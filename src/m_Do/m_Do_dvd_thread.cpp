@@ -149,7 +149,7 @@ extern "C" void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap(); // 1
 extern "C" void __dt__21mDoDvdThd_toMainRam_cFv(); // 1
 extern "C" void execute__21mDoDvdThd_toMainRam_cFv(); // 1
 extern "C" void __sinit_m_Do_dvd_thread_cpp(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const m_Do_m_Do_dvd_thread__stringBase0;
 extern "C" extern u8 l_threadStack__9mDoDvdThd[4096];
 
 // 
@@ -529,7 +529,7 @@ asm mDoDvdThd_mountArchive_c::mDoDvdThd_mountArchive_c(u8 param_0) {
 #pragma pop
 
 
-/* 80015E14-80015EDC 00C8+00 s=0 e=10 z=0  None .text      create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap            */
+/* 80015E14-80015EDC 00C8+00 s=0 e=10 z=1  None .text      create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

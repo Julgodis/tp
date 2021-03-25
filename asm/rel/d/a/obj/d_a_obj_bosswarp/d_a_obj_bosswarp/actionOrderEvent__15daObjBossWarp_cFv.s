@@ -10,24 +10,24 @@ lbl_8057A54C:
 /* 8057A56C 00000020  40 82 00 64 */	bne lbl_8057A5D0
 /* 8057A570 00000024  38 00 02 F2 */	li r0, 0x2f2
 /* 8057A574 00000028  B0 01 00 08 */	sth r0, 8(r1)
-/* 8057A578 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8057A57C 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 8057A578 0000002C  3C 60 80 02 */	lis r3, fpcSch_JudgeForPName__FPvPv@ha
+/* 8057A57C 00000030  38 63 35 78 */	addi r3, r3, fpcSch_JudgeForPName__FPvPv@l
 /* 8057A580 00000034  38 81 00 08 */	addi r4, r1, 8
-/* 8057A584 00000038  4B FF F0 95 */	bl _unresolved
+/* 8057A584 00000038  4B A9 F2 74 */	b fopAcIt_Judge__FPFPvPv_PvPv
 /* 8057A588 0000003C  7C 64 1B 78 */	mr r4, r3
-/* 8057A58C 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8057A590 00000044  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 8057A58C 00000040  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8057A590 00000044  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 8057A594 00000048  38 7F 4E C8 */	addi r3, r31, 0x4ec8
-/* 8057A598 0000004C  4B FF F0 81 */	bl _unresolved
+/* 8057A598 0000004C  4B AC 90 F4 */	b setPtT__14dEvt_control_cFPv
 /* 8057A59C 00000050  38 00 00 02 */	li r0, 2
 /* 8057A5A0 00000054  98 1E 05 90 */	stb r0, 0x590(r30)
 /* 8057A5A4 00000058  38 7F 4F F8 */	addi r3, r31, 0x4ff8
-/* 8057A5A8 0000005C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8057A5AC 00000060  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 8057A5A8 0000005C  3C 80 80 58 */	lis r4, struct_8057B4EC+0x0@ha
+/* 8057A5AC 00000060  38 84 B4 EC */	addi r4, r4, struct_8057B4EC+0x0@l
 /* 8057A5B0 00000064  38 84 00 C3 */	addi r4, r4, 0xc3
 /* 8057A5B4 00000068  38 A0 00 00 */	li r5, 0
 /* 8057A5B8 0000006C  38 C0 00 00 */	li r6, 0
-/* 8057A5BC 00000070  4B FF F0 5D */	bl _unresolved
+/* 8057A5BC 00000070  4B AC D5 60 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
 /* 8057A5C0 00000074  90 7E 05 9C */	stw r3, 0x59c(r30)
 /* 8057A5C4 00000078  7F C3 F3 78 */	mr r3, r30
 /* 8057A5C8 0000007C  48 00 04 CD */	bl demoProc__15daObjBossWarp_cFv
@@ -39,7 +39,7 @@ lbl_8057A5D0:
 /* 8057A5DC 0000000C  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 8057A5E0 00000010  38 E0 00 03 */	li r7, 3
 /* 8057A5E4 00000014  39 00 00 01 */	li r8, 1
-/* 8057A5E8 00000018  4B FF F0 31 */	bl _unresolved
+/* 8057A5E8 00000018  4B AA 10 94 */	b fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
 /* 8057A5EC 0000001C  A0 1E 00 FA */	lhz r0, 0xfa(r30)
 /* 8057A5F0 00000020  60 00 00 02 */	ori r0, r0, 2
 /* 8057A5F4 00000024  B0 1E 00 FA */	sth r0, 0xfa(r30)

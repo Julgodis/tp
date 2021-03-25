@@ -14,7 +14,7 @@ lbl_8020E754:
 /* 8020E784 00000030  88 1F 00 C1 */	lbz r0, 0xc1(r31)	/* effective address: 80430249 */
 /* 8020E788 00000034  28 00 00 06 */	cmplwi r0, 6
 /* 8020E78C 00000038  40 82 00 78 */	bne lbl_8020E804
-/* 8020E790 0000003C  A0 1F 00 A2 */	lhz r0, 0xa2(r31)
+/* 8020E790 0000003C  A0 1F 00 A2 */	lhz r0, 0xa2(r31)	/* effective address: 8043022A */
 /* 8020E794 00000040  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
 /* 8020E798 00000044  40 82 00 60 */	bne lbl_8020E7F8
 /* 8020E79C 00000048  4B FF FE 85 */	bl isFmapScreen__11dMeterMap_cFv
@@ -42,7 +42,7 @@ lbl_8020E754:
 /* 8020E7F4 000000A0  48 01 01 DD */	bl dMeter2Info_set2DVibration__Fv
 lbl_8020E7F8:
 /* 8020E7F8 00000000  38 00 00 00 */	li r0, 0
-/* 8020E7FC 00000004  98 1F 00 C1 */	stb r0, 0xc1(r31)
+/* 8020E7FC 00000004  98 1F 00 C1 */	stb r0, 0xc1(r31)	/* effective address: 80430249 */
 /* 8020E800 00000008  48 00 01 B8 */	b lbl_8020E9B8
 lbl_8020E804:
 /* 8020E804 00000000  4B FE B7 A9 */	bl dMw_LEFT_TRIGGER__Fv
@@ -83,7 +83,7 @@ lbl_8020E85C:
 /* 8020E88C 00000030  41 82 01 2C */	beq lbl_8020E9B8
 lbl_8020E890:
 /* 8020E890 00000000  38 00 00 02 */	li r0, 2
-/* 8020E894 00000004  98 1F 00 BF */	stb r0, 0xbf(r31)
+/* 8020E894 00000004  98 1F 00 BF */	stb r0, 0xbf(r31)	/* effective address: 80430247 */
 /* 8020E898 00000008  38 00 02 00 */	li r0, 0x200
 /* 8020E89C 0000000C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E8A0 00000010  38 63 01 88 */	addi r3, r3, g_meter2_info@l
@@ -140,7 +140,7 @@ lbl_8020E93C:
 /* 8020E964 00000028  41 82 00 54 */	beq lbl_8020E9B8
 lbl_8020E968:
 /* 8020E968 00000000  38 00 00 02 */	li r0, 2
-/* 8020E96C 00000004  98 1F 00 BF */	stb r0, 0xbf(r31)
+/* 8020E96C 00000004  98 1F 00 BF */	stb r0, 0xbf(r31)	/* effective address: 80430247 */
 /* 8020E970 00000008  38 00 04 00 */	li r0, 0x400
 /* 8020E974 0000000C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E978 00000010  38 63 01 88 */	addi r3, r3, g_meter2_info@l

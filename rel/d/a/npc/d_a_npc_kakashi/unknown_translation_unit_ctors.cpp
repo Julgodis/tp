@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_8054EAB0[8];
+extern void* data_8054EAB0[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_npc_kakashi_cpp(); // 1
 
 // 
 // Declarations:

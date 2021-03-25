@@ -3,9 +3,9 @@ lbl_805E01F8:
 /* 805E01FC 00000004  7C 08 02 A6 */	mflr r0
 /* 805E0200 00000008  90 01 00 34 */	stw r0, 0x34(r1)
 /* 805E0204 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
-/* 805E0208 00000010  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 805E020C 00000014  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 805E0210 00000018  88 04 5D B0 */	lbz r0, 0x5db0(r4)
+/* 805E0208 00000010  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805E020C 00000014  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 805E0210 00000018  88 04 5D B0 */	lbz r0, 0x5db0(r4)	/* effective address: 8040BF70 */
 /* 805E0214 0000001C  7C 00 07 74 */	extsb r0, r0
 /* 805E0218 00000020  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 805E021C 00000024  7C 84 02 14 */	add r4, r4, r0
@@ -25,16 +25,16 @@ lbl_805E01F8:
 /* 805E0254 0000005C  38 7F 02 48 */	addi r3, r31, 0x248
 /* 805E0258 00000060  38 81 00 14 */	addi r4, r1, 0x14
 /* 805E025C 00000064  38 A1 00 08 */	addi r5, r1, 8
-/* 805E0260 00000068  4B FF E1 19 */	bl _unresolved
+/* 805E0260 00000068  4B BA 09 B8 */	b Reset__9dCamera_cF4cXyz4cXyz
 /* 805E0264 0000006C  38 7F 02 48 */	addi r3, r31, 0x248
-/* 805E0268 00000070  4B FF E1 11 */	bl _unresolved
+/* 805E0268 00000070  4B B8 12 44 */	b Start__9dCamera_cFv
 /* 805E026C 00000074  38 7F 02 48 */	addi r3, r31, 0x248
 /* 805E0270 00000078  38 80 00 00 */	li r4, 0
-/* 805E0274 0000007C  4B FF E1 05 */	bl _unresolved
-/* 805E0278 00000080  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 805E027C 00000084  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 805E0274 0000007C  4B B8 2D 98 */	b SetTrimSize__9dCamera_cFl
+/* 805E0278 00000080  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805E027C 00000084  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805E0280 00000088  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 805E0284 0000008C  4B FF E0 F5 */	bl _unresolved
+/* 805E0284 0000008C  4B A6 21 E4 */	b reset__14dEvt_control_cFv
 /* 805E0288 00000090  83 E1 00 2C */	lwz r31, 0x2c(r1)
 /* 805E028C 00000094  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 805E0290 00000098  7C 08 03 A6 */	mtlr r0

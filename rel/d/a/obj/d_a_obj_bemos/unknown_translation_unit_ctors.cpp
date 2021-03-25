@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80BB37A4[8];
+extern void* data_80BB37A4[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_obj_bemos_cpp(); // 1
 
 // 
 // Declarations:

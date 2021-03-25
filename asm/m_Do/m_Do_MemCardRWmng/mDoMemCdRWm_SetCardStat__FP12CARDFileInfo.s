@@ -79,7 +79,7 @@ lbl_800179E4:
 /* 80017B18 00000134  B0 01 00 3E */	sth r0, 0x3e(r1)
 /* 80017B1C 00000138  54 60 05 3E */	clrlwi r0, r3, 0x14
 /* 80017B20 0000013C  B0 01 00 3E */	sth r0, 0x3e(r1)
-/* 80017B24 00000140  88 7F 1F BC */	lbz r3, 0x1fbc(r31)
+/* 80017B24 00000140  88 7F 1F BC */	lbz r3, 0x1fbc(r31)	/* effective address: 803ECEFC */
 /* 80017B28 00000144  80 9E 00 04 */	lwz r4, 4(r30)
 /* 80017B2C 00000148  38 A1 00 08 */	addi r5, r1, 8
 /* 80017B30 0000014C  48 34 15 E1 */	bl CARDSetStatus

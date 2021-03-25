@@ -48,8 +48,8 @@ lbl_80029874:
 /* 8002992C 000000B8  90 7F 00 44 */	stw r3, 0x44(r31)
 /* 80029930 000000BC  80 1F 00 44 */	lwz r0, 0x44(r31)
 /* 80029934 000000C0  90 0D 88 00 */	stw r0, m_res__22dMap_HIO_prm_res_dst_s(r13)
-/* 80029938 000000C4  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 8002993C 000000C8  38 63 8F 24 */	addi r3, r3, stringBase0@l
+/* 80029938 000000C4  3C 60 80 38 */	lis r3, d_map_d_map__stringBase0@ha
+/* 8002993C 000000C8  38 63 8F 24 */	addi r3, r3, d_map_d_map__stringBase0@l
 /* 80029940 000000CC  38 80 00 45 */	li r4, 0x45
 /* 80029944 000000D0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 80029948 000000D4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l

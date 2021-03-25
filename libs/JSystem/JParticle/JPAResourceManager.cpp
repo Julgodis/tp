@@ -14,13 +14,13 @@
 struct JKRHeap {
 };
 
-struct ResTIMG {
-};
-
 struct JPATexture {
 };
 
 struct JPAResource {
+};
+
+struct ResTIMG {
 };
 
 struct JPAResourceManager {

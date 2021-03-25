@@ -148,8 +148,8 @@ lbl_80334E1C:
 /* 80334E2C 00000010  48 00 11 FD */	bl readPatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl
 /* 80334E30 00000014  48 00 00 14 */	b lbl_80334E44
 lbl_80334E34:
-/* 80334E34 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80334E38 00000004  38 63 20 B0 */	addi r3, r3, stringBase0@l
+/* 80334E34 00000000  3C 60 80 3A */	lis r3, J3DModelLoader__stringBase0@ha
+/* 80334E38 00000004  38 63 20 B0 */	addi r3, r3, J3DModelLoader__stringBase0@l
 /* 80334E3C 00000008  4C C6 31 82 */	crclr 6
 /* 80334E40 0000000C  4B CD 1C 7D */	bl OSReport
 lbl_80334E44:

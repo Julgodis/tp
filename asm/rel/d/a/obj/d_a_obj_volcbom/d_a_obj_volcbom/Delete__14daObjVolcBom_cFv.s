@@ -20,10 +20,10 @@ lbl_80D26738:
 /* 80D26740 00000008  7F E3 FB 78 */	mr r3, r31
 /* 80D26744 0000000C  4B FF EF 21 */	bl endBindEffect__14daObjVolcBom_cFv
 /* 80D26748 00000010  38 7F 05 A0 */	addi r3, r31, 0x5a0
-/* 80D2674C 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80D26750 00000018  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80D26754 0000001C  80 84 00 00 */	lwz r4, 0(r4)
-/* 80D26758 00000020  4B FF DA 21 */	bl _unresolved
+/* 80D2674C 00000014  3C 80 80 D2 */	lis r4, l_arcName@ha
+/* 80D26750 00000018  38 84 6C 74 */	addi r4, r4, l_arcName@l
+/* 80D26754 0000001C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D26C74 */
+/* 80D26758 00000020  4B 30 68 B0 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80D2675C 00000024  38 60 00 01 */	li r3, 1
 /* 80D26760 00000028  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80D26764 0000002C  80 01 00 14 */	lwz r0, 0x14(r1)

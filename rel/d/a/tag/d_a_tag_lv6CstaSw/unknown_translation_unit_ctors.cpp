@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80D5B7D8[8];
+extern void* data_80D5B7D8[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_tag_lv6CstaSw_cpp(); // 1
 
 // 
 // Declarations:

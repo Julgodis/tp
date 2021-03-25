@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80652728[8];
+extern void* data_80652728[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_b_zant_mobile_cpp(); // 1
 
 // 
 // Declarations:

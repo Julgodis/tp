@@ -18,38 +18,107 @@ struct npc_inko_class {
 };
 
 struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD9C */ void transM(f32, f32, f32);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct Vec {
+};
+
+struct mDoExt_McaMorf {
+	/* 8000FC4C */ mDoExt_McaMorf(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, int, void*, u32, u32);
+	/* 8001037C */ void setAnm(J3DAnmTransform*, int, f32, f32, f32, f32, void*);
+	/* 800105C8 */ void play(Vec*, u32, s8);
+	/* 80010680 */ void entryDL();
+	/* 800106AC */ void modelCalc();
+};
+
+struct request_of_phase_process_class {
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dEvt_control_c {
+	/* 80042468 */ void reset();
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct daPy_py_c {
+	/* 8015F4F0 */ void setLookPos(cXyz*);
+};
+
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct dMsgFlow_c {
+	/* 80249F00 */ dMsgFlow_c();
+	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+};
+
+struct Z2SoundObjBase {
+	/* 802BDFF8 */ void deleteObject();
+};
+
+struct Z2SoundObjSimple {
+	/* 802BE844 */ Z2SoundObjSimple();
 };
 
 // 
 // Forward References:
 // 
 
-void nodeCallBack(J3DJoint*, int); // 2
-void daNpc_Inko_Draw(npc_inko_class*); // 2
+static void nodeCallBack(J3DJoint*, int); // 2
+static void daNpc_Inko_Draw(npc_inko_class*); // 2
 static void anm_init(npc_inko_class*, int, f32, u8, f32); // 2
 static void daNpc_Inko_Execute(npc_inko_class*); // 2
-void daNpc_Inko_IsDelete(npc_inko_class*); // 2
-void daNpc_Inko_Delete(npc_inko_class*); // 2
-void useHeapInit(fopAc_ac_c*); // 2
-void daNpc_Inko_Create(fopAc_ac_c*); // 2
+static void daNpc_Inko_IsDelete(npc_inko_class*); // 2
+static void daNpc_Inko_Delete(npc_inko_class*); // 2
+static void useHeapInit(fopAc_ac_c*); // 2
+static void daNpc_Inko_Create(fopAc_ac_c*); // 2
 
-extern "C" void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" void daNpc_Inko_Draw__FP14npc_inko_class(); // 1
+extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
+extern "C" static void daNpc_Inko_Draw__FP14npc_inko_class(); // 1
 extern "C" static void anm_init__FP14npc_inko_classifUcf(); // 1
 extern "C" static void daNpc_Inko_Execute__FP14npc_inko_class(); // 1
-extern "C" void daNpc_Inko_IsDelete__FP14npc_inko_class(); // 1
-extern "C" void daNpc_Inko_Delete__FP14npc_inko_class(); // 1
-extern "C" void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daNpc_Inko_Create__FP10fopAc_ac_c(); // 1
-extern "C" extern u8 const lit_3849[4];
-extern "C" extern u32 const lit_3850;
+extern "C" static void daNpc_Inko_IsDelete__FP14npc_inko_class(); // 1
+extern "C" static void daNpc_Inko_Delete__FP14npc_inko_class(); // 1
+extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
+extern "C" static void daNpc_Inko_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern u32 const lit_4329;
 extern "C" extern u32 const lit_4330;
 extern "C" extern u32 const lit_4331;
 extern "C" extern u32 const lit_4332;
 extern "C" extern u32 const lit_4333;
 extern "C" extern u32 const lit_4334;
-extern "C" extern u32 const lit_4335;
 extern "C" extern u32 const lit_4336;
 extern "C" extern u32 const lit_4337;
 extern "C" extern u32 const lit_4338;
@@ -85,118 +154,125 @@ extern "C" extern u32 const lit_4367;
 extern "C" extern u32 const lit_4461;
 extern "C" extern u32 const lit_4462;
 extern "C" extern char const* const stringBase0;
-extern "C" extern u8 data_80A0E0D8[16];
-extern "C" extern u8 data_80A0E0E8[16];
-extern "C" extern u8 l_daNpc_Inko_Method[32];
-extern "C" extern u8 g_profile_NPC_INKO[48];
+extern "C" extern void* g_profile_NPC_INKO[12];
 
 // 
 // External References:
 // 
 
+void mDoMtx_XrotM(f32 (* )[4], s16); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
+void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
+void fopAcM_SetMin(fopAc_ac_c*, f32, f32, f32); // 2
+void fopAcM_SetMax(fopAc_ac_c*, f32, f32, f32); // 2
+void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
+void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*); // 2
+void fpcSch_JudgeForPName(void*, void*); // 2
+void fpcSch_JudgeByID(void*, void*); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void dComIfGp_getReverb(int); // 2
+void cM_rndF(f32); // 2
+void cM_rndFX(f32); // 2
+void cLib_addCalc2(f32*, f32, f32, f32); // 2
+void cLib_addCalcAngleS2(s16*, s16, s16, s16); // 2
+void* operator new(u32); // 2
 
-extern "C" void _unresolved(); // 1
+extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
+extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
+extern "C" void __ct__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl(); // 1
+extern "C" void setAnm__14mDoExt_McaMorfFP15J3DAnmTransformiffffPv(); // 1
+extern "C" void play__14mDoExt_McaMorfFP3VecUlSc(); // 1
+extern "C" void entryDL__14mDoExt_McaMorfFv(); // 1
+extern "C" void modelCalc__14mDoExt_McaMorfFv(); // 1
+extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
+extern "C" void fopAcM_SetMin__FP10fopAc_ac_cfff(); // 1
+extern "C" void fopAcM_SetMax__FP10fopAc_ac_cfff(); // 1
+extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
+extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
+extern "C" void fpcSch_JudgeForPName__FPvPv(); // 1
+extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfGp_getReverb__Fi(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void reset__14dEvt_control_cFv(); // 1
+extern "C" void setLookPos__9daPy_py_cFP4cXyz(); // 1
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void __ct__10dMsgFlow_cFv(); // 1
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void cM_rndF__Ff(); // 1
+extern "C" void cM_rndFX__Ff(); // 1
+extern "C" void cLib_addCalc2__FPffff(); // 1
+extern "C" void cLib_addCalcAngleS2__FPssss(); // 1
+extern "C" void deleteObject__14Z2SoundObjBaseFv(); // 1
+extern "C" void __ct__16Z2SoundObjSimpleFv(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern void* calc_mtx[1 + 1 /* padding */];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 struct_80450C9C[4];
 
 // 
 // Declarations:
 // 
 
-/* 80A0C998-80A0CBB0 0218+00 s=0 e=0 z=0  None .text      nodeCallBack__FP8J3DJointi                                   */
+/* 80A0C998-80A0CBB0 0218+00 s=1 e=0 z=0  None .text      nodeCallBack__FP8J3DJointi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void nodeCallBack(J3DJoint* param_0, int param_1) {
+asm static void nodeCallBack(J3DJoint* param_0, int param_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/nodeCallBack__FP8J3DJointi.s"
 }
 #pragma pop
 
 
-/* 80A0CBB0-80A0CC18 0068+00 s=0 e=0 z=0  None .text      daNpc_Inko_Draw__FP14npc_inko_class                          */
+/* 80A0CBB0-80A0CC18 0068+00 s=1 e=0 z=0  None .text      daNpc_Inko_Draw__FP14npc_inko_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpc_Inko_Draw(npc_inko_class* param_0) {
+asm static void daNpc_Inko_Draw(npc_inko_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_Draw__FP14npc_inko_class.s"
 }
 #pragma pop
 
 
-/* 80A0CC18-80A0CCC8 00B0+00 s=1 e=0 z=0  None .text      anm_init__FP14npc_inko_classifUcf                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void anm_init(npc_inko_class* param_0, int param_1, f32 param_2, u8 param_3, f32 param_4) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/anm_init__FP14npc_inko_classifUcf.s"
-}
-#pragma pop
-
-
-/* 80A0CCC8-80A0DD70 10A8+00 s=1 e=0 z=0  None .text      daNpc_Inko_Execute__FP14npc_inko_class                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_Inko_Execute(npc_inko_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_Execute__FP14npc_inko_class.s"
-}
-#pragma pop
-
-
-/* 80A0DD70-80A0DD78 0008+00 s=0 e=0 z=0  None .text      daNpc_Inko_IsDelete__FP14npc_inko_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpc_Inko_IsDelete(npc_inko_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_IsDelete__FP14npc_inko_class.s"
-}
-#pragma pop
-
-
-/* 80A0DD78-80A0DDC8 0050+00 s=0 e=0 z=0  None .text      daNpc_Inko_Delete__FP14npc_inko_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpc_Inko_Delete(npc_inko_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_Delete__FP14npc_inko_class.s"
-}
-#pragma pop
-
-
-/* 80A0DDC8-80A0DF08 0140+00 s=0 e=0 z=0  None .text      useHeapInit__FP10fopAc_ac_c                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void useHeapInit(fopAc_ac_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/useHeapInit__FP10fopAc_ac_c.s"
-}
-#pragma pop
-
-
-/* 80A0DF08-80A0E00C 0104+00 s=0 e=0 z=0  None .text      daNpc_Inko_Create__FP10fopAc_ac_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpc_Inko_Create(fopAc_ac_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_Create__FP10fopAc_ac_c.s"
-}
-#pragma pop
-
-
 /* ############################################################################################## */
-/* 80A0E014-80A0E018 0004+00 s=0 e=0 z=0  None .rodata    @3849                                                        */
-SECTION_RODATA u8 const lit_3849[4] = {
+/* 80A0E014-80A0E018 0004+00 s=3 e=0 z=0  None .rodata    @3849                                                        */
+SECTION_RODATA static u8 const lit_3849[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80A0E018-80A0E01C 0004+00 s=0 e=0 z=0  None .rodata    @3850                                                        */
-SECTION_RODATA u32 const lit_3850 = 0xBF800000;
+/* 80A0E018-80A0E01C 0004+00 s=1 e=0 z=0  None .rodata    @3850                                                        */
+SECTION_RODATA static u32 const lit_3850 = 0xBF800000;
 
 /* 80A0E01C-80A0E020 0004+00 s=0 e=0 z=0  None .rodata    @4329                                                        */
 SECTION_RODATA u32 const lit_4329 = 0xC29C0000;
@@ -216,8 +292,8 @@ SECTION_RODATA u32 const lit_4333 = 0x428C0000;
 /* 80A0E030-80A0E034 0004+00 s=0 e=0 z=0  None .rodata    @4334                                                        */
 SECTION_RODATA u32 const lit_4334 = 0x41200000;
 
-/* 80A0E034-80A0E038 0004+00 s=0 e=0 z=0  None .rodata    @4335                                                        */
-SECTION_RODATA u32 const lit_4335 = 0x3F800000;
+/* 80A0E034-80A0E038 0004+00 s=1 e=0 z=0  None .rodata    @4335                                                        */
+SECTION_RODATA static u32 const lit_4335 = 0x3F800000;
 
 /* 80A0E038-80A0E03C 0004+00 s=0 e=0 z=0  None .rodata    @4336                                                        */
 SECTION_RODATA u32 const lit_4336 = 0x3FC00000;
@@ -327,33 +403,116 @@ SECTION_RODATA u32 const lit_4461 = 0x47800000;
 /* 80A0E0C8-80A0E0CC 0004+00 s=0 e=0 z=0  None .rodata    @4462                                                        */
 SECTION_RODATA u32 const lit_4462 = 0xC3480000;
 
-/* 80A0E0CC-80A0E0D5 0009+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80A0E0CC-80A0E0D5 0009+00 s=4 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD char const* const stringBase_80A0E0CC = "Npc_inko";
 #pragma pop
 
-/* 80A0E0D8-80A0E0E8 0010+00 s=0 e=0 z=0  None .data      mes_0$3966                                                   */
-SECTION_DATA u8 data_80A0E0D8[16] = {
+/* 80A0CC18-80A0CCC8 00B0+00 s=1 e=0 z=0  None .text      anm_init__FP14npc_inko_classifUcf                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void anm_init(npc_inko_class* param_0, int param_1, f32 param_2, u8 param_3, f32 param_4) {
+	nofralloc
+#include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/anm_init__FP14npc_inko_classifUcf.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
+/* 80A0E0D8-80A0E0E8 0010+00 s=1 e=0 z=0  None .data      mes_0$3966                                                   */
+SECTION_DATA static u8 data_80A0E0D8[16] = {
 	0x00, 0x00, 0x03, 0x57, 0x00, 0x00, 0x03, 0x58, 0x00, 0x00, 0x03, 0x59, 0x00, 0x00, 0x03, 0x5A,
 };
 
-/* 80A0E0E8-80A0E0F8 0010+00 s=0 e=0 z=0  None .data      mes_1$3967                                                   */
-SECTION_DATA u8 data_80A0E0E8[16] = {
+/* 80A0E0E8-80A0E0F8 0010+00 s=1 e=0 z=0  None .data      mes_1$3967                                                   */
+SECTION_DATA static u8 data_80A0E0E8[16] = {
 	0x00, 0x00, 0x03, 0x5B, 0x00, 0x00, 0x03, 0x5C, 0x00, 0x00, 0x03, 0x5D, 0x00, 0x00, 0x03, 0x5E,
 };
 
-/* 80A0E0F8-80A0E118 0020+00 s=0 e=0 z=0  None .data      l_daNpc_Inko_Method                                          */
-SECTION_DATA u8 l_daNpc_Inko_Method[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 80A0CCC8-80A0DD70 10A8+00 s=2 e=0 z=0  None .text      daNpc_Inko_Execute__FP14npc_inko_class                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daNpc_Inko_Execute(npc_inko_class* param_0) {
+	nofralloc
+#include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_Execute__FP14npc_inko_class.s"
+}
+#pragma pop
+
+
+/* 80A0DD70-80A0DD78 0008+00 s=1 e=0 z=0  None .text      daNpc_Inko_IsDelete__FP14npc_inko_class                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daNpc_Inko_IsDelete(npc_inko_class* param_0) {
+	nofralloc
+#include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_IsDelete__FP14npc_inko_class.s"
+}
+#pragma pop
+
+
+/* 80A0DD78-80A0DDC8 0050+00 s=1 e=0 z=0  None .text      daNpc_Inko_Delete__FP14npc_inko_class                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daNpc_Inko_Delete(npc_inko_class* param_0) {
+	nofralloc
+#include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_Delete__FP14npc_inko_class.s"
+}
+#pragma pop
+
+
+/* 80A0DDC8-80A0DF08 0140+00 s=1 e=0 z=0  None .text      useHeapInit__FP10fopAc_ac_c                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void useHeapInit(fopAc_ac_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/useHeapInit__FP10fopAc_ac_c.s"
+}
+#pragma pop
+
+
+/* 80A0DF08-80A0E00C 0104+00 s=1 e=0 z=0  None .text      daNpc_Inko_Create__FP10fopAc_ac_c                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daNpc_Inko_Create(fopAc_ac_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_Create__FP10fopAc_ac_c.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
+/* 80A0E0F8-80A0E118 0020+00 s=1 e=0 z=0  None .data      l_daNpc_Inko_Method                                          */
+SECTION_DATA static void* l_daNpc_Inko_Method[8] = {
+	/* 0    */ (void*)daNpc_Inko_Create__FP10fopAc_ac_c,
+	/* 1    */ (void*)daNpc_Inko_Delete__FP14npc_inko_class,
+	/* 2    */ (void*)daNpc_Inko_Execute__FP14npc_inko_class,
+	/* 3    */ (void*)daNpc_Inko_IsDelete__FP14npc_inko_class,
+	/* 4    */ (void*)daNpc_Inko_Draw__FP14npc_inko_class,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
 };
 
-/* 80A0E118-80A0E148 0030+00 s=0 e=0 z=0  None .data      g_profile_NPC_INKO                                           */
-SECTION_DATA u8 g_profile_NPC_INKO[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x08, 0xFF, 0xFD, 0x02, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x06, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x02, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x01, 0x00, 0x00, 0x0E, 0x00, 0x00,
+/* 80A0E118-80A0E148 0030+00 s=0 e=0 z=1  None .data      g_profile_NPC_INKO                                           */
+SECTION_DATA void* g_profile_NPC_INKO[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0008FFFD,
+	/* 2    */ (void*)0x02FF0000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x00000648,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x02C00000,
+	/* 9    */ (void*)&l_daNpc_Inko_Method,
+	/* 10   */ (void*)0x00040100,
+	/* 11   */ (void*)0x000E0000,
 };
 

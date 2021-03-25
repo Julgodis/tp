@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80D060CC[8];
+extern void* data_80D060CC[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_obj_taFence_cpp(); // 1
 
 // 
 // Declarations:

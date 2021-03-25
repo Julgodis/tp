@@ -26,28 +26,28 @@ lbl_80202AEC:
 /* 80202AF8 0000000C  48 03 46 ED */	bl isPlaceMessage__12dMsgObject_cFv
 /* 80202AFC 00000010  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80202B00 00000014  40 82 00 64 */	bne lbl_80202B64
-/* 80202B04 00000018  80 7D 5D BC */	lwz r3, 0x5dbc(r29)
+/* 80202B04 00000018  80 7D 5D BC */	lwz r3, 0x5dbc(r29)	/* effective address: 8040BF7C */
 /* 80202B08 0000001C  48 03 45 E1 */	bl isHowlMessage__12dMsgObject_cFv
 /* 80202B0C 00000020  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80202B10 00000024  40 82 00 54 */	bne lbl_80202B64
-/* 80202B14 00000028  80 7D 5D BC */	lwz r3, 0x5dbc(r29)
+/* 80202B14 00000028  80 7D 5D BC */	lwz r3, 0x5dbc(r29)	/* effective address: 8040BF7C */
 /* 80202B18 0000002C  48 03 46 E1 */	bl isBossMessage__12dMsgObject_cFv
 /* 80202B1C 00000030  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80202B20 00000034  40 82 00 44 */	bne lbl_80202B64
-/* 80202B24 00000038  80 7D 5D BC */	lwz r3, 0x5dbc(r29)
+/* 80202B24 00000038  80 7D 5D BC */	lwz r3, 0x5dbc(r29)	/* effective address: 8040BF7C */
 /* 80202B28 0000003C  48 03 46 E5 */	bl isBookMessage__12dMsgObject_cFv
 /* 80202B2C 00000040  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80202B30 00000044  40 82 00 34 */	bne lbl_80202B64
-/* 80202B34 00000048  80 7D 5D BC */	lwz r3, 0x5dbc(r29)
+/* 80202B34 00000048  80 7D 5D BC */	lwz r3, 0x5dbc(r29)	/* effective address: 8040BF7C */
 /* 80202B38 0000004C  48 03 46 DD */	bl isStaffMessage__12dMsgObject_cFv
 /* 80202B3C 00000050  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80202B40 00000054  40 82 00 24 */	bne lbl_80202B64
-/* 80202B44 00000058  80 7D 5D BC */	lwz r3, 0x5dbc(r29)
+/* 80202B44 00000058  80 7D 5D BC */	lwz r3, 0x5dbc(r29)	/* effective address: 8040BF7C */
 /* 80202B48 0000005C  48 03 45 75 */	bl isKanbanMessage__12dMsgObject_cFv
 /* 80202B4C 00000060  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80202B50 00000064  40 82 00 14 */	bne lbl_80202B64
-/* 80202B54 00000068  80 7D 5D BC */	lwz r3, 0x5dbc(r29)
-/* 80202B58 0000006C  88 03 01 9A */	lbz r0, 0x19a(r3)
+/* 80202B54 00000068  80 7D 5D BC */	lwz r3, 0x5dbc(r29)	/* effective address: 8040BF7C */
+/* 80202B58 0000006C  88 03 01 9A */	lbz r0, 0x19a(r3)	/* effective address: 8040019A */
 /* 80202B5C 00000070  28 00 00 11 */	cmplwi r0, 0x11
 /* 80202B60 00000074  40 82 00 40 */	bne lbl_80202BA0
 lbl_80202B64:

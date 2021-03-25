@@ -4,11 +4,11 @@ lbl_8078FCC0:
 /* 8078FCC8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8078FCCC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8078FCD0 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8078FCD4 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8078FCD8 00000018  38 C4 00 00 */	addi r6, r4, 0x0000 /* 0x00000000@l */
+/* 8078FCD4 00000014  3C 80 80 79 */	lis r4, lit_3902@ha
+/* 8078FCD8 00000018  38 C4 1D 70 */	addi r6, r4, lit_3902@l
 /* 8078FCDC 0000001C  38 00 00 06 */	li r0, 6
 /* 8078FCE0 00000020  B0 03 06 A0 */	sth r0, 0x6a0(r3)
-/* 8078FCE4 00000024  C0 26 00 04 */	lfs f1, 4(r6)
+/* 8078FCE4 00000024  C0 26 00 04 */	lfs f1, 4(r6)	/* effective address: 80791D74 */
 /* 8078FCE8 00000028  D0 23 05 2C */	stfs f1, 0x52c(r3)
 /* 8078FCEC 0000002C  A8 03 06 78 */	lha r0, 0x678(r3)
 /* 8078FCF0 00000030  2C 00 00 01 */	cmpwi r0, 1
@@ -23,9 +23,9 @@ lbl_8078FD08:
 /* 8078FD10 00000008  48 00 00 64 */	b lbl_8078FD74
 lbl_8078FD14:
 /* 8078FD14 00000000  38 80 00 0B */	li r4, 0xb
-/* 8078FD18 00000004  C0 26 00 AC */	lfs f1, 0xac(r6)
+/* 8078FD18 00000004  C0 26 00 AC */	lfs f1, 0xac(r6)	/* effective address: 80791E1C */
 /* 8078FD1C 00000008  38 A0 00 00 */	li r5, 0
-/* 8078FD20 0000000C  C0 46 00 08 */	lfs f2, 8(r6)
+/* 8078FD20 0000000C  C0 46 00 08 */	lfs f2, 8(r6)	/* effective address: 80791D78 */
 /* 8078FD24 00000010  4B FF E6 91 */	bl anm_init__FP10e_sh_classifUcf
 /* 8078FD28 00000014  38 00 00 01 */	li r0, 1
 /* 8078FD2C 00000018  B0 1F 06 78 */	sth r0, 0x678(r31)
@@ -56,9 +56,9 @@ lbl_8078FD74:
 /* 8078FD84 00000010  38 A0 00 0A */	li r5, 0xa
 /* 8078FD88 00000014  38 C0 00 00 */	li r6, 0
 /* 8078FD8C 00000018  38 E0 00 2A */	li r7, 0x2a
-/* 8078FD90 0000001C  4B FF E5 29 */	bl _unresolved
+/* 8078FD90 0000001C  4B 88 CD 48 */	b fopAcM_createDisappear__FPC10fopAc_ac_cPC4cXyzUcUcUc
 /* 8078FD94 00000020  7F E3 FB 78 */	mr r3, r31
-/* 8078FD98 00000024  4B FF E5 21 */	bl _unresolved
+/* 8078FD98 00000024  4B 88 9E E4 */	b fopAcM_delete__FP10fopAc_ac_c
 lbl_8078FD9C:
 /* 8078FD9C 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8078FDA0 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

@@ -244,10 +244,10 @@ lbl_801CF6EC:
 lbl_801CF92C:
 /* 801CF92C 00000000  90 1F 0C 98 */	stw r0, 0xc98(r31)
 /* 801CF930 00000004  80 7F 0C 98 */	lwz r3, 0xc98(r31)
-/* 801CF934 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801CF938 0000000C  38 84 65 D0 */	addi r4, r4, stringBase0@l
+/* 801CF934 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
+/* 801CF938 0000000C  38 84 65 D0 */	addi r4, r4, d_menu_d_menu_fmap2D__stringBase0@l
 /* 801CF93C 00000010  3C A0 00 02 */	lis r5, 2
-/* 801CF940 00000014  80 DE 5C BC */	lwz r6, 0x5cbc(r30)
+/* 801CF940 00000014  80 DE 5C BC */	lwz r6, 0x5cbc(r30)	/* effective address: 8040BE7C */
 /* 801CF944 00000018  48 12 8D 05 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 801CF948 0000001C  80 7F 0C 98 */	lwz r3, 0xc98(r31)
 /* 801CF94C 00000020  48 08 57 9D */	bl dPaneClass_showNullPane__FP9J2DScreen
@@ -260,18 +260,18 @@ lbl_801CF92C:
 lbl_801CF968:
 /* 801CF968 00000000  90 1F 0C 9C */	stw r0, 0xc9c(r31)
 /* 801CF96C 00000004  80 7F 0C 9C */	lwz r3, 0xc9c(r31)
-/* 801CF970 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801CF974 0000000C  38 84 65 D0 */	addi r4, r4, stringBase0@l
+/* 801CF970 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
+/* 801CF974 0000000C  38 84 65 D0 */	addi r4, r4, d_menu_d_menu_fmap2D__stringBase0@l
 /* 801CF978 00000010  38 84 00 20 */	addi r4, r4, 0x20
 /* 801CF97C 00000014  3C A0 00 02 */	lis r5, 2
-/* 801CF980 00000018  80 DE 5C BC */	lwz r6, 0x5cbc(r30)
+/* 801CF980 00000018  80 DE 5C BC */	lwz r6, 0x5cbc(r30)	/* effective address: 8040BE7C */
 /* 801CF984 0000001C  48 12 8C C5 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 801CF988 00000020  80 7F 0C 9C */	lwz r3, 0xc9c(r31)
 /* 801CF98C 00000024  48 08 57 5D */	bl dPaneClass_showNullPane__FP9J2DScreen
-/* 801CF990 00000028  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801CF994 0000002C  38 63 65 D0 */	addi r3, r3, stringBase0@l
+/* 801CF990 00000028  3C 60 80 39 */	lis r3, d_menu_d_menu_fmap2D__stringBase0@ha
+/* 801CF994 0000002C  38 63 65 D0 */	addi r3, r3, d_menu_d_menu_fmap2D__stringBase0@l
 /* 801CF998 00000030  38 63 00 3A */	addi r3, r3, 0x3a
-/* 801CF99C 00000034  80 9E 5C BC */	lwz r4, 0x5cbc(r30)
+/* 801CF99C 00000034  80 9E 5C BC */	lwz r4, 0x5cbc(r30)	/* effective address: 8040BE7C */
 /* 801CF9A0 00000038  48 10 48 D1 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
 /* 801CF9A4 0000003C  48 13 90 C9 */	bl load__20J2DAnmLoaderDataBaseFPCv
 /* 801CF9A8 00000040  90 7F 0C E4 */	stw r3, 0xce4(r31)
@@ -341,8 +341,8 @@ lbl_801CFA8C:
 /* 801CFA98 0000000C  80 63 5D 30 */	lwz r3, 0x5d30(r3)	/* effective address: 8040BEF0 */
 /* 801CFA9C 00000010  3C 80 54 49 */	lis r4, 0x5449 /* 0x54494D47@ha */
 /* 801CFAA0 00000014  38 84 4D 47 */	addi r4, r4, 0x4D47 /* 0x54494D47@l */
-/* 801CFAA4 00000018  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801CFAA8 0000001C  38 A5 65 D0 */	addi r5, r5, stringBase0@l
+/* 801CFAA4 00000018  3C A0 80 39 */	lis r5, d_menu_d_menu_fmap2D__stringBase0@ha
+/* 801CFAA8 0000001C  38 A5 65 D0 */	addi r5, r5, d_menu_d_menu_fmap2D__stringBase0@l
 /* 801CFAAC 00000020  38 A5 00 54 */	addi r5, r5, 0x54
 /* 801CFAB0 00000024  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 804061C0 */
 /* 801CFAB4 00000028  81 8C 00 18 */	lwz r12, 0x18(r12)
@@ -394,11 +394,11 @@ lbl_801CFAE0:
 lbl_801CFB68:
 /* 801CFB68 00000000  90 1F 0C D8 */	stw r0, 0xcd8(r31)
 /* 801CFB6C 00000004  80 7F 0C D8 */	lwz r3, 0xcd8(r31)
-/* 801CFB70 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801CFB74 0000000C  38 84 65 D0 */	addi r4, r4, stringBase0@l
+/* 801CFB70 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
+/* 801CFB74 0000000C  38 84 65 D0 */	addi r4, r4, d_menu_d_menu_fmap2D__stringBase0@l
 /* 801CFB78 00000010  38 84 00 64 */	addi r4, r4, 0x64
 /* 801CFB7C 00000014  3C A0 00 02 */	lis r5, 2
-/* 801CFB80 00000018  80 DE 5C BC */	lwz r6, 0x5cbc(r30)
+/* 801CFB80 00000018  80 DE 5C BC */	lwz r6, 0x5cbc(r30)	/* effective address: 8040BE7C */
 /* 801CFB84 0000001C  48 12 8A C5 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 801CFB88 00000020  80 7F 0C D8 */	lwz r3, 0xcd8(r31)
 /* 801CFB8C 00000024  48 08 55 5D */	bl dPaneClass_showNullPane__FP9J2DScreen

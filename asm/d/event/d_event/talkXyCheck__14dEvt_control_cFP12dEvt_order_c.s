@@ -6,8 +6,8 @@ lbl_80041B58:
 /* 80041B68 00000010  48 32 06 6D */	bl _savegpr_27
 /* 80041B6C 00000014  7C 7B 1B 78 */	mr r27, r3
 /* 80041B70 00000018  7C 9C 23 78 */	mr r28, r4
-/* 80041B74 0000001C  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 80041B78 00000020  38 63 9D 80 */	addi r3, r3, stringBase0@l
+/* 80041B74 0000001C  3C 60 80 38 */	lis r3, d_event_d_event__stringBase0@ha
+/* 80041B78 00000020  38 63 9D 80 */	addi r3, r3, d_event_d_event__stringBase0@l
 /* 80041B7C 00000024  3B C3 00 23 */	addi r30, r3, 0x23
 /* 80041B80 00000028  83 E4 00 0C */	lwz r31, 0xc(r4)
 /* 80041B84 0000002C  A0 04 00 00 */	lhz r0, 0(r4)

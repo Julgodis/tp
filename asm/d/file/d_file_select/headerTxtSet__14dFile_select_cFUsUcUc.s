@@ -20,8 +20,8 @@ lbl_8018D11C:
 /* 8018D128 0000000C  54 80 15 BA */	rlwinm r0, r4, 2, 0x16, 0x1d
 /* 8018D12C 00000010  7C 7D 02 14 */	add r3, r29, r0
 /* 8018D130 00000014  80 63 02 14 */	lwz r3, 0x214(r3)
-/* 8018D134 00000018  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 8018D138 0000001C  38 84 43 88 */	addi r4, r4, stringBase0@l
+/* 8018D134 00000018  3C 80 80 39 */	lis r4, d_file_d_file_select__stringBase0@ha
+/* 8018D138 0000001C  38 84 43 88 */	addi r4, r4, d_file_d_file_select__stringBase0@l
 /* 8018D13C 00000020  38 84 00 6B */	addi r4, r4, 0x6b
 /* 8018D140 00000024  48 1D B9 ED */	bl strcpy
 /* 8018D144 00000028  48 00 00 C4 */	b lbl_8018D208

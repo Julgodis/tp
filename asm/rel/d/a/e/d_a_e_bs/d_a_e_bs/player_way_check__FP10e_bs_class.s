@@ -1,8 +1,8 @@
 lbl_8068E4F0:
-/* 8068E4F0 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8068E4F4 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 8068E4F8 00000008  80 84 5D AC */	lwz r4, 0x5dac(r4)
-/* 8068E4FC 0000000C  A8 84 04 E6 */	lha r4, 0x4e6(r4)
+/* 8068E4F0 00000000  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8068E4F4 00000004  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8068E4F8 00000008  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8068E4FC 0000000C  A8 84 04 E6 */	lha r4, 0x4e6(r4)	/* effective address: 804066A6 */
 /* 8068E500 00000010  A8 03 04 E6 */	lha r0, 0x4e6(r3)
 /* 8068E504 00000014  7C 04 00 50 */	subf r0, r4, r0
 /* 8068E508 00000018  7C 00 07 35 */	extsh. r0, r0

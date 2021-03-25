@@ -59,7 +59,7 @@ lbl_800DEC68:
 /* 800DEC9C 00000034  54 60 02 95 */	rlwinm. r0, r3, 0, 0xa, 0xa
 /* 800DECA0 00000038  41 82 00 48 */	beq lbl_800DECE8
 /* 800DECA4 0000003C  54 60 02 D2 */	rlwinm r0, r3, 0, 0xb, 9
-/* 800DECA8 00000040  90 04 5F 18 */	stw r0, 0x5f18(r4)
+/* 800DECA8 00000040  90 04 5F 18 */	stw r0, 0x5f18(r4)	/* effective address: 8040C0D8 */
 /* 800DECAC 00000044  3C 60 00 02 */	lis r3, 0x0002 /* 0x000200B6@ha */
 /* 800DECB0 00000048  38 03 00 B6 */	addi r0, r3, 0x00B6 /* 0x000200B6@l */
 /* 800DECB4 0000004C  90 01 00 0C */	stw r0, 0xc(r1)

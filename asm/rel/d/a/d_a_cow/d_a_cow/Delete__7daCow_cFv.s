@@ -5,9 +5,9 @@ lbl_80662BE4:
 /* 80662BF0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80662BF4 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80662BF8 00000014  38 7F 05 6C */	addi r3, r31, 0x56c
-/* 80662BFC 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80662C00 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80662C04 00000020  4B FF 59 35 */	bl _unresolved
+/* 80662BFC 00000018  3C 80 80 66 */	lis r4, stringBase0@ha
+/* 80662C00 0000001C  38 84 2F 18 */	addi r4, r4, stringBase0@l
+/* 80662C04 00000020  4B 9C A4 04 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80662C08 00000024  80 1F 00 F0 */	lwz r0, 0xf0(r31)
 /* 80662C0C 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 80662C10 0000002C  41 82 00 18 */	beq lbl_80662C28

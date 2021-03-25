@@ -3,19 +3,19 @@ lbl_80CA3BB4:
 /* 80CA3BB8 00000004  7C 08 02 A6 */	mflr r0
 /* 80CA3BBC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CA3BC0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80CA3BC4 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CA3BC8 00000014  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80CA3BC4 00000010  3C 60 80 CA */	lis r3, __global_destructor_chain@ha
+/* 80CA3BC8 00000014  3B E3 4B 10 */	addi r31, r3, __global_destructor_chain@l
 /* 80CA3BCC 00000018  48 00 00 20 */	b lbl_80CA3BEC
 lbl_80CA3BD0:
 /* 80CA3BD0 00000000  80 05 00 00 */	lwz r0, 0(r5)
-/* 80CA3BD4 00000004  90 1F 00 00 */	stw r0, 0(r31)
+/* 80CA3BD4 00000004  90 1F 00 00 */	stw r0, 0(r31)	/* effective address: 80CA4B10 */
 /* 80CA3BD8 00000008  80 65 00 08 */	lwz r3, 8(r5)
 /* 80CA3BDC 0000000C  38 80 FF FF */	li r4, -1
 /* 80CA3BE0 00000010  81 85 00 04 */	lwz r12, 4(r5)
 /* 80CA3BE4 00000014  7D 89 03 A6 */	mtctr r12
 /* 80CA3BE8 00000018  4E 80 04 21 */	bctrl 
 lbl_80CA3BEC:
-/* 80CA3BEC 00000000  80 BF 00 00 */	lwz r5, 0(r31)
+/* 80CA3BEC 00000000  80 BF 00 00 */	lwz r5, 0(r31)	/* effective address: 80CA4B10 */
 /* 80CA3BF0 00000004  28 05 00 00 */	cmplwi r5, 0
 /* 80CA3BF4 00000008  40 82 FF DC */	bne lbl_80CA3BD0
 /* 80CA3BF8 0000000C  83 E1 00 0C */	lwz r31, 0xc(r1)

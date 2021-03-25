@@ -7,27 +7,27 @@ lbl_80A82878:
 /* 80A8288C 00000014  88 03 0E 0A */	lbz r0, 0xe0a(r3)
 /* 80A82890 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80A82894 0000001C  40 82 00 58 */	bne lbl_80A828EC
-/* 80A82898 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80A8289C 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80A82898 00000020  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 80A8289C 00000024  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 80A828A0 00000028  80 9F 0B D8 */	lwz r4, 0xbd8(r31)
 /* 80A828A4 0000002C  80 84 00 04 */	lwz r4, 4(r4)
 /* 80A828A8 00000030  38 BF 01 0C */	addi r5, r31, 0x10c
-/* 80A828AC 00000034  4B FF 98 2D */	bl _unresolved
+/* 80A828AC 00000034  4B 72 24 F4 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 80A828B0 00000038  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 80A828B4 0000003C  80 63 00 04 */	lwz r3, 4(r3)
 /* 80A828B8 00000040  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 80A828BC 00000044  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 80A828C0 00000048  38 63 03 30 */	addi r3, r3, 0x330
-/* 80A828C4 0000004C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80A828C8 00000050  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80A828CC 00000054  4B FF 98 0D */	bl _unresolved
-/* 80A828D0 00000058  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80A828D4 0000005C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80A828C4 0000004C  3C 80 80 3E */	lis r4, now__14mDoMtx_stack_c@ha
+/* 80A828C8 00000050  38 84 D4 70 */	addi r4, r4, now__14mDoMtx_stack_c@l
+/* 80A828CC 00000054  4B 8C 3B E4 */	b PSMTXCopy
+/* 80A828D0 00000058  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80A828D4 0000005C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80A828D8 00000060  80 9F 0B D8 */	lwz r4, 0xbd8(r31)
 /* 80A828DC 00000064  38 84 00 24 */	addi r4, r4, 0x24
-/* 80A828E0 00000068  4B FF 97 F9 */	bl _unresolved
+/* 80A828E0 00000068  4B 8C 3B D0 */	b PSMTXCopy
 /* 80A828E4 0000006C  80 7F 0B D8 */	lwz r3, 0xbd8(r31)
-/* 80A828E8 00000070  4B FF 97 F1 */	bl _unresolved
+/* 80A828E8 00000070  4B 58 B3 DC */	b mDoExt_modelUpdateDL__FP8J3DModel
 lbl_80A828EC:
 /* 80A828EC 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80A828F0 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

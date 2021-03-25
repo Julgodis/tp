@@ -5,23 +5,23 @@ lbl_80C60D40:
 /* 80C60D4C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C60D50 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80C60D54 00000014  38 7F 05 B0 */	addi r3, r31, 0x5b0
-/* 80C60D58 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80C60D5C 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80C60D60 00000020  80 84 00 00 */	lwz r4, 0(r4)
-/* 80C60D64 00000024  4B FF FC F5 */	bl _unresolved
+/* 80C60D58 00000018  3C 80 80 C6 */	lis r4, l_arcName@ha
+/* 80C60D5C 0000001C  38 84 1B DC */	addi r4, r4, l_arcName@l
+/* 80C60D60 00000020  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C61BDC */
+/* 80C60D64 00000024  4B 3C C1 58 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80C60D68 00000028  7C 60 1B 78 */	mr r0, r3
 /* 80C60D6C 0000002C  2C 00 00 04 */	cmpwi r0, 4
 /* 80C60D70 00000030  40 82 00 3C */	bne lbl_80C60DAC
 /* 80C60D74 00000034  7F E3 FB 78 */	mr r3, r31
-/* 80C60D78 00000038  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80C60D7C 0000003C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80C60D80 00000040  80 84 00 00 */	lwz r4, 0(r4)
+/* 80C60D78 00000038  3C 80 80 C6 */	lis r4, l_arcName@ha
+/* 80C60D7C 0000003C  38 84 1B DC */	addi r4, r4, l_arcName@l
+/* 80C60D80 00000040  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C61BDC */
 /* 80C60D84 00000044  38 A0 00 07 */	li r5, 7
-/* 80C60D88 00000048  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
-/* 80C60D8C 0000004C  38 C6 00 00 */	addi r6, r6, 0x0000 /* 0x00000000@l */
+/* 80C60D88 00000048  3C C0 80 07 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
+/* 80C60D8C 0000004C  38 C6 5A D8 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
 /* 80C60D90 00000050  38 E0 73 50 */	li r7, 0x7350
 /* 80C60D94 00000054  39 00 00 00 */	li r8, 0
-/* 80C60D98 00000058  4B FF FC C1 */	bl _unresolved
+/* 80C60D98 00000058  4B 41 7A 24 */	b MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f
 /* 80C60D9C 0000005C  7C 60 1B 78 */	mr r0, r3
 /* 80C60DA0 00000060  2C 00 00 05 */	cmpwi r0, 5
 /* 80C60DA4 00000064  40 82 00 08 */	bne lbl_80C60DAC

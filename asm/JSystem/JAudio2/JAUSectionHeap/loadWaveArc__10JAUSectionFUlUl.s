@@ -12,8 +12,8 @@ lbl_802A5948:
 /* 802A5970 00000028  3C 60 80 3D */	lis r3, __files@ha
 /* 802A5974 0000002C  38 63 29 B0 */	addi r3, r3, __files@l
 /* 802A5978 00000030  38 63 00 A0 */	addi r3, r3, 0xa0
-/* 802A597C 00000034  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802A5980 00000038  38 84 B9 50 */	addi r4, r4, stringBase0@l
+/* 802A597C 00000034  3C 80 80 3A */	lis r4, JAUSectionHeap__stringBase0@ha
+/* 802A5980 00000038  38 84 B9 50 */	addi r4, r4, JAUSectionHeap__stringBase0@l
 /* 802A5984 0000003C  38 84 00 24 */	addi r4, r4, 0x24
 /* 802A5988 00000040  4C C6 31 82 */	crclr 6
 /* 802A598C 00000044  48 0C 0E 11 */	bl fprintf

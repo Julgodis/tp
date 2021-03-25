@@ -10,25 +10,25 @@ lbl_80BF4FF0:
 /* 80BF5010 00000020  40 82 00 1C */	bne lbl_80BF502C
 /* 80BF5014 00000024  28 1E 00 00 */	cmplwi r30, 0
 /* 80BF5018 00000028  41 82 00 08 */	beq lbl_80BF5020
-/* 80BF501C 0000002C  4B FF FC BD */	bl _unresolved
+/* 80BF501C 0000002C  4B 42 3B 48 */	b __ct__10fopAc_ac_cFv
 lbl_80BF5020:
 /* 80BF5020 00000000  80 1E 04 A0 */	lwz r0, 0x4a0(r30)
 /* 80BF5024 00000004  60 00 00 08 */	ori r0, r0, 8
 /* 80BF5028 00000008  90 1E 04 A0 */	stw r0, 0x4a0(r30)
 lbl_80BF502C:
 /* 80BF502C 00000000  38 7E 05 68 */	addi r3, r30, 0x568
-/* 80BF5030 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80BF5034 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80BF5038 0000000C  80 84 00 00 */	lwz r4, 0(r4)
-/* 80BF503C 00000010  4B FF FC 9D */	bl _unresolved
+/* 80BF5030 00000004  3C 80 80 BF */	lis r4, l_arcName@ha
+/* 80BF5034 00000008  38 84 56 E4 */	addi r4, r4, l_arcName@l
+/* 80BF5038 0000000C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BF56E4 */
+/* 80BF503C 00000010  4B 43 7E 80 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80BF5040 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 80BF5044 00000018  2C 1F 00 04 */	cmpwi r31, 4
 /* 80BF5048 0000001C  40 82 00 40 */	bne lbl_80BF5088
 /* 80BF504C 00000020  7F C3 F3 78 */	mr r3, r30
-/* 80BF5050 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80BF5054 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80BF5050 00000024  3C 80 80 BF */	lis r4, CheckCreateHeap__FP10fopAc_ac_c@ha
+/* 80BF5054 00000028  38 84 4C F8 */	addi r4, r4, CheckCreateHeap__FP10fopAc_ac_c@l
 /* 80BF5058 0000002C  38 A0 35 00 */	li r5, 0x3500
-/* 80BF505C 00000030  4B FF FC 7D */	bl _unresolved
+/* 80BF505C 00000030  4B 42 54 54 */	b fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
 /* 80BF5060 00000034  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80BF5064 00000038  40 82 00 0C */	bne lbl_80BF5070
 /* 80BF5068 0000003C  38 60 00 05 */	li r3, 5

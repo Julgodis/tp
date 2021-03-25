@@ -68,7 +68,7 @@ lbl_8034CDE0:
 /* 8034CDE0 00000000  54 A5 06 3E */	clrlwi r5, r5, 0x18
 /* 8034CDE4 00000004  54 84 23 36 */	rlwinm r4, r4, 4, 0xc, 0x1b
 /* 8034CDE8 00000008  7C A4 23 78 */	or r4, r5, r4
-/* 8034CDEC 0000000C  B0 8B 00 00 */	sth r4, 0(r11)
+/* 8034CDEC 0000000C  B0 8B 00 00 */	sth r4, 0(r11)	/* effective address: 8044CA28 */
 /* 8034CDF0 00000010  3C 80 80 00 */	lis r4, 0x8000
 /* 8034CDF4 00000014  3D 20 01 00 */	lis r9, 0x100
 /* 8034CDF8 00000018  80 AD 92 90 */	lwz r5, changed(r13)
@@ -79,25 +79,25 @@ lbl_8034CDE0:
 /* 8034CE0C 0000002C  91 4D 92 94 */	stw r10, data_80451814(r13)
 /* 8034CE10 00000030  90 8D 92 90 */	stw r4, changed(r13)
 /* 8034CE14 00000034  3C 80 00 80 */	lis r4, 0x80
-/* 8034CE18 00000038  B0 0B 00 0E */	sth r0, 0xe(r11)
+/* 8034CE18 00000038  B0 0B 00 0E */	sth r0, 0xe(r11)	/* effective address: 8044CA36 */
 /* 8034CE1C 0000003C  80 0D 92 90 */	lwz r0, changed(r13)
 /* 8034CE20 00000040  81 4D 92 94 */	lwz r10, data_80451814(r13)
 /* 8034CE24 00000044  7C 00 4B 78 */	or r0, r0, r9
 /* 8034CE28 00000048  91 4D 92 94 */	stw r10, data_80451814(r13)
 /* 8034CE2C 0000004C  90 0D 92 90 */	stw r0, changed(r13)
-/* 8034CE30 00000050  B0 CB 00 0C */	sth r6, 0xc(r11)
+/* 8034CE30 00000050  B0 CB 00 0C */	sth r6, 0xc(r11)	/* effective address: 8044CA34 */
 /* 8034CE34 00000054  80 0D 92 90 */	lwz r0, changed(r13)
 /* 8034CE38 00000058  80 CD 92 94 */	lwz r6, data_80451814(r13)
 /* 8034CE3C 0000005C  7C 00 43 78 */	or r0, r0, r8
 /* 8034CE40 00000060  90 CD 92 94 */	stw r6, data_80451814(r13)
 /* 8034CE44 00000064  90 0D 92 90 */	stw r0, changed(r13)
-/* 8034CE48 00000068  B0 6B 00 12 */	sth r3, 0x12(r11)
+/* 8034CE48 00000068  B0 6B 00 12 */	sth r3, 0x12(r11)	/* effective address: 8044CA3A */
 /* 8034CE4C 0000006C  80 0D 92 90 */	lwz r0, changed(r13)
 /* 8034CE50 00000070  80 6D 92 94 */	lwz r3, data_80451814(r13)
 /* 8034CE54 00000074  7C 00 2B 78 */	or r0, r0, r5
 /* 8034CE58 00000078  90 6D 92 94 */	stw r3, data_80451814(r13)
 /* 8034CE5C 0000007C  90 0D 92 90 */	stw r0, changed(r13)
-/* 8034CE60 00000080  B0 EB 00 10 */	sth r7, 0x10(r11)
+/* 8034CE60 00000080  B0 EB 00 10 */	sth r7, 0x10(r11)	/* effective address: 8044CA38 */
 /* 8034CE64 00000084  80 0D 92 90 */	lwz r0, changed(r13)
 /* 8034CE68 00000088  80 6D 92 94 */	lwz r3, data_80451814(r13)
 /* 8034CE6C 0000008C  7C 00 23 78 */	or r0, r0, r4

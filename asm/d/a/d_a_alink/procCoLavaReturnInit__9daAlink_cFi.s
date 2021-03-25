@@ -163,7 +163,7 @@ lbl_800DC0C0:
 /* 800DC138 00000078  39 40 00 FF */	li r10, 0xff
 /* 800DC13C 0000007C  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800DC140 00000080  4B F7 09 51 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
-/* 800DC144 00000084  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
+/* 800DC144 00000084  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
 /* 800DC148 00000088  38 80 00 00 */	li r4, 0
 /* 800DC14C 0000008C  90 81 00 08 */	stw r4, 8(r1)
 /* 800DC150 00000090  38 00 FF FF */	li r0, -1
@@ -203,8 +203,8 @@ lbl_800DC1CC:
 /* 800DC1CC 00000000  48 0A 54 75 */	bl dCam_getBody__Fv
 /* 800DC1D0 00000004  38 80 00 09 */	li r4, 9
 /* 800DC1D4 00000008  7F A5 EB 78 */	mr r5, r29
-/* 800DC1D8 0000000C  3C C0 80 39 */	lis r6, stringBase0@ha
-/* 800DC1DC 00000010  38 C6 20 94 */	addi r6, r6, stringBase0@l
+/* 800DC1D8 0000000C  3C C0 80 39 */	lis r6, d_a_d_a_alink__stringBase0@ha
+/* 800DC1DC 00000010  38 C6 20 94 */	addi r6, r6, d_a_d_a_alink__stringBase0@l
 /* 800DC1E0 00000014  38 C6 00 43 */	addi r6, r6, 0x43
 /* 800DC1E4 00000018  38 E0 00 01 */	li r7, 1
 /* 800DC1E8 0000001C  39 1E 31 94 */	addi r8, r30, 0x3194

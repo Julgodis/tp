@@ -30,7 +30,7 @@ extern "C" void __ct__10dMsgUnit_cFv(); // 1
 extern "C" void __dt__10dMsgUnit_cFv(); // 1
 extern "C" void setTag__10dMsgUnit_cFiiPcb(); // 1
 extern "C" void __sinit_d_msg_unit_cpp(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_msg_d_msg_unit__stringBase0;
 extern "C" extern u8 g_msg_unit[4 + 4 /* padding */];
 extern "C" extern u8 data_804510D8[8];
 

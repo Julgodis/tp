@@ -5,18 +5,18 @@ lbl_80C3934C:
 /* 80C39358 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C3935C 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80C39360 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80C39364 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80C39368 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80C39364 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C39368 0000001C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80C3936C 00000020  38 7F 4F F8 */	addi r3, r31, 0x4ff8
-/* 80C39370 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80C39374 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80C39378 0000002C  4B FF F2 E1 */	bl _unresolved
+/* 80C39370 00000024  3C 80 80 C4 */	lis r4, stringBase0@ha
+/* 80C39374 00000028  38 84 96 CC */	addi r4, r4, stringBase0@l
+/* 80C39378 0000002C  4B 40 E7 64 */	b endCheckOld__16dEvent_manager_cFPCc
 /* 80C3937C 00000030  2C 03 00 00 */	cmpwi r3, 0
 /* 80C39380 00000034  41 82 00 14 */	beq lbl_80C39394
 /* 80C39384 00000038  38 7F 4E C8 */	addi r3, r31, 0x4ec8
-/* 80C39388 0000003C  4B FF F2 D1 */	bl _unresolved
+/* 80C39388 0000003C  4B 40 90 E0 */	b reset__14dEvt_control_cFv
 /* 80C3938C 00000040  7F C3 F3 78 */	mr r3, r30
-/* 80C39390 00000044  4B FF F2 C9 */	bl _unresolved
+/* 80C39390 00000044  4B 3E 08 EC */	b fopAcM_delete__FP10fopAc_ac_c
 lbl_80C39394:
 /* 80C39394 00000000  38 60 00 01 */	li r3, 1
 /* 80C39398 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

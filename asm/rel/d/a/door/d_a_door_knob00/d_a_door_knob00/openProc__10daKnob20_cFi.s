@@ -7,7 +7,7 @@ lbl_8045FBF8:
 /* 8045FC0C 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 8045FC10 00000018  7C 9F 23 78 */	mr r31, r4
 /* 8045FC14 0000001C  38 7E 05 7C */	addi r3, r30, 0x57c
-/* 8045FC18 00000020  4B FF EC 21 */	bl _unresolved
+/* 8045FC18 00000020  4B BA D8 10 */	b play__14mDoExt_baseAnmFv
 /* 8045FC1C 00000024  2C 03 00 00 */	cmpwi r3, 0
 /* 8045FC20 00000028  41 82 00 0C */	beq lbl_8045FC2C
 /* 8045FC24 0000002C  38 60 00 01 */	li r3, 1
@@ -19,14 +19,14 @@ lbl_8045FC2C:
 /* 8045FC38 0000000C  40 82 00 50 */	bne lbl_8045FC88
 lbl_8045FC3C:
 /* 8045FC3C 00000000  38 7E 05 7C */	addi r3, r30, 0x57c
-/* 8045FC40 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8045FC44 00000008  C0 24 00 00 */	lfs f1, 0x0000(r4)
-/* 8045FC48 0000000C  4B FF EB F1 */	bl _unresolved
+/* 8045FC40 00000004  3C 80 80 46 */	lis r4, lit_4377@ha
+/* 8045FC44 00000008  C0 24 06 B8 */	lfs f1, lit_4377@l(r4)
+/* 8045FC48 0000000C  4B EC 87 E4 */	b checkPass__12J3DFrameCtrlFf
 /* 8045FC4C 00000010  2C 03 00 00 */	cmpwi r3, 0
 /* 8045FC50 00000014  41 82 00 38 */	beq lbl_8045FC88
-/* 8045FC54 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8045FC58 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 8045FC5C 00000020  83 E3 5D AC */	lwz r31, 0x5dac(r3)
+/* 8045FC54 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045FC58 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8045FC5C 00000020  83 E3 5D AC */	lwz r31, 0x5dac(r3)	/* effective address: 8040BF6C */
 /* 8045FC60 00000024  7F C3 F3 78 */	mr r3, r30
 /* 8045FC64 00000028  4B FF EC 19 */	bl getExitNo__12knob_param_cFP10fopAc_ac_c
 /* 8045FC68 0000002C  7C 64 1B 78 */	mr r4, r3

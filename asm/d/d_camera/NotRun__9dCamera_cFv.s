@@ -34,9 +34,9 @@ lbl_80162D88:
 /* 80162DB4 0000002C  90 1E 06 0C */	stw r0, 0x60c(r30)
 /* 80162DB8 00000030  7F C3 F3 78 */	mr r3, r30
 /* 80162DBC 00000034  48 00 52 31 */	bl checkGroundInfo__9dCamera_cFv
-/* 80162DC0 00000038  80 1F 5D 7C */	lwz r0, 0x5d7c(r31)
+/* 80162DC0 00000038  80 1F 5D 7C */	lwz r0, 0x5d7c(r31)	/* effective address: 8040BF3C */
 /* 80162DC4 0000003C  54 00 06 6E */	rlwinm r0, r0, 0, 0x19, 0x17
-/* 80162DC8 00000040  90 1F 5D 7C */	stw r0, 0x5d7c(r31)
+/* 80162DC8 00000040  90 1F 5D 7C */	stw r0, 0x5d7c(r31)	/* effective address: 8040BF3C */
 /* 80162DCC 00000044  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80162DD0 00000048  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80162DD4 0000004C  80 03 51 84 */	lwz r0, 0x5184(r3)	/* effective address: 8040B344 */
@@ -58,7 +58,7 @@ lbl_80162DEC:
 /* 80162E10 00000024  48 00 1E 55 */	bl pushInfo__9dCamera_cFPQ29dCamera_c10dCamInfo_cs
 /* 80162E14 00000028  80 1E 06 8C */	lwz r0, 0x68c(r30)
 /* 80162E18 0000002C  90 1E 04 F4 */	stw r0, 0x4f4(r30)
-/* 80162E1C 00000030  80 1D 00 04 */	lwz r0, 4(r29)
+/* 80162E1C 00000030  80 1D 00 04 */	lwz r0, 4(r29)	/* effective address: 8042C8FC */
 /* 80162E20 00000034  90 1E 06 8C */	stw r0, 0x68c(r30)
 /* 80162E24 00000038  38 7E 0A EC */	addi r3, r30, 0xaec
 /* 80162E28 0000003C  3C 80 45 4E */	lis r4, 0x454E /* 0x454E3031@ha */
@@ -90,9 +90,9 @@ lbl_80162E48:
 /* 80162E8C 00000044  38 03 00 01 */	addi r0, r3, 1
 /* 80162E90 00000048  90 1E 01 74 */	stw r0, 0x174(r30)
 lbl_80162E94:
-/* 80162E94 00000000  80 1F 5D 7C */	lwz r0, 0x5d7c(r31)
+/* 80162E94 00000000  80 1F 5D 7C */	lwz r0, 0x5d7c(r31)	/* effective address: 8040BF3C */
 /* 80162E98 00000004  60 00 00 14 */	ori r0, r0, 0x14
-/* 80162E9C 00000008  90 1F 5D 7C */	stw r0, 0x5d7c(r31)
+/* 80162E9C 00000008  90 1F 5D 7C */	stw r0, 0x5d7c(r31)	/* effective address: 8040BF3C */
 /* 80162EA0 0000000C  80 9E 06 0C */	lwz r4, 0x60c(r30)
 /* 80162EA4 00000010  3C 60 FF F8 */	lis r3, 0xFFF8 /* 0xFFF7FF7F@ha */
 /* 80162EA8 00000014  38 03 FF 7F */	addi r0, r3, 0xFF7F /* 0xFFF7FF7F@l */

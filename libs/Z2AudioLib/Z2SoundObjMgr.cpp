@@ -117,7 +117,7 @@ asm Z2SoundObjMgr::Z2SoundObjMgr() {
 #pragma pop
 
 
-/* 802BF980-802BF994 0014+00 s=1 e=3 z=0  None .text      setForceBattleArea__13Z2SoundObjMgrFbUsUsUs                  */
+/* 802BF980-802BF994 0014+00 s=1 e=3 z=3  None .text      setForceBattleArea__13Z2SoundObjMgrFbUsUsUs                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

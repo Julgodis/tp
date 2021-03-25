@@ -5,12 +5,12 @@ lbl_80AAD120:
 /* 80AAD12C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80AAD130 00000010  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80AAD134 00000014  41 82 00 1C */	beq lbl_80AAD150
-/* 80AAD138 00000018  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 80AAD13C 0000001C  38 05 00 00 */	addi r0, r5, 0x0000 /* 0x00000000@l */
+/* 80AAD138 00000018  3C A0 80 AB */	lis r5, __vt__18daNpc_Post_Param_c@ha
+/* 80AAD13C 0000001C  38 05 DB D8 */	addi r0, r5, __vt__18daNpc_Post_Param_c@l
 /* 80AAD140 00000020  90 1F 00 00 */	stw r0, 0(r31)
 /* 80AAD144 00000024  7C 80 07 35 */	extsh. r0, r4
 /* 80AAD148 00000028  40 81 00 08 */	ble lbl_80AAD150
-/* 80AAD14C 0000002C  4B FF BA AD */	bl _unresolved
+/* 80AAD14C 0000002C  4B 82 1B F0 */	b __dl__FPv
 lbl_80AAD150:
 /* 80AAD150 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80AAD154 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

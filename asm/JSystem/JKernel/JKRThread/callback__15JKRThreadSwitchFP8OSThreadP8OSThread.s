@@ -20,7 +20,7 @@ lbl_802D1B14:
 /* 802D1B28 00000014  83 C3 42 8C */	lwz r30, sThreadList__9JKRThread@l(r3)
 /* 802D1B2C 00000018  48 00 00 FC */	b lbl_802D1C28
 lbl_802D1B30:
-/* 802D1B30 00000000  83 FE 00 00 */	lwz r31, 0(r30)
+/* 802D1B30 00000000  83 FE 00 00 */	lwz r31, 0(r30)	/* effective address: 8043428C */
 /* 802D1B34 00000004  80 1F 00 2C */	lwz r0, 0x2c(r31)
 /* 802D1B38 00000008  7C 00 D8 40 */	cmplw r0, r27
 /* 802D1B3C 0000000C  40 82 00 34 */	bne lbl_802D1B70
@@ -77,8 +77,8 @@ lbl_802D1BF4:
 /* 802D1BF8 00000004  40 80 00 2C */	bge lbl_802D1C24
 /* 802D1BFC 00000008  48 00 00 24 */	b lbl_802D1C20
 lbl_802D1C00:
-/* 802D1C00 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802D1C04 00000004  38 63 CF A8 */	addi r3, r3, stringBase0@l
+/* 802D1C00 00000000  3C 60 80 3A */	lis r3, JKRThread__stringBase0@ha
+/* 802D1C04 00000004  38 63 CF A8 */	addi r3, r3, JKRThread__stringBase0@l
 /* 802D1C08 00000008  38 63 00 34 */	addi r3, r3, 0x34
 /* 802D1C0C 0000000C  48 01 6A F1 */	bl JUTWarningConsole
 /* 802D1C10 00000010  83 AD 8D F4 */	lwz r29, sCurrentHeap__7JKRHeap(r13)
@@ -89,7 +89,7 @@ lbl_802D1C18:
 lbl_802D1C20:
 /* 802D1C20 00000000  83 AD 8D F0 */	lwz r29, sSystemHeap__7JKRHeap(r13)
 lbl_802D1C24:
-/* 802D1C24 00000000  83 DE 00 0C */	lwz r30, 0xc(r30)
+/* 802D1C24 00000000  83 DE 00 0C */	lwz r30, 0xc(r30)	/* effective address: 80434298 */
 lbl_802D1C28:
 /* 802D1C28 00000000  28 1E 00 00 */	cmplwi r30, 0
 /* 802D1C2C 00000004  40 82 FF 04 */	bne lbl_802D1B30

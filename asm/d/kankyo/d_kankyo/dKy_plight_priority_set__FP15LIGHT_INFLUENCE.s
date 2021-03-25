@@ -29,8 +29,8 @@ lbl_801A78F4:
 lbl_801A7900:
 /* 801A7900 00000000  2C 07 00 32 */	cmpwi r7, 0x32
 /* 801A7904 00000004  41 80 00 18 */	blt lbl_801A791C
-/* 801A7908 00000008  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801A790C 0000000C  38 63 4C 6C */	addi r3, r3, stringBase0@l
+/* 801A7908 00000008  3C 60 80 39 */	lis r3, d_kankyo_d_kankyo__stringBase0@ha
+/* 801A790C 0000000C  38 63 4C 6C */	addi r3, r3, d_kankyo_d_kankyo__stringBase0@l
 /* 801A7910 00000010  38 63 02 09 */	addi r3, r3, 0x209
 /* 801A7914 00000014  4C C6 31 82 */	crclr 6
 /* 801A7918 00000018  4B E5 F3 D5 */	bl OSReport_Warning

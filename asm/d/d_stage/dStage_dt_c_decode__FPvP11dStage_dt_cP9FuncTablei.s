@@ -44,8 +44,8 @@ lbl_80026144:
 /* 80026148 00000004  41 80 FF A0 */	blt lbl_800260E8
 /* 8002614C 00000008  48 00 00 18 */	b lbl_80026164
 lbl_80026150:
-/* 80026150 00000000  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 80026154 00000004  38 63 8A 50 */	addi r3, r3, stringBase0@l
+/* 80026150 00000000  3C 60 80 38 */	lis r3, d_d_stage__stringBase0@ha
+/* 80026154 00000004  38 63 8A 50 */	addi r3, r3, d_d_stage__stringBase0@l
 /* 80026158 00000008  38 63 00 EA */	addi r3, r3, 0xea
 /* 8002615C 0000000C  4C C6 31 82 */	crclr 6
 /* 80026160 00000010  4B FE 0A AD */	bl OSReport_Error

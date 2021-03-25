@@ -42,15 +42,15 @@ lbl_80AD6CC8:
 /* 80AD6CE8 00000020  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
 /* 80AD6CEC 00000024  40 82 00 2C */	bne lbl_80AD6D18
 /* 80AD6CF0 00000028  7F E3 FB 78 */	mr r3, r31
-/* 80AD6CF4 0000002C  4B FF E9 A5 */	bl _unresolved
+/* 80AD6CF4 0000002C  4B 67 58 EC */	b daNpcT_chkDoBtnIsSpeak__FP10fopAc_ac_c
 /* 80AD6CF8 00000030  2C 03 00 00 */	cmpwi r3, 0
 /* 80AD6CFC 00000034  41 82 00 1C */	beq lbl_80AD6D18
 /* 80AD6D00 00000038  38 00 00 08 */	li r0, 8
-/* 80AD6D04 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AD6D08 00000040  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80AD6D0C 00000044  98 03 5E 24 */	stb r0, 0x5e24(r3)
+/* 80AD6D04 0000003C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AD6D08 00000040  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AD6D0C 00000044  98 03 5E 24 */	stb r0, 0x5e24(r3)	/* effective address: 8040BFE4 */
 /* 80AD6D10 00000048  38 00 00 00 */	li r0, 0
-/* 80AD6D14 0000004C  98 03 5E 4A */	stb r0, 0x5e4a(r3)
+/* 80AD6D14 0000004C  98 03 5E 4A */	stb r0, 0x5e4a(r3)	/* effective address: 8040C00A */
 lbl_80AD6D18:
 /* 80AD6D18 00000000  38 60 00 01 */	li r3, 1
 /* 80AD6D1C 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

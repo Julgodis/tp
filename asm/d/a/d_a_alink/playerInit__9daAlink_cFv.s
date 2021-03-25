@@ -374,7 +374,7 @@ lbl_800A5234:
 /* 800A5248 00000014  90 77 31 88 */	stw r3, 0x3188(r23)
 /* 800A524C 00000018  48 00 01 5C */	b lbl_800A53A8
 lbl_800A5250:
-/* 800A5250 00000000  80 03 0D D0 */	lwz r0, 0xdd0(r3)
+/* 800A5250 00000000  80 03 0D D0 */	lwz r0, 0xdd0(r3)	/* effective address: 804112A0 */
 /* 800A5254 00000004  54 00 07 3E */	clrlwi r0, r0, 0x1c
 /* 800A5258 00000008  28 00 00 09 */	cmplwi r0, 9
 /* 800A525C 0000000C  40 82 00 18 */	bne lbl_800A5274
@@ -530,20 +530,20 @@ lbl_800A53DC:
 /* 800A547C 000000A0  7E E3 BB 78 */	mr r3, r23
 /* 800A5480 000000A4  38 80 00 00 */	li r4, 0
 /* 800A5484 000000A8  4B FF F4 8D */	bl setSelectEquipItem__9daAlink_cFi
-/* 800A5488 000000AC  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800A548C 000000B0  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800A5488 000000AC  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800A548C 000000B0  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800A5490 000000B4  38 63 01 70 */	addi r3, r3, 0x170
 /* 800A5494 000000B8  4B FF 85 CD */	bl checkStageName__9daAlink_cFPCc
 /* 800A5498 000000BC  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 800A549C 000000C0  40 82 00 34 */	bne lbl_800A54D0
-/* 800A54A0 000000C4  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800A54A4 000000C8  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800A54A0 000000C4  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800A54A4 000000C8  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800A54A8 000000CC  38 63 04 4D */	addi r3, r3, 0x44d
 /* 800A54AC 000000D0  4B FF 85 B5 */	bl checkStageName__9daAlink_cFPCc
 /* 800A54B0 000000D4  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 800A54B4 000000D8  40 82 00 1C */	bne lbl_800A54D0
-/* 800A54B8 000000DC  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800A54BC 000000E0  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800A54B8 000000DC  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800A54BC 000000E0  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800A54C0 000000E4  38 63 01 34 */	addi r3, r3, 0x134
 /* 800A54C4 000000E8  4B FF 85 9D */	bl checkStageName__9daAlink_cFPCc
 /* 800A54C8 000000EC  54 60 06 3F */	clrlwi. r0, r3, 0x18

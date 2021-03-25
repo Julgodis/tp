@@ -131,7 +131,7 @@ extern "C" void isFmapScreen__11dMeterMap_cFv(); // 1
 extern "C" void isDmapScreen__11dMeterMap_cFv(); // 1
 extern "C" void meter_map_move__11dMeterMap_cFUl(); // 1
 extern "C" void keyCheck__11dMeterMap_cFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_meter_d_meter_map__stringBase0;
 
 // 
 // External References:

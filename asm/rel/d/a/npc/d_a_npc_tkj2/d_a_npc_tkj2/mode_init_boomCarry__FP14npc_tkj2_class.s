@@ -5,15 +5,15 @@ lbl_80B1119C:
 /* 80B111A8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80B111AC 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80B111B0 00000014  38 7F 06 74 */	addi r3, r31, 0x674
-/* 80B111B4 00000018  4B FF FB A5 */	bl _unresolved
+/* 80B111B4 00000018  4B 56 61 F0 */	b ClrMoveBGOnly__9dBgS_AcchFv
 /* 80B111B8 0000001C  80 1F 06 A0 */	lwz r0, 0x6a0(r31)
 /* 80B111BC 00000020  54 00 07 FA */	rlwinm r0, r0, 0, 0x1f, 0x1d
 /* 80B111C0 00000024  90 1F 06 A0 */	stw r0, 0x6a0(r31)
 /* 80B111C4 00000028  38 7F 08 8C */	addi r3, r31, 0x88c
-/* 80B111C8 0000002C  4B FF FB 91 */	bl _unresolved
+/* 80B111C8 0000002C  4B 57 33 80 */	b GetTgHitGObj__12dCcD_GObjInfFv
 /* 80B111CC 00000030  38 7F 06 24 */	addi r3, r31, 0x624
 /* 80B111D0 00000034  38 9F 04 D0 */	addi r4, r31, 0x4d0
-/* 80B111D4 00000038  4B FF FB 85 */	bl _unresolved
+/* 80B111D4 00000038  4B 64 D3 DC */	b initOffset__20daPy_boomerangMove_cFPC4cXyz
 /* 80B111D8 0000003C  38 00 00 01 */	li r0, 1
 /* 80B111DC 00000040  98 1F 05 F2 */	stb r0, 0x5f2(r31)
 /* 80B111E0 00000044  83 E1 00 0C */	lwz r31, 0xc(r1)

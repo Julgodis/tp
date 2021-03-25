@@ -5,15 +5,15 @@ lbl_80D5D160:
 /* 80D5D16C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D5D170 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80D5D174 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80D5D178 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80D5D17C 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
-/* 80D5D180 00000020  C0 3F 00 38 */	lfs f1, 0x38(r31)
-/* 80D5D184 00000024  C0 5F 00 3C */	lfs f2, 0x3c(r31)
+/* 80D5D178 00000018  3C 80 80 D6 */	lis r4, lit_3694@ha
+/* 80D5D17C 0000001C  3B E4 D3 00 */	addi r31, r4, lit_3694@l
+/* 80D5D180 00000020  C0 3F 00 38 */	lfs f1, 0x38(r31)	/* effective address: 80D5D338 */
+/* 80D5D184 00000024  C0 5F 00 3C */	lfs f2, 0x3c(r31)	/* effective address: 80D5D33C */
 /* 80D5D188 00000028  FC 60 08 90 */	fmr f3, f1
-/* 80D5D18C 0000002C  C0 9F 00 40 */	lfs f4, 0x40(r31)
-/* 80D5D190 00000030  C0 BF 00 44 */	lfs f5, 0x44(r31)
+/* 80D5D18C 0000002C  C0 9F 00 40 */	lfs f4, 0x40(r31)	/* effective address: 80D5D340 */
+/* 80D5D190 00000030  C0 BF 00 44 */	lfs f5, 0x44(r31)	/* effective address: 80D5D344 */
 /* 80D5D194 00000034  FC C0 20 90 */	fmr f6, f4
-/* 80D5D198 00000038  4B FF F9 81 */	bl _unresolved
+/* 80D5D198 00000038  4B 2B D3 B0 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80D5D19C 0000003C  38 80 00 00 */	li r4, 0
 /* 80D5D1A0 00000040  90 9E 05 5C */	stw r4, 0x55c(r30)
 /* 80D5D1A4 00000044  A8 1E 04 B6 */	lha r0, 0x4b6(r30)
@@ -26,7 +26,7 @@ lbl_80D5D160:
 /* 80D5D1C0 00000060  B0 1E 04 E6 */	sth r0, 0x4e6(r30)
 /* 80D5D1C4 00000064  A8 1E 04 E0 */	lha r0, 0x4e0(r30)
 /* 80D5D1C8 00000068  B0 1E 04 E8 */	sth r0, 0x4e8(r30)
-/* 80D5D1CC 0000006C  C0 1F 00 1C */	lfs f0, 0x1c(r31)
+/* 80D5D1CC 0000006C  C0 1F 00 1C */	lfs f0, 0x1c(r31)	/* effective address: 80D5D31C */
 /* 80D5D1D0 00000070  D0 1E 05 6C */	stfs f0, 0x56c(r30)
 /* 80D5D1D4 00000074  98 9E 05 79 */	stb r4, 0x579(r30)
 /* 80D5D1D8 00000078  98 9E 05 78 */	stb r4, 0x578(r30)

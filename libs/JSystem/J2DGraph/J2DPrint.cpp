@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct J2DTextBoxHBinding {
+};
+
 struct JUtility {
 	struct TColor {
 	};
@@ -22,9 +25,6 @@ struct JUTFont {
 };
 
 struct J2DTextBoxVBinding {
-};
-
-struct J2DTextBoxHBinding {
 };
 
 struct J2DPrint {

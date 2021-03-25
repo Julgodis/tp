@@ -7,30 +7,30 @@ lbl_80C58D68:
 /* 80C58D7C 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80C58D80 00000018  7C 9F 23 78 */	mr r31, r4
 /* 80C58D84 0000001C  38 7E 05 C8 */	addi r3, r30, 0x5c8
-/* 80C58D88 00000020  4B FF F9 B1 */	bl _unresolved
+/* 80C58D88 00000020  4B 3B 46 A0 */	b play__14mDoExt_baseAnmFv
 /* 80C58D8C 00000024  80 1E 05 C4 */	lwz r0, 0x5c4(r30)
 /* 80C58D90 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 80C58D94 0000002C  41 82 00 0C */	beq lbl_80C58DA0
 /* 80C58D98 00000030  38 7E 05 E0 */	addi r3, r30, 0x5e0
-/* 80C58D9C 00000034  4B FF F9 9D */	bl _unresolved
+/* 80C58D9C 00000034  4B 3B 46 8C */	b play__14mDoExt_baseAnmFv
 lbl_80C58DA0:
 /* 80C58DA0 00000000  38 7E 05 A8 */	addi r3, r30, 0x5a8
-/* 80C58DA4 00000004  4B FF F9 95 */	bl _unresolved
+/* 80C58DA4 00000004  4B 3E FA C8 */	b eventUpdate__17dEvLib_callback_cFv
 /* 80C58DA8 00000008  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80C58DAC 0000000C  54 04 06 3E */	clrlwi r4, r0, 0x18
-/* 80C58DB0 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80C58DB4 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80C58DB0 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C58DB4 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C58DB8 00000018  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80C58DBC 0000001C  7C 05 07 74 */	extsb r5, r0
-/* 80C58DC0 00000020  4B FF F9 79 */	bl _unresolved
+/* 80C58DC0 00000020  4B 3D C5 A0 */	b isSwitch__10dSv_info_cCFii
 /* 80C58DC4 00000024  98 7E 06 03 */	stb r3, 0x603(r30)
 /* 80C58DC8 00000028  7F C3 F3 78 */	mr r3, r30
 /* 80C58DCC 0000002C  88 1E 05 F8 */	lbz r0, 0x5f8(r30)
 /* 80C58DD0 00000030  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 80C58DD4 00000034  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80C58DD8 00000038  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
+/* 80C58DD4 00000034  3C 80 80 C6 */	lis r4, l_mode_func@ha
+/* 80C58DD8 00000038  38 04 A1 C8 */	addi r0, r4, l_mode_func@l
 /* 80C58DDC 0000003C  7D 80 2A 14 */	add r12, r0, r5
-/* 80C58DE0 00000040  4B FF F9 59 */	bl _unresolved
+/* 80C58DE0 00000040  4B 70 92 A4 */	b __ptmf_scall
 /* 80C58DE4 00000044  60 00 00 00 */	nop 
 /* 80C58DE8 00000048  7F C3 F3 78 */	mr r3, r30
 /* 80C58DEC 0000004C  48 00 00 35 */	bl effectSet__12daLv3Water_cFv

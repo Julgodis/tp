@@ -19,25 +19,25 @@ lbl_80D1F358:
 /* 80D1F39C 00000044  C0 84 00 48 */	lfs f4, 0x48(r4)
 /* 80D1F3A0 00000048  C0 A4 00 4C */	lfs f5, 0x4c(r4)
 /* 80D1F3A4 0000004C  C0 C4 00 50 */	lfs f6, 0x50(r4)
-/* 80D1F3A8 00000050  4B FF FC 91 */	bl _unresolved
-/* 80D1F3AC 00000054  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D1F3B0 00000058  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80D1F3B4 0000005C  80 63 00 00 */	lwz r3, 0(r3)
+/* 80D1F3A8 00000050  4B 2F B1 A0 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
+/* 80D1F3AC 00000054  3C 60 80 D2 */	lis r3, l_arcName@ha
+/* 80D1F3B0 00000058  38 63 F8 F4 */	addi r3, r3, l_arcName@l
+/* 80D1F3B4 0000005C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80D1F8F4 */
 /* 80D1F3B8 00000060  38 80 00 04 */	li r4, 4
-/* 80D1F3BC 00000064  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 80D1F3C0 00000068  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
+/* 80D1F3BC 00000064  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80D1F3C0 00000068  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80D1F3C4 0000006C  3C A5 00 02 */	addis r5, r5, 2
 /* 80D1F3C8 00000070  38 C0 00 80 */	li r6, 0x80
 /* 80D1F3CC 00000074  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 80D1F3D0 00000078  4B FF FC 69 */	bl _unresolved
-/* 80D1F3D4 0000007C  80 83 00 28 */	lwz r4, 0x28(r3)
+/* 80D1F3D0 00000078  4B 31 CF 1C */	b getRes__14dRes_control_cFPCclP11dRes_info_ci
+/* 80D1F3D4 0000007C  80 83 00 28 */	lwz r4, 0x28(r3)	/* effective address: 80D1F91C */
 /* 80D1F3D8 00000080  80 A4 00 04 */	lwz r5, 4(r4)
-/* 80D1F3DC 00000084  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80D1F3E0 00000088  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
+/* 80D1F3DC 00000084  3C 80 80 D2 */	lis r4, nodeCallBack__FP8J3DJointi@ha
+/* 80D1F3E0 00000088  38 04 F1 90 */	addi r0, r4, nodeCallBack__FP8J3DJointi@l
 /* 80D1F3E4 0000008C  90 05 00 04 */	stw r0, 4(r5)
-/* 80D1F3E8 00000090  80 63 00 28 */	lwz r3, 0x28(r3)
-/* 80D1F3EC 00000094  80 63 00 08 */	lwz r3, 8(r3)
-/* 80D1F3F0 00000098  90 03 00 04 */	stw r0, 4(r3)
+/* 80D1F3E8 00000090  80 63 00 28 */	lwz r3, 0x28(r3)	/* effective address: 80D1F91C */
+/* 80D1F3EC 00000094  80 63 00 08 */	lwz r3, 8(r3)	/* effective address: 80D1F8FC */
+/* 80D1F3F0 00000098  90 03 00 04 */	stw r0, 4(r3)	/* effective address: 80D1F8F8 */
 /* 80D1F3F4 0000009C  80 7F 05 A8 */	lwz r3, 0x5a8(r31)
 /* 80D1F3F8 000000A0  93 E3 00 14 */	stw r31, 0x14(r3)
 /* 80D1F3FC 000000A4  38 60 00 01 */	li r3, 1

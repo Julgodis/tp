@@ -73,7 +73,7 @@ extern "C" void moveLightDropAnime__16dMenuMapCommon_cFv(); // 1
 extern "C" void getIconSizeX__16dMenuMapCommon_cFUc(); // 1
 extern "C" void getIconSizeY__16dMenuMapCommon_cFUc(); // 1
 extern "C" void debugIcon__16dMenuMapCommon_cFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_menu_d_menu_map_common__stringBase0;
 
 // 
 // External References:

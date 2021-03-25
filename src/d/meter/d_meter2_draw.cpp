@@ -11,30 +11,10 @@
 // Types:
 // 
 
+struct J2DAnmColor {
+};
+
 struct JKRExpHeap {
-};
-
-struct JKRArchive {
-	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
-};
-
-struct J2DGrafContext {
-};
-
-struct J2DScreen {
-	/* 802F8498 */ J2DScreen();
-	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
-	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-	/* 802F9690 */ void animation();
-};
-
-struct CPaneMgrAlpha {
-	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 802555C8 */ void show();
-	/* 80255608 */ void hide();
-	/* 8025564C */ void isVisible();
-	/* 802557D0 */ void setAlphaRate(f32);
-	/* 80255828 */ void getAlphaRate();
 };
 
 struct JUtility {
@@ -57,6 +37,20 @@ struct J2DPane {
 	/* 802F7FCC */ void animationTransform();
 };
 
+struct J2DGrafContext {
+};
+
+struct JKRArchive {
+	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
+};
+
+struct J2DScreen {
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+	/* 802F9690 */ void animation();
+};
+
 struct CPaneMgr {
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80254458 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
@@ -64,7 +58,13 @@ struct CPaneMgr {
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
-struct J2DAnmColor {
+struct CPaneMgrAlpha {
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 802555C8 */ void show();
+	/* 80255608 */ void hide();
+	/* 8025564C */ void isVisible();
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255828 */ void getAlphaRate();
 };
 
 struct dMeter2Draw_c {
@@ -192,10 +192,7 @@ struct dKantera_icon_c {
 	/* 801AEC44 */ void setNowGauge(u16, u16);
 };
 
-struct ResTIMG {
-};
-
-struct ResTLUT {
+struct JMSMesgEntry_c {
 };
 
 struct JGeometry {
@@ -207,12 +204,15 @@ struct JGeometry {
 
 };
 
+struct ResTLUT {
+};
+
+struct ResTIMG {
+};
+
 struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
-};
-
-struct JMSMesgEntry_c {
 };
 
 struct dMeter2Info_c {
@@ -369,7 +369,7 @@ extern "C" extern u8 const data_803987C0[32];
 extern "C" extern u8 const data_803987E0[32];
 extern "C" extern u8 const data_80398800[40];
 extern "C" extern u8 const data_803988B8[24];
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_meter_d_meter2_draw__stringBase0;
 
 // 
 // External References:
@@ -721,16 +721,16 @@ SECTION_DEAD static char const* const pad_80398A77 = "";
 
 /* 803BF328-803BF350 0028+00 s=1 e=0 z=0  None .data      bmg_filename$3954                                            */
 SECTION_DATA static void* data_803BF328[10] = {
-	/* 0    */ (void*)&stringBase0,
-	/* 1    */ (void*)(((char*)&stringBase0)+0xB),
-	/* 2    */ (void*)(((char*)&stringBase0)+0x16),
-	/* 3    */ (void*)(((char*)&stringBase0)+0x21),
-	/* 4    */ (void*)(((char*)&stringBase0)+0x2C),
-	/* 5    */ (void*)(((char*)&stringBase0)+0x37),
-	/* 6    */ (void*)(((char*)&stringBase0)+0x42),
-	/* 7    */ (void*)(((char*)&stringBase0)+0x4D),
-	/* 8    */ (void*)(((char*)&stringBase0)+0x58),
-	/* 9    */ (void*)(((char*)&stringBase0)+0x63),
+	/* 0    */ (void*)&d_meter_d_meter2_draw__stringBase0,
+	/* 1    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0xB),
+	/* 2    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x16),
+	/* 3    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x21),
+	/* 4    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x2C),
+	/* 5    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x37),
+	/* 6    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x42),
+	/* 7    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x4D),
+	/* 8    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x58),
+	/* 9    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x63),
 };
 
 /* 803BF350-803BF554 0204+00 s=1 e=0 z=0  None .data      i_action_num$8471                                            */

@@ -16,8 +16,8 @@ lbl_801E7F9C:
 /* 801E7FD4 00000038  3B C0 00 00 */	li r30, 0
 /* 801E7FD8 0000003C  3C 60 80 39 */	lis r3, data_803975B0@ha
 /* 801E7FDC 00000040  3B A3 75 B0 */	addi r29, r3, data_803975B0@l
-/* 801E7FE0 00000044  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801E7FE4 00000048  3B 83 75 D8 */	addi r28, r3, stringBase0@l
+/* 801E7FE0 00000044  3C 60 80 39 */	lis r3, d_menu_d_menu_option__stringBase0@ha
+/* 801E7FE4 00000048  3B 83 75 D8 */	addi r28, r3, d_menu_d_menu_option__stringBase0@l
 lbl_801E7FE8:
 /* 801E7FE8 00000000  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801E7FEC 00000004  7C 9D F2 14 */	add r4, r29, r30

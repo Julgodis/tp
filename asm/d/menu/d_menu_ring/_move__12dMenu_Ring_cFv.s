@@ -48,7 +48,7 @@ lbl_801EAC74:
 /* 801EACA0 0000002C  41 82 00 14 */	beq lbl_801EACB4
 /* 801EACA4 00000030  D0 3F 06 10 */	stfs f1, 0x610(r31)
 /* 801EACA8 00000034  80 7F 00 10 */	lwz r3, 0x10(r31)
-/* 801EACAC 00000038  C0 24 00 28 */	lfs f1, 0x28(r4)
+/* 801EACAC 00000038  C0 24 00 28 */	lfs f1, 0x28(r4)	/* effective address: 8042FB24 */
 /* 801EACB0 0000003C  4B FA A5 19 */	bl setScale__16dSelect_cursor_cFf
 lbl_801EACB4:
 /* 801EACB4 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

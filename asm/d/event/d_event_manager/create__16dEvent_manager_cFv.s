@@ -36,8 +36,8 @@ lbl_80046764:
 /* 80046794 00000030  4B FF F9 D9 */	bl init__11dEvDtBase_cFPci
 /* 80046798 00000034  38 7D 01 68 */	addi r3, r29, 0x168
 /* 8004679C 00000038  4B FF F9 9D */	bl init__11dEvDtBase_cFv
-/* 800467A0 0000003C  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 800467A4 00000040  38 63 9F 60 */	addi r3, r3, stringBase0@l
+/* 800467A0 0000003C  3C 60 80 38 */	lis r3, d_event_d_event_manager__stringBase0@ha
+/* 800467A4 00000040  38 63 9F 60 */	addi r3, r3, d_event_d_event_manager__stringBase0@l
 /* 800467A8 00000044  38 63 01 1E */	addi r3, r3, 0x11e
 /* 800467AC 00000048  3C 80 80 38 */	lis r4, data_80379F50@ha
 /* 800467B0 0000004C  38 84 9F 50 */	addi r4, r4, data_80379F50@l

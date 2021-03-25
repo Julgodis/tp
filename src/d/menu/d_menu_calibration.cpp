@@ -103,7 +103,7 @@ extern "C" void setExplainString__19dMenu_Calibration_cFUs(); // 1
 extern "C" void setHIO__19dMenu_Calibration_cFb(); // 1
 extern "C" void draw__19dMenu_Calibration_cFv(); // 1
 extern "C" void __sinit_d_menu_calibration_cpp(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_menu_d_menu_calibration__stringBase0;
 
 // 
 // External References:

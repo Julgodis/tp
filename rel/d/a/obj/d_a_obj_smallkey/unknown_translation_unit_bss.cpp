@@ -25,6 +25,6 @@ extern "C" extern u8 data_80CDBAB0[4];
 // 
 
 /* ############################################################################################## */
-/* 80CDBAB0-80CDBAB4 0004+00 s=0 e=0 z=0  None .bss       None                                                         */
+/* 80CDBAB0-80CDBAB4 0004+00 s=0 e=1 z=0  None .bss       None                                                         */
 u8 data_80CDBAB0[4];
 

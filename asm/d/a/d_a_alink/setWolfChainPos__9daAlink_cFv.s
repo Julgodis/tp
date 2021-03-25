@@ -255,9 +255,9 @@ lbl_8012C6A0:
 /* 8012C6C4 00000024  3C 60 80 43 */	lis r3, Zero__4cXyz@ha
 /* 8012C6C8 00000028  C0 03 0C F4 */	lfs f0, Zero__4cXyz@l(r3)
 /* 8012C6CC 0000002C  D0 01 00 70 */	stfs f0, 0x70(r1)
-/* 8012C6D0 00000030  C0 1A 00 04 */	lfs f0, 4(r26)
+/* 8012C6D0 00000030  C0 1A 00 04 */	lfs f0, 4(r26)	/* effective address: 80430CF8 */
 /* 8012C6D4 00000034  D0 01 00 74 */	stfs f0, 0x74(r1)
-/* 8012C6D8 00000038  C0 1A 00 08 */	lfs f0, 8(r26)
+/* 8012C6D8 00000038  C0 1A 00 08 */	lfs f0, 8(r26)	/* effective address: 80430CFC */
 /* 8012C6DC 0000003C  D0 01 00 78 */	stfs f0, 0x78(r1)
 /* 8012C6E0 00000040  48 00 00 3C */	b lbl_8012C71C
 lbl_8012C6E4:

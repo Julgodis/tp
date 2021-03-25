@@ -31,7 +31,7 @@ lbl_800E6EEC:
 /* 800E6F60 00000074  D0 1E 34 78 */	stfs f0, 0x3478(r30)
 /* 800E6F64 00000078  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800E6F68 0000007C  C0 42 93 34 */	lfs f2, lit_7710(r2)
-/* 800E6F6C 00000080  C0 1F 00 A8 */	lfs f0, 0xa8(r31)
+/* 800E6F6C 00000080  C0 1F 00 A8 */	lfs f0, 0xa8(r31)	/* effective address: 8038ECF0 */
 /* 800E6F70 00000084  EC 02 00 28 */	fsubs f0, f2, f0
 /* 800E6F74 00000088  EC 01 00 24 */	fdivs f0, f1, f0
 /* 800E6F78 0000008C  D0 1E 34 7C */	stfs f0, 0x347c(r30)

@@ -15,38 +15,38 @@ lbl_80ACC980:
 /* 80ACC9B4 00000034  48 00 00 80 */	b lbl_80ACCA34
 lbl_80ACC9B8:
 /* 80ACC9B8 00000000  38 7F 10 C4 */	addi r3, r31, 0x10c4
-/* 80ACC9BC 00000004  4B FF ED 7D */	bl _unresolved
+/* 80ACC9BC 00000004  4B 67 8D 4C */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80ACC9C0 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80ACC9C4 0000000C  40 82 00 70 */	bne lbl_80ACCA34
 /* 80ACC9C8 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80ACC9CC 00000014  38 80 01 0D */	li r4, 0x10d
-/* 80ACC9D0 00000018  4B FF ED 69 */	bl _unresolved
+/* 80ACC9D0 00000018  4B 67 F4 5C */	b getNearestActorP__8daNpcT_cFs
 /* 80ACC9D4 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80ACC9D8 00000020  38 7F 10 C4 */	addi r3, r31, 0x10c4
-/* 80ACC9DC 00000024  4B FF ED 5D */	bl _unresolved
+/* 80ACC9DC 00000024  4B 67 8D 04 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 /* 80ACC9E0 00000028  48 00 00 54 */	b lbl_80ACCA34
 lbl_80ACC9E4:
 /* 80ACC9E4 00000000  38 7F 10 CC */	addi r3, r31, 0x10cc
-/* 80ACC9E8 00000004  4B FF ED 51 */	bl _unresolved
+/* 80ACC9E8 00000004  4B 67 8D 20 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80ACC9EC 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80ACC9F0 0000000C  40 82 00 1C */	bne lbl_80ACCA0C
 /* 80ACC9F4 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80ACC9F8 00000014  38 80 02 54 */	li r4, 0x254
-/* 80ACC9FC 00000018  4B FF ED 3D */	bl _unresolved
+/* 80ACC9FC 00000018  4B 67 F4 30 */	b getNearestActorP__8daNpcT_cFs
 /* 80ACCA00 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80ACCA04 00000020  38 7F 10 CC */	addi r3, r31, 0x10cc
-/* 80ACCA08 00000024  4B FF ED 31 */	bl _unresolved
+/* 80ACCA08 00000024  4B 67 8C D8 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 lbl_80ACCA0C:
 /* 80ACCA0C 00000000  38 7F 10 D4 */	addi r3, r31, 0x10d4
-/* 80ACCA10 00000004  4B FF ED 29 */	bl _unresolved
+/* 80ACCA10 00000004  4B 67 8C F8 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80ACCA14 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80ACCA18 0000000C  40 82 00 1C */	bne lbl_80ACCA34
 /* 80ACCA1C 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80ACCA20 00000014  38 80 02 45 */	li r4, 0x245
-/* 80ACCA24 00000018  4B FF ED 15 */	bl _unresolved
+/* 80ACCA24 00000018  4B 67 F4 08 */	b getNearestActorP__8daNpcT_cFs
 /* 80ACCA28 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80ACCA2C 00000020  38 7F 10 D4 */	addi r3, r31, 0x10d4
-/* 80ACCA30 00000024  4B FF ED 09 */	bl _unresolved
+/* 80ACCA30 00000024  4B 67 8C B0 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 lbl_80ACCA34:
 /* 80ACCA34 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80ACCA38 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

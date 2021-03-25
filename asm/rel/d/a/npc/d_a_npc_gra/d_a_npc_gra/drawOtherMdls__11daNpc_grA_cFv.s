@@ -10,11 +10,11 @@ lbl_809C1064:
 /* 809C1084 00000020  80 9F 0B D8 */	lwz r4, 0xbd8(r31)
 /* 809C1088 00000024  28 04 00 00 */	cmplwi r4, 0
 /* 809C108C 00000028  41 82 00 B4 */	beq lbl_809C1140
-/* 809C1090 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 809C1094 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 809C1090 0000002C  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 809C1094 00000030  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 809C1098 00000034  80 84 00 04 */	lwz r4, 4(r4)
 /* 809C109C 00000038  38 BF 01 0C */	addi r5, r31, 0x10c
-/* 809C10A0 0000003C  4B FF D8 19 */	bl _unresolved
+/* 809C10A0 0000003C  4B 7E 3D 00 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 809C10A4 00000040  88 1F 14 74 */	lbz r0, 0x1474(r31)
 /* 809C10A8 00000044  2C 00 00 07 */	cmpwi r0, 7
 /* 809C10AC 00000048  41 82 00 14 */	beq lbl_809C10C0
@@ -26,7 +26,7 @@ lbl_809C10C0:
 /* 809C10C0 00000000  38 7F 14 DC */	addi r3, r31, 0x14dc
 /* 809C10C4 00000004  80 9F 0B D8 */	lwz r4, 0xbd8(r31)
 /* 809C10C8 00000008  38 84 00 24 */	addi r4, r4, 0x24
-/* 809C10CC 0000000C  4B FF D7 ED */	bl _unresolved
+/* 809C10CC 0000000C  4B 98 53 E4 */	b PSMTXCopy
 /* 809C10D0 00000010  48 00 00 50 */	b lbl_809C1120
 lbl_809C10D4:
 /* 809C10D4 00000000  80 7F 05 68 */	lwz r3, 0x568(r31)
@@ -34,29 +34,29 @@ lbl_809C10D4:
 /* 809C10DC 00000008  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 809C10E0 0000000C  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 809C10E4 00000010  38 63 03 30 */	addi r3, r3, 0x330
-/* 809C10E8 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 809C10EC 00000018  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 809C10F0 0000001C  4B FF D7 C9 */	bl _unresolved
+/* 809C10E8 00000014  3C 80 80 3E */	lis r4, now__14mDoMtx_stack_c@ha
+/* 809C10EC 00000018  38 84 D4 70 */	addi r4, r4, now__14mDoMtx_stack_c@l
+/* 809C10F0 0000001C  4B 98 53 C0 */	b PSMTXCopy
 /* 809C10F4 00000020  38 7F 04 EC */	addi r3, r31, 0x4ec
-/* 809C10F8 00000024  4B FF D7 C1 */	bl _unresolved
-/* 809C10FC 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 809C1100 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 809C10F8 00000024  4B 64 BD 78 */	b scaleM__14mDoMtx_stack_cFRC4cXyz
+/* 809C10FC 00000028  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 809C1100 0000002C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 809C1104 00000030  80 9F 0B D8 */	lwz r4, 0xbd8(r31)
 /* 809C1108 00000034  38 84 00 24 */	addi r4, r4, 0x24
-/* 809C110C 00000038  4B FF D7 AD */	bl _unresolved
+/* 809C110C 00000038  4B 98 53 A4 */	b PSMTXCopy
 /* 809C1110 0000003C  80 7F 0B D8 */	lwz r3, 0xbd8(r31)
 /* 809C1114 00000040  80 83 00 04 */	lwz r4, 4(r3)
 /* 809C1118 00000044  7F E3 FB 78 */	mr r3, r31
-/* 809C111C 00000048  4B FF D7 9D */	bl _unresolved
+/* 809C111C 00000048  4B 65 C3 10 */	b fopAcM_setEffectMtx__FPC10fopAc_ac_cPC12J3DModelData
 lbl_809C1120:
 /* 809C1120 00000000  80 7F 0B D8 */	lwz r3, 0xbd8(r31)
-/* 809C1124 00000004  4B FF D7 95 */	bl _unresolved
-/* 809C1128 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 809C112C 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 809C1124 00000004  4B 64 CB A0 */	b mDoExt_modelUpdateDL__FP8J3DModel
+/* 809C1128 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809C112C 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809C1130 00000010  38 63 61 C0 */	addi r3, r3, 0x61c0
 /* 809C1134 00000014  80 9F 09 A0 */	lwz r4, 0x9a0(r31)
 /* 809C1138 00000018  80 BF 0B D8 */	lwz r5, 0xbd8(r31)
-/* 809C113C 0000001C  4B FF D7 7D */	bl _unresolved
+/* 809C113C 0000001C  4B 69 4D E0 */	b addReal__21dDlst_shadowControl_cFUlP8J3DModel
 lbl_809C1140:
 /* 809C1140 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 809C1144 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

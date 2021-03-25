@@ -93,8 +93,8 @@ lbl_800F2A88:
 /* 800F2A88 00000000  48 08 EB B9 */	bl dCam_getBody__Fv
 /* 800F2A8C 00000004  38 80 00 12 */	li r4, 0x12
 /* 800F2A90 00000008  7F C5 F3 78 */	mr r5, r30
-/* 800F2A94 0000000C  3C C0 80 39 */	lis r6, stringBase0@ha
-/* 800F2A98 00000010  38 C6 20 94 */	addi r6, r6, stringBase0@l
+/* 800F2A94 0000000C  3C C0 80 39 */	lis r6, d_a_d_a_alink__stringBase0@ha
+/* 800F2A98 00000010  38 C6 20 94 */	addi r6, r6, d_a_d_a_alink__stringBase0@l
 /* 800F2A9C 00000014  38 C6 00 43 */	addi r6, r6, 0x43
 /* 800F2AA0 00000018  38 E0 00 01 */	li r7, 1
 /* 800F2AA4 0000001C  39 1F 31 9C */	addi r8, r31, 0x319c

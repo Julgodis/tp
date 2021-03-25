@@ -5,8 +5,8 @@ lbl_800A4068:
 /* 800A4074 0000000C  39 61 00 20 */	addi r11, r1, 0x20
 /* 800A4078 00000010  48 2B E1 5D */	bl _savegpr_27
 /* 800A407C 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 800A4080 00000018  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800A4084 0000001C  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800A4080 00000018  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800A4084 0000001C  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800A4088 00000020  38 63 03 34 */	addi r3, r3, 0x334
 /* 800A408C 00000024  38 80 00 5D */	li r4, 0x5d
 /* 800A4090 00000028  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
@@ -16,7 +16,7 @@ lbl_800A4068:
 /* 800A40A0 00000038  7F C5 F3 78 */	mr r5, r30
 /* 800A40A4 0000003C  38 C0 00 80 */	li r6, 0x80
 /* 800A40A8 00000040  4B F9 82 45 */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
-/* 800A40AC 00000044  80 03 00 1C */	lwz r0, 0x1c(r3)
+/* 800A40AC 00000044  80 03 00 1C */	lwz r0, 0x1c(r3)	/* effective address: 803923E4 */
 /* 800A40B0 00000048  7C 03 02 14 */	add r0, r3, r0
 /* 800A40B4 0000004C  90 1F 07 C0 */	stw r0, 0x7c0(r31)
 /* 800A40B8 00000050  3C 60 80 40 */	lis r3, mDemoArcName__20dStage_roomControl_c@ha
@@ -25,8 +25,8 @@ lbl_800A4068:
 /* 800A40C4 0000005C  41 82 01 88 */	beq lbl_800A424C
 /* 800A40C8 00000060  7F E3 FB 78 */	mr r3, r31
 /* 800A40CC 00000064  38 9F 06 A0 */	addi r4, r31, 0x6a0
-/* 800A40D0 00000068  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 800A40D4 0000006C  38 A5 20 94 */	addi r5, r5, stringBase0@l
+/* 800A40D0 00000068  3C A0 80 39 */	lis r5, d_a_d_a_alink__stringBase0@ha
+/* 800A40D4 0000006C  38 A5 20 94 */	addi r5, r5, d_a_d_a_alink__stringBase0@l
 /* 800A40D8 00000070  38 A5 03 3B */	addi r5, r5, 0x33b
 /* 800A40DC 00000074  3C C0 01 00 */	lis r6, 0x100
 /* 800A40E0 00000078  4B FF FE 21 */	bl initDemoModel__9daAlink_cFPP8J3DModelPCcUl
@@ -39,8 +39,8 @@ lbl_800A40F4:
 /* 800A40F8 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 800A40FC 00000008  41 82 00 28 */	beq lbl_800A4124
 /* 800A4100 0000000C  38 7F 06 A4 */	addi r3, r31, 0x6a4
-/* 800A4104 00000010  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 800A4108 00000014  38 84 20 94 */	addi r4, r4, stringBase0@l
+/* 800A4104 00000010  3C 80 80 39 */	lis r4, d_a_d_a_alink__stringBase0@ha
+/* 800A4108 00000014  38 84 20 94 */	addi r4, r4, d_a_d_a_alink__stringBase0@l
 /* 800A410C 00000018  38 84 03 58 */	addi r4, r4, 0x358
 /* 800A4110 0000001C  4B FF FE 89 */	bl initDemoBck__9daAlink_cFPP13mDoExt_bckAnmPCc
 /* 800A4114 00000020  2C 03 00 00 */	cmpwi r3, 0
@@ -50,8 +50,8 @@ lbl_800A40F4:
 lbl_800A4124:
 /* 800A4124 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800A4128 00000004  38 9F 06 A8 */	addi r4, r31, 0x6a8
-/* 800A412C 00000008  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 800A4130 0000000C  38 A5 20 94 */	addi r5, r5, stringBase0@l
+/* 800A412C 00000008  3C A0 80 39 */	lis r5, d_a_d_a_alink__stringBase0@ha
+/* 800A4130 0000000C  38 A5 20 94 */	addi r5, r5, d_a_d_a_alink__stringBase0@l
 /* 800A4134 00000010  38 A5 03 75 */	addi r5, r5, 0x375
 /* 800A4138 00000014  38 C0 00 00 */	li r6, 0
 /* 800A413C 00000018  4B FF FD C5 */	bl initDemoModel__9daAlink_cFPP8J3DModelPCcUl
@@ -64,8 +64,8 @@ lbl_800A4150:
 /* 800A4154 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 800A4158 00000008  41 82 00 28 */	beq lbl_800A4180
 /* 800A415C 0000000C  38 7F 06 AC */	addi r3, r31, 0x6ac
-/* 800A4160 00000010  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 800A4164 00000014  38 84 20 94 */	addi r4, r4, stringBase0@l
+/* 800A4160 00000010  3C 80 80 39 */	lis r4, d_a_d_a_alink__stringBase0@ha
+/* 800A4164 00000014  38 84 20 94 */	addi r4, r4, d_a_d_a_alink__stringBase0@l
 /* 800A4168 00000018  38 84 03 92 */	addi r4, r4, 0x392
 /* 800A416C 0000001C  4B FF FE 2D */	bl initDemoBck__9daAlink_cFPP13mDoExt_bckAnmPCc
 /* 800A4170 00000020  2C 03 00 00 */	cmpwi r3, 0
@@ -75,8 +75,8 @@ lbl_800A4150:
 lbl_800A4180:
 /* 800A4180 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800A4184 00000004  38 9F 06 84 */	addi r4, r31, 0x684
-/* 800A4188 00000008  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 800A418C 0000000C  38 A5 20 94 */	addi r5, r5, stringBase0@l
+/* 800A4188 00000008  3C A0 80 39 */	lis r5, d_a_d_a_alink__stringBase0@ha
+/* 800A418C 0000000C  38 A5 20 94 */	addi r5, r5, d_a_d_a_alink__stringBase0@l
 /* 800A4190 00000010  38 A5 03 AF */	addi r5, r5, 0x3af
 /* 800A4194 00000014  38 C0 00 00 */	li r6, 0
 /* 800A4198 00000018  4B FF FD 69 */	bl initDemoModel__9daAlink_cFPP8J3DModelPCcUl
@@ -87,8 +87,8 @@ lbl_800A4180:
 lbl_800A41AC:
 /* 800A41AC 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800A41B0 00000004  38 9F 06 88 */	addi r4, r31, 0x688
-/* 800A41B4 00000008  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 800A41B8 0000000C  38 A5 20 94 */	addi r5, r5, stringBase0@l
+/* 800A41B4 00000008  3C A0 80 39 */	lis r5, d_a_d_a_alink__stringBase0@ha
+/* 800A41B8 0000000C  38 A5 20 94 */	addi r5, r5, d_a_d_a_alink__stringBase0@l
 /* 800A41BC 00000010  38 A5 03 CE */	addi r5, r5, 0x3ce
 /* 800A41C0 00000014  38 C0 02 00 */	li r6, 0x200
 /* 800A41C4 00000018  4B FF FD 3D */	bl initDemoModel__9daAlink_cFPP8J3DModelPCcUl
@@ -101,8 +101,8 @@ lbl_800A41D8:
 /* 800A41DC 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 800A41E0 00000008  41 82 00 28 */	beq lbl_800A4208
 /* 800A41E4 0000000C  38 7F 06 90 */	addi r3, r31, 0x690
-/* 800A41E8 00000010  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 800A41EC 00000014  38 84 20 94 */	addi r4, r4, stringBase0@l
+/* 800A41E8 00000010  3C 80 80 39 */	lis r4, d_a_d_a_alink__stringBase0@ha
+/* 800A41EC 00000014  38 84 20 94 */	addi r4, r4, d_a_d_a_alink__stringBase0@l
 /* 800A41F0 00000018  38 84 03 EE */	addi r4, r4, 0x3ee
 /* 800A41F4 0000001C  4B FF FD A5 */	bl initDemoBck__9daAlink_cFPP13mDoExt_bckAnmPCc
 /* 800A41F8 00000020  2C 03 00 00 */	cmpwi r3, 0
@@ -111,8 +111,8 @@ lbl_800A41D8:
 /* 800A4204 0000002C  48 00 06 04 */	b lbl_800A4808
 lbl_800A4208:
 /* 800A4208 00000000  38 7F 06 B0 */	addi r3, r31, 0x6b0
-/* 800A420C 00000004  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 800A4210 00000008  38 84 20 94 */	addi r4, r4, stringBase0@l
+/* 800A420C 00000004  3C 80 80 39 */	lis r4, d_a_d_a_alink__stringBase0@ha
+/* 800A4210 00000008  38 84 20 94 */	addi r4, r4, d_a_d_a_alink__stringBase0@l
 /* 800A4214 0000000C  38 84 04 0B */	addi r4, r4, 0x40b
 /* 800A4218 00000010  4B FF FD 81 */	bl initDemoBck__9daAlink_cFPP13mDoExt_bckAnmPCc
 /* 800A421C 00000014  2C 03 00 00 */	cmpwi r3, 0
@@ -512,8 +512,8 @@ lbl_800A47A0:
 lbl_800A47B8:
 /* 800A47B8 00000000  3C 60 80 40 */	lis r3, mDemoArcName__20dStage_roomControl_c@ha
 /* 800A47BC 00000004  38 63 61 94 */	addi r3, r3, mDemoArcName__20dStage_roomControl_c@l
-/* 800A47C0 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 800A47C4 0000000C  38 84 20 94 */	addi r4, r4, stringBase0@l
+/* 800A47C0 00000008  3C 80 80 39 */	lis r4, d_a_d_a_alink__stringBase0@ha
+/* 800A47C4 0000000C  38 84 20 94 */	addi r4, r4, d_a_d_a_alink__stringBase0@l
 /* 800A47C8 00000010  38 84 04 28 */	addi r4, r4, 0x428
 /* 800A47CC 00000014  7F C5 F3 78 */	mr r5, r30
 /* 800A47D0 00000018  38 C0 00 80 */	li r6, 0x80

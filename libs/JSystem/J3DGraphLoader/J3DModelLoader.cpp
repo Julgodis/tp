@@ -11,16 +11,13 @@
 // Types:
 // 
 
-struct J3DMaterialBlock {
-};
-
-struct J3DMaterialBlock_v21 {
-};
-
 struct J3DJointBlock {
 };
 
 struct J3DVertexBlock {
+};
+
+struct J3DEnvelopeBlock {
 };
 
 struct J3DDrawBlock {
@@ -29,16 +26,19 @@ struct J3DDrawBlock {
 struct J3DModelInfoBlock {
 };
 
-struct J3DShapeBlock {
-};
-
-struct J3DMaterialDLBlock {
-};
-
 struct J3DTextureBlock {
 };
 
-struct J3DEnvelopeBlock {
+struct J3DMaterialBlock_v21 {
+};
+
+struct J3DShapeBlock {
+};
+
+struct J3DMaterialBlock {
+};
+
+struct J3DMaterialDLBlock {
 };
 
 struct J3DModelLoader {
@@ -147,18 +147,15 @@ struct JUTNameTab {
 	/* 802DE9E0 */ JUTNameTab(ResNTAB const*);
 };
 
-struct J3DVertexData {
+struct J3DDrawMtxData {
 };
 
-struct J3DDrawMtxData {
+struct J3DVertexData {
 };
 
 struct J3DShapeTable {
 	/* 80325910 */ void initShapeNodes(J3DDrawMtxData*, J3DVertexData*);
 	/* 8032597C */ void sortVcdVatCmd();
-};
-
-struct J3DJoint {
 };
 
 struct J3DMaterialTable {
@@ -167,6 +164,9 @@ struct J3DMaterialTable {
 };
 
 struct J3DModelHierarchy {
+};
+
+struct J3DJoint {
 };
 
 struct J3DJointTree {
@@ -285,7 +285,7 @@ extern "C" static void func_80336734(); // 1
 extern "C" void func_8033674C(); // 1
 extern "C" void func_80336764(); // 1
 extern "C" void func_8033677C(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const J3DModelLoader__stringBase0;
 
 // 
 // External References:

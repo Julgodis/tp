@@ -6,8 +6,8 @@ lbl_8022E960:
 /* 8022E970 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8022E974 00000014  7C 80 23 78 */	mr r0, r4
 /* 8022E978 00000018  38 61 00 08 */	addi r3, r1, 8
-/* 8022E97C 0000001C  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8022E980 00000020  38 84 96 10 */	addi r4, r4, stringBase0@l
+/* 8022E97C 0000001C  3C 80 80 3A */	lis r4, d_msg_d_msg_class__stringBase0@ha
+/* 8022E980 00000020  38 84 96 10 */	addi r4, r4, d_msg_d_msg_class__stringBase0@l
 /* 8022E984 00000024  38 84 00 10 */	addi r4, r4, 0x10
 /* 8022E988 00000028  7C 05 07 34 */	extsh r5, r0
 /* 8022E98C 0000002C  4C C6 31 82 */	crclr 6

@@ -5,9 +5,9 @@ lbl_80AAA124:
 /* 80AAA130 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80AAA134 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80AAA138 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80AAA13C 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AAA140 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
-/* 80AAA144 00000020  C0 3F 00 B8 */	lfs f1, 0xb8(r31)
+/* 80AAA13C 00000018  3C 60 80 AB */	lis r3, m__18daNpc_Post_Param_c@ha
+/* 80AAA140 0000001C  3B E3 D1 EC */	addi r31, r3, m__18daNpc_Post_Param_c@l
+/* 80AAA144 00000020  C0 3F 00 B8 */	lfs f1, 0xb8(r31)	/* effective address: 80AAD2A4 */
 /* 80AAA148 00000024  C0 1E 0D F4 */	lfs f0, 0xdf4(r30)
 /* 80AAA14C 00000028  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80AAA150 0000002C  40 82 00 7C */	bne lbl_80AAA1CC
@@ -17,19 +17,19 @@ lbl_80AAA124:
 /* 80AAA160 0000003C  D0 21 00 0C */	stfs f1, 0xc(r1)
 /* 80AAA164 00000040  C0 1E 04 D8 */	lfs f0, 0x4d8(r30)
 /* 80AAA168 00000044  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 80AAA16C 00000048  C0 1F 00 B0 */	lfs f0, 0xb0(r31)
+/* 80AAA16C 00000048  C0 1F 00 B0 */	lfs f0, 0xb0(r31)	/* effective address: 80AAD29C */
 /* 80AAA170 0000004C  EC 01 00 2A */	fadds f0, f1, f0
 /* 80AAA174 00000050  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80AAA178 00000054  38 7E 09 30 */	addi r3, r30, 0x930
 /* 80AAA17C 00000058  38 81 00 08 */	addi r4, r1, 8
-/* 80AAA180 0000005C  4B FF EA 79 */	bl _unresolved
-/* 80AAA184 00000060  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AAA188 00000064  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80AAA180 0000005C  4B 7B DB A8 */	b SetPos__11cBgS_GndChkFPC4cXyz
+/* 80AAA184 00000060  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AAA188 00000064  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AAA18C 00000068  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80AAA190 0000006C  38 9E 09 30 */	addi r4, r30, 0x930
-/* 80AAA194 00000070  4B FF EA 65 */	bl _unresolved
+/* 80AAA194 00000070  4B 5C A3 0C */	b GroundCross__4cBgSFP11cBgS_GndChk
 /* 80AAA198 00000074  D0 21 00 0C */	stfs f1, 0xc(r1)
-/* 80AAA19C 00000078  C0 1F 00 B8 */	lfs f0, 0xb8(r31)
+/* 80AAA19C 00000078  C0 1F 00 B8 */	lfs f0, 0xb8(r31)	/* effective address: 80AAD2A4 */
 /* 80AAA1A0 0000007C  FC 20 08 18 */	frsp f1, f1
 /* 80AAA1A4 00000080  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80AAA1A8 00000084  41 82 00 0C */	beq lbl_80AAA1B4
@@ -39,7 +39,7 @@ lbl_80AAA1B4:
 /* 80AAA1B4 00000000  C0 1E 10 08 */	lfs f0, 0x1008(r30)
 /* 80AAA1B8 00000004  D0 1E 04 D4 */	stfs f0, 0x4d4(r30)
 lbl_80AAA1BC:
-/* 80AAA1BC 00000000  C0 1F 00 B4 */	lfs f0, 0xb4(r31)
+/* 80AAA1BC 00000000  C0 1F 00 B4 */	lfs f0, 0xb4(r31)	/* effective address: 80AAD2A0 */
 /* 80AAA1C0 00000004  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 80AAA1C4 00000008  C0 1E 04 D4 */	lfs f0, 0x4d4(r30)
 /* 80AAA1C8 0000000C  D0 1E 04 C0 */	stfs f0, 0x4c0(r30)

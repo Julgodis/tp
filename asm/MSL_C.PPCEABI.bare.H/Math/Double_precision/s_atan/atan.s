@@ -26,15 +26,15 @@ lbl_8036BCF8:
 /* 8036BCFC 00000004  40 81 00 1C */	ble lbl_8036BD18
 /* 8036BD00 00000008  38 85 00 00 */	addi r4, r5, 0
 /* 8036BD04 0000000C  38 65 00 20 */	addi r3, r5, 0x20
-/* 8036BD08 00000010  C8 24 00 18 */	lfd f1, 0x18(r4)
-/* 8036BD0C 00000014  C8 03 00 18 */	lfd f0, 0x18(r3)
+/* 8036BD08 00000010  C8 24 00 18 */	lfd f1, 0x18(r4)	/* effective address: 803A2608 */
+/* 8036BD0C 00000014  C8 03 00 18 */	lfd f0, 0x18(r3)	/* effective address: 803A2628 */
 /* 8036BD10 00000018  FC 21 00 2A */	fadd f1, f1, f0
 /* 8036BD14 0000001C  48 00 01 A0 */	b lbl_8036BEB4
 lbl_8036BD18:
 /* 8036BD18 00000000  38 85 00 00 */	addi r4, r5, 0
 /* 8036BD1C 00000004  38 65 00 20 */	addi r3, r5, 0x20
-/* 8036BD20 00000008  C8 24 00 18 */	lfd f1, 0x18(r4)
-/* 8036BD24 0000000C  C8 03 00 18 */	lfd f0, 0x18(r3)
+/* 8036BD20 00000008  C8 24 00 18 */	lfd f1, 0x18(r4)	/* effective address: 803A2608 */
+/* 8036BD24 0000000C  C8 03 00 18 */	lfd f0, 0x18(r3)	/* effective address: 803A2628 */
 /* 8036BD28 00000010  FC 20 08 50 */	fneg f1, f1
 /* 8036BD2C 00000014  FC 21 00 28 */	fsub f1, f1, f0
 /* 8036BD30 00000018  48 00 01 84 */	b lbl_8036BEB4
@@ -100,22 +100,22 @@ lbl_8036BDF8:
 lbl_8036BE08:
 /* 8036BE08 00000000  C9 21 00 08 */	lfd f9, 8(r1)
 /* 8036BE0C 00000004  38 65 00 40 */	addi r3, r5, 0x40
-/* 8036BE10 00000008  C8 83 00 50 */	lfd f4, 0x50(r3)
+/* 8036BE10 00000008  C8 83 00 50 */	lfd f4, 0x50(r3)	/* effective address: 803A2680 */
 /* 8036BE14 0000000C  2C 00 00 00 */	cmpwi r0, 0
 /* 8036BE18 00000010  FD 69 02 72 */	fmul f11, f9, f9
-/* 8036BE1C 00000014  C8 23 00 40 */	lfd f1, 0x40(r3)
-/* 8036BE20 00000018  C8 E3 00 30 */	lfd f7, 0x30(r3)
-/* 8036BE24 0000001C  C8 63 00 48 */	lfd f3, 0x48(r3)
-/* 8036BE28 00000020  C8 03 00 38 */	lfd f0, 0x38(r3)
+/* 8036BE1C 00000014  C8 23 00 40 */	lfd f1, 0x40(r3)	/* effective address: 803A2670 */
+/* 8036BE20 00000018  C8 E3 00 30 */	lfd f7, 0x30(r3)	/* effective address: 803A2660 */
+/* 8036BE24 0000001C  C8 63 00 48 */	lfd f3, 0x48(r3)	/* effective address: 803A2678 */
+/* 8036BE28 00000020  C8 03 00 38 */	lfd f0, 0x38(r3)	/* effective address: 803A2668 */
 /* 8036BE2C 00000024  FD 4B 02 F2 */	fmul f10, f11, f11
-/* 8036BE30 00000028  C8 C3 00 20 */	lfd f6, 0x20(r3)
-/* 8036BE34 0000002C  C8 43 00 28 */	lfd f2, 0x28(r3)
-/* 8036BE38 00000030  C8 A3 00 10 */	lfd f5, 0x10(r3)
+/* 8036BE30 00000028  C8 C3 00 20 */	lfd f6, 0x20(r3)	/* effective address: 803A2650 */
+/* 8036BE34 0000002C  C8 43 00 28 */	lfd f2, 0x28(r3)	/* effective address: 803A2658 */
+/* 8036BE38 00000030  C8 A3 00 10 */	lfd f5, 0x10(r3)	/* effective address: 803A2640 */
 /* 8036BE3C 00000034  FD 0A 09 3A */	fmadd f8, f10, f4, f1
-/* 8036BE40 00000038  C8 23 00 18 */	lfd f1, 0x18(r3)
-/* 8036BE44 0000003C  C8 85 00 40 */	lfd f4, 0x40(r5)
+/* 8036BE40 00000038  C8 23 00 18 */	lfd f1, 0x18(r3)	/* effective address: 803A2648 */
+/* 8036BE44 0000003C  C8 85 00 40 */	lfd f4, 0x40(r5)	/* effective address: 803A2630 */
 /* 8036BE48 00000040  FC 6A 00 FA */	fmadd f3, f10, f3, f0
-/* 8036BE4C 00000044  C8 03 00 08 */	lfd f0, 8(r3)
+/* 8036BE4C 00000044  C8 03 00 08 */	lfd f0, 8(r3)	/* effective address: 803A2638 */
 /* 8036BE50 00000048  FC EA 3A 3A */	fmadd f7, f10, f8, f7
 /* 8036BE54 0000004C  FC 4A 10 FA */	fmadd f2, f10, f3, f2
 /* 8036BE58 00000050  FC 6A 31 FA */	fmadd f3, f10, f7, f6

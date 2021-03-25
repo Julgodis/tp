@@ -5,23 +5,23 @@ lbl_80C50F98:
 /* 80C50FA4 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80C50FA8 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80C50FAC 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80C50FB0 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80C50FB4 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
-/* 80C50FB8 00000020  C0 3F 00 34 */	lfs f1, 0x34(r31)
-/* 80C50FBC 00000024  C0 5F 00 38 */	lfs f2, 0x38(r31)
+/* 80C50FB0 00000018  3C 80 80 C5 */	lis r4, M_attr__10daObjLdy_c@ha
+/* 80C50FB4 0000001C  3B E4 20 00 */	addi r31, r4, M_attr__10daObjLdy_c@l
+/* 80C50FB8 00000020  C0 3F 00 34 */	lfs f1, 0x34(r31)	/* effective address: 80C52034 */
+/* 80C50FBC 00000024  C0 5F 00 38 */	lfs f2, 0x38(r31)	/* effective address: 80C52038 */
 /* 80C50FC0 00000028  FC 60 08 90 */	fmr f3, f1
-/* 80C50FC4 0000002C  C0 9F 00 3C */	lfs f4, 0x3c(r31)
-/* 80C50FC8 00000030  C0 BF 00 40 */	lfs f5, 0x40(r31)
+/* 80C50FC4 0000002C  C0 9F 00 3C */	lfs f4, 0x3c(r31)	/* effective address: 80C5203C */
+/* 80C50FC8 00000030  C0 BF 00 40 */	lfs f5, 0x40(r31)	/* effective address: 80C52040 */
 /* 80C50FCC 00000034  FC C0 20 90 */	fmr f6, f4
-/* 80C50FD0 00000038  4B FF FF A9 */	bl _unresolved
-/* 80C50FD4 0000003C  C0 1F 00 44 */	lfs f0, 0x44(r31)
+/* 80C50FD0 00000038  4B 3C 95 78 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
+/* 80C50FD4 0000003C  C0 1F 00 44 */	lfs f0, 0x44(r31)	/* effective address: 80C52044 */
 /* 80C50FD8 00000040  D0 1E 05 20 */	stfs f0, 0x520(r30)
 /* 80C50FDC 00000044  38 BE 07 20 */	addi r5, r30, 0x720
 /* 80C50FE0 00000048  38 C0 00 00 */	li r6, 0
 /* 80C50FE4 0000004C  38 9F 00 00 */	addi r4, r31, 0
-/* 80C50FE8 00000050  C8 5F 00 48 */	lfd f2, 0x48(r31)
+/* 80C50FE8 00000050  C8 5F 00 48 */	lfd f2, 0x48(r31)	/* effective address: 80C52048 */
 /* 80C50FEC 00000054  3C 60 43 30 */	lis r3, 0x4330
-/* 80C50FF0 00000058  C0 24 00 0C */	lfs f1, 0xc(r4)
+/* 80C50FF0 00000058  C0 24 00 0C */	lfs f1, 0xc(r4)	/* effective address: 80C5200C */
 /* 80C50FF4 0000005C  38 00 00 03 */	li r0, 3
 /* 80C50FF8 00000060  7C 09 03 A6 */	mtctr r0
 lbl_80C50FFC:
@@ -50,7 +50,7 @@ lbl_80C50FFC:
 /* 80C51054 00000058  38 C6 00 01 */	addi r6, r6, 1
 /* 80C51058 0000005C  38 A5 00 38 */	addi r5, r5, 0x38
 /* 80C5105C 00000060  42 00 FF A0 */	bdnz lbl_80C50FFC
-/* 80C51060 00000064  C0 1F 00 00 */	lfs f0, 0(r31)
+/* 80C51060 00000064  C0 1F 00 00 */	lfs f0, 0(r31)	/* effective address: 80C52000 */
 /* 80C51064 00000068  D0 1E 05 30 */	stfs f0, 0x530(r30)
 /* 80C51068 0000006C  7F C3 F3 78 */	mr r3, r30
 /* 80C5106C 00000070  48 00 00 1D */	bl initBaseMtx__10daObjLdy_cFv

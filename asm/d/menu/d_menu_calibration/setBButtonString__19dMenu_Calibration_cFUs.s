@@ -9,8 +9,8 @@ lbl_801AF7E8:
 /* 801AF804 0000001C  40 82 00 3C */	bne lbl_801AF840
 /* 801AF808 00000020  3B A0 00 00 */	li r29, 0
 /* 801AF80C 00000024  3B E0 00 00 */	li r31, 0
-/* 801AF810 00000028  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801AF814 0000002C  3B C3 4F 70 */	addi r30, r3, stringBase0@l
+/* 801AF810 00000028  3C 60 80 39 */	lis r3, d_menu_d_menu_calibration__stringBase0@ha
+/* 801AF814 0000002C  3B C3 4F 70 */	addi r30, r3, d_menu_d_menu_calibration__stringBase0@l
 lbl_801AF818:
 /* 801AF818 00000000  38 1F 00 28 */	addi r0, r31, 0x28
 /* 801AF81C 00000004  7C 7B 00 2E */	lwzx r3, r27, r0

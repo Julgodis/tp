@@ -133,7 +133,7 @@ extern "C" void fetchResource__14JKRCompArchiveFPvUlPQ210JKRArchive12SDIFileEntr
 extern "C" void removeResourceAll__14JKRCompArchiveFv(); // 1
 extern "C" void removeResource__14JKRCompArchiveFPv(); // 1
 extern "C" void getExpandedResSize__14JKRCompArchiveCFPCv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JKRCompArchive__stringBase0;
 
 // 
 // External References:

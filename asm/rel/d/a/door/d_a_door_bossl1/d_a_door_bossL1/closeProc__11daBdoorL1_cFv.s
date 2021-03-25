@@ -3,40 +3,40 @@ lbl_804E3A2C:
 /* 804E3A30 00000004  7C 08 02 A6 */	mflr r0
 /* 804E3A34 00000008  90 01 00 54 */	stw r0, 0x54(r1)
 /* 804E3A38 0000000C  39 61 00 50 */	addi r11, r1, 0x50
-/* 804E3A3C 00000010  4B FF E3 3D */	bl _unresolved
+/* 804E3A3C 00000010  4B E7 E7 A0 */	b _savegpr_29
 /* 804E3A40 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 804E3A44 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804E3A48 0000001C  3B A3 00 00 */	addi r29, r3, 0x0000 /* 0x00000000@l */
+/* 804E3A44 00000018  3C 60 80 4E */	lis r3, l_staff_name@ha
+/* 804E3A48 0000001C  3B A3 4A 14 */	addi r29, r3, l_staff_name@l
 /* 804E3A4C 00000020  80 7E 05 88 */	lwz r3, 0x588(r30)
-/* 804E3A50 00000024  4B FF E3 29 */	bl _unresolved
+/* 804E3A50 00000024  4B B2 99 D8 */	b play__14mDoExt_baseAnmFv
 /* 804E3A54 00000028  7C 7F 1B 78 */	mr r31, r3
 /* 804E3A58 0000002C  80 7E 05 88 */	lwz r3, 0x588(r30)
 /* 804E3A5C 00000030  C0 23 00 10 */	lfs f1, 0x10(r3)
-/* 804E3A60 00000034  C0 1D 00 80 */	lfs f0, 0x80(r29)
+/* 804E3A60 00000034  C0 1D 00 80 */	lfs f0, 0x80(r29)	/* effective address: 804E4A94 */
 /* 804E3A64 00000038  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 804E3A68 0000003C  40 82 00 1C */	bne lbl_804E3A84
-/* 804E3A6C 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804E3A70 00000044  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 804E3A6C 00000040  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804E3A70 00000044  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804E3A74 00000048  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 804E3A78 0000004C  38 80 00 1F */	li r4, 0x1f
-/* 804E3A7C 00000050  4B FF E2 FD */	bl _unresolved
+/* 804E3A7C 00000050  4B B8 C3 18 */	b StopQuake__12dVibration_cFi
 /* 804E3A80 00000054  48 00 01 70 */	b lbl_804E3BF0
 lbl_804E3A84:
-/* 804E3A84 00000000  C0 1D 00 78 */	lfs f0, 0x78(r29)
+/* 804E3A84 00000000  C0 1D 00 78 */	lfs f0, 0x78(r29)	/* effective address: 804E4A8C */
 /* 804E3A88 00000004  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 804E3A8C 00000008  40 82 00 AC */	bne lbl_804E3B38
-/* 804E3A90 0000000C  C0 3D 00 40 */	lfs f1, 0x40(r29)
+/* 804E3A90 0000000C  C0 3D 00 40 */	lfs f1, 0x40(r29)	/* effective address: 804E4A54 */
 /* 804E3A94 00000010  D0 21 00 1C */	stfs f1, 0x1c(r1)
-/* 804E3A98 00000014  C0 1D 00 3C */	lfs f0, 0x3c(r29)
+/* 804E3A98 00000014  C0 1D 00 3C */	lfs f0, 0x3c(r29)	/* effective address: 804E4A50 */
 /* 804E3A9C 00000018  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 804E3AA0 0000001C  D0 21 00 24 */	stfs f1, 0x24(r1)
-/* 804E3AA4 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804E3AA8 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 804E3AA4 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804E3AA8 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804E3AAC 00000028  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 804E3AB0 0000002C  38 80 00 08 */	li r4, 8
 /* 804E3AB4 00000030  38 A0 00 0F */	li r5, 0xf
 /* 804E3AB8 00000034  38 C1 00 1C */	addi r6, r1, 0x1c
-/* 804E3ABC 00000038  4B FF E2 BD */	bl _unresolved
+/* 804E3ABC 00000038  4B B8 BF 68 */	b StartShock__12dVibration_cFii4cXyz
 /* 804E3AC0 0000003C  4B FF E2 D9 */	bl getNowLevel__Fv
 /* 804E3AC4 00000040  2C 03 00 05 */	cmpwi r3, 5
 /* 804E3AC8 00000044  41 82 00 20 */	beq lbl_804E3AE8
@@ -51,26 +51,26 @@ lbl_804E3ADC:
 lbl_804E3AE8:
 /* 804E3AE8 00000000  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 804E3AEC 00000004  7C 03 07 74 */	extsb r3, r0
-/* 804E3AF0 00000008  4B FF E2 89 */	bl _unresolved
+/* 804E3AF0 00000008  4B B4 95 7C */	b dComIfGp_getReverb__Fi
 /* 804E3AF4 0000000C  7C 67 1B 78 */	mr r7, r3
 /* 804E3AF8 00000010  3C 60 00 08 */	lis r3, 0x0008 /* 0x000800B5@ha */
 /* 804E3AFC 00000014  38 03 00 B5 */	addi r0, r3, 0x00B5 /* 0x000800B5@l */
 /* 804E3B00 00000018  90 01 00 18 */	stw r0, 0x18(r1)
-/* 804E3B04 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804E3B08 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 804E3B0C 00000024  80 63 00 00 */	lwz r3, 0(r3)
+/* 804E3B04 0000001C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
+/* 804E3B08 00000020  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 804E3B0C 00000024  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
 /* 804E3B10 00000028  38 81 00 18 */	addi r4, r1, 0x18
 /* 804E3B14 0000002C  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 804E3B18 00000030  38 C0 00 00 */	li r6, 0
-/* 804E3B1C 00000034  C0 3D 00 3C */	lfs f1, 0x3c(r29)
+/* 804E3B1C 00000034  C0 3D 00 3C */	lfs f1, 0x3c(r29)	/* effective address: 804E4A50 */
 /* 804E3B20 00000038  FC 40 08 90 */	fmr f2, f1
-/* 804E3B24 0000003C  C0 7D 00 54 */	lfs f3, 0x54(r29)
+/* 804E3B24 0000003C  C0 7D 00 54 */	lfs f3, 0x54(r29)	/* effective address: 804E4A68 */
 /* 804E3B28 00000040  FC 80 18 90 */	fmr f4, f3
 /* 804E3B2C 00000044  39 00 00 00 */	li r8, 0
-/* 804E3B30 00000048  4B FF E2 49 */	bl _unresolved
+/* 804E3B30 00000048  4B DC 7E 54 */	b seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 804E3B34 0000004C  48 00 00 BC */	b lbl_804E3BF0
 lbl_804E3B38:
-/* 804E3B38 00000000  C0 1D 00 84 */	lfs f0, 0x84(r29)
+/* 804E3B38 00000000  C0 1D 00 84 */	lfs f0, 0x84(r29)	/* effective address: 804E4A98 */
 /* 804E3B3C 00000004  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 804E3B40 00000008  40 82 00 B0 */	bne lbl_804E3BF0
 /* 804E3B44 0000000C  4B FF E2 55 */	bl getNowLevel__Fv
@@ -85,18 +85,18 @@ lbl_804E3B60:
 /* 804E3B64 00000004  40 80 00 8C */	bge lbl_804E3BF0
 lbl_804E3B68:
 /* 804E3B68 00000000  C0 1E 07 C8 */	lfs f0, 0x7c8(r30)
-/* 804E3B6C 00000004  C0 3D 00 88 */	lfs f1, 0x88(r29)
+/* 804E3B6C 00000004  C0 3D 00 88 */	lfs f1, 0x88(r29)	/* effective address: 804E4A9C */
 /* 804E3B70 00000008  EC 00 08 28 */	fsubs f0, f0, f1
 /* 804E3B74 0000000C  D0 1E 07 C8 */	stfs f0, 0x7c8(r30)
 /* 804E3B78 00000010  C0 1E 07 D4 */	lfs f0, 0x7d4(r30)
 /* 804E3B7C 00000014  EC 00 08 2A */	fadds f0, f0, f1
 /* 804E3B80 00000018  D0 1E 07 D4 */	stfs f0, 0x7d4(r30)
 /* 804E3B84 0000001C  38 7E 05 AC */	addi r3, r30, 0x5ac
-/* 804E3B88 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 804E3B8C 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 804E3B88 00000020  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 804E3B8C 00000024  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 804E3B90 00000028  38 84 0F 38 */	addi r4, r4, 0xf38
-/* 804E3B94 0000002C  4B FF E1 E5 */	bl _unresolved
-/* 804E3B98 00000030  C0 1D 00 8C */	lfs f0, 0x8c(r29)
+/* 804E3B94 0000002C  4B B9 2F 18 */	b CrrPos__9dBgS_AcchFR4dBgS
+/* 804E3B98 00000030  C0 1D 00 8C */	lfs f0, 0x8c(r29)	/* effective address: 804E4AA0 */
 /* 804E3B9C 00000034  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 804E3BA0 00000038  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 804E3BA4 0000003C  D0 01 00 30 */	stfs f0, 0x30(r1)
@@ -106,9 +106,9 @@ lbl_804E3B68:
 /* 804E3BB4 0000004C  90 01 00 08 */	stw r0, 8(r1)
 /* 804E3BB8 00000050  90 61 00 0C */	stw r3, 0xc(r1)
 /* 804E3BBC 00000054  90 01 00 10 */	stw r0, 0x10(r1)
-/* 804E3BC0 00000058  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804E3BC4 0000005C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 804E3BC8 00000060  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 804E3BC0 00000058  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804E3BC4 0000005C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804E3BC8 00000060  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 804E3BCC 00000064  3C 80 00 01 */	lis r4, 0x0001 /* 0x00008C50@ha */
 /* 804E3BD0 00000068  38 84 8C 50 */	addi r4, r4, 0x8C50 /* 0x00008C50@l */
 /* 804E3BD4 0000006C  38 BE 06 9C */	addi r5, r30, 0x69c
@@ -117,11 +117,11 @@ lbl_804E3B68:
 /* 804E3BE0 00000078  39 1E 04 E4 */	addi r8, r30, 0x4e4
 /* 804E3BE4 0000007C  39 21 00 28 */	addi r9, r1, 0x28
 /* 804E3BE8 00000080  39 40 00 00 */	li r10, 0
-/* 804E3BEC 00000084  4B FF E1 8D */	bl _unresolved
+/* 804E3BEC 00000084  4B B6 94 7C */	b setPoly__13dPa_control_cFUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz
 lbl_804E3BF0:
 /* 804E3BF0 00000000  7F E3 FB 78 */	mr r3, r31
 /* 804E3BF4 00000004  39 61 00 50 */	addi r11, r1, 0x50
-/* 804E3BF8 00000008  4B FF E1 81 */	bl _unresolved
+/* 804E3BF8 00000008  4B E7 E6 30 */	b _restgpr_29
 /* 804E3BFC 0000000C  80 01 00 54 */	lwz r0, 0x54(r1)
 /* 804E3C00 00000010  7C 08 03 A6 */	mtlr r0
 /* 804E3C04 00000014  38 21 00 50 */	addi r1, r1, 0x50

@@ -80,7 +80,7 @@ extern "C" void sync__13JKRAramStreamFP20JKRAramStreamCommandi(); // 1
 extern "C" void setTransBuffer__13JKRAramStreamFPUcUlP7JKRHeap(); // 1
 extern "C" void __ct__20JKRAramStreamCommandFv(); // 1
 extern "C" void getAvailable__20JSURandomInputStreamCFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JKRAramStream__stringBase0;
 
 // 
 // External References:

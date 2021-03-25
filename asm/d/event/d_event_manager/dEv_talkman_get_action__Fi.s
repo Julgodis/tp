@@ -9,8 +9,8 @@ lbl_80048748:
 /* 80048764 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80048768 00000020  3B E3 4F F8 */	addi r31, r3, 0x4ff8
 /* 8004876C 00000024  7F E3 FB 78 */	mr r3, r31
-/* 80048770 00000028  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 80048774 0000002C  38 84 9F 60 */	addi r4, r4, stringBase0@l
+/* 80048770 00000028  3C 80 80 38 */	lis r4, d_event_d_event_manager__stringBase0@ha
+/* 80048774 0000002C  38 84 9F 60 */	addi r4, r4, d_event_d_event_manager__stringBase0@l
 /* 80048778 00000030  38 84 01 9C */	addi r4, r4, 0x19c
 /* 8004877C 00000034  38 A0 00 00 */	li r5, 0
 /* 80048780 00000038  38 C0 FF FF */	li r6, -1

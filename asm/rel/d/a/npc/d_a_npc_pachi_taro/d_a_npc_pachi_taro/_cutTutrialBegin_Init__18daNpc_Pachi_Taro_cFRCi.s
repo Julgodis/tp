@@ -6,20 +6,20 @@ lbl_80A9EAA0:
 /* 80A9EAB0 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80A9EAB4 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80A9EAB8 00000018  7C 9F 23 78 */	mr r31, r4
-/* 80A9EABC 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80A9EAC0 00000020  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
-/* 80A9EAC4 00000024  80 64 00 00 */	lwz r3, 0(r4)
-/* 80A9EAC8 00000028  80 04 00 04 */	lwz r0, 4(r4)
+/* 80A9EABC 0000001C  3C 60 80 AA */	lis r3, lit_5498@ha
+/* 80A9EAC0 00000020  38 83 17 1C */	addi r4, r3, lit_5498@l
+/* 80A9EAC4 00000024  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80AA171C */
+/* 80A9EAC8 00000028  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80AA1720 */
 /* 80A9EACC 0000002C  90 61 00 08 */	stw r3, 8(r1)
 /* 80A9EAD0 00000030  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A9EAD4 00000034  80 04 00 08 */	lwz r0, 8(r4)
+/* 80A9EAD4 00000034  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80AA1724 */
 /* 80A9EAD8 00000038  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A9EADC 0000003C  93 C1 00 08 */	stw r30, 8(r1)
 /* 80A9EAE0 00000040  38 7E 0F 8C */	addi r3, r30, 0xf8c
-/* 80A9EAE4 00000044  4B FF D7 15 */	bl _unresolved
+/* 80A9EAE4 00000044  4B 6A 6C 24 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80A9EAE8 00000048  90 61 00 0C */	stw r3, 0xc(r1)
 /* 80A9EAEC 0000004C  38 7E 0F 94 */	addi r3, r30, 0xf94
-/* 80A9EAF0 00000050  4B FF D7 09 */	bl _unresolved
+/* 80A9EAF0 00000050  4B 6A 6C 18 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80A9EAF4 00000054  90 61 00 10 */	stw r3, 0x10(r1)
 /* 80A9EAF8 00000058  80 1F 00 00 */	lwz r0, 0(r31)
 /* 80A9EAFC 0000005C  2C 00 00 0A */	cmpwi r0, 0xa
@@ -31,7 +31,7 @@ lbl_80A9EB08:
 /* 80A9EB10 00000008  7F C3 F3 78 */	mr r3, r30
 /* 80A9EB14 0000000C  38 80 00 47 */	li r4, 0x47
 /* 80A9EB18 00000010  38 A1 00 08 */	addi r5, r1, 8
-/* 80A9EB1C 00000014  4B FF D6 DD */	bl _unresolved
+/* 80A9EB1C 00000014  4B 6A D0 D4 */	b initTalk__8daNpcT_cFiPP10fopAc_ac_c
 lbl_80A9EB20:
 /* 80A9EB20 00000000  38 60 00 01 */	li r3, 1
 /* 80A9EB24 00000004  83 E1 00 1C */	lwz r31, 0x1c(r1)

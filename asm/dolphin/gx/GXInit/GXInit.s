@@ -265,13 +265,13 @@ lbl_803598DC:
 /* 80359A70 00000194  90 1D 80 00 */	stw r0, -0x8000(r29)	/* effective address: CC008000 */
 /* 80359A74 00000198  48 00 57 01 */	bl __GXFlushTextureState
 /* 80359A78 0000019C  3C 60 3E 10 */	lis r3, 0x3E10 /* 0x3E0F83E1@ha */
-/* 80359A7C 000001A0  9B 9D 80 00 */	stb r28, -0x8000(r29)
+/* 80359A7C 000001A0  9B 9D 80 00 */	stb r28, -0x8000(r29)	/* effective address: CC008000 */
 /* 80359A80 000001A4  38 03 83 E1 */	addi r0, r3, 0x83E1 /* 0x3E0F83E1@l */
 /* 80359A84 000001A8  7C 00 C8 16 */	mulhwu r0, r0, r25
 /* 80359A88 000001AC  54 00 B2 BE */	srwi r0, r0, 0xa
 /* 80359A8C 000001B0  64 00 46 00 */	oris r0, r0, 0x4600
 /* 80359A90 000001B4  60 00 02 00 */	ori r0, r0, 0x200
-/* 80359A94 000001B8  90 1D 80 00 */	stw r0, -0x8000(r29)
+/* 80359A94 000001B8  90 1D 80 00 */	stw r0, -0x8000(r29)	/* effective address: CC008000 */
 /* 80359A98 000001BC  4B FF FA 35 */	bl __GXInitRevisionBits
 /* 80359A9C 000001C0  3C 60 80 3D */	lis r3, GXTexRegionAddrTable@ha
 /* 80359AA0 000001C4  57 C4 10 3A */	slwi r4, r30, 2

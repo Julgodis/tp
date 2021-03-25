@@ -47,8 +47,8 @@ lbl_8011A80C:
 /* 8011A838 0000002C  80 1D 31 A0 */	lwz r0, 0x31a0(r29)
 /* 8011A83C 00000030  54 00 05 6B */	rlwinm. r0, r0, 0, 0x15, 0x15
 /* 8011A840 00000034  40 82 00 44 */	bne lbl_8011A884
-/* 8011A844 00000038  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 8011A848 0000003C  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 8011A844 00000038  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 8011A848 0000003C  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 8011A84C 00000040  38 63 00 FE */	addi r3, r3, 0xfe
 /* 8011A850 00000044  4B F8 32 11 */	bl checkStageName__9daAlink_cFPCc
 /* 8011A854 00000048  54 60 06 3F */	clrlwi. r0, r3, 0x18

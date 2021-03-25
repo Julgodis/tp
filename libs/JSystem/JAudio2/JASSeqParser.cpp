@@ -225,7 +225,7 @@ extern "C" void parseCommand__12JASSeqParserFP8JASTrackUcUs(); // 1
 extern "C" void parseRegCommand__12JASSeqParserFP8JASTracki(); // 1
 extern "C" void parse__12JASSeqParserFP8JASTrack(); // 1
 extern "C" void __sinit_JASSeqParser_cpp(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JASSeqParser__stringBase0;
 extern "C" extern void* __vt__12JASSeqParser[8];
 extern "C" extern u8 sCallBackFunc__12JASSeqParser[4];
 

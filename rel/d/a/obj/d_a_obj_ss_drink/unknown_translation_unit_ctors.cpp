@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80CE6924[8];
+extern void* data_80CE6924[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_obj_ss_drink_cpp(); // 1
 
 // 
 // Declarations:

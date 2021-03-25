@@ -3,11 +3,11 @@ lbl_80CCC7D0:
 /* 80CCC7D4 00000004  7C 08 02 A6 */	mflr r0
 /* 80CCC7D8 00000008  90 01 00 54 */	stw r0, 0x54(r1)
 /* 80CCC7DC 0000000C  39 61 00 50 */	addi r11, r1, 0x50
-/* 80CCC7E0 00000010  4B FF EB 19 */	bl _unresolved
+/* 80CCC7E0 00000010  4B 69 59 FC */	b _savegpr_29
 /* 80CCC7E4 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 80CCC7E8 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CCC7EC 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80CCC7F0 00000020  88 03 5D B0 */	lbz r0, 0x5db0(r3)
+/* 80CCC7E8 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCC7EC 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CCC7F0 00000020  88 03 5D B0 */	lbz r0, 0x5db0(r3)	/* effective address: 8040BF70 */
 /* 80CCC7F4 00000024  7C 00 07 74 */	extsb r0, r0
 /* 80CCC7F8 00000028  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 80CCC7FC 0000002C  7C 63 02 14 */	add r3, r3, r0
@@ -21,18 +21,18 @@ lbl_80CCC7D0:
 /* 80CCC81C 0000004C  C0 1E 00 E0 */	lfs f0, 0xe0(r30)
 /* 80CCC820 00000050  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80CCC824 00000054  7F C3 F3 78 */	mr r3, r30
-/* 80CCC828 00000058  4B FF EA D1 */	bl _unresolved
+/* 80CCC828 00000058  4B 4B 4D A4 */	b dCam_getAngleY__FP12camera_class
 /* 80CCC82C 0000005C  7C 7F 1B 78 */	mr r31, r3
 /* 80CCC830 00000060  7F C3 F3 78 */	mr r3, r30
-/* 80CCC834 00000064  4B FF EA C5 */	bl _unresolved
+/* 80CCC834 00000064  4B 4B 4D BC */	b dCam_getAngleX__FP12camera_class
 /* 80CCC838 00000068  B0 61 00 20 */	sth r3, 0x20(r1)
 /* 80CCC83C 0000006C  B3 E1 00 22 */	sth r31, 0x22(r1)
 /* 80CCC840 00000070  38 00 00 00 */	li r0, 0
 /* 80CCC844 00000074  B0 01 00 24 */	sth r0, 0x24(r1)
 lbl_80CCC848:
-/* 80CCC848 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CCC84C 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80CCC850 00000008  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 80CCC848 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCC84C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CCC850 00000008  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 80CCC854 0000000C  38 80 00 00 */	li r4, 0
 /* 80CCC858 00000010  90 81 00 08 */	stw r4, 8(r1)
 /* 80CCC85C 00000014  38 00 FF FF */	li r0, -1
@@ -48,12 +48,12 @@ lbl_80CCC848:
 /* 80CCC884 0000003C  39 01 00 20 */	addi r8, r1, 0x20
 /* 80CCC888 00000040  39 20 00 00 */	li r9, 0
 /* 80CCC88C 00000044  39 40 00 FF */	li r10, 0xff
-/* 80CCC890 00000048  3D 60 00 00 */	lis r11, 0x0000 /* 0x00000000@ha */
-/* 80CCC894 0000004C  C0 2B 00 00 */	lfs f1, 0x0000(r11)
-/* 80CCC898 00000050  4B FF EA 61 */	bl _unresolved
+/* 80CCC890 00000048  3D 60 80 CD */	lis r11, lit_3987@ha
+/* 80CCC894 0000004C  C0 2B CC 4C */	lfs f1, lit_3987@l(r11)
+/* 80CCC898 00000050  4B 38 01 F8 */	b set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 80CCC89C 00000054  90 7D 06 00 */	stw r3, 0x600(r29)
 /* 80CCC8A0 00000058  39 61 00 50 */	addi r11, r1, 0x50
-/* 80CCC8A4 0000005C  4B FF EA 55 */	bl _unresolved
+/* 80CCC8A4 0000005C  4B 69 59 84 */	b _restgpr_29
 /* 80CCC8A8 00000060  80 01 00 54 */	lwz r0, 0x54(r1)
 /* 80CCC8AC 00000064  7C 08 03 A6 */	mtlr r0
 /* 80CCC8B0 00000068  38 21 00 50 */	addi r1, r1, 0x50

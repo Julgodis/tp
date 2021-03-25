@@ -47,14 +47,14 @@ lbl_800B8134:
 /* 800B816C 00000038  48 00 82 35 */	bl checkCloudSea__9daAlink_cFv
 /* 800B8170 0000003C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 800B8174 00000040  40 82 00 AC */	bne lbl_800B8220
-/* 800B8178 00000044  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800B817C 00000048  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800B8178 00000044  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800B817C 00000048  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800B8180 0000004C  38 63 04 7F */	addi r3, r3, 0x47f
 /* 800B8184 00000050  4B FE 58 DD */	bl checkStageName__9daAlink_cFPCc
 /* 800B8188 00000054  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 800B818C 00000058  40 82 00 94 */	bne lbl_800B8220
-/* 800B8190 0000005C  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800B8194 00000060  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800B8190 0000005C  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800B8194 00000060  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800B8198 00000064  38 63 01 2C */	addi r3, r3, 0x12c
 /* 800B819C 00000068  4B FE 58 C5 */	bl checkStageName__9daAlink_cFPCc
 /* 800B81A0 0000006C  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -74,8 +74,8 @@ lbl_800B81D0:
 /* 800B81D0 00000000  80 1F 05 70 */	lwz r0, 0x570(r31)
 /* 800B81D4 00000004  54 00 04 E7 */	rlwinm. r0, r0, 0, 0x13, 0x13
 /* 800B81D8 00000008  41 82 00 2C */	beq lbl_800B8204
-/* 800B81DC 0000000C  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800B81E0 00000010  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800B81DC 0000000C  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800B81E0 00000010  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800B81E4 00000014  38 63 00 3B */	addi r3, r3, 0x3b
 /* 800B81E8 00000018  4B FE 58 79 */	bl checkStageName__9daAlink_cFPCc
 /* 800B81EC 0000001C  54 60 06 3F */	clrlwi. r0, r3, 0x18

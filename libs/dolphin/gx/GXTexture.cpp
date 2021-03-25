@@ -237,7 +237,7 @@ SECTION_SDATA2 static f32 lit_220[1 + 1 /* padding */] = {
 /* 804565F0-804565F8 0008+00 s=1 e=0 z=0  None .sdata2    @222                                                         */
 SECTION_SDATA2 static f64 lit_222 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8035DE40-8035E08C 024C+00 s=2 e=22 z=0  None .text      GXInitTexObj                                                 */
+/* 8035DE40-8035E08C 024C+00 s=2 e=22 z=3  None .text      GXInitTexObj                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -248,7 +248,7 @@ extern "C" asm void GXInitTexObj() {
 #pragma pop
 
 
-/* 8035E08C-8035E0D4 0048+00 s=0 e=3 z=0  None .text      GXInitTexObjCI                                               */
+/* 8035E08C-8035E0D4 0048+00 s=0 e=3 z=1  None .text      GXInitTexObjCI                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -322,7 +322,7 @@ SECTION_SDATA2 static u8 lit_292[4] = {
 /* 8045660C-80456610 0004+00 s=1 e=0 z=0  None .sdata2    @293                                                         */
 SECTION_SDATA2 static f32 lit_293 = 10.0f;
 
-/* 8035E0D4-8035E238 0164+00 s=0 e=21 z=0  None .text      GXInitTexObjLOD                                              */
+/* 8035E0D4-8035E238 0164+00 s=0 e=21 z=4  None .text      GXInitTexObjLOD                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -333,7 +333,7 @@ extern "C" asm void GXInitTexObjLOD() {
 #pragma pop
 
 
-/* 8035E238-8035E248 0010+00 s=0 e=4 z=0  None .text      GXGetTexObjWidth                                             */
+/* 8035E238-8035E248 0010+00 s=0 e=4 z=1  None .text      GXGetTexObjWidth                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -421,7 +421,7 @@ extern "C" asm static void GXLoadTexObjPreLoaded() {
 #pragma pop
 
 
-/* 8035E414-8035E468 0054+00 s=0 e=33 z=0  None .text      GXLoadTexObj                                                 */
+/* 8035E414-8035E468 0054+00 s=0 e=33 z=5  None .text      GXLoadTexObj                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -432,7 +432,7 @@ extern "C" asm void GXLoadTexObj() {
 #pragma pop
 
 
-/* 8035E468-8035E4A0 0038+00 s=0 e=4 z=0  None .text      GXInitTlutObj                                                */
+/* 8035E468-8035E4A0 0038+00 s=0 e=4 z=1  None .text      GXInitTlutObj                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -443,7 +443,7 @@ extern "C" asm void GXInitTlutObj() {
 #pragma pop
 
 
-/* 8035E4A0-8035E538 0098+00 s=0 e=4 z=0  None .text      GXLoadTlut                                                   */
+/* 8035E4A0-8035E538 0098+00 s=0 e=4 z=1  None .text      GXLoadTlut                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -476,7 +476,7 @@ extern "C" asm void GXInitTlutRegion() {
 #pragma pop
 
 
-/* 8035E664-8035E6AC 0048+00 s=0 e=8 z=0  None .text      GXInvalidateTexAll                                           */
+/* 8035E664-8035E6AC 0048+00 s=0 e=8 z=1  None .text      GXInvalidateTexAll                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

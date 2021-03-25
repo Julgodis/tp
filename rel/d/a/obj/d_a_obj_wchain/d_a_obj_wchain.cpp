@@ -11,7 +11,15 @@
 // Types:
 // 
 
+struct Vec {
+};
+
 struct cXyz {
+	/* 80266AE4 */ void operator+(Vec const&) const;
+	/* 80266B34 */ void operator-(Vec const&) const;
+	/* 80266B84 */ void operator*(f32) const;
+	/* 80266F48 */ void normalizeZP();
+	/* 80267150 */ void atan2sY_XZ() const;
 	/* 80D303D4 */ cXyz();
 	/* 80D303D8 */ ~cXyz();
 };
@@ -28,11 +36,14 @@ struct daObjWchain_c {
 };
 
 struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct csXyz {
-	/* 80D30394 */ ~csXyz();
 	/* 80D303D0 */ csXyz();
+	/* 802673F4 */ csXyz(s16, s16, s16);
+	/* 80D30394 */ ~csXyz();
 };
 
 struct daObjWchain_shape_c {
@@ -40,36 +51,96 @@ struct daObjWchain_shape_c {
 	/* 80D318C0 */ ~daObjWchain_shape_c();
 };
 
+struct mDoMtx_stack_c {
+	/* 8000CDD4 */ void transM(cXyz const&);
+	/* 8000CD9C */ void transM(f32, f32, f32);
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
+};
+
+struct J3DModel {
+};
+
+struct J3DModelData {
+};
+
+struct fopAcM_rc_c {
+	/* 8001DD1C */ void roofCheck(cXyz const*);
+};
+
+struct request_of_phase_process_class {
+};
+
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 800352B0 */ void offSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct JAISoundID {
+};
+
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct J3DPacket;
+struct J3DDrawBuffer {
+	/* 8032548C */ void entryImm(J3DPacket*, u16);
+};
+
+struct J3DPacket {
+	/* 80312750 */ void entry(J3DDrawBuffer*);
+};
+
+struct J3DShape {
+	/* 80315300 */ void loadPreDrawSetting() const;
+};
+
 // 
 // Forward References:
 // 
 
-void daObjWchain_createHeap(fopAc_ac_c*); // 2
-void daObjWchain_Create(fopAc_ac_c*); // 2
-void daObjWchain_Delete(daObjWchain_c*); // 2
-void daObjWchain_Execute(daObjWchain_c*); // 2
-void daObjWchain_Draw(daObjWchain_c*); // 2
+static void daObjWchain_createHeap(fopAc_ac_c*); // 2
+static void daObjWchain_Create(fopAc_ac_c*); // 2
+static void daObjWchain_Delete(daObjWchain_c*); // 2
+static void daObjWchain_Execute(daObjWchain_c*); // 2
+static void daObjWchain_Draw(daObjWchain_c*); // 2
 
 extern "C" void createHeap__13daObjWchain_cFv(); // 1
-extern "C" void daObjWchain_createHeap__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjWchain_createHeap__FP10fopAc_ac_c(); // 1
 extern "C" void create__13daObjWchain_cFv(); // 1
 extern "C" void __dt__5csXyzFv(); // 1
 extern "C" void __ct__5csXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void daObjWchain_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjWchain_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__13daObjWchain_cFv(); // 1
-extern "C" void daObjWchain_Delete__FP13daObjWchain_c(); // 1
+extern "C" static void daObjWchain_Delete__FP13daObjWchain_c(); // 1
 extern "C" void setMatrix__13daObjWchain_cFv(); // 1
 extern "C" void getChainAngleZ__13daObjWchain_cFP4cXyzi(); // 1
 extern "C" void setChainPos__13daObjWchain_cFv(); // 1
 extern "C" void execute__13daObjWchain_cFv(); // 1
-extern "C" void daObjWchain_Execute__FP13daObjWchain_c(); // 1
+extern "C" static void daObjWchain_Execute__FP13daObjWchain_c(); // 1
 extern "C" void draw__19daObjWchain_shape_cFv(); // 1
 extern "C" void draw__13daObjWchain_cFv(); // 1
-extern "C" void daObjWchain_Draw__FP13daObjWchain_c(); // 1
+extern "C" static void daObjWchain_Draw__FP13daObjWchain_c(); // 1
 extern "C" void __dt__19daObjWchain_shape_cFv(); // 1
-extern "C" extern u8 const l_arcName[7 + 1 /* padding */];
 extern "C" extern u32 const lit_3744;
 extern "C" extern u32 const lit_3745;
 extern "C" extern u32 const lit_3746;
@@ -79,47 +150,141 @@ extern "C" extern u32 const lit_3749;
 extern "C" extern u32 const lit_3750;
 extern "C" extern u32 const lit_3751;
 extern "C" extern u32 const lit_3752;
-extern "C" extern u8 const lit_3753[4];
 extern "C" extern u32 const lit_3754;
 extern "C" extern u32 const lit_3755;
 extern "C" extern u32 const lit_3756;
 extern "C" extern u32 const lit_3757;
 extern "C" extern u8 const lit_3759[8];
 extern "C" extern u8 const data_80D3196C[12];
-extern "C" extern u32 const lit_3819;
-extern "C" extern u8 const lit_3863[8];
-extern "C" extern u8 const lit_3864[8];
 extern "C" extern u8 const lit_3865[8];
 extern "C" extern u32 const lit_3866;
 extern "C" extern u32 const lit_3867;
 extern "C" extern u8 const data_80D3199C[12];
 extern "C" extern u8 const data_80D319A8[12];
-extern "C" extern u32 const lit_4154;
-extern "C" extern u32 const lit_4155;
 extern "C" extern u32 const lit_4156;
 extern "C" extern u32 const lit_4157;
 extern "C" extern u32 const lit_4158;
 extern "C" extern u32 const lit_4159;
 extern "C" extern u32 const lit_4160;
 extern "C" extern u32 const lit_4161;
-extern "C" extern u32 const lit_4252;
 extern "C" extern u32 const lit_4253;
 extern "C" extern u32 const lit_4254;
 extern "C" extern u32 const lit_4364;
-extern "C" extern u8 l_daObjWchain_Method[32];
-extern "C" extern u8 g_profile_Obj_Wchain[48];
-extern "C" extern void* __vt__19daObjWchain_shape_c[5];
+extern "C" extern void* g_profile_Obj_Wchain[12];
 
 // 
 // External References:
 // 
 
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
+void mDoMtx_YrotS(f32 (* )[4], s16); // 2
+void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
+void mDoExt_modelUpdateDL(J3DModel*); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
+void fopAcM_SetMin(fopAc_ac_c*, f32, f32, f32); // 2
+void fopAcM_SetMax(fopAc_ac_c*, f32, f32, f32); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void dComIfGp_getReverb(int); // 2
+void dKy_setLight_again(); // 2
+void dKy_GxFog_tevstr_set(dKy_tevstr_c*); // 2
+void cM_rad2s(f32); // 2
+void cM_atan2s(f32, f32); // 2
+void cM_rnd(); // 2
+void cM_rndF(f32); // 2
+void cM_rndFX(f32); // 2
+void cLib_chaseF(f32*, f32, f32); // 2
+void operator delete(void*); // 2
 
-extern "C" void _unresolved(); // 1
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
+extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
+extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
+extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
+extern "C" void transM__14mDoMtx_stack_cFRC4cXyz(); // 1
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void __dt__10fopAc_ac_cFv(); // 1
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
+extern "C" void fopAcM_SetMin__FP10fopAc_ac_cfff(); // 1
+extern "C" void fopAcM_SetMax__FP10fopAc_ac_cfff(); // 1
+extern "C" void roofCheck__11fopAcM_rc_cFPC4cXyz(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfGp_getReverb__Fi(); // 1
+extern "C" void onSwitch__10dSv_info_cFii(); // 1
+extern "C" void offSwitch__10dSv_info_cFii(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void dKy_setLight_again__Fv(); // 1
+extern "C" void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c(); // 1
+extern "C" void __pl__4cXyzCFRC3Vec(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void __ml__4cXyzCFf(); // 1
+extern "C" void normalizeZP__4cXyzFv(); // 1
+extern "C" void atan2sY_XZ__4cXyzCFv(); // 1
+extern "C" void __ct__5csXyzFsss(); // 1
+extern "C" void cM_rad2s__Ff(); // 1
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void cM_rnd__Fv(); // 1
+extern "C" void cM_rndF__Ff(); // 1
+extern "C" void cM_rndFX__Ff(); // 1
+extern "C" void cLib_chaseF__FPfff(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void entry__9J3DPacketFP13J3DDrawBuffer(); // 1
+extern "C" void loadPreDrawSetting__8J3DShapeCFv(); // 1
+extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECScale(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void GXLoadLightObjImm(); // 1
+extern "C" void GXSetChanAmbColor(); // 1
+extern "C" void GXSetChanMatColor(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXLoadNrmMtxImm(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_20(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _restgpr_20(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void abs(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__9J3DPacket[5];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern f32 Zero__4cXyz[3];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 g_whiteColor;
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 mRoofY__11fopAcM_rc_c[4];
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
 
 // 
 // Declarations:
 // 
+
+/* ############################################################################################## */
+/* 80D31924-80D3192C 0007+01 s=8 e=0 z=0  None .rodata    l_arcName                                                    */
+SECTION_RODATA static u8 const l_arcName[7 + 1 /* padding */] = {
+	0x57, 0x63, 0x68, 0x61, 0x69, 0x6E, 0x00,
+	/* padding */
+	0x00,
+};
 
 /* 80D2FEF8-80D2FF9C 00A4+00 s=1 e=0 z=0  None .text      createHeap__13daObjWchain_cFv                                */
 #pragma push
@@ -132,16 +297,54 @@ asm void daObjWchain_c::createHeap() {
 #pragma pop
 
 
-/* 80D2FF9C-80D2FFBC 0020+00 s=0 e=0 z=0  None .text      daObjWchain_createHeap__FP10fopAc_ac_c                       */
+/* 80D2FF9C-80D2FFBC 0020+00 s=1 e=0 z=0  None .text      daObjWchain_createHeap__FP10fopAc_ac_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjWchain_createHeap(fopAc_ac_c* param_0) {
+asm static void daObjWchain_createHeap(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/daObjWchain_createHeap__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80D319E4-80D31A04 0020+00 s=1 e=0 z=0  None .data      l_daObjWchain_Method                                         */
+SECTION_DATA static void* l_daObjWchain_Method[8] = {
+	/* 0    */ (void*)daObjWchain_Create__FP10fopAc_ac_c,
+	/* 1    */ (void*)daObjWchain_Delete__FP13daObjWchain_c,
+	/* 2    */ (void*)daObjWchain_Execute__FP13daObjWchain_c,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)daObjWchain_Draw__FP13daObjWchain_c,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+};
+
+/* 80D31A04-80D31A34 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Wchain                                         */
+SECTION_DATA void* g_profile_Obj_Wchain[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0007FFFD,
+	/* 2    */ (void*)0x01590000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x000007BC,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x00F70000,
+	/* 9    */ (void*)&l_daObjWchain_Method,
+	/* 10   */ (void*)0x00060100,
+	/* 11   */ (void*)0x030E0000,
+};
+
+/* 80D31A34-80D31A48 0014+00 s=3 e=0 z=0  None .data      __vt__19daObjWchain_shape_c                                  */
+SECTION_DATA static void* __vt__19daObjWchain_shape_c[5] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	/* 3    */ (void*)draw__19daObjWchain_shape_cFv,
+	/* 4    */ (void*)__dt__19daObjWchain_shape_cFv,
+};
 
 /* 80D2FFBC-80D30394 03D8+00 s=1 e=0 z=0  None .text      create__13daObjWchain_cFv                                    */
 #pragma push
@@ -154,7 +357,7 @@ asm void daObjWchain_c::create() {
 #pragma pop
 
 
-/* 80D30394-80D303D0 003C+00 s=0 e=0 z=0  None .text      __dt__5csXyzFv                                               */
+/* 80D30394-80D303D0 003C+00 s=2 e=0 z=0  None .text      __dt__5csXyzFv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -165,7 +368,7 @@ asm csXyz::~csXyz() {
 #pragma pop
 
 
-/* 80D303D0-80D303D4 0004+00 s=0 e=0 z=0  None .text      __ct__5csXyzFv                                               */
+/* 80D303D0-80D303D4 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -176,7 +379,7 @@ asm csXyz::csXyz() {
 #pragma pop
 
 
-/* 80D303D4-80D303D8 0004+00 s=0 e=0 z=0  None .text      __ct__4cXyzFv                                                */
+/* 80D303D4-80D303D8 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -187,7 +390,7 @@ asm cXyz::cXyz() {
 #pragma pop
 
 
-/* 80D303D8-80D30414 003C+00 s=0 e=0 z=0  None .text      __dt__4cXyzFv                                                */
+/* 80D303D8-80D30414 003C+00 s=2 e=0 z=0  None .text      __dt__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,11 +401,11 @@ asm cXyz::~cXyz() {
 #pragma pop
 
 
-/* 80D30414-80D30434 0020+00 s=0 e=0 z=0  None .text      daObjWchain_Create__FP10fopAc_ac_c                           */
+/* 80D30414-80D30434 0020+00 s=1 e=0 z=0  None .text      daObjWchain_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjWchain_Create(fopAc_ac_c* param_0) {
+asm static void daObjWchain_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/daObjWchain_Create__FP10fopAc_ac_c.s"
 }
@@ -220,124 +423,18 @@ asm daObjWchain_c::~daObjWchain_c() {
 #pragma pop
 
 
-/* 80D3050C-80D30534 0028+00 s=0 e=0 z=0  None .text      daObjWchain_Delete__FP13daObjWchain_c                        */
+/* 80D3050C-80D30534 0028+00 s=1 e=0 z=0  None .text      daObjWchain_Delete__FP13daObjWchain_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjWchain_Delete(daObjWchain_c* param_0) {
+asm static void daObjWchain_Delete(daObjWchain_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/daObjWchain_Delete__FP13daObjWchain_c.s"
 }
 #pragma pop
 
 
-/* 80D30534-80D305E4 00B0+00 s=2 e=0 z=0  None .text      setMatrix__13daObjWchain_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjWchain_c::setMatrix() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/setMatrix__13daObjWchain_cFv.s"
-}
-#pragma pop
-
-
-/* 80D305E4-80D3080C 0228+00 s=1 e=0 z=0  None .text      getChainAngleZ__13daObjWchain_cFP4cXyzi                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjWchain_c::getChainAngleZ(cXyz* param_0, int param_1) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/getChainAngleZ__13daObjWchain_cFP4cXyzi.s"
-}
-#pragma pop
-
-
-/* 80D3080C-80D310AC 08A0+00 s=1 e=0 z=0  None .text      setChainPos__13daObjWchain_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjWchain_c::setChainPos() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/setChainPos__13daObjWchain_cFv.s"
-}
-#pragma pop
-
-
-/* 80D310AC-80D313F8 034C+00 s=1 e=0 z=0  None .text      execute__13daObjWchain_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjWchain_c::execute() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/execute__13daObjWchain_cFv.s"
-}
-#pragma pop
-
-
-/* 80D313F8-80D31418 0020+00 s=0 e=0 z=0  None .text      daObjWchain_Execute__FP13daObjWchain_c                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjWchain_Execute(daObjWchain_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/daObjWchain_Execute__FP13daObjWchain_c.s"
-}
-#pragma pop
-
-
-/* 80D31418-80D31810 03F8+00 s=0 e=0 z=0  None .text      draw__19daObjWchain_shape_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjWchain_shape_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/draw__19daObjWchain_shape_cFv.s"
-}
-#pragma pop
-
-
-/* 80D31810-80D318A0 0090+00 s=1 e=0 z=0  None .text      draw__13daObjWchain_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjWchain_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/draw__13daObjWchain_cFv.s"
-}
-#pragma pop
-
-
-/* 80D318A0-80D318C0 0020+00 s=0 e=0 z=0  None .text      daObjWchain_Draw__FP13daObjWchain_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjWchain_Draw(daObjWchain_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/daObjWchain_Draw__FP13daObjWchain_c.s"
-}
-#pragma pop
-
-
-/* 80D318C0-80D3191C 005C+00 s=0 e=0 z=0  None .text      __dt__19daObjWchain_shape_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daObjWchain_shape_c::~daObjWchain_shape_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/__dt__19daObjWchain_shape_cFv.s"
-}
-#pragma pop
-
-
 /* ############################################################################################## */
-/* 80D31924-80D3192C 0007+01 s=0 e=0 z=0  None .rodata    l_arcName                                                    */
-SECTION_RODATA u8 const l_arcName[7 + 1 /* padding */] = {
-	0x57, 0x63, 0x68, 0x61, 0x69, 0x6E, 0x00,
-	/* padding */
-	0x00,
-};
-
 /* 80D3192C-80D31930 0004+00 s=0 e=0 z=0  None .rodata    @3744                                                        */
 SECTION_RODATA u32 const lit_3744 = 0xC3480000;
 
@@ -365,8 +462,8 @@ SECTION_RODATA u32 const lit_3751 = 0x437A0000;
 /* 80D3194C-80D31950 0004+00 s=0 e=0 z=0  None .rodata    @3752                                                        */
 SECTION_RODATA u32 const lit_3752 = 0x44160000;
 
-/* 80D31950-80D31954 0004+00 s=0 e=0 z=0  None .rodata    @3753                                                        */
-SECTION_RODATA u8 const lit_3753[4] = {
+/* 80D31950-80D31954 0004+00 s=3 e=0 z=0  None .rodata    @3753                                                        */
+SECTION_RODATA static u8 const lit_3753[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -392,19 +489,43 @@ SECTION_RODATA u8 const data_80D3196C[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x57, 0x00, 0x00,
 };
 
-/* 80D31978-80D3197C 0004+00 s=0 e=0 z=0  None .rodata    @3819                                                        */
-SECTION_RODATA u32 const lit_3819 = 0x410C0000;
+/* 80D31978-80D3197C 0004+00 s=1 e=0 z=0  None .rodata    @3819                                                        */
+SECTION_RODATA static u32 const lit_3819 = 0x410C0000;
 
-/* 80D3197C-80D31984 0008+00 s=0 e=0 z=0  None .rodata    @3863                                                        */
-SECTION_RODATA u8 const lit_3863[8] = {
+/* 80D30534-80D305E4 00B0+00 s=2 e=0 z=0  None .text      setMatrix__13daObjWchain_cFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjWchain_c::setMatrix() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/setMatrix__13daObjWchain_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
+/* 80D3197C-80D31984 0008+00 s=1 e=0 z=0  None .rodata    @3863                                                        */
+SECTION_RODATA static u8 const lit_3863[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80D31984-80D3198C 0008+00 s=0 e=0 z=0  None .rodata    @3864                                                        */
-SECTION_RODATA u8 const lit_3864[8] = {
+/* 80D31984-80D3198C 0008+00 s=1 e=0 z=0  None .rodata    @3864                                                        */
+SECTION_RODATA static u8 const lit_3864[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
+/* 80D305E4-80D3080C 0228+00 s=1 e=0 z=0  None .text      getChainAngleZ__13daObjWchain_cFP4cXyzi                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjWchain_c::getChainAngleZ(cXyz* param_0, int param_1) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/getChainAngleZ__13daObjWchain_cFP4cXyzi.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
 /* 80D3198C-80D31994 0008+00 s=0 e=0 z=0  None .rodata    @3865                                                        */
 SECTION_RODATA u8 const lit_3865[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -426,11 +547,23 @@ SECTION_RODATA u8 const data_80D319A8[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC1, 0x8C, 0x00, 0x00,
 };
 
-/* 80D319B4-80D319B8 0004+00 s=0 e=0 z=0  None .rodata    @4154                                                        */
-SECTION_RODATA u32 const lit_4154 = 0x3F400000;
+/* 80D319B4-80D319B8 0004+00 s=1 e=0 z=0  None .rodata    @4154                                                        */
+SECTION_RODATA static u32 const lit_4154 = 0x3F400000;
 
-/* 80D319B8-80D319BC 0004+00 s=0 e=0 z=0  None .rodata    @4155                                                        */
-SECTION_RODATA u32 const lit_4155 = 0x3F800000;
+/* 80D3080C-80D310AC 08A0+00 s=1 e=0 z=0  None .text      setChainPos__13daObjWchain_cFv                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjWchain_c::setChainPos() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/setChainPos__13daObjWchain_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
+/* 80D319B8-80D319BC 0004+00 s=1 e=0 z=0  None .rodata    @4155                                                        */
+SECTION_RODATA static u32 const lit_4155 = 0x3F800000;
 
 /* 80D319BC-80D319C0 0004+00 s=0 e=0 z=0  None .rodata    @4156                                                        */
 SECTION_RODATA u32 const lit_4156 = 0x40A00000;
@@ -450,9 +583,76 @@ SECTION_RODATA u32 const lit_4160 = 0x40C90FDB;
 /* 80D319D0-80D319D4 0004+00 s=0 e=0 z=0  None .rodata    @4161                                                        */
 SECTION_RODATA u32 const lit_4161 = 0x3D23D70A;
 
-/* 80D319D4-80D319D8 0004+00 s=0 e=0 z=0  None .rodata    @4252                                                        */
-SECTION_RODATA u32 const lit_4252 = 0xBF800000;
+/* 80D319D4-80D319D8 0004+00 s=1 e=0 z=0  None .rodata    @4252                                                        */
+SECTION_RODATA static u32 const lit_4252 = 0xBF800000;
 
+/* 80D310AC-80D313F8 034C+00 s=1 e=0 z=0  None .text      execute__13daObjWchain_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjWchain_c::execute() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/execute__13daObjWchain_cFv.s"
+}
+#pragma pop
+
+
+/* 80D313F8-80D31418 0020+00 s=1 e=0 z=0  None .text      daObjWchain_Execute__FP13daObjWchain_c                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daObjWchain_Execute(daObjWchain_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/daObjWchain_Execute__FP13daObjWchain_c.s"
+}
+#pragma pop
+
+
+/* 80D31418-80D31810 03F8+00 s=1 e=0 z=0  None .text      draw__19daObjWchain_shape_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjWchain_shape_c::draw() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/draw__19daObjWchain_shape_cFv.s"
+}
+#pragma pop
+
+
+/* 80D31810-80D318A0 0090+00 s=1 e=0 z=0  None .text      draw__13daObjWchain_cFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjWchain_c::draw() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/draw__13daObjWchain_cFv.s"
+}
+#pragma pop
+
+
+/* 80D318A0-80D318C0 0020+00 s=1 e=0 z=0  None .text      daObjWchain_Draw__FP13daObjWchain_c                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daObjWchain_Draw(daObjWchain_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/daObjWchain_Draw__FP13daObjWchain_c.s"
+}
+#pragma pop
+
+
+/* 80D318C0-80D3191C 005C+00 s=1 e=0 z=0  None .text      __dt__19daObjWchain_shape_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm daObjWchain_shape_c::~daObjWchain_shape_c() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/__dt__19daObjWchain_shape_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
 /* 80D319D8-80D319DC 0004+00 s=0 e=0 z=0  None .rodata    @4253                                                        */
 SECTION_RODATA u32 const lit_4253 = 0x3DCCCCCD;
 
@@ -461,26 +661,4 @@ SECTION_RODATA u32 const lit_4254 = 0x41700000;
 
 /* 80D319E0-80D319E4 0004+00 s=0 e=0 z=0  None .rodata    @4364                                                        */
 SECTION_RODATA u32 const lit_4364 = 0xC10C0000;
-
-/* 80D319E4-80D31A04 0020+00 s=0 e=0 z=0  None .data      l_daObjWchain_Method                                         */
-SECTION_DATA u8 l_daObjWchain_Method[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80D31A04-80D31A34 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Wchain                                         */
-SECTION_DATA u8 g_profile_Obj_Wchain[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x01, 0x59, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x07, 0xBC, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0xF7, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x01, 0x00, 0x03, 0x0E, 0x00, 0x00,
-};
-
-/* 80D31A34-80D31A48 0014+00 s=0 e=0 z=0  None .data      __vt__19daObjWchain_shape_c                                  */
-SECTION_DATA void* __vt__19daObjWchain_shape_c[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-};
 

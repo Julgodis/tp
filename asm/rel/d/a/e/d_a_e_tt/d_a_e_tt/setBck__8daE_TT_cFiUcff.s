@@ -12,24 +12,24 @@ lbl_807BDAE0:
 /* 807BDB08 0000000C  7C BF 2B 78 */	mr r31, r5
 /* 807BDB0C 00000010  FF C0 08 90 */	fmr f30, f1
 /* 807BDB10 00000014  FF E0 10 90 */	fmr f31, f2
-/* 807BDB14 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 807BDB18 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 807BDB1C 00000020  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 807BDB20 00000024  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
+/* 807BDB14 00000018  3C 60 80 7C */	lis r3, stringBase0@ha
+/* 807BDB18 0000001C  38 63 20 B0 */	addi r3, r3, stringBase0@l
+/* 807BDB1C 00000020  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 807BDB20 00000024  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 807BDB24 00000028  3C A5 00 02 */	addis r5, r5, 2
 /* 807BDB28 0000002C  38 C0 00 80 */	li r6, 0x80
 /* 807BDB2C 00000030  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 807BDB30 00000034  4B FF FB E9 */	bl _unresolved
+/* 807BDB30 00000034  4B 87 E7 BC */	b getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 807BDB34 00000038  7C 64 1B 78 */	mr r4, r3
 /* 807BDB38 0000003C  80 7E 05 BC */	lwz r3, 0x5bc(r30)
 /* 807BDB3C 00000040  57 E5 06 3E */	clrlwi r5, r31, 0x18
 /* 807BDB40 00000044  FC 20 F0 90 */	fmr f1, f30
 /* 807BDB44 00000048  FC 40 F8 90 */	fmr f2, f31
-/* 807BDB48 0000004C  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
-/* 807BDB4C 00000050  C0 66 00 00 */	lfs f3, 0x0000(r6)
-/* 807BDB50 00000054  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
-/* 807BDB54 00000058  C0 86 00 00 */	lfs f4, 0x0000(r6)
-/* 807BDB58 0000005C  4B FF FB C1 */	bl _unresolved
+/* 807BDB48 0000004C  3C C0 80 7C */	lis r6, lit_3909@ha
+/* 807BDB4C 00000050  C0 66 1F BC */	lfs f3, lit_3909@l(r6)
+/* 807BDB50 00000054  3C C0 80 7C */	lis r6, lit_4031@ha
+/* 807BDB54 00000058  C0 86 1F F8 */	lfs f4, lit_4031@l(r6)
+/* 807BDB58 0000005C  4B 85 33 18 */	b setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff
 /* 807BDB5C 0000007C  E3 E1 00 28 */	psq_l f31, 40(r1), 0, 0 /* qr0 */
 /* 807BDB60 00000000  CB E1 00 20 */	lfd f31, 0x20(r1)
 /* 807BDB64 00000084  E3 C1 00 18 */	psq_l f30, 24(r1), 0, 0 /* qr0 */

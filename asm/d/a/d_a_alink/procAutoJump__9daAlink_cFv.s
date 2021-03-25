@@ -256,7 +256,7 @@ lbl_800C6554:
 /* 800C6590 00000004  7F C3 F3 78 */	mr r3, r30
 /* 800C6594 00000008  38 80 00 8C */	li r4, 0x8c
 /* 800C6598 0000000C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
-/* 800C659C 00000010  C0 45 00 44 */	lfs f2, 0x44(r5)
+/* 800C659C 00000010  C0 45 00 44 */	lfs f2, 0x44(r5)	/* effective address: 8038E498 */
 /* 800C65A0 00000014  4B FE 6A 41 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 800C65A4 00000018  38 00 00 8C */	li r0, 0x8c
 /* 800C65A8 0000001C  90 1E 31 98 */	stw r0, 0x3198(r30)

@@ -39,8 +39,8 @@ lbl_800F546C:
 /* 800F54B8 00000020  4B FB F5 51 */	bl setTalkStatus__9daAlink_cFv
 /* 800F54BC 00000024  2C 03 00 00 */	cmpwi r3, 0
 /* 800F54C0 00000028  40 82 00 28 */	bne lbl_800F54E8
-/* 800F54C4 0000002C  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800F54C8 00000030  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800F54C4 0000002C  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800F54C8 00000030  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800F54CC 00000034  38 63 00 7E */	addi r3, r3, 0x7e
 /* 800F54D0 00000038  4B FA 85 91 */	bl checkStageName__9daAlink_cFPCc
 /* 800F54D4 0000003C  54 60 06 3F */	clrlwi. r0, r3, 0x18

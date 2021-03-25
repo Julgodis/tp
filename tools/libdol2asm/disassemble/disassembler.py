@@ -256,7 +256,9 @@ class Disassembler:
 
         self.r13_addr = 0x80458580
         self.r2_addr = 0x80459A00
-
+        self.common_r13_addr = self.r13_addr
+        self.common_r2_addr = self.r2_addr
+        
     def is_label_candidate(self, addr):
         if len(self.sections) == 0:
             return True
@@ -295,6 +297,8 @@ class Disassembler:
 
         self.r13_addr = 0x80458580
         self.r2_addr = 0x80459A00
+        self.common_r13_addr = self.r13_addr
+        self.common_r2_addr = self.r2_addr
 
         yield 0, addr
         instructions = []
@@ -366,8 +370,10 @@ class Disassembler:
         self.r2AddrInsns[insn.address] = self.r2_addr
         self.r13AddrInsns[insn.address] = self.r13_addr
 
-        if insn.id in {PPC_INS_B, PPC_INS_BL, PPC_INS_BC, PPC_INS_BDZ, PPC_INS_BDNZ}:
+        if insn.id in {PPC_INS_B, PPC_INS_BLR, PPC_INS_BL, PPC_INS_BC, PPC_INS_BDZ, PPC_INS_BDNZ}:
             self.lisInsns.clear()
+
+        if insn.id == PPC_INS_BLR:
             self.registers.clear()
 
         if insn.id == PPC_INS_LIS:
@@ -390,9 +396,9 @@ class Disassembler:
 
             # detect r2/r13 initialization
             if insn.id == PPC_INS_ORI and insn.operands[0].reg == insn.operands[1].reg:
-                if self.r2_addr == None and insn.operands[0].reg == PPC_REG_R2:
+                if insn.operands[0].reg == PPC_REG_R2:
                     self.r2_addr = value
-                elif self.r13_addr == None and insn.operands[0].reg == PPC_REG_R13:
+                elif insn.operands[0].reg == PPC_REG_R13:
                     self.r13_addr = value
         elif insn.id in {PPC_INS_ADDI, PPC_INS_ORI} and insn.operands[1].reg in self.registers:
             value = self.registers[insn.operands[1].reg]
@@ -471,7 +477,7 @@ class AccessCollector(Disassembler):
                 if op.type == PPC_OP_IMM:
                     self.add_branch_access(insn, op.imm)
 
-        if r13_addr != None:
+        if r13_addr == self.common_r13_addr:
             if insn.id == PPC_INS_ADDI and insn.operands[1].value.reg == PPC_REG_R13:
                 value = r13_addr + sign_extend_16(insn.operands[2].imm)
                 self.add_sda_hack(insn, value)
@@ -479,7 +485,7 @@ class AccessCollector(Disassembler):
                 value = r13_addr + sign_extend_16(insn.operands[1].mem.disp)
                 self.add_load_access(insn, value)
 
-        if r2_addr != None:
+        if r2_addr == self.common_r2_addr:
             if insn.id == PPC_INS_ADDI and insn.operands[1].value.reg == PPC_REG_R2:
                 value = r2_addr + sign_extend_16(insn.operands[2].imm)
                 self.add_sda_hack(insn, value)

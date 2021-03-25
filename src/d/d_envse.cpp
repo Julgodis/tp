@@ -77,7 +77,7 @@ extern "C" static void dEnvSe_Execute__FP8dEnvSe_c(); // 1
 extern "C" static void dEnvSe_IsDelete__FP8dEnvSe_c(); // 1
 extern "C" static void dEnvSe_Delete__FP8dEnvSe_c(); // 1
 extern "C" static void dEnvSe_Create__FP8dEnvSe_c(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_d_envse__stringBase0;
 extern "C" extern void* g_profile_ENVSE[10 + 1 /* padding */];
 
 // 
@@ -246,7 +246,7 @@ SECTION_DATA static void* l_dEnvSe_Method[5] = {
 	/* 4    */ (void*)dEnvSe_Draw__FP8dEnvSe_c,
 };
 
-/* 803BA81C-803BA848 0028+04 s=0 e=0 z=0  None .data      g_profile_ENVSE                                              */
+/* 803BA81C-803BA848 0028+04 s=0 e=0 z=1  None .data      g_profile_ENVSE                                              */
 SECTION_DATA void* g_profile_ENVSE[10 + 1 /* padding */] = {
 	/* 0    */ (void*)0xFFFFFFFD,
 	/* 1    */ (void*)0x0002FFFD,

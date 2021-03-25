@@ -10,7 +10,7 @@ lbl_80353AC8:
 /* 80353AE8 00000020  80 1E 01 0C */	lwz r0, 0x10c(r30)	/* effective address: 8044CCCC */
 /* 80353AEC 00000024  28 00 00 00 */	cmplwi r0, 0
 /* 80353AF0 00000028  41 82 00 10 */	beq lbl_80353B00
-/* 80353AF4 0000002C  80 1E 02 1C */	lwz r0, 0x21c(r30)
+/* 80353AF4 0000002C  80 1E 02 1C */	lwz r0, 0x21c(r30)	/* effective address: 8044CDDC */
 /* 80353AF8 00000030  28 00 00 00 */	cmplwi r0, 0
 /* 80353AFC 00000034  40 82 00 5C */	bne lbl_80353B58
 lbl_80353B00:
@@ -23,7 +23,7 @@ lbl_80353B00:
 /* 80353B18 00000018  3B A0 00 00 */	li r29, 0
 /* 80353B1C 0000001C  3B E0 FF FD */	li r31, -3
 lbl_80353B20:
-/* 80353B20 00000000  93 FE 00 04 */	stw r31, 4(r30)
+/* 80353B20 00000000  93 FE 00 04 */	stw r31, 4(r30)	/* effective address: 8044CBC4 */
 /* 80353B24 00000004  38 7E 00 8C */	addi r3, r30, 0x8c
 /* 80353B28 00000008  4B FE D1 4D */	bl OSInitThreadQueue
 /* 80353B2C 0000000C  38 7E 00 E0 */	addi r3, r30, 0xe0

@@ -67,12 +67,12 @@ lbl_800EFA50:
 /* 800EFA50 00000000  7F 43 D3 78 */	mr r3, r26
 /* 800EFA54 00000004  38 80 00 3A */	li r4, 0x3a
 /* 800EFA58 00000008  4B FD 25 15 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
-/* 800EFA5C 0000000C  C0 1B 00 0C */	lfs f0, 0xc(r27)
+/* 800EFA5C 0000000C  C0 1B 00 0C */	lfs f0, 0xc(r27)	/* effective address: 80425514 */
 /* 800EFA60 00000010  D0 1A 35 88 */	stfs f0, 0x3588(r26)
 /* 800EFA64 00000014  38 7B 00 0C */	addi r3, r27, 0xc
-/* 800EFA68 00000018  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800EFA68 00000018  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80425518 */
 /* 800EFA6C 0000001C  D0 1A 35 8C */	stfs f0, 0x358c(r26)
-/* 800EFA70 00000020  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800EFA70 00000020  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 8042551C */
 /* 800EFA74 00000024  D0 1A 35 90 */	stfs f0, 0x3590(r26)
 /* 800EFA78 00000028  C3 E2 92 B8 */	lfs f31, lit_6040(r2)
 /* 800EFA7C 0000002C  3B 60 FF FF */	li r27, -1

@@ -54,7 +54,7 @@ extern "C" static void daNocrm_create__FP9daNocrm_c(); // 1
 extern "C" static void daNocrm_Delete__FP9daNocrm_c(); // 1
 extern "C" static void daNocrm_execute__FP9daNocrm_c(); // 1
 extern "C" static void daNocrm_draw__FP9daNocrm_c(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_a_d_a_no_chg_room__stringBase0;
 extern "C" extern void* g_profile_NO_CHG_ROOM[12];
 
 // 
@@ -208,7 +208,7 @@ SECTION_DATA static void* daNocrm_METHODS[8] = {
 	/* 7    */ (void*)NULL,
 };
 
-/* 803B3678-803B36A8 0030+00 s=0 e=0 z=0  None .data      g_profile_NO_CHG_ROOM                                        */
+/* 803B3678-803B36A8 0030+00 s=0 e=0 z=1  None .data      g_profile_NO_CHG_ROOM                                        */
 SECTION_DATA void* g_profile_NO_CHG_ROOM[12] = {
 	/* 0    */ (void*)0xFFFFFFFD,
 	/* 1    */ (void*)0x0002FFFD,

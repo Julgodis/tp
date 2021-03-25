@@ -19,7 +19,7 @@ extern "C" void AIStopDMA(); // 1
 extern "C" void AISetStreamPlayState(); // 1
 extern "C" static void AIGetStreamPlayState(); // 1
 extern "C" void AISetDSPSampleRate(); // 1
-extern "C" static void AIGetDSPSampleRate(); // 1
+extern "C" void AIGetDSPSampleRate(); // 1
 extern "C" static void __AI_set_stream_sample_rate(); // 1
 extern "C" static void AIGetStreamSampleRate(); // 1
 extern "C" void AISetStreamVolLeft(); // 1
@@ -134,11 +134,11 @@ extern "C" asm void AISetDSPSampleRate() {
 #pragma pop
 
 
-/* 8034FF34-8034FF48 0014+00 s=1 e=0 z=0  None .text      AIGetDSPSampleRate                                           */
+/* 8034FF34-8034FF48 0014+00 s=1 e=0 z=1  None .text      AIGetDSPSampleRate                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void AIGetDSPSampleRate() {
+extern "C" asm void AIGetDSPSampleRate() {
 	nofralloc
 #include "asm/dolphin/ai/ai/AIGetDSPSampleRate.s"
 }

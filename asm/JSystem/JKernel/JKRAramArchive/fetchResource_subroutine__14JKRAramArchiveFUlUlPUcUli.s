@@ -38,8 +38,8 @@ lbl_802D78BC:
 /* 802D78DC 00000020  80 61 00 08 */	lwz r3, 8(r1)
 /* 802D78E0 00000024  48 00 00 24 */	b lbl_802D7904
 lbl_802D78E4:
-/* 802D78E4 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802D78E8 00000004  38 63 D1 88 */	addi r3, r3, stringBase0@l
+/* 802D78E4 00000000  3C 60 80 3A */	lis r3, JKRAramArchive__stringBase0@ha
+/* 802D78E8 00000004  38 63 D1 88 */	addi r3, r3, JKRAramArchive__stringBase0@l
 /* 802D78EC 00000008  38 80 02 8F */	li r4, 0x28f
 /* 802D78F0 0000000C  38 A3 00 13 */	addi r5, r3, 0x13
 /* 802D78F4 00000010  38 C3 00 16 */	addi r6, r3, 0x16

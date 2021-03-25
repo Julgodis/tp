@@ -16,8 +16,8 @@ lbl_80249700:
 /* 80249738 00000038  80 A3 5C F4 */	lwz r5, 0x5cf4(r3)	/* effective address: 8040BEB4 */
 /* 8024973C 0000003C  3C 60 52 4F */	lis r3, 0x524F /* 0x524F4F54@ha */
 /* 80249740 00000040  38 63 4F 54 */	addi r3, r3, 0x4F54 /* 0x524F4F54@l */
-/* 80249744 00000044  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 80249748 00000048  38 84 9C 98 */	addi r4, r4, stringBase0@l
+/* 80249744 00000044  3C 80 80 3A */	lis r4, d_msg_d_msg_string_base__stringBase0@ha
+/* 80249748 00000048  38 84 9C 98 */	addi r4, r4, d_msg_d_msg_string_base__stringBase0@l
 /* 8024974C 0000004C  48 08 C3 ED */	bl getGlbResource__10JKRArchiveFUlPCcP10JKRArchive
 /* 80249750 00000050  90 7F 00 1C */	stw r3, 0x1c(r31)
 lbl_80249754:

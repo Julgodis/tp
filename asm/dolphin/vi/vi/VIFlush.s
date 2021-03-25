@@ -68,7 +68,7 @@ lbl_8034D770:
 /* 8034D78C 0000001C  38 00 00 01 */	li r0, 1
 /* 8034D790 00000020  90 0D 92 68 */	stw r0, flushFlag(r13)
 /* 8034D794 00000024  7F C3 F3 78 */	mr r3, r30
-/* 8034D798 00000028  80 1F 01 20 */	lwz r0, 0x120(r31)
+/* 8034D798 00000028  80 1F 01 20 */	lwz r0, 0x120(r31)	/* effective address: 8044CB48 */
 /* 8034D79C 0000002C  90 0D 92 B0 */	stw r0, NextBufAddr(r13)
 /* 8034D7A0 00000030  4B FE FF 7D */	bl OSRestoreInterrupts
 /* 8034D7A4 00000034  80 01 00 24 */	lwz r0, 0x24(r1)

@@ -33,7 +33,7 @@ lbl_8018AC6C:
 /* 8018ACB4 00000048  88 9E 02 65 */	lbz r4, 0x265(r30)
 /* 8018ACB8 0000004C  38 A0 00 FF */	li r5, 0xff
 /* 8018ACBC 00000050  38 C0 00 00 */	li r6, 0
-/* 8018ACC0 00000054  88 FF 00 08 */	lbz r7, 8(r31)
+/* 8018ACC0 00000054  88 FF 00 08 */	lbz r7, 8(r31)	/* effective address: 8042C9F4 */
 /* 8018ACC4 00000058  48 00 29 8D */	bl selectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc
 /* 8018ACC8 0000005C  7F C3 F3 78 */	mr r3, r30
 /* 8018ACCC 00000060  38 80 03 1F */	li r4, 0x31f

@@ -3,7 +3,7 @@ lbl_8097B288:
 /* 8097B28C 00000004  7C 08 02 A6 */	mflr r0
 /* 8097B290 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8097B294 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 8097B298 00000010  4B FF DA 21 */	bl _unresolved
+/* 8097B298 00000010  4B 9E 6F 44 */	b _savegpr_29
 /* 8097B29C 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 8097B2A0 00000018  80 03 00 B0 */	lwz r0, 0xb0(r3)
 /* 8097B2A4 0000001C  54 00 06 3E */	clrlwi r0, r0, 0x18
@@ -25,31 +25,31 @@ lbl_8097B288:
 /* 8097B2E4 0000005C  88 1F 0A C6 */	lbz r0, 0xac6(r31)
 /* 8097B2E8 00000060  28 00 00 00 */	cmplwi r0, 0
 /* 8097B2EC 00000064  41 82 00 10 */	beq lbl_8097B2FC
-/* 8097B2F0 00000068  4B FF D9 C9 */	bl _unresolved
+/* 8097B2F0 00000068  4B 82 48 40 */	b dKy_getDarktime_minute__Fv
 /* 8097B2F4 0000006C  7C 7E 1B 78 */	mr r30, r3
 /* 8097B2F8 00000070  48 00 00 0C */	b lbl_8097B304
 lbl_8097B2FC:
-/* 8097B2FC 00000000  4B FF D9 BD */	bl _unresolved
+/* 8097B2FC 00000000  4B 82 47 40 */	b dKy_getdaytime_minute__Fv
 /* 8097B300 00000004  7C 7E 1B 78 */	mr r30, r3
 lbl_8097B304:
 /* 8097B304 00000000  88 1F 0A C6 */	lbz r0, 0xac6(r31)
 /* 8097B308 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 8097B30C 00000008  41 82 00 0C */	beq lbl_8097B318
-/* 8097B310 0000000C  4B FF D9 A9 */	bl _unresolved
+/* 8097B310 0000000C  4B 82 47 E4 */	b dKy_getDarktime_hour__Fv
 /* 8097B314 00000010  48 00 00 08 */	b lbl_8097B31C
 lbl_8097B318:
-/* 8097B318 00000000  4B FF D9 A1 */	bl _unresolved
+/* 8097B318 00000000  4B 82 46 F8 */	b dKy_getdaytime_hour__Fv
 lbl_8097B31C:
 /* 8097B31C 00000000  1C 03 00 3C */	mulli r0, r3, 0x3c
 /* 8097B320 00000004  7F DE 02 14 */	add r30, r30, r0
 /* 8097B324 00000008  88 1F 0A C6 */	lbz r0, 0xac6(r31)
 /* 8097B328 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 8097B32C 00000010  41 82 00 10 */	beq lbl_8097B33C
-/* 8097B330 00000014  4B FF D9 89 */	bl _unresolved
+/* 8097B330 00000014  4B 82 48 8C */	b dKy_getDarktime_week__Fv
 /* 8097B334 00000018  54 63 06 3E */	clrlwi r3, r3, 0x18
 /* 8097B338 0000001C  48 00 00 08 */	b lbl_8097B340
 lbl_8097B33C:
-/* 8097B33C 00000000  4B FF D9 7D */	bl _unresolved
+/* 8097B33C 00000000  4B 82 D7 FC */	b dKy_get_dayofweek__Fv
 lbl_8097B340:
 /* 8097B340 00000000  80 9F 0B 88 */	lwz r4, 0xb88(r31)
 /* 8097B344 00000004  80 04 05 68 */	lwz r0, 0x568(r4)
@@ -66,7 +66,7 @@ lbl_8097B340:
 /* 8097B370 00000030  4B FF DA 65 */	bl setAction__11daNpcCdn3_cFQ211daNpcCdn3_c6Mode_e
 lbl_8097B374:
 /* 8097B374 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 8097B378 00000004  4B FF D9 41 */	bl _unresolved
+/* 8097B378 00000004  4B 9E 6E B0 */	b _restgpr_29
 /* 8097B37C 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8097B380 0000000C  7C 08 03 A6 */	mtlr r0
 /* 8097B384 00000010  38 21 00 20 */	addi r1, r1, 0x20

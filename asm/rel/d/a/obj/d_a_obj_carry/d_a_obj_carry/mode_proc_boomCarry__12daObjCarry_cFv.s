@@ -9,7 +9,7 @@ lbl_80474FA8:
 /* 80474FC4 0000001C  38 BF 04 E6 */	addi r5, r31, 0x4e6
 /* 80474FC8 00000020  7F E6 FB 78 */	mr r6, r31
 /* 80474FCC 00000024  38 E0 1C 00 */	li r7, 0x1c00
-/* 80474FD0 00000028  4B FF A0 09 */	bl _unresolved
+/* 80474FD0 00000028  4B CE 96 84 */	b posMove__20daPy_boomerangMove_cFP4cXyzPsP10fopAc_ac_cs
 /* 80474FD4 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 80474FD8 00000030  40 82 00 24 */	bne lbl_80474FFC
 /* 80474FDC 00000034  80 1F 04 9C */	lwz r0, 0x49c(r31)

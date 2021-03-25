@@ -5,8 +5,8 @@ lbl_8021BBB4:
 /* 8021BBC0 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021BBC4 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8021BBC8 00000014  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 8021BBCC 00000018  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8021BBD0 0000001C  38 84 88 D0 */	addi r4, r4, stringBase0@l
+/* 8021BBCC 00000018  3C 80 80 3A */	lis r4, d_meter_d_meter2_draw__stringBase0@ha
+/* 8021BBD0 0000001C  38 84 88 D0 */	addi r4, r4, d_meter_d_meter2_draw__stringBase0@l
 /* 8021BBD4 00000020  38 84 01 9F */	addi r4, r4, 0x19f
 /* 8021BBD8 00000024  48 14 CD BD */	bl strcmp
 /* 8021BBDC 00000028  2C 03 00 00 */	cmpwi r3, 0

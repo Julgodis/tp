@@ -5,8 +5,8 @@ lbl_80041A20:
 /* 80041A2C 0000000C  39 61 00 20 */	addi r11, r1, 0x20
 /* 80041A30 00000010  48 32 07 AD */	bl _savegpr_29
 /* 80041A34 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80041A38 00000018  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 80041A3C 0000001C  38 63 9D 80 */	addi r3, r3, stringBase0@l
+/* 80041A38 00000018  3C 60 80 38 */	lis r3, d_event_d_event__stringBase0@ha
+/* 80041A3C 0000001C  38 63 9D 80 */	addi r3, r3, d_event_d_event__stringBase0@l
 /* 80041A40 00000020  3B C3 00 0B */	addi r30, r3, 0xb
 /* 80041A44 00000024  83 A4 00 0C */	lwz r29, 0xc(r4)
 /* 80041A48 00000028  A8 7D 00 08 */	lha r3, 8(r29)
@@ -36,8 +36,8 @@ lbl_80041A7C:
 /* 80041A9C 00000020  54 00 04 A5 */	rlwinm. r0, r0, 0, 0x12, 0x12
 /* 80041AA0 00000024  41 82 00 10 */	beq lbl_80041AB0
 lbl_80041AA4:
-/* 80041AA4 00000000  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 80041AA8 00000004  38 63 9D 80 */	addi r3, r3, stringBase0@l
+/* 80041AA4 00000000  3C 60 80 38 */	lis r3, d_event_d_event__stringBase0@ha
+/* 80041AA8 00000004  38 63 9D 80 */	addi r3, r3, d_event_d_event__stringBase0@l
 /* 80041AAC 00000008  3B C3 00 18 */	addi r30, r3, 0x18
 lbl_80041AB0:
 /* 80041AB0 00000000  7F E3 FB 78 */	mr r3, r31

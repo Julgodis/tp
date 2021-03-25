@@ -15,6 +15,15 @@ struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
 };
 
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
 struct JASSoundParams {
 };
 
@@ -23,19 +32,10 @@ struct JASTrack {
 	/* 802919F4 */ void assignExtBuffer(u32, JASSoundParams*);
 };
 
-struct JAIAudience {
-};
-
 struct JAISoundID {
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
-
+struct JAIAudience {
 };
 
 struct JAISound {
@@ -89,7 +89,7 @@ extern "C" void die_JAISound___8JAISoundFv(); // 1
 extern "C" void increasePrepareCount_JAISound___8JAISoundFv(); // 1
 extern "C" void calc_JAISound___8JAISoundFv(); // 1
 extern "C" void initTrack_JAISound___8JAISoundFP8JASTrack(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JAISound__stringBase0;
 
 // 
 // External References:

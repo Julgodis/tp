@@ -3,23 +3,23 @@ lbl_80BAE4A8:
 /* 80BAE4AC 00000004  7C 08 02 A6 */	mflr r0
 /* 80BAE4B0 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80BAE4B4 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80BAE4B8 00000010  4B FF FE 21 */	bl _unresolved
+/* 80BAE4B8 00000010  4B 7B 3D 20 */	b _savegpr_28
 /* 80BAE4BC 00000014  2C 04 00 00 */	cmpwi r4, 0
 /* 80BAE4C0 00000018  40 82 01 20 */	bne lbl_80BAE5E0
 /* 80BAE4C4 0000001C  A3 E3 00 14 */	lhz r31, 0x14(r3)
-/* 80BAE4C8 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BAE4CC 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80BAE4D0 00000028  83 C3 00 38 */	lwz r30, 0x38(r3)
+/* 80BAE4C8 00000020  3C 60 80 43 */	lis r3, j3dSys@ha
+/* 80BAE4CC 00000024  38 63 4A C8 */	addi r3, r3, j3dSys@l
+/* 80BAE4D0 00000028  83 C3 00 38 */	lwz r30, 0x38(r3)	/* effective address: 80434B00 */
 /* 80BAE4D4 0000002C  83 9E 00 14 */	lwz r28, 0x14(r30)
 /* 80BAE4D8 00000030  80 7E 00 84 */	lwz r3, 0x84(r30)
 /* 80BAE4DC 00000034  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 80BAE4E0 00000038  1F BF 00 30 */	mulli r29, r31, 0x30
 /* 80BAE4E4 0000003C  7C 60 EA 14 */	add r3, r0, r29
-/* 80BAE4E8 00000040  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80BAE4EC 00000044  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80BAE4F0 00000048  4B FF FD E9 */	bl _unresolved
-/* 80BAE4F4 0000004C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BAE4F8 00000050  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80BAE4E8 00000040  3C 80 80 3E */	lis r4, now__14mDoMtx_stack_c@ha
+/* 80BAE4EC 00000044  38 84 D4 70 */	addi r4, r4, now__14mDoMtx_stack_c@l
+/* 80BAE4F0 00000048  4B 79 7F C0 */	b PSMTXCopy
+/* 80BAE4F4 0000004C  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
+/* 80BAE4F8 00000050  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 80BAE4FC 00000054  80 1C 0F F0 */	lwz r0, 0xff0(r28)
 /* 80BAE500 00000058  1C 00 2C EC */	mulli r0, r0, 0x2cec
 /* 80BAE504 0000005C  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
@@ -33,59 +33,59 @@ lbl_80BAE4A8:
 /* 80BAE524 0000007C  A8 1C 0F 8C */	lha r0, 0xf8c(r28)
 /* 80BAE528 00000080  7C 1F 00 00 */	cmpw r31, r0
 /* 80BAE52C 00000084  40 82 00 20 */	bne lbl_80BAE54C
-/* 80BAE530 00000088  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BAE534 0000008C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80BAE530 00000088  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80BAE534 0000008C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80BAE538 00000090  A8 1C 0F 96 */	lha r0, 0xf96(r28)
 /* 80BAE53C 00000094  7C 00 22 14 */	add r0, r0, r4
 /* 80BAE540 00000098  7C 04 07 34 */	extsh r4, r0
-/* 80BAE544 0000009C  4B FF FD 95 */	bl _unresolved
+/* 80BAE544 0000009C  4B 45 DE 58 */	b mDoMtx_XrotM__FPA4_fs
 /* 80BAE548 000000A0  48 00 00 80 */	b lbl_80BAE5C8
 lbl_80BAE54C:
 /* 80BAE54C 00000000  A8 1C 0F 8E */	lha r0, 0xf8e(r28)
 /* 80BAE550 00000004  7C 1F 00 00 */	cmpw r31, r0
 /* 80BAE554 00000008  40 82 00 18 */	bne lbl_80BAE56C
-/* 80BAE558 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BAE55C 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80BAE558 0000000C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80BAE55C 00000010  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80BAE560 00000014  A8 9C 0F 9A */	lha r4, 0xf9a(r28)
-/* 80BAE564 00000018  4B FF FD 75 */	bl _unresolved
+/* 80BAE564 00000018  4B 45 DE 38 */	b mDoMtx_XrotM__FPA4_fs
 /* 80BAE568 0000001C  48 00 00 60 */	b lbl_80BAE5C8
 lbl_80BAE56C:
 /* 80BAE56C 00000000  A8 1C 0F 90 */	lha r0, 0xf90(r28)
 /* 80BAE570 00000004  7C 1F 00 00 */	cmpw r31, r0
 /* 80BAE574 00000008  40 82 00 18 */	bne lbl_80BAE58C
-/* 80BAE578 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BAE57C 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80BAE578 0000000C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80BAE57C 00000010  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80BAE580 00000014  A8 9C 0F 9E */	lha r4, 0xf9e(r28)
-/* 80BAE584 00000018  4B FF FD 55 */	bl _unresolved
+/* 80BAE584 00000018  4B 45 DE 18 */	b mDoMtx_XrotM__FPA4_fs
 /* 80BAE588 0000001C  48 00 00 40 */	b lbl_80BAE5C8
 lbl_80BAE58C:
 /* 80BAE58C 00000000  A8 1C 0F 92 */	lha r0, 0xf92(r28)
 /* 80BAE590 00000004  7C 1F 00 00 */	cmpw r31, r0
 /* 80BAE594 00000008  40 82 00 18 */	bne lbl_80BAE5AC
-/* 80BAE598 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BAE59C 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80BAE598 0000000C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80BAE59C 00000010  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80BAE5A0 00000014  A8 9C 0F A2 */	lha r4, 0xfa2(r28)
-/* 80BAE5A4 00000018  4B FF FD 35 */	bl _unresolved
+/* 80BAE5A4 00000018  4B 45 DD F8 */	b mDoMtx_XrotM__FPA4_fs
 /* 80BAE5A8 0000001C  48 00 00 20 */	b lbl_80BAE5C8
 lbl_80BAE5AC:
 /* 80BAE5AC 00000000  A8 1C 0F 94 */	lha r0, 0xf94(r28)
 /* 80BAE5B0 00000004  7C 1F 00 00 */	cmpw r31, r0
 /* 80BAE5B4 00000008  40 82 00 14 */	bne lbl_80BAE5C8
-/* 80BAE5B8 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BAE5BC 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80BAE5B8 0000000C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80BAE5BC 00000010  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80BAE5C0 00000014  A8 9C 0F A6 */	lha r4, 0xfa6(r28)
-/* 80BAE5C4 00000018  4B FF FD 15 */	bl _unresolved
+/* 80BAE5C4 00000018  4B 45 DD D8 */	b mDoMtx_XrotM__FPA4_fs
 lbl_80BAE5C8:
 /* 80BAE5C8 00000000  80 7E 00 84 */	lwz r3, 0x84(r30)
 /* 80BAE5CC 00000004  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 80BAE5D0 00000008  7C 80 EA 14 */	add r4, r0, r29
-/* 80BAE5D4 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BAE5D8 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80BAE5DC 00000014  4B FF FC FD */	bl _unresolved
+/* 80BAE5D4 0000000C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80BAE5D8 00000010  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80BAE5DC 00000014  4B 79 7E D4 */	b PSMTXCopy
 lbl_80BAE5E0:
 /* 80BAE5E0 00000000  38 60 00 01 */	li r3, 1
 /* 80BAE5E4 00000004  39 61 00 20 */	addi r11, r1, 0x20
-/* 80BAE5E8 00000008  4B FF FC F1 */	bl _unresolved
+/* 80BAE5E8 00000008  4B 7B 3C 3C */	b _restgpr_28
 /* 80BAE5EC 0000000C  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80BAE5F0 00000010  7C 08 03 A6 */	mtlr r0
 /* 80BAE5F4 00000014  38 21 00 20 */	addi r1, r1, 0x20

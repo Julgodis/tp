@@ -7,8 +7,8 @@ lbl_80031648:
 /* 8003165C 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80031660 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80031664 0000001C  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 80031668 00000020  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 8003166C 00000024  38 84 90 B0 */	addi r4, r4, stringBase0@l
+/* 80031668 00000020  3C 80 80 38 */	lis r4, d_com_d_com_static__stringBase0@ha
+/* 8003166C 00000024  38 84 90 B0 */	addi r4, r4, d_com_d_com_static__stringBase0@l
 /* 80031670 00000028  48 33 73 25 */	bl strcmp
 /* 80031674 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 80031678 00000030  40 82 00 18 */	bne lbl_80031690

@@ -9,7 +9,7 @@ lbl_80B762CC:
 /* 80B762E8 0000001C  88 03 0E 25 */	lbz r0, 0xe25(r3)
 /* 80B762EC 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 80B762F0 00000024  40 82 00 1C */	bne lbl_80B7630C
-/* 80B762F4 00000028  4B FF ED A5 */	bl _unresolved
+/* 80B762F4 00000028  4B 4B 97 60 */	b dComIfGs_wolfeye_effect_check__Fv
 /* 80B762F8 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 80B762FC 00000030  40 82 00 14 */	bne lbl_80B76310
 /* 80B76300 00000034  88 1E 0A 89 */	lbz r0, 0xa89(r30)

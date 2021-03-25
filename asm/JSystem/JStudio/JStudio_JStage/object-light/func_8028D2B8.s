@@ -41,10 +41,10 @@ lbl_8028D2B8:
 /* 8028D354 0000009C  38 00 00 01 */	li r0, 1
 /* 8028D358 000000A0  90 01 00 40 */	stw r0, 0x40(r1)
 /* 8028D35C 000000A4  38 7F 00 48 */	addi r3, r31, 0x48
-/* 8028D360 000000A8  90 C3 00 0C */	stw r6, 0xc(r3)
-/* 8028D364 000000AC  90 A3 00 0C */	stw r5, 0xc(r3)
-/* 8028D368 000000B0  90 83 00 10 */	stw r4, 0x10(r3)
-/* 8028D36C 000000B4  90 03 00 14 */	stw r0, 0x14(r3)
+/* 8028D360 000000A8  90 C3 00 0C */	stw r6, 0xc(r3)	/* effective address: 80431454 */
+/* 8028D364 000000AC  90 A3 00 0C */	stw r5, 0xc(r3)	/* effective address: 80431454 */
+/* 8028D368 000000B0  90 83 00 10 */	stw r4, 0x10(r3)	/* effective address: 80431458 */
+/* 8028D36C 000000B4  90 03 00 14 */	stw r0, 0x14(r3)	/* effective address: 8043145C */
 /* 8028D370 000000B8  38 63 00 0C */	addi r3, r3, 0xc
 /* 8028D374 000000BC  3C 80 80 29 */	lis r4, __dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv@ha
 /* 8028D378 000000C0  38 84 D2 58 */	addi r4, r4, __dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv@l
@@ -67,10 +67,10 @@ lbl_8028D2B8:
 /* 8028D3BC 00000104  38 00 00 02 */	li r0, 2
 /* 8028D3C0 00000108  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8028D3C4 0000010C  38 7F 00 48 */	addi r3, r31, 0x48
-/* 8028D3C8 00000110  90 C3 00 18 */	stw r6, 0x18(r3)
-/* 8028D3CC 00000114  90 A3 00 18 */	stw r5, 0x18(r3)
-/* 8028D3D0 00000118  90 83 00 1C */	stw r4, 0x1c(r3)
-/* 8028D3D4 0000011C  90 03 00 20 */	stw r0, 0x20(r3)
+/* 8028D3C8 00000110  90 C3 00 18 */	stw r6, 0x18(r3)	/* effective address: 80431460 */
+/* 8028D3CC 00000114  90 A3 00 18 */	stw r5, 0x18(r3)	/* effective address: 80431460 */
+/* 8028D3D0 00000118  90 83 00 1C */	stw r4, 0x1c(r3)	/* effective address: 80431464 */
+/* 8028D3D4 0000011C  90 03 00 20 */	stw r0, 0x20(r3)	/* effective address: 80431468 */
 /* 8028D3D8 00000120  38 63 00 18 */	addi r3, r3, 0x18
 /* 8028D3DC 00000124  3C 80 80 29 */	lis r4, __dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv@ha
 /* 8028D3E0 00000128  38 84 D2 58 */	addi r4, r4, __dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv@l
@@ -93,10 +93,10 @@ lbl_8028D2B8:
 /* 8028D424 0000016C  38 00 00 02 */	li r0, 2
 /* 8028D428 00000170  90 01 00 28 */	stw r0, 0x28(r1)
 /* 8028D42C 00000174  38 7F 00 48 */	addi r3, r31, 0x48
-/* 8028D430 00000178  90 C3 00 24 */	stw r6, 0x24(r3)
-/* 8028D434 0000017C  90 A3 00 24 */	stw r5, 0x24(r3)
-/* 8028D438 00000180  90 83 00 28 */	stw r4, 0x28(r3)
-/* 8028D43C 00000184  90 03 00 2C */	stw r0, 0x2c(r3)
+/* 8028D430 00000178  90 C3 00 24 */	stw r6, 0x24(r3)	/* effective address: 8043146C */
+/* 8028D434 0000017C  90 A3 00 24 */	stw r5, 0x24(r3)	/* effective address: 8043146C */
+/* 8028D438 00000180  90 83 00 28 */	stw r4, 0x28(r3)	/* effective address: 80431470 */
+/* 8028D43C 00000184  90 03 00 2C */	stw r0, 0x2c(r3)	/* effective address: 80431474 */
 /* 8028D440 00000188  38 63 00 24 */	addi r3, r3, 0x24
 /* 8028D444 0000018C  3C 80 80 29 */	lis r4, __dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv@ha
 /* 8028D448 00000190  38 84 D2 58 */	addi r4, r4, __dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv@l
@@ -119,10 +119,10 @@ lbl_8028D2B8:
 /* 8028D48C 000001D4  38 00 00 02 */	li r0, 2
 /* 8028D490 000001D8  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 8028D494 000001DC  38 7F 00 48 */	addi r3, r31, 0x48
-/* 8028D498 000001E0  90 C3 00 30 */	stw r6, 0x30(r3)
-/* 8028D49C 000001E4  90 A3 00 30 */	stw r5, 0x30(r3)
-/* 8028D4A0 000001E8  90 83 00 34 */	stw r4, 0x34(r3)
-/* 8028D4A4 000001EC  90 03 00 38 */	stw r0, 0x38(r3)
+/* 8028D498 000001E0  90 C3 00 30 */	stw r6, 0x30(r3)	/* effective address: 80431478 */
+/* 8028D49C 000001E4  90 A3 00 30 */	stw r5, 0x30(r3)	/* effective address: 80431478 */
+/* 8028D4A0 000001E8  90 83 00 34 */	stw r4, 0x34(r3)	/* effective address: 8043147C */
+/* 8028D4A4 000001EC  90 03 00 38 */	stw r0, 0x38(r3)	/* effective address: 80431480 */
 /* 8028D4A8 000001F0  38 63 00 30 */	addi r3, r3, 0x30
 /* 8028D4AC 000001F4  3C 80 80 29 */	lis r4, __dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv@ha
 /* 8028D4B0 000001F8  38 84 D2 58 */	addi r4, r4, __dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv@l
@@ -145,10 +145,10 @@ lbl_8028D2B8:
 /* 8028D4F4 0000023C  38 00 00 00 */	li r0, 0
 /* 8028D4F8 00000240  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8028D4FC 00000244  38 7F 00 48 */	addi r3, r31, 0x48
-/* 8028D500 00000248  90 C3 00 3C */	stw r6, 0x3c(r3)
-/* 8028D504 0000024C  90 A3 00 3C */	stw r5, 0x3c(r3)
-/* 8028D508 00000250  90 83 00 40 */	stw r4, 0x40(r3)
-/* 8028D50C 00000254  90 03 00 44 */	stw r0, 0x44(r3)
+/* 8028D500 00000248  90 C3 00 3C */	stw r6, 0x3c(r3)	/* effective address: 80431484 */
+/* 8028D504 0000024C  90 A3 00 3C */	stw r5, 0x3c(r3)	/* effective address: 80431484 */
+/* 8028D508 00000250  90 83 00 40 */	stw r4, 0x40(r3)	/* effective address: 80431488 */
+/* 8028D50C 00000254  90 03 00 44 */	stw r0, 0x44(r3)	/* effective address: 8043148C */
 /* 8028D510 00000258  38 63 00 3C */	addi r3, r3, 0x3c
 /* 8028D514 0000025C  3C 80 80 29 */	lis r4, __dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv@ha
 /* 8028D518 00000260  38 84 D2 58 */	addi r4, r4, __dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv@l

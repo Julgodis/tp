@@ -5,16 +5,16 @@ lbl_80855CEC:
 /* 80855CF8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80855CFC 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80855D00 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80855D04 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80855D08 0000001C  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
-/* 80855D0C 00000020  4B FF FD 8D */	bl _unresolved
+/* 80855D04 00000018  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 80855D08 0000001C  3B C3 CA 54 */	addi r30, r3, g_env_light@l
+/* 80855D0C 00000020  4B 80 4D D4 */	b dKyw_get_wind_vec__Fv
 /* 80855D10 00000024  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 80855D14 00000028  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
 /* 80855D18 0000002C  40 82 00 20 */	bne lbl_80855D38
 /* 80855D1C 00000030  28 1F 00 00 */	cmplwi r31, 0
 /* 80855D20 00000034  41 82 00 0C */	beq lbl_80855D2C
 /* 80855D24 00000038  7F E3 FB 78 */	mr r3, r31
-/* 80855D28 0000003C  4B FF FD 71 */	bl _unresolved
+/* 80855D28 0000003C  4B 7C 2E 3C */	b __ct__10fopAc_ac_cFv
 lbl_80855D2C:
 /* 80855D2C 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 80855D30 00000004  60 00 00 08 */	ori r0, r0, 8
@@ -25,43 +25,43 @@ lbl_80855D38:
 /* 80855D40 00000008  98 1F 05 76 */	stb r0, 0x576(r31)
 /* 80855D44 0000000C  A8 1F 04 DC */	lha r0, 0x4dc(r31)
 /* 80855D48 00000010  98 1F 05 77 */	stb r0, 0x577(r31)
-/* 80855D4C 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80855D50 00000018  C0 03 00 00 */	lfs f0, 0x0000(r3)
-/* 80855D54 0000001C  D0 1E 0E 5C */	stfs f0, 0xe5c(r30)
+/* 80855D4C 00000014  3C 60 80 85 */	lis r3, lit_3668@ha
+/* 80855D50 00000018  C0 03 5E 04 */	lfs f0, lit_3668@l(r3)
+/* 80855D54 0000001C  D0 1E 0E 5C */	stfs f0, 0xe5c(r30)	/* effective address: 8042D8B0 */
 /* 80855D58 00000020  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80855D5C 00000024  98 1F 05 78 */	stb r0, 0x578(r31)
-/* 80855D60 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80855D64 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80855D60 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80855D64 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80855D68 00000030  88 9F 05 77 */	lbz r4, 0x577(r31)
 /* 80855D6C 00000034  88 BF 04 BA */	lbz r5, 0x4ba(r31)
 /* 80855D70 00000038  7C A5 07 74 */	extsb r5, r5
-/* 80855D74 0000003C  4B FF FD 25 */	bl _unresolved
+/* 80855D74 0000003C  4B 7D F5 EC */	b isSwitch__10dSv_info_cCFii
 /* 80855D78 00000040  2C 03 00 00 */	cmpwi r3, 0
 /* 80855D7C 00000044  41 82 00 44 */	beq lbl_80855DC0
-/* 80855D80 00000048  4B FF FD 19 */	bl _unresolved
+/* 80855D80 00000048  4B 80 58 B8 */	b dKyw_evt_wind_set_go__Fv
 /* 80855D84 0000004C  38 60 00 00 */	li r3, 0
 /* 80855D88 00000050  A8 9F 04 DE */	lha r4, 0x4de(r31)
-/* 80855D8C 00000054  4B FF FD 0D */	bl _unresolved
+/* 80855D8C 00000054  4B 80 58 90 */	b dKyw_evt_wind_set__Fss
 /* 80855D90 00000058  88 1F 05 78 */	lbz r0, 0x578(r31)
 /* 80855D94 0000005C  28 00 00 63 */	cmplwi r0, 0x63
 /* 80855D98 00000060  40 82 00 10 */	bne lbl_80855DA8
 /* 80855D9C 00000064  38 00 00 FF */	li r0, 0xff
-/* 80855DA0 00000068  98 1E 0E 6E */	stb r0, 0xe6e(r30)
+/* 80855DA0 00000068  98 1E 0E 6E */	stb r0, 0xe6e(r30)	/* effective address: 8042D8C2 */
 /* 80855DA4 0000006C  48 00 00 1C */	b lbl_80855DC0
 lbl_80855DA8:
 /* 80855DA8 00000000  38 00 00 01 */	li r0, 1
-/* 80855DAC 00000004  98 1E 0E 6E */	stb r0, 0xe6e(r30)
+/* 80855DAC 00000004  98 1E 0E 6E */	stb r0, 0xe6e(r30)	/* effective address: 8042D8C2 */
 /* 80855DB0 00000008  38 00 00 04 */	li r0, 4
-/* 80855DB4 0000000C  98 1E 0E B5 */	stb r0, 0xeb5(r30)
+/* 80855DB4 0000000C  98 1E 0E B5 */	stb r0, 0xeb5(r30)	/* effective address: 8042D909 */
 /* 80855DB8 00000010  38 00 00 32 */	li r0, 0x32
-/* 80855DBC 00000014  90 1E 0E B8 */	stw r0, 0xeb8(r30)
+/* 80855DBC 00000014  90 1E 0E B8 */	stw r0, 0xeb8(r30)	/* effective address: 8042D90C */
 lbl_80855DC0:
 /* 80855DC0 00000000  88 1F 05 78 */	lbz r0, 0x578(r31)
 /* 80855DC4 00000004  28 00 00 63 */	cmplwi r0, 0x63
 /* 80855DC8 00000008  41 82 00 10 */	beq lbl_80855DD8
-/* 80855DCC 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80855DD0 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80855DD4 00000014  4B FF FC C5 */	bl _unresolved
+/* 80855DCC 0000000C  3C 60 80 43 */	lis r3, g_mEnvSeMgr@ha
+/* 80855DD0 00000010  38 63 DD 70 */	addi r3, r3, g_mEnvSeMgr@l
+/* 80855DD4 00000014  4B A7 21 E8 */	b initStrongWindSe__10Z2EnvSeMgrFv
 lbl_80855DD8:
 /* 80855DD8 00000000  38 60 00 04 */	li r3, 4
 /* 80855DDC 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

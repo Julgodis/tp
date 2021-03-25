@@ -18,7 +18,7 @@ lbl_80019F78:
 /* 80019FB8 00000040  38 63 35 90 */	addi r3, r3, fpcSch_JudgeByID__FPvPv@l
 /* 80019FBC 00000044  38 81 00 08 */	addi r4, r1, 8
 /* 80019FC0 00000048  4B FF F8 39 */	bl fopAcIt_Judge__FPFPvPv_PvPv
-/* 80019FC4 0000004C  A8 A3 04 DE */	lha r5, 0x4de(r3)
+/* 80019FC4 0000004C  A8 A3 04 DE */	lha r5, 0x4de(r3)	/* effective address: 80023A6E */
 /* 80019FC8 00000050  28 17 00 00 */	cmplwi r23, 0
 /* 80019FCC 00000054  40 82 00 24 */	bne lbl_80019FF0
 /* 80019FD0 00000058  3C 80 80 43 */	lis r4, Zero__4cXyz@ha
@@ -55,11 +55,11 @@ lbl_8001A030:
 /* 8001A040 00000010  A8 18 00 04 */	lha r0, 4(r24)
 /* 8001A044 00000014  B0 01 00 18 */	sth r0, 0x18(r1)
 lbl_8001A048:
-/* 8001A048 00000000  C0 83 04 D0 */	lfs f4, 0x4d0(r3)
+/* 8001A048 00000000  C0 83 04 D0 */	lfs f4, 0x4d0(r3)	/* effective address: 80023A60 */
 /* 8001A04C 00000004  D0 81 00 1C */	stfs f4, 0x1c(r1)
-/* 8001A050 00000008  C0 63 04 D4 */	lfs f3, 0x4d4(r3)
+/* 8001A050 00000008  C0 63 04 D4 */	lfs f3, 0x4d4(r3)	/* effective address: 80023A64 */
 /* 8001A054 0000000C  D0 61 00 20 */	stfs f3, 0x20(r1)
-/* 8001A058 00000010  C0 43 04 D8 */	lfs f2, 0x4d8(r3)
+/* 8001A058 00000010  C0 43 04 D8 */	lfs f2, 0x4d8(r3)	/* effective address: 80023A68 */
 /* 8001A05C 00000014  D0 41 00 24 */	stfs f2, 0x24(r1)
 /* 8001A060 00000018  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8001A064 0000001C  90 01 00 0C */	stw r0, 0xc(r1)

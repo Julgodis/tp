@@ -16,7 +16,7 @@ lbl_8001FFC4:
 /* 8001FFFC 00000038  80 63 00 1C */	lwz r3, 0x1c(r3)	/* effective address: 804301A4 */
 /* 80020000 0000003C  48 1F F6 ED */	bl emphasisButtonDelete__9dMeter2_cFv
 lbl_80020004:
-/* 80020004 00000000  88 1F 5E 8F */	lbz r0, 0x5e8f(r31)
+/* 80020004 00000000  88 1F 5E 8F */	lbz r0, 0x5e8f(r31)	/* effective address: 8040C04F */
 /* 80020008 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 8002000C 00000008  41 82 00 2C */	beq lbl_80020038
 /* 80020010 0000000C  28 00 00 05 */	cmplwi r0, 5

@@ -96,7 +96,7 @@ extern "C" static void dkWmark_Delete__FP9dkWmark_c(); // 1
 extern "C" void setMatrix__9dkWmark_cFv(); // 1
 extern "C" static void dkWmark_Execute__FP9dkWmark_c(); // 1
 extern "C" static void dkWmark_Draw__FP9dkWmark_c(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_d_k_wmark__stringBase0;
 extern "C" extern void* g_profile_WMARK[10 + 1 /* padding */];
 
 // 
@@ -309,7 +309,7 @@ SECTION_DATA static void* l_dkWmark_Method[5] = {
 	/* 4    */ (void*)dkWmark_Draw__FP9dkWmark_c,
 };
 
-/* 803C3444-803C3470 0028+04 s=0 e=0 z=0  None .data      g_profile_WMARK                                              */
+/* 803C3444-803C3470 0028+04 s=0 e=0 z=1  None .data      g_profile_WMARK                                              */
 SECTION_DATA void* g_profile_WMARK[10 + 1 /* padding */] = {
 	/* 0    */ (void*)0xFFFFFFFD,
 	/* 1    */ (void*)0x0009FFFD,

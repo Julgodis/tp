@@ -124,7 +124,7 @@ lbl_801DC93C:
 /* 801DC9C4 00000088  81 8C 01 10 */	lwz r12, 0x110(r12)
 /* 801DC9C8 0000008C  7D 89 03 A6 */	mtctr r12
 /* 801DC9CC 00000090  4E 80 04 21 */	bctrl 
-/* 801DC9D0 00000094  83 7C 5D 30 */	lwz r27, 0x5d30(r28)
+/* 801DC9D0 00000094  83 7C 5D 30 */	lwz r27, 0x5d30(r28)	/* effective address: 8040BEF0 */
 /* 801DC9D4 00000098  38 60 00 0A */	li r3, 0xa
 /* 801DC9D8 0000009C  7C 1F 1B D6 */	divw r0, r31, r3
 /* 801DC9DC 000000A0  7C 00 19 D6 */	mullw r0, r0, r3
@@ -176,7 +176,7 @@ lbl_801DCA34:
 /* 801DCA90 0000005C  7C 00 19 D6 */	mullw r0, r0, r3
 /* 801DCA94 00000060  7C 00 F8 50 */	subf r0, r0, r31
 /* 801DCA98 00000064  54 1D 06 3E */	clrlwi r29, r0, 0x18
-/* 801DCA9C 00000068  83 7C 5D 30 */	lwz r27, 0x5d30(r28)
+/* 801DCA9C 00000068  83 7C 5D 30 */	lwz r27, 0x5d30(r28)	/* effective address: 8040BEF0 */
 /* 801DCAA0 0000006C  38 00 00 0A */	li r0, 0xa
 /* 801DCAA4 00000070  7C 7D 03 D6 */	divw r3, r29, r0
 /* 801DCAA8 00000074  48 04 18 21 */	bl dMeter2Info_getNumberTextureName__Fi
@@ -195,7 +195,7 @@ lbl_801DCA34:
 /* 801DCADC 000000A8  81 8C 01 10 */	lwz r12, 0x110(r12)
 /* 801DCAE0 000000AC  7D 89 03 A6 */	mtctr r12
 /* 801DCAE4 000000B0  4E 80 04 21 */	bctrl 
-/* 801DCAE8 000000B4  83 7C 5D 30 */	lwz r27, 0x5d30(r28)
+/* 801DCAE8 000000B4  83 7C 5D 30 */	lwz r27, 0x5d30(r28)	/* effective address: 8040BEF0 */
 /* 801DCAEC 000000B8  38 60 00 0A */	li r3, 0xa
 /* 801DCAF0 000000BC  7C 1D 1B D6 */	divw r0, r29, r3
 /* 801DCAF4 000000C0  7C 00 19 D6 */	mullw r0, r0, r3

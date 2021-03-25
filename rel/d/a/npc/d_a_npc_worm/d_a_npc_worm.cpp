@@ -20,46 +20,110 @@ struct npc_worm_class {
 struct fopAc_ac_c {
 };
 
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
 struct daPy_py_c {
+	/* 8015F4F0 */ void setLookPos(cXyz*);
 	/* 80B2F050 */ void getLeftHandPos() const;
 };
 
 struct dInsect_c {
+	/* 8015E010 */ dInsect_c();
 	/* 80B2F06C */ void Insect_Release();
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD9C */ void transM(f32, f32, f32);
+	/* 8000CE38 */ void scaleM(f32, f32, f32);
+};
+
+struct J3DModel {
+};
+
+struct J3DModelData {
+};
+
+struct request_of_phase_process_class {
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dAttCatch_c {
+	/* 80073A08 */ void request(fopAc_ac_c*, u8, f32, f32, f32, s16, int);
+};
+
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
+};
+
+struct cBgS_LinChk {
+};
+
+struct cBgS {
+	/* 800743B4 */ void LineCross(cBgS_LinChk*);
+	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
+};
+
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
+};
+
+struct dBgS_LinChk {
+	/* 80077C68 */ dBgS_LinChk();
+	/* 80077CDC */ ~dBgS_LinChk();
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 // 
 // Forward References:
 // 
 
-void nodeCallBack(J3DJoint*, int); // 2
-void daNPC_WORM_Draw(npc_worm_class*); // 2
+static void nodeCallBack(J3DJoint*, int); // 2
+static void daNPC_WORM_Draw(npc_worm_class*); // 2
 static void npc_worm_ground(npc_worm_class*); // 2
 static void npc_worm_normal(npc_worm_class*); // 2
 static void npc_worm_dive(npc_worm_class*); // 2
 static void npc_worm_binwait(npc_worm_class*); // 2
 static void action(npc_worm_class*); // 2
 static void daNPC_WORM_Execute(npc_worm_class*); // 2
-void daNPC_WORM_IsDelete(npc_worm_class*); // 2
-void daNPC_WORM_Delete(npc_worm_class*); // 2
-void useHeapInit(fopAc_ac_c*); // 2
-void daNPC_WORM_Create(fopAc_ac_c*); // 2
+static void daNPC_WORM_IsDelete(npc_worm_class*); // 2
+static void daNPC_WORM_Delete(npc_worm_class*); // 2
+static void useHeapInit(fopAc_ac_c*); // 2
+static void daNPC_WORM_Create(fopAc_ac_c*); // 2
 
-extern "C" void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" void daNPC_WORM_Draw__FP14npc_worm_class(); // 1
+extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
+extern "C" static void daNPC_WORM_Draw__FP14npc_worm_class(); // 1
 extern "C" static void npc_worm_ground__FP14npc_worm_class(); // 1
 extern "C" static void npc_worm_normal__FP14npc_worm_class(); // 1
 extern "C" static void npc_worm_dive__FP14npc_worm_class(); // 1
 extern "C" static void npc_worm_binwait__FP14npc_worm_class(); // 1
 extern "C" static void action__FP14npc_worm_class(); // 1
 extern "C" static void daNPC_WORM_Execute__FP14npc_worm_class(); // 1
-extern "C" void daNPC_WORM_IsDelete__FP14npc_worm_class(); // 1
-extern "C" void daNPC_WORM_Delete__FP14npc_worm_class(); // 1
-extern "C" void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daNPC_WORM_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daNPC_WORM_IsDelete__FP14npc_worm_class(); // 1
+extern "C" static void daNPC_WORM_Delete__FP14npc_worm_class(); // 1
+extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
+extern "C" static void daNPC_WORM_Create__FP10fopAc_ac_c(); // 1
 extern "C" void getLeftHandPos__9daPy_py_cCFv(); // 1
 extern "C" void Insect_Release__9dInsect_cFv(); // 1
-extern "C" extern u32 const lit_3717;
 extern "C" extern u8 const lit_3774[4];
 extern "C" extern u8 const lit_3775[8];
 extern "C" extern u8 const lit_3776[8];
@@ -98,37 +162,114 @@ extern "C" extern u32 const lit_4055;
 extern "C" extern u32 const lit_4056;
 extern "C" extern u32 const lit_4126;
 extern "C" extern char const* const stringBase0;
-extern "C" extern u8 l_daNPC_WORM_Method[32];
-extern "C" extern u8 g_profile_NPC_WORM[48];
-extern "C" extern void* __vt__14npc_worm_class[3];
+extern "C" extern void* g_profile_NPC_WORM[12];
 
 // 
 // External References:
 // 
 
+void mDoMtx_XrotS(f32 (* )[4], s16); // 2
+void mDoMtx_XrotM(f32 (* )[4], s16); // 2
+void mDoMtx_YrotS(f32 (* )[4], s16); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
+void mDoExt_modelUpdateDL(J3DModel*); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+void fopAcM_delete(fopAc_ac_c*); // 2
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
+void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void cM_atan2s(f32, f32); // 2
+void cM_rndF(f32); // 2
+void cM_rndFX(f32); // 2
+void cLib_addCalc2(f32*, f32, f32, f32); // 2
+void cLib_addCalc0(f32*, f32, f32); // 2
+void cLib_addCalcAngleS2(s16*, s16, s16, s16); // 2
+void MtxPosition(cXyz*, cXyz*); // 2
 
-extern "C" void _unresolved(); // 1
+extern "C" void mDoMtx_XrotS__FPA4_fs(); // 1
+extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
+extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
+extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
+extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
+extern "C" void fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void request__11dAttCatch_cFP10fopAc_ac_cUcfffsi(); // 1
+extern "C" void LineCross__4cBgSFP11cBgS_LinChk(); // 1
+extern "C" void GroundCross__4cBgSFP11cBgS_GndChk(); // 1
+extern "C" void __ct__11dBgS_GndChkFv(); // 1
+extern "C" void __dt__11dBgS_GndChkFv(); // 1
+extern "C" void __ct__11dBgS_LinChkFv(); // 1
+extern "C" void __dt__11dBgS_LinChkFv(); // 1
+extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
+extern "C" void __ct__9dInsect_cFv(); // 1
+extern "C" void setLookPos__9daPy_py_cFP4cXyz(); // 1
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void cM_rndF__Ff(); // 1
+extern "C" void cM_rndFX__Ff(); // 1
+extern "C" void SetPos__11cBgS_GndChkFPC4cXyz(); // 1
+extern "C" void cLib_addCalc2__FPffff(); // 1
+extern "C" void cLib_addCalc0__FPfff(); // 1
+extern "C" void cLib_addCalcAngleS2__FPssss(); // 1
+extern "C" void MtxPosition__FP4cXyzP4cXyz(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern void* calc_mtx[1 + 1 /* padding */];
+extern "C" extern u32 __float_nan;
 
 // 
 // Declarations:
 // 
 
-/* 80B2DE78-80B2DF4C 00D4+00 s=0 e=0 z=0  None .text      nodeCallBack__FP8J3DJointi                                   */
+/* 80B2DE78-80B2DF4C 00D4+00 s=1 e=0 z=0  None .text      nodeCallBack__FP8J3DJointi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void nodeCallBack(J3DJoint* param_0, int param_1) {
+asm static void nodeCallBack(J3DJoint* param_0, int param_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/nodeCallBack__FP8J3DJointi.s"
 }
 #pragma pop
 
 
-/* 80B2DF4C-80B2E044 00F8+00 s=0 e=0 z=0  None .text      daNPC_WORM_Draw__FP14npc_worm_class                          */
+/* ############################################################################################## */
+/* 80B2F080-80B2F084 0004+00 s=7 e=0 z=0  None .rodata    @3717                                                        */
+SECTION_RODATA static u32 const lit_3717 = 0x3C23D70A;
+
+/* 80B2DF4C-80B2E044 00F8+00 s=1 e=0 z=0  None .text      daNPC_WORM_Draw__FP14npc_worm_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNPC_WORM_Draw(npc_worm_class* param_0) {
+asm static void daNPC_WORM_Draw(npc_worm_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/daNPC_WORM_Draw__FP14npc_worm_class.s"
 }
@@ -190,7 +331,7 @@ asm static void action(npc_worm_class* param_0) {
 #pragma pop
 
 
-/* 80B2EBF4-80B2EDD0 01DC+00 s=1 e=0 z=0  None .text      daNPC_WORM_Execute__FP14npc_worm_class                       */
+/* 80B2EBF4-80B2EDD0 01DC+00 s=2 e=0 z=0  None .text      daNPC_WORM_Execute__FP14npc_worm_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -201,76 +342,18 @@ asm static void daNPC_WORM_Execute(npc_worm_class* param_0) {
 #pragma pop
 
 
-/* 80B2EDD0-80B2EDD8 0008+00 s=0 e=0 z=0  None .text      daNPC_WORM_IsDelete__FP14npc_worm_class                      */
+/* 80B2EDD0-80B2EDD8 0008+00 s=1 e=0 z=0  None .text      daNPC_WORM_IsDelete__FP14npc_worm_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNPC_WORM_IsDelete(npc_worm_class* param_0) {
+asm static void daNPC_WORM_IsDelete(npc_worm_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/daNPC_WORM_IsDelete__FP14npc_worm_class.s"
 }
 #pragma pop
 
 
-/* 80B2EDD8-80B2EE08 0030+00 s=0 e=0 z=0  None .text      daNPC_WORM_Delete__FP14npc_worm_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNPC_WORM_Delete(npc_worm_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/daNPC_WORM_Delete__FP14npc_worm_class.s"
-}
-#pragma pop
-
-
-/* 80B2EE08-80B2EEC0 00B8+00 s=0 e=0 z=0  None .text      useHeapInit__FP10fopAc_ac_c                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void useHeapInit(fopAc_ac_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/useHeapInit__FP10fopAc_ac_c.s"
-}
-#pragma pop
-
-
-/* 80B2EEC0-80B2F050 0190+00 s=0 e=0 z=0  None .text      daNPC_WORM_Create__FP10fopAc_ac_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNPC_WORM_Create(fopAc_ac_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/daNPC_WORM_Create__FP10fopAc_ac_c.s"
-}
-#pragma pop
-
-
-/* 80B2F050-80B2F06C 001C+00 s=1 e=0 z=0  None .text      getLeftHandPos__9daPy_py_cCFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daPy_py_c::getLeftHandPos() const {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/getLeftHandPos__9daPy_py_cCFv.s"
-}
-#pragma pop
-
-
-/* 80B2F06C-80B2F078 000C+00 s=0 e=0 z=0  None .text      Insect_Release__9dInsect_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dInsect_c::Insect_Release() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/Insect_Release__9dInsect_cFv.s"
-}
-#pragma pop
-
-
 /* ############################################################################################## */
-/* 80B2F080-80B2F084 0004+00 s=0 e=0 z=0  None .rodata    @3717                                                        */
-SECTION_RODATA u32 const lit_3717 = 0x3C23D70A;
-
 /* 80B2F084-80B2F088 0004+00 s=0 e=0 z=0  None .rodata    @3774                                                        */
 SECTION_RODATA u8 const lit_3774[4] = {
 	0x00, 0x00, 0x00, 0x00,
@@ -390,30 +473,101 @@ SECTION_RODATA u32 const lit_4056 = 0x3F8CCCCD;
 /* 80B2F120-80B2F124 0004+00 s=0 e=0 z=0  None .rodata    @4126                                                        */
 SECTION_RODATA u32 const lit_4126 = 0x477FFF00;
 
-/* 80B2F124-80B2F12A 0006+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80B2F124-80B2F12A 0006+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD char const* const stringBase_80B2F124 = "Alink";
 #pragma pop
 
-/* 80B2F12C-80B2F14C 0020+00 s=0 e=0 z=0  None .data      l_daNPC_WORM_Method                                          */
-SECTION_DATA u8 l_daNPC_WORM_Method[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 80B2EDD8-80B2EE08 0030+00 s=1 e=0 z=0  None .text      daNPC_WORM_Delete__FP14npc_worm_class                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daNPC_WORM_Delete(npc_worm_class* param_0) {
+	nofralloc
+#include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/daNPC_WORM_Delete__FP14npc_worm_class.s"
+}
+#pragma pop
+
+
+/* 80B2EE08-80B2EEC0 00B8+00 s=1 e=0 z=0  None .text      useHeapInit__FP10fopAc_ac_c                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void useHeapInit(fopAc_ac_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/useHeapInit__FP10fopAc_ac_c.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
+/* 80B2F12C-80B2F14C 0020+00 s=1 e=0 z=0  None .data      l_daNPC_WORM_Method                                          */
+SECTION_DATA static void* l_daNPC_WORM_Method[8] = {
+	/* 0    */ (void*)daNPC_WORM_Create__FP10fopAc_ac_c,
+	/* 1    */ (void*)daNPC_WORM_Delete__FP14npc_worm_class,
+	/* 2    */ (void*)daNPC_WORM_Execute__FP14npc_worm_class,
+	/* 3    */ (void*)daNPC_WORM_IsDelete__FP14npc_worm_class,
+	/* 4    */ (void*)daNPC_WORM_Draw__FP14npc_worm_class,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
 };
 
-/* 80B2F14C-80B2F17C 0030+00 s=0 e=0 z=0  None .data      g_profile_NPC_WORM                                           */
-SECTION_DATA u8 g_profile_NPC_WORM[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x05, 0xEC, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x01, 0xAD, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 80B2F14C-80B2F17C 0030+00 s=0 e=0 z=1  None .data      g_profile_NPC_WORM                                           */
+SECTION_DATA void* g_profile_NPC_WORM[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0007FFFD,
+	/* 2    */ (void*)0x01010000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x000005EC,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x01AD0000,
+	/* 9    */ (void*)&l_daNPC_WORM_Method,
+	/* 10   */ (void*)0x00040100,
+	/* 11   */ (void*)NULL,
 };
 
-/* 80B2F17C-80B2F188 000C+00 s=0 e=0 z=0  None .data      __vt__14npc_worm_class                                       */
-SECTION_DATA void* __vt__14npc_worm_class[3] = {
+/* 80B2F17C-80B2F188 000C+00 s=1 e=0 z=0  None .data      __vt__14npc_worm_class                                       */
+SECTION_DATA static void* __vt__14npc_worm_class[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
+	/* 2    */ (void*)Insect_Release__9dInsect_cFv,
 };
+
+/* 80B2EEC0-80B2F050 0190+00 s=1 e=0 z=0  None .text      daNPC_WORM_Create__FP10fopAc_ac_c                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daNPC_WORM_Create(fopAc_ac_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/daNPC_WORM_Create__FP10fopAc_ac_c.s"
+}
+#pragma pop
+
+
+/* 80B2F050-80B2F06C 001C+00 s=1 e=0 z=0  None .text      getLeftHandPos__9daPy_py_cCFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daPy_py_c::getLeftHandPos() const {
+	nofralloc
+#include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/getLeftHandPos__9daPy_py_cCFv.s"
+}
+#pragma pop
+
+
+/* 80B2F06C-80B2F078 000C+00 s=1 e=0 z=0  None .text      Insect_Release__9dInsect_cFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dInsect_c::Insect_Release() {
+	nofralloc
+#include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/Insect_Release__9dInsect_cFv.s"
+}
+#pragma pop
+
 

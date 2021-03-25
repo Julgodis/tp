@@ -38,15 +38,15 @@ lbl_802F7100:
 /* 802F7190 00000090  C4 03 49 B0 */	lfsu f0, static_mBounds__7J2DPane@l(r3)
 /* 802F7194 00000094  EC 00 08 2A */	fadds f0, f0, f1
 /* 802F7198 00000098  D0 03 00 00 */	stfs f0, 0(r3)	/* effective address: 80430000 */
-/* 802F719C 0000009C  C0 1F 00 04 */	lfs f0, 4(r31)
+/* 802F719C 0000009C  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 804349B4 */
 /* 802F71A0 000000A0  EC 00 10 2A */	fadds f0, f0, f2
-/* 802F71A4 000000A4  D0 1F 00 04 */	stfs f0, 4(r31)
-/* 802F71A8 000000A8  C0 1F 00 08 */	lfs f0, 8(r31)
+/* 802F71A4 000000A4  D0 1F 00 04 */	stfs f0, 4(r31)	/* effective address: 804349B4 */
+/* 802F71A8 000000A8  C0 1F 00 08 */	lfs f0, 8(r31)	/* effective address: 804349B8 */
 /* 802F71AC 000000AC  EC 00 08 2A */	fadds f0, f0, f1
-/* 802F71B0 000000B0  D0 1F 00 08 */	stfs f0, 8(r31)
-/* 802F71B4 000000B4  C0 1F 00 0C */	lfs f0, 0xc(r31)
+/* 802F71B0 000000B0  D0 1F 00 08 */	stfs f0, 8(r31)	/* effective address: 804349B8 */
+/* 802F71B4 000000B4  C0 1F 00 0C */	lfs f0, 0xc(r31)	/* effective address: 804349BC */
 /* 802F71B8 000000B8  EC 00 10 2A */	fadds f0, f0, f2
-/* 802F71BC 000000BC  D0 1F 00 0C */	stfs f0, 0xc(r31)
+/* 802F71BC 000000BC  D0 1F 00 0C */	stfs f0, 0xc(r31)	/* effective address: 804349BC */
 lbl_802F71C0:
 /* 802F71C0 00000000  3C 60 80 43 */	lis r3, static_mBounds__7J2DPane@ha
 /* 802F71C4 00000004  38 63 49 B0 */	addi r3, r3, static_mBounds__7J2DPane@l

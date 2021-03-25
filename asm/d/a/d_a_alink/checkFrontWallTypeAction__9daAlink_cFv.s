@@ -190,8 +190,8 @@ lbl_800B6CE4:
 /* 800B6CF0 0000000C  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 800B6CF4 00000010  2C 00 00 04 */	cmpwi r0, 4
 /* 800B6CF8 00000014  40 82 00 30 */	bne lbl_800B6D28
-/* 800B6CFC 00000018  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800B6D00 0000001C  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800B6CFC 00000018  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800B6D00 0000001C  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800B6D04 00000020  38 63 04 78 */	addi r3, r3, 0x478
 /* 800B6D08 00000024  4B FE 6D 59 */	bl checkStageName__9daAlink_cFPCc
 /* 800B6D0C 00000028  54 60 06 3F */	clrlwi. r0, r3, 0x18

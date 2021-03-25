@@ -38,7 +38,7 @@ lbl_802184BC:
 /* 802184D0 00000014  FC 1F 08 00 */	fcmpu cr0, f31, f1
 /* 802184D4 00000018  41 82 00 20 */	beq lbl_802184F4
 /* 802184D8 0000001C  7C 7B E8 2E */	lwzx r3, r27, r29
-/* 802184DC 00000020  C0 3E 00 18 */	lfs f1, 0x18(r30)
+/* 802184DC 00000020  C0 3E 00 18 */	lfs f1, 0x18(r30)	/* effective address: 8042EBE0 */
 /* 802184E0 00000024  48 03 D2 F1 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 802184E4 00000028  7F 63 DB 78 */	mr r3, r27
 /* 802184E8 0000002C  7C 9B E8 2E */	lwzx r4, r27, r29

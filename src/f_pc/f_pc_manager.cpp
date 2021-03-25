@@ -197,7 +197,7 @@ asm void fpcM_Delete(void* param_0) {
 #pragma pop
 
 
-/* 80022138-80022158 0020+00 s=0 e=6 z=0  None .text      fpcM_IsCreating__FUi                                         */
+/* 80022138-80022158 0020+00 s=0 e=6 z=43  None .text      fpcM_IsCreating__FUi                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

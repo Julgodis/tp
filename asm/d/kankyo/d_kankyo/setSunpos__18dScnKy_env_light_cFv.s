@@ -15,8 +15,8 @@ lbl_8019F788:
 /* 8019F7BC 00000020  28 1E 00 00 */	cmplwi r30, 0
 /* 8019F7C0 00000024  41 82 02 20 */	beq lbl_8019F9E0
 /* 8019F7C4 00000028  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 8019F7C8 0000002C  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 8019F7CC 00000030  38 84 4C 6C */	addi r4, r4, stringBase0@l
+/* 8019F7C8 0000002C  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
+/* 8019F7CC 00000030  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
 /* 8019F7D0 00000034  38 84 01 82 */	addi r4, r4, 0x182
 /* 8019F7D4 00000038  48 1C 91 C1 */	bl strcmp
 /* 8019F7D8 0000003C  2C 03 00 00 */	cmpwi r3, 0
@@ -58,7 +58,7 @@ lbl_8019F838:
 /* 8019F860 00000004  EF FF 00 28 */	fsubs f31, f31, f0
 lbl_8019F864:
 /* 8019F864 00000000  C0 22 A2 40 */	lfs f1, lit_4503(r2)
-/* 8019F868 00000004  C0 1F 12 44 */	lfs f0, 0x1244(r31)
+/* 8019F868 00000004  C0 1F 12 44 */	lfs f0, 0x1244(r31)	/* effective address: 8042DC98 */
 /* 8019F86C 00000008  EC 61 00 2A */	fadds f3, f1, f0
 /* 8019F870 0000000C  C0 02 A2 B0 */	lfs f0, lit_5348(r2)
 /* 8019F874 00000010  FC 03 00 40 */	fcmpo cr0, f3, f0

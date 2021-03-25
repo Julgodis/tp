@@ -110,7 +110,7 @@ extern "C" void getFsResource__12JKRFileCacheFPCc(); // 1
 extern "C" void getNameResource__12JKRFileCacheFUlPCc(); // 1
 extern "C" void readFsResource__12JKRFileCacheFPvUlPCc(); // 1
 extern "C" void readNameResource__12JKRFileCacheFPvUlUlPCc(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JKRFileCache__stringBase0;
 
 // 
 // External References:

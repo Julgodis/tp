@@ -5,7 +5,7 @@ lbl_80AEB7F0:
 /* 80AEB7FC 0000000C  7C 65 1B 78 */	mr r5, r3
 /* 80AEB800 00000010  7C 83 23 78 */	mr r3, r4
 /* 80AEB804 00000014  38 85 09 DC */	addi r4, r5, 0x9dc
-/* 80AEB808 00000018  4B FF EF B1 */	bl _unresolved
+/* 80AEB808 00000018  4B 87 68 40 */	b __ptmf_cmpr
 /* 80AEB80C 0000001C  7C 60 00 34 */	cntlzw r0, r3
 /* 80AEB810 00000020  54 03 D9 7E */	srwi r3, r0, 5
 /* 80AEB814 00000024  80 01 00 14 */	lwz r0, 0x14(r1)

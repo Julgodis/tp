@@ -19,3 +19,83 @@ lbl_8024B7B0:
 /* 8024B7B4 00000004  40 80 00 74 */	bge lbl_8024B828
 /* 8024B7B8 00000008  48 00 00 38 */	b lbl_8024B7F0
 lbl_8024B7BC:
+/* 8024B7BC 00000000  2C 1F 00 49 */	cmpwi r31, 0x49
+/* 8024B7C0 00000004  41 82 00 14 */	beq lbl_8024B7D4
+/* 8024B7C4 00000008  40 80 00 64 */	bge lbl_8024B828
+/* 8024B7C8 0000000C  2C 1F 00 32 */	cmpwi r31, 0x32
+/* 8024B7CC 00000010  40 80 00 5C */	bge lbl_8024B828
+/* 8024B7D0 00000014  48 00 00 3C */	b lbl_8024B80C
+lbl_8024B7D4:
+/* 8024B7D4 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8024B7D8 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8024B7DC 00000008  88 03 00 14 */	lbz r0, 0x14(r3)	/* effective address: 804061D4 */
+/* 8024B7E0 0000000C  7C 1F 00 40 */	cmplw r31, r0
+/* 8024B7E4 00000010  40 82 00 E4 */	bne lbl_8024B8C8
+/* 8024B7E8 00000014  3B C0 00 01 */	li r30, 1
+/* 8024B7EC 00000018  48 00 00 DC */	b lbl_8024B8C8
+lbl_8024B7F0:
+/* 8024B7F0 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8024B7F4 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8024B7F8 00000008  88 03 00 15 */	lbz r0, 0x15(r3)	/* effective address: 804061D5 */
+/* 8024B7FC 0000000C  7C 1F 00 40 */	cmplw r31, r0
+/* 8024B800 00000010  40 82 00 C8 */	bne lbl_8024B8C8
+/* 8024B804 00000014  3B C0 00 01 */	li r30, 1
+/* 8024B808 00000018  48 00 00 C0 */	b lbl_8024B8C8
+lbl_8024B80C:
+/* 8024B80C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8024B810 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8024B814 00000008  88 03 00 13 */	lbz r0, 0x13(r3)	/* effective address: 804061D3 */
+/* 8024B818 0000000C  7C 1F 00 40 */	cmplw r31, r0
+/* 8024B81C 00000010  40 82 00 AC */	bne lbl_8024B8C8
+/* 8024B820 00000014  3B C0 00 01 */	li r30, 1
+/* 8024B824 00000018  48 00 00 A4 */	b lbl_8024B8C8
+lbl_8024B828:
+/* 8024B828 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8024B82C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8024B830 00000008  38 80 00 00 */	li r4, 0
+/* 8024B834 0000000C  4B DE 72 29 */	bl getSelectItemIndex__21dSv_player_status_a_cCFi
+/* 8024B838 00000010  7C 60 1B 78 */	mr r0, r3
+/* 8024B83C 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8024B840 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8024B844 0000001C  3B A3 00 9C */	addi r29, r3, 0x9c
+/* 8024B848 00000020  7F A3 EB 78 */	mr r3, r29
+/* 8024B84C 00000024  54 04 06 3E */	clrlwi r4, r0, 0x18
+/* 8024B850 00000028  38 A0 00 01 */	li r5, 1
+/* 8024B854 0000002C  4B DE 77 DD */	bl getItem__17dSv_player_item_cCFib
+/* 8024B858 00000030  54 60 06 3E */	clrlwi r0, r3, 0x18
+/* 8024B85C 00000034  7C 1F 00 40 */	cmplw r31, r0
+/* 8024B860 00000038  41 82 00 64 */	beq lbl_8024B8C4
+/* 8024B864 0000003C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8024B868 00000040  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8024B86C 00000044  38 80 00 01 */	li r4, 1
+/* 8024B870 00000048  4B DE 71 ED */	bl getSelectItemIndex__21dSv_player_status_a_cCFi
+/* 8024B874 0000004C  7C 60 1B 78 */	mr r0, r3
+/* 8024B878 00000050  7F A3 EB 78 */	mr r3, r29
+/* 8024B87C 00000054  54 04 06 3E */	clrlwi r4, r0, 0x18
+/* 8024B880 00000058  38 A0 00 01 */	li r5, 1
+/* 8024B884 0000005C  4B DE 77 AD */	bl getItem__17dSv_player_item_cCFib
+/* 8024B888 00000060  54 60 06 3E */	clrlwi r0, r3, 0x18
+/* 8024B88C 00000064  7C 1F 00 40 */	cmplw r31, r0
+/* 8024B890 00000068  41 82 00 34 */	beq lbl_8024B8C4
+/* 8024B894 0000006C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8024B898 00000070  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8024B89C 00000074  38 80 00 02 */	li r4, 2
+/* 8024B8A0 00000078  4B DE 71 BD */	bl getSelectItemIndex__21dSv_player_status_a_cCFi
+/* 8024B8A4 0000007C  7C 60 1B 78 */	mr r0, r3
+/* 8024B8A8 00000080  7F A3 EB 78 */	mr r3, r29
+/* 8024B8AC 00000084  54 04 06 3E */	clrlwi r4, r0, 0x18
+/* 8024B8B0 00000088  38 A0 00 01 */	li r5, 1
+/* 8024B8B4 0000008C  4B DE 77 7D */	bl getItem__17dSv_player_item_cCFib
+/* 8024B8B8 00000090  54 60 06 3E */	clrlwi r0, r3, 0x18
+/* 8024B8BC 00000094  7C 1F 00 40 */	cmplw r31, r0
+/* 8024B8C0 00000098  40 82 00 08 */	bne lbl_8024B8C8
+lbl_8024B8C4:
+/* 8024B8C4 00000000  3B C0 00 01 */	li r30, 1
+lbl_8024B8C8:
+/* 8024B8C8 00000000  7F C3 F3 78 */	mr r3, r30
+/* 8024B8CC 00000004  39 61 00 20 */	addi r11, r1, 0x20
+/* 8024B8D0 00000008  48 11 69 59 */	bl _restgpr_29
+/* 8024B8D4 0000000C  80 01 00 24 */	lwz r0, 0x24(r1)
+/* 8024B8D8 00000010  7C 08 03 A6 */	mtlr r0
+/* 8024B8DC 00000014  38 21 00 20 */	addi r1, r1, 0x20
+/* 8024B8E0 00000018  4E 80 00 20 */	blr 

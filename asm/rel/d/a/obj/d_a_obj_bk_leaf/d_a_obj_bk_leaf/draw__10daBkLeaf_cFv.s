@@ -4,25 +4,25 @@ lbl_80BB65C4:
 /* 80BB65CC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80BB65D0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BB65D4 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80BB65D8 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BB65DC 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80BB65D8 00000014  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 80BB65DC 00000018  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 80BB65E0 0000001C  38 80 00 00 */	li r4, 0
 /* 80BB65E4 00000020  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80BB65E8 00000024  38 DF 01 0C */	addi r6, r31, 0x10c
-/* 80BB65EC 00000028  4B FF FA CD */	bl _unresolved
-/* 80BB65F0 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BB65F4 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80BB65EC 00000028  4B 5E D1 D8 */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
+/* 80BB65F0 0000002C  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 80BB65F4 00000030  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 80BB65F8 00000034  80 9F 05 70 */	lwz r4, 0x570(r31)
 /* 80BB65FC 00000038  80 84 00 04 */	lwz r4, 4(r4)
 /* 80BB6600 0000003C  38 BF 01 0C */	addi r5, r31, 0x10c
-/* 80BB6604 00000040  4B FF FA B5 */	bl _unresolved
+/* 80BB6604 00000040  4B 5E E7 9C */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 80BB6608 00000044  80 7F 05 70 */	lwz r3, 0x570(r31)
 /* 80BB660C 00000048  80 83 00 04 */	lwz r4, 4(r3)
 /* 80BB6610 0000004C  80 7F 05 74 */	lwz r3, 0x574(r31)
 /* 80BB6614 00000050  C0 23 00 10 */	lfs f1, 0x10(r3)
-/* 80BB6618 00000054  4B FF FA A1 */	bl _unresolved
+/* 80BB6618 00000054  4B 45 73 B4 */	b entry__13mDoExt_bckAnmFP12J3DModelDataf
 /* 80BB661C 00000058  80 7F 05 70 */	lwz r3, 0x570(r31)
-/* 80BB6620 0000005C  4B FF FA 99 */	bl _unresolved
+/* 80BB6620 0000005C  4B 45 76 A4 */	b mDoExt_modelUpdateDL__FP8J3DModel
 /* 80BB6624 00000060  80 7F 05 70 */	lwz r3, 0x570(r31)
 /* 80BB6628 00000064  80 63 00 04 */	lwz r3, 4(r3)
 /* 80BB662C 00000068  80 63 00 28 */	lwz r3, 0x28(r3)

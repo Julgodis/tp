@@ -19,27 +19,27 @@ lbl_8034FF48:
 /* 8034FF8C 00000044  48 00 00 CD */	bl AISetStreamVolRight
 /* 8034FF90 00000048  38 60 00 00 */	li r3, 0
 /* 8034FF94 0000004C  48 00 00 99 */	bl AISetStreamVolLeft
-/* 8034FF98 00000050  80 7F 6C 00 */	lwz r3, 0x6c00(r31)
-/* 8034FF9C 00000054  80 1F 6C 00 */	lwz r0, 0x6c00(r31)
+/* 8034FF98 00000050  80 7F 6C 00 */	lwz r3, 0x6c00(r31)	/* effective address: CC006C00 */
+/* 8034FF9C 00000054  80 1F 6C 00 */	lwz r0, 0x6c00(r31)	/* effective address: CC006C00 */
 /* 8034FFA0 00000058  54 7A 06 72 */	rlwinm r26, r3, 0, 0x19, 0x19
 /* 8034FFA4 0000005C  54 00 06 B0 */	rlwinm r0, r0, 0, 0x1a, 0x18
-/* 8034FFA8 00000060  90 1F 6C 00 */	stw r0, 0x6c00(r31)
+/* 8034FFA8 00000060  90 1F 6C 00 */	stw r0, 0x6c00(r31)	/* effective address: CC006C00 */
 /* 8034FFAC 00000064  4B FE D7 49 */	bl OSDisableInterrupts
 /* 8034FFB0 00000068  7C 7E 1B 78 */	mr r30, r3
 /* 8034FFB4 0000006C  48 00 03 BD */	bl __AI_SRC_INIT
-/* 8034FFB8 00000070  80 9F 6C 00 */	lwz r4, 0x6c00(r31)
+/* 8034FFB8 00000070  80 9F 6C 00 */	lwz r4, 0x6c00(r31)	/* effective address: CC006C00 */
 /* 8034FFBC 00000074  57 20 08 3C */	slwi r0, r25, 1
 /* 8034FFC0 00000078  38 7E 00 00 */	addi r3, r30, 0
 /* 8034FFC4 0000007C  7C 84 D3 78 */	or r4, r4, r26
-/* 8034FFC8 00000080  90 9F 6C 00 */	stw r4, 0x6c00(r31)
-/* 8034FFCC 00000084  80 9F 6C 00 */	lwz r4, 0x6c00(r31)
+/* 8034FFC8 00000080  90 9F 6C 00 */	stw r4, 0x6c00(r31)	/* effective address: CC006C00 */
+/* 8034FFCC 00000084  80 9F 6C 00 */	lwz r4, 0x6c00(r31)	/* effective address: CC006C00 */
 /* 8034FFD0 00000088  54 84 06 F2 */	rlwinm r4, r4, 0, 0x1b, 0x19
 /* 8034FFD4 0000008C  60 84 00 20 */	ori r4, r4, 0x20
-/* 8034FFD8 00000090  90 9F 6C 00 */	stw r4, 0x6c00(r31)
-/* 8034FFDC 00000094  80 9F 6C 00 */	lwz r4, 0x6c00(r31)
+/* 8034FFD8 00000090  90 9F 6C 00 */	stw r4, 0x6c00(r31)	/* effective address: CC006C00 */
+/* 8034FFDC 00000094  80 9F 6C 00 */	lwz r4, 0x6c00(r31)	/* effective address: CC006C00 */
 /* 8034FFE0 00000098  54 84 07 FA */	rlwinm r4, r4, 0, 0x1f, 0x1d
 /* 8034FFE4 0000009C  7C 80 03 78 */	or r0, r4, r0
-/* 8034FFE8 000000A0  90 1F 6C 00 */	stw r0, 0x6c00(r31)
+/* 8034FFE8 000000A0  90 1F 6C 00 */	stw r0, 0x6c00(r31)	/* effective address: CC006C00 */
 /* 8034FFEC 000000A4  4B FE D7 31 */	bl OSRestoreInterrupts
 /* 8034FFF0 000000A8  7F A3 EB 78 */	mr r3, r29
 /* 8034FFF4 000000AC  4B FF FD 79 */	bl AISetStreamPlayState

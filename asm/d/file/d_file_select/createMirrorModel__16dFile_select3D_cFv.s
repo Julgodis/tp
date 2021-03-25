@@ -36,8 +36,8 @@ lbl_80190D68:
 /* 80190DF0 00000088  28 00 00 00 */	cmplwi r0, 0
 /* 80190DF4 0000008C  41 82 01 E0 */	beq lbl_80190FD4
 /* 80190DF8 00000090  54 07 15 BA */	rlwinm r7, r0, 2, 0x16, 0x1d
-/* 80190DFC 00000094  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 80190E00 00000098  38 84 43 88 */	addi r4, r4, stringBase0@l
+/* 80190DFC 00000094  3C 80 80 39 */	lis r4, d_file_d_file_select__stringBase0@ha
+/* 80190E00 00000098  38 84 43 88 */	addi r4, r4, d_file_d_file_select__stringBase0@l
 /* 80190E04 0000009C  38 84 04 8A */	addi r4, r4, 0x48a
 /* 80190E08 000000A0  3C A0 80 3C */	lis r5, data_803BB324@ha
 /* 80190E0C 000000A4  38 05 B3 24 */	addi r0, r5, data_803BB324@l

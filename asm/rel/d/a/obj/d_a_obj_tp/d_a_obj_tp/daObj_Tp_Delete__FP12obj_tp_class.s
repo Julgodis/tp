@@ -5,16 +5,16 @@ lbl_80D1E468:
 /* 80D1E474 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D1E478 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80D1E47C 00000014  38 7F 05 68 */	addi r3, r31, 0x568
-/* 80D1E480 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80D1E484 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80D1E488 00000020  4B FF F0 D1 */	bl _unresolved
+/* 80D1E480 00000018  3C 80 80 D2 */	lis r4, stringBase0@ha
+/* 80D1E484 0000001C  38 84 EE 98 */	addi r4, r4, stringBase0@l
+/* 80D1E488 00000020  4B 30 EB 80 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80D1E48C 00000024  80 9F 06 04 */	lwz r4, 0x604(r31)
 /* 80D1E490 00000028  28 04 00 00 */	cmplwi r4, 0
 /* 80D1E494 0000002C  41 82 00 14 */	beq lbl_80D1E4A8
-/* 80D1E498 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D1E49C 00000034  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D1E498 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D1E49C 00000034  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D1E4A0 00000038  38 63 0F 38 */	addi r3, r3, 0xf38
-/* 80D1E4A4 0000003C  4B FF F0 B5 */	bl _unresolved
+/* 80D1E4A4 0000003C  4B 35 5D AC */	b Release__4cBgSFP9dBgW_Base
 lbl_80D1E4A8:
 /* 80D1E4A8 00000000  38 60 00 01 */	li r3, 1
 /* 80D1E4AC 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

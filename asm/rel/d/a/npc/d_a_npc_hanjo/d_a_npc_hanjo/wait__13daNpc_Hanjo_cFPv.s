@@ -3,10 +3,10 @@ lbl_809FD86C:
 /* 809FD870 00000004  7C 08 02 A6 */	mflr r0
 /* 809FD874 00000008  90 01 00 34 */	stw r0, 0x34(r1)
 /* 809FD878 0000000C  39 61 00 30 */	addi r11, r1, 0x30
-/* 809FD87C 00000010  4B FF B7 7D */	bl _unresolved
+/* 809FD87C 00000010  4B 96 49 60 */	b _savegpr_29
 /* 809FD880 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 809FD884 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 809FD888 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 809FD884 00000018  3C 60 80 A0 */	lis r3, m__19daNpc_Hanjo_Param_c@ha
+/* 809FD888 0000001C  3B E3 06 00 */	addi r31, r3, m__19daNpc_Hanjo_Param_c@l
 /* 809FD88C 00000020  A0 1E 0E 22 */	lhz r0, 0xe22(r30)
 /* 809FD890 00000024  2C 00 00 02 */	cmpwi r0, 2
 /* 809FD894 00000028  41 82 01 B8 */	beq lbl_809FDA4C
@@ -32,11 +32,11 @@ lbl_809FD8C8:
 /* 809FD8DC 00000014  41 82 00 24 */	beq lbl_809FD900
 /* 809FD8E0 00000018  83 BE 0B 5C */	lwz r29, 0xb5c(r30)
 /* 809FD8E4 0000001C  38 7E 0B 50 */	addi r3, r30, 0xb50
-/* 809FD8E8 00000020  4B FF B7 11 */	bl _unresolved
+/* 809FD8E8 00000020  4B 74 7F B0 */	b initialize__22daNpcT_MotionSeqMngr_cFv
 /* 809FD8EC 00000024  93 BE 0B 5C */	stw r29, 0xb5c(r30)
 /* 809FD8F0 00000028  38 00 00 07 */	li r0, 7
 /* 809FD8F4 0000002C  90 1E 0B 58 */	stw r0, 0xb58(r30)
-/* 809FD8F8 00000030  C0 1F 01 20 */	lfs f0, 0x120(r31)
+/* 809FD8F8 00000030  C0 1F 01 20 */	lfs f0, 0x120(r31)	/* effective address: 80A00720 */
 /* 809FD8FC 00000034  D0 1E 0B 68 */	stfs f0, 0xb68(r30)
 lbl_809FD900:
 /* 809FD900 00000000  80 1E 0B 7C */	lwz r0, 0xb7c(r30)
@@ -44,11 +44,11 @@ lbl_809FD900:
 /* 809FD908 00000008  41 82 01 3C */	beq lbl_809FDA44
 /* 809FD90C 0000000C  83 BE 0B 80 */	lwz r29, 0xb80(r30)
 /* 809FD910 00000010  38 7E 0B 74 */	addi r3, r30, 0xb74
-/* 809FD914 00000014  4B FF B6 E5 */	bl _unresolved
+/* 809FD914 00000014  4B 74 7F 84 */	b initialize__22daNpcT_MotionSeqMngr_cFv
 /* 809FD918 00000018  93 BE 0B 80 */	stw r29, 0xb80(r30)
 /* 809FD91C 0000001C  38 00 00 13 */	li r0, 0x13
 /* 809FD920 00000020  90 1E 0B 7C */	stw r0, 0xb7c(r30)
-/* 809FD924 00000024  C0 1F 01 20 */	lfs f0, 0x120(r31)
+/* 809FD924 00000024  C0 1F 01 20 */	lfs f0, 0x120(r31)	/* effective address: 80A00720 */
 /* 809FD928 00000028  D0 1E 0B 8C */	stfs f0, 0xb8c(r30)
 /* 809FD92C 0000002C  48 00 01 18 */	b lbl_809FDA44
 lbl_809FD930:
@@ -57,23 +57,23 @@ lbl_809FD930:
 /* 809FD938 00000008  41 82 00 24 */	beq lbl_809FD95C
 /* 809FD93C 0000000C  83 BE 0B 5C */	lwz r29, 0xb5c(r30)
 /* 809FD940 00000010  38 7E 0B 50 */	addi r3, r30, 0xb50
-/* 809FD944 00000014  4B FF B6 B5 */	bl _unresolved
+/* 809FD944 00000014  4B 74 7F 54 */	b initialize__22daNpcT_MotionSeqMngr_cFv
 /* 809FD948 00000018  93 BE 0B 5C */	stw r29, 0xb5c(r30)
 /* 809FD94C 0000001C  38 00 00 07 */	li r0, 7
 /* 809FD950 00000020  90 1E 0B 58 */	stw r0, 0xb58(r30)
-/* 809FD954 00000024  C0 1F 01 20 */	lfs f0, 0x120(r31)
+/* 809FD954 00000024  C0 1F 01 20 */	lfs f0, 0x120(r31)	/* effective address: 80A00720 */
 /* 809FD958 00000028  D0 1E 0B 68 */	stfs f0, 0xb68(r30)
 lbl_809FD95C:
 /* 809FD95C 00000000  38 7E 0B 98 */	addi r3, r30, 0xb98
-/* 809FD960 00000004  4B FF B6 99 */	bl _unresolved
+/* 809FD960 00000004  4B 74 7D A8 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 809FD964 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 809FD968 0000000C  40 82 00 24 */	bne lbl_809FD98C
 /* 809FD96C 00000010  38 60 00 AB */	li r3, 0xab
-/* 809FD970 00000014  4B FF B6 89 */	bl _unresolved
+/* 809FD970 00000014  4B 74 F1 3C */	b daNpcT_chkEvtBit__FUl
 /* 809FD974 00000018  2C 03 00 00 */	cmpwi r3, 0
 /* 809FD978 0000001C  40 82 00 14 */	bne lbl_809FD98C
 /* 809FD97C 00000020  38 60 00 B7 */	li r3, 0xb7
-/* 809FD980 00000024  4B FF B6 79 */	bl _unresolved
+/* 809FD980 00000024  4B 74 F1 2C */	b daNpcT_chkEvtBit__FUl
 /* 809FD984 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 809FD988 0000002C  41 82 00 34 */	beq lbl_809FD9BC
 lbl_809FD98C:
@@ -82,11 +82,11 @@ lbl_809FD98C:
 /* 809FD994 00000008  41 82 00 B0 */	beq lbl_809FDA44
 /* 809FD998 0000000C  83 BE 0B 80 */	lwz r29, 0xb80(r30)
 /* 809FD99C 00000010  38 7E 0B 74 */	addi r3, r30, 0xb74
-/* 809FD9A0 00000014  4B FF B6 59 */	bl _unresolved
+/* 809FD9A0 00000014  4B 74 7E F8 */	b initialize__22daNpcT_MotionSeqMngr_cFv
 /* 809FD9A4 00000018  93 BE 0B 80 */	stw r29, 0xb80(r30)
 /* 809FD9A8 0000001C  38 00 00 00 */	li r0, 0
 /* 809FD9AC 00000020  90 1E 0B 7C */	stw r0, 0xb7c(r30)
-/* 809FD9B0 00000024  C0 1F 01 20 */	lfs f0, 0x120(r31)
+/* 809FD9B0 00000024  C0 1F 01 20 */	lfs f0, 0x120(r31)	/* effective address: 80A00720 */
 /* 809FD9B4 00000028  D0 1E 0B 8C */	stfs f0, 0xb8c(r30)
 /* 809FD9B8 0000002C  48 00 00 8C */	b lbl_809FDA44
 lbl_809FD9BC:
@@ -95,11 +95,11 @@ lbl_809FD9BC:
 /* 809FD9C4 00000008  41 82 00 80 */	beq lbl_809FDA44
 /* 809FD9C8 0000000C  83 BE 0B 80 */	lwz r29, 0xb80(r30)
 /* 809FD9CC 00000010  38 7E 0B 74 */	addi r3, r30, 0xb74
-/* 809FD9D0 00000014  4B FF B6 29 */	bl _unresolved
+/* 809FD9D0 00000014  4B 74 7E C8 */	b initialize__22daNpcT_MotionSeqMngr_cFv
 /* 809FD9D4 00000018  93 BE 0B 80 */	stw r29, 0xb80(r30)
 /* 809FD9D8 0000001C  38 00 00 02 */	li r0, 2
 /* 809FD9DC 00000020  90 1E 0B 7C */	stw r0, 0xb7c(r30)
-/* 809FD9E0 00000024  C0 1F 01 20 */	lfs f0, 0x120(r31)
+/* 809FD9E0 00000024  C0 1F 01 20 */	lfs f0, 0x120(r31)	/* effective address: 80A00720 */
 /* 809FD9E4 00000028  D0 1E 0B 8C */	stfs f0, 0xb8c(r30)
 /* 809FD9E8 0000002C  48 00 00 5C */	b lbl_809FDA44
 lbl_809FD9EC:
@@ -108,11 +108,11 @@ lbl_809FD9EC:
 /* 809FD9F4 00000008  41 82 00 24 */	beq lbl_809FDA18
 /* 809FD9F8 0000000C  83 BE 0B 5C */	lwz r29, 0xb5c(r30)
 /* 809FD9FC 00000010  38 7E 0B 50 */	addi r3, r30, 0xb50
-/* 809FDA00 00000014  4B FF B5 F9 */	bl _unresolved
+/* 809FDA00 00000014  4B 74 7E 98 */	b initialize__22daNpcT_MotionSeqMngr_cFv
 /* 809FDA04 00000018  93 BE 0B 5C */	stw r29, 0xb5c(r30)
 /* 809FDA08 0000001C  38 00 00 07 */	li r0, 7
 /* 809FDA0C 00000020  90 1E 0B 58 */	stw r0, 0xb58(r30)
-/* 809FDA10 00000024  C0 1F 01 20 */	lfs f0, 0x120(r31)
+/* 809FDA10 00000024  C0 1F 01 20 */	lfs f0, 0x120(r31)	/* effective address: 80A00720 */
 /* 809FDA14 00000028  D0 1E 0B 68 */	stfs f0, 0xb68(r30)
 lbl_809FDA18:
 /* 809FDA18 00000000  80 1E 0B 7C */	lwz r0, 0xb7c(r30)
@@ -120,11 +120,11 @@ lbl_809FDA18:
 /* 809FDA20 00000008  41 82 00 24 */	beq lbl_809FDA44
 /* 809FDA24 0000000C  83 BE 0B 80 */	lwz r29, 0xb80(r30)
 /* 809FDA28 00000010  38 7E 0B 74 */	addi r3, r30, 0xb74
-/* 809FDA2C 00000014  4B FF B5 CD */	bl _unresolved
+/* 809FDA2C 00000014  4B 74 7E 6C */	b initialize__22daNpcT_MotionSeqMngr_cFv
 /* 809FDA30 00000018  93 BE 0B 80 */	stw r29, 0xb80(r30)
 /* 809FDA34 0000001C  38 00 00 00 */	li r0, 0
 /* 809FDA38 00000020  90 1E 0B 7C */	stw r0, 0xb7c(r30)
-/* 809FDA3C 00000024  C0 1F 01 20 */	lfs f0, 0x120(r31)
+/* 809FDA3C 00000024  C0 1F 01 20 */	lfs f0, 0x120(r31)	/* effective address: 80A00720 */
 /* 809FDA40 00000028  D0 1E 0B 8C */	stfs f0, 0xb8c(r30)
 lbl_809FDA44:
 /* 809FDA44 00000000  38 00 00 02 */	li r0, 2
@@ -142,14 +142,14 @@ lbl_809FDA68:
 /* 809FDA6C 00000004  40 80 01 28 */	bge lbl_809FDB94
 /* 809FDA70 00000008  48 00 00 98 */	b lbl_809FDB08
 lbl_809FDA74:
-/* 809FDA74 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 809FDA78 00000004  3B A3 00 00 */	addi r29, r3, 0x0000 /* 0x00000000@l */
-/* 809FDA7C 00000008  80 7D 5D AC */	lwz r3, 0x5dac(r29)
-/* 809FDA80 0000000C  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
+/* 809FDA74 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809FDA78 00000004  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 809FDA7C 00000008  80 7D 5D AC */	lwz r3, 0x5dac(r29)	/* effective address: 8040BF6C */
+/* 809FDA80 0000000C  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 804004D0 */
 /* 809FDA84 00000010  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 809FDA88 00000014  C0 03 04 D4 */	lfs f0, 0x4d4(r3)
+/* 809FDA88 00000014  C0 03 04 D4 */	lfs f0, 0x4d4(r3)	/* effective address: 804004D4 */
 /* 809FDA8C 00000018  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 809FDA90 0000001C  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
+/* 809FDA90 0000001C  C0 03 04 D8 */	lfs f0, 0x4d8(r3)	/* effective address: 804004D8 */
 /* 809FDA94 00000020  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 809FDA98 00000024  C0 1E 04 D0 */	lfs f0, 0x4d0(r30)
 /* 809FDA9C 00000028  D0 01 00 08 */	stfs f0, 8(r1)
@@ -161,14 +161,14 @@ lbl_809FDA74:
 /* 809FDAB4 00000040  38 81 00 14 */	addi r4, r1, 0x14
 /* 809FDAB8 00000044  38 A1 00 08 */	addi r5, r1, 8
 /* 809FDABC 00000048  38 DF 00 00 */	addi r6, r31, 0
-/* 809FDAC0 0000004C  C0 26 00 54 */	lfs f1, 0x54(r6)
-/* 809FDAC4 00000050  C0 5F 01 E0 */	lfs f2, 0x1e0(r31)
-/* 809FDAC8 00000054  C0 7F 01 E4 */	lfs f3, 0x1e4(r31)
+/* 809FDAC0 0000004C  C0 26 00 54 */	lfs f1, 0x54(r6)	/* effective address: 80A00654 */
+/* 809FDAC4 00000050  C0 5F 01 E0 */	lfs f2, 0x1e0(r31)	/* effective address: 80A007E0 */
+/* 809FDAC8 00000054  C0 7F 01 E4 */	lfs f3, 0x1e4(r31)	/* effective address: 80A007E4 */
 /* 809FDACC 00000058  38 C0 00 00 */	li r6, 0
-/* 809FDAD0 0000005C  4B FF B5 29 */	bl _unresolved
+/* 809FDAD0 0000005C  4B 74 D2 20 */	b chkPointInArea__8daNpcT_cF4cXyz4cXyzfffs
 /* 809FDAD4 00000060  2C 03 00 00 */	cmpwi r3, 0
 /* 809FDAD8 00000064  41 82 00 BC */	beq lbl_809FDB94
-/* 809FDADC 00000068  80 7D 5D AC */	lwz r3, 0x5dac(r29)
+/* 809FDADC 00000068  80 7D 5D AC */	lwz r3, 0x5dac(r29)	/* effective address: 8040BF6C */
 /* 809FDAE0 0000006C  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 809FDAE4 00000070  81 8C 02 0C */	lwz r12, 0x20c(r12)
 /* 809FDAE8 00000074  7D 89 03 A6 */	mtctr r12
@@ -180,33 +180,33 @@ lbl_809FDA74:
 /* 809FDB00 0000008C  98 1E 17 23 */	stb r0, 0x1723(r30)
 /* 809FDB04 00000090  48 00 00 90 */	b lbl_809FDB94
 lbl_809FDB08:
-/* 809FDB08 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 809FDB0C 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 809FDB10 00000008  80 63 5D B4 */	lwz r3, 0x5db4(r3)
-/* 809FDB14 0000000C  80 03 05 74 */	lwz r0, 0x574(r3)
+/* 809FDB08 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809FDB0C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809FDB10 00000008  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 809FDB14 0000000C  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
 /* 809FDB18 00000010  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 809FDB1C 00000014  41 82 00 78 */	beq lbl_809FDB94
 /* 809FDB20 00000018  38 7E 0F 88 */	addi r3, r30, 0xf88
-/* 809FDB24 0000001C  4B FF B4 D5 */	bl _unresolved
+/* 809FDB24 0000001C  4B 68 6B 34 */	b ChkCoHit__12dCcD_GObjInfFv
 /* 809FDB28 00000020  28 03 00 00 */	cmplwi r3, 0
 /* 809FDB2C 00000024  41 82 00 68 */	beq lbl_809FDB94
-/* 809FDB30 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 809FDB34 0000002C  3B A3 00 00 */	addi r29, r3, 0x0000 /* 0x00000000@l */
-/* 809FDB38 00000030  80 7D 5D AC */	lwz r3, 0x5dac(r29)
-/* 809FDB3C 00000034  81 83 06 28 */	lwz r12, 0x628(r3)
+/* 809FDB30 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809FDB34 0000002C  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 809FDB38 00000030  80 7D 5D AC */	lwz r3, 0x5dac(r29)	/* effective address: 8040BF6C */
+/* 809FDB3C 00000034  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 80400628 */
 /* 809FDB40 00000038  81 8C 00 44 */	lwz r12, 0x44(r12)
 /* 809FDB44 0000003C  7D 89 03 A6 */	mtctr r12
 /* 809FDB48 00000040  4E 80 04 21 */	bctrl 
 /* 809FDB4C 00000044  28 03 00 00 */	cmplwi r3, 0
 /* 809FDB50 00000048  41 82 00 3C */	beq lbl_809FDB8C
-/* 809FDB54 0000004C  80 7D 5D AC */	lwz r3, 0x5dac(r29)
+/* 809FDB54 0000004C  80 7D 5D AC */	lwz r3, 0x5dac(r29)	/* effective address: 8040BF6C */
 /* 809FDB58 00000050  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 809FDB5C 00000054  81 8C 00 50 */	lwz r12, 0x50(r12)
 /* 809FDB60 00000058  7D 89 03 A6 */	mtctr r12
 /* 809FDB64 0000005C  4E 80 04 21 */	bctrl 
 /* 809FDB68 00000060  2C 03 00 00 */	cmpwi r3, 0
 /* 809FDB6C 00000064  40 82 00 20 */	bne lbl_809FDB8C
-/* 809FDB70 00000068  80 7D 5D AC */	lwz r3, 0x5dac(r29)
+/* 809FDB70 00000068  80 7D 5D AC */	lwz r3, 0x5dac(r29)	/* effective address: 8040BF6C */
 /* 809FDB74 0000006C  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 809FDB78 00000070  81 8C 00 58 */	lwz r12, 0x58(r12)
 /* 809FDB7C 00000074  7D 89 03 A6 */	mtctr r12
@@ -224,11 +224,11 @@ lbl_809FDB94:
 /* 809FDBA4 00000010  28 00 00 00 */	cmplwi r0, 0
 /* 809FDBA8 00000014  40 82 00 68 */	bne lbl_809FDC10
 /* 809FDBAC 00000018  38 60 00 AB */	li r3, 0xab
-/* 809FDBB0 0000001C  4B FF B4 49 */	bl _unresolved
+/* 809FDBB0 0000001C  4B 74 EE FC */	b daNpcT_chkEvtBit__FUl
 /* 809FDBB4 00000020  2C 03 00 00 */	cmpwi r3, 0
 /* 809FDBB8 00000024  40 82 00 14 */	bne lbl_809FDBCC
 /* 809FDBBC 00000028  38 60 00 B7 */	li r3, 0xb7
-/* 809FDBC0 0000002C  4B FF B4 39 */	bl _unresolved
+/* 809FDBC0 0000002C  4B 74 EE EC */	b daNpcT_chkEvtBit__FUl
 /* 809FDBC4 00000030  2C 03 00 00 */	cmpwi r3, 0
 /* 809FDBC8 00000034  41 82 00 58 */	beq lbl_809FDC20
 lbl_809FDBCC:
@@ -242,31 +242,31 @@ lbl_809FDBCC:
 /* 809FDBE8 0000001C  41 82 00 38 */	beq lbl_809FDC20
 /* 809FDBEC 00000020  83 BE 0B 80 */	lwz r29, 0xb80(r30)
 /* 809FDBF0 00000024  38 7E 0B 74 */	addi r3, r30, 0xb74
-/* 809FDBF4 00000028  4B FF B4 05 */	bl _unresolved
+/* 809FDBF4 00000028  4B 74 7C A4 */	b initialize__22daNpcT_MotionSeqMngr_cFv
 /* 809FDBF8 0000002C  93 BE 0B 80 */	stw r29, 0xb80(r30)
 /* 809FDBFC 00000030  38 00 00 00 */	li r0, 0
 /* 809FDC00 00000034  90 1E 0B 7C */	stw r0, 0xb7c(r30)
-/* 809FDC04 00000038  C0 1F 01 20 */	lfs f0, 0x120(r31)
+/* 809FDC04 00000038  C0 1F 01 20 */	lfs f0, 0x120(r31)	/* effective address: 80A00720 */
 /* 809FDC08 0000003C  D0 1E 0B 8C */	stfs f0, 0xb8c(r30)
 /* 809FDC0C 00000040  48 00 00 14 */	b lbl_809FDC20
 lbl_809FDC10:
 /* 809FDC10 00000000  28 00 00 03 */	cmplwi r0, 3
 /* 809FDC14 00000004  40 82 00 0C */	bne lbl_809FDC20
 /* 809FDC18 00000008  38 7E 0B 98 */	addi r3, r30, 0xb98
-/* 809FDC1C 0000000C  4B FF B3 DD */	bl _unresolved
+/* 809FDC1C 0000000C  4B 74 7A E0 */	b remove__18daNpcT_ActorMngr_cFv
 lbl_809FDC20:
 /* 809FDC20 00000000  38 7E 0B 98 */	addi r3, r30, 0xb98
-/* 809FDC24 00000004  4B FF B3 D5 */	bl _unresolved
+/* 809FDC24 00000004  4B 74 7A E4 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 809FDC28 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 809FDC2C 0000000C  41 82 00 C0 */	beq lbl_809FDCEC
 /* 809FDC30 00000010  80 1E 0C E0 */	lwz r0, 0xce0(r30)
 /* 809FDC34 00000014  2C 00 00 01 */	cmpwi r0, 1
 /* 809FDC38 00000018  41 82 00 28 */	beq lbl_809FDC60
 /* 809FDC3C 0000001C  38 7E 0B A8 */	addi r3, r30, 0xba8
-/* 809FDC40 00000020  4B FF B3 B9 */	bl _unresolved
+/* 809FDC40 00000020  4B 74 7A BC */	b remove__18daNpcT_ActorMngr_cFv
 /* 809FDC44 00000024  38 00 00 00 */	li r0, 0
 /* 809FDC48 00000028  90 1E 0B C8 */	stw r0, 0xbc8(r30)
-/* 809FDC4C 0000002C  C0 1F 00 FC */	lfs f0, 0xfc(r31)
+/* 809FDC4C 0000002C  C0 1F 00 FC */	lfs f0, 0xfc(r31)	/* effective address: 80A006FC */
 /* 809FDC50 00000030  D0 1E 0C F4 */	stfs f0, 0xcf4(r30)
 /* 809FDC54 00000034  98 1E 0C FF */	stb r0, 0xcff(r30)
 /* 809FDC58 00000038  38 00 00 01 */	li r0, 1
@@ -275,22 +275,22 @@ lbl_809FDC60:
 /* 809FDC60 00000000  38 00 00 00 */	li r0, 0
 /* 809FDC64 00000004  98 1E 0C FF */	stb r0, 0xcff(r30)
 /* 809FDC68 00000008  38 7E 0B 98 */	addi r3, r30, 0xb98
-/* 809FDC6C 0000000C  4B FF B3 8D */	bl _unresolved
+/* 809FDC6C 0000000C  4B 74 7A 9C */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 809FDC70 00000010  7C 64 1B 78 */	mr r4, r3
 /* 809FDC74 00000014  7F C3 F3 78 */	mr r3, r30
 /* 809FDC78 00000018  C0 3E 0D F8 */	lfs f1, 0xdf8(r30)
 /* 809FDC7C 0000001C  A8 BE 0D 7A */	lha r5, 0xd7a(r30)
-/* 809FDC80 00000020  4B FF B3 79 */	bl _unresolved
+/* 809FDC80 00000020  4B 74 CF 50 */	b chkActorInSight__8daNpcT_cFP10fopAc_ac_cfs
 /* 809FDC84 00000024  2C 03 00 00 */	cmpwi r3, 0
 /* 809FDC88 00000028  40 82 00 38 */	bne lbl_809FDCC0
 /* 809FDC8C 0000002C  80 1E 0C E0 */	lwz r0, 0xce0(r30)
 /* 809FDC90 00000030  2C 00 00 00 */	cmpwi r0, 0
 /* 809FDC94 00000034  41 82 00 24 */	beq lbl_809FDCB8
 /* 809FDC98 00000038  38 7E 0B A8 */	addi r3, r30, 0xba8
-/* 809FDC9C 0000003C  4B FF B3 5D */	bl _unresolved
+/* 809FDC9C 0000003C  4B 74 7A 60 */	b remove__18daNpcT_ActorMngr_cFv
 /* 809FDCA0 00000040  38 00 00 00 */	li r0, 0
 /* 809FDCA4 00000044  90 1E 0B C8 */	stw r0, 0xbc8(r30)
-/* 809FDCA8 00000048  C0 1F 00 FC */	lfs f0, 0xfc(r31)
+/* 809FDCA8 00000048  C0 1F 00 FC */	lfs f0, 0xfc(r31)	/* effective address: 80A006FC */
 /* 809FDCAC 0000004C  D0 1E 0C F4 */	stfs f0, 0xcf4(r30)
 /* 809FDCB0 00000050  98 1E 0C FF */	stb r0, 0xcff(r30)
 /* 809FDCB4 00000054  90 1E 0C E0 */	stw r0, 0xce0(r30)
@@ -299,7 +299,7 @@ lbl_809FDCB8:
 /* 809FDCBC 00000004  98 1E 0C FF */	stb r0, 0xcff(r30)
 lbl_809FDCC0:
 /* 809FDCC0 00000000  7F C3 F3 78 */	mr r3, r30
-/* 809FDCC4 00000004  4B FF B3 35 */	bl _unresolved
+/* 809FDCC4 00000004  4B 74 D6 74 */	b srchPlayerActor__8daNpcT_cFv
 /* 809FDCC8 00000008  2C 03 00 00 */	cmpwi r3, 0
 /* 809FDCCC 0000000C  40 82 00 F8 */	bne lbl_809FDDC4
 /* 809FDCD0 00000010  A8 7E 04 B6 */	lha r3, 0x4b6(r30)
@@ -314,10 +314,10 @@ lbl_809FDCEC:
 /* 809FDCF0 00000004  2C 00 00 00 */	cmpwi r0, 0
 /* 809FDCF4 00000008  41 82 00 24 */	beq lbl_809FDD18
 /* 809FDCF8 0000000C  38 7E 0B A8 */	addi r3, r30, 0xba8
-/* 809FDCFC 00000010  4B FF B2 FD */	bl _unresolved
+/* 809FDCFC 00000010  4B 74 7A 00 */	b remove__18daNpcT_ActorMngr_cFv
 /* 809FDD00 00000014  38 00 00 00 */	li r0, 0
 /* 809FDD04 00000018  90 1E 0B C8 */	stw r0, 0xbc8(r30)
-/* 809FDD08 0000001C  C0 1F 00 FC */	lfs f0, 0xfc(r31)
+/* 809FDD08 0000001C  C0 1F 00 FC */	lfs f0, 0xfc(r31)	/* effective address: 80A006FC */
 /* 809FDD0C 00000020  D0 1E 0C F4 */	stfs f0, 0xcf4(r30)
 /* 809FDD10 00000024  98 1E 0C FF */	stb r0, 0xcff(r30)
 /* 809FDD14 00000028  90 1E 0C E0 */	stw r0, 0xce0(r30)
@@ -339,7 +339,7 @@ lbl_809FDD18:
 /* 809FDD50 00000038  38 C0 FF FF */	li r6, -1
 /* 809FDD54 0000003C  38 E0 00 0F */	li r7, 0xf
 /* 809FDD58 00000040  39 00 00 00 */	li r8, 0
-/* 809FDD5C 00000044  4B FF B2 9D */	bl _unresolved
+/* 809FDD5C 00000044  4B 74 D8 EC */	b step__8daNpcT_cFsiiii
 /* 809FDD60 00000048  2C 03 00 00 */	cmpwi r3, 0
 /* 809FDD64 0000004C  41 82 00 4C */	beq lbl_809FDDB0
 /* 809FDD68 00000050  38 00 00 01 */	li r0, 1
@@ -351,7 +351,7 @@ lbl_809FDD74:
 /* 809FDD7C 00000008  38 C0 00 0E */	li r6, 0xe
 /* 809FDD80 0000000C  38 E0 00 0F */	li r7, 0xf
 /* 809FDD84 00000010  39 00 00 00 */	li r8, 0
-/* 809FDD88 00000014  4B FF B2 71 */	bl _unresolved
+/* 809FDD88 00000014  4B 74 D8 C0 */	b step__8daNpcT_cFsiiii
 /* 809FDD8C 00000018  2C 03 00 00 */	cmpwi r3, 0
 /* 809FDD90 0000001C  41 82 00 20 */	beq lbl_809FDDB0
 /* 809FDD94 00000020  38 00 00 01 */	li r0, 1
@@ -359,7 +359,7 @@ lbl_809FDD74:
 /* 809FDD9C 00000028  48 00 00 14 */	b lbl_809FDDB0
 lbl_809FDDA0:
 /* 809FDDA0 00000000  7F C3 F3 78 */	mr r3, r30
-/* 809FDDA4 00000004  4B FF B2 55 */	bl _unresolved
+/* 809FDDA4 00000004  4B 74 CC 74 */	b setAngle__8daNpcT_cFs
 /* 809FDDA8 00000008  38 00 00 01 */	li r0, 1
 /* 809FDDAC 0000000C  B0 1E 0E 22 */	sth r0, 0xe22(r30)
 lbl_809FDDB0:
@@ -368,7 +368,7 @@ lbl_809FDDB0:
 /* 809FDDB8 00000008  48 00 00 0C */	b lbl_809FDDC4
 lbl_809FDDBC:
 /* 809FDDBC 00000000  7F C3 F3 78 */	mr r3, r30
-/* 809FDDC0 00000004  4B FF B2 39 */	bl _unresolved
+/* 809FDDC0 00000004  4B 74 D5 78 */	b srchPlayerActor__8daNpcT_cFv
 lbl_809FDDC4:
 /* 809FDDC4 00000000  80 1E 0C E0 */	lwz r0, 0xce0(r30)
 /* 809FDDC8 00000004  2C 00 00 01 */	cmpwi r0, 1
@@ -393,11 +393,11 @@ lbl_809FDDF0:
 /* 809FDE0C 0000001C  41 82 00 D4 */	beq lbl_809FDEE0
 /* 809FDE10 00000020  83 BE 0B 80 */	lwz r29, 0xb80(r30)
 /* 809FDE14 00000024  38 7E 0B 74 */	addi r3, r30, 0xb74
-/* 809FDE18 00000028  4B FF B1 E1 */	bl _unresolved
+/* 809FDE18 00000028  4B 74 7A 80 */	b initialize__22daNpcT_MotionSeqMngr_cFv
 /* 809FDE1C 0000002C  93 BE 0B 80 */	stw r29, 0xb80(r30)
 /* 809FDE20 00000030  38 00 00 00 */	li r0, 0
 /* 809FDE24 00000034  90 1E 0B 7C */	stw r0, 0xb7c(r30)
-/* 809FDE28 00000038  C0 1F 01 20 */	lfs f0, 0x120(r31)
+/* 809FDE28 00000038  C0 1F 01 20 */	lfs f0, 0x120(r31)	/* effective address: 80A00720 */
 /* 809FDE2C 0000003C  D0 1E 0B 8C */	stfs f0, 0xb8c(r30)
 /* 809FDE30 00000040  48 00 00 B0 */	b lbl_809FDEE0
 lbl_809FDE34:
@@ -407,11 +407,11 @@ lbl_809FDE34:
 /* 809FDE40 0000000C  48 00 00 A0 */	b lbl_809FDEE0
 lbl_809FDE44:
 /* 809FDE44 00000000  38 7E 10 D0 */	addi r3, r30, 0x10d0
-/* 809FDE48 00000004  4B FF B1 B1 */	bl _unresolved
+/* 809FDE48 00000004  4B 74 78 C0 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 809FDE4C 00000008  7C 7D 1B 79 */	or. r29, r3, r3
 /* 809FDE50 0000000C  41 82 00 90 */	beq lbl_809FDEE0
 /* 809FDE54 00000010  38 7E 0B A8 */	addi r3, r30, 0xba8
-/* 809FDE58 00000014  4B FF B1 A1 */	bl _unresolved
+/* 809FDE58 00000014  4B 74 78 B0 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 809FDE5C 00000018  7C 63 E8 50 */	subf r3, r3, r29
 /* 809FDE60 0000001C  30 03 FF FF */	addic r0, r3, -1
 /* 809FDE64 00000020  7C 00 19 10 */	subfe r0, r0, r3
@@ -422,10 +422,10 @@ lbl_809FDE44:
 /* 809FDE78 00000034  41 82 00 30 */	beq lbl_809FDEA8
 lbl_809FDE7C:
 /* 809FDE7C 00000000  38 7E 0B A8 */	addi r3, r30, 0xba8
-/* 809FDE80 00000004  4B FF B1 79 */	bl _unresolved
+/* 809FDE80 00000004  4B 74 78 7C */	b remove__18daNpcT_ActorMngr_cFv
 /* 809FDE84 00000008  38 00 00 00 */	li r0, 0
 /* 809FDE88 0000000C  90 1E 0B C8 */	stw r0, 0xbc8(r30)
-/* 809FDE8C 00000010  C0 1F 00 FC */	lfs f0, 0xfc(r31)
+/* 809FDE8C 00000010  C0 1F 00 FC */	lfs f0, 0xfc(r31)	/* effective address: 80A006FC */
 /* 809FDE90 00000014  D0 1E 0C F4 */	stfs f0, 0xcf4(r30)
 /* 809FDE94 00000018  98 1E 0C FF */	stb r0, 0xcff(r30)
 /* 809FDE98 0000001C  38 00 00 02 */	li r0, 2
@@ -438,13 +438,13 @@ lbl_809FDEAC:
 /* 809FDEAC 00000000  2C 00 00 00 */	cmpwi r0, 0
 /* 809FDEB0 00000004  41 82 00 28 */	beq lbl_809FDED8
 /* 809FDEB4 00000008  7F A3 EB 78 */	mr r3, r29
-/* 809FDEB8 0000000C  4B FF B1 41 */	bl _unresolved
+/* 809FDEB8 0000000C  4B 61 AE 28 */	b fopAc_IsActor__FPv
 /* 809FDEBC 00000010  2C 03 00 00 */	cmpwi r3, 0
 /* 809FDEC0 00000014  41 82 00 18 */	beq lbl_809FDED8
 /* 809FDEC4 00000018  38 7E 0B A8 */	addi r3, r30, 0xba8
 /* 809FDEC8 0000001C  7F A4 EB 78 */	mr r4, r29
-/* 809FDECC 00000020  4B FF B1 2D */	bl _unresolved
-/* 809FDED0 00000024  C0 1F 01 E8 */	lfs f0, 0x1e8(r31)
+/* 809FDECC 00000020  4B 74 78 14 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 809FDED0 00000024  C0 1F 01 E8 */	lfs f0, 0x1e8(r31)	/* effective address: 80A007E8 */
 /* 809FDED4 00000028  D0 1E 0C F4 */	stfs f0, 0xcf4(r30)
 lbl_809FDED8:
 /* 809FDED8 00000000  38 00 00 00 */	li r0, 0
@@ -452,7 +452,7 @@ lbl_809FDED8:
 lbl_809FDEE0:
 /* 809FDEE0 00000000  38 60 00 01 */	li r3, 1
 /* 809FDEE4 00000004  39 61 00 30 */	addi r11, r1, 0x30
-/* 809FDEE8 00000008  4B FF B1 11 */	bl _unresolved
+/* 809FDEE8 00000008  4B 96 43 40 */	b _restgpr_29
 /* 809FDEEC 0000000C  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 809FDEF0 00000010  7C 08 03 A6 */	mtlr r0
 /* 809FDEF4 00000014  38 21 00 30 */	addi r1, r1, 0x30

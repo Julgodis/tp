@@ -10,9 +10,9 @@ lbl_804CCB1C:
 /* 804CCB3C 00000020  54 80 03 DF */	rlwinm. r0, r4, 0, 0xf, 0xf
 /* 804CCB40 00000024  41 82 00 28 */	beq lbl_804CCB68
 lbl_804CCB44:
-/* 804CCB44 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 804CCB48 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 804CCB4C 00000008  88 04 4F AD */	lbz r0, 0x4fad(r4)
+/* 804CCB44 00000000  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 804CCB48 00000004  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 804CCB4C 00000008  88 04 4F AD */	lbz r0, 0x4fad(r4)	/* effective address: 8040B16D */
 /* 804CCB50 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 804CCB54 00000010  40 82 00 14 */	bne lbl_804CCB68
 /* 804CCB58 00000014  88 03 09 34 */	lbz r0, 0x934(r3)

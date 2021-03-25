@@ -3,15 +3,15 @@ lbl_807A78B4:
 /* 807A78B8 00000004  7C 08 02 A6 */	mflr r0
 /* 807A78BC 00000008  90 01 00 44 */	stw r0, 0x44(r1)
 /* 807A78C0 0000000C  39 61 00 40 */	addi r11, r1, 0x40
-/* 807A78C4 00000010  4B FF FA B5 */	bl _unresolved
+/* 807A78C4 00000010  4B BB A9 18 */	b _savegpr_29
 /* 807A78C8 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 807A78CC 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 807A78D0 0000001C  3B A3 00 00 */	addi r29, r3, 0x0000 /* 0x00000000@l */
+/* 807A78CC 00000018  3C 60 80 7B */	lis r3, lit_3909@ha
+/* 807A78D0 0000001C  3B A3 FD 2C */	addi r29, r3, lit_3909@l
 /* 807A78D4 00000020  88 1F 06 E4 */	lbz r0, 0x6e4(r31)
 /* 807A78D8 00000024  28 00 00 00 */	cmplwi r0, 0
 /* 807A78DC 00000028  41 82 01 14 */	beq lbl_807A79F0
 /* 807A78E0 0000002C  C0 3F 05 2C */	lfs f1, 0x52c(r31)
-/* 807A78E4 00000030  C0 1D 00 04 */	lfs f0, 4(r29)
+/* 807A78E4 00000030  C0 1D 00 04 */	lfs f0, 4(r29)	/* effective address: 807AFD30 */
 /* 807A78E8 00000034  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 807A78EC 00000038  41 82 01 04 */	beq lbl_807A79F0
 /* 807A78F0 0000003C  C0 1F 06 74 */	lfs f0, 0x674(r31)
@@ -20,12 +20,12 @@ lbl_807A78B4:
 /* 807A78FC 00000048  D0 21 00 28 */	stfs f1, 0x28(r1)
 /* 807A7900 0000004C  C0 1F 06 7C */	lfs f0, 0x67c(r31)
 /* 807A7904 00000050  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 807A7908 00000054  C0 1D 00 00 */	lfs f0, 0(r29)
+/* 807A7908 00000054  C0 1D 00 00 */	lfs f0, 0(r29)	/* effective address: 807AFD2C */
 /* 807A790C 00000058  EC 01 00 2A */	fadds f0, f1, f0
 /* 807A7910 0000005C  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 807A7914 00000060  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 807A7918 00000064  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
-/* 807A791C 00000068  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
+/* 807A7914 00000060  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807A7918 00000064  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 807A791C 00000068  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
 /* 807A7920 0000006C  38 00 00 FF */	li r0, 0xff
 /* 807A7924 00000070  90 01 00 08 */	stw r0, 8(r1)
 /* 807A7928 00000074  38 80 00 00 */	li r4, 0
@@ -43,10 +43,10 @@ lbl_807A78B4:
 /* 807A7958 000000A4  39 1F 01 0C */	addi r8, r31, 0x10c
 /* 807A795C 000000A8  39 3F 04 E4 */	addi r9, r31, 0x4e4
 /* 807A7960 000000AC  39 40 00 00 */	li r10, 0
-/* 807A7964 000000B0  C0 3D 00 08 */	lfs f1, 8(r29)
-/* 807A7968 000000B4  4B FF FA 11 */	bl _unresolved
+/* 807A7964 000000B0  C0 3D 00 08 */	lfs f1, 8(r29)	/* effective address: 807AFD34 */
+/* 807A7968 000000B4  4B 8A 5B 64 */	b set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 807A796C 000000B8  90 7F 0A F0 */	stw r3, 0xaf0(r31)
-/* 807A7970 000000BC  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
+/* 807A7970 000000BC  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
 /* 807A7974 000000C0  38 00 00 FF */	li r0, 0xff
 /* 807A7978 000000C4  90 01 00 08 */	stw r0, 8(r1)
 /* 807A797C 000000C8  38 80 00 00 */	li r4, 0
@@ -64,8 +64,8 @@ lbl_807A78B4:
 /* 807A79AC 000000F8  39 1F 01 0C */	addi r8, r31, 0x10c
 /* 807A79B0 000000FC  39 3F 04 E4 */	addi r9, r31, 0x4e4
 /* 807A79B4 00000100  39 40 00 00 */	li r10, 0
-/* 807A79B8 00000104  C0 3D 00 08 */	lfs f1, 8(r29)
-/* 807A79BC 00000108  4B FF F9 BD */	bl _unresolved
+/* 807A79B8 00000104  C0 3D 00 08 */	lfs f1, 8(r29)	/* effective address: 807AFD34 */
+/* 807A79BC 00000108  4B 8A 5B 10 */	b set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 807A79C0 0000010C  90 7F 0A F4 */	stw r3, 0xaf4(r31)
 /* 807A79C4 00000110  3C 60 00 07 */	lis r3, 0x0007 /* 0x00070359@ha */
 /* 807A79C8 00000114  38 03 03 59 */	addi r0, r3, 0x0359 /* 0x00070359@l */
@@ -80,7 +80,7 @@ lbl_807A78B4:
 /* 807A79EC 00000138  4E 80 04 21 */	bctrl 
 lbl_807A79F0:
 /* 807A79F0 00000000  39 61 00 40 */	addi r11, r1, 0x40
-/* 807A79F4 00000004  4B FF F9 85 */	bl _unresolved
+/* 807A79F4 00000004  4B BB A8 34 */	b _restgpr_29
 /* 807A79F8 00000008  80 01 00 44 */	lwz r0, 0x44(r1)
 /* 807A79FC 0000000C  7C 08 03 A6 */	mtlr r0
 /* 807A7A00 00000010  38 21 00 40 */	addi r1, r1, 0x40

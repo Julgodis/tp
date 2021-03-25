@@ -36,7 +36,7 @@ lbl_80349C58:
 /* 80349CA8 00000050  4B CB D1 D5 */	bl OSPanic
 lbl_80349CAC:
 /* 80349CAC 00000000  3C 60 80 45 */	lis r3, BB2@ha
-/* 80349CB0 00000004  80 DF 00 00 */	lwz r6, 0(r31)
+/* 80349CB0 00000004  80 DF 00 00 */	lwz r6, 0(r31)	/* effective address: 8044C908 */
 /* 80349CB4 00000008  38 A3 C9 00 */	addi r5, r3, BB2@l
 /* 80349CB8 0000000C  80 ED 92 00 */	lwz r7, bootInfo(r13)
 /* 80349CBC 00000010  3C 80 80 35 */	lis r4, cbForStateReadingFST@ha

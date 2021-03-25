@@ -197,8 +197,8 @@ lbl_8006D284:
 /* 8006D310 0000008C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8006D314 00000090  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8006D318 00000094  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 8006D31C 00000098  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 8006D320 0000009C  38 84 A5 78 */	addi r4, r4, stringBase0@l
+/* 8006D31C 00000098  3C 80 80 38 */	lis r4, d_kankyo_d_kankyo_rain__stringBase0@ha
+/* 8006D320 0000009C  38 84 A5 78 */	addi r4, r4, d_kankyo_d_kankyo_rain__stringBase0@l
 /* 8006D324 000000A0  38 84 00 54 */	addi r4, r4, 0x54
 /* 8006D328 000000A4  48 2F B6 6D */	bl strcmp
 /* 8006D32C 000000A8  2C 03 00 00 */	cmpwi r3, 0
@@ -405,7 +405,7 @@ lbl_8006D50C:
 /* 8006D648 0000013C  38 C0 00 04 */	li r6, 4
 /* 8006D64C 00000140  38 E0 00 00 */	li r7, 0
 /* 8006D650 00000144  48 2F 1F D5 */	bl GXSetAlphaCompare
-/* 8006D654 00000148  88 19 12 D8 */	lbz r0, 0x12d8(r25)
+/* 8006D654 00000148  88 19 12 D8 */	lbz r0, 0x12d8(r25)	/* effective address: 8042DD2C */
 /* 8006D658 0000014C  28 00 00 00 */	cmplwi r0, 0
 /* 8006D65C 00000150  41 82 00 18 */	beq lbl_8006D674
 /* 8006D660 00000154  38 60 00 00 */	li r3, 0
@@ -520,39 +520,39 @@ lbl_8006D6DC:
 /* 8006D808 0000012C  38 A0 00 04 */	li r5, 4
 /* 8006D80C 00000130  48 2E EF 59 */	bl GXBegin
 /* 8006D810 00000134  C0 01 00 48 */	lfs f0, 0x48(r1)
-/* 8006D814 00000138  D0 1C 80 00 */	stfs f0, -0x8000(r28)
+/* 8006D814 00000138  D0 1C 80 00 */	stfs f0, -0x8000(r28)	/* effective address: CC008000 */
 /* 8006D818 0000013C  C0 01 00 4C */	lfs f0, 0x4c(r1)
-/* 8006D81C 00000140  D0 1C 80 00 */	stfs f0, -0x8000(r28)
+/* 8006D81C 00000140  D0 1C 80 00 */	stfs f0, -0x8000(r28)	/* effective address: CC008000 */
 /* 8006D820 00000144  C0 01 00 50 */	lfs f0, 0x50(r1)
-/* 8006D824 00000148  D0 1C 80 00 */	stfs f0, -0x8000(r28)
+/* 8006D824 00000148  D0 1C 80 00 */	stfs f0, -0x8000(r28)	/* effective address: CC008000 */
 /* 8006D828 0000014C  38 60 00 00 */	li r3, 0
-/* 8006D82C 00000150  B0 7C 80 00 */	sth r3, -0x8000(r28)
-/* 8006D830 00000154  B0 7C 80 00 */	sth r3, -0x8000(r28)
+/* 8006D82C 00000150  B0 7C 80 00 */	sth r3, -0x8000(r28)	/* effective address: CC008000 */
+/* 8006D830 00000154  B0 7C 80 00 */	sth r3, -0x8000(r28)	/* effective address: CC008000 */
 /* 8006D834 00000158  C0 01 00 54 */	lfs f0, 0x54(r1)
-/* 8006D838 0000015C  D0 1C 80 00 */	stfs f0, -0x8000(r28)
+/* 8006D838 0000015C  D0 1C 80 00 */	stfs f0, -0x8000(r28)	/* effective address: CC008000 */
 /* 8006D83C 00000160  C0 01 00 58 */	lfs f0, 0x58(r1)
-/* 8006D840 00000164  D0 1C 80 00 */	stfs f0, -0x8000(r28)
+/* 8006D840 00000164  D0 1C 80 00 */	stfs f0, -0x8000(r28)	/* effective address: CC008000 */
 /* 8006D844 00000168  C0 01 00 5C */	lfs f0, 0x5c(r1)
-/* 8006D848 0000016C  D0 1C 80 00 */	stfs f0, -0x8000(r28)
+/* 8006D848 0000016C  D0 1C 80 00 */	stfs f0, -0x8000(r28)	/* effective address: CC008000 */
 /* 8006D84C 00000170  38 00 00 FF */	li r0, 0xff
-/* 8006D850 00000174  B0 1C 80 00 */	sth r0, -0x8000(r28)
-/* 8006D854 00000178  B0 7C 80 00 */	sth r3, -0x8000(r28)
+/* 8006D850 00000174  B0 1C 80 00 */	sth r0, -0x8000(r28)	/* effective address: CC008000 */
+/* 8006D854 00000178  B0 7C 80 00 */	sth r3, -0x8000(r28)	/* effective address: CC008000 */
 /* 8006D858 0000017C  C0 01 00 60 */	lfs f0, 0x60(r1)
-/* 8006D85C 00000180  D0 1C 80 00 */	stfs f0, -0x8000(r28)
+/* 8006D85C 00000180  D0 1C 80 00 */	stfs f0, -0x8000(r28)	/* effective address: CC008000 */
 /* 8006D860 00000184  C0 01 00 64 */	lfs f0, 0x64(r1)
-/* 8006D864 00000188  D0 1C 80 00 */	stfs f0, -0x8000(r28)
+/* 8006D864 00000188  D0 1C 80 00 */	stfs f0, -0x8000(r28)	/* effective address: CC008000 */
 /* 8006D868 0000018C  C0 01 00 68 */	lfs f0, 0x68(r1)
-/* 8006D86C 00000190  D0 1C 80 00 */	stfs f0, -0x8000(r28)
-/* 8006D870 00000194  B0 1C 80 00 */	sth r0, -0x8000(r28)
-/* 8006D874 00000198  B0 1C 80 00 */	sth r0, -0x8000(r28)
+/* 8006D86C 00000190  D0 1C 80 00 */	stfs f0, -0x8000(r28)	/* effective address: CC008000 */
+/* 8006D870 00000194  B0 1C 80 00 */	sth r0, -0x8000(r28)	/* effective address: CC008000 */
+/* 8006D874 00000198  B0 1C 80 00 */	sth r0, -0x8000(r28)	/* effective address: CC008000 */
 /* 8006D878 0000019C  C0 01 00 6C */	lfs f0, 0x6c(r1)
-/* 8006D87C 000001A0  D0 1C 80 00 */	stfs f0, -0x8000(r28)
+/* 8006D87C 000001A0  D0 1C 80 00 */	stfs f0, -0x8000(r28)	/* effective address: CC008000 */
 /* 8006D880 000001A4  C0 01 00 70 */	lfs f0, 0x70(r1)
-/* 8006D884 000001A8  D0 1C 80 00 */	stfs f0, -0x8000(r28)
+/* 8006D884 000001A8  D0 1C 80 00 */	stfs f0, -0x8000(r28)	/* effective address: CC008000 */
 /* 8006D888 000001AC  C0 01 00 74 */	lfs f0, 0x74(r1)
-/* 8006D88C 000001B0  D0 1C 80 00 */	stfs f0, -0x8000(r28)
-/* 8006D890 000001B4  B0 7C 80 00 */	sth r3, -0x8000(r28)
-/* 8006D894 000001B8  B0 1C 80 00 */	sth r0, -0x8000(r28)
+/* 8006D88C 000001B0  D0 1C 80 00 */	stfs f0, -0x8000(r28)	/* effective address: CC008000 */
+/* 8006D890 000001B4  B0 7C 80 00 */	sth r3, -0x8000(r28)	/* effective address: CC008000 */
+/* 8006D894 000001B8  B0 1C 80 00 */	sth r0, -0x8000(r28)	/* effective address: CC008000 */
 /* 8006D898 000001BC  3B 7B 00 01 */	addi r27, r27, 1
 /* 8006D89C 000001C0  3B 5A 00 48 */	addi r26, r26, 0x48
 lbl_8006D8A0:

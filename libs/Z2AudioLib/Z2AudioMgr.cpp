@@ -11,12 +11,6 @@
 // Types:
 // 
 
-struct JKRArchive {
-};
-
-struct JKRSolidHeap {
-};
-
 struct JAISoundHandle {
 };
 
@@ -30,6 +24,12 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JKRSolidHeap {
+};
+
+struct JKRArchive {
 };
 
 struct Z2AudioMgr {
@@ -92,13 +92,13 @@ struct JASAudioReseter {
 	/* 8029D1F8 */ void checkDone() const;
 };
 
+struct JAISeqDataMgr {
+};
+
 struct JAISeCategoryArrangement {
 };
 
 struct JAIAudience {
-};
-
-struct JAISeqDataMgr {
 };
 
 struct JAISeMgr {
@@ -238,7 +238,7 @@ extern "C" void func_802CDB1C(); // 1
 extern "C" void func_802CDB68(); // 1
 extern "C" void func_802CDC08(); // 1
 extern "C" void func_802CDCEC(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const Z2AudioMgr__stringBase0;
 extern "C" extern void* __vt__10Z2AudioMgr[3];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
@@ -359,7 +359,7 @@ SECTION_DATA void* __vt__10Z2AudioMgr[3] = {
 	/* 2    */ (void*)func_802CDB1C,
 };
 
-/* 80451368-80451370 0004+04 s=1 e=251 z=0  None .sbss      mAudioMgrPtr__10Z2AudioMgr                                   */
+/* 80451368-80451370 0004+04 s=1 e=251 z=900  None .sbss      mAudioMgrPtr__10Z2AudioMgr                                   */
 u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 /* 802CD248-802CD34C 0104+00 s=0 e=1 z=0  None .text      __ct__10Z2AudioMgrFv                                         */

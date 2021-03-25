@@ -30,8 +30,8 @@ lbl_802A5854:
 /* 802A58C4 00000070  3C 60 80 3D */	lis r3, __files@ha
 /* 802A58C8 00000074  38 63 29 B0 */	addi r3, r3, __files@l
 /* 802A58CC 00000078  38 63 00 A0 */	addi r3, r3, 0xa0
-/* 802A58D0 0000007C  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802A58D4 00000080  38 84 B9 50 */	addi r4, r4, stringBase0@l
+/* 802A58D0 0000007C  3C 80 80 3A */	lis r4, JAUSectionHeap__stringBase0@ha
+/* 802A58D4 00000080  38 84 B9 50 */	addi r4, r4, JAUSectionHeap__stringBase0@l
 /* 802A58D8 00000084  38 84 00 47 */	addi r4, r4, 0x47
 /* 802A58DC 00000088  4C C6 31 82 */	crclr 6
 /* 802A58E0 0000008C  48 0C 0E BD */	bl fprintf

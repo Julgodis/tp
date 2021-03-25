@@ -29,7 +29,7 @@ lbl_802D4A10:
 /* 802D4A14 00000004  83 A3 43 54 */	lwz r29, sVolumeList__13JKRFileLoader@l(r3)
 /* 802D4A18 00000008  48 00 00 50 */	b lbl_802D4A68
 lbl_802D4A1C:
-/* 802D4A1C 00000000  80 9D 00 00 */	lwz r4, 0(r29)
+/* 802D4A1C 00000000  80 9D 00 00 */	lwz r4, 0(r29)	/* effective address: 80434354 */
 /* 802D4A20 00000004  80 64 00 2C */	lwz r3, 0x2c(r4)
 /* 802D4A24 00000008  3C 03 BC BF */	addis r0, r3, 0xbcbf
 /* 802D4A28 0000000C  28 00 53 48 */	cmplwi r0, 0x5348
@@ -48,7 +48,7 @@ lbl_802D4A1C:
 /* 802D4A5C 00000040  7F 83 E3 78 */	mr r3, r28
 /* 802D4A60 00000044  48 00 00 3C */	b lbl_802D4A9C
 lbl_802D4A64:
-/* 802D4A64 00000000  83 BD 00 0C */	lwz r29, 0xc(r29)
+/* 802D4A64 00000000  83 BD 00 0C */	lwz r29, 0xc(r29)	/* effective address: 80434360 */
 lbl_802D4A68:
 /* 802D4A68 00000000  28 1D 00 00 */	cmplwi r29, 0
 /* 802D4A6C 00000004  40 82 FF B0 */	bne lbl_802D4A1C

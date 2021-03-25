@@ -10,25 +10,25 @@ lbl_80BB63F4:
 /* 80BB6414 00000020  40 82 00 1C */	bne lbl_80BB6430
 /* 80BB6418 00000024  28 1E 00 00 */	cmplwi r30, 0
 /* 80BB641C 00000028  41 82 00 08 */	beq lbl_80BB6424
-/* 80BB6420 0000002C  4B FF FC 99 */	bl _unresolved
+/* 80BB6420 0000002C  4B 46 27 44 */	b __ct__10fopAc_ac_cFv
 lbl_80BB6424:
 /* 80BB6424 00000000  80 1E 04 A0 */	lwz r0, 0x4a0(r30)
 /* 80BB6428 00000004  60 00 00 08 */	ori r0, r0, 8
 /* 80BB642C 00000008  90 1E 04 A0 */	stw r0, 0x4a0(r30)
 lbl_80BB6430:
 /* 80BB6430 00000000  38 7E 05 68 */	addi r3, r30, 0x568
-/* 80BB6434 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80BB6438 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80BB643C 0000000C  80 84 00 00 */	lwz r4, 0(r4)
-/* 80BB6440 00000010  4B FF FC 79 */	bl _unresolved
+/* 80BB6434 00000004  3C 80 80 BB */	lis r4, l_arcName@ha
+/* 80BB6438 00000008  38 84 67 58 */	addi r4, r4, l_arcName@l
+/* 80BB643C 0000000C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BB6758 */
+/* 80BB6440 00000010  4B 47 6A 7C */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80BB6444 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 80BB6448 00000018  2C 1F 00 04 */	cmpwi r31, 4
 /* 80BB644C 0000001C  40 82 00 40 */	bne lbl_80BB648C
 /* 80BB6450 00000020  7F C3 F3 78 */	mr r3, r30
-/* 80BB6454 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80BB6458 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80BB6454 00000024  3C 80 80 BB */	lis r4, CheckCreateHeap__FP10fopAc_ac_c@ha
+/* 80BB6458 00000028  38 84 60 D8 */	addi r4, r4, CheckCreateHeap__FP10fopAc_ac_c@l
 /* 80BB645C 0000002C  38 A0 09 80 */	li r5, 0x980
-/* 80BB6460 00000030  4B FF FC 59 */	bl _unresolved
+/* 80BB6460 00000030  4B 46 40 50 */	b fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
 /* 80BB6464 00000034  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80BB6468 00000038  40 82 00 0C */	bne lbl_80BB6474
 /* 80BB646C 0000003C  38 60 00 05 */	li r3, 5

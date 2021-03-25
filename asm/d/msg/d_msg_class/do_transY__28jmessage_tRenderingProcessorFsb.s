@@ -11,8 +11,8 @@ lbl_8022E9C0:
 /* 8022E9E4 00000024  7F A0 07 35 */	extsh. r0, r29
 /* 8022E9E8 00000028  40 80 00 48 */	bge lbl_8022EA30
 /* 8022E9EC 0000002C  38 61 00 18 */	addi r3, r1, 0x18
-/* 8022E9F0 00000030  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8022E9F4 00000034  38 84 96 10 */	addi r4, r4, stringBase0@l
+/* 8022E9F0 00000030  3C 80 80 3A */	lis r4, d_msg_d_msg_class__stringBase0@ha
+/* 8022E9F4 00000034  38 84 96 10 */	addi r4, r4, d_msg_d_msg_class__stringBase0@l
 /* 8022E9F8 00000038  38 84 00 3A */	addi r4, r4, 0x3a
 /* 8022E9FC 0000003C  7F A0 07 34 */	extsh r0, r29
 /* 8022EA00 00000040  7F C0 00 D0 */	neg r30, r0
@@ -20,8 +20,8 @@ lbl_8022E9C0:
 /* 8022EA08 00000048  4C C6 31 82 */	crclr 6
 /* 8022EA0C 0000004C  48 13 7A D1 */	bl sprintf
 /* 8022EA10 00000050  38 61 00 08 */	addi r3, r1, 8
-/* 8022EA14 00000054  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8022EA18 00000058  38 84 96 10 */	addi r4, r4, stringBase0@l
+/* 8022EA14 00000054  3C 80 80 3A */	lis r4, d_msg_d_msg_class__stringBase0@ha
+/* 8022EA18 00000058  38 84 96 10 */	addi r4, r4, d_msg_d_msg_class__stringBase0@l
 /* 8022EA1C 0000005C  38 84 00 10 */	addi r4, r4, 0x10
 /* 8022EA20 00000060  7F C5 F3 78 */	mr r5, r30
 /* 8022EA24 00000064  4C C6 31 82 */	crclr 6
@@ -29,16 +29,16 @@ lbl_8022E9C0:
 /* 8022EA2C 0000006C  48 00 00 40 */	b lbl_8022EA6C
 lbl_8022EA30:
 /* 8022EA30 00000000  38 61 00 18 */	addi r3, r1, 0x18
-/* 8022EA34 00000004  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8022EA38 00000008  38 84 96 10 */	addi r4, r4, stringBase0@l
+/* 8022EA34 00000004  3C 80 80 3A */	lis r4, d_msg_d_msg_class__stringBase0@ha
+/* 8022EA38 00000008  38 84 96 10 */	addi r4, r4, d_msg_d_msg_class__stringBase0@l
 /* 8022EA3C 0000000C  38 84 00 10 */	addi r4, r4, 0x10
 /* 8022EA40 00000010  7F BE 07 34 */	extsh r30, r29
 /* 8022EA44 00000014  7F C5 F3 78 */	mr r5, r30
 /* 8022EA48 00000018  4C C6 31 82 */	crclr 6
 /* 8022EA4C 0000001C  48 13 7A 91 */	bl sprintf
 /* 8022EA50 00000020  38 61 00 08 */	addi r3, r1, 8
-/* 8022EA54 00000024  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8022EA58 00000028  38 84 96 10 */	addi r4, r4, stringBase0@l
+/* 8022EA54 00000024  3C 80 80 3A */	lis r4, d_msg_d_msg_class__stringBase0@ha
+/* 8022EA58 00000028  38 84 96 10 */	addi r4, r4, d_msg_d_msg_class__stringBase0@l
 /* 8022EA5C 0000002C  38 84 00 3A */	addi r4, r4, 0x3a
 /* 8022EA60 00000030  7F C5 F3 78 */	mr r5, r30
 /* 8022EA64 00000034  4C C6 31 82 */	crclr 6

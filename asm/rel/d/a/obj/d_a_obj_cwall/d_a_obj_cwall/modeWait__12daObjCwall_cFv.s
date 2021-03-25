@@ -3,13 +3,13 @@ lbl_80BD85C0:
 /* 80BD85C4 00000004  7C 08 02 A6 */	mflr r0
 /* 80BD85C8 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80BD85CC 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80BD85D0 00000010  4B FF E3 E9 */	bl _unresolved
+/* 80BD85D0 00000010  4B 78 9C 04 */	b _savegpr_27
 /* 80BD85D4 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80BD85D8 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80BD85DC 0000001C  3B C4 00 00 */	addi r30, r4, 0x0000 /* 0x00000000@l */
-/* 80BD85E0 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80BD85E4 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80BD85E8 00000028  83 84 5D AC */	lwz r28, 0x5dac(r4)
+/* 80BD85D8 00000018  3C 80 80 BE */	lis r4, l_wallBmd@ha
+/* 80BD85DC 0000001C  3B C4 9F A4 */	addi r30, r4, l_wallBmd@l
+/* 80BD85E0 00000020  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BD85E4 00000024  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80BD85E8 00000028  83 84 5D AC */	lwz r28, 0x5dac(r4)	/* effective address: 8040BF6C */
 /* 80BD85EC 0000002C  8B 63 0F 0E */	lbz r27, 0xf0e(r3)
 /* 80BD85F0 00000030  88 03 0E 90 */	lbz r0, 0xe90(r3)
 /* 80BD85F4 00000034  28 00 00 00 */	cmplwi r0, 0
@@ -34,7 +34,7 @@ lbl_80BD862C:
 /* 80BD863C 00000010  88 7F 0F 0E */	lbz r3, 0xf0e(r31)
 /* 80BD8640 00000014  38 03 00 01 */	addi r0, r3, 1
 /* 80BD8644 00000018  98 1F 0F 0E */	stb r0, 0xf0e(r31)
-/* 80BD8648 0000001C  C0 3E 00 64 */	lfs f1, 0x64(r30)
+/* 80BD8648 0000001C  C0 3E 00 64 */	lfs f1, 0x64(r30)	/* effective address: 80BDA008 */
 /* 80BD864C 00000020  C0 1F 0F 50 */	lfs f0, 0xf50(r31)
 /* 80BD8650 00000024  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80BD8654 00000028  41 82 00 BC */	beq lbl_80BD8710
@@ -47,7 +47,7 @@ lbl_80BD862C:
 /* 80BD8670 00000044  81 8C 00 E4 */	lwz r12, 0xe4(r12)
 /* 80BD8674 00000048  7D 89 03 A6 */	mtctr r12
 /* 80BD8678 0000004C  4E 80 04 21 */	bctrl 
-/* 80BD867C 00000050  C0 1E 00 CC */	lfs f0, 0xcc(r30)
+/* 80BD867C 00000050  C0 1E 00 CC */	lfs f0, 0xcc(r30)	/* effective address: 80BDA070 */
 /* 80BD8680 00000054  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80BD8684 00000000  40 81 00 8C */	ble lbl_80BD8710
 /* 80BD8688 00000004  7F 83 E3 78 */	mr r3, r28
@@ -55,7 +55,7 @@ lbl_80BD862C:
 /* 80BD8690 0000000C  81 8C 00 E4 */	lwz r12, 0xe4(r12)
 /* 80BD8694 00000010  7D 89 03 A6 */	mtctr r12
 /* 80BD8698 00000014  4E 80 04 21 */	bctrl 
-/* 80BD869C 00000018  C0 1E 00 B0 */	lfs f0, 0xb0(r30)
+/* 80BD869C 00000018  C0 1E 00 B0 */	lfs f0, 0xb0(r30)	/* effective address: 80BDA054 */
 /* 80BD86A0 00000074  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80BD86A4 00000000  40 80 00 6C */	bge lbl_80BD8710
 /* 80BD86A8 00000004  88 1F 0F 0E */	lbz r0, 0xf0e(r31)
@@ -98,7 +98,7 @@ lbl_80BD8728:
 /* 80BD872C 00000004  98 1F 0F 0E */	stb r0, 0xf0e(r31)
 lbl_80BD8730:
 /* 80BD8730 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80BD8734 00000004  4B FF E2 85 */	bl _unresolved
+/* 80BD8734 00000004  4B 78 9A EC */	b _restgpr_27
 /* 80BD8738 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80BD873C 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80BD8740 00000010  38 21 00 20 */	addi r1, r1, 0x20

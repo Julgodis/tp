@@ -19,7 +19,7 @@ lbl_80CCF740:
 /* 80CCF748 00000008  48 00 02 4C */	b lbl_80CCF994
 lbl_80CCF74C:
 /* 80CCF74C 00000000  38 7F 10 D4 */	addi r3, r31, 0x10d4
-/* 80CCF750 00000004  4B FF EB 69 */	bl _unresolved
+/* 80CCF750 00000004  4B 47 5F B8 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80CCF754 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80CCF758 0000000C  40 82 00 1C */	bne lbl_80CCF774
 /* 80CCF75C 00000010  7F E3 FB 78 */	mr r3, r31
@@ -27,10 +27,10 @@ lbl_80CCF74C:
 /* 80CCF764 00000018  4B FF F6 CD */	bl getSekizoaP__15daObj_Sekizoa_cFi
 /* 80CCF768 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80CCF76C 00000020  38 7F 10 D4 */	addi r3, r31, 0x10d4
-/* 80CCF770 00000024  4B FF EB 49 */	bl _unresolved
+/* 80CCF770 00000024  4B 47 5F 70 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 lbl_80CCF774:
 /* 80CCF774 00000000  38 7F 10 DC */	addi r3, r31, 0x10dc
-/* 80CCF778 00000004  4B FF EB 41 */	bl _unresolved
+/* 80CCF778 00000004  4B 47 5F 90 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80CCF77C 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80CCF780 0000000C  40 82 00 1C */	bne lbl_80CCF79C
 /* 80CCF784 00000010  7F E3 FB 78 */	mr r3, r31
@@ -38,10 +38,10 @@ lbl_80CCF774:
 /* 80CCF78C 00000018  4B FF F6 A5 */	bl getSekizoaP__15daObj_Sekizoa_cFi
 /* 80CCF790 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80CCF794 00000020  38 7F 10 DC */	addi r3, r31, 0x10dc
-/* 80CCF798 00000024  4B FF EB 21 */	bl _unresolved
+/* 80CCF798 00000024  4B 47 5F 48 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 lbl_80CCF79C:
 /* 80CCF79C 00000000  38 7F 10 E4 */	addi r3, r31, 0x10e4
-/* 80CCF7A0 00000004  4B FF EB 19 */	bl _unresolved
+/* 80CCF7A0 00000004  4B 47 5F 68 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80CCF7A4 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80CCF7A8 0000000C  40 82 00 1C */	bne lbl_80CCF7C4
 /* 80CCF7AC 00000010  7F E3 FB 78 */	mr r3, r31
@@ -49,57 +49,57 @@ lbl_80CCF79C:
 /* 80CCF7B4 00000018  4B FF F6 7D */	bl getSekizoaP__15daObj_Sekizoa_cFi
 /* 80CCF7B8 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80CCF7BC 00000020  38 7F 10 E4 */	addi r3, r31, 0x10e4
-/* 80CCF7C0 00000024  4B FF EA F9 */	bl _unresolved
+/* 80CCF7C0 00000024  4B 47 5F 20 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 lbl_80CCF7C4:
 /* 80CCF7C4 00000000  38 7F 10 EC */	addi r3, r31, 0x10ec
-/* 80CCF7C8 00000004  4B FF EA F1 */	bl _unresolved
+/* 80CCF7C8 00000004  4B 47 5F 40 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80CCF7CC 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80CCF7D0 0000000C  40 82 00 1C */	bne lbl_80CCF7EC
 /* 80CCF7D4 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80CCF7D8 00000014  38 80 01 34 */	li r4, 0x134
-/* 80CCF7DC 00000018  4B FF EA DD */	bl _unresolved
+/* 80CCF7DC 00000018  4B 47 C6 50 */	b getNearestActorP__8daNpcT_cFs
 /* 80CCF7E0 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80CCF7E4 00000020  38 7F 10 EC */	addi r3, r31, 0x10ec
-/* 80CCF7E8 00000024  4B FF EA D1 */	bl _unresolved
+/* 80CCF7E8 00000024  4B 47 5E F8 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 lbl_80CCF7EC:
 /* 80CCF7EC 00000000  38 7F 10 F4 */	addi r3, r31, 0x10f4
-/* 80CCF7F0 00000004  4B FF EA C9 */	bl _unresolved
+/* 80CCF7F0 00000004  4B 47 5F 18 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80CCF7F4 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80CCF7F8 0000000C  40 82 00 20 */	bne lbl_80CCF818
 /* 80CCF7FC 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80CCF800 00000014  38 80 00 01 */	li r4, 1
 /* 80CCF804 00000018  38 A0 00 00 */	li r5, 0
-/* 80CCF808 0000001C  4B FF EA B1 */	bl _unresolved
+/* 80CCF808 0000001C  4B 47 C6 DC */	b getEvtAreaTagP__8daNpcT_cFii
 /* 80CCF80C 00000020  7C 64 1B 78 */	mr r4, r3
 /* 80CCF810 00000024  38 7F 10 F4 */	addi r3, r31, 0x10f4
-/* 80CCF814 00000028  4B FF EA A5 */	bl _unresolved
+/* 80CCF814 00000028  4B 47 5E CC */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 lbl_80CCF818:
 /* 80CCF818 00000000  38 7F 10 FC */	addi r3, r31, 0x10fc
-/* 80CCF81C 00000004  4B FF EA 9D */	bl _unresolved
+/* 80CCF81C 00000004  4B 47 5E EC */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80CCF820 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80CCF824 0000000C  40 82 00 20 */	bne lbl_80CCF844
 /* 80CCF828 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80CCF82C 00000014  38 80 00 01 */	li r4, 1
 /* 80CCF830 00000018  38 A0 00 01 */	li r5, 1
-/* 80CCF834 0000001C  4B FF EA 85 */	bl _unresolved
+/* 80CCF834 0000001C  4B 47 C6 B0 */	b getEvtAreaTagP__8daNpcT_cFii
 /* 80CCF838 00000020  7C 64 1B 78 */	mr r4, r3
 /* 80CCF83C 00000024  38 7F 10 FC */	addi r3, r31, 0x10fc
-/* 80CCF840 00000028  4B FF EA 79 */	bl _unresolved
+/* 80CCF840 00000028  4B 47 5E A0 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 lbl_80CCF844:
 /* 80CCF844 00000000  38 7F 11 04 */	addi r3, r31, 0x1104
-/* 80CCF848 00000004  4B FF EA 71 */	bl _unresolved
+/* 80CCF848 00000004  4B 47 5E C0 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80CCF84C 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80CCF850 0000000C  40 82 01 44 */	bne lbl_80CCF994
 /* 80CCF854 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80CCF858 00000014  38 80 01 32 */	li r4, 0x132
-/* 80CCF85C 00000018  4B FF EA 5D */	bl _unresolved
+/* 80CCF85C 00000018  4B 47 C5 D0 */	b getNearestActorP__8daNpcT_cFs
 /* 80CCF860 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80CCF864 00000020  38 7F 11 04 */	addi r3, r31, 0x1104
-/* 80CCF868 00000024  4B FF EA 51 */	bl _unresolved
+/* 80CCF868 00000024  4B 47 5E 78 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 /* 80CCF86C 00000028  48 00 01 28 */	b lbl_80CCF994
 lbl_80CCF870:
 /* 80CCF870 00000000  38 7F 10 E4 */	addi r3, r31, 0x10e4
-/* 80CCF874 00000004  4B FF EA 45 */	bl _unresolved
+/* 80CCF874 00000004  4B 47 5E 94 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80CCF878 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80CCF87C 0000000C  40 82 00 1C */	bne lbl_80CCF898
 /* 80CCF880 00000010  7F E3 FB 78 */	mr r3, r31
@@ -107,57 +107,57 @@ lbl_80CCF870:
 /* 80CCF888 00000018  4B FF F5 A9 */	bl getSekizoaP__15daObj_Sekizoa_cFi
 /* 80CCF88C 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80CCF890 00000020  38 7F 10 E4 */	addi r3, r31, 0x10e4
-/* 80CCF894 00000024  4B FF EA 25 */	bl _unresolved
+/* 80CCF894 00000024  4B 47 5E 4C */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 lbl_80CCF898:
 /* 80CCF898 00000000  38 7F 10 EC */	addi r3, r31, 0x10ec
-/* 80CCF89C 00000004  4B FF EA 1D */	bl _unresolved
+/* 80CCF89C 00000004  4B 47 5E 6C */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80CCF8A0 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80CCF8A4 0000000C  40 82 00 1C */	bne lbl_80CCF8C0
 /* 80CCF8A8 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80CCF8AC 00000014  38 80 01 34 */	li r4, 0x134
-/* 80CCF8B0 00000018  4B FF EA 09 */	bl _unresolved
+/* 80CCF8B0 00000018  4B 47 C5 7C */	b getNearestActorP__8daNpcT_cFs
 /* 80CCF8B4 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80CCF8B8 00000020  38 7F 10 EC */	addi r3, r31, 0x10ec
-/* 80CCF8BC 00000024  4B FF E9 FD */	bl _unresolved
+/* 80CCF8BC 00000024  4B 47 5E 24 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 lbl_80CCF8C0:
 /* 80CCF8C0 00000000  38 7F 10 F4 */	addi r3, r31, 0x10f4
-/* 80CCF8C4 00000004  4B FF E9 F5 */	bl _unresolved
+/* 80CCF8C4 00000004  4B 47 5E 44 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80CCF8C8 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80CCF8CC 0000000C  40 82 00 20 */	bne lbl_80CCF8EC
 /* 80CCF8D0 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80CCF8D4 00000014  38 80 00 01 */	li r4, 1
 /* 80CCF8D8 00000018  38 A0 00 00 */	li r5, 0
-/* 80CCF8DC 0000001C  4B FF E9 DD */	bl _unresolved
+/* 80CCF8DC 0000001C  4B 47 C6 08 */	b getEvtAreaTagP__8daNpcT_cFii
 /* 80CCF8E0 00000020  7C 64 1B 78 */	mr r4, r3
 /* 80CCF8E4 00000024  38 7F 10 F4 */	addi r3, r31, 0x10f4
-/* 80CCF8E8 00000028  4B FF E9 D1 */	bl _unresolved
+/* 80CCF8E8 00000028  4B 47 5D F8 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 lbl_80CCF8EC:
 /* 80CCF8EC 00000000  38 7F 10 FC */	addi r3, r31, 0x10fc
-/* 80CCF8F0 00000004  4B FF E9 C9 */	bl _unresolved
+/* 80CCF8F0 00000004  4B 47 5E 18 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80CCF8F4 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80CCF8F8 0000000C  40 82 00 20 */	bne lbl_80CCF918
 /* 80CCF8FC 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80CCF900 00000014  38 80 00 01 */	li r4, 1
 /* 80CCF904 00000018  38 A0 00 01 */	li r5, 1
-/* 80CCF908 0000001C  4B FF E9 B1 */	bl _unresolved
+/* 80CCF908 0000001C  4B 47 C5 DC */	b getEvtAreaTagP__8daNpcT_cFii
 /* 80CCF90C 00000020  7C 64 1B 78 */	mr r4, r3
 /* 80CCF910 00000024  38 7F 10 FC */	addi r3, r31, 0x10fc
-/* 80CCF914 00000028  4B FF E9 A5 */	bl _unresolved
+/* 80CCF914 00000028  4B 47 5D CC */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 lbl_80CCF918:
 /* 80CCF918 00000000  38 7F 11 04 */	addi r3, r31, 0x1104
-/* 80CCF91C 00000004  4B FF E9 9D */	bl _unresolved
+/* 80CCF91C 00000004  4B 47 5D EC */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80CCF920 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80CCF924 0000000C  40 82 00 70 */	bne lbl_80CCF994
 /* 80CCF928 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80CCF92C 00000014  38 80 01 32 */	li r4, 0x132
-/* 80CCF930 00000018  4B FF E9 89 */	bl _unresolved
+/* 80CCF930 00000018  4B 47 C4 FC */	b getNearestActorP__8daNpcT_cFs
 /* 80CCF934 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80CCF938 00000020  38 7F 11 04 */	addi r3, r31, 0x1104
-/* 80CCF93C 00000024  4B FF E9 7D */	bl _unresolved
+/* 80CCF93C 00000024  4B 47 5D A4 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 /* 80CCF940 00000028  48 00 00 54 */	b lbl_80CCF994
 lbl_80CCF944:
 /* 80CCF944 00000000  38 7F 10 E4 */	addi r3, r31, 0x10e4
-/* 80CCF948 00000004  4B FF E9 71 */	bl _unresolved
+/* 80CCF948 00000004  4B 47 5D C0 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80CCF94C 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80CCF950 0000000C  40 82 00 44 */	bne lbl_80CCF994
 /* 80CCF954 00000010  7F E3 FB 78 */	mr r3, r31
@@ -165,18 +165,18 @@ lbl_80CCF944:
 /* 80CCF95C 00000018  4B FF F4 D5 */	bl getSekizoaP__15daObj_Sekizoa_cFi
 /* 80CCF960 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80CCF964 00000020  38 7F 10 E4 */	addi r3, r31, 0x10e4
-/* 80CCF968 00000024  4B FF E9 51 */	bl _unresolved
+/* 80CCF968 00000024  4B 47 5D 78 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 /* 80CCF96C 00000028  48 00 00 28 */	b lbl_80CCF994
 lbl_80CCF970:
 /* 80CCF970 00000000  38 7F 10 CC */	addi r3, r31, 0x10cc
-/* 80CCF974 00000004  4B FF E9 45 */	bl _unresolved
+/* 80CCF974 00000004  4B 47 5D 94 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80CCF978 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80CCF97C 0000000C  40 82 00 18 */	bne lbl_80CCF994
 /* 80CCF980 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80CCF984 00000014  4B FF F6 21 */	bl getKMsgTagP__15daObj_Sekizoa_cFv
 /* 80CCF988 00000018  7C 64 1B 78 */	mr r4, r3
 /* 80CCF98C 0000001C  38 7F 10 CC */	addi r3, r31, 0x10cc
-/* 80CCF990 00000020  4B FF E9 29 */	bl _unresolved
+/* 80CCF990 00000020  4B 47 5D 50 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 lbl_80CCF994:
 /* 80CCF994 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80CCF998 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

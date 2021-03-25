@@ -5,15 +5,15 @@ lbl_8048FC70:
 /* 8048FC7C 0000000C  93 E1 00 3C */	stw r31, 0x3c(r1)
 /* 8048FC80 00000010  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 8048FC84 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 8048FC88 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8048FC8C 0000001C  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
+/* 8048FC88 00000018  3C 60 80 49 */	lis r3, m__17daTag_Msg_Param_c@ha
+/* 8048FC8C 0000001C  3B C3 01 78 */	addi r30, r3, m__17daTag_Msg_Param_c@l
 /* 8048FC90 00000020  38 61 00 18 */	addi r3, r1, 0x18
-/* 8048FC94 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8048FC98 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 8048FC9C 0000002C  80 84 5D AC */	lwz r4, 0x5dac(r4)
+/* 8048FC94 00000024  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8048FC98 00000028  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8048FC9C 0000002C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
 /* 8048FCA0 00000030  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 8048FCA4 00000034  38 BF 04 D0 */	addi r5, r31, 0x4d0
-/* 8048FCA8 00000038  4B FF FB 11 */	bl _unresolved
+/* 8048FCA8 00000038  4B DD 6E 8C */	b __mi__4cXyzCFRC3Vec
 /* 8048FCAC 0000003C  C0 41 00 18 */	lfs f2, 0x18(r1)
 /* 8048FCB0 00000040  D0 41 00 24 */	stfs f2, 0x24(r1)
 /* 8048FCB4 00000044  C0 01 00 1C */	lfs f0, 0x1c(r1)
@@ -21,18 +21,18 @@ lbl_8048FC70:
 /* 8048FCBC 0000004C  C0 21 00 20 */	lfs f1, 0x20(r1)
 /* 8048FCC0 00000050  D0 21 00 2C */	stfs f1, 0x2c(r1)
 /* 8048FCC4 00000054  D0 41 00 0C */	stfs f2, 0xc(r1)
-/* 8048FCC8 00000058  C0 1E 00 08 */	lfs f0, 8(r30)
+/* 8048FCC8 00000058  C0 1E 00 08 */	lfs f0, 8(r30)	/* effective address: 80490180 */
 /* 8048FCCC 0000005C  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8048FCD0 00000060  D0 21 00 14 */	stfs f1, 0x14(r1)
 /* 8048FCD4 00000064  38 61 00 0C */	addi r3, r1, 0xc
-/* 8048FCD8 00000068  4B FF FA E1 */	bl _unresolved
-/* 8048FCDC 0000006C  C0 1E 00 08 */	lfs f0, 8(r30)
+/* 8048FCD8 00000068  4B EB 74 60 */	b PSVECSquareMag
+/* 8048FCDC 0000006C  C0 1E 00 08 */	lfs f0, 8(r30)	/* effective address: 80490180 */
 /* 8048FCE0 00000070  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8048FCE4 00000000  40 81 00 58 */	ble lbl_8048FD3C
 /* 8048FCE8 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 8048FCEC 00000008  C8 9E 00 10 */	lfd f4, 0x10(r30)
+/* 8048FCEC 00000008  C8 9E 00 10 */	lfd f4, 0x10(r30)	/* effective address: 80490188 */
 /* 8048FCF0 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 8048FCF4 00000010  C8 7E 00 18 */	lfd f3, 0x18(r30)
+/* 8048FCF4 00000010  C8 7E 00 18 */	lfd f3, 0x18(r30)	/* effective address: 80490190 */
 /* 8048FCF8 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 8048FCFC 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 8048FD00 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -51,11 +51,11 @@ lbl_8048FC70:
 /* 8048FD34 00000050  FC 20 08 18 */	frsp f1, f1
 /* 8048FD38 00000054  48 00 00 88 */	b lbl_8048FDC0
 lbl_8048FD3C:
-/* 8048FD3C 00000000  C8 1E 00 20 */	lfd f0, 0x20(r30)
+/* 8048FD3C 00000000  C8 1E 00 20 */	lfd f0, 0x20(r30)	/* effective address: 80490198 */
 /* 8048FD40 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8048FD44 00000000  40 80 00 10 */	bge lbl_8048FD54
-/* 8048FD48 00000004  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8048FD4C 00000008  C0 23 00 00 */	lfs f1, 0x0000(r3)
+/* 8048FD48 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
+/* 8048FD4C 00000008  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 /* 8048FD50 0000000C  48 00 00 70 */	b lbl_8048FDC0
 lbl_8048FD54:
 /* 8048FD54 00000000  D0 21 00 08 */	stfs f1, 8(r1)
@@ -89,8 +89,8 @@ lbl_8048FDAC:
 lbl_8048FDB0:
 /* 8048FDB0 00000000  2C 00 00 01 */	cmpwi r0, 1
 /* 8048FDB4 00000004  40 82 00 0C */	bne lbl_8048FDC0
-/* 8048FDB8 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8048FDBC 0000000C  C0 23 00 00 */	lfs f1, 0x0000(r3)
+/* 8048FDB8 00000008  3C 60 80 45 */	lis r3, __float_nan@ha
+/* 8048FDBC 0000000C  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 lbl_8048FDC0:
 /* 8048FDC0 00000000  C0 1F 04 EC */	lfs f0, 0x4ec(r31)
 /* 8048FDC4 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0

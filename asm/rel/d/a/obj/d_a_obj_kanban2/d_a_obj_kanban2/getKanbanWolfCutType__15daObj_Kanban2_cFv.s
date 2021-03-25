@@ -5,15 +5,15 @@ lbl_80581C48:
 /* 80581C54 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80581C58 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80581C5C 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80581C60 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80581C64 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
-/* 80581C68 00000020  80 9F 5D AC */	lwz r4, 0x5dac(r31)
-/* 80581C6C 00000024  4B FF FA 6D */	bl _unresolved
+/* 80581C60 00000018  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80581C64 0000001C  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80581C68 00000020  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80581C6C 00000024  4B A9 8A A4 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80581C70 00000028  7C 64 1B 78 */	mr r4, r3
 /* 80581C74 0000002C  A8 7E 04 E6 */	lha r3, 0x4e6(r30)
-/* 80581C78 00000030  4B FF FA 61 */	bl _unresolved
+/* 80581C78 00000030  4B CE F1 AC */	b cLib_distanceAngleS__Fss
 /* 80581C7C 00000034  7C 64 07 34 */	extsh r4, r3
-/* 80581C80 00000038  80 7F 5D AC */	lwz r3, 0x5dac(r31)
+/* 80581C80 00000038  80 7F 5D AC */	lwz r3, 0x5dac(r31)	/* effective address: 8040BF6C */
 /* 80581C84 0000003C  88 03 05 68 */	lbz r0, 0x568(r3)
 /* 80581C88 00000040  2C 00 00 2F */	cmpwi r0, 0x2f
 /* 80581C8C 00000044  41 82 00 38 */	beq lbl_80581CC4

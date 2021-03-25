@@ -177,7 +177,7 @@ extern "C" void init__11dEvDtBase_cFv(); // 1
 extern "C" void init__11dEvDtBase_cFPci(); // 1
 extern "C" void advanceCut__11dEvDtBase_cFP12dEvDtEvent_c(); // 1
 extern "C" void advanceCutLocal__11dEvDtBase_cFP12dEvDtStaff_c(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_event_d_event_data__stringBase0;
 
 // 
 // External References:

@@ -15,10 +15,10 @@ lbl_806EAB0C:
 /* 806EAB0C 00000000  88 1E 06 ED */	lbz r0, 0x6ed(r30)
 /* 806EAB10 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 806EAB14 00000008  41 82 00 1C */	beq lbl_806EAB30
-/* 806EAB18 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 806EAB1C 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 806EAB18 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806EAB1C 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806EAB20 00000014  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 806EAB24 00000018  4B FF FA 55 */	bl _unresolved
+/* 806EAB24 00000018  4B 95 79 44 */	b reset__14dEvt_control_cFv
 /* 806EAB28 0000001C  38 00 00 00 */	li r0, 0
 /* 806EAB2C 00000020  98 1E 06 ED */	stb r0, 0x6ed(r30)
 lbl_806EAB30:

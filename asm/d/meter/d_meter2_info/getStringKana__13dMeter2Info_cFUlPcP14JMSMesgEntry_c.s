@@ -9,8 +9,8 @@ lbl_8021C370:
 /* 8021C38C 0000001C  7C BE 2B 78 */	mr r30, r5
 /* 8021C390 00000020  7C DF 33 78 */	mr r31, r6
 /* 8021C394 00000024  7F C3 F3 78 */	mr r3, r30
-/* 8021C398 00000028  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8021C39C 0000002C  38 84 91 68 */	addi r4, r4, stringBase0@l
+/* 8021C398 00000028  3C 80 80 3A */	lis r4, d_meter_d_meter2_info__stringBase0@ha
+/* 8021C39C 0000002C  38 84 91 68 */	addi r4, r4, d_meter_d_meter2_info__stringBase0@l
 /* 8021C3A0 00000030  48 14 C7 8D */	bl strcpy
 /* 8021C3A4 00000034  80 7C 00 10 */	lwz r3, 0x10(r28)
 /* 8021C3A8 00000038  28 03 00 00 */	cmplwi r3, 0
@@ -20,8 +20,8 @@ lbl_8021C370:
 /* 8021C3B8 00000048  80 A3 5C F4 */	lwz r5, 0x5cf4(r3)	/* effective address: 8040BEB4 */
 /* 8021C3BC 0000004C  3C 60 52 4F */	lis r3, 0x524F /* 0x524F4F54@ha */
 /* 8021C3C0 00000050  38 63 4F 54 */	addi r3, r3, 0x4F54 /* 0x524F4F54@l */
-/* 8021C3C4 00000054  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8021C3C8 00000058  38 84 91 68 */	addi r4, r4, stringBase0@l
+/* 8021C3C4 00000054  3C 80 80 3A */	lis r4, d_meter_d_meter2_info__stringBase0@ha
+/* 8021C3C8 00000058  38 84 91 68 */	addi r4, r4, d_meter_d_meter2_info__stringBase0@l
 /* 8021C3CC 0000005C  38 84 00 01 */	addi r4, r4, 1
 /* 8021C3D0 00000060  48 0B 97 69 */	bl getGlbResource__10JKRArchiveFUlPCcP10JKRArchive
 /* 8021C3D4 00000064  28 03 00 00 */	cmplwi r3, 0

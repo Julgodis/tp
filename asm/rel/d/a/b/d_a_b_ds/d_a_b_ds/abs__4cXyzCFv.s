@@ -3,16 +3,16 @@ lbl_805CFAD4:
 /* 805CFAD8 00000004  7C 08 02 A6 */	mflr r0
 /* 805CFADC 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 805CFAE0 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 805CFAE4 00000010  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 805CFAE8 00000014  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
-/* 805CFAEC 00000018  4B FF B6 AD */	bl _unresolved
-/* 805CFAF0 0000001C  C0 1F 00 04 */	lfs f0, 4(r31)
+/* 805CFAE4 00000010  3C 80 80 5E */	lis r4, lit_3932@ha
+/* 805CFAE8 00000014  3B E4 CA 54 */	addi r31, r4, lit_3932@l
+/* 805CFAEC 00000018  4B D7 76 4C */	b PSVECSquareMag
+/* 805CFAF0 0000001C  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 805DCA58 */
 /* 805CFAF4 00000020  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 805CFAF8 00000000  40 81 00 58 */	ble lbl_805CFB50
 /* 805CFAFC 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 805CFB00 00000008  C8 9F 00 10 */	lfd f4, 0x10(r31)
+/* 805CFB00 00000008  C8 9F 00 10 */	lfd f4, 0x10(r31)	/* effective address: 805DCA64 */
 /* 805CFB04 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 805CFB08 00000010  C8 7F 00 18 */	lfd f3, 0x18(r31)
+/* 805CFB08 00000010  C8 7F 00 18 */	lfd f3, 0x18(r31)	/* effective address: 805DCA6C */
 /* 805CFB0C 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 805CFB10 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 805CFB14 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -31,11 +31,11 @@ lbl_805CFAD4:
 /* 805CFB48 00000050  FC 20 08 18 */	frsp f1, f1
 /* 805CFB4C 00000054  48 00 00 88 */	b lbl_805CFBD4
 lbl_805CFB50:
-/* 805CFB50 00000000  C8 1F 00 20 */	lfd f0, 0x20(r31)
+/* 805CFB50 00000000  C8 1F 00 20 */	lfd f0, 0x20(r31)	/* effective address: 805DCA74 */
 /* 805CFB54 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 805CFB58 00000000  40 80 00 10 */	bge lbl_805CFB68
-/* 805CFB5C 00000004  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 805CFB60 00000008  C0 23 00 00 */	lfs f1, 0x0000(r3)
+/* 805CFB5C 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
+/* 805CFB60 00000008  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 /* 805CFB64 0000000C  48 00 00 70 */	b lbl_805CFBD4
 lbl_805CFB68:
 /* 805CFB68 00000000  D0 21 00 08 */	stfs f1, 8(r1)
@@ -69,8 +69,8 @@ lbl_805CFBC0:
 lbl_805CFBC4:
 /* 805CFBC4 00000000  2C 00 00 01 */	cmpwi r0, 1
 /* 805CFBC8 00000004  40 82 00 0C */	bne lbl_805CFBD4
-/* 805CFBCC 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 805CFBD0 0000000C  C0 23 00 00 */	lfs f1, 0x0000(r3)
+/* 805CFBCC 00000008  3C 60 80 45 */	lis r3, __float_nan@ha
+/* 805CFBD0 0000000C  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 lbl_805CFBD4:
 /* 805CFBD4 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 805CFBD8 00000004  80 01 00 24 */	lwz r0, 0x24(r1)

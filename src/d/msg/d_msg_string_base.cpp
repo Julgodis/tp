@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JUTFont {
+struct COutFont_c {
 };
 
-struct COutFont_c {
+struct JUTFont {
 };
 
 struct J2DTextBox {
@@ -115,7 +115,7 @@ extern "C" void getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextB
 extern "C" void getMessage__16dMsgStringBase_cFUlPc(); // 1
 extern "C" void resetStringLocal__16dMsgStringBase_cFP10J2DTextBox(); // 1
 extern "C" void drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_msg_d_msg_string_base__stringBase0;
 
 // 
 // External References:

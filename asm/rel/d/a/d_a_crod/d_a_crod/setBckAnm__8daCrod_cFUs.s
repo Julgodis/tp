@@ -6,24 +6,24 @@ lbl_804A3580:
 /* 804A3590 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 804A3594 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 804A3598 00000018  7C 9F 23 78 */	mr r31, r4
-/* 804A359C 0000001C  4B FF F8 7D */	bl _unresolved
+/* 804A359C 0000001C  4B BF A2 E8 */	b getAlinkArcName__9daAlink_cFv
 /* 804A35A0 00000020  57 E4 04 3E */	clrlwi r4, r31, 0x10
-/* 804A35A4 00000024  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 804A35A8 00000028  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
+/* 804A35A4 00000024  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 804A35A8 00000028  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 804A35AC 0000002C  3C A5 00 02 */	addis r5, r5, 2
 /* 804A35B0 00000030  38 C0 00 80 */	li r6, 0x80
 /* 804A35B4 00000034  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 804A35B8 00000038  4B FF F8 61 */	bl _unresolved
+/* 804A35B8 00000038  4B B9 8D 34 */	b getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 804A35BC 0000003C  7C 64 1B 78 */	mr r4, r3
 /* 804A35C0 00000040  38 7E 05 6C */	addi r3, r30, 0x56c
 /* 804A35C4 00000044  38 A0 00 01 */	li r5, 1
 /* 804A35C8 00000048  38 C0 FF FF */	li r6, -1
-/* 804A35CC 0000004C  3C E0 00 00 */	lis r7, 0x0000 /* 0x00000000@ha */
-/* 804A35D0 00000050  C0 27 00 00 */	lfs f1, 0x0000(r7)
+/* 804A35CC 0000004C  3C E0 80 4A */	lis r7, lit_4173@ha
+/* 804A35D0 00000050  C0 27 41 04 */	lfs f1, lit_4173@l(r7)
 /* 804A35D4 00000054  38 E0 00 00 */	li r7, 0
 /* 804A35D8 00000058  39 00 FF FF */	li r8, -1
 /* 804A35DC 0000005C  39 20 00 01 */	li r9, 1
-/* 804A35E0 00000060  4B FF F8 39 */	bl _unresolved
+/* 804A35E0 00000060  4B B6 A1 FC */	b init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb
 /* 804A35E4 00000064  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804A35E8 00000068  83 C1 00 08 */	lwz r30, 8(r1)
 /* 804A35EC 0000006C  80 01 00 14 */	lwz r0, 0x14(r1)

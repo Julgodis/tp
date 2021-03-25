@@ -37,7 +37,7 @@ lbl_8012FED0:
 /* 8012FF08 00000038  4B FF 99 41 */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c
 /* 8012FF0C 0000003C  2C 1D 00 00 */	cmpwi r29, 0
 /* 8012FF10 00000040  41 82 00 40 */	beq lbl_8012FF50
-/* 8012FF14 00000044  A8 1E 00 00 */	lha r0, 0(r30)
+/* 8012FF14 00000044  A8 1E 00 00 */	lha r0, 0(r30)	/* effective address: 8038F404 */
 /* 8012FF18 00000048  C8 22 92 B0 */	lfd f1, lit_6025(r2)
 /* 8012FF1C 0000004C  6C 03 80 00 */	xoris r3, r0, 0x8000
 /* 8012FF20 00000050  90 61 00 0C */	stw r3, 0xc(r1)

@@ -72,8 +72,8 @@ lbl_802DF440:
 /* 802DF440 00000000  3B 39 00 04 */	addi r25, r25, 4
 /* 802DF444 00000004  48 00 00 14 */	b lbl_802DF458
 lbl_802DF448:
-/* 802DF448 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802DF44C 00000004  38 63 D4 5C */	addi r3, r3, stringBase0@l
+/* 802DF448 00000000  3C 60 80 3A */	lis r3, JUTResFont__stringBase0@ha
+/* 802DF44C 00000004  38 63 D4 5C */	addi r3, r3, JUTResFont__stringBase0@l
 /* 802DF450 00000008  38 63 00 20 */	addi r3, r3, 0x20
 /* 802DF454 0000000C  48 00 91 F5 */	bl JUTReportConsole
 lbl_802DF458:

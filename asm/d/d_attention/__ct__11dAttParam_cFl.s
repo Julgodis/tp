@@ -41,8 +41,8 @@ lbl_80070038:
 /* 800700D4 0000009C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800700D8 000000A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 800700DC 000000A4  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 800700E0 000000A8  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 800700E4 000000AC  38 84 A7 70 */	addi r4, r4, stringBase0@l
+/* 800700E0 000000A8  3C 80 80 38 */	lis r4, d_d_attention__stringBase0@ha
+/* 800700E4 000000AC  38 84 A7 70 */	addi r4, r4, d_d_attention__stringBase0@l
 /* 800700E8 000000B0  48 2F 88 AD */	bl strcmp
 /* 800700EC 000000B4  7C 60 00 34 */	cntlzw r0, r3
 /* 800700F0 000000B8  54 00 D9 7E */	srwi r0, r0, 5

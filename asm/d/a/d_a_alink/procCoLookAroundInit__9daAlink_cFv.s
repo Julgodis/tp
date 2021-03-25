@@ -25,12 +25,12 @@ lbl_8011C664:
 /* 8011C684 00000020  7F C3 F3 78 */	mr r3, r30
 /* 8011C688 00000024  38 80 00 A0 */	li r4, 0xa0
 /* 8011C68C 00000028  4B F9 32 15 */	bl setFaceBasicTexture__9daAlink_cFQ29daAlink_c13daAlink_FTANM
-/* 8011C690 0000002C  C0 1F 01 14 */	lfs f0, 0x114(r31)
+/* 8011C690 0000002C  C0 1F 01 14 */	lfs f0, 0x114(r31)	/* effective address: 8042561C */
 /* 8011C694 00000030  D0 1E 35 88 */	stfs f0, 0x3588(r30)
 /* 8011C698 00000034  38 7F 01 14 */	addi r3, r31, 0x114
-/* 8011C69C 00000038  C0 03 00 04 */	lfs f0, 4(r3)
+/* 8011C69C 00000038  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80425620 */
 /* 8011C6A0 0000003C  D0 1E 35 8C */	stfs f0, 0x358c(r30)
-/* 8011C6A4 00000040  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8011C6A4 00000040  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80425624 */
 /* 8011C6A8 00000044  D0 1E 35 90 */	stfs f0, 0x3590(r30)
 /* 8011C6AC 00000048  7F C3 F3 78 */	mr r3, r30
 /* 8011C6B0 0000004C  3C 80 00 01 */	lis r4, 0x0001 /* 0x000100BB@ha */
@@ -47,24 +47,24 @@ lbl_8011C6CC:
 /* 8011C6D8 0000000C  7F C3 F3 78 */	mr r3, r30
 /* 8011C6DC 00000010  38 80 01 9C */	li r4, 0x19c
 /* 8011C6E0 00000014  4B F9 08 A1 */	bl setSingleAnimeBase__9daAlink_cFQ29daAlink_c11daAlink_ANM
-/* 8011C6E4 00000018  C0 1F 00 3C */	lfs f0, 0x3c(r31)
+/* 8011C6E4 00000018  C0 1F 00 3C */	lfs f0, 0x3c(r31)	/* effective address: 80425544 */
 /* 8011C6E8 0000001C  D0 1E 35 88 */	stfs f0, 0x3588(r30)
 /* 8011C6EC 00000020  38 7F 00 3C */	addi r3, r31, 0x3c
-/* 8011C6F0 00000024  C0 03 00 04 */	lfs f0, 4(r3)
+/* 8011C6F0 00000024  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80425548 */
 /* 8011C6F4 00000028  D0 1E 35 8C */	stfs f0, 0x358c(r30)
-/* 8011C6F8 0000002C  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8011C6F8 0000002C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 8042554C */
 /* 8011C6FC 00000030  D0 1E 35 90 */	stfs f0, 0x3590(r30)
 /* 8011C700 00000034  48 00 00 34 */	b lbl_8011C734
 lbl_8011C704:
 /* 8011C704 00000000  7F C3 F3 78 */	mr r3, r30
 /* 8011C708 00000004  38 80 01 24 */	li r4, 0x124
 /* 8011C70C 00000008  4B F9 08 75 */	bl setSingleAnimeBase__9daAlink_cFQ29daAlink_c11daAlink_ANM
-/* 8011C710 0000000C  C0 1F 00 0C */	lfs f0, 0xc(r31)
+/* 8011C710 0000000C  C0 1F 00 0C */	lfs f0, 0xc(r31)	/* effective address: 80425514 */
 /* 8011C714 00000010  D0 1E 35 88 */	stfs f0, 0x3588(r30)
 /* 8011C718 00000014  38 7F 00 0C */	addi r3, r31, 0xc
-/* 8011C71C 00000018  C0 03 00 04 */	lfs f0, 4(r3)
+/* 8011C71C 00000018  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80425518 */
 /* 8011C720 0000001C  D0 1E 35 8C */	stfs f0, 0x358c(r30)
-/* 8011C724 00000020  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8011C724 00000020  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 8042551C */
 /* 8011C728 00000024  D0 1E 35 90 */	stfs f0, 0x3590(r30)
 /* 8011C72C 00000028  38 00 00 01 */	li r0, 1
 /* 8011C730 0000002C  B0 1E 30 0E */	sth r0, 0x300e(r30)

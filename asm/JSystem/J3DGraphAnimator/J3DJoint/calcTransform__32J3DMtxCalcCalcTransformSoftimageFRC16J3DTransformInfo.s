@@ -37,14 +37,14 @@ lbl_8032EE50:
 /* 8032EEDC 0000008C  C0 1B 00 00 */	lfs f0, 0(r27)
 /* 8032EEE0 00000090  EC 61 00 32 */	fmuls f3, f1, f0
 /* 8032EEE4 00000094  D0 63 00 00 */	stfs f3, 0(r3)	/* effective address: 80430000 */
-/* 8032EEE8 00000098  C0 3E 00 04 */	lfs f1, 4(r30)
+/* 8032EEE8 00000098  C0 3E 00 04 */	lfs f1, 4(r30)	/* effective address: 80434C18 */
 /* 8032EEEC 0000009C  C0 1B 00 04 */	lfs f0, 4(r27)
 /* 8032EEF0 000000A0  EC 41 00 32 */	fmuls f2, f1, f0
-/* 8032EEF4 000000A4  D0 5E 00 04 */	stfs f2, 4(r30)
-/* 8032EEF8 000000A8  C0 3E 00 08 */	lfs f1, 8(r30)
+/* 8032EEF4 000000A4  D0 5E 00 04 */	stfs f2, 4(r30)	/* effective address: 80434C18 */
+/* 8032EEF8 000000A8  C0 3E 00 08 */	lfs f1, 8(r30)	/* effective address: 80434C1C */
 /* 8032EEFC 000000AC  C0 1B 00 08 */	lfs f0, 8(r27)
 /* 8032EF00 000000B0  EC 21 00 32 */	fmuls f1, f1, f0
-/* 8032EF04 000000B4  D0 3E 00 08 */	stfs f1, 8(r30)
+/* 8032EF04 000000B4  D0 3E 00 08 */	stfs f1, 8(r30)	/* effective address: 80434C1C */
 /* 8032EF08 000000B8  C0 02 CA A0 */	lfs f0, lit_922(r2)
 /* 8032EF0C 000000BC  FC 00 18 00 */	fcmpu cr0, f0, f3
 /* 8032EF10 000000C0  40 82 00 1C */	bne lbl_8032EF2C
@@ -67,8 +67,8 @@ lbl_8032EF30:
 /* 8032EF4C 0000001C  7F E4 FB 78 */	mr r4, r31
 /* 8032EF50 00000020  3C A0 80 43 */	lis r5, mCurrentS__6J3DSys@ha
 /* 8032EF54 00000024  C0 25 4C 14 */	lfs f1, mCurrentS__6J3DSys@l(r5)
-/* 8032EF58 00000028  C0 5E 00 04 */	lfs f2, 4(r30)
-/* 8032EF5C 0000002C  C0 7E 00 08 */	lfs f3, 8(r30)
+/* 8032EF58 00000028  C0 5E 00 04 */	lfs f2, 4(r30)	/* effective address: 80434C18 */
+/* 8032EF5C 0000002C  C0 7E 00 08 */	lfs f3, 8(r30)	/* effective address: 80434C1C */
 /* 8032EF60 00000030  48 00 AB 25 */	bl JMAMTXApplyScale__FPA4_CfPA4_ffff
 /* 8032EF64 00000034  3C 60 80 43 */	lis r3, mCurrentMtx__6J3DSys@ha
 /* 8032EF68 00000038  38 63 4B E4 */	addi r3, r3, mCurrentMtx__6J3DSys@l

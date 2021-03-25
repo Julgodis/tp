@@ -293,8 +293,8 @@ lbl_80130B00:
 /* 80130B38 00000038  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)
 /* 80130B3C 0000003C  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80130B40 00000040  48 18 53 4D */	bl taktModeMute__8Z2SeqMgrFv
-/* 80130B44 00000044  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 80130B48 00000048  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 80130B44 00000044  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 80130B48 00000048  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 80130B4C 0000004C  38 63 03 0F */	addi r3, r3, 0x30f
 /* 80130B50 00000050  4B F6 CF 11 */	bl checkStageName__9daAlink_cFPCc
 /* 80130B54 00000054  54 60 06 3F */	clrlwi. r0, r3, 0x18

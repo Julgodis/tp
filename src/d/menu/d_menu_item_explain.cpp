@@ -11,7 +11,7 @@
 // Types:
 // 
 
-struct JKRArchive {
+struct JKRExpHeap {
 };
 
 struct STControl {
@@ -20,7 +20,7 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
-struct JKRExpHeap {
+struct JKRArchive {
 };
 
 struct J2DOrthoGraph {
@@ -76,10 +76,7 @@ struct dKantera_icon_c {
 struct JUTFont {
 };
 
-struct ResTIMG {
-};
-
-struct ResTLUT {
+struct JMSMesgEntry_c {
 };
 
 struct JGeometry {
@@ -91,12 +88,15 @@ struct JGeometry {
 
 };
 
+struct ResTLUT {
+};
+
+struct ResTIMG {
+};
+
 struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
-};
-
-struct JMSMesgEntry_c {
 };
 
 struct dMeter2Info_c {
@@ -212,7 +212,7 @@ extern "C" void setNumber__19dMenu_ItemExplain_cFv(); // 1
 extern "C" void getWarpMarkFlag__19dMenu_ItemExplain_cFv(); // 1
 extern "C" void setScale__19dMenu_ItemExplain_cFv(); // 1
 extern "C" void __sinit_d_menu_item_explain_cpp(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_menu_d_menu_item_explain__stringBase0;
 
 // 
 // External References:

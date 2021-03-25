@@ -317,7 +317,7 @@ extern "C" static void dMeter2_Execute__FP9dMeter2_c(); // 1
 extern "C" static void dMeter2_IsDelete__FP9dMeter2_c(); // 1
 extern "C" static void dMeter2_Delete__FP9dMeter2_c(); // 1
 extern "C" static void dMeter2_Create__FP9msg_class(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_meter_d_meter2__stringBase0;
 extern "C" extern void* g_profile_METER2[10];
 
 // 
@@ -598,7 +598,7 @@ asm void dMeter2_c::emphasisButtonDelete() {
 #pragma pop
 
 
-/* 8021F780-8021F7B0 0030+00 s=0 e=0 z=0  None .text      setLifeZero__9dMeter2_cFv                                    */
+/* 8021F780-8021F7B0 0030+00 s=0 e=0 z=1  None .text      setLifeZero__9dMeter2_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1152,7 +1152,7 @@ SECTION_DATA static void* l_dMeter2_Method[5] = {
 	/* 4    */ (void*)dMeter2_Draw__FP9dMeter2_c,
 };
 
-/* 803BFA68-803BFA90 0028+00 s=0 e=0 z=0  None .data      g_profile_METER2                                             */
+/* 803BFA68-803BFA90 0028+00 s=0 e=0 z=1  None .data      g_profile_METER2                                             */
 SECTION_DATA void* g_profile_METER2[10] = {
 	/* 0    */ (void*)0xFFFFFFFD,
 	/* 1    */ (void*)0x000CFFFD,

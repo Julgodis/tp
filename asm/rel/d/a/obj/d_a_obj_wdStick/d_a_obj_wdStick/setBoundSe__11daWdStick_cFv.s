@@ -3,16 +3,16 @@ lbl_80D33348:
 /* 80D3334C 00000004  7C 08 02 A6 */	mflr r0
 /* 80D33350 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80D33354 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80D33358 00000010  4B FF E7 61 */	bl _unresolved
+/* 80D33358 00000010  4B 62 EE 84 */	b _savegpr_29
 /* 80D3335C 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 80D33360 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D33364 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80D33360 00000018  3C 60 80 D3 */	lis r3, mCcDObjInfo__11daWdStick_c@ha
+/* 80D33364 0000001C  3B E3 41 38 */	addi r31, r3, mCcDObjInfo__11daWdStick_c@l
 /* 80D33368 00000020  C0 1D 05 98 */	lfs f0, 0x598(r29)
 /* 80D3336C 00000024  FC 00 02 10 */	fabs f0, f0
 /* 80D33370 00000028  FC 20 00 18 */	frsp f1, f0
-/* 80D33374 0000002C  C0 1F 00 98 */	lfs f0, 0x98(r31)
+/* 80D33374 0000002C  C0 1F 00 98 */	lfs f0, 0x98(r31)	/* effective address: 80D341D0 */
 /* 80D33378 00000030  EC 20 00 72 */	fmuls f1, f0, f1
-/* 80D3337C 00000034  4B FF E7 3D */	bl _unresolved
+/* 80D3337C 00000034  4B 62 ED 30 */	b __cvt_fp2unsigned
 /* 80D33380 00000038  7C 7E 1B 78 */	mr r30, r3
 /* 80D33384 0000003C  28 1E 00 64 */	cmplwi r30, 0x64
 /* 80D33388 00000040  40 81 00 08 */	ble lbl_80D33390
@@ -20,25 +20,25 @@ lbl_80D33348:
 lbl_80D33390:
 /* 80D33390 00000000  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 80D33394 00000004  7C 03 07 74 */	extsb r3, r0
-/* 80D33398 00000008  4B FF E7 21 */	bl _unresolved
+/* 80D33398 00000008  4B 2F 9C D4 */	b dComIfGp_getReverb__Fi
 /* 80D3339C 0000000C  7C 67 1B 78 */	mr r7, r3
 /* 80D333A0 00000010  3C 60 00 08 */	lis r3, 0x0008 /* 0x0008010B@ha */
 /* 80D333A4 00000014  38 03 01 0B */	addi r0, r3, 0x010B /* 0x0008010B@l */
 /* 80D333A8 00000018  90 01 00 08 */	stw r0, 8(r1)
-/* 80D333AC 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D333B0 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80D333B4 00000024  80 63 00 00 */	lwz r3, 0(r3)
+/* 80D333AC 0000001C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
+/* 80D333B0 00000020  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 80D333B4 00000024  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
 /* 80D333B8 00000028  38 81 00 08 */	addi r4, r1, 8
 /* 80D333BC 0000002C  38 BD 04 D0 */	addi r5, r29, 0x4d0
 /* 80D333C0 00000030  7F C6 F3 78 */	mr r6, r30
-/* 80D333C4 00000034  C0 3F 00 50 */	lfs f1, 0x50(r31)
+/* 80D333C4 00000034  C0 3F 00 50 */	lfs f1, 0x50(r31)	/* effective address: 80D34188 */
 /* 80D333C8 00000038  FC 40 08 90 */	fmr f2, f1
-/* 80D333CC 0000003C  C0 7F 00 54 */	lfs f3, 0x54(r31)
+/* 80D333CC 0000003C  C0 7F 00 54 */	lfs f3, 0x54(r31)	/* effective address: 80D3418C */
 /* 80D333D0 00000040  FC 80 18 90 */	fmr f4, f3
 /* 80D333D4 00000044  39 00 00 00 */	li r8, 0
-/* 80D333D8 00000048  4B FF E6 E1 */	bl _unresolved
+/* 80D333D8 00000048  4B 57 85 AC */	b seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 80D333DC 0000004C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80D333E0 00000050  4B FF E6 D9 */	bl _unresolved
+/* 80D333E0 00000050  4B 62 EE 48 */	b _restgpr_29
 /* 80D333E4 00000054  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80D333E8 00000058  7C 08 03 A6 */	mtlr r0
 /* 80D333EC 0000005C  38 21 00 20 */	addi r1, r1, 0x20

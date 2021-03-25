@@ -16,10 +16,7 @@ struct dSelect_cursorHIO_c {
 	/* 80195978 */ ~dSelect_cursorHIO_c();
 };
 
-struct JKRArchive {
-};
-
-struct J2DAnmTextureSRTKey {
+struct J2DAnmColor {
 };
 
 struct J2DAnmTransformKey {
@@ -29,7 +26,10 @@ struct J2DAnmTransformKey {
 struct J2DPane {
 };
 
-struct J2DAnmColor {
+struct J2DAnmTextureSRTKey {
+};
+
+struct JKRArchive {
 };
 
 struct dSelect_cursor_c {
@@ -113,7 +113,7 @@ extern "C" void setBckAnimation__16dSelect_cursor_cFP18J2DAnmTransformKey(); // 
 extern "C" void moveCenter__16dSelect_cursor_cFP7J2DPaneff(); // 1
 extern "C" void __dt__19dSelect_cursorHIO_cFv(); // 1
 extern "C" void __dt__18J2DAnmTransformKeyFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_d_select_cursor__stringBase0;
 extern "C" extern void* data_803BB70C[4];
 extern "C" extern void* data_803BB71C[4];
 extern "C" extern void* data_803BB72C[4];
@@ -222,42 +222,42 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803BB70C-803BB71C 0010+00 s=0 e=0 z=0  None .data      blo_name$3684                                                */
 SECTION_DATA void* data_803BB70C[4] = {
-	/* 0    */ (void*)&stringBase0,
-	/* 1    */ (void*)(((char*)&stringBase0)+0x1F),
-	/* 2    */ (void*)(((char*)&stringBase0)+0x3B),
-	/* 3    */ (void*)(((char*)&stringBase0)+0x5C),
+	/* 0    */ (void*)&d_d_select_cursor__stringBase0,
+	/* 1    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x1F),
+	/* 2    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x3B),
+	/* 3    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x5C),
 };
 
 /* 803BB71C-803BB72C 0010+00 s=0 e=0 z=0  None .data      bck_name$3685                                                */
 SECTION_DATA void* data_803BB71C[4] = {
-	/* 0    */ (void*)(((char*)&stringBase0)+0x7B),
-	/* 1    */ (void*)(((char*)&stringBase0)+0x7C),
-	/* 2    */ (void*)(((char*)&stringBase0)+0x7B),
-	/* 3    */ (void*)(((char*)&stringBase0)+0x7B),
+	/* 0    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
+	/* 1    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7C),
+	/* 2    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
+	/* 3    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
 };
 
 /* 803BB72C-803BB73C 0010+00 s=0 e=0 z=0  None .data      bpk_name$3686                                                */
 SECTION_DATA void* data_803BB72C[4] = {
-	/* 0    */ (void*)(((char*)&stringBase0)+0x98),
-	/* 1    */ (void*)(((char*)&stringBase0)+0xB7),
-	/* 2    */ (void*)(((char*)&stringBase0)+0xD3),
-	/* 3    */ (void*)(((char*)&stringBase0)+0xF4),
+	/* 0    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x98),
+	/* 1    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0xB7),
+	/* 2    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0xD3),
+	/* 3    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0xF4),
 };
 
 /* 803BB73C-803BB74C 0010+00 s=0 e=0 z=0  None .data      btk_name$3687                                                */
 SECTION_DATA void* data_803BB73C[4] = {
-	/* 0    */ (void*)(((char*)&stringBase0)+0x113),
-	/* 1    */ (void*)(((char*)&stringBase0)+0x132),
-	/* 2    */ (void*)(((char*)&stringBase0)+0x7B),
-	/* 3    */ (void*)(((char*)&stringBase0)+0x7B),
+	/* 0    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x113),
+	/* 1    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x132),
+	/* 2    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
+	/* 3    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
 };
 
 /* 803BB74C-803BB78C 0010+30 s=0 e=0 z=0  None .data      btk2_name$3688                                               */
 SECTION_DATA void* data_803BB74C[4 + 12 /* padding */] = {
-	/* 0    */ (void*)(((char*)&stringBase0)+0x7B),
-	/* 1    */ (void*)(((char*)&stringBase0)+0x14E),
-	/* 2    */ (void*)(((char*)&stringBase0)+0x7B),
-	/* 3    */ (void*)(((char*)&stringBase0)+0x7B),
+	/* 0    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
+	/* 1    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x14E),
+	/* 2    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
+	/* 3    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
 	/* padding */
 	NULL,
 	NULL,

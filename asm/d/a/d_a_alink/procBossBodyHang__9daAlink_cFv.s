@@ -153,7 +153,7 @@ lbl_800FCA80:
 /* 800FCA8C 0000000C  7F A3 EB 78 */	mr r3, r29
 /* 800FCA90 00000010  4B FD 47 D9 */	bl setSwordModel__9daAlink_cFv
 lbl_800FCA94:
-/* 800FCA94 00000000  88 1C 5E 24 */	lbz r0, 0x5e24(r28)
+/* 800FCA94 00000000  88 1C 5E 24 */	lbz r0, 0x5e24(r28)	/* effective address: 8040BFE4 */
 /* 800FCA98 00000004  28 00 00 30 */	cmplwi r0, 0x30
 /* 800FCA9C 00000008  40 82 00 78 */	bne lbl_800FCB14
 /* 800FCAA0 0000000C  88 1D 2F 8D */	lbz r0, 0x2f8d(r29)

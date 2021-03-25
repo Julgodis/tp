@@ -85,8 +85,8 @@ lbl_802B6310:
 /* 802B6318 00000008  28 00 00 08 */	cmplwi r0, 8
 /* 802B631C 0000000C  40 82 00 2C */	bne lbl_802B6348
 /* 802B6320 00000010  7F C3 F3 78 */	mr r3, r30
-/* 802B6324 00000014  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B6328 00000018  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B6324 00000014  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B6328 00000018  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B632C 0000001C  38 84 02 6A */	addi r4, r4, 0x26a
 /* 802B6330 00000020  48 0B 26 65 */	bl strcmp
 /* 802B6334 00000024  2C 03 00 00 */	cmpwi r3, 0
@@ -96,15 +96,15 @@ lbl_802B6310:
 /* 802B6344 00000034  48 00 03 C0 */	b lbl_802B6704
 lbl_802B6348:
 /* 802B6348 00000000  7F C3 F3 78 */	mr r3, r30
-/* 802B634C 00000004  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B6350 00000008  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B634C 00000004  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B6350 00000008  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B6354 0000000C  38 84 02 74 */	addi r4, r4, 0x274
 /* 802B6358 00000010  48 0B 26 3D */	bl strcmp
 /* 802B635C 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 802B6360 00000018  41 82 00 20 */	beq lbl_802B6380
 /* 802B6364 0000001C  7F C3 F3 78 */	mr r3, r30
-/* 802B6368 00000020  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B636C 00000024  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B6368 00000020  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B636C 00000024  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B6370 00000028  38 84 02 7C */	addi r4, r4, 0x27c
 /* 802B6374 0000002C  48 0B 26 21 */	bl strcmp
 /* 802B6378 00000030  2C 03 00 00 */	cmpwi r3, 0
@@ -115,15 +115,15 @@ lbl_802B6380:
 /* 802B6388 00000008  48 00 03 7C */	b lbl_802B6704
 lbl_802B638C:
 /* 802B638C 00000000  7F C3 F3 78 */	mr r3, r30
-/* 802B6390 00000004  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B6394 00000008  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B6390 00000004  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B6394 00000008  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B6398 0000000C  38 84 02 84 */	addi r4, r4, 0x284
 /* 802B639C 00000010  48 0B 25 F9 */	bl strcmp
 /* 802B63A0 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 802B63A4 00000018  41 82 00 20 */	beq lbl_802B63C4
 /* 802B63A8 0000001C  7F C3 F3 78 */	mr r3, r30
-/* 802B63AC 00000020  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B63B0 00000024  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B63AC 00000020  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B63B0 00000024  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B63B4 00000028  38 84 02 8E */	addi r4, r4, 0x28e
 /* 802B63B8 0000002C  48 0B 25 DD */	bl strcmp
 /* 802B63BC 00000030  2C 03 00 00 */	cmpwi r3, 0
@@ -150,8 +150,8 @@ lbl_802B63C4:
 /* 802B640C 00000048  48 00 02 F8 */	b lbl_802B6704
 lbl_802B6410:
 /* 802B6410 00000000  7F C3 F3 78 */	mr r3, r30
-/* 802B6414 00000004  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B6418 00000008  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B6414 00000004  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B6418 00000008  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B641C 0000000C  38 84 02 98 */	addi r4, r4, 0x298
 /* 802B6420 00000010  48 0B 25 75 */	bl strcmp
 /* 802B6424 00000014  2C 03 00 00 */	cmpwi r3, 0
@@ -166,8 +166,8 @@ lbl_802B6410:
 /* 802B6448 00000038  48 00 02 BC */	b lbl_802B6704
 lbl_802B644C:
 /* 802B644C 00000000  7F C3 F3 78 */	mr r3, r30
-/* 802B6450 00000004  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B6454 00000008  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B6450 00000004  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B6454 00000008  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B6458 0000000C  38 84 02 A2 */	addi r4, r4, 0x2a2
 /* 802B645C 00000010  38 A0 00 06 */	li r5, 6
 /* 802B6460 00000014  48 0B 24 F5 */	bl strncmp
@@ -182,8 +182,8 @@ lbl_802B644C:
 /* 802B6484 00000038  48 00 02 80 */	b lbl_802B6704
 lbl_802B6488:
 /* 802B6488 00000000  7F C3 F3 78 */	mr r3, r30
-/* 802B648C 00000004  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B6490 00000008  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B648C 00000004  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B6490 00000008  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B6494 0000000C  38 84 02 A9 */	addi r4, r4, 0x2a9
 /* 802B6498 00000010  38 A0 00 04 */	li r5, 4
 /* 802B649C 00000014  48 0B 24 B9 */	bl strncmp
@@ -194,8 +194,8 @@ lbl_802B6488:
 /* 802B64B0 00000028  48 00 02 54 */	b lbl_802B6704
 lbl_802B64B4:
 /* 802B64B4 00000000  7F C3 F3 78 */	mr r3, r30
-/* 802B64B8 00000004  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B64BC 00000008  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B64B8 00000004  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B64BC 00000008  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B64C0 0000000C  38 84 02 AE */	addi r4, r4, 0x2ae
 /* 802B64C4 00000010  48 0B 24 D1 */	bl strcmp
 /* 802B64C8 00000014  2C 03 00 00 */	cmpwi r3, 0
@@ -205,8 +205,8 @@ lbl_802B64B4:
 /* 802B64D8 00000024  48 00 02 2C */	b lbl_802B6704
 lbl_802B64DC:
 /* 802B64DC 00000000  7F C3 F3 78 */	mr r3, r30
-/* 802B64E0 00000004  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B64E4 00000008  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B64E0 00000004  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B64E4 00000008  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B64E8 0000000C  38 84 02 6A */	addi r4, r4, 0x26a
 /* 802B64EC 00000010  48 0B 24 A9 */	bl strcmp
 /* 802B64F0 00000014  2C 03 00 00 */	cmpwi r3, 0
@@ -216,8 +216,8 @@ lbl_802B64DC:
 /* 802B6500 00000024  48 00 02 04 */	b lbl_802B6704
 lbl_802B6504:
 /* 802B6504 00000000  7F C3 F3 78 */	mr r3, r30
-/* 802B6508 00000004  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B650C 00000008  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B6508 00000004  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B650C 00000008  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B6510 0000000C  38 84 02 BA */	addi r4, r4, 0x2ba
 /* 802B6514 00000010  48 0B 24 81 */	bl strcmp
 /* 802B6518 00000014  2C 03 00 00 */	cmpwi r3, 0
@@ -227,8 +227,8 @@ lbl_802B6504:
 /* 802B6528 00000024  48 00 01 DC */	b lbl_802B6704
 lbl_802B652C:
 /* 802B652C 00000000  7F C3 F3 78 */	mr r3, r30
-/* 802B6530 00000004  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B6534 00000008  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B6530 00000004  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B6534 00000008  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B6538 0000000C  38 84 02 C6 */	addi r4, r4, 0x2c6
 /* 802B653C 00000010  48 0B 24 59 */	bl strcmp
 /* 802B6540 00000014  2C 03 00 00 */	cmpwi r3, 0
@@ -238,8 +238,8 @@ lbl_802B652C:
 /* 802B6550 00000024  48 00 01 B4 */	b lbl_802B6704
 lbl_802B6554:
 /* 802B6554 00000000  7F C3 F3 78 */	mr r3, r30
-/* 802B6558 00000004  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B655C 00000008  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B6558 00000004  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B655C 00000008  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B6560 0000000C  38 84 02 D0 */	addi r4, r4, 0x2d0
 /* 802B6564 00000010  48 0B 24 31 */	bl strcmp
 /* 802B6568 00000014  2C 03 00 00 */	cmpwi r3, 0
@@ -260,8 +260,8 @@ lbl_802B657C:
 /* 802B65A0 00000024  7C 09 03 A6 */	mtctr r0
 /* 802B65A4 00000028  4E 80 04 20 */	bctr 
 /* 802B65A8 0000002C  7F C3 F3 78 */	mr r3, r30
-/* 802B65AC 00000030  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B65B0 00000034  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B65AC 00000030  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B65B0 00000034  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B65B4 00000038  38 84 02 D9 */	addi r4, r4, 0x2d9
 /* 802B65B8 0000003C  48 0B 23 DD */	bl strcmp
 /* 802B65BC 00000040  2C 03 00 00 */	cmpwi r3, 0
@@ -274,8 +274,8 @@ lbl_802B657C:
 /* 802B65D8 0000005C  4B FF 8E C5 */	bl subBgmStart__8Z2SeqMgrFUl
 /* 802B65DC 00000060  48 00 00 F4 */	b lbl_802B66D0
 /* 802B65E0 00000064  7F C3 F3 78 */	mr r3, r30
-/* 802B65E4 00000068  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B65E8 0000006C  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B65E4 00000068  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B65E8 0000006C  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B65EC 00000070  38 84 02 E3 */	addi r4, r4, 0x2e3
 /* 802B65F0 00000074  48 0B 23 A5 */	bl strcmp
 /* 802B65F4 00000078  2C 03 00 00 */	cmpwi r3, 0
@@ -290,8 +290,8 @@ lbl_802B657C:
 /* 802B6618 0000009C  98 1D 00 2C */	stb r0, 0x2c(r29)
 /* 802B661C 000000A0  48 00 00 B4 */	b lbl_802B66D0
 /* 802B6620 000000A4  7F C3 F3 78 */	mr r3, r30
-/* 802B6624 000000A8  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B6628 000000AC  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B6624 000000A8  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B6628 000000AC  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B662C 000000B0  38 84 02 ED */	addi r4, r4, 0x2ed
 /* 802B6630 000000B4  48 0B 23 65 */	bl strcmp
 /* 802B6634 000000B8  2C 03 00 00 */	cmpwi r3, 0
@@ -299,8 +299,8 @@ lbl_802B657C:
 /* 802B663C 000000C0  3B E0 00 01 */	li r31, 1
 /* 802B6640 000000C4  48 00 00 90 */	b lbl_802B66D0
 /* 802B6644 000000C8  7F C3 F3 78 */	mr r3, r30
-/* 802B6648 000000CC  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B664C 000000D0  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B6648 000000CC  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B664C 000000D0  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B6650 000000D4  38 84 02 FA */	addi r4, r4, 0x2fa
 /* 802B6654 000000D8  48 0B 23 41 */	bl strcmp
 /* 802B6658 000000DC  2C 03 00 00 */	cmpwi r3, 0
@@ -308,8 +308,8 @@ lbl_802B657C:
 /* 802B6660 000000E4  3B E0 00 01 */	li r31, 1
 /* 802B6664 000000E8  48 00 00 6C */	b lbl_802B66D0
 /* 802B6668 000000EC  7F C3 F3 78 */	mr r3, r30
-/* 802B666C 000000F0  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B6670 000000F4  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B666C 000000F0  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B6670 000000F4  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B6674 000000F8  38 84 03 06 */	addi r4, r4, 0x306
 /* 802B6678 000000FC  48 0B 23 1D */	bl strcmp
 /* 802B667C 00000100  2C 03 00 00 */	cmpwi r3, 0
@@ -317,8 +317,8 @@ lbl_802B657C:
 /* 802B6684 00000108  3B E0 00 01 */	li r31, 1
 /* 802B6688 0000010C  48 00 00 48 */	b lbl_802B66D0
 /* 802B668C 00000110  7F C3 F3 78 */	mr r3, r30
-/* 802B6690 00000114  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B6694 00000118  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B6690 00000114  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B6694 00000118  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B6698 0000011C  38 84 03 10 */	addi r4, r4, 0x310
 /* 802B669C 00000120  48 0B 22 F9 */	bl strcmp
 /* 802B66A0 00000124  2C 03 00 00 */	cmpwi r3, 0
@@ -326,8 +326,8 @@ lbl_802B657C:
 /* 802B66A8 0000012C  3B E0 00 01 */	li r31, 1
 /* 802B66AC 00000130  48 00 00 24 */	b lbl_802B66D0
 /* 802B66B0 00000134  7F C3 F3 78 */	mr r3, r30
-/* 802B66B4 00000138  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B66B8 0000013C  38 84 BC 88 */	addi r4, r4, stringBase0@l
+/* 802B66B4 00000138  3C 80 80 3A */	lis r4, Z2StatusMgr__stringBase0@ha
+/* 802B66B8 0000013C  38 84 BC 88 */	addi r4, r4, Z2StatusMgr__stringBase0@l
 /* 802B66BC 00000140  38 84 02 D9 */	addi r4, r4, 0x2d9
 /* 802B66C0 00000144  48 0B 22 D5 */	bl strcmp
 /* 802B66C4 00000148  2C 03 00 00 */	cmpwi r3, 0

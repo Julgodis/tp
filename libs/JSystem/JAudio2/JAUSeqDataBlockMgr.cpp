@@ -32,13 +32,13 @@ struct JAUSeqDataBlocks {
 	/* 802A6A18 */ void hasFailedBlock(JAISoundID);
 };
 
-struct JKRArchive {
+struct JAISeqData {
 };
 
 struct JAISeqDataUser {
 };
 
-struct JAISeqData {
+struct JKRArchive {
 };
 
 struct JAUDynamicSeqDataBlocks {

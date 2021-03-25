@@ -26,9 +26,9 @@ lbl_800F99FC:
 /* 800F9A5C 00000060  B0 1B 30 08 */	sth r0, 0x3008(r27)
 /* 800F9A60 00000064  38 00 01 2C */	li r0, 0x12c
 /* 800F9A64 00000068  B0 1B 30 0A */	sth r0, 0x300a(r27)
-/* 800F9A68 0000006C  80 1F 5F 18 */	lwz r0, 0x5f18(r31)
+/* 800F9A68 0000006C  80 1F 5F 18 */	lwz r0, 0x5f18(r31)	/* effective address: 8040C0D8 */
 /* 800F9A6C 00000070  64 00 08 00 */	oris r0, r0, 0x800
-/* 800F9A70 00000074  90 1F 5F 18 */	stw r0, 0x5f18(r31)
+/* 800F9A70 00000074  90 1F 5F 18 */	stw r0, 0x5f18(r31)	/* effective address: 8040C0D8 */
 /* 800F9A74 00000078  7F 63 DB 78 */	mr r3, r27
 /* 800F9A78 0000007C  4B FF E2 71 */	bl setCrawlMoveDirectionArrow__9daAlink_cFv
 /* 800F9A7C 00000080  C0 02 92 C0 */	lfs f0, lit_6108(r2)
@@ -37,9 +37,9 @@ lbl_800F99FC:
 /* 800F9A88 0000008C  98 1B 2F 99 */	stb r0, 0x2f99(r27)
 /* 800F9A8C 00000090  2C 1E 00 00 */	cmpwi r30, 0
 /* 800F9A90 00000094  41 82 00 10 */	beq lbl_800F9AA0
-/* 800F9A94 00000098  80 1F 5F 18 */	lwz r0, 0x5f18(r31)
+/* 800F9A94 00000098  80 1F 5F 18 */	lwz r0, 0x5f18(r31)	/* effective address: 8040C0D8 */
 /* 800F9A98 0000009C  60 00 20 00 */	ori r0, r0, 0x2000
-/* 800F9A9C 000000A0  90 1F 5F 18 */	stw r0, 0x5f18(r31)
+/* 800F9A9C 000000A0  90 1F 5F 18 */	stw r0, 0x5f18(r31)	/* effective address: 8040C0D8 */
 lbl_800F9AA0:
 /* 800F9AA0 00000000  38 60 00 01 */	li r3, 1
 /* 800F9AA4 00000004  39 61 00 20 */	addi r11, r1, 0x20

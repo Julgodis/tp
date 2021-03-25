@@ -6,8 +6,8 @@ lbl_80006FC0:
 /* 80006FD0 00000010  80 0D 86 40 */	lwz r0, l_affCommand(r13)
 /* 80006FD4 00000014  28 00 00 00 */	cmplwi r0, 0
 /* 80006FD8 00000018  40 82 00 24 */	bne lbl_80006FFC
-/* 80006FDC 0000001C  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 80006FE0 00000020  38 63 3D 68 */	addi r3, r3, stringBase0@l
+/* 80006FDC 0000001C  3C 60 80 37 */	lis r3, m_Do_m_Do_audio__stringBase0@ha
+/* 80006FE0 00000020  38 63 3D 68 */	addi r3, r3, m_Do_m_Do_audio__stringBase0@l
 /* 80006FE4 00000024  38 80 00 02 */	li r4, 2
 /* 80006FE8 00000028  38 A0 00 00 */	li r5, 0
 /* 80006FEC 0000002C  48 00 F3 A9 */	bl create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap
@@ -18,8 +18,8 @@ lbl_80006FFC:
 /* 80006FFC 00000000  80 0D 86 44 */	lwz r0, l_arcCommand(r13)
 /* 80007000 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 80007004 00000008  40 82 00 2C */	bne lbl_80007030
-/* 80007008 0000000C  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 8000700C 00000010  38 63 3D 68 */	addi r3, r3, stringBase0@l
+/* 80007008 0000000C  3C 60 80 37 */	lis r3, m_Do_m_Do_audio__stringBase0@ha
+/* 8000700C 00000010  38 63 3D 68 */	addi r3, r3, m_Do_m_Do_audio__stringBase0@l
 /* 80007010 00000014  38 63 00 16 */	addi r3, r3, 0x16
 /* 80007014 00000018  38 80 00 00 */	li r4, 0
 /* 80007018 0000001C  38 A0 00 03 */	li r5, 3
@@ -60,8 +60,8 @@ lbl_80007030:
 /* 800070A0 00000070  48 2C 9B 55 */	bl adjustSize__12JKRSolidHeapFv
 /* 800070A4 00000074  48 00 00 18 */	b lbl_800070BC
 lbl_800070A8:
-/* 800070A8 00000000  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 800070AC 00000004  38 63 3D 68 */	addi r3, r3, stringBase0@l
+/* 800070A8 00000000  3C 60 80 37 */	lis r3, m_Do_m_Do_audio__stringBase0@ha
+/* 800070AC 00000004  38 63 3D 68 */	addi r3, r3, m_Do_m_Do_audio__stringBase0@l
 /* 800070B0 00000008  38 63 00 35 */	addi r3, r3, 0x35
 /* 800070B4 0000000C  4C C6 31 82 */	crclr 6
 /* 800070B8 00000010  4B FF FB 55 */	bl OSReport_Error

@@ -11,17 +11,17 @@
 // Types:
 // 
 
+struct JKRExpHeap {
+};
+
 struct J2DPane {
 	/* 802F7100 */ void getBounds();
 };
 
-struct JKRExpHeap {
+struct J2DGrafContext {
 };
 
 struct JKRArchive {
-};
-
-struct J2DGrafContext {
 };
 
 struct J2DScreen {
@@ -145,17 +145,17 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
 struct CPaneMgrAlpha {
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
 };
 
 struct dMeter2Draw_c {
@@ -316,7 +316,7 @@ extern "C" void trans_button__14dMeterButton_cFif(); // 1
 extern "C" void hide_button__14dMeterButton_cFUc(); // 1
 extern "C" void pikariCheck__14dMeterButton_cFv(); // 1
 extern "C" void paneTrans__14dMeterButton_cFP8CPaneMgrffUc(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_meter_d_meter_button__stringBase0;
 
 // 
 // External References:
@@ -469,7 +469,7 @@ SECTION_DATA static void* __vt__14dMeterButton_c[4] = {
 	/* 3    */ (void*)__dt__14dMeterButton_cFv,
 };
 
-/* 80201328-80201370 0048+00 s=0 e=1 z=0  None .text      __ct__14dMeterButton_cFv                                     */
+/* 80201328-80201370 0048+00 s=0 e=1 z=1  None .text      __ct__14dMeterButton_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

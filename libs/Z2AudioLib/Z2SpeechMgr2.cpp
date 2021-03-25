@@ -27,6 +27,10 @@ struct Z2SpeechMgr2 {
 	/* 802CCF88 */ void isMidnaSpeak();
 };
 
+struct JAISoundHandle {
+	/* 802A2184 */ void releaseSound();
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -34,10 +38,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAISoundHandle {
-	/* 802A2184 */ void releaseSound();
 };
 
 struct JAISoundID {

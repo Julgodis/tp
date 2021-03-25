@@ -108,7 +108,7 @@ lbl_800C6E68:
 /* 800C6EA4 00000004  7F E3 FB 78 */	mr r3, r31
 /* 800C6EA8 00000008  38 80 00 8C */	li r4, 0x8c
 /* 800C6EAC 0000000C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
-/* 800C6EB0 00000010  C0 45 00 44 */	lfs f2, 0x44(r5)
+/* 800C6EB0 00000010  C0 45 00 44 */	lfs f2, 0x44(r5)	/* effective address: 8038E498 */
 /* 800C6EB4 00000014  4B FE 61 2D */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 800C6EB8 00000018  38 00 00 01 */	li r0, 1
 /* 800C6EBC 0000001C  B0 1F 30 0C */	sth r0, 0x300c(r31)
@@ -124,7 +124,7 @@ lbl_800C6EC0:
 /* 800C6EE0 00000020  38 60 00 01 */	li r3, 1
 /* 800C6EE4 00000024  48 00 00 1C */	b lbl_800C6F00
 lbl_800C6EE8:
-/* 800C6EE8 00000000  A0 1E 00 02 */	lhz r0, 2(r30)
+/* 800C6EE8 00000000  A0 1E 00 02 */	lhz r0, 2(r30)	/* effective address: 804061C2 */
 /* 800C6EEC 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 800C6EF0 00000008  41 82 00 0C */	beq lbl_800C6EFC
 /* 800C6EF4 0000000C  7F E3 FB 78 */	mr r3, r31

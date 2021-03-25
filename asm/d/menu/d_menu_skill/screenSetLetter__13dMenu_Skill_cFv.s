@@ -14,8 +14,8 @@ lbl_801F8A18:
 lbl_801F8A48:
 /* 801F8A48 00000000  90 1F 00 1C */	stw r0, 0x1c(r31)
 /* 801F8A4C 00000004  80 7F 00 1C */	lwz r3, 0x1c(r31)
-/* 801F8A50 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801F8A54 0000000C  38 84 7D B8 */	addi r4, r4, stringBase0@l
+/* 801F8A50 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_skill__stringBase0@ha
+/* 801F8A54 0000000C  38 84 7D B8 */	addi r4, r4, d_menu_d_menu_skill__stringBase0@l
 /* 801F8A58 00000010  38 84 00 30 */	addi r4, r4, 0x30
 /* 801F8A5C 00000014  3C A0 00 02 */	lis r5, 2
 /* 801F8A60 00000018  80 DF 00 08 */	lwz r6, 8(r31)
@@ -75,8 +75,8 @@ lbl_801F8B08:
 /* 801F8B30 00000028  80 7F 01 80 */	lwz r3, 0x180(r31)
 /* 801F8B34 0000002C  80 63 00 04 */	lwz r3, 4(r3)
 /* 801F8B38 00000030  38 80 02 00 */	li r4, 0x200
-/* 801F8B3C 00000034  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801F8B40 00000038  38 A5 7D B8 */	addi r5, r5, stringBase0@l
+/* 801F8B3C 00000034  3C A0 80 39 */	lis r5, d_menu_d_menu_skill__stringBase0@ha
+/* 801F8B40 00000038  38 A5 7D B8 */	addi r5, r5, d_menu_d_menu_skill__stringBase0@l
 /* 801F8B44 0000003C  38 A5 00 2F */	addi r5, r5, 0x2f
 /* 801F8B48 00000040  4C C6 31 82 */	crclr 6
 /* 801F8B4C 00000044  48 10 7C 01 */	bl setString__10J2DTextBoxFsPCce
@@ -87,8 +87,8 @@ lbl_801F8B08:
 /* 801F8B60 00000058  3B 43 7D 10 */	addi r26, r3, data_80397D10@l
 /* 801F8B64 0000005C  3C 60 80 39 */	lis r3, data_80397CF0@ha
 /* 801F8B68 00000060  3B 63 7C F0 */	addi r27, r3, data_80397CF0@l
-/* 801F8B6C 00000064  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801F8B70 00000068  3B 83 7D B8 */	addi r28, r3, stringBase0@l
+/* 801F8B6C 00000064  3C 60 80 39 */	lis r3, d_menu_d_menu_skill__stringBase0@ha
+/* 801F8B70 00000068  3B 83 7D B8 */	addi r28, r3, d_menu_d_menu_skill__stringBase0@l
 lbl_801F8B74:
 /* 801F8B74 00000000  80 7F 00 1C */	lwz r3, 0x1c(r31)
 /* 801F8B78 00000004  7C 9A EA 14 */	add r4, r26, r29
@@ -149,8 +149,8 @@ lbl_801F8C38:
 /* 801F8C50 00000018  80 63 5D 30 */	lwz r3, 0x5d30(r3)	/* effective address: 8040BEF0 */
 /* 801F8C54 0000001C  3C 80 54 49 */	lis r4, 0x5449 /* 0x54494D47@ha */
 /* 801F8C58 00000020  38 84 4D 47 */	addi r4, r4, 0x4D47 /* 0x54494D47@l */
-/* 801F8C5C 00000024  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801F8C60 00000028  38 A5 7D B8 */	addi r5, r5, stringBase0@l
+/* 801F8C5C 00000024  3C A0 80 39 */	lis r5, d_menu_d_menu_skill__stringBase0@ha
+/* 801F8C60 00000028  38 A5 7D B8 */	addi r5, r5, d_menu_d_menu_skill__stringBase0@l
 /* 801F8C64 0000002C  38 A5 00 44 */	addi r5, r5, 0x44
 /* 801F8C68 00000030  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 804061C0 */
 /* 801F8C6C 00000034  81 8C 00 18 */	lwz r12, 0x18(r12)

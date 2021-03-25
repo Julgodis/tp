@@ -4,8 +4,8 @@ lbl_800EC814:
 /* 800EC81C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 800EC820 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800EC824 00000010  3B E0 00 00 */	li r31, 0
-/* 800EC828 00000014  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800EC82C 00000018  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800EC828 00000014  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800EC82C 00000018  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800EC830 0000001C  38 63 00 77 */	addi r3, r3, 0x77
 /* 800EC834 00000020  4B FB 12 2D */	bl checkStageName__9daAlink_cFPCc
 /* 800EC838 00000024  54 60 06 3F */	clrlwi. r0, r3, 0x18

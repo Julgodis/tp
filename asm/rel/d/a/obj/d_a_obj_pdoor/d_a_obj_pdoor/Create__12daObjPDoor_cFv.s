@@ -5,21 +5,21 @@ lbl_80CAA03C:
 /* 80CAA048 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CAA04C 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80CAA050 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80CAA054 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CAA058 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CAA054 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CAA058 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CAA05C 00000020  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CAA060 00000024  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80CAA064 00000028  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CAA068 0000002C  7C 05 07 74 */	extsb r5, r0
-/* 80CAA06C 00000030  4B FF FE 0D */	bl _unresolved
+/* 80CAA06C 00000030  4B 38 B2 F4 */	b isSwitch__10dSv_info_cCFii
 /* 80CAA070 00000034  7C 7E 1B 78 */	mr r30, r3
-/* 80CAA074 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CAA078 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CAA074 00000038  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CAA078 0000003C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CAA07C 00000040  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CAA080 00000044  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80CAA084 00000048  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CAA088 0000004C  7C 05 07 74 */	extsb r5, r0
-/* 80CAA08C 00000050  4B FF FD ED */	bl _unresolved
+/* 80CAA08C 00000050  4B 38 B2 D4 */	b isSwitch__10dSv_info_cCFii
 /* 80CAA090 00000054  2C 1E 00 00 */	cmpwi r30, 0
 /* 80CAA094 00000058  40 82 00 18 */	bne lbl_80CAA0AC
 /* 80CAA098 0000005C  2C 03 00 00 */	cmpwi r3, 0
@@ -50,19 +50,19 @@ lbl_80CAA0E8:
 /* 80CAA0F0 00000008  80 7F 05 A8 */	lwz r3, 0x5a8(r31)
 /* 80CAA0F4 0000000C  38 03 00 24 */	addi r0, r3, 0x24
 /* 80CAA0F8 00000010  90 1F 05 04 */	stw r0, 0x504(r31)
-/* 80CAA0FC 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CAA100 00000018  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
+/* 80CAA0FC 00000014  3C 60 80 CB */	lis r3, PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel@ha
+/* 80CAA100 00000018  38 03 9E 98 */	addi r0, r3, PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel@l
 /* 80CAA104 0000001C  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 80CAA108 00000020  90 03 00 10 */	stw r0, 0x10(r3)
 /* 80CAA10C 00000024  7F E3 FB 78 */	mr r3, r31
-/* 80CAA110 00000028  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80CAA114 0000002C  C4 24 00 00 */	lfsu f1, 0x0000(r4)
-/* 80CAA118 00000030  C0 44 00 04 */	lfs f2, 4(r4)
-/* 80CAA11C 00000034  C0 64 00 08 */	lfs f3, 8(r4)
-/* 80CAA120 00000038  C0 84 00 0C */	lfs f4, 0xc(r4)
-/* 80CAA124 0000003C  C0 A4 00 10 */	lfs f5, 0x10(r4)
-/* 80CAA128 00000040  C0 C4 00 14 */	lfs f6, 0x14(r4)
-/* 80CAA12C 00000044  4B FF FD 4D */	bl _unresolved
+/* 80CAA110 00000028  3C 80 80 CB */	lis r4, l_cull_box@ha
+/* 80CAA114 0000002C  C4 24 AB 70 */	lfsu f1, l_cull_box@l(r4)
+/* 80CAA118 00000030  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80CB0004 */
+/* 80CAA11C 00000034  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80CB0008 */
+/* 80CAA120 00000038  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80CB000C */
+/* 80CAA124 0000003C  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80CB0010 */
+/* 80CAA128 00000040  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80CB0014 */
+/* 80CAA12C 00000044  4B 37 04 1C */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80CAA130 00000048  38 60 00 01 */	li r3, 1
 /* 80CAA134 0000004C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80CAA138 00000050  83 C1 00 08 */	lwz r30, 8(r1)

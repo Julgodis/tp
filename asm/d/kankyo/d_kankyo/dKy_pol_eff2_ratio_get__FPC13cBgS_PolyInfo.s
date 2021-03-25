@@ -22,8 +22,8 @@ lbl_801AC020:
 /* 801AC02C 0000000C  7C 7B 1B 78 */	mr r27, r3
 /* 801AC030 00000010  3B 9D 3E C8 */	addi r28, r29, 0x3ec8
 /* 801AC034 00000014  7F 83 E3 78 */	mr r3, r28
-/* 801AC038 00000018  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801AC03C 0000001C  38 84 4C 6C */	addi r4, r4, stringBase0@l
+/* 801AC038 00000018  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
+/* 801AC03C 0000001C  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
 /* 801AC040 00000020  38 84 01 7A */	addi r4, r4, 0x17a
 /* 801AC044 00000024  48 1B C9 51 */	bl strcmp
 /* 801AC048 00000028  2C 03 00 00 */	cmpwi r3, 0
@@ -39,8 +39,8 @@ lbl_801AC020:
 /* 801AC070 00000050  48 00 00 48 */	b lbl_801AC0B8
 lbl_801AC074:
 /* 801AC074 00000000  7F 83 E3 78 */	mr r3, r28
-/* 801AC078 00000004  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801AC07C 00000008  38 84 4C 6C */	addi r4, r4, stringBase0@l
+/* 801AC078 00000004  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
+/* 801AC07C 00000008  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
 /* 801AC080 0000000C  38 84 02 61 */	addi r4, r4, 0x261
 /* 801AC084 00000010  48 1B C9 11 */	bl strcmp
 /* 801AC088 00000014  2C 03 00 00 */	cmpwi r3, 0
@@ -59,7 +59,7 @@ lbl_801AC0B8:
 /* 801AC0B8 00000000  7F A3 EB 78 */	mr r3, r29
 /* 801AC0BC 00000004  7F E4 FB 78 */	mr r4, r31
 /* 801AC0C0 00000008  4B EC 8D E1 */	bl GetPolyAtt1__4dBgSFRC13cBgS_PolyInfo
-/* 801AC0C4 0000000C  80 9E 12 E8 */	lwz r4, 0x12e8(r30)
+/* 801AC0C4 0000000C  80 9E 12 E8 */	lwz r4, 0x12e8(r30)	/* effective address: 8042DD3C */
 /* 801AC0C8 00000010  28 04 00 00 */	cmplwi r4, 0
 /* 801AC0CC 00000014  41 82 00 14 */	beq lbl_801AC0E0
 /* 801AC0D0 00000018  57 60 18 38 */	slwi r0, r27, 3
@@ -75,7 +75,7 @@ lbl_801AC0E8:
 /* 801AC0F0 00000008  C0 22 A2 0C */	lfs f1, lit_4409(r2)
 /* 801AC0F4 0000000C  48 00 00 34 */	b lbl_801AC128
 lbl_801AC0F8:
-/* 801AC0F8 00000000  80 7E 12 F4 */	lwz r3, 0x12f4(r30)
+/* 801AC0F8 00000000  80 7E 12 F4 */	lwz r3, 0x12f4(r30)	/* effective address: 8042DD48 */
 /* 801AC0FC 00000004  54 00 1D 78 */	rlwinm r0, r0, 3, 0x15, 0x1c
 /* 801AC100 00000008  7C 63 02 14 */	add r3, r3, r0
 /* 801AC104 0000000C  88 03 00 07 */	lbz r0, 7(r3)

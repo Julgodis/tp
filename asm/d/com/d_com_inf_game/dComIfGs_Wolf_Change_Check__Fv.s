@@ -75,8 +75,8 @@ lbl_8002F91C:
 /* 8002F920 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8002F924 00000008  3B C3 4E 00 */	addi r30, r3, 0x4e00
 /* 8002F928 0000000C  7F C3 F3 78 */	mr r3, r30
-/* 8002F92C 00000010  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 8002F930 00000014  38 84 8F 38 */	addi r4, r4, stringBase0@l
+/* 8002F92C 00000010  3C 80 80 38 */	lis r4, d_com_d_com_inf_game__stringBase0@ha
+/* 8002F930 00000014  38 84 8F 38 */	addi r4, r4, d_com_d_com_inf_game__stringBase0@l
 /* 8002F934 00000018  38 84 00 AD */	addi r4, r4, 0xad
 /* 8002F938 0000001C  48 33 90 5D */	bl strcmp
 /* 8002F93C 00000020  2C 03 00 00 */	cmpwi r3, 0
@@ -86,7 +86,7 @@ lbl_8002F91C:
 /* 8002F94C 00000030  88 03 4E 0A */	lbz r0, 0x4e0a(r3)	/* effective address: 8040AFCA */
 /* 8002F950 00000034  2C 00 00 02 */	cmpwi r0, 2
 /* 8002F954 00000038  40 82 00 2C */	bne lbl_8002F980
-/* 8002F958 0000003C  A8 03 4E 08 */	lha r0, 0x4e08(r3)
+/* 8002F958 0000003C  A8 03 4E 08 */	lha r0, 0x4e08(r3)	/* effective address: 8040AFC8 */
 /* 8002F95C 00000040  2C 00 00 0A */	cmpwi r0, 0xa
 /* 8002F960 00000044  40 82 00 20 */	bne lbl_8002F980
 /* 8002F964 00000048  38 63 09 58 */	addi r3, r3, 0x958
@@ -98,8 +98,8 @@ lbl_8002F91C:
 /* 8002F97C 00000060  48 00 00 58 */	b lbl_8002F9D4
 lbl_8002F980:
 /* 8002F980 00000000  7F C3 F3 78 */	mr r3, r30
-/* 8002F984 00000004  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 8002F988 00000008  38 84 8F 38 */	addi r4, r4, stringBase0@l
+/* 8002F984 00000004  3C 80 80 38 */	lis r4, d_com_d_com_inf_game__stringBase0@ha
+/* 8002F988 00000008  38 84 8F 38 */	addi r4, r4, d_com_d_com_inf_game__stringBase0@l
 /* 8002F98C 0000000C  38 84 00 AD */	addi r4, r4, 0xad
 /* 8002F990 00000010  48 33 90 05 */	bl strcmp
 /* 8002F994 00000014  2C 03 00 00 */	cmpwi r3, 0
@@ -109,7 +109,7 @@ lbl_8002F980:
 /* 8002F9A4 00000024  88 03 4E 0A */	lbz r0, 0x4e0a(r3)	/* effective address: 8040AFCA */
 /* 8002F9A8 00000028  2C 00 00 09 */	cmpwi r0, 9
 /* 8002F9AC 0000002C  40 82 00 28 */	bne lbl_8002F9D4
-/* 8002F9B0 00000030  A8 03 4E 08 */	lha r0, 0x4e08(r3)
+/* 8002F9B0 00000030  A8 03 4E 08 */	lha r0, 0x4e08(r3)	/* effective address: 8040AFC8 */
 /* 8002F9B4 00000034  2C 00 00 0A */	cmpwi r0, 0xa
 /* 8002F9B8 00000038  40 82 00 1C */	bne lbl_8002F9D4
 /* 8002F9BC 0000003C  38 63 09 58 */	addi r3, r3, 0x958

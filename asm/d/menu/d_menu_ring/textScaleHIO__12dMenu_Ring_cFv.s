@@ -80,12 +80,12 @@ lbl_801EF028:
 /* 801EF030 00000008  7C 00 20 00 */	cmpw r0, r4
 /* 801EF034 0000000C  40 82 00 14 */	bne lbl_801EF048
 /* 801EF038 00000010  7F C3 F3 78 */	mr r3, r30
-/* 801EF03C 00000014  C0 3C 00 18 */	lfs f1, 0x18(r28)
+/* 801EF03C 00000014  C0 3C 00 18 */	lfs f1, 0x18(r28)	/* effective address: 8042FB14 */
 /* 801EF040 00000018  4B FF CA 79 */	bl setButtonScale__12dMenu_Ring_cFif
 /* 801EF044 0000001C  48 00 00 48 */	b lbl_801EF08C
 lbl_801EF048:
 /* 801EF048 00000000  7F C3 F3 78 */	mr r3, r30
-/* 801EF04C 00000004  C0 3C 00 20 */	lfs f1, 0x20(r28)
+/* 801EF04C 00000004  C0 3C 00 20 */	lfs f1, 0x20(r28)	/* effective address: 8042FB1C */
 /* 801EF050 00000008  4B FF CA 69 */	bl setButtonScale__12dMenu_Ring_cFif
 /* 801EF054 0000000C  48 00 00 38 */	b lbl_801EF08C
 lbl_801EF058:

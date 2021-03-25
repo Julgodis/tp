@@ -33,8 +33,8 @@ lbl_802445AC:
 lbl_802445CC:
 /* 802445CC 00000000  90 1F 00 04 */	stw r0, 4(r31)
 /* 802445D0 00000004  80 7F 00 04 */	lwz r3, 4(r31)
-/* 802445D4 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802445D8 0000000C  38 84 9A 80 */	addi r4, r4, stringBase0@l
+/* 802445D4 00000008  3C 80 80 3A */	lis r4, msg_scrn_d_msg_scrn_jimaku__stringBase0@ha
+/* 802445D8 0000000C  38 84 9A 80 */	addi r4, r4, msg_scrn_d_msg_scrn_jimaku__stringBase0@l
 /* 802445DC 00000010  3C A0 00 02 */	lis r5, 2
 /* 802445E0 00000014  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
 /* 802445E4 00000018  38 C6 61 C0 */	addi r6, r6, g_dComIfG_gameInfo@l
@@ -161,8 +161,8 @@ lbl_80244730:
 /* 802447B8 00000088  3B 40 00 00 */	li r26, 0
 /* 802447BC 0000008C  3B 20 00 00 */	li r25, 0
 /* 802447C0 00000090  3B 00 00 00 */	li r24, 0
-/* 802447C4 00000094  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802447C8 00000098  3B A3 9A 80 */	addi r29, r3, stringBase0@l
+/* 802447C4 00000094  3C 60 80 3A */	lis r3, msg_scrn_d_msg_scrn_jimaku__stringBase0@ha
+/* 802447C8 00000098  3B A3 9A 80 */	addi r29, r3, msg_scrn_d_msg_scrn_jimaku__stringBase0@l
 /* 802447CC 0000009C  3C 60 80 43 */	lis r3, g_MsgObject_HIO_c@ha
 /* 802447D0 000000A0  3B C3 02 8C */	addi r30, r3, g_MsgObject_HIO_c@l
 lbl_802447D4:
@@ -211,8 +211,8 @@ lbl_802447D4:
 /* 8024487C 000000A8  7C 7F 00 2E */	lwzx r3, r31, r0
 /* 80244880 000000AC  80 63 00 04 */	lwz r3, 4(r3)
 /* 80244884 000000B0  38 80 02 00 */	li r4, 0x200
-/* 80244888 000000B4  3C A0 80 3A */	lis r5, stringBase0@ha
-/* 8024488C 000000B8  38 A5 9A 80 */	addi r5, r5, stringBase0@l
+/* 80244888 000000B4  3C A0 80 3A */	lis r5, msg_scrn_d_msg_scrn_jimaku__stringBase0@ha
+/* 8024488C 000000B8  38 A5 9A 80 */	addi r5, r5, msg_scrn_d_msg_scrn_jimaku__stringBase0@l
 /* 80244890 000000BC  38 A5 00 1E */	addi r5, r5, 0x1e
 /* 80244894 000000C0  4C C6 31 82 */	crclr 6
 /* 80244898 000000C4  48 0B BE B5 */	bl setString__10J2DTextBoxFsPCce

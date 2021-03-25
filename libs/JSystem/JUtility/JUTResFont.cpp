@@ -11,6 +11,17 @@
 // Types:
 // 
 
+struct JUTFont {
+	struct TWidth {
+	};
+
+	/* 802DECF8 */ JUTFont();
+	/* 802DED24 */ void initialize_state();
+	/* 802E0108 */ void isLeadByte_1Byte(int);
+	/* 802E0110 */ void isLeadByte_2Byte(int);
+	/* 802E0118 */ void isLeadByte_ShiftJIS(int);
+};
+
 struct _GXTexMapID {
 };
 
@@ -24,17 +35,6 @@ struct JUtility {
 	struct TColor {
 	};
 
-};
-
-struct JUTFont {
-	struct TWidth {
-	};
-
-	/* 802DECF8 */ JUTFont();
-	/* 802DED24 */ void initialize_state();
-	/* 802E0108 */ void isLeadByte_1Byte(int);
-	/* 802E0110 */ void isLeadByte_2Byte(int);
-	/* 802E0118 */ void isLeadByte_ShiftJIS(int);
 };
 
 struct JUTResFont {
@@ -96,7 +96,7 @@ extern "C" void isLeadByte_1Byte__7JUTFontFi(); // 1
 extern "C" void isLeadByte_2Byte__7JUTFontFi(); // 1
 extern "C" void isLeadByte_ShiftJIS__7JUTFontFi(); // 1
 extern "C" extern void* const saoAboutEncoding___10JUTResFont[3];
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JUTResFont__stringBase0;
 
 // 
 // External References:

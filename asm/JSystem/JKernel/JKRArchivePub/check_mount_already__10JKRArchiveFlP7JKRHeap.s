@@ -7,7 +7,7 @@ lbl_802D5784:
 /* 802D5788 00000004  80 C5 43 54 */	lwz r6, sVolumeList__13JKRFileLoader@l(r5)
 /* 802D578C 00000008  48 00 00 48 */	b lbl_802D57D4
 lbl_802D5790:
-/* 802D5790 00000000  80 E6 00 00 */	lwz r7, 0(r6)
+/* 802D5790 00000000  80 E6 00 00 */	lwz r7, 0(r6)	/* effective address: 80434354 */
 /* 802D5794 00000004  80 A7 00 2C */	lwz r5, 0x2c(r7)
 /* 802D5798 00000008  3C 05 AD BF */	addis r0, r5, 0xadbf
 /* 802D579C 0000000C  28 00 52 43 */	cmplwi r0, 0x5243

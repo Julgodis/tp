@@ -16,8 +16,8 @@ lbl_801AFEA4:
 lbl_801AFEDC:
 /* 801AFEDC 00000000  90 1F 00 18 */	stw r0, 0x18(r31)
 /* 801AFEE0 00000004  80 7F 00 18 */	lwz r3, 0x18(r31)
-/* 801AFEE4 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801AFEE8 0000000C  38 84 53 30 */	addi r4, r4, stringBase0@l
+/* 801AFEE4 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_collect__stringBase0@ha
+/* 801AFEE8 0000000C  38 84 53 30 */	addi r4, r4, d_menu_d_menu_collect__stringBase0@l
 /* 801AFEEC 00000010  3C A0 01 02 */	lis r5, 0x102
 /* 801AFEF0 00000014  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
 /* 801AFEF4 00000018  3B C6 61 C0 */	addi r30, r6, g_dComIfG_gameInfo@l
@@ -34,11 +34,11 @@ lbl_801AFEDC:
 lbl_801AFF20:
 /* 801AFF20 00000000  90 1F 00 1C */	stw r0, 0x1c(r31)
 /* 801AFF24 00000004  80 7F 00 1C */	lwz r3, 0x1c(r31)
-/* 801AFF28 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801AFF2C 0000000C  38 84 53 30 */	addi r4, r4, stringBase0@l
+/* 801AFF28 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_collect__stringBase0@ha
+/* 801AFF2C 0000000C  38 84 53 30 */	addi r4, r4, d_menu_d_menu_collect__stringBase0@l
 /* 801AFF30 00000010  38 84 00 1F */	addi r4, r4, 0x1f
 /* 801AFF34 00000014  3C A0 00 02 */	lis r5, 2
-/* 801AFF38 00000018  80 DE 5C B8 */	lwz r6, 0x5cb8(r30)
+/* 801AFF38 00000018  80 DE 5C B8 */	lwz r6, 0x5cb8(r30)	/* effective address: 8040BE78 */
 /* 801AFF3C 0000001C  48 14 87 0D */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 801AFF40 00000020  38 60 00 00 */	li r3, 0
 /* 801AFF44 00000024  7C 65 1B 78 */	mr r5, r3
@@ -71,8 +71,8 @@ lbl_801AFF9C:
 /* 801AFFA8 0000000C  80 63 5D 30 */	lwz r3, 0x5d30(r3)	/* effective address: 8040BEF0 */
 /* 801AFFAC 00000010  3C 80 54 49 */	lis r4, 0x5449 /* 0x54494D47@ha */
 /* 801AFFB0 00000014  38 84 4D 47 */	addi r4, r4, 0x4D47 /* 0x54494D47@l */
-/* 801AFFB4 00000018  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801AFFB8 0000001C  38 A5 53 30 */	addi r5, r5, stringBase0@l
+/* 801AFFB4 00000018  3C A0 80 39 */	lis r5, d_menu_d_menu_collect__stringBase0@ha
+/* 801AFFB8 0000001C  38 A5 53 30 */	addi r5, r5, d_menu_d_menu_collect__stringBase0@l
 /* 801AFFBC 00000020  38 A5 00 45 */	addi r5, r5, 0x45
 /* 801AFFC0 00000024  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 804061C0 */
 /* 801AFFC4 00000028  81 8C 00 18 */	lwz r12, 0x18(r12)

@@ -16,7 +16,7 @@ lbl_80208FB4:
 /* 80208FEC 00000038  88 03 5E 4A */	lbz r0, 0x5e4a(r3)	/* effective address: 8040C00A */
 /* 80208FF0 0000003C  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 80208FF4 00000040  40 82 00 10 */	bne lbl_80209004
-/* 80208FF8 00000044  88 03 5E 4B */	lbz r0, 0x5e4b(r3)
+/* 80208FF8 00000044  88 03 5E 4B */	lbz r0, 0x5e4b(r3)	/* effective address: 8040C00B */
 /* 80208FFC 00000048  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 80209000 0000004C  41 82 00 20 */	beq lbl_80209020
 lbl_80209004:

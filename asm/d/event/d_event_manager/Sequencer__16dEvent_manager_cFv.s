@@ -16,7 +16,7 @@ lbl_80046E64:
 /* 80046E9C 00000038  7C 7C 1B 78 */	mr r28, r3
 /* 80046EA0 0000003C  28 1D 00 00 */	cmplwi r29, 0
 /* 80046EA4 00000040  41 82 05 24 */	beq lbl_800473C8
-/* 80046EA8 00000044  A0 1F 00 D8 */	lhz r0, 0xd8(r31)
+/* 80046EA8 00000044  A0 1F 00 D8 */	lhz r0, 0xd8(r31)	/* effective address: 8040B160 */
 /* 80046EAC 00000048  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
 /* 80046EB0 0000004C  41 82 01 14 */	beq lbl_80046FC4
 /* 80046EB4 00000050  3B 60 00 00 */	li r27, 0
@@ -33,7 +33,7 @@ lbl_80046EDC:
 /* 80046EDC 00000000  88 7C 00 08 */	lbz r3, 8(r28)
 /* 80046EE0 00000004  54 60 07 FF */	clrlwi. r0, r3, 0x1f
 /* 80046EE4 00000008  41 82 00 D0 */	beq lbl_80046FB4
-/* 80046EE8 0000000C  A0 1F 00 DA */	lhz r0, 0xda(r31)
+/* 80046EE8 0000000C  A0 1F 00 DA */	lhz r0, 0xda(r31)	/* effective address: 8040B162 */
 /* 80046EEC 00000010  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
 /* 80046EF0 00000014  40 82 00 C4 */	bne lbl_80046FB4
 /* 80046EF4 00000018  54 60 FF BE */	rlwinm r0, r3, 0x1f, 0x1e, 0x1f
@@ -43,13 +43,13 @@ lbl_80046EDC:
 /* 80046F04 00000028  4B FF BA A5 */	bl onSkipFade__14dEvt_control_cFv
 lbl_80046F08:
 /* 80046F08 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80046F0C 00000004  80 9F 00 C4 */	lwz r4, 0xc4(r31)
+/* 80046F0C 00000004  80 9F 00 C4 */	lwz r4, 0xc4(r31)	/* effective address: 8040B14C */
 /* 80046F10 00000008  4B FF C3 DD */	bl convPId__14dEvt_control_cFUi
 /* 80046F14 0000000C  7C 64 1B 78 */	mr r4, r3
 /* 80046F18 00000010  28 03 00 00 */	cmplwi r3, 0
 /* 80046F1C 00000014  40 82 00 14 */	bne lbl_80046F30
 /* 80046F20 00000018  7F E3 FB 78 */	mr r3, r31
-/* 80046F24 0000001C  80 9F 00 C8 */	lwz r4, 0xc8(r31)
+/* 80046F24 0000001C  80 9F 00 C8 */	lwz r4, 0xc8(r31)	/* effective address: 8040B150 */
 /* 80046F28 00000020  4B FF C3 C5 */	bl convPId__14dEvt_control_cFUi
 /* 80046F2C 00000024  7C 64 1B 78 */	mr r4, r3
 lbl_80046F30:
@@ -101,7 +101,7 @@ lbl_80046FC4:
 /* 80046FCC 00000008  2C 03 00 00 */	cmpwi r3, 0
 /* 80046FD0 0000000C  41 82 03 C0 */	beq lbl_80047390
 /* 80046FD4 00000010  3B 40 00 00 */	li r26, 0
-/* 80046FD8 00000014  A0 7F 00 DA */	lhz r3, 0xda(r31)
+/* 80046FD8 00000014  A0 7F 00 DA */	lhz r3, 0xda(r31)	/* effective address: 8040B162 */
 /* 80046FDC 00000018  54 60 07 FF */	clrlwi. r0, r3, 0x1f
 /* 80046FE0 0000001C  41 82 00 08 */	beq lbl_80046FE8
 /* 80046FE4 00000020  3B 40 00 01 */	li r26, 1
@@ -381,7 +381,7 @@ lbl_800473B0:
 /* 800473C0 00000010  90 1E 01 B8 */	stw r0, 0x1b8(r30)
 /* 800473C4 00000014  48 00 00 20 */	b lbl_800473E4
 lbl_800473C8:
-/* 800473C8 00000000  A0 1F 00 D8 */	lhz r0, 0xd8(r31)
+/* 800473C8 00000000  A0 1F 00 D8 */	lhz r0, 0xd8(r31)	/* effective address: 8040B160 */
 /* 800473CC 00000004  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
 /* 800473D0 00000008  41 82 00 14 */	beq lbl_800473E4
 /* 800473D4 0000000C  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)

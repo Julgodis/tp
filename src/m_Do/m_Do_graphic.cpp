@@ -86,10 +86,10 @@ struct dDlst_shadowControl_c {
 	/* 80055A14 */ void draw(f32 (* )[4]);
 };
 
-struct dDlst_base_c {
+struct J3DDrawBuffer {
 };
 
-struct J3DDrawBuffer {
+struct dDlst_base_c {
 };
 
 struct dDlst_list_c {
@@ -111,13 +111,13 @@ struct dMenu_Collect3D_c {
 	/* 801B75E8 */ void setupItem3D(f32 (* )[4]);
 };
 
-struct _GXRenderModeObj {
-};
-
 struct JUTXfb {
 	struct EXfbNumber {
 	};
 
+};
+
+struct _GXRenderModeObj {
 };
 
 struct JFWDisplay {
@@ -199,7 +199,7 @@ extern "C" void __dt__13J2DOrthoGraphFv(); // 1
 extern "C" void mDoGph_Create__Fv(); // 1
 extern "C" void __sinit_m_Do_graphic_cpp(); // 1
 extern "C" void getAtnActorID__9daPy_py_cCFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const m_Do_m_Do_graphic__stringBase0;
 extern "C" extern u8 mFrameBufferTexObj__13mDoGph_gInf_c[32];
 extern "C" extern u8 m_bloom__13mDoGph_gInf_c[20];
 extern "C" extern u8 mBackColor__13mDoGph_gInf_c[4];
@@ -398,10 +398,10 @@ SECTION_SDATA u8 mFadeColor__13mDoGph_gInf_c[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80450BC8-80450BCC 0004+00 s=2 e=38 z=0  None .sbss      mFader__13mDoGph_gInf_c                                      */
+/* 80450BC8-80450BCC 0004+00 s=2 e=38 z=1  None .sbss      mFader__13mDoGph_gInf_c                                      */
 u8 mFader__13mDoGph_gInf_c[4];
 
-/* 80450BCC-80450BD0 0004+00 s=3 e=8 z=0  None .sbss      mFrameBufferTimg__13mDoGph_gInf_c                            */
+/* 80450BCC-80450BD0 0004+00 s=3 e=8 z=1  None .sbss      mFrameBufferTimg__13mDoGph_gInf_c                            */
 u8 mFrameBufferTimg__13mDoGph_gInf_c[4];
 
 /* 80450BD0-80450BD4 0004+00 s=3 e=6 z=0  None .sbss      mFrameBufferTex__13mDoGph_gInf_c                             */
@@ -413,13 +413,13 @@ u8 mZbufferTimg__13mDoGph_gInf_c[4];
 /* 80450BD8-80450BDC 0004+00 s=3 e=1 z=0  None .sbss      mZbufferTex__13mDoGph_gInf_c                                 */
 u8 mZbufferTex__13mDoGph_gInf_c[4];
 
-/* 80450BDC-80450BE0 0004+00 s=3 e=3 z=0  None .sbss      mFadeRate__13mDoGph_gInf_c                                   */
+/* 80450BDC-80450BE0 0004+00 s=3 e=3 z=1  None .sbss      mFadeRate__13mDoGph_gInf_c                                   */
 f32 mFadeRate__13mDoGph_gInf_c;
 
 /* 80450BE0-80450BE4 0004+00 s=3 e=0 z=0  None .sbss      mFadeSpeed__13mDoGph_gInf_c                                  */
 static f32 mFadeSpeed__13mDoGph_gInf_c;
 
-/* 80450BE4-80450BE8 0004+00 s=8 e=9 z=0  None .sbss      None                                                         */
+/* 80450BE4-80450BE8 0004+00 s=8 e=9 z=11  None .sbss      None                                                         */
 u8 struct_80450BE4[4];
 
 /* 80007E44-80007F90 014C+00 s=1 e=0 z=0  None .text      create__13mDoGph_gInf_cFv                                    */
@@ -457,7 +457,7 @@ SECTION_SDATA2 static u8 lit_4062[4] = {
 /* 80451A3C-80451A40 0004+00 s=8 e=0 z=0  None .sdata2    @4063                                                        */
 SECTION_SDATA2 static f32 lit_4063 = 1.0f;
 
-/* 80007FD8-80008028 0050+00 s=1 e=6 z=0  None .text      fadeOut__13mDoGph_gInf_cFfR8_GXColor                         */
+/* 80007FD8-80008028 0050+00 s=1 e=6 z=15  None .text      fadeOut__13mDoGph_gInf_cFfR8_GXColor                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -468,7 +468,7 @@ asm void mDoGph_gInf_c::fadeOut(f32 param_0, _GXColor& param_1) {
 #pragma pop
 
 
-/* 80008028-80008078 0050+00 s=0 e=0 z=0  None .text      fadeOut_f__13mDoGph_gInf_cFfR8_GXColor                       */
+/* 80008028-80008078 0050+00 s=0 e=0 z=2  None .text      fadeOut_f__13mDoGph_gInf_cFfR8_GXColor                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -479,7 +479,7 @@ asm void mDoGph_gInf_c::fadeOut_f(f32 param_0, _GXColor& param_1) {
 #pragma pop
 
 
-/* 80008078-800080A0 0028+00 s=0 e=1 z=0  None .text      onBlure__13mDoGph_gInf_cFv                                   */
+/* 80008078-800080A0 0028+00 s=0 e=1 z=8  None .text      onBlure__13mDoGph_gInf_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -514,7 +514,7 @@ asm void mDoGph_gInf_c::onBlure(f32 const (* param_0)[4]) {
 #pragma pop
 
 
-/* 800080D0-800080F4 0024+00 s=0 e=3 z=0  None .text      fadeOut__13mDoGph_gInf_cFf                                   */
+/* 800080D0-800080F4 0024+00 s=0 e=3 z=7  None .text      fadeOut__13mDoGph_gInf_cFf                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

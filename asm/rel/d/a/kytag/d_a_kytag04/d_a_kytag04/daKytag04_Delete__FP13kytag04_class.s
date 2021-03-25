@@ -5,14 +5,14 @@ lbl_8046D35C:
 /* 8046D368 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8046D36C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8046D370 00000014  38 7F 05 9C */	addi r3, r31, 0x59c
-/* 8046D374 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8046D378 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 8046D374 00000018  3C 80 80 47 */	lis r4, stringBase0@ha
+/* 8046D378 0000001C  38 84 DA 50 */	addi r4, r4, stringBase0@l
 /* 8046D37C 00000020  38 84 00 16 */	addi r4, r4, 0x16
-/* 8046D380 00000024  4B FF F7 B9 */	bl _unresolved
+/* 8046D380 00000024  4B BB FC 88 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 8046D384 00000028  80 7F 05 A4 */	lwz r3, 0x5a4(r31)
 /* 8046D388 0000002C  28 03 00 00 */	cmplwi r3, 0
 /* 8046D38C 00000030  41 82 00 40 */	beq lbl_8046D3CC
-/* 8046D390 00000034  4B FF F7 A9 */	bl _unresolved
+/* 8046D390 00000034  4B E1 18 D0 */	b deleteAllParticle__14JPABaseEmitterFv
 /* 8046D394 00000038  80 7F 05 A4 */	lwz r3, 0x5a4(r31)
 /* 8046D398 0000003C  80 03 00 F4 */	lwz r0, 0xf4(r3)
 /* 8046D39C 00000040  60 00 00 01 */	ori r0, r0, 1
@@ -31,7 +31,7 @@ lbl_8046D3CC:
 /* 8046D3CC 00000000  80 7F 05 A8 */	lwz r3, 0x5a8(r31)
 /* 8046D3D0 00000004  28 03 00 00 */	cmplwi r3, 0
 /* 8046D3D4 00000008  41 82 00 40 */	beq lbl_8046D414
-/* 8046D3D8 0000000C  4B FF F7 61 */	bl _unresolved
+/* 8046D3D8 0000000C  4B E1 18 88 */	b deleteAllParticle__14JPABaseEmitterFv
 /* 8046D3DC 00000010  80 7F 05 A8 */	lwz r3, 0x5a8(r31)
 /* 8046D3E0 00000014  80 03 00 F4 */	lwz r0, 0xf4(r3)
 /* 8046D3E4 00000018  60 00 00 01 */	ori r0, r0, 1
@@ -50,7 +50,7 @@ lbl_8046D414:
 /* 8046D414 00000000  80 7F 05 AC */	lwz r3, 0x5ac(r31)
 /* 8046D418 00000004  28 03 00 00 */	cmplwi r3, 0
 /* 8046D41C 00000008  41 82 00 40 */	beq lbl_8046D45C
-/* 8046D420 0000000C  4B FF F7 19 */	bl _unresolved
+/* 8046D420 0000000C  4B E1 18 40 */	b deleteAllParticle__14JPABaseEmitterFv
 /* 8046D424 00000010  80 7F 05 AC */	lwz r3, 0x5ac(r31)
 /* 8046D428 00000014  80 03 00 F4 */	lwz r0, 0xf4(r3)
 /* 8046D42C 00000018  60 00 00 01 */	ori r0, r0, 1

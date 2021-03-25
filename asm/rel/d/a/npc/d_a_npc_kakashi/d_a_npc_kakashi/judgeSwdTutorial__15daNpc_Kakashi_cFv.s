@@ -4,7 +4,7 @@ lbl_8054D374:
 /* 8054D37C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8054D380 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8054D384 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8054D388 00000014  4B FF DF 51 */	bl _unresolved
+/* 8054D388 00000014  4B AE 43 58 */	b daNpcKakashi_getSwdTutorialStep__Fv
 /* 8054D38C 00000018  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8054D390 0000001C  2C 00 00 04 */	cmpwi r0, 4
 /* 8054D394 00000020  41 82 00 68 */	beq lbl_8054D3FC

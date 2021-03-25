@@ -15,12 +15,12 @@ lbl_80A295D8:
 /* 80A2960C 00000034  A0 03 04 E8 */	lhz r0, 0x4e8(r3)
 /* 80A29610 00000038  B0 01 00 0C */	sth r0, 0xc(r1)
 /* 80A29614 0000003C  38 61 00 08 */	addi r3, r1, 8
-/* 80A29618 00000040  4B FF CB 21 */	bl _unresolved
-/* 80A2961C 00000044  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80A29620 00000048  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80A29618 00000040  4B 5E 38 F4 */	b ZXYrotS__14mDoMtx_stack_cFRC5csXyz
+/* 80A2961C 00000044  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80A29620 00000048  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80A29624 0000004C  7F E4 FB 78 */	mr r4, r31
 /* 80A29628 00000050  7F E5 FB 78 */	mr r5, r31
-/* 80A2962C 00000054  4B FF CB 0D */	bl _unresolved
+/* 80A2962C 00000054  4B 91 D7 40 */	b PSMTXMultVec
 /* 80A29630 00000058  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80A29634 0000005C  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80A29638 00000060  7C 08 03 A6 */	mtlr r0

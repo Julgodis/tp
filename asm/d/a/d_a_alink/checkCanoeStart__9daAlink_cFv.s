@@ -6,8 +6,8 @@ lbl_800A4C40:
 /* 800A4C50 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 800A4C54 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 800A4C58 00000018  3B E0 00 00 */	li r31, 0
-/* 800A4C5C 0000001C  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800A4C60 00000020  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800A4C5C 0000001C  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800A4C60 00000020  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800A4C64 00000024  38 63 01 06 */	addi r3, r3, 0x106
 /* 800A4C68 00000028  4B FF 8D F9 */	bl checkStageName__9daAlink_cFPCc
 /* 800A4C6C 0000002C  54 60 06 3F */	clrlwi. r0, r3, 0x18

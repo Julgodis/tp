@@ -147,8 +147,8 @@ lbl_8016C384:
 /* 8016C5C8 000001B0  2C 03 00 00 */	cmpwi r3, 0
 /* 8016C5CC 000001B4  41 82 00 24 */	beq lbl_8016C5F0
 /* 8016C5D0 000001B8  7F C3 F3 78 */	mr r3, r30
-/* 8016C5D4 000001BC  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 8016C5D8 000001C0  38 84 3F 68 */	addi r4, r4, stringBase0@l
+/* 8016C5D4 000001BC  3C 80 80 39 */	lis r4, d_d_camera__stringBase0@ha
+/* 8016C5D8 000001C0  38 84 3F 68 */	addi r4, r4, d_d_camera__stringBase0@l
 /* 8016C5DC 000001C4  38 84 01 A6 */	addi r4, r4, 0x1a6
 /* 8016C5E0 000001C8  4B F1 CE E5 */	bl getEvActor__9dCamera_cFPc
 /* 8016C5E4 000001CC  28 03 00 00 */	cmplwi r3, 0
@@ -398,7 +398,7 @@ lbl_8016C960:
 /* 8016C978 00000018  3B A0 00 3C */	li r29, 0x3c
 /* 8016C97C 0000001C  48 00 00 14 */	b lbl_8016C990
 lbl_8016C980:
-/* 8016C980 00000000  80 03 00 98 */	lwz r0, 0x98(r3)
+/* 8016C980 00000000  80 03 00 98 */	lwz r0, 0x98(r3)	/* effective address: 8042C990 */
 /* 8016C984 00000004  7C 04 00 00 */	cmpw r4, r0
 /* 8016C988 00000008  40 82 00 08 */	bne lbl_8016C990
 /* 8016C98C 0000000C  3B A0 00 28 */	li r29, 0x28

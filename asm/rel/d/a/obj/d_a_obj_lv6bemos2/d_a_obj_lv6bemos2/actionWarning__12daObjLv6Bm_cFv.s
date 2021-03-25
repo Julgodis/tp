@@ -6,10 +6,10 @@ lbl_80C802C0:
 /* 80C802D0 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80C802D4 00000014  38 00 01 F4 */	li r0, 0x1f4
 /* 80C802D8 00000018  B0 03 09 D8 */	sth r0, 0x9d8(r3)
-/* 80C802DC 0000001C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80C802E0 00000020  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80C802E4 00000024  80 84 5D AC */	lwz r4, 0x5dac(r4)
-/* 80C802E8 00000028  4B FF DE B1 */	bl _unresolved
+/* 80C802DC 0000001C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C802E0 00000020  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80C802E4 00000024  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80C802E8 00000028  4B 39 A4 28 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80C802EC 0000002C  88 1F 0A 16 */	lbz r0, 0xa16(r31)
 /* 80C802F0 00000030  2C 00 00 01 */	cmpwi r0, 1
 /* 80C802F4 00000034  41 82 00 20 */	beq lbl_80C80314

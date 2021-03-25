@@ -35,8 +35,8 @@ lbl_801D8114:
 /* 801D8198 00000084  80 63 5D 30 */	lwz r3, 0x5d30(r3)	/* effective address: 8040BEF0 */
 /* 801D819C 00000088  3C 80 54 49 */	lis r4, 0x5449 /* 0x54494D47@ha */
 /* 801D81A0 0000008C  38 84 4D 47 */	addi r4, r4, 0x4D47 /* 0x54494D47@l */
-/* 801D81A4 00000090  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801D81A8 00000094  38 A5 68 C0 */	addi r5, r5, stringBase0@l
+/* 801D81A4 00000090  3C A0 80 39 */	lis r5, d_menu_d_menu_insect__stringBase0@ha
+/* 801D81A8 00000094  38 A5 68 C0 */	addi r5, r5, d_menu_d_menu_insect__stringBase0@l
 /* 801D81AC 00000098  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 804061C0 */
 /* 801D81B0 0000009C  81 8C 00 18 */	lwz r12, 0x18(r12)
 /* 801D81B4 000000A0  7D 89 03 A6 */	mtctr r12

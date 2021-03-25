@@ -5,8 +5,8 @@ lbl_80B12D20:
 /* 80B12D2C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80B12D30 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80B12D34 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80B12D38 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80B12D3C 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80B12D38 00000018  3C 60 80 B1 */	lis r3, lit_3648@ha
+/* 80B12D3C 0000001C  3B E3 42 DC */	addi r31, r3, lit_3648@l
 /* 80B12D40 00000020  A8 7E 06 20 */	lha r3, 0x620(r30)
 /* 80B12D44 00000024  38 03 FF FF */	addi r0, r3, -1
 /* 80B12D48 00000028  B0 1E 06 20 */	sth r0, 0x620(r30)
@@ -27,22 +27,22 @@ lbl_80B12D60:
 /* 80B12D80 00000020  88 1E 06 30 */	lbz r0, 0x630(r30)
 /* 80B12D84 00000024  28 00 00 00 */	cmplwi r0, 0
 /* 80B12D88 00000028  40 82 00 E8 */	bne lbl_80B12E70
-/* 80B12D8C 0000002C  C0 3F 00 08 */	lfs f1, 8(r31)
+/* 80B12D8C 0000002C  C0 3F 00 08 */	lfs f1, 8(r31)	/* effective address: 80B142E4 */
 /* 80B12D90 00000030  C0 1E 05 2C */	lfs f0, 0x52c(r30)
 /* 80B12D94 00000034  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80B12D98 00000038  41 82 00 D8 */	beq lbl_80B12E70
 /* 80B12D9C 0000003C  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 80B12DA0 00000040  C0 3F 00 78 */	lfs f1, 0x78(r31)
-/* 80B12DA4 00000044  C0 5F 00 00 */	lfs f2, 0(r31)
-/* 80B12DA8 00000048  C0 7F 00 1C */	lfs f3, 0x1c(r31)
-/* 80B12DAC 0000004C  4B FF DF AD */	bl _unresolved
+/* 80B12DA0 00000040  C0 3F 00 78 */	lfs f1, 0x78(r31)	/* effective address: 80B14354 */
+/* 80B12DA4 00000044  C0 5F 00 00 */	lfs f2, 0(r31)	/* effective address: 80B142DC */
+/* 80B12DA8 00000048  C0 7F 00 1C */	lfs f3, 0x1c(r31)	/* effective address: 80B142F8 */
+/* 80B12DAC 0000004C  4B 75 CC 90 */	b cLib_addCalc2__FPffff
 /* 80B12DB0 00000050  48 00 00 C0 */	b lbl_80B12E70
 lbl_80B12DB4:
 /* 80B12DB4 00000000  38 7E 08 8C */	addi r3, r30, 0x88c
-/* 80B12DB8 00000004  4B FF DF A1 */	bl _unresolved
+/* 80B12DB8 00000004  4B 57 16 A8 */	b ChkTgHit__12dCcD_GObjInfFv
 /* 80B12DBC 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80B12DC0 0000000C  41 82 00 B0 */	beq lbl_80B12E70
-/* 80B12DC4 00000010  C0 3F 00 08 */	lfs f1, 8(r31)
+/* 80B12DC4 00000010  C0 3F 00 08 */	lfs f1, 8(r31)	/* effective address: 80B142E4 */
 /* 80B12DC8 00000014  C0 1E 05 2C */	lfs f0, 0x52c(r30)
 /* 80B12DCC 00000018  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80B12DD0 0000001C  40 82 00 84 */	bne lbl_80B12E54
@@ -53,18 +53,18 @@ lbl_80B12DB4:
 /* 80B12DE4 00000030  4E 80 04 21 */	bctrl 
 /* 80B12DE8 00000034  38 60 00 00 */	li r3, 0
 /* 80B12DEC 00000038  B0 7E 06 0A */	sth r3, 0x60a(r30)
-/* 80B12DF0 0000003C  C0 1F 00 1C */	lfs f0, 0x1c(r31)
+/* 80B12DF0 0000003C  C0 1F 00 1C */	lfs f0, 0x1c(r31)	/* effective address: 80B142F8 */
 /* 80B12DF4 00000040  D0 1E 05 2C */	stfs f0, 0x52c(r30)
-/* 80B12DF8 00000044  C0 1F 00 20 */	lfs f0, 0x20(r31)
+/* 80B12DF8 00000044  C0 1F 00 20 */	lfs f0, 0x20(r31)	/* effective address: 80B142FC */
 /* 80B12DFC 00000048  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 80B12E00 0000004C  38 00 00 02 */	li r0, 2
 /* 80B12E04 00000050  B0 1E 06 08 */	sth r0, 0x608(r30)
 /* 80B12E08 00000054  B0 7E 06 0A */	sth r3, 0x60a(r30)
 /* 80B12E0C 00000058  7F C3 F3 78 */	mr r3, r30
 /* 80B12E10 0000005C  38 80 00 06 */	li r4, 6
-/* 80B12E14 00000060  C0 3F 00 00 */	lfs f1, 0(r31)
+/* 80B12E14 00000060  C0 3F 00 00 */	lfs f1, 0(r31)	/* effective address: 80B142DC */
 /* 80B12E18 00000064  38 A0 00 02 */	li r5, 2
-/* 80B12E1C 00000068  C0 5F 00 04 */	lfs f2, 4(r31)
+/* 80B12E1C 00000068  C0 5F 00 04 */	lfs f2, 4(r31)	/* effective address: 80B142E0 */
 /* 80B12E20 0000006C  4B FF E0 01 */	bl anm_init__FP14npc_tkj2_classifUcf
 /* 80B12E24 00000070  A8 7E 06 0A */	lha r3, 0x60a(r30)
 /* 80B12E28 00000074  38 03 00 01 */	addi r0, r3, 1
@@ -83,7 +83,7 @@ lbl_80B12E54:
 /* 80B12E58 00000004  B0 1E 06 20 */	sth r0, 0x620(r30)
 /* 80B12E5C 00000008  38 00 00 28 */	li r0, 0x28
 /* 80B12E60 0000000C  B0 1E 06 10 */	sth r0, 0x610(r30)
-/* 80B12E64 00000010  C0 1F 00 04 */	lfs f0, 4(r31)
+/* 80B12E64 00000010  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 80B142E0 */
 /* 80B12E68 00000014  80 7E 05 D4 */	lwz r3, 0x5d4(r30)
 /* 80B12E6C 00000018  D0 03 00 18 */	stfs f0, 0x18(r3)
 lbl_80B12E70:

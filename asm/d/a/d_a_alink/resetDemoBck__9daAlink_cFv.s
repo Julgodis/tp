@@ -21,9 +21,9 @@ lbl_80117B90:
 /* 80117BDC 0000004C  41 82 00 2C */	beq lbl_80117C08
 /* 80117BE0 00000050  38 80 00 00 */	li r4, 0
 /* 80117BE4 00000054  38 A6 18 D0 */	addi r5, r6, 0x18d0
-/* 80117BE8 00000058  C0 25 00 14 */	lfs f1, 0x14(r5)
+/* 80117BE8 00000058  C0 25 00 14 */	lfs f1, 0x14(r5)	/* effective address: 8038EF3C */
 /* 80117BEC 0000005C  38 A6 17 D0 */	addi r5, r6, 0x17d0
-/* 80117BF0 00000060  C0 45 00 94 */	lfs f2, 0x94(r5)
+/* 80117BF0 00000060  C0 45 00 94 */	lfs f2, 0x94(r5)	/* effective address: 8038EEBC */
 /* 80117BF4 00000064  48 01 1A E5 */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 80117BF8 00000068  7F E3 FB 78 */	mr r3, r31
 /* 80117BFC 0000006C  38 80 00 19 */	li r4, 0x19
@@ -32,9 +32,9 @@ lbl_80117B90:
 lbl_80117C08:
 /* 80117C08 00000000  38 80 00 19 */	li r4, 0x19
 /* 80117C0C 00000004  38 A6 00 64 */	addi r5, r6, 0x64
-/* 80117C10 00000008  C0 25 00 1C */	lfs f1, 0x1c(r5)
+/* 80117C10 00000008  C0 25 00 1C */	lfs f1, 0x1c(r5)	/* effective address: 8038D6D8 */
 /* 80117C14 0000000C  38 A6 00 0C */	addi r5, r6, 0xc
-/* 80117C18 00000010  C0 45 00 18 */	lfs f2, 0x18(r5)
+/* 80117C18 00000010  C0 45 00 18 */	lfs f2, 0x18(r5)	/* effective address: 8038D67C */
 /* 80117C1C 00000014  4B F9 53 C5 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 lbl_80117C20:
 /* 80117C20 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

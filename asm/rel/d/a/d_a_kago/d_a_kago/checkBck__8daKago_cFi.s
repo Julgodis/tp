@@ -7,12 +7,12 @@ lbl_80849798:
 /* 808497AC 00000014  4B FF FE B5 */	bl getBckName__8daKago_cFi
 /* 808497B0 00000018  7C 64 1B 78 */	mr r4, r3
 /* 808497B4 0000001C  80 7F 07 5C */	lwz r3, 0x75c(r31)
-/* 808497B8 00000020  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 808497BC 00000024  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
+/* 808497B8 00000020  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 808497BC 00000024  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 808497C0 00000028  3C A5 00 02 */	addis r5, r5, 2
 /* 808497C4 0000002C  38 C0 00 80 */	li r6, 0x80
 /* 808497C8 00000030  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 808497CC 00000034  4B FF FD 4D */	bl _unresolved
+/* 808497CC 00000034  4B 7F 2B 20 */	b getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 808497D0 00000038  80 9F 05 70 */	lwz r4, 0x570(r31)
 /* 808497D4 0000003C  80 04 00 08 */	lwz r0, 8(r4)
 /* 808497D8 00000040  7C 00 18 50 */	subf r0, r0, r3

@@ -14,9 +14,9 @@ lbl_804C8304:
 /* 804C8304 00000000  A8 1F 0B 58 */	lha r0, 0xb58(r31)
 /* 804C8308 00000004  2C 00 00 00 */	cmpwi r0, 0
 /* 804C830C 00000008  40 81 00 FC */	ble lbl_804C8408
-/* 804C8310 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 804C8314 00000010  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 804C8318 00000014  88 04 4F AD */	lbz r0, 0x4fad(r4)
+/* 804C8310 0000000C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 804C8314 00000010  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 804C8318 00000014  88 04 4F AD */	lbz r0, 0x4fad(r4)	/* effective address: 8040B16D */
 /* 804C831C 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 804C8320 0000001C  40 82 00 94 */	bne lbl_804C83B4
 /* 804C8324 00000020  4B FF FF 71 */	bl checkTimerStop__9daNbomb_cFv
@@ -28,28 +28,28 @@ lbl_804C8304:
 /* 804C833C 00000038  80 1F 0B 4C */	lwz r0, 0xb4c(r31)
 /* 804C8340 0000003C  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
 /* 804C8344 00000040  41 82 00 70 */	beq lbl_804C83B4
-/* 804C8348 00000044  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804C834C 00000048  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 804C8350 0000004C  83 C3 5D B4 */	lwz r30, 0x5db4(r3)
+/* 804C8348 00000044  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C834C 00000048  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804C8350 0000004C  83 C3 5D B4 */	lwz r30, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 804C8354 00000050  7F C3 F3 78 */	mr r3, r30
-/* 804C8358 00000054  4B FF E9 E1 */	bl _unresolved
+/* 804C8358 00000054  4B C1 B4 08 */	b getBombExplodeTime__9daAlink_cCFv
 /* 804C835C 00000058  7C 63 07 34 */	extsh r3, r3
 /* 804C8360 0000005C  A8 1F 0B 58 */	lha r0, 0xb58(r31)
 /* 804C8364 00000060  7C 00 18 00 */	cmpw r0, r3
 /* 804C8368 00000064  40 80 00 4C */	bge lbl_804C83B4
 /* 804C836C 00000068  7F C3 F3 78 */	mr r3, r30
-/* 804C8370 0000006C  4B FF E9 C9 */	bl _unresolved
+/* 804C8370 0000006C  4B C1 B3 F0 */	b getBombExplodeTime__9daAlink_cCFv
 /* 804C8374 00000070  7C 60 07 34 */	extsh r0, r3
-/* 804C8378 00000074  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804C837C 00000078  C8 23 00 00 */	lfd f1, 0x0000(r3)
+/* 804C8378 00000074  3C 60 80 4D */	lis r3, lit_4689@ha
+/* 804C837C 00000078  C8 23 C3 D8 */	lfd f1, lit_4689@l(r3)
 /* 804C8380 0000007C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 804C8384 00000080  90 01 00 0C */	stw r0, 0xc(r1)
 /* 804C8388 00000084  3C 00 43 30 */	lis r0, 0x4330
 /* 804C838C 00000088  90 01 00 08 */	stw r0, 8(r1)
 /* 804C8390 0000008C  C8 01 00 08 */	lfd f0, 8(r1)
 /* 804C8394 00000090  EC 20 08 28 */	fsubs f1, f0, f1
-/* 804C8398 00000094  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804C839C 00000098  C0 03 00 00 */	lfs f0, 0x0000(r3)
+/* 804C8398 00000094  3C 60 80 4D */	lis r3, lit_5021@ha
+/* 804C839C 00000098  C0 03 C3 E0 */	lfs f0, lit_5021@l(r3)
 /* 804C83A0 0000009C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 804C83A4 000000A0  FC 00 00 1E */	fctiwz f0, f0
 /* 804C83A8 000000A4  D8 01 00 10 */	stfd f0, 0x10(r1)
@@ -72,7 +72,7 @@ lbl_804C83E0:
 /* 804C83E4 00000004  54 00 06 F7 */	rlwinm. r0, r0, 0, 0x1b, 0x1b
 /* 804C83E8 00000008  41 82 00 20 */	beq lbl_804C8408
 /* 804C83EC 0000000C  38 7F 07 50 */	addi r3, r31, 0x750
-/* 804C83F0 00000010  4B FF E9 49 */	bl _unresolved
+/* 804C83F0 00000010  4B C0 F3 78 */	b checkIcePolygonDamage__9daAlink_cFP13cBgS_PolyInfo
 /* 804C83F4 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 804C83F8 00000018  40 82 00 10 */	bne lbl_804C8408
 lbl_804C83FC:

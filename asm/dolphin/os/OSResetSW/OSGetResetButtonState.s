@@ -128,7 +128,7 @@ lbl_8033FD98:
 /* 8033FDA4 0000000C  54 00 06 FF */	clrlwi. r0, r0, 0x1b
 /* 8033FDA8 00000010  41 82 00 A0 */	beq lbl_8033FE48
 /* 8033FDAC 00000014  1D 40 00 3C */	mulli r10, r0, 0x3c
-/* 8033FDB0 00000018  80 05 00 F8 */	lwz r0, 0xf8(r5)
+/* 8033FDB0 00000018  80 05 00 F8 */	lwz r0, 0xf8(r5)	/* effective address: 800000F8 */
 /* 8033FDB4 0000001C  81 2D 90 B4 */	lwz r9, data_80451634(r13)
 /* 8033FDB8 00000020  81 0D 90 B0 */	lwz r8, __OSStartTime(r13)
 /* 8033FDBC 00000024  54 06 F0 BE */	srwi r6, r0, 2

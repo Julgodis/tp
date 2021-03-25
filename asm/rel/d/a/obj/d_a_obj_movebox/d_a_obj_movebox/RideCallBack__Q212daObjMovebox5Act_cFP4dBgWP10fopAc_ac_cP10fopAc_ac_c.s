@@ -1,6 +1,6 @@
 lbl_8047EBEC:
-/* 8047EBEC 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8047EBF0 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 8047EBEC 00000000  3C 60 80 48 */	lis r3, M_lin5__Q212daObjMovebox5Bgc_c@ha
+/* 8047EBF0 00000004  38 63 0F 28 */	addi r3, r3, M_lin5__Q212daObjMovebox5Bgc_c@l
 /* 8047EBF4 00000008  80 04 05 AC */	lwz r0, 0x5ac(r4)
 /* 8047EBF8 0000000C  2C 00 00 02 */	cmpwi r0, 2
 /* 8047EBFC 00000010  40 82 00 F8 */	bne lbl_8047ECF4
@@ -33,21 +33,21 @@ lbl_8047EC60:
 /* 8047EC60 00000000  EC 25 01 72 */	fmuls f1, f5, f5
 /* 8047EC64 00000004  EC 06 01 B2 */	fmuls f0, f6, f6
 /* 8047EC68 00000008  EC 41 00 2A */	fadds f2, f1, f0
-/* 8047EC6C 0000000C  C0 03 01 C0 */	lfs f0, 0x1c0(r3)
+/* 8047EC6C 0000000C  C0 03 01 C0 */	lfs f0, 0x1c0(r3)	/* effective address: 804810E8 */
 /* 8047EC70 00000010  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 8047EC74 00000000  40 81 00 0C */	ble lbl_8047EC80
 /* 8047EC78 00000004  FC 00 10 34 */	frsqrte f0, f2
 /* 8047EC7C 00000008  EC 40 00 B2 */	fmuls f2, f0, f2
 lbl_8047EC80:
-/* 8047EC80 00000000  C0 23 01 D4 */	lfs f1, 0x1d4(r3)
+/* 8047EC80 00000000  C0 23 01 D4 */	lfs f1, 0x1d4(r3)	/* effective address: 804810FC */
 /* 8047EC84 00000004  C0 06 00 74 */	lfs f0, 0x74(r6)
 /* 8047EC88 00000008  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8047EC8C 0000000C  EC 41 00 28 */	fsubs f2, f1, f0
-/* 8047EC90 00000010  C0 23 07 44 */	lfs f1, 0x744(r3)
-/* 8047EC94 00000014  C0 03 07 48 */	lfs f0, 0x748(r3)
+/* 8047EC90 00000010  C0 23 07 44 */	lfs f1, 0x744(r3)	/* effective address: 8048166C */
+/* 8047EC94 00000014  C0 03 07 48 */	lfs f0, 0x748(r3)	/* effective address: 80481670 */
 /* 8047EC98 00000018  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 8047EC9C 0000001C  EC 21 00 2A */	fadds f1, f1, f0
-/* 8047ECA0 00000020  C0 03 01 C0 */	lfs f0, 0x1c0(r3)
+/* 8047ECA0 00000020  C0 03 01 C0 */	lfs f0, 0x1c0(r3)	/* effective address: 804810E8 */
 /* 8047ECA4 00000024  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8047ECA8 00000000  40 80 00 08 */	bge lbl_8047ECB0
 /* 8047ECAC 00000004  FC 20 00 90 */	fmr f1, f0

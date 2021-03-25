@@ -27,7 +27,7 @@ lbl_8032F2A0:
 /* 8032F2B4 00000014  48 00 01 24 */	b lbl_8032F3D8
 lbl_8032F2B8:
 /* 8032F2B8 00000000  A0 1C 00 14 */	lhz r0, 0x14(r28)
-/* 8032F2BC 00000004  80 BF 00 38 */	lwz r5, 0x38(r31)
+/* 8032F2BC 00000004  80 BF 00 38 */	lwz r5, 0x38(r31)	/* effective address: 80434B00 */
 /* 8032F2C0 00000008  80 65 00 C0 */	lwz r3, 0xc0(r5)
 /* 8032F2C4 0000000C  54 00 32 B2 */	rlwinm r0, r0, 6, 0xa, 0x19
 /* 8032F2C8 00000010  7F A3 02 14 */	add r29, r3, r0
@@ -96,7 +96,7 @@ lbl_8032F36C:
 /* 8032F3A4 00000038  4E 80 04 21 */	bctrl 
 /* 8032F3A8 0000003C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8032F3AC 00000040  41 82 00 28 */	beq lbl_8032F3D4
-/* 8032F3B0 00000044  93 BF 00 3C */	stw r29, 0x3c(r31)
+/* 8032F3B0 00000044  93 BF 00 3C */	stw r29, 0x3c(r31)	/* effective address: 80434B04 */
 /* 8032F3B4 00000048  80 6D 90 60 */	lwz r3, entryNum__13J3DDrawBuffer(r13)
 /* 8032F3B8 0000004C  38 03 00 01 */	addi r0, r3, 1
 /* 8032F3BC 00000050  90 0D 90 60 */	stw r0, entryNum__13J3DDrawBuffer(r13)

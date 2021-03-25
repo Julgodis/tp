@@ -19,7 +19,7 @@ lbl_801A16C0:
 /* 801A1704 00000044  88 17 03 7E */	lbz r0, 0x37e(r23)
 /* 801A1708 00000048  7C 03 00 40 */	cmplw r3, r0
 /* 801A170C 0000004C  41 82 00 10 */	beq lbl_801A171C
-/* 801A1710 00000050  C0 04 11 DC */	lfs f0, 0x11dc(r4)
+/* 801A1710 00000050  C0 04 11 DC */	lfs f0, 0x11dc(r4)	/* effective address: 8042DC30 */
 /* 801A1714 00000054  D0 17 03 70 */	stfs f0, 0x370(r23)
 /* 801A1718 00000058  48 00 00 1C */	b lbl_801A1734
 lbl_801A171C:
@@ -122,8 +122,8 @@ lbl_801A1860:
 /* 801A1888 00000028  C0 57 03 70 */	lfs f2, 0x370(r23)
 /* 801A188C 0000002C  39 01 00 78 */	addi r8, r1, 0x78
 /* 801A1890 00000030  C0 97 03 74 */	lfs f4, 0x374(r23)
-/* 801A1894 00000034  C0 69 12 10 */	lfs f3, 0x1210(r9)
-/* 801A1898 00000038  C0 09 11 FC */	lfs f0, 0x11fc(r9)
+/* 801A1894 00000034  C0 69 12 10 */	lfs f3, 0x1210(r9)	/* effective address: 8042DC64 */
+/* 801A1898 00000038  C0 09 11 FC */	lfs f0, 0x11fc(r9)	/* effective address: 8042DC50 */
 /* 801A189C 0000003C  EC 00 00 32 */	fmuls f0, f0, f0
 /* 801A18A0 00000040  EC 03 00 32 */	fmuls f0, f3, f0
 /* 801A18A4 00000044  EC 64 00 32 */	fmuls f3, f4, f0
@@ -223,7 +223,7 @@ lbl_801A19C8:
 /* 801A1A04 0000003C  C0 21 00 3C */	lfs f1, 0x3c(r1)
 /* 801A1A08 00000040  C0 57 03 70 */	lfs f2, 0x370(r23)
 /* 801A1A0C 00000044  39 01 00 68 */	addi r8, r1, 0x68
-/* 801A1A10 00000048  C0 72 12 10 */	lfs f3, 0x1210(r18)
+/* 801A1A10 00000048  C0 72 12 10 */	lfs f3, 0x1210(r18)	/* effective address: 8042DC64 */
 /* 801A1A14 0000004C  4B FF E9 2D */	bl dKy_calc_color_set__FP11_GXColorS10P15color_RGB_classP15color_RGB_classP15color_RGB_classP15color_RGB_classff11_GXColorS10f
 /* 801A1A18 00000050  4B FB DA 0D */	bl checkNowWolfEyeUp__9daPy_py_cFv
 /* 801A1A1C 00000054  2C 03 00 00 */	cmpwi r3, 0
@@ -272,7 +272,7 @@ lbl_801A1A80:
 /* 801A1ABC 0000003C  C0 21 00 3C */	lfs f1, 0x3c(r1)
 /* 801A1AC0 00000040  C0 57 03 70 */	lfs f2, 0x370(r23)
 /* 801A1AC4 00000044  39 01 00 58 */	addi r8, r1, 0x58
-/* 801A1AC8 00000048  C0 12 11 FC */	lfs f0, 0x11fc(r18)
+/* 801A1AC8 00000048  C0 12 11 FC */	lfs f0, 0x11fc(r18)	/* effective address: 8042DC50 */
 /* 801A1ACC 0000004C  EC 60 00 32 */	fmuls f3, f0, f0
 /* 801A1AD0 00000050  4B FF E8 71 */	bl dKy_calc_color_set__FP11_GXColorS10P15color_RGB_classP15color_RGB_classP15color_RGB_classP15color_RGB_classff11_GXColorS10f
 /* 801A1AD4 00000054  4B FB D9 51 */	bl checkNowWolfEyeUp__9daPy_py_cFv
@@ -323,8 +323,8 @@ lbl_801A1B44:
 /* 801A1B80 0000003C  C0 21 00 3C */	lfs f1, 0x3c(r1)
 /* 801A1B84 00000040  C0 57 03 70 */	lfs f2, 0x370(r23)
 /* 801A1B88 00000044  39 01 00 50 */	addi r8, r1, 0x50
-/* 801A1B8C 00000048  C0 72 12 10 */	lfs f3, 0x1210(r18)
-/* 801A1B90 0000004C  C0 12 11 FC */	lfs f0, 0x11fc(r18)
+/* 801A1B8C 00000048  C0 72 12 10 */	lfs f3, 0x1210(r18)	/* effective address: 8042DC64 */
+/* 801A1B90 0000004C  C0 12 11 FC */	lfs f0, 0x11fc(r18)	/* effective address: 8042DC50 */
 /* 801A1B94 00000050  EC 00 00 32 */	fmuls f0, f0, f0
 /* 801A1B98 00000054  EC 63 00 32 */	fmuls f3, f3, f0
 /* 801A1B9C 00000058  4B FF E7 A5 */	bl dKy_calc_color_set__FP11_GXColorS10P15color_RGB_classP15color_RGB_classP15color_RGB_classP15color_RGB_classff11_GXColorS10f
@@ -376,7 +376,7 @@ lbl_801A1BE4:
 /* 801A1C4C 00000068  40 82 00 14 */	bne lbl_801A1C60
 lbl_801A1C50:
 /* 801A1C50 00000000  C0 22 A2 48 */	lfs f1, lit_4505(r2)
-/* 801A1C54 00000004  C0 12 12 10 */	lfs f0, 0x1210(r18)
+/* 801A1C54 00000004  C0 12 12 10 */	lfs f0, 0x1210(r18)	/* effective address: 8042DC64 */
 /* 801A1C58 00000008  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 801A1C5C 0000000C  40 82 00 68 */	bne lbl_801A1CC4
 lbl_801A1C60:
@@ -401,7 +401,7 @@ lbl_801A1C60:
 /* 801A1CA8 00000048  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A1CAC 0000004C  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 801A1CB0 00000050  C0 E3 11 F0 */	lfs f7, 0x11f0(r3)	/* effective address: 8042DC44 */
-/* 801A1CB4 00000054  C1 10 11 F4 */	lfs f8, 0x11f4(r16)
+/* 801A1CB4 00000054  C1 10 11 F4 */	lfs f8, 0x11f4(r16)	/* effective address: 8042DC48 */
 /* 801A1CB8 00000058  4B FF BA E9 */	bl float_kankyo_color_ratio_set__Fffffffff
 /* 801A1CBC 0000005C  D0 3A 00 00 */	stfs f1, 0(r26)
 /* 801A1CC0 00000060  48 00 00 64 */	b lbl_801A1D24

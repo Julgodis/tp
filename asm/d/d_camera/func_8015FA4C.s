@@ -31,9 +31,9 @@ lbl_8015FA70:
 /* 8015FAB8 00000048  90 03 04 9C */	stw r0, 0x49c(r3)	/* effective address: 8040665C */
 /* 8015FABC 0000004C  48 00 00 10 */	b lbl_8015FACC
 lbl_8015FAC0:
-/* 8015FAC0 00000000  80 03 04 9C */	lwz r0, 0x49c(r3)
+/* 8015FAC0 00000000  80 03 04 9C */	lwz r0, 0x49c(r3)	/* effective address: 8040665C */
 /* 8015FAC4 00000004  64 00 01 00 */	oris r0, r0, 0x100
-/* 8015FAC8 00000008  90 03 04 9C */	stw r0, 0x49c(r3)
+/* 8015FAC8 00000008  90 03 04 9C */	stw r0, 0x49c(r3)	/* effective address: 8040665C */
 lbl_8015FACC:
 /* 8015FACC 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8015FAD0 00000004  7C 08 03 A6 */	mtlr r0

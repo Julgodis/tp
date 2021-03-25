@@ -10,7 +10,7 @@ lbl_801DCBBC:
 /* 801DCBDC 00000020  88 04 05 68 */	lbz r0, 0x568(r4)	/* effective address: 8042F130 */
 /* 801DCBE0 00000024  28 00 00 01 */	cmplwi r0, 1
 /* 801DCBE4 00000028  40 82 00 2C */	bne lbl_801DCC10
-/* 801DCBE8 0000002C  88 04 05 69 */	lbz r0, 0x569(r4)
+/* 801DCBE8 0000002C  88 04 05 69 */	lbz r0, 0x569(r4)	/* effective address: 8042F131 */
 /* 801DCBEC 00000030  C8 22 A8 D8 */	lfd f1, lit_4950(r2)
 /* 801DCBF0 00000034  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801DCBF4 00000038  3C 00 43 30 */	lis r0, 0x4330

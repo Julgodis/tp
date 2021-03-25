@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80BD9F90[8];
+extern void* data_80BD9F90[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_obj_cwall_cpp(); // 1
 
 // 
 // Declarations:

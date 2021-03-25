@@ -3,20 +3,20 @@ lbl_806A8790:
 /* 806A8794 00000004  7C 08 02 A6 */	mflr r0
 /* 806A8798 00000008  90 01 00 34 */	stw r0, 0x34(r1)
 /* 806A879C 0000000C  39 61 00 30 */	addi r11, r1, 0x30
-/* 806A87A0 00000010  4B FF EE B9 */	bl _unresolved
+/* 806A87A0 00000010  4B CB 9A 3C */	b _savegpr_29
 /* 806A87A4 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 806A87A8 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 806A87AC 0000001C  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
-/* 806A87B0 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 806A87B4 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 806A87B8 00000028  83 A3 5D AC */	lwz r29, 0x5dac(r3)
+/* 806A87A8 00000018  3C 60 80 6B */	lis r3, lit_3916@ha
+/* 806A87AC 0000001C  3B C3 9F 30 */	addi r30, r3, lit_3916@l
+/* 806A87B0 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806A87B4 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806A87B8 00000028  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
 /* 806A87BC 0000002C  80 7F 05 C8 */	lwz r3, 0x5c8(r31)
 /* 806A87C0 00000030  38 63 00 0C */	addi r3, r3, 0xc
-/* 806A87C4 00000034  C0 3E 00 9C */	lfs f1, 0x9c(r30)
-/* 806A87C8 00000038  4B FF EE 91 */	bl _unresolved
+/* 806A87C4 00000034  C0 3E 00 9C */	lfs f1, 0x9c(r30)	/* effective address: 806A9FCC */
+/* 806A87C8 00000038  4B C7 FC 64 */	b checkPass__12J3DFrameCtrlFf
 /* 806A87CC 0000003C  2C 03 00 00 */	cmpwi r3, 0
 /* 806A87D0 00000040  41 82 00 28 */	beq lbl_806A87F8
-/* 806A87D4 00000044  C0 1E 00 04 */	lfs f0, 4(r30)
+/* 806A87D4 00000044  C0 1E 00 04 */	lfs f0, 4(r30)	/* effective address: 806A9F34 */
 /* 806A87D8 00000048  D0 1D 04 F8 */	stfs f0, 0x4f8(r29)
 /* 806A87DC 0000004C  D0 1D 04 FC */	stfs f0, 0x4fc(r29)
 /* 806A87E0 00000050  D0 1D 05 00 */	stfs f0, 0x500(r29)
@@ -28,21 +28,21 @@ lbl_806A8790:
 lbl_806A87F8:
 /* 806A87F8 00000000  80 7F 05 C8 */	lwz r3, 0x5c8(r31)
 /* 806A87FC 00000004  38 63 00 0C */	addi r3, r3, 0xc
-/* 806A8800 00000008  C0 3E 00 A0 */	lfs f1, 0xa0(r30)
-/* 806A8804 0000000C  4B FF EE 55 */	bl _unresolved
+/* 806A8800 00000008  C0 3E 00 A0 */	lfs f1, 0xa0(r30)	/* effective address: 806A9FD0 */
+/* 806A8804 0000000C  4B C7 FC 28 */	b checkPass__12J3DFrameCtrlFf
 /* 806A8808 00000010  2C 03 00 00 */	cmpwi r3, 0
 /* 806A880C 00000014  41 82 00 58 */	beq lbl_806A8864
-/* 806A8810 00000018  C0 1E 00 04 */	lfs f0, 4(r30)
+/* 806A8810 00000018  C0 1E 00 04 */	lfs f0, 4(r30)	/* effective address: 806A9F34 */
 /* 806A8814 0000001C  D0 1D 04 F8 */	stfs f0, 0x4f8(r29)
 /* 806A8818 00000020  D0 1D 04 FC */	stfs f0, 0x4fc(r29)
 /* 806A881C 00000024  D0 1D 05 00 */	stfs f0, 0x500(r29)
 /* 806A8820 00000028  38 7F 04 D0 */	addi r3, r31, 0x4d0
 /* 806A8824 0000002C  38 9F 08 28 */	addi r4, r31, 0x828
-/* 806A8828 00000030  4B FF EE 31 */	bl _unresolved
+/* 806A8828 00000030  4B BC 83 DC */	b cLib_targetAngleY__FPC3VecPC3Vec
 /* 806A882C 00000034  7C 64 1B 78 */	mr r4, r3
 /* 806A8830 00000038  7F A3 EB 78 */	mr r3, r29
-/* 806A8834 0000003C  C0 3E 00 A0 */	lfs f1, 0xa0(r30)
-/* 806A8838 00000040  C0 5E 00 A4 */	lfs f2, 0xa4(r30)
+/* 806A8834 0000003C  C0 3E 00 A0 */	lfs f1, 0xa0(r30)	/* effective address: 806A9FD0 */
+/* 806A8838 00000040  C0 5E 00 A4 */	lfs f2, 0xa4(r30)	/* effective address: 806A9FD4 */
 /* 806A883C 00000044  38 A0 00 02 */	li r5, 2
 /* 806A8840 00000048  38 C0 00 00 */	li r6, 0
 /* 806A8844 0000004C  38 E0 00 00 */	li r7, 0
@@ -56,35 +56,35 @@ lbl_806A87F8:
 lbl_806A8864:
 /* 806A8864 00000000  80 7F 05 C8 */	lwz r3, 0x5c8(r31)
 /* 806A8868 00000004  38 63 00 0C */	addi r3, r3, 0xc
-/* 806A886C 00000008  C0 3E 00 A8 */	lfs f1, 0xa8(r30)
-/* 806A8870 0000000C  4B FF ED E9 */	bl _unresolved
+/* 806A886C 00000008  C0 3E 00 A8 */	lfs f1, 0xa8(r30)	/* effective address: 806A9FD8 */
+/* 806A8870 0000000C  4B C7 FB BC */	b checkPass__12J3DFrameCtrlFf
 /* 806A8874 00000010  2C 03 00 00 */	cmpwi r3, 0
 /* 806A8878 00000014  41 82 00 38 */	beq lbl_806A88B0
-/* 806A887C 00000018  C0 3E 00 04 */	lfs f1, 4(r30)
+/* 806A887C 00000018  C0 3E 00 04 */	lfs f1, 4(r30)	/* effective address: 806A9F34 */
 /* 806A8880 0000001C  D0 21 00 08 */	stfs f1, 8(r1)
-/* 806A8884 00000020  C0 1E 00 08 */	lfs f0, 8(r30)
+/* 806A8884 00000020  C0 1E 00 08 */	lfs f0, 8(r30)	/* effective address: 806A9F38 */
 /* 806A8888 00000024  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 806A888C 00000028  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 806A8890 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 806A8894 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 806A8890 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806A8894 00000030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806A8898 00000034  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 806A889C 00000038  38 80 00 03 */	li r4, 3
 /* 806A88A0 0000003C  38 A0 00 1F */	li r5, 0x1f
 /* 806A88A4 00000040  38 C1 00 08 */	addi r6, r1, 8
-/* 806A88A8 00000044  4B FF ED B1 */	bl _unresolved
+/* 806A88A8 00000044  4B 9C 72 68 */	b StartQuake__12dVibration_cFii4cXyz
 /* 806A88AC 00000048  48 00 00 74 */	b lbl_806A8920
 lbl_806A88B0:
 /* 806A88B0 00000000  80 7F 05 C8 */	lwz r3, 0x5c8(r31)
 /* 806A88B4 00000004  38 63 00 0C */	addi r3, r3, 0xc
-/* 806A88B8 00000008  C0 3E 00 AC */	lfs f1, 0xac(r30)
-/* 806A88BC 0000000C  4B FF ED 9D */	bl _unresolved
+/* 806A88B8 00000008  C0 3E 00 AC */	lfs f1, 0xac(r30)	/* effective address: 806A9FDC */
+/* 806A88BC 0000000C  4B C7 FB 70 */	b checkPass__12J3DFrameCtrlFf
 /* 806A88C0 00000010  2C 03 00 00 */	cmpwi r3, 0
 /* 806A88C4 00000014  41 82 00 1C */	beq lbl_806A88E0
-/* 806A88C8 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 806A88CC 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 806A88C8 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806A88CC 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806A88D0 00000020  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 806A88D4 00000024  38 80 00 1F */	li r4, 0x1f
-/* 806A88D8 00000028  4B FF ED 81 */	bl _unresolved
+/* 806A88D8 00000028  4B 9C 74 BC */	b StopQuake__12dVibration_cFi
 /* 806A88DC 0000002C  48 00 00 44 */	b lbl_806A8920
 lbl_806A88E0:
 /* 806A88E0 00000000  80 7F 05 C8 */	lwz r3, 0x5c8(r31)
@@ -92,7 +92,7 @@ lbl_806A88E0:
 /* 806A88E8 00000008  88 03 00 11 */	lbz r0, 0x11(r3)
 /* 806A88EC 0000000C  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 806A88F0 00000010  40 82 00 18 */	bne lbl_806A8908
-/* 806A88F4 00000014  C0 3E 00 04 */	lfs f1, 4(r30)
+/* 806A88F4 00000014  C0 3E 00 04 */	lfs f1, 4(r30)	/* effective address: 806A9F34 */
 /* 806A88F8 00000018  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 806A88FC 0000001C  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 806A8900 00000020  41 82 00 08 */	beq lbl_806A8908
@@ -106,7 +106,7 @@ lbl_806A8908:
 /* 806A891C 00000014  98 1F 05 AE */	stb r0, 0x5ae(r31)
 lbl_806A8920:
 /* 806A8920 00000000  39 61 00 30 */	addi r11, r1, 0x30
-/* 806A8924 00000004  4B FF ED 35 */	bl _unresolved
+/* 806A8924 00000004  4B CB 99 04 */	b _restgpr_29
 /* 806A8928 00000008  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 806A892C 0000000C  7C 08 03 A6 */	mtlr r0
 /* 806A8930 00000010  38 21 00 30 */	addi r1, r1, 0x30

@@ -16,7 +16,7 @@ lbl_80BA76D4:
 /* 80BA770C 00000038  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 80BA7710 0000003C  38 E0 00 00 */	li r7, 0
 /* 80BA7714 00000040  39 00 00 01 */	li r8, 1
-/* 80BA7718 00000044  4B FF F7 A1 */	bl _unresolved
+/* 80BA7718 00000044  4B 47 3F 64 */	b fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
 /* 80BA771C 00000048  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 80BA7720 0000004C  60 00 00 02 */	ori r0, r0, 2
 /* 80BA7724 00000050  B0 1F 00 FA */	sth r0, 0xfa(r31)

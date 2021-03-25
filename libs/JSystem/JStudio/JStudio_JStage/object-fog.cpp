@@ -84,8 +84,6 @@ extern "C" void adaptor_do_data__Q214JStudio_JStage12TAdaptor_fogFPCvUlPCvUl(); 
 extern "C" void func_8028C8A4(); // 1
 extern "C" void func_8028CAC0(); // 1
 extern "C" void func_8028CB20(); // 1
-extern "C" extern u8 lit_849[12];
-extern "C" extern u8 lit_850[12];
 extern "C" extern u8 lit_853[12];
 extern "C" extern u8 lit_854[12];
 
@@ -132,13 +130,13 @@ SECTION_DATA static u8 lit_845[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x44, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C59B8-803C59C4 000C+00 s=0 e=0 z=0  None .data      @849                                                         */
-SECTION_DATA u8 lit_849[12] = {
+/* 803C59B8-803C59C4 000C+00 s=1 e=0 z=0  None .data      @849                                                         */
+SECTION_DATA static u8 lit_849[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x50, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C59C4-803C59D0 000C+00 s=0 e=0 z=0  None .data      @850                                                         */
-SECTION_DATA u8 lit_850[12] = {
+/* 803C59C4-803C59D0 000C+00 s=1 e=0 z=0  None .data      @850                                                         */
+SECTION_DATA static u8 lit_850[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x4C, 0x00, 0x00, 0x00, 0x00,
 };
 

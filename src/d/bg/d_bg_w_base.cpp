@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct fopAc_ac_c {
 };
 
 struct dBgW_Base {

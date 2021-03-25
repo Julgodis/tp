@@ -9,8 +9,8 @@ lbl_80015A90:
 /* 80015AAC 0000001C  4E 80 04 21 */	bctrl 
 /* 80015AB0 00000020  2C 03 00 01 */	cmpwi r3, 1
 /* 80015AB4 00000024  41 82 00 14 */	beq lbl_80015AC8
-/* 80015AB8 00000028  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 80015ABC 0000002C  38 63 41 A8 */	addi r3, r3, stringBase0@l
+/* 80015AB8 00000028  3C 60 80 37 */	lis r3, m_Do_m_Do_dvd_thread__stringBase0@ha
+/* 80015ABC 0000002C  38 63 41 A8 */	addi r3, r3, m_Do_m_Do_dvd_thread__stringBase0@l
 /* 80015AC0 00000030  4C C6 31 82 */	crclr 6
 /* 80015AC4 00000034  4B FF 11 49 */	bl OSReport_Error
 lbl_80015AC8:

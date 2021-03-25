@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80657910[8];
+extern void* data_80657910[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_coach_2D_cpp(); // 1
 
 // 
 // Declarations:

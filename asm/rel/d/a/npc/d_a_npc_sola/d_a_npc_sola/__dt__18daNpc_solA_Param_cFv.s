@@ -5,12 +5,12 @@ lbl_80AEF094:
 /* 80AEF0A0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80AEF0A4 00000010  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80AEF0A8 00000014  41 82 00 1C */	beq lbl_80AEF0C4
-/* 80AEF0AC 00000018  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 80AEF0B0 0000001C  38 05 00 00 */	addi r0, r5, 0x0000 /* 0x00000000@l */
+/* 80AEF0AC 00000018  3C A0 80 AF */	lis r5, __vt__18daNpc_solA_Param_c@ha
+/* 80AEF0B0 0000001C  38 05 F4 6C */	addi r0, r5, __vt__18daNpc_solA_Param_c@l
 /* 80AEF0B4 00000020  90 1F 00 00 */	stw r0, 0(r31)
 /* 80AEF0B8 00000024  7C 80 07 35 */	extsh. r0, r4
 /* 80AEF0BC 00000028  40 81 00 08 */	ble lbl_80AEF0C4
-/* 80AEF0C0 0000002C  4B FF DA 59 */	bl _unresolved
+/* 80AEF0C0 0000002C  4B 7D FC 7C */	b __dl__FPv
 lbl_80AEF0C4:
 /* 80AEF0C4 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80AEF0C8 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

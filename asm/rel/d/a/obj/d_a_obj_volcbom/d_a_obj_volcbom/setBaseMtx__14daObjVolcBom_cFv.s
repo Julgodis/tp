@@ -5,23 +5,23 @@ lbl_80D24238:
 /* 80D24244 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D24248 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80D2424C 00000014  38 7F 04 D0 */	addi r3, r31, 0x4d0
-/* 80D24250 00000018  4B FF FF 29 */	bl _unresolved
+/* 80D24250 00000018  4B 2E 8B 14 */	b transS__14mDoMtx_stack_cFRC4cXyz
 /* 80D24254 0000001C  38 7F 04 E4 */	addi r3, r31, 0x4e4
-/* 80D24258 00000020  4B FF FF 21 */	bl _unresolved
-/* 80D2425C 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D24260 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D24258 00000020  4B 2E 8C EC */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
+/* 80D2425C 00000024  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80D24260 00000028  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80D24264 0000002C  80 9F 05 A8 */	lwz r4, 0x5a8(r31)
 /* 80D24268 00000030  38 84 00 24 */	addi r4, r4, 0x24
-/* 80D2426C 00000034  4B FF FF 0D */	bl _unresolved
-/* 80D24270 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D24274 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D2426C 00000034  4B 62 22 44 */	b PSMTXCopy
+/* 80D24270 00000038  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80D24274 0000003C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80D24278 00000040  38 9F 05 6C */	addi r4, r31, 0x56c
-/* 80D2427C 00000044  4B FF FE FD */	bl _unresolved
-/* 80D24280 00000048  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D24284 0000004C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D2427C 00000044  4B 62 22 34 */	b PSMTXCopy
+/* 80D24280 00000048  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80D24284 0000004C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80D24288 00000050  80 9F 05 B8 */	lwz r4, 0x5b8(r31)
 /* 80D2428C 00000054  38 84 00 24 */	addi r4, r4, 0x24
-/* 80D24290 00000058  4B FF FE E9 */	bl _unresolved
+/* 80D24290 00000058  4B 62 22 20 */	b PSMTXCopy
 /* 80D24294 0000005C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80D24298 00000060  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80D2429C 00000064  7C 08 03 A6 */	mtlr r0

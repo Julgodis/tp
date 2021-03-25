@@ -2,7 +2,7 @@ lbl_80C67BB4:
 /* 80C67BB4 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80C67BB8 00000004  7C 08 02 A6 */	mflr r0
 /* 80C67BBC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80C67BC0 0000000C  4B FF FC 19 */	bl _unresolved
+/* 80C67BC0 0000000C  4B 3B 20 BC */	b fopAcM_delete__FP10fopAc_ac_c
 /* 80C67BC4 00000010  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80C67BC8 00000014  7C 08 03 A6 */	mtlr r0
 /* 80C67BCC 00000018  38 21 00 10 */	addi r1, r1, 0x10

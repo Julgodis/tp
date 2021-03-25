@@ -9,8 +9,8 @@ lbl_802D1C74:
 /* 802D1C90 00000008  7C 7A 1B 78 */	mr r26, r3
 /* 802D1C94 0000000C  7C 9B 23 78 */	mr r27, r4
 /* 802D1C98 00000010  7C BC 2B 79 */	or. r28, r5, r5
-/* 802D1C9C 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802D1CA0 00000018  38 63 CF A8 */	addi r3, r3, stringBase0@l
+/* 802D1C9C 00000014  3C 60 80 3A */	lis r3, JKRThread__stringBase0@ha
+/* 802D1CA0 00000018  38 63 CF A8 */	addi r3, r3, JKRThread__stringBase0@l
 /* 802D1CA4 0000001C  3B 23 00 5D */	addi r25, r3, 0x5d
 /* 802D1CA8 00000020  3B A3 00 7F */	addi r29, r3, 0x7f
 /* 802D1CAC 00000024  41 82 00 34 */	beq lbl_802D1CE0
@@ -31,8 +31,8 @@ lbl_802D1CE0:
 /* 802D1CE4 00000004  83 C3 42 8C */	lwz r30, sThreadList__9JKRThread@l(r3)
 /* 802D1CE8 00000008  48 00 01 04 */	b lbl_802D1DEC
 lbl_802D1CEC:
-/* 802D1CEC 00000000  83 3E 00 00 */	lwz r25, 0(r30)
-/* 802D1CF0 00000004  88 19 00 60 */	lbz r0, 0x60(r25)
+/* 802D1CEC 00000000  83 3E 00 00 */	lwz r25, 0(r30)	/* effective address: 8043428C */
+/* 802D1CF0 00000004  88 19 00 60 */	lbz r0, 0x60(r25)	/* effective address: 8039D065 */
 /* 802D1CF4 00000008  28 00 00 00 */	cmplwi r0, 0
 /* 802D1CF8 0000000C  41 82 00 F0 */	beq lbl_802D1DE8
 /* 802D1CFC 00000010  3B A0 00 00 */	li r29, 0
@@ -42,7 +42,7 @@ lbl_802D1CEC:
 /* 802D1D0C 00000020  48 00 00 20 */	b lbl_802D1D2C
 lbl_802D1D10:
 /* 802D1D10 00000000  80 65 00 00 */	lwz r3, 0(r5)
-/* 802D1D14 00000004  80 19 00 70 */	lwz r0, 0x70(r25)
+/* 802D1D14 00000004  80 19 00 70 */	lwz r0, 0x70(r25)	/* effective address: 8039D075 */
 /* 802D1D18 00000008  7C 03 00 00 */	cmpw r3, r0
 /* 802D1D1C 0000000C  40 82 00 0C */	bne lbl_802D1D28
 /* 802D1D20 00000010  7C 9D 23 78 */	mr r29, r4
@@ -57,19 +57,19 @@ lbl_802D1D38:
 /* 802D1D38 00000000  28 1D 00 00 */	cmplwi r29, 0
 /* 802D1D3C 00000004  40 82 00 24 */	bne lbl_802D1D60
 /* 802D1D40 00000008  38 61 00 08 */	addi r3, r1, 8
-/* 802D1D44 0000000C  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802D1D48 00000010  38 84 CF A8 */	addi r4, r4, stringBase0@l
+/* 802D1D44 0000000C  3C 80 80 3A */	lis r4, JKRThread__stringBase0@ha
+/* 802D1D48 00000010  38 84 CF A8 */	addi r4, r4, JKRThread__stringBase0@l
 /* 802D1D4C 00000014  38 84 00 A7 */	addi r4, r4, 0xa7
-/* 802D1D50 00000018  80 B9 00 70 */	lwz r5, 0x70(r25)
+/* 802D1D50 00000018  80 B9 00 70 */	lwz r5, 0x70(r25)	/* effective address: 8039D075 */
 /* 802D1D54 0000001C  4C C6 31 82 */	crclr 6
 /* 802D1D58 00000020  48 09 47 85 */	bl sprintf
 /* 802D1D5C 00000024  3B A1 00 08 */	addi r29, r1, 8
 lbl_802D1D60:
-/* 802D1D60 00000000  83 F9 00 68 */	lwz r31, 0x68(r25)
+/* 802D1D60 00000000  83 F9 00 68 */	lwz r31, 0x68(r25)	/* effective address: 8039D06D */
 /* 802D1D64 00000004  80 7A 00 18 */	lwz r3, 0x18(r26)
 /* 802D1D68 00000008  80 9A 00 1C */	lwz r4, 0x1c(r26)
 /* 802D1D6C 0000000C  48 09 09 51 */	bl __cvt_sll_flt
-/* 802D1D70 00000010  80 19 00 64 */	lwz r0, 0x64(r25)
+/* 802D1D70 00000010  80 19 00 64 */	lwz r0, 0x64(r25)	/* effective address: 8039D069 */
 /* 802D1D74 00000014  C8 42 C5 C8 */	lfd f2, lit_937(r2)
 /* 802D1D78 00000018  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 802D1D7C 0000001C  3C 00 43 30 */	lis r0, 0x4330
@@ -91,8 +91,8 @@ lbl_802D1D60:
 /* 802D1DBC 0000005C  28 1C 00 00 */	cmplwi r28, 0
 /* 802D1DC0 00000060  41 82 00 28 */	beq lbl_802D1DE8
 /* 802D1DC4 00000064  7F 83 E3 78 */	mr r3, r28
-/* 802D1DC8 00000068  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802D1DCC 0000006C  38 84 CF A8 */	addi r4, r4, stringBase0@l
+/* 802D1DC8 00000068  3C 80 80 3A */	lis r4, JKRThread__stringBase0@ha
+/* 802D1DCC 0000006C  38 84 CF A8 */	addi r4, r4, JKRThread__stringBase0@l
 /* 802D1DD0 00000070  38 84 00 AA */	addi r4, r4, 0xaa
 /* 802D1DD4 00000074  7F A5 EB 78 */	mr r5, r29
 /* 802D1DD8 00000078  7F E6 FB 78 */	mr r6, r31
@@ -100,7 +100,7 @@ lbl_802D1D60:
 /* 802D1DE0 00000080  4C C6 31 82 */	crclr 6
 /* 802D1DE4 00000084  48 01 5D D5 */	bl print_f__10JUTConsoleFPCce
 lbl_802D1DE8:
-/* 802D1DE8 00000000  83 DE 00 0C */	lwz r30, 0xc(r30)
+/* 802D1DE8 00000000  83 DE 00 0C */	lwz r30, 0xc(r30)	/* effective address: 80434298 */
 lbl_802D1DEC:
 /* 802D1DEC 00000000  28 1E 00 00 */	cmplwi r30, 0
 /* 802D1DF0 00000004  40 82 FE FC */	bne lbl_802D1CEC

@@ -72,8 +72,8 @@ lbl_802D7998:
 /* 802D7A24 0000008C  80 61 00 08 */	lwz r3, 8(r1)
 /* 802D7A28 00000090  48 00 00 24 */	b lbl_802D7A4C
 lbl_802D7A2C:
-/* 802D7A2C 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802D7A30 00000004  38 63 D1 88 */	addi r3, r3, stringBase0@l
+/* 802D7A2C 00000000  3C 60 80 3A */	lis r3, JKRAramArchive__stringBase0@ha
+/* 802D7A30 00000004  38 63 D1 88 */	addi r3, r3, JKRAramArchive__stringBase0@l
 /* 802D7A34 00000008  38 80 02 C9 */	li r4, 0x2c9
 /* 802D7A38 0000000C  38 A3 00 13 */	addi r5, r3, 0x13
 /* 802D7A3C 00000010  38 C3 00 16 */	addi r6, r3, 0x16

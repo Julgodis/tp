@@ -498,8 +498,8 @@ lbl_80090C74:
 lbl_80090C84:
 /* 80090C84 00000000  7F 43 D3 78 */	mr r3, r26
 /* 80090C88 00000004  38 9A 03 F4 */	addi r4, r26, 0x3f4
-/* 80090C8C 00000008  3C A0 80 38 */	lis r5, stringBase0@ha
-/* 80090C90 0000000C  38 A5 AA F4 */	addi r5, r5, stringBase0@l
+/* 80090C8C 00000008  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
+/* 80090C90 0000000C  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
 /* 80090C94 00000010  38 A5 01 7B */	addi r5, r5, 0x17b
 /* 80090C98 00000014  38 C0 00 00 */	li r6, 0
 /* 80090C9C 00000018  4B FF 83 F1 */	bl getEvIntData__9dCamera_cFPiPci

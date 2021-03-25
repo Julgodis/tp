@@ -131,8 +131,8 @@ lbl_801A9004:
 /* 801A9004 00000000  C3 E2 A2 48 */	lfs f31, lit_4505(r2)
 lbl_801A9008:
 /* 801A9008 00000000  80 61 00 E8 */	lwz r3, 0xe8(r1)
-/* 801A900C 00000004  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801A9010 00000008  38 84 4C 6C */	addi r4, r4, stringBase0@l
+/* 801A900C 00000004  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
+/* 801A9010 00000008  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
 /* 801A9014 0000000C  38 84 00 27 */	addi r4, r4, 0x27
 /* 801A9018 00000010  48 1B F9 7D */	bl strcmp
 /* 801A901C 00000014  2C 03 00 00 */	cmpwi r3, 0

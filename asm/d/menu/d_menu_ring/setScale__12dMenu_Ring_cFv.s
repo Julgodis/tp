@@ -35,7 +35,7 @@ lbl_801EC27C:
 /* 801EC280 00000004  48 00 01 31 */	bl setNameString__12dMenu_Ring_cFUl
 /* 801EC284 00000008  7F C3 F3 78 */	mr r3, r30
 /* 801EC288 0000000C  7F E4 FB 78 */	mr r4, r31
-/* 801EC28C 00000010  C0 3C 00 1C */	lfs f1, 0x1c(r28)
+/* 801EC28C 00000010  C0 3C 00 1C */	lfs f1, 0x1c(r28)	/* effective address: 8042FB18 */
 /* 801EC290 00000014  4B FF F7 A9 */	bl setItemScale__12dMenu_Ring_cFif
 /* 801EC294 00000018  3B 40 00 00 */	li r26, 0
 lbl_801EC298:
@@ -44,13 +44,13 @@ lbl_801EC298:
 /* 801EC2A0 00000008  40 82 00 18 */	bne lbl_801EC2B8
 /* 801EC2A4 0000000C  7F C3 F3 78 */	mr r3, r30
 /* 801EC2A8 00000010  7F 44 D3 78 */	mr r4, r26
-/* 801EC2AC 00000014  C0 3C 00 18 */	lfs f1, 0x18(r28)
+/* 801EC2AC 00000014  C0 3C 00 18 */	lfs f1, 0x18(r28)	/* effective address: 8042FB14 */
 /* 801EC2B0 00000018  4B FF F8 09 */	bl setButtonScale__12dMenu_Ring_cFif
 /* 801EC2B4 0000001C  48 00 00 14 */	b lbl_801EC2C8
 lbl_801EC2B8:
 /* 801EC2B8 00000000  7F C3 F3 78 */	mr r3, r30
 /* 801EC2BC 00000004  7F 44 D3 78 */	mr r4, r26
-/* 801EC2C0 00000008  C0 3C 00 20 */	lfs f1, 0x20(r28)
+/* 801EC2C0 00000008  C0 3C 00 20 */	lfs f1, 0x20(r28)	/* effective address: 8042FB1C */
 /* 801EC2C4 0000000C  4B FF F7 F5 */	bl setButtonScale__12dMenu_Ring_cFif
 lbl_801EC2C8:
 /* 801EC2C8 00000000  3B 5A 00 01 */	addi r26, r26, 1
@@ -76,7 +76,7 @@ lbl_801EC300:
 /* 801EC310 00000010  4B E4 6D 21 */	bl getItem__17dSv_player_item_cCFib
 /* 801EC314 00000014  54 63 06 3E */	clrlwi r3, r3, 0x18
 /* 801EC318 00000018  38 83 01 65 */	addi r4, r3, 0x165
-/* 801EC31C 0000001C  88 BD 00 DC */	lbz r5, 0xdc(r29)
+/* 801EC31C 0000001C  88 BD 00 DC */	lbz r5, 0xdc(r29)	/* effective address: 80430264 */
 /* 801EC320 00000020  28 05 00 FF */	cmplwi r5, 0xff
 /* 801EC324 00000024  41 82 00 18 */	beq lbl_801EC33C
 /* 801EC328 00000028  7C 7E D0 AE */	lbzx r3, r30, r26
@@ -89,20 +89,20 @@ lbl_801EC33C:
 /* 801EC340 00000004  48 00 00 71 */	bl setNameString__12dMenu_Ring_cFUl
 /* 801EC344 00000008  7F C3 F3 78 */	mr r3, r30
 /* 801EC348 0000000C  7F E4 FB 78 */	mr r4, r31
-/* 801EC34C 00000010  C0 3C 00 14 */	lfs f1, 0x14(r28)
+/* 801EC34C 00000010  C0 3C 00 14 */	lfs f1, 0x14(r28)	/* effective address: 8042FB10 */
 /* 801EC350 00000014  4B FF F6 E9 */	bl setItemScale__12dMenu_Ring_cFif
 /* 801EC354 00000018  48 00 00 14 */	b lbl_801EC368
 lbl_801EC358:
 /* 801EC358 00000000  7F C3 F3 78 */	mr r3, r30
 /* 801EC35C 00000004  7F E4 FB 78 */	mr r4, r31
-/* 801EC360 00000008  C0 3C 00 1C */	lfs f1, 0x1c(r28)
+/* 801EC360 00000008  C0 3C 00 1C */	lfs f1, 0x1c(r28)	/* effective address: 8042FB18 */
 /* 801EC364 0000000C  4B FF F6 D5 */	bl setItemScale__12dMenu_Ring_cFif
 lbl_801EC368:
 /* 801EC368 00000000  3B 40 00 00 */	li r26, 0
 lbl_801EC36C:
 /* 801EC36C 00000000  7F C3 F3 78 */	mr r3, r30
 /* 801EC370 00000004  7F 44 D3 78 */	mr r4, r26
-/* 801EC374 00000008  C0 3C 00 20 */	lfs f1, 0x20(r28)
+/* 801EC374 00000008  C0 3C 00 20 */	lfs f1, 0x20(r28)	/* effective address: 8042FB1C */
 /* 801EC378 0000000C  4B FF F7 41 */	bl setButtonScale__12dMenu_Ring_cFif
 /* 801EC37C 00000010  3B 5A 00 01 */	addi r26, r26, 1
 /* 801EC380 00000014  2C 1A 00 02 */	cmpwi r26, 2

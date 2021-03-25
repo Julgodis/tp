@@ -11,15 +11,15 @@ lbl_80046480:
 /* 800464A4 00000024  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 800464A8 00000028  38 7F 4E C4 */	addi r3, r31, 0x4ec4
 /* 800464AC 0000002C  4B FD DE D9 */	bl getStatusRoomDt__20dStage_roomControl_cFi
-/* 800464B0 00000030  81 83 00 00 */	lwz r12, 0(r3)
+/* 800464B0 00000030  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 8040B084 */
 /* 800464B4 00000034  81 8C 00 FC */	lwz r12, 0xfc(r12)
 /* 800464B8 00000038  7D 89 03 A6 */	mtctr r12
 /* 800464BC 0000003C  4E 80 04 21 */	bctrl 
 /* 800464C0 00000040  80 9E 00 00 */	lwz r4, 0(r30)
 /* 800464C4 00000044  2C 04 FF FF */	cmpwi r4, -1
 /* 800464C8 00000048  40 82 00 14 */	bne lbl_800464DC
-/* 800464CC 0000004C  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 800464D0 00000050  38 63 9F 60 */	addi r3, r3, stringBase0@l
+/* 800464CC 0000004C  3C 60 80 38 */	lis r3, d_event_d_event_manager__stringBase0@ha
+/* 800464D0 00000050  38 63 9F 60 */	addi r3, r3, d_event_d_event_manager__stringBase0@l
 /* 800464D4 00000054  38 63 00 D6 */	addi r3, r3, 0xd6
 /* 800464D8 00000058  48 00 00 F8 */	b lbl_800465D0
 lbl_800464DC:
@@ -30,7 +30,7 @@ lbl_800464DC:
 /* 800464EC 00000010  2C 04 00 CB */	cmpwi r4, 0xcb
 /* 800464F0 00000014  40 82 00 1C */	bne lbl_8004650C
 /* 800464F4 00000018  38 7F 4E 20 */	addi r3, r31, 0x4e20
-/* 800464F8 0000001C  81 9F 4E 20 */	lwz r12, 0x4e20(r31)
+/* 800464F8 0000001C  81 9F 4E 20 */	lwz r12, 0x4e20(r31)	/* effective address: 8040AFE0 */
 /* 800464FC 00000020  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 80046500 00000024  7D 89 03 A6 */	mtctr r12
 /* 80046504 00000028  4E 80 04 21 */	bctrl 
@@ -57,23 +57,23 @@ lbl_80046530:
 lbl_8004654C:
 /* 8004654C 00000000  28 03 00 00 */	cmplwi r3, 0
 /* 80046550 00000004  40 82 00 14 */	bne lbl_80046564
-/* 80046554 00000008  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 80046558 0000000C  38 63 9F 60 */	addi r3, r3, stringBase0@l
+/* 80046554 00000008  3C 60 80 38 */	lis r3, d_event_d_event_manager__stringBase0@ha
+/* 80046558 0000000C  38 63 9F 60 */	addi r3, r3, d_event_d_event_manager__stringBase0@l
 /* 8004655C 00000010  38 63 00 E4 */	addi r3, r3, 0xe4
 /* 80046560 00000014  48 00 00 70 */	b lbl_800465D0
 lbl_80046564:
 /* 80046564 00000000  2C 04 00 00 */	cmpwi r4, 0
 /* 80046568 00000004  41 80 00 10 */	blt lbl_80046578
-/* 8004656C 00000008  80 03 00 00 */	lwz r0, 0(r3)
+/* 8004656C 00000008  80 03 00 00 */	lwz r0, 0(r3)	/* effective address: 8037A044 */
 /* 80046570 0000000C  7C 04 00 00 */	cmpw r4, r0
 /* 80046574 00000010  40 81 00 14 */	ble lbl_80046588
 lbl_80046578:
-/* 80046578 00000000  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 8004657C 00000004  38 63 9F 60 */	addi r3, r3, stringBase0@l
+/* 80046578 00000000  3C 60 80 38 */	lis r3, d_event_d_event_manager__stringBase0@ha
+/* 8004657C 00000004  38 63 9F 60 */	addi r3, r3, d_event_d_event_manager__stringBase0@l
 /* 80046580 00000008  38 63 00 F0 */	addi r3, r3, 0xf0
 /* 80046584 0000000C  48 00 00 4C */	b lbl_800465D0
 lbl_80046588:
-/* 80046588 00000000  80 63 00 04 */	lwz r3, 4(r3)
+/* 80046588 00000000  80 63 00 04 */	lwz r3, 4(r3)	/* effective address: 8037A054 */
 /* 8004658C 00000004  1C 04 00 1C */	mulli r0, r4, 0x1c
 /* 80046590 00000008  7C 63 02 14 */	add r3, r3, r0
 /* 80046594 0000000C  88 03 00 00 */	lbz r0, 0(r3)
@@ -85,13 +85,13 @@ lbl_80046588:
 /* 800465AC 00000024  38 63 00 0D */	addi r3, r3, 0xd
 /* 800465B0 00000028  48 00 00 20 */	b lbl_800465D0
 lbl_800465B4:
-/* 800465B4 00000000  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 800465B8 00000004  38 63 9F 60 */	addi r3, r3, stringBase0@l
+/* 800465B4 00000000  3C 60 80 38 */	lis r3, d_event_d_event_manager__stringBase0@ha
+/* 800465B8 00000004  38 63 9F 60 */	addi r3, r3, d_event_d_event_manager__stringBase0@l
 /* 800465BC 00000008  38 63 00 FF */	addi r3, r3, 0xff
 /* 800465C0 0000000C  48 00 00 10 */	b lbl_800465D0
 lbl_800465C4:
-/* 800465C4 00000000  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 800465C8 00000004  38 63 9F 60 */	addi r3, r3, stringBase0@l
+/* 800465C4 00000000  3C 60 80 38 */	lis r3, d_event_d_event_manager__stringBase0@ha
+/* 800465C8 00000004  38 63 9F 60 */	addi r3, r3, d_event_d_event_manager__stringBase0@l
 /* 800465CC 00000008  38 63 01 11 */	addi r3, r3, 0x111
 lbl_800465D0:
 /* 800465D0 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

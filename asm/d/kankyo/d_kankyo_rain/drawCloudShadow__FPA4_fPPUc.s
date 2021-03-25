@@ -228,7 +228,7 @@ lbl_800695DC:
 /* 8006988C 000002B0  39 00 00 00 */	li r8, 0
 /* 80069890 000002B4  48 2F 5A 85 */	bl GXSetTevAlphaOp
 /* 80069894 000002B8  48 13 ED 99 */	bl dKy_GxFog_set__Fv
-/* 80069898 000002BC  88 1F 0E B5 */	lbz r0, 0xeb5(r31)
+/* 80069898 000002BC  88 1F 0E B5 */	lbz r0, 0xeb5(r31)	/* effective address: 8042D909 */
 /* 8006989C 000002C0  28 00 00 03 */	cmplwi r0, 3
 /* 800698A0 000002C4  41 82 00 24 */	beq lbl_800698C4
 /* 800698A4 000002C8  28 00 00 04 */	cmplwi r0, 4
@@ -504,7 +504,7 @@ lbl_80069988:
 /* 80069CC8 00000340  38 60 00 00 */	li r3, 0
 /* 80069CCC 00000344  48 2F 54 09 */	bl GXSetNumIndStages
 lbl_80069CD0:
-/* 80069CD0 00000000  88 1F 0E B5 */	lbz r0, 0xeb5(r31)
+/* 80069CD0 00000000  88 1F 0E B5 */	lbz r0, 0xeb5(r31)	/* effective address: 8042D909 */
 /* 80069CD4 00000004  28 00 00 07 */	cmplwi r0, 7
 /* 80069CD8 00000008  41 82 00 1C */	beq lbl_80069CF4
 /* 80069CDC 0000000C  28 00 00 08 */	cmplwi r0, 8
@@ -634,7 +634,7 @@ lbl_80069D10:
 /* 80069EC0 000001A0  C0 01 00 4C */	lfs f0, 0x4c(r1)
 /* 80069EC4 000001A4  EC 01 00 2A */	fadds f0, f1, f0
 /* 80069EC8 000001A8  D0 01 00 C8 */	stfs f0, 0xc8(r1)
-/* 80069ECC 000001AC  88 1F 0E B5 */	lbz r0, 0xeb5(r31)
+/* 80069ECC 000001AC  88 1F 0E B5 */	lbz r0, 0xeb5(r31)	/* effective address: 8042D909 */
 /* 80069ED0 000001B0  28 00 00 32 */	cmplwi r0, 0x32
 /* 80069ED4 000001B4  40 80 00 A4 */	bge lbl_80069F78
 /* 80069ED8 000001B8  38 60 00 80 */	li r3, 0x80

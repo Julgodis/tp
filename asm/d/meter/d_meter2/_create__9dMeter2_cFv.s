@@ -35,8 +35,8 @@ lbl_8021EA84:
 /* 8021EA90 0000000C  80 7F 01 00 */	lwz r3, 0x100(r31)
 /* 8021EA94 00000010  48 0A FC F1 */	bl getTotalFreeSize__7JKRHeapFv
 /* 8021EA98 00000014  38 7B 4E 00 */	addi r3, r27, 0x4e00
-/* 8021EA9C 00000018  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8021EAA0 0000001C  38 84 93 38 */	addi r4, r4, stringBase0@l
+/* 8021EA9C 00000018  3C 80 80 3A */	lis r4, d_meter_d_meter2__stringBase0@ha
+/* 8021EAA0 0000001C  38 84 93 38 */	addi r4, r4, d_meter_d_meter2__stringBase0@l
 /* 8021EAA4 00000020  48 14 9E F1 */	bl strcmp
 /* 8021EAA8 00000024  2C 03 00 00 */	cmpwi r3, 0
 /* 8021EAAC 00000028  40 82 00 18 */	bne lbl_8021EAC4
@@ -381,7 +381,7 @@ lbl_8021EF94:
 /* 8021EFBC 00000028  28 00 00 5A */	cmplwi r0, 0x5a
 /* 8021EFC0 0000002C  40 82 00 1C */	bne lbl_8021EFDC
 lbl_8021EFC4:
-/* 8021EFC4 00000000  88 DD 00 00 */	lbz r6, 0(r29)
+/* 8021EFC4 00000000  88 DD 00 00 */	lbz r6, 0(r29)	/* effective address: 804062B8 */
 /* 8021EFC8 00000004  80 7F 01 0C */	lwz r3, 0x10c(r31)
 /* 8021EFCC 00000008  57 24 06 3E */	clrlwi r4, r25, 0x18
 /* 8021EFD0 0000000C  88 BF 01 DA */	lbz r5, 0x1da(r31)
@@ -410,7 +410,7 @@ lbl_8021EFFC:
 /* 8021F024 00000028  40 81 00 08 */	ble lbl_8021F02C
 /* 8021F028 0000002C  7C 1A 03 78 */	mr r26, r0
 lbl_8021F02C:
-/* 8021F02C 00000000  88 7D 00 00 */	lbz r3, 0(r29)
+/* 8021F02C 00000000  88 7D 00 00 */	lbz r3, 0(r29)	/* effective address: 804062B8 */
 /* 8021F030 00000004  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8021F034 00000008  7C 06 00 40 */	cmplw r6, r0
 /* 8021F038 0000000C  40 80 00 08 */	bge lbl_8021F040
@@ -448,7 +448,7 @@ lbl_8021F09C:
 /* 8021F0A8 0000000C  28 00 00 02 */	cmplwi r0, 2
 /* 8021F0AC 00000010  40 82 00 0C */	bne lbl_8021F0B8
 /* 8021F0B0 00000014  38 00 00 00 */	li r0, 0
-/* 8021F0B4 00000018  98 03 00 BF */	stb r0, 0xbf(r3)
+/* 8021F0B4 00000018  98 03 00 BF */	stb r0, 0xbf(r3)	/* effective address: 80430247 */
 lbl_8021F0B8:
 /* 8021F0B8 00000000  80 1F 01 20 */	lwz r0, 0x120(r31)
 /* 8021F0BC 00000004  3C 60 80 43 */	lis r3, g_meter2_info@ha

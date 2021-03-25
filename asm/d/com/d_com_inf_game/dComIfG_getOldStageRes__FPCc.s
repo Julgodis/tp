@@ -3,8 +3,8 @@ lbl_8002F478:
 /* 8002F47C 00000004  7C 08 02 A6 */	mflr r0
 /* 8002F480 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8002F484 0000000C  7C 64 1B 78 */	mr r4, r3
-/* 8002F488 00000010  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 8002F48C 00000014  38 63 8F 38 */	addi r3, r3, stringBase0@l
+/* 8002F488 00000010  3C 60 80 38 */	lis r3, d_com_d_com_inf_game__stringBase0@ha
+/* 8002F48C 00000014  38 63 8F 38 */	addi r3, r3, d_com_d_com_inf_game__stringBase0@l
 /* 8002F490 00000018  38 63 01 67 */	addi r3, r3, 0x167
 /* 8002F494 0000001C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 8002F498 00000020  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l

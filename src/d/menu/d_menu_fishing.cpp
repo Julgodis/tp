@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct STControl {
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct STControl {
 };
 
 struct CSTControl {
@@ -61,10 +61,10 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
 struct J2DScreen {
@@ -134,7 +134,7 @@ extern "C" extern u8 const data_80395F70[48];
 extern "C" extern u8 const data_80395FA0[48];
 extern "C" extern u8 const data_80395FD0[48];
 extern "C" extern u8 const data_80396000[24];
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_menu_d_menu_fishing__stringBase0;
 
 // 
 // External References:

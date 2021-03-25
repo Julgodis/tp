@@ -15,7 +15,7 @@ lbl_80224F70:
 /* 80224FA4 00000034  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 80224FA8 00000038  28 00 00 00 */	cmplwi r0, 0
 /* 80224FAC 0000003C  41 82 00 10 */	beq lbl_80224FBC
-/* 80224FB0 00000040  A0 03 4F A4 */	lhz r0, 0x4fa4(r3)
+/* 80224FB0 00000040  A0 03 4F A4 */	lhz r0, 0x4fa4(r3)	/* effective address: 8040B164 */
 /* 80224FB4 00000044  54 00 06 72 */	rlwinm r0, r0, 0, 0x19, 0x19
 /* 80224FB8 00000048  48 00 00 08 */	b lbl_80224FC0
 lbl_80224FBC:

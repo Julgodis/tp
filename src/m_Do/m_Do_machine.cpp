@@ -130,7 +130,7 @@ extern "C" static void fault_callback_scroll__FUsP9OSContextUlUl(); // 1
 extern "C" static void my_PrintHeap__FPCcUl(); // 1
 extern "C" static void my_SysPrintHeap__FPCcPvUl(); // 1
 extern "C" void mDoMch_Create__Fv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const m_Do_m_Do_machine__stringBase0;
 extern "C" extern u8 g_ntscZeldaProg[60];
 extern "C" extern void* mRenderModeObj__15mDoMch_render_c[1 + 1 /* padding */];
 

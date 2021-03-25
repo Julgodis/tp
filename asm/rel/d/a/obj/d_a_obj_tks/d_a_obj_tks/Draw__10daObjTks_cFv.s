@@ -17,12 +17,12 @@ lbl_80D0FE80:
 /* 80D0FE98 00000018  90 04 00 3C */	stw r0, 0x3c(r4)
 /* 80D0FE9C 0000001C  38 80 00 00 */	li r4, 0
 /* 80D0FEA0 00000020  38 A0 00 00 */	li r5, 0
-/* 80D0FEA4 00000024  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
-/* 80D0FEA8 00000028  38 C6 00 00 */	addi r6, r6, 0x0000 /* 0x00000000@l */
-/* 80D0FEAC 0000002C  C0 26 00 0C */	lfs f1, 0xc(r6)
+/* 80D0FEA4 00000024  3C C0 80 D1 */	lis r6, m__16daObjTks_Param_c@ha
+/* 80D0FEA8 00000028  38 C6 27 3C */	addi r6, r6, m__16daObjTks_Param_c@l
+/* 80D0FEAC 0000002C  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 80D12748 */
 /* 80D0FEB0 00000030  38 C0 00 00 */	li r6, 0
 /* 80D0FEB4 00000034  38 E0 00 00 */	li r7, 0
-/* 80D0FEB8 00000038  4B FF F3 41 */	bl _unresolved
+/* 80D0FEB8 00000038  4B 44 23 F4 */	b draw__8daNpcF_cFiifP11_GXColorS10i
 /* 80D0FEBC 0000003C  38 60 00 01 */	li r3, 1
 lbl_80D0FEC0:
 /* 80D0FEC0 00000000  80 01 00 14 */	lwz r0, 0x14(r1)

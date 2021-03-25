@@ -3,23 +3,23 @@ lbl_80D568B8:
 /* 80D568BC 00000004  7C 08 02 A6 */	mflr r0
 /* 80D568C0 00000008  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80D568C4 0000000C  39 61 00 30 */	addi r11, r1, 0x30
-/* 80D568C8 00000010  4B FF FE 71 */	bl _unresolved
+/* 80D568C8 00000010  4B 60 B9 14 */	b _savegpr_29
 /* 80D568CC 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80D568D0 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D568D4 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D568D0 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D568D4 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D568D8 00000020  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D568DC 00000024  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80D568E0 00000028  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80D568E4 0000002C  7C 05 07 74 */	extsb r5, r0
-/* 80D568E8 00000030  4B FF FE 51 */	bl _unresolved
+/* 80D568E8 00000030  4B 2D EA 78 */	b isSwitch__10dSv_info_cCFii
 /* 80D568EC 00000034  2C 03 00 00 */	cmpwi r3, 0
 /* 80D568F0 00000038  41 82 00 0C */	beq lbl_80D568FC
 /* 80D568F4 0000003C  38 60 00 01 */	li r3, 1
 /* 80D568F8 00000040  48 00 01 74 */	b lbl_80D56A6C
 lbl_80D568FC:
-/* 80D568FC 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D56900 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80D56904 00000008  83 C3 5D AC */	lwz r30, 0x5dac(r3)
+/* 80D568FC 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D56900 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D56904 00000008  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
 /* 80D56908 0000000C  C0 1E 04 D0 */	lfs f0, 0x4d0(r30)
 /* 80D5690C 00000010  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80D56910 00000014  C0 1E 04 D4 */	lfs f0, 0x4d4(r30)
@@ -29,18 +29,18 @@ lbl_80D568FC:
 /* 80D56920 00000024  38 61 00 14 */	addi r3, r1, 0x14
 /* 80D56924 00000028  38 9F 04 A8 */	addi r4, r31, 0x4a8
 /* 80D56928 0000002C  7C 65 1B 78 */	mr r5, r3
-/* 80D5692C 00000030  4B FF FE 0D */	bl _unresolved
-/* 80D56930 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D56934 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D5692C 00000030  4B 5F 07 88 */	b PSVECSubtract
+/* 80D56930 00000034  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80D56934 00000038  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80D56938 0000003C  A8 1F 04 DE */	lha r0, 0x4de(r31)
 /* 80D5693C 00000040  7C 00 00 D0 */	neg r0, r0
 /* 80D56940 00000044  7C 04 07 34 */	extsh r4, r0
-/* 80D56944 00000048  4B FF FD F5 */	bl _unresolved
-/* 80D56948 0000004C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D5694C 00000050  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D56944 00000048  4B 2B 5A 98 */	b mDoMtx_YrotS__FPA4_fs
+/* 80D56948 0000004C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80D5694C 00000050  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80D56950 00000054  38 81 00 14 */	addi r4, r1, 0x14
 /* 80D56954 00000058  7C 85 23 78 */	mr r5, r4
-/* 80D56958 0000005C  4B FF FD E1 */	bl _unresolved
+/* 80D56958 0000005C  4B 5F 04 14 */	b PSMTXMultVec
 /* 80D5695C 00000060  C0 1F 05 68 */	lfs f0, 0x568(r31)
 /* 80D56960 00000064  C0 21 00 14 */	lfs f1, 0x14(r1)
 /* 80D56964 00000068  FC 00 08 40 */	fcmpo cr0, f0, f1
@@ -66,18 +66,18 @@ lbl_80D568FC:
 /* 80D569B4 00000024  54 1D 06 3E */	clrlwi r29, r0, 0x18
 /* 80D569B8 00000028  28 1D 00 FF */	cmplwi r29, 0xff
 /* 80D569BC 0000002C  41 82 00 74 */	beq lbl_80D56A30
-/* 80D569C0 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D569C4 00000034  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D569C0 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D569C4 00000034  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D569C8 00000038  38 63 4E C4 */	addi r3, r3, 0x4ec4
 /* 80D569CC 0000003C  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80D569D0 00000040  7C 04 07 74 */	extsb r4, r0
-/* 80D569D4 00000044  4B FF FD 65 */	bl _unresolved
-/* 80D569D8 00000048  81 83 00 00 */	lwz r12, 0(r3)
+/* 80D569D4 00000044  4B 2C D9 B0 */	b getStatusRoomDt__20dStage_roomControl_cFi
+/* 80D569D8 00000048  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 8040B084 */
 /* 80D569DC 0000004C  81 8C 00 20 */	lwz r12, 0x20(r12)
 /* 80D569E0 00000050  7D 89 03 A6 */	mtctr r12
 /* 80D569E4 00000054  4E 80 04 21 */	bctrl 
-/* 80D569E8 00000058  80 83 00 04 */	lwz r4, 4(r3)
-/* 80D569EC 0000005C  80 03 00 00 */	lwz r0, 0(r3)
+/* 80D569E8 00000058  80 83 00 04 */	lwz r4, 4(r3)	/* effective address: 8040B088 */
+/* 80D569EC 0000005C  80 03 00 00 */	lwz r0, 0(r3)	/* effective address: 8040B084 */
 /* 80D569F0 00000060  7C 09 03 A6 */	mtctr r0
 /* 80D569F4 00000064  2C 00 00 00 */	cmpwi r0, 0
 /* 80D569F8 00000068  40 81 00 1C */	ble lbl_80D56A14
@@ -99,23 +99,23 @@ lbl_80D56A14:
 lbl_80D56A30:
 /* 80D56A30 00000000  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80D56A34 00000004  7C 06 07 74 */	extsb r6, r0
-/* 80D56A38 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D56A3C 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D56A38 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D56A3C 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D56A40 00000010  38 63 0D B4 */	addi r3, r3, 0xdb4
 /* 80D56A44 00000014  38 81 00 08 */	addi r4, r1, 8
-/* 80D56A48 00000018  4B FF FC F1 */	bl _unresolved
-/* 80D56A4C 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D56A50 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D56A48 00000018  4B 2D E5 38 */	b setRoom__13dSv_restart_cFRC4cXyzsSc
+/* 80D56A4C 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D56A50 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D56A54 00000024  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D56A58 00000028  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80D56A5C 0000002C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80D56A60 00000030  7C 05 07 74 */	extsb r5, r0
-/* 80D56A64 00000034  4B FF FC D5 */	bl _unresolved
+/* 80D56A64 00000034  4B 2D E7 9C */	b onSwitch__10dSv_info_cFii
 lbl_80D56A68:
 /* 80D56A68 00000000  38 60 00 01 */	li r3, 1
 lbl_80D56A6C:
 /* 80D56A6C 00000000  39 61 00 30 */	addi r11, r1, 0x30
-/* 80D56A70 00000004  4B FF FC C9 */	bl _unresolved
+/* 80D56A70 00000004  4B 60 B7 B8 */	b _restgpr_29
 /* 80D56A74 00000008  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 80D56A78 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80D56A7C 00000010  38 21 00 30 */	addi r1, r1, 0x30

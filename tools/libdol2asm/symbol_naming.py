@@ -160,21 +160,19 @@ def nameFix(context, label_collisions, reference_collisions, symbol):
             
             pass
 
-    if symbol.reference_count.extern > 0:
+    if symbol.reference_count.extern > 0 or isinstance(symbol, StringBase):
         label_collisions[symbol.identifier.label] += 1
         reference_collisions[symbol.identifier.reference] += 1
 
 def nameCollision(context, label_collisions, reference_collisions, parent_name, symbol):
-    if symbol.reference_count.extern == 0:
-        return
-
-    if label_collisions[symbol.identifier.label] > 1 or reference_collisions[symbol.identifier.reference] > 1:
-        obj_prefix = parent_name.replace(
-            "/", "_").replace(".", "_").replace("-", "_")
-        #if symbol.name.is_function:
-        #    symbol.name.is_static = True
-        #else:
-        symbol.identifier.override_name = obj_prefix + "__" + symbol.identifier.label
+    if symbol.reference_count.extern > 0 or isinstance(symbol, StringBase):
+        if label_collisions[symbol.identifier.label] > 1 or reference_collisions[symbol.identifier.reference] > 1:
+            obj_prefix = parent_name.replace(
+                "/", "_").replace(".", "_").replace("-", "_")
+            #if symbol.name.is_function:
+            #    symbol.name.is_static = True
+            #else:
+            symbol.identifier.override_name = obj_prefix + "__" + symbol.identifier.label
 
 
 def execute(context, libraries):

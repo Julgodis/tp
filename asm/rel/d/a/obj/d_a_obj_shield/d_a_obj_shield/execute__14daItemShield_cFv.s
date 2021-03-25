@@ -33,26 +33,26 @@ lbl_80CD7FE8:
 /* 80CD8064 0000007C  38 A0 00 50 */	li r5, 0x50
 /* 80CD8068 00000080  38 C0 00 28 */	li r6, 0x28
 /* 80CD806C 00000084  38 E0 00 0A */	li r7, 0xa
-/* 80CD8070 00000088  4B FF E9 C9 */	bl _unresolved
+/* 80CD8070 00000088  4B 59 84 D0 */	b cLib_addCalcAngleS__FPsssss
 /* 80CD8074 0000008C  38 7F 09 48 */	addi r3, r31, 0x948
 /* 80CD8078 00000090  38 80 00 00 */	li r4, 0
 /* 80CD807C 00000094  38 A0 00 50 */	li r5, 0x50
 /* 80CD8080 00000098  38 C0 00 28 */	li r6, 0x28
 /* 80CD8084 0000009C  38 E0 00 0A */	li r7, 0xa
-/* 80CD8088 000000A0  4B FF E9 B1 */	bl _unresolved
+/* 80CD8088 000000A0  4B 59 84 B8 */	b cLib_addCalcAngleS__FPsssss
 /* 80CD808C 000000A4  7F E3 FB 78 */	mr r3, r31
 /* 80CD8090 000000A8  4B FF ED 49 */	bl setBaseMtx__14daItemShield_cFv
 /* 80CD8094 000000AC  7F E3 FB 78 */	mr r3, r31
-/* 80CD8098 000000B0  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80CD809C 000000B4  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80CD80A0 000000B8  80 84 5D AC */	lwz r4, 0x5dac(r4)
-/* 80CD80A4 000000BC  4B FF E9 95 */	bl _unresolved
-/* 80CD80A8 000000C0  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CD80AC 000000C4  C0 03 00 00 */	lfs f0, 0x0000(r3)
+/* 80CD8098 000000B0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80CD809C 000000B4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80CD80A0 000000B8  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80CD80A4 000000BC  4B 34 27 3C */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 80CD80A8 000000C0  3C 60 80 CE */	lis r3, lit_4335@ha
+/* 80CD80AC 000000C4  C0 03 83 20 */	lfs f0, lit_4335@l(r3)
 /* 80CD80B0 000000C8  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80CD80B4 00000000  40 80 00 18 */	bge lbl_80CD80CC
 /* 80CD80B8 00000004  38 7F 05 50 */	addi r3, r31, 0x550
-/* 80CD80BC 00000008  4B FF E9 7D */	bl _unresolved
+/* 80CD80BC 00000008  4B 48 74 34 */	b setLookPos__9daPy_py_cFP4cXyz
 /* 80CD80C0 0000000C  38 00 01 00 */	li r0, 0x100
 /* 80CD80C4 00000010  90 1F 05 5C */	stw r0, 0x55c(r31)
 /* 80CD80C8 00000014  48 00 00 0C */	b lbl_80CD80D4

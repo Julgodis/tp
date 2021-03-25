@@ -25,10 +25,10 @@ struct dMsgScrnArrow_c {
 struct JKRExpHeap {
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
 struct J2DScreen {
@@ -69,7 +69,7 @@ extern "C" void arwAnimeInit__15dMsgScrnArrow_cFv(); // 1
 extern "C" void arwAnimeMove__15dMsgScrnArrow_cFv(); // 1
 extern "C" void dotAnimeInit__15dMsgScrnArrow_cFv(); // 1
 extern "C" void dotAnimeMove__15dMsgScrnArrow_cFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const msg_scrn_d_msg_scrn_arrow__stringBase0;
 
 // 
 // External References:

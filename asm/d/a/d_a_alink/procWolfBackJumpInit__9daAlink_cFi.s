@@ -18,9 +18,9 @@ lbl_8012E398:
 /* 8012E3D8 00000040  38 A5 00 50 */	addi r5, r5, 0x50
 /* 8012E3DC 00000044  4B FF B4 6D */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c
 /* 8012E3E0 00000048  38 7F 20 00 */	addi r3, r31, 0x2000
-/* 8012E3E4 0000004C  C0 03 00 94 */	lfs f0, 0x94(r3)
+/* 8012E3E4 0000004C  C0 03 00 94 */	lfs f0, 0x94(r3)	/* effective address: 8038F6EC */
 /* 8012E3E8 00000050  D0 1D 33 98 */	stfs f0, 0x3398(r29)
-/* 8012E3EC 00000054  C0 03 00 98 */	lfs f0, 0x98(r3)
+/* 8012E3EC 00000054  C0 03 00 98 */	lfs f0, 0x98(r3)	/* effective address: 8038F6F0 */
 /* 8012E3F0 00000058  D0 1D 04 FC */	stfs f0, 0x4fc(r29)
 /* 8012E3F4 0000005C  7F A3 EB 78 */	mr r3, r29
 /* 8012E3F8 00000060  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010033@ha */
@@ -36,11 +36,11 @@ lbl_8012E414:
 /* 8012E41C 00000008  7F A3 EB 78 */	mr r3, r29
 /* 8012E420 0000000C  38 80 00 66 */	li r4, 0x66
 /* 8012E424 00000010  38 BF 1F 5C */	addi r5, r31, 0x1f5c
-/* 8012E428 00000014  C0 25 00 44 */	lfs f1, 0x44(r5)
-/* 8012E42C 00000018  C0 45 00 40 */	lfs f2, 0x40(r5)
-/* 8012E430 0000001C  A8 BF 19 B8 */	lha r5, 0x19b8(r31)
+/* 8012E428 00000014  C0 25 00 44 */	lfs f1, 0x44(r5)	/* effective address: 8038F5F8 */
+/* 8012E42C 00000018  C0 45 00 40 */	lfs f2, 0x40(r5)	/* effective address: 8038F5F4 */
+/* 8012E430 0000001C  A8 BF 19 B8 */	lha r5, 0x19b8(r31)	/* effective address: 8038F010 */
 /* 8012E434 00000020  38 DF 19 B8 */	addi r6, r31, 0x19b8
-/* 8012E438 00000024  C0 66 00 0C */	lfs f3, 0xc(r6)
+/* 8012E438 00000024  C0 66 00 0C */	lfs f3, 0xc(r6)	/* effective address: 8038F01C */
 /* 8012E43C 00000028  4B FF B2 C9 */	bl setSingleAnimeWolf__9daAlink_cFQ29daAlink_c12daAlink_WANMffsf
 /* 8012E440 0000002C  48 00 00 30 */	b lbl_8012E470
 lbl_8012E444:
@@ -57,9 +57,9 @@ lbl_8012E444:
 /* 8012E46C 00000028  4E 80 04 21 */	bctrl 
 lbl_8012E470:
 /* 8012E470 00000000  38 7F 19 B8 */	addi r3, r31, 0x19b8
-/* 8012E474 00000004  C0 03 00 28 */	lfs f0, 0x28(r3)
+/* 8012E474 00000004  C0 03 00 28 */	lfs f0, 0x28(r3)	/* effective address: 8038F038 */
 /* 8012E478 00000008  D0 1D 33 98 */	stfs f0, 0x3398(r29)
-/* 8012E47C 0000000C  C0 03 00 2C */	lfs f0, 0x2c(r3)
+/* 8012E47C 0000000C  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 8038F03C */
 /* 8012E480 00000010  D0 1D 04 FC */	stfs f0, 0x4fc(r29)
 lbl_8012E484:
 /* 8012E484 00000000  80 9D 27 EC */	lwz r4, 0x27ec(r29)

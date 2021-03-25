@@ -83,8 +83,8 @@ lbl_8011CF08:
 /* 8011CF08 00000000  48 06 47 39 */	bl dCam_getBody__Fv
 /* 8011CF0C 00000004  38 80 00 13 */	li r4, 0x13
 /* 8011CF10 00000008  7F C5 F3 78 */	mr r5, r30
-/* 8011CF14 0000000C  3C C0 80 39 */	lis r6, stringBase0@ha
-/* 8011CF18 00000010  38 C6 20 94 */	addi r6, r6, stringBase0@l
+/* 8011CF14 0000000C  3C C0 80 39 */	lis r6, d_a_d_a_alink__stringBase0@ha
+/* 8011CF18 00000010  38 C6 20 94 */	addi r6, r6, d_a_d_a_alink__stringBase0@l
 /* 8011CF1C 00000014  38 C6 00 43 */	addi r6, r6, 0x43
 /* 8011CF20 00000018  38 E0 00 01 */	li r7, 1
 /* 8011CF24 0000001C  39 1F 31 94 */	addi r8, r31, 0x3194

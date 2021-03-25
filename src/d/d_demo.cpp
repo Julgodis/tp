@@ -255,10 +255,10 @@ struct dRes_control_c {
 	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, int);
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -475,7 +475,7 @@ extern "C" void JSGGetTextureAnimationFrameMax__13dDemo_actor_cCFv(); // 1
 extern "C" void JSGGetTranslation__13dDemo_actor_cCFP3Vec(); // 1
 extern "C" void JSGGetScaling__13dDemo_actor_cCFP3Vec(); // 1
 extern "C" void JSGGetRotation__13dDemo_actor_cCFP3Vec(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_d_demo__stringBase0;
 extern "C" extern void* __vt__17jmessage_tControl[3];
 extern "C" extern void* __vt__Q27JStudio13TCreateObject[4];
 extern "C" extern void* __vt__Q27JStudio16TAdaptor_message[9];
@@ -483,6 +483,7 @@ extern "C" extern u16 m_branchId__7dDemo_c[1 + 3 /* padding */];
 extern "C" extern u8 m_control__7dDemo_c[4];
 extern "C" extern u8 m_mesgControl__7dDemo_c[4];
 extern "C" extern u8 m_object__7dDemo_c[4];
+extern "C" extern u8 m_frame__7dDemo_c[4];
 extern "C" extern u8 m_frameNoMsg__7dDemo_c[4];
 extern "C" extern u8 m_mode__7dDemo_c[4];
 extern "C" extern u8 m_status__7dDemo_c[4];
@@ -981,7 +982,7 @@ asm void dDemo_actor_c::setActor(fopAc_ac_c* param_0) {
 /* 80451DB8-80451DC0 0008+00 s=4 e=0 z=0  None .sdata2    @4127                                                        */
 SECTION_SDATA2 static f64 lit_4127 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8003819C-80038338 019C+00 s=1 e=1 z=0  None .text      getPrm_Morf__13dDemo_actor_cFv                               */
+/* 8003819C-80038338 019C+00 s=1 e=1 z=1  None .text      getPrm_Morf__13dDemo_actor_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1020,14 +1021,14 @@ static u8 m_factory__7dDemo_c[4];
 /* 80450E1C-80450E20 0004+00 s=2 e=1 z=0  None .sbss      m_mesgControl__7dDemo_c                                      */
 u8 m_mesgControl__7dDemo_c[4];
 
-/* 80450E20-80450E24 0004+00 s=5 e=9 z=0  None .sbss      m_object__7dDemo_c                                           */
+/* 80450E20-80450E24 0004+00 s=5 e=9 z=7  None .sbss      m_object__7dDemo_c                                           */
 u8 m_object__7dDemo_c[4];
 
 /* 80450E24-80450E28 0004+00 s=4 e=0 z=0  None .sbss      m_data__7dDemo_c                                             */
 static u8 m_data__7dDemo_c[4];
 
-/* 80450E28-80450E2C 0004+00 s=2 e=0 z=0  None .sbss      m_frame__7dDemo_c                                            */
-static u8 m_frame__7dDemo_c[4];
+/* 80450E28-80450E2C 0004+00 s=2 e=0 z=1  None .sbss      m_frame__7dDemo_c                                            */
+u8 m_frame__7dDemo_c[4];
 
 /* 80450E2C-80450E30 0004+00 s=2 e=0 z=0  None .sbss      m_translation__7dDemo_c                                      */
 static u8 m_translation__7dDemo_c[4];
@@ -1056,7 +1057,7 @@ static u8 struct_80450E48[4];
 /* 80450E4C-80450E50 0004+00 s=1 e=0 z=0  None .sbss      it$4206                                                      */
 static u8 data_80450E4C[4];
 
-/* 80038338-80038490 0158+00 s=0 e=1 z=0  None .text      getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc                  */
+/* 80038338-80038490 0158+00 s=0 e=1 z=5  None .text      getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1082,7 +1083,7 @@ asm static void dDemo_getJaiPointer(char const* param_0, u32 param_1, int param_
 /* 80451DC0-80451DC4 0004+00 s=1 e=0 z=0  None .sdata2    @4152                                                        */
 SECTION_SDATA2 static f32 lit_4152 = -1.0f;
 
-/* 80038518-800387A8 0290+00 s=0 e=0 z=0  None .text      dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc */
+/* 80038518-800387A8 0290+00 s=0 e=0 z=2  None .text      dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1602,7 +1603,7 @@ asm void dDemo_object_c::appendActor(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80039088-800390AC 0024+00 s=2 e=6 z=0  None .text      getActor__14dDemo_object_cFUc                                */
+/* 80039088-800390AC 0024+00 s=2 e=6 z=7  None .text      getActor__14dDemo_object_cFUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

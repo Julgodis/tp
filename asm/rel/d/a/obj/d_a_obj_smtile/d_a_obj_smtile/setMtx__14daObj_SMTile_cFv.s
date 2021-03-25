@@ -13,16 +13,16 @@ lbl_80CDE1A8:
 /* 80CDE1D4 0000002C  38 03 80 00 */	addi r0, r3, -32768
 /* 80CDE1D8 00000030  B0 01 00 0A */	sth r0, 0xa(r1)
 /* 80CDE1DC 00000034  38 7F 04 D0 */	addi r3, r31, 0x4d0
-/* 80CDE1E0 00000038  4B FF F0 39 */	bl _unresolved
+/* 80CDE1E0 00000038  4B 32 EB 84 */	b transS__14mDoMtx_stack_cFRC4cXyz
 /* 80CDE1E4 0000003C  38 61 00 08 */	addi r3, r1, 8
-/* 80CDE1E8 00000040  4B FF F0 31 */	bl _unresolved
+/* 80CDE1E8 00000040  4B 32 ED 5C */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 80CDE1EC 00000044  38 7F 04 EC */	addi r3, r31, 0x4ec
-/* 80CDE1F0 00000048  4B FF F0 29 */	bl _unresolved
-/* 80CDE1F4 0000004C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CDE1F8 00000050  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CDE1F0 00000048  4B 32 EC 80 */	b scaleM__14mDoMtx_stack_cFRC4cXyz
+/* 80CDE1F4 0000004C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80CDE1F8 00000050  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80CDE1FC 00000054  80 9F 05 8C */	lwz r4, 0x58c(r31)
 /* 80CDE200 00000058  38 84 00 24 */	addi r4, r4, 0x24
-/* 80CDE204 0000005C  4B FF F0 15 */	bl _unresolved
+/* 80CDE204 0000005C  4B 66 82 AC */	b PSMTXCopy
 /* 80CDE208 00000060  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80CDE20C 00000064  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80CDE210 00000068  7C 08 03 A6 */	mtlr r0

@@ -167,7 +167,7 @@ lbl_802163E8:
 /* 802165B8 000001D0  C0 3C 03 6C */	lfs f1, 0x36c(r28)	/* effective address: 8042EF34 */
 /* 802165BC 000001D4  C0 5C 03 70 */	lfs f2, 0x370(r28)	/* effective address: 8042EF38 */
 /* 802165C0 000001D8  48 03 DF F1 */	bl paneTrans__8CPaneMgrFff
-/* 802165C4 000001DC  C0 1D 03 74 */	lfs f0, 0x374(r29)
+/* 802165C4 000001DC  C0 1D 03 74 */	lfs f0, 0x374(r29)	/* effective address: 8042EF3C */
 /* 802165C8 000001E0  80 7F 02 BC */	lwz r3, 0x2bc(r31)
 /* 802165CC 000001E4  80 63 00 04 */	lwz r3, 4(r3)
 /* 802165D0 000001E8  D0 03 00 CC */	stfs f0, 0xcc(r3)
@@ -177,8 +177,8 @@ lbl_802163E8:
 /* 802165E0 000001F8  7D 89 03 A6 */	mtctr r12
 /* 802165E4 000001FC  4E 80 04 21 */	bctrl 
 /* 802165E8 00000200  80 7F 02 BC */	lwz r3, 0x2bc(r31)
-/* 802165EC 00000204  C0 3C 03 6C */	lfs f1, 0x36c(r28)
-/* 802165F0 00000208  C0 5C 03 70 */	lfs f2, 0x370(r28)
+/* 802165EC 00000204  C0 3C 03 6C */	lfs f1, 0x36c(r28)	/* effective address: 8042EF34 */
+/* 802165F0 00000208  C0 5C 03 70 */	lfs f2, 0x370(r28)	/* effective address: 8042EF38 */
 /* 802165F4 0000020C  48 03 DF BD */	bl paneTrans__8CPaneMgrFff
 /* 802165F8 00000210  3B 20 00 00 */	li r25, 0
 /* 802165FC 00000214  3B C0 00 00 */	li r30, 0

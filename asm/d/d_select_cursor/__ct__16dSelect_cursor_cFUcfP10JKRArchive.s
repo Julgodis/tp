@@ -368,8 +368,8 @@ lbl_8019473C:
 /* 80194778 0000003C  54 00 10 3A */	slwi r0, r0, 2
 /* 8019477C 00000040  38 9E 00 2C */	addi r4, r30, 0x2c
 /* 80194780 00000044  7C 64 00 2E */	lwzx r3, r4, r0
-/* 80194784 00000048  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 80194788 0000004C  38 84 4A A0 */	addi r4, r4, stringBase0@l
+/* 80194784 00000048  3C 80 80 39 */	lis r4, d_d_select_cursor__stringBase0@ha
+/* 80194788 0000004C  38 84 4A A0 */	addi r4, r4, d_d_select_cursor__stringBase0@l
 /* 8019478C 00000050  38 84 00 7B */	addi r4, r4, 0x7b
 /* 80194790 00000054  48 1D 42 05 */	bl strcmp
 /* 80194794 00000058  2C 03 00 00 */	cmpwi r3, 0
@@ -399,8 +399,8 @@ lbl_801947E0:
 /* 801947EC 0000000C  54 00 10 3A */	slwi r0, r0, 2
 /* 801947F0 00000010  38 9E 00 3C */	addi r4, r30, 0x3c
 /* 801947F4 00000014  7C 64 00 2E */	lwzx r3, r4, r0
-/* 801947F8 00000018  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801947FC 0000001C  38 84 4A A0 */	addi r4, r4, stringBase0@l
+/* 801947F8 00000018  3C 80 80 39 */	lis r4, d_d_select_cursor__stringBase0@ha
+/* 801947FC 0000001C  38 84 4A A0 */	addi r4, r4, d_d_select_cursor__stringBase0@l
 /* 80194800 00000020  38 84 00 7B */	addi r4, r4, 0x7b
 /* 80194804 00000024  48 1D 41 91 */	bl strcmp
 /* 80194808 00000028  2C 03 00 00 */	cmpwi r3, 0
@@ -430,8 +430,8 @@ lbl_80194854:
 /* 80194860 0000000C  54 00 10 3A */	slwi r0, r0, 2
 /* 80194864 00000010  38 9E 00 4C */	addi r4, r30, 0x4c
 /* 80194868 00000014  7C 64 00 2E */	lwzx r3, r4, r0
-/* 8019486C 00000018  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 80194870 0000001C  38 84 4A A0 */	addi r4, r4, stringBase0@l
+/* 8019486C 00000018  3C 80 80 39 */	lis r4, d_d_select_cursor__stringBase0@ha
+/* 80194870 0000001C  38 84 4A A0 */	addi r4, r4, d_d_select_cursor__stringBase0@l
 /* 80194874 00000020  38 84 00 7B */	addi r4, r4, 0x7b
 /* 80194878 00000024  48 1D 41 1D */	bl strcmp
 /* 8019487C 00000028  2C 03 00 00 */	cmpwi r3, 0
@@ -461,8 +461,8 @@ lbl_801948C8:
 /* 801948D4 0000000C  54 00 10 3A */	slwi r0, r0, 2
 /* 801948D8 00000010  38 9E 00 1C */	addi r4, r30, 0x1c
 /* 801948DC 00000014  7C 64 00 2E */	lwzx r3, r4, r0
-/* 801948E0 00000018  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801948E4 0000001C  38 84 4A A0 */	addi r4, r4, stringBase0@l
+/* 801948E0 00000018  3C 80 80 39 */	lis r4, d_d_select_cursor__stringBase0@ha
+/* 801948E4 0000001C  38 84 4A A0 */	addi r4, r4, d_d_select_cursor__stringBase0@l
 /* 801948E8 00000020  38 84 00 7B */	addi r4, r4, 0x7b
 /* 801948EC 00000024  48 1D 40 A9 */	bl strcmp
 /* 801948F0 00000028  2C 03 00 00 */	cmpwi r3, 0

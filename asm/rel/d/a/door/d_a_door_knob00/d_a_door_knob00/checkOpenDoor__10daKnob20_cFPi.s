@@ -20,13 +20,13 @@ lbl_8045EE9C:
 /* 8045EEA0 00000004  38 80 00 00 */	li r4, 0
 /* 8045EEA4 00000008  38 C0 00 00 */	li r6, 0
 /* 8045EEA8 0000000C  38 E0 00 00 */	li r7, 0
-/* 8045EEAC 00000010  4B FF F9 8D */	bl _unresolved
+/* 8045EEAC 00000010  4B DE B0 E4 */	b init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c
 /* 8045EEB0 00000014  38 7E 05 C0 */	addi r3, r30, 0x5c0
 /* 8045EEB4 00000018  7F C4 F3 78 */	mr r4, r30
 /* 8045EEB8 0000001C  7F E5 FB 78 */	mr r5, r31
-/* 8045EEBC 00000020  4B FF F9 7D */	bl _unresolved
+/* 8045EEBC 00000020  4B DE B2 80 */	b checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi
 /* 8045EEC0 00000024  7C 7F 1B 78 */	mr r31, r3
-/* 8045EEC4 00000028  4B FF F9 75 */	bl _unresolved
+/* 8045EEC4 00000028  4B DD 91 D4 */	b endFlowGroup__12dMsgObject_cFv
 /* 8045EEC8 0000002C  7F E3 FB 78 */	mr r3, r31
 lbl_8045EECC:
 /* 8045EECC 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

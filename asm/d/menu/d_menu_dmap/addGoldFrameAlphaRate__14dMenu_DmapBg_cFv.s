@@ -21,7 +21,7 @@ lbl_801BA9BC:
 /* 801BA9BC 00000000  38 05 00 01 */	addi r0, r5, 1
 /* 801BA9C0 00000004  98 1E 0D D7 */	stb r0, 0xdd7(r30)
 /* 801BA9C4 00000008  88 9E 0D D7 */	lbz r4, 0xdd7(r30)
-/* 801BA9C8 0000000C  A8 1F 00 94 */	lha r0, 0x94(r31)
+/* 801BA9C8 0000000C  A8 1F 00 94 */	lha r0, 0x94(r31)	/* effective address: 8042FCF4 */
 /* 801BA9CC 00000010  7C 04 00 00 */	cmpw r4, r0
 /* 801BA9D0 00000014  40 82 00 0C */	bne lbl_801BA9DC
 /* 801BA9D4 00000018  38 80 00 01 */	li r4, 1
@@ -36,7 +36,7 @@ lbl_801BA9DC:
 /* 801BA9F4 00000018  90 61 00 08 */	stw r3, 8(r1)
 /* 801BA9F8 0000001C  C8 01 00 08 */	lfd f0, 8(r1)
 /* 801BA9FC 00000020  EC 20 10 28 */	fsubs f1, f0, f2
-/* 801BAA00 00000024  A8 1F 00 94 */	lha r0, 0x94(r31)
+/* 801BAA00 00000024  A8 1F 00 94 */	lha r0, 0x94(r31)	/* effective address: 8042FCF4 */
 /* 801BAA04 00000028  7C 00 01 D6 */	mullw r0, r0, r0
 /* 801BAA08 0000002C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801BAA0C 00000030  90 01 00 14 */	stw r0, 0x14(r1)

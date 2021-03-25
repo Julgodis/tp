@@ -20,9 +20,9 @@ lbl_80CE654C:
 /* 80CE6558 0000000C  98 1E 0B 0C */	stb r0, 0xb0c(r30)
 /* 80CE655C 00000010  48 00 00 AC */	b lbl_80CE6608
 lbl_80CE6560:
-/* 80CE6560 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CE6564 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80CE6568 00000008  83 E3 5D AC */	lwz r31, 0x5dac(r3)
+/* 80CE6560 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CE6564 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CE6568 00000008  83 E3 5D AC */	lwz r31, 0x5dac(r3)	/* effective address: 8040BF6C */
 /* 80CE656C 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 80CE6570 00000010  81 9F 06 28 */	lwz r12, 0x628(r31)
 /* 80CE6574 00000014  81 8C 00 B0 */	lwz r12, 0xb0(r12)
@@ -30,17 +30,17 @@ lbl_80CE6560:
 /* 80CE657C 0000001C  4E 80 04 21 */	bctrl 
 /* 80CE6580 00000020  2C 03 00 00 */	cmpwi r3, 0
 /* 80CE6584 00000024  41 82 00 44 */	beq lbl_80CE65C8
-/* 80CE6588 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CE658C 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CE6588 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CE658C 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CE6590 00000030  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 80CE6594 00000034  4B FF E9 C5 */	bl _unresolved
-/* 80CE6598 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CE659C 0000003C  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
-/* 80CE65A0 00000040  80 64 00 00 */	lwz r3, 0(r4)
-/* 80CE65A4 00000044  80 04 00 04 */	lwz r0, 4(r4)
+/* 80CE6594 00000034  4B 35 BE D4 */	b reset__14dEvt_control_cFv
+/* 80CE6598 00000038  3C 60 80 CE */	lis r3, lit_4432@ha
+/* 80CE659C 0000003C  38 83 6A 9C */	addi r4, r3, lit_4432@l
+/* 80CE65A0 00000040  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80CE6A9C */
+/* 80CE65A4 00000044  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80CE6AA0 */
 /* 80CE65A8 00000048  90 61 00 14 */	stw r3, 0x14(r1)
 /* 80CE65AC 0000004C  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80CE65B0 00000050  80 04 00 08 */	lwz r0, 8(r4)
+/* 80CE65B0 00000050  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80CE6AA4 */
 /* 80CE65B4 00000054  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80CE65B8 00000058  7F C3 F3 78 */	mr r3, r30
 /* 80CE65BC 0000005C  38 81 00 14 */	addi r4, r1, 0x14

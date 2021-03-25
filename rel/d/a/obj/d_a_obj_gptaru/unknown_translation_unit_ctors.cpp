@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_8057F55C[8];
+extern void* data_8057F55C[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_obj_gpTaru_cpp(); // 1
 
 // 
 // Declarations:

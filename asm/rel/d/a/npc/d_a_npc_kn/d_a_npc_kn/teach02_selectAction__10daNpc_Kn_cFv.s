@@ -1,6 +1,6 @@
 lbl_80A3EF1C:
-/* 80A3EF1C 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80A3EF20 00000004  38 A4 00 00 */	addi r5, r4, 0x0000 /* 0x00000000@l */
+/* 80A3EF1C 00000000  3C 80 80 A4 */	lis r4, cNullVec__6Z2Calc@ha
+/* 80A3EF20 00000004  38 A4 0D 34 */	addi r5, r4, cNullVec__6Z2Calc@l
 /* 80A3EF24 00000008  88 03 15 AE */	lbz r0, 0x15ae(r3)
 /* 80A3EF28 0000000C  7C 00 07 74 */	extsb r0, r0
 /* 80A3EF2C 00000010  2C 00 00 06 */	cmpwi r0, 6
@@ -15,11 +15,11 @@ lbl_80A3EF48:
 /* 80A3EF4C 00000004  40 80 00 78 */	bge lbl_80A3EFC4
 /* 80A3EF50 00000008  48 00 00 58 */	b lbl_80A3EFA8
 lbl_80A3EF54:
-/* 80A3EF54 00000000  80 85 21 C4 */	lwz r4, 0x21c4(r5)
-/* 80A3EF58 00000004  80 05 21 C8 */	lwz r0, 0x21c8(r5)
+/* 80A3EF54 00000000  80 85 21 C4 */	lwz r4, 0x21c4(r5)	/* effective address: 80A42EF8 */
+/* 80A3EF58 00000004  80 05 21 C8 */	lwz r0, 0x21c8(r5)	/* effective address: 80A42EFC */
 /* 80A3EF5C 00000008  90 83 17 14 */	stw r4, 0x1714(r3)
 /* 80A3EF60 0000000C  90 03 17 18 */	stw r0, 0x1718(r3)
-/* 80A3EF64 00000010  80 05 21 CC */	lwz r0, 0x21cc(r5)
+/* 80A3EF64 00000010  80 05 21 CC */	lwz r0, 0x21cc(r5)	/* effective address: 80A42F00 */
 /* 80A3EF68 00000014  90 03 17 1C */	stw r0, 0x171c(r3)
 /* 80A3EF6C 00000018  4E 80 00 20 */	blr 
 lbl_80A3EF70:

@@ -16,7 +16,7 @@ extern "C" void __num2dec(); // 1
 extern "C" static void __num2dec_internal(); // 1
 extern "C" static void __two_exp(); // 1
 extern "C" static void __timesdec(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const MSL_Common_Embedded_Src_ansi_fp__stringBase0;
 
 // 
 // External References:

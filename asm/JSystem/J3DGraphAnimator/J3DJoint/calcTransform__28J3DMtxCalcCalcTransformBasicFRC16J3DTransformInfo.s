@@ -32,10 +32,10 @@ lbl_8032ED30:
 /* 8032EDA8 00000078  C0 03 4C 14 */	lfs f0, mCurrentS__6J3DSys@l(r3)
 /* 8032EDAC 0000007C  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 8032EDB0 00000080  40 82 00 24 */	bne lbl_8032EDD4
-/* 8032EDB4 00000084  C0 1F 00 04 */	lfs f0, 4(r31)
+/* 8032EDB4 00000084  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 80434C18 */
 /* 8032EDB8 00000088  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 8032EDBC 0000008C  40 82 00 18 */	bne lbl_8032EDD4
-/* 8032EDC0 00000090  C0 1F 00 08 */	lfs f0, 8(r31)
+/* 8032EDC0 00000090  C0 1F 00 08 */	lfs f0, 8(r31)	/* effective address: 80434C1C */
 /* 8032EDC4 00000094  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 8032EDC8 00000098  40 82 00 0C */	bne lbl_8032EDD4
 /* 8032EDCC 0000009C  38 00 00 01 */	li r0, 1

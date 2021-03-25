@@ -80,7 +80,7 @@ lbl_80101C34:
 /* 80101C60 0000002C  48 00 00 1C */	b lbl_80101C7C
 lbl_80101C64:
 /* 80101C64 00000000  38 00 00 01 */	li r0, 1
-/* 80101C68 00000004  98 1F 5E B7 */	stb r0, 0x5eb7(r31)
+/* 80101C68 00000004  98 1F 5E B7 */	stb r0, 0x5eb7(r31)	/* effective address: 8040C077 */
 /* 80101C6C 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80101C70 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80101C74 00000010  80 03 5D E8 */	lwz r0, 0x5de8(r3)	/* effective address: 8040BFA8 */

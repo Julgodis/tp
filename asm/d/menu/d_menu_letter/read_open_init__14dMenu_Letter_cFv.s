@@ -74,8 +74,8 @@ lbl_801DE3E8:
 /* 801DE44C 00000064  28 06 00 01 */	cmplwi r6, 1
 /* 801DE450 00000068  40 81 00 5C */	ble lbl_801DE4AC
 /* 801DE454 0000006C  38 61 00 10 */	addi r3, r1, 0x10
-/* 801DE458 00000070  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801DE45C 00000074  38 84 6D C0 */	addi r4, r4, stringBase0@l
+/* 801DE458 00000070  3C 80 80 39 */	lis r4, d_menu_d_menu_letter__stringBase0@ha
+/* 801DE45C 00000074  38 84 6D C0 */	addi r4, r4, d_menu_d_menu_letter__stringBase0@l
 /* 801DE460 00000078  38 84 00 17 */	addi r4, r4, 0x17
 /* 801DE464 0000007C  88 BC 03 E3 */	lbz r5, 0x3e3(r28)
 /* 801DE468 00000080  4C C6 31 82 */	crclr 6

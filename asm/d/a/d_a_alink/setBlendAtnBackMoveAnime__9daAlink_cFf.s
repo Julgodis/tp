@@ -29,12 +29,12 @@ lbl_800AF11C:
 /* 800AF188 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 800AF18C 0000002C  41 82 00 38 */	beq lbl_800AF1C4
 /* 800AF190 00000030  38 7E 00 BC */	addi r3, r30, 0xbc
-/* 800AF194 00000034  C0 03 00 38 */	lfs f0, 0x38(r3)
+/* 800AF194 00000034  C0 03 00 38 */	lfs f0, 0x38(r3)	/* effective address: 8038D74C */
 /* 800AF198 00000038  D0 1F 05 94 */	stfs f0, 0x594(r31)
-/* 800AF19C 0000003C  C3 A3 00 48 */	lfs f29, 0x48(r3)
-/* 800AF1A0 00000040  C3 83 00 30 */	lfs f28, 0x30(r3)
-/* 800AF1A4 00000044  C3 63 00 34 */	lfs f27, 0x34(r3)
-/* 800AF1A8 00000048  C3 43 00 08 */	lfs f26, 8(r3)
+/* 800AF19C 0000003C  C3 A3 00 48 */	lfs f29, 0x48(r3)	/* effective address: 8038D75C */
+/* 800AF1A0 00000040  C3 83 00 30 */	lfs f28, 0x30(r3)	/* effective address: 8038D744 */
+/* 800AF1A4 00000044  C3 63 00 34 */	lfs f27, 0x34(r3)	/* effective address: 8038D748 */
+/* 800AF1A8 00000048  C3 43 00 08 */	lfs f26, 8(r3)	/* effective address: 8038D71C */
 /* 800AF1AC 0000004C  C3 22 92 B8 */	lfs f25, lit_6040(r2)
 /* 800AF1B0 00000050  FF 00 C8 90 */	fmr f24, f25
 /* 800AF1B4 00000054  3B C0 00 11 */	li r30, 0x11

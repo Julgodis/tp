@@ -10,12 +10,12 @@ lbl_80470B5C:
 /* 80470B7C 00000020  7F C3 F3 78 */	mr r3, r30
 /* 80470B80 00000024  4B FF EB 3D */	bl getArcName__12daObjCarry_cFv
 /* 80470B84 00000028  7F E4 FB 78 */	mr r4, r31
-/* 80470B88 0000002C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 80470B8C 00000030  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
+/* 80470B88 0000002C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80470B8C 00000030  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80470B90 00000034  3C A5 00 02 */	addis r5, r5, 2
 /* 80470B94 00000038  38 C0 00 80 */	li r6, 0x80
 /* 80470B98 0000003C  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 80470B9C 00000040  4B FF E4 3D */	bl _unresolved
+/* 80470B9C 00000040  4B BC B7 E0 */	b getRes__14dRes_control_cFPCcPCcP11dRes_info_ci
 /* 80470BA0 00000044  88 1E 0C F0 */	lbz r0, 0xcf0(r30)
 /* 80470BA4 00000048  2C 00 00 03 */	cmpwi r0, 3
 /* 80470BA8 0000004C  3C 80 00 08 */	lis r4, 8
@@ -24,7 +24,7 @@ lbl_80470B5C:
 lbl_80470BB4:
 /* 80470BB4 00000000  3C A0 11 00 */	lis r5, 0x1100 /* 0x11000084@ha */
 /* 80470BB8 00000004  38 A5 00 84 */	addi r5, r5, 0x0084 /* 0x11000084@l */
-/* 80470BBC 00000008  4B FF E4 1D */	bl _unresolved
+/* 80470BBC 00000008  4B BA 40 98 */	b mDoExt_J3DModel__create__FP12J3DModelDataUlUl
 /* 80470BC0 0000000C  90 7E 05 70 */	stw r3, 0x570(r30)
 /* 80470BC4 00000010  80 1E 05 70 */	lwz r0, 0x570(r30)
 /* 80470BC8 00000014  28 00 00 00 */	cmplwi r0, 0

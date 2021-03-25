@@ -10,15 +10,15 @@ lbl_80222364:
 /* 80222384 00000020  88 A3 5E 3F */	lbz r5, 0x5e3f(r3)	/* effective address: 8040BFFF */
 /* 80222388 00000024  28 05 00 00 */	cmplwi r5, 0
 /* 8022238C 00000028  41 82 00 28 */	beq lbl_802223B4
-/* 80222390 0000002C  88 03 5E 59 */	lbz r0, 0x5e59(r3)
-/* 80222394 00000030  88 83 5E 31 */	lbz r4, 0x5e31(r3)
-/* 80222398 00000034  98 A3 5E 2F */	stb r5, 0x5e2f(r3)
-/* 8022239C 00000038  98 83 5E 30 */	stb r4, 0x5e30(r3)
-/* 802223A0 0000003C  98 03 5E 4C */	stb r0, 0x5e4c(r3)
+/* 80222390 0000002C  88 03 5E 59 */	lbz r0, 0x5e59(r3)	/* effective address: 8040C019 */
+/* 80222394 00000030  88 83 5E 31 */	lbz r4, 0x5e31(r3)	/* effective address: 8040BFF1 */
+/* 80222398 00000034  98 A3 5E 2F */	stb r5, 0x5e2f(r3)	/* effective address: 8040BFEF */
+/* 8022239C 00000038  98 83 5E 30 */	stb r4, 0x5e30(r3)	/* effective address: 8040BFF0 */
+/* 802223A0 0000003C  98 03 5E 4C */	stb r0, 0x5e4c(r3)	/* effective address: 8040C00C */
 /* 802223A4 00000040  38 00 00 00 */	li r0, 0
-/* 802223A8 00000044  98 03 5E 3F */	stb r0, 0x5e3f(r3)
-/* 802223AC 00000048  98 03 5E 31 */	stb r0, 0x5e31(r3)
-/* 802223B0 0000004C  98 03 5E 59 */	stb r0, 0x5e59(r3)
+/* 802223A8 00000044  98 03 5E 3F */	stb r0, 0x5e3f(r3)	/* effective address: 8040BFFF */
+/* 802223AC 00000048  98 03 5E 31 */	stb r0, 0x5e31(r3)	/* effective address: 8040BFF1 */
+/* 802223B0 0000004C  98 03 5E 59 */	stb r0, 0x5e59(r3)	/* effective address: 8040C019 */
 lbl_802223B4:
 /* 802223B4 00000000  88 9E 01 CB */	lbz r4, 0x1cb(r30)
 /* 802223B8 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -39,7 +39,7 @@ lbl_802223B4:
 /* 802223F4 00000040  7C 00 00 34 */	cntlzw r0, r0
 /* 802223F8 00000044  54 00 DE 3F */	rlwinm. r0, r0, 0x1b, 0x18, 0x1f
 /* 802223FC 00000048  41 82 00 10 */	beq lbl_8022240C
-/* 80222400 0000004C  88 1F 5E 4C */	lbz r0, 0x5e4c(r31)
+/* 80222400 0000004C  88 1F 5E 4C */	lbz r0, 0x5e4c(r31)	/* effective address: 8040C00C */
 /* 80222404 00000050  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
 /* 80222408 00000054  41 82 00 34 */	beq lbl_8022243C
 lbl_8022240C:
@@ -60,7 +60,7 @@ lbl_8022243C:
 /* 8022243C 00000000  80 7E 01 0C */	lwz r3, 0x10c(r30)
 /* 80222440 00000004  4B FF 99 91 */	bl getButtonTimer__13dMeter2Draw_cFv
 /* 80222444 00000008  B0 7E 01 9A */	sth r3, 0x19a(r30)
-/* 80222448 0000000C  88 1F 5E 2F */	lbz r0, 0x5e2f(r31)
+/* 80222448 0000000C  88 1F 5E 2F */	lbz r0, 0x5e2f(r31)	/* effective address: 8040BFEF */
 /* 8022244C 00000010  98 1E 01 CB */	stb r0, 0x1cb(r30)
 /* 80222450 00000014  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80222454 00000018  38 63 01 88 */	addi r3, r3, g_meter2_info@l

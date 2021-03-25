@@ -60,16 +60,16 @@ lbl_800D35A8:
 lbl_800D35AC:
 /* 800D35AC 00000000  2C 19 00 00 */	cmpwi r25, 0
 /* 800D35B0 00000004  41 82 00 0C */	beq lbl_800D35BC
-/* 800D35B4 00000008  C3 FA 00 1C */	lfs f31, 0x1c(r26)
+/* 800D35B4 00000008  C3 FA 00 1C */	lfs f31, 0x1c(r26)	/* effective address: 8038DADC */
 /* 800D35B8 0000000C  48 00 00 1C */	b lbl_800D35D4
 lbl_800D35BC:
 /* 800D35BC 00000000  88 1C 05 69 */	lbz r0, 0x569(r28)
 /* 800D35C0 00000004  28 00 00 03 */	cmplwi r0, 3
 /* 800D35C4 00000008  40 82 00 0C */	bne lbl_800D35D0
-/* 800D35C8 0000000C  C3 FA 00 28 */	lfs f31, 0x28(r26)
+/* 800D35C8 0000000C  C3 FA 00 28 */	lfs f31, 0x28(r26)	/* effective address: 8038DAE8 */
 /* 800D35CC 00000010  48 00 00 08 */	b lbl_800D35D4
 lbl_800D35D0:
-/* 800D35D0 00000000  C3 FA 00 08 */	lfs f31, 8(r26)
+/* 800D35D0 00000000  C3 FA 00 08 */	lfs f31, 8(r26)	/* effective address: 8038DAC8 */
 lbl_800D35D4:
 /* 800D35D4 00000000  7F 83 E3 78 */	mr r3, r28
 /* 800D35D8 00000004  4B FE C7 D9 */	bl checkZoraWearAbility__9daAlink_cCFv
@@ -81,19 +81,19 @@ lbl_800D35D4:
 /* 800D35F0 0000001C  C0 7F 00 0C */	lfs f3, 0xc(r31)
 /* 800D35F4 00000020  48 00 00 08 */	b lbl_800D35FC
 lbl_800D35F8:
-/* 800D35F8 00000000  C0 7A 00 0C */	lfs f3, 0xc(r26)
+/* 800D35F8 00000000  C0 7A 00 0C */	lfs f3, 0xc(r26)	/* effective address: 8038DACC */
 lbl_800D35FC:
 /* 800D35FC 00000000  7F 83 E3 78 */	mr r3, r28
 /* 800D3600 00000004  80 9F 00 00 */	lwz r4, 0(r31)
-/* 800D3604 00000008  C0 3A 00 04 */	lfs f1, 4(r26)
+/* 800D3604 00000008  C0 3A 00 04 */	lfs f1, 4(r26)	/* effective address: 8038DAC4 */
 /* 800D3608 0000000C  FC 40 F8 90 */	fmr f2, f31
-/* 800D360C 00000010  A8 BA 00 00 */	lha r5, 0(r26)
+/* 800D360C 00000010  A8 BA 00 00 */	lha r5, 0(r26)	/* effective address: 8038DAC0 */
 /* 800D3610 00000014  4B FD 99 FD */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
-/* 800D3614 00000018  C0 1A 00 1C */	lfs f0, 0x1c(r26)
+/* 800D3614 00000018  C0 1A 00 1C */	lfs f0, 0x1c(r26)	/* effective address: 8038DADC */
 /* 800D3618 0000001C  D0 1C 34 78 */	stfs f0, 0x3478(r28)
-/* 800D361C 00000020  C0 1A 00 20 */	lfs f0, 0x20(r26)
+/* 800D361C 00000020  C0 1A 00 20 */	lfs f0, 0x20(r26)	/* effective address: 8038DAE0 */
 /* 800D3620 00000024  D0 1C 34 7C */	stfs f0, 0x347c(r28)
-/* 800D3624 00000028  C0 1A 00 18 */	lfs f0, 0x18(r26)
+/* 800D3624 00000028  C0 1A 00 18 */	lfs f0, 0x18(r26)	/* effective address: 8038DAD8 */
 /* 800D3628 0000002C  D0 1C 34 80 */	stfs f0, 0x3480(r28)
 /* 800D362C 00000030  7F 83 E3 78 */	mr r3, r28
 /* 800D3630 00000034  38 80 00 01 */	li r4, 1
@@ -109,31 +109,31 @@ lbl_800D3654:
 /* 800D3654 00000000  A8 1C 04 E6 */	lha r0, 0x4e6(r28)
 /* 800D3658 00000004  B0 1C 04 DE */	sth r0, 0x4de(r28)
 /* 800D365C 00000008  39 1B 08 34 */	addi r8, r27, 0x834
-/* 800D3660 0000000C  A8 08 00 52 */	lha r0, 0x52(r8)
+/* 800D3660 0000000C  A8 08 00 52 */	lha r0, 0x52(r8)	/* effective address: 8038DEDE */
 /* 800D3664 00000010  B0 1C 30 7E */	sth r0, 0x307e(r28)
 /* 800D3668 00000014  88 1C 05 69 */	lbz r0, 0x569(r28)
 /* 800D366C 00000018  28 00 00 03 */	cmplwi r0, 3
 /* 800D3670 0000001C  40 82 00 44 */	bne lbl_800D36B4
-/* 800D3674 00000020  C0 1A 00 24 */	lfs f0, 0x24(r26)
+/* 800D3674 00000020  C0 1A 00 24 */	lfs f0, 0x24(r26)	/* effective address: 8038DAE4 */
 /* 800D3678 00000024  D0 1C 34 84 */	stfs f0, 0x3484(r28)
-/* 800D367C 00000028  A8 1A 00 16 */	lha r0, 0x16(r26)
+/* 800D367C 00000028  A8 1A 00 16 */	lha r0, 0x16(r26)	/* effective address: 8038DAD6 */
 /* 800D3680 0000002C  B0 1C 30 08 */	sth r0, 0x3008(r28)
 /* 800D3684 00000030  7F 83 E3 78 */	mr r3, r28
 /* 800D3688 00000034  38 80 00 00 */	li r4, 0
 /* 800D368C 00000038  38 A0 00 01 */	li r5, 1
 /* 800D3690 0000003C  88 DF 00 09 */	lbz r6, 9(r31)
 /* 800D3694 00000040  38 E0 00 02 */	li r7, 2
-/* 800D3698 00000044  C0 28 00 74 */	lfs f1, 0x74(r8)
-/* 800D369C 00000048  C0 48 00 78 */	lfs f2, 0x78(r8)
+/* 800D3698 00000044  C0 28 00 74 */	lfs f1, 0x74(r8)	/* effective address: 8038DF00 */
+/* 800D369C 00000048  C0 48 00 78 */	lfs f2, 0x78(r8)	/* effective address: 8038DF04 */
 /* 800D36A0 0000004C  4B FF DF E9 */	bl setSwordAtParam__9daAlink_cF11dCcG_At_SplUcUciff
 /* 800D36A4 00000050  3C 60 00 02 */	lis r3, 0x0002 /* 0x00020002@ha */
 /* 800D36A8 00000054  38 03 00 02 */	addi r0, r3, 0x0002 /* 0x00020002@l */
 /* 800D36AC 00000058  90 1C 32 D0 */	stw r0, 0x32d0(r28)
 /* 800D36B0 0000005C  48 00 00 60 */	b lbl_800D3710
 lbl_800D36B4:
-/* 800D36B4 00000000  C0 1A 00 10 */	lfs f0, 0x10(r26)
+/* 800D36B4 00000000  C0 1A 00 10 */	lfs f0, 0x10(r26)	/* effective address: 8038DAD0 */
 /* 800D36B8 00000004  D0 1C 34 84 */	stfs f0, 0x3484(r28)
-/* 800D36BC 00000008  A8 1A 00 14 */	lha r0, 0x14(r26)
+/* 800D36BC 00000008  A8 1A 00 14 */	lha r0, 0x14(r26)	/* effective address: 8038DAD4 */
 /* 800D36C0 0000000C  B0 1C 30 08 */	sth r0, 0x3008(r28)
 /* 800D36C4 00000010  7F 83 E3 78 */	mr r3, r28
 /* 800D36C8 00000014  38 80 00 01 */	li r4, 1
@@ -142,8 +142,8 @@ lbl_800D36B4:
 /* 800D36D4 00000020  30 1E FF FF */	addic r0, r30, -1
 /* 800D36D8 00000024  7C E0 F1 10 */	subfe r7, r0, r30
 /* 800D36DC 00000028  38 E7 00 03 */	addi r7, r7, 3
-/* 800D36E0 0000002C  C0 28 00 74 */	lfs f1, 0x74(r8)
-/* 800D36E4 00000030  C0 48 00 78 */	lfs f2, 0x78(r8)
+/* 800D36E0 0000002C  C0 28 00 74 */	lfs f1, 0x74(r8)	/* effective address: 8038DF00 */
+/* 800D36E4 00000030  C0 48 00 78 */	lfs f2, 0x78(r8)	/* effective address: 8038DF04 */
 /* 800D36E8 00000034  4B FF DF A1 */	bl setSwordAtParam__9daAlink_cF11dCcG_At_SplUcUciff
 /* 800D36EC 00000038  2C 1D 00 02 */	cmpwi r29, 2
 /* 800D36F0 0000003C  40 82 00 14 */	bne lbl_800D3704

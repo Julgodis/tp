@@ -23,8 +23,8 @@ lbl_8019B940:
 lbl_8019B994:
 /* 8019B994 00000000  90 1F 00 04 */	stw r0, 4(r31)
 /* 8019B998 00000004  80 7F 00 04 */	lwz r3, 4(r31)
-/* 8019B99C 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 8019B9A0 0000000C  38 84 4C 28 */	addi r4, r4, stringBase0@l
+/* 8019B99C 00000008  3C 80 80 39 */	lis r4, d_d_gameover__stringBase0@ha
+/* 8019B9A0 0000000C  38 84 4C 28 */	addi r4, r4, d_d_gameover__stringBase0@l
 /* 8019B9A4 00000010  38 84 00 0E */	addi r4, r4, 0xe
 /* 8019B9A8 00000014  3C A0 00 10 */	lis r5, 0x10
 /* 8019B9AC 00000018  7F C6 F3 78 */	mr r6, r30
@@ -92,8 +92,8 @@ lbl_8019BA54:
 /* 8019BAA0 0000004C  80 63 5D 30 */	lwz r3, 0x5d30(r3)	/* effective address: 8040BEF0 */
 /* 8019BAA4 00000050  3C 80 54 49 */	lis r4, 0x5449 /* 0x54494D47@ha */
 /* 8019BAA8 00000054  38 84 4D 47 */	addi r4, r4, 0x4D47 /* 0x54494D47@l */
-/* 8019BAAC 00000058  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 8019BAB0 0000005C  38 A5 4C 28 */	addi r5, r5, stringBase0@l
+/* 8019BAAC 00000058  3C A0 80 39 */	lis r5, d_d_gameover__stringBase0@ha
+/* 8019BAB0 0000005C  38 A5 4C 28 */	addi r5, r5, d_d_gameover__stringBase0@l
 /* 8019BAB4 00000060  38 A5 00 22 */	addi r5, r5, 0x22
 /* 8019BAB8 00000064  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 804061C0 */
 /* 8019BABC 00000068  81 8C 00 18 */	lwz r12, 0x18(r12)

@@ -13,8 +13,8 @@ lbl_80AF1CA4:
 /* 80AF1CD0 0000002C  48 00 00 70 */	b lbl_80AF1D40
 /* 80AF1CD4 00000030  48 00 00 6C */	b lbl_80AF1D40
 lbl_80AF1CD8:
-/* 80AF1CD8 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AF1CDC 00000004  C0 03 00 00 */	lfs f0, 0x0000(r3)
+/* 80AF1CD8 00000000  3C 60 80 AF */	lis r3, lit_4449@ha
+/* 80AF1CDC 00000004  C0 03 27 68 */	lfs f0, lit_4449@l(r3)
 /* 80AF1CE0 00000008  D0 1F 05 2C */	stfs f0, 0x52c(r31)
 /* 80AF1CE4 0000000C  D0 1F 04 F8 */	stfs f0, 0x4f8(r31)
 /* 80AF1CE8 00000010  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
@@ -23,19 +23,19 @@ lbl_80AF1CD8:
 /* 80AF1CF4 0000001C  B0 1F 0E 16 */	sth r0, 0xe16(r31)
 lbl_80AF1CF8:
 /* 80AF1CF8 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80AF1CFC 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80AF1D00 00000008  38 A4 00 00 */	addi r5, r4, 0x0000 /* 0x00000000@l */
-/* 80AF1D04 0000000C  A8 85 00 66 */	lha r4, 0x66(r5)
-/* 80AF1D08 00000010  C0 25 00 44 */	lfs f1, 0x44(r5)
+/* 80AF1CFC 00000004  3C 80 80 AF */	lis r4, m__22daNpc_SoldierA_Param_c@ha
+/* 80AF1D00 00000008  38 A4 26 E8 */	addi r5, r4, m__22daNpc_SoldierA_Param_c@l
+/* 80AF1D04 0000000C  A8 85 00 66 */	lha r4, 0x66(r5)	/* effective address: 80AF274E */
+/* 80AF1D08 00000010  C0 25 00 44 */	lfs f1, 0x44(r5)	/* effective address: 80AF272C */
 /* 80AF1D0C 00000014  38 A0 00 00 */	li r5, 0
 /* 80AF1D10 00000018  81 9F 0B 44 */	lwz r12, 0xb44(r31)
 /* 80AF1D14 0000001C  81 8C 00 3C */	lwz r12, 0x3c(r12)
 /* 80AF1D18 00000020  7D 89 03 A6 */	mtctr r12
 /* 80AF1D1C 00000024  4E 80 04 21 */	bctrl 
 /* 80AF1D20 00000028  7F E3 FB 78 */	mr r3, r31
-/* 80AF1D24 0000002C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80AF1D28 00000030  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80AF1D2C 00000034  A8 84 00 68 */	lha r4, 0x68(r4)
+/* 80AF1D24 0000002C  3C 80 80 AF */	lis r4, m__22daNpc_SoldierA_Param_c@ha
+/* 80AF1D28 00000030  38 84 26 E8 */	addi r4, r4, m__22daNpc_SoldierA_Param_c@l
+/* 80AF1D2C 00000034  A8 84 00 68 */	lha r4, 0x68(r4)	/* effective address: 80AF2750 */
 /* 80AF1D30 00000038  4B FF F7 59 */	bl setLookMode__16daNpc_SoldierA_cFi
 /* 80AF1D34 0000003C  38 00 00 00 */	li r0, 0
 /* 80AF1D38 00000040  B0 1F 09 E6 */	sth r0, 0x9e6(r31)

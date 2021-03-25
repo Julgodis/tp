@@ -50,8 +50,8 @@ lbl_802D4AB4:
 /* 802D4B74 000000C0  80 9F 00 4C */	lwz r4, 0x4c(r31)
 /* 802D4B78 000000C4  48 00 0A AD */	bl convStrLower__12JKRFileCacheCFPc
 /* 802D4B7C 000000C8  80 7F 00 4C */	lwz r3, 0x4c(r31)
-/* 802D4B80 000000CC  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802D4B84 000000D0  38 84 D1 58 */	addi r4, r4, stringBase0@l
+/* 802D4B80 000000CC  3C 80 80 3A */	lis r4, JKRFileCache__stringBase0@ha
+/* 802D4B84 000000D0  38 84 D1 58 */	addi r4, r4, JKRFileCache__stringBase0@l
 /* 802D4B88 000000D4  48 09 3F 35 */	bl strcat
 /* 802D4B8C 000000D8  7F BE EB 78 */	mr r30, r29
 /* 802D4B90 000000DC  28 1D 00 00 */	cmplwi r29, 0
@@ -81,8 +81,8 @@ lbl_802D4BE8:
 /* 802D4BE8 00000000  7F BE EB 78 */	mr r30, r29
 /* 802D4BEC 00000004  28 1D 00 00 */	cmplwi r29, 0
 /* 802D4BF0 00000008  40 82 00 10 */	bne lbl_802D4C00
-/* 802D4BF4 0000000C  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802D4BF8 00000010  38 63 D1 58 */	addi r3, r3, stringBase0@l
+/* 802D4BF4 0000000C  3C 60 80 3A */	lis r3, JKRFileCache__stringBase0@ha
+/* 802D4BF8 00000010  38 63 D1 58 */	addi r3, r3, JKRFileCache__stringBase0@l
 /* 802D4BFC 00000014  3B C3 00 02 */	addi r30, r3, 2
 lbl_802D4C00:
 /* 802D4C00 00000000  7F C3 F3 78 */	mr r3, r30

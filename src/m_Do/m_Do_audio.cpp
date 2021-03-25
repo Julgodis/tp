@@ -16,16 +16,6 @@ struct mDoAud_zelAudio_c {
 	/* 80007368 */ ~mDoAud_zelAudio_c();
 };
 
-struct JKRArchive {
-	struct EMountMode {
-	};
-
-};
-
-struct JKRSolidHeap {
-	/* 802D0BF4 */ void adjustSize();
-};
-
 struct JAISoundHandle {
 	/* 80007838 */ ~JAISoundHandle();
 	/* 802A2184 */ void releaseSound();
@@ -39,6 +29,16 @@ struct JGeometry {
 	struct TVec3 { };
 	/* TVec3<f32> */
 	struct TVec3__template0 {
+	};
+
+};
+
+struct JKRSolidHeap {
+	/* 802D0BF4 */ void adjustSize();
+};
+
+struct JKRArchive {
+	struct EMountMode {
 	};
 
 };
@@ -147,7 +147,7 @@ extern "C" void __dt__10Z2AudioMgrFv(); // 1
 extern "C" void __dt__14JAISoundHandleFv(); // 1
 extern "C" void __dt__12Z2MultiSeObjFv(); // 1
 extern "C" void __dt__16JAISeCategoryMgrFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const m_Do_m_Do_audio__stringBase0;
 extern "C" extern void* __vt__12JAUSoundInfo[4 + 1 /* padding */];
 extern "C" extern u8 struct_80450BB8[4];
 extern "C" extern u8 g_mDoAud_audioHeap[4];

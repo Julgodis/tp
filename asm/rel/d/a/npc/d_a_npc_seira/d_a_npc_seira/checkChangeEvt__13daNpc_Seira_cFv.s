@@ -4,13 +4,13 @@ lbl_80ACC818:
 /* 80ACC820 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80ACC824 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80ACC828 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80ACC82C 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80ACC830 00000018  38 A4 00 00 */	addi r5, r4, 0x0000 /* 0x00000000@l */
-/* 80ACC834 0000001C  80 85 00 00 */	lwz r4, 0(r5)
-/* 80ACC838 00000020  80 05 00 04 */	lwz r0, 4(r5)
+/* 80ACC82C 00000014  3C 80 80 AD */	lis r4, lit_4679@ha
+/* 80ACC830 00000018  38 A4 07 24 */	addi r5, r4, lit_4679@l
+/* 80ACC834 0000001C  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80AD0724 */
+/* 80ACC838 00000020  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80AD0728 */
 /* 80ACC83C 00000024  90 81 00 08 */	stw r4, 8(r1)
 /* 80ACC840 00000028  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80ACC844 0000002C  80 05 00 08 */	lwz r0, 8(r5)
+/* 80ACC844 0000002C  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80AD072C */
 /* 80ACC848 00000030  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80ACC84C 00000034  38 81 00 08 */	addi r4, r1, 8
 /* 80ACC850 00000038  48 00 10 B1 */	bl chkAction__13daNpc_Seira_cFM13daNpc_Seira_cFPCvPvPv_i
@@ -24,7 +24,7 @@ lbl_80ACC818:
 /* 80ACC870 00000058  48 00 00 38 */	b lbl_80ACC8A8
 lbl_80ACC874:
 /* 80ACC874 00000000  38 60 02 4D */	li r3, 0x24d
-/* 80ACC878 00000004  4B FF EE C1 */	bl _unresolved
+/* 80ACC878 00000004  4B 68 02 34 */	b daNpcT_chkEvtBit__FUl
 /* 80ACC87C 00000008  2C 03 00 00 */	cmpwi r3, 0
 /* 80ACC880 0000000C  41 82 00 10 */	beq lbl_80ACC890
 /* 80ACC884 00000010  38 00 00 03 */	li r0, 3
@@ -35,7 +35,7 @@ lbl_80ACC890:
 /* 80ACC894 00000004  B0 1F 0E 30 */	sth r0, 0xe30(r31)
 lbl_80ACC898:
 /* 80ACC898 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80ACC89C 00000004  4B FF EE 9D */	bl _unresolved
+/* 80ACC89C 00000004  4B 67 D9 88 */	b evtChange__8daNpcT_cFv
 /* 80ACC8A0 00000008  38 60 00 01 */	li r3, 1
 /* 80ACC8A4 0000000C  48 00 00 08 */	b lbl_80ACC8AC
 lbl_80ACC8A8:

@@ -79,9 +79,9 @@ lbl_8014ED3C:
 /* 8014ED70 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8014ED74 00000038  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8014ED78 0000003C  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
-/* 8014ED7C 00000040  90 1C 00 48 */	stw r0, 0x48(r28)
+/* 8014ED7C 00000040  90 1C 00 48 */	stw r0, 0x48(r28)	/* effective address: 80434B10 */
 /* 8014ED80 00000044  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
-/* 8014ED84 00000048  90 1C 00 4C */	stw r0, 0x4c(r28)
+/* 8014ED84 00000048  90 1C 00 4C */	stw r0, 0x4c(r28)	/* effective address: 80434B14 */
 /* 8014ED88 0000004C  48 00 00 0C */	b lbl_8014ED94
 lbl_8014ED8C:
 /* 8014ED8C 00000000  80 7D 07 54 */	lwz r3, 0x754(r29)

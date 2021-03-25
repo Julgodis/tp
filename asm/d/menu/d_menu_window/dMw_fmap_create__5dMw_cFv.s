@@ -14,7 +14,7 @@ lbl_801FC0FC:
 /* 801FC12C 00000030  A0 83 00 AA */	lhz r4, 0xaa(r3)	/* effective address: 80430232 */
 /* 801FC130 00000034  28 04 04 00 */	cmplwi r4, 0x400
 /* 801FC134 00000038  41 82 00 40 */	beq lbl_801FC174
-/* 801FC138 0000003C  88 03 00 BF */	lbz r0, 0xbf(r3)
+/* 801FC138 0000003C  88 03 00 BF */	lbz r0, 0xbf(r3)	/* effective address: 80430247 */
 /* 801FC13C 00000040  28 00 00 03 */	cmplwi r0, 3
 /* 801FC140 00000044  41 82 00 34 */	beq lbl_801FC174
 /* 801FC144 00000048  28 00 00 04 */	cmplwi r0, 4

@@ -9,22 +9,22 @@ lbl_80C70408:
 /* 80C70424 0000001C  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80C70428 00000020  41 82 00 20 */	beq lbl_80C70448
 /* 80C7042C 00000024  90 61 00 08 */	stw r3, 8(r1)
-/* 80C70430 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80C70434 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80C70430 00000028  3C 60 80 02 */	lis r3, fpcSch_JudgeByID__FPvPv@ha
+/* 80C70434 0000002C  38 63 35 90 */	addi r3, r3, fpcSch_JudgeByID__FPvPv@l
 /* 80C70438 00000030  38 81 00 08 */	addi r4, r1, 8
-/* 80C7043C 00000034  4B FF E7 9D */	bl _unresolved
+/* 80C7043C 00000034  4B 3A 93 BC */	b fopAcIt_Judge__FPFPvPv_PvPv
 /* 80C70440 00000038  38 00 00 01 */	li r0, 1
-/* 80C70444 0000003C  98 03 0D B8 */	stb r0, 0xdb8(r3)
+/* 80C70444 0000003C  98 03 0D B8 */	stb r0, 0xdb8(r3)	/* effective address: 80024348 */
 lbl_80C70448:
 /* 80C70448 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80C7044C 00000004  28 1F 00 00 */	cmplwi r31, 0
 /* 80C70450 00000008  41 82 00 08 */	beq lbl_80C70458
 /* 80C70454 0000000C  38 7F 05 A0 */	addi r3, r31, 0x5a0
 lbl_80C70458:
-/* 80C70458 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80C7045C 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80C70460 00000008  80 84 00 00 */	lwz r4, 0(r4)
-/* 80C70464 0000000C  4B FF E7 75 */	bl _unresolved
+/* 80C70458 00000000  3C 80 80 C7 */	lis r4, l_arcName@ha
+/* 80C7045C 00000004  38 84 0A 38 */	addi r4, r4, l_arcName@l
+/* 80C70460 00000008  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C70A38 */
+/* 80C70464 0000000C  4B 3B CB A4 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C70468 00000010  38 60 00 01 */	li r3, 1
 /* 80C7046C 00000014  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80C70470 00000018  80 01 00 24 */	lwz r0, 0x24(r1)

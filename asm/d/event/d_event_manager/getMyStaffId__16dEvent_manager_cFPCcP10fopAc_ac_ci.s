@@ -126,14 +126,14 @@ lbl_80047CCC:
 /* 80047CD0 00000004  48 00 00 64 */	b lbl_80047D34
 lbl_80047CD4:
 /* 80047CD4 00000000  7E C3 B3 78 */	mr r3, r22
-/* 80047CD8 00000004  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 80047CDC 00000008  38 84 9F 60 */	addi r4, r4, stringBase0@l
+/* 80047CD8 00000004  3C 80 80 38 */	lis r4, d_event_d_event_manager__stringBase0@ha
+/* 80047CDC 00000008  38 84 9F 60 */	addi r4, r4, d_event_d_event_manager__stringBase0@l
 /* 80047CE0 0000000C  38 84 01 5F */	addi r4, r4, 0x15f
 /* 80047CE4 00000010  48 32 0C B1 */	bl strcmp
 /* 80047CE8 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 80047CEC 00000018  40 82 00 34 */	bne lbl_80047D20
-/* 80047CF0 0000001C  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 80047CF4 00000020  38 63 9F 60 */	addi r3, r3, stringBase0@l
+/* 80047CF0 0000001C  3C 60 80 38 */	lis r3, d_event_d_event_manager__stringBase0@ha
+/* 80047CF4 00000020  38 63 9F 60 */	addi r3, r3, d_event_d_event_manager__stringBase0@l
 /* 80047CF8 00000024  38 63 01 65 */	addi r3, r3, 0x165
 /* 80047CFC 00000028  38 81 00 08 */	addi r4, r1, 8
 /* 80047D00 0000002C  48 32 0C 95 */	bl strcmp

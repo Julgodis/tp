@@ -32,7 +32,7 @@ lbl_8014B390:
 /* 8014B3AC 0000001C  2C 03 00 00 */	cmpwi r3, 0
 /* 8014B3B0 00000020  41 82 00 10 */	beq lbl_8014B3C0
 /* 8014B3B4 00000024  38 7E 0B 98 */	addi r3, r30, 0xb98
-/* 8014B3B8 00000028  80 9F 5D AC */	lwz r4, 0x5dac(r31)
+/* 8014B3B8 00000028  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
 /* 8014B3BC 0000002C  4B FF A3 25 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 lbl_8014B3C0:
 /* 8014B3C0 00000000  38 7E 0B 98 */	addi r3, r30, 0xb98

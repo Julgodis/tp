@@ -5,8 +5,8 @@ lbl_80CF3394:
 /* 80CF33A0 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80CF33A4 00000010  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 80CF33A8 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80CF33AC 00000018  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 80CF33B0 0000001C  3B E5 00 00 */	addi r31, r5, 0x0000 /* 0x00000000@l */
+/* 80CF33AC 00000018  3C A0 80 CF */	lis r5, l_color@ha
+/* 80CF33B0 0000001C  3B E5 43 E4 */	addi r31, r5, l_color@l
 /* 80CF33B4 00000020  28 04 00 00 */	cmplwi r4, 0
 /* 80CF33B8 00000024  40 82 00 0C */	bne lbl_80CF33C4
 /* 80CF33BC 00000028  38 60 00 00 */	li r3, 0
@@ -17,19 +17,19 @@ lbl_80CF33C4:
 /* 80CF33CC 00000008  40 82 00 58 */	bne lbl_80CF3424
 /* 80CF33D0 0000000C  C0 64 04 D4 */	lfs f3, 0x4d4(r4)
 /* 80CF33D4 00000010  C0 5E 04 D4 */	lfs f2, 0x4d4(r30)
-/* 80CF33D8 00000014  C0 1F 00 04 */	lfs f0, 4(r31)
+/* 80CF33D8 00000014  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 80CF43E8 */
 /* 80CF33DC 00000018  EC 02 00 28 */	fsubs f0, f2, f0
 /* 80CF33E0 0000001C  FC 03 00 40 */	fcmpo cr0, f3, f0
 /* 80CF33E4 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 80CF33E8 00000004  40 82 00 E0 */	bne lbl_80CF34C8
-/* 80CF33EC 00000008  C0 3F 00 08 */	lfs f1, 8(r31)
+/* 80CF33EC 00000008  C0 3F 00 08 */	lfs f1, 8(r31)	/* effective address: 80CF43EC */
 /* 80CF33F0 0000000C  C0 1E 04 F0 */	lfs f0, 0x4f0(r30)
 /* 80CF33F4 00000010  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80CF33F8 00000014  EC 02 00 2A */	fadds f0, f2, f0
 /* 80CF33FC 00000038  FC 03 00 40 */	fcmpo cr0, f3, f0
 /* 80CF3400 00000000  40 80 00 C8 */	bge lbl_80CF34C8
-/* 80CF3404 00000004  4B FF FE D5 */	bl _unresolved
-/* 80CF3408 00000008  C0 5F 00 08 */	lfs f2, 8(r31)
+/* 80CF3404 00000004  4B 32 75 60 */	b fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 80CF3408 00000008  C0 5F 00 08 */	lfs f2, 8(r31)	/* effective address: 80CF43EC */
 /* 80CF340C 0000000C  C0 1E 04 EC */	lfs f0, 0x4ec(r30)
 /* 80CF3410 00000010  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80CF3414 00000050  FC 01 00 40 */	fcmpo cr0, f1, f0
@@ -39,16 +39,16 @@ lbl_80CF33C4:
 lbl_80CF3424:
 /* 80CF3424 00000000  28 00 00 01 */	cmplwi r0, 1
 /* 80CF3428 00000004  40 82 00 A0 */	bne lbl_80CF34C8
-/* 80CF342C 00000008  C0 1F 00 0C */	lfs f0, 0xc(r31)
+/* 80CF342C 00000008  C0 1F 00 0C */	lfs f0, 0xc(r31)	/* effective address: 80CF43F0 */
 /* 80CF3430 0000000C  C0 9E 04 F4 */	lfs f4, 0x4f4(r30)
 /* 80CF3434 00000010  EC 20 01 32 */	fmuls f1, f0, f4
 /* 80CF3438 00000014  C0 5E 04 EC */	lfs f2, 0x4ec(r30)
 /* 80CF343C 00000018  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 80CF3440 0000001C  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 80CF3444 00000020  C0 7F 00 10 */	lfs f3, 0x10(r31)
+/* 80CF3444 00000020  C0 7F 00 10 */	lfs f3, 0x10(r31)	/* effective address: 80CF43F4 */
 /* 80CF3448 00000024  D0 61 00 18 */	stfs f3, 0x18(r1)
 /* 80CF344C 00000028  D0 21 00 1C */	stfs f1, 0x1c(r1)
-/* 80CF3450 0000002C  C0 3F 00 08 */	lfs f1, 8(r31)
+/* 80CF3450 0000002C  C0 3F 00 08 */	lfs f1, 8(r31)	/* effective address: 80CF43EC */
 /* 80CF3454 00000030  EC A1 01 32 */	fmuls f5, f1, f4
 /* 80CF3458 00000034  C0 1E 04 F0 */	lfs f0, 0x4f0(r30)
 /* 80CF345C 00000038  EC 81 00 32 */	fmuls f4, f1, f0
@@ -57,7 +57,7 @@ lbl_80CF3424:
 /* 80CF3468 00000044  D0 81 00 0C */	stfs f4, 0xc(r1)
 /* 80CF346C 00000048  D0 A1 00 10 */	stfs f5, 0x10(r1)
 /* 80CF3470 0000004C  C0 5E 04 D4 */	lfs f2, 0x4d4(r30)
-/* 80CF3474 00000050  C0 1F 00 04 */	lfs f0, 4(r31)
+/* 80CF3474 00000050  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 80CF43E8 */
 /* 80CF3478 00000054  EC 02 00 28 */	fsubs f0, f2, f0
 /* 80CF347C 00000058  EC 23 00 2A */	fadds f1, f3, f0
 /* 80CF3480 0000005C  D0 21 00 18 */	stfs f1, 0x18(r1)
@@ -73,7 +73,7 @@ lbl_80CF3424:
 /* 80CF34A8 00000008  7F C4 F3 78 */	mr r4, r30
 /* 80CF34AC 0000000C  38 A1 00 14 */	addi r5, r1, 0x14
 /* 80CF34B0 00000010  38 C1 00 08 */	addi r6, r1, 8
-/* 80CF34B4 00000014  4B FF FE 25 */	bl _unresolved
+/* 80CF34B4 00000014  4B 33 F1 A0 */	b dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz
 /* 80CF34B8 00000018  2C 03 00 00 */	cmpwi r3, 0
 /* 80CF34BC 0000001C  41 82 00 0C */	beq lbl_80CF34C8
 /* 80CF34C0 00000020  38 60 00 01 */	li r3, 1

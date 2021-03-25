@@ -42,7 +42,7 @@ lbl_801BF3C0:
 /* 801BF3C8 00000008  A0 03 00 B2 */	lhz r0, 0xb2(r3)	/* effective address: 8043023A */
 /* 801BF3CC 0000000C  54 00 04 63 */	rlwinm. r0, r0, 0, 0x11, 0x11
 /* 801BF3D0 00000010  41 82 00 28 */	beq lbl_801BF3F8
-/* 801BF3D4 00000014  88 03 00 BF */	lbz r0, 0xbf(r3)
+/* 801BF3D4 00000014  88 03 00 BF */	lbz r0, 0xbf(r3)	/* effective address: 80430247 */
 /* 801BF3D8 00000018  28 00 00 06 */	cmplwi r0, 6
 /* 801BF3DC 0000001C  41 82 00 1C */	beq lbl_801BF3F8
 /* 801BF3E0 00000020  7F E3 FB 78 */	mr r3, r31

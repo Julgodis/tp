@@ -21,7 +21,7 @@ lbl_800EDB88:
 /* 800EDB90 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800EDB94 0000000C  54 00 04 A5 */	rlwinm. r0, r0, 0, 0x12, 0x12
 /* 800EDB98 00000010  40 82 00 5C */	bne lbl_800EDBF4
-/* 800EDB9C 00000014  88 03 00 15 */	lbz r0, 0x15(r3)
+/* 800EDB9C 00000014  88 03 00 15 */	lbz r0, 0x15(r3)	/* effective address: 804061D5 */
 /* 800EDBA0 00000018  28 00 00 FF */	cmplwi r0, 0xff
 /* 800EDBA4 0000001C  41 82 00 14 */	beq lbl_800EDBB8
 /* 800EDBA8 00000020  7F 83 E3 78 */	mr r3, r28

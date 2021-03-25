@@ -84,8 +84,8 @@ lbl_802DD9EC:
 /* 802DDA20 00000034  4B FF 49 1D */	bl mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl
 /* 802DDA24 00000038  28 03 00 00 */	cmplwi r3, 0
 /* 802DDA28 0000003C  40 82 00 24 */	bne lbl_802DDA4C
-/* 802DDA2C 00000040  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802DDA30 00000044  38 C3 D2 F0 */	addi r6, r3, stringBase0@l
+/* 802DDA2C 00000040  3C 60 80 3A */	lis r3, JUTCacheFont__stringBase0@ha
+/* 802DDA30 00000044  38 C3 D2 F0 */	addi r6, r3, JUTCacheFont__stringBase0@l
 /* 802DDA34 00000048  38 66 00 22 */	addi r3, r6, 0x22
 /* 802DDA38 0000004C  38 80 01 DD */	li r4, 0x1dd
 /* 802DDA3C 00000050  38 A6 00 33 */	addi r5, r6, 0x33
@@ -128,8 +128,8 @@ lbl_802DDAB8:
 /* 802DDAC0 00000008  3A B5 00 04 */	addi r21, r21, 4
 /* 802DDAC4 0000000C  48 00 00 14 */	b lbl_802DDAD8
 lbl_802DDAC8:
-/* 802DDAC8 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802DDACC 00000004  38 63 D2 F0 */	addi r3, r3, stringBase0@l
+/* 802DDAC8 00000000  3C 60 80 3A */	lis r3, JUTCacheFont__stringBase0@ha
+/* 802DDACC 00000004  38 63 D2 F0 */	addi r3, r3, JUTCacheFont__stringBase0@l
 /* 802DDAD0 00000008  38 63 00 5C */	addi r3, r3, 0x5c
 /* 802DDAD4 0000000C  48 00 AB 75 */	bl JUTReportConsole
 lbl_802DDAD8:

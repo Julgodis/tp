@@ -77,7 +77,7 @@ extern "C" static void nextSrcData__FPUc(); // 1
 extern "C" void isErrorRetry__12JKRDvdRipperFv(); // 1
 extern "C" void __sinit_JKRDvdRipper_cpp(); // 1
 extern "C" void func_802DA820(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JKRDvdRipper__stringBase0;
 extern "C" extern u32 sSZSBufferSize__12JKRDvdRipper;
 
 // 

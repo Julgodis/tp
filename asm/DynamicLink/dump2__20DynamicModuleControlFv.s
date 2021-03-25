@@ -8,8 +8,8 @@ lbl_80262C0C:
 /* 80262C24 00000018  80 C4 00 10 */	lwz r6, 0x10(r4)
 /* 80262C28 0000001C  80 06 00 08 */	lwz r0, 8(r6)
 /* 80262C2C 00000020  54 05 00 3C */	rlwinm r5, r0, 0, 0, 0x1e
-/* 80262C30 00000024  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80262C34 00000028  38 63 A4 A0 */	addi r3, r3, stringBase0@l
+/* 80262C30 00000024  3C 60 80 3A */	lis r3, DynamicLink__stringBase0@ha
+/* 80262C34 00000028  38 63 A4 A0 */	addi r3, r3, DynamicLink__stringBase0@l
 /* 80262C38 0000002C  38 63 02 2E */	addi r3, r3, 0x22e
 /* 80262C3C 00000030  80 06 00 0C */	lwz r0, 0xc(r6)
 /* 80262C40 00000034  7C C5 02 14 */	add r6, r5, r0

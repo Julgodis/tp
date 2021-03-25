@@ -194,7 +194,7 @@ SECTION_DATA static void* l_dOvlpFd_Method[5] = {
 	/* 4    */ (void*)dOvlpFd_Draw__FP14overlap1_class,
 };
 
-/* 803C2BAC-803C2BD4 0028+00 s=0 e=0 z=0  None .data      g_profile_OVERLAP0                                           */
+/* 803C2BAC-803C2BD4 0028+00 s=0 e=0 z=1  None .data      g_profile_OVERLAP0                                           */
 SECTION_DATA void* g_profile_OVERLAP0[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0000FFFD,
@@ -208,7 +208,7 @@ SECTION_DATA void* g_profile_OVERLAP0[10] = {
 	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2BD4-803C2BFC 0028+00 s=0 e=0 z=0  None .data      g_profile_OVERLAP1                                           */
+/* 803C2BD4-803C2BFC 0028+00 s=0 e=0 z=1  None .data      g_profile_OVERLAP1                                           */
 SECTION_DATA void* g_profile_OVERLAP1[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0000FFFD,
@@ -222,7 +222,7 @@ SECTION_DATA void* g_profile_OVERLAP1[10] = {
 	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2BFC-803C2C24 0028+00 s=0 e=0 z=0  None .data      g_profile_OVERLAP6                                           */
+/* 803C2BFC-803C2C24 0028+00 s=0 e=0 z=1  None .data      g_profile_OVERLAP6                                           */
 SECTION_DATA void* g_profile_OVERLAP6[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0000FFFD,
@@ -236,7 +236,7 @@ SECTION_DATA void* g_profile_OVERLAP6[10] = {
 	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2C24-803C2C4C 0028+00 s=0 e=0 z=0  None .data      g_profile_OVERLAP7                                           */
+/* 803C2C24-803C2C4C 0028+00 s=0 e=0 z=1  None .data      g_profile_OVERLAP7                                           */
 SECTION_DATA void* g_profile_OVERLAP7[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0000FFFD,
@@ -250,7 +250,7 @@ SECTION_DATA void* g_profile_OVERLAP7[10] = {
 	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2C4C-803C2C74 0028+00 s=0 e=0 z=0  None .data      g_profile_OVERLAP8                                           */
+/* 803C2C4C-803C2C74 0028+00 s=0 e=0 z=1  None .data      g_profile_OVERLAP8                                           */
 SECTION_DATA void* g_profile_OVERLAP8[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0000FFFD,
@@ -264,7 +264,7 @@ SECTION_DATA void* g_profile_OVERLAP8[10] = {
 	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2C74-803C2C9C 0028+00 s=0 e=0 z=0  None .data      g_profile_OVERLAP9                                           */
+/* 803C2C74-803C2C9C 0028+00 s=0 e=0 z=1  None .data      g_profile_OVERLAP9                                           */
 SECTION_DATA void* g_profile_OVERLAP9[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0000FFFD,
@@ -278,7 +278,7 @@ SECTION_DATA void* g_profile_OVERLAP9[10] = {
 	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2C9C-803C2CC4 0028+00 s=0 e=0 z=0  None .data      g_profile_OVERLAP10                                          */
+/* 803C2C9C-803C2CC4 0028+00 s=0 e=0 z=1  None .data      g_profile_OVERLAP10                                          */
 SECTION_DATA void* g_profile_OVERLAP10[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0000FFFD,
@@ -292,7 +292,7 @@ SECTION_DATA void* g_profile_OVERLAP10[10] = {
 	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2CC4-803C2CF0 0028+04 s=0 e=0 z=0  None .data      g_profile_OVERLAP11                                          */
+/* 803C2CC4-803C2CF0 0028+04 s=0 e=0 z=1  None .data      g_profile_OVERLAP11                                          */
 SECTION_DATA void* g_profile_OVERLAP11[10 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0000FFFD,

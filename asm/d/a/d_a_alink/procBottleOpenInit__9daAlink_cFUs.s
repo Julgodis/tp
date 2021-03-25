@@ -91,8 +91,8 @@ lbl_8010F844:
 /* 8010F844 00000000  48 07 1D FD */	bl dCam_getBody__Fv
 /* 8010F848 00000004  38 80 00 12 */	li r4, 0x12
 /* 8010F84C 00000008  7F A5 EB 78 */	mr r5, r29
-/* 8010F850 0000000C  3C C0 80 39 */	lis r6, stringBase0@ha
-/* 8010F854 00000010  38 C6 20 94 */	addi r6, r6, stringBase0@l
+/* 8010F850 0000000C  3C C0 80 39 */	lis r6, d_a_d_a_alink__stringBase0@ha
+/* 8010F854 00000010  38 C6 20 94 */	addi r6, r6, d_a_d_a_alink__stringBase0@l
 /* 8010F858 00000014  38 C6 00 43 */	addi r6, r6, 0x43
 /* 8010F85C 00000018  38 E0 00 01 */	li r7, 1
 /* 8010F860 0000001C  39 1E 31 94 */	addi r8, r30, 0x3194

@@ -29,7 +29,7 @@ lbl_8000E708:
 /* 8000E730 00000028  D0 21 00 0C */	stfs f1, 0xc(r1)
 /* 8000E734 0000002C  D0 41 00 10 */	stfs f2, 0x10(r1)
 /* 8000E738 00000030  7F 83 E3 78 */	mr r3, r28
-/* 8000E73C 00000034  80 9E 5F A8 */	lwz r4, 0x5fa8(r30)
+/* 8000E73C 00000034  80 9E 5F A8 */	lwz r4, 0x5fa8(r30)	/* effective address: 8040C168 */
 /* 8000E740 00000038  7F E5 FB 78 */	mr r5, r31
 /* 8000E744 0000003C  38 C1 00 08 */	addi r6, r1, 8
 /* 8000E748 00000040  48 04 7E A5 */	bl entryZSortXluDrawList__12dDlst_list_cFP13J3DDrawBufferP9J3DPacketR4cXyz
@@ -49,7 +49,7 @@ lbl_8000E768:
 /* 8000E778 00000010  48 00 00 20 */	b lbl_8000E798
 lbl_8000E77C:
 /* 8000E77C 00000000  7F 83 E3 78 */	mr r3, r28
-/* 8000E780 00000004  80 9E 5F A8 */	lwz r4, 0x5fa8(r30)
+/* 8000E780 00000004  80 9E 5F A8 */	lwz r4, 0x5fa8(r30)	/* effective address: 8040C168 */
 /* 8000E784 00000008  7F E5 FB 78 */	mr r5, r31
 /* 8000E788 0000000C  7F 46 D3 78 */	mr r6, r26
 /* 8000E78C 00000010  48 04 7E 61 */	bl entryZSortXluDrawList__12dDlst_list_cFP13J3DDrawBufferP9J3DPacketR4cXyz

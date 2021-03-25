@@ -34,21 +34,21 @@ lbl_80321840:
 /* 80321898 00000058  48 00 23 75 */	bl calcPostTexMtx__9J3DTexMtxFPA4_Cf
 /* 8032189C 0000005C  48 00 00 70 */	b lbl_8032190C
 /* 803218A0 00000060  38 00 00 00 */	li r0, 0
-/* 803218A4 00000064  B0 04 00 0C */	sth r0, 0xc(r4)
+/* 803218A4 00000064  B0 04 00 0C */	sth r0, 0xc(r4)	/* effective address: 803A1E68 */
 /* 803218A8 00000068  7C 7E 28 2E */	lwzx r3, r30, r5
 /* 803218AC 0000006C  3C 80 80 3A */	lis r4, j3dDefaultMtx@ha
 /* 803218B0 00000070  38 84 1E 5C */	addi r4, r4, j3dDefaultMtx@l
 /* 803218B4 00000074  48 00 23 59 */	bl calcPostTexMtx__9J3DTexMtxFPA4_Cf
 /* 803218B8 00000078  48 00 00 54 */	b lbl_8032190C
 /* 803218BC 0000007C  38 00 00 00 */	li r0, 0
-/* 803218C0 00000080  B0 04 00 0C */	sth r0, 0xc(r4)
+/* 803218C0 00000080  B0 04 00 0C */	sth r0, 0xc(r4)	/* effective address: 803A1E68 */
 /* 803218C4 00000084  7C 7E 28 2E */	lwzx r3, r30, r5
 /* 803218C8 00000088  3C 80 80 3A */	lis r4, j3dDefaultMtx@ha
 /* 803218CC 0000008C  38 84 1E 5C */	addi r4, r4, j3dDefaultMtx@l
 /* 803218D0 00000090  48 00 23 3D */	bl calcPostTexMtx__9J3DTexMtxFPA4_Cf
 /* 803218D4 00000094  48 00 00 38 */	b lbl_8032190C
 /* 803218D8 00000098  38 00 00 1E */	li r0, 0x1e
-/* 803218DC 0000009C  B0 04 00 0C */	sth r0, 0xc(r4)
+/* 803218DC 0000009C  B0 04 00 0C */	sth r0, 0xc(r4)	/* effective address: 803A1E68 */
 /* 803218E0 000000A0  7C 7E 28 2E */	lwzx r3, r30, r5
 /* 803218E4 000000A4  3C 80 80 3A */	lis r4, j3dDefaultMtx@ha
 /* 803218E8 000000A8  38 84 1E 5C */	addi r4, r4, j3dDefaultMtx@l
@@ -56,7 +56,7 @@ lbl_80321840:
 /* 803218F0 000000B0  48 00 00 1C */	b lbl_8032190C
 lbl_803218F4:
 /* 803218F4 00000000  38 00 00 3C */	li r0, 0x3c
-/* 803218F8 00000004  B0 04 00 0C */	sth r0, 0xc(r4)
+/* 803218F8 00000004  B0 04 00 0C */	sth r0, 0xc(r4)	/* effective address: 803A1E68 */
 /* 803218FC 00000008  7C 7E 28 2E */	lwzx r3, r30, r5
 /* 80321900 0000000C  3C 80 80 3A */	lis r4, j3dDefaultMtx@ha
 /* 80321904 00000010  38 84 1E 5C */	addi r4, r4, j3dDefaultMtx@l

@@ -14,8 +14,8 @@ lbl_8003B30C:
 /* 8003B33C 00000030  80 1E 00 20 */	lwz r0, 0x20(r30)
 /* 8003B340 00000034  28 00 00 00 */	cmplwi r0, 0
 /* 8003B344 00000038  40 82 00 24 */	bne lbl_8003B368
-/* 8003B348 0000003C  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 8003B34C 00000040  38 63 98 B8 */	addi r3, r3, stringBase0@l
+/* 8003B348 0000003C  3C 60 80 38 */	lis r3, d_d_resorce__stringBase0@ha
+/* 8003B34C 00000040  38 63 98 B8 */	addi r3, r3, d_d_resorce__stringBase0@l
 /* 8003B350 00000044  38 63 00 2A */	addi r3, r3, 0x2a
 /* 8003B354 00000048  7F C4 F3 78 */	mr r4, r30
 /* 8003B358 0000004C  4C C6 31 82 */	crclr 6
@@ -66,8 +66,8 @@ lbl_8003B3C0:
 /* 8003B3F8 00000038  54 04 02 3E */	clrlwi r4, r0, 8
 /* 8003B3FC 0000003C  80 7E 00 14 */	lwz r3, 0x14(r30)
 /* 8003B400 00000040  80 03 00 54 */	lwz r0, 0x54(r3)
-/* 8003B404 00000044  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 8003B408 00000048  38 63 98 B8 */	addi r3, r3, stringBase0@l
+/* 8003B404 00000044  3C 60 80 38 */	lis r3, d_d_resorce__stringBase0@ha
+/* 8003B408 00000048  38 63 98 B8 */	addi r3, r3, d_d_resorce__stringBase0@l
 /* 8003B40C 0000004C  38 63 00 5A */	addi r3, r3, 0x5a
 /* 8003B410 00000050  7C 80 22 14 */	add r4, r0, r4
 /* 8003B414 00000054  4C C6 31 82 */	crclr 6

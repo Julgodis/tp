@@ -30,8 +30,8 @@ lbl_801F2940:
 /* 801F2950 00000010  80 9F 21 98 */	lwz r4, 0x2198(r31)
 /* 801F2954 00000014  2C 04 00 00 */	cmpwi r4, 0
 /* 801F2958 00000018  41 82 00 20 */	beq lbl_801F2978
-/* 801F295C 0000001C  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801F2960 00000020  38 63 79 60 */	addi r3, r3, stringBase0@l
+/* 801F295C 0000001C  3C 60 80 39 */	lis r3, d_menu_d_menu_save__stringBase0@ha
+/* 801F2960 00000020  38 63 79 60 */	addi r3, r3, d_menu_d_menu_save__stringBase0@l
 /* 801F2964 00000024  38 63 00 A6 */	addi r3, r3, 0xa6
 /* 801F2968 00000028  4C C6 31 82 */	crclr 6
 /* 801F296C 0000002C  48 17 3F 11 */	bl printf

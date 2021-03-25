@@ -4,34 +4,34 @@ lbl_806DFFC0:
 /* 806DFFC8 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 806DFFCC 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 806DFFD0 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 806DFFD4 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 806DFFD8 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 806DFFD4 00000014  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 806DFFD8 00000018  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 806DFFDC 0000001C  C0 3F 04 D0 */	lfs f1, 0x4d0(r31)
 /* 806DFFE0 00000020  C0 5F 04 D4 */	lfs f2, 0x4d4(r31)
 /* 806DFFE4 00000024  C0 7F 04 D8 */	lfs f3, 0x4d8(r31)
-/* 806DFFE8 00000028  4B FF FF 51 */	bl _unresolved
-/* 806DFFEC 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 806DFFF0 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 806DFFE8 00000028  4B C6 69 00 */	b PSMTXTrans
+/* 806DFFEC 0000002C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 806DFFF0 00000030  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 806DFFF4 00000034  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
-/* 806DFFF8 00000038  4B FF FF 41 */	bl _unresolved
-/* 806DFFFC 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 806E0000 00000040  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 806DFFF8 00000038  4B 92 C4 3C */	b mDoMtx_YrotM__FPA4_fs
+/* 806DFFFC 0000003C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 806E0000 00000040  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 806E0004 00000044  A8 9F 04 E4 */	lha r4, 0x4e4(r31)
-/* 806E0008 00000048  4B FF FF 31 */	bl _unresolved
+/* 806E0008 00000048  4B 92 C3 94 */	b mDoMtx_XrotM__FPA4_fs
 /* 806E000C 0000004C  80 7F 05 B4 */	lwz r3, 0x5b4(r31)
 /* 806E0010 00000050  80 83 00 04 */	lwz r4, 4(r3)
-/* 806E0014 00000054  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 806E0018 00000058  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 806E0014 00000054  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 806E0018 00000058  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 806E001C 0000005C  38 84 00 24 */	addi r4, r4, 0x24
-/* 806E0020 00000060  4B FF FF 19 */	bl _unresolved
+/* 806E0020 00000060  4B C6 64 90 */	b PSMTXCopy
 /* 806E0024 00000064  80 7F 05 B4 */	lwz r3, 0x5b4(r31)
-/* 806E0028 00000068  4B FF FF 11 */	bl _unresolved
+/* 806E0028 00000068  4B 93 06 84 */	b modelCalc__14mDoExt_McaMorfFv
 /* 806E002C 0000006C  80 1F 05 BC */	lwz r0, 0x5bc(r31)
 /* 806E0030 00000070  90 01 00 08 */	stw r0, 8(r1)
-/* 806E0034 00000074  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 806E0038 00000078  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 806E0034 00000074  3C 60 80 02 */	lis r3, fpcSch_JudgeByID__FPvPv@ha
+/* 806E0038 00000078  38 63 35 90 */	addi r3, r3, fpcSch_JudgeByID__FPvPv@l
 /* 806E003C 0000007C  38 81 00 08 */	addi r4, r1, 8
-/* 806E0040 00000080  4B FF FE F9 */	bl _unresolved
+/* 806E0040 00000080  4B 93 97 B8 */	b fopAcIt_Judge__FPFPvPv_PvPv
 /* 806E0044 00000084  88 9F 05 BA */	lbz r4, 0x5ba(r31)
 /* 806E0048 00000088  7C 80 07 75 */	extsb. r0, r4
 /* 806E004C 0000008C  40 82 00 18 */	bne lbl_806E0064

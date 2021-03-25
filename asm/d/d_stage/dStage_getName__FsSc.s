@@ -32,8 +32,8 @@ lbl_80024E90:
 /* 80024E9C 0000000C  40 82 00 2C */	bne lbl_80024EC8
 /* 80024EA0 00000010  38 6D 87 D8 */	addi r3, r13, 0x80450D58-0x80458580 /* data_80450D58-_SDA_BASE_ */
 /* 80024EA4 00000014  38 80 00 08 */	li r4, 8
-/* 80024EA8 00000018  3C A0 80 38 */	lis r5, stringBase0@ha
-/* 80024EAC 0000001C  38 A5 8A 50 */	addi r5, r5, stringBase0@l
+/* 80024EA8 00000018  3C A0 80 38 */	lis r5, d_d_stage__stringBase0@ha
+/* 80024EAC 0000001C  38 A5 8A 50 */	addi r5, r5, d_d_stage__stringBase0@l
 /* 80024EB0 00000020  38 A5 00 D4 */	addi r5, r5, 0xd4
 /* 80024EB4 00000024  7D 06 07 34 */	extsh r6, r8
 /* 80024EB8 00000028  7C E7 07 74 */	extsb r7, r7

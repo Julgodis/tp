@@ -10,18 +10,18 @@ lbl_80C4827C:
 /* 80C4829C 00000020  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80C482A0 00000024  41 82 00 58 */	beq lbl_80C482F8
 /* 80C482A4 00000028  90 61 00 08 */	stw r3, 8(r1)
-/* 80C482A8 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80C482AC 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80C482A8 0000002C  3C 60 80 02 */	lis r3, fpcSch_JudgeByID__FPvPv@ha
+/* 80C482AC 00000030  38 63 35 90 */	addi r3, r3, fpcSch_JudgeByID__FPvPv@l
 /* 80C482B0 00000034  38 81 00 08 */	addi r4, r1, 8
-/* 80C482B4 00000038  4B FF F7 E5 */	bl _unresolved
+/* 80C482B4 00000038  4B 3D 15 44 */	b fopAcIt_Judge__FPFPvPv_PvPv
 /* 80C482B8 0000003C  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80C482BC 00000040  41 82 00 48 */	beq lbl_80C48304
-/* 80C482C0 00000044  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80C482C4 00000048  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80C482C0 00000044  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C482C4 00000048  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C482C8 0000004C  88 9E 05 EB */	lbz r4, 0x5eb(r30)
 /* 80C482CC 00000050  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80C482D0 00000054  7C 05 07 74 */	extsb r5, r0
-/* 80C482D4 00000058  4B FF F7 C5 */	bl _unresolved
+/* 80C482D4 00000058  4B 3E D0 8C */	b isSwitch__10dSv_info_cCFii
 /* 80C482D8 0000005C  2C 03 00 00 */	cmpwi r3, 0
 /* 80C482DC 00000060  41 82 00 0C */	beq lbl_80C482E8
 /* 80C482E0 00000064  38 00 00 03 */	li r0, 3

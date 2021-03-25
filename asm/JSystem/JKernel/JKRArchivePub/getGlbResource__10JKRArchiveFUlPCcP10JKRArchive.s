@@ -22,21 +22,21 @@ lbl_802D5B80:
 /* 802D5B84 00000004  83 E3 43 54 */	lwz r31, sVolumeList__13JKRFileLoader@l(r3)
 /* 802D5B88 00000008  48 00 00 3C */	b lbl_802D5BC4
 lbl_802D5B8C:
-/* 802D5B8C 00000000  80 7F 00 00 */	lwz r3, 0(r31)
-/* 802D5B90 00000004  80 83 00 2C */	lwz r4, 0x2c(r3)
+/* 802D5B8C 00000000  80 7F 00 00 */	lwz r3, 0(r31)	/* effective address: 80434354 */
+/* 802D5B90 00000004  80 83 00 2C */	lwz r4, 0x2c(r3)	/* effective address: 8043002C */
 /* 802D5B94 00000008  3C 04 AD BF */	addis r0, r4, 0xadbf
 /* 802D5B98 0000000C  28 00 52 43 */	cmplwi r0, 0x5243
 /* 802D5B9C 00000010  40 82 00 24 */	bne lbl_802D5BC0
 /* 802D5BA0 00000014  7F A4 EB 78 */	mr r4, r29
 /* 802D5BA4 00000018  7F C5 F3 78 */	mr r5, r30
-/* 802D5BA8 0000001C  81 83 00 00 */	lwz r12, 0(r3)
+/* 802D5BA8 0000001C  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 80430000 */
 /* 802D5BAC 00000020  81 8C 00 18 */	lwz r12, 0x18(r12)
 /* 802D5BB0 00000024  7D 89 03 A6 */	mtctr r12
 /* 802D5BB4 00000028  4E 80 04 21 */	bctrl 
 /* 802D5BB8 0000002C  7C 66 1B 79 */	or. r6, r3, r3
 /* 802D5BBC 00000030  40 82 00 10 */	bne lbl_802D5BCC
 lbl_802D5BC0:
-/* 802D5BC0 00000000  83 FF 00 0C */	lwz r31, 0xc(r31)
+/* 802D5BC0 00000000  83 FF 00 0C */	lwz r31, 0xc(r31)	/* effective address: 80434360 */
 lbl_802D5BC4:
 /* 802D5BC4 00000000  28 1F 00 00 */	cmplwi r31, 0
 /* 802D5BC8 00000004  40 82 FF C4 */	bne lbl_802D5B8C

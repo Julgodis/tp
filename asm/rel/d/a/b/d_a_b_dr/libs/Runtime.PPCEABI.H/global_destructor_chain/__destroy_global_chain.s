@@ -3,19 +3,19 @@ lbl_805BAE14:
 /* 805BAE18 00000004  7C 08 02 A6 */	mflr r0
 /* 805BAE1C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 805BAE20 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 805BAE24 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 805BAE28 00000014  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 805BAE24 00000010  3C 60 80 5C */	lis r3, __global_destructor_chain@ha
+/* 805BAE28 00000014  3B E3 78 B8 */	addi r31, r3, __global_destructor_chain@l
 /* 805BAE2C 00000018  48 00 00 20 */	b lbl_805BAE4C
 lbl_805BAE30:
 /* 805BAE30 00000000  80 05 00 00 */	lwz r0, 0(r5)
-/* 805BAE34 00000004  90 1F 00 00 */	stw r0, 0(r31)
+/* 805BAE34 00000004  90 1F 00 00 */	stw r0, 0(r31)	/* effective address: 805C78B8 */
 /* 805BAE38 00000008  80 65 00 08 */	lwz r3, 8(r5)
 /* 805BAE3C 0000000C  38 80 FF FF */	li r4, -1
 /* 805BAE40 00000010  81 85 00 04 */	lwz r12, 4(r5)
 /* 805BAE44 00000014  7D 89 03 A6 */	mtctr r12
 /* 805BAE48 00000018  4E 80 04 21 */	bctrl 
 lbl_805BAE4C:
-/* 805BAE4C 00000000  80 BF 00 00 */	lwz r5, 0(r31)
+/* 805BAE4C 00000000  80 BF 00 00 */	lwz r5, 0(r31)	/* effective address: 805C78B8 */
 /* 805BAE50 00000004  28 05 00 00 */	cmplwi r5, 0
 /* 805BAE54 00000008  40 82 FF DC */	bne lbl_805BAE30
 /* 805BAE58 0000000C  83 E1 00 0C */	lwz r31, 0xc(r1)

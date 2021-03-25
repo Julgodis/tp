@@ -10,8 +10,8 @@ lbl_802D2248:
 /* 802D2268 00000020  41 82 00 28 */	beq lbl_802D2290
 /* 802D226C 00000024  54 80 06 FF */	clrlwi. r0, r4, 0x1b
 /* 802D2270 00000028  41 82 00 20 */	beq lbl_802D2290
-/* 802D2274 0000002C  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802D2278 00000030  38 63 D0 78 */	addi r3, r3, stringBase0@l
+/* 802D2274 0000002C  3C 60 80 3A */	lis r3, JKRAram__stringBase0@ha
+/* 802D2278 00000030  38 63 D0 78 */	addi r3, r3, JKRAram__stringBase0@l
 /* 802D227C 00000034  38 80 00 DB */	li r4, 0xdb
 /* 802D2280 00000038  38 A3 00 0C */	addi r5, r3, 0xc
 /* 802D2284 0000003C  38 C3 00 0F */	addi r6, r3, 0xf
@@ -24,8 +24,8 @@ lbl_802D2290:
 /* 802D229C 0000000C  7C 1F 02 14 */	add r0, r31, r0
 /* 802D22A0 00000010  54 00 06 FF */	clrlwi. r0, r0, 0x1b
 /* 802D22A4 00000014  41 82 00 20 */	beq lbl_802D22C4
-/* 802D22A8 00000018  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802D22AC 0000001C  38 63 D0 78 */	addi r3, r3, stringBase0@l
+/* 802D22A8 00000018  3C 60 80 3A */	lis r3, JKRAram__stringBase0@ha
+/* 802D22AC 0000001C  38 63 D0 78 */	addi r3, r3, JKRAram__stringBase0@l
 /* 802D22B0 00000020  38 80 00 E3 */	li r4, 0xe3
 /* 802D22B4 00000024  38 A3 00 0C */	addi r5, r3, 0xc
 /* 802D22B8 00000028  38 C3 00 0F */	addi r6, r3, 0xf

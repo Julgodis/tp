@@ -30,7 +30,7 @@ lbl_80124BA4:
 /* 80124C14 00000070  41 82 00 34 */	beq lbl_80124C48
 /* 80124C18 00000074  38 9E 47 08 */	addi r4, r30, 0x4708
 /* 80124C1C 00000078  E0 04 00 00 */	psq_l f0, 0(r4), 0, 0 /* qr0 */
-/* 80124C20 00000000  C0 44 00 08 */	lfs f2, 8(r4)
+/* 80124C20 00000000  C0 44 00 08 */	lfs f2, 8(r4)	/* effective address: 80391D68 */
 /* 80124C24 00000080  F0 01 00 2C */	psq_st f0, 44(r1), 0, 0 /* qr0 */
 /* 80124C28 00000000  D0 41 00 34 */	stfs f2, 0x34(r1)
 /* 80124C2C 00000004  C0 21 00 2C */	lfs f1, 0x2c(r1)
@@ -77,7 +77,7 @@ lbl_80124C64:
 /* 80124CC8 00000038  41 82 01 48 */	beq lbl_80124E10
 /* 80124CCC 0000003C  38 9E 47 20 */	addi r4, r30, 0x4720
 /* 80124CD0 0000006C  E0 04 00 00 */	psq_l f0, 0(r4), 0, 0 /* qr0 */
-/* 80124CD4 00000000  C0 44 00 08 */	lfs f2, 8(r4)
+/* 80124CD4 00000000  C0 44 00 08 */	lfs f2, 8(r4)	/* effective address: 80391D80 */
 /* 80124CD8 00000074  F0 01 00 20 */	psq_st f0, 32(r1), 0, 0 /* qr0 */
 /* 80124CDC 00000000  D0 41 00 28 */	stfs f2, 0x28(r1)
 /* 80124CE0 00000004  C0 21 00 20 */	lfs f1, 0x20(r1)
@@ -139,7 +139,7 @@ lbl_80124D5C:
 /* 80124DB8 0000005C  39 40 00 FF */	li r10, 0xff
 /* 80124DBC 00000060  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 80124DC0 00000064  4B F2 7C D1 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
-/* 80124DC4 00000068  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
+/* 80124DC4 00000068  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
 /* 80124DC8 0000006C  38 80 00 00 */	li r4, 0
 /* 80124DCC 00000070  90 81 00 08 */	stw r4, 8(r1)
 /* 80124DD0 00000074  38 00 FF FF */	li r0, -1

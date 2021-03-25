@@ -11,15 +11,15 @@
 // Types:
 // 
 
+struct JKRExpHeap {
+};
+
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 8003242C */ void checkLeftTrigger();
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
-};
-
-struct JKRExpHeap {
 };
 
 struct CSTControl {
@@ -81,10 +81,10 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct JKRArchive {
+struct J2DPane {
 };
 
-struct J2DPane {
+struct JKRArchive {
 };
 
 struct dSelect_cursor_c {
@@ -98,14 +98,14 @@ struct dSelect_cursor_c {
 struct JUTFont {
 };
 
+struct JMSMesgEntry_c {
+};
+
 struct ResTIMG {
 };
 
 struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
-};
-
-struct JMSMesgEntry_c {
 };
 
 struct dMeter2Info_c {
@@ -215,7 +215,7 @@ extern "C" void setBButtonString__14dMenu_Insect_cFUs(); // 1
 extern "C" void setHIO__14dMenu_Insect_cFb(); // 1
 extern "C" void draw__14dMenu_Insect_cFv(); // 1
 extern "C" void __sinit_d_menu_insect_cpp(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_menu_d_menu_insect__stringBase0;
 
 // 
 // External References:
@@ -863,7 +863,7 @@ asm void dMenu_Insect_c::isGiveInsect(u8 param_0) {
 #pragma pop
 
 
-/* 801D9F3C-801D9F8C 0050+00 s=0 e=1 z=0  None .text      isCatchNotGiveInsect__14dMenu_Insect_cFUc                    */
+/* 801D9F3C-801D9F8C 0050+00 s=0 e=1 z=12  None .text      isCatchNotGiveInsect__14dMenu_Insect_cFUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

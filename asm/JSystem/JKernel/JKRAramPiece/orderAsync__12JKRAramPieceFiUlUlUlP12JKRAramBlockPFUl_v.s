@@ -18,31 +18,31 @@ lbl_802D3614:
 /* 802D3654 00000040  57 80 06 FF */	clrlwi. r0, r28, 0x1b
 /* 802D3658 00000044  41 82 00 80 */	beq lbl_802D36D8
 lbl_802D365C:
-/* 802D365C 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802D3660 00000004  38 63 D0 B8 */	addi r3, r3, stringBase0@l
+/* 802D365C 00000000  3C 60 80 3A */	lis r3, JKRAramPiece__stringBase0@ha
+/* 802D3660 00000004  38 63 D0 B8 */	addi r3, r3, JKRAramPiece__stringBase0@l
 /* 802D3664 00000008  7F 44 D3 78 */	mr r4, r26
 /* 802D3668 0000000C  4C C6 31 82 */	crclr 6
 /* 802D366C 00000010  4B D3 34 51 */	bl OSReport
-/* 802D3670 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802D3674 00000018  38 63 D0 B8 */	addi r3, r3, stringBase0@l
+/* 802D3670 00000014  3C 60 80 3A */	lis r3, JKRAramPiece__stringBase0@ha
+/* 802D3674 00000018  38 63 D0 B8 */	addi r3, r3, JKRAramPiece__stringBase0@l
 /* 802D3678 0000001C  38 63 00 10 */	addi r3, r3, 0x10
 /* 802D367C 00000020  7F 64 DB 78 */	mr r4, r27
 /* 802D3680 00000024  4C C6 31 82 */	crclr 6
 /* 802D3684 00000028  4B D3 34 39 */	bl OSReport
-/* 802D3688 0000002C  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802D368C 00000030  38 63 D0 B8 */	addi r3, r3, stringBase0@l
+/* 802D3688 0000002C  3C 60 80 3A */	lis r3, JKRAramPiece__stringBase0@ha
+/* 802D368C 00000030  38 63 D0 B8 */	addi r3, r3, JKRAramPiece__stringBase0@l
 /* 802D3690 00000034  38 63 00 1D */	addi r3, r3, 0x1d
 /* 802D3694 00000038  7F 84 E3 78 */	mr r4, r28
 /* 802D3698 0000003C  4C C6 31 82 */	crclr 6
 /* 802D369C 00000040  4B D3 34 21 */	bl OSReport
-/* 802D36A0 00000044  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802D36A4 00000048  38 63 D0 B8 */	addi r3, r3, stringBase0@l
+/* 802D36A0 00000044  3C 60 80 3A */	lis r3, JKRAramPiece__stringBase0@ha
+/* 802D36A4 00000048  38 63 D0 B8 */	addi r3, r3, JKRAramPiece__stringBase0@l
 /* 802D36A8 0000004C  38 63 00 2F */	addi r3, r3, 0x2f
 /* 802D36AC 00000050  7F A4 EB 78 */	mr r4, r29
 /* 802D36B0 00000054  4C C6 31 82 */	crclr 6
 /* 802D36B4 00000058  4B D3 34 09 */	bl OSReport
-/* 802D36B8 0000005C  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802D36BC 00000060  38 C3 D0 B8 */	addi r6, r3, stringBase0@l
+/* 802D36B8 0000005C  3C 60 80 3A */	lis r3, JKRAramPiece__stringBase0@ha
+/* 802D36BC 00000060  38 C3 D0 B8 */	addi r6, r3, JKRAramPiece__stringBase0@l
 /* 802D36C0 00000064  38 66 00 3C */	addi r3, r6, 0x3c
 /* 802D36C4 00000068  38 80 00 6C */	li r4, 0x6c
 /* 802D36C8 0000006C  38 A6 00 4D */	addi r5, r6, 0x4d

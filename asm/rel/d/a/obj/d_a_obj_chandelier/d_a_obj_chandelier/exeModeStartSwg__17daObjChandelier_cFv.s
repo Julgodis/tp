@@ -4,12 +4,12 @@ lbl_80BC834C:
 /* 80BC8354 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80BC8358 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BC835C 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80BC8360 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80BC8364 00000018  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80BC8368 0000001C  C0 24 00 08 */	lfs f1, 8(r4)
-/* 80BC836C 00000020  C0 44 00 0C */	lfs f2, 0xc(r4)
-/* 80BC8370 00000024  C0 64 00 10 */	lfs f3, 0x10(r4)
-/* 80BC8374 00000028  C0 84 00 14 */	lfs f4, 0x14(r4)
+/* 80BC8360 00000014  3C 80 80 BD */	lis r4, lit_3731@ha
+/* 80BC8364 00000018  38 84 8C DC */	addi r4, r4, lit_3731@l
+/* 80BC8368 0000001C  C0 24 00 08 */	lfs f1, 8(r4)	/* effective address: 80BC8CE4 */
+/* 80BC836C 00000020  C0 44 00 0C */	lfs f2, 0xc(r4)	/* effective address: 80BC8CE8 */
+/* 80BC8370 00000024  C0 64 00 10 */	lfs f3, 0x10(r4)	/* effective address: 80BC8CEC */
+/* 80BC8374 00000028  C0 84 00 14 */	lfs f4, 0x14(r4)	/* effective address: 80BC8CF0 */
 /* 80BC8378 0000002C  48 00 04 09 */	bl moveSwing__17daObjChandelier_cFffff
 /* 80BC837C 00000030  80 7F 06 00 */	lwz r3, 0x600(r31)
 /* 80BC8380 00000034  2C 03 00 5A */	cmpwi r3, 0x5a

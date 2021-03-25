@@ -74,8 +74,8 @@ lbl_800B9A4C:
 /* 800B9A5C 00000010  4E 80 04 21 */	bctrl 
 /* 800B9A60 00000014  28 03 00 00 */	cmplwi r3, 0
 /* 800B9A64 00000018  41 82 00 58 */	beq lbl_800B9ABC
-/* 800B9A68 0000001C  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800B9A6C 00000020  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800B9A68 0000001C  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800B9A6C 00000020  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800B9A70 00000024  38 63 00 6F */	addi r3, r3, 0x6f
 /* 800B9A74 00000028  4B FE 3F ED */	bl checkStageName__9daAlink_cFPCc
 /* 800B9A78 0000002C  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -146,7 +146,7 @@ lbl_800B9B60:
 /* 800B9B68 00000008  41 82 00 30 */	beq lbl_800B9B98
 /* 800B9B6C 0000000C  28 03 01 03 */	cmplwi r3, 0x103
 /* 800B9B70 00000010  40 82 00 28 */	bne lbl_800B9B98
-/* 800B9B74 00000014  88 1F 00 14 */	lbz r0, 0x14(r31)
+/* 800B9B74 00000014  88 1F 00 14 */	lbz r0, 0x14(r31)	/* effective address: 804061D4 */
 /* 800B9B78 00000018  28 00 00 3F */	cmplwi r0, 0x3f
 /* 800B9B7C 0000001C  41 82 00 1C */	beq lbl_800B9B98
 /* 800B9B80 00000020  80 1E 31 A0 */	lwz r0, 0x31a0(r30)
@@ -232,8 +232,8 @@ lbl_800B9C90:
 /* 800B9CA4 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 800B9CA8 00000018  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 800B9CAC 0000001C  4B F8 E7 3D */	bl getRunEventName__16dEvent_manager_cFv
-/* 800B9CB0 00000020  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 800B9CB4 00000024  38 84 20 94 */	addi r4, r4, stringBase0@l
+/* 800B9CB0 00000020  3C 80 80 39 */	lis r4, d_a_d_a_alink__stringBase0@ha
+/* 800B9CB4 00000024  38 84 20 94 */	addi r4, r4, d_a_d_a_alink__stringBase0@l
 /* 800B9CB8 00000028  38 84 04 87 */	addi r4, r4, 0x487
 /* 800B9CBC 0000002C  48 2A EC D9 */	bl strcmp
 /* 800B9CC0 00000030  2C 03 00 00 */	cmpwi r3, 0
@@ -243,8 +243,8 @@ lbl_800B9CC8:
 /* 800B9CCC 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 800B9CD0 00000008  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 800B9CD4 0000000C  4B F8 E7 15 */	bl getRunEventName__16dEvent_manager_cFv
-/* 800B9CD8 00000010  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 800B9CDC 00000014  38 84 20 94 */	addi r4, r4, stringBase0@l
+/* 800B9CD8 00000010  3C 80 80 39 */	lis r4, d_a_d_a_alink__stringBase0@ha
+/* 800B9CDC 00000014  38 84 20 94 */	addi r4, r4, d_a_d_a_alink__stringBase0@l
 /* 800B9CE0 00000018  38 84 04 8D */	addi r4, r4, 0x48d
 /* 800B9CE4 0000001C  48 2A EC B1 */	bl strcmp
 /* 800B9CE8 00000020  2C 03 00 00 */	cmpwi r3, 0

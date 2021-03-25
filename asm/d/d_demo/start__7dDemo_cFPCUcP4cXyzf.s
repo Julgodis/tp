@@ -21,8 +21,8 @@ lbl_80039B6C:
 /* 80039BB8 0000004C  48 2A 2D 59 */	bl parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl
 /* 80039BBC 00000050  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80039BC0 00000054  40 82 00 2C */	bne lbl_80039BEC
-/* 80039BC4 00000058  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 80039BC8 0000005C  38 63 97 F8 */	addi r3, r3, stringBase0@l
+/* 80039BC4 00000058  3C 60 80 38 */	lis r3, d_d_demo__stringBase0@ha
+/* 80039BC8 0000005C  38 63 97 F8 */	addi r3, r3, d_d_demo__stringBase0@l
 /* 80039BCC 00000060  38 63 00 08 */	addi r3, r3, 8
 /* 80039BD0 00000064  4C C6 31 82 */	crclr 6
 /* 80039BD4 00000068  4B FC D0 39 */	bl OSReport_Error

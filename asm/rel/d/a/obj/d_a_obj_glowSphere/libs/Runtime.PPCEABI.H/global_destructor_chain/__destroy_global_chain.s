@@ -3,19 +3,19 @@ lbl_80BF92F4:
 /* 80BF92F8 00000004  7C 08 02 A6 */	mflr r0
 /* 80BF92FC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80BF9300 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80BF9304 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BF9308 00000014  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80BF9304 00000010  3C 60 80 C0 */	lis r3, __global_destructor_chain@ha
+/* 80BF9308 00000014  3B E3 AB A0 */	addi r31, r3, __global_destructor_chain@l
 /* 80BF930C 00000018  48 00 00 20 */	b lbl_80BF932C
 lbl_80BF9310:
 /* 80BF9310 00000000  80 05 00 00 */	lwz r0, 0(r5)
-/* 80BF9314 00000004  90 1F 00 00 */	stw r0, 0(r31)
+/* 80BF9314 00000004  90 1F 00 00 */	stw r0, 0(r31)	/* effective address: 80BFABA0 */
 /* 80BF9318 00000008  80 65 00 08 */	lwz r3, 8(r5)
 /* 80BF931C 0000000C  38 80 FF FF */	li r4, -1
 /* 80BF9320 00000010  81 85 00 04 */	lwz r12, 4(r5)
 /* 80BF9324 00000014  7D 89 03 A6 */	mtctr r12
 /* 80BF9328 00000018  4E 80 04 21 */	bctrl 
 lbl_80BF932C:
-/* 80BF932C 00000000  80 BF 00 00 */	lwz r5, 0(r31)
+/* 80BF932C 00000000  80 BF 00 00 */	lwz r5, 0(r31)	/* effective address: 80BFABA0 */
 /* 80BF9330 00000004  28 05 00 00 */	cmplwi r5, 0
 /* 80BF9334 00000008  40 82 FF DC */	bne lbl_80BF9310
 /* 80BF9338 0000000C  83 E1 00 0C */	lwz r31, 0xc(r1)

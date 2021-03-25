@@ -45,6 +45,7 @@ struct Hahen_c {
 };
 
 struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
 	/* 805786B4 */ ~cM3dGCyl();
 };
 
@@ -52,20 +53,163 @@ struct cM3dGAab {
 	/* 805786FC */ ~cM3dGAab();
 };
 
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CD9C */ void transM(f32, f32, f32);
+	/* 8000CE70 */ void scaleM(cXyz const&);
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
+};
+
+struct J3DModel {
+};
+
+struct J3DModelData {
+};
+
+struct Vec {
+};
+
+struct fopAcM_gc_c {
+	/* 8001DCBC */ void gndCheck(cXyz const*);
+};
+
+struct dComIfG_play_c {
+	/* 8002CAF0 */ void addSimpleModel(J3DModelData*, int, u8);
+	/* 8002CB30 */ void removeSimpleModel(J3DModelData*, int);
+	/* 8002CB68 */ void entrySimpleModel(J3DModel*, int);
+};
+
+struct request_of_phase_process_class {
+};
+
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
+	/* 8003C6B8 */ void getObjectResName2Index(char const*, char const*);
+};
+
+struct dKy_tevstr_c {
+};
+
+struct _GXColor {
+};
+
+struct dPa_levelEcallBack {
+};
+
+struct dPa_control_c {
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+};
+
+struct dVibration_c {
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
+};
+
+struct cBgS_LinChk {
+};
+
+struct dBgW_Base {
+};
+
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
+	/* 800743B4 */ void LineCross(cBgS_LinChk*);
+};
+
+struct dBgW {
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct dBgS_LinChk {
+	/* 80077C68 */ dBgS_LinChk();
+	/* 80077CDC */ ~dBgS_LinChk();
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct dBgS_MoveBgActor {
+	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ void IsDelete();
+	/* 800786B8 */ void ToFore();
+	/* 800786C0 */ void ToBack();
+	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
+	/* 800788DC */ void MoveBGDelete();
+	/* 80078950 */ void MoveBGExecute();
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80083830 */ void Move();
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 80084460 */ void ChkTgHit();
+	/* 800844B8 */ void ResetTgHit();
+	/* 800844F8 */ void GetTgHitObj();
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
+};
+
+struct cCcS {
+	/* 80264BA8 */ void Set(cCcD_Obj*);
+};
+
+struct cBgW_BgId {
+	/* 802681D4 */ void ChkUsed() const;
+};
+
+struct JAISoundID {
+};
+
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
 // 
 // Forward References:
 // 
 
-void daObjBHASHI_Create(fopAc_ac_c*); // 2
-void daObjBHASHI_Delete(daObjBHASHI_c*); // 2
-void daObjBHASHI_Draw(daObjBHASHI_c*); // 2
+static void daObjBHASHI_Create(fopAc_ac_c*); // 2
+static void daObjBHASHI_Delete(daObjBHASHI_c*); // 2
+static void daObjBHASHI_Draw(daObjBHASHI_c*); // 2
 static void daObjBHASHI_Execute(daObjBHASHI_c*); // 2
-void daObjBHASHI_IsDelete(daObjBHASHI_c*); // 2
+static void daObjBHASHI_IsDelete(daObjBHASHI_c*); // 2
 
 extern "C" void initCcCylinder__13daObjBHASHI_cFv(); // 1
 extern "C" void setCcCylinder__13daObjBHASHI_cFv(); // 1
-extern "C" void daObjBHASHI_Create__FP10fopAc_ac_c(); // 1
-extern "C" void daObjBHASHI_Delete__FP13daObjBHASHI_c(); // 1
+extern "C" static void daObjBHASHI_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjBHASHI_Delete__FP13daObjBHASHI_c(); // 1
 extern "C" void Set_Hahen__13daObjBHASHI_cFv(); // 1
 extern "C" void Set_Speed__13daObjBHASHI_cFssff(); // 1
 extern "C" void Obj_Damage__13daObjBHASHI_cFv(); // 1
@@ -78,32 +222,22 @@ extern "C" void checkViewArea__7Hahen_cFv(); // 1
 extern "C" void Rolling__13daObjBHASHI_cFP4cXyzff(); // 1
 extern "C" void Roll_Set__7Hahen_cFP4cXyzfs(); // 1
 extern "C" void setBaseMtx__13daObjBHASHI_cFv(); // 1
-extern "C" void daObjBHASHI_Draw__FP13daObjBHASHI_c(); // 1
+extern "C" static void daObjBHASHI_Draw__FP13daObjBHASHI_c(); // 1
 extern "C" static void daObjBHASHI_Execute__FP13daObjBHASHI_c(); // 1
 extern "C" void CreateHeap__13daObjBHASHI_cFv(); // 1
 extern "C" void create__13daObjBHASHI_cFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__7Hahen_cFv(); // 1
-extern "C" void daObjBHASHI_IsDelete__FP13daObjBHASHI_c(); // 1
+extern "C" static void daObjBHASHI_IsDelete__FP13daObjBHASHI_c(); // 1
 extern "C" void Create__13daObjBHASHI_cFv(); // 1
 extern "C" void Execute__13daObjBHASHI_cFPPA3_A4_f(); // 1
 extern "C" void Draw__13daObjBHASHI_cFv(); // 1
 extern "C" void Delete__13daObjBHASHI_cFv(); // 1
-extern "C" extern u8 const data_80578A88[68];
-extern "C" extern u32 const lit_3795;
-extern "C" extern u32 const lit_3829;
-extern "C" extern u32 const lit_3830;
 extern "C" extern u32 const lit_3922;
-extern "C" extern u32 const lit_3923;
-extern "C" extern u32 const lit_3924;
 extern "C" extern u32 const lit_3925;
-extern "C" extern u32 const lit_3926;
 extern "C" extern u32 const lit_3927;
-extern "C" extern u32 const lit_3928;
-extern "C" extern u32 const lit_3929;
 extern "C" extern u32 const lit_3930;
-extern "C" extern u8 const lit_3931[4];
 extern "C" extern u32 const lit_3932;
 extern "C" extern u32 const lit_3933;
 extern "C" extern u32 const lit_3934;
@@ -112,14 +246,6 @@ extern "C" extern u32 const lit_3936;
 extern "C" extern u32 const lit_3937;
 extern "C" extern u32 const lit_3938;
 extern "C" extern u32 const lit_3939;
-extern "C" extern u8 const lit_3942[8];
-extern "C" extern u32 const lit_4028;
-extern "C" extern u32 const lit_4029;
-extern "C" extern u32 const lit_4114;
-extern "C" extern u32 const lit_4185;
-extern "C" extern u32 const lit_4186[1 + 1 /* padding */];
-extern "C" extern u8 const lit_4187[8];
-extern "C" extern u8 const lit_4188[8];
 extern "C" extern u8 const lit_4189[8];
 extern "C" extern u32 const lit_4190;
 extern "C" extern u32 const lit_4191;
@@ -127,38 +253,131 @@ extern "C" extern u32 const lit_4192;
 extern "C" extern u32 const lit_4193;
 extern "C" extern u32 const lit_4194;
 extern "C" extern u32 const lit_4195;
-extern "C" extern u32 const lit_4258;
-extern "C" extern u32 const lit_4271;
-extern "C" extern u32 const lit_4272;
-extern "C" extern u32 const lit_4273;
-extern "C" extern u32 const lit_4345;
 extern "C" extern u32 const lit_4346;
 extern "C" extern u32 const lit_4347;
 extern "C" extern u32 const lit_4515;
-extern "C" extern u32 const lit_4516;
-extern "C" extern u32 const lit_4517;
 extern "C" extern u32 const lit_4518;
-extern "C" extern u32 const lit_4606;
-extern "C" extern u32 const lit_4626;
-extern "C" extern u32 const lit_4627;
 extern "C" extern char const* const stringBase0;
-extern "C" extern u8 l_arcName[4];
-extern "C" extern u8 l_daObjBHASHI_Method[32];
-extern "C" extern u8 g_profile_Obj_BHASHI[48];
-extern "C" extern void* __vt__8cM3dGCyl[3];
-extern "C" extern void* __vt__8cM3dGAab[3];
-extern "C" extern void* __vt__13daObjBHASHI_c[10];
+extern "C" extern void* g_profile_Obj_BHASHI[12];
 
 // 
 // External References:
 // 
 
+void mDoMtx_YrotS(f32 (* )[4], s16); // 2
+void mDoExt_modelUpdateDL(J3DModel*); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+void mDoLib_project(Vec*, Vec*); // 2
+void fopAcM_SearchByName(s16, fopAc_ac_c**); // 2
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*); // 2
+void cM_rndF(f32); // 2
+void cM_rndFX(f32); // 2
+void cLib_targetAngleY(Vec const*, Vec const*); // 2
+void operator delete(void*); // 2
 
-extern "C" void _unresolved(); // 1
+extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
+extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
+extern "C" void scaleM__14mDoMtx_stack_cFRC4cXyz(); // 1
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
+extern "C" void fopAcM_SearchByName__FsPP10fopAc_ac_c(); // 1
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
+extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz(); // 1
+extern "C" void addSimpleModel__14dComIfG_play_cFP12J3DModelDataiUc(); // 1
+extern "C" void removeSimpleModel__14dComIfG_play_cFP12J3DModelDatai(); // 1
+extern "C" void entrySimpleModel__14dComIfG_play_cFP8J3DModeli(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void onSwitch__10dSv_info_cFii(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
+extern "C" void getObjectResName2Index__14dRes_control_cFPCcPCc(); // 1
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
+extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
+extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
+extern "C" void LineCross__4cBgSFP11cBgS_LinChk(); // 1
+extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
+extern "C" void __ct__11dBgS_LinChkFv(); // 1
+extern "C" void __dt__11dBgS_LinChkFv(); // 1
+extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
+extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
+extern "C" void __ct__10dCcD_GSttsFv(); // 1
+extern "C" void Move__10dCcD_GSttsFv(); // 1
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
+extern "C" void __ct__12dCcD_GObjInfFv(); // 1
+extern "C" void ChkTgHit__12dCcD_GObjInfFv(); // 1
+extern "C" void ResetTgHit__12dCcD_GObjInfFv(); // 1
+extern "C" void GetTgHitObj__12dCcD_GObjInfFv(); // 1
+extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void GetAc__8cCcD_ObjFv(); // 1
+extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
+extern "C" void __ct__5csXyzFsss(); // 1
+extern "C" void cM_rndF__Ff(); // 1
+extern "C" void cM_rndFX__Ff(); // 1
+extern "C" void ChkUsed__9cBgW_BgIdCFv(); // 1
+extern "C" void SetC__8cM3dGCylFRC4cXyz(); // 1
+extern "C" void cLib_targetAngleY__FPC3VecPC3Vec(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECScale(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Cyl[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
+extern "C" extern f32 mGroundY__11fopAcM_gc_c;
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
+
+/* ############################################################################################## */
+/* 80578A88-80578ACC 0044+00 s=11 e=0 z=0  None .rodata    ccCylSrc$3780                                                */
+SECTION_RODATA static u8 const data_80578A88[68] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x10, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x43, 0x96, 0x00, 0x00,
+	0x45, 0x09, 0x80, 0x00,
+};
 
 /* 80576A58-80576AC4 006C+00 s=1 e=0 z=0  None .text      initCcCylinder__13daObjBHASHI_cFv                            */
 #pragma push
@@ -171,6 +390,10 @@ asm void daObjBHASHI_c::initCcCylinder() {
 #pragma pop
 
 
+/* ############################################################################################## */
+/* 80578ACC-80578AD0 0004+00 s=2 e=0 z=0  None .rodata    @3795                                                        */
+SECTION_RODATA static u32 const lit_3795 = 0xC4898000;
+
 /* 80576AC4-80576B34 0070+00 s=1 e=0 z=0  None .text      setCcCylinder__13daObjBHASHI_cFv                             */
 #pragma push
 #pragma optimization_level 0
@@ -182,27 +405,34 @@ asm void daObjBHASHI_c::setCcCylinder() {
 #pragma pop
 
 
-/* 80576B34-80576B54 0020+00 s=0 e=0 z=0  None .text      daObjBHASHI_Create__FP10fopAc_ac_c                           */
+/* 80576B34-80576B54 0020+00 s=1 e=0 z=0  None .text      daObjBHASHI_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjBHASHI_Create(fopAc_ac_c* param_0) {
+asm static void daObjBHASHI_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/daObjBHASHI_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80576B54-80576B78 0024+00 s=0 e=0 z=0  None .text      daObjBHASHI_Delete__FP13daObjBHASHI_c                        */
+/* 80576B54-80576B78 0024+00 s=1 e=0 z=0  None .text      daObjBHASHI_Delete__FP13daObjBHASHI_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjBHASHI_Delete(daObjBHASHI_c* param_0) {
+asm static void daObjBHASHI_Delete(daObjBHASHI_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/daObjBHASHI_Delete__FP13daObjBHASHI_c.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80578AD0-80578AD4 0004+00 s=2 e=0 z=0  None .rodata    @3829                                                        */
+SECTION_RODATA static u32 const lit_3829 = 0x44898000;
+
+/* 80578AD4-80578AD8 0004+00 s=1 e=0 z=0  None .rodata    @3830                                                        */
+SECTION_RODATA static u32 const lit_3830 = 0x42480000;
 
 /* 80576B78-80576C50 00D8+00 s=2 e=0 z=0  None .text      Set_Hahen__13daObjBHASHI_cFv                                 */
 #pragma push
@@ -215,307 +445,36 @@ asm void daObjBHASHI_c::Set_Hahen() {
 #pragma pop
 
 
-/* 80576C50-805771EC 059C+00 s=1 e=0 z=0  None .text      Set_Speed__13daObjBHASHI_cFssff                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBHASHI_c::Set_Speed(s16 param_0, s16 param_1, f32 param_2, f32 param_3) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Set_Speed__13daObjBHASHI_cFssff.s"
-}
-#pragma pop
-
-
-/* 805771EC-80577500 0314+00 s=1 e=0 z=0  None .text      Obj_Damage__13daObjBHASHI_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBHASHI_c::Obj_Damage() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Obj_Damage__13daObjBHASHI_cFv.s"
-}
-#pragma pop
-
-
-/* 80577500-80577794 0294+00 s=0 e=0 z=0  None .text      Obj_Damage__13daObjBHASHI_cF4cXyz                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBHASHI_c::Obj_Damage(cXyz param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Obj_Damage__13daObjBHASHI_cF4cXyz.s"
-}
-#pragma pop
-
-
-/* 80577794-805777A4 0010+00 s=0 e=0 z=0  None .text      __ct__7Hahen_cFv                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm Hahen_c::Hahen_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/__ct__7Hahen_cFv.s"
-}
-#pragma pop
-
-
-/* 805777A4-80577868 00C4+00 s=1 e=0 z=0  None .text      Wall_Check__7Hahen_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void Hahen_c::Wall_Check() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Wall_Check__7Hahen_cFv.s"
-}
-#pragma pop
-
-
-/* 80577868-80577C1C 03B4+00 s=1 e=0 z=0  None .text      HahenMotion__7Hahen_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void Hahen_c::HahenMotion() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/HahenMotion__7Hahen_cFv.s"
-}
-#pragma pop
-
-
-/* 80577C1C-80577DA4 0188+00 s=1 e=0 z=0  None .text      CheckCull__7Hahen_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void Hahen_c::CheckCull() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/CheckCull__7Hahen_cFv.s"
-}
-#pragma pop
-
-
-/* 80577DA4-80577E24 0080+00 s=1 e=0 z=0  None .text      checkViewArea__7Hahen_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void Hahen_c::checkViewArea() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/checkViewArea__7Hahen_cFv.s"
-}
-#pragma pop
-
-
-/* 80577E24-80577FE0 01BC+00 s=1 e=0 z=0  None .text      Rolling__13daObjBHASHI_cFP4cXyzff                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBHASHI_c::Rolling(cXyz* param_0, f32 param_1, f32 param_2) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Rolling__13daObjBHASHI_cFP4cXyzff.s"
-}
-#pragma pop
-
-
-/* 80577FE0-805781FC 021C+00 s=1 e=0 z=0  None .text      Roll_Set__7Hahen_cFP4cXyzfs                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void Hahen_c::Roll_Set(cXyz* param_0, f32 param_1, s16 param_2) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Roll_Set__7Hahen_cFP4cXyzfs.s"
-}
-#pragma pop
-
-
-/* 805781FC-805782E4 00E8+00 s=1 e=0 z=0  None .text      setBaseMtx__13daObjBHASHI_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBHASHI_c::setBaseMtx() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/setBaseMtx__13daObjBHASHI_cFv.s"
-}
-#pragma pop
-
-
-/* 805782E4-80578310 002C+00 s=0 e=0 z=0  None .text      daObjBHASHI_Draw__FP13daObjBHASHI_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBHASHI_Draw(daObjBHASHI_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/daObjBHASHI_Draw__FP13daObjBHASHI_c.s"
-}
-#pragma pop
-
-
-/* 80578310-80578330 0020+00 s=1 e=0 z=0  None .text      daObjBHASHI_Execute__FP13daObjBHASHI_c                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjBHASHI_Execute(daObjBHASHI_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/daObjBHASHI_Execute__FP13daObjBHASHI_c.s"
-}
-#pragma pop
-
-
-/* 80578330-8057842C 00FC+00 s=0 e=0 z=0  None .text      CreateHeap__13daObjBHASHI_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBHASHI_c::CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/CreateHeap__13daObjBHASHI_cFv.s"
-}
-#pragma pop
-
-
-/* 8057842C-805786B4 0288+00 s=1 e=0 z=0  None .text      create__13daObjBHASHI_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBHASHI_c::create() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/create__13daObjBHASHI_cFv.s"
-}
-#pragma pop
-
-
-/* 805786B4-805786FC 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cM3dGCyl::~cM3dGCyl() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/__dt__8cM3dGCylFv.s"
-}
-#pragma pop
-
-
-/* 805786FC-80578744 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cM3dGAab::~cM3dGAab() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/__dt__8cM3dGAabFv.s"
-}
-#pragma pop
-
-
-/* 80578744-80578780 003C+00 s=0 e=0 z=0  None .text      __dt__7Hahen_cFv                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm Hahen_c::~Hahen_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/__dt__7Hahen_cFv.s"
-}
-#pragma pop
-
-
-/* 80578780-80578788 0008+00 s=0 e=0 z=0  None .text      daObjBHASHI_IsDelete__FP13daObjBHASHI_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBHASHI_IsDelete(daObjBHASHI_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/daObjBHASHI_IsDelete__FP13daObjBHASHI_c.s"
-}
-#pragma pop
-
-
-/* 80578788-805787CC 0044+00 s=0 e=0 z=0  None .text      Create__13daObjBHASHI_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBHASHI_c::Create() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/func_80578788.s"
-}
-#pragma pop
-
-
-/* 805787CC-805788EC 0120+00 s=0 e=0 z=0  None .text      Execute__13daObjBHASHI_cFPPA3_A4_f                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBHASHI_c::Execute(f32 (** param_0)[3][4]) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Execute__13daObjBHASHI_cFPPA3_A4_f.s"
-}
-#pragma pop
-
-
-/* 805788EC-805789E8 00FC+00 s=0 e=0 z=0  None .text      Draw__13daObjBHASHI_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBHASHI_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Draw__13daObjBHASHI_cFv.s"
-}
-#pragma pop
-
-
-/* 805789E8-80578A80 0098+00 s=0 e=0 z=0  None .text      Delete__13daObjBHASHI_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBHASHI_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Delete__13daObjBHASHI_cFv.s"
-}
-#pragma pop
-
-
 /* ############################################################################################## */
-/* 80578A88-80578ACC 0044+00 s=0 e=0 z=0  None .rodata    ccCylSrc$3780                                                */
-SECTION_RODATA u8 const data_80578A88[68] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x10, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x43, 0x96, 0x00, 0x00,
-	0x45, 0x09, 0x80, 0x00,
-};
-
-/* 80578ACC-80578AD0 0004+00 s=0 e=0 z=0  None .rodata    @3795                                                        */
-SECTION_RODATA u32 const lit_3795 = 0xC4898000;
-
-/* 80578AD0-80578AD4 0004+00 s=0 e=0 z=0  None .rodata    @3829                                                        */
-SECTION_RODATA u32 const lit_3829 = 0x44898000;
-
-/* 80578AD4-80578AD8 0004+00 s=0 e=0 z=0  None .rodata    @3830                                                        */
-SECTION_RODATA u32 const lit_3830 = 0x42480000;
-
 /* 80578AD8-80578ADC 0004+00 s=0 e=0 z=0  None .rodata    @3922                                                        */
 SECTION_RODATA u32 const lit_3922 = 0x42A00000;
 
-/* 80578ADC-80578AE0 0004+00 s=0 e=0 z=0  None .rodata    @3923                                                        */
-SECTION_RODATA u32 const lit_3923 = 0x43AF0000;
+/* 80578ADC-80578AE0 0004+00 s=1 e=0 z=0  None .rodata    @3923                                                        */
+SECTION_RODATA static u32 const lit_3923 = 0x43AF0000;
 
-/* 80578AE0-80578AE4 0004+00 s=0 e=0 z=0  None .rodata    @3924                                                        */
-SECTION_RODATA u32 const lit_3924 = 0x40200000;
+/* 80578AE0-80578AE4 0004+00 s=1 e=0 z=0  None .rodata    @3924                                                        */
+SECTION_RODATA static u32 const lit_3924 = 0x40200000;
 
 /* 80578AE4-80578AE8 0004+00 s=0 e=0 z=0  None .rodata    @3925                                                        */
 SECTION_RODATA u32 const lit_3925 = 0x40B00000;
 
-/* 80578AE8-80578AEC 0004+00 s=0 e=0 z=0  None .rodata    @3926                                                        */
-SECTION_RODATA u32 const lit_3926 = 0x40466666;
+/* 80578AE8-80578AEC 0004+00 s=1 e=0 z=0  None .rodata    @3926                                                        */
+SECTION_RODATA static u32 const lit_3926 = 0x40466666;
 
 /* 80578AEC-80578AF0 0004+00 s=0 e=0 z=0  None .rodata    @3927                                                        */
 SECTION_RODATA u32 const lit_3927 = 0x40900000;
 
-/* 80578AF0-80578AF4 0004+00 s=0 e=0 z=0  None .rodata    @3928                                                        */
-SECTION_RODATA u32 const lit_3928 = 0x40000000;
+/* 80578AF0-80578AF4 0004+00 s=2 e=0 z=0  None .rodata    @3928                                                        */
+SECTION_RODATA static u32 const lit_3928 = 0x40000000;
 
-/* 80578AF4-80578AF8 0004+00 s=0 e=0 z=0  None .rodata    @3929                                                        */
-SECTION_RODATA u32 const lit_3929 = 0x41F00000;
+/* 80578AF4-80578AF8 0004+00 s=1 e=0 z=0  None .rodata    @3929                                                        */
+SECTION_RODATA static u32 const lit_3929 = 0x41F00000;
 
 /* 80578AF8-80578AFC 0004+00 s=0 e=0 z=0  None .rodata    @3930                                                        */
 SECTION_RODATA u32 const lit_3930 = 0x46000000;
 
-/* 80578AFC-80578B00 0004+00 s=0 e=0 z=0  None .rodata    @3931                                                        */
-SECTION_RODATA u8 const lit_3931[4] = {
+/* 80578AFC-80578B00 0004+00 s=6 e=0 z=0  None .rodata    @3931                                                        */
+SECTION_RODATA static u8 const lit_3931[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -543,40 +502,122 @@ SECTION_RODATA u32 const lit_3938 = 0x44DAC000;
 /* 80578B1C-80578B20 0004+00 s=0 e=0 z=0  None .rodata    @3939                                                        */
 SECTION_RODATA u32 const lit_3939 = 0x46FA0000;
 
-/* 80578B20-80578B28 0008+00 s=0 e=0 z=0  None .rodata    @3942                                                        */
-SECTION_RODATA u8 const lit_3942[8] = {
+/* 80578B20-80578B28 0008+00 s=3 e=0 z=0  None .rodata    @3942                                                        */
+SECTION_RODATA static u8 const lit_3942[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80578B28-80578B2C 0004+00 s=0 e=0 z=0  None .rodata    @4028                                                        */
-SECTION_RODATA u32 const lit_4028 = 0x3F800000;
+/* 80576C50-805771EC 059C+00 s=1 e=0 z=0  None .text      Set_Speed__13daObjBHASHI_cFssff                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjBHASHI_c::Set_Speed(s16 param_0, s16 param_1, f32 param_2, f32 param_3) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Set_Speed__13daObjBHASHI_cFssff.s"
+}
+#pragma pop
 
-/* 80578B2C-80578B30 0004+00 s=0 e=0 z=0  None .rodata    @4029                                                        */
-SECTION_RODATA u32 const lit_4029 = 0xBF800000;
 
-/* 80578B30-80578B34 0004+00 s=0 e=0 z=0  None .rodata    @4114                                                        */
-SECTION_RODATA u32 const lit_4114 = 0xBD4CCCCD;
+/* 805771EC-80577500 0314+00 s=1 e=0 z=0  None .text      Obj_Damage__13daObjBHASHI_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjBHASHI_c::Obj_Damage() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Obj_Damage__13daObjBHASHI_cFv.s"
+}
+#pragma pop
 
-/* 80578B34-80578B38 0004+00 s=0 e=0 z=0  None .rodata    @4185                                                        */
-SECTION_RODATA u32 const lit_4185 = 0x41700000;
 
-/* 80578B38-80578B40 0004+04 s=0 e=0 z=0  None .rodata    @4186                                                        */
-SECTION_RODATA u32 const lit_4186[1 + 1 /* padding */] = {
+/* ############################################################################################## */
+/* 80578B28-80578B2C 0004+00 s=1 e=0 z=0  None .rodata    @4028                                                        */
+SECTION_RODATA static u32 const lit_4028 = 0x3F800000;
+
+/* 80578B2C-80578B30 0004+00 s=2 e=0 z=0  None .rodata    @4029                                                        */
+SECTION_RODATA static u32 const lit_4029 = 0xBF800000;
+
+/* 80577500-80577794 0294+00 s=0 e=0 z=1  None .text      Obj_Damage__13daObjBHASHI_cF4cXyz                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjBHASHI_c::Obj_Damage(cXyz param_0) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Obj_Damage__13daObjBHASHI_cF4cXyz.s"
+}
+#pragma pop
+
+
+/* 80577794-805777A4 0010+00 s=1 e=0 z=0  None .text      __ct__7Hahen_cFv                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm Hahen_c::Hahen_c() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/__ct__7Hahen_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
+/* 80578B30-80578B34 0004+00 s=1 e=0 z=0  None .rodata    @4114                                                        */
+SECTION_RODATA static u32 const lit_4114 = 0xBD4CCCCD;
+
+/* 805777A4-80577868 00C4+00 s=1 e=0 z=0  None .text      Wall_Check__7Hahen_cFv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void Hahen_c::Wall_Check() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Wall_Check__7Hahen_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
+/* 80578B34-80578B38 0004+00 s=1 e=0 z=0  None .rodata    @4185                                                        */
+SECTION_RODATA static u32 const lit_4185 = 0x41700000;
+
+/* 80578B38-80578B40 0004+04 s=1 e=0 z=0  None .rodata    @4186                                                        */
+SECTION_RODATA static u32 const lit_4186[1 + 1 /* padding */] = {
 	0xC1100000,
 	/* padding */
 	0x00000000,
 };
 
-/* 80578B40-80578B48 0008+00 s=0 e=0 z=0  None .rodata    @4187                                                        */
-SECTION_RODATA u8 const lit_4187[8] = {
+/* 80577868-80577C1C 03B4+00 s=1 e=0 z=0  None .text      HahenMotion__7Hahen_cFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void Hahen_c::HahenMotion() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/HahenMotion__7Hahen_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
+/* 80578B40-80578B48 0008+00 s=2 e=0 z=0  None .rodata    @4187                                                        */
+SECTION_RODATA static u8 const lit_4187[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80578B48-80578B50 0008+00 s=0 e=0 z=0  None .rodata    @4188                                                        */
-SECTION_RODATA u8 const lit_4188[8] = {
+/* 80578B48-80578B50 0008+00 s=2 e=0 z=0  None .rodata    @4188                                                        */
+SECTION_RODATA static u8 const lit_4188[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
+/* 80577C1C-80577DA4 0188+00 s=1 e=0 z=0  None .text      CheckCull__7Hahen_cFv                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void Hahen_c::CheckCull() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/CheckCull__7Hahen_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
 /* 80578B50-80578B58 0008+00 s=0 e=0 z=0  None .rodata    @4189                                                        */
 SECTION_RODATA u8 const lit_4189[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -600,21 +641,89 @@ SECTION_RODATA u32 const lit_4194 = 0x41000000;
 /* 80578B6C-80578B70 0004+00 s=0 e=0 z=0  None .rodata    @4195                                                        */
 SECTION_RODATA u32 const lit_4195 = 0x3F19999A;
 
-/* 80578B70-80578B74 0004+00 s=0 e=0 z=0  None .rodata    @4258                                                        */
-SECTION_RODATA u32 const lit_4258 = 0x447A0000;
+/* 80578B70-80578B74 0004+00 s=1 e=0 z=0  None .rodata    @4258                                                        */
+SECTION_RODATA static u32 const lit_4258 = 0x447A0000;
 
-/* 80578B74-80578B78 0004+00 s=0 e=0 z=0  None .rodata    @4271                                                        */
-SECTION_RODATA u32 const lit_4271 = 0xC2480000;
+/* 80578B74-80578B78 0004+00 s=1 e=0 z=0  None .rodata    @4271                                                        */
+SECTION_RODATA static u32 const lit_4271 = 0xC2480000;
 
-/* 80578B78-80578B7C 0004+00 s=0 e=0 z=0  None .rodata    @4272                                                        */
-SECTION_RODATA u32 const lit_4272 = 0x44248000;
+/* 80578B78-80578B7C 0004+00 s=1 e=0 z=0  None .rodata    @4272                                                        */
+SECTION_RODATA static u32 const lit_4272 = 0x44248000;
 
-/* 80578B7C-80578B80 0004+00 s=0 e=0 z=0  None .rodata    @4273                                                        */
-SECTION_RODATA u32 const lit_4273 = 0x43F90000;
+/* 80578B7C-80578B80 0004+00 s=1 e=0 z=0  None .rodata    @4273                                                        */
+SECTION_RODATA static u32 const lit_4273 = 0x43F90000;
 
-/* 80578B80-80578B84 0004+00 s=0 e=0 z=0  None .rodata    @4345                                                        */
-SECTION_RODATA u32 const lit_4345 = 0x3E4CCCCD;
+/* 80577DA4-80577E24 0080+00 s=1 e=0 z=0  None .text      checkViewArea__7Hahen_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void Hahen_c::checkViewArea() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/checkViewArea__7Hahen_cFv.s"
+}
+#pragma pop
 
+
+/* 80577E24-80577FE0 01BC+00 s=1 e=0 z=0  None .text      Rolling__13daObjBHASHI_cFP4cXyzff                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjBHASHI_c::Rolling(cXyz* param_0, f32 param_1, f32 param_2) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Rolling__13daObjBHASHI_cFP4cXyzff.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
+/* 80578B80-80578B84 0004+00 s=1 e=0 z=0  None .rodata    @4345                                                        */
+SECTION_RODATA static u32 const lit_4345 = 0x3E4CCCCD;
+
+/* 80577FE0-805781FC 021C+00 s=1 e=0 z=0  None .text      Roll_Set__7Hahen_cFP4cXyzfs                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void Hahen_c::Roll_Set(cXyz* param_0, f32 param_1, s16 param_2) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Roll_Set__7Hahen_cFP4cXyzfs.s"
+}
+#pragma pop
+
+
+/* 805781FC-805782E4 00E8+00 s=1 e=0 z=0  None .text      setBaseMtx__13daObjBHASHI_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjBHASHI_c::setBaseMtx() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/setBaseMtx__13daObjBHASHI_cFv.s"
+}
+#pragma pop
+
+
+/* 805782E4-80578310 002C+00 s=1 e=0 z=0  None .text      daObjBHASHI_Draw__FP13daObjBHASHI_c                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daObjBHASHI_Draw(daObjBHASHI_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/daObjBHASHI_Draw__FP13daObjBHASHI_c.s"
+}
+#pragma pop
+
+
+/* 80578310-80578330 0020+00 s=2 e=0 z=0  None .text      daObjBHASHI_Execute__FP13daObjBHASHI_c                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daObjBHASHI_Execute(daObjBHASHI_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/daObjBHASHI_Execute__FP13daObjBHASHI_c.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
 /* 80578B84-80578B88 0004+00 s=0 e=0 z=0  None .rodata    @4346                                                        */
 SECTION_RODATA u32 const lit_4346 = 0x40400000;
 
@@ -624,25 +733,25 @@ SECTION_RODATA u32 const lit_4347 = 0x41100000;
 /* 80578B8C-80578B90 0004+00 s=0 e=0 z=0  None .rodata    @4515                                                        */
 SECTION_RODATA u32 const lit_4515 = 0x42C80000;
 
-/* 80578B90-80578B94 0004+00 s=0 e=0 z=0  None .rodata    @4516                                                        */
-SECTION_RODATA u32 const lit_4516 = 0xC3FA0000;
+/* 80578B90-80578B94 0004+00 s=1 e=0 z=0  None .rodata    @4516                                                        */
+SECTION_RODATA static u32 const lit_4516 = 0xC3FA0000;
 
-/* 80578B94-80578B98 0004+00 s=0 e=0 z=0  None .rodata    @4517                                                        */
-SECTION_RODATA u32 const lit_4517 = 0x43FA0000;
+/* 80578B94-80578B98 0004+00 s=1 e=0 z=0  None .rodata    @4517                                                        */
+SECTION_RODATA static u32 const lit_4517 = 0x43FA0000;
 
 /* 80578B98-80578B9C 0004+00 s=0 e=0 z=0  None .rodata    @4518                                                        */
 SECTION_RODATA u32 const lit_4518 = 0x453B8000;
 
-/* 80578B9C-80578BA0 0004+00 s=0 e=0 z=0  None .rodata    @4606                                                        */
-SECTION_RODATA u32 const lit_4606 = 0xC47A0000;
+/* 80578B9C-80578BA0 0004+00 s=1 e=0 z=0  None .rodata    @4606                                                        */
+SECTION_RODATA static u32 const lit_4606 = 0xC47A0000;
 
-/* 80578BA0-80578BA4 0004+00 s=0 e=0 z=0  None .rodata    @4626                                                        */
-SECTION_RODATA u32 const lit_4626 = 0x43C80000;
+/* 80578BA0-80578BA4 0004+00 s=1 e=0 z=0  None .rodata    @4626                                                        */
+SECTION_RODATA static u32 const lit_4626 = 0x43C80000;
 
-/* 80578BA4-80578BA8 0004+00 s=0 e=0 z=0  None .rodata    @4627                                                        */
-SECTION_RODATA u32 const lit_4627 = 0x42B40000;
+/* 80578BA4-80578BA8 0004+00 s=1 e=0 z=0  None .rodata    @4627                                                        */
+SECTION_RODATA static u32 const lit_4627 = 0x42B40000;
 
-/* 80578BA8-80578BEF 0047+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80578BA8-80578BEF 0047+00 s=4 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -652,49 +761,173 @@ SECTION_DEAD char const* const stringBase_80578BC3 = "Lv9_R07_pillar_hahen.bmd";
 SECTION_DEAD char const* const stringBase_80578BDC = "Lv9_R07_pillar.dzb";
 #pragma pop
 
-/* 80578BF0-80578BF4 0004+00 s=0 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA u8 l_arcName[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
+/* 80578BF0-80578BF4 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
 
-/* 80578BF4-80578C14 0020+00 s=0 e=0 z=0  None .data      l_daObjBHASHI_Method                                         */
-SECTION_DATA u8 l_daObjBHASHI_Method[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+/* 80578330-8057842C 00FC+00 s=1 e=0 z=0  None .text      CreateHeap__13daObjBHASHI_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjBHASHI_c::CreateHeap() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/CreateHeap__13daObjBHASHI_cFv.s"
+}
+#pragma pop
 
-/* 80578C14-80578C44 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_BHASHI                                         */
-SECTION_DATA u8 g_profile_Obj_BHASHI[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x03, 0xFF, 0xFD, 0x00, 0x6C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x14, 0x64, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x01, 0xCF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x40, 0x00, 0x00, 0x0E, 0x00, 0x00,
-};
 
-/* 80578C44-80578C50 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
-SECTION_DATA void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 80578C50-80578C5C 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 80578C5C-80578C84 0028+00 s=0 e=0 z=0  None .data      __vt__13daObjBHASHI_c                                        */
-SECTION_DATA void* __vt__13daObjBHASHI_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
+/* ############################################################################################## */
+/* 80578BF4-80578C14 0020+00 s=1 e=0 z=0  None .data      l_daObjBHASHI_Method                                         */
+SECTION_DATA static void* l_daObjBHASHI_Method[8] = {
+	/* 0    */ (void*)daObjBHASHI_Create__FP10fopAc_ac_c,
+	/* 1    */ (void*)daObjBHASHI_Delete__FP13daObjBHASHI_c,
+	/* 2    */ (void*)daObjBHASHI_Execute__FP13daObjBHASHI_c,
+	/* 3    */ (void*)daObjBHASHI_IsDelete__FP13daObjBHASHI_c,
+	/* 4    */ (void*)daObjBHASHI_Draw__FP13daObjBHASHI_c,
 	/* 5    */ (void*)NULL,
 	/* 6    */ (void*)NULL,
 	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)NULL,
-	/* 9    */ (void*)NULL,
 };
+
+/* 80578C14-80578C44 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_BHASHI                                         */
+SECTION_DATA void* g_profile_Obj_BHASHI[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0003FFFD,
+	/* 2    */ (void*)0x006C0000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x00001464,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x01CF0000,
+	/* 9    */ (void*)&l_daObjBHASHI_Method,
+	/* 10   */ (void*)0x00044000,
+	/* 11   */ (void*)0x000E0000,
+};
+
+/* 80578C44-80578C50 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
+SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__8cM3dGCylFv,
+};
+
+/* 80578C50-80578C5C 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA static void* __vt__8cM3dGAab[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__8cM3dGAabFv,
+};
+
+/* 80578C5C-80578C84 0028+00 s=1 e=0 z=0  None .data      __vt__13daObjBHASHI_c                                        */
+SECTION_DATA static void* __vt__13daObjBHASHI_c[10] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)CreateHeap__13daObjBHASHI_cFv,
+	/* 3    */ (void*)Create__13daObjBHASHI_cFv,
+	/* 4    */ (void*)Execute__13daObjBHASHI_cFPPA3_A4_f,
+	/* 5    */ (void*)Draw__13daObjBHASHI_cFv,
+	/* 6    */ (void*)Delete__13daObjBHASHI_cFv,
+	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
+	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
+	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+};
+
+/* 8057842C-805786B4 0288+00 s=1 e=0 z=0  None .text      create__13daObjBHASHI_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjBHASHI_c::create() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/create__13daObjBHASHI_cFv.s"
+}
+#pragma pop
+
+
+/* 805786B4-805786FC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm cM3dGCyl::~cM3dGCyl() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/__dt__8cM3dGCylFv.s"
+}
+#pragma pop
+
+
+/* 805786FC-80578744 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm cM3dGAab::~cM3dGAab() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/__dt__8cM3dGAabFv.s"
+}
+#pragma pop
+
+
+/* 80578744-80578780 003C+00 s=1 e=0 z=0  None .text      __dt__7Hahen_cFv                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm Hahen_c::~Hahen_c() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/__dt__7Hahen_cFv.s"
+}
+#pragma pop
+
+
+/* 80578780-80578788 0008+00 s=1 e=0 z=0  None .text      daObjBHASHI_IsDelete__FP13daObjBHASHI_c                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daObjBHASHI_IsDelete(daObjBHASHI_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/daObjBHASHI_IsDelete__FP13daObjBHASHI_c.s"
+}
+#pragma pop
+
+
+/* 80578788-805787CC 0044+00 s=1 e=0 z=0  None .text      Create__13daObjBHASHI_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjBHASHI_c::Create() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/func_80578788.s"
+}
+#pragma pop
+
+
+/* 805787CC-805788EC 0120+00 s=1 e=0 z=0  None .text      Execute__13daObjBHASHI_cFPPA3_A4_f                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjBHASHI_c::Execute(f32 (** param_0)[3][4]) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Execute__13daObjBHASHI_cFPPA3_A4_f.s"
+}
+#pragma pop
+
+
+/* 805788EC-805789E8 00FC+00 s=1 e=0 z=0  None .text      Draw__13daObjBHASHI_cFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjBHASHI_c::Draw() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Draw__13daObjBHASHI_cFv.s"
+}
+#pragma pop
+
+
+/* 805789E8-80578A80 0098+00 s=1 e=0 z=0  None .text      Delete__13daObjBHASHI_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjBHASHI_c::Delete() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bhashi/d_a_obj_bhashi/Delete__13daObjBHASHI_cFv.s"
+}
+#pragma pop
+
 

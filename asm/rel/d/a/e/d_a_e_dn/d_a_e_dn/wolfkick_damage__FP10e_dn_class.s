@@ -4,17 +4,17 @@ lbl_804EAD1C:
 /* 804EAD24 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804EAD28 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804EAD2C 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 804EAD30 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804EAD34 00000018  38 A3 00 00 */	addi r5, r3, 0x0000 /* 0x00000000@l */
-/* 804EAD38 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804EAD3C 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 804EAD40 00000024  80 C3 5D AC */	lwz r6, 0x5dac(r3)
+/* 804EAD30 00000014  3C 60 80 4F */	lis r3, lit_3789@ha
+/* 804EAD34 00000018  38 A3 E8 AC */	addi r5, r3, lit_3789@l
+/* 804EAD38 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804EAD3C 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804EAD40 00000024  80 C3 5D AC */	lwz r6, 0x5dac(r3)	/* effective address: 8040BF6C */
 /* 804EAD44 00000028  A8 9F 10 C2 */	lha r4, 0x10c2(r31)
 /* 804EAD48 0000002C  A8 7F 04 E6 */	lha r3, 0x4e6(r31)
 /* 804EAD4C 00000030  38 03 80 00 */	addi r0, r3, -32768
 /* 804EAD50 00000034  7C 04 00 50 */	subf r0, r4, r0
 /* 804EAD54 00000038  B0 1F 07 50 */	sth r0, 0x750(r31)
-/* 804EAD58 0000003C  C0 05 00 C4 */	lfs f0, 0xc4(r5)
+/* 804EAD58 0000003C  C0 05 00 C4 */	lfs f0, 0xc4(r5)	/* effective address: 804EE970 */
 /* 804EAD5C 00000040  D0 1F 07 4C */	stfs f0, 0x74c(r31)
 /* 804EAD60 00000044  38 00 00 15 */	li r0, 0x15
 /* 804EAD64 00000048  B0 1F 06 CE */	sth r0, 0x6ce(r31)
@@ -24,9 +24,9 @@ lbl_804EAD1C:
 /* 804EAD74 00000058  3C 63 00 01 */	addis r3, r3, 1
 /* 804EAD78 0000005C  38 03 80 00 */	addi r0, r3, -32768
 /* 804EAD7C 00000060  B0 1F 07 26 */	sth r0, 0x726(r31)
-/* 804EAD80 00000064  C0 05 00 04 */	lfs f0, 4(r5)
+/* 804EAD80 00000064  C0 05 00 04 */	lfs f0, 4(r5)	/* effective address: 804EE8B0 */
 /* 804EAD84 00000068  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
-/* 804EAD88 0000006C  C0 05 00 40 */	lfs f0, 0x40(r5)
+/* 804EAD88 0000006C  C0 05 00 40 */	lfs f0, 0x40(r5)	/* effective address: 804EE8EC */
 /* 804EAD8C 00000070  D0 1F 07 04 */	stfs f0, 0x704(r31)
 /* 804EAD90 00000074  38 00 00 32 */	li r0, 0x32
 /* 804EAD94 00000078  B0 1F 08 28 */	sth r0, 0x828(r31)

@@ -40,11 +40,11 @@ lbl_800D2FD4:
 lbl_800D2FE4:
 /* 800D2FE4 00000000  3B 7F 02 EC */	addi r27, r31, 0x2ec
 lbl_800D2FE8:
-/* 800D2FE8 00000000  C0 1B 00 18 */	lfs f0, 0x18(r27)
+/* 800D2FE8 00000000  C0 1B 00 18 */	lfs f0, 0x18(r27)	/* effective address: 8038D95C */
 /* 800D2FEC 00000004  D0 1D 34 78 */	stfs f0, 0x3478(r29)
-/* 800D2FF0 00000008  C0 1B 00 1C */	lfs f0, 0x1c(r27)
+/* 800D2FF0 00000008  C0 1B 00 1C */	lfs f0, 0x1c(r27)	/* effective address: 8038D960 */
 /* 800D2FF4 0000000C  D0 1D 34 7C */	stfs f0, 0x347c(r29)
-/* 800D2FF8 00000010  C0 1B 00 14 */	lfs f0, 0x14(r27)
+/* 800D2FF8 00000010  C0 1B 00 14 */	lfs f0, 0x14(r27)	/* effective address: 8038D958 */
 /* 800D2FFC 00000014  D0 1D 34 80 */	stfs f0, 0x3480(r29)
 /* 800D3000 00000018  7F A3 EB 78 */	mr r3, r29
 /* 800D3004 0000001C  38 80 00 01 */	li r4, 1
@@ -57,7 +57,7 @@ lbl_800D2FE8:
 /* 800D3020 00000038  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800D3024 0000003C  D0 1D 34 80 */	stfs f0, 0x3480(r29)
 lbl_800D3028:
-/* 800D3028 00000000  C0 1B 00 10 */	lfs f0, 0x10(r27)
+/* 800D3028 00000000  C0 1B 00 10 */	lfs f0, 0x10(r27)	/* effective address: 8038D954 */
 /* 800D302C 00000004  D0 1D 34 84 */	stfs f0, 0x3484(r29)
 /* 800D3030 00000008  7F A3 EB 78 */	mr r3, r29
 /* 800D3034 0000000C  4B FE CD 7D */	bl checkZoraWearAbility__9daAlink_cCFv
@@ -69,13 +69,13 @@ lbl_800D3028:
 /* 800D304C 00000024  C0 7E 00 0C */	lfs f3, 0xc(r30)
 /* 800D3050 00000028  48 00 00 08 */	b lbl_800D3058
 lbl_800D3054:
-/* 800D3054 00000000  C0 7B 00 0C */	lfs f3, 0xc(r27)
+/* 800D3054 00000000  C0 7B 00 0C */	lfs f3, 0xc(r27)	/* effective address: 8038D950 */
 lbl_800D3058:
 /* 800D3058 00000000  7F A3 EB 78 */	mr r3, r29
 /* 800D305C 00000004  80 9E 00 00 */	lwz r4, 0(r30)
-/* 800D3060 00000008  C0 3B 00 04 */	lfs f1, 4(r27)
-/* 800D3064 0000000C  C0 5B 00 08 */	lfs f2, 8(r27)
-/* 800D3068 00000010  A8 BB 00 00 */	lha r5, 0(r27)
+/* 800D3060 00000008  C0 3B 00 04 */	lfs f1, 4(r27)	/* effective address: 8038D948 */
+/* 800D3064 0000000C  C0 5B 00 08 */	lfs f2, 8(r27)	/* effective address: 8038D94C */
+/* 800D3068 00000010  A8 BB 00 00 */	lha r5, 0(r27)	/* effective address: 8038D944 */
 /* 800D306C 00000014  4B FD 9F A1 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 800D3070 00000018  A8 1D 04 E6 */	lha r0, 0x4e6(r29)
 /* 800D3074 0000001C  B0 1D 04 DE */	sth r0, 0x4de(r29)
@@ -117,15 +117,15 @@ lbl_800D30E0:
 /* 800D30F4 00000014  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800D30F8 00000018  D0 1D 35 90 */	stfs f0, 0x3590(r29)
 /* 800D30FC 0000001C  39 1F 08 34 */	addi r8, r31, 0x834
-/* 800D3100 00000020  A8 08 00 52 */	lha r0, 0x52(r8)
+/* 800D3100 00000020  A8 08 00 52 */	lha r0, 0x52(r8)	/* effective address: 8038DEDE */
 /* 800D3104 00000024  B0 1D 30 7E */	sth r0, 0x307e(r29)
 /* 800D3108 00000028  7F A3 EB 78 */	mr r3, r29
 /* 800D310C 0000002C  38 80 00 00 */	li r4, 0
 /* 800D3110 00000030  38 A0 00 01 */	li r5, 1
 /* 800D3114 00000034  88 DE 00 09 */	lbz r6, 9(r30)
 /* 800D3118 00000038  38 E0 00 02 */	li r7, 2
-/* 800D311C 0000003C  C0 28 00 74 */	lfs f1, 0x74(r8)
-/* 800D3120 00000040  C0 48 00 78 */	lfs f2, 0x78(r8)
+/* 800D311C 0000003C  C0 28 00 74 */	lfs f1, 0x74(r8)	/* effective address: 8038DF00 */
+/* 800D3120 00000040  C0 48 00 78 */	lfs f2, 0x78(r8)	/* effective address: 8038DF04 */
 /* 800D3124 00000044  4B FF E5 65 */	bl setSwordAtParam__9daAlink_cF11dCcG_At_SplUcUciff
 /* 800D3128 00000048  7F A3 EB 78 */	mr r3, r29
 /* 800D312C 0000004C  4B FF F1 D9 */	bl setSwordComboVoice__9daAlink_cFv

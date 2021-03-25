@@ -11,12 +11,12 @@
 // Types:
 // 
 
+struct JKRExpHeap {
+};
+
 struct STControl {
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
-};
-
-struct JKRExpHeap {
 };
 
 struct CSTControl {
@@ -83,10 +83,10 @@ struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-struct JUTFont {
+struct COutFont_c {
 };
 
-struct COutFont_c {
+struct JUTFont {
 };
 
 struct dMsgString_c {
@@ -115,11 +115,11 @@ struct JUtility {
 
 };
 
-struct JKRArchive {
-};
-
 struct J2DPane {
 	/* 802F7100 */ void getBounds();
+};
+
+struct JKRArchive {
 };
 
 struct dSelect_cursor_c {
@@ -262,7 +262,7 @@ extern "C" extern u8 const data_80396C08[48];
 extern "C" extern u8 const data_80396C38[72];
 extern "C" extern u8 const data_80396C80[72];
 extern "C" extern u8 const data_80396CC8[72];
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_menu_d_menu_letter__stringBase0;
 
 // 
 // External References:

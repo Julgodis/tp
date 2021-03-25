@@ -20,6 +20,9 @@ struct JASTrack {
 struct JAISound {
 };
 
+struct JAISoundHandle {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -27,9 +30,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAISoundHandle {
 };
 
 struct JAISoundID {
@@ -143,7 +143,7 @@ extern "C" void stop__10Z2SoundMgrFv(); // 1
 extern "C" void initParams__10Z2SoundMgrFv(); // 1
 extern "C" void multiVolumeSoundID__10Z2SoundMgrF10JAISoundIDf(); // 1
 extern "C" void isPlayingSoundID__10Z2SoundMgrF10JAISoundID(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const Z2SoundMgr__stringBase0;
 extern "C" extern void* __vt__10Z2SoundMgr[3 + 1 /* padding */];
 
 // 

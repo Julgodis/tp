@@ -14,8 +14,8 @@ lbl_801C5D3C:
 lbl_801C5D6C:
 /* 801C5D6C 00000000  90 1F 00 1C */	stw r0, 0x1c(r31)
 /* 801C5D70 00000004  80 7F 00 1C */	lwz r3, 0x1c(r31)
-/* 801C5D74 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801C5D78 0000000C  38 84 60 68 */	addi r4, r4, stringBase0@l
+/* 801C5D74 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_fishing__stringBase0@ha
+/* 801C5D78 0000000C  38 84 60 68 */	addi r4, r4, d_menu_d_menu_fishing__stringBase0@l
 /* 801C5D7C 00000010  38 84 00 3F */	addi r4, r4, 0x3f
 /* 801C5D80 00000014  3C A0 00 02 */	lis r5, 2
 /* 801C5D84 00000018  80 DF 00 08 */	lwz r6, 8(r31)
@@ -40,8 +40,8 @@ lbl_801C5DA0:
 /* 801C5DCC 0000002C  3B 43 60 18 */	addi r26, r3, data_80396018@l
 /* 801C5DD0 00000030  3C 60 80 39 */	lis r3, data_80396040@ha
 /* 801C5DD4 00000034  3B 63 60 40 */	addi r27, r3, data_80396040@l
-/* 801C5DD8 00000038  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801C5DDC 0000003C  3B 83 60 68 */	addi r28, r3, stringBase0@l
+/* 801C5DD8 00000038  3C 60 80 39 */	lis r3, d_menu_d_menu_fishing__stringBase0@ha
+/* 801C5DDC 0000003C  3B 83 60 68 */	addi r28, r3, d_menu_d_menu_fishing__stringBase0@l
 lbl_801C5DE0:
 /* 801C5DE0 00000000  80 7F 00 1C */	lwz r3, 0x1c(r31)
 /* 801C5DE4 00000004  7C 9A EA 14 */	add r4, r26, r29

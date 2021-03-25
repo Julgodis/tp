@@ -13,13 +13,13 @@ lbl_80CE78E0:
 /* 80CE790C 0000002C  B0 03 04 E6 */	sth r0, 0x4e6(r3)
 /* 80CE7910 00000030  A8 03 04 E0 */	lha r0, 0x4e0(r3)
 /* 80CE7914 00000034  B0 03 04 E8 */	sth r0, 0x4e8(r3)
-/* 80CE7918 00000038  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80CE791C 0000003C  38 A4 00 00 */	addi r5, r4, 0x0000 /* 0x00000000@l */
-/* 80CE7920 00000040  80 85 00 00 */	lwz r4, 0(r5)
-/* 80CE7924 00000044  80 05 00 04 */	lwz r0, 4(r5)
+/* 80CE7918 00000038  3C 80 80 CE */	lis r4, lit_4309@ha
+/* 80CE791C 0000003C  38 A4 7F 9C */	addi r5, r4, lit_4309@l
+/* 80CE7920 00000040  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80CE7F9C */
+/* 80CE7924 00000044  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80CE7FA0 */
 /* 80CE7928 00000048  90 81 00 08 */	stw r4, 8(r1)
 /* 80CE792C 0000004C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80CE7930 00000050  80 05 00 08 */	lwz r0, 8(r5)
+/* 80CE7930 00000050  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80CE7FA4 */
 /* 80CE7934 00000054  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80CE7938 00000058  38 81 00 08 */	addi r4, r1, 8
 /* 80CE793C 0000005C  48 00 01 C9 */	bl setProcess__14daObj_SSItem_cFM14daObj_SSItem_cFPCvPvPv_i

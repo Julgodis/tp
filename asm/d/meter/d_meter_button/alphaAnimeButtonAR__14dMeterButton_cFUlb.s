@@ -31,7 +31,7 @@ lbl_80203E58:
 /* 80203ECC 00000074  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 80203ED0 00000078  28 00 00 00 */	cmplwi r0, 0
 /* 80203ED4 0000007C  41 82 00 10 */	beq lbl_80203EE4
-/* 80203ED8 00000080  A0 03 4F A4 */	lhz r0, 0x4fa4(r3)
+/* 80203ED8 00000080  A0 03 4F A4 */	lhz r0, 0x4fa4(r3)	/* effective address: 8040B164 */
 /* 80203EDC 00000084  54 00 07 FE */	clrlwi r0, r0, 0x1f
 /* 80203EE0 00000088  48 00 00 08 */	b lbl_80203EE8
 lbl_80203EE4:

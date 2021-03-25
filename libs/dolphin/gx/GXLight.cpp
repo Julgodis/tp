@@ -155,7 +155,7 @@ extern "C" asm void GXInitLightColor() {
 #pragma pop
 
 
-/* 8035D8E4-8035D960 007C+00 s=0 e=4 z=0  None .text      GXLoadLightObjImm                                            */
+/* 8035D8E4-8035D960 007C+00 s=0 e=4 z=2  None .text      GXLoadLightObjImm                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -166,7 +166,7 @@ extern "C" asm void GXLoadLightObjImm() {
 #pragma pop
 
 
-/* 8035D960-8035DA48 00E8+00 s=0 e=7 z=0  None .text      GXSetChanAmbColor                                            */
+/* 8035D960-8035DA48 00E8+00 s=0 e=7 z=4  None .text      GXSetChanAmbColor                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -177,7 +177,7 @@ extern "C" asm void GXSetChanAmbColor() {
 #pragma pop
 
 
-/* 8035DA48-8035DB30 00E8+00 s=0 e=20 z=0  None .text      GXSetChanMatColor                                            */
+/* 8035DA48-8035DB30 00E8+00 s=0 e=20 z=2  None .text      GXSetChanMatColor                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -188,7 +188,7 @@ extern "C" asm void GXSetChanMatColor() {
 #pragma pop
 
 
-/* 8035DB30-8035DB6C 003C+00 s=0 e=51 z=0  None .text      GXSetNumChans                                                */
+/* 8035DB30-8035DB6C 003C+00 s=0 e=51 z=6  None .text      GXSetNumChans                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -199,7 +199,7 @@ extern "C" asm void GXSetNumChans() {
 #pragma pop
 
 
-/* 8035DB6C-8035DC1C 00B0+00 s=0 e=34 z=0  None .text      GXSetChanCtrl                                                */
+/* 8035DB6C-8035DC1C 00B0+00 s=0 e=34 z=4  None .text      GXSetChanCtrl                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

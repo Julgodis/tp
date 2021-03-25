@@ -77,7 +77,7 @@ extern "C" void doneDMA__12JKRAramPieceFUl(); // 1
 extern "C" void __ct__12JKRAMCommandFv(); // 1
 extern "C" void __dt__12JKRAMCommandFv(); // 1
 extern "C" void __sinit_JKRAramPiece_cpp(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JKRAramPiece__stringBase0;
 
 // 
 // External References:

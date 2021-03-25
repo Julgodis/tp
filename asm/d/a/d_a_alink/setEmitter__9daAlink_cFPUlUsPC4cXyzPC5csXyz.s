@@ -30,11 +30,11 @@ lbl_80120580:
 /* 801205F0 00000070  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 801205F4 00000074  4B F2 CE D9 */	bl set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 801205F8 00000078  90 7E 00 00 */	stw r3, 0(r30)
-/* 801205FC 0000007C  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
+/* 801205FC 0000007C  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
 /* 80120600 00000080  38 63 02 10 */	addi r3, r3, 0x210
 /* 80120604 00000084  80 9E 00 00 */	lwz r4, 0(r30)
 /* 80120608 00000088  4B F2 B2 AD */	bl forceOnEventMove__Q213dPa_control_c7level_cFUl
-/* 8012060C 0000008C  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
+/* 8012060C 0000008C  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
 /* 80120610 00000090  38 63 02 10 */	addi r3, r3, 0x210
 /* 80120614 00000094  80 9E 00 00 */	lwz r4, 0(r30)
 /* 80120618 00000098  4B F2 B3 01 */	bl getEmitter__Q213dPa_control_c7level_cFUl

@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct __va_list_struct {
+};
+
 struct JUtility {
 	struct TColor {
 	};
 
-};
-
-struct __va_list_struct {
 };
 
 struct JUTDirectPrint {
@@ -58,7 +58,7 @@ extern "C" void drawString__14JUTDirectPrintFUsUsPc(); // 1
 extern "C" void drawString_f__14JUTDirectPrintFUsUsPCce(); // 1
 extern "C" void setCharColor__14JUTDirectPrintFQ28JUtility6TColor(); // 1
 extern "C" void setCharColor__14JUTDirectPrintFUcUcUc(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JUTDirectPrint__stringBase0;
 extern "C" extern void* sFontData__14JUTDirectPrint[64];
 extern "C" extern void* sFontData2__14JUTDirectPrint[77];
 extern "C" extern u8 data_803CC96C[16 + 4 /* padding */];

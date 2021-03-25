@@ -7,7 +7,7 @@ lbl_8084B024:
 /* 8084B038 00000014  41 82 00 40 */	beq lbl_8084B078
 /* 8084B03C 00000018  80 63 06 1C */	lwz r3, 0x61c(r3)
 /* 8084B040 0000001C  38 81 00 0C */	addi r4, r1, 0xc
-/* 8084B044 00000020  4B FF E4 D5 */	bl _unresolved
+/* 8084B044 00000020  4B 7C E9 78 */	b fopAcM_SearchByID__FUiPP10fopAc_ac_c
 /* 8084B048 00000024  80 61 00 0C */	lwz r3, 0xc(r1)
 /* 8084B04C 00000028  28 03 00 00 */	cmplwi r3, 0
 /* 8084B050 0000002C  41 82 00 0C */	beq lbl_8084B05C
@@ -16,11 +16,11 @@ lbl_8084B024:
 lbl_8084B05C:
 /* 8084B05C 00000000  38 60 01 1C */	li r3, 0x11c
 /* 8084B060 00000004  38 81 00 08 */	addi r4, r1, 8
-/* 8084B064 00000008  4B FF E4 B5 */	bl _unresolved
+/* 8084B064 00000008  4B 7C E9 C8 */	b fopAcM_SearchByName__FsPP10fopAc_ac_c
 /* 8084B068 0000000C  80 61 00 08 */	lwz r3, 8(r1)
 /* 8084B06C 00000010  28 03 00 00 */	cmplwi r3, 0
 /* 8084B070 00000014  41 82 00 08 */	beq lbl_8084B078
-/* 8084B074 00000018  4B FF E4 A5 */	bl _unresolved
+/* 8084B074 00000018  48 35 D0 80 */	b saveBestScore__15daObj_Balloon_cFv
 lbl_8084B078:
 /* 8084B078 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8084B07C 00000004  7C 08 03 A6 */	mtlr r0

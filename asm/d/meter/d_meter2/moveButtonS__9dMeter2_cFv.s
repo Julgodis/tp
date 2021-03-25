@@ -8,17 +8,17 @@ lbl_80222494:
 /* 802224AC 00000018  88 83 5E 40 */	lbz r4, 0x5e40(r3)	/* effective address: 8040C000 */
 /* 802224B0 0000001C  28 04 00 00 */	cmplwi r4, 0
 /* 802224B4 00000020  41 82 00 20 */	beq lbl_802224D4
-/* 802224B8 00000024  88 03 5E 5A */	lbz r0, 0x5e5a(r3)
-/* 802224BC 00000028  98 83 5E 32 */	stb r4, 0x5e32(r3)
-/* 802224C0 0000002C  98 03 5E 4D */	stb r0, 0x5e4d(r3)
+/* 802224B8 00000024  88 03 5E 5A */	lbz r0, 0x5e5a(r3)	/* effective address: 8040C01A */
+/* 802224BC 00000028  98 83 5E 32 */	stb r4, 0x5e32(r3)	/* effective address: 8040BFF2 */
+/* 802224C0 0000002C  98 03 5E 4D */	stb r0, 0x5e4d(r3)	/* effective address: 8040C00D */
 /* 802224C4 00000030  38 00 00 00 */	li r0, 0
-/* 802224C8 00000034  98 03 5E 40 */	stb r0, 0x5e40(r3)
-/* 802224CC 00000038  98 03 5E 5A */	stb r0, 0x5e5a(r3)
+/* 802224C8 00000034  98 03 5E 40 */	stb r0, 0x5e40(r3)	/* effective address: 8040C000 */
+/* 802224CC 00000038  98 03 5E 5A */	stb r0, 0x5e5a(r3)	/* effective address: 8040C01A */
 /* 802224D0 0000003C  48 00 00 10 */	b lbl_802224E0
 lbl_802224D4:
 /* 802224D4 00000000  38 00 00 00 */	li r0, 0
-/* 802224D8 00000004  98 03 5E 32 */	stb r0, 0x5e32(r3)
-/* 802224DC 00000008  98 03 5E 4D */	stb r0, 0x5e4d(r3)
+/* 802224D8 00000004  98 03 5E 32 */	stb r0, 0x5e32(r3)	/* effective address: 8040BFF2 */
+/* 802224DC 00000008  98 03 5E 4D */	stb r0, 0x5e4d(r3)	/* effective address: 8040C00D */
 lbl_802224E0:
 /* 802224E0 00000000  88 05 01 CC */	lbz r0, 0x1cc(r5)
 /* 802224E4 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

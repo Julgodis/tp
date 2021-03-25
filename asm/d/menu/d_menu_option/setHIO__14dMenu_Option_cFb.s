@@ -13,7 +13,7 @@ lbl_801E78B8:
 /* 801E78E4 0000002C  FC 00 10 00 */	fcmpu cr0, f0, f2
 /* 801E78E8 00000030  40 82 00 14 */	bne lbl_801E78FC
 /* 801E78EC 00000034  C0 3E 03 7C */	lfs f1, 0x37c(r30)
-/* 801E78F0 00000038  C0 03 06 D4 */	lfs f0, 0x6d4(r3)
+/* 801E78F0 00000038  C0 03 06 D4 */	lfs f0, 0x6d4(r3)	/* effective address: 8042F29C */
 /* 801E78F4 0000003C  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 801E78F8 00000040  41 82 00 58 */	beq lbl_801E7950
 lbl_801E78FC:
@@ -77,35 +77,35 @@ lbl_801E79C0:
 /* 801E79D0 00000010  7C 05 00 40 */	cmplw r5, r0
 /* 801E79D4 00000014  40 82 00 74 */	bne lbl_801E7A48
 /* 801E79D8 00000018  88 7E 03 B9 */	lbz r3, 0x3b9(r30)
-/* 801E79DC 0000001C  88 04 06 C9 */	lbz r0, 0x6c9(r4)
+/* 801E79DC 0000001C  88 04 06 C9 */	lbz r0, 0x6c9(r4)	/* effective address: 8042F291 */
 /* 801E79E0 00000020  7C 03 00 40 */	cmplw r3, r0
 /* 801E79E4 00000024  40 82 00 64 */	bne lbl_801E7A48
 /* 801E79E8 00000028  88 7E 03 BA */	lbz r3, 0x3ba(r30)
-/* 801E79EC 0000002C  88 04 06 CA */	lbz r0, 0x6ca(r4)
+/* 801E79EC 0000002C  88 04 06 CA */	lbz r0, 0x6ca(r4)	/* effective address: 8042F292 */
 /* 801E79F0 00000030  7C 03 00 40 */	cmplw r3, r0
 /* 801E79F4 00000034  40 82 00 54 */	bne lbl_801E7A48
 /* 801E79F8 00000038  88 7E 03 BB */	lbz r3, 0x3bb(r30)
-/* 801E79FC 0000003C  88 04 06 CB */	lbz r0, 0x6cb(r4)
+/* 801E79FC 0000003C  88 04 06 CB */	lbz r0, 0x6cb(r4)	/* effective address: 8042F293 */
 /* 801E7A00 00000040  7C 03 00 40 */	cmplw r3, r0
 /* 801E7A04 00000044  40 82 00 44 */	bne lbl_801E7A48
 /* 801E7A08 00000048  88 7E 03 BC */	lbz r3, 0x3bc(r30)
-/* 801E7A0C 0000004C  88 04 06 CC */	lbz r0, 0x6cc(r4)
+/* 801E7A0C 0000004C  88 04 06 CC */	lbz r0, 0x6cc(r4)	/* effective address: 8042F294 */
 /* 801E7A10 00000050  7C 03 00 40 */	cmplw r3, r0
 /* 801E7A14 00000054  40 82 00 34 */	bne lbl_801E7A48
 /* 801E7A18 00000058  88 7E 03 BD */	lbz r3, 0x3bd(r30)
-/* 801E7A1C 0000005C  88 04 06 CD */	lbz r0, 0x6cd(r4)
+/* 801E7A1C 0000005C  88 04 06 CD */	lbz r0, 0x6cd(r4)	/* effective address: 8042F295 */
 /* 801E7A20 00000060  7C 03 00 40 */	cmplw r3, r0
 /* 801E7A24 00000064  40 82 00 24 */	bne lbl_801E7A48
 /* 801E7A28 00000068  88 7E 03 BE */	lbz r3, 0x3be(r30)
-/* 801E7A2C 0000006C  88 04 06 CE */	lbz r0, 0x6ce(r4)
+/* 801E7A2C 0000006C  88 04 06 CE */	lbz r0, 0x6ce(r4)	/* effective address: 8042F296 */
 /* 801E7A30 00000070  7C 03 00 40 */	cmplw r3, r0
 /* 801E7A34 00000074  40 82 00 14 */	bne lbl_801E7A48
 /* 801E7A38 00000078  88 7E 03 BF */	lbz r3, 0x3bf(r30)
-/* 801E7A3C 0000007C  88 04 06 CF */	lbz r0, 0x6cf(r4)
+/* 801E7A3C 0000007C  88 04 06 CF */	lbz r0, 0x6cf(r4)	/* effective address: 8042F297 */
 /* 801E7A40 00000080  7C 03 00 40 */	cmplw r3, r0
 /* 801E7A44 00000084  41 82 00 74 */	beq lbl_801E7AB8
 lbl_801E7A48:
-/* 801E7A48 00000000  80 04 06 C8 */	lwz r0, 0x6c8(r4)
+/* 801E7A48 00000000  80 04 06 C8 */	lwz r0, 0x6c8(r4)	/* effective address: 8042F290 */
 /* 801E7A4C 00000004  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801E7A50 00000008  88 01 00 0C */	lbz r0, 0xc(r1)
 /* 801E7A54 0000000C  98 1E 03 B8 */	stb r0, 0x3b8(r30)

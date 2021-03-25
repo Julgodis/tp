@@ -4,13 +4,13 @@ lbl_80CF77D8:
 /* 80CF77E0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CF77E4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CF77E8 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80CF77EC 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CF77F0 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CF77EC 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CF77F0 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CF77F4 0000001C  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CF77F8 00000020  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80CF77FC 00000024  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CF7800 00000028  7C 05 07 74 */	extsb r5, r0
-/* 80CF7804 0000002C  4B FF F7 75 */	bl _unresolved
+/* 80CF7804 0000002C  4B 33 D9 FC */	b onSwitch__10dSv_info_cFii
 /* 80CF7808 00000030  38 00 00 00 */	li r0, 0
 /* 80CF780C 00000034  98 1F 0A E3 */	stb r0, 0xae3(r31)
 /* 80CF7810 00000038  98 1F 0A E1 */	stb r0, 0xae1(r31)

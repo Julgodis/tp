@@ -41,8 +41,8 @@ lbl_802AF51C:
 /* 802AF52C 00000010  3B E0 FF FF */	li r31, -1
 /* 802AF530 00000014  48 00 01 00 */	b lbl_802AF630
 /* 802AF534 00000018  80 6D 85 FC */	lwz r3, data_80450B7C(r13)
-/* 802AF538 0000001C  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802AF53C 00000020  38 84 BA 08 */	addi r4, r4, stringBase0@l
+/* 802AF538 0000001C  3C 80 80 3A */	lis r4, Z2SeqMgr__stringBase0@ha
+/* 802AF53C 00000020  38 84 BA 08 */	addi r4, r4, Z2SeqMgr__stringBase0@l
 /* 802AF540 00000024  38 84 02 6A */	addi r4, r4, 0x26a
 /* 802AF544 00000028  48 00 6C A5 */	bl setDemoName__11Z2StatusMgrFPc
 /* 802AF548 0000002C  3B 80 00 00 */	li r28, 0

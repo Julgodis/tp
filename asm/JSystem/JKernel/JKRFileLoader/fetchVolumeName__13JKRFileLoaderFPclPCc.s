@@ -8,8 +8,8 @@ lbl_802D44C4:
 /* 802D44DC 00000018  7C 9E 23 78 */	mr r30, r4
 /* 802D44E0 0000001C  7C BF 2B 78 */	mr r31, r5
 /* 802D44E4 00000020  7F E3 FB 78 */	mr r3, r31
-/* 802D44E8 00000024  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802D44EC 00000028  38 84 D1 50 */	addi r4, r4, stringBase0@l
+/* 802D44E8 00000024  3C 80 80 3A */	lis r4, JKRFileLoader__stringBase0@ha
+/* 802D44EC 00000028  38 84 D1 50 */	addi r4, r4, JKRFileLoader__stringBase0@l
 /* 802D44F0 0000002C  48 09 44 A5 */	bl strcmp
 /* 802D44F4 00000030  2C 03 00 00 */	cmpwi r3, 0
 /* 802D44F8 00000034  40 82 00 18 */	bne lbl_802D4510

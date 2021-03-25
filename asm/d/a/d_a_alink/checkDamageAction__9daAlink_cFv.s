@@ -22,7 +22,7 @@ lbl_800D7C40:
 /* 800D7C90 00000050  7F E3 FB 78 */	mr r3, r31
 /* 800D7C94 00000054  38 80 00 02 */	li r4, 2
 /* 800D7C98 00000058  38 BD 0E F4 */	addi r5, r29, 0xef4
-/* 800D7C9C 0000005C  C0 25 00 20 */	lfs f1, 0x20(r5)
+/* 800D7C9C 0000005C  C0 25 00 20 */	lfs f1, 0x20(r5)	/* effective address: 8038E56C */
 /* 800D7CA0 00000060  4B FD 5A 85 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800D7CA4 00000064  48 00 00 64 */	b lbl_800D7D08
 lbl_800D7CA8:
@@ -166,7 +166,7 @@ lbl_800D7E48:
 /* 800D7E9C 00000054  38 80 01 14 */	li r4, 0x114
 /* 800D7EA0 00000058  4B FD 7C 75 */	bl setFacePriAnime__9daAlink_cFQ29daAlink_c11daAlink_ANM
 /* 800D7EA4 0000005C  38 7D 0E 44 */	addi r3, r29, 0xe44
-/* 800D7EA8 00000060  A8 03 00 14 */	lha r0, 0x14(r3)
+/* 800D7EA8 00000060  A8 03 00 14 */	lha r0, 0x14(r3)	/* effective address: 8038E4B0 */
 /* 800D7EAC 00000064  B0 1F 30 F6 */	sth r0, 0x30f6(r31)
 /* 800D7EB0 00000068  38 00 00 01 */	li r0, 1
 /* 800D7EB4 0000006C  98 1F 2F 96 */	stb r0, 0x2f96(r31)
@@ -315,7 +315,7 @@ lbl_800D8074:
 /* 800D80B4 00000040  B0 1F 30 06 */	sth r0, 0x3006(r31)
 /* 800D80B8 00000044  A8 9F 30 06 */	lha r4, 0x3006(r31)
 /* 800D80BC 00000048  38 7D 0E F4 */	addi r3, r29, 0xef4
-/* 800D80C0 0000004C  A8 03 00 2E */	lha r0, 0x2e(r3)
+/* 800D80C0 0000004C  A8 03 00 2E */	lha r0, 0x2e(r3)	/* effective address: 8038E57A */
 /* 800D80C4 00000050  7C 04 00 00 */	cmpw r4, r0
 /* 800D80C8 00000054  40 80 00 28 */	bge lbl_800D80F0
 /* 800D80CC 00000058  3B 60 00 00 */	li r27, 0
@@ -344,7 +344,7 @@ lbl_800D80F0:
 /* 800D811C 0000002C  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 800D8120 00000030  41 82 00 30 */	beq lbl_800D8150
 /* 800D8124 00000034  38 7D 0E F4 */	addi r3, r29, 0xef4
-/* 800D8128 00000038  A8 03 00 2C */	lha r0, 0x2c(r3)
+/* 800D8128 00000038  A8 03 00 2C */	lha r0, 0x2c(r3)	/* effective address: 8038E578 */
 /* 800D812C 0000003C  B0 1F 05 6C */	sth r0, 0x56c(r31)
 /* 800D8130 00000040  A8 7F 05 6C */	lha r3, 0x56c(r31)
 /* 800D8134 00000044  54 60 E0 06 */	slwi r0, r3, 0x1c
@@ -1152,7 +1152,7 @@ lbl_800D8C64:
 /* 800D8CBC 00000058  7F E3 FB 78 */	mr r3, r31
 /* 800D8CC0 0000005C  38 80 00 01 */	li r4, 1
 /* 800D8CC4 00000060  38 BD 0A 10 */	addi r5, r29, 0xa10
-/* 800D8CC8 00000064  C0 25 00 70 */	lfs f1, 0x70(r5)
+/* 800D8CC8 00000064  C0 25 00 70 */	lfs f1, 0x70(r5)	/* effective address: 8038E0D8 */
 /* 800D8CCC 00000068  4B FE DD 7D */	bl procFallInit__9daAlink_cFif
 /* 800D8CD0 0000006C  80 1F 31 A0 */	lwz r0, 0x31a0(r31)
 /* 800D8CD4 00000070  60 00 00 08 */	ori r0, r0, 8

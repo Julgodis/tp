@@ -17,7 +17,7 @@ lbl_8003EF70:
 lbl_8003EFAC:
 /* 8003EFAC 00000000  88 1D 00 01 */	lbz r0, 1(r29)
 /* 8003EFB0 00000004  7C 05 07 74 */	extsb r5, r0
-/* 8003EFB4 00000008  88 1F 0D B4 */	lbz r0, 0xdb4(r31)
+/* 8003EFB4 00000008  88 1F 0D B4 */	lbz r0, 0xdb4(r31)	/* effective address: 80406F74 */
 /* 8003EFB8 0000000C  7C 00 07 74 */	extsb r0, r0
 /* 8003EFBC 00000010  7C 05 00 00 */	cmpw r5, r0
 /* 8003EFC0 00000014  40 82 00 30 */	bne lbl_8003EFF0

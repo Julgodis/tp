@@ -15,11 +15,11 @@ lbl_80A599D8:
 /* 80A59A0C 00000034  48 00 00 28 */	b lbl_80A59A34
 lbl_80A59A10:
 /* 80A59A10 00000000  38 80 00 22 */	li r4, 0x22
-/* 80A59A14 00000004  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 80A59A18 00000008  C0 25 00 00 */	lfs f1, 0x0000(r5)
+/* 80A59A14 00000004  3C A0 80 A6 */	lis r5, lit_4803@ha
+/* 80A59A18 00000008  C0 25 DF 8C */	lfs f1, lit_4803@l(r5)
 /* 80A59A1C 0000000C  38 A0 00 02 */	li r5, 2
-/* 80A59A20 00000010  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
-/* 80A59A24 00000014  C0 46 00 00 */	lfs f2, 0x0000(r6)
+/* 80A59A20 00000010  3C C0 80 A6 */	lis r6, lit_4146@ha
+/* 80A59A24 00000014  C0 46 DF 24 */	lfs f2, lit_4146@l(r6)
 /* 80A59A28 00000018  4B FE F7 7D */	bl anm_init__FP12npc_ks_classifUcf
 /* 80A59A2C 0000001C  38 00 00 01 */	li r0, 1
 /* 80A59A30 00000020  B0 1F 05 EA */	sth r0, 0x5ea(r31)
@@ -28,20 +28,20 @@ lbl_80A59A34:
 /* 80A59A38 00000004  A8 9F 05 C8 */	lha r4, 0x5c8(r31)
 /* 80A59A3C 00000008  38 A0 00 02 */	li r5, 2
 /* 80A59A40 0000000C  38 C0 20 00 */	li r6, 0x2000
-/* 80A59A44 00000010  4B FE F4 B5 */	bl _unresolved
+/* 80A59A44 00000010  4B 81 6B C4 */	b cLib_addCalcAngleS2__FPssss
 /* 80A59A48 00000014  38 00 00 00 */	li r0, 0
 /* 80A59A4C 00000018  98 1F 0A EC */	stb r0, 0xaec(r31)
-/* 80A59A50 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80A59A54 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80A59A50 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A59A54 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A59A58 00000024  38 63 07 F0 */	addi r3, r3, 0x7f0
-/* 80A59A5C 00000028  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80A59A60 0000002C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80A59A64 00000030  A0 84 04 82 */	lhz r4, 0x482(r4)
-/* 80A59A68 00000034  4B FE F4 91 */	bl _unresolved
+/* 80A59A5C 00000028  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
+/* 80A59A60 0000002C  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
+/* 80A59A64 00000030  A0 84 04 82 */	lhz r4, 0x482(r4)	/* effective address: 803A770A */
+/* 80A59A68 00000034  4B 5D AF 54 */	b isEventBit__11dSv_event_cCFUs
 /* 80A59A6C 00000038  2C 03 00 00 */	cmpwi r3, 0
 /* 80A59A70 0000003C  41 82 00 0C */	beq lbl_80A59A7C
 /* 80A59A74 00000040  7F E3 FB 78 */	mr r3, r31
-/* 80A59A78 00000044  4B FE F4 81 */	bl _unresolved
+/* 80A59A78 00000044  4B 5C 02 04 */	b fopAcM_delete__FP10fopAc_ac_c
 lbl_80A59A7C:
 /* 80A59A7C 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80A59A80 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

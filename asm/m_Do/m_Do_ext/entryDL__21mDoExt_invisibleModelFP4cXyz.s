@@ -20,8 +20,8 @@ lbl_8000E7C0:
 /* 8000E808 00000048  7F 63 DB 78 */	mr r3, r27
 /* 8000E80C 0000004C  7F 84 E3 78 */	mr r4, r28
 /* 8000E810 00000050  4B FF FE B9 */	bl entryJoint__21mDoExt_invisibleModelFP4cXyz
-/* 8000E814 00000054  93 DF 00 48 */	stw r30, 0x48(r31)
-/* 8000E818 00000058  93 BF 00 4C */	stw r29, 0x4c(r31)
+/* 8000E814 00000054  93 DF 00 48 */	stw r30, 0x48(r31)	/* effective address: 80434B10 */
+/* 8000E818 00000058  93 BF 00 4C */	stw r29, 0x4c(r31)	/* effective address: 80434B14 */
 /* 8000E81C 0000005C  39 61 00 20 */	addi r11, r1, 0x20
 /* 8000E820 00000060  48 35 3A 01 */	bl _restgpr_27
 /* 8000E824 00000064  80 01 00 24 */	lwz r0, 0x24(r1)

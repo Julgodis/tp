@@ -6,10 +6,10 @@ lbl_80D01F58:
 /* 80D01F68 00000010  38 64 05 A0 */	addi r3, r4, 0x5a0
 /* 80D01F6C 00000014  88 04 05 AC */	lbz r0, 0x5ac(r4)
 /* 80D01F70 00000018  54 00 10 3A */	slwi r0, r0, 2
-/* 80D01F74 0000001C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80D01F78 00000020  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80D01F74 0000001C  3C 80 80 D0 */	lis r4, l_arcName@ha
+/* 80D01F78 00000020  38 84 20 EC */	addi r4, r4, l_arcName@l
 /* 80D01F7C 00000024  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80D01F80 00000028  4B FF EC 39 */	bl _unresolved
+/* 80D01F80 00000028  4B 32 B0 88 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80D01F84 0000002C  38 60 00 01 */	li r3, 1
 /* 80D01F88 00000030  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80D01F8C 00000034  7C 08 03 A6 */	mtlr r0

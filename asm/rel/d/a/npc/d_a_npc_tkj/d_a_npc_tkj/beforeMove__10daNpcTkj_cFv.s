@@ -9,7 +9,7 @@ lbl_8057538C:
 /* 805753A8 0000001C  88 03 0E 25 */	lbz r0, 0xe25(r3)
 /* 805753AC 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 805753B0 00000024  40 82 00 1C */	bne lbl_805753CC
-/* 805753B4 00000028  4B FF E2 E5 */	bl _unresolved
+/* 805753B4 00000028  4B AB A6 A0 */	b dComIfGs_wolfeye_effect_check__Fv
 /* 805753B8 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 805753BC 00000030  40 82 00 14 */	bne lbl_805753D0
 /* 805753C0 00000034  88 1E 0A 89 */	lbz r0, 0xa89(r30)

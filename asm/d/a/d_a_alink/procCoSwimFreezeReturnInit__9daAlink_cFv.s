@@ -45,7 +45,7 @@ lbl_800DC2FC:
 /* 800DC31C 00000020  7F E3 FB 78 */	mr r3, r31
 /* 800DC320 00000024  38 80 00 37 */	li r4, 0x37
 /* 800DC324 00000028  38 BE 1B E4 */	addi r5, r30, 0x1be4
-/* 800DC328 0000002C  C0 25 00 5C */	lfs f1, 0x5c(r5)
+/* 800DC328 0000002C  C0 25 00 5C */	lfs f1, 0x5c(r5)	/* effective address: 8038F298 */
 /* 800DC32C 00000030  C0 42 93 30 */	lfs f2, lit_7625(r2)
 /* 800DC330 00000034  48 04 D3 A9 */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 800DC334 00000038  38 00 00 03 */	li r0, 3
@@ -58,13 +58,13 @@ lbl_800DC2FC:
 /* 800DC350 00000054  38 00 00 01 */	li r0, 1
 /* 800DC354 00000058  98 1F 2F 9B */	stb r0, 0x2f9b(r31)
 /* 800DC358 0000005C  38 7E 22 5C */	addi r3, r30, 0x225c
-/* 800DC35C 00000060  C3 E3 00 48 */	lfs f31, 0x48(r3)
+/* 800DC35C 00000060  C3 E3 00 48 */	lfs f31, 0x48(r3)	/* effective address: 8038F8FC */
 /* 800DC360 00000064  48 00 00 48 */	b lbl_800DC3A8
 lbl_800DC364:
 /* 800DC364 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800DC368 00000004  38 80 00 CE */	li r4, 0xce
 /* 800DC36C 00000008  38 BE 0B F4 */	addi r5, r30, 0xbf4
-/* 800DC370 0000000C  C0 25 00 60 */	lfs f1, 0x60(r5)
+/* 800DC370 0000000C  C0 25 00 60 */	lfs f1, 0x60(r5)	/* effective address: 8038E2AC */
 /* 800DC374 00000010  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 800DC378 00000014  38 A0 00 05 */	li r5, 5
 /* 800DC37C 00000018  C0 62 93 30 */	lfs f3, lit_7625(r2)
@@ -77,7 +77,7 @@ lbl_800DC364:
 /* 800DC398 00000034  7D 89 03 A6 */	mtctr r12
 /* 800DC39C 00000038  4E 80 04 21 */	bctrl 
 /* 800DC3A0 0000003C  38 7E 16 D4 */	addi r3, r30, 0x16d4
-/* 800DC3A4 00000040  C3 E3 00 60 */	lfs f31, 0x60(r3)
+/* 800DC3A4 00000040  C3 E3 00 60 */	lfs f31, 0x60(r3)	/* effective address: 8038ED8C */
 lbl_800DC3A8:
 /* 800DC3A8 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800DC3AC 00000004  3C 80 00 02 */	lis r4, 0x0002 /* 0x0002004C@ha */
@@ -114,8 +114,8 @@ lbl_800DC41C:
 /* 800DC41C 00000000  48 0A 52 25 */	bl dCam_getBody__Fv
 /* 800DC420 00000004  38 80 00 09 */	li r4, 9
 /* 800DC424 00000008  7F 85 E3 78 */	mr r5, r28
-/* 800DC428 0000000C  3C C0 80 39 */	lis r6, stringBase0@ha
-/* 800DC42C 00000010  38 C6 20 94 */	addi r6, r6, stringBase0@l
+/* 800DC428 0000000C  3C C0 80 39 */	lis r6, d_a_d_a_alink__stringBase0@ha
+/* 800DC42C 00000010  38 C6 20 94 */	addi r6, r6, d_a_d_a_alink__stringBase0@l
 /* 800DC430 00000014  38 C6 00 43 */	addi r6, r6, 0x43
 /* 800DC434 00000018  38 E0 00 01 */	li r7, 1
 /* 800DC438 0000001C  39 1F 31 94 */	addi r8, r31, 0x3194

@@ -59,8 +59,8 @@ lbl_8005CDD0:
 /* 8005CEB4 000000E4  41 82 00 50 */	beq lbl_8005CF04
 /* 8005CEB8 000000E8  3B C0 00 01 */	li r30, 1
 /* 8005CEBC 000000EC  38 7D 3E C8 */	addi r3, r29, 0x3ec8
-/* 8005CEC0 000000F0  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 8005CEC4 000000F4  38 84 A5 78 */	addi r4, r4, stringBase0@l
+/* 8005CEC0 000000F0  3C 80 80 38 */	lis r4, d_kankyo_d_kankyo_rain__stringBase0@ha
+/* 8005CEC4 000000F4  38 84 A5 78 */	addi r4, r4, d_kankyo_d_kankyo_rain__stringBase0@l
 /* 8005CEC8 000000F8  38 84 00 17 */	addi r4, r4, 0x17
 /* 8005CECC 000000FC  48 30 BA C9 */	bl strcmp
 /* 8005CED0 00000100  2C 03 00 00 */	cmpwi r3, 0

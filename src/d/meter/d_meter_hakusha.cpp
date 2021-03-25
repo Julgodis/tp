@@ -35,17 +35,17 @@ struct dMeterSub_c {
 	/* 80194138 */ void isDead();
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
 struct CPaneMgrAlpha {
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
 };
 
 struct dMeter2Draw_c {
@@ -54,16 +54,16 @@ struct dMeter2Draw_c {
 	/* 8021AAA4 */ void setAlphaAnimeMax(CPaneMgrAlpha*, s16);
 };
 
-struct J2DPane {
-};
-
 struct JKRExpHeap {
 };
 
-struct JKRArchive {
+struct J2DPane {
 };
 
 struct J2DGrafContext {
+};
+
+struct JKRArchive {
 };
 
 struct J2DScreen {
@@ -96,7 +96,7 @@ extern "C" void setAlphaHakushaAnimeMax__15dMeterHakusha_cFv(); // 1
 extern "C" void setAlphaButtonAnimeMin__15dMeterHakusha_cFv(); // 1
 extern "C" void setAlphaButtonAnimeMax__15dMeterHakusha_cFv(); // 1
 extern "C" void getHakushaNum__15dMeterHakusha_cFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_meter_d_meter_hakusha__stringBase0;
 
 // 
 // External References:

@@ -5,30 +5,30 @@ lbl_80C49880:
 /* 80C4988C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C49890 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80C49894 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80C49898 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80C4989C 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80C49898 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C4989C 0000001C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80C498A0 00000020  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 80C498A4 00000024  88 1E 05 EF */	lbz r0, 0x5ef(r30)
 /* 80C498A8 00000028  54 00 08 3C */	slwi r0, r0, 1
 /* 80C498AC 0000002C  7C 9E 02 14 */	add r4, r30, r0
 /* 80C498B0 00000030  A8 84 05 F0 */	lha r4, 0x5f0(r4)
-/* 80C498B4 00000034  4B FF E1 E5 */	bl _unresolved
+/* 80C498B4 00000034  4B 3F E1 C4 */	b endCheck__16dEvent_manager_cFs
 /* 80C498B8 00000038  2C 03 00 00 */	cmpwi r3, 0
 /* 80C498BC 0000003C  41 82 00 18 */	beq lbl_80C498D4
 /* 80C498C0 00000040  38 00 00 02 */	li r0, 2
 /* 80C498C4 00000044  98 1E 05 E8 */	stb r0, 0x5e8(r30)
 /* 80C498C8 00000048  38 7F 4E C8 */	addi r3, r31, 0x4ec8
-/* 80C498CC 0000004C  4B FF E1 CD */	bl _unresolved
+/* 80C498CC 0000004C  4B 3F 8B 9C */	b reset__14dEvt_control_cFv
 /* 80C498D0 00000050  48 00 00 2C */	b lbl_80C498FC
 lbl_80C498D4:
 /* 80C498D4 00000000  88 1E 05 EA */	lbz r0, 0x5ea(r30)
 /* 80C498D8 00000004  28 00 00 03 */	cmplwi r0, 3
 /* 80C498DC 00000008  40 82 00 18 */	bne lbl_80C498F4
-/* 80C498E0 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80C498E4 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80C498E8 00000014  A0 03 00 B0 */	lhz r0, 0xb0(r3)
+/* 80C498E0 0000000C  3C 60 80 43 */	lis r3, g_meter2_info@ha
+/* 80C498E4 00000010  38 63 01 88 */	addi r3, r3, g_meter2_info@l
+/* 80C498E8 00000014  A0 03 00 B0 */	lhz r0, 0xb0(r3)	/* effective address: 80430238 */
 /* 80C498EC 00000018  60 00 00 02 */	ori r0, r0, 2
-/* 80C498F0 0000001C  B0 03 00 B0 */	sth r0, 0xb0(r3)
+/* 80C498F0 0000001C  B0 03 00 B0 */	sth r0, 0xb0(r3)	/* effective address: 80430238 */
 lbl_80C498F4:
 /* 80C498F4 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80C498F8 00000004  4B FF EE E9 */	bl demoProc2__12daObjKshtr_cFv

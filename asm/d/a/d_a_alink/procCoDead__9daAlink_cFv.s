@@ -182,8 +182,8 @@ lbl_8011C41C:
 /* 8011C43C 00000020  80 1D 05 70 */	lwz r0, 0x570(r29)
 /* 8011C440 00000024  54 00 04 63 */	rlwinm. r0, r0, 0, 0x11, 0x11
 /* 8011C444 00000028  40 82 01 CC */	bne lbl_8011C610
-/* 8011C448 0000002C  A0 64 00 02 */	lhz r3, 2(r4)
-/* 8011C44C 00000030  C0 44 5D C0 */	lfs f2, 0x5dc0(r4)
+/* 8011C448 0000002C  A0 64 00 02 */	lhz r3, 2(r4)	/* effective address: 804061C2 */
+/* 8011C44C 00000030  C0 44 5D C0 */	lfs f2, 0x5dc0(r4)	/* effective address: 8040BF80 */
 /* 8011C450 00000034  38 03 FF F4 */	addi r0, r3, -12
 /* 8011C454 00000038  7C 00 00 D0 */	neg r0, r0
 /* 8011C458 0000003C  C8 22 92 B0 */	lfd f1, lit_6025(r2)
@@ -194,19 +194,19 @@ lbl_8011C41C:
 /* 8011C46C 00000050  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8011C470 00000054  EC 00 08 28 */	fsubs f0, f0, f1
 /* 8011C474 00000058  EC 02 00 2A */	fadds f0, f2, f0
-/* 8011C478 0000005C  D0 04 5D C0 */	stfs f0, 0x5dc0(r4)
+/* 8011C478 0000005C  D0 04 5D C0 */	stfs f0, 0x5dc0(r4)	/* effective address: 8040BF80 */
 /* 8011C47C 00000060  38 00 00 00 */	li r0, 0
-/* 8011C480 00000064  98 04 5E B6 */	stb r0, 0x5eb6(r4)
+/* 8011C480 00000064  98 04 5E B6 */	stb r0, 0x5eb6(r4)	/* effective address: 8040C076 */
 /* 8011C484 00000068  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 8011C488 0000006C  7C 1C 07 74 */	extsb r28, r0
-/* 8011C48C 00000070  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 8011C490 00000074  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 8011C48C 00000070  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 8011C490 00000074  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 8011C494 00000078  38 63 01 1C */	addi r3, r3, 0x11c
 /* 8011C498 0000007C  4B F8 15 C9 */	bl checkStageName__9daAlink_cFPCc
 /* 8011C49C 00000080  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8011C4A0 00000084  40 82 00 24 */	bne lbl_8011C4C4
-/* 8011C4A4 00000088  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 8011C4A8 0000008C  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 8011C4A4 00000088  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 8011C4A8 0000008C  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 8011C4AC 00000090  38 63 01 24 */	addi r3, r3, 0x124
 /* 8011C4B0 00000094  4B F8 15 B1 */	bl checkStageName__9daAlink_cFPCc
 /* 8011C4B4 00000098  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -220,8 +220,8 @@ lbl_8011C4CC:
 /* 8011C4CC 00000000  3B E0 00 05 */	li r31, 5
 lbl_8011C4D0:
 /* 8011C4D0 00000000  3B C0 FF FF */	li r30, -1
-/* 8011C4D4 00000004  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 8011C4D8 00000008  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 8011C4D4 00000004  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 8011C4D8 00000008  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 8011C4DC 0000000C  38 63 01 2C */	addi r3, r3, 0x12c
 /* 8011C4E0 00000010  4B F8 15 81 */	bl checkStageName__9daAlink_cFPCc
 /* 8011C4E4 00000014  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -265,8 +265,8 @@ lbl_8011C554:
 /* 8011C570 0000001C  2C 03 00 00 */	cmpwi r3, 0
 /* 8011C574 00000020  41 82 00 38 */	beq lbl_8011C5AC
 lbl_8011C578:
-/* 8011C578 00000000  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 8011C57C 00000004  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 8011C578 00000000  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 8011C57C 00000004  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 8011C580 00000008  38 63 01 34 */	addi r3, r3, 0x134
 /* 8011C584 0000000C  4B F8 14 DD */	bl checkStageName__9daAlink_cFPCc
 /* 8011C588 00000010  54 60 06 3F */	clrlwi. r0, r3, 0x18

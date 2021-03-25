@@ -5,8 +5,8 @@ lbl_806E1AA0:
 /* 806E1AAC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 806E1AB0 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 806E1AB4 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 806E1AB8 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 806E1ABC 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
+/* 806E1AB8 00000018  3C 80 80 6E */	lis r4, lit_3791@ha
+/* 806E1ABC 0000001C  3B E4 59 20 */	addi r31, r4, lit_3791@l
 /* 806E1AC0 00000020  A8 03 05 D6 */	lha r0, 0x5d6(r3)
 /* 806E1AC4 00000024  2C 00 00 01 */	cmpwi r0, 1
 /* 806E1AC8 00000028  41 82 00 48 */	beq lbl_806E1B10
@@ -19,10 +19,10 @@ lbl_806E1ADC:
 /* 806E1AE0 00000004  98 1E 05 AD */	stb r0, 0x5ad(r30)
 /* 806E1AE4 00000008  38 80 00 0E */	li r4, 0xe
 /* 806E1AE8 0000000C  38 A0 00 02 */	li r5, 2
-/* 806E1AEC 00000010  C0 3F 00 E0 */	lfs f1, 0xe0(r31)
-/* 806E1AF0 00000014  C0 5F 00 08 */	lfs f2, 8(r31)
+/* 806E1AEC 00000010  C0 3F 00 E0 */	lfs f1, 0xe0(r31)	/* effective address: 806E5A00 */
+/* 806E1AF0 00000014  C0 5F 00 08 */	lfs f2, 8(r31)	/* effective address: 806E5928 */
 /* 806E1AF4 00000018  4B FF F3 99 */	bl SetAnm__8daE_HM_cFiiff
-/* 806E1AF8 0000001C  C0 1F 00 04 */	lfs f0, 4(r31)
+/* 806E1AF8 0000001C  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 806E5924 */
 /* 806E1AFC 00000020  D0 1E 05 F4 */	stfs f0, 0x5f4(r30)
 /* 806E1B00 00000024  A8 7E 05 D6 */	lha r3, 0x5d6(r30)
 /* 806E1B04 00000028  38 03 00 01 */	addi r0, r3, 1
@@ -30,10 +30,10 @@ lbl_806E1ADC:
 /* 806E1B0C 00000030  48 00 00 38 */	b lbl_806E1B44
 lbl_806E1B10:
 /* 806E1B10 00000000  38 7E 05 F4 */	addi r3, r30, 0x5f4
-/* 806E1B14 00000004  C0 3F 00 08 */	lfs f1, 8(r31)
-/* 806E1B18 00000008  C0 5F 00 FC */	lfs f2, 0xfc(r31)
-/* 806E1B1C 0000000C  4B FF E8 3D */	bl _unresolved
-/* 806E1B20 00000010  C0 3F 00 08 */	lfs f1, 8(r31)
+/* 806E1B14 00000004  C0 3F 00 08 */	lfs f1, 8(r31)	/* effective address: 806E5928 */
+/* 806E1B18 00000008  C0 5F 00 FC */	lfs f2, 0xfc(r31)	/* effective address: 806E5A1C */
+/* 806E1B1C 0000000C  4B B8 EC 24 */	b cLib_chaseF__FPfff
+/* 806E1B20 00000010  C0 3F 00 08 */	lfs f1, 8(r31)	/* effective address: 806E5928 */
 /* 806E1B24 00000014  C0 1E 05 F4 */	lfs f0, 0x5f4(r30)
 /* 806E1B28 00000018  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 806E1B2C 0000001C  40 82 00 18 */	bne lbl_806E1B44

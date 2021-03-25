@@ -24,8 +24,8 @@ lbl_802E2EB4:
 /* 802E2EBC 00000008  80 6D 8F 9C */	lwz r3, sConsole__12JUTException(r13)
 /* 802E2EC0 0000000C  28 03 00 00 */	cmplwi r3, 0
 /* 802E2EC4 00000010  41 82 00 44 */	beq lbl_802E2F08
-/* 802E2EC8 00000014  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802E2ECC 00000018  38 84 D4 90 */	addi r4, r4, stringBase0@l
+/* 802E2EC8 00000014  3C 80 80 3A */	lis r4, JUTException__stringBase0@ha
+/* 802E2ECC 00000018  38 84 D4 90 */	addi r4, r4, JUTException__stringBase0@l
 /* 802E2ED0 0000001C  38 84 04 4A */	addi r4, r4, 0x44a
 /* 802E2ED4 00000020  80 AD 8F A0 */	lwz r5, msr__12JUTException(r13)
 /* 802E2ED8 00000024  80 CD 8F A4 */	lwz r6, fpscr__12JUTException(r13)

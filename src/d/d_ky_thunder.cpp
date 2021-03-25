@@ -85,7 +85,7 @@ extern "C" static void dThunder_IsDelete__FP10dThunder_c(); // 1
 extern "C" static void dThunder_Delete__FP10dThunder_c(); // 1
 extern "C" static void dThunder_Create__FP12kankyo_class(); // 1
 extern "C" void create__10dThunder_cFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_d_ky_thunder__stringBase0;
 extern "C" extern void* g_profile_KY_THUNDER[10 + 1 /* padding */];
 
 // 
@@ -382,7 +382,7 @@ SECTION_DATA static void* l_dThunder_Method[5] = {
 	/* 4    */ (void*)dThunder_Draw__FP10dThunder_c,
 };
 
-/* 803BC1EC-803BC218 0028+04 s=0 e=0 z=0  None .data      g_profile_KY_THUNDER                                         */
+/* 803BC1EC-803BC218 0028+04 s=0 e=0 z=1  None .data      g_profile_KY_THUNDER                                         */
 SECTION_DATA void* g_profile_KY_THUNDER[10 + 1 /* padding */] = {
 	/* 0    */ (void*)0xFFFFFFFD,
 	/* 1    */ (void*)0x0007FFFD,

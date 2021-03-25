@@ -83,7 +83,7 @@ SECTION_DATA static u8 lit_1[68] = {
 	0x20, 0x3E, 0x3E, 0x00,
 };
 
-/* 803D11FC-803D1210 0014+00 s=9 e=0 z=0  None .data      Si                                                           */
+/* 803D11FC-803D1210 0014+00 s=11 e=0 z=0  None .data      Si                                                           */
 SECTION_DATA static u8 Si[20] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,

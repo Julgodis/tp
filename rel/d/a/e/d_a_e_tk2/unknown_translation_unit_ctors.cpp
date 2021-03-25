@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_807BBD94[8];
+extern void* data_807BBD94[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_e_tk2_cpp(); // 1
 
 // 
 // Declarations:

@@ -9,25 +9,25 @@ lbl_80CDDB48:
 /* 80CDDB64 00000008  DB A1 00 60 */	stfd f29, 0x60(r1)
 /* 80CDDB68 00000020  F3 A1 00 68 */	psq_st f29, 104(r1), 0, 0 /* qr0 */
 /* 80CDDB6C 00000000  39 61 00 60 */	addi r11, r1, 0x60
-/* 80CDDB70 00000004  4B FF F6 A9 */	bl _unresolved
+/* 80CDDB70 00000004  4B 68 46 50 */	b _savegpr_22
 /* 80CDDB74 00000008  7C 7D 1B 78 */	mr r29, r3
-/* 80CDDB78 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CDDB7C 00000010  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
-/* 80CDDB80 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CDDB84 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CDDB78 0000000C  3C 60 80 CE */	lis r3, m__20daObj_SMTile_Param_c@ha
+/* 80CDDB7C 00000010  3B E3 E3 5C */	addi r31, r3, m__20daObj_SMTile_Param_c@l
+/* 80CDDB80 00000014  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80CDDB84 00000018  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80CDDB88 0000001C  A8 9D 04 DE */	lha r4, 0x4de(r29)
-/* 80CDDB8C 00000020  4B FF F6 8D */	bl _unresolved
+/* 80CDDB8C 00000020  4B 32 E8 50 */	b mDoMtx_YrotS__FPA4_fs
 /* 80CDDB90 00000024  3B C0 00 00 */	li r30, 0
 /* 80CDDB94 00000028  3B 80 00 00 */	li r28, 0
 /* 80CDDB98 0000002C  3B 60 00 00 */	li r27, 0
-/* 80CDDB9C 00000030  C3 DF 00 08 */	lfs f30, 8(r31)
-/* 80CDDBA0 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CDDBA4 00000038  3B 03 00 00 */	addi r24, r3, 0x0000 /* 0x00000000@l */
-/* 80CDDBA8 0000003C  CB FF 00 18 */	lfd f31, 0x18(r31)
+/* 80CDDB9C 00000030  C3 DF 00 08 */	lfs f30, 8(r31)	/* effective address: 80CDE364 */
+/* 80CDDBA0 00000034  3C 60 80 CE */	lis r3, l_tileMoveData@ha
+/* 80CDDBA4 00000038  3B 03 E3 A4 */	addi r24, r3, l_tileMoveData@l
+/* 80CDDBA8 0000003C  CB FF 00 18 */	lfd f31, 0x18(r31)	/* effective address: 80CDE374 */
 /* 80CDDBAC 00000040  3F 20 43 30 */	lis r25, 0x4330
-/* 80CDDBB0 00000044  C3 BF 00 00 */	lfs f29, 0(r31)
-/* 80CDDBB4 00000048  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CDDBB8 0000004C  3B 43 00 00 */	addi r26, r3, 0x0000 /* 0x00000000@l */
+/* 80CDDBB0 00000044  C3 BF 00 00 */	lfs f29, 0(r31)	/* effective address: 80CDE35C */
+/* 80CDDBB4 00000048  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80CDDBB8 0000004C  3B 43 D4 70 */	addi r26, r3, now__14mDoMtx_stack_c@l
 lbl_80CDDBBC:
 /* 80CDDBBC 00000000  D3 C1 00 14 */	stfs f30, 0x14(r1)
 /* 80CDDBC0 00000004  D3 C1 00 18 */	stfs f30, 0x18(r1)
@@ -62,7 +62,7 @@ lbl_80CDDBBC:
 /* 80CDDC34 00000078  38 81 00 08 */	addi r4, r1, 8
 /* 80CDDC38 0000007C  7E DD E2 14 */	add r22, r29, r28
 /* 80CDDC3C 00000080  38 B6 06 8C */	addi r5, r22, 0x68c
-/* 80CDDC40 00000084  4B FF F5 D9 */	bl _unresolved
+/* 80CDDC40 00000084  4B 66 91 2C */	b PSMTXMultVec
 /* 80CDDC44 00000088  88 17 00 03 */	lbz r0, 3(r23)
 /* 80CDDC48 0000008C  2C 00 00 02 */	cmpwi r0, 2
 /* 80CDDC4C 00000090  41 82 00 4C */	beq lbl_80CDDC98
@@ -77,25 +77,25 @@ lbl_80CDDC64:
 /* 80CDDC6C 00000008  48 00 00 40 */	b lbl_80CDDCAC
 lbl_80CDDC70:
 /* 80CDDC70 00000000  C0 21 00 1C */	lfs f1, 0x1c(r1)
-/* 80CDDC74 00000004  C0 1F 00 0C */	lfs f0, 0xc(r31)
+/* 80CDDC74 00000004  C0 1F 00 0C */	lfs f0, 0xc(r31)	/* effective address: 80CDE368 */
 /* 80CDDC78 00000008  EC 01 00 2A */	fadds f0, f1, f0
 /* 80CDDC7C 0000000C  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 80CDDC80 00000010  48 00 00 3C */	b lbl_80CDDCBC
 lbl_80CDDC84:
 /* 80CDDC84 00000000  C0 21 00 14 */	lfs f1, 0x14(r1)
-/* 80CDDC88 00000004  C0 1F 00 0C */	lfs f0, 0xc(r31)
+/* 80CDDC88 00000004  C0 1F 00 0C */	lfs f0, 0xc(r31)	/* effective address: 80CDE368 */
 /* 80CDDC8C 00000008  EC 01 00 2A */	fadds f0, f1, f0
 /* 80CDDC90 0000000C  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80CDDC94 00000010  48 00 00 28 */	b lbl_80CDDCBC
 lbl_80CDDC98:
 /* 80CDDC98 00000000  C0 21 00 14 */	lfs f1, 0x14(r1)
-/* 80CDDC9C 00000004  C0 1F 00 0C */	lfs f0, 0xc(r31)
+/* 80CDDC9C 00000004  C0 1F 00 0C */	lfs f0, 0xc(r31)	/* effective address: 80CDE368 */
 /* 80CDDCA0 00000008  EC 01 00 28 */	fsubs f0, f1, f0
 /* 80CDDCA4 0000000C  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80CDDCA8 00000010  48 00 00 14 */	b lbl_80CDDCBC
 lbl_80CDDCAC:
 /* 80CDDCAC 00000000  C0 21 00 1C */	lfs f1, 0x1c(r1)
-/* 80CDDCB0 00000004  C0 1F 00 0C */	lfs f0, 0xc(r31)
+/* 80CDDCB0 00000004  C0 1F 00 0C */	lfs f0, 0xc(r31)	/* effective address: 80CDE368 */
 /* 80CDDCB4 00000008  EC 01 00 28 */	fsubs f0, f1, f0
 /* 80CDDCB8 0000000C  D0 01 00 1C */	stfs f0, 0x1c(r1)
 lbl_80CDDCBC:
@@ -108,7 +108,7 @@ lbl_80CDDCBC:
 /* 80CDDCD4 00000018  7F 43 D3 78 */	mr r3, r26
 /* 80CDDCD8 0000001C  38 81 00 14 */	addi r4, r1, 0x14
 /* 80CDDCDC 00000020  38 B6 05 90 */	addi r5, r22, 0x590
-/* 80CDDCE0 00000024  4B FF F5 39 */	bl _unresolved
+/* 80CDDCE0 00000024  4B 66 90 8C */	b PSMTXMultVec
 /* 80CDDCE4 00000028  3B DE 00 01 */	addi r30, r30, 1
 /* 80CDDCE8 0000002C  2C 1E 00 15 */	cmpwi r30, 0x15
 /* 80CDDCEC 00000030  3B 9C 00 0C */	addi r28, r28, 0xc
@@ -121,7 +121,7 @@ lbl_80CDDCBC:
 /* 80CDDD08 0000004C  E3 A1 00 68 */	psq_l f29, 104(r1), 0, 0 /* qr0 */
 /* 80CDDD0C 00000000  CB A1 00 60 */	lfd f29, 0x60(r1)
 /* 80CDDD10 00000004  39 61 00 60 */	addi r11, r1, 0x60
-/* 80CDDD14 00000008  4B FF F5 05 */	bl _unresolved
+/* 80CDDD14 00000008  4B 68 44 F8 */	b _restgpr_22
 /* 80CDDD18 0000000C  80 01 00 94 */	lwz r0, 0x94(r1)
 /* 80CDDD1C 00000010  7C 08 03 A6 */	mtlr r0
 /* 80CDDD20 00000014  38 21 00 90 */	addi r1, r1, 0x90

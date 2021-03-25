@@ -11,12 +11,12 @@ lbl_80BDF764:
 /* 80BDF788 00000024  7F E0 FB 79 */	or. r0, r31, r31
 /* 80BDF78C 00000028  41 82 00 20 */	beq lbl_80BDF7AC
 /* 80BDF790 0000002C  7C 1E 03 78 */	mr r30, r0
-/* 80BDF794 00000030  4B FF E1 45 */	bl _unresolved
-/* 80BDF798 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BDF79C 00000038  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
+/* 80BDF794 00000030  4B 49 8E 90 */	b __ct__16dBgS_MoveBgActorFv
+/* 80BDF798 00000034  3C 60 80 BE */	lis r3, __vt__17daObjDmElevator_c@ha
+/* 80BDF79C 00000038  38 03 FB 08 */	addi r0, r3, __vt__17daObjDmElevator_c@l
 /* 80BDF7A0 0000003C  90 1E 05 9C */	stw r0, 0x59c(r30)
 /* 80BDF7A4 00000040  38 7E 05 B8 */	addi r3, r30, 0x5b8
-/* 80BDF7A8 00000044  4B FF E1 31 */	bl _unresolved
+/* 80BDF7A8 00000044  4B 6D F0 9C */	b __ct__16Z2SoundObjSimpleFv
 lbl_80BDF7AC:
 /* 80BDF7AC 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 80BDF7B0 00000004  60 00 00 08 */	ori r0, r0, 8

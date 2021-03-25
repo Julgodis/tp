@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80C5FA28[8];
+extern void* data_80C5FA28[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_obj_lv4HsTarget_cpp(); // 1
 
 // 
 // Declarations:

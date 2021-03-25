@@ -11,8 +11,8 @@ lbl_803131D4:
 /* 803131F8 00000024  1F C4 00 03 */	mulli r30, r4, 3
 /* 803131FC 00000028  7F C4 F3 78 */	mr r4, r30
 /* 80313200 0000002C  4B FF C8 E1 */	bl J3DFifoLoadPosMtxImm__FPA4_fUl
-/* 80313204 00000030  80 7F 00 40 */	lwz r3, 0x40(r31)
-/* 80313208 00000034  80 63 00 30 */	lwz r3, 0x30(r3)
+/* 80313204 00000030  80 7F 00 40 */	lwz r3, 0x40(r31)	/* effective address: 80434B08 */
+/* 80313208 00000034  80 63 00 30 */	lwz r3, 0x30(r3)	/* effective address: 80430030 */
 /* 8031320C 00000038  7F C4 F3 78 */	mr r4, r30
 /* 80313210 0000003C  4B FF C9 51 */	bl J3DFifoLoadNrmMtxImm__FPA4_fUl
 /* 80313214 00000040  83 E1 00 0C */	lwz r31, 0xc(r1)

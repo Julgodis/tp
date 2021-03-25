@@ -10,9 +10,9 @@ lbl_80A72064:
 /* 80A72084 00000020  3C 60 D8 FC */	lis r3, 0xD8FC /* 0xD8FBFDFF@ha */
 /* 80A72088 00000024  38 83 FD FF */	addi r4, r3, 0xFDFF /* 0xD8FBFDFF@l */
 /* 80A7208C 00000028  38 A0 00 1F */	li r5, 0x1f
-/* 80A72090 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80A72094 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80A72098 00000034  88 03 4F AD */	lbz r0, 0x4fad(r3)
+/* 80A72090 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A72094 00000030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A72098 00000034  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 80A7209C 00000038  28 00 00 00 */	cmplwi r0, 0
 /* 80A720A0 0000003C  41 82 00 10 */	beq lbl_80A720B0
 /* 80A720A4 00000040  38 80 00 00 */	li r4, 0
@@ -41,18 +41,18 @@ lbl_80A720DC:
 /* 80A720F4 00000018  90 1F 0E E0 */	stw r0, 0xee0(r31)
 /* 80A720F8 0000001C  38 7F 0F 68 */	addi r3, r31, 0xf68
 /* 80A720FC 00000020  C0 3F 0D EC */	lfs f1, 0xdec(r31)
-/* 80A72100 00000024  4B FF EA D9 */	bl _unresolved
+/* 80A72100 00000024  4B 7F D0 F8 */	b SetH__8cM3dGCylFf
 /* 80A72104 00000028  38 7F 0F 68 */	addi r3, r31, 0xf68
 /* 80A72108 0000002C  C0 3F 0D F0 */	lfs f1, 0xdf0(r31)
-/* 80A7210C 00000030  4B FF EA CD */	bl _unresolved
+/* 80A7210C 00000030  4B 7F D0 F4 */	b SetR__8cM3dGCylFf
 /* 80A72110 00000034  38 7F 0F 68 */	addi r3, r31, 0xf68
 /* 80A72114 00000038  38 9F 04 D0 */	addi r4, r31, 0x4d0
-/* 80A72118 0000003C  4B FF EA C1 */	bl _unresolved
-/* 80A7211C 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80A72120 00000044  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80A72118 0000003C  4B 7F D0 C4 */	b SetC__8cM3dGCylFRC4cXyz
+/* 80A7211C 00000040  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A72120 00000044  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A72124 00000048  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80A72128 0000004C  38 9F 0E 44 */	addi r4, r31, 0xe44
-/* 80A7212C 00000050  4B FF EA AD */	bl _unresolved
+/* 80A7212C 00000050  4B 7F 2A 7C */	b Set__4cCcSFP8cCcD_Obj
 lbl_80A72130:
 /* 80A72130 00000000  38 7F 0E 44 */	addi r3, r31, 0xe44
 /* 80A72134 00000004  81 9F 0E 80 */	lwz r12, 0xe80(r31)

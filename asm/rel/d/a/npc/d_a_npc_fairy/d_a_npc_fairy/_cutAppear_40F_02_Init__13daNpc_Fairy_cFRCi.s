@@ -25,51 +25,51 @@ lbl_809B5B94:
 /* 809B5B9C 00000008  41 82 00 28 */	beq lbl_809B5BC4
 /* 809B5BA0 0000000C  83 FE 0B 80 */	lwz r31, 0xb80(r30)
 /* 809B5BA4 00000010  38 7E 0B 74 */	addi r3, r30, 0xb74
-/* 809B5BA8 00000014  4B FF BE D1 */	bl _unresolved
+/* 809B5BA8 00000014  4B 78 FC F0 */	b initialize__22daNpcT_MotionSeqMngr_cFv
 /* 809B5BAC 00000018  93 FE 0B 80 */	stw r31, 0xb80(r30)
 /* 809B5BB0 0000001C  38 00 00 03 */	li r0, 3
 /* 809B5BB4 00000020  90 1E 0B 7C */	stw r0, 0xb7c(r30)
-/* 809B5BB8 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 809B5BBC 00000028  C0 03 00 00 */	lfs f0, 0x0000(r3)
+/* 809B5BB8 00000024  3C 60 80 9C */	lis r3, lit_3945@ha
+/* 809B5BBC 00000028  C0 03 93 CC */	lfs f0, lit_3945@l(r3)
 /* 809B5BC0 0000002C  D0 1E 0B 8C */	stfs f0, 0xb8c(r30)
 lbl_809B5BC4:
 /* 809B5BC4 00000000  38 00 00 3D */	li r0, 0x3d
 /* 809B5BC8 00000004  B0 1E 0F 90 */	sth r0, 0xf90(r30)
 /* 809B5BCC 00000008  38 60 00 0A */	li r3, 0xa
-/* 809B5BD0 0000000C  4B FF BE A9 */	bl _unresolved
-/* 809B5BD4 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 809B5BD8 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 809B5BDC 00000018  80 63 00 00 */	lwz r3, 0(r3)
+/* 809B5BD0 0000000C  4B 7F 2C 14 */	b dKy_change_colpat__FUc
+/* 809B5BD4 00000010  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
+/* 809B5BD8 00000014  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 809B5BDC 00000018  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
 /* 809B5BE0 0000001C  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 809B5BE4 00000020  3C 80 02 00 */	lis r4, 0x0200 /* 0x0200003F@ha */
 /* 809B5BE8 00000024  38 84 00 3F */	addi r4, r4, 0x003F /* 0x0200003F@l */
-/* 809B5BEC 00000028  4B FF BE 8D */	bl _unresolved
+/* 809B5BEC 00000028  4B 8F 9F A8 */	b bgmStreamPrepare__8Z2SeqMgrFUl
 /* 809B5BF0 0000002C  48 00 00 5C */	b lbl_809B5C4C
 lbl_809B5BF4:
 /* 809B5BF4 00000000  38 00 00 00 */	li r0, 0
 /* 809B5BF8 00000004  98 1E 0F F6 */	stb r0, 0xff6(r30)
 /* 809B5BFC 00000008  38 00 00 64 */	li r0, 0x64
 /* 809B5C00 0000000C  B0 1E 0F 90 */	sth r0, 0xf90(r30)
-/* 809B5C04 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 809B5C08 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 809B5C0C 00000018  80 63 00 00 */	lwz r3, 0(r3)
+/* 809B5C04 00000010  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
+/* 809B5C08 00000014  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 809B5C0C 00000018  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
 /* 809B5C10 0000001C  38 63 03 D0 */	addi r3, r3, 0x3d0
-/* 809B5C14 00000020  4B FF BE 65 */	bl _unresolved
+/* 809B5C14 00000020  4B 8F A2 04 */	b bgmStreamPlay__8Z2SeqMgrFv
 /* 809B5C18 00000024  38 60 00 0C */	li r3, 0xc
-/* 809B5C1C 00000028  4B FF BE 5D */	bl _unresolved
+/* 809B5C1C 00000028  4B 7F 2B C8 */	b dKy_change_colpat__FUc
 /* 809B5C20 0000002C  48 00 00 2C */	b lbl_809B5C4C
 lbl_809B5C24:
 /* 809B5C24 00000000  80 9E 0A 7C */	lwz r4, 0xa7c(r30)
 /* 809B5C28 00000004  38 A0 00 00 */	li r5, 0
-/* 809B5C2C 00000008  4B FF BE 4D */	bl _unresolved
+/* 809B5C2C 00000008  4B 79 5F C4 */	b initTalk__8daNpcT_cFiPP10fopAc_ac_c
 /* 809B5C30 0000000C  48 00 00 1C */	b lbl_809B5C4C
 lbl_809B5C34:
-/* 809B5C34 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 809B5C38 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 809B5C3C 00000008  80 63 00 00 */	lwz r3, 0(r3)
+/* 809B5C34 00000000  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
+/* 809B5C38 00000004  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 809B5C3C 00000008  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
 /* 809B5C40 0000000C  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 809B5C44 00000010  38 80 00 2D */	li r4, 0x2d
-/* 809B5C48 00000014  4B FF BE 31 */	bl _unresolved
+/* 809B5C48 00000014  4B 8F A2 94 */	b bgmStreamStop__8Z2SeqMgrFUl
 lbl_809B5C4C:
 /* 809B5C4C 00000000  38 60 00 00 */	li r3, 0
 /* 809B5C50 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

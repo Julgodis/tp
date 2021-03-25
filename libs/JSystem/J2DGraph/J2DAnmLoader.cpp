@@ -15,16 +15,22 @@ struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
 };
 
-struct J3DAnmTevRegKeyData {
-};
-
 struct J3DAnmVtxColorKeyData {
 };
 
-struct J2DAnmTevRegKey {
+struct J3DAnmColorKeyData {
+};
+
+struct J3DAnmTransformKeyData {
 };
 
 struct J3DAnmTextureSRTKeyData {
+};
+
+struct J2DAnmVtxColorKey {
+};
+
+struct J2DAnmTextureSRTKey {
 };
 
 struct J2DScreen {
@@ -34,22 +40,16 @@ struct J2DAnmBase {
 	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
 };
 
-struct J2DAnmTextureSRTKey {
+struct J2DAnmColorKey {
+};
+
+struct J3DAnmTevRegKeyData {
 };
 
 struct J2DAnmTransformKey {
 };
 
-struct J3DAnmColorKeyData {
-};
-
-struct J3DAnmTransformKeyData {
-};
-
-struct J2DAnmColorKey {
-};
-
-struct J2DAnmVtxColorKey {
+struct J2DAnmTevRegKey {
 };
 
 struct J2DAnmKeyLoader_v15 {
@@ -69,16 +69,14 @@ struct J2DAnmKeyLoader_v15 {
 	/* 8030A004 */ void setAnmTevReg(J2DAnmTevRegKey*, J3DAnmTevRegKeyData const*);
 };
 
-struct J3DAnmColorFullData {
-};
-
-struct J3DAnmVisibilityFullData {
-};
-
-struct J3DAnmVtxColorFullData {
+struct J2DAnmVisibilityFull {
+	/* 8030A3B4 */ ~J2DAnmVisibilityFull();
 };
 
 struct J2DAnmTexPattern {
+};
+
+struct J3DAnmColorFullData {
 };
 
 struct J3DAnmTransformFullData {
@@ -87,17 +85,19 @@ struct J3DAnmTransformFullData {
 struct J2DAnmVtxColorFull {
 };
 
+struct J2DAnmTransformFull {
+};
+
 struct J3DAnmTexPatternFullData {
 };
 
-struct J2DAnmTransformFull {
+struct J3DAnmVisibilityFullData {
 };
 
 struct J2DAnmColorFull {
 };
 
-struct J2DAnmVisibilityFull {
-	/* 8030A3B4 */ ~J2DAnmVisibilityFull();
+struct J3DAnmVtxColorFullData {
 };
 
 struct J2DAnmFullLoader_v15 {
@@ -292,7 +292,7 @@ SECTION_SDATA2 static u8 lit_1581[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80308A6C-80309290 0824+00 s=0 e=26 z=0  None .text      load__20J2DAnmLoaderDataBaseFPCv                             */
+/* 80308A6C-80309290 0824+00 s=0 e=26 z=2  None .text      load__20J2DAnmLoaderDataBaseFPCv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

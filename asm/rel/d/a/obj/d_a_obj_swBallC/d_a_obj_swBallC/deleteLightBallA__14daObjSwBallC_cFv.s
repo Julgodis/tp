@@ -3,12 +3,12 @@ lbl_80CF692C:
 /* 80CF6930 00000004  7C 08 02 A6 */	mflr r0
 /* 80CF6934 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CF6938 0000000C  7C 64 1B 78 */	mr r4, r3
-/* 80CF693C 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CF6940 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80CF6944 00000018  4B FF F2 35 */	bl _unresolved
+/* 80CF693C 00000010  3C 60 80 CF */	lis r3, s_ballA_sub__FPvPv@ha
+/* 80CF6940 00000014  38 63 5C 24 */	addi r3, r3, s_ballA_sub__FPvPv@l
+/* 80CF6944 00000018  4B 32 A9 F4 */	b fpcEx_Search__FPFPvPv_PvPv
 /* 80CF6948 0000001C  28 03 00 00 */	cmplwi r3, 0
 /* 80CF694C 00000020  41 82 00 08 */	beq lbl_80CF6954
-/* 80CF6950 00000024  4B FF F2 29 */	bl _unresolved
+/* 80CF6950 00000024  4B 32 33 2C */	b fopAcM_delete__FP10fopAc_ac_c
 lbl_80CF6954:
 /* 80CF6954 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80CF6958 00000004  7C 08 03 A6 */	mtlr r0

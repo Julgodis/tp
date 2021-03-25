@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct Z2WolfHowlData {
+struct Vec {
 };
 
-struct Vec {
+struct Z2WolfHowlData {
 };
 
 struct Z2WolfHowlMgr {
@@ -45,6 +45,9 @@ struct JAISoundParamsMove {
 	/* 802A2E0C */ void movePitch(f32, u32);
 };
 
+struct JAISoundHandle {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -52,9 +55,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAISoundHandle {
 };
 
 struct JAISoundID {
@@ -484,7 +484,7 @@ SECTION_SDATA2 static f32 lit_4041[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 802CB6EC-802CBA88 039C+00 s=0 e=0 z=0  None .text      startWindStoneSound__13Z2WolfHowlMgrFScP3Vec                 */
+/* 802CB6EC-802CBA88 039C+00 s=0 e=0 z=2  None .text      startWindStoneSound__13Z2WolfHowlMgrFScP3Vec                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

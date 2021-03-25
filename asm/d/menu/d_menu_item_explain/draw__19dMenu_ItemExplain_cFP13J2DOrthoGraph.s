@@ -18,7 +18,7 @@ lbl_801DB54C:
 /* 801DB550 00000004  7C 7E D8 2E */	lwzx r3, r30, r27
 /* 801DB554 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 801DB558 0000000C  41 82 00 44 */	beq lbl_801DB59C
-/* 801DB55C 00000010  C0 1C 00 FC */	lfs f0, 0xfc(r28)
+/* 801DB55C 00000010  C0 1C 00 FC */	lfs f0, 0xfc(r28)	/* effective address: 8042FBF8 */
 /* 801DB560 00000014  80 63 00 04 */	lwz r3, 4(r3)
 /* 801DB564 00000018  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 801DB568 0000001C  D0 03 00 D0 */	stfs f0, 0xd0(r3)
@@ -28,10 +28,10 @@ lbl_801DB54C:
 /* 801DB578 0000002C  4E 80 04 21 */	bctrl 
 /* 801DB57C 00000030  7C 7E D8 2E */	lwzx r3, r30, r27
 /* 801DB580 00000034  C0 3E 00 D4 */	lfs f1, 0xd4(r30)
-/* 801DB584 00000038  C0 1C 00 F4 */	lfs f0, 0xf4(r28)
+/* 801DB584 00000038  C0 1C 00 F4 */	lfs f0, 0xf4(r28)	/* effective address: 8042FBF0 */
 /* 801DB588 0000003C  EC 21 00 2A */	fadds f1, f1, f0
 /* 801DB58C 00000040  C0 5E 00 D8 */	lfs f2, 0xd8(r30)
-/* 801DB590 00000044  C0 1C 00 F8 */	lfs f0, 0xf8(r28)
+/* 801DB590 00000044  C0 1C 00 F8 */	lfs f0, 0xf8(r28)	/* effective address: 8042FBF4 */
 /* 801DB594 00000048  EC 42 00 2A */	fadds f2, f2, f0
 /* 801DB598 0000004C  48 07 90 19 */	bl paneTrans__8CPaneMgrFff
 lbl_801DB59C:

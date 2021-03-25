@@ -109,7 +109,7 @@ extern "C" void getDecoLineColor__18dRenderingFDAmap_cFii(); // 1
 extern "C" void getDecorationLineWidth__18dRenderingFDAmap_cFi(); // 1
 extern "C" void __sinit_d_map_path_cpp(); // 1
 extern "C" void __dt__Q28dMpath_n18dTexObjAggregate_cFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_map_d_map_path__stringBase0;
 extern "C" extern void* __vt__18dRenderingFDAmap_c[26];
 extern "C" extern void* __vt__11dDrawPath_c[16];
 extern "C" extern u8 m_texObjAgg__8dMpath_n[28];

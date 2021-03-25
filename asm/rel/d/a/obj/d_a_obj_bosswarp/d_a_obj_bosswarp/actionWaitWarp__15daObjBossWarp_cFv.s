@@ -16,7 +16,7 @@ lbl_8057A678:
 /* 8057A6B0 00000038  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 8057A6B4 0000003C  38 E0 00 00 */	li r7, 0
 /* 8057A6B8 00000040  39 00 00 01 */	li r8, 1
-/* 8057A6BC 00000044  4B FF EF 5D */	bl _unresolved
+/* 8057A6BC 00000044  4B AA 0F C0 */	b fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
 /* 8057A6C0 00000048  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 8057A6C4 0000004C  60 00 00 02 */	ori r0, r0, 2
 /* 8057A6C8 00000050  B0 1F 00 FA */	sth r0, 0xfa(r31)

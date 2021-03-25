@@ -5,11 +5,11 @@ lbl_8078FBC8:
 /* 8078FBD4 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8078FBD8 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8078FBDC 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 8078FBE0 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8078FBE4 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
+/* 8078FBE0 00000018  3C 80 80 79 */	lis r4, lit_3902@ha
+/* 8078FBE4 0000001C  3B E4 1D 70 */	addi r31, r4, lit_3902@l
 /* 8078FBE8 00000020  38 00 00 06 */	li r0, 6
 /* 8078FBEC 00000024  B0 03 06 A0 */	sth r0, 0x6a0(r3)
-/* 8078FBF0 00000028  C0 3F 00 04 */	lfs f1, 4(r31)
+/* 8078FBF0 00000028  C0 3F 00 04 */	lfs f1, 4(r31)	/* effective address: 80791D74 */
 /* 8078FBF4 0000002C  D0 23 05 2C */	stfs f1, 0x52c(r3)
 /* 8078FBF8 00000030  A8 03 06 78 */	lha r0, 0x678(r3)
 /* 8078FBFC 00000034  2C 00 00 01 */	cmpwi r0, 1
@@ -20,9 +20,9 @@ lbl_8078FBC8:
 /* 8078FC10 00000048  48 00 00 98 */	b lbl_8078FCA8
 lbl_8078FC14:
 /* 8078FC14 00000000  38 80 00 09 */	li r4, 9
-/* 8078FC18 00000004  C0 3F 00 94 */	lfs f1, 0x94(r31)
+/* 8078FC18 00000004  C0 3F 00 94 */	lfs f1, 0x94(r31)	/* effective address: 80791E04 */
 /* 8078FC1C 00000008  38 A0 00 00 */	li r5, 0
-/* 8078FC20 0000000C  C0 5F 00 08 */	lfs f2, 8(r31)
+/* 8078FC20 0000000C  C0 5F 00 08 */	lfs f2, 8(r31)	/* effective address: 80791D78 */
 /* 8078FC24 00000010  4B FF E7 91 */	bl anm_init__FP10e_sh_classifUcf
 /* 8078FC28 00000014  38 00 00 01 */	li r0, 1
 /* 8078FC2C 00000018  B0 1E 06 78 */	sth r0, 0x678(r30)
@@ -51,9 +51,9 @@ lbl_8078FC58:
 lbl_8078FC80:
 /* 8078FC80 00000000  38 00 00 05 */	li r0, 5
 /* 8078FC84 00000004  B0 1E 06 78 */	sth r0, 0x678(r30)
-/* 8078FC88 00000008  C0 3F 00 6C */	lfs f1, 0x6c(r31)
-/* 8078FC8C 0000000C  4B FF E6 2D */	bl _unresolved
-/* 8078FC90 00000010  C0 1F 00 6C */	lfs f0, 0x6c(r31)
+/* 8078FC88 00000008  C0 3F 00 6C */	lfs f1, 0x6c(r31)	/* effective address: 80791DDC */
+/* 8078FC8C 0000000C  4B AD 7C C8 */	b cM_rndF__Ff
+/* 8078FC90 00000010  C0 1F 00 6C */	lfs f0, 0x6c(r31)	/* effective address: 80791DDC */
 /* 8078FC94 00000014  EC 00 08 2A */	fadds f0, f0, f1
 /* 8078FC98 00000018  FC 00 00 1E */	fctiwz f0, f0
 /* 8078FC9C 0000001C  D8 01 00 08 */	stfd f0, 8(r1)

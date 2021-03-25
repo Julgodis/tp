@@ -162,13 +162,13 @@ struct dPa_followEcallBack {
 	/* 80049580 */ dPa_followEcallBack(u8, u8);
 };
 
+struct dKy_tevstr_c {
+};
+
 struct _GXColor {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -333,10 +333,7 @@ extern "C" static void daItem_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __sinit_d_a_obj_item_cpp(); // 1
 extern "C" void getItemPos__9daPy_py_cCFv(); // 1
 extern "C" void getLeftHandPos__9daPy_py_cCFv(); // 1
-extern "C" extern char const* const stringBase0;
-extern "C" extern void* lit_4679[3];
-extern "C" extern void* lit_4680[3];
-extern "C" extern u8 data_803B9DC4[24];
+extern "C" extern char const* const a_obj_d_a_obj_item__stringBase0;
 extern "C" extern void* g_profile_ITEM[12];
 
 // 
@@ -529,7 +526,7 @@ asm static void Reflect(cXyz* param_0, cBgS_PolyInfo const& param_1, f32 param_2
 #pragma pop
 
 
-/* 8015B0B8-8015B0C4 000C+00 s=10 e=1 z=0  None .text      getData__12daItemBase_cFv                                    */
+/* 8015B0B8-8015B0C4 000C+00 s=10 e=1 z=1  None .text      getData__12daItemBase_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -616,22 +613,22 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803B9DAC-803B9DB8 000C+00 s=0 e=0 z=0  None .data      @4679                                                        */
-SECTION_DATA void* lit_4679[3] = {
+/* 803B9DAC-803B9DB8 000C+00 s=1 e=0 z=0  None .data      @4679                                                        */
+SECTION_DATA static void* lit_4679[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)mode_wait__8daItem_cFv,
 };
 
-/* 803B9DB8-803B9DC4 000C+00 s=0 e=0 z=0  None .data      @4680                                                        */
-SECTION_DATA void* lit_4680[3] = {
+/* 803B9DB8-803B9DC4 000C+00 s=1 e=0 z=0  None .data      @4680                                                        */
+SECTION_DATA static void* lit_4680[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)mode_water__8daItem_cFv,
 };
 
-/* 803B9DC4-803B9DDC 0018+00 s=0 e=0 z=0  None .data      mode_proc$4678                                               */
-SECTION_DATA u8 data_803B9DC4[24] = {
+/* 803B9DC4-803B9DDC 0018+00 s=1 e=0 z=0  None .data      mode_proc$4678                                               */
+SECTION_DATA static u8 data_803B9DC4[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
@@ -802,7 +799,7 @@ SECTION_DATA static void* l_daItem_Method[8] = {
 	/* 7    */ (void*)NULL,
 };
 
-/* 803B9F74-803B9FA4 0030+00 s=0 e=0 z=0  None .data      g_profile_ITEM                                               */
+/* 803B9F74-803B9FA4 0030+00 s=0 e=0 z=1  None .data      g_profile_ITEM                                               */
 SECTION_DATA void* g_profile_ITEM[12] = {
 	/* 0    */ (void*)0xFFFFFFFD,
 	/* 1    */ (void*)0x0007FFFD,

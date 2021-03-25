@@ -3,10 +3,10 @@ lbl_80591AA8:
 /* 80591AAC 00000004  7C 08 02 A6 */	mflr r0
 /* 80591AB0 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80591AB4 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80591AB8 00000010  4B FF D8 81 */	bl _unresolved
+/* 80591AB8 00000010  4B DD 07 24 */	b _savegpr_29
 /* 80591ABC 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80591AC0 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80591AC4 0000001C  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
+/* 80591AC0 00000018  3C 60 80 59 */	lis r3, l_magne_scale@ha
+/* 80591AC4 0000001C  3B C3 28 48 */	addi r30, r3, l_magne_scale@l
 /* 80591AC8 00000020  8B BF 0A 17 */	lbz r29, 0xa17(r31)
 /* 80591ACC 00000024  38 7F 0A 17 */	addi r3, r31, 0xa17
 /* 80591AD0 00000028  48 00 0D 45 */	bl func_80592814
@@ -20,7 +20,7 @@ lbl_80591AA8:
 /* 80591AF0 00000048  48 00 03 29 */	bl seStart_MOVESTART__11daObjMarm_cFv
 lbl_80591AF4:
 /* 80591AF4 00000000  38 7E 00 38 */	addi r3, r30, 0x38
-/* 80591AF8 00000004  A8 63 00 06 */	lha r3, 6(r3)
+/* 80591AF8 00000004  A8 63 00 06 */	lha r3, 6(r3)	/* effective address: 80592886 */
 /* 80591AFC 00000008  7C 64 1B 78 */	mr r4, r3
 /* 80591B00 0000000C  88 1F 0A 09 */	lbz r0, 0xa09(r31)
 /* 80591B04 00000010  7C 00 07 74 */	extsb r0, r0
@@ -33,13 +33,13 @@ lbl_80591B18:
 /* 80591B1C 00000004  38 A0 00 14 */	li r5, 0x14
 /* 80591B20 00000008  38 C0 00 32 */	li r6, 0x32
 /* 80591B24 0000000C  38 E0 00 0A */	li r7, 0xa
-/* 80591B28 00000010  4B FF D8 11 */	bl _unresolved
+/* 80591B28 00000010  4B CD EA 18 */	b cLib_addCalcAngleS__FPsssss
 /* 80591B2C 00000014  A8 7F 0A 0A */	lha r3, 0xa0a(r31)
 /* 80591B30 00000018  A8 1F 09 FC */	lha r0, 0x9fc(r31)
 /* 80591B34 0000001C  7C 03 00 50 */	subf r0, r3, r0
 /* 80591B38 00000020  B0 1F 09 FC */	sth r0, 0x9fc(r31)
 /* 80591B3C 00000024  A8 7F 0A 0A */	lha r3, 0xa0a(r31)
-/* 80591B40 00000028  4B FF D7 F9 */	bl _unresolved
+/* 80591B40 00000028  4B DD 35 90 */	b abs
 /* 80591B44 0000002C  80 1F 0A 10 */	lwz r0, 0xa10(r31)
 /* 80591B48 00000030  7C 00 1A 14 */	add r0, r0, r3
 /* 80591B4C 00000034  90 1F 0A 10 */	stw r0, 0xa10(r31)
@@ -48,9 +48,9 @@ lbl_80591B18:
 /* 80591B58 00000040  40 81 00 7C */	ble lbl_80591BD4
 /* 80591B5C 00000044  7F E3 FB 78 */	mr r3, r31
 /* 80591B60 00000048  48 00 00 99 */	bl setMagneHoleEffect__11daObjMarm_cFv
-/* 80591B64 0000004C  C0 1E 00 E8 */	lfs f0, 0xe8(r30)
+/* 80591B64 0000004C  C0 1E 00 E8 */	lfs f0, 0xe8(r30)	/* effective address: 80592930 */
 /* 80591B68 00000050  D0 1F 0A 2C */	stfs f0, 0xa2c(r31)
-/* 80591B6C 00000054  C0 1E 00 EC */	lfs f0, 0xec(r30)
+/* 80591B6C 00000054  C0 1E 00 EC */	lfs f0, 0xec(r30)	/* effective address: 80592934 */
 /* 80591B70 00000058  D0 1F 0A 3C */	stfs f0, 0xa3c(r31)
 /* 80591B74 0000005C  38 00 00 00 */	li r0, 0
 /* 80591B78 00000060  B0 1F 0A 40 */	sth r0, 0xa40(r31)
@@ -83,7 +83,7 @@ lbl_80591BD4:
 /* 80591BD8 00000004  48 00 02 A9 */	bl seStartLevel_MOVE__11daObjMarm_cFv
 lbl_80591BDC:
 /* 80591BDC 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80591BE0 00000004  4B FF D7 59 */	bl _unresolved
+/* 80591BE0 00000004  4B DD 06 48 */	b _restgpr_29
 /* 80591BE4 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80591BE8 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80591BEC 00000010  38 21 00 20 */	addi r1, r1, 0x20

@@ -11,12 +11,12 @@
 // Types:
 // 
 
+struct JKRExpHeap {
+};
+
 struct STControl {
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
-};
-
-struct JKRExpHeap {
 };
 
 struct CSTControl {
@@ -73,10 +73,10 @@ struct JUtility {
 
 };
 
-struct JKRArchive {
+struct J2DPane {
 };
 
-struct J2DPane {
+struct JKRArchive {
 };
 
 struct dSelect_cursor_c {
@@ -188,7 +188,7 @@ extern "C" extern u8 const data_80397C10[56];
 extern "C" extern u8 const data_80397C48[56];
 extern "C" extern u8 const data_80397C80[56];
 extern "C" extern u8 const data_80397CB8[56];
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_menu_d_menu_skill__stringBase0;
 
 // 
 // External References:

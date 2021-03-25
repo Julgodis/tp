@@ -13,12 +13,12 @@ lbl_8098CD74:
 /* 8098CDA0 0000002C  90 04 00 3C */	stw r0, 0x3c(r4)
 /* 8098CDA4 00000030  38 80 00 00 */	li r4, 0
 /* 8098CDA8 00000034  38 A0 00 00 */	li r5, 0
-/* 8098CDAC 00000038  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
-/* 8098CDB0 0000003C  38 C6 00 00 */	addi r6, r6, 0x0000 /* 0x00000000@l */
-/* 8098CDB4 00000040  C0 26 00 0C */	lfs f1, 0xc(r6)
+/* 8098CDAC 00000038  3C C0 80 99 */	lis r6, m__17daNpcChin_Param_c@ha
+/* 8098CDB0 0000003C  38 C6 19 0C */	addi r6, r6, m__17daNpcChin_Param_c@l
+/* 8098CDB4 00000040  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 80991918 */
 /* 8098CDB8 00000044  38 C0 00 00 */	li r6, 0
 /* 8098CDBC 00000048  38 E0 00 00 */	li r7, 0
-/* 8098CDC0 0000004C  4B FF F0 B9 */	bl _unresolved
+/* 8098CDC0 0000004C  4B 7C 54 EC */	b draw__8daNpcF_cFiifP11_GXColorS10i
 /* 8098CDC4 00000050  38 7F 0E 30 */	addi r3, r31, 0xe30
 /* 8098CDC8 00000054  38 9F 01 0C */	addi r4, r31, 0x10c
 /* 8098CDCC 00000058  4B FF F2 95 */	bl draw__Q211daNpcChin_c12_SpotLight_cFP12dKy_tevstr_c

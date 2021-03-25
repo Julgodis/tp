@@ -14,25 +14,25 @@ lbl_80160304:
 /* 80160334 00000030  28 00 00 07 */	cmplwi r0, 7
 /* 80160338 00000034  41 82 00 5C */	beq lbl_80160394
 /* 8016033C 00000038  C0 1E 00 30 */	lfs f0, 0x30(r30)
-/* 80160340 0000003C  D0 03 0E EC */	stfs f0, 0xeec(r3)
+/* 80160340 0000003C  D0 03 0E EC */	stfs f0, 0xeec(r3)	/* effective address: 804070AC */
 /* 80160344 00000040  C0 1E 00 34 */	lfs f0, 0x34(r30)
-/* 80160348 00000044  D0 03 0E F0 */	stfs f0, 0xef0(r3)
+/* 80160348 00000044  D0 03 0E F0 */	stfs f0, 0xef0(r3)	/* effective address: 804070B0 */
 /* 8016034C 00000048  C0 1E 00 38 */	lfs f0, 0x38(r30)
-/* 80160350 0000004C  D0 03 0E F4 */	stfs f0, 0xef4(r3)
+/* 80160350 0000004C  D0 03 0E F4 */	stfs f0, 0xef4(r3)	/* effective address: 804070B4 */
 /* 80160354 00000050  C0 1E 00 3C */	lfs f0, 0x3c(r30)
-/* 80160358 00000054  D0 03 0E F8 */	stfs f0, 0xef8(r3)
+/* 80160358 00000054  D0 03 0E F8 */	stfs f0, 0xef8(r3)	/* effective address: 804070B8 */
 /* 8016035C 00000058  C0 1E 00 40 */	lfs f0, 0x40(r30)
-/* 80160360 0000005C  D0 03 0E FC */	stfs f0, 0xefc(r3)
+/* 80160360 0000005C  D0 03 0E FC */	stfs f0, 0xefc(r3)	/* effective address: 804070BC */
 /* 80160364 00000060  C0 1E 00 44 */	lfs f0, 0x44(r30)
-/* 80160368 00000064  D0 03 0F 00 */	stfs f0, 0xf00(r3)
+/* 80160368 00000064  D0 03 0F 00 */	stfs f0, 0xf00(r3)	/* effective address: 804070C0 */
 /* 8016036C 00000068  C0 1E 00 48 */	lfs f0, 0x48(r30)
-/* 80160370 0000006C  D0 03 0F 04 */	stfs f0, 0xf04(r3)
+/* 80160370 0000006C  D0 03 0F 04 */	stfs f0, 0xf04(r3)	/* effective address: 804070C4 */
 /* 80160374 00000070  C0 1E 00 4C */	lfs f0, 0x4c(r30)
-/* 80160378 00000074  D0 03 0F 08 */	stfs f0, 0xf08(r3)
+/* 80160378 00000074  D0 03 0F 08 */	stfs f0, 0xf08(r3)	/* effective address: 804070C8 */
 /* 8016037C 00000078  C0 1E 00 50 */	lfs f0, 0x50(r30)
-/* 80160380 0000007C  D0 03 0F 0C */	stfs f0, 0xf0c(r3)
+/* 80160380 0000007C  D0 03 0F 0C */	stfs f0, 0xf0c(r3)	/* effective address: 804070CC */
 /* 80160384 00000080  C0 1E 00 58 */	lfs f0, 0x58(r30)
-/* 80160388 00000084  D0 03 0F 10 */	stfs f0, 0xf10(r3)
+/* 80160388 00000084  D0 03 0F 10 */	stfs f0, 0xf10(r3)	/* effective address: 804070D0 */
 /* 8016038C 00000088  38 00 00 00 */	li r0, 0
 /* 80160390 0000008C  90 0D 87 3C */	stw r0, stopStatus__10fopAc_ac_c(r13)
 lbl_80160394:

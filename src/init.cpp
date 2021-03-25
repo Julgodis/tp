@@ -142,7 +142,7 @@ SECTION_INIT asm static void __flush_cache() {
 #pragma pop
 
 
-/* 80003458-80003488 0030+00 s=1 e=55 z=0  None .init      memset                                                       */
+/* 80003458-80003488 0030+00 s=1 e=55 z=137  None .init      memset                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -164,7 +164,7 @@ SECTION_INIT asm static void __fill_mem() {
 #pragma pop
 
 
-/* 80003540-80003590 0050+00 s=1 e=63 z=0  None .init      memcpy                                                       */
+/* 80003540-80003590 0050+00 s=1 e=63 z=6  None .init      memcpy                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

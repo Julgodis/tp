@@ -237,7 +237,7 @@ SECTION_DATA static void* l_dOvlpFd2_Method[5] = {
 	/* 4    */ (void*)dOvlpFd2_Draw__FP10dOvlpFd2_c,
 };
 
-/* 803C2D34-803C2D5C 0028+00 s=0 e=0 z=0  None .data      g_profile_OVERLAP2                                           */
+/* 803C2D34-803C2D5C 0028+00 s=0 e=0 z=1  None .data      g_profile_OVERLAP2                                           */
 SECTION_DATA void* g_profile_OVERLAP2[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0002FFFD,

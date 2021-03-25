@@ -40,7 +40,7 @@ extern "C" static void mDoMemCdRWm_CalcCheckSum__FPvUl(); // 1
 extern "C" static void mDoMemCdRWm_CalcCheckSumGameData__FPvUl(); // 1
 extern "C" void mDoMemCdRWm_TestCheckSumGameData__FPv(); // 1
 extern "C" void mDoMemCdRWm_SetCheckSumGameData__FPUcUc(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const m_Do_m_Do_MemCardRWmng__stringBase0;
 
 // 
 // External References:

@@ -12,10 +12,10 @@ lbl_802D31AC:
 /* 802D31D4 00000028  80 83 43 0C */	lwz r4, sAramList__11JKRAramHeap@l(r3)
 /* 802D31D8 0000002C  48 00 00 14 */	b lbl_802D31EC
 lbl_802D31DC:
-/* 802D31DC 00000000  80 64 00 00 */	lwz r3, 0(r4)
-/* 802D31E0 00000004  80 03 00 1C */	lwz r0, 0x1c(r3)
+/* 802D31DC 00000000  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 8043430C */
+/* 802D31E0 00000004  80 03 00 1C */	lwz r0, 0x1c(r3)	/* effective address: 8043001C */
 /* 802D31E4 00000008  7F FF 02 14 */	add r31, r31, r0
-/* 802D31E8 0000000C  80 84 00 0C */	lwz r4, 0xc(r4)
+/* 802D31E8 0000000C  80 84 00 0C */	lwz r4, 0xc(r4)	/* effective address: 80434318 */
 lbl_802D31EC:
 /* 802D31EC 00000000  28 04 00 00 */	cmplwi r4, 0
 /* 802D31F0 00000004  40 82 FF EC */	bne lbl_802D31DC

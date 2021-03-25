@@ -1,0 +1,39 @@
+lbl_8024CDAC:
+/* 8024CDAC 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 8024CDB0 00000004  7C 08 02 A6 */	mflr r0
+/* 8024CDB4 00000008  90 01 00 24 */	stw r0, 0x24(r1)
+/* 8024CDB8 0000000C  38 84 00 04 */	addi r4, r4, 4
+/* 8024CDBC 00000010  4B FF E3 75 */	bl getParam__10dMsgFlow_cFPUc
+/* 8024CDC0 00000014  2C 03 00 00 */	cmpwi r3, 0
+/* 8024CDC4 00000018  40 82 00 08 */	bne lbl_8024CDCC
+/* 8024CDC8 0000001C  38 60 00 64 */	li r3, 0x64
+lbl_8024CDCC:
+/* 8024CDCC 00000000  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8024CDD0 00000004  38 C4 61 C0 */	addi r6, r4, g_dComIfG_gameInfo@l
+/* 8024CDD4 00000008  A0 A6 00 06 */	lhz r5, 6(r6)	/* effective address: 804061C6 */
+/* 8024CDD8 0000000C  80 86 5D D4 */	lwz r4, 0x5dd4(r6)	/* effective address: 8040BF94 */
+/* 8024CDDC 00000010  C8 22 B3 A0 */	lfd f1, lit_6040(r2)
+/* 8024CDE0 00000014  6C 60 80 00 */	xoris r0, r3, 0x8000
+/* 8024CDE4 00000018  90 01 00 0C */	stw r0, 0xc(r1)
+/* 8024CDE8 0000001C  3C 00 43 30 */	lis r0, 0x4330
+/* 8024CDEC 00000020  90 01 00 08 */	stw r0, 8(r1)
+/* 8024CDF0 00000024  C8 01 00 08 */	lfd f0, 8(r1)
+/* 8024CDF4 00000028  EC 20 08 28 */	fsubs f1, f0, f1
+/* 8024CDF8 0000002C  C0 02 B3 A8 */	lfs f0, lit_6273(r2)
+/* 8024CDFC 00000030  EC 41 00 24 */	fdivs f2, f1, f0
+/* 8024CE00 00000034  C8 22 B3 90 */	lfd f1, lit_5116(r2)
+/* 8024CE04 00000038  90 A1 00 14 */	stw r5, 0x14(r1)
+/* 8024CE08 0000003C  90 01 00 10 */	stw r0, 0x10(r1)
+/* 8024CE0C 00000040  C8 01 00 10 */	lfd f0, 0x10(r1)
+/* 8024CE10 00000044  EC 00 08 28 */	fsubs f0, f0, f1
+/* 8024CE14 00000048  EC 02 00 32 */	fmuls f0, f2, f0
+/* 8024CE18 0000004C  FC 00 00 1E */	fctiwz f0, f0
+/* 8024CE1C 00000050  D8 01 00 18 */	stfd f0, 0x18(r1)
+/* 8024CE20 00000054  80 01 00 1C */	lwz r0, 0x1c(r1)
+/* 8024CE24 00000058  7C 04 02 14 */	add r0, r4, r0
+/* 8024CE28 0000005C  90 06 5D D4 */	stw r0, 0x5dd4(r6)	/* effective address: 8040BF94 */
+/* 8024CE2C 00000060  38 60 00 01 */	li r3, 1
+/* 8024CE30 00000064  80 01 00 24 */	lwz r0, 0x24(r1)
+/* 8024CE34 00000068  7C 08 03 A6 */	mtlr r0
+/* 8024CE38 0000006C  38 21 00 20 */	addi r1, r1, 0x20
+/* 8024CE3C 00000070  4E 80 00 20 */	blr 

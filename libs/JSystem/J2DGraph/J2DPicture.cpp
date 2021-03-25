@@ -11,13 +11,7 @@
 // Types:
 // 
 
-struct JKRArchive {
-};
-
-struct J2DMaterial {
-};
-
-struct _GXTexMapID {
+struct J2DMirror {
 };
 
 struct JGeometry {
@@ -36,20 +30,38 @@ struct JGeometry {
 
 };
 
-struct JUtility {
-	struct TColor {
-		/* 80193960 */ TColor();
-	};
-
+struct ResFONT {
 };
 
 struct ResTIMG {
 };
 
-struct J2DAnmTexPattern {
+struct ResTLUT {
 };
 
-struct J2DAnmTevRegKey {
+struct _GXTexMapID {
+};
+
+struct _GXTlut {
+};
+
+struct JUTPalette {
+	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
+};
+
+struct JUTTexture {
+	/* 802DE234 */ ~JUTTexture();
+	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
+	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
+	/* 802DE5B0 */ void attachPalette(JUTPalette*);
+	/* 802DE840 */ void load(_GXTexMapID);
+};
+
+struct J2DMaterial {
+};
+
+struct J2DBinding {
 };
 
 struct JSUStreamSeekFrom {
@@ -60,10 +72,17 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct _GXCullMode {
+struct JUtility {
+	struct TColor {
+		/* 80193960 */ TColor();
+	};
+
 };
 
-struct J2DAnmBase {
+struct J2DAnmVisibilityFull {
+};
+
+struct J2DAnmTexPattern {
 };
 
 struct J2DAnmVtxColor {
@@ -72,16 +91,22 @@ struct J2DAnmVtxColor {
 struct J2DAnmTextureSRTKey {
 };
 
-struct ResFONT {
+struct J2DAnmBase {
+};
+
+struct J2DAnmColor {
 };
 
 struct J2DAnmTransform {
 };
 
-struct J2DAnmVisibilityFull {
+struct J2DAnmTevRegKey {
 };
 
-struct J2DAnmColor {
+struct JKRArchive {
+};
+
+struct _GXCullMode {
 };
 
 struct J2DPane {
@@ -123,31 +148,6 @@ struct J2DPane {
 	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
 	/* 802F8464 */ void setConnectParent(bool);
 	/* 802F8474 */ void update();
-};
-
-struct J2DBinding {
-};
-
-struct _GXTlut {
-};
-
-struct ResTLUT {
-};
-
-struct JUTPalette {
-	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
-};
-
-struct JUTTexture {
-	/* 802DE234 */ ~JUTTexture();
-	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
-	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
-	/* 802DE5B0 */ void attachPalette(JUTPalette*);
-	/* 802DE840 */ void load(_GXTexMapID);
-};
-
-struct J2DMirror {
 };
 
 struct J2DPicture {
@@ -542,7 +542,7 @@ asm J2DPicture::J2DPicture(J2DPane* param_0, JSURandomInputStream* param_1, J2DM
 /* 80456268-8045626C 0004+00 s=9 e=0 z=0  None .sdata2    @1767                                                        */
 SECTION_SDATA2 static f32 lit_1767 = 1.0f;
 
-/* 802FC708-802FC800 00F8+00 s=0 e=20 z=0  None .text      __ct__10J2DPictureFPC7ResTIMG                                */
+/* 802FC708-802FC800 00F8+00 s=0 e=20 z=1  None .text      __ct__10J2DPictureFPC7ResTIMG                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

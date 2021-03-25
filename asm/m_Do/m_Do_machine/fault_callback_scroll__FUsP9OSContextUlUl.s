@@ -18,8 +18,8 @@ lbl_8000B95C:
 /* 8000B99C 00000040  7C 08 00 40 */	cmplw r8, r0
 /* 8000B9A0 00000044  40 80 00 2C */	bge lbl_8000B9CC
 /* 8000B9A4 00000048  7F E3 FB 78 */	mr r3, r31
-/* 8000B9A8 0000004C  3C 80 80 37 */	lis r4, stringBase0@ha
-/* 8000B9AC 00000050  38 84 3D E8 */	addi r4, r4, stringBase0@l
+/* 8000B9A8 0000004C  3C 80 80 37 */	lis r4, m_Do_m_Do_machine__stringBase0@ha
+/* 8000B9AC 00000050  38 84 3D E8 */	addi r4, r4, m_Do_m_Do_machine__stringBase0@l
 /* 8000B9B0 00000054  38 84 01 A1 */	addi r4, r4, 0x1a1
 /* 8000B9B4 00000058  80 A8 FF F4 */	lwz r5, -0xc(r8)
 /* 8000B9B8 0000005C  80 C8 FF F8 */	lwz r6, -8(r8)
@@ -42,13 +42,13 @@ lbl_8000B9CC:
 /* 8000B9F8 0000002C  54 00 DE 3F */	rlwinm. r0, r0, 0x1b, 0x18, 0x1f
 /* 8000B9FC 00000030  40 82 02 30 */	bne lbl_8000BC2C
 /* 8000BA00 00000034  7F E3 FB 78 */	mr r3, r31
-/* 8000BA04 00000038  3C 80 80 37 */	lis r4, stringBase0@ha
-/* 8000BA08 0000003C  38 84 3D E8 */	addi r4, r4, stringBase0@l
+/* 8000BA04 00000038  3C 80 80 37 */	lis r4, m_Do_m_Do_machine__stringBase0@ha
+/* 8000BA08 0000003C  38 84 3D E8 */	addi r4, r4, m_Do_m_Do_machine__stringBase0@l
 /* 8000BA0C 00000040  38 84 01 BF */	addi r4, r4, 0x1bf
 /* 8000BA10 00000044  48 2D C2 29 */	bl print__10JUTConsoleFPCc
 /* 8000BA14 00000048  7F E3 FB 78 */	mr r3, r31
-/* 8000BA18 0000004C  3C 80 80 37 */	lis r4, stringBase0@ha
-/* 8000BA1C 00000050  38 84 3D E8 */	addi r4, r4, stringBase0@l
+/* 8000BA18 0000004C  3C 80 80 37 */	lis r4, m_Do_m_Do_machine__stringBase0@ha
+/* 8000BA1C 00000050  38 84 3D E8 */	addi r4, r4, m_Do_m_Do_machine__stringBase0@l
 /* 8000BA20 00000054  38 84 01 EB */	addi r4, r4, 0x1eb
 /* 8000BA24 00000058  48 2D C2 15 */	bl print__10JUTConsoleFPCc
 /* 8000BA28 0000005C  80 6D 8F F0 */	lwz r3, sManager__17JUTConsoleManager(r13)

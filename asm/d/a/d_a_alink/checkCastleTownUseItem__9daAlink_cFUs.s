@@ -33,8 +33,8 @@ lbl_800C06D0:
 /* 800C06F0 00000020  2C 03 00 00 */	cmpwi r3, 0
 /* 800C06F4 00000024  40 82 00 5C */	bne lbl_800C0750
 lbl_800C06F8:
-/* 800C06F8 00000000  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800C06FC 00000004  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800C06F8 00000000  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800C06FC 00000004  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800C0700 00000008  38 63 05 35 */	addi r3, r3, 0x535
 /* 800C0704 0000000C  4B FD D3 5D */	bl checkStageName__9daAlink_cFPCc
 /* 800C0708 00000010  54 60 06 3F */	clrlwi. r0, r3, 0x18

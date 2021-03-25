@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80C2E0FC[8];
+extern void* data_80C2E0FC[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_obj_kabuto_cpp(); // 1
 
 // 
 // Declarations:

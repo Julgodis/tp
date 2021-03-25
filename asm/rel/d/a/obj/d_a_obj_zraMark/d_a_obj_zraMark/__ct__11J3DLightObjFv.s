@@ -4,9 +4,9 @@ lbl_80D43C34:
 /* 80D43C3C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D43C40 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D43C44 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80D43C48 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80D43C4C 00000018  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80D43C50 0000001C  4B FF E9 E9 */	bl _unresolved
+/* 80D43C48 00000014  3C 80 80 3A */	lis r4, j3dDefaultLightInfo@ha
+/* 80D43C4C 00000018  38 84 1E C8 */	addi r4, r4, j3dDefaultLightInfo@l
+/* 80D43C50 0000001C  4B 5E 1A 74 */	b __as__12J3DLightInfoFRC12J3DLightInfo
 /* 80D43C54 00000020  7F E3 FB 78 */	mr r3, r31
 /* 80D43C58 00000024  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80D43C5C 00000028  80 01 00 14 */	lwz r0, 0x14(r1)

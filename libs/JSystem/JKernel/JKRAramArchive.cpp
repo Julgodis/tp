@@ -11,14 +11,6 @@
 // Types:
 // 
 
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-	/* 802CE548 */ void free(void*);
-	/* 802CEB18 */ void copyMemory(void*, void*, u32);
-};
-
 struct JKRArchive {
 	struct EMountDirection {
 	};
@@ -46,6 +38,14 @@ struct JKRArchive {
 	/* 802D6734 */ void findPtrResource(void const*) const;
 	/* 802D693C */ void setExpandSize(JKRArchive::SDIFileEntry*, u32);
 	/* 802D6978 */ void getExpandSize(JKRArchive::SDIFileEntry*) const;
+};
+
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+	/* 802CE548 */ void free(void*);
+	/* 802CEB18 */ void copyMemory(void*, void*, u32);
 };
 
 struct JKRAramArchive {
@@ -130,7 +130,7 @@ extern "C" void fetchResource_subroutine__14JKRAramArchiveFUlUlPUcUli(); // 1
 extern "C" void fetchResource_subroutine__14JKRAramArchiveFUlUlP7JKRHeapiPPUc(); // 1
 extern "C" void getExpandedResSize__14JKRAramArchiveCFPCv(); // 1
 extern "C" void __dt__7JKRFileFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JKRAramArchive__stringBase0;
 extern "C" extern void* __vt__7JKRFile[8];
 
 // 

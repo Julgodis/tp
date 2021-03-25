@@ -4,16 +4,16 @@ lbl_8051D6CC:
 /* 8051D6D4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8051D6D8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8051D6DC 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8051D6E0 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8051D6E4 00000018  80 04 00 00 */	lwz r0, 0x0000(r4)
+/* 8051D6E0 00000014  3C 80 80 45 */	lis r4, m_myObj__9daGrass_c@ha
+/* 8051D6E4 00000018  80 04 0D AC */	lwz r0, m_myObj__9daGrass_c@l(r4)
 /* 8051D6E8 0000001C  7C 00 F8 40 */	cmplw r0, r31
 /* 8051D6EC 00000020  40 82 00 1C */	bne lbl_8051D708
 /* 8051D6F0 00000024  4B FF E8 79 */	bl deleteGrass__9daGrass_cFv
 /* 8051D6F4 00000028  7F E3 FB 78 */	mr r3, r31
 /* 8051D6F8 0000002C  4B FF EA 49 */	bl deleteFlower__9daGrass_cFv
 /* 8051D6FC 00000030  38 00 00 00 */	li r0, 0
-/* 8051D700 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8051D704 00000038  90 03 00 00 */	stw r0, 0x0000(r3)
+/* 8051D700 00000034  3C 60 80 45 */	lis r3, m_myObj__9daGrass_c@ha
+/* 8051D704 00000038  90 03 0D AC */	stw r0, m_myObj__9daGrass_c@l(r3)
 lbl_8051D708:
 /* 8051D708 00000000  38 60 00 01 */	li r3, 1
 /* 8051D70C 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

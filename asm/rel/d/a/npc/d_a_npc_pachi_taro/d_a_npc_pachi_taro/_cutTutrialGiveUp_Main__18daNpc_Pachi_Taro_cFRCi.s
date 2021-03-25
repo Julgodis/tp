@@ -3,29 +3,29 @@ lbl_80A9FE34:
 /* 80A9FE38 00000004  7C 08 02 A6 */	mflr r0
 /* 80A9FE3C 00000008  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80A9FE40 0000000C  39 61 00 30 */	addi r11, r1, 0x30
-/* 80A9FE44 00000010  4B FF C3 B5 */	bl _unresolved
+/* 80A9FE44 00000010  4B 8C 23 90 */	b _savegpr_27
 /* 80A9FE48 00000014  7C 7B 1B 78 */	mr r27, r3
 /* 80A9FE4C 00000018  7C 9C 23 78 */	mr r28, r4
-/* 80A9FE50 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80A9FE54 00000020  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
-/* 80A9FE58 00000024  80 64 00 00 */	lwz r3, 0(r4)
-/* 80A9FE5C 00000028  80 04 00 04 */	lwz r0, 4(r4)
+/* 80A9FE50 0000001C  3C 60 80 AA */	lis r3, lit_5903@ha
+/* 80A9FE54 00000020  38 83 18 08 */	addi r4, r3, lit_5903@l
+/* 80A9FE58 00000024  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80AA1808 */
+/* 80A9FE5C 00000028  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80AA180C */
 /* 80A9FE60 0000002C  90 61 00 08 */	stw r3, 8(r1)
 /* 80A9FE64 00000030  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A9FE68 00000034  80 04 00 08 */	lwz r0, 8(r4)
+/* 80A9FE68 00000034  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80AA1810 */
 /* 80A9FE6C 00000038  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A9FE70 0000003C  93 61 00 08 */	stw r27, 8(r1)
 /* 80A9FE74 00000040  38 7B 0F 8C */	addi r3, r27, 0xf8c
-/* 80A9FE78 00000044  4B FF C3 81 */	bl _unresolved
+/* 80A9FE78 00000044  4B 6A 58 90 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80A9FE7C 00000048  90 61 00 0C */	stw r3, 0xc(r1)
 /* 80A9FE80 0000004C  38 7B 0F 94 */	addi r3, r27, 0xf94
-/* 80A9FE84 00000050  4B FF C3 75 */	bl _unresolved
+/* 80A9FE84 00000050  4B 6A 58 84 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80A9FE88 00000054  90 61 00 10 */	stw r3, 0x10(r1)
 /* 80A9FE8C 00000058  38 7B 0F 94 */	addi r3, r27, 0xf94
-/* 80A9FE90 0000005C  4B FF C3 69 */	bl _unresolved
+/* 80A9FE90 0000005C  4B 6A 58 78 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80A9FE94 00000060  7C 7E 1B 78 */	mr r30, r3
 /* 80A9FE98 00000064  38 7B 0F 8C */	addi r3, r27, 0xf8c
-/* 80A9FE9C 00000068  4B FF C3 5D */	bl _unresolved
+/* 80A9FE9C 00000068  4B 6A 58 6C */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80A9FEA0 0000006C  7C 7F 1B 78 */	mr r31, r3
 /* 80A9FEA4 00000070  3B A0 00 00 */	li r29, 0
 /* 80A9FEA8 00000074  80 1C 00 00 */	lwz r0, 0(r28)
@@ -51,14 +51,14 @@ lbl_80A9FEE0:
 /* 80A9FEE8 00000008  38 A0 00 00 */	li r5, 0
 /* 80A9FEEC 0000000C  38 C1 00 08 */	addi r6, r1, 8
 /* 80A9FEF0 00000010  38 E0 00 00 */	li r7, 0
-/* 80A9FEF4 00000014  4B FF C3 05 */	bl _unresolved
+/* 80A9FEF4 00000014  4B 6A BD 84 */	b talkProc__8daNpcT_cFPiiPP10fopAc_ac_ci
 /* 80A9FEF8 00000018  2C 03 00 00 */	cmpwi r3, 0
 /* 80A9FEFC 0000001C  41 82 00 0C */	beq lbl_80A9FF08
 /* 80A9FF00 00000020  3B A0 00 01 */	li r29, 1
 /* 80A9FF04 00000024  48 00 00 8C */	b lbl_80A9FF90
 lbl_80A9FF08:
 /* 80A9FF08 00000000  38 7B 09 74 */	addi r3, r27, 0x974
-/* 80A9FF0C 00000004  4B FF C2 ED */	bl _unresolved
+/* 80A9FF0C 00000004  4B 7A A6 34 */	b getNowMsgNo__10dMsgFlow_cFv
 /* 80A9FF10 00000008  28 03 16 9A */	cmplwi r3, 0x169a
 /* 80A9FF14 0000000C  40 82 00 48 */	bne lbl_80A9FF5C
 /* 80A9FF18 00000010  A8 7B 0F DA */	lha r3, 0xfda(r27)
@@ -97,7 +97,7 @@ lbl_80A9FF78:
 lbl_80A9FF90:
 /* 80A9FF90 00000000  7F A3 EB 78 */	mr r3, r29
 /* 80A9FF94 00000004  39 61 00 30 */	addi r11, r1, 0x30
-/* 80A9FF98 00000008  4B FF C2 61 */	bl _unresolved
+/* 80A9FF98 00000008  4B 8C 22 88 */	b _restgpr_27
 /* 80A9FF9C 0000000C  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 80A9FFA0 00000010  7C 08 03 A6 */	mtlr r0
 /* 80A9FFA4 00000014  38 21 00 30 */	addi r1, r1, 0x30

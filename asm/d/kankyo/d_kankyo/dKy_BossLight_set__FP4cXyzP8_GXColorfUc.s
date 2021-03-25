@@ -23,8 +23,8 @@ lbl_801A9D60:
 /* 801A9DB4 00000038  3B A0 00 00 */	li r29, 0
 /* 801A9DB8 0000003C  3B D5 4E 00 */	addi r30, r21, 0x4e00
 /* 801A9DBC 00000040  7F C3 F3 78 */	mr r3, r30
-/* 801A9DC0 00000044  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801A9DC4 00000048  38 84 4C 6C */	addi r4, r4, stringBase0@l
+/* 801A9DC0 00000044  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
+/* 801A9DC4 00000048  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
 /* 801A9DC8 0000004C  38 84 02 49 */	addi r4, r4, 0x249
 /* 801A9DCC 00000050  48 1B EB C9 */	bl strcmp
 /* 801A9DD0 00000054  2C 03 00 00 */	cmpwi r3, 0
@@ -148,8 +148,8 @@ lbl_801A9F58:
 /* 801A9F78 00000020  C0 1D 00 08 */	lfs f0, 8(r29)
 /* 801A9F7C 00000024  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 801A9F80 00000028  7F C3 F3 78 */	mr r3, r30
-/* 801A9F84 0000002C  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801A9F88 00000030  38 84 4C 6C */	addi r4, r4, stringBase0@l
+/* 801A9F84 0000002C  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
+/* 801A9F88 00000030  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
 /* 801A9F8C 00000034  38 84 01 0E */	addi r4, r4, 0x10e
 /* 801A9F90 00000038  48 1B EA 05 */	bl strcmp
 /* 801A9F94 0000003C  2C 03 00 00 */	cmpwi r3, 0

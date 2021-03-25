@@ -10,7 +10,7 @@ lbl_805A7424:
 /* 805A7444 00000020  40 82 00 1C */	bne lbl_805A7460
 /* 805A7448 00000024  28 1F 00 00 */	cmplwi r31, 0
 /* 805A744C 00000028  41 82 00 08 */	beq lbl_805A7454
-/* 805A7450 0000002C  4B FF FA E9 */	bl _unresolved
+/* 805A7450 0000002C  4B A7 17 14 */	b __ct__10fopAc_ac_cFv
 lbl_805A7454:
 /* 805A7454 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 805A7458 00000004  60 00 00 08 */	ori r0, r0, 8
@@ -21,30 +21,30 @@ lbl_805A7460:
 /* 805A7468 00000008  98 1F 05 97 */	stb r0, 0x597(r31)
 /* 805A746C 0000000C  88 1F 05 97 */	lbz r0, 0x597(r31)
 /* 805A7470 00000010  54 00 10 3A */	slwi r0, r0, 2
-/* 805A7474 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 805A7478 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 805A7474 00000014  3C 60 80 5B */	lis r3, l_evArcName@ha
+/* 805A7478 00000018  38 63 82 40 */	addi r3, r3, l_evArcName@l
 /* 805A747C 0000001C  7C 83 00 2E */	lwzx r4, r3, r0
 /* 805A7480 00000020  28 04 00 00 */	cmplwi r4, 0
 /* 805A7484 00000024  41 82 00 18 */	beq lbl_805A749C
 /* 805A7488 00000028  38 7F 05 70 */	addi r3, r31, 0x570
-/* 805A748C 0000002C  4B FF FA AD */	bl _unresolved
+/* 805A748C 0000002C  4B A8 5A 30 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 805A7490 00000030  2C 03 00 04 */	cmpwi r3, 4
 /* 805A7494 00000034  41 82 00 08 */	beq lbl_805A749C
 /* 805A7498 00000038  48 00 00 64 */	b lbl_805A74FC
 lbl_805A749C:
 /* 805A749C 00000000  38 7F 05 68 */	addi r3, r31, 0x568
-/* 805A74A0 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 805A74A4 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 805A74A8 0000000C  80 84 00 00 */	lwz r4, 0(r4)
-/* 805A74AC 00000010  4B FF FA 8D */	bl _unresolved
+/* 805A74A0 00000004  3C 80 80 5B */	lis r4, l_arcName@ha
+/* 805A74A4 00000008  38 84 82 1C */	addi r4, r4, l_arcName@l
+/* 805A74A8 0000000C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 805A821C */
+/* 805A74AC 00000010  4B A8 5A 10 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 805A74B0 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 805A74B4 00000018  2C 1E 00 04 */	cmpwi r30, 4
 /* 805A74B8 0000001C  40 82 00 40 */	bne lbl_805A74F8
 /* 805A74BC 00000020  7F E3 FB 78 */	mr r3, r31
-/* 805A74C0 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 805A74C4 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 805A74C0 00000024  3C 80 80 5A */	lis r4, CheckCreateHeap__FP10fopAc_ac_c@ha
+/* 805A74C4 00000028  38 84 6F 58 */	addi r4, r4, CheckCreateHeap__FP10fopAc_ac_c@l
 /* 805A74C8 0000002C  38 A0 11 00 */	li r5, 0x1100
-/* 805A74CC 00000030  4B FF FA 6D */	bl _unresolved
+/* 805A74CC 00000030  4B A7 2F E4 */	b fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
 /* 805A74D0 00000034  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 805A74D4 00000038  40 82 00 0C */	bne lbl_805A74E0
 /* 805A74D8 0000003C  38 60 00 05 */	li r3, 5

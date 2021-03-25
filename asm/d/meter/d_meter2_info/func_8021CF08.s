@@ -230,7 +230,7 @@ lbl_8021D244:
 /* 8021D258 00000014  48 00 02 61 */	bl get3rdTexture__13dMeter2Info_cFUc
 /* 8021D25C 00000018  7C 60 07 35 */	extsh. r0, r3
 /* 8021D260 0000001C  40 81 00 F0 */	ble lbl_8021D350
-/* 8021D264 00000020  82 B4 5C D0 */	lwz r21, 0x5cd0(r20)
+/* 8021D264 00000020  82 B4 5C D0 */	lwz r21, 0x5cd0(r20)	/* effective address: 8040BE90 */
 /* 8021D268 00000024  7F E3 FB 78 */	mr r3, r31
 /* 8021D26C 00000028  7F C4 F3 78 */	mr r4, r30
 /* 8021D270 0000002C  48 00 02 49 */	bl get3rdTexture__13dMeter2Info_cFUc
@@ -264,7 +264,7 @@ lbl_8021D2C8:
 /* 8021D2DC 00000014  48 00 02 21 */	bl get4thTexture__13dMeter2Info_cFUc
 /* 8021D2E0 00000018  7C 60 07 35 */	extsh. r0, r3
 /* 8021D2E4 0000001C  40 81 00 6C */	ble lbl_8021D350
-/* 8021D2E8 00000020  82 94 5C D0 */	lwz r20, 0x5cd0(r20)
+/* 8021D2E8 00000020  82 94 5C D0 */	lwz r20, 0x5cd0(r20)	/* effective address: 8040BE90 */
 /* 8021D2EC 00000024  7F E3 FB 78 */	mr r3, r31
 /* 8021D2F0 00000028  7F C4 F3 78 */	mr r4, r30
 /* 8021D2F4 0000002C  48 00 02 09 */	bl get4thTexture__13dMeter2Info_cFUc

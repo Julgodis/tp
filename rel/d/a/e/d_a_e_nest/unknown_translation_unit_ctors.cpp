@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_805046C8[8];
+extern void* data_805046C8[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_e_nest_cpp(); // 1
 
 // 
 // Declarations:

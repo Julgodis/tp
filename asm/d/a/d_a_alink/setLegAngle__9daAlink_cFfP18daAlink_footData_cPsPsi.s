@@ -43,22 +43,22 @@ lbl_800A2D40:
 /* 800A2D80 00000040  38 9C 00 44 */	addi r4, r28, 0x44
 /* 800A2D84 00000044  7F 45 D3 78 */	mr r5, r26
 /* 800A2D88 00000048  48 2A 37 5D */	bl PSMTXConcat
-/* 800A2D8C 0000004C  C0 1A 00 0C */	lfs f0, 0xc(r26)
+/* 800A2D8C 0000004C  C0 1A 00 0C */	lfs f0, 0xc(r26)	/* effective address: 803DD47C */
 /* 800A2D90 00000050  D0 01 00 F0 */	stfs f0, 0xf0(r1)
-/* 800A2D94 00000054  C0 1A 00 1C */	lfs f0, 0x1c(r26)
+/* 800A2D94 00000054  C0 1A 00 1C */	lfs f0, 0x1c(r26)	/* effective address: 803DD48C */
 /* 800A2D98 00000058  D0 01 00 F4 */	stfs f0, 0xf4(r1)
-/* 800A2D9C 0000005C  C0 1A 00 2C */	lfs f0, 0x2c(r26)
+/* 800A2D9C 0000005C  C0 1A 00 2C */	lfs f0, 0x2c(r26)	/* effective address: 803DD49C */
 /* 800A2DA0 00000060  D0 01 00 F8 */	stfs f0, 0xf8(r1)
 /* 800A2DA4 00000064  38 7B 2B E8 */	addi r3, r27, 0x2be8
 /* 800A2DA8 00000068  38 9C 00 74 */	addi r4, r28, 0x74
 /* 800A2DAC 0000006C  3C A0 80 3E */	lis r5, now__14mDoMtx_stack_c@ha
 /* 800A2DB0 00000070  38 A5 D4 70 */	addi r5, r5, now__14mDoMtx_stack_c@l
 /* 800A2DB4 00000074  48 2A 37 31 */	bl PSMTXConcat
-/* 800A2DB8 00000078  C0 3A 00 0C */	lfs f1, 0xc(r26)
+/* 800A2DB8 00000078  C0 3A 00 0C */	lfs f1, 0xc(r26)	/* effective address: 803DD47C */
 /* 800A2DBC 0000007C  D0 21 00 E4 */	stfs f1, 0xe4(r1)
-/* 800A2DC0 00000080  C0 1A 00 1C */	lfs f0, 0x1c(r26)
+/* 800A2DC0 00000080  C0 1A 00 1C */	lfs f0, 0x1c(r26)	/* effective address: 803DD48C */
 /* 800A2DC4 00000084  D0 01 00 E8 */	stfs f0, 0xe8(r1)
-/* 800A2DC8 00000088  C0 1A 00 2C */	lfs f0, 0x2c(r26)
+/* 800A2DC8 00000088  C0 1A 00 2C */	lfs f0, 0x2c(r26)	/* effective address: 803DD49C */
 /* 800A2DCC 0000008C  D0 01 00 EC */	stfs f0, 0xec(r1)
 /* 800A2DD0 00000090  A0 1B 2F E8 */	lhz r0, 0x2fe8(r27)
 /* 800A2DD4 00000094  28 00 00 3B */	cmplwi r0, 0x3b
@@ -105,22 +105,22 @@ lbl_800A2E34:
 /* 800A2E6C 00000038  38 9C 00 44 */	addi r4, r28, 0x44
 /* 800A2E70 0000003C  7F 45 D3 78 */	mr r5, r26
 /* 800A2E74 00000040  48 2A 36 71 */	bl PSMTXConcat
-/* 800A2E78 00000044  C0 1A 00 0C */	lfs f0, 0xc(r26)
+/* 800A2E78 00000044  C0 1A 00 0C */	lfs f0, 0xc(r26)	/* effective address: 803DD47C */
 /* 800A2E7C 00000048  D0 01 00 F0 */	stfs f0, 0xf0(r1)
-/* 800A2E80 0000004C  C0 1A 00 1C */	lfs f0, 0x1c(r26)
+/* 800A2E80 0000004C  C0 1A 00 1C */	lfs f0, 0x1c(r26)	/* effective address: 803DD48C */
 /* 800A2E84 00000050  D0 01 00 F4 */	stfs f0, 0xf4(r1)
-/* 800A2E88 00000054  C0 1A 00 2C */	lfs f0, 0x2c(r26)
+/* 800A2E88 00000054  C0 1A 00 2C */	lfs f0, 0x2c(r26)	/* effective address: 803DD49C */
 /* 800A2E8C 00000058  D0 01 00 F8 */	stfs f0, 0xf8(r1)
 /* 800A2E90 0000005C  38 7B 2B B8 */	addi r3, r27, 0x2bb8
 /* 800A2E94 00000060  38 9C 00 74 */	addi r4, r28, 0x74
 /* 800A2E98 00000064  3C A0 80 3E */	lis r5, now__14mDoMtx_stack_c@ha
 /* 800A2E9C 00000068  38 A5 D4 70 */	addi r5, r5, now__14mDoMtx_stack_c@l
 /* 800A2EA0 0000006C  48 2A 36 45 */	bl PSMTXConcat
-/* 800A2EA4 00000070  C0 1A 00 0C */	lfs f0, 0xc(r26)
+/* 800A2EA4 00000070  C0 1A 00 0C */	lfs f0, 0xc(r26)	/* effective address: 803DD47C */
 /* 800A2EA8 00000074  D0 01 00 E4 */	stfs f0, 0xe4(r1)
-/* 800A2EAC 00000078  C0 1A 00 1C */	lfs f0, 0x1c(r26)
+/* 800A2EAC 00000078  C0 1A 00 1C */	lfs f0, 0x1c(r26)	/* effective address: 803DD48C */
 /* 800A2EB0 0000007C  D0 01 00 E8 */	stfs f0, 0xe8(r1)
-/* 800A2EB4 00000080  C0 1A 00 2C */	lfs f0, 0x2c(r26)
+/* 800A2EB4 00000080  C0 1A 00 2C */	lfs f0, 0x2c(r26)	/* effective address: 803DD49C */
 /* 800A2EB8 00000084  D0 01 00 EC */	stfs f0, 0xec(r1)
 /* 800A2EBC 00000088  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800A2EC0 0000008C  D0 01 01 04 */	stfs f0, 0x104(r1)

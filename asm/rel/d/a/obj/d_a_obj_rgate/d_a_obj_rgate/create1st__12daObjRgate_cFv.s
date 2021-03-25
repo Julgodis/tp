@@ -5,22 +5,22 @@ lbl_80CBA828:
 /* 80CBA834 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CBA838 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80CBA83C 00000014  38 7F 05 A0 */	addi r3, r31, 0x5a0
-/* 80CBA840 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80CBA844 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80CBA848 00000020  80 84 00 00 */	lwz r4, 0(r4)
-/* 80CBA84C 00000024  4B FF F4 2D */	bl _unresolved
+/* 80CBA840 00000018  3C 80 80 CC */	lis r4, l_arcName@ha
+/* 80CBA844 0000001C  38 84 C4 C0 */	addi r4, r4, l_arcName@l
+/* 80CBA848 00000020  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CBC4C0 */
+/* 80CBA84C 00000024  4B 37 26 70 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80CBA850 00000028  7C 60 1B 78 */	mr r0, r3
 /* 80CBA854 0000002C  2C 00 00 04 */	cmpwi r0, 4
 /* 80CBA858 00000030  40 82 00 38 */	bne lbl_80CBA890
 /* 80CBA85C 00000034  7F E3 FB 78 */	mr r3, r31
-/* 80CBA860 00000038  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80CBA864 0000003C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80CBA868 00000040  80 84 00 00 */	lwz r4, 0(r4)
+/* 80CBA860 00000038  3C 80 80 CC */	lis r4, l_arcName@ha
+/* 80CBA864 0000003C  38 84 C4 C0 */	addi r4, r4, l_arcName@l
+/* 80CBA868 00000040  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CBC4C0 */
 /* 80CBA86C 00000044  38 A0 00 0A */	li r5, 0xa
 /* 80CBA870 00000048  38 C0 00 00 */	li r6, 0
 /* 80CBA874 0000004C  38 E0 21 80 */	li r7, 0x2180
 /* 80CBA878 00000050  39 00 00 00 */	li r8, 0
-/* 80CBA87C 00000054  4B FF F3 FD */	bl _unresolved
+/* 80CBA87C 00000054  4B 3B DF 40 */	b MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f
 /* 80CBA880 00000058  7C 60 1B 78 */	mr r0, r3
 /* 80CBA884 0000005C  2C 00 00 05 */	cmpwi r0, 5
 /* 80CBA888 00000060  40 82 00 08 */	bne lbl_80CBA890

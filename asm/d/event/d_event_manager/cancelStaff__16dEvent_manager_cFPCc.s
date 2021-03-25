@@ -5,8 +5,8 @@ lbl_80048348:
 /* 80048354 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80048358 00000010  7C 9F 23 78 */	mr r31, r4
 /* 8004835C 00000014  7F E3 FB 78 */	mr r3, r31
-/* 80048360 00000018  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 80048364 0000001C  38 84 9F 60 */	addi r4, r4, stringBase0@l
+/* 80048360 00000018  3C 80 80 38 */	lis r4, d_event_d_event_manager__stringBase0@ha
+/* 80048364 0000001C  38 84 9F 60 */	addi r4, r4, d_event_d_event_manager__stringBase0@l
 /* 80048368 00000020  38 84 01 4B */	addi r4, r4, 0x14b
 /* 8004836C 00000024  48 32 06 29 */	bl strcmp
 /* 80048370 00000028  2C 03 00 00 */	cmpwi r3, 0

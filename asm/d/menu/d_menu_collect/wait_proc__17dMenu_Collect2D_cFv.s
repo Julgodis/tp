@@ -208,15 +208,15 @@ lbl_801B4BC4:
 /* 801B4BDC 00000018  4E 80 04 21 */	bctrl 
 /* 801B4BE0 0000001C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 801B4BE4 00000020  40 82 00 44 */	bne lbl_801B4C28
-/* 801B4BE8 00000024  80 7E 5D AC */	lwz r3, 0x5dac(r30)
-/* 801B4BEC 00000028  81 83 06 28 */	lwz r12, 0x628(r3)
+/* 801B4BE8 00000024  80 7E 5D AC */	lwz r3, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 801B4BEC 00000028  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 80400628 */
 /* 801B4BF0 0000002C  81 8C 02 70 */	lwz r12, 0x270(r12)
 /* 801B4BF4 00000030  7D 89 03 A6 */	mtctr r12
 /* 801B4BF8 00000034  4E 80 04 21 */	bctrl 
 /* 801B4BFC 00000038  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 801B4C00 0000003C  40 82 00 28 */	bne lbl_801B4C28
-/* 801B4C04 00000040  80 7E 5D AC */	lwz r3, 0x5dac(r30)
-/* 801B4C08 00000044  81 83 06 28 */	lwz r12, 0x628(r3)
+/* 801B4C04 00000040  80 7E 5D AC */	lwz r3, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 801B4C08 00000044  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 80400628 */
 /* 801B4C0C 00000048  81 8C 02 6C */	lwz r12, 0x26c(r12)
 /* 801B4C10 0000004C  7D 89 03 A6 */	mtctr r12
 /* 801B4C14 00000050  4E 80 04 21 */	bctrl 

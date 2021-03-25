@@ -80,8 +80,8 @@ lbl_8025D4D4:
 /* 8025D4E0 0000000C  38 80 00 00 */	li r4, 0
 /* 8025D4E4 00000010  4B DC F6 F1 */	bl setTimerPtr__14dComIfG_play_cFP8dTimer_c
 /* 8025D4E8 00000014  38 7F 01 08 */	addi r3, r31, 0x108
-/* 8025D4EC 00000018  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8025D4F0 0000001C  38 84 A3 D8 */	addi r4, r4, stringBase0@l
+/* 8025D4EC 00000018  3C 80 80 3A */	lis r4, d_d_timer__stringBase0@ha
+/* 8025D4F0 0000001C  38 84 A3 D8 */	addi r4, r4, d_d_timer__stringBase0@l
 /* 8025D4F4 00000020  4B DC FB 15 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 8025D4F8 00000024  38 00 00 00 */	li r0, 0
 /* 8025D4FC 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

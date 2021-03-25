@@ -53,7 +53,7 @@ lbl_801AE254:
 lbl_801AE258:
 /* 801AE258 00000000  C0 1F 01 64 */	lfs f0, 0x164(r31)
 /* 801AE25C 00000004  EC 63 00 32 */	fmuls f3, f3, f0
-/* 801AE260 00000008  88 1E 0E D5 */	lbz r0, 0xed5(r30)
+/* 801AE260 00000008  88 1E 0E D5 */	lbz r0, 0xed5(r30)	/* effective address: 8042D929 */
 /* 801AE264 0000000C  28 00 00 0A */	cmplwi r0, 0xa
 /* 801AE268 00000010  40 80 00 78 */	bge lbl_801AE2E0
 /* 801AE26C 00000014  A8 1F 01 6A */	lha r0, 0x16a(r31)

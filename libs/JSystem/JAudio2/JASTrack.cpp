@@ -11,6 +11,19 @@
 // Types:
 // 
 
+struct JASDsp {
+	struct TChannel {
+		/* 8029E00C */ void setFilterMode(u16);
+		/* 8029E044 */ void setIIRFilterParam(s16*);
+		/* 8029E06C */ void setFIR8FilterParam(s16*);
+		/* 8029E094 */ void setDistFilter(s16);
+	};
+
+};
+
+struct JASSoundParams {
+};
+
 struct JASOscillator {
 	struct Point {
 	};
@@ -26,19 +39,6 @@ struct JASChannel {
 	/* 8029AB98 */ void setMixConfig(u32, u16);
 	/* 8029ACD4 */ void setKeySweepTarget(s32, u32);
 	/* 8029BBFC */ void free();
-};
-
-struct JASDsp {
-	struct TChannel {
-		/* 8029E00C */ void setFilterMode(u16);
-		/* 8029E044 */ void setIIRFilterParam(s16*);
-		/* 8029E06C */ void setFIR8FilterParam(s16*);
-		/* 8029E094 */ void setDistFilter(s16);
-	};
-
-};
-
-struct JASSoundParams {
 };
 
 struct JASTrack {
@@ -266,7 +266,6 @@ extern "C" void __sinit_JASTrack_cpp(); // 1
 extern "C" void __dt__Q28JASTrack5TListFv(); // 1
 extern "C" void __dt__19JASDefaultBankTableFv(); // 1
 extern "C" void func_80293528(); // 1
-extern "C" extern u8 const sPitchEnvOsc__8JASTrack[24];
 extern "C" extern void* __vt__11JASBankList[3 + 1 /* padding */];
 extern "C" extern u8 lit_433[12];
 extern "C" extern u8 data_80431AF4[16];
@@ -405,6 +404,18 @@ asm void JASTrack::setChannelMgrCount(u32 param_0) {
 SECTION_RODATA static u8 const sAdsTable__8JASTrack[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x7F, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x7F, 0xFF, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x0E, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8039AFE8-8039B000 0018+00 s=2 e=0 z=0  None .rodata    sEnvOsc__8JASTrack                                           */
+SECTION_RODATA static u8 const sEnvOsc__8JASTrack[24] = {
+	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8039B000-8039B018 0018+00 s=1 e=0 z=0  None .rodata    sPitchEnvOsc__8JASTrack                                      */
+SECTION_RODATA static u8 const sPitchEnvOsc__8JASTrack[24] = {
+	0x00, 0x00, 0x00, 0x01, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 804555A4-804555A8 0004+00 s=9 e=0 z=0  None .sdata2    @679                                                         */
@@ -768,13 +779,6 @@ asm void JASTrack::setOscTable(u32 param_0, JASOscillator::Point const* param_1)
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 8039AFE8-8039B000 0018+00 s=1 e=0 z=0  None .rodata    sEnvOsc__8JASTrack                                           */
-SECTION_RODATA static u8 const sEnvOsc__8JASTrack[24] = {
-	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
 
 /* 80292808-8029285C 0054+00 s=0 e=1 z=0  None .text      setOscAdsr__8JASTrackFssssUs                                 */
 #pragma push
@@ -1181,11 +1185,4 @@ asm void JASBankTable__template0::getBank(u32 param_0) const {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 8039B000-8039B018 0018+00 s=0 e=0 z=0  None .rodata    sPitchEnvOsc__8JASTrack                                      */
-SECTION_RODATA u8 const sPitchEnvOsc__8JASTrack[24] = {
-	0x00, 0x00, 0x00, 0x01, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
 

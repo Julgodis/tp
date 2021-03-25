@@ -4,8 +4,8 @@ lbl_8098FE28:
 /* 8098FE30 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8098FE34 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8098FE38 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8098FE3C 00000014  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 8098FE40 00000018  38 E5 00 00 */	addi r7, r5, 0x0000 /* 0x00000000@l */
+/* 8098FE3C 00000014  3C A0 80 99 */	lis r5, sLoadResPat_Normal@ha
+/* 8098FE40 00000018  38 E5 18 F8 */	addi r7, r5, sLoadResPat_Normal@l
 /* 8098FE44 0000001C  80 04 00 00 */	lwz r0, 0(r4)
 /* 8098FE48 00000020  2C 00 00 14 */	cmpwi r0, 0x14
 /* 8098FE4C 00000024  41 82 00 40 */	beq lbl_8098FE8C
@@ -20,7 +20,7 @@ lbl_8098FE60:
 lbl_8098FE6C:
 /* 8098FE6C 00000000  38 00 00 00 */	li r0, 0
 /* 8098FE70 00000004  98 1F 0E 6C */	stb r0, 0xe6c(r31)
-/* 8098FE74 00000008  C0 07 00 84 */	lfs f0, 0x84(r7)
+/* 8098FE74 00000008  C0 07 00 84 */	lfs f0, 0x84(r7)	/* effective address: 8099197C */
 /* 8098FE78 0000000C  D0 1F 0E 40 */	stfs f0, 0xe40(r31)
 /* 8098FE7C 00000010  4B FF FE E1 */	bl SphereReset__11daNpcChin_cFv
 /* 8098FE80 00000014  38 00 00 01 */	li r0, 1
@@ -44,27 +44,27 @@ lbl_8098FEA4:
 lbl_8098FEC0:
 /* 8098FEC0 00000000  2C 00 00 02 */	cmpwi r0, 2
 /* 8098FEC4 00000004  40 82 00 14 */	bne lbl_8098FED8
-/* 8098FEC8 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8098FECC 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 8098FED0 00000010  80 03 09 44 */	lwz r0, 0x944(r3)
+/* 8098FEC8 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8098FECC 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8098FED0 00000010  80 03 09 44 */	lwz r0, 0x944(r3)	/* effective address: 80406B04 */
 /* 8098FED4 00000014  90 1F 0E 10 */	stw r0, 0xe10(r31)
 lbl_8098FED8:
 /* 8098FED8 00000000  38 60 00 06 */	li r3, 6
 /* 8098FEDC 00000004  80 9F 0E 10 */	lwz r4, 0xe10(r31)
 /* 8098FEE0 00000008  38 A0 00 01 */	li r5, 1
 /* 8098FEE4 0000000C  38 C0 00 00 */	li r6, 0
-/* 8098FEE8 00000010  C0 27 04 38 */	lfs f1, 0x438(r7)
-/* 8098FEEC 00000014  C0 47 04 3C */	lfs f2, 0x43c(r7)
-/* 8098FEF0 00000018  C0 67 04 40 */	lfs f3, 0x440(r7)
-/* 8098FEF4 0000001C  C0 87 04 44 */	lfs f4, 0x444(r7)
-/* 8098FEF8 00000020  4B FF BF 81 */	bl _unresolved
-/* 8098FEFC 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8098FF00 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 8098FF04 0000002C  80 63 00 00 */	lwz r3, 0(r3)
+/* 8098FEE8 00000010  C0 27 04 38 */	lfs f1, 0x438(r7)	/* effective address: 80991D30 */
+/* 8098FEEC 00000014  C0 47 04 3C */	lfs f2, 0x43c(r7)	/* effective address: 80991D34 */
+/* 8098FEF0 00000018  C0 67 04 40 */	lfs f3, 0x440(r7)	/* effective address: 80991D38 */
+/* 8098FEF4 0000001C  C0 87 04 44 */	lfs f4, 0x444(r7)	/* effective address: 80991D3C */
+/* 8098FEF8 00000020  4B 8D 10 94 */	b dTimer_createTimer__FlUlUcUcffff
+/* 8098FEFC 00000024  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
+/* 8098FF00 00000028  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 8098FF04 0000002C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
 /* 8098FF08 00000030  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 8098FF0C 00000034  3C 80 01 00 */	lis r4, 0x0100 /* 0x01000078@ha */
 /* 8098FF10 00000038  38 84 00 78 */	addi r4, r4, 0x0078 /* 0x01000078@l */
-/* 8098FF14 0000003C  4B FF BF 65 */	bl _unresolved
+/* 8098FF14 0000003C  4B 91 F5 88 */	b subBgmStart__8Z2SeqMgrFUl
 lbl_8098FF18:
 /* 8098FF18 00000000  38 60 00 01 */	li r3, 1
 /* 8098FF1C 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -283,7 +283,7 @@ extern "C" void __sinit_d_s_play_cpp(); // 1
 extern "C" void __dt__17dScnPly_env_HIO_cFv(); // 1
 extern "C" void __dt__17dScnPly_reg_HIO_cFv(); // 1
 extern "C" void __dt__21dScnPly_preLoad_HIO_cFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_s_d_s_play__stringBase0;
 extern "C" extern void* g_profile_PLAY_SCENE[10];
 extern "C" extern void* g_profile_OPENING_SCENE[10];
 extern "C" extern u8 lit_4049[12];
@@ -510,7 +510,7 @@ static u8 data_8045111C[4];
 /* 80451120-80451124 0004+00 s=1 e=0 z=0  None .sbss      g_preLoadHIO                                                 */
 static u8 g_preLoadHIO[4];
 
-/* 80451124-80451128 0004+00 s=3 e=7 z=0  None .sbss      None                                                         */
+/* 80451124-80451128 0004+00 s=3 e=7 z=38  None .sbss      None                                                         */
 u8 struct_80451124[4];
 
 /* 80259400-80259440 0040+00 s=1 e=0 z=0  None .text      calcPauseTimer__9dScnPly_cFv                                 */
@@ -565,7 +565,7 @@ SECTION_DATA static void* l_dScnPly_Method[5] = {
 	/* 4    */ (void*)dScnPly_Draw__FP9dScnPly_c,
 };
 
-/* 803C31D4-803C31FC 0028+00 s=0 e=0 z=0  None .data      g_profile_PLAY_SCENE                                         */
+/* 803C31D4-803C31FC 0028+00 s=0 e=0 z=1  None .data      g_profile_PLAY_SCENE                                         */
 SECTION_DATA void* g_profile_PLAY_SCENE[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0001FFFD,
@@ -579,7 +579,7 @@ SECTION_DATA void* g_profile_PLAY_SCENE[10] = {
 	/* 9    */ (void*)NULL,
 };
 
-/* 803C31FC-803C3224 0028+00 s=0 e=0 z=0  None .data      g_profile_OPENING_SCENE                                      */
+/* 803C31FC-803C3224 0028+00 s=0 e=0 z=1  None .data      g_profile_OPENING_SCENE                                      */
 SECTION_DATA void* g_profile_OPENING_SCENE[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0001FFFD,
@@ -697,7 +697,7 @@ extern "C" u16 T_JOINT_dylKeyTbl[1 + 1 /* padding */];
 
 /* 8039A2C8-8039A2D8 0010+00 s=4 e=0 z=0  None .rodata    PreLoadInfoT                                                 */
 SECTION_RODATA static void* const PreLoadInfoT[4] = {
-	/* 0    */ (void*)(((char*)&stringBase0)+0x7),
+	/* 0    */ (void*)(((char*)&d_s_d_s_play__stringBase0)+0x7),
 	/* 1    */ (void*)&T_JOINT_dylKeyTbl,
 	/* 2    */ (void*)&T_JOINT_resName,
 	/* 3    */ (void*)0x01010000,
@@ -730,7 +730,7 @@ SECTION_DEAD static char const* const pad_8039A381 = "\0\0\0\0\0\0";
 #pragma pop
 
 /* 80450760-80450764 0004+00 s=1 e=0 z=0  None .sdata     T_JOINT_resName                                              */
-SECTION_SDATA static void* T_JOINT_resName = (void*)&stringBase0;
+SECTION_SDATA static void* T_JOINT_resName = (void*)&d_s_d_s_play__stringBase0;
 
 /* 80450764-80450768 0004+00 s=4 e=0 z=0  None .sdata     None                                                         */
 SECTION_SDATA static u8 struct_80450764[4] = {
@@ -860,7 +860,7 @@ u8 lit_4049[12];
 /* 80430790-8043079C 000C+00 s=0 e=0 z=0  None .bss       @4050                                                        */
 u8 lit_4050[12];
 
-/* 8043079C-804307E0 0044+00 s=1 e=3 z=0  None .bss       g_envHIO                                                     */
+/* 8043079C-804307E0 0044+00 s=2 e=3 z=0  None .bss       g_envHIO                                                     */
 u8 g_envHIO[68];
 
 /* 80454F30-80454F34 0004+00 s=1 e=0 z=0  None .sdata2    @4804                                                        */

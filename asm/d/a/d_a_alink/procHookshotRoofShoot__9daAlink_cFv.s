@@ -87,9 +87,9 @@ lbl_8010CE48:
 /* 8010CEA0 00000058  4B FF BF 15 */	bl setHookshotSight__9daAlink_cFv
 /* 8010CEA4 0000005C  48 00 00 10 */	b lbl_8010CEB4
 lbl_8010CEA8:
-/* 8010CEA8 00000000  80 1E 5F 18 */	lwz r0, 0x5f18(r30)
+/* 8010CEA8 00000000  80 1E 5F 18 */	lwz r0, 0x5f18(r30)	/* effective address: 8040C0D8 */
 /* 8010CEAC 00000004  64 00 00 04 */	oris r0, r0, 4
-/* 8010CEB0 00000008  90 1E 5F 18 */	stw r0, 0x5f18(r30)
+/* 8010CEB0 00000008  90 1E 5F 18 */	stw r0, 0x5f18(r30)	/* effective address: 8040C0D8 */
 lbl_8010CEB4:
 /* 8010CEB4 00000000  38 00 00 01 */	li r0, 1
 /* 8010CEB8 00000004  B0 1F 30 0C */	sth r0, 0x300c(r31)

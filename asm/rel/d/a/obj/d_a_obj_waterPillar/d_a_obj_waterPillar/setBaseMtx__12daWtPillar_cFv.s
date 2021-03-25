@@ -4,18 +4,18 @@ lbl_80D2C7B0:
 /* 80D2C7B8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D2C7BC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D2C7C0 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80D2C7C4 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D2C7C8 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D2C7C4 00000014  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80D2C7C8 00000018  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80D2C7CC 0000001C  C0 3F 04 D0 */	lfs f1, 0x4d0(r31)
 /* 80D2C7D0 00000020  C0 5F 04 D4 */	lfs f2, 0x4d4(r31)
 /* 80D2C7D4 00000024  C0 1F 0A E0 */	lfs f0, 0xae0(r31)
 /* 80D2C7D8 00000028  EC 42 00 2A */	fadds f2, f2, f0
 /* 80D2C7DC 0000002C  C0 7F 04 D8 */	lfs f3, 0x4d8(r31)
-/* 80D2C7E0 00000030  4B FF FE 59 */	bl _unresolved
+/* 80D2C7E0 00000030  4B 61 A1 08 */	b PSMTXTrans
 /* 80D2C7E4 00000034  C0 3F 0B 24 */	lfs f1, 0xb24(r31)
 /* 80D2C7E8 00000038  C0 5F 0B 28 */	lfs f2, 0xb28(r31)
 /* 80D2C7EC 0000003C  C0 7F 0B 2C */	lfs f3, 0xb2c(r31)
-/* 80D2C7F0 00000040  4B FF FE 49 */	bl _unresolved
+/* 80D2C7F0 00000040  4B 2E 05 AC */	b transM__14mDoMtx_stack_cFfff
 /* 80D2C7F4 00000044  80 7F 05 8C */	lwz r3, 0x58c(r31)
 /* 80D2C7F8 00000048  C0 1F 04 EC */	lfs f0, 0x4ec(r31)
 /* 80D2C7FC 0000004C  D0 03 00 18 */	stfs f0, 0x18(r3)
@@ -23,11 +23,11 @@ lbl_80D2C7B0:
 /* 80D2C804 00000054  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 80D2C808 00000058  C0 1F 04 F4 */	lfs f0, 0x4f4(r31)
 /* 80D2C80C 0000005C  D0 03 00 20 */	stfs f0, 0x20(r3)
-/* 80D2C810 00000060  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D2C814 00000064  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D2C810 00000060  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80D2C814 00000064  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80D2C818 00000068  80 9F 05 8C */	lwz r4, 0x58c(r31)
 /* 80D2C81C 0000006C  38 84 00 24 */	addi r4, r4, 0x24
-/* 80D2C820 00000070  4B FF FE 19 */	bl _unresolved
+/* 80D2C820 00000070  4B 61 9C 90 */	b PSMTXCopy
 /* 80D2C824 00000074  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80D2C828 00000078  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80D2C82C 0000007C  7C 08 03 A6 */	mtlr r0

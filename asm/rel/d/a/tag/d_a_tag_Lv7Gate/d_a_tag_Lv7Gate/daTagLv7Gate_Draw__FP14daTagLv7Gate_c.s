@@ -7,25 +7,25 @@ lbl_80D519BC:
 /* 80D519D0 00000014  88 03 05 B1 */	lbz r0, 0x5b1(r3)
 /* 80D519D4 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80D519D8 0000001C  41 82 00 68 */	beq lbl_80D51A40
-/* 80D519DC 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D519E0 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D519DC 00000020  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 80D519E0 00000024  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 80D519E4 00000028  38 80 00 00 */	li r4, 0
 /* 80D519E8 0000002C  38 BF 05 88 */	addi r5, r31, 0x588
 /* 80D519EC 00000030  38 DF 01 0C */	addi r6, r31, 0x10c
-/* 80D519F0 00000034  4B FF F0 A9 */	bl _unresolved
-/* 80D519F4 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D519F8 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D519F0 00000034  4B 45 1D D4 */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
+/* 80D519F4 00000038  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 80D519F8 0000003C  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 80D519FC 00000040  80 9F 05 68 */	lwz r4, 0x568(r31)
 /* 80D51A00 00000044  80 84 00 04 */	lwz r4, 4(r4)
 /* 80D51A04 00000048  38 BF 01 0C */	addi r5, r31, 0x10c
-/* 80D51A08 0000004C  4B FF F0 91 */	bl _unresolved
+/* 80D51A08 0000004C  4B 45 33 98 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 80D51A0C 00000050  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 80D51A10 00000054  80 83 00 04 */	lwz r4, 4(r3)
 /* 80D51A14 00000058  80 7F 05 6C */	lwz r3, 0x56c(r31)
 /* 80D51A18 0000005C  C0 23 00 10 */	lfs f1, 0x10(r3)
-/* 80D51A1C 00000060  4B FF F0 7D */	bl _unresolved
+/* 80D51A1C 00000060  4B 2B BF B0 */	b entry__13mDoExt_bckAnmFP12J3DModelDataf
 /* 80D51A20 00000064  80 7F 05 68 */	lwz r3, 0x568(r31)
-/* 80D51A24 00000068  4B FF F0 75 */	bl _unresolved
+/* 80D51A24 00000068  4B 2B C2 A0 */	b mDoExt_modelUpdateDL__FP8J3DModel
 /* 80D51A28 0000006C  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 80D51A2C 00000070  80 63 00 04 */	lwz r3, 4(r3)
 /* 80D51A30 00000074  80 63 00 28 */	lwz r3, 0x28(r3)

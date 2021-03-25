@@ -11,13 +11,79 @@
 // Types:
 // 
 
-struct J2DTevStage {
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
-struct J2DAnmTransform {
+struct J2DAnmTexPattern {
+};
+
+struct ResTLUT {
+};
+
+struct JUTPalette {
+};
+
+struct _GXTlut {
 };
 
 struct ResTIMG {
+};
+
+struct JUTTexture {
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
+	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmBase {
+};
+
+struct _GXTexMapID {
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
+	template <typename A1>
+	struct TVec2 { };
+	/* TVec2<s16> */
+	struct TVec2__template0 {
+		/* 802FF204 */ TVec2__template0();
+	};
+
+};
+
+struct ResFONT {
+};
+
+struct J2DAnmVtxColor {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DMaterial {
+	/* 802EA38C */ void setGX();
+	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
+	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
+	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 };
 
 struct JSUStreamSeekFrom {
@@ -28,20 +94,13 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
+struct J2DTevStage {
+};
+
+struct J2DAnmTransform {
+};
+
 struct _GXCullMode {
-};
-
-struct J2DAnmBase {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct ResFONT {
-};
-
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
 struct J2DPane {
@@ -67,65 +126,6 @@ struct J2DPane {
 	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
 	/* 802F8464 */ void setConnectParent(bool);
 	/* 802F8474 */ void update();
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
-	};
-
-	template <typename A1>
-	struct TVec2 { };
-	/* TVec2<s16> */
-	struct TVec2__template0 {
-		/* 802FF204 */ TVec2__template0();
-	};
-
-};
-
-struct _GXTlut {
-};
-
-struct JUTPalette {
-};
-
-struct JUTTexture {
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
-	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
-};
-
-struct J2DAnmColor {
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct J2DMaterial {
-	/* 802EA38C */ void setGX();
-	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
-	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
-	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
-	/* 802EA89C */ void setAnimation(J2DAnmColor*);
-};
-
-struct _GXTexMapID {
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct ResTLUT {
 };
 
 struct J2DPictureEx {

@@ -8,8 +8,8 @@ lbl_8002CEFC:
 /* 8002CF14 00000018  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8002CF18 0000001C  3C 84 00 02 */	addis r4, r4, 2
 /* 8002CF1C 00000020  38 A0 00 80 */	li r5, 0x80
-/* 8002CF20 00000024  3C C0 80 38 */	lis r6, stringBase0@ha
-/* 8002CF24 00000028  38 C6 8F 38 */	addi r6, r6, stringBase0@l
+/* 8002CF20 00000024  3C C0 80 38 */	lis r6, d_com_d_com_inf_game__stringBase0@ha
+/* 8002CF24 00000028  38 C6 8F 38 */	addi r6, r6, d_com_d_com_inf_game__stringBase0@l
 /* 8002CF28 0000002C  38 C6 01 13 */	addi r6, r6, 0x113
 /* 8002CF2C 00000030  38 E0 00 00 */	li r7, 0
 /* 8002CF30 00000034  81 08 00 04 */	lwz r8, 4(r8)

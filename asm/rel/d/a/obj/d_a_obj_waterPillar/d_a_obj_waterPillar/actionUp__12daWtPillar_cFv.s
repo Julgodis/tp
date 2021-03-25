@@ -5,49 +5,49 @@ lbl_80D2D850:
 /* 80D2D85C 0000000C  DB E1 00 20 */	stfd f31, 0x20(r1)
 /* 80D2D860 00000010  F3 E1 00 28 */	psq_st f31, 40(r1), 0, 0 /* qr0 */
 /* 80D2D864 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80D2D868 00000004  4B FF ED D1 */	bl _unresolved
+/* 80D2D868 00000004  4B 63 49 74 */	b _savegpr_29
 /* 80D2D86C 00000008  7C 7D 1B 78 */	mr r29, r3
-/* 80D2D870 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D2D874 00000010  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80D2D870 0000000C  3C 60 80 D3 */	lis r3, lit_3645@ha
+/* 80D2D874 00000010  3B E3 E7 70 */	addi r31, r3, lit_3645@l
 /* 80D2D878 00000014  C0 3D 0B 04 */	lfs f1, 0xb04(r29)
 /* 80D2D87C 00000018  38 7D 05 2C */	addi r3, r29, 0x52c
-/* 80D2D880 0000001C  C0 1F 00 AC */	lfs f0, 0xac(r31)
+/* 80D2D880 0000001C  C0 1F 00 AC */	lfs f0, 0xac(r31)	/* effective address: 80D2E81C */
 /* 80D2D884 00000020  EC 41 00 24 */	fdivs f2, f1, f0
-/* 80D2D888 00000024  4B FF ED B1 */	bl _unresolved
+/* 80D2D888 00000024  4B 54 2E B8 */	b cLib_chaseF__FPfff
 /* 80D2D88C 00000028  38 7D 0A E0 */	addi r3, r29, 0xae0
 /* 80D2D890 0000002C  C0 3D 0B 14 */	lfs f1, 0xb14(r29)
 /* 80D2D894 00000030  C0 1D 0B 18 */	lfs f0, 0xb18(r29)
 /* 80D2D898 00000034  EC 21 00 2A */	fadds f1, f1, f0
-/* 80D2D89C 00000038  C0 5F 00 00 */	lfs f2, 0(r31)
+/* 80D2D89C 00000038  C0 5F 00 00 */	lfs f2, 0(r31)	/* effective address: 80D2E770 */
 /* 80D2D8A0 0000003C  C0 7D 05 2C */	lfs f3, 0x52c(r29)
-/* 80D2D8A4 00000040  C0 9F 00 C0 */	lfs f4, 0xc0(r31)
-/* 80D2D8A8 00000044  4B FF ED 91 */	bl _unresolved
+/* 80D2D8A4 00000040  C0 9F 00 C0 */	lfs f4, 0xc0(r31)	/* effective address: 80D2E830 */
+/* 80D2D8A8 00000044  4B 54 20 D4 */	b cLib_addCalc__FPfffff
 /* 80D2D8AC 00000048  FF E0 08 90 */	fmr f31, f1
 /* 80D2D8B0 0000004C  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 80D2D8B4 00000050  7C 03 07 74 */	extsb r3, r0
-/* 80D2D8B8 00000054  4B FF ED 81 */	bl _unresolved
+/* 80D2D8B8 00000054  4B 2F F7 B4 */	b dComIfGp_getReverb__Fi
 /* 80D2D8BC 00000058  7C 7E 1B 78 */	mr r30, r3
 /* 80D2D8C0 0000005C  C0 3D 0B 14 */	lfs f1, 0xb14(r29)
 /* 80D2D8C4 00000060  C0 1D 0B 18 */	lfs f0, 0xb18(r29)
 /* 80D2D8C8 00000064  EC 21 00 2A */	fadds f1, f1, f0
-/* 80D2D8CC 00000068  4B FF ED 6D */	bl _unresolved
+/* 80D2D8CC 00000068  4B 63 47 E0 */	b __cvt_fp2unsigned
 /* 80D2D8D0 0000006C  7C 66 1B 78 */	mr r6, r3
 /* 80D2D8D4 00000070  3C 60 00 08 */	lis r3, 0x0008 /* 0x00080184@ha */
 /* 80D2D8D8 00000074  38 03 01 84 */	addi r0, r3, 0x0184 /* 0x00080184@l */
 /* 80D2D8DC 00000078  90 01 00 08 */	stw r0, 8(r1)
-/* 80D2D8E0 0000007C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D2D8E4 00000080  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80D2D8E8 00000084  80 63 00 00 */	lwz r3, 0(r3)
+/* 80D2D8E0 0000007C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
+/* 80D2D8E4 00000080  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 80D2D8E8 00000084  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
 /* 80D2D8EC 00000088  38 81 00 08 */	addi r4, r1, 8
 /* 80D2D8F0 0000008C  38 BD 0B 6C */	addi r5, r29, 0xb6c
 /* 80D2D8F4 00000090  7F C7 F3 78 */	mr r7, r30
-/* 80D2D8F8 00000094  C0 3F 00 00 */	lfs f1, 0(r31)
+/* 80D2D8F8 00000094  C0 3F 00 00 */	lfs f1, 0(r31)	/* effective address: 80D2E770 */
 /* 80D2D8FC 00000098  FC 40 08 90 */	fmr f2, f1
-/* 80D2D900 0000009C  C0 7F 00 B4 */	lfs f3, 0xb4(r31)
+/* 80D2D900 0000009C  C0 7F 00 B4 */	lfs f3, 0xb4(r31)	/* effective address: 80D2E824 */
 /* 80D2D904 000000A0  FC 80 18 90 */	fmr f4, f3
 /* 80D2D908 000000A4  39 00 00 00 */	li r8, 0
-/* 80D2D90C 000000A8  4B FF ED 2D */	bl _unresolved
-/* 80D2D910 000000AC  C0 1F 00 90 */	lfs f0, 0x90(r31)
+/* 80D2D90C 000000A8  4B 57 EC 00 */	b seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
+/* 80D2D910 000000AC  C0 1F 00 90 */	lfs f0, 0x90(r31)	/* effective address: 80D2E800 */
 /* 80D2D914 000000B0  FC 00 F8 00 */	fcmpu cr0, f0, f31
 /* 80D2D918 000000B4  40 82 00 24 */	bne lbl_80D2D93C
 /* 80D2D91C 000000B8  88 1D 0B 09 */	lbz r0, 0xb09(r29)
@@ -63,7 +63,7 @@ lbl_80D2D93C:
 /* 80D2D93C 00000000  E3 E1 00 28 */	psq_l f31, 40(r1), 0, 0 /* qr0 */
 /* 80D2D940 00000000  CB E1 00 20 */	lfd f31, 0x20(r1)
 /* 80D2D944 00000004  39 61 00 20 */	addi r11, r1, 0x20
-/* 80D2D948 00000008  4B FF EC F1 */	bl _unresolved
+/* 80D2D948 00000008  4B 63 48 E0 */	b _restgpr_29
 /* 80D2D94C 0000000C  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 80D2D950 00000010  7C 08 03 A6 */	mtlr r0
 /* 80D2D954 00000014  38 21 00 30 */	addi r1, r1, 0x30

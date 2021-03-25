@@ -79,8 +79,8 @@ lbl_80334FE8:
 /* 80334FFC 00000014  98 03 00 16 */	stb r0, 0x16(r3)
 /* 80335000 00000018  48 00 00 18 */	b lbl_80335018
 lbl_80335004:
-/* 80335004 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80335008 00000004  38 63 20 B0 */	addi r3, r3, stringBase0@l
+/* 80335004 00000000  3C 60 80 3A */	lis r3, J3DModelLoader__stringBase0@ha
+/* 80335008 00000004  38 63 20 B0 */	addi r3, r3, J3DModelLoader__stringBase0@l
 /* 8033500C 00000008  38 63 00 14 */	addi r3, r3, 0x14
 /* 80335010 0000000C  4C C6 31 82 */	crclr 6
 /* 80335014 00000010  4B CD 1A A9 */	bl OSReport

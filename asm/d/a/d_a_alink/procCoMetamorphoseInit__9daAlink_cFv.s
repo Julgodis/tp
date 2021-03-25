@@ -87,8 +87,8 @@ lbl_800C7918:
 /* 800C7928 00000010  80 1E 05 88 */	lwz r0, 0x588(r30)
 /* 800C792C 00000014  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
 /* 800C7930 00000018  41 82 00 24 */	beq lbl_800C7954
-/* 800C7934 0000001C  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800C7938 00000020  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800C7934 0000001C  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800C7938 00000020  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800C793C 00000024  38 63 01 70 */	addi r3, r3, 0x170
 /* 800C7940 00000028  4B FD 61 21 */	bl checkStageName__9daAlink_cFPCc
 /* 800C7944 0000002C  54 60 06 3F */	clrlwi. r0, r3, 0x18

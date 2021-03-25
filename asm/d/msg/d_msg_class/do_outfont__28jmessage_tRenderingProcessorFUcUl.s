@@ -117,8 +117,8 @@ lbl_8022EC50:
 /* 8022ECA0 00000050  D0 1F 00 48 */	stfs f0, 0x48(r31)
 /* 8022ECA4 00000054  38 61 00 08 */	addi r3, r1, 8
 /* 8022ECA8 00000058  38 80 00 0F */	li r4, 0xf
-/* 8022ECAC 0000005C  3C A0 80 3A */	lis r5, stringBase0@ha
-/* 8022ECB0 00000060  38 A5 96 10 */	addi r5, r5, stringBase0@l
+/* 8022ECAC 0000005C  3C A0 80 3A */	lis r5, d_msg_d_msg_class__stringBase0@ha
+/* 8022ECB0 00000060  38 A5 96 10 */	addi r5, r5, d_msg_d_msg_class__stringBase0@l
 /* 8022ECB4 00000064  38 A5 00 08 */	addi r5, r5, 8
 /* 8022ECB8 00000068  4C C6 31 82 */	crclr 6
 /* 8022ECBC 0000006C  48 13 79 01 */	bl snprintf

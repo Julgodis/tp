@@ -74,8 +74,8 @@ lbl_8033864C:
 /* 80338654 00000008  48 00 05 61 */	bl readAnmVtxColor__20J3DAnmFullLoader_v15FPC22J3DAnmVtxColorFullData
 /* 80338658 0000000C  48 00 00 18 */	b lbl_80338670
 lbl_8033865C:
-/* 8033865C 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80338660 00000004  38 63 21 30 */	addi r3, r3, stringBase0@l
+/* 8033865C 00000000  3C 60 80 3A */	lis r3, J3DAnmLoader__stringBase0@ha
+/* 80338660 00000004  38 63 21 30 */	addi r3, r3, J3DAnmLoader__stringBase0@l
 /* 80338664 00000008  38 63 00 29 */	addi r3, r3, 0x29
 /* 80338668 0000000C  4C C6 31 82 */	crclr 6
 /* 8033866C 00000010  4B CC E4 51 */	bl OSReport

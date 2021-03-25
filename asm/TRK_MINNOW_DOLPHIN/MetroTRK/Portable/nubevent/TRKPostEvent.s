@@ -18,7 +18,7 @@ lbl_8036CC54:
 /* 8036CC94 00000040  3B E0 01 00 */	li r31, 0x100
 /* 8036CC98 00000044  48 00 00 70 */	b lbl_8036CD08
 lbl_8036CC9C:
-/* 8036CC9C 00000000  80 1E 00 08 */	lwz r0, 8(r30)
+/* 8036CC9C 00000000  80 1E 00 08 */	lwz r0, 8(r30)	/* effective address: 8044D898 */
 /* 8036CCA0 00000004  7F A4 EB 78 */	mr r4, r29
 /* 8036CCA4 00000008  38 A0 00 0C */	li r5, 0xc
 /* 8036CCA8 0000000C  7C 00 1A 14 */	add r0, r0, r3
@@ -41,11 +41,11 @@ lbl_8036CC9C:
 /* 8036CCEC 00000050  90 04 00 24 */	stw r0, 0x24(r4)	/* effective address: 8044D8B4 */
 /* 8036CCF0 00000054  40 80 00 0C */	bge lbl_8036CCFC
 /* 8036CCF4 00000058  38 00 01 00 */	li r0, 0x100
-/* 8036CCF8 0000005C  90 04 00 24 */	stw r0, 0x24(r4)
+/* 8036CCF8 0000005C  90 04 00 24 */	stw r0, 0x24(r4)	/* effective address: 8044D8B4 */
 lbl_8036CCFC:
-/* 8036CCFC 00000000  80 7E 00 04 */	lwz r3, 4(r30)
+/* 8036CCFC 00000000  80 7E 00 04 */	lwz r3, 4(r30)	/* effective address: 8044D894 */
 /* 8036CD00 00000004  38 03 00 01 */	addi r0, r3, 1
-/* 8036CD04 00000008  90 1E 00 04 */	stw r0, 4(r30)
+/* 8036CD04 00000008  90 1E 00 04 */	stw r0, 4(r30)	/* effective address: 8044D894 */
 lbl_8036CD08:
 /* 8036CD08 00000000  3C 60 80 45 */	lis r3, gTRKEventQueue@ha
 /* 8036CD0C 00000004  38 63 D8 90 */	addi r3, r3, gTRKEventQueue@l

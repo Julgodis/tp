@@ -54,14 +54,14 @@ lbl_801AAD18:
 /* 801AAD1C 00000004  C0 22 A2 58 */	lfs f1, lit_4509(r2)
 /* 801AAD20 00000008  C0 42 A3 CC */	lfs f2, lit_9677(r2)
 lbl_801AAD24:
-/* 801AAD24 00000000  D0 07 12 7C */	stfs f0, 0x127c(r7)
-/* 801AAD28 00000004  C0 07 0C 28 */	lfs f0, 0xc28(r7)
+/* 801AAD24 00000000  D0 07 12 7C */	stfs f0, 0x127c(r7)	/* effective address: 8042DCD0 */
+/* 801AAD28 00000004  C0 07 0C 28 */	lfs f0, 0xc28(r7)	/* effective address: 8042D67C */
 /* 801AAD2C 00000008  EC 00 00 72 */	fmuls f0, f0, f1
-/* 801AAD30 0000000C  D0 07 0C 28 */	stfs f0, 0xc28(r7)
-/* 801AAD34 00000010  C0 07 0C 30 */	lfs f0, 0xc30(r7)
+/* 801AAD30 0000000C  D0 07 0C 28 */	stfs f0, 0xc28(r7)	/* effective address: 8042D67C */
+/* 801AAD34 00000010  C0 07 0C 30 */	lfs f0, 0xc30(r7)	/* effective address: 8042D684 */
 /* 801AAD38 00000014  EC 00 00 B2 */	fmuls f0, f0, f2
-/* 801AAD3C 00000018  D0 07 0C 30 */	stfs f0, 0xc30(r7)
+/* 801AAD3C 00000018  D0 07 0C 30 */	stfs f0, 0xc30(r7)	/* effective address: 8042D684 */
 /* 801AAD40 0000001C  38 00 00 01 */	li r0, 1
-/* 801AAD44 00000020  98 07 0C 3E */	stb r0, 0xc3e(r7)
+/* 801AAD44 00000020  98 07 0C 3E */	stb r0, 0xc3e(r7)	/* effective address: 8042D692 */
 /* 801AAD48 00000024  38 60 00 01 */	li r3, 1
 /* 801AAD4C 00000028  4E 80 00 20 */	blr 

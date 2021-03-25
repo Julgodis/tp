@@ -7,27 +7,27 @@ lbl_80AE38F0:
 /* 80AE3904 00000014  2C 04 00 01 */	cmpwi r4, 1
 /* 80AE3908 00000018  40 82 00 30 */	bne lbl_80AE3938
 /* 80AE390C 0000001C  A8 9F 0D 12 */	lha r4, 0xd12(r31)
-/* 80AE3910 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AE3914 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80AE3918 00000028  4B FF F4 21 */	bl _unresolved
-/* 80AE391C 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AE3920 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80AE3910 00000020  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80AE3914 00000024  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80AE3918 00000028  4B 52 8B 1C */	b mDoMtx_YrotM__FPA4_fs
+/* 80AE391C 0000002C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80AE3920 00000030  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80AE3924 00000034  A8 1F 0D 0E */	lha r0, 0xd0e(r31)
 /* 80AE3928 00000038  7C 00 00 D0 */	neg r0, r0
 /* 80AE392C 0000003C  7C 04 07 34 */	extsh r4, r0
-/* 80AE3930 00000040  4B FF F4 09 */	bl _unresolved
+/* 80AE3930 00000040  4B 52 8B 9C */	b mDoMtx_ZrotM__FPA4_fs
 /* 80AE3934 00000044  48 00 00 2C */	b lbl_80AE3960
 lbl_80AE3938:
 /* 80AE3938 00000000  2C 04 00 04 */	cmpwi r4, 4
 /* 80AE393C 00000004  40 82 00 24 */	bne lbl_80AE3960
 /* 80AE3940 00000008  A8 9F 0D 0C */	lha r4, 0xd0c(r31)
-/* 80AE3944 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AE3948 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80AE394C 00000014  4B FF F3 ED */	bl _unresolved
+/* 80AE3944 0000000C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80AE3948 00000010  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80AE394C 00000014  4B 52 8A E8 */	b mDoMtx_YrotM__FPA4_fs
 /* 80AE3950 00000018  A8 9F 0D 08 */	lha r4, 0xd08(r31)
-/* 80AE3954 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AE3958 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80AE395C 00000024  4B FF F3 DD */	bl _unresolved
+/* 80AE3954 0000001C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80AE3958 00000020  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
+/* 80AE395C 00000024  4B 52 8B 70 */	b mDoMtx_ZrotM__FPA4_fs
 lbl_80AE3960:
 /* 80AE3960 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80AE3964 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

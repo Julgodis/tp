@@ -23,7 +23,7 @@ lbl_803138C8:
 /* 8031391C 00000054  38 61 00 08 */	addi r3, r1, 8
 /* 80313920 00000058  4B FF F9 0D */	bl loadExecute__17J3DDifferedTexMtxFPA4_Cf
 lbl_80313924:
-/* 80313924 00000000  80 7F 00 40 */	lwz r3, 0x40(r31)
+/* 80313924 00000000  80 7F 00 40 */	lwz r3, 0x40(r31)	/* effective address: 80434B08 */
 /* 80313928 00000004  80 63 00 30 */	lwz r3, 0x30(r3)
 /* 8031392C 00000008  1C 9D 00 03 */	mulli r4, r29, 3
 /* 80313930 0000000C  4B FF C1 B1 */	bl J3DFifoLoadPosMtxImm__FPA4_fUl

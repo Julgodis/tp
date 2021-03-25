@@ -7,7 +7,7 @@ lbl_809D79F0:
 /* 809D7A04 00000014  88 03 0A 88 */	lbz r0, 0xa88(r3)
 /* 809D7A08 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 809D7A0C 0000001C  40 82 00 84 */	bne lbl_809D7A90
-/* 809D7A10 00000020  4B FF F9 69 */	bl _unresolved
+/* 809D7A10 00000020  4B 7C 31 14 */	b checkShopOpen__13dShopSystem_cFv
 /* 809D7A14 00000024  2C 03 00 00 */	cmpwi r3, 0
 /* 809D7A18 00000028  40 82 00 78 */	bne lbl_809D7A90
 /* 809D7A1C 0000002C  88 1F 10 BC */	lbz r0, 0x10bc(r31)
@@ -17,40 +17,40 @@ lbl_809D79F0:
 /* 809D7A2C 0000003C  28 00 00 00 */	cmplwi r0, 0
 /* 809D7A30 00000040  40 82 00 60 */	bne lbl_809D7A90
 /* 809D7A34 00000044  7F E3 FB 78 */	mr r3, r31
-/* 809D7A38 00000048  4B FF F9 41 */	bl _unresolved
+/* 809D7A38 00000048  4B 7B F9 00 */	b initShopSystem__13dShopSystem_cFv
 /* 809D7A3C 0000004C  7F E3 FB 78 */	mr r3, r31
 /* 809D7A40 00000050  48 00 01 75 */	bl getMaxNumItem__12daNpc_grMC_cFv
 /* 809D7A44 00000054  7C 64 1B 78 */	mr r4, r3
 /* 809D7A48 00000058  7F E3 FB 78 */	mr r3, r31
-/* 809D7A4C 0000005C  4B FF F9 2D */	bl _unresolved
+/* 809D7A4C 0000005C  4B 7C 30 D0 */	b setSellItemMax__13dShopSystem_cFUc
 /* 809D7A50 00000060  38 00 FF FF */	li r0, -1
 /* 809D7A54 00000064  90 1F 0F 60 */	stw r0, 0xf60(r31)
 /* 809D7A58 00000068  38 00 00 05 */	li r0, 5
 /* 809D7A5C 0000006C  98 1F 0F 77 */	stb r0, 0xf77(r31)
 /* 809D7A60 00000070  38 00 00 00 */	li r0, 0
 /* 809D7A64 00000074  B0 1F 0F 4E */	sth r0, 0xf4e(r31)
-/* 809D7A68 00000078  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 809D7A6C 0000007C  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
-/* 809D7A70 00000080  80 64 00 00 */	lwz r3, 0(r4)
-/* 809D7A74 00000084  80 04 00 04 */	lwz r0, 4(r4)
+/* 809D7A68 00000078  3C 60 80 3A */	lis r3, __ptmf_null@ha
+/* 809D7A6C 0000007C  38 83 21 80 */	addi r4, r3, __ptmf_null@l
+/* 809D7A70 00000080  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
+/* 809D7A74 00000084  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
 /* 809D7A78 00000088  90 7F 0E 78 */	stw r3, 0xe78(r31)
 /* 809D7A7C 0000008C  90 1F 0E 7C */	stw r0, 0xe7c(r31)
-/* 809D7A80 00000090  80 04 00 08 */	lwz r0, 8(r4)
+/* 809D7A80 00000090  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
 /* 809D7A84 00000094  90 1F 0E 80 */	stw r0, 0xe80(r31)
 /* 809D7A88 00000098  38 00 00 01 */	li r0, 1
 /* 809D7A8C 0000009C  98 1F 10 DD */	stb r0, 0x10dd(r31)
 lbl_809D7A90:
 /* 809D7A90 00000000  7F E3 FB 78 */	mr r3, r31
-/* 809D7A94 00000004  4B FF F8 E5 */	bl _unresolved
+/* 809D7A94 00000004  4B 77 0A 98 */	b execute__8daNpcT_cFv
 /* 809D7A98 00000008  88 1F 10 DD */	lbz r0, 0x10dd(r31)
 /* 809D7A9C 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 809D7AA0 00000010  41 82 00 1C */	beq lbl_809D7ABC
 /* 809D7AA4 00000014  7F E3 FB 78 */	mr r3, r31
-/* 809D7AA8 00000018  4B FF F8 D1 */	bl _unresolved
+/* 809D7AA8 00000018  4B 7C 2B 28 */	b searchItemActor__13dShopSystem_cFv
 /* 809D7AAC 0000001C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 809D7AB0 00000020  41 82 00 0C */	beq lbl_809D7ABC
 /* 809D7AB4 00000024  38 7F 0E 78 */	addi r3, r31, 0xe78
-/* 809D7AB8 00000028  4B FF F8 C1 */	bl _unresolved
+/* 809D7AB8 00000028  4B 7B EA 10 */	b move__16ShopCam_action_cFv
 lbl_809D7ABC:
 /* 809D7ABC 00000000  38 60 00 01 */	li r3, 1
 /* 809D7AC0 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

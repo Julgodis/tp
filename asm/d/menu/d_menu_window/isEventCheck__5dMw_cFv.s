@@ -32,7 +32,7 @@ lbl_801FCFD0:
 /* 801FCFF4 00000024  7C 00 19 10 */	subfe r0, r0, r3
 /* 801FCFF8 00000028  54 00 06 3F */	clrlwi. r0, r0, 0x18
 /* 801FCFFC 0000002C  40 82 00 68 */	bne lbl_801FD064
-/* 801FD000 00000030  88 1F 00 BF */	lbz r0, 0xbf(r31)
+/* 801FD000 00000030  88 1F 00 BF */	lbz r0, 0xbf(r31)	/* effective address: 80430247 */
 /* 801FD004 00000034  28 00 00 04 */	cmplwi r0, 4
 /* 801FD008 00000038  41 82 00 54 */	beq lbl_801FD05C
 /* 801FD00C 0000003C  28 00 00 05 */	cmplwi r0, 5
@@ -52,7 +52,7 @@ lbl_801FCFD0:
 /* 801FD044 00000074  A0 03 00 98 */	lhz r0, 0x98(r3)	/* effective address: 80430220 */
 /* 801FD048 00000078  54 00 07 7B */	rlwinm. r0, r0, 0, 0x1d, 0x1d
 /* 801FD04C 0000007C  40 82 00 10 */	bne lbl_801FD05C
-/* 801FD050 00000080  88 03 00 C1 */	lbz r0, 0xc1(r3)
+/* 801FD050 00000080  88 03 00 C1 */	lbz r0, 0xc1(r3)	/* effective address: 80430249 */
 /* 801FD054 00000084  28 00 00 08 */	cmplwi r0, 8
 /* 801FD058 00000088  40 82 00 0C */	bne lbl_801FD064
 lbl_801FD05C:

@@ -81,7 +81,7 @@ lbl_8033C1A4:
 /* 8033C204 00000060  80 06 00 D8 */	lwz r0, 0xd8(r6)	/* effective address: 800000D8 */
 /* 8033C208 00000064  7C 04 00 40 */	cmplw r4, r0
 /* 8033C20C 00000068  40 82 00 08 */	bne lbl_8033C214
-/* 8033C210 0000006C  90 A6 00 D8 */	stw r5, 0xd8(r6)
+/* 8033C210 0000006C  90 A6 00 D8 */	stw r5, 0xd8(r6)	/* effective address: 800000D8 */
 lbl_8033C214:
 /* 8033C214 00000000  38 61 00 10 */	addi r3, r1, 0x10
 /* 8033C218 00000004  4B FF FC 21 */	bl OSSetCurrentContext
@@ -149,7 +149,7 @@ lbl_8033C2A4:
 /* 8033C2F8 00000054  80 03 00 D8 */	lwz r0, 0x00D8(r3)
 /* 8033C2FC 00000058  7C 04 00 40 */	cmplw r4, r0
 /* 8033C300 0000005C  40 82 00 08 */	bne lbl_8033C308
-/* 8033C304 00000060  90 A3 00 D8 */	stw r5, 0xd8(r3)
+/* 8033C304 00000060  90 A3 00 D8 */	stw r5, 0xd8(r3)	/* effective address: 800000D8 */
 lbl_8033C308:
 /* 8033C308 00000000  7F C3 F3 78 */	mr r3, r30
 /* 8033C30C 00000004  4B FF FB 2D */	bl OSSetCurrentContext

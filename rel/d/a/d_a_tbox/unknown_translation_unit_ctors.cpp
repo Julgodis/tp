@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_804961C0[8];
+extern void* data_804961C0[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_tbox_cpp(); // 1
 
 // 
 // Declarations:

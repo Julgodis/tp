@@ -32,13 +32,13 @@ struct cM3dGLin {
 struct fopAc_ac_c {
 };
 
-struct J3DModel {
-};
-
 struct csXyz {
 };
 
 struct dJntColData_c {
+};
+
+struct J3DModel {
 };
 
 struct dJntCol_c {
@@ -154,7 +154,7 @@ extern "C" extern u32 __float_max;
 // Declarations:
 // 
 
-/* 80035C8C-80035CA0 0014+00 s=0 e=1 z=0  None .text      __ct__9dJntCol_cFv                                           */
+/* 80035C8C-80035CA0 0014+00 s=0 e=1 z=8  None .text      __ct__9dJntCol_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -165,7 +165,7 @@ asm dJntCol_c::dJntCol_c() {
 #pragma pop
 
 
-/* 80035CA0-80035CC8 0028+00 s=0 e=2 z=0  None .text      init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli   */
+/* 80035CA0-80035CC8 0028+00 s=0 e=2 z=8  None .text      init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -272,7 +272,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80036AEC-80036C44 0158+00 s=0 e=0 z=0  None .text      getArrowOffsetPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz */
+/* 80036AEC-80036C44 0158+00 s=0 e=0 z=1  None .text      getArrowOffsetPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -294,7 +294,7 @@ asm void dJntCol_c::getHitmarkPosAndAngle(cXyz const* param_0, csXyz const* para
 #pragma pop
 
 
-/* 80036FA8-80037038 0090+00 s=0 e=0 z=0  None .text      setArrowPosAndAngle__9dJntCol_cFPC4cXyzPC4cXyziP4cXyzP5csXyz */
+/* 80036FA8-80037038 0090+00 s=0 e=0 z=1  None .text      setArrowPosAndAngle__9dJntCol_cFPC4cXyzPC4cXyziP4cXyzP5csXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

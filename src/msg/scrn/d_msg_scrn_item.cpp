@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct J2DAnmTextureSRTKey {
-};
-
 struct JKRExpHeap {
 };
 
 struct J2DAnmColor {
+};
+
+struct J2DAnmTextureSRTKey {
 };
 
 struct dMsgScrnItem_c {
@@ -118,11 +118,11 @@ struct J2DPane {
 	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
 };
 
-struct JKRArchive {
-	/* 802D5ECC */ void readIdxResource(void*, u32, u32);
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
+	/* 802D5ECC */ void readIdxResource(void*, u32, u32);
 };
 
 struct J2DScreen {
@@ -190,7 +190,7 @@ extern "C" void setBtk0Animation__14dMsgScrnItem_cFP19J2DAnmTextureSRTKey(); // 
 extern "C" void setBpk0Animation__14dMsgScrnItem_cFP11J2DAnmColor(); // 1
 extern "C" void setBpk1Animation__14dMsgScrnItem_cFP11J2DAnmColor(); // 1
 extern "C" void isOugiID__14dMsgScrnItem_cFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const msg_scrn_d_msg_scrn_item__stringBase0;
 
 // 
 // External References:

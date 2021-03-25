@@ -47,6 +47,8 @@ struct daBalloon2D_c {
 };
 
 struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct dDlst_base_c {
@@ -61,18 +63,85 @@ struct mDoHIO_entry_c {
 	/* 80655404 */ ~mDoHIO_entry_c();
 };
 
+struct Vec {
+};
+
+struct request_of_phase_process_class {
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, int);
+};
+
+struct dDlst_list_c {
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
+};
+
+struct JMSMesgEntry_c {
+};
+
+struct dMeter2Info_c {
+	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
+};
+
+struct dMsgObject_c {
+	/* 8023822C */ void getStatus();
+};
+
+struct JKRExpHeap {
+};
+
+struct J2DGrafContext {
+};
+
+struct JKRArchive {
+};
+
+struct J2DScreen {
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 802545B0 */ void paneTrans(f32, f32);
+};
+
+struct CPaneMgrAlpha {
+	/* 802555C8 */ void show();
+	/* 80255608 */ void hide();
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255828 */ void getAlphaRate();
+};
+
+struct ResTIMG {
+};
+
+struct J2DPicture {
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
+};
+
 // 
 // Forward References:
 // 
 
-void daBalloon2D_createHeap(fopAc_ac_c*); // 2
-void daBalloon2D_create(daBalloon2D_c*); // 2
-void daBalloon2D_destroy(daBalloon2D_c*); // 2
-void daBalloon2D_execute(daBalloon2D_c*); // 2
-void daBalloon2D_draw(daBalloon2D_c*); // 2
+static void daBalloon2D_createHeap(fopAc_ac_c*); // 2
+static void daBalloon2D_create(daBalloon2D_c*); // 2
+static void daBalloon2D_destroy(daBalloon2D_c*); // 2
+static void daBalloon2D_execute(daBalloon2D_c*); // 2
+static void daBalloon2D_draw(daBalloon2D_c*); // 2
 
 extern "C" void draw__Q213daBalloon2D_c6c_listFv(); // 1
-extern "C" void daBalloon2D_createHeap__FP10fopAc_ac_c(); // 1
+extern "C" static void daBalloon2D_createHeap__FP10fopAc_ac_c(); // 1
 extern "C" void createHeap__13daBalloon2D_cFv(); // 1
 extern "C" void create__13daBalloon2D_cFv(); // 1
 extern "C" void destroy__13daBalloon2D_cFv(); // 1
@@ -91,23 +160,18 @@ extern "C" void setAllAlpha__13daBalloon2D_cFv(); // 1
 extern "C" void setComboAlpha__13daBalloon2D_cFv(); // 1
 extern "C" void drawAddScore__13daBalloon2D_cFv(); // 1
 extern "C" void setHIO__13daBalloon2D_cFb(); // 1
-extern "C" void daBalloon2D_create__FP13daBalloon2D_c(); // 1
+extern "C" static void daBalloon2D_create__FP13daBalloon2D_c(); // 1
 extern "C" void __dt__Q213daBalloon2D_c10CHeadScoreFv(); // 1
 extern "C" void __ct__Q213daBalloon2D_c10CHeadScoreFv(); // 1
-extern "C" void daBalloon2D_destroy__FP13daBalloon2D_c(); // 1
-extern "C" void daBalloon2D_execute__FP13daBalloon2D_c(); // 1
-extern "C" void daBalloon2D_draw__FP13daBalloon2D_c(); // 1
+extern "C" static void daBalloon2D_destroy__FP13daBalloon2D_c(); // 1
+extern "C" static void daBalloon2D_execute__FP13daBalloon2D_c(); // 1
+extern "C" static void daBalloon2D_draw__FP13daBalloon2D_c(); // 1
 extern "C" void draw__12dDlst_base_cFv(); // 1
 extern "C" void __dt__17daBalloon2D_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
 extern "C" void __dt__Q213daBalloon2D_c6c_listFv(); // 1
 extern "C" void __dt__13daBalloon2D_cFv(); // 1
 extern "C" void __sinit_d_a_balloon_2D_cpp(); // 1
-extern "C" extern u8 const lit_3896[4];
-extern "C" extern u32 const lit_4064;
-extern "C" extern u32 const lit_4065;
-extern "C" extern u32 const lit_4066;
-extern "C" extern u32 const lit_4067;
 extern "C" extern u32 const lit_4165;
 extern "C" extern u32 const lit_4166;
 extern "C" extern u32 const lit_4167;
@@ -119,32 +183,74 @@ extern "C" extern u32 const lit_4172;
 extern "C" extern u32 const lit_4173;
 extern "C" extern u8 const lit_4175[8];
 extern "C" extern char const* const stringBase0;
-extern "C" extern u8 data_80655610[196];
-extern "C" extern u8 l_arcName[4];
-extern "C" extern u8 daBalloon2D_METHODS[32];
-extern "C" extern u8 g_profile_BALLOON2D[48];
-extern "C" extern void* __vt__12dDlst_base_c[3];
-extern "C" extern void* __vt__13daBalloon2D_c[3];
-extern "C" extern void* __vt__Q213daBalloon2D_c6c_list[4];
-extern "C" extern void* __vt__17daBalloon2D_HIO_c[3];
-extern "C" extern void* __vt__14mDoHIO_entry_c[3];
-extern "C" extern u8 lit_3779[12];
-extern "C" extern u8 l_HOSTIO[200];
-extern "C" extern u8 myclass__13daBalloon2D_c[4];
+extern "C" extern void* g_profile_BALLOON2D[12];
 
 // 
 // External References:
 // 
 
+void mDoExt_getMesgFont(); // 2
+void mDoLib_project(Vec*, Vec*); // 2
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void dMeter2Info_getNumberTextureName(int); // 2
+void dMeter2Info_getPlusTextureName(); // 2
+void dPaneClass_showNullPane(J2DScreen*); // 2
+void cLib_addCalc2(f32*, f32, f32, f32); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
 
-extern "C" void _unresolved(); // 1
+SECTION_INIT void memcpy(); // 1
+extern "C" void mDoExt_getMesgFont__Fv(); // 1
+extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
+extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void __dt__10fopAc_ac_cFv(); // 1
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci(); // 1
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
+extern "C" void dMeter2Info_getNumberTextureName__Fi(); // 1
+extern "C" void dMeter2Info_getPlusTextureName__Fv(); // 1
+extern "C" void getStatus__12dMsgObject_cFv(); // 1
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void paneTrans__8CPaneMgrFff(); // 1
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
+extern "C" void show__13CPaneMgrAlphaFv(); // 1
+extern "C" void hide__13CPaneMgrAlphaFv(); // 1
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv(); // 1
+extern "C" void cLib_addCalc2__FPffff(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__9J2DScreenFv(); // 1
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
+extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
+extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
+extern "C" void setString__10J2DTextBoxFsPCce(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" void __register_global_object(); // 1
 
 // 
 // Declarations:
 // 
 
-/* 806534CC-80653518 004C+00 s=0 e=0 z=0  None .text      draw__Q213daBalloon2D_c6c_listFv                             */
+/* 806534CC-80653518 004C+00 s=1 e=0 z=0  None .text      draw__Q213daBalloon2D_c6c_listFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,16 +261,107 @@ asm void daBalloon2D_c::c_list::draw() {
 #pragma pop
 
 
-/* 80653518-80653538 0020+00 s=0 e=0 z=0  None .text      daBalloon2D_createHeap__FP10fopAc_ac_c                       */
+/* 80653518-80653538 0020+00 s=1 e=0 z=0  None .text      daBalloon2D_createHeap__FP10fopAc_ac_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBalloon2D_createHeap(fopAc_ac_c* param_0) {
+asm static void daBalloon2D_createHeap(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_balloon_2D/d_a_balloon_2D/daBalloon2D_createHeap__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 806555AC-806555B0 0004+00 s=5 e=0 z=0  None .rodata    @3896                                                        */
+SECTION_RODATA static u8 const lit_3896[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 806555B0-806555B4 0004+00 s=2 e=0 z=0  None .rodata    @4064                                                        */
+SECTION_RODATA static u32 const lit_4064 = 0x3F800000;
+
+/* 806555B4-806555B8 0004+00 s=2 e=0 z=0  None .rodata    @4065                                                        */
+SECTION_RODATA static u32 const lit_4065 = 0x3ECCCCCD;
+
+/* 806555B8-806555BC 0004+00 s=2 e=0 z=0  None .rodata    @4066                                                        */
+SECTION_RODATA static u32 const lit_4066 = 0x3F000000;
+
+/* 806555BC-806555C0 0004+00 s=2 e=0 z=0  None .rodata    @4067                                                        */
+SECTION_RODATA static u32 const lit_4067 = 0x3DCCCCCD;
+
+/* 806555C0-806555C4 0004+00 s=0 e=0 z=0  None .rodata    @4165                                                        */
+SECTION_RODATA u32 const lit_4165 = 0x41F00000;
+
+/* 806555C4-806555C8 0004+00 s=0 e=0 z=0  None .rodata    @4166                                                        */
+SECTION_RODATA u32 const lit_4166 = 0x3E99999A;
+
+/* 806555C8-806555CC 0004+00 s=0 e=0 z=0  None .rodata    @4167                                                        */
+SECTION_RODATA u32 const lit_4167 = 0x41200000;
+
+/* 806555CC-806555D0 0004+00 s=0 e=0 z=0  None .rodata    @4168                                                        */
+SECTION_RODATA u32 const lit_4168 = 0x437F0000;
+
+/* 806555D0-806555D4 0004+00 s=0 e=0 z=0  None .rodata    @4169                                                        */
+SECTION_RODATA u32 const lit_4169 = 0x40C00000;
+
+/* 806555D4-806555D8 0004+00 s=0 e=0 z=0  None .rodata    @4170                                                        */
+SECTION_RODATA u32 const lit_4170 = 0x40000000;
+
+/* 806555D8-806555DC 0004+00 s=0 e=0 z=0  None .rodata    @4171                                                        */
+SECTION_RODATA u32 const lit_4171 = 0x40400000;
+
+/* 806555DC-806555E0 0004+00 s=0 e=0 z=0  None .rodata    @4172                                                        */
+SECTION_RODATA u32 const lit_4172 = 0x40800000;
+
+/* 806555E0-806555E4 0004+00 s=0 e=0 z=0  None .rodata    @4173                                                        */
+SECTION_RODATA u32 const lit_4173 = 0x40A00000;
+
+/* 806555E4-806555EC 0008+00 s=0 e=0 z=0  None .rodata    @4175                                                        */
+SECTION_RODATA u8 const lit_4175[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 806555EC-8065560E 0022+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_806555EC = "Balloon2D";
+SECTION_DEAD char const* const stringBase_806555F6 = "zelda_balloon_game.blo";
+SECTION_DEAD char const* const stringBase_8065560D = "";
+#pragma pop
+
+/* 80655610-806556D4 00C4+00 s=1 e=0 z=0  None .data      aParam$localstatic3$__ct__17daBalloon2D_HIO_cFv              */
+SECTION_DATA static u8 data_80655610[196] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0xC1, 0x20, 0x00, 0x00, 0x3F, 0x4C, 0xCC, 0xCD, 0x00, 0x00, 0x00, 0x00, 0xC1, 0x50, 0x00, 0x00,
+	0x3F, 0x8C, 0xCC, 0xCD, 0x3F, 0x66, 0x66, 0x66, 0x3F, 0x33, 0x33, 0x33, 0x00, 0x00, 0x00, 0x00,
+	0x41, 0x90, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0xC0, 0xD3, 0x33, 0x33, 0x40, 0xD3, 0x33, 0x33,
+	0x3F, 0xA6, 0x66, 0x66, 0xBF, 0xA6, 0x66, 0x66, 0x41, 0x13, 0x33, 0x33, 0x3F, 0x80, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x40, 0xD3, 0x33, 0x33, 0x3F, 0x8C, 0xCC, 0xCD, 0x3F, 0x66, 0x66, 0x66,
+	0x3F, 0x80, 0x00, 0x00, 0x40, 0x79, 0x99, 0x9A, 0xC1, 0x13, 0x33, 0x33, 0x3F, 0x59, 0x99, 0x9A,
+	0x3F, 0x4C, 0xCC, 0xCD, 0x40, 0xD3, 0x33, 0x33, 0x3F, 0xA6, 0x66, 0x66, 0x3F, 0x40, 0x00, 0x00,
+	0x3F, 0x66, 0x66, 0x66, 0x40, 0x79, 0x99, 0x9A, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x59, 0x99, 0x9A,
+	0x3F, 0x66, 0x66, 0x66, 0x40, 0x79, 0x99, 0x9A, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x73, 0x33, 0x33,
+	0x3F, 0x66, 0x66, 0x66, 0x41, 0xB0, 0x00, 0x00, 0xC1, 0x88, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
+	0x41, 0xA0, 0x00, 0x00,
+};
+
+/* 806556D4-806556D8 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+
+/* 806556D8-806556F8 0020+00 s=2 e=0 z=0  None .data      daBalloon2D_METHODS                                          */
+SECTION_DATA static void* daBalloon2D_METHODS[8] = {
+	/* 0    */ (void*)daBalloon2D_create__FP13daBalloon2D_c,
+	/* 1    */ (void*)daBalloon2D_destroy__FP13daBalloon2D_c,
+	/* 2    */ (void*)daBalloon2D_execute__FP13daBalloon2D_c,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)daBalloon2D_draw__FP13daBalloon2D_c,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+};
 
 /* 80653538-80653D24 07EC+00 s=1 e=0 z=0  None .text      createHeap__13daBalloon2D_cFv                                */
 #pragma push
@@ -176,6 +373,16 @@ asm void daBalloon2D_c::createHeap() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80655770-8065577C 000C+00 s=1 e=0 z=0  None .bss       @3779                                                        */
+static u8 lit_3779[12];
+
+/* 8065577C-80655844 00C8+00 s=3 e=0 z=0  None .bss       l_HOSTIO                                                     */
+static u8 l_HOSTIO[200];
+
+/* 80655844-80655848 0004+00 s=2 e=0 z=0  None .bss       myclass__13daBalloon2D_c                                     */
+static u8 myclass__13daBalloon2D_c[4];
 
 /* 80653D24-80653DB4 0090+00 s=1 e=0 z=0  None .text      create__13daBalloon2D_cFv                                    */
 #pragma push
@@ -232,7 +439,7 @@ asm void daBalloon2D_c::drawMeter() {
 #pragma pop
 
 
-/* 80653F58-80653FC0 0068+00 s=0 e=0 z=0  None .text      setComboCount__13daBalloon2D_cFUcUc                          */
+/* 80653F58-80653FC0 0068+00 s=0 e=0 z=1  None .text      setComboCount__13daBalloon2D_cFUcUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -243,7 +450,7 @@ asm void daBalloon2D_c::setComboCount(u8 param_0, u8 param_1) {
 #pragma pop
 
 
-/* 80653FC0-80653FEC 002C+00 s=0 e=0 z=0  None .text      setScoreCount__13daBalloon2D_cFUl                            */
+/* 80653FC0-80653FEC 002C+00 s=0 e=0 z=2  None .text      setScoreCount__13daBalloon2D_cFUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -254,7 +461,7 @@ asm void daBalloon2D_c::setScoreCount(u32 param_0) {
 #pragma pop
 
 
-/* 80653FEC-806540B4 00C8+00 s=0 e=0 z=0  None .text      addScoreCount__13daBalloon2D_cFP4cXyzUlUc                    */
+/* 80653FEC-806540B4 00C8+00 s=0 e=0 z=1  None .text      addScoreCount__13daBalloon2D_cFP4cXyzUlUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -364,18 +571,57 @@ asm void daBalloon2D_c::setHIO(bool param_0) {
 #pragma pop
 
 
-/* 80655250-80655304 00B4+00 s=0 e=0 z=0  None .text      daBalloon2D_create__FP13daBalloon2D_c                        */
+/* ############################################################################################## */
+/* 806556F8-80655728 0030+00 s=0 e=0 z=1  None .data      g_profile_BALLOON2D                                          */
+SECTION_DATA void* g_profile_BALLOON2D[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0003FFFD,
+	/* 2    */ (void*)0x005A0000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x00000748,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x02FD0000,
+	/* 9    */ (void*)&daBalloon2D_METHODS,
+	/* 10   */ (void*)0x00040000,
+	/* 11   */ (void*)NULL,
+};
+
+/* 80655728-80655734 000C+00 s=1 e=0 z=0  None .data      __vt__12dDlst_base_c                                         */
+SECTION_DATA static void* __vt__12dDlst_base_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)draw__12dDlst_base_cFv,
+};
+
+/* 80655734-80655740 000C+00 s=2 e=0 z=0  None .data      __vt__13daBalloon2D_c                                        */
+SECTION_DATA static void* __vt__13daBalloon2D_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__13daBalloon2D_cFv,
+};
+
+/* 80655740-80655750 0010+00 s=3 e=0 z=0  None .data      __vt__Q213daBalloon2D_c6c_list                               */
+SECTION_DATA static void* __vt__Q213daBalloon2D_c6c_list[4] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)draw__Q213daBalloon2D_c6c_listFv,
+	/* 3    */ (void*)__dt__Q213daBalloon2D_c6c_listFv,
+};
+
+/* 80655250-80655304 00B4+00 s=1 e=0 z=0  None .text      daBalloon2D_create__FP13daBalloon2D_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBalloon2D_create(daBalloon2D_c* param_0) {
+asm static void daBalloon2D_create(daBalloon2D_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_balloon_2D/d_a_balloon_2D/daBalloon2D_create__FP13daBalloon2D_c.s"
 }
 #pragma pop
 
 
-/* 80655304-80655340 003C+00 s=0 e=0 z=0  None .text      __dt__Q213daBalloon2D_c10CHeadScoreFv                        */
+/* 80655304-80655340 003C+00 s=2 e=0 z=0  None .text      __dt__Q213daBalloon2D_c10CHeadScoreFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -386,7 +632,7 @@ asm daBalloon2D_c::CHeadScore::~CHeadScore() {
 #pragma pop
 
 
-/* 80655340-80655344 0004+00 s=0 e=0 z=0  None .text      __ct__Q213daBalloon2D_c10CHeadScoreFv                        */
+/* 80655340-80655344 0004+00 s=1 e=0 z=0  None .text      __ct__Q213daBalloon2D_c10CHeadScoreFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -397,40 +643,40 @@ asm daBalloon2D_c::CHeadScore::CHeadScore() {
 #pragma pop
 
 
-/* 80655344-80655364 0020+00 s=0 e=0 z=0  None .text      daBalloon2D_destroy__FP13daBalloon2D_c                       */
+/* 80655344-80655364 0020+00 s=1 e=0 z=0  None .text      daBalloon2D_destroy__FP13daBalloon2D_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBalloon2D_destroy(daBalloon2D_c* param_0) {
+asm static void daBalloon2D_destroy(daBalloon2D_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_balloon_2D/d_a_balloon_2D/daBalloon2D_destroy__FP13daBalloon2D_c.s"
 }
 #pragma pop
 
 
-/* 80655364-80655384 0020+00 s=0 e=0 z=0  None .text      daBalloon2D_execute__FP13daBalloon2D_c                       */
+/* 80655364-80655384 0020+00 s=1 e=0 z=0  None .text      daBalloon2D_execute__FP13daBalloon2D_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBalloon2D_execute(daBalloon2D_c* param_0) {
+asm static void daBalloon2D_execute(daBalloon2D_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_balloon_2D/d_a_balloon_2D/daBalloon2D_execute__FP13daBalloon2D_c.s"
 }
 #pragma pop
 
 
-/* 80655384-806553A4 0020+00 s=0 e=0 z=0  None .text      daBalloon2D_draw__FP13daBalloon2D_c                          */
+/* 80655384-806553A4 0020+00 s=1 e=0 z=0  None .text      daBalloon2D_draw__FP13daBalloon2D_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBalloon2D_draw(daBalloon2D_c* param_0) {
+asm static void daBalloon2D_draw(daBalloon2D_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_balloon_2D/d_a_balloon_2D/daBalloon2D_draw__FP13daBalloon2D_c.s"
 }
 #pragma pop
 
 
-/* 806553A4-806553A8 0004+00 s=0 e=0 z=0  None .text      draw__12dDlst_base_cFv                                       */
+/* 806553A4-806553A8 0004+00 s=1 e=0 z=0  None .text      draw__12dDlst_base_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -441,7 +687,22 @@ asm void dDlst_base_c::draw() {
 #pragma pop
 
 
-/* 806553A8-80655404 005C+00 s=0 e=0 z=0  None .text      __dt__17daBalloon2D_HIO_cFv                                  */
+/* ############################################################################################## */
+/* 80655750-8065575C 000C+00 s=2 e=0 z=0  None .data      __vt__17daBalloon2D_HIO_c                                    */
+SECTION_DATA static void* __vt__17daBalloon2D_HIO_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__17daBalloon2D_HIO_cFv,
+};
+
+/* 8065575C-80655768 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
+SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__14mDoHIO_entry_cFv,
+};
+
+/* 806553A8-80655404 005C+00 s=2 e=0 z=0  None .text      __dt__17daBalloon2D_HIO_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -452,7 +713,7 @@ asm daBalloon2D_HIO_c::~daBalloon2D_HIO_c() {
 #pragma pop
 
 
-/* 80655404-8065544C 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80655404-8065544C 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -463,7 +724,7 @@ asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 #pragma pop
 
 
-/* 8065544C-80655494 0048+00 s=0 e=0 z=0  None .text      __dt__Q213daBalloon2D_c6c_listFv                             */
+/* 8065544C-80655494 0048+00 s=1 e=0 z=0  None .text      __dt__Q213daBalloon2D_c6c_listFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -474,7 +735,7 @@ asm daBalloon2D_c::c_list::~c_list() {
 #pragma pop
 
 
-/* 80655494-80655524 0090+00 s=0 e=0 z=0  None .text      __dt__13daBalloon2D_cFv                                      */
+/* 80655494-80655524 0090+00 s=1 e=0 z=0  None .text      __dt__13daBalloon2D_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -485,7 +746,7 @@ asm daBalloon2D_c::~daBalloon2D_c() {
 #pragma pop
 
 
-/* 80655524-80655598 0074+00 s=0 e=0 z=0  None .text      __sinit_d_a_balloon_2D_cpp                                   */
+/* 80655524-80655598 0074+00 s=0 e=1 z=0  None .text      __sinit_d_a_balloon_2D_cpp                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -495,143 +756,4 @@ extern "C" asm void __sinit_d_a_balloon_2D_cpp() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 806555AC-806555B0 0004+00 s=0 e=0 z=0  None .rodata    @3896                                                        */
-SECTION_RODATA u8 const lit_3896[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 806555B0-806555B4 0004+00 s=0 e=0 z=0  None .rodata    @4064                                                        */
-SECTION_RODATA u32 const lit_4064 = 0x3F800000;
-
-/* 806555B4-806555B8 0004+00 s=0 e=0 z=0  None .rodata    @4065                                                        */
-SECTION_RODATA u32 const lit_4065 = 0x3ECCCCCD;
-
-/* 806555B8-806555BC 0004+00 s=0 e=0 z=0  None .rodata    @4066                                                        */
-SECTION_RODATA u32 const lit_4066 = 0x3F000000;
-
-/* 806555BC-806555C0 0004+00 s=0 e=0 z=0  None .rodata    @4067                                                        */
-SECTION_RODATA u32 const lit_4067 = 0x3DCCCCCD;
-
-/* 806555C0-806555C4 0004+00 s=0 e=0 z=0  None .rodata    @4165                                                        */
-SECTION_RODATA u32 const lit_4165 = 0x41F00000;
-
-/* 806555C4-806555C8 0004+00 s=0 e=0 z=0  None .rodata    @4166                                                        */
-SECTION_RODATA u32 const lit_4166 = 0x3E99999A;
-
-/* 806555C8-806555CC 0004+00 s=0 e=0 z=0  None .rodata    @4167                                                        */
-SECTION_RODATA u32 const lit_4167 = 0x41200000;
-
-/* 806555CC-806555D0 0004+00 s=0 e=0 z=0  None .rodata    @4168                                                        */
-SECTION_RODATA u32 const lit_4168 = 0x437F0000;
-
-/* 806555D0-806555D4 0004+00 s=0 e=0 z=0  None .rodata    @4169                                                        */
-SECTION_RODATA u32 const lit_4169 = 0x40C00000;
-
-/* 806555D4-806555D8 0004+00 s=0 e=0 z=0  None .rodata    @4170                                                        */
-SECTION_RODATA u32 const lit_4170 = 0x40000000;
-
-/* 806555D8-806555DC 0004+00 s=0 e=0 z=0  None .rodata    @4171                                                        */
-SECTION_RODATA u32 const lit_4171 = 0x40400000;
-
-/* 806555DC-806555E0 0004+00 s=0 e=0 z=0  None .rodata    @4172                                                        */
-SECTION_RODATA u32 const lit_4172 = 0x40800000;
-
-/* 806555E0-806555E4 0004+00 s=0 e=0 z=0  None .rodata    @4173                                                        */
-SECTION_RODATA u32 const lit_4173 = 0x40A00000;
-
-/* 806555E4-806555EC 0008+00 s=0 e=0 z=0  None .rodata    @4175                                                        */
-SECTION_RODATA u8 const lit_4175[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 806555EC-8065560E 0022+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_806555EC = "Balloon2D";
-SECTION_DEAD char const* const stringBase_806555F6 = "zelda_balloon_game.blo";
-SECTION_DEAD char const* const stringBase_8065560D = "";
-#pragma pop
-
-/* 80655610-806556D4 00C4+00 s=0 e=0 z=0  None .data      aParam$localstatic3$__ct__17daBalloon2D_HIO_cFv              */
-SECTION_DATA u8 data_80655610[196] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0xC1, 0x20, 0x00, 0x00, 0x3F, 0x4C, 0xCC, 0xCD, 0x00, 0x00, 0x00, 0x00, 0xC1, 0x50, 0x00, 0x00,
-	0x3F, 0x8C, 0xCC, 0xCD, 0x3F, 0x66, 0x66, 0x66, 0x3F, 0x33, 0x33, 0x33, 0x00, 0x00, 0x00, 0x00,
-	0x41, 0x90, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0xC0, 0xD3, 0x33, 0x33, 0x40, 0xD3, 0x33, 0x33,
-	0x3F, 0xA6, 0x66, 0x66, 0xBF, 0xA6, 0x66, 0x66, 0x41, 0x13, 0x33, 0x33, 0x3F, 0x80, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x40, 0xD3, 0x33, 0x33, 0x3F, 0x8C, 0xCC, 0xCD, 0x3F, 0x66, 0x66, 0x66,
-	0x3F, 0x80, 0x00, 0x00, 0x40, 0x79, 0x99, 0x9A, 0xC1, 0x13, 0x33, 0x33, 0x3F, 0x59, 0x99, 0x9A,
-	0x3F, 0x4C, 0xCC, 0xCD, 0x40, 0xD3, 0x33, 0x33, 0x3F, 0xA6, 0x66, 0x66, 0x3F, 0x40, 0x00, 0x00,
-	0x3F, 0x66, 0x66, 0x66, 0x40, 0x79, 0x99, 0x9A, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x59, 0x99, 0x9A,
-	0x3F, 0x66, 0x66, 0x66, 0x40, 0x79, 0x99, 0x9A, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x73, 0x33, 0x33,
-	0x3F, 0x66, 0x66, 0x66, 0x41, 0xB0, 0x00, 0x00, 0xC1, 0x88, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
-	0x41, 0xA0, 0x00, 0x00,
-};
-
-/* 806556D4-806556D8 0004+00 s=0 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA u8 l_arcName[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 806556D8-806556F8 0020+00 s=0 e=0 z=0  None .data      daBalloon2D_METHODS                                          */
-SECTION_DATA u8 daBalloon2D_METHODS[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 806556F8-80655728 0030+00 s=0 e=0 z=0  None .data      g_profile_BALLOON2D                                          */
-SECTION_DATA u8 g_profile_BALLOON2D[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x03, 0xFF, 0xFD, 0x00, 0x5A, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x07, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x02, 0xFD, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80655728-80655734 000C+00 s=0 e=0 z=0  None .data      __vt__12dDlst_base_c                                         */
-SECTION_DATA void* __vt__12dDlst_base_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 80655734-80655740 000C+00 s=0 e=0 z=0  None .data      __vt__13daBalloon2D_c                                        */
-SECTION_DATA void* __vt__13daBalloon2D_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 80655740-80655750 0010+00 s=0 e=0 z=0  None .data      __vt__Q213daBalloon2D_c6c_list                               */
-SECTION_DATA void* __vt__Q213daBalloon2D_c6c_list[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-};
-
-/* 80655750-8065575C 000C+00 s=0 e=0 z=0  None .data      __vt__17daBalloon2D_HIO_c                                    */
-SECTION_DATA void* __vt__17daBalloon2D_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 8065575C-80655768 000C+00 s=0 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
-SECTION_DATA void* __vt__14mDoHIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 80655770-8065577C 000C+00 s=0 e=0 z=0  None .bss       @3779                                                        */
-u8 lit_3779[12];
-
-/* 8065577C-80655844 00C8+00 s=0 e=0 z=0  None .bss       l_HOSTIO                                                     */
-u8 l_HOSTIO[200];
-
-/* 80655844-80655848 0004+00 s=0 e=0 z=0  None .bss       myclass__13daBalloon2D_c                                     */
-u8 myclass__13daBalloon2D_c[4];
 

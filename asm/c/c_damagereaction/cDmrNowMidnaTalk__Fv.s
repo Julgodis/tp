@@ -7,7 +7,7 @@ lbl_800182A8:
 /* 800182BC 00000014  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 800182C0 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 800182C4 0000001C  41 82 00 50 */	beq lbl_80018314
-/* 800182C8 00000020  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 800182C8 00000020  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 800182CC 00000024  48 00 38 49 */	bl fopAcM_getTalkEventPartner__FPC10fopAc_ac_c
 /* 800182D0 00000028  28 03 00 00 */	cmplwi r3, 0
 /* 800182D4 0000002C  41 82 00 40 */	beq lbl_80018314

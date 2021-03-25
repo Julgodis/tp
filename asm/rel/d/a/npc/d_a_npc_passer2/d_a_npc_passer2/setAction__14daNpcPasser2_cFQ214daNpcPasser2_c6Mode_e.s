@@ -7,8 +7,8 @@ lbl_80AA755C:
 /* 80AA7570 00000014  90 83 0A 1C */	stw r4, 0xa1c(r3)
 /* 80AA7574 00000018  80 03 0A 1C */	lwz r0, 0xa1c(r3)
 /* 80AA7578 0000001C  1C A0 00 18 */	mulli r5, r0, 0x18
-/* 80AA757C 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80AA7580 00000024  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
+/* 80AA757C 00000020  3C 80 80 AB */	lis r4, ActionTable__14daNpcPasser2_c@ha
+/* 80AA7580 00000024  38 04 8A A0 */	addi r0, r4, ActionTable__14daNpcPasser2_c@l
 /* 80AA7584 00000028  7C 00 2A 14 */	add r0, r0, r5
 /* 80AA7588 0000002C  90 03 0A 18 */	stw r0, 0xa18(r3)
 /* 80AA758C 00000030  48 00 00 15 */	bl callInit__14daNpcPasser2_cFv

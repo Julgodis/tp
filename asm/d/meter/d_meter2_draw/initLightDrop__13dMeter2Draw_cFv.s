@@ -153,7 +153,7 @@ lbl_80212390:
 /* 802123C4 00000034  38 C6 EB C8 */	addi r6, r6, g_drawHIO@l
 /* 802123C8 00000038  C0 26 0E 8C */	lfs f1, 0xe8c(r6)	/* effective address: 8042FA54 */
 /* 802123CC 0000003C  C0 46 0E 94 */	lfs f2, 0xe94(r6)	/* effective address: 8042FA5C */
-/* 802123D0 00000040  C0 7F 0E 84 */	lfs f3, 0xe84(r31)
+/* 802123D0 00000040  C0 7F 0E 84 */	lfs f3, 0xe84(r31)	/* effective address: 8042FA4C */
 /* 802123D4 00000044  C0 86 0E A4 */	lfs f4, 0xea4(r6)	/* effective address: 8042FA6C */
 /* 802123D8 00000048  38 C0 00 00 */	li r6, 0
 /* 802123DC 0000004C  48 00 37 3D */	bl drawLightDrop__13dMeter2Draw_cFUcUcffffUc

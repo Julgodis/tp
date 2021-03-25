@@ -2,10 +2,10 @@ lbl_806EB05C:
 /* 806EB05C 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 806EB060 00000004  7C 08 02 A6 */	mflr r0
 /* 806EB064 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 806EB068 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 806EB06C 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 806EB070 00000014  80 63 5D AC */	lwz r3, 0x5dac(r3)
-/* 806EB074 00000018  81 83 06 28 */	lwz r12, 0x628(r3)
+/* 806EB068 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806EB06C 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806EB070 00000014  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 806EB074 00000018  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
 /* 806EB078 0000001C  81 8C 01 A4 */	lwz r12, 0x1a4(r12)
 /* 806EB07C 00000020  7D 89 03 A6 */	mtctr r12
 /* 806EB080 00000024  4E 80 04 21 */	bctrl 

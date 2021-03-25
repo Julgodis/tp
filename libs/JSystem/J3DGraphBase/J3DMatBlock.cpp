@@ -186,13 +186,13 @@ struct J3DTevBlockNull {
 	/* 803176D4 */ void initialize();
 };
 
-struct J3DGXColorS10 {
-};
-
 struct J3DIndTevStage {
 };
 
-struct J3DTevStage {
+struct J3DTevOrder {
+};
+
+struct J3DGXColorS10 {
 };
 
 struct J3DTevSwapModeInfo {
@@ -201,7 +201,7 @@ struct J3DTevSwapModeInfo {
 struct J3DTevSwapModeTable {
 };
 
-struct J3DTevOrder {
+struct J3DTevStage {
 };
 
 struct J3DTevBlock {
@@ -506,18 +506,18 @@ struct J3DTevBlock16 {
 	/* 80321F84 */ ~J3DTevBlock16();
 };
 
-struct J3DIndTexOrder {
-};
-
-struct J3DIndBlock {
+struct J3DIndTexCoordScale {
+	/* 8000E024 */ ~J3DIndTexCoordScale();
 };
 
 struct J3DIndTexMtx {
 	/* 8000E064 */ ~J3DIndTexMtx();
 };
 
-struct J3DIndTexCoordScale {
-	/* 8000E024 */ ~J3DIndTexCoordScale();
+struct J3DIndTexOrder {
+};
+
+struct J3DIndBlock {
 };
 
 struct J3DIndBlockFull {
@@ -544,13 +544,13 @@ struct J3DIndBlockFull {
 struct J3DAlphaComp {
 };
 
-struct J3DBlend {
+struct J3DFog {
 };
 
 struct J3DZMode {
 };
 
-struct J3DFog {
+struct J3DBlend {
 };
 
 struct J3DPEBlock {
@@ -1171,7 +1171,7 @@ extern "C" void setIndTevStage__11J3DTevBlockFUlPC14J3DIndTevStage(); // 1
 extern "C" void getTexNoOffset__11J3DTevBlockCFv(); // 1
 extern "C" void getType__21J3DColorBlockLightOffFv(); // 1
 extern "C" void __sinit_J3DMatBlock_cpp(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const J3DMatBlock__stringBase0;
 extern "C" extern void* __vt__14J3DPEBlockFull[31];
 extern "C" extern void* __vt__16J3DPEBlockFogOff[31];
 extern "C" extern void* __vt__13J3DTevBlock16[55];

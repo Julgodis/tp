@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct JAISeqDataRegion {
-};
-
 struct JAISoundParamsMove {
 };
 
-struct JAISoundActivity {
+struct JAISeqDataRegion {
 };
 
 struct JAISoundID {
+};
+
+struct JAISoundActivity {
 };
 
 struct JAISeCategoryMgr {
@@ -46,15 +46,6 @@ struct JASMemPool__template0 {
 	/* 8029FC34 */ ~JASMemPool__template0();
 };
 
-struct JAISeqDataMgr {
-};
-
-struct JAIAudience {
-};
-
-struct JAISeCategoryArrangement {
-};
-
 struct JAISoundHandle {
 };
 
@@ -65,6 +56,15 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISeCategoryArrangement {
+};
+
+struct JAISeqDataMgr {
+};
+
+struct JAIAudience {
 };
 
 struct JAISeMgr {
@@ -168,7 +168,7 @@ extern "C" void func_802A0768(); // 1
 extern "C" void getNumActiveSe__8JAISeMgrCFv(); // 1
 extern "C" void __dt__8JAISeMgrFv(); // 1
 extern "C" void __ct__16JAISeCategoryMgrFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JAISeMgr__stringBase0;
 extern "C" extern void* __vt__8JAISeMgr[5];
 extern "C" extern void* __vt__16JAISeCategoryMgr[5];
 extern "C" extern u8 data_80434084[16 + 4 /* padding */];

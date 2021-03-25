@@ -136,7 +136,7 @@ extern "C" void setZoneNo__20dStage_roomControl_cFii(); // 1
 extern "C" static void phase_3__FP19room_of_scene_class(); // 1
 extern "C" static void phase_4__FP19room_of_scene_class(); // 1
 extern "C" static void dScnRoom_Create__FP11scene_class(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_s_d_s_room__stringBase0;
 extern "C" extern void* g_profile_ROOM_SCENE[10];
 
 // 
@@ -488,7 +488,7 @@ SECTION_DATA static void* l_dScnRoom_Method[5] = {
 	/* 4    */ (void*)dScnRoom_Draw__FP19room_of_scene_class,
 };
 
-/* 803C3288-803C32B0 0028+00 s=0 e=0 z=0  None .data      g_profile_ROOM_SCENE                                         */
+/* 803C3288-803C32B0 0028+00 s=0 e=0 z=1  None .data      g_profile_ROOM_SCENE                                         */
 SECTION_DATA void* g_profile_ROOM_SCENE[10] = {
 	/* 0    */ (void*)0xFFFFFFFD,
 	/* 1    */ (void*)0x0000FFFD,

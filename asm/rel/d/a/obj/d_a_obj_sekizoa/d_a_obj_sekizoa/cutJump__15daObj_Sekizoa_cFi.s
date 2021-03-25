@@ -3,29 +3,29 @@ lbl_80CD2908:
 /* 80CD290C 00000004  7C 08 02 A6 */	mflr r0
 /* 80CD2910 00000008  90 01 00 54 */	stw r0, 0x54(r1)
 /* 80CD2914 0000000C  39 61 00 50 */	addi r11, r1, 0x50
-/* 80CD2918 00000010  4B FF B9 A1 */	bl _unresolved
+/* 80CD2918 00000010  4B 68 F8 B8 */	b _savegpr_26
 /* 80CD291C 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 80CD2920 00000018  7C 9A 23 78 */	mr r26, r4
-/* 80CD2924 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CD2928 00000020  3B A3 00 00 */	addi r29, r3, 0x0000 /* 0x00000000@l */
+/* 80CD2924 0000001C  3C 60 80 CD */	lis r3, m__21daObj_Sekizoa_Param_c@ha
+/* 80CD2928 00000020  3B A3 5C FC */	addi r29, r3, m__21daObj_Sekizoa_Param_c@l
 /* 80CD292C 00000024  3B 80 00 00 */	li r28, 0
 /* 80CD2930 00000028  3B 60 FF FF */	li r27, -1
-/* 80CD2934 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CD2938 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CD2934 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CD2938 00000030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CD293C 00000034  3B C3 4F F8 */	addi r30, r3, 0x4ff8
 /* 80CD2940 00000038  7F C3 F3 78 */	mr r3, r30
-/* 80CD2944 0000003C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 80CD2948 00000040  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
+/* 80CD2944 0000003C  3C A0 80 CD */	lis r5, struct_80CD5E64+0x0@ha
+/* 80CD2948 00000040  38 A5 5E 64 */	addi r5, r5, struct_80CD5E64+0x0@l
 /* 80CD294C 00000044  38 A5 00 5F */	addi r5, r5, 0x5f
 /* 80CD2950 00000048  38 C0 00 03 */	li r6, 3
-/* 80CD2954 0000004C  4B FF B9 65 */	bl _unresolved
+/* 80CD2954 0000004C  4B 37 57 98 */	b getMySubstanceP__16dEvent_manager_cFiPCci
 /* 80CD2958 00000050  28 03 00 00 */	cmplwi r3, 0
 /* 80CD295C 00000054  41 82 00 08 */	beq lbl_80CD2964
 /* 80CD2960 00000058  83 63 00 00 */	lwz r27, 0(r3)
 lbl_80CD2964:
 /* 80CD2964 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80CD2968 00000004  7F 44 D3 78 */	mr r4, r26
-/* 80CD296C 00000008  4B FF B9 4D */	bl _unresolved
+/* 80CD296C 00000008  4B 37 53 E0 */	b getIsAddvance__16dEvent_manager_cFi
 /* 80CD2970 0000000C  2C 03 00 00 */	cmpwi r3, 0
 /* 80CD2974 00000010  41 82 00 20 */	beq lbl_80CD2994
 /* 80CD2978 00000014  2C 1B 00 01 */	cmpwi r27, 1
@@ -67,7 +67,7 @@ lbl_80CD29E8:
 lbl_80CD29F0:
 /* 80CD29F0 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80CD29F4 00000004  4B FF E5 21 */	bl jump__15daObj_Sekizoa_cFv
-/* 80CD29F8 00000008  C0 1D 00 C0 */	lfs f0, 0xc0(r29)
+/* 80CD29F8 00000008  C0 1D 00 C0 */	lfs f0, 0xc0(r29)	/* effective address: 80CD5DBC */
 /* 80CD29FC 0000000C  D0 1F 05 30 */	stfs f0, 0x530(r31)
 /* 80CD2A00 00000010  D0 1F 05 2C */	stfs f0, 0x52c(r31)
 /* 80CD2A04 00000014  D0 1F 04 F8 */	stfs f0, 0x4f8(r31)
@@ -83,16 +83,16 @@ lbl_80CD2A24:
 /* 80CD2A28 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 80CD2A2C 00000008  40 82 01 18 */	bne lbl_80CD2B44
 /* 80CD2A30 0000000C  38 7F 10 E4 */	addi r3, r31, 0x10e4
-/* 80CD2A34 00000010  4B FF B8 85 */	bl _unresolved
+/* 80CD2A34 00000010  4B 47 2C D4 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80CD2A38 00000014  7C 7C 1B 78 */	mr r28, r3
-/* 80CD2A3C 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CD2A40 0000001C  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
-/* 80CD2A44 00000020  80 7E 5D AC */	lwz r3, 0x5dac(r30)
-/* 80CD2A48 00000024  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
+/* 80CD2A3C 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CD2A40 0000001C  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80CD2A44 00000020  80 7E 5D AC */	lwz r3, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 80CD2A48 00000024  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 804004D0 */
 /* 80CD2A4C 00000028  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 80CD2A50 0000002C  C0 03 04 D4 */	lfs f0, 0x4d4(r3)
+/* 80CD2A50 0000002C  C0 03 04 D4 */	lfs f0, 0x4d4(r3)	/* effective address: 804004D4 */
 /* 80CD2A54 00000030  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 80CD2A58 00000034  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
+/* 80CD2A58 00000034  C0 03 04 D8 */	lfs f0, 0x4d8(r3)	/* effective address: 804004D8 */
 /* 80CD2A5C 00000038  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 80CD2A60 0000003C  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)
 /* 80CD2A64 00000040  D0 01 00 2C */	stfs f0, 0x2c(r1)
@@ -103,14 +103,14 @@ lbl_80CD2A24:
 /* 80CD2A78 00000054  7F E3 FB 78 */	mr r3, r31
 /* 80CD2A7C 00000058  38 81 00 20 */	addi r4, r1, 0x20
 /* 80CD2A80 0000005C  38 A1 00 2C */	addi r5, r1, 0x2c
-/* 80CD2A84 00000060  C0 3D 01 40 */	lfs f1, 0x140(r29)
-/* 80CD2A88 00000064  C0 5D 01 30 */	lfs f2, 0x130(r29)
-/* 80CD2A8C 00000068  C0 7D 01 34 */	lfs f3, 0x134(r29)
+/* 80CD2A84 00000060  C0 3D 01 40 */	lfs f1, 0x140(r29)	/* effective address: 80CD5E3C */
+/* 80CD2A88 00000064  C0 5D 01 30 */	lfs f2, 0x130(r29)	/* effective address: 80CD5E2C */
+/* 80CD2A8C 00000068  C0 7D 01 34 */	lfs f3, 0x134(r29)	/* effective address: 80CD5E30 */
 /* 80CD2A90 0000006C  38 C0 00 00 */	li r6, 0
-/* 80CD2A94 00000070  4B FF B8 25 */	bl _unresolved
+/* 80CD2A94 00000070  4B 47 82 5C */	b chkPointInArea__8daNpcT_cF4cXyz4cXyzfffs
 /* 80CD2A98 00000074  2C 03 00 00 */	cmpwi r3, 0
 /* 80CD2A9C 00000078  40 82 00 60 */	bne lbl_80CD2AFC
-/* 80CD2AA0 0000007C  80 7E 5D AC */	lwz r3, 0x5dac(r30)
+/* 80CD2AA0 0000007C  80 7E 5D AC */	lwz r3, 0x5dac(r30)	/* effective address: 8040BF6C */
 /* 80CD2AA4 00000080  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 80CD2AA8 00000084  D0 01 00 08 */	stfs f0, 8(r1)
 /* 80CD2AAC 00000088  C0 03 04 D4 */	lfs f0, 0x4d4(r3)
@@ -126,18 +126,18 @@ lbl_80CD2A24:
 /* 80CD2AD4 000000B0  7F 83 E3 78 */	mr r3, r28
 /* 80CD2AD8 000000B4  38 81 00 08 */	addi r4, r1, 8
 /* 80CD2ADC 000000B8  38 A1 00 14 */	addi r5, r1, 0x14
-/* 80CD2AE0 000000BC  C0 3D 01 40 */	lfs f1, 0x140(r29)
-/* 80CD2AE4 000000C0  C0 5D 01 30 */	lfs f2, 0x130(r29)
-/* 80CD2AE8 000000C4  C0 7D 01 34 */	lfs f3, 0x134(r29)
+/* 80CD2AE0 000000BC  C0 3D 01 40 */	lfs f1, 0x140(r29)	/* effective address: 80CD5E3C */
+/* 80CD2AE4 000000C0  C0 5D 01 30 */	lfs f2, 0x130(r29)	/* effective address: 80CD5E2C */
+/* 80CD2AE8 000000C4  C0 7D 01 34 */	lfs f3, 0x134(r29)	/* effective address: 80CD5E30 */
 /* 80CD2AEC 000000C8  38 C0 00 00 */	li r6, 0
-/* 80CD2AF0 000000CC  4B FF B7 C9 */	bl _unresolved
+/* 80CD2AF0 000000CC  4B 47 82 00 */	b chkPointInArea__8daNpcT_cF4cXyz4cXyzfffs
 /* 80CD2AF4 000000D0  2C 03 00 00 */	cmpwi r3, 0
 /* 80CD2AF8 000000D4  41 82 00 1C */	beq lbl_80CD2B14
 lbl_80CD2AFC:
 /* 80CD2AFC 00000000  38 00 00 03 */	li r0, 3
 /* 80CD2B00 00000004  B0 1F 0E 30 */	sth r0, 0xe30(r31)
 /* 80CD2B04 00000008  7F E3 FB 78 */	mr r3, r31
-/* 80CD2B08 0000000C  4B FF B7 B1 */	bl _unresolved
+/* 80CD2B08 0000000C  4B 47 77 1C */	b evtChange__8daNpcT_cFv
 /* 80CD2B0C 00000010  38 60 00 00 */	li r3, 0
 /* 80CD2B10 00000014  48 00 00 3C */	b lbl_80CD2B4C
 lbl_80CD2B14:
@@ -152,14 +152,14 @@ lbl_80CD2B14:
 /* 80CD2B34 00000020  38 00 00 06 */	li r0, 6
 /* 80CD2B38 00000024  B0 1F 0E 30 */	sth r0, 0xe30(r31)
 /* 80CD2B3C 00000028  7F E3 FB 78 */	mr r3, r31
-/* 80CD2B40 0000002C  4B FF B7 79 */	bl _unresolved
+/* 80CD2B40 0000002C  4B 47 76 E4 */	b evtChange__8daNpcT_cFv
 lbl_80CD2B44:
 /* 80CD2B44 00000000  3B 80 00 01 */	li r28, 1
 lbl_80CD2B48:
 /* 80CD2B48 00000000  7F 83 E3 78 */	mr r3, r28
 lbl_80CD2B4C:
 /* 80CD2B4C 00000000  39 61 00 50 */	addi r11, r1, 0x50
-/* 80CD2B50 00000004  4B FF B7 69 */	bl _unresolved
+/* 80CD2B50 00000004  4B 68 F6 CC */	b _restgpr_26
 /* 80CD2B54 00000008  80 01 00 54 */	lwz r0, 0x54(r1)
 /* 80CD2B58 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80CD2B5C 00000010  38 21 00 50 */	addi r1, r1, 0x50

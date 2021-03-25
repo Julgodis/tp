@@ -92,7 +92,7 @@ lbl_80054954:
 /* 800549A4 00000050  48 21 F0 A1 */	bl clip__11J3DUClipperCFPA4_CfP3VecP3Vec
 /* 800549A8 00000054  7C 7F 1B 78 */	mr r31, r3
 /* 800549AC 00000058  C0 0D 86 F0 */	lfs f0, mSystemFar__14mDoLib_clipper(r13)
-/* 800549B0 0000005C  D0 1E 00 58 */	stfs f0, 0x58(r30)
+/* 800549B0 0000005C  D0 1E 00 58 */	stfs f0, 0x58(r30)	/* effective address: 803DD93C */
 /* 800549B4 00000060  3C 60 80 3E */	lis r3, mClipper__14mDoLib_clipper@ha
 /* 800549B8 00000064  38 63 D8 E4 */	addi r3, r3, mClipper__14mDoLib_clipper@l
 /* 800549BC 00000068  48 21 ED D1 */	bl calcViewFrustum__11J3DUClipperFv

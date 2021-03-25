@@ -13,7 +13,7 @@ lbl_80123C8C:
 /* 80123CB8 0000002C  3B 80 00 FF */	li r28, 0xff
 /* 80123CBC 00000030  48 00 00 3C */	b lbl_80123CF8
 lbl_80123CC0:
-/* 80123CC0 00000000  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 80123CC0 00000000  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 80123CC4 00000004  38 63 02 10 */	addi r3, r3, 0x210
 /* 80123CC8 00000008  80 9A 31 B0 */	lwz r4, 0x31b0(r26)
 /* 80123CCC 0000000C  4B F2 7C 4D */	bl getEmitter__Q213dPa_control_c7level_cFUl

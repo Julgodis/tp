@@ -9,9 +9,9 @@ lbl_80C49BB8:
 /* 80C49BD4 0000001C  40 82 00 28 */	bne lbl_80C49BFC
 /* 80C49BD8 00000020  28 1F 00 00 */	cmplwi r31, 0
 /* 80C49BDC 00000024  41 82 00 14 */	beq lbl_80C49BF0
-/* 80C49BE0 00000028  4B FF DE B9 */	bl _unresolved
-/* 80C49BE4 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80C49BE8 00000030  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
+/* 80C49BE0 00000028  4B 42 EA 44 */	b __ct__16dBgS_MoveBgActorFv
+/* 80C49BE4 0000002C  3C 60 80 C5 */	lis r3, __vt__12daObjKshtr_c@ha
+/* 80C49BE8 00000030  38 03 A0 BC */	addi r0, r3, __vt__12daObjKshtr_c@l
 /* 80C49BEC 00000034  90 1F 05 9C */	stw r0, 0x59c(r31)
 lbl_80C49BF0:
 /* 80C49BF0 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)

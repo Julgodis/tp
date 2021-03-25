@@ -78,7 +78,7 @@ lbl_800E5DA4:
 /* 800E5DDC 00000038  B0 1F 30 0E */	sth r0, 0x300e(r31)
 /* 800E5DE0 0000003C  C0 62 92 B8 */	lfs f3, lit_6040(r2)
 /* 800E5DE4 00000040  C0 22 93 34 */	lfs f1, lit_7710(r2)
-/* 800E5DE8 00000044  C0 1E 00 94 */	lfs f0, 0x94(r30)
+/* 800E5DE8 00000044  C0 1E 00 94 */	lfs f0, 0x94(r30)	/* effective address: 8038ECDC */
 /* 800E5DEC 00000048  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800E5DF0 0000004C  EC 03 00 24 */	fdivs f0, f3, f0
 /* 800E5DF4 00000050  D0 1F 34 7C */	stfs f0, 0x347c(r31)

@@ -69,7 +69,7 @@ lbl_800195A4:
 /* 80019628 00000084  C0 22 81 E0 */	lfs f1, lit_4505(r2)
 /* 8001962C 00000088  48 03 3E A1 */	bl set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 80019630 0000008C  90 7E 05 94 */	stw r3, 0x594(r30)
-/* 80019634 00000090  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
+/* 80019634 00000090  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
 /* 80019638 00000094  38 00 00 FF */	li r0, 0xff
 /* 8001963C 00000098  90 01 00 08 */	stw r0, 8(r1)
 /* 80019640 0000009C  38 80 00 00 */	li r4, 0

@@ -41,9 +41,9 @@ lbl_801B6A00:
 /* 801B6A00 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801B6A04 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 801B6A08 00000008  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
-/* 801B6A0C 0000000C  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 801B6A0C 0000000C  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
 /* 801B6A10 00000010  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
-/* 801B6A14 00000014  90 1F 00 4C */	stw r0, 0x4c(r31)
+/* 801B6A14 00000014  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
 /* 801B6A18 00000018  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801B6A1C 0000001C  83 C1 00 08 */	lwz r30, 8(r1)
 /* 801B6A20 00000020  80 01 00 14 */	lwz r0, 0x14(r1)

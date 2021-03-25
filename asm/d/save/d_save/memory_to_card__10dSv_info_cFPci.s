@@ -32,10 +32,10 @@ lbl_80035798:
 /* 80035810 00000078  4B FF F1 AD */	bl isEventBit__11dSv_event_cCFUs
 /* 80035814 0000007C  7C 77 1B 78 */	mr r23, r3
 /* 80035818 00000080  7F A3 EB 78 */	mr r3, r29
-/* 8003581C 00000084  A0 99 01 C0 */	lhz r4, 0x1c0(r25)
+/* 8003581C 00000084  A0 99 01 C0 */	lhz r4, 0x1c0(r25)	/* effective address: 803A7448 */
 /* 80035820 00000088  4B FF F1 85 */	bl offEventBit__11dSv_event_cFUs
 /* 80035824 0000008C  7F A3 EB 78 */	mr r3, r29
-/* 80035828 00000090  A0 96 01 C2 */	lhz r4, 0x1c2(r22)
+/* 80035828 00000090  A0 96 01 C2 */	lhz r4, 0x1c2(r22)	/* effective address: 803A744A */
 /* 8003582C 00000094  4B FF F1 79 */	bl offEventBit__11dSv_event_cFUs
 /* 80035830 00000098  3A C0 00 01 */	li r22, 1
 lbl_80035834:
@@ -99,18 +99,18 @@ lbl_800358A8:
 /* 80035914 0000006C  7C 65 29 10 */	subfe r3, r5, r5
 /* 80035918 00000070  7C 63 00 D1 */	neg. r3, r3
 /* 8003591C 00000074  41 82 00 0C */	beq lbl_80035928
-/* 80035920 00000078  93 38 01 AC */	stw r25, 0x1ac(r24)
-/* 80035924 0000007C  93 58 01 A8 */	stw r26, 0x1a8(r24)
+/* 80035920 00000078  93 38 01 AC */	stw r25, 0x1ac(r24)	/* effective address: 8040636C */
+/* 80035924 0000007C  93 58 01 A8 */	stw r26, 0x1a8(r24)	/* effective address: 80406368 */
 lbl_80035928:
 /* 80035928 00000000  48 30 CD D5 */	bl OSGetTime
-/* 8003592C 00000004  90 98 00 2C */	stw r4, 0x2c(r24)
-/* 80035930 00000008  90 78 00 28 */	stw r3, 0x28(r24)
+/* 8003592C 00000004  90 98 00 2C */	stw r4, 0x2c(r24)	/* effective address: 804061EC */
+/* 80035930 00000008  90 78 00 28 */	stw r3, 0x28(r24)	/* effective address: 804061E8 */
 /* 80035934 0000000C  7F 83 E3 78 */	mr r3, r28
 /* 80035938 00000010  7F 04 C3 78 */	mr r4, r24
 /* 8003593C 00000014  38 A0 09 58 */	li r5, 0x958
 /* 80035940 00000018  4B FC DC 01 */	bl memcpy
-/* 80035944 0000001C  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 80035948 00000020  38 63 92 34 */	addi r3, r3, stringBase0@l
+/* 80035944 0000001C  3C 60 80 38 */	lis r3, d_save_d_save__stringBase0@ha
+/* 80035948 00000020  38 63 92 34 */	addi r3, r3, d_save_d_save__stringBase0@l
 /* 8003594C 00000024  38 63 00 29 */	addi r3, r3, 0x29
 /* 80035950 00000028  38 80 09 58 */	li r4, 0x958
 /* 80035954 0000002C  4C C6 31 82 */	crclr 6
@@ -147,8 +147,8 @@ lbl_800359A0:
 /* 800359C8 00000028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 800359CC 0000002C  B3 E3 00 08 */	sth r31, 8(r3)	/* effective address: 804061C8 */
 lbl_800359D0:
-/* 800359D0 00000000  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 800359D4 00000004  38 63 92 34 */	addi r3, r3, stringBase0@l
+/* 800359D0 00000000  3C 60 80 38 */	lis r3, d_save_d_save__stringBase0@ha
+/* 800359D4 00000004  38 63 92 34 */	addi r3, r3, d_save_d_save__stringBase0@l
 /* 800359D8 00000008  38 63 00 38 */	addi r3, r3, 0x38
 /* 800359DC 0000000C  38 80 09 58 */	li r4, 0x958
 /* 800359E0 00000010  4C C6 31 82 */	crclr 6

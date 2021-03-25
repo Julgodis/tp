@@ -51,8 +51,8 @@ lbl_801499EC:
 lbl_80149A38:
 /* 80149A38 00000000  38 7D 4F F8 */	addi r3, r29, 0x4ff8
 /* 80149A3C 00000004  4B EF E9 AD */	bl getRunEventName__16dEvent_manager_cFv
-/* 80149A40 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 80149A44 0000000C  38 84 27 10 */	addi r4, r4, stringBase0@l
+/* 80149A40 00000008  3C 80 80 39 */	lis r4, d_a_d_a_npc__stringBase0@ha
+/* 80149A44 0000000C  38 84 27 10 */	addi r4, r4, d_a_d_a_npc__stringBase0@l
 /* 80149A48 00000010  48 21 EF 4D */	bl strcmp
 /* 80149A4C 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 80149A50 00000018  40 82 00 38 */	bne lbl_80149A88

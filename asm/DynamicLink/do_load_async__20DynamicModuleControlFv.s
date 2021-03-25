@@ -21,8 +21,8 @@ lbl_80262B30:
 /* 80262B44 00000014  80 1F 00 28 */	lwz r0, 0x28(r31)
 /* 80262B48 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80262B4C 0000001C  40 82 00 1C */	bne lbl_80262B68
-/* 80262B50 00000020  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80262B54 00000024  38 63 A4 A0 */	addi r3, r3, stringBase0@l
+/* 80262B50 00000020  3C 60 80 3A */	lis r3, DynamicLink__stringBase0@ha
+/* 80262B54 00000024  38 63 A4 A0 */	addi r3, r3, DynamicLink__stringBase0@l
 /* 80262B58 00000028  38 63 01 DF */	addi r3, r3, 0x1df
 /* 80262B5C 0000002C  80 9F 00 1C */	lwz r4, 0x1c(r31)
 /* 80262B60 00000030  4C C6 31 82 */	crclr 6

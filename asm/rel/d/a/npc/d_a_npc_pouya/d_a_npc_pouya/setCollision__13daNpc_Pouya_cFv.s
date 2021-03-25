@@ -14,9 +14,9 @@ lbl_80AAF8E4:
 /* 80AAF914 00000014  3C 60 D8 FC */	lis r3, 0xD8FC /* 0xD8FBFDFF@ha */
 /* 80AAF918 00000018  38 83 FD FF */	addi r4, r3, 0xFDFF /* 0xD8FBFDFF@l */
 /* 80AAF91C 0000001C  38 A0 00 1F */	li r5, 0x1f
-/* 80AAF920 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AAF924 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80AAF928 00000028  88 03 4F AD */	lbz r0, 0x4fad(r3)
+/* 80AAF920 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AAF924 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AAF928 00000028  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 80AAF92C 0000002C  28 00 00 00 */	cmplwi r0, 0
 /* 80AAF930 00000030  41 82 00 10 */	beq lbl_80AAF940
 /* 80AAF934 00000034  38 80 00 00 */	li r4, 0
@@ -43,40 +43,40 @@ lbl_80AAF96C:
 /* 80AAF97C 00000010  80 1F 0E E4 */	lwz r0, 0xee4(r31)
 /* 80AAF980 00000014  60 00 00 04 */	ori r0, r0, 4
 /* 80AAF984 00000018  90 1F 0E E4 */	stw r0, 0xee4(r31)
-/* 80AAF988 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AAF98C 00000020  C0 03 00 00 */	lfs f0, 0x0000(r3)
+/* 80AAF988 0000001C  3C 60 80 AB */	lis r3, lit_4204@ha
+/* 80AAF98C 00000020  C0 03 20 B8 */	lfs f0, lit_4204@l(r3)
 /* 80AAF990 00000024  D0 01 00 08 */	stfs f0, 8(r1)
 /* 80AAF994 00000028  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80AAF998 0000002C  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80AAF99C 00000030  C3 FF 0D EC */	lfs f31, 0xdec(r31)
 /* 80AAF9A0 00000034  C3 DF 0D F0 */	lfs f30, 0xdf0(r31)
-/* 80AAF9A4 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AAF9A8 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80AAF9A4 00000038  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80AAF9A8 0000003C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80AAF9AC 00000040  A8 9F 0D 7A */	lha r4, 0xd7a(r31)
-/* 80AAF9B0 00000044  4B FF E3 69 */	bl _unresolved
-/* 80AAF9B4 00000048  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AAF9B8 0000004C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80AAF9B0 00000044  4B 55 CA 2C */	b mDoMtx_YrotS__FPA4_fs
+/* 80AAF9B4 00000048  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80AAF9B8 0000004C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80AAF9BC 00000050  38 81 00 08 */	addi r4, r1, 8
 /* 80AAF9C0 00000054  7C 85 23 78 */	mr r5, r4
-/* 80AAF9C4 00000058  4B FF E3 55 */	bl _unresolved
+/* 80AAF9C4 00000058  4B 89 73 A8 */	b PSMTXMultVec
 /* 80AAF9C8 0000005C  38 61 00 08 */	addi r3, r1, 8
 /* 80AAF9CC 00000060  38 9F 04 D0 */	addi r4, r31, 0x4d0
 /* 80AAF9D0 00000064  7C 65 1B 78 */	mr r5, r3
-/* 80AAF9D4 00000068  4B FF E3 45 */	bl _unresolved
+/* 80AAF9D4 00000068  4B 89 76 BC */	b PSVECAdd
 /* 80AAF9D8 0000006C  38 7F 0F 6C */	addi r3, r31, 0xf6c
 /* 80AAF9DC 00000070  FC 20 F8 90 */	fmr f1, f31
-/* 80AAF9E0 00000074  4B FF E3 39 */	bl _unresolved
+/* 80AAF9E0 00000074  4B 7B F8 18 */	b SetH__8cM3dGCylFf
 /* 80AAF9E4 00000078  38 7F 0F 6C */	addi r3, r31, 0xf6c
 /* 80AAF9E8 0000007C  FC 20 F0 90 */	fmr f1, f30
-/* 80AAF9EC 00000080  4B FF E3 2D */	bl _unresolved
+/* 80AAF9EC 00000080  4B 7B F8 14 */	b SetR__8cM3dGCylFf
 /* 80AAF9F0 00000084  38 7F 0F 6C */	addi r3, r31, 0xf6c
 /* 80AAF9F4 00000088  38 81 00 08 */	addi r4, r1, 8
-/* 80AAF9F8 0000008C  4B FF E3 21 */	bl _unresolved
-/* 80AAF9FC 00000090  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AAFA00 00000094  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80AAF9F8 0000008C  4B 7B F7 E4 */	b SetC__8cM3dGCylFRC4cXyz
+/* 80AAF9FC 00000090  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AAFA00 00000094  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AAFA04 00000098  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80AAFA08 0000009C  38 9F 0E 48 */	addi r4, r31, 0xe48
-/* 80AAFA0C 000000A0  4B FF E3 0D */	bl _unresolved
+/* 80AAFA0C 000000A0  4B 7B 51 9C */	b Set__4cCcSFP8cCcD_Obj
 lbl_80AAFA10:
 /* 80AAFA10 00000000  38 7F 0E 48 */	addi r3, r31, 0xe48
 /* 80AAFA14 00000004  81 9F 0E 84 */	lwz r12, 0xe84(r31)

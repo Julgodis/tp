@@ -8,9 +8,9 @@ lbl_80782E90:
 /* 80782EA8 00000018  38 A0 00 0A */	li r5, 0xa
 /* 80782EAC 0000001C  38 C0 00 00 */	li r6, 0
 /* 80782EB0 00000020  38 E0 00 0F */	li r7, 0xf
-/* 80782EB4 00000024  4B FF E7 05 */	bl _unresolved
+/* 80782EB4 00000024  4B 89 9C 24 */	b fopAcM_createDisappear__FPC10fopAc_ac_cPC4cXyzUcUcUc
 /* 80782EB8 00000028  7F E3 FB 78 */	mr r3, r31
-/* 80782EBC 0000002C  4B FF E6 FD */	bl _unresolved
+/* 80782EBC 0000002C  4B 89 6D C0 */	b fopAcM_delete__FP10fopAc_ac_c
 /* 80782EC0 00000030  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80782EC4 00000034  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80782EC8 00000038  7C 08 03 A6 */	mtlr r0

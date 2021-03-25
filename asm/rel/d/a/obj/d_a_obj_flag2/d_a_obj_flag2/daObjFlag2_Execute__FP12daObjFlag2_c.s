@@ -5,8 +5,8 @@ lbl_80BEDDC0:
 /* 80BEDDCC 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80BEDDD0 00000010  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 80BEDDD4 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80BEDDD8 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BEDDDC 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80BEDDD8 00000018  3C 60 80 BF */	lis r3, M_attr__12daObjFlag2_c@ha
+/* 80BEDDDC 0000001C  3B E3 E0 DC */	addi r31, r3, M_attr__12daObjFlag2_c@l
 /* 80BEDDE0 00000020  88 1E 10 AC */	lbz r0, 0x10ac(r30)
 /* 80BEDDE4 00000024  28 00 00 00 */	cmplwi r0, 0
 /* 80BEDDE8 00000028  40 82 00 0C */	bne lbl_80BEDDF4
@@ -16,30 +16,30 @@ lbl_80BEDDF4:
 /* 80BEDDF4 00000000  38 7E 10 A0 */	addi r3, r30, 0x10a0
 /* 80BEDDF8 00000004  38 81 00 10 */	addi r4, r1, 0x10
 /* 80BEDDFC 00000008  38 A1 00 08 */	addi r5, r1, 8
-/* 80BEDE00 0000000C  4B FF E8 39 */	bl _unresolved
+/* 80BEDE00 0000000C  4B 46 D4 F8 */	b dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf
 /* 80BEDE04 00000010  C0 21 00 08 */	lfs f1, 8(r1)
-/* 80BEDE08 00000014  C0 1F 00 18 */	lfs f0, 0x18(r31)
+/* 80BEDE08 00000014  C0 1F 00 18 */	lfs f0, 0x18(r31)	/* effective address: 80BEE0F4 */
 /* 80BEDE0C 00000018  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80BEDE10 00000000  40 81 00 50 */	ble lbl_80BEDE60
 /* 80BEDE14 00000004  3C 60 00 08 */	lis r3, 0x0008 /* 0x000800BE@ha */
 /* 80BEDE18 00000008  38 03 00 BE */	addi r0, r3, 0x00BE /* 0x000800BE@l */
 /* 80BEDE1C 0000000C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80BEDE20 00000010  C0 1F 01 00 */	lfs f0, 0x100(r31)
+/* 80BEDE20 00000010  C0 1F 01 00 */	lfs f0, 0x100(r31)	/* effective address: 80BEE1DC */
 /* 80BEDE24 00000014  EC 20 00 72 */	fmuls f1, f0, f1
-/* 80BEDE28 00000018  4B FF E8 11 */	bl _unresolved
+/* 80BEDE28 00000018  4B 77 42 84 */	b __cvt_fp2unsigned
 /* 80BEDE2C 0000001C  7C 66 1B 78 */	mr r6, r3
-/* 80BEDE30 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BEDE34 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80BEDE38 00000028  80 63 00 00 */	lwz r3, 0(r3)
+/* 80BEDE30 00000020  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
+/* 80BEDE34 00000024  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 80BEDE38 00000028  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
 /* 80BEDE3C 0000002C  38 81 00 0C */	addi r4, r1, 0xc
 /* 80BEDE40 00000030  38 BE 10 A0 */	addi r5, r30, 0x10a0
 /* 80BEDE44 00000034  38 E0 00 00 */	li r7, 0
-/* 80BEDE48 00000038  C0 3F 01 04 */	lfs f1, 0x104(r31)
+/* 80BEDE48 00000038  C0 3F 01 04 */	lfs f1, 0x104(r31)	/* effective address: 80BEE1E0 */
 /* 80BEDE4C 0000003C  FC 40 08 90 */	fmr f2, f1
-/* 80BEDE50 00000040  C0 7F 01 08 */	lfs f3, 0x108(r31)
+/* 80BEDE50 00000040  C0 7F 01 08 */	lfs f3, 0x108(r31)	/* effective address: 80BEE1E4 */
 /* 80BEDE54 00000044  FC 80 18 90 */	fmr f4, f3
 /* 80BEDE58 00000048  39 00 00 00 */	li r8, 0
-/* 80BEDE5C 0000004C  4B FF E7 DD */	bl _unresolved
+/* 80BEDE5C 0000004C  4B 6B E6 B0 */	b seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 lbl_80BEDE60:
 /* 80BEDE60 00000000  38 7E 07 00 */	addi r3, r30, 0x700
 /* 80BEDE64 00000004  4B FF EF 35 */	bl execute__11FlagCloth_cFv

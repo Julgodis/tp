@@ -5,15 +5,15 @@ lbl_80BE3A88:
 /* 80BE3A94 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80BE3A98 00000010  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 80BE3A9C 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80BE3AA0 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BE3AA4 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80BE3AA0 00000018  3C 60 80 BE */	lis r3, lit_3677@ha
+/* 80BE3AA4 0000001C  3B E3 4A B0 */	addi r31, r3, lit_3677@l
 /* 80BE3AA8 00000020  88 7E 05 D8 */	lbz r3, 0x5d8(r30)
 /* 80BE3AAC 00000024  38 03 FF FF */	addi r0, r3, -1
 /* 80BE3AB0 00000028  54 03 06 3F */	clrlwi. r3, r0, 0x18
 /* 80BE3AB4 0000002C  41 82 00 6C */	beq lbl_80BE3B20
-/* 80BE3AB8 00000030  C0 3F 00 00 */	lfs f1, 0(r31)
+/* 80BE3AB8 00000030  C0 3F 00 00 */	lfs f1, 0(r31)	/* effective address: 80BE4AB0 */
 /* 80BE3ABC 00000034  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 80BE3AC0 00000038  C0 1F 00 04 */	lfs f0, 4(r31)
+/* 80BE3AC0 00000038  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 80BE4AB4 */
 /* 80BE3AC4 0000003C  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80BE3AC8 00000040  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 80BE3ACC 00000044  80 1E 00 B0 */	lwz r0, 0xb0(r30)
@@ -36,7 +36,7 @@ lbl_80BE3B04:
 /* 80BE3B08 00000004  39 1E 04 E4 */	addi r8, r30, 0x4e4
 /* 80BE3B0C 00000008  39 3E 04 EC */	addi r9, r30, 0x4ec
 /* 80BE3B10 0000000C  39 40 FF FF */	li r10, -1
-/* 80BE3B14 00000010  4B FF FE 85 */	bl _unresolved
+/* 80BE3B14 00000010  4B 43 64 64 */	b fopAcM_createChildFromOffset__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i
 /* 80BE3B18 00000014  90 7E 05 EC */	stw r3, 0x5ec(r30)
 /* 80BE3B1C 00000018  48 00 00 0C */	b lbl_80BE3B28
 lbl_80BE3B20:
@@ -51,15 +51,15 @@ lbl_80BE3B28:
 /* 80BE3B3C 00000014  38 1E 05 A8 */	addi r0, r30, 0x5a8
 /* 80BE3B40 00000018  90 1E 05 04 */	stw r0, 0x504(r30)
 /* 80BE3B44 0000001C  7F C3 F3 78 */	mr r3, r30
-/* 80BE3B48 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80BE3B4C 00000024  C4 24 00 00 */	lfsu f1, 0x0000(r4)
-/* 80BE3B50 00000028  C0 44 00 04 */	lfs f2, 4(r4)
-/* 80BE3B54 0000002C  C0 64 00 08 */	lfs f3, 8(r4)
-/* 80BE3B58 00000030  C0 84 00 0C */	lfs f4, 0xc(r4)
-/* 80BE3B5C 00000034  C0 A4 00 10 */	lfs f5, 0x10(r4)
-/* 80BE3B60 00000038  C0 C4 00 14 */	lfs f6, 0x14(r4)
-/* 80BE3B64 0000003C  4B FF FE 35 */	bl _unresolved
-/* 80BE3B68 00000040  C0 1F 00 08 */	lfs f0, 8(r31)
+/* 80BE3B48 00000020  3C 80 80 BE */	lis r4, l_cull_box@ha
+/* 80BE3B4C 00000024  C4 24 4B 24 */	lfsu f1, l_cull_box@l(r4)
+/* 80BE3B50 00000028  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80BE0004 */
+/* 80BE3B54 0000002C  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80BE0008 */
+/* 80BE3B58 00000030  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80BE000C */
+/* 80BE3B5C 00000034  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80BE0010 */
+/* 80BE3B60 00000038  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80BE0014 */
+/* 80BE3B64 0000003C  4B 43 69 E4 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
+/* 80BE3B68 00000040  C0 1F 00 08 */	lfs f0, 8(r31)	/* effective address: 80BE4AB8 */
 /* 80BE3B6C 00000044  D0 1E 05 30 */	stfs f0, 0x530(r30)
 /* 80BE3B70 00000048  38 7E 05 F4 */	addi r3, r30, 0x5f4
 /* 80BE3B74 0000004C  38 9E 04 D0 */	addi r4, r30, 0x4d0

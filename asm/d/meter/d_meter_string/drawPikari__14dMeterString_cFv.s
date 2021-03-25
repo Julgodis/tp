@@ -187,15 +187,15 @@ lbl_8020F934:
 /* 8020F9A4 00000070  3C 17 00 00 */	addis r0, r23, 0
 /* 8020F9A8 00000074  28 00 81 40 */	cmplwi r0, 0x8140
 /* 8020F9AC 00000078  41 82 00 64 */	beq lbl_8020FA10
-/* 8020F9B0 0000007C  80 1C 0C 10 */	lwz r0, 0xc10(r28)
+/* 8020F9B0 0000007C  80 1C 0C 10 */	lwz r0, 0xc10(r28)	/* effective address: 8042F7D8 */
 /* 8020F9B4 00000080  90 01 00 10 */	stw r0, 0x10(r1)
-/* 8020F9B8 00000084  80 1C 0C 14 */	lwz r0, 0xc14(r28)
+/* 8020F9B8 00000084  80 1C 0C 14 */	lwz r0, 0xc14(r28)	/* effective address: 8042F7DC */
 /* 8020F9BC 00000088  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8020F9C0 0000008C  80 1C 0C 08 */	lwz r0, 0xc08(r28)
+/* 8020F9C0 0000008C  80 1C 0C 08 */	lwz r0, 0xc08(r28)	/* effective address: 8042F7D0 */
 /* 8020F9C4 00000090  90 01 00 18 */	stw r0, 0x18(r1)
-/* 8020F9C8 00000094  80 1C 0C 0C */	lwz r0, 0xc0c(r28)
+/* 8020F9C8 00000094  80 1C 0C 0C */	lwz r0, 0xc0c(r28)	/* effective address: 8042F7D4 */
 /* 8020F9CC 00000098  90 01 00 1C */	stw r0, 0x1c(r1)
-/* 8020F9D0 0000009C  80 7D 00 1C */	lwz r3, 0x1c(r29)
+/* 8020F9D0 0000009C  80 7D 00 1C */	lwz r3, 0x1c(r29)	/* effective address: 804301A4 */
 /* 8020F9D4 000000A0  80 63 01 0C */	lwz r3, 0x10c(r3)
 /* 8020F9D8 000000A4  C0 02 AE 7C */	lfs f0, lit_3979(r2)
 /* 8020F9DC 000000A8  EC 38 00 32 */	fmuls f1, f24, f0
@@ -203,12 +203,12 @@ lbl_8020F934:
 /* 8020F9E4 000000B0  EC 21 00 2A */	fadds f1, f1, f0
 /* 8020F9E8 000000B4  FC 40 D0 90 */	fmr f2, f26
 /* 8020F9EC 000000B8  38 81 00 20 */	addi r4, r1, 0x20
-/* 8020F9F0 000000BC  C0 7C 0C 04 */	lfs f3, 0xc04(r28)
+/* 8020F9F0 000000BC  C0 7C 0C 04 */	lfs f3, 0xc04(r28)	/* effective address: 8042F7CC */
 /* 8020F9F4 000000C0  38 A1 00 1C */	addi r5, r1, 0x1c
 /* 8020F9F8 000000C4  38 C1 00 18 */	addi r6, r1, 0x18
 /* 8020F9FC 000000C8  38 E1 00 14 */	addi r7, r1, 0x14
 /* 8020FA00 000000CC  39 01 00 10 */	addi r8, r1, 0x10
-/* 8020FA04 000000D0  C0 9C 0C 18 */	lfs f4, 0xc18(r28)
+/* 8020FA04 000000D0  C0 9C 0C 18 */	lfs f4, 0xc18(r28)	/* effective address: 8042F7E0 */
 /* 8020FA08 000000D4  39 20 00 00 */	li r9, 0
 /* 8020FA0C 000000D8  48 00 46 D1 */	bl drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc
 lbl_8020FA10:

@@ -136,8 +136,8 @@ lbl_8022A420:
 /* 8022A450 00000030  38 60 00 01 */	li r3, 1
 /* 8022A454 00000034  48 00 0C 44 */	b lbl_8022B098
 /* 8022A458 00000038  38 61 00 0C */	addi r3, r1, 0xc
-/* 8022A45C 0000003C  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8022A460 00000040  38 84 96 10 */	addi r4, r4, stringBase0@l
+/* 8022A45C 0000003C  3C 80 80 3A */	lis r4, d_msg_d_msg_class__stringBase0@ha
+/* 8022A460 00000040  38 84 96 10 */	addi r4, r4, d_msg_d_msg_class__stringBase0@l
 /* 8022A464 00000044  38 84 00 04 */	addi r4, r4, 4
 /* 8022A468 00000048  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 8022A46C 0000004C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
@@ -152,8 +152,8 @@ lbl_8022A420:
 /* 8022A490 00000070  38 60 00 01 */	li r3, 1
 /* 8022A494 00000074  48 00 0C 04 */	b lbl_8022B098
 /* 8022A498 00000078  38 61 00 08 */	addi r3, r1, 8
-/* 8022A49C 0000007C  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8022A4A0 00000080  38 84 96 10 */	addi r4, r4, stringBase0@l
+/* 8022A49C 0000007C  3C 80 80 3A */	lis r4, d_msg_d_msg_class__stringBase0@ha
+/* 8022A4A0 00000080  38 84 96 10 */	addi r4, r4, d_msg_d_msg_class__stringBase0@l
 /* 8022A4A4 00000084  38 84 00 04 */	addi r4, r4, 4
 /* 8022A4A8 00000088  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 8022A4AC 0000008C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l

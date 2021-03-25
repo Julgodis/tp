@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct JAISoundHandle {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -18,9 +21,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAISoundHandle {
 };
 
 struct JAISoundID {

@@ -16,16 +16,16 @@ lbl_8018C524:
 lbl_8018C55C:
 /* 8018C55C 00000000  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 8018C560 00000004  80 7F 00 4C */	lwz r3, 0x4c(r31)
-/* 8018C564 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 8018C568 0000000C  38 84 43 88 */	addi r4, r4, stringBase0@l
+/* 8018C564 00000008  3C 80 80 39 */	lis r4, d_file_d_file_select__stringBase0@ha
+/* 8018C568 0000000C  38 84 43 88 */	addi r4, r4, d_file_d_file_select__stringBase0@l
 /* 8018C56C 00000010  38 84 01 D8 */	addi r4, r4, 0x1d8
 /* 8018C570 00000014  3C A0 01 10 */	lis r5, 0x110
 /* 8018C574 00000018  80 DF 00 08 */	lwz r6, 8(r31)
 /* 8018C578 0000001C  48 16 C0 D1 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 8018C57C 00000020  80 7F 00 4C */	lwz r3, 0x4c(r31)
 /* 8018C580 00000024  48 0C 8B 69 */	bl dPaneClass_showNullPane__FP9J2DScreen
-/* 8018C584 00000028  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 8018C588 0000002C  38 63 43 88 */	addi r3, r3, stringBase0@l
+/* 8018C584 00000028  3C 60 80 39 */	lis r3, d_file_d_file_select__stringBase0@ha
+/* 8018C588 0000002C  38 63 43 88 */	addi r3, r3, d_file_d_file_select__stringBase0@l
 /* 8018C58C 00000030  38 63 01 FC */	addi r3, r3, 0x1fc
 /* 8018C590 00000034  80 9F 00 08 */	lwz r4, 8(r31)
 /* 8018C594 00000038  48 14 7C DD */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
@@ -125,8 +125,8 @@ lbl_8018C684:
 /* 8018C700 0000007C  3B 5A 00 04 */	addi r26, r26, 4
 /* 8018C704 00000080  3B 7B 00 08 */	addi r27, r27, 8
 /* 8018C708 00000084  41 80 FF 0C */	blt lbl_8018C614
-/* 8018C70C 00000088  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 8018C710 0000008C  38 63 43 88 */	addi r3, r3, stringBase0@l
+/* 8018C70C 00000088  3C 60 80 39 */	lis r3, d_file_d_file_select__stringBase0@ha
+/* 8018C710 0000008C  38 63 43 88 */	addi r3, r3, d_file_d_file_select__stringBase0@l
 /* 8018C714 00000090  38 63 02 20 */	addi r3, r3, 0x220
 /* 8018C718 00000094  80 9F 00 08 */	lwz r4, 8(r31)
 /* 8018C71C 00000098  48 14 7B 55 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
@@ -140,8 +140,8 @@ lbl_8018C684:
 /* 8018C73C 000000B8  4E 80 04 21 */	bctrl 
 /* 8018C740 000000BC  38 00 00 00 */	li r0, 0
 /* 8018C744 000000C0  90 1F 03 1C */	stw r0, 0x31c(r31)
-/* 8018C748 000000C4  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 8018C74C 000000C8  38 63 43 88 */	addi r3, r3, stringBase0@l
+/* 8018C748 000000C4  3C 60 80 39 */	lis r3, d_file_d_file_select__stringBase0@ha
+/* 8018C74C 000000C8  38 63 43 88 */	addi r3, r3, d_file_d_file_select__stringBase0@l
 /* 8018C750 000000CC  38 63 02 44 */	addi r3, r3, 0x244
 /* 8018C754 000000D0  80 9F 00 08 */	lwz r4, 8(r31)
 /* 8018C758 000000D4  48 14 7B 19 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader

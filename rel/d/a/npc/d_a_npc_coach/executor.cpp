@@ -21,6 +21,13 @@ extern "C" void _unresolved(); // 1
 // 
 
 
+extern "C" void ModuleProlog(); // 1
+extern "C" void ModuleEpilog(); // 1
+extern "C" void ModuleUnresolved(); // 1
+extern "C" void ModuleConstructorsX(); // 1
+extern "C" void ModuleDestructorsX(); // 1
+extern u8 data_809A4EC8[4];
+extern u8 data_809A4ECC[4];
 
 // 
 // Declarations:
@@ -48,7 +55,7 @@ extern "C" asm void _epilog() {
 #pragma pop
 
 
-/* 8099D6B8-8099D6D8 0020+00 s=2 e=47 z=0  None .text      _unresolved                                                  */
+/* 8099D6B8-8099D6D8 0020+00 s=0 e=0 z=0  None .text      _unresolved                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

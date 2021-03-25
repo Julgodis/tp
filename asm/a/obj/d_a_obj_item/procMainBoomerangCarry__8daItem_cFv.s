@@ -17,7 +17,7 @@ lbl_8015C514:
 /* 8015C550 0000003C  2C 03 00 00 */	cmpwi r3, 0
 /* 8015C554 00000040  40 82 00 48 */	bne lbl_8015C59C
 /* 8015C558 00000044  7F A3 EB 78 */	mr r3, r29
-/* 8015C55C 00000048  80 9F 5D AC */	lwz r4, 0x5dac(r31)
+/* 8015C55C 00000048  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
 /* 8015C560 0000004C  4B EB E2 81 */	bl fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8015C564 00000050  C0 02 9B A0 */	lfs f0, lit_4524(r2)
 /* 8015C568 00000054  FC 01 00 40 */	fcmpo cr0, f1, f0

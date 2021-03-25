@@ -103,8 +103,8 @@ lbl_8022F06C:
 /* 8022F074 00000008  D8 01 00 30 */	stfd f0, 0x30(r1)
 /* 8022F078 0000000C  80 C1 00 34 */	lwz r6, 0x34(r1)
 /* 8022F07C 00000010  38 61 00 08 */	addi r3, r1, 8
-/* 8022F080 00000014  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8022F084 00000018  38 84 96 10 */	addi r4, r4, stringBase0@l
+/* 8022F080 00000014  3C 80 80 3A */	lis r4, d_msg_d_msg_class__stringBase0@ha
+/* 8022F084 00000018  38 84 96 10 */	addi r4, r4, d_msg_d_msg_class__stringBase0@l
 /* 8022F088 0000001C  38 84 00 18 */	addi r4, r4, 0x18
 /* 8022F08C 00000020  80 BC 01 20 */	lwz r5, 0x120(r28)
 /* 8022F090 00000024  50 C5 06 3E */	rlwimi r5, r6, 0, 0x18, 0x1f

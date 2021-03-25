@@ -8,7 +8,7 @@ lbl_8034D7C4:
 /* 8034D7DC 00000018  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 8034D7E0 0000001C  3B C3 00 00 */	addi r30, r3, 0
 /* 8034D7E4 00000020  4B FE FF 11 */	bl OSDisableInterrupts
-/* 8034D7E8 00000024  93 DF 01 20 */	stw r30, 0x120(r31)
+/* 8034D7E8 00000024  93 DF 01 20 */	stw r30, 0x120(r31)	/* effective address: 8044CB48 */
 /* 8034D7EC 00000028  38 00 00 01 */	li r0, 1
 /* 8034D7F0 0000002C  3B C3 00 00 */	addi r30, r3, 0
 /* 8034D7F4 00000030  90 0D 92 B8 */	stw r0, FBSet(r13)

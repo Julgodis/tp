@@ -49,50 +49,50 @@ lbl_801A5C8C:
 /* 801A5CD4 00000048  88 0D 87 E4 */	lbz r0, struct_80450D64+0x0(r13)
 /* 801A5CD8 0000004C  7C 03 07 74 */	extsb r3, r0
 /* 801A5CDC 00000050  48 00 0F 45 */	bl dKy_setLight_nowroom__Fc
-/* 801A5CE0 00000054  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801A5CE4 00000058  38 63 4C 6C */	addi r3, r3, stringBase0@l
+/* 801A5CE0 00000054  3C 60 80 39 */	lis r3, d_kankyo_d_kankyo__stringBase0@ha
+/* 801A5CE4 00000058  38 63 4C 6C */	addi r3, r3, d_kankyo_d_kankyo__stringBase0@l
 /* 801A5CE8 0000005C  38 63 01 9A */	addi r3, r3, 0x19a
 /* 801A5CEC 00000060  4B E8 97 49 */	bl dComIfG_getStageRes__FPCc
 /* 801A5CF0 00000064  3C 80 80 43 */	lis r4, g_env_light@ha
 /* 801A5CF4 00000068  38 84 CA 54 */	addi r4, r4, g_env_light@l
 /* 801A5CF8 0000006C  90 64 12 DC */	stw r3, 0x12dc(r4)	/* effective address: 8042DD30 */
-/* 801A5CFC 00000070  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801A5D00 00000074  38 63 4C 6C */	addi r3, r3, stringBase0@l
+/* 801A5CFC 00000070  3C 60 80 39 */	lis r3, d_kankyo_d_kankyo__stringBase0@ha
+/* 801A5D00 00000074  38 63 4C 6C */	addi r3, r3, d_kankyo_d_kankyo__stringBase0@l
 /* 801A5D04 00000078  38 63 01 A9 */	addi r3, r3, 0x1a9
 /* 801A5D08 0000007C  4B E8 97 2D */	bl dComIfG_getStageRes__FPCc
 /* 801A5D0C 00000080  3C 80 80 43 */	lis r4, g_env_light@ha
 /* 801A5D10 00000084  38 84 CA 54 */	addi r4, r4, g_env_light@l
 /* 801A5D14 00000088  90 64 12 E0 */	stw r3, 0x12e0(r4)	/* effective address: 8042DD34 */
-/* 801A5D18 0000008C  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801A5D1C 00000090  38 63 4C 6C */	addi r3, r3, stringBase0@l
+/* 801A5D18 0000008C  3C 60 80 39 */	lis r3, d_kankyo_d_kankyo__stringBase0@ha
+/* 801A5D1C 00000090  38 63 4C 6C */	addi r3, r3, d_kankyo_d_kankyo__stringBase0@l
 /* 801A5D20 00000094  38 63 01 B8 */	addi r3, r3, 0x1b8
 /* 801A5D24 00000098  4B E8 97 11 */	bl dComIfG_getStageRes__FPCc
 /* 801A5D28 0000009C  3C 80 80 43 */	lis r4, g_env_light@ha
 /* 801A5D2C 000000A0  38 84 CA 54 */	addi r4, r4, g_env_light@l
 /* 801A5D30 000000A4  90 64 12 E4 */	stw r3, 0x12e4(r4)	/* effective address: 8042DD38 */
-/* 801A5D34 000000A8  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801A5D38 000000AC  38 63 4C 6C */	addi r3, r3, stringBase0@l
+/* 801A5D34 000000A8  3C 60 80 39 */	lis r3, d_kankyo_d_kankyo__stringBase0@ha
+/* 801A5D38 000000AC  38 63 4C 6C */	addi r3, r3, d_kankyo_d_kankyo__stringBase0@l
 /* 801A5D3C 000000B0  38 63 01 C8 */	addi r3, r3, 0x1c8
 /* 801A5D40 000000B4  4B E8 96 F5 */	bl dComIfG_getStageRes__FPCc
 /* 801A5D44 000000B8  3C 80 80 43 */	lis r4, g_env_light@ha
 /* 801A5D48 000000BC  38 84 CA 54 */	addi r4, r4, g_env_light@l
 /* 801A5D4C 000000C0  90 64 12 E8 */	stw r3, 0x12e8(r4)	/* effective address: 8042DD3C */
-/* 801A5D50 000000C4  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801A5D54 000000C8  38 63 4C 6C */	addi r3, r3, stringBase0@l
+/* 801A5D50 000000C4  3C 60 80 39 */	lis r3, d_kankyo_d_kankyo__stringBase0@ha
+/* 801A5D54 000000C8  38 63 4C 6C */	addi r3, r3, d_kankyo_d_kankyo__stringBase0@l
 /* 801A5D58 000000CC  38 63 01 D8 */	addi r3, r3, 0x1d8
 /* 801A5D5C 000000D0  4B E8 96 D9 */	bl dComIfG_getStageRes__FPCc
 /* 801A5D60 000000D4  3C 80 80 43 */	lis r4, g_env_light@ha
 /* 801A5D64 000000D8  38 84 CA 54 */	addi r4, r4, g_env_light@l
 /* 801A5D68 000000DC  90 64 12 EC */	stw r3, 0x12ec(r4)	/* effective address: 8042DD40 */
-/* 801A5D6C 000000E0  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801A5D70 000000E4  38 63 4C 6C */	addi r3, r3, stringBase0@l
+/* 801A5D6C 000000E0  3C 60 80 39 */	lis r3, d_kankyo_d_kankyo__stringBase0@ha
+/* 801A5D70 000000E4  38 63 4C 6C */	addi r3, r3, d_kankyo_d_kankyo__stringBase0@l
 /* 801A5D74 000000E8  38 63 01 E6 */	addi r3, r3, 0x1e6
 /* 801A5D78 000000EC  4B E8 96 BD */	bl dComIfG_getStageRes__FPCc
 /* 801A5D7C 000000F0  3C 80 80 43 */	lis r4, g_env_light@ha
 /* 801A5D80 000000F4  38 84 CA 54 */	addi r4, r4, g_env_light@l
 /* 801A5D84 000000F8  90 64 12 F0 */	stw r3, 0x12f0(r4)	/* effective address: 8042DD44 */
-/* 801A5D88 000000FC  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801A5D8C 00000100  38 63 4C 6C */	addi r3, r3, stringBase0@l
+/* 801A5D88 000000FC  3C 60 80 39 */	lis r3, d_kankyo_d_kankyo__stringBase0@ha
+/* 801A5D8C 00000100  38 63 4C 6C */	addi r3, r3, d_kankyo_d_kankyo__stringBase0@l
 /* 801A5D90 00000104  38 63 01 F2 */	addi r3, r3, 0x1f2
 /* 801A5D94 00000108  4B E8 96 A1 */	bl dComIfG_getStageRes__FPCc
 /* 801A5D98 0000010C  3C 80 80 43 */	lis r4, g_env_light@ha
@@ -119,7 +119,7 @@ lbl_801A5DC4:
 /* 801A5DE8 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801A5DEC 00000028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 801A5DF0 0000002C  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 804061F4 */
-/* 801A5DF4 00000030  D0 04 12 74 */	stfs f0, 0x1274(r4)
+/* 801A5DF4 00000030  D0 04 12 74 */	stfs f0, 0x1274(r4)	/* effective address: 8042DCC8 */
 /* 801A5DF8 00000034  48 00 00 38 */	b lbl_801A5E30
 lbl_801A5DFC:
 /* 801A5DFC 00000000  C0 02 A2 50 */	lfs f0, lit_4507(r2)
@@ -135,10 +135,10 @@ lbl_801A5DFC:
 /* 801A5E24 00000028  D0 23 00 34 */	stfs f1, 0x34(r3)	/* effective address: 804061F4 */
 lbl_801A5E28:
 /* 801A5E28 00000000  C0 02 A2 50 */	lfs f0, lit_4507(r2)
-/* 801A5E2C 00000004  D0 04 12 74 */	stfs f0, 0x1274(r4)
+/* 801A5E2C 00000004  D0 04 12 74 */	stfs f0, 0x1274(r4)	/* effective address: 8042DCC8 */
 lbl_801A5E30:
 /* 801A5E30 00000000  C0 02 A2 50 */	lfs f0, lit_4507(r2)
-/* 801A5E34 00000004  D0 1E 12 48 */	stfs f0, 0x1248(r30)
+/* 801A5E34 00000004  D0 1E 12 48 */	stfs f0, 0x1248(r30)	/* effective address: 8042DC9C */
 /* 801A5E38 00000008  38 60 00 04 */	li r3, 4
 /* 801A5E3C 0000000C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801A5E40 00000010  83 C1 00 08 */	lwz r30, 8(r1)

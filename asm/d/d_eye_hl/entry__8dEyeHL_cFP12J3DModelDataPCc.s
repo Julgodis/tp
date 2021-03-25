@@ -42,8 +42,8 @@ lbl_8009C9F0:
 /* 8009C9F8 00000008  7C 03 00 40 */	cmplw r3, r0
 /* 8009C9FC 0000000C  41 80 FF A4 */	blt lbl_8009C9A0
 lbl_8009CA00:
-/* 8009CA00 00000000  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 8009CA04 00000004  38 63 B1 00 */	addi r3, r3, stringBase0@l
+/* 8009CA00 00000000  3C 60 80 38 */	lis r3, d_d_eye_hl__stringBase0@ha
+/* 8009CA04 00000004  38 63 B1 00 */	addi r3, r3, d_d_eye_hl__stringBase0@l
 /* 8009CA08 00000008  4C C6 31 82 */	crclr 6
 /* 8009CA0C 0000000C  4B F6 A2 01 */	bl OSReport_Error
 lbl_8009CA10:

@@ -26,21 +26,21 @@ lbl_80CC1558:
 /* 80CC15B8 00000060  C0 03 04 F4 */	lfs f0, 0x4f4(r3)
 /* 80CC15BC 00000064  D0 04 00 20 */	stfs f0, 0x20(r4)
 /* 80CC15C0 00000068  48 00 00 55 */	bl setBaseMtx__15daObjRotStair_cFv
-/* 80CC15C4 0000006C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CC15C8 00000070  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CC15C4 0000006C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80CC15C8 00000070  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80CC15CC 00000074  80 9F 05 A8 */	lwz r4, 0x5a8(r31)
 /* 80CC15D0 00000078  38 84 00 24 */	addi r4, r4, 0x24
-/* 80CC15D4 0000007C  4B FF FF 65 */	bl _unresolved
-/* 80CC15D8 00000080  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CC15DC 00000084  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CC15D4 0000007C  4B 68 4E DC */	b PSMTXCopy
+/* 80CC15D8 00000080  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80CC15DC 00000084  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80CC15E0 00000088  80 9F 05 AC */	lwz r4, 0x5ac(r31)
 /* 80CC15E4 0000008C  38 84 00 24 */	addi r4, r4, 0x24
-/* 80CC15E8 00000090  4B FF FF 51 */	bl _unresolved
-/* 80CC15EC 00000094  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CC15F0 00000098  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CC15E8 00000090  4B 68 4E C8 */	b PSMTXCopy
+/* 80CC15EC 00000094  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80CC15F0 00000098  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80CC15F4 0000009C  80 9F 05 B0 */	lwz r4, 0x5b0(r31)
 /* 80CC15F8 000000A0  38 84 00 24 */	addi r4, r4, 0x24
-/* 80CC15FC 000000A4  4B FF FF 3D */	bl _unresolved
+/* 80CC15FC 000000A4  4B 68 4E B4 */	b PSMTXCopy
 /* 80CC1600 000000A8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80CC1604 000000AC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80CC1608 000000B0  7C 08 03 A6 */	mtlr r0

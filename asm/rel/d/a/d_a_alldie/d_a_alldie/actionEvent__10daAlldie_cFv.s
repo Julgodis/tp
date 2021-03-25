@@ -5,15 +5,15 @@ lbl_804D59A0:
 /* 804D59AC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804D59B0 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 804D59B4 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 804D59B8 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804D59BC 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 804D59B8 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804D59BC 0000001C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 804D59C0 00000020  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 804D59C4 00000024  A8 9E 05 6C */	lha r4, 0x56c(r30)
-/* 804D59C8 00000028  4B FF FE 31 */	bl _unresolved
+/* 804D59C8 00000028  4B B7 20 B0 */	b endCheck__16dEvent_manager_cFs
 /* 804D59CC 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 804D59D0 00000030  41 82 00 58 */	beq lbl_804D5A28
 /* 804D59D4 00000034  38 7F 4E C8 */	addi r3, r31, 0x4ec8
-/* 804D59D8 00000038  4B FF FE 21 */	bl _unresolved
+/* 804D59D8 00000038  4B B6 CA 90 */	b reset__14dEvt_control_cFv
 /* 804D59DC 0000003C  A8 1E 05 6E */	lha r0, 0x56e(r30)
 /* 804D59E0 00000040  2C 00 FF FF */	cmpwi r0, -1
 /* 804D59E4 00000044  41 82 00 34 */	beq lbl_804D5A18
@@ -27,7 +27,7 @@ lbl_804D59A0:
 /* 804D5A04 00000064  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 804D5A08 00000068  38 E0 00 00 */	li r7, 0
 /* 804D5A0C 0000006C  39 00 00 01 */	li r8, 1
-/* 804D5A10 00000070  4B FF FD E9 */	bl _unresolved
+/* 804D5A10 00000070  4B B4 5C 6C */	b fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
 /* 804D5A14 00000074  48 00 00 14 */	b lbl_804D5A28
 lbl_804D5A18:
 /* 804D5A18 00000000  38 00 00 00 */	li r0, 0

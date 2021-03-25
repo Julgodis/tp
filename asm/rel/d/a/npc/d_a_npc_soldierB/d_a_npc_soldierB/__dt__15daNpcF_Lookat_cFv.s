@@ -7,43 +7,43 @@ lbl_80AF526C:
 /* 80AF5280 00000014  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80AF5284 00000018  7C 9F 23 78 */	mr r31, r4
 /* 80AF5288 0000001C  41 82 00 98 */	beq lbl_80AF5320
-/* 80AF528C 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AF5290 00000024  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
+/* 80AF528C 00000020  3C 60 80 AF */	lis r3, __vt__15daNpcF_Lookat_c@ha
+/* 80AF5290 00000024  38 03 5E 0C */	addi r0, r3, __vt__15daNpcF_Lookat_c@l
 /* 80AF5294 00000028  90 1E 00 98 */	stw r0, 0x98(r30)
 /* 80AF5298 0000002C  38 7E 00 7C */	addi r3, r30, 0x7c
-/* 80AF529C 00000030  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80AF52A0 00000034  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80AF529C 00000030  3C 80 80 AF */	lis r4, __dt__5csXyzFv@ha
+/* 80AF52A0 00000034  38 84 53 3C */	addi r4, r4, __dt__5csXyzFv@l
 /* 80AF52A4 00000038  38 A0 00 06 */	li r5, 6
 /* 80AF52A8 0000003C  38 C0 00 04 */	li r6, 4
-/* 80AF52AC 00000040  4B FF D9 6D */	bl _unresolved
+/* 80AF52AC 00000040  4B 86 CA 3C */	b __destroy_arr
 /* 80AF52B0 00000044  38 7E 00 64 */	addi r3, r30, 0x64
-/* 80AF52B4 00000048  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80AF52B8 0000004C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80AF52B4 00000048  3C 80 80 AF */	lis r4, __dt__5csXyzFv@ha
+/* 80AF52B8 0000004C  38 84 53 3C */	addi r4, r4, __dt__5csXyzFv@l
 /* 80AF52BC 00000050  38 A0 00 06 */	li r5, 6
 /* 80AF52C0 00000054  38 C0 00 04 */	li r6, 4
-/* 80AF52C4 00000058  4B FF D9 55 */	bl _unresolved
+/* 80AF52C4 00000058  4B 86 CA 24 */	b __destroy_arr
 /* 80AF52C8 0000005C  38 7E 00 4C */	addi r3, r30, 0x4c
-/* 80AF52CC 00000060  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80AF52D0 00000064  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80AF52CC 00000060  3C 80 80 AF */	lis r4, __dt__5csXyzFv@ha
+/* 80AF52D0 00000064  38 84 53 3C */	addi r4, r4, __dt__5csXyzFv@l
 /* 80AF52D4 00000068  38 A0 00 06 */	li r5, 6
 /* 80AF52D8 0000006C  38 C0 00 04 */	li r6, 4
-/* 80AF52DC 00000070  4B FF D9 3D */	bl _unresolved
+/* 80AF52DC 00000070  4B 86 CA 0C */	b __destroy_arr
 /* 80AF52E0 00000074  38 7E 00 34 */	addi r3, r30, 0x34
-/* 80AF52E4 00000078  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80AF52E8 0000007C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80AF52E4 00000078  3C 80 80 AF */	lis r4, __dt__5csXyzFv@ha
+/* 80AF52E8 0000007C  38 84 53 3C */	addi r4, r4, __dt__5csXyzFv@l
 /* 80AF52EC 00000080  38 A0 00 06 */	li r5, 6
 /* 80AF52F0 00000084  38 C0 00 04 */	li r6, 4
-/* 80AF52F4 00000088  4B FF D9 25 */	bl _unresolved
+/* 80AF52F4 00000088  4B 86 C9 F4 */	b __destroy_arr
 /* 80AF52F8 0000008C  7F C3 F3 78 */	mr r3, r30
-/* 80AF52FC 00000090  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80AF5300 00000094  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80AF52FC 00000090  3C 80 80 AF */	lis r4, __dt__4cXyzFv@ha
+/* 80AF5300 00000094  38 84 53 7C */	addi r4, r4, __dt__4cXyzFv@l
 /* 80AF5304 00000098  38 A0 00 0C */	li r5, 0xc
 /* 80AF5308 0000009C  38 C0 00 04 */	li r6, 4
-/* 80AF530C 000000A0  4B FF D9 0D */	bl _unresolved
+/* 80AF530C 000000A0  4B 86 C9 DC */	b __destroy_arr
 /* 80AF5310 000000A4  7F E0 07 35 */	extsh. r0, r31
 /* 80AF5314 000000A8  40 81 00 0C */	ble lbl_80AF5320
 /* 80AF5318 000000AC  7F C3 F3 78 */	mr r3, r30
-/* 80AF531C 000000B0  4B FF D8 FD */	bl _unresolved
+/* 80AF531C 000000B0  4B 7D 9A 20 */	b __dl__FPv
 lbl_80AF5320:
 /* 80AF5320 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80AF5324 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

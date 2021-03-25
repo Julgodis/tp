@@ -104,7 +104,7 @@ extern "C" static void firstSrcData__Fv(); // 1
 extern "C" static void nextSrcData__FPUc(); // 1
 extern "C" void __sinit_JKRAram_cpp(); // 1
 extern "C" void func_802D2DF0(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JKRAram__stringBase0;
 extern "C" extern u8 sMessageQueue__7JKRAram[32];
 extern "C" extern u32 sSZSBufferSize__7JKRAram[1 + 1 /* padding */];
 extern "C" extern u8 sAramObject__7JKRAram[4];

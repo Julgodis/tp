@@ -192,7 +192,7 @@ lbl_800EE158:
 /* 800EE1C0 00000068  B0 1D 30 A6 */	sth r0, 0x30a6(r29)
 /* 800EE1C4 0000006C  7F A3 EB 78 */	mr r3, r29
 /* 800EE1C8 00000070  4B FF ED D5 */	bl setHorseSwordUpAnime__9daAlink_cFv
-/* 800EE1CC 00000074  A8 1E 00 56 */	lha r0, 0x56(r30)
+/* 800EE1CC 00000074  A8 1E 00 56 */	lha r0, 0x56(r30)	/* effective address: 8038E5FA */
 /* 800EE1D0 00000078  7C 00 00 D0 */	neg r0, r0
 /* 800EE1D4 0000007C  B0 1D 30 02 */	sth r0, 0x3002(r29)
 /* 800EE1D8 00000080  48 00 00 EC */	b lbl_800EE2C4
@@ -364,7 +364,7 @@ lbl_800EE408:
 /* 800EE43C 00000034  7F A3 EB 78 */	mr r3, r29
 /* 800EE440 00000038  38 80 00 02 */	li r4, 2
 /* 800EE444 0000003C  4B FB F2 E1 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
-/* 800EE448 00000040  C0 1E 00 60 */	lfs f0, 0x60(r30)
+/* 800EE448 00000040  C0 1E 00 60 */	lfs f0, 0x60(r30)	/* effective address: 8038E604 */
 /* 800EE44C 00000044  FC 00 00 1E */	fctiwz f0, f0
 /* 800EE450 00000048  D8 01 00 18 */	stfd f0, 0x18(r1)
 /* 800EE454 0000004C  80 01 00 1C */	lwz r0, 0x1c(r1)

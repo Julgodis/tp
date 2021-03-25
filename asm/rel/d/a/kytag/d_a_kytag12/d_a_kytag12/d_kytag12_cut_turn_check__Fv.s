@@ -1,7 +1,7 @@
 lbl_8085BB38:
-/* 8085BB38 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8085BB3C 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 8085BB40 00000008  80 83 5D AC */	lwz r4, 0x5dac(r3)
+/* 8085BB38 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8085BB3C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8085BB40 00000008  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
 /* 8085BB44 0000000C  38 60 00 00 */	li r3, 0
 /* 8085BB48 00000010  28 04 00 00 */	cmplwi r4, 0
 /* 8085BB4C 00000014  4D 82 00 20 */	beqlr 

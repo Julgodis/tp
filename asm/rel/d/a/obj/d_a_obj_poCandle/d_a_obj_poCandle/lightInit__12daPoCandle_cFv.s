@@ -1,6 +1,6 @@
 lbl_80CB1D74:
-/* 80CB1D74 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80CB1D78 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80CB1D74 00000000  3C 80 80 CB */	lis r4, lit_3635@ha
+/* 80CB1D78 00000004  38 84 26 B8 */	addi r4, r4, lit_3635@l
 /* 80CB1D7C 00000008  C0 03 05 C4 */	lfs f0, 0x5c4(r3)
 /* 80CB1D80 0000000C  D0 03 05 E0 */	stfs f0, 0x5e0(r3)
 /* 80CB1D84 00000010  C0 03 05 C8 */	lfs f0, 0x5c8(r3)
@@ -8,7 +8,7 @@ lbl_80CB1D74:
 /* 80CB1D8C 00000018  C0 03 05 CC */	lfs f0, 0x5cc(r3)
 /* 80CB1D90 0000001C  D0 03 05 E8 */	stfs f0, 0x5e8(r3)
 /* 80CB1D94 00000020  C0 23 05 E4 */	lfs f1, 0x5e4(r3)
-/* 80CB1D98 00000024  C0 04 00 08 */	lfs f0, 8(r4)
+/* 80CB1D98 00000024  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80CB26C0 */
 /* 80CB1D9C 00000028  EC 01 00 2A */	fadds f0, f1, f0
 /* 80CB1DA0 0000002C  D0 03 05 E4 */	stfs f0, 0x5e4(r3)
 /* 80CB1DA4 00000030  88 03 05 EC */	lbz r0, 0x5ec(r3)
@@ -26,9 +26,9 @@ lbl_80CB1D74:
 /* 80CB1DD4 00000060  B0 03 06 02 */	sth r0, 0x602(r3)
 /* 80CB1DD8 00000064  38 00 00 42 */	li r0, 0x42
 /* 80CB1DDC 00000068  B0 03 06 04 */	sth r0, 0x604(r3)
-/* 80CB1DE0 0000006C  C0 04 00 0C */	lfs f0, 0xc(r4)
+/* 80CB1DE0 0000006C  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 80CB26C4 */
 /* 80CB1DE4 00000070  D0 03 06 08 */	stfs f0, 0x608(r3)
-/* 80CB1DE8 00000074  C0 04 00 10 */	lfs f0, 0x10(r4)
+/* 80CB1DE8 00000074  C0 04 00 10 */	lfs f0, 0x10(r4)	/* effective address: 80CB26C8 */
 /* 80CB1DEC 00000078  D0 03 06 0C */	stfs f0, 0x60c(r3)
 /* 80CB1DF0 0000007C  4E 80 00 20 */	blr 
 lbl_80CB1DF4:

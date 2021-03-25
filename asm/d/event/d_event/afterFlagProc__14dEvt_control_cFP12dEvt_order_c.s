@@ -8,8 +8,8 @@ lbl_80041964:
 /* 8004197C 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80041980 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80041984 00000020  38 63 4F F8 */	addi r3, r3, 0x4ff8
-/* 80041988 00000024  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 8004198C 00000028  38 84 9D 80 */	addi r4, r4, stringBase0@l
+/* 80041988 00000024  3C 80 80 38 */	lis r4, d_event_d_event__stringBase0@ha
+/* 8004198C 00000028  38 84 9D 80 */	addi r4, r4, d_event_d_event__stringBase0@l
 /* 80041990 0000002C  38 84 00 07 */	addi r4, r4, 7
 /* 80041994 00000030  48 00 69 39 */	bl issueStaff__16dEvent_manager_cFPCc
 lbl_80041998:

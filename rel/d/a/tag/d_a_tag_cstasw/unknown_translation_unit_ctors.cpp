@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_805A2518[8];
+extern void* data_805A2518[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_tag_CstaSw_cpp(); // 1
 
 // 
 // Declarations:

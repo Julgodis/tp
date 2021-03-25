@@ -73,12 +73,12 @@ lbl_8032F4F8:
 /* 8032F504 0000000C  48 01 6F AD */	bl PSMTXCopy
 /* 8032F508 00000010  3C 60 80 43 */	lis r3, mCurrentS__6J3DSys@ha
 /* 8032F50C 00000014  D3 E3 4C 14 */	stfs f31, mCurrentS__6J3DSys@l(r3)
-/* 8032F510 00000018  D3 DC 00 04 */	stfs f30, 4(r28)
-/* 8032F514 0000001C  D3 BC 00 08 */	stfs f29, 8(r28)
+/* 8032F510 00000018  D3 DC 00 04 */	stfs f30, 4(r28)	/* effective address: 80434C18 */
+/* 8032F514 0000001C  D3 BC 00 08 */	stfs f29, 8(r28)	/* effective address: 80434C1C */
 /* 8032F518 00000020  3C 60 80 43 */	lis r3, mParentS__6J3DSys@ha
 /* 8032F51C 00000024  D3 83 4C 20 */	stfs f28, mParentS__6J3DSys@l(r3)
-/* 8032F520 00000028  D3 7D 00 04 */	stfs f27, 4(r29)
-/* 8032F524 0000002C  D3 5D 00 08 */	stfs f26, 8(r29)
+/* 8032F520 00000028  D3 7D 00 04 */	stfs f27, 4(r29)	/* effective address: 80434C24 */
+/* 8032F524 0000002C  D3 5D 00 08 */	stfs f26, 8(r29)	/* effective address: 80434C28 */
 /* 8032F528 00000030  28 1F 00 00 */	cmplwi r31, 0
 /* 8032F52C 00000034  41 82 00 08 */	beq lbl_8032F534
 /* 8032F530 00000038  93 ED 90 78 */	stw r31, mCurrentMtxCalc__8J3DJoint(r13)

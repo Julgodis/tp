@@ -213,7 +213,7 @@ asm void dTres_c::checkTreasureBox(dTres_c::data_s* param_0) {
 #pragma pop
 
 
-/* 8009C168-8009C1F0 0088+00 s=0 e=0 z=0  None .text      onStatus__7dTres_cFUcii                                      */
+/* 8009C168-8009C1F0 0088+00 s=0 e=0 z=3  None .text      onStatus__7dTres_cFUcii                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -224,7 +224,7 @@ asm void dTres_c::onStatus(u8 param_0, int param_1, int param_2) {
 #pragma pop
 
 
-/* 8009C1F0-8009C27C 008C+00 s=0 e=0 z=0  None .text      offStatus__7dTres_cFUcii                                     */
+/* 8009C1F0-8009C27C 008C+00 s=0 e=0 z=3  None .text      offStatus__7dTres_cFUcii                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -279,7 +279,7 @@ asm void dTres_c::getNextData(dTres_c::typeGroupData_c const* param_0) {
 #pragma pop
 
 
-/* 8009C3CC-8009C49C 00D0+00 s=0 e=0 z=0  None .text      setPosition__7dTres_cFiUcPC3Veci                             */
+/* 8009C3CC-8009C49C 00D0+00 s=0 e=0 z=14  None .text      setPosition__7dTres_cFiUcPC3Veci                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -7,24 +7,24 @@ lbl_80BFA204:
 /* 80BFA218 00000000  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80BFA21C 00000004  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80BFA220 00000008  7C 7E 1B 78 */	mr r30, r3
-/* 80BFA224 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BFA228 00000010  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80BFA224 0000000C  3C 60 80 C0 */	lis r3, lit_3665@ha
+/* 80BFA228 00000010  3B E3 A9 70 */	addi r31, r3, lit_3665@l
 /* 80BFA22C 00000014  38 7E 09 58 */	addi r3, r30, 0x958
-/* 80BFA230 00000018  C0 3F 00 48 */	lfs f1, 0x48(r31)
-/* 80BFA234 0000001C  C0 5F 00 44 */	lfs f2, 0x44(r31)
-/* 80BFA238 00000020  C0 7F 00 50 */	lfs f3, 0x50(r31)
-/* 80BFA23C 00000024  C0 9F 00 38 */	lfs f4, 0x38(r31)
-/* 80BFA240 00000028  4B FF F0 79 */	bl _unresolved
+/* 80BFA230 00000018  C0 3F 00 48 */	lfs f1, 0x48(r31)	/* effective address: 80BFA9B8 */
+/* 80BFA234 0000001C  C0 5F 00 44 */	lfs f2, 0x44(r31)	/* effective address: 80BFA9B4 */
+/* 80BFA238 00000020  C0 7F 00 50 */	lfs f3, 0x50(r31)	/* effective address: 80BFA9C0 */
+/* 80BFA23C 00000024  C0 9F 00 38 */	lfs f4, 0x38(r31)	/* effective address: 80BFA9A8 */
+/* 80BFA240 00000028  4B 67 57 3C */	b cLib_addCalc__FPfffff
 /* 80BFA244 0000002C  FF E0 08 90 */	fmr f31, f1
 /* 80BFA248 00000030  38 61 00 08 */	addi r3, r1, 8
 /* 80BFA24C 00000034  38 9E 09 5C */	addi r4, r30, 0x95c
 /* 80BFA250 00000038  C0 3E 09 58 */	lfs f1, 0x958(r30)
-/* 80BFA254 0000003C  4B FF F0 65 */	bl _unresolved
+/* 80BFA254 0000003C  4B 66 C9 30 */	b __ml__4cXyzCFf
 /* 80BFA258 00000040  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 80BFA25C 00000044  38 81 00 08 */	addi r4, r1, 8
 /* 80BFA260 00000048  7C 65 1B 78 */	mr r5, r3
-/* 80BFA264 0000004C  4B FF F0 55 */	bl _unresolved
-/* 80BFA268 00000050  C0 1F 00 48 */	lfs f0, 0x48(r31)
+/* 80BFA264 0000004C  4B 74 CE 2C */	b PSVECAdd
+/* 80BFA268 00000050  C0 1F 00 48 */	lfs f0, 0x48(r31)	/* effective address: 80BFA9B8 */
 /* 80BFA26C 00000054  FC 00 F8 00 */	fcmpu cr0, f0, f31
 /* 80BFA270 00000058  40 82 00 14 */	bne lbl_80BFA284
 /* 80BFA274 0000005C  38 00 00 0A */	li r0, 0xa

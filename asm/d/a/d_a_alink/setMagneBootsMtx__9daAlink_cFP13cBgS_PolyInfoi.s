@@ -136,8 +136,8 @@ lbl_800E29E8:
 /* 800E29E8 00000000  B3 9D 31 14 */	sth r28, 0x3114(r29)
 /* 800E29EC 00000004  48 00 03 60 */	b lbl_800E2D4C
 lbl_800E29F0:
-/* 800E29F0 00000000  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800E29F4 00000004  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800E29F0 00000000  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800E29F4 00000004  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800E29F8 00000008  38 63 00 68 */	addi r3, r3, 0x68
 /* 800E29FC 0000000C  4B FB B0 65 */	bl checkStageName__9daAlink_cFPCc
 /* 800E2A00 00000010  54 60 06 3F */	clrlwi. r0, r3, 0x18

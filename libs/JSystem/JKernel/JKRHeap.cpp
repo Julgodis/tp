@@ -138,7 +138,7 @@ extern "C" void state_compare__7JKRHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState(
 extern "C" void state_dump__7JKRHeapCFRCQ27JKRHeap6TState(); // 1
 extern "C" void do_changeGroupID__7JKRHeapFUc(); // 1
 extern "C" void do_getCurrentGroupId__7JKRHeapFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JKRHeap__stringBase0;
 extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
 extern "C" extern u8 sRootHeap__7JKRHeap[4];
@@ -288,7 +288,7 @@ asm void JKRHeap::becomeSystemHeap() {
 #pragma pop
 
 
-/* 802CE438-802CE448 0010+00 s=1 e=22 z=0  None .text      becomeCurrentHeap__7JKRHeapFv                                */
+/* 802CE438-802CE448 0010+00 s=1 e=22 z=1  None .text      becomeCurrentHeap__7JKRHeapFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -299,7 +299,7 @@ asm void JKRHeap::becomeCurrentHeap() {
 #pragma pop
 
 
-/* 802CE448-802CE474 002C+00 s=0 e=5 z=0  None .text      destroy__7JKRHeapFv                                          */
+/* 802CE448-802CE474 002C+00 s=0 e=5 z=1  None .text      destroy__7JKRHeapFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -321,7 +321,7 @@ asm void JKRHeap::alloc(u32 param_0, int param_1, JKRHeap* param_2) {
 #pragma pop
 
 
-/* 802CE4D4-802CE500 002C+00 s=1 e=30 z=0  None .text      alloc__7JKRHeapFUli                                          */
+/* 802CE4D4-802CE500 002C+00 s=1 e=30 z=1  None .text      alloc__7JKRHeapFUli                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -332,7 +332,7 @@ asm void JKRHeap::alloc(u32 param_0, int param_1) {
 #pragma pop
 
 
-/* 802CE500-802CE548 0048+00 s=2 e=38 z=0  None .text      free__7JKRHeapFPvP7JKRHeap                                   */
+/* 802CE500-802CE548 0048+00 s=2 e=38 z=1  None .text      free__7JKRHeapFPvP7JKRHeap                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -630,7 +630,7 @@ asm void JKRHeap::isSubHeap(JKRHeap* param_0) const {
 #pragma pop
 
 
-/* 802CEC4C-802CEC74 0028+00 s=0 e=278 z=0  None .text      __nw__FUl                                                    */
+/* 802CEC4C-802CEC74 0028+00 s=0 e=278 z=377  None .text      __nw__FUl                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -663,7 +663,7 @@ asm void* operator new(u32 param_0, JKRHeap* param_1, int param_2) {
 #pragma pop
 
 
-/* 802CECC4-802CECEC 0028+00 s=0 e=52 z=0  None .text      __nwa__FUl                                                   */
+/* 802CECC4-802CECEC 0028+00 s=0 e=52 z=15  None .text      __nwa__FUl                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -696,7 +696,7 @@ asm void* operator new[](u32 param_0, JKRHeap* param_1, int param_2) {
 #pragma pop
 
 
-/* 802CED3C-802CED60 0024+00 s=1 e=847 z=0  None .text      __dl__FPv                                                    */
+/* 802CED3C-802CED60 0024+00 s=1 e=847 z=4665  None .text      __dl__FPv                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -707,7 +707,7 @@ asm void operator delete(void* param_0) {
 #pragma pop
 
 
-/* 802CED60-802CED84 0024+00 s=0 e=20 z=0  None .text      __dla__FPv                                                   */
+/* 802CED60-802CED84 0024+00 s=0 e=20 z=3  None .text      __dla__FPv                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -25,10 +25,10 @@ struct JUTGamePad {
 		/* 802E1CD8 */ CButton();
 	};
 
-	struct EWhichStick {
+	struct EStickMode {
 	};
 
-	struct EStickMode {
+	struct EWhichStick {
 	};
 
 	struct CStick {

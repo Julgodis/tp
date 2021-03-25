@@ -6,9 +6,9 @@ lbl_8033BE38:
 /* 8033BE48 00000010  80 A4 00 D8 */	lwz r5, 0xd8(r4)	/* effective address: 800000D8 */
 /* 8033BE4C 00000014  7C 05 18 00 */	cmpw r5, r3
 /* 8033BE50 00000018  40 82 00 20 */	bne lbl_8033BE70
-/* 8033BE54 0000001C  80 C3 01 9C */	lwz r6, 0x19c(r3)
+/* 8033BE54 0000001C  80 C3 01 9C */	lwz r6, 0x19c(r3)	/* effective address: 80000270 */
 /* 8033BE58 00000020  60 C6 20 00 */	ori r6, r6, 0x2000
-/* 8033BE5C 00000024  90 C3 01 9C */	stw r6, 0x19c(r3)
+/* 8033BE5C 00000024  90 C3 01 9C */	stw r6, 0x19c(r3)	/* effective address: 80000270 */
 /* 8033BE60 00000028  7C C0 00 A6 */	mfmsr r6
 /* 8033BE64 0000002C  60 C6 00 02 */	ori r6, r6, 2
 /* 8033BE68 00000030  7C C0 01 24 */	mtmsr r6

@@ -1,6 +1,6 @@
 lbl_80CEBE24:
-/* 80CEBE24 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80CEBE28 00000004  38 A4 00 00 */	addi r5, r4, 0x0000 /* 0x00000000@l */
+/* 80CEBE24 00000000  3C 80 80 CF */	lis r4, l_bmdIdx@ha
+/* 80CEBE28 00000004  38 A4 CA B4 */	addi r5, r4, l_bmdIdx@l
 /* 80CEBE2C 00000008  80 03 07 C8 */	lwz r0, 0x7c8(r3)
 /* 80CEBE30 0000000C  54 00 00 3C */	rlwinm r0, r0, 0, 0, 0x1e
 /* 80CEBE34 00000010  90 03 07 C8 */	stw r0, 0x7c8(r3)
@@ -14,9 +14,9 @@ lbl_80CEBE24:
 /* 80CEBE54 00000030  D0 03 09 40 */	stfs f0, 0x940(r3)
 /* 80CEBE58 00000034  38 00 00 00 */	li r0, 0
 /* 80CEBE5C 00000038  90 03 09 0C */	stw r0, 0x90c(r3)
-/* 80CEBE60 0000003C  C0 05 01 5C */	lfs f0, 0x15c(r5)
+/* 80CEBE60 0000003C  C0 05 01 5C */	lfs f0, 0x15c(r5)	/* effective address: 80CECC10 */
 /* 80CEBE64 00000040  D0 03 05 30 */	stfs f0, 0x530(r3)
-/* 80CEBE68 00000044  C0 05 01 60 */	lfs f0, 0x160(r5)
+/* 80CEBE68 00000044  C0 05 01 60 */	lfs f0, 0x160(r5)	/* effective address: 80CECC14 */
 /* 80CEBE6C 00000048  D0 03 05 34 */	stfs f0, 0x534(r3)
 /* 80CEBE70 0000004C  C0 03 07 40 */	lfs f0, 0x740(r3)
 /* 80CEBE74 00000050  D0 03 04 D4 */	stfs f0, 0x4d4(r3)

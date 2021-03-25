@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80AA15F0[8];
+extern void* data_80AA15F0[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_npc_pachi_taro_cpp(); // 1
 
 // 
 // Declarations:

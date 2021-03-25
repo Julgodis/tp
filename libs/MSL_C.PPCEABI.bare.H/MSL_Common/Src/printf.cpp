@@ -27,7 +27,7 @@ extern "C" static void double2hex(); // 1
 extern "C" static void longlong2str(); // 1
 extern "C" static void long2str(); // 1
 extern "C" static void parse_format(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const MSL_Common_Src_printf__stringBase0;
 
 // 
 // External References:
@@ -55,7 +55,7 @@ extern "C" extern u8 __ctype_map[256];
 // Declarations:
 // 
 
-/* 803664DC-803665BC 00E0+00 s=0 e=32 z=0  None .text      sprintf                                                      */
+/* 803664DC-803665BC 00E0+00 s=0 e=32 z=14  None .text      sprintf                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

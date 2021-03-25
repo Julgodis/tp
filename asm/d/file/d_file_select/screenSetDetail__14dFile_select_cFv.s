@@ -13,14 +13,14 @@ lbl_8018CCD0:
 lbl_8018CCFC:
 /* 8018CCFC 00000000  90 1F 00 28 */	stw r0, 0x28(r31)
 /* 8018CD00 00000004  80 7F 00 28 */	lwz r3, 0x28(r31)
-/* 8018CD04 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 8018CD08 0000000C  38 84 43 88 */	addi r4, r4, stringBase0@l
+/* 8018CD04 00000008  3C 80 80 39 */	lis r4, d_file_d_file_select__stringBase0@ha
+/* 8018CD08 0000000C  38 84 43 88 */	addi r4, r4, d_file_d_file_select__stringBase0@l
 /* 8018CD0C 00000010  38 84 02 F4 */	addi r4, r4, 0x2f4
 /* 8018CD10 00000014  3C A0 01 10 */	lis r5, 0x110
 /* 8018CD14 00000018  80 DF 00 08 */	lwz r6, 8(r31)
 /* 8018CD18 0000001C  48 16 B9 31 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
-/* 8018CD1C 00000020  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 8018CD20 00000024  38 63 43 88 */	addi r3, r3, stringBase0@l
+/* 8018CD1C 00000020  3C 60 80 39 */	lis r3, d_file_d_file_select__stringBase0@ha
+/* 8018CD20 00000024  38 63 43 88 */	addi r3, r3, d_file_d_file_select__stringBase0@l
 /* 8018CD24 00000028  38 63 03 12 */	addi r3, r3, 0x312
 /* 8018CD28 0000002C  80 9F 00 08 */	lwz r4, 8(r31)
 /* 8018CD2C 00000030  48 14 75 45 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader

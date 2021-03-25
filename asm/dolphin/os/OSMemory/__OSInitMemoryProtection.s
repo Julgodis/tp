@@ -35,8 +35,8 @@ lbl_8033EEF0:
 /* 8033EF74 00000084  3C 60 80 3D */	lis r3, ResetFunctionInfo@ha
 /* 8033EF78 00000088  38 63 07 D8 */	addi r3, r3, ResetFunctionInfo@l
 /* 8033EF7C 0000008C  48 00 06 E5 */	bl OSRegisterResetFunction
-/* 8033EF80 00000090  80 7B 00 F0 */	lwz r3, 0xf0(r27)
-/* 8033EF84 00000094  80 1B 00 28 */	lwz r0, 0x28(r27)
+/* 8033EF80 00000090  80 7B 00 F0 */	lwz r3, 0xf0(r27)	/* effective address: 800000F0 */
+/* 8033EF84 00000094  80 1B 00 28 */	lwz r0, 0x28(r27)	/* effective address: 80000028 */
 /* 8033EF88 00000098  7C 03 00 40 */	cmplw r3, r0
 /* 8033EF8C 0000009C  40 80 00 24 */	bge lbl_8033EFB0
 /* 8033EF90 000000A0  3C 03 FE 80 */	addis r0, r3, 0xfe80
@@ -46,7 +46,7 @@ lbl_8033EEF0:
 /* 8033EFA0 000000B0  3C 80 01 80 */	lis r4, 0x180
 /* 8033EFA4 000000B4  4B FF C5 DD */	bl DCInvalidateRange
 /* 8033EFA8 000000B8  38 00 00 02 */	li r0, 2
-/* 8033EFAC 000000BC  B0 1C 00 28 */	sth r0, 0x28(r28)
+/* 8033EFAC 000000BC  B0 1C 00 28 */	sth r0, 0x28(r28)	/* effective address: CC004028 */
 lbl_8033EFB0:
 /* 8033EFB0 00000000  3C 00 01 80 */	lis r0, 0x180
 /* 8033EFB4 00000004  7C 1F 00 40 */	cmplw r31, r0

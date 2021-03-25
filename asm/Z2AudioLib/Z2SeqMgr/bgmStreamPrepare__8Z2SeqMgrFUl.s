@@ -126,8 +126,8 @@ lbl_802AFD20:
 /* 802AFD5C 0000003C  48 00 00 78 */	b lbl_802AFDD4
 lbl_802AFD60:
 /* 802AFD60 00000000  80 6D 85 FC */	lwz r3, data_80450B7C(r13)
-/* 802AFD64 00000004  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802AFD68 00000008  38 84 BA 08 */	addi r4, r4, stringBase0@l
+/* 802AFD64 00000004  3C 80 80 3A */	lis r4, Z2SeqMgr__stringBase0@ha
+/* 802AFD68 00000008  38 84 BA 08 */	addi r4, r4, Z2SeqMgr__stringBase0@l
 /* 802AFD6C 0000000C  38 84 02 6A */	addi r4, r4, 0x26a
 /* 802AFD70 00000010  48 00 64 79 */	bl setDemoName__11Z2StatusMgrFPc
 lbl_802AFD74:

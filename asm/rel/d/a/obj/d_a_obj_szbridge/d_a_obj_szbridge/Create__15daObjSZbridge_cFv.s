@@ -4,29 +4,29 @@ lbl_80D048C4:
 /* 80D048CC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D048D0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D048D4 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80D048D8 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80D048DC 00000018  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
+/* 80D048D8 00000014  3C 80 80 D0 */	lis r4, rideCallback__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c@ha
+/* 80D048DC 00000018  38 04 43 38 */	addi r0, r4, rideCallback__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c@l
 /* 80D048E0 0000001C  80 83 05 68 */	lwz r4, 0x568(r3)
 /* 80D048E4 00000020  90 04 00 B4 */	stw r0, 0xb4(r4)
 /* 80D048E8 00000024  4B FF FC B1 */	bl chkBg__15daObjSZbridge_cFv
-/* 80D048EC 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D048F0 0000002C  C0 03 00 00 */	lfs f0, 0x0000(r3)
+/* 80D048EC 00000028  3C 60 80 D0 */	lis r3, lit_3739@ha
+/* 80D048F0 0000002C  C0 03 4C 7C */	lfs f0, lit_3739@l(r3)
 /* 80D048F4 00000030  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
 /* 80D048F8 00000034  38 7F 05 D8 */	addi r3, r31, 0x5d8
 /* 80D048FC 00000038  80 9F 06 08 */	lwz r4, 0x608(r31)
 /* 80D04900 0000003C  38 84 00 24 */	addi r4, r4, 0x24
-/* 80D04904 00000040  4B FF FA 15 */	bl _unresolved
+/* 80D04904 00000040  4B 64 1B AC */	b PSMTXCopy
 /* 80D04908 00000044  38 1F 05 D8 */	addi r0, r31, 0x5d8
 /* 80D0490C 00000048  90 1F 05 04 */	stw r0, 0x504(r31)
 /* 80D04910 0000004C  7F E3 FB 78 */	mr r3, r31
-/* 80D04914 00000050  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80D04918 00000054  C4 24 00 00 */	lfsu f1, 0x0000(r4)
-/* 80D0491C 00000058  C0 44 00 04 */	lfs f2, 4(r4)
-/* 80D04920 0000005C  C0 64 00 08 */	lfs f3, 8(r4)
-/* 80D04924 00000060  C0 84 00 0C */	lfs f4, 0xc(r4)
-/* 80D04928 00000064  C0 A4 00 10 */	lfs f5, 0x10(r4)
-/* 80D0492C 00000068  C0 C4 00 14 */	lfs f6, 0x14(r4)
-/* 80D04930 0000006C  4B FF F9 E9 */	bl _unresolved
+/* 80D04914 00000050  3C 80 80 D0 */	lis r4, l_cull_box@ha
+/* 80D04918 00000054  C4 24 4C 38 */	lfsu f1, l_cull_box@l(r4)
+/* 80D0491C 00000058  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80D00004 */
+/* 80D04920 0000005C  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80D00008 */
+/* 80D04924 00000060  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80D0000C */
+/* 80D04928 00000064  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80D00010 */
+/* 80D0492C 00000068  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80D00014 */
+/* 80D04930 0000006C  4B 31 5C 18 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80D04934 00000070  38 60 00 00 */	li r3, 0
 /* 80D04938 00000074  38 80 FF FF */	li r4, -1
 /* 80D0493C 00000078  38 00 00 02 */	li r0, 2

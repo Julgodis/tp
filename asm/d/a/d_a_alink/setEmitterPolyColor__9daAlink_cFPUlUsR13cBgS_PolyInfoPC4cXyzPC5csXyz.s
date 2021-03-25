@@ -21,11 +21,11 @@ lbl_80120634:
 /* 80120680 0000004C  39 40 00 00 */	li r10, 0
 /* 80120684 00000050  4B F2 D0 21 */	bl setPoly__13dPa_control_cFUlUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz
 /* 80120688 00000054  90 7E 00 00 */	stw r3, 0(r30)
-/* 8012068C 00000058  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
+/* 8012068C 00000058  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
 /* 80120690 0000005C  38 63 02 10 */	addi r3, r3, 0x210
 /* 80120694 00000060  80 9E 00 00 */	lwz r4, 0(r30)
 /* 80120698 00000064  4B F2 B2 1D */	bl forceOnEventMove__Q213dPa_control_c7level_cFUl
-/* 8012069C 00000068  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
+/* 8012069C 00000068  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
 /* 801206A0 0000006C  38 63 02 10 */	addi r3, r3, 0x210
 /* 801206A4 00000070  80 9E 00 00 */	lwz r4, 0(r30)
 /* 801206A8 00000074  4B F2 B2 71 */	bl getEmitter__Q213dPa_control_c7level_cFUl

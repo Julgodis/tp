@@ -209,7 +209,7 @@ asm void J3DDisplayListObj::swapBuffer() {
 #pragma pop
 
 
-/* 80312618-80312644 002C+00 s=3 e=4 z=0  None .text      callDL__17J3DDisplayListObjCFv                               */
+/* 80312618-80312644 002C+00 s=3 e=4 z=1  None .text      callDL__17J3DDisplayListObjCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -271,7 +271,7 @@ asm void J3DDisplayListObj::endPatch() {
 #pragma pop
 
 
-/* 80312750-80312758 0008+00 s=3 e=16 z=0  None .text      entry__9J3DPacketFP13J3DDrawBuffer                           */
+/* 80312750-80312758 0008+00 s=3 e=16 z=10  None .text      entry__9J3DPacketFP13J3DDrawBuffer                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -333,7 +333,7 @@ SECTION_DATA static void* __vt__13J3DDrawPacket[5] = {
 	/* 4    */ (void*)__dt__13J3DDrawPacketFv,
 };
 
-/* 803CD97C-803CD990 0014+00 s=2 e=34 z=0  None .data      __vt__9J3DPacket                                             */
+/* 803CD97C-803CD990 0014+00 s=2 e=34 z=23  None .data      __vt__9J3DPacket                                             */
 SECTION_DATA void* __vt__9J3DPacket[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -540,7 +540,7 @@ asm void J3DShapePacket::draw() {
 #pragma pop
 
 
-/* 80312FBC-80313044 0088+00 s=1 e=2 z=0  None .text      drawFast__14J3DShapePacketFv                                 */
+/* 80312FBC-80313044 0088+00 s=1 e=2 z=1  None .text      drawFast__14J3DShapePacketFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

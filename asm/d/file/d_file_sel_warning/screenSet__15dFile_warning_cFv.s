@@ -118,8 +118,8 @@ lbl_80191E04:
 /* 80191EB8 000000B4  4E 80 04 21 */	bctrl 
 /* 80191EBC 000000B8  80 7F 00 20 */	lwz r3, 0x20(r31)
 /* 80191EC0 000000BC  38 80 02 00 */	li r4, 0x200
-/* 80191EC4 000000C0  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 80191EC8 000000C4  38 A5 48 28 */	addi r5, r5, stringBase0@l
+/* 80191EC4 000000C0  3C A0 80 39 */	lis r5, d_file_d_file_sel_warning__stringBase0@ha
+/* 80191EC8 000000C4  38 A5 48 28 */	addi r5, r5, d_file_d_file_sel_warning__stringBase0@l
 /* 80191ECC 000000C8  38 A5 00 88 */	addi r5, r5, 0x88
 /* 80191ED0 000000CC  4C C6 31 82 */	crclr 6
 /* 80191ED4 000000D0  48 16 E8 79 */	bl setString__10J2DTextBoxFsPCce

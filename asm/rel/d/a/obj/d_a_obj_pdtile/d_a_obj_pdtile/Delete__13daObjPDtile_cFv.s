@@ -8,9 +8,9 @@ lbl_80CAC094:
 /* 80CAC0AC 00000018  38 63 05 A0 */	addi r3, r3, 0x5a0
 lbl_80CAC0B0:
 /* 80CAC0B0 00000000  80 9F 07 BC */	lwz r4, 0x7bc(r31)
-/* 80CAC0B4 00000004  4B FF EB E5 */	bl _unresolved
+/* 80CAC0B4 00000004  4B 38 0F 54 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80CAC0B8 00000008  38 7F 07 DC */	addi r3, r31, 0x7dc
-/* 80CAC0BC 0000000C  4B FF EB DD */	bl _unresolved
+/* 80CAC0BC 0000000C  4B 61 1F 3C */	b deleteObject__14Z2SoundObjBaseFv
 /* 80CAC0C0 00000010  38 60 00 01 */	li r3, 1
 /* 80CAC0C4 00000014  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80CAC0C8 00000018  80 01 00 14 */	lwz r0, 0x14(r1)

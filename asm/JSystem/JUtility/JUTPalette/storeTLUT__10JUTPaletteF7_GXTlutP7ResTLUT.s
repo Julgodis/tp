@@ -8,8 +8,8 @@ lbl_802DE890:
 /* 802DE8A8 00000018  7C 9E 23 78 */	mr r30, r4
 /* 802DE8AC 0000001C  7C BF 2B 79 */	or. r31, r5, r5
 /* 802DE8B0 00000020  40 82 00 1C */	bne lbl_802DE8CC
-/* 802DE8B4 00000024  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802DE8B8 00000028  38 63 D3 60 */	addi r3, r3, stringBase0@l
+/* 802DE8B4 00000024  3C 60 80 3A */	lis r3, JUTPalette__stringBase0@ha
+/* 802DE8B8 00000028  38 63 D3 60 */	addi r3, r3, JUTPalette__stringBase0@l
 /* 802DE8BC 0000002C  38 80 00 23 */	li r4, 0x23
 /* 802DE8C0 00000030  38 A3 00 0F */	addi r5, r3, 0xf
 /* 802DE8C4 00000034  4C C6 31 82 */	crclr 6

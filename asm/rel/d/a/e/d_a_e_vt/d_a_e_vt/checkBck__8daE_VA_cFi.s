@@ -4,14 +4,14 @@ lbl_807C38BC:
 /* 807C38C4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 807C38C8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 807C38CC 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 807C38D0 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 807C38D4 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 807C38D8 0000001C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 807C38DC 00000020  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
+/* 807C38D0 00000014  3C 60 80 7D */	lis r3, stringBase0@ha
+/* 807C38D4 00000018  38 63 EE FC */	addi r3, r3, stringBase0@l
+/* 807C38D8 0000001C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 807C38DC 00000020  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 807C38E0 00000024  3C A5 00 02 */	addis r5, r5, 2
 /* 807C38E4 00000028  38 C0 00 80 */	li r6, 0x80
 /* 807C38E8 0000002C  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 807C38EC 00000030  4B FF EC 6D */	bl _unresolved
+/* 807C38EC 00000030  4B 87 8A 00 */	b getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 807C38F0 00000034  80 9F 05 B4 */	lwz r4, 0x5b4(r31)
 /* 807C38F4 00000038  80 04 00 08 */	lwz r0, 8(r4)
 /* 807C38F8 0000003C  7C 00 18 50 */	subf r0, r0, r3

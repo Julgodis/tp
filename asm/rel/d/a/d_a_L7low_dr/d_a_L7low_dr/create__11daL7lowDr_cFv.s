@@ -11,43 +11,43 @@ lbl_805AAD58:
 /* 805AAD7C 00000024  7F E0 FB 79 */	or. r0, r31, r31
 /* 805AAD80 00000028  41 82 00 14 */	beq lbl_805AAD94
 /* 805AAD84 0000002C  7C 1E 03 78 */	mr r30, r0
-/* 805AAD88 00000030  4B FF F8 51 */	bl _unresolved
+/* 805AAD88 00000030  4B A6 DD DC */	b __ct__10fopAc_ac_cFv
 /* 805AAD8C 00000034  38 7E 05 74 */	addi r3, r30, 0x574
-/* 805AAD90 00000038  4B FF F8 49 */	bl _unresolved
+/* 805AAD90 00000038  4B D1 61 D4 */	b __ct__15Z2CreatureEnemyFv
 lbl_805AAD94:
 /* 805AAD94 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 805AAD98 00000004  60 00 00 08 */	ori r0, r0, 8
 /* 805AAD9C 00000008  90 1F 04 A0 */	stw r0, 0x4a0(r31)
 lbl_805AADA0:
 /* 805AADA0 00000000  38 7F 05 68 */	addi r3, r31, 0x568
-/* 805AADA4 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 805AADA8 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 805AADAC 0000000C  4B FF F8 2D */	bl _unresolved
+/* 805AADA4 00000004  3C 80 80 5B */	lis r4, stringBase0@ha
+/* 805AADA8 00000008  38 84 AF B0 */	addi r4, r4, stringBase0@l
+/* 805AADAC 0000000C  4B A8 21 10 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 805AADB0 00000010  7C 7E 1B 78 */	mr r30, r3
 /* 805AADB4 00000014  2C 1E 00 04 */	cmpwi r30, 4
 /* 805AADB8 00000018  40 82 00 B4 */	bne lbl_805AAE6C
 /* 805AADBC 0000001C  7F E3 FB 78 */	mr r3, r31
-/* 805AADC0 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 805AADC4 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 805AADC0 00000020  3C 80 80 5B */	lis r4, useHeapInit__FP10fopAc_ac_c@ha
+/* 805AADC4 00000024  38 84 AC 3C */	addi r4, r4, useHeapInit__FP10fopAc_ac_c@l
 /* 805AADC8 00000028  38 A0 1D 20 */	li r5, 0x1d20
-/* 805AADCC 0000002C  4B FF F8 0D */	bl _unresolved
+/* 805AADCC 0000002C  4B A6 F6 E4 */	b fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
 /* 805AADD0 00000030  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 805AADD4 00000034  40 82 00 0C */	bne lbl_805AADE0
 /* 805AADD8 00000038  38 60 00 05 */	li r3, 5
 /* 805AADDC 0000003C  48 00 00 94 */	b lbl_805AAE70
 lbl_805AADE0:
-/* 805AADE0 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 805AADE4 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 805AADE0 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805AADE4 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805AADE8 00000008  38 63 09 58 */	addi r3, r3, 0x958
 /* 805AADEC 0000000C  38 80 00 03 */	li r4, 3
-/* 805AADF0 00000010  4B FF F7 E9 */	bl _unresolved
+/* 805AADF0 00000010  4B A8 9B 44 */	b isDungeonItem__12dSv_memBit_cCFi
 /* 805AADF4 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 805AADF8 00000018  41 82 00 0C */	beq lbl_805AAE04
 /* 805AADFC 0000001C  38 60 00 05 */	li r3, 5
 /* 805AAE00 00000020  48 00 00 70 */	b lbl_805AAE70
 lbl_805AAE04:
-/* 805AAE04 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 805AAE08 00000004  C0 03 00 00 */	lfs f0, 0x0000(r3)
+/* 805AAE04 00000000  3C 60 80 5B */	lis r3, lit_3773@ha
+/* 805AAE08 00000004  C0 03 AF 84 */	lfs f0, lit_3773@l(r3)
 /* 805AAE0C 00000008  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 805AAE10 0000000C  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
 /* 805AAE14 00000010  D0 1F 04 F4 */	stfs f0, 0x4f4(r31)
@@ -58,14 +58,14 @@ lbl_805AAE04:
 /* 805AAE28 00000024  38 BF 05 38 */	addi r5, r31, 0x538
 /* 805AAE2C 00000028  38 C0 00 03 */	li r6, 3
 /* 805AAE30 0000002C  38 E0 00 01 */	li r7, 1
-/* 805AAE34 00000030  4B FF F7 A5 */	bl _unresolved
-/* 805AAE38 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 805AAE3C 00000038  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
-/* 805AAE40 0000003C  80 64 00 00 */	lwz r3, 0(r4)
-/* 805AAE44 00000040  80 04 00 04 */	lwz r0, 4(r4)
+/* 805AAE34 00000030  4B D1 62 60 */	b init__15Z2CreatureEnemyFP3VecP3VecUcUc
+/* 805AAE38 00000034  3C 60 80 5B */	lis r3, lit_3832@ha
+/* 805AAE3C 00000038  38 83 AF B8 */	addi r4, r3, lit_3832@l
+/* 805AAE40 0000003C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 805AAFB8 */
+/* 805AAE44 00000040  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 805AAFBC */
 /* 805AAE48 00000044  90 61 00 08 */	stw r3, 8(r1)
 /* 805AAE4C 00000048  90 01 00 0C */	stw r0, 0xc(r1)
-/* 805AAE50 0000004C  80 04 00 08 */	lwz r0, 8(r4)
+/* 805AAE50 0000004C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 805AAFC0 */
 /* 805AAE54 00000050  90 01 00 10 */	stw r0, 0x10(r1)
 /* 805AAE58 00000054  7F E3 FB 78 */	mr r3, r31
 /* 805AAE5C 00000058  38 81 00 08 */	addi r4, r1, 8

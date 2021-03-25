@@ -21,7 +21,7 @@ lbl_8036FE08:
 /* 8036FE30 00000028  4C C6 31 82 */	crclr 6
 /* 8036FE34 0000002C  48 00 2E 21 */	bl MWTRACE
 /* 8036FE38 00000030  3C 60 80 45 */	lis r3, gTRKCPUState@ha
-/* 8036FE3C 00000034  80 9F 00 04 */	lwz r4, 4(r31)
+/* 8036FE3C 00000034  80 9F 00 04 */	lwz r4, 4(r31)	/* effective address: 803D3258 */
 /* 8036FE40 00000038  38 63 F3 38 */	addi r3, r3, gTRKCPUState@l
 /* 8036FE44 0000003C  80 03 01 F8 */	lwz r0, 0x1f8(r3)	/* effective address: 8044F530 */
 /* 8036FE48 00000040  2C 04 00 00 */	cmpwi r4, 0
@@ -31,9 +31,9 @@ lbl_8036FE08:
 /* 8036FE58 00000050  2C 04 00 10 */	cmpwi r4, 0x10
 /* 8036FE5C 00000054  40 82 00 10 */	bne lbl_8036FE6C
 lbl_8036FE60:
-/* 8036FE60 00000000  80 7F 00 08 */	lwz r3, 8(r31)
+/* 8036FE60 00000000  80 7F 00 08 */	lwz r3, 8(r31)	/* effective address: 803D325C */
 /* 8036FE64 00000004  38 03 FF FF */	addi r0, r3, -1
-/* 8036FE68 00000008  90 1F 00 08 */	stw r0, 8(r31)
+/* 8036FE68 00000008  90 1F 00 08 */	stw r0, 8(r31)	/* effective address: 803D325C */
 lbl_8036FE6C:
 /* 8036FE6C 00000000  3C 60 80 45 */	lis r3, gTRKState@ha
 /* 8036FE70 00000004  38 00 00 00 */	li r0, 0

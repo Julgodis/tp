@@ -133,13 +133,13 @@ lbl_800F156C:
 /* 800F15A4 00000038  7F C3 F3 78 */	mr r3, r30
 /* 800F15A8 0000003C  88 9C 00 0A */	lbz r4, 0xa(r28)
 /* 800F15AC 00000040  4B FD FF 81 */	bl setCutType__9daAlink_cFUc
-/* 800F15B0 00000044  C0 1D 00 14 */	lfs f0, 0x14(r29)
+/* 800F15B0 00000044  C0 1D 00 14 */	lfs f0, 0x14(r29)	/* effective address: 8038DC90 */
 /* 800F15B4 00000048  D0 1E 34 78 */	stfs f0, 0x3478(r30)
-/* 800F15B8 0000004C  C0 1D 00 18 */	lfs f0, 0x18(r29)
+/* 800F15B8 0000004C  C0 1D 00 18 */	lfs f0, 0x18(r29)	/* effective address: 8038DC94 */
 /* 800F15BC 00000050  D0 1E 34 7C */	stfs f0, 0x347c(r30)
-/* 800F15C0 00000054  C0 1D 00 1C */	lfs f0, 0x1c(r29)
+/* 800F15C0 00000054  C0 1D 00 1C */	lfs f0, 0x1c(r29)	/* effective address: 8038DC98 */
 /* 800F15C4 00000058  D0 1E 34 80 */	stfs f0, 0x3480(r30)
-/* 800F15C8 0000005C  C0 1D 00 10 */	lfs f0, 0x10(r29)
+/* 800F15C8 0000005C  C0 1D 00 10 */	lfs f0, 0x10(r29)	/* effective address: 8038DC8C */
 /* 800F15CC 00000060  D0 1E 34 84 */	stfs f0, 0x3484(r30)
 /* 800F15D0 00000064  80 1E 05 78 */	lwz r0, 0x578(r30)
 /* 800F15D4 00000068  54 00 01 D1 */	rlwinm. r0, r0, 0, 7, 8
@@ -150,8 +150,8 @@ lbl_800F156C:
 /* 800F15E8 0000007C  38 C0 00 01 */	li r6, 1
 /* 800F15EC 00000080  38 E0 00 02 */	li r7, 2
 /* 800F15F0 00000084  39 1F 08 34 */	addi r8, r31, 0x834
-/* 800F15F4 00000088  C0 28 00 90 */	lfs f1, 0x90(r8)
-/* 800F15F8 0000008C  C0 48 00 94 */	lfs f2, 0x94(r8)
+/* 800F15F4 00000088  C0 28 00 90 */	lfs f1, 0x90(r8)	/* effective address: 8038DF1C */
+/* 800F15F8 0000008C  C0 48 00 94 */	lfs f2, 0x94(r8)	/* effective address: 8038DF20 */
 /* 800F15FC 00000090  4B FE 00 8D */	bl setSwordAtParam__9daAlink_cF11dCcG_At_SplUcUciff
 /* 800F1600 00000094  48 00 00 28 */	b lbl_800F1628
 lbl_800F1604:
@@ -161,8 +161,8 @@ lbl_800F1604:
 /* 800F1610 0000000C  38 C0 00 01 */	li r6, 1
 /* 800F1614 00000010  38 E0 00 02 */	li r7, 2
 /* 800F1618 00000014  39 1F 08 34 */	addi r8, r31, 0x834
-/* 800F161C 00000018  C0 28 00 7C */	lfs f1, 0x7c(r8)
-/* 800F1620 0000001C  C0 48 00 80 */	lfs f2, 0x80(r8)
+/* 800F161C 00000018  C0 28 00 7C */	lfs f1, 0x7c(r8)	/* effective address: 8038DF08 */
+/* 800F1620 0000001C  C0 48 00 80 */	lfs f2, 0x80(r8)	/* effective address: 8038DF0C */
 /* 800F1624 00000020  4B FE 00 65 */	bl setSwordAtParam__9daAlink_cF11dCcG_At_SplUcUciff
 lbl_800F1628:
 /* 800F1628 00000000  7F C3 F3 78 */	mr r3, r30
@@ -172,7 +172,7 @@ lbl_800F1628:
 /* 800F1638 00000010  7D 89 03 A6 */	mtctr r12
 /* 800F163C 00000014  4E 80 04 21 */	bctrl 
 /* 800F1640 00000018  38 7F 08 34 */	addi r3, r31, 0x834
-/* 800F1644 0000001C  A8 03 00 52 */	lha r0, 0x52(r3)
+/* 800F1644 0000001C  A8 03 00 52 */	lha r0, 0x52(r3)	/* effective address: 8038DEDE */
 /* 800F1648 00000020  B0 1E 30 7E */	sth r0, 0x307e(r30)
 /* 800F164C 00000024  38 00 00 00 */	li r0, 0
 /* 800F1650 00000028  B0 1E 30 12 */	sth r0, 0x3012(r30)

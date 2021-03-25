@@ -5,26 +5,26 @@ lbl_80AA4A7C:
 /* 80AA4A88 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80AA4A8C 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80AA4A90 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80AA4A94 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80AA4A98 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
+/* 80AA4A94 00000018  3C 80 80 AA */	lis r4, lit_4109@ha
+/* 80AA4A98 0000001C  3B E4 69 8C */	addi r31, r4, lit_4109@l
 /* 80AA4A9C 00000020  88 03 0B 22 */	lbz r0, 0xb22(r3)
 /* 80AA4AA0 00000024  28 00 00 00 */	cmplwi r0, 0
 /* 80AA4AA4 00000028  41 82 00 5C */	beq lbl_80AA4B00
 /* 80AA4AA8 0000002C  38 80 00 0B */	li r4, 0xb
 /* 80AA4AAC 00000030  80 BE 0B 00 */	lwz r5, 0xb00(r30)
-/* 80AA4AB0 00000034  4B FF E1 49 */	bl _unresolved
+/* 80AA4AB0 00000034  4B 6B 36 40 */	b getAnmP__10daNpcCd2_cFii
 /* 80AA4AB4 00000038  7C 64 1B 78 */	mr r4, r3
 /* 80AA4AB8 0000003C  7F C3 F3 78 */	mr r3, r30
-/* 80AA4ABC 00000040  C0 3F 00 0C */	lfs f1, 0xc(r31)
-/* 80AA4AC0 00000044  C0 5F 00 10 */	lfs f2, 0x10(r31)
+/* 80AA4ABC 00000040  C0 3F 00 0C */	lfs f1, 0xc(r31)	/* effective address: 80AA6998 */
+/* 80AA4AC0 00000044  C0 5F 00 10 */	lfs f2, 0x10(r31)	/* effective address: 80AA699C */
 /* 80AA4AC4 00000048  38 A0 00 02 */	li r5, 2
 /* 80AA4AC8 0000004C  38 C0 00 00 */	li r6, 0
 /* 80AA4ACC 00000050  38 E0 FF FF */	li r7, -1
-/* 80AA4AD0 00000054  4B FF E1 29 */	bl _unresolved
-/* 80AA4AD4 00000058  C0 3F 00 30 */	lfs f1, 0x30(r31)
+/* 80AA4AD0 00000054  4B 6B 44 30 */	b setAnm__10daNpcCd2_cFP18J3DAnmTransformKeyffiii
+/* 80AA4AD4 00000058  C0 3F 00 30 */	lfs f1, 0x30(r31)	/* effective address: 80AA69BC */
 /* 80AA4AD8 0000005C  FC 40 08 90 */	fmr f2, f1
 /* 80AA4ADC 00000060  48 00 0E E1 */	bl func_80AA59BC
-/* 80AA4AE0 00000064  C0 1F 00 6C */	lfs f0, 0x6c(r31)
+/* 80AA4AE0 00000064  C0 1F 00 6C */	lfs f0, 0x6c(r31)	/* effective address: 80AA69F8 */
 /* 80AA4AE4 00000068  EC 00 08 2A */	fadds f0, f0, f1
 /* 80AA4AE8 0000006C  FC 00 00 1E */	fctiwz f0, f0
 /* 80AA4AEC 00000070  D8 01 00 08 */	stfd f0, 8(r1)

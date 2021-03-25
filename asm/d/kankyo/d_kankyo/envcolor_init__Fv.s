@@ -103,14 +103,14 @@ lbl_8019EC98:
 /* 8019EE2C 00000194  D0 3E 12 70 */	stfs f1, 0x1270(r30)	/* effective address: 8042DCC4 */
 /* 8019EE30 00000198  3B FF 4E 00 */	addi r31, r31, 0x4e00
 /* 8019EE34 0000019C  7F E3 FB 78 */	mr r3, r31
-/* 8019EE38 000001A0  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 8019EE3C 000001A4  38 84 4C 6C */	addi r4, r4, stringBase0@l
+/* 8019EE38 000001A0  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
+/* 8019EE3C 000001A4  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
 /* 8019EE40 000001A8  38 84 01 5C */	addi r4, r4, 0x15c
 /* 8019EE44 000001AC  48 1C 9B 51 */	bl strcmp
 /* 8019EE48 000001B0  2C 03 00 00 */	cmpwi r3, 0
 /* 8019EE4C 000001B4  40 82 00 0C */	bne lbl_8019EE58
 /* 8019EE50 000001B8  C0 02 A2 A0 */	lfs f0, lit_5344(r2)
-/* 8019EE54 000001BC  D0 1E 12 70 */	stfs f0, 0x1270(r30)
+/* 8019EE54 000001BC  D0 1E 12 70 */	stfs f0, 0x1270(r30)	/* effective address: 8042DCC4 */
 lbl_8019EE58:
 /* 8019EE58 00000000  38 00 00 00 */	li r0, 0
 /* 8019EE5C 00000004  3C 60 80 43 */	lis r3, g_env_light@ha
@@ -137,7 +137,7 @@ lbl_8019EE58:
 /* 8019EEB0 00000058  C0 02 A2 8C */	lfs f0, lit_5106(r2)
 /* 8019EEB4 0000005C  D0 03 12 7C */	stfs f0, 0x127c(r3)	/* effective address: 8042DCD0 */
 /* 8019EEB8 00000060  7F 23 CB 78 */	mr r3, r25
-/* 8019EEBC 00000064  81 99 00 00 */	lwz r12, 0(r25)
+/* 8019EEBC 00000064  81 99 00 00 */	lwz r12, 0(r25)	/* effective address: 8040AFE0 */
 /* 8019EEC0 00000068  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 8019EEC4 0000006C  7D 89 03 A6 */	mtctr r12
 /* 8019EEC8 00000070  4E 80 04 21 */	bctrl 
@@ -170,15 +170,15 @@ lbl_8019EF00:
 /* 8019EF2C 0000002C  C0 02 A2 0C */	lfs f0, lit_4409(r2)
 /* 8019EF30 00000030  D0 1E 0E CC */	stfs f0, 0xecc(r30)	/* effective address: 8042D920 */
 /* 8019EF34 00000034  7F E3 FB 78 */	mr r3, r31
-/* 8019EF38 00000038  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 8019EF3C 0000003C  38 84 4C 6C */	addi r4, r4, stringBase0@l
+/* 8019EF38 00000038  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
+/* 8019EF3C 0000003C  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
 /* 8019EF40 00000040  38 84 01 7A */	addi r4, r4, 0x17a
 /* 8019EF44 00000044  48 1C 9A 51 */	bl strcmp
 /* 8019EF48 00000048  2C 03 00 00 */	cmpwi r3, 0
 /* 8019EF4C 0000004C  41 82 00 20 */	beq lbl_8019EF6C
 /* 8019EF50 00000050  7F E3 FB 78 */	mr r3, r31
-/* 8019EF54 00000054  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 8019EF58 00000058  38 84 4C 6C */	addi r4, r4, stringBase0@l
+/* 8019EF54 00000054  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
+/* 8019EF58 00000058  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
 /* 8019EF5C 0000005C  38 84 01 5C */	addi r4, r4, 0x15c
 /* 8019EF60 00000060  48 1C 9A 35 */	bl strcmp
 /* 8019EF64 00000064  2C 03 00 00 */	cmpwi r3, 0
@@ -190,18 +190,18 @@ lbl_8019EF6C:
 /* 8019EF78 0000000C  28 00 00 07 */	cmplwi r0, 7
 /* 8019EF7C 00000010  41 80 00 10 */	blt lbl_8019EF8C
 /* 8019EF80 00000014  38 00 00 02 */	li r0, 2
-/* 8019EF84 00000018  98 1E 12 C8 */	stb r0, 0x12c8(r30)
+/* 8019EF84 00000018  98 1E 12 C8 */	stb r0, 0x12c8(r30)	/* effective address: 8042DD1C */
 /* 8019EF88 0000001C  48 00 00 78 */	b lbl_8019F000
 lbl_8019EF8C:
 /* 8019EF8C 00000000  28 00 00 00 */	cmplwi r0, 0
 /* 8019EF90 00000004  41 82 00 70 */	beq lbl_8019F000
 /* 8019EF94 00000008  38 00 00 01 */	li r0, 1
-/* 8019EF98 0000000C  98 1E 12 C8 */	stb r0, 0x12c8(r30)
+/* 8019EF98 0000000C  98 1E 12 C8 */	stb r0, 0x12c8(r30)	/* effective address: 8042DD1C */
 /* 8019EF9C 00000010  48 00 00 64 */	b lbl_8019F000
 lbl_8019EFA0:
 /* 8019EFA0 00000000  7F E3 FB 78 */	mr r3, r31
-/* 8019EFA4 00000004  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 8019EFA8 00000008  38 84 4C 6C */	addi r4, r4, stringBase0@l
+/* 8019EFA4 00000004  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
+/* 8019EFA8 00000008  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
 /* 8019EFAC 0000000C  38 84 00 6F */	addi r4, r4, 0x6f
 /* 8019EFB0 00000010  48 1C 99 E5 */	bl strcmp
 /* 8019EFB4 00000014  2C 03 00 00 */	cmpwi r3, 0
@@ -212,13 +212,13 @@ lbl_8019EFA0:
 /* 8019EFC8 00000028  28 00 00 01 */	cmplwi r0, 1
 /* 8019EFCC 0000002C  40 82 00 10 */	bne lbl_8019EFDC
 /* 8019EFD0 00000030  38 00 00 01 */	li r0, 1
-/* 8019EFD4 00000034  98 1E 12 C8 */	stb r0, 0x12c8(r30)
+/* 8019EFD4 00000034  98 1E 12 C8 */	stb r0, 0x12c8(r30)	/* effective address: 8042DD1C */
 /* 8019EFD8 00000038  48 00 00 28 */	b lbl_8019F000
 lbl_8019EFDC:
 /* 8019EFDC 00000000  28 00 00 02 */	cmplwi r0, 2
 /* 8019EFE0 00000004  40 82 00 20 */	bne lbl_8019F000
 /* 8019EFE4 00000008  38 00 00 02 */	li r0, 2
-/* 8019EFE8 0000000C  98 1E 12 C8 */	stb r0, 0x12c8(r30)
+/* 8019EFE8 0000000C  98 1E 12 C8 */	stb r0, 0x12c8(r30)	/* effective address: 8042DD1C */
 /* 8019EFEC 00000010  48 00 00 14 */	b lbl_8019F000
 lbl_8019EFF0:
 /* 8019EFF0 00000000  38 00 00 00 */	li r0, 0
@@ -256,7 +256,7 @@ lbl_8019F000:
 /* 8019F06C 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 8019F070 00000004  40 82 00 0C */	bne lbl_8019F07C
 /* 8019F074 00000008  EC 01 00 28 */	fsubs f0, f1, f0
-/* 8019F078 0000000C  D0 03 11 D4 */	stfs f0, 0x11d4(r3)
+/* 8019F078 0000000C  D0 03 11 D4 */	stfs f0, 0x11d4(r3)	/* effective address: 8042DC28 */
 lbl_8019F07C:
 /* 8019F07C 00000000  38 80 00 00 */	li r4, 0
 /* 8019F080 00000004  3C 60 80 43 */	lis r3, g_env_light@ha
@@ -266,7 +266,7 @@ lbl_8019F07C:
 /* 8019F090 00000014  90 83 12 98 */	stw r4, 0x1298(r3)	/* effective address: 8042DCEC */
 /* 8019F094 00000018  C0 02 A2 0C */	lfs f0, lit_4409(r2)
 /* 8019F098 0000001C  D0 03 11 D8 */	stfs f0, 0x11d8(r3)	/* effective address: 8042DC2C */
-/* 8019F09C 00000020  88 1E 12 C8 */	lbz r0, 0x12c8(r30)
+/* 8019F09C 00000020  88 1E 12 C8 */	lbz r0, 0x12c8(r30)	/* effective address: 8042DD1C */
 /* 8019F0A0 00000024  98 03 12 C2 */	stb r0, 0x12c2(r3)	/* effective address: 8042DD16 */
 /* 8019F0A4 00000028  98 03 12 C3 */	stb r0, 0x12c3(r3)	/* effective address: 8042DD17 */
 /* 8019F0A8 0000002C  38 00 00 FF */	li r0, 0xff
@@ -278,7 +278,7 @@ lbl_8019F07C:
 /* 8019F0C0 00000044  98 83 12 CE */	stb r4, 0x12ce(r3)	/* effective address: 8042DD22 */
 /* 8019F0C4 00000048  28 1C 00 00 */	cmplwi r28, 0
 /* 8019F0C8 0000004C  41 82 00 0C */	beq lbl_8019F0D4
-/* 8019F0CC 00000050  93 83 00 0C */	stw r28, 0xc(r3)
+/* 8019F0CC 00000050  93 83 00 0C */	stw r28, 0xc(r3)	/* effective address: 8042CA60 */
 /* 8019F0D0 00000054  48 00 00 14 */	b lbl_8019F0E4
 lbl_8019F0D4:
 /* 8019F0D4 00000000  4B EB 79 21 */	bl dKyd_dmenvr_getp__Fv
@@ -354,7 +354,7 @@ lbl_8019F15C:
 /* 8019F1D0 00000074  C0 02 A2 48 */	lfs f0, lit_4505(r2)
 /* 8019F1D4 00000078  D0 03 13 04 */	stfs f0, 0x1304(r3)	/* effective address: 8042DD58 */
 /* 8019F1D8 0000007C  7F 23 CB 78 */	mr r3, r25
-/* 8019F1DC 00000080  81 99 00 00 */	lwz r12, 0(r25)
+/* 8019F1DC 00000080  81 99 00 00 */	lwz r12, 0(r25)	/* effective address: 8040AFE0 */
 /* 8019F1E0 00000084  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 8019F1E4 00000088  7D 89 03 A6 */	mtctr r12
 /* 8019F1E8 0000008C  4E 80 04 21 */	bctrl 
@@ -371,7 +371,7 @@ lbl_8019F15C:
 /* 8019F214 000000B8  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8019F218 000000BC  EC 00 08 28 */	fsubs f0, f0, f1
 /* 8019F21C 000000C0  EC 02 00 32 */	fmuls f0, f2, f0
-/* 8019F220 000000C4  D0 1F 00 34 */	stfs f0, 0x34(r31)
+/* 8019F220 000000C4  D0 1F 00 34 */	stfs f0, 0x34(r31)	/* effective address: 804061F4 */
 lbl_8019F224:
 /* 8019F224 00000000  C0 02 A2 B4 */	lfs f0, lit_5349(r2)
 /* 8019F228 00000004  3C 60 80 43 */	lis r3, g_env_light@ha

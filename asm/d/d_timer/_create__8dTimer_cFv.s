@@ -6,8 +6,8 @@ lbl_8025CA0C:
 /* 8025CA1C 00000010  48 10 57 BD */	bl _savegpr_28
 /* 8025CA20 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 8025CA24 00000018  38 7F 01 08 */	addi r3, r31, 0x108
-/* 8025CA28 0000001C  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8025CA2C 00000020  38 84 A3 D8 */	addi r4, r4, stringBase0@l
+/* 8025CA28 0000001C  3C 80 80 3A */	lis r4, d_d_timer__stringBase0@ha
+/* 8025CA2C 00000020  38 84 A3 D8 */	addi r4, r4, d_d_timer__stringBase0@l
 /* 8025CA30 00000024  4B DD 04 8D */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 8025CA34 00000028  2C 03 00 04 */	cmpwi r3, 4
 /* 8025CA38 0000002C  40 82 04 B4 */	bne lbl_8025CEEC
@@ -18,8 +18,8 @@ lbl_8025CA0C:
 /* 8025CA4C 00000040  38 60 00 05 */	li r3, 5
 /* 8025CA50 00000044  48 00 04 9C */	b lbl_8025CEEC
 lbl_8025CA54:
-/* 8025CA54 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 8025CA58 00000004  38 63 A3 D8 */	addi r3, r3, stringBase0@l
+/* 8025CA54 00000000  3C 60 80 3A */	lis r3, d_d_timer__stringBase0@ha
+/* 8025CA58 00000004  38 63 A3 D8 */	addi r3, r3, d_d_timer__stringBase0@l
 /* 8025CA5C 00000008  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8025CA60 0000000C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8025CA64 00000010  3C 84 00 02 */	addis r4, r4, 2
@@ -27,7 +27,7 @@ lbl_8025CA54:
 /* 8025CA6C 00000018  38 84 C2 F8 */	addi r4, r4, -15624
 /* 8025CA70 0000001C  4B DD F7 75 */	bl getResInfo__14dRes_control_cFPCcP11dRes_info_ci
 /* 8025CA74 00000020  7C 7D 1B 78 */	mr r29, r3
-/* 8025CA78 00000024  80 03 00 14 */	lwz r0, 0x14(r3)
+/* 8025CA78 00000024  80 03 00 14 */	lwz r0, 0x14(r3)	/* effective address: 8039A3EC */
 /* 8025CA7C 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8025CA80 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8025CA84 00000030  90 03 5C E0 */	stw r0, 0x5ce0(r3)	/* effective address: 8040BEA0 */
@@ -197,7 +197,7 @@ lbl_8025CCD8:
 /* 8025CCEC 00000014  48 00 00 A4 */	b lbl_8025CD90
 lbl_8025CCF0:
 /* 8025CCF0 00000000  90 1F 01 54 */	stw r0, 0x154(r31)
-/* 8025CCF4 00000004  80 DE 00 20 */	lwz r6, 0x20(r30)
+/* 8025CCF4 00000004  80 DE 00 20 */	lwz r6, 0x20(r30)	/* effective address: 80407118 */
 /* 8025CCF8 00000008  38 A0 00 00 */	li r5, 0
 /* 8025CCFC 0000000C  3C 60 80 00 */	lis r3, 0x8000 /* 0x800000F8@ha */
 /* 8025CD00 00000010  80 03 00 F8 */	lwz r0, 0x00F8(r3)

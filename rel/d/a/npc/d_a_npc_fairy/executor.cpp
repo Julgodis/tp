@@ -21,6 +21,14 @@ extern "C" void _unresolved(); // 1
 // 
 
 
+extern "C" void ModuleProlog(); // 1
+extern "C" void ModuleEpilog(); // 1
+extern "C" void ModuleUnresolved(); // 1
+extern "C" void ModuleConstructorsX(); // 1
+extern "C" void ModuleDestructorsX(); // 1
+extern void* data_809B92D0[2];
+#pragma section ".dtors$10"
+__declspec(section ".dtors$10") extern void* __destroy_global_chain_reference;
 
 // 
 // Declarations:
@@ -48,7 +56,7 @@ extern "C" asm void _epilog() {
 #pragma pop
 
 
-/* 809B1A78-809B1A98 0020+00 s=2 e=107 z=0  None .text      _unresolved                                                  */
+/* 809B1A78-809B1A98 0020+00 s=0 e=0 z=0  None .text      _unresolved                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -34,8 +34,8 @@ lbl_80244E88:
 lbl_80244EB0:
 /* 80244EB0 00000000  90 1F 00 04 */	stw r0, 4(r31)
 /* 80244EB4 00000004  80 7F 00 04 */	lwz r3, 4(r31)
-/* 80244EB8 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 80244EBC 0000000C  38 84 9A B8 */	addi r4, r4, stringBase0@l
+/* 80244EB8 00000008  3C 80 80 3A */	lis r4, msg_scrn_d_msg_scrn_kanban__stringBase0@ha
+/* 80244EBC 0000000C  38 84 9A B8 */	addi r4, r4, msg_scrn_d_msg_scrn_kanban__stringBase0@l
 /* 80244EC0 00000010  3C A0 01 02 */	lis r5, 0x102
 /* 80244EC4 00000014  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
 /* 80244EC8 00000018  3B A6 61 C0 */	addi r29, r6, g_dComIfG_gameInfo@l
@@ -55,17 +55,17 @@ lbl_80244EB0:
 /* 80244F00 00000050  38 60 00 07 */	li r3, 7
 /* 80244F04 00000054  64 63 00 07 */	oris r3, r3, 7
 /* 80244F08 00000058  7C 75 E3 A6 */	mtspr 0x395, r3
-/* 80244F0C 0000005C  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 80244F10 00000060  38 84 9A B8 */	addi r4, r4, stringBase0@l
+/* 80244F0C 0000005C  3C 80 80 3A */	lis r4, msg_scrn_d_msg_scrn_kanban__stringBase0@ha
+/* 80244F10 00000060  38 84 9A B8 */	addi r4, r4, msg_scrn_d_msg_scrn_kanban__stringBase0@l
 /* 80244F14 00000064  38 64 00 19 */	addi r3, r4, 0x19
-/* 80244F18 00000068  80 9D 5C 74 */	lwz r4, 0x5c74(r29)
+/* 80244F18 00000068  80 9D 5C 74 */	lwz r4, 0x5c74(r29)	/* effective address: 8040BE34 */
 /* 80244F1C 0000006C  48 08 F3 55 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
 /* 80244F20 00000070  48 0C 3B 4D */	bl load__20J2DAnmLoaderDataBaseFPCv
 /* 80244F24 00000074  90 7F 00 CC */	stw r3, 0xcc(r31)
-/* 80244F28 00000078  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 80244F2C 0000007C  38 84 9A B8 */	addi r4, r4, stringBase0@l
+/* 80244F28 00000078  3C 80 80 3A */	lis r4, msg_scrn_d_msg_scrn_kanban__stringBase0@ha
+/* 80244F2C 0000007C  38 84 9A B8 */	addi r4, r4, msg_scrn_d_msg_scrn_kanban__stringBase0@l
 /* 80244F30 00000080  38 64 00 32 */	addi r3, r4, 0x32
-/* 80244F34 00000084  80 9D 5C 74 */	lwz r4, 0x5c74(r29)
+/* 80244F34 00000084  80 9D 5C 74 */	lwz r4, 0x5c74(r29)	/* effective address: 8040BE34 */
 /* 80244F38 00000088  48 08 F3 39 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
 /* 80244F3C 0000008C  48 0C 3B 31 */	bl load__20J2DAnmLoaderDataBaseFPCv
 /* 80244F40 00000090  90 7F 00 D0 */	stw r3, 0xd0(r31)

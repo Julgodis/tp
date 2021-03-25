@@ -16,11 +16,11 @@ lbl_8000CFB8:
 /* 8000CFF0 00000038  48 35 4C 35 */	bl __register_global_object
 /* 8000CFF4 0000003C  38 7F 03 48 */	addi r3, r31, 0x348
 /* 8000CFF8 00000040  38 03 00 04 */	addi r0, r3, 4
-/* 8000CFFC 00000044  90 1F 03 48 */	stw r0, 0x348(r31)
+/* 8000CFFC 00000044  90 1F 03 48 */	stw r0, 0x348(r31)	/* effective address: 803DD7B8 */
 /* 8000D000 00000048  38 03 00 14 */	addi r0, r3, 0x14
-/* 8000D004 0000004C  90 03 01 14 */	stw r0, 0x114(r3)
+/* 8000D004 0000004C  90 03 01 14 */	stw r0, 0x114(r3)	/* effective address: 803DD8CC */
 /* 8000D008 00000050  38 03 01 14 */	addi r0, r3, 0x114
-/* 8000D00C 00000054  90 03 01 18 */	stw r0, 0x118(r3)
+/* 8000D00C 00000054  90 03 01 18 */	stw r0, 0x118(r3)	/* effective address: 803DD8D0 */
 /* 8000D010 00000058  3C 80 80 01 */	lis r4, __dt__18mDoMtx_quatStack_cFv@ha
 /* 8000D014 0000005C  38 84 D0 34 */	addi r4, r4, __dt__18mDoMtx_quatStack_cFv@l
 /* 8000D018 00000060  38 BF 03 3C */	addi r5, r31, 0x33c

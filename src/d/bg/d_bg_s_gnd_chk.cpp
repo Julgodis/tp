@@ -146,7 +146,7 @@ SECTION_DATA void* __vt__14dBgS_CamGndChk[12] = {
 	/* 11   */ (void*)func_80077B78,
 };
 
-/* 803AB6E8-803AB718 0030+00 s=1 e=3 z=0  None .data      __vt__18dBgS_ObjGndChk_All                                   */
+/* 803AB6E8-803AB718 0030+00 s=1 e=3 z=8  None .data      __vt__18dBgS_ObjGndChk_All                                   */
 SECTION_DATA void* __vt__18dBgS_ObjGndChk_All[12] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -210,7 +210,7 @@ SECTION_DATA static void* __vt__11dBgS_GndChk[12] = {
 	/* 11   */ (void*)func_80077B18,
 };
 
-/* 8007757C-800775F0 0074+00 s=3 e=15 z=0  None .text      __ct__11dBgS_GndChkFv                                        */
+/* 8007757C-800775F0 0074+00 s=3 e=15 z=289  None .text      __ct__11dBgS_GndChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -221,7 +221,7 @@ asm dBgS_GndChk::dBgS_GndChk() {
 #pragma pop
 
 
-/* 800775F0-80077678 0088+00 s=8 e=13 z=0  None .text      __dt__11dBgS_GndChkFv                                        */
+/* 800775F0-80077678 0088+00 s=8 e=13 z=295  None .text      __dt__11dBgS_GndChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -232,7 +232,7 @@ asm dBgS_GndChk::~dBgS_GndChk() {
 #pragma pop
 
 
-/* 80077678-80077710 0098+00 s=0 e=0 z=0  None .text      __ct__18dBgS_ObjGndChk_WtrFv                                 */
+/* 80077678-80077710 0098+00 s=0 e=0 z=1  None .text      __ct__18dBgS_ObjGndChk_WtrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -243,7 +243,7 @@ asm dBgS_ObjGndChk_Wtr::dBgS_ObjGndChk_Wtr() {
 #pragma pop
 
 
-/* 80077710-800777B0 00A0+00 s=4 e=0 z=0  None .text      __dt__18dBgS_ObjGndChk_WtrFv                                 */
+/* 80077710-800777B0 00A0+00 s=4 e=0 z=1  None .text      __dt__18dBgS_ObjGndChk_WtrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -254,7 +254,7 @@ asm dBgS_ObjGndChk_Wtr::~dBgS_ObjGndChk_Wtr() {
 #pragma pop
 
 
-/* 800777B0-80077848 0098+00 s=0 e=0 z=0  None .text      __ct__18dBgS_ObjGndChk_SplFv                                 */
+/* 800777B0-80077848 0098+00 s=0 e=0 z=61  None .text      __ct__18dBgS_ObjGndChk_SplFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -265,7 +265,7 @@ asm dBgS_ObjGndChk_Spl::dBgS_ObjGndChk_Spl() {
 #pragma pop
 
 
-/* 80077848-800778E8 00A0+00 s=4 e=0 z=0  None .text      __dt__18dBgS_ObjGndChk_SplFv                                 */
+/* 80077848-800778E8 00A0+00 s=4 e=0 z=61  None .text      __dt__18dBgS_ObjGndChk_SplFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -276,7 +276,7 @@ asm dBgS_ObjGndChk_Spl::~dBgS_ObjGndChk_Spl() {
 #pragma pop
 
 
-/* 800778E8-80077988 00A0+00 s=4 e=3 z=0  None .text      __dt__18dBgS_ObjGndChk_AllFv                                 */
+/* 800778E8-80077988 00A0+00 s=4 e=3 z=7  None .text      __dt__18dBgS_ObjGndChk_AllFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -298,7 +298,7 @@ asm dBgS_CamGndChk::~dBgS_CamGndChk() {
 #pragma pop
 
 
-/* 80077A00-80077A98 0098+00 s=0 e=5 z=0  None .text      __ct__18dBgS_CamGndChk_WtrFv                                 */
+/* 80077A00-80077A98 0098+00 s=0 e=5 z=1  None .text      __ct__18dBgS_CamGndChk_WtrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -309,7 +309,7 @@ asm dBgS_CamGndChk_Wtr::dBgS_CamGndChk_Wtr() {
 #pragma pop
 
 
-/* 80077A98-80077B10 0078+00 s=4 e=5 z=0  None .text      __dt__18dBgS_CamGndChk_WtrFv                                 */
+/* 80077A98-80077B10 0078+00 s=4 e=5 z=1  None .text      __dt__18dBgS_CamGndChk_WtrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

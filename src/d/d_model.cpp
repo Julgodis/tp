@@ -14,10 +14,10 @@
 struct dMdl_obj_c {
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dMdl_c {
@@ -66,6 +66,7 @@ extern "C" void remove__10dMdl_mng_cFv(); // 1
 extern "C" void reset__10dMdl_mng_cFv(); // 1
 extern "C" void entry__10dMdl_mng_cFP12J3DModelDataUsi(); // 1
 extern "C" void __ct__6dMdl_cFv(); // 1
+extern "C" extern void* __vt__6dMdl_c[5 + 1 /* padding */];
 
 // 
 // External References:
@@ -122,7 +123,7 @@ asm void dMdl_c::draw() {
 #pragma pop
 
 
-/* 8009C650-8009C668 0018+00 s=1 e=0 z=0  None .text      create__6dMdl_cFP12J3DModelDataUsP12dKy_tevstr_c             */
+/* 8009C650-8009C668 0018+00 s=1 e=0 z=1  None .text      create__6dMdl_cFP12J3DModelDataUsP12dKy_tevstr_c             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -133,7 +134,7 @@ asm void dMdl_c::create(J3DModelData* param_0, u16 param_1, dKy_tevstr_c* param_
 #pragma pop
 
 
-/* 8009C668-8009C6DC 0074+00 s=0 e=0 z=0  None .text      entryObj__6dMdl_cFP10dMdl_obj_c                              */
+/* 8009C668-8009C6DC 0074+00 s=0 e=0 z=5  None .text      entryObj__6dMdl_cFP10dMdl_obj_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -182,8 +183,8 @@ asm void dMdl_mng_c::create() {
 
 
 /* ############################################################################################## */
-/* 803AF978-803AF990 0014+04 s=2 e=0 z=0  None .data      __vt__6dMdl_c                                                */
-SECTION_DATA static void* __vt__6dMdl_c[5 + 1 /* padding */] = {
+/* 803AF978-803AF990 0014+04 s=2 e=0 z=1  None .data      __vt__6dMdl_c                                                */
+SECTION_DATA void* __vt__6dMdl_c[5 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
@@ -226,7 +227,7 @@ asm void dMdl_mng_c::reset() {
 #pragma pop
 
 
-/* 8009C8D8-8009C930 0058+00 s=0 e=0 z=0  None .text      entry__10dMdl_mng_cFP12J3DModelDataUsi                       */
+/* 8009C8D8-8009C930 0058+00 s=0 e=0 z=4  None .text      entry__10dMdl_mng_cFP12J3DModelDataUsi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

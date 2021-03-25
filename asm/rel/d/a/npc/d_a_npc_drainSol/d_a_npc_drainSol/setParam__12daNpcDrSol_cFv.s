@@ -12,7 +12,7 @@ lbl_809AEDA8:
 /* 809AEDD0 00000028  88 1E 09 F4 */	lbz r0, 0x9f4(r30)
 /* 809AEDD4 0000002C  28 00 00 00 */	cmplwi r0, 0
 /* 809AEDD8 00000030  41 82 00 14 */	beq lbl_809AEDEC
-/* 809AEDDC 00000034  4B FF EF FD */	bl _unresolved
+/* 809AEDDC 00000034  4B 68 0C 78 */	b dComIfGs_wolfeye_effect_check__Fv
 /* 809AEDE0 00000038  2C 03 00 00 */	cmpwi r3, 0
 /* 809AEDE4 0000003C  40 82 00 08 */	bne lbl_809AEDEC
 lbl_809AEDE8:

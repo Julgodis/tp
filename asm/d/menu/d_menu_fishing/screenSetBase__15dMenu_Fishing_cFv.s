@@ -12,8 +12,8 @@ lbl_801C55D8:
 /* 801C5600 00000028  80 63 5D 30 */	lwz r3, 0x5d30(r3)	/* effective address: 8040BEF0 */
 /* 801C5604 0000002C  3C 80 54 49 */	lis r4, 0x5449 /* 0x54494D47@ha */
 /* 801C5608 00000030  38 84 4D 47 */	addi r4, r4, 0x4D47 /* 0x54494D47@l */
-/* 801C560C 00000034  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801C5610 00000038  38 A5 60 68 */	addi r5, r5, stringBase0@l
+/* 801C560C 00000034  3C A0 80 39 */	lis r5, d_menu_d_menu_fishing__stringBase0@ha
+/* 801C5610 00000038  38 A5 60 68 */	addi r5, r5, d_menu_d_menu_fishing__stringBase0@l
 /* 801C5614 0000003C  38 A5 00 18 */	addi r5, r5, 0x18
 /* 801C5618 00000040  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 804061C0 */
 /* 801C561C 00000044  81 8C 00 18 */	lwz r12, 0x18(r12)
@@ -59,8 +59,8 @@ lbl_801C5648:
 lbl_801C56B8:
 /* 801C56B8 00000000  90 1F 00 18 */	stw r0, 0x18(r31)
 /* 801C56BC 00000004  80 7F 00 18 */	lwz r3, 0x18(r31)
-/* 801C56C0 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801C56C4 0000000C  38 84 60 68 */	addi r4, r4, stringBase0@l
+/* 801C56C0 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_fishing__stringBase0@ha
+/* 801C56C4 0000000C  38 84 60 68 */	addi r4, r4, d_menu_d_menu_fishing__stringBase0@l
 /* 801C56C8 00000010  38 84 00 28 */	addi r4, r4, 0x28
 /* 801C56CC 00000014  3C A0 00 02 */	lis r5, 2
 /* 801C56D0 00000018  80 DF 00 08 */	lwz r6, 8(r31)
@@ -257,8 +257,8 @@ lbl_801C5938:
 /* 801C59A0 00000068  4E 80 04 21 */	bctrl 
 /* 801C59A4 0000006C  7E 43 93 78 */	mr r3, r18
 /* 801C59A8 00000070  38 80 02 00 */	li r4, 0x200
-/* 801C59AC 00000074  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801C59B0 00000078  38 A5 60 68 */	addi r5, r5, stringBase0@l
+/* 801C59AC 00000074  3C A0 80 39 */	lis r5, d_menu_d_menu_fishing__stringBase0@ha
+/* 801C59B0 00000078  38 A5 60 68 */	addi r5, r5, d_menu_d_menu_fishing__stringBase0@l
 /* 801C59B4 0000007C  38 A5 00 3E */	addi r5, r5, 0x3e
 /* 801C59B8 00000080  4C C6 31 82 */	crclr 6
 /* 801C59BC 00000084  48 13 AD 91 */	bl setString__10J2DTextBoxFsPCce
@@ -277,8 +277,8 @@ lbl_801C5938:
 /* 801C59F0 000000B8  3A C0 00 00 */	li r22, 0
 /* 801C59F4 000000BC  3A A0 00 00 */	li r21, 0
 /* 801C59F8 000000C0  3B 1E 01 50 */	addi r24, r30, 0x150
-/* 801C59FC 000000C4  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801C5A00 000000C8  3B 23 60 68 */	addi r25, r3, stringBase0@l
+/* 801C59FC 000000C4  3C 60 80 39 */	lis r3, d_menu_d_menu_fishing__stringBase0@ha
+/* 801C5A00 000000C8  3B 23 60 68 */	addi r25, r3, d_menu_d_menu_fishing__stringBase0@l
 /* 801C5A04 000000CC  3B 5E 01 80 */	addi r26, r30, 0x180
 /* 801C5A08 000000D0  3B BE 01 B0 */	addi r29, r30, 0x1b0
 /* 801C5A0C 000000D4  3B 9E 01 E0 */	addi r28, r30, 0x1e0
@@ -452,8 +452,8 @@ lbl_801C5A24:
 /* 801C5CA8 00000284  4E 80 04 21 */	bctrl 
 /* 801C5CAC 00000288  80 7F 01 E4 */	lwz r3, 0x1e4(r31)
 /* 801C5CB0 0000028C  38 80 00 20 */	li r4, 0x20
-/* 801C5CB4 00000290  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801C5CB8 00000294  38 A5 60 68 */	addi r5, r5, stringBase0@l
+/* 801C5CB4 00000290  3C A0 80 39 */	lis r5, d_menu_d_menu_fishing__stringBase0@ha
+/* 801C5CB8 00000294  38 A5 60 68 */	addi r5, r5, d_menu_d_menu_fishing__stringBase0@l
 /* 801C5CBC 00000298  38 A5 00 3E */	addi r5, r5, 0x3e
 /* 801C5CC0 0000029C  4C C6 31 82 */	crclr 6
 /* 801C5CC4 000002A0  48 13 AA 89 */	bl setString__10J2DTextBoxFsPCce
@@ -467,8 +467,8 @@ lbl_801C5A24:
 /* 801C5CE4 000002C0  48 05 68 61 */	bl getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c
 /* 801C5CE8 000002C4  80 7F 01 E8 */	lwz r3, 0x1e8(r31)
 /* 801C5CEC 000002C8  38 80 00 20 */	li r4, 0x20
-/* 801C5CF0 000002CC  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801C5CF4 000002D0  38 A5 60 68 */	addi r5, r5, stringBase0@l
+/* 801C5CF0 000002CC  3C A0 80 39 */	lis r5, d_menu_d_menu_fishing__stringBase0@ha
+/* 801C5CF4 000002D0  38 A5 60 68 */	addi r5, r5, d_menu_d_menu_fishing__stringBase0@l
 /* 801C5CF8 000002D4  38 A5 00 3E */	addi r5, r5, 0x3e
 /* 801C5CFC 000002D8  4C C6 31 82 */	crclr 6
 /* 801C5D00 000002DC  48 13 AA 4D */	bl setString__10J2DTextBoxFsPCce

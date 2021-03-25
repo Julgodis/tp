@@ -7,8 +7,8 @@ lbl_80037038:
 /* 8003704C 00000014  7C 7D 1B 78 */	mr r29, r3
 /* 80037050 00000018  7C 9E 23 78 */	mr r30, r4
 /* 80037054 0000001C  7C BF 2B 78 */	mr r31, r5
-/* 80037058 00000020  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 8003705C 00000024  38 63 92 A8 */	addi r3, r3, stringBase0@l
+/* 80037058 00000020  3C 60 80 38 */	lis r3, d_a_d_a_obj__stringBase0@ha
+/* 8003705C 00000024  38 63 92 A8 */	addi r3, r3, d_a_d_a_obj__stringBase0@l
 /* 80037060 00000028  38 80 00 20 */	li r4, 0x20
 /* 80037064 0000002C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 80037068 00000030  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
@@ -18,8 +18,8 @@ lbl_80037038:
 /* 80037078 00000040  38 C0 00 80 */	li r6, 0x80
 /* 8003707C 00000044  48 00 52 71 */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 80037080 00000048  7C 7B 1B 78 */	mr r27, r3
-/* 80037084 0000004C  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 80037088 00000050  38 63 92 A8 */	addi r3, r3, stringBase0@l
+/* 80037084 0000004C  3C 60 80 38 */	lis r3, d_a_d_a_obj__stringBase0@ha
+/* 80037088 00000050  38 63 92 A8 */	addi r3, r3, d_a_d_a_obj__stringBase0@l
 /* 8003708C 00000054  38 80 00 42 */	li r4, 0x42
 /* 80037090 00000058  7F 45 D3 78 */	mr r5, r26
 /* 80037094 0000005C  38 C0 00 80 */	li r6, 0x80
@@ -55,7 +55,7 @@ lbl_80037038:
 /* 8003710C 000000D4  48 01 3A F5 */	bl setModel__18dPa_modelEcallBackFP14JPABaseEmitterP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc
 /* 80037110 000000D8  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 80037114 000000DC  7C 06 07 74 */	extsb r6, r0
-/* 80037118 000000E0  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
+/* 80037118 000000E0  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)	/* effective address: 8040BEFC */
 /* 8003711C 000000E4  57 E5 18 38 */	slwi r5, r31, 3
 /* 80037120 000000E8  3C 80 80 42 */	lis r4, mTsubo__13dPa_control_c@ha
 /* 80037124 000000EC  38 04 47 94 */	addi r0, r4, mTsubo__13dPa_control_c@l

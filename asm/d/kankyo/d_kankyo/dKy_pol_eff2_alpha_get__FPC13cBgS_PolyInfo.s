@@ -22,8 +22,8 @@ lbl_801ABEE4:
 /* 801ABEF0 0000000C  7C 7C 1B 78 */	mr r28, r3
 /* 801ABEF4 00000010  3B BE 3E C8 */	addi r29, r30, 0x3ec8
 /* 801ABEF8 00000014  7F A3 EB 78 */	mr r3, r29
-/* 801ABEFC 00000018  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801ABF00 0000001C  38 84 4C 6C */	addi r4, r4, stringBase0@l
+/* 801ABEFC 00000018  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
+/* 801ABF00 0000001C  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
 /* 801ABF04 00000020  38 84 01 7A */	addi r4, r4, 0x17a
 /* 801ABF08 00000024  48 1B CA 8D */	bl strcmp
 /* 801ABF0C 00000028  2C 03 00 00 */	cmpwi r3, 0
@@ -39,8 +39,8 @@ lbl_801ABEE4:
 /* 801ABF34 00000050  48 00 00 48 */	b lbl_801ABF7C
 lbl_801ABF38:
 /* 801ABF38 00000000  7F A3 EB 78 */	mr r3, r29
-/* 801ABF3C 00000004  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801ABF40 00000008  38 84 4C 6C */	addi r4, r4, stringBase0@l
+/* 801ABF3C 00000004  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
+/* 801ABF40 00000008  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
 /* 801ABF44 0000000C  38 84 02 61 */	addi r4, r4, 0x261
 /* 801ABF48 00000010  48 1B CA 4D */	bl strcmp
 /* 801ABF4C 00000014  2C 03 00 00 */	cmpwi r3, 0
@@ -59,7 +59,7 @@ lbl_801ABF7C:
 /* 801ABF7C 00000000  7F C3 F3 78 */	mr r3, r30
 /* 801ABF80 00000004  7F 64 DB 78 */	mr r4, r27
 /* 801ABF84 00000008  4B EC 8F 1D */	bl GetPolyAtt1__4dBgSFRC13cBgS_PolyInfo
-/* 801ABF88 0000000C  80 9F 12 E8 */	lwz r4, 0x12e8(r31)
+/* 801ABF88 0000000C  80 9F 12 E8 */	lwz r4, 0x12e8(r31)	/* effective address: 8042DD3C */
 /* 801ABF8C 00000010  28 04 00 00 */	cmplwi r4, 0
 /* 801ABF90 00000014  41 82 00 14 */	beq lbl_801ABFA4
 /* 801ABF94 00000018  57 80 18 38 */	slwi r0, r28, 3
@@ -75,7 +75,7 @@ lbl_801ABFAC:
 /* 801ABFB4 00000008  38 60 00 FF */	li r3, 0xff
 /* 801ABFB8 0000000C  48 00 00 14 */	b lbl_801ABFCC
 lbl_801ABFBC:
-/* 801ABFBC 00000000  80 7F 12 F4 */	lwz r3, 0x12f4(r31)
+/* 801ABFBC 00000000  80 7F 12 F4 */	lwz r3, 0x12f4(r31)	/* effective address: 8042DD48 */
 /* 801ABFC0 00000004  54 00 1D 78 */	rlwinm r0, r0, 3, 0x15, 0x1c
 /* 801ABFC4 00000008  7C 63 02 14 */	add r3, r3, r0
 /* 801ABFC8 0000000C  88 63 00 06 */	lbz r3, 6(r3)

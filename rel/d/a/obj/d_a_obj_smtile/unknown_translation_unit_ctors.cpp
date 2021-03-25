@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80CDE348[8];
+extern void* data_80CDE348[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_obj_smtile_cpp(); // 1
 
 // 
 // Declarations:

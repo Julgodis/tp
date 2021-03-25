@@ -11,22 +11,22 @@
 // Types:
 // 
 
-struct J3DTexNoAnm {
-};
-
-struct J3DTevColorAnm {
+struct J3DMaterial {
 };
 
 struct J3DTexMtxAnm {
 };
 
+struct J3DTevColorAnm {
+};
+
 struct J3DTevKColorAnm {
 };
 
-struct J3DMaterial {
+struct J3DMatColorAnm {
 };
 
-struct J3DMatColorAnm {
+struct J3DTexNoAnm {
 };
 
 struct J3DMaterialAnm {
@@ -88,7 +88,7 @@ extern "C" void _restgpr_27(); // 1
 // Declarations:
 // 
 
-/* 8032C320-8032C3C4 00A4+00 s=0 e=5 z=0  None .text      initialize__14J3DMaterialAnmFv                               */
+/* 8032C320-8032C3C4 00A4+00 s=0 e=5 z=72  None .text      initialize__14J3DMaterialAnmFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,7 +99,7 @@ asm void J3DMaterialAnm::initialize() {
 #pragma pop
 
 
-/* 8032C3C4-8032C5A4 01E0+00 s=1 e=4 z=0  None .text      calc__14J3DMaterialAnmCFP11J3DMaterial                       */
+/* 8032C3C4-8032C5A4 01E0+00 s=1 e=4 z=2  None .text      calc__14J3DMaterialAnmCFP11J3DMaterial                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -166,7 +166,7 @@ asm void J3DMaterialAnm::setTevKColorAnm(int param_0, J3DTevKColorAnm* param_1) 
 
 
 /* ############################################################################################## */
-/* 803CEE60-803CEE70 0010+00 s=0 e=10 z=0  None .data      __vt__14J3DMaterialAnm                                       */
+/* 803CEE60-803CEE70 0010+00 s=0 e=10 z=74  None .data      __vt__14J3DMaterialAnm                                       */
 SECTION_DATA void* __vt__14J3DMaterialAnm[4] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,

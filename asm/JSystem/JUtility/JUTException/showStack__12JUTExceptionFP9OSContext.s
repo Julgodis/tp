@@ -8,28 +8,28 @@ lbl_802E26B0:
 /* 802E26C8 00000018  80 6D 8F 9C */	lwz r3, sConsole__12JUTException(r13)
 /* 802E26CC 0000001C  28 03 00 00 */	cmplwi r3, 0
 /* 802E26D0 00000020  41 82 00 C8 */	beq lbl_802E2798
-/* 802E26D4 00000024  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802E26D8 00000028  38 84 D4 90 */	addi r4, r4, stringBase0@l
+/* 802E26D4 00000024  3C 80 80 3A */	lis r4, JUTException__stringBase0@ha
+/* 802E26D8 00000028  38 84 D4 90 */	addi r4, r4, JUTException__stringBase0@l
 /* 802E26DC 0000002C  38 84 01 51 */	addi r4, r4, 0x151
 /* 802E26E0 00000030  48 00 55 59 */	bl print__10JUTConsoleFPCc
 /* 802E26E4 00000034  83 BC 00 A0 */	lwz r29, 0xa0(r28)
 /* 802E26E8 00000038  80 6D 8F 9C */	lwz r3, sConsole__12JUTException(r13)
-/* 802E26EC 0000003C  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802E26F0 00000040  38 84 D4 90 */	addi r4, r4, stringBase0@l
+/* 802E26EC 0000003C  3C 80 80 3A */	lis r4, JUTException__stringBase0@ha
+/* 802E26F0 00000040  38 84 D4 90 */	addi r4, r4, JUTException__stringBase0@l
 /* 802E26F4 00000044  38 84 01 79 */	addi r4, r4, 0x179
 /* 802E26F8 00000048  4C C6 31 82 */	crclr 6
 /* 802E26FC 0000004C  48 00 54 BD */	bl print_f__10JUTConsoleFPCce
 /* 802E2700 00000050  3B C0 00 00 */	li r30, 0
-/* 802E2704 00000054  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802E2708 00000058  3B E3 D4 90 */	addi r31, r3, stringBase0@l
+/* 802E2704 00000054  3C 60 80 3A */	lis r3, JUTException__stringBase0@ha
+/* 802E2708 00000058  3B E3 D4 90 */	addi r31, r3, JUTException__stringBase0@l
 /* 802E270C 0000005C  48 00 00 6C */	b lbl_802E2778
 lbl_802E2710:
 /* 802E2710 00000000  80 1C 00 94 */	lwz r0, 0x94(r28)
 /* 802E2714 00000004  7C 1E 00 40 */	cmplw r30, r0
 /* 802E2718 00000008  40 81 00 1C */	ble lbl_802E2734
 /* 802E271C 0000000C  80 6D 8F 9C */	lwz r3, sConsole__12JUTException(r13)
-/* 802E2720 00000010  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802E2724 00000014  38 84 D4 90 */	addi r4, r4, stringBase0@l
+/* 802E2720 00000010  3C 80 80 3A */	lis r4, JUTException__stringBase0@ha
+/* 802E2724 00000014  38 84 D4 90 */	addi r4, r4, JUTException__stringBase0@l
 /* 802E2728 00000018  38 84 01 99 */	addi r4, r4, 0x199
 /* 802E272C 0000001C  48 00 55 0D */	bl print__10JUTConsoleFPCc
 /* 802E2730 00000020  48 00 00 68 */	b lbl_802E2798

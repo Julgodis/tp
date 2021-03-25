@@ -20,7 +20,7 @@ lbl_801A133C:
 /* 801A1384 00000048  88 14 03 7E */	lbz r0, 0x37e(r20)
 /* 801A1388 0000004C  7C 03 00 40 */	cmplw r3, r0
 /* 801A138C 00000050  41 82 00 0C */	beq lbl_801A1398
-/* 801A1390 00000054  C0 04 11 DC */	lfs f0, 0x11dc(r4)
+/* 801A1390 00000054  C0 04 11 DC */	lfs f0, 0x11dc(r4)	/* effective address: 8042DC30 */
 /* 801A1394 00000058  D0 14 03 70 */	stfs f0, 0x370(r20)
 lbl_801A1398:
 /* 801A1398 00000000  38 01 00 20 */	addi r0, r1, 0x20
@@ -137,7 +137,7 @@ lbl_801A1504:
 /* 801A1540 0000003C  C0 21 00 34 */	lfs f1, 0x34(r1)
 /* 801A1544 00000040  C0 54 03 70 */	lfs f2, 0x370(r20)
 /* 801A1548 00000044  39 01 00 40 */	addi r8, r1, 0x40
-/* 801A154C 00000048  C0 7F 12 00 */	lfs f3, 0x1200(r31)
+/* 801A154C 00000048  C0 7F 12 00 */	lfs f3, 0x1200(r31)	/* effective address: 8042DC54 */
 /* 801A1550 0000004C  4B FF ED F1 */	bl dKy_calc_color_set__FP11_GXColorS10P15color_RGB_classP15color_RGB_classP15color_RGB_classP15color_RGB_classff11_GXColorS10f
 /* 801A1554 00000050  4B FB DE D1 */	bl checkNowWolfEyeUp__9daPy_py_cFv
 /* 801A1558 00000054  2C 03 00 00 */	cmpwi r3, 0
@@ -212,7 +212,7 @@ lbl_801A1570:
 /* 801A1668 000000F8  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A166C 000000FC  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 801A1670 00000100  C0 E3 11 F0 */	lfs f7, 0x11f0(r3)	/* effective address: 8042DC44 */
-/* 801A1674 00000104  C1 10 11 F4 */	lfs f8, 0x11f4(r16)
+/* 801A1674 00000104  C1 10 11 F4 */	lfs f8, 0x11f4(r16)	/* effective address: 8042DC48 */
 /* 801A1678 00000108  4B FF C1 29 */	bl float_kankyo_color_ratio_set__Fffffffff
 /* 801A167C 0000010C  D0 37 00 00 */	stfs f1, 0(r23)
 /* 801A1680 00000110  4B FB DD A5 */	bl checkNowWolfEyeUp__9daPy_py_cFv

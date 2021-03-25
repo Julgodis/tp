@@ -6,15 +6,15 @@ lbl_8003BD2C:
 /* 8003BD3C 00000010  48 32 64 91 */	bl _savegpr_25
 /* 8003BD40 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 8003BD44 00000018  7C 9F 23 78 */	mr r31, r4
-/* 8003BD48 0000001C  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 8003BD4C 00000020  38 63 98 B8 */	addi r3, r3, stringBase0@l
+/* 8003BD48 0000001C  3C 60 80 38 */	lis r3, d_d_resorce__stringBase0@ha
+/* 8003BD4C 00000020  38 63 98 B8 */	addi r3, r3, d_d_resorce__stringBase0@l
 /* 8003BD50 00000024  38 63 00 E3 */	addi r3, r3, 0xe3
 /* 8003BD54 00000028  7F C4 F3 78 */	mr r4, r30
 /* 8003BD58 0000002C  7F E5 FB 78 */	mr r5, r31
 /* 8003BD5C 00000030  4C C6 31 82 */	crclr 6
 /* 8003BD60 00000034  48 2A C8 69 */	bl JUTReportConsole_f
-/* 8003BD64 00000038  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 8003BD68 0000003C  38 63 98 B8 */	addi r3, r3, stringBase0@l
+/* 8003BD64 00000038  3C 60 80 38 */	lis r3, d_d_resorce__stringBase0@ha
+/* 8003BD68 0000003C  38 63 98 B8 */	addi r3, r3, d_d_resorce__stringBase0@l
 /* 8003BD6C 00000040  38 63 01 03 */	addi r3, r3, 0x103
 /* 8003BD70 00000044  4C C6 31 82 */	crclr 6
 /* 8003BD74 00000048  48 2A C8 55 */	bl JUTReportConsole_f
@@ -48,8 +48,8 @@ lbl_8003BDD0:
 /* 8003BDD8 00000008  A0 1E 00 0C */	lhz r0, 0xc(r30)
 /* 8003BDDC 0000000C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8003BDE0 00000010  93 C1 00 10 */	stw r30, 0x10(r1)
-/* 8003BDE4 00000014  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 8003BDE8 00000018  38 63 98 B8 */	addi r3, r3, stringBase0@l
+/* 8003BDE4 00000014  3C 60 80 38 */	lis r3, d_d_resorce__stringBase0@ha
+/* 8003BDE8 00000018  38 63 98 B8 */	addi r3, r3, d_d_resorce__stringBase0@l
 /* 8003BDEC 0000001C  38 63 01 51 */	addi r3, r3, 0x151
 /* 8003BDF0 00000020  7F 84 E3 78 */	mr r4, r28
 /* 8003BDF4 00000024  80 BE 00 10 */	lwz r5, 0x10(r30)

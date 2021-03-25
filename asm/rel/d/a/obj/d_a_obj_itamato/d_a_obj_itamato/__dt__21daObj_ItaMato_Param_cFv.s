@@ -5,12 +5,12 @@ lbl_80C2AB04:
 /* 80C2AB10 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C2AB14 00000010  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80C2AB18 00000014  41 82 00 1C */	beq lbl_80C2AB34
-/* 80C2AB1C 00000018  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 80C2AB20 0000001C  38 05 00 00 */	addi r0, r5, 0x0000 /* 0x00000000@l */
+/* 80C2AB1C 00000018  3C A0 80 C3 */	lis r5, __vt__21daObj_ItaMato_Param_c@ha
+/* 80C2AB20 0000001C  38 05 AD 40 */	addi r0, r5, __vt__21daObj_ItaMato_Param_c@l
 /* 80C2AB24 00000020  90 1F 00 00 */	stw r0, 0(r31)
 /* 80C2AB28 00000024  7C 80 07 35 */	extsh. r0, r4
 /* 80C2AB2C 00000028  40 81 00 08 */	ble lbl_80C2AB34
-/* 80C2AB30 0000002C  4B FF E9 29 */	bl _unresolved
+/* 80C2AB30 0000002C  4B 6A 42 0C */	b __dl__FPv
 lbl_80C2AB34:
 /* 80C2AB34 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80C2AB38 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

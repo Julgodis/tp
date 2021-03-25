@@ -6,19 +6,19 @@ lbl_80CF07F8:
 /* 80CF0808 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80CF080C 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80CF0810 00000018  7C 9F 23 78 */	mr r31, r4
-/* 80CF0814 0000001C  4B FF FE 05 */	bl _unresolved
+/* 80CF0814 0000001C  4B 32 84 CC */	b fopAc_IsActor__FPv
 /* 80CF0818 00000020  2C 03 00 00 */	cmpwi r3, 0
 /* 80CF081C 00000024  41 82 00 C0 */	beq lbl_80CF08DC
 /* 80CF0820 00000028  A8 1E 00 08 */	lha r0, 8(r30)
 /* 80CF0824 0000002C  2C 00 00 60 */	cmpwi r0, 0x60
 /* 80CF0828 00000030  40 82 00 B4 */	bne lbl_80CF08DC
 /* 80CF082C 00000034  7F C3 F3 78 */	mr r3, r30
-/* 80CF0830 00000038  4B FF FD E9 */	bl _unresolved
-/* 80CF0834 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CF0838 00000040  38 A3 00 00 */	addi r5, r3, 0x0000 /* 0x00000000@l */
-/* 80CF083C 00000044  80 C5 00 00 */	lwz r6, 0(r5)
-/* 80CF0840 00000048  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CF0844 0000004C  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
+/* 80CF0830 00000038  4B 32 94 4C */	b fopAcM_delete__FP10fopAc_ac_c
+/* 80CF0834 0000003C  3C 60 80 CF */	lis r3, saru_ct@ha
+/* 80CF0838 00000040  38 A3 32 78 */	addi r5, r3, saru_ct@l
+/* 80CF083C 00000044  80 C5 00 00 */	lwz r6, 0(r5)	/* effective address: 80CF3278 */
+/* 80CF0840 00000048  3C 60 80 CF */	lis r3, sc_path@ha
+/* 80CF0844 0000004C  38 83 31 00 */	addi r4, r3, sc_path@l
 /* 80CF0848 00000050  20 06 00 07 */	subfic r0, r6, 7
 /* 80CF084C 00000054  54 00 20 36 */	slwi r0, r0, 4
 /* 80CF0850 00000058  7C 64 02 14 */	add r3, r4, r0
@@ -26,7 +26,7 @@ lbl_80CF07F8:
 /* 80CF0858 00000060  1C 66 00 64 */	mulli r3, r6, 0x64
 /* 80CF085C 00000064  38 03 05 AC */	addi r0, r3, 0x5ac
 /* 80CF0860 00000068  7C 1F 05 2E */	stfsx f0, r31, r0
-/* 80CF0864 0000006C  80 C5 00 00 */	lwz r6, 0(r5)
+/* 80CF0864 0000006C  80 C5 00 00 */	lwz r6, 0(r5)	/* effective address: 80CF3278 */
 /* 80CF0868 00000070  20 06 00 07 */	subfic r0, r6, 7
 /* 80CF086C 00000074  54 00 20 36 */	slwi r0, r0, 4
 /* 80CF0870 00000078  7C 64 02 14 */	add r3, r4, r0
@@ -34,7 +34,7 @@ lbl_80CF07F8:
 /* 80CF0878 00000080  1C 66 00 64 */	mulli r3, r6, 0x64
 /* 80CF087C 00000084  38 03 05 B0 */	addi r0, r3, 0x5b0
 /* 80CF0880 00000088  7C 1F 05 2E */	stfsx f0, r31, r0
-/* 80CF0884 0000008C  80 C5 00 00 */	lwz r6, 0(r5)
+/* 80CF0884 0000008C  80 C5 00 00 */	lwz r6, 0(r5)	/* effective address: 80CF3278 */
 /* 80CF0888 00000090  20 06 00 07 */	subfic r0, r6, 7
 /* 80CF088C 00000094  54 00 20 36 */	slwi r0, r0, 4
 /* 80CF0890 00000098  7C 64 02 14 */	add r3, r4, r0
@@ -42,20 +42,20 @@ lbl_80CF07F8:
 /* 80CF0898 000000A0  1C 66 00 64 */	mulli r3, r6, 0x64
 /* 80CF089C 000000A4  38 03 05 B4 */	addi r0, r3, 0x5b4
 /* 80CF08A0 000000A8  7C 1F 05 2E */	stfsx f0, r31, r0
-/* 80CF08A4 000000AC  80 05 00 00 */	lwz r0, 0(r5)
+/* 80CF08A4 000000AC  80 05 00 00 */	lwz r0, 0(r5)	/* effective address: 80CF3278 */
 /* 80CF08A8 000000B0  1C 60 00 14 */	mulli r3, r0, 0x14
 /* 80CF08AC 000000B4  38 83 00 3C */	addi r4, r3, 0x3c
 /* 80CF08B0 000000B8  1C 60 00 64 */	mulli r3, r0, 0x64
 /* 80CF08B4 000000BC  38 03 05 DC */	addi r0, r3, 0x5dc
 /* 80CF08B8 000000C0  7C 9F 01 AE */	stbx r4, r31, r0
-/* 80CF08BC 000000C4  80 05 00 00 */	lwz r0, 0(r5)
+/* 80CF08BC 000000C4  80 05 00 00 */	lwz r0, 0(r5)	/* effective address: 80CF3278 */
 /* 80CF08C0 000000C8  20 80 00 08 */	subfic r4, r0, 8
 /* 80CF08C4 000000CC  1C 60 00 64 */	mulli r3, r0, 0x64
 /* 80CF08C8 000000D0  38 03 05 E0 */	addi r0, r3, 0x5e0
 /* 80CF08CC 000000D4  7C 9F 01 2E */	stwx r4, r31, r0
-/* 80CF08D0 000000D8  80 65 00 00 */	lwz r3, 0(r5)
+/* 80CF08D0 000000D8  80 65 00 00 */	lwz r3, 0(r5)	/* effective address: 80CF3278 */
 /* 80CF08D4 000000DC  38 03 00 01 */	addi r0, r3, 1
-/* 80CF08D8 000000E0  90 05 00 00 */	stw r0, 0(r5)
+/* 80CF08D8 000000E0  90 05 00 00 */	stw r0, 0(r5)	/* effective address: 80CF3278 */
 lbl_80CF08DC:
 /* 80CF08DC 00000000  38 60 00 00 */	li r3, 0
 /* 80CF08E0 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -4,9 +4,9 @@ lbl_80675ADC:
 /* 80675AE4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80675AE8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80675AEC 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 80675AF0 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80675AF4 00000018  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80675AF8 0000001C  83 E4 5D AC */	lwz r31, 0x5dac(r4)
+/* 80675AF0 00000014  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80675AF4 00000018  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80675AF8 0000001C  83 E4 5D AC */	lwz r31, 0x5dac(r4)	/* effective address: 8040BF6C */
 /* 80675AFC 00000020  AB C3 04 E6 */	lha r30, 0x4e6(r3)
 /* 80675B00 00000024  48 00 07 A5 */	bl checkFront__12daMBdoorL1_cFv
 /* 80675B04 00000028  2C 03 00 00 */	cmpwi r3, 0

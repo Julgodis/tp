@@ -36,11 +36,11 @@ lbl_806B503C:
 /* 806B5050 00000014  88 1F 07 6F */	lbz r0, 0x76f(r31)
 /* 806B5054 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 806B5058 0000001C  40 82 00 18 */	bne lbl_806B5070
-/* 806B505C 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 806B5060 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 806B505C 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806B5060 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806B5064 00000028  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 806B5068 0000002C  38 80 00 1F */	li r4, 0x1f
-/* 806B506C 00000030  4B FF 88 0D */	bl _unresolved
+/* 806B506C 00000030  4B 9B AD 28 */	b StopQuake__12dVibration_cFi
 lbl_806B5070:
 /* 806B5070 00000000  88 7F 07 6C */	lbz r3, 0x76c(r31)
 /* 806B5074 00000004  28 03 00 00 */	cmplwi r3, 0
@@ -76,13 +76,13 @@ lbl_806B50D8:
 /* 806B50D8 00000000  38 60 00 02 */	li r3, 2
 /* 806B50DC 00000004  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 806B50E0 00000008  7C 04 07 74 */	extsb r4, r0
-/* 806B50E4 0000000C  4B FF 87 95 */	bl _unresolved
+/* 806B50E4 0000000C  4B 97 8A 80 */	b dComIfGs_isOneZoneSwitch__Fii
 /* 806B50E8 00000010  2C 03 00 00 */	cmpwi r3, 0
 /* 806B50EC 00000014  40 82 00 14 */	bne lbl_806B5100
 /* 806B50F0 00000018  38 60 00 02 */	li r3, 2
 /* 806B50F4 0000001C  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 806B50F8 00000020  7C 04 07 74 */	extsb r4, r0
-/* 806B50FC 00000024  4B FF 87 7D */	bl _unresolved
+/* 806B50FC 00000024  4B 97 89 A0 */	b dComIfGs_onOneZoneSwitch__Fii
 lbl_806B5100:
 /* 806B5100 00000000  7F E3 FB 78 */	mr r3, r31
 /* 806B5104 00000004  4B FF F6 21 */	bl action__8daE_DT_cFv

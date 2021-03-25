@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JUTFont {
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct JUTFont {
 };
 
 struct dMsgScrnTree_c {
@@ -48,10 +48,10 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
 struct J2DScreen {
@@ -103,7 +103,7 @@ extern "C" void draw__14dMsgScrnTree_cFv(); // 1
 extern "C" void fukiAlpha__14dMsgScrnTree_cFf(); // 1
 extern "C" void fukiScale__14dMsgScrnTree_cFf(); // 1
 extern "C" void fukiTrans__14dMsgScrnTree_cFff(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const msg_scrn_d_msg_scrn_tree__stringBase0;
 
 // 
 // External References:

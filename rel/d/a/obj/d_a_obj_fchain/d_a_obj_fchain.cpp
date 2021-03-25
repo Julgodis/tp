@@ -11,7 +11,16 @@
 // Types:
 // 
 
+struct Vec {
+};
+
 struct cXyz {
+	/* 80266AE4 */ void operator+(Vec const&) const;
+	/* 80266B34 */ void operator-(Vec const&) const;
+	/* 80266B84 */ void operator*(f32) const;
+	/* 80266F48 */ void normalizeZP();
+	/* 80267128 */ void atan2sX_Z() const;
+	/* 80267150 */ void atan2sY_XZ() const;
 	/* 80BE6368 */ ~cXyz();
 	/* 80BE63A4 */ cXyz();
 };
@@ -27,6 +36,8 @@ struct daObjFchain_c {
 };
 
 struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct csXyz {
@@ -39,35 +50,82 @@ struct daObjFchain_shape_c {
 	/* 80BE73D4 */ ~daObjFchain_shape_c();
 };
 
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CDD4 */ void transM(cXyz const&);
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
+};
+
+struct request_of_phase_process_class {
+};
+
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dEvent_manager_c {
+	/* 800483E8 */ void getRunEventName();
+};
+
+struct J3DModelData {
+};
+
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct J3DPacket;
+struct J3DDrawBuffer {
+	/* 8032548C */ void entryImm(J3DPacket*, u16);
+};
+
+struct J3DPacket {
+	/* 80312750 */ void entry(J3DDrawBuffer*);
+};
+
+struct J3DShape {
+	/* 80315300 */ void loadPreDrawSetting() const;
+};
+
 // 
 // Forward References:
 // 
 
-void daObjFchain_createHeap(fopAc_ac_c*); // 2
-void daObjFchain_Create(fopAc_ac_c*); // 2
-void daObjFchain_Delete(daObjFchain_c*); // 2
-void daObjFchain_Execute(daObjFchain_c*); // 2
-void daObjFchain_Draw(daObjFchain_c*); // 2
+static void daObjFchain_createHeap(fopAc_ac_c*); // 2
+static void daObjFchain_Create(fopAc_ac_c*); // 2
+static void daObjFchain_Delete(daObjFchain_c*); // 2
+static void daObjFchain_Execute(daObjFchain_c*); // 2
+static void daObjFchain_Draw(daObjFchain_c*); // 2
 
 extern "C" void createHeap__13daObjFchain_cFv(); // 1
-extern "C" void daObjFchain_createHeap__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjFchain_createHeap__FP10fopAc_ac_c(); // 1
 extern "C" void create__13daObjFchain_cFv(); // 1
 extern "C" void __dt__5csXyzFv(); // 1
 extern "C" void __ct__5csXyzFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
-extern "C" void daObjFchain_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjFchain_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__13daObjFchain_cFv(); // 1
-extern "C" void daObjFchain_Delete__FP13daObjFchain_c(); // 1
+extern "C" static void daObjFchain_Delete__FP13daObjFchain_c(); // 1
 extern "C" void checkPlayerFoot__13daObjFchain_cFPC4cXyzPC4cXyzP4cXyz(); // 1
 extern "C" void setGroundVec__13daObjFchain_cFP4cXyzf(); // 1
 extern "C" void execute__13daObjFchain_cFv(); // 1
-extern "C" void daObjFchain_Execute__FP13daObjFchain_c(); // 1
+extern "C" static void daObjFchain_Execute__FP13daObjFchain_c(); // 1
 extern "C" void draw__19daObjFchain_shape_cFv(); // 1
 extern "C" void draw__13daObjFchain_cFv(); // 1
-extern "C" void daObjFchain_Draw__FP13daObjFchain_c(); // 1
+extern "C" static void daObjFchain_Draw__FP13daObjFchain_c(); // 1
 extern "C" void __dt__19daObjFchain_shape_cFv(); // 1
-extern "C" extern u8 const l_arcName[7 + 1 /* padding */];
 extern "C" extern u8 const data_80BE7440[12];
 extern "C" extern u32 const lit_3710;
 extern "C" extern u32 const lit_3711;
@@ -79,9 +137,6 @@ extern "C" extern u32 const lit_3716;
 extern "C" extern u32 const lit_3717;
 extern "C" extern u32 const lit_3718;
 extern "C" extern u8 const lit_3720[8];
-extern "C" extern u8 const lit_3809[4 + 4 /* padding */];
-extern "C" extern u8 const lit_3810[8];
-extern "C" extern u8 const lit_3811[8];
 extern "C" extern u8 const lit_3812[8];
 extern "C" extern u32 const lit_3813;
 extern "C" extern u32 const lit_3814;
@@ -95,20 +150,94 @@ extern "C" extern u32 const lit_4163;
 extern "C" extern u32 const lit_4164;
 extern "C" extern u32 const lit_4165;
 extern "C" extern char const* const stringBase0;
-extern "C" extern u8 l_daObjFchain_Method[32];
-extern "C" extern u8 g_profile_Obj_Fchain[48];
-extern "C" extern void* __vt__19daObjFchain_shape_c[5];
+extern "C" extern void* g_profile_Obj_Fchain[12];
 
 // 
 // External References:
 // 
 
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void dKy_setLight_again(); // 2
+void dKy_GxFog_tevstr_set(dKy_tevstr_c*); // 2
+void cM_atan2s(f32, f32); // 2
+void cM_rnd(); // 2
+void cM_rndF(f32); // 2
+void cM_rndFX(f32); // 2
+void operator delete(void*); // 2
 
-extern "C" void _unresolved(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
+extern "C" void transM__14mDoMtx_stack_cFRC4cXyz(); // 1
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
+extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void __dt__10fopAc_ac_cFv(); // 1
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void getRunEventName__16dEvent_manager_cFv(); // 1
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void dKy_setLight_again__Fv(); // 1
+extern "C" void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c(); // 1
+extern "C" void __pl__4cXyzCFRC3Vec(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void __ml__4cXyzCFf(); // 1
+extern "C" void normalizeZP__4cXyzFv(); // 1
+extern "C" void atan2sX_Z__4cXyzCFv(); // 1
+extern "C" void atan2sY_XZ__4cXyzCFv(); // 1
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void cM_rnd__Fv(); // 1
+extern "C" void cM_rndF__Ff(); // 1
+extern "C" void cM_rndFX__Ff(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void entry__9J3DPacketFP13J3DDrawBuffer(); // 1
+extern "C" void loadPreDrawSetting__8J3DShapeCFv(); // 1
+extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECScale(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void GXLoadLightObjImm(); // 1
+extern "C" void GXSetChanAmbColor(); // 1
+extern "C" void GXSetChanMatColor(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXLoadNrmMtxImm(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__9J3DPacket[5];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern f32 Zero__4cXyz[3];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u32 g_whiteColor;
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
 
 // 
 // Declarations:
 // 
+
+/* ############################################################################################## */
+/* 80BE7438-80BE7440 0007+01 s=6 e=0 z=0  None .rodata    l_arcName                                                    */
+SECTION_RODATA static u8 const l_arcName[7 + 1 /* padding */] = {
+	0x46, 0x63, 0x68, 0x61, 0x69, 0x6E, 0x00,
+	/* padding */
+	0x00,
+};
 
 /* 80BE5FF8-80BE6054 005C+00 s=1 e=0 z=0  None .text      createHeap__13daObjFchain_cFv                                */
 #pragma push
@@ -121,16 +250,54 @@ asm void daObjFchain_c::createHeap() {
 #pragma pop
 
 
-/* 80BE6054-80BE6074 0020+00 s=0 e=0 z=0  None .text      daObjFchain_createHeap__FP10fopAc_ac_c                       */
+/* 80BE6054-80BE6074 0020+00 s=1 e=0 z=0  None .text      daObjFchain_createHeap__FP10fopAc_ac_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjFchain_createHeap(fopAc_ac_c* param_0) {
+asm static void daObjFchain_createHeap(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/daObjFchain_createHeap__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80BE74D8-80BE74F8 0020+00 s=1 e=0 z=0  None .data      l_daObjFchain_Method                                         */
+SECTION_DATA static void* l_daObjFchain_Method[8] = {
+	/* 0    */ (void*)daObjFchain_Create__FP10fopAc_ac_c,
+	/* 1    */ (void*)daObjFchain_Delete__FP13daObjFchain_c,
+	/* 2    */ (void*)daObjFchain_Execute__FP13daObjFchain_c,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)daObjFchain_Draw__FP13daObjFchain_c,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+};
+
+/* 80BE74F8-80BE7528 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Fchain                                         */
+SECTION_DATA void* g_profile_Obj_Fchain[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0007FFFD,
+	/* 2    */ (void*)0x01580000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x00000928,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x00F60000,
+	/* 9    */ (void*)&l_daObjFchain_Method,
+	/* 10   */ (void*)0x00060000,
+	/* 11   */ (void*)0x030E0000,
+};
+
+/* 80BE7528-80BE753C 0014+00 s=3 e=0 z=0  None .data      __vt__19daObjFchain_shape_c                                  */
+SECTION_DATA static void* __vt__19daObjFchain_shape_c[5] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	/* 3    */ (void*)draw__19daObjFchain_shape_cFv,
+	/* 4    */ (void*)__dt__19daObjFchain_shape_cFv,
+};
 
 /* 80BE6074-80BE6328 02B4+00 s=1 e=0 z=0  None .text      create__13daObjFchain_cFv                                    */
 #pragma push
@@ -143,7 +310,7 @@ asm void daObjFchain_c::create() {
 #pragma pop
 
 
-/* 80BE6328-80BE6364 003C+00 s=0 e=0 z=0  None .text      __dt__5csXyzFv                                               */
+/* 80BE6328-80BE6364 003C+00 s=2 e=0 z=0  None .text      __dt__5csXyzFv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -154,7 +321,7 @@ asm csXyz::~csXyz() {
 #pragma pop
 
 
-/* 80BE6364-80BE6368 0004+00 s=0 e=0 z=0  None .text      __ct__5csXyzFv                                               */
+/* 80BE6364-80BE6368 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -165,7 +332,7 @@ asm csXyz::csXyz() {
 #pragma pop
 
 
-/* 80BE6368-80BE63A4 003C+00 s=0 e=0 z=0  None .text      __dt__4cXyzFv                                                */
+/* 80BE6368-80BE63A4 003C+00 s=2 e=0 z=0  None .text      __dt__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -176,7 +343,7 @@ asm cXyz::~cXyz() {
 #pragma pop
 
 
-/* 80BE63A4-80BE63A8 0004+00 s=0 e=0 z=0  None .text      __ct__4cXyzFv                                                */
+/* 80BE63A4-80BE63A8 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -187,11 +354,11 @@ asm cXyz::cXyz() {
 #pragma pop
 
 
-/* 80BE63A8-80BE63C8 0020+00 s=0 e=0 z=0  None .text      daObjFchain_Create__FP10fopAc_ac_c                           */
+/* 80BE63A8-80BE63C8 0020+00 s=1 e=0 z=0  None .text      daObjFchain_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjFchain_Create(fopAc_ac_c* param_0) {
+asm static void daObjFchain_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/daObjFchain_Create__FP10fopAc_ac_c.s"
 }
@@ -209,113 +376,18 @@ asm daObjFchain_c::~daObjFchain_c() {
 #pragma pop
 
 
-/* 80BE64B8-80BE64E0 0028+00 s=0 e=0 z=0  None .text      daObjFchain_Delete__FP13daObjFchain_c                        */
+/* 80BE64B8-80BE64E0 0028+00 s=1 e=0 z=0  None .text      daObjFchain_Delete__FP13daObjFchain_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjFchain_Delete(daObjFchain_c* param_0) {
+asm static void daObjFchain_Delete(daObjFchain_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/daObjFchain_Delete__FP13daObjFchain_c.s"
 }
 #pragma pop
 
 
-/* 80BE64E0-80BE66B4 01D4+00 s=1 e=0 z=0  None .text      checkPlayerFoot__13daObjFchain_cFPC4cXyzPC4cXyzP4cXyz        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjFchain_c::checkPlayerFoot(cXyz const* param_0, cXyz const* param_1, cXyz* param_2) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/checkPlayerFoot__13daObjFchain_cFPC4cXyzPC4cXyzP4cXyz.s"
-}
-#pragma pop
-
-
-/* 80BE66B4-80BE6868 01B4+00 s=1 e=0 z=0  None .text      setGroundVec__13daObjFchain_cFP4cXyzf                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjFchain_c::setGroundVec(cXyz* param_0, f32 param_1) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/setGroundVec__13daObjFchain_cFP4cXyzf.s"
-}
-#pragma pop
-
-
-/* 80BE6868-80BE7174 090C+00 s=1 e=0 z=0  None .text      execute__13daObjFchain_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjFchain_c::execute() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/execute__13daObjFchain_cFv.s"
-}
-#pragma pop
-
-
-/* 80BE7174-80BE7194 0020+00 s=0 e=0 z=0  None .text      daObjFchain_Execute__FP13daObjFchain_c                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjFchain_Execute(daObjFchain_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/daObjFchain_Execute__FP13daObjFchain_c.s"
-}
-#pragma pop
-
-
-/* 80BE7194-80BE7324 0190+00 s=0 e=0 z=0  None .text      draw__19daObjFchain_shape_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjFchain_shape_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/draw__19daObjFchain_shape_cFv.s"
-}
-#pragma pop
-
-
-/* 80BE7324-80BE73B4 0090+00 s=1 e=0 z=0  None .text      draw__13daObjFchain_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjFchain_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/draw__13daObjFchain_cFv.s"
-}
-#pragma pop
-
-
-/* 80BE73B4-80BE73D4 0020+00 s=0 e=0 z=0  None .text      daObjFchain_Draw__FP13daObjFchain_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjFchain_Draw(daObjFchain_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/daObjFchain_Draw__FP13daObjFchain_c.s"
-}
-#pragma pop
-
-
-/* 80BE73D4-80BE7430 005C+00 s=0 e=0 z=0  None .text      __dt__19daObjFchain_shape_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daObjFchain_shape_c::~daObjFchain_shape_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/__dt__19daObjFchain_shape_cFv.s"
-}
-#pragma pop
-
-
 /* ############################################################################################## */
-/* 80BE7438-80BE7440 0007+01 s=0 e=0 z=0  None .rodata    l_arcName                                                    */
-SECTION_RODATA u8 const l_arcName[7 + 1 /* padding */] = {
-	0x46, 0x63, 0x68, 0x61, 0x69, 0x6E, 0x00,
-	/* padding */
-	0x00,
-};
-
 /* 80BE7440-80BE744C 000C+00 s=0 e=0 z=0  None .rodata    localVec$3662                                                */
 SECTION_RODATA u8 const data_80BE7440[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC1, 0x10, 0x00, 0x00,
@@ -353,23 +425,46 @@ SECTION_RODATA u8 const lit_3720[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80BE7478-80BE7480 0004+04 s=0 e=0 z=0  None .rodata    @3809                                                        */
-SECTION_RODATA u8 const lit_3809[4 + 4 /* padding */] = {
+/* 80BE7478-80BE7480 0004+04 s=2 e=0 z=0  None .rodata    @3809                                                        */
+SECTION_RODATA static u8 const lit_3809[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80BE7480-80BE7488 0008+00 s=0 e=0 z=0  None .rodata    @3810                                                        */
-SECTION_RODATA u8 const lit_3810[8] = {
+/* 80BE7480-80BE7488 0008+00 s=2 e=0 z=0  None .rodata    @3810                                                        */
+SECTION_RODATA static u8 const lit_3810[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80BE7488-80BE7490 0008+00 s=0 e=0 z=0  None .rodata    @3811                                                        */
-SECTION_RODATA u8 const lit_3811[8] = {
+/* 80BE7488-80BE7490 0008+00 s=2 e=0 z=0  None .rodata    @3811                                                        */
+SECTION_RODATA static u8 const lit_3811[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
+/* 80BE64E0-80BE66B4 01D4+00 s=1 e=0 z=0  None .text      checkPlayerFoot__13daObjFchain_cFPC4cXyzPC4cXyzP4cXyz        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjFchain_c::checkPlayerFoot(cXyz const* param_0, cXyz const* param_1, cXyz* param_2) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/checkPlayerFoot__13daObjFchain_cFPC4cXyzPC4cXyzP4cXyz.s"
+}
+#pragma pop
+
+
+/* 80BE66B4-80BE6868 01B4+00 s=1 e=0 z=0  None .text      setGroundVec__13daObjFchain_cFP4cXyzf                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjFchain_c::setGroundVec(cXyz* param_0, f32 param_1) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/setGroundVec__13daObjFchain_cFP4cXyzf.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
 /* 80BE7490-80BE7498 0008+00 s=0 e=0 z=0  None .rodata    @3812                                                        */
 SECTION_RODATA u8 const lit_3812[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -410,32 +505,76 @@ SECTION_RODATA u32 const lit_4164 = 0x44C00000;
 /* 80BE74C8-80BE74CC 0004+00 s=0 e=0 z=0  None .rodata    @4165                                                        */
 SECTION_RODATA u32 const lit_4165 = 0x40000000;
 
-/* 80BE74CC-80BE74D6 000A+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80BE74CC-80BE74D6 000A+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD char const* const stringBase_80BE74CC = "demo06_01";
 #pragma pop
 
-/* 80BE74D8-80BE74F8 0020+00 s=0 e=0 z=0  None .data      l_daObjFchain_Method                                         */
-SECTION_DATA u8 l_daObjFchain_Method[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
+/* 80BE6868-80BE7174 090C+00 s=1 e=0 z=0  None .text      execute__13daObjFchain_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjFchain_c::execute() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/execute__13daObjFchain_cFv.s"
+}
+#pragma pop
 
-/* 80BE74F8-80BE7528 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Fchain                                         */
-SECTION_DATA u8 g_profile_Obj_Fchain[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x01, 0x58, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x09, 0x28, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0xF6, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x03, 0x0E, 0x00, 0x00,
-};
 
-/* 80BE7528-80BE753C 0014+00 s=0 e=0 z=0  None .data      __vt__19daObjFchain_shape_c                                  */
-SECTION_DATA void* __vt__19daObjFchain_shape_c[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-};
+/* 80BE7174-80BE7194 0020+00 s=1 e=0 z=0  None .text      daObjFchain_Execute__FP13daObjFchain_c                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daObjFchain_Execute(daObjFchain_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/daObjFchain_Execute__FP13daObjFchain_c.s"
+}
+#pragma pop
+
+
+/* 80BE7194-80BE7324 0190+00 s=1 e=0 z=0  None .text      draw__19daObjFchain_shape_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjFchain_shape_c::draw() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/draw__19daObjFchain_shape_cFv.s"
+}
+#pragma pop
+
+
+/* 80BE7324-80BE73B4 0090+00 s=1 e=0 z=0  None .text      draw__13daObjFchain_cFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjFchain_c::draw() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/draw__13daObjFchain_cFv.s"
+}
+#pragma pop
+
+
+/* 80BE73B4-80BE73D4 0020+00 s=1 e=0 z=0  None .text      daObjFchain_Draw__FP13daObjFchain_c                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daObjFchain_Draw(daObjFchain_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/daObjFchain_Draw__FP13daObjFchain_c.s"
+}
+#pragma pop
+
+
+/* 80BE73D4-80BE7430 005C+00 s=1 e=0 z=0  None .text      __dt__19daObjFchain_shape_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm daObjFchain_shape_c::~daObjFchain_shape_c() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_fchain/d_a_obj_fchain/__dt__19daObjFchain_shape_cFv.s"
+}
+#pragma pop
+
 

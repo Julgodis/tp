@@ -16,7 +16,7 @@ lbl_802E39B4:
 /* 802E39B4 00000000  48 05 ED 49 */	bl OSGetTime
 /* 802E39B8 00000004  7C 9C 20 10 */	subfc r4, r28, r4
 /* 802E39BC 00000008  7C 7D 19 10 */	subfe r3, r29, r3
-/* 802E39C0 0000000C  80 1E 00 F8 */	lwz r0, 0xf8(r30)
+/* 802E39C0 0000000C  80 1E 00 F8 */	lwz r0, 0xf8(r30)	/* effective address: 800000F8 */
 /* 802E39C4 00000010  54 00 F0 BE */	srwi r0, r0, 2
 /* 802E39C8 00000014  7C C0 FB 96 */	divwu r6, r0, r31
 /* 802E39CC 00000018  38 A0 00 00 */	li r5, 0

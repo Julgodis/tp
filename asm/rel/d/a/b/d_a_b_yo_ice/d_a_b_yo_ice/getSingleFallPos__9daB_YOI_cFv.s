@@ -6,20 +6,20 @@ lbl_8063ABC0:
 /* 8063ABD0 00000010  93 C1 00 48 */	stw r30, 0x48(r1)
 /* 8063ABD4 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 8063ABD8 00000018  7C 9F 23 78 */	mr r31, r4
-/* 8063ABDC 0000001C  4B FF F4 DD */	bl _unresolved
+/* 8063ABDC 0000001C  4B B4 6A 64 */	b dCam_getBody__Fv
 /* 8063ABE0 00000020  7C 64 1B 78 */	mr r4, r3
 /* 8063ABE4 00000024  38 61 00 14 */	addi r3, r1, 0x14
-/* 8063ABE8 00000028  4B FF F4 D1 */	bl _unresolved
+/* 8063ABE8 00000028  4B B4 72 7C */	b Eye__9dCamera_cFv
 /* 8063ABEC 0000002C  80 61 00 14 */	lwz r3, 0x14(r1)
 /* 8063ABF0 00000030  80 01 00 18 */	lwz r0, 0x18(r1)
 /* 8063ABF4 00000034  90 61 00 38 */	stw r3, 0x38(r1)
 /* 8063ABF8 00000038  90 01 00 3C */	stw r0, 0x3c(r1)
 /* 8063ABFC 0000003C  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 8063AC00 00000040  90 01 00 40 */	stw r0, 0x40(r1)
-/* 8063AC04 00000044  4B FF F4 B5 */	bl _unresolved
+/* 8063AC04 00000044  4B B4 6A 3C */	b dCam_getBody__Fv
 /* 8063AC08 00000048  7C 64 1B 78 */	mr r4, r3
 /* 8063AC0C 0000004C  38 61 00 08 */	addi r3, r1, 8
-/* 8063AC10 00000050  4B FF F4 A9 */	bl _unresolved
+/* 8063AC10 00000050  4B B4 72 88 */	b Center__9dCamera_cFv
 /* 8063AC14 00000054  80 61 00 08 */	lwz r3, 8(r1)
 /* 8063AC18 00000058  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8063AC1C 0000005C  90 61 00 2C */	stw r3, 0x2c(r1)
@@ -28,7 +28,7 @@ lbl_8063ABC0:
 /* 8063AC28 00000068  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8063AC2C 0000006C  38 61 00 38 */	addi r3, r1, 0x38
 /* 8063AC30 00000070  38 81 00 2C */	addi r4, r1, 0x2c
-/* 8063AC34 00000074  4B FF F4 85 */	bl _unresolved
+/* 8063AC34 00000074  4B C3 5F D0 */	b cLib_targetAngleY__FPC3VecPC3Vec
 /* 8063AC38 00000078  7C 66 07 34 */	extsh r6, r3
 /* 8063AC3C 0000007C  80 7F 06 A4 */	lwz r3, 0x6a4(r31)
 /* 8063AC40 00000080  34 03 FF FB */	addic. r0, r3, -5
@@ -39,11 +39,11 @@ lbl_8063AC4C:
 /* 8063AC50 00000004  54 00 10 3A */	slwi r0, r0, 2
 /* 8063AC54 00000008  7C A3 02 14 */	add r5, r3, r0
 /* 8063AC58 0000000C  C0 45 0A 68 */	lfs f2, 0xa68(r5)
-/* 8063AC5C 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8063AC60 00000014  C0 23 00 00 */	lfs f1, 0x0000(r3)
+/* 8063AC5C 00000010  3C 60 80 64 */	lis r3, lit_4082@ha
+/* 8063AC60 00000014  C0 23 DC D8 */	lfs f1, lit_4082@l(r3)
 /* 8063AC64 00000018  C0 9F 04 D4 */	lfs f4, 0x4d4(r31)
-/* 8063AC68 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8063AC6C 00000020  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
+/* 8063AC68 0000001C  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
+/* 8063AC6C 00000020  38 83 9A 20 */	addi r4, r3, sincosTable___5JMath@l
 /* 8063AC70 00000024  54 C0 04 38 */	rlwinm r0, r6, 0, 0x10, 0x1c
 /* 8063AC74 00000028  7C 64 02 14 */	add r3, r4, r0
 /* 8063AC78 0000002C  C0 03 00 04 */	lfs f0, 4(r3)

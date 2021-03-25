@@ -2,22 +2,22 @@ lbl_800056C0:
 /* 800056C0 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800056C4 00000004  7C 08 02 A6 */	mflr r0
 /* 800056C8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 800056CC 0000000C  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 800056D0 00000010  38 63 39 A0 */	addi r3, r3, stringBase0@l
+/* 800056CC 0000000C  3C 60 80 37 */	lis r3, m_Do_m_Do_main__stringBase0@ha
+/* 800056D0 00000010  38 63 39 A0 */	addi r3, r3, m_Do_m_Do_main__stringBase0@l
 /* 800056D4 00000014  7C 64 1B 78 */	mr r4, r3
 /* 800056D8 00000018  48 36 32 BD */	bl strcmp
 /* 800056DC 0000001C  2C 03 00 00 */	cmpwi r3, 0
 /* 800056E0 00000020  40 82 00 20 */	bne lbl_80005700
-/* 800056E4 00000024  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 800056E8 00000028  38 63 39 A0 */	addi r3, r3, stringBase0@l
+/* 800056E4 00000024  3C 60 80 37 */	lis r3, m_Do_m_Do_main__stringBase0@ha
+/* 800056E8 00000028  38 63 39 A0 */	addi r3, r3, m_Do_m_Do_main__stringBase0@l
 /* 800056EC 0000002C  38 63 00 0A */	addi r3, r3, 0xa
 /* 800056F0 00000030  7C 64 1B 78 */	mr r4, r3
 /* 800056F4 00000034  48 36 32 A1 */	bl strcmp
 /* 800056F8 00000038  2C 03 00 00 */	cmpwi r3, 0
 /* 800056FC 0000003C  41 82 00 1C */	beq lbl_80005718
 lbl_80005700:
-/* 80005700 00000000  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 80005704 00000004  38 63 39 A0 */	addi r3, r3, stringBase0@l
+/* 80005700 00000000  3C 60 80 37 */	lis r3, m_Do_m_Do_main__stringBase0@ha
+/* 80005704 00000004  38 63 39 A0 */	addi r3, r3, m_Do_m_Do_main__stringBase0@l
 /* 80005708 00000008  38 63 00 11 */	addi r3, r3, 0x11
 /* 8000570C 0000000C  4C C6 31 82 */	crclr 6
 /* 80005710 00000010  48 00 14 FD */	bl OSReport_Error

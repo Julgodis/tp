@@ -253,9 +253,9 @@ lbl_80137B80:
 lbl_80137B90:
 /* 80137B90 00000000  38 79 04 E6 */	addi r3, r25, 0x4e6
 /* 80137B94 00000004  38 FC 1A E0 */	addi r7, r28, 0x1ae0
-/* 80137B98 00000008  A8 A7 00 28 */	lha r5, 0x28(r7)
-/* 80137B9C 0000000C  A8 C7 00 2A */	lha r6, 0x2a(r7)
-/* 80137BA0 00000010  A8 E7 00 2C */	lha r7, 0x2c(r7)
+/* 80137B98 00000008  A8 A7 00 28 */	lha r5, 0x28(r7)	/* effective address: 8038F160 */
+/* 80137B9C 0000000C  A8 C7 00 2A */	lha r6, 0x2a(r7)	/* effective address: 8038F162 */
+/* 80137BA0 00000010  A8 E7 00 2C */	lha r7, 0x2c(r7)	/* effective address: 8038F164 */
 /* 80137BA4 00000014  48 13 89 9D */	bl cLib_addCalcAngleS__FPsssss
 lbl_80137BA8:
 /* 80137BA8 00000000  7F 23 CB 78 */	mr r3, r25

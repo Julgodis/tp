@@ -81,7 +81,7 @@ lbl_8015963C:
 /* 80159688 0000004C  C0 22 9A E0 */	lfs f1, lit_4050(r2)
 /* 8015968C 00000050  4B EF 3E 41 */	bl set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 80159690 00000054  7C 7E D9 2E */	stwx r3, r30, r27
-/* 80159694 00000058  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
+/* 80159694 00000058  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)	/* effective address: 8040BEFC */
 /* 80159698 0000005C  38 63 02 10 */	addi r3, r3, 0x210
 /* 8015969C 00000060  7C 9E D8 2E */	lwzx r4, r30, r27
 /* 801596A0 00000064  4B EF 22 79 */	bl getEmitter__Q213dPa_control_c7level_cFUl

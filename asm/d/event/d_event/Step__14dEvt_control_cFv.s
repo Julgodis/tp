@@ -52,12 +52,12 @@ lbl_80042C64:
 /* 80042C74 00000010  28 00 00 02 */	cmplwi r0, 2
 /* 80042C78 00000014  40 82 00 38 */	bne lbl_80042CB0
 /* 80042C7C 00000018  7F C3 F3 78 */	mr r3, r30
-/* 80042C80 0000001C  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 80042C84 00000020  38 84 9D 80 */	addi r4, r4, stringBase0@l
+/* 80042C80 0000001C  3C 80 80 38 */	lis r4, d_event_d_event__stringBase0@ha
+/* 80042C84 00000020  38 84 9D 80 */	addi r4, r4, d_event_d_event__stringBase0@l
 /* 80042C88 00000024  38 84 00 07 */	addi r4, r4, 7
 /* 80042C8C 00000028  48 00 56 BD */	bl cancelStaff__16dEvent_manager_cFPCc
 /* 80042C90 0000002C  38 60 00 00 */	li r3, 0
-/* 80042C94 00000030  90 7E 01 8C */	stw r3, 0x18c(r30)
+/* 80042C94 00000030  90 7E 01 8C */	stw r3, 0x18c(r30)	/* effective address: 8040B344 */
 /* 80042C98 00000034  B0 7D 00 D8 */	sth r3, 0xd8(r29)
 /* 80042C9C 00000038  A0 1D 00 D8 */	lhz r0, 0xd8(r29)
 /* 80042CA0 0000003C  60 00 02 00 */	ori r0, r0, 0x200
@@ -127,12 +127,12 @@ lbl_80042D74:
 /* 80042D7C 00000008  2C 03 FF FF */	cmpwi r3, -1
 /* 80042D80 0000000C  41 82 00 50 */	beq lbl_80042DD0
 /* 80042D84 00000010  7F C3 F3 78 */	mr r3, r30
-/* 80042D88 00000014  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 80042D8C 00000018  38 84 9D 80 */	addi r4, r4, stringBase0@l
+/* 80042D88 00000014  3C 80 80 38 */	lis r4, d_event_d_event__stringBase0@ha
+/* 80042D8C 00000018  38 84 9D 80 */	addi r4, r4, d_event_d_event__stringBase0@l
 /* 80042D90 0000001C  38 84 00 07 */	addi r4, r4, 7
 /* 80042D94 00000020  48 00 55 B5 */	bl cancelStaff__16dEvent_manager_cFPCc
 /* 80042D98 00000024  38 60 00 00 */	li r3, 0
-/* 80042D9C 00000028  90 7E 01 8C */	stw r3, 0x18c(r30)
+/* 80042D9C 00000028  90 7E 01 8C */	stw r3, 0x18c(r30)	/* effective address: 8040B344 */
 /* 80042DA0 0000002C  A0 1D 00 D8 */	lhz r0, 0xd8(r29)
 /* 80042DA4 00000030  60 00 02 00 */	ori r0, r0, 0x200
 /* 80042DA8 00000034  B0 1D 00 D8 */	sth r0, 0xd8(r29)
@@ -180,7 +180,7 @@ lbl_80042E28:
 /* 80042E44 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80042E48 00000020  83 83 5D B4 */	lwz r28, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 80042E4C 00000024  48 13 E7 F5 */	bl dCam_getBody__Fv
-/* 80042E50 00000028  80 03 00 24 */	lwz r0, 0x24(r3)
+/* 80042E50 00000028  80 03 00 24 */	lwz r0, 0x24(r3)	/* effective address: 804061E4 */
 /* 80042E54 0000002C  2C 00 00 00 */	cmpwi r0, 0
 /* 80042E58 00000030  41 82 00 8C */	beq lbl_80042EE4
 /* 80042E5C 00000034  38 80 00 01 */	li r4, 1

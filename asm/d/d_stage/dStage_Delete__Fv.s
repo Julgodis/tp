@@ -47,7 +47,7 @@ lbl_80026E34:
 lbl_80026EA8:
 /* 80026EA8 00000000  4B FF DA 01 */	bl destroyMemoryBlock__20dStage_roomControl_cFv
 /* 80026EAC 00000004  7F C3 F3 78 */	mr r3, r30
-/* 80026EB0 00000008  81 9E 00 00 */	lwz r12, 0(r30)
+/* 80026EB0 00000008  81 9E 00 00 */	lwz r12, 0(r30)	/* effective address: 8040AFE0 */
 /* 80026EB4 0000000C  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 80026EB8 00000010  7D 89 03 A6 */	mtctr r12
 /* 80026EBC 00000014  4E 80 04 21 */	bctrl 
@@ -55,8 +55,8 @@ lbl_80026EA8:
 /* 80026EC4 0000001C  54 00 87 7E */	rlwinm r0, r0, 0x10, 0x1d, 0x1f
 /* 80026EC8 00000020  28 00 00 01 */	cmplwi r0, 1
 /* 80026ECC 00000024  40 82 00 48 */	bne lbl_80026F14
-/* 80026ED0 00000028  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 80026ED4 0000002C  38 63 8A 50 */	addi r3, r3, stringBase0@l
+/* 80026ED0 00000028  3C 60 80 38 */	lis r3, d_d_stage__stringBase0@ha
+/* 80026ED4 0000002C  38 63 8A 50 */	addi r3, r3, d_d_stage__stringBase0@l
 /* 80026ED8 00000030  38 63 01 32 */	addi r3, r3, 0x132
 /* 80026EDC 00000034  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80026EE0 00000038  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
@@ -65,16 +65,16 @@ lbl_80026EA8:
 /* 80026EEC 00000044  38 A0 00 40 */	li r5, 0x40
 /* 80026EF0 00000048  48 01 52 F5 */	bl getResInfo__14dRes_control_cFPCcP11dRes_info_ci
 /* 80026EF4 0000004C  38 00 00 58 */	li r0, 0x58
-/* 80026EF8 00000050  98 03 00 00 */	stb r0, 0(r3)
+/* 80026EF8 00000050  98 03 00 00 */	stb r0, 0(r3)	/* effective address: 80378B82 */
 /* 80026EFC 00000054  7F C3 F3 78 */	mr r3, r30
-/* 80026F00 00000058  81 9E 00 00 */	lwz r12, 0(r30)
+/* 80026F00 00000058  81 9E 00 00 */	lwz r12, 0(r30)	/* effective address: 8040AFE0 */
 /* 80026F04 0000005C  81 8C 01 30 */	lwz r12, 0x130(r12)
 /* 80026F08 00000060  7D 89 03 A6 */	mtctr r12
 /* 80026F0C 00000064  4E 80 04 21 */	bctrl 
 /* 80026F10 00000068  48 00 00 58 */	b lbl_80026F68
 lbl_80026F14:
-/* 80026F14 00000000  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 80026F18 00000004  38 63 8A 50 */	addi r3, r3, stringBase0@l
+/* 80026F14 00000000  3C 60 80 38 */	lis r3, d_d_stage__stringBase0@ha
+/* 80026F18 00000004  38 63 8A 50 */	addi r3, r3, d_d_stage__stringBase0@l
 /* 80026F1C 00000008  38 63 01 32 */	addi r3, r3, 0x132
 /* 80026F20 0000000C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80026F24 00000010  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
@@ -83,20 +83,20 @@ lbl_80026F14:
 /* 80026F30 0000001C  7F A4 EB 78 */	mr r4, r29
 /* 80026F34 00000020  38 A0 00 40 */	li r5, 0x40
 /* 80026F38 00000024  48 01 52 5D */	bl deleteRes__14dRes_control_cFPCcP11dRes_info_ci
-/* 80026F3C 00000028  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 80026F40 0000002C  38 63 8A 50 */	addi r3, r3, stringBase0@l
+/* 80026F3C 00000028  3C 60 80 38 */	lis r3, d_d_stage__stringBase0@ha
+/* 80026F40 0000002C  38 63 8A 50 */	addi r3, r3, d_d_stage__stringBase0@l
 /* 80026F44 00000030  38 63 00 E3 */	addi r3, r3, 0xe3
 /* 80026F48 00000034  7F A4 EB 78 */	mr r4, r29
 /* 80026F4C 00000038  38 A0 00 40 */	li r5, 0x40
 /* 80026F50 0000003C  48 01 52 45 */	bl deleteRes__14dRes_control_cFPCcP11dRes_info_ci
 /* 80026F54 00000040  7F C3 F3 78 */	mr r3, r30
-/* 80026F58 00000044  81 9E 00 00 */	lwz r12, 0(r30)
+/* 80026F58 00000044  81 9E 00 00 */	lwz r12, 0(r30)	/* effective address: 8040AFE0 */
 /* 80026F5C 00000048  81 8C 01 34 */	lwz r12, 0x134(r12)
 /* 80026F60 0000004C  7D 89 03 A6 */	mtctr r12
 /* 80026F64 00000050  4E 80 04 21 */	bctrl 
 lbl_80026F68:
-/* 80026F68 00000000  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 80026F6C 00000004  38 63 8A 50 */	addi r3, r3, stringBase0@l
+/* 80026F68 00000000  3C 60 80 38 */	lis r3, d_d_stage__stringBase0@ha
+/* 80026F6C 00000004  38 63 8A 50 */	addi r3, r3, d_d_stage__stringBase0@l
 /* 80026F70 00000008  38 63 01 39 */	addi r3, r3, 0x139
 /* 80026F74 0000000C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80026F78 00000010  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
@@ -114,7 +114,7 @@ lbl_80026F68:
 /* 80026FA8 00000040  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 80026FAC 00000044  48 01 FC 61 */	bl remove__16dEvent_manager_cFv
 /* 80026FB0 00000048  7F C3 F3 78 */	mr r3, r30
-/* 80026FB4 0000004C  81 9E 00 00 */	lwz r12, 0(r30)
+/* 80026FB4 0000004C  81 9E 00 00 */	lwz r12, 0(r30)	/* effective address: 8040AFE0 */
 /* 80026FB8 00000050  81 8C 00 08 */	lwz r12, 8(r12)
 /* 80026FBC 00000054  7D 89 03 A6 */	mtctr r12
 /* 80026FC0 00000058  4E 80 04 21 */	bctrl 

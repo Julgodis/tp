@@ -4,16 +4,16 @@ lbl_804F9FE0:
 /* 804F9FE8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804F9FEC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804F9FF0 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 804F9FF4 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 804F9FF8 00000018  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 804F9FFC 0000001C  4B FF 50 5D */	bl _unresolved
+/* 804F9FF4 00000014  3C 80 80 3A */	lis r4, j3dDefaultLightInfo@ha
+/* 804F9FF8 00000018  38 84 1E C8 */	addi r4, r4, j3dDefaultLightInfo@l
+/* 804F9FFC 0000001C  4B E2 B6 C8 */	b __as__12J3DLightInfoFRC12J3DLightInfo
 /* 804FA000 00000020  38 7F 00 74 */	addi r3, r31, 0x74
-/* 804FA004 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 804FA008 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 804FA004 00000024  3C 80 80 50 */	lis r4, __ct__11J3DLightObjFv@ha
+/* 804FA008 00000028  38 84 A0 34 */	addi r4, r4, __ct__11J3DLightObjFv@l
 /* 804FA00C 0000002C  38 A0 00 00 */	li r5, 0
 /* 804FA010 00000030  38 C0 00 74 */	li r6, 0x74
 /* 804FA014 00000034  38 E0 00 06 */	li r7, 6
-/* 804FA018 00000038  4B FF 50 41 */	bl _unresolved
+/* 804FA018 00000038  4B E6 7D 48 */	b __construct_array
 /* 804FA01C 0000003C  7F E3 FB 78 */	mr r3, r31
 /* 804FA020 00000040  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804FA024 00000044  80 01 00 14 */	lwz r0, 0x14(r1)

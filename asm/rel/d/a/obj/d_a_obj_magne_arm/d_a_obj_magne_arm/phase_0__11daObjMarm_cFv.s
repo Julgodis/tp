@@ -8,22 +8,22 @@ lbl_80590244:
 /* 8059025C 00000018  54 00 C7 3E */	rlwinm r0, r0, 0x18, 0x1c, 0x1f
 /* 80590260 0000001C  98 03 0A 15 */	stb r0, 0xa15(r3)
 /* 80590264 00000020  38 7F 05 A0 */	addi r3, r31, 0x5a0
-/* 80590268 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8059026C 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80590270 0000002C  80 84 00 00 */	lwz r4, 0(r4)
-/* 80590274 00000030  4B FF F0 C5 */	bl _unresolved
+/* 80590268 00000024  3C 80 80 59 */	lis r4, l_arcName@ha
+/* 8059026C 00000028  38 84 29 A0 */	addi r4, r4, l_arcName@l
+/* 80590270 0000002C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 805929A0 */
+/* 80590274 00000030  4B A9 CC 48 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80590278 00000034  2C 03 00 04 */	cmpwi r3, 4
 /* 8059027C 00000038  40 82 00 44 */	bne lbl_805902C0
 /* 80590280 0000003C  7F E3 FB 78 */	mr r3, r31
-/* 80590284 00000040  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80590288 00000044  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 8059028C 00000048  80 84 00 00 */	lwz r4, 0(r4)
+/* 80590284 00000040  3C 80 80 59 */	lis r4, l_arcName@ha
+/* 80590288 00000044  38 84 29 A0 */	addi r4, r4, l_arcName@l
+/* 8059028C 00000048  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 805929A0 */
 /* 80590290 0000004C  38 A0 00 15 */	li r5, 0x15
-/* 80590294 00000050  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
-/* 80590298 00000054  38 C6 00 00 */	addi r6, r6, 0x0000 /* 0x00000000@l */
+/* 80590294 00000050  3C C0 80 07 */	lis r6, dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
+/* 80590298 00000054  38 C6 5A 24 */	addi r6, r6, dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
 /* 8059029C 00000058  38 E0 60 00 */	li r7, 0x6000
 /* 805902A0 0000005C  39 00 00 00 */	li r8, 0
-/* 805902A4 00000060  4B FF F0 95 */	bl _unresolved
+/* 805902A4 00000060  4B AE 85 18 */	b MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f
 /* 805902A8 00000064  2C 03 00 05 */	cmpwi r3, 5
 /* 805902AC 00000068  40 82 00 08 */	bne lbl_805902B4
 /* 805902B0 0000006C  48 00 00 14 */	b lbl_805902C4

@@ -43,10 +43,10 @@ lbl_8028E0F4:
 /* 8028E198 000000A4  38 03 D7 50 */	addi r0, r3, func_8028D750@l
 /* 8028E19C 000000A8  90 01 00 40 */	stw r0, 0x40(r1)
 /* 8028E1A0 000000AC  38 7F 00 68 */	addi r3, r31, 0x68
-/* 8028E1A4 000000B0  90 C3 00 0C */	stw r6, 0xc(r3)
-/* 8028E1A8 000000B4  90 A3 00 0C */	stw r5, 0xc(r3)
-/* 8028E1AC 000000B8  90 83 00 10 */	stw r4, 0x10(r3)
-/* 8028E1B0 000000BC  90 03 00 14 */	stw r0, 0x14(r3)
+/* 8028E1A4 000000B0  90 C3 00 0C */	stw r6, 0xc(r3)	/* effective address: 80431504 */
+/* 8028E1A8 000000B4  90 A3 00 0C */	stw r5, 0xc(r3)	/* effective address: 80431504 */
+/* 8028E1AC 000000B8  90 83 00 10 */	stw r4, 0x10(r3)	/* effective address: 80431508 */
+/* 8028E1B0 000000BC  90 03 00 14 */	stw r0, 0x14(r3)	/* effective address: 8043150C */
 /* 8028E1B4 000000C0  38 63 00 0C */	addi r3, r3, 0xc
 /* 8028E1B8 000000C4  3C 80 80 29 */	lis r4, __dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv@ha
 /* 8028E1BC 000000C8  38 84 E0 94 */	addi r4, r4, __dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv@l
@@ -70,10 +70,10 @@ lbl_8028E0F4:
 /* 8028E204 00000110  38 03 D7 78 */	addi r0, r3, func_8028D778@l
 /* 8028E208 00000114  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8028E20C 00000118  38 7F 00 68 */	addi r3, r31, 0x68
-/* 8028E210 0000011C  90 C3 00 18 */	stw r6, 0x18(r3)
-/* 8028E214 00000120  90 A3 00 18 */	stw r5, 0x18(r3)
-/* 8028E218 00000124  90 83 00 1C */	stw r4, 0x1c(r3)
-/* 8028E21C 00000128  90 03 00 20 */	stw r0, 0x20(r3)
+/* 8028E210 0000011C  90 C3 00 18 */	stw r6, 0x18(r3)	/* effective address: 80431510 */
+/* 8028E214 00000120  90 A3 00 18 */	stw r5, 0x18(r3)	/* effective address: 80431510 */
+/* 8028E218 00000124  90 83 00 1C */	stw r4, 0x1c(r3)	/* effective address: 80431514 */
+/* 8028E21C 00000128  90 03 00 20 */	stw r0, 0x20(r3)	/* effective address: 80431518 */
 /* 8028E220 0000012C  38 63 00 18 */	addi r3, r3, 0x18
 /* 8028E224 00000130  3C 80 80 29 */	lis r4, __dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv@ha
 /* 8028E228 00000134  38 84 E0 94 */	addi r4, r4, __dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv@l
@@ -97,10 +97,10 @@ lbl_8028E0F4:
 /* 8028E270 0000017C  38 03 D7 A0 */	addi r0, r3, func_8028D7A0@l
 /* 8028E274 00000180  90 01 00 28 */	stw r0, 0x28(r1)
 /* 8028E278 00000184  38 7F 00 68 */	addi r3, r31, 0x68
-/* 8028E27C 00000188  90 C3 00 24 */	stw r6, 0x24(r3)
-/* 8028E280 0000018C  90 A3 00 24 */	stw r5, 0x24(r3)
-/* 8028E284 00000190  90 83 00 28 */	stw r4, 0x28(r3)
-/* 8028E288 00000194  90 03 00 2C */	stw r0, 0x2c(r3)
+/* 8028E27C 00000188  90 C3 00 24 */	stw r6, 0x24(r3)	/* effective address: 8043151C */
+/* 8028E280 0000018C  90 A3 00 24 */	stw r5, 0x24(r3)	/* effective address: 8043151C */
+/* 8028E284 00000190  90 83 00 28 */	stw r4, 0x28(r3)	/* effective address: 80431520 */
+/* 8028E288 00000194  90 03 00 2C */	stw r0, 0x2c(r3)	/* effective address: 80431524 */
 /* 8028E28C 00000198  38 63 00 24 */	addi r3, r3, 0x24
 /* 8028E290 0000019C  3C 80 80 29 */	lis r4, __dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv@ha
 /* 8028E294 000001A0  38 84 E0 94 */	addi r4, r4, __dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv@l
@@ -124,10 +124,10 @@ lbl_8028E0F4:
 /* 8028E2DC 000001E8  38 03 D8 00 */	addi r0, r3, func_8028D800@l
 /* 8028E2E0 000001EC  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 8028E2E4 000001F0  38 7F 00 68 */	addi r3, r31, 0x68
-/* 8028E2E8 000001F4  90 C3 00 30 */	stw r6, 0x30(r3)
-/* 8028E2EC 000001F8  90 A3 00 30 */	stw r5, 0x30(r3)
-/* 8028E2F0 000001FC  90 83 00 34 */	stw r4, 0x34(r3)
-/* 8028E2F4 00000200  90 03 00 38 */	stw r0, 0x38(r3)
+/* 8028E2E8 000001F4  90 C3 00 30 */	stw r6, 0x30(r3)	/* effective address: 80431528 */
+/* 8028E2EC 000001F8  90 A3 00 30 */	stw r5, 0x30(r3)	/* effective address: 80431528 */
+/* 8028E2F0 000001FC  90 83 00 34 */	stw r4, 0x34(r3)	/* effective address: 8043152C */
+/* 8028E2F4 00000200  90 03 00 38 */	stw r0, 0x38(r3)	/* effective address: 80431530 */
 /* 8028E2F8 00000204  38 63 00 30 */	addi r3, r3, 0x30
 /* 8028E2FC 00000208  3C 80 80 29 */	lis r4, __dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv@ha
 /* 8028E300 0000020C  38 84 E0 94 */	addi r4, r4, __dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv@l
@@ -150,10 +150,10 @@ lbl_8028E0F4:
 /* 8028E344 00000250  38 00 00 00 */	li r0, 0
 /* 8028E348 00000254  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8028E34C 00000258  38 7F 00 68 */	addi r3, r31, 0x68
-/* 8028E350 0000025C  90 C3 00 3C */	stw r6, 0x3c(r3)
-/* 8028E354 00000260  90 A3 00 3C */	stw r5, 0x3c(r3)
-/* 8028E358 00000264  90 83 00 40 */	stw r4, 0x40(r3)
-/* 8028E35C 00000268  90 03 00 44 */	stw r0, 0x44(r3)
+/* 8028E350 0000025C  90 C3 00 3C */	stw r6, 0x3c(r3)	/* effective address: 80431534 */
+/* 8028E354 00000260  90 A3 00 3C */	stw r5, 0x3c(r3)	/* effective address: 80431534 */
+/* 8028E358 00000264  90 83 00 40 */	stw r4, 0x40(r3)	/* effective address: 80431538 */
+/* 8028E35C 00000268  90 03 00 44 */	stw r0, 0x44(r3)	/* effective address: 8043153C */
 /* 8028E360 0000026C  38 63 00 3C */	addi r3, r3, 0x3c
 /* 8028E364 00000270  3C 80 80 29 */	lis r4, __dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv@ha
 /* 8028E368 00000274  38 84 E0 94 */	addi r4, r4, __dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv@l

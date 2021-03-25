@@ -106,7 +106,7 @@ asm void JPTraceParticleCallBack4::draw(JPABaseEmitter* param_0, JPABaseParticle
 #pragma pop
 
 
-/* 800182A8-80018328 0080+00 s=0 e=0 z=0  None .text      cDmrNowMidnaTalk__Fv                                         */
+/* 800182A8-80018328 0080+00 s=0 e=0 z=22  None .text      cDmrNowMidnaTalk__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -151,10 +151,10 @@ SECTION_DATA void* __vt__19JPAParticleCallBack[5] = {
 /* 803F0F40-803F0F50 000C+04 s=1 e=0 z=0  None .bss       @3741                                                        */
 static u8 lit_3741[12 + 4 /* padding */];
 
-/* 80450CA0-80450CA4 0004+00 s=0 e=0 z=0  None .sbss      None                                                         */
+/* 80450CA0-80450CA4 0004+00 s=0 e=0 z=2  None .sbss      None                                                         */
 u8 data_80450CA0[4];
 
-/* 80450CA4-80450CA8 0004+00 s=1 e=1 z=0  None .sbss      JPTracePCB4                                                  */
+/* 80450CA4-80450CA8 0004+00 s=1 e=1 z=1  None .sbss      JPTracePCB4                                                  */
 u8 JPTracePCB4[4];
 
 /* 80018388-800183D4 004C+00 s=0 e=1 z=0  None .text      __sinit_c_damagereaction_cpp                                 */

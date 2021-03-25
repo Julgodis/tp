@@ -2,10 +2,10 @@ lbl_80BA140C:
 /* 80BA140C 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80BA1410 00000004  7C 08 02 A6 */	mflr r0
 /* 80BA1414 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80BA1418 0000000C  48 00 00 21 */	bl _unresolved
-/* 80BA141C 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BA1420 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80BA1424 00000018  48 00 00 15 */	bl _unresolved
+/* 80BA1418 0000000C  4B 6C 1C 74 */	b ModuleEpilog
+/* 80BA141C 00000010  3C 60 80 BA */	lis r3, __destroy_global_chain_reference@ha
+/* 80BA1420 00000014  38 63 23 84 */	addi r3, r3, __destroy_global_chain_reference@l
+/* 80BA1424 00000018  4B 6C 1D 6C */	b ModuleDestructorsX
 /* 80BA1428 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80BA142C 00000020  7C 08 03 A6 */	mtlr r0
 /* 80BA1430 00000024  38 21 00 10 */	addi r1, r1, 0x10

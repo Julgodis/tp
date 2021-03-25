@@ -19,7 +19,7 @@ lbl_8011510C:
 /* 80115150 00000044  4B F9 7E BD */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 80115154 00000048  7F C3 F3 78 */	mr r3, r30
 /* 80115158 0000004C  38 80 01 9A */	li r4, 0x19a
-/* 8011515C 00000050  C0 3F 00 1C */	lfs f1, 0x1c(r31)
+/* 8011515C 00000050  C0 3F 00 1C */	lfs f1, 0x1c(r31)	/* effective address: 8038EA8C */
 /* 80115160 00000054  C0 42 92 BC */	lfs f2, lit_6041(r2)
 /* 80115164 00000058  4B F9 82 45 */	bl setUpperAnimeBaseSpeed__9daAlink_cFUsff
 /* 80115168 0000005C  C0 02 92 C0 */	lfs f0, lit_6108(r2)

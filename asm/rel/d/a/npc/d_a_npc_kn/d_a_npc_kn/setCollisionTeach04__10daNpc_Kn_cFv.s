@@ -8,9 +8,9 @@ lbl_80A2CC24:
 /* 80A2CC3C 00000018  4C 80 00 20 */	bgelr 
 /* 80A2CC40 0000001C  48 00 00 80 */	b lbl_80A2CCC0
 lbl_80A2CC44:
-/* 80A2CC44 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80A2CC48 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80A2CC4C 00000008  88 04 4F AD */	lbz r0, 0x4fad(r4)
+/* 80A2CC44 00000000  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A2CC48 00000004  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80A2CC4C 00000008  88 04 4F AD */	lbz r0, 0x4fad(r4)	/* effective address: 8040B16D */
 /* 80A2CC50 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80A2CC54 00000010  41 82 00 2C */	beq lbl_80A2CC80
 /* 80A2CC58 00000014  A0 03 00 F8 */	lhz r0, 0xf8(r3)

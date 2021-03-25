@@ -11,18 +11,6 @@
 // Types:
 // 
 
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TActor {
-	};
-
-	struct TObject {
-	};
-
-};
-
 struct Vec {
 };
 
@@ -63,6 +51,18 @@ namespace JStudio {
 
 	struct TAdaptor_actor {
 		/* 802868B0 */ ~TAdaptor_actor();
+	};
+
+};
+
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TActor {
+	};
+
+	struct TObject {
 	};
 
 };
@@ -149,12 +149,6 @@ extern "C" void func_8028B198(); // 1
 extern "C" void __ct__Q27JStudio14TVariableValueFv(); // 1
 extern "C" void func_8028B580(); // 1
 extern "C" void func_8028B5E0(); // 1
-extern "C" extern u8 lit_1089[12];
-extern "C" extern u8 lit_1090[12];
-extern "C" extern u8 lit_1091[12];
-extern "C" extern u8 lit_1096[12];
-extern "C" extern u8 lit_1097[12];
-extern "C" extern u8 lit_1098[12];
 extern "C" extern u8 lit_1088[12];
 extern "C" extern u8 lit_1095[12];
 extern "C" extern u8 lit_1102[12];
@@ -228,33 +222,33 @@ SECTION_DATA static u8 lit_1084[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x70, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C576C-803C5778 000C+00 s=0 e=0 z=0  None .data      @1089                                                        */
-SECTION_DATA u8 lit_1089[12] = {
+/* 803C576C-803C5778 000C+00 s=1 e=0 z=0  None .data      @1089                                                        */
+SECTION_DATA static u8 lit_1089[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x68, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C5778-803C5784 000C+00 s=0 e=0 z=0  None .data      @1090                                                        */
-SECTION_DATA u8 lit_1090[12] = {
+/* 803C5778-803C5784 000C+00 s=1 e=0 z=0  None .data      @1090                                                        */
+SECTION_DATA static u8 lit_1090[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x64, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C5784-803C5790 000C+00 s=0 e=0 z=0  None .data      @1091                                                        */
-SECTION_DATA u8 lit_1091[12] = {
+/* 803C5784-803C5790 000C+00 s=1 e=0 z=0  None .data      @1091                                                        */
+SECTION_DATA static u8 lit_1091[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x6C, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C5790-803C579C 000C+00 s=0 e=0 z=0  None .data      @1096                                                        */
-SECTION_DATA u8 lit_1096[12] = {
+/* 803C5790-803C579C 000C+00 s=1 e=0 z=0  None .data      @1096                                                        */
+SECTION_DATA static u8 lit_1096[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x84, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C579C-803C57A8 000C+00 s=0 e=0 z=0  None .data      @1097                                                        */
-SECTION_DATA u8 lit_1097[12] = {
+/* 803C579C-803C57A8 000C+00 s=1 e=0 z=0  None .data      @1097                                                        */
+SECTION_DATA static u8 lit_1097[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C57A8-803C57B4 000C+00 s=0 e=0 z=0  None .data      @1098                                                        */
-SECTION_DATA u8 lit_1098[12] = {
+/* 803C57A8-803C57B4 000C+00 s=1 e=0 z=0  None .data      @1098                                                        */
+SECTION_DATA static u8 lit_1098[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x88, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -352,7 +346,7 @@ u8 lit_1102[12];
 /* 804311F8-80431204 000C+00 s=0 e=0 z=0  None .bss       @1103                                                        */
 u8 lit_1103[12];
 
-/* 80431204-80431298 0090+04 s=2 e=0 z=0  None .bss       saoVVOutput_ANIMATION_FRAME___Q214JStudio_JStage14TAdaptor_actor */
+/* 80431204-80431298 0090+04 s=3 e=0 z=0  None .bss       saoVVOutput_ANIMATION_FRAME___Q214JStudio_JStage14TAdaptor_actor */
 static u8 saoVVOutput_ANIMATION_FRAME___Q214JStudio_JStage14TAdaptor_actor[144 + 4 /* padding */];
 
 /* 8028A728-8028A7B4 008C+00 s=1 e=0 z=0  None .text      adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_actorFv     */

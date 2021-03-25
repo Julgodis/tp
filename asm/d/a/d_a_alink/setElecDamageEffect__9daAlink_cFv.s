@@ -7,8 +7,8 @@ lbl_80122BBC:
 /* 80122BD0 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80122BD4 00000018  3C 60 80 39 */	lis r3, lit_3757@ha
 /* 80122BD8 0000001C  3B 83 D6 58 */	addi r28, r3, lit_3757@l
-/* 80122BDC 00000020  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 80122BE0 00000024  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 80122BDC 00000020  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 80122BE0 00000024  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 80122BE4 00000028  38 63 01 2C */	addi r3, r3, 0x12c
 /* 80122BE8 0000002C  4B F7 AE 79 */	bl checkStageName__9daAlink_cFPCc
 /* 80122BEC 00000030  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -43,7 +43,7 @@ lbl_80122C30:
 /* 80122C58 00000028  40 82 00 30 */	bne lbl_80122C88
 /* 80122C5C 0000002C  38 9C 46 14 */	addi r4, r28, 0x4614
 /* 80122C60 00000030  E0 04 00 00 */	psq_l f0, 0(r4), 0, 0 /* qr0 */
-/* 80122C64 00000000  C0 24 00 08 */	lfs f1, 8(r4)
+/* 80122C64 00000000  C0 24 00 08 */	lfs f1, 8(r4)	/* effective address: 80391C74 */
 /* 80122C68 00000038  F0 01 00 44 */	psq_st f0, 68(r1), 0, 0 /* qr0 */
 /* 80122C6C 00000000  D0 21 00 4C */	stfs f1, 0x4c(r1)
 /* 80122C70 00000004  C0 01 00 44 */	lfs f0, 0x44(r1)
@@ -55,7 +55,7 @@ lbl_80122C30:
 lbl_80122C88:
 /* 80122C88 00000000  38 9C 46 08 */	addi r4, r28, 0x4608
 /* 80122C8C 00000004  E0 04 00 00 */	psq_l f0, 0(r4), 0, 0 /* qr0 */
-/* 80122C90 00000000  C0 24 00 08 */	lfs f1, 8(r4)
+/* 80122C90 00000000  C0 24 00 08 */	lfs f1, 8(r4)	/* effective address: 80391C68 */
 /* 80122C94 00000004  F0 01 00 38 */	psq_st f0, 56(r1), 0, 0 /* qr0 */
 /* 80122C98 00000008  D0 21 00 40 */	stfs f1, 0x40(r1)
 /* 80122C9C 0000000C  C0 01 00 38 */	lfs f0, 0x38(r1)
@@ -102,8 +102,8 @@ lbl_80122CF4:
 /* 80122D34 00000040  A8 1E 30 1A */	lha r0, 0x301a(r30)
 /* 80122D38 00000044  2C 00 00 06 */	cmpwi r0, 6
 /* 80122D3C 00000048  40 82 01 C4 */	bne lbl_80122F00
-/* 80122D40 0000004C  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 80122D44 00000050  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 80122D40 0000004C  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 80122D44 00000050  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 80122D48 00000054  38 63 00 BB */	addi r3, r3, 0xbb
 /* 80122D4C 00000058  4B F7 AD 15 */	bl checkStageName__9daAlink_cFPCc
 /* 80122D50 0000005C  54 60 06 3F */	clrlwi. r0, r3, 0x18

@@ -107,7 +107,7 @@ extern "C" void __dt__15JKRThreadSwitchFv(); // 1
 extern "C" void __sinit_JKRThread_cpp(); // 1
 extern "C" void func_802D1EFC(); // 1
 extern "C" void func_802D1F50(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JKRThread__stringBase0;
 extern "C" extern u8 lit_989[12];
 extern "C" extern u8 sTaskList__7JKRTask[12];
 extern "C" extern u8 sEndMesgQueue__7JKRTask[32];

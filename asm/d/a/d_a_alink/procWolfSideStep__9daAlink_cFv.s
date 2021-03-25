@@ -71,7 +71,7 @@ lbl_8012E180:
 /* 8012E1B0 00000008  98 1F 2F 98 */	stb r0, 0x2f98(r31)
 /* 8012E1B4 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 8012E1B8 00000010  38 80 00 02 */	li r4, 2
-/* 8012E1BC 00000014  C0 25 00 64 */	lfs f1, 0x64(r5)
+/* 8012E1BC 00000014  C0 25 00 64 */	lfs f1, 0x64(r5)	/* effective address: 8038F00C */
 /* 8012E1C0 00000018  48 00 0C 11 */	bl procWolfFallInit__9daAlink_cFif
 /* 8012E1C4 0000001C  48 00 00 10 */	b lbl_8012E1D4
 lbl_8012E1C8:

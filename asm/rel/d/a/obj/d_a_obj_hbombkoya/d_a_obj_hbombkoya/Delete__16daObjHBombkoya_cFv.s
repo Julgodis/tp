@@ -6,10 +6,10 @@ lbl_80C1C16C:
 /* 80C1C17C 00000010  41 82 00 08 */	beq lbl_80C1C184
 /* 80C1C180 00000014  38 63 05 A0 */	addi r3, r3, 0x5a0
 lbl_80C1C184:
-/* 80C1C184 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80C1C188 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80C1C18C 00000008  80 84 00 00 */	lwz r4, 0(r4)
-/* 80C1C190 0000000C  4B FF F6 C9 */	bl _unresolved
+/* 80C1C184 00000000  3C 80 80 C2 */	lis r4, l_arcName@ha
+/* 80C1C188 00000004  38 84 C7 34 */	addi r4, r4, l_arcName@l
+/* 80C1C18C 00000008  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C1C734 */
+/* 80C1C190 0000000C  4B 41 0E 78 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C1C194 00000010  38 60 00 01 */	li r3, 1
 /* 80C1C198 00000014  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80C1C19C 00000018  7C 08 03 A6 */	mtlr r0

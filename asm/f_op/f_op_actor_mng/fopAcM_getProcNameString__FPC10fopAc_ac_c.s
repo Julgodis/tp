@@ -11,8 +11,8 @@ lbl_8001D5A4:
 /* 8001D5C8 00000024  41 82 00 08 */	beq lbl_8001D5D0
 /* 8001D5CC 00000028  48 00 00 10 */	b lbl_8001D5DC
 lbl_8001D5D0:
-/* 8001D5D0 00000000  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 8001D5D4 00000004  38 63 88 C8 */	addi r3, r3, stringBase0@l
+/* 8001D5D0 00000000  3C 60 80 38 */	lis r3, f_op_f_op_actor_mng__stringBase0@ha
+/* 8001D5D4 00000004  38 63 88 C8 */	addi r3, r3, f_op_f_op_actor_mng__stringBase0@l
 /* 8001D5D8 00000008  38 63 01 7A */	addi r3, r3, 0x17a
 lbl_8001D5DC:
 /* 8001D5DC 00000000  80 01 00 14 */	lwz r0, 0x14(r1)

@@ -90,8 +90,8 @@ lbl_8029CF10:
 /* 8029CF34 00000024  4B FF FF 80 */	b lbl_8029CEB4
 lbl_8029CF38:
 /* 8029CF38 00000000  38 60 00 02 */	li r3, 2
-/* 8029CF3C 00000004  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8029CF40 00000008  38 84 B3 38 */	addi r4, r4, stringBase0@l
+/* 8029CF3C 00000004  3C 80 80 3A */	lis r4, JASAudioThread__stringBase0@ha
+/* 8029CF40 00000008  38 84 B3 38 */	addi r4, r4, JASAudioThread__stringBase0@l
 /* 8029CF44 0000000C  4B FF 3F A1 */	bl start__8JASProbeFlPCc
 /* 8029CF48 00000010  4B FF F7 7D */	bl updateDSP__9JASDriverFv
 /* 8029CF4C 00000014  38 60 00 02 */	li r3, 2

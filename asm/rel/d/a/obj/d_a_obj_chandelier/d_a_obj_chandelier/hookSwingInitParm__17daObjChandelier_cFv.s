@@ -1,9 +1,9 @@
 lbl_80BC8B20:
-/* 80BC8B20 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80BC8B24 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80BC8B28 00000008  C0 04 00 54 */	lfs f0, 0x54(r4)
+/* 80BC8B20 00000000  3C 80 80 BD */	lis r4, lit_3731@ha
+/* 80BC8B24 00000004  38 84 8C DC */	addi r4, r4, lit_3731@l
+/* 80BC8B28 00000008  C0 04 00 54 */	lfs f0, 0x54(r4)	/* effective address: 80BC8D30 */
 /* 80BC8B2C 0000000C  D0 03 05 EC */	stfs f0, 0x5ec(r3)
-/* 80BC8B30 00000010  C0 04 00 58 */	lfs f0, 0x58(r4)
+/* 80BC8B30 00000010  C0 04 00 58 */	lfs f0, 0x58(r4)	/* effective address: 80BC8D34 */
 /* 80BC8B34 00000014  D0 03 05 F0 */	stfs f0, 0x5f0(r3)
 /* 80BC8B38 00000018  A8 03 04 B6 */	lha r0, 0x4b6(r3)
 /* 80BC8B3C 0000001C  B0 03 04 E6 */	sth r0, 0x4e6(r3)
@@ -19,6 +19,6 @@ lbl_80BC8B20:
 /* 80BC8B64 00000044  B0 03 06 04 */	sth r0, 0x604(r3)
 /* 80BC8B68 00000048  38 00 00 00 */	li r0, 0
 /* 80BC8B6C 0000004C  90 03 05 FC */	stw r0, 0x5fc(r3)
-/* 80BC8B70 00000050  C0 04 00 5C */	lfs f0, 0x5c(r4)
+/* 80BC8B70 00000050  C0 04 00 5C */	lfs f0, 0x5c(r4)	/* effective address: 80BC8D38 */
 /* 80BC8B74 00000054  D0 03 05 F8 */	stfs f0, 0x5f8(r3)
 /* 80BC8B78 00000058  4E 80 00 20 */	blr 

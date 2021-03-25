@@ -4,10 +4,10 @@ lbl_80CE63AC:
 /* 80CE63B4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CE63B8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CE63BC 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80CE63C0 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80CE63C4 00000018  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80CE63C8 0000001C  80 84 5D B4 */	lwz r4, 0x5db4(r4)
-/* 80CE63CC 00000020  80 04 05 74 */	lwz r0, 0x574(r4)
+/* 80CE63C0 00000014  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80CE63C4 00000018  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80CE63C8 0000001C  80 84 5D B4 */	lwz r4, 0x5db4(r4)	/* effective address: 8040BF74 */
+/* 80CE63CC 00000020  80 04 05 74 */	lwz r0, 0x574(r4)	/* effective address: 80406734 */
 /* 80CE63D0 00000024  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80CE63D4 00000028  40 82 00 30 */	bne lbl_80CE6404
 /* 80CE63D8 0000002C  88 1F 0B 0C */	lbz r0, 0xb0c(r31)

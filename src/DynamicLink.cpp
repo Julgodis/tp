@@ -127,7 +127,7 @@ extern "C" void dump2__24DynamicModuleControlBaseFv(); // 1
 extern "C" void getModuleTypeString__24DynamicModuleControlBaseCFv(); // 1
 extern "C" void getModuleSize__24DynamicModuleControlBaseCFv(); // 1
 extern "C" void getModuleName__20DynamicModuleControlCFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const DynamicLink__stringBase0;
 extern "C" extern void* __vt__20DynamicModuleControl[13];
 
 // 
@@ -226,10 +226,10 @@ SECTION_DEAD static char const* const pad_8039A7E4 = "\0\0\0";
 
 /* 803C34B0-803C34C0 0010+00 s=1 e=0 z=0  None .data      strings$4165                                                 */
 SECTION_DATA static void* data_803C34B0[4] = {
-	/* 0    */ (void*)(((char*)&stringBase0)+0x2BE),
-	/* 1    */ (void*)(((char*)&stringBase0)+0x2C3),
-	/* 2    */ (void*)(((char*)&stringBase0)+0x2C7),
-	/* 3    */ (void*)(((char*)&stringBase0)+0x2CC),
+	/* 0    */ (void*)(((char*)&DynamicLink__stringBase0)+0x2BE),
+	/* 1    */ (void*)(((char*)&DynamicLink__stringBase0)+0x2C3),
+	/* 2    */ (void*)(((char*)&DynamicLink__stringBase0)+0x2C7),
+	/* 3    */ (void*)(((char*)&DynamicLink__stringBase0)+0x2CC),
 };
 
 /* 803C34C0-803C34F4 0034+00 s=1 e=2 z=0  None .data      __vt__20DynamicModuleControl                                 */
@@ -513,7 +513,7 @@ asm void DynamicModuleControl::getModuleTypeString() const {
 #pragma pop
 
 
-/* 80263088-8026308C 0004+00 s=0 e=0 z=0  None .text      ModuleProlog                                                 */
+/* 80263088-8026308C 0004+00 s=0 e=0 z=756  None .text      ModuleProlog                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -524,7 +524,7 @@ extern "C" asm void ModuleProlog() {
 #pragma pop
 
 
-/* 8026308C-80263090 0004+00 s=0 e=0 z=0  None .text      ModuleEpilog                                                 */
+/* 8026308C-80263090 0004+00 s=0 e=0 z=756  None .text      ModuleEpilog                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -535,7 +535,7 @@ extern "C" asm void ModuleEpilog() {
 #pragma pop
 
 
-/* 80263090-8026314C 00BC+00 s=0 e=0 z=0  None .text      ModuleUnresolved                                             */
+/* 80263090-8026314C 00BC+00 s=0 e=0 z=757  None .text      ModuleUnresolved                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -546,7 +546,7 @@ extern "C" asm void ModuleUnresolved() {
 #pragma pop
 
 
-/* 8026314C-80263190 0044+00 s=0 e=0 z=0  None .text      ModuleConstructorsX                                          */
+/* 8026314C-80263190 0044+00 s=0 e=0 z=757  None .text      ModuleConstructorsX                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -557,7 +557,7 @@ extern "C" asm void ModuleConstructorsX() {
 #pragma pop
 
 
-/* 80263190-802631D4 0044+00 s=0 e=0 z=0  None .text      ModuleDestructorsX                                           */
+/* 80263190-802631D4 0044+00 s=0 e=0 z=757  None .text      ModuleDestructorsX                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

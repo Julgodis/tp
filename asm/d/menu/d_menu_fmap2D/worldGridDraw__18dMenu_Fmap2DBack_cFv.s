@@ -66,11 +66,11 @@ lbl_801D3274:
 /* 801D32CC 00000030  38 61 00 2C */	addi r3, r1, 0x2c
 /* 801D32D0 00000034  38 80 00 06 */	li r4, 6
 /* 801D32D4 00000038  48 11 66 C5 */	bl J2DDrawLine__FffffQ28JUtility6TColori
-/* 801D32D8 0000003C  C0 1F 00 A4 */	lfs f0, 0xa4(r31)
+/* 801D32D8 0000003C  C0 1F 00 A4 */	lfs f0, 0xa4(r31)	/* effective address: 8042FD04 */
 /* 801D32DC 00000040  EF 9C 00 28 */	fsubs f28, f28, f0
 /* 801D32E0 00000044  4B FF FF 94 */	b lbl_801D3274
 lbl_801D32E4:
-/* 801D32E4 00000000  C0 1F 00 A4 */	lfs f0, 0xa4(r31)
+/* 801D32E4 00000000  C0 1F 00 A4 */	lfs f0, 0xa4(r31)	/* effective address: 8042FD04 */
 /* 801D32E8 00000004  EF 9F 00 2A */	fadds f28, f31, f0
 lbl_801D32EC:
 /* 801D32EC 00000000  7F C3 F3 78 */	mr r3, r30
@@ -102,7 +102,7 @@ lbl_801D32EC:
 /* 801D3354 00000030  38 61 00 24 */	addi r3, r1, 0x24
 /* 801D3358 00000034  38 80 00 06 */	li r4, 6
 /* 801D335C 00000038  48 11 66 3D */	bl J2DDrawLine__FffffQ28JUtility6TColori
-/* 801D3360 0000003C  C0 1F 00 A4 */	lfs f0, 0xa4(r31)
+/* 801D3360 0000003C  C0 1F 00 A4 */	lfs f0, 0xa4(r31)	/* effective address: 8042FD04 */
 /* 801D3364 00000040  EF 9C 00 2A */	fadds f28, f28, f0
 /* 801D3368 00000044  4B FF FF 84 */	b lbl_801D32EC
 lbl_801D336C:
@@ -120,7 +120,7 @@ lbl_801D336C:
 /* 801D3398 0000002C  38 61 00 1C */	addi r3, r1, 0x1c
 /* 801D339C 00000030  38 80 00 06 */	li r4, 6
 /* 801D33A0 00000034  48 11 65 F9 */	bl J2DDrawLine__FffffQ28JUtility6TColori
-/* 801D33A4 00000038  C0 1F 00 A4 */	lfs f0, 0xa4(r31)
+/* 801D33A4 00000038  C0 1F 00 A4 */	lfs f0, 0xa4(r31)	/* effective address: 8042FD04 */
 /* 801D33A8 0000003C  EF 9E 00 28 */	fsubs f28, f30, f0
 lbl_801D33AC:
 /* 801D33AC 00000000  7F C3 F3 78 */	mr r3, r30
@@ -148,11 +148,11 @@ lbl_801D33AC:
 /* 801D3404 00000030  38 61 00 14 */	addi r3, r1, 0x14
 /* 801D3408 00000034  38 80 00 06 */	li r4, 6
 /* 801D340C 00000038  48 11 65 8D */	bl J2DDrawLine__FffffQ28JUtility6TColori
-/* 801D3410 0000003C  C0 1F 00 A4 */	lfs f0, 0xa4(r31)
+/* 801D3410 0000003C  C0 1F 00 A4 */	lfs f0, 0xa4(r31)	/* effective address: 8042FD04 */
 /* 801D3414 00000040  EF 9C 00 28 */	fsubs f28, f28, f0
 /* 801D3418 00000044  4B FF FF 94 */	b lbl_801D33AC
 lbl_801D341C:
-/* 801D341C 00000000  C0 1F 00 A4 */	lfs f0, 0xa4(r31)
+/* 801D341C 00000000  C0 1F 00 A4 */	lfs f0, 0xa4(r31)	/* effective address: 8042FD04 */
 /* 801D3420 00000004  EF 9E 00 2A */	fadds f28, f30, f0
 lbl_801D3424:
 /* 801D3424 00000000  7F C3 F3 78 */	mr r3, r30
@@ -184,7 +184,7 @@ lbl_801D3424:
 /* 801D348C 00000030  38 61 00 0C */	addi r3, r1, 0xc
 /* 801D3490 00000034  38 80 00 06 */	li r4, 6
 /* 801D3494 00000038  48 11 65 05 */	bl J2DDrawLine__FffffQ28JUtility6TColori
-/* 801D3498 0000003C  C0 1F 00 A4 */	lfs f0, 0xa4(r31)
+/* 801D3498 0000003C  C0 1F 00 A4 */	lfs f0, 0xa4(r31)	/* effective address: 8042FD04 */
 /* 801D349C 00000040  EF 9C 00 2A */	fadds f28, f28, f0
 /* 801D34A0 00000044  4B FF FF 84 */	b lbl_801D3424
 lbl_801D34A4:

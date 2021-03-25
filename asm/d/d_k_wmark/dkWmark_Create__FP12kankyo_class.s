@@ -65,8 +65,8 @@ lbl_802614F4:
 /* 80261504 00000010  80 1F 00 F8 */	lwz r0, 0xf8(r31)
 /* 80261508 00000014  28 00 00 00 */	cmplwi r0, 0
 /* 8026150C 00000018  41 82 00 4C */	beq lbl_80261558
-/* 80261510 0000001C  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80261514 00000020  38 63 A4 94 */	addi r3, r3, stringBase0@l
+/* 80261510 0000001C  3C 60 80 3A */	lis r3, d_d_k_wmark__stringBase0@ha
+/* 80261514 00000020  38 63 A4 94 */	addi r3, r3, d_d_k_wmark__stringBase0@l
 /* 80261518 00000024  38 80 00 23 */	li r4, 0x23
 /* 8026151C 00000028  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 80261520 0000002C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l

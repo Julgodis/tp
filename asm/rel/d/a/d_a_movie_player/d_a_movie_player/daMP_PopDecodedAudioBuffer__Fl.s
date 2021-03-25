@@ -3,10 +3,10 @@ lbl_808761CC:
 /* 808761D0 00000004  7C 08 02 A6 */	mflr r0
 /* 808761D4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 808761D8 0000000C  7C 65 1B 78 */	mr r5, r3
-/* 808761DC 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 808761E0 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 808761DC 00000010  3C 60 80 94 */	lis r3, daMP_DecodedAudioBufferQueue@ha
+/* 808761E0 00000014  38 63 48 50 */	addi r3, r3, daMP_DecodedAudioBufferQueue@l
 /* 808761E4 00000018  38 81 00 08 */	addi r4, r1, 8
-/* 808761E8 0000001C  4B FF C5 51 */	bl _unresolved
+/* 808761E8 0000001C  4B AC 88 D4 */	b OSReceiveMessage
 /* 808761EC 00000020  2C 03 00 01 */	cmpwi r3, 1
 /* 808761F0 00000024  40 82 00 0C */	bne lbl_808761FC
 /* 808761F4 00000028  80 61 00 08 */	lwz r3, 8(r1)

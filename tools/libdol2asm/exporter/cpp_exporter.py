@@ -88,9 +88,19 @@ class CPPDisassembler(Disassembler):
         if addr in self.block_map:
             return self.block_map[addr]
 
-        return self.symbol_table[self.function._module, addr]
+        return self.symbol_table.always_get(addr)
 
     def addr_to_label(self, addr) -> str:
+        """
+        if self.last_address == 0x803713d4:
+            symbol = self.get_symbol(addr)
+            print(hex(self.r2AddrInsns[self.last_address]))
+            print(hex(addr))
+            print(symbol)
+            print(symbol.valid_reference(addr))
+            assert False
+        """
+
         symbol = self.get_symbol(addr)
         if not symbol:
             return None
@@ -141,6 +151,7 @@ class CPPDisassembler(Disassembler):
         r2_addr = self.r2AddrInsns[addr]
         r13_addr = self.r13AddrInsns[addr]
 
+        """
         # Relocation
         if len(self.relocations) > 0 and addr in self.relocations:
             relocation = self.relocations[addr]
@@ -183,13 +194,16 @@ class CPPDisassembler(Disassembler):
             else:
                 self.context.warning(
                     f"{addr:08X}: relocation ({librel.RELOCATION_NAMES[relocation.type]}) for instruction not supported. \"{insn.mnemonic} {insn.op_str}\" ({id})")
-
+        """
+        
         # Branch instruction replace immediate value with label
         if id in {PPC_INS_B, PPC_INS_BL, PPC_INS_BDZ, PPC_INS_BDNZ}:
             label = self.addr_to_label(insn.operands[0].imm)
             if not label:
+                k = " ".join([ f"{x:02X}" for x in insn.bytes ])
                 self.context.warning(
-                    f"'{label}' {addr:08X} to {insn.operands[0].imm:08X}, branch to unknown addr: {insn}")
+                    f"{k}| '{label}' {addr:08X} to {insn.operands[0].imm:08X}, branch to unknown addr: {insn}")
+                sys.exit(1)
             assert label
             return f"{insn.mnemonic} {label}"
         elif id == PPC_INS_BC:
@@ -242,7 +256,7 @@ class CPPDisassembler(Disassembler):
                 fixed_value = value & 0xFFFF
                 return f"{insn.mnemonic} {rA}, 0x{fixed_value:04X}({rB})"
 
-        if r13_addr != None:
+        if r13_addr == self.common_r13_addr:
             if id == PPC_INS_ADDI and insn.operands[1].reg == PPC_REG_R13:
                 imm = insn.operands[2].imm
                 value = r13_addr + sign_extend_16(imm)
@@ -260,7 +274,7 @@ class CPPDisassembler(Disassembler):
                 if name:
                     return f"{insn.mnemonic} {rA}, {name}({rB})"
 
-        if r2_addr != None:
+        if r2_addr == self.common_r2_addr:
             #g.LOG.debug(f"{id == PPC_INS_ADDI}, {insn.operands[1].reg == PPC_REG_R2 if len(insn.operands) > 1 else False}")
             if id == PPC_INS_ADDI and insn.operands[1].reg == PPC_REG_R2:
                 value = r2_addr + sign_extend_16(insn.operands[2].imm)

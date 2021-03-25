@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct cSAngle {
+struct cXyz {
 };
 
-struct cXyz {
+struct cSAngle {
 };
 
 struct dCamMath {
@@ -90,7 +90,7 @@ extern "C" void __dt__11dCamSetup_cFv(); // 1
 extern "C" void CheckLatitudeRange__11dCamSetup_cFPs(); // 1
 extern "C" void PlayerHideDist__11dCamSetup_cFv(); // 1
 extern "C" void __dt__9dCstick_cFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_d_cam_param__stringBase0;
 
 // 
 // External References:

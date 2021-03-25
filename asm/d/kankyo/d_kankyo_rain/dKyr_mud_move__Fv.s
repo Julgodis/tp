@@ -43,14 +43,14 @@ lbl_8006C8FC:
 /* 8006C8FC 00000000  7C 00 07 34 */	extsh r0, r0
 /* 8006C900 00000004  90 1E 00 10 */	stw r0, 0x10(r30)
 lbl_8006C904:
-/* 8006C904 00000000  80 03 10 48 */	lwz r0, 0x1048(r3)
+/* 8006C904 00000000  80 03 10 48 */	lwz r0, 0x1048(r3)	/* effective address: 8042DA9C */
 /* 8006C908 00000004  2C 00 00 00 */	cmpwi r0, 0
 /* 8006C90C 00000008  41 82 00 7C */	beq lbl_8006C988
 /* 8006C910 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8006C914 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8006C918 00000014  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 8006C91C 00000018  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 8006C920 0000001C  38 84 A5 78 */	addi r4, r4, stringBase0@l
+/* 8006C91C 00000018  3C 80 80 38 */	lis r4, d_kankyo_d_kankyo_rain__stringBase0@ha
+/* 8006C920 0000001C  38 84 A5 78 */	addi r4, r4, d_kankyo_d_kankyo_rain__stringBase0@l
 /* 8006C924 00000020  38 84 00 54 */	addi r4, r4, 0x54
 /* 8006C928 00000024  48 2F C0 6D */	bl strcmp
 /* 8006C92C 00000028  2C 03 00 00 */	cmpwi r3, 0

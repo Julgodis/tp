@@ -52,7 +52,7 @@ lbl_80236154:
 /* 8023615C 00000008  80 63 00 1C */	lwz r3, 0x1c(r3)	/* effective address: 804301A4 */
 /* 80236160 0000000C  4B FE 95 8D */	bl emphasisButtonDelete__9dMeter2_cFv
 lbl_80236164:
-/* 80236164 00000000  88 9C 5E 8F */	lbz r4, 0x5e8f(r28)
+/* 80236164 00000000  88 9C 5E 8F */	lbz r4, 0x5e8f(r28)	/* effective address: 8040C04F */
 /* 80236168 00000004  28 04 00 00 */	cmplwi r4, 0
 /* 8023616C 00000008  41 82 00 48 */	beq lbl_802361B4
 /* 80236170 0000000C  28 04 00 05 */	cmplwi r4, 5
@@ -401,19 +401,19 @@ lbl_802364BC:
 /* 80236668 000001AC  7D 89 03 A6 */	mtctr r12
 /* 8023666C 000001B0  4E 80 04 21 */	bctrl 
 /* 80236670 000001B4  80 7F 01 04 */	lwz r3, 0x104(r31)
-/* 80236674 000001B8  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 80236678 000001BC  38 84 96 60 */	addi r4, r4, stringBase0@l
+/* 80236674 000001B8  3C 80 80 3A */	lis r4, d_msg_d_msg_object__stringBase0@ha
+/* 80236678 000001BC  38 84 96 60 */	addi r4, r4, d_msg_d_msg_object__stringBase0@l
 /* 8023667C 000001C0  38 84 00 6E */	addi r4, r4, 0x6e
 /* 80236680 000001C4  7C 85 23 78 */	mr r5, r4
 /* 80236684 000001C8  48 00 5C DD */	bl setString__14dMsgScrnBase_cFPcPc
 /* 80236688 000001CC  80 7F 01 04 */	lwz r3, 0x104(r31)
-/* 8023668C 000001D0  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 80236690 000001D4  38 84 96 60 */	addi r4, r4, stringBase0@l
+/* 8023668C 000001D0  3C 80 80 3A */	lis r4, d_msg_d_msg_object__stringBase0@ha
+/* 80236690 000001D4  38 84 96 60 */	addi r4, r4, d_msg_d_msg_object__stringBase0@l
 /* 80236694 000001D8  38 84 00 6E */	addi r4, r4, 0x6e
 /* 80236698 000001DC  48 00 5D 55 */	bl setRubyString__14dMsgScrnBase_cFPc
 /* 8023669C 000001E0  80 7F 01 04 */	lwz r3, 0x104(r31)
-/* 802366A0 000001E4  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802366A4 000001E8  38 84 96 60 */	addi r4, r4, stringBase0@l
+/* 802366A0 000001E4  3C 80 80 3A */	lis r4, d_msg_d_msg_object__stringBase0@ha
+/* 802366A4 000001E8  38 84 96 60 */	addi r4, r4, d_msg_d_msg_object__stringBase0@l
 /* 802366A8 000001EC  38 84 00 6E */	addi r4, r4, 0x6e
 /* 802366AC 000001F0  7C 85 23 78 */	mr r5, r4
 /* 802366B0 000001F4  7C 86 23 78 */	mr r6, r4
@@ -422,8 +422,8 @@ lbl_802364BC:
 /* 802366BC 00000200  7D 89 03 A6 */	mtctr r12
 /* 802366C0 00000204  4E 80 04 21 */	bctrl 
 /* 802366C4 00000208  80 7F 01 04 */	lwz r3, 0x104(r31)
-/* 802366C8 0000020C  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802366CC 00000210  38 84 96 60 */	addi r4, r4, stringBase0@l
+/* 802366C8 0000020C  3C 80 80 3A */	lis r4, d_msg_d_msg_object__stringBase0@ha
+/* 802366CC 00000210  38 84 96 60 */	addi r4, r4, d_msg_d_msg_object__stringBase0@l
 /* 802366D0 00000214  38 84 00 6E */	addi r4, r4, 0x6e
 /* 802366D4 00000218  7C 85 23 78 */	mr r5, r4
 /* 802366D8 0000021C  7C 86 23 78 */	mr r6, r4

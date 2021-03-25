@@ -3,16 +3,16 @@ lbl_805ADDD8:
 /* 805ADDDC 00000004  7C 08 02 A6 */	mflr r0
 /* 805ADDE0 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 805ADDE4 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 805ADDE8 00000010  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 805ADDEC 00000014  3B E5 00 00 */	addi r31, r5, 0x0000 /* 0x00000000@l */
-/* 805ADDF0 00000018  4B FF D2 89 */	bl _unresolved
-/* 805ADDF4 0000001C  C0 1F 00 08 */	lfs f0, 8(r31)
+/* 805ADDE8 00000010  3C A0 80 5B */	lis r5, lit_3850@ha
+/* 805ADDEC 00000014  3B E5 DF 50 */	addi r31, r5, lit_3850@l
+/* 805ADDF0 00000018  4B D9 95 AC */	b PSVECSquareDistance
+/* 805ADDF4 0000001C  C0 1F 00 08 */	lfs f0, 8(r31)	/* effective address: 805ADF58 */
 /* 805ADDF8 00000020  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 805ADDFC 00000000  40 81 00 58 */	ble lbl_805ADE54
 /* 805ADE00 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 805ADE04 00000008  C8 9F 01 30 */	lfd f4, 0x130(r31)
+/* 805ADE04 00000008  C8 9F 01 30 */	lfd f4, 0x130(r31)	/* effective address: 805AE080 */
 /* 805ADE08 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 805ADE0C 00000010  C8 7F 01 38 */	lfd f3, 0x138(r31)
+/* 805ADE0C 00000010  C8 7F 01 38 */	lfd f3, 0x138(r31)	/* effective address: 805AE088 */
 /* 805ADE10 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 805ADE14 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 805ADE18 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -31,11 +31,11 @@ lbl_805ADDD8:
 /* 805ADE4C 00000050  FC 20 08 18 */	frsp f1, f1
 /* 805ADE50 00000054  48 00 00 88 */	b lbl_805ADED8
 lbl_805ADE54:
-/* 805ADE54 00000000  C8 1F 01 40 */	lfd f0, 0x140(r31)
+/* 805ADE54 00000000  C8 1F 01 40 */	lfd f0, 0x140(r31)	/* effective address: 805AE090 */
 /* 805ADE58 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 805ADE5C 00000000  40 80 00 10 */	bge lbl_805ADE6C
-/* 805ADE60 00000004  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 805ADE64 00000008  C0 23 00 00 */	lfs f1, 0x0000(r3)
+/* 805ADE60 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
+/* 805ADE64 00000008  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 /* 805ADE68 0000000C  48 00 00 70 */	b lbl_805ADED8
 lbl_805ADE6C:
 /* 805ADE6C 00000000  D0 21 00 08 */	stfs f1, 8(r1)
@@ -69,8 +69,8 @@ lbl_805ADEC4:
 lbl_805ADEC8:
 /* 805ADEC8 00000000  2C 00 00 01 */	cmpwi r0, 1
 /* 805ADECC 00000004  40 82 00 0C */	bne lbl_805ADED8
-/* 805ADED0 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 805ADED4 0000000C  C0 23 00 00 */	lfs f1, 0x0000(r3)
+/* 805ADED0 00000008  3C 60 80 45 */	lis r3, __float_nan@ha
+/* 805ADED4 0000000C  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 lbl_805ADED8:
 /* 805ADED8 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 805ADEDC 00000004  80 01 00 24 */	lwz r0, 0x24(r1)

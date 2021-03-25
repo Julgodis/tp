@@ -8,8 +8,8 @@ lbl_80044CB8:
 /* 80044CD0 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80044CD4 0000001C  3B C3 4F F8 */	addi r30, r3, 0x4ff8
 /* 80044CD8 00000020  7F C3 F3 78 */	mr r3, r30
-/* 80044CDC 00000024  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 80044CE0 00000028  38 84 9D D0 */	addi r4, r4, stringBase0@l
+/* 80044CDC 00000024  3C 80 80 38 */	lis r4, d_event_d_event_data__stringBase0@ha
+/* 80044CE0 00000028  38 84 9D D0 */	addi r4, r4, d_event_d_event_data__stringBase0@l
 /* 80044CE4 0000002C  38 84 00 76 */	addi r4, r4, 0x76
 /* 80044CE8 00000030  38 A0 00 00 */	li r5, 0
 /* 80044CEC 00000034  38 C0 00 00 */	li r6, 0
@@ -40,8 +40,8 @@ lbl_80044CB8:
 lbl_80044D50:
 /* 80044D50 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80044D54 00000004  7F E4 FB 78 */	mr r4, r31
-/* 80044D58 00000008  3C A0 80 38 */	lis r5, stringBase0@ha
-/* 80044D5C 0000000C  38 A5 9D D0 */	addi r5, r5, stringBase0@l
+/* 80044D58 00000008  3C A0 80 38 */	lis r5, d_event_d_event_data__stringBase0@ha
+/* 80044D5C 0000000C  38 A5 9D D0 */	addi r5, r5, d_event_d_event_data__stringBase0@l
 /* 80044D60 00000010  38 A5 00 7E */	addi r5, r5, 0x7e
 /* 80044D64 00000014  38 C0 00 04 */	li r6, 4
 /* 80044D68 00000018  48 00 33 85 */	bl getMySubstanceP__16dEvent_manager_cFiPCci
@@ -49,8 +49,8 @@ lbl_80044D50:
 /* 80044D70 00000020  7C 7D 1B 78 */	mr r29, r3
 /* 80044D74 00000024  7F C3 F3 78 */	mr r3, r30
 /* 80044D78 00000028  7F E4 FB 78 */	mr r4, r31
-/* 80044D7C 0000002C  3C A0 80 38 */	lis r5, stringBase0@ha
-/* 80044D80 00000030  38 A5 9D D0 */	addi r5, r5, stringBase0@l
+/* 80044D7C 0000002C  3C A0 80 38 */	lis r5, d_event_d_event_data__stringBase0@ha
+/* 80044D80 00000030  38 A5 9D D0 */	addi r5, r5, d_event_d_event_data__stringBase0@l
 /* 80044D84 00000034  38 A5 00 87 */	addi r5, r5, 0x87
 /* 80044D88 00000038  38 C0 00 03 */	li r6, 3
 /* 80044D8C 0000003C  48 00 33 61 */	bl getMySubstanceP__16dEvent_manager_cFiPCci
@@ -63,8 +63,8 @@ lbl_80044DA0:
 lbl_80044DA4:
 /* 80044DA4 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80044DA8 00000004  7F E4 FB 78 */	mr r4, r31
-/* 80044DAC 00000008  3C A0 80 38 */	lis r5, stringBase0@ha
-/* 80044DB0 0000000C  38 A5 9D D0 */	addi r5, r5, stringBase0@l
+/* 80044DAC 00000008  3C A0 80 38 */	lis r5, d_event_d_event_data__stringBase0@ha
+/* 80044DB0 0000000C  38 A5 9D D0 */	addi r5, r5, d_event_d_event_data__stringBase0@l
 /* 80044DB4 00000010  38 A5 00 8B */	addi r5, r5, 0x8b
 /* 80044DB8 00000014  38 C0 00 01 */	li r6, 1
 /* 80044DBC 00000018  48 00 33 31 */	bl getMySubstanceP__16dEvent_manager_cFiPCci
@@ -81,17 +81,17 @@ lbl_80044DA4:
 /* 80044DE8 00000044  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80044DEC 00000048  48 00 00 1C */	b lbl_80044E08
 lbl_80044DF0:
-/* 80044DF0 00000000  C0 03 00 00 */	lfs f0, 0(r3)
+/* 80044DF0 00000000  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 804061C0 */
 /* 80044DF4 00000004  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 80044DF8 00000008  C0 03 00 04 */	lfs f0, 4(r3)
+/* 80044DF8 00000008  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 804061C4 */
 /* 80044DFC 0000000C  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 80044E00 00000010  C0 03 00 08 */	lfs f0, 8(r3)
+/* 80044E00 00000010  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 804061C8 */
 /* 80044E04 00000014  D0 01 00 24 */	stfs f0, 0x24(r1)
 lbl_80044E08:
 /* 80044E08 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80044E0C 00000004  7F E4 FB 78 */	mr r4, r31
-/* 80044E10 00000008  3C A0 80 38 */	lis r5, stringBase0@ha
-/* 80044E14 0000000C  38 A5 9D D0 */	addi r5, r5, stringBase0@l
+/* 80044E10 00000008  3C A0 80 38 */	lis r5, d_event_d_event_data__stringBase0@ha
+/* 80044E14 0000000C  38 A5 9D D0 */	addi r5, r5, d_event_d_event_data__stringBase0@l
 /* 80044E18 00000010  38 A5 00 8F */	addi r5, r5, 0x8f
 /* 80044E1C 00000014  38 C0 00 03 */	li r6, 3
 /* 80044E20 00000018  48 00 32 CD */	bl getMySubstanceP__16dEvent_manager_cFiPCci
@@ -112,8 +112,8 @@ lbl_80044E40:
 lbl_80044E58:
 /* 80044E58 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80044E5C 00000004  7F E4 FB 78 */	mr r4, r31
-/* 80044E60 00000008  3C A0 80 38 */	lis r5, stringBase0@ha
-/* 80044E64 0000000C  38 A5 9D D0 */	addi r5, r5, stringBase0@l
+/* 80044E60 00000008  3C A0 80 38 */	lis r5, d_event_d_event_data__stringBase0@ha
+/* 80044E64 0000000C  38 A5 9D D0 */	addi r5, r5, d_event_d_event_data__stringBase0@l
 /* 80044E68 00000010  38 A5 00 95 */	addi r5, r5, 0x95
 /* 80044E6C 00000014  38 C0 00 01 */	li r6, 1
 /* 80044E70 00000018  48 00 32 7D */	bl getMySubstanceP__16dEvent_manager_cFiPCci

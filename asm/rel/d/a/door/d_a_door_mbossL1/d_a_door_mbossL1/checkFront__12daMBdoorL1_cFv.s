@@ -14,7 +14,7 @@ lbl_806762D0:
 /* 806762D0 00000000  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 806762D4 00000004  7C 1F 07 74 */	extsb r31, r0
 /* 806762D8 00000008  7F C3 F3 78 */	mr r3, r30
-/* 806762DC 0000000C  4B FF C5 3D */	bl _unresolved
+/* 806762DC 0000000C  4B 9C 3E DC */	b getFRoomNo__13door_param2_cFP10fopAc_ac_c
 /* 806762E0 00000010  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 806762E4 00000014  7C 1F 00 50 */	subf r0, r31, r0
 /* 806762E8 00000018  7C 00 00 34 */	cntlzw r0, r0

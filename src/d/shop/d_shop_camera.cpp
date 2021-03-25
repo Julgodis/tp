@@ -11,14 +11,14 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct fopAc_ac_c {
 };
 
 struct ShopCam_action_c {
@@ -140,7 +140,7 @@ SECTION_SDATA2 static f32 lit_3797 = 20.0f;
 /* 80453A90-80453A94 0004+00 s=1 e=0 z=0  None .sdata2    @3798                                                        */
 SECTION_SDATA2 static f32 lit_3798 = 5.0f;
 
-/* 80195C9C-80195E18 017C+00 s=0 e=0 z=0  None .text      shop_cam_action_init__16ShopCam_action_cFv                   */
+/* 80195C9C-80195E18 017C+00 s=0 e=0 z=9  None .text      shop_cam_action_init__16ShopCam_action_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -182,7 +182,7 @@ asm void ShopCam_action_c::shop_cam_action() {
 #pragma pop
 
 
-/* 8019630C-8019635C 0050+00 s=1 e=0 z=0  None .text      Save__16ShopCam_action_cFv                                   */
+/* 8019630C-8019635C 0050+00 s=1 e=0 z=12  None .text      Save__16ShopCam_action_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -193,7 +193,7 @@ asm void ShopCam_action_c::Save() {
 #pragma pop
 
 
-/* 8019635C-801963B4 0058+00 s=0 e=0 z=0  None .text      EventRecoverNotime__16ShopCam_action_cFv                     */
+/* 8019635C-801963B4 0058+00 s=0 e=0 z=9  None .text      EventRecoverNotime__16ShopCam_action_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -204,7 +204,7 @@ asm void ShopCam_action_c::EventRecoverNotime() {
 #pragma pop
 
 
-/* 801963B4-801964C8 0114+00 s=0 e=0 z=0  None .text      Reset__16ShopCam_action_cFv                                  */
+/* 801963B4-801964C8 0114+00 s=0 e=0 z=9  None .text      Reset__16ShopCam_action_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -215,7 +215,7 @@ asm void ShopCam_action_c::Reset() {
 #pragma pop
 
 
-/* 801964C8-80196544 007C+00 s=0 e=0 z=0  None .text      move__16ShopCam_action_cFv                                   */
+/* 801964C8-80196544 007C+00 s=0 e=0 z=9  None .text      move__16ShopCam_action_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -282,7 +282,7 @@ asm void ShopCam_action_c::_debugSetCamera() {
 #pragma pop
 
 
-/* 801968B8-80196914 005C+00 s=0 e=1 z=0  None .text      setMasterCamCtrPos__16ShopCam_action_cFP4cXyz                */
+/* 801968B8-80196914 005C+00 s=0 e=1 z=3  None .text      setMasterCamCtrPos__16ShopCam_action_cFP4cXyz                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

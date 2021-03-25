@@ -32,7 +32,7 @@ lbl_8049461C:
 /* 80494638 0000001C  38 E0 FF FF */	li r7, -1
 /* 8049463C 00000020  39 00 00 00 */	li r8, 0
 /* 80494640 00000024  39 20 00 00 */	li r9, 0
-/* 80494644 00000028  4B FF C6 55 */	bl _unresolved
+/* 80494644 00000028  4B B8 75 A4 */	b fopAcM_createItemForPresentDemo__FPC4cXyziUciiPC5csXyzPC4cXyz
 /* 80494648 0000002C  7C 64 1B 78 */	mr r4, r3
 /* 8049464C 00000030  48 00 00 24 */	b lbl_80494670
 lbl_80494650:
@@ -42,16 +42,16 @@ lbl_80494650:
 /* 8049465C 0000000C  38 C0 FF FF */	li r6, -1
 /* 80494660 00000010  38 E0 00 00 */	li r7, 0
 /* 80494664 00000014  39 00 00 00 */	li r8, 0
-/* 80494668 00000018  4B FF C6 31 */	bl _unresolved
+/* 80494668 00000018  4B B8 76 0C */	b fopAcM_createItemForTrBoxDemo__FPC4cXyziiiPC5csXyzPC4cXyz
 /* 8049466C 0000001C  7C 64 1B 78 */	mr r4, r3
 lbl_80494670:
 /* 80494670 00000000  3C 04 00 01 */	addis r0, r4, 1
 /* 80494674 00000004  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80494678 00000008  41 82 00 14 */	beq lbl_8049468C
-/* 8049467C 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80494680 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 8049467C 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80494680 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80494684 00000014  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 80494688 00000018  4B FF C6 11 */	bl _unresolved
+/* 80494688 00000018  4B BA F0 64 */	b setPtI_Id__14dEvt_control_cFUi
 lbl_8049468C:
 /* 8049468C 00000000  38 60 00 01 */	li r3, 1
 /* 80494690 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -69,8 +69,8 @@ lbl_802DD448:
 /* 802DD450 00000008  3A D6 00 01 */	addi r22, r22, 1
 /* 802DD454 0000000C  48 00 00 10 */	b lbl_802DD464
 lbl_802DD458:
-/* 802DD458 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802DD45C 00000004  38 63 D2 F0 */	addi r3, r3, stringBase0@l
+/* 802DD458 00000000  3C 60 80 3A */	lis r3, JUTCacheFont__stringBase0@ha
+/* 802DD45C 00000004  38 63 D2 F0 */	addi r3, r3, JUTCacheFont__stringBase0@l
 /* 802DD460 00000008  48 00 B1 E9 */	bl JUTReportConsole
 lbl_802DD464:
 /* 802DD464 00000000  80 11 00 04 */	lwz r0, 4(r17)

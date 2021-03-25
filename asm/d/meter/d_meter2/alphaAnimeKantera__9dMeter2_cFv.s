@@ -37,7 +37,7 @@ lbl_80224A04:
 /* 80224A90 0000008C  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 80224A94 00000090  28 00 00 00 */	cmplwi r0, 0
 /* 80224A98 00000094  41 82 00 10 */	beq lbl_80224AA8
-/* 80224A9C 00000098  A0 03 4F A4 */	lhz r0, 0x4fa4(r3)
+/* 80224A9C 00000098  A0 03 4F A4 */	lhz r0, 0x4fa4(r3)	/* effective address: 8040B164 */
 /* 80224AA0 0000009C  54 00 05 6A */	rlwinm r0, r0, 0, 0x15, 0x15
 /* 80224AA4 000000A0  48 00 00 08 */	b lbl_80224AAC
 lbl_80224AA8:
@@ -51,7 +51,7 @@ lbl_80224AB4:
 /* 80224ABC 00000008  88 03 5E B7 */	lbz r0, 0x5eb7(r3)	/* effective address: 8040C077 */
 /* 80224AC0 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80224AC4 00000010  40 82 00 B0 */	bne lbl_80224B74
-/* 80224AC8 00000014  80 9E 5D AC */	lwz r4, 0x5dac(r30)
+/* 80224AC8 00000014  80 9E 5D AC */	lwz r4, 0x5dac(r30)	/* effective address: 8040BF6C */
 /* 80224ACC 00000018  38 00 00 00 */	li r0, 0
 /* 80224AD0 0000001C  88 64 05 6A */	lbz r3, 0x56a(r4)
 /* 80224AD4 00000020  28 03 00 00 */	cmplwi r3, 0

@@ -48,7 +48,7 @@ lbl_801834E4:
 /* 80183530 0000004C  4B FF FA A9 */	bl execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc
 /* 80183534 00000050  3B BF 4E 20 */	addi r29, r31, 0x4e20
 /* 80183538 00000054  7F A3 EB 78 */	mr r3, r29
-/* 8018353C 00000058  81 9D 00 00 */	lwz r12, 0(r29)
+/* 8018353C 00000058  81 9D 00 00 */	lwz r12, 0(r29)	/* effective address: 8040AFE0 */
 /* 80183540 0000005C  81 8C 00 F4 */	lwz r12, 0xf4(r12)
 /* 80183544 00000060  7D 89 03 A6 */	mtctr r12
 /* 80183548 00000064  4E 80 04 21 */	bctrl 
@@ -58,7 +58,7 @@ lbl_801834E4:
 /* 80183558 00000074  38 C0 00 00 */	li r6, 0
 /* 8018355C 00000078  4B FF FA 7D */	bl execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc
 /* 80183560 0000007C  7F A3 EB 78 */	mr r3, r29
-/* 80183564 00000080  81 9D 00 00 */	lwz r12, 0(r29)
+/* 80183564 00000080  81 9D 00 00 */	lwz r12, 0(r29)	/* effective address: 8040AFE0 */
 /* 80183568 00000084  81 8C 00 EC */	lwz r12, 0xec(r12)
 /* 8018356C 00000088  7D 89 03 A6 */	mtctr r12
 /* 80183570 0000008C  4E 80 04 21 */	bctrl 

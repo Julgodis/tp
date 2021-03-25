@@ -125,12 +125,6 @@ extern "C" void getJSG_targetPosition___Q214JStudio_JStage15TAdaptor_cameraFPCQ2
 extern "C" void func_8028C180(); // 1
 extern "C" void func_8028C4E4(); // 1
 extern "C" void func_8028C544(); // 1
-extern "C" extern u8 lit_1019[12];
-extern "C" extern u8 lit_1020[12];
-extern "C" extern u8 lit_1024[12];
-extern "C" extern u8 lit_1025[12];
-extern "C" extern u8 lit_1029[12];
-extern "C" extern u8 lit_1030[12];
 extern "C" extern u8 lit_1023[12];
 extern "C" extern u8 lit_1028[12];
 extern "C" extern u8 lit_1033[12];
@@ -185,33 +179,33 @@ SECTION_DATA static u8 lit_1015[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x8C, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C58C0-803C58CC 000C+00 s=0 e=0 z=0  None .data      @1019                                                        */
-SECTION_DATA u8 lit_1019[12] = {
+/* 803C58C0-803C58CC 000C+00 s=1 e=0 z=0  None .data      @1019                                                        */
+SECTION_DATA static u8 lit_1019[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x58, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C58CC-803C58D8 000C+00 s=0 e=0 z=0  None .data      @1020                                                        */
-SECTION_DATA u8 lit_1020[12] = {
+/* 803C58CC-803C58D8 000C+00 s=1 e=0 z=0  None .data      @1020                                                        */
+SECTION_DATA static u8 lit_1020[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x54, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C58D8-803C58E4 000C+00 s=0 e=0 z=0  None .data      @1024                                                        */
-SECTION_DATA u8 lit_1024[12] = {
+/* 803C58D8-803C58E4 000C+00 s=1 e=0 z=0  None .data      @1024                                                        */
+SECTION_DATA static u8 lit_1024[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C58E4-803C58F0 000C+00 s=0 e=0 z=0  None .data      @1025                                                        */
-SECTION_DATA u8 lit_1025[12] = {
+/* 803C58E4-803C58F0 000C+00 s=1 e=0 z=0  None .data      @1025                                                        */
+SECTION_DATA static u8 lit_1025[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x44, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C58F0-803C58FC 000C+00 s=0 e=0 z=0  None .data      @1029                                                        */
-SECTION_DATA u8 lit_1029[12] = {
+/* 803C58F0-803C58FC 000C+00 s=1 e=0 z=0  None .data      @1029                                                        */
+SECTION_DATA static u8 lit_1029[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x50, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C58FC-803C5908 000C+00 s=0 e=0 z=0  None .data      @1030                                                        */
-SECTION_DATA u8 lit_1030[12] = {
+/* 803C58FC-803C5908 000C+00 s=1 e=0 z=0  None .data      @1030                                                        */
+SECTION_DATA static u8 lit_1030[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x4C, 0x00, 0x00, 0x00, 0x00,
 };
 

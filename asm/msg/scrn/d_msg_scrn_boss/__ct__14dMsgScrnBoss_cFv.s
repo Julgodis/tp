@@ -22,8 +22,8 @@ lbl_8023C5C8:
 lbl_8023C618:
 /* 8023C618 00000000  90 1E 00 04 */	stw r0, 4(r30)
 /* 8023C61C 00000004  80 7E 00 04 */	lwz r3, 4(r30)
-/* 8023C620 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8023C624 0000000C  38 84 98 F8 */	addi r4, r4, stringBase0@l
+/* 8023C620 00000008  3C 80 80 3A */	lis r4, msg_scrn_d_msg_scrn_boss__stringBase0@ha
+/* 8023C624 0000000C  38 84 98 F8 */	addi r4, r4, msg_scrn_d_msg_scrn_boss__stringBase0@l
 /* 8023C628 00000010  3C A0 00 02 */	lis r5, 2
 /* 8023C62C 00000014  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
 /* 8023C630 00000018  38 C6 61 C0 */	addi r6, r6, g_dComIfG_gameInfo@l
@@ -126,8 +126,8 @@ lbl_8023C758:
 /* 8023C7A8 00000050  3B A0 00 00 */	li r29, 0
 /* 8023C7AC 00000054  3B 80 00 00 */	li r28, 0
 /* 8023C7B0 00000058  C3 E2 B1 B0 */	lfs f31, lit_3854(r2)
-/* 8023C7B4 0000005C  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 8023C7B8 00000060  3B 63 98 F8 */	addi r27, r3, stringBase0@l
+/* 8023C7B4 0000005C  3C 60 80 3A */	lis r3, msg_scrn_d_msg_scrn_boss__stringBase0@ha
+/* 8023C7B8 00000060  3B 63 98 F8 */	addi r27, r3, msg_scrn_d_msg_scrn_boss__stringBase0@l
 lbl_8023C7BC:
 /* 8023C7BC 00000000  38 60 00 6C */	li r3, 0x6c
 /* 8023C7C0 00000004  48 09 24 8D */	bl __nw__FUl

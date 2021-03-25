@@ -11,14 +11,6 @@
 // Types:
 // 
 
-struct STControl {
-	/* 8003219C */ void checkTrigger();
-	/* 8003242C */ void checkLeftTrigger();
-	/* 800324A8 */ void checkRightTrigger();
-	/* 80032524 */ void checkUpTrigger();
-	/* 800325A0 */ void checkDownTrigger();
-};
-
 struct JKRHeap {
 	/* 802CE5CC */ void freeAll();
 	/* 802CE784 */ void getTotalFreeSize();
@@ -26,6 +18,14 @@ struct JKRHeap {
 
 struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
+struct STControl {
+	/* 8003219C */ void checkTrigger();
+	/* 8003242C */ void checkLeftTrigger();
+	/* 800324A8 */ void checkRightTrigger();
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
 };
 
 struct CSTControl {
@@ -157,14 +157,14 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
+struct J3DMaterialTable {
+};
+
 struct J3DModelData {
 };
 
 struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
-};
-
-struct J3DMaterialTable {
 };
 
 struct mDoExt_brkAnm {
@@ -250,10 +250,10 @@ struct daAlink_c {
 	/* 80140AC8 */ void resetStatusWindow();
 };
 
-struct JKRArchive {
+struct J2DPane {
 };
 
-struct J2DPane {
+struct JKRArchive {
 };
 
 struct dSelect_cursor_c {
@@ -534,7 +534,8 @@ extern "C" extern u8 const data_803952E0[20];
 extern "C" extern u8 const data_803952F4[20];
 extern "C" extern u8 const data_80395308[20];
 extern "C" extern u8 const data_8039531C[20];
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_menu_d_menu_collect__stringBase0;
+extern "C" extern u32 mViewOffsetY__17dMenu_Collect3D_c[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -1256,34 +1257,34 @@ SECTION_DATA static u8 process[228] = {
 
 /* 803BC71C-803BC72C 0010+00 s=1 e=0 z=0  None .data      bck_name$7583                                                */
 SECTION_DATA static void* data_803BC71C[4] = {
-	/* 0    */ (void*)(((char*)&stringBase0)+0x75),
-	/* 1    */ (void*)(((char*)&stringBase0)+0x8E),
-	/* 2    */ (void*)(((char*)&stringBase0)+0xA7),
-	/* 3    */ (void*)(((char*)&stringBase0)+0xC0),
+	/* 0    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x75),
+	/* 1    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x8E),
+	/* 2    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0xA7),
+	/* 3    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0xC0),
 };
 
 /* 803BC72C-803BC73C 0010+00 s=1 e=0 z=0  None .data      brk_name$7584                                                */
 SECTION_DATA static void* data_803BC72C[4] = {
-	/* 0    */ (void*)(((char*)&stringBase0)+0xD9),
-	/* 1    */ (void*)(((char*)&stringBase0)+0xF2),
-	/* 2    */ (void*)(((char*)&stringBase0)+0xF2),
-	/* 3    */ (void*)(((char*)&stringBase0)+0x10D),
+	/* 0    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0xD9),
+	/* 1    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0xF2),
+	/* 2    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0xF2),
+	/* 3    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x10D),
 };
 
 /* 803BC73C-803BC74C 0010+00 s=1 e=0 z=0  None .data      bck_name$7687                                                */
 SECTION_DATA static void* data_803BC73C[4] = {
-	/* 0    */ (void*)(((char*)&stringBase0)+0x135),
-	/* 1    */ (void*)(((char*)&stringBase0)+0x14E),
-	/* 2    */ (void*)(((char*)&stringBase0)+0x167),
-	/* 3    */ (void*)(((char*)&stringBase0)+0x180),
+	/* 0    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x135),
+	/* 1    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x14E),
+	/* 2    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x167),
+	/* 3    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x180),
 };
 
 /* 803BC74C-803BC75C 0010+00 s=1 e=0 z=0  None .data      brk_name$7688                                                */
 SECTION_DATA static void* data_803BC74C[4] = {
-	/* 0    */ (void*)(((char*)&stringBase0)+0x199),
-	/* 1    */ (void*)(((char*)&stringBase0)+0x1B2),
-	/* 2    */ (void*)(((char*)&stringBase0)+0x1B2),
-	/* 3    */ (void*)(((char*)&stringBase0)+0x1B2),
+	/* 0    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x199),
+	/* 1    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x1B2),
+	/* 2    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x1B2),
+	/* 3    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x1B2),
 };
 
 /* 803BC75C-803BC768 000C+00 s=2 e=0 z=0  None .data      __vt__15dMenu_Collect_c                                      */
@@ -2438,8 +2439,8 @@ asm void dMenu_Collect3D_c::getMaskMdlVisible() {
 
 
 /* ############################################################################################## */
-/* 80450720-80450728 0004+04 s=1 e=0 z=0  None .sdata     mViewOffsetY__17dMenu_Collect3D_c                            */
-SECTION_SDATA static u32 mViewOffsetY__17dMenu_Collect3D_c[1 + 1 /* padding */] = {
+/* 80450720-80450728 0004+04 s=1 e=0 z=1  None .sdata     mViewOffsetY__17dMenu_Collect3D_c                            */
+SECTION_SDATA u32 mViewOffsetY__17dMenu_Collect3D_c[1 + 1 /* padding */] = {
 	0xC2C80000,
 	/* padding */
 	0x00000000,

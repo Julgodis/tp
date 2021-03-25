@@ -41,7 +41,7 @@ lbl_800E6770:
 /* 800E67C0 00000050  38 00 00 01 */	li r0, 1
 /* 800E67C4 00000054  B0 1F 30 0E */	sth r0, 0x300e(r31)
 /* 800E67C8 00000058  C0 62 92 B8 */	lfs f3, lit_6040(r2)
-/* 800E67CC 0000005C  A8 1E 00 A0 */	lha r0, 0xa0(r30)
+/* 800E67CC 0000005C  A8 1E 00 A0 */	lha r0, 0xa0(r30)	/* effective address: 8038ECE8 */
 /* 800E67D0 00000060  C8 42 92 B0 */	lfd f2, lit_6025(r2)
 /* 800E67D4 00000064  6C 03 80 00 */	xoris r3, r0, 0x8000
 /* 800E67D8 00000068  90 61 00 0C */	stw r3, 0xc(r1)
@@ -74,7 +74,7 @@ lbl_800E6820:
 /* 800E6840 00000020  7F C5 F3 78 */	mr r5, r30
 /* 800E6844 00000024  4B FC 68 B1 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 800E6848 00000028  C0 42 92 B8 */	lfs f2, lit_6040(r2)
-/* 800E684C 0000002C  A8 1E 00 00 */	lha r0, 0(r30)
+/* 800E684C 0000002C  A8 1E 00 00 */	lha r0, 0(r30)	/* effective address: 8038EC98 */
 /* 800E6850 00000030  C8 22 92 B0 */	lfd f1, lit_6025(r2)
 /* 800E6854 00000034  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 800E6858 00000038  90 01 00 14 */	stw r0, 0x14(r1)

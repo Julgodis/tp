@@ -3,8 +3,8 @@ lbl_80A94E38:
 /* 80A94E3C 00000004  7C 08 02 A6 */	mflr r0
 /* 80A94E40 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80A94E44 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80A94E48 00000010  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 80A94E4C 00000014  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
+/* 80A94E48 00000010  3C A0 80 A9 */	lis r5, m__24daNpc_Pachi_Besu_Param_c@ha
+/* 80A94E4C 00000014  38 A5 6A 6C */	addi r5, r5, m__24daNpc_Pachi_Besu_Param_c@l
 /* 80A94E50 00000018  3B E0 00 00 */	li r31, 0
 /* 80A94E54 0000001C  80 04 00 00 */	lwz r0, 0(r4)
 /* 80A94E58 00000020  2C 00 00 0A */	cmpwi r0, 0xa
@@ -21,11 +21,11 @@ lbl_80A94E7C:
 /* 80A94E7C 00000000  3B E0 00 01 */	li r31, 1
 /* 80A94E80 00000004  48 00 00 34 */	b lbl_80A94EB4
 lbl_80A94E84:
-/* 80A94E84 00000000  C0 05 00 E8 */	lfs f0, 0xe8(r5)
+/* 80A94E84 00000000  C0 05 00 E8 */	lfs f0, 0xe8(r5)	/* effective address: 80A96B54 */
 /* 80A94E88 00000004  D0 01 00 08 */	stfs f0, 8(r1)
-/* 80A94E8C 00000008  C0 05 00 EC */	lfs f0, 0xec(r5)
+/* 80A94E8C 00000008  C0 05 00 EC */	lfs f0, 0xec(r5)	/* effective address: 80A96B58 */
 /* 80A94E90 0000000C  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80A94E94 00000010  C0 05 00 F0 */	lfs f0, 0xf0(r5)
+/* 80A94E94 00000010  C0 05 00 F0 */	lfs f0, 0xf0(r5)	/* effective address: 80A96B5C */
 /* 80A94E98 00000014  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80A94E9C 00000018  38 81 00 08 */	addi r4, r1, 8
 /* 80A94EA0 0000001C  38 A0 10 00 */	li r5, 0x1000

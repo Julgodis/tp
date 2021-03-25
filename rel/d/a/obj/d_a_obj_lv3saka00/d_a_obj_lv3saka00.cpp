@@ -24,14 +24,77 @@ struct daObjLv3saka_c {
 	/* 80C5C27C */ void Delete();
 };
 
+struct request_of_phase_process_class {
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dBgW_Base {
+};
+
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
+};
+
+struct fopAc_ac_c {
+};
+
+struct dBgS {
+	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
+};
+
+struct dBgW {
+	/* 8007B970 */ dBgW();
+	/* 8007B9C0 */ void Move();
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct cXyz {
+};
+
+struct csXyz {
+};
+
+struct dBgS_MoveBgActor {
+	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ void IsDelete();
+	/* 800786B8 */ void ToFore();
+	/* 800786C0 */ void ToBack();
+	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
+	/* 800788DC */ void MoveBGDelete();
+	/* 80078950 */ void MoveBGExecute();
+};
+
+struct cBgD_t {
+};
+
+struct cBgW {
+	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
+};
+
+struct cBgW_BgId {
+	/* 802681D4 */ void ChkUsed() const;
+};
+
 // 
 // Forward References:
 // 
 
-void daObjLv3saka_create1st(daObjLv3saka_c*); // 2
-void daObjLv3saka_MoveBGDelete(daObjLv3saka_c*); // 2
-void daObjLv3saka_MoveBGExecute(daObjLv3saka_c*); // 2
-void daObjLv3saka_MoveBGDraw(daObjLv3saka_c*); // 2
+static void daObjLv3saka_create1st(daObjLv3saka_c*); // 2
+static void daObjLv3saka_MoveBGDelete(daObjLv3saka_c*); // 2
+static void daObjLv3saka_MoveBGExecute(daObjLv3saka_c*); // 2
+static void daObjLv3saka_MoveBGDraw(daObjLv3saka_c*); // 2
 
 extern "C" void initBaseMtx__14daObjLv3saka_cFv(); // 1
 extern "C" void setBaseMtx__14daObjLv3saka_cFv(); // 1
@@ -43,25 +106,48 @@ extern "C" void setNrmDzb__14daObjLv3saka_cFv(); // 1
 extern "C" void setWtrDzb__14daObjLv3saka_cFv(); // 1
 extern "C" void Draw__14daObjLv3saka_cFv(); // 1
 extern "C" void Delete__14daObjLv3saka_cFv(); // 1
-extern "C" void daObjLv3saka_create1st__FP14daObjLv3saka_c(); // 1
-extern "C" void daObjLv3saka_MoveBGDelete__FP14daObjLv3saka_c(); // 1
-extern "C" void daObjLv3saka_MoveBGExecute__FP14daObjLv3saka_c(); // 1
-extern "C" void daObjLv3saka_MoveBGDraw__FP14daObjLv3saka_c(); // 1
-extern "C" extern u8 const l_dzbIdx[8];
-extern "C" extern u8 const l_dzbIdx2[8];
-extern "C" extern u8 const l_heap_size[8];
-extern "C" extern u8 const struct_80C5C3DC[20];
-extern "C" extern u8 l_arcName[8];
-extern "C" extern u8 daObjLv3saka_METHODS[32];
-extern "C" extern u8 g_profile_Obj_Lv3R10Saka[48];
-extern "C" extern void* __vt__14daObjLv3saka_c[10];
+extern "C" static void daObjLv3saka_create1st__FP14daObjLv3saka_c(); // 1
+extern "C" static void daObjLv3saka_MoveBGDelete__FP14daObjLv3saka_c(); // 1
+extern "C" static void daObjLv3saka_MoveBGExecute__FP14daObjLv3saka_c(); // 1
+extern "C" static void daObjLv3saka_MoveBGDraw__FP14daObjLv3saka_c(); // 1
+extern "C" extern void* g_profile_Obj_Lv3R10Saka[12];
 
 // 
 // External References:
 // 
 
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*); // 2
+void* operator new(u32); // 2
 
-extern "C" void _unresolved(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
+extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
+extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
+extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
+extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f(); // 1
+extern "C" void __ct__4dBgWFv(); // 1
+extern "C" void Move__4dBgWFv(); // 1
+extern "C" void ChkUsed__9cBgW_BgIdCFv(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 
 // Declarations:
@@ -89,7 +175,7 @@ asm void daObjLv3saka_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80C5BED8-80C5BFA0 00C8+00 s=0 e=0 z=0  None .text      Create__14daObjLv3saka_cFv                                   */
+/* 80C5BED8-80C5BFA0 00C8+00 s=1 e=0 z=0  None .text      Create__14daObjLv3saka_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -100,7 +186,37 @@ asm void daObjLv3saka_c::Create() {
 #pragma pop
 
 
-/* 80C5BFA0-80C5C058 00B8+00 s=0 e=0 z=0  None .text      CreateHeap__14daObjLv3saka_cFv                               */
+/* ############################################################################################## */
+/* 80C5C3C4-80C5C3CC 0008+00 s=1 e=0 z=0  None .rodata    l_dzbIdx                                                     */
+SECTION_RODATA static u8 const l_dzbIdx[8] = {
+	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x03,
+};
+
+/* 80C5C3CC-80C5C3D4 0008+00 s=1 e=0 z=0  None .rodata    l_dzbIdx2                                                    */
+SECTION_RODATA static u8 const l_dzbIdx2[8] = {
+	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04,
+};
+
+/* 80C5C3D4-80C5C3DC 0008+00 s=1 e=0 z=0  None .rodata    l_heap_size                                                  */
+SECTION_RODATA static u8 const l_heap_size[8] = {
+	0x00, 0x00, 0x4E, 0x00, 0x00, 0x00, 0x29, 0x00,
+};
+
+/* 80C5C3DC-80C5C3F0 0014+00 s=1 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const struct_80C5C3DC[20] = {
+	/* 80C5C3DC 0009 stringBase_80C5C3DC @stringBase0 */
+	0x4F, 0x62, 0x6A, 0x5F, 0x73, 0x61, 0x6B, 0x61, 0x00,
+	/* 80C5C3E5 000B data_80C5C3E5 None */
+	0x4F, 0x62, 0x6A, 0x5F, 0x73, 0x61, 0x6B, 0x61, 0x32, 0x00, 0x00,
+};
+
+/* 80C5C3F0-80C5C3F8 0008+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName[2] = {
+	/* 0    */ (void*)(((char*)&struct_80C5C3DC)+0x0) /* @stringBase0 */,
+	/* 1    */ (void*)(((char*)&struct_80C5C3DC)+0x9) /* None */,
+};
+
+/* 80C5BFA0-80C5C058 00B8+00 s=1 e=0 z=0  None .text      CreateHeap__14daObjLv3saka_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -122,7 +238,7 @@ asm void daObjLv3saka_c::create1st() {
 #pragma pop
 
 
-/* 80C5C0FC-80C5C17C 0080+00 s=0 e=0 z=0  None .text      Execute__14daObjLv3saka_cFPPA3_A4_f                          */
+/* 80C5C0FC-80C5C17C 0080+00 s=1 e=0 z=0  None .text      Execute__14daObjLv3saka_cFPPA3_A4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,7 +271,7 @@ asm void daObjLv3saka_c::setWtrDzb() {
 #pragma pop
 
 
-/* 80C5C274-80C5C27C 0008+00 s=0 e=0 z=0  None .text      Draw__14daObjLv3saka_cFv                                     */
+/* 80C5C274-80C5C27C 0008+00 s=1 e=0 z=0  None .text      Draw__14daObjLv3saka_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -166,7 +282,7 @@ asm void daObjLv3saka_c::Draw() {
 #pragma pop
 
 
-/* 80C5C27C-80C5C2F0 0074+00 s=0 e=0 z=0  None .text      Delete__14daObjLv3saka_cFv                                   */
+/* 80C5C27C-80C5C2F0 0074+00 s=1 e=0 z=0  None .text      Delete__14daObjLv3saka_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -177,103 +293,90 @@ asm void daObjLv3saka_c::Delete() {
 #pragma pop
 
 
-/* 80C5C2F0-80C5C350 0060+00 s=0 e=0 z=0  None .text      daObjLv3saka_create1st__FP14daObjLv3saka_c                   */
+/* ############################################################################################## */
+/* 80C5C3F8-80C5C418 0020+00 s=1 e=0 z=0  None .data      daObjLv3saka_METHODS                                         */
+SECTION_DATA static void* daObjLv3saka_METHODS[8] = {
+	/* 0    */ (void*)daObjLv3saka_create1st__FP14daObjLv3saka_c,
+	/* 1    */ (void*)daObjLv3saka_MoveBGDelete__FP14daObjLv3saka_c,
+	/* 2    */ (void*)daObjLv3saka_MoveBGExecute__FP14daObjLv3saka_c,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)daObjLv3saka_MoveBGDraw__FP14daObjLv3saka_c,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+};
+
+/* 80C5C418-80C5C448 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Lv3R10Saka                                     */
+SECTION_DATA void* g_profile_Obj_Lv3R10Saka[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0003FFFD,
+	/* 2    */ (void*)0x00D40000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x000005AC,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x02100000,
+	/* 9    */ (void*)&daObjLv3saka_METHODS,
+	/* 10   */ (void*)0x00040100,
+	/* 11   */ (void*)0x000E0000,
+};
+
+/* 80C5C448-80C5C470 0028+00 s=1 e=0 z=0  None .data      __vt__14daObjLv3saka_c                                       */
+SECTION_DATA static void* __vt__14daObjLv3saka_c[10] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)CreateHeap__14daObjLv3saka_cFv,
+	/* 3    */ (void*)Create__14daObjLv3saka_cFv,
+	/* 4    */ (void*)Execute__14daObjLv3saka_cFPPA3_A4_f,
+	/* 5    */ (void*)Draw__14daObjLv3saka_cFv,
+	/* 6    */ (void*)Delete__14daObjLv3saka_cFv,
+	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
+	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
+	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+};
+
+/* 80C5C2F0-80C5C350 0060+00 s=1 e=0 z=0  None .text      daObjLv3saka_create1st__FP14daObjLv3saka_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjLv3saka_create1st(daObjLv3saka_c* param_0) {
+asm static void daObjLv3saka_create1st(daObjLv3saka_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3saka00/d_a_obj_lv3saka00/daObjLv3saka_create1st__FP14daObjLv3saka_c.s"
 }
 #pragma pop
 
 
-/* 80C5C350-80C5C370 0020+00 s=0 e=0 z=0  None .text      daObjLv3saka_MoveBGDelete__FP14daObjLv3saka_c                */
+/* 80C5C350-80C5C370 0020+00 s=1 e=0 z=0  None .text      daObjLv3saka_MoveBGDelete__FP14daObjLv3saka_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjLv3saka_MoveBGDelete(daObjLv3saka_c* param_0) {
+asm static void daObjLv3saka_MoveBGDelete(daObjLv3saka_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3saka00/d_a_obj_lv3saka00/daObjLv3saka_MoveBGDelete__FP14daObjLv3saka_c.s"
 }
 #pragma pop
 
 
-/* 80C5C370-80C5C390 0020+00 s=0 e=0 z=0  None .text      daObjLv3saka_MoveBGExecute__FP14daObjLv3saka_c               */
+/* 80C5C370-80C5C390 0020+00 s=1 e=0 z=0  None .text      daObjLv3saka_MoveBGExecute__FP14daObjLv3saka_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjLv3saka_MoveBGExecute(daObjLv3saka_c* param_0) {
+asm static void daObjLv3saka_MoveBGExecute(daObjLv3saka_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3saka00/d_a_obj_lv3saka00/daObjLv3saka_MoveBGExecute__FP14daObjLv3saka_c.s"
 }
 #pragma pop
 
 
-/* 80C5C390-80C5C3BC 002C+00 s=0 e=0 z=0  None .text      daObjLv3saka_MoveBGDraw__FP14daObjLv3saka_c                  */
+/* 80C5C390-80C5C3BC 002C+00 s=1 e=0 z=0  None .text      daObjLv3saka_MoveBGDraw__FP14daObjLv3saka_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjLv3saka_MoveBGDraw(daObjLv3saka_c* param_0) {
+asm static void daObjLv3saka_MoveBGDraw(daObjLv3saka_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3saka00/d_a_obj_lv3saka00/daObjLv3saka_MoveBGDraw__FP14daObjLv3saka_c.s"
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80C5C3C4-80C5C3CC 0008+00 s=0 e=0 z=0  None .rodata    l_dzbIdx                                                     */
-SECTION_RODATA u8 const l_dzbIdx[8] = {
-	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x03,
-};
-
-/* 80C5C3CC-80C5C3D4 0008+00 s=0 e=0 z=0  None .rodata    l_dzbIdx2                                                    */
-SECTION_RODATA u8 const l_dzbIdx2[8] = {
-	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04,
-};
-
-/* 80C5C3D4-80C5C3DC 0008+00 s=0 e=0 z=0  None .rodata    l_heap_size                                                  */
-SECTION_RODATA u8 const l_heap_size[8] = {
-	0x00, 0x00, 0x4E, 0x00, 0x00, 0x00, 0x29, 0x00,
-};
-
-/* 80C5C3DC-80C5C3F0 0014+00 s=0 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA u8 const struct_80C5C3DC[20] = {
-	/* 80C5C3DC 0009 stringBase_80C5C3DC @stringBase0 */
-	0x4F, 0x62, 0x6A, 0x5F, 0x73, 0x61, 0x6B, 0x61, 0x00,
-	/* 80C5C3E5 000B data_80C5C3E5 None */
-	0x4F, 0x62, 0x6A, 0x5F, 0x73, 0x61, 0x6B, 0x61, 0x32, 0x00, 0x00,
-};
-
-/* 80C5C3F0-80C5C3F8 0008+00 s=0 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA u8 l_arcName[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C5C3F8-80C5C418 0020+00 s=0 e=0 z=0  None .data      daObjLv3saka_METHODS                                         */
-SECTION_DATA u8 daObjLv3saka_METHODS[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C5C418-80C5C448 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Lv3R10Saka                                     */
-SECTION_DATA u8 g_profile_Obj_Lv3R10Saka[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x03, 0xFF, 0xFD, 0x00, 0xD4, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x05, 0xAC, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x02, 0x10, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x01, 0x00, 0x00, 0x0E, 0x00, 0x00,
-};
-
-/* 80C5C448-80C5C470 0028+00 s=0 e=0 z=0  None .data      __vt__14daObjLv3saka_c                                       */
-SECTION_DATA void* __vt__14daObjLv3saka_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)NULL,
-	/* 9    */ (void*)NULL,
-};
 

@@ -15,9 +15,15 @@ struct obj_ndoor_class {
 };
 
 struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
+struct cXyz {
 };
 
 struct cM3dGSph {
+	/* 8026F648 */ void SetC(cXyz const&);
+	/* 8026F708 */ void SetR(f32);
 	/* 80CA39AC */ ~cM3dGSph();
 };
 
@@ -25,26 +31,80 @@ struct cM3dGAab {
 	/* 80CA39F4 */ ~cM3dGAab();
 };
 
+struct J3DModel {
+};
+
+struct J3DModelData {
+};
+
+struct request_of_phase_process_class {
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 80084460 */ void ChkTgHit();
+	/* 800844F8 */ void GetTgHitObj();
+};
+
+struct dCcD_SrcSph {
+};
+
+struct dCcD_Sph {
+	/* 80084A34 */ void Set(dCcD_SrcSph const&);
+};
+
+struct dCcU_AtInfo {
+};
+
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct cCcD_Obj {
+};
+
+struct cCcS {
+	/* 80264BA8 */ void Set(cCcD_Obj*);
+};
+
 // 
 // Forward References:
 // 
 
-void daObj_Ndoor_Draw(obj_ndoor_class*); // 2
+static void daObj_Ndoor_Draw(obj_ndoor_class*); // 2
 static void daObj_Ndoor_Execute(obj_ndoor_class*); // 2
-void daObj_Ndoor_IsDelete(obj_ndoor_class*); // 2
-void daObj_Ndoor_Delete(obj_ndoor_class*); // 2
-void useHeapInit(fopAc_ac_c*); // 2
-void daObj_Ndoor_Create(fopAc_ac_c*); // 2
+static void daObj_Ndoor_IsDelete(obj_ndoor_class*); // 2
+static void daObj_Ndoor_Delete(obj_ndoor_class*); // 2
+static void useHeapInit(fopAc_ac_c*); // 2
+static void daObj_Ndoor_Create(fopAc_ac_c*); // 2
 
-extern "C" void daObj_Ndoor_Draw__FP15obj_ndoor_class(); // 1
+extern "C" static void daObj_Ndoor_Draw__FP15obj_ndoor_class(); // 1
 extern "C" static void daObj_Ndoor_Execute__FP15obj_ndoor_class(); // 1
-extern "C" void daObj_Ndoor_IsDelete__FP15obj_ndoor_class(); // 1
-extern "C" void daObj_Ndoor_Delete__FP15obj_ndoor_class(); // 1
-extern "C" void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daObj_Ndoor_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObj_Ndoor_IsDelete__FP15obj_ndoor_class(); // 1
+extern "C" static void daObj_Ndoor_Delete__FP15obj_ndoor_class(); // 1
+extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
+extern "C" static void daObj_Ndoor_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" extern u32 const lit_3831;
 extern "C" extern u32 const lit_3832;
 extern "C" extern u32 const lit_3833;
 extern "C" extern u32 const lit_3834;
@@ -53,35 +113,82 @@ extern "C" extern u32 const lit_3836;
 extern "C" extern u32 const lit_3837[1 + 1 /* padding */];
 extern "C" extern u8 const lit_3839[8];
 extern "C" extern char const* const stringBase0;
-extern "C" extern u8 data_80CA3A78[64];
-extern "C" extern u8 l_daObj_Ndoor_Method[32];
-extern "C" extern u8 g_profile_OBJ_NDOOR[48];
-extern "C" extern void* __vt__8cM3dGSph[3];
-extern "C" extern void* __vt__8cM3dGAab[3];
+extern "C" extern void* g_profile_OBJ_NDOOR[12];
 
 // 
 // External References:
 // 
 
+void mDoMtx_XrotM(f32 (* )[4], s16); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void mDoExt_modelUpdateDL(J3DModel*); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
+void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void at_power_check(dCcU_AtInfo*); // 2
+void cLib_addCalc0(f32*, f32, f32); // 2
+void operator delete(void*); // 2
 
-extern "C" void _unresolved(); // 1
+extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
+extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void __ct__10dCcD_GSttsFv(); // 1
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
+extern "C" void __ct__12dCcD_GObjInfFv(); // 1
+extern "C" void ChkTgHit__12dCcD_GObjInfFv(); // 1
+extern "C" void GetTgHitObj__12dCcD_GObjInfFv(); // 1
+extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph(); // 1
+extern "C" void at_power_check__FP11dCcU_AtInfo(); // 1
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
+extern "C" void SetC__8cM3dGSphFRC4cXyz(); // 1
+extern "C" void SetR__8cM3dGSphFf(); // 1
+extern "C" void cLib_addCalc0__FPfff(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Sph[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_SphAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
 
 // 
 // Declarations:
 // 
 
-/* 80CA3538-80CA359C 0064+00 s=0 e=0 z=0  None .text      daObj_Ndoor_Draw__FP15obj_ndoor_class                        */
+/* 80CA3538-80CA359C 0064+00 s=1 e=0 z=0  None .text      daObj_Ndoor_Draw__FP15obj_ndoor_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Ndoor_Draw(obj_ndoor_class* param_0) {
+asm static void daObj_Ndoor_Draw(obj_ndoor_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ndoor/d_a_obj_ndoor/daObj_Ndoor_Draw__FP15obj_ndoor_class.s"
 }
 #pragma pop
 
 
-/* 80CA359C-80CA37A4 0208+00 s=1 e=0 z=0  None .text      daObj_Ndoor_Execute__FP15obj_ndoor_class                     */
+/* ############################################################################################## */
+/* 80CA3A44-80CA3A48 0004+00 s=1 e=0 z=0  None .rodata    @3831                                                        */
+SECTION_RODATA static u32 const lit_3831 = 0x43AF0000;
+
+/* 80CA359C-80CA37A4 0208+00 s=2 e=0 z=0  None .text      daObj_Ndoor_Execute__FP15obj_ndoor_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,76 +199,18 @@ asm static void daObj_Ndoor_Execute(obj_ndoor_class* param_0) {
 #pragma pop
 
 
-/* 80CA37A4-80CA37AC 0008+00 s=0 e=0 z=0  None .text      daObj_Ndoor_IsDelete__FP15obj_ndoor_class                    */
+/* 80CA37A4-80CA37AC 0008+00 s=1 e=0 z=0  None .text      daObj_Ndoor_IsDelete__FP15obj_ndoor_class                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Ndoor_IsDelete(obj_ndoor_class* param_0) {
+asm static void daObj_Ndoor_IsDelete(obj_ndoor_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ndoor/d_a_obj_ndoor/daObj_Ndoor_IsDelete__FP15obj_ndoor_class.s"
 }
 #pragma pop
 
 
-/* 80CA37AC-80CA37DC 0030+00 s=0 e=0 z=0  None .text      daObj_Ndoor_Delete__FP15obj_ndoor_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObj_Ndoor_Delete(obj_ndoor_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ndoor/d_a_obj_ndoor/daObj_Ndoor_Delete__FP15obj_ndoor_class.s"
-}
-#pragma pop
-
-
-/* 80CA37DC-80CA3848 006C+00 s=0 e=0 z=0  None .text      useHeapInit__FP10fopAc_ac_c                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void useHeapInit(fopAc_ac_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ndoor/d_a_obj_ndoor/useHeapInit__FP10fopAc_ac_c.s"
-}
-#pragma pop
-
-
-/* 80CA3848-80CA39AC 0164+00 s=0 e=0 z=0  None .text      daObj_Ndoor_Create__FP10fopAc_ac_c                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObj_Ndoor_Create(fopAc_ac_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ndoor/d_a_obj_ndoor/daObj_Ndoor_Create__FP10fopAc_ac_c.s"
-}
-#pragma pop
-
-
-/* 80CA39AC-80CA39F4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cM3dGSph::~cM3dGSph() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ndoor/d_a_obj_ndoor/__dt__8cM3dGSphFv.s"
-}
-#pragma pop
-
-
-/* 80CA39F4-80CA3A3C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cM3dGAab::~cM3dGAab() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ndoor/d_a_obj_ndoor/__dt__8cM3dGAabFv.s"
-}
-#pragma pop
-
-
 /* ############################################################################################## */
-/* 80CA3A44-80CA3A48 0004+00 s=0 e=0 z=0  None .rodata    @3831                                                        */
-SECTION_RODATA u32 const lit_3831 = 0x43AF0000;
-
 /* 80CA3A48-80CA3A4C 0004+00 s=0 e=0 z=0  None .rodata    @3832                                                        */
 SECTION_RODATA u32 const lit_3832 = 0x451C4000;
 
@@ -189,45 +238,116 @@ SECTION_RODATA u8 const lit_3839[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80CA3A6C-80CA3A76 000A+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80CA3A6C-80CA3A76 000A+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD char const* const stringBase_80CA3A6C = "Obj_ndoor";
 #pragma pop
 
-/* 80CA3A78-80CA3AB8 0040+00 s=0 e=0 z=0  None .data      cc_sph_src$3869                                              */
-SECTION_DATA u8 data_80CA3A78[64] = {
+/* 80CA37AC-80CA37DC 0030+00 s=1 e=0 z=0  None .text      daObj_Ndoor_Delete__FP15obj_ndoor_class                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daObj_Ndoor_Delete(obj_ndoor_class* param_0) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_ndoor/d_a_obj_ndoor/daObj_Ndoor_Delete__FP15obj_ndoor_class.s"
+}
+#pragma pop
+
+
+/* 80CA37DC-80CA3848 006C+00 s=1 e=0 z=0  None .text      useHeapInit__FP10fopAc_ac_c                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void useHeapInit(fopAc_ac_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_ndoor/d_a_obj_ndoor/useHeapInit__FP10fopAc_ac_c.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
+/* 80CA3A78-80CA3AB8 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$3869                                              */
+SECTION_DATA static u8 data_80CA3A78[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
 };
 
-/* 80CA3AB8-80CA3AD8 0020+00 s=0 e=0 z=0  None .data      l_daObj_Ndoor_Method                                         */
-SECTION_DATA u8 l_daObj_Ndoor_Method[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 80CA3AB8-80CA3AD8 0020+00 s=1 e=0 z=0  None .data      l_daObj_Ndoor_Method                                         */
+SECTION_DATA static void* l_daObj_Ndoor_Method[8] = {
+	/* 0    */ (void*)daObj_Ndoor_Create__FP10fopAc_ac_c,
+	/* 1    */ (void*)daObj_Ndoor_Delete__FP15obj_ndoor_class,
+	/* 2    */ (void*)daObj_Ndoor_Execute__FP15obj_ndoor_class,
+	/* 3    */ (void*)daObj_Ndoor_IsDelete__FP15obj_ndoor_class,
+	/* 4    */ (void*)daObj_Ndoor_Draw__FP15obj_ndoor_class,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
 };
 
-/* 80CA3AD8-80CA3B08 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_NDOOR                                          */
-SECTION_DATA u8 g_profile_OBJ_NDOOR[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x01, 0x28, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x07, 0x18, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x4C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 80CA3AD8-80CA3B08 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_NDOOR                                          */
+SECTION_DATA void* g_profile_OBJ_NDOOR[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0007FFFD,
+	/* 2    */ (void*)0x01280000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x00000718,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x004C0000,
+	/* 9    */ (void*)&l_daObj_Ndoor_Method,
+	/* 10   */ (void*)0x00040100,
+	/* 11   */ (void*)NULL,
 };
 
-/* 80CA3B08-80CA3B14 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
-SECTION_DATA void* __vt__8cM3dGSph[3] = {
+/* 80CA3B08-80CA3B14 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
+SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
+	/* 2    */ (void*)__dt__8cM3dGSphFv,
 };
 
-/* 80CA3B14-80CA3B20 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA void* __vt__8cM3dGAab[3] = {
+/* 80CA3B14-80CA3B20 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
+	/* 2    */ (void*)__dt__8cM3dGAabFv,
 };
+
+/* 80CA3848-80CA39AC 0164+00 s=1 e=0 z=0  None .text      daObj_Ndoor_Create__FP10fopAc_ac_c                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daObj_Ndoor_Create(fopAc_ac_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_ndoor/d_a_obj_ndoor/daObj_Ndoor_Create__FP10fopAc_ac_c.s"
+}
+#pragma pop
+
+
+/* 80CA39AC-80CA39F4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm cM3dGSph::~cM3dGSph() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_ndoor/d_a_obj_ndoor/__dt__8cM3dGSphFv.s"
+}
+#pragma pop
+
+
+/* 80CA39F4-80CA3A3C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm cM3dGAab::~cM3dGAab() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_ndoor/d_a_obj_ndoor/__dt__8cM3dGAabFv.s"
+}
+#pragma pop
+
 

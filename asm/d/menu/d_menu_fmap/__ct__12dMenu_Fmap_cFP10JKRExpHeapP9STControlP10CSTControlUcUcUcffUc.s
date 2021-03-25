@@ -102,8 +102,8 @@ lbl_801C6820:
 /* 801C686C 0000004C  38 00 00 06 */	li r0, 6
 /* 801C6870 00000050  98 1D 03 00 */	stb r0, 0x300(r29)
 /* 801C6874 00000054  38 7D 02 50 */	addi r3, r29, 0x250
-/* 801C6878 00000058  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801C687C 0000005C  38 84 60 E8 */	addi r4, r4, stringBase0@l
+/* 801C6878 00000058  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap__stringBase0@ha
+/* 801C687C 0000005C  38 84 60 E8 */	addi r4, r4, d_menu_d_menu_fmap__stringBase0@l
 /* 801C6880 00000060  48 1A 22 AD */	bl strcpy
 /* 801C6884 00000064  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801C6888 00000068  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
@@ -114,7 +114,7 @@ lbl_801C6820:
 /* 801C689C 0000007C  28 00 00 00 */	cmplwi r0, 0
 /* 801C68A0 00000080  41 82 00 14 */	beq lbl_801C68B4
 /* 801C68A4 00000084  9B DD 03 00 */	stb r30, 0x300(r29)
-/* 801C68A8 00000088  80 03 00 08 */	lwz r0, 8(r3)
+/* 801C68A8 00000088  80 03 00 08 */	lwz r0, 8(r3)	/* effective address: 8042FC68 */
 /* 801C68AC 0000008C  90 1D 00 64 */	stw r0, 0x64(r29)
 /* 801C68B0 00000090  48 00 00 14 */	b lbl_801C68C4
 lbl_801C68B4:

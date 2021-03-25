@@ -9,8 +9,8 @@ lbl_8021A2F4:
 /* 8021A310 0000001C  7C DF 33 78 */	mr r31, r6
 /* 8021A314 00000020  3C 60 80 43 */	lis r3, data_80430158@ha
 /* 8021A318 00000024  38 63 01 58 */	addi r3, r3, data_80430158@l
-/* 8021A31C 00000028  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8021A320 0000002C  38 84 88 D0 */	addi r4, r4, stringBase0@l
+/* 8021A31C 00000028  3C 80 80 3A */	lis r4, d_meter_d_meter2_draw__stringBase0@ha
+/* 8021A320 0000002C  38 84 88 D0 */	addi r4, r4, d_meter_d_meter2_draw__stringBase0@l
 /* 8021A324 00000030  38 84 00 EF */	addi r4, r4, 0xef
 /* 8021A328 00000034  48 14 E8 05 */	bl strcpy
 /* 8021A32C 00000038  28 1F 00 00 */	cmplwi r31, 0
@@ -48,7 +48,7 @@ lbl_8021A39C:
 /* 8021A3A0 00000004  41 82 00 A8 */	beq lbl_8021A448
 /* 8021A3A4 00000008  88 01 00 26 */	lbz r0, 0x26(r1)
 /* 8021A3A8 0000000C  98 1F 00 00 */	stb r0, 0(r31)
-/* 8021A3AC 00000010  80 1D 02 C8 */	lwz r0, 0x2c8(r29)
+/* 8021A3AC 00000010  80 1D 02 C8 */	lwz r0, 0x2c8(r29)	/* effective address: 8042EE90 */
 /* 8021A3B0 00000014  2C 00 03 E6 */	cmpwi r0, 0x3e6
 /* 8021A3B4 00000018  40 82 00 94 */	bne lbl_8021A448
 /* 8021A3B8 0000001C  38 00 00 07 */	li r0, 7

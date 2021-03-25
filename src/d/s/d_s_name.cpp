@@ -145,13 +145,7 @@ extern "C" static void dScnName_Create__FP11scene_class(); // 1
 extern "C" void __dt__17dScnName_camera_cFv(); // 1
 extern "C" void __dt__9dSn_HIO_cFv(); // 1
 extern "C" void __sinit_d_s_name_cpp(); // 1
-extern "C" extern char const* const stringBase0;
-extern "C" extern void* lit_3942[3];
-extern "C" extern void* lit_3943[3];
-extern "C" extern void* lit_3944[3];
-extern "C" extern void* lit_3945[3];
-extern "C" extern void* lit_3946[3];
-extern "C" extern void* lit_3947[3];
+extern "C" extern char const* const d_s_d_s_name__stringBase0;
 extern "C" extern void* g_profile_NAME_SCENE[10];
 extern "C" extern void* g_profile_NAMEEX_SCENE[10];
 
@@ -244,49 +238,49 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C304C-803C3058 000C+00 s=0 e=0 z=0  None .data      @3942                                                        */
-SECTION_DATA void* lit_3942[3] = {
+/* 803C304C-803C3058 000C+00 s=1 e=0 z=0  None .data      @3942                                                        */
+SECTION_DATA static void* lit_3942[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)FileSelectOpen__10dScnName_cFv,
 };
 
-/* 803C3058-803C3064 000C+00 s=0 e=0 z=0  None .data      @3943                                                        */
-SECTION_DATA void* lit_3943[3] = {
+/* 803C3058-803C3064 000C+00 s=1 e=0 z=0  None .data      @3943                                                        */
+SECTION_DATA static void* lit_3943[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)FileSelectMain__10dScnName_cFv,
 };
 
-/* 803C3064-803C3070 000C+00 s=0 e=0 z=0  None .data      @3944                                                        */
-SECTION_DATA void* lit_3944[3] = {
+/* 803C3064-803C3070 000C+00 s=1 e=0 z=0  None .data      @3944                                                        */
+SECTION_DATA static void* lit_3944[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)FileSelectClose__10dScnName_cFv,
 };
 
-/* 803C3070-803C307C 000C+00 s=0 e=0 z=0  None .data      @3945                                                        */
-SECTION_DATA void* lit_3945[3] = {
+/* 803C3070-803C307C 000C+00 s=1 e=0 z=0  None .data      @3945                                                        */
+SECTION_DATA static void* lit_3945[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)brightCheckOpen__10dScnName_cFv,
 };
 
-/* 803C307C-803C3088 000C+00 s=0 e=0 z=0  None .data      @3946                                                        */
-SECTION_DATA void* lit_3946[3] = {
+/* 803C307C-803C3088 000C+00 s=1 e=0 z=0  None .data      @3946                                                        */
+SECTION_DATA static void* lit_3946[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)brightCheck__10dScnName_cFv,
 };
 
-/* 803C3088-803C3094 000C+00 s=0 e=0 z=0  None .data      @3947                                                        */
-SECTION_DATA void* lit_3947[3] = {
+/* 803C3088-803C3094 000C+00 s=1 e=0 z=0  None .data      @3947                                                        */
+SECTION_DATA static void* lit_3947[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)changeGameScene__10dScnName_cFv,
 };
 
-/* 803C3094-803C30DC 0048+00 s=1 e=0 z=0  None .data      MainProc                                                     */
+/* 803C3094-803C30DC 0048+00 s=2 e=0 z=0  None .data      MainProc                                                     */
 SECTION_DATA static u8 MainProc[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -304,7 +298,7 @@ SECTION_DATA static void* l_dScnName_Method[5] = {
 	/* 4    */ (void*)dScnName_Draw__FP10dScnName_c,
 };
 
-/* 803C30F0-803C3118 0028+00 s=0 e=0 z=0  None .data      g_profile_NAME_SCENE                                         */
+/* 803C30F0-803C3118 0028+00 s=0 e=0 z=1  None .data      g_profile_NAME_SCENE                                         */
 SECTION_DATA void* g_profile_NAME_SCENE[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0001FFFD,
@@ -318,7 +312,7 @@ SECTION_DATA void* g_profile_NAME_SCENE[10] = {
 	/* 9    */ (void*)NULL,
 };
 
-/* 803C3118-803C3140 0028+00 s=0 e=0 z=0  None .data      g_profile_NAMEEX_SCENE                                       */
+/* 803C3118-803C3140 0028+00 s=0 e=0 z=1  None .data      g_profile_NAMEEX_SCENE                                       */
 SECTION_DATA void* g_profile_NAMEEX_SCENE[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0001FFFD,

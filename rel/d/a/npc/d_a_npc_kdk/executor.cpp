@@ -14,13 +14,20 @@
 
 extern "C" void _prolog(); // 1
 extern "C" void _epilog(); // 1
-extern "C" static void _unresolved(); // 1
+extern "C" void _unresolved(); // 1
 
 // 
 // External References:
 // 
 
 
+extern "C" void ModuleProlog(); // 1
+extern "C" void ModuleEpilog(); // 1
+extern "C" void ModuleUnresolved(); // 1
+extern "C" void ModuleConstructorsX(); // 1
+extern "C" void ModuleDestructorsX(); // 1
+extern u8 data_80A2A8D8[4];
+extern u8 data_80A2A8DC[4];
 
 // 
 // Declarations:
@@ -48,11 +55,11 @@ extern "C" asm void _epilog() {
 #pragma pop
 
 
-/* 80A2A8B8-80A2A8D8 0020+00 s=2 e=0 z=0  None .text      _unresolved                                                  */
+/* 80A2A8B8-80A2A8D8 0020+00 s=0 e=0 z=0  None .text      _unresolved                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void _unresolved() {
+extern "C" asm void _unresolved() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kdk/executor/_unresolved.s"
 }

@@ -12,8 +12,8 @@ lbl_80090478:
 /* 800904A0 00000028  90 1F 01 60 */	stw r0, 0x160(r31)
 lbl_800904A4:
 /* 800904A4 00000000  7F E3 FB 78 */	mr r3, r31
-/* 800904A8 00000004  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 800904AC 00000008  38 A4 AA F4 */	addi r5, r4, stringBase0@l
+/* 800904A8 00000004  3C 80 80 38 */	lis r4, d_d_ev_camera__stringBase0@ha
+/* 800904AC 00000008  38 A4 AA F4 */	addi r5, r4, d_d_ev_camera__stringBase0@l
 /* 800904B0 0000000C  38 85 01 71 */	addi r4, r5, 0x171
 /* 800904B4 00000010  38 A5 01 76 */	addi r5, r5, 0x176
 /* 800904B8 00000014  4B FF 8F 65 */	bl getEvStringPntData__9dCamera_cFPcPc

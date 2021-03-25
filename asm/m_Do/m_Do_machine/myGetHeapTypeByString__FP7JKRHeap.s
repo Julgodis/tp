@@ -7,55 +7,55 @@ lbl_8000B1EC:
 /* 8000B200 00000014  80 0D 8D F0 */	lwz r0, sSystemHeap__7JKRHeap(r13)
 /* 8000B204 00000018  7C 1F 00 40 */	cmplw r31, r0
 /* 8000B208 0000001C  40 82 00 10 */	bne lbl_8000B218
-/* 8000B20C 00000020  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 8000B210 00000024  38 63 3D E8 */	addi r3, r3, stringBase0@l
+/* 8000B20C 00000020  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
+/* 8000B210 00000024  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B214 00000028  48 00 01 C4 */	b lbl_8000B3D8
 lbl_8000B218:
 /* 8000B218 00000000  48 00 3B 69 */	bl mDoExt_getZeldaHeap__Fv
 /* 8000B21C 00000004  7C 1F 18 40 */	cmplw r31, r3
 /* 8000B220 00000008  40 82 00 14 */	bne lbl_8000B234
-/* 8000B224 0000000C  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 8000B228 00000010  38 63 3D E8 */	addi r3, r3, stringBase0@l
+/* 8000B224 0000000C  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
+/* 8000B228 00000010  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B22C 00000014  38 63 00 0B */	addi r3, r3, 0xb
 /* 8000B230 00000018  48 00 01 A8 */	b lbl_8000B3D8
 lbl_8000B234:
 /* 8000B234 00000000  48 00 3B 1D */	bl mDoExt_getGameHeap__Fv
 /* 8000B238 00000004  7C 1F 18 40 */	cmplw r31, r3
 /* 8000B23C 00000008  40 82 00 14 */	bne lbl_8000B250
-/* 8000B240 0000000C  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 8000B244 00000010  38 63 3D E8 */	addi r3, r3, stringBase0@l
+/* 8000B240 0000000C  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
+/* 8000B244 00000010  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B248 00000014  38 63 00 15 */	addi r3, r3, 0x15
 /* 8000B24C 00000018  48 00 01 8C */	b lbl_8000B3D8
 lbl_8000B250:
 /* 8000B250 00000000  48 00 3B 9D */	bl mDoExt_getArchiveHeap__Fv
 /* 8000B254 00000004  7C 1F 18 40 */	cmplw r31, r3
 /* 8000B258 00000008  40 82 00 14 */	bne lbl_8000B26C
-/* 8000B25C 0000000C  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 8000B260 00000010  38 63 3D E8 */	addi r3, r3, stringBase0@l
+/* 8000B25C 0000000C  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
+/* 8000B260 00000010  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B264 00000014  38 63 00 1E */	addi r3, r3, 0x1e
 /* 8000B268 00000018  48 00 01 70 */	b lbl_8000B3D8
 lbl_8000B26C:
 /* 8000B26C 00000000  48 00 3B 45 */	bl mDoExt_getCommandHeap__Fv
 /* 8000B270 00000004  7C 1F 18 40 */	cmplw r31, r3
 /* 8000B274 00000008  40 82 00 14 */	bne lbl_8000B288
-/* 8000B278 0000000C  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 8000B27C 00000010  38 63 3D E8 */	addi r3, r3, stringBase0@l
+/* 8000B278 0000000C  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
+/* 8000B27C 00000010  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B280 00000014  38 63 00 2A */	addi r3, r3, 0x2a
 /* 8000B284 00000018  48 00 01 54 */	b lbl_8000B3D8
 lbl_8000B288:
 /* 8000B288 00000000  48 00 3A 8D */	bl mDoExt_getDbPrintHeap__Fv
 /* 8000B28C 00000004  7C 1F 18 40 */	cmplw r31, r3
 /* 8000B290 00000008  40 82 00 14 */	bne lbl_8000B2A4
-/* 8000B294 0000000C  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 8000B298 00000010  38 63 3D E8 */	addi r3, r3, stringBase0@l
+/* 8000B294 0000000C  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
+/* 8000B298 00000010  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B29C 00000014  38 63 00 36 */	addi r3, r3, 0x36
 /* 8000B2A0 00000018  48 00 01 38 */	b lbl_8000B3D8
 lbl_8000B2A4:
 /* 8000B2A4 00000000  48 00 3B 8D */	bl mDoExt_getJ2dHeap__Fv
 /* 8000B2A8 00000004  7C 1F 18 40 */	cmplw r31, r3
 /* 8000B2AC 00000008  40 82 00 14 */	bne lbl_8000B2C0
-/* 8000B2B0 0000000C  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 8000B2B4 00000010  38 63 3D E8 */	addi r3, r3, stringBase0@l
+/* 8000B2B0 0000000C  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
+/* 8000B2B4 00000010  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B2B8 00000014  38 63 00 42 */	addi r3, r3, 0x42
 /* 8000B2BC 00000018  48 00 01 1C */	b lbl_8000B3D8
 lbl_8000B2C0:
@@ -95,33 +95,33 @@ lbl_8000B31C:
 /* 8000B33C 00000020  41 82 00 38 */	beq lbl_8000B374
 /* 8000B340 00000024  48 00 00 64 */	b lbl_8000B3A4
 lbl_8000B344:
-/* 8000B344 00000000  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 8000B348 00000004  38 63 3D E8 */	addi r3, r3, stringBase0@l
+/* 8000B344 00000000  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
+/* 8000B348 00000004  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B34C 00000008  38 63 00 4A */	addi r3, r3, 0x4a
 /* 8000B350 0000000C  48 00 00 88 */	b lbl_8000B3D8
 lbl_8000B354:
-/* 8000B354 00000000  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 8000B358 00000004  38 63 3D E8 */	addi r3, r3, stringBase0@l
+/* 8000B354 00000000  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
+/* 8000B358 00000004  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B35C 00000008  38 63 00 4F */	addi r3, r3, 0x4f
 /* 8000B360 0000000C  48 00 00 78 */	b lbl_8000B3D8
 lbl_8000B364:
-/* 8000B364 00000000  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 8000B368 00000004  38 63 3D E8 */	addi r3, r3, stringBase0@l
+/* 8000B364 00000000  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
+/* 8000B368 00000004  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B36C 00000008  38 63 00 54 */	addi r3, r3, 0x54
 /* 8000B370 0000000C  48 00 00 68 */	b lbl_8000B3D8
 lbl_8000B374:
-/* 8000B374 00000000  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 8000B378 00000004  38 63 3D E8 */	addi r3, r3, stringBase0@l
+/* 8000B374 00000000  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
+/* 8000B378 00000004  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B37C 00000008  38 63 00 59 */	addi r3, r3, 0x59
 /* 8000B380 0000000C  48 00 00 58 */	b lbl_8000B3D8
 lbl_8000B384:
-/* 8000B384 00000000  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 8000B388 00000004  38 63 3D E8 */	addi r3, r3, stringBase0@l
+/* 8000B384 00000000  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
+/* 8000B388 00000004  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B38C 00000008  38 63 00 5E */	addi r3, r3, 0x5e
 /* 8000B390 0000000C  48 00 00 48 */	b lbl_8000B3D8
 lbl_8000B394:
-/* 8000B394 00000000  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 8000B398 00000004  38 63 3D E8 */	addi r3, r3, stringBase0@l
+/* 8000B394 00000000  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
+/* 8000B398 00000004  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B39C 00000008  38 63 00 63 */	addi r3, r3, 0x63
 /* 8000B3A0 0000000C  48 00 00 38 */	b lbl_8000B3D8
 lbl_8000B3A4:

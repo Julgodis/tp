@@ -69,8 +69,8 @@ lbl_8002A408:
 /* 8002A434 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8002A438 00000030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8002A43C 00000034  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 8002A440 00000038  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 8002A444 0000003C  38 84 8F 24 */	addi r4, r4, stringBase0@l
+/* 8002A440 00000038  3C 80 80 38 */	lis r4, d_map_d_map__stringBase0@ha
+/* 8002A444 0000003C  38 84 8F 24 */	addi r4, r4, d_map_d_map__stringBase0@l
 /* 8002A448 00000040  38 84 00 07 */	addi r4, r4, 7
 /* 8002A44C 00000044  48 33 E5 49 */	bl strcmp
 /* 8002A450 00000048  2C 03 00 00 */	cmpwi r3, 0

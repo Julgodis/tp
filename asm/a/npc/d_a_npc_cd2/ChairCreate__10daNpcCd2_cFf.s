@@ -10,8 +10,8 @@ lbl_80157F68:
 /* 80157F88 0000000C  FF E0 08 90 */	fmr f31, f1
 /* 80157F8C 00000010  88 03 0A C6 */	lbz r0, 0xac6(r3)
 /* 80157F90 00000014  28 00 00 00 */	cmplwi r0, 0
-/* 80157F94 00000018  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 80157F98 0000001C  38 63 3B 70 */	addi r3, r3, stringBase0@l
+/* 80157F94 00000018  3C 60 80 39 */	lis r3, a_npc_d_a_npc_cd2__stringBase0@ha
+/* 80157F98 0000001C  38 63 3B 70 */	addi r3, r3, a_npc_d_a_npc_cd2__stringBase0@l
 /* 80157F9C 00000020  3B C3 00 21 */	addi r30, r3, 0x21
 /* 80157FA0 00000024  41 82 00 08 */	beq lbl_80157FA8
 /* 80157FA4 00000028  3B C3 00 28 */	addi r30, r3, 0x28

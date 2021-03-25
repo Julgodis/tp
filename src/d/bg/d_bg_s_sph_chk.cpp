@@ -90,7 +90,7 @@ SECTION_DATA static void* __vt__11dBgS_SphChk[15 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80078A14-80078AC0 00AC+00 s=0 e=1 z=0  None .text      __ct__11dBgS_SphChkFv                                        */
+/* 80078A14-80078AC0 00AC+00 s=0 e=1 z=1  None .text      __ct__11dBgS_SphChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

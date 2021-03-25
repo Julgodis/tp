@@ -46,18 +46,18 @@ struct dMeter2Info_c {
 	/* 8021CC00 */ void resetMeterString();
 };
 
+struct JKRExpHeap {
+};
+
 struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 	/* 802F7FCC */ void animationTransform();
 };
 
-struct JKRExpHeap {
+struct J2DGrafContext {
 };
 
 struct JKRArchive {
-};
-
-struct J2DGrafContext {
 };
 
 struct J2DScreen {
@@ -104,7 +104,7 @@ extern "C" void createString__14dMeterString_cFi(); // 1
 extern "C" void playBckAnimation__14dMeterString_cFf(); // 1
 extern "C" void drawPikari__14dMeterString_cFv(); // 1
 extern "C" void isLeadByte__14dMeterString_cFi(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_meter_d_meter_string__stringBase0;
 
 // 
 // External References:

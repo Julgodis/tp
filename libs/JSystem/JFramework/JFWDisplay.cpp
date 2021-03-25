@@ -14,18 +14,18 @@
 struct JKRHeap {
 };
 
-struct _GXRenderModeObj {
-};
-
-struct _GXColor {
-};
-
 struct JUTXfb {
 	struct EXfbNumber {
 	};
 
 	/* 802E53B8 */ void createManager(JKRHeap*, JUTXfb::EXfbNumber);
 	/* 802E5424 */ void destroyManager();
+};
+
+struct _GXColor {
+};
+
+struct _GXRenderModeObj {
 };
 
 struct JFWDisplay {
@@ -157,7 +157,7 @@ extern "C" static void JFWGXAbortAlarmHandler__FP7OSAlarmP9OSContext(); // 1
 extern "C" static void diagnoseGpHang__Fv(); // 1
 extern "C" void __sinit_JFWDisplay_cpp(); // 1
 extern "C" void func_80273724(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JFWDisplay__stringBase0;
 extern "C" extern u8 sManager__10JFWDisplay[4];
 
 // 
@@ -358,7 +358,7 @@ asm JFWDisplay::~JFWDisplay() {
 
 
 /* ############################################################################################## */
-/* 804511C0-804511C4 0004+00 s=2 e=40 z=0  None .sbss      sManager__10JFWDisplay                                       */
+/* 804511C0-804511C4 0004+00 s=2 e=40 z=1  None .sbss      sManager__10JFWDisplay                                       */
 u8 sManager__10JFWDisplay[4];
 
 /* 802721DC-80272260 0084+00 s=0 e=1 z=0  None .text      createManager__10JFWDisplayFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumberb */

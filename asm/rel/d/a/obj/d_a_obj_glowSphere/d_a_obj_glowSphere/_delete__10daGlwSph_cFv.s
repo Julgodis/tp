@@ -5,11 +5,11 @@ lbl_80BFA3EC:
 /* 80BFA3F8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BFA3FC 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80BFA400 00000014  38 7F 05 68 */	addi r3, r31, 0x568
-/* 80BFA404 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80BFA408 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80BFA40C 00000020  4B FF EE AD */	bl _unresolved
-/* 80BFA410 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BFA414 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80BFA404 00000018  3C 80 80 C0 */	lis r4, stringBase0@ha
+/* 80BFA408 0000001C  38 84 A9 C4 */	addi r4, r4, stringBase0@l
+/* 80BFA40C 00000020  4B 43 2B FC */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80BFA410 00000024  3C 60 80 C0 */	lis r3, mSphMng__10daGlwSph_c@ha
+/* 80BFA414 00000028  38 63 AC 0C */	addi r3, r3, mSphMng__10daGlwSph_c@l
 /* 80BFA418 0000002C  7F E4 FB 78 */	mr r4, r31
 /* 80BFA41C 00000030  48 00 01 0D */	bl remove__12_GlSph_Mng_cFP10daGlwSph_c
 /* 80BFA420 00000034  38 60 00 01 */	li r3, 1

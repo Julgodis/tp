@@ -11,25 +11,25 @@ lbl_805C8458:
 /* 805C847C 00000010  7C 7E 1B 78 */	mr r30, r3
 /* 805C8480 00000014  FF C0 08 90 */	fmr f30, f1
 /* 805C8484 00000018  FF E0 10 90 */	fmr f31, f2
-/* 805C8488 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 805C848C 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 805C8490 00000024  88 03 5D B0 */	lbz r0, 0x5db0(r3)
+/* 805C8488 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805C848C 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805C8490 00000024  88 03 5D B0 */	lbz r0, 0x5db0(r3)	/* effective address: 8040BF70 */
 /* 805C8494 00000028  7C 00 07 74 */	extsb r0, r0
 /* 805C8498 0000002C  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 805C849C 00000030  7C 63 02 14 */	add r3, r3, r0
 /* 805C84A0 00000034  83 E3 5D 74 */	lwz r31, 0x5d74(r3)
 /* 805C84A4 00000038  38 7E 05 C8 */	addi r3, r30, 0x5c8
 /* 805C84A8 0000003C  38 9E 05 D4 */	addi r4, r30, 0x5d4
-/* 805C84AC 00000040  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 805C84B0 00000044  C0 65 00 00 */	lfs f3, 0x0000(r5)
-/* 805C84B4 00000048  4B FF F5 E5 */	bl _unresolved
+/* 805C84AC 00000040  3C A0 80 5D */	lis r5, lit_3862@ha
+/* 805C84B0 00000044  C0 65 AD 60 */	lfs f3, lit_3862@l(r5)
+/* 805C84B4 00000048  4B CA 76 04 */	b cLib_addCalcPos__FP4cXyzRC4cXyzfff
 /* 805C84B8 0000004C  38 7E 05 E0 */	addi r3, r30, 0x5e0
 /* 805C84BC 00000050  38 9E 05 EC */	addi r4, r30, 0x5ec
 /* 805C84C0 00000054  FC 20 F0 90 */	fmr f1, f30
 /* 805C84C4 00000058  FC 40 F8 90 */	fmr f2, f31
-/* 805C84C8 0000005C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 805C84CC 00000060  C0 65 00 00 */	lfs f3, 0x0000(r5)
-/* 805C84D0 00000064  4B FF F5 C9 */	bl _unresolved
+/* 805C84C8 0000005C  3C A0 80 5D */	lis r5, lit_3862@ha
+/* 805C84CC 00000060  C0 65 AD 60 */	lfs f3, lit_3862@l(r5)
+/* 805C84D0 00000064  4B CA 75 E8 */	b cLib_addCalcPos__FP4cXyzRC4cXyzfff
 /* 805C84D4 00000068  C0 1E 05 C8 */	lfs f0, 0x5c8(r30)
 /* 805C84D8 0000006C  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 805C84DC 00000070  C0 1E 05 CC */	lfs f0, 0x5cc(r30)
@@ -47,7 +47,7 @@ lbl_805C8458:
 /* 805C850C 000000A0  38 A1 00 08 */	addi r5, r1, 8
 /* 805C8510 000000A4  C0 3E 06 00 */	lfs f1, 0x600(r30)
 /* 805C8514 000000A8  38 C0 00 00 */	li r6, 0
-/* 805C8518 000000AC  4B FF F5 81 */	bl _unresolved
+/* 805C8518 000000AC  4B BB 85 C8 */	b Set__9dCamera_cF4cXyz4cXyzfs
 /* 805C851C 000000C4  E3 E1 00 48 */	psq_l f31, 72(r1), 0, 0 /* qr0 */
 /* 805C8520 00000000  CB E1 00 40 */	lfd f31, 0x40(r1)
 /* 805C8524 000000CC  E3 C1 00 38 */	psq_l f30, 56(r1), 0, 0 /* qr0 */

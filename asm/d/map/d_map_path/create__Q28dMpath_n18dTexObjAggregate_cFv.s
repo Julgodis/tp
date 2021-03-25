@@ -10,8 +10,8 @@ lbl_8003C85C:
 /* 8003C87C 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8003C880 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8003C884 00000028  3F 83 00 02 */	addis r28, r3, 2
-/* 8003C888 0000002C  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 8003C88C 00000030  3B A3 9C 4C */	addi r29, r3, stringBase0@l
+/* 8003C888 0000002C  3C 60 80 38 */	lis r3, d_map_d_map_path__stringBase0@ha
+/* 8003C88C 00000030  3B A3 9C 4C */	addi r29, r3, d_map_d_map_path__stringBase0@l
 /* 8003C890 00000034  3C 60 80 38 */	lis r3, data_80379C30@ha
 /* 8003C894 00000038  3B C3 9C 30 */	addi r30, r3, data_80379C30@l
 /* 8003C898 0000003C  3B 9C C2 F8 */	addi r28, r28, -15624

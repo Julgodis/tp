@@ -5,7 +5,7 @@ lbl_80485E88:
 /* 80485E94 0000000C  7C 64 1B 78 */	mr r4, r3
 /* 80485E98 00000010  38 64 05 68 */	addi r3, r4, 0x568
 /* 80485E9C 00000014  38 84 05 70 */	addi r4, r4, 0x570
-/* 80485EA0 00000018  4B FF FE B9 */	bl _unresolved
+/* 80485EA0 00000018  4B BA 71 68 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80485EA4 0000001C  38 60 00 01 */	li r3, 1
 /* 80485EA8 00000020  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80485EAC 00000024  7C 08 03 A6 */	mtlr r0

@@ -7,15 +7,15 @@ lbl_80BC43F4:
 /* 80BC4408 00000014  38 1F 07 60 */	addi r0, r31, 0x760
 /* 80BC440C 00000018  90 03 05 04 */	stw r0, 0x504(r3)
 /* 80BC4410 0000001C  38 7F 04 D0 */	addi r3, r31, 0x4d0
-/* 80BC4414 00000020  4B FF FE 85 */	bl _unresolved
-/* 80BC4418 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BC441C 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80BC4414 00000020  4B 44 89 50 */	b transS__14mDoMtx_stack_cFRC4cXyz
+/* 80BC4418 00000024  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80BC441C 00000028  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80BC4420 0000002C  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
-/* 80BC4424 00000030  4B FF FE 75 */	bl _unresolved
-/* 80BC4428 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BC442C 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80BC4424 00000030  4B 44 80 10 */	b mDoMtx_YrotM__FPA4_fs
+/* 80BC4428 00000034  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80BC442C 00000038  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80BC4430 0000003C  38 9F 07 60 */	addi r4, r31, 0x760
-/* 80BC4434 00000040  4B FF FE 65 */	bl _unresolved
+/* 80BC4434 00000040  4B 78 20 7C */	b PSMTXCopy
 /* 80BC4438 00000044  7F E3 FB 78 */	mr r3, r31
 /* 80BC443C 00000048  48 00 00 19 */	bl setBaseMtx__14daObjCatDoor_cFv
 /* 80BC4440 0000004C  83 E1 00 0C */	lwz r31, 0xc(r1)

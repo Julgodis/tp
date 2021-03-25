@@ -19,7 +19,7 @@ lbl_80B7FD10:
 /* 80B7FD54 00000044  2C 03 00 00 */	cmpwi r3, 0
 /* 80B7FD58 00000048  41 82 00 34 */	beq lbl_80B7FD8C
 /* 80B7FD5C 0000004C  38 7F 0C 18 */	addi r3, r31, 0xc18
-/* 80B7FD60 00000050  4B FF 87 19 */	bl _unresolved
+/* 80B7FD60 00000050  4B 5D 0E 5C */	b reverse__13daNpcF_Path_cFv
 /* 80B7FD64 00000054  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)
 /* 80B7FD68 00000058  D0 01 00 08 */	stfs f0, 8(r1)
 /* 80B7FD6C 0000005C  C0 1F 04 D4 */	lfs f0, 0x4d4(r31)
@@ -33,20 +33,20 @@ lbl_80B7FD10:
 lbl_80B7FD8C:
 /* 80B7FD8C 00000000  38 7F 04 D0 */	addi r3, r31, 0x4d0
 /* 80B7FD90 00000004  38 81 00 20 */	addi r4, r1, 0x20
-/* 80B7FD94 00000008  4B FF 86 E5 */	bl _unresolved
+/* 80B7FD94 00000008  4B 6F 0E 70 */	b cLib_targetAngleY__FPC3VecPC3Vec
 /* 80B7FD98 0000000C  7C 64 1B 78 */	mr r4, r3
-/* 80B7FD9C 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80B7FDA0 00000014  38 C3 00 00 */	addi r6, r3, 0x0000 /* 0x00000000@l */
-/* 80B7FDA4 00000018  C0 26 00 94 */	lfs f1, 0x94(r6)
+/* 80B7FD9C 00000010  3C 60 80 B9 */	lis r3, m__17daNpc_zrA_Param_c@ha
+/* 80B7FDA0 00000014  38 C3 C4 58 */	addi r6, r3, m__17daNpc_zrA_Param_c@l
+/* 80B7FDA4 00000018  C0 26 00 94 */	lfs f1, 0x94(r6)	/* effective address: 80B8C4EC */
 /* 80B7FDA8 0000001C  D0 3F 05 2C */	stfs f1, 0x52c(r31)
-/* 80B7FDAC 00000020  C0 06 00 9C */	lfs f0, 0x9c(r6)
+/* 80B7FDAC 00000020  C0 06 00 9C */	lfs f0, 0x9c(r6)	/* effective address: 80B8C4F4 */
 /* 80B7FDB0 00000024  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80B7FDB4 00000028  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 80B7FDB8 0000002C  D0 03 00 18 */	stfs f0, 0x18(r3)
 /* 80B7FDBC 00000030  38 7F 04 DE */	addi r3, r31, 0x4de
-/* 80B7FDC0 00000034  A8 A6 00 9A */	lha r5, 0x9a(r6)
-/* 80B7FDC4 00000038  A8 C6 00 98 */	lha r6, 0x98(r6)
-/* 80B7FDC8 0000003C  4B FF 86 B1 */	bl _unresolved
+/* 80B7FDC0 00000034  A8 A6 00 9A */	lha r5, 0x9a(r6)	/* effective address: 80B8C4F2 */
+/* 80B7FDC4 00000038  A8 C6 00 98 */	lha r6, 0x98(r6)	/* effective address: 80B8C4F0 */
+/* 80B7FDC8 0000003C  4B 6F 08 40 */	b cLib_addCalcAngleS2__FPssss
 /* 80B7FDCC 00000040  A8 1F 04 DC */	lha r0, 0x4dc(r31)
 /* 80B7FDD0 00000044  B0 1F 08 F0 */	sth r0, 0x8f0(r31)
 /* 80B7FDD4 00000048  A8 1F 04 DE */	lha r0, 0x4de(r31)

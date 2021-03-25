@@ -79,7 +79,7 @@ extern "C" void checkspace__15mDoMemCd_Ctrl_cFv(); // 1
 extern "C" void setCardState__15mDoMemCd_Ctrl_cFl(); // 1
 extern "C" static void mDoMemCd_main__FPv(); // 1
 extern "C" void __sinit_m_Do_MemCard_cpp(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const m_Do_m_Do_MemCard__stringBase0;
 extern "C" extern u8 g_mDoMemCd_control[8192];
 
 // 

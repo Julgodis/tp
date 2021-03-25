@@ -93,7 +93,7 @@ lbl_80050FC8:
 /* 80050FC8 00000000  80 9F 00 00 */	lwz r4, 0(r31)
 /* 80050FCC 00000004  28 04 00 00 */	cmplwi r4, 0
 /* 80050FD0 00000008  41 82 00 10 */	beq lbl_80050FE0
-/* 80050FD4 0000000C  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
+/* 80050FD4 0000000C  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
 /* 80050FD8 00000010  4B FF C7 99 */	bl setStopContinue__13dPa_control_cFUl
 /* 80050FDC 00000014  90 7F 00 00 */	stw r3, 0(r31)
 lbl_80050FE0:

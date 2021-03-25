@@ -12,23 +12,23 @@ lbl_80BEF700:
 /* 80BEF728 00000028  41 82 00 10 */	beq lbl_80BEF738
 /* 80BEF72C 0000002C  38 7E 05 6C */	addi r3, r30, 0x56c
 /* 80BEF730 00000030  38 9E 13 2D */	addi r4, r30, 0x132d
-/* 80BEF734 00000034  4B FF F3 25 */	bl _unresolved
+/* 80BEF734 00000034  4B 43 D8 D4 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 lbl_80BEF738:
 /* 80BEF738 00000000  7F C3 F3 78 */	mr r3, r30
-/* 80BEF73C 00000004  4B FF F3 1D */	bl _unresolved
+/* 80BEF73C 00000004  4B 44 21 34 */	b getArcName__12daSetBgObj_cFP10fopAc_ac_c
 /* 80BEF740 00000008  7C 64 1B 78 */	mr r4, r3
 /* 80BEF744 0000000C  38 7E 05 74 */	addi r3, r30, 0x574
-/* 80BEF748 00000010  4B FF F3 11 */	bl _unresolved
+/* 80BEF748 00000010  4B 43 D8 C0 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80BEF74C 00000014  38 7E 05 80 */	addi r3, r30, 0x580
 /* 80BEF750 00000018  38 80 FF FF */	li r4, -1
 /* 80BEF754 0000001C  48 00 00 3D */	bl __dt__12FlagCloth2_cFv
 /* 80BEF758 00000020  7F C3 F3 78 */	mr r3, r30
 /* 80BEF75C 00000024  38 80 00 00 */	li r4, 0
-/* 80BEF760 00000028  4B FF F2 F9 */	bl _unresolved
+/* 80BEF760 00000028  4B 42 95 2C */	b __dt__10fopAc_ac_cFv
 /* 80BEF764 0000002C  7F E0 07 35 */	extsh. r0, r31
 /* 80BEF768 00000030  40 81 00 0C */	ble lbl_80BEF774
 /* 80BEF76C 00000034  7F C3 F3 78 */	mr r3, r30
-/* 80BEF770 00000038  4B FF F2 E9 */	bl _unresolved
+/* 80BEF770 00000038  4B 6D F5 CC */	b __dl__FPv
 lbl_80BEF774:
 /* 80BEF774 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80BEF778 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

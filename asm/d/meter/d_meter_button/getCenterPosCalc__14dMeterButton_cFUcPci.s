@@ -288,7 +288,7 @@ lbl_8020A12C:
 /* 8020A1E0 000000B4  EC 01 00 2A */	fadds f0, f1, f0
 /* 8020A1E4 000000B8  D0 1E 01 EC */	stfs f0, 0x1ec(r30)
 lbl_8020A1E8:
-/* 8020A1E8 00000000  88 1A 5E 2D */	lbz r0, 0x5e2d(r26)
+/* 8020A1E8 00000000  88 1A 5E 2D */	lbz r0, 0x5e2d(r26)	/* effective address: 8040BFED */
 /* 8020A1EC 00000004  54 00 07 7B */	rlwinm. r0, r0, 0, 0x1d, 0x1d
 /* 8020A1F0 00000008  41 82 00 44 */	beq lbl_8020A234
 /* 8020A1F4 0000000C  80 7B 00 08 */	lwz r3, 8(r27)

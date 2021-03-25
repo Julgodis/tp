@@ -5,14 +5,14 @@ lbl_8049FD6C:
 /* 8049FD78 0000000C  80 03 00 B0 */	lwz r0, 0xb0(r3)
 /* 8049FD7C 00000010  28 00 00 01 */	cmplwi r0, 1
 /* 8049FD80 00000014  4C 82 00 20 */	bnelr 
-/* 8049FD84 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8049FD88 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 8049FD8C 00000020  80 84 5D B4 */	lwz r4, 0x5db4(r4)
-/* 8049FD90 00000024  C0 04 35 34 */	lfs f0, 0x3534(r4)
+/* 8049FD84 00000018  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8049FD88 0000001C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8049FD8C 00000020  80 84 5D B4 */	lwz r4, 0x5db4(r4)	/* effective address: 8040BF74 */
+/* 8049FD90 00000024  C0 04 35 34 */	lfs f0, 0x3534(r4)	/* effective address: 804096F4 */
 /* 8049FD94 00000028  D0 03 09 90 */	stfs f0, 0x990(r3)
-/* 8049FD98 0000002C  C0 04 35 38 */	lfs f0, 0x3538(r4)
+/* 8049FD98 0000002C  C0 04 35 38 */	lfs f0, 0x3538(r4)	/* effective address: 804096F8 */
 /* 8049FD9C 00000030  D0 03 09 94 */	stfs f0, 0x994(r3)
-/* 8049FDA0 00000034  C0 04 35 3C */	lfs f0, 0x353c(r4)
+/* 8049FDA0 00000034  C0 04 35 3C */	lfs f0, 0x353c(r4)	/* effective address: 804096FC */
 /* 8049FDA4 00000038  D0 03 09 98 */	stfs f0, 0x998(r3)
 /* 8049FDA8 0000003C  4E 80 00 20 */	blr 
 lbl_8049FDAC:

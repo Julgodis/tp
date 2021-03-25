@@ -5,9 +5,9 @@ lbl_80D6786C:
 /* 80D67878 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D6787C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80D67880 00000014  38 7F 05 68 */	addi r3, r31, 0x568
-/* 80D67884 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80D67888 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80D6788C 00000020  4B FF F1 ED */	bl _unresolved
+/* 80D67884 00000018  3C 80 80 D6 */	lis r4, l_arcName@ha
+/* 80D67888 0000001C  38 84 7B E0 */	addi r4, r4, l_arcName@l
+/* 80D6788C 00000020  4B 2C 57 7C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80D67890 00000024  80 7F 05 E8 */	lwz r3, 0x5e8(r31)
 /* 80D67894 00000028  28 03 00 00 */	cmplwi r3, 0
 /* 80D67898 0000002C  41 82 00 18 */	beq lbl_80D678B0
@@ -50,7 +50,7 @@ lbl_80D67920:
 /* 80D67920 00000000  80 7F 05 DC */	lwz r3, 0x5dc(r31)
 /* 80D67924 00000004  28 03 00 00 */	cmplwi r3, 0
 /* 80D67928 00000008  41 82 00 08 */	beq lbl_80D67930
-/* 80D6792C 0000000C  4B FF F1 4D */	bl _unresolved
+/* 80D6792C 0000000C  4B 56 6B 1C */	b destroy__7JKRHeapFv
 lbl_80D67930:
 /* 80D67930 00000000  38 60 00 01 */	li r3, 1
 /* 80D67934 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

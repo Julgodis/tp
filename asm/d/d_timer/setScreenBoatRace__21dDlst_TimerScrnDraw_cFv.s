@@ -13,8 +13,8 @@ lbl_8025E66C:
 lbl_8025E698:
 /* 8025E698 00000000  90 1F 00 04 */	stw r0, 4(r31)
 /* 8025E69C 00000004  80 7F 00 04 */	lwz r3, 4(r31)
-/* 8025E6A0 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8025E6A4 0000000C  38 84 A3 D8 */	addi r4, r4, stringBase0@l
+/* 8025E6A0 00000008  3C 80 80 3A */	lis r4, d_d_timer__stringBase0@ha
+/* 8025E6A4 0000000C  38 84 A3 D8 */	addi r4, r4, d_d_timer__stringBase0@l
 /* 8025E6A8 00000010  38 84 00 64 */	addi r4, r4, 0x64
 /* 8025E6AC 00000014  3C A0 00 02 */	lis r5, 2
 /* 8025E6B0 00000018  80 DF 00 7C */	lwz r6, 0x7c(r31)

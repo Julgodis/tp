@@ -45,10 +45,10 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
 struct J2DScreen {
@@ -96,7 +96,7 @@ extern "C" void draw__16dMsgScrnKanban_cFv(); // 1
 extern "C" void fukiAlpha__16dMsgScrnKanban_cFf(); // 1
 extern "C" void fukiScale__16dMsgScrnKanban_cFf(); // 1
 extern "C" void fukiTrans__16dMsgScrnKanban_cFff(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const msg_scrn_d_msg_scrn_kanban__stringBase0;
 
 // 
 // External References:

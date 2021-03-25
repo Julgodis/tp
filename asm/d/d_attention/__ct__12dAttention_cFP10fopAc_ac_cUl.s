@@ -74,8 +74,8 @@ lbl_80070198:
 /* 800702B8 00000120  38 80 00 00 */	li r4, 0
 /* 800702BC 00000124  4B F9 ED 89 */	bl mDoExt_createSolidHeapFromGameToCurrent__FUlUl
 /* 800702C0 00000128  90 7F 00 18 */	stw r3, 0x18(r31)
-/* 800702C4 0000012C  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 800702C8 00000130  38 63 A7 70 */	addi r3, r3, stringBase0@l
+/* 800702C4 0000012C  3C 60 80 38 */	lis r3, d_d_attention__stringBase0@ha
+/* 800702C8 00000130  38 63 A7 70 */	addi r3, r3, d_d_attention__stringBase0@l
 /* 800702CC 00000134  38 63 00 08 */	addi r3, r3, 8
 /* 800702D0 00000138  38 80 00 25 */	li r4, 0x25
 /* 800702D4 0000013C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
@@ -86,8 +86,8 @@ lbl_80070198:
 /* 800702E8 00000150  38 C0 00 80 */	li r6, 0x80
 /* 800702EC 00000154  4B FC C0 01 */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 800702F0 00000158  7C 7B 1B 78 */	mr r27, r3
-/* 800702F4 0000015C  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 800702F8 00000160  38 63 A7 70 */	addi r3, r3, stringBase0@l
+/* 800702F4 0000015C  3C 60 80 38 */	lis r3, d_d_attention__stringBase0@ha
+/* 800702F8 00000160  38 63 A7 70 */	addi r3, r3, d_d_attention__stringBase0@l
 /* 800702FC 00000164  38 63 00 08 */	addi r3, r3, 8
 /* 80070300 00000168  38 80 00 26 */	li r4, 0x26
 /* 80070304 0000016C  7F A5 EB 78 */	mr r5, r29
@@ -97,8 +97,8 @@ lbl_80070198:
 /* 80070314 0000017C  3B 20 00 00 */	li r25, 0
 /* 80070318 00000180  3B C0 00 00 */	li r30, 0
 /* 8007031C 00000184  3F 00 11 00 */	lis r24, 0x1100
-/* 80070320 00000188  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 80070324 0000018C  3B 83 A7 70 */	addi r28, r3, stringBase0@l
+/* 80070320 00000188  3C 60 80 38 */	lis r3, d_d_attention__stringBase0@ha
+/* 80070324 0000018C  3B 83 A7 70 */	addi r28, r3, d_d_attention__stringBase0@l
 lbl_80070328:
 /* 80070328 00000000  7F 43 D3 78 */	mr r3, r26
 /* 8007032C 00000004  3C 80 00 08 */	lis r4, 8

@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct Vec {
+struct _GXAttr {
 };
 
-struct _GXAttr {
+struct Vec {
 };
 
 struct J3DShape {
@@ -266,10 +266,10 @@ asm void J3DShape::makeVcdVatCmd() {
 
 
 /* ############################################################################################## */
-/* 804515D0-804515D4 0004+00 s=5 e=25 z=0  None .sbss      sOldVcdVatCmd__8J3DShape                                     */
+/* 804515D0-804515D4 0004+00 s=5 e=25 z=9  None .sbss      sOldVcdVatCmd__8J3DShape                                     */
 u8 sOldVcdVatCmd__8J3DShape[4];
 
-/* 80315300-80315398 0098+00 s=2 e=6 z=0  None .text      loadPreDrawSetting__8J3DShapeCFv                             */
+/* 80315300-80315398 0098+00 s=2 e=6 z=3  None .text      loadPreDrawSetting__8J3DShapeCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

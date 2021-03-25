@@ -84,7 +84,7 @@ extern "C" extern u8 struct_80451500[4];
 /* 803DD2D8-803DD2E8 0010+00 s=2 e=6 z=0  None .bss       m_gamePad__8mDoCPd_c                                         */
 u8 m_gamePad__8mDoCPd_c[16];
 
-/* 803DD2E8-803DD3E8 0100+00 s=2 e=84 z=0  None .bss       m_cpadInfo__8mDoCPd_c                                        */
+/* 803DD2E8-803DD3E8 0100+00 s=2 e=84 z=37  None .bss       m_cpadInfo__8mDoCPd_c                                        */
 u8 m_cpadInfo__8mDoCPd_c[256];
 
 /* 80007954-80007A94 0140+00 s=0 e=1 z=0  None .text      create__8mDoCPd_cFv                                          */

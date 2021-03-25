@@ -23,7 +23,7 @@ lbl_80A9E8E8:
 /* 80A9E8EC 00000004  B0 03 0E 30 */	sth r0, 0xe30(r3)
 /* 80A9E8F0 00000008  A0 03 0E 30 */	lhz r0, 0xe30(r3)
 /* 80A9E8F4 0000000C  B0 03 0F DC */	sth r0, 0xfdc(r3)
-/* 80A9E8F8 00000010  4B FF D9 01 */	bl _unresolved
+/* 80A9E8F8 00000010  4B 6A B9 2C */	b evtChange__8daNpcT_cFv
 lbl_80A9E8FC:
 /* 80A9E8FC 00000000  38 60 00 00 */	li r3, 0
 /* 80A9E900 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

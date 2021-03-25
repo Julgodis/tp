@@ -17,10 +17,10 @@ lbl_806CAE28:
 /* 806CAE2C 00000004  38 80 00 05 */	li r4, 5
 /* 806CAE30 00000008  4B FF D2 C9 */	bl setActionMode__8daE_GE_cFi
 lbl_806CAE34:
-/* 806CAE34 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 806CAE38 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 806CAE34 00000000  3C 60 80 6C */	lis r3, s_ge_surprise__FPvPv@ha
+/* 806CAE38 00000004  38 63 7E 7C */	addi r3, r3, s_ge_surprise__FPvPv@l
 /* 806CAE3C 00000008  7F E4 FB 78 */	mr r4, r31
-/* 806CAE40 0000000C  4B FF CB 79 */	bl _unresolved
+/* 806CAE40 0000000C  4B 95 64 F8 */	b fpcEx_Search__FPFPvPv_PvPv
 /* 806CAE44 00000010  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 806CAE48 00000014  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 806CAE4C 00000018  7C 08 03 A6 */	mtlr r0

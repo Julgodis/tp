@@ -19,3 +19,5 @@ lbl_8024BA4C:
 lbl_8024BA90:
 /* 8024BA90 00000000  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 8024BA94 00000004  38 84 01 88 */	addi r4, r4, g_meter2_info@l
+/* 8024BA98 00000008  90 04 00 88 */	stw r0, 0x88(r4)	/* effective address: 80430210 */
+/* 8024BA9C 0000000C  4E 80 00 20 */	blr 

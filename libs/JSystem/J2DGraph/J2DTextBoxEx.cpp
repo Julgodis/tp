@@ -11,10 +11,52 @@
 // Types:
 // 
 
-struct J2DTevStage {
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct JUTFont {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmBase {
+};
+
+struct J2DTextBoxHBinding {
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct ResFONT {
 };
 
 struct ResTIMG {
+};
+
+struct J2DAnmVtxColor {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DMaterial {
+	/* 802EA38C */ void setGX();
+	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
+	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
+	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 };
 
 struct JSUStreamSeekFrom {
@@ -25,23 +67,13 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct _GXCullMode {
-};
-
-struct J2DAnmBase {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct ResFONT {
+struct J2DTevStage {
 };
 
 struct J2DAnmTransform {
 };
 
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
+struct _GXCullMode {
 };
 
 struct J2DPane {
@@ -65,38 +97,6 @@ struct J2DPane {
 	/* 802F83D0 */ void setAnimationVF(J2DAnmVisibilityFull*);
 	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
 	/* 802F8474 */ void update();
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DAnmColor {
-};
-
-struct JUTFont {
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct J2DMaterial {
-	/* 802EA38C */ void setGX();
-	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
-	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
-	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
-	/* 802EA89C */ void setAnimation(J2DAnmColor*);
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct J2DTextBoxHBinding {
 };
 
 struct J2DTextBoxEx {
@@ -198,7 +198,7 @@ extern "C" void setCullBack__12J2DTextBoxExFb(); // 1
 extern "C" void isUsed__12J2DTextBoxExFPC7ResTIMG(); // 1
 extern "C" void setAnimation__12J2DTextBoxExFP14J2DAnmVtxColor(); // 1
 extern "C" void setAnimation__12J2DTextBoxExFP10J2DAnmBase(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const J2DTextBoxEx__stringBase0;
 
 // 
 // External References:

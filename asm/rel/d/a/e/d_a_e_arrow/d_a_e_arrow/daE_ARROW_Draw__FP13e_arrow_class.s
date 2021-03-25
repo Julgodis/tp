@@ -13,31 +13,31 @@ lbl_8067C7F4:
 /* 8067C7F4 00000000  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 8067C7F8 00000004  54 00 00 01 */	rlwinm. r0, r0, 0, 0, 0
 /* 8067C7FC 00000008  41 82 00 20 */	beq lbl_8067C81C
-/* 8067C800 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8067C804 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 8067C800 0000000C  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 8067C804 00000010  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 8067C808 00000014  38 80 00 02 */	li r4, 2
 /* 8067C80C 00000018  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 8067C810 0000001C  38 DF 01 0C */	addi r6, r31, 0x10c
-/* 8067C814 00000020  4B FF FF 25 */	bl _unresolved
+/* 8067C814 00000020  4B B2 6F B0 */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
 /* 8067C818 00000024  48 00 00 1C */	b lbl_8067C834
 lbl_8067C81C:
-/* 8067C81C 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8067C820 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 8067C81C 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 8067C820 00000004  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 8067C824 00000008  38 80 00 00 */	li r4, 0
 /* 8067C828 0000000C  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 8067C82C 00000010  38 DF 01 0C */	addi r6, r31, 0x10c
-/* 8067C830 00000014  4B FF FF 09 */	bl _unresolved
+/* 8067C830 00000014  4B B2 6F 94 */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
 lbl_8067C834:
 /* 8067C834 00000000  80 9F 05 B4 */	lwz r4, 0x5b4(r31)
 /* 8067C838 00000004  28 04 00 00 */	cmplwi r4, 0
 /* 8067C83C 00000008  41 82 00 20 */	beq lbl_8067C85C
-/* 8067C840 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8067C844 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 8067C840 0000000C  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 8067C844 00000010  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 8067C848 00000014  80 84 00 04 */	lwz r4, 4(r4)
 /* 8067C84C 00000018  38 BF 01 0C */	addi r5, r31, 0x10c
-/* 8067C850 0000001C  4B FF FE E9 */	bl _unresolved
+/* 8067C850 0000001C  4B B2 85 50 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 8067C854 00000020  80 7F 05 B4 */	lwz r3, 0x5b4(r31)
-/* 8067C858 00000024  4B FF FE E1 */	bl _unresolved
+/* 8067C858 00000024  4B 99 14 6C */	b mDoExt_modelUpdateDL__FP8J3DModel
 lbl_8067C85C:
 /* 8067C85C 00000000  38 60 00 01 */	li r3, 1
 lbl_8067C860:

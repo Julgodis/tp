@@ -100,7 +100,7 @@ extern "C" static void main01__Fv(); // 1
 extern "C" void main(); // 1
 extern "C" void dump_sort__7JKRHeapFv(); // 1
 extern "C" void __sinit_m_Do_main_cpp(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const m_Do_m_Do_main__stringBase0;
 extern "C" extern u8 COPYDATE_STRING__7mDoMain[18 + 2 /* padding */];
 extern "C" extern void* data_803A2F14[5];
 extern "C" extern void* data_803A2F28[5 + 1 /* padding */];
@@ -615,20 +615,20 @@ extern "C" asm void __sinit_m_Do_main_cpp() {
 /* ############################################################################################## */
 /* 803A2F14-803A2F28 0014+00 s=0 e=0 z=0  None .data      desc1$3717                                                   */
 SECTION_DATA void* data_803A2F14[5] = {
-	/* 0    */ (void*)(((char*)&stringBase0)+0x14F),
-	/* 1    */ (void*)(((char*)&stringBase0)+0x150),
-	/* 2    */ (void*)(((char*)&stringBase0)+0x15A),
-	/* 3    */ (void*)(((char*)&stringBase0)+0x164),
-	/* 4    */ (void*)(((char*)&stringBase0)+0x16E),
+	/* 0    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x14F),
+	/* 1    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x150),
+	/* 2    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x15A),
+	/* 3    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x164),
+	/* 4    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x16E),
 };
 
 /* 803A2F28-803A2F40 0014+04 s=0 e=0 z=0  None .data      desc2$3718                                                   */
 SECTION_DATA void* data_803A2F28[5 + 1 /* padding */] = {
-	/* 0    */ (void*)(((char*)&stringBase0)+0x14F),
-	/* 1    */ (void*)(((char*)&stringBase0)+0x178),
-	/* 2    */ (void*)(((char*)&stringBase0)+0x182),
-	/* 3    */ (void*)(((char*)&stringBase0)+0x18C),
-	/* 4    */ (void*)(((char*)&stringBase0)+0x18C),
+	/* 0    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x14F),
+	/* 1    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x178),
+	/* 2    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x182),
+	/* 3    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x18C),
+	/* 4    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x18C),
 	/* padding */
 	NULL,
 };

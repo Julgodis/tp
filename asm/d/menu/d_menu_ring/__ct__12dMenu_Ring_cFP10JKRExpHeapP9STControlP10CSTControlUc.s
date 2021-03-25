@@ -498,8 +498,8 @@ lbl_801E9838:
 /* 801E983C 00000004  38 7F 03 74 */	addi r3, r31, 0x374
 /* 801E9840 00000008  80 9F 00 04 */	lwz r4, 4(r31)
 /* 801E9844 0000000C  80 BF 00 58 */	lwz r5, 0x58(r31)
-/* 801E9848 00000010  3C C0 80 39 */	lis r6, stringBase0@ha
-/* 801E984C 00000014  38 C6 78 C8 */	addi r6, r6, stringBase0@l
+/* 801E9848 00000010  3C C0 80 39 */	lis r6, d_menu_d_menu_ring__stringBase0@ha
+/* 801E984C 00000014  38 C6 78 C8 */	addi r6, r6, d_menu_d_menu_ring__stringBase0@l
 /* 801E9850 00000018  3C E0 00 02 */	lis r7, 2
 /* 801E9854 0000001C  3D 00 80 40 */	lis r8, g_dComIfG_gameInfo@ha
 /* 801E9858 00000020  3B 88 61 C0 */	addi r28, r8, g_dComIfG_gameInfo@l
@@ -880,8 +880,8 @@ lbl_801E9DEC:
 /* 801E9DF4 00000008  3A 80 00 00 */	li r20, 0
 /* 801E9DF8 0000000C  3A DE 00 28 */	addi r22, r30, 0x28
 /* 801E9DFC 00000010  3A BE 00 00 */	addi r21, r30, 0
-/* 801E9E00 00000014  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801E9E04 00000018  3A 63 78 C8 */	addi r19, r3, stringBase0@l
+/* 801E9E00 00000014  3C 60 80 39 */	lis r3, d_menu_d_menu_ring__stringBase0@ha
+/* 801E9E04 00000018  3A 63 78 C8 */	addi r19, r3, d_menu_d_menu_ring__stringBase0@l
 lbl_801E9E08:
 /* 801E9E08 00000000  80 7F 00 58 */	lwz r3, 0x58(r31)
 /* 801E9E0C 00000004  7C D6 A2 14 */	add r6, r22, r20
@@ -934,8 +934,8 @@ lbl_801E9E08:
 /* 801E9EC8 000000C0  3A 80 00 00 */	li r20, 0
 /* 801E9ECC 000000C4  3A DE 00 78 */	addi r22, r30, 0x78
 /* 801E9ED0 000000C8  3A BE 00 50 */	addi r21, r30, 0x50
-/* 801E9ED4 000000CC  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801E9ED8 000000D0  3A 63 78 C8 */	addi r19, r3, stringBase0@l
+/* 801E9ED4 000000CC  3C 60 80 39 */	lis r3, d_menu_d_menu_ring__stringBase0@ha
+/* 801E9ED8 000000D0  3A 63 78 C8 */	addi r19, r3, d_menu_d_menu_ring__stringBase0@l
 lbl_801E9EDC:
 /* 801E9EDC 00000000  80 7F 00 58 */	lwz r3, 0x58(r31)
 /* 801E9EE0 00000004  7C D6 A2 14 */	add r6, r22, r20
@@ -988,8 +988,8 @@ lbl_801E9EDC:
 /* 801E9F9C 000000C0  3A 80 00 00 */	li r20, 0
 /* 801E9FA0 000000C4  3A DE 00 C8 */	addi r22, r30, 0xc8
 /* 801E9FA4 000000C8  3A BE 00 A0 */	addi r21, r30, 0xa0
-/* 801E9FA8 000000CC  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801E9FAC 000000D0  3A 63 78 C8 */	addi r19, r3, stringBase0@l
+/* 801E9FA8 000000CC  3C 60 80 39 */	lis r3, d_menu_d_menu_ring__stringBase0@ha
+/* 801E9FAC 000000D0  3A 63 78 C8 */	addi r19, r3, d_menu_d_menu_ring__stringBase0@l
 lbl_801E9FB0:
 /* 801E9FB0 00000000  80 7F 00 58 */	lwz r3, 0x58(r31)
 /* 801E9FB4 00000004  7C D6 A2 14 */	add r6, r22, r20
@@ -1043,8 +1043,8 @@ lbl_801E9FB0:
 /* 801EA074 000000C4  3A C0 00 00 */	li r22, 0
 /* 801EA078 000000C8  3B 1E 01 18 */	addi r24, r30, 0x118
 /* 801EA07C 000000CC  3A FE 00 F0 */	addi r23, r30, 0xf0
-/* 801EA080 000000D0  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801EA084 000000D4  3A 63 78 C8 */	addi r19, r3, stringBase0@l
+/* 801EA080 000000D0  3C 60 80 39 */	lis r3, d_menu_d_menu_ring__stringBase0@ha
+/* 801EA084 000000D4  3A 63 78 C8 */	addi r19, r3, d_menu_d_menu_ring__stringBase0@l
 lbl_801EA088:
 /* 801EA088 00000000  80 7F 00 58 */	lwz r3, 0x58(r31)
 /* 801EA08C 00000004  7C D8 B2 14 */	add r6, r24, r22
@@ -1102,8 +1102,8 @@ lbl_801EA088:
 /* 801EA15C 000000D4  3A C0 00 00 */	li r22, 0
 /* 801EA160 000000D8  3A FE 01 68 */	addi r23, r30, 0x168
 /* 801EA164 000000DC  3B 1E 01 40 */	addi r24, r30, 0x140
-/* 801EA168 000000E0  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801EA16C 000000E4  3A 63 78 C8 */	addi r19, r3, stringBase0@l
+/* 801EA168 000000E0  3C 60 80 39 */	lis r3, d_menu_d_menu_ring__stringBase0@ha
+/* 801EA16C 000000E4  3A 63 78 C8 */	addi r19, r3, d_menu_d_menu_ring__stringBase0@l
 lbl_801EA170:
 /* 801EA170 00000000  80 7F 00 58 */	lwz r3, 0x58(r31)
 /* 801EA174 00000004  7C D7 B2 14 */	add r6, r23, r22
@@ -1158,11 +1158,11 @@ lbl_801EA170:
 /* 801EA238 000000C8  41 80 FF 38 */	blt lbl_801EA170
 /* 801EA23C 000000CC  80 7F 00 04 */	lwz r3, 4(r31)
 /* 801EA240 000000D0  48 0E 45 45 */	bl getTotalFreeSize__7JKRHeapFv
-/* 801EA244 000000D4  80 7B 5D 30 */	lwz r3, 0x5d30(r27)
+/* 801EA244 000000D4  80 7B 5D 30 */	lwz r3, 0x5d30(r27)	/* effective address: 8040BEF0 */
 /* 801EA248 000000D8  3C 80 54 49 */	lis r4, 0x5449 /* 0x54494D47@ha */
 /* 801EA24C 000000DC  38 84 4D 47 */	addi r4, r4, 0x4D47 /* 0x54494D47@l */
-/* 801EA250 000000E0  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801EA254 000000E4  38 A5 78 C8 */	addi r5, r5, stringBase0@l
+/* 801EA250 000000E0  3C A0 80 39 */	lis r5, d_menu_d_menu_ring__stringBase0@ha
+/* 801EA254 000000E4  38 A5 78 C8 */	addi r5, r5, d_menu_d_menu_ring__stringBase0@l
 /* 801EA258 000000E8  38 A5 00 2E */	addi r5, r5, 0x2e
 /* 801EA25C 000000EC  81 83 00 00 */	lwz r12, 0(r3)
 /* 801EA260 000000F0  81 8C 00 18 */	lwz r12, 0x18(r12)
@@ -1216,11 +1216,11 @@ lbl_801EA314:
 /* 801EA318 00000004  38 7F 03 78 */	addi r3, r31, 0x378
 /* 801EA31C 00000008  80 9F 00 04 */	lwz r4, 4(r31)
 /* 801EA320 0000000C  80 BF 00 5C */	lwz r5, 0x5c(r31)
-/* 801EA324 00000010  3C C0 80 39 */	lis r6, stringBase0@ha
-/* 801EA328 00000014  38 C6 78 C8 */	addi r6, r6, stringBase0@l
+/* 801EA324 00000010  3C C0 80 39 */	lis r6, d_menu_d_menu_ring__stringBase0@ha
+/* 801EA328 00000014  38 C6 78 C8 */	addi r6, r6, d_menu_d_menu_ring__stringBase0@l
 /* 801EA32C 00000018  38 C6 00 3E */	addi r6, r6, 0x3e
 /* 801EA330 0000001C  3C E0 00 02 */	lis r7, 2
-/* 801EA334 00000020  81 1C 5C E8 */	lwz r8, 0x5ce8(r28)
+/* 801EA334 00000020  81 1C 5C E8 */	lwz r8, 0x5ce8(r28)	/* effective address: 8040BEA8 */
 /* 801EA338 00000024  48 06 AE 4D */	bl dPaneClass_setPriority__FPPvP7JKRHeapP9J2DScreenPCcUlP10JKRArchive
 /* 801EA33C 00000028  80 7F 00 5C */	lwz r3, 0x5c(r31)
 /* 801EA340 0000002C  48 06 AD A9 */	bl dPaneClass_showNullPane__FP9J2DScreen
@@ -1249,11 +1249,11 @@ lbl_801EA390:
 /* 801EA394 00000004  38 7F 03 7C */	addi r3, r31, 0x37c
 /* 801EA398 00000008  80 9F 00 04 */	lwz r4, 4(r31)
 /* 801EA39C 0000000C  80 BF 00 64 */	lwz r5, 0x64(r31)
-/* 801EA3A0 00000010  3C C0 80 39 */	lis r6, stringBase0@ha
-/* 801EA3A4 00000014  38 C6 78 C8 */	addi r6, r6, stringBase0@l
+/* 801EA3A0 00000010  3C C0 80 39 */	lis r6, d_menu_d_menu_ring__stringBase0@ha
+/* 801EA3A4 00000014  38 C6 78 C8 */	addi r6, r6, d_menu_d_menu_ring__stringBase0@l
 /* 801EA3A8 00000018  38 C6 00 64 */	addi r6, r6, 0x64
 /* 801EA3AC 0000001C  3C E0 00 02 */	lis r7, 2
-/* 801EA3B0 00000020  81 1C 5C E8 */	lwz r8, 0x5ce8(r28)
+/* 801EA3B0 00000020  81 1C 5C E8 */	lwz r8, 0x5ce8(r28)	/* effective address: 8040BEA8 */
 /* 801EA3B4 00000024  48 06 AD D1 */	bl dPaneClass_setPriority__FPPvP7JKRHeapP9J2DScreenPCcUlP10JKRArchive
 /* 801EA3B8 00000028  80 7F 00 64 */	lwz r3, 0x64(r31)
 /* 801EA3BC 0000002C  48 06 AD 2D */	bl dPaneClass_showNullPane__FP9J2DScreen
@@ -1381,8 +1381,8 @@ lbl_801EA464:
 /* 801EA598 00000134  3A 40 00 00 */	li r18, 0
 /* 801EA59C 00000138  3A 80 00 00 */	li r20, 0
 /* 801EA5A0 0000013C  3A A1 00 28 */	addi r21, r1, 0x28
-/* 801EA5A4 00000140  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801EA5A8 00000144  3A 63 78 C8 */	addi r19, r3, stringBase0@l
+/* 801EA5A4 00000140  3C 60 80 39 */	lis r3, d_menu_d_menu_ring__stringBase0@ha
+/* 801EA5A8 00000144  3A 63 78 C8 */	addi r19, r3, d_menu_d_menu_ring__stringBase0@l
 lbl_801EA5AC:
 /* 801EA5AC 00000000  4B E2 A4 45 */	bl mDoExt_getMesgFont__Fv
 /* 801EA5B0 00000004  7C 64 1B 78 */	mr r4, r3
@@ -1411,7 +1411,7 @@ lbl_801EA5AC:
 /* 801EA60C 00000060  3C A0 80 43 */	lis r5, g_ringHIO@ha
 /* 801EA610 00000064  38 A5 FA FC */	addi r5, r5, g_ringHIO@l
 /* 801EA614 00000068  C0 25 00 28 */	lfs f1, 0x28(r5)	/* effective address: 8042FB24 */
-/* 801EA618 0000006C  80 BB 5D 30 */	lwz r5, 0x5d30(r27)
+/* 801EA618 0000006C  80 BB 5D 30 */	lwz r5, 0x5d30(r27)	/* effective address: 8040BEF0 */
 /* 801EA61C 00000070  4B FA 9C 05 */	bl __ct__16dSelect_cursor_cFUcfP10JKRArchive
 /* 801EA620 00000074  7C 60 1B 78 */	mr r0, r3
 lbl_801EA624:
@@ -1424,7 +1424,7 @@ lbl_801EA624:
 /* 801EA63C 00000018  7C 60 1B 79 */	or. r0, r3, r3
 /* 801EA640 0000001C  41 82 00 1C */	beq lbl_801EA65C
 /* 801EA644 00000020  80 9F 00 04 */	lwz r4, 4(r31)
-/* 801EA648 00000024  80 BC 5C E8 */	lwz r5, 0x5ce8(r28)
+/* 801EA648 00000024  80 BC 5C E8 */	lwz r5, 0x5ce8(r28)	/* effective address: 8040BEA8 */
 /* 801EA64C 00000028  7F 46 D3 78 */	mr r6, r26
 /* 801EA650 0000002C  38 E0 00 01 */	li r7, 1
 /* 801EA654 00000030  4B FF 01 01 */	bl __ct__19dMenu_ItemExplain_cFP10JKRExpHeapP10JKRArchiveP9STControlb

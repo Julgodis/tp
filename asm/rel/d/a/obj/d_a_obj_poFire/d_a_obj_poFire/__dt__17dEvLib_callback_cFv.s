@@ -5,12 +5,12 @@ lbl_80CB3DDC:
 /* 80CB3DE8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CB3DEC 00000010  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80CB3DF0 00000014  41 82 00 1C */	beq lbl_80CB3E0C
-/* 80CB3DF4 00000018  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 80CB3DF8 0000001C  38 05 00 00 */	addi r0, r5, 0x0000 /* 0x00000000@l */
+/* 80CB3DF4 00000018  3C A0 80 CB */	lis r5, __vt__17dEvLib_callback_c@ha
+/* 80CB3DF8 0000001C  38 05 40 D0 */	addi r0, r5, __vt__17dEvLib_callback_c@l
 /* 80CB3DFC 00000020  90 1F 00 00 */	stw r0, 0(r31)
 /* 80CB3E00 00000024  7C 80 07 35 */	extsh. r0, r4
 /* 80CB3E04 00000028  40 81 00 08 */	ble lbl_80CB3E0C
-/* 80CB3E08 0000002C  4B FF EA B1 */	bl _unresolved
+/* 80CB3E08 0000002C  4B 61 AF 34 */	b __dl__FPv
 lbl_80CB3E0C:
 /* 80CB3E0C 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80CB3E10 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

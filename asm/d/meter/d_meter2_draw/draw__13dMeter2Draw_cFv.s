@@ -206,23 +206,23 @@ lbl_8021182C:
 /* 80211830 00000004  C0 05 06 20 */	lfs f0, 0x620(r5)
 /* 80211834 00000008  FC 00 F0 40 */	fcmpo cr0, f0, f30
 /* 80211838 00000000  40 81 00 54 */	ble lbl_8021188C
-/* 8021183C 00000004  80 16 04 74 */	lwz r0, 0x474(r22)
+/* 8021183C 00000004  80 16 04 74 */	lwz r0, 0x474(r22)	/* effective address: 8042F03C */
 /* 80211840 00000008  90 01 00 48 */	stw r0, 0x48(r1)
-/* 80211844 0000000C  80 16 04 78 */	lwz r0, 0x478(r22)
+/* 80211844 0000000C  80 16 04 78 */	lwz r0, 0x478(r22)	/* effective address: 8042F040 */
 /* 80211848 00000010  90 01 00 4C */	stw r0, 0x4c(r1)
-/* 8021184C 00000014  80 16 04 6C */	lwz r0, 0x46c(r22)
+/* 8021184C 00000014  80 16 04 6C */	lwz r0, 0x46c(r22)	/* effective address: 8042F034 */
 /* 80211850 00000018  90 01 00 50 */	stw r0, 0x50(r1)
-/* 80211854 0000001C  80 16 04 70 */	lwz r0, 0x470(r22)
+/* 80211854 0000001C  80 16 04 70 */	lwz r0, 0x470(r22)	/* effective address: 8042F038 */
 /* 80211858 00000020  90 01 00 54 */	stw r0, 0x54(r1)
 /* 8021185C 00000024  7F 23 CB 78 */	mr r3, r25
 /* 80211860 00000028  80 85 03 40 */	lwz r4, 0x340(r5)
 /* 80211864 0000002C  38 A5 06 20 */	addi r5, r5, 0x620
-/* 80211868 00000030  C0 36 03 DC */	lfs f1, 0x3dc(r22)
+/* 80211868 00000030  C0 36 03 DC */	lfs f1, 0x3dc(r22)	/* effective address: 8042EFA4 */
 /* 8021186C 00000034  38 C1 00 54 */	addi r6, r1, 0x54
 /* 80211870 00000038  38 E1 00 50 */	addi r7, r1, 0x50
 /* 80211874 0000003C  39 01 00 4C */	addi r8, r1, 0x4c
 /* 80211878 00000040  39 21 00 48 */	addi r9, r1, 0x48
-/* 8021187C 00000044  C0 56 04 7C */	lfs f2, 0x47c(r22)
+/* 8021187C 00000044  C0 56 04 7C */	lfs f2, 0x47c(r22)	/* effective address: 8042F044 */
 /* 80211880 00000048  38 15 07 5C */	addi r0, r21, 0x75c
 /* 80211884 0000004C  7D 59 00 AE */	lbzx r10, r25, r0
 /* 80211888 00000050  48 00 27 69 */	bl drawPikari__13dMeter2Draw_cFP8CPaneMgrPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc
@@ -244,8 +244,8 @@ lbl_8021189C:
 /* 802118C0 00000024  A8 79 07 56 */	lha r3, 0x756(r25)
 /* 802118C4 00000028  7C 60 07 35 */	extsh. r0, r3
 /* 802118C8 0000002C  41 80 00 E4 */	blt lbl_802119AC
-/* 802118CC 00000030  C3 A4 0E E8 */	lfs f29, 0xee8(r4)
-/* 802118D0 00000034  A8 04 0E CE */	lha r0, 0xece(r4)
+/* 802118CC 00000030  C3 A4 0E E8 */	lfs f29, 0xee8(r4)	/* effective address: 8042FAB0 */
+/* 802118D0 00000034  A8 04 0E CE */	lha r0, 0xece(r4)	/* effective address: 8042FA96 */
 /* 802118D4 00000038  1C A0 00 0F */	mulli r5, r0, 0xf
 /* 802118D8 0000003C  7C 03 28 00 */	cmpw r3, r5
 /* 802118DC 00000040  41 81 00 4C */	bgt lbl_80211928
@@ -322,19 +322,19 @@ lbl_802119D4:
 /* 802119D8 00000004  C0 1B 06 6C */	lfs f0, 0x66c(r27)
 /* 802119DC 00000008  FC 00 F0 40 */	fcmpo cr0, f0, f30
 /* 802119E0 00000000  40 81 00 A0 */	ble lbl_80211A80
-/* 802119E4 00000004  80 1E 0F 00 */	lwz r0, 0xf00(r30)
+/* 802119E4 00000004  80 1E 0F 00 */	lwz r0, 0xf00(r30)	/* effective address: 8042FAC8 */
 /* 802119E8 00000008  90 01 00 38 */	stw r0, 0x38(r1)
-/* 802119EC 0000000C  80 1E 0F 08 */	lwz r0, 0xf08(r30)
+/* 802119EC 0000000C  80 1E 0F 08 */	lwz r0, 0xf08(r30)	/* effective address: 8042FAD0 */
 /* 802119F0 00000010  90 01 00 3C */	stw r0, 0x3c(r1)
-/* 802119F4 00000014  80 1E 0E F0 */	lwz r0, 0xef0(r30)
+/* 802119F4 00000014  80 1E 0E F0 */	lwz r0, 0xef0(r30)	/* effective address: 8042FAB8 */
 /* 802119F8 00000018  90 01 00 40 */	stw r0, 0x40(r1)
-/* 802119FC 0000001C  80 1E 0E F8 */	lwz r0, 0xef8(r30)
+/* 802119FC 0000001C  80 1E 0E F8 */	lwz r0, 0xef8(r30)	/* effective address: 8042FAC0 */
 /* 80211A00 00000020  90 01 00 44 */	stw r0, 0x44(r1)
 /* 80211A04 00000024  7F 23 CB 78 */	mr r3, r25
 /* 80211A08 00000028  3A B8 01 F4 */	addi r21, r24, 0x1f4
 /* 80211A0C 0000002C  7C 99 A8 2E */	lwzx r4, r25, r21
 /* 80211A10 00000030  7F A5 EB 78 */	mr r5, r29
-/* 80211A14 00000034  C0 3E 0F 20 */	lfs f1, 0xf20(r30)
+/* 80211A14 00000034  C0 3E 0F 20 */	lfs f1, 0xf20(r30)	/* effective address: 8042FAE8 */
 /* 80211A18 00000038  38 C1 00 44 */	addi r6, r1, 0x44
 /* 80211A1C 0000003C  38 E1 00 40 */	addi r7, r1, 0x40
 /* 80211A20 00000040  39 01 00 3C */	addi r8, r1, 0x3c
@@ -342,33 +342,33 @@ lbl_802119D4:
 /* 80211A28 00000048  FC 40 F0 90 */	fmr f2, f30
 /* 80211A2C 0000004C  39 40 00 03 */	li r10, 3
 /* 80211A30 00000050  48 00 25 C1 */	bl drawPikari__13dMeter2Draw_cFP8CPaneMgrPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc
-/* 80211A34 00000054  80 1E 0E FC */	lwz r0, 0xefc(r30)
+/* 80211A34 00000054  80 1E 0E FC */	lwz r0, 0xefc(r30)	/* effective address: 8042FAC4 */
 /* 80211A38 00000058  90 01 00 28 */	stw r0, 0x28(r1)
-/* 80211A3C 0000005C  80 1E 0F 04 */	lwz r0, 0xf04(r30)
+/* 80211A3C 0000005C  80 1E 0F 04 */	lwz r0, 0xf04(r30)	/* effective address: 8042FACC */
 /* 80211A40 00000060  90 01 00 2C */	stw r0, 0x2c(r1)
-/* 80211A44 00000064  80 1E 0E EC */	lwz r0, 0xeec(r30)
+/* 80211A44 00000064  80 1E 0E EC */	lwz r0, 0xeec(r30)	/* effective address: 8042FAB4 */
 /* 80211A48 00000068  90 01 00 30 */	stw r0, 0x30(r1)
-/* 80211A4C 0000006C  80 1E 0E F4 */	lwz r0, 0xef4(r30)
+/* 80211A4C 0000006C  80 1E 0E F4 */	lwz r0, 0xef4(r30)	/* effective address: 8042FABC */
 /* 80211A50 00000070  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80211A54 00000074  7F 23 CB 78 */	mr r3, r25
 /* 80211A58 00000078  7C 99 A8 2E */	lwzx r4, r25, r21
 /* 80211A5C 0000007C  38 BB 06 6C */	addi r5, r27, 0x66c
-/* 80211A60 00000080  C0 3E 0F 1C */	lfs f1, 0xf1c(r30)
+/* 80211A60 00000080  C0 3E 0F 1C */	lfs f1, 0xf1c(r30)	/* effective address: 8042FAE4 */
 /* 80211A64 00000084  38 C1 00 34 */	addi r6, r1, 0x34
 /* 80211A68 00000088  38 E1 00 30 */	addi r7, r1, 0x30
 /* 80211A6C 0000008C  39 01 00 2C */	addi r8, r1, 0x2c
 /* 80211A70 00000090  39 21 00 28 */	addi r9, r1, 0x28
-/* 80211A74 00000094  C0 5E 0F 0C */	lfs f2, 0xf0c(r30)
+/* 80211A74 00000094  C0 5E 0F 0C */	lfs f2, 0xf0c(r30)	/* effective address: 8042FAD4 */
 /* 80211A78 00000098  39 40 00 03 */	li r10, 3
 /* 80211A7C 0000009C  48 00 25 75 */	bl drawPikari__13dMeter2Draw_cFP8CPaneMgrPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc
 lbl_80211A80:
-/* 80211A80 00000000  88 1E 0F 24 */	lbz r0, 0xf24(r30)
+/* 80211A80 00000000  88 1E 0F 24 */	lbz r0, 0xf24(r30)	/* effective address: 8042FAEC */
 /* 80211A84 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 80211A88 00000008  41 82 00 28 */	beq lbl_80211AB0
 /* 80211A8C 0000000C  7F 83 E3 78 */	mr r3, r28
-/* 80211A90 00000010  88 9F 4E 0C */	lbz r4, 0x4e0c(r31)
+/* 80211A90 00000010  88 9F 4E 0C */	lbz r4, 0x4e0c(r31)	/* effective address: 8040AFCC */
 /* 80211A94 00000014  4B E2 28 AD */	bl getLightDropNum__16dSv_light_drop_cCFUc
-/* 80211A98 00000018  88 9F 5E A1 */	lbz r4, 0x5ea1(r31)
+/* 80211A98 00000018  88 9F 5E A1 */	lbz r4, 0x5ea1(r31)	/* effective address: 8040C061 */
 /* 80211A9C 0000001C  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 80211AA0 00000020  7C 04 00 40 */	cmplw r4, r0
 /* 80211AA4 00000024  41 82 00 0C */	beq lbl_80211AB0
@@ -391,13 +391,13 @@ lbl_80211ADC:
 /* 80211AE0 00000004  C0 05 06 2C */	lfs f0, 0x62c(r5)
 /* 80211AE4 00000008  FC 00 F0 40 */	fcmpo cr0, f0, f30
 /* 80211AE8 00000000  40 81 00 54 */	ble lbl_80211B3C
-/* 80211AEC 00000004  80 16 0E DC */	lwz r0, 0xedc(r22)
+/* 80211AEC 00000004  80 16 0E DC */	lwz r0, 0xedc(r22)	/* effective address: 8042FAA4 */
 /* 80211AF0 00000008  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80211AF4 0000000C  80 16 0E E0 */	lwz r0, 0xee0(r22)
+/* 80211AF4 0000000C  80 16 0E E0 */	lwz r0, 0xee0(r22)	/* effective address: 8042FAA8 */
 /* 80211AF8 00000010  90 01 00 1C */	stw r0, 0x1c(r1)
-/* 80211AFC 00000014  80 16 0E D4 */	lwz r0, 0xed4(r22)
+/* 80211AFC 00000014  80 16 0E D4 */	lwz r0, 0xed4(r22)	/* effective address: 8042FA9C */
 /* 80211B00 00000018  90 01 00 20 */	stw r0, 0x20(r1)
-/* 80211B04 0000001C  80 16 0E D8 */	lwz r0, 0xed8(r22)
+/* 80211B04 0000001C  80 16 0E D8 */	lwz r0, 0xed8(r22)	/* effective address: 8042FAA0 */
 /* 80211B08 00000020  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80211B0C 00000024  7F 23 CB 78 */	mr r3, r25
 /* 80211B10 00000028  38 1A 01 F4 */	addi r0, r26, 0x1f4

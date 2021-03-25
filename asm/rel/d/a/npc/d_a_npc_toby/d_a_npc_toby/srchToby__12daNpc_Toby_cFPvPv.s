@@ -4,8 +4,8 @@ lbl_80B1F088:
 /* 80B1F090 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80B1F094 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80B1F098 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80B1F09C 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80B1F0A0 00000018  80 03 00 00 */	lwz r0, 0x0000(r3)
+/* 80B1F09C 00000014  3C 60 80 45 */	lis r3, mFindCount__8daNpcT_c@ha
+/* 80B1F0A0 00000018  80 03 0F DC */	lwz r0, mFindCount__8daNpcT_c@l(r3)
 /* 80B1F0A4 0000001C  2C 00 00 32 */	cmpwi r0, 0x32
 /* 80B1F0A8 00000020  40 80 00 64 */	bge lbl_80B1F10C
 /* 80B1F0AC 00000024  28 1F 00 00 */	cmplwi r31, 0
@@ -19,21 +19,21 @@ lbl_80B1F088:
 lbl_80B1F0CC:
 /* 80B1F0CC 00000000  38 60 FF FF */	li r3, -1
 lbl_80B1F0D0:
-/* 80B1F0D0 00000000  4B FF F4 E9 */	bl _unresolved
+/* 80B1F0D0 00000000  4B 50 22 CC */	b fpcEx_IsExist__FUi
 /* 80B1F0D4 00000004  2C 03 00 00 */	cmpwi r3, 0
 /* 80B1F0D8 00000008  41 82 00 34 */	beq lbl_80B1F10C
 /* 80B1F0DC 0000000C  A8 1F 00 08 */	lha r0, 8(r31)
 /* 80B1F0E0 00000010  2C 00 02 78 */	cmpwi r0, 0x278
 /* 80B1F0E4 00000014  40 82 00 28 */	bne lbl_80B1F10C
-/* 80B1F0E8 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80B1F0EC 0000001C  38 A3 00 00 */	addi r5, r3, 0x0000 /* 0x00000000@l */
-/* 80B1F0F0 00000020  80 85 00 00 */	lwz r4, 0(r5)
+/* 80B1F0E8 00000018  3C 60 80 45 */	lis r3, mFindCount__8daNpcT_c@ha
+/* 80B1F0EC 0000001C  38 A3 0F DC */	addi r5, r3, mFindCount__8daNpcT_c@l
+/* 80B1F0F0 00000020  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80450FDC */
 /* 80B1F0F4 00000024  54 80 10 3A */	slwi r0, r4, 2
-/* 80B1F0F8 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80B1F0FC 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80B1F0F8 00000028  3C 60 80 42 */	lis r3, mFindActorPtrs__8daNpcT_c@ha
+/* 80B1F0FC 0000002C  38 63 57 08 */	addi r3, r3, mFindActorPtrs__8daNpcT_c@l
 /* 80B1F100 00000030  7F E3 01 2E */	stwx r31, r3, r0
 /* 80B1F104 00000034  38 04 00 01 */	addi r0, r4, 1
-/* 80B1F108 00000038  90 05 00 00 */	stw r0, 0(r5)
+/* 80B1F108 00000038  90 05 00 00 */	stw r0, 0(r5)	/* effective address: 80450FDC */
 lbl_80B1F10C:
 /* 80B1F10C 00000000  38 60 00 00 */	li r3, 0
 /* 80B1F110 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

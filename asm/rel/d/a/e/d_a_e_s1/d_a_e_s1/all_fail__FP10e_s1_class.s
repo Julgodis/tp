@@ -3,9 +3,9 @@ lbl_8077CAA4:
 /* 8077CAA8 00000004  7C 08 02 A6 */	mflr r0
 /* 8077CAAC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8077CAB0 0000000C  7C 64 1B 78 */	mr r4, r3
-/* 8077CAB4 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8077CAB8 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 8077CABC 00000018  4B FF E0 3D */	bl _unresolved
+/* 8077CAB4 00000010  3C 60 80 78 */	lis r3, s_allfail_sub__FPvPv@ha
+/* 8077CAB8 00000014  38 63 CA 0C */	addi r3, r3, s_allfail_sub__FPvPv@l
+/* 8077CABC 00000018  4B 8A 48 7C */	b fpcEx_Search__FPFPvPv_PvPv
 /* 8077CAC0 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8077CAC4 00000020  7C 08 03 A6 */	mtlr r0
 /* 8077CAC8 00000024  38 21 00 10 */	addi r1, r1, 0x10

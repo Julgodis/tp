@@ -276,7 +276,7 @@ extern "C" void __dt__16renderingDAmap_cFv(); // 1
 extern "C" extern u8 const data_80378E8C[36];
 extern "C" extern u8 const data_80378EB0[36];
 extern "C" extern u8 const data_80378ED4[36];
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_map_d_map__stringBase0;
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern void* __vt__28dDrawPathWithNormalPattern_c[16];
 extern "C" extern void* __vt__15dRenderingMap_c[23];

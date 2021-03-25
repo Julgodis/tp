@@ -286,8 +286,8 @@ lbl_800DD7B4:
 /* 800DD7EC 00000038  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 800DD7F0 0000003C  40 82 00 1C */	bne lbl_800DD80C
 lbl_800DD7F4:
-/* 800DD7F4 00000000  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800DD7F8 00000004  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800DD7F4 00000000  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800DD7F8 00000004  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800DD7FC 00000008  38 63 00 48 */	addi r3, r3, 0x48
 /* 800DD800 0000000C  4B FC 02 61 */	bl checkStageName__9daAlink_cFPCc
 /* 800DD804 00000010  54 60 06 3F */	clrlwi. r0, r3, 0x18

@@ -164,9 +164,9 @@ lbl_80110AC0:
 lbl_80110B58:
 /* 80110B58 00000000  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80110B5C 00000004  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80110B60 00000008  C0 3E 00 0C */	lfs f1, 0xc(r30)
-/* 80110B64 0000000C  C0 5E 00 1C */	lfs f2, 0x1c(r30)
-/* 80110B68 00000010  C0 7E 00 2C */	lfs f3, 0x2c(r30)
+/* 80110B60 00000008  C0 3E 00 0C */	lfs f1, 0xc(r30)	/* effective address: 80434BF0 */
+/* 80110B64 0000000C  C0 5E 00 1C */	lfs f2, 0x1c(r30)	/* effective address: 80434C00 */
+/* 80110B68 00000010  C0 7E 00 2C */	lfs f3, 0x2c(r30)	/* effective address: 80434C10 */
 /* 80110B6C 00000014  48 23 5D 7D */	bl PSMTXTrans
 /* 80110B70 00000018  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80110B74 0000001C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l

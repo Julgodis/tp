@@ -5,25 +5,25 @@ lbl_804CDDAC:
 /* 804CDDB8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804CDDBC 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 804CDDC0 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 804CDDC4 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804CDDC8 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 804CDDC4 00000018  3C 60 80 4D */	lis r3, l_cyl_src@ha
+/* 804CDDC8 0000001C  3B E3 E3 F4 */	addi r31, r3, l_cyl_src@l
 /* 804CDDCC 00000020  38 7E 09 54 */	addi r3, r30, 0x954
-/* 804CDDD0 00000024  C0 3F 00 7C */	lfs f1, 0x7c(r31)
-/* 804CDDD4 00000028  C0 5F 00 A8 */	lfs f2, 0xa8(r31)
-/* 804CDDD8 0000002C  4B FF E9 E1 */	bl _unresolved
-/* 804CDDDC 00000030  C0 3F 00 7C */	lfs f1, 0x7c(r31)
+/* 804CDDD0 00000024  C0 3F 00 7C */	lfs f1, 0x7c(r31)	/* effective address: 804CE470 */
+/* 804CDDD4 00000028  C0 5F 00 A8 */	lfs f2, 0xa8(r31)	/* effective address: 804CE49C */
+/* 804CDDD8 0000002C  4B DA 29 68 */	b cLib_chaseF__FPfff
+/* 804CDDDC 00000030  C0 3F 00 7C */	lfs f1, 0x7c(r31)	/* effective address: 804CE470 */
 /* 804CDDE0 00000034  C0 1E 09 54 */	lfs f0, 0x954(r30)
 /* 804CDDE4 00000038  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 804CDDE8 0000003C  40 82 00 50 */	bne lbl_804CDE38
 /* 804CDDEC 00000040  38 7E 09 4C */	addi r3, r30, 0x94c
-/* 804CDDF0 00000044  C0 3F 00 44 */	lfs f1, 0x44(r31)
-/* 804CDDF4 00000048  C0 5F 00 94 */	lfs f2, 0x94(r31)
-/* 804CDDF8 0000004C  4B FF E9 C1 */	bl _unresolved
+/* 804CDDF0 00000044  C0 3F 00 44 */	lfs f1, 0x44(r31)	/* effective address: 804CE438 */
+/* 804CDDF4 00000048  C0 5F 00 94 */	lfs f2, 0x94(r31)	/* effective address: 804CE488 */
+/* 804CDDF8 0000004C  4B DA 29 48 */	b cLib_chaseF__FPfff
 /* 804CDDFC 00000050  A8 1E 09 5E */	lha r0, 0x95e(r30)
 /* 804CDE00 00000054  1C 00 0B B8 */	mulli r0, r0, 0xbb8
 /* 804CDE04 00000058  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
-/* 804CDE08 0000005C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804CDE0C 00000060  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 804CDE08 0000005C  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
+/* 804CDE0C 00000060  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 804CDE10 00000064  7C 23 04 2E */	lfsx f1, r3, r0
 /* 804CDE14 00000068  C0 1E 09 4C */	lfs f0, 0x94c(r30)
 /* 804CDE18 0000006C  EC 00 00 72 */	fmuls f0, f0, f1
@@ -35,7 +35,7 @@ lbl_804CDDAC:
 /* 804CDE30 00000084  B0 1E 09 5E */	sth r0, 0x95e(r30)
 /* 804CDE34 00000088  48 00 00 0C */	b lbl_804CDE40
 lbl_804CDE38:
-/* 804CDE38 00000000  C0 1F 00 44 */	lfs f0, 0x44(r31)
+/* 804CDE38 00000000  C0 1F 00 44 */	lfs f0, 0x44(r31)	/* effective address: 804CE438 */
 /* 804CDE3C 00000004  D0 1E 09 50 */	stfs f0, 0x950(r30)
 lbl_804CDE40:
 /* 804CDE40 00000000  C0 3E 09 50 */	lfs f1, 0x950(r30)

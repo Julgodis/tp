@@ -31,31 +31,31 @@ lbl_80BED704:
 /* 80BED704 00000000  38 00 00 01 */	li r0, 1
 /* 80BED708 00000004  98 1E 10 AC */	stb r0, 0x10ac(r30)
 /* 80BED70C 00000008  38 7E 10 AD */	addi r3, r30, 0x10ad
-/* 80BED710 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80BED714 00000010  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80BED710 0000000C  3C 80 80 BF */	lis r4, stringBase0@ha
+/* 80BED714 00000010  38 84 E1 E8 */	addi r4, r4, stringBase0@l
 /* 80BED718 00000014  38 84 00 2A */	addi r4, r4, 0x2a
 /* 80BED71C 00000018  4C C6 31 82 */	crclr 6
-/* 80BED720 0000001C  4B FF EF 19 */	bl _unresolved
+/* 80BED720 0000001C  4B 77 8D BC */	b sprintf
 /* 80BED724 00000020  38 7E 05 6C */	addi r3, r30, 0x56c
 /* 80BED728 00000024  38 9E 10 AD */	addi r4, r30, 0x10ad
-/* 80BED72C 00000028  4B FF EF 0D */	bl _unresolved
+/* 80BED72C 00000028  4B 43 F7 90 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80BED730 0000002C  2C 03 00 04 */	cmpwi r3, 4
 /* 80BED734 00000030  41 82 00 08 */	beq lbl_80BED73C
 /* 80BED738 00000034  48 00 00 54 */	b lbl_80BED78C
 lbl_80BED73C:
 /* 80BED73C 00000000  7F C3 F3 78 */	mr r3, r30
-/* 80BED740 00000004  4B FF EE F9 */	bl _unresolved
+/* 80BED740 00000004  4B 44 41 30 */	b getArcName__12daSetBgObj_cFP10fopAc_ac_c
 /* 80BED744 00000008  7C 64 1B 78 */	mr r4, r3
 /* 80BED748 0000000C  38 7E 05 74 */	addi r3, r30, 0x574
-/* 80BED74C 00000010  4B FF EE ED */	bl _unresolved
+/* 80BED74C 00000010  4B 43 F7 70 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80BED750 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 80BED754 00000018  2C 1F 00 04 */	cmpwi r31, 4
 /* 80BED758 0000001C  40 82 00 30 */	bne lbl_80BED788
 /* 80BED75C 00000020  7F C3 F3 78 */	mr r3, r30
-/* 80BED760 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80BED764 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80BED760 00000024  3C 80 80 BF */	lis r4, createSolidHeap__FP10fopAc_ac_c@ha
+/* 80BED764 00000028  38 84 D6 80 */	addi r4, r4, createSolidHeap__FP10fopAc_ac_c@l
 /* 80BED768 0000002C  38 A0 08 20 */	li r5, 0x820
-/* 80BED76C 00000030  4B FF EE CD */	bl _unresolved
+/* 80BED76C 00000030  4B 42 CD 44 */	b fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
 /* 80BED770 00000034  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80BED774 00000038  40 82 00 0C */	bne lbl_80BED780
 /* 80BED778 0000003C  38 60 00 05 */	li r3, 5

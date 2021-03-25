@@ -5,8 +5,8 @@ lbl_80CF766C:
 /* 80CF7678 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80CF767C 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80CF7680 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80CF7684 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80CF7688 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
+/* 80CF7684 00000018  3C 80 80 D0 */	lis r4, l_sph_src_at@ha
+/* 80CF7688 0000001C  3B E4 83 A0 */	addi r31, r4, l_sph_src_at@l
 /* 80CF768C 00000020  48 00 02 ED */	bl checkHit__14daObjSwLight_cFv
 /* 80CF7690 00000024  88 7E 0A E6 */	lbz r3, 0xae6(r30)
 /* 80CF7694 00000028  54 60 07 FF */	clrlwi. r0, r3, 0x1f
@@ -26,21 +26,21 @@ lbl_80CF76C4:
 /* 80CF76C4 00000000  88 7E 0A E1 */	lbz r3, 0xae1(r30)
 /* 80CF76C8 00000004  28 03 00 05 */	cmplwi r3, 5
 /* 80CF76CC 00000008  40 80 00 10 */	bge lbl_80CF76DC
-/* 80CF76D0 0000000C  C0 1F 00 84 */	lfs f0, 0x84(r31)
+/* 80CF76D0 0000000C  C0 1F 00 84 */	lfs f0, 0x84(r31)	/* effective address: 80CF8424 */
 /* 80CF76D4 00000010  D0 1E 0A DC */	stfs f0, 0xadc(r30)
 /* 80CF76D8 00000014  48 00 00 8C */	b lbl_80CF7764
 lbl_80CF76DC:
 /* 80CF76DC 00000000  40 82 00 10 */	bne lbl_80CF76EC
-/* 80CF76E0 00000004  C0 1F 00 98 */	lfs f0, 0x98(r31)
+/* 80CF76E0 00000004  C0 1F 00 98 */	lfs f0, 0x98(r31)	/* effective address: 80CF8438 */
 /* 80CF76E4 00000008  D0 1E 0A DC */	stfs f0, 0xadc(r30)
 /* 80CF76E8 0000000C  48 00 00 7C */	b lbl_80CF7764
 lbl_80CF76EC:
 /* 80CF76EC 00000000  28 03 00 32 */	cmplwi r3, 0x32
 /* 80CF76F0 00000004  40 80 00 48 */	bge lbl_80CF7738
-/* 80CF76F4 00000008  C0 7F 00 80 */	lfs f3, 0x80(r31)
-/* 80CF76F8 0000000C  C0 5F 00 9C */	lfs f2, 0x9c(r31)
+/* 80CF76F4 00000008  C0 7F 00 80 */	lfs f3, 0x80(r31)	/* effective address: 80CF8420 */
+/* 80CF76F8 0000000C  C0 5F 00 9C */	lfs f2, 0x9c(r31)	/* effective address: 80CF843C */
 /* 80CF76FC 00000010  38 03 FF FB */	addi r0, r3, -5
-/* 80CF7700 00000014  C8 3F 00 A8 */	lfd f1, 0xa8(r31)
+/* 80CF7700 00000014  C8 3F 00 A8 */	lfd f1, 0xa8(r31)	/* effective address: 80CF8448 */
 /* 80CF7704 00000018  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80CF7708 0000001C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80CF770C 00000020  3C 00 43 30 */	lis r0, 0x4330
@@ -48,7 +48,7 @@ lbl_80CF76EC:
 /* 80CF7714 00000028  C8 01 00 08 */	lfd f0, 8(r1)
 /* 80CF7718 0000002C  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80CF771C 00000030  EC 22 00 32 */	fmuls f1, f2, f0
-/* 80CF7720 00000034  C0 1F 00 A0 */	lfs f0, 0xa0(r31)
+/* 80CF7720 00000034  C0 1F 00 A0 */	lfs f0, 0xa0(r31)	/* effective address: 80CF8440 */
 /* 80CF7724 00000038  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80CF7728 0000003C  EC 02 00 2A */	fadds f0, f2, f0
 /* 80CF772C 00000040  EC 03 00 32 */	fmuls f0, f3, f0
@@ -56,7 +56,7 @@ lbl_80CF76EC:
 /* 80CF7734 00000048  48 00 00 30 */	b lbl_80CF7764
 lbl_80CF7738:
 /* 80CF7738 00000000  40 82 00 10 */	bne lbl_80CF7748
-/* 80CF773C 00000004  C0 1F 00 80 */	lfs f0, 0x80(r31)
+/* 80CF773C 00000004  C0 1F 00 80 */	lfs f0, 0x80(r31)	/* effective address: 80CF8420 */
 /* 80CF7740 00000008  D0 1E 0A DC */	stfs f0, 0xadc(r30)
 /* 80CF7744 0000000C  48 00 00 20 */	b lbl_80CF7764
 lbl_80CF7748:

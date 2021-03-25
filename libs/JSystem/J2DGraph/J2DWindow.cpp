@@ -11,47 +11,6 @@
 // Types:
 // 
 
-struct JKRArchive {
-};
-
-struct J2DMaterial {
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct ResTIMG {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct JSUStreamSeekFrom {
-};
-
-struct JSURandomInputStream {
-	/* 802DC458 */ void peek(void*, s32);
-	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
-};
-
-struct _GXCullMode {
-};
-
-struct J2DAnmBase {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -64,13 +23,54 @@ struct JGeometry {
 struct ResFONT {
 };
 
-struct J2DAnmTransform {
+struct ResTIMG {
+};
+
+struct J2DMaterial {
+};
+
+struct JSUStreamSeekFrom {
+};
+
+struct JSURandomInputStream {
+	/* 802DC458 */ void peek(void*, s32);
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
 };
 
 struct J2DAnmVisibilityFull {
 };
 
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmVtxColor {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmBase {
+};
+
 struct J2DAnmColor {
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct JKRArchive {
+};
+
+struct _GXCullMode {
 };
 
 struct J2DPane {

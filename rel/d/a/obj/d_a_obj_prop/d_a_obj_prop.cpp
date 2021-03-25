@@ -12,6 +12,8 @@
 // 
 
 struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daObjProp_c {
@@ -26,17 +28,44 @@ struct daObjProp_c {
 	/* 80CB54F4 */ void setModelMtx();
 };
 
+struct J3DModel {
+};
+
+struct J3DModelData {
+};
+
+struct request_of_phase_process_class {
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct cXyz {
+};
+
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
 // 
 // Forward References:
 // 
 
-void daObjProp_c_createHeap(fopAc_ac_c*); // 2
-void daObjProp_create(daObjProp_c*); // 2
-void daObjProp_Delete(daObjProp_c*); // 2
-void daObjProp_execute(daObjProp_c*); // 2
-void daObjProp_draw(daObjProp_c*); // 2
+static void daObjProp_c_createHeap(fopAc_ac_c*); // 2
+static void daObjProp_create(daObjProp_c*); // 2
+static void daObjProp_Delete(daObjProp_c*); // 2
+static void daObjProp_execute(daObjProp_c*); // 2
+static void daObjProp_draw(daObjProp_c*); // 2
 
-extern "C" void daObjProp_c_createHeap__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjProp_c_createHeap__FP10fopAc_ac_c(); // 1
 extern "C" void __ct__11daObjProp_cFv(); // 1
 extern "C" void __dt__11daObjProp_cFv(); // 1
 extern "C" void createHeap__11daObjProp_cFv(); // 1
@@ -46,39 +75,117 @@ extern "C" void draw__11daObjProp_cFv(); // 1
 extern "C" void execute__11daObjProp_cFv(); // 1
 extern "C" void init__11daObjProp_cFv(); // 1
 extern "C" void setModelMtx__11daObjProp_cFv(); // 1
-extern "C" void daObjProp_create__FP11daObjProp_c(); // 1
-extern "C" void daObjProp_Delete__FP11daObjProp_c(); // 1
-extern "C" void daObjProp_execute__FP11daObjProp_c(); // 1
-extern "C" void daObjProp_draw__FP11daObjProp_c(); // 1
-extern "C" extern u8 const data_80CB5614[8];
-extern "C" extern u8 const data_80CB561C[4];
+extern "C" static void daObjProp_create__FP11daObjProp_c(); // 1
+extern "C" static void daObjProp_Delete__FP11daObjProp_c(); // 1
+extern "C" static void daObjProp_execute__FP11daObjProp_c(); // 1
+extern "C" static void daObjProp_draw__FP11daObjProp_c(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern u8 l_arcName[4];
-extern "C" extern u8 daObjProp_METHODS[32];
-extern "C" extern u8 g_profile_Obj_Prop[48];
-extern "C" extern void* __vt__11daObjProp_c[3];
+extern "C" extern void* g_profile_Obj_Prop[12];
 
 // 
 // External References:
 // 
 
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void mDoExt_modelUpdate(J3DModel*); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
+void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void operator delete(void*); // 2
 
-extern "C" void _unresolved(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void mDoExt_modelUpdate__FP8J3DModel(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void __dt__10fopAc_ac_cFv(); // 1
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
+extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
 
 // 
 // Declarations:
 // 
 
-/* 80CB51D8-80CB51F8 0020+00 s=0 e=0 z=0  None .text      daObjProp_c_createHeap__FP10fopAc_ac_c                       */
+/* 80CB51D8-80CB51F8 0020+00 s=1 e=0 z=0  None .text      daObjProp_c_createHeap__FP10fopAc_ac_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjProp_c_createHeap(fopAc_ac_c* param_0) {
+asm static void daObjProp_c_createHeap(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/daObjProp_c_createHeap__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80CB5614-80CB561C 0008+00 s=1 e=0 z=0  None .rodata    BMD_IDX$3638                                                 */
+SECTION_RODATA static u8 const data_80CB5614[8] = {
+	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04,
+};
+
+/* 80CB561C-80CB5620 0004+00 s=1 e=0 z=0  None .rodata    ADD_ANGLE$3689                                               */
+SECTION_RODATA static u8 const data_80CB561C[4] = {
+	0x18, 0x00, 0xE8, 0x00,
+};
+
+/* 80CB5620-80CB5627 0007+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80CB5620 = "L7Prop";
+#pragma pop
+
+/* 80CB5628-80CB562C 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+
+/* 80CB562C-80CB564C 0020+00 s=1 e=0 z=0  None .data      daObjProp_METHODS                                            */
+SECTION_DATA static void* daObjProp_METHODS[8] = {
+	/* 0    */ (void*)daObjProp_create__FP11daObjProp_c,
+	/* 1    */ (void*)daObjProp_Delete__FP11daObjProp_c,
+	/* 2    */ (void*)daObjProp_execute__FP11daObjProp_c,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)daObjProp_draw__FP11daObjProp_c,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+};
+
+/* 80CB564C-80CB567C 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Prop                                           */
+SECTION_DATA void* g_profile_Obj_Prop[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0007FFFD,
+	/* 2    */ (void*)0x01970000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x0000057C,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x02E10000,
+	/* 9    */ (void*)&daObjProp_METHODS,
+	/* 10   */ (void*)0x00040000,
+	/* 11   */ (void*)0x030E0000,
+};
+
+/* 80CB567C-80CB5688 000C+00 s=2 e=0 z=0  None .data      __vt__11daObjProp_c                                          */
+SECTION_DATA static void* __vt__11daObjProp_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__11daObjProp_cFv,
+};
 
 /* 80CB51F8-80CB5234 003C+00 s=2 e=0 z=0  None .text      __ct__11daObjProp_cFv                                        */
 #pragma push
@@ -91,7 +198,7 @@ asm daObjProp_c::daObjProp_c() {
 #pragma pop
 
 
-/* 80CB5234-80CB52B4 0080+00 s=0 e=0 z=0  None .text      __dt__11daObjProp_cFv                                        */
+/* 80CB5234-80CB52B4 0080+00 s=1 e=0 z=0  None .text      __dt__11daObjProp_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -179,90 +286,47 @@ asm void daObjProp_c::setModelMtx() {
 #pragma pop
 
 
-/* 80CB5558-80CB55AC 0054+00 s=0 e=0 z=0  None .text      daObjProp_create__FP11daObjProp_c                            */
+/* 80CB5558-80CB55AC 0054+00 s=1 e=0 z=0  None .text      daObjProp_create__FP11daObjProp_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjProp_create(daObjProp_c* param_0) {
+asm static void daObjProp_create(daObjProp_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/daObjProp_create__FP11daObjProp_c.s"
 }
 #pragma pop
 
 
-/* 80CB55AC-80CB55CC 0020+00 s=0 e=0 z=0  None .text      daObjProp_Delete__FP11daObjProp_c                            */
+/* 80CB55AC-80CB55CC 0020+00 s=1 e=0 z=0  None .text      daObjProp_Delete__FP11daObjProp_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjProp_Delete(daObjProp_c* param_0) {
+asm static void daObjProp_Delete(daObjProp_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/daObjProp_Delete__FP11daObjProp_c.s"
 }
 #pragma pop
 
 
-/* 80CB55CC-80CB55EC 0020+00 s=0 e=0 z=0  None .text      daObjProp_execute__FP11daObjProp_c                           */
+/* 80CB55CC-80CB55EC 0020+00 s=1 e=0 z=0  None .text      daObjProp_execute__FP11daObjProp_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjProp_execute(daObjProp_c* param_0) {
+asm static void daObjProp_execute(daObjProp_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/daObjProp_execute__FP11daObjProp_c.s"
 }
 #pragma pop
 
 
-/* 80CB55EC-80CB560C 0020+00 s=0 e=0 z=0  None .text      daObjProp_draw__FP11daObjProp_c                              */
+/* 80CB55EC-80CB560C 0020+00 s=1 e=0 z=0  None .text      daObjProp_draw__FP11daObjProp_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjProp_draw(daObjProp_c* param_0) {
+asm static void daObjProp_draw(daObjProp_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/daObjProp_draw__FP11daObjProp_c.s"
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80CB5614-80CB561C 0008+00 s=0 e=0 z=0  None .rodata    BMD_IDX$3638                                                 */
-SECTION_RODATA u8 const data_80CB5614[8] = {
-	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04,
-};
-
-/* 80CB561C-80CB5620 0004+00 s=0 e=0 z=0  None .rodata    ADD_ANGLE$3689                                               */
-SECTION_RODATA u8 const data_80CB561C[4] = {
-	0x18, 0x00, 0xE8, 0x00,
-};
-
-/* 80CB5620-80CB5627 0007+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80CB5620 = "L7Prop";
-#pragma pop
-
-/* 80CB5628-80CB562C 0004+00 s=0 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA u8 l_arcName[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80CB562C-80CB564C 0020+00 s=0 e=0 z=0  None .data      daObjProp_METHODS                                            */
-SECTION_DATA u8 daObjProp_METHODS[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80CB564C-80CB567C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Prop                                           */
-SECTION_DATA u8 g_profile_Obj_Prop[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x01, 0x97, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x05, 0x7C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x02, 0xE1, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x03, 0x0E, 0x00, 0x00,
-};
-
-/* 80CB567C-80CB5688 000C+00 s=0 e=0 z=0  None .data      __vt__11daObjProp_c                                          */
-SECTION_DATA void* __vt__11daObjProp_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
 

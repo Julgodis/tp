@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80A5DEE8[8];
+extern void* data_80A5DEE8[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_npc_ks_cpp(); // 1
 
 // 
 // Declarations:

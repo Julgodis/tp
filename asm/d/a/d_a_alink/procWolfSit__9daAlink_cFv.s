@@ -14,11 +14,11 @@ lbl_8012F358:
 /* 8012F388 00000030  54 00 02 53 */	rlwinm. r0, r0, 0, 9, 9
 /* 8012F38C 00000034  41 82 00 10 */	beq lbl_8012F39C
 /* 8012F390 00000038  38 9F 17 D0 */	addi r4, r31, 0x17d0
-/* 8012F394 0000003C  C0 44 00 6C */	lfs f2, 0x6c(r4)
+/* 8012F394 0000003C  C0 44 00 6C */	lfs f2, 0x6c(r4)	/* effective address: 8038EE94 */
 /* 8012F398 00000040  48 00 00 0C */	b lbl_8012F3A4
 lbl_8012F39C:
 /* 8012F39C 00000000  38 9F 18 D0 */	addi r4, r31, 0x18d0
-/* 8012F3A0 00000004  C0 44 00 10 */	lfs f2, 0x10(r4)
+/* 8012F3A0 00000004  C0 44 00 10 */	lfs f2, 0x10(r4)	/* effective address: 8038EF38 */
 lbl_8012F3A4:
 /* 8012F3A4 00000000  48 14 13 9D */	bl cLib_chaseF__FPfff
 /* 8012F3A8 00000004  7F A3 EB 78 */	mr r3, r29
@@ -39,8 +39,8 @@ lbl_8012F3D0:
 /* 8012F3E0 00000010  7F A3 EB 78 */	mr r3, r29
 /* 8012F3E4 00000014  38 80 00 0E */	li r4, 0xe
 /* 8012F3E8 00000018  38 BF 1A E0 */	addi r5, r31, 0x1ae0
-/* 8012F3EC 0000001C  C0 25 00 44 */	lfs f1, 0x44(r5)
-/* 8012F3F0 00000020  C0 45 00 48 */	lfs f2, 0x48(r5)
+/* 8012F3EC 0000001C  C0 25 00 44 */	lfs f1, 0x44(r5)	/* effective address: 8038F17C */
+/* 8012F3F0 00000020  C0 45 00 48 */	lfs f2, 0x48(r5)	/* effective address: 8038F180 */
 /* 8012F3F4 00000024  4B FF A2 E5 */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 8012F3F8 00000028  38 00 00 01 */	li r0, 1
 /* 8012F3FC 0000002C  90 1D 31 98 */	stw r0, 0x3198(r29)

@@ -6,10 +6,10 @@ lbl_80482FE8:
 /* 80482FF8 00000010  38 64 05 68 */	addi r3, r4, 0x568
 /* 80482FFC 00000014  88 04 05 F4 */	lbz r0, 0x5f4(r4)
 /* 80483000 00000018  54 00 10 3A */	slwi r0, r0, 2
-/* 80483004 0000001C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80483008 00000020  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80483004 0000001C  3C 80 80 48 */	lis r4, M_arcname__Q211daObjSwpush5Act_c@ha
+/* 80483008 00000020  38 84 4E A4 */	addi r4, r4, M_arcname__Q211daObjSwpush5Act_c@l
 /* 8048300C 00000024  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80483010 00000028  4B FF FC A9 */	bl _unresolved
+/* 80483010 00000028  4B BA 9E AC */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80483014 0000002C  2C 03 00 04 */	cmpwi r3, 4
 /* 80483018 00000030  38 00 00 04 */	li r0, 4
 /* 8048301C 00000034  41 82 00 08 */	beq lbl_80483024

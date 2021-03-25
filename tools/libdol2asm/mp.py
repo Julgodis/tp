@@ -67,6 +67,7 @@ def _process_entrypoint(input: Queue, output: Queue, shared_file: str):
                 result = task[0](context, *task[1], **shared)
                 context.complete(result)
             except SystemExit:
+                context.exit()
                 sys.exit(1)
             except:
                 # exception inside task, capture exception information and send it back to the main process
@@ -175,6 +176,8 @@ def execute_tasks(process_count: int,
                 elif command[0] == 'exception':
                     waiting -= 1
                     print(command[1][1])
+                elif command[0] == 'exit':
+                    sys.exit(1)
                 else:
                     warning(f"unknown command: {command}")
         except Empty:

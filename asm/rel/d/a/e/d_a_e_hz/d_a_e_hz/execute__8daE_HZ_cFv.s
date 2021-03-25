@@ -67,31 +67,31 @@ lbl_806EF540:
 /* 806EF554 00000014  A8 1F 06 E0 */	lha r0, 0x6e0(r31)
 /* 806EF558 00000018  2C 00 00 00 */	cmpwi r0, 0
 /* 806EF55C 0000001C  40 82 00 20 */	bne lbl_806EF57C
-/* 806EF560 00000020  4B FF B0 19 */	bl _unresolved
-/* 806EF564 00000024  4B FF B0 15 */	bl _unresolved
+/* 806EF560 00000020  4B A9 20 E0 */	b dCam_getBody__Fv
+/* 806EF564 00000024  4B A9 1F 9C */	b GetForceLockOnActor__9dCamera_cFv
 /* 806EF568 00000028  7C 03 F8 40 */	cmplw r3, r31
 /* 806EF56C 0000002C  40 82 00 10 */	bne lbl_806EF57C
-/* 806EF570 00000030  4B FF B0 09 */	bl _unresolved
+/* 806EF570 00000030  4B A9 20 D0 */	b dCam_getBody__Fv
 /* 806EF574 00000034  7F E4 FB 78 */	mr r4, r31
-/* 806EF578 00000038  4B FF B0 01 */	bl _unresolved
+/* 806EF578 00000038  4B A9 20 24 */	b ForceLockOff__9dCamera_cFP10fopAc_ac_c
 lbl_806EF57C:
-/* 806EF57C 00000000  4B FF AF FD */	bl _unresolved
-/* 806EF580 00000004  4B FF AF F9 */	bl _unresolved
+/* 806EF57C 00000000  4B A9 20 C4 */	b dCam_getBody__Fv
+/* 806EF580 00000004  4B A9 1F 80 */	b GetForceLockOnActor__9dCamera_cFv
 /* 806EF584 00000008  7C 03 F8 40 */	cmplw r3, r31
 /* 806EF588 0000000C  40 82 00 38 */	bne lbl_806EF5C0
-/* 806EF58C 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 806EF590 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 806EF594 00000018  80 63 5D AC */	lwz r3, 0x5dac(r3)
-/* 806EF598 0000001C  C0 43 04 D4 */	lfs f2, 0x4d4(r3)
+/* 806EF58C 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806EF590 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806EF594 00000018  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 806EF598 0000001C  C0 43 04 D4 */	lfs f2, 0x4d4(r3)	/* effective address: 80406694 */
 /* 806EF59C 00000020  C0 3F 04 D4 */	lfs f1, 0x4d4(r31)
-/* 806EF5A0 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 806EF5A4 00000028  C0 03 00 00 */	lfs f0, 0x0000(r3)
+/* 806EF5A0 00000024  3C 60 80 6F */	lis r3, lit_3966@ha
+/* 806EF5A4 00000028  C0 03 08 60 */	lfs f0, lit_3966@l(r3)
 /* 806EF5A8 0000002C  EC 01 00 28 */	fsubs f0, f1, f0
 /* 806EF5AC 00000030  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 806EF5B0 00000000  40 80 00 10 */	bge lbl_806EF5C0
-/* 806EF5B4 00000004  4B FF AF C5 */	bl _unresolved
+/* 806EF5B4 00000004  4B A9 20 8C */	b dCam_getBody__Fv
 /* 806EF5B8 00000008  7F E4 FB 78 */	mr r4, r31
-/* 806EF5BC 0000000C  4B FF AF BD */	bl _unresolved
+/* 806EF5BC 0000000C  4B A9 1F E0 */	b ForceLockOff__9dCamera_cFP10fopAc_ac_c
 lbl_806EF5C0:
 /* 806EF5C0 00000000  A8 7F 06 E2 */	lha r3, 0x6e2(r31)
 /* 806EF5C4 00000004  2C 03 00 00 */	cmpwi r3, 0
@@ -101,38 +101,38 @@ lbl_806EF5C0:
 /* 806EF5D4 00000014  A8 1F 06 E2 */	lha r0, 0x6e2(r31)
 /* 806EF5D8 00000018  2C 00 00 00 */	cmpwi r0, 0
 /* 806EF5DC 0000001C  40 82 00 20 */	bne lbl_806EF5FC
-/* 806EF5E0 00000020  4B FF AF 99 */	bl _unresolved
-/* 806EF5E4 00000024  4B FF AF 95 */	bl _unresolved
+/* 806EF5E0 00000020  4B A9 20 60 */	b dCam_getBody__Fv
+/* 806EF5E4 00000024  4B A9 1F 1C */	b GetForceLockOnActor__9dCamera_cFv
 /* 806EF5E8 00000028  7C 03 F8 40 */	cmplw r3, r31
 /* 806EF5EC 0000002C  41 82 00 10 */	beq lbl_806EF5FC
-/* 806EF5F0 00000030  4B FF AF 89 */	bl _unresolved
+/* 806EF5F0 00000030  4B A9 20 50 */	b dCam_getBody__Fv
 /* 806EF5F4 00000034  7F E4 FB 78 */	mr r4, r31
-/* 806EF5F8 00000038  4B FF AF 81 */	bl _unresolved
+/* 806EF5F8 00000038  4B A9 1F 3C */	b ForceLockOn__9dCamera_cFP10fopAc_ac_c
 lbl_806EF5FC:
 /* 806EF5FC 00000000  38 7F 06 94 */	addi r3, r31, 0x694
 /* 806EF600 00000004  38 80 00 00 */	li r4, 0
 /* 806EF604 00000008  38 A0 02 00 */	li r5, 0x200
-/* 806EF608 0000000C  4B FF AF 71 */	bl _unresolved
+/* 806EF608 0000000C  4B B8 15 88 */	b cLib_chaseAngleS__FPsss
 /* 806EF60C 00000010  38 7F 06 92 */	addi r3, r31, 0x692
 /* 806EF610 00000014  38 80 00 00 */	li r4, 0
 /* 806EF614 00000018  38 A0 02 00 */	li r5, 0x200
-/* 806EF618 0000001C  4B FF AF 61 */	bl _unresolved
+/* 806EF618 0000001C  4B B8 15 78 */	b cLib_chaseAngleS__FPsss
 /* 806EF61C 00000020  38 7F 06 9A */	addi r3, r31, 0x69a
 /* 806EF620 00000024  38 80 00 00 */	li r4, 0
 /* 806EF624 00000028  38 A0 02 00 */	li r5, 0x200
-/* 806EF628 0000002C  4B FF AF 51 */	bl _unresolved
+/* 806EF628 0000002C  4B B8 15 68 */	b cLib_chaseAngleS__FPsss
 /* 806EF62C 00000030  38 7F 06 98 */	addi r3, r31, 0x698
 /* 806EF630 00000034  38 80 00 00 */	li r4, 0
 /* 806EF634 00000038  38 A0 02 00 */	li r5, 0x200
-/* 806EF638 0000003C  4B FF AF 41 */	bl _unresolved
+/* 806EF638 0000003C  4B B8 15 58 */	b cLib_chaseAngleS__FPsss
 /* 806EF63C 00000040  38 7F 06 A0 */	addi r3, r31, 0x6a0
 /* 806EF640 00000044  38 80 00 00 */	li r4, 0
 /* 806EF644 00000048  38 A0 02 00 */	li r5, 0x200
-/* 806EF648 0000004C  4B FF AF 31 */	bl _unresolved
+/* 806EF648 0000004C  4B B8 15 48 */	b cLib_chaseAngleS__FPsss
 /* 806EF64C 00000050  38 7F 06 9E */	addi r3, r31, 0x69e
 /* 806EF650 00000054  38 80 00 00 */	li r4, 0
 /* 806EF654 00000058  38 A0 02 00 */	li r5, 0x200
-/* 806EF658 0000005C  4B FF AF 21 */	bl _unresolved
+/* 806EF658 0000005C  4B B8 15 38 */	b cLib_chaseAngleS__FPsss
 /* 806EF65C 00000060  7F E3 FB 78 */	mr r3, r31
 /* 806EF660 00000064  4B FF F8 85 */	bl action__8daE_HZ_cFv
 /* 806EF664 00000068  7F E3 FB 78 */	mr r3, r31

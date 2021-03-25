@@ -82,7 +82,7 @@ extern "C" void __dt__19dDlst_BrightCheck_cFv(); // 1
 extern "C" extern u8 const data_80394938[40];
 extern "C" extern u8 const data_80394960[80];
 extern "C" extern u8 const data_803949B0[40];
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_d_bright_check__stringBase0;
 
 // 
 // External References:

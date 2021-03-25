@@ -35,15 +35,15 @@ lbl_80006C44:
 /* 80006C8C 00000048  38 01 00 08 */	addi r0, r1, 8
 /* 80006C90 0000004C  90 01 00 70 */	stw r0, 0x70(r1)
 /* 80006C94 00000050  4B FF FC 19 */	bl OSReportForceEnableOn
-/* 80006C98 00000054  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 80006C9C 00000058  38 63 3C B0 */	addi r3, r3, stringBase0@l
+/* 80006C98 00000054  3C 60 80 37 */	lis r3, m_Do_m_Do_printf__stringBase0@ha
+/* 80006C9C 00000058  38 63 3C B0 */	addi r3, r3, m_Do_m_Do_printf__stringBase0@l
 /* 80006CA0 0000005C  38 63 00 3D */	addi r3, r3, 0x3d
 /* 80006CA4 00000060  4B FF FB 25 */	bl my_PutString__FPCc
 /* 80006CA8 00000064  7F E3 FB 78 */	mr r3, r31
 /* 80006CAC 00000068  38 81 00 68 */	addi r4, r1, 0x68
 /* 80006CB0 0000006C  4B FF FD ED */	bl OSVReport
-/* 80006CB4 00000070  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 80006CB8 00000074  38 63 3C B0 */	addi r3, r3, stringBase0@l
+/* 80006CB4 00000070  3C 60 80 37 */	lis r3, m_Do_m_Do_printf__stringBase0@ha
+/* 80006CB8 00000074  38 63 3C B0 */	addi r3, r3, m_Do_m_Do_printf__stringBase0@l
 /* 80006CBC 00000078  38 63 00 4D */	addi r3, r3, 0x4d
 /* 80006CC0 0000007C  4B FF FB 09 */	bl my_PutString__FPCc
 /* 80006CC4 00000080  4B FF FB F5 */	bl OSReportForceEnableOff

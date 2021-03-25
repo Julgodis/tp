@@ -3,13 +3,13 @@ lbl_80B284DC:
 /* 80B284E0 00000004  7C 08 02 A6 */	mflr r0
 /* 80B284E4 00000008  90 01 00 54 */	stw r0, 0x54(r1)
 /* 80B284E8 0000000C  39 61 00 50 */	addi r11, r1, 0x50
-/* 80B284EC 00000010  4B FF E2 2D */	bl _unresolved
+/* 80B284EC 00000010  4B 83 9C F0 */	b _savegpr_29
 /* 80B284F0 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80B284F4 00000018  80 63 05 78 */	lwz r3, 0x578(r3)
 /* 80B284F8 0000001C  83 A3 00 04 */	lwz r29, 4(r3)
 /* 80B284FC 00000020  38 00 00 00 */	li r0, 0
-/* 80B28500 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80B28504 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80B28500 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B28504 00000028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B28508 0000002C  3B E3 61 C0 */	addi r31, r3, 0x61c0
 /* 80B2850C 00000030  80 9E 0E 44 */	lwz r4, 0xe44(r30)
 /* 80B28510 00000034  28 04 00 00 */	cmplwi r4, 0
@@ -19,37 +19,37 @@ lbl_80B284DC:
 /* 80B28520 00000044  88 1E 10 08 */	lbz r0, 0x1008(r30)
 /* 80B28524 00000048  28 00 00 00 */	cmplwi r0, 0
 /* 80B28528 0000004C  41 82 00 74 */	beq lbl_80B2859C
-/* 80B2852C 00000050  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80B28530 00000054  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80B2852C 00000050  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 80B28530 00000054  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 80B28534 00000058  80 84 00 04 */	lwz r4, 4(r4)
 /* 80B28538 0000005C  38 BE 01 0C */	addi r5, r30, 0x10c
-/* 80B2853C 00000060  4B FF E1 DD */	bl _unresolved
+/* 80B2853C 00000060  4B 67 C8 64 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 80B28540 00000064  80 7D 00 84 */	lwz r3, 0x84(r29)
 /* 80B28544 00000068  80 83 00 0C */	lwz r4, 0xc(r3)
-/* 80B28548 0000006C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80B2854C 00000070  80 03 00 00 */	lwz r0, 0x0000(r3)
+/* 80B28548 0000006C  3C 60 80 B3 */	lis r3, data_80B2CF44@ha
+/* 80B2854C 00000070  80 03 CF 44 */	lwz r0, data_80B2CF44@l(r3)
 /* 80B28550 00000074  1C 00 00 30 */	mulli r0, r0, 0x30
 /* 80B28554 00000078  7C 64 02 14 */	add r3, r4, r0
-/* 80B28558 0000007C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80B2855C 00000080  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80B28560 00000084  4B FF E1 B9 */	bl _unresolved
-/* 80B28564 00000088  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80B28568 0000008C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80B28558 0000007C  3C 80 80 3E */	lis r4, now__14mDoMtx_stack_c@ha
+/* 80B2855C 00000080  38 84 D4 70 */	addi r4, r4, now__14mDoMtx_stack_c@l
+/* 80B28560 00000084  4B 81 DF 50 */	b PSMTXCopy
+/* 80B28564 00000088  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80B28568 0000008C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80B2856C 00000090  38 81 00 08 */	addi r4, r1, 8
-/* 80B28570 00000094  4B FF E1 A9 */	bl _unresolved
+/* 80B28570 00000094  4B 81 DF 40 */	b PSMTXCopy
 /* 80B28574 00000098  38 61 00 08 */	addi r3, r1, 8
 /* 80B28578 0000009C  80 9E 0E 44 */	lwz r4, 0xe44(r30)
 /* 80B2857C 000000A0  38 84 00 24 */	addi r4, r4, 0x24
-/* 80B28580 000000A4  4B FF E1 99 */	bl _unresolved
+/* 80B28580 000000A4  4B 81 DF 30 */	b PSMTXCopy
 /* 80B28584 000000A8  80 7E 0E 44 */	lwz r3, 0xe44(r30)
-/* 80B28588 000000AC  4B FF E1 91 */	bl _unresolved
+/* 80B28588 000000AC  4B 4E 57 3C */	b mDoExt_modelUpdateDL__FP8J3DModel
 /* 80B2858C 000000B0  7F E3 FB 78 */	mr r3, r31
 /* 80B28590 000000B4  80 9E 0D 94 */	lwz r4, 0xd94(r30)
 /* 80B28594 000000B8  80 BE 0E 44 */	lwz r5, 0xe44(r30)
-/* 80B28598 000000BC  4B FF E1 81 */	bl _unresolved
+/* 80B28598 000000BC  4B 52 D9 84 */	b addReal__21dDlst_shadowControl_cFUlP8J3DModel
 lbl_80B2859C:
 /* 80B2859C 00000000  39 61 00 50 */	addi r11, r1, 0x50
-/* 80B285A0 00000004  4B FF E1 79 */	bl _unresolved
+/* 80B285A0 00000004  4B 83 9C 88 */	b _restgpr_29
 /* 80B285A4 00000008  80 01 00 54 */	lwz r0, 0x54(r1)
 /* 80B285A8 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80B285AC 00000010  38 21 00 50 */	addi r1, r1, 0x50

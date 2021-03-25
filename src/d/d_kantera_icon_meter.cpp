@@ -29,10 +29,10 @@ struct dDlst_KanteraIcon_c {
 struct JKRExpHeap {
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
 struct J2DScreen {
@@ -63,7 +63,7 @@ extern "C" void setScale__15dKantera_icon_cFff(); // 1
 extern "C" void setNowGauge__15dKantera_icon_cFUsUs(); // 1
 extern "C" void draw__19dDlst_KanteraIcon_cFv(); // 1
 extern "C" void __dt__19dDlst_KanteraIcon_cFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_d_kantera_icon_meter__stringBase0;
 
 // 
 // External References:

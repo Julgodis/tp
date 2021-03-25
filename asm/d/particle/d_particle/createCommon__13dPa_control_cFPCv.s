@@ -24,8 +24,8 @@ lbl_8004BBCC:
 /* 8004BBCC 00000000  90 1F 00 04 */	stw r0, 4(r31)
 /* 8004BBD0 00000004  80 7F 00 04 */	lwz r3, 4(r31)
 /* 8004BBD4 00000008  80 8D 86 4C */	lwz r4, mFrameBufferTimg__13mDoGph_gInf_c(r13)
-/* 8004BBD8 0000000C  3C A0 80 38 */	lis r5, stringBase0@ha
-/* 8004BBDC 00000010  38 A5 A1 2C */	addi r5, r5, stringBase0@l
+/* 8004BBD8 0000000C  3C A0 80 38 */	lis r5, d_particle_d_particle__stringBase0@ha
+/* 8004BBDC 00000010  38 A5 A1 2C */	addi r5, r5, d_particle_d_particle__stringBase0@l
 /* 8004BBE0 00000014  48 22 83 0D */	bl swapTexture__18JPAResourceManagerFPC7ResTIMGPCc
 /* 8004BBE4 00000018  38 60 00 30 */	li r3, 0x30
 /* 8004BBE8 0000001C  80 9F 00 00 */	lwz r4, 0(r31)

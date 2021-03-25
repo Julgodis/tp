@@ -8,12 +8,12 @@ lbl_805F98A0:
 /* 805F98B8 00000018  B0 03 0C 58 */	sth r0, 0xc58(r3)
 /* 805F98BC 0000001C  80 03 1F B4 */	lwz r0, 0x1fb4(r3)
 /* 805F98C0 00000020  90 01 00 08 */	stw r0, 8(r1)
-/* 805F98C4 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 805F98C8 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 805F98C4 00000024  3C 60 80 02 */	lis r3, fpcSch_JudgeByID__FPvPv@ha
+/* 805F98C8 00000028  38 63 35 90 */	addi r3, r3, fpcSch_JudgeByID__FPvPv@l
 /* 805F98CC 0000002C  38 81 00 08 */	addi r4, r1, 8
-/* 805F98D0 00000030  4B FF B0 E9 */	bl _unresolved
+/* 805F98D0 00000030  4B A1 FF 28 */	b fopAcIt_Judge__FPFPvPv_PvPv
 /* 805F98D4 00000034  38 00 00 01 */	li r0, 1
-/* 805F98D8 00000038  98 03 39 65 */	stb r0, 0x3965(r3)
+/* 805F98D8 00000038  98 03 39 65 */	stb r0, 0x3965(r3)	/* effective address: 80026EF5 */
 /* 805F98DC 0000003C  A8 1F 05 BC */	lha r0, 0x5bc(r31)
 /* 805F98E0 00000040  2C 00 00 00 */	cmpwi r0, 0
 /* 805F98E4 00000044  83 E1 00 1C */	lwz r31, 0x1c(r1)

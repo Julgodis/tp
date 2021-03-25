@@ -7,19 +7,19 @@ lbl_804A278C:
 /* 804A27A0 00000014  7C 7E 1B 79 */	or. r30, r3, r3
 /* 804A27A4 00000018  7C 9F 23 78 */	mr r31, r4
 /* 804A27A8 0000001C  41 82 00 38 */	beq lbl_804A27E0
-/* 804A27AC 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804A27B0 00000024  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
+/* 804A27AC 00000020  3C 60 80 4A */	lis r3, __vt__19daBoomerang_sight_c@ha
+/* 804A27B0 00000024  38 03 2C C0 */	addi r0, r3, __vt__19daBoomerang_sight_c@l
 /* 804A27B4 00000028  90 1E 00 00 */	stw r0, 0(r30)
 /* 804A27B8 0000002C  38 7E 00 C8 */	addi r3, r30, 0xc8
-/* 804A27BC 00000030  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 804A27C0 00000034  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 804A27BC 00000030  3C 80 80 4A */	lis r4, __dt__4cXyzFv@ha
+/* 804A27C0 00000034  38 84 EE 8C */	addi r4, r4, __dt__4cXyzFv@l
 /* 804A27C4 00000038  38 A0 00 0C */	li r5, 0xc
 /* 804A27C8 0000003C  38 C0 00 06 */	li r6, 6
-/* 804A27CC 00000040  4B FF B8 CD */	bl _unresolved
+/* 804A27CC 00000040  4B EB F5 1C */	b __destroy_arr
 /* 804A27D0 00000044  7F E0 07 35 */	extsh. r0, r31
 /* 804A27D4 00000048  40 81 00 0C */	ble lbl_804A27E0
 /* 804A27D8 0000004C  7F C3 F3 78 */	mr r3, r30
-/* 804A27DC 00000050  4B FF B8 BD */	bl _unresolved
+/* 804A27DC 00000050  4B E2 C5 60 */	b __dl__FPv
 lbl_804A27E0:
 /* 804A27E0 00000000  7F C3 F3 78 */	mr r3, r30
 /* 804A27E4 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -38,7 +38,7 @@ lbl_8001D150:
 /* 8001D198 00000048  C0 22 82 38 */	lfs f1, lit_5810(r2)
 /* 8001D19C 0000004C  48 03 03 31 */	bl set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8001D1A0 00000050  90 7B 00 00 */	stw r3, 0(r27)
-/* 8001D1A4 00000054  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
+/* 8001D1A4 00000054  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
 /* 8001D1A8 00000058  38 63 02 10 */	addi r3, r3, 0x210
 /* 8001D1AC 0000005C  80 9B 00 00 */	lwz r4, 0(r27)
 /* 8001D1B0 00000060  48 02 E7 69 */	bl getEmitter__Q213dPa_control_c7level_cFUl

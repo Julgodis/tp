@@ -11,8 +11,8 @@ lbl_801D7398:
 /* 801D73BC 00000024  3B C0 00 00 */	li r30, 0
 /* 801D73C0 00000028  3C 60 80 39 */	lis r3, data_80396580@ha
 /* 801D73C4 0000002C  3B A3 65 80 */	addi r29, r3, data_80396580@l
-/* 801D73C8 00000030  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801D73CC 00000034  3B 83 65 D0 */	addi r28, r3, stringBase0@l
+/* 801D73C8 00000030  3C 60 80 39 */	lis r3, d_menu_d_menu_fmap2D__stringBase0@ha
+/* 801D73CC 00000034  3B 83 65 D0 */	addi r28, r3, d_menu_d_menu_fmap2D__stringBase0@l
 lbl_801D73D0:
 /* 801D73D0 00000000  80 7F 00 08 */	lwz r3, 8(r31)
 /* 801D73D4 00000004  7C 9D F2 14 */	add r4, r29, r30

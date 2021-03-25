@@ -4,8 +4,8 @@ lbl_809AE550:
 /* 809AE558 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 809AE55C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 809AE560 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 809AE564 00000014  4B FF F8 75 */	bl _unresolved
-/* 809AE568 00000018  4B FF F8 71 */	bl _unresolved
+/* 809AE564 00000014  4B 7A 3A B0 */	b execute__8daNpcF_cFv
+/* 809AE568 00000018  4B 7B 0E BC */	b checkNowWolfEyeUp__9daPy_py_cFv
 /* 809AE56C 0000001C  2C 03 00 00 */	cmpwi r3, 0
 /* 809AE570 00000020  41 82 00 44 */	beq lbl_809AE5B4
 /* 809AE574 00000024  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
@@ -19,11 +19,11 @@ lbl_809AE550:
 /* 809AE594 00000044  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 809AE598 00000048  2C 04 00 FF */	cmpwi r4, 0xff
 /* 809AE59C 0000004C  41 82 00 18 */	beq lbl_809AE5B4
-/* 809AE5A0 00000050  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 809AE5A4 00000054  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 809AE5A0 00000050  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809AE5A4 00000054  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809AE5A8 00000058  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 809AE5AC 0000005C  7C 05 07 74 */	extsb r5, r0
-/* 809AE5B0 00000060  4B FF F8 29 */	bl _unresolved
+/* 809AE5B0 00000060  4B 68 6C 50 */	b onSwitch__10dSv_info_cFii
 lbl_809AE5B4:
 /* 809AE5B4 00000000  38 60 00 01 */	li r3, 1
 /* 809AE5B8 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

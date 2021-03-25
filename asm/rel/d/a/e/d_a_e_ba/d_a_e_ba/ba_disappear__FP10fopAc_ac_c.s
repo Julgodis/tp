@@ -8,16 +8,16 @@ lbl_8067ED30:
 /* 8067ED48 00000018  38 A0 00 06 */	li r5, 6
 /* 8067ED4C 0000001C  38 C0 00 00 */	li r6, 0
 /* 8067ED50 00000020  38 E0 00 03 */	li r7, 3
-/* 8067ED54 00000024  4B FF FF 05 */	bl _unresolved
+/* 8067ED54 00000024  4B 99 DD 84 */	b fopAcM_createDisappear__FPC10fopAc_ac_cPC4cXyzUcUcUc
 /* 8067ED58 00000028  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 8067ED5C 0000002C  54 04 46 3E */	srwi r4, r0, 0x18
 /* 8067ED60 00000030  2C 04 00 FF */	cmpwi r4, 0xff
 /* 8067ED64 00000034  41 82 00 18 */	beq lbl_8067ED7C
-/* 8067ED68 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8067ED6C 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 8067ED68 00000038  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8067ED6C 0000003C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8067ED70 00000040  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 8067ED74 00000044  7C 05 07 74 */	extsb r5, r0
-/* 8067ED78 00000048  4B FF FE E1 */	bl _unresolved
+/* 8067ED78 00000048  4B 9B 64 88 */	b onSwitch__10dSv_info_cFii
 lbl_8067ED7C:
 /* 8067ED7C 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8067ED80 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

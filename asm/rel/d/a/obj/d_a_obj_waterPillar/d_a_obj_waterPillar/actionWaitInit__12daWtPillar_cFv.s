@@ -5,13 +5,13 @@ lbl_80D2D4AC:
 /* 80D2D4B8 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80D2D4BC 00000010  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 80D2D4C0 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80D2D4C4 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D2D4C8 0000001C  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
-/* 80D2D4CC 00000020  C0 7E 00 AC */	lfs f3, 0xac(r30)
-/* 80D2D4D0 00000024  C0 5E 00 B0 */	lfs f2, 0xb0(r30)
+/* 80D2D4C4 00000018  3C 60 80 D3 */	lis r3, lit_3645@ha
+/* 80D2D4C8 0000001C  3B C3 E7 70 */	addi r30, r3, lit_3645@l
+/* 80D2D4CC 00000020  C0 7E 00 AC */	lfs f3, 0xac(r30)	/* effective address: 80D2E81C */
+/* 80D2D4D0 00000024  C0 5E 00 B0 */	lfs f2, 0xb0(r30)	/* effective address: 80D2E820 */
 /* 80D2D4D4 00000028  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D2D4D8 0000002C  54 00 A6 FE */	rlwinm r0, r0, 0x14, 0x1b, 0x1f
-/* 80D2D4DC 00000030  C8 3E 00 98 */	lfd f1, 0x98(r30)
+/* 80D2D4DC 00000030  C8 3E 00 98 */	lfd f1, 0x98(r30)	/* effective address: 80D2E808 */
 /* 80D2D4E0 00000034  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80D2D4E4 00000038  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D2D4E8 0000003C  3C 00 43 30 */	lis r0, 0x4330
@@ -29,23 +29,23 @@ lbl_80D2D4AC:
 /* 80D2D518 0000006C  98 1F 0B 45 */	stb r0, 0xb45(r31)
 /* 80D2D51C 00000070  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80D2D520 00000074  7C 03 07 74 */	extsb r3, r0
-/* 80D2D524 00000078  4B FF F1 15 */	bl _unresolved
+/* 80D2D524 00000078  4B 2F FB 48 */	b dComIfGp_getReverb__Fi
 /* 80D2D528 0000007C  7C 67 1B 78 */	mr r7, r3
 /* 80D2D52C 00000080  3C 60 00 08 */	lis r3, 0x0008 /* 0x00080182@ha */
 /* 80D2D530 00000084  38 03 01 82 */	addi r0, r3, 0x0182 /* 0x00080182@l */
 /* 80D2D534 00000088  90 01 00 08 */	stw r0, 8(r1)
-/* 80D2D538 0000008C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D2D53C 00000090  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80D2D540 00000094  80 63 00 00 */	lwz r3, 0(r3)
+/* 80D2D538 0000008C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
+/* 80D2D53C 00000090  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 80D2D540 00000094  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
 /* 80D2D544 00000098  38 81 00 08 */	addi r4, r1, 8
 /* 80D2D548 0000009C  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80D2D54C 000000A0  38 C0 00 00 */	li r6, 0
-/* 80D2D550 000000A4  C0 3E 00 00 */	lfs f1, 0(r30)
+/* 80D2D550 000000A4  C0 3E 00 00 */	lfs f1, 0(r30)	/* effective address: 80D2E770 */
 /* 80D2D554 000000A8  FC 40 08 90 */	fmr f2, f1
-/* 80D2D558 000000AC  C0 7E 00 B4 */	lfs f3, 0xb4(r30)
+/* 80D2D558 000000AC  C0 7E 00 B4 */	lfs f3, 0xb4(r30)	/* effective address: 80D2E824 */
 /* 80D2D55C 000000B0  FC 80 18 90 */	fmr f4, f3
 /* 80D2D560 000000B4  39 00 00 00 */	li r8, 0
-/* 80D2D564 000000B8  4B FF F0 D5 */	bl _unresolved
+/* 80D2D564 000000B8  4B 57 E4 20 */	b seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 80D2D568 000000BC  38 00 00 01 */	li r0, 1
 /* 80D2D56C 000000C0  98 1F 0B 00 */	stb r0, 0xb00(r31)
 /* 80D2D570 000000C4  83 E1 00 2C */	lwz r31, 0x2c(r1)

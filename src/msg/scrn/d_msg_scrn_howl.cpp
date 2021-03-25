@@ -88,11 +88,11 @@ struct dMsgScrnBase_c {
 	/* 8023C4F4 */ void fontAlpha(f32);
 };
 
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
 };
 
 struct JKRArchive {
@@ -195,7 +195,7 @@ extern "C" void initGuideData__14dMsgScrnHowl_cFv(); // 1
 extern "C" void getGuideDataSize__14dMsgScrnHowl_cFv(); // 1
 extern "C" void getGuideDataType__14dMsgScrnHowl_cFi(); // 1
 extern "C" void __sinit_d_msg_scrn_howl_cpp(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const msg_scrn_d_msg_scrn_howl__stringBase0;
 extern "C" extern u8 data_803C10D0[24];
 extern "C" extern u8 data_803C10E8[56];
 extern "C" extern u8 data_803C1120[56];

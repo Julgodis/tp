@@ -5,8 +5,8 @@ lbl_8081A718:
 /* 8081A724 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8081A728 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8081A72C 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 8081A730 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8081A734 0000001C  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
+/* 8081A730 00000018  3C 60 80 82 */	lis r3, lit_3791@ha
+/* 8081A734 0000001C  3B C3 18 AC */	addi r30, r3, lit_3791@l
 /* 8081A738 00000020  3C 60 00 07 */	lis r3, 0x0007 /* 0x0007029B@ha */
 /* 8081A73C 00000024  38 03 02 9B */	addi r0, r3, 0x029B /* 0x0007029B@l */
 /* 8081A740 00000028  90 01 00 0C */	stw r0, 0xc(r1)
@@ -39,45 +39,45 @@ lbl_8081A780:
 /* 8081A7A8 00000028  7F E3 FB 78 */	mr r3, r31
 /* 8081A7AC 0000002C  38 80 00 12 */	li r4, 0x12
 /* 8081A7B0 00000030  38 A0 00 00 */	li r5, 0
-/* 8081A7B4 00000034  C0 3E 00 38 */	lfs f1, 0x38(r30)
-/* 8081A7B8 00000038  C0 5E 00 00 */	lfs f2, 0(r30)
+/* 8081A7B4 00000034  C0 3E 00 38 */	lfs f1, 0x38(r30)	/* effective address: 808218E4 */
+/* 8081A7B8 00000038  C0 5E 00 00 */	lfs f2, 0(r30)	/* effective address: 808218AC */
 /* 8081A7BC 0000003C  4B FF C1 C1 */	bl setBck__9daE_YMB_cFiUcff
 /* 8081A7C0 00000040  7F E3 FB 78 */	mr r3, r31
-/* 8081A7C4 00000044  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8081A7C8 00000048  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 8081A7CC 0000004C  80 84 5D AC */	lwz r4, 0x5dac(r4)
-/* 8081A7D0 00000050  4B FF B8 A9 */	bl _unresolved
+/* 8081A7C4 00000044  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8081A7C8 00000048  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8081A7CC 0000004C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8081A7D0 00000050  4B 7F FF 40 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8081A7D4 00000054  38 03 80 00 */	addi r0, r3, -32768
 /* 8081A7D8 00000058  B0 1F 04 DE */	sth r0, 0x4de(r31)
-/* 8081A7DC 0000005C  C0 1E 00 04 */	lfs f0, 4(r30)
+/* 8081A7DC 0000005C  C0 1E 00 04 */	lfs f0, 4(r30)	/* effective address: 808218B0 */
 /* 8081A7E0 00000060  D0 1F 05 2C */	stfs f0, 0x52c(r31)
 /* 8081A7E4 00000064  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
 /* 8081A7E8 00000068  38 00 00 01 */	li r0, 1
 /* 8081A7EC 0000006C  90 1F 06 B8 */	stw r0, 0x6b8(r31)
 lbl_8081A7F0:
 /* 8081A7F0 00000000  38 7F 05 2C */	addi r3, r31, 0x52c
-/* 8081A7F4 00000004  C0 3E 00 18 */	lfs f1, 0x18(r30)
-/* 8081A7F8 00000008  C0 5E 00 C4 */	lfs f2, 0xc4(r30)
-/* 8081A7FC 0000000C  4B FF B8 7D */	bl _unresolved
+/* 8081A7F4 00000004  C0 3E 00 18 */	lfs f1, 0x18(r30)	/* effective address: 808218C4 */
+/* 8081A7F8 00000008  C0 5E 00 C4 */	lfs f2, 0xc4(r30)	/* effective address: 80821970 */
+/* 8081A7FC 0000000C  4B A5 5F 44 */	b cLib_chaseF__FPfff
 /* 8081A800 00000010  38 7F 04 FC */	addi r3, r31, 0x4fc
-/* 8081A804 00000014  C0 3E 00 18 */	lfs f1, 0x18(r30)
-/* 8081A808 00000018  C0 5E 00 C4 */	lfs f2, 0xc4(r30)
-/* 8081A80C 0000001C  4B FF B8 6D */	bl _unresolved
+/* 8081A804 00000014  C0 3E 00 18 */	lfs f1, 0x18(r30)	/* effective address: 808218C4 */
+/* 8081A808 00000018  C0 5E 00 C4 */	lfs f2, 0xc4(r30)	/* effective address: 80821970 */
+/* 8081A80C 0000001C  4B A5 5F 34 */	b cLib_chaseF__FPfff
 /* 8081A810 00000020  7F E3 FB 78 */	mr r3, r31
-/* 8081A814 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8081A818 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 8081A81C 0000002C  80 84 5D AC */	lwz r4, 0x5dac(r4)
-/* 8081A820 00000030  4B FF B8 59 */	bl _unresolved
+/* 8081A814 00000024  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8081A818 00000028  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8081A81C 0000002C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8081A820 00000030  4B 7F FE F0 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8081A824 00000034  7C 64 1B 78 */	mr r4, r3
 /* 8081A828 00000038  38 7F 04 E6 */	addi r3, r31, 0x4e6
 /* 8081A82C 0000003C  38 A0 04 00 */	li r5, 0x400
-/* 8081A830 00000040  4B FF B8 49 */	bl _unresolved
+/* 8081A830 00000040  4B A5 63 60 */	b cLib_chaseAngleS__FPsss
 /* 8081A834 00000044  80 7F 05 BC */	lwz r3, 0x5bc(r31)
 /* 8081A838 00000048  38 80 00 01 */	li r4, 1
 /* 8081A83C 0000004C  88 03 00 11 */	lbz r0, 0x11(r3)
 /* 8081A840 00000050  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 8081A844 00000054  40 82 00 18 */	bne lbl_8081A85C
-/* 8081A848 00000058  C0 3E 00 18 */	lfs f1, 0x18(r30)
+/* 8081A848 00000058  C0 3E 00 18 */	lfs f1, 0x18(r30)	/* effective address: 808218C4 */
 /* 8081A84C 0000005C  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 8081A850 00000060  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 8081A854 00000064  41 82 00 08 */	beq lbl_8081A85C

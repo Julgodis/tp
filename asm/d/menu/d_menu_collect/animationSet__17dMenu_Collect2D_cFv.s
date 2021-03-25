@@ -16,8 +16,8 @@ lbl_801B1C3C:
 /* 801B1C74 00000038  38 60 00 07 */	li r3, 7
 /* 801B1C78 0000003C  64 63 00 07 */	oris r3, r3, 7
 /* 801B1C7C 00000040  7C 75 E3 A6 */	mtspr 0x395, r3
-/* 801B1C80 00000044  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801B1C84 00000048  38 84 53 30 */	addi r4, r4, stringBase0@l
+/* 801B1C80 00000044  3C 80 80 39 */	lis r4, d_menu_d_menu_collect__stringBase0@ha
+/* 801B1C84 00000048  38 84 53 30 */	addi r4, r4, d_menu_d_menu_collect__stringBase0@l
 /* 801B1C88 0000004C  38 64 00 56 */	addi r3, r4, 0x56
 /* 801B1C8C 00000050  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 801B1C90 00000054  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l

@@ -16,8 +16,8 @@ lbl_802047E8:
 lbl_80204820:
 /* 80204820 00000000  90 1F 00 08 */	stw r0, 8(r31)
 /* 80204824 00000004  80 7F 00 08 */	lwz r3, 8(r31)
-/* 80204828 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8020482C 0000000C  38 84 80 E8 */	addi r4, r4, stringBase0@l
+/* 80204828 00000008  3C 80 80 3A */	lis r4, d_meter_d_meter_button__stringBase0@ha
+/* 8020482C 0000000C  38 84 80 E8 */	addi r4, r4, d_meter_d_meter_button__stringBase0@l
 /* 80204830 00000010  3C A0 00 02 */	lis r5, 2
 /* 80204834 00000014  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
 /* 80204838 00000018  38 C6 61 C0 */	addi r6, r6, g_dComIfG_gameInfo@l
@@ -538,8 +538,8 @@ lbl_80204F98:
 /* 80204FF0 00000058  3B 63 80 98 */	addi r27, r3, data_80398098@l
 /* 80204FF4 0000005C  3C 60 80 3A */	lis r3, data_80398048@ha
 /* 80204FF8 00000060  3B 43 80 48 */	addi r26, r3, data_80398048@l
-/* 80204FFC 00000064  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80205000 00000068  3B 23 80 E8 */	addi r25, r3, stringBase0@l
+/* 80204FFC 00000064  3C 60 80 3A */	lis r3, d_meter_d_meter_button__stringBase0@ha
+/* 80205000 00000068  3B 23 80 E8 */	addi r25, r3, d_meter_d_meter_button__stringBase0@l
 lbl_80205004:
 /* 80205004 00000000  80 7F 00 08 */	lwz r3, 8(r31)
 /* 80205008 00000004  7C 9B EA 14 */	add r4, r27, r29
@@ -591,8 +591,8 @@ lbl_80205004:
 /* 802050C0 000000BC  3B C0 00 00 */	li r30, 0
 /* 802050C4 000000C0  3B A0 00 00 */	li r29, 0
 /* 802050C8 000000C4  3B 80 00 00 */	li r28, 0
-/* 802050CC 000000C8  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 802050D0 000000CC  3B 23 80 E8 */	addi r25, r3, stringBase0@l
+/* 802050CC 000000C8  3C 60 80 3A */	lis r3, d_meter_d_meter_button__stringBase0@ha
+/* 802050D0 000000CC  3B 23 80 E8 */	addi r25, r3, d_meter_d_meter_button__stringBase0@l
 /* 802050D4 000000D0  C3 E2 AD 48 */	lfs f31, lit_4146(r2)
 /* 802050D8 000000D4  3B 40 00 16 */	li r26, 0x16
 /* 802050DC 000000D8  3B 60 00 00 */	li r27, 0

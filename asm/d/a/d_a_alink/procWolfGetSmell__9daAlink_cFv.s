@@ -26,8 +26,8 @@ lbl_8013FC24:
 /* 8013FC84 00000060  2C 00 00 B0 */	cmpwi r0, 0xb0
 /* 8013FC88 00000064  40 82 00 2C */	bne lbl_8013FCB4
 /* 8013FC8C 00000068  7F C3 F3 78 */	mr r3, r30
-/* 8013FC90 0000006C  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 8013FC94 00000070  38 84 20 94 */	addi r4, r4, stringBase0@l
+/* 8013FC90 0000006C  3C 80 80 39 */	lis r4, d_a_d_a_alink__stringBase0@ha
+/* 8013FC94 00000070  38 84 20 94 */	addi r4, r4, d_a_d_a_alink__stringBase0@l
 /* 8013FC98 00000074  38 84 03 1E */	addi r4, r4, 0x31e
 /* 8013FC9C 00000078  3C A0 00 01 */	lis r5, 0x0001 /* 0x0000FFFF@ha */
 /* 8013FCA0 0000007C  38 A5 FF FF */	addi r5, r5, 0xFFFF /* 0x0000FFFF@l */
@@ -37,8 +37,8 @@ lbl_8013FC24:
 /* 8013FCB0 0000008C  48 00 00 28 */	b lbl_8013FCD8
 lbl_8013FCB4:
 /* 8013FCB4 00000000  7F C3 F3 78 */	mr r3, r30
-/* 8013FCB8 00000004  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 8013FCBC 00000008  38 84 20 94 */	addi r4, r4, stringBase0@l
+/* 8013FCB8 00000004  3C 80 80 39 */	lis r4, d_a_d_a_alink__stringBase0@ha
+/* 8013FCBC 00000008  38 84 20 94 */	addi r4, r4, d_a_d_a_alink__stringBase0@l
 /* 8013FCC0 0000000C  38 84 03 28 */	addi r4, r4, 0x328
 /* 8013FCC4 00000010  3C A0 00 01 */	lis r5, 0x0001 /* 0x0000FFFF@ha */
 /* 8013FCC8 00000014  38 A5 FF FF */	addi r5, r5, 0xFFFF /* 0x0000FFFF@l */

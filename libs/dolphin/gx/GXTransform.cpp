@@ -63,7 +63,7 @@ extern "C" asm void GXProject() {
 #pragma pop
 
 
-/* 803600D4-80360178 00A4+00 s=0 e=15 z=0  None .text      GXSetProjection                                              */
+/* 803600D4-80360178 00A4+00 s=0 e=15 z=2  None .text      GXSetProjection                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -74,7 +74,7 @@ extern "C" asm void GXSetProjection() {
 #pragma pop
 
 
-/* 80360178-80360204 008C+00 s=0 e=1 z=0  None .text      GXSetProjectionv                                             */
+/* 80360178-80360204 008C+00 s=0 e=1 z=1  None .text      GXSetProjectionv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -85,7 +85,7 @@ extern "C" asm void GXSetProjectionv() {
 #pragma pop
 
 
-/* 80360204-8036024C 0048+00 s=0 e=1 z=0  None .text      GXGetProjectionv                                             */
+/* 80360204-8036024C 0048+00 s=0 e=1 z=1  None .text      GXGetProjectionv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -96,7 +96,7 @@ extern "C" asm void GXGetProjectionv() {
 #pragma pop
 
 
-/* 8036024C-8036029C 0050+00 s=0 e=83 z=0  None .text      GXLoadPosMtxImm                                              */
+/* 8036024C-8036029C 0050+00 s=0 e=83 z=9  None .text      GXLoadPosMtxImm                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -107,7 +107,7 @@ extern "C" asm void GXLoadPosMtxImm() {
 #pragma pop
 
 
-/* 8036029C-803602EC 0050+00 s=0 e=11 z=0  None .text      GXLoadNrmMtxImm                                              */
+/* 8036029C-803602EC 0050+00 s=0 e=11 z=7  None .text      GXLoadNrmMtxImm                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,7 +118,7 @@ extern "C" asm void GXLoadNrmMtxImm() {
 #pragma pop
 
 
-/* 803602EC-80360320 0034+00 s=0 e=51 z=0  None .text      GXSetCurrentMtx                                              */
+/* 803602EC-80360320 0034+00 s=0 e=51 z=2  None .text      GXSetCurrentMtx                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,7 +155,7 @@ extern "C" asm static void __GXSetViewport() {
 #pragma pop
 
 
-/* 80360464-803604AC 0048+00 s=0 e=10 z=0  None .text      GXSetViewport                                                */
+/* 80360464-803604AC 0048+00 s=0 e=10 z=1  None .text      GXSetViewport                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -166,7 +166,7 @@ extern "C" asm void GXSetViewport() {
 #pragma pop
 
 
-/* 803604AC-803604D0 0024+00 s=0 e=1 z=0  None .text      GXGetViewportv                                               */
+/* 803604AC-803604D0 0024+00 s=0 e=1 z=1  None .text      GXGetViewportv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -177,7 +177,7 @@ extern "C" asm void GXGetViewportv() {
 #pragma pop
 
 
-/* 803604D0-80360548 0078+00 s=0 e=11 z=0  None .text      GXSetScissor                                                 */
+/* 803604D0-80360548 0078+00 s=0 e=11 z=4  None .text      GXSetScissor                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -188,7 +188,7 @@ extern "C" asm void GXSetScissor() {
 #pragma pop
 
 
-/* 80360548-80360590 0048+00 s=0 e=6 z=0  None .text      GXGetScissor                                                 */
+/* 80360548-80360590 0048+00 s=0 e=6 z=2  None .text      GXGetScissor                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -210,7 +210,7 @@ extern "C" asm void GXSetScissorBoxOffset() {
 #pragma pop
 
 
-/* 803605D0-803605F8 0028+00 s=0 e=27 z=0  None .text      GXSetClipMode                                                */
+/* 803605D0-803605F8 0028+00 s=0 e=27 z=2  None .text      GXSetClipMode                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -14,7 +14,7 @@ lbl_8036D80C:
 /* 8036D810 00000004  48 00 1C 99 */	bl TRKInitializeMutex
 /* 8036D814 00000008  7F C3 F3 78 */	mr r3, r30
 /* 8036D818 0000000C  48 00 1C 89 */	bl TRKAcquireMutex
-/* 8036D81C 00000010  93 FE 00 04 */	stw r31, 4(r30)
+/* 8036D81C 00000010  93 FE 00 04 */	stw r31, 4(r30)	/* effective address: 8044D8C4 */
 /* 8036D820 00000014  7F C3 F3 78 */	mr r3, r30
 /* 8036D824 00000018  48 00 1C 75 */	bl TRKReleaseMutex
 /* 8036D828 0000001C  3B BD 00 01 */	addi r29, r29, 1

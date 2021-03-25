@@ -4,7 +4,7 @@ lbl_804CC2D4:
 /* 804CC2DC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804CC2E0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804CC2E4 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 804CC2E8 00000014  4B FF AA 51 */	bl _unresolved
+/* 804CC2E8 00000014  4B B4 D9 94 */	b fopAcM_delete__FP10fopAc_ac_c
 /* 804CC2EC 00000018  80 1F 0B 4C */	lwz r0, 0xb4c(r31)
 /* 804CC2F0 0000001C  60 00 00 40 */	ori r0, r0, 0x40
 /* 804CC2F4 00000020  90 1F 0B 4C */	stw r0, 0xb4c(r31)

@@ -34,7 +34,6 @@ extern "C" void DVDLowClearCallback(); // 1
 extern "C" static void __DVDLowSetWAType(); // 1
 extern "C" void __DVDLowTestAlarm(); // 1
 extern "C" extern u8 AlarmForWA[40];
-extern "C" extern u8 Prev[12];
 
 // 
 // External References:
@@ -124,6 +123,21 @@ extern "C" asm void __DVDInitWA() {
 
 
 /* ############################################################################################## */
+/* 8044C870-8044C898 0028+00 s=0 e=0 z=0  None .bss       AlarmForWA                                                   */
+u8 AlarmForWA[40];
+
+/* 8044C898-8044C8C0 0028+00 s=9 e=0 z=0  None .bss       AlarmForTimeout                                              */
+static u8 AlarmForTimeout[40];
+
+/* 8044C8C0-8044C8E8 0028+00 s=1 e=0 z=0  None .bss       AlarmForBreak                                                */
+static u8 AlarmForBreak[40];
+
+/* 8044C8E8-8044C8F4 000C+00 s=1 e=0 z=0  None .bss       Prev                                                         */
+static u8 Prev[12];
+
+/* 8044C8F4-8044C900 000C+00 s=2 e=0 z=0  None .bss       Curr                                                         */
+static u8 Curr[12];
+
 /* 804509D8-804509E0 0004+04 s=2 e=0 z=0  None .sdata     FirstRead                                                    */
 SECTION_SDATA static u32 FirstRead[1 + 1 /* padding */] = {
 	0x00000001,
@@ -185,22 +199,6 @@ extern "C" asm static void SeekTwiceBeforeRead() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 8044C870-8044C898 0028+00 s=0 e=0 z=0  None .bss       AlarmForWA                                                   */
-u8 AlarmForWA[40];
-
-/* 8044C898-8044C8C0 0028+00 s=9 e=0 z=0  None .bss       AlarmForTimeout                                              */
-static u8 AlarmForTimeout[40];
-
-/* 8044C8C0-8044C8E8 0028+00 s=1 e=0 z=0  None .bss       AlarmForBreak                                                */
-static u8 AlarmForBreak[40];
-
-/* 8044C8E8-8044C8F4 000C+00 s=0 e=0 z=0  None .bss       Prev                                                         */
-u8 Prev[12];
-
-/* 8044C8F4-8044C900 000C+00 s=1 e=0 z=0  None .bss       Curr                                                         */
-static u8 Curr[12];
 
 /* 80347C18-80347EB0 0298+00 s=0 e=4 z=0  None .text      DVDLowRead                                                   */
 #pragma push

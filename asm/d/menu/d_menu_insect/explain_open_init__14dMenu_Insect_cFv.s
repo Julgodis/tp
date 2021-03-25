@@ -172,8 +172,8 @@ lbl_801D9080:
 lbl_801D909C:
 /* 801D909C 00000000  38 61 00 38 */	addi r3, r1, 0x38
 /* 801D90A0 00000004  38 80 00 20 */	li r4, 0x20
-/* 801D90A4 00000008  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801D90A8 0000000C  38 A5 68 C0 */	addi r5, r5, stringBase0@l
+/* 801D90A4 00000008  3C A0 80 39 */	lis r5, d_menu_d_menu_insect__stringBase0@ha
+/* 801D90A8 0000000C  38 A5 68 C0 */	addi r5, r5, d_menu_d_menu_insect__stringBase0@l
 /* 801D90AC 00000010  38 A5 00 2A */	addi r5, r5, 0x2a
 /* 801D90B0 00000014  C0 22 A8 70 */	lfs f1, lit_4136(r2)
 /* 801D90B4 00000018  EC 1F E8 28 */	fsubs f0, f31, f29
@@ -188,8 +188,8 @@ lbl_801D909C:
 /* 801D90D8 0000003C  48 18 F9 E5 */	bl strcat
 /* 801D90DC 00000040  38 61 00 18 */	addi r3, r1, 0x18
 /* 801D90E0 00000044  38 80 00 20 */	li r4, 0x20
-/* 801D90E4 00000048  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801D90E8 0000004C  38 A5 68 C0 */	addi r5, r5, stringBase0@l
+/* 801D90E4 00000048  3C A0 80 39 */	lis r5, d_menu_d_menu_insect__stringBase0@ha
+/* 801D90E8 0000004C  38 A5 68 C0 */	addi r5, r5, d_menu_d_menu_insect__stringBase0@l
 /* 801D90EC 00000050  38 A5 00 2A */	addi r5, r5, 0x2a
 /* 801D90F0 00000054  C0 22 A8 70 */	lfs f1, lit_4136(r2)
 /* 801D90F4 00000058  EC 1F F0 28 */	fsubs f0, f31, f30
@@ -203,15 +203,15 @@ lbl_801D909C:
 /* 801D9114 00000078  38 81 00 58 */	addi r4, r1, 0x58
 /* 801D9118 0000007C  48 18 F9 A5 */	bl strcat
 /* 801D911C 00000080  80 7F 00 1C */	lwz r3, 0x1c(r31)
-/* 801D9120 00000084  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801D9124 00000088  38 84 68 C0 */	addi r4, r4, stringBase0@l
+/* 801D9120 00000084  3C 80 80 39 */	lis r4, d_menu_d_menu_insect__stringBase0@ha
+/* 801D9124 00000088  38 84 68 C0 */	addi r4, r4, d_menu_d_menu_insect__stringBase0@l
 /* 801D9128 0000008C  38 84 00 32 */	addi r4, r4, 0x32
 /* 801D912C 00000090  38 A1 00 38 */	addi r5, r1, 0x38
 /* 801D9130 00000094  38 C1 00 18 */	addi r6, r1, 0x18
 /* 801D9134 00000098  48 06 0B 45 */	bl setString__17dMsgScrn3Select_cFPcPcPc
 /* 801D9138 0000009C  80 7F 00 1C */	lwz r3, 0x1c(r31)
-/* 801D913C 000000A0  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801D9140 000000A4  38 84 68 C0 */	addi r4, r4, stringBase0@l
+/* 801D913C 000000A0  3C 80 80 39 */	lis r4, d_menu_d_menu_insect__stringBase0@ha
+/* 801D9140 000000A4  38 84 68 C0 */	addi r4, r4, d_menu_d_menu_insect__stringBase0@l
 /* 801D9144 000000A8  38 84 00 32 */	addi r4, r4, 0x32
 /* 801D9148 000000AC  7C 85 23 78 */	mr r5, r4
 /* 801D914C 000000B0  7C 86 23 78 */	mr r6, r4

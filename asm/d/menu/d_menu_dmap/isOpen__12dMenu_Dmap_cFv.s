@@ -21,8 +21,8 @@ lbl_801BE328:
 /* 801BE374 0000004C  40 82 00 24 */	bne lbl_801BE398
 /* 801BE378 00000050  4B E5 0A B9 */	bl mDoExt_getJ2dHeap__Fv
 /* 801BE37C 00000054  7C 65 1B 78 */	mr r5, r3
-/* 801BE380 00000058  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801BE384 0000005C  38 63 57 60 */	addi r3, r3, stringBase0@l
+/* 801BE380 00000058  3C 60 80 39 */	lis r3, d_menu_d_menu_dmap__stringBase0@ha
+/* 801BE384 0000005C  38 63 57 60 */	addi r3, r3, d_menu_d_menu_dmap__stringBase0@l
 /* 801BE388 00000060  38 63 00 C6 */	addi r3, r3, 0xc6
 /* 801BE38C 00000064  38 80 00 02 */	li r4, 2
 /* 801BE390 00000068  4B E5 7A 85 */	bl create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap
@@ -46,8 +46,8 @@ lbl_801BE3D0:
 /* 801BE3D0 00000000  38 00 00 00 */	li r0, 0
 /* 801BE3D4 00000004  90 1B 00 E0 */	stw r0, 0xe0(r27)
 /* 801BE3D8 00000008  80 7B 00 E4 */	lwz r3, 0xe4(r27)
-/* 801BE3DC 0000000C  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801BE3E0 00000010  38 84 57 60 */	addi r4, r4, stringBase0@l
+/* 801BE3DC 0000000C  3C 80 80 39 */	lis r4, d_menu_d_menu_dmap__stringBase0@ha
+/* 801BE3E0 00000010  38 84 57 60 */	addi r4, r4, d_menu_d_menu_dmap__stringBase0@l
 /* 801BE3E4 00000014  38 84 00 DE */	addi r4, r4, 0xde
 /* 801BE3E8 00000018  81 83 00 00 */	lwz r12, 0(r3)
 /* 801BE3EC 0000001C  81 8C 00 14 */	lwz r12, 0x14(r12)

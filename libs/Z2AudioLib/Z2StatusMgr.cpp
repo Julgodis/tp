@@ -95,7 +95,7 @@ extern "C" void setEventBit__11Z2StatusMgrFPv(); // 1
 extern "C" void setCameraPolygonPos__11Z2StatusMgrFP3Vec(); // 1
 extern "C" void setCameraGroupInfo__11Z2StatusMgrFUc(); // 1
 extern "C" void setCameraInWaterDepth__11Z2StatusMgrFf(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const Z2StatusMgr__stringBase0;
 
 // 
 // External References:
@@ -405,7 +405,7 @@ SECTION_DATA static void* lit_3732[46] = {
 /* 80455A28-80455A30 0008+00 s=1 e=0 z=0  None .sdata2    @3731                                                        */
 SECTION_SDATA2 static f64 lit_3731 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802B61E8-802B671C 0534+00 s=1 e=7 z=0  None .text      setDemoName__11Z2StatusMgrFPc                                */
+/* 802B61E8-802B671C 0534+00 s=1 e=7 z=11  None .text      setDemoName__11Z2StatusMgrFPc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

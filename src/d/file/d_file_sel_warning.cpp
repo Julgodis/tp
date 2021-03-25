@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct JKRArchive {
-};
-
 struct JUtility {
 	struct TColor {
 	};
 
+};
+
+struct JKRArchive {
 };
 
 struct dFile_warning_c {
@@ -47,10 +47,10 @@ struct dDlst_FileWarn_c {
 	/* 801923CC */ ~dDlst_FileWarn_c();
 };
 
-struct J2DAnmTransform {
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct J2DAnmTransform {
 };
 
 struct J2DScreen {
@@ -116,7 +116,7 @@ extern "C" void draw__16dDlst_FileWarn_cFv(); // 1
 extern "C" void __sinit_d_file_sel_warning_cpp(); // 1
 extern "C" void __dt__16dDlst_FileWarn_cFv(); // 1
 extern "C" void setAnimation__9J2DScreenFP15J2DAnmTransform(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_file_d_file_sel_warning__stringBase0;
 
 // 
 // External References:
@@ -250,16 +250,16 @@ SECTION_DEAD static char const* const pad_803948B1 = "\0\0\0\0\0\0";
 #pragma pop
 
 /* 804539DC-804539E0 0004+00 s=1 e=0 z=0  None .sdata2    @3769                                                        */
-SECTION_SDATA2 static void* lit_3769 = (void*)&stringBase0;
+SECTION_SDATA2 static void* lit_3769 = (void*)&d_file_d_file_sel_warning__stringBase0;
 
 /* 804539E0-804539E4 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
-SECTION_SDATA2 static void* data_804539E0 = (void*)(((char*)&stringBase0)+0x25);
+SECTION_SDATA2 static void* data_804539E0 = (void*)(((char*)&d_file_d_file_sel_warning__stringBase0)+0x25);
 
 /* 804539E4-804539E8 0004+00 s=1 e=0 z=0  None .sdata2    @3770                                                        */
-SECTION_SDATA2 static void* lit_3770 = (void*)(((char*)&stringBase0)+0x44);
+SECTION_SDATA2 static void* lit_3770 = (void*)(((char*)&d_file_d_file_sel_warning__stringBase0)+0x44);
 
 /* 804539E8-804539EC 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
-SECTION_SDATA2 static void* data_804539E8 = (void*)(((char*)&stringBase0)+0x69);
+SECTION_SDATA2 static void* data_804539E8 = (void*)(((char*)&d_file_d_file_sel_warning__stringBase0)+0x69);
 
 /* 804539EC-804539F0 0004+00 s=2 e=0 z=0  None .sdata2    @3799                                                        */
 SECTION_SDATA2 static f32 lit_3799 = 2849.0f;

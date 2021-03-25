@@ -44,7 +44,7 @@ lbl_8036FB80:
 /* 8036FBC4 00000044  90 01 00 0C */	stw r0, 0xc(r1)
 lbl_8036FBC8:
 /* 8036FBC8 00000000  80 01 00 0C */	lwz r0, 0xc(r1)
-/* 8036FBCC 00000004  90 1F 00 0C */	stw r0, 0xc(r31)
+/* 8036FBCC 00000004  90 1F 00 0C */	stw r0, 0xc(r31)	/* effective address: 8044F344 */
 /* 8036FBD0 00000008  48 00 01 24 */	b lbl_8036FCF4
 lbl_8036FBD4:
 /* 8036FBD4 00000000  2C 1B 00 D3 */	cmpwi r27, 0xd3
@@ -64,7 +64,7 @@ lbl_8036FBD4:
 /* 8036FC0C 00000038  90 01 00 0C */	stw r0, 0xc(r1)
 lbl_8036FC10:
 /* 8036FC10 00000000  80 01 00 0C */	lwz r0, 0xc(r1)
-/* 8036FC14 00000004  90 1F 00 0C */	stw r0, 0xc(r31)
+/* 8036FC14 00000004  90 1F 00 0C */	stw r0, 0xc(r31)	/* effective address: 8044F344 */
 /* 8036FC18 00000008  48 00 00 DC */	b lbl_8036FCF4
 lbl_8036FC1C:
 /* 8036FC1C 00000000  2C 1B 00 D4 */	cmpwi r27, 0xd4
@@ -91,8 +91,8 @@ lbl_8036FC1C:
 lbl_8036FC70:
 /* 8036FC70 00000000  80 61 00 0C */	lwz r3, 0xc(r1)
 /* 8036FC74 00000004  80 01 00 08 */	lwz r0, 8(r1)
-/* 8036FC78 00000008  90 7F 00 0C */	stw r3, 0xc(r31)
-/* 8036FC7C 0000000C  80 7D 00 14 */	lwz r3, 0x14(r29)
+/* 8036FC78 00000008  90 7F 00 0C */	stw r3, 0xc(r31)	/* effective address: 8044F344 */
+/* 8036FC7C 0000000C  80 7D 00 14 */	lwz r3, 0x14(r29)	/* effective address: 8044F34C */
 /* 8036FC80 00000010  90 03 00 00 */	stw r0, 0(r3)
 /* 8036FC84 00000014  48 00 00 70 */	b lbl_8036FCF4
 lbl_8036FC88:
@@ -119,9 +119,9 @@ lbl_8036FC88:
 lbl_8036FCD8:
 /* 8036FCD8 00000000  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8036FCDC 00000004  2C 1B 00 D1 */	cmpwi r27, 0xd1
-/* 8036FCE0 00000008  90 1F 00 0C */	stw r0, 0xc(r31)
+/* 8036FCE0 00000008  90 1F 00 0C */	stw r0, 0xc(r31)	/* effective address: 8044F344 */
 /* 8036FCE4 0000000C  40 82 00 10 */	bne lbl_8036FCF4
-/* 8036FCE8 00000010  80 7D 00 18 */	lwz r3, 0x18(r29)
+/* 8036FCE8 00000010  80 7D 00 18 */	lwz r3, 0x18(r29)	/* effective address: 8044F350 */
 /* 8036FCEC 00000014  80 9C 00 00 */	lwz r4, 0(r28)
 /* 8036FCF0 00000018  4B FF F8 59 */	bl TRK_flush_cache
 lbl_8036FCF4:

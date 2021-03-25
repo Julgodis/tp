@@ -39,8 +39,8 @@ lbl_80262C98:
 /* 80262CEC 00000054  48 06 B7 89 */	bl alloc__7JKRHeapFUliP7JKRHeap
 /* 80262CF0 00000058  7C 64 1B 79 */	or. r4, r3, r3
 /* 80262CF4 0000005C  40 82 00 1C */	bne lbl_80262D10
-/* 80262CF8 00000060  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80262CFC 00000064  38 63 A4 A0 */	addi r3, r3, stringBase0@l
+/* 80262CF8 00000060  3C 60 80 3A */	lis r3, DynamicLink__stringBase0@ha
+/* 80262CFC 00000064  38 63 A4 A0 */	addi r3, r3, DynamicLink__stringBase0@l
 /* 80262D00 00000068  38 63 02 42 */	addi r3, r3, 0x242
 /* 80262D04 0000006C  4C C6 31 82 */	crclr 6
 /* 80262D08 00000070  4B DA 3F 05 */	bl OSReport_Error
@@ -51,8 +51,8 @@ lbl_80262D10:
 /* 80262D18 00000008  48 0D B7 F9 */	bl OSLink
 /* 80262D1C 0000000C  2C 03 00 00 */	cmpwi r3, 0
 /* 80262D20 00000010  40 82 01 64 */	bne lbl_80262E84
-/* 80262D24 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80262D28 00000018  38 63 A4 A0 */	addi r3, r3, stringBase0@l
+/* 80262D24 00000014  3C 60 80 3A */	lis r3, DynamicLink__stringBase0@ha
+/* 80262D28 00000018  38 63 A4 A0 */	addi r3, r3, DynamicLink__stringBase0@l
 /* 80262D2C 0000001C  38 63 02 55 */	addi r3, r3, 0x255
 /* 80262D30 00000020  4C C6 31 82 */	crclr 6
 /* 80262D34 00000024  4B DA 3E D9 */	bl OSReport_Error
@@ -68,8 +68,8 @@ lbl_80262D3C:
 /* 80262D58 0000001C  48 0D B7 DD */	bl OSLinkFixed
 /* 80262D5C 00000020  2C 03 00 00 */	cmpwi r3, 0
 /* 80262D60 00000024  40 82 00 1C */	bne lbl_80262D7C
-/* 80262D64 00000028  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80262D68 0000002C  38 63 A4 A0 */	addi r3, r3, stringBase0@l
+/* 80262D64 00000028  3C 60 80 3A */	lis r3, DynamicLink__stringBase0@ha
+/* 80262D68 0000002C  38 63 A4 A0 */	addi r3, r3, DynamicLink__stringBase0@l
 /* 80262D6C 00000030  38 63 02 55 */	addi r3, r3, 0x255
 /* 80262D70 00000034  4C C6 31 82 */	crclr 6
 /* 80262D74 00000038  4B DA 3E 99 */	bl OSReport_Error
@@ -82,8 +82,8 @@ lbl_80262D7C:
 /* 80262D8C 00000010  48 06 B8 99 */	bl resize__7JKRHeapFPvUlP7JKRHeap
 /* 80262D90 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 80262D94 00000018  40 80 00 F0 */	bge lbl_80262E84
-/* 80262D98 0000001C  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80262D9C 00000020  38 63 A4 A0 */	addi r3, r3, stringBase0@l
+/* 80262D98 0000001C  3C 60 80 3A */	lis r3, DynamicLink__stringBase0@ha
+/* 80262D9C 00000020  38 63 A4 A0 */	addi r3, r3, DynamicLink__stringBase0@l
 /* 80262DA0 00000024  38 63 02 61 */	addi r3, r3, 0x261
 /* 80262DA4 00000028  4C C6 31 82 */	crclr 6
 /* 80262DA8 0000002C  4B DA 3E 65 */	bl OSReport_Error
@@ -99,8 +99,8 @@ lbl_80262DB0:
 /* 80262DCC 0000001C  48 0D B7 69 */	bl OSLinkFixed
 /* 80262DD0 00000020  2C 03 00 00 */	cmpwi r3, 0
 /* 80262DD4 00000024  40 82 00 B0 */	bne lbl_80262E84
-/* 80262DD8 00000028  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80262DDC 0000002C  38 63 A4 A0 */	addi r3, r3, stringBase0@l
+/* 80262DD8 00000028  3C 60 80 3A */	lis r3, DynamicLink__stringBase0@ha
+/* 80262DDC 0000002C  38 63 A4 A0 */	addi r3, r3, DynamicLink__stringBase0@l
 /* 80262DE0 00000030  38 63 02 55 */	addi r3, r3, 0x255
 /* 80262DE4 00000034  4C C6 31 82 */	crclr 6
 /* 80262DE8 00000038  4B DA 3E 25 */	bl OSReport_Error
@@ -113,8 +113,8 @@ lbl_80262DF0:
 /* 80262E00 00000010  48 06 B6 75 */	bl alloc__7JKRHeapFUliP7JKRHeap
 /* 80262E04 00000014  7C 64 1B 79 */	or. r4, r3, r3
 /* 80262E08 00000018  40 82 00 24 */	bne lbl_80262E2C
-/* 80262E0C 0000001C  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80262E10 00000020  38 63 A4 A0 */	addi r3, r3, stringBase0@l
+/* 80262E0C 0000001C  3C 60 80 3A */	lis r3, DynamicLink__stringBase0@ha
+/* 80262E10 00000020  38 63 A4 A0 */	addi r3, r3, DynamicLink__stringBase0@l
 /* 80262E14 00000024  38 63 02 7F */	addi r3, r3, 0x27f
 /* 80262E18 00000028  80 9F 00 10 */	lwz r4, 0x10(r31)
 /* 80262E1C 0000002C  80 84 00 20 */	lwz r4, 0x20(r4)
@@ -127,8 +127,8 @@ lbl_80262E2C:
 /* 80262E34 00000008  48 0D B7 01 */	bl OSLinkFixed
 /* 80262E38 0000000C  2C 03 00 00 */	cmpwi r3, 0
 /* 80262E3C 00000010  40 82 00 1C */	bne lbl_80262E58
-/* 80262E40 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80262E44 00000018  38 63 A4 A0 */	addi r3, r3, stringBase0@l
+/* 80262E40 00000014  3C 60 80 3A */	lis r3, DynamicLink__stringBase0@ha
+/* 80262E44 00000018  38 63 A4 A0 */	addi r3, r3, DynamicLink__stringBase0@l
 /* 80262E48 0000001C  38 63 02 55 */	addi r3, r3, 0x255
 /* 80262E4C 00000020  4C C6 31 82 */	crclr 6
 /* 80262E50 00000024  4B DA 3D BD */	bl OSReport_Error
@@ -140,8 +140,8 @@ lbl_80262E58:
 /* 80262E64 0000000C  48 06 B7 C1 */	bl resize__7JKRHeapFPvUlP7JKRHeap
 /* 80262E68 00000010  2C 03 00 00 */	cmpwi r3, 0
 /* 80262E6C 00000014  40 80 00 18 */	bge lbl_80262E84
-/* 80262E70 00000018  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80262E74 0000001C  38 63 A4 A0 */	addi r3, r3, stringBase0@l
+/* 80262E70 00000018  3C 60 80 3A */	lis r3, DynamicLink__stringBase0@ha
+/* 80262E74 0000001C  38 63 A4 A0 */	addi r3, r3, DynamicLink__stringBase0@l
 /* 80262E78 00000020  38 63 02 61 */	addi r3, r3, 0x261
 /* 80262E7C 00000024  4C C6 31 82 */	crclr 6
 /* 80262E80 00000028  4B DA 3D 8D */	bl OSReport_Error

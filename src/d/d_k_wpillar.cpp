@@ -82,13 +82,13 @@ struct dRes_control_c {
 struct csXyz {
 };
 
+struct dKy_tevstr_c {
+};
+
 struct _GXColor {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -318,7 +318,7 @@ SECTION_DATA static void* l_dkWpillar_Method[5] = {
 	/* 4    */ (void*)dkWpillar_Draw__FP11dkWpillar_c,
 };
 
-/* 803C3484-803C34B0 0028+04 s=0 e=0 z=0  None .data      g_profile_WPILLAR                                            */
+/* 803C3484-803C34B0 0028+04 s=0 e=0 z=1  None .data      g_profile_WPILLAR                                            */
 SECTION_DATA void* g_profile_WPILLAR[10 + 1 /* padding */] = {
 	/* 0    */ (void*)0xFFFFFFFD,
 	/* 1    */ (void*)0x0009FFFD,

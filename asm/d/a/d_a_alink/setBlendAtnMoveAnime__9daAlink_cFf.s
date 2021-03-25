@@ -115,12 +115,12 @@ lbl_800AEC0C:
 /* 800AEC0C 00000000  28 04 00 00 */	cmplwi r4, 0
 /* 800AEC10 00000004  41 82 00 14 */	beq lbl_800AEC24
 /* 800AEC14 00000008  38 7F 00 BC */	addi r3, r31, 0xbc
-/* 800AEC18 0000000C  C0 03 00 1C */	lfs f0, 0x1c(r3)
+/* 800AEC18 0000000C  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 8038D730 */
 /* 800AEC1C 00000010  D0 1D 05 94 */	stfs f0, 0x594(r29)
 /* 800AEC20 00000014  48 00 00 10 */	b lbl_800AEC30
 lbl_800AEC24:
 /* 800AEC24 00000000  38 7F 01 10 */	addi r3, r31, 0x110
-/* 800AEC28 00000004  C0 03 00 1C */	lfs f0, 0x1c(r3)
+/* 800AEC28 00000004  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 8038D784 */
 /* 800AEC2C 00000008  D0 1D 05 94 */	stfs f0, 0x594(r29)
 lbl_800AEC30:
 /* 800AEC30 00000000  80 1D 27 EC */	lwz r0, 0x27ec(r29)
@@ -219,7 +219,7 @@ lbl_800AED74:
 /* 800AED74 00000000  2C 1E 00 00 */	cmpwi r30, 0
 /* 800AED78 00000004  41 82 00 20 */	beq lbl_800AED98
 /* 800AED7C 00000008  38 7F 00 64 */	addi r3, r31, 0x64
-/* 800AED80 0000000C  C0 03 00 30 */	lfs f0, 0x30(r3)
+/* 800AED80 0000000C  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 8038D6EC */
 /* 800AED84 00000010  D0 1D 05 94 */	stfs f0, 0x594(r29)
 /* 800AED88 00000014  7F A3 EB 78 */	mr r3, r29
 /* 800AED8C 00000018  FC 20 F8 90 */	fmr f1, f31
@@ -233,21 +233,21 @@ lbl_800AED98:
 /* 800AEDA8 00000010  28 04 00 00 */	cmplwi r4, 0
 /* 800AEDAC 00000014  41 82 00 24 */	beq lbl_800AEDD0
 /* 800AEDB0 00000018  38 7F 00 BC */	addi r3, r31, 0xbc
-/* 800AEDB4 0000001C  C3 83 00 44 */	lfs f28, 0x44(r3)
-/* 800AEDB8 00000020  C0 03 00 14 */	lfs f0, 0x14(r3)
-/* 800AEDBC 00000024  C0 43 00 18 */	lfs f2, 0x18(r3)
-/* 800AEDC0 00000028  C3 63 00 08 */	lfs f27, 8(r3)
-/* 800AEDC4 0000002C  C3 43 00 0C */	lfs f26, 0xc(r3)
-/* 800AEDC8 00000030  C0 63 00 10 */	lfs f3, 0x10(r3)
+/* 800AEDB4 0000001C  C3 83 00 44 */	lfs f28, 0x44(r3)	/* effective address: 8038D758 */
+/* 800AEDB8 00000020  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 8038D728 */
+/* 800AEDBC 00000024  C0 43 00 18 */	lfs f2, 0x18(r3)	/* effective address: 8038D72C */
+/* 800AEDC0 00000028  C3 63 00 08 */	lfs f27, 8(r3)	/* effective address: 8038D71C */
+/* 800AEDC4 0000002C  C3 43 00 0C */	lfs f26, 0xc(r3)	/* effective address: 8038D720 */
+/* 800AEDC8 00000030  C0 63 00 10 */	lfs f3, 0x10(r3)	/* effective address: 8038D724 */
 /* 800AEDCC 00000034  48 00 00 20 */	b lbl_800AEDEC
 lbl_800AEDD0:
 /* 800AEDD0 00000000  38 7F 01 10 */	addi r3, r31, 0x110
-/* 800AEDD4 00000004  C3 83 00 44 */	lfs f28, 0x44(r3)
-/* 800AEDD8 00000008  C0 03 00 14 */	lfs f0, 0x14(r3)
-/* 800AEDDC 0000000C  C0 43 00 18 */	lfs f2, 0x18(r3)
-/* 800AEDE0 00000010  C3 63 00 08 */	lfs f27, 8(r3)
-/* 800AEDE4 00000014  C3 43 00 0C */	lfs f26, 0xc(r3)
-/* 800AEDE8 00000018  C0 63 00 10 */	lfs f3, 0x10(r3)
+/* 800AEDD4 00000004  C3 83 00 44 */	lfs f28, 0x44(r3)	/* effective address: 8038D7AC */
+/* 800AEDD8 00000008  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 8038D77C */
+/* 800AEDDC 0000000C  C0 43 00 18 */	lfs f2, 0x18(r3)	/* effective address: 8038D780 */
+/* 800AEDE0 00000010  C3 63 00 08 */	lfs f27, 8(r3)	/* effective address: 8038D770 */
+/* 800AEDE4 00000014  C3 43 00 0C */	lfs f26, 0xc(r3)	/* effective address: 8038D774 */
+/* 800AEDE8 00000018  C0 63 00 10 */	lfs f3, 0x10(r3)	/* effective address: 8038D778 */
 lbl_800AEDEC:
 /* 800AEDEC 00000000  FC 1E 00 40 */	fcmpo cr0, f30, f0
 /* 800AEDF0 00000000  40 80 00 CC */	bge lbl_800AEEBC
@@ -258,7 +258,7 @@ lbl_800AEDEC:
 /* 800AEE04 00000014  3B C0 00 11 */	li r30, 0x11
 /* 800AEE08 00000018  3B 80 00 00 */	li r28, 0
 /* 800AEE0C 0000001C  38 7F 00 BC */	addi r3, r31, 0xbc
-/* 800AEE10 00000020  C3 43 00 4C */	lfs f26, 0x4c(r3)
+/* 800AEE10 00000020  C3 43 00 4C */	lfs f26, 0x4c(r3)	/* effective address: 8038D760 */
 /* 800AEE14 00000024  48 00 00 40 */	b lbl_800AEE54
 lbl_800AEE18:
 /* 800AEE18 00000000  28 00 00 02 */	cmplwi r0, 2
@@ -321,8 +321,8 @@ lbl_800AEEBC:
 /* 800AEEDC 0000001C  38 80 00 00 */	li r4, 0
 /* 800AEEE0 00000020  38 A0 00 01 */	li r5, 1
 /* 800AEEE4 00000024  38 7F 00 BC */	addi r3, r31, 0xbc
-/* 800AEEE8 00000028  C3 43 00 4C */	lfs f26, 0x4c(r3)
-/* 800AEEEC 0000002C  C0 63 00 50 */	lfs f3, 0x50(r3)
+/* 800AEEE8 00000028  C3 43 00 4C */	lfs f26, 0x4c(r3)	/* effective address: 8038D760 */
+/* 800AEEEC 0000002C  C0 63 00 50 */	lfs f3, 0x50(r3)	/* effective address: 8038D764 */
 /* 800AEEF0 00000030  48 00 00 48 */	b lbl_800AEF38
 lbl_800AEEF4:
 /* 800AEEF4 00000000  28 00 00 02 */	cmplwi r0, 2
@@ -362,7 +362,7 @@ lbl_800AEF60:
 /* 800AEF68 00000008  40 82 00 14 */	bne lbl_800AEF7C
 /* 800AEF6C 0000000C  38 80 00 01 */	li r4, 1
 /* 800AEF70 00000010  38 7F 00 BC */	addi r3, r31, 0xbc
-/* 800AEF74 00000014  C0 63 00 50 */	lfs f3, 0x50(r3)
+/* 800AEF74 00000014  C0 63 00 50 */	lfs f3, 0x50(r3)	/* effective address: 8038D764 */
 /* 800AEF78 00000018  48 00 00 38 */	b lbl_800AEFB0
 lbl_800AEF7C:
 /* 800AEF7C 00000000  28 00 00 02 */	cmplwi r0, 2

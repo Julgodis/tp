@@ -8,14 +8,14 @@ lbl_80AFDAA4:
 /* 80AFDABC 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80AFDAC0 0000001C  41 82 00 98 */	beq lbl_80AFDB58
 /* 80AFDAC4 00000020  38 C0 00 00 */	li r6, 0
-/* 80AFDAC8 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80AFDACC 00000028  80 A4 00 00 */	lwz r5, 0x0000(r4)
+/* 80AFDAC8 00000024  3C 80 80 B0 */	lis r4, l_btkGetParamList@ha
+/* 80AFDACC 00000028  80 A4 10 C4 */	lwz r5, l_btkGetParamList@l(r4)
 /* 80AFDAD0 0000002C  2C 05 00 00 */	cmpwi r5, 0
 /* 80AFDAD4 00000030  41 80 00 18 */	blt lbl_80AFDAEC
-/* 80AFDAD8 00000034  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80AFDADC 00000038  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80AFDAE0 0000003C  80 84 00 00 */	lwz r4, 0(r4)
-/* 80AFDAE4 00000040  4B FF EB F5 */	bl _unresolved
+/* 80AFDAD8 00000034  3C 80 80 B0 */	lis r4, l_arcName@ha
+/* 80AFDADC 00000038  38 84 10 E4 */	addi r4, r4, l_arcName@l
+/* 80AFDAE0 0000003C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B010E4 */
+/* 80AFDAE4 00000040  4B 65 50 C0 */	b getTexSRTKeyAnmP__8daNpcF_cFPci
 /* 80AFDAE8 00000044  7C 66 1B 78 */	mr r6, r3
 lbl_80AFDAEC:
 /* 80AFDAEC 00000000  80 1F 05 B4 */	lwz r0, 0x5b4(r31)
@@ -23,11 +23,11 @@ lbl_80AFDAEC:
 /* 80AFDAF4 00000008  40 82 00 58 */	bne lbl_80AFDB4C
 /* 80AFDAF8 0000000C  A8 1F 08 FE */	lha r0, 0x8fe(r31)
 /* 80AFDAFC 00000010  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
-/* 80AFDB00 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AFDB04 00000018  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
+/* 80AFDB00 00000014  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
+/* 80AFDB04 00000018  38 83 9A 20 */	addi r4, r3, sincosTable___5JMath@l
 /* 80AFDB08 0000001C  7C 04 04 2E */	lfsx f0, r4, r0
-/* 80AFDB0C 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AFDB10 00000024  C0 23 00 00 */	lfs f1, 0x0000(r3)
+/* 80AFDB0C 00000020  3C 60 80 B0 */	lis r3, lit_4581@ha
+/* 80AFDB10 00000024  C0 23 0E 34 */	lfs f1, lit_4581@l(r3)
 /* 80AFDB14 00000028  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80AFDB18 0000002C  80 7F 0B D8 */	lwz r3, 0xbd8(r31)
 /* 80AFDB1C 00000030  D0 03 00 FC */	stfs f0, 0xfc(r3)

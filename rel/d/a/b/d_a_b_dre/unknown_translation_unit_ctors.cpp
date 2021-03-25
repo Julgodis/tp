@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_805CAD48[8];
+extern void* data_805CAD48[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_b_dre_cpp(); // 1
 
 // 
 // Declarations:

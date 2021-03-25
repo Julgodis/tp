@@ -46,23 +46,88 @@ struct daAmiShutter_c {
 };
 
 struct fopAc_ac_c {
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct dEvLib_callback_c {
+	/* 8004886C */ void eventUpdate();
+	/* 80048940 */ void orderEvent(int, int, int);
 	/* 80BA2288 */ ~dEvLib_callback_c();
 	/* 80BA22D0 */ void eventStart();
 	/* 80BA22D8 */ void eventRun();
 	/* 80BA22E0 */ void eventEnd();
 };
 
+struct J3DModel {
+};
+
+struct J3DModelData {
+};
+
+struct request_of_phase_process_class {
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dBgW {
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct csXyz {
+};
+
+struct dBgS_MoveBgActor {
+	/* 80078624 */ dBgS_MoveBgActor();
+	/* 80078690 */ void Create();
+	/* 800786B0 */ void IsDelete();
+	/* 800786B8 */ void ToFore();
+	/* 800786C0 */ void ToBack();
+	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
+	/* 800788DC */ void MoveBGDelete();
+	/* 80078950 */ void MoveBGExecute();
+};
+
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct JAISoundID {
+};
+
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
 // 
 // Forward References:
 // 
 
-void daAmiShutter_Draw(daAmiShutter_c*); // 2
-void daAmiShutter_Execute(daAmiShutter_c*); // 2
-void daAmiShutter_Delete(daAmiShutter_c*); // 2
-void daAmiShutter_Create(fopAc_ac_c*); // 2
+static void daAmiShutter_Draw(daAmiShutter_c*); // 2
+static void daAmiShutter_Execute(daAmiShutter_c*); // 2
+static void daAmiShutter_Delete(daAmiShutter_c*); // 2
+static void daAmiShutter_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__18daAmiShutter_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -87,63 +152,232 @@ extern "C" void init_modeOpen__14daAmiShutter_cFv(); // 1
 extern "C" void modeOpen__14daAmiShutter_cFv(); // 1
 extern "C" void Draw__14daAmiShutter_cFv(); // 1
 extern "C" void Delete__14daAmiShutter_cFv(); // 1
-extern "C" void daAmiShutter_Draw__FP14daAmiShutter_c(); // 1
-extern "C" void daAmiShutter_Execute__FP14daAmiShutter_c(); // 1
-extern "C" void daAmiShutter_Delete__FP14daAmiShutter_c(); // 1
-extern "C" void daAmiShutter_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daAmiShutter_Draw__FP14daAmiShutter_c(); // 1
+extern "C" static void daAmiShutter_Execute__FP14daAmiShutter_c(); // 1
+extern "C" static void daAmiShutter_Delete__FP14daAmiShutter_c(); // 1
+extern "C" static void daAmiShutter_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__18daAmiShutter_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_amiShutter_cpp(); // 1
-extern "C" void func_80BA2278(); // 1
-extern "C" void func_80BA2280(); // 1
+extern "C" static void func_80BA2278(); // 1
+extern "C" static void func_80BA2280(); // 1
 extern "C" void __dt__17dEvLib_callback_cFv(); // 1
 extern "C" void eventStart__17dEvLib_callback_cFv(); // 1
 extern "C" void eventRun__17dEvLib_callback_cFv(); // 1
 extern "C" void eventEnd__17dEvLib_callback_cFv(); // 1
 extern "C" void __dt__14daAmiShutter_cFv(); // 1
-extern "C" extern u32 const lit_3655;
-extern "C" extern u32 const lit_3656;
-extern "C" extern u32 const lit_3739;
-extern "C" extern u32 const lit_3740;
-extern "C" extern u8 const lit_3822[4 + 4 /* padding */];
-extern "C" extern u8 const lit_3823[8];
-extern "C" extern u8 const lit_3824[8];
 extern "C" extern u8 const lit_3825[8];
 extern "C" extern u32 const lit_3826;
-extern "C" extern u32 const lit_3890;
-extern "C" extern u32 const lit_3891;
-extern "C" extern u32 const lit_3900;
-extern "C" extern u32 const lit_3919;
 extern "C" extern char const* const stringBase0;
-extern "C" extern u8 cNullVec__6Z2Calc[12];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern u8 lit_3759[12];
-extern "C" extern u8 lit_3760[12];
-extern "C" extern u8 lit_3761[12];
-extern "C" extern u8 lit_3762[12];
-extern "C" extern u8 lit_3763[12];
-extern "C" extern u8 lit_3764[12];
-extern "C" extern u8 data_80BA2444[72];
-extern "C" extern u8 l_daAmiShutter_Method[32];
-extern "C" extern u8 g_profile_Obj_AmiShutter[48];
-extern "C" extern void* __vt__17dEvLib_callback_c[6];
-extern "C" extern void* __vt__14daAmiShutter_c[18];
-extern "C" extern void* __vt__18daAmiShutter_HIO_c[3];
-extern "C" extern void* __vt__14mDoHIO_entry_c[3];
-extern "C" extern u8 lit_3649[12];
-extern "C" extern u8 l_HIO[20];
-extern "C" extern u8 data_80BA2580[4];
+extern "C" extern void* g_profile_Obj_AmiShutter[12];
 
 // 
 // External References:
 // 
 
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
+void mDoExt_modelUpdateDL(J3DModel*); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void dComIfGp_getReverb(int); // 2
+void dBgS_MoveBGProc_Typical(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*); // 2
+void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
+void operator delete(void*); // 2
 
-extern "C" void _unresolved(); // 1
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void __dt__10fopAc_ac_cFv(); // 1
+extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfGp_getReverb__Fi(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void eventUpdate__17dEvLib_callback_cFv(); // 1
+extern "C" void orderEvent__17dEvLib_callback_cFiii(); // 1
+extern "C" void dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
+extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" void Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void cLib_addCalc__FPfffff(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__16dBgS_MoveBgActor[10];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 struct_80450C98[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" void __register_global_object(); // 1
 
 // 
 // Declarations:
 // 
+
+/* ############################################################################################## */
+/* 80BA2390-80BA2394 0004+00 s=5 e=0 z=0  None .rodata    @3655                                                        */
+SECTION_RODATA static u32 const lit_3655 = 0x428C0000;
+
+/* 80BA2394-80BA2398 0004+00 s=1 e=0 z=0  None .rodata    @3656                                                        */
+SECTION_RODATA static u32 const lit_3656 = 0x43C80000;
+
+/* 80BA23DC-80BA23E8 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BA23E8-80BA23FC 0004+10 s=0 e=0 z=0  None .data      @1787                                                        */
+SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
+	0x02000201,
+	/* padding */
+	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
+};
+
+/* 80BA23FC-80BA2408 000C+00 s=1 e=0 z=0  None .data      @3759                                                        */
+SECTION_DATA static void* lit_3759[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)modeWait__14daAmiShutter_cFv,
+};
+
+/* 80BA2408-80BA2414 000C+00 s=1 e=0 z=0  None .data      @3760                                                        */
+SECTION_DATA static void* lit_3760[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)modeWaitEvent__14daAmiShutter_cFv,
+};
+
+/* 80BA2414-80BA2420 000C+00 s=1 e=0 z=0  None .data      @3761                                                        */
+SECTION_DATA static void* lit_3761[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)modeClose__14daAmiShutter_cFv,
+};
+
+/* 80BA2420-80BA242C 000C+00 s=1 e=0 z=0  None .data      @3762                                                        */
+SECTION_DATA static void* lit_3762[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)modeCloseEvent__14daAmiShutter_cFv,
+};
+
+/* 80BA242C-80BA2438 000C+00 s=1 e=0 z=0  None .data      @3763                                                        */
+SECTION_DATA static void* lit_3763[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)modeCloseEnd__14daAmiShutter_cFv,
+};
+
+/* 80BA2438-80BA2444 000C+00 s=1 e=0 z=0  None .data      @3764                                                        */
+SECTION_DATA static void* lit_3764[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)modeOpen__14daAmiShutter_cFv,
+};
+
+/* 80BA2444-80BA248C 0048+00 s=1 e=0 z=0  None .data      mode_proc$3758                                               */
+SECTION_DATA static u8 data_80BA2444[72] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BA248C-80BA24AC 0020+00 s=1 e=0 z=0  None .data      l_daAmiShutter_Method                                        */
+SECTION_DATA static void* l_daAmiShutter_Method[8] = {
+	/* 0    */ (void*)daAmiShutter_Create__FP10fopAc_ac_c,
+	/* 1    */ (void*)daAmiShutter_Delete__FP14daAmiShutter_c,
+	/* 2    */ (void*)daAmiShutter_Execute__FP14daAmiShutter_c,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)daAmiShutter_Draw__FP14daAmiShutter_c,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+};
+
+/* 80BA24AC-80BA24DC 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_AmiShutter                                     */
+SECTION_DATA void* g_profile_Obj_AmiShutter[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0003FFFD,
+	/* 2    */ (void*)0x00470000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x000005DC,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x02090000,
+	/* 9    */ (void*)&l_daAmiShutter_Method,
+	/* 10   */ (void*)0x00044000,
+	/* 11   */ (void*)0x000E0000,
+};
+
+/* 80BA24DC-80BA24F4 0018+00 s=3 e=0 z=0  None .data      __vt__17dEvLib_callback_c                                    */
+SECTION_DATA static void* __vt__17dEvLib_callback_c[6] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__17dEvLib_callback_cFv,
+	/* 3    */ (void*)eventStart__17dEvLib_callback_cFv,
+	/* 4    */ (void*)eventRun__17dEvLib_callback_cFv,
+	/* 5    */ (void*)eventEnd__17dEvLib_callback_cFv,
+};
+
+/* 80BA24F4-80BA253C 0048+00 s=2 e=0 z=0  None .data      __vt__14daAmiShutter_c                                       */
+SECTION_DATA static void* __vt__14daAmiShutter_c[18] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)CreateHeap__14daAmiShutter_cFv,
+	/* 3    */ (void*)Create__16dBgS_MoveBgActorFv,
+	/* 4    */ (void*)Execute__14daAmiShutter_cFPPA3_A4_f,
+	/* 5    */ (void*)Draw__14daAmiShutter_cFv,
+	/* 6    */ (void*)Delete__14daAmiShutter_cFv,
+	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
+	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
+	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	/* 10   */ (void*)NULL,
+	/* 11   */ (void*)NULL,
+	/* 12   */ (void*)func_80BA2280,
+	/* 13   */ (void*)func_80BA2278,
+	/* 14   */ (void*)eventRun__17dEvLib_callback_cFv,
+	/* 15   */ (void*)eventEnd__17dEvLib_callback_cFv,
+	/* 16   */ (void*)__dt__14daAmiShutter_cFv,
+	/* 17   */ (void*)eventStart__14daAmiShutter_cFv,
+};
+
+/* 80BA253C-80BA2548 000C+00 s=2 e=0 z=0  None .data      __vt__18daAmiShutter_HIO_c                                   */
+SECTION_DATA static void* __vt__18daAmiShutter_HIO_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__18daAmiShutter_HIO_cFv,
+};
+
+/* 80BA2548-80BA2554 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
+SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__14mDoHIO_entry_cFv,
+};
 
 /* 80BA14CC-80BA1514 0048+00 s=1 e=0 z=0  None .text      __ct__18daAmiShutter_HIO_cFv                                 */
 #pragma push
@@ -156,7 +390,7 @@ asm daAmiShutter_HIO_c::daAmiShutter_HIO_c() {
 #pragma pop
 
 
-/* 80BA1514-80BA155C 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80BA1514-80BA155C 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -178,7 +412,58 @@ asm void daAmiShutter_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80BA15E4-80BA1650 006C+00 s=0 e=0 z=0  None .text      CreateHeap__14daAmiShutter_cFv                               */
+/* ############################################################################################## */
+/* 80BA2398-80BA239C 0004+00 s=1 e=0 z=0  None .rodata    @3739                                                        */
+SECTION_RODATA static u32 const lit_3739 = 0xC4480000;
+
+/* 80BA239C-80BA23A0 0004+00 s=2 e=0 z=0  None .rodata    @3740                                                        */
+SECTION_RODATA static u32 const lit_3740 = 0x44160000;
+
+/* 80BA23A0-80BA23A8 0004+04 s=3 e=0 z=0  None .rodata    @3822                                                        */
+SECTION_RODATA static u8 const lit_3822[4 + 4 /* padding */] = {
+	0x00, 0x00, 0x00, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BA23A8-80BA23B0 0008+00 s=1 e=0 z=0  None .rodata    @3823                                                        */
+SECTION_RODATA static u8 const lit_3823[8] = {
+	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BA23B0-80BA23B8 0008+00 s=1 e=0 z=0  None .rodata    @3824                                                        */
+SECTION_RODATA static u8 const lit_3824[8] = {
+	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BA23B8-80BA23C0 0008+00 s=0 e=0 z=0  None .rodata    @3825                                                        */
+SECTION_RODATA u8 const lit_3825[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BA23C0-80BA23C4 0004+00 s=0 e=0 z=0  None .rodata    @3826                                                        */
+SECTION_RODATA u32 const lit_3826 = 0x42480000;
+
+/* 80BA23C4-80BA23C8 0004+00 s=5 e=0 z=0  None .rodata    @3890                                                        */
+SECTION_RODATA static u32 const lit_3890 = 0x3F800000;
+
+/* 80BA23C8-80BA23CC 0004+00 s=3 e=0 z=0  None .rodata    @3891                                                        */
+SECTION_RODATA static u32 const lit_3891 = 0xBF800000;
+
+/* 80BA23CC-80BA23D0 0004+00 s=1 e=0 z=0  None .rodata    @3900                                                        */
+SECTION_RODATA static u32 const lit_3900 = 0x3F000000;
+
+/* 80BA23D0-80BA23D4 0004+00 s=1 e=0 z=0  None .rodata    @3919                                                        */
+SECTION_RODATA static u32 const lit_3919 = 0x3E4CCCCD;
+
+/* 80BA23D4-80BA23DB 0007+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80BA23D4 = "S_Zami";
+#pragma pop
+
+/* 80BA15E4-80BA1650 006C+00 s=1 e=0 z=0  None .text      CreateHeap__14daAmiShutter_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -200,7 +485,7 @@ asm void daAmiShutter_c::create() {
 #pragma pop
 
 
-/* 80BA182C-80BA1888 005C+00 s=0 e=0 z=0  None .text      Execute__14daAmiShutter_cFPPA3_A4_f                          */
+/* 80BA182C-80BA1888 005C+00 s=1 e=0 z=0  None .text      Execute__14daAmiShutter_cFPPA3_A4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -210,6 +495,16 @@ asm void daAmiShutter_c::Execute(f32 (** param_0)[3][4]) {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80BA2560-80BA256C 000C+00 s=1 e=0 z=0  None .bss       @3649                                                        */
+static u8 lit_3649[12];
+
+/* 80BA256C-80BA2580 0014+00 s=6 e=0 z=0  None .bss       l_HIO                                                        */
+static u8 l_HIO[20];
+
+/* 80BA2580-80BA2584 0004+00 s=1 e=0 z=0  None .bss       None                                                         */
+static u8 data_80BA2580[4];
 
 /* 80BA1888-80BA1974 00EC+00 s=1 e=0 z=0  None .text      moveShutter__14daAmiShutter_cFv                              */
 #pragma push
@@ -244,7 +539,7 @@ asm void daAmiShutter_c::init_modeWait() {
 #pragma pop
 
 
-/* 80BA1B58-80BA1BCC 0074+00 s=0 e=0 z=0  None .text      modeWait__14daAmiShutter_cFv                                 */
+/* 80BA1B58-80BA1BCC 0074+00 s=1 e=0 z=0  None .text      modeWait__14daAmiShutter_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -266,7 +561,7 @@ asm void daAmiShutter_c::init_modeWaitEvent() {
 #pragma pop
 
 
-/* 80BA1BD8-80BA1C90 00B8+00 s=0 e=0 z=0  None .text      modeWaitEvent__14daAmiShutter_cFv                            */
+/* 80BA1BD8-80BA1C90 00B8+00 s=1 e=0 z=0  None .text      modeWaitEvent__14daAmiShutter_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -277,7 +572,7 @@ asm void daAmiShutter_c::modeWaitEvent() {
 #pragma pop
 
 
-/* 80BA1C90-80BA1CB4 0024+00 s=1 e=0 z=0  None .text      eventStart__14daAmiShutter_cFv                               */
+/* 80BA1C90-80BA1CB4 0024+00 s=2 e=0 z=0  None .text      eventStart__14daAmiShutter_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -299,7 +594,7 @@ asm void daAmiShutter_c::init_modeClose() {
 #pragma pop
 
 
-/* 80BA1D48-80BA1DCC 0084+00 s=0 e=0 z=0  None .text      modeClose__14daAmiShutter_cFv                                */
+/* 80BA1D48-80BA1DCC 0084+00 s=1 e=0 z=0  None .text      modeClose__14daAmiShutter_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -321,7 +616,7 @@ asm void daAmiShutter_c::init_modeCloseEvent() {
 #pragma pop
 
 
-/* 80BA1E60-80BA1EEC 008C+00 s=0 e=0 z=0  None .text      modeCloseEvent__14daAmiShutter_cFv                           */
+/* 80BA1E60-80BA1EEC 008C+00 s=1 e=0 z=0  None .text      modeCloseEvent__14daAmiShutter_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -343,7 +638,7 @@ asm void daAmiShutter_c::init_modeCloseEnd() {
 #pragma pop
 
 
-/* 80BA1F7C-80BA1F80 0004+00 s=0 e=0 z=0  None .text      modeCloseEnd__14daAmiShutter_cFv                             */
+/* 80BA1F7C-80BA1F80 0004+00 s=1 e=0 z=0  None .text      modeCloseEnd__14daAmiShutter_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -365,7 +660,7 @@ asm void daAmiShutter_c::init_modeOpen() {
 #pragma pop
 
 
-/* 80BA2004-80BA2080 007C+00 s=0 e=0 z=0  None .text      modeOpen__14daAmiShutter_cFv                                 */
+/* 80BA2004-80BA2080 007C+00 s=1 e=0 z=0  None .text      modeOpen__14daAmiShutter_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -376,7 +671,7 @@ asm void daAmiShutter_c::modeOpen() {
 #pragma pop
 
 
-/* 80BA2080-80BA2124 00A4+00 s=0 e=0 z=0  None .text      Draw__14daAmiShutter_cFv                                     */
+/* 80BA2080-80BA2124 00A4+00 s=1 e=0 z=0  None .text      Draw__14daAmiShutter_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -387,7 +682,7 @@ asm void daAmiShutter_c::Draw() {
 #pragma pop
 
 
-/* 80BA2124-80BA2154 0030+00 s=0 e=0 z=0  None .text      Delete__14daAmiShutter_cFv                                   */
+/* 80BA2124-80BA2154 0030+00 s=1 e=0 z=0  None .text      Delete__14daAmiShutter_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -398,51 +693,51 @@ asm void daAmiShutter_c::Delete() {
 #pragma pop
 
 
-/* 80BA2154-80BA2180 002C+00 s=0 e=0 z=0  None .text      daAmiShutter_Draw__FP14daAmiShutter_c                        */
+/* 80BA2154-80BA2180 002C+00 s=1 e=0 z=0  None .text      daAmiShutter_Draw__FP14daAmiShutter_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daAmiShutter_Draw(daAmiShutter_c* param_0) {
+asm static void daAmiShutter_Draw(daAmiShutter_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/daAmiShutter_Draw__FP14daAmiShutter_c.s"
 }
 #pragma pop
 
 
-/* 80BA2180-80BA21A0 0020+00 s=0 e=0 z=0  None .text      daAmiShutter_Execute__FP14daAmiShutter_c                     */
+/* 80BA2180-80BA21A0 0020+00 s=1 e=0 z=0  None .text      daAmiShutter_Execute__FP14daAmiShutter_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daAmiShutter_Execute(daAmiShutter_c* param_0) {
+asm static void daAmiShutter_Execute(daAmiShutter_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/daAmiShutter_Execute__FP14daAmiShutter_c.s"
 }
 #pragma pop
 
 
-/* 80BA21A0-80BA21C0 0020+00 s=0 e=0 z=0  None .text      daAmiShutter_Delete__FP14daAmiShutter_c                      */
+/* 80BA21A0-80BA21C0 0020+00 s=1 e=0 z=0  None .text      daAmiShutter_Delete__FP14daAmiShutter_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daAmiShutter_Delete(daAmiShutter_c* param_0) {
+asm static void daAmiShutter_Delete(daAmiShutter_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/daAmiShutter_Delete__FP14daAmiShutter_c.s"
 }
 #pragma pop
 
 
-/* 80BA21C0-80BA21E0 0020+00 s=0 e=0 z=0  None .text      daAmiShutter_Create__FP10fopAc_ac_c                          */
+/* 80BA21C0-80BA21E0 0020+00 s=1 e=0 z=0  None .text      daAmiShutter_Create__FP10fopAc_ac_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daAmiShutter_Create(fopAc_ac_c* param_0) {
+asm static void daAmiShutter_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/daAmiShutter_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80BA21E0-80BA223C 005C+00 s=0 e=0 z=0  None .text      __dt__18daAmiShutter_HIO_cFv                                 */
+/* 80BA21E0-80BA223C 005C+00 s=2 e=0 z=0  None .text      __dt__18daAmiShutter_HIO_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -453,7 +748,7 @@ asm daAmiShutter_HIO_c::~daAmiShutter_HIO_c() {
 #pragma pop
 
 
-/* 80BA223C-80BA2278 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_amiShutter_cpp                               */
+/* 80BA223C-80BA2278 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_amiShutter_cpp                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -464,29 +759,29 @@ extern "C" asm void __sinit_d_a_obj_amiShutter_cpp() {
 #pragma pop
 
 
-/* 80BA2278-80BA2280 0008+00 s=0 e=0 z=0  None .text      @1448@eventStart__14daAmiShutter_cFv                         */
+/* 80BA2278-80BA2280 0008+00 s=1 e=0 z=0  None .text      @1448@eventStart__14daAmiShutter_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BA2278() {
+extern "C" asm static void func_80BA2278() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/func_80BA2278.s"
 }
 #pragma pop
 
 
-/* 80BA2280-80BA2288 0008+00 s=0 e=0 z=0  None .text      @1448@__dt__14daAmiShutter_cFv                               */
+/* 80BA2280-80BA2288 0008+00 s=1 e=0 z=0  None .text      @1448@__dt__14daAmiShutter_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BA2280() {
+extern "C" asm static void func_80BA2280() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/func_80BA2280.s"
 }
 #pragma pop
 
 
-/* 80BA2288-80BA22D0 0048+00 s=0 e=0 z=0  None .text      __dt__17dEvLib_callback_cFv                                  */
+/* 80BA2288-80BA22D0 0048+00 s=1 e=0 z=0  None .text      __dt__17dEvLib_callback_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -497,7 +792,7 @@ asm dEvLib_callback_c::~dEvLib_callback_c() {
 #pragma pop
 
 
-/* 80BA22D0-80BA22D8 0008+00 s=0 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
+/* 80BA22D0-80BA22D8 0008+00 s=1 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -508,7 +803,7 @@ asm void dEvLib_callback_c::eventStart() {
 #pragma pop
 
 
-/* 80BA22D8-80BA22E0 0008+00 s=0 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
+/* 80BA22D8-80BA22E0 0008+00 s=2 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -519,7 +814,7 @@ asm void dEvLib_callback_c::eventRun() {
 #pragma pop
 
 
-/* 80BA22E0-80BA22E8 0008+00 s=0 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
+/* 80BA22E0-80BA22E8 0008+00 s=2 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -530,7 +825,7 @@ asm void dEvLib_callback_c::eventEnd() {
 #pragma pop
 
 
-/* 80BA22E8-80BA237C 0094+00 s=1 e=0 z=0  None .text      __dt__14daAmiShutter_cFv                                     */
+/* 80BA22E8-80BA237C 0094+00 s=2 e=0 z=0  None .text      __dt__14daAmiShutter_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -540,180 +835,4 @@ asm daAmiShutter_c::~daAmiShutter_c() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80BA2390-80BA2394 0004+00 s=0 e=0 z=0  None .rodata    @3655                                                        */
-SECTION_RODATA u32 const lit_3655 = 0x428C0000;
-
-/* 80BA2394-80BA2398 0004+00 s=0 e=0 z=0  None .rodata    @3656                                                        */
-SECTION_RODATA u32 const lit_3656 = 0x43C80000;
-
-/* 80BA2398-80BA239C 0004+00 s=0 e=0 z=0  None .rodata    @3739                                                        */
-SECTION_RODATA u32 const lit_3739 = 0xC4480000;
-
-/* 80BA239C-80BA23A0 0004+00 s=0 e=0 z=0  None .rodata    @3740                                                        */
-SECTION_RODATA u32 const lit_3740 = 0x44160000;
-
-/* 80BA23A0-80BA23A8 0004+04 s=0 e=0 z=0  None .rodata    @3822                                                        */
-SECTION_RODATA u8 const lit_3822[4 + 4 /* padding */] = {
-	0x00, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA23A8-80BA23B0 0008+00 s=0 e=0 z=0  None .rodata    @3823                                                        */
-SECTION_RODATA u8 const lit_3823[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA23B0-80BA23B8 0008+00 s=0 e=0 z=0  None .rodata    @3824                                                        */
-SECTION_RODATA u8 const lit_3824[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA23B8-80BA23C0 0008+00 s=0 e=0 z=0  None .rodata    @3825                                                        */
-SECTION_RODATA u8 const lit_3825[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA23C0-80BA23C4 0004+00 s=0 e=0 z=0  None .rodata    @3826                                                        */
-SECTION_RODATA u32 const lit_3826 = 0x42480000;
-
-/* 80BA23C4-80BA23C8 0004+00 s=0 e=0 z=0  None .rodata    @3890                                                        */
-SECTION_RODATA u32 const lit_3890 = 0x3F800000;
-
-/* 80BA23C8-80BA23CC 0004+00 s=0 e=0 z=0  None .rodata    @3891                                                        */
-SECTION_RODATA u32 const lit_3891 = 0xBF800000;
-
-/* 80BA23CC-80BA23D0 0004+00 s=0 e=0 z=0  None .rodata    @3900                                                        */
-SECTION_RODATA u32 const lit_3900 = 0x3F000000;
-
-/* 80BA23D0-80BA23D4 0004+00 s=0 e=0 z=0  None .rodata    @3919                                                        */
-SECTION_RODATA u32 const lit_3919 = 0x3E4CCCCD;
-
-/* 80BA23D4-80BA23DB 0007+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80BA23D4 = "S_Zami";
-#pragma pop
-
-/* 80BA23DC-80BA23E8 000C+00 s=0 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA u8 cNullVec__6Z2Calc[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA23E8-80BA23FC 0004+10 s=0 e=0 z=0  None .data      @1787                                                        */
-SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
-	0x02000201,
-	/* padding */
-	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
-};
-
-/* 80BA23FC-80BA2408 000C+00 s=0 e=0 z=0  None .data      @3759                                                        */
-SECTION_DATA u8 lit_3759[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA2408-80BA2414 000C+00 s=0 e=0 z=0  None .data      @3760                                                        */
-SECTION_DATA u8 lit_3760[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA2414-80BA2420 000C+00 s=0 e=0 z=0  None .data      @3761                                                        */
-SECTION_DATA u8 lit_3761[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA2420-80BA242C 000C+00 s=0 e=0 z=0  None .data      @3762                                                        */
-SECTION_DATA u8 lit_3762[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA242C-80BA2438 000C+00 s=0 e=0 z=0  None .data      @3763                                                        */
-SECTION_DATA u8 lit_3763[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA2438-80BA2444 000C+00 s=0 e=0 z=0  None .data      @3764                                                        */
-SECTION_DATA u8 lit_3764[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA2444-80BA248C 0048+00 s=0 e=0 z=0  None .data      mode_proc$3758                                               */
-SECTION_DATA u8 data_80BA2444[72] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA248C-80BA24AC 0020+00 s=0 e=0 z=0  None .data      l_daAmiShutter_Method                                        */
-SECTION_DATA u8 l_daAmiShutter_Method[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA24AC-80BA24DC 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_AmiShutter                                     */
-SECTION_DATA u8 g_profile_Obj_AmiShutter[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x03, 0xFF, 0xFD, 0x00, 0x47, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x05, 0xDC, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x02, 0x09, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x40, 0x00, 0x00, 0x0E, 0x00, 0x00,
-};
-
-/* 80BA24DC-80BA24F4 0018+00 s=0 e=0 z=0  None .data      __vt__17dEvLib_callback_c                                    */
-SECTION_DATA void* __vt__17dEvLib_callback_c[6] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-};
-
-/* 80BA24F4-80BA253C 0048+00 s=0 e=0 z=0  None .data      __vt__14daAmiShutter_c                                       */
-SECTION_DATA void* __vt__14daAmiShutter_c[18] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)NULL,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)NULL,
-	/* 12   */ (void*)NULL,
-	/* 13   */ (void*)NULL,
-	/* 14   */ (void*)NULL,
-	/* 15   */ (void*)NULL,
-	/* 16   */ (void*)NULL,
-	/* 17   */ (void*)NULL,
-};
-
-/* 80BA253C-80BA2548 000C+00 s=0 e=0 z=0  None .data      __vt__18daAmiShutter_HIO_c                                   */
-SECTION_DATA void* __vt__18daAmiShutter_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 80BA2548-80BA2554 000C+00 s=0 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
-SECTION_DATA void* __vt__14mDoHIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 80BA2560-80BA256C 000C+00 s=0 e=0 z=0  None .bss       @3649                                                        */
-u8 lit_3649[12];
-
-/* 80BA256C-80BA2580 0014+00 s=0 e=0 z=0  None .bss       l_HIO                                                        */
-u8 l_HIO[20];
-
-/* 80BA2580-80BA2584 0004+00 s=0 e=0 z=0  None .bss       None                                                         */
-u8 data_80BA2580[4];
 

@@ -81,7 +81,7 @@ lbl_801EB1AC:
 /* 801EB1D0 00000024  D0 1E 05 6C */	stfs f0, 0x56c(r30)
 lbl_801EB1D4:
 /* 801EB1D4 00000000  A8 7E 06 38 */	lha r3, 0x638(r30)
-/* 801EB1D8 00000004  A8 04 01 3A */	lha r0, 0x13a(r4)
+/* 801EB1D8 00000004  A8 04 01 3A */	lha r0, 0x13a(r4)	/* effective address: 8042FC36 */
 /* 801EB1DC 00000008  7C 03 00 00 */	cmpw r3, r0
 /* 801EB1E0 0000000C  41 80 00 2C */	blt lbl_801EB20C
 /* 801EB1E4 00000010  3C 60 80 43 */	lis r3, g_ringHIO@ha

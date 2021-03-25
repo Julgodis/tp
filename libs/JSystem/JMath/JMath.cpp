@@ -44,7 +44,7 @@ extern "C" extern u8 sincosTable___5JMath[65536];
 // Declarations:
 // 
 
-/* 80339878-80339938 00C0+00 s=0 e=11 z=0  None .text      JMAEulerToQuat__FsssP10Quaternion                            */
+/* 80339878-80339938 00C0+00 s=0 e=11 z=2  None .text      JMAEulerToQuat__FsssP10Quaternion                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

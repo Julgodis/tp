@@ -27,12 +27,12 @@ lbl_8021CA70:
 /* 8021CAD4 00000064  A8 BF 0D BA */	lha r5, 0xdba(r31)	/* effective address: 80406F7A */
 /* 8021CAD8 00000068  38 C0 00 00 */	li r6, 0
 /* 8021CADC 0000006C  48 04 A9 19 */	bl __ct__5csXyzFsss
-/* 8021CAE0 00000070  88 1F 0D B4 */	lbz r0, 0xdb4(r31)
+/* 8021CAE0 00000070  88 1F 0D B4 */	lbz r0, 0xdb4(r31)	/* effective address: 80406F74 */
 /* 8021CAE4 00000074  7C 1F 07 74 */	extsb r31, r0
 /* 8021CAE8 00000078  3B DE 4E 00 */	addi r30, r30, 0x4e00
 /* 8021CAEC 0000007C  7F C3 F3 78 */	mr r3, r30
-/* 8021CAF0 00000080  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8021CAF4 00000084  38 84 91 68 */	addi r4, r4, stringBase0@l
+/* 8021CAF0 00000080  3C 80 80 3A */	lis r4, d_meter_d_meter2_info__stringBase0@ha
+/* 8021CAF4 00000084  38 84 91 68 */	addi r4, r4, d_meter_d_meter2_info__stringBase0@l
 /* 8021CAF8 00000088  38 84 00 0C */	addi r4, r4, 0xc
 /* 8021CAFC 0000008C  48 14 BE 99 */	bl strcmp
 /* 8021CB00 00000090  2C 03 00 00 */	cmpwi r3, 0
@@ -66,8 +66,8 @@ lbl_8021CB48:
 /* 8021CB60 00000018  48 00 00 3C */	b lbl_8021CB9C
 lbl_8021CB64:
 /* 8021CB64 00000000  7F C3 F3 78 */	mr r3, r30
-/* 8021CB68 00000004  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8021CB6C 00000008  38 84 91 68 */	addi r4, r4, stringBase0@l
+/* 8021CB68 00000004  3C 80 80 3A */	lis r4, d_meter_d_meter2_info__stringBase0@ha
+/* 8021CB6C 00000008  38 84 91 68 */	addi r4, r4, d_meter_d_meter2_info__stringBase0@l
 /* 8021CB70 0000000C  38 84 00 13 */	addi r4, r4, 0x13
 /* 8021CB74 00000010  48 14 BE 21 */	bl strcmp
 /* 8021CB78 00000014  2C 03 00 00 */	cmpwi r3, 0

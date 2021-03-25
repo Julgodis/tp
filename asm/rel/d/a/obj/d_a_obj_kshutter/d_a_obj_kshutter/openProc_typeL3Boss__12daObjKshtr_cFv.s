@@ -5,16 +5,16 @@ lbl_80C490F8:
 /* 80C49104 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C49108 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80C4910C 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80C49110 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80C49114 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80C49110 00000018  3C 60 80 C5 */	lis r3, l_bmd@ha
+/* 80C49114 0000001C  3B E3 9C A8 */	addi r31, r3, l_bmd@l
 /* 80C49118 00000020  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 80C4911C 00000024  C0 3F 00 94 */	lfs f1, 0x94(r31)
-/* 80C49120 00000028  C0 5F 00 98 */	lfs f2, 0x98(r31)
-/* 80C49124 0000002C  4B FF E9 75 */	bl _unresolved
+/* 80C4911C 00000024  C0 3F 00 94 */	lfs f1, 0x94(r31)	/* effective address: 80C49D3C */
+/* 80C49120 00000028  C0 5F 00 98 */	lfs f2, 0x98(r31)	/* effective address: 80C49D40 */
+/* 80C49124 0000002C  4B 62 76 1C */	b cLib_chaseF__FPfff
 /* 80C49128 00000030  38 7E 05 FC */	addi r3, r30, 0x5fc
-/* 80C4912C 00000034  C0 3F 00 5C */	lfs f1, 0x5c(r31)
+/* 80C4912C 00000034  C0 3F 00 5C */	lfs f1, 0x5c(r31)	/* effective address: 80C49D04 */
 /* 80C49130 00000038  C0 5E 05 2C */	lfs f2, 0x52c(r30)
-/* 80C49134 0000003C  4B FF E9 65 */	bl _unresolved
+/* 80C49134 0000003C  4B 62 76 0C */	b cLib_chaseF__FPfff
 /* 80C49138 00000040  30 03 FF FF */	addic r0, r3, -1
 /* 80C4913C 00000044  7C 60 19 10 */	subfe r3, r0, r3
 /* 80C49140 00000048  83 E1 00 0C */	lwz r31, 0xc(r1)

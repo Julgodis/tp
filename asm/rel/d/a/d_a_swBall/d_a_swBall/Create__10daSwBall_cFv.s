@@ -32,13 +32,13 @@ lbl_80D4E3E4:
 /* 80D4E3E4 00000000  38 00 00 02 */	li r0, 2
 /* 80D4E3E8 00000004  98 1F 05 8A */	stb r0, 0x58a(r31)
 lbl_80D4E3EC:
-/* 80D4E3EC 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D4E3F0 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D4E3EC 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D4E3F0 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D4E3F4 00000008  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D4E3F8 0000000C  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
 /* 80D4E3FC 00000010  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80D4E400 00000014  7C 05 07 74 */	extsb r5, r0
-/* 80D4E404 00000018  4B FF FB B5 */	bl _unresolved
+/* 80D4E404 00000018  4B 2E 6D FC */	b onSwitch__10dSv_info_cFii
 /* 80D4E408 0000001C  48 00 00 0C */	b lbl_80D4E414
 lbl_80D4E40C:
 /* 80D4E40C 00000000  38 00 00 00 */	li r0, 0

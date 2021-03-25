@@ -14,18 +14,18 @@ lbl_8045FF08:
 /* 8045FF38 00000030  4B FF F6 31 */	bl demoProc__10daKnob20_cFv
 /* 8045FF3C 00000034  48 00 00 5C */	b lbl_8045FF98
 lbl_8045FF40:
-/* 8045FF40 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8045FF44 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 8045FF48 00000008  88 04 4F AD */	lbz r0, 0x4fad(r4)
+/* 8045FF40 00000000  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8045FF44 00000004  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8045FF48 00000008  88 04 4F AD */	lbz r0, 0x4fad(r4)	/* effective address: 8040B16D */
 /* 8045FF4C 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 8045FF50 00000010  41 82 00 44 */	beq lbl_8045FF94
 /* 8045FF54 00000014  38 64 4F F8 */	addi r3, r4, 0x4ff8
-/* 8045FF58 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8045FF5C 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 8045FF58 00000018  3C 80 80 46 */	lis r4, struct_804606C4+0x0@ha
+/* 8045FF5C 0000001C  38 84 06 C4 */	addi r4, r4, struct_804606C4+0x0@l
 /* 8045FF60 00000020  38 84 01 AA */	addi r4, r4, 0x1aa
 /* 8045FF64 00000024  38 A0 00 00 */	li r5, 0
 /* 8045FF68 00000028  38 C0 00 00 */	li r6, 0
-/* 8045FF6C 0000002C  4B FF E8 CD */	bl _unresolved
+/* 8045FF6C 0000002C  4B BE 7B B0 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
 /* 8045FF70 00000030  90 7F 05 BC */	stw r3, 0x5bc(r31)
 /* 8045FF74 00000034  80 1F 05 BC */	lwz r0, 0x5bc(r31)
 /* 8045FF78 00000038  2C 00 FF FF */	cmpwi r0, -1

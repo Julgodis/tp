@@ -81,7 +81,7 @@ lbl_8012EC74:
 /* 8012ECBC 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 8012ECC0 00000010  38 80 00 60 */	li r4, 0x60
 /* 8012ECC4 00000014  C0 22 92 C0 */	lfs f1, lit_6108(r2)
-/* 8012ECC8 00000018  C0 45 00 3C */	lfs f2, 0x3c(r5)
+/* 8012ECC8 00000018  C0 45 00 3C */	lfs f2, 0x3c(r5)	/* effective address: 8038F3B0 */
 /* 8012ECCC 0000001C  4B FF AA 0D */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 8012ECD0 00000020  48 00 00 E4 */	b lbl_8012EDB4
 lbl_8012ECD4:

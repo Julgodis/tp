@@ -1327,6 +1327,6 @@ u8 g_fmapHIO[1188];
 /* 80430104-80430110 000C+00 s=0 e=0 z=0  None .bss       @3770                                                        */
 u8 lit_3770[12];
 
-/* 80430110-80430158 0044+04 s=0 e=6 z=0  None .bss       g_cursorHIO                                                  */
+/* 80430110-80430158 0044+04 s=0 e=6 z=1  None .bss       g_cursorHIO                                                  */
 u8 g_cursorHIO[68 + 4 /* padding */];
 

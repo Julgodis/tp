@@ -16,7 +16,7 @@ lbl_80BBA13C:
 /* 80BBA174 00000038  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 80BBA178 0000003C  38 E0 00 00 */	li r7, 0
 /* 80BBA17C 00000040  39 00 00 01 */	li r8, 1
-/* 80BBA180 00000044  4B FF F8 B9 */	bl _unresolved
+/* 80BBA180 00000044  4B 46 14 FC */	b fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
 /* 80BBA184 00000048  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 80BBA188 0000004C  60 00 00 02 */	ori r0, r0, 2
 /* 80BBA18C 00000050  B0 1F 00 FA */	sth r0, 0xfa(r31)

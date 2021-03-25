@@ -138,7 +138,7 @@ lbl_8000D2B4:
 /* 8000D2BC 00000008  7C C4 33 78 */	mr r4, r6
 /* 8000D2C0 0000000C  7C 65 1B 78 */	mr r5, r3
 /* 8000D2C4 00000010  48 33 92 21 */	bl PSMTXConcat
-/* 8000D2C8 00000014  80 9D 00 38 */	lwz r4, 0x38(r29)
+/* 8000D2C8 00000014  80 9D 00 38 */	lwz r4, 0x38(r29)	/* effective address: 80434B00 */
 /* 8000D2CC 00000018  3C 60 80 43 */	lis r3, mCurrentMtx__6J3DSys@ha
 /* 8000D2D0 0000001C  38 63 4B E4 */	addi r3, r3, mCurrentMtx__6J3DSys@l
 /* 8000D2D4 00000020  80 84 00 84 */	lwz r4, 0x84(r4)

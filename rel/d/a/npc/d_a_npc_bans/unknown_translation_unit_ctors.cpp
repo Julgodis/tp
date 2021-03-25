@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80967E0C[8];
+extern void* data_80967E0C[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_npc_bans_cpp(); // 1
 
 // 
 // Declarations:

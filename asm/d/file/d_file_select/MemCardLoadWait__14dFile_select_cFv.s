@@ -20,7 +20,7 @@ lbl_8018E7C4:
 /* 8018E80C 00000048  28 00 00 00 */	cmplwi r0, 0
 /* 8018E810 0000004C  41 82 00 0C */	beq lbl_8018E81C
 /* 8018E814 00000050  38 00 00 00 */	li r0, 0
-/* 8018E818 00000054  98 03 0F 1A */	stb r0, 0xf1a(r3)
+/* 8018E818 00000054  98 03 0F 1A */	stb r0, 0xf1a(r3)	/* effective address: 804070DA */
 lbl_8018E81C:
 /* 8018E81C 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8018E820 00000004  4B FF 66 19 */	bl dataSelectInAnmSet__14dFile_select_cFv

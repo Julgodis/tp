@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80AEA39C[8];
+extern void* data_80AEA39C[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_npc_shoe_cpp(); // 1
 
 // 
 // Declarations:

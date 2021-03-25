@@ -13,7 +13,7 @@ lbl_8034BF6C:
 /* 8034BF98 0000002C  54 C0 04 21 */	rlwinm. r0, r6, 0, 0x10, 0x10
 /* 8034BF9C 00000030  41 82 00 10 */	beq lbl_8034BFAC
 /* 8034BFA0 00000034  54 C0 04 5E */	rlwinm r0, r6, 0, 0x11, 0xf
-/* 8034BFA4 00000038  B0 05 00 00 */	sth r0, 0(r5)
+/* 8034BFA4 00000038  B0 05 00 00 */	sth r0, 0(r5)	/* effective address: CC002000 */
 /* 8034BFA8 0000003C  60 E7 00 01 */	ori r7, r7, 1
 lbl_8034BFAC:
 /* 8034BFAC 00000000  3C 60 CC 00 */	lis r3, 0xCC00 /* 0xCC002034@ha */
@@ -21,7 +21,7 @@ lbl_8034BFAC:
 /* 8034BFB4 00000008  54 80 04 21 */	rlwinm. r0, r4, 0, 0x10, 0x10
 /* 8034BFB8 0000000C  41 82 00 10 */	beq lbl_8034BFC8
 /* 8034BFBC 00000010  54 80 04 5E */	rlwinm r0, r4, 0, 0x11, 0xf
-/* 8034BFC0 00000014  B0 03 00 00 */	sth r0, 0(r3)
+/* 8034BFC0 00000014  B0 03 00 00 */	sth r0, 0(r3)	/* effective address: CC000000 */
 /* 8034BFC4 00000018  60 E7 00 02 */	ori r7, r7, 2
 lbl_8034BFC8:
 /* 8034BFC8 00000000  3C 60 CC 00 */	lis r3, 0xCC00 /* 0xCC002038@ha */
@@ -29,7 +29,7 @@ lbl_8034BFC8:
 /* 8034BFD0 00000008  54 80 04 21 */	rlwinm. r0, r4, 0, 0x10, 0x10
 /* 8034BFD4 0000000C  41 82 00 10 */	beq lbl_8034BFE4
 /* 8034BFD8 00000010  54 80 04 5E */	rlwinm r0, r4, 0, 0x11, 0xf
-/* 8034BFDC 00000014  B0 03 00 00 */	sth r0, 0(r3)
+/* 8034BFDC 00000014  B0 03 00 00 */	sth r0, 0(r3)	/* effective address: CC000000 */
 /* 8034BFE0 00000018  60 E7 00 04 */	ori r7, r7, 4
 lbl_8034BFE4:
 /* 8034BFE4 00000000  3C 60 CC 00 */	lis r3, 0xCC00 /* 0xCC00203C@ha */
@@ -37,7 +37,7 @@ lbl_8034BFE4:
 /* 8034BFEC 00000008  54 80 04 21 */	rlwinm. r0, r4, 0, 0x10, 0x10
 /* 8034BFF0 0000000C  41 82 00 10 */	beq lbl_8034C000
 /* 8034BFF4 00000010  54 80 04 5E */	rlwinm r0, r4, 0, 0x11, 0xf
-/* 8034BFF8 00000014  B0 03 00 00 */	sth r0, 0(r3)
+/* 8034BFF8 00000014  B0 03 00 00 */	sth r0, 0(r3)	/* effective address: CC000000 */
 /* 8034BFFC 00000018  60 E7 00 08 */	ori r7, r7, 8
 lbl_8034C000:
 /* 8034C000 00000000  54 E0 07 7B */	rlwinm. r0, r7, 0, 0x1d, 0x1d
@@ -137,9 +137,9 @@ lbl_8034C138:
 /* 8034C154 0000001C  90 8D 92 98 */	stw r4, shdwChangeMode(r13)
 /* 8034C158 00000020  38 80 00 01 */	li r4, 1
 /* 8034C15C 00000024  80 0D 92 B0 */	lwz r0, NextBufAddr(r13)
-/* 8034C160 00000028  80 7F 01 44 */	lwz r3, 0x144(r31)
+/* 8034C160 00000028  80 7F 01 44 */	lwz r3, 0x144(r31)	/* effective address: 8044CB6C */
 /* 8034C164 0000002C  90 6D 92 A8 */	stw r3, CurrTiming(r13)
-/* 8034C168 00000030  80 7F 01 18 */	lwz r3, 0x118(r31)
+/* 8034C168 00000030  80 7F 01 18 */	lwz r3, 0x118(r31)	/* effective address: 8044CB40 */
 /* 8034C16C 00000034  90 6D 92 AC */	stw r3, CurrTvMode(r13)
 /* 8034C170 00000038  90 0D 92 B4 */	stw r0, CurrBufAddr(r13)
 /* 8034C174 0000003C  48 00 00 08 */	b lbl_8034C17C

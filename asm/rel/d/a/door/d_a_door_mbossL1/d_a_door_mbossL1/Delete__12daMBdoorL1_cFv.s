@@ -8,25 +8,25 @@ lbl_806773DC:
 /* 806773F4 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 806773F8 0000001C  41 82 00 28 */	beq lbl_80677420
 /* 806773FC 00000020  80 7F 05 98 */	lwz r3, 0x598(r31)
-/* 80677400 00000024  4B FF B4 19 */	bl _unresolved
+/* 80677400 00000024  4B BF 0D D4 */	b ChkUsed__9cBgW_BgIdCFv
 /* 80677404 00000028  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80677408 0000002C  41 82 00 18 */	beq lbl_80677420
-/* 8067740C 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80677410 00000034  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 8067740C 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80677410 00000034  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80677414 00000038  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80677418 0000003C  80 9F 05 98 */	lwz r4, 0x598(r31)
-/* 8067741C 00000040  4B FF B3 FD */	bl _unresolved
+/* 8067741C 00000040  4B 9F CE 34 */	b Release__4cBgSFP9dBgW_Base
 lbl_80677420:
 /* 80677420 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80677424 00000004  4B FF BA C5 */	bl getArcName__12daMBdoorL1_cFv
 /* 80677428 00000008  7C 64 1B 78 */	mr r4, r3
 /* 8067742C 0000000C  38 7F 05 68 */	addi r3, r31, 0x568
-/* 80677430 00000010  4B FF B3 E9 */	bl _unresolved
+/* 80677430 00000010  4B 9B 5B D8 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80677434 00000014  7F E3 FB 78 */	mr r3, r31
 /* 80677438 00000018  4B FF BB 3D */	bl getAlwaysArcName__12daMBdoorL1_cFv
 /* 8067743C 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80677440 00000020  38 7F 05 70 */	addi r3, r31, 0x570
-/* 80677444 00000024  4B FF B3 D5 */	bl _unresolved
+/* 80677444 00000024  4B 9B 5B C4 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80677448 00000028  7F E3 FB 78 */	mr r3, r31
 /* 8067744C 0000002C  4B FF BA 25 */	bl getAnmArcName__12daMBdoorL1_cFv
 /* 80677450 00000030  28 03 00 00 */	cmplwi r3, 0
@@ -35,7 +35,7 @@ lbl_80677420:
 /* 8067745C 0000003C  4B FF BA 15 */	bl getAnmArcName__12daMBdoorL1_cFv
 /* 80677460 00000040  7C 64 1B 78 */	mr r4, r3
 /* 80677464 00000044  38 7F 05 78 */	addi r3, r31, 0x578
-/* 80677468 00000048  4B FF B3 B1 */	bl _unresolved
+/* 80677468 00000048  4B 9B 5B A0 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 lbl_8067746C:
 /* 8067746C 00000000  38 60 00 01 */	li r3, 1
 /* 80677470 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

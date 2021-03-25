@@ -16,7 +16,7 @@ lbl_800ECB58:
 /* 800ECB90 00000038  3C 60 80 42 */	lis r3, l_horseBaseAnime@ha
 /* 800ECB94 0000003C  38 03 55 8C */	addi r0, r3, l_horseBaseAnime@l
 /* 800ECB98 00000040  90 1E 38 4C */	stw r0, 0x384c(r30)
-/* 800ECB9C 00000044  80 7F 5D B8 */	lwz r3, 0x5db8(r31)
+/* 800ECB9C 00000044  80 7F 5D B8 */	lwz r3, 0x5db8(r31)	/* effective address: 8040BF78 */
 /* 800ECBA0 00000048  39 83 18 EC */	addi r12, r3, 0x18ec
 /* 800ECBA4 0000004C  48 27 54 E1 */	bl __ptmf_scall
 /* 800ECBA8 00000050  60 00 00 00 */	nop 

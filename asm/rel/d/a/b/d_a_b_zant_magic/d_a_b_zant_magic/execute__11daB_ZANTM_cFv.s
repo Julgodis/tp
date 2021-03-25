@@ -15,23 +15,23 @@ lbl_8064FE94:
 /* 8064FE9C 00000008  7F E3 FB 78 */	mr r3, r31
 /* 8064FEA0 0000000C  4B FF F9 35 */	bl setMagicEffect__11daB_ZANTM_cFv
 /* 8064FEA4 00000010  38 7F 08 28 */	addi r3, r31, 0x828
-/* 8064FEA8 00000014  4B FF F8 B1 */	bl _unresolved
+/* 8064FEA8 00000014  4B A3 39 88 */	b Move__10dCcD_GSttsFv
 /* 8064FEAC 00000018  7F E3 FB 78 */	mr r3, r31
 /* 8064FEB0 0000001C  38 9F 08 0C */	addi r4, r31, 0x80c
-/* 8064FEB4 00000020  4B FF F8 A5 */	bl _unresolved
+/* 8064FEB4 00000020  4B 9C A8 18 */	b fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz
 /* 8064FEB8 00000024  38 7F 06 34 */	addi r3, r31, 0x634
-/* 8064FEBC 00000028  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8064FEC0 0000002C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 8064FEBC 00000028  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8064FEC0 0000002C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8064FEC4 00000030  38 84 0F 38 */	addi r4, r4, 0xf38
-/* 8064FEC8 00000034  4B FF F8 91 */	bl _unresolved
+/* 8064FEC8 00000034  4B A2 6B E4 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 8064FECC 00000038  7F E3 FB 78 */	mr r3, r31
 /* 8064FED0 0000003C  4B FF FE 9D */	bl cc_set__11daB_ZANTM_cFv
 /* 8064FED4 00000040  38 7F 04 D0 */	addi r3, r31, 0x4d0
-/* 8064FED8 00000044  4B FF F8 81 */	bl _unresolved
-/* 8064FEDC 00000048  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8064FEE0 0000004C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 8064FED8 00000044  4B 9B CE 8C */	b transS__14mDoMtx_stack_cFRC4cXyz
+/* 8064FEDC 00000048  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 8064FEE0 0000004C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 8064FEE4 00000050  38 9F 05 AC */	addi r4, r31, 0x5ac
-/* 8064FEE8 00000054  4B FF F8 71 */	bl _unresolved
+/* 8064FEE8 00000054  4B CF 65 C8 */	b PSMTXCopy
 /* 8064FEEC 00000058  38 60 00 01 */	li r3, 1
 /* 8064FEF0 0000005C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8064FEF4 00000060  80 01 00 14 */	lwz r0, 0x14(r1)

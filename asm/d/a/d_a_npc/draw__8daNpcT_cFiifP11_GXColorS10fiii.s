@@ -182,9 +182,9 @@ lbl_80148AA8:
 /* 80148B08 00000060  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80148B0C 00000064  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80148B10 00000068  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
-/* 80148B14 0000006C  90 18 00 48 */	stw r0, 0x48(r24)
+/* 80148B14 0000006C  90 18 00 48 */	stw r0, 0x48(r24)	/* effective address: 80434B10 */
 /* 80148B18 00000070  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
-/* 80148B1C 00000074  90 18 00 4C */	stw r0, 0x4c(r24)
+/* 80148B1C 00000074  90 18 00 4C */	stw r0, 0x4c(r24)	/* effective address: 80434B14 */
 /* 80148B20 00000078  48 00 00 38 */	b lbl_80148B58
 lbl_80148B24:
 /* 80148B24 00000000  3C 60 80 43 */	lis r3, g_env_light@ha

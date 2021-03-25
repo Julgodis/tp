@@ -8,13 +8,13 @@ lbl_8034D840:
 /* 8034D858 00000018  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8034D85C 0000001C  3B C3 00 00 */	addi r30, r3, 0
 /* 8034D860 00000020  4B FE FE 95 */	bl OSDisableInterrupts
-/* 8034D864 00000024  93 DF 01 30 */	stw r30, 0x130(r31)
+/* 8034D864 00000024  93 DF 01 30 */	stw r30, 0x130(r31)	/* effective address: 8044CB58 */
 /* 8034D868 00000028  7C 7E 1B 78 */	mr r30, r3
-/* 8034D86C 0000002C  81 5F 01 44 */	lwz r10, 0x144(r31)
-/* 8034D870 00000030  80 1F 01 30 */	lwz r0, 0x130(r31)
+/* 8034D86C 0000002C  81 5F 01 44 */	lwz r10, 0x144(r31)	/* effective address: 8044CB6C */
+/* 8034D870 00000030  80 1F 01 30 */	lwz r0, 0x130(r31)	/* effective address: 8044CB58 */
 /* 8034D874 00000034  90 01 00 08 */	stw r0, 8(r1)
-/* 8034D878 00000038  A0 7F 00 FA */	lhz r3, 0xfa(r31)
-/* 8034D87C 0000003C  A0 9F 00 F6 */	lhz r4, 0xf6(r31)
+/* 8034D878 00000038  A0 7F 00 FA */	lhz r3, 0xfa(r31)	/* effective address: 8044CB22 */
+/* 8034D87C 0000003C  A0 9F 00 F6 */	lhz r4, 0xf6(r31)	/* effective address: 8044CB1E */
 /* 8034D880 00000040  88 AA 00 00 */	lbz r5, 0(r10)
 /* 8034D884 00000044  A0 CA 00 02 */	lhz r6, 2(r10)
 /* 8034D888 00000048  A0 EA 00 04 */	lhz r7, 4(r10)

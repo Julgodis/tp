@@ -11,8 +11,8 @@ lbl_8003A490:
 /* 8003A4B4 00000024  28 1D 00 00 */	cmplwi r29, 0
 /* 8003A4B8 00000028  41 82 03 4C */	beq lbl_8003A804
 /* 8003A4BC 0000002C  3B 60 00 00 */	li r27, 0
-/* 8003A4C0 00000030  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 8003A4C4 00000034  3B E3 98 B8 */	addi r31, r3, stringBase0@l
+/* 8003A4C0 00000030  3C 60 80 38 */	lis r3, d_d_resorce__stringBase0@ha
+/* 8003A4C4 00000034  3B E3 98 B8 */	addi r31, r3, d_d_resorce__stringBase0@l
 /* 8003A4C8 00000038  48 00 03 2C */	b lbl_8003A7F4
 lbl_8003A4CC:
 /* 8003A4CC 00000000  7F A3 EB 78 */	mr r3, r29

@@ -13,7 +13,7 @@ lbl_804E12C8:
 /* 804E12F4 0000002C  28 00 00 00 */	cmplwi r0, 0
 /* 804E12F8 00000030  41 82 00 0C */	beq lbl_804E1304
 /* 804E12FC 00000034  38 7F 09 48 */	addi r3, r31, 0x948
-/* 804E1300 00000038  4B FF E8 39 */	bl _unresolved
+/* 804E1300 00000038  4B CC 67 00 */	b dKy_efplight_cut__FP15LIGHT_INFLUENCE
 lbl_804E1304:
 /* 804E1304 00000000  88 1F 09 2A */	lbz r0, 0x92a(r31)
 /* 804E1308 00000004  28 00 00 22 */	cmplwi r0, 0x22
@@ -55,14 +55,14 @@ lbl_804E1388:
 /* 804E1388 00000000  7F E3 FB 78 */	mr r3, r31
 /* 804E138C 00000004  4B FF F9 25 */	bl endInsectEffect__9daDitem_cFv
 /* 804E1390 00000008  38 7F 09 A8 */	addi r3, r31, 0x9a8
-/* 804E1394 0000000C  4B FF E7 A5 */	bl _unresolved
+/* 804E1394 0000000C  4B DD CC 64 */	b deleteObject__14Z2SoundObjBaseFv
 /* 804E1398 00000010  88 1F 09 2A */	lbz r0, 0x92a(r31)
 /* 804E139C 00000014  1C 00 00 18 */	mulli r0, r0, 0x18
-/* 804E13A0 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804E13A4 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 804E13A0 00000018  3C 60 80 3B */	lis r3, item_resource__10dItem_data@ha
+/* 804E13A4 0000001C  38 63 C5 A0 */	addi r3, r3, item_resource__10dItem_data@l
 /* 804E13A8 00000020  7C 83 00 2E */	lwzx r4, r3, r0
 /* 804E13AC 00000024  7F E3 FB 78 */	mr r3, r31
-/* 804E13B0 00000028  4B FF E7 89 */	bl _unresolved
+/* 804E13B0 00000028  4B C6 33 74 */	b DeleteBase__12daItemBase_cFPCc
 /* 804E13B4 0000002C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804E13B8 00000030  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804E13BC 00000034  7C 08 03 A6 */	mtlr r0

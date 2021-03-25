@@ -15,8 +15,8 @@ lbl_801A80D0:
 /* 801A8104 00000034  FC 03 00 40 */	fcmpo cr0, f3, f0
 /* 801A8108 00000000  40 81 00 1C */	ble lbl_801A8124
 lbl_801A810C:
-/* 801A810C 00000000  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801A8110 00000004  38 63 4C 6C */	addi r3, r3, stringBase0@l
+/* 801A810C 00000000  3C 60 80 39 */	lis r3, d_kankyo_d_kankyo__stringBase0@ha
+/* 801A8110 00000004  38 63 4C 6C */	addi r3, r3, d_kankyo_d_kankyo__stringBase0@l
 /* 801A8114 00000008  38 63 02 24 */	addi r3, r3, 0x224
 /* 801A8118 0000000C  4C C6 31 82 */	crclr 6
 /* 801A811C 00000010  4B E5 EB D1 */	bl OSReport_Warning

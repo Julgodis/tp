@@ -31,16 +31,30 @@ struct daTagCstaSw_c {
 };
 
 struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 800352B0 */ void offSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
 // 
 // Forward References:
 // 
 
-void daTagCstaSw_Draw(daTagCstaSw_c*); // 2
-void daTagCstaSw_Execute(daTagCstaSw_c*); // 2
-void daTagCstaSw_Delete(daTagCstaSw_c*); // 2
-void daTagCstaSw_Create(fopAc_ac_c*); // 2
+static void daTagCstaSw_Draw(daTagCstaSw_c*); // 2
+static void daTagCstaSw_Execute(daTagCstaSw_c*); // 2
+static void daTagCstaSw_Delete(daTagCstaSw_c*); // 2
+static void daTagCstaSw_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__17daTagCstaSw_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -51,35 +65,93 @@ extern "C" void areaCheck__13daTagCstaSw_cFv(); // 1
 extern "C" void Execute__13daTagCstaSw_cFv(); // 1
 extern "C" void Draw__13daTagCstaSw_cFv(); // 1
 extern "C" void Delete__13daTagCstaSw_cFv(); // 1
-extern "C" void daTagCstaSw_Draw__FP13daTagCstaSw_c(); // 1
-extern "C" void daTagCstaSw_Execute__FP13daTagCstaSw_c(); // 1
-extern "C" void daTagCstaSw_Delete__FP13daTagCstaSw_c(); // 1
-extern "C" void daTagCstaSw_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daTagCstaSw_Draw__FP13daTagCstaSw_c(); // 1
+extern "C" static void daTagCstaSw_Execute__FP13daTagCstaSw_c(); // 1
+extern "C" static void daTagCstaSw_Delete__FP13daTagCstaSw_c(); // 1
+extern "C" static void daTagCstaSw_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__17daTagCstaSw_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_tag_CstaSw_cpp(); // 1
-extern "C" extern u8 const lit_3724[4 + 4 /* padding */];
 extern "C" extern u8 const lit_3725[8];
 extern "C" extern u8 const lit_3726[8];
 extern "C" extern u8 const lit_3727[8];
 extern "C" extern u32 const lit_3728;
-extern "C" extern u8 l_daTagCstaSw_Method[32];
-extern "C" extern u8 g_profile_Tag_CstaSw[48];
-extern "C" extern void* __vt__17daTagCstaSw_HIO_c[3];
-extern "C" extern void* __vt__14mDoHIO_entry_c[3];
-extern "C" extern u8 lit_3619[12];
-extern "C" extern u8 l_HIO[8];
+extern "C" extern void* g_profile_Tag_CstaSw[12];
 
 // 
 // External References:
 // 
 
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
+void fopAc_IsActor(void*); // 2
+void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
+void operator delete(void*); // 2
 
-extern "C" void _unresolved(); // 1
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
+extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void fopAc_IsActor__FPv(); // 1
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+extern "C" void onSwitch__10dSv_info_cFii(); // 1
+extern "C" void offSwitch__10dSv_info_cFii(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
 extern "C" void __register_global_object(); // 1
 
 // 
 // Declarations:
 // 
+
+/* ############################################################################################## */
+/* 805A2550-805A2570 0020+00 s=1 e=0 z=0  None .data      l_daTagCstaSw_Method                                         */
+SECTION_DATA static void* l_daTagCstaSw_Method[8] = {
+	/* 0    */ (void*)daTagCstaSw_Create__FP10fopAc_ac_c,
+	/* 1    */ (void*)daTagCstaSw_Delete__FP13daTagCstaSw_c,
+	/* 2    */ (void*)daTagCstaSw_Execute__FP13daTagCstaSw_c,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)daTagCstaSw_Draw__FP13daTagCstaSw_c,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+};
+
+/* 805A2570-805A25A0 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_CstaSw                                         */
+SECTION_DATA void* g_profile_Tag_CstaSw[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0007FFFD,
+	/* 2    */ (void*)0x01900000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x00000570,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x02910000,
+	/* 9    */ (void*)&l_daTagCstaSw_Method,
+	/* 10   */ (void*)0x00044000,
+	/* 11   */ (void*)0x000E0000,
+};
+
+/* 805A25A0-805A25AC 000C+00 s=2 e=0 z=0  None .data      __vt__17daTagCstaSw_HIO_c                                    */
+SECTION_DATA static void* __vt__17daTagCstaSw_HIO_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__17daTagCstaSw_HIO_cFv,
+};
+
+/* 805A25AC-805A25B8 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
+SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__14mDoHIO_entry_cFv,
+};
 
 /* 805A202C-805A2050 0024+00 s=1 e=0 z=0  None .text      __ct__17daTagCstaSw_HIO_cFv                                  */
 #pragma push
@@ -92,7 +164,7 @@ asm daTagCstaSw_HIO_c::daTagCstaSw_HIO_c() {
 #pragma pop
 
 
-/* 805A2050-805A2098 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 805A2050-805A2098 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -125,7 +197,7 @@ asm void daTagCstaSw_c::create() {
 #pragma pop
 
 
-/* 805A2150-805A21A0 0050+00 s=0 e=0 z=0  None .text      searchSekizoAct__13daTagCstaSw_cFPvPv                        */
+/* 805A2150-805A21A0 0050+00 s=1 e=0 z=0  None .text      searchSekizoAct__13daTagCstaSw_cFPvPv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -135,6 +207,14 @@ asm void daTagCstaSw_c::searchSekizoAct(void* param_0, void* param_1) {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 805A252C-805A2534 0004+04 s=1 e=0 z=0  None .rodata    @3724                                                        */
+SECTION_RODATA static u8 const lit_3724[4 + 4 /* padding */] = {
+	0x00, 0x00, 0x00, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00,
+};
 
 /* 805A21A0-805A2340 01A0+00 s=1 e=0 z=0  None .text      areaCheck__13daTagCstaSw_cFv                                 */
 #pragma push
@@ -180,51 +260,51 @@ asm void daTagCstaSw_c::Delete() {
 #pragma pop
 
 
-/* 805A2400-805A2420 0020+00 s=0 e=0 z=0  None .text      daTagCstaSw_Draw__FP13daTagCstaSw_c                          */
+/* 805A2400-805A2420 0020+00 s=1 e=0 z=0  None .text      daTagCstaSw_Draw__FP13daTagCstaSw_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagCstaSw_Draw(daTagCstaSw_c* param_0) {
+asm static void daTagCstaSw_Draw(daTagCstaSw_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_cstasw/d_a_tag_CstaSw/daTagCstaSw_Draw__FP13daTagCstaSw_c.s"
 }
 #pragma pop
 
 
-/* 805A2420-805A2440 0020+00 s=0 e=0 z=0  None .text      daTagCstaSw_Execute__FP13daTagCstaSw_c                       */
+/* 805A2420-805A2440 0020+00 s=1 e=0 z=0  None .text      daTagCstaSw_Execute__FP13daTagCstaSw_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagCstaSw_Execute(daTagCstaSw_c* param_0) {
+asm static void daTagCstaSw_Execute(daTagCstaSw_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_cstasw/d_a_tag_CstaSw/daTagCstaSw_Execute__FP13daTagCstaSw_c.s"
 }
 #pragma pop
 
 
-/* 805A2440-805A2460 0020+00 s=0 e=0 z=0  None .text      daTagCstaSw_Delete__FP13daTagCstaSw_c                        */
+/* 805A2440-805A2460 0020+00 s=1 e=0 z=0  None .text      daTagCstaSw_Delete__FP13daTagCstaSw_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagCstaSw_Delete(daTagCstaSw_c* param_0) {
+asm static void daTagCstaSw_Delete(daTagCstaSw_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_cstasw/d_a_tag_CstaSw/daTagCstaSw_Delete__FP13daTagCstaSw_c.s"
 }
 #pragma pop
 
 
-/* 805A2460-805A2480 0020+00 s=0 e=0 z=0  None .text      daTagCstaSw_Create__FP10fopAc_ac_c                           */
+/* 805A2460-805A2480 0020+00 s=1 e=0 z=0  None .text      daTagCstaSw_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagCstaSw_Create(fopAc_ac_c* param_0) {
+asm static void daTagCstaSw_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_cstasw/d_a_tag_CstaSw/daTagCstaSw_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 805A2480-805A24DC 005C+00 s=0 e=0 z=0  None .text      __dt__17daTagCstaSw_HIO_cFv                                  */
+/* 805A2480-805A24DC 005C+00 s=2 e=0 z=0  None .text      __dt__17daTagCstaSw_HIO_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -235,7 +315,14 @@ asm daTagCstaSw_HIO_c::~daTagCstaSw_HIO_c() {
 #pragma pop
 
 
-/* 805A24DC-805A2518 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_tag_CstaSw_cpp                                   */
+/* ############################################################################################## */
+/* 805A25C0-805A25CC 000C+00 s=1 e=0 z=0  None .bss       @3619                                                        */
+static u8 lit_3619[12];
+
+/* 805A25CC-805A25D4 0008+00 s=1 e=0 z=0  None .bss       l_HIO                                                        */
+static u8 l_HIO[8];
+
+/* 805A24DC-805A2518 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_tag_CstaSw_cpp                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -247,13 +334,6 @@ extern "C" asm void __sinit_d_a_tag_CstaSw_cpp() {
 
 
 /* ############################################################################################## */
-/* 805A252C-805A2534 0004+04 s=0 e=0 z=0  None .rodata    @3724                                                        */
-SECTION_RODATA u8 const lit_3724[4 + 4 /* padding */] = {
-	0x00, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-
 /* 805A2534-805A253C 0008+00 s=0 e=0 z=0  None .rodata    @3725                                                        */
 SECTION_RODATA u8 const lit_3725[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -271,37 +351,4 @@ SECTION_RODATA u8 const lit_3727[8] = {
 
 /* 805A254C-805A2550 0004+00 s=0 e=0 z=0  None .rodata    @3728                                                        */
 SECTION_RODATA u32 const lit_3728 = 0x42C80000;
-
-/* 805A2550-805A2570 0020+00 s=0 e=0 z=0  None .data      l_daTagCstaSw_Method                                         */
-SECTION_DATA u8 l_daTagCstaSw_Method[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 805A2570-805A25A0 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_CstaSw                                         */
-SECTION_DATA u8 g_profile_Tag_CstaSw[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x01, 0x90, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x05, 0x70, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x02, 0x91, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x40, 0x00, 0x00, 0x0E, 0x00, 0x00,
-};
-
-/* 805A25A0-805A25AC 000C+00 s=0 e=0 z=0  None .data      __vt__17daTagCstaSw_HIO_c                                    */
-SECTION_DATA void* __vt__17daTagCstaSw_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 805A25AC-805A25B8 000C+00 s=0 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
-SECTION_DATA void* __vt__14mDoHIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 805A25C0-805A25CC 000C+00 s=0 e=0 z=0  None .bss       @3619                                                        */
-u8 lit_3619[12];
-
-/* 805A25CC-805A25D4 0008+00 s=0 e=0 z=0  None .bss       l_HIO                                                        */
-u8 l_HIO[8];
 

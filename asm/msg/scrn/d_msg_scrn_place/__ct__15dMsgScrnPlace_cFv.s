@@ -42,8 +42,8 @@ lbl_8024644C:
 lbl_80246464:
 /* 80246464 00000000  90 1F 00 04 */	stw r0, 4(r31)
 /* 80246468 00000004  80 7F 00 04 */	lwz r3, 4(r31)
-/* 8024646C 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 80246470 0000000C  38 84 9B 78 */	addi r4, r4, stringBase0@l
+/* 8024646C 00000008  3C 80 80 3A */	lis r4, msg_scrn_d_msg_scrn_place__stringBase0@ha
+/* 80246470 0000000C  38 84 9B 78 */	addi r4, r4, msg_scrn_d_msg_scrn_place__stringBase0@l
 /* 80246474 00000010  3C A0 00 02 */	lis r5, 2
 /* 80246478 00000014  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
 /* 8024647C 00000018  38 C6 61 C0 */	addi r6, r6, g_dComIfG_gameInfo@l
@@ -149,8 +149,8 @@ lbl_802465AC:
 /* 80246600 00000054  3B C0 00 00 */	li r30, 0
 /* 80246604 00000058  3B A0 00 00 */	li r29, 0
 /* 80246608 0000005C  3B 80 00 00 */	li r28, 0
-/* 8024660C 00000060  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80246610 00000064  3B 63 9B 78 */	addi r27, r3, stringBase0@l
+/* 8024660C 00000060  3C 60 80 3A */	lis r3, msg_scrn_d_msg_scrn_place__stringBase0@ha
+/* 80246610 00000064  3B 63 9B 78 */	addi r27, r3, msg_scrn_d_msg_scrn_place__stringBase0@l
 /* 80246614 00000068  C3 E2 B2 EC */	lfs f31, lit_3999(r2)
 lbl_80246618:
 /* 80246618 00000000  38 60 00 6C */	li r3, 0x6c

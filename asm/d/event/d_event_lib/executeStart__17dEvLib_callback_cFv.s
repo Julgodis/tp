@@ -21,7 +21,7 @@ lbl_80048A70:
 /* 80048ABC 0000004C  4B FD 2C F9 */	bl fopAcM_orderMapToolEvent__FP10fopAc_ac_cUcsUsUsUs
 /* 80048AC0 00000050  48 00 00 24 */	b lbl_80048AE4
 lbl_80048AC4:
-/* 80048AC4 00000000  A8 86 00 FC */	lha r4, 0xfc(r6)
+/* 80048AC4 00000000  A8 86 00 FC */	lha r4, 0xfc(r6)	/* effective address: 000100FB */
 /* 80048AC8 00000004  7C C3 33 78 */	mr r3, r6
 /* 80048ACC 00000008  7C 05 03 78 */	mr r5, r0
 /* 80048AD0 0000000C  3C C0 00 01 */	lis r6, 0x0001 /* 0x0000FFFF@ha */

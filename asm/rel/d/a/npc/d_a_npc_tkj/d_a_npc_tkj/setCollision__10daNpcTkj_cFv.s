@@ -22,23 +22,23 @@ lbl_805747AC:
 /* 805747BC 00000010  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 805747C0 00000014  C0 1F 04 D8 */	lfs f0, 0x4d8(r31)
 /* 805747C4 00000018  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 805747C8 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 805747CC 00000020  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
-/* 805747D0 00000024  C3 E4 00 1C */	lfs f31, 0x1c(r4)
+/* 805747C8 0000001C  3C 60 80 57 */	lis r3, m__17daNpc_Tkj_Param_c@ha
+/* 805747CC 00000020  38 83 65 98 */	addi r4, r3, m__17daNpc_Tkj_Param_c@l
+/* 805747D0 00000024  C3 E4 00 1C */	lfs f31, 0x1c(r4)	/* effective address: 805765B4 */
 /* 805747D4 00000028  38 7F 0F 68 */	addi r3, r31, 0xf68
-/* 805747D8 0000002C  C0 24 00 14 */	lfs f1, 0x14(r4)
-/* 805747DC 00000030  4B FF EE BD */	bl _unresolved
+/* 805747D8 0000002C  C0 24 00 14 */	lfs f1, 0x14(r4)	/* effective address: 805765AC */
+/* 805747DC 00000030  4B CF AA 1C */	b SetH__8cM3dGCylFf
 /* 805747E0 00000034  38 7F 0F 68 */	addi r3, r31, 0xf68
 /* 805747E4 00000038  FC 20 F8 90 */	fmr f1, f31
-/* 805747E8 0000003C  4B FF EE B1 */	bl _unresolved
+/* 805747E8 0000003C  4B CF AA 18 */	b SetR__8cM3dGCylFf
 /* 805747EC 00000040  38 7F 0F 68 */	addi r3, r31, 0xf68
 /* 805747F0 00000044  38 81 00 08 */	addi r4, r1, 8
-/* 805747F4 00000048  4B FF EE A5 */	bl _unresolved
-/* 805747F8 0000004C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 805747FC 00000050  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 805747F4 00000048  4B CF A9 E8 */	b SetC__8cM3dGCylFRC4cXyz
+/* 805747F8 0000004C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805747FC 00000050  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80574800 00000054  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80574804 00000058  38 9F 0E 44 */	addi r4, r31, 0xe44
-/* 80574808 0000005C  4B FF EE 91 */	bl _unresolved
+/* 80574808 0000005C  4B CF 03 A0 */	b Set__4cCcSFP8cCcD_Obj
 lbl_8057480C:
 /* 8057480C 00000000  38 7F 0E 44 */	addi r3, r31, 0xe44
 /* 80574810 00000004  81 9F 0E 80 */	lwz r12, 0xe80(r31)

@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80D360AC[8];
+extern void* data_80D360AC[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_obj_web1_cpp(); // 1
 
 // 
 // Declarations:

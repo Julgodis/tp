@@ -39,7 +39,7 @@ extern "C" void remove__8dEyeHL_cFv(); // 1
 extern "C" void update__12dEyeHL_mng_cFv(); // 1
 extern "C" void entry__12dEyeHL_mng_cFP8dEyeHL_c(); // 1
 extern "C" void remove__12dEyeHL_mng_cFP8dEyeHL_c(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_d_eye_hl__stringBase0;
 extern "C" extern u8 struct_80450FB0[8];
 extern "C" extern u8 struct_80450FB8[4];
 extern "C" extern u8 struct_80450FBC[4];

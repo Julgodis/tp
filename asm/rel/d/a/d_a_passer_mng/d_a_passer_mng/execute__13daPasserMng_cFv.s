@@ -3,25 +3,25 @@ lbl_80D45738:
 /* 80D4573C 00000004  7C 08 02 A6 */	mflr r0
 /* 80D45740 00000008  90 01 00 44 */	stw r0, 0x44(r1)
 /* 80D45744 0000000C  39 61 00 40 */	addi r11, r1, 0x40
-/* 80D45748 00000010  4B FF FF B1 */	bl _unresolved
+/* 80D45748 00000010  4B 61 CA 88 */	b _savegpr_26
 /* 80D4574C 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80D45750 00000018  4B FF FF A9 */	bl _unresolved
+/* 80D45750 00000018  4B 46 6E 2C */	b dKy_darkworld_check__Fv
 /* 80D45754 0000001C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80D45758 00000020  41 82 00 10 */	beq lbl_80D45768
-/* 80D4575C 00000024  4B FF FF 9D */	bl _unresolved
+/* 80D4575C 00000024  4B 45 A3 D4 */	b dKy_getDarktime_minute__Fv
 /* 80D45760 00000028  7C 7C 1B 78 */	mr r28, r3
 /* 80D45764 0000002C  48 00 00 0C */	b lbl_80D45770
 lbl_80D45768:
-/* 80D45768 00000000  4B FF FF 91 */	bl _unresolved
+/* 80D45768 00000000  4B 45 A2 D4 */	b dKy_getdaytime_minute__Fv
 /* 80D4576C 00000004  7C 7C 1B 78 */	mr r28, r3
 lbl_80D45770:
-/* 80D45770 00000000  4B FF FF 89 */	bl _unresolved
+/* 80D45770 00000000  4B 46 6E 0C */	b dKy_darkworld_check__Fv
 /* 80D45774 00000004  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80D45778 00000008  41 82 00 0C */	beq lbl_80D45784
-/* 80D4577C 0000000C  4B FF FF 7D */	bl _unresolved
+/* 80D4577C 0000000C  4B 45 A3 78 */	b dKy_getDarktime_hour__Fv
 /* 80D45780 00000010  48 00 00 08 */	b lbl_80D45788
 lbl_80D45784:
-/* 80D45784 00000000  4B FF FF 75 */	bl _unresolved
+/* 80D45784 00000000  4B 45 A2 8C */	b dKy_getdaytime_hour__Fv
 lbl_80D45788:
 /* 80D45788 00000000  1C 03 00 3C */	mulli r0, r3, 0x3c
 /* 80D4578C 00000004  7F FC 02 14 */	add r31, r28, r0
@@ -35,14 +35,14 @@ lbl_80D45788:
 /* 80D457AC 00000024  7C 1F 00 00 */	cmpw r31, r0
 /* 80D457B0 00000028  40 80 01 B0 */	bge lbl_80D45960
 lbl_80D457B4:
-/* 80D457B4 00000000  4B FF FF 45 */	bl _unresolved
+/* 80D457B4 00000000  4B 46 6D C8 */	b dKy_darkworld_check__Fv
 /* 80D457B8 00000004  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80D457BC 00000008  41 82 00 10 */	beq lbl_80D457CC
-/* 80D457C0 0000000C  4B FF FF 39 */	bl _unresolved
+/* 80D457C0 0000000C  4B 45 A3 FC */	b dKy_getDarktime_week__Fv
 /* 80D457C4 00000010  54 63 06 3E */	clrlwi r3, r3, 0x18
 /* 80D457C8 00000014  48 00 00 08 */	b lbl_80D457D0
 lbl_80D457CC:
-/* 80D457CC 00000000  4B FF FF 2D */	bl _unresolved
+/* 80D457CC 00000000  4B 46 33 6C */	b dKy_get_dayofweek__Fv
 lbl_80D457D0:
 /* 80D457D0 00000000  80 1E 05 80 */	lwz r0, 0x580(r30)
 /* 80D457D4 00000004  7C 00 18 00 */	cmpw r0, r3
@@ -61,7 +61,7 @@ lbl_80D45804:
 /* 80D45804 00000000  80 7E 05 68 */	lwz r3, 0x568(r30)
 /* 80D45808 00000004  7C 63 E8 2E */	lwzx r3, r3, r29
 /* 80D4580C 00000008  38 81 00 10 */	addi r4, r1, 0x10
-/* 80D45810 0000000C  4B FF FE E9 */	bl _unresolved
+/* 80D45810 0000000C  4B 2D 41 AC */	b fopAcM_SearchByID__FUiPP10fopAc_ac_c
 /* 80D45814 00000010  80 01 00 10 */	lwz r0, 0x10(r1)
 /* 80D45818 00000014  28 00 00 00 */	cmplwi r0, 0
 /* 80D4581C 00000018  41 82 00 08 */	beq lbl_80D45824
@@ -88,7 +88,7 @@ lbl_80D45860:
 /* 80D45860 00000000  7C 04 07 34 */	extsh r4, r0
 /* 80D45864 00000004  A8 BE 04 DE */	lha r5, 0x4de(r30)
 /* 80D45868 00000008  38 C0 00 00 */	li r6, 0
-/* 80D4586C 0000000C  4B FF FE 8D */	bl _unresolved
+/* 80D4586C 0000000C  4B 52 1B 88 */	b __ct__5csXyzFsss
 /* 80D45870 00000010  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80D45874 00000014  7C 1A 07 74 */	extsb r26, r0
 /* 80D45878 00000018  28 1E 00 00 */	cmplwi r30, 0
@@ -110,7 +110,7 @@ lbl_80D4588C:
 /* 80D458B0 00000024  39 01 00 14 */	addi r8, r1, 0x14
 /* 80D458B4 00000028  39 20 00 00 */	li r9, 0
 /* 80D458B8 0000002C  39 40 FF FF */	li r10, -1
-/* 80D458BC 00000030  4B FF FE 3D */	bl _unresolved
+/* 80D458BC 00000030  4B 2D 46 34 */	b fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i
 /* 80D458C0 00000034  80 9E 05 68 */	lwz r4, 0x568(r30)
 /* 80D458C4 00000038  80 1E 05 84 */	lwz r0, 0x584(r30)
 /* 80D458C8 0000003C  54 00 10 3A */	slwi r0, r0, 2
@@ -156,7 +156,7 @@ lbl_80D45930:
 lbl_80D45960:
 /* 80D45960 00000000  38 60 00 01 */	li r3, 1
 /* 80D45964 00000004  39 61 00 40 */	addi r11, r1, 0x40
-/* 80D45968 00000008  4B FF FD 91 */	bl _unresolved
+/* 80D45968 00000008  4B 61 C8 B4 */	b _restgpr_26
 /* 80D4596C 0000000C  80 01 00 44 */	lwz r0, 0x44(r1)
 /* 80D45970 00000010  7C 08 03 A6 */	mtlr r0
 /* 80D45974 00000014  38 21 00 40 */	addi r1, r1, 0x40

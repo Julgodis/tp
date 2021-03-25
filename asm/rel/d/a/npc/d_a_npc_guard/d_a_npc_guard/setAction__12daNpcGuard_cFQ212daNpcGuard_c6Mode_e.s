@@ -7,8 +7,8 @@ lbl_809EFE20:
 /* 809EFE34 00000014  90 83 0B 0C */	stw r4, 0xb0c(r3)
 /* 809EFE38 00000018  80 03 0B 0C */	lwz r0, 0xb0c(r3)
 /* 809EFE3C 0000001C  1C A0 00 18 */	mulli r5, r0, 0x18
-/* 809EFE40 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 809EFE44 00000024  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
+/* 809EFE40 00000020  3C 80 80 9F */	lis r4, ActionTable__12daNpcGuard_c@ha
+/* 809EFE44 00000024  38 04 2E 18 */	addi r0, r4, ActionTable__12daNpcGuard_c@l
 /* 809EFE48 00000028  7C 00 2A 14 */	add r0, r0, r5
 /* 809EFE4C 0000002C  90 03 0B 08 */	stw r0, 0xb08(r3)
 /* 809EFE50 00000030  48 00 00 15 */	bl callInit__12daNpcGuard_cFv

@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80A96A58[8];
+extern void* data_80A96A58[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_npc_pachi_besu_cpp(); // 1
 
 // 
 // Declarations:

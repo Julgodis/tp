@@ -5,10 +5,10 @@ lbl_80D56384:
 /* 80D56390 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D56394 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80D56398 00000014  48 00 00 81 */	bl makeSoup__18daTag_BottleItem_cFv
-/* 80D5639C 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D563A0 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80D563A4 00000020  80 63 5D B4 */	lwz r3, 0x5db4(r3)
-/* 80D563A8 00000024  80 03 05 74 */	lwz r0, 0x574(r3)
+/* 80D5639C 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D563A0 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D563A4 00000020  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 80D563A8 00000024  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
 /* 80D563AC 00000028  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80D563B0 0000002C  40 82 00 20 */	bne lbl_80D563D0
 /* 80D563B4 00000030  88 1F 05 76 */	lbz r0, 0x576(r31)

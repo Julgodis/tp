@@ -49,8 +49,8 @@ lbl_801DEC44:
 /* 801DEC8C 00000048  3B FF 00 04 */	addi r31, r31, 4
 /* 801DEC90 0000004C  41 80 FF 9C */	blt lbl_801DEC2C
 /* 801DEC94 00000050  38 61 00 10 */	addi r3, r1, 0x10
-/* 801DEC98 00000054  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801DEC9C 00000058  38 84 6D C0 */	addi r4, r4, stringBase0@l
+/* 801DEC98 00000054  3C 80 80 39 */	lis r4, d_menu_d_menu_letter__stringBase0@ha
+/* 801DEC9C 00000058  38 84 6D C0 */	addi r4, r4, d_menu_d_menu_letter__stringBase0@l
 /* 801DECA0 0000005C  38 84 00 17 */	addi r4, r4, 0x17
 /* 801DECA4 00000060  88 BD 03 E3 */	lbz r5, 0x3e3(r29)
 /* 801DECA8 00000064  88 DD 03 E2 */	lbz r6, 0x3e2(r29)

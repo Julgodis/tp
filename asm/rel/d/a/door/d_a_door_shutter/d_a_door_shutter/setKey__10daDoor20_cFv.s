@@ -5,17 +5,17 @@ lbl_80462EB4:
 /* 80462EC0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80462EC4 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80462EC8 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80462ECC 00000018  4B FF DC 4D */	bl _unresolved
+/* 80462ECC 00000018  4B BD 73 04 */	b getSwbit__13door_param2_cFP10fopAc_ac_c
 /* 80462ED0 0000001C  54 7F 06 3E */	clrlwi r31, r3, 0x18
 /* 80462ED4 00000020  7F C3 F3 78 */	mr r3, r30
 /* 80462ED8 00000024  48 00 31 C5 */	bl chkMakeKey__10daDoor20_cFv
 /* 80462EDC 00000028  2C 03 00 01 */	cmpwi r3, 1
 /* 80462EE0 0000002C  40 82 00 2C */	bne lbl_80462F0C
-/* 80462EE4 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80462EE8 00000034  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80462EE4 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80462EE8 00000034  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80462EEC 00000038  7F E4 FB 78 */	mr r4, r31
 /* 80462EF0 0000003C  38 A0 FF FF */	li r5, -1
-/* 80462EF4 00000040  4B FF DC 25 */	bl _unresolved
+/* 80462EF4 00000040  4B BD 24 6C */	b isSwitch__10dSv_info_cCFii
 /* 80462EF8 00000044  2C 03 00 00 */	cmpwi r3, 0
 /* 80462EFC 00000048  40 82 00 10 */	bne lbl_80462F0C
 /* 80462F00 0000004C  38 00 00 01 */	li r0, 1

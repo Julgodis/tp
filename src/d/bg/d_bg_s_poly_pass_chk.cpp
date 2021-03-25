@@ -127,7 +127,7 @@ asm void dBgS_PolyPassChk::SetPassChkInfo(dBgS_PolyPassChk& param_0) {
 #pragma pop
 
 
-/* 80078E68-80078E74 000C+00 s=0 e=14 z=0  None .text      SetObj__16dBgS_PolyPassChkFv                                 */
+/* 80078E68-80078E74 000C+00 s=0 e=14 z=410  None .text      SetObj__16dBgS_PolyPassChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -138,7 +138,7 @@ asm void dBgS_PolyPassChk::SetObj() {
 #pragma pop
 
 
-/* 80078E74-80078E80 000C+00 s=0 e=4 z=0  None .text      ClrObj__16dBgS_PolyPassChkFv                                 */
+/* 80078E74-80078E80 000C+00 s=0 e=4 z=2  None .text      ClrObj__16dBgS_PolyPassChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -171,7 +171,7 @@ asm void dBgS_PolyPassChk::ClrCam() {
 #pragma pop
 
 
-/* 80078E98-80078EA4 000C+00 s=0 e=3 z=0  None .text      SetLink__16dBgS_PolyPassChkFv                                */
+/* 80078E98-80078EA4 000C+00 s=0 e=3 z=3  None .text      SetLink__16dBgS_PolyPassChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -204,7 +204,7 @@ asm void dBgS_PolyPassChk::SetArrow() {
 #pragma pop
 
 
-/* 80078EBC-80078EC8 000C+00 s=0 e=2 z=0  None .text      SetBomb__16dBgS_PolyPassChkFv                                */
+/* 80078EBC-80078EC8 000C+00 s=0 e=2 z=2  None .text      SetBomb__16dBgS_PolyPassChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -237,7 +237,7 @@ asm void dBgS_PolyPassChk::SetBoomerang() {
 #pragma pop
 
 
-/* 80078EE0-80078EEC 000C+00 s=0 e=1 z=0  None .text      SetRope__16dBgS_PolyPassChkFv                                */
+/* 80078EE0-80078EEC 000C+00 s=0 e=1 z=8  None .text      SetRope__16dBgS_PolyPassChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -259,7 +259,7 @@ asm void dBgS_PolyPassChk::SetUnderwaterRoof() {
 #pragma pop
 
 
-/* 80078EF8-80078F04 000C+00 s=0 e=1 z=0  None .text      SetHorse__16dBgS_PolyPassChkFv                               */
+/* 80078EF8-80078F04 000C+00 s=0 e=1 z=1  None .text      SetHorse__16dBgS_PolyPassChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -281,7 +281,7 @@ asm void dBgS_PolyPassChk::ChkNoHorse() {
 #pragma pop
 
 
-/* 80078F7C-80078F88 000C+00 s=0 e=1 z=0  None .text      SetStatue__16dBgS_PolyPassChkFv                              */
+/* 80078F7C-80078F88 000C+00 s=0 e=1 z=2  None .text      SetStatue__16dBgS_PolyPassChkFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -303,7 +303,7 @@ asm void dBgS_PolyPassChk::ClrStatue() {
 #pragma pop
 
 
-/* 80078F94-80078FA0 000C+00 s=0 e=1 z=0  None .text      SetIronBall__16dBgS_PolyPassChkFv                            */
+/* 80078F94-80078FA0 000C+00 s=0 e=1 z=1  None .text      SetIronBall__16dBgS_PolyPassChkFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -314,7 +314,7 @@ asm void dBgS_PolyPassChk::SetIronBall() {
 #pragma pop
 
 
-/* 80078FA0-80078FAC 000C+00 s=0 e=0 z=0  None .text      ClrIronBall__16dBgS_PolyPassChkFv                            */
+/* 80078FA0-80078FAC 000C+00 s=0 e=0 z=9  None .text      ClrIronBall__16dBgS_PolyPassChkFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

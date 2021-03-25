@@ -5,21 +5,21 @@ lbl_80486CE4:
 /* 80486CF0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80486CF4 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80486CF8 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80486CFC 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80486D00 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80486CFC 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80486D00 0000001C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80486D04 00000020  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 80486D08 00000024  A8 9E 07 56 */	lha r4, 0x756(r30)
-/* 80486D0C 00000028  4B FF F2 CD */	bl _unresolved
+/* 80486D0C 00000028  4B BC 0D 6C */	b endCheck__16dEvent_manager_cFs
 /* 80486D10 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 80486D14 00000030  41 82 00 50 */	beq lbl_80486D64
 /* 80486D18 00000034  7F C3 F3 78 */	mr r3, r30
 /* 80486D1C 00000038  4B FF F2 DD */	bl getSwNo__10daSwhit0_cFv
 /* 80486D20 0000003C  7C 64 1B 78 */	mr r4, r3
-/* 80486D24 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80486D28 00000044  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80486D24 00000040  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80486D28 00000044  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80486D2C 00000048  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80486D30 0000004C  7C 05 07 74 */	extsb r5, r0
-/* 80486D34 00000050  4B FF F2 A5 */	bl _unresolved
+/* 80486D34 00000050  4B BA E6 2C */	b isSwitch__10dSv_info_cCFii
 /* 80486D38 00000054  2C 03 00 00 */	cmpwi r3, 0
 /* 80486D3C 00000058  41 82 00 10 */	beq lbl_80486D4C
 /* 80486D40 0000005C  38 00 00 06 */	li r0, 6
@@ -30,7 +30,7 @@ lbl_80486D4C:
 /* 80486D50 00000004  98 1E 07 4D */	stb r0, 0x74d(r30)
 lbl_80486D54:
 /* 80486D54 00000000  38 7F 4E C8 */	addi r3, r31, 0x4ec8
-/* 80486D58 00000004  4B FF F2 81 */	bl _unresolved
+/* 80486D58 00000004  4B BB B7 10 */	b reset__14dEvt_control_cFv
 /* 80486D5C 00000008  38 60 00 01 */	li r3, 1
 /* 80486D60 0000000C  48 00 00 10 */	b lbl_80486D70
 lbl_80486D64:

@@ -5,10 +5,10 @@ lbl_8051BD4C:
 /* 8051BD58 0000000C  DB E1 00 30 */	stfd f31, 0x30(r1)
 /* 8051BD5C 00000010  F3 E1 00 38 */	psq_st f31, 56(r1), 0, 0 /* qr0 */
 /* 8051BD60 00000014  39 61 00 30 */	addi r11, r1, 0x30
-/* 8051BD64 00000018  4B FF FF 55 */	bl _unresolved
+/* 8051BD64 00000018  4B E4 64 70 */	b _savegpr_27
 /* 8051BD68 0000001C  7C 7B 1B 78 */	mr r27, r3
-/* 8051BD6C 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8051BD70 00000024  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 8051BD6C 00000020  3C 60 80 52 */	lis r3, lit_3999@ha
+/* 8051BD70 00000024  3B E3 30 28 */	addi r31, r3, lit_3999@l
 /* 8051BD74 00000028  A8 9B 00 00 */	lha r4, 0(r27)
 /* 8051BD78 0000002C  54 83 06 FE */	clrlwi r3, r4, 0x1b
 /* 8051BD7C 00000030  7C 7E 1B 78 */	mr r30, r3
@@ -16,26 +16,26 @@ lbl_8051BD4C:
 /* 8051BD84 00000038  7C 1D 07 34 */	extsh r29, r0
 /* 8051BD88 0000003C  54 80 B6 FE */	rlwinm r0, r4, 0x16, 0x1b, 0x1f
 /* 8051BD8C 00000040  7C 1C 07 34 */	extsh r28, r0
-/* 8051BD90 00000044  C0 7F 00 1C */	lfs f3, 0x1c(r31)
-/* 8051BD94 00000048  C0 5F 01 1C */	lfs f2, 0x11c(r31)
-/* 8051BD98 0000004C  C8 3F 00 38 */	lfd f1, 0x38(r31)
+/* 8051BD90 00000044  C0 7F 00 1C */	lfs f3, 0x1c(r31)	/* effective address: 80523044 */
+/* 8051BD94 00000048  C0 5F 01 1C */	lfs f2, 0x11c(r31)	/* effective address: 80523144 */
+/* 8051BD98 0000004C  C8 3F 00 38 */	lfd f1, 0x38(r31)	/* effective address: 80523060 */
 /* 8051BD9C 00000050  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 8051BDA0 00000054  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8051BDA4 00000058  3C 00 43 30 */	lis r0, 0x4330
 /* 8051BDA8 0000005C  90 01 00 08 */	stw r0, 8(r1)
 /* 8051BDAC 00000060  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8051BDB0 00000064  EC 20 08 28 */	fsubs f1, f0, f1
-/* 8051BDB4 00000068  C0 1F 01 84 */	lfs f0, 0x184(r31)
+/* 8051BDB4 00000068  C0 1F 01 84 */	lfs f0, 0x184(r31)	/* effective address: 805231AC */
 /* 8051BDB8 0000006C  EC 01 00 24 */	fdivs f0, f1, f0
 /* 8051BDBC 00000070  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8051BDC0 00000074  EF E3 00 2A */	fadds f31, f3, f0
-/* 8051BDC4 00000078  C0 3F 00 FC */	lfs f1, 0xfc(r31)
-/* 8051BDC8 0000007C  4B FF FE F1 */	bl _unresolved
+/* 8051BDC4 00000078  C0 3F 00 FC */	lfs f1, 0xfc(r31)	/* effective address: 80523124 */
+/* 8051BDC8 0000007C  4B D4 BB 8C */	b cM_rndF__Ff
 /* 8051BDCC 00000080  EF FF 00 72 */	fmuls f31, f31, f1
 /* 8051BDD0 00000084  7F C0 07 34 */	extsh r0, r30
 /* 8051BDD4 00000088  2C 00 00 1F */	cmpwi r0, 0x1f
 /* 8051BDD8 0000008C  41 82 00 4C */	beq lbl_8051BE24
-/* 8051BDDC 00000090  C8 3F 00 38 */	lfd f1, 0x38(r31)
+/* 8051BDDC 00000090  C8 3F 00 38 */	lfd f1, 0x38(r31)	/* effective address: 80523060 */
 /* 8051BDE0 00000094  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8051BDE4 00000098  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8051BDE8 0000009C  3C 00 43 30 */	lis r0, 0x4330
@@ -57,7 +57,7 @@ lbl_8051BE14:
 lbl_8051BE24:
 /* 8051BE24 00000000  2C 1D 00 1F */	cmpwi r29, 0x1f
 /* 8051BE28 00000004  41 82 00 4C */	beq lbl_8051BE74
-/* 8051BE2C 00000008  C8 3F 00 38 */	lfd f1, 0x38(r31)
+/* 8051BE2C 00000008  C8 3F 00 38 */	lfd f1, 0x38(r31)	/* effective address: 80523060 */
 /* 8051BE30 0000000C  6F A0 80 00 */	xoris r0, r29, 0x8000
 /* 8051BE34 00000010  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8051BE38 00000014  3C 00 43 30 */	lis r0, 0x4330
@@ -79,7 +79,7 @@ lbl_8051BE64:
 lbl_8051BE74:
 /* 8051BE74 00000000  2C 1C 00 1F */	cmpwi r28, 0x1f
 /* 8051BE78 00000004  41 82 00 4C */	beq lbl_8051BEC4
-/* 8051BE7C 00000008  C8 3F 00 38 */	lfd f1, 0x38(r31)
+/* 8051BE7C 00000008  C8 3F 00 38 */	lfd f1, 0x38(r31)	/* effective address: 80523060 */
 /* 8051BE80 0000000C  6F 80 80 00 */	xoris r0, r28, 0x8000
 /* 8051BE84 00000010  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8051BE88 00000014  3C 00 43 30 */	lis r0, 0x4330
@@ -108,7 +108,7 @@ lbl_8051BEC4:
 /* 8051BEDC 00000018  E3 E1 00 38 */	psq_l f31, 56(r1), 0, 0 /* qr0 */
 /* 8051BEE0 00000000  CB E1 00 30 */	lfd f31, 0x30(r1)
 /* 8051BEE4 00000004  39 61 00 30 */	addi r11, r1, 0x30
-/* 8051BEE8 00000008  4B FF FD D1 */	bl _unresolved
+/* 8051BEE8 00000008  4B E4 63 38 */	b _restgpr_27
 /* 8051BEEC 0000000C  80 01 00 44 */	lwz r0, 0x44(r1)
 /* 8051BEF0 00000010  7C 08 03 A6 */	mtlr r0
 /* 8051BEF4 00000014  38 21 00 40 */	addi r1, r1, 0x40

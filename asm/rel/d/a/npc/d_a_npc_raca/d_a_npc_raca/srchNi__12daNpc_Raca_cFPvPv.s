@@ -6,11 +6,11 @@ lbl_80AB6674:
 /* 80AB6684 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80AB6688 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80AB668C 00000018  7C 9F 23 78 */	mr r31, r4
-/* 80AB6690 0000001C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80AB6694 00000020  80 04 00 00 */	lwz r0, 0x0000(r4)
+/* 80AB6690 0000001C  3C 80 80 45 */	lis r4, mFindCount__8daNpcT_c@ha
+/* 80AB6694 00000020  80 04 0F DC */	lwz r0, mFindCount__8daNpcT_c@l(r4)
 /* 80AB6698 00000024  2C 00 00 32 */	cmpwi r0, 0x32
 /* 80AB669C 00000028  40 80 00 48 */	bge lbl_80AB66E4
-/* 80AB66A0 0000002C  4B FF F5 79 */	bl _unresolved
+/* 80AB66A0 0000002C  4B 56 26 40 */	b fopAc_IsActor__FPv
 /* 80AB66A4 00000030  2C 03 00 00 */	cmpwi r3, 0
 /* 80AB66A8 00000034  41 82 00 3C */	beq lbl_80AB66E4
 /* 80AB66AC 00000038  7C 1E F8 40 */	cmplw r30, r31
@@ -18,15 +18,15 @@ lbl_80AB6674:
 /* 80AB66B4 00000040  A8 1E 00 08 */	lha r0, 8(r30)
 /* 80AB66B8 00000044  2C 00 01 08 */	cmpwi r0, 0x108
 /* 80AB66BC 00000048  40 82 00 28 */	bne lbl_80AB66E4
-/* 80AB66C0 0000004C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AB66C4 00000050  38 A3 00 00 */	addi r5, r3, 0x0000 /* 0x00000000@l */
-/* 80AB66C8 00000054  80 85 00 00 */	lwz r4, 0(r5)
+/* 80AB66C0 0000004C  3C 60 80 45 */	lis r3, mFindCount__8daNpcT_c@ha
+/* 80AB66C4 00000050  38 A3 0F DC */	addi r5, r3, mFindCount__8daNpcT_c@l
+/* 80AB66C8 00000054  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80450FDC */
 /* 80AB66CC 00000058  54 80 10 3A */	slwi r0, r4, 2
-/* 80AB66D0 0000005C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AB66D4 00000060  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80AB66D0 0000005C  3C 60 80 42 */	lis r3, mFindActorPtrs__8daNpcT_c@ha
+/* 80AB66D4 00000060  38 63 57 08 */	addi r3, r3, mFindActorPtrs__8daNpcT_c@l
 /* 80AB66D8 00000064  7F C3 01 2E */	stwx r30, r3, r0
 /* 80AB66DC 00000068  38 04 00 01 */	addi r0, r4, 1
-/* 80AB66E0 0000006C  90 05 00 00 */	stw r0, 0(r5)
+/* 80AB66E0 0000006C  90 05 00 00 */	stw r0, 0(r5)	/* effective address: 80450FDC */
 lbl_80AB66E4:
 /* 80AB66E4 00000000  38 60 00 00 */	li r3, 0
 /* 80AB66E8 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

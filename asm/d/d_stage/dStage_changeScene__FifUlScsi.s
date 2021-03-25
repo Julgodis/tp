@@ -26,7 +26,7 @@ lbl_800271C8:
 /* 800271CC 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 800271D0 00000008  38 63 4E C4 */	addi r3, r3, 0x4ec4
 /* 800271D4 0000000C  4B FF D1 B1 */	bl getStatusRoomDt__20dStage_roomControl_cFi
-/* 800271D8 00000010  81 83 00 00 */	lwz r12, 0(r3)
+/* 800271D8 00000010  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 8040B084 */
 /* 800271DC 00000014  81 8C 00 C4 */	lwz r12, 0xc4(r12)
 /* 800271E0 00000018  7D 89 03 A6 */	mtctr r12
 /* 800271E4 0000001C  4E 80 04 21 */	bctrl 

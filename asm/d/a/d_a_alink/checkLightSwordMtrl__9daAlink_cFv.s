@@ -9,11 +9,11 @@ lbl_800D0E08:
 /* 800D0E24 0000001C  88 03 00 14 */	lbz r0, 0x14(r3)	/* effective address: 804061D4 */
 /* 800D0E28 00000020  28 00 00 49 */	cmplwi r0, 0x49
 /* 800D0E2C 00000024  40 82 00 4C */	bne lbl_800D0E78
-/* 800D0E30 00000028  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
+/* 800D0E30 00000028  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
 /* 800D0E34 0000002C  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 800D0E38 00000030  7D 89 03 A6 */	mtctr r12
 /* 800D0E3C 00000034  4E 80 04 21 */	bctrl 
-/* 800D0E40 00000038  88 03 00 09 */	lbz r0, 9(r3)
+/* 800D0E40 00000038  88 03 00 09 */	lbz r0, 9(r3)	/* effective address: 804061C9 */
 /* 800D0E44 0000003C  54 00 FE FE */	rlwinm r0, r0, 0x1f, 0x1b, 0x1f
 /* 800D0E48 00000040  2C 00 00 17 */	cmpwi r0, 0x17
 /* 800D0E4C 00000044  41 82 00 1C */	beq lbl_800D0E68

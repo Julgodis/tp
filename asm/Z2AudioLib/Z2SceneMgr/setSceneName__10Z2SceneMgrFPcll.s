@@ -46,8 +46,8 @@ lbl_802B6AF8:
 /* 802B6BA8 000000B0  88 03 00 2C */	lbz r0, 0x2c(r3)
 /* 802B6BAC 000000B4  28 00 00 08 */	cmplwi r0, 8
 /* 802B6BB0 000000B8  40 82 00 14 */	bne lbl_802B6BC4
-/* 802B6BB4 000000BC  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802B6BB8 000000C0  38 84 BF A8 */	addi r4, r4, stringBase0@l
+/* 802B6BB4 000000BC  3C 80 80 3A */	lis r4, Z2SceneMgr__stringBase0@ha
+/* 802B6BB8 000000C0  38 84 BF A8 */	addi r4, r4, Z2SceneMgr__stringBase0@l
 /* 802B6BBC 000000C4  38 84 02 6A */	addi r4, r4, 0x26a
 /* 802B6BC0 000000C8  4B FF F6 29 */	bl setDemoName__11Z2StatusMgrFPc
 lbl_802B6BC4:

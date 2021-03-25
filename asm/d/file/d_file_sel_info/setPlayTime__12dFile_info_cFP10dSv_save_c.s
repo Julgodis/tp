@@ -25,8 +25,8 @@ lbl_80192C70:
 /* 80192CCC 0000005C  7C A5 00 D1 */	neg. r5, r5
 /* 80192CD0 00000060  40 82 00 20 */	bne lbl_80192CF0
 /* 80192CD4 00000064  80 7C 00 34 */	lwz r3, 0x34(r28)
-/* 80192CD8 00000068  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 80192CDC 0000006C  38 84 48 B8 */	addi r4, r4, stringBase0@l
+/* 80192CD8 00000068  3C 80 80 39 */	lis r4, d_file_d_file_sel_info__stringBase0@ha
+/* 80192CDC 0000006C  38 84 48 B8 */	addi r4, r4, d_file_d_file_sel_info__stringBase0@l
 /* 80192CE0 00000070  38 84 00 48 */	addi r4, r4, 0x48
 /* 80192CE4 00000074  4C C6 31 82 */	crclr 6
 /* 80192CE8 00000078  48 1D 37 F5 */	bl sprintf
@@ -46,8 +46,8 @@ lbl_80192CF0:
 /* 80192D1C 0000002C  48 1C F6 09 */	bl __div2i
 /* 80192D20 00000030  7C 85 23 78 */	mr r5, r4
 /* 80192D24 00000034  80 7C 00 34 */	lwz r3, 0x34(r28)
-/* 80192D28 00000038  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 80192D2C 0000003C  38 84 48 B8 */	addi r4, r4, stringBase0@l
+/* 80192D28 00000038  3C 80 80 39 */	lis r4, d_file_d_file_sel_info__stringBase0@ha
+/* 80192D2C 0000003C  38 84 48 B8 */	addi r4, r4, d_file_d_file_sel_info__stringBase0@l
 /* 80192D30 00000040  38 84 00 4F */	addi r4, r4, 0x4f
 /* 80192D34 00000044  7F E6 FB 78 */	mr r6, r31
 /* 80192D38 00000048  4C C6 31 82 */	crclr 6

@@ -28,8 +28,8 @@ lbl_80056870:
 /* 8005687C 0000000C  80 A3 5D 30 */	lwz r5, 0x5d30(r3)	/* effective address: 8040BEF0 */
 /* 80056880 00000010  3C 60 54 49 */	lis r3, 0x5449 /* 0x54494D47@ha */
 /* 80056884 00000014  38 63 4D 47 */	addi r3, r3, 0x4D47 /* 0x54494D47@l */
-/* 80056888 00000018  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 8005688C 0000001C  38 84 A1 B0 */	addi r4, r4, stringBase0@l
+/* 80056888 00000018  3C 80 80 38 */	lis r4, d_d_drawlist__stringBase0@ha
+/* 8005688C 0000001C  38 84 A1 B0 */	addi r4, r4, d_d_drawlist__stringBase0@l
 /* 80056890 00000020  48 27 F2 A9 */	bl getGlbResource__10JKRArchiveFUlPCcP10JKRArchive
 /* 80056894 00000024  7C 64 1B 78 */	mr r4, r3
 /* 80056898 00000028  3C 60 80 42 */	lis r3, mWipeDlst__12dDlst_list_c@ha

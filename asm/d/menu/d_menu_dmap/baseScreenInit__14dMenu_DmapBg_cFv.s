@@ -14,8 +14,8 @@ lbl_801B91DC:
 lbl_801B920C:
 /* 801B920C 00000000  90 1F 0C A4 */	stw r0, 0xca4(r31)
 /* 801B9210 00000004  80 7F 0C A4 */	lwz r3, 0xca4(r31)
-/* 801B9214 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801B9218 0000000C  38 84 57 60 */	addi r4, r4, stringBase0@l
+/* 801B9214 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_dmap__stringBase0@ha
+/* 801B9218 0000000C  38 84 57 60 */	addi r4, r4, d_menu_d_menu_dmap__stringBase0@l
 /* 801B921C 00000010  38 84 00 70 */	addi r4, r4, 0x70
 /* 801B9220 00000014  3C A0 00 02 */	lis r5, 2
 /* 801B9224 00000018  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
@@ -33,11 +33,11 @@ lbl_801B920C:
 lbl_801B9254:
 /* 801B9254 00000000  90 1F 0C BC */	stw r0, 0xcbc(r31)
 /* 801B9258 00000004  80 7F 0C BC */	lwz r3, 0xcbc(r31)
-/* 801B925C 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801B9260 0000000C  38 84 57 60 */	addi r4, r4, stringBase0@l
+/* 801B925C 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_dmap__stringBase0@ha
+/* 801B9260 0000000C  38 84 57 60 */	addi r4, r4, d_menu_d_menu_dmap__stringBase0@l
 /* 801B9264 00000010  38 84 00 8B */	addi r4, r4, 0x8b
 /* 801B9268 00000014  3C A0 00 02 */	lis r5, 2
-/* 801B926C 00000018  80 DE 5C C0 */	lwz r6, 0x5cc0(r30)
+/* 801B926C 00000018  80 DE 5C C0 */	lwz r6, 0x5cc0(r30)	/* effective address: 8040BE80 */
 /* 801B9270 0000001C  48 13 F3 D9 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 801B9274 00000020  80 7F 0C BC */	lwz r3, 0xcbc(r31)
 /* 801B9278 00000024  48 09 BE 71 */	bl dPaneClass_showNullPane__FP9J2DScreen
@@ -129,8 +129,8 @@ lbl_801B9334:
 /* 801B93C4 00000090  4E 80 04 21 */	bctrl 
 /* 801B93C8 00000094  7F C3 F3 78 */	mr r3, r30
 /* 801B93CC 00000098  38 80 00 20 */	li r4, 0x20
-/* 801B93D0 0000009C  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801B93D4 000000A0  38 A5 57 60 */	addi r5, r5, stringBase0@l
+/* 801B93D0 0000009C  3C A0 80 39 */	lis r5, d_menu_d_menu_dmap__stringBase0@ha
+/* 801B93D4 000000A0  38 A5 57 60 */	addi r5, r5, d_menu_d_menu_dmap__stringBase0@l
 /* 801B93D8 000000A4  38 A5 00 6F */	addi r5, r5, 0x6f
 /* 801B93DC 000000A8  4C C6 31 82 */	crclr 6
 /* 801B93E0 000000AC  48 14 73 6D */	bl setString__10J2DTextBoxFsPCce

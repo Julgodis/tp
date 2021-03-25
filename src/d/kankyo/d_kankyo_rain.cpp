@@ -73,10 +73,10 @@ struct dEvent_manager_c {
 	/* 800483E8 */ void getRunEventName();
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -255,7 +255,7 @@ extern "C" static void dKyr_evil_draw2__FPA4_fPPUc(); // 1
 extern "C" static void dKyr_near_bosslight_check__F4cXyz(); // 1
 extern "C" void dKyr_evil_draw__FPA4_fPPUc(); // 1
 extern "C" void getKandelaarFlamePos__9daPy_py_cFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_kankyo_d_kankyo_rain__stringBase0;
 extern "C" extern u8 lit_7955[12];
 extern "C" extern u8 lit_7956[12];
 extern "C" extern u8 lit_7957[12];
@@ -465,6 +465,7 @@ extern "C" void cos(); // 1
 extern "C" void sin(); // 1
 extern "C" void atan2(); // 1
 extern "C" void sqrt(); // 1
+extern "C" extern void* const font_data[18584];
 extern "C" extern void* __vt__14dBgS_ObjGndChk[12 + 1 /* padding */];
 extern "C" extern void* __vt__19dKankyo_star_Packet[5];
 extern "C" extern void* __vt__19dKankyo_snow_Packet[5];
@@ -521,7 +522,7 @@ asm static void get_vectle_calc(cXyz* param_0, cXyz* param_1, cXyz* param_2) {
 #pragma pop
 
 
-/* 8005B760-8005B780 0020+00 s=8 e=7 z=0  None .text      dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz                    */
+/* 8005B760-8005B780 0020+00 s=8 e=7 z=11  None .text      dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1956,7 +1957,7 @@ asm void dKyr_mud_draw(f32 (* param_0)[4], u8** param_1) {
 #pragma pop
 
 
-/* 8006D914-8006DA04 00F0+00 s=0 e=1 z=0  None .text      dKyr_evil_init__Fv                                           */
+/* 8006D914-8006DA04 00F0+00 s=0 e=1 z=1  None .text      dKyr_evil_init__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -14,11 +14,11 @@ lbl_80D5FBFC:
 /* 80D5FC2C 00000030  54 04 46 3E */	srwi r4, r0, 0x18
 /* 80D5FC30 00000034  2C 04 00 FF */	cmpwi r4, 0xff
 /* 80D5FC34 00000038  41 82 00 20 */	beq lbl_80D5FC54
-/* 80D5FC38 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D5FC3C 00000040  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D5FC38 0000003C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D5FC3C 00000040  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D5FC40 00000044  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80D5FC44 00000048  7C 05 07 74 */	extsb r5, r0
-/* 80D5FC48 0000004C  4B FF FE 91 */	bl _unresolved
+/* 80D5FC48 0000004C  4B 2D 57 18 */	b isSwitch__10dSv_info_cCFii
 /* 80D5FC4C 00000050  2C 03 00 00 */	cmpwi r3, 0
 /* 80D5FC50 00000054  41 82 01 50 */	beq lbl_80D5FDA0
 lbl_80D5FC54:
@@ -32,15 +32,15 @@ lbl_80D5FC54:
 /* 80D5FC70 0000001C  40 82 00 14 */	bne lbl_80D5FC84
 /* 80D5FC74 00000020  57 E0 C6 3E */	rlwinm r0, r31, 0x18, 0x18, 0x1f
 /* 80D5FC78 00000024  7C 03 07 74 */	extsb r3, r0
-/* 80D5FC7C 00000028  4B FF FE 5D */	bl _unresolved
+/* 80D5FC7C 00000028  4B 2C FF 04 */	b dComIfGs_onVisitedRoom__Fi
 /* 80D5FC80 0000002C  48 00 01 20 */	b lbl_80D5FDA0
 lbl_80D5FC84:
-/* 80D5FC84 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D5FC88 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80D5FC8C 00000008  4B FF FE 4D */	bl _unresolved
+/* 80D5FC84 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D5FC88 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D5FC8C 00000008  4B 2D 54 1C */	b getSave2__10dSv_save_cFi
 /* 80D5FC90 0000000C  57 E0 C6 3E */	rlwinm r0, r31, 0x18, 0x18, 0x1f
 /* 80D5FC94 00000010  7C 04 07 74 */	extsb r4, r0
-/* 80D5FC98 00000014  4B FF FE 41 */	bl _unresolved
+/* 80D5FC98 00000014  4B 2D 4E 0C */	b onVisitedRoom__13dSv_memory2_cFi
 /* 80D5FC9C 00000018  48 00 01 04 */	b lbl_80D5FDA0
 lbl_80D5FCA0:
 /* 80D5FCA0 00000000  28 00 00 00 */	cmplwi r0, 0
@@ -51,15 +51,15 @@ lbl_80D5FCA0:
 /* 80D5FCB4 00000014  40 82 00 14 */	bne lbl_80D5FCC8
 /* 80D5FCB8 00000018  57 E0 C6 3E */	rlwinm r0, r31, 0x18, 0x18, 0x1f
 /* 80D5FCBC 0000001C  7C 03 07 74 */	extsb r3, r0
-/* 80D5FCC0 00000020  4B FF FE 19 */	bl _unresolved
+/* 80D5FCC0 00000020  4B 2C FF 7C */	b dComIfGs_offVisitedRoom__Fi
 /* 80D5FCC4 00000024  48 00 00 DC */	b lbl_80D5FDA0
 lbl_80D5FCC8:
-/* 80D5FCC8 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D5FCCC 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80D5FCD0 00000008  4B FF FE 09 */	bl _unresolved
+/* 80D5FCC8 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D5FCCC 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D5FCD0 00000008  4B 2D 53 D8 */	b getSave2__10dSv_save_cFi
 /* 80D5FCD4 0000000C  57 E0 C6 3E */	rlwinm r0, r31, 0x18, 0x18, 0x1f
 /* 80D5FCD8 00000010  7C 04 07 74 */	extsb r4, r0
-/* 80D5FCDC 00000014  4B FF FD FD */	bl _unresolved
+/* 80D5FCDC 00000014  4B 2D 4D EC */	b offVisitedRoom__13dSv_memory2_cFi
 /* 80D5FCE0 00000018  48 00 00 C0 */	b lbl_80D5FDA0
 lbl_80D5FCE4:
 /* 80D5FCE4 00000000  28 03 00 00 */	cmplwi r3, 0
@@ -67,11 +67,11 @@ lbl_80D5FCE4:
 /* 80D5FCEC 00000008  54 04 46 3E */	srwi r4, r0, 0x18
 /* 80D5FCF0 0000000C  2C 04 00 FF */	cmpwi r4, 0xff
 /* 80D5FCF4 00000010  41 82 00 20 */	beq lbl_80D5FD14
-/* 80D5FCF8 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D5FCFC 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D5FCF8 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D5FCFC 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D5FD00 0000001C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80D5FD04 00000020  7C 05 07 74 */	extsb r5, r0
-/* 80D5FD08 00000024  4B FF FD D1 */	bl _unresolved
+/* 80D5FD08 00000024  4B 2D 56 58 */	b isSwitch__10dSv_info_cCFii
 /* 80D5FD0C 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 80D5FD10 0000002C  40 82 00 90 */	bne lbl_80D5FDA0
 lbl_80D5FD14:
@@ -85,15 +85,15 @@ lbl_80D5FD14:
 /* 80D5FD30 0000001C  40 82 00 14 */	bne lbl_80D5FD44
 /* 80D5FD34 00000020  57 E0 C6 3E */	rlwinm r0, r31, 0x18, 0x18, 0x1f
 /* 80D5FD38 00000024  7C 03 07 74 */	extsb r3, r0
-/* 80D5FD3C 00000028  4B FF FD 9D */	bl _unresolved
+/* 80D5FD3C 00000028  4B 2C FE 44 */	b dComIfGs_onVisitedRoom__Fi
 /* 80D5FD40 0000002C  48 00 00 60 */	b lbl_80D5FDA0
 lbl_80D5FD44:
-/* 80D5FD44 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D5FD48 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80D5FD4C 00000008  4B FF FD 8D */	bl _unresolved
+/* 80D5FD44 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D5FD48 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D5FD4C 00000008  4B 2D 53 5C */	b getSave2__10dSv_save_cFi
 /* 80D5FD50 0000000C  57 E0 C6 3E */	rlwinm r0, r31, 0x18, 0x18, 0x1f
 /* 80D5FD54 00000010  7C 04 07 74 */	extsb r4, r0
-/* 80D5FD58 00000014  4B FF FD 81 */	bl _unresolved
+/* 80D5FD58 00000014  4B 2D 4D 4C */	b onVisitedRoom__13dSv_memory2_cFi
 /* 80D5FD5C 00000018  48 00 00 44 */	b lbl_80D5FDA0
 lbl_80D5FD60:
 /* 80D5FD60 00000000  28 00 00 00 */	cmplwi r0, 0
@@ -104,15 +104,15 @@ lbl_80D5FD60:
 /* 80D5FD74 00000014  40 82 00 14 */	bne lbl_80D5FD88
 /* 80D5FD78 00000018  57 E0 C6 3E */	rlwinm r0, r31, 0x18, 0x18, 0x1f
 /* 80D5FD7C 0000001C  7C 03 07 74 */	extsb r3, r0
-/* 80D5FD80 00000020  4B FF FD 59 */	bl _unresolved
+/* 80D5FD80 00000020  4B 2C FE BC */	b dComIfGs_offVisitedRoom__Fi
 /* 80D5FD84 00000024  48 00 00 1C */	b lbl_80D5FDA0
 lbl_80D5FD88:
-/* 80D5FD88 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D5FD8C 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80D5FD90 00000008  4B FF FD 49 */	bl _unresolved
+/* 80D5FD88 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D5FD8C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D5FD90 00000008  4B 2D 53 18 */	b getSave2__10dSv_save_cFi
 /* 80D5FD94 0000000C  57 E0 C6 3E */	rlwinm r0, r31, 0x18, 0x18, 0x1f
 /* 80D5FD98 00000010  7C 04 07 74 */	extsb r4, r0
-/* 80D5FD9C 00000014  4B FF FD 3D */	bl _unresolved
+/* 80D5FD9C 00000014  4B 2D 4D 2C */	b offVisitedRoom__13dSv_memory2_cFi
 lbl_80D5FDA0:
 /* 80D5FDA0 00000000  38 60 00 01 */	li r3, 1
 /* 80D5FDA4 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

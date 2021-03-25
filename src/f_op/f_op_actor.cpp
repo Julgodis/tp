@@ -96,10 +96,10 @@ struct dEvt_control_c {
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
+struct cXyz {
 };
 
-struct cXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -154,7 +154,7 @@ extern "C" void initBallModel__13fopEn_enemy_cFv(); // 1
 extern "C" void checkBallModelDraw__13fopEn_enemy_cFv(); // 1
 extern "C" void setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c(); // 1
 extern "C" void drawBallModel__13fopEn_enemy_cFP12dKy_tevstr_c(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const f_op_f_op_actor__stringBase0;
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* __vt__11dEvt_info_c[3 + 1 /* padding */];
 extern "C" extern u8 stopStatus__10fopAc_ac_c[4];
@@ -244,7 +244,7 @@ extern "C" extern u8 struct_80451124[4];
 // Declarations:
 // 
 
-/* 80018B64-80018BD0 006C+00 s=0 e=7 z=0  None .text      __ct__10fopAc_ac_cFv                                         */
+/* 80018B64-80018BD0 006C+00 s=0 e=7 z=562  None .text      __ct__10fopAc_ac_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -278,7 +278,7 @@ asm J3DLightObj::J3DLightObj() {
 
 
 /* ############################################################################################## */
-/* 803A35B0-803A35D0 0020+00 s=0 e=3 z=0  None .data      g_fopAc_Method                                               */
+/* 803A35B0-803A35D0 0020+00 s=0 e=3 z=756  None .data      g_fopAc_Method                                               */
 SECTION_DATA void* g_fopAc_Method[8] = {
 	/* 0    */ (void*)fopAc_Create__FPv,
 	/* 1    */ (void*)fopAc_Delete__FPv,
@@ -310,7 +310,7 @@ asm dEvt_info_c::~dEvt_info_c() {
 #pragma pop
 
 
-/* 80018C8C-80018CE0 0054+00 s=0 e=5 z=0  None .text      __dt__10fopAc_ac_cFv                                         */
+/* 80018C8C-80018CE0 0054+00 s=0 e=5 z=270  None .text      __dt__10fopAc_ac_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -325,7 +325,7 @@ asm fopAc_ac_c::~fopAc_ac_c() {
 /* 80450CB8-80450CBC 0004+00 s=2 e=0 z=0  None .sbss      g_fopAc_type                                                 */
 static u8 g_fopAc_type[4];
 
-/* 80018CE0-80018D0C 002C+00 s=0 e=12 z=0  None .text      fopAc_IsActor__FPv                                           */
+/* 80018CE0-80018D0C 002C+00 s=0 e=12 z=391  None .text      fopAc_IsActor__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -433,7 +433,7 @@ SECTION_DEAD char const* const stringBase_80378878 = "Alink";
 SECTION_DEAD static char const* const pad_8037887E = "\0";
 #pragma pop
 
-/* 80019404-800194FC 00F8+00 s=0 e=0 z=0  None .text      initBallModel__13fopEn_enemy_cFv                             */
+/* 80019404-800194FC 00F8+00 s=0 e=0 z=2  None .text      initBallModel__13fopEn_enemy_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -444,7 +444,7 @@ asm void fopEn_enemy_c::initBallModel() {
 #pragma pop
 
 
-/* 800194FC-80019520 0024+00 s=2 e=0 z=0  None .text      checkBallModelDraw__13fopEn_enemy_cFv                        */
+/* 800194FC-80019520 0024+00 s=2 e=0 z=2  None .text      checkBallModelDraw__13fopEn_enemy_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -466,7 +466,7 @@ SECTION_SDATA2 static f32 lit_4505[1 + 1 /* padding */] = {
 /* 80451BE8-80451BF0 0008+00 s=1 e=0 z=0  None .sdata2    @4507                                                        */
 SECTION_SDATA2 static f64 lit_4507 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80019520-800196A0 0180+00 s=0 e=0 z=0  None .text      setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c          */
+/* 80019520-800196A0 0180+00 s=0 e=0 z=2  None .text      setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -493,7 +493,7 @@ SECTION_SDATA2 static f32 lit_4557[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 800196A0-800197BC 011C+00 s=0 e=0 z=0  None .text      drawBallModel__13fopEn_enemy_cFP12dKy_tevstr_c               */
+/* 800196A0-800197BC 011C+00 s=0 e=0 z=2  None .text      drawBallModel__13fopEn_enemy_cFP12dKy_tevstr_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

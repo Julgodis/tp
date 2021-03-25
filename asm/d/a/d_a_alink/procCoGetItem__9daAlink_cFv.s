@@ -346,8 +346,8 @@ lbl_8011B0FC:
 /* 8011B11C 00000020  41 82 01 18 */	beq lbl_8011B234
 /* 8011B120 00000024  2C 00 00 70 */	cmpwi r0, 0x70
 /* 8011B124 00000028  40 82 00 28 */	bne lbl_8011B14C
-/* 8011B128 0000002C  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 8011B12C 00000030  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 8011B128 0000002C  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 8011B12C 00000030  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 8011B130 00000034  38 63 01 06 */	addi r3, r3, 0x106
 /* 8011B134 00000038  4B F8 29 2D */	bl checkStageName__9daAlink_cFPCc
 /* 8011B138 0000003C  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -359,8 +359,8 @@ lbl_8011B14C:
 /* 8011B14C 00000000  A8 1C 30 0C */	lha r0, 0x300c(r28)
 /* 8011B150 00000004  2C 00 00 23 */	cmpwi r0, 0x23
 /* 8011B154 00000008  40 82 00 28 */	bne lbl_8011B17C
-/* 8011B158 0000000C  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 8011B15C 00000010  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 8011B158 0000000C  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 8011B15C 00000010  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 8011B160 00000014  38 63 01 0E */	addi r3, r3, 0x10e
 /* 8011B164 00000018  4B F8 28 FD */	bl checkStageName__9daAlink_cFPCc
 /* 8011B168 0000001C  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -407,8 +407,8 @@ lbl_8011B1C8:
 lbl_8011B1FC:
 /* 8011B1FC 00000000  2C 04 00 33 */	cmpwi r4, 0x33
 /* 8011B200 00000004  40 82 00 28 */	bne lbl_8011B228
-/* 8011B204 00000008  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 8011B208 0000000C  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 8011B204 00000008  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 8011B208 0000000C  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 8011B20C 00000010  38 63 01 15 */	addi r3, r3, 0x115
 /* 8011B210 00000014  4B F8 28 51 */	bl checkStageName__9daAlink_cFPCc
 /* 8011B214 00000018  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -492,7 +492,7 @@ lbl_8011B304:
 /* 8011B338 00000034  41 82 00 18 */	beq lbl_8011B350
 /* 8011B33C 00000038  7F 83 E3 78 */	mr r3, r28
 /* 8011B340 0000003C  38 9F 17 D0 */	addi r4, r31, 0x17d0
-/* 8011B344 00000040  C0 24 00 94 */	lfs f1, 0x94(r4)
+/* 8011B344 00000040  C0 24 00 94 */	lfs f1, 0x94(r4)	/* effective address: 8038EEBC */
 /* 8011B348 00000044  48 00 D4 FD */	bl setBlendWolfMoveAnime__9daAlink_cFf
 /* 8011B34C 00000048  48 00 00 88 */	b lbl_8011B3D4
 lbl_8011B350:
@@ -522,7 +522,7 @@ lbl_8011B364:
 lbl_8011B3A8:
 /* 8011B3A8 00000000  7F 83 E3 78 */	mr r3, r28
 /* 8011B3AC 00000004  38 9F 00 0C */	addi r4, r31, 0xc
-/* 8011B3B0 00000008  C0 24 00 18 */	lfs f1, 0x18(r4)
+/* 8011B3B0 00000008  C0 24 00 18 */	lfs f1, 0x18(r4)	/* effective address: 8038D67C */
 /* 8011B3B4 0000000C  4B F9 2A 61 */	bl setBlendMoveAnime__9daAlink_cFf
 /* 8011B3B8 00000010  48 00 00 1C */	b lbl_8011B3D4
 lbl_8011B3BC:

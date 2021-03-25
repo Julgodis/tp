@@ -400,7 +400,7 @@ SECTION_SDATA2 static f64 lit_4067 = 4503599627370496.0 /* cast u32 to float */;
 /* 804558E0-804558E8 0008+00 s=2 e=0 z=0  None .sdata2    @4070                                                        */
 SECTION_SDATA2 static f64 lit_4070 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802AB984-802AC50C 0B88+00 s=1 e=196 z=0  None .text      seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc               */
+/* 802AB984-802AC50C 0B88+00 s=1 e=196 z=549  None .text      seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -540,7 +540,7 @@ SECTION_SDATA2 static f32 lit_4614 = 600.0f;
 /* 8045598C-80455990 0004+00 s=1 e=0 z=0  None .sdata2    @4615                                                        */
 SECTION_SDATA2 static f32 lit_4615 = 90.0f;
 
-/* 802AC50C-802AD8B0 13A4+00 s=3 e=19 z=0  None .text      seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc          */
+/* 802AC50C-802AD8B0 13A4+00 s=3 e=19 z=199  None .text      seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -551,7 +551,7 @@ asm void Z2SeMgr::seStartLevel(JAISoundID param_0, Vec const* param_1, u32 param
 #pragma pop
 
 
-/* 802AD8B0-802AD94C 009C+00 s=1 e=0 z=0  None .text      seStop__7Z2SeMgrF10JAISoundIDUl                              */
+/* 802AD8B0-802AD94C 009C+00 s=1 e=0 z=4  None .text      seStop__7Z2SeMgrF10JAISoundIDUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -573,7 +573,7 @@ asm void Z2SeMgr::seStopAll(u32 param_0) {
 #pragma pop
 
 
-/* 802AD9F4-802ADB14 0120+00 s=3 e=5 z=0  None .text      seMoveVolumeAll__7Z2SeMgrFfUl                                */
+/* 802AD9F4-802ADB14 0120+00 s=3 e=5 z=1  None .text      seMoveVolumeAll__7Z2SeMgrFfUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -5,28 +5,28 @@ lbl_80BC82C0:
 /* 80BC82CC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BC82D0 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80BC82D4 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80BC82D8 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80BC82DC 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
+/* 80BC82D8 00000018  3C 80 80 BD */	lis r4, lit_3731@ha
+/* 80BC82DC 0000001C  3B E4 8C DC */	addi r31, r4, lit_3731@l
 /* 80BC82E0 00000020  48 00 02 3D */	bl exeModeHookSwg__17daObjChandelier_cFv
 /* 80BC82E4 00000024  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80BC82E8 00000028  54 04 E6 3E */	rlwinm r4, r0, 0x1c, 0x18, 0x1f
-/* 80BC82EC 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BC82F0 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80BC82EC 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BC82F0 00000030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BC82F4 00000034  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80BC82F8 00000038  7C 05 07 74 */	extsb r5, r0
-/* 80BC82FC 0000003C  4B FF FC 1D */	bl _unresolved
+/* 80BC82FC 0000003C  4B 46 D0 64 */	b isSwitch__10dSv_info_cCFii
 /* 80BC8300 00000040  2C 03 00 00 */	cmpwi r3, 0
 /* 80BC8304 00000044  41 82 00 30 */	beq lbl_80BC8334
 /* 80BC8308 00000048  38 00 00 01 */	li r0, 1
 /* 80BC830C 0000004C  98 1E 06 09 */	stb r0, 0x609(r30)
-/* 80BC8310 00000050  C0 1F 00 00 */	lfs f0, 0(r31)
+/* 80BC8310 00000050  C0 1F 00 00 */	lfs f0, 0(r31)	/* effective address: 80BC8CDC */
 /* 80BC8314 00000054  D0 1E 05 EC */	stfs f0, 0x5ec(r30)
-/* 80BC8318 00000058  C0 1F 00 04 */	lfs f0, 4(r31)
+/* 80BC8318 00000058  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 80BC8CE0 */
 /* 80BC831C 0000005C  D0 1E 05 F0 */	stfs f0, 0x5f0(r30)
 /* 80BC8320 00000060  38 00 00 00 */	li r0, 0
 /* 80BC8324 00000064  90 1E 05 FC */	stw r0, 0x5fc(r30)
 /* 80BC8328 00000068  90 1E 06 00 */	stw r0, 0x600(r30)
-/* 80BC832C 0000006C  C0 1F 00 08 */	lfs f0, 8(r31)
+/* 80BC832C 0000006C  C0 1F 00 08 */	lfs f0, 8(r31)	/* effective address: 80BC8CE4 */
 /* 80BC8330 00000070  D0 1E 05 F8 */	stfs f0, 0x5f8(r30)
 lbl_80BC8334:
 /* 80BC8334 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

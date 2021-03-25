@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80CB9A70[8];
+extern void* data_80CB9A70[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_obj_rfHole_cpp(); // 1
 
 // 
 // Declarations:

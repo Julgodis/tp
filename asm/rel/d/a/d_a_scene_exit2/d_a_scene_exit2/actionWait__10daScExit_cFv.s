@@ -16,7 +16,7 @@ lbl_8059E3A0:
 /* 8059E3D8 00000038  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 8059E3DC 0000003C  38 E0 00 00 */	li r7, 0
 /* 8059E3E0 00000040  39 00 00 01 */	li r8, 1
-/* 8059E3E4 00000044  4B FF FD 55 */	bl _unresolved
+/* 8059E3E4 00000044  4B A7 D2 98 */	b fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
 /* 8059E3E8 00000048  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 8059E3EC 0000004C  60 00 00 02 */	ori r0, r0, 2
 /* 8059E3F0 00000050  B0 1F 00 FA */	sth r0, 0xfa(r31)

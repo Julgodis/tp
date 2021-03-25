@@ -92,7 +92,7 @@ lbl_800E6BC4:
 /* 800E6BE0 0000001C  40 82 00 14 */	bne lbl_800E6BF4
 lbl_800E6BE4:
 /* 800E6BE4 00000000  7F E3 FB 78 */	mr r3, r31
-/* 800E6BE8 00000004  C0 3E 00 18 */	lfs f1, 0x18(r30)
+/* 800E6BE8 00000004  C0 3E 00 18 */	lfs f1, 0x18(r30)	/* effective address: 8038D67C */
 /* 800E6BEC 00000008  4B FC 7E 85 */	bl setBlendAtnMoveAnime__9daAlink_cFf
 /* 800E6BF0 0000000C  48 00 00 10 */	b lbl_800E6C00
 lbl_800E6BF4:

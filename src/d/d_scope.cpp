@@ -72,7 +72,7 @@ extern "C" void draw__11dMeterSub_cFv(); // 1
 extern "C" void _execute__11dMeterSub_cFUl(); // 1
 extern "C" void isDead__11dMeterSub_cFv(); // 1
 extern "C" void __sinit_d_scope_cpp(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_d_scope__stringBase0;
 extern "C" extern void* __vt__11dMeterSub_c[8 + 3 /* padding */];
 
 // 

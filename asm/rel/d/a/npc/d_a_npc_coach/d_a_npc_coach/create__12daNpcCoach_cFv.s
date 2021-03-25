@@ -17,18 +17,18 @@ lbl_809A38B4:
 /* 809A38BC 00000008  90 1E 04 A0 */	stw r0, 0x4a0(r30)
 lbl_809A38C0:
 /* 809A38C0 00000000  38 7E 25 48 */	addi r3, r30, 0x2548
-/* 809A38C4 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 809A38C8 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 809A38CC 0000000C  80 84 00 00 */	lwz r4, 0(r4)
-/* 809A38D0 00000010  4B FF 9D E9 */	bl _unresolved
+/* 809A38C4 00000004  3C 80 80 9A */	lis r4, l_arcName@ha
+/* 809A38C8 00000008  38 84 51 30 */	addi r4, r4, l_arcName@l
+/* 809A38CC 0000000C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 809A5130 */
+/* 809A38D0 00000010  4B 68 95 EC */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 809A38D4 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 809A38D8 00000018  2C 1F 00 04 */	cmpwi r31, 4
 /* 809A38DC 0000001C  40 82 00 30 */	bne lbl_809A390C
 /* 809A38E0 00000020  7F C3 F3 78 */	mr r3, r30
-/* 809A38E4 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 809A38E8 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 809A38E4 00000024  3C 80 80 9A */	lis r4, createSolidHeap__FP10fopAc_ac_c@ha
+/* 809A38E8 00000028  38 84 E4 A0 */	addi r4, r4, createSolidHeap__FP10fopAc_ac_c@l
 /* 809A38EC 0000002C  38 A0 7D 60 */	li r5, 0x7d60
-/* 809A38F0 00000030  4B FF 9D C9 */	bl _unresolved
+/* 809A38F0 00000030  4B 67 6B C0 */	b fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
 /* 809A38F4 00000034  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 809A38F8 00000038  40 82 00 0C */	bne lbl_809A3904
 /* 809A38FC 0000003C  38 60 00 05 */	li r3, 5

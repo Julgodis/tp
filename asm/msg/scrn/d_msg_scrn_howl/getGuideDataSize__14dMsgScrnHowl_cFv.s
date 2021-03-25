@@ -11,7 +11,7 @@ lbl_80244304:
 /* 80244328 00000024  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 8024432C 00000028  48 00 00 38 */	b lbl_80244364
 lbl_80244330:
-/* 80244330 00000000  80 7F 5D B4 */	lwz r3, 0x5db4(r31)
+/* 80244330 00000000  80 7F 5D B4 */	lwz r3, 0x5db4(r31)	/* effective address: 8040BF74 */
 /* 80244334 00000004  38 63 2D 84 */	addi r3, r3, 0x2d84
 /* 80244338 00000008  57 A4 06 3E */	clrlwi r4, r29, 0x18
 /* 8024433C 0000000C  48 08 6F E5 */	bl getCorrectLine__13Z2WolfHowlMgrFUc

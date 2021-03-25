@@ -5,19 +5,19 @@ lbl_80CBD964:
 /* 80CBD970 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CBD974 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80CBD978 00000014  38 7F 06 18 */	addi r3, r31, 0x618
-/* 80CBD97C 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80CBD980 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80CBD984 00000020  80 84 00 00 */	lwz r4, 0(r4)
-/* 80CBD988 00000024  4B FF EC B1 */	bl _unresolved
+/* 80CBD97C 00000018  3C 80 80 CC */	lis r4, l_arcName@ha
+/* 80CBD980 0000001C  38 84 DB 40 */	addi r4, r4, l_arcName@l
+/* 80CBD984 00000020  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CBDB40 */
+/* 80CBD988 00000024  4B 36 F6 80 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80CBD98C 00000028  88 1F 07 98 */	lbz r0, 0x798(r31)
 /* 80CBD990 0000002C  28 00 00 00 */	cmplwi r0, 0
 /* 80CBD994 00000030  41 82 00 10 */	beq lbl_80CBD9A4
 /* 80CBD998 00000034  38 00 00 00 */	li r0, 0
-/* 80CBD99C 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CBD9A0 0000003C  98 03 00 00 */	stb r0, 0x0000(r3)
+/* 80CBD99C 00000038  3C 60 80 CC */	lis r3, data_80CBDBE8@ha
+/* 80CBD9A0 0000003C  98 03 DB E8 */	stb r0, data_80CBDBE8@l(r3)
 lbl_80CBD9A4:
 /* 80CBD9A4 00000000  38 7F 05 F0 */	addi r3, r31, 0x5f0
-/* 80CBD9A8 00000004  4B FF EC 91 */	bl _unresolved
+/* 80CBD9A8 00000004  4B 60 06 50 */	b deleteObject__14Z2SoundObjBaseFv
 /* 80CBD9AC 00000008  38 60 00 01 */	li r3, 1
 /* 80CBD9B0 0000000C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80CBD9B4 00000010  80 01 00 14 */	lwz r0, 0x14(r1)

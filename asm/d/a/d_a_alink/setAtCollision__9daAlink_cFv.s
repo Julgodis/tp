@@ -203,7 +203,7 @@ lbl_800AADA8:
 /* 800AADC0 00000018  38 61 00 90 */	addi r3, r1, 0x90
 /* 800AADC4 0000001C  38 81 00 B4 */	addi r4, r1, 0xb4
 /* 800AADC8 00000020  38 BF 09 44 */	addi r5, r31, 0x944
-/* 800AADCC 00000024  C0 25 00 70 */	lfs f1, 0x70(r5)
+/* 800AADCC 00000024  C0 25 00 70 */	lfs f1, 0x70(r5)	/* effective address: 8038E00C */
 /* 800AADD0 00000028  48 1B BD B5 */	bl __ml__4cXyzCFf
 /* 800AADD4 0000002C  38 61 00 84 */	addi r3, r1, 0x84
 /* 800AADD8 00000030  38 9E 04 D0 */	addi r4, r30, 0x4d0
@@ -273,11 +273,11 @@ lbl_800AAEC0:
 /* 800AAED0 00000010  41 82 00 D0 */	beq lbl_800AAFA0
 /* 800AAED4 00000014  C0 3E 1F E0 */	lfs f1, 0x1fe0(r30)
 /* 800AAED8 00000018  38 7F 01 64 */	addi r3, r31, 0x164
-/* 800AAEDC 0000001C  C0 03 00 64 */	lfs f0, 0x64(r3)
+/* 800AAEDC 0000001C  C0 03 00 64 */	lfs f0, 0x64(r3)	/* effective address: 8038D820 */
 /* 800AAEE0 00000020  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800AAEE4 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 800AAEE8 00000004  40 82 00 B8 */	bne lbl_800AAFA0
-/* 800AAEEC 00000008  C0 03 00 68 */	lfs f0, 0x68(r3)
+/* 800AAEEC 00000008  C0 03 00 68 */	lfs f0, 0x68(r3)	/* effective address: 8038D824 */
 /* 800AAEF0 00000030  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800AAEF4 00000000  40 80 00 AC */	bge lbl_800AAFA0
 /* 800AAEF8 00000004  38 61 00 60 */	addi r3, r1, 0x60
@@ -342,13 +342,13 @@ lbl_800AAFD0:
 /* 800AAFD8 00000008  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 800AAFDC 0000000C  41 82 00 14 */	beq lbl_800AAFF0
 /* 800AAFE0 00000010  38 7F 13 68 */	addi r3, r31, 0x1368
-/* 800AAFE4 00000014  C3 C3 00 64 */	lfs f30, 0x64(r3)
-/* 800AAFE8 00000018  C3 E3 00 60 */	lfs f31, 0x60(r3)
+/* 800AAFE4 00000014  C3 C3 00 64 */	lfs f30, 0x64(r3)	/* effective address: 8038EA24 */
+/* 800AAFE8 00000018  C3 E3 00 60 */	lfs f31, 0x60(r3)	/* effective address: 8038EA20 */
 /* 800AAFEC 0000001C  48 00 00 10 */	b lbl_800AAFFC
 lbl_800AAFF0:
 /* 800AAFF0 00000000  38 7F 13 68 */	addi r3, r31, 0x1368
-/* 800AAFF4 00000004  C3 C3 00 4C */	lfs f30, 0x4c(r3)
-/* 800AAFF8 00000008  C3 E3 00 48 */	lfs f31, 0x48(r3)
+/* 800AAFF4 00000004  C3 C3 00 4C */	lfs f30, 0x4c(r3)	/* effective address: 8038EA0C */
+/* 800AAFF8 00000008  C3 E3 00 48 */	lfs f31, 0x48(r3)	/* effective address: 8038EA08 */
 lbl_800AAFFC:
 /* 800AAFFC 00000000  A8 1E 30 1A */	lha r0, 0x301a(r30)
 /* 800AB000 00000004  2C 00 00 03 */	cmpwi r0, 3
@@ -691,7 +691,7 @@ lbl_800AB4CC:
 /* 800AB4D4 00000008  2C 03 00 00 */	cmpwi r3, 0
 /* 800AB4D8 0000000C  41 82 00 64 */	beq lbl_800AB53C
 /* 800AB4DC 00000010  38 7F 08 34 */	addi r3, r31, 0x834
-/* 800AB4E0 00000014  A8 03 00 58 */	lha r0, 0x58(r3)
+/* 800AB4E0 00000014  A8 03 00 58 */	lha r0, 0x58(r3)	/* effective address: 8038DEE4 */
 /* 800AB4E4 00000018  90 1E 22 10 */	stw r0, 0x2210(r30)
 /* 800AB4E8 0000001C  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 800AB4EC 00000020  38 83 9A 20 */	addi r4, r3, sincosTable___5JMath@l
@@ -716,7 +716,7 @@ lbl_800AB4CC:
 /* 800AB538 0000006C  48 00 00 58 */	b lbl_800AB590
 lbl_800AB53C:
 /* 800AB53C 00000000  38 7F 08 34 */	addi r3, r31, 0x834
-/* 800AB540 00000004  A8 03 00 54 */	lha r0, 0x54(r3)
+/* 800AB540 00000004  A8 03 00 54 */	lha r0, 0x54(r3)	/* effective address: 8038DEE0 */
 /* 800AB544 00000008  90 1E 22 10 */	stw r0, 0x2210(r30)
 /* 800AB548 0000000C  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 800AB54C 00000010  38 83 9A 20 */	addi r4, r3, sincosTable___5JMath@l

@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80CB1850[8];
+extern void* data_80CB1850[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_obj_pleaf_cpp(); // 1
 
 // 
 // Declarations:

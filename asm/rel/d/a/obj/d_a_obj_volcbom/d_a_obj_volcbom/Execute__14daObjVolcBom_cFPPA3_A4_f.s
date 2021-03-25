@@ -12,9 +12,9 @@ lbl_80D249D0:
 /* 80D249F8 00000028  7F C3 F3 78 */	mr r3, r30
 /* 80D249FC 0000002C  4B FF F8 3D */	bl setBaseMtx__14daObjVolcBom_cFv
 /* 80D24A00 00000030  80 7E 05 AC */	lwz r3, 0x5ac(r30)
-/* 80D24A04 00000034  4B FF F7 75 */	bl _unresolved
+/* 80D24A04 00000034  4B 2E 8A 24 */	b play__14mDoExt_baseAnmFv
 /* 80D24A08 00000038  80 7E 05 B0 */	lwz r3, 0x5b0(r30)
-/* 80D24A0C 0000003C  4B FF F7 6D */	bl _unresolved
+/* 80D24A0C 0000003C  4B 2E 8A 1C */	b play__14mDoExt_baseAnmFv
 /* 80D24A10 00000040  38 60 00 01 */	li r3, 1
 /* 80D24A14 00000044  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80D24A18 00000048  83 C1 00 08 */	lwz r30, 8(r1)

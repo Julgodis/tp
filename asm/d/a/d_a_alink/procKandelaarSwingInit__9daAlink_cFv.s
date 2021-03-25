@@ -55,8 +55,8 @@ lbl_801114D8:
 /* 80111504 0000002C  2C 00 00 29 */	cmpwi r0, 0x29
 /* 80111508 00000030  41 82 00 34 */	beq lbl_8011153C
 lbl_8011150C:
-/* 8011150C 00000000  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 80111510 00000004  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 8011150C 00000000  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 80111510 00000004  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 80111514 00000008  38 63 00 A5 */	addi r3, r3, 0xa5
 /* 80111518 0000000C  4B F8 C5 49 */	bl checkStageName__9daAlink_cFPCc
 /* 8011151C 00000010  54 60 06 3F */	clrlwi. r0, r3, 0x18

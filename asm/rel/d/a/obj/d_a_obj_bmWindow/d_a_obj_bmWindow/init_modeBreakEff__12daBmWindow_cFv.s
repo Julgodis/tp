@@ -5,46 +5,46 @@ lbl_80BB922C:
 /* 80BB9238 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80BB923C 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80BB9240 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80BB9244 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BB9248 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80BB9244 00000018  3C 60 80 BC */	lis r3, lit_3653@ha
+/* 80BB9248 0000001C  3B E3 97 3C */	addi r31, r3, lit_3653@l
 /* 80BB924C 00000020  C0 1E 04 D0 */	lfs f0, 0x4d0(r30)
 /* 80BB9250 00000024  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80BB9254 00000028  C0 1E 04 D4 */	lfs f0, 0x4d4(r30)
 /* 80BB9258 0000002C  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80BB925C 00000030  C0 3E 04 D8 */	lfs f1, 0x4d8(r30)
 /* 80BB9260 00000034  D0 21 00 14 */	stfs f1, 0x14(r1)
-/* 80BB9264 00000038  C0 1F 00 8C */	lfs f0, 0x8c(r31)
+/* 80BB9264 00000038  C0 1F 00 8C */	lfs f0, 0x8c(r31)	/* effective address: 80BB97C8 */
 /* 80BB9268 0000003C  EC 01 00 28 */	fsubs f0, f1, f0
 /* 80BB926C 00000040  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80BB9270 00000044  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80BB9274 00000048  7C 03 07 74 */	extsb r3, r0
-/* 80BB9278 0000004C  4B FF EF 01 */	bl _unresolved
+/* 80BB9278 0000004C  4B 47 3D F4 */	b dComIfGp_getReverb__Fi
 /* 80BB927C 00000050  7C 67 1B 78 */	mr r7, r3
 /* 80BB9280 00000054  3C 60 00 08 */	lis r3, 0x0008 /* 0x00080173@ha */
 /* 80BB9284 00000058  38 03 01 73 */	addi r0, r3, 0x0173 /* 0x00080173@l */
 /* 80BB9288 0000005C  90 01 00 08 */	stw r0, 8(r1)
-/* 80BB928C 00000060  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BB9290 00000064  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80BB9294 00000068  80 63 00 00 */	lwz r3, 0(r3)
+/* 80BB928C 00000060  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
+/* 80BB9290 00000064  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 80BB9294 00000068  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
 /* 80BB9298 0000006C  38 81 00 08 */	addi r4, r1, 8
 /* 80BB929C 00000070  38 A1 00 0C */	addi r5, r1, 0xc
 /* 80BB92A0 00000074  38 C0 00 00 */	li r6, 0
-/* 80BB92A4 00000078  C0 3F 00 20 */	lfs f1, 0x20(r31)
+/* 80BB92A4 00000078  C0 3F 00 20 */	lfs f1, 0x20(r31)	/* effective address: 80BB975C */
 /* 80BB92A8 0000007C  FC 40 08 90 */	fmr f2, f1
-/* 80BB92AC 00000080  C0 7F 00 90 */	lfs f3, 0x90(r31)
+/* 80BB92AC 00000080  C0 7F 00 90 */	lfs f3, 0x90(r31)	/* effective address: 80BB97CC */
 /* 80BB92B0 00000084  FC 80 18 90 */	fmr f4, f3
 /* 80BB92B4 00000088  39 00 00 00 */	li r8, 0
-/* 80BB92B8 0000008C  4B FF EE C1 */	bl _unresolved
+/* 80BB92B8 0000008C  4B 6F 26 CC */	b seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 80BB92BC 00000090  7F C3 F3 78 */	mr r3, r30
 /* 80BB92C0 00000094  38 80 00 01 */	li r4, 1
 /* 80BB92C4 00000098  48 00 00 61 */	bl setBreakEffect__12daBmWindow_cFi
-/* 80BB92C8 0000009C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BB92CC 000000A0  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80BB92C8 0000009C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB92CC 000000A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BB92D0 000000A4  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80BB92D4 000000A8  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80BB92D8 000000AC  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80BB92DC 000000B0  7C 05 07 74 */	extsb r5, r0
-/* 80BB92E0 000000B4  4B FF EE 99 */	bl _unresolved
+/* 80BB92E0 000000B4  4B 47 BF 20 */	b onSwitch__10dSv_info_cFii
 /* 80BB92E4 000000B8  38 00 00 02 */	li r0, 2
 /* 80BB92E8 000000BC  98 1E 05 AC */	stb r0, 0x5ac(r30)
 /* 80BB92EC 000000C0  83 E1 00 1C */	lwz r31, 0x1c(r1)

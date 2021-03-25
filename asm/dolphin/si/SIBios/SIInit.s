@@ -8,14 +8,14 @@ lbl_80345494:
 /* 803454AC 00000018  80 6D 84 48 */	lwz r3, __SIVersion(r13)
 /* 803454B0 0000001C  4B FF 53 C5 */	bl OSRegisterVersion
 /* 803454B4 00000020  38 A0 FF FF */	li r5, -1
-/* 803454B8 00000024  90 BF 00 60 */	stw r5, 0x60(r31)
+/* 803454B8 00000024  90 BF 00 60 */	stw r5, 0x60(r31)	/* effective address: 8044C690 */
 /* 803454BC 00000028  3C 60 80 3D */	lis r3, Si@ha
 /* 803454C0 0000002C  38 83 11 FC */	addi r4, r3, Si@l
-/* 803454C4 00000030  90 BF 00 40 */	stw r5, 0x40(r31)
+/* 803454C4 00000030  90 BF 00 40 */	stw r5, 0x40(r31)	/* effective address: 8044C670 */
 /* 803454C8 00000034  38 00 00 00 */	li r0, 0
 /* 803454CC 00000038  38 60 00 00 */	li r3, 0
-/* 803454D0 0000003C  90 BF 00 20 */	stw r5, 0x20(r31)
-/* 803454D4 00000040  90 BF 00 00 */	stw r5, 0(r31)
+/* 803454D0 0000003C  90 BF 00 20 */	stw r5, 0x20(r31)	/* effective address: 8044C650 */
+/* 803454D4 00000040  90 BF 00 00 */	stw r5, 0(r31)	/* effective address: 8044C630 */
 /* 803454D8 00000044  90 04 00 04 */	stw r0, 4(r4)	/* effective address: 803D1200 */
 /* 803454DC 00000048  48 00 0D B5 */	bl SISetSamplingRate
 /* 803454E0 0000004C  3C 60 CC 00 */	lis r3, 0xcc00
@@ -26,7 +26,7 @@ lbl_803454E4:
 /* 803454F0 0000000C  40 82 FF F4 */	bne lbl_803454E4
 /* 803454F4 00000010  3C 00 80 00 */	lis r0, 0x8000
 /* 803454F8 00000014  3C 60 80 34 */	lis r3, SIInterruptHandler@ha
-/* 803454FC 00000018  90 04 00 00 */	stw r0, 0(r4)
+/* 803454FC 00000018  90 04 00 00 */	stw r0, 0(r4)	/* effective address: CC006400 */
 /* 80345500 0000001C  38 83 4E F8 */	addi r4, r3, SIInterruptHandler@l
 /* 80345504 00000020  38 60 00 14 */	li r3, 0x14
 /* 80345508 00000024  4B FF 82 39 */	bl __OSSetInterruptHandler

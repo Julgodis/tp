@@ -5,29 +5,29 @@ lbl_80CD8C80:
 /* 80CD8C8C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CD8C90 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80CD8C94 00000014  38 7F 04 D0 */	addi r3, r31, 0x4d0
-/* 80CD8C98 00000018  4B FF F9 01 */	bl _unresolved
+/* 80CD8C98 00000018  4B 33 40 CC */	b transS__14mDoMtx_stack_cFRC4cXyz
 /* 80CD8C9C 0000001C  38 7F 04 E4 */	addi r3, r31, 0x4e4
-/* 80CD8CA0 00000020  4B FF F8 F9 */	bl _unresolved
+/* 80CD8CA0 00000020  4B 33 42 A4 */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 80CD8CA4 00000024  88 1F 05 A0 */	lbz r0, 0x5a0(r31)
 /* 80CD8CA8 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 80CD8CAC 0000002C  40 82 00 1C */	bne lbl_80CD8CC8
-/* 80CD8CB0 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CD8CB4 00000034  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CD8CB0 00000030  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80CD8CB4 00000034  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80CD8CB8 00000038  80 9F 05 CC */	lwz r4, 0x5cc(r31)
 /* 80CD8CBC 0000003C  38 84 00 24 */	addi r4, r4, 0x24
-/* 80CD8CC0 00000040  4B FF F8 D9 */	bl _unresolved
+/* 80CD8CC0 00000040  4B 66 D7 F0 */	b PSMTXCopy
 /* 80CD8CC4 00000044  48 00 00 18 */	b lbl_80CD8CDC
 lbl_80CD8CC8:
-/* 80CD8CC8 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CD8CCC 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CD8CC8 00000000  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80CD8CCC 00000004  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80CD8CD0 00000008  80 9F 05 D0 */	lwz r4, 0x5d0(r31)
 /* 80CD8CD4 0000000C  38 84 00 24 */	addi r4, r4, 0x24
-/* 80CD8CD8 00000010  4B FF F8 C1 */	bl _unresolved
+/* 80CD8CD8 00000010  4B 66 D7 D8 */	b PSMTXCopy
 lbl_80CD8CDC:
-/* 80CD8CDC 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CD8CE0 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CD8CDC 00000000  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 80CD8CE0 00000004  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80CD8CE4 00000008  38 9F 05 6C */	addi r4, r31, 0x56c
-/* 80CD8CE8 0000000C  4B FF F8 B1 */	bl _unresolved
+/* 80CD8CE8 0000000C  4B 66 D7 C8 */	b PSMTXCopy
 /* 80CD8CEC 00000010  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80CD8CF0 00000014  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80CD8CF4 00000018  7C 08 03 A6 */	mtlr r0

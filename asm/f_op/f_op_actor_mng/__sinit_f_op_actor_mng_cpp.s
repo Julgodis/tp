@@ -12,9 +12,9 @@ lbl_8001DE14:
 /* 8001DE3C 00000028  38 BF 00 00 */	addi r5, r31, 0
 /* 8001DE40 0000002C  48 34 3D E5 */	bl __register_global_object
 /* 8001DE44 00000030  38 7F 00 48 */	addi r3, r31, 0x48
-/* 8001DE48 00000034  80 03 00 4C */	lwz r0, 0x4c(r3)
+/* 8001DE48 00000034  80 03 00 4C */	lwz r0, 0x4c(r3)	/* effective address: 803F1C94 */
 /* 8001DE4C 00000038  54 00 00 C2 */	rlwinm r0, r0, 0, 3, 1
-/* 8001DE50 0000003C  90 03 00 4C */	stw r0, 0x4c(r3)
+/* 8001DE50 0000003C  90 03 00 4C */	stw r0, 0x4c(r3)	/* effective address: 803F1C94 */
 /* 8001DE54 00000040  48 05 A1 09 */	bl __ct__14dBgS_ObjLinChkFv
 /* 8001DE58 00000044  3C 80 80 07 */	lis r4, __dt__14dBgS_ObjLinChkFv@ha
 /* 8001DE5C 00000048  38 84 7F B8 */	addi r4, r4, __dt__14dBgS_ObjLinChkFv@l
@@ -25,13 +25,13 @@ lbl_8001DE14:
 /* 8001DE70 0000005C  48 05 97 0D */	bl __ct__11dBgS_GndChkFv
 /* 8001DE74 00000060  3C 60 80 3A */	lis r3, __vt__14dBgS_ObjGndChk@ha
 /* 8001DE78 00000064  38 63 38 2C */	addi r3, r3, __vt__14dBgS_ObjGndChk@l
-/* 8001DE7C 00000068  90 7E 00 10 */	stw r3, 0x10(r30)
+/* 8001DE7C 00000068  90 7E 00 10 */	stw r3, 0x10(r30)	/* effective address: 803F1CD4 */
 /* 8001DE80 0000006C  38 03 00 0C */	addi r0, r3, 0xc
-/* 8001DE84 00000070  90 1E 00 20 */	stw r0, 0x20(r30)
+/* 8001DE84 00000070  90 1E 00 20 */	stw r0, 0x20(r30)	/* effective address: 803F1CE4 */
 /* 8001DE88 00000074  38 03 00 18 */	addi r0, r3, 0x18
-/* 8001DE8C 00000078  90 1E 00 3C */	stw r0, 0x3c(r30)
+/* 8001DE8C 00000078  90 1E 00 3C */	stw r0, 0x3c(r30)	/* effective address: 803F1D00 */
 /* 8001DE90 0000007C  38 03 00 24 */	addi r0, r3, 0x24
-/* 8001DE94 00000080  90 1E 00 4C */	stw r0, 0x4c(r30)
+/* 8001DE94 00000080  90 1E 00 4C */	stw r0, 0x4c(r30)	/* effective address: 803F1D10 */
 /* 8001DE98 00000084  38 7E 00 3C */	addi r3, r30, 0x3c
 /* 8001DE9C 00000088  48 05 AF CD */	bl SetObj__16dBgS_PolyPassChkFv
 /* 8001DEA0 0000008C  7F C3 F3 78 */	mr r3, r30
@@ -44,13 +44,13 @@ lbl_8001DE14:
 /* 8001DEBC 000000A8  48 05 B1 39 */	bl __ct__12dBgS_RoofChkFv
 /* 8001DEC0 000000AC  3C 60 80 3A */	lis r3, __vt__15dBgS_ObjRoofChk@ha
 /* 8001DEC4 000000B0  38 63 37 CC */	addi r3, r3, __vt__15dBgS_ObjRoofChk@l
-/* 8001DEC8 000000B4  90 7E 00 0C */	stw r3, 0xc(r30)
+/* 8001DEC8 000000B4  90 7E 00 0C */	stw r3, 0xc(r30)	/* effective address: 803F1D30 */
 /* 8001DECC 000000B8  38 03 00 0C */	addi r0, r3, 0xc
-/* 8001DED0 000000BC  90 1E 00 20 */	stw r0, 0x20(r30)
+/* 8001DED0 000000BC  90 1E 00 20 */	stw r0, 0x20(r30)	/* effective address: 803F1D44 */
 /* 8001DED4 000000C0  38 03 00 18 */	addi r0, r3, 0x18
-/* 8001DED8 000000C4  90 1E 00 24 */	stw r0, 0x24(r30)
+/* 8001DED8 000000C4  90 1E 00 24 */	stw r0, 0x24(r30)	/* effective address: 803F1D48 */
 /* 8001DEDC 000000C8  38 03 00 24 */	addi r0, r3, 0x24
-/* 8001DEE0 000000CC  90 1E 00 34 */	stw r0, 0x34(r30)
+/* 8001DEE0 000000CC  90 1E 00 34 */	stw r0, 0x34(r30)	/* effective address: 803F1D58 */
 /* 8001DEE4 000000D0  38 7E 00 24 */	addi r3, r30, 0x24
 /* 8001DEE8 000000D4  48 05 AF 81 */	bl SetObj__16dBgS_PolyPassChkFv
 /* 8001DEEC 000000D8  7F C3 F3 78 */	mr r3, r30

@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80A0C25C[8];
+extern void* data_80A0C25C[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_npc_impal_cpp(); // 1
 
 // 
 // Declarations:

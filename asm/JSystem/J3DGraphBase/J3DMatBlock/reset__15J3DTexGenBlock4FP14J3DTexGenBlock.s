@@ -58,8 +58,8 @@ lbl_80320218:
 /* 80320278 00000060  48 01 B3 65 */	bl DCStoreRange
 /* 8032027C 00000064  48 00 00 18 */	b lbl_80320294
 lbl_80320280:
-/* 80320280 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80320284 00000004  38 63 1E A8 */	addi r3, r3, stringBase0@l
+/* 80320280 00000000  3C 60 80 3A */	lis r3, J3DMatBlock__stringBase0@ha
+/* 80320284 00000004  38 63 1E A8 */	addi r3, r3, J3DMatBlock__stringBase0@l
 /* 80320288 00000008  7F A4 EB 78 */	mr r4, r29
 /* 8032028C 0000000C  4C C6 31 82 */	crclr 6
 /* 80320290 00000010  4B CE 68 2D */	bl OSReport

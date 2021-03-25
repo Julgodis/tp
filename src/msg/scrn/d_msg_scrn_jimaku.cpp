@@ -98,7 +98,7 @@ extern "C" void fukiAlpha__16dMsgScrnJimaku_cFf(); // 1
 extern "C" void fukiScale__16dMsgScrnJimaku_cFf(); // 1
 extern "C" void fukiTrans__16dMsgScrnJimaku_cFff(); // 1
 extern "C" void fontAlpha__16dMsgScrnJimaku_cFf(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const msg_scrn_d_msg_scrn_jimaku__stringBase0;
 
 // 
 // External References:

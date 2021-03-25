@@ -14,7 +14,7 @@ lbl_8024438C:
 /* 802443BC 00000030  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 802443C0 00000034  48 00 00 6C */	b lbl_8024442C
 lbl_802443C4:
-/* 802443C4 00000000  80 7F 5D B4 */	lwz r3, 0x5db4(r31)
+/* 802443C4 00000000  80 7F 5D B4 */	lwz r3, 0x5db4(r31)	/* effective address: 8040BF74 */
 /* 802443C8 00000004  38 63 2D 84 */	addi r3, r3, 0x2d84
 /* 802443CC 00000008  57 84 06 3E */	clrlwi r4, r28, 0x18
 /* 802443D0 0000000C  48 08 6F 51 */	bl getCorrectLine__13Z2WolfHowlMgrFUc
@@ -29,7 +29,7 @@ lbl_802443C4:
 /* 802443F4 00000030  57 A0 04 3E */	clrlwi r0, r29, 0x10
 /* 802443F8 00000034  7C 00 D8 00 */	cmpw r0, r27
 /* 802443FC 00000038  40 81 00 28 */	ble lbl_80244424
-/* 80244400 0000003C  80 7F 5D B4 */	lwz r3, 0x5db4(r31)
+/* 80244400 0000003C  80 7F 5D B4 */	lwz r3, 0x5db4(r31)	/* effective address: 8040BF74 */
 /* 80244404 00000040  38 63 2D 84 */	addi r3, r3, 0x2d84
 /* 80244408 00000044  57 84 06 3E */	clrlwi r4, r28, 0x18
 /* 8024440C 00000048  48 08 6F 15 */	bl getCorrectLine__13Z2WolfHowlMgrFUc

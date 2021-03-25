@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80AE1FC8[8];
+extern void* data_80AE1FC8[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_npc_shad_cpp(); // 1
 
 // 
 // Declarations:

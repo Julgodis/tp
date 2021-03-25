@@ -11,16 +11,10 @@
 // Types:
 // 
 
-struct cCcD_Stts {
-	/* 80263934 */ void PlusCcMove(f32, f32, f32);
-	/* 80263970 */ void PlusDmg(int);
-};
-
-struct dCcD_GObjInf {
-	/* 800843DC */ void ChkAtNoGuard();
-};
-
 struct dCcD_GStts {
+};
+
+struct fopAc_ac_c {
 };
 
 struct cCcD_ShapeAttr {
@@ -32,20 +26,26 @@ struct cCcD_ShapeAttr {
 struct cXyz {
 };
 
-struct cCcD_GStts {
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
 };
 
-struct fopAc_ac_c {
+struct cCcD_GStts {
 };
 
 struct csXyz {
 };
 
-struct cCcD_Obj {
-	/* 80263A48 */ void GetAc();
+struct cCcD_GObjInf {
 };
 
-struct cCcD_GObjInf {
+struct dCcD_GObjInf {
+	/* 800843DC */ void ChkAtNoGuard();
+};
+
+struct cCcD_Stts {
+	/* 80263934 */ void PlusCcMove(f32, f32, f32);
+	/* 80263970 */ void PlusDmg(int);
 };
 
 struct dCcS {
@@ -504,7 +504,7 @@ asm void dCcS::Draw() {
 #pragma pop
 
 
-/* 8008730C-80087330 0024+00 s=0 e=0 z=0  None .text      MassClear__4dCcSFv                                           */
+/* 8008730C-80087330 0024+00 s=0 e=0 z=1  None .text      MassClear__4dCcSFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -14,6 +14,9 @@
 struct _GXColor {
 };
 
+struct dMenu_Fmap_world_data_c {
+};
+
 struct dDrawPath_c {
 	struct group_class {
 	};
@@ -37,9 +40,6 @@ struct dDrawPath_c {
 
 struct dMenu_Fmap_region_data_c {
 	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, int, int*, int*);
-};
-
-struct dMenu_Fmap_world_data_c {
 };
 
 struct renderingFmap_c {
@@ -180,7 +180,7 @@ extern "C" void afterDrawPath__15renderingFmap_cFv(); // 1
 extern "C" extern u8 const data_803961D0[36];
 extern "C" extern u8 const data_803961F4[36];
 extern "C" extern u8 const data_80396218[36];
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_menu_d_menu_fmap_map__stringBase0;
 
 // 
 // External References:

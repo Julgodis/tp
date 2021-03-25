@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_8097F534[8];
+extern void* data_8097F534[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_npc_cdn3_cpp(); // 1
 
 // 
 // Declarations:

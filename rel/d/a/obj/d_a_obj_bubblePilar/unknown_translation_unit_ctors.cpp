@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80BC405C[8];
+extern void* data_80BC405C[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_obj_bubblePilar_cpp(); // 1
 
 // 
 // Declarations:

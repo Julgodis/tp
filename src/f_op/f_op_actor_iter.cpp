@@ -55,7 +55,7 @@ extern "C" extern u8 g_fopAcTg_Queue[12 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 800197BC-800197F8 003C+00 s=0 e=5 z=0  None .text      fopAcIt_Executor__FPFPvPv_iPv                                */
+/* 800197BC-800197F8 003C+00 s=0 e=5 z=3  None .text      fopAcIt_Executor__FPFPvPv_iPv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -66,7 +66,7 @@ asm void fopAcIt_Executor(int (*)(void*, void*), void* param_1) {
 #pragma pop
 
 
-/* 800197F8-80019834 003C+00 s=0 e=67 z=0  None .text      fopAcIt_Judge__FPFPvPv_PvPv                                  */
+/* 800197F8-80019834 003C+00 s=0 e=67 z=388  None .text      fopAcIt_Judge__FPFPvPv_PvPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -5,8 +5,8 @@ lbl_805EF504:
 /* 805EF510 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 805EF514 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 805EF518 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 805EF51C 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 805EF520 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
+/* 805EF51C 00000018  3C 80 80 5F */	lis r4, lit_3774@ha
+/* 805EF520 0000001C  3B E4 41 88 */	addi r31, r4, lit_3774@l
 /* 805EF524 00000020  80 83 05 DC */	lwz r4, 0x5dc(r3)
 /* 805EF528 00000024  C0 04 00 1C */	lfs f0, 0x1c(r4)
 /* 805EF52C 00000028  FC 00 00 1E */	fctiwz f0, f0
@@ -23,16 +23,16 @@ lbl_805EF554:
 /* 805EF554 00000000  38 00 00 01 */	li r0, 1
 /* 805EF558 00000004  B0 1E 07 20 */	sth r0, 0x720(r30)
 /* 805EF55C 00000008  38 80 00 18 */	li r4, 0x18
-/* 805EF560 0000000C  C0 3F 00 8C */	lfs f1, 0x8c(r31)
+/* 805EF560 0000000C  C0 3F 00 8C */	lfs f1, 0x8c(r31)	/* effective address: 805F4214 */
 /* 805EF564 00000010  38 A0 00 00 */	li r5, 0
-/* 805EF568 00000014  C0 5F 00 00 */	lfs f2, 0(r31)
+/* 805EF568 00000014  C0 5F 00 00 */	lfs f2, 0(r31)	/* effective address: 805F4188 */
 /* 805EF56C 00000018  4B FF E4 91 */	bl anm_init__FP10b_gm_classifUcf
 /* 805EF570 0000001C  48 00 00 90 */	b lbl_805EF600
 lbl_805EF574:
 /* 805EF574 00000000  2C 04 00 32 */	cmpwi r4, 0x32
 /* 805EF578 00000004  41 80 00 30 */	blt lbl_805EF5A8
 /* 805EF57C 00000008  40 82 00 0C */	bne lbl_805EF588
-/* 805EF580 0000000C  C0 1F 00 90 */	lfs f0, 0x90(r31)
+/* 805EF580 0000000C  C0 1F 00 90 */	lfs f0, 0x90(r31)	/* effective address: 805F4218 */
 /* 805EF584 00000010  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 lbl_805EF588:
 /* 805EF588 00000000  C0 3E 04 D4 */	lfs f1, 0x4d4(r30)
@@ -40,7 +40,7 @@ lbl_805EF588:
 /* 805EF590 00000008  EC 01 00 2A */	fadds f0, f1, f0
 /* 805EF594 0000000C  D0 1E 04 D4 */	stfs f0, 0x4d4(r30)
 /* 805EF598 00000010  C0 3E 04 FC */	lfs f1, 0x4fc(r30)
-/* 805EF59C 00000014  C0 1F 00 40 */	lfs f0, 0x40(r31)
+/* 805EF59C 00000014  C0 1F 00 40 */	lfs f0, 0x40(r31)	/* effective address: 805F41C8 */
 /* 805EF5A0 00000018  EC 01 00 28 */	fsubs f0, f1, f0
 /* 805EF5A4 0000001C  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 lbl_805EF5A8:
@@ -49,7 +49,7 @@ lbl_805EF5A8:
 /* 805EF5B0 00000008  88 03 00 11 */	lbz r0, 0x11(r3)
 /* 805EF5B4 0000000C  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 805EF5B8 00000010  40 82 00 18 */	bne lbl_805EF5D0
-/* 805EF5BC 00000014  C0 3F 00 1C */	lfs f1, 0x1c(r31)
+/* 805EF5BC 00000014  C0 3F 00 1C */	lfs f1, 0x1c(r31)	/* effective address: 805F41A4 */
 /* 805EF5C0 00000018  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 805EF5C4 0000001C  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 805EF5C8 00000020  41 82 00 08 */	beq lbl_805EF5D0
@@ -63,17 +63,17 @@ lbl_805EF5D0:
 /* 805EF5E4 00000014  B0 1E 07 20 */	sth r0, 0x720(r30)
 /* 805EF5E8 00000018  7F C3 F3 78 */	mr r3, r30
 /* 805EF5EC 0000001C  38 80 00 11 */	li r4, 0x11
-/* 805EF5F0 00000020  C0 3F 00 1C */	lfs f1, 0x1c(r31)
+/* 805EF5F0 00000020  C0 3F 00 1C */	lfs f1, 0x1c(r31)	/* effective address: 805F41A4 */
 /* 805EF5F4 00000024  38 A0 00 02 */	li r5, 2
-/* 805EF5F8 00000028  C0 5F 00 00 */	lfs f2, 0(r31)
+/* 805EF5F8 00000028  C0 5F 00 00 */	lfs f2, 0(r31)	/* effective address: 805F4188 */
 /* 805EF5FC 0000002C  4B FF E4 01 */	bl anm_init__FP10b_gm_classifUcf
 lbl_805EF600:
 /* 805EF600 00000000  38 00 00 14 */	li r0, 0x14
 /* 805EF604 00000004  B0 1E 07 2A */	sth r0, 0x72a(r30)
 /* 805EF608 00000008  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 805EF60C 0000000C  C0 3F 00 00 */	lfs f1, 0(r31)
-/* 805EF610 00000010  C0 5F 00 88 */	lfs f2, 0x88(r31)
-/* 805EF614 00000014  4B FF E2 A5 */	bl _unresolved
+/* 805EF60C 0000000C  C0 3F 00 00 */	lfs f1, 0(r31)	/* effective address: 805F4188 */
+/* 805EF610 00000010  C0 5F 00 88 */	lfs f2, 0x88(r31)	/* effective address: 805F4210 */
+/* 805EF614 00000014  4B C8 04 6C */	b cLib_addCalc0__FPfff
 /* 805EF618 00000018  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 805EF61C 0000001C  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 805EF620 00000020  80 01 00 24 */	lwz r0, 0x24(r1)

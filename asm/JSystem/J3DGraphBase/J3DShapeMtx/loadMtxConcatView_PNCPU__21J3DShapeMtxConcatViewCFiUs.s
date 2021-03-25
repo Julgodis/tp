@@ -28,15 +28,15 @@ lbl_80313A68:
 /* 80313A78 00000010  1F DE 00 03 */	mulli r30, r30, 3
 /* 80313A7C 00000014  7F C4 F3 78 */	mr r4, r30
 /* 80313A80 00000018  4B FF C0 61 */	bl J3DFifoLoadPosMtxImm__FPA4_fUl
-/* 80313A84 0000001C  80 7F 00 40 */	lwz r3, 0x40(r31)
-/* 80313A88 00000020  80 63 00 30 */	lwz r3, 0x30(r3)
+/* 80313A84 0000001C  80 7F 00 40 */	lwz r3, 0x40(r31)	/* effective address: 80434B08 */
+/* 80313A88 00000020  80 63 00 30 */	lwz r3, 0x30(r3)	/* effective address: 80430030 */
 /* 80313A8C 00000024  7F C4 F3 78 */	mr r4, r30
 /* 80313A90 00000028  4B FF C0 D1 */	bl J3DFifoLoadNrmMtxImm__FPA4_fUl
 /* 80313A94 0000002C  80 0D 90 34 */	lwz r0, sTexMtxLoadType__11J3DShapeMtx(r13)
 /* 80313A98 00000030  28 00 20 00 */	cmplwi r0, 0x2000
 /* 80313A9C 00000034  40 82 00 14 */	bne lbl_80313AB0
-/* 80313AA0 00000038  80 7F 00 40 */	lwz r3, 0x40(r31)
-/* 80313AA4 0000003C  80 63 00 30 */	lwz r3, 0x30(r3)
+/* 80313AA0 00000038  80 7F 00 40 */	lwz r3, 0x40(r31)	/* effective address: 80434B08 */
+/* 80313AA4 0000003C  80 63 00 30 */	lwz r3, 0x30(r3)	/* effective address: 80430030 */
 /* 80313AA8 00000040  38 9E 00 1E */	addi r4, r30, 0x1e
 /* 80313AAC 00000044  4B FF C1 8D */	bl J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl
 lbl_80313AB0:

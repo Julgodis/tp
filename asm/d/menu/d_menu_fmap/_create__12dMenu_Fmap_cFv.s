@@ -56,8 +56,8 @@ lbl_801C6DEC:
 /* 801C6E30 00000044  48 00 7F B9 */	bl _create__15dMenu_FmapMap_cFUsUsUsUsPv
 /* 801C6E34 00000048  7F E3 FB 78 */	mr r3, r31
 /* 801C6E38 0000004C  38 9F 00 8C */	addi r4, r31, 0x8c
-/* 801C6E3C 00000050  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801C6E40 00000054  38 A5 60 E8 */	addi r5, r5, stringBase0@l
+/* 801C6E3C 00000050  3C A0 80 39 */	lis r5, d_menu_d_menu_fmap__stringBase0@ha
+/* 801C6E40 00000054  38 A5 60 E8 */	addi r5, r5, d_menu_d_menu_fmap__stringBase0@l
 /* 801C6E44 00000058  38 A5 00 01 */	addi r5, r5, 1
 /* 801C6E48 0000005C  38 C0 00 00 */	li r6, 0
 /* 801C6E4C 00000060  38 E0 00 00 */	li r7, 0
@@ -66,8 +66,8 @@ lbl_801C6DEC:
 /* 801C6E58 0000006C  48 00 54 59 */	bl decodeFieldMapData__12dMenu_Fmap_cFv
 /* 801C6E5C 00000070  7F E3 FB 78 */	mr r3, r31
 /* 801C6E60 00000074  38 9F 00 90 */	addi r4, r31, 0x90
-/* 801C6E64 00000078  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801C6E68 0000007C  38 A5 60 E8 */	addi r5, r5, stringBase0@l
+/* 801C6E64 00000078  3C A0 80 39 */	lis r5, d_menu_d_menu_fmap__stringBase0@ha
+/* 801C6E68 0000007C  38 A5 60 E8 */	addi r5, r5, d_menu_d_menu_fmap__stringBase0@l
 /* 801C6E6C 00000080  38 A5 00 0F */	addi r5, r5, 0xf
 /* 801C6E70 00000084  38 C0 00 00 */	li r6, 0
 /* 801C6E74 00000088  38 E0 00 00 */	li r7, 0
@@ -320,7 +320,7 @@ lbl_801C71E0:
 /* 801C7224 00000044  C0 02 A7 3C */	lfs f0, lit_4353(r2)
 /* 801C7228 00000048  EC 21 00 24 */	fdivs f1, f1, f0
 /* 801C722C 0000004C  48 00 9F 1D */	bl zoomMapCalc__18dMenu_Fmap2DBack_cFf
-/* 801C7230 00000050  88 1E 02 F9 */	lbz r0, 0x2f9(r30)
+/* 801C7230 00000050  88 1E 02 F9 */	lbz r0, 0x2f9(r30)	/* effective address: 8042FF59 */
 /* 801C7234 00000054  28 00 00 00 */	cmplwi r0, 0
 /* 801C7238 00000058  41 82 00 10 */	beq lbl_801C7248
 /* 801C723C 0000005C  80 7F 00 14 */	lwz r3, 0x14(r31)

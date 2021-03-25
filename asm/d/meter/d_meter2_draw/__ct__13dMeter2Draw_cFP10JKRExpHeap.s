@@ -27,8 +27,8 @@ lbl_8020FAB4:
 /* 8020FB18 00000064  80 B7 5C F4 */	lwz r5, 0x5cf4(r23)	/* effective address: 8040BEB4 */
 /* 8020FB1C 00000068  3C 80 52 4F */	lis r4, 0x524F /* 0x524F4F54@ha */
 /* 8020FB20 0000006C  38 64 4F 54 */	addi r3, r4, 0x4F54 /* 0x524F4F54@l */
-/* 8020FB24 00000070  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8020FB28 00000074  38 84 88 D0 */	addi r4, r4, stringBase0@l
+/* 8020FB24 00000070  3C 80 80 3A */	lis r4, d_meter_d_meter2_draw__stringBase0@ha
+/* 8020FB28 00000074  38 84 88 D0 */	addi r4, r4, d_meter_d_meter2_draw__stringBase0@l
 /* 8020FB2C 00000078  48 0C 60 0D */	bl getGlbResource__10JKRArchiveFUlPCcP10JKRArchive
 /* 8020FB30 0000007C  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 8020FB34 00000080  38 84 01 88 */	addi r4, r4, g_meter2_info@l
@@ -49,11 +49,11 @@ lbl_8020FAB4:
 /* 8020FB70 000000BC  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 8020FB74 000000C0  38 84 01 88 */	addi r4, r4, g_meter2_info@l
 /* 8020FB78 000000C4  90 64 00 14 */	stw r3, 0x14(r4)	/* effective address: 8043019C */
-/* 8020FB7C 000000C8  80 B7 5C F4 */	lwz r5, 0x5cf4(r23)
+/* 8020FB7C 000000C8  80 B7 5C F4 */	lwz r5, 0x5cf4(r23)	/* effective address: 8040BEB4 */
 /* 8020FB80 000000CC  3C 80 52 4F */	lis r4, 0x524F /* 0x524F4F54@ha */
 /* 8020FB84 000000D0  38 64 4F 54 */	addi r3, r4, 0x4F54 /* 0x524F4F54@l */
-/* 8020FB88 000000D4  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8020FB8C 000000D8  38 84 88 D0 */	addi r4, r4, stringBase0@l
+/* 8020FB88 000000D4  3C 80 80 3A */	lis r4, d_meter_d_meter2_draw__stringBase0@ha
+/* 8020FB8C 000000D8  38 84 88 D0 */	addi r4, r4, d_meter_d_meter2_draw__stringBase0@l
 /* 8020FB90 000000DC  38 84 00 6E */	addi r4, r4, 0x6e
 /* 8020FB94 000000E0  48 0C 5F A5 */	bl getGlbResource__10JKRArchiveFUlPCcP10JKRArchive
 /* 8020FB98 000000E4  3C 80 80 43 */	lis r4, g_meter2_info@ha
@@ -70,8 +70,8 @@ lbl_8020FAB4:
 lbl_8020FBC4:
 /* 8020FBC4 00000000  90 1F 00 78 */	stw r0, 0x78(r31)
 /* 8020FBC8 00000004  80 7F 00 78 */	lwz r3, 0x78(r31)
-/* 8020FBCC 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8020FBD0 0000000C  38 84 88 D0 */	addi r4, r4, stringBase0@l
+/* 8020FBCC 00000008  3C 80 80 3A */	lis r4, d_meter_d_meter2_draw__stringBase0@ha
+/* 8020FBD0 0000000C  38 84 88 D0 */	addi r4, r4, d_meter_d_meter2_draw__stringBase0@l
 /* 8020FBD4 00000010  38 84 00 7B */	addi r4, r4, 0x7b
 /* 8020FBD8 00000014  3C A0 00 02 */	lis r5, 2
 /* 8020FBDC 00000018  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
@@ -117,11 +117,11 @@ lbl_8020FC44:
 lbl_8020FC74:
 /* 8020FC74 00000000  90 1F 00 7C */	stw r0, 0x7c(r31)
 /* 8020FC78 00000004  80 7F 00 7C */	lwz r3, 0x7c(r31)
-/* 8020FC7C 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8020FC80 0000000C  38 84 88 D0 */	addi r4, r4, stringBase0@l
+/* 8020FC7C 00000008  3C 80 80 3A */	lis r4, d_meter_d_meter2_draw__stringBase0@ha
+/* 8020FC80 0000000C  38 84 88 D0 */	addi r4, r4, d_meter_d_meter2_draw__stringBase0@l
 /* 8020FC84 00000010  38 84 00 90 */	addi r4, r4, 0x90
 /* 8020FC88 00000014  3C A0 00 02 */	lis r5, 2
-/* 8020FC8C 00000018  80 D7 5D 30 */	lwz r6, 0x5d30(r23)
+/* 8020FC8C 00000018  80 D7 5D 30 */	lwz r6, 0x5d30(r23)	/* effective address: 8040BEF0 */
 /* 8020FC90 0000001C  48 0E 89 B9 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 8020FC94 00000020  80 7F 00 7C */	lwz r3, 0x7c(r31)
 /* 8020FC98 00000024  48 04 54 51 */	bl dPaneClass_showNullPane__FP9J2DScreen
@@ -134,11 +134,11 @@ lbl_8020FC74:
 lbl_8020FCB4:
 /* 8020FCB4 00000000  90 1F 00 80 */	stw r0, 0x80(r31)
 /* 8020FCB8 00000004  80 7F 00 80 */	lwz r3, 0x80(r31)
-/* 8020FCBC 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8020FCC0 0000000C  38 84 88 D0 */	addi r4, r4, stringBase0@l
+/* 8020FCBC 00000008  3C 80 80 3A */	lis r4, d_meter_d_meter2_draw__stringBase0@ha
+/* 8020FCC0 0000000C  38 84 88 D0 */	addi r4, r4, d_meter_d_meter2_draw__stringBase0@l
 /* 8020FCC4 00000010  38 84 00 AD */	addi r4, r4, 0xad
 /* 8020FCC8 00000014  3C A0 00 02 */	lis r5, 2
-/* 8020FCCC 00000018  80 D7 5D 30 */	lwz r6, 0x5d30(r23)
+/* 8020FCCC 00000018  80 D7 5D 30 */	lwz r6, 0x5d30(r23)	/* effective address: 8040BEF0 */
 /* 8020FCD0 0000001C  48 0E 89 79 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 8020FCD4 00000020  80 7F 00 80 */	lwz r3, 0x80(r31)
 /* 8020FCD8 00000024  48 04 54 11 */	bl dPaneClass_showNullPane__FP9J2DScreen
@@ -212,20 +212,20 @@ lbl_8020FD0C:
 /* 8020FDE4 000000D8  38 60 00 07 */	li r3, 7
 /* 8020FDE8 000000DC  64 63 00 07 */	oris r3, r3, 7
 /* 8020FDEC 000000E0  7C 75 E3 A6 */	mtspr 0x395, r3
-/* 8020FDF0 000000E4  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8020FDF4 000000E8  38 84 88 D0 */	addi r4, r4, stringBase0@l
+/* 8020FDF0 000000E4  3C 80 80 3A */	lis r4, d_meter_d_meter2_draw__stringBase0@ha
+/* 8020FDF4 000000E8  38 84 88 D0 */	addi r4, r4, d_meter_d_meter2_draw__stringBase0@l
 /* 8020FDF8 000000EC  38 64 00 C3 */	addi r3, r4, 0xc3
-/* 8020FDFC 000000F0  80 97 5D 30 */	lwz r4, 0x5d30(r23)
+/* 8020FDFC 000000F0  80 97 5D 30 */	lwz r4, 0x5d30(r23)	/* effective address: 8040BEF0 */
 /* 8020FE00 000000F4  48 0C 44 71 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
 /* 8020FE04 000000F8  48 0F 8C 69 */	bl load__20J2DAnmLoaderDataBaseFPCv
 /* 8020FE08 000000FC  90 7F 05 34 */	stw r3, 0x534(r31)
 /* 8020FE0C 00000100  7F E3 FB 78 */	mr r3, r31
 /* 8020FE10 00000104  C0 22 AE 84 */	lfs f1, lit_4183(r2)
 /* 8020FE14 00000108  48 00 3E D9 */	bl playPikariBckAnimation__13dMeter2Draw_cFf
-/* 8020FE18 0000010C  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8020FE1C 00000110  38 84 88 D0 */	addi r4, r4, stringBase0@l
+/* 8020FE18 0000010C  3C 80 80 3A */	lis r4, d_meter_d_meter2_draw__stringBase0@ha
+/* 8020FE1C 00000110  38 84 88 D0 */	addi r4, r4, d_meter_d_meter2_draw__stringBase0@l
 /* 8020FE20 00000114  38 64 00 D9 */	addi r3, r4, 0xd9
-/* 8020FE24 00000118  80 97 5D 30 */	lwz r4, 0x5d30(r23)
+/* 8020FE24 00000118  80 97 5D 30 */	lwz r4, 0x5d30(r23)	/* effective address: 8040BEF0 */
 /* 8020FE28 0000011C  48 0C 44 49 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
 /* 8020FE2C 00000120  48 0F 8C 41 */	bl load__20J2DAnmLoaderDataBaseFPCv
 /* 8020FE30 00000124  90 7F 05 38 */	stw r3, 0x538(r31)
@@ -258,8 +258,8 @@ lbl_8020FE88:
 /* 8020FE98 00000010  3B C0 00 00 */	li r30, 0
 /* 8020FE9C 00000014  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 8020FEA0 00000018  3A E4 EB C8 */	addi r23, r4, g_drawHIO@l
-/* 8020FEA4 0000001C  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8020FEA8 00000020  3B A4 88 D0 */	addi r29, r4, stringBase0@l
+/* 8020FEA4 0000001C  3C 80 80 3A */	lis r4, d_meter_d_meter2_draw__stringBase0@ha
+/* 8020FEA8 00000020  3B A4 88 D0 */	addi r29, r4, d_meter_d_meter2_draw__stringBase0@l
 lbl_8020FEAC:
 /* 8020FEAC 00000000  38 60 00 6C */	li r3, 0x6c
 /* 8020FEB0 00000004  48 0B ED 9D */	bl __nw__FUl
@@ -294,7 +294,7 @@ lbl_8020FEE0:
 /* 8020FF20 00000040  4E 80 04 21 */	bctrl 
 /* 8020FF24 00000044  80 99 00 C0 */	lwz r4, 0xc0(r25)
 /* 8020FF28 00000048  80 84 00 04 */	lwz r4, 4(r4)
-/* 8020FF2C 0000004C  C0 17 02 C4 */	lfs f0, 0x2c4(r23)
+/* 8020FF2C 0000004C  C0 17 02 C4 */	lfs f0, 0x2c4(r23)	/* effective address: 8042EE8C */
 /* 8020FF30 00000050  D0 04 01 14 */	stfs f0, 0x114(r4)
 /* 8020FF34 00000054  38 60 00 6C */	li r3, 0x6c
 /* 8020FF38 00000058  48 0B ED 15 */	bl __nw__FUl

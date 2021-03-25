@@ -5,14 +5,14 @@ lbl_805EBB30:
 /* 805EBB3C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 805EBB40 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 805EBB44 00000014  38 7F 06 94 */	addi r3, r31, 0x694
-/* 805EBB48 00000018  4B FF 28 31 */	bl _unresolved
+/* 805EBB48 00000018  4B A2 12 1C */	b transS__14mDoMtx_stack_cFRC4cXyz
 /* 805EBB4C 0000001C  38 7F 06 A0 */	addi r3, r31, 0x6a0
-/* 805EBB50 00000020  4B FF 28 29 */	bl _unresolved
-/* 805EBB54 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 805EBB58 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 805EBB50 00000020  4B A2 13 F4 */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
+/* 805EBB54 00000024  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
+/* 805EBB58 00000028  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 805EBB5C 0000002C  80 9F 0E 3C */	lwz r4, 0xe3c(r31)
 /* 805EBB60 00000030  38 84 00 24 */	addi r4, r4, 0x24
-/* 805EBB64 00000034  4B FF 28 15 */	bl _unresolved
+/* 805EBB64 00000034  4B D5 A9 4C */	b PSMTXCopy
 /* 805EBB68 00000038  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 805EBB6C 0000003C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 805EBB70 00000040  7C 08 03 A6 */	mtlr r0

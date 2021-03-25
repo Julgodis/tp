@@ -264,8 +264,8 @@ lbl_8022E6F8:
 /* 8022E70C 00000014  D0 1E 00 4C */	stfs f0, 0x4c(r30)
 /* 8022E710 00000018  38 61 00 08 */	addi r3, r1, 8
 /* 8022E714 0000001C  38 80 00 0F */	li r4, 0xf
-/* 8022E718 00000020  3C A0 80 3A */	lis r5, stringBase0@ha
-/* 8022E71C 00000024  38 A5 96 10 */	addi r5, r5, stringBase0@l
+/* 8022E718 00000020  3C A0 80 3A */	lis r5, d_msg_d_msg_class__stringBase0@ha
+/* 8022E71C 00000024  38 A5 96 10 */	addi r5, r5, d_msg_d_msg_class__stringBase0@l
 /* 8022E720 00000028  38 A5 00 10 */	addi r5, r5, 0x10
 /* 8022E724 0000002C  FC 00 F8 1E */	fctiwz f0, f31
 /* 8022E728 00000030  D8 01 00 18 */	stfd f0, 0x18(r1)

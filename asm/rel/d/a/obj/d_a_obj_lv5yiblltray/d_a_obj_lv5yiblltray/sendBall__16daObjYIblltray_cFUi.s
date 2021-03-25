@@ -7,25 +7,25 @@ lbl_80C6F23C:
 /* 80C6F250 00000014  90 83 06 34 */	stw r4, 0x634(r3)
 /* 80C6F254 00000018  38 00 00 03 */	li r0, 3
 /* 80C6F258 0000001C  90 03 06 40 */	stw r0, 0x640(r3)
-/* 80C6F25C 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80C6F260 00000024  C0 03 00 00 */	lfs f0, 0x0000(r3)
+/* 80C6F25C 00000020  3C 60 80 C7 */	lis r3, lit_3694@ha
+/* 80C6F260 00000024  C0 03 09 C0 */	lfs f0, lit_3694@l(r3)
 /* 80C6F264 00000028  D0 1F 06 3C */	stfs f0, 0x63c(r31)
 /* 80C6F268 0000002C  80 1F 06 34 */	lwz r0, 0x634(r31)
 /* 80C6F26C 00000030  90 01 00 08 */	stw r0, 8(r1)
-/* 80C6F270 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80C6F274 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80C6F270 00000034  3C 60 80 02 */	lis r3, fpcSch_JudgeByID__FPvPv@ha
+/* 80C6F274 00000038  38 63 35 90 */	addi r3, r3, fpcSch_JudgeByID__FPvPv@l
 /* 80C6F278 0000003C  38 81 00 08 */	addi r4, r1, 8
-/* 80C6F27C 00000040  4B FF F9 5D */	bl _unresolved
+/* 80C6F27C 00000040  4B 3A A5 7C */	b fopAcIt_Judge__FPFPvPv_PvPv
 /* 80C6F280 00000044  C0 1F 06 28 */	lfs f0, 0x628(r31)
-/* 80C6F284 00000048  D0 03 04 D0 */	stfs f0, 0x4d0(r3)
+/* 80C6F284 00000048  D0 03 04 D0 */	stfs f0, 0x4d0(r3)	/* effective address: 80023A60 */
 /* 80C6F288 0000004C  C0 1F 06 2C */	lfs f0, 0x62c(r31)
-/* 80C6F28C 00000050  D0 03 04 D4 */	stfs f0, 0x4d4(r3)
+/* 80C6F28C 00000050  D0 03 04 D4 */	stfs f0, 0x4d4(r3)	/* effective address: 80023A64 */
 /* 80C6F290 00000054  C0 1F 06 30 */	lfs f0, 0x630(r31)
-/* 80C6F294 00000058  D0 03 04 D8 */	stfs f0, 0x4d8(r3)
+/* 80C6F294 00000058  D0 03 04 D8 */	stfs f0, 0x4d8(r3)	/* effective address: 80023A68 */
 /* 80C6F298 0000005C  38 00 00 01 */	li r0, 1
-/* 80C6F29C 00000060  98 03 0D B8 */	stb r0, 0xdb8(r3)
+/* 80C6F29C 00000060  98 03 0D B8 */	stb r0, 0xdb8(r3)	/* effective address: 80024348 */
 /* 80C6F2A0 00000064  88 1F 04 BA */	lbz r0, 0x4ba(r31)
-/* 80C6F2A4 00000068  98 03 04 E2 */	stb r0, 0x4e2(r3)
+/* 80C6F2A4 00000068  98 03 04 E2 */	stb r0, 0x4e2(r3)	/* effective address: 80023A72 */
 /* 80C6F2A8 0000006C  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80C6F2AC 00000070  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80C6F2B0 00000074  7C 08 03 A6 */	mtlr r0

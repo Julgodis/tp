@@ -37,10 +37,10 @@ lbl_80223E3C:
 /* 80223E88 0000004C  4B FD 5F 8D */	bl getBombFlag__9dMw_HIO_cFv
 /* 80223E8C 00000050  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80223E90 00000054  40 82 00 1C */	bne lbl_80223EAC
-/* 80223E94 00000058  88 1E 00 DD */	lbz r0, 0xdd(r30)
+/* 80223E94 00000058  88 1E 00 DD */	lbz r0, 0xdd(r30)	/* effective address: 80430265 */
 /* 80223E98 0000005C  28 00 00 01 */	cmplwi r0, 1
 /* 80223E9C 00000060  40 82 00 7C */	bne lbl_80223F18
-/* 80223EA0 00000064  88 1E 00 DC */	lbz r0, 0xdc(r30)
+/* 80223EA0 00000064  88 1E 00 DC */	lbz r0, 0xdc(r30)	/* effective address: 80430264 */
 /* 80223EA4 00000068  7C 17 00 00 */	cmpw r23, r0
 /* 80223EA8 0000006C  40 82 00 70 */	bne lbl_80223F18
 lbl_80223EAC:
@@ -163,9 +163,9 @@ lbl_80224050:
 /* 80224058 00000008  38 A0 00 50 */	li r5, 0x50
 /* 8022405C 0000000C  4B E0 EF 5D */	bl setItem__17dSv_player_item_cFiUc
 /* 80224060 00000010  3A 97 00 0F */	addi r20, r23, 0xf
-/* 80224064 00000014  9A 9D 5E 7D */	stb r20, 0x5e7d(r29)
+/* 80224064 00000014  9A 9D 5E 7D */	stb r20, 0x5e7d(r29)	/* effective address: 8040C03D */
 /* 80224068 00000018  38 00 00 50 */	li r0, 0x50
-/* 8022406C 0000001C  98 1D 5E 7E */	stb r0, 0x5e7e(r29)
+/* 8022406C 0000001C  98 1D 5E 7E */	stb r0, 0x5e7e(r29)	/* effective address: 8040C03E */
 /* 80224070 00000020  3A 40 00 00 */	li r18, 0
 lbl_80224074:
 /* 80224074 00000000  7E 43 93 78 */	mr r3, r18

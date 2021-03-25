@@ -11,7 +11,7 @@
 // Types:
 // 
 
-struct JKRArchive {
+struct J2DAnmVisibilityFull {
 };
 
 struct J2DAnmTexPattern {
@@ -20,10 +20,25 @@ struct J2DAnmTexPattern {
 struct J2DScrnBlockHeader {
 };
 
+struct ResFONT {
+};
+
 struct ResTIMG {
 };
 
-struct J2DGrafContext {
+struct J2DAnmVtxColor {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct JKRArchive {
+};
+
+struct J2DAnmBase {
 };
 
 struct JSUStreamSeekFrom {
@@ -34,13 +49,10 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct _GXCullMode {
+struct J2DAnmColor {
 };
 
-struct J2DAnmBase {
-};
-
-struct J2DAnmVtxColor {
+struct J2DAnmTransform {
 };
 
 struct JGeometry {
@@ -52,13 +64,10 @@ struct JGeometry {
 
 };
 
-struct ResFONT {
+struct J2DGrafContext {
 };
 
-struct J2DAnmTransform {
-};
-
-struct J2DAnmVisibilityFull {
+struct _GXCullMode {
 };
 
 struct J2DPane {
@@ -88,15 +97,6 @@ struct J2DPane {
 	/* 802F8464 */ void setConnectParent(bool);
 	/* 802F8474 */ void update();
 	/* 802F8478 */ void drawSelf(f32, f32);
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DAnmColor {
 };
 
 struct J2DScreen {
@@ -171,10 +171,10 @@ struct J2DMaterial {
 	/* 802EAC78 */ void animation();
 };
 
-struct J2DMaterialBlock {
+struct J2DResReference {
 };
 
-struct J2DResReference {
+struct J2DMaterialBlock {
 };
 
 struct J2DMaterialFactory {
@@ -420,7 +420,7 @@ SECTION_SDATA2 static f32 lit_1563[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 802F8498-802F8540 00A8+00 s=0 e=59 z=0  None .text      __ct__9J2DScreenFv                                           */
+/* 802F8498-802F8540 00A8+00 s=0 e=59 z=4  None .text      __ct__9J2DScreenFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -453,7 +453,7 @@ asm void J2DScreen::clean() {
 #pragma pop
 
 
-/* 802F8648-802F8748 0100+00 s=0 e=58 z=0  None .text      setPriority__9J2DScreenFPCcUlP10JKRArchive                   */
+/* 802F8648-802F8748 0100+00 s=0 e=58 z=4  None .text      setPriority__9J2DScreenFPCcUlP10JKRArchive                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -541,7 +541,7 @@ SECTION_SDATA2 static f32 lit_1829 = -1.0f;
 /* 8045623C-80456240 0004+00 s=1 e=0 z=0  None .sdata2    @1830                                                        */
 SECTION_SDATA2 static f32 lit_1830 = 1.0f;
 
-/* 802F8ED4-802F90A0 01CC+00 s=0 e=51 z=0  None .text      draw__9J2DScreenFffPC14J2DGrafContext                        */
+/* 802F8ED4-802F90A0 01CC+00 s=0 e=51 z=4  None .text      draw__9J2DScreenFffPC14J2DGrafContext                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -644,7 +644,7 @@ asm void J2DScreen::getNameResource(char const* param_0) {
 #pragma pop
 
 
-/* 802F9690-802F9704 0074+00 s=0 e=30 z=0  None .text      animation__9J2DScreenFv                                      */
+/* 802F9690-802F9704 0074+00 s=0 e=30 z=3  None .text      animation__9J2DScreenFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

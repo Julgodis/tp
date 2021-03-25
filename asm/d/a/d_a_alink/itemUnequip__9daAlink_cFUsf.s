@@ -70,15 +70,15 @@ lbl_800B9798:
 /* 800B97A0 00000008  C0 23 00 34 */	lfs f1, 0x34(r3)	/* effective address: 8038EB84 */
 /* 800B97A4 0000000C  48 00 00 0C */	b lbl_800B97B0
 lbl_800B97A8:
-/* 800B97A8 00000000  C0 1D 00 04 */	lfs f0, 4(r29)
+/* 800B97A8 00000000  C0 1D 00 04 */	lfs f0, 4(r29)	/* effective address: 8038EB68 */
 /* 800B97AC 00000004  EC 20 07 F2 */	fmuls f1, f0, f31
 lbl_800B97B0:
 /* 800B97B0 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800B97B4 00000004  7F C4 F3 78 */	mr r4, r30
 /* 800B97B8 00000008  38 A0 00 02 */	li r5, 2
-/* 800B97BC 0000000C  C0 5D 00 08 */	lfs f2, 8(r29)
-/* 800B97C0 00000010  A8 DD 00 00 */	lha r6, 0(r29)
-/* 800B97C4 00000014  C0 7D 00 0C */	lfs f3, 0xc(r29)
+/* 800B97BC 0000000C  C0 5D 00 08 */	lfs f2, 8(r29)	/* effective address: 8038EB6C */
+/* 800B97C0 00000010  A8 DD 00 00 */	lha r6, 0(r29)	/* effective address: 8038EB64 */
+/* 800B97C4 00000014  C0 7D 00 0C */	lfs f3, 0xc(r29)	/* effective address: 8038EB70 */
 /* 800B97C8 00000018  4B FF 3C 11 */	bl setUpperAnime__9daAlink_cFUsQ29daAlink_c13daAlink_UPPERffsf
 /* 800B97CC 0000001C  E3 E1 00 28 */	psq_l f31, 40(r1), 0, 0 /* qr0 */
 /* 800B97D0 00000000  CB E1 00 20 */	lfd f31, 0x20(r1)

@@ -47,15 +47,15 @@ lbl_8019F578:
 /* 8019F5AC 00000034  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8019F5B0 00000038  3B A3 4E 00 */	addi r29, r3, 0x4e00
 /* 8019F5B4 0000003C  7F A3 EB 78 */	mr r3, r29
-/* 8019F5B8 00000040  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 8019F5BC 00000044  38 84 4C 6C */	addi r4, r4, stringBase0@l
+/* 8019F5B8 00000040  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
+/* 8019F5BC 00000044  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
 /* 8019F5C0 00000048  38 84 01 7A */	addi r4, r4, 0x17a
 /* 8019F5C4 0000004C  48 1C 93 D1 */	bl strcmp
 /* 8019F5C8 00000050  2C 03 00 00 */	cmpwi r3, 0
 /* 8019F5CC 00000054  41 82 00 20 */	beq lbl_8019F5EC
 /* 8019F5D0 00000058  7F A3 EB 78 */	mr r3, r29
-/* 8019F5D4 0000005C  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 8019F5D8 00000060  38 84 4C 6C */	addi r4, r4, stringBase0@l
+/* 8019F5D4 0000005C  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
+/* 8019F5D8 00000060  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
 /* 8019F5DC 00000064  38 84 01 5C */	addi r4, r4, 0x15c
 /* 8019F5E0 00000068  48 1C 93 B5 */	bl strcmp
 /* 8019F5E4 0000006C  2C 03 00 00 */	cmpwi r3, 0
@@ -147,7 +147,7 @@ lbl_8019F708:
 /* 8019F720 0000000C  D0 1E 12 44 */	stfs f0, 0x1244(r30)
 lbl_8019F724:
 /* 8019F724 00000000  C0 1E 12 44 */	lfs f0, 0x1244(r30)
-/* 8019F728 00000004  D0 1F 00 34 */	stfs f0, 0x34(r31)
+/* 8019F728 00000004  D0 1F 00 34 */	stfs f0, 0x34(r31)	/* effective address: 804061F4 */
 /* 8019F72C 00000008  48 00 02 E5 */	bl dKy_getdaytime_hour__Fv
 /* 8019F730 0000000C  80 8D 8D E8 */	lwz r4, mAudioMgrPtr__10Z2AudioMgr(r13)
 /* 8019F734 00000010  98 64 04 C4 */	stb r3, 0x4c4(r4)
@@ -158,7 +158,7 @@ lbl_8019F724:
 /* 8019F748 00000024  80 8D 8D E8 */	lwz r4, mAudioMgrPtr__10Z2AudioMgr(r13)
 /* 8019F74C 00000028  98 64 04 C6 */	stb r3, 0x4c6(r4)
 /* 8019F750 0000002C  A0 1E 12 BE */	lhz r0, 0x12be(r30)
-/* 8019F754 00000030  B0 1F 00 38 */	sth r0, 0x38(r31)
+/* 8019F754 00000030  B0 1F 00 38 */	sth r0, 0x38(r31)	/* effective address: 804061F8 */
 /* 8019F758 00000034  38 00 00 00 */	li r0, 0
 /* 8019F75C 00000038  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8019F760 0000003C  38 63 CA 54 */	addi r3, r3, g_env_light@l

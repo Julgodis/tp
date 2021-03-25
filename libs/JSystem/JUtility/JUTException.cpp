@@ -15,10 +15,10 @@ struct JUTDirectPrint {
 	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
 };
 
-struct OSContext {
+struct __va_list_struct {
 };
 
-struct __va_list_struct {
+struct OSContext {
 };
 
 struct JUTException {
@@ -163,7 +163,7 @@ extern "C" void __ct__13JUTExternalFBFP16_GXRenderModeObj8_GXGammaPvUl(); // 1
 extern "C" void __dt__12JUTExceptionFv(); // 1
 extern "C" void __sinit_JUTException_cpp(); // 1
 extern "C" void func_802E4194(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JUTException__stringBase0;
 extern "C" extern u8 data_804508F8[8];
 extern "C" extern u8 sErrorManager__12JUTException[4];
 extern "C" extern u8 sConsole__12JUTException[4];
@@ -361,23 +361,23 @@ SECTION_DATA static u8 c3bcnt[32] = {
 
 /* 803CC660-803CC6A4 0044+00 s=1 e=0 z=0  None .data      sCpuExpName__12JUTException                                  */
 SECTION_DATA static void* sCpuExpName__12JUTException[17] = {
-	/* 0    */ (void*)&stringBase0,
-	/* 1    */ (void*)(((char*)&stringBase0)+0xD),
-	/* 2    */ (void*)(((char*)&stringBase0)+0x1B),
-	/* 3    */ (void*)(((char*)&stringBase0)+0x1F),
-	/* 4    */ (void*)(((char*)&stringBase0)+0x23),
-	/* 5    */ (void*)(((char*)&stringBase0)+0x36),
-	/* 6    */ (void*)(((char*)&stringBase0)+0x40),
-	/* 7    */ (void*)(((char*)&stringBase0)+0x48),
-	/* 8    */ (void*)(((char*)&stringBase0)+0x57),
-	/* 9    */ (void*)(((char*)&stringBase0)+0x63),
-	/* 10   */ (void*)(((char*)&stringBase0)+0x6F),
-	/* 11   */ (void*)(((char*)&stringBase0)+0x75),
-	/* 12   */ (void*)(((char*)&stringBase0)+0x88),
-	/* 13   */ (void*)(((char*)&stringBase0)+0x94),
-	/* 14   */ (void*)(((char*)&stringBase0)+0xA5),
-	/* 15   */ (void*)(((char*)&stringBase0)+0xB7),
-	/* 16   */ (void*)(((char*)&stringBase0)+0x48),
+	/* 0    */ (void*)&JUTException__stringBase0,
+	/* 1    */ (void*)(((char*)&JUTException__stringBase0)+0xD),
+	/* 2    */ (void*)(((char*)&JUTException__stringBase0)+0x1B),
+	/* 3    */ (void*)(((char*)&JUTException__stringBase0)+0x1F),
+	/* 4    */ (void*)(((char*)&JUTException__stringBase0)+0x23),
+	/* 5    */ (void*)(((char*)&JUTException__stringBase0)+0x36),
+	/* 6    */ (void*)(((char*)&JUTException__stringBase0)+0x40),
+	/* 7    */ (void*)(((char*)&JUTException__stringBase0)+0x48),
+	/* 8    */ (void*)(((char*)&JUTException__stringBase0)+0x57),
+	/* 9    */ (void*)(((char*)&JUTException__stringBase0)+0x63),
+	/* 10   */ (void*)(((char*)&JUTException__stringBase0)+0x6F),
+	/* 11   */ (void*)(((char*)&JUTException__stringBase0)+0x75),
+	/* 12   */ (void*)(((char*)&JUTException__stringBase0)+0x88),
+	/* 13   */ (void*)(((char*)&JUTException__stringBase0)+0x94),
+	/* 14   */ (void*)(((char*)&JUTException__stringBase0)+0xA5),
+	/* 15   */ (void*)(((char*)&JUTException__stringBase0)+0xB7),
+	/* 16   */ (void*)(((char*)&JUTException__stringBase0)+0x48),
 };
 
 /* 803CC6A4-803CC6B8 0010+04 s=2 e=0 z=0  None .data      __vt__12JUTException                                         */

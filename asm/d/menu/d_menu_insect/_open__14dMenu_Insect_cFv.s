@@ -9,8 +9,8 @@ lbl_801D894C:
 /* 801D8968 00000008  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 801D896C 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 801D8970 00000010  40 82 00 20 */	bne lbl_801D8990
-/* 801D8974 00000014  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801D8978 00000018  38 63 68 C0 */	addi r3, r3, stringBase0@l
+/* 801D8974 00000014  3C 60 80 39 */	lis r3, d_menu_d_menu_insect__stringBase0@ha
+/* 801D8978 00000018  38 63 68 C0 */	addi r3, r3, d_menu_d_menu_insect__stringBase0@l
 /* 801D897C 0000001C  38 63 00 10 */	addi r3, r3, 0x10
 /* 801D8980 00000020  38 80 00 00 */	li r4, 0
 /* 801D8984 00000024  38 A0 00 00 */	li r5, 0

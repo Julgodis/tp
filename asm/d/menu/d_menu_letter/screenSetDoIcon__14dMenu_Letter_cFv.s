@@ -14,8 +14,8 @@ lbl_801E09A8:
 lbl_801E09D8:
 /* 801E09D8 00000000  90 1F 00 30 */	stw r0, 0x30(r31)
 /* 801E09DC 00000004  80 7F 00 30 */	lwz r3, 0x30(r31)
-/* 801E09E0 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801E09E4 0000000C  38 84 6D C0 */	addi r4, r4, stringBase0@l
+/* 801E09E0 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_letter__stringBase0@ha
+/* 801E09E4 0000000C  38 84 6D C0 */	addi r4, r4, d_menu_d_menu_letter__stringBase0@l
 /* 801E09E8 00000010  38 84 00 C2 */	addi r4, r4, 0xc2
 /* 801E09EC 00000014  3C A0 00 02 */	lis r5, 2
 /* 801E09F0 00000018  80 DF 00 08 */	lwz r6, 8(r31)
@@ -40,8 +40,8 @@ lbl_801E0A0C:
 /* 801E0A38 0000002C  3B 43 6D 70 */	addi r26, r3, data_80396D70@l
 /* 801E0A3C 00000030  3C 60 80 39 */	lis r3, data_80396D98@ha
 /* 801E0A40 00000034  3B 63 6D 98 */	addi r27, r3, data_80396D98@l
-/* 801E0A44 00000038  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801E0A48 0000003C  3B 83 6D C0 */	addi r28, r3, stringBase0@l
+/* 801E0A44 00000038  3C 60 80 39 */	lis r3, d_menu_d_menu_letter__stringBase0@ha
+/* 801E0A48 0000003C  3B 83 6D C0 */	addi r28, r3, d_menu_d_menu_letter__stringBase0@l
 lbl_801E0A4C:
 /* 801E0A4C 00000000  80 7F 00 30 */	lwz r3, 0x30(r31)
 /* 801E0A50 00000004  7C 9A EA 14 */	add r4, r26, r29

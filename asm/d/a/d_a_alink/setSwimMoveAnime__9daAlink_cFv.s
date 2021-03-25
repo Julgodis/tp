@@ -174,7 +174,7 @@ lbl_801038EC:
 /* 80103900 00000014  48 16 CE 41 */	bl cLib_chaseF__FPfff
 lbl_80103904:
 /* 80103904 00000000  C0 22 92 B8 */	lfs f1, lit_6040(r2)
-/* 80103908 00000004  C0 1D 00 74 */	lfs f0, 0x74(r29)
+/* 80103908 00000004  C0 1D 00 74 */	lfs f0, 0x74(r29)	/* effective address: 8038EDA0 */
 /* 8010390C 00000008  EF E1 00 24 */	fdivs f31, f1, f0
 /* 80103910 0000000C  7F 43 D3 78 */	mr r3, r26
 /* 80103914 00000010  4B FB C4 9D */	bl checkZoraWearAbility__9daAlink_cCFv

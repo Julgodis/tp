@@ -21,8 +21,8 @@ lbl_8022E260:
 /* 8022E2AC 00000004  40 82 00 50 */	bne lbl_8022E2FC
 /* 8022E2B0 00000008  38 61 00 08 */	addi r3, r1, 8
 /* 8022E2B4 0000000C  38 80 00 0F */	li r4, 0xf
-/* 8022E2B8 00000010  3C A0 80 3A */	lis r5, stringBase0@ha
-/* 8022E2BC 00000014  38 A5 96 10 */	addi r5, r5, stringBase0@l
+/* 8022E2B8 00000010  3C A0 80 3A */	lis r5, d_msg_d_msg_class__stringBase0@ha
+/* 8022E2BC 00000014  38 A5 96 10 */	addi r5, r5, d_msg_d_msg_class__stringBase0@l
 /* 8022E2C0 00000018  38 A5 00 08 */	addi r5, r5, 8
 /* 8022E2C4 0000001C  FC 00 F8 1E */	fctiwz f0, f31
 /* 8022E2C8 00000020  D8 01 00 18 */	stfd f0, 0x18(r1)

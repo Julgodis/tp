@@ -122,10 +122,10 @@ struct dDlst_effectLine_c {
 	/* 800541F4 */ void update(cXyz&, _GXColor&, u16, u16, u16, u16, f32, f32, f32, f32);
 };
 
-struct cBgD_Vtx_t {
+struct cM3dGPla {
 };
 
-struct cM3dGPla {
+struct cBgD_Vtx_t {
 };
 
 struct dDlst_shadowPoly_c {
@@ -186,9 +186,6 @@ struct dDlst_peekZ_c {
 	/* 80056080 */ void peekData();
 };
 
-struct dDlst_base_c {
-};
-
 struct J3DPacket {
 };
 
@@ -199,6 +196,9 @@ struct J3DDrawBuffer {
 	/* 80325068 */ void frameInit();
 	/* 8032548C */ void entryImm(J3DPacket*, u16);
 	/* 803254AC */ void draw() const;
+};
+
+struct dDlst_base_c {
 };
 
 struct dDlst_list_c {
@@ -353,7 +353,7 @@ extern "C" void getTri__22dDlst_shadowRealPoly_cFv(); // 1
 extern "C" void getTriMax__22dDlst_shadowRealPoly_cFv(); // 1
 extern "C" void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen(); // 1
 extern "C" void __sinit_d_drawlist_cpp(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_d_drawlist__stringBase0;
 extern "C" extern u8 l_frontZMat[60 + 4 /* padding */];
 extern "C" extern u8 l_frontNoZSubMat[42 + 2 /* padding */];
 extern "C" extern u8 l_shadowVolPos[96 + 20 /* padding */];
@@ -1546,7 +1546,7 @@ SECTION_SDATA2 static f32 lit_5552 = -1000.0f;
 /* 804520C0-804520C4 0004+00 s=1 e=0 z=0  None .sdata2    @5553                                                        */
 SECTION_SDATA2 static f32 lit_5553 = 0.0010000000474974513f;
 
-/* 80055C74-80055F1C 02A8+00 s=0 e=1 z=0  None .text      setReal__21dDlst_shadowControl_cFUlScP8J3DModelP4cXyzffP12dKy_tevstr_c */
+/* 80055C74-80055F1C 02A8+00 s=0 e=1 z=1  None .text      setReal__21dDlst_shadowControl_cFUlScP8J3DModelP4cXyzffP12dKy_tevstr_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1557,7 +1557,7 @@ asm void dDlst_shadowControl_c::setReal(u32 param_0, s8 param_1, J3DModel* param
 #pragma pop
 
 
-/* 80055F1C-80055F84 0068+00 s=0 e=1 z=0  None .text      addReal__21dDlst_shadowControl_cFUlP8J3DModel                */
+/* 80055F1C-80055F84 0068+00 s=0 e=1 z=45  None .text      addReal__21dDlst_shadowControl_cFUlP8J3DModel                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1568,7 +1568,7 @@ asm void dDlst_shadowControl_c::addReal(u32 param_0, J3DModel* param_1) {
 #pragma pop
 
 
-/* 80055F84-80055FE8 0064+00 s=0 e=1 z=0  None .text      setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj */
+/* 80055F84-80055FE8 0064+00 s=0 e=1 z=10  None .text      setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1580,7 +1580,7 @@ asm void dDlst_shadowControl_c::setSimple(cXyz* param_0, f32 param_1, f32 param_
 
 
 /* ############################################################################################## */
-/* 804248D0-804248F0 0020+00 s=1 e=6 z=0  None .bss       mSimpleTexObj__21dDlst_shadowControl_c                       */
+/* 804248D0-804248F0 0020+00 s=1 e=6 z=173  None .bss       mSimpleTexObj__21dDlst_shadowControl_c                       */
 u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
 
 /* 80055FE8-80056018 0030+00 s=0 e=1 z=0  None .text      setSimpleTex__21dDlst_shadowControl_cFPC7ResTIMG             */
@@ -1594,7 +1594,7 @@ asm void dDlst_shadowControl_c::setSimpleTex(ResTIMG const* param_0) {
 #pragma pop
 
 
-/* 80056018-80056080 0068+00 s=0 e=3 z=0  None .text      newData__13dDlst_peekZ_cFssPUl                               */
+/* 80056018-80056080 0068+00 s=0 e=3 z=9  None .text      newData__13dDlst_peekZ_cFssPUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1809,7 +1809,7 @@ asm void dDlst_list_c::drawXluListItem3d() {
 #pragma pop
 
 
-/* 80056794-800567C4 0030+00 s=2 e=35 z=0  None .text      set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c */
+/* 80056794-800567C4 0030+00 s=2 e=35 z=6  None .text      set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

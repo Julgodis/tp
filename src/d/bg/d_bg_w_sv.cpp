@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct cBgS_PolyInfo {
-};
-
 struct csXyz {
 };
 
-struct cBgD_t {
+struct cXyz {
 };
 
-struct cXyz {
+struct cBgS_PolyInfo {
+};
+
+struct cBgD_t {
 };
 
 struct dBgWSv {
@@ -38,13 +38,13 @@ struct dBgW_Base {
 	/* 80074AB4 */ void SetOldShapeAngleY(s16);
 };
 
-struct cBgS_LinChk {
+struct cBgS_GndChk {
 };
 
 struct cBgS_ShdwDraw {
 };
 
-struct cBgS_GndChk {
+struct cBgS_LinChk {
 };
 
 struct cBgW {
@@ -67,25 +67,25 @@ struct cBgW {
 	/* 8007B964 */ void ChkMoveBg() const;
 };
 
+struct dBgS_RoofChk {
+};
+
 struct dBgS_SplGrpChk {
-};
-
-struct dBgS_Acch {
-};
-
-struct dBgS_CaptPoly {
-};
-
-struct cBgS_GrpPassChk {
-};
-
-struct dBgS_SphChk {
 };
 
 struct fopAc_ac_c {
 };
 
-struct dBgS_RoofChk {
+struct cBgS_GrpPassChk {
+};
+
+struct dBgS_CaptPoly {
+};
+
+struct dBgS_Acch {
+};
+
+struct dBgS_SphChk {
 };
 
 struct cBgS_PolyPassChk {
@@ -150,6 +150,7 @@ extern "C" void TransPosWork__6dBgWSvFP4cXyziii(); // 1
 extern "C" void TransPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void MatrixCrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __dt__6dBgWSvFv(); // 1
+extern "C" extern void* __vt__6dBgWSv[65 + 1 /* padding */];
 
 // 
 // External References:
@@ -230,7 +231,7 @@ extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 // Declarations:
 // 
 
-/* 80082F98-80083020 0088+00 s=0 e=0 z=0  None .text      Set__6dBgWSvFP6cBgD_tUl                                      */
+/* 80082F98-80083020 0088+00 s=0 e=0 z=2  None .text      Set__6dBgWSvFP6cBgD_tUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -241,7 +242,7 @@ asm void dBgWSv::Set(cBgD_t* param_0, u32 param_1) {
 #pragma pop
 
 
-/* 80083020-8008308C 006C+00 s=0 e=0 z=0  None .text      CopyBackVtx__6dBgWSvFv                                       */
+/* 80083020-8008308C 006C+00 s=0 e=0 z=3  None .text      CopyBackVtx__6dBgWSvFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -317,8 +318,8 @@ asm void dBgWSv::MatrixCrrPos(cBgS_PolyInfo const& param_0, void* param_1, bool 
 
 
 /* ############################################################################################## */
-/* 803ABEB8-803ABFC0 0104+04 s=1 e=0 z=0  None .data      __vt__6dBgWSv                                                */
-SECTION_DATA static void* __vt__6dBgWSv[65 + 1 /* padding */] = {
+/* 803ABEB8-803ABFC0 0104+04 s=1 e=0 z=2  None .data      __vt__6dBgWSv                                                */
+SECTION_DATA void* __vt__6dBgWSv[65 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__6dBgWSvFv,

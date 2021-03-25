@@ -10,8 +10,8 @@ lbl_800C0520:
 /* 800C0540 00000020  4B FF FF 75 */	bl checkRoomSpecial__9daAlink_cFv
 /* 800C0544 00000024  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 800C0548 00000028  40 82 00 30 */	bne lbl_800C0578
-/* 800C054C 0000002C  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800C0550 00000030  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800C054C 0000002C  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800C0550 00000030  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800C0554 00000034  38 63 01 3C */	addi r3, r3, 0x13c
 /* 800C0558 00000038  4B FD D5 09 */	bl checkStageName__9daAlink_cFPCc
 /* 800C055C 0000003C  54 60 06 3F */	clrlwi. r0, r3, 0x18

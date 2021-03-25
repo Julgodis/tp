@@ -49,7 +49,7 @@ lbl_80035AA8:
 /* 80035AB4 0000000C  28 00 00 0C */	cmplwi r0, 0xc
 /* 80035AB8 00000010  40 80 00 0C */	bge lbl_80035AC4
 /* 80035ABC 00000014  38 00 00 0C */	li r0, 0xc
-/* 80035AC0 00000018  B0 1F 00 02 */	sth r0, 2(r31)
+/* 80035AC0 00000018  B0 1F 00 02 */	sth r0, 2(r31)	/* effective address: 804061C2 */
 lbl_80035AC4:
 /* 80035AC4 00000000  38 60 00 06 */	li r3, 6
 /* 80035AC8 00000004  38 80 00 00 */	li r4, 0
@@ -107,8 +107,8 @@ lbl_80035B60:
 /* 80035B90 00000030  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80035B94 00000034  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 80035B98 00000038  48 1E 86 F9 */	bl setSaveStageName__13dMeter2Info_cFPCc
-/* 80035B9C 0000003C  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 80035BA0 00000040  38 63 92 34 */	addi r3, r3, stringBase0@l
+/* 80035B9C 0000003C  3C 60 80 38 */	lis r3, d_save_d_save__stringBase0@ha
+/* 80035BA0 00000040  38 63 92 34 */	addi r3, r3, d_save_d_save__stringBase0@l
 /* 80035BA4 00000044  38 63 00 46 */	addi r3, r3, 0x46
 /* 80035BA8 00000048  38 80 09 58 */	li r4, 0x958
 /* 80035BAC 0000004C  4C C6 31 82 */	crclr 6

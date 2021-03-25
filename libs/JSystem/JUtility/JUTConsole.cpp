@@ -122,7 +122,7 @@ extern "C" void JUTReportConsole_f(); // 1
 extern "C" void JUTReportConsole(); // 1
 extern "C" void JUTWarningConsole_f(); // 1
 extern "C" void JUTWarningConsole(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JUTConsole__stringBase0;
 extern "C" extern u8 sManager__17JUTConsoleManager[4];
 
 // 

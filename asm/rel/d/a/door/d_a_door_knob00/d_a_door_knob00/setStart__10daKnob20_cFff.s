@@ -2,9 +2,9 @@ lbl_8045F8A4:
 /* 8045F8A4 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8045F8A8 00000004  7C 08 02 A6 */	mflr r0
 /* 8045F8AC 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 8045F8B0 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8045F8B4 00000010  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 8045F8B8 00000014  80 A4 5D AC */	lwz r5, 0x5dac(r4)
+/* 8045F8B0 0000000C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8045F8B4 00000010  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8045F8B8 00000014  80 A4 5D AC */	lwz r5, 0x5dac(r4)	/* effective address: 8040BF6C */
 /* 8045F8BC 00000018  C0 A3 04 D0 */	lfs f5, 0x4d0(r3)
 /* 8045F8C0 0000001C  D0 A1 00 08 */	stfs f5, 8(r1)
 /* 8045F8C4 00000020  C0 03 04 D4 */	lfs f0, 0x4d4(r3)
@@ -14,8 +14,8 @@ lbl_8045F8A4:
 /* 8045F8D4 00000030  A8 63 04 E6 */	lha r3, 0x4e6(r3)
 /* 8045F8D8 00000034  38 03 7F FF */	addi r0, r3, 0x7fff
 /* 8045F8DC 00000038  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
-/* 8045F8E0 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8045F8E4 00000040  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 8045F8E0 0000003C  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
+/* 8045F8E4 00000040  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 8045F8E8 00000044  7C C3 04 2E */	lfsx f6, r3, r0
 /* 8045F8EC 00000048  EC 62 01 B2 */	fmuls f3, f2, f6
 /* 8045F8F0 0000004C  7C 63 02 14 */	add r3, r3, r0

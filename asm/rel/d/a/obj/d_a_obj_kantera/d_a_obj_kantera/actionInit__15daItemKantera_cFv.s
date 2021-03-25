@@ -4,7 +4,7 @@ lbl_80C39068:
 /* 80C39070 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80C39074 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C39078 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80C3907C 00000014  4B FF F5 DD */	bl _unresolved
+/* 80C3907C 00000014  4B 3F E9 F8 */	b show__12daItemBase_cFv
 /* 80C39080 00000018  7F E3 FB 78 */	mr r3, r31
 /* 80C39084 0000001C  48 00 00 1D */	bl actionWaitInit__15daItemKantera_cFv
 /* 80C39088 00000020  38 60 00 01 */	li r3, 1

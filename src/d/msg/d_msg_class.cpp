@@ -116,11 +116,11 @@ struct jmessage_tRenderingProcessor {
 	/* 8023293C */ ~jmessage_tRenderingProcessor();
 };
 
-struct JUTFont {
-};
-
 struct COutFont_c {
 	/* 80226CF8 */ void initialize();
+};
+
+struct JUTFont {
 };
 
 struct J2DTextBox {
@@ -460,7 +460,9 @@ extern "C" void __dt__24jmessage_string_tControlFv(); // 1
 extern "C" void __dt__28jmessage_tRenderingProcessorFv(); // 1
 extern "C" void __dt__27jmessage_tSequenceProcessorFv(); // 1
 extern "C" void getActorPos__19jmessage_tReferenceFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_msg_d_msg_class__stringBase0;
+extern "C" extern void* lit_5157[15];
+extern "C" extern void* lit_5156[14];
 
 // 
 // External References:
@@ -820,8 +822,8 @@ SECTION_DATA static void* lit_5158[12] = {
 	/* 11   */ (void*)(((char*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+0xDE8),
 };
 
-/* 803BFFD0-803C000C 003C+00 s=1 e=0 z=0  None .data      @5157                                                        */
-SECTION_DATA static void* lit_5157[15] = {
+/* 803BFFD0-803C000C 003C+00 s=1 e=1 z=0  None .data      @5157                                                        */
+SECTION_DATA void* lit_5157[15] = {
 	/* 0    */ (void*)(((char*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+0x9DC),
 	/* 1    */ (void*)(((char*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+0xA60),
 	/* 2    */ (void*)(((char*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+0xA84),
@@ -839,8 +841,8 @@ SECTION_DATA static void* lit_5157[15] = {
 	/* 14   */ (void*)(((char*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+0xC5C),
 };
 
-/* 803C000C-803C0044 0038+00 s=1 e=0 z=0  None .data      @5156                                                        */
-SECTION_DATA static void* lit_5156[14] = {
+/* 803C000C-803C0044 0038+00 s=1 e=1 z=0  None .data      @5156                                                        */
+SECTION_DATA void* lit_5156[14] = {
 	/* 0    */ (void*)(((char*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+0x7FC),
 	/* 1    */ (void*)(((char*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+0x818),
 	/* 2    */ (void*)(((char*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+0x834),

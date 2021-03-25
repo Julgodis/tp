@@ -12,23 +12,34 @@
 // 
 
 
-extern "C" extern u8 g_profile_NPC_KDK[48];
+extern "C" extern void* g_profile_NPC_KDK[12];
 
 // 
 // External References:
 // 
 
 
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80A2A8E0-80A2A910 0030+00 s=0 e=0 z=0  None .data      g_profile_NPC_KDK                                            */
-SECTION_DATA u8 g_profile_NPC_KDK[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x02, 0x42, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x0F, 0xA0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x01, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x41, 0x07, 0x04, 0x0E, 0x00, 0x00,
+/* 80A2A8E0-80A2A910 0030+00 s=0 e=0 z=1  None .data      g_profile_NPC_KDK                                            */
+SECTION_DATA void* g_profile_NPC_KDK[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0007FFFD,
+	/* 2    */ (void*)0x02420000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x00000FA0,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x01400000,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)0x00044107,
+	/* 11   */ (void*)0x040E0000,
 };
 

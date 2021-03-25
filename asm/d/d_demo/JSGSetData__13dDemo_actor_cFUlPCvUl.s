@@ -51,8 +51,8 @@ lbl_80038898:
 /* 800388A0 00000008  7C 03 00 00 */	cmpw r3, r0
 /* 800388A4 0000000C  41 80 FF E0 */	blt lbl_80038884
 /* 800388A8 00000010  7F E3 FB 78 */	mr r3, r31
-/* 800388AC 00000014  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 800388B0 00000018  38 84 97 F8 */	addi r4, r4, stringBase0@l
+/* 800388AC 00000014  3C 80 80 38 */	lis r4, d_d_demo__stringBase0@ha
+/* 800388B0 00000018  38 84 97 F8 */	addi r4, r4, d_d_demo__stringBase0@l
 /* 800388B4 0000001C  48 33 00 E1 */	bl strcmp
 /* 800388B8 00000020  2C 03 00 00 */	cmpwi r3, 0
 /* 800388BC 00000024  41 82 00 4C */	beq lbl_80038908

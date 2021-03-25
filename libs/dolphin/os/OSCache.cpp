@@ -80,7 +80,7 @@ extern "C" asm static void DCEnable() {
 #pragma pop
 
 
-/* 8033B580-8033B5AC 002C+00 s=0 e=30 z=0  None .text      DCInvalidateRange                                            */
+/* 8033B580-8033B5AC 002C+00 s=0 e=30 z=1  None .text      DCInvalidateRange                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -102,7 +102,7 @@ extern "C" asm void DCFlushRange() {
 #pragma pop
 
 
-/* 8033B5DC-8033B60C 0030+00 s=0 e=54 z=0  None .text      DCStoreRange                                                 */
+/* 8033B5DC-8033B60C 0030+00 s=0 e=54 z=1  None .text      DCStoreRange                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -124,7 +124,7 @@ extern "C" asm void DCFlushRangeNoSync() {
 #pragma pop
 
 
-/* 8033B638-8033B664 002C+00 s=0 e=13 z=0  None .text      DCStoreRangeNoSync                                           */
+/* 8033B638-8033B664 002C+00 s=0 e=13 z=3  None .text      DCStoreRangeNoSync                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -135,7 +135,7 @@ extern "C" asm void DCStoreRangeNoSync() {
 #pragma pop
 
 
-/* 8033B664-8033B690 002C+00 s=0 e=1 z=0  None .text      DCZeroRange                                                  */
+/* 8033B664-8033B690 002C+00 s=0 e=1 z=1  None .text      DCZeroRange                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -190,7 +190,7 @@ extern "C" asm static void __LCEnable() {
 #pragma pop
 
 
-/* 8033B7B4-8033B7EC 0038+00 s=0 e=0 z=0  None .text      LCEnable                                                     */
+/* 8033B7B4-8033B7EC 0038+00 s=0 e=0 z=1  None .text      LCEnable                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -201,7 +201,7 @@ extern "C" asm void LCEnable() {
 #pragma pop
 
 
-/* 8033B7EC-8033B814 0028+00 s=0 e=2 z=0  None .text      LCDisable                                                    */
+/* 8033B7EC-8033B814 0028+00 s=0 e=2 z=1  None .text      LCDisable                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -223,7 +223,7 @@ extern "C" asm static void LCStoreBlocks() {
 #pragma pop
 
 
-/* 8033B838-8033B8E4 00AC+00 s=0 e=0 z=0  None .text      LCStoreData                                                  */
+/* 8033B838-8033B8E4 00AC+00 s=0 e=0 z=3  None .text      LCStoreData                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -234,7 +234,7 @@ extern "C" asm void LCStoreData() {
 #pragma pop
 
 
-/* 8033B8E4-8033B8F8 0014+00 s=0 e=0 z=0  None .text      LCQueueWait                                                  */
+/* 8033B8E4-8033B8F8 0014+00 s=0 e=0 z=3  None .text      LCQueueWait                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

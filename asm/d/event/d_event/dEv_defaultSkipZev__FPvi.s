@@ -37,8 +37,8 @@ lbl_80042698:
 /* 8004269C 00000004  38 84 00 0D */	addi r4, r4, 0xd
 /* 800426A0 00000008  48 32 64 8D */	bl strcpy
 /* 800426A4 0000000C  38 61 00 08 */	addi r3, r1, 8
-/* 800426A8 00000010  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 800426AC 00000014  38 84 9D 80 */	addi r4, r4, stringBase0@l
+/* 800426A8 00000010  3C 80 80 38 */	lis r4, d_event_d_event__stringBase0@ha
+/* 800426AC 00000014  38 84 9D 80 */	addi r4, r4, d_event_d_event__stringBase0@l
 /* 800426B0 00000018  38 84 00 43 */	addi r4, r4, 0x43
 /* 800426B4 0000001C  48 32 64 09 */	bl strcat
 /* 800426B8 00000020  38 7E 4F F8 */	addi r3, r30, 0x4ff8
@@ -66,7 +66,7 @@ lbl_800426F4:
 /* 80042708 00000014  4B FF FE 11 */	bl reset__14dEvt_control_cFPv
 /* 8004270C 00000018  7F E3 FB 78 */	mr r3, r31
 /* 80042710 0000001C  7F 84 E3 78 */	mr r4, r28
-/* 80042714 00000020  88 BD 00 EB */	lbz r5, 0xeb(r29)
+/* 80042714 00000020  88 BD 00 EB */	lbz r5, 0xeb(r29)	/* effective address: 8040B173 */
 /* 80042718 00000024  3C C0 00 01 */	lis r6, 0x0001 /* 0x0000FFFF@ha */
 /* 8004271C 00000028  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 80042720 0000002C  38 E0 00 03 */	li r7, 3

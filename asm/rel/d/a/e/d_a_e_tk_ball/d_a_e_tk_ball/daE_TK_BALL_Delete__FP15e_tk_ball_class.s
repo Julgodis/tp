@@ -8,22 +8,22 @@ lbl_807BD0C8:
 /* 807BD0E0 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 807BD0E4 0000001C  40 82 00 18 */	bne lbl_807BD0FC
 /* 807BD0E8 00000020  38 7F 05 AC */	addi r3, r31, 0x5ac
-/* 807BD0EC 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 807BD0F0 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 807BD0F4 0000002C  4B FF EE E5 */	bl _unresolved
+/* 807BD0EC 00000024  3C 80 80 7C */	lis r4, stringBase0@ha
+/* 807BD0F0 00000028  38 84 D5 C4 */	addi r4, r4, stringBase0@l
+/* 807BD0F4 0000002C  4B 86 FF 14 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 807BD0F8 00000030  48 00 00 18 */	b lbl_807BD110
 lbl_807BD0FC:
 /* 807BD0FC 00000000  38 7F 05 AC */	addi r3, r31, 0x5ac
-/* 807BD100 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 807BD104 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 807BD100 00000004  3C 80 80 7C */	lis r4, stringBase0@ha
+/* 807BD104 00000008  38 84 D5 C4 */	addi r4, r4, stringBase0@l
 /* 807BD108 0000000C  38 84 00 05 */	addi r4, r4, 5
-/* 807BD10C 00000010  4B FF EE CD */	bl _unresolved
+/* 807BD10C 00000010  4B 86 FE FC */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 lbl_807BD110:
 /* 807BD110 00000000  80 1F 00 F0 */	lwz r0, 0xf0(r31)
 /* 807BD114 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 807BD118 00000008  41 82 00 0C */	beq lbl_807BD124
 /* 807BD11C 0000000C  38 7F 05 BC */	addi r3, r31, 0x5bc
-/* 807BD120 00000010  4B FF EE B9 */	bl _unresolved
+/* 807BD120 00000010  4B B0 0E D8 */	b deleteObject__14Z2SoundObjBaseFv
 lbl_807BD124:
 /* 807BD124 00000000  38 60 00 01 */	li r3, 1
 /* 807BD128 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

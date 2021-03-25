@@ -106,8 +106,8 @@ lbl_80117340:
 /* 80117370 00000030  7F E3 FB 78 */	mr r3, r31
 /* 80117374 00000034  4B FC D8 61 */	bl freeGrabItem__9daAlink_cFv
 /* 80117378 00000038  38 7E 4F F8 */	addi r3, r30, 0x4ff8
-/* 8011737C 0000003C  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 80117380 00000040  38 84 20 94 */	addi r4, r4, stringBase0@l
+/* 8011737C 0000003C  3C 80 80 39 */	lis r4, d_a_d_a_alink__stringBase0@ha
+/* 80117380 00000040  38 84 20 94 */	addi r4, r4, d_a_d_a_alink__stringBase0@l
 /* 80117384 00000044  38 84 00 D0 */	addi r4, r4, 0xd0
 /* 80117388 00000048  4B F3 06 B1 */	bl startCheckOld__16dEvent_manager_cFPCc
 /* 8011738C 0000004C  2C 03 00 00 */	cmpwi r3, 0
@@ -277,8 +277,8 @@ lbl_801175C4:
 lbl_801175D4:
 /* 801175D4 00000000  7F 63 DB 78 */	mr r3, r27
 /* 801175D8 00000004  80 9F 31 84 */	lwz r4, 0x3184(r31)
-/* 801175DC 00000008  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801175E0 0000000C  38 A5 20 94 */	addi r5, r5, stringBase0@l
+/* 801175DC 00000008  3C A0 80 39 */	lis r5, d_a_d_a_alink__stringBase0@ha
+/* 801175E0 0000000C  38 A5 20 94 */	addi r5, r5, d_a_d_a_alink__stringBase0@l
 /* 801175E4 00000010  38 A5 00 DC */	addi r5, r5, 0xdc
 /* 801175E8 00000014  38 C0 00 01 */	li r6, 1
 /* 801175EC 00000018  4B F3 0B 01 */	bl getMySubstanceP__16dEvent_manager_cFiPCci
@@ -291,8 +291,8 @@ lbl_801175D4:
 lbl_80117608:
 /* 80117608 00000000  7F 63 DB 78 */	mr r3, r27
 /* 8011760C 00000004  80 9F 31 84 */	lwz r4, 0x3184(r31)
-/* 80117610 00000008  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 80117614 0000000C  38 A5 20 94 */	addi r5, r5, stringBase0@l
+/* 80117610 00000008  3C A0 80 39 */	lis r5, d_a_d_a_alink__stringBase0@ha
+/* 80117614 0000000C  38 A5 20 94 */	addi r5, r5, d_a_d_a_alink__stringBase0@l
 /* 80117618 00000010  38 A5 00 E0 */	addi r5, r5, 0xe0
 /* 8011761C 00000014  38 C0 00 03 */	li r6, 3
 /* 80117620 00000018  4B F3 0A CD */	bl getMySubstanceP__16dEvent_manager_cFiPCci
@@ -312,16 +312,16 @@ lbl_8011764C:
 lbl_80117650:
 /* 80117650 00000000  7F 63 DB 78 */	mr r3, r27
 /* 80117654 00000004  80 9F 31 84 */	lwz r4, 0x3184(r31)
-/* 80117658 00000008  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 8011765C 0000000C  38 A5 20 94 */	addi r5, r5, stringBase0@l
+/* 80117658 00000008  3C A0 80 39 */	lis r5, d_a_d_a_alink__stringBase0@ha
+/* 8011765C 0000000C  38 A5 20 94 */	addi r5, r5, d_a_d_a_alink__stringBase0@l
 /* 80117660 00000010  38 A5 00 E6 */	addi r5, r5, 0xe6
 /* 80117664 00000014  38 C0 00 03 */	li r6, 3
 /* 80117668 00000018  4B F3 0A 85 */	bl getMySubstanceP__16dEvent_manager_cFiPCci
 /* 8011766C 0000001C  7C 78 1B 78 */	mr r24, r3
 /* 80117670 00000020  7F 63 DB 78 */	mr r3, r27
 /* 80117674 00000024  80 9F 31 84 */	lwz r4, 0x3184(r31)
-/* 80117678 00000028  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 8011767C 0000002C  38 A5 20 94 */	addi r5, r5, stringBase0@l
+/* 80117678 00000028  3C A0 80 39 */	lis r5, d_a_d_a_alink__stringBase0@ha
+/* 8011767C 0000002C  38 A5 20 94 */	addi r5, r5, d_a_d_a_alink__stringBase0@l
 /* 80117680 00000030  38 A5 00 EB */	addi r5, r5, 0xeb
 /* 80117684 00000034  38 C0 00 03 */	li r6, 3
 /* 80117688 00000038  4B F3 0A 65 */	bl getMySubstanceP__16dEvent_manager_cFiPCci
@@ -331,8 +331,8 @@ lbl_80117650:
 /* 80117698 00000048  40 82 00 3C */	bne lbl_801176D4
 /* 8011769C 0000004C  7F 63 DB 78 */	mr r3, r27
 /* 801176A0 00000050  80 9F 31 84 */	lwz r4, 0x3184(r31)
-/* 801176A4 00000054  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801176A8 00000058  38 A5 20 94 */	addi r5, r5, stringBase0@l
+/* 801176A4 00000054  3C A0 80 39 */	lis r5, d_a_d_a_alink__stringBase0@ha
+/* 801176A8 00000058  38 A5 20 94 */	addi r5, r5, d_a_d_a_alink__stringBase0@l
 /* 801176AC 0000005C  38 A5 00 F0 */	addi r5, r5, 0xf0
 /* 801176B0 00000060  38 C0 00 00 */	li r6, 0
 /* 801176B4 00000064  4B F3 0A 39 */	bl getMySubstanceP__16dEvent_manager_cFiPCci
@@ -556,16 +556,16 @@ lbl_801179AC:
 /* 801179C4 00000018  28 00 00 08 */	cmplwi r0, 8
 /* 801179C8 0000001C  40 82 00 1C */	bne lbl_801179E4
 lbl_801179CC:
-/* 801179CC 00000000  80 1D 5F 18 */	lwz r0, 0x5f18(r29)
+/* 801179CC 00000000  80 1D 5F 18 */	lwz r0, 0x5f18(r29)	/* effective address: 8040C0D8 */
 /* 801179D0 00000004  60 00 00 10 */	ori r0, r0, 0x10
-/* 801179D4 00000008  90 1D 5F 18 */	stw r0, 0x5f18(r29)
+/* 801179D4 00000008  90 1D 5F 18 */	stw r0, 0x5f18(r29)	/* effective address: 8040C0D8 */
 /* 801179D8 0000000C  38 00 00 1E */	li r0, 0x1e
 /* 801179DC 00000010  98 1F 2F B2 */	stb r0, 0x2fb2(r31)
 /* 801179E0 00000014  48 00 00 10 */	b lbl_801179F0
 lbl_801179E4:
-/* 801179E4 00000000  80 1D 5F 18 */	lwz r0, 0x5f18(r29)
+/* 801179E4 00000000  80 1D 5F 18 */	lwz r0, 0x5f18(r29)	/* effective address: 8040C0D8 */
 /* 801179E8 00000004  54 00 07 34 */	rlwinm r0, r0, 0, 0x1c, 0x1a
-/* 801179EC 00000008  90 1D 5F 18 */	stw r0, 0x5f18(r29)
+/* 801179EC 00000008  90 1D 5F 18 */	stw r0, 0x5f18(r29)	/* effective address: 8040C0D8 */
 lbl_801179F0:
 /* 801179F0 00000000  80 9F 31 84 */	lwz r4, 0x3184(r31)
 /* 801179F4 00000004  2C 04 FF FF */	cmpwi r4, -1

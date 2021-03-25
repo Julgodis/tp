@@ -296,8 +296,8 @@ lbl_8010C300:
 /* 8010C30C 0000000C  3B 80 00 00 */	li r28, 0
 /* 8010C310 00000010  3B 60 00 00 */	li r27, 0
 /* 8010C314 00000014  3B 40 00 00 */	li r26, 0
-/* 8010C318 00000018  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 8010C31C 0000001C  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 8010C318 00000018  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 8010C31C 0000001C  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 8010C320 00000020  38 63 00 96 */	addi r3, r3, 0x96
 /* 8010C324 00000024  4B F9 17 3D */	bl checkStageName__9daAlink_cFPCc
 /* 8010C328 00000028  54 60 06 3F */	clrlwi. r0, r3, 0x18

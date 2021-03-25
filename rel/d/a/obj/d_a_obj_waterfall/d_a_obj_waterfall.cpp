@@ -24,12 +24,19 @@ struct daObjWaterFall_c {
 	/* 80D2FC9C */ void _delete();
 };
 
+struct Vec {
+};
+
 struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80D2EFF8 */ ~cXyz();
 	/* 80D2F6DC */ cXyz();
 };
 
 struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
 	/* 80D2F6E0 */ ~cM3dGCyl();
 };
 
@@ -51,21 +58,64 @@ struct cM3dGPla {
 };
 
 struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+};
+
+struct request_of_phase_process_class {
+};
+
+struct dBomb_c {
+	/* 80031FF4 */ void checkWaterBomb(fopAc_ac_c*);
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct cCcD_Obj {
+};
+
+struct cCcS {
+	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
 // 
 // Forward References:
 // 
 
-void s_b_sub(void*, void*); // 2
-void s_a_sub(void*, void*); // 2
-void daObjWaterFall_Draw(daObjWaterFall_c*); // 2
-void daObjWaterFall_Execute(daObjWaterFall_c*); // 2
-void daObjWaterFall_Delete(daObjWaterFall_c*); // 2
-void daObjWaterFall_Create(fopAc_ac_c*); // 2
+static void s_b_sub(void*, void*); // 2
+static void s_a_sub(void*, void*); // 2
+static void daObjWaterFall_Draw(daObjWaterFall_c*); // 2
+static void daObjWaterFall_Execute(daObjWaterFall_c*); // 2
+static void daObjWaterFall_Delete(daObjWaterFall_c*); // 2
+static void daObjWaterFall_Create(fopAc_ac_c*); // 2
 
-extern "C" void s_b_sub__FPvPv(); // 1
-extern "C" void s_a_sub__FPvPv(); // 1
+extern "C" static void s_b_sub__FPvPv(); // 1
+extern "C" static void s_a_sub__FPvPv(); // 1
 extern "C" void search_bomb__16daObjWaterFall_cFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void search_arrow__16daObjWaterFall_cFv(); // 1
@@ -84,63 +134,115 @@ extern "C" void execute__16daObjWaterFall_cFv(); // 1
 extern "C" void push_player__16daObjWaterFall_cFv(); // 1
 extern "C" void draw__16daObjWaterFall_cFv(); // 1
 extern "C" void _delete__16daObjWaterFall_cFv(); // 1
-extern "C" void daObjWaterFall_Draw__FP16daObjWaterFall_c(); // 1
-extern "C" void daObjWaterFall_Execute__FP16daObjWaterFall_c(); // 1
-extern "C" void daObjWaterFall_Delete__FP16daObjWaterFall_c(); // 1
-extern "C" void daObjWaterFall_Create__FP10fopAc_ac_c(); // 1
-extern "C" extern u8 const lit_3807[4];
-extern "C" extern u32 const lit_3808;
-extern "C" extern u32 const lit_3809;
+extern "C" static void daObjWaterFall_Draw__FP16daObjWaterFall_c(); // 1
+extern "C" static void daObjWaterFall_Execute__FP16daObjWaterFall_c(); // 1
+extern "C" static void daObjWaterFall_Delete__FP16daObjWaterFall_c(); // 1
+extern "C" static void daObjWaterFall_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern u32 const lit_3953;
-extern "C" extern u32 const lit_3954;
-extern "C" extern u32 const lit_4203;
 extern "C" extern u32 const lit_4204;
 extern "C" extern u32 const lit_4205;
 extern "C" extern u32 const lit_4206;
 extern "C" extern char const* const stringBase0;
-extern "C" extern u8 l_arcName[4];
-extern "C" extern u8 l_cyl_src[68];
-extern "C" extern u8 l_daObjWaterFall_Method[32];
-extern "C" extern u8 g_profile_Obj_WaterFall[48];
-extern "C" extern void* __vt__8cM3dGPla[3];
-extern "C" extern void* __vt__8cM3dGTri[3];
-extern "C" extern void* __vt__8cM3dGCyl[3];
-extern "C" extern void* __vt__8cM3dGAab[3];
-extern "C" extern u8 target_info[40];
-extern "C" extern u8 target_info_count[4];
+extern "C" extern void* g_profile_Obj_WaterFall[12];
 
 // 
 // External References:
 // 
 
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
+void mDoMtx_YrotS(f32 (* )[4], s16); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void fopAc_IsActor(void*); // 2
+void fopAcM_delete(fopAc_ac_c*); // 2
+void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*); // 2
+void fpcEx_Search(void* (*)(void*, void*), void*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void cM_atan2s(f32, f32); // 2
+void cLib_chasePosXZ(cXyz*, cXyz const&, f32); // 2
+void operator delete(void*); // 2
 
-extern "C" void _unresolved(); // 1
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
+extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
+extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void fopAc_IsActor__FPv(); // 1
+extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
+extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
+extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void checkWaterBomb__7dBomb_cFP10fopAc_ac_c(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void __ct__10dCcD_GSttsFv(); // 1
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
+extern "C" void __ct__12dCcD_GObjInfFv(); // 1
+extern "C" void __dt__12dCcD_GObjInfFv(); // 1
+extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
+extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void SetC__8cM3dGCylFRC4cXyz(); // 1
+extern "C" void SetH__8cM3dGCylFf(); // 1
+extern "C" void SetR__8cM3dGCylFf(); // 1
+extern "C" void cLib_chasePosXZ__FP4cXyzRC4cXyzf(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Cyl[36];
+extern "C" extern void* __vt__8dCcD_Tri[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__12cCcD_TriAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 
 // Declarations:
 // 
 
-/* 80D2EC18-80D2ECA4 008C+00 s=0 e=0 z=0  None .text      s_b_sub__FPvPv                                               */
+/* ############################################################################################## */
+/* 80D2FE50-80D2FE78 0028+00 s=4 e=0 z=0  None .bss       target_info                                                  */
+static u8 target_info[40];
+
+/* 80D2FE78-80D2FE7C 0004+00 s=4 e=0 z=0  None .bss       target_info_count                                            */
+static u8 target_info_count[4];
+
+/* 80D2EC18-80D2ECA4 008C+00 s=1 e=0 z=0  None .text      s_b_sub__FPvPv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void s_b_sub(void* param_0, void* param_1) {
+asm static void s_b_sub(void* param_0, void* param_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterfall/d_a_obj_waterfall/s_b_sub__FPvPv.s"
 }
 #pragma pop
 
 
-/* 80D2ECA4-80D2ED14 0070+00 s=0 e=0 z=0  None .text      s_a_sub__FPvPv                                               */
+/* 80D2ECA4-80D2ED14 0070+00 s=1 e=0 z=0  None .text      s_a_sub__FPvPv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void s_a_sub(void* param_0, void* param_1) {
+asm static void s_a_sub(void* param_0, void* param_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterfall/d_a_obj_waterfall/s_a_sub__FPvPv.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80D2FD58-80D2FD5C 0004+00 s=4 e=0 z=0  None .rodata    @3807                                                        */
+SECTION_RODATA static u8 const lit_3807[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
 
 /* 80D2ED14-80D2EFF8 02E4+00 s=1 e=0 z=0  None .text      search_bomb__16daObjWaterFall_cFv                            */
 #pragma push
@@ -153,7 +255,7 @@ asm void daObjWaterFall_c::search_bomb() {
 #pragma pop
 
 
-/* 80D2EFF8-80D2F034 003C+00 s=0 e=0 z=0  None .text      __dt__4cXyzFv                                                */
+/* 80D2EFF8-80D2F034 003C+00 s=1 e=0 z=0  None .text      __dt__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -197,6 +299,50 @@ asm void daObjWaterFall_c::setBaseMtx() {
 #pragma pop
 
 
+/* ############################################################################################## */
+/* 80D2FD5C-80D2FD60 0004+00 s=1 e=0 z=0  None .rodata    @3808                                                        */
+SECTION_RODATA static u32 const lit_3808 = 0x42480000;
+
+/* 80D2FD60-80D2FD64 0004+00 s=1 e=0 z=0  None .rodata    @3809                                                        */
+SECTION_RODATA static u32 const lit_3809 = 0x42C80000;
+
+/* 80D2FD64-80D2FD68 0004+00 s=0 e=0 z=0  None .rodata    @3953                                                        */
+SECTION_RODATA u32 const lit_3953 = 0xC2480000;
+
+/* 80D2FD68-80D2FD6C 0004+00 s=1 e=0 z=0  None .rodata    @3954                                                        */
+SECTION_RODATA static u32 const lit_3954 = 0x41200000;
+
+/* 80D2FD6C-80D2FD70 0004+00 s=1 e=0 z=0  None .rodata    @4203                                                        */
+SECTION_RODATA static u32 const lit_4203 = 0x41C80000;
+
+/* 80D2FD70-80D2FD74 0004+00 s=0 e=0 z=0  None .rodata    @4204                                                        */
+SECTION_RODATA u32 const lit_4204 = 0xC1200000;
+
+/* 80D2FD74-80D2FD78 0004+00 s=0 e=0 z=0  None .rodata    @4205                                                        */
+SECTION_RODATA u32 const lit_4205 = 0x42700000;
+
+/* 80D2FD78-80D2FD7C 0004+00 s=0 e=0 z=0  None .rodata    @4206                                                        */
+SECTION_RODATA u32 const lit_4206 = 0xC2700000;
+
+/* 80D2FD7C-80D2FD83 0007+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80D2FD7C = "sample";
+#pragma pop
+
+/* 80D2FD84-80D2FD88 0004+00 s=1 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+
+/* 80D2FD88-80D2FDCC 0044+00 s=1 e=0 z=0  None .data      l_cyl_src                                                    */
+SECTION_DATA static u8 l_cyl_src[68] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x01, 0x19, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x84, 0x00, 0x00, 0x00, 0x02,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00,
+};
+
 /* 80D2F39C-80D2F5A0 0204+00 s=1 e=0 z=0  None .text      Create__16daObjWaterFall_cFv                                 */
 #pragma push
 #pragma optimization_level 0
@@ -207,6 +353,63 @@ asm void daObjWaterFall_c::Create() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80D2FDCC-80D2FDEC 0020+00 s=1 e=0 z=0  None .data      l_daObjWaterFall_Method                                      */
+SECTION_DATA static void* l_daObjWaterFall_Method[8] = {
+	/* 0    */ (void*)daObjWaterFall_Create__FP10fopAc_ac_c,
+	/* 1    */ (void*)daObjWaterFall_Delete__FP16daObjWaterFall_c,
+	/* 2    */ (void*)daObjWaterFall_Execute__FP16daObjWaterFall_c,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)daObjWaterFall_Draw__FP16daObjWaterFall_c,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+};
+
+/* 80D2FDEC-80D2FE1C 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_WaterFall                                      */
+SECTION_DATA void* g_profile_Obj_WaterFall[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0007FFFD,
+	/* 2    */ (void*)0x01770000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x000009CC,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x021F0000,
+	/* 9    */ (void*)&l_daObjWaterFall_Method,
+	/* 10   */ (void*)0x00040100,
+	/* 11   */ (void*)0x000E0000,
+};
+
+/* 80D2FE1C-80D2FE28 000C+00 s=4 e=0 z=0  None .data      __vt__8cM3dGPla                                              */
+SECTION_DATA static void* __vt__8cM3dGPla[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__8cM3dGPlaFv,
+};
+
+/* 80D2FE28-80D2FE34 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGTri                                              */
+SECTION_DATA static void* __vt__8cM3dGTri[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__8cM3dGTriFv,
+};
+
+/* 80D2FE34-80D2FE40 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
+SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__8cM3dGCylFv,
+};
+
+/* 80D2FE40-80D2FE4C 000C+00 s=4 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA static void* __vt__8cM3dGAab[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__8cM3dGAabFv,
+};
 
 /* 80D2F5A0-80D2F6DC 013C+00 s=1 e=0 z=0  None .text      create__16daObjWaterFall_cFv                                 */
 #pragma push
@@ -219,7 +422,7 @@ asm void daObjWaterFall_c::create() {
 #pragma pop
 
 
-/* 80D2F6DC-80D2F6E0 0004+00 s=0 e=0 z=0  None .text      __ct__4cXyzFv                                                */
+/* 80D2F6DC-80D2F6E0 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -230,7 +433,7 @@ asm cXyz::cXyz() {
 #pragma pop
 
 
-/* 80D2F6E0-80D2F728 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80D2F6E0-80D2F728 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -241,7 +444,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80D2F728-80D2F770 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80D2F728-80D2F770 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -252,7 +455,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80D2F770-80D2F850 00E0+00 s=0 e=0 z=0  None .text      __dt__8dCcD_TriFv                                            */
+/* 80D2F770-80D2F850 00E0+00 s=1 e=0 z=0  None .text      __dt__8dCcD_TriFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -263,7 +466,7 @@ asm dCcD_Tri::~dCcD_Tri() {
 #pragma pop
 
 
-/* 80D2F850-80D2F8E0 0090+00 s=0 e=0 z=0  None .text      __ct__8dCcD_TriFv                                            */
+/* 80D2F850-80D2F8E0 0090+00 s=1 e=0 z=0  None .text      __ct__8dCcD_TriFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -274,7 +477,7 @@ asm dCcD_Tri::dCcD_Tri() {
 #pragma pop
 
 
-/* 80D2F8E0-80D2F93C 005C+00 s=0 e=0 z=0  None .text      __dt__8cM3dGTriFv                                            */
+/* 80D2F8E0-80D2F93C 005C+00 s=1 e=0 z=0  None .text      __dt__8cM3dGTriFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -285,7 +488,7 @@ asm cM3dGTri::~cM3dGTri() {
 #pragma pop
 
 
-/* 80D2F93C-80D2F984 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 80D2F93C-80D2F984 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -340,145 +543,47 @@ asm void daObjWaterFall_c::_delete() {
 #pragma pop
 
 
-/* 80D2FCD0-80D2FCF0 0020+00 s=0 e=0 z=0  None .text      daObjWaterFall_Draw__FP16daObjWaterFall_c                    */
+/* 80D2FCD0-80D2FCF0 0020+00 s=1 e=0 z=0  None .text      daObjWaterFall_Draw__FP16daObjWaterFall_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjWaterFall_Draw(daObjWaterFall_c* param_0) {
+asm static void daObjWaterFall_Draw(daObjWaterFall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterfall/d_a_obj_waterfall/daObjWaterFall_Draw__FP16daObjWaterFall_c.s"
 }
 #pragma pop
 
 
-/* 80D2FCF0-80D2FD10 0020+00 s=0 e=0 z=0  None .text      daObjWaterFall_Execute__FP16daObjWaterFall_c                 */
+/* 80D2FCF0-80D2FD10 0020+00 s=1 e=0 z=0  None .text      daObjWaterFall_Execute__FP16daObjWaterFall_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjWaterFall_Execute(daObjWaterFall_c* param_0) {
+asm static void daObjWaterFall_Execute(daObjWaterFall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterfall/d_a_obj_waterfall/daObjWaterFall_Execute__FP16daObjWaterFall_c.s"
 }
 #pragma pop
 
 
-/* 80D2FD10-80D2FD30 0020+00 s=0 e=0 z=0  None .text      daObjWaterFall_Delete__FP16daObjWaterFall_c                  */
+/* 80D2FD10-80D2FD30 0020+00 s=1 e=0 z=0  None .text      daObjWaterFall_Delete__FP16daObjWaterFall_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjWaterFall_Delete(daObjWaterFall_c* param_0) {
+asm static void daObjWaterFall_Delete(daObjWaterFall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterfall/d_a_obj_waterfall/daObjWaterFall_Delete__FP16daObjWaterFall_c.s"
 }
 #pragma pop
 
 
-/* 80D2FD30-80D2FD50 0020+00 s=0 e=0 z=0  None .text      daObjWaterFall_Create__FP10fopAc_ac_c                        */
+/* 80D2FD30-80D2FD50 0020+00 s=1 e=0 z=0  None .text      daObjWaterFall_Create__FP10fopAc_ac_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjWaterFall_Create(fopAc_ac_c* param_0) {
+asm static void daObjWaterFall_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterfall/d_a_obj_waterfall/daObjWaterFall_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80D2FD58-80D2FD5C 0004+00 s=0 e=0 z=0  None .rodata    @3807                                                        */
-SECTION_RODATA u8 const lit_3807[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80D2FD5C-80D2FD60 0004+00 s=0 e=0 z=0  None .rodata    @3808                                                        */
-SECTION_RODATA u32 const lit_3808 = 0x42480000;
-
-/* 80D2FD60-80D2FD64 0004+00 s=0 e=0 z=0  None .rodata    @3809                                                        */
-SECTION_RODATA u32 const lit_3809 = 0x42C80000;
-
-/* 80D2FD64-80D2FD68 0004+00 s=0 e=0 z=0  None .rodata    @3953                                                        */
-SECTION_RODATA u32 const lit_3953 = 0xC2480000;
-
-/* 80D2FD68-80D2FD6C 0004+00 s=0 e=0 z=0  None .rodata    @3954                                                        */
-SECTION_RODATA u32 const lit_3954 = 0x41200000;
-
-/* 80D2FD6C-80D2FD70 0004+00 s=0 e=0 z=0  None .rodata    @4203                                                        */
-SECTION_RODATA u32 const lit_4203 = 0x41C80000;
-
-/* 80D2FD70-80D2FD74 0004+00 s=0 e=0 z=0  None .rodata    @4204                                                        */
-SECTION_RODATA u32 const lit_4204 = 0xC1200000;
-
-/* 80D2FD74-80D2FD78 0004+00 s=0 e=0 z=0  None .rodata    @4205                                                        */
-SECTION_RODATA u32 const lit_4205 = 0x42700000;
-
-/* 80D2FD78-80D2FD7C 0004+00 s=0 e=0 z=0  None .rodata    @4206                                                        */
-SECTION_RODATA u32 const lit_4206 = 0xC2700000;
-
-/* 80D2FD7C-80D2FD83 0007+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80D2FD7C = "sample";
-#pragma pop
-
-/* 80D2FD84-80D2FD88 0004+00 s=0 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA u8 l_arcName[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80D2FD88-80D2FDCC 0044+00 s=0 e=0 z=0  None .data      l_cyl_src                                                    */
-SECTION_DATA u8 l_cyl_src[68] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x01, 0x19, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x84, 0x00, 0x00, 0x00, 0x02,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80D2FDCC-80D2FDEC 0020+00 s=0 e=0 z=0  None .data      l_daObjWaterFall_Method                                      */
-SECTION_DATA u8 l_daObjWaterFall_Method[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80D2FDEC-80D2FE1C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_WaterFall                                      */
-SECTION_DATA u8 g_profile_Obj_WaterFall[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x01, 0x77, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x09, 0xCC, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x02, 0x1F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x01, 0x00, 0x00, 0x0E, 0x00, 0x00,
-};
-
-/* 80D2FE1C-80D2FE28 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGPla                                              */
-SECTION_DATA void* __vt__8cM3dGPla[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 80D2FE28-80D2FE34 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGTri                                              */
-SECTION_DATA void* __vt__8cM3dGTri[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 80D2FE34-80D2FE40 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
-SECTION_DATA void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 80D2FE40-80D2FE4C 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 80D2FE50-80D2FE78 0028+00 s=0 e=0 z=0  None .bss       target_info                                                  */
-u8 target_info[40];
-
-/* 80D2FE78-80D2FE7C 0004+00 s=0 e=0 z=0  None .bss       target_info_count                                            */
-u8 target_info_count[4];
 

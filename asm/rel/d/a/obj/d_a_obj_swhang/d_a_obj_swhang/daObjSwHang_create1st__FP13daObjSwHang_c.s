@@ -11,47 +11,47 @@ lbl_80CFCE0C:
 /* 80CFCE30 00000024  7F E0 FB 79 */	or. r0, r31, r31
 /* 80CFCE34 00000028  41 82 00 C0 */	beq lbl_80CFCEF4
 /* 80CFCE38 0000002C  7C 1E 03 78 */	mr r30, r0
-/* 80CFCE3C 00000030  4B FF EA DD */	bl _unresolved
-/* 80CFCE40 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CFCE44 00000038  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
+/* 80CFCE3C 00000030  4B 37 B7 E8 */	b __ct__16dBgS_MoveBgActorFv
+/* 80CFCE40 00000034  3C 60 80 D0 */	lis r3, __vt__17dEvLib_callback_c@ha
+/* 80CFCE44 00000038  38 03 D4 6C */	addi r0, r3, __vt__17dEvLib_callback_c@l
 /* 80CFCE48 0000003C  90 1E 05 A0 */	stw r0, 0x5a0(r30)
 /* 80CFCE4C 00000040  93 DE 05 A4 */	stw r30, 0x5a4(r30)
 /* 80CFCE50 00000044  38 00 00 00 */	li r0, 0
 /* 80CFCE54 00000048  90 1E 05 A8 */	stw r0, 0x5a8(r30)
-/* 80CFCE58 0000004C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CFCE5C 00000050  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CFCE58 0000004C  3C 60 80 D0 */	lis r3, __vt__13daObjSwHang_c@ha
+/* 80CFCE5C 00000050  38 63 D4 84 */	addi r3, r3, __vt__13daObjSwHang_c@l
 /* 80CFCE60 00000054  90 7E 05 9C */	stw r3, 0x59c(r30)
 /* 80CFCE64 00000058  38 03 00 28 */	addi r0, r3, 0x28
 /* 80CFCE68 0000005C  90 1E 05 A0 */	stw r0, 0x5a0(r30)
-/* 80CFCE6C 00000060  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CFCE70 00000064  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
+/* 80CFCE6C 00000060  3C 60 80 3C */	lis r3, __vt__9cCcD_Stts@ha
+/* 80CFCE70 00000064  38 03 37 28 */	addi r0, r3, __vt__9cCcD_Stts@l
 /* 80CFCE74 00000068  90 1E 05 D4 */	stw r0, 0x5d4(r30)
 /* 80CFCE78 0000006C  38 7E 05 D8 */	addi r3, r30, 0x5d8
-/* 80CFCE7C 00000070  4B FF EA 9D */	bl _unresolved
-/* 80CFCE80 00000074  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CFCE84 00000078  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CFCE7C 00000070  4B 38 68 E4 */	b __ct__10dCcD_GSttsFv
+/* 80CFCE80 00000074  3C 60 80 3B */	lis r3, __vt__9dCcD_Stts@ha
+/* 80CFCE84 00000078  38 63 C2 E4 */	addi r3, r3, __vt__9dCcD_Stts@l
 /* 80CFCE88 0000007C  90 7E 05 D4 */	stw r3, 0x5d4(r30)
 /* 80CFCE8C 00000080  38 03 00 20 */	addi r0, r3, 0x20
 /* 80CFCE90 00000084  90 1E 05 D8 */	stw r0, 0x5d8(r30)
 /* 80CFCE94 00000088  3B DE 05 F8 */	addi r30, r30, 0x5f8
 /* 80CFCE98 0000008C  7F C3 F3 78 */	mr r3, r30
-/* 80CFCE9C 00000090  4B FF EA 7D */	bl _unresolved
-/* 80CFCEA0 00000094  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CFCEA4 00000098  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
+/* 80CFCE9C 00000090  4B 38 6B 8C */	b __ct__12dCcD_GObjInfFv
+/* 80CFCEA0 00000094  3C 60 80 3C */	lis r3, __vt__14cCcD_ShapeAttr@ha
+/* 80CFCEA4 00000098  38 03 36 D0 */	addi r0, r3, __vt__14cCcD_ShapeAttr@l
 /* 80CFCEA8 0000009C  90 1E 01 20 */	stw r0, 0x120(r30)
-/* 80CFCEAC 000000A0  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CFCEB0 000000A4  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
+/* 80CFCEAC 000000A0  3C 60 80 D0 */	lis r3, __vt__8cM3dGAab@ha
+/* 80CFCEB0 000000A4  38 03 D4 60 */	addi r0, r3, __vt__8cM3dGAab@l
 /* 80CFCEB4 000000A8  90 1E 01 1C */	stw r0, 0x11c(r30)
-/* 80CFCEB8 000000AC  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CFCEBC 000000B0  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
+/* 80CFCEB8 000000AC  3C 60 80 D0 */	lis r3, __vt__8cM3dGSph@ha
+/* 80CFCEBC 000000B0  38 03 D4 54 */	addi r0, r3, __vt__8cM3dGSph@l
 /* 80CFCEC0 000000B4  90 1E 01 34 */	stw r0, 0x134(r30)
-/* 80CFCEC4 000000B8  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CFCEC8 000000BC  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CFCEC4 000000B8  3C 60 80 3C */	lis r3, __vt__12cCcD_SphAttr@ha
+/* 80CFCEC8 000000BC  38 63 35 40 */	addi r3, r3, __vt__12cCcD_SphAttr@l
 /* 80CFCECC 000000C0  90 7E 01 20 */	stw r3, 0x120(r30)
 /* 80CFCED0 000000C4  38 03 00 58 */	addi r0, r3, 0x58
 /* 80CFCED4 000000C8  90 1E 01 34 */	stw r0, 0x134(r30)
-/* 80CFCED8 000000CC  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CFCEDC 000000D0  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CFCED8 000000CC  3C 60 80 3B */	lis r3, __vt__8dCcD_Sph@ha
+/* 80CFCEDC 000000D0  38 63 BF C0 */	addi r3, r3, __vt__8dCcD_Sph@l
 /* 80CFCEE0 000000D4  90 7E 00 3C */	stw r3, 0x3c(r30)
 /* 80CFCEE4 000000D8  38 03 00 2C */	addi r0, r3, 0x2c
 /* 80CFCEE8 000000DC  90 1E 01 20 */	stw r0, 0x120(r30)

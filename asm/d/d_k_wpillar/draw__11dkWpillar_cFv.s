@@ -46,9 +46,9 @@ lbl_802620C8:
 /* 80262178 000000B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8026217C 000000B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80262180 000000B8  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
-/* 80262184 000000BC  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 80262184 000000BC  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
 /* 80262188 000000C0  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
-/* 8026218C 000000C4  90 1F 00 4C */	stw r0, 0x4c(r31)
+/* 8026218C 000000C4  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
 /* 80262190 000000C8  38 60 00 01 */	li r3, 1
 /* 80262194 000000CC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80262198 000000D0  83 C1 00 08 */	lwz r30, 8(r1)

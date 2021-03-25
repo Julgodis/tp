@@ -5,7 +5,7 @@ lbl_8004DCA0:
 /* 8004DCAC 0000000C  88 03 0F 3D */	lbz r0, 0xf3d(r3)	/* effective address: 8042D991 */
 /* 8004DCB0 00000010  28 00 00 01 */	cmplwi r0, 1
 /* 8004DCB4 00000014  40 82 00 3C */	bne lbl_8004DCF0
-/* 8004DCB8 00000018  C0 23 0F 40 */	lfs f1, 0xf40(r3)
+/* 8004DCB8 00000018  C0 23 0F 40 */	lfs f1, 0xf40(r3)	/* effective address: 8042D994 */
 /* 8004DCBC 0000001C  C0 02 85 50 */	lfs f0, lit_3964(r2)
 /* 8004DCC0 00000020  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8004DCC4 00000000  40 81 00 2C */	ble lbl_8004DCF0

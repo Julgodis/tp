@@ -22,8 +22,8 @@ lbl_801B8EE0:
 /* 801B8F08 00000028  7D 89 03 A6 */	mtctr r12
 /* 801B8F0C 0000002C  4E 80 04 21 */	bctrl 
 /* 801B8F10 00000030  48 14 77 49 */	bl getStringPtr__10J2DTextBoxCFv
-/* 801B8F14 00000034  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801B8F18 00000038  38 84 57 60 */	addi r4, r4, stringBase0@l
+/* 801B8F14 00000034  3C 80 80 39 */	lis r4, d_menu_d_menu_dmap__stringBase0@ha
+/* 801B8F18 00000038  38 84 57 60 */	addi r4, r4, d_menu_d_menu_dmap__stringBase0@l
 /* 801B8F1C 0000003C  38 84 00 6F */	addi r4, r4, 0x6f
 /* 801B8F20 00000040  48 1A FC 0D */	bl strcpy
 /* 801B8F24 00000044  48 00 00 48 */	b lbl_801B8F6C

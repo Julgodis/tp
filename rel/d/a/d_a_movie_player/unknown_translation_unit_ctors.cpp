@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80879028[8];
+extern void* data_80879028[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_movie_player_cpp(); // 1
 
 // 
 // Declarations:

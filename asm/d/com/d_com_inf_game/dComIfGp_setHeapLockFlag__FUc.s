@@ -19,7 +19,7 @@ lbl_8002E10C:
 /* 8002E120 00000014  48 00 01 0D */	bl dComIfGp_createSubExpHeap2D__Fv
 lbl_8002E124:
 /* 8002E124 00000000  38 00 00 05 */	li r0, 5
-/* 8002E128 00000004  98 1F 5E 8F */	stb r0, 0x5e8f(r31)
+/* 8002E128 00000004  98 1F 5E 8F */	stb r0, 0x5e8f(r31)	/* effective address: 8040C04F */
 /* 8002E12C 00000008  48 00 02 1D */	bl dComIfGp_checkEmptySubHeap2D__Fv
 /* 8002E130 0000000C  2C 03 00 00 */	cmpwi r3, 0
 /* 8002E134 00000010  41 80 00 38 */	blt lbl_8002E16C

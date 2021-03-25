@@ -40,7 +40,7 @@ lbl_801FB324:
 /* 801FB32C 00000008  80 64 00 20 */	lwz r3, 0x20(r4)	/* effective address: 804301A8 */
 /* 801FB330 0000000C  28 03 00 00 */	cmplwi r3, 0
 /* 801FB334 00000010  41 82 00 24 */	beq lbl_801FB358
-/* 801FB338 00000014  88 04 00 BF */	lbz r0, 0xbf(r4)
+/* 801FB338 00000014  88 04 00 BF */	lbz r0, 0xbf(r4)	/* effective address: 80430247 */
 /* 801FB33C 00000018  28 00 00 01 */	cmplwi r0, 1
 /* 801FB340 0000001C  40 82 00 0C */	bne lbl_801FB34C
 /* 801FB344 00000020  48 01 25 31 */	bl setDispPosInsideFlg_SE_On__11dMeterMap_cFv

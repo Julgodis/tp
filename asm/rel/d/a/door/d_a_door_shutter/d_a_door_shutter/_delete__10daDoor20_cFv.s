@@ -8,14 +8,14 @@ lbl_804647BC:
 /* 804647D4 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 804647D8 0000001C  41 82 00 28 */	beq lbl_80464800
 /* 804647DC 00000020  80 7F 05 C4 */	lwz r3, 0x5c4(r31)
-/* 804647E0 00000024  4B FF C3 39 */	bl _unresolved
+/* 804647E0 00000024  4B E0 39 F4 */	b ChkUsed__9cBgW_BgIdCFv
 /* 804647E4 00000028  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 804647E8 0000002C  41 82 00 18 */	beq lbl_80464800
-/* 804647EC 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804647F0 00000034  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 804647EC 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804647F0 00000034  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804647F4 00000038  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 804647F8 0000003C  80 9F 05 C4 */	lwz r4, 0x5c4(r31)
-/* 804647FC 00000040  4B FF C3 1D */	bl _unresolved
+/* 804647FC 00000040  4B C0 FA 54 */	b Release__4cBgSFP9dBgW_Base
 lbl_80464800:
 /* 80464800 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80464804 00000004  48 00 02 E1 */	bl deleteKey__10daDoor20_cFv
@@ -23,7 +23,7 @@ lbl_80464800:
 /* 8046480C 0000000C  4B FF C3 89 */	bl getAlwaysArcName__10daDoor20_cFv
 /* 80464810 00000010  7C 64 1B 78 */	mr r4, r3
 /* 80464814 00000014  38 7F 05 6C */	addi r3, r31, 0x56c
-/* 80464818 00000018  4B FF C3 01 */	bl _unresolved
+/* 80464818 00000018  4B BC 87 F0 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 8046481C 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 80464820 00000020  4B FF C3 85 */	bl getArcName__10daDoor20_cFv
 /* 80464824 00000024  28 03 00 00 */	cmplwi r3, 0
@@ -32,7 +32,7 @@ lbl_80464800:
 /* 80464830 00000030  4B FF C3 75 */	bl getArcName__10daDoor20_cFv
 /* 80464834 00000034  7C 64 1B 78 */	mr r4, r3
 /* 80464838 00000038  38 7F 05 74 */	addi r3, r31, 0x574
-/* 8046483C 0000003C  4B FF C2 DD */	bl _unresolved
+/* 8046483C 0000003C  4B BC 87 CC */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 lbl_80464840:
 /* 80464840 00000000  38 60 00 01 */	li r3, 1
 /* 80464844 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -28,7 +28,7 @@ lbl_802933EC:
 /* 802933EC 00000000  90 6D 86 10 */	stw r3, data_80450B90(r13)
 /* 802933F0 00000004  3C 60 80 3C */	lis r3, __vt__19JASDefaultBankTable@ha
 /* 802933F4 00000008  38 03 5B 68 */	addi r0, r3, __vt__19JASDefaultBankTable@l
-/* 802933F8 0000000C  90 1E 00 00 */	stw r0, 0(r30)
+/* 802933F8 0000000C  90 1E 00 00 */	stw r0, 0(r30)	/* effective address: 804316B4 */
 /* 802933FC 00000010  7F C3 F3 78 */	mr r3, r30
 /* 80293400 00000014  3C 80 80 29 */	lis r4, __dt__19JASDefaultBankTableFv@ha
 /* 80293404 00000018  38 84 34 B4 */	addi r4, r4, __dt__19JASDefaultBankTableFv@l
@@ -36,13 +36,13 @@ lbl_802933EC:
 /* 8029340C 00000020  48 0C E8 19 */	bl __register_global_object
 /* 80293410 00000024  38 00 00 00 */	li r0, 0
 /* 80293414 00000028  38 9F 04 24 */	addi r4, r31, 0x424
-/* 80293418 0000002C  94 04 00 04 */	stwu r0, 4(r4)
+/* 80293418 0000002C  94 04 00 04 */	stwu r0, 4(r4)	/* effective address: 80431AD0 */
 /* 8029341C 00000030  38 7F 04 24 */	addi r3, r31, 0x424
-/* 80293420 00000034  90 03 00 08 */	stw r0, 8(r3)
-/* 80293424 00000038  90 1F 04 24 */	stw r0, 0x424(r31)
-/* 80293428 0000003C  90 84 00 00 */	stw r4, 0(r4)
-/* 8029342C 00000040  90 83 00 08 */	stw r4, 8(r3)
-/* 80293430 00000044  98 03 00 0C */	stb r0, 0xc(r3)
+/* 80293420 00000034  90 03 00 08 */	stw r0, 8(r3)	/* effective address: 80431AD4 */
+/* 80293424 00000038  90 1F 04 24 */	stw r0, 0x424(r31)	/* effective address: 80431ACC */
+/* 80293428 0000003C  90 84 00 00 */	stw r4, 0(r4)	/* effective address: 80431ACC */
+/* 8029342C 00000040  90 83 00 08 */	stw r4, 8(r3)	/* effective address: 80431AD4 */
+/* 80293430 00000044  98 03 00 0C */	stb r0, 0xc(r3)	/* effective address: 80431AD8 */
 /* 80293434 00000048  3C 80 80 29 */	lis r4, __dt__Q28JASTrack5TListFv@ha
 /* 80293438 0000004C  38 84 34 5C */	addi r4, r4, __dt__Q28JASTrack5TListFv@l
 /* 8029343C 00000050  38 BF 04 18 */	addi r5, r31, 0x418

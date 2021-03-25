@@ -162,7 +162,7 @@ lbl_8004DB78:
 /* 8004DBC8 00000050  C0 21 00 38 */	lfs f1, 0x38(r1)
 /* 8004DBCC 00000054  4B FF F9 01 */	bl set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8004DBD0 00000058  90 76 00 00 */	stw r3, 0(r22)
-/* 8004DBD4 0000005C  80 6E 5D 3C */	lwz r3, 0x5d3c(r14)
+/* 8004DBD4 0000005C  80 6E 5D 3C */	lwz r3, 0x5d3c(r14)	/* effective address: 8040BEFC */
 /* 8004DBD8 00000060  38 63 02 10 */	addi r3, r3, 0x210
 /* 8004DBDC 00000064  80 96 00 00 */	lwz r4, 0(r22)
 /* 8004DBE0 00000068  4B FF DC D5 */	bl forceOnEventMove__Q213dPa_control_c7level_cFUl

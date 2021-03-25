@@ -18,7 +18,7 @@ lbl_801F6278:
 /* 801F62B8 00000040  48 05 F5 C1 */	bl alphaAnime__13CPaneMgrAlphaFsUcUcUc
 /* 801F62BC 00000044  7C 7E 1B 78 */	mr r30, r3
 /* 801F62C0 00000048  80 7D 01 98 */	lwz r3, 0x198(r29)
-/* 801F62C4 0000004C  88 9F 00 08 */	lbz r4, 8(r31)
+/* 801F62C4 0000004C  88 9F 00 08 */	lbz r4, 8(r31)	/* effective address: 8042E854 */
 /* 801F62C8 00000050  38 A0 00 80 */	li r5, 0x80
 /* 801F62CC 00000054  38 C0 00 FF */	li r6, 0xff
 /* 801F62D0 00000058  38 E0 00 00 */	li r7, 0
@@ -35,7 +35,7 @@ lbl_801F62DC:
 /* 801F62F8 0000001C  48 05 F5 81 */	bl alphaAnime__13CPaneMgrAlphaFsUcUcUc
 /* 801F62FC 00000020  7C 7E 1B 78 */	mr r30, r3
 /* 801F6300 00000024  80 7D 01 98 */	lwz r3, 0x198(r29)
-/* 801F6304 00000028  88 9F 00 08 */	lbz r4, 8(r31)
+/* 801F6304 00000028  88 9F 00 08 */	lbz r4, 8(r31)	/* effective address: 8042E854 */
 /* 801F6308 0000002C  38 A0 00 FF */	li r5, 0xff
 /* 801F630C 00000030  38 C0 00 80 */	li r6, 0x80
 /* 801F6310 00000034  38 E0 00 00 */	li r7, 0

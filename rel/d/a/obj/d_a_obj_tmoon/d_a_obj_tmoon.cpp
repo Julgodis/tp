@@ -12,6 +12,7 @@
 // 
 
 struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct daObjTMoon_c {
@@ -25,17 +26,47 @@ struct daObjTMoon_c {
 	/* 80D12EDC */ void _delete();
 };
 
+struct cXyz {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+};
+
+struct J3DModelData {
+};
+
+struct create_tag_class {
+};
+
+struct leafdraw_class {
+};
+
+struct request_of_phase_process_class {
+};
+
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
 // 
 // Forward References:
 // 
 
-void CheckCreateHeap(fopAc_ac_c*); // 2
-void daObjTMoon_Draw(daObjTMoon_c*); // 2
-void daObjTMoon_Execute(daObjTMoon_c*); // 2
-void daObjTMoon_Delete(daObjTMoon_c*); // 2
-void daObjTMoon_Create(daObjTMoon_c*); // 2
+static void CheckCreateHeap(fopAc_ac_c*); // 2
+static void daObjTMoon_Draw(daObjTMoon_c*); // 2
+static void daObjTMoon_Execute(daObjTMoon_c*); // 2
+static void daObjTMoon_Delete(daObjTMoon_c*); // 2
+static void daObjTMoon_Create(daObjTMoon_c*); // 2
 
-extern "C" void CheckCreateHeap__FP10fopAc_ac_c(); // 1
+extern "C" static void CheckCreateHeap__FP10fopAc_ac_c(); // 1
 extern "C" void initBaseMtx__12daObjTMoon_cFv(); // 1
 extern "C" void setBaseMtx__12daObjTMoon_cFv(); // 1
 extern "C" void Create__12daObjTMoon_cFv(); // 1
@@ -44,31 +75,55 @@ extern "C" void create__12daObjTMoon_cFv(); // 1
 extern "C" void execute__12daObjTMoon_cFv(); // 1
 extern "C" void draw__12daObjTMoon_cFv(); // 1
 extern "C" void _delete__12daObjTMoon_cFv(); // 1
-extern "C" void daObjTMoon_Draw__FP12daObjTMoon_c(); // 1
-extern "C" void daObjTMoon_Execute__FP12daObjTMoon_c(); // 1
-extern "C" void daObjTMoon_Delete__FP12daObjTMoon_c(); // 1
-extern "C" void daObjTMoon_Create__FP12daObjTMoon_c(); // 1
+extern "C" static void daObjTMoon_Draw__FP12daObjTMoon_c(); // 1
+extern "C" static void daObjTMoon_Execute__FP12daObjTMoon_c(); // 1
+extern "C" static void daObjTMoon_Delete__FP12daObjTMoon_c(); // 1
+extern "C" static void daObjTMoon_Create__FP12daObjTMoon_c(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern u8 l_arcName[4];
-extern "C" extern u8 l_daObjTMoon_Method[32];
-extern "C" extern u8 g_profile_Obj_TMoon[48];
+extern "C" extern void* g_profile_Obj_TMoon[12];
 
 // 
 // External References:
 // 
 
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
+void fopDwTg_ToDrawQ(create_tag_class*, int); // 2
+void fopDwTg_DrawQTo(create_tag_class*); // 2
+void fpcLf_GetPriority(leafdraw_class const*); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
 
-extern "C" void _unresolved(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
+extern "C" void fopDwTg_ToDrawQ__FP16create_tag_classi(); // 1
+extern "C" void fopDwTg_DrawQTo__FP16create_tag_class(); // 1
+extern "C" void fpcLf_GetPriority__FPC14leafdraw_class(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
 
 // 
 // Declarations:
 // 
 
-/* 80D12B98-80D12BB8 0020+00 s=0 e=0 z=0  None .text      CheckCreateHeap__FP10fopAc_ac_c                              */
+/* 80D12B98-80D12BB8 0020+00 s=1 e=0 z=0  None .text      CheckCreateHeap__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CheckCreateHeap(fopAc_ac_c* param_0) {
+asm static void CheckCreateHeap(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -107,6 +162,17 @@ asm void daObjTMoon_c::Create() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80D12F98-80D12FA0 0008+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80D12F98 = "A_TMoon";
+#pragma pop
+
+/* 80D12FA0-80D12FA4 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
 
 /* 80D12C9C-80D12D0C 0070+00 s=1 e=0 z=0  None .text      CreateHeap__12daObjTMoon_cFv                                 */
 #pragma push
@@ -163,44 +229,44 @@ asm void daObjTMoon_c::_delete() {
 #pragma pop
 
 
-/* 80D12F10-80D12F30 0020+00 s=0 e=0 z=0  None .text      daObjTMoon_Draw__FP12daObjTMoon_c                            */
+/* 80D12F10-80D12F30 0020+00 s=1 e=0 z=0  None .text      daObjTMoon_Draw__FP12daObjTMoon_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjTMoon_Draw(daObjTMoon_c* param_0) {
+asm static void daObjTMoon_Draw(daObjTMoon_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/daObjTMoon_Draw__FP12daObjTMoon_c.s"
 }
 #pragma pop
 
 
-/* 80D12F30-80D12F50 0020+00 s=0 e=0 z=0  None .text      daObjTMoon_Execute__FP12daObjTMoon_c                         */
+/* 80D12F30-80D12F50 0020+00 s=1 e=0 z=0  None .text      daObjTMoon_Execute__FP12daObjTMoon_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjTMoon_Execute(daObjTMoon_c* param_0) {
+asm static void daObjTMoon_Execute(daObjTMoon_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/daObjTMoon_Execute__FP12daObjTMoon_c.s"
 }
 #pragma pop
 
 
-/* 80D12F50-80D12F70 0020+00 s=0 e=0 z=0  None .text      daObjTMoon_Delete__FP12daObjTMoon_c                          */
+/* 80D12F50-80D12F70 0020+00 s=1 e=0 z=0  None .text      daObjTMoon_Delete__FP12daObjTMoon_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjTMoon_Delete(daObjTMoon_c* param_0) {
+asm static void daObjTMoon_Delete(daObjTMoon_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/daObjTMoon_Delete__FP12daObjTMoon_c.s"
 }
 #pragma pop
 
 
-/* 80D12F70-80D12F90 0020+00 s=0 e=0 z=0  None .text      daObjTMoon_Create__FP12daObjTMoon_c                          */
+/* 80D12F70-80D12F90 0020+00 s=1 e=0 z=0  None .text      daObjTMoon_Create__FP12daObjTMoon_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjTMoon_Create(daObjTMoon_c* param_0) {
+asm static void daObjTMoon_Create(daObjTMoon_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/daObjTMoon_Create__FP12daObjTMoon_c.s"
 }
@@ -208,28 +274,31 @@ asm void daObjTMoon_Create(daObjTMoon_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80D12F98-80D12FA0 0008+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80D12F98 = "A_TMoon";
-#pragma pop
-
-/* 80D12FA0-80D12FA4 0004+00 s=0 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA u8 l_arcName[4] = {
-	0x00, 0x00, 0x00, 0x00,
+/* 80D12FA4-80D12FC4 0020+00 s=1 e=0 z=0  None .data      l_daObjTMoon_Method                                          */
+SECTION_DATA static void* l_daObjTMoon_Method[8] = {
+	/* 0    */ (void*)daObjTMoon_Create__FP12daObjTMoon_c,
+	/* 1    */ (void*)daObjTMoon_Delete__FP12daObjTMoon_c,
+	/* 2    */ (void*)daObjTMoon_Execute__FP12daObjTMoon_c,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)daObjTMoon_Draw__FP12daObjTMoon_c,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
 };
 
-/* 80D12FA4-80D12FC4 0020+00 s=0 e=0 z=0  None .data      l_daObjTMoon_Method                                          */
-SECTION_DATA u8 l_daObjTMoon_Method[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80D12FC4-80D12FF4 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_TMoon                                          */
-SECTION_DATA u8 g_profile_Obj_TMoon[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x01, 0x95, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x05, 0x78, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x02, 0x39, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x0E, 0x00, 0x00,
+/* 80D12FC4-80D12FF4 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_TMoon                                          */
+SECTION_DATA void* g_profile_Obj_TMoon[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0007FFFD,
+	/* 2    */ (void*)0x01950000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x00000578,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x02390000,
+	/* 9    */ (void*)&l_daObjTMoon_Method,
+	/* 10   */ (void*)0x00040000,
+	/* 11   */ (void*)0x000E0000,
 };
 

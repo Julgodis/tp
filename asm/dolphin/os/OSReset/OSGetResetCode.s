@@ -4,7 +4,7 @@ lbl_8033FAAC:
 /* 8033FAB4 00000008  80 03 00 00 */	lwz r0, 0(r3)	/* effective address: 8044BAB0 */
 /* 8033FAB8 0000000C  2C 00 00 00 */	cmpwi r0, 0
 /* 8033FABC 00000010  41 82 00 10 */	beq lbl_8033FACC
-/* 8033FAC0 00000014  80 03 00 04 */	lwz r0, 4(r3)
+/* 8033FAC0 00000014  80 03 00 04 */	lwz r0, 4(r3)	/* effective address: 8044BAB4 */
 /* 8033FAC4 00000018  64 03 80 00 */	oris r3, r0, 0x8000
 /* 8033FAC8 0000001C  48 00 00 18 */	b lbl_8033FAE0
 lbl_8033FACC:

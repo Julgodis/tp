@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80BC57D0[8];
+extern void* data_80BC57D0[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_obj_cb_cpp(); // 1
 
 // 
 // Declarations:

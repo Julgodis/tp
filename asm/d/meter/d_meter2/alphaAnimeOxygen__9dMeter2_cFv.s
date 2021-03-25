@@ -15,10 +15,10 @@ lbl_80224BAC:
 /* 80224BE0 00000034  40 82 00 E4 */	bne lbl_80224CC4
 /* 80224BE4 00000038  54 60 06 73 */	rlwinm. r0, r3, 0, 0x19, 0x19
 /* 80224BE8 0000003C  41 82 00 28 */	beq lbl_80224C10
-/* 80224BEC 00000040  88 1F 4F AD */	lbz r0, 0x4fad(r31)
+/* 80224BEC 00000040  88 1F 4F AD */	lbz r0, 0x4fad(r31)	/* effective address: 8040B16D */
 /* 80224BF0 00000044  28 00 00 00 */	cmplwi r0, 0
 /* 80224BF4 00000048  41 82 00 10 */	beq lbl_80224C04
-/* 80224BF8 0000004C  A0 1F 4F A4 */	lhz r0, 0x4fa4(r31)
+/* 80224BF8 0000004C  A0 1F 4F A4 */	lhz r0, 0x4fa4(r31)	/* effective address: 8040B164 */
 /* 80224BFC 00000050  54 00 05 28 */	rlwinm r0, r0, 0, 0x14, 0x14
 /* 80224C00 00000054  48 00 00 08 */	b lbl_80224C08
 lbl_80224C04:
@@ -77,7 +77,7 @@ lbl_80224C78:
 lbl_80224CC4:
 /* 80224CC4 00000000  80 7E 01 0C */	lwz r3, 0x10c(r30)
 /* 80224CC8 00000004  4B FF 0D 51 */	bl setAlphaOxygenAnimeMin__13dMeter2Draw_cFv
-/* 80224CCC 00000008  88 1F 5E B7 */	lbz r0, 0x5eb7(r31)
+/* 80224CCC 00000008  88 1F 5E B7 */	lbz r0, 0x5eb7(r31)	/* effective address: 8040C077 */
 /* 80224CD0 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80224CD4 00000010  40 82 00 74 */	bne lbl_80224D48
 /* 80224CD8 00000014  38 00 00 00 */	li r0, 0

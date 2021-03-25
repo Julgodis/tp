@@ -5,8 +5,8 @@ lbl_800924D0:
 /* 800924DC 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 800924E0 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 800924E4 00000014  38 81 00 08 */	addi r4, r1, 8
-/* 800924E8 00000018  3C A0 80 38 */	lis r5, stringBase0@ha
-/* 800924EC 0000001C  38 A5 AA F4 */	addi r5, r5, stringBase0@l
+/* 800924E8 00000018  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
+/* 800924EC 0000001C  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
 /* 800924F0 00000020  38 A5 01 80 */	addi r5, r5, 0x180
 /* 800924F4 00000024  38 C0 00 00 */	li r6, 0
 /* 800924F8 00000028  4B FF 6B 95 */	bl getEvIntData__9dCamera_cFPiPci

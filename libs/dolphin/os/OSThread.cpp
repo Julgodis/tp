@@ -278,7 +278,7 @@ extern "C" asm void OSYieldThread() {
 #pragma pop
 
 
-/* 8034128C-80341474 01E8+00 s=0 e=5 z=0  None .text      OSCreateThread                                               */
+/* 8034128C-80341474 01E8+00 s=0 e=5 z=3  None .text      OSCreateThread                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -300,7 +300,7 @@ extern "C" asm void OSExitThread() {
 #pragma pop
 
 
-/* 80341558-80341714 01BC+00 s=0 e=4 z=0  None .text      OSCancelThread                                               */
+/* 80341558-80341714 01BC+00 s=0 e=4 z=3  None .text      OSCancelThread                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -322,7 +322,7 @@ extern "C" asm void OSDetachThread() {
 #pragma pop
 
 
-/* 803417B4-80341A3C 0288+00 s=0 e=13 z=0  None .text      OSResumeThread                                               */
+/* 803417B4-80341A3C 0288+00 s=0 e=13 z=3  None .text      OSResumeThread                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -333,7 +333,7 @@ extern "C" asm void OSResumeThread() {
 #pragma pop
 
 
-/* 80341A3C-80341BAC 0170+00 s=0 e=7 z=0  None .text      OSSuspendThread                                              */
+/* 80341A3C-80341BAC 0170+00 s=0 e=7 z=4  None .text      OSSuspendThread                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

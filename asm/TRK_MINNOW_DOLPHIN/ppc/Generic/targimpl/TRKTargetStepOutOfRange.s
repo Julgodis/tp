@@ -22,7 +22,7 @@ lbl_8036FD50:
 /* 8036FD7C 0000002C  4C C6 31 82 */	crclr 6
 /* 8036FD80 00000030  48 00 2E D5 */	bl MWTRACE
 /* 8036FD84 00000034  3C 60 80 45 */	lis r3, gTRKCPUState@ha
-/* 8036FD88 00000038  80 9F 00 04 */	lwz r4, 4(r31)
+/* 8036FD88 00000038  80 9F 00 04 */	lwz r4, 4(r31)	/* effective address: 803D3258 */
 /* 8036FD8C 0000003C  38 63 F3 38 */	addi r3, r3, gTRKCPUState@l
 /* 8036FD90 00000040  80 03 01 F8 */	lwz r0, 0x1f8(r3)	/* effective address: 8044F530 */
 /* 8036FD94 00000044  2C 04 00 00 */	cmpwi r4, 0

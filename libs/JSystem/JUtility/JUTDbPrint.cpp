@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
 struct JUtility {
 	struct TColor {
 	};
@@ -20,11 +25,6 @@ struct JUtility {
 struct JUTFont {
 	/* 802DED70 */ void setCharColor(JUtility::TColor);
 	/* 802DEE28 */ void drawString_size_scale(f32, f32, f32, f32, char const*, u32, bool);
-};
-
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 struct JUTDbPrint {
@@ -183,7 +183,7 @@ asm void JUTDbPrint::drawString(int param_0, int param_1, int param_2, u8 const*
 #pragma pop
 
 
-/* 802E0530-802E0600 00D0+00 s=0 e=2 z=0  None .text      JUTReport__FiiPCce                                           */
+/* 802E0530-802E0600 00D0+00 s=0 e=2 z=2  None .text      JUTReport__FiiPCce                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

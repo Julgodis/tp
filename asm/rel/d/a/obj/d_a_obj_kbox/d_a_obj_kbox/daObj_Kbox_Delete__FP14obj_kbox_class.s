@@ -5,27 +5,27 @@ lbl_80C3EA2C:
 /* 80C3EA38 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C3EA3C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80C3EA40 00000014  38 7F 05 68 */	addi r3, r31, 0x568
-/* 80C3EA44 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80C3EA48 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80C3EA44 00000018  3C 80 80 C4 */	lis r4, stringBase0@ha
+/* 80C3EA48 0000001C  38 84 F1 08 */	addi r4, r4, stringBase0@l
 /* 80C3EA4C 00000020  38 84 00 18 */	addi r4, r4, 0x18
-/* 80C3EA50 00000024  4B FF EB 29 */	bl _unresolved
+/* 80C3EA50 00000024  4B 3E E5 B8 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C3EA54 00000028  88 1F 09 EC */	lbz r0, 0x9ec(r31)
 /* 80C3EA58 0000002C  28 00 00 00 */	cmplwi r0, 0
 /* 80C3EA5C 00000030  41 82 00 10 */	beq lbl_80C3EA6C
 /* 80C3EA60 00000034  38 00 00 00 */	li r0, 0
-/* 80C3EA64 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80C3EA68 0000003C  98 03 00 00 */	stb r0, 0x0000(r3)
+/* 80C3EA64 00000038  3C 60 80 C4 */	lis r3, struct_80C3F284+0x1@ha
+/* 80C3EA68 0000003C  98 03 F2 85 */	stb r0, struct_80C3F284+0x1@l(r3)
 lbl_80C3EA6C:
-/* 80C3EA6C 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80C3EA70 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80C3EA6C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C3EA70 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C3EA74 00000008  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C3EA78 0000000C  80 9F 09 A4 */	lwz r4, 0x9a4(r31)
-/* 80C3EA7C 00000010  4B FF EA FD */	bl _unresolved
+/* 80C3EA7C 00000010  4B 43 57 D4 */	b Release__4cBgSFP9dBgW_Base
 /* 80C3EA80 00000014  80 1F 00 F0 */	lwz r0, 0xf0(r31)
 /* 80C3EA84 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80C3EA88 0000001C  41 82 00 0C */	beq lbl_80C3EA94
 /* 80C3EA8C 00000020  38 7F 09 A8 */	addi r3, r31, 0x9a8
-/* 80C3EA90 00000024  4B FF EA E9 */	bl _unresolved
+/* 80C3EA90 00000024  4B 67 F5 68 */	b deleteObject__14Z2SoundObjBaseFv
 lbl_80C3EA94:
 /* 80C3EA94 00000000  38 60 00 01 */	li r3, 1
 /* 80C3EA98 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

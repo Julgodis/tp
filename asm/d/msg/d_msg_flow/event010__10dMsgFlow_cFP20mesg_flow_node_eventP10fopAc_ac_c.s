@@ -19,3 +19,20 @@ lbl_8024C76C:
 /* 8024C7B0 00000044  7C 84 02 2E */	lhzx r4, r4, r0
 /* 8024C7B4 00000048  4B DE 81 D9 */	bl onEventBit__11dSv_event_cFUs
 lbl_8024C7B8:
+/* 8024C7B8 00000000  A0 01 00 0A */	lhz r0, 0xa(r1)
+/* 8024C7BC 00000004  28 00 00 00 */	cmplwi r0, 0
+/* 8024C7C0 00000008  41 82 00 24 */	beq lbl_8024C7E4
+/* 8024C7C4 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8024C7C8 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8024C7CC 00000014  38 63 0D D8 */	addi r3, r3, 0xdd8
+/* 8024C7D0 00000018  54 00 0B FC */	rlwinm r0, r0, 1, 0xf, 0x1e
+/* 8024C7D4 0000001C  3C 80 80 38 */	lis r4, tempBitLabels__20dSv_event_tmp_flag_c@ha
+/* 8024C7D8 00000020  38 84 90 C0 */	addi r4, r4, tempBitLabels__20dSv_event_tmp_flag_c@l
+/* 8024C7DC 00000024  7C 84 02 2E */	lhzx r4, r4, r0
+/* 8024C7E0 00000028  4B DE 81 AD */	bl onEventBit__11dSv_event_cFUs
+lbl_8024C7E4:
+/* 8024C7E4 00000000  38 60 00 01 */	li r3, 1
+/* 8024C7E8 00000004  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 8024C7EC 00000008  7C 08 03 A6 */	mtlr r0
+/* 8024C7F0 0000000C  38 21 00 10 */	addi r1, r1, 0x10
+/* 8024C7F4 00000010  4E 80 00 20 */	blr 

@@ -87,7 +87,7 @@ lbl_8014C134:
 /* 8014C180 0000004C  C0 22 99 DC */	lfs f1, lit_4140(r2)
 /* 8014C184 00000050  4B F0 13 49 */	bl set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8014C188 00000054  7C 7E D9 2E */	stwx r3, r30, r27
-/* 8014C18C 00000058  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
+/* 8014C18C 00000058  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)	/* effective address: 8040BEFC */
 /* 8014C190 0000005C  38 63 02 10 */	addi r3, r3, 0x210
 /* 8014C194 00000060  7C 9E D8 2E */	lwzx r4, r30, r27
 /* 8014C198 00000064  4B EF F7 81 */	bl getEmitter__Q213dPa_control_c7level_cFUl

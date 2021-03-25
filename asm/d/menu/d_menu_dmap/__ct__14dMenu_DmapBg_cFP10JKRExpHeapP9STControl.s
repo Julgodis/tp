@@ -71,8 +71,8 @@ lbl_801B8018:
 /* 801B802C 00000014  7F E3 FB 78 */	mr r3, r31
 /* 801B8030 00000018  48 00 00 E1 */	bl mapScreenInit__14dMenu_DmapBg_cFv
 /* 801B8034 0000001C  38 61 00 10 */	addi r3, r1, 0x10
-/* 801B8038 00000020  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801B803C 00000024  38 84 57 60 */	addi r4, r4, stringBase0@l
+/* 801B8038 00000020  3C 80 80 39 */	lis r4, d_menu_d_menu_dmap__stringBase0@ha
+/* 801B803C 00000024  38 84 57 60 */	addi r4, r4, d_menu_d_menu_dmap__stringBase0@l
 /* 801B8040 00000028  48 1B 0A ED */	bl strcpy
 /* 801B8044 0000002C  38 61 00 08 */	addi r3, r1, 8
 /* 801B8048 00000030  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha

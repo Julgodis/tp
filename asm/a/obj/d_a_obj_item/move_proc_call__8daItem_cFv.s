@@ -10,19 +10,19 @@ lbl_8015CAB8:
 /* 8015CAD8 00000020  88 0D 8A 90 */	lbz r0, data_80451010(r13)
 /* 8015CADC 00000024  7C 00 07 75 */	extsb. r0, r0
 /* 8015CAE0 00000028  40 82 00 40 */	bne lbl_8015CB20
-/* 8015CAE4 0000002C  80 7F 00 0C */	lwz r3, 0xc(r31)
-/* 8015CAE8 00000030  80 1F 00 10 */	lwz r0, 0x10(r31)
-/* 8015CAEC 00000034  90 7F 00 24 */	stw r3, 0x24(r31)
-/* 8015CAF0 00000038  90 1F 00 28 */	stw r0, 0x28(r31)
-/* 8015CAF4 0000003C  80 1F 00 14 */	lwz r0, 0x14(r31)
-/* 8015CAF8 00000040  90 1F 00 2C */	stw r0, 0x2c(r31)
+/* 8015CAE4 0000002C  80 7F 00 0C */	lwz r3, 0xc(r31)	/* effective address: 803B9DAC */
+/* 8015CAE8 00000030  80 1F 00 10 */	lwz r0, 0x10(r31)	/* effective address: 803B9DB0 */
+/* 8015CAEC 00000034  90 7F 00 24 */	stw r3, 0x24(r31)	/* effective address: 803B9DC4 */
+/* 8015CAF0 00000038  90 1F 00 28 */	stw r0, 0x28(r31)	/* effective address: 803B9DC8 */
+/* 8015CAF4 0000003C  80 1F 00 14 */	lwz r0, 0x14(r31)	/* effective address: 803B9DB4 */
+/* 8015CAF8 00000040  90 1F 00 2C */	stw r0, 0x2c(r31)	/* effective address: 803B9DCC */
 /* 8015CAFC 00000044  38 9F 00 24 */	addi r4, r31, 0x24
-/* 8015CB00 00000048  80 7F 00 18 */	lwz r3, 0x18(r31)
-/* 8015CB04 0000004C  80 1F 00 1C */	lwz r0, 0x1c(r31)
-/* 8015CB08 00000050  90 64 00 0C */	stw r3, 0xc(r4)
-/* 8015CB0C 00000054  90 04 00 10 */	stw r0, 0x10(r4)
-/* 8015CB10 00000058  80 1F 00 20 */	lwz r0, 0x20(r31)
-/* 8015CB14 0000005C  90 04 00 14 */	stw r0, 0x14(r4)
+/* 8015CB00 00000048  80 7F 00 18 */	lwz r3, 0x18(r31)	/* effective address: 803B9DB8 */
+/* 8015CB04 0000004C  80 1F 00 1C */	lwz r0, 0x1c(r31)	/* effective address: 803B9DBC */
+/* 8015CB08 00000050  90 64 00 0C */	stw r3, 0xc(r4)	/* effective address: 803B9DD0 */
+/* 8015CB0C 00000054  90 04 00 10 */	stw r0, 0x10(r4)	/* effective address: 803B9DD4 */
+/* 8015CB10 00000058  80 1F 00 20 */	lwz r0, 0x20(r31)	/* effective address: 803B9DC0 */
+/* 8015CB14 0000005C  90 04 00 14 */	stw r0, 0x14(r4)	/* effective address: 803B9DD8 */
 /* 8015CB18 00000060  38 00 00 01 */	li r0, 1
 /* 8015CB1C 00000064  98 0D 8A 90 */	stb r0, data_80451010(r13)
 lbl_8015CB20:

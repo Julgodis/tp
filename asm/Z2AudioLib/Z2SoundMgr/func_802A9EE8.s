@@ -182,8 +182,8 @@ lbl_802AA15C:
 /* 802AA178 0000001C  48 00 00 20 */	b lbl_802AA198
 lbl_802AA17C:
 /* 802AA17C 00000000  38 61 00 28 */	addi r3, r1, 0x28
-/* 802AA180 00000004  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802AA184 00000008  38 84 B9 D0 */	addi r4, r4, stringBase0@l
+/* 802AA180 00000004  3C 80 80 3A */	lis r4, Z2SoundMgr__stringBase0@ha
+/* 802AA184 00000008  38 84 B9 D0 */	addi r4, r4, Z2SoundMgr__stringBase0@l
 /* 802AA188 0000000C  80 BD 00 00 */	lwz r5, 0(r29)
 /* 802AA18C 00000010  4C C6 31 82 */	crclr 6
 /* 802AA190 00000014  48 0B C3 4D */	bl sprintf

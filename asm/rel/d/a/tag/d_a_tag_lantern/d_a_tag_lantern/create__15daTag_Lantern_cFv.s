@@ -11,14 +11,14 @@ lbl_8048ED28:
 /* 8048ED4C 00000024  7F E0 FB 79 */	or. r0, r31, r31
 /* 8048ED50 00000028  41 82 00 28 */	beq lbl_8048ED78
 /* 8048ED54 0000002C  7C 1E 03 78 */	mr r30, r0
-/* 8048ED58 00000030  4B FF FE C1 */	bl _unresolved
-/* 8048ED5C 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8048ED60 00000038  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
+/* 8048ED58 00000030  4B B8 9E 0C */	b __ct__10fopAc_ac_cFv
+/* 8048ED5C 00000034  3C 60 80 49 */	lis r3, __vt__15daTag_Lantern_c@ha
+/* 8048ED60 00000038  38 03 F1 A4 */	addi r0, r3, __vt__15daTag_Lantern_c@l
 /* 8048ED64 0000003C  90 1E 06 08 */	stw r0, 0x608(r30)
 /* 8048ED68 00000040  38 7E 05 68 */	addi r3, r30, 0x568
-/* 8048ED6C 00000044  4B FF FE AD */	bl _unresolved
+/* 8048ED6C 00000044  4B DB B1 94 */	b __ct__10dMsgFlow_cFv
 /* 8048ED70 00000048  38 7E 05 B4 */	addi r3, r30, 0x5b4
-/* 8048ED74 0000004C  4B FF FE A5 */	bl _unresolved
+/* 8048ED74 0000004C  4B DD 8E A8 */	b __ct__11cBgS_GndChkFv
 lbl_8048ED78:
 /* 8048ED78 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 8048ED7C 00000004  60 00 00 08 */	ori r0, r0, 8

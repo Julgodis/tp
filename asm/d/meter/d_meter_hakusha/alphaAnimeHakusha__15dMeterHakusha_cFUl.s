@@ -30,8 +30,8 @@ lbl_8020CC58:
 /* 8020CCC8 00000070  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020CCCC 00000074  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8020CCD0 00000078  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 8020CCD4 0000007C  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8020CCD8 00000080  38 84 81 B0 */	addi r4, r4, stringBase0@l
+/* 8020CCD4 0000007C  3C 80 80 3A */	lis r4, d_meter_d_meter_hakusha__stringBase0@ha
+/* 8020CCD8 00000080  38 84 81 B0 */	addi r4, r4, d_meter_d_meter_hakusha__stringBase0@l
 /* 8020CCDC 00000084  38 84 00 4E */	addi r4, r4, 0x4e
 /* 8020CCE0 00000088  48 15 BC B5 */	bl strcmp
 /* 8020CCE4 0000008C  2C 03 00 00 */	cmpwi r3, 0
@@ -57,7 +57,7 @@ lbl_8020CD18:
 lbl_8020CD2C:
 /* 8020CD2C 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8020CD30 00000004  48 00 05 D9 */	bl setAlphaHakushaAnimeMax__15dMeterHakusha_cFv
-/* 8020CD34 00000008  88 1E 5E 24 */	lbz r0, 0x5e24(r30)
+/* 8020CD34 00000008  88 1E 5E 24 */	lbz r0, 0x5e24(r30)	/* effective address: 8040BFE4 */
 /* 8020CD38 0000000C  28 00 00 09 */	cmplwi r0, 9
 /* 8020CD3C 00000010  40 82 00 10 */	bne lbl_8020CD4C
 /* 8020CD40 00000014  7F E3 FB 78 */	mr r3, r31

@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct J3DMaterialBlock {
-};
-
 struct J3DMaterial {
 	/* 803157A0 */ void createColorBlock(u32);
 	/* 803159A0 */ void createTexGenBlock(u32);
@@ -27,6 +24,9 @@ struct J3DMaterial {
 	/* 803161D8 */ void calcSizePEBlock(u32, u32);
 	/* 80316240 */ void initialize();
 	/* 80332B94 */ ~J3DMaterial();
+};
+
+struct J3DMaterialBlock {
 };
 
 struct J3DMaterialDLBlock {
@@ -85,15 +85,12 @@ struct J3DPEBlockNull {
 	/* 803329B0 */ ~J3DPEBlockNull();
 };
 
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
+struct J3DGXColor {
+	/* 8000E538 */ J3DGXColor();
 };
 
 struct J3DIndTevStage {
 	/* 8000E14C */ J3DIndTevStage();
-};
-
-struct J3DTevSwapModeInfo {
 };
 
 struct J3DTevStageInfo {
@@ -104,15 +101,18 @@ struct J3DTevStage {
 	/* 8003AACC */ J3DTevStage(J3DTevStageInfo const&);
 };
 
-struct J3DTevSwapModeTable {
-};
-
 struct J3DTevOrder {
 	/* 8000E140 */ J3DTevOrder();
 };
 
-struct J3DGXColor {
-	/* 8000E538 */ J3DGXColor();
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
+};
+
+struct J3DTevSwapModeTable {
+};
+
+struct J3DTevSwapModeInfo {
 };
 
 struct J3DTevBlock {
@@ -198,13 +198,13 @@ struct J3DColorBlockNull {
 struct J3DAlphaComp {
 };
 
-struct J3DBlend {
+struct J3DFog {
 };
 
 struct J3DZMode {
 };
 
-struct J3DFog {
+struct J3DBlend {
 };
 
 struct J3DPEBlock {
@@ -236,10 +236,10 @@ struct J3DPEBlock {
 	/* 80317394 */ void setFogOffset(u32);
 };
 
-struct J3DLightObj {
+struct J3DColorChan {
 };
 
-struct J3DColorChan {
+struct J3DLightObj {
 };
 
 struct J3DColorBlock {
@@ -277,10 +277,10 @@ struct J3DColorBlock {
 	/* 80317478 */ void setColorChanOffset(u32);
 };
 
-struct J3DNBTScale {
+struct J3DTexMtx {
 };
 
-struct J3DTexMtx {
+struct J3DNBTScale {
 };
 
 struct J3DTexCoord {

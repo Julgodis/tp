@@ -10,8 +10,8 @@ lbl_801DDA74:
 /* 801DDA94 00000020  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 801DDA98 00000024  28 00 00 00 */	cmplwi r0, 0
 /* 801DDA9C 00000028  40 82 00 1C */	bne lbl_801DDAB8
-/* 801DDAA0 0000002C  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801DDAA4 00000030  38 63 6D C0 */	addi r3, r3, stringBase0@l
+/* 801DDAA0 0000002C  3C 60 80 39 */	lis r3, d_menu_d_menu_letter__stringBase0@ha
+/* 801DDAA4 00000030  38 63 6D C0 */	addi r3, r3, d_menu_d_menu_letter__stringBase0@l
 /* 801DDAA8 00000034  38 80 00 00 */	li r4, 0
 /* 801DDAAC 00000038  38 A0 00 00 */	li r5, 0
 /* 801DDAB0 0000003C  4B E3 83 65 */	bl create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap
@@ -60,7 +60,7 @@ lbl_801DDB20:
 /* 801DDB4C 0000002C  3B 60 00 00 */	li r27, 0
 /* 801DDB50 00000030  3B C0 00 00 */	li r30, 0
 lbl_801DDB54:
-/* 801DDB54 00000000  C0 1D 07 40 */	lfs f0, 0x740(r29)
+/* 801DDB54 00000000  C0 1D 07 40 */	lfs f0, 0x740(r29)	/* effective address: 8042F308 */
 /* 801DDB58 00000004  3B 9E 02 B8 */	addi r28, r30, 0x2b8
 /* 801DDB5C 00000008  7C 7F E0 2E */	lwzx r3, r31, r28
 /* 801DDB60 0000000C  80 63 00 04 */	lwz r3, 4(r3)
@@ -108,7 +108,7 @@ lbl_801DDBD0:
 /* 801DDC04 00000034  3B 60 00 00 */	li r27, 0
 /* 801DDC08 00000038  3B C0 00 00 */	li r30, 0
 lbl_801DDC0C:
-/* 801DDC0C 00000000  C0 1D 07 40 */	lfs f0, 0x740(r29)
+/* 801DDC0C 00000000  C0 1D 07 40 */	lfs f0, 0x740(r29)	/* effective address: 8042F308 */
 /* 801DDC10 00000004  EC 00 07 F2 */	fmuls f0, f0, f31
 /* 801DDC14 00000008  3B 9E 02 B8 */	addi r28, r30, 0x2b8
 /* 801DDC18 0000000C  7C 7F E0 2E */	lwzx r3, r31, r28

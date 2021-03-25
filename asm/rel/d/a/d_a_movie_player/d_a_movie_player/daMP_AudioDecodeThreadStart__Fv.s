@@ -2,13 +2,13 @@ lbl_808764E8:
 /* 808764E8 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 808764EC 00000004  7C 08 02 A6 */	mflr r0
 /* 808764F0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 808764F4 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 808764F8 00000010  80 03 00 00 */	lwz r0, 0x0000(r3)
+/* 808764F4 0000000C  3C 60 80 8E */	lis r3, daMP_AudioDecodeThreadCreated@ha
+/* 808764F8 00000010  80 03 05 14 */	lwz r0, daMP_AudioDecodeThreadCreated@l(r3)
 /* 808764FC 00000014  2C 00 00 00 */	cmpwi r0, 0
 /* 80876500 00000018  41 82 00 10 */	beq lbl_80876510
-/* 80876504 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80876508 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 8087650C 00000024  4B FF C2 2D */	bl _unresolved
+/* 80876504 0000001C  3C 60 80 8E */	lis r3, daMP_AudioDecodeThread@ha
+/* 80876508 00000020  38 63 05 18 */	addi r3, r3, daMP_AudioDecodeThread@l
+/* 8087650C 00000024  4B AC B2 A8 */	b OSResumeThread
 lbl_80876510:
 /* 80876510 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80876514 00000004  7C 08 03 A6 */	mtlr r0

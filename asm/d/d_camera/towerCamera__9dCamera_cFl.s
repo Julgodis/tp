@@ -625,8 +625,8 @@ lbl_80177754:
 /* 8017775C 00000008  41 82 00 3C */	beq lbl_80177798
 /* 80177760 0000000C  7F 03 C3 78 */	mr r3, r24
 /* 80177764 00000010  38 81 01 50 */	addi r4, r1, 0x150
-/* 80177768 00000014  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 8017776C 00000018  38 A5 3F 68 */	addi r5, r5, stringBase0@l
+/* 80177768 00000014  3C A0 80 39 */	lis r5, d_d_camera__stringBase0@ha
+/* 8017776C 00000018  38 A5 3F 68 */	addi r5, r5, d_d_camera__stringBase0@l
 /* 80177770 0000001C  38 A5 01 A0 */	addi r5, r5, 0x1a0
 /* 80177774 00000020  38 C0 00 14 */	li r6, 0x14
 /* 80177778 00000024  4B F1 19 15 */	bl getEvIntData__9dCamera_cFPiPci

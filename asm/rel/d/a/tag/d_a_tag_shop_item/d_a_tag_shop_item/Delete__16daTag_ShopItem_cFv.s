@@ -15,18 +15,18 @@ lbl_80D60D78:
 /* 80D60DAC 00000034  7F C3 F3 78 */	mr r3, r30
 /* 80D60DB0 00000038  48 00 02 95 */	bl getSwitchBit1__16daTag_ShopItem_cFv
 /* 80D60DB4 0000003C  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 80D60DB8 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D60DBC 00000044  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D60DB8 00000040  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D60DBC 00000044  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D60DC0 00000048  3B E3 09 58 */	addi r31, r3, 0x958
 /* 80D60DC4 0000004C  7F E3 FB 78 */	mr r3, r31
-/* 80D60DC8 00000050  4B FF FD 91 */	bl _unresolved
+/* 80D60DC8 00000050  4B 2D 3A 98 */	b isSwitch__12dSv_memBit_cCFi
 /* 80D60DCC 00000054  2C 03 00 00 */	cmpwi r3, 0
 /* 80D60DD0 00000058  41 82 00 18 */	beq lbl_80D60DE8
 /* 80D60DD4 0000005C  7F C3 F3 78 */	mr r3, r30
 /* 80D60DD8 00000060  48 00 02 79 */	bl getSwitchBit2__16daTag_ShopItem_cFv
 /* 80D60DDC 00000064  54 64 06 3E */	clrlwi r4, r3, 0x18
 /* 80D60DE0 00000068  7F E3 FB 78 */	mr r3, r31
-/* 80D60DE4 0000006C  4B FF FD 75 */	bl _unresolved
+/* 80D60DE4 0000006C  4B 2D 3A 54 */	b offSwitch__12dSv_memBit_cFi
 lbl_80D60DE8:
 /* 80D60DE8 00000000  38 60 00 01 */	li r3, 1
 /* 80D60DEC 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

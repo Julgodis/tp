@@ -36,7 +36,7 @@ lbl_80C2C9BC:
 /* 80C2C9BC 00000000  4B FF F6 2D */	bl MoveAction__13daObjKABUTO_cFv
 lbl_80C2C9C0:
 /* 80C2C9C0 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80C2C9C4 00000004  4B FF E4 15 */	bl _unresolved
+/* 80C2C9C4 00000004  4B 53 16 B4 */	b Insect_GetDemoMain__9dInsect_cFv
 /* 80C2C9C8 00000008  3C 60 00 06 */	lis r3, 0x0006 /* 0x000600A3@ha */
 /* 80C2C9CC 0000000C  38 03 00 A3 */	addi r0, r3, 0x00A3 /* 0x000600A3@l */
 /* 80C2C9D0 00000010  90 01 00 08 */	stw r0, 8(r1)

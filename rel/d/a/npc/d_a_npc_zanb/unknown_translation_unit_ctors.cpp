@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80B6BCB0[8];
+extern void* data_80B6BCB0[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_npc_zanb_cpp(); // 1
 
 // 
 // Declarations:

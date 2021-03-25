@@ -5,14 +5,14 @@ lbl_8061E4F0:
 /* 8061E4FC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8061E500 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8061E504 00000014  38 7F 05 AC */	addi r3, r31, 0x5ac
-/* 8061E508 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8061E50C 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 8061E510 00000020  4B FF F7 89 */	bl _unresolved
+/* 8061E508 00000018  3C 80 80 62 */	lis r4, stringBase0@ha
+/* 8061E50C 0000001C  38 84 EA 84 */	addi r4, r4, stringBase0@l
+/* 8061E510 00000020  4B A0 EA F8 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 8061E514 00000024  80 1F 00 F0 */	lwz r0, 0xf0(r31)
 /* 8061E518 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 8061E51C 0000002C  41 82 00 0C */	beq lbl_8061E528
 /* 8061E520 00000030  80 7F 05 B4 */	lwz r3, 0x5b4(r31)
-/* 8061E524 00000034  4B FF F7 75 */	bl _unresolved
+/* 8061E524 00000034  4B 9F 2D EC */	b stopZelAnime__16mDoExt_McaMorfSOFv
 lbl_8061E528:
 /* 8061E528 00000000  38 60 00 01 */	li r3, 1
 /* 8061E52C 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

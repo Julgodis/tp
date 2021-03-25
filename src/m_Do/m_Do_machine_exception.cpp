@@ -52,7 +52,7 @@ extern "C" static void dispGameInfo__Fv(); // 1
 extern "C" static void dispDateInfo__Fv(); // 1
 extern "C" static void dispConsoleToTerminal__Fv(); // 1
 extern "C" void exception_addition__FP10JUTConsole(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const m_Do_m_Do_machine_exception__stringBase0;
 extern "C" extern u8 struct_80450C98[4];
 extern "C" extern u8 struct_80450C9C[4];
 
@@ -202,9 +202,9 @@ asm void exception_addition(JUTConsole* param_0) {
 
 
 /* ############################################################################################## */
-/* 80450C98-80450C9C 0004+00 s=0 e=0 z=0  None .sbss      None                                                         */
+/* 80450C98-80450C9C 0004+00 s=0 e=0 z=50  None .sbss      None                                                         */
 u8 struct_80450C98[4];
 
-/* 80450C9C-80450CA0 0004+00 s=0 e=0 z=0  None .sbss      None                                                         */
+/* 80450C9C-80450CA0 0004+00 s=0 e=0 z=6  None .sbss      None                                                         */
 u8 struct_80450C9C[4];
 

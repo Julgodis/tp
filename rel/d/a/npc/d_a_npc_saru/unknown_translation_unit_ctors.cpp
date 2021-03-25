@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80AC44E4[8];
+extern void* data_80AC44E4[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_npc_saru_cpp(); // 1
 
 // 
 // Declarations:

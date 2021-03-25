@@ -17,7 +17,7 @@ lbl_80CC2184:
 /* 80CC2190 0000000C  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 80CC2194 00000010  38 E0 00 00 */	li r7, 0
 /* 80CC2198 00000014  39 00 00 01 */	li r8, 1
-/* 80CC219C 00000018  4B FF F3 9D */	bl _unresolved
+/* 80CC219C 00000018  4B 35 94 E0 */	b fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
 /* 80CC21A0 0000001C  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 80CC21A4 00000020  60 00 00 02 */	ori r0, r0, 2
 /* 80CC21A8 00000024  B0 1F 00 FA */	sth r0, 0xfa(r31)

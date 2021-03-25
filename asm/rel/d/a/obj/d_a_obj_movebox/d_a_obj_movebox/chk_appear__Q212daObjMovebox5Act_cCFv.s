@@ -19,11 +19,11 @@ lbl_8047F56C:
 /* 8047F56C 00000000  7F C3 F3 78 */	mr r3, r30
 /* 8047F570 00000004  4B FF F0 B9 */	bl prm_get_swSave1__Q212daObjMovebox5Act_cCFv
 /* 8047F574 00000008  7C 64 1B 78 */	mr r4, r3
-/* 8047F578 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8047F57C 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 8047F578 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8047F57C 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8047F580 00000014  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 8047F584 00000018  7C 05 07 74 */	extsb r5, r0
-/* 8047F588 0000001C  4B FF E4 D1 */	bl _unresolved
+/* 8047F588 0000001C  4B BB 5D D8 */	b isSwitch__10dSv_info_cCFii
 /* 8047F58C 00000020  30 03 FF FF */	addic r0, r3, -1
 /* 8047F590 00000024  7C 00 19 10 */	subfe r0, r0, r3
 /* 8047F594 00000028  54 00 06 3F */	clrlwi. r0, r0, 0x18

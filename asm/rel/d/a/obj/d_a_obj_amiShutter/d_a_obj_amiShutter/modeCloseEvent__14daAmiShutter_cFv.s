@@ -5,8 +5,8 @@ lbl_80BA1E60:
 /* 80BA1E6C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BA1E70 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80BA1E74 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80BA1E78 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BA1E7C 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80BA1E78 00000018  3C 60 80 BA */	lis r3, lit_3655@ha
+/* 80BA1E7C 0000001C  3B E3 23 90 */	addi r31, r3, lit_3655@l
 /* 80BA1E80 00000020  88 7E 05 D8 */	lbz r3, 0x5d8(r30)
 /* 80BA1E84 00000024  28 03 00 00 */	cmplwi r3, 0
 /* 80BA1E88 00000028  41 82 00 10 */	beq lbl_80BA1E98
@@ -16,13 +16,13 @@ lbl_80BA1E60:
 lbl_80BA1E98:
 /* 80BA1E98 00000000  38 7E 04 D8 */	addi r3, r30, 0x4d8
 /* 80BA1E9C 00000004  C0 3E 05 C8 */	lfs f1, 0x5c8(r30)
-/* 80BA1EA0 00000008  C0 5F 00 40 */	lfs f2, 0x40(r31)
-/* 80BA1EA4 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80BA1EA8 00000010  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80BA1EAC 00000014  C0 64 00 08 */	lfs f3, 8(r4)
-/* 80BA1EB0 00000018  C0 9F 00 34 */	lfs f4, 0x34(r31)
-/* 80BA1EB4 0000001C  4B FF F5 85 */	bl _unresolved
-/* 80BA1EB8 00000020  C0 1F 00 10 */	lfs f0, 0x10(r31)
+/* 80BA1EA0 00000008  C0 5F 00 40 */	lfs f2, 0x40(r31)	/* effective address: 80BA23D0 */
+/* 80BA1EA4 0000000C  3C 80 80 BA */	lis r4, l_HIO@ha
+/* 80BA1EA8 00000010  38 84 25 6C */	addi r4, r4, l_HIO@l
+/* 80BA1EAC 00000014  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80BA2574 */
+/* 80BA1EB0 00000018  C0 9F 00 34 */	lfs f4, 0x34(r31)	/* effective address: 80BA23C4 */
+/* 80BA1EB4 0000001C  4B 6C DA C8 */	b cLib_addCalc__FPfffff
+/* 80BA1EB8 00000020  C0 1F 00 10 */	lfs f0, 0x10(r31)	/* effective address: 80BA23A0 */
 /* 80BA1EBC 00000024  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80BA1EC0 00000028  40 82 00 14 */	bne lbl_80BA1ED4
 /* 80BA1EC4 0000002C  38 00 00 00 */	li r0, 0

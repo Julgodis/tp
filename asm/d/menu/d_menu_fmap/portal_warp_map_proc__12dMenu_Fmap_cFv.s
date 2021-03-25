@@ -15,9 +15,9 @@ lbl_801C8C0C:
 /* 801C8C40 00000034  A0 03 00 B2 */	lhz r0, 0xb2(r3)	/* effective address: 8043023A */
 /* 801C8C44 00000038  54 00 04 E7 */	rlwinm. r0, r0, 0, 0x13, 0x13
 /* 801C8C48 0000003C  40 82 00 3C */	bne lbl_801C8C84
-/* 801C8C4C 00000040  80 63 00 1C */	lwz r3, 0x1c(r3)
-/* 801C8C50 00000044  80 63 01 0C */	lwz r3, 0x10c(r3)
-/* 801C8C54 00000048  88 03 07 72 */	lbz r0, 0x772(r3)
+/* 801C8C4C 00000040  80 63 00 1C */	lwz r3, 0x1c(r3)	/* effective address: 804301A4 */
+/* 801C8C50 00000044  80 63 01 0C */	lwz r3, 0x10c(r3)	/* effective address: 80430294 */
+/* 801C8C54 00000048  88 03 07 72 */	lbz r0, 0x772(r3)	/* effective address: 804308FA */
 /* 801C8C58 0000004C  28 00 00 01 */	cmplwi r0, 1
 /* 801C8C5C 00000050  41 82 00 28 */	beq lbl_801C8C84
 /* 801C8C60 00000054  7F C3 F3 78 */	mr r3, r30
@@ -38,9 +38,9 @@ lbl_801C8C84:
 /* 801C8C98 00000014  A0 03 00 B2 */	lhz r0, 0xb2(r3)	/* effective address: 8043023A */
 /* 801C8C9C 00000018  54 00 04 E7 */	rlwinm. r0, r0, 0, 0x13, 0x13
 /* 801C8CA0 0000001C  40 82 03 50 */	bne lbl_801C8FF0
-/* 801C8CA4 00000020  80 63 00 1C */	lwz r3, 0x1c(r3)
-/* 801C8CA8 00000024  80 63 01 0C */	lwz r3, 0x10c(r3)
-/* 801C8CAC 00000028  88 03 07 72 */	lbz r0, 0x772(r3)
+/* 801C8CA4 00000020  80 63 00 1C */	lwz r3, 0x1c(r3)	/* effective address: 804301A4 */
+/* 801C8CA8 00000024  80 63 01 0C */	lwz r3, 0x10c(r3)	/* effective address: 80430294 */
+/* 801C8CAC 00000028  88 03 07 72 */	lbz r0, 0x772(r3)	/* effective address: 804308FA */
 /* 801C8CB0 0000002C  28 00 00 01 */	cmplwi r0, 1
 /* 801C8CB4 00000030  41 82 03 3C */	beq lbl_801C8FF0
 /* 801C8CB8 00000034  88 1E 03 08 */	lbz r0, 0x308(r30)
@@ -119,8 +119,8 @@ lbl_801C8DC8:
 /* 801C8DD4 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801C8DD8 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 801C8DDC 00000014  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 801C8DE0 00000018  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801C8DE4 0000001C  38 84 60 E8 */	addi r4, r4, stringBase0@l
+/* 801C8DE0 00000018  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap__stringBase0@ha
+/* 801C8DE4 0000001C  38 84 60 E8 */	addi r4, r4, d_menu_d_menu_fmap__stringBase0@l
 /* 801C8DE8 00000020  38 84 00 1E */	addi r4, r4, 0x1e
 /* 801C8DEC 00000024  48 19 FB A9 */	bl strcmp
 /* 801C8DF0 00000028  2C 03 00 00 */	cmpwi r3, 0

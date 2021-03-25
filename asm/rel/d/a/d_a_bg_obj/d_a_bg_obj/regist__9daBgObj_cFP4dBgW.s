@@ -5,10 +5,10 @@ lbl_80459BB4:
 /* 80459BC0 0000000C  7C 65 1B 78 */	mr r5, r3
 /* 80459BC4 00000010  28 04 00 00 */	cmplwi r4, 0
 /* 80459BC8 00000014  41 82 00 14 */	beq lbl_80459BDC
-/* 80459BCC 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80459BD0 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80459BCC 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80459BD0 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80459BD4 00000020  38 63 0F 38 */	addi r3, r3, 0xf38
-/* 80459BD8 00000024  4B FF FA 61 */	bl _unresolved
+/* 80459BD8 00000024  4B C1 AE 30 */	b Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c
 lbl_80459BDC:
 /* 80459BDC 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80459BE0 00000004  7C 08 03 A6 */	mtlr r0

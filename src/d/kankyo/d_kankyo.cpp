@@ -31,11 +31,11 @@ struct J3DLightInfo {
 struct _GXColor {
 };
 
-struct dKy_tevstr_c {
-};
-
 struct J3DModelData {
 	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -98,10 +98,10 @@ struct color_RGB_class {
 struct J3DMaterial {
 };
 
-struct J3DLightObj {
+struct J3DGXColor {
 };
 
-struct J3DGXColor {
+struct J3DLightObj {
 };
 
 struct J3DColorBlock {
@@ -336,11 +336,11 @@ void dKy_bg1_addcol_amb_set(s16, s16, s16, f32); // 2
 static void dKy_bg2_addcol_amb_set(s16, s16, s16, f32); // 2
 static void dKy_bg3_addcol_amb_set(s16, s16, s16, f32); // 2
 void dKy_addcol_fog_set(s16, s16, s16, f32); // 2
-static void dKy_actor_addcol_set(s16, s16, s16, f32); // 2
+void dKy_actor_addcol_set(s16, s16, s16, f32); // 2
 void dKy_vrbox_addcol_sky0_set(s16, s16, s16, f32); // 2
 void dKy_vrbox_addcol_kasumi_set(s16, s16, s16, f32); // 2
 static void dKy_vrbox_addcol_set(s16, s16, s16, f32); // 2
-static void dKy_fog_startendz_set(f32, f32, f32); // 2
+void dKy_fog_startendz_set(f32, f32, f32); // 2
 void dKy_Itemgetcol_chg_on(); // 2
 static void dKy_Sound_init(); // 2
 void dKy_Sound_set(cXyz, int, unsigned int, int); // 2
@@ -373,7 +373,7 @@ static void NewAmbColGet(_GXColorS10*); // 2
 static void dKy_ParticleColor_get_base(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32); // 2
 void dKy_ParticleColor_get_actor(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32); // 2
 void dKy_ParticleColor_get_bg(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32); // 2
-static void dKy_BossLight_set(cXyz*, _GXColor*, f32, u8); // 2
+void dKy_BossLight_set(cXyz*, _GXColor*, f32, u8); // 2
 void dKy_BossSpotLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8); // 2
 void dKy_WolfEyeLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8); // 2
 static void dKy_twilight_camelight_set(); // 2
@@ -393,7 +393,7 @@ void dKy_pol_eff_ratio_get(cBgS_PolyInfo const*); // 2
 void dKy_pol_eff2_alpha_get(cBgS_PolyInfo const*); // 2
 void dKy_pol_eff2_ratio_get(cBgS_PolyInfo const*); // 2
 void dKy_TeachWind_existence_chk(); // 2
-static void dKy_SunMoon_Light_Check(); // 2
+void dKy_SunMoon_Light_Check(); // 2
 static void dKy_Outdoor_check(); // 2
 static void dKy_Indoor_check(); // 2
 void dKy_withwarp_capture_check(); // 2
@@ -406,7 +406,7 @@ void dKy_darkworld_Area_set(char const*, int); // 2
 static void dKy_murky_set(J3DMaterial*); // 2
 void dKy_shadow_mode_set(u8); // 2
 void dKy_shadow_mode_reset(u8); // 2
-static void dKy_shadow_mode_check(u8); // 2
+void dKy_shadow_mode_check(u8); // 2
 void dKy_bg_MAxx_proc(void*); // 2
 static void dKankyo_DayProc(); // 2
 
@@ -523,11 +523,11 @@ extern "C" void dKy_bg1_addcol_amb_set__Fsssf(); // 1
 extern "C" static void dKy_bg2_addcol_amb_set__Fsssf(); // 1
 extern "C" static void dKy_bg3_addcol_amb_set__Fsssf(); // 1
 extern "C" void dKy_addcol_fog_set__Fsssf(); // 1
-extern "C" static void dKy_actor_addcol_set__Fsssf(); // 1
+extern "C" void dKy_actor_addcol_set__Fsssf(); // 1
 extern "C" void dKy_vrbox_addcol_sky0_set__Fsssf(); // 1
 extern "C" void dKy_vrbox_addcol_kasumi_set__Fsssf(); // 1
 extern "C" static void dKy_vrbox_addcol_set__Fsssf(); // 1
-extern "C" static void dKy_fog_startendz_set__Ffff(); // 1
+extern "C" void dKy_fog_startendz_set__Ffff(); // 1
 extern "C" void dKy_Itemgetcol_chg_on__Fv(); // 1
 extern "C" static void dKy_Sound_init__Fv(); // 1
 extern "C" void dKy_Sound_set__F4cXyziUii(); // 1
@@ -560,7 +560,7 @@ extern "C" static void NewAmbColGet__FP11_GXColorS10(); // 1
 extern "C" static void dKy_ParticleColor_get_base__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf(); // 1
 extern "C" void dKy_ParticleColor_get_actor__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf(); // 1
 extern "C" void dKy_ParticleColor_get_bg__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf(); // 1
-extern "C" static void dKy_BossLight_set__FP4cXyzP8_GXColorfUc(); // 1
+extern "C" void dKy_BossLight_set__FP4cXyzP8_GXColorfUc(); // 1
 extern "C" void dKy_BossSpotLight_set__FP4cXyzfffP8_GXColorfUcUc(); // 1
 extern "C" void dKy_WolfEyeLight_set__FP4cXyzfffP8_GXColorfUcUc(); // 1
 extern "C" static void dKy_twilight_camelight_set__Fv(); // 1
@@ -580,7 +580,7 @@ extern "C" void dKy_pol_eff_ratio_get__FPC13cBgS_PolyInfo(); // 1
 extern "C" void dKy_pol_eff2_alpha_get__FPC13cBgS_PolyInfo(); // 1
 extern "C" void dKy_pol_eff2_ratio_get__FPC13cBgS_PolyInfo(); // 1
 extern "C" void dKy_TeachWind_existence_chk__Fv(); // 1
-extern "C" static void dKy_SunMoon_Light_Check__Fv(); // 1
+extern "C" void dKy_SunMoon_Light_Check__Fv(); // 1
 extern "C" static void dKy_Outdoor_check__Fv(); // 1
 extern "C" static void dKy_Indoor_check__Fv(); // 1
 extern "C" void dKy_withwarp_capture_check__Fv(); // 1
@@ -593,12 +593,12 @@ extern "C" void dKy_darkworld_Area_set__FPCci(); // 1
 extern "C" static void dKy_murky_set__FP11J3DMaterial(); // 1
 extern "C" void dKy_shadow_mode_set__FUc(); // 1
 extern "C" void dKy_shadow_mode_reset__FUc(); // 1
-extern "C" static void dKy_shadow_mode_check__FUc(); // 1
+extern "C" void dKy_shadow_mode_check__FUc(); // 1
 extern "C" void dKy_bg_MAxx_proc__FPv(); // 1
 extern "C" void __dt__18dScnKy_env_light_cFv(); // 1
 extern "C" void __sinit_d_kankyo_cpp(); // 1
 extern "C" static void dKankyo_DayProc__Fv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_kankyo_d_kankyo__stringBase0;
 extern "C" extern u8 data_803BC070[16];
 extern "C" extern u8 data_803BC080[16];
 extern "C" extern u8 data_803BC090[16];
@@ -607,7 +607,6 @@ extern "C" extern u8 g_env_light[4880];
 extern "C" extern u8 lit_4113[12];
 extern "C" extern u8 g_mEnvSeMgr[780];
 extern "C" extern u8 lit_7485[12];
-extern "C" extern u8 data_8042E7C8[12];
 extern "C" extern u8 lit_7489[12];
 extern "C" extern u8 data_8042E7E0[12 + 4 /* padding */];
 extern "C" extern u8 struct_80451070[8];
@@ -1118,7 +1117,7 @@ asm static void dKy_pos2_get_angle(cXyz* param_0, cXyz* param_1, s16* param_2, s
 /* 8042CA48-8042CA54 000C+00 s=2 e=0 z=0  None .bss       @4112                                                        */
 static u8 lit_4112[12];
 
-/* 8042CA54-8042DD64 1310+00 s=116 e=128 z=0  None .bss       g_env_light                                                  */
+/* 8042CA54-8042DD64 1310+00 s=116 e=128 z=649  None .bss       g_env_light                                                  */
 u8 g_env_light[4880];
 
 /* 80453C28-80453C2C 0004+00 s=1 e=0 z=0  None .sdata2    @4441                                                        */
@@ -1309,7 +1308,7 @@ asm static void get_parcent(f32 param_0, f32 param_1, f32 param_2) {
 #pragma pop
 
 
-/* 8019D8AC-8019D8CC 0020+00 s=0 e=1 z=0  None .text      dKy_get_parcent__Ffff                                        */
+/* 8019D8AC-8019D8CC 0020+00 s=0 e=1 z=1  None .text      dKy_get_parcent__Ffff                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1687,7 +1686,7 @@ SECTION_DATA static void* l_dKy_Method[5] = {
 	/* 4    */ (void*)dKy_Draw__FP17sub_kankyo__class,
 };
 
-/* 803BC0B4-803BC0DC 0028+00 s=0 e=0 z=0  None .data      g_profile_KANKYO                                             */
+/* 803BC0B4-803BC0DC 0028+00 s=0 e=0 z=1  None .data      g_profile_KANKYO                                             */
 SECTION_DATA void* g_profile_KANKYO[10] = {
 	/* 0    */ (void*)0xFFFFFFFD,
 	/* 1    */ (void*)0x0001FFFD,
@@ -1885,7 +1884,7 @@ asm void dScnKy_env_light_c::setSunpos() {
 #pragma pop
 
 
-/* 8019FA08-8019FA10 0008+00 s=3 e=5 z=0  None .text      getDaytime__18dScnKy_env_light_cFv                           */
+/* 8019FA08-8019FA10 0008+00 s=3 e=5 z=1  None .text      getDaytime__18dScnKy_env_light_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1896,7 +1895,7 @@ asm void dScnKy_env_light_c::getDaytime() {
 #pragma pop
 
 
-/* 8019FA10-8019FA3C 002C+00 s=2 e=2 z=0  None .text      dKy_getdaytime_hour__Fv                                      */
+/* 8019FA10-8019FA3C 002C+00 s=2 e=2 z=32  None .text      dKy_getdaytime_hour__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1907,7 +1906,7 @@ asm void dKy_getdaytime_hour() {
 #pragma pop
 
 
-/* 8019FA3C-8019FAB8 007C+00 s=1 e=1 z=0  None .text      dKy_getdaytime_minute__Fv                                    */
+/* 8019FA3C-8019FAB8 007C+00 s=1 e=1 z=26  None .text      dKy_getdaytime_minute__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1918,7 +1917,7 @@ asm void dKy_getdaytime_minute() {
 #pragma pop
 
 
-/* 8019FAB8-8019FAF4 003C+00 s=0 e=3 z=0  None .text      dKy_daynight_check__Fv                                       */
+/* 8019FAB8-8019FAF4 003C+00 s=0 e=3 z=6  None .text      dKy_daynight_check__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1929,7 +1928,7 @@ asm void dKy_daynight_check() {
 #pragma pop
 
 
-/* 8019FAF4-8019FB30 003C+00 s=0 e=0 z=0  None .text      dKy_getDarktime_hour__Fv                                     */
+/* 8019FAF4-8019FB30 003C+00 s=0 e=0 z=22  None .text      dKy_getDarktime_hour__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1940,7 +1939,7 @@ asm void dKy_getDarktime_hour() {
 #pragma pop
 
 
-/* 8019FB30-8019FBBC 008C+00 s=0 e=0 z=0  None .text      dKy_getDarktime_minute__Fv                                   */
+/* 8019FB30-8019FBBC 008C+00 s=0 e=0 z=19  None .text      dKy_getDarktime_minute__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1951,7 +1950,7 @@ asm void dKy_getDarktime_minute() {
 #pragma pop
 
 
-/* 8019FBBC-8019FBCC 0010+00 s=0 e=0 z=0  None .text      dKy_getDarktime_week__Fv                                     */
+/* 8019FBBC-8019FBCC 0010+00 s=0 e=0 z=8  None .text      dKy_getDarktime_week__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2163,7 +2162,7 @@ asm void dScnKy_env_light_c::settingTevStruct_plightcol_plus(cXyz* param_0, dKy_
 /* 8042DD64-8042DD70 000C+00 s=0 e=0 z=0  None .bss       @4113                                                        */
 u8 lit_4113[12];
 
-/* 8042DD70-8042E07C 030C+00 s=1 e=8 z=0  None .bss       g_mEnvSeMgr                                                  */
+/* 8042DD70-8042E07C 030C+00 s=1 e=8 z=9  None .bss       g_mEnvSeMgr                                                  */
 u8 g_mEnvSeMgr[780];
 
 /* 8042E07C-8042E7BC 0740+00 s=5 e=0 z=0  None .bss       lightStatusData                                              */
@@ -2220,7 +2219,7 @@ SECTION_SDATA2 static f32 lit_7026 = 9.0f / 10.0f;
 /* 80453D8C-80453D90 0004+00 s=2 e=0 z=0  None .sdata2    @7027                                                        */
 SECTION_SDATA2 static f32 lit_7027 = 6.0f / 5.0f;
 
-/* 801A37C4-801A441C 0C58+00 s=2 e=14 z=0  None .text      settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c */
+/* 801A37C4-801A441C 0C58+00 s=2 e=14 z=515  None .text      settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2231,7 +2230,7 @@ asm void dScnKy_env_light_c::settingTevStruct(int param_0, cXyz* param_1, dKy_te
 #pragma pop
 
 
-/* 801A441C-801A4420 0004+00 s=0 e=0 z=0  None .text      setLightTevColorType__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c */
+/* 801A441C-801A4420 0004+00 s=0 e=0 z=2  None .text      setLightTevColorType__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2293,7 +2292,7 @@ asm static void dKy_cloudshadow_scroll(J3DModelData* param_0, dKy_tevstr_c* para
 #pragma pop
 
 
-/* 801A4DA0-801A4E90 00F0+00 s=0 e=18 z=0  None .text      setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c */
+/* 801A4DA0-801A4E90 00F0+00 s=0 e=18 z=536  None .text      setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2388,6 +2387,12 @@ asm void dScnKy_env_light_c::drawKankyo() {
 
 
 /* ############################################################################################## */
+/* 8042E7BC-8042E7C8 000C+00 s=0 e=0 z=0  None .bss       @7485                                                        */
+u8 lit_7485[12];
+
+/* 8042E7C8-8042E7D4 000C+00 s=1 e=0 z=0  None .bss       S_old_cameye$7484                                            */
+static u8 data_8042E7C8[12];
+
 /* 80453DA0-80453DA4 0004+00 s=1 e=0 z=0  None .sdata2    @7608                                                        */
 SECTION_SDATA2 static f32 lit_7608 = 0.005239999853074551f;
 
@@ -2526,7 +2531,7 @@ asm void dKy_setLight_nowroom(char param_0) {
 #pragma pop
 
 
-/* 801A6C58-801A6D4C 00F4+00 s=0 e=1 z=0  None .text      dKy_setLight_nowroom_grass__Fcf                              */
+/* 801A6C58-801A6D4C 00F4+00 s=0 e=1 z=2  None .text      dKy_setLight_nowroom_grass__Fcf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2559,7 +2564,7 @@ asm void dKy_setLight_nowroom_actor(dKy_tevstr_c* param_0) {
 #pragma pop
 
 
-/* 801A75C0-801A75E0 0020+00 s=0 e=6 z=0  None .text      dKy_setLight_again__Fv                                       */
+/* 801A75C0-801A75E0 0020+00 s=0 e=6 z=7  None .text      dKy_setLight_again__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2570,7 +2575,7 @@ asm void dKy_setLight_again() {
 #pragma pop
 
 
-/* 801A75E0-801A76D8 00F8+00 s=0 e=3 z=0  None .text      dKy_Global_amb_set__FP12dKy_tevstr_c                         */
+/* 801A75E0-801A76D8 00F8+00 s=0 e=3 z=5  None .text      dKy_Global_amb_set__FP12dKy_tevstr_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2603,7 +2608,7 @@ asm void dKy_plight_near_pos() {
 #pragma pop
 
 
-/* 801A7738-801A7790 0058+00 s=0 e=0 z=0  None .text      dKy_mock_light_every_set__FP15LIGHT_INFLUENCE                */
+/* 801A7738-801A7790 0058+00 s=0 e=0 z=1  None .text      dKy_mock_light_every_set__FP15LIGHT_INFLUENCE                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2614,7 +2619,7 @@ asm void dKy_mock_light_every_set(LIGHT_INFLUENCE* param_0) {
 #pragma pop
 
 
-/* 801A7790-801A7814 0084+00 s=1 e=1 z=0  None .text      dKy_plight_set__FP15LIGHT_INFLUENCE                          */
+/* 801A7790-801A7814 0084+00 s=1 e=1 z=18  None .text      dKy_plight_set__FP15LIGHT_INFLUENCE                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2625,7 +2630,7 @@ asm void dKy_plight_set(LIGHT_INFLUENCE* param_0) {
 #pragma pop
 
 
-/* 801A7814-801A7868 0054+00 s=0 e=0 z=0  None .text      dKy_dalkmist_inf_set__FP18DALKMIST_INFLUENCE                 */
+/* 801A7814-801A7868 0054+00 s=0 e=0 z=4  None .text      dKy_dalkmist_inf_set__FP18DALKMIST_INFLUENCE                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2636,7 +2641,7 @@ asm void dKy_dalkmist_inf_set(DALKMIST_INFLUENCE* param_0) {
 #pragma pop
 
 
-/* 801A7868-801A789C 0034+00 s=0 e=0 z=0  None .text      dKy_dalkmist_inf_cut__FP18DALKMIST_INFLUENCE                 */
+/* 801A7868-801A789C 0034+00 s=0 e=0 z=4  None .text      dKy_dalkmist_inf_cut__FP18DALKMIST_INFLUENCE                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2647,7 +2652,7 @@ asm void dKy_dalkmist_inf_cut(DALKMIST_INFLUENCE* param_0) {
 #pragma pop
 
 
-/* 801A789C-801A792C 0090+00 s=0 e=0 z=0  None .text      dKy_plight_priority_set__FP15LIGHT_INFLUENCE                 */
+/* 801A789C-801A792C 0090+00 s=0 e=0 z=1  None .text      dKy_plight_priority_set__FP15LIGHT_INFLUENCE                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2658,7 +2663,7 @@ asm void dKy_plight_priority_set(LIGHT_INFLUENCE* param_0) {
 #pragma pop
 
 
-/* 801A792C-801A797C 0050+00 s=0 e=1 z=0  None .text      dKy_plight_cut__FP15LIGHT_INFLUENCE                          */
+/* 801A792C-801A797C 0050+00 s=0 e=1 z=32  None .text      dKy_plight_cut__FP15LIGHT_INFLUENCE                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2669,7 +2674,7 @@ asm void dKy_plight_cut(LIGHT_INFLUENCE* param_0) {
 #pragma pop
 
 
-/* 801A797C-801A7A00 0084+00 s=1 e=1 z=0  None .text      dKy_efplight_set__FP15LIGHT_INFLUENCE                        */
+/* 801A797C-801A7A00 0084+00 s=1 e=1 z=3  None .text      dKy_efplight_set__FP15LIGHT_INFLUENCE                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2680,7 +2685,7 @@ asm void dKy_efplight_set(LIGHT_INFLUENCE* param_0) {
 #pragma pop
 
 
-/* 801A7A00-801A7A40 0040+00 s=1 e=1 z=0  None .text      dKy_efplight_cut__FP15LIGHT_INFLUENCE                        */
+/* 801A7A00-801A7A40 0040+00 s=1 e=1 z=3  None .text      dKy_efplight_cut__FP15LIGHT_INFLUENCE                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2713,7 +2718,7 @@ asm static void dKy_bgparts_activelight_cut(int param_0) {
 #pragma pop
 
 
-/* 801A7AC8-801A7B68 00A0+00 s=1 e=1 z=0  None .text      dKy_actor_addcol_amb_set__Fsssf                              */
+/* 801A7AC8-801A7B68 00A0+00 s=1 e=1 z=1  None .text      dKy_actor_addcol_amb_set__Fsssf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2724,7 +2729,7 @@ asm void dKy_actor_addcol_amb_set(s16 param_0, s16 param_1, s16 param_2, f32 par
 #pragma pop
 
 
-/* 801A7B68-801A7C08 00A0+00 s=1 e=1 z=0  None .text      dKy_bg_addcol_amb_set__Fsssf                                 */
+/* 801A7B68-801A7C08 00A0+00 s=1 e=1 z=1  None .text      dKy_bg_addcol_amb_set__Fsssf                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2779,11 +2784,11 @@ asm void dKy_addcol_fog_set(s16 param_0, s16 param_1, s16 param_2, f32 param_3) 
 #pragma pop
 
 
-/* 801A7E88-801A7F20 0098+00 s=2 e=0 z=0  None .text      dKy_actor_addcol_set__Fsssf                                  */
+/* 801A7E88-801A7F20 0098+00 s=2 e=0 z=2  None .text      dKy_actor_addcol_set__Fsssf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_actor_addcol_set(s16 param_0, s16 param_1, s16 param_2, f32 param_3) {
+asm void dKy_actor_addcol_set(s16 param_0, s16 param_1, s16 param_2, f32 param_3) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_actor_addcol_set__Fsssf.s"
 }
@@ -2823,11 +2828,11 @@ asm static void dKy_vrbox_addcol_set(s16 param_0, s16 param_1, s16 param_2, f32 
 #pragma pop
 
 
-/* 801A80D0-801A8168 0098+00 s=1 e=0 z=0  None .text      dKy_fog_startendz_set__Ffff                                  */
+/* 801A80D0-801A8168 0098+00 s=1 e=0 z=2  None .text      dKy_fog_startendz_set__Ffff                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_fog_startendz_set(f32 param_0, f32 param_1, f32 param_2) {
+asm void dKy_fog_startendz_set(f32 param_0, f32 param_1, f32 param_2) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_fog_startendz_set__Ffff.s"
 }
@@ -2856,7 +2861,7 @@ asm static void dKy_Sound_init() {
 #pragma pop
 
 
-/* 801A81C0-801A8474 02B4+00 s=0 e=5 z=0  None .text      dKy_Sound_set__F4cXyziUii                                    */
+/* 801A81C0-801A8474 02B4+00 s=0 e=5 z=27  None .text      dKy_Sound_set__F4cXyziUii                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2867,7 +2872,7 @@ asm void dKy_Sound_set(cXyz param_0, int param_1, unsigned int param_2, int para
 #pragma pop
 
 
-/* 801A8474-801A8484 0010+00 s=0 e=1 z=0  None .text      dKy_Sound_get__Fv                                            */
+/* 801A8474-801A8484 0010+00 s=0 e=1 z=8  None .text      dKy_Sound_get__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2915,7 +2920,7 @@ asm static void GxFog_set() {
 #pragma pop
 
 
-/* 801A862C-801A8650 0024+00 s=0 e=7 z=0  None .text      dKy_GxFog_set__Fv                                            */
+/* 801A862C-801A8650 0024+00 s=0 e=7 z=2  None .text      dKy_GxFog_set__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2926,7 +2931,7 @@ asm void dKy_GxFog_set() {
 #pragma pop
 
 
-/* 801A8650-801A86F8 00A8+00 s=0 e=3 z=0  None .text      dKy_GxFog_tevstr_set__FP12dKy_tevstr_c                       */
+/* 801A8650-801A86F8 00A8+00 s=0 e=3 z=6  None .text      dKy_GxFog_tevstr_set__FP12dKy_tevstr_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2937,7 +2942,7 @@ asm void dKy_GxFog_tevstr_set(dKy_tevstr_c* param_0) {
 #pragma pop
 
 
-/* 801A86F8-801A87A0 00A8+00 s=0 e=0 z=0  None .text      dKy_GfFog_tevstr_set__FP12dKy_tevstr_c                       */
+/* 801A86F8-801A87A0 00A8+00 s=0 e=0 z=1  None .text      dKy_GfFog_tevstr_set__FP12dKy_tevstr_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2959,7 +2964,7 @@ asm static void GxXFog_set() {
 #pragma pop
 
 
-/* 801A87E4-801A880C 0028+00 s=0 e=0 z=0  None .text      dKy_change_colpat__FUc                                       */
+/* 801A87E4-801A880C 0028+00 s=0 e=0 z=52  None .text      dKy_change_colpat__FUc                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2970,7 +2975,7 @@ asm void dKy_change_colpat(u8 param_0) {
 #pragma pop
 
 
-/* 801A880C-801A8854 0048+00 s=0 e=0 z=0  None .text      dKy_custom_colset__FUcUcf                                    */
+/* 801A880C-801A8854 0048+00 s=0 e=0 z=25  None .text      dKy_custom_colset__FUcUcf                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2981,7 +2986,7 @@ asm void dKy_custom_colset(u8 param_0, u8 param_1, f32 param_2) {
 #pragma pop
 
 
-/* 801A8854-801A88EC 0098+00 s=0 e=0 z=0  None .text      dKy_setLight_mine__FP12dKy_tevstr_c                          */
+/* 801A8854-801A88EC 0098+00 s=0 e=0 z=2  None .text      dKy_setLight_mine__FP12dKy_tevstr_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2992,7 +2997,7 @@ asm void dKy_setLight_mine(dKy_tevstr_c* param_0) {
 #pragma pop
 
 
-/* 801A88EC-801A8A34 0148+00 s=2 e=5 z=0  None .text      dKy_tevstr_init__FP12dKy_tevstr_cScUc                        */
+/* 801A88EC-801A8A34 0148+00 s=2 e=5 z=11  None .text      dKy_tevstr_init__FP12dKy_tevstr_cScUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3014,7 +3019,7 @@ asm void dKy_rain_check() {
 #pragma pop
 
 
-/* 801A8A44-801A8A54 0010+00 s=0 e=0 z=0  None .text      dKy_set_allcol_ratio__Ff                                     */
+/* 801A8A44-801A8A54 0010+00 s=0 e=0 z=5  None .text      dKy_set_allcol_ratio__Ff                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3025,7 +3030,7 @@ asm void dKy_set_allcol_ratio(f32 param_0) {
 #pragma pop
 
 
-/* 801A8A54-801A8A64 0010+00 s=0 e=1 z=0  None .text      dKy_set_actcol_ratio__Ff                                     */
+/* 801A8A54-801A8A64 0010+00 s=0 e=1 z=1  None .text      dKy_set_actcol_ratio__Ff                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3036,7 +3041,7 @@ asm void dKy_set_actcol_ratio(f32 param_0) {
 #pragma pop
 
 
-/* 801A8A64-801A8A74 0010+00 s=0 e=1 z=0  None .text      dKy_set_bgcol_ratio__Ff                                      */
+/* 801A8A64-801A8A74 0010+00 s=0 e=1 z=1  None .text      dKy_set_bgcol_ratio__Ff                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3047,7 +3052,7 @@ asm void dKy_set_bgcol_ratio(f32 param_0) {
 #pragma pop
 
 
-/* 801A8A74-801A8A84 0010+00 s=0 e=1 z=0  None .text      dKy_set_fogcol_ratio__Ff                                     */
+/* 801A8A74-801A8A84 0010+00 s=0 e=1 z=1  None .text      dKy_set_fogcol_ratio__Ff                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3102,7 +3107,7 @@ asm void dKy_itudemo_se() {
 #pragma pop
 
 
-/* 801A8B38-801A8B58 0020+00 s=1 e=2 z=0  None .text      dKy_get_dayofweek__Fv                                        */
+/* 801A8B38-801A8B58 0020+00 s=1 e=2 z=11  None .text      dKy_get_dayofweek__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3212,18 +3217,18 @@ asm void dKy_ParticleColor_get_bg(cXyz* param_0, dKy_tevstr_c* param_1, _GXColor
 #pragma pop
 
 
-/* 801A9D60-801AA664 0904+00 s=1 e=0 z=0  None .text      dKy_BossLight_set__FP4cXyzP8_GXColorfUc                      */
+/* 801A9D60-801AA664 0904+00 s=1 e=0 z=17  None .text      dKy_BossLight_set__FP4cXyzP8_GXColorfUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_BossLight_set(cXyz* param_0, _GXColor* param_1, f32 param_2, u8 param_3) {
+asm void dKy_BossLight_set(cXyz* param_0, _GXColor* param_1, f32 param_2, u8 param_3) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_BossLight_set__FP4cXyzP8_GXColorfUc.s"
 }
 #pragma pop
 
 
-/* 801AA664-801AAC5C 05F8+00 s=0 e=0 z=0  None .text      dKy_BossSpotLight_set__FP4cXyzfffP8_GXColorfUcUc             */
+/* 801AA664-801AAC5C 05F8+00 s=0 e=0 z=3  None .text      dKy_BossSpotLight_set__FP4cXyzfffP8_GXColorfUcUc             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3317,7 +3322,7 @@ asm void dKy_camera_water_in_status_set(u8 param_0) {
 #pragma pop
 
 
-/* 801AB280-801AB290 0010+00 s=3 e=1 z=0  None .text      dKy_camera_water_in_status_check__Fv                         */
+/* 801AB280-801AB290 0010+00 s=3 e=1 z=5  None .text      dKy_camera_water_in_status_check__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3350,7 +3355,7 @@ asm void dKy_pol_efftype2_get(cBgS_PolyInfo const* param_0) {
 #pragma pop
 
 
-/* 801AB4C0-801AB59C 00DC+00 s=0 e=9 z=0  None .text      dKy_pol_sound_get__FPC13cBgS_PolyInfo                        */
+/* 801AB4C0-801AB59C 00DC+00 s=0 e=9 z=21  None .text      dKy_pol_sound_get__FPC13cBgS_PolyInfo                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3372,7 +3377,7 @@ asm void dKy_pol_argument_get(cBgS_PolyInfo const* param_0) {
 #pragma pop
 
 
-/* 801AB668-801AB7D0 0168+00 s=0 e=1 z=0  None .text      dKy_pol_eff_prim_get__FPC13cBgS_PolyInfoP8_GXColor           */
+/* 801AB668-801AB7D0 0168+00 s=0 e=1 z=2  None .text      dKy_pol_eff_prim_get__FPC13cBgS_PolyInfoP8_GXColor           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3383,7 +3388,7 @@ asm void dKy_pol_eff_prim_get(cBgS_PolyInfo const* param_0, _GXColor* param_1) {
 #pragma pop
 
 
-/* 801AB7D0-801AB93C 016C+00 s=0 e=1 z=0  None .text      dKy_pol_eff_env_get__FPC13cBgS_PolyInfoP8_GXColor            */
+/* 801AB7D0-801AB93C 016C+00 s=0 e=1 z=2  None .text      dKy_pol_eff_env_get__FPC13cBgS_PolyInfoP8_GXColor            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3394,7 +3399,7 @@ asm void dKy_pol_eff_env_get(cBgS_PolyInfo const* param_0, _GXColor* param_1) {
 #pragma pop
 
 
-/* 801AB93C-801ABAA4 0168+00 s=0 e=1 z=0  None .text      dKy_pol_eff2_prim_get__FPC13cBgS_PolyInfoP8_GXColor          */
+/* 801AB93C-801ABAA4 0168+00 s=0 e=1 z=2  None .text      dKy_pol_eff2_prim_get__FPC13cBgS_PolyInfoP8_GXColor          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3405,7 +3410,7 @@ asm void dKy_pol_eff2_prim_get(cBgS_PolyInfo const* param_0, _GXColor* param_1) 
 #pragma pop
 
 
-/* 801ABAA4-801ABC10 016C+00 s=0 e=1 z=0  None .text      dKy_pol_eff2_env_get__FPC13cBgS_PolyInfoP8_GXColor           */
+/* 801ABAA4-801ABC10 016C+00 s=0 e=1 z=2  None .text      dKy_pol_eff2_env_get__FPC13cBgS_PolyInfoP8_GXColor           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3416,7 +3421,7 @@ asm void dKy_pol_eff2_env_get(cBgS_PolyInfo const* param_0, _GXColor* param_1) {
 #pragma pop
 
 
-/* 801ABC10-801ABD4C 013C+00 s=0 e=1 z=0  None .text      dKy_pol_eff_alpha_get__FPC13cBgS_PolyInfo                    */
+/* 801ABC10-801ABD4C 013C+00 s=0 e=1 z=2  None .text      dKy_pol_eff_alpha_get__FPC13cBgS_PolyInfo                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3427,7 +3432,7 @@ asm void dKy_pol_eff_alpha_get(cBgS_PolyInfo const* param_0) {
 #pragma pop
 
 
-/* 801ABD4C-801ABEA8 015C+00 s=0 e=1 z=0  None .text      dKy_pol_eff_ratio_get__FPC13cBgS_PolyInfo                    */
+/* 801ABD4C-801ABEA8 015C+00 s=0 e=1 z=2  None .text      dKy_pol_eff_ratio_get__FPC13cBgS_PolyInfo                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3438,7 +3443,7 @@ asm void dKy_pol_eff_ratio_get(cBgS_PolyInfo const* param_0) {
 #pragma pop
 
 
-/* 801ABEA8-801ABFE4 013C+00 s=0 e=1 z=0  None .text      dKy_pol_eff2_alpha_get__FPC13cBgS_PolyInfo                   */
+/* 801ABEA8-801ABFE4 013C+00 s=0 e=1 z=2  None .text      dKy_pol_eff2_alpha_get__FPC13cBgS_PolyInfo                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3449,7 +3454,7 @@ asm void dKy_pol_eff2_alpha_get(cBgS_PolyInfo const* param_0) {
 #pragma pop
 
 
-/* 801ABFE4-801AC140 015C+00 s=0 e=1 z=0  None .text      dKy_pol_eff2_ratio_get__FPC13cBgS_PolyInfo                   */
+/* 801ABFE4-801AC140 015C+00 s=0 e=1 z=2  None .text      dKy_pol_eff2_ratio_get__FPC13cBgS_PolyInfo                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3471,11 +3476,11 @@ asm void dKy_TeachWind_existence_chk() {
 #pragma pop
 
 
-/* 801AC168-801AC228 00C0+00 s=4 e=0 z=0  None .text      dKy_SunMoon_Light_Check__Fv                                  */
+/* 801AC168-801AC228 00C0+00 s=4 e=0 z=2  None .text      dKy_SunMoon_Light_Check__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_SunMoon_Light_Check() {
+asm void dKy_SunMoon_Light_Check() {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_SunMoon_Light_Check__Fv.s"
 }
@@ -3533,7 +3538,7 @@ asm void dKy_depth_dist_set(void* param_0) {
 #pragma pop
 
 
-/* 801AC57C-801AC5BC 0040+00 s=13 e=21 z=0  None .text      dKy_darkworld_check__Fv                                      */
+/* 801AC57C-801AC5BC 0040+00 s=13 e=21 z=134  None .text      dKy_darkworld_check__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3634,11 +3639,11 @@ asm void dKy_shadow_mode_reset(u8 param_0) {
 #pragma pop
 
 
-/* 801ACD0C-801ACD24 0018+00 s=3 e=0 z=0  None .text      dKy_shadow_mode_check__FUc                                   */
+/* 801ACD0C-801ACD24 0018+00 s=3 e=0 z=1  None .text      dKy_shadow_mode_check__FUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_shadow_mode_check(u8 param_0) {
+asm void dKy_shadow_mode_check(u8 param_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_shadow_mode_check__FUc.s"
 }
@@ -3717,7 +3722,7 @@ SECTION_SDATA2 static f32 lit_10932[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 801ACD24-801ADBBC 0E98+00 s=0 e=0 z=0  None .text      dKy_bg_MAxx_proc__FPv                                        */
+/* 801ACD24-801ADBBC 0E98+00 s=0 e=0 z=7  None .text      dKy_bg_MAxx_proc__FPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3762,12 +3767,6 @@ asm static void dKankyo_DayProc() {
 
 
 /* ############################################################################################## */
-/* 8042E7BC-8042E7C8 000C+00 s=0 e=0 z=0  None .bss       @7485                                                        */
-u8 lit_7485[12];
-
-/* 8042E7C8-8042E7D4 000C+00 s=0 e=0 z=0  None .bss       S_old_cameye$7484                                            */
-u8 data_8042E7C8[12];
-
 /* 8042E7D4-8042E7E0 000C+00 s=0 e=0 z=0  None .bss       @7489                                                        */
 u8 lit_7489[12];
 

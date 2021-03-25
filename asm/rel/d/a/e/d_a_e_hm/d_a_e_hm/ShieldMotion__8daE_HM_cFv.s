@@ -5,13 +5,13 @@ lbl_806E2B80:
 /* 806E2B8C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 806E2B90 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 806E2B94 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 806E2B98 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 806E2B9C 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 806E2B98 00000018  3C 60 80 6E */	lis r3, lit_3791@ha
+/* 806E2B9C 0000001C  3B E3 59 20 */	addi r31, r3, lit_3791@l
 /* 806E2BA0 00000020  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 806E2BA4 00000024  C0 3F 00 04 */	lfs f1, 4(r31)
-/* 806E2BA8 00000028  C0 5F 01 08 */	lfs f2, 0x108(r31)
-/* 806E2BAC 0000002C  C0 7F 00 CC */	lfs f3, 0xcc(r31)
-/* 806E2BB0 00000030  4B FF D7 A9 */	bl _unresolved
+/* 806E2BA4 00000024  C0 3F 00 04 */	lfs f1, 4(r31)	/* effective address: 806E5924 */
+/* 806E2BA8 00000028  C0 5F 01 08 */	lfs f2, 0x108(r31)	/* effective address: 806E5A28 */
+/* 806E2BAC 0000002C  C0 7F 00 CC */	lfs f3, 0xcc(r31)	/* effective address: 806E59EC */
+/* 806E2BB0 00000030  4B B8 CE 8C */	b cLib_addCalc2__FPffff
 /* 806E2BB4 00000034  7F C3 F3 78 */	mr r3, r30
 /* 806E2BB8 00000038  4B FF FA 31 */	bl WallCheck__8daE_HM_cFv
 /* 806E2BBC 0000003C  2C 03 00 00 */	cmpwi r3, 0
@@ -31,7 +31,7 @@ lbl_806E2BE4:
 /* 806E2BEC 00000008  88 03 00 11 */	lbz r0, 0x11(r3)
 /* 806E2BF0 0000000C  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 806E2BF4 00000010  40 82 00 18 */	bne lbl_806E2C0C
-/* 806E2BF8 00000014  C0 3F 00 04 */	lfs f1, 4(r31)
+/* 806E2BF8 00000014  C0 3F 00 04 */	lfs f1, 4(r31)	/* effective address: 806E5924 */
 /* 806E2BFC 00000018  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 806E2C00 0000001C  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 806E2C04 00000020  41 82 00 08 */	beq lbl_806E2C0C
@@ -45,7 +45,7 @@ lbl_806E2C0C:
 /* 806E2C20 00000014  B0 1E 05 D4 */	sth r0, 0x5d4(r30)
 /* 806E2C24 00000018  A8 1E 04 E6 */	lha r0, 0x4e6(r30)
 /* 806E2C28 0000001C  B0 1E 04 DE */	sth r0, 0x4de(r30)
-/* 806E2C2C 00000020  C0 1F 00 04 */	lfs f0, 4(r31)
+/* 806E2C2C 00000020  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 806E5924 */
 /* 806E2C30 00000024  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 806E2C34 00000028  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 lbl_806E2C38:

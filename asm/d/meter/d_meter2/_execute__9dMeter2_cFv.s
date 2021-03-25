@@ -107,7 +107,7 @@ lbl_8021F2A4:
 /* 8021F2BC 00000018  88 03 5E B5 */	lbz r0, 0x5eb5(r3)	/* effective address: 8040C075 */
 /* 8021F2C0 0000001C  28 00 00 00 */	cmplwi r0, 0
 /* 8021F2C4 00000020  40 82 00 1C */	bne lbl_8021F2E0
-/* 8021F2C8 00000024  88 03 4F AD */	lbz r0, 0x4fad(r3)
+/* 8021F2C8 00000024  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 8021F2CC 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 8021F2D0 0000002C  40 82 00 10 */	bne lbl_8021F2E0
 /* 8021F2D4 00000030  3C 60 80 43 */	lis r3, g_meter2_info@ha

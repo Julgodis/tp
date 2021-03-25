@@ -17,7 +17,7 @@ lbl_8001FD34:
 /* 8001FD70 0000003C  80 63 00 1C */	lwz r3, 0x1c(r3)	/* effective address: 804301A4 */
 /* 8001FD74 00000040  48 1F F9 79 */	bl emphasisButtonDelete__9dMeter2_cFv
 lbl_8001FD78:
-/* 8001FD78 00000000  88 1F 5E 8F */	lbz r0, 0x5e8f(r31)
+/* 8001FD78 00000000  88 1F 5E 8F */	lbz r0, 0x5e8f(r31)	/* effective address: 8040C04F */
 /* 8001FD7C 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 8001FD80 00000008  41 82 00 2C */	beq lbl_8001FDAC
 /* 8001FD84 0000000C  28 00 00 05 */	cmplwi r0, 5
@@ -57,7 +57,7 @@ lbl_8001FDF8:
 /* 8001FE00 00000008  88 03 03 1F */	lbz r0, 0x31f(r3)	/* effective address: 804305AB */
 /* 8001FE04 0000000C  28 00 00 01 */	cmplwi r0, 1
 /* 8001FE08 00000010  40 82 00 08 */	bne lbl_8001FE10
-/* 8001FE0C 00000014  AB 83 02 F4 */	lha r28, 0x2f4(r3)
+/* 8001FE0C 00000014  AB 83 02 F4 */	lha r28, 0x2f4(r3)	/* effective address: 80430580 */
 lbl_8001FE10:
 /* 8001FE10 00000000  80 6D 80 48 */	lwz r3, i_msgID(r13)
 /* 8001FE14 00000004  4B FF FC 11 */	bl fopMsgM_SearchByID__FUi

@@ -2,8 +2,8 @@ lbl_80027B98:
 /* 80027B98 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80027B9C 00000004  7C 08 02 A6 */	mflr r0
 /* 80027BA0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80027BA4 0000000C  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 80027BA8 00000010  38 63 8A 50 */	addi r3, r3, stringBase0@l
+/* 80027BA4 0000000C  3C 60 80 38 */	lis r3, d_d_stage__stringBase0@ha
+/* 80027BA8 00000010  38 63 8A 50 */	addi r3, r3, d_d_stage__stringBase0@l
 /* 80027BAC 00000014  38 63 02 D2 */	addi r3, r3, 0x2d2
 /* 80027BB0 00000018  4C C6 31 82 */	crclr 6
 /* 80027BB4 0000001C  4B FD EF 09 */	bl OSReport

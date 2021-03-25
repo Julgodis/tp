@@ -84,14 +84,14 @@ lbl_80123AA8:
 /* 80123AE4 0000003C  39 40 00 00 */	li r10, 0
 /* 80123AE8 00000040  4B F2 9B BD */	bl setPoly__13dPa_control_cFUlUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz
 /* 80123AEC 00000044  90 7F 32 CC */	stw r3, 0x32cc(r31)
-/* 80123AF0 00000048  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
+/* 80123AF0 00000048  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
 /* 80123AF4 0000004C  38 63 02 10 */	addi r3, r3, 0x210
 /* 80123AF8 00000050  80 9F 32 CC */	lwz r4, 0x32cc(r31)
 /* 80123AFC 00000054  4B F2 7E 1D */	bl getEmitter__Q213dPa_control_c7level_cFUl
 /* 80123B00 00000058  28 03 00 00 */	cmplwi r3, 0
 /* 80123B04 0000005C  41 82 00 70 */	beq lbl_80123B74
 /* 80123B08 00000060  D3 C3 00 38 */	stfs f30, 0x38(r3)
-/* 80123B0C 00000064  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
+/* 80123B0C 00000064  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
 /* 80123B10 00000068  38 63 02 10 */	addi r3, r3, 0x210
 /* 80123B14 0000006C  80 9F 32 CC */	lwz r4, 0x32cc(r31)
 /* 80123B18 00000070  4B F2 7D 9D */	bl forceOnEventMove__Q213dPa_control_c7level_cFUl

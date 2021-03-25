@@ -22,8 +22,8 @@ lbl_801455E0:
 /* 801455F0 00000010  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 801455F4 00000014  7C 00 07 75 */	extsb. r0, r0
 /* 801455F8 00000018  40 80 00 1C */	bge lbl_80145614
-/* 801455FC 0000001C  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 80145600 00000020  38 63 26 40 */	addi r3, r3, stringBase0@l
+/* 801455FC 0000001C  3C 60 80 39 */	lis r3, d_a_d_a_no_chg_room__stringBase0@ha
+/* 80145600 00000020  38 63 26 40 */	addi r3, r3, d_a_d_a_no_chg_room__stringBase0@l
 /* 80145604 00000024  4C C6 31 82 */	crclr 6
 /* 80145608 00000028  4B EC 16 E5 */	bl OSReport_Warning
 /* 8014560C 0000002C  38 60 00 05 */	li r3, 5

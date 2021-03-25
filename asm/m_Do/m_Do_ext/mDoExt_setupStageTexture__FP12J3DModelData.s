@@ -27,8 +27,8 @@ lbl_8000EABC:
 /* 8000EAE0 00000024  7C 66 1B 78 */	mr r6, r3
 /* 8000EAE4 00000028  38 61 00 08 */	addi r3, r1, 8
 /* 8000EAE8 0000002C  38 80 00 40 */	li r4, 0x40
-/* 8000EAEC 00000030  3C A0 80 37 */	lis r5, stringBase0@ha
-/* 8000EAF0 00000034  38 A5 40 FC */	addi r5, r5, stringBase0@l
+/* 8000EAEC 00000030  3C A0 80 37 */	lis r5, m_Do_m_Do_ext__stringBase0@ha
+/* 8000EAF0 00000034  38 A5 40 FC */	addi r5, r5, m_Do_m_Do_ext__stringBase0@l
 /* 8000EAF4 00000038  38 A5 00 1C */	addi r5, r5, 0x1c
 /* 8000EAF8 0000003C  4C C6 31 82 */	crclr 6
 /* 8000EAFC 00000040  48 35 7A C1 */	bl snprintf

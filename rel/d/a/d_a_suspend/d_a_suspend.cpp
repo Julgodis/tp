@@ -11,35 +11,48 @@
 // Types:
 // 
 
+struct cXyz {
+};
+
 struct daSus_c {
+	/* 80031248 */ void newData(s8, cXyz const&, cXyz const&, u8, u8, u8);
 	/* 804D5118 */ void create();
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 // 
 // Forward References:
 // 
 
-void daSus_create(daSus_c*); // 2
+static void daSus_create(daSus_c*); // 2
 
 extern "C" void create__7daSus_cFv(); // 1
-extern "C" void daSus_create__FP7daSus_c(); // 1
-extern "C" extern u32 const lit_3640;
+extern "C" static void daSus_create__FP7daSus_c(); // 1
 extern "C" extern u32 const lit_3641;
 extern "C" extern u32 const lit_3642;
 extern "C" extern u32 const lit_3643;
-extern "C" extern u8 daSus_METHODS[32];
-extern "C" extern u8 g_profile_SUSPEND[48];
+extern "C" extern void* g_profile_SUSPEND[12];
 
 // 
 // External References:
 // 
 
 
-extern "C" void _unresolved(); // 1
+extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void newData__7daSus_cFScRC4cXyzRC4cXyzUcUcUc(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 
 // 
 // Declarations:
 // 
+
+/* ############################################################################################## */
+/* 804D523C-804D5240 0004+00 s=1 e=0 z=0  None .rodata    @3640                                                        */
+SECTION_RODATA static u32 const lit_3640 = 0x449C4000;
 
 /* 804D5118-804D51E0 00C8+00 s=1 e=0 z=0  None .text      create__7daSus_cFv                                           */
 #pragma push
@@ -52,11 +65,11 @@ asm void daSus_c::create() {
 #pragma pop
 
 
-/* 804D51E0-804D5234 0054+00 s=0 e=0 z=0  None .text      daSus_create__FP7daSus_c                                     */
+/* 804D51E0-804D5234 0054+00 s=1 e=0 z=0  None .text      daSus_create__FP7daSus_c                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daSus_create(daSus_c* param_0) {
+asm static void daSus_create(daSus_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_suspend/d_a_suspend/daSus_create__FP7daSus_c.s"
 }
@@ -64,9 +77,6 @@ asm void daSus_create(daSus_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 804D523C-804D5240 0004+00 s=0 e=0 z=0  None .rodata    @3640                                                        */
-SECTION_RODATA u32 const lit_3640 = 0x449C4000;
-
 /* 804D5240-804D5244 0004+00 s=0 e=0 z=0  None .rodata    @3641                                                        */
 SECTION_RODATA u32 const lit_3641 = 0x451C4000;
 
@@ -76,16 +86,31 @@ SECTION_RODATA u32 const lit_3642 = 0x42FA0000;
 /* 804D5248-804D524C 0004+00 s=0 e=0 z=0  None .rodata    @3643                                                        */
 SECTION_RODATA u32 const lit_3643 = 0x437A0000;
 
-/* 804D524C-804D526C 0020+00 s=0 e=0 z=0  None .data      daSus_METHODS                                                */
-SECTION_DATA u8 daSus_METHODS[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 804D524C-804D526C 0020+00 s=1 e=0 z=0  None .data      daSus_METHODS                                                */
+SECTION_DATA static void* daSus_METHODS[8] = {
+	/* 0    */ (void*)daSus_create__FP7daSus_c,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
 };
 
-/* 804D526C-804D529C 0030+00 s=0 e=0 z=0  None .data      g_profile_SUSPEND                                            */
-SECTION_DATA u8 g_profile_SUSPEND[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x0B, 0xFF, 0xFD, 0x03, 0x0F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x05, 0x68, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x02, 0xFB, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00,
+/* 804D526C-804D529C 0030+00 s=0 e=0 z=1  None .data      g_profile_SUSPEND                                            */
+SECTION_DATA void* g_profile_SUSPEND[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x000BFFFD,
+	/* 2    */ (void*)0x030F0000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x00000568,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x02FB0000,
+	/* 9    */ (void*)&daSus_METHODS,
+	/* 10   */ (void*)0x00060000,
+	/* 11   */ (void*)0x05000000,
 };
 

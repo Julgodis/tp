@@ -11,10 +11,10 @@ lbl_8033D770:
 /* 8033D794 00000024  80 6D 90 F0 */	lwz r3, InterruptHandlerTable(r13)
 /* 8033D798 00000028  4B CC 5C C1 */	bl memset
 /* 8033D79C 0000002C  38 00 00 00 */	li r0, 0
-/* 8033D7A0 00000030  90 1F 00 C4 */	stw r0, 0xc4(r31)
+/* 8033D7A0 00000030  90 1F 00 C4 */	stw r0, 0xc4(r31)	/* effective address: 800000C4 */
 /* 8033D7A4 00000034  3C 60 CC 00 */	lis r3, 0xCC00 /* 0xCC003000@ha */
 /* 8033D7A8 00000038  38 83 30 00 */	addi r4, r3, 0x3000 /* 0xCC003000@l */
-/* 8033D7AC 0000003C  90 1F 00 C8 */	stw r0, 0xc8(r31)
+/* 8033D7AC 0000003C  90 1F 00 C8 */	stw r0, 0xc8(r31)	/* effective address: 800000C8 */
 /* 8033D7B0 00000040  38 00 00 F0 */	li r0, 0xf0
 /* 8033D7B4 00000044  38 60 FF E0 */	li r3, -32
 /* 8033D7B8 00000048  90 04 00 04 */	stw r0, 4(r4)	/* effective address: CC003004 */

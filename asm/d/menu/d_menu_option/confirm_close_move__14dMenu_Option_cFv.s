@@ -65,7 +65,7 @@ lbl_801E508C:
 /* 801E50A4 00000018  88 9F 03 EA */	lbz r4, 0x3ea(r31)
 /* 801E50A8 0000001C  4B E4 63 01 */	bl setNowVibration__14dComIfG_play_cFUc
 /* 801E50AC 00000020  88 1F 03 E5 */	lbz r0, 0x3e5(r31)
-/* 801E50B0 00000024  98 1E 00 0A */	stb r0, 0xa(r30)
+/* 801E50B0 00000024  98 1E 00 0A */	stb r0, 0xa(r30)	/* effective address: 804063AA */
 /* 801E50B4 00000028  80 7F 00 44 */	lwz r3, 0x44(r31)
 /* 801E50B8 0000002C  88 03 00 B4 */	lbz r0, 0xb4(r3)
 /* 801E50BC 00000030  54 00 06 3C */	rlwinm r0, r0, 0, 0x18, 0x1e

@@ -82,7 +82,7 @@ extern "C" void fukiAlpha__14dMsgScrnBoss_cFf(); // 1
 extern "C" void fukiScale__14dMsgScrnBoss_cFf(); // 1
 extern "C" void fukiTrans__14dMsgScrnBoss_cFff(); // 1
 extern "C" void fontAlpha__14dMsgScrnBoss_cFf(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const msg_scrn_d_msg_scrn_boss__stringBase0;
 
 // 
 // External References:

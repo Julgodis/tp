@@ -134,14 +134,14 @@ lbl_80BB2E68:
 /* 80BB2E74 0000000C  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 80BB2E78 00000010  90 03 00 10 */	stw r0, 0x10(r3)
 /* 80BB2E7C 00000014  38 7F 10 60 */	addi r3, r31, 0x1060
-/* 80BB2E80 00000018  4B FF B4 59 */	bl _unresolved
+/* 80BB2E80 00000018  4B 70 B1 78 */	b deleteObject__14Z2SoundObjBaseFv
 /* 80BB2E84 0000001C  38 7F 10 80 */	addi r3, r31, 0x1080
-/* 80BB2E88 00000020  4B FF B4 51 */	bl _unresolved
+/* 80BB2E88 00000020  4B 70 B1 70 */	b deleteObject__14Z2SoundObjBaseFv
 /* 80BB2E8C 00000024  38 7F 05 A0 */	addi r3, r31, 0x5a0
-/* 80BB2E90 00000028  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80BB2E94 0000002C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80BB2E98 00000030  80 84 00 00 */	lwz r4, 0(r4)
-/* 80BB2E9C 00000034  4B FF B4 3D */	bl _unresolved
+/* 80BB2E90 00000028  3C 80 80 BB */	lis r4, l_arcName@ha
+/* 80BB2E94 0000002C  38 84 3A 94 */	addi r4, r4, l_arcName@l
+/* 80BB2E98 00000030  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BB3A94 */
+/* 80BB2E9C 00000034  4B 47 A1 6C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80BB2EA0 00000038  38 60 00 01 */	li r3, 1
 /* 80BB2EA4 0000003C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80BB2EA8 00000040  80 01 00 14 */	lwz r0, 0x14(r1)

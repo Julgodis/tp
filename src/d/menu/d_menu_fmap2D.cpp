@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct ResTIMG {
+struct STControl {
 };
 
-struct STControl {
+struct ResTIMG {
 };
 
 struct dMenu_Fmap2DBack_c {
@@ -90,9 +90,6 @@ struct dMenu_Fmap2DBack_c {
 struct JKRExpHeap {
 };
 
-struct JKRArchive {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -104,6 +101,9 @@ struct JGeometry {
 
 struct J2DGrafContext {
 	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
+};
+
+struct JKRArchive {
 };
 
 struct J2DScreen {
@@ -366,7 +366,7 @@ extern "C" extern u8 const data_80396418[40];
 extern "C" extern u8 const data_80396440[40];
 extern "C" extern u8 const data_80396468[40];
 extern "C" extern u8 const data_80396490[40];
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_menu_d_menu_fmap2D__stringBase0;
 
 // 
 // External References:

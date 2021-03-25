@@ -15,9 +15,9 @@ lbl_8049B214:
 /* 8049B248 00000034  28 00 00 00 */	cmplwi r0, 0
 /* 8049B24C 00000038  40 82 01 0C */	bne lbl_8049B358
 /* 8049B250 0000003C  4B FF FC C9 */	bl setSmokePos__9daArrow_cFv
-/* 8049B254 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8049B258 00000044  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
-/* 8049B25C 00000048  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
+/* 8049B254 00000040  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8049B258 00000044  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 8049B25C 00000048  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
 /* 8049B260 0000004C  38 00 00 FF */	li r0, 0xff
 /* 8049B264 00000050  90 01 00 08 */	stw r0, 8(r1)
 /* 8049B268 00000054  38 1F 0A 10 */	addi r0, r31, 0xa10
@@ -35,18 +35,18 @@ lbl_8049B214:
 /* 8049B298 00000084  39 1F 01 0C */	addi r8, r31, 0x10c
 /* 8049B29C 00000088  39 3F 09 58 */	addi r9, r31, 0x958
 /* 8049B2A0 0000008C  39 40 00 00 */	li r10, 0
-/* 8049B2A4 00000090  3D 60 00 00 */	lis r11, 0x0000 /* 0x00000000@ha */
-/* 8049B2A8 00000094  C0 2B 00 00 */	lfs f1, 0x0000(r11)
-/* 8049B2AC 00000098  4B FF E9 2D */	bl _unresolved
+/* 8049B2A4 00000090  3D 60 80 4A */	lis r11, lit_4187@ha
+/* 8049B2A8 00000094  C0 2B DD 3C */	lfs f1, lit_4187@l(r11)
+/* 8049B2AC 00000098  4B BB 22 20 */	b set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8049B2B0 0000009C  90 7F 09 64 */	stw r3, 0x964(r31)
-/* 8049B2B4 000000A0  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
+/* 8049B2B4 000000A0  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
 /* 8049B2B8 000000A4  38 63 02 10 */	addi r3, r3, 0x210
 /* 8049B2BC 000000A8  80 9F 09 64 */	lwz r4, 0x964(r31)
-/* 8049B2C0 000000AC  4B FF E9 19 */	bl _unresolved
-/* 8049B2C4 000000B0  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8049B2C8 000000B4  C0 03 00 00 */	lfs f0, 0x0000(r3)
+/* 8049B2C0 000000AC  4B BB 05 F4 */	b forceOnEventMove__Q213dPa_control_c7level_cFUl
+/* 8049B2C4 000000B0  3C 60 80 4A */	lis r3, lit_4749@ha
+/* 8049B2C8 000000B4  C0 03 DD B4 */	lfs f0, lit_4749@l(r3)
 /* 8049B2CC 000000B8  D0 1F 0A 14 */	stfs f0, 0xa14(r31)
-/* 8049B2D0 000000BC  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
+/* 8049B2D0 000000BC  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
 /* 8049B2D4 000000C0  38 00 00 FF */	li r0, 0xff
 /* 8049B2D8 000000C4  90 01 00 08 */	stw r0, 8(r1)
 /* 8049B2DC 000000C8  38 80 00 00 */	li r4, 0
@@ -63,18 +63,18 @@ lbl_8049B214:
 /* 8049B308 000000F4  39 1F 01 0C */	addi r8, r31, 0x10c
 /* 8049B30C 000000F8  39 3F 09 58 */	addi r9, r31, 0x958
 /* 8049B310 000000FC  39 40 00 00 */	li r10, 0
-/* 8049B314 00000100  3D 60 00 00 */	lis r11, 0x0000 /* 0x00000000@ha */
-/* 8049B318 00000104  C0 2B 00 00 */	lfs f1, 0x0000(r11)
-/* 8049B31C 00000108  4B FF E8 BD */	bl _unresolved
+/* 8049B314 00000100  3D 60 80 4A */	lis r11, lit_4187@ha
+/* 8049B318 00000104  C0 2B DD 3C */	lfs f1, lit_4187@l(r11)
+/* 8049B31C 00000108  4B BB 21 B0 */	b set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8049B320 0000010C  90 7F 09 68 */	stw r3, 0x968(r31)
-/* 8049B324 00000110  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
+/* 8049B324 00000110  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
 /* 8049B328 00000114  38 63 02 10 */	addi r3, r3, 0x210
 /* 8049B32C 00000118  80 9F 09 68 */	lwz r4, 0x968(r31)
-/* 8049B330 0000011C  4B FF E8 A9 */	bl _unresolved
-/* 8049B334 00000120  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
+/* 8049B330 0000011C  4B BB 05 84 */	b forceOnEventMove__Q213dPa_control_c7level_cFUl
+/* 8049B334 00000120  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
 /* 8049B338 00000124  38 63 02 10 */	addi r3, r3, 0x210
 /* 8049B33C 00000128  80 9F 09 68 */	lwz r4, 0x968(r31)
-/* 8049B340 0000012C  4B FF E8 99 */	bl _unresolved
+/* 8049B340 0000012C  4B BB 05 D8 */	b getEmitter__Q213dPa_control_c7level_cFUl
 /* 8049B344 00000130  28 03 00 00 */	cmplwi r3, 0
 /* 8049B348 00000134  41 82 00 10 */	beq lbl_8049B358
 /* 8049B34C 00000138  80 03 00 F4 */	lwz r0, 0xf4(r3)

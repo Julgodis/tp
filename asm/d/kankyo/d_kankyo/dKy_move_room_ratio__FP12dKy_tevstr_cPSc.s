@@ -12,8 +12,8 @@ lbl_801A6D4C:
 /* 801A6D74 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801A6D78 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 801A6D7C 0000001C  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 801A6D80 00000020  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801A6D84 00000024  38 84 4C 6C */	addi r4, r4, stringBase0@l
+/* 801A6D80 00000020  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
+/* 801A6D84 00000024  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
 /* 801A6D88 00000028  38 84 02 04 */	addi r4, r4, 0x204
 /* 801A6D8C 0000002C  38 A0 00 04 */	li r5, 4
 /* 801A6D90 00000030  48 1B F2 FD */	bl memcmp
@@ -24,7 +24,7 @@ lbl_801A6D4C:
 /* 801A6DA4 00000044  88 03 12 CD */	lbz r0, 0x12cd(r3)	/* effective address: 8042DD21 */
 /* 801A6DA8 00000048  28 00 00 00 */	cmplwi r0, 0
 /* 801A6DAC 0000004C  40 82 00 CC */	bne lbl_801A6E78
-/* 801A6DB0 00000050  88 03 12 CE */	lbz r0, 0x12ce(r3)
+/* 801A6DB0 00000050  88 03 12 CE */	lbz r0, 0x12ce(r3)	/* effective address: 8042DD22 */
 /* 801A6DB4 00000054  28 00 00 00 */	cmplwi r0, 0
 /* 801A6DB8 00000058  40 82 00 C0 */	bne lbl_801A6E78
 /* 801A6DBC 0000005C  C0 3E 03 70 */	lfs f1, 0x370(r30)

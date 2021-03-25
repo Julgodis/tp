@@ -9,8 +9,8 @@ lbl_801F7A40:
 /* 801F7A5C 00000008  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 801F7A60 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 801F7A64 00000010  40 82 00 1C */	bne lbl_801F7A80
-/* 801F7A68 00000014  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801F7A6C 00000018  38 63 7D B8 */	addi r3, r3, stringBase0@l
+/* 801F7A68 00000014  3C 60 80 39 */	lis r3, d_menu_d_menu_skill__stringBase0@ha
+/* 801F7A6C 00000018  38 63 7D B8 */	addi r3, r3, d_menu_d_menu_skill__stringBase0@l
 /* 801F7A70 0000001C  38 80 00 00 */	li r4, 0
 /* 801F7A74 00000020  38 A0 00 00 */	li r5, 0
 /* 801F7A78 00000024  4B E1 E3 9D */	bl create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap

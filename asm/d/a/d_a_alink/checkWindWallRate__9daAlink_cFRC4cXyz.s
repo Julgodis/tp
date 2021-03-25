@@ -116,7 +116,7 @@ lbl_800A7C5C:
 /* 800A7C60 00000004  38 63 D6 64 */	addi r3, r3, m__19daAlinkHIO_basic_c0@l
 /* 800A7C64 00000008  C0 63 00 30 */	lfs f3, 0x30(r3)	/* effective address: 8038D694 */
 /* 800A7C68 0000000C  C0 42 92 B8 */	lfs f2, lit_6040(r2)
-/* 800A7C6C 00000010  C0 1F 00 2C */	lfs f0, 0x2c(r31)
+/* 800A7C6C 00000010  C0 1F 00 2C */	lfs f0, 0x2c(r31)	/* effective address: 8038D690 */
 /* 800A7C70 00000014  EC 00 18 28 */	fsubs f0, f0, f3
 /* 800A7C74 00000018  EC 42 00 24 */	fdivs f2, f2, f0
 /* 800A7C78 0000001C  EC 01 18 28 */	fsubs f0, f1, f3

@@ -81,8 +81,8 @@ lbl_8021BEA8:
 /* 8021BFA0 000000F8  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8021BFA4 000000FC  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8021BFA8 00000100  7F E3 FB 78 */	mr r3, r31
-/* 8021BFAC 00000104  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8021BFB0 00000108  38 84 91 68 */	addi r4, r4, stringBase0@l
+/* 8021BFAC 00000104  3C 80 80 3A */	lis r4, d_meter_d_meter2_info__stringBase0@ha
+/* 8021BFB0 00000108  38 84 91 68 */	addi r4, r4, d_meter_d_meter2_info__stringBase0@l
 /* 8021BFB4 0000010C  38 A1 00 08 */	addi r5, r1, 8
 /* 8021BFB8 00000110  38 C0 00 00 */	li r6, 0
 /* 8021BFBC 00000114  38 E0 00 00 */	li r7, 0
@@ -124,8 +124,8 @@ lbl_8021BFFC:
 /* 8021C044 00000048  98 7F 00 DD */	stb r3, 0xdd(r31)
 /* 8021C048 0000004C  98 7F 00 DE */	stb r3, 0xde(r31)
 /* 8021C04C 00000050  7F E3 FB 78 */	mr r3, r31
-/* 8021C050 00000054  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8021C054 00000058  38 84 91 68 */	addi r4, r4, stringBase0@l
+/* 8021C050 00000054  3C 80 80 3A */	lis r4, d_meter_d_meter2_info__stringBase0@ha
+/* 8021C054 00000058  38 84 91 68 */	addi r4, r4, d_meter_d_meter2_info__stringBase0@l
 /* 8021C058 0000005C  48 00 22 39 */	bl setSaveStageName__13dMeter2Info_cFPCc
 /* 8021C05C 00000060  3B A0 00 00 */	li r29, 0
 /* 8021C060 00000064  9B BF 00 DF */	stb r29, 0xdf(r31)

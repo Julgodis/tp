@@ -21,7 +21,7 @@ lbl_801CCB48:
 /* 801CCB50 00000008  88 03 00 7C */	lbz r0, 0x7c(r3)	/* effective address: 8040623C */
 /* 801CCB54 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 801CCB58 00000010  41 82 00 44 */	beq lbl_801CCB9C
-/* 801CCB5C 00000014  83 83 5D AC */	lwz r28, 0x5dac(r3)
+/* 801CCB5C 00000014  83 83 5D AC */	lwz r28, 0x5dac(r3)	/* effective address: 8040BF6C */
 /* 801CCB60 00000018  38 61 00 10 */	addi r3, r1, 0x10
 /* 801CCB64 0000001C  4B E7 22 F9 */	bl getMapPlayerPos__10dMapInfo_nFv
 /* 801CCB68 00000020  C0 01 00 10 */	lfs f0, 0x10(r1)

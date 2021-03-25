@@ -30,6 +30,9 @@ class Context:
     def exception(self, traceback):
         self.send_command('exception', self.index, traceback)
 
+    def exit(self):
+        self.send_command('exit', 0)
+
 @dataclass
 class MainContext(Context):
     def send_command(self, command, *args):

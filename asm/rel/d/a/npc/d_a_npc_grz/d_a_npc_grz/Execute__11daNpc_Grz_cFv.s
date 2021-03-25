@@ -5,7 +5,7 @@ lbl_809E92E0:
 /* 809E92EC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 809E92F0 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 809E92F4 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 809E92F8 00000018  4B FF F0 81 */	bl _unresolved
+/* 809E92F8 00000018  4B 76 8D 1C */	b execute__8daNpcF_cFv
 /* 809E92FC 0000001C  7C 7F 1B 78 */	mr r31, r3
 /* 809E9300 00000020  7F C3 F3 78 */	mr r3, r30
 /* 809E9304 00000024  48 00 3D 69 */	bl setPrtcl__11daNpc_Grz_cFv

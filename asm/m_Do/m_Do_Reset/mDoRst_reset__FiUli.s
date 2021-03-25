@@ -23,8 +23,8 @@ lbl_80015660:
 /* 80015660 00000000  48 33 5B 69 */	bl DVDGetDriveStatus
 /* 80015664 00000004  2C 03 00 01 */	cmpwi r3, 1
 /* 80015668 00000008  40 82 00 14 */	bne lbl_8001567C
-/* 8001566C 0000000C  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 80015670 00000010  38 63 41 98 */	addi r3, r3, stringBase0@l
+/* 8001566C 0000000C  3C 60 80 37 */	lis r3, m_Do_m_Do_Reset__stringBase0@ha
+/* 80015670 00000010  38 63 41 98 */	addi r3, r3, m_Do_m_Do_Reset__stringBase0@l
 /* 80015674 00000014  4C C6 31 82 */	crclr 6
 /* 80015678 00000018  4B FF 11 9D */	bl OSAttention
 lbl_8001567C:
@@ -68,7 +68,7 @@ lbl_800156E4:
 lbl_80015708:
 /* 80015708 00000000  48 33 72 BD */	bl VIWaitForRetrace
 lbl_8001570C:
-/* 8001570C 00000000  80 1F 1F C0 */	lwz r0, 0x1fc0(r31)
+/* 8001570C 00000000  80 1F 1F C0 */	lwz r0, 0x1fc0(r31)	/* effective address: 803ECF00 */
 /* 80015710 00000004  2C 00 00 00 */	cmpwi r0, 0
 /* 80015714 00000008  40 82 FF F4 */	bne lbl_80015708
 /* 80015718 0000000C  4B FF FE C1 */	bl my_OSCancelAlarmAll__Fv

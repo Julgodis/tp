@@ -107,10 +107,10 @@ struct JUTResReference {
 	/* 802DE120 */ void getResource(void const*, u32, JKRArchive*);
 };
 
-struct _GXTlut {
+struct JUTTransparency {
 };
 
-struct JUTTransparency {
+struct _GXTlut {
 };
 
 struct _GXTlutFmt {

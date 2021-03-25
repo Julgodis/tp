@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_804FBB7C[8];
+extern void* data_804FBB7C[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_e_ga_cpp(); // 1
 
 // 
 // Declarations:

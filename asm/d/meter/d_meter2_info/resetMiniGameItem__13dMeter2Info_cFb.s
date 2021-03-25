@@ -33,7 +33,7 @@ lbl_8021E100:
 /* 8021E13C 0000003C  88 9E 00 DC */	lbz r4, 0xdc(r30)
 /* 8021E140 00000040  4B E1 5E 3D */	bl getBombNum__24dSv_player_item_record_cCFUc
 /* 8021E144 00000044  98 7E 00 D8 */	stb r3, 0xd8(r30)
-/* 8021E148 00000048  88 1C 00 00 */	lbz r0, 0(r28)
+/* 8021E148 00000048  88 1C 00 00 */	lbz r0, 0(r28)	/* effective address: 804062AC */
 /* 8021E14C 0000004C  98 1E 00 D9 */	stb r0, 0xd9(r30)
 /* 8021E150 00000050  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021E154 00000054  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
@@ -85,8 +85,8 @@ lbl_8021E190:
 /* 8021E204 00000074  88 7E 00 CF */	lbz r3, 0xcf(r30)
 /* 8021E208 00000078  88 9E 00 DC */	lbz r4, 0xdc(r30)
 /* 8021E20C 0000007C  38 04 00 0F */	addi r0, r4, 0xf
-/* 8021E210 00000080  98 1D 5E 7D */	stb r0, 0x5e7d(r29)
-/* 8021E214 00000084  98 7D 5E 7E */	stb r3, 0x5e7e(r29)
+/* 8021E210 00000080  98 1D 5E 7D */	stb r0, 0x5e7d(r29)	/* effective address: 8040C03D */
+/* 8021E214 00000084  98 7D 5E 7E */	stb r3, 0x5e7e(r29)	/* effective address: 8040C03E */
 /* 8021E218 00000088  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021E21C 0000008C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8021E220 00000090  3B 83 00 EC */	addi r28, r3, 0xec
@@ -94,7 +94,7 @@ lbl_8021E190:
 /* 8021E228 00000098  88 BE 00 CC */	lbz r5, 0xcc(r30)
 /* 8021E22C 0000009C  4B E1 5D 41 */	bl setBombNum__24dSv_player_item_record_cFUcUc
 /* 8021E230 000000A0  88 1E 00 CD */	lbz r0, 0xcd(r30)
-/* 8021E234 000000A4  98 1C 00 00 */	stb r0, 0(r28)
+/* 8021E234 000000A4  98 1C 00 00 */	stb r0, 0(r28)	/* effective address: 804062AC */
 /* 8021E238 000000A8  57 E0 06 3F */	clrlwi. r0, r31, 0x18
 /* 8021E23C 000000AC  40 82 00 14 */	bne lbl_8021E250
 /* 8021E240 000000B0  38 00 00 00 */	li r0, 0

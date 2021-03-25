@@ -46,7 +46,7 @@ lbl_80138F80:
 /* 80138FC4 00000044  39 40 00 FF */	li r10, 0xff
 /* 80138FC8 00000048  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80138FCC 0000004C  4B F1 3A C5 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
-/* 80138FD0 00000050  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
+/* 80138FD0 00000050  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
 /* 80138FD4 00000054  38 80 00 00 */	li r4, 0
 /* 80138FD8 00000058  90 81 00 08 */	stw r4, 8(r1)
 /* 80138FDC 0000005C  38 00 FF FF */	li r0, -1

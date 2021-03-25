@@ -9,7 +9,7 @@ lbl_80A43FAC:
 /* 80A43FC8 0000001C  88 03 0E 25 */	lbz r0, 0xe25(r3)
 /* 80A43FCC 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 80A43FD0 00000024  40 82 00 1C */	bne lbl_80A43FEC
-/* 80A43FD4 00000028  4B FF F5 05 */	bl _unresolved
+/* 80A43FD4 00000028  4B 5E BA 80 */	b dComIfGs_wolfeye_effect_check__Fv
 /* 80A43FD8 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 80A43FDC 00000030  40 82 00 14 */	bne lbl_80A43FF0
 /* 80A43FE0 00000034  88 1E 0A 89 */	lbz r0, 0xa89(r30)

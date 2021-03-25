@@ -18,8 +18,8 @@ lbl_80205834:
 lbl_80205874:
 /* 80205874 00000000  90 1F 00 10 */	stw r0, 0x10(r31)
 /* 80205878 00000004  80 7F 00 10 */	lwz r3, 0x10(r31)
-/* 8020587C 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 80205880 0000000C  38 84 80 E8 */	addi r4, r4, stringBase0@l
+/* 8020587C 00000008  3C 80 80 3A */	lis r4, d_meter_d_meter_button__stringBase0@ha
+/* 80205880 0000000C  38 84 80 E8 */	addi r4, r4, d_meter_d_meter_button__stringBase0@l
 /* 80205884 00000010  38 84 00 22 */	addi r4, r4, 0x22
 /* 80205888 00000014  3C A0 00 02 */	lis r5, 2
 /* 8020588C 00000018  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
@@ -114,8 +114,8 @@ lbl_802059CC:
 lbl_802059E8:
 /* 802059E8 00000000  90 1F 00 14 */	stw r0, 0x14(r31)
 /* 802059EC 00000004  80 7F 00 14 */	lwz r3, 0x14(r31)
-/* 802059F0 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802059F4 0000000C  38 84 80 E8 */	addi r4, r4, stringBase0@l
+/* 802059F0 00000008  3C 80 80 3A */	lis r4, d_meter_d_meter_button__stringBase0@ha
+/* 802059F4 0000000C  38 84 80 E8 */	addi r4, r4, d_meter_d_meter_button__stringBase0@l
 /* 802059F8 00000010  38 84 00 3F */	addi r4, r4, 0x3f
 /* 802059FC 00000014  3C A0 00 02 */	lis r5, 2
 /* 80205A00 00000018  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
@@ -209,8 +209,8 @@ lbl_80205AB8:
 /* 80205B54 0000009C  C3 C3 01 18 */	lfs f30, 0x118(r3)
 /* 80205B58 000000A0  3B C0 00 00 */	li r30, 0
 /* 80205B5C 000000A4  3B A0 00 00 */	li r29, 0
-/* 80205B60 000000A8  3C 60 80 3A */	lis r3, stringBase0@ha
-/* 80205B64 000000AC  3B 83 80 E8 */	addi r28, r3, stringBase0@l
+/* 80205B60 000000A8  3C 60 80 3A */	lis r3, d_meter_d_meter_button__stringBase0@ha
+/* 80205B64 000000AC  3B 83 80 E8 */	addi r28, r3, d_meter_d_meter_button__stringBase0@l
 lbl_80205B68:
 /* 80205B68 00000000  7F 5F EA 14 */	add r26, r31, r29
 /* 80205B6C 00000004  80 7A 00 E4 */	lwz r3, 0xe4(r26)
@@ -242,8 +242,8 @@ lbl_80205B68:
 /* 80205BD4 0000006C  80 7A 00 EC */	lwz r3, 0xec(r26)
 /* 80205BD8 00000070  80 63 00 04 */	lwz r3, 4(r3)
 /* 80205BDC 00000074  38 80 02 00 */	li r4, 0x200
-/* 80205BE0 00000078  3C A0 80 3A */	lis r5, stringBase0@ha
-/* 80205BE4 0000007C  38 A5 80 E8 */	addi r5, r5, stringBase0@l
+/* 80205BE0 00000078  3C A0 80 3A */	lis r5, d_meter_d_meter_button__stringBase0@ha
+/* 80205BE4 0000007C  38 A5 80 E8 */	addi r5, r5, d_meter_d_meter_button__stringBase0@l
 /* 80205BE8 00000080  38 A5 00 21 */	addi r5, r5, 0x21
 /* 80205BEC 00000084  4C C6 31 82 */	crclr 6
 /* 80205BF0 00000088  48 0F AB 5D */	bl setString__10J2DTextBoxFsPCce

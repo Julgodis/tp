@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80D64D60[8];
+extern void* data_80D64D60[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_tag_waterfall_cpp(); // 1
 
 // 
 // Declarations:

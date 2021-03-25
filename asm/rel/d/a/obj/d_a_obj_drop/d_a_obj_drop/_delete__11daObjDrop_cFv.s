@@ -8,7 +8,7 @@ lbl_80BE1DCC:
 /* 80BE1DE4 00000018  7F E3 FB 78 */	mr r3, r31
 /* 80BE1DE8 0000001C  4B FF EA 59 */	bl removeBodyEffect__11daObjDrop_cFv
 /* 80BE1DEC 00000020  38 7F 06 C0 */	addi r3, r31, 0x6c0
-/* 80BE1DF0 00000024  4B FF DE C9 */	bl _unresolved
+/* 80BE1DF0 00000024  4B 6D C2 08 */	b deleteObject__14Z2SoundObjBaseFv
 /* 80BE1DF4 00000028  38 60 00 01 */	li r3, 1
 /* 80BE1DF8 0000002C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80BE1DFC 00000030  80 01 00 14 */	lwz r0, 0x14(r1)

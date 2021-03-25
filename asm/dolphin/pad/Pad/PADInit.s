@@ -62,19 +62,19 @@ lbl_8034EE30:
 /* 8034EE34 00000004  A0 03 30 E0 */	lhz r0, 0x30E0(r3)
 /* 8034EE38 00000008  54 00 42 AE */	rlwinm r0, r0, 8, 0xa, 0x17
 /* 8034EE3C 0000000C  64 00 4D 00 */	oris r0, r0, 0x4d00
-/* 8034EE40 00000010  90 1F 00 40 */	stw r0, 0x40(r31)
+/* 8034EE40 00000010  90 1F 00 40 */	stw r0, 0x40(r31)	/* effective address: 8044CBB0 */
 /* 8034EE44 00000014  A0 03 30 E0 */	lhz r0, 0x30e0(r3)	/* effective address: 800030E0 */
 /* 8034EE48 00000018  54 00 42 AE */	rlwinm r0, r0, 8, 0xa, 0x17
 /* 8034EE4C 0000001C  64 00 4D 40 */	oris r0, r0, 0x4d40
-/* 8034EE50 00000020  90 1F 00 44 */	stw r0, 0x44(r31)
+/* 8034EE50 00000020  90 1F 00 44 */	stw r0, 0x44(r31)	/* effective address: 8044CBB4 */
 /* 8034EE54 00000024  A0 03 30 E0 */	lhz r0, 0x30e0(r3)	/* effective address: 800030E0 */
 /* 8034EE58 00000028  54 00 42 AE */	rlwinm r0, r0, 8, 0xa, 0x17
 /* 8034EE5C 0000002C  64 00 4D 80 */	oris r0, r0, 0x4d80
-/* 8034EE60 00000030  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 8034EE60 00000030  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 8044CBB8 */
 /* 8034EE64 00000034  A0 03 30 E0 */	lhz r0, 0x30e0(r3)	/* effective address: 800030E0 */
 /* 8034EE68 00000038  54 00 42 AE */	rlwinm r0, r0, 8, 0xa, 0x17
 /* 8034EE6C 0000003C  64 00 4D C0 */	oris r0, r0, 0x4dc0
-/* 8034EE70 00000040  90 1F 00 4C */	stw r0, 0x4c(r31)
+/* 8034EE70 00000040  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 8044CBBC */
 /* 8034EE74 00000044  4B FF 75 01 */	bl SIRefreshSamplingRate
 /* 8034EE78 00000048  3C 60 80 3D */	lis r3, ResetFunctionInfo@ha
 /* 8034EE7C 0000004C  38 63 1B 90 */	addi r3, r3, ResetFunctionInfo@l

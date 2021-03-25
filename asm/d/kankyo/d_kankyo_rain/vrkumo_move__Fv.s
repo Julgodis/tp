@@ -66,8 +66,8 @@ lbl_800621A0:
 /* 800621A4 00000004  3B 03 61 C0 */	addi r24, r3, g_dComIfG_gameInfo@l
 /* 800621A8 00000008  3B B8 4E 00 */	addi r29, r24, 0x4e00
 /* 800621AC 0000000C  7F A3 EB 78 */	mr r3, r29
-/* 800621B0 00000010  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 800621B4 00000014  38 84 A5 78 */	addi r4, r4, stringBase0@l
+/* 800621B0 00000010  3C 80 80 38 */	lis r4, d_kankyo_d_kankyo_rain__stringBase0@ha
+/* 800621B4 00000014  38 84 A5 78 */	addi r4, r4, d_kankyo_d_kankyo_rain__stringBase0@l
 /* 800621B8 00000018  38 84 00 5C */	addi r4, r4, 0x5c
 /* 800621BC 0000001C  48 30 67 D9 */	bl strcmp
 /* 800621C0 00000020  2C 03 00 00 */	cmpwi r3, 0
@@ -88,7 +88,7 @@ lbl_800621D0:
 /* 800621F8 00000028  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800621FC 0000002C  EF 9C 00 2A */	fadds f28, f28, f0
 /* 80062200 00000030  38 78 4E 20 */	addi r3, r24, 0x4e20
-/* 80062204 00000034  81 98 4E 20 */	lwz r12, 0x4e20(r24)
+/* 80062204 00000034  81 98 4E 20 */	lwz r12, 0x4e20(r24)	/* effective address: 8040AFE0 */
 /* 80062208 00000038  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 8006220C 0000003C  7D 89 03 A6 */	mtctr r12
 /* 80062210 00000040  4E 80 04 21 */	bctrl 
@@ -104,7 +104,7 @@ lbl_800621D0:
 /* 80062238 00000068  41 80 00 1C */	blt lbl_80062254
 /* 8006223C 0000006C  38 78 4E C4 */	addi r3, r24, 0x4ec4
 /* 80062240 00000070  4B FC 21 45 */	bl getStatusRoomDt__20dStage_roomControl_cFi
-/* 80062244 00000074  81 83 00 00 */	lwz r12, 0(r3)
+/* 80062244 00000074  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 8040B084 */
 /* 80062248 00000078  81 8C 01 0C */	lwz r12, 0x10c(r12)
 /* 8006224C 0000007C  7D 89 03 A6 */	mtctr r12
 /* 80062250 00000080  4E 80 04 21 */	bctrl 
@@ -468,8 +468,8 @@ lbl_80062754:
 /* 80062758 00000004  D0 1C 00 40 */	stfs f0, 0x40(r28)
 lbl_8006275C:
 /* 8006275C 00000000  7F A3 EB 78 */	mr r3, r29
-/* 80062760 00000004  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 80062764 00000008  38 84 A5 78 */	addi r4, r4, stringBase0@l
+/* 80062760 00000004  3C 80 80 38 */	lis r4, d_kankyo_d_kankyo_rain__stringBase0@ha
+/* 80062764 00000008  38 84 A5 78 */	addi r4, r4, d_kankyo_d_kankyo_rain__stringBase0@l
 /* 80062768 0000000C  38 84 00 5C */	addi r4, r4, 0x5c
 /* 8006276C 00000010  48 30 62 29 */	bl strcmp
 /* 80062770 00000014  2C 03 00 00 */	cmpwi r3, 0
@@ -481,8 +481,8 @@ lbl_8006275C:
 /* 80062788 0000002C  48 00 00 58 */	b lbl_800627E0
 lbl_8006278C:
 /* 8006278C 00000000  7F A3 EB 78 */	mr r3, r29
-/* 80062790 00000004  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 80062794 00000008  38 84 A5 78 */	addi r4, r4, stringBase0@l
+/* 80062790 00000004  3C 80 80 38 */	lis r4, d_kankyo_d_kankyo_rain__stringBase0@ha
+/* 80062794 00000008  38 84 A5 78 */	addi r4, r4, d_kankyo_d_kankyo_rain__stringBase0@l
 /* 80062798 0000000C  38 84 00 1F */	addi r4, r4, 0x1f
 /* 8006279C 00000010  48 30 61 F9 */	bl strcmp
 /* 800627A0 00000014  2C 03 00 00 */	cmpwi r3, 0
@@ -654,7 +654,7 @@ lbl_800629F4:
 /* 80062A00 0000000C  EC 14 00 32 */	fmuls f0, f20, f0
 /* 80062A04 00000010  EC 1A 00 28 */	fsubs f0, f26, f0
 /* 80062A08 00000014  D0 1C 00 44 */	stfs f0, 0x44(r28)
-/* 80062A0C 00000018  80 1F 0E C8 */	lwz r0, 0xec8(r31)
+/* 80062A0C 00000018  80 1F 0E C8 */	lwz r0, 0xec8(r31)	/* effective address: 8042D91C */
 /* 80062A10 0000001C  7C 1A 00 00 */	cmpw r26, r0
 /* 80062A14 00000020  41 80 00 0C */	blt lbl_80062A20
 /* 80062A18 00000024  C0 22 87 B8 */	lfs f1, lit_3954(r2)

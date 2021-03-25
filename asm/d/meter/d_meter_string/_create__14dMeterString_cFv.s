@@ -43,8 +43,8 @@ lbl_8020EEF0:
 lbl_8020EF08:
 /* 8020EF08 00000000  90 1F 00 04 */	stw r0, 4(r31)
 /* 8020EF0C 00000004  80 7F 00 04 */	lwz r3, 4(r31)
-/* 8020EF10 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8020EF14 0000000C  38 84 82 10 */	addi r4, r4, stringBase0@l
+/* 8020EF10 00000008  3C 80 80 3A */	lis r4, d_meter_d_meter_string__stringBase0@ha
+/* 8020EF14 0000000C  38 84 82 10 */	addi r4, r4, d_meter_d_meter_string__stringBase0@l
 /* 8020EF18 00000010  3C A0 00 02 */	lis r5, 2
 /* 8020EF1C 00000014  80 DF 00 18 */	lwz r6, 0x18(r31)
 /* 8020EF20 00000018  48 0E 97 29 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
@@ -62,8 +62,8 @@ lbl_8020EF08:
 /* 8020EF50 00000048  38 60 00 07 */	li r3, 7
 /* 8020EF54 0000004C  64 63 00 07 */	oris r3, r3, 7
 /* 8020EF58 00000050  7C 75 E3 A6 */	mtspr 0x395, r3
-/* 8020EF5C 00000054  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8020EF60 00000058  38 84 82 10 */	addi r4, r4, stringBase0@l
+/* 8020EF5C 00000054  3C 80 80 3A */	lis r4, d_meter_d_meter_string__stringBase0@ha
+/* 8020EF60 00000058  38 84 82 10 */	addi r4, r4, d_meter_d_meter_string__stringBase0@l
 /* 8020EF64 0000005C  38 64 00 20 */	addi r3, r4, 0x20
 /* 8020EF68 00000060  80 9F 00 18 */	lwz r4, 0x18(r31)
 /* 8020EF6C 00000064  48 0C 53 05 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
@@ -153,8 +153,8 @@ lbl_8020F014:
 /* 8020F0B0 0000009C  7D 89 03 A6 */	mtctr r12
 /* 8020F0B4 000000A0  4E 80 04 21 */	bctrl 
 /* 8020F0B8 000000A4  38 80 01 00 */	li r4, 0x100
-/* 8020F0BC 000000A8  3C A0 80 3A */	lis r5, stringBase0@ha
-/* 8020F0C0 000000AC  38 A5 82 10 */	addi r5, r5, stringBase0@l
+/* 8020F0BC 000000A8  3C A0 80 3A */	lis r5, d_meter_d_meter_string__stringBase0@ha
+/* 8020F0C0 000000AC  38 A5 82 10 */	addi r5, r5, d_meter_d_meter_string__stringBase0@l
 /* 8020F0C4 000000B0  38 A5 00 40 */	addi r5, r5, 0x40
 /* 8020F0C8 000000B4  4C C6 31 82 */	crclr 6
 /* 8020F0CC 000000B8  48 0F 16 81 */	bl setString__10J2DTextBoxFsPCce
@@ -167,8 +167,8 @@ lbl_8020F014:
 /* 8020F0E8 000000D4  7D 89 03 A6 */	mtctr r12
 /* 8020F0EC 000000D8  4E 80 04 21 */	bctrl 
 /* 8020F0F0 000000DC  38 80 01 00 */	li r4, 0x100
-/* 8020F0F4 000000E0  3C A0 80 3A */	lis r5, stringBase0@ha
-/* 8020F0F8 000000E4  38 A5 82 10 */	addi r5, r5, stringBase0@l
+/* 8020F0F4 000000E0  3C A0 80 3A */	lis r5, d_meter_d_meter_string__stringBase0@ha
+/* 8020F0F8 000000E4  38 A5 82 10 */	addi r5, r5, d_meter_d_meter_string__stringBase0@l
 /* 8020F0FC 000000E8  38 A5 00 40 */	addi r5, r5, 0x40
 /* 8020F100 000000EC  4C C6 31 82 */	crclr 6
 /* 8020F104 000000F0  48 0F 16 49 */	bl setString__10J2DTextBoxFsPCce

@@ -7,10 +7,10 @@ lbl_80947CFC:
 /* 80947D10 00000014  A0 03 09 1E */	lhz r0, 0x91e(r3)
 /* 80947D14 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80947D18 0000001C  41 82 00 1C */	beq lbl_80947D34
-/* 80947D1C 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80947D20 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80947D24 00000028  80 63 00 00 */	lwz r3, 0(r3)
-/* 80947D28 0000002C  4B FF DE B1 */	bl _unresolved
+/* 80947D1C 00000020  3C 60 80 95 */	lis r3, daMyna_LightActor@ha
+/* 80947D20 00000024  38 63 BA C0 */	addi r3, r3, daMyna_LightActor@l
+/* 80947D24 00000028  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8094BAC0 */
+/* 80947D28 0000002C  48 41 51 18 */	b setTurnOnOffChange__17daTag_MynaLight_cFv
 /* 80947D2C 00000030  38 00 00 0D */	li r0, 0xd
 /* 80947D30 00000034  98 1F 09 2C */	stb r0, 0x92c(r31)
 lbl_80947D34:

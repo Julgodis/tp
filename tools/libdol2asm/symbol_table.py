@@ -22,6 +22,7 @@ class AIT(IntervalTree):
     def get_range_one_or_none(self, start, end):
         data = list(self.overlap(start, end))
         return data[0].data if len(data) == 1 else None
+        
 
 import traceback
 @dataclass()
@@ -63,15 +64,16 @@ class GlobalSymbolTable:
         return addr, symbol  
     
     def at_addr(self, module, addr):
-        assert module >= 0
         symbol = self.symbols.get_one_or_none(addr)
         if symbol:
-            if symbol._module == module:
+            if module < 0 or symbol._module == module:
                 if symbol.valid_reference(addr):
                     return symbol
 
         return None
 
+    def always_get(self, addr):
+        return self.symbols.get_one_or_none(addr)
 
     def at(self, module, addr, at = 0):
         if isinstance(addr, librel.Relocation):
@@ -83,8 +85,17 @@ class GlobalSymbolTable:
     def __getitem__(self, key, at = 0):
         return self.at(key[0], key[1], at)
 
+    def has_symbol(self, module, addr) -> bool:
+        if self.at(module, addr):
+            return True
+        else:
+            return False
+
+    def has(self, module, addr) -> bool:
+        return self.has_symbol(module, addr)
+
     def resolve_set(self, addrs):
-        return [ self.at(*x) for x in addrs ]
+        return [y for y in [ self.at(*x) for x in addrs ] if y]
 
     def add_symbol(self, symbol: "Symbol"):
         if symbol.size > 0:

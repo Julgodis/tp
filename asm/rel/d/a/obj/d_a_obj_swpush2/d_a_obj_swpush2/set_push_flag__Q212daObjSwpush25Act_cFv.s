@@ -15,8 +15,8 @@ lbl_80CFEC60:
 /* 80CFEC7C 0000001C  40 82 00 24 */	bne lbl_80CFECA0
 /* 80CFEC80 00000020  80 03 05 C0 */	lwz r0, 0x5c0(r3)
 /* 80CFEC84 00000024  1C A0 00 38 */	mulli r5, r0, 0x38
-/* 80CFEC88 00000028  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80CFEC8C 0000002C  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
+/* 80CFEC88 00000028  3C 80 80 D0 */	lis r4, M_attr__Q212daObjSwpush25Act_c@ha
+/* 80CFEC8C 0000002C  38 04 FC 00 */	addi r0, r4, M_attr__Q212daObjSwpush25Act_c@l
 /* 80CFEC90 00000030  7C 80 2A 14 */	add r4, r0, r5
 /* 80CFEC94 00000034  A8 04 00 26 */	lha r0, 0x26(r4)
 /* 80CFEC98 00000038  B0 03 05 D6 */	sth r0, 0x5d6(r3)
@@ -24,8 +24,8 @@ lbl_80CFEC60:
 lbl_80CFECA0:
 /* 80CFECA0 00000000  80 03 05 C0 */	lwz r0, 0x5c0(r3)
 /* 80CFECA4 00000004  1C A0 00 38 */	mulli r5, r0, 0x38
-/* 80CFECA8 00000008  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80CFECAC 0000000C  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
+/* 80CFECA8 00000008  3C 80 80 D0 */	lis r4, M_attr__Q212daObjSwpush25Act_c@ha
+/* 80CFECAC 0000000C  38 04 FC 00 */	addi r0, r4, M_attr__Q212daObjSwpush25Act_c@l
 /* 80CFECB0 00000010  7C 80 2A 14 */	add r4, r0, r5
 /* 80CFECB4 00000014  A8 04 00 22 */	lha r0, 0x22(r4)
 /* 80CFECB8 00000018  B0 03 05 D6 */	sth r0, 0x5d6(r3)
@@ -49,8 +49,8 @@ lbl_80CFECE0:
 /* 80CFECF8 00000018  7C 06 07 34 */	extsh r6, r0
 /* 80CFECFC 0000001C  80 03 05 C0 */	lwz r0, 0x5c0(r3)
 /* 80CFED00 00000020  1C A0 00 38 */	mulli r5, r0, 0x38
-/* 80CFED04 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80CFED08 00000028  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
+/* 80CFED04 00000024  3C 80 80 D0 */	lis r4, M_attr__Q212daObjSwpush25Act_c@ha
+/* 80CFED08 00000028  38 04 FC 00 */	addi r0, r4, M_attr__Q212daObjSwpush25Act_c@l
 /* 80CFED0C 0000002C  7C 80 2A 14 */	add r4, r0, r5
 /* 80CFED10 00000030  A8 04 00 22 */	lha r0, 0x22(r4)
 /* 80CFED14 00000034  7C 06 00 00 */	cmpw r6, r0
@@ -70,8 +70,8 @@ lbl_80CFED30:
 /* 80CFED44 00000014  41 82 00 24 */	beq lbl_80CFED68
 /* 80CFED48 00000018  80 03 05 C0 */	lwz r0, 0x5c0(r3)
 /* 80CFED4C 0000001C  1C A0 00 38 */	mulli r5, r0, 0x38
-/* 80CFED50 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80CFED54 00000024  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
+/* 80CFED50 00000020  3C 80 80 D0 */	lis r4, M_attr__Q212daObjSwpush25Act_c@ha
+/* 80CFED54 00000024  38 04 FC 00 */	addi r0, r4, M_attr__Q212daObjSwpush25Act_c@l
 /* 80CFED58 00000028  7C 80 2A 14 */	add r4, r0, r5
 /* 80CFED5C 0000002C  A8 04 00 24 */	lha r0, 0x24(r4)
 /* 80CFED60 00000030  B0 03 05 DC */	sth r0, 0x5dc(r3)
@@ -95,8 +95,8 @@ lbl_80CFED88:
 /* 80CFEDA0 00000018  7C 06 07 34 */	extsh r6, r0
 /* 80CFEDA4 0000001C  80 03 05 C0 */	lwz r0, 0x5c0(r3)
 /* 80CFEDA8 00000020  1C A0 00 38 */	mulli r5, r0, 0x38
-/* 80CFEDAC 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80CFEDB0 00000028  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
+/* 80CFEDAC 00000024  3C 80 80 D0 */	lis r4, M_attr__Q212daObjSwpush25Act_c@ha
+/* 80CFEDB0 00000028  38 04 FC 00 */	addi r0, r4, M_attr__Q212daObjSwpush25Act_c@l
 /* 80CFEDB4 0000002C  7C 80 2A 14 */	add r4, r0, r5
 /* 80CFEDB8 00000030  A8 04 00 24 */	lha r0, 0x24(r4)
 /* 80CFEDBC 00000034  7C 06 00 00 */	cmpw r6, r0

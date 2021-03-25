@@ -8,8 +8,8 @@ lbl_8005A174:
 /* 8005A18C 00000018  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 8005A190 0000001C  3B DF 4E 00 */	addi r30, r31, 0x4e00
 /* 8005A194 00000020  7F C3 F3 78 */	mr r3, r30
-/* 8005A198 00000024  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 8005A19C 00000028  38 84 A3 68 */	addi r4, r4, stringBase0@l
+/* 8005A198 00000024  3C 80 80 38 */	lis r4, d_kankyo_d_kankyo_wether__stringBase0@ha
+/* 8005A19C 00000028  38 84 A3 68 */	addi r4, r4, d_kankyo_d_kankyo_wether__stringBase0@l
 /* 8005A1A0 0000002C  38 84 01 46 */	addi r4, r4, 0x146
 /* 8005A1A4 00000030  48 30 E7 F1 */	bl strcmp
 /* 8005A1A8 00000034  2C 03 00 00 */	cmpwi r3, 0
@@ -22,8 +22,8 @@ lbl_8005A174:
 /* 8005A1C4 00000050  4B FF D1 55 */	bl dKyw_Cloud_Draw__Fv
 lbl_8005A1C8:
 /* 8005A1C8 00000000  7F C3 F3 78 */	mr r3, r30
-/* 8005A1CC 00000004  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 8005A1D0 00000008  38 84 A3 68 */	addi r4, r4, stringBase0@l
+/* 8005A1CC 00000004  3C 80 80 38 */	lis r4, d_kankyo_d_kankyo_wether__stringBase0@ha
+/* 8005A1D0 00000008  38 84 A3 68 */	addi r4, r4, d_kankyo_d_kankyo_wether__stringBase0@l
 /* 8005A1D4 0000000C  38 84 01 46 */	addi r4, r4, 0x146
 /* 8005A1D8 00000010  48 30 E7 BD */	bl strcmp
 /* 8005A1DC 00000014  2C 03 00 00 */	cmpwi r3, 0
@@ -34,11 +34,11 @@ lbl_8005A1C8:
 /* 8005A1F0 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 8005A1F4 0000002C  41 82 00 2C */	beq lbl_8005A220
 /* 8005A1F8 00000030  38 7F 4E 20 */	addi r3, r31, 0x4e20
-/* 8005A1FC 00000034  81 9F 4E 20 */	lwz r12, 0x4e20(r31)
+/* 8005A1FC 00000034  81 9F 4E 20 */	lwz r12, 0x4e20(r31)	/* effective address: 8040AFE0 */
 /* 8005A200 00000038  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 8005A204 0000003C  7D 89 03 A6 */	mtctr r12
 /* 8005A208 00000040  4E 80 04 21 */	bctrl 
-/* 8005A20C 00000044  80 03 00 0C */	lwz r0, 0xc(r3)
+/* 8005A20C 00000044  80 03 00 0C */	lwz r0, 0xc(r3)	/* effective address: 8040AFEC */
 /* 8005A210 00000048  54 00 66 3F */	rlwinm. r0, r0, 0xc, 0x18, 0x1f
 /* 8005A214 0000004C  41 82 00 0C */	beq lbl_8005A220
 /* 8005A218 00000050  4B FF CE F5 */	bl dKyw_Sun_Draw__Fv
@@ -53,8 +53,8 @@ lbl_8005A220:
 /* 8005A238 00000018  4B FF D1 89 */	bl dKyw_shstar_Draw__Fv
 lbl_8005A23C:
 /* 8005A23C 00000000  7F C3 F3 78 */	mr r3, r30
-/* 8005A240 00000004  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 8005A244 00000008  38 84 A3 68 */	addi r4, r4, stringBase0@l
+/* 8005A240 00000004  3C 80 80 38 */	lis r4, d_kankyo_d_kankyo_wether__stringBase0@ha
+/* 8005A244 00000008  38 84 A3 68 */	addi r4, r4, d_kankyo_d_kankyo_wether__stringBase0@l
 /* 8005A248 0000000C  38 84 01 46 */	addi r4, r4, 0x146
 /* 8005A24C 00000010  48 30 E7 49 */	bl strcmp
 /* 8005A250 00000014  2C 03 00 00 */	cmpwi r3, 0

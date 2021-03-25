@@ -12,6 +12,8 @@
 // 
 
 struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daTagLv6Gate_c {
@@ -22,40 +24,156 @@ struct daTagLv6Gate_c {
 };
 
 struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
 	/* 80D4FB70 */ ~J3DFrameCtrl();
 };
 
 struct dBgW {
+	/* 8007B970 */ dBgW();
+	/* 8007B9C0 */ void Move();
 	/* 80D4FE5C */ ~dBgW();
+};
+
+struct cXyz {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CCC8 */ void push();
+	/* 8000CD14 */ void pop();
+	/* 8000CD64 */ void transS(cXyz const&);
+};
+
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
+struct J3DAnmTextureSRTKey {
+};
+
+struct J3DMaterialTable {
+	/* 8032F7B4 */ void removeTexMtxAnimator(J3DAnmTextureSRTKey*);
+};
+
+struct mDoExt_btkAnm {
+	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
+	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
+};
+
+struct J3DModel {
+};
+
+struct J3DModelData {
+};
+
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
+};
+
+struct request_of_phase_process_class {
+};
+
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dEvt_control_c {
+	/* 80042468 */ void reset();
+	/* 80042958 */ void setSkipZev(void*, char*);
+};
+
+struct dEvent_manager_c {
+	/* 80046800 */ void setObjectArchive(char*);
+	/* 80047758 */ void getEventIdx(fopAc_ac_c*, char const*, u8);
+	/* 80047A78 */ void endCheck(s16);
+	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
+	/* 80047D4C */ void getIsAddvance(int);
+	/* 80047F5C */ void getMyNowCutName(int);
+	/* 8004817C */ void cutEnd(int);
+};
+
+struct dKy_tevstr_c {
+};
+
+struct _GXColor {
+};
+
+struct dPa_levelEcallBack {
+};
+
+struct dPa_control_c {
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+};
+
+struct dBgW_Base {
+};
+
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
+};
+
+struct dBgS {
+	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
+};
+
+struct cBgD_t {
+};
+
+struct cBgW {
+	/* 8007933C */ ~cBgW();
+	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct cBgW_BgId {
+	/* 802681D4 */ void ChkUsed() const;
+};
+
+struct Vec {
+};
+
+struct JAISoundID {
+};
+
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // 
 // Forward References:
 // 
 
-void createSolidHeap(fopAc_ac_c*); // 2
-void daTagLv6Gate_Create(fopAc_ac_c*); // 2
-void daTagLv6Gate_Execute(daTagLv6Gate_c*); // 2
-void daTagLv6Gate_Draw(daTagLv6Gate_c*); // 2
-void daTagLv6Gate_IsDelete(daTagLv6Gate_c*); // 2
-void daTagLv6Gate_Delete(daTagLv6Gate_c*); // 2
+static void createSolidHeap(fopAc_ac_c*); // 2
+static void daTagLv6Gate_Create(fopAc_ac_c*); // 2
+static void daTagLv6Gate_Execute(daTagLv6Gate_c*); // 2
+static void daTagLv6Gate_Draw(daTagLv6Gate_c*); // 2
+static void daTagLv6Gate_IsDelete(daTagLv6Gate_c*); // 2
+static void daTagLv6Gate_Delete(daTagLv6Gate_c*); // 2
 
-extern "C" void createSolidHeap__FP10fopAc_ac_c(); // 1
+extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
 extern "C" void createHeap__14daTagLv6Gate_cFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void daTagLv6Gate_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daTagLv6Gate_Create__FP10fopAc_ac_c(); // 1
 extern "C" void create__14daTagLv6Gate_cFv(); // 1
 extern "C" void __dt__4dBgWFv(); // 1
-extern "C" void daTagLv6Gate_Execute__FP14daTagLv6Gate_c(); // 1
+extern "C" static void daTagLv6Gate_Execute__FP14daTagLv6Gate_c(); // 1
 extern "C" void execute__14daTagLv6Gate_cFv(); // 1
-extern "C" void daTagLv6Gate_Draw__FP14daTagLv6Gate_c(); // 1
+extern "C" static void daTagLv6Gate_Draw__FP14daTagLv6Gate_c(); // 1
 extern "C" void draw__14daTagLv6Gate_cFv(); // 1
-extern "C" void daTagLv6Gate_IsDelete__FP14daTagLv6Gate_c(); // 1
-extern "C" void daTagLv6Gate_Delete__FP14daTagLv6Gate_c(); // 1
-extern "C" extern u8 const l_minRelative[12];
+extern "C" static void daTagLv6Gate_IsDelete__FP14daTagLv6Gate_c(); // 1
+extern "C" static void daTagLv6Gate_Delete__FP14daTagLv6Gate_c(); // 1
 extern "C" extern u8 const l_maxRelative[12];
-extern "C" extern u32 const lit_3757[1 + 1 /* padding */];
-extern "C" extern u8 const lit_3759[8];
 extern "C" extern u8 const lit_3803[12];
 extern "C" extern u8 const lit_3839[12];
 extern "C" extern u8 const lit_3847[12];
@@ -77,157 +195,120 @@ extern "C" extern u32 const lit_4159;
 extern "C" extern u32 const lit_4160;
 extern "C" extern u32 const lit_4161;
 extern "C" extern char const* const stringBase0;
-extern "C" extern u8 l_arcName[4];
-extern "C" extern u8 l_daTagLv6Gate_Method[32];
-extern "C" extern u8 g_profile_Tag_Lv6Gate[48];
-extern "C" extern void* __vt__12J3DFrameCtrl[3];
+extern "C" extern void* g_profile_Tag_Lv6Gate[12];
 
 // 
 // External References:
 // 
 
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void mDoExt_modelUpdateDL(J3DModel*); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
+void fopAcM_SearchByID(unsigned int, fopAc_ac_c**); // 2
+void fopAcM_SearchByName(s16, fopAc_ac_c**); // 2
+void fopAcM_delete(unsigned int); // 2
+void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8); // 2
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
+void fpcSch_JudgeForPName(void*, void*); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
 
-extern "C" void _unresolved(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void push__14mDoMtx_stack_cFv(); // 1
+extern "C" void pop__14mDoMtx_stack_cFv(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
+extern "C" void play__14mDoExt_baseAnmFv(); // 1
+extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss(); // 1
+extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void __dt__10fopAc_ac_cFv(); // 1
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+extern "C" void fopAcM_SearchByID__FUiPP10fopAc_ac_c(); // 1
+extern "C" void fopAcM_SearchByName__FsPP10fopAc_ac_c(); // 1
+extern "C" void fopAcM_delete__FUi(); // 1
+extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc(); // 1
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
+extern "C" void fpcSch_JudgeForPName__FPvPv(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void onSwitch__10dSv_info_cFii(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void reset__14dEvt_control_cFv(); // 1
+extern "C" void setSkipZev__14dEvt_control_cFPvPc(); // 1
+extern "C" void setObjectArchive__16dEvent_manager_cFPc(); // 1
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc(); // 1
+extern "C" void endCheck__16dEvent_manager_cFs(); // 1
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci(); // 1
+extern "C" void getIsAddvance__16dEvent_manager_cFi(); // 1
+extern "C" void getMyNowCutName__16dEvent_manager_cFi(); // 1
+extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
+extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
+extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
+extern "C" void __dt__4cBgWFv(); // 1
+extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f(); // 1
+extern "C" void __ct__4dBgWFv(); // 1
+extern "C" void Move__4dBgWFv(); // 1
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void __ct__5csXyzFsss(); // 1
+extern "C" void ChkUsed__9cBgW_BgIdCFv(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void init__12J3DFrameCtrlFs(); // 1
+extern "C" void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXInverse(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__4dBgW[65];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 80D4F898-80D4F8B8 0020+00 s=0 e=0 z=0  None .text      createSolidHeap__FP10fopAc_ac_c                              */
+/* 80D4F898-80D4F8B8 0020+00 s=1 e=0 z=0  None .text      createSolidHeap__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void createSolidHeap(fopAc_ac_c* param_0) {
+asm static void createSolidHeap(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/createSolidHeap__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80D4F8B8-80D4FB70 02B8+00 s=1 e=0 z=0  None .text      createHeap__14daTagLv6Gate_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagLv6Gate_c::createHeap() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/createHeap__14daTagLv6Gate_cFv.s"
-}
-#pragma pop
-
-
-/* 80D4FB70-80D4FBB8 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm J3DFrameCtrl::~J3DFrameCtrl() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/__dt__12J3DFrameCtrlFv.s"
-}
-#pragma pop
-
-
-/* 80D4FBB8-80D4FBD8 0020+00 s=0 e=0 z=0  None .text      daTagLv6Gate_Create__FP10fopAc_ac_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagLv6Gate_Create(fopAc_ac_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/daTagLv6Gate_Create__FP10fopAc_ac_c.s"
-}
-#pragma pop
-
-
-/* 80D4FBD8-80D4FE5C 0284+00 s=1 e=0 z=0  None .text      create__14daTagLv6Gate_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagLv6Gate_c::create() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/create__14daTagLv6Gate_cFv.s"
-}
-#pragma pop
-
-
-/* 80D4FE5C-80D4FEBC 0060+00 s=0 e=0 z=0  None .text      __dt__4dBgWFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm dBgW::~dBgW() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/__dt__4dBgWFv.s"
-}
-#pragma pop
-
-
-/* 80D4FEBC-80D4FEDC 0020+00 s=0 e=0 z=0  None .text      daTagLv6Gate_Execute__FP14daTagLv6Gate_c                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagLv6Gate_Execute(daTagLv6Gate_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/daTagLv6Gate_Execute__FP14daTagLv6Gate_c.s"
-}
-#pragma pop
-
-
-/* 80D4FEDC-80D5068C 07B0+00 s=1 e=0 z=0  None .text      execute__14daTagLv6Gate_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagLv6Gate_c::execute() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/execute__14daTagLv6Gate_cFv.s"
-}
-#pragma pop
-
-
-/* 80D5068C-80D506AC 0020+00 s=0 e=0 z=0  None .text      daTagLv6Gate_Draw__FP14daTagLv6Gate_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagLv6Gate_Draw(daTagLv6Gate_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/daTagLv6Gate_Draw__FP14daTagLv6Gate_c.s"
-}
-#pragma pop
-
-
-/* 80D506AC-80D50848 019C+00 s=1 e=0 z=0  None .text      draw__14daTagLv6Gate_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagLv6Gate_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/draw__14daTagLv6Gate_cFv.s"
-}
-#pragma pop
-
-
-/* 80D50848-80D50850 0008+00 s=0 e=0 z=0  None .text      daTagLv6Gate_IsDelete__FP14daTagLv6Gate_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagLv6Gate_IsDelete(daTagLv6Gate_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/daTagLv6Gate_IsDelete__FP14daTagLv6Gate_c.s"
-}
-#pragma pop
-
-
-/* 80D50850-80D50900 00B0+00 s=0 e=0 z=0  None .text      daTagLv6Gate_Delete__FP14daTagLv6Gate_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagLv6Gate_Delete(daTagLv6Gate_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/daTagLv6Gate_Delete__FP14daTagLv6Gate_c.s"
-}
-#pragma pop
-
-
 /* ############################################################################################## */
-/* 80D50908-80D50914 000C+00 s=0 e=0 z=0  None .rodata    l_minRelative                                                */
-SECTION_RODATA u8 const l_minRelative[12] = {
+/* 80D50908-80D50914 000C+00 s=2 e=0 z=0  None .rodata    l_minRelative                                                */
+SECTION_RODATA static u8 const l_minRelative[12] = {
 	0xC4, 0x2F, 0x00, 0x00, 0xC3, 0x96, 0x00, 0x00, 0xC4, 0xFA, 0x00, 0x00,
 };
 
@@ -236,15 +317,15 @@ SECTION_RODATA u8 const l_maxRelative[12] = {
 	0x44, 0x2F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x44, 0x7A, 0x00, 0x00,
 };
 
-/* 80D50920-80D50928 0004+04 s=0 e=0 z=0  None .rodata    @3757                                                        */
-SECTION_RODATA u32 const lit_3757[1 + 1 /* padding */] = {
+/* 80D50920-80D50928 0004+04 s=1 e=0 z=0  None .rodata    @3757                                                        */
+SECTION_RODATA static u32 const lit_3757[1 + 1 /* padding */] = {
 	0x3F800000,
 	/* padding */
 	0x00000000,
 };
 
-/* 80D50928-80D50930 0008+00 s=0 e=0 z=0  None .rodata    @3759                                                        */
-SECTION_RODATA u8 const lit_3759[8] = {
+/* 80D50928-80D50930 0008+00 s=1 e=0 z=0  None .rodata    @3759                                                        */
+SECTION_RODATA static u8 const lit_3759[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
@@ -316,7 +397,7 @@ SECTION_RODATA u32 const lit_4160 = 0x414C0000;
 /* 80D50994-80D50998 0004+00 s=0 e=0 z=0  None .rodata    @4161                                                        */
 SECTION_RODATA u32 const lit_4161 = 0x40B80000;
 
-/* 80D50998-80D509C5 002D+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80D50998-80D509C5 002D+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -325,28 +406,162 @@ SECTION_DEAD char const* const stringBase_80D509A0 = "LV6_GATE_APPEAR_SKIP";
 SECTION_DEAD char const* const stringBase_80D509B5 = "LV6_GATE_APPEAR";
 #pragma pop
 
-/* 80D509C8-80D509CC 0004+00 s=0 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA u8 l_arcName[4] = {
-	0x00, 0x00, 0x00, 0x00,
+/* 80D509C8-80D509CC 0004+00 s=4 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+
+/* 80D509CC-80D509EC 0020+00 s=1 e=0 z=0  None .data      l_daTagLv6Gate_Method                                        */
+SECTION_DATA static void* l_daTagLv6Gate_Method[8] = {
+	/* 0    */ (void*)daTagLv6Gate_Create__FP10fopAc_ac_c,
+	/* 1    */ (void*)daTagLv6Gate_Delete__FP14daTagLv6Gate_c,
+	/* 2    */ (void*)daTagLv6Gate_Execute__FP14daTagLv6Gate_c,
+	/* 3    */ (void*)daTagLv6Gate_IsDelete__FP14daTagLv6Gate_c,
+	/* 4    */ (void*)daTagLv6Gate_Draw__FP14daTagLv6Gate_c,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
 };
 
-/* 80D509CC-80D509EC 0020+00 s=0 e=0 z=0  None .data      l_daTagLv6Gate_Method                                        */
-SECTION_DATA u8 l_daTagLv6Gate_Method[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 80D509EC-80D50A1C 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_Lv6Gate                                        */
+SECTION_DATA void* g_profile_Tag_Lv6Gate[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0007FFFD,
+	/* 2    */ (void*)0x02C90000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x0000076C,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x01060000,
+	/* 9    */ (void*)&l_daTagLv6Gate_Method,
+	/* 10   */ (void*)0x00040000,
+	/* 11   */ (void*)0x000E0000,
 };
 
-/* 80D509EC-80D50A1C 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_Lv6Gate                                        */
-SECTION_DATA u8 g_profile_Tag_Lv6Gate[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x02, 0xC9, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x07, 0x6C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x01, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x0E, 0x00, 0x00,
-};
-
-/* 80D50A1C-80D50A28 000C+00 s=0 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
-SECTION_DATA void* __vt__12J3DFrameCtrl[3] = {
+/* 80D50A1C-80D50A28 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
+SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
+	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
 };
+
+/* 80D4F8B8-80D4FB70 02B8+00 s=1 e=0 z=0  None .text      createHeap__14daTagLv6Gate_cFv                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daTagLv6Gate_c::createHeap() {
+	nofralloc
+#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/createHeap__14daTagLv6Gate_cFv.s"
+}
+#pragma pop
+
+
+/* 80D4FB70-80D4FBB8 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm J3DFrameCtrl::~J3DFrameCtrl() {
+	nofralloc
+#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/__dt__12J3DFrameCtrlFv.s"
+}
+#pragma pop
+
+
+/* 80D4FBB8-80D4FBD8 0020+00 s=1 e=0 z=0  None .text      daTagLv6Gate_Create__FP10fopAc_ac_c                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daTagLv6Gate_Create(fopAc_ac_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/daTagLv6Gate_Create__FP10fopAc_ac_c.s"
+}
+#pragma pop
+
+
+/* 80D4FBD8-80D4FE5C 0284+00 s=1 e=0 z=0  None .text      create__14daTagLv6Gate_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daTagLv6Gate_c::create() {
+	nofralloc
+#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/create__14daTagLv6Gate_cFv.s"
+}
+#pragma pop
+
+
+/* 80D4FE5C-80D4FEBC 0060+00 s=2 e=0 z=0  None .text      __dt__4dBgWFv                                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm dBgW::~dBgW() {
+	nofralloc
+#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/__dt__4dBgWFv.s"
+}
+#pragma pop
+
+
+/* 80D4FEBC-80D4FEDC 0020+00 s=1 e=0 z=0  None .text      daTagLv6Gate_Execute__FP14daTagLv6Gate_c                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daTagLv6Gate_Execute(daTagLv6Gate_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/daTagLv6Gate_Execute__FP14daTagLv6Gate_c.s"
+}
+#pragma pop
+
+
+/* 80D4FEDC-80D5068C 07B0+00 s=1 e=0 z=0  None .text      execute__14daTagLv6Gate_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daTagLv6Gate_c::execute() {
+	nofralloc
+#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/execute__14daTagLv6Gate_cFv.s"
+}
+#pragma pop
+
+
+/* 80D5068C-80D506AC 0020+00 s=1 e=0 z=0  None .text      daTagLv6Gate_Draw__FP14daTagLv6Gate_c                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daTagLv6Gate_Draw(daTagLv6Gate_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/daTagLv6Gate_Draw__FP14daTagLv6Gate_c.s"
+}
+#pragma pop
+
+
+/* 80D506AC-80D50848 019C+00 s=1 e=0 z=0  None .text      draw__14daTagLv6Gate_cFv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daTagLv6Gate_c::draw() {
+	nofralloc
+#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/draw__14daTagLv6Gate_cFv.s"
+}
+#pragma pop
+
+
+/* 80D50848-80D50850 0008+00 s=1 e=0 z=0  None .text      daTagLv6Gate_IsDelete__FP14daTagLv6Gate_c                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daTagLv6Gate_IsDelete(daTagLv6Gate_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/daTagLv6Gate_IsDelete__FP14daTagLv6Gate_c.s"
+}
+#pragma pop
+
+
+/* 80D50850-80D50900 00B0+00 s=1 e=0 z=0  None .text      daTagLv6Gate_Delete__FP14daTagLv6Gate_c                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daTagLv6Gate_Delete(daTagLv6Gate_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/daTagLv6Gate_Delete__FP14daTagLv6Gate_c.s"
+}
+#pragma pop
+
 

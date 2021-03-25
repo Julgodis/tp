@@ -4,10 +4,10 @@ lbl_80C3F6B4:
 /* 80C3F6BC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80C3F6C0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C3F6C4 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80C3F6C8 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80C3F6CC 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80C3F6C8 00000014  3C 60 80 C4 */	lis r3, s_master_sub__FPvPv@ha
+/* 80C3F6CC 00000018  38 63 F5 40 */	addi r3, r3, s_master_sub__FPvPv@l
 /* 80C3F6D0 0000001C  7F E4 FB 78 */	mr r4, r31
-/* 80C3F6D4 00000020  4B FF FC A5 */	bl _unresolved
+/* 80C3F6D4 00000020  4B 3E 1C 64 */	b fpcEx_Search__FPFPvPv_PvPv
 /* 80C3F6D8 00000024  28 03 00 00 */	cmplwi r3, 0
 /* 80C3F6DC 00000028  41 82 00 24 */	beq lbl_80C3F700
 /* 80C3F6E0 0000002C  38 00 00 03 */	li r0, 3

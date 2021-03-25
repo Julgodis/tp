@@ -46,8 +46,8 @@ lbl_8011E4F0:
 /* 8011E4F0 00000000  48 06 31 51 */	bl dCam_getBody__Fv
 /* 8011E4F4 00000004  38 80 00 12 */	li r4, 0x12
 /* 8011E4F8 00000008  7F C5 F3 78 */	mr r5, r30
-/* 8011E4FC 0000000C  3C C0 80 39 */	lis r6, stringBase0@ha
-/* 8011E500 00000010  38 C6 20 94 */	addi r6, r6, stringBase0@l
+/* 8011E4FC 0000000C  3C C0 80 39 */	lis r6, d_a_d_a_alink__stringBase0@ha
+/* 8011E500 00000010  38 C6 20 94 */	addi r6, r6, d_a_d_a_alink__stringBase0@l
 /* 8011E504 00000014  38 C6 00 43 */	addi r6, r6, 0x43
 /* 8011E508 00000018  38 E0 00 01 */	li r7, 1
 /* 8011E50C 0000001C  39 1F 31 94 */	addi r8, r31, 0x3194

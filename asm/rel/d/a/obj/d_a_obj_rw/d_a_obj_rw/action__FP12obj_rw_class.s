@@ -5,8 +5,8 @@ lbl_80CC2E78:
 /* 80CC2E84 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80CC2E88 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80CC2E8C 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80CC2E90 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80CC2E94 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
+/* 80CC2E90 00000018  3C 80 80 CC */	lis r4, lit_3649@ha
+/* 80CC2E94 0000001C  3B E4 3A F4 */	addi r31, r4, lit_3649@l
 /* 80CC2E98 00000020  A8 03 06 62 */	lha r0, 0x662(r3)
 /* 80CC2E9C 00000024  2C 00 00 00 */	cmpwi r0, 0
 /* 80CC2EA0 00000028  41 82 00 08 */	beq lbl_80CC2EA8
@@ -17,18 +17,18 @@ lbl_80CC2EAC:
 /* 80CC2EAC 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80CC2EB0 00000004  4B FF FC F5 */	bl damage_check__FP12obj_rw_class
 /* 80CC2EB4 00000008  38 7E 06 6C */	addi r3, r30, 0x66c
-/* 80CC2EB8 0000000C  C0 3F 00 24 */	lfs f1, 0x24(r31)
-/* 80CC2EBC 00000010  C0 5F 00 28 */	lfs f2, 0x28(r31)
-/* 80CC2EC0 00000014  4B FF FA 39 */	bl _unresolved
+/* 80CC2EB8 0000000C  C0 3F 00 24 */	lfs f1, 0x24(r31)	/* effective address: 80CC3B18 */
+/* 80CC2EBC 00000010  C0 5F 00 28 */	lfs f2, 0x28(r31)	/* effective address: 80CC3B1C */
+/* 80CC2EC0 00000014  4B 5A CB C0 */	b cLib_addCalc0__FPfff
 /* 80CC2EC4 00000018  A8 7E 06 72 */	lha r3, 0x672(r30)
 /* 80CC2EC8 0000001C  38 03 0D 00 */	addi r0, r3, 0xd00
 /* 80CC2ECC 00000020  B0 1E 06 72 */	sth r0, 0x672(r30)
 /* 80CC2ED0 00000024  A8 1E 06 72 */	lha r0, 0x672(r30)
 /* 80CC2ED4 00000028  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
-/* 80CC2ED8 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CC2EDC 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CC2ED8 0000002C  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
+/* 80CC2EDC 00000030  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 80CC2EE0 00000034  7C 43 04 2E */	lfsx f2, r3, r0
-/* 80CC2EE4 00000038  C0 3F 00 2C */	lfs f1, 0x2c(r31)
+/* 80CC2EE4 00000038  C0 3F 00 2C */	lfs f1, 0x2c(r31)	/* effective address: 80CC3B20 */
 /* 80CC2EE8 0000003C  C0 1E 06 6C */	lfs f0, 0x66c(r30)
 /* 80CC2EEC 00000040  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80CC2EF0 00000044  EC 00 00 B2 */	fmuls f0, f0, f2

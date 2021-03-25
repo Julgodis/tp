@@ -431,7 +431,7 @@ extern "C" static void dMw_Create__FP9msg_class(); // 1
 extern "C" void __sinit_d_menu_window_cpp(); // 1
 extern "C" void draw__20dDlst_MENU_CAPTURE_cFv(); // 1
 extern "C" void __dt__20dDlst_MENU_CAPTURE_cFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_menu_d_menu_window__stringBase0;
 extern "C" extern void* g_profile_MENUWINDOW[10 + 6 /* padding */];
 
 // 
@@ -690,7 +690,7 @@ asm void dMw_START_TRIGGER() {
 #pragma pop
 
 
-/* 801FA08C-801FA0AC 0020+00 s=0 e=0 z=0  None .text      dMw_onPauseWindow__Fv                                        */
+/* 801FA08C-801FA0AC 0020+00 s=0 e=0 z=1  None .text      dMw_onPauseWindow__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -701,7 +701,7 @@ asm void dMw_onPauseWindow() {
 #pragma pop
 
 
-/* 801FA0AC-801FA0CC 0020+00 s=0 e=0 z=0  None .text      dMw_offPauseWindow__Fv                                       */
+/* 801FA0AC-801FA0CC 0020+00 s=0 e=0 z=1  None .text      dMw_offPauseWindow__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -712,7 +712,7 @@ asm void dMw_offPauseWindow() {
 #pragma pop
 
 
-/* 801FA0CC-801FA0F0 0024+00 s=0 e=0 z=0  None .text      dMw_onMenuRing__Fv                                           */
+/* 801FA0CC-801FA0F0 0024+00 s=0 e=0 z=4  None .text      dMw_onMenuRing__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -723,7 +723,7 @@ asm void dMw_onMenuRing() {
 #pragma pop
 
 
-/* 801FA0F0-801FA114 0024+00 s=0 e=0 z=0  None .text      dMw_offMenuRing__Fv                                          */
+/* 801FA0F0-801FA114 0024+00 s=0 e=0 z=2  None .text      dMw_offMenuRing__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2163,7 +2163,7 @@ SECTION_DATA static void* l_dMw_Method[5] = {
 	/* 4    */ (void*)dMw_Draw__FP5dMw_c,
 };
 
-/* 803BF094-803BF0D4 0028+18 s=0 e=0 z=0  None .data      g_profile_MENUWINDOW                                         */
+/* 803BF094-803BF0D4 0028+18 s=0 e=0 z=1  None .data      g_profile_MENUWINDOW                                         */
 SECTION_DATA void* g_profile_MENUWINDOW[10 + 6 /* padding */] = {
 	/* 0    */ (void*)0xFFFFFFFD,
 	/* 1    */ (void*)0x000CFFFD,

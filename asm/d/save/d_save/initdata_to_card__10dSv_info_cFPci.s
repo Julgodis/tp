@@ -22,19 +22,19 @@ lbl_80035BD0:
 /* 80035C20 00000050  38 61 00 08 */	addi r3, r1, 8
 /* 80035C24 00000054  4B FF F3 F9 */	bl init__10dSv_save_cFv
 /* 80035C28 00000058  38 61 01 BC */	addi r3, r1, 0x1bc
-/* 80035C2C 0000005C  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 80035C30 00000060  38 84 92 34 */	addi r4, r4, stringBase0@l
+/* 80035C2C 0000005C  3C 80 80 38 */	lis r4, d_save_d_save__stringBase0@ha
+/* 80035C30 00000060  38 84 92 34 */	addi r4, r4, d_save_d_save__stringBase0@l
 /* 80035C34 00000064  48 33 2E F9 */	bl strcpy
 /* 80035C38 00000068  38 61 01 CD */	addi r3, r1, 0x1cd
-/* 80035C3C 0000006C  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 80035C40 00000070  38 84 92 34 */	addi r4, r4, stringBase0@l
+/* 80035C3C 0000006C  3C 80 80 38 */	lis r4, d_save_d_save__stringBase0@ha
+/* 80035C40 00000070  38 84 92 34 */	addi r4, r4, d_save_d_save__stringBase0@l
 /* 80035C44 00000074  48 33 2E E9 */	bl strcpy
 /* 80035C48 00000078  7F E3 FB 78 */	mr r3, r31
 /* 80035C4C 0000007C  38 81 00 08 */	addi r4, r1, 8
 /* 80035C50 00000080  38 A0 09 58 */	li r5, 0x958
 /* 80035C54 00000084  4B FC D8 ED */	bl memcpy
-/* 80035C58 00000088  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 80035C5C 0000008C  38 63 92 34 */	addi r3, r3, stringBase0@l
+/* 80035C58 00000088  3C 60 80 38 */	lis r3, d_save_d_save__stringBase0@ha
+/* 80035C5C 0000008C  38 63 92 34 */	addi r3, r3, d_save_d_save__stringBase0@l
 /* 80035C60 00000090  38 63 00 54 */	addi r3, r3, 0x54
 /* 80035C64 00000094  38 80 09 58 */	li r4, 0x958
 /* 80035C68 00000098  4C C6 31 82 */	crclr 6

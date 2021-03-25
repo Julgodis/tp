@@ -101,10 +101,10 @@ struct J2DPane {
 	/* 802F7100 */ void getBounds();
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
 struct J2DScreen {
@@ -163,7 +163,7 @@ extern "C" void fukiScale__14dMsgScrnTalk_cFf(); // 1
 extern "C" void fukiTrans__14dMsgScrnTalk_cFff(); // 1
 extern "C" void fukiAlpha__14dMsgScrnTalk_cFf(); // 1
 extern "C" void fukiPosCalc__14dMsgScrnTalk_cFUc(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const msg_scrn_d_msg_scrn_talk__stringBase0;
 
 // 
 // External References:

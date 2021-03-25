@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80BDC39C[8];
+extern void* data_80BDC39C[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_obj_dan_cpp(); // 1
 
 // 
 // Declarations:

@@ -87,26 +87,26 @@ lbl_802EAD64:
 /* 802EADC4 00000060  EF A1 00 24 */	fdivs f29, f1, f0
 /* 802EADC8 00000064  C3 81 00 40 */	lfs f28, 0x40(r1)
 /* 802EADCC 00000068  C3 61 00 44 */	lfs f27, 0x44(r1)
-/* 802EADD0 0000006C  C0 1E 00 04 */	lfs f0, 4(r30)
+/* 802EADD0 0000006C  C0 1E 00 04 */	lfs f0, 4(r30)	/* effective address: 803A1BA4 */
 /* 802EADD4 00000070  D0 01 00 4C */	stfs f0, 0x4c(r1)
-/* 802EADD8 00000074  C0 1E 00 08 */	lfs f0, 8(r30)
+/* 802EADD8 00000074  C0 1E 00 08 */	lfs f0, 8(r30)	/* effective address: 803A1BA8 */
 /* 802EADDC 00000078  D0 01 00 50 */	stfs f0, 0x50(r1)
-/* 802EADE0 0000007C  C0 1E 00 0C */	lfs f0, 0xc(r30)
+/* 802EADE0 0000007C  C0 1E 00 0C */	lfs f0, 0xc(r30)	/* effective address: 803A1BAC */
 /* 802EADE4 00000080  D0 01 00 54 */	stfs f0, 0x54(r1)
 /* 802EADE8 00000084  3C 60 80 3A */	lis r3, j2dDefaultTexMtxInfo@ha
 /* 802EADEC 00000088  88 03 1B A0 */	lbz r0, j2dDefaultTexMtxInfo@l(r3)
 /* 802EADF0 0000008C  98 01 00 48 */	stb r0, 0x48(r1)
-/* 802EADF4 00000090  88 1E 00 01 */	lbz r0, 1(r30)
+/* 802EADF4 00000090  88 1E 00 01 */	lbz r0, 1(r30)	/* effective address: 803A1BA1 */
 /* 802EADF8 00000094  98 01 00 49 */	stb r0, 0x49(r1)
-/* 802EADFC 00000098  C0 1E 00 10 */	lfs f0, 0x10(r30)
+/* 802EADFC 00000098  C0 1E 00 10 */	lfs f0, 0x10(r30)	/* effective address: 803A1BB0 */
 /* 802EAE00 0000009C  D0 01 00 58 */	stfs f0, 0x58(r1)
-/* 802EAE04 000000A0  C0 1E 00 14 */	lfs f0, 0x14(r30)
+/* 802EAE04 000000A0  C0 1E 00 14 */	lfs f0, 0x14(r30)	/* effective address: 803A1BB4 */
 /* 802EAE08 000000A4  D0 01 00 5C */	stfs f0, 0x5c(r1)
-/* 802EAE0C 000000A8  C0 1E 00 18 */	lfs f0, 0x18(r30)
+/* 802EAE0C 000000A8  C0 1E 00 18 */	lfs f0, 0x18(r30)	/* effective address: 803A1BB8 */
 /* 802EAE10 000000AC  D0 01 00 60 */	stfs f0, 0x60(r1)
-/* 802EAE14 000000B0  C0 1E 00 1C */	lfs f0, 0x1c(r30)
+/* 802EAE14 000000B0  C0 1E 00 1C */	lfs f0, 0x1c(r30)	/* effective address: 803A1BBC */
 /* 802EAE18 000000B4  D0 01 00 64 */	stfs f0, 0x64(r1)
-/* 802EAE1C 000000B8  C0 1E 00 20 */	lfs f0, 0x20(r30)
+/* 802EAE1C 000000B8  C0 1E 00 20 */	lfs f0, 0x20(r30)	/* effective address: 803A1BC0 */
 /* 802EAE20 000000BC  D0 01 00 68 */	stfs f0, 0x68(r1)
 /* 802EAE24 000000C0  38 7F 00 28 */	addi r3, r31, 0x28
 /* 802EAE28 000000C4  7F A4 EB 78 */	mr r4, r29

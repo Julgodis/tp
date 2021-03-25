@@ -5,16 +5,16 @@ lbl_80C57698:
 /* 80C576A4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C576A8 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80C576AC 00000014  38 7F 07 6C */	addi r3, r31, 0x76c
-/* 80C576B0 00000018  4B FF F5 69 */	bl _unresolved
+/* 80C576B0 00000018  4B 66 69 48 */	b deleteObject__14Z2SoundObjBaseFv
 /* 80C576B4 0000001C  38 7F 05 A0 */	addi r3, r31, 0x5a0
-/* 80C576B8 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80C576BC 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80C576C0 00000028  4B FF F5 59 */	bl _unresolved
+/* 80C576B8 00000020  3C 80 80 C5 */	lis r4, stringBase0@ha
+/* 80C576BC 00000024  38 84 78 C0 */	addi r4, r4, stringBase0@l
+/* 80C576C0 00000028  4B 3D 59 48 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C576C4 0000002C  88 1F 07 40 */	lbz r0, 0x740(r31)
 /* 80C576C8 00000030  28 00 00 00 */	cmplwi r0, 0
 /* 80C576CC 00000034  41 82 00 0C */	beq lbl_80C576D8
 /* 80C576D0 00000038  38 7F 07 48 */	addi r3, r31, 0x748
-/* 80C576D4 0000003C  4B FF F5 45 */	bl _unresolved
+/* 80C576D4 0000003C  4B 55 02 58 */	b dKy_plight_cut__FP15LIGHT_INFLUENCE
 lbl_80C576D8:
 /* 80C576D8 00000000  38 60 00 01 */	li r3, 1
 /* 80C576DC 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

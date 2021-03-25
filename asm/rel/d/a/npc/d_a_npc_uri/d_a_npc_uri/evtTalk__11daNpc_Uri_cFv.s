@@ -4,13 +4,13 @@ lbl_80B27C8C:
 /* 80B27C94 00000008  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80B27C98 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80B27C9C 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80B27CA0 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80B27CA4 00000018  38 A4 00 00 */	addi r5, r4, 0x0000 /* 0x00000000@l */
-/* 80B27CA8 0000001C  80 85 00 00 */	lwz r4, 0(r5)
-/* 80B27CAC 00000020  80 05 00 04 */	lwz r0, 4(r5)
+/* 80B27CA0 00000014  3C 80 80 B3 */	lis r4, lit_4734@ha
+/* 80B27CA4 00000018  38 A4 DA E4 */	addi r5, r4, lit_4734@l
+/* 80B27CA8 0000001C  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80B2DAE4 */
+/* 80B27CAC 00000020  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80B2DAE8 */
 /* 80B27CB0 00000024  90 81 00 14 */	stw r4, 0x14(r1)
 /* 80B27CB4 00000028  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80B27CB8 0000002C  80 05 00 08 */	lwz r0, 8(r5)
+/* 80B27CB8 0000002C  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80B2DAEC */
 /* 80B27CBC 00000030  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80B27CC0 00000034  38 81 00 14 */	addi r4, r1, 0x14
 /* 80B27CC4 00000038  48 00 0A D1 */	bl chkAction__11daNpc_Uri_cFM11daNpc_Uri_cFPCvPvPv_i
@@ -19,17 +19,17 @@ lbl_80B27C8C:
 /* 80B27CD0 00000044  7F E3 FB 78 */	mr r3, r31
 /* 80B27CD4 00000048  38 80 00 00 */	li r4, 0
 /* 80B27CD8 0000004C  39 9F 0F CC */	addi r12, r31, 0xfcc
-/* 80B27CDC 00000050  4B FF EA 3D */	bl _unresolved
+/* 80B27CDC 00000050  4B 83 A3 A8 */	b __ptmf_scall
 /* 80B27CE0 00000054  60 00 00 00 */	nop 
 /* 80B27CE4 00000058  48 00 00 30 */	b lbl_80B27D14
 lbl_80B27CE8:
-/* 80B27CE8 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80B27CEC 00000004  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
-/* 80B27CF0 00000008  80 64 00 00 */	lwz r3, 0(r4)
-/* 80B27CF4 0000000C  80 04 00 04 */	lwz r0, 4(r4)
+/* 80B27CE8 00000000  3C 60 80 B3 */	lis r3, lit_4739@ha
+/* 80B27CEC 00000004  38 83 DA F0 */	addi r4, r3, lit_4739@l
+/* 80B27CF0 00000008  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B2DAF0 */
+/* 80B27CF4 0000000C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B2DAF4 */
 /* 80B27CF8 00000010  90 61 00 08 */	stw r3, 8(r1)
 /* 80B27CFC 00000014  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80B27D00 00000018  80 04 00 08 */	lwz r0, 8(r4)
+/* 80B27D00 00000018  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B2DAF8 */
 /* 80B27D04 0000001C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80B27D08 00000020  7F E3 FB 78 */	mr r3, r31
 /* 80B27D0C 00000024  38 81 00 08 */	addi r4, r1, 8

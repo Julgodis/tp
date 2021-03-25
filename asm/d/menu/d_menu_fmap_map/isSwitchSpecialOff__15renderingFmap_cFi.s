@@ -9,8 +9,8 @@ lbl_801CE224:
 /* 801CE240 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801CE244 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 801CE248 00000024  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 801CE24C 00000028  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801CE250 0000002C  38 84 62 3C */	addi r4, r4, stringBase0@l
+/* 801CE24C 00000028  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap_map__stringBase0@ha
+/* 801CE250 0000002C  38 84 62 3C */	addi r4, r4, d_menu_d_menu_fmap_map__stringBase0@l
 /* 801CE254 00000030  48 19 A7 41 */	bl strcmp
 /* 801CE258 00000034  2C 03 00 00 */	cmpwi r3, 0
 /* 801CE25C 00000038  40 82 00 10 */	bne lbl_801CE26C

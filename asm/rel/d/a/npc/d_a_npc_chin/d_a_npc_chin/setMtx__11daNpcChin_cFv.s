@@ -4,7 +4,7 @@ lbl_80991858:
 /* 80991860 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80991864 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80991868 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8099186C 00000014  4B FF A6 0D */	bl _unresolved
+/* 8099186C 00000014  4B 7C 0F 00 */	b setMtx__8daNpcF_cFv
 /* 80991870 00000018  38 7F 0E 30 */	addi r3, r31, 0xe30
 /* 80991874 0000001C  4B FF A7 8D */	bl setMtx__Q211daNpcChin_c12_SpotLight_cFv
 /* 80991878 00000020  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -3,8 +3,8 @@ lbl_80A9A05C:
 /* 80A9A060 00000004  7C 08 02 A6 */	mflr r0
 /* 80A9A064 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80A9A068 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80A9A06C 00000010  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 80A9A070 00000014  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
+/* 80A9A06C 00000010  3C A0 80 AA */	lis r5, m__24daNpc_Pachi_Maro_Param_c@ha
+/* 80A9A070 00000014  38 A5 B8 8C */	addi r5, r5, m__24daNpc_Pachi_Maro_Param_c@l
 /* 80A9A074 00000018  3B E0 00 00 */	li r31, 0
 /* 80A9A078 0000001C  80 04 00 00 */	lwz r0, 0(r4)
 /* 80A9A07C 00000020  2C 00 00 0A */	cmpwi r0, 0xa
@@ -21,11 +21,11 @@ lbl_80A9A0A0:
 /* 80A9A0A0 00000000  3B E0 00 01 */	li r31, 1
 /* 80A9A0A4 00000004  48 00 00 34 */	b lbl_80A9A0D8
 lbl_80A9A0A8:
-/* 80A9A0A8 00000000  C0 05 00 F0 */	lfs f0, 0xf0(r5)
+/* 80A9A0A8 00000000  C0 05 00 F0 */	lfs f0, 0xf0(r5)	/* effective address: 80A9B97C */
 /* 80A9A0AC 00000004  D0 01 00 08 */	stfs f0, 8(r1)
-/* 80A9A0B0 00000008  C0 05 00 F4 */	lfs f0, 0xf4(r5)
+/* 80A9A0B0 00000008  C0 05 00 F4 */	lfs f0, 0xf4(r5)	/* effective address: 80A9B980 */
 /* 80A9A0B4 0000000C  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80A9A0B8 00000010  C0 05 00 F8 */	lfs f0, 0xf8(r5)
+/* 80A9A0B8 00000010  C0 05 00 F8 */	lfs f0, 0xf8(r5)	/* effective address: 80A9B984 */
 /* 80A9A0BC 00000014  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80A9A0C0 00000018  38 81 00 08 */	addi r4, r1, 8
 /* 80A9A0C4 0000001C  38 A0 10 00 */	li r5, 0x1000

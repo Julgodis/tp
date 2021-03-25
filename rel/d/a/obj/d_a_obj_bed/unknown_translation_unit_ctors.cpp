@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80BAE154[8];
+extern void* data_80BAE154[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_obj_bed_cpp(); // 1
 
 // 
 // Declarations:

@@ -140,7 +140,7 @@ lbl_801C3ACC:
 /* 801C3ADC 00000010  D0 03 00 5C */	stfs f0, 0x5c(r3)
 /* 801C3AE0 00000014  80 7B 00 64 */	lwz r3, 0x64(r27)
 /* 801C3AE4 00000018  C0 3D 00 78 */	lfs f1, 0x78(r29)
-/* 801C3AE8 0000001C  C0 1E 03 1C */	lfs f0, 0x31c(r30)
+/* 801C3AE8 0000001C  C0 1E 03 1C */	lfs f0, 0x31c(r30)	/* effective address: 8042FF7C */
 /* 801C3AEC 00000020  EC 21 00 32 */	fmuls f1, f1, f0
 /* 801C3AF0 00000024  4B FD 16 D9 */	bl setScale__16dSelect_cursor_cFf
 /* 801C3AF4 00000028  80 7B 00 64 */	lwz r3, 0x64(r27)
@@ -187,7 +187,7 @@ lbl_801C3B78:
 /* 801C3B88 00000010  D0 03 00 5C */	stfs f0, 0x5c(r3)
 /* 801C3B8C 00000014  80 7B 00 68 */	lwz r3, 0x68(r27)
 /* 801C3B90 00000018  C0 3D 00 78 */	lfs f1, 0x78(r29)
-/* 801C3B94 0000001C  C0 1E 03 20 */	lfs f0, 0x320(r30)
+/* 801C3B94 0000001C  C0 1E 03 20 */	lfs f0, 0x320(r30)	/* effective address: 8042FF80 */
 /* 801C3B98 00000020  EC 21 00 32 */	fmuls f1, f1, f0
 /* 801C3B9C 00000024  4B FD 16 2D */	bl setScale__16dSelect_cursor_cFf
 /* 801C3BA0 00000028  80 7B 00 68 */	lwz r3, 0x68(r27)

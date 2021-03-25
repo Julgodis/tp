@@ -112,7 +112,7 @@ lbl_80154B20:
 /* 80154B70 00000050  2C 03 00 00 */	cmpwi r3, 0
 /* 80154B74 00000054  41 82 00 28 */	beq lbl_80154B9C
 /* 80154B78 00000058  7F 63 DB 78 */	mr r3, r27
-/* 80154B7C 0000005C  80 9F 5D AC */	lwz r4, 0x5dac(r31)
+/* 80154B7C 0000005C  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
 /* 80154B80 00000060  FC 20 E0 90 */	fmr f1, f28
 /* 80154B84 00000064  7F A5 EB 78 */	mr r5, r29
 /* 80154B88 00000068  4B FF FB A9 */	bl chkActorInSight2__8daNpcF_cFP10fopAc_ac_cfs

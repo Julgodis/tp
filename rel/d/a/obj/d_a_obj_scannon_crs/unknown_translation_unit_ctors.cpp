@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80CCB074[8];
+extern void* data_80CCB074[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_obj_scannon_crs_cpp(); // 1
 
 // 
 // Declarations:

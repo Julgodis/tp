@@ -48,10 +48,10 @@ struct dMeterSub_c {
 struct JKRExpHeap {
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
 struct J2DScreen {
@@ -104,7 +104,7 @@ extern "C" void updateHaihai__14dMeterHaihai_cFv(); // 1
 extern "C" void playBckAnime__14dMeterHaihai_cFP18J2DAnmTransformKey(); // 1
 extern "C" void playBtkAnime__14dMeterHaihai_cFP19J2DAnmTextureSRTKey(); // 1
 extern "C" void playBpkAnime__14dMeterHaihai_cFP11J2DAnmColor(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_meter_d_meter_haihai__stringBase0;
 
 // 
 // External References:

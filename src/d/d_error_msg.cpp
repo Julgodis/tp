@@ -54,10 +54,10 @@ struct J2DOrthoGraph {
 	/* 802E980C */ void setOrtho(JGeometry::TBox2<f32> const&, f32, f32);
 };
 
-struct ResTIMG {
+struct ResTLUT {
 };
 
-struct ResTLUT {
+struct ResTIMG {
 };
 
 struct J2DPicture {
@@ -66,10 +66,10 @@ struct J2DPicture {
 	/* 802FDC70 */ void draw(f32, f32, f32, f32, bool, bool, bool);
 };
 
-struct J2DTextBoxVBinding {
+struct J2DTextBoxHBinding {
 };
 
-struct J2DTextBoxHBinding {
+struct J2DTextBoxVBinding {
 };
 
 struct J2DTextBox {
@@ -96,7 +96,7 @@ extern "C" void execute__14dDvdErrorMsg_cFv(); // 1
 extern "C" static void drawCapture__FUc(); // 1
 extern "C" void execute__19dShutdownErrorMsg_cFv(); // 1
 extern "C" extern void* const font_data[18584];
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_d_error_msg__stringBase0;
 
 // 
 // External References:
@@ -234,7 +234,7 @@ SECTION_RODATA static u8 const msg_data[608] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8037B3E0-8038D640 12260+00 s=1 e=1 z=0  None .rodata    font_data                                                    */
+/* 8037B3E0-8038D640 12260+00 s=1 e=2 z=0  None .rodata    font_data                                                    */
 SECTION_RODATA void* const font_data[18584] = {
 	/* 0    */ (void*)0x464F4E54,
 	/* 1    */ (void*)0x62666E31,

@@ -11,12 +11,12 @@
 // Types:
 // 
 
+struct JKRExpHeap {
+};
+
 struct J2DPane {
 	/* 802F7A8C */ void getFirstChildPane();
 	/* 802F7AC4 */ void getNextChildPane();
-};
-
-struct JKRExpHeap {
 };
 
 struct J2DScreen {
@@ -135,7 +135,7 @@ asm CPaneMgrAlpha::CPaneMgrAlpha() {
 #pragma pop
 
 
-/* 802553FC-8025546C 0070+00 s=1 e=9 z=0  None .text      __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap           */
+/* 802553FC-8025546C 0070+00 s=1 e=9 z=1  None .text      __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -168,7 +168,7 @@ asm void CPaneMgrAlpha::initiateAlpha(J2DPane* param_0, JKRExpHeap* param_1) {
 #pragma pop
 
 
-/* 802555C8-80255608 0040+00 s=0 e=40 z=0  None .text      show__13CPaneMgrAlphaFv                                      */
+/* 802555C8-80255608 0040+00 s=0 e=40 z=2  None .text      show__13CPaneMgrAlphaFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -179,7 +179,7 @@ asm void CPaneMgrAlpha::show() {
 #pragma pop
 
 
-/* 80255608-8025564C 0044+00 s=0 e=46 z=0  None .text      hide__13CPaneMgrAlphaFv                                      */
+/* 80255608-8025564C 0044+00 s=0 e=46 z=2  None .text      hide__13CPaneMgrAlphaFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -238,7 +238,7 @@ asm void CPaneMgrAlpha::setAlpha(u8 param_0) {
 /* 80454EC8-80454ED0 0008+00 s=6 e=0 z=0  None .sdata2    @3708                                                        */
 SECTION_SDATA2 static f64 lit_3708 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802557D0-80255828 0058+00 s=1 e=173 z=0  None .text      setAlphaRate__13CPaneMgrAlphaFf                              */
+/* 802557D0-80255828 0058+00 s=1 e=173 z=5  None .text      setAlphaRate__13CPaneMgrAlphaFf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -257,7 +257,7 @@ SECTION_SDATA2 static u8 lit_3721[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80255828-80255878 0050+00 s=0 e=107 z=0  None .text      getAlphaRate__13CPaneMgrAlphaFv                              */
+/* 80255828-80255878 0050+00 s=0 e=107 z=2  None .text      getAlphaRate__13CPaneMgrAlphaFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -268,7 +268,7 @@ asm void CPaneMgrAlpha::getAlphaRate() {
 #pragma pop
 
 
-/* 80255878-80255964 00EC+00 s=0 e=31 z=0  None .text      alphaAnime__13CPaneMgrAlphaFsUcUcUc                          */
+/* 80255878-80255964 00EC+00 s=0 e=31 z=1  None .text      alphaAnime__13CPaneMgrAlphaFsUcUcUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -279,7 +279,7 @@ asm void CPaneMgrAlpha::alphaAnime(s16 param_0, u8 param_1, u8 param_2, u8 param
 #pragma pop
 
 
-/* 80255964-80255A60 00FC+00 s=0 e=0 z=0  None .text      alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc                      */
+/* 80255964-80255A60 00FC+00 s=0 e=0 z=1  None .text      alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

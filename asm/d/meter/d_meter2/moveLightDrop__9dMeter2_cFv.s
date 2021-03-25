@@ -44,7 +44,7 @@ lbl_8022090C:
 /* 8022092C 00000020  7C 04 00 40 */	cmplw r4, r0
 /* 80220930 00000024  41 82 00 CC */	beq lbl_802209FC
 /* 80220934 00000028  7F C3 F3 78 */	mr r3, r30
-/* 80220938 0000002C  88 9F 4E 0C */	lbz r4, 0x4e0c(r31)
+/* 80220938 0000002C  88 9F 4E 0C */	lbz r4, 0x4e0c(r31)	/* effective address: 8040AFCC */
 /* 8022093C 00000030  4B E1 3A 05 */	bl getLightDropNum__16dSv_light_drop_cCFUc
 /* 80220940 00000034  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80220944 00000038  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
@@ -69,7 +69,7 @@ lbl_8022090C:
 /* 80220990 00000084  48 00 00 58 */	b lbl_802209E8
 lbl_80220994:
 /* 80220994 00000000  7F C3 F3 78 */	mr r3, r30
-/* 80220998 00000004  88 9F 4E 0C */	lbz r4, 0x4e0c(r31)
+/* 80220998 00000004  88 9F 4E 0C */	lbz r4, 0x4e0c(r31)	/* effective address: 8040AFCC */
 /* 8022099C 00000008  4B E1 39 A5 */	bl getLightDropNum__16dSv_light_drop_cCFUc
 /* 802209A0 0000000C  88 9B 01 C2 */	lbz r4, 0x1c2(r27)
 /* 802209A4 00000010  54 60 06 3E */	clrlwi r0, r3, 0x18
@@ -91,7 +91,7 @@ lbl_80220994:
 /* 802209E4 00000050  48 08 AF A1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 lbl_802209E8:
 /* 802209E8 00000000  7F C3 F3 78 */	mr r3, r30
-/* 802209EC 00000004  88 9F 4E 0C */	lbz r4, 0x4e0c(r31)
+/* 802209EC 00000004  88 9F 4E 0C */	lbz r4, 0x4e0c(r31)	/* effective address: 8040AFCC */
 /* 802209F0 00000008  4B E1 39 51 */	bl getLightDropNum__16dSv_light_drop_cCFUc
 /* 802209F4 0000000C  98 7B 01 C2 */	stb r3, 0x1c2(r27)
 /* 802209F8 00000010  3B A0 00 01 */	li r29, 1
@@ -117,7 +117,7 @@ lbl_80220A1C:
 /* 80220A40 00000024  4E 80 04 21 */	bctrl 
 /* 80220A44 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 80220A48 0000002C  40 82 00 34 */	bne lbl_80220A7C
-/* 80220A4C 00000030  80 7E 5D AC */	lwz r3, 0x5dac(r30)
+/* 80220A4C 00000030  80 7E 5D AC */	lwz r3, 0x5dac(r30)	/* effective address: 8040BF6C */
 /* 80220A50 00000034  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80220A54 00000038  81 8C 00 D0 */	lwz r12, 0xd0(r12)
 /* 80220A58 0000003C  7D 89 03 A6 */	mtctr r12

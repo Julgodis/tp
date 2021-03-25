@@ -36,11 +36,11 @@ lbl_800BBD40:
 /* 800BBDC8 00000088  38 7F 2B B8 */	addi r3, r31, 0x2bb8
 /* 800BBDCC 0000008C  7F C5 F3 78 */	mr r5, r30
 /* 800BBDD0 00000090  48 28 A7 15 */	bl PSMTXConcat
-/* 800BBDD4 00000094  C0 1E 00 0C */	lfs f0, 0xc(r30)
+/* 800BBDD4 00000094  C0 1E 00 0C */	lfs f0, 0xc(r30)	/* effective address: 803DD47C */
 /* 800BBDD8 00000098  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 800BBDDC 0000009C  C0 3E 00 1C */	lfs f1, 0x1c(r30)
+/* 800BBDDC 0000009C  C0 3E 00 1C */	lfs f1, 0x1c(r30)	/* effective address: 803DD48C */
 /* 800BBDE0 000000A0  D0 21 00 30 */	stfs f1, 0x30(r1)
-/* 800BBDE4 000000A4  C0 1E 00 2C */	lfs f0, 0x2c(r30)
+/* 800BBDE4 000000A4  C0 1E 00 2C */	lfs f0, 0x2c(r30)	/* effective address: 803DD49C */
 /* 800BBDE8 000000A8  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 800BBDEC 000000AC  C0 01 00 24 */	lfs f0, 0x24(r1)
 /* 800BBDF0 000000B0  FC 00 08 40 */	fcmpo cr0, f0, f1

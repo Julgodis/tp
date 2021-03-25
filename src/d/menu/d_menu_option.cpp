@@ -11,15 +11,15 @@
 // Types:
 // 
 
-struct JKRArchive {
-};
-
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 8003242C */ void checkLeftTrigger();
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct JKRArchive {
 };
 
 struct dMenu_Option_c {
@@ -373,7 +373,7 @@ extern "C" extern u8 const data_803974D8[32];
 extern "C" extern u8 const data_803974F8[24];
 extern "C" extern u8 const data_80397510[80];
 extern "C" extern u8 const data_80397560[40];
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_menu_d_menu_option__stringBase0;
 
 // 
 // External References:

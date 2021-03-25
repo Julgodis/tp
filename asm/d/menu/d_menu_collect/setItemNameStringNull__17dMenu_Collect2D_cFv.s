@@ -16,8 +16,8 @@ lbl_801B6344:
 /* 801B637C 00000038  7D 89 03 A6 */	mtctr r12
 /* 801B6380 0000003C  4E 80 04 21 */	bctrl 
 /* 801B6384 00000040  48 14 A2 D5 */	bl getStringPtr__10J2DTextBoxCFv
-/* 801B6388 00000044  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801B638C 00000048  38 84 53 30 */	addi r4, r4, stringBase0@l
+/* 801B6388 00000044  3C 80 80 39 */	lis r4, d_menu_d_menu_collect__stringBase0@ha
+/* 801B638C 00000048  38 84 53 30 */	addi r4, r4, d_menu_d_menu_collect__stringBase0@l
 /* 801B6390 0000004C  38 84 00 55 */	addi r4, r4, 0x55
 /* 801B6394 00000050  48 1B 27 99 */	bl strcpy
 /* 801B6398 00000054  80 7F 00 18 */	lwz r3, 0x18(r31)
@@ -30,8 +30,8 @@ lbl_801B6344:
 /* 801B63B4 00000070  7D 89 03 A6 */	mtctr r12
 /* 801B63B8 00000074  4E 80 04 21 */	bctrl 
 /* 801B63BC 00000078  48 14 A2 9D */	bl getStringPtr__10J2DTextBoxCFv
-/* 801B63C0 0000007C  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801B63C4 00000080  38 84 53 30 */	addi r4, r4, stringBase0@l
+/* 801B63C0 0000007C  3C 80 80 39 */	lis r4, d_menu_d_menu_collect__stringBase0@ha
+/* 801B63C4 00000080  38 84 53 30 */	addi r4, r4, d_menu_d_menu_collect__stringBase0@l
 /* 801B63C8 00000084  38 84 00 55 */	addi r4, r4, 0x55
 /* 801B63CC 00000088  48 1B 27 61 */	bl strcpy
 /* 801B63D0 0000008C  80 7F 00 18 */	lwz r3, 0x18(r31)
@@ -44,8 +44,8 @@ lbl_801B6344:
 /* 801B63EC 000000A8  7D 89 03 A6 */	mtctr r12
 /* 801B63F0 000000AC  4E 80 04 21 */	bctrl 
 /* 801B63F4 000000B0  48 14 A2 65 */	bl getStringPtr__10J2DTextBoxCFv
-/* 801B63F8 000000B4  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801B63FC 000000B8  38 84 53 30 */	addi r4, r4, stringBase0@l
+/* 801B63F8 000000B4  3C 80 80 39 */	lis r4, d_menu_d_menu_collect__stringBase0@ha
+/* 801B63FC 000000B8  38 84 53 30 */	addi r4, r4, d_menu_d_menu_collect__stringBase0@l
 /* 801B6400 000000BC  38 84 00 55 */	addi r4, r4, 0x55
 /* 801B6404 000000C0  48 1B 27 29 */	bl strcpy
 /* 801B6408 000000C4  80 7F 00 18 */	lwz r3, 0x18(r31)
@@ -58,8 +58,8 @@ lbl_801B6344:
 /* 801B6424 000000E0  7D 89 03 A6 */	mtctr r12
 /* 801B6428 000000E4  4E 80 04 21 */	bctrl 
 /* 801B642C 000000E8  48 14 A2 2D */	bl getStringPtr__10J2DTextBoxCFv
-/* 801B6430 000000EC  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801B6434 000000F0  38 84 53 30 */	addi r4, r4, stringBase0@l
+/* 801B6430 000000EC  3C 80 80 39 */	lis r4, d_menu_d_menu_collect__stringBase0@ha
+/* 801B6434 000000F0  38 84 53 30 */	addi r4, r4, d_menu_d_menu_collect__stringBase0@l
 /* 801B6438 000000F4  38 84 00 55 */	addi r4, r4, 0x55
 /* 801B643C 000000F8  48 1B 26 F1 */	bl strcpy
 /* 801B6440 000000FC  83 E1 00 0C */	lwz r31, 0xc(r1)

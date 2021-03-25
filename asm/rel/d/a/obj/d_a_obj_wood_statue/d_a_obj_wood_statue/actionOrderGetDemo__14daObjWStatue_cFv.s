@@ -8,10 +8,10 @@ lbl_80D3AC64:
 /* 80D3AC7C 00000018  3C 04 00 01 */	addis r0, r4, 1
 /* 80D3AC80 0000001C  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80D3AC84 00000020  41 82 00 14 */	beq lbl_80D3AC98
-/* 80D3AC88 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D3AC8C 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D3AC88 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D3AC8C 00000028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D3AC90 0000002C  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 80D3AC94 00000030  4B FF F1 85 */	bl _unresolved
+/* 80D3AC94 00000030  4B 30 8A 58 */	b setPtI_Id__14dEvt_control_cFUi
 lbl_80D3AC98:
 /* 80D3AC98 00000000  38 60 00 01 */	li r3, 1
 /* 80D3AC9C 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

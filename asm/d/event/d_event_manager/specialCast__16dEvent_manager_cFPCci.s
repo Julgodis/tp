@@ -13,8 +13,8 @@ lbl_80048618:
 /* 80048644 0000002C  48 00 00 EC */	b lbl_80048730
 lbl_80048648:
 /* 80048648 00000000  7C 83 23 78 */	mr r3, r4
-/* 8004864C 00000004  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 80048650 00000008  38 84 9F 60 */	addi r4, r4, stringBase0@l
+/* 8004864C 00000004  3C 80 80 38 */	lis r4, d_event_d_event_manager__stringBase0@ha
+/* 80048650 00000008  38 84 9F 60 */	addi r4, r4, d_event_d_event_manager__stringBase0@l
 /* 80048654 0000000C  38 84 01 7E */	addi r4, r4, 0x17e
 /* 80048658 00000010  48 32 03 3D */	bl strcmp
 /* 8004865C 00000014  2C 03 00 00 */	cmpwi r3, 0

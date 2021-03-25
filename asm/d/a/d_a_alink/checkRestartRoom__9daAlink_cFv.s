@@ -52,8 +52,8 @@ lbl_800BE4A0:
 /* 800BE4A0 00000000  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 800BE4A4 00000004  7C 00 07 75 */	extsb. r0, r0
 /* 800BE4A8 00000008  40 82 00 28 */	bne lbl_800BE4D0
-/* 800BE4AC 0000000C  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800BE4B0 00000010  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800BE4AC 0000000C  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800BE4B0 00000010  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800BE4B4 00000014  38 63 05 26 */	addi r3, r3, 0x526
 /* 800BE4B8 00000018  4B FD F5 A9 */	bl checkStageName__9daAlink_cFPCc
 /* 800BE4BC 0000001C  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -93,8 +93,8 @@ lbl_800BE534:
 /* 800BE538 00000004  C0 1D 04 D4 */	lfs f0, 0x4d4(r29)
 /* 800BE53C 00000008  EF E1 00 28 */	fsubs f31, f1, f0
 lbl_800BE540:
-/* 800BE540 00000000  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 800BE544 00000004  38 63 20 94 */	addi r3, r3, stringBase0@l
+/* 800BE540 00000000  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
+/* 800BE544 00000004  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
 /* 800BE548 00000008  38 63 05 26 */	addi r3, r3, 0x526
 /* 800BE54C 0000000C  4B FD F5 15 */	bl checkStageName__9daAlink_cFPCc
 /* 800BE550 00000010  54 60 06 3F */	clrlwi. r0, r3, 0x18

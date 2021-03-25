@@ -6,10 +6,10 @@ lbl_80D23A0C:
 /* 80D23A1C 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80D23A20 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80D23A24 00000018  38 7E 05 7C */	addi r3, r30, 0x57c
-/* 80D23A28 0000001C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80D23A2C 00000020  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80D23A30 00000024  80 84 00 00 */	lwz r4, 0(r4)
-/* 80D23A34 00000028  4B FF E0 C5 */	bl _unresolved
+/* 80D23A28 0000001C  3C 80 80 D2 */	lis r4, l_arcName@ha
+/* 80D23A2C 00000020  38 84 3E AC */	addi r4, r4, l_arcName@l
+/* 80D23A30 00000024  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D23EAC */
+/* 80D23A34 00000028  4B 30 95 D4 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80D23A38 0000002C  88 1E 06 00 */	lbz r0, 0x600(r30)
 /* 80D23A3C 00000030  28 00 00 00 */	cmplwi r0, 0
 /* 80D23A40 00000034  41 82 00 18 */	beq lbl_80D23A58
@@ -19,11 +19,11 @@ lbl_80D23A0C:
 /* 80D23A50 00000044  28 00 00 00 */	cmplwi r0, 0
 /* 80D23A54 00000048  41 82 00 18 */	beq lbl_80D23A6C
 lbl_80D23A58:
-/* 80D23A58 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D23A5C 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D23A58 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D23A5C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D23A60 00000008  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80D23A64 0000000C  38 80 00 1F */	li r4, 0x1f
-/* 80D23A68 00000010  4B FF E0 91 */	bl _unresolved
+/* 80D23A68 00000010  4B 34 C3 2C */	b StopQuake__12dVibration_cFi
 lbl_80D23A6C:
 /* 80D23A6C 00000000  3B E0 00 00 */	li r31, 0
 lbl_80D23A70:

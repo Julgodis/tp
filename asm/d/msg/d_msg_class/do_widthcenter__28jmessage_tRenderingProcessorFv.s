@@ -33,8 +33,8 @@ lbl_8022E1D0:
 /* 8022E1F4 00000004  40 82 00 50 */	bne lbl_8022E244
 /* 8022E1F8 00000008  38 61 00 08 */	addi r3, r1, 8
 /* 8022E1FC 0000000C  38 80 00 0F */	li r4, 0xf
-/* 8022E200 00000010  3C A0 80 3A */	lis r5, stringBase0@ha
-/* 8022E204 00000014  38 A5 96 10 */	addi r5, r5, stringBase0@l
+/* 8022E200 00000010  3C A0 80 3A */	lis r5, d_msg_d_msg_class__stringBase0@ha
+/* 8022E204 00000014  38 A5 96 10 */	addi r5, r5, d_msg_d_msg_class__stringBase0@l
 /* 8022E208 00000018  38 A5 00 08 */	addi r5, r5, 8
 /* 8022E20C 0000001C  FC 00 F8 1E */	fctiwz f0, f31
 /* 8022E210 00000020  D8 01 00 18 */	stfd f0, 0x18(r1)

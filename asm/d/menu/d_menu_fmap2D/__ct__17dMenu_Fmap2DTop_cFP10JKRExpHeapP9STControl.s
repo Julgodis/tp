@@ -29,8 +29,8 @@ lbl_801D5BD0:
 lbl_801D5C3C:
 /* 801D5C3C 00000000  90 1F 00 08 */	stw r0, 8(r31)
 /* 801D5C40 00000004  80 7F 00 08 */	lwz r3, 8(r31)
-/* 801D5C44 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801D5C48 0000000C  38 84 65 D0 */	addi r4, r4, stringBase0@l
+/* 801D5C44 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
+/* 801D5C48 0000000C  38 84 65 D0 */	addi r4, r4, d_menu_d_menu_fmap2D__stringBase0@l
 /* 801D5C4C 00000010  38 84 00 85 */	addi r4, r4, 0x85
 /* 801D5C50 00000014  3C A0 01 02 */	lis r5, 0x102
 /* 801D5C54 00000018  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
@@ -367,10 +367,10 @@ lbl_801D60C8:
 /* 801D6134 0000006C  38 60 00 07 */	li r3, 7
 /* 801D6138 00000070  64 63 00 07 */	oris r3, r3, 7
 /* 801D613C 00000074  7C 75 E3 A6 */	mtspr 0x395, r3
-/* 801D6140 00000078  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801D6144 0000007C  38 84 65 D0 */	addi r4, r4, stringBase0@l
+/* 801D6140 00000078  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
+/* 801D6144 0000007C  38 84 65 D0 */	addi r4, r4, d_menu_d_menu_fmap2D__stringBase0@l
 /* 801D6148 00000080  38 64 00 A0 */	addi r3, r4, 0xa0
-/* 801D614C 00000084  80 9D 5C BC */	lwz r4, 0x5cbc(r29)
+/* 801D614C 00000084  80 9D 5C BC */	lwz r4, 0x5cbc(r29)	/* effective address: 8040BE7C */
 /* 801D6150 00000088  48 0F E1 21 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
 /* 801D6154 0000008C  48 13 29 19 */	bl load__20J2DAnmLoaderDataBaseFPCv
 /* 801D6158 00000090  90 7F 00 10 */	stw r3, 0x10(r31)
@@ -384,8 +384,8 @@ lbl_801D60C8:
 /* 801D6178 000000B0  D0 1F 00 74 */	stfs f0, 0x74(r31)
 /* 801D617C 000000B4  3B 00 00 00 */	li r24, 0
 /* 801D6180 000000B8  3B A0 00 00 */	li r29, 0
-/* 801D6184 000000BC  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801D6188 000000C0  3B 64 65 D0 */	addi r27, r4, stringBase0@l
+/* 801D6184 000000BC  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
+/* 801D6188 000000C0  3B 64 65 D0 */	addi r27, r4, d_menu_d_menu_fmap2D__stringBase0@l
 /* 801D618C 000000C4  3B 5E 00 40 */	addi r26, r30, 0x40
 lbl_801D6190:
 /* 801D6190 00000000  4B E3 E9 75 */	bl mDoExt_getRubyFont__Fv
@@ -431,8 +431,8 @@ lbl_801D6190:
 /* 801D6230 000000A0  41 80 FF 60 */	blt lbl_801D6190
 /* 801D6234 000000A4  3B 00 00 00 */	li r24, 0
 /* 801D6238 000000A8  3B A0 00 00 */	li r29, 0
-/* 801D623C 000000AC  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801D6240 000000B0  3B 64 65 D0 */	addi r27, r4, stringBase0@l
+/* 801D623C 000000AC  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
+/* 801D6240 000000B0  3B 64 65 D0 */	addi r27, r4, d_menu_d_menu_fmap2D__stringBase0@l
 /* 801D6244 000000B4  3B 5E 00 70 */	addi r26, r30, 0x70
 lbl_801D6248:
 /* 801D6248 00000000  4B E3 E8 BD */	bl mDoExt_getRubyFont__Fv
@@ -481,8 +481,8 @@ lbl_801D6248:
 /* 801D62F4 000000AC  48 00 0C 45 */	bl setTitleNameString__17dMenu_Fmap2DTop_cFUl
 /* 801D62F8 000000B0  3B 00 00 00 */	li r24, 0
 /* 801D62FC 000000B4  3B A0 00 00 */	li r29, 0
-/* 801D6300 000000B8  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801D6304 000000BC  3B 64 65 D0 */	addi r27, r4, stringBase0@l
+/* 801D6300 000000B8  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
+/* 801D6304 000000BC  3B 64 65 D0 */	addi r27, r4, d_menu_d_menu_fmap2D__stringBase0@l
 /* 801D6308 000000C0  3B 5E 00 E0 */	addi r26, r30, 0xe0
 lbl_801D630C:
 /* 801D630C 00000000  4B E3 E6 E5 */	bl mDoExt_getMesgFont__Fv
@@ -532,8 +532,8 @@ lbl_801D630C:
 /* 801D63BC 000000B0  48 00 0D 2D */	bl setZButtonString__17dMenu_Fmap2DTop_cFUlUc
 /* 801D63C0 000000B4  3B 00 00 00 */	li r24, 0
 /* 801D63C4 000000B8  3B A0 00 00 */	li r29, 0
-/* 801D63C8 000000BC  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801D63CC 000000C0  3B 64 65 D0 */	addi r27, r4, stringBase0@l
+/* 801D63C8 000000BC  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
+/* 801D63CC 000000C0  3B 64 65 D0 */	addi r27, r4, d_menu_d_menu_fmap2D__stringBase0@l
 /* 801D63D0 000000C4  3B 5E 01 30 */	addi r26, r30, 0x130
 lbl_801D63D4:
 /* 801D63D4 00000000  4B E3 E6 1D */	bl mDoExt_getMesgFont__Fv
@@ -583,8 +583,8 @@ lbl_801D63D4:
 /* 801D6484 000000B0  48 00 0D 8D */	bl setBButtonString__17dMenu_Fmap2DTop_cFUlUc
 /* 801D6488 000000B4  3B 00 00 00 */	li r24, 0
 /* 801D648C 000000B8  3B A0 00 00 */	li r29, 0
-/* 801D6490 000000BC  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801D6494 000000C0  3B 64 65 D0 */	addi r27, r4, stringBase0@l
+/* 801D6490 000000BC  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
+/* 801D6494 000000C0  3B 64 65 D0 */	addi r27, r4, d_menu_d_menu_fmap2D__stringBase0@l
 /* 801D6498 000000C4  3B 5E 01 80 */	addi r26, r30, 0x180
 lbl_801D649C:
 /* 801D649C 00000000  4B E3 E5 55 */	bl mDoExt_getMesgFont__Fv
@@ -634,8 +634,8 @@ lbl_801D649C:
 /* 801D654C 000000B0  48 00 0D 89 */	bl setAButtonString__17dMenu_Fmap2DTop_cFUlUc
 /* 801D6550 000000B4  3B 00 00 00 */	li r24, 0
 /* 801D6554 000000B8  3B A0 00 00 */	li r29, 0
-/* 801D6558 000000BC  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801D655C 000000C0  3B 64 65 D0 */	addi r27, r4, stringBase0@l
+/* 801D6558 000000BC  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
+/* 801D655C 000000C0  3B 64 65 D0 */	addi r27, r4, d_menu_d_menu_fmap2D__stringBase0@l
 /* 801D6560 000000C4  3B 5E 01 D0 */	addi r26, r30, 0x1d0
 lbl_801D6564:
 /* 801D6564 00000000  4B E3 E4 8D */	bl mDoExt_getMesgFont__Fv
@@ -684,8 +684,8 @@ lbl_801D6564:
 /* 801D6610 000000AC  48 00 0D 89 */	bl setCrossLRString__17dMenu_Fmap2DTop_cFUl
 /* 801D6614 000000B0  3B 00 00 00 */	li r24, 0
 /* 801D6618 000000B4  3B A0 00 00 */	li r29, 0
-/* 801D661C 000000B8  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801D6620 000000BC  3B 64 65 D0 */	addi r27, r4, stringBase0@l
+/* 801D661C 000000B8  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
+/* 801D6620 000000BC  3B 64 65 D0 */	addi r27, r4, d_menu_d_menu_fmap2D__stringBase0@l
 /* 801D6624 000000C0  3B 9E 02 20 */	addi r28, r30, 0x220
 lbl_801D6628:
 /* 801D6628 00000000  4B E3 E3 C9 */	bl mDoExt_getMesgFont__Fv

@@ -63,7 +63,7 @@ lbl_80039E64:
 /* 80039E80 0000001C  28 00 00 0A */	cmplwi r0, 0xa
 /* 80039E84 00000020  40 81 00 18 */	ble lbl_80039E9C
 /* 80039E88 00000024  38 00 00 00 */	li r0, 0
-/* 80039E8C 00000028  98 1F 13 0C */	stb r0, 0x130c(r31)
+/* 80039E8C 00000028  98 1F 13 0C */	stb r0, 0x130c(r31)	/* effective address: 8042DD60 */
 /* 80039E90 0000002C  38 00 00 02 */	li r0, 2
 /* 80039E94 00000030  90 0D 88 B8 */	stw r0, m_mode__7dDemo_c(r13)
 /* 80039E98 00000034  48 00 00 2C */	b lbl_80039EC4
@@ -76,9 +76,9 @@ lbl_80039E9C:
 /* 80039EB0 00000014  38 6D 80 84 */	addi r3, r13, 0x80450604-0x80458580 /* g_blackColor-_SDA_BASE_ */
 /* 80039EB4 00000018  4B FC E1 25 */	bl fadeOut__13mDoGph_gInf_cFfR8_GXColor
 lbl_80039EB8:
-/* 80039EB8 00000000  88 7F 13 0C */	lbz r3, 0x130c(r31)
+/* 80039EB8 00000000  88 7F 13 0C */	lbz r3, 0x130c(r31)	/* effective address: 8042DD60 */
 /* 80039EBC 00000004  38 03 00 01 */	addi r0, r3, 1
-/* 80039EC0 00000008  98 1F 13 0C */	stb r0, 0x130c(r31)
+/* 80039EC0 00000008  98 1F 13 0C */	stb r0, 0x130c(r31)	/* effective address: 8042DD60 */
 lbl_80039EC4:
 /* 80039EC4 00000000  38 60 00 01 */	li r3, 1
 lbl_80039EC8:

@@ -6,10 +6,10 @@ lbl_80C5AEFC:
 /* 80C5AF0C 00000010  38 64 05 B8 */	addi r3, r4, 0x5b8
 /* 80C5AF10 00000014  88 04 05 DD */	lbz r0, 0x5dd(r4)
 /* 80C5AF14 00000018  54 00 10 3A */	slwi r0, r0, 2
-/* 80C5AF18 0000001C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80C5AF1C 00000020  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80C5AF18 0000001C  3C 80 80 C6 */	lis r4, l_resNameIdx@ha
+/* 80C5AF1C 00000020  38 84 B3 C4 */	addi r4, r4, l_resNameIdx@l
 /* 80C5AF20 00000024  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80C5AF24 00000028  4B FF F4 55 */	bl _unresolved
+/* 80C5AF24 00000028  4B 3D 20 E4 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C5AF28 0000002C  38 60 00 01 */	li r3, 1
 /* 80C5AF2C 00000030  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80C5AF30 00000034  7C 08 03 A6 */	mtlr r0

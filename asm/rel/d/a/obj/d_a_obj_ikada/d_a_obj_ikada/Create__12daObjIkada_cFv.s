@@ -5,8 +5,8 @@ lbl_80C270A0:
 /* 80C270AC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C270B0 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80C270B4 00000014  4B FF FB 9D */	bl initBaseMtx__12daObjIkada_cFv
-/* 80C270B8 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80C270BC 0000001C  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
+/* 80C270B8 00000018  3C 60 80 C2 */	lis r3, rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c@ha
+/* 80C270BC 0000001C  38 03 6C D8 */	addi r0, r3, rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c@l
 /* 80C270C0 00000020  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 80C270C4 00000024  90 03 00 B4 */	stw r0, 0xb4(r3)
 /* 80C270C8 00000028  38 60 00 04 */	li r3, 4

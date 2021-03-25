@@ -31,8 +31,8 @@ lbl_801EF7FC:
 lbl_801EF81C:
 /* 801EF81C 00000000  4B E1 F6 15 */	bl mDoExt_getJ2dHeap__Fv
 /* 801EF820 00000004  7C 65 1B 78 */	mr r5, r3
-/* 801EF824 00000008  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801EF828 0000000C  38 63 79 60 */	addi r3, r3, stringBase0@l
+/* 801EF824 00000008  3C 60 80 39 */	lis r3, d_menu_d_menu_save__stringBase0@ha
+/* 801EF828 0000000C  38 63 79 60 */	addi r3, r3, d_menu_d_menu_save__stringBase0@l
 /* 801EF82C 00000010  38 80 00 00 */	li r4, 0
 /* 801EF830 00000014  4B E2 65 E5 */	bl create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap
 /* 801EF834 00000018  90 7E 00 08 */	stw r3, 8(r30)

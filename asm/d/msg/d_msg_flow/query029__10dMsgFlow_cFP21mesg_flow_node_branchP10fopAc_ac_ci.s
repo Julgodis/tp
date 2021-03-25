@@ -5,7 +5,7 @@ lbl_8024BAA0:
 /* 8024BAAC 0000000C  A0 04 00 08 */	lhz r0, 8(r4)	/* effective address: 804061C8 */
 /* 8024BAB0 00000010  54 03 04 3F */	clrlwi. r3, r0, 0x10
 /* 8024BAB4 00000014  41 82 00 10 */	beq lbl_8024BAC4
-/* 8024BAB8 00000018  A0 04 00 06 */	lhz r0, 6(r4)
+/* 8024BAB8 00000018  A0 04 00 06 */	lhz r0, 6(r4)	/* effective address: 804061C6 */
 /* 8024BABC 0000001C  54 00 04 3F */	clrlwi. r0, r0, 0x10
 /* 8024BAC0 00000020  40 82 00 0C */	bne lbl_8024BACC
 lbl_8024BAC4:

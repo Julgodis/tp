@@ -7,23 +7,23 @@ lbl_8048F7F8:
 /* 8048F80C 00000014  7C 7E 1B 79 */	or. r30, r3, r3
 /* 8048F810 00000018  7C 9F 23 78 */	mr r31, r4
 /* 8048F814 0000001C  41 82 00 48 */	beq lbl_8048F85C
-/* 8048F818 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8048F81C 00000024  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
+/* 8048F818 00000020  3C 80 80 49 */	lis r4, __vt__11daTag_Msg_c@ha
+/* 8048F81C 00000024  38 04 02 34 */	addi r0, r4, __vt__11daTag_Msg_c@l
 /* 8048F820 00000028  90 1E 05 68 */	stw r0, 0x568(r30)
 /* 8048F824 0000002C  48 00 07 69 */	bl getResName__11daTag_Msg_cFv
 /* 8048F828 00000030  7C 64 1B 78 */	mr r4, r3
 /* 8048F82C 00000034  38 7E 05 74 */	addi r3, r30, 0x574
-/* 8048F830 00000038  4B FF FF 89 */	bl _unresolved
+/* 8048F830 00000038  4B B9 D7 D8 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 8048F834 0000003C  38 7E 05 80 */	addi r3, r30, 0x580
 /* 8048F838 00000040  38 80 FF FF */	li r4, -1
-/* 8048F83C 00000044  4B FF FF 7D */	bl _unresolved
+/* 8048F83C 00000044  4B DB A7 0C */	b __dt__10dMsgFlow_cFv
 /* 8048F840 00000048  7F C3 F3 78 */	mr r3, r30
 /* 8048F844 0000004C  38 80 00 00 */	li r4, 0
-/* 8048F848 00000050  4B FF FF 71 */	bl _unresolved
+/* 8048F848 00000050  4B B8 94 44 */	b __dt__10fopAc_ac_cFv
 /* 8048F84C 00000054  7F E0 07 35 */	extsh. r0, r31
 /* 8048F850 00000058  40 81 00 0C */	ble lbl_8048F85C
 /* 8048F854 0000005C  7F C3 F3 78 */	mr r3, r30
-/* 8048F858 00000060  4B FF FF 61 */	bl _unresolved
+/* 8048F858 00000060  4B E3 F4 E4 */	b __dl__FPv
 lbl_8048F85C:
 /* 8048F85C 00000000  7F C3 F3 78 */	mr r3, r30
 /* 8048F860 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

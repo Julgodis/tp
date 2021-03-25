@@ -8,8 +8,8 @@ lbl_8015C3BC:
 /* 8015C3D4 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8015C3D8 0000001C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 8015C3DC 00000020  38 7F 4F F8 */	addi r3, r31, 0x4ff8
-/* 8015C3E0 00000024  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 8015C3E4 00000028  38 84 3D 88 */	addi r4, r4, stringBase0@l
+/* 8015C3E0 00000024  3C 80 80 39 */	lis r4, a_obj_d_a_obj_item__stringBase0@ha
+/* 8015C3E4 00000028  38 84 3D 88 */	addi r4, r4, a_obj_d_a_obj_item__stringBase0@l
 /* 8015C3E8 0000002C  4B EE B6 F5 */	bl endCheckOld__16dEvent_manager_cFPCc
 /* 8015C3EC 00000030  2C 03 00 00 */	cmpwi r3, 0
 /* 8015C3F0 00000034  41 82 00 14 */	beq lbl_8015C404

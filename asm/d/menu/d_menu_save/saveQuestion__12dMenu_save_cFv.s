@@ -35,8 +35,8 @@ lbl_801F1378:
 /* 801F13FC 00000084  54 00 10 3A */	slwi r0, r0, 2
 /* 801F1400 00000088  7C 7E 02 14 */	add r3, r30, r0
 /* 801F1404 0000008C  80 63 01 70 */	lwz r3, 0x170(r3)
-/* 801F1408 00000090  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801F140C 00000094  38 84 79 60 */	addi r4, r4, stringBase0@l
+/* 801F1408 00000090  3C 80 80 39 */	lis r4, d_menu_d_menu_save__stringBase0@ha
+/* 801F140C 00000094  38 84 79 60 */	addi r4, r4, d_menu_d_menu_save__stringBase0@l
 /* 801F1410 00000098  38 84 00 A5 */	addi r4, r4, 0xa5
 /* 801F1414 0000009C  48 17 77 19 */	bl strcpy
 /* 801F1418 000000A0  88 1E 01 78 */	lbz r0, 0x178(r30)
@@ -44,8 +44,8 @@ lbl_801F1378:
 /* 801F1420 000000A8  54 00 10 3A */	slwi r0, r0, 2
 /* 801F1424 000000AC  7C 7E 02 14 */	add r3, r30, r0
 /* 801F1428 000000B0  80 63 01 70 */	lwz r3, 0x170(r3)
-/* 801F142C 000000B4  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801F1430 000000B8  38 84 79 60 */	addi r4, r4, stringBase0@l
+/* 801F142C 000000B4  3C 80 80 39 */	lis r4, d_menu_d_menu_save__stringBase0@ha
+/* 801F1430 000000B8  38 84 79 60 */	addi r4, r4, d_menu_d_menu_save__stringBase0@l
 /* 801F1434 000000BC  38 84 00 A5 */	addi r4, r4, 0xa5
 /* 801F1438 000000C0  48 17 76 F5 */	bl strcpy
 /* 801F143C 000000C4  38 00 00 00 */	li r0, 0

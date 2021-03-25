@@ -28,13 +28,13 @@ lbl_80AEBA10:
 /* 80AEBA18 00000008  4B FF FD 69 */	bl cut_alert__13daNpc_Shop0_cFii
 /* 80AEBA1C 0000000C  2C 03 00 00 */	cmpwi r3, 0
 /* 80AEBA20 00000010  41 82 00 50 */	beq lbl_80AEBA70
-/* 80AEBA24 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AEBA28 00000018  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
-/* 80AEBA2C 0000001C  80 64 00 00 */	lwz r3, 0(r4)
-/* 80AEBA30 00000020  80 04 00 04 */	lwz r0, 4(r4)
+/* 80AEBA24 00000014  3C 60 80 AF */	lis r3, lit_4268@ha
+/* 80AEBA28 00000018  38 83 BC A4 */	addi r4, r3, lit_4268@l
+/* 80AEBA2C 0000001C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80AEBCA4 */
+/* 80AEBA30 00000020  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80AEBCA8 */
 /* 80AEBA34 00000024  90 61 00 08 */	stw r3, 8(r1)
 /* 80AEBA38 00000028  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80AEBA3C 0000002C  80 04 00 08 */	lwz r0, 8(r4)
+/* 80AEBA3C 0000002C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80AEBCAC */
 /* 80AEBA40 00000030  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80AEBA44 00000034  7F C3 F3 78 */	mr r3, r30
 /* 80AEBA48 00000038  38 81 00 08 */	addi r4, r1, 8
@@ -43,10 +43,10 @@ lbl_80AEBA10:
 /* 80AEBA54 00000044  4B FF FD D1 */	bl setProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_iPvi
 /* 80AEBA58 00000048  48 00 00 18 */	b lbl_80AEBA70
 lbl_80AEBA5C:
-/* 80AEBA5C 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AEBA60 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80AEBA5C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AEBA60 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AEBA64 00000008  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 80AEBA68 0000000C  4B FF ED 51 */	bl _unresolved
+/* 80AEBA68 0000000C  4B 55 6A 00 */	b reset__14dEvt_control_cFv
 /* 80AEBA6C 00000010  3B E0 00 01 */	li r31, 1
 lbl_80AEBA70:
 /* 80AEBA70 00000000  7F E3 FB 78 */	mr r3, r31

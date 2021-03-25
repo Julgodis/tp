@@ -4,10 +4,10 @@ lbl_80AE9B20:
 /* 80AE9B28 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80AE9B2C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80AE9B30 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80AE9B34 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80AE9B38 00000018  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
+/* 80AE9B34 00000014  3C 80 80 AF */	lis r4, __vt__18daNpcF_ActorMngr_c@ha
+/* 80AE9B38 00000018  38 04 A6 F4 */	addi r0, r4, __vt__18daNpcF_ActorMngr_c@l
 /* 80AE9B3C 0000001C  90 03 00 04 */	stw r0, 4(r3)
-/* 80AE9B40 00000020  4B FF DD 79 */	bl _unresolved
+/* 80AE9B40 00000020  4B 66 6B 70 */	b initialize__18daNpcF_ActorMngr_cFv
 /* 80AE9B44 00000024  7F E3 FB 78 */	mr r3, r31
 /* 80AE9B48 00000028  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80AE9B4C 0000002C  80 01 00 14 */	lwz r0, 0x14(r1)

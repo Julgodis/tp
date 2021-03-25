@@ -1,8 +1,8 @@
 lbl_800065E0:
 /* 800065E0 00000000  3C 60 80 3D */	lis r3, RootHeapCheck@ha
 /* 800065E4 00000004  38 C3 32 E0 */	addi r6, r3, RootHeapCheck@l
-/* 800065E8 00000008  3C 60 80 37 */	lis r3, stringBase0@ha
-/* 800065EC 0000000C  38 A3 39 A0 */	addi r5, r3, stringBase0@l
+/* 800065E8 00000008  3C 60 80 37 */	lis r3, m_Do_m_Do_main__stringBase0@ha
+/* 800065EC 0000000C  38 A3 39 A0 */	addi r5, r3, m_Do_m_Do_main__stringBase0@l
 /* 800065F0 00000010  38 65 02 9F */	addi r3, r5, 0x29f
 /* 800065F4 00000014  38 85 02 A4 */	addi r4, r5, 0x2a4
 /* 800065F8 00000018  90 66 00 00 */	stw r3, 0(r6)	/* effective address: 803D32E0 */

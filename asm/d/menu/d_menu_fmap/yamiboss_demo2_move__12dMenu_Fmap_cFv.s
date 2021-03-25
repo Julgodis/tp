@@ -36,7 +36,7 @@ lbl_801CA3D4:
 /* 801CA3E0 0000000C  38 00 00 01 */	li r0, 1
 /* 801CA3E4 00000010  98 1D 03 0B */	stb r0, 0x30b(r29)
 /* 801CA3E8 00000014  7F C3 F3 78 */	mr r3, r30
-/* 801CA3EC 00000018  A0 9F 00 EE */	lhz r4, 0xee(r31)
+/* 801CA3EC 00000018  A0 9F 00 EE */	lhz r4, 0xee(r31)	/* effective address: 803A7376 */
 /* 801CA3F0 0000001C  4B E6 A5 9D */	bl onEventBit__11dSv_event_cFUs
 lbl_801CA3F4:
 /* 801CA3F4 00000000  39 61 00 20 */	addi r11, r1, 0x20

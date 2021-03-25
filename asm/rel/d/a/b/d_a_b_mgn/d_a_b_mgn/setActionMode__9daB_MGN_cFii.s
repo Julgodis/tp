@@ -7,15 +7,15 @@ lbl_80607A2C:
 /* 80607A40 00000014  98 A3 0A FA */	stb r5, 0xafa(r3)
 /* 80607A44 00000018  38 00 00 00 */	li r0, 0
 /* 80607A48 0000001C  98 03 05 CC */	stb r0, 0x5cc(r3)
-/* 80607A4C 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80607A50 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80607A54 00000028  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 80607A4C 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80607A50 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80607A54 00000028  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 80607A58 0000002C  38 63 02 10 */	addi r3, r3, 0x210
 /* 80607A5C 00000030  80 86 26 18 */	lwz r4, 0x2618(r6)
-/* 80607A60 00000034  4B FF DC 39 */	bl _unresolved
+/* 80607A60 00000034  4B A4 3E B8 */	b getEmitter__Q213dPa_control_c7level_cFUl
 /* 80607A64 00000038  28 03 00 00 */	cmplwi r3, 0
 /* 80607A68 0000003C  41 82 00 08 */	beq lbl_80607A70
-/* 80607A6C 00000040  4B FF DC 2D */	bl _unresolved
+/* 80607A6C 00000040  4B C7 71 F4 */	b deleteAllParticle__14JPABaseEmitterFv
 lbl_80607A70:
 /* 80607A70 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80607A74 00000004  7C 08 03 A6 */	mtlr r0

@@ -53,7 +53,7 @@ lbl_800C59F8:
 /* 800C5A20 00000000  40 80 00 14 */	bge lbl_800C5A34
 /* 800C5A24 00000004  7F E3 FB 78 */	mr r3, r31
 /* 800C5A28 00000008  38 80 00 02 */	li r4, 2
-/* 800C5A2C 0000000C  C0 25 00 34 */	lfs f1, 0x34(r5)
+/* 800C5A2C 0000000C  C0 25 00 34 */	lfs f1, 0x34(r5)	/* effective address: 8038D860 */
 /* 800C5A30 00000010  48 00 10 19 */	bl procFallInit__9daAlink_cFif
 lbl_800C5A34:
 /* 800C5A34 00000000  7F E3 FB 78 */	mr r3, r31

@@ -61,7 +61,7 @@ extern "C" void findVolume__13JKRFileLoaderFPPCc(); // 1
 extern "C" void fetchVolumeName__13JKRFileLoaderFPclPCc(); // 1
 extern "C" void __sinit_JKRFileLoader_cpp(); // 1
 extern "C" void func_802D45E4(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JKRFileLoader__stringBase0;
 extern "C" extern u8 sVolumeList__13JKRFileLoader[12];
 extern "C" extern u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];
 
@@ -166,7 +166,7 @@ static u8 lit_2182[12];
 /* 80434354-80434360 000C+00 s=5 e=14 z=0  None .bss       sVolumeList__13JKRFileLoader                                 */
 u8 sVolumeList__13JKRFileLoader[12];
 
-/* 802D4270-802D4308 0098+00 s=0 e=29 z=0  None .text      getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader          */
+/* 802D4270-802D4308 0098+00 s=0 e=29 z=1  None .text      getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -10,20 +10,20 @@ lbl_80469568:
 /* 80469588 00000020  88 1F 06 02 */	lbz r0, 0x602(r31)
 /* 8046958C 00000024  28 00 00 01 */	cmplwi r0, 1
 /* 80469590 00000028  41 82 00 3C */	beq lbl_804695CC
-/* 80469594 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80469598 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80469594 0000002C  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 80469598 00000030  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 8046959C 00000034  38 80 00 10 */	li r4, 0x10
 /* 804695A0 00000038  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 804695A4 0000003C  38 DF 01 0C */	addi r6, r31, 0x10c
-/* 804695A8 00000040  4B FF EC 31 */	bl _unresolved
-/* 804695AC 00000044  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804695B0 00000048  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 804695A8 00000040  4B D3 A2 1C */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
+/* 804695AC 00000044  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 804695B0 00000048  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 804695B4 0000004C  80 9F 05 A0 */	lwz r4, 0x5a0(r31)
 /* 804695B8 00000050  80 84 00 04 */	lwz r4, 4(r4)
 /* 804695BC 00000054  38 BF 01 0C */	addi r5, r31, 0x10c
-/* 804695C0 00000058  4B FF EC 19 */	bl _unresolved
+/* 804695C0 00000058  4B D3 B7 E0 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 804695C4 0000005C  80 7F 05 A0 */	lwz r3, 0x5a0(r31)
-/* 804695C8 00000060  4B FF EC 11 */	bl _unresolved
+/* 804695C8 00000060  4B BA 46 FC */	b mDoExt_modelUpdateDL__FP8J3DModel
 lbl_804695CC:
 /* 804695CC 00000000  88 1F 0A 79 */	lbz r0, 0xa79(r31)
 /* 804695D0 00000004  7C 00 07 75 */	extsb. r0, r0

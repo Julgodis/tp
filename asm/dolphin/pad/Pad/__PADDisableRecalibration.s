@@ -21,9 +21,9 @@ lbl_8034FC2C:
 /* 8034FC38 0000000C  54 00 06 B0 */	rlwinm r0, r0, 0, 0x1a, 0x18
 /* 8034FC3C 00000010  98 04 30 E3 */	stb r0, 0x30e3(r4)	/* effective address: 800030E3 */
 /* 8034FC40 00000014  41 82 00 10 */	beq lbl_8034FC50
-/* 8034FC44 00000018  88 04 30 E3 */	lbz r0, 0x30e3(r4)
+/* 8034FC44 00000018  88 04 30 E3 */	lbz r0, 0x30e3(r4)	/* effective address: 800030E3 */
 /* 8034FC48 0000001C  60 00 00 40 */	ori r0, r0, 0x40
-/* 8034FC4C 00000020  98 04 30 E3 */	stb r0, 0x30e3(r4)
+/* 8034FC4C 00000020  98 04 30 E3 */	stb r0, 0x30e3(r4)	/* effective address: 800030E3 */
 lbl_8034FC50:
 /* 8034FC50 00000000  4B FE DA CD */	bl OSRestoreInterrupts
 /* 8034FC54 00000004  7F E3 FB 78 */	mr r3, r31

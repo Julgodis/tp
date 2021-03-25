@@ -11,12 +11,12 @@ lbl_8033FE90:
 /* 8033FEB4 00000024  7C 7F 22 14 */	add r3, r31, r4
 /* 8033FEB8 00000028  20 A4 00 40 */	subfic r5, r4, 0x40
 /* 8033FEBC 0000002C  48 00 00 35 */	bl WriteSram
-/* 8033FEC0 00000030  90 7F 00 4C */	stw r3, 0x4c(r31)
-/* 8033FEC4 00000034  80 1F 00 4C */	lwz r0, 0x4c(r31)
+/* 8033FEC0 00000030  90 7F 00 4C */	stw r3, 0x4c(r31)	/* effective address: 8044BB6C */
+/* 8033FEC4 00000034  80 1F 00 4C */	lwz r0, 0x4c(r31)	/* effective address: 8044BB6C */
 /* 8033FEC8 00000038  2C 00 00 00 */	cmpwi r0, 0
 /* 8033FECC 0000003C  41 82 00 0C */	beq lbl_8033FED8
 /* 8033FED0 00000040  38 00 00 40 */	li r0, 0x40
-/* 8033FED4 00000044  90 1E 00 00 */	stw r0, 0(r30)
+/* 8033FED4 00000044  90 1E 00 00 */	stw r0, 0(r30)	/* effective address: 8044BB60 */
 lbl_8033FED8:
 /* 8033FED8 00000000  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 8033FEDC 00000004  83 E1 00 14 */	lwz r31, 0x14(r1)

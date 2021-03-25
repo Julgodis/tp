@@ -30,8 +30,8 @@ lbl_802192C0:
 /* 802192C0 00000000  3B BF 00 C0 */	addi r29, r31, 0xc0
 /* 802192C4 00000004  7C 7B E8 2E */	lwzx r3, r27, r29
 /* 802192C8 00000008  48 03 C5 61 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 802192CC 0000000C  C0 5E 00 18 */	lfs f2, 0x18(r30)
-/* 802192D0 00000010  C0 1E 00 84 */	lfs f0, 0x84(r30)
+/* 802192CC 0000000C  C0 5E 00 18 */	lfs f2, 0x18(r30)	/* effective address: 8042EBE0 */
+/* 802192D0 00000010  C0 1E 00 84 */	lfs f0, 0x84(r30)	/* effective address: 8042EC4C */
 /* 802192D4 00000014  EC 02 00 32 */	fmuls f0, f2, f0
 /* 802192D8 00000018  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 802192DC 0000001C  41 82 00 20 */	beq lbl_802192FC

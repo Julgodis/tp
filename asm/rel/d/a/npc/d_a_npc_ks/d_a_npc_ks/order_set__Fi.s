@@ -1,8 +1,8 @@
 lbl_80A4DD70:
-/* 80A4DD70 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80A4DD74 00000004  38 C4 00 00 */	addi r6, r4, 0x0000 /* 0x00000000@l */
-/* 80A4DD78 00000008  80 86 00 00 */	lwz r4, 0(r6)
-/* 80A4DD7C 0000000C  C0 24 05 C4 */	lfs f1, 0x5c4(r4)
+/* 80A4DD70 00000000  3C 80 80 A6 */	lis r4, saru_p@ha
+/* 80A4DD74 00000004  38 C4 E4 78 */	addi r6, r4, saru_p@l
+/* 80A4DD78 00000008  80 86 00 00 */	lwz r4, 0(r6)	/* effective address: 80A5E478 */
+/* 80A4DD7C 0000000C  C0 24 05 C4 */	lfs f1, 0x5c4(r4)	/* effective address: 80A605C4 */
 /* 80A4DD80 00000010  54 60 10 3A */	slwi r0, r3, 2
 /* 80A4DD84 00000014  7C 86 02 14 */	add r4, r6, r0
 /* 80A4DD88 00000018  80 84 FF FC */	lwz r4, -4(r4)

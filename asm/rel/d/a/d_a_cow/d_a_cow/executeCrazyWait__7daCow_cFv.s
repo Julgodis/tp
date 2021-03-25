@@ -5,8 +5,8 @@ lbl_8065DE70:
 /* 8065DE7C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8065DE80 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 8065DE84 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 8065DE88 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8065DE8C 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 8065DE88 00000018  3C 60 80 66 */	lis r3, lit_3987@ha
+/* 8065DE8C 0000001C  3B E3 2D B0 */	addi r31, r3, lit_3987@l
 /* 8065DE90 00000020  A0 7E 05 68 */	lhz r3, 0x568(r30)
 /* 8065DE94 00000024  54 60 06 B5 */	rlwinm. r0, r3, 0, 0x1a, 0x1a
 /* 8065DE98 00000028  41 82 00 0C */	beq lbl_8065DEA4
@@ -27,21 +27,21 @@ lbl_8065DEC4:
 /* 8065DECC 00000008  41 82 00 5C */	beq lbl_8065DF28
 /* 8065DED0 0000000C  38 00 00 01 */	li r0, 1
 /* 8065DED4 00000010  98 1E 0C 9F */	stb r0, 0xc9f(r30)
-/* 8065DED8 00000014  C0 1F 00 CC */	lfs f0, 0xcc(r31)
+/* 8065DED8 00000014  C0 1F 00 CC */	lfs f0, 0xcc(r31)	/* effective address: 80662E7C */
 /* 8065DEDC 00000018  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 8065DEE0 0000001C  7F C3 F3 78 */	mr r3, r30
 /* 8065DEE4 00000020  38 80 00 14 */	li r4, 0x14
 /* 8065DEE8 00000024  38 A0 00 02 */	li r5, 2
-/* 8065DEEC 00000028  C0 3F 00 58 */	lfs f1, 0x58(r31)
-/* 8065DEF0 0000002C  C0 5F 00 08 */	lfs f2, 8(r31)
+/* 8065DEEC 00000028  C0 3F 00 58 */	lfs f1, 0x58(r31)	/* effective address: 80662E08 */
+/* 8065DEF0 0000002C  C0 5F 00 08 */	lfs f2, 8(r31)	/* effective address: 80662DB8 */
 /* 8065DEF4 00000030  4B FF A8 3D */	bl setBck__7daCow_cFiUcff
 /* 8065DEF8 00000034  38 00 00 00 */	li r0, 0
 /* 8065DEFC 00000038  98 1E 0C A6 */	stb r0, 0xca6(r30)
 /* 8065DF00 0000003C  B0 1E 05 68 */	sth r0, 0x568(r30)
 /* 8065DF04 00000040  38 7E 08 20 */	addi r3, r30, 0x820
-/* 8065DF08 00000044  C0 3F 00 3C */	lfs f1, 0x3c(r31)
-/* 8065DF0C 00000048  C0 5F 00 A4 */	lfs f2, 0xa4(r31)
-/* 8065DF10 0000004C  4B FF A6 29 */	bl _unresolved
+/* 8065DF08 00000044  C0 3F 00 3C */	lfs f1, 0x3c(r31)	/* effective address: 80662DEC */
+/* 8065DF0C 00000048  C0 5F 00 A4 */	lfs f2, 0xa4(r31)	/* effective address: 80662E54 */
+/* 8065DF10 0000004C  4B A1 80 48 */	b SetWall__12dBgS_AcchCirFff
 /* 8065DF14 00000050  38 00 00 1E */	li r0, 0x1e
 /* 8065DF18 00000054  90 1E 0C 90 */	stw r0, 0xc90(r30)
 /* 8065DF1C 00000058  80 1E 04 9C */	lwz r0, 0x49c(r30)

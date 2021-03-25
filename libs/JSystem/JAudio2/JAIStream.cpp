@@ -21,16 +21,13 @@ struct JASAramStream {
 	/* 802966CC */ void cancel();
 };
 
-struct JAISoundActivity {
-};
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
 
-struct JAIStreamMgr {
-};
-
-struct JAIAudience {
-};
-
-struct JAISoundID {
 };
 
 template <typename A0>
@@ -39,16 +36,19 @@ struct JAISoundStrategyMgr { };
 struct JAISoundStrategyMgr__template2 {
 };
 
+struct JAIStreamMgr {
+};
+
 struct JASSoundParams {
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
+struct JAIAudience {
+};
 
+struct JAISoundID {
+};
+
+struct JAISoundActivity {
 };
 
 struct JAIStream {

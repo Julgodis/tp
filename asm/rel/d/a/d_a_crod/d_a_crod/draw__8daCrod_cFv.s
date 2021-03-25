@@ -7,10 +7,10 @@ lbl_804A3FD4:
 /* 804A3FE8 00000014  80 03 00 B0 */	lwz r0, 0xb0(r3)
 /* 804A3FEC 00000018  28 00 00 06 */	cmplwi r0, 6
 /* 804A3FF0 0000001C  41 82 00 34 */	beq lbl_804A4024
-/* 804A3FF4 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804A3FF8 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 804A3FFC 00000028  80 63 5D B4 */	lwz r3, 0x5db4(r3)
-/* 804A4000 0000002C  81 83 06 28 */	lwz r12, 0x628(r3)
+/* 804A3FF4 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804A3FF8 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804A3FFC 00000028  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 804A4000 0000002C  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
 /* 804A4004 00000030  81 8C 02 A0 */	lwz r12, 0x2a0(r12)
 /* 804A4008 00000034  7D 89 03 A6 */	mtctr r12
 /* 804A400C 00000038  4E 80 04 21 */	bctrl 
@@ -23,20 +23,20 @@ lbl_804A4024:
 /* 804A4024 00000000  38 60 00 01 */	li r3, 1
 /* 804A4028 00000004  48 00 00 40 */	b lbl_804A4068
 lbl_804A402C:
-/* 804A402C 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804A4030 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 804A402C 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 804A4030 00000004  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 804A4034 00000008  38 80 00 00 */	li r4, 0
 /* 804A4038 0000000C  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 804A403C 00000010  38 DF 01 0C */	addi r6, r31, 0x10c
-/* 804A4040 00000014  4B FF ED D9 */	bl _unresolved
-/* 804A4044 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804A4048 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 804A4040 00000014  4B CF F7 84 */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
+/* 804A4044 00000018  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 804A4048 0000001C  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 804A404C 00000020  80 9F 05 68 */	lwz r4, 0x568(r31)
 /* 804A4050 00000024  80 84 00 04 */	lwz r4, 4(r4)
 /* 804A4054 00000028  38 BF 01 0C */	addi r5, r31, 0x10c
-/* 804A4058 0000002C  4B FF ED C1 */	bl _unresolved
+/* 804A4058 0000002C  4B D0 0D 48 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 804A405C 00000030  80 7F 05 68 */	lwz r3, 0x568(r31)
-/* 804A4060 00000034  4B FF ED B9 */	bl _unresolved
+/* 804A4060 00000034  4B B6 9C 64 */	b mDoExt_modelUpdateDL__FP8J3DModel
 /* 804A4064 00000038  38 60 00 01 */	li r3, 1
 lbl_804A4068:
 /* 804A4068 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

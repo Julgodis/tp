@@ -23,7 +23,7 @@ lbl_80495958:
 /* 80495960 00000008  7C 7F 1B 78 */	mr r31, r3
 /* 80495964 0000000C  38 7E 07 1C */	addi r3, r30, 0x71c
 /* 80495968 00000010  80 9F 00 00 */	lwz r4, 0(r31)
-/* 8049596C 00000014  4B FF B3 2D */	bl _unresolved
+/* 8049596C 00000014  4B B9 75 50 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80495970 00000018  2C 03 00 04 */	cmpwi r3, 4
 /* 80495974 0000001C  41 82 00 08 */	beq lbl_8049597C
 /* 80495978 00000020  48 00 00 5C */	b lbl_804959D4
@@ -34,10 +34,10 @@ lbl_8049597C:
 /* 80495988 0000000C  7F C3 F3 78 */	mr r3, r30
 /* 8049598C 00000010  80 9F 00 00 */	lwz r4, 0(r31)
 /* 80495990 00000014  80 BF 00 0C */	lwz r5, 0xc(r31)
-/* 80495994 00000018  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
-/* 80495998 0000001C  38 C6 00 00 */	addi r6, r6, 0x0000 /* 0x00000000@l */
+/* 80495994 00000018  3C C0 80 07 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
+/* 80495998 0000001C  38 C6 5A D8 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
 /* 8049599C 00000020  39 00 00 00 */	li r8, 0
-/* 804959A0 00000024  4B FF B2 F9 */	bl _unresolved
+/* 804959A0 00000024  4B BE 2E 1C */	b MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f
 /* 804959A4 00000028  7C 7F 1B 78 */	mr r31, r3
 /* 804959A8 0000002C  2C 1F 00 05 */	cmpwi r31, 5
 /* 804959AC 00000030  40 82 00 08 */	bne lbl_804959B4

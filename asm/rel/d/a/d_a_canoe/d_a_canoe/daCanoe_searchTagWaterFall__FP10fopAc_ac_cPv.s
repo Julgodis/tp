@@ -12,15 +12,15 @@ lbl_804DA54C:
 /* 804DA574 00000028  C0 04 00 08 */	lfs f0, 8(r4)
 /* 804DA578 0000002C  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 804DA57C 00000030  38 81 00 08 */	addi r4, r1, 8
-/* 804DA580 00000034  4B FF FF 39 */	bl _unresolved
+/* 804DA580 00000034  48 88 A1 E8 */	b checkHitWaterFall__16daTagWaterFall_cF4cXyz
 /* 804DA584 00000038  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 804DA588 0000003C  41 82 00 1C */	beq lbl_804DA5A4
-/* 804DA58C 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804DA590 00000044  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 804DA594 00000048  80 63 5D B4 */	lwz r3, 0x5db4(r3)
-/* 804DA598 0000004C  80 03 05 8C */	lwz r0, 0x58c(r3)
+/* 804DA58C 00000040  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804DA590 00000044  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804DA594 00000048  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 804DA598 0000004C  80 03 05 8C */	lwz r0, 0x58c(r3)	/* effective address: 8040674C */
 /* 804DA59C 00000050  60 00 08 00 */	ori r0, r0, 0x800
-/* 804DA5A0 00000054  90 03 05 8C */	stw r0, 0x58c(r3)
+/* 804DA5A0 00000054  90 03 05 8C */	stw r0, 0x58c(r3)	/* effective address: 8040674C */
 lbl_804DA5A4:
 /* 804DA5A4 00000000  38 60 00 01 */	li r3, 1
 /* 804DA5A8 00000004  80 01 00 24 */	lwz r0, 0x24(r1)

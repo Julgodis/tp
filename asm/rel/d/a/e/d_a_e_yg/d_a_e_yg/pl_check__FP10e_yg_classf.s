@@ -2,13 +2,13 @@ lbl_807F8440:
 /* 807F8440 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 807F8444 00000004  7C 08 02 A6 */	mflr r0
 /* 807F8448 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 807F844C 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 807F8450 00000010  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 807F8454 00000014  80 84 5D AC */	lwz r4, 0x5dac(r4)
+/* 807F844C 0000000C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 807F8450 00000010  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 807F8454 00000014  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
 /* 807F8458 00000018  C0 03 06 80 */	lfs f0, 0x680(r3)
 /* 807F845C 0000001C  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 807F8460 00000000  40 80 00 18 */	bge lbl_807F8478
-/* 807F8464 00000004  4B FF FE 55 */	bl _unresolved
+/* 807F8464 00000004  4B 82 49 98 */	b fopAcM_otherBgCheck__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 807F8468 00000008  2C 03 00 00 */	cmpwi r3, 0
 /* 807F846C 0000000C  40 82 00 0C */	bne lbl_807F8478
 /* 807F8470 00000010  38 60 00 01 */	li r3, 1

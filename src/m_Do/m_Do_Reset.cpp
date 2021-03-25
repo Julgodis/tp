@@ -49,7 +49,7 @@ extern "C" static void destroyVideo__Fv(); // 1
 extern "C" void mDoRst_reset__FiUli(); // 1
 extern "C" void mDoRst_resetCallBack__FiPv(); // 1
 extern "C" void getResetData__6mDoRstFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const m_Do_m_Do_Reset__stringBase0;
 extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
 extern "C" extern u8 struct_80450C80[8];
 extern "C" extern u8 data_80450C88[8];
@@ -132,7 +132,7 @@ asm static void destroyVideo() {
 SECTION_DEAD char const* const stringBase_80374198 = "DVD_STATE_BUSY\n";
 #pragma pop
 
-/* 80450C78-80450C80 0004+04 s=3 e=42 z=0  None .sbss      mResetData__6mDoRst                                          */
+/* 80450C78-80450C80 0004+04 s=3 e=42 z=2  None .sbss      mResetData__6mDoRst                                          */
 u8 mResetData__6mDoRst[4 + 4 /* padding */];
 
 /* 80015614-8001574C 0138+00 s=0 e=3 z=0  None .text      mDoRst_reset__FiUli                                          */

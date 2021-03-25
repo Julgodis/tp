@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JKRArchive {
+struct dSv_save_c {
 };
 
-struct dSv_save_c {
+struct JKRArchive {
 };
 
 struct dFile_info_c {
@@ -88,7 +88,7 @@ extern "C" void _draw__12dFile_info_cFv(); // 1
 extern "C" void draw__16dDlst_FileInfo_cFv(); // 1
 extern "C" void __sinit_d_file_sel_info_cpp(); // 1
 extern "C" void __dt__16dDlst_FileInfo_cFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_file_d_file_sel_info__stringBase0;
 
 // 
 // External References:
@@ -173,10 +173,10 @@ SECTION_DATA static u8 data_803BB4A8[160] = {
 
 /* 803BB548-803BB558 0010+00 s=1 e=0 z=0  None .data      amariheartTex$3880                                           */
 SECTION_DATA static void* data_803BB548[4] = {
-	/* 0    */ (void*)(((char*)&stringBase0)+0x21),
-	/* 1    */ (void*)(((char*)&stringBase0)+0x21),
-	/* 2    */ (void*)(((char*)&stringBase0)+0x21),
-	/* 3    */ (void*)(((char*)&stringBase0)+0x21),
+	/* 0    */ (void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
+	/* 1    */ (void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
+	/* 2    */ (void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
+	/* 3    */ (void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
 };
 
 /* 803BB558-803BB564 000C+00 s=1 e=0 z=0  None .data      @3953                                                        */

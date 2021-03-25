@@ -66,13 +66,13 @@ lbl_800242C0:
 /* 800242D8 00000018  3B DE 04 04 */	addi r30, r30, 0x404
 /* 800242DC 0000001C  3B 9C 04 04 */	addi r28, r28, 0x404
 /* 800242E0 00000020  41 80 FF 6C */	blt lbl_8002424C
-/* 800242E4 00000024  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 800242E8 00000028  38 63 8A 50 */	addi r3, r3, stringBase0@l
+/* 800242E4 00000024  3C 60 80 38 */	lis r3, d_d_stage__stringBase0@ha
+/* 800242E8 00000028  38 63 8A 50 */	addi r3, r3, d_d_stage__stringBase0@l
 /* 800242EC 0000002C  38 63 00 8D */	addi r3, r3, 0x8d
 /* 800242F0 00000030  48 00 B1 45 */	bl dComIfG_getStageRes__FPCc
 /* 800242F4 00000034  90 6D 87 EC */	stw r3, mArcBankName__20dStage_roomControl_c(r13)
-/* 800242F8 00000038  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 800242FC 0000003C  38 63 8A 50 */	addi r3, r3, stringBase0@l
+/* 800242F8 00000038  3C 60 80 38 */	lis r3, d_d_stage__stringBase0@ha
+/* 800242FC 0000003C  38 63 8A 50 */	addi r3, r3, d_d_stage__stringBase0@l
 /* 80024300 00000040  38 63 00 96 */	addi r3, r3, 0x96
 /* 80024304 00000044  48 00 B1 31 */	bl dComIfG_getStageRes__FPCc
 /* 80024308 00000048  90 6D 87 F0 */	stw r3, mArcBankData__20dStage_roomControl_c(r13)

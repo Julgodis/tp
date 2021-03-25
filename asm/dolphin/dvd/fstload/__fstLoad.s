@@ -42,33 +42,33 @@ lbl_8034BE64:
 /* 8034BEA0 0000003C  38 6D 84 80 */	addi r3, r13, 0x80450A00-0x80458580 /* lit_37-_SDA_BASE_ */
 /* 8034BEA4 00000040  4C C6 31 82 */	crclr 6
 /* 8034BEA8 00000044  4B CB AC 15 */	bl OSReport
-/* 8034BEAC 00000048  88 9D 00 00 */	lbz r4, 0(r29)
+/* 8034BEAC 00000048  88 9D 00 00 */	lbz r4, 0(r29)	/* effective address: 80000000 */
 /* 8034BEB0 0000004C  7F E3 FB 78 */	mr r3, r31
-/* 8034BEB4 00000050  88 BD 00 01 */	lbz r5, 1(r29)
+/* 8034BEB4 00000050  88 BD 00 01 */	lbz r5, 1(r29)	/* effective address: 80000001 */
 /* 8034BEB8 00000054  4C C6 31 82 */	crclr 6
-/* 8034BEBC 00000058  88 DD 00 02 */	lbz r6, 2(r29)
-/* 8034BEC0 0000005C  88 FD 00 03 */	lbz r7, 3(r29)
+/* 8034BEBC 00000058  88 DD 00 02 */	lbz r6, 2(r29)	/* effective address: 80000002 */
+/* 8034BEC0 0000005C  88 FD 00 03 */	lbz r7, 3(r29)	/* effective address: 80000003 */
 /* 8034BEC4 00000060  7C 84 07 74 */	extsb r4, r4
 /* 8034BEC8 00000064  7C A5 07 74 */	extsb r5, r5
 /* 8034BECC 00000068  7C C6 07 74 */	extsb r6, r6
 /* 8034BED0 0000006C  7C E7 07 74 */	extsb r7, r7
 /* 8034BED4 00000070  4B CB AB E9 */	bl OSReport
-/* 8034BED8 00000074  88 9D 00 04 */	lbz r4, 4(r29)
+/* 8034BED8 00000074  88 9D 00 04 */	lbz r4, 4(r29)	/* effective address: 80000004 */
 /* 8034BEDC 00000078  38 7F 00 1C */	addi r3, r31, 0x1c
-/* 8034BEE0 0000007C  88 BD 00 05 */	lbz r5, 5(r29)
+/* 8034BEE0 0000007C  88 BD 00 05 */	lbz r5, 5(r29)	/* effective address: 80000005 */
 /* 8034BEE4 00000080  4C C6 31 82 */	crclr 6
 /* 8034BEE8 00000084  7C 84 07 74 */	extsb r4, r4
 /* 8034BEEC 00000088  7C A5 07 74 */	extsb r5, r5
 /* 8034BEF0 0000008C  4B CB AB CD */	bl OSReport
-/* 8034BEF4 00000090  88 9D 00 06 */	lbz r4, 6(r29)
+/* 8034BEF4 00000090  88 9D 00 06 */	lbz r4, 6(r29)	/* effective address: 80000006 */
 /* 8034BEF8 00000094  38 7F 00 34 */	addi r3, r31, 0x34
 /* 8034BEFC 00000098  4C C6 31 82 */	crclr 6
 /* 8034BF00 0000009C  4B CB AB BD */	bl OSReport
-/* 8034BF04 000000A0  88 9D 00 07 */	lbz r4, 7(r29)
+/* 8034BF04 000000A0  88 9D 00 07 */	lbz r4, 7(r29)	/* effective address: 80000007 */
 /* 8034BF08 000000A4  38 7F 00 48 */	addi r3, r31, 0x48
 /* 8034BF0C 000000A8  4C C6 31 82 */	crclr 6
 /* 8034BF10 000000AC  4B CB AB AD */	bl OSReport
-/* 8034BF14 000000B0  88 1E 00 08 */	lbz r0, 8(r30)
+/* 8034BF14 000000B0  88 1E 00 08 */	lbz r0, 8(r30)	/* effective address: 80000008 */
 /* 8034BF18 000000B4  28 00 00 00 */	cmplwi r0, 0
 /* 8034BF1C 000000B8  40 82 00 0C */	bne lbl_8034BF28
 /* 8034BF20 000000BC  38 8D 84 84 */	addi r4, r13, 0x80450A04-0x80458580 /* lit_42-_SDA_BASE_ */

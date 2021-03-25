@@ -1,10 +1,10 @@
 lbl_806FABC0:
-/* 806FABC0 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 806FABC4 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 806FABC8 00000008  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 806FABC0 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806FABC4 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806FABC8 00000008  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
 /* 806FABCC 0000000C  2C 04 00 00 */	cmpwi r4, 0
 /* 806FABD0 00000010  40 82 00 18 */	bne lbl_806FABE8
-/* 806FABD4 00000014  88 03 05 69 */	lbz r0, 0x569(r3)
+/* 806FABD4 00000014  88 03 05 69 */	lbz r0, 0x569(r3)	/* effective address: 80406729 */
 /* 806FABD8 00000018  28 00 00 04 */	cmplwi r0, 4
 /* 806FABDC 0000001C  41 80 00 0C */	blt lbl_806FABE8
 /* 806FABE0 00000020  38 60 00 01 */	li r3, 1

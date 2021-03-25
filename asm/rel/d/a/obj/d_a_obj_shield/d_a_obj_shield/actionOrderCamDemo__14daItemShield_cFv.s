@@ -17,7 +17,7 @@ lbl_80CD7F4C:
 /* 80CD7F58 0000000C  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 80CD7F5C 00000010  38 E0 00 00 */	li r7, 0
 /* 80CD7F60 00000014  39 00 00 01 */	li r8, 1
-/* 80CD7F64 00000018  4B FF EA D5 */	bl _unresolved
+/* 80CD7F64 00000018  4B 34 37 18 */	b fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
 /* 80CD7F68 0000001C  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 80CD7F6C 00000020  60 00 00 02 */	ori r0, r0, 2
 /* 80CD7F70 00000024  B0 1F 00 FA */	sth r0, 0xfa(r31)

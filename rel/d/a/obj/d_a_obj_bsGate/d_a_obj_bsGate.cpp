@@ -39,14 +39,84 @@ struct daBsGate_c {
 struct fopAc_ac_c {
 };
 
+struct mDoMtx_stack_c {
+	/* 8000CD9C */ void transM(f32, f32, f32);
+};
+
+struct J3DModel {
+};
+
+struct J3DModelData {
+};
+
+struct request_of_phase_process_class {
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct cXyz {
+};
+
+struct dVibration_c {
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
+};
+
+struct dBgW {
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct csXyz {
+};
+
+struct dBgS_MoveBgActor {
+	/* 80078624 */ dBgS_MoveBgActor();
+	/* 80078690 */ void Create();
+	/* 800786B0 */ void IsDelete();
+	/* 800786B8 */ void ToFore();
+	/* 800786C0 */ void ToBack();
+	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
+	/* 800788DC */ void MoveBGDelete();
+	/* 80078950 */ void MoveBGExecute();
+};
+
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct Vec {
+};
+
+struct JAISoundID {
+};
+
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
 // 
 // Forward References:
 // 
 
-void daBsGate_Draw(daBsGate_c*); // 2
-void daBsGate_Execute(daBsGate_c*); // 2
-void daBsGate_Delete(daBsGate_c*); // 2
-void daBsGate_Create(fopAc_ac_c*); // 2
+static void daBsGate_Draw(daBsGate_c*); // 2
+static void daBsGate_Execute(daBsGate_c*); // 2
+static void daBsGate_Delete(daBsGate_c*); // 2
+static void daBsGate_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__14daBsGate_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -63,48 +133,180 @@ extern "C" void init_modeClose__10daBsGate_cFv(); // 1
 extern "C" void modeClose__10daBsGate_cFv(); // 1
 extern "C" void Draw__10daBsGate_cFv(); // 1
 extern "C" void Delete__10daBsGate_cFv(); // 1
-extern "C" void daBsGate_Draw__FP10daBsGate_c(); // 1
-extern "C" void daBsGate_Execute__FP10daBsGate_c(); // 1
-extern "C" void daBsGate_Delete__FP10daBsGate_c(); // 1
-extern "C" void daBsGate_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daBsGate_Draw__FP10daBsGate_c(); // 1
+extern "C" static void daBsGate_Execute__FP10daBsGate_c(); // 1
+extern "C" static void daBsGate_Delete__FP10daBsGate_c(); // 1
+extern "C" static void daBsGate_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__14daBsGate_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_bsGate_cpp(); // 1
-extern "C" extern u32 const lit_3625;
-extern "C" extern u32 const lit_3626;
-extern "C" extern u8 const lit_3647[4];
-extern "C" extern u32 const lit_3710;
-extern "C" extern u32 const lit_3783;
-extern "C" extern u32 const lit_3784;
 extern "C" extern u32 const lit_3785;
 extern "C" extern u32 const lit_3786;
 extern "C" extern u32 const lit_3820;
 extern "C" extern char const* const stringBase0;
-extern "C" extern u8 cNullVec__6Z2Calc[12];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern u8 lit_3724[12];
-extern "C" extern u8 lit_3725[12];
-extern "C" extern u8 lit_3726[12];
-extern "C" extern u8 data_80BC3210[36];
-extern "C" extern u8 l_daBsGate_Method[32];
-extern "C" extern u8 g_profile_Obj_BsGate[48];
-extern "C" extern void* __vt__10daBsGate_c[10];
-extern "C" extern void* __vt__14daBsGate_HIO_c[3];
-extern "C" extern void* __vt__14mDoHIO_entry_c[3];
-extern "C" extern u8 lit_3619[12];
-extern "C" extern u8 l_HIO[16];
-extern "C" extern u8 data_80BC32EC[4];
+extern "C" extern void* g_profile_Obj_BsGate[12];
 
 // 
 // External References:
 // 
 
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
+void mDoExt_modelUpdateDL(J3DModel*); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void dComIfGp_getReverb(int); // 2
+void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*); // 2
+void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
+void operator delete(void*); // 2
 
-extern "C" void _unresolved(); // 1
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
+extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfGp_getReverb__Fi(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
+extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
+extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" void Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void cLib_addCalc__FPfffff(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" void __register_global_object(); // 1
 
 // 
 // Declarations:
 // 
+
+/* ############################################################################################## */
+/* 80BC31A0-80BC31A4 0004+00 s=3 e=0 z=0  None .rodata    @3625                                                        */
+SECTION_RODATA static u32 const lit_3625 = 0x40000000;
+
+/* 80BC31A4-80BC31A8 0004+00 s=1 e=0 z=0  None .rodata    @3626                                                        */
+SECTION_RODATA static u32 const lit_3626 = 0x41400000;
+
+/* 80BC31CC-80BC31D8 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BC31D8-80BC31EC 0004+10 s=0 e=0 z=0  None .data      @1787                                                        */
+SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
+	0x02000201,
+	/* padding */
+	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
+};
+
+/* 80BC31EC-80BC31F8 000C+00 s=1 e=0 z=0  None .data      @3724                                                        */
+SECTION_DATA static void* lit_3724[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)modeWait__10daBsGate_cFv,
+};
+
+/* 80BC31F8-80BC3204 000C+00 s=1 e=0 z=0  None .data      @3725                                                        */
+SECTION_DATA static void* lit_3725[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)modeOpen__10daBsGate_cFv,
+};
+
+/* 80BC3204-80BC3210 000C+00 s=1 e=0 z=0  None .data      @3726                                                        */
+SECTION_DATA static void* lit_3726[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)modeClose__10daBsGate_cFv,
+};
+
+/* 80BC3210-80BC3234 0024+00 s=1 e=0 z=0  None .data      mode_proc$3723                                               */
+SECTION_DATA static u8 data_80BC3210[36] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BC3234-80BC3254 0020+00 s=1 e=0 z=0  None .data      l_daBsGate_Method                                            */
+SECTION_DATA static void* l_daBsGate_Method[8] = {
+	/* 0    */ (void*)daBsGate_Create__FP10fopAc_ac_c,
+	/* 1    */ (void*)daBsGate_Delete__FP10daBsGate_c,
+	/* 2    */ (void*)daBsGate_Execute__FP10daBsGate_c,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)daBsGate_Draw__FP10daBsGate_c,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+};
+
+/* 80BC3254-80BC3284 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_BsGate                                         */
+SECTION_DATA void* g_profile_Obj_BsGate[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0003FFFD,
+	/* 2    */ (void*)0x00460000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x000005B8,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x02060000,
+	/* 9    */ (void*)&l_daBsGate_Method,
+	/* 10   */ (void*)0x00040000,
+	/* 11   */ (void*)0x000E0000,
+};
+
+/* 80BC3284-80BC32AC 0028+00 s=1 e=0 z=0  None .data      __vt__10daBsGate_c                                           */
+SECTION_DATA static void* __vt__10daBsGate_c[10] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)CreateHeap__10daBsGate_cFv,
+	/* 3    */ (void*)Create__16dBgS_MoveBgActorFv,
+	/* 4    */ (void*)Execute__10daBsGate_cFPPA3_A4_f,
+	/* 5    */ (void*)Draw__10daBsGate_cFv,
+	/* 6    */ (void*)Delete__10daBsGate_cFv,
+	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
+	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
+	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+};
+
+/* 80BC32AC-80BC32B8 000C+00 s=2 e=0 z=0  None .data      __vt__14daBsGate_HIO_c                                       */
+SECTION_DATA static void* __vt__14daBsGate_HIO_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__14daBsGate_HIO_cFv,
+};
+
+/* 80BC32B8-80BC32C4 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
+SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__14mDoHIO_entry_cFv,
+};
 
 /* 80BC288C-80BC28C8 003C+00 s=1 e=0 z=0  None .text      __ct__14daBsGate_HIO_cFv                                     */
 #pragma push
@@ -117,7 +319,7 @@ asm daBsGate_HIO_c::daBsGate_HIO_c() {
 #pragma pop
 
 
-/* 80BC28C8-80BC2910 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80BC28C8-80BC2910 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,6 +329,12 @@ asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80BC31A8-80BC31AC 0004+00 s=2 e=0 z=0  None .rodata    @3647                                                        */
+SECTION_RODATA static u8 const lit_3647[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
 
 /* 80BC2910-80BC29AC 009C+00 s=2 e=0 z=0  None .text      setBaseMtx__10daBsGate_cFv                                   */
 #pragma push
@@ -139,7 +347,33 @@ asm void daBsGate_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80BC29AC-80BC2A18 006C+00 s=0 e=0 z=0  None .text      CreateHeap__10daBsGate_cFv                                   */
+/* ############################################################################################## */
+/* 80BC31AC-80BC31B0 0004+00 s=1 e=0 z=0  None .rodata    @3710                                                        */
+SECTION_RODATA static u32 const lit_3710 = 0xC37A0000;
+
+/* 80BC31B0-80BC31B4 0004+00 s=2 e=0 z=0  None .rodata    @3783                                                        */
+SECTION_RODATA static u32 const lit_3783 = 0x3F800000;
+
+/* 80BC31B4-80BC31B8 0004+00 s=2 e=0 z=0  None .rodata    @3784                                                        */
+SECTION_RODATA static u32 const lit_3784 = 0xBF800000;
+
+/* 80BC31B8-80BC31BC 0004+00 s=0 e=0 z=0  None .rodata    @3785                                                        */
+SECTION_RODATA u32 const lit_3785 = 0x3E4CCCCD;
+
+/* 80BC31BC-80BC31C0 0004+00 s=0 e=0 z=0  None .rodata    @3786                                                        */
+SECTION_RODATA u32 const lit_3786 = 0x3F000000;
+
+/* 80BC31C0-80BC31C4 0004+00 s=0 e=0 z=0  None .rodata    @3820                                                        */
+SECTION_RODATA u32 const lit_3820 = 0x3ECCCCCD;
+
+/* 80BC31C4-80BC31CC 0008+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80BC31C4 = "S_Zgate";
+#pragma pop
+
+/* 80BC29AC-80BC2A18 006C+00 s=1 e=0 z=0  None .text      CreateHeap__10daBsGate_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -161,7 +395,7 @@ asm void daBsGate_c::create() {
 #pragma pop
 
 
-/* 80BC2B6C-80BC2BBC 0050+00 s=0 e=0 z=0  None .text      Execute__10daBsGate_cFPPA3_A4_f                              */
+/* 80BC2B6C-80BC2BBC 0050+00 s=1 e=0 z=0  None .text      Execute__10daBsGate_cFPPA3_A4_f                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -171,6 +405,16 @@ asm void daBsGate_c::Execute(f32 (** param_0)[3][4]) {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80BC32D0-80BC32DC 000C+00 s=1 e=0 z=0  None .bss       @3619                                                        */
+static u8 lit_3619[12];
+
+/* 80BC32DC-80BC32EC 0010+00 s=3 e=0 z=0  None .bss       l_HIO                                                        */
+static u8 l_HIO[16];
+
+/* 80BC32EC-80BC32F0 0004+00 s=1 e=0 z=0  None .bss       None                                                         */
+static u8 data_80BC32EC[4];
 
 /* 80BC2BBC-80BC2CC4 0108+00 s=1 e=0 z=0  None .text      moveGate__10daBsGate_cFv                                     */
 #pragma push
@@ -194,7 +438,7 @@ asm void daBsGate_c::init_modeWait() {
 #pragma pop
 
 
-/* 80BC2CD0-80BC2CD4 0004+00 s=0 e=0 z=0  None .text      modeWait__10daBsGate_cFv                                     */
+/* 80BC2CD0-80BC2CD4 0004+00 s=1 e=0 z=0  None .text      modeWait__10daBsGate_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -216,7 +460,7 @@ asm void daBsGate_c::init_modeOpen() {
 #pragma pop
 
 
-/* 80BC2CE0-80BC2E34 0154+00 s=0 e=0 z=0  None .text      modeOpen__10daBsGate_cFv                                     */
+/* 80BC2CE0-80BC2E34 0154+00 s=1 e=0 z=0  None .text      modeOpen__10daBsGate_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -238,7 +482,7 @@ asm void daBsGate_c::init_modeClose() {
 #pragma pop
 
 
-/* 80BC2E40-80BC2F94 0154+00 s=0 e=0 z=0  None .text      modeClose__10daBsGate_cFv                                    */
+/* 80BC2E40-80BC2F94 0154+00 s=1 e=0 z=0  None .text      modeClose__10daBsGate_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -249,7 +493,7 @@ asm void daBsGate_c::modeClose() {
 #pragma pop
 
 
-/* 80BC2F94-80BC3038 00A4+00 s=0 e=0 z=0  None .text      Draw__10daBsGate_cFv                                         */
+/* 80BC2F94-80BC3038 00A4+00 s=1 e=0 z=0  None .text      Draw__10daBsGate_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -260,7 +504,7 @@ asm void daBsGate_c::Draw() {
 #pragma pop
 
 
-/* 80BC3038-80BC3068 0030+00 s=0 e=0 z=0  None .text      Delete__10daBsGate_cFv                                       */
+/* 80BC3038-80BC3068 0030+00 s=1 e=0 z=0  None .text      Delete__10daBsGate_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -271,51 +515,51 @@ asm void daBsGate_c::Delete() {
 #pragma pop
 
 
-/* 80BC3068-80BC3094 002C+00 s=0 e=0 z=0  None .text      daBsGate_Draw__FP10daBsGate_c                                */
+/* 80BC3068-80BC3094 002C+00 s=1 e=0 z=0  None .text      daBsGate_Draw__FP10daBsGate_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBsGate_Draw(daBsGate_c* param_0) {
+asm static void daBsGate_Draw(daBsGate_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bsGate/d_a_obj_bsGate/daBsGate_Draw__FP10daBsGate_c.s"
 }
 #pragma pop
 
 
-/* 80BC3094-80BC30B4 0020+00 s=0 e=0 z=0  None .text      daBsGate_Execute__FP10daBsGate_c                             */
+/* 80BC3094-80BC30B4 0020+00 s=1 e=0 z=0  None .text      daBsGate_Execute__FP10daBsGate_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBsGate_Execute(daBsGate_c* param_0) {
+asm static void daBsGate_Execute(daBsGate_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bsGate/d_a_obj_bsGate/daBsGate_Execute__FP10daBsGate_c.s"
 }
 #pragma pop
 
 
-/* 80BC30B4-80BC30D4 0020+00 s=0 e=0 z=0  None .text      daBsGate_Delete__FP10daBsGate_c                              */
+/* 80BC30B4-80BC30D4 0020+00 s=1 e=0 z=0  None .text      daBsGate_Delete__FP10daBsGate_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBsGate_Delete(daBsGate_c* param_0) {
+asm static void daBsGate_Delete(daBsGate_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bsGate/d_a_obj_bsGate/daBsGate_Delete__FP10daBsGate_c.s"
 }
 #pragma pop
 
 
-/* 80BC30D4-80BC30F4 0020+00 s=0 e=0 z=0  None .text      daBsGate_Create__FP10fopAc_ac_c                              */
+/* 80BC30D4-80BC30F4 0020+00 s=1 e=0 z=0  None .text      daBsGate_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBsGate_Create(fopAc_ac_c* param_0) {
+asm static void daBsGate_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bsGate/d_a_obj_bsGate/daBsGate_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80BC30F4-80BC3150 005C+00 s=0 e=0 z=0  None .text      __dt__14daBsGate_HIO_cFv                                     */
+/* 80BC30F4-80BC3150 005C+00 s=2 e=0 z=0  None .text      __dt__14daBsGate_HIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -326,7 +570,7 @@ asm daBsGate_HIO_c::~daBsGate_HIO_c() {
 #pragma pop
 
 
-/* 80BC3150-80BC318C 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_bsGate_cpp                                   */
+/* 80BC3150-80BC318C 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_bsGate_cpp                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -336,125 +580,4 @@ extern "C" asm void __sinit_d_a_obj_bsGate_cpp() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80BC31A0-80BC31A4 0004+00 s=0 e=0 z=0  None .rodata    @3625                                                        */
-SECTION_RODATA u32 const lit_3625 = 0x40000000;
-
-/* 80BC31A4-80BC31A8 0004+00 s=0 e=0 z=0  None .rodata    @3626                                                        */
-SECTION_RODATA u32 const lit_3626 = 0x41400000;
-
-/* 80BC31A8-80BC31AC 0004+00 s=0 e=0 z=0  None .rodata    @3647                                                        */
-SECTION_RODATA u8 const lit_3647[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BC31AC-80BC31B0 0004+00 s=0 e=0 z=0  None .rodata    @3710                                                        */
-SECTION_RODATA u32 const lit_3710 = 0xC37A0000;
-
-/* 80BC31B0-80BC31B4 0004+00 s=0 e=0 z=0  None .rodata    @3783                                                        */
-SECTION_RODATA u32 const lit_3783 = 0x3F800000;
-
-/* 80BC31B4-80BC31B8 0004+00 s=0 e=0 z=0  None .rodata    @3784                                                        */
-SECTION_RODATA u32 const lit_3784 = 0xBF800000;
-
-/* 80BC31B8-80BC31BC 0004+00 s=0 e=0 z=0  None .rodata    @3785                                                        */
-SECTION_RODATA u32 const lit_3785 = 0x3E4CCCCD;
-
-/* 80BC31BC-80BC31C0 0004+00 s=0 e=0 z=0  None .rodata    @3786                                                        */
-SECTION_RODATA u32 const lit_3786 = 0x3F000000;
-
-/* 80BC31C0-80BC31C4 0004+00 s=0 e=0 z=0  None .rodata    @3820                                                        */
-SECTION_RODATA u32 const lit_3820 = 0x3ECCCCCD;
-
-/* 80BC31C4-80BC31CC 0008+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80BC31C4 = "S_Zgate";
-#pragma pop
-
-/* 80BC31CC-80BC31D8 000C+00 s=0 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA u8 cNullVec__6Z2Calc[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BC31D8-80BC31EC 0004+10 s=0 e=0 z=0  None .data      @1787                                                        */
-SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
-	0x02000201,
-	/* padding */
-	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
-};
-
-/* 80BC31EC-80BC31F8 000C+00 s=0 e=0 z=0  None .data      @3724                                                        */
-SECTION_DATA u8 lit_3724[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BC31F8-80BC3204 000C+00 s=0 e=0 z=0  None .data      @3725                                                        */
-SECTION_DATA u8 lit_3725[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BC3204-80BC3210 000C+00 s=0 e=0 z=0  None .data      @3726                                                        */
-SECTION_DATA u8 lit_3726[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BC3210-80BC3234 0024+00 s=0 e=0 z=0  None .data      mode_proc$3723                                               */
-SECTION_DATA u8 data_80BC3210[36] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BC3234-80BC3254 0020+00 s=0 e=0 z=0  None .data      l_daBsGate_Method                                            */
-SECTION_DATA u8 l_daBsGate_Method[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BC3254-80BC3284 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_BsGate                                         */
-SECTION_DATA u8 g_profile_Obj_BsGate[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x03, 0xFF, 0xFD, 0x00, 0x46, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x05, 0xB8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x02, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x0E, 0x00, 0x00,
-};
-
-/* 80BC3284-80BC32AC 0028+00 s=0 e=0 z=0  None .data      __vt__10daBsGate_c                                           */
-SECTION_DATA void* __vt__10daBsGate_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)NULL,
-	/* 9    */ (void*)NULL,
-};
-
-/* 80BC32AC-80BC32B8 000C+00 s=0 e=0 z=0  None .data      __vt__14daBsGate_HIO_c                                       */
-SECTION_DATA void* __vt__14daBsGate_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 80BC32B8-80BC32C4 000C+00 s=0 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
-SECTION_DATA void* __vt__14mDoHIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 80BC32D0-80BC32DC 000C+00 s=0 e=0 z=0  None .bss       @3619                                                        */
-u8 lit_3619[12];
-
-/* 80BC32DC-80BC32EC 0010+00 s=0 e=0 z=0  None .bss       l_HIO                                                        */
-u8 l_HIO[16];
-
-/* 80BC32EC-80BC32F0 0004+00 s=0 e=0 z=0  None .bss       None                                                         */
-u8 data_80BC32EC[4];
 

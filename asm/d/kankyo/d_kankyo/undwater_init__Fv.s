@@ -4,8 +4,8 @@ lbl_8019EAA0:
 /* 8019EAA8 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8019EAAC 0000000C  39 61 00 20 */	addi r11, r1, 0x20
 /* 8019EAB0 00000010  48 1C 37 25 */	bl _savegpr_27
-/* 8019EAB4 00000014  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 8019EAB8 00000018  38 63 4C 6C */	addi r3, r3, stringBase0@l
+/* 8019EAB4 00000014  3C 60 80 39 */	lis r3, d_kankyo_d_kankyo__stringBase0@ha
+/* 8019EAB8 00000018  38 63 4C 6C */	addi r3, r3, d_kankyo_d_kankyo__stringBase0@l
 /* 8019EABC 0000001C  38 63 01 73 */	addi r3, r3, 0x173
 /* 8019EAC0 00000020  38 80 00 1D */	li r4, 0x1d
 /* 8019EAC4 00000024  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
@@ -51,15 +51,15 @@ lbl_8019EB58:
 /* 8019EB60 00000008  93 DF 10 5C */	stw r30, 0x105c(r31)	/* effective address: 8042DAB0 */
 /* 8019EB64 0000000C  28 1E 00 00 */	cmplwi r30, 0
 /* 8019EB68 00000010  41 82 00 44 */	beq lbl_8019EBAC
-/* 8019EB6C 00000014  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 8019EB70 00000018  38 63 4C 6C */	addi r3, r3, stringBase0@l
+/* 8019EB6C 00000014  3C 60 80 39 */	lis r3, d_kankyo_d_kankyo__stringBase0@ha
+/* 8019EB70 00000018  38 63 4C 6C */	addi r3, r3, d_kankyo_d_kankyo__stringBase0@l
 /* 8019EB74 0000001C  38 63 01 73 */	addi r3, r3, 0x173
 /* 8019EB78 00000020  38 80 00 3C */	li r4, 0x3c
 /* 8019EB7C 00000024  7F 85 E3 78 */	mr r5, r28
 /* 8019EB80 00000028  38 C0 00 80 */	li r6, 0x80
 /* 8019EB84 0000002C  4B E9 D7 69 */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 8019EB88 00000030  7C 65 1B 78 */	mr r5, r3
-/* 8019EB8C 00000034  80 7F 10 5C */	lwz r3, 0x105c(r31)
+/* 8019EB8C 00000034  80 7F 10 5C */	lwz r3, 0x105c(r31)	/* effective address: 8042DAB0 */
 /* 8019EB90 00000038  38 9B 00 58 */	addi r4, r27, 0x58
 /* 8019EB94 0000003C  38 C0 00 01 */	li r6, 1
 /* 8019EB98 00000040  38 E0 00 02 */	li r7, 2
@@ -69,7 +69,7 @@ lbl_8019EB58:
 /* 8019EBA8 00000050  4B E6 EA 95 */	bl init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss
 lbl_8019EBAC:
 /* 8019EBAC 00000000  4B E7 06 49 */	bl mDoExt_restoreCurrentHeap__Fv
-/* 8019EBB0 00000004  80 7D 0F 38 */	lwz r3, 0xf38(r29)
+/* 8019EBB0 00000004  80 7D 0F 38 */	lwz r3, 0xf38(r29)	/* effective address: 8042D98C */
 /* 8019EBB4 00000008  4B E7 04 D9 */	bl mDoExt_adjustSolidHeap__FP12JKRSolidHeap
 lbl_8019EBB8:
 /* 8019EBB8 00000000  39 61 00 20 */	addi r11, r1, 0x20

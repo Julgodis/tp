@@ -60,8 +60,8 @@ lbl_80231F54:
 /* 80231FD4 00000024  41 82 00 44 */	beq lbl_80232018
 /* 80231FD8 00000028  38 61 00 08 */	addi r3, r1, 8
 /* 80231FDC 0000002C  38 80 00 0F */	li r4, 0xf
-/* 80231FE0 00000030  3C A0 80 3A */	lis r5, stringBase0@ha
-/* 80231FE4 00000034  38 A5 96 10 */	addi r5, r5, stringBase0@l
+/* 80231FE0 00000030  3C A0 80 3A */	lis r5, d_msg_d_msg_class__stringBase0@ha
+/* 80231FE4 00000034  38 A5 96 10 */	addi r5, r5, d_msg_d_msg_class__stringBase0@l
 /* 80231FE8 00000038  38 A5 00 10 */	addi r5, r5, 0x10
 /* 80231FEC 0000003C  FC 00 08 1E */	fctiwz f0, f1
 /* 80231FF0 00000040  D8 01 00 18 */	stfd f0, 0x18(r1)

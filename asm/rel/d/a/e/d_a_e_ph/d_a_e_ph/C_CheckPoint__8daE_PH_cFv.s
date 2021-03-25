@@ -12,7 +12,7 @@ lbl_8073E8B0:
 /* 8073E8D8 00000028  D0 41 00 10 */	stfs f2, 0x10(r1)
 /* 8073E8DC 0000002C  38 61 00 08 */	addi r3, r1, 8
 /* 8073E8E0 00000030  38 9F 04 D0 */	addi r4, r31, 0x4d0
-/* 8073E8E4 00000034  4B FF EA D5 */	bl _unresolved
+/* 8073E8E4 00000034  4B B3 23 20 */	b cLib_targetAngleY__FPC3VecPC3Vec
 /* 8073E8E8 00000038  A8 1F 06 1E */	lha r0, 0x61e(r31)
 /* 8073E8EC 0000003C  7C 03 00 50 */	subf r0, r3, r0
 /* 8073E8F0 00000040  7C 00 07 34 */	extsh r0, r0

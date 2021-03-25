@@ -5,18 +5,18 @@ lbl_8054D604:
 /* 8054D610 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8054D614 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 8054D618 00000014  7C 9E 23 78 */	mr r30, r4
-/* 8054D61C 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8054D620 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 8054D61C 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8054D620 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8054D624 00000020  3B E3 4F F8 */	addi r31, r3, 0x4ff8
 /* 8054D628 00000024  7F E3 FB 78 */	mr r3, r31
-/* 8054D62C 00000028  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 8054D630 0000002C  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
+/* 8054D62C 00000028  3C A0 80 55 */	lis r5, struct_8054EBD0+0x0@ha
+/* 8054D630 0000002C  38 A5 EB D0 */	addi r5, r5, struct_8054EBD0+0x0@l
 /* 8054D634 00000030  38 A5 01 C6 */	addi r5, r5, 0x1c6
 /* 8054D638 00000034  38 C0 00 03 */	li r6, 3
-/* 8054D63C 00000038  4B FF DC 9D */	bl _unresolved
+/* 8054D63C 00000038  4B AF AA B0 */	b getMySubstanceP__16dEvent_manager_cFiPCci
 /* 8054D640 0000003C  7F E3 FB 78 */	mr r3, r31
 /* 8054D644 00000040  7F C4 F3 78 */	mr r4, r30
-/* 8054D648 00000044  4B FF DC 91 */	bl _unresolved
+/* 8054D648 00000044  4B AF A7 04 */	b getIsAddvance__16dEvent_manager_cFi
 /* 8054D64C 00000048  38 60 00 00 */	li r3, 0
 /* 8054D650 0000004C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8054D654 00000050  83 C1 00 08 */	lwz r30, 8(r1)

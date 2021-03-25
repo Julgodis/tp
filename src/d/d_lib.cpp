@@ -127,7 +127,7 @@ extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803A7240-803A7250 0010+00 s=0 e=0 z=0  None .data      ZeroQuat                                                     */
+/* 803A7240-803A7250 0010+00 s=0 e=0 z=6  None .data      ZeroQuat                                                     */
 SECTION_DATA u8 ZeroQuat[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
@@ -302,7 +302,7 @@ asm void STControl::checkDownTrigger() {
 #pragma pop
 
 
-/* 8003261C-80032654 0038+00 s=0 e=0 z=0  None .text      dLib_getEventSwitchNo__Fi                                    */
+/* 8003261C-80032654 0038+00 s=0 e=0 z=1  None .text      dLib_getEventSwitchNo__Fi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -313,7 +313,7 @@ asm void dLib_getEventSwitchNo(int param_0) {
 #pragma pop
 
 
-/* 80032654-80032738 00E4+00 s=0 e=0 z=0  None .text      dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz */
+/* 80032654-80032738 00E4+00 s=0 e=0 z=8  None .text      dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

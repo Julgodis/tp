@@ -9,8 +9,8 @@ lbl_801B8110:
 /* 801B812C 0000001C  3B C0 00 00 */	li r30, 0
 /* 801B8130 00000020  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 801B8134 00000024  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
-/* 801B8138 00000028  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801B813C 0000002C  3B 84 57 60 */	addi r28, r4, stringBase0@l
+/* 801B8138 00000028  3C 80 80 39 */	lis r4, d_menu_d_menu_dmap__stringBase0@ha
+/* 801B813C 0000002C  3B 84 57 60 */	addi r28, r4, d_menu_d_menu_dmap__stringBase0@l
 lbl_801B8140:
 /* 801B8140 00000000  38 60 01 18 */	li r3, 0x118
 /* 801B8144 00000004  48 11 6B 09 */	bl __nw__FUl
@@ -24,7 +24,7 @@ lbl_801B8158:
 /* 801B8160 00000008  7C 7D D8 2E */	lwzx r3, r29, r27
 /* 801B8164 0000000C  38 9C 00 19 */	addi r4, r28, 0x19
 /* 801B8168 00000010  3C A0 00 02 */	lis r5, 2
-/* 801B816C 00000014  80 DF 5C C0 */	lwz r6, 0x5cc0(r31)
+/* 801B816C 00000014  80 DF 5C C0 */	lwz r6, 0x5cc0(r31)	/* effective address: 8040BE80 */
 /* 801B8170 00000018  48 14 04 D9 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 801B8174 0000001C  7C 7D D8 2E */	lwzx r3, r29, r27
 /* 801B8178 00000020  48 09 CF 71 */	bl dPaneClass_showNullPane__FP9J2DScreen
@@ -242,10 +242,10 @@ lbl_801B84B4:
 /* 801B84C0 0000000C  2C 1A 00 02 */	cmpwi r26, 2
 /* 801B84C4 00000010  3B DE 00 04 */	addi r30, r30, 4
 /* 801B84C8 00000014  41 80 FF BC */	blt lbl_801B8484
-/* 801B84CC 00000018  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801B84D0 0000001C  38 84 57 60 */	addi r4, r4, stringBase0@l
+/* 801B84CC 00000018  3C 80 80 39 */	lis r4, d_menu_d_menu_dmap__stringBase0@ha
+/* 801B84D0 0000001C  38 84 57 60 */	addi r4, r4, d_menu_d_menu_dmap__stringBase0@l
 /* 801B84D4 00000020  38 64 00 33 */	addi r3, r4, 0x33
-/* 801B84D8 00000024  80 9F 5C C0 */	lwz r4, 0x5cc0(r31)
+/* 801B84D8 00000024  80 9F 5C C0 */	lwz r4, 0x5cc0(r31)	/* effective address: 8040BE80 */
 /* 801B84DC 00000028  48 11 BD 95 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
 /* 801B84E0 0000002C  48 15 05 8D */	bl load__20J2DAnmLoaderDataBaseFPCv
 /* 801B84E4 00000030  90 7D 0D 28 */	stw r3, 0xd28(r29)
@@ -429,7 +429,7 @@ lbl_801B84B4:
 /* 801B87AC 000002F8  7D 89 03 A6 */	mtctr r12
 /* 801B87B0 000002FC  4E 80 04 21 */	bctrl 
 /* 801B87B4 00000300  38 7D 00 04 */	addi r3, r29, 4
-/* 801B87B8 00000304  80 9F 5C C0 */	lwz r4, 0x5cc0(r31)
+/* 801B87B8 00000304  80 9F 5C C0 */	lwz r4, 0x5cc0(r31)	/* effective address: 8040BE80 */
 /* 801B87BC 00000308  48 00 A1 1D */	bl initiate__16dMenuMapCommon_cFP10JKRArchive
 /* 801B87C0 0000030C  3B 40 00 00 */	li r26, 0
 /* 801B87C4 00000310  3B C0 00 00 */	li r30, 0

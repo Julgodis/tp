@@ -5,37 +5,37 @@ lbl_80CA2658:
 /* 80CA2664 0000000C  93 E1 00 4C */	stw r31, 0x4c(r1)
 /* 80CA2668 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80CA266C 00000014  38 7F 06 50 */	addi r3, r31, 0x650
-/* 80CA2670 00000018  4B FF DE A9 */	bl _unresolved
+/* 80CA2670 00000018  4B 3E 11 C0 */	b Move__10dCcD_GSttsFv
 /* 80CA2674 0000001C  38 7F 06 70 */	addi r3, r31, 0x670
-/* 80CA2678 00000020  4B FF DE A1 */	bl _unresolved
+/* 80CA2678 00000020  4B 3E 1D E8 */	b ChkTgHit__12dCcD_GObjInfFv
 /* 80CA267C 00000024  28 03 00 00 */	cmplwi r3, 0
 /* 80CA2680 00000028  41 82 00 78 */	beq lbl_80CA26F8
 /* 80CA2684 0000002C  38 7F 06 70 */	addi r3, r31, 0x670
-/* 80CA2688 00000030  4B FF DE 91 */	bl _unresolved
+/* 80CA2688 00000030  4B 3E 1E 70 */	b GetTgHitObj__12dCcD_GObjInfFv
 /* 80CA268C 00000034  90 61 00 20 */	stw r3, 0x20(r1)
 /* 80CA2690 00000038  80 03 00 10 */	lwz r0, 0x10(r3)
 /* 80CA2694 0000003C  54 00 04 63 */	rlwinm. r0, r0, 0, 0x11, 0x11
 /* 80CA2698 00000040  41 82 00 34 */	beq lbl_80CA26CC
-/* 80CA269C 00000044  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CA26A0 00000048  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
-/* 80CA26A4 0000004C  80 64 00 00 */	lwz r3, 0(r4)
-/* 80CA26A8 00000050  80 04 00 04 */	lwz r0, 4(r4)
+/* 80CA269C 00000044  3C 60 80 CA */	lis r3, lit_4680@ha
+/* 80CA26A0 00000048  38 83 33 A0 */	addi r4, r3, lit_4680@l
+/* 80CA26A4 0000004C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80CA33A0 */
+/* 80CA26A8 00000050  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80CA33A4 */
 /* 80CA26AC 00000054  90 61 00 14 */	stw r3, 0x14(r1)
 /* 80CA26B0 00000058  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80CA26B4 0000005C  80 04 00 08 */	lwz r0, 8(r4)
+/* 80CA26B4 0000005C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80CA33A8 */
 /* 80CA26B8 00000060  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80CA26BC 00000064  7F E3 FB 78 */	mr r3, r31
 /* 80CA26C0 00000068  38 81 00 14 */	addi r4, r1, 0x14
 /* 80CA26C4 0000006C  4B FF DF 11 */	bl setAction__10daObjNAN_cFM10daObjNAN_cFPCvPv_v
 /* 80CA26C8 00000070  48 00 00 30 */	b lbl_80CA26F8
 lbl_80CA26CC:
-/* 80CA26CC 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CA26D0 00000004  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
-/* 80CA26D4 00000008  80 64 00 00 */	lwz r3, 0(r4)
-/* 80CA26D8 0000000C  80 04 00 04 */	lwz r0, 4(r4)
+/* 80CA26CC 00000000  3C 60 80 CA */	lis r3, lit_4683@ha
+/* 80CA26D0 00000004  38 83 33 AC */	addi r4, r3, lit_4683@l
+/* 80CA26D4 00000008  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80CA33AC */
+/* 80CA26D8 0000000C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80CA33B0 */
 /* 80CA26DC 00000010  90 61 00 08 */	stw r3, 8(r1)
 /* 80CA26E0 00000014  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80CA26E4 00000018  80 04 00 08 */	lwz r0, 8(r4)
+/* 80CA26E4 00000018  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80CA33B4 */
 /* 80CA26E8 0000001C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80CA26EC 00000020  7F E3 FB 78 */	mr r3, r31
 /* 80CA26F0 00000024  38 81 00 08 */	addi r4, r1, 8

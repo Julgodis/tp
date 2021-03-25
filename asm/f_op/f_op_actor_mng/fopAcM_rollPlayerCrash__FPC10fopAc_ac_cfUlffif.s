@@ -53,13 +53,13 @@ lbl_8001AB54:
 /* 8001ABA4 00000038  41 82 00 70 */	beq lbl_8001AC14
 lbl_8001ABA8:
 /* 8001ABA8 00000000  7F 63 DB 78 */	mr r3, r27
-/* 8001ABAC 00000004  80 9F 5D AC */	lwz r4, 0x5dac(r31)
+/* 8001ABAC 00000004  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
 /* 8001ABB0 00000008  4B FF FE E5 */	bl fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8001ABB4 0000000C  EC 1F 07 F2 */	fmuls f0, f31, f31
 /* 8001ABB8 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8001ABBC 00000000  40 80 00 58 */	bge lbl_8001AC14
 /* 8001ABC0 00000004  7F 63 DB 78 */	mr r3, r27
-/* 8001ABC4 00000008  80 9F 5D AC */	lwz r4, 0x5dac(r31)
+/* 8001ABC4 00000008  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
 /* 8001ABC8 0000000C  4B FF FB 49 */	bl fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8001ABCC 00000010  3C 80 80 44 */	lis r4, sincosTable___5JMath@ha
 /* 8001ABD0 00000014  38 84 9A 20 */	addi r4, r4, sincosTable___5JMath@l

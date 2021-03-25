@@ -205,11 +205,13 @@ def search(context: Context,
     sorted_accesses.sort(key=lambda x: x[0])
     for relative_addr, access in sorted_accesses:
         is_relocation_symbol = False
+        """
         for relocs in relocations.values():
             if relative_addr in relocs:
                 relocs[relative_addr].access = access
                 is_relocation_symbol = True
                 break
+        """
 
         # if the access is a relocatable symbol skip
         if is_relocation_symbol:
@@ -323,10 +325,10 @@ def search(context: Context,
                                   base_addr=exe_section.base_addr,
                                   index=map_section.index)
 
-                #
+
                 if map_section.index in relocations:
                     for relocation in relocations[map_section.index]:
-                        section.relocations[relocation.addr] = relocation
+                        section.relocations[map_section.addr + relocation.replace_addr] = relocation
                 translation_unit.add_section(section)
 
                 # If the section contains data but there are no symbols for it, we need to create

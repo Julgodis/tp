@@ -32,8 +32,8 @@ lbl_801B7014:
 /* 801B708C 00000078  90 1F 00 20 */	stw r0, 0x20(r31)
 /* 801B7090 0000007C  41 82 01 1C */	beq lbl_801B71AC
 /* 801B7094 00000080  7F E3 FB 78 */	mr r3, r31
-/* 801B7098 00000084  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801B709C 00000088  38 84 53 30 */	addi r4, r4, stringBase0@l
+/* 801B7098 00000084  3C 80 80 39 */	lis r4, d_menu_d_menu_collect__stringBase0@ha
+/* 801B709C 00000088  38 84 53 30 */	addi r4, r4, d_menu_d_menu_collect__stringBase0@l
 /* 801B70A0 0000008C  38 84 01 26 */	addi r4, r4, 0x126
 /* 801B70A4 00000090  3C A0 80 3C */	lis r5, data_803BC71C@ha
 /* 801B70A8 00000094  38 05 C7 1C */	addi r0, r5, data_803BC71C@l

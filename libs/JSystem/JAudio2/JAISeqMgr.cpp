@@ -11,28 +11,9 @@
 // Types:
 // 
 
-struct JAISeqDataRegion {
+struct JAISoundHandle {
 };
 
-template <typename A0>
-struct JAISoundStrategyMgr { };
-/* JAISoundStrategyMgr<JAISeq> */
-struct JAISoundStrategyMgr__template1 {
-};
-
-struct JAISoundActivity {
-};
-
-struct JAIAudience {
-};
-
-struct JAISoundID {
-};
-
-struct JASSoundParams {
-};
-
-struct JAISeqMgr;
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -42,14 +23,33 @@ struct JGeometry {
 
 };
 
+struct JAISeqDataRegion {
+};
+
+struct JAISeqMgr;
+template <typename A0>
+struct JAISoundStrategyMgr { };
+/* JAISoundStrategyMgr<JAISeq> */
+struct JAISoundStrategyMgr__template1 {
+};
+
+struct JASSoundParams {
+};
+
+struct JAIAudience {
+};
+
+struct JAISoundID {
+};
+
+struct JAISoundActivity {
+};
+
 struct JAISeq {
 	/* 802A0A8C */ JAISeq(JAISeqMgr*, JAISoundStrategyMgr<JAISeq>*);
 	/* 802A0B64 */ void JAISeqMgr_startID_(JAISoundID, JGeometry::TVec3<f32> const*, JAIAudience*, int, int);
 	/* 802A108C */ void JAISeqMgr_calc_();
 	/* 802A14FC */ void JAISeqMgr_mixOut_(JASSoundParams const&, JAISoundActivity);
-};
-
-struct JAISoundHandle {
 };
 
 struct JAISeqMgr {

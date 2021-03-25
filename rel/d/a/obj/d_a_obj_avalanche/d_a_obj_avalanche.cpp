@@ -32,17 +32,144 @@ struct daObjAvalanche_c {
 };
 
 struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
 	/* 80BA7328 */ ~J3DFrameCtrl();
+};
+
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
+};
+
+struct mDoExt_bckAnm {
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
+};
+
+struct J3DModel {
+};
+
+struct fopAc_ac_c {
+};
+
+struct request_of_phase_process_class {
+};
+
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dEvt_control_c {
+	/* 80042468 */ void reset();
+};
+
+struct dEvent_manager_c {
+	/* 80047758 */ void getEventIdx(fopAc_ac_c*, char const*, u8);
+	/* 80047A78 */ void endCheck(s16);
+	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
+	/* 80047D4C */ void getIsAddvance(int);
+	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
+	/* 800480EC */ void getMySubstanceP(int, char const*, int);
+	/* 8004817C */ void cutEnd(int);
+};
+
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
+};
+
+struct dKy_tevstr_c {
+};
+
+struct _GXColor {
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct dPa_levelEcallBack {
+};
+
+struct dPa_control_c {
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+};
+
+struct dBgW_Base {
+};
+
+struct cBgS {
+	/* 80074250 */ void Release(dBgW_Base*);
+};
+
+struct dBgS {
+	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
+};
+
+struct dBgW {
+	/* 8007B970 */ dBgW();
+	/* 8007B9C0 */ void Move();
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct dBgS_MoveBgActor {
+	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ void IsDelete();
+	/* 800786B8 */ void ToFore();
+	/* 800786C0 */ void ToBack();
+	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
+	/* 800788DC */ void MoveBGDelete();
+	/* 80078950 */ void MoveBGExecute();
+};
+
+struct cBgD_t {
+};
+
+struct cBgW {
+	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct cBgW_BgId {
+	/* 802681D4 */ void ChkUsed() const;
+};
+
+struct JAISoundID {
+};
+
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // 
 // Forward References:
 // 
 
-void daObjAvalanche_create1st(daObjAvalanche_c*); // 2
-void daObjAvalanche_MoveBGDelete(daObjAvalanche_c*); // 2
-void daObjAvalanche_MoveBGExecute(daObjAvalanche_c*); // 2
-void daObjAvalanche_MoveBGDraw(daObjAvalanche_c*); // 2
+static void daObjAvalanche_create1st(daObjAvalanche_c*); // 2
+static void daObjAvalanche_MoveBGDelete(daObjAvalanche_c*); // 2
+static void daObjAvalanche_MoveBGExecute(daObjAvalanche_c*); // 2
+static void daObjAvalanche_MoveBGDraw(daObjAvalanche_c*); // 2
 static void cLib_calcTimer__template0(u8*); // 2
 
 extern "C" void initBaseMtx__16daObjAvalanche_cFv(); // 1
@@ -63,44 +190,95 @@ extern "C" void demoProc__16daObjAvalanche_cFv(); // 1
 extern "C" void setEffect__16daObjAvalanche_cFv(); // 1
 extern "C" void Draw__16daObjAvalanche_cFv(); // 1
 extern "C" void Delete__16daObjAvalanche_cFv(); // 1
-extern "C" void daObjAvalanche_create1st__FP16daObjAvalanche_c(); // 1
-extern "C" void daObjAvalanche_MoveBGDelete__FP16daObjAvalanche_c(); // 1
-extern "C" void daObjAvalanche_MoveBGExecute__FP16daObjAvalanche_c(); // 1
-extern "C" void daObjAvalanche_MoveBGDraw__FP16daObjAvalanche_c(); // 1
+extern "C" static void daObjAvalanche_create1st__FP16daObjAvalanche_c(); // 1
+extern "C" static void daObjAvalanche_MoveBGDelete__FP16daObjAvalanche_c(); // 1
+extern "C" static void daObjAvalanche_MoveBGExecute__FP16daObjAvalanche_c(); // 1
+extern "C" static void daObjAvalanche_MoveBGDraw__FP16daObjAvalanche_c(); // 1
 extern "C" static void func_80BA7CD8(); // 1
-extern "C" extern u8 const l_dzb[8];
-extern "C" extern u8 const l_check_pos[24];
-extern "C" extern u8 const lit_3663[4];
-extern "C" extern u32 const lit_3716;
-extern "C" extern u8 const lit_3718[8];
-extern "C" extern u32 const lit_3762;
-extern "C" extern u32 const lit_3834;
-extern "C" extern u32 const lit_3846;
-extern "C" extern u32 const lit_3964;
-extern "C" extern u8 const struct_80BA7D3C[52];
-extern "C" extern u8 cNullVec__6Z2Calc[12];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern u8 l_arcName[4];
-extern "C" extern u8 l_evName[4];
-extern "C" extern u8 l_staffName[4];
+extern "C" extern void* l_evName;
 extern "C" extern u8 l_cull_box[24];
-extern "C" extern u8 lit_3851[12];
-extern "C" extern u8 lit_3852[12];
-extern "C" extern u8 lit_3853[12];
-extern "C" extern u8 lit_3854[12];
-extern "C" extern u8 data_80BA7DE4[48];
-extern "C" extern u8 data_80BA7E14[8];
-extern "C" extern u8 daObjAvalanche_METHODS[32];
-extern "C" extern u8 g_profile_Obj_Avalanche[48];
-extern "C" extern void* __vt__12J3DFrameCtrl[3];
-extern "C" extern void* __vt__16daObjAvalanche_c[10];
+extern "C" extern void* g_profile_Obj_Avalanche[12];
 
 // 
 // External References:
 // 
 
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void mDoExt_modelUpdateDL(J3DModel*); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void dComIfGp_getReverb(int); // 2
+void dBgS_MoveBGProc_Trans(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*); // 2
+void cLib_chaseF(f32*, f32, f32); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
 
-extern "C" void _unresolved(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void play__14mDoExt_baseAnmFv(); // 1
+extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb(); // 1
+extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfGp_getReverb__Fi(); // 1
+extern "C" void onSwitch__10dSv_info_cFii(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void reset__14dEvt_control_cFv(); // 1
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc(); // 1
+extern "C" void endCheck__16dEvent_manager_cFs(); // 1
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci(); // 1
+extern "C" void getIsAddvance__16dEvent_manager_cFi(); // 1
+extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii(); // 1
+extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci(); // 1
+extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
+extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
+extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
+extern "C" void dBgS_MoveBGProc_Trans__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
+extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
+extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f(); // 1
+extern "C" void __ct__4dBgWFv(); // 1
+extern "C" void Move__4dBgWFv(); // 1
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void __ct__5csXyzFsss(); // 1
+extern "C" void ChkUsed__9cBgW_BgIdCFv(); // 1
+extern "C" void cLib_chaseF__FPfff(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void init__12J3DFrameCtrlFs(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 data_80BA7EA0[4];
 
 // 
 // Declarations:
@@ -117,6 +295,23 @@ asm void daObjAvalanche_c::initBaseMtx() {
 #pragma pop
 
 
+/* ############################################################################################## */
+/* 80BA7CFC-80BA7D04 0008+00 s=1 e=0 z=0  None .rodata    l_dzb                                                        */
+SECTION_RODATA static u8 const l_dzb[8] = {
+	0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x0C,
+};
+
+/* 80BA7D04-80BA7D1C 0018+00 s=1 e=0 z=0  None .rodata    l_check_pos                                                  */
+SECTION_RODATA static u8 const l_check_pos[24] = {
+	0xC3, 0x96, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x43, 0x96, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x43, 0x96, 0x00, 0x00,
+};
+
+/* 80BA7D1C-80BA7D20 0004+00 s=4 e=0 z=0  None .rodata    @3663                                                        */
+SECTION_RODATA static u8 const lit_3663[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
 /* 80BA6F14-80BA6FC8 00B4+00 s=3 e=0 z=0  None .text      setBaseMtx__16daObjAvalanche_cFv                             */
 #pragma push
 #pragma optimization_level 0
@@ -128,7 +323,21 @@ asm void daObjAvalanche_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80BA6FC8-80BA7178 01B0+00 s=0 e=0 z=0  None .text      Create__16daObjAvalanche_cFv                                 */
+/* ############################################################################################## */
+/* 80BA7D20-80BA7D24 0004+00 s=1 e=0 z=0  None .rodata    @3716                                                        */
+SECTION_RODATA static u32 const lit_3716 = 0xC3C80000;
+
+/* 80BA7D24-80BA7D2C 0008+00 s=1 e=0 z=0  None .rodata    @3718                                                        */
+SECTION_RODATA static u8 const lit_3718[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
+/* 80BA7D70-80BA7D7C 000C+00 s=2 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BA6FC8-80BA7178 01B0+00 s=1 e=0 z=0  None .text      Create__16daObjAvalanche_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -139,7 +348,133 @@ asm void daObjAvalanche_c::Create() {
 #pragma pop
 
 
-/* 80BA7178-80BA7328 01B0+00 s=0 e=0 z=0  None .text      CreateHeap__16daObjAvalanche_cFv                             */
+/* ############################################################################################## */
+/* 80BA7D2C-80BA7D30 0004+00 s=2 e=0 z=0  None .rodata    @3762                                                        */
+SECTION_RODATA static u32 const lit_3762 = 0x3F800000;
+
+/* 80BA7D30-80BA7D34 0004+00 s=1 e=0 z=0  None .rodata    @3834                                                        */
+SECTION_RODATA static u32 const lit_3834 = 0x43960000;
+
+/* 80BA7D34-80BA7D38 0004+00 s=1 e=0 z=0  None .rodata    @3846                                                        */
+SECTION_RODATA static u32 const lit_3846 = 0x42200000;
+
+/* 80BA7D38-80BA7D3C 0004+00 s=1 e=0 z=0  None .rodata    @3964                                                        */
+SECTION_RODATA static u32 const lit_3964 = 0xBF800000;
+
+/* 80BA7D3C-80BA7D70 0034+00 s=5 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const struct_80BA7D3C[52] = {
+	/* 80BA7D3C 0007 stringBase_80BA7D3C @stringBase0 */
+	0x56, 0x5F, 0x59, 0x75, 0x6B, 0x69, 0x00,
+	/* 80BA7D43 000E data_80BA7D43 None */
+	0x53, 0x4E, 0x4F, 0x57, 0x5F, 0x43, 0x4F, 0x4C, 0x4C, 0x41, 0x50, 0x53, 0x45, 0x00,
+	/* 80BA7D51 0008 data_80BA7D51 None */
+	0x4F, 0x62, 0x6A, 0x5F, 0x61, 0x76, 0x61, 0x00,
+	/* 80BA7D59 0005 data_80BA7D59 None */
+	0x57, 0x41, 0x49, 0x54, 0x00,
+	/* 80BA7D5E 0012 data_80BA7D5E None */
+	0x43, 0x4F, 0x4C, 0x4C, 0x41, 0x50, 0x53, 0x45, 0x00, 0x54, 0x69, 0x6D, 0x65, 0x72, 0x00, 0x00,
+	0x00, 0x00,
+};
+
+/* 80BA7D7C-80BA7D90 0004+10 s=0 e=0 z=0  None .data      @1787                                                        */
+SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
+	0x02000201,
+	/* padding */
+	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
+};
+
+/* 80BA7D90-80BA7D94 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)(((char*)&struct_80BA7D3C)+0x0) /* @stringBase0 */;
+
+/* 80BA7D94-80BA7D98 0004+00 s=0 e=0 z=0  None .data      l_evName                                                     */
+SECTION_DATA void* l_evName = (void*)(((char*)&struct_80BA7D3C)+0x7) /* None */;
+
+/* 80BA7D98-80BA7D9C 0004+00 s=1 e=0 z=0  None .data      l_staffName                                                  */
+SECTION_DATA static void* l_staffName = (void*)(((char*)&struct_80BA7D3C)+0x15) /* None */;
+
+/* 80BA7D9C-80BA7DB4 0018+00 s=0 e=0 z=0  None .data      l_cull_box                                                   */
+SECTION_DATA u8 l_cull_box[24] = {
+	0xC3, 0xFA, 0x00, 0x00, 0xC3, 0xFA, 0x00, 0x00, 0xC4, 0x2F, 0x00, 0x00, 0x43, 0xFA, 0x00, 0x00,
+	0x44, 0x7A, 0x00, 0x00, 0x44, 0x2F, 0x00, 0x00,
+};
+
+/* 80BA7DB4-80BA7DC0 000C+00 s=1 e=0 z=0  None .data      @3851                                                        */
+SECTION_DATA static void* lit_3851[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)actionWait__16daObjAvalanche_cFv,
+};
+
+/* 80BA7DC0-80BA7DCC 000C+00 s=1 e=0 z=0  None .data      @3852                                                        */
+SECTION_DATA static void* lit_3852[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)actionOrderEvent__16daObjAvalanche_cFv,
+};
+
+/* 80BA7DCC-80BA7DD8 000C+00 s=1 e=0 z=0  None .data      @3853                                                        */
+SECTION_DATA static void* lit_3853[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)actionEvent__16daObjAvalanche_cFv,
+};
+
+/* 80BA7DD8-80BA7DE4 000C+00 s=1 e=0 z=0  None .data      @3854                                                        */
+SECTION_DATA static void* lit_3854[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)actionDead__16daObjAvalanche_cFv,
+};
+
+/* 80BA7DE4-80BA7E14 0030+00 s=1 e=0 z=0  None .data      l_func$3850                                                  */
+SECTION_DATA static u8 data_80BA7DE4[48] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BA7E14-80BA7E1C 0008+00 s=1 e=0 z=0  None .data      action_table$3910                                            */
+SECTION_DATA static void* data_80BA7E14[2] = {
+	/* 0    */ (void*)(((char*)&struct_80BA7D3C)+0x1D) /* None */,
+	/* 1    */ (void*)(((char*)&struct_80BA7D3C)+0x22) /* None */,
+};
+
+/* 80BA7E1C-80BA7E3C 0020+00 s=1 e=0 z=0  None .data      daObjAvalanche_METHODS                                       */
+SECTION_DATA static void* daObjAvalanche_METHODS[8] = {
+	/* 0    */ (void*)daObjAvalanche_create1st__FP16daObjAvalanche_c,
+	/* 1    */ (void*)daObjAvalanche_MoveBGDelete__FP16daObjAvalanche_c,
+	/* 2    */ (void*)daObjAvalanche_MoveBGExecute__FP16daObjAvalanche_c,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)daObjAvalanche_MoveBGDraw__FP16daObjAvalanche_c,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+};
+
+/* 80BA7E3C-80BA7E6C 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Avalanche                                      */
+SECTION_DATA void* g_profile_Obj_Avalanche[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0003FFFD,
+	/* 2    */ (void*)0x00AD0000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x000005F4,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x028F0000,
+	/* 9    */ (void*)&daObjAvalanche_METHODS,
+	/* 10   */ (void*)0x00040000,
+	/* 11   */ (void*)0x000E0000,
+};
+
+/* 80BA7E6C-80BA7E78 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
+SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+};
+
+/* 80BA7178-80BA7328 01B0+00 s=1 e=0 z=0  None .text      CreateHeap__16daObjAvalanche_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -150,7 +485,7 @@ asm void daObjAvalanche_c::CreateHeap() {
 #pragma pop
 
 
-/* 80BA7328-80BA7370 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80BA7328-80BA7370 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -172,7 +507,7 @@ asm void daObjAvalanche_c::create1st() {
 #pragma pop
 
 
-/* 80BA73F4-80BA7440 004C+00 s=0 e=0 z=0  None .text      Execute__16daObjAvalanche_cFPPA3_A4_f                        */
+/* 80BA73F4-80BA7440 004C+00 s=1 e=0 z=0  None .text      Execute__16daObjAvalanche_cFPPA3_A4_f                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -216,7 +551,7 @@ asm void daObjAvalanche_c::event_proc_call() {
 #pragma pop
 
 
-/* 80BA76D4-80BA773C 0068+00 s=0 e=0 z=0  None .text      actionWait__16daObjAvalanche_cFv                             */
+/* 80BA76D4-80BA773C 0068+00 s=1 e=0 z=0  None .text      actionWait__16daObjAvalanche_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -227,7 +562,7 @@ asm void daObjAvalanche_c::actionWait() {
 #pragma pop
 
 
-/* 80BA773C-80BA7804 00C8+00 s=0 e=0 z=0  None .text      actionOrderEvent__16daObjAvalanche_cFv                       */
+/* 80BA773C-80BA7804 00C8+00 s=1 e=0 z=0  None .text      actionOrderEvent__16daObjAvalanche_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -238,7 +573,7 @@ asm void daObjAvalanche_c::actionOrderEvent() {
 #pragma pop
 
 
-/* 80BA7804-80BA7888 0084+00 s=0 e=0 z=0  None .text      actionEvent__16daObjAvalanche_cFv                            */
+/* 80BA7804-80BA7888 0084+00 s=1 e=0 z=0  None .text      actionEvent__16daObjAvalanche_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -249,7 +584,7 @@ asm void daObjAvalanche_c::actionEvent() {
 #pragma pop
 
 
-/* 80BA7888-80BA788C 0004+00 s=0 e=0 z=0  None .text      actionDead__16daObjAvalanche_cFv                             */
+/* 80BA7888-80BA788C 0004+00 s=1 e=0 z=0  None .text      actionDead__16daObjAvalanche_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -282,7 +617,7 @@ asm void daObjAvalanche_c::setEffect() {
 #pragma pop
 
 
-/* 80BA7AE8-80BA7BA0 00B8+00 s=0 e=0 z=0  None .text      Draw__16daObjAvalanche_cFv                                   */
+/* 80BA7AE8-80BA7BA0 00B8+00 s=1 e=0 z=0  None .text      Draw__16daObjAvalanche_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -293,7 +628,7 @@ asm void daObjAvalanche_c::Draw() {
 #pragma pop
 
 
-/* 80BA7BA0-80BA7C0C 006C+00 s=0 e=0 z=0  None .text      Delete__16daObjAvalanche_cFv                                 */
+/* 80BA7BA0-80BA7C0C 006C+00 s=1 e=0 z=0  None .text      Delete__16daObjAvalanche_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -304,44 +639,59 @@ asm void daObjAvalanche_c::Delete() {
 #pragma pop
 
 
-/* 80BA7C0C-80BA7C6C 0060+00 s=0 e=0 z=0  None .text      daObjAvalanche_create1st__FP16daObjAvalanche_c               */
+/* ############################################################################################## */
+/* 80BA7E78-80BA7EA0 0028+00 s=1 e=0 z=0  None .data      __vt__16daObjAvalanche_c                                     */
+SECTION_DATA static void* __vt__16daObjAvalanche_c[10] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)CreateHeap__16daObjAvalanche_cFv,
+	/* 3    */ (void*)Create__16daObjAvalanche_cFv,
+	/* 4    */ (void*)Execute__16daObjAvalanche_cFPPA3_A4_f,
+	/* 5    */ (void*)Draw__16daObjAvalanche_cFv,
+	/* 6    */ (void*)Delete__16daObjAvalanche_cFv,
+	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
+	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
+	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+};
+
+/* 80BA7C0C-80BA7C6C 0060+00 s=1 e=0 z=0  None .text      daObjAvalanche_create1st__FP16daObjAvalanche_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjAvalanche_create1st(daObjAvalanche_c* param_0) {
+asm static void daObjAvalanche_create1st(daObjAvalanche_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/daObjAvalanche_create1st__FP16daObjAvalanche_c.s"
 }
 #pragma pop
 
 
-/* 80BA7C6C-80BA7C8C 0020+00 s=0 e=0 z=0  None .text      daObjAvalanche_MoveBGDelete__FP16daObjAvalanche_c            */
+/* 80BA7C6C-80BA7C8C 0020+00 s=1 e=0 z=0  None .text      daObjAvalanche_MoveBGDelete__FP16daObjAvalanche_c            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjAvalanche_MoveBGDelete(daObjAvalanche_c* param_0) {
+asm static void daObjAvalanche_MoveBGDelete(daObjAvalanche_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/daObjAvalanche_MoveBGDelete__FP16daObjAvalanche_c.s"
 }
 #pragma pop
 
 
-/* 80BA7C8C-80BA7CAC 0020+00 s=0 e=0 z=0  None .text      daObjAvalanche_MoveBGExecute__FP16daObjAvalanche_c           */
+/* 80BA7C8C-80BA7CAC 0020+00 s=1 e=0 z=0  None .text      daObjAvalanche_MoveBGExecute__FP16daObjAvalanche_c           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjAvalanche_MoveBGExecute(daObjAvalanche_c* param_0) {
+asm static void daObjAvalanche_MoveBGExecute(daObjAvalanche_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/daObjAvalanche_MoveBGExecute__FP16daObjAvalanche_c.s"
 }
 #pragma pop
 
 
-/* 80BA7CAC-80BA7CD8 002C+00 s=0 e=0 z=0  None .text      daObjAvalanche_MoveBGDraw__FP16daObjAvalanche_c              */
+/* 80BA7CAC-80BA7CD8 002C+00 s=1 e=0 z=0  None .text      daObjAvalanche_MoveBGDraw__FP16daObjAvalanche_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjAvalanche_MoveBGDraw(daObjAvalanche_c* param_0) {
+asm static void daObjAvalanche_MoveBGDraw(daObjAvalanche_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/daObjAvalanche_MoveBGDraw__FP16daObjAvalanche_c.s"
 }
@@ -358,155 +708,4 @@ asm static void cLib_calcTimer__template0(u8* param_0) {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80BA7CFC-80BA7D04 0008+00 s=0 e=0 z=0  None .rodata    l_dzb                                                        */
-SECTION_RODATA u8 const l_dzb[8] = {
-	0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x0C,
-};
-
-/* 80BA7D04-80BA7D1C 0018+00 s=0 e=0 z=0  None .rodata    l_check_pos                                                  */
-SECTION_RODATA u8 const l_check_pos[24] = {
-	0xC3, 0x96, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x43, 0x96, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x43, 0x96, 0x00, 0x00,
-};
-
-/* 80BA7D1C-80BA7D20 0004+00 s=0 e=0 z=0  None .rodata    @3663                                                        */
-SECTION_RODATA u8 const lit_3663[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA7D20-80BA7D24 0004+00 s=0 e=0 z=0  None .rodata    @3716                                                        */
-SECTION_RODATA u32 const lit_3716 = 0xC3C80000;
-
-/* 80BA7D24-80BA7D2C 0008+00 s=0 e=0 z=0  None .rodata    @3718                                                        */
-SECTION_RODATA u8 const lit_3718[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
-/* 80BA7D2C-80BA7D30 0004+00 s=0 e=0 z=0  None .rodata    @3762                                                        */
-SECTION_RODATA u32 const lit_3762 = 0x3F800000;
-
-/* 80BA7D30-80BA7D34 0004+00 s=0 e=0 z=0  None .rodata    @3834                                                        */
-SECTION_RODATA u32 const lit_3834 = 0x43960000;
-
-/* 80BA7D34-80BA7D38 0004+00 s=0 e=0 z=0  None .rodata    @3846                                                        */
-SECTION_RODATA u32 const lit_3846 = 0x42200000;
-
-/* 80BA7D38-80BA7D3C 0004+00 s=0 e=0 z=0  None .rodata    @3964                                                        */
-SECTION_RODATA u32 const lit_3964 = 0xBF800000;
-
-/* 80BA7D3C-80BA7D70 0034+00 s=0 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA u8 const struct_80BA7D3C[52] = {
-	/* 80BA7D3C 0007 stringBase_80BA7D3C @stringBase0 */
-	0x56, 0x5F, 0x59, 0x75, 0x6B, 0x69, 0x00,
-	/* 80BA7D43 000E data_80BA7D43 None */
-	0x53, 0x4E, 0x4F, 0x57, 0x5F, 0x43, 0x4F, 0x4C, 0x4C, 0x41, 0x50, 0x53, 0x45, 0x00,
-	/* 80BA7D51 0008 data_80BA7D51 None */
-	0x4F, 0x62, 0x6A, 0x5F, 0x61, 0x76, 0x61, 0x00,
-	/* 80BA7D59 0005 data_80BA7D59 None */
-	0x57, 0x41, 0x49, 0x54, 0x00,
-	/* 80BA7D5E 0012 data_80BA7D5E None */
-	0x43, 0x4F, 0x4C, 0x4C, 0x41, 0x50, 0x53, 0x45, 0x00, 0x54, 0x69, 0x6D, 0x65, 0x72, 0x00, 0x00,
-	0x00, 0x00,
-};
-
-/* 80BA7D70-80BA7D7C 000C+00 s=0 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA u8 cNullVec__6Z2Calc[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA7D7C-80BA7D90 0004+10 s=0 e=0 z=0  None .data      @1787                                                        */
-SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
-	0x02000201,
-	/* padding */
-	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
-};
-
-/* 80BA7D90-80BA7D94 0004+00 s=0 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA u8 l_arcName[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA7D94-80BA7D98 0004+00 s=0 e=0 z=0  None .data      l_evName                                                     */
-SECTION_DATA u8 l_evName[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA7D98-80BA7D9C 0004+00 s=0 e=0 z=0  None .data      l_staffName                                                  */
-SECTION_DATA u8 l_staffName[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA7D9C-80BA7DB4 0018+00 s=0 e=0 z=0  None .data      l_cull_box                                                   */
-SECTION_DATA u8 l_cull_box[24] = {
-	0xC3, 0xFA, 0x00, 0x00, 0xC3, 0xFA, 0x00, 0x00, 0xC4, 0x2F, 0x00, 0x00, 0x43, 0xFA, 0x00, 0x00,
-	0x44, 0x7A, 0x00, 0x00, 0x44, 0x2F, 0x00, 0x00,
-};
-
-/* 80BA7DB4-80BA7DC0 000C+00 s=0 e=0 z=0  None .data      @3851                                                        */
-SECTION_DATA u8 lit_3851[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA7DC0-80BA7DCC 000C+00 s=0 e=0 z=0  None .data      @3852                                                        */
-SECTION_DATA u8 lit_3852[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA7DCC-80BA7DD8 000C+00 s=0 e=0 z=0  None .data      @3853                                                        */
-SECTION_DATA u8 lit_3853[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA7DD8-80BA7DE4 000C+00 s=0 e=0 z=0  None .data      @3854                                                        */
-SECTION_DATA u8 lit_3854[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA7DE4-80BA7E14 0030+00 s=0 e=0 z=0  None .data      l_func$3850                                                  */
-SECTION_DATA u8 data_80BA7DE4[48] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA7E14-80BA7E1C 0008+00 s=0 e=0 z=0  None .data      action_table$3910                                            */
-SECTION_DATA u8 data_80BA7E14[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA7E1C-80BA7E3C 0020+00 s=0 e=0 z=0  None .data      daObjAvalanche_METHODS                                       */
-SECTION_DATA u8 daObjAvalanche_METHODS[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA7E3C-80BA7E6C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Avalanche                                      */
-SECTION_DATA u8 g_profile_Obj_Avalanche[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x03, 0xFF, 0xFD, 0x00, 0xAD, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x05, 0xF4, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x02, 0x8F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x0E, 0x00, 0x00,
-};
-
-/* 80BA7E6C-80BA7E78 000C+00 s=0 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
-SECTION_DATA void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 80BA7E78-80BA7EA0 0028+00 s=0 e=0 z=0  None .data      __vt__16daObjAvalanche_c                                     */
-SECTION_DATA void* __vt__16daObjAvalanche_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)NULL,
-	/* 9    */ (void*)NULL,
-};
 

@@ -25,7 +25,7 @@ lbl_801ECB14:
 /* 801ECB70 00000030  38 00 00 00 */	li r0, 0
 /* 801ECB74 00000034  B0 1B 06 84 */	sth r0, 0x684(r27)
 lbl_801ECB78:
-/* 801ECB78 00000000  A8 63 01 38 */	lha r3, 0x138(r3)
+/* 801ECB78 00000000  A8 63 01 38 */	lha r3, 0x138(r3)	/* effective address: 8042FC34 */
 /* 801ECB7C 00000004  7C 60 0E 70 */	srawi r0, r3, 1
 /* 801ECB80 00000008  7C 80 01 94 */	addze r4, r0
 /* 801ECB84 0000000C  A8 1B 06 84 */	lha r0, 0x684(r27)
@@ -99,7 +99,7 @@ lbl_801ECC68:
 /* 801ECC88 00000020  28 00 00 03 */	cmplwi r0, 3
 /* 801ECC8C 00000024  41 82 02 C0 */	beq lbl_801ECF4C
 lbl_801ECC90:
-/* 801ECC90 00000000  80 16 01 34 */	lwz r0, 0x134(r22)
+/* 801ECC90 00000000  80 16 01 34 */	lwz r0, 0x134(r22)	/* effective address: 8042FC30 */
 /* 801ECC94 00000004  90 01 00 08 */	stw r0, 8(r1)
 /* 801ECC98 00000008  7F FB CA 14 */	add r31, r27, r25
 /* 801ECC9C 0000000C  C0 1F 03 8C */	lfs f0, 0x38c(r31)
@@ -135,7 +135,7 @@ lbl_801ECCFC:
 /* 801ECD0C 00000010  80 1B 06 2C */	lwz r0, 0x62c(r27)
 /* 801ECD10 00000014  28 00 00 00 */	cmplwi r0, 0
 /* 801ECD14 00000018  41 82 00 48 */	beq lbl_801ECD5C
-/* 801ECD18 0000001C  88 16 01 52 */	lbz r0, 0x152(r22)
+/* 801ECD18 0000001C  88 16 01 52 */	lbz r0, 0x152(r22)	/* effective address: 8042FC4E */
 /* 801ECD1C 00000020  C8 22 A9 B8 */	lfd f1, lit_4312(r2)
 /* 801ECD20 00000024  90 01 00 3C */	stw r0, 0x3c(r1)
 /* 801ECD24 00000028  3C 00 43 30 */	lis r0, 0x4330
@@ -153,7 +153,7 @@ lbl_801ECCFC:
 /* 801ECD54 00000058  4E 80 04 21 */	bctrl 
 /* 801ECD58 0000005C  48 00 00 48 */	b lbl_801ECDA0
 lbl_801ECD5C:
-/* 801ECD5C 00000000  88 16 01 51 */	lbz r0, 0x151(r22)
+/* 801ECD5C 00000000  88 16 01 51 */	lbz r0, 0x151(r22)	/* effective address: 8042FC4D */
 /* 801ECD60 00000004  C8 22 A9 B8 */	lfd f1, lit_4312(r2)
 /* 801ECD64 00000008  90 01 00 3C */	stw r0, 0x3c(r1)
 /* 801ECD68 0000000C  3C 00 43 30 */	lis r0, 0x4330
@@ -255,8 +255,8 @@ lbl_801ECE98:
 /* 801ECED8 00000040  C0 22 A9 F0 */	lfs f1, lit_5370(r2)
 /* 801ECEDC 00000044  FC 40 08 90 */	fmr f2, f1
 /* 801ECEE0 00000048  4B FC 1D 15 */	bl setScale__15dKantera_icon_cFff
-/* 801ECEE4 0000004C  A0 B7 00 08 */	lhz r5, 8(r23)
-/* 801ECEE8 00000050  A0 97 00 06 */	lhz r4, 6(r23)
+/* 801ECEE4 0000004C  A0 B7 00 08 */	lhz r5, 8(r23)	/* effective address: 804061C8 */
+/* 801ECEE8 00000050  A0 97 00 06 */	lhz r4, 6(r23)	/* effective address: 804061C6 */
 /* 801ECEEC 00000054  80 7B 00 54 */	lwz r3, 0x54(r27)
 /* 801ECEF0 00000058  4B FC 1D 55 */	bl setNowGauge__15dKantera_icon_cFUsUs
 /* 801ECEF4 0000005C  7C 75 F0 2E */	lwzx r3, r21, r30

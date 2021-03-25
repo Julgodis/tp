@@ -41,7 +41,7 @@ lbl_8020EA1C:
 /* 8020EA64 00000048  39 00 00 00 */	li r8, 0
 /* 8020EA68 0000004C  48 09 CF 1D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 8020EA6C 00000050  38 00 00 00 */	li r0, 0
-/* 8020EA70 00000054  98 1F 00 BF */	stb r0, 0xbf(r31)
+/* 8020EA70 00000054  98 1F 00 BF */	stb r0, 0xbf(r31)	/* effective address: 80430247 */
 /* 8020EA74 00000058  48 00 02 D4 */	b lbl_8020ED48
 lbl_8020EA78:
 /* 8020EA78 00000000  28 00 00 00 */	cmplwi r0, 0
@@ -59,7 +59,7 @@ lbl_8020EA78:
 /* 8020EAA8 00000030  41 82 00 58 */	beq lbl_8020EB00
 lbl_8020EAAC:
 /* 8020EAAC 00000000  38 00 00 02 */	li r0, 2
-/* 8020EAB0 00000004  98 1F 00 BF */	stb r0, 0xbf(r31)
+/* 8020EAB0 00000004  98 1F 00 BF */	stb r0, 0xbf(r31)	/* effective address: 80430247 */
 /* 8020EAB4 00000008  38 00 02 00 */	li r0, 0x200
 /* 8020EAB8 0000000C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020EABC 00000010  38 63 01 88 */	addi r3, r3, g_meter2_info@l
@@ -97,7 +97,7 @@ lbl_8020EB00:
 /* 8020EB38 00000038  48 09 CE 4D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 8020EB3C 0000003C  48 00 FE 95 */	bl dMeter2Info_set2DVibration__Fv
 /* 8020EB40 00000040  38 00 00 01 */	li r0, 1
-/* 8020EB44 00000044  98 1F 00 BF */	stb r0, 0xbf(r31)
+/* 8020EB44 00000044  98 1F 00 BF */	stb r0, 0xbf(r31)	/* effective address: 80430247 */
 /* 8020EB48 00000048  48 00 02 00 */	b lbl_8020ED48
 lbl_8020EB4C:
 /* 8020EB4C 00000000  4B FE B4 A9 */	bl dMw_RIGHT_TRIGGER__Fv
@@ -140,7 +140,7 @@ lbl_8020EB84:
 /* 8020EBDC 00000058  48 09 CD A9 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 8020EBE0 0000005C  48 00 FD F1 */	bl dMeter2Info_set2DVibration__Fv
 /* 8020EBE4 00000060  38 00 00 01 */	li r0, 1
-/* 8020EBE8 00000064  98 1F 00 BF */	stb r0, 0xbf(r31)
+/* 8020EBE8 00000064  98 1F 00 BF */	stb r0, 0xbf(r31)	/* effective address: 80430247 */
 /* 8020EBEC 00000068  48 00 01 5C */	b lbl_8020ED48
 lbl_8020EBF0:
 /* 8020EBF0 00000000  3C 60 80 43 */	lis r3, g_meter2_info@ha
@@ -156,7 +156,7 @@ lbl_8020EBF0:
 /* 8020EC18 00000028  41 82 01 30 */	beq lbl_8020ED48
 lbl_8020EC1C:
 /* 8020EC1C 00000000  38 00 00 02 */	li r0, 2
-/* 8020EC20 00000004  98 1F 00 BF */	stb r0, 0xbf(r31)
+/* 8020EC20 00000004  98 1F 00 BF */	stb r0, 0xbf(r31)	/* effective address: 80430247 */
 /* 8020EC24 00000008  38 00 04 00 */	li r0, 0x400
 /* 8020EC28 0000000C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020EC2C 00000010  38 63 01 88 */	addi r3, r3, g_meter2_info@l
@@ -195,7 +195,7 @@ lbl_8020EC70:
 /* 8020ECAC 0000003C  41 82 00 58 */	beq lbl_8020ED04
 lbl_8020ECB0:
 /* 8020ECB0 00000000  38 00 00 02 */	li r0, 2
-/* 8020ECB4 00000004  98 1F 00 BF */	stb r0, 0xbf(r31)
+/* 8020ECB4 00000004  98 1F 00 BF */	stb r0, 0xbf(r31)	/* effective address: 80430247 */
 /* 8020ECB8 00000008  38 00 04 00 */	li r0, 0x400
 /* 8020ECBC 0000000C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020ECC0 00000010  38 63 01 88 */	addi r3, r3, g_meter2_info@l
@@ -232,7 +232,7 @@ lbl_8020ED04:
 /* 8020ED38 00000034  39 00 00 00 */	li r8, 0
 /* 8020ED3C 00000038  48 09 CC 49 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 8020ED40 0000003C  38 00 00 00 */	li r0, 0
-/* 8020ED44 00000040  98 1F 00 BF */	stb r0, 0xbf(r31)
+/* 8020ED44 00000040  98 1F 00 BF */	stb r0, 0xbf(r31)	/* effective address: 80430247 */
 lbl_8020ED48:
 /* 8020ED48 00000000  83 E1 00 2C */	lwz r31, 0x2c(r1)
 /* 8020ED4C 00000004  83 C1 00 28 */	lwz r30, 0x28(r1)

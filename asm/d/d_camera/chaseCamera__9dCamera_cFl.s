@@ -1278,8 +1278,8 @@ lbl_80169928:
 /* 801699D4 000000AC  41 82 00 44 */	beq lbl_80169A18
 /* 801699D8 000000B0  7F E3 FB 78 */	mr r3, r31
 /* 801699DC 000000B4  38 81 00 E4 */	addi r4, r1, 0xe4
-/* 801699E0 000000B8  3C A0 80 39 */	lis r5, stringBase0@ha
-/* 801699E4 000000BC  38 A5 3F 68 */	addi r5, r5, stringBase0@l
+/* 801699E0 000000B8  3C A0 80 39 */	lis r5, d_d_camera__stringBase0@ha
+/* 801699E4 000000BC  38 A5 3F 68 */	addi r5, r5, d_d_camera__stringBase0@l
 /* 801699E8 000000C0  38 A5 01 A0 */	addi r5, r5, 0x1a0
 /* 801699EC 000000C4  38 C0 00 14 */	li r6, 0x14
 /* 801699F0 000000C8  4B F1 F6 9D */	bl getEvIntData__9dCamera_cFPiPci

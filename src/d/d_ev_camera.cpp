@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-};
-
 struct Vec {
 };
 
@@ -29,6 +26,9 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80266CE4 */ void norm() const;
 	/* 80266EF4 */ void normalize();
+};
+
+struct fopAc_ac_c {
 };
 
 struct dCamera_c {
@@ -288,12 +288,11 @@ extern "C" void checkBoardRide__9daPy_py_cCFv(); // 1
 extern "C" void checkSpinnerRide__9daPy_py_cCFv(); // 1
 extern "C" void checkBoarRide__9daPy_py_cCFv(); // 1
 extern "C" void getShadowTalkAtnPos__9daAlink_cFv(); // 1
-extern "C" extern u8 const lit_5984[16];
 extern "C" extern u8 const lit_5985[28];
 extern "C" extern u8 const lit_5986[28];
 extern "C" extern u8 const lit_5987[20];
 extern "C" extern u8 const lit_5988[20];
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_d_ev_camera__stringBase0;
 extern "C" extern u8 lit_4203[12];
 
 // 
@@ -433,7 +432,7 @@ extern "C" asm static void func_800889F8() {
 #pragma pop
 
 
-/* 80088A7C-80088BBC 0140+00 s=0 e=15 z=0  None .text      StartEventCamera__9dCamera_cFiie                             */
+/* 80088A7C-80088BBC 0140+00 s=0 e=15 z=2  None .text      StartEventCamera__9dCamera_cFiie                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -444,7 +443,7 @@ asm void dCamera_c::StartEventCamera(int param_0, int param_1, ...) {
 #pragma pop
 
 
-/* 80088BBC-80088C24 0068+00 s=0 e=3 z=0  None .text      EndEventCamera__9dCamera_cFi                                 */
+/* 80088BBC-80088C24 0068+00 s=0 e=3 z=4  None .text      EndEventCamera__9dCamera_cFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -604,8 +603,8 @@ SECTION_RODATA static u8 const lit_3871[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8037A7FC-8037A80C 0010+00 s=0 e=0 z=0  None .rodata    @5984                                                        */
-SECTION_RODATA u8 const lit_5984[16] = {
+/* 8037A7FC-8037A80C 0010+00 s=1 e=0 z=0  None .rodata    @5984                                                        */
+SECTION_RODATA static u8 const lit_5984[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
@@ -888,7 +887,7 @@ asm void dCamera_c::rollingEvCamera() {
 /* 804253C0-804253CC 000C+00 s=0 e=0 z=0  None .bss       @4203                                                        */
 u8 lit_4203[12];
 
-/* 804253CC-804253D8 000C+00 s=1 e=0 z=0  None .bss       MidnaAdditionVec__25@unnamed@d_ev_camera_cpp@                */
+/* 804253CC-804253D8 000C+00 s=2 e=0 z=0  None .bss       MidnaAdditionVec__25@unnamed@d_ev_camera_cpp@                */
 static u8 data_804253CC[12];
 
 /* 804253D8-804253E4 000C+00 s=1 e=0 z=0  None .bss       @5852                                                        */

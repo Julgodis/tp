@@ -7,9 +7,9 @@ lbl_804BA098:
 /* 804BA0AC 00000014  A8 03 13 B4 */	lha r0, 0x13b4(r3)
 /* 804BA0B0 00000018  2C 00 00 00 */	cmpwi r0, 0
 /* 804BA0B4 0000001C  41 82 00 80 */	beq lbl_804BA134
-/* 804BA0B8 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 804BA0BC 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 804BA0C0 00000028  88 03 5D B0 */	lbz r0, 0x5db0(r3)
+/* 804BA0B8 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804BA0BC 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804BA0C0 00000028  88 03 5D B0 */	lbz r0, 0x5db0(r3)	/* effective address: 8040BF70 */
 /* 804BA0C4 0000002C  7C 00 07 74 */	extsb r0, r0
 /* 804BA0C8 00000030  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 804BA0CC 00000034  7C 63 02 14 */	add r3, r3, r0
@@ -31,13 +31,13 @@ lbl_804BA098:
 /* 804BA10C 00000074  38 A1 00 08 */	addi r5, r1, 8
 /* 804BA110 00000078  C0 26 14 08 */	lfs f1, 0x1408(r6)
 /* 804BA114 0000007C  38 C0 00 00 */	li r6, 0
-/* 804BA118 00000080  4B FE F4 41 */	bl _unresolved
+/* 804BA118 00000080  4B CC 6A 88 */	b Reset__9dCamera_cF4cXyz4cXyzfs
 /* 804BA11C 00000084  38 7F 02 48 */	addi r3, r31, 0x248
-/* 804BA120 00000088  4B FE F4 39 */	bl _unresolved
+/* 804BA120 00000088  4B CA 73 8C */	b Start__9dCamera_cFv
 /* 804BA124 0000008C  38 7F 02 48 */	addi r3, r31, 0x248
 /* 804BA128 00000090  38 80 00 00 */	li r4, 0
-/* 804BA12C 00000094  4B FE F4 2D */	bl _unresolved
-/* 804BA130 00000098  4B FE F4 29 */	bl _unresolved
+/* 804BA12C 00000094  4B CA 8E E0 */	b SetTrimSize__9dCamera_cFl
+/* 804BA130 00000098  4B D3 FF 9C */	b dMw_onMenuRing__Fv
 lbl_804BA134:
 /* 804BA134 00000000  38 60 00 01 */	li r3, 1
 /* 804BA138 00000004  83 E1 00 2C */	lwz r31, 0x2c(r1)

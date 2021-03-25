@@ -9,19 +9,19 @@ lbl_8021B364:
 /* 8021B380 0000001C  88 05 04 27 */	lbz r0, 0x427(r5)	/* effective address: 8042EFEF */
 /* 8021B384 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 8021B388 00000024  41 82 00 40 */	beq lbl_8021B3C8
-/* 8021B38C 00000028  C0 05 01 C0 */	lfs f0, 0x1c0(r5)
+/* 8021B38C 00000028  C0 05 01 C0 */	lfs f0, 0x1c0(r5)	/* effective address: 8042ED88 */
 /* 8021B390 0000002C  D0 1F 00 20 */	stfs f0, 0x20(r31)
-/* 8021B394 00000030  C0 05 01 C4 */	lfs f0, 0x1c4(r5)
+/* 8021B394 00000030  C0 05 01 C4 */	lfs f0, 0x1c4(r5)	/* effective address: 8042ED8C */
 /* 8021B398 00000034  D0 1F 00 24 */	stfs f0, 0x24(r31)
-/* 8021B39C 00000038  C0 05 01 C8 */	lfs f0, 0x1c8(r5)
+/* 8021B39C 00000038  C0 05 01 C8 */	lfs f0, 0x1c8(r5)	/* effective address: 8042ED90 */
 /* 8021B3A0 0000003C  D0 1F 00 28 */	stfs f0, 0x28(r31)
-/* 8021B3A4 00000040  C0 05 01 E8 */	lfs f0, 0x1e8(r5)
+/* 8021B3A4 00000040  C0 05 01 E8 */	lfs f0, 0x1e8(r5)	/* effective address: 8042EDB0 */
 /* 8021B3A8 00000044  D0 1F 00 2C */	stfs f0, 0x2c(r31)
-/* 8021B3AC 00000048  C0 05 01 F4 */	lfs f0, 0x1f4(r5)
+/* 8021B3AC 00000048  C0 05 01 F4 */	lfs f0, 0x1f4(r5)	/* effective address: 8042EDBC */
 /* 8021B3B0 0000004C  D0 1F 00 30 */	stfs f0, 0x30(r31)
-/* 8021B3B4 00000050  C0 05 02 04 */	lfs f0, 0x204(r5)
+/* 8021B3B4 00000050  C0 05 02 04 */	lfs f0, 0x204(r5)	/* effective address: 8042EDCC */
 /* 8021B3B8 00000054  D0 1F 00 34 */	stfs f0, 0x34(r31)
-/* 8021B3BC 00000058  C0 05 02 14 */	lfs f0, 0x214(r5)
+/* 8021B3BC 00000058  C0 05 02 14 */	lfs f0, 0x214(r5)	/* effective address: 8042EDDC */
 /* 8021B3C0 0000005C  D0 1F 00 38 */	stfs f0, 0x38(r31)
 /* 8021B3C4 00000060  48 00 01 D8 */	b lbl_8021B59C
 lbl_8021B3C8:
@@ -92,17 +92,17 @@ lbl_8021B3C8:
 /* 8021B4C8 00000100  48 00 00 D4 */	b lbl_8021B59C
 /* 8021B4CC 00000104  C0 02 AF 38 */	lfs f0, lit_9029(r2)
 /* 8021B4D0 00000108  D0 1F 00 20 */	stfs f0, 0x20(r31)
-/* 8021B4D4 0000010C  C0 05 01 C4 */	lfs f0, 0x1c4(r5)
+/* 8021B4D4 0000010C  C0 05 01 C4 */	lfs f0, 0x1c4(r5)	/* effective address: 8042ED8C */
 /* 8021B4D8 00000110  D0 1F 00 24 */	stfs f0, 0x24(r31)
-/* 8021B4DC 00000114  C0 05 01 C8 */	lfs f0, 0x1c8(r5)
+/* 8021B4DC 00000114  C0 05 01 C8 */	lfs f0, 0x1c8(r5)	/* effective address: 8042ED90 */
 /* 8021B4E0 00000118  D0 1F 00 28 */	stfs f0, 0x28(r31)
-/* 8021B4E4 0000011C  C0 05 01 E8 */	lfs f0, 0x1e8(r5)
+/* 8021B4E4 0000011C  C0 05 01 E8 */	lfs f0, 0x1e8(r5)	/* effective address: 8042EDB0 */
 /* 8021B4E8 00000120  D0 1F 00 2C */	stfs f0, 0x2c(r31)
-/* 8021B4EC 00000124  C0 05 01 F4 */	lfs f0, 0x1f4(r5)
+/* 8021B4EC 00000124  C0 05 01 F4 */	lfs f0, 0x1f4(r5)	/* effective address: 8042EDBC */
 /* 8021B4F0 00000128  D0 1F 00 30 */	stfs f0, 0x30(r31)
-/* 8021B4F4 0000012C  C0 05 02 04 */	lfs f0, 0x204(r5)
+/* 8021B4F4 0000012C  C0 05 02 04 */	lfs f0, 0x204(r5)	/* effective address: 8042EDCC */
 /* 8021B4F8 00000130  D0 1F 00 34 */	stfs f0, 0x34(r31)
-/* 8021B4FC 00000134  C0 05 02 14 */	lfs f0, 0x214(r5)
+/* 8021B4FC 00000134  C0 05 02 14 */	lfs f0, 0x214(r5)	/* effective address: 8042EDDC */
 /* 8021B500 00000138  D0 1F 00 38 */	stfs f0, 0x38(r31)
 /* 8021B504 0000013C  48 00 00 98 */	b lbl_8021B59C
 lbl_8021B508:

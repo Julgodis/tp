@@ -27,7 +27,7 @@ extern "C" extern u8 g_Counter[12 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80430CD8-80430CE8 000C+04 s=1 e=12 z=0  None .bss       g_Counter                                                    */
+/* 80430CD8-80430CE8 000C+04 s=1 e=12 z=22  None .bss       g_Counter                                                    */
 u8 g_Counter[12 + 4 /* padding */];
 
 /* 80265E1C-80265E64 0048+00 s=0 e=1 z=0  None .text      cCt_Counter__Fi                                              */

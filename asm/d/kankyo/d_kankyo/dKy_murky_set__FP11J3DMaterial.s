@@ -92,8 +92,8 @@ lbl_801ACA74:
 /* 801ACA74 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801ACA78 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 801ACA7C 00000008  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 801ACA80 0000000C  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801ACA84 00000010  38 84 4C 6C */	addi r4, r4, stringBase0@l
+/* 801ACA80 0000000C  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
+/* 801ACA84 00000010  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
 /* 801ACA88 00000014  38 84 02 61 */	addi r4, r4, 0x261
 /* 801ACA8C 00000018  48 1B BF 09 */	bl strcmp
 /* 801ACA90 0000001C  2C 03 00 00 */	cmpwi r3, 0

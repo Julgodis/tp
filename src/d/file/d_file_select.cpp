@@ -212,12 +212,6 @@ struct J2DTextBox {
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
-struct ResTIMG {
-};
-
-struct ResTLUT {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -225,6 +219,12 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
+};
+
+struct ResTLUT {
+};
+
+struct ResTIMG {
 };
 
 struct J2DPicture {
@@ -289,10 +289,10 @@ struct JUTNameTab {
 	/* 80191134 */ ~JUTNameTab();
 };
 
-struct JUTFont {
+struct COutFont_c {
 };
 
-struct COutFont_c {
+struct JUTFont {
 };
 
 struct dMsgString_c {
@@ -308,14 +308,14 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
+struct J3DMaterialTable {
+};
+
 struct J3DModelData {
 };
 
 struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
-};
-
-struct J3DMaterialTable {
 };
 
 struct mDoExt_brkAnm {
@@ -754,55 +754,8 @@ extern "C" extern u8 const data_80394338[20];
 extern "C" extern u8 const data_8039434C[20];
 extern "C" extern u8 const data_80394360[20];
 extern "C" extern u8 const data_80394374[20];
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_file_d_file_select__stringBase0;
 extern "C" extern u8 l_tagName13[24];
-extern "C" extern void* lit_4167[3];
-extern "C" extern void* lit_4168[3];
-extern "C" extern void* lit_4169[3];
-extern "C" extern void* lit_4170[3];
-extern "C" extern void* lit_4171[3];
-extern "C" extern void* lit_4172[3];
-extern "C" extern void* lit_4173[3];
-extern "C" extern void* lit_4174[3];
-extern "C" extern void* lit_4175[3];
-extern "C" extern void* lit_4176[3];
-extern "C" extern void* lit_4177[3];
-extern "C" extern void* lit_4178[3];
-extern "C" extern void* lit_4179[3];
-extern "C" extern void* lit_4180[3];
-extern "C" extern void* lit_4181[3];
-extern "C" extern void* lit_4182[3];
-extern "C" extern void* lit_4183[3];
-extern "C" extern void* lit_4184[3];
-extern "C" extern void* lit_4185[3];
-extern "C" extern void* lit_4186[3];
-extern "C" extern void* lit_4187[3];
-extern "C" extern void* lit_4188[3];
-extern "C" extern void* lit_4189[3];
-extern "C" extern void* lit_4190[3];
-extern "C" extern void* lit_4191[3];
-extern "C" extern void* lit_4192[3];
-extern "C" extern void* lit_4193[3];
-extern "C" extern void* lit_4194[3];
-extern "C" extern void* lit_4195[3];
-extern "C" extern void* lit_4196[3];
-extern "C" extern void* lit_4197[3];
-extern "C" extern void* lit_4198[3];
-extern "C" extern void* lit_4199[3];
-extern "C" extern void* lit_4200[3];
-extern "C" extern void* lit_4201[3];
-extern "C" extern void* lit_4202[3];
-extern "C" extern void* lit_4203[3];
-extern "C" extern void* lit_4204[3];
-extern "C" extern void* lit_4205[3];
-extern "C" extern void* lit_4206[3];
-extern "C" extern void* lit_4207[3];
-extern "C" extern void* lit_4208[3];
-extern "C" extern void* lit_4209[3];
-extern "C" extern void* lit_4210[3];
-extern "C" extern void* lit_4211[3];
-extern "C" extern void* lit_4212[3];
-extern "C" extern void* lit_4213[3];
 extern "C" extern u8 data_803BAD40[24];
 extern "C" extern u8 data_803BAD58[24];
 extern "C" extern u8 data_803BAD70[24];
@@ -832,38 +785,6 @@ extern "C" extern u8 data_803BAF88[24];
 extern "C" extern u8 data_803BAFA0[24];
 extern "C" extern u8 data_803BAFB8[24];
 extern "C" extern u8 data_803BAFD0[24];
-extern "C" extern void* lit_7759[3];
-extern "C" extern void* lit_7760[3];
-extern "C" extern void* lit_7761[3];
-extern "C" extern void* lit_7762[3];
-extern "C" extern void* lit_7763[3];
-extern "C" extern void* lit_7764[3];
-extern "C" extern void* lit_7765[3];
-extern "C" extern void* lit_7766[3];
-extern "C" extern void* lit_7767[3];
-extern "C" extern void* lit_7768[3];
-extern "C" extern void* lit_7769[3];
-extern "C" extern void* lit_7770[3];
-extern "C" extern void* lit_7771[3];
-extern "C" extern void* lit_7772[3];
-extern "C" extern void* lit_7773[3];
-extern "C" extern void* lit_7774[3];
-extern "C" extern void* lit_7775[3];
-extern "C" extern void* lit_7776[3];
-extern "C" extern void* lit_7777[3];
-extern "C" extern void* lit_7778[3];
-extern "C" extern void* lit_7779[3];
-extern "C" extern void* lit_7780[3];
-extern "C" extern void* lit_7781[3];
-extern "C" extern void* lit_7782[3];
-extern "C" extern void* lit_7783[3];
-extern "C" extern void* lit_7784[3];
-extern "C" extern void* lit_7785[3];
-extern "C" extern void* lit_7797[3];
-extern "C" extern void* lit_7799[3];
-extern "C" extern void* lit_7801[3];
-extern "C" extern void* lit_7803[3];
-extern "C" extern void* lit_7808[3];
 extern "C" extern void* __vt__15J2DAnmTransform[5 + 4 /* padding */];
 extern "C" extern void* __vt__10JUTNameTab[3];
 
@@ -1212,336 +1133,336 @@ SECTION_DATA u8 l_tagName13[24] = {
 	0x77, 0x5F, 0x64, 0x61, 0x74, 0x5F, 0x69, 0x32,
 };
 
-/* 803BA8B8-803BA8C4 000C+00 s=0 e=0 z=0  None .data      @4167                                                        */
-SECTION_DATA void* lit_4167[3] = {
+/* 803BA8B8-803BA8C4 000C+00 s=1 e=0 z=0  None .data      @4167                                                        */
+SECTION_DATA static void* lit_4167[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardCheckMain__14dFile_select_cFv,
 };
 
-/* 803BA8C4-803BA8D0 000C+00 s=0 e=0 z=0  None .data      @4168                                                        */
-SECTION_DATA void* lit_4168[3] = {
+/* 803BA8C4-803BA8D0 000C+00 s=1 e=0 z=0  None .data      @4168                                                        */
+SECTION_DATA static void* lit_4168[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)dataSelectIn__14dFile_select_cFv,
 };
 
-/* 803BA8D0-803BA8DC 000C+00 s=0 e=0 z=0  None .data      @4169                                                        */
-SECTION_DATA void* lit_4169[3] = {
+/* 803BA8D0-803BA8DC 000C+00 s=1 e=0 z=0  None .data      @4169                                                        */
+SECTION_DATA static void* lit_4169[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)dataSelectInit__14dFile_select_cFv,
 };
 
-/* 803BA8DC-803BA8E8 000C+00 s=0 e=0 z=0  None .data      @4170                                                        */
-SECTION_DATA void* lit_4170[3] = {
+/* 803BA8DC-803BA8E8 000C+00 s=1 e=0 z=0  None .data      @4170                                                        */
+SECTION_DATA static void* lit_4170[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)dataSelect__14dFile_select_cFv,
 };
 
-/* 803BA8E8-803BA8F4 000C+00 s=0 e=0 z=0  None .data      @4171                                                        */
-SECTION_DATA void* lit_4171[3] = {
+/* 803BA8E8-803BA8F4 000C+00 s=1 e=0 z=0  None .data      @4171                                                        */
+SECTION_DATA static void* lit_4171[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)dataSelectMoveAnime__14dFile_select_cFv,
 };
 
-/* 803BA8F4-803BA900 000C+00 s=0 e=0 z=0  None .data      @4172                                                        */
-SECTION_DATA void* lit_4172[3] = {
+/* 803BA8F4-803BA900 000C+00 s=1 e=0 z=0  None .data      @4172                                                        */
+SECTION_DATA static void* lit_4172[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)selectDataOpenMove__14dFile_select_cFv,
 };
 
-/* 803BA900-803BA90C 000C+00 s=0 e=0 z=0  None .data      @4173                                                        */
-SECTION_DATA void* lit_4173[3] = {
+/* 803BA900-803BA90C 000C+00 s=1 e=0 z=0  None .data      @4173                                                        */
+SECTION_DATA static void* lit_4173[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)selectDataNameMove__14dFile_select_cFv,
 };
 
-/* 803BA90C-803BA918 000C+00 s=0 e=0 z=0  None .data      @4174                                                        */
-SECTION_DATA void* lit_4174[3] = {
+/* 803BA90C-803BA918 000C+00 s=1 e=0 z=0  None .data      @4174                                                        */
+SECTION_DATA static void* lit_4174[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)selectDataOpenEraseMove__14dFile_select_cFv,
 };
 
-/* 803BA918-803BA924 000C+00 s=0 e=0 z=0  None .data      @4175                                                        */
-SECTION_DATA void* lit_4175[3] = {
+/* 803BA918-803BA924 000C+00 s=1 e=0 z=0  None .data      @4175                                                        */
+SECTION_DATA static void* lit_4175[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)menuSelect__14dFile_select_cFv,
 };
 
-/* 803BA924-803BA930 000C+00 s=0 e=0 z=0  None .data      @4176                                                        */
-SECTION_DATA void* lit_4176[3] = {
+/* 803BA924-803BA930 000C+00 s=1 e=0 z=0  None .data      @4176                                                        */
+SECTION_DATA static void* lit_4176[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)menuSelectMoveAnm__14dFile_select_cFv,
 };
 
-/* 803BA930-803BA93C 000C+00 s=0 e=0 z=0  None .data      @4177                                                        */
-SECTION_DATA void* lit_4177[3] = {
+/* 803BA930-803BA93C 000C+00 s=1 e=0 z=0  None .data      @4177                                                        */
+SECTION_DATA static void* lit_4177[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)ToNameMove__14dFile_select_cFv,
 };
 
-/* 803BA93C-803BA948 000C+00 s=0 e=0 z=0  None .data      @4178                                                        */
-SECTION_DATA void* lit_4178[3] = {
+/* 803BA93C-803BA948 000C+00 s=1 e=0 z=0  None .data      @4178                                                        */
+SECTION_DATA static void* lit_4178[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)ToCopyPaneMove__14dFile_select_cFv,
 };
 
-/* 803BA948-803BA954 000C+00 s=0 e=0 z=0  None .data      @4179                                                        */
-SECTION_DATA void* lit_4179[3] = {
+/* 803BA948-803BA954 000C+00 s=1 e=0 z=0  None .data      @4179                                                        */
+SECTION_DATA static void* lit_4179[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)ToErasePaneMove__14dFile_select_cFv,
 };
 
-/* 803BA954-803BA960 000C+00 s=0 e=0 z=0  None .data      @4180                                                        */
-SECTION_DATA void* lit_4180[3] = {
+/* 803BA954-803BA960 000C+00 s=1 e=0 z=0  None .data      @4180                                                        */
+SECTION_DATA static void* lit_4180[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)backSelectMove__14dFile_select_cFv,
 };
 
-/* 803BA960-803BA96C 000C+00 s=0 e=0 z=0  None .data      @4181                                                        */
-SECTION_DATA void* lit_4181[3] = {
+/* 803BA960-803BA96C 000C+00 s=1 e=0 z=0  None .data      @4181                                                        */
+SECTION_DATA static void* lit_4181[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)nameToDataSelectMove__14dFile_select_cFv,
 };
 
-/* 803BA96C-803BA978 000C+00 s=0 e=0 z=0  None .data      @4182                                                        */
-SECTION_DATA void* lit_4182[3] = {
+/* 803BA96C-803BA978 000C+00 s=1 e=0 z=0  None .data      @4182                                                        */
+SECTION_DATA static void* lit_4182[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)nameInputWait__14dFile_select_cFv,
 };
 
-/* 803BA978-803BA984 000C+00 s=0 e=0 z=0  None .data      @4183                                                        */
-SECTION_DATA void* lit_4183[3] = {
+/* 803BA978-803BA984 000C+00 s=1 e=0 z=0  None .data      @4183                                                        */
+SECTION_DATA static void* lit_4183[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)nameInput__14dFile_select_cFv,
 };
 
-/* 803BA984-803BA990 000C+00 s=0 e=0 z=0  None .data      @4184                                                        */
-SECTION_DATA void* lit_4184[3] = {
+/* 803BA984-803BA990 000C+00 s=1 e=0 z=0  None .data      @4184                                                        */
+SECTION_DATA static void* lit_4184[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)nameInputFade__14dFile_select_cFv,
 };
 
-/* 803BA990-803BA99C 000C+00 s=0 e=0 z=0  None .data      @4185                                                        */
-SECTION_DATA void* lit_4185[3] = {
+/* 803BA990-803BA99C 000C+00 s=1 e=0 z=0  None .data      @4185                                                        */
+SECTION_DATA static void* lit_4185[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)nameInput2Move__14dFile_select_cFv,
 };
 
-/* 803BA99C-803BA9A8 000C+00 s=0 e=0 z=0  None .data      @4186                                                        */
-SECTION_DATA void* lit_4186[3] = {
+/* 803BA99C-803BA9A8 000C+00 s=1 e=0 z=0  None .data      @4186                                                        */
+SECTION_DATA static void* lit_4186[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)nameInput2__14dFile_select_cFv,
 };
 
-/* 803BA9A8-803BA9B4 000C+00 s=0 e=0 z=0  None .data      @4187                                                        */
-SECTION_DATA void* lit_4187[3] = {
+/* 803BA9A8-803BA9B4 000C+00 s=1 e=0 z=0  None .data      @4187                                                        */
+SECTION_DATA static void* lit_4187[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)backNameInputMove0__14dFile_select_cFv,
 };
 
-/* 803BA9B4-803BA9C0 000C+00 s=0 e=0 z=0  None .data      @4188                                                        */
-SECTION_DATA void* lit_4188[3] = {
+/* 803BA9B4-803BA9C0 000C+00 s=1 e=0 z=0  None .data      @4188                                                        */
+SECTION_DATA static void* lit_4188[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)backNameInputMove__14dFile_select_cFv,
 };
 
-/* 803BA9C0-803BA9CC 000C+00 s=0 e=0 z=0  None .data      @4189                                                        */
-SECTION_DATA void* lit_4189[3] = {
+/* 803BA9C0-803BA9CC 000C+00 s=1 e=0 z=0  None .data      @4189                                                        */
+SECTION_DATA static void* lit_4189[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)copyDataToSelect__14dFile_select_cFv,
 };
 
-/* 803BA9CC-803BA9D8 000C+00 s=0 e=0 z=0  None .data      @4190                                                        */
-SECTION_DATA void* lit_4190[3] = {
+/* 803BA9CC-803BA9D8 000C+00 s=1 e=0 z=0  None .data      @4190                                                        */
+SECTION_DATA static void* lit_4190[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)copyDataToSelectMoveAnm__14dFile_select_cFv,
 };
 
-/* 803BA9D8-803BA9E4 000C+00 s=0 e=0 z=0  None .data      @4191                                                        */
-SECTION_DATA void* lit_4191[3] = {
+/* 803BA9D8-803BA9E4 000C+00 s=1 e=0 z=0  None .data      @4191                                                        */
+SECTION_DATA static void* lit_4191[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)copyToSelBack__14dFile_select_cFv,
 };
 
-/* 803BA9E4-803BA9F0 000C+00 s=0 e=0 z=0  None .data      @4192                                                        */
-SECTION_DATA void* lit_4192[3] = {
+/* 803BA9E4-803BA9F0 000C+00 s=1 e=0 z=0  None .data      @4192                                                        */
+SECTION_DATA static void* lit_4192[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)copyToSelPaneMove__14dFile_select_cFv,
 };
 
-/* 803BA9F0-803BA9FC 000C+00 s=0 e=0 z=0  None .data      @4193                                                        */
-SECTION_DATA void* lit_4193[3] = {
+/* 803BA9F0-803BA9FC 000C+00 s=1 e=0 z=0  None .data      @4193                                                        */
+SECTION_DATA static void* lit_4193[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)YesNoSelect__14dFile_select_cFv,
 };
 
-/* 803BA9FC-803BAA08 000C+00 s=0 e=0 z=0  None .data      @4194                                                        */
-SECTION_DATA void* lit_4194[3] = {
+/* 803BA9FC-803BAA08 000C+00 s=1 e=0 z=0  None .data      @4194                                                        */
+SECTION_DATA static void* lit_4194[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)YesNoCancelMove__14dFile_select_cFv,
 };
 
-/* 803BAA08-803BAA14 000C+00 s=0 e=0 z=0  None .data      @4195                                                        */
-SECTION_DATA void* lit_4195[3] = {
+/* 803BAA08-803BAA14 000C+00 s=1 e=0 z=0  None .data      @4195                                                        */
+SECTION_DATA static void* lit_4195[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)yesNoCursorMoveAnm__14dFile_select_cFv,
 };
 
-/* 803BAA14-803BAA20 000C+00 s=0 e=0 z=0  None .data      @4196                                                        */
-SECTION_DATA void* lit_4196[3] = {
+/* 803BAA14-803BAA20 000C+00 s=1 e=0 z=0  None .data      @4196                                                        */
+SECTION_DATA static void* lit_4196[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)CmdExecPaneMove0__14dFile_select_cFv,
 };
 
-/* 803BAA20-803BAA2C 000C+00 s=0 e=0 z=0  None .data      @4197                                                        */
-SECTION_DATA void* lit_4197[3] = {
+/* 803BAA20-803BAA2C 000C+00 s=1 e=0 z=0  None .data      @4197                                                        */
+SECTION_DATA static void* lit_4197[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)CommandExec__14dFile_select_cFv,
 };
 
-/* 803BAA2C-803BAA38 000C+00 s=0 e=0 z=0  None .data      @4198                                                        */
-SECTION_DATA void* lit_4198[3] = {
+/* 803BAA2C-803BAA38 000C+00 s=1 e=0 z=0  None .data      @4198                                                        */
+SECTION_DATA static void* lit_4198[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)DataEraseWait__14dFile_select_cFv,
 };
 
-/* 803BAA38-803BAA44 000C+00 s=0 e=0 z=0  None .data      @4199                                                        */
-SECTION_DATA void* lit_4199[3] = {
+/* 803BAA38-803BAA44 000C+00 s=1 e=0 z=0  None .data      @4199                                                        */
+SECTION_DATA static void* lit_4199[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)DataEraseWait2__14dFile_select_cFv,
 };
 
-/* 803BAA44-803BAA50 000C+00 s=0 e=0 z=0  None .data      @4200                                                        */
-SECTION_DATA void* lit_4200[3] = {
+/* 803BAA44-803BAA50 000C+00 s=1 e=0 z=0  None .data      @4200                                                        */
+SECTION_DATA static void* lit_4200[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)DataCopyWait__14dFile_select_cFv,
 };
 
-/* 803BAA50-803BAA5C 000C+00 s=0 e=0 z=0  None .data      @4201                                                        */
-SECTION_DATA void* lit_4201[3] = {
+/* 803BAA50-803BAA5C 000C+00 s=1 e=0 z=0  None .data      @4201                                                        */
+SECTION_DATA static void* lit_4201[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)DataCopyWait2__14dFile_select_cFv,
 };
 
-/* 803BAA5C-803BAA68 000C+00 s=0 e=0 z=0  None .data      @4202                                                        */
-SECTION_DATA void* lit_4202[3] = {
+/* 803BAA5C-803BAA68 000C+00 s=1 e=0 z=0  None .data      @4202                                                        */
+SECTION_DATA static void* lit_4202[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)copyPaneMoveOk__14dFile_select_cFv,
 };
 
-/* 803BAA68-803BAA74 000C+00 s=0 e=0 z=0  None .data      @4203                                                        */
-SECTION_DATA void* lit_4203[3] = {
+/* 803BAA68-803BAA74 000C+00 s=1 e=0 z=0  None .data      @4203                                                        */
+SECTION_DATA static void* lit_4203[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)copyPaneMoveOk2__14dFile_select_cFv,
 };
 
-/* 803BAA74-803BAA80 000C+00 s=0 e=0 z=0  None .data      @4204                                                        */
-SECTION_DATA void* lit_4204[3] = {
+/* 803BAA74-803BAA80 000C+00 s=1 e=0 z=0  None .data      @4204                                                        */
+SECTION_DATA static void* lit_4204[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)ErasePaneMoveOk__14dFile_select_cFv,
 };
 
-/* 803BAA80-803BAA8C 000C+00 s=0 e=0 z=0  None .data      @4205                                                        */
-SECTION_DATA void* lit_4205[3] = {
+/* 803BAA80-803BAA8C 000C+00 s=1 e=0 z=0  None .data      @4205                                                        */
+SECTION_DATA static void* lit_4205[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)ErasePaneMoveOk2__14dFile_select_cFv,
 };
 
-/* 803BAA8C-803BAA98 000C+00 s=0 e=0 z=0  None .data      @4206                                                        */
-SECTION_DATA void* lit_4206[3] = {
+/* 803BAA8C-803BAA98 000C+00 s=1 e=0 z=0  None .data      @4206                                                        */
+SECTION_DATA static void* lit_4206[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)ErrorMsgPaneMove__14dFile_select_cFv,
 };
 
-/* 803BAA98-803BAAA4 000C+00 s=0 e=0 z=0  None .data      @4207                                                        */
-SECTION_DATA void* lit_4207[3] = {
+/* 803BAA98-803BAAA4 000C+00 s=1 e=0 z=0  None .data      @4207                                                        */
+SECTION_DATA static void* lit_4207[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)eraseEndBackSelectWait__14dFile_select_cFv,
 };
 
-/* 803BAAA4-803BAAB0 000C+00 s=0 e=0 z=0  None .data      @4208                                                        */
-SECTION_DATA void* lit_4208[3] = {
+/* 803BAAA4-803BAAB0 000C+00 s=1 e=0 z=0  None .data      @4208                                                        */
+SECTION_DATA static void* lit_4208[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)eraseEndBackSelect__14dFile_select_cFv,
 };
 
-/* 803BAAB0-803BAABC 000C+00 s=0 e=0 z=0  None .data      @4209                                                        */
-SECTION_DATA void* lit_4209[3] = {
+/* 803BAAB0-803BAABC 000C+00 s=1 e=0 z=0  None .data      @4209                                                        */
+SECTION_DATA static void* lit_4209[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)backDatSelWait__14dFile_select_cFv,
 };
 
-/* 803BAABC-803BAAC8 000C+00 s=0 e=0 z=0  None .data      @4210                                                        */
-SECTION_DATA void* lit_4210[3] = {
+/* 803BAABC-803BAAC8 000C+00 s=1 e=0 z=0  None .data      @4210                                                        */
+SECTION_DATA static void* lit_4210[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)backDatSelWait2__14dFile_select_cFv,
 };
 
-/* 803BAAC8-803BAAD4 000C+00 s=0 e=0 z=0  None .data      @4211                                                        */
-SECTION_DATA void* lit_4211[3] = {
+/* 803BAAC8-803BAAD4 000C+00 s=1 e=0 z=0  None .data      @4211                                                        */
+SECTION_DATA static void* lit_4211[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)backDatSelPaneMove__14dFile_select_cFv,
 };
 
-/* 803BAAD4-803BAAE0 000C+00 s=0 e=0 z=0  None .data      @4212                                                        */
-SECTION_DATA void* lit_4212[3] = {
+/* 803BAAD4-803BAAE0 000C+00 s=1 e=0 z=0  None .data      @4212                                                        */
+SECTION_DATA static void* lit_4212[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)ToNameMove2__14dFile_select_cFv,
 };
 
-/* 803BAAE0-803BAAEC 000C+00 s=0 e=0 z=0  None .data      @4213                                                        */
-SECTION_DATA void* lit_4213[3] = {
+/* 803BAAE0-803BAAEC 000C+00 s=1 e=0 z=0  None .data      @4213                                                        */
+SECTION_DATA static void* lit_4213[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)nextModeWait__14dFile_select_cFv,
 };
 
-/* 803BAAEC-803BAD20 0234+00 s=1 e=0 z=0  None .data      DataSelProc                                                  */
+/* 803BAAEC-803BAD20 0234+00 s=2 e=0 z=0  None .data      DataSelProc                                                  */
 SECTION_DATA static u8 DataSelProc[564] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1588,9 +1509,9 @@ SECTION_DATA static u8 data_803BAD20[16] = {
 
 /* 803BAD30-803BAD40 000C+04 s=1 e=0 z=0  None .data      l_numTex$5621                                                */
 SECTION_DATA static void* data_803BAD30[3 + 1 /* padding */] = {
-	/* 0    */ (void*)&stringBase0,
-	/* 1    */ (void*)(((char*)&stringBase0)+0x15),
-	/* 2    */ (void*)(((char*)&stringBase0)+0x2A),
+	/* 0    */ (void*)&d_file_d_file_select__stringBase0,
+	/* 1    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x15),
+	/* 2    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x2A),
 	/* padding */
 	NULL,
 };
@@ -1761,196 +1682,196 @@ SECTION_DATA u8 data_803BAFD0[24] = {
 	0x00, 0x66, 0x5F, 0x63, 0x6F, 0x70, 0x5F, 0x74,
 };
 
-/* 803BAFE8-803BAFF4 000C+00 s=0 e=0 z=0  None .data      @7759                                                        */
-SECTION_DATA void* lit_7759[3] = {
+/* 803BAFE8-803BAFF4 000C+00 s=1 e=0 z=0  None .data      @7759                                                        */
+SECTION_DATA static void* lit_7759[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardStatCheck__14dFile_select_cFv,
 };
 
-/* 803BAFF4-803BB000 000C+00 s=0 e=0 z=0  None .data      @7760                                                        */
-SECTION_DATA void* lit_7760[3] = {
+/* 803BAFF4-803BB000 000C+00 s=1 e=0 z=0  None .data      @7760                                                        */
+SECTION_DATA static void* lit_7760[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardLoadWait__14dFile_select_cFv,
 };
 
-/* 803BB000-803BB00C 000C+00 s=0 e=0 z=0  None .data      @7761                                                        */
-SECTION_DATA void* lit_7761[3] = {
+/* 803BB000-803BB00C 000C+00 s=1 e=0 z=0  None .data      @7761                                                        */
+SECTION_DATA static void* lit_7761[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardErrMsgWaitKey__14dFile_select_cFv,
 };
 
-/* 803BB00C-803BB018 000C+00 s=0 e=0 z=0  None .data      @7762                                                        */
-SECTION_DATA void* lit_7762[3] = {
+/* 803BB00C-803BB018 000C+00 s=1 e=0 z=0  None .data      @7762                                                        */
+SECTION_DATA static void* lit_7762[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardNoSaveSelDisp__14dFile_select_cFv,
 };
 
-/* 803BB018-803BB024 000C+00 s=0 e=0 z=0  None .data      @7763                                                        */
-SECTION_DATA void* lit_7763[3] = {
+/* 803BB018-803BB024 000C+00 s=1 e=0 z=0  None .data      @7763                                                        */
+SECTION_DATA static void* lit_7763[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardErrMsgWaitNoSaveSel__14dFile_select_cFv,
 };
 
-/* 803BB024-803BB030 000C+00 s=0 e=0 z=0  None .data      @7764                                                        */
-SECTION_DATA void* lit_7764[3] = {
+/* 803BB024-803BB030 000C+00 s=1 e=0 z=0  None .data      @7764                                                        */
+SECTION_DATA static void* lit_7764[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardErrMsgWaitFormatSel__14dFile_select_cFv,
 };
 
-/* 803BB030-803BB03C 000C+00 s=0 e=0 z=0  None .data      @7765                                                        */
-SECTION_DATA void* lit_7765[3] = {
+/* 803BB030-803BB03C 000C+00 s=1 e=0 z=0  None .data      @7765                                                        */
+SECTION_DATA static void* lit_7765[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardFormatYesSelDisp__14dFile_select_cFv,
 };
 
-/* 803BB03C-803BB048 000C+00 s=0 e=0 z=0  None .data      @7766                                                        */
-SECTION_DATA void* lit_7766[3] = {
+/* 803BB03C-803BB048 000C+00 s=1 e=0 z=0  None .data      @7766                                                        */
+SECTION_DATA static void* lit_7766[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardFormatNoSelDisp__14dFile_select_cFv,
 };
 
-/* 803BB048-803BB054 000C+00 s=0 e=0 z=0  None .data      @7767                                                        */
-SECTION_DATA void* lit_7767[3] = {
+/* 803BB048-803BB054 000C+00 s=1 e=0 z=0  None .data      @7767                                                        */
+SECTION_DATA static void* lit_7767[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardErrMsgWaitFormatSel2__14dFile_select_cFv,
 };
 
-/* 803BB054-803BB060 000C+00 s=0 e=0 z=0  None .data      @7768                                                        */
-SECTION_DATA void* lit_7768[3] = {
+/* 803BB054-803BB060 000C+00 s=1 e=0 z=0  None .data      @7768                                                        */
+SECTION_DATA static void* lit_7768[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardFormatYesSel2Disp__14dFile_select_cFv,
 };
 
-/* 803BB060-803BB06C 000C+00 s=0 e=0 z=0  None .data      @7769                                                        */
-SECTION_DATA void* lit_7769[3] = {
+/* 803BB060-803BB06C 000C+00 s=1 e=0 z=0  None .data      @7769                                                        */
+SECTION_DATA static void* lit_7769[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardFormat__14dFile_select_cFv,
 };
 
-/* 803BB06C-803BB078 000C+00 s=0 e=0 z=0  None .data      @7770                                                        */
-SECTION_DATA void* lit_7770[3] = {
+/* 803BB06C-803BB078 000C+00 s=1 e=0 z=0  None .data      @7770                                                        */
+SECTION_DATA static void* lit_7770[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardFormatWait__14dFile_select_cFv,
 };
 
-/* 803BB078-803BB084 000C+00 s=0 e=0 z=0  None .data      @7771                                                        */
-SECTION_DATA void* lit_7771[3] = {
+/* 803BB078-803BB084 000C+00 s=1 e=0 z=0  None .data      @7771                                                        */
+SECTION_DATA static void* lit_7771[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardFormatCheck__14dFile_select_cFv,
 };
 
-/* 803BB084-803BB090 000C+00 s=0 e=0 z=0  None .data      @7772                                                        */
-SECTION_DATA void* lit_7772[3] = {
+/* 803BB084-803BB090 000C+00 s=1 e=0 z=0  None .data      @7772                                                        */
+SECTION_DATA static void* lit_7772[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardMakeGameFileSel__14dFile_select_cFv,
 };
 
-/* 803BB090-803BB09C 000C+00 s=0 e=0 z=0  None .data      @7773                                                        */
-SECTION_DATA void* lit_7773[3] = {
+/* 803BB090-803BB09C 000C+00 s=1 e=0 z=0  None .data      @7773                                                        */
+SECTION_DATA static void* lit_7773[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardMakeGameFileSelDisp__14dFile_select_cFv,
 };
 
-/* 803BB09C-803BB0A8 000C+00 s=0 e=0 z=0  None .data      @7774                                                        */
-SECTION_DATA void* lit_7774[3] = {
+/* 803BB09C-803BB0A8 000C+00 s=1 e=0 z=0  None .data      @7774                                                        */
+SECTION_DATA static void* lit_7774[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardMakeGameFile__14dFile_select_cFv,
 };
 
-/* 803BB0A8-803BB0B4 000C+00 s=0 e=0 z=0  None .data      @7775                                                        */
-SECTION_DATA void* lit_7775[3] = {
+/* 803BB0A8-803BB0B4 000C+00 s=1 e=0 z=0  None .data      @7775                                                        */
+SECTION_DATA static void* lit_7775[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardMakeGameFileWait__14dFile_select_cFv,
 };
 
-/* 803BB0B4-803BB0C0 000C+00 s=0 e=0 z=0  None .data      @7776                                                        */
-SECTION_DATA void* lit_7776[3] = {
+/* 803BB0B4-803BB0C0 000C+00 s=1 e=0 z=0  None .data      @7776                                                        */
+SECTION_DATA static void* lit_7776[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardMakeGameFileCheck__14dFile_select_cFv,
 };
 
-/* 803BB0C0-803BB0CC 000C+00 s=0 e=0 z=0  None .data      @7777                                                        */
-SECTION_DATA void* lit_7777[3] = {
+/* 803BB0C0-803BB0CC 000C+00 s=1 e=0 z=0  None .data      @7777                                                        */
+SECTION_DATA static void* lit_7777[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardNoFileSpaceDisp__14dFile_select_cFv,
 };
 
-/* 803BB0CC-803BB0D8 000C+00 s=0 e=0 z=0  None .data      @7778                                                        */
-SECTION_DATA void* lit_7778[3] = {
+/* 803BB0CC-803BB0D8 000C+00 s=1 e=0 z=0  None .data      @7778                                                        */
+SECTION_DATA static void* lit_7778[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardGotoIPLSelectDisp__14dFile_select_cFv,
 };
 
-/* 803BB0D8-803BB0E4 000C+00 s=0 e=0 z=0  None .data      @7779                                                        */
-SECTION_DATA void* lit_7779[3] = {
+/* 803BB0D8-803BB0E4 000C+00 s=1 e=0 z=0  None .data      @7779                                                        */
+SECTION_DATA static void* lit_7779[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardGotoIPLSelect__14dFile_select_cFv,
 };
 
-/* 803BB0E4-803BB0F0 000C+00 s=0 e=0 z=0  None .data      @7780                                                        */
-SECTION_DATA void* lit_7780[3] = {
+/* 803BB0E4-803BB0F0 000C+00 s=1 e=0 z=0  None .data      @7780                                                        */
+SECTION_DATA static void* lit_7780[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardGotoIPL__14dFile_select_cFv,
 };
 
-/* 803BB0F0-803BB0FC 000C+00 s=0 e=0 z=0  None .data      @7781                                                        */
-SECTION_DATA void* lit_7781[3] = {
+/* 803BB0F0-803BB0FC 000C+00 s=1 e=0 z=0  None .data      @7781                                                        */
+SECTION_DATA static void* lit_7781[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardMsgWindowInitOpen__14dFile_select_cFv,
 };
 
-/* 803BB0FC-803BB108 000C+00 s=0 e=0 z=0  None .data      @7782                                                        */
-SECTION_DATA void* lit_7782[3] = {
+/* 803BB0FC-803BB108 000C+00 s=1 e=0 z=0  None .data      @7782                                                        */
+SECTION_DATA static void* lit_7782[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardMsgWindowOpen__14dFile_select_cFv,
 };
 
-/* 803BB108-803BB114 000C+00 s=0 e=0 z=0  None .data      @7783                                                        */
-SECTION_DATA void* lit_7783[3] = {
+/* 803BB108-803BB114 000C+00 s=1 e=0 z=0  None .data      @7783                                                        */
+SECTION_DATA static void* lit_7783[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardMsgWindowClose__14dFile_select_cFv,
 };
 
-/* 803BB114-803BB120 000C+00 s=0 e=0 z=0  None .data      @7784                                                        */
-SECTION_DATA void* lit_7784[3] = {
+/* 803BB114-803BB120 000C+00 s=1 e=0 z=0  None .data      @7784                                                        */
+SECTION_DATA static void* lit_7784[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardErrYesNoCursorMoveAnm__14dFile_select_cFv,
 };
 
-/* 803BB120-803BB12C 000C+00 s=0 e=0 z=0  None .data      @7785                                                        */
-SECTION_DATA void* lit_7785[3] = {
+/* 803BB120-803BB12C 000C+00 s=1 e=0 z=0  None .data      @7785                                                        */
+SECTION_DATA static void* lit_7785[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)MemCardSaveDataClear__14dFile_select_cFv,
 };
 
-/* 803BB12C-803BB270 0144+00 s=1 e=0 z=0  None .data      MemCardCheckProc                                             */
+/* 803BB12C-803BB270 0144+00 s=2 e=0 z=0  None .data      MemCardCheckProc                                             */
 SECTION_DATA static u8 MemCardCheckProc[324] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1975,36 +1896,36 @@ SECTION_DATA static u8 MemCardCheckProc[324] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BB270-803BB27C 000C+00 s=0 e=0 z=0  None .data      @7797                                                        */
-SECTION_DATA void* lit_7797[3] = {
+/* 803BB270-803BB27C 000C+00 s=1 e=0 z=0  None .data      @7797                                                        */
+SECTION_DATA static void* lit_7797[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)noSaveSelDispInit__14dFile_select_cFv,
 };
 
-/* 803BB27C-803BB288 000C+00 s=0 e=0 z=0  None .data      @7799                                                        */
-SECTION_DATA void* lit_7799[3] = {
+/* 803BB27C-803BB288 000C+00 s=1 e=0 z=0  None .data      @7799                                                        */
+SECTION_DATA static void* lit_7799[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)noSaveSelDispInit__14dFile_select_cFv,
 };
 
-/* 803BB288-803BB294 000C+00 s=0 e=0 z=0  None .data      @7801                                                        */
-SECTION_DATA void* lit_7801[3] = {
+/* 803BB288-803BB294 000C+00 s=1 e=0 z=0  None .data      @7801                                                        */
+SECTION_DATA static void* lit_7801[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)noSaveSelDispInit__14dFile_select_cFv,
 };
 
-/* 803BB294-803BB2A0 000C+00 s=0 e=0 z=0  None .data      @7803                                                        */
-SECTION_DATA void* lit_7803[3] = {
+/* 803BB294-803BB2A0 000C+00 s=1 e=0 z=0  None .data      @7803                                                        */
+SECTION_DATA static void* lit_7803[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)noSaveSelDispInit__14dFile_select_cFv,
 };
 
-/* 803BB2A0-803BB2AC 000C+00 s=0 e=0 z=0  None .data      @7808                                                        */
-SECTION_DATA void* lit_7808[3] = {
+/* 803BB2A0-803BB2AC 000C+00 s=1 e=0 z=0  None .data      @7808                                                        */
+SECTION_DATA static void* lit_7808[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)noFileSpaceDispInit__14dFile_select_cFv,
@@ -2050,34 +1971,34 @@ SECTION_DATA static void* lit_8083[3] = {
 
 /* 803BB304-803BB314 0010+00 s=1 e=0 z=0  None .data      bck_name$8683                                                */
 SECTION_DATA static void* data_803BB304[4] = {
-	/* 0    */ (void*)(((char*)&stringBase0)+0x330),
-	/* 1    */ (void*)(((char*)&stringBase0)+0x349),
-	/* 2    */ (void*)(((char*)&stringBase0)+0x362),
-	/* 3    */ (void*)(((char*)&stringBase0)+0x37B),
+	/* 0    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x330),
+	/* 1    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x349),
+	/* 2    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x362),
+	/* 3    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x37B),
 };
 
 /* 803BB314-803BB324 0010+00 s=1 e=0 z=0  None .data      brk_name$8684                                                */
 SECTION_DATA static void* data_803BB314[4] = {
-	/* 0    */ (void*)(((char*)&stringBase0)+0x394),
-	/* 1    */ (void*)(((char*)&stringBase0)+0x3AD),
-	/* 2    */ (void*)(((char*)&stringBase0)+0x3AD),
-	/* 3    */ (void*)(((char*)&stringBase0)+0x3C8),
+	/* 0    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x394),
+	/* 1    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x3AD),
+	/* 2    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x3AD),
+	/* 3    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x3C8),
 };
 
 /* 803BB324-803BB334 0010+00 s=1 e=0 z=0  None .data      bck_name$8786                                                */
 SECTION_DATA static void* data_803BB324[4] = {
-	/* 0    */ (void*)(((char*)&stringBase0)+0x3F0),
-	/* 1    */ (void*)(((char*)&stringBase0)+0x409),
-	/* 2    */ (void*)(((char*)&stringBase0)+0x422),
-	/* 3    */ (void*)(((char*)&stringBase0)+0x43B),
+	/* 0    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x3F0),
+	/* 1    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x409),
+	/* 2    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x422),
+	/* 3    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x43B),
 };
 
 /* 803BB334-803BB35C 0010+18 s=1 e=0 z=0  None .data      brk_name$8787                                                */
 SECTION_DATA static void* data_803BB334[4 + 6 /* padding */] = {
-	/* 0    */ (void*)(((char*)&stringBase0)+0x454),
-	/* 1    */ (void*)(((char*)&stringBase0)+0x46D),
-	/* 2    */ (void*)(((char*)&stringBase0)+0x46D),
-	/* 3    */ (void*)(((char*)&stringBase0)+0x46D),
+	/* 0    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x454),
+	/* 1    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x46D),
+	/* 2    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x46D),
+	/* 3    */ (void*)(((char*)&d_file_d_file_select__stringBase0)+0x46D),
 	/* padding */
 	NULL,
 	NULL,

@@ -56,7 +56,7 @@ lbl_800F5ACC:
 /* 800F5AE4 00000018  C0 7F 05 2C */	lfs f3, 0x52c(r31)
 /* 800F5AE8 0000001C  C0 42 92 98 */	lfs f2, lit_5943(r2)
 /* 800F5AEC 00000020  FC 20 F8 50 */	fneg f1, f31
-/* 800F5AF0 00000024  C0 03 00 34 */	lfs f0, 0x34(r3)
+/* 800F5AF0 00000024  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 8038E644 */
 /* 800F5AF4 00000028  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800F5AF8 0000002C  EC 02 00 32 */	fmuls f0, f2, f0
 /* 800F5AFC 00000030  FC 03 00 40 */	fcmpo cr0, f3, f0

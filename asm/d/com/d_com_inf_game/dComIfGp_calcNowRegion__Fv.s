@@ -12,8 +12,8 @@ lbl_8002E9F0:
 /* 8002EA18 00000028  80 7F 5C 68 */	lwz r3, 0x5c68(r31)	/* effective address: 8040BE28 */
 /* 8002EA1C 0000002C  38 81 00 40 */	addi r4, r1, 0x40
 /* 8002EA20 00000030  38 A0 08 00 */	li r5, 0x800
-/* 8002EA24 00000034  3C C0 80 38 */	lis r6, stringBase0@ha
-/* 8002EA28 00000038  38 C6 8F 38 */	addi r6, r6, stringBase0@l
+/* 8002EA24 00000034  3C C0 80 38 */	lis r6, d_com_d_com_inf_game__stringBase0@ha
+/* 8002EA28 00000038  38 C6 8F 38 */	addi r6, r6, d_com_d_com_inf_game__stringBase0@l
 /* 8002EA2C 0000003C  38 C6 01 52 */	addi r6, r6, 0x152
 /* 8002EA30 00000040  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 80400000 */
 /* 8002EA34 00000044  81 8C 00 1C */	lwz r12, 0x1c(r12)
@@ -48,8 +48,8 @@ lbl_8002EA68:
 /* 8002EAA4 0000003C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8002EAA8 00000040  3B 43 4E 00 */	addi r26, r3, 0x4e00
 /* 8002EAAC 00000044  7F 43 D3 78 */	mr r3, r26
-/* 8002EAB0 00000048  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 8002EAB4 0000004C  38 84 8F 38 */	addi r4, r4, stringBase0@l
+/* 8002EAB0 00000048  3C 80 80 38 */	lis r4, d_com_d_com_inf_game__stringBase0@ha
+/* 8002EAB4 0000004C  38 84 8F 38 */	addi r4, r4, d_com_d_com_inf_game__stringBase0@l
 /* 8002EAB8 00000050  38 84 00 9E */	addi r4, r4, 0x9e
 /* 8002EABC 00000054  48 33 9E D9 */	bl strcmp
 /* 8002EAC0 00000058  2C 03 00 00 */	cmpwi r3, 0
@@ -60,8 +60,8 @@ lbl_8002EA68:
 /* 8002EAD4 0000006C  41 82 01 1C */	beq lbl_8002EBF0
 lbl_8002EAD8:
 /* 8002EAD8 00000000  7F 43 D3 78 */	mr r3, r26
-/* 8002EADC 00000004  3C 80 80 38 */	lis r4, stringBase0@ha
-/* 8002EAE0 00000008  38 84 8F 38 */	addi r4, r4, stringBase0@l
+/* 8002EADC 00000004  3C 80 80 38 */	lis r4, d_com_d_com_inf_game__stringBase0@ha
+/* 8002EAE0 00000008  38 84 8F 38 */	addi r4, r4, d_com_d_com_inf_game__stringBase0@l
 /* 8002EAE4 0000000C  38 84 00 4F */	addi r4, r4, 0x4f
 /* 8002EAE8 00000010  48 33 9E AD */	bl strcmp
 /* 8002EAEC 00000014  2C 03 00 00 */	cmpwi r3, 0
@@ -71,11 +71,11 @@ lbl_8002EAD8:
 /* 8002EAFC 00000024  88 03 4E 0A */	lbz r0, 0x4e0a(r3)	/* effective address: 8040AFCA */
 /* 8002EB00 00000028  2C 00 00 01 */	cmpwi r0, 1
 /* 8002EB04 0000002C  40 82 00 4C */	bne lbl_8002EB50
-/* 8002EB08 00000030  C0 1E 00 00 */	lfs f0, 0(r30)
+/* 8002EB08 00000030  C0 1E 00 00 */	lfs f0, 0(r30)	/* effective address: 80406224 */
 /* 8002EB0C 00000034  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 8002EB10 00000038  C0 1E 00 04 */	lfs f0, 4(r30)
+/* 8002EB10 00000038  C0 1E 00 04 */	lfs f0, 4(r30)	/* effective address: 80406228 */
 /* 8002EB14 0000003C  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 8002EB18 00000040  C0 1E 00 08 */	lfs f0, 8(r30)
+/* 8002EB18 00000040  C0 1E 00 08 */	lfs f0, 8(r30)	/* effective address: 8040622C */
 /* 8002EB1C 00000044  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 8002EB20 00000048  C0 02 83 18 */	lfs f0, lit_6980(r2)
 /* 8002EB24 0000004C  D0 01 00 20 */	stfs f0, 0x20(r1)
@@ -129,7 +129,7 @@ lbl_8002EBBC:
 /* 8002EBD0 00000014  98 A3 03 F9 */	stb r5, 0x3f9(r3)
 lbl_8002EBD4:
 /* 8002EBD4 00000000  38 00 00 01 */	li r0, 1
-/* 8002EBD8 00000004  98 1E 00 18 */	stb r0, 0x18(r30)
+/* 8002EBD8 00000004  98 1E 00 18 */	stb r0, 0x18(r30)	/* effective address: 8040623C */
 lbl_8002EBDC:
 /* 8002EBDC 00000000  3B 7B 00 01 */	addi r27, r27, 1
 /* 8002EBE0 00000004  3B 5A 00 14 */	addi r26, r26, 0x14
@@ -138,11 +138,11 @@ lbl_8002EBE4:
 /* 8002EBE8 00000004  7C 1B 00 00 */	cmpw r27, r0
 /* 8002EBEC 00000008  41 80 FF 70 */	blt lbl_8002EB5C
 lbl_8002EBF0:
-/* 8002EBF0 00000000  88 1E 00 18 */	lbz r0, 0x18(r30)
+/* 8002EBF0 00000000  88 1E 00 18 */	lbz r0, 0x18(r30)	/* effective address: 8040623C */
 /* 8002EBF4 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 8002EBF8 00000008  40 82 00 2C */	bne lbl_8002EC24
 /* 8002EBFC 0000000C  38 60 00 00 */	li r3, 0
-/* 8002EC00 00000010  88 DE 00 17 */	lbz r6, 0x17(r30)
+/* 8002EC00 00000010  88 DE 00 17 */	lbz r6, 0x17(r30)	/* effective address: 8040623B */
 /* 8002EC04 00000014  3C 80 80 3F */	lis r4, mStatus__20dStage_roomControl_c@ha
 /* 8002EC08 00000018  38 A4 60 94 */	addi r5, r4, mStatus__20dStage_roomControl_c@l
 /* 8002EC0C 0000001C  38 00 00 40 */	li r0, 0x40
@@ -153,7 +153,7 @@ lbl_8002EC14:
 /* 8002EC1C 00000008  38 63 04 04 */	addi r3, r3, 0x404
 /* 8002EC20 0000000C  42 00 FF F4 */	bdnz lbl_8002EC14
 lbl_8002EC24:
-/* 8002EC24 00000000  80 7F 5C 68 */	lwz r3, 0x5c68(r31)
+/* 8002EC24 00000000  80 7F 5C 68 */	lwz r3, 0x5c68(r31)	/* effective address: 8040BE28 */
 /* 8002EC28 00000004  81 83 00 00 */	lwz r12, 0(r3)
 /* 8002EC2C 00000008  81 8C 00 24 */	lwz r12, 0x24(r12)
 /* 8002EC30 0000000C  7D 89 03 A6 */	mtctr r12

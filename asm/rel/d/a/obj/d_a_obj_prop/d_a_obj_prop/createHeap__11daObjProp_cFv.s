@@ -5,23 +5,23 @@ lbl_80CB52B4:
 /* 80CB52C0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CB52C4 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80CB52C8 00000014  80 03 00 B0 */	lwz r0, 0xb0(r3)
-/* 80CB52CC 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CB52D0 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80CB52D4 00000020  80 63 00 00 */	lwz r3, 0(r3)
+/* 80CB52CC 00000018  3C 60 80 CB */	lis r3, l_arcName@ha
+/* 80CB52D0 0000001C  38 63 56 28 */	addi r3, r3, l_arcName@l
+/* 80CB52D4 00000020  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80CB5628 */
 /* 80CB52D8 00000024  54 00 16 BA */	rlwinm r0, r0, 2, 0x1a, 0x1d
-/* 80CB52DC 00000028  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80CB52E0 0000002C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80CB52DC 00000028  3C 80 80 CB */	lis r4, data_80CB5614@ha
+/* 80CB52E0 0000002C  38 84 56 14 */	addi r4, r4, data_80CB5614@l
 /* 80CB52E4 00000030  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80CB52E8 00000034  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 80CB52EC 00000038  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
+/* 80CB52E8 00000034  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80CB52EC 00000038  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80CB52F0 0000003C  3C A5 00 02 */	addis r5, r5, 2
 /* 80CB52F4 00000040  38 C0 00 80 */	li r6, 0x80
 /* 80CB52F8 00000044  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 80CB52FC 00000048  4B FF FE BD */	bl _unresolved
+/* 80CB52FC 00000048  4B 38 6F F0 */	b getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 80CB5300 0000004C  3C 80 00 08 */	lis r4, 8
 /* 80CB5304 00000050  3C A0 11 00 */	lis r5, 0x1100 /* 0x11000084@ha */
 /* 80CB5308 00000054  38 A5 00 84 */	addi r5, r5, 0x0084 /* 0x11000084@l */
-/* 80CB530C 00000058  4B FF FE AD */	bl _unresolved
+/* 80CB530C 00000058  4B 35 F9 48 */	b mDoExt_J3DModel__create__FP12J3DModelDataUlUl
 /* 80CB5310 0000005C  90 7F 05 74 */	stw r3, 0x574(r31)
 /* 80CB5314 00000060  80 7F 05 74 */	lwz r3, 0x574(r31)
 /* 80CB5318 00000064  30 03 FF FF */	addic r0, r3, -1

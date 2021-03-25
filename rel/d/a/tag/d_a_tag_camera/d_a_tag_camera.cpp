@@ -24,40 +24,65 @@ struct daTag_Cam_c {
 };
 
 struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct daAlink_c {
+	/* 800E1390 */ void getCopyRodCameraActor();
+};
+
+struct dCamera_c {
+	/* 80163558 */ void SetTagData(fopAc_ac_c*, s32, u16, u8);
 };
 
 // 
 // Forward References:
 // 
 
-void daTag_Cam_Draw(daTag_Cam_c*); // 2
-void daTag_Cam_Execute(daTag_Cam_c*); // 2
-void daTag_Cam_IsDelete(daTag_Cam_c*); // 2
-void daTag_Cam_Delete(daTag_Cam_c*); // 2
-void daTag_Cam_Create(fopAc_ac_c*); // 2
+static void daTag_Cam_Draw(daTag_Cam_c*); // 2
+static void daTag_Cam_Execute(daTag_Cam_c*); // 2
+static void daTag_Cam_IsDelete(daTag_Cam_c*); // 2
+static void daTag_Cam_Delete(daTag_Cam_c*); // 2
+static void daTag_Cam_Create(fopAc_ac_c*); // 2
 
-extern "C" void func_80489A98(); // 1
-extern "C" void func_80489AA0(); // 1
-extern "C" void func_80489B18(); // 1
-extern "C" void func_80489B2C(); // 1
-extern "C" void func_80489B6C(); // 1
-extern "C" void func_80489BE0(); // 1
-extern "C" void func_80489C04(); // 1
-extern "C" void func_80489C1C(); // 1
-extern "C" void func_80489C34(); // 1
-extern "C" void func_80489C6C(); // 1
-extern "C" void func_80489CAC(); // 1
+extern "C" static void func_80489A98(); // 1
+extern "C" static void func_80489AA0(); // 1
+extern "C" static void func_80489B18(); // 1
+extern "C" static void func_80489B2C(); // 1
+extern "C" static void func_80489B6C(); // 1
+extern "C" static void func_80489BE0(); // 1
+extern "C" static void func_80489C04(); // 1
+extern "C" static void func_80489C1C(); // 1
+extern "C" static void func_80489C34(); // 1
+extern "C" static void func_80489C6C(); // 1
+extern "C" static void func_80489CAC(); // 1
 extern "C" static void func_80489CE4(); // 1
-extern "C" void func_80489CF8(); // 1
-extern "C" void func_80489D30(); // 1
-extern "C" void func_80489D5C(); // 1
-extern "C" void func_80489D70(); // 1
-extern "C" void func_80489DB0(); // 1
-extern "C" void func_80489DE4(); // 1
-extern "C" void func_80489DF8(); // 1
-extern "C" void func_80489E18(); // 1
-extern "C" void func_80489E8C(); // 1
-extern "C" void func_80489EDC(); // 1
+extern "C" static void func_80489CF8(); // 1
+extern "C" static void func_80489D30(); // 1
+extern "C" static void func_80489D5C(); // 1
+extern "C" static void func_80489D70(); // 1
+extern "C" static void func_80489DB0(); // 1
+extern "C" static void func_80489DE4(); // 1
+extern "C" static void func_80489DF8(); // 1
+extern "C" static void func_80489E18(); // 1
+extern "C" static void func_80489E8C(); // 1
+extern "C" static void func_80489EDC(); // 1
 extern "C" void getSwType__11daTag_Cam_cFv(); // 1
 extern "C" void getPrio__11daTag_Cam_cFv(); // 1
 extern "C" void getSwBit__11daTag_Cam_cFv(); // 1
@@ -67,13 +92,12 @@ extern "C" void getRailID__11daTag_Cam_cFv(); // 1
 extern "C" void getAreaType__11daTag_Cam_cFv(); // 1
 extern "C" void getAreaNoChk__11daTag_Cam_cFv(); // 1
 extern "C" void execute__11daTag_Cam_cFv(); // 1
-extern "C" void daTag_Cam_Draw__FP11daTag_Cam_c(); // 1
-extern "C" void daTag_Cam_Execute__FP11daTag_Cam_c(); // 1
-extern "C" void daTag_Cam_IsDelete__FP11daTag_Cam_c(); // 1
-extern "C" void daTag_Cam_Delete__FP11daTag_Cam_c(); // 1
-extern "C" void daTag_Cam_Create__FP10fopAc_ac_c(); // 1
-extern "C" extern u8 const lit_3874[12];
-extern "C" extern u8 const lit_4358[88];
+extern "C" static void daTag_Cam_Draw__FP11daTag_Cam_c(); // 1
+extern "C" static void daTag_Cam_Execute__FP11daTag_Cam_c(); // 1
+extern "C" static void daTag_Cam_IsDelete__FP11daTag_Cam_c(); // 1
+extern "C" static void daTag_Cam_Delete__FP11daTag_Cam_c(); // 1
+extern "C" static void daTag_Cam_Create__FP10fopAc_ac_c(); // 1
+extern "C" extern void* const lit_4358[22];
 extern "C" extern u32 const lit_4466;
 extern "C" extern u8 const lit_4467[4 + 4 /* padding */];
 extern "C" extern u8 const lit_4468[8];
@@ -81,143 +105,164 @@ extern "C" extern u8 const lit_4469[8];
 extern "C" extern u8 const lit_4470[8];
 extern "C" extern u32 const lit_4545;
 extern "C" extern u32 const lit_4546;
-extern "C" extern u8 l_daTag_Cam_Method[32];
-extern "C" extern u8 g_profile_TAG_CAMERA[48];
-extern "C" extern u8 data_8048A670[4];
+extern "C" extern void* g_profile_TAG_CAMERA[12];
 
 // 
 // External References:
 // 
 
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void dCam_getBody(); // 2
 
-extern "C" void _unresolved(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
+extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void __dt__10fopAc_ac_cFv(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void getCopyRodCameraActor__9daAlink_cFv(); // 1
+extern "C" void SetTagData__9dCamera_cFP10fopAc_ac_clUsUc(); // 1
+extern "C" void dCam_getBody__Fv(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 struct_80450D64[4];
 
 // 
 // Declarations:
 // 
 
-/* 80489A98-80489AA0 0008+00 s=0 e=0 z=0  None .text      always_true__28@unnamed@d_a_tag_camera_cpp@Fv                */
+/* 80489A98-80489AA0 0008+00 s=1 e=0 z=0  None .text      always_true__28@unnamed@d_a_tag_camera_cpp@Fv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489A98() {
+extern "C" asm static void func_80489A98() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489A98.s"
 }
 #pragma pop
 
 
-/* 80489AA0-80489B18 0078+00 s=0 e=0 z=0  None .text      is_player_riding_horse__28@unnamed@d_a_tag_camera_cpp@Fv     */
+/* ############################################################################################## */
+/* 8048A670-8048A674 0004+00 s=15 e=0 z=0  None .bss       Player__28@unnamed@d_a_tag_camera_cpp@                       */
+static u8 data_8048A670[4];
+
+/* 80489AA0-80489B18 0078+00 s=1 e=0 z=0  None .text      is_player_riding_horse__28@unnamed@d_a_tag_camera_cpp@Fv     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489AA0() {
+extern "C" asm static void func_80489AA0() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489AA0.s"
 }
 #pragma pop
 
 
-/* 80489B18-80489B2C 0014+00 s=0 e=0 z=0  None .text      is_player_swimming__28@unnamed@d_a_tag_camera_cpp@Fv         */
+/* 80489B18-80489B2C 0014+00 s=1 e=0 z=0  None .text      is_player_swimming__28@unnamed@d_a_tag_camera_cpp@Fv         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489B18() {
+extern "C" asm static void func_80489B18() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489B18.s"
 }
 #pragma pop
 
 
-/* 80489B2C-80489B6C 0040+00 s=0 e=0 z=0  None .text      is_player_riding_canoe__28@unnamed@d_a_tag_camera_cpp@Fv     */
+/* 80489B2C-80489B6C 0040+00 s=1 e=0 z=0  None .text      is_player_riding_canoe__28@unnamed@d_a_tag_camera_cpp@Fv     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489B2C() {
+extern "C" asm static void func_80489B2C() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489B2C.s"
 }
 #pragma pop
 
 
-/* 80489B6C-80489BE0 0074+00 s=0 e=0 z=0  None .text      is_player_jumping_by_horse__28@unnamed@d_a_tag_camera_cpp@Fv */
+/* 80489B6C-80489BE0 0074+00 s=1 e=0 z=0  None .text      is_player_jumping_by_horse__28@unnamed@d_a_tag_camera_cpp@Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489B6C() {
+extern "C" asm static void func_80489B6C() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489B6C.s"
 }
 #pragma pop
 
 
-/* 80489BE0-80489C04 0024+00 s=0 e=0 z=0  None .text      is_player_climbing__28@unnamed@d_a_tag_camera_cpp@Fv         */
+/* 80489BE0-80489C04 0024+00 s=1 e=0 z=0  None .text      is_player_climbing__28@unnamed@d_a_tag_camera_cpp@Fv         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489BE0() {
+extern "C" asm static void func_80489BE0() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489BE0.s"
 }
 #pragma pop
 
 
-/* 80489C04-80489C1C 0018+00 s=0 e=0 z=0  None .text      is_player_wear_magneboots__28@unnamed@d_a_tag_camera_cpp@Fv  */
+/* 80489C04-80489C1C 0018+00 s=1 e=0 z=0  None .text      is_player_wear_magneboots__28@unnamed@d_a_tag_camera_cpp@Fv  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489C04() {
+extern "C" asm static void func_80489C04() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489C04.s"
 }
 #pragma pop
 
 
-/* 80489C1C-80489C34 0018+00 s=0 e=0 z=0  None .text      is_player_wolf__28@unnamed@d_a_tag_camera_cpp@Fv             */
+/* 80489C1C-80489C34 0018+00 s=1 e=0 z=0  None .text      is_player_wolf__28@unnamed@d_a_tag_camera_cpp@Fv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489C1C() {
+extern "C" asm static void func_80489C1C() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489C1C.s"
 }
 #pragma pop
 
 
-/* 80489C34-80489C6C 0038+00 s=0 e=0 z=0  None .text      is_player_pulling_chainblock__28@unnamed@d_a_tag_camera_cpp@Fv */
+/* 80489C34-80489C6C 0038+00 s=1 e=0 z=0  None .text      is_player_pulling_chainblock__28@unnamed@d_a_tag_camera_cpp@Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489C34() {
+extern "C" asm static void func_80489C34() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489C34.s"
 }
 #pragma pop
 
 
-/* 80489C6C-80489CAC 0040+00 s=0 e=0 z=0  None .text      is_player_playing_spinner__28@unnamed@d_a_tag_camera_cpp@Fv  */
+/* 80489C6C-80489CAC 0040+00 s=1 e=0 z=0  None .text      is_player_playing_spinner__28@unnamed@d_a_tag_camera_cpp@Fv  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489C6C() {
+extern "C" asm static void func_80489C6C() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489C6C.s"
 }
 #pragma pop
 
 
-/* 80489CAC-80489CE4 0038+00 s=0 e=0 z=0  None .text      is_player_sliding_slope__28@unnamed@d_a_tag_camera_cpp@Fv    */
+/* 80489CAC-80489CE4 0038+00 s=1 e=0 z=0  None .text      is_player_sliding_slope__28@unnamed@d_a_tag_camera_cpp@Fv    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489CAC() {
+extern "C" asm static void func_80489CAC() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489CAC.s"
 }
 #pragma pop
 
 
-/* 80489CE4-80489CF8 0014+00 s=1 e=0 z=0  None .text      is_player_on_watersurface__28@unnamed@d_a_tag_camera_cpp@Fv  */
+/* 80489CE4-80489CF8 0014+00 s=2 e=0 z=0  None .text      is_player_on_watersurface__28@unnamed@d_a_tag_camera_cpp@Fv  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -228,110 +273,110 @@ extern "C" asm static void func_80489CE4() {
 #pragma pop
 
 
-/* 80489CF8-80489D30 0038+00 s=0 e=0 z=0  None .text      is_player_moving_on_spinnerrail__28@unnamed@d_a_tag_camera_cpp@Fv */
+/* 80489CF8-80489D30 0038+00 s=1 e=0 z=0  None .text      is_player_moving_on_spinnerrail__28@unnamed@d_a_tag_camera_cpp@Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489CF8() {
+extern "C" asm static void func_80489CF8() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489CF8.s"
 }
 #pragma pop
 
 
-/* 80489D30-80489D5C 002C+00 s=0 e=0 z=0  None .text      is_player_gliding__28@unnamed@d_a_tag_camera_cpp@Fv          */
+/* 80489D30-80489D5C 002C+00 s=1 e=0 z=0  None .text      is_player_gliding__28@unnamed@d_a_tag_camera_cpp@Fv          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489D30() {
+extern "C" asm static void func_80489D30() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489D30.s"
 }
 #pragma pop
 
 
-/* 80489D5C-80489D70 0014+00 s=0 e=0 z=0  None .text      is_player_hunging_by_hookshot__28@unnamed@d_a_tag_camera_cpp@Fv */
+/* 80489D5C-80489D70 0014+00 s=1 e=0 z=0  None .text      is_player_hunging_by_hookshot__28@unnamed@d_a_tag_camera_cpp@Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489D5C() {
+extern "C" asm static void func_80489D5C() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489D5C.s"
 }
 #pragma pop
 
 
-/* 80489D70-80489DB0 0040+00 s=0 e=0 z=0  None .text      is_player_on_rope__28@unnamed@d_a_tag_camera_cpp@Fv          */
+/* 80489D70-80489DB0 0040+00 s=1 e=0 z=0  None .text      is_player_on_rope__28@unnamed@d_a_tag_camera_cpp@Fv          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489D70() {
+extern "C" asm static void func_80489D70() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489D70.s"
 }
 #pragma pop
 
 
-/* 80489DB0-80489DE4 0034+00 s=0 e=0 z=0  None .text      is_player_using_copyrod__28@unnamed@d_a_tag_camera_cpp@Fv    */
+/* 80489DB0-80489DE4 0034+00 s=1 e=0 z=0  None .text      is_player_using_copyrod__28@unnamed@d_a_tag_camera_cpp@Fv    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489DB0() {
+extern "C" asm static void func_80489DB0() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489DB0.s"
 }
 #pragma pop
 
 
-/* 80489DE4-80489DF8 0014+00 s=0 e=0 z=0  None .text      is_player_hunging_wall_by_hookshot__28@unnamed@d_a_tag_camera_cpp@Fv */
+/* 80489DE4-80489DF8 0014+00 s=1 e=0 z=0  None .text      is_player_hunging_wall_by_hookshot__28@unnamed@d_a_tag_camera_cpp@Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489DE4() {
+extern "C" asm static void func_80489DE4() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489DE4.s"
 }
 #pragma pop
 
 
-/* 80489DF8-80489E18 0020+00 s=0 e=0 z=0  None .text      is_player_carried_by_cargo__28@unnamed@d_a_tag_camera_cpp@Fv */
+/* 80489DF8-80489E18 0020+00 s=1 e=0 z=0  None .text      is_player_carried_by_cargo__28@unnamed@d_a_tag_camera_cpp@Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489DF8() {
+extern "C" asm static void func_80489DF8() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489DF8.s"
 }
 #pragma pop
 
 
-/* 80489E18-80489E8C 0074+00 s=0 e=0 z=0  None .text      is_player_playing_rodeo__28@unnamed@d_a_tag_camera_cpp@Fv    */
+/* 80489E18-80489E8C 0074+00 s=1 e=0 z=0  None .text      is_player_playing_rodeo__28@unnamed@d_a_tag_camera_cpp@Fv    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489E18() {
+extern "C" asm static void func_80489E18() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489E18.s"
 }
 #pragma pop
 
 
-/* 80489E8C-80489EDC 0050+00 s=0 e=0 z=0  None .text      is_player_in_water__28@unnamed@d_a_tag_camera_cpp@Fv         */
+/* 80489E8C-80489EDC 0050+00 s=1 e=0 z=0  None .text      is_player_in_water__28@unnamed@d_a_tag_camera_cpp@Fv         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489E8C() {
+extern "C" asm static void func_80489E8C() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489E8C.s"
 }
 #pragma pop
 
 
-/* 80489EDC-80489F14 0038+00 s=0 e=0 z=0  None .text      is_player_hugging_eal__28@unnamed@d_a_tag_camera_cpp@Fv      */
+/* 80489EDC-80489F14 0038+00 s=1 e=0 z=0  None .text      is_player_hugging_eal__28@unnamed@d_a_tag_camera_cpp@Fv      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80489EDC() {
+extern "C" asm static void func_80489EDC() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489EDC.s"
 }
@@ -426,6 +471,12 @@ asm void daTag_Cam_c::getAreaNoChk() {
 #pragma pop
 
 
+/* ############################################################################################## */
+/* 8048A590-8048A59C 000C+00 s=2 e=0 z=0  None .rodata    @3874                                                        */
+SECTION_RODATA static u8 const lit_3874[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
 /* 80489F74-8048A378 0404+00 s=1 e=0 z=0  None .text      execute__11daTag_Cam_cFv                                     */
 #pragma push
 #pragma optimization_level 0
@@ -437,55 +488,55 @@ asm void daTag_Cam_c::execute() {
 #pragma pop
 
 
-/* 8048A378-8048A380 0008+00 s=0 e=0 z=0  None .text      daTag_Cam_Draw__FP11daTag_Cam_c                              */
+/* 8048A378-8048A380 0008+00 s=1 e=0 z=0  None .text      daTag_Cam_Draw__FP11daTag_Cam_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_Cam_Draw(daTag_Cam_c* param_0) {
+asm static void daTag_Cam_Draw(daTag_Cam_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/daTag_Cam_Draw__FP11daTag_Cam_c.s"
 }
 #pragma pop
 
 
-/* 8048A380-8048A3A4 0024+00 s=0 e=0 z=0  None .text      daTag_Cam_Execute__FP11daTag_Cam_c                           */
+/* 8048A380-8048A3A4 0024+00 s=1 e=0 z=0  None .text      daTag_Cam_Execute__FP11daTag_Cam_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_Cam_Execute(daTag_Cam_c* param_0) {
+asm static void daTag_Cam_Execute(daTag_Cam_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/daTag_Cam_Execute__FP11daTag_Cam_c.s"
 }
 #pragma pop
 
 
-/* 8048A3A4-8048A3AC 0008+00 s=0 e=0 z=0  None .text      daTag_Cam_IsDelete__FP11daTag_Cam_c                          */
+/* 8048A3A4-8048A3AC 0008+00 s=1 e=0 z=0  None .text      daTag_Cam_IsDelete__FP11daTag_Cam_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_Cam_IsDelete(daTag_Cam_c* param_0) {
+asm static void daTag_Cam_IsDelete(daTag_Cam_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/daTag_Cam_IsDelete__FP11daTag_Cam_c.s"
 }
 #pragma pop
 
 
-/* 8048A3AC-8048A3DC 0030+00 s=0 e=0 z=0  None .text      daTag_Cam_Delete__FP11daTag_Cam_c                            */
+/* 8048A3AC-8048A3DC 0030+00 s=1 e=0 z=0  None .text      daTag_Cam_Delete__FP11daTag_Cam_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_Cam_Delete(daTag_Cam_c* param_0) {
+asm static void daTag_Cam_Delete(daTag_Cam_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/daTag_Cam_Delete__FP11daTag_Cam_c.s"
 }
 #pragma pop
 
 
-/* 8048A3DC-8048A588 01AC+00 s=0 e=0 z=0  None .text      daTag_Cam_Create__FP10fopAc_ac_c                             */
+/* 8048A3DC-8048A588 01AC+00 s=1 e=0 z=0  None .text      daTag_Cam_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_Cam_Create(fopAc_ac_c* param_0) {
+asm static void daTag_Cam_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/daTag_Cam_Create__FP10fopAc_ac_c.s"
 }
@@ -493,19 +544,30 @@ asm void daTag_Cam_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 8048A590-8048A59C 000C+00 s=0 e=0 z=0  None .rodata    @3874                                                        */
-SECTION_RODATA u8 const lit_3874[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
 /* 8048A59C-8048A5F4 0058+00 s=0 e=0 z=0  None .rodata    @4358                                                        */
-SECTION_RODATA u8 const lit_4358[88] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+SECTION_RODATA void* const lit_4358[22] = {
+	/* 0    */ (void*)func_80489AA0,
+	/* 1    */ (void*)func_80489B18,
+	/* 2    */ (void*)func_80489B2C,
+	/* 3    */ (void*)func_80489A98,
+	/* 4    */ (void*)func_80489B6C,
+	/* 5    */ (void*)func_80489BE0,
+	/* 6    */ (void*)func_80489C04,
+	/* 7    */ (void*)func_80489C1C,
+	/* 8    */ (void*)func_80489C34,
+	/* 9    */ (void*)func_80489C6C,
+	/* 10   */ (void*)func_80489CAC,
+	/* 11   */ (void*)func_80489CE4,
+	/* 12   */ (void*)func_80489CF8,
+	/* 13   */ (void*)func_80489D30,
+	/* 14   */ (void*)func_80489D5C,
+	/* 15   */ (void*)func_80489D70,
+	/* 16   */ (void*)func_80489DB0,
+	/* 17   */ (void*)func_80489DE4,
+	/* 18   */ (void*)func_80489DF8,
+	/* 19   */ (void*)func_80489E18,
+	/* 20   */ (void*)func_80489E8C,
+	/* 21   */ (void*)func_80489EDC,
 };
 
 /* 8048A5F4-8048A5F8 0004+00 s=0 e=0 z=0  None .rodata    @4466                                                        */
@@ -539,19 +601,31 @@ SECTION_RODATA u32 const lit_4545 = 0x43FA0000;
 /* 8048A61C-8048A620 0004+00 s=0 e=0 z=0  None .rodata    @4546                                                        */
 SECTION_RODATA u32 const lit_4546 = 0x447A0000;
 
-/* 8048A620-8048A640 0020+00 s=0 e=0 z=0  None .data      l_daTag_Cam_Method                                           */
-SECTION_DATA u8 l_daTag_Cam_Method[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 8048A620-8048A640 0020+00 s=1 e=0 z=0  None .data      l_daTag_Cam_Method                                           */
+SECTION_DATA static void* l_daTag_Cam_Method[8] = {
+	/* 0    */ (void*)daTag_Cam_Create__FP10fopAc_ac_c,
+	/* 1    */ (void*)daTag_Cam_Delete__FP11daTag_Cam_c,
+	/* 2    */ (void*)daTag_Cam_Execute__FP11daTag_Cam_c,
+	/* 3    */ (void*)daTag_Cam_IsDelete__FP11daTag_Cam_c,
+	/* 4    */ (void*)daTag_Cam_Draw__FP11daTag_Cam_c,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
 };
 
-/* 8048A640-8048A670 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_CAMERA                                         */
-SECTION_DATA u8 g_profile_TAG_CAMERA[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x02, 0xCF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x05, 0x8C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x01, 0x17, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x40, 0x00, 0x00, 0x06, 0x00, 0x00,
+/* 8048A640-8048A670 0030+00 s=0 e=0 z=1  None .data      g_profile_TAG_CAMERA                                         */
+SECTION_DATA void* g_profile_TAG_CAMERA[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0007FFFD,
+	/* 2    */ (void*)0x02CF0000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x0000058C,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x01170000,
+	/* 9    */ (void*)&l_daTag_Cam_Method,
+	/* 10   */ (void*)0x00044000,
+	/* 11   */ (void*)0x00060000,
 };
-
-/* 8048A670-8048A674 0004+00 s=0 e=0 z=0  None .bss       Player__28@unnamed@d_a_tag_camera_cpp@                       */
-u8 data_8048A670[4];
 

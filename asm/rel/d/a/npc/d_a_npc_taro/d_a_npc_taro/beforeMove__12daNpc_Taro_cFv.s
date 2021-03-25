@@ -12,7 +12,7 @@ lbl_80567EB4:
 /* 80567EDC 00000028  88 03 0E 25 */	lbz r0, 0xe25(r3)
 /* 80567EE0 0000002C  28 00 00 00 */	cmplwi r0, 0
 /* 80567EE4 00000030  40 82 00 1C */	bne lbl_80567F00
-/* 80567EE8 00000034  4B FF DF 11 */	bl _unresolved
+/* 80567EE8 00000034  4B AC 7B 6C */	b dComIfGs_wolfeye_effect_check__Fv
 /* 80567EEC 00000038  2C 03 00 00 */	cmpwi r3, 0
 /* 80567EF0 0000003C  40 82 00 14 */	bne lbl_80567F04
 /* 80567EF4 00000040  88 1E 0A 89 */	lbz r0, 0xa89(r30)
@@ -31,7 +31,7 @@ lbl_80567F18:
 /* 80567F1C 00000004  88 1E 0E 25 */	lbz r0, 0xe25(r30)
 /* 80567F20 00000008  28 00 00 00 */	cmplwi r0, 0
 /* 80567F24 0000000C  40 82 00 1C */	bne lbl_80567F40
-/* 80567F28 00000010  4B FF DE D1 */	bl _unresolved
+/* 80567F28 00000010  4B AC 7B 2C */	b dComIfGs_wolfeye_effect_check__Fv
 /* 80567F2C 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 80567F30 00000018  40 82 00 14 */	bne lbl_80567F44
 /* 80567F34 0000001C  88 1E 0A 89 */	lbz r0, 0xa89(r30)

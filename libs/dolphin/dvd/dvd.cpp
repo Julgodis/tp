@@ -735,7 +735,7 @@ extern "C" asm static void DVDCancelAsync() {
 #pragma pop
 
 
-/* 8034B550-8034B5FC 00AC+00 s=0 e=1 z=0  None .text      DVDCancel                                                    */
+/* 8034B550-8034B5FC 00AC+00 s=0 e=1 z=1  None .text      DVDCancel                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -15,23 +15,23 @@ lbl_8036CD34:
 /* 8036CD68 00000034  80 1F 00 04 */	lwz r0, 4(r31)	/* effective address: 8044D894 */
 /* 8036CD6C 00000038  2C 00 00 00 */	cmpwi r0, 0
 /* 8036CD70 0000003C  40 81 00 4C */	ble lbl_8036CDBC
-/* 8036CD74 00000040  80 1F 00 08 */	lwz r0, 8(r31)
+/* 8036CD74 00000040  80 1F 00 08 */	lwz r0, 8(r31)	/* effective address: 8044D898 */
 /* 8036CD78 00000044  7F A3 EB 78 */	mr r3, r29
 /* 8036CD7C 00000048  38 A0 00 0C */	li r5, 0xc
 /* 8036CD80 0000004C  1C 00 00 0C */	mulli r0, r0, 0xc
 /* 8036CD84 00000050  7C 9F 02 14 */	add r4, r31, r0
 /* 8036CD88 00000054  38 84 00 0C */	addi r4, r4, 0xc
 /* 8036CD8C 00000058  4B C9 68 35 */	bl TRK_memcpy
-/* 8036CD90 0000005C  80 7F 00 08 */	lwz r3, 8(r31)
-/* 8036CD94 00000060  80 9F 00 04 */	lwz r4, 4(r31)
+/* 8036CD90 0000005C  80 7F 00 08 */	lwz r3, 8(r31)	/* effective address: 8044D898 */
+/* 8036CD94 00000060  80 9F 00 04 */	lwz r4, 4(r31)	/* effective address: 8044D894 */
 /* 8036CD98 00000064  38 03 00 01 */	addi r0, r3, 1
 /* 8036CD9C 00000068  38 64 FF FF */	addi r3, r4, -1
-/* 8036CDA0 0000006C  90 1F 00 08 */	stw r0, 8(r31)
+/* 8036CDA0 0000006C  90 1F 00 08 */	stw r0, 8(r31)	/* effective address: 8044D898 */
 /* 8036CDA4 00000070  2C 00 00 02 */	cmpwi r0, 2
-/* 8036CDA8 00000074  90 7F 00 04 */	stw r3, 4(r31)
+/* 8036CDA8 00000074  90 7F 00 04 */	stw r3, 4(r31)	/* effective address: 8044D894 */
 /* 8036CDAC 00000078  40 82 00 0C */	bne lbl_8036CDB8
 /* 8036CDB0 0000007C  38 00 00 00 */	li r0, 0
-/* 8036CDB4 00000080  90 1F 00 08 */	stw r0, 8(r31)
+/* 8036CDB4 00000080  90 1F 00 08 */	stw r0, 8(r31)	/* effective address: 8044D898 */
 lbl_8036CDB8:
 /* 8036CDB8 00000000  3B C0 00 01 */	li r30, 1
 lbl_8036CDBC:

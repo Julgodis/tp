@@ -257,13 +257,13 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
+struct JKRExpHeap {
+};
+
 struct JUtility {
 	struct TColor {
 	};
 
-};
-
-struct JKRExpHeap {
 };
 
 struct J2DGrafContext {
@@ -451,7 +451,7 @@ extern "C" void __dt__16dDlst_MenuSave_cFv(); // 1
 extern "C" void __dt__23dDlst_MenuSaveExplain_cFv(); // 1
 extern "C" void __dt__9dMs_HIO_cFv(); // 1
 extern "C" void __sinit_d_menu_save_cpp(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_menu_d_menu_save__stringBase0;
 extern "C" extern u8 data_803BDFD8[24];
 extern "C" extern u8 data_803BDFF0[16];
 extern "C" extern u8 data_803BE000[16];
@@ -468,67 +468,6 @@ extern "C" extern u8 data_803BE0C0[16];
 extern "C" extern u8 data_803BE0D0[80];
 extern "C" extern u8 data_803BE120[16];
 extern "C" extern u8 data_803BE130[24];
-extern "C" extern void* lit_4479[3];
-extern "C" extern void* lit_4480[3];
-extern "C" extern void* lit_4481[3];
-extern "C" extern void* lit_4482[3];
-extern "C" extern void* lit_4483[3];
-extern "C" extern void* lit_4484[3];
-extern "C" extern void* lit_4485[3];
-extern "C" extern void* lit_4486[3];
-extern "C" extern void* lit_4487[3];
-extern "C" extern void* lit_4488[3];
-extern "C" extern void* lit_4489[3];
-extern "C" extern void* lit_4490[3];
-extern "C" extern void* lit_4491[3];
-extern "C" extern void* lit_4492[3];
-extern "C" extern void* lit_4493[3];
-extern "C" extern void* lit_4494[3];
-extern "C" extern void* lit_4495[3];
-extern "C" extern void* lit_4496[3];
-extern "C" extern void* lit_4497[3];
-extern "C" extern void* lit_4498[3];
-extern "C" extern void* lit_4499[3];
-extern "C" extern void* lit_4500[3];
-extern "C" extern void* lit_4501[3];
-extern "C" extern void* lit_4502[3];
-extern "C" extern void* lit_4503[3];
-extern "C" extern void* lit_4504[3];
-extern "C" extern void* lit_4505[3];
-extern "C" extern void* lit_4506[3];
-extern "C" extern void* lit_4507[3];
-extern "C" extern void* lit_4508[3];
-extern "C" extern void* lit_4509[3];
-extern "C" extern void* lit_4510[3];
-extern "C" extern void* lit_4511[3];
-extern "C" extern void* lit_4512[3];
-extern "C" extern void* lit_4513[3];
-extern "C" extern void* lit_4514[3];
-extern "C" extern void* lit_4515[3];
-extern "C" extern void* lit_4516[3];
-extern "C" extern void* lit_4517[3];
-extern "C" extern void* lit_4518[3];
-extern "C" extern void* lit_4519[3];
-extern "C" extern void* lit_4520[3];
-extern "C" extern void* lit_4521[3];
-extern "C" extern void* lit_4522[3];
-extern "C" extern void* lit_4523[3];
-extern "C" extern void* lit_4524[3];
-extern "C" extern void* lit_4525[3];
-extern "C" extern void* lit_4526[3];
-extern "C" extern void* lit_4527[3];
-extern "C" extern void* lit_4528[3];
-extern "C" extern void* lit_4529[3];
-extern "C" extern void* lit_4530[3];
-extern "C" extern void* lit_4531[3];
-extern "C" extern void* lit_4532[3];
-extern "C" extern void* lit_4533[3];
-extern "C" extern void* lit_4534[3];
-extern "C" extern void* lit_4535[3];
-extern "C" extern void* lit_4536[3];
-extern "C" extern void* lit_4537[3];
-extern "C" extern void* lit_4538[3];
-extern "C" extern void* lit_4539[3];
 extern "C" extern void* __vt__16dDlst_MenuSave_c[4];
 extern "C" extern void* __vt__23dDlst_MenuSaveExplain_c[4 + 18 /* padding */];
 
@@ -786,434 +725,434 @@ SECTION_DATA u8 data_803BE130[24] = {
 	0x77, 0x5F, 0x64, 0x61, 0x74, 0x5F, 0x69, 0x32,
 };
 
-/* 803BE148-803BE154 000C+00 s=0 e=0 z=0  None .data      @4479                                                        */
-SECTION_DATA void* lit_4479[3] = {
+/* 803BE148-803BE154 000C+00 s=1 e=0 z=0  None .data      @4479                                                        */
+SECTION_DATA static void* lit_4479[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)saveQuestion__12dMenu_save_cFv,
 };
 
-/* 803BE154-803BE160 000C+00 s=0 e=0 z=0  None .data      @4480                                                        */
-SECTION_DATA void* lit_4480[3] = {
+/* 803BE154-803BE160 000C+00 s=1 e=0 z=0  None .data      @4480                                                        */
+SECTION_DATA static void* lit_4480[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)saveQuestion2__12dMenu_save_cFv,
 };
 
-/* 803BE160-803BE16C 000C+00 s=0 e=0 z=0  None .data      @4481                                                        */
-SECTION_DATA void* lit_4481[3] = {
+/* 803BE160-803BE16C 000C+00 s=1 e=0 z=0  None .data      @4481                                                        */
+SECTION_DATA static void* lit_4481[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)saveQuestion21__12dMenu_save_cFv,
 };
 
-/* 803BE16C-803BE178 000C+00 s=0 e=0 z=0  None .data      @4482                                                        */
-SECTION_DATA void* lit_4482[3] = {
+/* 803BE16C-803BE178 000C+00 s=1 e=0 z=0  None .data      @4482                                                        */
+SECTION_DATA static void* lit_4482[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)saveQuestion3__12dMenu_save_cFv,
 };
 
-/* 803BE178-803BE184 000C+00 s=0 e=0 z=0  None .data      @4483                                                        */
-SECTION_DATA void* lit_4483[3] = {
+/* 803BE178-803BE184 000C+00 s=1 e=0 z=0  None .data      @4483                                                        */
+SECTION_DATA static void* lit_4483[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)saveQuestion4__12dMenu_save_cFv,
 };
 
-/* 803BE184-803BE190 000C+00 s=0 e=0 z=0  None .data      @4484                                                        */
-SECTION_DATA void* lit_4484[3] = {
+/* 803BE184-803BE190 000C+00 s=1 e=0 z=0  None .data      @4484                                                        */
+SECTION_DATA static void* lit_4484[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)saveGuide__12dMenu_save_cFv,
 };
 
-/* 803BE190-803BE19C 000C+00 s=0 e=0 z=0  None .data      @4485                                                        */
-SECTION_DATA void* lit_4485[3] = {
+/* 803BE190-803BE19C 000C+00 s=1 e=0 z=0  None .data      @4485                                                        */
+SECTION_DATA static void* lit_4485[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)memCardCheck__12dMenu_save_cFv,
 };
 
-/* 803BE19C-803BE1A8 000C+00 s=0 e=0 z=0  None .data      @4486                                                        */
-SECTION_DATA void* lit_4486[3] = {
+/* 803BE19C-803BE1A8 000C+00 s=1 e=0 z=0  None .data      @4486                                                        */
+SECTION_DATA static void* lit_4486[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)backSaveQuestion__12dMenu_save_cFv,
 };
 
-/* 803BE1A8-803BE1B4 000C+00 s=0 e=0 z=0  None .data      @4487                                                        */
-SECTION_DATA void* lit_4487[3] = {
+/* 803BE1A8-803BE1B4 000C+00 s=1 e=0 z=0  None .data      @4487                                                        */
+SECTION_DATA static void* lit_4487[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)backSaveQuestion2__12dMenu_save_cFv,
 };
 
-/* 803BE1B4-803BE1C0 000C+00 s=0 e=0 z=0  None .data      @4488                                                        */
-SECTION_DATA void* lit_4488[3] = {
+/* 803BE1B4-803BE1C0 000C+00 s=1 e=0 z=0  None .data      @4488                                                        */
+SECTION_DATA static void* lit_4488[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)memCardErrMsgWaitKey__12dMenu_save_cFv,
 };
 
-/* 803BE1C0-803BE1CC 000C+00 s=0 e=0 z=0  None .data      @4489                                                        */
-SECTION_DATA void* lit_4489[3] = {
+/* 803BE1C0-803BE1CC 000C+00 s=1 e=0 z=0  None .data      @4489                                                        */
+SECTION_DATA static void* lit_4489[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)IPLSelectDisp1__12dMenu_save_cFv,
 };
 
-/* 803BE1CC-803BE1D8 000C+00 s=0 e=0 z=0  None .data      @4490                                                        */
-SECTION_DATA void* lit_4490[3] = {
+/* 803BE1CC-803BE1D8 000C+00 s=1 e=0 z=0  None .data      @4490                                                        */
+SECTION_DATA static void* lit_4490[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)IPLSelectDisp2__12dMenu_save_cFv,
 };
 
-/* 803BE1D8-803BE1E4 000C+00 s=0 e=0 z=0  None .data      @4491                                                        */
-SECTION_DATA void* lit_4491[3] = {
+/* 803BE1D8-803BE1E4 000C+00 s=1 e=0 z=0  None .data      @4491                                                        */
+SECTION_DATA static void* lit_4491[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)memCardErrGoIPLSel__12dMenu_save_cFv,
 };
 
-/* 803BE1E4-803BE1F0 000C+00 s=0 e=0 z=0  None .data      @4492                                                        */
-SECTION_DATA void* lit_4492[3] = {
+/* 803BE1E4-803BE1F0 000C+00 s=1 e=0 z=0  None .data      @4492                                                        */
+SECTION_DATA static void* lit_4492[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)IPLSelect2Disp__12dMenu_save_cFv,
 };
 
-/* 803BE1F0-803BE1FC 000C+00 s=0 e=0 z=0  None .data      @4493                                                        */
-SECTION_DATA void* lit_4493[3] = {
+/* 803BE1F0-803BE1FC 000C+00 s=1 e=0 z=0  None .data      @4493                                                        */
+SECTION_DATA static void* lit_4493[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)memCardErrGoIPLSel2__12dMenu_save_cFv,
 };
 
-/* 803BE1FC-803BE208 000C+00 s=0 e=0 z=0  None .data      @4494                                                        */
-SECTION_DATA void* lit_4494[3] = {
+/* 803BE1FC-803BE208 000C+00 s=1 e=0 z=0  None .data      @4494                                                        */
+SECTION_DATA static void* lit_4494[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)memCardErrGotoIPL__12dMenu_save_cFv,
 };
 
-/* 803BE208-803BE214 000C+00 s=0 e=0 z=0  None .data      @4495                                                        */
-SECTION_DATA void* lit_4495[3] = {
+/* 803BE208-803BE214 000C+00 s=1 e=0 z=0  None .data      @4495                                                        */
+SECTION_DATA static void* lit_4495[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)memCardErrMsgWaitFormatSel__12dMenu_save_cFv,
 };
 
-/* 803BE214-803BE220 000C+00 s=0 e=0 z=0  None .data      @4496                                                        */
-SECTION_DATA void* lit_4496[3] = {
+/* 803BE214-803BE220 000C+00 s=1 e=0 z=0  None .data      @4496                                                        */
+SECTION_DATA static void* lit_4496[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cardFormatYesSelDisp__12dMenu_save_cFv,
 };
 
-/* 803BE220-803BE22C 000C+00 s=0 e=0 z=0  None .data      @4497                                                        */
-SECTION_DATA void* lit_4497[3] = {
+/* 803BE220-803BE22C 000C+00 s=1 e=0 z=0  None .data      @4497                                                        */
+SECTION_DATA static void* lit_4497[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cardFormatNoSelDisp__12dMenu_save_cFv,
 };
 
-/* 803BE22C-803BE238 000C+00 s=0 e=0 z=0  None .data      @4498                                                        */
-SECTION_DATA void* lit_4498[3] = {
+/* 803BE22C-803BE238 000C+00 s=1 e=0 z=0  None .data      @4498                                                        */
+SECTION_DATA static void* lit_4498[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)memCardErrMsgWaitFormatSel2__12dMenu_save_cFv,
 };
 
-/* 803BE238-803BE244 000C+00 s=0 e=0 z=0  None .data      @4499                                                        */
-SECTION_DATA void* lit_4499[3] = {
+/* 803BE238-803BE244 000C+00 s=1 e=0 z=0  None .data      @4499                                                        */
+SECTION_DATA static void* lit_4499[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cardFormatYesSel2Disp__12dMenu_save_cFv,
 };
 
-/* 803BE244-803BE250 000C+00 s=0 e=0 z=0  None .data      @4500                                                        */
-SECTION_DATA void* lit_4500[3] = {
+/* 803BE244-803BE250 000C+00 s=1 e=0 z=0  None .data      @4500                                                        */
+SECTION_DATA static void* lit_4500[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)memCardFormat__12dMenu_save_cFv,
 };
 
-/* 803BE250-803BE25C 000C+00 s=0 e=0 z=0  None .data      @4501                                                        */
-SECTION_DATA void* lit_4501[3] = {
+/* 803BE250-803BE25C 000C+00 s=1 e=0 z=0  None .data      @4501                                                        */
+SECTION_DATA static void* lit_4501[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)memCardFormatWait__12dMenu_save_cFv,
 };
 
-/* 803BE25C-803BE268 000C+00 s=0 e=0 z=0  None .data      @4502                                                        */
-SECTION_DATA void* lit_4502[3] = {
+/* 803BE25C-803BE268 000C+00 s=1 e=0 z=0  None .data      @4502                                                        */
+SECTION_DATA static void* lit_4502[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)makeGameFileSelDisp__12dMenu_save_cFv,
 };
 
-/* 803BE268-803BE274 000C+00 s=0 e=0 z=0  None .data      @4503                                                        */
-SECTION_DATA void* lit_4503[3] = {
+/* 803BE268-803BE274 000C+00 s=1 e=0 z=0  None .data      @4503                                                        */
+SECTION_DATA static void* lit_4503[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)memCardMakeGameFileSel__12dMenu_save_cFv,
 };
 
-/* 803BE274-803BE280 000C+00 s=0 e=0 z=0  None .data      @4504                                                        */
-SECTION_DATA void* lit_4504[3] = {
+/* 803BE274-803BE280 000C+00 s=1 e=0 z=0  None .data      @4504                                                        */
+SECTION_DATA static void* lit_4504[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)makeGameFileDisp__12dMenu_save_cFv,
 };
 
-/* 803BE280-803BE28C 000C+00 s=0 e=0 z=0  None .data      @4505                                                        */
-SECTION_DATA void* lit_4505[3] = {
+/* 803BE280-803BE28C 000C+00 s=1 e=0 z=0  None .data      @4505                                                        */
+SECTION_DATA static void* lit_4505[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)memCardMakeGameFile__12dMenu_save_cFv,
 };
 
-/* 803BE28C-803BE298 000C+00 s=0 e=0 z=0  None .data      @4506                                                        */
-SECTION_DATA void* lit_4506[3] = {
+/* 803BE28C-803BE298 000C+00 s=1 e=0 z=0  None .data      @4506                                                        */
+SECTION_DATA static void* lit_4506[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)memCardMakeGameFileWait__12dMenu_save_cFv,
 };
 
-/* 803BE298-803BE2A4 000C+00 s=0 e=0 z=0  None .data      @4507                                                        */
-SECTION_DATA void* lit_4507[3] = {
+/* 803BE298-803BE2A4 000C+00 s=1 e=0 z=0  None .data      @4507                                                        */
+SECTION_DATA static void* lit_4507[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)memCardCommandEnd__12dMenu_save_cFv,
 };
 
-/* 803BE2A4-803BE2B0 000C+00 s=0 e=0 z=0  None .data      @4508                                                        */
-SECTION_DATA void* lit_4508[3] = {
+/* 803BE2A4-803BE2B0 000C+00 s=1 e=0 z=0  None .data      @4508                                                        */
+SECTION_DATA static void* lit_4508[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)memCardCommandEnd2__12dMenu_save_cFv,
 };
 
-/* 803BE2B0-803BE2BC 000C+00 s=0 e=0 z=0  None .data      @4509                                                        */
-SECTION_DATA void* lit_4509[3] = {
+/* 803BE2B0-803BE2BC 000C+00 s=1 e=0 z=0  None .data      @4509                                                        */
+SECTION_DATA static void* lit_4509[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)memCardDataLoadWait__12dMenu_save_cFv,
 };
 
-/* 803BE2BC-803BE2C8 000C+00 s=0 e=0 z=0  None .data      @4510                                                        */
-SECTION_DATA void* lit_4510[3] = {
+/* 803BE2BC-803BE2C8 000C+00 s=1 e=0 z=0  None .data      @4510                                                        */
+SECTION_DATA static void* lit_4510[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)memCardDataSaveWait__12dMenu_save_cFv,
 };
 
-/* 803BE2C8-803BE2D4 000C+00 s=0 e=0 z=0  None .data      @4511                                                        */
-SECTION_DATA void* lit_4511[3] = {
+/* 803BE2C8-803BE2D4 000C+00 s=1 e=0 z=0  None .data      @4511                                                        */
+SECTION_DATA static void* lit_4511[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)memCardDataSaveWait2__12dMenu_save_cFv,
 };
 
-/* 803BE2D4-803BE2E0 000C+00 s=0 e=0 z=0  None .data      @4512                                                        */
-SECTION_DATA void* lit_4512[3] = {
+/* 803BE2D4-803BE2E0 000C+00 s=1 e=0 z=0  None .data      @4512                                                        */
+SECTION_DATA static void* lit_4512[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)gameContinueDisp__12dMenu_save_cFv,
 };
 
-/* 803BE2E0-803BE2EC 000C+00 s=0 e=0 z=0  None .data      @4513                                                        */
-SECTION_DATA void* lit_4513[3] = {
+/* 803BE2E0-803BE2EC 000C+00 s=1 e=0 z=0  None .data      @4513                                                        */
+SECTION_DATA static void* lit_4513[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)gameContinue__12dMenu_save_cFv,
 };
 
-/* 803BE2EC-803BE2F8 000C+00 s=0 e=0 z=0  None .data      @4514                                                        */
-SECTION_DATA void* lit_4514[3] = {
+/* 803BE2EC-803BE2F8 000C+00 s=1 e=0 z=0  None .data      @4514                                                        */
+SECTION_DATA static void* lit_4514[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)gameContinue2__12dMenu_save_cFv,
 };
 
-/* 803BE2F8-803BE304 000C+00 s=0 e=0 z=0  None .data      @4515                                                        */
-SECTION_DATA void* lit_4515[3] = {
+/* 803BE2F8-803BE304 000C+00 s=1 e=0 z=0  None .data      @4515                                                        */
+SECTION_DATA static void* lit_4515[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)gameContinue3__12dMenu_save_cFv,
 };
 
-/* 803BE304-803BE310 000C+00 s=0 e=0 z=0  None .data      @4516                                                        */
-SECTION_DATA void* lit_4516[3] = {
+/* 803BE304-803BE310 000C+00 s=1 e=0 z=0  None .data      @4516                                                        */
+SECTION_DATA static void* lit_4516[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)saveEnd__12dMenu_save_cFv,
 };
 
-/* 803BE310-803BE31C 000C+00 s=0 e=0 z=0  None .data      @4517                                                        */
-SECTION_DATA void* lit_4517[3] = {
+/* 803BE310-803BE31C 000C+00 s=1 e=0 z=0  None .data      @4517                                                        */
+SECTION_DATA static void* lit_4517[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)endingNoSave__12dMenu_save_cFv,
 };
 
-/* 803BE31C-803BE328 000C+00 s=0 e=0 z=0  None .data      @4518                                                        */
-SECTION_DATA void* lit_4518[3] = {
+/* 803BE31C-803BE328 000C+00 s=1 e=0 z=0  None .data      @4518                                                        */
+SECTION_DATA static void* lit_4518[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)endingNoSave2__12dMenu_save_cFv,
 };
 
-/* 803BE328-803BE334 000C+00 s=0 e=0 z=0  None .data      @4519                                                        */
-SECTION_DATA void* lit_4519[3] = {
+/* 803BE328-803BE334 000C+00 s=1 e=0 z=0  None .data      @4519                                                        */
+SECTION_DATA static void* lit_4519[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)endingDataCheck__12dMenu_save_cFv,
 };
 
-/* 803BE334-803BE340 000C+00 s=0 e=0 z=0  None .data      @4520                                                        */
-SECTION_DATA void* lit_4520[3] = {
+/* 803BE334-803BE340 000C+00 s=1 e=0 z=0  None .data      @4520                                                        */
+SECTION_DATA static void* lit_4520[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)saveWait__12dMenu_save_cFv,
 };
 
-/* 803BE340-803BE34C 000C+00 s=0 e=0 z=0  None .data      @4521                                                        */
-SECTION_DATA void* lit_4521[3] = {
+/* 803BE340-803BE34C 000C+00 s=1 e=0 z=0  None .data      @4521                                                        */
+SECTION_DATA static void* lit_4521[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)messageChange__12dMenu_save_cFv,
 };
 
-/* 803BE34C-803BE358 000C+00 s=0 e=0 z=0  None .data      @4522                                                        */
-SECTION_DATA void* lit_4522[3] = {
+/* 803BE34C-803BE358 000C+00 s=1 e=0 z=0  None .data      @4522                                                        */
+SECTION_DATA static void* lit_4522[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)retryQuestion0__12dMenu_save_cFv,
 };
 
-/* 803BE358-803BE364 000C+00 s=0 e=0 z=0  None .data      @4523                                                        */
-SECTION_DATA void* lit_4523[3] = {
+/* 803BE358-803BE364 000C+00 s=1 e=0 z=0  None .data      @4523                                                        */
+SECTION_DATA static void* lit_4523[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)retryQuestion1__12dMenu_save_cFv,
 };
 
-/* 803BE364-803BE370 000C+00 s=0 e=0 z=0  None .data      @4524                                                        */
-SECTION_DATA void* lit_4524[3] = {
+/* 803BE364-803BE370 000C+00 s=1 e=0 z=0  None .data      @4524                                                        */
+SECTION_DATA static void* lit_4524[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)retryQuestion2__12dMenu_save_cFv,
 };
 
-/* 803BE370-803BE37C 000C+00 s=0 e=0 z=0  None .data      @4525                                                        */
-SECTION_DATA void* lit_4525[3] = {
+/* 803BE370-803BE37C 000C+00 s=1 e=0 z=0  None .data      @4525                                                        */
+SECTION_DATA static void* lit_4525[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)openSaveSelect__12dMenu_save_cFv,
 };
 
-/* 803BE37C-803BE388 000C+00 s=0 e=0 z=0  None .data      @4526                                                        */
-SECTION_DATA void* lit_4526[3] = {
+/* 803BE37C-803BE388 000C+00 s=1 e=0 z=0  None .data      @4526                                                        */
+SECTION_DATA static void* lit_4526[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)openSaveSelect2__12dMenu_save_cFv,
 };
 
-/* 803BE388-803BE394 000C+00 s=0 e=0 z=0  None .data      @4527                                                        */
-SECTION_DATA void* lit_4527[3] = {
+/* 803BE388-803BE394 000C+00 s=1 e=0 z=0  None .data      @4527                                                        */
+SECTION_DATA static void* lit_4527[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)openSaveSelect3__12dMenu_save_cFv,
 };
 
-/* 803BE394-803BE3A0 000C+00 s=0 e=0 z=0  None .data      @4528                                                        */
-SECTION_DATA void* lit_4528[3] = {
+/* 803BE394-803BE3A0 000C+00 s=1 e=0 z=0  None .data      @4528                                                        */
+SECTION_DATA static void* lit_4528[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)saveSelect__12dMenu_save_cFv,
 };
 
-/* 803BE3A0-803BE3AC 000C+00 s=0 e=0 z=0  None .data      @4529                                                        */
-SECTION_DATA void* lit_4529[3] = {
+/* 803BE3A0-803BE3AC 000C+00 s=1 e=0 z=0  None .data      @4529                                                        */
+SECTION_DATA static void* lit_4529[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)saveSelectMoveAnime__12dMenu_save_cFv,
 };
 
-/* 803BE3AC-803BE3B8 000C+00 s=0 e=0 z=0  None .data      @4530                                                        */
-SECTION_DATA void* lit_4530[3] = {
+/* 803BE3AC-803BE3B8 000C+00 s=1 e=0 z=0  None .data      @4530                                                        */
+SECTION_DATA static void* lit_4530[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)selectDataOpenMove__12dMenu_save_cFv,
 };
 
-/* 803BE3B8-803BE3C4 000C+00 s=0 e=0 z=0  None .data      @4531                                                        */
-SECTION_DATA void* lit_4531[3] = {
+/* 803BE3B8-803BE3C4 000C+00 s=1 e=0 z=0  None .data      @4531                                                        */
+SECTION_DATA static void* lit_4531[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)saveYesNoSelect__12dMenu_save_cFv,
 };
 
-/* 803BE3C4-803BE3D0 000C+00 s=0 e=0 z=0  None .data      @4532                                                        */
-SECTION_DATA void* lit_4532[3] = {
+/* 803BE3C4-803BE3D0 000C+00 s=1 e=0 z=0  None .data      @4532                                                        */
+SECTION_DATA static void* lit_4532[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)yesNoCursorMoveAnm__12dMenu_save_cFv,
 };
 
-/* 803BE3D0-803BE3DC 000C+00 s=0 e=0 z=0  None .data      @4533                                                        */
-SECTION_DATA void* lit_4533[3] = {
+/* 803BE3D0-803BE3DC 000C+00 s=1 e=0 z=0  None .data      @4533                                                        */
+SECTION_DATA static void* lit_4533[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)saveYesNoCancelMove__12dMenu_save_cFv,
 };
 
-/* 803BE3DC-803BE3E8 000C+00 s=0 e=0 z=0  None .data      @4534                                                        */
-SECTION_DATA void* lit_4534[3] = {
+/* 803BE3DC-803BE3E8 000C+00 s=1 e=0 z=0  None .data      @4534                                                        */
+SECTION_DATA static void* lit_4534[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)saveMoveDisp__12dMenu_save_cFv,
 };
 
-/* 803BE3E8-803BE3F4 000C+00 s=0 e=0 z=0  None .data      @4535                                                        */
-SECTION_DATA void* lit_4535[3] = {
+/* 803BE3E8-803BE3F4 000C+00 s=1 e=0 z=0  None .data      @4535                                                        */
+SECTION_DATA static void* lit_4535[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)saveMoveDisp2__12dMenu_save_cFv,
 };
 
-/* 803BE3F4-803BE400 000C+00 s=0 e=0 z=0  None .data      @4536                                                        */
-SECTION_DATA void* lit_4536[3] = {
+/* 803BE3F4-803BE400 000C+00 s=1 e=0 z=0  None .data      @4536                                                        */
+SECTION_DATA static void* lit_4536[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)msgWindowInitOpen__12dMenu_save_cFv,
 };
 
-/* 803BE400-803BE40C 000C+00 s=0 e=0 z=0  None .data      @4537                                                        */
-SECTION_DATA void* lit_4537[3] = {
+/* 803BE400-803BE40C 000C+00 s=1 e=0 z=0  None .data      @4537                                                        */
+SECTION_DATA static void* lit_4537[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)msgWindowOpen__12dMenu_save_cFv,
 };
 
-/* 803BE40C-803BE418 000C+00 s=0 e=0 z=0  None .data      @4538                                                        */
-SECTION_DATA void* lit_4538[3] = {
+/* 803BE40C-803BE418 000C+00 s=1 e=0 z=0  None .data      @4538                                                        */
+SECTION_DATA static void* lit_4538[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)msgWindowClose__12dMenu_save_cFv,
 };
 
-/* 803BE418-803BE424 000C+00 s=0 e=0 z=0  None .data      @4539                                                        */
-SECTION_DATA void* lit_4539[3] = {
+/* 803BE418-803BE424 000C+00 s=1 e=0 z=0  None .data      @4539                                                        */
+SECTION_DATA static void* lit_4539[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)errYesNoCursorMoveAnm__12dMenu_save_cFv,
 };
 
-/* 803BE424-803BE70C 02E8+00 s=1 e=0 z=0  None .data      MenuSaveProc                                                 */
+/* 803BE424-803BE70C 02E8+00 s=2 e=0 z=0  None .data      MenuSaveProc                                                 */
 SECTION_DATA static u8 MenuSaveProc[744] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

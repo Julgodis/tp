@@ -46,14 +46,70 @@ struct daMagLift_c {
 struct fopAc_ac_c {
 };
 
+struct J3DModel {
+};
+
+struct J3DModelData {
+};
+
+struct request_of_phase_process_class {
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dBgW {
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+	/* 8026702C */ bool operator==(Vec const&) const;
+};
+
+struct csXyz {
+};
+
+struct dBgS_MoveBgActor {
+	/* 80078624 */ dBgS_MoveBgActor();
+	/* 80078690 */ void Create();
+	/* 800786B0 */ void IsDelete();
+	/* 800786B8 */ void ToFore();
+	/* 800786C0 */ void ToBack();
+	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
+	/* 800788DC */ void MoveBGDelete();
+	/* 80078950 */ void MoveBGExecute();
+};
+
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
 // 
 // Forward References:
 // 
 
-void daMagLift_Draw(daMagLift_c*); // 2
-void daMagLift_Execute(daMagLift_c*); // 2
-void daMagLift_Delete(daMagLift_c*); // 2
-void daMagLift_Create(fopAc_ac_c*); // 2
+static void daMagLift_Draw(daMagLift_c*); // 2
+static void daMagLift_Execute(daMagLift_c*); // 2
+static void daMagLift_Delete(daMagLift_c*); // 2
+static void daMagLift_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__15daMagLift_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -77,54 +133,205 @@ extern "C" void modeDead__11daMagLift_cFv(); // 1
 extern "C" void setNextPoint__11daMagLift_cFv(); // 1
 extern "C" void Draw__11daMagLift_cFv(); // 1
 extern "C" void Delete__11daMagLift_cFv(); // 1
-extern "C" void daMagLift_Draw__FP11daMagLift_c(); // 1
-extern "C" void daMagLift_Execute__FP11daMagLift_c(); // 1
-extern "C" void daMagLift_Delete__FP11daMagLift_c(); // 1
-extern "C" void daMagLift_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daMagLift_Draw__FP11daMagLift_c(); // 1
+extern "C" static void daMagLift_Execute__FP11daMagLift_c(); // 1
+extern "C" static void daMagLift_Delete__FP11daMagLift_c(); // 1
+extern "C" static void daMagLift_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__15daMagLift_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_magLift_cpp(); // 1
-extern "C" extern u8 const mSpeed__11daMagLift_c[64];
-extern "C" extern u8 const lit_3718[4];
-extern "C" extern u32 const lit_3759;
 extern "C" extern u32 const lit_3760;
-extern "C" extern u32 const lit_3761;
-extern "C" extern u8 const lit_3834[8];
-extern "C" extern u8 const lit_3835[8];
 extern "C" extern u8 const lit_3836[8];
 extern "C" extern u32 const lit_3837;
 extern "C" extern u32 const lit_3838;
-extern "C" extern u32 const lit_3852;
 extern "C" extern char const* const stringBase0;
-extern "C" extern u8 cNullVec__6Z2Calc[12];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern u8 lit_3736[12];
-extern "C" extern u8 lit_3737[12];
-extern "C" extern u8 lit_3738[12];
-extern "C" extern u8 lit_3739[12];
-extern "C" extern u8 lit_3740[12];
-extern "C" extern u8 lit_3741[12];
-extern "C" extern u8 lit_3742[12];
-extern "C" extern u8 data_80C8E750[96];
-extern "C" extern u8 l_daMagLift_Method[32];
-extern "C" extern u8 g_profile_Obj_MagLift[48];
-extern "C" extern void* __vt__11daMagLift_c[10];
-extern "C" extern void* __vt__15daMagLift_HIO_c[3];
-extern "C" extern void* __vt__14mDoHIO_entry_c[3];
-extern "C" extern u8 lit_3619[12];
-extern "C" extern u8 l_HIO[8];
-extern "C" extern u8 data_80C8E85C[4];
+extern "C" extern void* g_profile_Obj_MagLift[12];
 
 // 
 // External References:
 // 
 
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
+void mDoExt_modelUpdateDL(J3DModel*); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void dPath_GetRoomPath(int, int); // 2
+void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*); // 2
+void cLib_addCalcPos(cXyz*, cXyz const&, f32, f32, f32); // 2
+void cLib_chaseF(f32*, f32, f32); // 2
+void operator delete(void*); // 2
 
-extern "C" void _unresolved(); // 1
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void dPath_GetRoomPath__Fii(); // 1
+extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
+extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" void Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" bool __eq__4cXyzCFRC3Vec(); // 1
+extern "C" void cLib_addCalcPos__FP4cXyzRC4cXyzfff(); // 1
+extern "C" void cLib_chaseF__FPfff(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u32 __float_nan;
 extern "C" void __register_global_object(); // 1
 
 // 
 // Declarations:
 // 
+
+/* ############################################################################################## */
+/* 80C8E6DC-80C8E6E8 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C8E6E8-80C8E6FC 0004+10 s=0 e=0 z=0  None .data      @1787                                                        */
+SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
+	0x02000201,
+	/* padding */
+	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
+};
+
+/* 80C8E6FC-80C8E708 000C+00 s=1 e=0 z=0  None .data      @3736                                                        */
+SECTION_DATA static void* lit_3736[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)modeAcc__11daMagLift_cFv,
+};
+
+/* 80C8E708-80C8E714 000C+00 s=1 e=0 z=0  None .data      @3737                                                        */
+SECTION_DATA static void* lit_3737[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)modeMove__11daMagLift_cFv,
+};
+
+/* 80C8E714-80C8E720 000C+00 s=1 e=0 z=0  None .data      @3738                                                        */
+SECTION_DATA static void* lit_3738[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)modeBrk__11daMagLift_cFv,
+};
+
+/* 80C8E720-80C8E72C 000C+00 s=1 e=0 z=0  None .data      @3739                                                        */
+SECTION_DATA static void* lit_3739[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)modeWait__11daMagLift_cFv,
+};
+
+/* 80C8E72C-80C8E738 000C+00 s=1 e=0 z=0  None .data      @3740                                                        */
+SECTION_DATA static void* lit_3740[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)modeWaitInit__11daMagLift_cFv,
+};
+
+/* 80C8E738-80C8E744 000C+00 s=1 e=0 z=0  None .data      @3741                                                        */
+SECTION_DATA static void* lit_3741[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)modeDead__11daMagLift_cFv,
+};
+
+/* 80C8E744-80C8E750 000C+00 s=1 e=0 z=0  None .data      @3742                                                        */
+SECTION_DATA static void* lit_3742[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)modeMoveWait__11daMagLift_cFv,
+};
+
+/* 80C8E750-80C8E7B0 0060+00 s=1 e=0 z=0  None .data      mode_proc$3735                                               */
+SECTION_DATA static u8 data_80C8E750[96] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C8E7B0-80C8E7D0 0020+00 s=1 e=0 z=0  None .data      l_daMagLift_Method                                           */
+SECTION_DATA static void* l_daMagLift_Method[8] = {
+	/* 0    */ (void*)daMagLift_Create__FP10fopAc_ac_c,
+	/* 1    */ (void*)daMagLift_Delete__FP11daMagLift_c,
+	/* 2    */ (void*)daMagLift_Execute__FP11daMagLift_c,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)daMagLift_Draw__FP11daMagLift_c,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+};
+
+/* 80C8E7D0-80C8E800 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_MagLift                                        */
+SECTION_DATA void* g_profile_Obj_MagLift[12] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0003FFFD,
+	/* 2    */ (void*)0x00370000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x000005D4,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopAc_Method,
+	/* 8    */ (void*)0x01EC0000,
+	/* 9    */ (void*)&l_daMagLift_Method,
+	/* 10   */ (void*)0x00040100,
+	/* 11   */ (void*)0x000E0000,
+};
+
+/* 80C8E800-80C8E828 0028+00 s=1 e=0 z=0  None .data      __vt__11daMagLift_c                                          */
+SECTION_DATA static void* __vt__11daMagLift_c[10] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)CreateHeap__11daMagLift_cFv,
+	/* 3    */ (void*)Create__16dBgS_MoveBgActorFv,
+	/* 4    */ (void*)Execute__11daMagLift_cFPPA3_A4_f,
+	/* 5    */ (void*)Draw__11daMagLift_cFv,
+	/* 6    */ (void*)Delete__11daMagLift_cFv,
+	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
+	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
+	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+};
+
+/* 80C8E828-80C8E834 000C+00 s=2 e=0 z=0  None .data      __vt__15daMagLift_HIO_c                                      */
+SECTION_DATA static void* __vt__15daMagLift_HIO_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__15daMagLift_HIO_cFv,
+};
+
+/* 80C8E834-80C8E840 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
+SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__14mDoHIO_entry_cFv,
+};
 
 /* 80C8DA2C-80C8DA58 002C+00 s=1 e=0 z=0  None .text      __ct__15daMagLift_HIO_cFv                                    */
 #pragma push
@@ -137,7 +344,7 @@ asm daMagLift_HIO_c::daMagLift_HIO_c() {
 #pragma pop
 
 
-/* 80C8DA58-80C8DAA0 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80C8DA58-80C8DAA0 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -159,7 +366,61 @@ asm void daMagLift_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80C8DB28-80C8DB94 006C+00 s=0 e=0 z=0  None .text      CreateHeap__11daMagLift_cFv                                  */
+/* ############################################################################################## */
+/* 80C8E65C-80C8E69C 0040+00 s=4 e=0 z=0  None .rodata    mSpeed__11daMagLift_c                                        */
+SECTION_RODATA static u8 const mSpeed__11daMagLift_c[64] = {
+	0x40, 0xA0, 0x00, 0x00, 0x40, 0xD5, 0x55, 0x55, 0x41, 0x05, 0x55, 0x55, 0x41, 0x20, 0x00, 0x00,
+	0x41, 0x3A, 0xAA, 0xAB, 0x41, 0x55, 0x55, 0x55, 0x41, 0x70, 0x00, 0x00, 0x41, 0x85, 0x55, 0x55,
+	0x41, 0x92, 0xAA, 0xAB, 0x41, 0xA0, 0x00, 0x00, 0x41, 0xAD, 0x55, 0x55, 0x41, 0xBA, 0xAA, 0xAB,
+	0x41, 0xC8, 0x00, 0x00, 0x41, 0xD5, 0x55, 0x55, 0x41, 0xE2, 0xAA, 0xAB, 0x40, 0x55, 0x55, 0x55,
+};
+
+/* 80C8E69C-80C8E6A0 0004+00 s=3 e=0 z=0  None .rodata    @3718                                                        */
+SECTION_RODATA static u8 const lit_3718[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C8E6A0-80C8E6A4 0004+00 s=1 e=0 z=0  None .rodata    @3759                                                        */
+SECTION_RODATA static u32 const lit_3759 = 0x41F00000;
+
+/* 80C8E6A4-80C8E6A8 0004+00 s=0 e=0 z=0  None .rodata    @3760                                                        */
+SECTION_RODATA u32 const lit_3760 = 0x3F800000;
+
+/* 80C8E6A8-80C8E6AC 0004+00 s=1 e=0 z=0  None .rodata    @3761                                                        */
+SECTION_RODATA static u32 const lit_3761 = 0x3DCCCCCD;
+
+/* 80C8E6AC-80C8E6B4 0008+00 s=1 e=0 z=0  None .rodata    @3834                                                        */
+SECTION_RODATA static u8 const lit_3834[8] = {
+	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C8E6B4-80C8E6BC 0008+00 s=1 e=0 z=0  None .rodata    @3835                                                        */
+SECTION_RODATA static u8 const lit_3835[8] = {
+	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C8E6BC-80C8E6C4 0008+00 s=0 e=0 z=0  None .rodata    @3836                                                        */
+SECTION_RODATA u8 const lit_3836[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C8E6C4-80C8E6C8 0004+00 s=0 e=0 z=0  None .rodata    @3837                                                        */
+SECTION_RODATA u32 const lit_3837 = 0x3E99999A;
+
+/* 80C8E6C8-80C8E6CC 0004+00 s=0 e=0 z=0  None .rodata    @3838                                                        */
+SECTION_RODATA u32 const lit_3838 = 0x43960000;
+
+/* 80C8E6CC-80C8E6D0 0004+00 s=1 e=0 z=0  None .rodata    @3852                                                        */
+SECTION_RODATA static u32 const lit_3852 = 0x3F000000;
+
+/* 80C8E6D0-80C8E6DA 000A+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80C8E6D0 = "L_maglift";
+#pragma pop
+
+/* 80C8DB28-80C8DB94 006C+00 s=1 e=0 z=0  None .text      CreateHeap__11daMagLift_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,7 +442,7 @@ asm void daMagLift_c::create() {
 #pragma pop
 
 
-/* 80C8DD38-80C8DD88 0050+00 s=0 e=0 z=0  None .text      Execute__11daMagLift_cFPPA3_A4_f                             */
+/* 80C8DD38-80C8DD88 0050+00 s=1 e=0 z=0  None .text      Execute__11daMagLift_cFPPA3_A4_f                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,6 +452,16 @@ asm void daMagLift_c::Execute(f32 (** param_0)[3][4]) {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80C8E848-80C8E854 000C+00 s=1 e=0 z=0  None .bss       @3619                                                        */
+static u8 lit_3619[12];
+
+/* 80C8E854-80C8E85C 0008+00 s=1 e=0 z=0  None .bss       l_HIO                                                        */
+static u8 l_HIO[8];
+
+/* 80C8E85C-80C8E860 0004+00 s=1 e=0 z=0  None .bss       None                                                         */
+static u8 data_80C8E85C[4];
 
 /* 80C8DD88-80C8DE98 0110+00 s=1 e=0 z=0  None .text      moveLift__11daMagLift_cFv                                    */
 #pragma push
@@ -203,7 +474,7 @@ asm void daMagLift_c::moveLift() {
 #pragma pop
 
 
-/* 80C8DE98-80C8DF20 0088+00 s=0 e=0 z=0  None .text      modeAcc__11daMagLift_cFv                                     */
+/* 80C8DE98-80C8DF20 0088+00 s=1 e=0 z=0  None .text      modeAcc__11daMagLift_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,7 +496,7 @@ asm void daMagLift_c::init_modeMove() {
 #pragma pop
 
 
-/* 80C8DF2C-80C8E1EC 02C0+00 s=0 e=0 z=0  None .text      modeMove__11daMagLift_cFv                                    */
+/* 80C8DF2C-80C8E1EC 02C0+00 s=1 e=0 z=0  None .text      modeMove__11daMagLift_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -247,7 +518,7 @@ asm void daMagLift_c::init_modeBrk() {
 #pragma pop
 
 
-/* 80C8E1F8-80C8E260 0068+00 s=0 e=0 z=0  None .text      modeBrk__11daMagLift_cFv                                     */
+/* 80C8E1F8-80C8E260 0068+00 s=1 e=0 z=0  None .text      modeBrk__11daMagLift_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -269,7 +540,7 @@ asm void daMagLift_c::init_modeWaitInit() {
 #pragma pop
 
 
-/* 80C8E26C-80C8E2A0 0034+00 s=0 e=0 z=0  None .text      modeWaitInit__11daMagLift_cFv                                */
+/* 80C8E26C-80C8E2A0 0034+00 s=1 e=0 z=0  None .text      modeWaitInit__11daMagLift_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,7 +562,7 @@ asm void daMagLift_c::init_modeWait() {
 #pragma pop
 
 
-/* 80C8E2AC-80C8E2B8 000C+00 s=0 e=0 z=0  None .text      modeWait__11daMagLift_cFv                                    */
+/* 80C8E2AC-80C8E2B8 000C+00 s=1 e=0 z=0  None .text      modeWait__11daMagLift_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -313,7 +584,7 @@ asm void daMagLift_c::init_modeMoveWait() {
 #pragma pop
 
 
-/* 80C8E2C4-80C8E318 0054+00 s=0 e=0 z=0  None .text      modeMoveWait__11daMagLift_cFv                                */
+/* 80C8E2C4-80C8E318 0054+00 s=1 e=0 z=0  None .text      modeMoveWait__11daMagLift_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -324,7 +595,7 @@ asm void daMagLift_c::modeMoveWait() {
 #pragma pop
 
 
-/* 80C8E318-80C8E31C 0004+00 s=0 e=0 z=0  None .text      modeDead__11daMagLift_cFv                                    */
+/* 80C8E318-80C8E31C 0004+00 s=1 e=0 z=0  None .text      modeDead__11daMagLift_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -346,7 +617,7 @@ asm void daMagLift_c::setNextPoint() {
 #pragma pop
 
 
-/* 80C8E450-80C8E4F4 00A4+00 s=0 e=0 z=0  None .text      Draw__11daMagLift_cFv                                        */
+/* 80C8E450-80C8E4F4 00A4+00 s=1 e=0 z=0  None .text      Draw__11daMagLift_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -357,7 +628,7 @@ asm void daMagLift_c::Draw() {
 #pragma pop
 
 
-/* 80C8E4F4-80C8E524 0030+00 s=0 e=0 z=0  None .text      Delete__11daMagLift_cFv                                      */
+/* 80C8E4F4-80C8E524 0030+00 s=1 e=0 z=0  None .text      Delete__11daMagLift_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -368,51 +639,51 @@ asm void daMagLift_c::Delete() {
 #pragma pop
 
 
-/* 80C8E524-80C8E550 002C+00 s=0 e=0 z=0  None .text      daMagLift_Draw__FP11daMagLift_c                              */
+/* 80C8E524-80C8E550 002C+00 s=1 e=0 z=0  None .text      daMagLift_Draw__FP11daMagLift_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daMagLift_Draw(daMagLift_c* param_0) {
+asm static void daMagLift_Draw(daMagLift_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/daMagLift_Draw__FP11daMagLift_c.s"
 }
 #pragma pop
 
 
-/* 80C8E550-80C8E570 0020+00 s=0 e=0 z=0  None .text      daMagLift_Execute__FP11daMagLift_c                           */
+/* 80C8E550-80C8E570 0020+00 s=1 e=0 z=0  None .text      daMagLift_Execute__FP11daMagLift_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daMagLift_Execute(daMagLift_c* param_0) {
+asm static void daMagLift_Execute(daMagLift_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/daMagLift_Execute__FP11daMagLift_c.s"
 }
 #pragma pop
 
 
-/* 80C8E570-80C8E590 0020+00 s=0 e=0 z=0  None .text      daMagLift_Delete__FP11daMagLift_c                            */
+/* 80C8E570-80C8E590 0020+00 s=1 e=0 z=0  None .text      daMagLift_Delete__FP11daMagLift_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daMagLift_Delete(daMagLift_c* param_0) {
+asm static void daMagLift_Delete(daMagLift_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/daMagLift_Delete__FP11daMagLift_c.s"
 }
 #pragma pop
 
 
-/* 80C8E590-80C8E5B0 0020+00 s=0 e=0 z=0  None .text      daMagLift_Create__FP10fopAc_ac_c                             */
+/* 80C8E590-80C8E5B0 0020+00 s=1 e=0 z=0  None .text      daMagLift_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daMagLift_Create(fopAc_ac_c* param_0) {
+asm static void daMagLift_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/daMagLift_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C8E5B0-80C8E60C 005C+00 s=0 e=0 z=0  None .text      __dt__15daMagLift_HIO_cFv                                    */
+/* 80C8E5B0-80C8E60C 005C+00 s=2 e=0 z=0  None .text      __dt__15daMagLift_HIO_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -423,7 +694,7 @@ asm daMagLift_HIO_c::~daMagLift_HIO_c() {
 #pragma pop
 
 
-/* 80C8E60C-80C8E648 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_magLift_cpp                                  */
+/* 80C8E60C-80C8E648 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_magLift_cpp                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -433,165 +704,4 @@ extern "C" asm void __sinit_d_a_obj_magLift_cpp() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80C8E65C-80C8E69C 0040+00 s=0 e=0 z=0  None .rodata    mSpeed__11daMagLift_c                                        */
-SECTION_RODATA u8 const mSpeed__11daMagLift_c[64] = {
-	0x40, 0xA0, 0x00, 0x00, 0x40, 0xD5, 0x55, 0x55, 0x41, 0x05, 0x55, 0x55, 0x41, 0x20, 0x00, 0x00,
-	0x41, 0x3A, 0xAA, 0xAB, 0x41, 0x55, 0x55, 0x55, 0x41, 0x70, 0x00, 0x00, 0x41, 0x85, 0x55, 0x55,
-	0x41, 0x92, 0xAA, 0xAB, 0x41, 0xA0, 0x00, 0x00, 0x41, 0xAD, 0x55, 0x55, 0x41, 0xBA, 0xAA, 0xAB,
-	0x41, 0xC8, 0x00, 0x00, 0x41, 0xD5, 0x55, 0x55, 0x41, 0xE2, 0xAA, 0xAB, 0x40, 0x55, 0x55, 0x55,
-};
-
-/* 80C8E69C-80C8E6A0 0004+00 s=0 e=0 z=0  None .rodata    @3718                                                        */
-SECTION_RODATA u8 const lit_3718[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C8E6A0-80C8E6A4 0004+00 s=0 e=0 z=0  None .rodata    @3759                                                        */
-SECTION_RODATA u32 const lit_3759 = 0x41F00000;
-
-/* 80C8E6A4-80C8E6A8 0004+00 s=0 e=0 z=0  None .rodata    @3760                                                        */
-SECTION_RODATA u32 const lit_3760 = 0x3F800000;
-
-/* 80C8E6A8-80C8E6AC 0004+00 s=0 e=0 z=0  None .rodata    @3761                                                        */
-SECTION_RODATA u32 const lit_3761 = 0x3DCCCCCD;
-
-/* 80C8E6AC-80C8E6B4 0008+00 s=0 e=0 z=0  None .rodata    @3834                                                        */
-SECTION_RODATA u8 const lit_3834[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C8E6B4-80C8E6BC 0008+00 s=0 e=0 z=0  None .rodata    @3835                                                        */
-SECTION_RODATA u8 const lit_3835[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C8E6BC-80C8E6C4 0008+00 s=0 e=0 z=0  None .rodata    @3836                                                        */
-SECTION_RODATA u8 const lit_3836[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C8E6C4-80C8E6C8 0004+00 s=0 e=0 z=0  None .rodata    @3837                                                        */
-SECTION_RODATA u32 const lit_3837 = 0x3E99999A;
-
-/* 80C8E6C8-80C8E6CC 0004+00 s=0 e=0 z=0  None .rodata    @3838                                                        */
-SECTION_RODATA u32 const lit_3838 = 0x43960000;
-
-/* 80C8E6CC-80C8E6D0 0004+00 s=0 e=0 z=0  None .rodata    @3852                                                        */
-SECTION_RODATA u32 const lit_3852 = 0x3F000000;
-
-/* 80C8E6D0-80C8E6DA 000A+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80C8E6D0 = "L_maglift";
-#pragma pop
-
-/* 80C8E6DC-80C8E6E8 000C+00 s=0 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA u8 cNullVec__6Z2Calc[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C8E6E8-80C8E6FC 0004+10 s=0 e=0 z=0  None .data      @1787                                                        */
-SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
-	0x02000201,
-	/* padding */
-	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
-};
-
-/* 80C8E6FC-80C8E708 000C+00 s=0 e=0 z=0  None .data      @3736                                                        */
-SECTION_DATA u8 lit_3736[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C8E708-80C8E714 000C+00 s=0 e=0 z=0  None .data      @3737                                                        */
-SECTION_DATA u8 lit_3737[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C8E714-80C8E720 000C+00 s=0 e=0 z=0  None .data      @3738                                                        */
-SECTION_DATA u8 lit_3738[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C8E720-80C8E72C 000C+00 s=0 e=0 z=0  None .data      @3739                                                        */
-SECTION_DATA u8 lit_3739[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C8E72C-80C8E738 000C+00 s=0 e=0 z=0  None .data      @3740                                                        */
-SECTION_DATA u8 lit_3740[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C8E738-80C8E744 000C+00 s=0 e=0 z=0  None .data      @3741                                                        */
-SECTION_DATA u8 lit_3741[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C8E744-80C8E750 000C+00 s=0 e=0 z=0  None .data      @3742                                                        */
-SECTION_DATA u8 lit_3742[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C8E750-80C8E7B0 0060+00 s=0 e=0 z=0  None .data      mode_proc$3735                                               */
-SECTION_DATA u8 data_80C8E750[96] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C8E7B0-80C8E7D0 0020+00 s=0 e=0 z=0  None .data      l_daMagLift_Method                                           */
-SECTION_DATA u8 l_daMagLift_Method[32] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C8E7D0-80C8E800 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_MagLift                                        */
-SECTION_DATA u8 g_profile_Obj_MagLift[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x03, 0xFF, 0xFD, 0x00, 0x37, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x05, 0xD4, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x01, 0xEC, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x01, 0x00, 0x00, 0x0E, 0x00, 0x00,
-};
-
-/* 80C8E800-80C8E828 0028+00 s=0 e=0 z=0  None .data      __vt__11daMagLift_c                                          */
-SECTION_DATA void* __vt__11daMagLift_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)NULL,
-	/* 9    */ (void*)NULL,
-};
-
-/* 80C8E828-80C8E834 000C+00 s=0 e=0 z=0  None .data      __vt__15daMagLift_HIO_c                                      */
-SECTION_DATA void* __vt__15daMagLift_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 80C8E834-80C8E840 000C+00 s=0 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
-SECTION_DATA void* __vt__14mDoHIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-};
-
-/* 80C8E848-80C8E854 000C+00 s=0 e=0 z=0  None .bss       @3619                                                        */
-u8 lit_3619[12];
-
-/* 80C8E854-80C8E85C 0008+00 s=0 e=0 z=0  None .bss       l_HIO                                                        */
-u8 l_HIO[8];
-
-/* 80C8E85C-80C8E860 0004+00 s=0 e=0 z=0  None .bss       None                                                         */
-u8 data_80C8E85C[4];
 

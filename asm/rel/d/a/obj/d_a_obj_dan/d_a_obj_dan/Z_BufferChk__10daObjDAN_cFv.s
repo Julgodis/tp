@@ -9,46 +9,46 @@ lbl_80BDB0E8:
 /* 80BDB104 00000000  93 E1 00 3C */	stw r31, 0x3c(r1)
 /* 80BDB108 00000004  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 80BDB10C 00000008  7C 7E 1B 78 */	mr r30, r3
-/* 80BDB110 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BDB114 00000010  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80BDB110 0000000C  3C 60 80 BE */	lis r3, lit_3775@ha
+/* 80BDB114 00000010  3B E3 C3 B0 */	addi r31, r3, lit_3775@l
 /* 80BDB118 00000014  C0 1E 04 D0 */	lfs f0, 0x4d0(r30)
 /* 80BDB11C 00000018  D0 01 00 08 */	stfs f0, 8(r1)
 /* 80BDB120 0000001C  C0 3E 04 D4 */	lfs f1, 0x4d4(r30)
 /* 80BDB124 00000020  D0 21 00 0C */	stfs f1, 0xc(r1)
 /* 80BDB128 00000024  C0 1E 04 D8 */	lfs f0, 0x4d8(r30)
 /* 80BDB12C 00000028  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 80BDB130 0000002C  C0 1F 00 44 */	lfs f0, 0x44(r31)
+/* 80BDB130 0000002C  C0 1F 00 44 */	lfs f0, 0x44(r31)	/* effective address: 80BDC3F4 */
 /* 80BDB134 00000030  EC 01 00 2A */	fadds f0, f1, f0
 /* 80BDB138 00000034  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80BDB13C 00000038  38 61 00 08 */	addi r3, r1, 8
 /* 80BDB140 0000003C  38 81 00 14 */	addi r4, r1, 0x14
-/* 80BDB144 00000040  4B FF F3 B5 */	bl _unresolved
-/* 80BDB148 00000044  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BDB14C 00000048  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80BDB150 0000004C  80 63 5D 74 */	lwz r3, 0x5d74(r3)
+/* 80BDB144 00000040  4B 43 A1 CC */	b mDoLib_project__FP3VecP3Vec
+/* 80BDB148 00000044  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BDB14C 00000048  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BDB150 0000004C  80 63 5D 74 */	lwz r3, 0x5d74(r3)	/* effective address: 8040BF34 */
 /* 80BDB154 00000050  28 03 00 00 */	cmplwi r3, 0
 /* 80BDB158 00000054  41 82 00 0C */	beq lbl_80BDB164
 /* 80BDB15C 00000058  C0 63 0B 68 */	lfs f3, 0xb68(r3)
 /* 80BDB160 0000005C  48 00 00 08 */	b lbl_80BDB168
 lbl_80BDB164:
-/* 80BDB164 00000000  C0 7F 00 54 */	lfs f3, 0x54(r31)
+/* 80BDB164 00000000  C0 7F 00 54 */	lfs f3, 0x54(r31)	/* effective address: 80BDC404 */
 lbl_80BDB168:
 /* 80BDB168 00000000  C0 21 00 14 */	lfs f1, 0x14(r1)
-/* 80BDB16C 00000004  C0 1F 00 54 */	lfs f0, 0x54(r31)
+/* 80BDB16C 00000004  C0 1F 00 54 */	lfs f0, 0x54(r31)	/* effective address: 80BDC404 */
 /* 80BDB170 00000008  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80BDB174 00000000  40 81 00 5C */	ble lbl_80BDB1D0
-/* 80BDB178 00000004  C0 1F 00 80 */	lfs f0, 0x80(r31)
+/* 80BDB178 00000004  C0 1F 00 80 */	lfs f0, 0x80(r31)	/* effective address: 80BDC430 */
 /* 80BDB17C 00000014  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80BDB180 00000000  40 80 00 50 */	bge lbl_80BDB1D0
 /* 80BDB184 00000004  C0 41 00 18 */	lfs f2, 0x18(r1)
 /* 80BDB188 00000020  FC 02 18 40 */	fcmpo cr0, f2, f3
 /* 80BDB18C 00000000  40 81 00 44 */	ble lbl_80BDB1D0
-/* 80BDB190 00000004  C0 1F 00 84 */	lfs f0, 0x84(r31)
+/* 80BDB190 00000004  C0 1F 00 84 */	lfs f0, 0x84(r31)	/* effective address: 80BDC434 */
 /* 80BDB194 00000008  EC 00 18 28 */	fsubs f0, f0, f3
 /* 80BDB198 00000030  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 80BDB19C 00000000  40 80 00 34 */	bge lbl_80BDB1D0
-/* 80BDB1A0 00000004  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BDB1A4 00000008  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80BDB1A0 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BDB1A4 00000008  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BDB1A8 0000000C  3C 63 00 02 */	addis r3, r3, 2
 /* 80BDB1AC 00000010  FC 00 08 1E */	fctiwz f0, f1
 /* 80BDB1B0 00000014  D8 01 00 20 */	stfd f0, 0x20(r1)
@@ -58,27 +58,27 @@ lbl_80BDB168:
 /* 80BDB1C0 00000024  80 A1 00 2C */	lwz r5, 0x2c(r1)
 /* 80BDB1C4 00000028  38 DE 07 9C */	addi r6, r30, 0x79c
 /* 80BDB1C8 0000002C  38 63 C0 F4 */	addi r3, r3, -16140
-/* 80BDB1CC 00000030  4B FF F3 2D */	bl _unresolved
+/* 80BDB1CC 00000030  4B 47 AE 4C */	b newData__13dDlst_peekZ_cFssPUl
 lbl_80BDB1D0:
-/* 80BDB1D0 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80BDB1D4 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80BDB1D8 00000008  80 63 61 B0 */	lwz r3, 0x61b0(r3)
-/* 80BDB1DC 0000000C  C3 E3 00 C8 */	lfs f31, 0xc8(r3)
-/* 80BDB1E0 00000010  C3 C3 00 CC */	lfs f30, 0xcc(r3)
+/* 80BDB1D0 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BDB1D4 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BDB1D8 00000008  80 63 61 B0 */	lwz r3, 0x61b0(r3)	/* effective address: 8040C370 */
+/* 80BDB1DC 0000000C  C3 E3 00 C8 */	lfs f31, 0xc8(r3)	/* effective address: 80406288 */
+/* 80BDB1E0 00000010  C3 C3 00 CC */	lfs f30, 0xcc(r3)	/* effective address: 8040628C */
 /* 80BDB1E4 00000014  38 61 00 08 */	addi r3, r1, 8
 /* 80BDB1E8 00000018  38 81 00 14 */	addi r4, r1, 0x14
-/* 80BDB1EC 0000001C  4B FF F3 0D */	bl _unresolved
+/* 80BDB1EC 0000001C  4B 43 A3 00 */	b mDoLib_pos2camera__FP3VecP3Vec
 /* 80BDB1F0 00000020  C0 21 00 1C */	lfs f1, 0x1c(r1)
-/* 80BDB1F4 00000024  C0 1F 00 50 */	lfs f0, 0x50(r31)
+/* 80BDB1F4 00000024  C0 1F 00 50 */	lfs f0, 0x50(r31)	/* effective address: 80BDC400 */
 /* 80BDB1F8 00000028  EC 21 00 2A */	fadds f1, f1, f0
 /* 80BDB1FC 0000002C  D0 21 00 1C */	stfs f1, 0x1c(r1)
-/* 80BDB200 00000030  C0 1F 00 54 */	lfs f0, 0x54(r31)
+/* 80BDB200 00000030  C0 1F 00 54 */	lfs f0, 0x54(r31)	/* effective address: 80BDC404 */
 /* 80BDB204 00000034  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80BDB208 00000000  40 81 00 08 */	ble lbl_80BDB210
 /* 80BDB20C 00000004  D0 01 00 1C */	stfs f0, 0x1c(r1)
 lbl_80BDB210:
-/* 80BDB210 00000000  C0 7F 00 88 */	lfs f3, 0x88(r31)
-/* 80BDB214 00000004  C0 5F 00 00 */	lfs f2, 0(r31)
+/* 80BDB210 00000000  C0 7F 00 88 */	lfs f3, 0x88(r31)	/* effective address: 80BDC438 */
+/* 80BDB214 00000004  C0 5F 00 00 */	lfs f2, 0(r31)	/* effective address: 80BDC3B0 */
 /* 80BDB218 00000008  EC 3E 07 F2 */	fmuls f1, f30, f31
 /* 80BDB21C 0000000C  C0 01 00 1C */	lfs f0, 0x1c(r1)
 /* 80BDB220 00000010  EC 01 00 24 */	fdivs f0, f1, f0

@@ -56,28 +56,28 @@ lbl_8028C8A4:
 /* 8028C97C 000000D8  91 41 00 28 */	stw r10, 0x28(r1)
 /* 8028C980 000000DC  39 20 00 05 */	li r9, 5
 /* 8028C984 000000E0  91 21 00 2C */	stw r9, 0x2c(r1)
-/* 8028C988 000000E4  81 1F 00 18 */	lwz r8, 0x18(r31)
-/* 8028C98C 000000E8  80 FF 00 1C */	lwz r7, 0x1c(r31)
+/* 8028C988 000000E4  81 1F 00 18 */	lwz r8, 0x18(r31)	/* effective address: 803C59B8 */
+/* 8028C98C 000000E8  80 FF 00 1C */	lwz r7, 0x1c(r31)	/* effective address: 803C59BC */
 /* 8028C990 000000EC  91 01 00 30 */	stw r8, 0x30(r1)
 /* 8028C994 000000F0  90 E1 00 34 */	stw r7, 0x34(r1)
-/* 8028C998 000000F4  80 DF 00 20 */	lwz r6, 0x20(r31)
+/* 8028C998 000000F4  80 DF 00 20 */	lwz r6, 0x20(r31)	/* effective address: 803C59C0 */
 /* 8028C99C 000000F8  90 C1 00 38 */	stw r6, 0x38(r1)
-/* 8028C9A0 000000FC  80 BF 00 24 */	lwz r5, 0x24(r31)
-/* 8028C9A4 00000100  80 9F 00 28 */	lwz r4, 0x28(r31)
+/* 8028C9A0 000000FC  80 BF 00 24 */	lwz r5, 0x24(r31)	/* effective address: 803C59C4 */
+/* 8028C9A4 00000100  80 9F 00 28 */	lwz r4, 0x28(r31)	/* effective address: 803C59C8 */
 /* 8028C9A8 00000104  90 A1 00 3C */	stw r5, 0x3c(r1)
 /* 8028C9AC 00000108  90 81 00 40 */	stw r4, 0x40(r1)
-/* 8028C9B0 0000010C  80 1F 00 2C */	lwz r0, 0x2c(r31)
+/* 8028C9B0 0000010C  80 1F 00 2C */	lwz r0, 0x2c(r31)	/* effective address: 803C59CC */
 /* 8028C9B4 00000110  90 01 00 44 */	stw r0, 0x44(r1)
 /* 8028C9B8 00000114  38 7E 00 24 */	addi r3, r30, 0x24
-/* 8028C9BC 00000118  91 63 00 20 */	stw r11, 0x20(r3)
-/* 8028C9C0 0000011C  91 43 00 20 */	stw r10, 0x20(r3)
-/* 8028C9C4 00000120  91 23 00 24 */	stw r9, 0x24(r3)
-/* 8028C9C8 00000124  91 03 00 28 */	stw r8, 0x28(r3)
-/* 8028C9CC 00000128  90 E3 00 2C */	stw r7, 0x2c(r3)
-/* 8028C9D0 0000012C  90 C3 00 30 */	stw r6, 0x30(r3)
-/* 8028C9D4 00000130  90 A3 00 34 */	stw r5, 0x34(r3)
-/* 8028C9D8 00000134  90 83 00 38 */	stw r4, 0x38(r3)
-/* 8028C9DC 00000138  90 03 00 3C */	stw r0, 0x3c(r3)
+/* 8028C9BC 00000118  91 63 00 20 */	stw r11, 0x20(r3)	/* effective address: 804313BC */
+/* 8028C9C0 0000011C  91 43 00 20 */	stw r10, 0x20(r3)	/* effective address: 804313BC */
+/* 8028C9C4 00000120  91 23 00 24 */	stw r9, 0x24(r3)	/* effective address: 804313C0 */
+/* 8028C9C8 00000124  91 03 00 28 */	stw r8, 0x28(r3)	/* effective address: 804313C4 */
+/* 8028C9CC 00000128  90 E3 00 2C */	stw r7, 0x2c(r3)	/* effective address: 804313C8 */
+/* 8028C9D0 0000012C  90 C3 00 30 */	stw r6, 0x30(r3)	/* effective address: 804313CC */
+/* 8028C9D4 00000130  90 A3 00 34 */	stw r5, 0x34(r3)	/* effective address: 804313D0 */
+/* 8028C9D8 00000134  90 83 00 38 */	stw r4, 0x38(r3)	/* effective address: 804313D4 */
+/* 8028C9DC 00000138  90 03 00 3C */	stw r0, 0x3c(r3)	/* effective address: 804313D8 */
 /* 8028C9E0 0000013C  38 63 00 20 */	addi r3, r3, 0x20
 /* 8028C9E4 00000140  3C 80 80 29 */	lis r4, func_8028CAC0@ha
 /* 8028C9E8 00000144  38 84 CA C0 */	addi r4, r4, func_8028CAC0@l
@@ -108,15 +108,15 @@ lbl_8028C8A4:
 /* 8028CA4C 000001A8  90 81 00 20 */	stw r4, 0x20(r1)
 /* 8028CA50 000001AC  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8028CA54 000001B0  38 7E 00 24 */	addi r3, r30, 0x24
-/* 8028CA58 000001B4  91 03 00 40 */	stw r8, 0x40(r3)
-/* 8028CA5C 000001B8  90 E3 00 40 */	stw r7, 0x40(r3)
-/* 8028CA60 000001BC  90 C3 00 44 */	stw r6, 0x44(r3)
-/* 8028CA64 000001C0  90 A3 00 48 */	stw r5, 0x48(r3)
-/* 8028CA68 000001C4  90 83 00 4C */	stw r4, 0x4c(r3)
-/* 8028CA6C 000001C8  90 03 00 50 */	stw r0, 0x50(r3)
-/* 8028CA70 000001CC  90 A3 00 54 */	stw r5, 0x54(r3)
-/* 8028CA74 000001D0  90 83 00 58 */	stw r4, 0x58(r3)
-/* 8028CA78 000001D4  90 03 00 5C */	stw r0, 0x5c(r3)
+/* 8028CA58 000001B4  91 03 00 40 */	stw r8, 0x40(r3)	/* effective address: 804313DC */
+/* 8028CA5C 000001B8  90 E3 00 40 */	stw r7, 0x40(r3)	/* effective address: 804313DC */
+/* 8028CA60 000001BC  90 C3 00 44 */	stw r6, 0x44(r3)	/* effective address: 804313E0 */
+/* 8028CA64 000001C0  90 A3 00 48 */	stw r5, 0x48(r3)	/* effective address: 804313E4 */
+/* 8028CA68 000001C4  90 83 00 4C */	stw r4, 0x4c(r3)	/* effective address: 804313E8 */
+/* 8028CA6C 000001C8  90 03 00 50 */	stw r0, 0x50(r3)	/* effective address: 804313EC */
+/* 8028CA70 000001CC  90 A3 00 54 */	stw r5, 0x54(r3)	/* effective address: 804313F0 */
+/* 8028CA74 000001D0  90 83 00 58 */	stw r4, 0x58(r3)	/* effective address: 804313F4 */
+/* 8028CA78 000001D4  90 03 00 5C */	stw r0, 0x5c(r3)	/* effective address: 804313F8 */
 /* 8028CA7C 000001D8  38 63 00 40 */	addi r3, r3, 0x40
 /* 8028CA80 000001DC  3C 80 80 29 */	lis r4, func_8028CAC0@ha
 /* 8028CA84 000001E0  38 84 CA C0 */	addi r4, r4, func_8028CAC0@l

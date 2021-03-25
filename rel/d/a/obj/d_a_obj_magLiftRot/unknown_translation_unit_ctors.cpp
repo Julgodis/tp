@@ -12,13 +12,14 @@
 // 
 
 
-extern u8 data_80C8FAD4[8];
+extern void* data_80C8FAD4[2];
 
 // 
 // External References:
 // 
 
 
+extern "C" void __sinit_d_a_obj_magLiftRot_cpp(); // 1
 
 // 
 // Declarations:

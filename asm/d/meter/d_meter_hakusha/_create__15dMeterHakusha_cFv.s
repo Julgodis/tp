@@ -55,8 +55,8 @@ lbl_8020C4AC:
 lbl_8020C4C8:
 /* 8020C4C8 00000000  90 1F 00 08 */	stw r0, 8(r31)
 /* 8020C4CC 00000004  80 7F 00 08 */	lwz r3, 8(r31)
-/* 8020C4D0 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8020C4D4 0000000C  38 84 81 B0 */	addi r4, r4, stringBase0@l
+/* 8020C4D0 00000008  3C 80 80 3A */	lis r4, d_meter_d_meter_hakusha__stringBase0@ha
+/* 8020C4D4 0000000C  38 84 81 B0 */	addi r4, r4, d_meter_d_meter_hakusha__stringBase0@l
 /* 8020C4D8 00000010  3C A0 00 02 */	lis r5, 2
 /* 8020C4DC 00000014  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
 /* 8020C4E0 00000018  3B C6 61 C0 */	addi r30, r6, g_dComIfG_gameInfo@l
@@ -136,11 +136,11 @@ lbl_8020C5A4:
 lbl_8020C5FC:
 /* 8020C5FC 00000000  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 8020C600 00000004  80 7F 00 0C */	lwz r3, 0xc(r31)
-/* 8020C604 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8020C608 0000000C  38 84 81 B0 */	addi r4, r4, stringBase0@l
+/* 8020C604 00000008  3C 80 80 3A */	lis r4, d_meter_d_meter_hakusha__stringBase0@ha
+/* 8020C608 0000000C  38 84 81 B0 */	addi r4, r4, d_meter_d_meter_hakusha__stringBase0@l
 /* 8020C60C 00000010  38 84 00 23 */	addi r4, r4, 0x23
 /* 8020C610 00000014  3C A0 00 02 */	lis r5, 2
-/* 8020C614 00000018  80 DE 5D 30 */	lwz r6, 0x5d30(r30)
+/* 8020C614 00000018  80 DE 5D 30 */	lwz r6, 0x5d30(r30)	/* effective address: 8040BEF0 */
 /* 8020C618 0000001C  48 0E C0 31 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 8020C61C 00000020  80 7F 00 0C */	lwz r3, 0xc(r31)
 /* 8020C620 00000024  48 04 8A C9 */	bl dPaneClass_showNullPane__FP9J2DScreen
@@ -187,8 +187,8 @@ lbl_8020C654:
 /* 8020C6C0 0000006C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020C6C4 00000070  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8020C6C8 00000074  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 8020C6CC 00000078  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8020C6D0 0000007C  38 84 81 B0 */	addi r4, r4, stringBase0@l
+/* 8020C6CC 00000078  3C 80 80 3A */	lis r4, d_meter_d_meter_hakusha__stringBase0@ha
+/* 8020C6D0 0000007C  38 84 81 B0 */	addi r4, r4, d_meter_d_meter_hakusha__stringBase0@l
 /* 8020C6D4 00000080  38 84 00 46 */	addi r4, r4, 0x46
 /* 8020C6D8 00000084  48 15 C2 BD */	bl strcmp
 /* 8020C6DC 00000088  2C 03 00 00 */	cmpwi r3, 0
@@ -222,8 +222,8 @@ lbl_8020C720:
 /* 8020C744 00000024  7D 89 03 A6 */	mtctr r12
 /* 8020C748 00000028  4E 80 04 21 */	bctrl 
 /* 8020C74C 0000002C  80 7F 00 34 */	lwz r3, 0x34(r31)
-/* 8020C750 00000030  C0 3D 03 B8 */	lfs f1, 0x3b8(r29)
-/* 8020C754 00000034  C0 5D 03 BC */	lfs f2, 0x3bc(r29)
+/* 8020C750 00000030  C0 3D 03 B8 */	lfs f1, 0x3b8(r29)	/* effective address: 8042EF80 */
+/* 8020C754 00000034  C0 5D 03 BC */	lfs f2, 0x3bc(r29)	/* effective address: 8042EF84 */
 /* 8020C758 00000038  48 04 7E 59 */	bl paneTrans__8CPaneMgrFff
 /* 8020C75C 0000003C  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 8020C760 00000040  38 63 EB C8 */	addi r3, r3, g_drawHIO@l

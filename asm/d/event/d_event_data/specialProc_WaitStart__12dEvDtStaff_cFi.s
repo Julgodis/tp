@@ -7,8 +7,8 @@ lbl_80043FD8:
 /* 80043FEC 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80043FF0 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80043FF4 0000001C  38 63 4F F8 */	addi r3, r3, 0x4ff8
-/* 80043FF8 00000020  3C A0 80 38 */	lis r5, stringBase0@ha
-/* 80043FFC 00000024  38 A5 9D D0 */	addi r5, r5, stringBase0@l
+/* 80043FF8 00000020  3C A0 80 38 */	lis r5, d_event_d_event_data__stringBase0@ha
+/* 80043FFC 00000024  38 A5 9D D0 */	addi r5, r5, d_event_d_event_data__stringBase0@l
 /* 80044000 00000028  38 A5 00 3D */	addi r5, r5, 0x3d
 /* 80044004 0000002C  38 C0 00 03 */	li r6, 3
 /* 80044008 00000030  48 00 40 E5 */	bl getMySubstanceP__16dEvent_manager_cFiPCci

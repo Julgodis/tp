@@ -21,7 +21,19 @@ struct cBgW_NodeTree {
 	/* 80079238 */ ~cBgW_NodeTree();
 };
 
+struct cBgS_ShdwDraw {
+};
+
 struct cBgS_LinChk {
+};
+
+struct cBgD_t {
+};
+
+struct cBgS_GrpPassChk {
+};
+
+struct cXyz {
 };
 
 struct cBgS_GndChk {
@@ -31,19 +43,7 @@ struct cBgS_PolyInfo {
 	/* 802681A4 */ void SetPolyIndex(int);
 };
 
-struct cBgD_t {
-};
-
-struct cBgS_GrpPassChk {
-};
-
-struct cBgS_ShdwDraw {
-};
-
 struct cBgS_PolyPassChk {
-};
-
-struct cXyz {
 };
 
 struct cBgW {
@@ -112,11 +112,11 @@ struct cBgW_GrpElm {
 	/* 8007A1E4 */ cBgW_GrpElm();
 };
 
-struct Vec {
-};
-
 struct cM3dGPla {
 	/* 8026F57C */ void getCrossY(cXyz const&, f32*) const;
+};
+
+struct Vec {
 };
 
 struct cM3dGTri {
@@ -124,7 +124,13 @@ struct cM3dGTri {
 	/* 8026F85C */ void setBg(Vec const*, Vec const*, Vec const*, cM3dGPla const*);
 };
 
+struct dBgS_RoofChk {
+};
+
 struct dBgS_SplGrpChk {
+};
+
+struct fopAc_ac_c {
 };
 
 struct dBgS_Acch {
@@ -137,16 +143,10 @@ struct dBgS_Acch {
 struct dBgS_CaptPoly {
 };
 
-struct dBgS_SphChk {
-};
-
-struct fopAc_ac_c {
-};
-
-struct dBgS_RoofChk {
-};
-
 struct csXyz {
+};
+
+struct dBgS_SphChk {
 };
 
 struct dBgW {
@@ -494,7 +494,7 @@ extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803ABA80-803ABB84 0104+00 s=2 e=1 z=0  None .data      __vt__4dBgW                                                  */
+/* 803ABA80-803ABB84 0104+00 s=2 e=1 z=5  None .data      __vt__4dBgW                                                  */
 SECTION_DATA void* __vt__4dBgW[65] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -730,7 +730,7 @@ asm cBgW::cBgW() {
 #pragma pop
 
 
-/* 8007933C-800793A4 0068+00 s=2 e=1 z=0  None .text      __dt__4cBgWFv                                                */
+/* 8007933C-800793A4 0068+00 s=2 e=1 z=5  None .text      __dt__4cBgWFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -752,7 +752,7 @@ asm void cBgW::FreeArea() {
 #pragma pop
 
 
-/* 800793C4-80079484 00C0+00 s=2 e=0 z=0  None .text      GlobalVtx__4cBgWFv                                           */
+/* 800793C4-80079484 00C0+00 s=2 e=0 z=1  None .text      GlobalVtx__4cBgWFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -931,7 +931,7 @@ asm void cBgW::ChkMemoryError() {
 /* 80452708-8045270C 0004+00 s=1 e=0 z=0  None .sdata2    @4073                                                        */
 SECTION_SDATA2 static f32 lit_4073 = 128.0f;
 
-/* 80079F38-8007A184 024C+00 s=1 e=3 z=0  None .text      Set__4cBgWFP6cBgD_tUlPA3_A4_f                                */
+/* 80079F38-8007A184 024C+00 s=1 e=3 z=85  None .text      Set__4cBgWFP6cBgD_tUlPA3_A4_f                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1683,7 +1683,7 @@ asm void cBgW::ChkMoveBg() const {
 #pragma pop
 
 
-/* 8007B970-8007B9C0 0050+00 s=1 e=2 z=0  None .text      __ct__4dBgWFv                                                */
+/* 8007B970-8007B9C0 0050+00 s=1 e=2 z=87  None .text      __ct__4dBgWFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1694,7 +1694,7 @@ asm dBgW::dBgW() {
 #pragma pop
 
 
-/* 8007B9C0-8007B9EC 002C+00 s=0 e=2 z=0  None .text      Move__4dBgWFv                                                */
+/* 8007B9C0-8007B9EC 002C+00 s=0 e=2 z=115  None .text      Move__4dBgWFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2130,7 +2130,7 @@ asm void dBgW::ChkMoveFlag() const {
 #pragma pop
 
 
-/* 8007E4C0-8007E548 0088+00 s=0 e=0 z=0  None .text      dBgW_NewSet__FP6cBgD_tUlPA3_A4_f                             */
+/* 8007E4C0-8007E548 0088+00 s=0 e=0 z=1  None .text      dBgW_NewSet__FP6cBgD_tUlPA3_A4_f                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -5,9 +5,9 @@ lbl_806D9C80:
 /* 806D9C8C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 806D9C90 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 806D9C94 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 806D9C98 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 806D9C9C 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
-/* 806D9CA0 00000020  C0 3F 00 18 */	lfs f1, 0x18(r31)
+/* 806D9C98 00000018  3C 80 80 6E */	lis r4, lit_3763@ha
+/* 806D9C9C 0000001C  3B E4 EE 38 */	addi r31, r4, lit_3763@l
+/* 806D9CA0 00000020  C0 3F 00 18 */	lfs f1, 0x18(r31)	/* effective address: 806DEE50 */
 /* 806D9CA4 00000024  A8 03 06 58 */	lha r0, 0x658(r3)
 /* 806D9CA8 00000028  2C 00 00 01 */	cmpwi r0, 1
 /* 806D9CAC 0000002C  41 82 00 30 */	beq lbl_806D9CDC
@@ -17,14 +17,14 @@ lbl_806D9C80:
 /* 806D9CBC 0000003C  48 00 00 60 */	b lbl_806D9D1C
 lbl_806D9CC0:
 /* 806D9CC0 00000000  38 80 00 21 */	li r4, 0x21
-/* 806D9CC4 00000004  C0 3F 00 48 */	lfs f1, 0x48(r31)
+/* 806D9CC4 00000004  C0 3F 00 48 */	lfs f1, 0x48(r31)	/* effective address: 806DEE80 */
 /* 806D9CC8 00000008  38 A0 00 00 */	li r5, 0
-/* 806D9CCC 0000000C  C0 5F 00 1C */	lfs f2, 0x1c(r31)
+/* 806D9CCC 0000000C  C0 5F 00 1C */	lfs f2, 0x1c(r31)	/* effective address: 806DEE54 */
 /* 806D9CD0 00000010  4B FF E8 A9 */	bl anm_init__FP11e_gob_classifUcf
 /* 806D9CD4 00000014  38 00 00 01 */	li r0, 1
 /* 806D9CD8 00000018  B0 1E 06 58 */	sth r0, 0x658(r30)
 lbl_806D9CDC:
-/* 806D9CDC 00000000  C0 3F 00 18 */	lfs f1, 0x18(r31)
+/* 806D9CDC 00000000  C0 3F 00 18 */	lfs f1, 0x18(r31)	/* effective address: 806DEE50 */
 /* 806D9CE0 00000004  80 7E 05 B4 */	lwz r3, 0x5b4(r30)
 /* 806D9CE4 00000008  38 80 00 01 */	li r4, 1
 /* 806D9CE8 0000000C  88 03 00 11 */	lbz r0, 0x11(r3)
@@ -43,9 +43,9 @@ lbl_806D9D04:
 /* 806D9D18 00000014  B0 1E 06 58 */	sth r0, 0x658(r30)
 lbl_806D9D1C:
 /* 806D9D1C 00000000  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 806D9D20 00000004  C0 5F 00 1C */	lfs f2, 0x1c(r31)
-/* 806D9D24 00000008  C0 7F 00 58 */	lfs f3, 0x58(r31)
-/* 806D9D28 0000000C  4B FF E2 D1 */	bl _unresolved
+/* 806D9D20 00000004  C0 5F 00 1C */	lfs f2, 0x1c(r31)	/* effective address: 806DEE54 */
+/* 806D9D24 00000008  C0 7F 00 58 */	lfs f3, 0x58(r31)	/* effective address: 806DEE90 */
+/* 806D9D28 0000000C  4B B9 5D 14 */	b cLib_addCalc2__FPffff
 /* 806D9D2C 00000010  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 806D9D30 00000014  83 C1 00 08 */	lwz r30, 8(r1)
 /* 806D9D34 00000018  80 01 00 14 */	lwz r0, 0x14(r1)

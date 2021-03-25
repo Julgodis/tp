@@ -281,13 +281,13 @@ lbl_8012171C:
 /* 80121788 0000006C  EC 02 00 2A */	fadds f0, f2, f0
 /* 8012178C 00000070  D0 01 00 B0 */	stfs f0, 0xb0(r1)
 /* 80121790 00000074  38 7F 22 5C */	addi r3, r31, 0x225c
-/* 80121794 00000078  C0 03 00 48 */	lfs f0, 0x48(r3)
+/* 80121794 00000078  C0 03 00 48 */	lfs f0, 0x48(r3)	/* effective address: 8038F8FC */
 /* 80121798 0000007C  EC 03 00 28 */	fsubs f0, f3, f0
 /* 8012179C 00000080  D0 01 00 A0 */	stfs f0, 0xa0(r1)
 /* 801217A0 00000084  48 00 00 14 */	b lbl_801217B4
 lbl_801217A4:
 /* 801217A4 00000000  38 7F 16 D4 */	addi r3, r31, 0x16d4
-/* 801217A8 00000004  C0 03 00 60 */	lfs f0, 0x60(r3)
+/* 801217A8 00000004  C0 03 00 60 */	lfs f0, 0x60(r3)	/* effective address: 8038ED8C */
 /* 801217AC 00000008  EC 03 00 28 */	fsubs f0, f3, f0
 /* 801217B0 0000000C  D0 01 00 A0 */	stfs f0, 0xa0(r1)
 lbl_801217B4:
@@ -363,7 +363,7 @@ lbl_80121868:
 /* 801218BC 00000054  39 40 00 00 */	li r10, 0
 /* 801218C0 00000058  4B F2 BD E5 */	bl setPoly__13dPa_control_cFUlUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz
 /* 801218C4 0000005C  90 7B 31 C0 */	stw r3, 0x31c0(r27)
-/* 801218C8 00000060  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
+/* 801218C8 00000060  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)	/* effective address: 8040BEFC */
 /* 801218CC 00000064  38 63 02 10 */	addi r3, r3, 0x210
 /* 801218D0 00000068  80 9B 31 C0 */	lwz r4, 0x31c0(r27)
 /* 801218D4 0000006C  4B F2 9F E1 */	bl forceOnEventMove__Q213dPa_control_c7level_cFUl
@@ -806,7 +806,7 @@ lbl_80121E34:
 /* 80121F20 00000030  28 03 00 00 */	cmplwi r3, 0
 /* 80121F24 00000034  41 82 00 F4 */	beq lbl_80122018
 /* 80121F28 00000038  38 9F 12 18 */	addi r4, r31, 0x1218
-/* 80121F2C 0000003C  C0 04 00 98 */	lfs f0, 0x98(r4)
+/* 80121F2C 0000003C  C0 04 00 98 */	lfs f0, 0x98(r4)	/* effective address: 8038E908 */
 /* 80121F30 00000040  EC 5F 00 24 */	fdivs f2, f31, f0
 /* 80121F34 00000044  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 80121F38 00000104  FC 02 00 40 */	fcmpo cr0, f2, f0

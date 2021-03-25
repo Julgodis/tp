@@ -23,7 +23,7 @@ lbl_800DE674:
 /* 800DE69C 00000028  D0 05 00 00 */	stfs f0, 0(r5)
 /* 800DE6A0 0000002C  4E 80 00 20 */	blr 
 lbl_800DE6A4:
-/* 800DE6A4 00000000  A8 03 30 1C */	lha r0, 0x301c(r3)	/* effective address: 80391674 */
+/* 800DE6A4 00000000  A8 03 30 1C */	lha r0, 0x301c(r3)
 /* 800DE6A8 00000004  2C 00 00 00 */	cmpwi r0, 0
 /* 800DE6AC 00000008  41 82 00 0C */	beq lbl_800DE6B8
 /* 800DE6B0 0000000C  2C 06 00 00 */	cmpwi r6, 0
@@ -48,7 +48,7 @@ lbl_800DE6E0:
 /* 800DE6F4 00000014  D0 05 00 00 */	stfs f0, 0(r5)
 /* 800DE6F8 00000018  4E 80 00 20 */	blr 
 lbl_800DE6FC:
-/* 800DE6FC 00000000  A8 03 30 1E */	lha r0, 0x301e(r3)	/* effective address: 80391676 */
+/* 800DE6FC 00000000  A8 03 30 1E */	lha r0, 0x301e(r3)
 /* 800DE700 00000004  2C 00 00 01 */	cmpwi r0, 1
 /* 800DE704 00000008  40 82 00 20 */	bne lbl_800DE724
 /* 800DE708 0000000C  3C 60 80 39 */	lis r3, m__17daAlinkHIO_bow_c0@ha

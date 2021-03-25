@@ -48,8 +48,8 @@ lbl_802A5AE4:
 /* 802A5AFC 00000018  3C 60 80 3D */	lis r3, __files@ha
 /* 802A5B00 0000001C  38 63 29 B0 */	addi r3, r3, __files@l
 /* 802A5B04 00000020  38 63 00 A0 */	addi r3, r3, 0xa0
-/* 802A5B08 00000024  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 802A5B0C 00000028  38 84 B9 50 */	addi r4, r4, stringBase0@l
+/* 802A5B08 00000024  3C 80 80 3A */	lis r4, JAUSectionHeap__stringBase0@ha
+/* 802A5B0C 00000028  38 84 B9 50 */	addi r4, r4, JAUSectionHeap__stringBase0@l
 /* 802A5B10 0000002C  38 84 00 47 */	addi r4, r4, 0x47
 /* 802A5B14 00000030  4C C6 31 82 */	crclr 6
 /* 802A5B18 00000034  48 0C 0C 85 */	bl fprintf

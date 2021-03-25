@@ -44,12 +44,12 @@ struct J2DAnmColorKey {
 	/* 80239BE0 */ ~J2DAnmColorKey();
 };
 
-struct JKRArchive {
-};
-
 struct J2DPane {
 	/* 802F7100 */ void getBounds();
 	/* 802F7FCC */ void animationTransform();
+};
+
+struct JKRArchive {
 };
 
 struct dSelect_cursor_c {
@@ -132,7 +132,7 @@ extern "C" void selectScale__17dMsgScrn3Select_cFv(); // 1
 extern "C" void selectTrans__17dMsgScrn3Select_cFv(); // 1
 extern "C" void selectAnimeTransform__17dMsgScrn3Select_cFi(); // 1
 extern "C" void __sinit_d_msg_scrn_3select_cpp(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const msg_scrn_d_msg_scrn_3select__stringBase0;
 extern "C" extern u8 data_803C0CA0[24 + 48 /* padding */];
 
 // 

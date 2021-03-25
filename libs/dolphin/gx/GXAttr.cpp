@@ -13,7 +13,7 @@
 
 
 extern "C" void GXSetVtxDesc(); // 1
-extern "C" static void GXSetVtxDescv(); // 1
+extern "C" void GXSetVtxDescv(); // 1
 extern "C" void __GXSetVCD(); // 1
 extern "C" void __GXCalculateVLim(); // 1
 extern "C" void GXClearVtxDesc(); // 1
@@ -68,7 +68,7 @@ SECTION_DATA static void* lit_176[26] = {
 	/* 25   */ (void*)(((char*)GXSetVtxDesc)+0x11C),
 };
 
-/* 8035AEB8-8035B124 026C+00 s=1 e=70 z=0  None .text      GXSetVtxDesc                                                 */
+/* 8035AEB8-8035B124 026C+00 s=1 e=70 z=6  None .text      GXSetVtxDesc                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -110,11 +110,11 @@ SECTION_DATA static void* lit_223[26] = {
 	/* 25   */ (void*)(((char*)GXSetVtxDescv)+0x128),
 };
 
-/* 8035B124-8035B3AC 0288+00 s=1 e=0 z=0  None .text      GXSetVtxDescv                                                */
+/* 8035B124-8035B3AC 0288+00 s=1 e=0 z=1  None .text      GXSetVtxDescv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void GXSetVtxDescv() {
+extern "C" asm void GXSetVtxDescv() {
 	nofralloc
 #include "asm/dolphin/gx/GXAttr/GXSetVtxDescv.s"
 }
@@ -161,7 +161,7 @@ extern "C" asm void __GXCalculateVLim() {
 #pragma pop
 
 
-/* 8035B58C-8035B5C4 0038+00 s=0 e=66 z=0  None .text      GXClearVtxDesc                                               */
+/* 8035B58C-8035B5C4 0038+00 s=0 e=66 z=7  None .text      GXClearVtxDesc                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -194,7 +194,7 @@ SECTION_DATA static void* lit_476[17] = {
 	/* 16   */ (void*)(((char*)GXSetVtxAttrFmt)+0x64),
 };
 
-/* 8035B5C4-8035B820 025C+00 s=1 e=69 z=0  None .text      GXSetVtxAttrFmt                                              */
+/* 8035B5C4-8035B820 025C+00 s=1 e=69 z=6  None .text      GXSetVtxAttrFmt                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -227,7 +227,7 @@ SECTION_DATA static void* lit_503[17] = {
 	/* 16   */ (void*)(((char*)GXSetVtxAttrFmtv)+0x78),
 };
 
-/* 8035B820-8035BAA0 0280+00 s=1 e=1 z=0  None .text      GXSetVtxAttrFmtv                                             */
+/* 8035B820-8035BAA0 0280+00 s=1 e=1 z=1  None .text      GXSetVtxAttrFmtv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -249,7 +249,7 @@ extern "C" asm void __GXSetVAT() {
 #pragma pop
 
 
-/* 8035BB28-8035BB6C 0044+00 s=0 e=13 z=0  None .text      GXSetArray                                                   */
+/* 8035BB28-8035BB6C 0044+00 s=0 e=13 z=5  None .text      GXSetArray                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -308,7 +308,7 @@ SECTION_DATA static void* lit_739[21] = {
 	/* 20   */ (void*)(((char*)GXSetTexCoordGen2)+0x70),
 };
 
-/* 8035BB7C-8035BDFC 0280+00 s=2 e=46 z=0  None .text      GXSetTexCoordGen2                                            */
+/* 8035BB7C-8035BDFC 0280+00 s=2 e=46 z=5  None .text      GXSetTexCoordGen2                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -319,7 +319,7 @@ extern "C" asm void GXSetTexCoordGen2() {
 #pragma pop
 
 
-/* 8035BDFC-8035BE38 003C+00 s=0 e=59 z=0  None .text      GXSetNumTexGens                                              */
+/* 8035BDFC-8035BE38 003C+00 s=0 e=59 z=6  None .text      GXSetNumTexGens                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

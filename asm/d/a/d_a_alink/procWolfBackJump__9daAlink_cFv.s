@@ -52,7 +52,7 @@ lbl_8012E598:
 /* 8012E5C8 00000008  98 1F 2F 98 */	stb r0, 0x2f98(r31)
 /* 8012E5CC 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 8012E5D0 00000010  38 80 00 02 */	li r4, 2
-/* 8012E5D4 00000014  C0 25 00 34 */	lfs f1, 0x34(r5)
+/* 8012E5D4 00000014  C0 25 00 34 */	lfs f1, 0x34(r5)	/* effective address: 8038F044 */
 /* 8012E5D8 00000018  48 00 07 F9 */	bl procWolfFallInit__9daAlink_cFif
 lbl_8012E5DC:
 /* 8012E5DC 00000000  38 60 00 01 */	li r3, 1

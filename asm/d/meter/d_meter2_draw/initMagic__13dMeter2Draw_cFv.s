@@ -98,8 +98,8 @@ lbl_80211FA8:
 /* 80211FD0 00000028  38 60 00 07 */	li r3, 7
 /* 80211FD4 0000002C  64 63 00 07 */	oris r3, r3, 7
 /* 80211FD8 00000030  7C 75 E3 A6 */	mtspr 0x395, r3
-/* 80211FDC 00000034  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 80211FE0 00000038  38 84 88 D0 */	addi r4, r4, stringBase0@l
+/* 80211FDC 00000034  3C 80 80 3A */	lis r4, d_meter_d_meter2_draw__stringBase0@ha
+/* 80211FE0 00000038  38 84 88 D0 */	addi r4, r4, d_meter_d_meter2_draw__stringBase0@l
 /* 80211FE4 0000003C  38 64 00 F0 */	addi r3, r4, 0xf0
 /* 80211FE8 00000040  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80211FEC 00000044  3B C4 61 C0 */	addi r30, r4, g_dComIfG_gameInfo@l
@@ -113,10 +113,10 @@ lbl_80211FA8:
 /* 8021200C 00000064  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 80212010 00000068  7D 89 03 A6 */	mtctr r12
 /* 80212014 0000006C  4E 80 04 21 */	bctrl 
-/* 80212018 00000070  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8021201C 00000074  38 84 88 D0 */	addi r4, r4, stringBase0@l
+/* 80212018 00000070  3C 80 80 3A */	lis r4, d_meter_d_meter2_draw__stringBase0@ha
+/* 8021201C 00000074  38 84 88 D0 */	addi r4, r4, d_meter_d_meter2_draw__stringBase0@l
 /* 80212020 00000078  38 64 01 15 */	addi r3, r4, 0x115
-/* 80212024 0000007C  80 9E 5D 30 */	lwz r4, 0x5d30(r30)
+/* 80212024 0000007C  80 9E 5D 30 */	lwz r4, 0x5d30(r30)	/* effective address: 8040BEF0 */
 /* 80212028 00000080  48 0C 22 49 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
 /* 8021202C 00000084  48 0F 6A 41 */	bl load__20J2DAnmLoaderDataBaseFPCv
 /* 80212030 00000088  90 7F 05 40 */	stw r3, 0x540(r31)
@@ -126,10 +126,10 @@ lbl_80211FA8:
 /* 80212040 00000098  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 80212044 0000009C  7D 89 03 A6 */	mtctr r12
 /* 80212048 000000A0  4E 80 04 21 */	bctrl 
-/* 8021204C 000000A4  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 80212050 000000A8  38 84 88 D0 */	addi r4, r4, stringBase0@l
+/* 8021204C 000000A4  3C 80 80 3A */	lis r4, d_meter_d_meter2_draw__stringBase0@ha
+/* 80212050 000000A8  38 84 88 D0 */	addi r4, r4, d_meter_d_meter2_draw__stringBase0@l
 /* 80212054 000000AC  38 64 01 3A */	addi r3, r4, 0x13a
-/* 80212058 000000B0  80 9E 5D 30 */	lwz r4, 0x5d30(r30)
+/* 80212058 000000B0  80 9E 5D 30 */	lwz r4, 0x5d30(r30)	/* effective address: 8040BEF0 */
 /* 8021205C 000000B4  48 0C 22 15 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
 /* 80212060 000000B8  48 0F 6A 0D */	bl load__20J2DAnmLoaderDataBaseFPCv
 /* 80212064 000000BC  90 7F 05 44 */	stw r3, 0x544(r31)
@@ -151,7 +151,7 @@ lbl_80211FA8:
 /* 802120A4 000000FC  A0 04 61 C0 */	lhz r0, g_dComIfG_gameInfo@l(r4)
 /* 802120A8 00000100  28 00 00 32 */	cmplwi r0, 0x32
 /* 802120AC 00000104  41 81 00 08 */	bgt lbl_802120B4
-/* 802120B0 00000108  C3 C5 00 0C */	lfs f30, 0xc(r5)
+/* 802120B0 00000108  C3 C5 00 0C */	lfs f30, 0xc(r5)	/* effective address: 8042EBD4 */
 lbl_802120B4:
 /* 802120B4 00000000  38 80 00 00 */	li r4, 0
 /* 802120B8 00000004  38 A0 00 00 */	li r5, 0

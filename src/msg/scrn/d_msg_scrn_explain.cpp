@@ -94,17 +94,17 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
+struct JKRExpHeap {
+};
+
 struct J2DPane {
 	/* 802F7100 */ void getBounds();
 };
 
-struct JKRExpHeap {
+struct J2DGrafContext {
 };
 
 struct JKRArchive {
-};
-
-struct J2DGrafContext {
 };
 
 struct J2DScreen {
@@ -170,7 +170,7 @@ extern "C" void getAlphaRatio__17dMsgScrnExplain_cFv(); // 1
 extern "C" void checkTriggerA__17dMsgScrnExplain_cFv(); // 1
 extern "C" void checkTriggerB__17dMsgScrnExplain_cFv(); // 1
 extern "C" void __sinit_d_msg_scrn_explain_cpp(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const msg_scrn_d_msg_scrn_explain__stringBase0;
 
 // 
 // External References:

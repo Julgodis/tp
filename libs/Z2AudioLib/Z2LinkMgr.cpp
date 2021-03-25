@@ -61,6 +61,9 @@ struct Z2CreatureLink {
 	/* 802C48D8 */ void setResumeAttack(bool);
 };
 
+struct JAISoundHandle {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -68,9 +71,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAISoundHandle {
 };
 
 struct Z2LinkSoundStarter {
@@ -230,6 +230,7 @@ extern "C" void startFireSound__15Z2SoundObjCoachFUs(); // 1
 extern "C" void startSound__15Z2SoundObjCoachF10JAISoundIDUlSc(); // 1
 extern "C" static void func_802C588C(); // 1
 extern "C" static void func_802C5894(); // 1
+extern "C" extern void* __vt__15Z2SoundObjCoach[8];
 extern "C" extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
 
 // 
@@ -366,8 +367,8 @@ asm void Z2CreatureLink::setLinkBootsType(s32 param_0) {
 
 
 /* ############################################################################################## */
-/* 803CB8F0-803CB910 0020+00 s=1 e=0 z=0  None .data      __vt__15Z2SoundObjCoach                                      */
-SECTION_DATA static void* __vt__15Z2SoundObjCoach[8] = {
+/* 803CB8F0-803CB910 0020+00 s=1 e=0 z=1  None .data      __vt__15Z2SoundObjCoach                                      */
+SECTION_DATA void* __vt__15Z2SoundObjCoach[8] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)framework__14Z2SoundObjBaseFUlSc,
@@ -745,7 +746,7 @@ asm void Z2CreatureLink::startCollisionSE(u32 param_0, u32 param_1) {
 /* 80455D18-80455D1C 0004+00 s=1 e=0 z=0  None .sdata2    @4178                                                        */
 SECTION_SDATA2 static f32 lit_4178 = 100.0f;
 
-/* 802C4814-802C48D8 00C4+00 s=0 e=4 z=0  None .text      startHitItemSE__14Z2CreatureLinkFUlUlP14Z2SoundObjBasef      */
+/* 802C4814-802C48D8 00C4+00 s=0 e=4 z=2  None .text      startHitItemSE__14Z2CreatureLinkFUlUlP14Z2SoundObjBasef      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -793,7 +794,7 @@ asm void Z2LinkSoundStarter::startSound(JAISoundID param_0, JAISoundHandle* para
 #pragma pop
 
 
-/* 802C4FFC-802C5078 007C+00 s=0 e=0 z=0  None .text      __ct__14Z2CreatureRideFv                                     */
+/* 802C4FFC-802C5078 007C+00 s=0 e=0 z=3  None .text      __ct__14Z2CreatureRideFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -815,7 +816,7 @@ asm Z2RideSoundStarter::~Z2RideSoundStarter() {
 #pragma pop
 
 
-/* 802C5114-802C51EC 00D8+00 s=2 e=0 z=0  None .text      __dt__14Z2CreatureRideFv                                     */
+/* 802C5114-802C51EC 00D8+00 s=2 e=0 z=2  None .text      __dt__14Z2CreatureRideFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -837,7 +838,7 @@ asm void Z2CreatureRide::deleteObject() {
 #pragma pop
 
 
-/* 802C520C-802C522C 0020+00 s=0 e=0 z=0  None .text      init__14Z2CreatureRideFP3VecP3VecUcUc                        */
+/* 802C520C-802C522C 0020+00 s=0 e=0 z=3  None .text      init__14Z2CreatureRideFP3VecP3VecUcUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -848,7 +849,7 @@ asm void Z2CreatureRide::init(Vec* param_0, Vec* param_1, u8 param_2, u8 param_3
 #pragma pop
 
 
-/* 802C522C-802C5234 0008+00 s=0 e=2 z=0  None .text      setLinkRiding__14Z2CreatureRideFb                            */
+/* 802C522C-802C5234 0008+00 s=0 e=2 z=1  None .text      setLinkRiding__14Z2CreatureRideFb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -881,7 +882,7 @@ asm void Z2RideSoundStarter::startSound(JAISoundID param_0, JAISoundHandle* para
 #pragma pop
 
 
-/* 802C54B8-802C54FC 0044+00 s=0 e=0 z=0  None .text      __ct__15Z2SoundObjCoachFv                                    */
+/* 802C54B8-802C54FC 0044+00 s=0 e=0 z=1  None .text      __ct__15Z2SoundObjCoachFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -919,7 +920,7 @@ SECTION_SDATA2 static f32 lit_4624 = 1.25f;
 /* 80455D30-80455D34 0004+00 s=2 e=0 z=0  None .sdata2    @4625                                                        */
 SECTION_SDATA2 static f32 lit_4625 = 50.0f;
 
-/* 802C551C-802C56C0 01A4+00 s=0 e=0 z=0  None .text      startWheelSound__15Z2SoundObjCoachFf                         */
+/* 802C551C-802C56C0 01A4+00 s=0 e=0 z=1  None .text      startWheelSound__15Z2SoundObjCoachFf                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -940,7 +941,7 @@ SECTION_SDATA2 static f32 lit_4646 = 1.0f / 5.0f;
 /* 80455D3C-80455D40 0004+00 s=2 e=0 z=0  None .sdata2    @4647                                                        */
 SECTION_SDATA2 static f32 lit_4647 = 17.0f / 20.0f;
 
-/* 802C56C0-802C57C0 0100+00 s=0 e=0 z=0  None .text      startFireSound__15Z2SoundObjCoachFUs                         */
+/* 802C56C0-802C57C0 0100+00 s=0 e=0 z=1  None .text      startFireSound__15Z2SoundObjCoachFUs                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

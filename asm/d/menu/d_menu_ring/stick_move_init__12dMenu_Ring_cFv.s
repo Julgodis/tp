@@ -16,11 +16,11 @@ lbl_801ED4BC:
 /* 801ED4C4 00000008  A8 04 01 44 */	lha r0, 0x144(r4)	/* effective address: 8042FC40 */
 /* 801ED4C8 0000000C  7C 05 00 00 */	cmpw r5, r0
 /* 801ED4CC 00000010  40 80 00 24 */	bge lbl_801ED4F0
-/* 801ED4D0 00000014  A8 04 01 48 */	lha r0, 0x148(r4)
+/* 801ED4D0 00000014  A8 04 01 48 */	lha r0, 0x148(r4)	/* effective address: 8042FC44 */
 /* 801ED4D4 00000018  7C 05 02 14 */	add r0, r5, r0
 /* 801ED4D8 0000001C  B0 03 06 80 */	sth r0, 0x680(r3)
 /* 801ED4DC 00000020  A8 03 06 80 */	lha r0, 0x680(r3)
-/* 801ED4E0 00000024  A8 84 01 44 */	lha r4, 0x144(r4)
+/* 801ED4E0 00000024  A8 84 01 44 */	lha r4, 0x144(r4)	/* effective address: 8042FC40 */
 /* 801ED4E4 00000028  7C 00 20 00 */	cmpw r0, r4
 /* 801ED4E8 0000002C  40 81 00 08 */	ble lbl_801ED4F0
 /* 801ED4EC 00000030  B0 83 06 80 */	sth r4, 0x680(r3)

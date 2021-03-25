@@ -12,20 +12,20 @@ lbl_8065C680:
 /* 8065C6A8 00000028  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8065C6AC 0000002C  38 60 00 02 */	li r3, 2
 /* 8065C6B0 00000030  38 81 00 08 */	addi r4, r1, 8
-/* 8065C6B4 00000034  4B FF BE 85 */	bl _unresolved
-/* 8065C6B8 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8065C6BC 0000003C  38 A3 00 00 */	addi r5, r3, 0x0000 /* 0x00000000@l */
-/* 8065C6C0 00000040  88 65 00 BC */	lbz r3, 0xbc(r5)
+/* 8065C6B4 00000034  4B C0 4A 4C */	b dTimer_createGetIn2D__Fl4cXyz
+/* 8065C6B8 00000038  3C 60 80 43 */	lis r3, g_meter2_info@ha
+/* 8065C6BC 0000003C  38 A3 01 88 */	addi r5, r3, g_meter2_info@l
+/* 8065C6C0 00000040  88 65 00 BC */	lbz r3, 0xbc(r5)	/* effective address: 80430244 */
 /* 8065C6C4 00000044  38 03 00 01 */	addi r0, r3, 1
-/* 8065C6C8 00000048  98 05 00 BC */	stb r0, 0xbc(r5)
+/* 8065C6C8 00000048  98 05 00 BC */	stb r0, 0xbc(r5)	/* effective address: 80430244 */
 /* 8065C6CC 0000004C  38 00 00 32 */	li r0, 0x32
 /* 8065C6D0 00000050  90 1F 0C 90 */	stw r0, 0xc90(r31)
 /* 8065C6D4 00000054  38 80 00 01 */	li r4, 1
 /* 8065C6D8 00000058  98 9F 0C 9F */	stb r4, 0xc9f(r31)
 /* 8065C6DC 0000005C  38 00 00 00 */	li r0, 0
 /* 8065C6E0 00000060  98 1F 0C A9 */	stb r0, 0xca9(r31)
-/* 8065C6E4 00000064  88 65 00 BC */	lbz r3, 0xbc(r5)
-/* 8065C6E8 00000068  88 05 00 BB */	lbz r0, 0xbb(r5)
+/* 8065C6E4 00000064  88 65 00 BC */	lbz r3, 0xbc(r5)	/* effective address: 80430244 */
+/* 8065C6E8 00000068  88 05 00 BB */	lbz r0, 0xbb(r5)	/* effective address: 80430243 */
 /* 8065C6EC 0000006C  7C 03 00 40 */	cmplw r3, r0
 /* 8065C6F0 00000070  40 82 00 08 */	bne lbl_8065C6F8
 /* 8065C6F4 00000074  98 9F 0C A9 */	stb r4, 0xca9(r31)

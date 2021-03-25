@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct STControl {
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct STControl {
 };
 
 struct CSTControl {
@@ -279,7 +279,7 @@ extern "C" extern u8 const data_80397828[40];
 extern "C" extern u8 const data_80397850[40];
 extern "C" extern u8 const data_80397878[40];
 extern "C" extern u8 const data_803978A0[40];
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_menu_d_menu_ring__stringBase0;
 extern "C" extern u8 pad_80454434[4];
 
 // 

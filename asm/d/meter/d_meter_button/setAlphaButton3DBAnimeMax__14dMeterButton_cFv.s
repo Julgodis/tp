@@ -16,7 +16,7 @@ lbl_80208570:
 /* 802085A8 00000038  88 03 5E 4A */	lbz r0, 0x5e4a(r3)	/* effective address: 8040C00A */
 /* 802085AC 0000003C  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 802085B0 00000040  40 82 00 10 */	bne lbl_802085C0
-/* 802085B4 00000044  88 03 5E 4B */	lbz r0, 0x5e4b(r3)
+/* 802085B4 00000044  88 03 5E 4B */	lbz r0, 0x5e4b(r3)	/* effective address: 8040C00B */
 /* 802085B8 00000048  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 802085BC 0000004C  41 82 00 20 */	beq lbl_802085DC
 lbl_802085C0:

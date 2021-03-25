@@ -5,12 +5,12 @@ lbl_80AA0D74:
 /* 80AA0D80 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80AA0D84 00000010  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80AA0D88 00000014  41 82 00 1C */	beq lbl_80AA0DA4
-/* 80AA0D8C 00000018  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 80AA0D90 0000001C  38 05 00 00 */	addi r0, r5, 0x0000 /* 0x00000000@l */
+/* 80AA0D8C 00000018  3C A0 80 AA */	lis r5, __vt__22daNpcT_MotionSeqMngr_c@ha
+/* 80AA0D90 0000001C  38 05 2A 74 */	addi r0, r5, __vt__22daNpcT_MotionSeqMngr_c@l
 /* 80AA0D94 00000020  90 1F 00 20 */	stw r0, 0x20(r31)
 /* 80AA0D98 00000024  7C 80 07 35 */	extsh. r0, r4
 /* 80AA0D9C 00000028  40 81 00 08 */	ble lbl_80AA0DA4
-/* 80AA0DA0 0000002C  4B FF B4 59 */	bl _unresolved
+/* 80AA0DA0 0000002C  4B 82 DF 9C */	b __dl__FPv
 lbl_80AA0DA4:
 /* 80AA0DA4 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80AA0DA8 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

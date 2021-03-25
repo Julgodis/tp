@@ -5,24 +5,24 @@ lbl_80503E2C:
 /* 80503E38 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80503E3C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80503E40 00000014  38 7F 05 68 */	addi r3, r31, 0x568
-/* 80503E44 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80503E48 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80503E44 00000018  3C 80 80 50 */	lis r4, stringBase0@ha
+/* 80503E48 0000001C  38 84 47 EC */	addi r4, r4, stringBase0@l
 /* 80503E4C 00000020  38 84 00 08 */	addi r4, r4, 8
-/* 80503E50 00000024  4B FF D0 A9 */	bl _unresolved
+/* 80503E50 00000024  4B B2 91 B8 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80503E54 00000028  88 1F 0C F4 */	lbz r0, 0xcf4(r31)
 /* 80503E58 0000002C  28 00 00 00 */	cmplwi r0, 0
 /* 80503E5C 00000030  41 82 00 10 */	beq lbl_80503E6C
 /* 80503E60 00000034  38 00 00 00 */	li r0, 0
-/* 80503E64 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80503E68 0000003C  98 03 00 00 */	stb r0, 0x0000(r3)
+/* 80503E64 00000038  3C 60 80 50 */	lis r3, data_80504950@ha
+/* 80503E68 0000003C  98 03 49 50 */	stb r0, data_80504950@l(r3)
 lbl_80503E6C:
 /* 80503E6C 00000000  80 1F 00 F0 */	lwz r0, 0xf0(r31)
 /* 80503E70 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 80503E74 00000008  41 82 00 14 */	beq lbl_80503E88
 /* 80503E78 0000000C  38 7F 0A F8 */	addi r3, r31, 0xaf8
-/* 80503E7C 00000010  4B FF D0 7D */	bl _unresolved
+/* 80503E7C 00000010  4B DB A1 7C */	b deleteObject__14Z2SoundObjBaseFv
 /* 80503E80 00000014  38 7F 0A D8 */	addi r3, r31, 0xad8
-/* 80503E84 00000018  4B FF D0 75 */	bl _unresolved
+/* 80503E84 00000018  4B DB A1 74 */	b deleteObject__14Z2SoundObjBaseFv
 lbl_80503E88:
 /* 80503E88 00000000  38 60 00 01 */	li r3, 1
 /* 80503E8C 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

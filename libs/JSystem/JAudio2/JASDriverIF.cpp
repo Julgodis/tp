@@ -138,7 +138,7 @@ asm void JASDriver::setOutputMode(u32 param_0) {
 #pragma pop
 
 
-/* 8029E180-8029E188 0008+00 s=0 e=4 z=0  None .text      getOutputMode__9JASDriverFv                                  */
+/* 8029E180-8029E188 0008+00 s=0 e=4 z=1  None .text      getOutputMode__9JASDriverFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

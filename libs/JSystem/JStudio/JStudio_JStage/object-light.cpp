@@ -20,10 +20,10 @@ struct JStage {
 
 };
 
-struct Vec {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct Vec {
 };
 
 namespace JStudio {

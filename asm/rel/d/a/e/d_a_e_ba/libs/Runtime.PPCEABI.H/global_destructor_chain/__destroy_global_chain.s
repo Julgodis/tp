@@ -3,19 +3,19 @@ lbl_8067EC94:
 /* 8067EC98 00000004  7C 08 02 A6 */	mflr r0
 /* 8067EC9C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8067ECA0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8067ECA4 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8067ECA8 00000014  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 8067ECA4 00000010  3C 60 80 68 */	lis r3, __global_destructor_chain@ha
+/* 8067ECA8 00000014  3B E3 26 30 */	addi r31, r3, __global_destructor_chain@l
 /* 8067ECAC 00000018  48 00 00 20 */	b lbl_8067ECCC
 lbl_8067ECB0:
 /* 8067ECB0 00000000  80 05 00 00 */	lwz r0, 0(r5)
-/* 8067ECB4 00000004  90 1F 00 00 */	stw r0, 0(r31)
+/* 8067ECB4 00000004  90 1F 00 00 */	stw r0, 0(r31)	/* effective address: 80682630 */
 /* 8067ECB8 00000008  80 65 00 08 */	lwz r3, 8(r5)
 /* 8067ECBC 0000000C  38 80 FF FF */	li r4, -1
 /* 8067ECC0 00000010  81 85 00 04 */	lwz r12, 4(r5)
 /* 8067ECC4 00000014  7D 89 03 A6 */	mtctr r12
 /* 8067ECC8 00000018  4E 80 04 21 */	bctrl 
 lbl_8067ECCC:
-/* 8067ECCC 00000000  80 BF 00 00 */	lwz r5, 0(r31)
+/* 8067ECCC 00000000  80 BF 00 00 */	lwz r5, 0(r31)	/* effective address: 80682630 */
 /* 8067ECD0 00000004  28 05 00 00 */	cmplwi r5, 0
 /* 8067ECD4 00000008  40 82 FF DC */	bne lbl_8067ECB0
 /* 8067ECD8 0000000C  83 E1 00 0C */	lwz r31, 0xc(r1)

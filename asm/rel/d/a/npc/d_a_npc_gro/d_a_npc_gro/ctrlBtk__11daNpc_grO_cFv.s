@@ -8,16 +8,16 @@ lbl_809DB774:
 /* 809DB78C 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 809DB790 0000001C  41 82 00 AC */	beq lbl_809DB83C
 /* 809DB794 00000020  38 C0 00 00 */	li r6, 0
-/* 809DB798 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 809DB79C 00000028  84 A4 00 00 */	lwzu r5, 0x0000(r4)
+/* 809DB798 00000024  3C 80 80 9E */	lis r4, l_btkGetParamList@ha
+/* 809DB79C 00000028  84 A4 F4 24 */	lwzu r5, l_btkGetParamList@l(r4)
 /* 809DB7A0 0000002C  2C 05 00 00 */	cmpwi r5, 0
 /* 809DB7A4 00000030  41 80 00 20 */	blt lbl_809DB7C4
-/* 809DB7A8 00000034  80 04 00 04 */	lwz r0, 4(r4)
+/* 809DB7A8 00000034  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 809E0004 */
 /* 809DB7AC 00000038  54 00 10 3A */	slwi r0, r0, 2
-/* 809DB7B0 0000003C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 809DB7B4 00000040  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 809DB7B0 0000003C  3C 80 80 9E */	lis r4, l_resNames@ha
+/* 809DB7B4 00000040  38 84 F4 A4 */	addi r4, r4, l_resNames@l
 /* 809DB7B8 00000044  7C 84 00 2E */	lwzx r4, r4, r0
-/* 809DB7BC 00000048  4B FF ED 1D */	bl _unresolved
+/* 809DB7BC 00000048  4B 77 73 E8 */	b getTexSRTKeyAnmP__8daNpcF_cFPci
 /* 809DB7C0 0000004C  7C 66 1B 78 */	mr r6, r3
 lbl_809DB7C4:
 /* 809DB7C4 00000000  80 1F 05 B4 */	lwz r0, 0x5b4(r31)
@@ -25,13 +25,13 @@ lbl_809DB7C4:
 /* 809DB7CC 00000008  40 82 00 64 */	bne lbl_809DB830
 /* 809DB7D0 0000000C  A8 1F 08 FE */	lha r0, 0x8fe(r31)
 /* 809DB7D4 00000010  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
-/* 809DB7D8 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 809DB7DC 00000018  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
+/* 809DB7D8 00000014  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
+/* 809DB7DC 00000018  38 83 9A 20 */	addi r4, r3, sincosTable___5JMath@l
 /* 809DB7E0 0000001C  7C 04 04 2E */	lfsx f0, r4, r0
-/* 809DB7E4 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 809DB7E8 00000024  C0 43 00 00 */	lfs f2, 0x0000(r3)
-/* 809DB7EC 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 809DB7F0 0000002C  C0 23 00 00 */	lfs f1, 0x0000(r3)
+/* 809DB7E4 00000020  3C 60 80 9E */	lis r3, lit_4812@ha
+/* 809DB7E8 00000024  C0 43 F0 1C */	lfs f2, lit_4812@l(r3)
+/* 809DB7EC 00000028  3C 60 80 9E */	lis r3, lit_4813@ha
+/* 809DB7F0 0000002C  C0 23 F0 20 */	lfs f1, lit_4813@l(r3)
 /* 809DB7F4 00000030  EC 01 00 32 */	fmuls f0, f1, f0
 /* 809DB7F8 00000034  EC 02 00 32 */	fmuls f0, f2, f0
 /* 809DB7FC 00000038  80 7F 0B DC */	lwz r3, 0xbdc(r31)

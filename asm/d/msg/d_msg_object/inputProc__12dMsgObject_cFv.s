@@ -82,21 +82,21 @@ lbl_8023598C:
 /* 80235A10 00000084  2C 03 00 00 */	cmpwi r3, 0
 /* 80235A14 00000088  40 82 00 1C */	bne lbl_80235A30
 /* 80235A18 0000008C  7F 63 DB 78 */	mr r3, r27
-/* 80235A1C 00000090  A0 9D 02 F0 */	lhz r4, 0x2f0(r29)
+/* 80235A1C 00000090  A0 9D 02 F0 */	lhz r4, 0x2f0(r29)	/* effective address: 803A7578 */
 /* 80235A20 00000094  4B DF EF 6D */	bl onEventBit__11dSv_event_cFUs
 /* 80235A24 00000098  38 60 00 00 */	li r3, 0
 /* 80235A28 0000009C  48 00 2F 69 */	bl dMsgObject_setFundRaising__FUs
 /* 80235A2C 000000A0  48 00 00 40 */	b lbl_80235A6C
 lbl_80235A30:
 /* 80235A30 00000000  7F 63 DB 78 */	mr r3, r27
-/* 80235A34 00000004  A0 9F 00 F8 */	lhz r4, 0xf8(r31)
+/* 80235A34 00000004  A0 9F 00 F8 */	lhz r4, 0xf8(r31)	/* effective address: 803A7380 */
 /* 80235A38 00000008  4B DF EF 55 */	bl onEventBit__11dSv_event_cFUs
 /* 80235A3C 0000000C  38 60 00 00 */	li r3, 0
 /* 80235A40 00000010  48 00 2F 51 */	bl dMsgObject_setFundRaising__FUs
 /* 80235A44 00000014  48 00 00 28 */	b lbl_80235A6C
 lbl_80235A48:
 /* 80235A48 00000000  7F A3 EB 78 */	mr r3, r29
-/* 80235A4C 00000004  A0 9F 00 A0 */	lhz r4, 0xa0(r31)
+/* 80235A4C 00000004  A0 9F 00 A0 */	lhz r4, 0xa0(r31)	/* effective address: 803A7328 */
 /* 80235A50 00000008  4B DF EF 55 */	bl offEventBit__11dSv_event_cFUs
 /* 80235A54 0000000C  48 00 00 18 */	b lbl_80235A6C
 lbl_80235A58:
@@ -107,7 +107,7 @@ lbl_80235A58:
 /* 80235A68 00000010  4B DE B8 D1 */	bl fpcEx_Search__FPFPvPv_PvPv
 lbl_80235A6C:
 /* 80235A6C 00000000  38 00 00 00 */	li r0, 0
-/* 80235A70 00000004  98 1E 00 BD */	stb r0, 0xbd(r30)
+/* 80235A70 00000004  98 1E 00 BD */	stb r0, 0xbd(r30)	/* effective address: 80430245 */
 /* 80235A74 00000008  7F 83 E3 78 */	mr r3, r28
 /* 80235A78 0000000C  38 80 00 0E */	li r4, 0xe
 /* 80235A7C 00000010  48 00 0E 69 */	bl setStatusLocal__12dMsgObject_cFUs
@@ -123,7 +123,7 @@ lbl_80235A84:
 /* 80235AA0 0000001C  A0 84 00 A0 */	lhz r4, 0xa0(r4)	/* effective address: 80379160 */
 /* 80235AA4 00000020  4B DF EF 01 */	bl offEventBit__11dSv_event_cFUs
 /* 80235AA8 00000024  38 00 00 00 */	li r0, 0
-/* 80235AAC 00000028  98 1E 00 BD */	stb r0, 0xbd(r30)
+/* 80235AAC 00000028  98 1E 00 BD */	stb r0, 0xbd(r30)	/* effective address: 80430245 */
 /* 80235AB0 0000002C  7F 83 E3 78 */	mr r3, r28
 /* 80235AB4 00000030  38 80 00 0E */	li r4, 0xe
 /* 80235AB8 00000034  48 00 0E 2D */	bl setStatusLocal__12dMsgObject_cFUs

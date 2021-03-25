@@ -9,7 +9,7 @@ lbl_80B69F60:
 /* 80B69F7C 0000001C  88 03 0E 25 */	lbz r0, 0xe25(r3)
 /* 80B69F80 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 80B69F84 00000024  40 82 00 1C */	bne lbl_80B69FA0
-/* 80B69F88 00000028  4B FF EF 11 */	bl _unresolved
+/* 80B69F88 00000028  4B 4C 5A CC */	b dComIfGs_wolfeye_effect_check__Fv
 /* 80B69F8C 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 80B69F90 00000030  40 82 00 14 */	bne lbl_80B69FA4
 /* 80B69F94 00000034  88 1E 0A 89 */	lbz r0, 0xa89(r30)

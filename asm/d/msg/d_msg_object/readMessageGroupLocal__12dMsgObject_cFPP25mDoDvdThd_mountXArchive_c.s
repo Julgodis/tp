@@ -14,8 +14,8 @@ lbl_80236BF8:
 /* 80236C28 00000030  8B E3 00 28 */	lbz r31, 0x28(r3)	/* effective address: 804061E8 */
 /* 80236C2C 00000034  3C 60 80 43 */	lis r3, data_8043069C@ha
 /* 80236C30 00000038  38 63 06 9C */	addi r3, r3, data_8043069C@l
-/* 80236C34 0000003C  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 80236C38 00000040  38 84 96 60 */	addi r4, r4, stringBase0@l
+/* 80236C34 0000003C  3C 80 80 3A */	lis r4, d_msg_d_msg_object__stringBase0@ha
+/* 80236C38 00000040  38 84 96 60 */	addi r4, r4, d_msg_d_msg_object__stringBase0@l
 /* 80236C3C 00000044  38 84 00 6F */	addi r4, r4, 0x6f
 /* 80236C40 00000048  7F E5 FB 78 */	mr r5, r31
 /* 80236C44 0000004C  4C C6 31 82 */	crclr 6

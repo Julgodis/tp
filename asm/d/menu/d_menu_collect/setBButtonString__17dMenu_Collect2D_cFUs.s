@@ -16,8 +16,8 @@ lbl_801B60B8:
 /* 801B60F0 00000038  3B C0 00 00 */	li r30, 0
 /* 801B60F4 0000003C  3C 60 80 39 */	lis r3, data_80395290@ha
 /* 801B60F8 00000040  3B A3 52 90 */	addi r29, r3, data_80395290@l
-/* 801B60FC 00000044  3C 60 80 39 */	lis r3, stringBase0@ha
-/* 801B6100 00000048  3B 83 53 30 */	addi r28, r3, stringBase0@l
+/* 801B60FC 00000044  3C 60 80 39 */	lis r3, d_menu_d_menu_collect__stringBase0@ha
+/* 801B6100 00000048  3B 83 53 30 */	addi r28, r3, d_menu_d_menu_collect__stringBase0@l
 lbl_801B6104:
 /* 801B6104 00000000  80 7F 00 1C */	lwz r3, 0x1c(r31)
 /* 801B6108 00000004  7C 9D F2 14 */	add r4, r29, r30

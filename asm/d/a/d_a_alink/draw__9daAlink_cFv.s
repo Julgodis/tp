@@ -491,13 +491,13 @@ lbl_800CCF0C:
 /* 800CCF24 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CCF28 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 800CCF2C 00000020  80 03 5F B0 */	lwz r0, 0x5fb0(r3)	/* effective address: 8040C170 */
-/* 800CCF30 00000024  90 1B 00 48 */	stw r0, 0x48(r27)
-/* 800CCF34 00000028  90 1B 00 4C */	stw r0, 0x4c(r27)
+/* 800CCF30 00000024  90 1B 00 48 */	stw r0, 0x48(r27)	/* effective address: 80434B10 */
+/* 800CCF34 00000028  90 1B 00 4C */	stw r0, 0x4c(r27)	/* effective address: 80434B14 */
 /* 800CCF38 0000002C  48 00 00 1C */	b lbl_800CCF54
 lbl_800CCF3C:
 /* 800CCF3C 00000000  28 00 01 0A */	cmplwi r0, 0x10a
 /* 800CCF40 00000004  40 82 00 14 */	bne lbl_800CCF54
-/* 800CCF44 00000008  80 63 00 04 */	lwz r3, 4(r3)
+/* 800CCF44 00000008  80 63 00 04 */	lwz r3, 4(r3)	/* effective address: 804061C4 */
 /* 800CCF48 0000000C  38 63 00 58 */	addi r3, r3, 0x58
 /* 800CCF4C 00000010  80 9C 07 18 */	lwz r4, 0x718(r28)
 /* 800CCF50 00000014  48 26 2D 75 */	bl entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey
@@ -510,9 +510,9 @@ lbl_800CCF64:
 /* 800CCF64 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CCF68 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 800CCF6C 00000008  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
-/* 800CCF70 0000000C  90 1B 00 48 */	stw r0, 0x48(r27)
+/* 800CCF70 0000000C  90 1B 00 48 */	stw r0, 0x48(r27)	/* effective address: 80434B10 */
 /* 800CCF74 00000010  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
-/* 800CCF78 00000014  90 1B 00 4C */	stw r0, 0x4c(r27)
+/* 800CCF78 00000014  90 1B 00 4C */	stw r0, 0x4c(r27)	/* effective address: 80434B14 */
 /* 800CCF7C 00000018  48 00 07 7C */	b lbl_800CD6F8
 lbl_800CCF80:
 /* 800CCF80 00000000  7F 83 E3 78 */	mr r3, r28

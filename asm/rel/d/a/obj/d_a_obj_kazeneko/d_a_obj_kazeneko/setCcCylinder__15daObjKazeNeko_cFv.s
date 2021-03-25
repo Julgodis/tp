@@ -6,21 +6,21 @@ lbl_80C3CB10:
 /* 80C3CB20 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80C3CB24 00000014  38 7F 07 14 */	addi r3, r31, 0x714
 /* 80C3CB28 00000018  38 9F 04 D0 */	addi r4, r31, 0x4d0
-/* 80C3CB2C 0000001C  4B FF FD 8D */	bl _unresolved
+/* 80C3CB2C 0000001C  4B 63 26 B0 */	b SetC__8cM3dGCylFRC4cXyz
 /* 80C3CB30 00000020  38 7F 07 14 */	addi r3, r31, 0x714
-/* 80C3CB34 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80C3CB38 00000028  C0 24 00 00 */	lfs f1, 0x0000(r4)
-/* 80C3CB3C 0000002C  4B FF FD 7D */	bl _unresolved
+/* 80C3CB34 00000024  3C 80 80 C4 */	lis r4, M_attr__15daObjKazeNeko_c@ha
+/* 80C3CB38 00000028  C0 24 D3 DC */	lfs f1, M_attr__15daObjKazeNeko_c@l(r4)
+/* 80C3CB3C 0000002C  4B 63 26 C4 */	b SetR__8cM3dGCylFf
 /* 80C3CB40 00000030  38 7F 07 14 */	addi r3, r31, 0x714
-/* 80C3CB44 00000034  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 80C3CB48 00000038  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
-/* 80C3CB4C 0000003C  C0 24 00 04 */	lfs f1, 4(r4)
-/* 80C3CB50 00000040  4B FF FD 69 */	bl _unresolved
-/* 80C3CB54 00000044  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80C3CB58 00000048  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80C3CB44 00000034  3C 80 80 C4 */	lis r4, M_attr__15daObjKazeNeko_c@ha
+/* 80C3CB48 00000038  38 84 D3 DC */	addi r4, r4, M_attr__15daObjKazeNeko_c@l
+/* 80C3CB4C 0000003C  C0 24 00 04 */	lfs f1, 4(r4)	/* effective address: 80C3D3E0 */
+/* 80C3CB50 00000040  4B 63 26 A8 */	b SetH__8cM3dGCylFf
+/* 80C3CB54 00000044  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C3CB58 00000048  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C3CB5C 0000004C  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80C3CB60 00000050  38 9F 05 F0 */	addi r4, r31, 0x5f0
-/* 80C3CB64 00000054  4B FF FD 55 */	bl _unresolved
+/* 80C3CB64 00000054  4B 62 80 44 */	b Set__4cCcSFP8cCcD_Obj
 /* 80C3CB68 00000058  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80C3CB6C 0000005C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80C3CB70 00000060  7C 08 03 A6 */	mtlr r0

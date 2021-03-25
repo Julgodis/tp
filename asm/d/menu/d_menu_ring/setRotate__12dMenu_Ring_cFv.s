@@ -28,11 +28,11 @@ lbl_801EB960:
 lbl_801EB9C8:
 /* 801EB9C8 00000000  7C 7B F2 14 */	add r3, r27, r30
 /* 801EB9CC 00000004  C0 23 03 8C */	lfs f1, 0x38c(r3)
-/* 801EB9D0 00000008  C0 1D 01 10 */	lfs f0, 0x110(r29)
+/* 801EB9D0 00000008  C0 1D 01 10 */	lfs f0, 0x110(r29)	/* effective address: 8042FC0C */
 /* 801EB9D4 0000000C  EC 1E 00 2A */	fadds f0, f30, f0
 /* 801EB9D8 00000010  EC 21 00 28 */	fsubs f1, f1, f0
 /* 801EB9DC 00000014  C0 43 03 EC */	lfs f2, 0x3ec(r3)
-/* 801EB9E0 00000018  C0 1D 01 14 */	lfs f0, 0x114(r29)
+/* 801EB9E0 00000018  C0 1D 01 14 */	lfs f0, 0x114(r29)	/* effective address: 8042FC10 */
 /* 801EB9E4 0000001C  EC 1F 00 2A */	fadds f0, f31, f0
 /* 801EB9E8 00000020  EC 42 00 28 */	fsubs f2, f2, f0
 /* 801EB9EC 00000024  48 07 BC 89 */	bl cM_atan2s__Fff

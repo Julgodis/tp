@@ -35,7 +35,7 @@ lbl_801BAAA8:
 /* 801BAAC8 00000020  90 61 00 08 */	stw r3, 8(r1)
 /* 801BAACC 00000024  C8 01 00 08 */	lfd f0, 8(r1)
 /* 801BAAD0 00000028  EC 20 10 28 */	fsubs f1, f0, f2
-/* 801BAAD4 0000002C  A8 04 00 96 */	lha r0, 0x96(r4)
+/* 801BAAD4 0000002C  A8 04 00 96 */	lha r0, 0x96(r4)	/* effective address: 8042FCF6 */
 /* 801BAAD8 00000030  7C 00 01 D6 */	mullw r0, r0, r0
 /* 801BAADC 00000034  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801BAAE0 00000038  90 01 00 14 */	stw r0, 0x14(r1)

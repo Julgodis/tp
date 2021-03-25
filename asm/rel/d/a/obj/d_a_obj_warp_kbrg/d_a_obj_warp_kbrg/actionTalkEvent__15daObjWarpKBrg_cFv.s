@@ -8,25 +8,25 @@ lbl_80D28040:
 /* 80D28058 00000018  7F E4 FB 78 */	mr r4, r31
 /* 80D2805C 0000001C  38 A0 00 00 */	li r5, 0
 /* 80D28060 00000020  38 C0 00 00 */	li r6, 0
-/* 80D28064 00000024  4B FF EE B5 */	bl _unresolved
+/* 80D28064 00000024  4B 52 22 74 */	b doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci
 /* 80D28068 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 80D2806C 0000002C  41 82 00 4C */	beq lbl_80D280B8
-/* 80D28070 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D28074 00000034  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80D28070 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D28074 00000034  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D28078 00000038  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 80D2807C 0000003C  4B FF EE 9D */	bl _unresolved
+/* 80D2807C 0000003C  4B 31 A3 EC */	b reset__14dEvt_control_cFv
 /* 80D28080 00000040  38 00 00 01 */	li r0, 1
 /* 80D28084 00000044  98 1F 05 D9 */	stb r0, 0x5d9(r31)
 /* 80D28088 00000048  38 7F 05 DC */	addi r3, r31, 0x5dc
 /* 80D2808C 0000004C  38 81 00 08 */	addi r4, r1, 8
-/* 80D28090 00000050  4B FF EE 89 */	bl _unresolved
+/* 80D28090 00000050  4B 52 24 98 */	b getEventId__10dMsgFlow_cFPi
 /* 80D28094 00000054  54 60 04 3E */	clrlwi r0, r3, 0x10
 /* 80D28098 00000058  28 00 00 0B */	cmplwi r0, 0xb
 /* 80D2809C 0000005C  40 82 00 14 */	bne lbl_80D280B0
 /* 80D280A0 00000060  38 00 00 06 */	li r0, 6
-/* 80D280A4 00000064  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80D280A8 00000068  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80D280AC 0000006C  98 03 00 C1 */	stb r0, 0xc1(r3)
+/* 80D280A4 00000064  3C 60 80 43 */	lis r3, g_meter2_info@ha
+/* 80D280A8 00000068  38 63 01 88 */	addi r3, r3, g_meter2_info@l
+/* 80D280AC 0000006C  98 03 00 C1 */	stb r0, 0xc1(r3)	/* effective address: 80430249 */
 lbl_80D280B0:
 /* 80D280B0 00000000  38 00 00 05 */	li r0, 5
 /* 80D280B4 00000004  98 1F 05 CA */	stb r0, 0x5ca(r31)

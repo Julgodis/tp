@@ -128,6 +128,6 @@ asm void e_wb_class::setRunRideMode() {
 
 
 /* ############################################################################################## */
-/* 80450DF8-80450E00 0004+04 s=0 e=1 z=0  None .sbss      m_top__12daTagHstop_c                                        */
+/* 80450DF8-80450E00 0004+04 s=0 e=1 z=3  None .sbss      m_top__12daTagHstop_c                                        */
 u8 m_top__12daTagHstop_c[4 + 4 /* padding */];
 

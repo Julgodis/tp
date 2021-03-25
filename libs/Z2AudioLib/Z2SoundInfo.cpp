@@ -14,16 +14,16 @@
 struct JAIStream {
 };
 
-struct JAISeq {
+struct JAISound {
 };
 
-struct JAISe {
+struct JAISeq {
 };
 
 struct JAISoundID {
 };
 
-struct JAISound {
+struct JAISe {
 };
 
 struct Z2SoundInfo {

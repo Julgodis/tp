@@ -5,33 +5,33 @@ lbl_80CC0360:
 /* 80CC036C 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80CC0370 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80CC0374 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80CC0378 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CC037C 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80CC0378 00000018  3C 60 80 CC */	lis r3, lit_3649@ha
+/* 80CC037C 0000001C  3B E3 08 08 */	addi r31, r3, lit_3649@l
 /* 80CC0380 00000020  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80CC0384 00000024  7C 03 07 74 */	extsb r3, r0
-/* 80CC0388 00000028  4B FF F4 91 */	bl _unresolved
+/* 80CC0388 00000028  4B 36 CC E4 */	b dComIfGp_getReverb__Fi
 /* 80CC038C 0000002C  7C 67 1B 78 */	mr r7, r3
 /* 80CC0390 00000030  3C 60 00 08 */	lis r3, 0x0008 /* 0x000801A6@ha */
 /* 80CC0394 00000034  38 03 01 A6 */	addi r0, r3, 0x01A6 /* 0x000801A6@l */
 /* 80CC0398 00000038  90 01 00 08 */	stw r0, 8(r1)
-/* 80CC039C 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CC03A0 00000040  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80CC03A4 00000044  80 63 00 00 */	lwz r3, 0(r3)
+/* 80CC039C 0000003C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
+/* 80CC03A0 00000040  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 80CC03A4 00000044  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
 /* 80CC03A8 00000048  38 81 00 08 */	addi r4, r1, 8
 /* 80CC03AC 0000004C  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80CC03B0 00000050  38 C0 00 00 */	li r6, 0
-/* 80CC03B4 00000054  C0 3F 00 3C */	lfs f1, 0x3c(r31)
+/* 80CC03B4 00000054  C0 3F 00 3C */	lfs f1, 0x3c(r31)	/* effective address: 80CC0844 */
 /* 80CC03B8 00000058  FC 40 08 90 */	fmr f2, f1
-/* 80CC03BC 0000005C  C0 7F 00 4C */	lfs f3, 0x4c(r31)
+/* 80CC03BC 0000005C  C0 7F 00 4C */	lfs f3, 0x4c(r31)	/* effective address: 80CC0854 */
 /* 80CC03C0 00000060  FC 80 18 90 */	fmr f4, f3
 /* 80CC03C4 00000064  39 00 00 00 */	li r8, 0
-/* 80CC03C8 00000068  4B FF F4 51 */	bl _unresolved
-/* 80CC03CC 0000006C  C0 7F 00 40 */	lfs f3, 0x40(r31)
-/* 80CC03D0 00000070  C0 5F 00 44 */	lfs f2, 0x44(r31)
-/* 80CC03D4 00000074  C0 3F 00 48 */	lfs f1, 0x48(r31)
-/* 80CC03D8 00000078  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80CC03DC 0000007C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80CC03E0 00000080  C0 03 00 04 */	lfs f0, 4(r3)
+/* 80CC03C8 00000068  4B 5E C1 44 */	b seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
+/* 80CC03CC 0000006C  C0 7F 00 40 */	lfs f3, 0x40(r31)	/* effective address: 80CC0848 */
+/* 80CC03D0 00000070  C0 5F 00 44 */	lfs f2, 0x44(r31)	/* effective address: 80CC084C */
+/* 80CC03D4 00000074  C0 3F 00 48 */	lfs f1, 0x48(r31)	/* effective address: 80CC0850 */
+/* 80CC03D8 00000078  3C 60 80 CC */	lis r3, l_HIO@ha
+/* 80CC03DC 0000007C  38 63 0A C4 */	addi r3, r3, l_HIO@l
+/* 80CC03E0 00000080  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80CC0AC8 */
 /* 80CC03E4 00000084  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80CC03E8 00000088  EC 02 00 24 */	fdivs f0, f2, f0
 /* 80CC03EC 0000008C  EC 03 00 32 */	fmuls f0, f3, f0
@@ -39,8 +39,8 @@ lbl_80CC0360:
 /* 80CC03F4 00000094  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 80CC03F8 00000098  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80CC03FC 0000009C  B0 1E 05 B0 */	sth r0, 0x5b0(r30)
-/* 80CC0400 000000A0  C0 3F 00 38 */	lfs f1, 0x38(r31)
-/* 80CC0404 000000A4  C0 03 00 04 */	lfs f0, 4(r3)
+/* 80CC0400 000000A0  C0 3F 00 38 */	lfs f1, 0x38(r31)	/* effective address: 80CC0840 */
+/* 80CC0404 000000A4  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80CC0AC8 */
 /* 80CC0408 000000A8  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80CC040C 000000AC  41 82 00 14 */	beq lbl_80CC0420
 /* 80CC0410 000000B0  A8 7E 04 E6 */	lha r3, 0x4e6(r30)

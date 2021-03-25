@@ -38,7 +38,7 @@ extern "C" static void dKyeff_Execute__FP8dKyeff_c(); // 1
 extern "C" static void dKyeff_IsDelete__FP8dKyeff_c(); // 1
 extern "C" static void dKyeff_Delete__FP8dKyeff_c(); // 1
 extern "C" static void dKyeff_Create__FP12kankyo_class(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const d_d_kyeff__stringBase0;
 extern "C" extern void* g_profile_KYEFF[10 + 1 /* padding */];
 
 // 
@@ -176,7 +176,7 @@ SECTION_DATA static void* l_dKyeff_Method[5] = {
 	/* 4    */ (void*)dKyeff_Draw__FP8dKyeff_c,
 };
 
-/* 803BC16C-803BC198 0028+04 s=0 e=0 z=0  None .data      g_profile_KYEFF                                              */
+/* 803BC16C-803BC198 0028+04 s=0 e=0 z=1  None .data      g_profile_KYEFF                                              */
 SECTION_DATA void* g_profile_KYEFF[10 + 1 /* padding */] = {
 	/* 0    */ (void*)0xFFFFFFFD,
 	/* 1    */ (void*)0x000CFFFD,

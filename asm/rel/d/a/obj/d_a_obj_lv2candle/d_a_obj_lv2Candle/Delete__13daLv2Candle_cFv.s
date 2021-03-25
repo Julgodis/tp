@@ -5,19 +5,19 @@ lbl_8058EF6C:
 /* 8058EF78 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8058EF7C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8058EF80 00000014  38 7F 07 3C */	addi r3, r31, 0x73c
-/* 8058EF84 00000018  4B FF F0 35 */	bl _unresolved
+/* 8058EF84 00000018  4B D2 F0 74 */	b deleteObject__14Z2SoundObjBaseFv
 /* 8058EF88 0000001C  38 7F 05 68 */	addi r3, r31, 0x568
 /* 8058EF8C 00000020  88 1F 06 FD */	lbz r0, 0x6fd(r31)
 /* 8058EF90 00000024  54 00 10 3A */	slwi r0, r0, 2
-/* 8058EF94 00000028  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 8058EF98 0000002C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 8058EF94 00000028  3C 80 80 59 */	lis r4, l_resNameIdx@ha
+/* 8058EF98 0000002C  38 84 F2 0C */	addi r4, r4, l_resNameIdx@l
 /* 8058EF9C 00000030  7C 84 00 2E */	lwzx r4, r4, r0
-/* 8058EFA0 00000034  4B FF F0 19 */	bl _unresolved
+/* 8058EFA0 00000034  4B A9 E0 68 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 8058EFA4 00000038  88 1F 07 0C */	lbz r0, 0x70c(r31)
 /* 8058EFA8 0000003C  28 00 00 00 */	cmplwi r0, 0
 /* 8058EFAC 00000040  41 82 00 0C */	beq lbl_8058EFB8
 /* 8058EFB0 00000044  38 7F 07 14 */	addi r3, r31, 0x714
-/* 8058EFB4 00000048  4B FF F0 05 */	bl _unresolved
+/* 8058EFB4 00000048  4B C1 89 78 */	b dKy_plight_cut__FP15LIGHT_INFLUENCE
 lbl_8058EFB8:
 /* 8058EFB8 00000000  38 60 00 01 */	li r3, 1
 /* 8058EFBC 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

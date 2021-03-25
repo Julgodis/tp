@@ -126,7 +126,7 @@ extern "C" void state_register__10JKRExpHeapCFPQ27JKRHeap6TStateUl(); // 1
 extern "C" void state_compare__10JKRExpHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState(); // 1
 extern "C" void getHeapType__10JKRExpHeapFv(); // 1
 extern "C" void do_getCurrentGroupId__10JKRExpHeapFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JKRExpHeap__stringBase0;
 
 // 
 // External References:
@@ -181,7 +181,7 @@ asm void JKRExpHeap::createRoot(int param_0, bool param_1) {
 #pragma pop
 
 
-/* 802CEE2C-802CEF00 00D4+00 s=0 e=19 z=0  None .text      create__10JKRExpHeapFUlP7JKRHeapb                            */
+/* 802CEE2C-802CEF00 00D4+00 s=0 e=19 z=1  None .text      create__10JKRExpHeapFUlP7JKRHeapb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

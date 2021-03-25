@@ -59,7 +59,7 @@ lbl_8014B0C8:
 /* 8014B1AC 000000B8  2C 03 00 00 */	cmpwi r3, 0
 /* 8014B1B0 000000BC  41 82 00 28 */	beq lbl_8014B1D8
 /* 8014B1B4 000000C0  7F 43 D3 78 */	mr r3, r26
-/* 8014B1B8 000000C4  80 9F 5D AC */	lwz r4, 0x5dac(r31)
+/* 8014B1B8 000000C4  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
 /* 8014B1BC 000000C8  FC 20 E8 90 */	fmr f1, f29
 /* 8014B1C0 000000CC  7F 65 DB 78 */	mr r5, r27
 /* 8014B1C4 000000D0  4B FF FA 0D */	bl chkActorInSight__8daNpcT_cFP10fopAc_ac_cfs

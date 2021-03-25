@@ -8,8 +8,8 @@ lbl_8029CB70:
 /* 8029CB88 00000018  7C 9B 23 78 */	mr r27, r4
 /* 8029CB8C 0000001C  7C BC 2B 78 */	mr r28, r5
 /* 8029CB90 00000020  38 60 00 05 */	li r3, 5
-/* 8029CB94 00000024  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8029CB98 00000028  38 84 B2 F0 */	addi r4, r4, stringBase0@l
+/* 8029CB94 00000024  3C 80 80 3A */	lis r4, JASAiCtrl__stringBase0@ha
+/* 8029CB98 00000028  38 84 B2 F0 */	addi r4, r4, JASAiCtrl__stringBase0@l
 /* 8029CB9C 0000002C  38 84 00 3A */	addi r4, r4, 0x3a
 /* 8029CBA0 00000030  4B FF 43 45 */	bl start__8JASProbeFlPCc
 /* 8029CBA4 00000034  7F 63 DB 78 */	mr r3, r27
@@ -21,8 +21,8 @@ lbl_8029CB70:
 /* 8029CBBC 0000004C  38 60 00 05 */	li r3, 5
 /* 8029CBC0 00000050  4B FF 43 65 */	bl stop__8JASProbeFl
 /* 8029CBC4 00000054  38 60 00 06 */	li r3, 6
-/* 8029CBC8 00000058  3C 80 80 3A */	lis r4, stringBase0@ha
-/* 8029CBCC 0000005C  38 84 B2 F0 */	addi r4, r4, stringBase0@l
+/* 8029CBC8 00000058  3C 80 80 3A */	lis r4, JASAiCtrl__stringBase0@ha
+/* 8029CBCC 0000005C  38 84 B2 F0 */	addi r4, r4, JASAiCtrl__stringBase0@l
 /* 8029CBD0 00000060  38 84 00 41 */	addi r4, r4, 0x41
 /* 8029CBD4 00000064  4B FF 43 11 */	bl start__8JASProbeFlPCc
 /* 8029CBD8 00000068  7F BE EB 78 */	mr r30, r29

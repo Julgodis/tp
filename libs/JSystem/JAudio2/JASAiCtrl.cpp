@@ -104,7 +104,7 @@ extern "C" void mixMonoTrackWide__9JASDriverFPsUlPFl_Ps(); // 1
 extern "C" void mixExtraTrack__9JASDriverFPsUlPFl_Ps(); // 1
 extern "C" void mixInterleaveTrack__9JASDriverFPsUlPFl_Ps(); // 1
 extern "C" void getSubFrameCounter__9JASDriverFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JASAiCtrl__stringBase0;
 
 // 
 // External References:
@@ -356,7 +356,7 @@ asm void JASDriver::finishDSPFrame() {
 #pragma pop
 
 
-/* 8029C9DC-8029C9E8 000C+00 s=0 e=0 z=0  None .text      registerMixCallback__9JASDriverFPFl_Ps10JASMixMode           */
+/* 8029C9DC-8029C9E8 000C+00 s=0 e=0 z=2  None .text      registerMixCallback__9JASDriverFPFl_Ps10JASMixMode           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

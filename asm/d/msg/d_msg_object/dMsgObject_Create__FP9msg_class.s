@@ -11,7 +11,7 @@ lbl_80237F80:
 /* 80237FA4 00000024  80 7F 5E C8 */	lwz r3, 0x5ec8(r31)	/* effective address: 8040C088 */
 /* 80237FA8 00000028  4B DD 72 25 */	bl mDoExt_setCurrentHeap__FP7JKRHeap
 /* 80237FAC 0000002C  7C 7D 1B 78 */	mr r29, r3
-/* 80237FB0 00000030  80 7F 5E C8 */	lwz r3, 0x5ec8(r31)
+/* 80237FB0 00000030  80 7F 5E C8 */	lwz r3, 0x5ec8(r31)	/* effective address: 8040C088 */
 /* 80237FB4 00000034  48 09 67 D1 */	bl getTotalFreeSize__7JKRHeapFv
 /* 80237FB8 00000038  7F C3 F3 78 */	mr r3, r30
 /* 80237FBC 0000003C  4B DE 79 F9 */	bl fopMsgM_setStageLayer__FPv

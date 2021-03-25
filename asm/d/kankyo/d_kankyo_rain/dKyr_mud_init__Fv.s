@@ -5,8 +5,8 @@ lbl_8006C790:
 /* 8006C79C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8006C7A0 00000010  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8006C7A4 00000014  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 8006C7A8 00000018  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 8006C7AC 0000001C  38 63 A5 78 */	addi r3, r3, stringBase0@l
+/* 8006C7A8 00000018  3C 60 80 38 */	lis r3, d_kankyo_d_kankyo_rain__stringBase0@ha
+/* 8006C7AC 0000001C  38 63 A5 78 */	addi r3, r3, d_kankyo_d_kankyo_rain__stringBase0@l
 /* 8006C7B0 00000020  38 63 00 10 */	addi r3, r3, 0x10
 /* 8006C7B4 00000024  38 80 00 53 */	li r4, 0x53
 /* 8006C7B8 00000028  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
@@ -24,13 +24,13 @@ lbl_8006C790:
 /* 8006C7E8 00000058  38 00 00 64 */	li r0, 0x64
 /* 8006C7EC 0000005C  7C 09 03 A6 */	mtctr r0
 lbl_8006C7F0:
-/* 8006C7F0 00000000  80 9F 10 4C */	lwz r4, 0x104c(r31)
+/* 8006C7F0 00000000  80 9F 10 4C */	lwz r4, 0x104c(r31)	/* effective address: 8042DAA0 */
 /* 8006C7F4 00000004  38 03 00 18 */	addi r0, r3, 0x18
 /* 8006C7F8 00000008  7C A4 01 AE */	stbx r5, r4, r0
 /* 8006C7FC 0000000C  38 63 00 48 */	addi r3, r3, 0x48
 /* 8006C800 00000010  42 00 FF F0 */	bdnz lbl_8006C7F0
 /* 8006C804 00000014  38 00 00 00 */	li r0, 0
-/* 8006C808 00000018  80 7F 10 4C */	lwz r3, 0x104c(r31)
+/* 8006C808 00000018  80 7F 10 4C */	lwz r3, 0x104c(r31)	/* effective address: 8042DAA0 */
 /* 8006C80C 0000001C  90 03 00 10 */	stw r0, 0x10(r3)
 /* 8006C810 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8006C814 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
@@ -40,12 +40,12 @@ lbl_8006C7F0:
 /* 8006C824 00000034  2C 03 00 00 */	cmpwi r3, 0
 /* 8006C828 00000038  40 82 00 14 */	bne lbl_8006C83C
 /* 8006C82C 0000003C  C0 02 88 14 */	lfs f0, lit_4354(r2)
-/* 8006C830 00000040  80 7F 10 4C */	lwz r3, 0x104c(r31)
+/* 8006C830 00000040  80 7F 10 4C */	lwz r3, 0x104c(r31)	/* effective address: 8042DAA0 */
 /* 8006C834 00000044  D0 03 1C 3C */	stfs f0, 0x1c3c(r3)
 /* 8006C838 00000048  48 00 00 10 */	b lbl_8006C848
 lbl_8006C83C:
 /* 8006C83C 00000000  C0 02 87 B8 */	lfs f0, lit_3954(r2)
-/* 8006C840 00000004  80 7F 10 4C */	lwz r3, 0x104c(r31)
+/* 8006C840 00000004  80 7F 10 4C */	lwz r3, 0x104c(r31)	/* effective address: 8042DAA0 */
 /* 8006C844 00000008  D0 03 1C 3C */	stfs f0, 0x1c3c(r3)
 lbl_8006C848:
 /* 8006C848 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

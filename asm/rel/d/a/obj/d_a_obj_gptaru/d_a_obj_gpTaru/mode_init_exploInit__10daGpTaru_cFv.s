@@ -5,13 +5,13 @@ lbl_8057EBA4:
 /* 8057EBB0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8057EBB4 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 8057EBB8 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 8057EBBC 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8057EBC0 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
-/* 8057EBC4 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 8057EBC8 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 8057EBCC 00000028  88 03 00 10 */	lbz r0, 0x10(r3)
+/* 8057EBBC 00000018  3C 60 80 58 */	lis r3, lit_3656@ha
+/* 8057EBC0 0000001C  3B E3 F5 70 */	addi r31, r3, lit_3656@l
+/* 8057EBC4 00000020  3C 60 80 58 */	lis r3, l_HIO@ha
+/* 8057EBC8 00000024  38 63 F8 E4 */	addi r3, r3, l_HIO@l
+/* 8057EBCC 00000028  88 03 00 10 */	lbz r0, 0x10(r3)	/* effective address: 8057F8F4 */
 /* 8057EBD0 0000002C  98 1E 09 34 */	stb r0, 0x934(r30)
-/* 8057EBD4 00000030  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8057EBD4 00000030  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 8057F8EC */
 /* 8057EBD8 00000034  D0 1E 09 38 */	stfs f0, 0x938(r30)
 /* 8057EBDC 00000038  80 1E 05 5C */	lwz r0, 0x55c(r30)
 /* 8057EBE0 0000003C  54 00 07 34 */	rlwinm r0, r0, 0, 0x1c, 0x1a
@@ -22,21 +22,21 @@ lbl_8057EBA4:
 /* 8057EBF4 00000050  D0 1E 09 5C */	stfs f0, 0x95c(r30)
 /* 8057EBF8 00000054  C0 1E 04 D8 */	lfs f0, 0x4d8(r30)
 /* 8057EBFC 00000058  D0 1E 09 60 */	stfs f0, 0x960(r30)
-/* 8057EC00 0000005C  C0 3F 00 54 */	lfs f1, 0x54(r31)
+/* 8057EC00 0000005C  C0 3F 00 54 */	lfs f1, 0x54(r31)	/* effective address: 8057F5C4 */
 /* 8057EC04 00000060  D0 3E 09 64 */	stfs f1, 0x964(r30)
-/* 8057EC08 00000064  C0 1F 00 10 */	lfs f0, 0x10(r31)
+/* 8057EC08 00000064  C0 1F 00 10 */	lfs f0, 0x10(r31)	/* effective address: 8057F580 */
 /* 8057EC0C 00000068  D0 1E 09 68 */	stfs f0, 0x968(r30)
 /* 8057EC10 0000006C  D0 3E 09 6C */	stfs f1, 0x96c(r30)
-/* 8057EC14 00000070  C0 1F 00 C0 */	lfs f0, 0xc0(r31)
+/* 8057EC14 00000070  C0 1F 00 C0 */	lfs f0, 0xc0(r31)	/* effective address: 8057F630 */
 /* 8057EC18 00000074  D0 1E 09 70 */	stfs f0, 0x970(r30)
 /* 8057EC1C 00000078  D0 3E 09 78 */	stfs f1, 0x978(r30)
-/* 8057EC20 0000007C  C0 1F 00 C4 */	lfs f0, 0xc4(r31)
+/* 8057EC20 0000007C  C0 1F 00 C4 */	lfs f0, 0xc4(r31)	/* effective address: 8057F634 */
 /* 8057EC24 00000080  D0 1E 09 74 */	stfs f0, 0x974(r30)
 /* 8057EC28 00000084  38 7E 09 58 */	addi r3, r30, 0x958
-/* 8057EC2C 00000088  4B FF E4 0D */	bl _unresolved
+/* 8057EC2C 00000088  4B AD C1 D0 */	b dKyw_pntwind_set__FP14WIND_INFLUENCE
 /* 8057EC30 0000008C  38 00 00 00 */	li r0, 0
 /* 8057EC34 00000090  98 1E 09 A8 */	stb r0, 0x9a8(r30)
-/* 8057EC38 00000094  C0 1F 00 54 */	lfs f0, 0x54(r31)
+/* 8057EC38 00000094  C0 1F 00 54 */	lfs f0, 0x54(r31)	/* effective address: 8057F5C4 */
 /* 8057EC3C 00000098  D0 1E 09 A4 */	stfs f0, 0x9a4(r30)
 /* 8057EC40 0000009C  38 00 00 04 */	li r0, 4
 /* 8057EC44 000000A0  98 1E 05 78 */	stb r0, 0x578(r30)

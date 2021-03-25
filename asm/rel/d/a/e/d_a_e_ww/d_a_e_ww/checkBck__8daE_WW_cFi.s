@@ -4,14 +4,14 @@ lbl_807E7B80:
 /* 807E7B88 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 807E7B8C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 807E7B90 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 807E7B94 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 807E7B98 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 807E7B9C 0000001C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
-/* 807E7BA0 00000020  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
+/* 807E7B94 00000014  3C 60 80 7F */	lis r3, stringBase0@ha
+/* 807E7B98 00000018  38 63 F8 B8 */	addi r3, r3, stringBase0@l
+/* 807E7B9C 0000001C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 807E7BA0 00000020  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 807E7BA4 00000024  3C A5 00 02 */	addis r5, r5, 2
 /* 807E7BA8 00000028  38 C0 00 80 */	li r6, 0x80
 /* 807E7BAC 0000002C  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 807E7BB0 00000030  4B FF FA A9 */	bl _unresolved
+/* 807E7BB0 00000030  4B 85 47 3C */	b getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 807E7BB4 00000034  80 9F 05 B4 */	lwz r4, 0x5b4(r31)
 /* 807E7BB8 00000038  80 04 00 08 */	lwz r0, 8(r4)
 /* 807E7BBC 0000003C  7C 00 18 50 */	subf r0, r0, r3

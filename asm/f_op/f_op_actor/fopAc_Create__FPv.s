@@ -160,7 +160,7 @@ lbl_8001919C:
 /* 800192C0 00000124  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 800192C4 00000128  38 63 4E C4 */	addi r3, r3, 0x4ec4
 /* 800192C8 0000012C  48 00 B0 BD */	bl getStatusRoomDt__20dStage_roomControl_cFi
-/* 800192CC 00000130  81 83 00 00 */	lwz r12, 0(r3)
+/* 800192CC 00000130  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 8040B084 */
 /* 800192D0 00000134  81 8C 01 0C */	lwz r12, 0x10c(r12)
 /* 800192D4 00000138  7D 89 03 A6 */	mtctr r12
 /* 800192D8 0000013C  4E 80 04 21 */	bctrl 
@@ -174,7 +174,7 @@ lbl_800192DC:
 /* 800192F4 00000018  38 63 4E C4 */	addi r3, r3, 0x4ec4
 /* 800192F8 0000001C  7C 84 07 74 */	extsb r4, r4
 /* 800192FC 00000020  48 00 B0 89 */	bl getStatusRoomDt__20dStage_roomControl_cFi
-/* 80019300 00000024  81 83 00 00 */	lwz r12, 0(r3)
+/* 80019300 00000024  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 8040B084 */
 /* 80019304 00000028  81 8C 01 0C */	lwz r12, 0x10c(r12)
 /* 80019308 0000002C  7D 89 03 A6 */	mtctr r12
 /* 8001930C 00000030  4E 80 04 21 */	bctrl 

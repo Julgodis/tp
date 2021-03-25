@@ -10,20 +10,20 @@ lbl_80C4F8E0:
 /* 80C4F900 00000020  54 00 06 6E */	rlwinm r0, r0, 0, 0x19, 0x17
 /* 80C4F904 00000024  90 03 04 9C */	stw r0, 0x49c(r3)
 /* 80C4F908 00000028  80 63 04 A4 */	lwz r3, 0x4a4(r3)
-/* 80C4F90C 0000002C  4B FF FF 2D */	bl _unresolved
+/* 80C4F90C 0000002C  4B 3D 1A 4C */	b fpcEx_SearchByID__FUi
 /* 80C4F910 00000030  28 03 00 00 */	cmplwi r3, 0
 /* 80C4F914 00000034  41 82 00 10 */	beq lbl_80C4F924
 /* 80C4F918 00000038  38 9F 04 F8 */	addi r4, r31, 0x4f8
 /* 80C4F91C 0000003C  80 BF 00 B0 */	lwz r5, 0xb0(r31)
-/* 80C4F920 00000040  4B FF FF 19 */	bl _unresolved
+/* 80C4F920 00000040  4B FE D3 20 */	b getFirstVec__15daObjKazeNeko_cFP4cXyzi
 lbl_80C4F924:
-/* 80C4F924 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80C4F928 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
-/* 80C4F92C 00000008  A8 03 00 30 */	lha r0, 0x30(r3)
+/* 80C4F924 00000000  3C 60 80 C5 */	lis r3, M_attr__14daObjKznkarm_c@ha
+/* 80C4F928 00000004  38 63 0D 08 */	addi r3, r3, M_attr__14daObjKznkarm_c@l
+/* 80C4F92C 00000008  A8 03 00 30 */	lha r0, 0x30(r3)	/* effective address: 80C50D38 */
 /* 80C4F930 0000000C  B0 1F 07 A8 */	sth r0, 0x7a8(r31)
-/* 80C4F934 00000010  A8 03 00 32 */	lha r0, 0x32(r3)
+/* 80C4F934 00000010  A8 03 00 32 */	lha r0, 0x32(r3)	/* effective address: 80C50D3A */
 /* 80C4F938 00000014  B0 1F 07 AA */	sth r0, 0x7aa(r31)
-/* 80C4F93C 00000018  A8 03 00 34 */	lha r0, 0x34(r3)
+/* 80C4F93C 00000018  A8 03 00 34 */	lha r0, 0x34(r3)	/* effective address: 80C50D3C */
 /* 80C4F940 0000001C  B0 1F 07 AC */	sth r0, 0x7ac(r31)
 /* 80C4F944 00000020  38 00 00 0A */	li r0, 0xa
 /* 80C4F948 00000024  98 1F 07 B0 */	stb r0, 0x7b0(r31)

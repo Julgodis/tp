@@ -19,7 +19,7 @@ lbl_80678708:
 /* 8067874C 00000044  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 80678750 00000048  38 E0 00 00 */	li r7, 0
 /* 80678754 0000004C  39 00 00 01 */	li r8, 1
-/* 80678758 00000050  4B FF F6 41 */	bl _unresolved
+/* 80678758 00000050  4B 9A 2F 24 */	b fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
 /* 8067875C 00000054  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 80678760 00000058  60 00 00 02 */	ori r0, r0, 2
 /* 80678764 0000005C  B0 1F 00 FA */	sth r0, 0xfa(r31)

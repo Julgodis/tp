@@ -12,8 +12,8 @@ lbl_8002CE38:
 /* 8002CE60 00000028  48 00 F3 01 */	bl syncRes__14dRes_control_cFPCcP11dRes_info_ci
 /* 8002CE64 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 8002CE68 00000030  40 80 00 24 */	bge lbl_8002CE8C
-/* 8002CE6C 00000034  3C 60 80 38 */	lis r3, stringBase0@ha
-/* 8002CE70 00000038  38 63 8F 38 */	addi r3, r3, stringBase0@l
+/* 8002CE6C 00000034  3C 60 80 38 */	lis r3, d_com_d_com_inf_game__stringBase0@ha
+/* 8002CE70 00000038  38 63 8F 38 */	addi r3, r3, d_com_d_com_inf_game__stringBase0@l
 /* 8002CE74 0000003C  38 63 01 36 */	addi r3, r3, 0x136
 /* 8002CE78 00000040  7F E4 FB 78 */	mr r4, r31
 /* 8002CE7C 00000044  4C C6 31 82 */	crclr 6

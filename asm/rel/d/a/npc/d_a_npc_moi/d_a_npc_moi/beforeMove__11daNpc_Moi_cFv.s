@@ -12,7 +12,7 @@ lbl_80A759F4:
 /* 80A75A1C 00000028  88 03 0E 25 */	lbz r0, 0xe25(r3)
 /* 80A75A20 0000002C  28 00 00 00 */	cmplwi r0, 0
 /* 80A75A24 00000030  40 82 00 1C */	bne lbl_80A75A40
-/* 80A75A28 00000034  4B FF E4 91 */	bl _unresolved
+/* 80A75A28 00000034  4B 5B A0 2C */	b dComIfGs_wolfeye_effect_check__Fv
 /* 80A75A2C 00000038  2C 03 00 00 */	cmpwi r3, 0
 /* 80A75A30 0000003C  40 82 00 14 */	bne lbl_80A75A44
 /* 80A75A34 00000040  88 1E 0A 89 */	lbz r0, 0xa89(r30)
@@ -31,7 +31,7 @@ lbl_80A75A58:
 /* 80A75A5C 00000004  88 1E 0E 25 */	lbz r0, 0xe25(r30)
 /* 80A75A60 00000008  28 00 00 00 */	cmplwi r0, 0
 /* 80A75A64 0000000C  40 82 00 1C */	bne lbl_80A75A80
-/* 80A75A68 00000010  4B FF E4 51 */	bl _unresolved
+/* 80A75A68 00000010  4B 5B 9F EC */	b dComIfGs_wolfeye_effect_check__Fv
 /* 80A75A6C 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 80A75A70 00000018  40 82 00 14 */	bne lbl_80A75A84
 /* 80A75A74 0000001C  88 1E 0A 89 */	lbz r0, 0xa89(r30)

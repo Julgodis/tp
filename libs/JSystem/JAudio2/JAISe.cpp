@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct JAISoundActivity {
-};
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
 
-struct JAIAudience {
-};
-
-struct JAISoundID {
 };
 
 template <typename A0>
@@ -32,13 +32,13 @@ struct JASSoundParams {
 struct JAISeMgr {
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
+struct JAIAudience {
+};
 
+struct JAISoundID {
+};
+
+struct JAISoundActivity {
 };
 
 struct JAISe {

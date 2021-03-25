@@ -78,7 +78,7 @@ extern "C" void run__14JASAudioThreadFv(); // 1
 extern "C" void DMACallback__14JASAudioThreadFv(); // 1
 extern "C" void DSPCallback__14JASAudioThreadFPv(); // 1
 extern "C" void __dt__14JASAudioThreadFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const JASAudioThread__stringBase0;
 extern "C" extern u8 snIntCount__14JASAudioThread[4 + 4 /* padding */];
 
 // 

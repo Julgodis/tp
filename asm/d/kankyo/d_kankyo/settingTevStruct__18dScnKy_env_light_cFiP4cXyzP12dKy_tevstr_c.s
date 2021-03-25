@@ -513,7 +513,7 @@ lbl_801A3F24:
 /* 801A3F38 00000014  57 20 06 3E */	clrlwi r0, r25, 0x18
 /* 801A3F3C 00000018  7C 03 00 40 */	cmplw r3, r0
 /* 801A3F40 0000001C  41 82 00 60 */	beq lbl_801A3FA0
-/* 801A3F44 00000020  9B 24 09 8C */	stb r25, 0x98c(r4)
+/* 801A3F44 00000020  9B 24 09 8C */	stb r25, 0x98c(r4)	/* effective address: 8042D3E0 */
 /* 801A3F48 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801A3F4C 00000028  38 A3 61 C0 */	addi r5, r3, g_dComIfG_gameInfo@l
 /* 801A3F50 0000002C  3B C5 4E 00 */	addi r30, r5, 0x4e00
@@ -527,8 +527,8 @@ lbl_801A3F24:
 /* 801A3F70 0000004C  7F 24 CB 78 */	mr r4, r25
 /* 801A3F74 00000050  4B E6 32 49 */	bl mDoAud_setSceneName__FPCcll
 /* 801A3F78 00000054  7F C3 F3 78 */	mr r3, r30
-/* 801A3F7C 00000058  3C 80 80 39 */	lis r4, stringBase0@ha
-/* 801A3F80 0000005C  38 84 4C 6C */	addi r4, r4, stringBase0@l
+/* 801A3F7C 00000058  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
+/* 801A3F80 0000005C  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
 /* 801A3F84 00000060  38 84 01 92 */	addi r4, r4, 0x192
 /* 801A3F88 00000064  48 1C 4A 0D */	bl strcmp
 /* 801A3F8C 00000068  2C 03 00 00 */	cmpwi r3, 0

@@ -3,17 +3,17 @@ lbl_807BB028:
 /* 807BB02C 00000004  7C 08 02 A6 */	mflr r0
 /* 807BB030 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 807BB034 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 807BB038 00000010  4B FF F4 A1 */	bl _unresolved
+/* 807BB038 00000010  4B BA 71 A4 */	b _savegpr_29
 /* 807BB03C 00000014  7C 7D 1B 78 */	mr r29, r3
 /* 807BB040 00000018  7F BE EB 78 */	mr r30, r29
-/* 807BB044 0000001C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
-/* 807BB048 00000020  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
-/* 807BB04C 00000024  80 9F 5D AC */	lwz r4, 0x5dac(r31)
-/* 807BB050 00000028  4B FF F4 89 */	bl _unresolved
+/* 807BB044 0000001C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 807BB048 00000020  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 807BB04C 00000024  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 807BB050 00000028  4B 85 F6 C0 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 807BB054 0000002C  B0 7D 06 80 */	sth r3, 0x680(r29)
 /* 807BB058 00000030  7F C3 F3 78 */	mr r3, r30
-/* 807BB05C 00000034  80 9F 5D AC */	lwz r4, 0x5dac(r31)
-/* 807BB060 00000038  4B FF F4 79 */	bl _unresolved
+/* 807BB05C 00000034  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 807BB060 00000038  4B 85 F7 80 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 807BB064 0000003C  D0 3D 06 84 */	stfs f1, 0x684(r29)
 /* 807BB068 00000040  7F A3 EB 78 */	mr r3, r29
 /* 807BB06C 00000044  4B FF F7 B9 */	bl damage_check__FP11e_tk2_class
@@ -59,15 +59,15 @@ lbl_807BB0EC:
 /* 807BB0F0 00000004  41 82 00 14 */	beq lbl_807BB104
 /* 807BB0F4 00000008  38 7D 05 C0 */	addi r3, r29, 0x5c0
 /* 807BB0F8 0000000C  38 80 00 01 */	li r4, 1
-/* 807BB0FC 00000010  4B FF F3 DD */	bl _unresolved
+/* 807BB0FC 00000010  4B B0 6A 80 */	b setLinkSearch__15Z2CreatureEnemyFb
 /* 807BB100 00000014  48 00 00 10 */	b lbl_807BB110
 lbl_807BB104:
 /* 807BB104 00000000  38 7D 05 C0 */	addi r3, r29, 0x5c0
 /* 807BB108 00000004  38 80 00 00 */	li r4, 0
-/* 807BB10C 00000008  4B FF F3 CD */	bl _unresolved
+/* 807BB10C 00000008  4B B0 6A 70 */	b setLinkSearch__15Z2CreatureEnemyFb
 lbl_807BB110:
 /* 807BB110 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 807BB114 00000004  4B FF F3 C5 */	bl _unresolved
+/* 807BB114 00000004  4B BA 71 14 */	b _restgpr_29
 /* 807BB118 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 807BB11C 0000000C  7C 08 03 A6 */	mtlr r0
 /* 807BB120 00000010  38 21 00 20 */	addi r1, r1, 0x20

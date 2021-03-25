@@ -8,11 +8,11 @@ lbl_80AEB1D0:
 /* 80AEB1E8 00000018  88 83 09 EA */	lbz r4, 0x9ea(r3)
 /* 80AEB1EC 0000001C  28 04 00 FF */	cmplwi r4, 0xff
 /* 80AEB1F0 00000020  41 82 00 24 */	beq lbl_80AEB214
-/* 80AEB1F4 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
-/* 80AEB1F8 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80AEB1F4 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AEB1F8 00000028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AEB1FC 0000002C  88 05 04 E2 */	lbz r0, 0x4e2(r5)
 /* 80AEB200 00000030  7C 05 07 74 */	extsb r5, r0
-/* 80AEB204 00000034  4B FF F5 B5 */	bl _unresolved
+/* 80AEB204 00000034  4B 54 A1 5C */	b isSwitch__10dSv_info_cCFii
 /* 80AEB208 00000038  2C 03 00 00 */	cmpwi r3, 0
 /* 80AEB20C 0000003C  41 82 00 08 */	beq lbl_80AEB214
 /* 80AEB210 00000040  3B E0 00 01 */	li r31, 1

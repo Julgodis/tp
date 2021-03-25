@@ -20,6 +20,9 @@ struct J3DSkinNList {
 struct Vec {
 };
 
+struct J3DModelData {
+};
+
 struct J3DModel {
 };
 
@@ -27,9 +30,6 @@ struct J3DVertexBuffer {
 };
 
 struct J3DMtxBuffer {
-};
-
-struct J3DModelData {
 };
 
 struct J3DSkinDeform {
@@ -88,7 +88,7 @@ extern "C" void deform__13J3DSkinDeformFP8J3DModel(); // 1
 extern "C" void deform__13J3DSkinDeformFP15J3DVertexBufferP12J3DMtxBuffer(); // 1
 extern "C" void calc__15J3DVtxColorCalcFP8J3DModel(); // 1
 extern "C" void __dt__13J3DSkinDeformFv(); // 1
-extern "C" extern char const* const stringBase0;
+extern "C" extern char const* const J3DSkinDeform__stringBase0;
 
 // 
 // External References:
@@ -200,7 +200,7 @@ SECTION_DATA static void* __vt__13J3DSkinDeform[4] = {
 	/* 3    */ (void*)__dt__13J3DSkinDeformFv,
 };
 
-/* 8032C96C-8032C9B0 0044+00 s=0 e=0 z=0  None .text      __ct__13J3DSkinDeformFv                                      */
+/* 8032C96C-8032C9B0 0044+00 s=0 e=0 z=2  None .text      __ct__13J3DSkinDeformFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
