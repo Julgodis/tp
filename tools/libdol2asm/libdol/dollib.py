@@ -36,6 +36,12 @@ class DOL:
     bss_size: int
     entry_point: int
 
+    def get_named_section(self, name: str) -> Section:
+        for section in self.sections:
+            if section.name == name:
+                return section
+        return None
+
 NAMES_FOR_INDEX = {
     0: ".init",
     1: ".text",
