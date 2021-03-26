@@ -54,114 +54,114 @@ var sectionId = 'dynsection-0';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>libs/dolphin/os/OSReboot.cpp</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-147 685,-147 685,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-147 684.5,-147 684.5,4 -4,4"/>
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="174,-123.5 174,-142.5 319,-142.5 319,-123.5 174,-123.5"/>
-<text text-anchor="middle" x="246.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00">libs/dolphin/os/OSReboot.cpp</text>
+<polygon fill="#bfbfbf" stroke="black" points="187.5,-123.5 187.5,-142.5 332.5,-142.5 332.5,-123.5 187.5,-123.5"/>
+<text text-anchor="middle" x="260" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00">libs/dolphin/os/OSReboot.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="dol2asm_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="0,-62 0,-81 61,-81 61,-62 0,-62"/>
-<text text-anchor="middle" x="30.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">dol2asm.h</text>
+<g id="a_node2"><a xlink:href="OSReboot_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="0,-62 0,-81 116,-81 116,-62 0,-62"/>
+<text text-anchor="middle" x="58" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">dolphin/os/OSReboot.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M211.96,-123.5C177.31,-114.83 122.5,-100.74 75.5,-87 72.35,-86.08 69.08,-85.09 65.82,-84.08"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="66.72,-80.69 56.13,-81.02 64.61,-87.37 66.72,-80.69"/>
+<path fill="none" stroke="midnightblue" d="M231.06,-123.48C195.73,-113.07 135.87,-95.44 96.64,-83.88"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="97.47,-80.48 86.89,-81.01 95.49,-87.19 97.47,-80.48"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:href="types_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="92,-0.5 92,-19.5 173,-19.5 173,-0.5 92,-0.5"/>
-<text text-anchor="middle" x="132.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">dolphin/types.h</text>
+<polygon fill="white" stroke="black" points="60.5,-0.5 60.5,-19.5 141.5,-19.5 141.5,-0.5 60.5,-0.5"/>
+<text text-anchor="middle" x="101" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">dolphin/types.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
+<g id="edge4" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M173.88,-125.5C149.06,-119.39 123.75,-108.01 108.5,-87 95.61,-69.24 107.91,-44.31 119.13,-27.91"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="122,-29.92 125.09,-19.78 116.35,-25.78 122,-29.92"/>
+<path fill="none" stroke="midnightblue" d="M234.25,-123.48C213.88,-115.94 185.4,-103.56 164,-87 142.47,-70.34 123.41,-45.1 112.03,-28.34"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="114.69,-26.01 106.27,-19.58 108.84,-29.85 114.69,-26.01"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="OSReboot_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="117.5,-62 117.5,-81 233.5,-81 233.5,-62 117.5,-62"/>
-<text text-anchor="middle" x="175.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">dolphin/os/OSReboot.h</text>
+<g id="a_node4"><a xlink:href="dol2asm_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="172.5,-62 172.5,-81 233.5,-81 233.5,-62 172.5,-62"/>
+<text text-anchor="middle" x="203" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">dol2asm.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M236.33,-123.48C225.15,-114.11 206.98,-98.88 193.41,-87.51"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="195.57,-84.75 185.65,-81.01 191.07,-90.11 195.57,-84.75"/>
+<path fill="none" stroke="midnightblue" d="M251.83,-123.48C243.11,-114.37 229.1,-99.74 218.31,-88.48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="220.6,-85.81 211.15,-81.01 215.54,-90.65 220.6,-85.81"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
 <g id="a_node5"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="252,-56.5 252,-86.5 383,-86.5 383,-56.5 252,-56.5"/>
-<text text-anchor="start" x="260" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/dolphin/os/OSReboot</text>
-<text text-anchor="middle" x="317.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">/__OSReboot.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="251.5,-56.5 251.5,-86.5 382.5,-86.5 382.5,-56.5 251.5,-56.5"/>
+<text text-anchor="start" x="259.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/dolphin/os/OSReboot</text>
+<text text-anchor="middle" x="317" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">/__OSReboot.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M256.67,-123.48C266.11,-115.57 280.53,-103.48 292.96,-93.07"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="295.35,-95.63 300.77,-86.52 290.85,-90.26 295.35,-95.63"/>
+<path fill="none" stroke="midnightblue" d="M268.17,-123.48C275.53,-115.79 286.66,-104.17 296.44,-93.96"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="299.18,-96.17 303.57,-86.52 294.12,-91.32 299.18,-96.17"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
 <g id="a_node6"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="401,-56.5 401,-86.5 532,-86.5 532,-56.5 401,-56.5"/>
-<text text-anchor="start" x="409" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/dolphin/os/OSReboot</text>
-<text text-anchor="middle" x="466.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">/OSSetSaveRegion.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="400.5,-56.5 400.5,-86.5 531.5,-86.5 531.5,-56.5 400.5,-56.5"/>
+<text text-anchor="start" x="408.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/dolphin/os/OSReboot</text>
+<text text-anchor="middle" x="466" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">/OSSetSaveRegion.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node6 -->
 <g id="edge6" class="edge">
 <title>Node1&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M278.02,-123.48C311.02,-114.55 363.68,-100.31 404.96,-89.14"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="405.91,-92.51 414.65,-86.52 404.08,-85.76 405.91,-92.51"/>
+<path fill="none" stroke="midnightblue" d="M289.51,-123.48C320.15,-114.63 368.89,-100.55 407.39,-89.43"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="408.81,-92.66 417.45,-86.52 406.87,-85.94 408.81,-92.66"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
 <g id="a_node7"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="550,-56.5 550,-86.5 681,-86.5 681,-56.5 550,-56.5"/>
-<text text-anchor="start" x="558" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/dolphin/os/OSReboot</text>
-<text text-anchor="middle" x="615.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">/OSGetSaveRegion.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="549.5,-56.5 549.5,-86.5 680.5,-86.5 680.5,-56.5 549.5,-56.5"/>
+<text text-anchor="start" x="557.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/dolphin/os/OSReboot</text>
+<text text-anchor="middle" x="615" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">/OSGetSaveRegion.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node7 -->
 <g id="edge7" class="edge">
 <title>Node1&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M307.36,-123.48C364.87,-115.26 453.83,-102.09 539.83,-87.25"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="540.5,-90.69 549.76,-85.53 539.31,-83.79 540.5,-90.69"/>
+<path fill="none" stroke="midnightblue" d="M316.88,-123.48C371.49,-115.17 456.57,-101.88 539.19,-87.29"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="540.02,-90.7 549.25,-85.51 538.8,-83.81 540.02,-90.7"/>
 </g>
-<!-- Node4&#45;&gt;Node3 -->
-<g id="edge4" class="edge">
-<title>Node4&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M169.34,-61.98C162.89,-53.05 152.6,-38.81 144.53,-27.64"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="147.34,-25.56 138.65,-19.51 141.67,-29.66 147.34,-25.56"/>
+<!-- Node2&#45;&gt;Node3 -->
+<g id="edge2" class="edge">
+<title>Node2&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M64.16,-61.98C70.61,-53.05 80.9,-38.81 88.97,-27.64"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="91.83,-29.66 94.85,-19.51 86.16,-25.56 91.83,-29.66"/>
 </g>
 </g>
 </svg>

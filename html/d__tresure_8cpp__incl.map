@@ -1,8 +1,8 @@
 <map id="src/d/d_tresure.cpp" name="src/d/d_tresure.cpp">
 <area shape="rect" id="node1" title=" " alt="" coords="1451,5,1585,32"/>
-<area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,95,87,121"/>
-<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="113,184,221,211"/>
-<area shape="rect" id="node4" href="$d__tresure_8h.html" title=" " alt="" coords="163,95,260,121"/>
+<area shape="rect" id="node2" href="$d__tresure_8h.html" title=" " alt="" coords="5,95,103,121"/>
+<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="43,184,151,211"/>
+<area shape="rect" id="node4" href="$dol2asm_8h.html" title=" " alt="" coords="179,95,260,121"/>
 <area shape="rect" id="node5" title=" " alt="" coords="285,87,471,129"/>
 <area shape="rect" id="node6" title=" " alt="" coords="496,87,652,129"/>
 <area shape="rect" id="node7" title=" " alt="" coords="677,87,839,129"/>

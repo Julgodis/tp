@@ -81,9 +81,9 @@ $(function() {
 <div class="title">J3DAnmLoader.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="J3DAnmLoader_8h_source.html">JSystem/J3DGraphLoader/J3DAnmLoader.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="J3DAnmLoader_8h_source.html">JSystem/J3DGraphLoader/J3DAnmLoader.h</a>&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphLoader/J3DAnmLoader/load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphLoader/J3DAnmLoader/setResource__20J3DAnmLoaderDataBaseFP10J3DAnmBasePCv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphLoader/J3DAnmLoader/__ct__20J3DAnmFullLoader_v15Fv.s&quot;</code><br />
@@ -403,7 +403,7 @@ Variables</h2></td></tr>
 <tr class="separator:a8b626e2b9ecf278e3cf275ac78a63925"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c21f3e5ca24bf13260789ade6ec1e29"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DAnmLoader_8cpp.html#a9c21f3e5ca24bf13260789ade6ec1e29">__vt__19J3DAnmTransformFull</a> [5+1]</td></tr>
 <tr class="separator:a9c21f3e5ca24bf13260789ade6ec1e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfba37995ef8e5c6b3aeaf55c9901430"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DAnmLoader_8cpp.html#acfba37995ef8e5c6b3aeaf55c9901430">stringBase_803A2130</a></td></tr>
+<tr class="memitem:acfba37995ef8e5c6b3aeaf55c9901430"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DAnmLoader_8cpp.html#acfba37995ef8e5c6b3aeaf55c9901430">stringBase_803A2130</a> = &quot;J3DAnmLoader: this is not a J3D Binary.\n&quot;</td></tr>
 <tr class="separator:acfba37995ef8e5c6b3aeaf55c9901430"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed20daa53b9e39205410e84d374a67f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DAnmLoader_8cpp.html#aed20daa53b9e39205410e84d374a67f9">stringBase_803A2159</a> = &quot;Unknown data block\n&quot;</td></tr>
 <tr class="separator:aed20daa53b9e39205410e84d374a67f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2513,9 +2513,15 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2549,13 +2555,11 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const* const stringBase_803A2130</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const* const stringBase_803A2130 = &quot;J3DAnmLoader: this is not a J3D Binary.\n&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= </div>
-<div class="line">    <span class="stringliteral">&quot;J3DAnmLoader: this is not a J3D Binary.\n&quot;</span></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aed20daa53b9e39205410e84d374a67f9"></a>

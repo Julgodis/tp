@@ -81,9 +81,9 @@ $(function() {
 <div class="title">JKRSolidHeap.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="JKRSolidHeap_8h_source.html">JSystem/JKernel/JKRSolidHeap.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="JKRSolidHeap_8h_source.html">JSystem/JKernel/JKRSolidHeap.h</a>&quot;</code><br />
 <code>#include &quot;asm/JSystem/JKernel/JKRSolidHeap/create__12JKRSolidHeapFUlP7JKRHeapb.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JKernel/JKRSolidHeap/do_destroy__12JKRSolidHeapFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JKernel/JKRSolidHeap/__ct__12JKRSolidHeapFPvUlP7JKRHeapb.s&quot;</code><br />
@@ -234,7 +234,7 @@ Variables</h2></td></tr>
 <tr class="separator:ab2d5437d7570b4bd679310ad9dabb3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5ad284847de9713da4c37ef7711ba8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRSolidHeap_8cpp.html#ad5ad284847de9713da4c37ef7711ba8e">stringBase_8039CE81</a></td></tr>
 <tr class="separator:ad5ad284847de9713da4c37ef7711ba8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad293463a711195bf0dd6fd7d5765f731"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRSolidHeap_8cpp.html#ad293463a711195bf0dd6fd7d5765f731">stringBase_8039CEB2</a></td></tr>
+<tr class="memitem:ad293463a711195bf0dd6fd7d5765f731"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRSolidHeap_8cpp.html#ad293463a711195bf0dd6fd7d5765f731">stringBase_8039CEB2</a> = &quot;free: cannot <a class="el" href="file__io_8cpp.html#aafde19f7d36ca163a143579c1b125b6d">free</a> memory block (%08x)\n&quot;</td></tr>
 <tr class="separator:ad293463a711195bf0dd6fd7d5765f731"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a948a8dc0f18d63f2d5cf16cb3b451c6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRSolidHeap_8cpp.html#a948a8dc0f18d63f2d5cf16cb3b451c6d">stringBase_8039CED9</a></td></tr>
 <tr class="separator:a948a8dc0f18d63f2d5cf16cb3b451c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1300,7 +1300,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= </div>
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">    <span class="stringliteral">&quot;allocFromHead: cannot alloc memory (0x%x byte).\n&quot;</span></div>
 </div><!-- fragment -->
 </div>
@@ -1316,7 +1316,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= </div>
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">    <span class="stringliteral">&quot;allocFromTail: cannot alloc memory (0x%x byte).\n&quot;</span></div>
 </div><!-- fragment -->
 </div>
@@ -1328,13 +1328,11 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const* const stringBase_8039CEB2</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const* const stringBase_8039CEB2 = &quot;free: cannot <a class="el" href="file__io_8cpp.html#aafde19f7d36ca163a143579c1b125b6d">free</a> memory block (%08x)\n&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= </div>
-<div class="line">    <span class="stringliteral">&quot;free: cannot free memory block (%08x)\n&quot;</span></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a948a8dc0f18d63f2d5cf16cb3b451c6d"></a>
@@ -1348,7 +1346,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= </div>
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">    <span class="stringliteral">&quot;resize: cannot resize memory block (%08x: %d)\n&quot;</span></div>
 </div><!-- fragment -->
 </div>
@@ -1364,7 +1362,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= </div>
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">    <span class="stringliteral">&quot;getSize: cannot get memory block size (%08x)\n&quot;</span></div>
 </div><!-- fragment -->
 </div>
@@ -1380,7 +1378,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= </div>
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">    <span class="stringliteral">&quot;check: bad total memory block size (%08X, %08X)\n&quot;</span></div>
 </div><!-- fragment -->
 </div>

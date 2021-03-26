@@ -81,9 +81,9 @@ $(function() {
 <div class="title">Z2WolfHowlMgr.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="Z2WolfHowlMgr_8h_source.html">Z2AudioLib/Z2WolfHowlMgr.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Z2WolfHowlMgr_8h_source.html">Z2AudioLib/Z2WolfHowlMgr.h</a>&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2WolfHowlMgr/__ct__13Z2WolfHowlMgrFv.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2WolfHowlMgr/resetState__13Z2WolfHowlMgrFv.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2WolfHowlMgr/calcVolumeMod__13Z2WolfHowlMgrFf.s&quot;</code><br />
@@ -1137,7 +1137,10 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1827,15 +1830,15 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)0x09000000,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)&amp;<a class="code" href="Z2WolfHowlMgr_8cpp.html#afd9d58a07aa70d2731c710d02d586b65">sNewSong3</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_a2f53ac6b65d09a2ad5c33de7c3c0aef6"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#a2f53ac6b65d09a2ad5c33de7c3c0aef6">sNewSong1</a></div><div class="ttdeci">static SECTION_DATA u8 sNewSong1[14+2]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:170</div></div>
-<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_a4f993747e21ace39b492d7820f382847"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#a4f993747e21ace39b492d7820f382847">sHowlZeldaSong</a></div><div class="ttdeci">static SECTION_DATA u8 sHowlZeldaSong[12]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:150</div></div>
-<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_a81570c18a8e1d88bfdc49987f7e95834"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#a81570c18a8e1d88bfdc49987f7e95834">sHowlSoulRequiem</a></div><div class="ttdeci">static SECTION_DATA u8 sHowlSoulRequiem[12]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:160</div></div>
-<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_aa7d7de70bc577d60a727ed2ecafe664c"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#aa7d7de70bc577d60a727ed2ecafe664c">sHowlTobikusa</a></div><div class="ttdeci">u8 sHowlTobikusa[8]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:142</div></div>
-<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_abad36bfc8f028eb2724e1be500b1c738"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#abad36bfc8f028eb2724e1be500b1c738">sHealingSong</a></div><div class="ttdeci">static SECTION_DATA u8 sHealingSong[12]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:165</div></div>
-<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_acb58ea4fb2cc8cc797c8808de5af46c0"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#acb58ea4fb2cc8cc797c8808de5af46c0">sNewSong2</a></div><div class="ttdeci">static SECTION_DATA u8 sNewSong2[16]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:177</div></div>
-<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_ad7aa21053cd34f6b5a657d191aea7fe5"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#ad7aa21053cd34f6b5a657d191aea7fe5">sHowlLightPrelude</a></div><div class="ttdeci">static SECTION_DATA u8 sHowlLightPrelude[12]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:155</div></div>
-<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_ae2a5ddfd7d4dca4dfdd00753694843bc"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#ae2a5ddfd7d4dca4dfdd00753694843bc">sHowlUmakusa</a></div><div class="ttdeci">static SECTION_DATA u8 sHowlUmakusa[12]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:145</div></div>
-<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_afd9d58a07aa70d2731c710d02d586b65"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#afd9d58a07aa70d2731c710d02d586b65">sNewSong3</a></div><div class="ttdeci">static SECTION_DATA u8 sNewSong3[18+2]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:182</div></div>
+<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_a2f53ac6b65d09a2ad5c33de7c3c0aef6"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#a2f53ac6b65d09a2ad5c33de7c3c0aef6">sNewSong1</a></div><div class="ttdeci">static SECTION_DATA u8 sNewSong1[14+2]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:161</div></div>
+<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_a4f993747e21ace39b492d7820f382847"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#a4f993747e21ace39b492d7820f382847">sHowlZeldaSong</a></div><div class="ttdeci">static SECTION_DATA u8 sHowlZeldaSong[12]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:141</div></div>
+<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_a81570c18a8e1d88bfdc49987f7e95834"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#a81570c18a8e1d88bfdc49987f7e95834">sHowlSoulRequiem</a></div><div class="ttdeci">static SECTION_DATA u8 sHowlSoulRequiem[12]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:151</div></div>
+<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_aa7d7de70bc577d60a727ed2ecafe664c"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#aa7d7de70bc577d60a727ed2ecafe664c">sHowlTobikusa</a></div><div class="ttdeci">u8 sHowlTobikusa[8]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:133</div></div>
+<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_abad36bfc8f028eb2724e1be500b1c738"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#abad36bfc8f028eb2724e1be500b1c738">sHealingSong</a></div><div class="ttdeci">static SECTION_DATA u8 sHealingSong[12]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:156</div></div>
+<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_acb58ea4fb2cc8cc797c8808de5af46c0"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#acb58ea4fb2cc8cc797c8808de5af46c0">sNewSong2</a></div><div class="ttdeci">static SECTION_DATA u8 sNewSong2[16]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:182</div></div>
+<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_ad7aa21053cd34f6b5a657d191aea7fe5"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#ad7aa21053cd34f6b5a657d191aea7fe5">sHowlLightPrelude</a></div><div class="ttdeci">static SECTION_DATA u8 sHowlLightPrelude[12]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:146</div></div>
+<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_ae2a5ddfd7d4dca4dfdd00753694843bc"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#ae2a5ddfd7d4dca4dfdd00753694843bc">sHowlUmakusa</a></div><div class="ttdeci">static SECTION_DATA u8 sHowlUmakusa[12]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:136</div></div>
+<div class="ttc" id="aZ2WolfHowlMgr_8cpp_html_afd9d58a07aa70d2731c710d02d586b65"><div class="ttname"><a href="Z2WolfHowlMgr_8cpp.html#afd9d58a07aa70d2731c710d02d586b65">sNewSong3</a></div><div class="ttdeci">static SECTION_DATA u8 sNewSong3[18+2]</div><div class="ttdef"><b>Definition:</b> Z2WolfHowlMgr.cpp:187</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2001,9 +2004,23 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x03, 0x1E, 0x02, 0x1E, 0x01, 0x1E, 0x03, 0x28, 0x02, 0x14, 0x03, 0x1E, 0x01, 0x1E,</div>
+<div class="line">    0x03,</div>
+<div class="line">    0x1E,</div>
+<div class="line">    0x02,</div>
+<div class="line">    0x1E,</div>
+<div class="line">    0x01,</div>
+<div class="line">    0x1E,</div>
+<div class="line">    0x03,</div>
+<div class="line">    0x28,</div>
+<div class="line">    0x02,</div>
+<div class="line">    0x14,</div>
+<div class="line">    0x03,</div>
+<div class="line">    0x1E,</div>
+<div class="line">    0x01,</div>
+<div class="line">    0x1E,</div>
 <div class="line">    </div>
-<div class="line">    0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2053,10 +2070,27 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x02, 0x1E, 0x03, 0x3C, 0x02, 0x28, 0x01, 0x14, 0x03, 0x3C, 0x01, 0x14, 0x02, 0x14, 0x01, 0x14,</div>
-<div class="line">    0x02, 0x2D,</div>
+<div class="line">    0x02,</div>
+<div class="line">    0x1E,</div>
+<div class="line">    0x03,</div>
+<div class="line">    0x3C,</div>
+<div class="line">    0x02,</div>
+<div class="line">    0x28,</div>
+<div class="line">    0x01,</div>
+<div class="line">    0x14,</div>
+<div class="line">    0x03,</div>
+<div class="line">    0x3C,</div>
+<div class="line">    0x01,</div>
+<div class="line">    0x14,</div>
+<div class="line">    0x02,</div>
+<div class="line">    0x14,</div>
+<div class="line">    0x01,</div>
+<div class="line">    0x14,</div>
+<div class="line">    0x02,</div>
+<div class="line">    0x2D,</div>
 <div class="line">    </div>
-<div class="line">    0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2130,7 +2164,8 @@ Variables</h2></td></tr>
 <div class="line">    </div>
 <div class="line">    0x07,</div>
 <div class="line">    </div>
-<div class="line">    0x1E, 0x00,</div>
+<div class="line">    0x1E,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -2158,7 +2193,9 @@ Variables</h2></td></tr>
 <div class="line">    </div>
 <div class="line">    0x05,</div>
 <div class="line">    </div>
-<div class="line">    0x1E, 0x00, 0x00,</div>
+<div class="line">    0x1E,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>

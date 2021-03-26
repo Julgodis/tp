@@ -80,9 +80,9 @@ $(function() {
 <div class="title">dolphin_trk_glue.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dolphin__trk__glue_8h_source.html">TRK_MINNOW_DOLPHIN/Os/dolphin/dolphin_trk_glue.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dolphin__trk__glue_8h_source.html">TRK_MINNOW_DOLPHIN/Os/dolphin/dolphin_trk_glue.h</a>&quot;</code><br />
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/Os/dolphin/dolphin_trk_glue/TRKLoadContext.s&quot;</code><br />
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/Os/dolphin/dolphin_trk_glue/InitializeProgramEndTrap.s&quot;</code><br />
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/Os/dolphin/dolphin_trk_glue/TRK_board_display.s&quot;</code><br />
@@ -1157,7 +1157,10 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x45, 0x4E, 0x44,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x45,</div>
+<div class="line">    0x4E,</div>
+<div class="line">    0x44,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1210,9 +1213,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1251,10 +1254,31 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x44, 0x65, 0x76, 0x6B, 0x69, 0x74, 0x20, 0x73, 0x65, 0x74, 0x20, 0x74, 0x6F, 0x20, 0x3A, 0x20,</div>
-<div class="line">    0x25, 0x6C, 0x64, 0x0A, 0x00,</div>
+<div class="line">    0x44,</div>
+<div class="line">    0x65,</div>
+<div class="line">    0x76,</div>
+<div class="line">    0x6B,</div>
+<div class="line">    0x69,</div>
+<div class="line">    0x74,</div>
+<div class="line">    0x20,</div>
+<div class="line">    0x73,</div>
+<div class="line">    0x65,</div>
+<div class="line">    0x74,</div>
+<div class="line">    0x20,</div>
+<div class="line">    0x74,</div>
+<div class="line">    0x6F,</div>
+<div class="line">    0x20,</div>
+<div class="line">    0x3A,</div>
+<div class="line">    0x20,</div>
+<div class="line">    0x25,</div>
+<div class="line">    0x6C,</div>
+<div class="line">    0x64,</div>
+<div class="line">    0x0A,</div>
+<div class="line">    0x00,</div>
 <div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1271,8 +1295,29 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74,</div>
-<div class="line">    0x6F, 0x20, 0x42, 0x42, 0x41, 0x0A, 0x00,</div>
+<div class="line">    0x4D,</div>
+<div class="line">    0x65,</div>
+<div class="line">    0x74,</div>
+<div class="line">    0x72,</div>
+<div class="line">    0x6F,</div>
+<div class="line">    0x54,</div>
+<div class="line">    0x52,</div>
+<div class="line">    0x4B,</div>
+<div class="line">    0x20,</div>
+<div class="line">    0x3A,</div>
+<div class="line">    0x20,</div>
+<div class="line">    0x53,</div>
+<div class="line">    0x65,</div>
+<div class="line">    0x74,</div>
+<div class="line">    0x20,</div>
+<div class="line">    0x74,</div>
+<div class="line">    0x6F,</div>
+<div class="line">    0x20,</div>
+<div class="line">    0x42,</div>
+<div class="line">    0x42,</div>
+<div class="line">    0x41,</div>
+<div class="line">    0x0A,</div>
+<div class="line">    0x00,</div>
 <div class="line">    </div>
 <div class="line">    0x00,</div>
 <div class="line">}</div>
@@ -1290,14 +1335,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74,</div>
-<div class="line">    0x6F, 0x20, 0x47, 0x44, 0x45, 0x56, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61, 0x72, 0x65, 0x0A,</div>
-<div class="line">    0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a7a6a6657fe14827da5227b5473f5e1cf"></a>
@@ -1312,9 +1350,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74,</div>
-<div class="line">    0x6F, 0x20, 0x41, 0x4D, 0x43, 0x20, 0x44, 0x44, 0x48, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61,</div>
-<div class="line">    0x72, 0x65, 0x0A, 0x00,</div>
+<div class="line">    0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x53,</div>
+<div class="line">    0x65, 0x74, 0x20, 0x74, 0x6F, 0x20, 0x41, 0x4D, 0x43, 0x20, 0x44, 0x44,</div>
+<div class="line">    0x48, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61, 0x72, 0x65, 0x0A, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1330,14 +1368,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74,</div>
-<div class="line">    0x6F, 0x20, 0x55, 0x4E, 0x4B, 0x4E, 0x4F, 0x57, 0x4E, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61,</div>
-<div class="line">    0x72, 0x65, 0x2E, 0x20, 0x28, 0x25, 0x6C, 0x64, 0x29, 0x0A, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3e0cb83972960c52c0a43997156fb6eb"></a>
@@ -1351,14 +1382,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x49, 0x6E, 0x76, 0x61, 0x6C,</div>
-<div class="line">    0x69, 0x64, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61, 0x72, 0x65, 0x20, 0x49, 0x44, 0x20, 0x70,</div>
-<div class="line">    0x61, 0x73, 0x73, 0x65, 0x64, 0x20, 0x66, 0x72, 0x6F, 0x6D, 0x20, 0x4F, 0x53, 0x0A, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1c452393c557e3d01ec9aabfa44850e8"></a>
@@ -1372,14 +1396,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x44, 0x65, 0x66, 0x61, 0x75,</div>
-<div class="line">    0x6C, 0x74, 0x69, 0x6E, 0x67, 0x20, 0x74, 0x6F, 0x20, 0x47, 0x44, 0x45, 0x56, 0x20, 0x48, 0x61,</div>
-<div class="line">    0x72, 0x64, 0x77, 0x61, 0x72, 0x65, 0x0A, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

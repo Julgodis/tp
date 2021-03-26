@@ -1,10 +1,10 @@
 <map id="libs/JSystem/J3DU/J3DUClipper.cpp" name="libs/JSystem/J3DU/J3DUClipper.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="374,5,609,32"/>
-<area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,95,87,121"/>
-<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="139,184,247,211"/>
-<area shape="rect" id="node4" href="$J3DUClipper_8h.html" title=" " alt="" coords="162,95,359,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="383,87,599,129"/>
-<area shape="rect" id="node6" title=" " alt="" coords="623,87,877,129"/>
+<area shape="rect" id="node1" title=" " alt="" coords="375,5,609,32"/>
+<area shape="rect" id="node2" href="$J3DUClipper_8h.html" title=" " alt="" coords="5,95,203,121"/>
+<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="118,184,226,211"/>
+<area shape="rect" id="node4" href="$dol2asm_8h.html" title=" " alt="" coords="278,95,359,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="384,87,600,129"/>
+<area shape="rect" id="node6" title=" " alt="" coords="624,87,877,129"/>
 <area shape="rect" id="node7" title=" " alt="" coords="901,80,1117,136"/>
 <area shape="rect" id="node8" title=" " alt="" coords="1141,80,1357,136"/>
 </map>

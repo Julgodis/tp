@@ -81,9 +81,9 @@ $(function() {
 <div class="title">d_particle.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="d__particle_8h_source.html">d/particle/d_particle.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="d__particle_8h_source.html">d/particle/d_particle.h</a>&quot;</code><br />
 <code>#include &quot;asm/d/particle/d_particle/dPa_cleanupGX__Fv.s&quot;</code><br />
 <code>#include &quot;asm/d/particle/d_particle/__ct__19dPa_followEcallBackFUcUc.s&quot;</code><br />
 <code>#include &quot;asm/d/particle/d_particle/execute__19dPa_followEcallBackFP14JPABaseEmitter.s&quot;</code><br />
@@ -1221,7 +1221,7 @@ Variables</h2></td></tr>
 <tr class="separator:ab1555540c3a0f9a55a1de6ad8bac00f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab61d5837617036027f6360b9816a7967"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__particle_8cpp.html#ab61d5837617036027f6360b9816a7967">stringBase_8037A132</a> = &quot;/res/Particle/Pscene%03d.jpc&quot;</td></tr>
 <tr class="separator:ab61d5837617036027f6360b9816a7967"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa398ee7dff3643028487d1e11b71eb14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__particle_8cpp.html#aa398ee7dff3643028487d1e11b71eb14">stringBase_8037A14F</a> = &quot;&quot;&quot;\x1B&quot;&quot;[43;30m１エミッター登録数オーバー！！\n&quot;</td></tr>
+<tr class="memitem:aa398ee7dff3643028487d1e11b71eb14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__particle_8cpp.html#aa398ee7dff3643028487d1e11b71eb14">stringBase_8037A14F</a></td></tr>
 <tr class="separator:aa398ee7dff3643028487d1e11b71eb14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4244a5020e2f0853c03787471412272"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__particle_8cpp.html#ae4244a5020e2f0853c03787471412272">pad_8037A177</a> = &quot;&quot;</td></tr>
 <tr class="separator:ae4244a5020e2f0853c03787471412272"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -8333,8 +8333,8 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0xE6, 0x00, 0xE7, 0x01, 0x43, 0x01, 0x46, 0x01, 0xAF, 0x01, 0xB8, 0x88, 0x1B, 0x88, 0x1E,</div>
-<div class="line">    0x88, 0x1C, 0x88, 0x1F, 0x86, 0xAE, 0x86, 0xAF,</div>
+<div class="line">    0x00, 0xE6, 0x00, 0xE7, 0x01, 0x43, 0x01, 0x46, 0x01, 0xAF, 0x01, 0xB8,</div>
+<div class="line">    0x88, 0x1B, 0x88, 0x1E, 0x88, 0x1C, 0x88, 0x1F, 0x86, 0xAE, 0x86, 0xAF,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -8471,7 +8471,10 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x01, 0xB3, 0x01, 0xB2,</div>
+<div class="line">    0x01,</div>
+<div class="line">    0xB3,</div>
+<div class="line">    0x01,</div>
+<div class="line">    0xB2,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -8606,9 +8609,19 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x07, 0x0F, 0x07, 0x3D, 0x01, 0x00, 0x01, 0x01, 0x01, 0x03,</div>
+<div class="line">    0x07,</div>
+<div class="line">    0x0F,</div>
+<div class="line">    0x07,</div>
+<div class="line">    0x3D,</div>
+<div class="line">    0x01,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x01,</div>
+<div class="line">    0x01,</div>
+<div class="line">    0x01,</div>
+<div class="line">    0x03,</div>
 <div class="line">    </div>
-<div class="line">    0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -8746,7 +8759,10 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -10332,8 +10348,8 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x81, 0x10, 0x81, 0x11, 0x81, 0x12, 0x89, 0xD6, 0x89, 0xD7, 0x89, 0xD8, 0x83, 0xA6, 0x83, 0xA7,</div>
-<div class="line">    0x81, 0x04, 0x81, 0x05, 0x81, 0x06, 0x81, 0x74, 0x81, 0x75, 0x81, 0x76,</div>
+<div class="line">    0x81, 0x10, 0x81, 0x11, 0x81, 0x12, 0x89, 0xD6, 0x89, 0xD7, 0x89, 0xD8, 0x83, 0xA6,</div>
+<div class="line">    0x83, 0xA7, 0x81, 0x04, 0x81, 0x05, 0x81, 0x06, 0x81, 0x74, 0x81, 0x75, 0x81, 0x76,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -10417,11 +10433,14 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const* const stringBase_8037A14F = &quot;&quot;&quot;\x1B&quot;&quot;[43;30m１エミッター登録数オーバー！！\n&quot;</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const* const stringBase_8037A14F</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line">                                                     <span class="stringliteral">&quot;\x1B&quot;</span></div>
+<div class="line">                                                     <span class="stringliteral">&quot;[43;30m１エミッター登録数オーバー！！\n&quot;</span></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a26bf0818a5e2965243a18b6f833cac42"></a>

@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 642;
+var viewWidth = 641;
 var viewHeight = 173;
 var sectionId = 'dynsection-0';
 </script>
@@ -54,101 +54,101 @@ var sectionId = 'dynsection-0';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>libs/JSystem/JAudio2/JASDvdThread.cpp</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-169 637.5,-169 637.5,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-169 637,-169 637,4 -4,4"/>
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="147,-134.5 147,-164.5 258,-164.5 258,-134.5 147,-134.5"/>
-<text text-anchor="start" x="155" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">libs/JSystem/JAudio2</text>
-<text text-anchor="middle" x="202.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JASDvdThread.cpp</text>
+<polygon fill="#bfbfbf" stroke="black" points="201.5,-134.5 201.5,-164.5 312.5,-164.5 312.5,-134.5 201.5,-134.5"/>
+<text text-anchor="start" x="209.5" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">libs/JSystem/JAudio2</text>
+<text text-anchor="middle" x="257" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JASDvdThread.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="dol2asm_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="0,-67.5 0,-86.5 61,-86.5 61,-67.5 0,-67.5"/>
-<text text-anchor="middle" x="30.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">dol2asm.h</text>
+<g id="a_node2"><a xlink:href="JASDvdThread_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="0,-67.5 0,-86.5 170,-86.5 170,-67.5 0,-67.5"/>
+<text text-anchor="middle" x="85" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">JSystem/JAudio2/JASDvdThread.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M165.94,-134.41C140.48,-124.48 105.79,-110.75 75.5,-98 69.95,-95.66 64.04,-93.1 58.4,-90.61"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="59.82,-87.41 49.26,-86.54 56.97,-93.8 59.82,-87.41"/>
+<path fill="none" stroke="midnightblue" d="M222.61,-134.4C191.25,-121.55 145.37,-102.74 115.35,-90.44"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="116.4,-87.09 105.82,-86.53 113.74,-93.56 116.4,-87.09"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:href="types_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="105,-0.5 105,-19.5 186,-19.5 186,-0.5 105,-0.5"/>
-<text text-anchor="middle" x="145.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">dolphin/types.h</text>
+<polygon fill="white" stroke="black" points="100.5,-0.5 100.5,-19.5 181.5,-19.5 181.5,-0.5 100.5,-0.5"/>
+<text text-anchor="middle" x="141" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">dolphin/types.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
+<g id="edge4" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M154.38,-134.38C136.76,-126.63 118.67,-115.01 108.5,-98 98.92,-81.98 102.2,-73.57 108.5,-56 112.44,-45 120.36,-34.77 127.86,-26.85"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="130.39,-29.27 135.06,-19.76 125.48,-24.28 130.39,-29.27"/>
+<path fill="none" stroke="midnightblue" d="M245.11,-134.39C229.82,-116.25 202.44,-83.77 179,-56 170.99,-46.51 162.02,-35.89 154.81,-27.35"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="157.41,-25.01 148.29,-19.63 152.07,-29.52 157.41,-25.01"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="JASDvdThread_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="117.5,-67.5 117.5,-86.5 287.5,-86.5 287.5,-67.5 117.5,-67.5"/>
-<text text-anchor="middle" x="202.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">JSystem/JAudio2/JASDvdThread.h</text>
+<g id="a_node4"><a xlink:href="dol2asm_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="226.5,-67.5 226.5,-86.5 287.5,-86.5 287.5,-67.5 226.5,-67.5"/>
+<text text-anchor="middle" x="257" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">dol2asm.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M202.5,-134.23C202.5,-123.5 202.5,-108.69 202.5,-96.96"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="206,-96.89 202.5,-86.89 199,-96.89 206,-96.89"/>
+<path fill="none" stroke="midnightblue" d="M257,-134.23C257,-123.5 257,-108.69 257,-96.96"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="260.5,-96.89 257,-86.89 253.5,-96.89 260.5,-96.89"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
 <g id="a_node5"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="306,-56.5 306,-97.5 469,-97.5 469,-56.5 306,-56.5"/>
-<text text-anchor="start" x="314" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JAudio2</text>
-<text text-anchor="start" x="314" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JASDvdThread/getThreadPointer</text>
-<text text-anchor="middle" x="387.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__6JASDvdFv.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="305.5,-56.5 305.5,-97.5 468.5,-97.5 468.5,-56.5 305.5,-56.5"/>
+<text text-anchor="start" x="313.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JAudio2</text>
+<text text-anchor="start" x="313.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JASDvdThread/getThreadPointer</text>
+<text text-anchor="middle" x="387" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__6JASDvdFv.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M239.49,-134.4C264.41,-124.91 297.85,-112.16 326.64,-101.19"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="328.11,-104.38 336.21,-97.55 325.62,-97.84 328.11,-104.38"/>
+<path fill="none" stroke="midnightblue" d="M282.99,-134.4C299.83,-125.27 322.2,-113.14 341.89,-102.47"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="343.59,-105.52 350.71,-97.68 340.25,-99.37 343.59,-105.52"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
 <g id="a_node6"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="487.5,-56.5 487.5,-97.5 633.5,-97.5 633.5,-56.5 487.5,-56.5"/>
-<text text-anchor="start" x="495.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JAudio2</text>
-<text text-anchor="start" x="495.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JASDvdThread/createThread</text>
-<text text-anchor="middle" x="560.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__6JASDvdFliUl.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="487,-56.5 487,-97.5 633,-97.5 633,-56.5 487,-56.5"/>
+<text text-anchor="start" x="495" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JAudio2</text>
+<text text-anchor="start" x="495" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JASDvdThread/createThread</text>
+<text text-anchor="middle" x="560" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__6JASDvdFliUl.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node6 -->
 <g id="edge6" class="edge">
 <title>Node1&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M258.2,-139.29C311.89,-130.19 395.65,-115.41 477.29,-98.21"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="478.18,-101.59 487.23,-96.09 476.72,-94.75 478.18,-101.59"/>
+<path fill="none" stroke="midnightblue" d="M312.91,-135.96C355.35,-126.39 415.41,-112.73 476.83,-98.26"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="477.77,-101.64 486.7,-95.94 476.16,-94.83 477.77,-101.64"/>
 </g>
-<!-- Node4&#45;&gt;Node3 -->
-<g id="edge4" class="edge">
-<title>Node4&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M194.81,-67.23C185.84,-57 170.81,-39.86 159.7,-27.19"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="162.29,-24.84 153.07,-19.63 157.03,-29.45 162.29,-24.84"/>
+<!-- Node2&#45;&gt;Node3 -->
+<g id="edge2" class="edge">
+<title>Node2&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M92.55,-67.23C101.28,-57.1 115.85,-40.19 126.74,-27.56"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="129.69,-29.49 133.57,-19.63 124.39,-24.92 129.69,-29.49"/>
 </g>
 </g>
 </svg>
