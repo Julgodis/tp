@@ -1,10 +1,10 @@
 lbl_801ADD38:
-/* 801ADD38 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 801ADD3C 00000004  7C 08 02 A6 */	mflr r0
-/* 801ADD40 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 801ADD44 0000000C  4B EA C4 31 */	bl dKyw_wether_draw__Fv
-/* 801ADD48 00000010  38 60 00 01 */	li r3, 1
-/* 801ADD4C 00000014  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 801ADD50 00000018  7C 08 03 A6 */	mtlr r0
-/* 801ADD54 0000001C  38 21 00 10 */	addi r1, r1, 0x10
-/* 801ADD58 00000020  4E 80 00 20 */	blr 
+/* 801ADD38  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 801ADD3C  7C 08 02 A6 */	mflr r0                                 
+/* 801ADD40  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 801ADD44  4B EA C4 31 */	bl dKyw_wether_draw__Fv                  /* constant-address: 8005A174, symbol: dKyw_wether_draw__Fv */
+/* 801ADD48  38 60 00 01 */	li r3, 1                                
+/* 801ADD4C  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 801ADD50  7C 08 03 A6 */	mtlr r0                                 
+/* 801ADD54  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 801ADD58  4E 80 00 20 */	blr                                     

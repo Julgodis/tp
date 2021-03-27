@@ -1,149 +1,149 @@
 lbl_8020DCE4:
-/* 8020DCE4 00000000  94 21 FF C0 */	stwu r1, -0x40(r1)
-/* 8020DCE8 00000004  7C 08 02 A6 */	mflr r0
-/* 8020DCEC 00000008  90 01 00 44 */	stw r0, 0x44(r1)
-/* 8020DCF0 0000000C  39 61 00 40 */	addi r11, r1, 0x40
-/* 8020DCF4 00000010  48 15 44 E5 */	bl _savegpr_28
-/* 8020DCF8 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 8020DCFC 00000018  7C 9F 23 78 */	mr r31, r4
-/* 8020DD00 0000001C  88 03 00 2B */	lbz r0, 0x2b(r3)
-/* 8020DD04 00000020  28 00 00 00 */	cmplwi r0, 0
-/* 8020DD08 00000024  40 82 00 84 */	bne lbl_8020DD8C
-/* 8020DD0C 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8020DD10 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8020DD14 00000030  3B 83 07 F0 */	addi r28, r3, 0x7f0
-/* 8020DD18 00000034  7F 83 E3 78 */	mr r3, r28
-/* 8020DD1C 00000038  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
-/* 8020DD20 0000003C  3B A4 72 88 */	addi r29, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 8020DD24 00000040  A0 9D 00 EC */	lhz r4, 0xec(r29)	/* effective address: 803A7374 */
-/* 8020DD28 00000044  4B E2 6C 95 */	bl isEventBit__11dSv_event_cCFUs
-/* 8020DD2C 00000048  2C 03 00 00 */	cmpwi r3, 0
-/* 8020DD30 0000004C  41 82 00 5C */	beq lbl_8020DD8C
-/* 8020DD34 00000050  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8020DD38 00000054  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8020DD3C 00000058  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 8020DD40 0000005C  3C 80 80 3A */	lis r4, d_meter_d_meter_map__stringBase0@ha
-/* 8020DD44 00000060  38 84 82 08 */	addi r4, r4, d_meter_d_meter_map__stringBase0@l
-/* 8020DD48 00000064  48 15 AC 4D */	bl strcmp
-/* 8020DD4C 00000068  2C 03 00 00 */	cmpwi r3, 0
-/* 8020DD50 0000006C  40 82 00 1C */	bne lbl_8020DD6C
-/* 8020DD54 00000070  7F 83 E3 78 */	mr r3, r28
-/* 8020DD58 00000074  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
-/* 8020DD5C 00000078  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 8020DD60 0000007C  A0 84 00 EE */	lhz r4, 0xee(r4)	/* effective address: 803A7376 */
-/* 8020DD64 00000080  4B E2 6C 29 */	bl onEventBit__11dSv_event_cFUs
-/* 8020DD68 00000084  48 00 00 24 */	b lbl_8020DD8C
+/* 8020DCE4  94 21 FF C0 */	stwu r1, -0x40(r1)                      
+/* 8020DCE8  7C 08 02 A6 */	mflr r0                                 
+/* 8020DCEC  90 01 00 44 */	stw r0, 0x44(r1)                        
+/* 8020DCF0  39 61 00 40 */	addi r11, r1, 0x40                      
+/* 8020DCF4  48 15 44 E5 */	bl _savegpr_28                           /* constant-address: 803621D8, symbol: _savegpr_28 */
+/* 8020DCF8  7C 7E 1B 78 */	mr r30, r3                              
+/* 8020DCFC  7C 9F 23 78 */	mr r31, r4                              
+/* 8020DD00  88 03 00 2B */	lbz r0, 0x2b(r3)                        
+/* 8020DD04  28 00 00 00 */	cmplwi r0, 0                            
+/* 8020DD08  40 82 00 84 */	bne lbl_8020DD8C                         /* constant-address: 8020DD8C, symbol: lbl_8020DD8C */
+/* 8020DD0C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 8020DD10  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 8020DD14  3B 83 07 F0 */	addi r28, r3, 0x7f0                      /* constant-address: 804069B0, symbol: None */
+/* 8020DD18  7F 83 E3 78 */	mr r3, r28                              
+/* 8020DD1C  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
+/* 8020DD20  3B A4 72 88 */	addi r29, r4, saveBitLabels__16dSv_event_flag_c@l /* constant-address: 803A7288, symbol: saveBitLabels__16dSv_event_flag_c */
+/* 8020DD24  A0 9D 00 EC */	lhz r4, 0xec(r29)                        /* constant-address: 803A7374, symbol: None */
+/* 8020DD28  4B E2 6C 95 */	bl isEventBit__11dSv_event_cCFUs         /* constant-address: 800349BC, symbol: isEventBit__11dSv_event_cCFUs */
+/* 8020DD2C  2C 03 00 00 */	cmpwi r3, 0                             
+/* 8020DD30  41 82 00 5C */	beq lbl_8020DD8C                         /* constant-address: 8020DD8C, symbol: lbl_8020DD8C */
+/* 8020DD34  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 8020DD38  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 8020DD3C  38 63 4E 00 */	addi r3, r3, 0x4e00                      /* constant-address: 8040AFC0, symbol: None */
+/* 8020DD40  3C 80 80 3A */	lis r4, d_meter_d_meter_map__stringBase0@ha
+/* 8020DD44  38 84 82 08 */	addi r4, r4, d_meter_d_meter_map__stringBase0@l /* constant-address: 80398208, symbol: d_meter_d_meter_map__stringBase0 */
+/* 8020DD48  48 15 AC 4D */	bl strcmp                                /* constant-address: 80368994, symbol: strcmp */
+/* 8020DD4C  2C 03 00 00 */	cmpwi r3, 0                             
+/* 8020DD50  40 82 00 1C */	bne lbl_8020DD6C                         /* constant-address: 8020DD6C, symbol: lbl_8020DD6C */
+/* 8020DD54  7F 83 E3 78 */	mr r3, r28                              
+/* 8020DD58  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
+/* 8020DD5C  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l /* constant-address: 803A7288, symbol: saveBitLabels__16dSv_event_flag_c */
+/* 8020DD60  A0 84 00 EE */	lhz r4, 0xee(r4)                         /* constant-address: 803A7376, symbol: None */
+/* 8020DD64  4B E2 6C 29 */	bl onEventBit__11dSv_event_cFUs          /* constant-address: 8003498C, symbol: onEventBit__11dSv_event_cFUs */
+/* 8020DD68  48 00 00 24 */	b lbl_8020DD8C                           /* constant-address: 8020DD8C, symbol: lbl_8020DD8C */
 lbl_8020DD6C:
-/* 8020DD6C 00000000  7F 83 E3 78 */	mr r3, r28
-/* 8020DD70 00000004  A0 9D 00 EC */	lhz r4, 0xec(r29)	/* effective address: 803A7374 */
-/* 8020DD74 00000008  4B E2 6C 49 */	bl isEventBit__11dSv_event_cCFUs
-/* 8020DD78 0000000C  98 7E 00 2B */	stb r3, 0x2b(r30)
-/* 8020DD7C 00000010  38 00 00 02 */	li r0, 2
-/* 8020DD80 00000014  3C 60 80 43 */	lis r3, g_meter2_info@ha
-/* 8020DD84 00000018  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8020DD88 0000001C  98 03 00 C1 */	stb r0, 0xc1(r3)	/* effective address: 80430249 */
+/* 8020DD6C  7F 83 E3 78 */	mr r3, r28                              
+/* 8020DD70  A0 9D 00 EC */	lhz r4, 0xec(r29)                        /* constant-address: 803A7374, symbol: None */
+/* 8020DD74  4B E2 6C 49 */	bl isEventBit__11dSv_event_cCFUs         /* constant-address: 800349BC, symbol: isEventBit__11dSv_event_cCFUs */
+/* 8020DD78  98 7E 00 2B */	stb r3, 0x2b(r30)                       
+/* 8020DD7C  38 00 00 02 */	li r0, 2                                
+/* 8020DD80  3C 60 80 43 */	lis r3, g_meter2_info@ha                
+/* 8020DD84  38 63 01 88 */	addi r3, r3, g_meter2_info@l             /* constant-address: 80430188, symbol: g_meter2_info */
+/* 8020DD88  98 03 00 C1 */	stb r0, 0xc1(r3)                         /* constant-address: 80430249, symbol: None */
 lbl_8020DD8C:
-/* 8020DD8C 00000000  8B AD 87 E4 */	lbz r29, struct_80450D64+0x0(r13)
-/* 8020DD90 00000004  7F BD 07 74 */	extsb r29, r29
-/* 8020DD94 00000008  93 FE 00 14 */	stw r31, 0x14(r30)
-/* 8020DD98 0000000C  7F C3 F3 78 */	mr r3, r30
-/* 8020DD9C 00000010  48 00 06 C1 */	bl checkMoveStatus__11dMeterMap_cFv
-/* 8020DDA0 00000014  98 7E 00 2A */	stb r3, 0x2a(r30)
-/* 8020DDA4 00000018  88 1E 00 2A */	lbz r0, 0x2a(r30)
-/* 8020DDA8 0000001C  28 00 00 01 */	cmplwi r0, 1
-/* 8020DDAC 00000020  41 82 00 50 */	beq lbl_8020DDFC
-/* 8020DDB0 00000024  28 00 00 02 */	cmplwi r0, 2
-/* 8020DDB4 00000028  41 82 00 48 */	beq lbl_8020DDFC
-/* 8020DDB8 0000002C  28 00 00 03 */	cmplwi r0, 3
-/* 8020DDBC 00000030  41 82 00 40 */	beq lbl_8020DDFC
-/* 8020DDC0 00000034  3C 60 80 43 */	lis r3, g_meter2_info@ha
-/* 8020DDC4 00000038  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8020DDC8 0000003C  88 03 00 C1 */	lbz r0, 0xc1(r3)	/* effective address: 80430249 */
-/* 8020DDCC 00000040  28 00 00 07 */	cmplwi r0, 7
-/* 8020DDD0 00000044  41 82 00 2C */	beq lbl_8020DDFC
-/* 8020DDD4 00000048  28 00 00 02 */	cmplwi r0, 2
-/* 8020DDD8 0000004C  41 82 00 24 */	beq lbl_8020DDFC
-/* 8020DDDC 00000050  28 00 00 06 */	cmplwi r0, 6
-/* 8020DDE0 00000054  41 82 00 1C */	beq lbl_8020DDFC
-/* 8020DDE4 00000058  28 00 00 04 */	cmplwi r0, 4
-/* 8020DDE8 0000005C  41 82 00 14 */	beq lbl_8020DDFC
-/* 8020DDEC 00000060  28 00 00 03 */	cmplwi r0, 3
-/* 8020DDF0 00000064  41 82 00 0C */	beq lbl_8020DDFC
-/* 8020DDF4 00000068  28 00 00 05 */	cmplwi r0, 5
-/* 8020DDF8 0000006C  40 82 00 0C */	bne lbl_8020DE04
+/* 8020DD8C  8B AD 87 E4 */	lbz r29, struct_80450D64+0x0(r13)        /* constant-address: 80450D64, symbol: struct_80450D64+0x0 */
+/* 8020DD90  7F BD 07 74 */	extsb r29, r29                          
+/* 8020DD94  93 FE 00 14 */	stw r31, 0x14(r30)                      
+/* 8020DD98  7F C3 F3 78 */	mr r3, r30                              
+/* 8020DD9C  48 00 06 C1 */	bl checkMoveStatus__11dMeterMap_cFv      /* constant-address: 8020E45C, symbol: checkMoveStatus__11dMeterMap_cFv */
+/* 8020DDA0  98 7E 00 2A */	stb r3, 0x2a(r30)                       
+/* 8020DDA4  88 1E 00 2A */	lbz r0, 0x2a(r30)                       
+/* 8020DDA8  28 00 00 01 */	cmplwi r0, 1                            
+/* 8020DDAC  41 82 00 50 */	beq lbl_8020DDFC                         /* constant-address: 8020DDFC, symbol: lbl_8020DDFC */
+/* 8020DDB0  28 00 00 02 */	cmplwi r0, 2                            
+/* 8020DDB4  41 82 00 48 */	beq lbl_8020DDFC                         /* constant-address: 8020DDFC, symbol: lbl_8020DDFC */
+/* 8020DDB8  28 00 00 03 */	cmplwi r0, 3                            
+/* 8020DDBC  41 82 00 40 */	beq lbl_8020DDFC                         /* constant-address: 8020DDFC, symbol: lbl_8020DDFC */
+/* 8020DDC0  3C 60 80 43 */	lis r3, g_meter2_info@ha                
+/* 8020DDC4  38 63 01 88 */	addi r3, r3, g_meter2_info@l             /* constant-address: 80430188, symbol: g_meter2_info */
+/* 8020DDC8  88 03 00 C1 */	lbz r0, 0xc1(r3)                         /* constant-address: 80430249, symbol: None */
+/* 8020DDCC  28 00 00 07 */	cmplwi r0, 7                            
+/* 8020DDD0  41 82 00 2C */	beq lbl_8020DDFC                         /* constant-address: 8020DDFC, symbol: lbl_8020DDFC */
+/* 8020DDD4  28 00 00 02 */	cmplwi r0, 2                            
+/* 8020DDD8  41 82 00 24 */	beq lbl_8020DDFC                         /* constant-address: 8020DDFC, symbol: lbl_8020DDFC */
+/* 8020DDDC  28 00 00 06 */	cmplwi r0, 6                            
+/* 8020DDE0  41 82 00 1C */	beq lbl_8020DDFC                         /* constant-address: 8020DDFC, symbol: lbl_8020DDFC */
+/* 8020DDE4  28 00 00 04 */	cmplwi r0, 4                            
+/* 8020DDE8  41 82 00 14 */	beq lbl_8020DDFC                         /* constant-address: 8020DDFC, symbol: lbl_8020DDFC */
+/* 8020DDEC  28 00 00 03 */	cmplwi r0, 3                            
+/* 8020DDF0  41 82 00 0C */	beq lbl_8020DDFC                         /* constant-address: 8020DDFC, symbol: lbl_8020DDFC */
+/* 8020DDF4  28 00 00 05 */	cmplwi r0, 5                            
+/* 8020DDF8  40 82 00 0C */	bne lbl_8020DE04                         /* constant-address: 8020DE04, symbol: lbl_8020DE04 */
 lbl_8020DDFC:
-/* 8020DDFC 00000000  7F C3 F3 78 */	mr r3, r30
-/* 8020DE00 00000004  48 00 02 71 */	bl ctrlShowMap__11dMeterMap_cFv
+/* 8020DDFC  7F C3 F3 78 */	mr r3, r30                              
+/* 8020DE00  48 00 02 71 */	bl ctrlShowMap__11dMeterMap_cFv          /* constant-address: 8020E070, symbol: ctrlShowMap__11dMeterMap_cFv */
 lbl_8020DE04:
-/* 8020DE04 00000000  88 1E 00 2D */	lbz r0, 0x2d(r30)
-/* 8020DE08 00000004  28 00 00 00 */	cmplwi r0, 0
-/* 8020DE0C 00000008  41 82 00 40 */	beq lbl_8020DE4C
-/* 8020DE10 0000000C  7F C3 F3 78 */	mr r3, r30
-/* 8020DE14 00000010  4B FF F9 D1 */	bl getDispPosInside_OffsetX__11dMeterMap_cFv
-/* 8020DE18 00000014  7C 63 07 34 */	extsh r3, r3
-/* 8020DE1C 00000018  A8 1E 00 28 */	lha r0, 0x28(r30)
-/* 8020DE20 0000001C  7C 00 18 00 */	cmpw r0, r3
-/* 8020DE24 00000020  41 82 00 48 */	beq lbl_8020DE6C
-/* 8020DE28 00000024  7F C3 F3 78 */	mr r3, r30
-/* 8020DE2C 00000028  4B FF F9 B9 */	bl getDispPosInside_OffsetX__11dMeterMap_cFv
-/* 8020DE30 0000002C  7C 64 1B 78 */	mr r4, r3
-/* 8020DE34 00000030  38 7E 00 28 */	addi r3, r30, 0x28
-/* 8020DE38 00000034  38 A0 00 02 */	li r5, 2
-/* 8020DE3C 00000038  38 C0 00 3C */	li r6, 0x3c
-/* 8020DE40 0000003C  38 E0 00 0A */	li r7, 0xa
-/* 8020DE44 00000040  48 06 26 FD */	bl cLib_addCalcAngleS__FPsssss
-/* 8020DE48 00000044  48 00 00 24 */	b lbl_8020DE6C
+/* 8020DE04  88 1E 00 2D */	lbz r0, 0x2d(r30)                       
+/* 8020DE08  28 00 00 00 */	cmplwi r0, 0                            
+/* 8020DE0C  41 82 00 40 */	beq lbl_8020DE4C                         /* constant-address: 8020DE4C, symbol: lbl_8020DE4C */
+/* 8020DE10  7F C3 F3 78 */	mr r3, r30                              
+/* 8020DE14  4B FF F9 D1 */	bl getDispPosInside_OffsetX__11dMeterMap_cFv /* constant-address: 8020D7E4, symbol: getDispPosInside_OffsetX__11dMeterMap_cFv */
+/* 8020DE18  7C 63 07 34 */	extsh r3, r3                            
+/* 8020DE1C  A8 1E 00 28 */	lha r0, 0x28(r30)                       
+/* 8020DE20  7C 00 18 00 */	cmpw r0, r3                             
+/* 8020DE24  41 82 00 48 */	beq lbl_8020DE6C                         /* constant-address: 8020DE6C, symbol: lbl_8020DE6C */
+/* 8020DE28  7F C3 F3 78 */	mr r3, r30                              
+/* 8020DE2C  4B FF F9 B9 */	bl getDispPosInside_OffsetX__11dMeterMap_cFv /* constant-address: 8020D7E4, symbol: getDispPosInside_OffsetX__11dMeterMap_cFv */
+/* 8020DE30  7C 64 1B 78 */	mr r4, r3                               
+/* 8020DE34  38 7E 00 28 */	addi r3, r30, 0x28                      
+/* 8020DE38  38 A0 00 02 */	li r5, 2                                
+/* 8020DE3C  38 C0 00 3C */	li r6, 0x3c                             
+/* 8020DE40  38 E0 00 0A */	li r7, 0xa                              
+/* 8020DE44  48 06 26 FD */	bl cLib_addCalcAngleS__FPsssss           /* constant-address: 80270540, symbol: cLib_addCalcAngleS__FPsssss */
+/* 8020DE48  48 00 00 24 */	b lbl_8020DE6C                           /* constant-address: 8020DE6C, symbol: lbl_8020DE6C */
 lbl_8020DE4C:
-/* 8020DE4C 00000000  7F C3 F3 78 */	mr r3, r30
-/* 8020DE50 00000004  4B FF F9 9D */	bl getDispPosOutSide_OffsetX__11dMeterMap_cFv
-/* 8020DE54 00000008  7C 64 1B 78 */	mr r4, r3
-/* 8020DE58 0000000C  38 7E 00 28 */	addi r3, r30, 0x28
-/* 8020DE5C 00000010  38 A0 00 02 */	li r5, 2
-/* 8020DE60 00000014  38 C0 00 3C */	li r6, 0x3c
-/* 8020DE64 00000018  38 E0 00 0A */	li r7, 0xa
-/* 8020DE68 0000001C  48 06 26 D9 */	bl cLib_addCalcAngleS__FPsssss
+/* 8020DE4C  7F C3 F3 78 */	mr r3, r30                              
+/* 8020DE50  4B FF F9 9D */	bl getDispPosOutSide_OffsetX__11dMeterMap_cFv /* constant-address: 8020D7EC, symbol: getDispPosOutSide_OffsetX__11dMeterMap_cFv */
+/* 8020DE54  7C 64 1B 78 */	mr r4, r3                               
+/* 8020DE58  38 7E 00 28 */	addi r3, r30, 0x28                      
+/* 8020DE5C  38 A0 00 02 */	li r5, 2                                
+/* 8020DE60  38 C0 00 3C */	li r6, 0x3c                             
+/* 8020DE64  38 E0 00 0A */	li r7, 0xa                              
+/* 8020DE68  48 06 26 D9 */	bl cLib_addCalcAngleS__FPsssss           /* constant-address: 80270540, symbol: cLib_addCalcAngleS__FPsssss */
 lbl_8020DE6C:
-/* 8020DE6C 00000000  38 61 00 08 */	addi r3, r1, 8
-/* 8020DE70 00000004  4B E3 0F ED */	bl getMapPlayerPos__10dMapInfo_nFv
-/* 8020DE74 00000008  80 61 00 08 */	lwz r3, 8(r1)
-/* 8020DE78 0000000C  80 01 00 0C */	lwz r0, 0xc(r1)
-/* 8020DE7C 00000010  90 61 00 14 */	stw r3, 0x14(r1)
-/* 8020DE80 00000014  90 01 00 18 */	stw r0, 0x18(r1)
-/* 8020DE84 00000018  80 01 00 10 */	lwz r0, 0x10(r1)
-/* 8020DE88 0000001C  90 01 00 1C */	stw r0, 0x1c(r1)
-/* 8020DE8C 00000020  7F C3 F3 78 */	mr r3, r30
-/* 8020DE90 00000024  4B FF F8 9D */	bl getMapDispEdgeLeftX_Layout__11dMeterMap_cFv
-/* 8020DE94 00000028  A8 1E 00 28 */	lha r0, 0x28(r30)
-/* 8020DE98 0000002C  C8 42 AE 28 */	lfd f2, lit_4100(r2)
-/* 8020DE9C 00000030  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 8020DEA0 00000034  90 01 00 24 */	stw r0, 0x24(r1)
-/* 8020DEA4 00000038  3C 00 43 30 */	lis r0, 0x4330
-/* 8020DEA8 0000003C  90 01 00 20 */	stw r0, 0x20(r1)
-/* 8020DEAC 00000040  C8 01 00 20 */	lfd f0, 0x20(r1)
-/* 8020DEB0 00000044  EC 00 10 28 */	fsubs f0, f0, f2
-/* 8020DEB4 00000048  EC 00 08 2A */	fadds f0, f0, f1
-/* 8020DEB8 0000004C  D0 1E 00 18 */	stfs f0, 0x18(r30)
-/* 8020DEBC 00000050  7F C3 F3 78 */	mr r3, r30
-/* 8020DEC0 00000054  4B FF F7 D1 */	bl getMapDispEdgeBottomY_Layout__11dMeterMap_cFv
-/* 8020DEC4 00000058  C0 1E 00 24 */	lfs f0, 0x24(r30)
-/* 8020DEC8 0000005C  EC 01 00 28 */	fsubs f0, f1, f0
-/* 8020DECC 00000060  D0 1E 00 1C */	stfs f0, 0x1c(r30)
-/* 8020DED0 00000064  80 7E 00 08 */	lwz r3, 8(r30)
-/* 8020DED4 00000068  C0 21 00 14 */	lfs f1, 0x14(r1)
-/* 8020DED8 0000006C  C0 41 00 1C */	lfs f2, 0x1c(r1)
-/* 8020DEDC 00000070  7F A4 EB 78 */	mr r4, r29
-/* 8020DEE0 00000074  C0 61 00 18 */	lfs f3, 0x18(r1)
-/* 8020DEE4 00000078  4B E1 C4 49 */	bl _move__6dMap_cFffif
-/* 8020DEE8 0000007C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8020DEEC 00000080  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8020DEF0 00000084  88 63 4F AD */	lbz r3, 0x4fad(r3)	/* effective address: 8040B16D */
-/* 8020DEF4 00000088  30 03 FF FF */	addic r0, r3, -1
-/* 8020DEF8 0000008C  7C 00 19 10 */	subfe r0, r0, r3
-/* 8020DEFC 00000090  54 00 06 3E */	clrlwi r0, r0, 0x18
-/* 8020DF00 00000094  90 1E 00 30 */	stw r0, 0x30(r30)
-/* 8020DF04 00000098  39 61 00 40 */	addi r11, r1, 0x40
-/* 8020DF08 0000009C  48 15 43 1D */	bl _restgpr_28
-/* 8020DF0C 000000A0  80 01 00 44 */	lwz r0, 0x44(r1)
-/* 8020DF10 000000A4  7C 08 03 A6 */	mtlr r0
-/* 8020DF14 000000A8  38 21 00 40 */	addi r1, r1, 0x40
-/* 8020DF18 000000AC  4E 80 00 20 */	blr 
+/* 8020DE6C  38 61 00 08 */	addi r3, r1, 8                          
+/* 8020DE70  4B E3 0F ED */	bl getMapPlayerPos__10dMapInfo_nFv       /* constant-address: 8003EE5C, symbol: getMapPlayerPos__10dMapInfo_nFv */
+/* 8020DE74  80 61 00 08 */	lwz r3, 8(r1)                           
+/* 8020DE78  80 01 00 0C */	lwz r0, 0xc(r1)                         
+/* 8020DE7C  90 61 00 14 */	stw r3, 0x14(r1)                        
+/* 8020DE80  90 01 00 18 */	stw r0, 0x18(r1)                        
+/* 8020DE84  80 01 00 10 */	lwz r0, 0x10(r1)                        
+/* 8020DE88  90 01 00 1C */	stw r0, 0x1c(r1)                        
+/* 8020DE8C  7F C3 F3 78 */	mr r3, r30                              
+/* 8020DE90  4B FF F8 9D */	bl getMapDispEdgeLeftX_Layout__11dMeterMap_cFv /* constant-address: 8020D72C, symbol: getMapDispEdgeLeftX_Layout__11dMeterMap_cFv */
+/* 8020DE94  A8 1E 00 28 */	lha r0, 0x28(r30)                       
+/* 8020DE98  C8 42 AE 28 */	lfd f2, lit_4100(r2)                     /* constant-address: 80454828, symbol: lit_4100 */
+/* 8020DE9C  6C 00 80 00 */	xoris r0, r0, 0x8000                    
+/* 8020DEA0  90 01 00 24 */	stw r0, 0x24(r1)                        
+/* 8020DEA4  3C 00 43 30 */	lis r0, 0x4330                          
+/* 8020DEA8  90 01 00 20 */	stw r0, 0x20(r1)                        
+/* 8020DEAC  C8 01 00 20 */	lfd f0, 0x20(r1)                        
+/* 8020DEB0  EC 00 10 28 */	fsubs f0, f0, f2                        
+/* 8020DEB4  EC 00 08 2A */	fadds f0, f0, f1                        
+/* 8020DEB8  D0 1E 00 18 */	stfs f0, 0x18(r30)                      
+/* 8020DEBC  7F C3 F3 78 */	mr r3, r30                              
+/* 8020DEC0  4B FF F7 D1 */	bl getMapDispEdgeBottomY_Layout__11dMeterMap_cFv /* constant-address: 8020D690, symbol: getMapDispEdgeBottomY_Layout__11dMeterMap_cFv */
+/* 8020DEC4  C0 1E 00 24 */	lfs f0, 0x24(r30)                       
+/* 8020DEC8  EC 01 00 28 */	fsubs f0, f1, f0                        
+/* 8020DECC  D0 1E 00 1C */	stfs f0, 0x1c(r30)                      
+/* 8020DED0  80 7E 00 08 */	lwz r3, 8(r30)                          
+/* 8020DED4  C0 21 00 14 */	lfs f1, 0x14(r1)                        
+/* 8020DED8  C0 41 00 1C */	lfs f2, 0x1c(r1)                        
+/* 8020DEDC  7F A4 EB 78 */	mr r4, r29                              
+/* 8020DEE0  C0 61 00 18 */	lfs f3, 0x18(r1)                        
+/* 8020DEE4  4B E1 C4 49 */	bl _move__6dMap_cFffif                   /* constant-address: 8002A32C, symbol: _move__6dMap_cFffif */
+/* 8020DEE8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 8020DEEC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 8020DEF0  88 63 4F AD */	lbz r3, 0x4fad(r3)                       /* constant-address: 8040B16D, symbol: None */
+/* 8020DEF4  30 03 FF FF */	addic r0, r3, -1                        
+/* 8020DEF8  7C 00 19 10 */	subfe r0, r0, r3                        
+/* 8020DEFC  54 00 06 3E */	clrlwi r0, r0, 0x18                     
+/* 8020DF00  90 1E 00 30 */	stw r0, 0x30(r30)                       
+/* 8020DF04  39 61 00 40 */	addi r11, r1, 0x40                      
+/* 8020DF08  48 15 43 1D */	bl _restgpr_28                           /* constant-address: 80362224, symbol: _restgpr_28 */
+/* 8020DF0C  80 01 00 44 */	lwz r0, 0x44(r1)                        
+/* 8020DF10  7C 08 03 A6 */	mtlr r0                                 
+/* 8020DF14  38 21 00 40 */	addi r1, r1, 0x40                       
+/* 8020DF18  4E 80 00 20 */	blr                                     

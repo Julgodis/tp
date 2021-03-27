@@ -1,19 +1,19 @@
 lbl_801561E8:
-/* 801561E8 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 801561EC 00000004  7C 08 02 A6 */	mflr r0
-/* 801561F0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 801561F4 0000000C  48 00 13 95 */	bl getObjMdlDataP__9daNpcCd_cFi
-/* 801561F8 00000010  28 03 00 00 */	cmplwi r3, 0
-/* 801561FC 00000014  41 82 00 18 */	beq lbl_80156214
-/* 80156200 00000018  3C 80 00 08 */	lis r4, 8
-/* 80156204 0000001C  3C A0 11 00 */	lis r5, 0x1100 /* 0x11000084@ha */
-/* 80156208 00000020  38 A5 00 84 */	addi r5, r5, 0x0084 /* 0x11000084@l */
-/* 8015620C 00000024  4B EB EA 49 */	bl mDoExt_J3DModel__create__FP12J3DModelDataUlUl
-/* 80156210 00000028  48 00 00 08 */	b lbl_80156218
+/* 801561E8  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 801561EC  7C 08 02 A6 */	mflr r0                                 
+/* 801561F0  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 801561F4  48 00 13 95 */	bl getObjMdlDataP__9daNpcCd_cFi          /* constant-address: 80157588, symbol: getObjMdlDataP__9daNpcCd_cFi */
+/* 801561F8  28 03 00 00 */	cmplwi r3, 0                            
+/* 801561FC  41 82 00 18 */	beq lbl_80156214                         /* constant-address: 80156214, symbol: lbl_80156214 */
+/* 80156200  3C 80 00 08 */	lis r4, 8                               
+/* 80156204  3C A0 11 00 */	lis r5, 0x1100 /* 0x11000084@ha */      
+/* 80156208  38 A5 00 84 */	addi r5, r5, 0x0084 /* 0x11000084@l */   /* constant-address: 11000084 */
+/* 8015620C  4B EB EA 49 */	bl mDoExt_J3DModel__create__FP12J3DModelDataUlUl /* constant-address: 80014C54, symbol: mDoExt_J3DModel__create__FP12J3DModelDataUlUl */
+/* 80156210  48 00 00 08 */	b lbl_80156218                           /* constant-address: 80156218, symbol: lbl_80156218 */
 lbl_80156214:
-/* 80156214 00000000  38 60 00 00 */	li r3, 0
+/* 80156214  38 60 00 00 */	li r3, 0                                
 lbl_80156218:
-/* 80156218 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 8015621C 00000004  7C 08 03 A6 */	mtlr r0
-/* 80156220 00000008  38 21 00 10 */	addi r1, r1, 0x10
-/* 80156224 0000000C  4E 80 00 20 */	blr 
+/* 80156218  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 8015621C  7C 08 03 A6 */	mtlr r0                                 
+/* 80156220  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 80156224  4E 80 00 20 */	blr                                     

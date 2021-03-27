@@ -1,19 +1,19 @@
 lbl_8002E348:
-/* 8002E348 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8002E34C 00000004  38 A3 61 C0 */	addi r5, r3, g_dComIfG_gameInfo@l
-/* 8002E350 00000008  88 05 5E 8F */	lbz r0, 0x5e8f(r5)	/* effective address: 8040C04F */
-/* 8002E354 0000000C  28 00 00 05 */	cmplwi r0, 5
-/* 8002E358 00000010  40 82 00 28 */	bne lbl_8002E380
-/* 8002E35C 00000014  38 60 00 00 */	li r3, 0
-/* 8002E360 00000018  38 00 00 02 */	li r0, 2
-/* 8002E364 0000001C  7C 09 03 A6 */	mtctr r0
+/* 8002E348  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 8002E34C  38 A3 61 C0 */	addi r5, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 8002E350  88 05 5E 8F */	lbz r0, 0x5e8f(r5)                       /* constant-address: 8040C04F, symbol: None */
+/* 8002E354  28 00 00 05 */	cmplwi r0, 5                            
+/* 8002E358  40 82 00 28 */	bne lbl_8002E380                         /* constant-address: 8002E380, symbol: lbl_8002E380 */
+/* 8002E35C  38 60 00 00 */	li r3, 0                                
+/* 8002E360  38 00 00 02 */	li r0, 2                                
+/* 8002E364  7C 09 03 A6 */	mtctr r0                                
 lbl_8002E368:
-/* 8002E368 00000000  7C 85 1A 14 */	add r4, r5, r3
-/* 8002E36C 00000004  88 04 5E 90 */	lbz r0, 0x5e90(r4)
-/* 8002E370 00000008  28 00 00 00 */	cmplwi r0, 0
-/* 8002E374 0000000C  4D 82 00 20 */	beqlr 
-/* 8002E378 00000010  38 63 00 01 */	addi r3, r3, 1
-/* 8002E37C 00000014  42 00 FF EC */	bdnz lbl_8002E368
+/* 8002E368  7C 85 1A 14 */	add r4, r5, r3                          
+/* 8002E36C  88 04 5E 90 */	lbz r0, 0x5e90(r4)                      
+/* 8002E370  28 00 00 00 */	cmplwi r0, 0                            
+/* 8002E374  4D 82 00 20 */	beqlr                                   
+/* 8002E378  38 63 00 01 */	addi r3, r3, 1                          
+/* 8002E37C  42 00 FF EC */	bdnz lbl_8002E368                        /* constant-address: 8002E368, symbol: lbl_8002E368 */
 lbl_8002E380:
-/* 8002E380 00000000  38 60 FF FF */	li r3, -1
-/* 8002E384 00000004  4E 80 00 20 */	blr 
+/* 8002E380  38 60 FF FF */	li r3, -1                               
+/* 8002E384  4E 80 00 20 */	blr                                     

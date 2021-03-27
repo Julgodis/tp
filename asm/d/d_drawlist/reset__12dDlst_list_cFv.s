@@ -1,48 +1,48 @@
 lbl_80056538:
-/* 80056538 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 8005653C 00000004  7C 08 02 A6 */	mflr r0
-/* 80056540 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80056544 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80056548 00000010  48 30 BC 95 */	bl _savegpr_29
-/* 8005654C 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 80056550 00000018  7F BF EB 78 */	mr r31, r29
-/* 80056554 0000001C  3B C0 00 00 */	li r30, 0
+/* 80056538  94 21 FF E0 */	stwu r1, -0x20(r1)                      
+/* 8005653C  7C 08 02 A6 */	mflr r0                                 
+/* 80056540  90 01 00 24 */	stw r0, 0x24(r1)                        
+/* 80056544  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 80056548  48 30 BC 95 */	bl _savegpr_29                           /* constant-address: 803621DC, symbol: _savegpr_29 */
+/* 8005654C  7C 7D 1B 78 */	mr r29, r3                              
+/* 80056550  7F BF EB 78 */	mr r31, r29                             
+/* 80056554  3B C0 00 00 */	li r30, 0                               
 lbl_80056558:
-/* 80056558 00000000  80 7F 00 00 */	lwz r3, 0(r31)
-/* 8005655C 00000004  3B FF 00 04 */	addi r31, r31, 4
-/* 80056560 00000008  48 2C EB 09 */	bl frameInit__13J3DDrawBufferFv
-/* 80056564 0000000C  3B DE 00 01 */	addi r30, r30, 1
-/* 80056568 00000010  2C 1E 00 15 */	cmpwi r30, 0x15
-/* 8005656C 00000014  41 80 FF EC */	blt lbl_80056558
-/* 80056570 00000018  80 1D 00 1C */	lwz r0, 0x1c(r29)
-/* 80056574 0000001C  3C 60 80 43 */	lis r3, j3dSys@ha
-/* 80056578 00000020  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 8005657C 00000024  90 03 00 48 */	stw r0, 0x48(r3)	/* effective address: 80434B10 */
-/* 80056580 00000028  80 1D 00 20 */	lwz r0, 0x20(r29)
-/* 80056584 0000002C  90 03 00 4C */	stw r0, 0x4c(r3)	/* effective address: 80434B14 */
-/* 80056588 00000030  38 1D 00 54 */	addi r0, r29, 0x54
-/* 8005658C 00000034  90 1D 00 64 */	stw r0, 0x64(r29)
-/* 80056590 00000038  38 1D 00 6C */	addi r0, r29, 0x6c
-/* 80056594 0000003C  90 1D 00 AC */	stw r0, 0xac(r29)
-/* 80056598 00000040  38 1D 00 B4 */	addi r0, r29, 0xb4
-/* 8005659C 00000044  90 1D 01 B4 */	stw r0, 0x1b4(r29)
-/* 800565A0 00000048  38 1D 01 BC */	addi r0, r29, 0x1bc
-/* 800565A4 0000004C  90 1D 02 3C */	stw r0, 0x23c(r29)
-/* 800565A8 00000050  38 7D 02 5C */	addi r3, r29, 0x25c
-/* 800565AC 00000054  4B FF F1 BD */	bl reset__21dDlst_shadowControl_cFv
-/* 800565B0 00000058  38 60 00 00 */	li r3, 0
-/* 800565B4 0000005C  7C 65 1B 78 */	mr r5, r3
-/* 800565B8 00000060  38 00 00 03 */	li r0, 3
-/* 800565BC 00000064  7C 09 03 A6 */	mtctr r0
+/* 80056558  80 7F 00 00 */	lwz r3, 0(r31)                          
+/* 8005655C  3B FF 00 04 */	addi r31, r31, 4                        
+/* 80056560  48 2C EB 09 */	bl frameInit__13J3DDrawBufferFv          /* constant-address: 80325068, symbol: frameInit__13J3DDrawBufferFv */
+/* 80056564  3B DE 00 01 */	addi r30, r30, 1                        
+/* 80056568  2C 1E 00 15 */	cmpwi r30, 0x15                         
+/* 8005656C  41 80 FF EC */	blt lbl_80056558                         /* constant-address: 80056558, symbol: lbl_80056558 */
+/* 80056570  80 1D 00 1C */	lwz r0, 0x1c(r29)                       
+/* 80056574  3C 60 80 43 */	lis r3, j3dSys@ha                       
+/* 80056578  38 63 4A C8 */	addi r3, r3, j3dSys@l                    /* constant-address: 80434AC8, symbol: j3dSys */
+/* 8005657C  90 03 00 48 */	stw r0, 0x48(r3)                         /* constant-address: 80434B10, symbol: None */
+/* 80056580  80 1D 00 20 */	lwz r0, 0x20(r29)                       
+/* 80056584  90 03 00 4C */	stw r0, 0x4c(r3)                         /* constant-address: 80434B14, symbol: None */
+/* 80056588  38 1D 00 54 */	addi r0, r29, 0x54                      
+/* 8005658C  90 1D 00 64 */	stw r0, 0x64(r29)                       
+/* 80056590  38 1D 00 6C */	addi r0, r29, 0x6c                      
+/* 80056594  90 1D 00 AC */	stw r0, 0xac(r29)                       
+/* 80056598  38 1D 00 B4 */	addi r0, r29, 0xb4                      
+/* 8005659C  90 1D 01 B4 */	stw r0, 0x1b4(r29)                      
+/* 800565A0  38 1D 01 BC */	addi r0, r29, 0x1bc                     
+/* 800565A4  90 1D 02 3C */	stw r0, 0x23c(r29)                      
+/* 800565A8  38 7D 02 5C */	addi r3, r29, 0x25c                     
+/* 800565AC  4B FF F1 BD */	bl reset__21dDlst_shadowControl_cFv      /* constant-address: 80055768, symbol: reset__21dDlst_shadowControl_cFv */
+/* 800565B0  38 60 00 00 */	li r3, 0                                
+/* 800565B4  7C 65 1B 78 */	mr r5, r3                               
+/* 800565B8  38 00 00 03 */	li r0, 3                                
+/* 800565BC  7C 09 03 A6 */	mtctr r0                                
 lbl_800565C0:
-/* 800565C0 00000000  3C 83 00 01 */	addis r4, r3, 1
-/* 800565C4 00000004  38 84 61 64 */	addi r4, r4, 0x6164
-/* 800565C8 00000008  7C BD 21 2E */	stwx r5, r29, r4
-/* 800565CC 0000000C  38 63 00 14 */	addi r3, r3, 0x14
-/* 800565D0 00000010  42 00 FF F0 */	bdnz lbl_800565C0
-/* 800565D4 00000014  39 61 00 20 */	addi r11, r1, 0x20
-/* 800565D8 00000018  48 30 BC 51 */	bl _restgpr_29
-/* 800565DC 0000001C  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 800565E0 00000020  7C 08 03 A6 */	mtlr r0
-/* 800565E4 00000024  38 21 00 20 */	addi r1, r1, 0x20
-/* 800565E8 00000028  4E 80 00 20 */	blr 
+/* 800565C0  3C 83 00 01 */	addis r4, r3, 1                         
+/* 800565C4  38 84 61 64 */	addi r4, r4, 0x6164                     
+/* 800565C8  7C BD 21 2E */	stwx r5, r29, r4                        
+/* 800565CC  38 63 00 14 */	addi r3, r3, 0x14                       
+/* 800565D0  42 00 FF F0 */	bdnz lbl_800565C0                        /* constant-address: 800565C0, symbol: lbl_800565C0 */
+/* 800565D4  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 800565D8  48 30 BC 51 */	bl _restgpr_29                           /* constant-address: 80362228, symbol: _restgpr_29 */
+/* 800565DC  80 01 00 24 */	lwz r0, 0x24(r1)                        
+/* 800565E0  7C 08 03 A6 */	mtlr r0                                 
+/* 800565E4  38 21 00 20 */	addi r1, r1, 0x20                       
+/* 800565E8  4E 80 00 20 */	blr                                     

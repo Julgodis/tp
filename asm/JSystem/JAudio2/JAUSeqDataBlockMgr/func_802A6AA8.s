@@ -1,62 +1,62 @@
 lbl_802A6AA8:
-/* 802A6AA8 00000000  94 21 FF D0 */	stwu r1, -0x30(r1)
-/* 802A6AAC 00000004  7C 08 02 A6 */	mflr r0
-/* 802A6AB0 00000008  90 01 00 34 */	stw r0, 0x34(r1)
-/* 802A6AB4 0000000C  39 61 00 30 */	addi r11, r1, 0x30
-/* 802A6AB8 00000010  48 0B B7 1D */	bl _savegpr_27
-/* 802A6ABC 00000014  7C 7B 1B 78 */	mr r27, r3
-/* 802A6AC0 00000018  7C 9C 23 78 */	mr r28, r4
-/* 802A6AC4 0000001C  7C BD 2B 78 */	mr r29, r5
-/* 802A6AC8 00000020  7C DE 33 78 */	mr r30, r6
-/* 802A6ACC 00000024  7C FF 3B 78 */	mr r31, r7
-/* 802A6AD0 00000028  48 00 04 0D */	bl rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv
-/* 802A6AD4 0000002C  80 1C 00 00 */	lwz r0, 0(r28)
-/* 802A6AD8 00000030  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802A6ADC 00000034  7F 63 DB 78 */	mr r3, r27
-/* 802A6AE0 00000038  38 81 00 14 */	addi r4, r1, 0x14
-/* 802A6AE4 0000003C  4B FF FF 35 */	bl hasFailedBlock__16JAUSeqDataBlocksF10JAISoundID
-/* 802A6AE8 00000040  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 802A6AEC 00000044  41 82 00 0C */	beq lbl_802A6AF8
-/* 802A6AF0 00000048  38 60 00 00 */	li r3, 0
-/* 802A6AF4 0000004C  48 00 00 80 */	b lbl_802A6B74
+/* 802A6AA8  94 21 FF D0 */	stwu r1, -0x30(r1)                      
+/* 802A6AAC  7C 08 02 A6 */	mflr r0                                 
+/* 802A6AB0  90 01 00 34 */	stw r0, 0x34(r1)                        
+/* 802A6AB4  39 61 00 30 */	addi r11, r1, 0x30                      
+/* 802A6AB8  48 0B B7 1D */	bl _savegpr_27                           /* constant-address: 803621D4, symbol: _savegpr_27 */
+/* 802A6ABC  7C 7B 1B 78 */	mr r27, r3                              
+/* 802A6AC0  7C 9C 23 78 */	mr r28, r4                              
+/* 802A6AC4  7C BD 2B 78 */	mr r29, r5                              
+/* 802A6AC8  7C DE 33 78 */	mr r30, r6                              
+/* 802A6ACC  7C FF 3B 78 */	mr r31, r7                              
+/* 802A6AD0  48 00 04 0D */	bl rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv /* constant-address: 802A6EDC, symbol: rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv */
+/* 802A6AD4  80 1C 00 00 */	lwz r0, 0(r28)                          
+/* 802A6AD8  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 802A6ADC  7F 63 DB 78 */	mr r3, r27                              
+/* 802A6AE0  38 81 00 14 */	addi r4, r1, 0x14                       
+/* 802A6AE4  4B FF FF 35 */	bl hasFailedBlock__16JAUSeqDataBlocksF10JAISoundID /* constant-address: 802A6A18, symbol: hasFailedBlock__16JAUSeqDataBlocksF10JAISoundID */
+/* 802A6AE8  54 60 06 3F */	clrlwi. r0, r3, 0x18                    
+/* 802A6AEC  41 82 00 0C */	beq lbl_802A6AF8                         /* constant-address: 802A6AF8, symbol: lbl_802A6AF8 */
+/* 802A6AF0  38 60 00 00 */	li r3, 0                                
+/* 802A6AF4  48 00 00 80 */	b lbl_802A6B74                           /* constant-address: 802A6B74, symbol: lbl_802A6B74 */
 lbl_802A6AF8:
-/* 802A6AF8 00000000  80 1C 00 00 */	lwz r0, 0(r28)
-/* 802A6AFC 00000004  90 01 00 10 */	stw r0, 0x10(r1)
-/* 802A6B00 00000008  38 7B 00 0C */	addi r3, r27, 0xc
-/* 802A6B04 0000000C  38 81 00 10 */	addi r4, r1, 0x10
-/* 802A6B08 00000010  4B FF FE 21 */	bl getSeqData__16JAUSeqDataBlocksF10JAISoundID
-/* 802A6B0C 00000014  28 03 00 00 */	cmplwi r3, 0
-/* 802A6B10 00000018  41 82 00 0C */	beq lbl_802A6B1C
-/* 802A6B14 0000001C  38 60 00 01 */	li r3, 1
-/* 802A6B18 00000020  48 00 00 5C */	b lbl_802A6B74
+/* 802A6AF8  80 1C 00 00 */	lwz r0, 0(r28)                          
+/* 802A6AFC  90 01 00 10 */	stw r0, 0x10(r1)                        
+/* 802A6B00  38 7B 00 0C */	addi r3, r27, 0xc                       
+/* 802A6B04  38 81 00 10 */	addi r4, r1, 0x10                       
+/* 802A6B08  4B FF FE 21 */	bl getSeqData__16JAUSeqDataBlocksF10JAISoundID /* constant-address: 802A6928, symbol: getSeqData__16JAUSeqDataBlocksF10JAISoundID */
+/* 802A6B0C  28 03 00 00 */	cmplwi r3, 0                            
+/* 802A6B10  41 82 00 0C */	beq lbl_802A6B1C                         /* constant-address: 802A6B1C, symbol: lbl_802A6B1C */
+/* 802A6B14  38 60 00 01 */	li r3, 1                                
+/* 802A6B18  48 00 00 5C */	b lbl_802A6B74                           /* constant-address: 802A6B74, symbol: lbl_802A6B74 */
 lbl_802A6B1C:
-/* 802A6B1C 00000000  80 1C 00 00 */	lwz r0, 0(r28)
-/* 802A6B20 00000004  90 01 00 0C */	stw r0, 0xc(r1)
-/* 802A6B24 00000008  38 7B 00 18 */	addi r3, r27, 0x18
-/* 802A6B28 0000000C  38 81 00 0C */	addi r4, r1, 0xc
-/* 802A6B2C 00000010  4B FF FD FD */	bl getSeqData__16JAUSeqDataBlocksF10JAISoundID
-/* 802A6B30 00000014  28 03 00 00 */	cmplwi r3, 0
-/* 802A6B34 00000018  41 82 00 18 */	beq lbl_802A6B4C
-/* 802A6B38 0000001C  90 7E 00 00 */	stw r3, 0(r30)
-/* 802A6B3C 00000020  38 00 00 00 */	li r0, 0
-/* 802A6B40 00000024  90 1E 00 04 */	stw r0, 4(r30)
-/* 802A6B44 00000028  38 60 00 02 */	li r3, 2
-/* 802A6B48 0000002C  48 00 00 2C */	b lbl_802A6B74
+/* 802A6B1C  80 1C 00 00 */	lwz r0, 0(r28)                          
+/* 802A6B20  90 01 00 0C */	stw r0, 0xc(r1)                         
+/* 802A6B24  38 7B 00 18 */	addi r3, r27, 0x18                      
+/* 802A6B28  38 81 00 0C */	addi r4, r1, 0xc                        
+/* 802A6B2C  4B FF FD FD */	bl getSeqData__16JAUSeqDataBlocksF10JAISoundID /* constant-address: 802A6928, symbol: getSeqData__16JAUSeqDataBlocksF10JAISoundID */
+/* 802A6B30  28 03 00 00 */	cmplwi r3, 0                            
+/* 802A6B34  41 82 00 18 */	beq lbl_802A6B4C                         /* constant-address: 802A6B4C, symbol: lbl_802A6B4C */
+/* 802A6B38  90 7E 00 00 */	stw r3, 0(r30)                          
+/* 802A6B3C  38 00 00 00 */	li r0, 0                                
+/* 802A6B40  90 1E 00 04 */	stw r0, 4(r30)                          
+/* 802A6B44  38 60 00 02 */	li r3, 2                                
+/* 802A6B48  48 00 00 2C */	b lbl_802A6B74                           /* constant-address: 802A6B74, symbol: lbl_802A6B74 */
 lbl_802A6B4C:
-/* 802A6B4C 00000000  80 1C 00 00 */	lwz r0, 0(r28)
-/* 802A6B50 00000004  90 01 00 08 */	stw r0, 8(r1)
-/* 802A6B54 00000008  7F 63 DB 78 */	mr r3, r27
-/* 802A6B58 0000000C  38 81 00 08 */	addi r4, r1, 8
-/* 802A6B5C 00000010  7F E5 FB 78 */	mr r5, r31
-/* 802A6B60 00000014  7F A6 EB 78 */	mr r6, r29
-/* 802A6B64 00000018  48 00 00 B5 */	bl loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser
-/* 802A6B68 0000001C  54 63 06 3E */	clrlwi r3, r3, 0x18
-/* 802A6B6C 00000020  30 03 FF FF */	addic r0, r3, -1
-/* 802A6B70 00000024  7C 60 19 10 */	subfe r3, r0, r3
+/* 802A6B4C  80 1C 00 00 */	lwz r0, 0(r28)                          
+/* 802A6B50  90 01 00 08 */	stw r0, 8(r1)                           
+/* 802A6B54  7F 63 DB 78 */	mr r3, r27                              
+/* 802A6B58  38 81 00 08 */	addi r4, r1, 8                          
+/* 802A6B5C  7F E5 FB 78 */	mr r5, r31                              
+/* 802A6B60  7F A6 EB 78 */	mr r6, r29                              
+/* 802A6B64  48 00 00 B5 */	bl loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser /* constant-address: 802A6C18, symbol: loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser */
+/* 802A6B68  54 63 06 3E */	clrlwi r3, r3, 0x18                     
+/* 802A6B6C  30 03 FF FF */	addic r0, r3, -1                        
+/* 802A6B70  7C 60 19 10 */	subfe r3, r0, r3                        
 lbl_802A6B74:
-/* 802A6B74 00000000  39 61 00 30 */	addi r11, r1, 0x30
-/* 802A6B78 00000004  48 0B B6 A9 */	bl _restgpr_27
-/* 802A6B7C 00000008  80 01 00 34 */	lwz r0, 0x34(r1)
-/* 802A6B80 0000000C  7C 08 03 A6 */	mtlr r0
-/* 802A6B84 00000010  38 21 00 30 */	addi r1, r1, 0x30
-/* 802A6B88 00000014  4E 80 00 20 */	blr 
+/* 802A6B74  39 61 00 30 */	addi r11, r1, 0x30                      
+/* 802A6B78  48 0B B6 A9 */	bl _restgpr_27                           /* constant-address: 80362220, symbol: _restgpr_27 */
+/* 802A6B7C  80 01 00 34 */	lwz r0, 0x34(r1)                        
+/* 802A6B80  7C 08 03 A6 */	mtlr r0                                 
+/* 802A6B84  38 21 00 30 */	addi r1, r1, 0x30                       
+/* 802A6B88  4E 80 00 20 */	blr                                     

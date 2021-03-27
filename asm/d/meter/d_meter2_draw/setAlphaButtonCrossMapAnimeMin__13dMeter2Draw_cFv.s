@@ -1,59 +1,59 @@
 lbl_802185E8:
-/* 802185E8 00000000  94 21 FF D0 */	stwu r1, -0x30(r1)
-/* 802185EC 00000004  7C 08 02 A6 */	mflr r0
-/* 802185F0 00000008  90 01 00 34 */	stw r0, 0x34(r1)
-/* 802185F4 0000000C  DB E1 00 20 */	stfd f31, 0x20(r1)
-/* 802185F8 00000010  F3 E1 00 28 */	psq_st f31, 40(r1), 0, 0 /* qr0 */
-/* 802185FC 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80218600 00000004  48 14 9B D5 */	bl _savegpr_27
-/* 80218604 00000008  7C 7B 1B 78 */	mr r27, r3
-/* 80218608 0000000C  80 63 03 64 */	lwz r3, 0x364(r3)
-/* 8021860C 00000010  48 03 D2 1D */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80218610 00000014  C0 02 AE 80 */	lfs f0, lit_4182(r2)
-/* 80218614 00000018  FC 00 08 00 */	fcmpu cr0, f0, f1
-/* 80218618 0000001C  41 82 00 30 */	beq lbl_80218648
-/* 8021861C 00000020  80 7B 03 64 */	lwz r3, 0x364(r27)
-/* 80218620 00000024  3C 80 80 43 */	lis r4, g_drawHIO@ha
-/* 80218624 00000028  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 80218628 0000002C  C0 24 00 18 */	lfs f1, 0x18(r4)	/* effective address: 8042EBE0 */
-/* 8021862C 00000030  C0 04 04 1C */	lfs f0, 0x41c(r4)	/* effective address: 8042EFE4 */
-/* 80218630 00000034  EC 21 00 32 */	fmuls f1, f1, f0
-/* 80218634 00000038  48 03 D1 9D */	bl setAlphaRate__13CPaneMgrAlphaFf
-/* 80218638 0000003C  7F 63 DB 78 */	mr r3, r27
-/* 8021863C 00000040  80 9B 03 64 */	lwz r4, 0x364(r27)
-/* 80218640 00000044  38 A0 00 05 */	li r5, 5
-/* 80218644 00000048  48 00 23 85 */	bl setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas
+/* 802185E8  94 21 FF D0 */	stwu r1, -0x30(r1)                      
+/* 802185EC  7C 08 02 A6 */	mflr r0                                 
+/* 802185F0  90 01 00 34 */	stw r0, 0x34(r1)                        
+/* 802185F4  DB E1 00 20 */	stfd f31, 0x20(r1)                      
+/* 802185F8  F3 E1 00 28 */	psq_st f31, 40(r1), 0, 0 /* qr0 */      
+/* 802185FC  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 80218600  48 14 9B D5 */	bl _savegpr_27                           /* constant-address: 803621D4, symbol: _savegpr_27 */
+/* 80218604  7C 7B 1B 78 */	mr r27, r3                              
+/* 80218608  80 63 03 64 */	lwz r3, 0x364(r3)                       
+/* 8021860C  48 03 D2 1D */	bl getAlphaRate__13CPaneMgrAlphaFv       /* constant-address: 80255828, symbol: getAlphaRate__13CPaneMgrAlphaFv */
+/* 80218610  C0 02 AE 80 */	lfs f0, lit_4182(r2)                     /* constant-address: 80454880, symbol: lit_4182 */
+/* 80218614  FC 00 08 00 */	fcmpu cr0, f0, f1                       
+/* 80218618  41 82 00 30 */	beq lbl_80218648                         /* constant-address: 80218648, symbol: lbl_80218648 */
+/* 8021861C  80 7B 03 64 */	lwz r3, 0x364(r27)                      
+/* 80218620  3C 80 80 43 */	lis r4, g_drawHIO@ha                    
+/* 80218624  38 84 EB C8 */	addi r4, r4, g_drawHIO@l                 /* constant-address: 8042EBC8, symbol: g_drawHIO */
+/* 80218628  C0 24 00 18 */	lfs f1, 0x18(r4)                         /* constant-address: 8042EBE0, symbol: None */
+/* 8021862C  C0 04 04 1C */	lfs f0, 0x41c(r4)                        /* constant-address: 8042EFE4, symbol: None */
+/* 80218630  EC 21 00 32 */	fmuls f1, f1, f0                        
+/* 80218634  48 03 D1 9D */	bl setAlphaRate__13CPaneMgrAlphaFf       /* constant-address: 802557D0, symbol: setAlphaRate__13CPaneMgrAlphaFf */
+/* 80218638  7F 63 DB 78 */	mr r3, r27                              
+/* 8021863C  80 9B 03 64 */	lwz r4, 0x364(r27)                      
+/* 80218640  38 A0 00 05 */	li r5, 5                                
+/* 80218644  48 00 23 85 */	bl setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas /* constant-address: 8021A9C8, symbol: setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas */
 lbl_80218648:
-/* 80218648 00000000  3B 80 00 00 */	li r28, 0
-/* 8021864C 00000004  3B E0 00 00 */	li r31, 0
-/* 80218650 00000008  3C 60 80 43 */	lis r3, g_drawHIO@ha
-/* 80218654 0000000C  3B C3 EB C8 */	addi r30, r3, g_drawHIO@l
-/* 80218658 00000010  C3 E2 AE 80 */	lfs f31, lit_4182(r2)
+/* 80218648  3B 80 00 00 */	li r28, 0                               
+/* 8021864C  3B E0 00 00 */	li r31, 0                               
+/* 80218650  3C 60 80 43 */	lis r3, g_drawHIO@ha                    
+/* 80218654  3B C3 EB C8 */	addi r30, r3, g_drawHIO@l                /* constant-address: 8042EBC8, symbol: g_drawHIO */
+/* 80218658  C3 E2 AE 80 */	lfs f31, lit_4182(r2)                    /* constant-address: 80454880, symbol: lit_4182 */
 lbl_8021865C:
-/* 8021865C 00000000  3B BF 04 A4 */	addi r29, r31, 0x4a4
-/* 80218660 00000004  7C 7B E8 2E */	lwzx r3, r27, r29
-/* 80218664 00000008  28 03 00 00 */	cmplwi r3, 0
-/* 80218668 0000000C  41 82 00 2C */	beq lbl_80218694
-/* 8021866C 00000010  48 03 D1 BD */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80218670 00000014  FC 1F 08 00 */	fcmpu cr0, f31, f1
-/* 80218674 00000018  41 82 00 20 */	beq lbl_80218694
-/* 80218678 0000001C  7C 7B E8 2E */	lwzx r3, r27, r29
-/* 8021867C 00000020  C0 3E 00 18 */	lfs f1, 0x18(r30)	/* effective address: 8042EBE0 */
-/* 80218680 00000024  48 03 D1 51 */	bl setAlphaRate__13CPaneMgrAlphaFf
-/* 80218684 00000028  7F 63 DB 78 */	mr r3, r27
-/* 80218688 0000002C  7C 9B E8 2E */	lwzx r4, r27, r29
-/* 8021868C 00000030  38 A0 00 05 */	li r5, 5
-/* 80218690 00000034  48 00 23 39 */	bl setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas
+/* 8021865C  3B BF 04 A4 */	addi r29, r31, 0x4a4                    
+/* 80218660  7C 7B E8 2E */	lwzx r3, r27, r29                       
+/* 80218664  28 03 00 00 */	cmplwi r3, 0                            
+/* 80218668  41 82 00 2C */	beq lbl_80218694                         /* constant-address: 80218694, symbol: lbl_80218694 */
+/* 8021866C  48 03 D1 BD */	bl getAlphaRate__13CPaneMgrAlphaFv       /* constant-address: 80255828, symbol: getAlphaRate__13CPaneMgrAlphaFv */
+/* 80218670  FC 1F 08 00 */	fcmpu cr0, f31, f1                      
+/* 80218674  41 82 00 20 */	beq lbl_80218694                         /* constant-address: 80218694, symbol: lbl_80218694 */
+/* 80218678  7C 7B E8 2E */	lwzx r3, r27, r29                       
+/* 8021867C  C0 3E 00 18 */	lfs f1, 0x18(r30)                        /* constant-address: 8042EBE0, symbol: None */
+/* 80218680  48 03 D1 51 */	bl setAlphaRate__13CPaneMgrAlphaFf       /* constant-address: 802557D0, symbol: setAlphaRate__13CPaneMgrAlphaFf */
+/* 80218684  7F 63 DB 78 */	mr r3, r27                              
+/* 80218688  7C 9B E8 2E */	lwzx r4, r27, r29                       
+/* 8021868C  38 A0 00 05 */	li r5, 5                                
+/* 80218690  48 00 23 39 */	bl setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas /* constant-address: 8021A9C8, symbol: setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas */
 lbl_80218694:
-/* 80218694 00000000  3B 9C 00 01 */	addi r28, r28, 1
-/* 80218698 00000004  2C 1C 00 05 */	cmpwi r28, 5
-/* 8021869C 00000008  3B FF 00 04 */	addi r31, r31, 4
-/* 802186A0 0000000C  41 80 FF BC */	blt lbl_8021865C
-/* 802186A4 00000010  E3 E1 00 28 */	psq_l f31, 40(r1), 0, 0 /* qr0 */
-/* 802186A8 00000000  CB E1 00 20 */	lfd f31, 0x20(r1)
-/* 802186AC 00000004  39 61 00 20 */	addi r11, r1, 0x20
-/* 802186B0 00000008  48 14 9B 71 */	bl _restgpr_27
-/* 802186B4 0000000C  80 01 00 34 */	lwz r0, 0x34(r1)
-/* 802186B8 00000010  7C 08 03 A6 */	mtlr r0
-/* 802186BC 00000014  38 21 00 30 */	addi r1, r1, 0x30
-/* 802186C0 00000018  4E 80 00 20 */	blr 
+/* 80218694  3B 9C 00 01 */	addi r28, r28, 1                         /* constant-address: 00000001 */
+/* 80218698  2C 1C 00 05 */	cmpwi r28, 5                            
+/* 8021869C  3B FF 00 04 */	addi r31, r31, 4                         /* constant-address: 00000004 */
+/* 802186A0  41 80 FF BC */	blt lbl_8021865C                         /* constant-address: 8021865C, symbol: lbl_8021865C */
+/* 802186A4  E3 E1 00 28 */	psq_l f31, 40(r1), 0, 0 /* qr0 */       
+/* 802186A8  CB E1 00 20 */	lfd f31, 0x20(r1)                       
+/* 802186AC  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 802186B0  48 14 9B 71 */	bl _restgpr_27                           /* constant-address: 80362220, symbol: _restgpr_27 */
+/* 802186B4  80 01 00 34 */	lwz r0, 0x34(r1)                        
+/* 802186B8  7C 08 03 A6 */	mtlr r0                                 
+/* 802186BC  38 21 00 30 */	addi r1, r1, 0x30                       
+/* 802186C0  4E 80 00 20 */	blr                                     

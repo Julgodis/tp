@@ -1,25 +1,25 @@
 lbl_8031073C:
-/* 8031073C 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80310740 00000004  7C 08 02 A6 */	mflr r0
-/* 80310744 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80310748 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8031074C 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80310750 00000014  48 00 00 4D */	bl reinitGenMode__6J3DSysFv
-/* 80310754 00000018  7F E3 FB 78 */	mr r3, r31
-/* 80310758 0000001C  48 00 00 91 */	bl reinitLighting__6J3DSysFv
-/* 8031075C 00000020  7F E3 FB 78 */	mr r3, r31
-/* 80310760 00000024  48 00 01 35 */	bl reinitTransform__6J3DSysFv
-/* 80310764 00000028  7F E3 FB 78 */	mr r3, r31
-/* 80310768 0000002C  48 00 02 31 */	bl reinitTexture__6J3DSysFv
-/* 8031076C 00000030  7F E3 FB 78 */	mr r3, r31
-/* 80310770 00000034  48 00 02 CD */	bl reinitTevStages__6J3DSysFv
-/* 80310774 00000038  7F E3 FB 78 */	mr r3, r31
-/* 80310778 0000003C  48 00 05 CD */	bl reinitIndStages__6J3DSysFv
-/* 8031077C 00000040  7F E3 FB 78 */	mr r3, r31
-/* 80310780 00000044  48 00 06 BD */	bl reinitPixelProc__6J3DSysFv
-/* 80310784 00000048  48 04 B7 49 */	bl GXFlush
-/* 80310788 0000004C  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8031078C 00000050  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80310790 00000054  7C 08 03 A6 */	mtlr r0
-/* 80310794 00000058  38 21 00 10 */	addi r1, r1, 0x10
-/* 80310798 0000005C  4E 80 00 20 */	blr 
+/* 8031073C  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 80310740  7C 08 02 A6 */	mflr r0                                 
+/* 80310744  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 80310748  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 8031074C  7C 7F 1B 78 */	mr r31, r3                              
+/* 80310750  48 00 00 4D */	bl reinitGenMode__6J3DSysFv              /* constant-address: 8031079C, symbol: reinitGenMode__6J3DSysFv */
+/* 80310754  7F E3 FB 78 */	mr r3, r31                              
+/* 80310758  48 00 00 91 */	bl reinitLighting__6J3DSysFv             /* constant-address: 803107E8, symbol: reinitLighting__6J3DSysFv */
+/* 8031075C  7F E3 FB 78 */	mr r3, r31                              
+/* 80310760  48 00 01 35 */	bl reinitTransform__6J3DSysFv            /* constant-address: 80310894, symbol: reinitTransform__6J3DSysFv */
+/* 80310764  7F E3 FB 78 */	mr r3, r31                              
+/* 80310768  48 00 02 31 */	bl reinitTexture__6J3DSysFv              /* constant-address: 80310998, symbol: reinitTexture__6J3DSysFv */
+/* 8031076C  7F E3 FB 78 */	mr r3, r31                              
+/* 80310770  48 00 02 CD */	bl reinitTevStages__6J3DSysFv            /* constant-address: 80310A3C, symbol: reinitTevStages__6J3DSysFv */
+/* 80310774  7F E3 FB 78 */	mr r3, r31                              
+/* 80310778  48 00 05 CD */	bl reinitIndStages__6J3DSysFv            /* constant-address: 80310D44, symbol: reinitIndStages__6J3DSysFv */
+/* 8031077C  7F E3 FB 78 */	mr r3, r31                              
+/* 80310780  48 00 06 BD */	bl reinitPixelProc__6J3DSysFv            /* constant-address: 80310E3C, symbol: reinitPixelProc__6J3DSysFv */
+/* 80310784  48 04 B7 49 */	bl GXFlush                               /* constant-address: 8035BECC, symbol: GXFlush */
+/* 80310788  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 8031078C  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 80310790  7C 08 03 A6 */	mtlr r0                                 
+/* 80310794  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 80310798  4E 80 00 20 */	blr                                     

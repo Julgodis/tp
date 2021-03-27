@@ -1,10 +1,10 @@
+import libdemangle
 
 from collections import defaultdict
 
 from .data import *
 from .types import ConstType, ReferenceType, PointerType, ArrayType, ClassName, NamedType, EmptyType, ValueType
 from . import util
-from . import demangle
 
 integer_types = {
     ("char", True, False): U8,
@@ -55,6 +55,7 @@ def class_name_from(name):
         for param in name.template_types
     ])
 
+
 def named_type_from_qulified_name(qname):
     if not qname:
         return None
@@ -63,34 +64,36 @@ def named_type_from_qulified_name(qname):
         for part in qname.parts
     ])
 
+
 def type_from_demangled_param(param):
     if not param:
         return None
 
-    if isinstance(param, demangle.FuncParam):
+    if isinstance(param, libdemangle.FuncParam):
         return FunctionType(
-            inner = type_from_demangled_param(param.inner_type),
-            return_type = type_from_demangled_param(param.ret_type),
-            argument_types = [ type_from_demangled_param(arg) for arg in param.params ],
-            inner_class= named_type_from_qulified_name(param.class_name)
+            inner=type_from_demangled_param(param.inner_type),
+            return_type=type_from_demangled_param(param.ret_type),
+            argument_types=[type_from_demangled_param(
+                arg) for arg in param.params],
+            inner_class=named_type_from_qulified_name(param.class_name)
         )
-    elif isinstance(param, demangle.ArrayParam):
+    elif isinstance(param, libdemangle.ArrayParam):
         return ArrayType(
-            base = type_from_demangled_param(param.base_type),
-            inner = type_from_demangled_param(param.inner_type),
-            sizes = param.sizes
+            base=type_from_demangled_param(param.base_type),
+            inner=type_from_demangled_param(param.inner_type),
+            sizes=param.sizes
         )
-    elif isinstance(param, demangle.IntegerParam):
+    elif isinstance(param, libdemangle.IntegerParam):
         return ValueType(param.value)
-    elif isinstance(param, demangle.ConstParam):
+    elif isinstance(param, libdemangle.ConstParam):
         return ConstType(of=type_from_demangled_param(param.base_type))
-    elif isinstance(param, demangle.PointerParam):
+    elif isinstance(param, libdemangle.PointerParam):
         return PointerType(of=type_from_demangled_param(param.base_type))
-    elif isinstance(param, demangle.ReferenceParam):
+    elif isinstance(param, libdemangle.ReferenceParam):
         return ReferenceType(of=type_from_demangled_param(param.base_type))
 
     if not param.name:
-        # used for making types like: A (*)[3] easier to work with. 
+        # used for making types like: A (*)[3] easier to work with.
         # the will be constructed like this: A (EmptyType*)[3]
         type = EmptyType()
     elif param.name.is_simple():
@@ -100,7 +103,7 @@ def type_from_demangled_param(param):
         elif param.name.name in type_map:
             assert not param.is_unsigned and not param.is_signed
             type = type_map[param.name.name]
-        elif not demangle.is_builtin_type(param.name):
+        elif not libdemangle.is_builtin_type(param.name):
             type = NamedType([class_name_from(param.name.first)])
     else:
         type = named_type_from_qulified_name(param.name)
@@ -114,14 +117,15 @@ def type_from_demangled_param(param):
 
     return type
 
+
 def nameFix(context, label_collisions, reference_collisions, symbol):
     util.escape_name(symbol.identifier)
 
-    if (symbol.identifier.name and 
-        (not "@" in symbol.identifier.name) and isinstance(symbol, Function)):
+    if (symbol.identifier.name and
+            (not "@" in symbol.identifier.name) and isinstance(symbol, Function)):
         name = symbol.identifier.name
         try:
-            p = demangle.ParseCtx(name)
+            p = libdemangle.ParseCtx(name)
             p.demangle()
 
             if len(p.to_str()) > 0 and p.to_str() != name:
@@ -137,7 +141,8 @@ def nameFix(context, label_collisions, reference_collisions, symbol):
                         break
 
                 if valid:
-                    symbol.func_name = named_type_from_qulified_name(p.full_name)
+                    symbol.func_name = named_type_from_qulified_name(
+                        p.full_name)
                     symbol.func_is_const = p.is_const
                     symbol.special_func_name = p.special_func_name
                     symbol.argument_types = [x for x in types if x != VOID]
@@ -146,37 +151,38 @@ def nameFix(context, label_collisions, reference_collisions, symbol):
                         return_type = special_func_return_types[symbol.special_func_name]
                         if symbol.return_type:
                             if return_type:
-                                context.warning(f"overriding function '{symbol.label}' return type from: '{symbol.return_type.type()}', to: {return_type.type()}")
+                                context.warning(
+                                    f"overriding function '{symbol.label}' return type from: '{symbol.return_type.type()}', to: {return_type.type()}")
                             else:
-                                context.warning(f"discarding function '{symbol.label}' return type: '{symbol.return_type.type()}'")
+                                context.warning(
+                                    f"discarding function '{symbol.label}' return type: '{symbol.return_type.type()}'")
                             symbol.return_type = return_type
                         else:
                             symbol.return_type = return_type
                 else:
-                    context.warning(f"one of the demangled parameters could not be converted to data-type.")
-                    context.warning([ x[1] for x in zip(types, p.demangled) if not x[0] ])
-                        
-        except Exception as e:# demangle.ParseError as e:
+                    context.warning(
+                        f"one of the demangled parameters could not be converted to data-type.")
+                    context.warning(
+                        [x[1] for x in zip(types, p.demangled) if not x[0]])
+
+        except Exception as e:  # demangle.ParseError as e:
             context.error(f"demangle error: '{name}'")
             context.error(f"\t{e}")
             context.error(f"\t{p.func_name}")
             context.error(f"\t{p.class_name}")
             context.error(f"\t{p.to_str()}")
-            
-            pass
 
     if symbol.reference_count.extern > 0 or isinstance(symbol, StringBase):
         label_collisions[symbol.identifier.label] += 1
         reference_collisions[symbol.identifier.reference] += 1
+
 
 def nameCollision(context, label_collisions, reference_collisions, parent_name, symbol):
     if symbol.reference_count.extern > 0 or isinstance(symbol, StringBase):
         if label_collisions[symbol.identifier.label] > 1 or reference_collisions[symbol.identifier.reference] > 1:
             obj_prefix = parent_name.replace(
                 "/", "_").replace(".", "_").replace("-", "_")
-            #if symbol.name.is_function:
-            #    symbol.name.is_static = True
-            #else:
+
             symbol.identifier.override_name = obj_prefix + "__" + symbol.identifier.label
 
 
@@ -188,13 +194,15 @@ def execute(context, libraries):
         for tu in lib.translation_units.values():
             for sec in tu.sections.values():
                 for symbol in sec.symbols:
-                    nameFix(context, label_collisions, reference_collisions, symbol)
+                    nameFix(context, label_collisions,
+                            reference_collisions, symbol)
 
     for lib in libraries:
         for tu in lib.translation_units.values():
             for sec in tu.sections.values():
                 for symbol in sec.symbols:
-                    nameCollision(context, label_collisions, reference_collisions, tu.name, symbol)
+                    nameCollision(context, label_collisions,
+                                  reference_collisions, tu.name, symbol)
 
     types = defaultdict(lambda: defaultdict(list))
     names = defaultdict(list)
@@ -212,18 +220,18 @@ def execute(context, libraries):
                     if isinstance(symbol, Function):
                         if symbol.is_demangled():
                             add_named_type(symbol.func_name, 1)
-                            raw_names = tuple([x.name for x in symbol.func_name.names])
+                            raw_names = tuple(
+                                [x.name for x in symbol.func_name.names])
                             names[raw_names].append(symbol)
 
                         if symbol.return_type:
                             symbol.return_type.collect(
-                                filter=lambda x: isinstance(x, NamedType), 
+                                filter=lambda x: isinstance(x, NamedType),
                                 collection=all_named_types)
                         for arg_type in symbol.argument_types:
                             arg_type.collect(
-                                filter=lambda x: isinstance(x, NamedType), 
+                                filter=lambda x: isinstance(x, NamedType),
                                 collection=all_named_types)
-
 
     for named_type in all_named_types:
         add_named_type(named_type)
@@ -246,9 +254,8 @@ def execute(context, libraries):
     for name, functions in names.items():
         if functions[0].func_name.last.templates:
             #context.debug("Found Templated Function(s):")
-            functions.sort(key=lambda x:x.addr)
+            functions.sort(key=lambda x: x.addr)
             for i, function in enumerate(functions):
                 function.template_index = i
                 function.func_name.last.template_index = i
-                #context.debug(f"\t{function.func_name.to_str(without_template=True)}")
-
+                # context.debug(f"\t{function.func_name.to_str(without_template=True)}")

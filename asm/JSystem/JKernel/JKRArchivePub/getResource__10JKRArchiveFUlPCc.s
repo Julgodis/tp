@@ -1,38 +1,38 @@
 lbl_802D5C64:
-/* 802D5C64 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 802D5C68 00000004  7C 08 02 A6 */	mflr r0
-/* 802D5C6C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802D5C70 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802D5C74 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 802D5C78 00000014  28 04 00 00 */	cmplwi r4, 0
-/* 802D5C7C 00000018  41 82 00 10 */	beq lbl_802D5C8C
-/* 802D5C80 0000001C  3C 04 C0 C1 */	addis r0, r4, 0xc0c1
-/* 802D5C84 00000020  28 00 3F 3F */	cmplwi r0, 0x3f3f
-/* 802D5C88 00000024  40 82 00 18 */	bne lbl_802D5CA0
+/* 802D5C64  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 802D5C68  7C 08 02 A6 */	mflr r0                                 
+/* 802D5C6C  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 802D5C70  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 802D5C74  7C 7F 1B 78 */	mr r31, r3                              
+/* 802D5C78  28 04 00 00 */	cmplwi r4, 0                            
+/* 802D5C7C  41 82 00 10 */	beq lbl_802D5C8C                         /* constant-address: 802D5C8C, symbol: lbl_802D5C8C */
+/* 802D5C80  3C 04 C0 C1 */	addis r0, r4, 0xc0c1                    
+/* 802D5C84  28 00 3F 3F */	cmplwi r0, 0x3f3f                       
+/* 802D5C88  40 82 00 18 */	bne lbl_802D5CA0                         /* constant-address: 802D5CA0, symbol: lbl_802D5CA0 */
 lbl_802D5C8C:
-/* 802D5C8C 00000000  7F E3 FB 78 */	mr r3, r31
-/* 802D5C90 00000004  7C A4 2B 78 */	mr r4, r5
-/* 802D5C94 00000008  48 00 0A 19 */	bl findNameResource__10JKRArchiveCFPCc
-/* 802D5C98 0000000C  7C 64 1B 78 */	mr r4, r3
-/* 802D5C9C 00000010  48 00 00 0C */	b lbl_802D5CA8
+/* 802D5C8C  7F E3 FB 78 */	mr r3, r31                              
+/* 802D5C90  7C A4 2B 78 */	mr r4, r5                               
+/* 802D5C94  48 00 0A 19 */	bl findNameResource__10JKRArchiveCFPCc   /* constant-address: 802D66AC, symbol: findNameResource__10JKRArchiveCFPCc */
+/* 802D5C98  7C 64 1B 78 */	mr r4, r3                               
+/* 802D5C9C  48 00 00 0C */	b lbl_802D5CA8                           /* constant-address: 802D5CA8, symbol: lbl_802D5CA8 */
 lbl_802D5CA0:
-/* 802D5CA0 00000000  48 00 08 55 */	bl findTypeResource__10JKRArchiveCFUlPCc
-/* 802D5CA4 00000004  7C 64 1B 78 */	mr r4, r3
+/* 802D5CA0  48 00 08 55 */	bl findTypeResource__10JKRArchiveCFUlPCc /* constant-address: 802D64F4, symbol: findTypeResource__10JKRArchiveCFUlPCc */
+/* 802D5CA4  7C 64 1B 78 */	mr r4, r3                               
 lbl_802D5CA8:
-/* 802D5CA8 00000000  28 04 00 00 */	cmplwi r4, 0
-/* 802D5CAC 00000004  41 82 00 20 */	beq lbl_802D5CCC
-/* 802D5CB0 00000008  7F E3 FB 78 */	mr r3, r31
-/* 802D5CB4 0000000C  38 A0 00 00 */	li r5, 0
-/* 802D5CB8 00000010  81 9F 00 00 */	lwz r12, 0(r31)
-/* 802D5CBC 00000014  81 8C 00 40 */	lwz r12, 0x40(r12)
-/* 802D5CC0 00000018  7D 89 03 A6 */	mtctr r12
-/* 802D5CC4 0000001C  4E 80 04 21 */	bctrl 
-/* 802D5CC8 00000020  48 00 00 08 */	b lbl_802D5CD0
+/* 802D5CA8  28 04 00 00 */	cmplwi r4, 0                            
+/* 802D5CAC  41 82 00 20 */	beq lbl_802D5CCC                         /* constant-address: 802D5CCC, symbol: lbl_802D5CCC */
+/* 802D5CB0  7F E3 FB 78 */	mr r3, r31                              
+/* 802D5CB4  38 A0 00 00 */	li r5, 0                                
+/* 802D5CB8  81 9F 00 00 */	lwz r12, 0(r31)                         
+/* 802D5CBC  81 8C 00 40 */	lwz r12, 0x40(r12)                      
+/* 802D5CC0  7D 89 03 A6 */	mtctr r12                               
+/* 802D5CC4  4E 80 04 21 */	bctrl                                   
+/* 802D5CC8  48 00 00 08 */	b lbl_802D5CD0                           /* constant-address: 802D5CD0, symbol: lbl_802D5CD0 */
 lbl_802D5CCC:
-/* 802D5CCC 00000000  38 60 00 00 */	li r3, 0
+/* 802D5CCC  38 60 00 00 */	li r3, 0                                
 lbl_802D5CD0:
-/* 802D5CD0 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 802D5CD4 00000004  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 802D5CD8 00000008  7C 08 03 A6 */	mtlr r0
-/* 802D5CDC 0000000C  38 21 00 10 */	addi r1, r1, 0x10
-/* 802D5CE0 00000010  4E 80 00 20 */	blr 
+/* 802D5CD0  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 802D5CD4  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 802D5CD8  7C 08 03 A6 */	mtlr r0                                 
+/* 802D5CDC  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 802D5CE0  4E 80 00 20 */	blr                                     

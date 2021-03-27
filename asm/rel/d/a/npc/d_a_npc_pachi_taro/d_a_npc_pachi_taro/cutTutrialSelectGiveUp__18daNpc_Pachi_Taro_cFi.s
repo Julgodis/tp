@@ -1,41 +1,41 @@
 lbl_80A9F9C4:
-/* 80A9F9C4 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 80A9F9C8 00000004  7C 08 02 A6 */	mflr r0
-/* 80A9F9CC 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80A9F9D0 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A9F9D4 00000010  4B 8C 28 04 */	b _savegpr_28
-/* 80A9F9D8 00000014  7C 7C 1B 78 */	mr r28, r3
-/* 80A9F9DC 00000018  7C 9D 23 78 */	mr r29, r4
-/* 80A9F9E0 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80A9F9E4 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80A9F9E8 00000024  3B C3 4F F8 */	addi r30, r3, 0x4ff8
-/* 80A9F9EC 00000028  7F C3 F3 78 */	mr r3, r30
-/* 80A9F9F0 0000002C  3C A0 80 AA */	lis r5, struct_80AA1814+0x0@ha
-/* 80A9F9F4 00000030  38 A5 18 14 */	addi r5, r5, struct_80AA1814+0x0@l
-/* 80A9F9F8 00000034  38 A5 00 EF */	addi r5, r5, 0xef
-/* 80A9F9FC 00000038  38 C0 00 03 */	li r6, 3
-/* 80A9FA00 0000003C  4B 5A 86 EC */	b getMySubstanceP__16dEvent_manager_cFiPCci
-/* 80A9FA04 00000040  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80A9FA08 00000044  40 82 00 0C */	bne lbl_80A9FA14
-/* 80A9FA0C 00000048  38 60 00 01 */	li r3, 1
-/* 80A9FA10 0000004C  48 00 00 30 */	b lbl_80A9FA40
+/* 80A9F9C4  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 80A9F9C8  7C 08 02 A6 */	mflr r0
+/* 80A9F9CC  90 01 00 24 */	stw r0, 0x24(r1)
+/* 80A9F9D0  39 61 00 20 */	addi r11, r1, 0x20
+/* 80A9F9D4  4B 8C 28 04 */	b _savegpr_28
+/* 80A9F9D8  7C 7C 1B 78 */	mr r28, r3
+/* 80A9F9DC  7C 9D 23 78 */	mr r29, r4
+/* 80A9F9E0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 80A9F9E4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A9F9E8  3B C3 4F F8 */	addi r30, r3, 0x4ff8
+/* 80A9F9EC  7F C3 F3 78 */	mr r3, r30
+/* 80A9F9F0  3C A0 80 AA */	lis r5, struct_80AA1814+0x0@ha
+/* 80A9F9F4  38 A5 18 14 */	addi r5, r5, struct_80AA1814+0x0@l
+/* 80A9F9F8  38 A5 00 EF */	addi r5, r5, 0xef
+/* 80A9F9FC  38 C0 00 03 */	li r6, 3
+/* 80A9FA00  4B 5A 86 EC */	b getMySubstanceP__16dEvent_manager_cFiPCci
+/* 80A9FA04  7C 7F 1B 79 */	or. r31, r3, r3
+/* 80A9FA08  40 82 00 0C */	bne lbl_80A9FA14
+/* 80A9FA0C  38 60 00 01 */	li r3, 1
+/* 80A9FA10  48 00 00 30 */	b lbl_80A9FA40
 lbl_80A9FA14:
-/* 80A9FA14 00000000  7F C3 F3 78 */	mr r3, r30
-/* 80A9FA18 00000004  7F A4 EB 78 */	mr r4, r29
-/* 80A9FA1C 00000008  4B 5A 83 30 */	b getIsAddvance__16dEvent_manager_cFi
-/* 80A9FA20 0000000C  2C 03 00 00 */	cmpwi r3, 0
-/* 80A9FA24 00000010  41 82 00 10 */	beq lbl_80A9FA34
-/* 80A9FA28 00000014  7F 83 E3 78 */	mr r3, r28
-/* 80A9FA2C 00000018  7F E4 FB 78 */	mr r4, r31
-/* 80A9FA30 0000001C  48 00 00 29 */	bl _cutTutrialSelectGiveUp_Init__18daNpc_Pachi_Taro_cFRCi
+/* 80A9FA14  7F C3 F3 78 */	mr r3, r30
+/* 80A9FA18  7F A4 EB 78 */	mr r4, r29
+/* 80A9FA1C  4B 5A 83 30 */	b getIsAddvance__16dEvent_manager_cFi
+/* 80A9FA20  2C 03 00 00 */	cmpwi r3, 0
+/* 80A9FA24  41 82 00 10 */	beq lbl_80A9FA34
+/* 80A9FA28  7F 83 E3 78 */	mr r3, r28
+/* 80A9FA2C  7F E4 FB 78 */	mr r4, r31
+/* 80A9FA30  48 00 00 29 */	bl _cutTutrialSelectGiveUp_Init__18daNpc_Pachi_Taro_cFRCi
 lbl_80A9FA34:
-/* 80A9FA34 00000000  7F 83 E3 78 */	mr r3, r28
-/* 80A9FA38 00000004  7F E4 FB 78 */	mr r4, r31
-/* 80A9FA3C 00000008  48 00 00 CD */	bl _cutTutrialSelectGiveUp_Main__18daNpc_Pachi_Taro_cFRCi
+/* 80A9FA34  7F 83 E3 78 */	mr r3, r28
+/* 80A9FA38  7F E4 FB 78 */	mr r4, r31
+/* 80A9FA3C  48 00 00 CD */	bl _cutTutrialSelectGiveUp_Main__18daNpc_Pachi_Taro_cFRCi
 lbl_80A9FA40:
-/* 80A9FA40 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A9FA44 00000004  4B 8C 27 E0 */	b _restgpr_28
-/* 80A9FA48 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 80A9FA4C 0000000C  7C 08 03 A6 */	mtlr r0
-/* 80A9FA50 00000010  38 21 00 20 */	addi r1, r1, 0x20
-/* 80A9FA54 00000014  4E 80 00 20 */	blr 
+/* 80A9FA40  39 61 00 20 */	addi r11, r1, 0x20
+/* 80A9FA44  4B 8C 27 E0 */	b _restgpr_28
+/* 80A9FA48  80 01 00 24 */	lwz r0, 0x24(r1)
+/* 80A9FA4C  7C 08 03 A6 */	mtlr r0
+/* 80A9FA50  38 21 00 20 */	addi r1, r1, 0x20
+/* 80A9FA54  4E 80 00 20 */	blr 

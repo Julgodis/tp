@@ -1,8 +1,8 @@
 lbl_80CCD51C:
-/* 80CCD51C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80CCD520 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80CCD524 00000008  88 63 4F AD */	lbz r3, 0x4fad(r3)	/* effective address: 8040B16D */
-/* 80CCD528 0000000C  30 03 FF FF */	addic r0, r3, -1
-/* 80CCD52C 00000010  7C 00 19 10 */	subfe r0, r0, r3
-/* 80CCD530 00000014  54 03 06 3E */	clrlwi r3, r0, 0x18
-/* 80CCD534 00000018  4E 80 00 20 */	blr 
+/* 80CCD51C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 80CCD520  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CCD524  88 63 4F AD */	lbz r3, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80CCD528  30 03 FF FF */	addic r0, r3, -1
+/* 80CCD52C  7C 00 19 10 */	subfe r0, r0, r3
+/* 80CCD530  54 03 06 3E */	clrlwi r3, r0, 0x18
+/* 80CCD534  4E 80 00 20 */	blr 

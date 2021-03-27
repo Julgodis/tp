@@ -1,117 +1,117 @@
 lbl_8030D938:
-/* 8030D938 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 8030D93C 00000004  7C 60 00 34 */	cntlzw r0, r3
-/* 8030D940 00000008  20 00 00 1F */	subfic r0, r0, 0x1f
-/* 8030D944 0000000C  54 00 04 3E */	clrlwi r0, r0, 0x10
-/* 8030D948 00000010  28 00 00 07 */	cmplwi r0, 7
-/* 8030D94C 00000014  40 81 00 08 */	ble lbl_8030D954
-/* 8030D950 00000018  38 00 00 00 */	li r0, 0
+/* 8030D938  94 21 FF E0 */	stwu r1, -0x20(r1)                      
+/* 8030D93C  7C 60 00 34 */	cntlzw r0, r3                           
+/* 8030D940  20 00 00 1F */	subfic r0, r0, 0x1f                     
+/* 8030D944  54 00 04 3E */	clrlwi r0, r0, 0x10                     
+/* 8030D948  28 00 00 07 */	cmplwi r0, 7                            
+/* 8030D94C  40 81 00 08 */	ble lbl_8030D954                         /* constant-address: 8030D954, symbol: lbl_8030D954 */
+/* 8030D950  38 00 00 00 */	li r0, 0                                
 lbl_8030D954:
-/* 8030D954 00000000  54 03 24 36 */	rlwinm r3, r0, 4, 0x10, 0x1b
-/* 8030D958 00000004  38 C3 06 0D */	addi r6, r3, 0x60d
-/* 8030D95C 00000008  38 A0 00 10 */	li r5, 0x10
-/* 8030D960 0000000C  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030D964 00000010  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030D968 00000014  38 03 00 01 */	addi r0, r3, 1
-/* 8030D96C 00000018  90 04 00 08 */	stw r0, 8(r4)
-/* 8030D970 0000001C  98 A3 00 00 */	stb r5, 0(r3)
-/* 8030D974 00000020  38 A0 00 00 */	li r5, 0
-/* 8030D978 00000024  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030D97C 00000028  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030D980 0000002C  38 03 00 01 */	addi r0, r3, 1
-/* 8030D984 00000030  90 04 00 08 */	stw r0, 8(r4)
-/* 8030D988 00000034  98 A3 00 00 */	stb r5, 0(r3)
-/* 8030D98C 00000038  38 A0 00 02 */	li r5, 2
-/* 8030D990 0000003C  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030D994 00000040  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030D998 00000044  38 03 00 01 */	addi r0, r3, 1
-/* 8030D99C 00000048  90 04 00 08 */	stw r0, 8(r4)
-/* 8030D9A0 0000004C  98 A3 00 00 */	stb r5, 0(r3)
-/* 8030D9A4 00000050  54 C5 C6 3E */	rlwinm r5, r6, 0x18, 0x18, 0x1f
-/* 8030D9A8 00000054  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030D9AC 00000058  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030D9B0 0000005C  38 03 00 01 */	addi r0, r3, 1
-/* 8030D9B4 00000060  90 04 00 08 */	stw r0, 8(r4)
-/* 8030D9B8 00000064  98 A3 00 00 */	stb r5, 0(r3)
-/* 8030D9BC 00000068  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030D9C0 0000006C  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030D9C4 00000070  38 03 00 01 */	addi r0, r3, 1
-/* 8030D9C8 00000074  90 04 00 08 */	stw r0, 8(r4)
-/* 8030D9CC 00000078  98 C3 00 00 */	stb r6, 0(r3)
-/* 8030D9D0 0000007C  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 8030D9D4 00000080  80 C1 00 10 */	lwz r6, 0x10(r1)
-/* 8030D9D8 00000084  54 C5 46 3E */	srwi r5, r6, 0x18
-/* 8030D9DC 00000088  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030D9E0 0000008C  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030D9E4 00000090  38 03 00 01 */	addi r0, r3, 1
-/* 8030D9E8 00000094  90 04 00 08 */	stw r0, 8(r4)
-/* 8030D9EC 00000098  98 A3 00 00 */	stb r5, 0(r3)
-/* 8030D9F0 0000009C  54 C5 86 3E */	rlwinm r5, r6, 0x10, 0x18, 0x1f
-/* 8030D9F4 000000A0  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030D9F8 000000A4  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030D9FC 000000A8  38 03 00 01 */	addi r0, r3, 1
-/* 8030DA00 000000AC  90 04 00 08 */	stw r0, 8(r4)
-/* 8030DA04 000000B0  98 A3 00 00 */	stb r5, 0(r3)
-/* 8030DA08 000000B4  54 C5 C6 3E */	rlwinm r5, r6, 0x18, 0x18, 0x1f
-/* 8030DA0C 000000B8  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030DA10 000000BC  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030DA14 000000C0  38 03 00 01 */	addi r0, r3, 1
-/* 8030DA18 000000C4  90 04 00 08 */	stw r0, 8(r4)
-/* 8030DA1C 000000C8  98 A3 00 00 */	stb r5, 0(r3)
-/* 8030DA20 000000CC  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030DA24 000000D0  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030DA28 000000D4  38 03 00 01 */	addi r0, r3, 1
-/* 8030DA2C 000000D8  90 04 00 08 */	stw r0, 8(r4)
-/* 8030DA30 000000DC  98 C3 00 00 */	stb r6, 0(r3)
-/* 8030DA34 000000E0  D0 41 00 0C */	stfs f2, 0xc(r1)
-/* 8030DA38 000000E4  80 C1 00 0C */	lwz r6, 0xc(r1)
-/* 8030DA3C 000000E8  54 C5 46 3E */	srwi r5, r6, 0x18
-/* 8030DA40 000000EC  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030DA44 000000F0  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030DA48 000000F4  38 03 00 01 */	addi r0, r3, 1
-/* 8030DA4C 000000F8  90 04 00 08 */	stw r0, 8(r4)
-/* 8030DA50 000000FC  98 A3 00 00 */	stb r5, 0(r3)
-/* 8030DA54 00000100  54 C5 86 3E */	rlwinm r5, r6, 0x10, 0x18, 0x1f
-/* 8030DA58 00000104  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030DA5C 00000108  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030DA60 0000010C  38 03 00 01 */	addi r0, r3, 1
-/* 8030DA64 00000110  90 04 00 08 */	stw r0, 8(r4)
-/* 8030DA68 00000114  98 A3 00 00 */	stb r5, 0(r3)
-/* 8030DA6C 00000118  54 C5 C6 3E */	rlwinm r5, r6, 0x18, 0x18, 0x1f
-/* 8030DA70 0000011C  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030DA74 00000120  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030DA78 00000124  38 03 00 01 */	addi r0, r3, 1
-/* 8030DA7C 00000128  90 04 00 08 */	stw r0, 8(r4)
-/* 8030DA80 0000012C  98 A3 00 00 */	stb r5, 0(r3)
-/* 8030DA84 00000130  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030DA88 00000134  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030DA8C 00000138  38 03 00 01 */	addi r0, r3, 1
-/* 8030DA90 0000013C  90 04 00 08 */	stw r0, 8(r4)
-/* 8030DA94 00000140  98 C3 00 00 */	stb r6, 0(r3)
-/* 8030DA98 00000144  D0 61 00 08 */	stfs f3, 8(r1)
-/* 8030DA9C 00000148  80 C1 00 08 */	lwz r6, 8(r1)
-/* 8030DAA0 0000014C  54 C5 46 3E */	srwi r5, r6, 0x18
-/* 8030DAA4 00000150  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030DAA8 00000154  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030DAAC 00000158  38 03 00 01 */	addi r0, r3, 1
-/* 8030DAB0 0000015C  90 04 00 08 */	stw r0, 8(r4)
-/* 8030DAB4 00000160  98 A3 00 00 */	stb r5, 0(r3)
-/* 8030DAB8 00000164  54 C5 86 3E */	rlwinm r5, r6, 0x10, 0x18, 0x1f
-/* 8030DABC 00000168  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030DAC0 0000016C  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030DAC4 00000170  38 03 00 01 */	addi r0, r3, 1
-/* 8030DAC8 00000174  90 04 00 08 */	stw r0, 8(r4)
-/* 8030DACC 00000178  98 A3 00 00 */	stb r5, 0(r3)
-/* 8030DAD0 0000017C  54 C5 C6 3E */	rlwinm r5, r6, 0x18, 0x18, 0x1f
-/* 8030DAD4 00000180  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030DAD8 00000184  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030DADC 00000188  38 03 00 01 */	addi r0, r3, 1
-/* 8030DAE0 0000018C  90 04 00 08 */	stw r0, 8(r4)
-/* 8030DAE4 00000190  98 A3 00 00 */	stb r5, 0(r3)
-/* 8030DAE8 00000194  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030DAEC 00000198  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030DAF0 0000019C  38 03 00 01 */	addi r0, r3, 1
-/* 8030DAF4 000001A0  90 04 00 08 */	stw r0, 8(r4)
-/* 8030DAF8 000001A4  98 C3 00 00 */	stb r6, 0(r3)
-/* 8030DAFC 000001A8  38 21 00 20 */	addi r1, r1, 0x20
-/* 8030DB00 000001AC  4E 80 00 20 */	blr 
+/* 8030D954  54 03 24 36 */	rlwinm r3, r0, 4, 0x10, 0x1b            
+/* 8030D958  38 C3 06 0D */	addi r6, r3, 0x60d                      
+/* 8030D95C  38 A0 00 10 */	li r5, 0x10                             
+/* 8030D960  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030D964  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030D968  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030D96C  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030D970  98 A3 00 00 */	stb r5, 0(r3)                           
+/* 8030D974  38 A0 00 00 */	li r5, 0                                
+/* 8030D978  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030D97C  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030D980  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030D984  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030D988  98 A3 00 00 */	stb r5, 0(r3)                           
+/* 8030D98C  38 A0 00 02 */	li r5, 2                                
+/* 8030D990  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030D994  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030D998  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030D99C  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030D9A0  98 A3 00 00 */	stb r5, 0(r3)                           
+/* 8030D9A4  54 C5 C6 3E */	rlwinm r5, r6, 0x18, 0x18, 0x1f         
+/* 8030D9A8  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030D9AC  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030D9B0  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030D9B4  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030D9B8  98 A3 00 00 */	stb r5, 0(r3)                           
+/* 8030D9BC  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030D9C0  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030D9C4  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030D9C8  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030D9CC  98 C3 00 00 */	stb r6, 0(r3)                           
+/* 8030D9D0  D0 21 00 10 */	stfs f1, 0x10(r1)                       
+/* 8030D9D4  80 C1 00 10 */	lwz r6, 0x10(r1)                        
+/* 8030D9D8  54 C5 46 3E */	srwi r5, r6, 0x18                       
+/* 8030D9DC  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030D9E0  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030D9E4  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030D9E8  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030D9EC  98 A3 00 00 */	stb r5, 0(r3)                           
+/* 8030D9F0  54 C5 86 3E */	rlwinm r5, r6, 0x10, 0x18, 0x1f         
+/* 8030D9F4  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030D9F8  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030D9FC  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030DA00  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030DA04  98 A3 00 00 */	stb r5, 0(r3)                           
+/* 8030DA08  54 C5 C6 3E */	rlwinm r5, r6, 0x18, 0x18, 0x1f         
+/* 8030DA0C  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030DA10  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030DA14  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030DA18  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030DA1C  98 A3 00 00 */	stb r5, 0(r3)                           
+/* 8030DA20  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030DA24  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030DA28  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030DA2C  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030DA30  98 C3 00 00 */	stb r6, 0(r3)                           
+/* 8030DA34  D0 41 00 0C */	stfs f2, 0xc(r1)                        
+/* 8030DA38  80 C1 00 0C */	lwz r6, 0xc(r1)                         
+/* 8030DA3C  54 C5 46 3E */	srwi r5, r6, 0x18                       
+/* 8030DA40  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030DA44  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030DA48  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030DA4C  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030DA50  98 A3 00 00 */	stb r5, 0(r3)                           
+/* 8030DA54  54 C5 86 3E */	rlwinm r5, r6, 0x10, 0x18, 0x1f         
+/* 8030DA58  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030DA5C  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030DA60  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030DA64  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030DA68  98 A3 00 00 */	stb r5, 0(r3)                           
+/* 8030DA6C  54 C5 C6 3E */	rlwinm r5, r6, 0x18, 0x18, 0x1f         
+/* 8030DA70  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030DA74  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030DA78  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030DA7C  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030DA80  98 A3 00 00 */	stb r5, 0(r3)                           
+/* 8030DA84  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030DA88  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030DA8C  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030DA90  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030DA94  98 C3 00 00 */	stb r6, 0(r3)                           
+/* 8030DA98  D0 61 00 08 */	stfs f3, 8(r1)                          
+/* 8030DA9C  80 C1 00 08 */	lwz r6, 8(r1)                           
+/* 8030DAA0  54 C5 46 3E */	srwi r5, r6, 0x18                       
+/* 8030DAA4  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030DAA8  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030DAAC  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030DAB0  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030DAB4  98 A3 00 00 */	stb r5, 0(r3)                           
+/* 8030DAB8  54 C5 86 3E */	rlwinm r5, r6, 0x10, 0x18, 0x1f         
+/* 8030DABC  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030DAC0  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030DAC4  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030DAC8  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030DACC  98 A3 00 00 */	stb r5, 0(r3)                           
+/* 8030DAD0  54 C5 C6 3E */	rlwinm r5, r6, 0x18, 0x18, 0x1f         
+/* 8030DAD4  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030DAD8  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030DADC  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030DAE0  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030DAE4  98 A3 00 00 */	stb r5, 0(r3)                           
+/* 8030DAE8  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030DAEC  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030DAF0  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030DAF4  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030DAF8  98 C3 00 00 */	stb r6, 0(r3)                           
+/* 8030DAFC  38 21 00 20 */	addi r1, r1, 0x20                       
+/* 8030DB00  4E 80 00 20 */	blr                                     

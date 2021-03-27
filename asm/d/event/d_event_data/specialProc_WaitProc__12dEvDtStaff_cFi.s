@@ -1,20 +1,20 @@
 lbl_8004403C:
-/* 8004403C 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80044040 00000004  7C 08 02 A6 */	mflr r0
-/* 80044044 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80044048 0000000C  A8 A3 00 36 */	lha r5, 0x36(r3)
-/* 8004404C 00000010  2C 05 00 00 */	cmpwi r5, 0
-/* 80044050 00000014  40 81 00 10 */	ble lbl_80044060
-/* 80044054 00000018  38 05 FF FF */	addi r0, r5, -1
-/* 80044058 0000001C  B0 03 00 36 */	sth r0, 0x36(r3)
-/* 8004405C 00000020  48 00 00 14 */	b lbl_80044070
+/* 8004403C  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 80044040  7C 08 02 A6 */	mflr r0                                 
+/* 80044044  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 80044048  A8 A3 00 36 */	lha r5, 0x36(r3)                        
+/* 8004404C  2C 05 00 00 */	cmpwi r5, 0                             
+/* 80044050  40 81 00 10 */	ble lbl_80044060                         /* constant-address: 80044060, symbol: lbl_80044060 */
+/* 80044054  38 05 FF FF */	addi r0, r5, -1                         
+/* 80044058  B0 03 00 36 */	sth r0, 0x36(r3)                        
+/* 8004405C  48 00 00 14 */	b lbl_80044070                           /* constant-address: 80044070, symbol: lbl_80044070 */
 lbl_80044060:
-/* 80044060 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80044064 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80044068 00000008  38 63 4F F8 */	addi r3, r3, 0x4ff8
-/* 8004406C 0000000C  48 00 41 11 */	bl cutEnd__16dEvent_manager_cFi
+/* 80044060  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 80044064  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 80044068  38 63 4F F8 */	addi r3, r3, 0x4ff8                      /* constant-address: 8040B1B8, symbol: None */
+/* 8004406C  48 00 41 11 */	bl cutEnd__16dEvent_manager_cFi          /* constant-address: 8004817C, symbol: cutEnd__16dEvent_manager_cFi */
 lbl_80044070:
-/* 80044070 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80044074 00000004  7C 08 03 A6 */	mtlr r0
-/* 80044078 00000008  38 21 00 10 */	addi r1, r1, 0x10
-/* 8004407C 0000000C  4E 80 00 20 */	blr 
+/* 80044070  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 80044074  7C 08 03 A6 */	mtlr r0                                 
+/* 80044078  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 8004407C  4E 80 00 20 */	blr                                     

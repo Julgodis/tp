@@ -1,17 +1,17 @@
 lbl_80192E88:
-/* 80192E88 00000000  3C 60 80 3C */	lis r3, cNullVec__6Z2Calc@ha
-/* 80192E8C 00000004  38 A3 B4 98 */	addi r5, r3, cNullVec__6Z2Calc@l
-/* 80192E90 00000008  80 65 00 C0 */	lwz r3, 0xc0(r5)	/* effective address: 803BB558 */
-/* 80192E94 0000000C  80 05 00 C4 */	lwz r0, 0xc4(r5)	/* effective address: 803BB55C */
-/* 80192E98 00000010  90 65 00 D8 */	stw r3, 0xd8(r5)	/* effective address: 803BB570 */
-/* 80192E9C 00000014  90 05 00 DC */	stw r0, 0xdc(r5)	/* effective address: 803BB574 */
-/* 80192EA0 00000018  80 05 00 C8 */	lwz r0, 0xc8(r5)	/* effective address: 803BB560 */
-/* 80192EA4 0000001C  90 05 00 E0 */	stw r0, 0xe0(r5)	/* effective address: 803BB578 */
-/* 80192EA8 00000020  38 85 00 D8 */	addi r4, r5, 0xd8
-/* 80192EAC 00000024  80 65 00 CC */	lwz r3, 0xcc(r5)	/* effective address: 803BB564 */
-/* 80192EB0 00000028  80 05 00 D0 */	lwz r0, 0xd0(r5)	/* effective address: 803BB568 */
-/* 80192EB4 0000002C  90 64 00 0C */	stw r3, 0xc(r4)	/* effective address: 803BB57C */
-/* 80192EB8 00000030  90 04 00 10 */	stw r0, 0x10(r4)	/* effective address: 803BB580 */
-/* 80192EBC 00000034  80 05 00 D4 */	lwz r0, 0xd4(r5)	/* effective address: 803BB56C */
-/* 80192EC0 00000038  90 04 00 14 */	stw r0, 0x14(r4)	/* effective address: 803BB584 */
-/* 80192EC4 0000003C  4E 80 00 20 */	blr 
+/* 80192E88  3C 60 80 3C */	lis r3, cNullVec__6Z2Calc@ha            
+/* 80192E8C  38 A3 B4 98 */	addi r5, r3, cNullVec__6Z2Calc@l         /* constant-address: 803BB498, symbol: cNullVec__6Z2Calc */
+/* 80192E90  80 65 00 C0 */	lwz r3, 0xc0(r5)                         /* constant-address: 803BB558, symbol: lit_3953 */
+/* 80192E94  80 05 00 C4 */	lwz r0, 0xc4(r5)                         /* constant-address: 803BB55C, symbol: None */
+/* 80192E98  90 65 00 D8 */	stw r3, 0xd8(r5)                         /* constant-address: 803BB570, symbol: fileWarningProc */
+/* 80192E9C  90 05 00 DC */	stw r0, 0xdc(r5)                         /* constant-address: 803BB574, symbol: None */
+/* 80192EA0  80 05 00 C8 */	lwz r0, 0xc8(r5)                         /* constant-address: 803BB560, symbol: None */
+/* 80192EA4  90 05 00 E0 */	stw r0, 0xe0(r5)                         /* constant-address: 803BB578, symbol: None */
+/* 80192EA8  38 85 00 D8 */	addi r4, r5, 0xd8                        /* constant-address: 803BB570, symbol: fileWarningProc */
+/* 80192EAC  80 65 00 CC */	lwz r3, 0xcc(r5)                         /* constant-address: 803BB564, symbol: lit_3954 */
+/* 80192EB0  80 05 00 D0 */	lwz r0, 0xd0(r5)                         /* constant-address: 803BB568, symbol: None */
+/* 80192EB4  90 64 00 0C */	stw r3, 0xc(r4)                          /* constant-address: 803BB57C, symbol: None */
+/* 80192EB8  90 04 00 10 */	stw r0, 0x10(r4)                         /* constant-address: 803BB580, symbol: None */
+/* 80192EBC  80 05 00 D4 */	lwz r0, 0xd4(r5)                         /* constant-address: 803BB56C, symbol: None */
+/* 80192EC0  90 04 00 14 */	stw r0, 0x14(r4)                         /* constant-address: 803BB584, symbol: None */
+/* 80192EC4  4E 80 00 20 */	blr                                     

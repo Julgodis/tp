@@ -1,63 +1,63 @@
 lbl_802DF48C:
-/* 802DF48C 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 802DF490 00000004  7C 08 02 A6 */	mflr r0
-/* 802DF494 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802DF498 0000000C  38 60 00 01 */	li r3, 1
-/* 802DF49C 00000010  48 07 E6 95 */	bl GXSetNumChans
-/* 802DF4A0 00000014  38 60 00 01 */	li r3, 1
-/* 802DF4A4 00000018  48 08 03 ED */	bl GXSetNumTevStages
-/* 802DF4A8 0000001C  38 60 00 01 */	li r3, 1
-/* 802DF4AC 00000020  48 07 C9 51 */	bl GXSetNumTexGens
-/* 802DF4B0 00000024  38 60 00 00 */	li r3, 0
-/* 802DF4B4 00000028  38 80 00 00 */	li r4, 0
-/* 802DF4B8 0000002C  38 A0 00 00 */	li r5, 0
-/* 802DF4BC 00000030  38 C0 00 04 */	li r6, 4
-/* 802DF4C0 00000034  48 08 02 35 */	bl GXSetTevOrder
-/* 802DF4C4 00000038  38 60 00 04 */	li r3, 4
-/* 802DF4C8 0000003C  38 80 00 00 */	li r4, 0
-/* 802DF4CC 00000040  38 A0 00 00 */	li r5, 0
-/* 802DF4D0 00000044  38 C0 00 01 */	li r6, 1
-/* 802DF4D4 00000048  38 E0 00 00 */	li r7, 0
-/* 802DF4D8 0000004C  39 00 00 00 */	li r8, 0
-/* 802DF4DC 00000050  39 20 00 02 */	li r9, 2
-/* 802DF4E0 00000054  48 07 E6 8D */	bl GXSetChanCtrl
-/* 802DF4E4 00000058  38 60 00 00 */	li r3, 0
-/* 802DF4E8 0000005C  38 80 00 00 */	li r4, 0
-/* 802DF4EC 00000060  48 07 FC AD */	bl GXSetTevOp
-/* 802DF4F0 00000064  38 60 00 01 */	li r3, 1
-/* 802DF4F4 00000068  38 80 00 04 */	li r4, 4
-/* 802DF4F8 0000006C  38 A0 00 05 */	li r5, 5
-/* 802DF4FC 00000070  38 C0 00 0F */	li r6, 0xf
-/* 802DF500 00000074  48 08 06 F1 */	bl GXSetBlendMode
-/* 802DF504 00000078  38 60 00 00 */	li r3, 0
-/* 802DF508 0000007C  38 80 00 09 */	li r4, 9
-/* 802DF50C 00000080  38 A0 00 01 */	li r5, 1
-/* 802DF510 00000084  38 C0 00 03 */	li r6, 3
-/* 802DF514 00000088  38 E0 00 00 */	li r7, 0
-/* 802DF518 0000008C  48 07 C0 AD */	bl GXSetVtxAttrFmt
-/* 802DF51C 00000090  38 60 00 00 */	li r3, 0
-/* 802DF520 00000094  38 80 00 0B */	li r4, 0xb
-/* 802DF524 00000098  38 A0 00 01 */	li r5, 1
-/* 802DF528 0000009C  38 C0 00 05 */	li r6, 5
-/* 802DF52C 000000A0  38 E0 00 00 */	li r7, 0
-/* 802DF530 000000A4  48 07 C0 95 */	bl GXSetVtxAttrFmt
-/* 802DF534 000000A8  38 60 00 00 */	li r3, 0
-/* 802DF538 000000AC  38 80 00 0D */	li r4, 0xd
-/* 802DF53C 000000B0  38 A0 00 01 */	li r5, 1
-/* 802DF540 000000B4  38 C0 00 02 */	li r6, 2
-/* 802DF544 000000B8  38 E0 00 0F */	li r7, 0xf
-/* 802DF548 000000BC  48 07 C0 7D */	bl GXSetVtxAttrFmt
-/* 802DF54C 000000C0  48 07 C0 41 */	bl GXClearVtxDesc
-/* 802DF550 000000C4  38 60 00 09 */	li r3, 9
-/* 802DF554 000000C8  38 80 00 01 */	li r4, 1
-/* 802DF558 000000CC  48 07 B9 61 */	bl GXSetVtxDesc
-/* 802DF55C 000000D0  38 60 00 0B */	li r3, 0xb
-/* 802DF560 000000D4  38 80 00 01 */	li r4, 1
-/* 802DF564 000000D8  48 07 B9 55 */	bl GXSetVtxDesc
-/* 802DF568 000000DC  38 60 00 0D */	li r3, 0xd
-/* 802DF56C 000000E0  38 80 00 01 */	li r4, 1
-/* 802DF570 000000E4  48 07 B9 49 */	bl GXSetVtxDesc
-/* 802DF574 000000E8  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 802DF578 000000EC  7C 08 03 A6 */	mtlr r0
-/* 802DF57C 000000F0  38 21 00 10 */	addi r1, r1, 0x10
-/* 802DF580 000000F4  4E 80 00 20 */	blr 
+/* 802DF48C  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 802DF490  7C 08 02 A6 */	mflr r0                                 
+/* 802DF494  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 802DF498  38 60 00 01 */	li r3, 1                                
+/* 802DF49C  48 07 E6 95 */	bl GXSetNumChans                         /* constant-address: 8035DB30, symbol: GXSetNumChans */
+/* 802DF4A0  38 60 00 01 */	li r3, 1                                
+/* 802DF4A4  48 08 03 ED */	bl GXSetNumTevStages                     /* constant-address: 8035F890, symbol: GXSetNumTevStages */
+/* 802DF4A8  38 60 00 01 */	li r3, 1                                
+/* 802DF4AC  48 07 C9 51 */	bl GXSetNumTexGens                       /* constant-address: 8035BDFC, symbol: GXSetNumTexGens */
+/* 802DF4B0  38 60 00 00 */	li r3, 0                                
+/* 802DF4B4  38 80 00 00 */	li r4, 0                                
+/* 802DF4B8  38 A0 00 00 */	li r5, 0                                
+/* 802DF4BC  38 C0 00 04 */	li r6, 4                                
+/* 802DF4C0  48 08 02 35 */	bl GXSetTevOrder                         /* constant-address: 8035F6F4, symbol: GXSetTevOrder */
+/* 802DF4C4  38 60 00 04 */	li r3, 4                                
+/* 802DF4C8  38 80 00 00 */	li r4, 0                                
+/* 802DF4CC  38 A0 00 00 */	li r5, 0                                
+/* 802DF4D0  38 C0 00 01 */	li r6, 1                                
+/* 802DF4D4  38 E0 00 00 */	li r7, 0                                
+/* 802DF4D8  39 00 00 00 */	li r8, 0                                
+/* 802DF4DC  39 20 00 02 */	li r9, 2                                
+/* 802DF4E0  48 07 E6 8D */	bl GXSetChanCtrl                         /* constant-address: 8035DB6C, symbol: GXSetChanCtrl */
+/* 802DF4E4  38 60 00 00 */	li r3, 0                                
+/* 802DF4E8  38 80 00 00 */	li r4, 0                                
+/* 802DF4EC  48 07 FC AD */	bl GXSetTevOp                            /* constant-address: 8035F198, symbol: GXSetTevOp */
+/* 802DF4F0  38 60 00 01 */	li r3, 1                                
+/* 802DF4F4  38 80 00 04 */	li r4, 4                                
+/* 802DF4F8  38 A0 00 05 */	li r5, 5                                
+/* 802DF4FC  38 C0 00 0F */	li r6, 0xf                              
+/* 802DF500  48 08 06 F1 */	bl GXSetBlendMode                        /* constant-address: 8035FBF0, symbol: GXSetBlendMode */
+/* 802DF504  38 60 00 00 */	li r3, 0                                
+/* 802DF508  38 80 00 09 */	li r4, 9                                
+/* 802DF50C  38 A0 00 01 */	li r5, 1                                
+/* 802DF510  38 C0 00 03 */	li r6, 3                                
+/* 802DF514  38 E0 00 00 */	li r7, 0                                
+/* 802DF518  48 07 C0 AD */	bl GXSetVtxAttrFmt                       /* constant-address: 8035B5C4, symbol: GXSetVtxAttrFmt */
+/* 802DF51C  38 60 00 00 */	li r3, 0                                
+/* 802DF520  38 80 00 0B */	li r4, 0xb                              
+/* 802DF524  38 A0 00 01 */	li r5, 1                                
+/* 802DF528  38 C0 00 05 */	li r6, 5                                
+/* 802DF52C  38 E0 00 00 */	li r7, 0                                
+/* 802DF530  48 07 C0 95 */	bl GXSetVtxAttrFmt                       /* constant-address: 8035B5C4, symbol: GXSetVtxAttrFmt */
+/* 802DF534  38 60 00 00 */	li r3, 0                                
+/* 802DF538  38 80 00 0D */	li r4, 0xd                              
+/* 802DF53C  38 A0 00 01 */	li r5, 1                                
+/* 802DF540  38 C0 00 02 */	li r6, 2                                
+/* 802DF544  38 E0 00 0F */	li r7, 0xf                              
+/* 802DF548  48 07 C0 7D */	bl GXSetVtxAttrFmt                       /* constant-address: 8035B5C4, symbol: GXSetVtxAttrFmt */
+/* 802DF54C  48 07 C0 41 */	bl GXClearVtxDesc                        /* constant-address: 8035B58C, symbol: GXClearVtxDesc */
+/* 802DF550  38 60 00 09 */	li r3, 9                                
+/* 802DF554  38 80 00 01 */	li r4, 1                                
+/* 802DF558  48 07 B9 61 */	bl GXSetVtxDesc                          /* constant-address: 8035AEB8, symbol: GXSetVtxDesc */
+/* 802DF55C  38 60 00 0B */	li r3, 0xb                              
+/* 802DF560  38 80 00 01 */	li r4, 1                                
+/* 802DF564  48 07 B9 55 */	bl GXSetVtxDesc                          /* constant-address: 8035AEB8, symbol: GXSetVtxDesc */
+/* 802DF568  38 60 00 0D */	li r3, 0xd                              
+/* 802DF56C  38 80 00 01 */	li r4, 1                                
+/* 802DF570  48 07 B9 49 */	bl GXSetVtxDesc                          /* constant-address: 8035AEB8, symbol: GXSetVtxDesc */
+/* 802DF574  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 802DF578  7C 08 03 A6 */	mtlr r0                                 
+/* 802DF57C  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 802DF580  4E 80 00 20 */	blr                                     

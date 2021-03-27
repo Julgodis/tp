@@ -1,9 +1,9 @@
+import libdemangle
 
 from dataclasses import dataclass, field
 from typing import List
 
 from ...builder import AsyncBuilder
-from ... import demangle
 from ... import util
 from ...types import *
 from ..symbol import *
@@ -18,7 +18,7 @@ special_func_no_return = set([
 class Function(Symbol):
     return_type: Type = None
     argument_types: List[Type] = field(default_factory=list)
-    func_name: demangle.QualifiedName = None
+    func_name: libdemangle.QualifiedName = None
     special_func_name: str = None
     func_is_const: bool = False
     template_index: int = -1

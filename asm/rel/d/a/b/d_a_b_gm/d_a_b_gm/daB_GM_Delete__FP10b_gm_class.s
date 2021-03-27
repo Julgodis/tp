@@ -1,31 +1,31 @@
 lbl_805F30A8:
-/* 805F30A8 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 805F30AC 00000004  7C 08 02 A6 */	mflr r0
-/* 805F30B0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 805F30B4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 805F30B8 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 805F30BC 00000014  38 7F 05 AC */	addi r3, r31, 0x5ac
-/* 805F30C0 00000018  3C 80 80 5F */	lis r4, stringBase0@ha
-/* 805F30C4 0000001C  38 84 43 88 */	addi r4, r4, stringBase0@l
-/* 805F30C8 00000020  4B A3 9F 40 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
-/* 805F30CC 00000024  88 1F 1D 04 */	lbz r0, 0x1d04(r31)
-/* 805F30D0 00000028  28 00 00 00 */	cmplwi r0, 0
-/* 805F30D4 0000002C  41 82 00 10 */	beq lbl_805F30E4
-/* 805F30D8 00000030  38 00 00 00 */	li r0, 0
-/* 805F30DC 00000034  3C 60 80 5F */	lis r3, struct_805F47CC+0x1@ha
-/* 805F30E0 00000038  98 03 47 CD */	stb r0, struct_805F47CC+0x1@l(r3)
+/* 805F30A8  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 805F30AC  7C 08 02 A6 */	mflr r0
+/* 805F30B0  90 01 00 14 */	stw r0, 0x14(r1)
+/* 805F30B4  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 805F30B8  7C 7F 1B 78 */	mr r31, r3
+/* 805F30BC  38 7F 05 AC */	addi r3, r31, 0x5ac
+/* 805F30C0  3C 80 80 5F */	lis r4, stringBase0@ha
+/* 805F30C4  38 84 43 88 */	addi r4, r4, stringBase0@l
+/* 805F30C8  4B A3 9F 40 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 805F30CC  88 1F 1D 04 */	lbz r0, 0x1d04(r31)
+/* 805F30D0  28 00 00 00 */	cmplwi r0, 0
+/* 805F30D4  41 82 00 10 */	beq lbl_805F30E4
+/* 805F30D8  38 00 00 00 */	li r0, 0
+/* 805F30DC  3C 60 80 5F */	lis r3, struct_805F47CC+0x1@ha
+/* 805F30E0  98 03 47 CD */	stb r0, struct_805F47CC+0x1@l(r3)
 lbl_805F30E4:
-/* 805F30E4 00000000  80 1F 00 F0 */	lwz r0, 0xf0(r31)
-/* 805F30E8 00000004  28 00 00 00 */	cmplwi r0, 0
-/* 805F30EC 00000008  41 82 00 14 */	beq lbl_805F3100
-/* 805F30F0 0000000C  80 7F 05 DC */	lwz r3, 0x5dc(r31)
-/* 805F30F4 00000010  4B A1 E2 1C */	b stopZelAnime__16mDoExt_McaMorfSOFv
-/* 805F30F8 00000014  38 7F 06 84 */	addi r3, r31, 0x684
-/* 805F30FC 00000018  4B CC AE FC */	b deleteObject__14Z2SoundObjBaseFv
+/* 805F30E4  80 1F 00 F0 */	lwz r0, 0xf0(r31)
+/* 805F30E8  28 00 00 00 */	cmplwi r0, 0
+/* 805F30EC  41 82 00 14 */	beq lbl_805F3100
+/* 805F30F0  80 7F 05 DC */	lwz r3, 0x5dc(r31)
+/* 805F30F4  4B A1 E2 1C */	b stopZelAnime__16mDoExt_McaMorfSOFv
+/* 805F30F8  38 7F 06 84 */	addi r3, r31, 0x684
+/* 805F30FC  4B CC AE FC */	b deleteObject__14Z2SoundObjBaseFv
 lbl_805F3100:
-/* 805F3100 00000000  38 60 00 01 */	li r3, 1
-/* 805F3104 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 805F3108 00000008  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 805F310C 0000000C  7C 08 03 A6 */	mtlr r0
-/* 805F3110 00000010  38 21 00 10 */	addi r1, r1, 0x10
-/* 805F3114 00000014  4E 80 00 20 */	blr 
+/* 805F3100  38 60 00 01 */	li r3, 1
+/* 805F3104  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 805F3108  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 805F310C  7C 08 03 A6 */	mtlr r0
+/* 805F3110  38 21 00 10 */	addi r1, r1, 0x10
+/* 805F3114  4E 80 00 20 */	blr 

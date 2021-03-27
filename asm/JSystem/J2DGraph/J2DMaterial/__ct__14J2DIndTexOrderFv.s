@@ -1,7 +1,7 @@
 lbl_802EB378:
-/* 802EB378 00000000  88 02 C7 84 */	lbz r0, j2dDefaultIndTexOrderNull(r2)
-/* 802EB37C 00000004  98 03 00 00 */	stb r0, 0(r3)
-/* 802EB380 00000008  38 82 C7 84 */	addi r4, r2, 0x80456184-0x80459A00 /* j2dDefaultIndTexOrderNull-_SDA2_BASE_ */
-/* 802EB384 0000000C  88 04 00 01 */	lbz r0, 1(r4)
-/* 802EB388 00000010  98 03 00 01 */	stb r0, 1(r3)
-/* 802EB38C 00000014  4E 80 00 20 */	blr 
+/* 802EB378  88 02 C7 84 */	lbz r0, j2dDefaultIndTexOrderNull(r2)    /* constant-address: 80456184, symbol: j2dDefaultIndTexOrderNull */
+/* 802EB37C  98 03 00 00 */	stb r0, 0(r3)                           
+/* 802EB380  38 82 C7 84 */	la r4, j2dDefaultIndTexOrderNull(r2) /* 80456184-_SDA2_BASE_ */ /* constant-address: 80456184, symbol: j2dDefaultIndTexOrderNull */
+/* 802EB384  88 04 00 01 */	lbz r0, 1(r4)                            /* constant-address: 80456185, symbol: None */
+/* 802EB388  98 03 00 01 */	stb r0, 1(r3)                           
+/* 802EB38C  4E 80 00 20 */	blr                                     

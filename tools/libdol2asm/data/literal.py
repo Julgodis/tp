@@ -162,6 +162,9 @@ class FloatingPoint(Literal):
             special_value = util.special_float32(f32)
             if special_value:
                 values.append(special_value)
+                # TODO: Add support for FLOAT_NAN
+                if special_value == "FLOAT_NAN":
+                    return None 
             elif f32 in util.float32_exact:
                 fractions = util.float32_exact[f32]
                 values.append(f"{fractions[0]}.0f / {fractions[1]}.0f")

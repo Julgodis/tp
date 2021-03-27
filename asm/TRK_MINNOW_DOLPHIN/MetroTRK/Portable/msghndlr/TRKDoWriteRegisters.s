@@ -1,186 +1,186 @@
 lbl_8036E134:
-/* 8036E134 00000000  94 21 FF 20 */	stwu r1, -0xe0(r1)
-/* 8036E138 00000004  7C 08 02 A6 */	mflr r0
-/* 8036E13C 00000008  38 80 00 00 */	li r4, 0
-/* 8036E140 0000000C  90 01 00 E4 */	stw r0, 0xe4(r1)
-/* 8036E144 00000010  93 E1 00 DC */	stw r31, 0xdc(r1)
-/* 8036E148 00000014  93 C1 00 D8 */	stw r30, 0xd8(r1)
-/* 8036E14C 00000018  93 A1 00 D4 */	stw r29, 0xd4(r1)
-/* 8036E150 0000001C  93 81 00 D0 */	stw r28, 0xd0(r1)
-/* 8036E154 00000020  7C 7C 1B 78 */	mr r28, r3
-/* 8036E158 00000024  8B E3 00 18 */	lbz r31, 0x18(r3)
-/* 8036E15C 00000028  A3 C3 00 1C */	lhz r30, 0x1c(r3)
-/* 8036E160 0000002C  A3 A3 00 20 */	lhz r29, 0x20(r3)
-/* 8036E164 00000030  4B FF F4 B9 */	bl TRKSetBufferPosition
-/* 8036E168 00000034  7C 1E E8 40 */	cmplw r30, r29
-/* 8036E16C 00000038  40 81 00 40 */	ble lbl_8036E1AC
-/* 8036E170 0000003C  38 61 00 4C */	addi r3, r1, 0x4c
-/* 8036E174 00000040  38 80 00 00 */	li r4, 0
-/* 8036E178 00000044  38 A0 00 40 */	li r5, 0x40
-/* 8036E17C 00000048  4B C9 52 DD */	bl memset
-/* 8036E180 0000004C  38 60 00 80 */	li r3, 0x80
-/* 8036E184 00000050  38 A0 00 40 */	li r5, 0x40
-/* 8036E188 00000054  38 00 00 14 */	li r0, 0x14
-/* 8036E18C 00000058  98 61 00 50 */	stb r3, 0x50(r1)
-/* 8036E190 0000005C  38 61 00 4C */	addi r3, r1, 0x4c
-/* 8036E194 00000060  38 80 00 40 */	li r4, 0x40
-/* 8036E198 00000064  90 A1 00 4C */	stw r5, 0x4c(r1)
-/* 8036E19C 00000068  98 01 00 54 */	stb r0, 0x54(r1)
-/* 8036E1A0 0000006C  48 00 3B C9 */	bl TRKWriteUARTN
-/* 8036E1A4 00000070  38 60 00 00 */	li r3, 0
-/* 8036E1A8 00000074  48 00 01 FC */	b lbl_8036E3A4
+/* 8036E134  94 21 FF 20 */	stwu r1, -0xe0(r1)                      
+/* 8036E138  7C 08 02 A6 */	mflr r0                                 
+/* 8036E13C  38 80 00 00 */	li r4, 0                                
+/* 8036E140  90 01 00 E4 */	stw r0, 0xe4(r1)                        
+/* 8036E144  93 E1 00 DC */	stw r31, 0xdc(r1)                       
+/* 8036E148  93 C1 00 D8 */	stw r30, 0xd8(r1)                       
+/* 8036E14C  93 A1 00 D4 */	stw r29, 0xd4(r1)                       
+/* 8036E150  93 81 00 D0 */	stw r28, 0xd0(r1)                       
+/* 8036E154  7C 7C 1B 78 */	mr r28, r3                              
+/* 8036E158  8B E3 00 18 */	lbz r31, 0x18(r3)                       
+/* 8036E15C  A3 C3 00 1C */	lhz r30, 0x1c(r3)                       
+/* 8036E160  A3 A3 00 20 */	lhz r29, 0x20(r3)                       
+/* 8036E164  4B FF F4 B9 */	bl TRKSetBufferPosition                  /* constant-address: 8036D61C, symbol: TRKSetBufferPosition */
+/* 8036E168  7C 1E E8 40 */	cmplw r30, r29                          
+/* 8036E16C  40 81 00 40 */	ble lbl_8036E1AC                         /* constant-address: 8036E1AC, symbol: lbl_8036E1AC */
+/* 8036E170  38 61 00 4C */	addi r3, r1, 0x4c                       
+/* 8036E174  38 80 00 00 */	li r4, 0                                
+/* 8036E178  38 A0 00 40 */	li r5, 0x40                             
+/* 8036E17C  4B C9 52 DD */	bl memset                                /* constant-address: 80003458, symbol: memset */
+/* 8036E180  38 60 00 80 */	li r3, 0x80                             
+/* 8036E184  38 A0 00 40 */	li r5, 0x40                             
+/* 8036E188  38 00 00 14 */	li r0, 0x14                             
+/* 8036E18C  98 61 00 50 */	stb r3, 0x50(r1)                        
+/* 8036E190  38 61 00 4C */	addi r3, r1, 0x4c                       
+/* 8036E194  38 80 00 40 */	li r4, 0x40                             
+/* 8036E198  90 A1 00 4C */	stw r5, 0x4c(r1)                        
+/* 8036E19C  98 01 00 54 */	stb r0, 0x54(r1)                        
+/* 8036E1A0  48 00 3B C9 */	bl TRKWriteUARTN                         /* constant-address: 80371D68, symbol: TRKWriteUARTN */
+/* 8036E1A4  38 60 00 00 */	li r3, 0                                
+/* 8036E1A8  48 00 01 FC */	b lbl_8036E3A4                           /* constant-address: 8036E3A4, symbol: lbl_8036E3A4 */
 lbl_8036E1AC:
-/* 8036E1AC 00000000  7F 83 E3 78 */	mr r3, r28
-/* 8036E1B0 00000004  38 80 00 40 */	li r4, 0x40
-/* 8036E1B4 00000008  4B FF F4 69 */	bl TRKSetBufferPosition
-/* 8036E1B8 0000000C  2C 1F 00 02 */	cmpwi r31, 2
-/* 8036E1BC 00000010  41 82 00 64 */	beq lbl_8036E220
-/* 8036E1C0 00000014  40 80 00 14 */	bge lbl_8036E1D4
-/* 8036E1C4 00000018  2C 1F 00 00 */	cmpwi r31, 0
-/* 8036E1C8 0000001C  41 82 00 18 */	beq lbl_8036E1E0
-/* 8036E1CC 00000020  40 80 00 34 */	bge lbl_8036E200
-/* 8036E1D0 00000024  48 00 00 90 */	b lbl_8036E260
+/* 8036E1AC  7F 83 E3 78 */	mr r3, r28                              
+/* 8036E1B0  38 80 00 40 */	li r4, 0x40                             
+/* 8036E1B4  4B FF F4 69 */	bl TRKSetBufferPosition                  /* constant-address: 8036D61C, symbol: TRKSetBufferPosition */
+/* 8036E1B8  2C 1F 00 02 */	cmpwi r31, 2                            
+/* 8036E1BC  41 82 00 64 */	beq lbl_8036E220                         /* constant-address: 8036E220, symbol: lbl_8036E220 */
+/* 8036E1C0  40 80 00 14 */	bge lbl_8036E1D4                         /* constant-address: 8036E1D4, symbol: lbl_8036E1D4 */
+/* 8036E1C4  2C 1F 00 00 */	cmpwi r31, 0                            
+/* 8036E1C8  41 82 00 18 */	beq lbl_8036E1E0                         /* constant-address: 8036E1E0, symbol: lbl_8036E1E0 */
+/* 8036E1CC  40 80 00 34 */	bge lbl_8036E200                         /* constant-address: 8036E200, symbol: lbl_8036E200 */
+/* 8036E1D0  48 00 00 90 */	b lbl_8036E260                           /* constant-address: 8036E260, symbol: lbl_8036E260 */
 lbl_8036E1D4:
-/* 8036E1D4 00000000  2C 1F 00 04 */	cmpwi r31, 4
-/* 8036E1D8 00000004  40 80 00 88 */	bge lbl_8036E260
-/* 8036E1DC 00000008  48 00 00 64 */	b lbl_8036E240
+/* 8036E1D4  2C 1F 00 04 */	cmpwi r31, 4                            
+/* 8036E1D8  40 80 00 88 */	bge lbl_8036E260                         /* constant-address: 8036E260, symbol: lbl_8036E260 */
+/* 8036E1DC  48 00 00 64 */	b lbl_8036E240                           /* constant-address: 8036E240, symbol: lbl_8036E240 */
 lbl_8036E1E0:
-/* 8036E1E0 00000000  7F C3 F3 78 */	mr r3, r30
-/* 8036E1E4 00000004  7F A4 EB 78 */	mr r4, r29
-/* 8036E1E8 00000008  7F 85 E3 78 */	mr r5, r28
-/* 8036E1EC 0000000C  38 C1 00 08 */	addi r6, r1, 8
-/* 8036E1F0 00000010  38 E0 00 00 */	li r7, 0
-/* 8036E1F4 00000014  48 00 2A A1 */	bl TRKTargetAccessDefault
-/* 8036E1F8 00000018  7C 7F 1B 78 */	mr r31, r3
-/* 8036E1FC 0000001C  48 00 00 68 */	b lbl_8036E264
+/* 8036E1E0  7F C3 F3 78 */	mr r3, r30                              
+/* 8036E1E4  7F A4 EB 78 */	mr r4, r29                              
+/* 8036E1E8  7F 85 E3 78 */	mr r5, r28                              
+/* 8036E1EC  38 C1 00 08 */	addi r6, r1, 8                          
+/* 8036E1F0  38 E0 00 00 */	li r7, 0                                
+/* 8036E1F4  48 00 2A A1 */	bl TRKTargetAccessDefault                /* constant-address: 80370C94, symbol: TRKTargetAccessDefault */
+/* 8036E1F8  7C 7F 1B 78 */	mr r31, r3                              
+/* 8036E1FC  48 00 00 68 */	b lbl_8036E264                           /* constant-address: 8036E264, symbol: lbl_8036E264 */
 lbl_8036E200:
-/* 8036E200 00000000  7F C3 F3 78 */	mr r3, r30
-/* 8036E204 00000004  7F A4 EB 78 */	mr r4, r29
-/* 8036E208 00000008  7F 85 E3 78 */	mr r5, r28
-/* 8036E20C 0000000C  38 C1 00 08 */	addi r6, r1, 8
-/* 8036E210 00000010  38 E0 00 00 */	li r7, 0
-/* 8036E214 00000014  48 00 25 75 */	bl TRKTargetAccessFP
-/* 8036E218 00000018  7C 7F 1B 78 */	mr r31, r3
-/* 8036E21C 0000001C  48 00 00 48 */	b lbl_8036E264
+/* 8036E200  7F C3 F3 78 */	mr r3, r30                              
+/* 8036E204  7F A4 EB 78 */	mr r4, r29                              
+/* 8036E208  7F 85 E3 78 */	mr r5, r28                              
+/* 8036E20C  38 C1 00 08 */	addi r6, r1, 8                          
+/* 8036E210  38 E0 00 00 */	li r7, 0                                
+/* 8036E214  48 00 25 75 */	bl TRKTargetAccessFP                     /* constant-address: 80370788, symbol: TRKTargetAccessFP */
+/* 8036E218  7C 7F 1B 78 */	mr r31, r3                              
+/* 8036E21C  48 00 00 48 */	b lbl_8036E264                           /* constant-address: 8036E264, symbol: lbl_8036E264 */
 lbl_8036E220:
-/* 8036E220 00000000  7F C3 F3 78 */	mr r3, r30
-/* 8036E224 00000004  7F A4 EB 78 */	mr r4, r29
-/* 8036E228 00000008  7F 85 E3 78 */	mr r5, r28
-/* 8036E22C 0000000C  38 C1 00 08 */	addi r6, r1, 8
-/* 8036E230 00000010  38 E0 00 00 */	li r7, 0
-/* 8036E234 00000014  48 00 23 E5 */	bl TRKTargetAccessExtended1
-/* 8036E238 00000018  7C 7F 1B 78 */	mr r31, r3
-/* 8036E23C 0000001C  48 00 00 28 */	b lbl_8036E264
+/* 8036E220  7F C3 F3 78 */	mr r3, r30                              
+/* 8036E224  7F A4 EB 78 */	mr r4, r29                              
+/* 8036E228  7F 85 E3 78 */	mr r5, r28                              
+/* 8036E22C  38 C1 00 08 */	addi r6, r1, 8                          
+/* 8036E230  38 E0 00 00 */	li r7, 0                                
+/* 8036E234  48 00 23 E5 */	bl TRKTargetAccessExtended1              /* constant-address: 80370618, symbol: TRKTargetAccessExtended1 */
+/* 8036E238  7C 7F 1B 78 */	mr r31, r3                              
+/* 8036E23C  48 00 00 28 */	b lbl_8036E264                           /* constant-address: 8036E264, symbol: lbl_8036E264 */
 lbl_8036E240:
-/* 8036E240 00000000  7F C3 F3 78 */	mr r3, r30
-/* 8036E244 00000004  7F A4 EB 78 */	mr r4, r29
-/* 8036E248 00000008  7F 85 E3 78 */	mr r5, r28
-/* 8036E24C 0000000C  38 C1 00 08 */	addi r6, r1, 8
-/* 8036E250 00000010  38 E0 00 00 */	li r7, 0
-/* 8036E254 00000014  48 00 1F 8D */	bl TRKTargetAccessExtended2
-/* 8036E258 00000018  7C 7F 1B 78 */	mr r31, r3
-/* 8036E25C 0000001C  48 00 00 08 */	b lbl_8036E264
+/* 8036E240  7F C3 F3 78 */	mr r3, r30                              
+/* 8036E244  7F A4 EB 78 */	mr r4, r29                              
+/* 8036E248  7F 85 E3 78 */	mr r5, r28                              
+/* 8036E24C  38 C1 00 08 */	addi r6, r1, 8                          
+/* 8036E250  38 E0 00 00 */	li r7, 0                                
+/* 8036E254  48 00 1F 8D */	bl TRKTargetAccessExtended2              /* constant-address: 803701E0, symbol: TRKTargetAccessExtended2 */
+/* 8036E258  7C 7F 1B 78 */	mr r31, r3                              
+/* 8036E25C  48 00 00 08 */	b lbl_8036E264                           /* constant-address: 8036E264, symbol: lbl_8036E264 */
 lbl_8036E260:
-/* 8036E260 00000000  3B E0 07 03 */	li r31, 0x703
+/* 8036E260  3B E0 07 03 */	li r31, 0x703                           
 lbl_8036E264:
-/* 8036E264 00000000  7F 83 E3 78 */	mr r3, r28
-/* 8036E268 00000004  38 80 00 00 */	li r4, 0
-/* 8036E26C 00000008  4B FF F3 E1 */	bl TRKResetBuffer
-/* 8036E270 0000000C  2C 1F 00 00 */	cmpwi r31, 0
-/* 8036E274 00000010  40 82 00 3C */	bne lbl_8036E2B0
-/* 8036E278 00000014  38 61 00 8C */	addi r3, r1, 0x8c
-/* 8036E27C 00000018  38 80 00 00 */	li r4, 0
-/* 8036E280 0000001C  38 A0 00 40 */	li r5, 0x40
-/* 8036E284 00000020  4B C9 51 D5 */	bl memset
-/* 8036E288 00000024  38 60 00 40 */	li r3, 0x40
-/* 8036E28C 00000028  38 00 00 80 */	li r0, 0x80
-/* 8036E290 0000002C  90 61 00 8C */	stw r3, 0x8c(r1)
-/* 8036E294 00000030  7F 83 E3 78 */	mr r3, r28
-/* 8036E298 00000034  38 81 00 8C */	addi r4, r1, 0x8c
-/* 8036E29C 00000038  38 A0 00 40 */	li r5, 0x40
-/* 8036E2A0 0000003C  98 01 00 90 */	stb r0, 0x90(r1)
-/* 8036E2A4 00000040  9B E1 00 94 */	stb r31, 0x94(r1)
-/* 8036E2A8 00000044  4B FF F2 D1 */	bl TRKAppendBuffer
-/* 8036E2AC 00000048  7C 7F 1B 78 */	mr r31, r3
+/* 8036E264  7F 83 E3 78 */	mr r3, r28                              
+/* 8036E268  38 80 00 00 */	li r4, 0                                
+/* 8036E26C  4B FF F3 E1 */	bl TRKResetBuffer                        /* constant-address: 8036D64C, symbol: TRKResetBuffer */
+/* 8036E270  2C 1F 00 00 */	cmpwi r31, 0                            
+/* 8036E274  40 82 00 3C */	bne lbl_8036E2B0                         /* constant-address: 8036E2B0, symbol: lbl_8036E2B0 */
+/* 8036E278  38 61 00 8C */	addi r3, r1, 0x8c                       
+/* 8036E27C  38 80 00 00 */	li r4, 0                                
+/* 8036E280  38 A0 00 40 */	li r5, 0x40                             
+/* 8036E284  4B C9 51 D5 */	bl memset                                /* constant-address: 80003458, symbol: memset */
+/* 8036E288  38 60 00 40 */	li r3, 0x40                             
+/* 8036E28C  38 00 00 80 */	li r0, 0x80                             
+/* 8036E290  90 61 00 8C */	stw r3, 0x8c(r1)                        
+/* 8036E294  7F 83 E3 78 */	mr r3, r28                              
+/* 8036E298  38 81 00 8C */	addi r4, r1, 0x8c                       
+/* 8036E29C  38 A0 00 40 */	li r5, 0x40                             
+/* 8036E2A0  98 01 00 90 */	stb r0, 0x90(r1)                        
+/* 8036E2A4  9B E1 00 94 */	stb r31, 0x94(r1)                       
+/* 8036E2A8  4B FF F2 D1 */	bl TRKAppendBuffer                       /* constant-address: 8036D578, symbol: TRKAppendBuffer */
+/* 8036E2AC  7C 7F 1B 78 */	mr r31, r3                              
 lbl_8036E2B0:
-/* 8036E2B0 00000000  2C 1F 00 00 */	cmpwi r31, 0
-/* 8036E2B4 00000004  41 82 00 B4 */	beq lbl_8036E368
-/* 8036E2B8 00000008  2C 1F 07 03 */	cmpwi r31, 0x703
-/* 8036E2BC 0000000C  41 82 00 38 */	beq lbl_8036E2F4
-/* 8036E2C0 00000010  40 80 00 1C */	bge lbl_8036E2DC
-/* 8036E2C4 00000014  2C 1F 07 01 */	cmpwi r31, 0x701
-/* 8036E2C8 00000018  41 82 00 34 */	beq lbl_8036E2FC
-/* 8036E2CC 0000001C  40 80 00 40 */	bge lbl_8036E30C
-/* 8036E2D0 00000020  2C 1F 03 02 */	cmpwi r31, 0x302
-/* 8036E2D4 00000024  41 82 00 30 */	beq lbl_8036E304
-/* 8036E2D8 00000028  48 00 00 54 */	b lbl_8036E32C
+/* 8036E2B0  2C 1F 00 00 */	cmpwi r31, 0                            
+/* 8036E2B4  41 82 00 B4 */	beq lbl_8036E368                         /* constant-address: 8036E368, symbol: lbl_8036E368 */
+/* 8036E2B8  2C 1F 07 03 */	cmpwi r31, 0x703                        
+/* 8036E2BC  41 82 00 38 */	beq lbl_8036E2F4                         /* constant-address: 8036E2F4, symbol: lbl_8036E2F4 */
+/* 8036E2C0  40 80 00 1C */	bge lbl_8036E2DC                         /* constant-address: 8036E2DC, symbol: lbl_8036E2DC */
+/* 8036E2C4  2C 1F 07 01 */	cmpwi r31, 0x701                        
+/* 8036E2C8  41 82 00 34 */	beq lbl_8036E2FC                         /* constant-address: 8036E2FC, symbol: lbl_8036E2FC */
+/* 8036E2CC  40 80 00 40 */	bge lbl_8036E30C                         /* constant-address: 8036E30C, symbol: lbl_8036E30C */
+/* 8036E2D0  2C 1F 03 02 */	cmpwi r31, 0x302                        
+/* 8036E2D4  41 82 00 30 */	beq lbl_8036E304                         /* constant-address: 8036E304, symbol: lbl_8036E304 */
+/* 8036E2D8  48 00 00 54 */	b lbl_8036E32C                           /* constant-address: 8036E32C, symbol: lbl_8036E32C */
 lbl_8036E2DC:
-/* 8036E2DC 00000000  2C 1F 07 06 */	cmpwi r31, 0x706
-/* 8036E2E0 00000004  41 82 00 44 */	beq lbl_8036E324
-/* 8036E2E4 00000008  40 80 00 48 */	bge lbl_8036E32C
-/* 8036E2E8 0000000C  2C 1F 07 05 */	cmpwi r31, 0x705
-/* 8036E2EC 00000010  40 80 00 30 */	bge lbl_8036E31C
-/* 8036E2F0 00000014  48 00 00 24 */	b lbl_8036E314
+/* 8036E2DC  2C 1F 07 06 */	cmpwi r31, 0x706                        
+/* 8036E2E0  41 82 00 44 */	beq lbl_8036E324                         /* constant-address: 8036E324, symbol: lbl_8036E324 */
+/* 8036E2E4  40 80 00 48 */	bge lbl_8036E32C                         /* constant-address: 8036E32C, symbol: lbl_8036E32C */
+/* 8036E2E8  2C 1F 07 05 */	cmpwi r31, 0x705                        
+/* 8036E2EC  40 80 00 30 */	bge lbl_8036E31C                         /* constant-address: 8036E31C, symbol: lbl_8036E31C */
+/* 8036E2F0  48 00 00 24 */	b lbl_8036E314                           /* constant-address: 8036E314, symbol: lbl_8036E314 */
 lbl_8036E2F4:
-/* 8036E2F4 00000000  3B E0 00 12 */	li r31, 0x12
-/* 8036E2F8 00000004  48 00 00 38 */	b lbl_8036E330
+/* 8036E2F4  3B E0 00 12 */	li r31, 0x12                            
+/* 8036E2F8  48 00 00 38 */	b lbl_8036E330                           /* constant-address: 8036E330, symbol: lbl_8036E330 */
 lbl_8036E2FC:
-/* 8036E2FC 00000000  3B E0 00 14 */	li r31, 0x14
-/* 8036E300 00000004  48 00 00 30 */	b lbl_8036E330
+/* 8036E2FC  3B E0 00 14 */	li r31, 0x14                            
+/* 8036E300  48 00 00 30 */	b lbl_8036E330                           /* constant-address: 8036E330, symbol: lbl_8036E330 */
 lbl_8036E304:
-/* 8036E304 00000000  3B E0 00 02 */	li r31, 2
-/* 8036E308 00000004  48 00 00 28 */	b lbl_8036E330
+/* 8036E304  3B E0 00 02 */	li r31, 2                               
+/* 8036E308  48 00 00 28 */	b lbl_8036E330                           /* constant-address: 8036E330, symbol: lbl_8036E330 */
 lbl_8036E30C:
-/* 8036E30C 00000000  3B E0 00 15 */	li r31, 0x15
-/* 8036E310 00000004  48 00 00 20 */	b lbl_8036E330
+/* 8036E30C  3B E0 00 15 */	li r31, 0x15                            
+/* 8036E310  48 00 00 20 */	b lbl_8036E330                           /* constant-address: 8036E330, symbol: lbl_8036E330 */
 lbl_8036E314:
-/* 8036E314 00000000  3B E0 00 21 */	li r31, 0x21
-/* 8036E318 00000004  48 00 00 18 */	b lbl_8036E330
+/* 8036E314  3B E0 00 21 */	li r31, 0x21                            
+/* 8036E318  48 00 00 18 */	b lbl_8036E330                           /* constant-address: 8036E330, symbol: lbl_8036E330 */
 lbl_8036E31C:
-/* 8036E31C 00000000  3B E0 00 22 */	li r31, 0x22
-/* 8036E320 00000004  48 00 00 10 */	b lbl_8036E330
+/* 8036E31C  3B E0 00 22 */	li r31, 0x22                            
+/* 8036E320  48 00 00 10 */	b lbl_8036E330                           /* constant-address: 8036E330, symbol: lbl_8036E330 */
 lbl_8036E324:
-/* 8036E324 00000000  3B E0 00 20 */	li r31, 0x20
-/* 8036E328 00000004  48 00 00 08 */	b lbl_8036E330
+/* 8036E324  3B E0 00 20 */	li r31, 0x20                            
+/* 8036E328  48 00 00 08 */	b lbl_8036E330                           /* constant-address: 8036E330, symbol: lbl_8036E330 */
 lbl_8036E32C:
-/* 8036E32C 00000000  3B E0 00 03 */	li r31, 3
+/* 8036E32C  3B E0 00 03 */	li r31, 3                               
 lbl_8036E330:
-/* 8036E330 00000000  38 61 00 0C */	addi r3, r1, 0xc
-/* 8036E334 00000004  38 80 00 00 */	li r4, 0
-/* 8036E338 00000008  38 A0 00 40 */	li r5, 0x40
-/* 8036E33C 0000000C  4B C9 51 1D */	bl memset
-/* 8036E340 00000010  38 60 00 80 */	li r3, 0x80
-/* 8036E344 00000014  38 00 00 40 */	li r0, 0x40
-/* 8036E348 00000018  98 61 00 10 */	stb r3, 0x10(r1)
-/* 8036E34C 0000001C  38 61 00 0C */	addi r3, r1, 0xc
-/* 8036E350 00000020  38 80 00 40 */	li r4, 0x40
-/* 8036E354 00000024  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8036E358 00000028  9B E1 00 14 */	stb r31, 0x14(r1)
-/* 8036E35C 0000002C  48 00 3A 0D */	bl TRKWriteUARTN
-/* 8036E360 00000030  38 60 00 00 */	li r3, 0
-/* 8036E364 00000034  48 00 00 40 */	b lbl_8036E3A4
+/* 8036E330  38 61 00 0C */	addi r3, r1, 0xc                        
+/* 8036E334  38 80 00 00 */	li r4, 0                                
+/* 8036E338  38 A0 00 40 */	li r5, 0x40                             
+/* 8036E33C  4B C9 51 1D */	bl memset                                /* constant-address: 80003458, symbol: memset */
+/* 8036E340  38 60 00 80 */	li r3, 0x80                             
+/* 8036E344  38 00 00 40 */	li r0, 0x40                             
+/* 8036E348  98 61 00 10 */	stb r3, 0x10(r1)                        
+/* 8036E34C  38 61 00 0C */	addi r3, r1, 0xc                        
+/* 8036E350  38 80 00 40 */	li r4, 0x40                             
+/* 8036E354  90 01 00 0C */	stw r0, 0xc(r1)                         
+/* 8036E358  9B E1 00 14 */	stb r31, 0x14(r1)                       
+/* 8036E35C  48 00 3A 0D */	bl TRKWriteUARTN                         /* constant-address: 80371D68, symbol: TRKWriteUARTN */
+/* 8036E360  38 60 00 00 */	li r3, 0                                
+/* 8036E364  48 00 00 40 */	b lbl_8036E3A4                           /* constant-address: 8036E3A4, symbol: lbl_8036E3A4 */
 lbl_8036E368:
-/* 8036E368 00000000  3C 80 80 3A */	lis r4, lit_403@ha
-/* 8036E36C 00000004  38 60 00 01 */	li r3, 1
-/* 8036E370 00000008  38 84 29 30 */	addi r4, r4, lit_403@l
-/* 8036E374 0000000C  4C C6 31 82 */	crclr 6
-/* 8036E378 00000010  48 00 48 DD */	bl MWTRACE
-/* 8036E37C 00000014  7F 83 E3 78 */	mr r3, r28
-/* 8036E380 00000018  4B FF EC 59 */	bl TRKMessageSend
-/* 8036E384 0000001C  7C 7F 1B 78 */	mr r31, r3
-/* 8036E388 00000020  3C 80 80 3A */	lis r4, lit_404@ha
-/* 8036E38C 00000024  38 60 00 01 */	li r3, 1
-/* 8036E390 00000028  38 84 29 50 */	addi r4, r4, lit_404@l
-/* 8036E394 0000002C  7F E5 FB 78 */	mr r5, r31
-/* 8036E398 00000030  4C C6 31 82 */	crclr 6
-/* 8036E39C 00000034  48 00 48 B9 */	bl MWTRACE
-/* 8036E3A0 00000038  7F E3 FB 78 */	mr r3, r31
+/* 8036E368  3C 80 80 3A */	lis r4, lit_403@ha                      
+/* 8036E36C  38 60 00 01 */	li r3, 1                                
+/* 8036E370  38 84 29 30 */	addi r4, r4, lit_403@l                   /* constant-address: 803A2930, symbol: lit_403 */
+/* 8036E374  4C C6 31 82 */	crclr 6                                 
+/* 8036E378  48 00 48 DD */	bl MWTRACE                               /* constant-address: 80372C54, symbol: MWTRACE */
+/* 8036E37C  7F 83 E3 78 */	mr r3, r28                              
+/* 8036E380  4B FF EC 59 */	bl TRKMessageSend                        /* constant-address: 8036CFD8, symbol: TRKMessageSend */
+/* 8036E384  7C 7F 1B 78 */	mr r31, r3                              
+/* 8036E388  3C 80 80 3A */	lis r4, lit_404@ha                      
+/* 8036E38C  38 60 00 01 */	li r3, 1                                
+/* 8036E390  38 84 29 50 */	addi r4, r4, lit_404@l                   /* constant-address: 803A2950, symbol: lit_404 */
+/* 8036E394  7F E5 FB 78 */	mr r5, r31                              
+/* 8036E398  4C C6 31 82 */	crclr 6                                 
+/* 8036E39C  48 00 48 B9 */	bl MWTRACE                               /* constant-address: 80372C54, symbol: MWTRACE */
+/* 8036E3A0  7F E3 FB 78 */	mr r3, r31                              
 lbl_8036E3A4:
-/* 8036E3A4 00000000  80 01 00 E4 */	lwz r0, 0xe4(r1)
-/* 8036E3A8 00000004  83 E1 00 DC */	lwz r31, 0xdc(r1)
-/* 8036E3AC 00000008  83 C1 00 D8 */	lwz r30, 0xd8(r1)
-/* 8036E3B0 0000000C  83 A1 00 D4 */	lwz r29, 0xd4(r1)
-/* 8036E3B4 00000010  83 81 00 D0 */	lwz r28, 0xd0(r1)
-/* 8036E3B8 00000014  7C 08 03 A6 */	mtlr r0
-/* 8036E3BC 00000018  38 21 00 E0 */	addi r1, r1, 0xe0
-/* 8036E3C0 0000001C  4E 80 00 20 */	blr 
+/* 8036E3A4  80 01 00 E4 */	lwz r0, 0xe4(r1)                        
+/* 8036E3A8  83 E1 00 DC */	lwz r31, 0xdc(r1)                       
+/* 8036E3AC  83 C1 00 D8 */	lwz r30, 0xd8(r1)                       
+/* 8036E3B0  83 A1 00 D4 */	lwz r29, 0xd4(r1)                       
+/* 8036E3B4  83 81 00 D0 */	lwz r28, 0xd0(r1)                       
+/* 8036E3B8  7C 08 03 A6 */	mtlr r0                                 
+/* 8036E3BC  38 21 00 E0 */	addi r1, r1, 0xe0                       
+/* 8036E3C0  4E 80 00 20 */	blr                                     

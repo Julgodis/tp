@@ -1,3 +1,3 @@
 lbl_8003FE4C:
-/* 8003FE4C 00000000  38 62 84 48 */	addi r3, r2, 0x80451E48-0x80459A00 /* data_80451E48-_SDA2_BASE_ */
-/* 8003FE50 00000004  4E 80 00 20 */	blr 
+/* 8003FE4C  38 62 84 48 */	la r3, data_80451E48(r2) /* 80451E48-_SDA2_BASE_ */ /* constant-address: 80451E48, symbol: data_80451E48 */
+/* 8003FE50  4E 80 00 20 */	blr                                     

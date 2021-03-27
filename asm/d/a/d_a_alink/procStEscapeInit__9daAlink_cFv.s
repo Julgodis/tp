@@ -1,25 +1,25 @@
 lbl_800DB5B0:
-/* 800DB5B0 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 800DB5B4 00000004  7C 08 02 A6 */	mflr r0
-/* 800DB5B8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 800DB5BC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 800DB5C0 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 800DB5C4 00000014  38 80 00 77 */	li r4, 0x77
-/* 800DB5C8 00000018  4B FE 69 A5 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
-/* 800DB5CC 0000001C  7F E3 FB 78 */	mr r3, r31
-/* 800DB5D0 00000020  38 80 00 BA */	li r4, 0xba
-/* 800DB5D4 00000024  3C A0 80 39 */	lis r5, m__23daAlinkHIO_damCaught_c0@ha
-/* 800DB5D8 00000028  38 A5 E4 9C */	addi r5, r5, m__23daAlinkHIO_damCaught_c0@l
-/* 800DB5DC 0000002C  4B FD 1B 19 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
-/* 800DB5E0 00000030  C0 02 93 74 */	lfs f0, lit_8502(r2)
-/* 800DB5E4 00000034  D0 1F 1F E0 */	stfs f0, 0x1fe0(r31)
-/* 800DB5E8 00000038  80 7F 1F 2C */	lwz r3, 0x1f2c(r31)
-/* 800DB5EC 0000003C  D0 03 00 08 */	stfs f0, 8(r3)
-/* 800DB5F0 00000040  C0 02 92 C0 */	lfs f0, lit_6108(r2)
-/* 800DB5F4 00000044  D0 1F 33 98 */	stfs f0, 0x3398(r31)
-/* 800DB5F8 00000048  38 60 00 01 */	li r3, 1
-/* 800DB5FC 0000004C  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 800DB600 00000050  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 800DB604 00000054  7C 08 03 A6 */	mtlr r0
-/* 800DB608 00000058  38 21 00 10 */	addi r1, r1, 0x10
-/* 800DB60C 0000005C  4E 80 00 20 */	blr 
+/* 800DB5B0  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 800DB5B4  7C 08 02 A6 */	mflr r0                                 
+/* 800DB5B8  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 800DB5BC  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 800DB5C0  7C 7F 1B 78 */	mr r31, r3                              
+/* 800DB5C4  38 80 00 77 */	li r4, 0x77                             
+/* 800DB5C8  4B FE 69 A5 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC /* constant-address: 800C1F6C, symbol: commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC */
+/* 800DB5CC  7F E3 FB 78 */	mr r3, r31                              
+/* 800DB5D0  38 80 00 BA */	li r4, 0xba                             
+/* 800DB5D4  3C A0 80 39 */	lis r5, m__23daAlinkHIO_damCaught_c0@ha 
+/* 800DB5D8  38 A5 E4 9C */	addi r5, r5, m__23daAlinkHIO_damCaught_c0@l /* constant-address: 8038E49C, symbol: m__23daAlinkHIO_damCaught_c0 */
+/* 800DB5DC  4B FD 1B 19 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c /* constant-address: 800AD0F4, symbol: setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c */
+/* 800DB5E0  C0 02 93 74 */	lfs f0, lit_8502(r2)                     /* constant-address: 80452D74, symbol: lit_8502 */
+/* 800DB5E4  D0 1F 1F E0 */	stfs f0, 0x1fe0(r31)                    
+/* 800DB5E8  80 7F 1F 2C */	lwz r3, 0x1f2c(r31)                     
+/* 800DB5EC  D0 03 00 08 */	stfs f0, 8(r3)                          
+/* 800DB5F0  C0 02 92 C0 */	lfs f0, lit_6108(r2)                     /* constant-address: 80452CC0, symbol: lit_6108 */
+/* 800DB5F4  D0 1F 33 98 */	stfs f0, 0x3398(r31)                    
+/* 800DB5F8  38 60 00 01 */	li r3, 1                                
+/* 800DB5FC  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 800DB600  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 800DB604  7C 08 03 A6 */	mtlr r0                                 
+/* 800DB608  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 800DB60C  4E 80 00 20 */	blr                                     

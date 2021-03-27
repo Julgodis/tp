@@ -1,270 +1,270 @@
 lbl_802BA7FC:
-/* 802BA7FC 00000000  94 21 FF B0 */	stwu r1, -0x50(r1)
-/* 802BA800 00000004  7C 08 02 A6 */	mflr r0
-/* 802BA804 00000008  90 01 00 54 */	stw r0, 0x54(r1)
-/* 802BA808 0000000C  39 61 00 50 */	addi r11, r1, 0x50
-/* 802BA80C 00000010  48 0A 79 B5 */	bl _savegpr_22
-/* 802BA810 00000014  7C 77 1B 78 */	mr r23, r3
-/* 802BA814 00000018  7C 98 23 78 */	mr r24, r4
-/* 802BA818 0000001C  7C B6 2B 78 */	mr r22, r5
-/* 802BA81C 00000020  38 60 28 00 */	li r3, 0x2800
-/* 802BA820 00000024  7E C4 B3 78 */	mr r4, r22
-/* 802BA824 00000028  38 A0 00 20 */	li r5, 0x20
-/* 802BA828 0000002C  48 01 44 E9 */	bl __nwa__FUlP7JKRHeapi
-/* 802BA82C 00000030  90 77 00 04 */	stw r3, 4(r23)
-/* 802BA830 00000034  38 60 28 00 */	li r3, 0x2800
-/* 802BA834 00000038  7E C4 B3 78 */	mr r4, r22
-/* 802BA838 0000003C  38 A0 00 20 */	li r5, 0x20
-/* 802BA83C 00000040  48 01 44 D5 */	bl __nwa__FUlP7JKRHeapi
-/* 802BA840 00000044  90 77 00 08 */	stw r3, 8(r23)
-/* 802BA844 00000048  38 60 4B 00 */	li r3, 0x4b00
-/* 802BA848 0000004C  7E C4 B3 78 */	mr r4, r22
-/* 802BA84C 00000050  38 A0 00 20 */	li r5, 0x20
-/* 802BA850 00000054  48 01 44 C1 */	bl __nwa__FUlP7JKRHeapi
-/* 802BA854 00000058  90 77 00 0C */	stw r3, 0xc(r23)
-/* 802BA858 0000005C  38 60 4B 00 */	li r3, 0x4b00
-/* 802BA85C 00000060  7E C4 B3 78 */	mr r4, r22
-/* 802BA860 00000064  38 A0 00 20 */	li r5, 0x20
-/* 802BA864 00000068  48 01 44 AD */	bl __nwa__FUlP7JKRHeapi
-/* 802BA868 0000006C  90 77 00 10 */	stw r3, 0x10(r23)
-/* 802BA86C 00000070  7F 03 C3 78 */	mr r3, r24
-/* 802BA870 00000074  48 01 B8 9D */	bl countResource__10JKRArchiveCFv
-/* 802BA874 00000078  98 77 00 15 */	stb r3, 0x15(r23)
-/* 802BA878 0000007C  88 17 00 15 */	lbz r0, 0x15(r23)
-/* 802BA87C 00000080  1C 60 00 30 */	mulli r3, r0, 0x30
-/* 802BA880 00000084  7E C4 B3 78 */	mr r4, r22
-/* 802BA884 00000088  38 A0 00 00 */	li r5, 0
-/* 802BA888 0000008C  48 01 44 89 */	bl __nwa__FUlP7JKRHeapi
-/* 802BA88C 00000090  90 77 00 00 */	stw r3, 0(r23)
-/* 802BA890 00000094  3B 40 00 00 */	li r26, 0
-/* 802BA894 00000098  3A C1 00 08 */	addi r22, r1, 8
-/* 802BA898 0000009C  3C 60 80 3C */	lis r3, __vt__10JSUIosBase@ha
-/* 802BA89C 000000A0  3B 83 2D F8 */	addi r28, r3, __vt__10JSUIosBase@l
-/* 802BA8A0 000000A4  3C 60 80 3D */	lis r3, __vt__14JSUInputStream@ha
-/* 802BA8A4 000000A8  3B A3 C4 D4 */	addi r29, r3, __vt__14JSUInputStream@l
-/* 802BA8A8 000000AC  3C 60 80 3D */	lis r3, __vt__20JSURandomInputStream@ha
-/* 802BA8AC 000000B0  3B C3 C4 B0 */	addi r30, r3, __vt__20JSURandomInputStream@l
-/* 802BA8B0 000000B4  3C 60 80 3D */	lis r3, __vt__20JSUMemoryInputStream@ha
-/* 802BA8B4 000000B8  3B E3 C4 F0 */	addi r31, r3, __vt__20JSUMemoryInputStream@l
-/* 802BA8B8 000000BC  48 00 03 20 */	b lbl_802BABD8
+/* 802BA7FC  94 21 FF B0 */	stwu r1, -0x50(r1)                      
+/* 802BA800  7C 08 02 A6 */	mflr r0                                 
+/* 802BA804  90 01 00 54 */	stw r0, 0x54(r1)                        
+/* 802BA808  39 61 00 50 */	addi r11, r1, 0x50                      
+/* 802BA80C  48 0A 79 B5 */	bl _savegpr_22                           /* constant-address: 803621C0, symbol: _savegpr_22 */
+/* 802BA810  7C 77 1B 78 */	mr r23, r3                              
+/* 802BA814  7C 98 23 78 */	mr r24, r4                              
+/* 802BA818  7C B6 2B 78 */	mr r22, r5                              
+/* 802BA81C  38 60 28 00 */	li r3, 0x2800                           
+/* 802BA820  7E C4 B3 78 */	mr r4, r22                              
+/* 802BA824  38 A0 00 20 */	li r5, 0x20                             
+/* 802BA828  48 01 44 E9 */	bl __nwa__FUlP7JKRHeapi                  /* constant-address: 802CED10, symbol: __nwa__FUlP7JKRHeapi */
+/* 802BA82C  90 77 00 04 */	stw r3, 4(r23)                          
+/* 802BA830  38 60 28 00 */	li r3, 0x2800                           
+/* 802BA834  7E C4 B3 78 */	mr r4, r22                              
+/* 802BA838  38 A0 00 20 */	li r5, 0x20                             
+/* 802BA83C  48 01 44 D5 */	bl __nwa__FUlP7JKRHeapi                  /* constant-address: 802CED10, symbol: __nwa__FUlP7JKRHeapi */
+/* 802BA840  90 77 00 08 */	stw r3, 8(r23)                          
+/* 802BA844  38 60 4B 00 */	li r3, 0x4b00                           
+/* 802BA848  7E C4 B3 78 */	mr r4, r22                              
+/* 802BA84C  38 A0 00 20 */	li r5, 0x20                             
+/* 802BA850  48 01 44 C1 */	bl __nwa__FUlP7JKRHeapi                  /* constant-address: 802CED10, symbol: __nwa__FUlP7JKRHeapi */
+/* 802BA854  90 77 00 0C */	stw r3, 0xc(r23)                        
+/* 802BA858  38 60 4B 00 */	li r3, 0x4b00                           
+/* 802BA85C  7E C4 B3 78 */	mr r4, r22                              
+/* 802BA860  38 A0 00 20 */	li r5, 0x20                             
+/* 802BA864  48 01 44 AD */	bl __nwa__FUlP7JKRHeapi                  /* constant-address: 802CED10, symbol: __nwa__FUlP7JKRHeapi */
+/* 802BA868  90 77 00 10 */	stw r3, 0x10(r23)                       
+/* 802BA86C  7F 03 C3 78 */	mr r3, r24                              
+/* 802BA870  48 01 B8 9D */	bl countResource__10JKRArchiveCFv        /* constant-address: 802D610C, symbol: countResource__10JKRArchiveCFv */
+/* 802BA874  98 77 00 15 */	stb r3, 0x15(r23)                       
+/* 802BA878  88 17 00 15 */	lbz r0, 0x15(r23)                       
+/* 802BA87C  1C 60 00 30 */	mulli r3, r0, 0x30                      
+/* 802BA880  7E C4 B3 78 */	mr r4, r22                              
+/* 802BA884  38 A0 00 00 */	li r5, 0                                
+/* 802BA888  48 01 44 89 */	bl __nwa__FUlP7JKRHeapi                  /* constant-address: 802CED10, symbol: __nwa__FUlP7JKRHeapi */
+/* 802BA88C  90 77 00 00 */	stw r3, 0(r23)                          
+/* 802BA890  3B 40 00 00 */	li r26, 0                               
+/* 802BA894  3A C1 00 08 */	addi r22, r1, 8                         
+/* 802BA898  3C 60 80 3C */	lis r3, __vt__10JSUIosBase@ha           
+/* 802BA89C  3B 83 2D F8 */	addi r28, r3, __vt__10JSUIosBase@l       /* constant-address: 803C2DF8, symbol: __vt__10JSUIosBase */
+/* 802BA8A0  3C 60 80 3D */	lis r3, __vt__14JSUInputStream@ha       
+/* 802BA8A4  3B A3 C4 D4 */	addi r29, r3, __vt__14JSUInputStream@l   /* constant-address: 803CC4D4, symbol: __vt__14JSUInputStream */
+/* 802BA8A8  3C 60 80 3D */	lis r3, __vt__20JSURandomInputStream@ha 
+/* 802BA8AC  3B C3 C4 B0 */	addi r30, r3, __vt__20JSURandomInputStream@l /* constant-address: 803CC4B0, symbol: __vt__20JSURandomInputStream */
+/* 802BA8B0  3C 60 80 3D */	lis r3, __vt__20JSUMemoryInputStream@ha 
+/* 802BA8B4  3B E3 C4 F0 */	addi r31, r3, __vt__20JSUMemoryInputStream@l /* constant-address: 803CC4F0, symbol: __vt__20JSUMemoryInputStream */
+/* 802BA8B8  48 00 03 20 */	b lbl_802BABD8                           /* constant-address: 802BABD8, symbol: lbl_802BABD8 */
 lbl_802BA8BC:
-/* 802BA8BC 00000000  7F 03 C3 78 */	mr r3, r24
-/* 802BA8C0 00000004  57 44 06 3E */	clrlwi r4, r26, 0x18
-/* 802BA8C4 00000008  48 01 B4 75 */	bl getResource__10JKRArchiveFUs
-/* 802BA8C8 0000000C  7C 79 1B 78 */	mr r25, r3
-/* 802BA8CC 00000010  7F 03 C3 78 */	mr r3, r24
-/* 802BA8D0 00000014  7F 24 CB 78 */	mr r4, r25
-/* 802BA8D4 00000018  81 98 00 00 */	lwz r12, 0(r24)
-/* 802BA8D8 0000001C  81 8C 00 30 */	lwz r12, 0x30(r12)
-/* 802BA8DC 00000020  7D 89 03 A6 */	mtctr r12
-/* 802BA8E0 00000024  4E 80 04 21 */	bctrl 
-/* 802BA8E4 00000028  38 03 00 1F */	addi r0, r3, 0x1f
-/* 802BA8E8 0000002C  54 05 00 34 */	rlwinm r5, r0, 0, 0, 0x1a
-/* 802BA8EC 00000030  93 81 00 08 */	stw r28, 8(r1)
-/* 802BA8F0 00000034  38 00 00 00 */	li r0, 0
-/* 802BA8F4 00000038  98 01 00 0C */	stb r0, 0xc(r1)
-/* 802BA8F8 0000003C  93 A1 00 08 */	stw r29, 8(r1)
-/* 802BA8FC 00000040  93 C1 00 08 */	stw r30, 8(r1)
-/* 802BA900 00000044  93 E1 00 08 */	stw r31, 8(r1)
-/* 802BA904 00000048  7E C3 B3 78 */	mr r3, r22
-/* 802BA908 0000004C  7F 24 CB 78 */	mr r4, r25
-/* 802BA90C 00000050  48 02 1C 15 */	bl setBuffer__20JSUMemoryInputStreamFPCvl
-/* 802BA910 00000054  38 61 00 08 */	addi r3, r1, 8
-/* 802BA914 00000058  80 97 00 00 */	lwz r4, 0(r23)
-/* 802BA918 0000005C  57 40 06 3E */	clrlwi r0, r26, 0x18
-/* 802BA91C 00000060  1F 60 00 30 */	mulli r27, r0, 0x30
-/* 802BA920 00000064  7C 84 DA 14 */	add r4, r4, r27
-/* 802BA924 00000068  38 A0 00 01 */	li r5, 1
-/* 802BA928 0000006C  48 02 19 71 */	bl read__14JSUInputStreamFPvl
-/* 802BA92C 00000070  38 61 00 08 */	addi r3, r1, 8
-/* 802BA930 00000074  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BA934 00000078  38 9B 00 01 */	addi r4, r27, 1
-/* 802BA938 0000007C  7C 80 22 14 */	add r4, r0, r4
-/* 802BA93C 00000080  38 A0 00 01 */	li r5, 1
-/* 802BA940 00000084  48 02 19 59 */	bl read__14JSUInputStreamFPvl
-/* 802BA944 00000088  38 61 00 08 */	addi r3, r1, 8
-/* 802BA948 0000008C  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BA94C 00000090  38 9B 00 02 */	addi r4, r27, 2
-/* 802BA950 00000094  7C 80 22 14 */	add r4, r0, r4
-/* 802BA954 00000098  38 A0 00 01 */	li r5, 1
-/* 802BA958 0000009C  48 02 19 41 */	bl read__14JSUInputStreamFPvl
-/* 802BA95C 000000A0  38 61 00 08 */	addi r3, r1, 8
-/* 802BA960 000000A4  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BA964 000000A8  38 9B 00 03 */	addi r4, r27, 3
-/* 802BA968 000000AC  7C 80 22 14 */	add r4, r0, r4
-/* 802BA96C 000000B0  38 A0 00 01 */	li r5, 1
-/* 802BA970 000000B4  48 02 19 29 */	bl read__14JSUInputStreamFPvl
-/* 802BA974 000000B8  38 61 00 08 */	addi r3, r1, 8
-/* 802BA978 000000BC  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BA97C 000000C0  38 9B 00 04 */	addi r4, r27, 4
-/* 802BA980 000000C4  7C 80 22 14 */	add r4, r0, r4
-/* 802BA984 000000C8  38 A0 00 02 */	li r5, 2
-/* 802BA988 000000CC  48 02 19 11 */	bl read__14JSUInputStreamFPvl
-/* 802BA98C 000000D0  38 61 00 08 */	addi r3, r1, 8
-/* 802BA990 000000D4  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BA994 000000D8  38 9B 00 06 */	addi r4, r27, 6
-/* 802BA998 000000DC  7C 80 22 14 */	add r4, r0, r4
-/* 802BA99C 000000E0  38 A0 00 02 */	li r5, 2
-/* 802BA9A0 000000E4  48 02 18 F9 */	bl read__14JSUInputStreamFPvl
-/* 802BA9A4 000000E8  38 61 00 08 */	addi r3, r1, 8
-/* 802BA9A8 000000EC  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BA9AC 000000F0  38 9B 00 08 */	addi r4, r27, 8
-/* 802BA9B0 000000F4  7C 80 22 14 */	add r4, r0, r4
-/* 802BA9B4 000000F8  38 A0 00 02 */	li r5, 2
-/* 802BA9B8 000000FC  48 02 18 E1 */	bl read__14JSUInputStreamFPvl
-/* 802BA9BC 00000100  38 61 00 08 */	addi r3, r1, 8
-/* 802BA9C0 00000104  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BA9C4 00000108  38 9B 00 0A */	addi r4, r27, 0xa
-/* 802BA9C8 0000010C  7C 80 22 14 */	add r4, r0, r4
-/* 802BA9CC 00000110  38 A0 00 02 */	li r5, 2
-/* 802BA9D0 00000114  48 02 18 C9 */	bl read__14JSUInputStreamFPvl
-/* 802BA9D4 00000118  38 61 00 08 */	addi r3, r1, 8
-/* 802BA9D8 0000011C  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BA9DC 00000120  38 9B 00 0C */	addi r4, r27, 0xc
-/* 802BA9E0 00000124  7C 80 22 14 */	add r4, r0, r4
-/* 802BA9E4 00000128  38 A0 00 02 */	li r5, 2
-/* 802BA9E8 0000012C  48 02 18 B1 */	bl read__14JSUInputStreamFPvl
-/* 802BA9EC 00000130  38 61 00 08 */	addi r3, r1, 8
-/* 802BA9F0 00000134  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BA9F4 00000138  38 9B 00 0E */	addi r4, r27, 0xe
-/* 802BA9F8 0000013C  7C 80 22 14 */	add r4, r0, r4
-/* 802BA9FC 00000140  38 A0 00 02 */	li r5, 2
-/* 802BAA00 00000144  48 02 18 99 */	bl read__14JSUInputStreamFPvl
-/* 802BAA04 00000148  38 61 00 08 */	addi r3, r1, 8
-/* 802BAA08 0000014C  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BAA0C 00000150  38 9B 00 10 */	addi r4, r27, 0x10
-/* 802BAA10 00000154  7C 80 22 14 */	add r4, r0, r4
-/* 802BAA14 00000158  38 A0 00 02 */	li r5, 2
-/* 802BAA18 0000015C  48 02 18 81 */	bl read__14JSUInputStreamFPvl
-/* 802BAA1C 00000160  38 61 00 08 */	addi r3, r1, 8
-/* 802BAA20 00000164  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BAA24 00000168  38 9B 00 12 */	addi r4, r27, 0x12
-/* 802BAA28 0000016C  7C 80 22 14 */	add r4, r0, r4
-/* 802BAA2C 00000170  38 A0 00 02 */	li r5, 2
-/* 802BAA30 00000174  48 02 18 69 */	bl read__14JSUInputStreamFPvl
-/* 802BAA34 00000178  38 61 00 08 */	addi r3, r1, 8
-/* 802BAA38 0000017C  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BAA3C 00000180  38 9B 00 14 */	addi r4, r27, 0x14
-/* 802BAA40 00000184  7C 80 22 14 */	add r4, r0, r4
-/* 802BAA44 00000188  38 A0 00 02 */	li r5, 2
-/* 802BAA48 0000018C  48 02 18 51 */	bl read__14JSUInputStreamFPvl
-/* 802BAA4C 00000190  38 61 00 08 */	addi r3, r1, 8
-/* 802BAA50 00000194  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BAA54 00000198  38 9B 00 16 */	addi r4, r27, 0x16
-/* 802BAA58 0000019C  7C 80 22 14 */	add r4, r0, r4
-/* 802BAA5C 000001A0  38 A0 00 02 */	li r5, 2
-/* 802BAA60 000001A4  48 02 18 39 */	bl read__14JSUInputStreamFPvl
-/* 802BAA64 000001A8  38 61 00 08 */	addi r3, r1, 8
-/* 802BAA68 000001AC  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BAA6C 000001B0  38 9B 00 18 */	addi r4, r27, 0x18
-/* 802BAA70 000001B4  7C 80 22 14 */	add r4, r0, r4
-/* 802BAA74 000001B8  38 A0 00 01 */	li r5, 1
-/* 802BAA78 000001BC  48 02 18 21 */	bl read__14JSUInputStreamFPvl
-/* 802BAA7C 000001C0  38 61 00 08 */	addi r3, r1, 8
-/* 802BAA80 000001C4  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BAA84 000001C8  38 9B 00 19 */	addi r4, r27, 0x19
-/* 802BAA88 000001CC  7C 80 22 14 */	add r4, r0, r4
-/* 802BAA8C 000001D0  38 A0 00 01 */	li r5, 1
-/* 802BAA90 000001D4  48 02 18 09 */	bl read__14JSUInputStreamFPvl
-/* 802BAA94 000001D8  38 61 00 08 */	addi r3, r1, 8
-/* 802BAA98 000001DC  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BAA9C 000001E0  38 9B 00 1A */	addi r4, r27, 0x1a
-/* 802BAAA0 000001E4  7C 80 22 14 */	add r4, r0, r4
-/* 802BAAA4 000001E8  38 A0 00 01 */	li r5, 1
-/* 802BAAA8 000001EC  48 02 17 F1 */	bl read__14JSUInputStreamFPvl
-/* 802BAAAC 000001F0  38 61 00 08 */	addi r3, r1, 8
-/* 802BAAB0 000001F4  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BAAB4 000001F8  38 9B 00 1B */	addi r4, r27, 0x1b
-/* 802BAAB8 000001FC  7C 80 22 14 */	add r4, r0, r4
-/* 802BAABC 00000200  38 A0 00 01 */	li r5, 1
-/* 802BAAC0 00000204  48 02 17 D9 */	bl read__14JSUInputStreamFPvl
-/* 802BAAC4 00000208  38 61 00 08 */	addi r3, r1, 8
-/* 802BAAC8 0000020C  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BAACC 00000210  38 9B 00 1C */	addi r4, r27, 0x1c
-/* 802BAAD0 00000214  7C 80 22 14 */	add r4, r0, r4
-/* 802BAAD4 00000218  38 A0 00 02 */	li r5, 2
-/* 802BAAD8 0000021C  48 02 17 C1 */	bl read__14JSUInputStreamFPvl
-/* 802BAADC 00000220  38 61 00 08 */	addi r3, r1, 8
-/* 802BAAE0 00000224  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BAAE4 00000228  38 9B 00 1E */	addi r4, r27, 0x1e
-/* 802BAAE8 0000022C  7C 80 22 14 */	add r4, r0, r4
-/* 802BAAEC 00000230  38 A0 00 02 */	li r5, 2
-/* 802BAAF0 00000234  48 02 17 A9 */	bl read__14JSUInputStreamFPvl
-/* 802BAAF4 00000238  38 61 00 08 */	addi r3, r1, 8
-/* 802BAAF8 0000023C  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BAAFC 00000240  38 9B 00 20 */	addi r4, r27, 0x20
-/* 802BAB00 00000244  7C 80 22 14 */	add r4, r0, r4
-/* 802BAB04 00000248  38 A0 00 02 */	li r5, 2
-/* 802BAB08 0000024C  48 02 17 91 */	bl read__14JSUInputStreamFPvl
-/* 802BAB0C 00000250  38 61 00 08 */	addi r3, r1, 8
-/* 802BAB10 00000254  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BAB14 00000258  38 9B 00 22 */	addi r4, r27, 0x22
-/* 802BAB18 0000025C  7C 80 22 14 */	add r4, r0, r4
-/* 802BAB1C 00000260  38 A0 00 02 */	li r5, 2
-/* 802BAB20 00000264  48 02 17 79 */	bl read__14JSUInputStreamFPvl
-/* 802BAB24 00000268  38 61 00 08 */	addi r3, r1, 8
-/* 802BAB28 0000026C  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BAB2C 00000270  38 9B 00 24 */	addi r4, r27, 0x24
-/* 802BAB30 00000274  7C 80 22 14 */	add r4, r0, r4
-/* 802BAB34 00000278  38 A0 00 02 */	li r5, 2
-/* 802BAB38 0000027C  48 02 17 61 */	bl read__14JSUInputStreamFPvl
-/* 802BAB3C 00000280  38 61 00 08 */	addi r3, r1, 8
-/* 802BAB40 00000284  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BAB44 00000288  38 9B 00 26 */	addi r4, r27, 0x26
-/* 802BAB48 0000028C  7C 80 22 14 */	add r4, r0, r4
-/* 802BAB4C 00000290  38 A0 00 02 */	li r5, 2
-/* 802BAB50 00000294  48 02 17 49 */	bl read__14JSUInputStreamFPvl
-/* 802BAB54 00000298  38 61 00 08 */	addi r3, r1, 8
-/* 802BAB58 0000029C  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BAB5C 000002A0  38 9B 00 28 */	addi r4, r27, 0x28
-/* 802BAB60 000002A4  7C 80 22 14 */	add r4, r0, r4
-/* 802BAB64 000002A8  38 A0 00 02 */	li r5, 2
-/* 802BAB68 000002AC  48 02 17 31 */	bl read__14JSUInputStreamFPvl
-/* 802BAB6C 000002B0  38 61 00 08 */	addi r3, r1, 8
-/* 802BAB70 000002B4  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BAB74 000002B8  38 9B 00 2A */	addi r4, r27, 0x2a
-/* 802BAB78 000002BC  7C 80 22 14 */	add r4, r0, r4
-/* 802BAB7C 000002C0  38 A0 00 02 */	li r5, 2
-/* 802BAB80 000002C4  48 02 17 19 */	bl read__14JSUInputStreamFPvl
-/* 802BAB84 000002C8  38 61 00 08 */	addi r3, r1, 8
-/* 802BAB88 000002CC  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BAB8C 000002D0  38 9B 00 2C */	addi r4, r27, 0x2c
-/* 802BAB90 000002D4  7C 80 22 14 */	add r4, r0, r4
-/* 802BAB94 000002D8  38 A0 00 02 */	li r5, 2
-/* 802BAB98 000002DC  48 02 17 01 */	bl read__14JSUInputStreamFPvl
-/* 802BAB9C 000002E0  38 61 00 08 */	addi r3, r1, 8
-/* 802BABA0 000002E4  80 17 00 00 */	lwz r0, 0(r23)
-/* 802BABA4 000002E8  38 9B 00 2E */	addi r4, r27, 0x2e
-/* 802BABA8 000002EC  7C 80 22 14 */	add r4, r0, r4
-/* 802BABAC 000002F0  38 A0 00 02 */	li r5, 2
-/* 802BABB0 000002F4  48 02 16 E9 */	bl read__14JSUInputStreamFPvl
-/* 802BABB4 000002F8  7F 23 CB 78 */	mr r3, r25
-/* 802BABB8 000002FC  38 80 00 00 */	li r4, 0
-/* 802BABBC 00000300  48 01 39 45 */	bl free__7JKRHeapFPvP7JKRHeap
-/* 802BABC0 00000304  93 E1 00 08 */	stw r31, 8(r1)
-/* 802BABC4 00000308  93 C1 00 08 */	stw r30, 8(r1)
-/* 802BABC8 0000030C  38 61 00 08 */	addi r3, r1, 8
-/* 802BABCC 00000310  38 80 00 00 */	li r4, 0
-/* 802BABD0 00000314  48 02 16 6D */	bl __dt__14JSUInputStreamFv
-/* 802BABD4 00000318  3B 5A 00 01 */	addi r26, r26, 1
+/* 802BA8BC  7F 03 C3 78 */	mr r3, r24                              
+/* 802BA8C0  57 44 06 3E */	clrlwi r4, r26, 0x18                    
+/* 802BA8C4  48 01 B4 75 */	bl getResource__10JKRArchiveFUs          /* constant-address: 802D5D38, symbol: getResource__10JKRArchiveFUs */
+/* 802BA8C8  7C 79 1B 78 */	mr r25, r3                              
+/* 802BA8CC  7F 03 C3 78 */	mr r3, r24                              
+/* 802BA8D0  7F 24 CB 78 */	mr r4, r25                              
+/* 802BA8D4  81 98 00 00 */	lwz r12, 0(r24)                         
+/* 802BA8D8  81 8C 00 30 */	lwz r12, 0x30(r12)                      
+/* 802BA8DC  7D 89 03 A6 */	mtctr r12                               
+/* 802BA8E0  4E 80 04 21 */	bctrl                                   
+/* 802BA8E4  38 03 00 1F */	addi r0, r3, 0x1f                       
+/* 802BA8E8  54 05 00 34 */	rlwinm r5, r0, 0, 0, 0x1a               
+/* 802BA8EC  93 81 00 08 */	stw r28, 8(r1)                          
+/* 802BA8F0  38 00 00 00 */	li r0, 0                                
+/* 802BA8F4  98 01 00 0C */	stb r0, 0xc(r1)                         
+/* 802BA8F8  93 A1 00 08 */	stw r29, 8(r1)                          
+/* 802BA8FC  93 C1 00 08 */	stw r30, 8(r1)                          
+/* 802BA900  93 E1 00 08 */	stw r31, 8(r1)                          
+/* 802BA904  7E C3 B3 78 */	mr r3, r22                              
+/* 802BA908  7F 24 CB 78 */	mr r4, r25                              
+/* 802BA90C  48 02 1C 15 */	bl setBuffer__20JSUMemoryInputStreamFPCvl /* constant-address: 802DC520, symbol: setBuffer__20JSUMemoryInputStreamFPCvl */
+/* 802BA910  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BA914  80 97 00 00 */	lwz r4, 0(r23)                          
+/* 802BA918  57 40 06 3E */	clrlwi r0, r26, 0x18                    
+/* 802BA91C  1F 60 00 30 */	mulli r27, r0, 0x30                     
+/* 802BA920  7C 84 DA 14 */	add r4, r4, r27                         
+/* 802BA924  38 A0 00 01 */	li r5, 1                                
+/* 802BA928  48 02 19 71 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BA92C  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BA930  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BA934  38 9B 00 01 */	addi r4, r27, 1                         
+/* 802BA938  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BA93C  38 A0 00 01 */	li r5, 1                                
+/* 802BA940  48 02 19 59 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BA944  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BA948  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BA94C  38 9B 00 02 */	addi r4, r27, 2                         
+/* 802BA950  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BA954  38 A0 00 01 */	li r5, 1                                
+/* 802BA958  48 02 19 41 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BA95C  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BA960  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BA964  38 9B 00 03 */	addi r4, r27, 3                         
+/* 802BA968  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BA96C  38 A0 00 01 */	li r5, 1                                
+/* 802BA970  48 02 19 29 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BA974  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BA978  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BA97C  38 9B 00 04 */	addi r4, r27, 4                         
+/* 802BA980  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BA984  38 A0 00 02 */	li r5, 2                                
+/* 802BA988  48 02 19 11 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BA98C  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BA990  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BA994  38 9B 00 06 */	addi r4, r27, 6                         
+/* 802BA998  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BA99C  38 A0 00 02 */	li r5, 2                                
+/* 802BA9A0  48 02 18 F9 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BA9A4  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BA9A8  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BA9AC  38 9B 00 08 */	addi r4, r27, 8                         
+/* 802BA9B0  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BA9B4  38 A0 00 02 */	li r5, 2                                
+/* 802BA9B8  48 02 18 E1 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BA9BC  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BA9C0  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BA9C4  38 9B 00 0A */	addi r4, r27, 0xa                       
+/* 802BA9C8  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BA9CC  38 A0 00 02 */	li r5, 2                                
+/* 802BA9D0  48 02 18 C9 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BA9D4  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BA9D8  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BA9DC  38 9B 00 0C */	addi r4, r27, 0xc                       
+/* 802BA9E0  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BA9E4  38 A0 00 02 */	li r5, 2                                
+/* 802BA9E8  48 02 18 B1 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BA9EC  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BA9F0  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BA9F4  38 9B 00 0E */	addi r4, r27, 0xe                       
+/* 802BA9F8  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BA9FC  38 A0 00 02 */	li r5, 2                                
+/* 802BAA00  48 02 18 99 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAA04  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BAA08  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BAA0C  38 9B 00 10 */	addi r4, r27, 0x10                      
+/* 802BAA10  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BAA14  38 A0 00 02 */	li r5, 2                                
+/* 802BAA18  48 02 18 81 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAA1C  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BAA20  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BAA24  38 9B 00 12 */	addi r4, r27, 0x12                      
+/* 802BAA28  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BAA2C  38 A0 00 02 */	li r5, 2                                
+/* 802BAA30  48 02 18 69 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAA34  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BAA38  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BAA3C  38 9B 00 14 */	addi r4, r27, 0x14                      
+/* 802BAA40  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BAA44  38 A0 00 02 */	li r5, 2                                
+/* 802BAA48  48 02 18 51 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAA4C  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BAA50  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BAA54  38 9B 00 16 */	addi r4, r27, 0x16                      
+/* 802BAA58  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BAA5C  38 A0 00 02 */	li r5, 2                                
+/* 802BAA60  48 02 18 39 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAA64  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BAA68  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BAA6C  38 9B 00 18 */	addi r4, r27, 0x18                      
+/* 802BAA70  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BAA74  38 A0 00 01 */	li r5, 1                                
+/* 802BAA78  48 02 18 21 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAA7C  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BAA80  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BAA84  38 9B 00 19 */	addi r4, r27, 0x19                      
+/* 802BAA88  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BAA8C  38 A0 00 01 */	li r5, 1                                
+/* 802BAA90  48 02 18 09 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAA94  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BAA98  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BAA9C  38 9B 00 1A */	addi r4, r27, 0x1a                      
+/* 802BAAA0  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BAAA4  38 A0 00 01 */	li r5, 1                                
+/* 802BAAA8  48 02 17 F1 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAAAC  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BAAB0  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BAAB4  38 9B 00 1B */	addi r4, r27, 0x1b                      
+/* 802BAAB8  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BAABC  38 A0 00 01 */	li r5, 1                                
+/* 802BAAC0  48 02 17 D9 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAAC4  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BAAC8  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BAACC  38 9B 00 1C */	addi r4, r27, 0x1c                      
+/* 802BAAD0  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BAAD4  38 A0 00 02 */	li r5, 2                                
+/* 802BAAD8  48 02 17 C1 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAADC  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BAAE0  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BAAE4  38 9B 00 1E */	addi r4, r27, 0x1e                      
+/* 802BAAE8  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BAAEC  38 A0 00 02 */	li r5, 2                                
+/* 802BAAF0  48 02 17 A9 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAAF4  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BAAF8  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BAAFC  38 9B 00 20 */	addi r4, r27, 0x20                      
+/* 802BAB00  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BAB04  38 A0 00 02 */	li r5, 2                                
+/* 802BAB08  48 02 17 91 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAB0C  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BAB10  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BAB14  38 9B 00 22 */	addi r4, r27, 0x22                      
+/* 802BAB18  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BAB1C  38 A0 00 02 */	li r5, 2                                
+/* 802BAB20  48 02 17 79 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAB24  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BAB28  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BAB2C  38 9B 00 24 */	addi r4, r27, 0x24                      
+/* 802BAB30  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BAB34  38 A0 00 02 */	li r5, 2                                
+/* 802BAB38  48 02 17 61 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAB3C  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BAB40  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BAB44  38 9B 00 26 */	addi r4, r27, 0x26                      
+/* 802BAB48  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BAB4C  38 A0 00 02 */	li r5, 2                                
+/* 802BAB50  48 02 17 49 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAB54  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BAB58  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BAB5C  38 9B 00 28 */	addi r4, r27, 0x28                      
+/* 802BAB60  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BAB64  38 A0 00 02 */	li r5, 2                                
+/* 802BAB68  48 02 17 31 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAB6C  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BAB70  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BAB74  38 9B 00 2A */	addi r4, r27, 0x2a                      
+/* 802BAB78  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BAB7C  38 A0 00 02 */	li r5, 2                                
+/* 802BAB80  48 02 17 19 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAB84  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BAB88  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BAB8C  38 9B 00 2C */	addi r4, r27, 0x2c                      
+/* 802BAB90  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BAB94  38 A0 00 02 */	li r5, 2                                
+/* 802BAB98  48 02 17 01 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BAB9C  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BABA0  80 17 00 00 */	lwz r0, 0(r23)                          
+/* 802BABA4  38 9B 00 2E */	addi r4, r27, 0x2e                      
+/* 802BABA8  7C 80 22 14 */	add r4, r0, r4                          
+/* 802BABAC  38 A0 00 02 */	li r5, 2                                
+/* 802BABB0  48 02 16 E9 */	bl read__14JSUInputStreamFPvl            /* constant-address: 802DC298, symbol: read__14JSUInputStreamFPvl */
+/* 802BABB4  7F 23 CB 78 */	mr r3, r25                              
+/* 802BABB8  38 80 00 00 */	li r4, 0                                
+/* 802BABBC  48 01 39 45 */	bl free__7JKRHeapFPvP7JKRHeap            /* constant-address: 802CE500, symbol: free__7JKRHeapFPvP7JKRHeap */
+/* 802BABC0  93 E1 00 08 */	stw r31, 8(r1)                          
+/* 802BABC4  93 C1 00 08 */	stw r30, 8(r1)                          
+/* 802BABC8  38 61 00 08 */	addi r3, r1, 8                          
+/* 802BABCC  38 80 00 00 */	li r4, 0                                
+/* 802BABD0  48 02 16 6D */	bl __dt__14JSUInputStreamFv              /* constant-address: 802DC23C, symbol: __dt__14JSUInputStreamFv */
+/* 802BABD4  3B 5A 00 01 */	addi r26, r26, 1                         /* constant-address: 00000001 */
 lbl_802BABD8:
-/* 802BABD8 00000000  57 43 06 3E */	clrlwi r3, r26, 0x18
-/* 802BABDC 00000004  88 17 00 15 */	lbz r0, 0x15(r23)
-/* 802BABE0 00000008  7C 03 00 40 */	cmplw r3, r0
-/* 802BABE4 0000000C  41 80 FC D8 */	blt lbl_802BA8BC
-/* 802BABE8 00000010  7E E3 BB 78 */	mr r3, r23
-/* 802BABEC 00000014  38 80 FF FF */	li r4, -1
-/* 802BABF0 00000018  38 A0 00 00 */	li r5, 0
-/* 802BABF4 0000001C  38 C0 00 00 */	li r6, 0
-/* 802BABF8 00000020  48 00 00 31 */	bl setLineID__11Z2FxLineMgrFScbb
-/* 802BABFC 00000024  7E E3 BB 78 */	mr r3, r23
-/* 802BAC00 00000028  38 80 FF FF */	li r4, -1
-/* 802BAC04 0000002C  38 A0 00 01 */	li r5, 1
-/* 802BAC08 00000030  38 C0 00 00 */	li r6, 0
-/* 802BAC0C 00000034  48 00 00 1D */	bl setLineID__11Z2FxLineMgrFScbb
-/* 802BAC10 00000038  39 61 00 50 */	addi r11, r1, 0x50
-/* 802BAC14 0000003C  48 0A 75 F9 */	bl _restgpr_22
-/* 802BAC18 00000040  80 01 00 54 */	lwz r0, 0x54(r1)
-/* 802BAC1C 00000044  7C 08 03 A6 */	mtlr r0
-/* 802BAC20 00000048  38 21 00 50 */	addi r1, r1, 0x50
-/* 802BAC24 0000004C  4E 80 00 20 */	blr 
+/* 802BABD8  57 43 06 3E */	clrlwi r3, r26, 0x18                    
+/* 802BABDC  88 17 00 15 */	lbz r0, 0x15(r23)                       
+/* 802BABE0  7C 03 00 40 */	cmplw r3, r0                            
+/* 802BABE4  41 80 FC D8 */	blt lbl_802BA8BC                         /* constant-address: 802BA8BC, symbol: lbl_802BA8BC */
+/* 802BABE8  7E E3 BB 78 */	mr r3, r23                              
+/* 802BABEC  38 80 FF FF */	li r4, -1                               
+/* 802BABF0  38 A0 00 00 */	li r5, 0                                
+/* 802BABF4  38 C0 00 00 */	li r6, 0                                
+/* 802BABF8  48 00 00 31 */	bl setLineID__11Z2FxLineMgrFScbb         /* constant-address: 802BAC28, symbol: setLineID__11Z2FxLineMgrFScbb */
+/* 802BABFC  7E E3 BB 78 */	mr r3, r23                              
+/* 802BAC00  38 80 FF FF */	li r4, -1                               
+/* 802BAC04  38 A0 00 01 */	li r5, 1                                
+/* 802BAC08  38 C0 00 00 */	li r6, 0                                
+/* 802BAC0C  48 00 00 1D */	bl setLineID__11Z2FxLineMgrFScbb         /* constant-address: 802BAC28, symbol: setLineID__11Z2FxLineMgrFScbb */
+/* 802BAC10  39 61 00 50 */	addi r11, r1, 0x50                      
+/* 802BAC14  48 0A 75 F9 */	bl _restgpr_22                           /* constant-address: 8036220C, symbol: _restgpr_22 */
+/* 802BAC18  80 01 00 54 */	lwz r0, 0x54(r1)                        
+/* 802BAC1C  7C 08 03 A6 */	mtlr r0                                 
+/* 802BAC20  38 21 00 50 */	addi r1, r1, 0x50                       
+/* 802BAC24  4E 80 00 20 */	blr                                     

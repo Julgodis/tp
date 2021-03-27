@@ -1,23 +1,23 @@
 lbl_80BD63B8:
-/* 80BD63B8 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80BD63BC 00000004  7C 08 02 A6 */	mflr r0
-/* 80BD63C0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80BD63C4 0000000C  80 83 05 70 */	lwz r4, 0x570(r3)
-/* 80BD63C8 00000010  C0 03 04 EC */	lfs f0, 0x4ec(r3)
-/* 80BD63CC 00000014  D0 04 00 18 */	stfs f0, 0x18(r4)
-/* 80BD63D0 00000018  C0 03 04 F0 */	lfs f0, 0x4f0(r3)
-/* 80BD63D4 0000001C  D0 04 00 1C */	stfs f0, 0x1c(r4)
-/* 80BD63D8 00000020  C0 03 04 F4 */	lfs f0, 0x4f4(r3)
-/* 80BD63DC 00000024  D0 04 00 20 */	stfs f0, 0x20(r4)
-/* 80BD63E0 00000028  80 83 05 74 */	lwz r4, 0x574(r3)
-/* 80BD63E4 0000002C  C0 03 04 EC */	lfs f0, 0x4ec(r3)
-/* 80BD63E8 00000030  D0 04 00 18 */	stfs f0, 0x18(r4)
-/* 80BD63EC 00000034  C0 03 04 F0 */	lfs f0, 0x4f0(r3)
-/* 80BD63F0 00000038  D0 04 00 1C */	stfs f0, 0x1c(r4)
-/* 80BD63F4 0000003C  C0 03 04 F4 */	lfs f0, 0x4f4(r3)
-/* 80BD63F8 00000040  D0 04 00 20 */	stfs f0, 0x20(r4)
-/* 80BD63FC 00000044  48 00 00 15 */	bl setBaseMtx__14daObjCrystal_cFv
-/* 80BD6400 00000048  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80BD6404 0000004C  7C 08 03 A6 */	mtlr r0
-/* 80BD6408 00000050  38 21 00 10 */	addi r1, r1, 0x10
-/* 80BD640C 00000054  4E 80 00 20 */	blr 
+/* 80BD63B8  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80BD63BC  7C 08 02 A6 */	mflr r0
+/* 80BD63C0  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80BD63C4  80 83 05 70 */	lwz r4, 0x570(r3)
+/* 80BD63C8  C0 03 04 EC */	lfs f0, 0x4ec(r3)
+/* 80BD63CC  D0 04 00 18 */	stfs f0, 0x18(r4)
+/* 80BD63D0  C0 03 04 F0 */	lfs f0, 0x4f0(r3)
+/* 80BD63D4  D0 04 00 1C */	stfs f0, 0x1c(r4)
+/* 80BD63D8  C0 03 04 F4 */	lfs f0, 0x4f4(r3)
+/* 80BD63DC  D0 04 00 20 */	stfs f0, 0x20(r4)
+/* 80BD63E0  80 83 05 74 */	lwz r4, 0x574(r3)
+/* 80BD63E4  C0 03 04 EC */	lfs f0, 0x4ec(r3)
+/* 80BD63E8  D0 04 00 18 */	stfs f0, 0x18(r4)
+/* 80BD63EC  C0 03 04 F0 */	lfs f0, 0x4f0(r3)
+/* 80BD63F0  D0 04 00 1C */	stfs f0, 0x1c(r4)
+/* 80BD63F4  C0 03 04 F4 */	lfs f0, 0x4f4(r3)
+/* 80BD63F8  D0 04 00 20 */	stfs f0, 0x20(r4)
+/* 80BD63FC  48 00 00 15 */	bl setBaseMtx__14daObjCrystal_cFv
+/* 80BD6400  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80BD6404  7C 08 03 A6 */	mtlr r0
+/* 80BD6408  38 21 00 10 */	addi r1, r1, 0x10
+/* 80BD640C  4E 80 00 20 */	blr 

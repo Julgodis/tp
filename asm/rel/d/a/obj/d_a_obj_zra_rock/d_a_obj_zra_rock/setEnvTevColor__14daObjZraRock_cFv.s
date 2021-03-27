@@ -1,24 +1,24 @@
 lbl_80D44DCC:
-/* 80D44DCC 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80D44DD0 00000004  7C 08 02 A6 */	mflr r0
-/* 80D44DD4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80D44DD8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80D44DDC 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 80D44DE0 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80D44DE4 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D44DE8 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80D44DEC 00000020  3B E3 0F 38 */	addi r31, r3, 0xf38
-/* 80D44DF0 00000024  7F E3 FB 78 */	mr r3, r31
-/* 80D44DF4 00000028  38 9E 07 F4 */	addi r4, r30, 0x7f4
-/* 80D44DF8 0000002C  4B 32 FD F0 */	b GetPolyColor__4dBgSFRC13cBgS_PolyInfo
-/* 80D44DFC 00000030  98 7E 04 8D */	stb r3, 0x48d(r30)
-/* 80D44E00 00000034  7F E3 FB 78 */	mr r3, r31
-/* 80D44E04 00000038  38 9E 07 F4 */	addi r4, r30, 0x7f4
-/* 80D44E08 0000003C  4B 33 02 F8 */	b GetRoomId__4dBgSFRC13cBgS_PolyInfo
-/* 80D44E0C 00000040  98 7E 04 8C */	stb r3, 0x48c(r30)
-/* 80D44E10 00000044  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80D44E14 00000048  83 C1 00 08 */	lwz r30, 8(r1)
-/* 80D44E18 0000004C  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80D44E1C 00000050  7C 08 03 A6 */	mtlr r0
-/* 80D44E20 00000054  38 21 00 10 */	addi r1, r1, 0x10
-/* 80D44E24 00000058  4E 80 00 20 */	blr 
+/* 80D44DCC  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80D44DD0  7C 08 02 A6 */	mflr r0
+/* 80D44DD4  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80D44DD8  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80D44DDC  93 C1 00 08 */	stw r30, 8(r1)
+/* 80D44DE0  7C 7E 1B 78 */	mr r30, r3
+/* 80D44DE4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 80D44DE8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D44DEC  3B E3 0F 38 */	addi r31, r3, 0xf38
+/* 80D44DF0  7F E3 FB 78 */	mr r3, r31
+/* 80D44DF4  38 9E 07 F4 */	addi r4, r30, 0x7f4
+/* 80D44DF8  4B 32 FD F0 */	b GetPolyColor__4dBgSFRC13cBgS_PolyInfo
+/* 80D44DFC  98 7E 04 8D */	stb r3, 0x48d(r30)
+/* 80D44E00  7F E3 FB 78 */	mr r3, r31
+/* 80D44E04  38 9E 07 F4 */	addi r4, r30, 0x7f4
+/* 80D44E08  4B 33 02 F8 */	b GetRoomId__4dBgSFRC13cBgS_PolyInfo
+/* 80D44E0C  98 7E 04 8C */	stb r3, 0x48c(r30)
+/* 80D44E10  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80D44E14  83 C1 00 08 */	lwz r30, 8(r1)
+/* 80D44E18  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80D44E1C  7C 08 03 A6 */	mtlr r0
+/* 80D44E20  38 21 00 10 */	addi r1, r1, 0x10
+/* 80D44E24  4E 80 00 20 */	blr 

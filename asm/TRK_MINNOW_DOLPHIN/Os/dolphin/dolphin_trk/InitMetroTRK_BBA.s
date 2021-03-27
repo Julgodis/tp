@@ -1,39 +1,39 @@
 lbl_803715F8:
-/* 803715F8 00000000  38 21 FF FC */	addi r1, r1, -4
-/* 803715FC 00000004  90 61 00 00 */	stw r3, 0(r1)
-/* 80371600 00000008  3C 60 80 44 */	lis r3, gTRKCPUState@h
-/* 80371604 0000000C  60 63 F3 38 */	ori r3, r3, gTRKCPUState@l
-/* 80371608 00000010  BC 03 00 00 */	stmw r0, 0(r3)	/* effective address: 8044F338 */
-/* 8037160C 00000014  80 81 00 00 */	lwz r4, 0(r1)
-/* 80371610 00000018  38 21 00 04 */	addi r1, r1, 4
-/* 80371614 0000001C  90 23 00 04 */	stw r1, 4(r3)	/* effective address: 8044F33C */
-/* 80371618 00000020  90 83 00 0C */	stw r4, 0xc(r3)	/* effective address: 8044F344 */
-/* 8037161C 00000024  7C 88 02 A6 */	mflr r4
-/* 80371620 00000028  90 83 00 84 */	stw r4, 0x84(r3)	/* effective address: 8044F3BC */
-/* 80371624 0000002C  90 83 00 80 */	stw r4, 0x80(r3)	/* effective address: 8044F3B8 */
-/* 80371628 00000030  7C 80 00 26 */	mfcr r4
-/* 8037162C 00000034  90 83 00 88 */	stw r4, 0x88(r3)	/* effective address: 8044F3C0 */
-/* 80371630 00000038  7C 80 00 A6 */	mfmsr r4
-/* 80371634 0000003C  60 83 80 00 */	ori r3, r4, 0x8000
-/* 80371638 00000040  7C 60 01 24 */	mtmsr r3
-/* 8037163C 00000044  7C 9B 03 A6 */	mtspr 0x1b, r4
-/* 80371640 00000048  4B FF FB B1 */	bl TRKSaveExtended1Block
-/* 80371644 0000004C  3C 60 80 44 */	lis r3, gTRKCPUState@h
-/* 80371648 00000050  60 63 F3 38 */	ori r3, r3, gTRKCPUState@l
-/* 8037164C 00000054  B8 03 00 00 */	lmw r0, 0(r3)	/* effective address: 8044F338 */
-/* 80371650 00000058  38 00 00 00 */	li r0, 0
-/* 80371654 0000005C  7C 12 FB A6 */	mtspr 0x3f2, r0
-/* 80371658 00000060  7C 15 FB A6 */	mtspr 0x3f5, r0
-/* 8037165C 00000064  3C 20 80 45 */	lis r1, 0x8045 /* 0x80459BC8@h */
-/* 80371660 00000068  60 21 9B C8 */	ori r1, r1, 0x9BC8 /* 0x80459BC8@l */
-/* 80371664 0000006C  38 60 00 02 */	li r3, 2
-/* 80371668 00000070  48 00 08 41 */	bl InitMetroTRKCommTable
-/* 8037166C 00000074  2C 03 00 01 */	cmpwi r3, 1
-/* 80371670 00000078  40 82 00 14 */	bne lbl_80371684
-/* 80371674 0000007C  80 83 00 84 */	lwz r4, 0x84(r3)
-/* 80371678 00000080  7C 88 03 A6 */	mtlr r4
-/* 8037167C 00000084  B8 03 00 00 */	lmw r0, 0(r3)
-/* 80371680 00000088  4E 80 00 20 */	blr 
+/* 803715F8  38 21 FF FC */	addi r1, r1, -4                         
+/* 803715FC  90 61 00 00 */	stw r3, 0(r1)                           
+/* 80371600  3C 60 80 44 */	lis r3, gTRKCPUState@h                  
+/* 80371604  60 63 F3 38 */	ori r3, r3, gTRKCPUState@l               /* constant-address: 8044F338, symbol: gTRKCPUState */
+/* 80371608  BC 03 00 00 */	stmw r0, 0(r3)                          
+/* 8037160C  80 81 00 00 */	lwz r4, 0(r1)                           
+/* 80371610  38 21 00 04 */	addi r1, r1, 4                          
+/* 80371614  90 23 00 04 */	stw r1, 4(r3)                            /* constant-address: 8044F33C, symbol: None */
+/* 80371618  90 83 00 0C */	stw r4, 0xc(r3)                          /* constant-address: 8044F344, symbol: None */
+/* 8037161C  7C 88 02 A6 */	mflr r4                                 
+/* 80371620  90 83 00 84 */	stw r4, 0x84(r3)                         /* constant-address: 8044F3BC, symbol: None */
+/* 80371624  90 83 00 80 */	stw r4, 0x80(r3)                         /* constant-address: 8044F3B8, symbol: None */
+/* 80371628  7C 80 00 26 */	mfcr r4                                 
+/* 8037162C  90 83 00 88 */	stw r4, 0x88(r3)                         /* constant-address: 8044F3C0, symbol: None */
+/* 80371630  7C 80 00 A6 */	mfmsr r4                                
+/* 80371634  60 83 80 00 */	ori r3, r4, 0x8000                      
+/* 80371638  7C 60 01 24 */	mtmsr r3                                
+/* 8037163C  7C 9B 03 A6 */	mtspr 0x1b, r4                          
+/* 80371640  4B FF FB B1 */	bl TRKSaveExtended1Block                 /* constant-address: 803711F0, symbol: TRKSaveExtended1Block */
+/* 80371644  3C 60 80 44 */	lis r3, gTRKCPUState@h                  
+/* 80371648  60 63 F3 38 */	ori r3, r3, gTRKCPUState@l               /* constant-address: 8044F338, symbol: gTRKCPUState */
+/* 8037164C  B8 03 00 00 */	lmw r0, 0(r3)                           
+/* 80371650  38 00 00 00 */	li r0, 0                                
+/* 80371654  7C 12 FB A6 */	mtspr 0x3f2, r0                         
+/* 80371658  7C 15 FB A6 */	mtspr 0x3f5, r0                         
+/* 8037165C  3C 20 80 45 */	lis r1, 0x8045 /* 0x80459BC8@h */       
+/* 80371660  60 21 9B C8 */	ori r1, r1, 0x9BC8 /* 0x80459BC8@l */    /* constant-address: 80459BC8, symbol: None */
+/* 80371664  38 60 00 02 */	li r3, 2                                
+/* 80371668  48 00 08 41 */	bl InitMetroTRKCommTable                 /* constant-address: 80371EA8, symbol: InitMetroTRKCommTable */
+/* 8037166C  2C 03 00 01 */	cmpwi r3, 1                             
+/* 80371670  40 82 00 14 */	bne lbl_80371684                         /* constant-address: 80371684, symbol: lbl_80371684 */
+/* 80371674  80 83 00 84 */	lwz r4, 0x84(r3)                         /* constant-address: 00000086 */
+/* 80371678  7C 88 03 A6 */	mtlr r4                                 
+/* 8037167C  B8 03 00 00 */	lmw r0, 0(r3)                           
+/* 80371680  4E 80 00 20 */	blr                                     
 lbl_80371684:
-/* 80371684 00000000  48 00 05 18 */	b TRK_main
-/* 80371688 00000004  4E 80 00 20 */	blr 
+/* 80371684  48 00 05 18 */	b TRK_main                               /* constant-address: 80371B9C, symbol: TRK_main */
+/* 80371688  4E 80 00 20 */	blr                                     

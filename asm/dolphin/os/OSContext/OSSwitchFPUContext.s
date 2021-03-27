@@ -1,36 +1,36 @@
 lbl_8033C388:
-/* 8033C388 00000000  7C A0 00 A6 */	mfmsr r5
-/* 8033C38C 00000004  60 A5 20 00 */	ori r5, r5, 0x2000
-/* 8033C390 00000008  7C A0 01 24 */	mtmsr r5
-/* 8033C394 0000000C  4C 00 01 2C */	isync 
-/* 8033C398 00000010  80 A4 01 9C */	lwz r5, 0x19c(r4)
-/* 8033C39C 00000014  60 A5 20 00 */	ori r5, r5, 0x2000
-/* 8033C3A0 00000018  7C BB 03 A6 */	mtspr 0x1b, r5
-/* 8033C3A4 0000001C  3C 60 80 00 */	lis r3, 0x8000 /* 0x800000D8@ha */
-/* 8033C3A8 00000020  80 A3 00 D8 */	lwz r5, 0x00D8(r3)
-/* 8033C3AC 00000024  90 83 00 D8 */	stw r4, 0xd8(r3)	/* effective address: 800000D8 */
-/* 8033C3B0 00000028  7C 05 20 00 */	cmpw r5, r4
-/* 8033C3B4 0000002C  41 82 00 14 */	beq lbl_8033C3C8
-/* 8033C3B8 00000030  2C 05 00 00 */	cmpwi r5, 0
-/* 8033C3BC 00000034  41 82 00 08 */	beq lbl_8033C3C4
-/* 8033C3C0 00000038  4B FF F9 49 */	bl __OSSaveFPUContext
+/* 8033C388  7C A0 00 A6 */	mfmsr r5                                
+/* 8033C38C  60 A5 20 00 */	ori r5, r5, 0x2000                      
+/* 8033C390  7C A0 01 24 */	mtmsr r5                                
+/* 8033C394  4C 00 01 2C */	isync                                   
+/* 8033C398  80 A4 01 9C */	lwz r5, 0x19c(r4)                       
+/* 8033C39C  60 A5 20 00 */	ori r5, r5, 0x2000                      
+/* 8033C3A0  7C BB 03 A6 */	mtspr 0x1b, r5                          
+/* 8033C3A4  3C 60 80 00 */	lis r3, 0x8000 /* 0x800000D8@ha */      
+/* 8033C3A8  80 A3 00 D8 */	lwz r5, 0x00D8(r3)                       /* constant-address: 800000D8 */
+/* 8033C3AC  90 83 00 D8 */	stw r4, 0xd8(r3)                         /* constant-address: 800000D8 */
+/* 8033C3B0  7C 05 20 00 */	cmpw r5, r4                             
+/* 8033C3B4  41 82 00 14 */	beq lbl_8033C3C8                         /* constant-address: 8033C3C8, symbol: lbl_8033C3C8 */
+/* 8033C3B8  2C 05 00 00 */	cmpwi r5, 0                             
+/* 8033C3BC  41 82 00 08 */	beq lbl_8033C3C4                         /* constant-address: 8033C3C4, symbol: lbl_8033C3C4 */
+/* 8033C3C0  4B FF F9 49 */	bl __OSSaveFPUContext                    /* constant-address: 8033BD08, symbol: __OSSaveFPUContext */
 lbl_8033C3C4:
-/* 8033C3C4 00000000  4B FF F8 21 */	bl __OSLoadFPUContext
+/* 8033C3C4  4B FF F8 21 */	bl __OSLoadFPUContext                    /* constant-address: 8033BBE4, symbol: __OSLoadFPUContext */
 lbl_8033C3C8:
-/* 8033C3C8 00000000  80 64 00 80 */	lwz r3, 0x80(r4)
-/* 8033C3CC 00000004  7C 6F F1 20 */	mtcrf 0xff, r3
-/* 8033C3D0 00000008  80 64 00 84 */	lwz r3, 0x84(r4)
-/* 8033C3D4 0000000C  7C 68 03 A6 */	mtlr r3
-/* 8033C3D8 00000010  80 64 01 98 */	lwz r3, 0x198(r4)
-/* 8033C3DC 00000014  7C 7A 03 A6 */	mtspr 0x1a, r3
-/* 8033C3E0 00000018  80 64 00 88 */	lwz r3, 0x88(r4)
-/* 8033C3E4 0000001C  7C 69 03 A6 */	mtctr r3
-/* 8033C3E8 00000020  80 64 00 8C */	lwz r3, 0x8c(r4)
-/* 8033C3EC 00000024  7C 61 03 A6 */	mtxer r3
-/* 8033C3F0 00000028  A0 64 01 A2 */	lhz r3, 0x1a2(r4)
-/* 8033C3F4 0000002C  54 63 07 FA */	rlwinm r3, r3, 0, 0x1f, 0x1d
-/* 8033C3F8 00000030  B0 64 01 A2 */	sth r3, 0x1a2(r4)
-/* 8033C3FC 00000034  80 A4 00 14 */	lwz r5, 0x14(r4)
-/* 8033C400 00000038  80 64 00 0C */	lwz r3, 0xc(r4)
-/* 8033C404 0000003C  80 84 00 10 */	lwz r4, 0x10(r4)
-/* 8033C408 00000040  4C 00 00 64 */	rfi 
+/* 8033C3C8  80 64 00 80 */	lwz r3, 0x80(r4)                        
+/* 8033C3CC  7C 6F F1 20 */	mtcrf 0xff, r3                          
+/* 8033C3D0  80 64 00 84 */	lwz r3, 0x84(r4)                        
+/* 8033C3D4  7C 68 03 A6 */	mtlr r3                                 
+/* 8033C3D8  80 64 01 98 */	lwz r3, 0x198(r4)                       
+/* 8033C3DC  7C 7A 03 A6 */	mtspr 0x1a, r3                          
+/* 8033C3E0  80 64 00 88 */	lwz r3, 0x88(r4)                        
+/* 8033C3E4  7C 69 03 A6 */	mtctr r3                                
+/* 8033C3E8  80 64 00 8C */	lwz r3, 0x8c(r4)                        
+/* 8033C3EC  7C 61 03 A6 */	mtxer r3                                
+/* 8033C3F0  A0 64 01 A2 */	lhz r3, 0x1a2(r4)                       
+/* 8033C3F4  54 63 07 FA */	rlwinm r3, r3, 0, 0x1f, 0x1d            
+/* 8033C3F8  B0 64 01 A2 */	sth r3, 0x1a2(r4)                       
+/* 8033C3FC  80 A4 00 14 */	lwz r5, 0x14(r4)                        
+/* 8033C400  80 64 00 0C */	lwz r3, 0xc(r4)                         
+/* 8033C404  80 84 00 10 */	lwz r4, 0x10(r4)                        
+/* 8033C408  4C 00 00 64 */	rfi                                     

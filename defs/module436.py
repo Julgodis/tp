@@ -27,16 +27,16 @@ SECTIONS = [
 
 # Symbols
 SYMBOLS = [
-	{'addr':0x80BDC5A0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':0,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80BDC5CC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':0,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80BDC5F8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':0,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80BDC618,'size':292,'pad':0,'label':"create__14daObjDigholl_cFv",'name':"create__14daObjDigholl_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80BDC73C,'size':32,'pad':0,'label':"daObjDigholl_Create__FP10fopAc_ac_c",'name':"daObjDigholl_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80BDC75C,'size':84,'pad':0,'label':"__dt__14daObjDigholl_cFv",'name':"__dt__14daObjDigholl_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80BDC5A0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':0,'section':0,'r':[0,0,9],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80BDC5CC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':0,'section':0,'r':[0,0,6],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80BDC5F8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':0,'section':0,'r':[0,0,5],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80BDC618,'size':292,'pad':0,'label':"create__14daObjDigholl_cFv",'name':"create__14daObjDigholl_cFv",'lib':-1,'tu':3,'section':0,'r':[0,0,17],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80BDC73C,'size':32,'pad':0,'label':"daObjDigholl_Create__FP10fopAc_ac_c",'name':"daObjDigholl_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[1,0,2],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80BDC75C,'size':84,'pad':0,'label':"__dt__14daObjDigholl_cFv",'name':"__dt__14daObjDigholl_cFv",'lib':-1,'tu':3,'section':0,'r':[0,0,2],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80BDC7B0,'size':40,'pad':0,'label':"daObjDigholl_Delete__FP14daObjDigholl_c",'name':"daObjDigholl_Delete__FP14daObjDigholl_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80BDC7D8,'size':788,'pad':0,'label':"execute__14daObjDigholl_cFv",'name':"execute__14daObjDigholl_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80BDC7D8,'size':788,'pad':0,'label':"execute__14daObjDigholl_cFv",'name':"execute__14daObjDigholl_cFv",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80BDCAEC,'size':32,'pad':0,'label':"daObjDigholl_Execute__FP14daObjDigholl_c",'name':"daObjDigholl_Execute__FP14daObjDigholl_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80BDCB0C,'size':8,'pad':0,'label':"draw__14daObjDigholl_cFv",'name':"draw__14daObjDigholl_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80BDCB0C,'size':8,'pad':0,'label':"draw__14daObjDigholl_cFv",'name':"draw__14daObjDigholl_cFv",'lib':-1,'tu':3,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
 	{'addr':0x80BDCB14,'size':32,'pad':0,'label':"daObjDigholl_Draw__FP14daObjDigholl_c",'name':"daObjDigholl_Draw__FP14daObjDigholl_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80BDCB34,'size':4,'pad':0,'label':"data_80BDCB34",'name':None,'lib':-1,'tu':1,'section':1,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80BDCB38,'size':4,'pad':0,'label':"data_80BDCB38",'name':None,'lib':-1,'tu':2,'section':2,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
@@ -55,7 +55,7 @@ SYMBOLS = [
 	{'addr':0x80BDCB74,'size':8,'pad':0,'label':"lit_3799",'name':"@3799",'lib':-1,'tu':3,'section':3,'r':[0,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80BDCB7C,'size':4,'pad':0,'label':"lit_3800",'name':"@3800",'lib':-1,'tu':3,'section':3,'r':[0,0,0],'sh':[0,0,0],'type':"Integer"},
 	{'addr':0x80BDCB80,'size':32,'pad':0,'label':"l_daObjDigholl_Method",'name':"l_daObjDigholl_Method",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
-	{'addr':0x80BDCBA0,'size':48,'pad':0,'label':"g_profile_Obj_Digholl",'name':"g_profile_Obj_Digholl",'lib':-1,'tu':3,'section':4,'r':[0,0,1],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x80BDCBA0,'size':48,'pad':0,'label':"g_profile_Obj_Digholl",'name':"g_profile_Obj_Digholl",'lib':-1,'tu':3,'section':4,'r':[0,0,3],'sh':[0,0,0],'type':"ReferenceArray"},
 ]
 
 # Names

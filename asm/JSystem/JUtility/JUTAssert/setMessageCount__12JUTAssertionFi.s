@@ -1,7 +1,7 @@
 lbl_802E4C3C:
-/* 802E4C3C 00000000  7C 03 00 D0 */	neg r0, r3
-/* 802E4C40 00000004  7C 60 03 38 */	orc r0, r3, r0
-/* 802E4C44 00000008  7C 00 FE 70 */	srawi r0, r0, 0x1f
-/* 802E4C48 0000000C  7C 60 00 78 */	andc r0, r3, r0
-/* 802E4C4C 00000010  90 0D 8F B0 */	stw r0, data_80451530(r13)
-/* 802E4C50 00000014  4E 80 00 20 */	blr 
+/* 802E4C3C  7C 03 00 D0 */	neg r0, r3                              
+/* 802E4C40  7C 60 03 38 */	orc r0, r3, r0                          
+/* 802E4C44  7C 00 FE 70 */	srawi r0, r0, 0x1f                      
+/* 802E4C48  7C 60 00 78 */	andc r0, r3, r0                         
+/* 802E4C4C  90 0D 8F B0 */	stw r0, data_80451530(r13)               /* constant-address: 80451530, symbol: data_80451530 */
+/* 802E4C50  4E 80 00 20 */	blr                                     

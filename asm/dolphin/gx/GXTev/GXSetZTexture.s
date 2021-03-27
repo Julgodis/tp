@@ -1,42 +1,42 @@
 lbl_8035F668:
-/* 8035F668 00000000  2C 04 00 13 */	cmpwi r4, 0x13
-/* 8035F66C 00000004  38 00 00 F4 */	li r0, 0xf4
-/* 8035F670 00000008  38 C0 00 00 */	li r6, 0
-/* 8035F674 0000000C  50 A6 02 3E */	rlwimi r6, r5, 0, 8, 0x1f
-/* 8035F678 00000010  50 06 C0 0E */	rlwimi r6, r0, 0x18, 0, 7
-/* 8035F67C 00000014  38 E0 00 00 */	li r7, 0
-/* 8035F680 00000018  41 82 00 28 */	beq lbl_8035F6A8
-/* 8035F684 0000001C  40 80 00 10 */	bge lbl_8035F694
-/* 8035F688 00000020  2C 04 00 11 */	cmpwi r4, 0x11
-/* 8035F68C 00000024  41 82 00 14 */	beq lbl_8035F6A0
-/* 8035F690 00000028  48 00 00 28 */	b lbl_8035F6B8
+/* 8035F668  2C 04 00 13 */	cmpwi r4, 0x13                          
+/* 8035F66C  38 00 00 F4 */	li r0, 0xf4                             
+/* 8035F670  38 C0 00 00 */	li r6, 0                                
+/* 8035F674  50 A6 02 3E */	rlwimi r6, r5, 0, 8, 0x1f               
+/* 8035F678  50 06 C0 0E */	rlwimi r6, r0, 0x18, 0, 7               
+/* 8035F67C  38 E0 00 00 */	li r7, 0                                
+/* 8035F680  41 82 00 28 */	beq lbl_8035F6A8                         /* constant-address: 8035F6A8, symbol: lbl_8035F6A8 */
+/* 8035F684  40 80 00 10 */	bge lbl_8035F694                         /* constant-address: 8035F694, symbol: lbl_8035F694 */
+/* 8035F688  2C 04 00 11 */	cmpwi r4, 0x11                          
+/* 8035F68C  41 82 00 14 */	beq lbl_8035F6A0                         /* constant-address: 8035F6A0, symbol: lbl_8035F6A0 */
+/* 8035F690  48 00 00 28 */	b lbl_8035F6B8                           /* constant-address: 8035F6B8, symbol: lbl_8035F6B8 */
 lbl_8035F694:
-/* 8035F694 00000000  2C 04 00 16 */	cmpwi r4, 0x16
-/* 8035F698 00000004  41 82 00 18 */	beq lbl_8035F6B0
-/* 8035F69C 00000008  48 00 00 1C */	b lbl_8035F6B8
+/* 8035F694  2C 04 00 16 */	cmpwi r4, 0x16                          
+/* 8035F698  41 82 00 18 */	beq lbl_8035F6B0                         /* constant-address: 8035F6B0, symbol: lbl_8035F6B0 */
+/* 8035F69C  48 00 00 1C */	b lbl_8035F6B8                           /* constant-address: 8035F6B8, symbol: lbl_8035F6B8 */
 lbl_8035F6A0:
-/* 8035F6A0 00000000  39 00 00 00 */	li r8, 0
-/* 8035F6A4 00000004  48 00 00 18 */	b lbl_8035F6BC
+/* 8035F6A0  39 00 00 00 */	li r8, 0                                
+/* 8035F6A4  48 00 00 18 */	b lbl_8035F6BC                           /* constant-address: 8035F6BC, symbol: lbl_8035F6BC */
 lbl_8035F6A8:
-/* 8035F6A8 00000000  39 00 00 01 */	li r8, 1
-/* 8035F6AC 00000004  48 00 00 10 */	b lbl_8035F6BC
+/* 8035F6A8  39 00 00 01 */	li r8, 1                                
+/* 8035F6AC  48 00 00 10 */	b lbl_8035F6BC                           /* constant-address: 8035F6BC, symbol: lbl_8035F6BC */
 lbl_8035F6B0:
-/* 8035F6B0 00000000  39 00 00 02 */	li r8, 2
-/* 8035F6B4 00000004  48 00 00 08 */	b lbl_8035F6BC
+/* 8035F6B0  39 00 00 02 */	li r8, 2                                
+/* 8035F6B4  48 00 00 08 */	b lbl_8035F6BC                           /* constant-address: 8035F6BC, symbol: lbl_8035F6BC */
 lbl_8035F6B8:
-/* 8035F6B8 00000000  39 00 00 02 */	li r8, 2
+/* 8035F6B8  39 00 00 02 */	li r8, 2                                
 lbl_8035F6BC:
-/* 8035F6BC 00000000  38 00 00 61 */	li r0, 0x61
-/* 8035F6C0 00000004  80 82 CB 80 */	lwz r4, __GXData(r2)
-/* 8035F6C4 00000008  3C A0 CC 01 */	lis r5, 0xCC01 /* 0xCC008000@ha */
-/* 8035F6C8 0000000C  98 05 80 00 */	stb r0, 0x8000(r5)
-/* 8035F6CC 00000010  51 07 07 BE */	rlwimi r7, r8, 0, 0x1e, 0x1f
-/* 8035F6D0 00000014  50 67 17 3A */	rlwimi r7, r3, 2, 0x1c, 0x1d
-/* 8035F6D4 00000018  90 C5 80 00 */	stw r6, -0x8000(r5)	/* effective address: CC008000 */
-/* 8035F6D8 0000001C  38 60 00 F5 */	li r3, 0xf5
-/* 8035F6DC 00000020  50 67 C0 0E */	rlwimi r7, r3, 0x18, 0, 7
-/* 8035F6E0 00000024  98 05 80 00 */	stb r0, -0x8000(r5)	/* effective address: CC008000 */
-/* 8035F6E4 00000028  38 00 00 00 */	li r0, 0
-/* 8035F6E8 0000002C  90 E5 80 00 */	stw r7, -0x8000(r5)	/* effective address: CC008000 */
-/* 8035F6EC 00000030  B0 04 00 02 */	sth r0, 2(r4)
-/* 8035F6F0 00000034  4E 80 00 20 */	blr 
+/* 8035F6BC  38 00 00 61 */	li r0, 0x61                             
+/* 8035F6C0  80 82 CB 80 */	lwz r4, __GXData(r2)                     /* constant-address: 80456580, symbol: __GXData */
+/* 8035F6C4  3C A0 CC 01 */	lis r5, 0xCC01 /* 0xCC008000@ha */      
+/* 8035F6C8  98 05 80 00 */	stb r0, 0x8000(r5)                       /* constant-address: CC008000 */
+/* 8035F6CC  51 07 07 BE */	rlwimi r7, r8, 0, 0x1e, 0x1f            
+/* 8035F6D0  50 67 17 3A */	rlwimi r7, r3, 2, 0x1c, 0x1d            
+/* 8035F6D4  90 C5 80 00 */	stw r6, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 8035F6D8  38 60 00 F5 */	li r3, 0xf5                             
+/* 8035F6DC  50 67 C0 0E */	rlwimi r7, r3, 0x18, 0, 7               
+/* 8035F6E0  98 05 80 00 */	stb r0, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 8035F6E4  38 00 00 00 */	li r0, 0                                
+/* 8035F6E8  90 E5 80 00 */	stw r7, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 8035F6EC  B0 04 00 02 */	sth r0, 2(r4)                           
+/* 8035F6F0  4E 80 00 20 */	blr                                     

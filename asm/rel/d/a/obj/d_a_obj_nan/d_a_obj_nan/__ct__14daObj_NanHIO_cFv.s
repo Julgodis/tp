@@ -1,11 +1,11 @@
 lbl_80CA05AC:
-/* 80CA05AC 00000000  3C 80 80 CA */	lis r4, __vt__14daObj_NanHIO_c@ha
-/* 80CA05B0 00000004  38 04 34 80 */	addi r0, r4, __vt__14daObj_NanHIO_c@l
-/* 80CA05B4 00000008  90 03 00 00 */	stw r0, 0(r3)
-/* 80CA05B8 0000000C  38 00 FF FF */	li r0, -1
-/* 80CA05BC 00000010  98 03 00 04 */	stb r0, 4(r3)
-/* 80CA05C0 00000014  3C 80 80 CA */	lis r4, lit_3774@ha
-/* 80CA05C4 00000018  C0 04 31 BC */	lfs f0, lit_3774@l(r4)
-/* 80CA05C8 0000001C  D0 03 00 0C */	stfs f0, 0xc(r3)
-/* 80CA05CC 00000020  D0 03 00 08 */	stfs f0, 8(r3)
-/* 80CA05D0 00000024  4E 80 00 20 */	blr 
+/* 80CA05AC  3C 80 80 CA */	lis r4, __vt__14daObj_NanHIO_c@ha
+/* 80CA05B0  38 04 34 80 */	addi r0, r4, __vt__14daObj_NanHIO_c@l
+/* 80CA05B4  90 03 00 00 */	stw r0, 0(r3)
+/* 80CA05B8  38 00 FF FF */	li r0, -1
+/* 80CA05BC  98 03 00 04 */	stb r0, 4(r3)
+/* 80CA05C0  3C 80 80 CA */	lis r4, lit_3774@ha
+/* 80CA05C4  C0 04 31 BC */	lfs f0, lit_3774@l(r4)
+/* 80CA05C8  D0 03 00 0C */	stfs f0, 0xc(r3)
+/* 80CA05CC  D0 03 00 08 */	stfs f0, 8(r3)
+/* 80CA05D0  4E 80 00 20 */	blr 

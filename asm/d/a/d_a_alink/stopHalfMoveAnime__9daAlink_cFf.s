@@ -1,34 +1,34 @@
 lbl_800F8F08:
-/* 800F8F08 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 800F8F0C 00000004  7C 08 02 A6 */	mflr r0
-/* 800F8F10 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 800F8F14 0000000C  DB E1 00 10 */	stfd f31, 0x10(r1)
-/* 800F8F18 00000010  F3 E1 00 18 */	psq_st f31, 24(r1), 0, 0 /* qr0 */
-/* 800F8F1C 00000000  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 800F8F20 00000004  93 C1 00 08 */	stw r30, 8(r1)
-/* 800F8F24 00000008  7C 7E 1B 78 */	mr r30, r3
-/* 800F8F28 0000000C  FF E0 08 90 */	fmr f31, f1
-/* 800F8F2C 00000010  3B FE 1F D0 */	addi r31, r30, 0x1fd0
-/* 800F8F30 00000014  7F E3 FB 78 */	mr r3, r31
-/* 800F8F34 00000018  C0 22 92 C0 */	lfs f1, lit_6108(r2)
-/* 800F8F38 0000001C  48 22 F4 F5 */	bl checkPass__12J3DFrameCtrlFf
-/* 800F8F3C 00000020  2C 03 00 00 */	cmpwi r3, 0
-/* 800F8F40 00000024  41 82 00 0C */	beq lbl_800F8F4C
-/* 800F8F44 00000028  C0 22 92 C0 */	lfs f1, lit_6108(r2)
-/* 800F8F48 0000002C  48 00 00 08 */	b lbl_800F8F50
+/* 800F8F08  94 21 FF E0 */	stwu r1, -0x20(r1)                      
+/* 800F8F0C  7C 08 02 A6 */	mflr r0                                 
+/* 800F8F10  90 01 00 24 */	stw r0, 0x24(r1)                        
+/* 800F8F14  DB E1 00 10 */	stfd f31, 0x10(r1)                      
+/* 800F8F18  F3 E1 00 18 */	psq_st f31, 24(r1), 0, 0 /* qr0 */      
+/* 800F8F1C  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 800F8F20  93 C1 00 08 */	stw r30, 8(r1)                          
+/* 800F8F24  7C 7E 1B 78 */	mr r30, r3                              
+/* 800F8F28  FF E0 08 90 */	fmr f31, f1                             
+/* 800F8F2C  3B FE 1F D0 */	addi r31, r30, 0x1fd0                   
+/* 800F8F30  7F E3 FB 78 */	mr r3, r31                              
+/* 800F8F34  C0 22 92 C0 */	lfs f1, lit_6108(r2)                     /* constant-address: 80452CC0, symbol: lit_6108 */
+/* 800F8F38  48 22 F4 F5 */	bl checkPass__12J3DFrameCtrlFf           /* constant-address: 8032842C, symbol: checkPass__12J3DFrameCtrlFf */
+/* 800F8F3C  2C 03 00 00 */	cmpwi r3, 0                             
+/* 800F8F40  41 82 00 0C */	beq lbl_800F8F4C                         /* constant-address: 800F8F4C, symbol: lbl_800F8F4C */
+/* 800F8F44  C0 22 92 C0 */	lfs f1, lit_6108(r2)                     /* constant-address: 80452CC0, symbol: lit_6108 */
+/* 800F8F48  48 00 00 08 */	b lbl_800F8F50                           /* constant-address: 800F8F50, symbol: lbl_800F8F50 */
 lbl_800F8F4C:
-/* 800F8F4C 00000000  FC 20 F8 90 */	fmr f1, f31
+/* 800F8F4C  FC 20 F8 90 */	fmr f1, f31                             
 lbl_800F8F50:
-/* 800F8F50 00000000  C0 02 92 C0 */	lfs f0, lit_6108(r2)
-/* 800F8F54 00000004  D0 1F 00 0C */	stfs f0, 0xc(r31)
-/* 800F8F58 00000008  D0 3F 00 10 */	stfs f1, 0x10(r31)
-/* 800F8F5C 0000000C  80 7E 1F 2C */	lwz r3, 0x1f2c(r30)
-/* 800F8F60 00000010  D0 23 00 08 */	stfs f1, 8(r3)
-/* 800F8F64 00000014  E3 E1 00 18 */	psq_l f31, 24(r1), 0, 0 /* qr0 */
-/* 800F8F68 00000000  CB E1 00 10 */	lfd f31, 0x10(r1)
-/* 800F8F6C 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 800F8F70 00000008  83 C1 00 08 */	lwz r30, 8(r1)
-/* 800F8F74 0000000C  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 800F8F78 00000010  7C 08 03 A6 */	mtlr r0
-/* 800F8F7C 00000014  38 21 00 20 */	addi r1, r1, 0x20
-/* 800F8F80 00000018  4E 80 00 20 */	blr 
+/* 800F8F50  C0 02 92 C0 */	lfs f0, lit_6108(r2)                     /* constant-address: 80452CC0, symbol: lit_6108 */
+/* 800F8F54  D0 1F 00 0C */	stfs f0, 0xc(r31)                       
+/* 800F8F58  D0 3F 00 10 */	stfs f1, 0x10(r31)                      
+/* 800F8F5C  80 7E 1F 2C */	lwz r3, 0x1f2c(r30)                     
+/* 800F8F60  D0 23 00 08 */	stfs f1, 8(r3)                          
+/* 800F8F64  E3 E1 00 18 */	psq_l f31, 24(r1), 0, 0 /* qr0 */       
+/* 800F8F68  CB E1 00 10 */	lfd f31, 0x10(r1)                       
+/* 800F8F6C  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 800F8F70  83 C1 00 08 */	lwz r30, 8(r1)                          
+/* 800F8F74  80 01 00 24 */	lwz r0, 0x24(r1)                        
+/* 800F8F78  7C 08 03 A6 */	mtlr r0                                 
+/* 800F8F7C  38 21 00 20 */	addi r1, r1, 0x20                       
+/* 800F8F80  4E 80 00 20 */	blr                                     

@@ -1,33 +1,33 @@
 lbl_800F1188:
-/* 800F1188 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 800F118C 00000004  7C 08 02 A6 */	mflr r0
-/* 800F1190 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 800F1194 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 800F1198 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 800F119C 00000014  38 80 00 3F */	li r4, 0x3f
-/* 800F11A0 00000018  4B FD 0D CD */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
-/* 800F11A4 0000001C  7F E3 FB 78 */	mr r3, r31
-/* 800F11A8 00000020  81 9F 06 28 */	lwz r12, 0x628(r31)
-/* 800F11AC 00000024  81 8C 01 88 */	lwz r12, 0x188(r12)
-/* 800F11B0 00000028  7D 89 03 A6 */	mtctr r12
-/* 800F11B4 0000002C  4E 80 04 21 */	bctrl 
-/* 800F11B8 00000030  28 03 00 00 */	cmplwi r3, 0
-/* 800F11BC 00000034  41 82 00 14 */	beq lbl_800F11D0
-/* 800F11C0 00000038  7F E3 FB 78 */	mr r3, r31
-/* 800F11C4 0000003C  38 80 00 02 */	li r4, 2
-/* 800F11C8 00000040  C0 22 92 BC */	lfs f1, lit_6041(r2)
-/* 800F11CC 00000044  4B FB C9 21 */	bl resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf
+/* 800F1188  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 800F118C  7C 08 02 A6 */	mflr r0                                 
+/* 800F1190  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 800F1194  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 800F1198  7C 7F 1B 78 */	mr r31, r3                              
+/* 800F119C  38 80 00 3F */	li r4, 0x3f                             
+/* 800F11A0  4B FD 0D CD */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC /* constant-address: 800C1F6C, symbol: commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC */
+/* 800F11A4  7F E3 FB 78 */	mr r3, r31                              
+/* 800F11A8  81 9F 06 28 */	lwz r12, 0x628(r31)                     
+/* 800F11AC  81 8C 01 88 */	lwz r12, 0x188(r12)                     
+/* 800F11B0  7D 89 03 A6 */	mtctr r12                               
+/* 800F11B4  4E 80 04 21 */	bctrl                                   
+/* 800F11B8  28 03 00 00 */	cmplwi r3, 0                            
+/* 800F11BC  41 82 00 14 */	beq lbl_800F11D0                         /* constant-address: 800F11D0, symbol: lbl_800F11D0 */
+/* 800F11C0  7F E3 FB 78 */	mr r3, r31                              
+/* 800F11C4  38 80 00 02 */	li r4, 2                                
+/* 800F11C8  C0 22 92 BC */	lfs f1, lit_6041(r2)                     /* constant-address: 80452CBC, symbol: lit_6041 */
+/* 800F11CC  4B FB C9 21 */	bl resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf /* constant-address: 800ADAEC, symbol: resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf */
 lbl_800F11D0:
-/* 800F11D0 00000000  7F E3 FB 78 */	mr r3, r31
-/* 800F11D4 00000004  4B FF C8 51 */	bl setSyncRidePos__9daAlink_cFv
-/* 800F11D8 00000008  38 00 00 00 */	li r0, 0
-/* 800F11DC 0000000C  B0 1F 30 04 */	sth r0, 0x3004(r31)
-/* 800F11E0 00000010  B0 1F 30 02 */	sth r0, 0x3002(r31)
-/* 800F11E4 00000014  7F E3 FB 78 */	mr r3, r31
-/* 800F11E8 00000018  4B FF C8 91 */	bl setHorseTurnAnime__9daAlink_cFv
-/* 800F11EC 0000001C  38 60 00 01 */	li r3, 1
-/* 800F11F0 00000020  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 800F11F4 00000024  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 800F11F8 00000028  7C 08 03 A6 */	mtlr r0
-/* 800F11FC 0000002C  38 21 00 10 */	addi r1, r1, 0x10
-/* 800F1200 00000030  4E 80 00 20 */	blr 
+/* 800F11D0  7F E3 FB 78 */	mr r3, r31                              
+/* 800F11D4  4B FF C8 51 */	bl setSyncRidePos__9daAlink_cFv          /* constant-address: 800EDA24, symbol: setSyncRidePos__9daAlink_cFv */
+/* 800F11D8  38 00 00 00 */	li r0, 0                                
+/* 800F11DC  B0 1F 30 04 */	sth r0, 0x3004(r31)                     
+/* 800F11E0  B0 1F 30 02 */	sth r0, 0x3002(r31)                     
+/* 800F11E4  7F E3 FB 78 */	mr r3, r31                              
+/* 800F11E8  4B FF C8 91 */	bl setHorseTurnAnime__9daAlink_cFv       /* constant-address: 800EDA78, symbol: setHorseTurnAnime__9daAlink_cFv */
+/* 800F11EC  38 60 00 01 */	li r3, 1                                
+/* 800F11F0  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 800F11F4  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 800F11F8  7C 08 03 A6 */	mtlr r0                                 
+/* 800F11FC  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 800F1200  4E 80 00 20 */	blr                                     

@@ -1,64 +1,64 @@
 lbl_802C5D9C:
-/* 802C5D9C 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 802C5DA0 00000004  7C 08 02 A6 */	mflr r0
-/* 802C5DA4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802C5DA8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802C5DAC 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 802C5DB0 00000014  80 63 00 04 */	lwz r3, 4(r3)
-/* 802C5DB4 00000018  28 03 00 00 */	cmplwi r3, 0
-/* 802C5DB8 0000001C  41 82 00 C4 */	beq lbl_802C5E7C
-/* 802C5DBC 00000020  C0 22 C3 48 */	lfs f1, lit_3503(r2)
-/* 802C5DC0 00000024  C0 1F 00 10 */	lfs f0, 0x10(r31)
-/* 802C5DC4 00000028  FC 01 00 00 */	fcmpu cr0, f1, f0
-/* 802C5DC8 0000002C  40 82 00 44 */	bne lbl_802C5E0C
-/* 802C5DCC 00000030  C0 1F 00 14 */	lfs f0, 0x14(r31)
-/* 802C5DD0 00000034  FC 01 00 00 */	fcmpu cr0, f1, f0
-/* 802C5DD4 00000038  40 82 00 38 */	bne lbl_802C5E0C
-/* 802C5DD8 0000003C  C0 1F 00 18 */	lfs f0, 0x18(r31)
-/* 802C5DDC 00000040  FC 01 00 00 */	fcmpu cr0, f1, f0
-/* 802C5DE0 00000044  40 82 00 2C */	bne lbl_802C5E0C
-/* 802C5DE4 00000048  38 63 00 48 */	addi r3, r3, 0x48
-/* 802C5DE8 0000004C  C0 22 C3 60 */	lfs f1, lit_3574(r2)
-/* 802C5DEC 00000050  38 80 00 00 */	li r4, 0
-/* 802C5DF0 00000054  4B FD D0 CD */	bl movePan__18JAISoundParamsMoveFfUl
-/* 802C5DF4 00000058  80 7F 00 04 */	lwz r3, 4(r31)
-/* 802C5DF8 0000005C  38 63 00 48 */	addi r3, r3, 0x48
-/* 802C5DFC 00000060  C0 22 C3 60 */	lfs f1, lit_3574(r2)
-/* 802C5E00 00000064  38 80 00 00 */	li r4, 0
-/* 802C5E04 00000068  4B FD D1 11 */	bl moveDolby__18JAISoundParamsMoveFfUl
-/* 802C5E08 0000006C  48 00 00 74 */	b lbl_802C5E7C
+/* 802C5D9C  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 802C5DA0  7C 08 02 A6 */	mflr r0                                 
+/* 802C5DA4  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 802C5DA8  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 802C5DAC  7C 7F 1B 78 */	mr r31, r3                              
+/* 802C5DB0  80 63 00 04 */	lwz r3, 4(r3)                           
+/* 802C5DB4  28 03 00 00 */	cmplwi r3, 0                            
+/* 802C5DB8  41 82 00 C4 */	beq lbl_802C5E7C                         /* constant-address: 802C5E7C, symbol: lbl_802C5E7C */
+/* 802C5DBC  C0 22 C3 48 */	lfs f1, lit_3503(r2)                     /* constant-address: 80455D48, symbol: lit_3503 */
+/* 802C5DC0  C0 1F 00 10 */	lfs f0, 0x10(r31)                       
+/* 802C5DC4  FC 01 00 00 */	fcmpu cr0, f1, f0                       
+/* 802C5DC8  40 82 00 44 */	bne lbl_802C5E0C                         /* constant-address: 802C5E0C, symbol: lbl_802C5E0C */
+/* 802C5DCC  C0 1F 00 14 */	lfs f0, 0x14(r31)                       
+/* 802C5DD0  FC 01 00 00 */	fcmpu cr0, f1, f0                       
+/* 802C5DD4  40 82 00 38 */	bne lbl_802C5E0C                         /* constant-address: 802C5E0C, symbol: lbl_802C5E0C */
+/* 802C5DD8  C0 1F 00 18 */	lfs f0, 0x18(r31)                       
+/* 802C5DDC  FC 01 00 00 */	fcmpu cr0, f1, f0                       
+/* 802C5DE0  40 82 00 2C */	bne lbl_802C5E0C                         /* constant-address: 802C5E0C, symbol: lbl_802C5E0C */
+/* 802C5DE4  38 63 00 48 */	addi r3, r3, 0x48                       
+/* 802C5DE8  C0 22 C3 60 */	lfs f1, lit_3574(r2)                     /* constant-address: 80455D60, symbol: lit_3574 */
+/* 802C5DEC  38 80 00 00 */	li r4, 0                                
+/* 802C5DF0  4B FD D0 CD */	bl movePan__18JAISoundParamsMoveFfUl     /* constant-address: 802A2EBC, symbol: movePan__18JAISoundParamsMoveFfUl */
+/* 802C5DF4  80 7F 00 04 */	lwz r3, 4(r31)                          
+/* 802C5DF8  38 63 00 48 */	addi r3, r3, 0x48                       
+/* 802C5DFC  C0 22 C3 60 */	lfs f1, lit_3574(r2)                     /* constant-address: 80455D60, symbol: lit_3574 */
+/* 802C5E00  38 80 00 00 */	li r4, 0                                
+/* 802C5E04  4B FD D1 11 */	bl moveDolby__18JAISoundParamsMoveFfUl   /* constant-address: 802A2F14, symbol: moveDolby__18JAISoundParamsMoveFfUl */
+/* 802C5E08  48 00 00 74 */	b lbl_802C5E7C                           /* constant-address: 802C5E7C, symbol: lbl_802C5E7C */
 lbl_802C5E0C:
-/* 802C5E0C 00000000  80 6D 85 C4 */	lwz r3, data_80450B44(r13)
-/* 802C5E10 00000004  38 9F 00 10 */	addi r4, r31, 0x10
-/* 802C5E14 00000008  7C 85 23 78 */	mr r5, r4
-/* 802C5E18 0000000C  38 C0 00 00 */	li r6, 0
-/* 802C5E1C 00000010  4B FF 7B 11 */	bl convertAbsToRel__10Z2AudienceFR3VecP3Veci
-/* 802C5E20 00000014  38 7F 00 10 */	addi r3, r31, 0x10
-/* 802C5E24 00000018  7C 64 1B 78 */	mr r4, r3
-/* 802C5E28 0000001C  48 07 3C 09 */	bl JMAFastVECNormalize__FPC3VecP3Vec
-/* 802C5E2C 00000020  80 6D 85 C4 */	lwz r3, data_80450B44(r13)
-/* 802C5E30 00000024  38 9F 00 10 */	addi r4, r31, 0x10
-/* 802C5E34 00000028  38 A0 00 00 */	li r5, 0
-/* 802C5E38 0000002C  4B FF 7C 0D */	bl calcRelPosPan__10Z2AudienceFRC3Veci
-/* 802C5E3C 00000030  D0 3F 00 08 */	stfs f1, 8(r31)
-/* 802C5E40 00000034  80 6D 85 C4 */	lwz r3, data_80450B44(r13)
-/* 802C5E44 00000038  38 9F 00 10 */	addi r4, r31, 0x10
-/* 802C5E48 0000003C  38 A0 00 00 */	li r5, 0
-/* 802C5E4C 00000040  4B FF 7C F9 */	bl calcRelPosDolby__10Z2AudienceFRC3Veci
-/* 802C5E50 00000044  D0 3F 00 0C */	stfs f1, 0xc(r31)
-/* 802C5E54 00000048  80 7F 00 04 */	lwz r3, 4(r31)
-/* 802C5E58 0000004C  38 63 00 48 */	addi r3, r3, 0x48
-/* 802C5E5C 00000050  C0 3F 00 08 */	lfs f1, 8(r31)
-/* 802C5E60 00000054  38 80 00 00 */	li r4, 0
-/* 802C5E64 00000058  4B FD D0 59 */	bl movePan__18JAISoundParamsMoveFfUl
-/* 802C5E68 0000005C  80 7F 00 04 */	lwz r3, 4(r31)
-/* 802C5E6C 00000060  38 63 00 48 */	addi r3, r3, 0x48
-/* 802C5E70 00000064  C0 3F 00 0C */	lfs f1, 0xc(r31)
-/* 802C5E74 00000068  38 80 00 00 */	li r4, 0
-/* 802C5E78 0000006C  4B FD D0 9D */	bl moveDolby__18JAISoundParamsMoveFfUl
+/* 802C5E0C  80 6D 85 C4 */	lwz r3, data_80450B44(r13)               /* constant-address: 80450B44, symbol: data_80450B44 */
+/* 802C5E10  38 9F 00 10 */	addi r4, r31, 0x10                      
+/* 802C5E14  7C 85 23 78 */	mr r5, r4                               
+/* 802C5E18  38 C0 00 00 */	li r6, 0                                
+/* 802C5E1C  4B FF 7B 11 */	bl convertAbsToRel__10Z2AudienceFR3VecP3Veci /* constant-address: 802BD92C, symbol: convertAbsToRel__10Z2AudienceFR3VecP3Veci */
+/* 802C5E20  38 7F 00 10 */	addi r3, r31, 0x10                      
+/* 802C5E24  7C 64 1B 78 */	mr r4, r3                               
+/* 802C5E28  48 07 3C 09 */	bl JMAFastVECNormalize__FPC3VecP3Vec     /* constant-address: 80339A30, symbol: JMAFastVECNormalize__FPC3VecP3Vec */
+/* 802C5E2C  80 6D 85 C4 */	lwz r3, data_80450B44(r13)               /* constant-address: 80450B44, symbol: data_80450B44 */
+/* 802C5E30  38 9F 00 10 */	addi r4, r31, 0x10                      
+/* 802C5E34  38 A0 00 00 */	li r5, 0                                
+/* 802C5E38  4B FF 7C 0D */	bl calcRelPosPan__10Z2AudienceFRC3Veci   /* constant-address: 802BDA44, symbol: calcRelPosPan__10Z2AudienceFRC3Veci */
+/* 802C5E3C  D0 3F 00 08 */	stfs f1, 8(r31)                         
+/* 802C5E40  80 6D 85 C4 */	lwz r3, data_80450B44(r13)               /* constant-address: 80450B44, symbol: data_80450B44 */
+/* 802C5E44  38 9F 00 10 */	addi r4, r31, 0x10                      
+/* 802C5E48  38 A0 00 00 */	li r5, 0                                
+/* 802C5E4C  4B FF 7C F9 */	bl calcRelPosDolby__10Z2AudienceFRC3Veci /* constant-address: 802BDB44, symbol: calcRelPosDolby__10Z2AudienceFRC3Veci */
+/* 802C5E50  D0 3F 00 0C */	stfs f1, 0xc(r31)                       
+/* 802C5E54  80 7F 00 04 */	lwz r3, 4(r31)                          
+/* 802C5E58  38 63 00 48 */	addi r3, r3, 0x48                       
+/* 802C5E5C  C0 3F 00 08 */	lfs f1, 8(r31)                          
+/* 802C5E60  38 80 00 00 */	li r4, 0                                
+/* 802C5E64  4B FD D0 59 */	bl movePan__18JAISoundParamsMoveFfUl     /* constant-address: 802A2EBC, symbol: movePan__18JAISoundParamsMoveFfUl */
+/* 802C5E68  80 7F 00 04 */	lwz r3, 4(r31)                          
+/* 802C5E6C  38 63 00 48 */	addi r3, r3, 0x48                       
+/* 802C5E70  C0 3F 00 0C */	lfs f1, 0xc(r31)                        
+/* 802C5E74  38 80 00 00 */	li r4, 0                                
+/* 802C5E78  4B FD D0 9D */	bl moveDolby__18JAISoundParamsMoveFfUl   /* constant-address: 802A2F14, symbol: moveDolby__18JAISoundParamsMoveFfUl */
 lbl_802C5E7C:
-/* 802C5E7C 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 802C5E80 00000004  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 802C5E84 00000008  7C 08 03 A6 */	mtlr r0
-/* 802C5E88 0000000C  38 21 00 10 */	addi r1, r1, 0x10
-/* 802C5E8C 00000010  4E 80 00 20 */	blr 
+/* 802C5E7C  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 802C5E80  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 802C5E84  7C 08 03 A6 */	mtlr r0                                 
+/* 802C5E88  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 802C5E8C  4E 80 00 20 */	blr                                     

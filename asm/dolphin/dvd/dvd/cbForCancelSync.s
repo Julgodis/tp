@@ -1,10 +1,10 @@
 lbl_8034B5FC:
-/* 8034B5FC 00000000  7C 08 02 A6 */	mflr r0
-/* 8034B600 00000004  38 6D 91 F0 */	addi r3, r13, 0x80451770-0x80458580 /* __DVDThreadQueue-_SDA_BASE_ */
-/* 8034B604 00000008  90 01 00 04 */	stw r0, 4(r1)
-/* 8034B608 0000000C  94 21 FF F8 */	stwu r1, -8(r1)
-/* 8034B60C 00000010  4B FF 66 8D */	bl OSWakeupThread
-/* 8034B610 00000014  80 01 00 0C */	lwz r0, 0xc(r1)
-/* 8034B614 00000018  38 21 00 08 */	addi r1, r1, 8
-/* 8034B618 0000001C  7C 08 03 A6 */	mtlr r0
-/* 8034B61C 00000020  4E 80 00 20 */	blr 
+/* 8034B5FC  7C 08 02 A6 */	mflr r0                                 
+/* 8034B600  38 6D 91 F0 */	la r3, __DVDThreadQueue(r13) /* 80451770-_SDA_BASE_ */ /* constant-address: 80451770, symbol: __DVDThreadQueue */
+/* 8034B604  90 01 00 04 */	stw r0, 4(r1)                           
+/* 8034B608  94 21 FF F8 */	stwu r1, -8(r1)                         
+/* 8034B60C  4B FF 66 8D */	bl OSWakeupThread                        /* constant-address: 80341C98, symbol: OSWakeupThread */
+/* 8034B610  80 01 00 0C */	lwz r0, 0xc(r1)                         
+/* 8034B614  38 21 00 08 */	addi r1, r1, 8                          
+/* 8034B618  7C 08 03 A6 */	mtlr r0                                 
+/* 8034B61C  4E 80 00 20 */	blr                                     

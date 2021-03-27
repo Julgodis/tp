@@ -1,27 +1,27 @@
 lbl_80591E80:
-/* 80591E80 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80591E84 00000004  7C 08 02 A6 */	mflr r0
-/* 80591E88 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80591E8C 0000000C  7C 65 1B 78 */	mr r5, r3
-/* 80591E90 00000010  3C 60 00 08 */	lis r3, 0x0008 /* 0x00080149@ha */
-/* 80591E94 00000014  38 03 01 49 */	addi r0, r3, 0x0149 /* 0x00080149@l */
-/* 80591E98 00000018  90 01 00 08 */	stw r0, 8(r1)
-/* 80591E9C 0000001C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
-/* 80591EA0 00000020  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80591EA4 00000024  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
-/* 80591EA8 00000028  38 81 00 08 */	addi r4, r1, 8
-/* 80591EAC 0000002C  38 A5 0A 44 */	addi r5, r5, 0xa44
-/* 80591EB0 00000030  38 C0 00 00 */	li r6, 0
-/* 80591EB4 00000034  38 E0 00 00 */	li r7, 0
-/* 80591EB8 00000038  3D 00 80 59 */	lis r8, lit_4010@ha
-/* 80591EBC 0000003C  C0 28 29 0C */	lfs f1, lit_4010@l(r8)
-/* 80591EC0 00000040  FC 40 08 90 */	fmr f2, f1
-/* 80591EC4 00000044  3D 00 80 59 */	lis r8, lit_4684@ha
-/* 80591EC8 00000048  C0 68 29 5C */	lfs f3, lit_4684@l(r8)
-/* 80591ECC 0000004C  FC 80 18 90 */	fmr f4, f3
-/* 80591ED0 00000050  39 00 00 00 */	li r8, 0
-/* 80591ED4 00000054  4B D1 A6 38 */	b seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
-/* 80591ED8 00000058  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80591EDC 0000005C  7C 08 03 A6 */	mtlr r0
-/* 80591EE0 00000060  38 21 00 10 */	addi r1, r1, 0x10
-/* 80591EE4 00000064  4E 80 00 20 */	blr 
+/* 80591E80  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80591E84  7C 08 02 A6 */	mflr r0
+/* 80591E88  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80591E8C  7C 65 1B 78 */	mr r5, r3
+/* 80591E90  3C 60 00 08 */	lis r3, 0x0008 /* 0x00080149@ha */
+/* 80591E94  38 03 01 49 */	addi r0, r3, 0x0149 /* 0x00080149@l */
+/* 80591E98  90 01 00 08 */	stw r0, 8(r1)
+/* 80591E9C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
+/* 80591EA0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 80591EA4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80591EA8  38 81 00 08 */	addi r4, r1, 8
+/* 80591EAC  38 A5 0A 44 */	addi r5, r5, 0xa44
+/* 80591EB0  38 C0 00 00 */	li r6, 0
+/* 80591EB4  38 E0 00 00 */	li r7, 0
+/* 80591EB8  3D 00 80 59 */	lis r8, lit_4010@ha
+/* 80591EBC  C0 28 29 0C */	lfs f1, lit_4010@l(r8)
+/* 80591EC0  FC 40 08 90 */	fmr f2, f1
+/* 80591EC4  3D 00 80 59 */	lis r8, lit_4684@ha
+/* 80591EC8  C0 68 29 5C */	lfs f3, lit_4684@l(r8)
+/* 80591ECC  FC 80 18 90 */	fmr f4, f3
+/* 80591ED0  39 00 00 00 */	li r8, 0
+/* 80591ED4  4B D1 A6 38 */	b seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
+/* 80591ED8  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80591EDC  7C 08 03 A6 */	mtlr r0
+/* 80591EE0  38 21 00 10 */	addi r1, r1, 0x10
+/* 80591EE4  4E 80 00 20 */	blr 

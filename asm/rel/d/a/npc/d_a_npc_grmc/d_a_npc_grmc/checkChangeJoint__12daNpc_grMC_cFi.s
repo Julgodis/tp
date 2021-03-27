@@ -1,5 +1,5 @@
 lbl_809D8FEC:
-/* 809D8FEC 00000000  20 04 00 04 */	subfic r0, r4, 4
-/* 809D8FF0 00000004  7C 00 00 34 */	cntlzw r0, r0
-/* 809D8FF4 00000008  54 03 DE 3E */	rlwinm r3, r0, 0x1b, 0x18, 0x1f
-/* 809D8FF8 0000000C  4E 80 00 20 */	blr 
+/* 809D8FEC  20 04 00 04 */	subfic r0, r4, 4
+/* 809D8FF0  7C 00 00 34 */	cntlzw r0, r0
+/* 809D8FF4  54 03 DE 3E */	rlwinm r3, r0, 0x1b, 0x18, 0x1f
+/* 809D8FF8  4E 80 00 20 */	blr 

@@ -1,6 +1,6 @@
 lbl_8021E2C8:
-/* 8021E2C8 00000000  54 60 10 3A */	slwi r0, r3, 2
-/* 8021E2CC 00000004  3C 60 80 3C */	lis r3, data_803BF7F4@ha
-/* 8021E2D0 00000008  38 63 F7 F4 */	addi r3, r3, data_803BF7F4@l
-/* 8021E2D4 0000000C  7C 63 00 2E */	lwzx r3, r3, r0
-/* 8021E2D8 00000010  4E 80 00 20 */	blr 
+/* 8021E2C8  54 60 10 3A */	slwi r0, r3, 2                          
+/* 8021E2CC  3C 60 80 3C */	lis r3, data_803BF7F4@ha                
+/* 8021E2D0  38 63 F7 F4 */	addi r3, r3, data_803BF7F4@l             /* constant-address: 803BF7F4, symbol: data_803BF7F4 */
+/* 8021E2D4  7C 63 00 2E */	lwzx r3, r3, r0                         
+/* 8021E2D8  4E 80 00 20 */	blr                                     

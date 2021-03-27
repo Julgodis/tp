@@ -1,117 +1,117 @@
 lbl_80339AEC:
-/* 80339AEC 00000000  94 21 FF 90 */	stwu r1, -0x70(r1)
-/* 80339AF0 00000004  7C 08 02 A6 */	mflr r0
-/* 80339AF4 00000008  90 01 00 74 */	stw r0, 0x74(r1)
-/* 80339AF8 0000000C  DB E1 00 60 */	stfd f31, 0x60(r1)
-/* 80339AFC 00000010  F3 E1 00 68 */	psq_st f31, 104(r1), 0, 0 /* qr0 */
-/* 80339B00 00000000  DB C1 00 50 */	stfd f30, 0x50(r1)
-/* 80339B04 00000018  F3 C1 00 58 */	psq_st f30, 88(r1), 0, 0 /* qr0 */
-/* 80339B08 00000000  DB A1 00 40 */	stfd f29, 0x40(r1)
-/* 80339B0C 00000020  F3 A1 00 48 */	psq_st f29, 72(r1), 0, 0 /* qr0 */
-/* 80339B10 00000000  DB 81 00 30 */	stfd f28, 0x30(r1)
-/* 80339B14 00000004  F3 81 00 38 */	psq_st f28, 56(r1), 0, 0 /* qr0 */
-/* 80339B18 00000008  39 61 00 30 */	addi r11, r1, 0x30
-/* 80339B1C 0000000C  48 02 86 B9 */	bl _savegpr_27
-/* 80339B20 00000010  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
-/* 80339B24 00000014  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
-/* 80339B28 00000018  3C 80 80 34 */	lis r4, func_80339CB0@ha
-/* 80339B2C 0000001C  38 84 9C B0 */	addi r4, r4, func_80339CB0@l
-/* 80339B30 00000020  38 A0 00 00 */	li r5, 0
-/* 80339B34 00000024  38 C0 00 08 */	li r6, 8
-/* 80339B38 00000028  38 E0 20 00 */	li r7, 0x2000
-/* 80339B3C 0000002C  48 02 82 25 */	bl __construct_array
-/* 80339B40 00000030  3B 80 00 00 */	li r28, 0
-/* 80339B44 00000034  7F 9F E3 78 */	mr r31, r28
-/* 80339B48 00000038  CB A2 CB 00 */	lfd f29, lit_441(r2)
-/* 80339B4C 0000003C  3F C0 43 30 */	lis r30, 0x4330
-/* 80339B50 00000040  CB E2 CA E0 */	lfd f31, lit_436(r2)
-/* 80339B54 00000044  CB C2 CA E8 */	lfd f30, lit_437(r2)
-/* 80339B58 00000048  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
-/* 80339B5C 0000004C  3B A3 9A 20 */	addi r29, r3, sincosTable___5JMath@l
+/* 80339AEC  94 21 FF 90 */	stwu r1, -0x70(r1)                      
+/* 80339AF0  7C 08 02 A6 */	mflr r0                                 
+/* 80339AF4  90 01 00 74 */	stw r0, 0x74(r1)                        
+/* 80339AF8  DB E1 00 60 */	stfd f31, 0x60(r1)                      
+/* 80339AFC  F3 E1 00 68 */	psq_st f31, 104(r1), 0, 0 /* qr0 */     
+/* 80339B00  DB C1 00 50 */	stfd f30, 0x50(r1)                      
+/* 80339B04  F3 C1 00 58 */	psq_st f30, 88(r1), 0, 0 /* qr0 */      
+/* 80339B08  DB A1 00 40 */	stfd f29, 0x40(r1)                      
+/* 80339B0C  F3 A1 00 48 */	psq_st f29, 72(r1), 0, 0 /* qr0 */      
+/* 80339B10  DB 81 00 30 */	stfd f28, 0x30(r1)                      
+/* 80339B14  F3 81 00 38 */	psq_st f28, 56(r1), 0, 0 /* qr0 */      
+/* 80339B18  39 61 00 30 */	addi r11, r1, 0x30                      
+/* 80339B1C  48 02 86 B9 */	bl _savegpr_27                           /* constant-address: 803621D4, symbol: _savegpr_27 */
+/* 80339B20  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha         
+/* 80339B24  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l      /* constant-address: 80439A20, symbol: sincosTable___5JMath */
+/* 80339B28  3C 80 80 34 */	lis r4, func_80339CB0@ha                
+/* 80339B2C  38 84 9C B0 */	addi r4, r4, func_80339CB0@l             /* constant-address: 80339CB0, symbol: func_80339CB0 */
+/* 80339B30  38 A0 00 00 */	li r5, 0                                
+/* 80339B34  38 C0 00 08 */	li r6, 8                                
+/* 80339B38  38 E0 20 00 */	li r7, 0x2000                           
+/* 80339B3C  48 02 82 25 */	bl __construct_array                     /* constant-address: 80361D60, symbol: __construct_array */
+/* 80339B40  3B 80 00 00 */	li r28, 0                               
+/* 80339B44  7F 9F E3 78 */	mr r31, r28                             
+/* 80339B48  CB A2 CB 00 */	lfd f29, lit_441(r2)                     /* constant-address: 80456500, symbol: lit_441 */
+/* 80339B4C  3F C0 43 30 */	lis r30, 0x4330                         
+/* 80339B50  CB E2 CA E0 */	lfd f31, lit_436(r2)                     /* constant-address: 804564E0, symbol: lit_436 */
+/* 80339B54  CB C2 CA E8 */	lfd f30, lit_437(r2)                     /* constant-address: 804564E8, symbol: lit_437 */
+/* 80339B58  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha         
+/* 80339B5C  3B A3 9A 20 */	addi r29, r3, sincosTable___5JMath@l     /* constant-address: 80439A20, symbol: sincosTable___5JMath */
 lbl_80339B60:
-/* 80339B60 00000000  6F 80 80 00 */	xoris r0, r28, 0x8000
-/* 80339B64 00000004  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80339B68 00000008  93 C1 00 08 */	stw r30, 8(r1)
-/* 80339B6C 0000000C  C8 01 00 08 */	lfd f0, 8(r1)
-/* 80339B70 00000010  FC 00 E8 28 */	fsub f0, f0, f29
-/* 80339B74 00000014  FC 00 07 F2 */	fmul f0, f0, f31
-/* 80339B78 00000018  FF 80 F0 24 */	fdiv f28, f0, f30
-/* 80339B7C 0000001C  FC 20 E0 90 */	fmr f1, f28
-/* 80339B80 00000020  48 03 2A 11 */	bl sin
-/* 80339B84 00000024  FC 00 08 18 */	frsp f0, f1
-/* 80339B88 00000028  7F 7D FA 14 */	add r27, r29, r31
-/* 80339B8C 0000002C  D0 1B 00 00 */	stfs f0, 0(r27)
-/* 80339B90 00000030  FC 20 E0 90 */	fmr f1, f28
-/* 80339B94 00000034  48 03 24 95 */	bl cos
-/* 80339B98 00000038  FC 00 08 18 */	frsp f0, f1
-/* 80339B9C 0000003C  D0 1B 00 04 */	stfs f0, 4(r27)
-/* 80339BA0 00000040  3B 9C 00 01 */	addi r28, r28, 1
-/* 80339BA4 00000044  2C 1C 20 00 */	cmpwi r28, 0x2000
-/* 80339BA8 00000048  3B FF 00 08 */	addi r31, r31, 8
-/* 80339BAC 0000004C  41 80 FF B4 */	blt lbl_80339B60
-/* 80339BB0 00000050  3B 80 00 00 */	li r28, 0
-/* 80339BB4 00000054  3B E0 00 00 */	li r31, 0
-/* 80339BB8 00000058  CB E2 CB 00 */	lfd f31, lit_441(r2)
-/* 80339BBC 0000005C  3F C0 43 30 */	lis r30, 0x4330
-/* 80339BC0 00000060  CB C2 CA F0 */	lfd f30, lit_438(r2)
-/* 80339BC4 00000064  3C 60 80 45 */	lis r3, atanTable___5JMath@ha
-/* 80339BC8 00000068  3B A3 9A 20 */	addi r29, r3, atanTable___5JMath@l
+/* 80339B60  6F 80 80 00 */	xoris r0, r28, 0x8000                   
+/* 80339B64  90 01 00 0C */	stw r0, 0xc(r1)                         
+/* 80339B68  93 C1 00 08 */	stw r30, 8(r1)                          
+/* 80339B6C  C8 01 00 08 */	lfd f0, 8(r1)                           
+/* 80339B70  FC 00 E8 28 */	fsub f0, f0, f29                        
+/* 80339B74  FC 00 07 F2 */	fmul f0, f0, f31                        
+/* 80339B78  FF 80 F0 24 */	fdiv f28, f0, f30                       
+/* 80339B7C  FC 20 E0 90 */	fmr f1, f28                             
+/* 80339B80  48 03 2A 11 */	bl sin                                   /* constant-address: 8036C590, symbol: sin */
+/* 80339B84  FC 00 08 18 */	frsp f0, f1                             
+/* 80339B88  7F 7D FA 14 */	add r27, r29, r31                       
+/* 80339B8C  D0 1B 00 00 */	stfs f0, 0(r27)                         
+/* 80339B90  FC 20 E0 90 */	fmr f1, f28                             
+/* 80339B94  48 03 24 95 */	bl cos                                   /* constant-address: 8036C028, symbol: cos */
+/* 80339B98  FC 00 08 18 */	frsp f0, f1                             
+/* 80339B9C  D0 1B 00 04 */	stfs f0, 4(r27)                         
+/* 80339BA0  3B 9C 00 01 */	addi r28, r28, 1                        
+/* 80339BA4  2C 1C 20 00 */	cmpwi r28, 0x2000                       
+/* 80339BA8  3B FF 00 08 */	addi r31, r31, 8                        
+/* 80339BAC  41 80 FF B4 */	blt lbl_80339B60                         /* constant-address: 80339B60, symbol: lbl_80339B60 */
+/* 80339BB0  3B 80 00 00 */	li r28, 0                               
+/* 80339BB4  3B E0 00 00 */	li r31, 0                               
+/* 80339BB8  CB E2 CB 00 */	lfd f31, lit_441(r2)                     /* constant-address: 80456500, symbol: lit_441 */
+/* 80339BBC  3F C0 43 30 */	lis r30, 0x4330                         
+/* 80339BC0  CB C2 CA F0 */	lfd f30, lit_438(r2)                     /* constant-address: 804564F0, symbol: lit_438 */
+/* 80339BC4  3C 60 80 45 */	lis r3, atanTable___5JMath@ha           
+/* 80339BC8  3B A3 9A 20 */	addi r29, r3, atanTable___5JMath@l       /* constant-address: 80449A20, symbol: atanTable___5JMath */
 lbl_80339BCC:
-/* 80339BCC 00000000  6F 80 80 00 */	xoris r0, r28, 0x8000
-/* 80339BD0 00000004  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80339BD4 00000008  93 C1 00 08 */	stw r30, 8(r1)
-/* 80339BD8 0000000C  C8 01 00 08 */	lfd f0, 8(r1)
-/* 80339BDC 00000010  FC 00 F8 28 */	fsub f0, f0, f31
-/* 80339BE0 00000014  FC 20 07 B2 */	fmul f1, f0, f30
-/* 80339BE4 00000018  48 03 20 C1 */	bl atan
-/* 80339BE8 0000001C  FC 00 08 18 */	frsp f0, f1
-/* 80339BEC 00000020  7C 1D FD 2E */	stfsx f0, r29, r31
-/* 80339BF0 00000024  3B 9C 00 01 */	addi r28, r28, 1
-/* 80339BF4 00000028  28 1C 04 00 */	cmplwi r28, 0x400
-/* 80339BF8 0000002C  3B FF 00 04 */	addi r31, r31, 4
-/* 80339BFC 00000030  41 80 FF D0 */	blt lbl_80339BCC
-/* 80339C00 00000034  C0 02 CA D8 */	lfs f0, lit_326(r2)
-/* 80339C04 00000038  3C 60 80 45 */	lis r3, atanTable___5JMath@ha
-/* 80339C08 0000003C  D4 03 9A 20 */	stfsu f0, atanTable___5JMath@l(r3)
-/* 80339C0C 00000040  C0 02 CA F8 */	lfs f0, lit_439(r2)
-/* 80339C10 00000044  D0 03 10 00 */	stfs f0, 0x1000(r3)	/* effective address: 80451000 */
-/* 80339C14 00000048  3B 80 00 00 */	li r28, 0
-/* 80339C18 0000004C  3B E0 00 00 */	li r31, 0
-/* 80339C1C 00000050  CB C2 CB 00 */	lfd f30, lit_441(r2)
-/* 80339C20 00000054  3F A0 43 30 */	lis r29, 0x4330
-/* 80339C24 00000058  CB E2 CA F0 */	lfd f31, lit_438(r2)
-/* 80339C28 0000005C  3C 60 80 45 */	lis r3, asinAcosTable___5JMath@ha
-/* 80339C2C 00000060  3B C3 AA 40 */	addi r30, r3, asinAcosTable___5JMath@l
+/* 80339BCC  6F 80 80 00 */	xoris r0, r28, 0x8000                   
+/* 80339BD0  90 01 00 0C */	stw r0, 0xc(r1)                         
+/* 80339BD4  93 C1 00 08 */	stw r30, 8(r1)                          
+/* 80339BD8  C8 01 00 08 */	lfd f0, 8(r1)                           
+/* 80339BDC  FC 00 F8 28 */	fsub f0, f0, f31                        
+/* 80339BE0  FC 20 07 B2 */	fmul f1, f0, f30                        
+/* 80339BE4  48 03 20 C1 */	bl atan                                  /* constant-address: 8036BCA4, symbol: atan */
+/* 80339BE8  FC 00 08 18 */	frsp f0, f1                             
+/* 80339BEC  7C 1D FD 2E */	stfsx f0, r29, r31                      
+/* 80339BF0  3B 9C 00 01 */	addi r28, r28, 1                        
+/* 80339BF4  28 1C 04 00 */	cmplwi r28, 0x400                       
+/* 80339BF8  3B FF 00 04 */	addi r31, r31, 4                        
+/* 80339BFC  41 80 FF D0 */	blt lbl_80339BCC                         /* constant-address: 80339BCC, symbol: lbl_80339BCC */
+/* 80339C00  C0 02 CA D8 */	lfs f0, lit_326(r2)                      /* constant-address: 804564D8, symbol: lit_326 */
+/* 80339C04  3C 60 80 45 */	lis r3, atanTable___5JMath@ha           
+/* 80339C08  D4 03 9A 20 */	stfsu f0, atanTable___5JMath@l(r3)       /* constant-address: 80449A20, symbol: atanTable___5JMath */
+/* 80339C0C  C0 02 CA F8 */	lfs f0, lit_439(r2)                      /* constant-address: 804564F8, symbol: lit_439 */
+/* 80339C10  D0 03 10 00 */	stfs f0, 0x1000(r3)                      /* constant-address: 8044AA20, symbol: None */
+/* 80339C14  3B 80 00 00 */	li r28, 0                               
+/* 80339C18  3B E0 00 00 */	li r31, 0                               
+/* 80339C1C  CB C2 CB 00 */	lfd f30, lit_441(r2)                     /* constant-address: 80456500, symbol: lit_441 */
+/* 80339C20  3F A0 43 30 */	lis r29, 0x4330                         
+/* 80339C24  CB E2 CA F0 */	lfd f31, lit_438(r2)                     /* constant-address: 804564F0, symbol: lit_438 */
+/* 80339C28  3C 60 80 45 */	lis r3, asinAcosTable___5JMath@ha       
+/* 80339C2C  3B C3 AA 40 */	addi r30, r3, asinAcosTable___5JMath@l   /* constant-address: 8044AA40, symbol: asinAcosTable___5JMath */
 lbl_80339C30:
-/* 80339C30 00000000  6F 80 80 00 */	xoris r0, r28, 0x8000
-/* 80339C34 00000004  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80339C38 00000008  93 A1 00 08 */	stw r29, 8(r1)
-/* 80339C3C 0000000C  C8 01 00 08 */	lfd f0, 8(r1)
-/* 80339C40 00000010  FC 00 F0 28 */	fsub f0, f0, f30
-/* 80339C44 00000014  FC 20 07 F2 */	fmul f1, f0, f31
-/* 80339C48 00000018  48 03 2A B9 */	bl asin
-/* 80339C4C 0000001C  FC 00 08 18 */	frsp f0, f1
-/* 80339C50 00000020  7C 1E FD 2E */	stfsx f0, r30, r31
-/* 80339C54 00000024  3B 9C 00 01 */	addi r28, r28, 1
-/* 80339C58 00000028  2C 1C 04 00 */	cmpwi r28, 0x400
-/* 80339C5C 0000002C  3B FF 00 04 */	addi r31, r31, 4
-/* 80339C60 00000030  41 80 FF D0 */	blt lbl_80339C30
-/* 80339C64 00000034  C0 02 CA D8 */	lfs f0, lit_326(r2)
-/* 80339C68 00000038  3C 60 80 45 */	lis r3, asinAcosTable___5JMath@ha
-/* 80339C6C 0000003C  D4 03 AA 40 */	stfsu f0, asinAcosTable___5JMath@l(r3)
-/* 80339C70 00000040  C0 02 CA F8 */	lfs f0, lit_439(r2)
-/* 80339C74 00000044  D0 03 10 00 */	stfs f0, 0x1000(r3)	/* effective address: 80451000 */
-/* 80339C78 00000048  E3 E1 00 68 */	psq_l f31, 104(r1), 0, 0 /* qr0 */
-/* 80339C7C 00000000  CB E1 00 60 */	lfd f31, 0x60(r1)
-/* 80339C80 00000050  E3 C1 00 58 */	psq_l f30, 88(r1), 0, 0 /* qr0 */
-/* 80339C84 00000000  CB C1 00 50 */	lfd f30, 0x50(r1)
-/* 80339C88 00000058  E3 A1 00 48 */	psq_l f29, 72(r1), 0, 0 /* qr0 */
-/* 80339C8C 00000000  CB A1 00 40 */	lfd f29, 0x40(r1)
-/* 80339C90 00000060  E3 81 00 38 */	psq_l f28, 56(r1), 0, 0 /* qr0 */
-/* 80339C94 00000000  CB 81 00 30 */	lfd f28, 0x30(r1)
-/* 80339C98 00000004  39 61 00 30 */	addi r11, r1, 0x30
-/* 80339C9C 00000008  48 02 85 85 */	bl _restgpr_27
-/* 80339CA0 0000000C  80 01 00 74 */	lwz r0, 0x74(r1)
-/* 80339CA4 00000010  7C 08 03 A6 */	mtlr r0
-/* 80339CA8 00000014  38 21 00 70 */	addi r1, r1, 0x70
-/* 80339CAC 00000018  4E 80 00 20 */	blr 
+/* 80339C30  6F 80 80 00 */	xoris r0, r28, 0x8000                   
+/* 80339C34  90 01 00 0C */	stw r0, 0xc(r1)                         
+/* 80339C38  93 A1 00 08 */	stw r29, 8(r1)                          
+/* 80339C3C  C8 01 00 08 */	lfd f0, 8(r1)                           
+/* 80339C40  FC 00 F0 28 */	fsub f0, f0, f30                        
+/* 80339C44  FC 20 07 F2 */	fmul f1, f0, f31                        
+/* 80339C48  48 03 2A B9 */	bl asin                                  /* constant-address: 8036C700, symbol: asin */
+/* 80339C4C  FC 00 08 18 */	frsp f0, f1                             
+/* 80339C50  7C 1E FD 2E */	stfsx f0, r30, r31                      
+/* 80339C54  3B 9C 00 01 */	addi r28, r28, 1                        
+/* 80339C58  2C 1C 04 00 */	cmpwi r28, 0x400                        
+/* 80339C5C  3B FF 00 04 */	addi r31, r31, 4                        
+/* 80339C60  41 80 FF D0 */	blt lbl_80339C30                         /* constant-address: 80339C30, symbol: lbl_80339C30 */
+/* 80339C64  C0 02 CA D8 */	lfs f0, lit_326(r2)                      /* constant-address: 804564D8, symbol: lit_326 */
+/* 80339C68  3C 60 80 45 */	lis r3, asinAcosTable___5JMath@ha       
+/* 80339C6C  D4 03 AA 40 */	stfsu f0, asinAcosTable___5JMath@l(r3)   /* constant-address: 8044AA40, symbol: asinAcosTable___5JMath */
+/* 80339C70  C0 02 CA F8 */	lfs f0, lit_439(r2)                      /* constant-address: 804564F8, symbol: lit_439 */
+/* 80339C74  D0 03 10 00 */	stfs f0, 0x1000(r3)                      /* constant-address: 8044BA40, symbol: None */
+/* 80339C78  E3 E1 00 68 */	psq_l f31, 104(r1), 0, 0 /* qr0 */      
+/* 80339C7C  CB E1 00 60 */	lfd f31, 0x60(r1)                       
+/* 80339C80  E3 C1 00 58 */	psq_l f30, 88(r1), 0, 0 /* qr0 */       
+/* 80339C84  CB C1 00 50 */	lfd f30, 0x50(r1)                       
+/* 80339C88  E3 A1 00 48 */	psq_l f29, 72(r1), 0, 0 /* qr0 */       
+/* 80339C8C  CB A1 00 40 */	lfd f29, 0x40(r1)                       
+/* 80339C90  E3 81 00 38 */	psq_l f28, 56(r1), 0, 0 /* qr0 */       
+/* 80339C94  CB 81 00 30 */	lfd f28, 0x30(r1)                       
+/* 80339C98  39 61 00 30 */	addi r11, r1, 0x30                      
+/* 80339C9C  48 02 85 85 */	bl _restgpr_27                           /* constant-address: 80362220, symbol: _restgpr_27 */
+/* 80339CA0  80 01 00 74 */	lwz r0, 0x74(r1)                        
+/* 80339CA4  7C 08 03 A6 */	mtlr r0                                 
+/* 80339CA8  38 21 00 70 */	addi r1, r1, 0x70                       
+/* 80339CAC  4E 80 00 20 */	blr                                     

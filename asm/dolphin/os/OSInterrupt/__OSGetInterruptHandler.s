@@ -1,6 +1,6 @@
 lbl_8033D75C:
-/* 8033D75C 00000000  7C 60 07 34 */	extsh r0, r3
-/* 8033D760 00000004  80 6D 90 F0 */	lwz r3, InterruptHandlerTable(r13)
-/* 8033D764 00000008  54 00 10 3A */	slwi r0, r0, 2
-/* 8033D768 0000000C  7C 63 00 2E */	lwzx r3, r3, r0
-/* 8033D76C 00000010  4E 80 00 20 */	blr 
+/* 8033D75C  7C 60 07 34 */	extsh r0, r3                            
+/* 8033D760  80 6D 90 F0 */	lwz r3, InterruptHandlerTable(r13)       /* constant-address: 80451670, symbol: InterruptHandlerTable */
+/* 8033D764  54 00 10 3A */	slwi r0, r0, 2                          
+/* 8033D768  7C 63 00 2E */	lwzx r3, r3, r0                         
+/* 8033D76C  4E 80 00 20 */	blr                                     

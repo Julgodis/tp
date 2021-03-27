@@ -1,34 +1,34 @@
 lbl_80101CF4:
-/* 80101CF4 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 80101CF8 00000004  7C 08 02 A6 */	mflr r0
-/* 80101CFC 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80101D00 0000000C  DB E1 00 10 */	stfd f31, 0x10(r1)
-/* 80101D04 00000010  F3 E1 00 18 */	psq_st f31, 24(r1), 0, 0 /* qr0 */
-/* 80101D08 00000000  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80101D0C 00000004  7C 9F 23 78 */	mr r31, r4
-/* 80101D10 00000008  FF E0 08 90 */	fmr f31, f1
-/* 80101D14 0000000C  80 03 05 70 */	lwz r0, 0x570(r3)
-/* 80101D18 00000010  54 00 02 11 */	rlwinm. r0, r0, 0, 8, 8
-/* 80101D1C 00000014  41 82 00 34 */	beq lbl_80101D50
-/* 80101D20 00000018  4B FB E0 91 */	bl checkZoraWearAbility__9daAlink_cCFv
-/* 80101D24 0000001C  2C 03 00 00 */	cmpwi r3, 0
-/* 80101D28 00000020  41 82 00 18 */	beq lbl_80101D40
-/* 80101D2C 00000024  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
-/* 80101D30 00000028  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
-/* 80101D34 0000002C  C0 03 00 48 */	lfs f0, 0x48(r3)	/* effective address: 8038E83C */
-/* 80101D38 00000030  EF FF 00 32 */	fmuls f31, f31, f0
-/* 80101D3C 00000034  48 00 00 14 */	b lbl_80101D50
+/* 80101CF4  94 21 FF E0 */	stwu r1, -0x20(r1)                      
+/* 80101CF8  7C 08 02 A6 */	mflr r0                                 
+/* 80101CFC  90 01 00 24 */	stw r0, 0x24(r1)                        
+/* 80101D00  DB E1 00 10 */	stfd f31, 0x10(r1)                      
+/* 80101D04  F3 E1 00 18 */	psq_st f31, 24(r1), 0, 0 /* qr0 */      
+/* 80101D08  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 80101D0C  7C 9F 23 78 */	mr r31, r4                              
+/* 80101D10  FF E0 08 90 */	fmr f31, f1                             
+/* 80101D14  80 03 05 70 */	lwz r0, 0x570(r3)                       
+/* 80101D18  54 00 02 11 */	rlwinm. r0, r0, 0, 8, 8                 
+/* 80101D1C  41 82 00 34 */	beq lbl_80101D50                         /* constant-address: 80101D50, symbol: lbl_80101D50 */
+/* 80101D20  4B FB E0 91 */	bl checkZoraWearAbility__9daAlink_cCFv   /* constant-address: 800BFDB0, symbol: checkZoraWearAbility__9daAlink_cCFv */
+/* 80101D24  2C 03 00 00 */	cmpwi r3, 0                             
+/* 80101D28  41 82 00 18 */	beq lbl_80101D40                         /* constant-address: 80101D40, symbol: lbl_80101D40 */
+/* 80101D2C  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
+/* 80101D30  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l /* constant-address: 8038E7F4, symbol: m__24daAlinkHIO_magneBoots_c0 */
+/* 80101D34  C0 03 00 48 */	lfs f0, 0x48(r3)                         /* constant-address: 8038E83C, symbol: None */
+/* 80101D38  EF FF 00 32 */	fmuls f31, f31, f0                      
+/* 80101D3C  48 00 00 14 */	b lbl_80101D50                           /* constant-address: 80101D50, symbol: lbl_80101D50 */
 lbl_80101D40:
-/* 80101D40 00000000  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
-/* 80101D44 00000004  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
-/* 80101D48 00000008  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 8038E820 */
-/* 80101D4C 0000000C  EF FF 00 32 */	fmuls f31, f31, f0
+/* 80101D40  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
+/* 80101D44  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l /* constant-address: 8038E7F4, symbol: m__24daAlinkHIO_magneBoots_c0 */
+/* 80101D48  C0 03 00 2C */	lfs f0, 0x2c(r3)                         /* constant-address: 8038E820, symbol: None */
+/* 80101D4C  EF FF 00 32 */	fmuls f31, f31, f0                      
 lbl_80101D50:
-/* 80101D50 00000000  D3 FF 00 0C */	stfs f31, 0xc(r31)
-/* 80101D54 00000004  E3 E1 00 18 */	psq_l f31, 24(r1), 0, 0 /* qr0 */
-/* 80101D58 00000000  CB E1 00 10 */	lfd f31, 0x10(r1)
-/* 80101D5C 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80101D60 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 80101D64 0000000C  7C 08 03 A6 */	mtlr r0
-/* 80101D68 00000010  38 21 00 20 */	addi r1, r1, 0x20
-/* 80101D6C 00000014  4E 80 00 20 */	blr 
+/* 80101D50  D3 FF 00 0C */	stfs f31, 0xc(r31)                      
+/* 80101D54  E3 E1 00 18 */	psq_l f31, 24(r1), 0, 0 /* qr0 */       
+/* 80101D58  CB E1 00 10 */	lfd f31, 0x10(r1)                       
+/* 80101D5C  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 80101D60  80 01 00 24 */	lwz r0, 0x24(r1)                        
+/* 80101D64  7C 08 03 A6 */	mtlr r0                                 
+/* 80101D68  38 21 00 20 */	addi r1, r1, 0x20                       
+/* 80101D6C  4E 80 00 20 */	blr                                     

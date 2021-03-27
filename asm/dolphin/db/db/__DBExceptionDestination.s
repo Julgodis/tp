@@ -1,5 +1,5 @@
 lbl_80346408:
-/* 80346408 00000000  7C 60 00 A6 */	mfmsr r3
-/* 8034640C 00000004  60 63 00 30 */	ori r3, r3, 0x30
-/* 80346410 00000008  7C 60 01 24 */	mtmsr r3
-/* 80346414 0000000C  4B FF FF AC */	b __DBExceptionDestinationAux
+/* 80346408  7C 60 00 A6 */	mfmsr r3                                
+/* 8034640C  60 63 00 30 */	ori r3, r3, 0x30                        
+/* 80346410  7C 60 01 24 */	mtmsr r3                                
+/* 80346414  4B FF FF AC */	b __DBExceptionDestinationAux            /* constant-address: 803463C0, symbol: __DBExceptionDestinationAux */

@@ -1,3 +1,3 @@
 lbl_80267F80:
-/* 80267F80 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 80267F84 00000004  4B FF FE 38 */	b __dt__11cBgS_LinChkFv
+/* 80267F80  38 63 FF EC */	addi r3, r3, -20                        
+/* 80267F84  4B FF FE 38 */	b __dt__11cBgS_LinChkFv                  /* constant-address: 80267DBC, symbol: __dt__11cBgS_LinChkFv */

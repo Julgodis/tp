@@ -1,5 +1,5 @@
 lbl_80340580:
-/* 80340580 00000000  3C 60 80 45 */	lis r3, Scb@ha
-/* 80340584 00000004  38 63 BB 20 */	addi r3, r3, Scb@l
-/* 80340588 00000008  80 63 00 4C */	lwz r3, 0x4c(r3)	/* effective address: 8044BB6C */
-/* 8034058C 0000000C  4E 80 00 20 */	blr 
+/* 80340580  3C 60 80 45 */	lis r3, Scb@ha                          
+/* 80340584  38 63 BB 20 */	addi r3, r3, Scb@l                       /* constant-address: 8044BB20, symbol: Scb */
+/* 80340588  80 63 00 4C */	lwz r3, 0x4c(r3)                         /* constant-address: 8044BB6C, symbol: None */
+/* 8034058C  4E 80 00 20 */	blr                                     

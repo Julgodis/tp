@@ -1,25 +1,25 @@
 lbl_800C39EC:
-/* 800C39EC 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 800C39F0 00000004  7C 08 02 A6 */	mflr r0
-/* 800C39F4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 800C39F8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 800C39FC 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 800C3A00 00000014  38 80 00 07 */	li r4, 7
-/* 800C3A04 00000018  4B FF F3 A1 */	bl commonProcInitNotSameProc__9daAlink_cFQ29daAlink_c12daAlink_PROC
-/* 800C3A08 0000001C  2C 03 00 00 */	cmpwi r3, 0
-/* 800C3A0C 00000020  40 82 00 0C */	bne lbl_800C3A18
-/* 800C3A10 00000024  38 60 00 00 */	li r3, 0
-/* 800C3A14 00000028  48 00 00 1C */	b lbl_800C3A30
+/* 800C39EC  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 800C39F0  7C 08 02 A6 */	mflr r0                                 
+/* 800C39F4  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 800C39F8  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 800C39FC  7C 7F 1B 78 */	mr r31, r3                              
+/* 800C3A00  38 80 00 07 */	li r4, 7                                
+/* 800C3A04  4B FF F3 A1 */	bl commonProcInitNotSameProc__9daAlink_cFQ29daAlink_c12daAlink_PROC /* constant-address: 800C2DA4, symbol: commonProcInitNotSameProc__9daAlink_cFQ29daAlink_c12daAlink_PROC */
+/* 800C3A08  2C 03 00 00 */	cmpwi r3, 0                             
+/* 800C3A0C  40 82 00 0C */	bne lbl_800C3A18                         /* constant-address: 800C3A18, symbol: lbl_800C3A18 */
+/* 800C3A10  38 60 00 00 */	li r3, 0                                
+/* 800C3A14  48 00 00 1C */	b lbl_800C3A30                           /* constant-address: 800C3A30, symbol: lbl_800C3A30 */
 lbl_800C3A18:
-/* 800C3A18 00000000  7F E3 FB 78 */	mr r3, r31
-/* 800C3A1C 00000004  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha
-/* 800C3A20 00000008  38 84 D6 64 */	addi r4, r4, m__19daAlinkHIO_basic_c0@l
-/* 800C3A24 0000000C  C0 24 00 18 */	lfs f1, 0x18(r4)	/* effective address: 8038D67C */
-/* 800C3A28 00000010  4B FE B0 49 */	bl setBlendAtnMoveAnime__9daAlink_cFf
-/* 800C3A2C 00000014  38 60 00 01 */	li r3, 1
+/* 800C3A18  7F E3 FB 78 */	mr r3, r31                              
+/* 800C3A1C  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha     
+/* 800C3A20  38 84 D6 64 */	addi r4, r4, m__19daAlinkHIO_basic_c0@l  /* constant-address: 8038D664, symbol: m__19daAlinkHIO_basic_c0 */
+/* 800C3A24  C0 24 00 18 */	lfs f1, 0x18(r4)                         /* constant-address: 8038D67C, symbol: None */
+/* 800C3A28  4B FE B0 49 */	bl setBlendAtnMoveAnime__9daAlink_cFf    /* constant-address: 800AEA70, symbol: setBlendAtnMoveAnime__9daAlink_cFf */
+/* 800C3A2C  38 60 00 01 */	li r3, 1                                
 lbl_800C3A30:
-/* 800C3A30 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 800C3A34 00000004  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 800C3A38 00000008  7C 08 03 A6 */	mtlr r0
-/* 800C3A3C 0000000C  38 21 00 10 */	addi r1, r1, 0x10
-/* 800C3A40 00000010  4E 80 00 20 */	blr 
+/* 800C3A30  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 800C3A34  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 800C3A38  7C 08 03 A6 */	mtlr r0                                 
+/* 800C3A3C  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 800C3A40  4E 80 00 20 */	blr                                     

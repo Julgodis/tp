@@ -1,50 +1,50 @@
 lbl_80159708:
-/* 80159708 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 8015970C 00000004  7C 08 02 A6 */	mflr r0
-/* 80159710 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80159714 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80159718 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 8015971C 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80159720 00000018  7C 9F 23 78 */	mr r31, r4
-/* 80159724 0000001C  4B EB F5 BD */	bl fopAc_IsActor__FPv
-/* 80159728 00000020  2C 03 00 00 */	cmpwi r3, 0
-/* 8015972C 00000024  41 82 00 78 */	beq lbl_801597A4
-/* 80159730 00000028  A8 1E 00 08 */	lha r0, 8(r30)
-/* 80159734 0000002C  2C 00 02 8A */	cmpwi r0, 0x28a
-/* 80159738 00000030  40 82 00 6C */	bne lbl_801597A4
-/* 8015973C 00000034  7F E3 FB 78 */	mr r3, r31
-/* 80159740 00000038  7F C4 F3 78 */	mr r4, r30
-/* 80159744 0000003C  4B EC 0F CD */	bl fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
-/* 80159748 00000040  7C 64 1B 78 */	mr r4, r3
-/* 8015974C 00000044  A8 6D 8A 8C */	lha r3, wolfAngle(r13)
-/* 80159750 00000048  48 11 76 D5 */	bl cLib_distanceAngleS__Fss
-/* 80159754 0000004C  80 0D 8A 84 */	lwz r0, target(r13)
-/* 80159758 00000050  28 00 00 00 */	cmplwi r0, 0
-/* 8015975C 00000054  40 82 00 20 */	bne lbl_8015977C
-/* 80159760 00000058  7F E3 FB 78 */	mr r3, r31
-/* 80159764 0000005C  7F C4 F3 78 */	mr r4, r30
-/* 80159768 00000060  4B EC 13 2D */	bl fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c
-/* 8015976C 00000064  D0 2D 8A 88 */	stfs f1, targetWay(r13)
-/* 80159770 00000068  93 CD 8A 84 */	stw r30, target(r13)
-/* 80159774 0000006C  38 60 00 00 */	li r3, 0
-/* 80159778 00000070  48 00 00 30 */	b lbl_801597A8
+/* 80159708  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 8015970C  7C 08 02 A6 */	mflr r0                                 
+/* 80159710  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 80159714  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 80159718  93 C1 00 08 */	stw r30, 8(r1)                          
+/* 8015971C  7C 7E 1B 78 */	mr r30, r3                              
+/* 80159720  7C 9F 23 78 */	mr r31, r4                              
+/* 80159724  4B EB F5 BD */	bl fopAc_IsActor__FPv                    /* constant-address: 80018CE0, symbol: fopAc_IsActor__FPv */
+/* 80159728  2C 03 00 00 */	cmpwi r3, 0                             
+/* 8015972C  41 82 00 78 */	beq lbl_801597A4                         /* constant-address: 801597A4, symbol: lbl_801597A4 */
+/* 80159730  A8 1E 00 08 */	lha r0, 8(r30)                          
+/* 80159734  2C 00 02 8A */	cmpwi r0, 0x28a                         
+/* 80159738  40 82 00 6C */	bne lbl_801597A4                         /* constant-address: 801597A4, symbol: lbl_801597A4 */
+/* 8015973C  7F E3 FB 78 */	mr r3, r31                              
+/* 80159740  7F C4 F3 78 */	mr r4, r30                              
+/* 80159744  4B EC 0F CD */	bl fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c /* constant-address: 8001A710, symbol: fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c */
+/* 80159748  7C 64 1B 78 */	mr r4, r3                               
+/* 8015974C  A8 6D 8A 8C */	lha r3, wolfAngle(r13)                   /* constant-address: 8045100C, symbol: wolfAngle */
+/* 80159750  48 11 76 D5 */	bl cLib_distanceAngleS__Fss              /* constant-address: 80270E24, symbol: cLib_distanceAngleS__Fss */
+/* 80159754  80 0D 8A 84 */	lwz r0, target(r13)                      /* constant-address: 80451004, symbol: target */
+/* 80159758  28 00 00 00 */	cmplwi r0, 0                            
+/* 8015975C  40 82 00 20 */	bne lbl_8015977C                         /* constant-address: 8015977C, symbol: lbl_8015977C */
+/* 80159760  7F E3 FB 78 */	mr r3, r31                              
+/* 80159764  7F C4 F3 78 */	mr r4, r30                              
+/* 80159768  4B EC 13 2D */	bl fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c /* constant-address: 8001AA94, symbol: fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c */
+/* 8015976C  D0 2D 8A 88 */	stfs f1, targetWay(r13)                  /* constant-address: 80451008, symbol: targetWay */
+/* 80159770  93 CD 8A 84 */	stw r30, target(r13)                     /* constant-address: 80451004, symbol: target */
+/* 80159774  38 60 00 00 */	li r3, 0                                
+/* 80159778  48 00 00 30 */	b lbl_801597A8                           /* constant-address: 801597A8, symbol: lbl_801597A8 */
 lbl_8015977C:
-/* 8015977C 00000000  2C 03 40 00 */	cmpwi r3, 0x4000
-/* 80159780 00000004  40 81 00 24 */	ble lbl_801597A4
-/* 80159784 00000008  7F E3 FB 78 */	mr r3, r31
-/* 80159788 0000000C  7F C4 F3 78 */	mr r4, r30
-/* 8015978C 00000010  4B EC 13 09 */	bl fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c
-/* 80159790 00000014  C0 0D 8A 88 */	lfs f0, targetWay(r13)
-/* 80159794 00000018  FC 00 08 40 */	fcmpo cr0, f0, f1
-/* 80159798 00000000  40 81 00 0C */	ble lbl_801597A4
-/* 8015979C 00000004  D0 2D 8A 88 */	stfs f1, targetWay(r13)
-/* 801597A0 00000008  93 CD 8A 84 */	stw r30, target(r13)
+/* 8015977C  2C 03 40 00 */	cmpwi r3, 0x4000                        
+/* 80159780  40 81 00 24 */	ble lbl_801597A4                         /* constant-address: 801597A4, symbol: lbl_801597A4 */
+/* 80159784  7F E3 FB 78 */	mr r3, r31                              
+/* 80159788  7F C4 F3 78 */	mr r4, r30                              
+/* 8015978C  4B EC 13 09 */	bl fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c /* constant-address: 8001AA94, symbol: fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c */
+/* 80159790  C0 0D 8A 88 */	lfs f0, targetWay(r13)                   /* constant-address: 80451008, symbol: targetWay */
+/* 80159794  FC 00 08 40 */	fcmpo cr0, f0, f1                       
+/* 80159798  40 81 00 0C */	ble lbl_801597A4                         /* constant-address: 801597A4, symbol: lbl_801597A4 */
+/* 8015979C  D0 2D 8A 88 */	stfs f1, targetWay(r13)                  /* constant-address: 80451008, symbol: targetWay */
+/* 801597A0  93 CD 8A 84 */	stw r30, target(r13)                     /* constant-address: 80451004, symbol: target */
 lbl_801597A4:
-/* 801597A4 00000000  38 60 00 00 */	li r3, 0
+/* 801597A4  38 60 00 00 */	li r3, 0                                
 lbl_801597A8:
-/* 801597A8 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 801597AC 00000004  83 C1 00 08 */	lwz r30, 8(r1)
-/* 801597B0 00000008  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 801597B4 0000000C  7C 08 03 A6 */	mtlr r0
-/* 801597B8 00000010  38 21 00 10 */	addi r1, r1, 0x10
-/* 801597BC 00000014  4E 80 00 20 */	blr 
+/* 801597A8  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 801597AC  83 C1 00 08 */	lwz r30, 8(r1)                          
+/* 801597B0  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 801597B4  7C 08 03 A6 */	mtlr r0                                 
+/* 801597B8  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 801597BC  4E 80 00 20 */	blr                                     

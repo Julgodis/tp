@@ -1,3 +1,3 @@
 lbl_80A68E80:
-/* 80A68E80 00000000  38 63 FF DC */	addi r3, r3, -36
-/* 80A68E84 00000004  4B FF F8 94 */	b __dt__12dBgS_ObjAcchFv
+/* 80A68E80  38 63 FF DC */	addi r3, r3, -36
+/* 80A68E84  4B FF F8 94 */	b __dt__12dBgS_ObjAcchFv

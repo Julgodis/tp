@@ -1,29 +1,29 @@
 lbl_802BCCC0:
-/* 802BCCC0 00000000  C0 24 00 08 */	lfs f1, 8(r4)
-/* 802BCCC4 00000004  C0 02 C0 A0 */	lfs f0, lit_848(r2)
-/* 802BCCC8 00000008  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 802BCCCC 00000000  4C 41 13 82 */	cror 2, 1, 2
-/* 802BCCD0 00000004  40 82 00 0C */	bne lbl_802BCCDC
-/* 802BCCD4 00000008  38 60 00 00 */	li r3, 0
-/* 802BCCD8 0000000C  4E 80 00 20 */	blr 
+/* 802BCCC0  C0 24 00 08 */	lfs f1, 8(r4)                           
+/* 802BCCC4  C0 02 C0 A0 */	lfs f0, lit_848(r2)                      /* constant-address: 80455AA0, symbol: lit_848 */
+/* 802BCCC8  FC 01 00 40 */	fcmpo cr0, f1, f0                       
+/* 802BCCCC  4C 41 13 82 */	cror 2, 1, 2                            
+/* 802BCCD0  40 82 00 0C */	bne lbl_802BCCDC                         /* constant-address: 802BCCDC, symbol: lbl_802BCCDC */
+/* 802BCCD4  38 60 00 00 */	li r3, 0                                
+/* 802BCCD8  4E 80 00 20 */	blr                                     
 lbl_802BCCDC:
-/* 802BCCDC 00000000  FC 20 0A 10 */	fabs f1, f1
-/* 802BCCE0 00000004  C0 04 00 00 */	lfs f0, 0(r4)
-/* 802BCCE4 00000008  FC 40 02 10 */	fabs f2, f0
-/* 802BCCE8 0000000C  C0 03 00 68 */	lfs f0, 0x68(r3)
-/* 802BCCEC 00000010  EC 00 00 72 */	fmuls f0, f0, f1
-/* 802BCCF0 00000014  FC 02 00 40 */	fcmpo cr0, f2, f0
-/* 802BCCF4 00000000  40 81 00 0C */	ble lbl_802BCD00
-/* 802BCCF8 00000004  38 60 00 00 */	li r3, 0
-/* 802BCCFC 00000008  4E 80 00 20 */	blr 
+/* 802BCCDC  FC 20 0A 10 */	fabs f1, f1                             
+/* 802BCCE0  C0 04 00 00 */	lfs f0, 0(r4)                           
+/* 802BCCE4  FC 40 02 10 */	fabs f2, f0                             
+/* 802BCCE8  C0 03 00 68 */	lfs f0, 0x68(r3)                        
+/* 802BCCEC  EC 00 00 72 */	fmuls f0, f0, f1                        
+/* 802BCCF0  FC 02 00 40 */	fcmpo cr0, f2, f0                       
+/* 802BCCF4  40 81 00 0C */	ble lbl_802BCD00                         /* constant-address: 802BCD00, symbol: lbl_802BCD00 */
+/* 802BCCF8  38 60 00 00 */	li r3, 0                                
+/* 802BCCFC  4E 80 00 20 */	blr                                     
 lbl_802BCD00:
-/* 802BCD00 00000000  C0 04 00 04 */	lfs f0, 4(r4)
-/* 802BCD04 00000004  FC 40 02 10 */	fabs f2, f0
-/* 802BCD08 00000008  C0 03 00 6C */	lfs f0, 0x6c(r3)
-/* 802BCD0C 0000000C  EC 00 00 72 */	fmuls f0, f0, f1
-/* 802BCD10 00000010  FC 02 00 40 */	fcmpo cr0, f2, f0
-/* 802BCD14 00000000  7C 00 00 26 */	mfcr r0
-/* 802BCD18 00000004  54 00 17 FE */	rlwinm r0, r0, 2, 0x1f, 0x1f
-/* 802BCD1C 00000008  7C 00 00 34 */	cntlzw r0, r0
-/* 802BCD20 0000000C  54 03 D9 7E */	srwi r3, r0, 5
-/* 802BCD24 00000010  4E 80 00 20 */	blr 
+/* 802BCD00  C0 04 00 04 */	lfs f0, 4(r4)                           
+/* 802BCD04  FC 40 02 10 */	fabs f2, f0                             
+/* 802BCD08  C0 03 00 6C */	lfs f0, 0x6c(r3)                        
+/* 802BCD0C  EC 00 00 72 */	fmuls f0, f0, f1                        
+/* 802BCD10  FC 02 00 40 */	fcmpo cr0, f2, f0                       
+/* 802BCD14  7C 00 00 26 */	mfcr r0                                 
+/* 802BCD18  54 00 17 FE */	rlwinm r0, r0, 2, 0x1f, 0x1f            
+/* 802BCD1C  7C 00 00 34 */	cntlzw r0, r0                           
+/* 802BCD20  54 03 D9 7E */	srwi r3, r0, 5                          
+/* 802BCD24  4E 80 00 20 */	blr                                     

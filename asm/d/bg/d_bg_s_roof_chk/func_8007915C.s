@@ -1,3 +1,3 @@
 lbl_8007915C:
-/* 8007915C 00000000  38 63 FF DC */	addi r3, r3, -36
-/* 80079160 00000004  4B FF FF 30 */	b __dt__12dBgS_RoofChkFv
+/* 8007915C  38 63 FF DC */	addi r3, r3, -36                        
+/* 80079160  4B FF FF 30 */	b __dt__12dBgS_RoofChkFv                 /* constant-address: 80079090, symbol: __dt__12dBgS_RoofChkFv */

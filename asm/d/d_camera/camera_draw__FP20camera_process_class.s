@@ -1,161 +1,161 @@
 lbl_80181F70:
-/* 80181F70 00000000  94 21 FF 50 */	stwu r1, -0xb0(r1)
-/* 80181F74 00000004  7C 08 02 A6 */	mflr r0
-/* 80181F78 00000008  90 01 00 B4 */	stw r0, 0xb4(r1)
-/* 80181F7C 0000000C  DB E1 00 A0 */	stfd f31, 0xa0(r1)
-/* 80181F80 00000010  F3 E1 00 A8 */	psq_st f31, 168(r1), 0, 0 /* qr0 */
-/* 80181F84 00000000  39 61 00 A0 */	addi r11, r1, 0xa0
-/* 80181F88 00000004  48 1E 02 4D */	bl _savegpr_27
-/* 80181F8C 00000008  7C 7D 1B 78 */	mr r29, r3
-/* 80181F90 0000000C  7F BB EB 78 */	mr r27, r29
-/* 80181F94 00000010  3B DD 02 48 */	addi r30, r29, 0x248
-/* 80181F98 00000014  4B E9 C3 71 */	bl fopCamM_GetParam__FP12camera_class
-/* 80181F9C 00000018  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
-/* 80181FA0 0000001C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 80181FA4 00000020  1C 03 00 38 */	mulli r0, r3, 0x38
-/* 80181FA8 00000024  7C 64 02 14 */	add r3, r4, r0
-/* 80181FAC 00000028  88 03 5D 78 */	lbz r0, 0x5d78(r3)
-/* 80181FB0 0000002C  7C 00 07 74 */	extsb r0, r0
-/* 80181FB4 00000030  3B E4 0F 38 */	addi r31, r4, 0xf38
-/* 80181FB8 00000034  1C 60 00 2C */	mulli r3, r0, 0x2c
-/* 80181FBC 00000038  3B 83 4E 10 */	addi r28, r3, 0x4e10
-/* 80181FC0 0000003C  7F 9F E2 14 */	add r28, r31, r28
-/* 80181FC4 00000040  7F 63 DB 78 */	mr r3, r27
-/* 80181FC8 00000044  4B E9 C3 41 */	bl fopCamM_GetParam__FP12camera_class
-/* 80181FCC 00000048  7C 7B 1B 78 */	mr r27, r3
-/* 80181FD0 0000004C  C0 1E 09 20 */	lfs f0, 0x920(r30)
-/* 80181FD4 00000050  FC 00 00 1E */	fctiwz f0, f0
-/* 80181FD8 00000054  D8 01 00 68 */	stfd f0, 0x68(r1)
-/* 80181FDC 00000058  80 01 00 6C */	lwz r0, 0x6c(r1)
-/* 80181FE0 0000005C  7F 83 E3 78 */	mr r3, r28
-/* 80181FE4 00000060  C0 22 9C A0 */	lfs f1, lit_5656(r2)
-/* 80181FE8 00000064  C8 C2 9C 98 */	lfd f6, lit_4448(r2)
-/* 80181FEC 00000068  6C 04 80 00 */	xoris r4, r0, 0x8000
-/* 80181FF0 0000006C  90 81 00 74 */	stw r4, 0x74(r1)
-/* 80181FF4 00000070  3C 00 43 30 */	lis r0, 0x4330
-/* 80181FF8 00000074  90 01 00 70 */	stw r0, 0x70(r1)
-/* 80181FFC 00000078  C8 01 00 70 */	lfd f0, 0x70(r1)
-/* 80182000 0000007C  EC 40 30 28 */	fsubs f2, f0, f6
-/* 80182004 00000080  C0 62 9D 08 */	lfs f3, lit_8020(r2)
-/* 80182008 00000084  C0 A2 9C FC */	lfs f5, lit_8017(r2)
-/* 8018200C 00000088  C0 82 9C F8 */	lfs f4, lit_8016(r2)
-/* 80182010 0000008C  90 81 00 7C */	stw r4, 0x7c(r1)
-/* 80182014 00000090  90 01 00 78 */	stw r0, 0x78(r1)
-/* 80182018 00000094  C8 01 00 78 */	lfd f0, 0x78(r1)
-/* 8018201C 00000098  EC 00 30 28 */	fsubs f0, f0, f6
-/* 80182020 0000009C  EC 04 00 32 */	fmuls f0, f4, f0
-/* 80182024 000000A0  EC 85 00 28 */	fsubs f4, f5, f0
-/* 80182028 000000A4  4B EC FA B5 */	bl setScissor__14dDlst_window_cFffff
-/* 8018202C 000000A8  38 7D 01 00 */	addi r3, r29, 0x100
-/* 80182030 000000AC  C0 3D 00 D0 */	lfs f1, 0xd0(r29)
-/* 80182034 000000B0  C0 5D 00 D4 */	lfs f2, 0xd4(r29)
-/* 80182038 000000B4  C0 7D 00 C8 */	lfs f3, 0xc8(r29)
-/* 8018203C 000000B8  C0 9D 00 CC */	lfs f4, 0xcc(r29)
-/* 80182040 000000BC  48 1C 4E E9 */	bl C_MTXPerspective
-/* 80182044 000000C0  38 7D 01 40 */	addi r3, r29, 0x140
-/* 80182048 000000C4  38 9D 00 D8 */	addi r4, r29, 0xd8
-/* 8018204C 000000C8  38 BD 00 E4 */	addi r5, r29, 0xe4
-/* 80182050 000000CC  38 DD 00 F0 */	addi r6, r29, 0xf0
-/* 80182054 000000D0  A8 FD 00 FC */	lha r7, 0xfc(r29)
-/* 80182058 000000D4  4B E8 A6 B9 */	bl mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs
-/* 8018205C 000000D8  38 7D 01 40 */	addi r3, r29, 0x140
-/* 80182060 000000DC  3C 80 80 43 */	lis r4, j3dSys@ha
-/* 80182064 000000E0  38 84 4A C8 */	addi r4, r4, j3dSys@l
-/* 80182068 000000E4  48 1C 44 49 */	bl PSMTXCopy
-/* 8018206C 000000E8  38 7D 01 40 */	addi r3, r29, 0x140
-/* 80182070 000000EC  38 9D 01 70 */	addi r4, r29, 0x170
-/* 80182074 000000F0  48 1C 45 3D */	bl PSMTXInverse
-/* 80182078 000000F4  80 6D 85 C4 */	lwz r3, data_80450B44(r13)
-/* 8018207C 000000F8  38 9D 01 40 */	addi r4, r29, 0x140
-/* 80182080 000000FC  38 BD 00 D8 */	addi r5, r29, 0xd8
-/* 80182084 00000100  38 DD 00 E4 */	addi r6, r29, 0xe4
-/* 80182088 00000104  C0 3D 00 D0 */	lfs f1, 0xd0(r29)
-/* 8018208C 00000108  C0 5D 00 D4 */	lfs f2, 0xd4(r29)
-/* 80182090 0000010C  3C E0 80 40 */	lis r7, g_dComIfG_gameInfo@ha
-/* 80182094 00000110  38 E7 61 C0 */	addi r7, r7, g_dComIfG_gameInfo@l
-/* 80182098 00000114  80 07 5D 7C */	lwz r0, 0x5d7c(r7)	/* effective address: 8040BF3C */
-/* 8018209C 00000118  54 07 CF FE */	rlwinm r7, r0, 0x19, 0x1f, 0x1f
-/* 801820A0 0000011C  7F 68 DB 78 */	mr r8, r27
-/* 801820A4 00000120  39 20 00 00 */	li r9, 0
-/* 801820A8 00000124  48 13 B2 35 */	bl setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib
-/* 801820AC 00000128  38 61 00 14 */	addi r3, r1, 0x14
-/* 801820B0 0000012C  4B EF 54 CD */	bl __ct__11dBgS_GndChkFv
-/* 801820B4 00000130  80 01 00 64 */	lwz r0, 0x64(r1)
-/* 801820B8 00000134  60 00 00 02 */	ori r0, r0, 2
-/* 801820BC 00000138  90 01 00 64 */	stw r0, 0x64(r1)
-/* 801820C0 0000013C  38 61 00 14 */	addi r3, r1, 0x14
-/* 801820C4 00000140  38 9D 00 D8 */	addi r4, r29, 0xd8
-/* 801820C8 00000144  48 0E 5C 61 */	bl SetPos__11cBgS_GndChkFPC4cXyz
-/* 801820CC 00000148  7F E3 FB 78 */	mr r3, r31
-/* 801820D0 0000014C  38 81 00 14 */	addi r4, r1, 0x14
-/* 801820D4 00000150  4B EF 23 CD */	bl GroundCross__4cBgSFP11cBgS_GndChk
-/* 801820D8 00000154  FF E0 08 90 */	fmr f31, f1
-/* 801820DC 00000158  C0 02 9C AC */	lfs f0, lit_5659(r2)
-/* 801820E0 0000015C  FC 00 F8 00 */	fcmpu cr0, f0, f31
-/* 801820E4 00000160  41 82 00 88 */	beq lbl_8018216C
-/* 801820E8 00000164  7F E3 FB 78 */	mr r3, r31
-/* 801820EC 00000168  3B 61 00 28 */	addi r27, r1, 0x28
-/* 801820F0 0000016C  7F 64 DB 78 */	mr r4, r27
-/* 801820F4 00000170  38 A0 01 00 */	li r5, 0x100
-/* 801820F8 00000174  4B EF 2F D9 */	bl ChkGrpInf__4dBgSFRC13cBgS_PolyInfoUl
-/* 801820FC 00000178  28 03 00 00 */	cmplwi r3, 0
-/* 80182100 0000017C  41 82 00 14 */	beq lbl_80182114
-/* 80182104 00000180  38 00 00 06 */	li r0, 6
-/* 80182108 00000184  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)
-/* 8018210C 00000188  90 03 04 D4 */	stw r0, 0x4d4(r3)
-/* 80182110 0000018C  48 00 00 18 */	b lbl_80182128
+/* 80181F70  94 21 FF 50 */	stwu r1, -0xb0(r1)                      
+/* 80181F74  7C 08 02 A6 */	mflr r0                                 
+/* 80181F78  90 01 00 B4 */	stw r0, 0xb4(r1)                        
+/* 80181F7C  DB E1 00 A0 */	stfd f31, 0xa0(r1)                      
+/* 80181F80  F3 E1 00 A8 */	psq_st f31, 168(r1), 0, 0 /* qr0 */     
+/* 80181F84  39 61 00 A0 */	addi r11, r1, 0xa0                      
+/* 80181F88  48 1E 02 4D */	bl _savegpr_27                           /* constant-address: 803621D4, symbol: _savegpr_27 */
+/* 80181F8C  7C 7D 1B 78 */	mr r29, r3                              
+/* 80181F90  7F BB EB 78 */	mr r27, r29                             
+/* 80181F94  3B DD 02 48 */	addi r30, r29, 0x248                    
+/* 80181F98  4B E9 C3 71 */	bl fopCamM_GetParam__FP12camera_class    /* constant-address: 8001E308, symbol: fopCamM_GetParam__FP12camera_class */
+/* 80181F9C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha           
+/* 80181FA0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 80181FA4  1C 03 00 38 */	mulli r0, r3, 0x38                      
+/* 80181FA8  7C 64 02 14 */	add r3, r4, r0                          
+/* 80181FAC  88 03 5D 78 */	lbz r0, 0x5d78(r3)                      
+/* 80181FB0  7C 00 07 74 */	extsb r0, r0                            
+/* 80181FB4  3B E4 0F 38 */	addi r31, r4, 0xf38                      /* constant-address: 804070F8, symbol: None */
+/* 80181FB8  1C 60 00 2C */	mulli r3, r0, 0x2c                      
+/* 80181FBC  3B 83 4E 10 */	addi r28, r3, 0x4e10                    
+/* 80181FC0  7F 9F E2 14 */	add r28, r31, r28                       
+/* 80181FC4  7F 63 DB 78 */	mr r3, r27                              
+/* 80181FC8  4B E9 C3 41 */	bl fopCamM_GetParam__FP12camera_class    /* constant-address: 8001E308, symbol: fopCamM_GetParam__FP12camera_class */
+/* 80181FCC  7C 7B 1B 78 */	mr r27, r3                              
+/* 80181FD0  C0 1E 09 20 */	lfs f0, 0x920(r30)                      
+/* 80181FD4  FC 00 00 1E */	fctiwz f0, f0                           
+/* 80181FD8  D8 01 00 68 */	stfd f0, 0x68(r1)                       
+/* 80181FDC  80 01 00 6C */	lwz r0, 0x6c(r1)                        
+/* 80181FE0  7F 83 E3 78 */	mr r3, r28                              
+/* 80181FE4  C0 22 9C A0 */	lfs f1, lit_5656(r2)                     /* constant-address: 804536A0, symbol: lit_5656 */
+/* 80181FE8  C8 C2 9C 98 */	lfd f6, lit_4448(r2)                     /* constant-address: 80453698, symbol: lit_4448 */
+/* 80181FEC  6C 04 80 00 */	xoris r4, r0, 0x8000                    
+/* 80181FF0  90 81 00 74 */	stw r4, 0x74(r1)                        
+/* 80181FF4  3C 00 43 30 */	lis r0, 0x4330                          
+/* 80181FF8  90 01 00 70 */	stw r0, 0x70(r1)                        
+/* 80181FFC  C8 01 00 70 */	lfd f0, 0x70(r1)                        
+/* 80182000  EC 40 30 28 */	fsubs f2, f0, f6                        
+/* 80182004  C0 62 9D 08 */	lfs f3, lit_8020(r2)                     /* constant-address: 80453708, symbol: lit_8020 */
+/* 80182008  C0 A2 9C FC */	lfs f5, lit_8017(r2)                     /* constant-address: 804536FC, symbol: lit_8017 */
+/* 8018200C  C0 82 9C F8 */	lfs f4, lit_8016(r2)                     /* constant-address: 804536F8, symbol: lit_8016 */
+/* 80182010  90 81 00 7C */	stw r4, 0x7c(r1)                        
+/* 80182014  90 01 00 78 */	stw r0, 0x78(r1)                        
+/* 80182018  C8 01 00 78 */	lfd f0, 0x78(r1)                        
+/* 8018201C  EC 00 30 28 */	fsubs f0, f0, f6                        
+/* 80182020  EC 04 00 32 */	fmuls f0, f4, f0                        
+/* 80182024  EC 85 00 28 */	fsubs f4, f5, f0                        
+/* 80182028  4B EC FA B5 */	bl setScissor__14dDlst_window_cFffff     /* constant-address: 80051ADC, symbol: setScissor__14dDlst_window_cFffff */
+/* 8018202C  38 7D 01 00 */	addi r3, r29, 0x100                     
+/* 80182030  C0 3D 00 D0 */	lfs f1, 0xd0(r29)                       
+/* 80182034  C0 5D 00 D4 */	lfs f2, 0xd4(r29)                       
+/* 80182038  C0 7D 00 C8 */	lfs f3, 0xc8(r29)                       
+/* 8018203C  C0 9D 00 CC */	lfs f4, 0xcc(r29)                       
+/* 80182040  48 1C 4E E9 */	bl C_MTXPerspective                      /* constant-address: 80346F28, symbol: C_MTXPerspective */
+/* 80182044  38 7D 01 40 */	addi r3, r29, 0x140                     
+/* 80182048  38 9D 00 D8 */	addi r4, r29, 0xd8                      
+/* 8018204C  38 BD 00 E4 */	addi r5, r29, 0xe4                      
+/* 80182050  38 DD 00 F0 */	addi r6, r29, 0xf0                      
+/* 80182054  A8 FD 00 FC */	lha r7, 0xfc(r29)                       
+/* 80182058  4B E8 A6 B9 */	bl mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs /* constant-address: 8000C710, symbol: mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs */
+/* 8018205C  38 7D 01 40 */	addi r3, r29, 0x140                     
+/* 80182060  3C 80 80 43 */	lis r4, j3dSys@ha                       
+/* 80182064  38 84 4A C8 */	addi r4, r4, j3dSys@l                    /* constant-address: 80434AC8, symbol: j3dSys */
+/* 80182068  48 1C 44 49 */	bl PSMTXCopy                             /* constant-address: 803464B0, symbol: PSMTXCopy */
+/* 8018206C  38 7D 01 40 */	addi r3, r29, 0x140                     
+/* 80182070  38 9D 01 70 */	addi r4, r29, 0x170                     
+/* 80182074  48 1C 45 3D */	bl PSMTXInverse                          /* constant-address: 803465B0, symbol: PSMTXInverse */
+/* 80182078  80 6D 85 C4 */	lwz r3, data_80450B44(r13)               /* constant-address: 80450B44, symbol: data_80450B44 */
+/* 8018207C  38 9D 01 40 */	addi r4, r29, 0x140                     
+/* 80182080  38 BD 00 D8 */	addi r5, r29, 0xd8                      
+/* 80182084  38 DD 00 E4 */	addi r6, r29, 0xe4                      
+/* 80182088  C0 3D 00 D0 */	lfs f1, 0xd0(r29)                       
+/* 8018208C  C0 5D 00 D4 */	lfs f2, 0xd4(r29)                       
+/* 80182090  3C E0 80 40 */	lis r7, g_dComIfG_gameInfo@ha           
+/* 80182094  38 E7 61 C0 */	addi r7, r7, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 80182098  80 07 5D 7C */	lwz r0, 0x5d7c(r7)                       /* constant-address: 8040BF3C, symbol: None */
+/* 8018209C  54 07 CF FE */	rlwinm r7, r0, 0x19, 0x1f, 0x1f         
+/* 801820A0  7F 68 DB 78 */	mr r8, r27                              
+/* 801820A4  39 20 00 00 */	li r9, 0                                
+/* 801820A8  48 13 B2 35 */	bl setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib /* constant-address: 802BD2DC, symbol: setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib */
+/* 801820AC  38 61 00 14 */	addi r3, r1, 0x14                       
+/* 801820B0  4B EF 54 CD */	bl __ct__11dBgS_GndChkFv                 /* constant-address: 8007757C, symbol: __ct__11dBgS_GndChkFv */
+/* 801820B4  80 01 00 64 */	lwz r0, 0x64(r1)                        
+/* 801820B8  60 00 00 02 */	ori r0, r0, 2                           
+/* 801820BC  90 01 00 64 */	stw r0, 0x64(r1)                        
+/* 801820C0  38 61 00 14 */	addi r3, r1, 0x14                       
+/* 801820C4  38 9D 00 D8 */	addi r4, r29, 0xd8                      
+/* 801820C8  48 0E 5C 61 */	bl SetPos__11cBgS_GndChkFPC4cXyz         /* constant-address: 80267D28, symbol: SetPos__11cBgS_GndChkFPC4cXyz */
+/* 801820CC  7F E3 FB 78 */	mr r3, r31                              
+/* 801820D0  38 81 00 14 */	addi r4, r1, 0x14                       
+/* 801820D4  4B EF 23 CD */	bl GroundCross__4cBgSFP11cBgS_GndChk     /* constant-address: 800744A0, symbol: GroundCross__4cBgSFP11cBgS_GndChk */
+/* 801820D8  FF E0 08 90 */	fmr f31, f1                             
+/* 801820DC  C0 02 9C AC */	lfs f0, lit_5659(r2)                     /* constant-address: 804536AC, symbol: lit_5659 */
+/* 801820E0  FC 00 F8 00 */	fcmpu cr0, f0, f31                      
+/* 801820E4  41 82 00 88 */	beq lbl_8018216C                         /* constant-address: 8018216C, symbol: lbl_8018216C */
+/* 801820E8  7F E3 FB 78 */	mr r3, r31                              
+/* 801820EC  3B 61 00 28 */	addi r27, r1, 0x28                      
+/* 801820F0  7F 64 DB 78 */	mr r4, r27                              
+/* 801820F4  38 A0 01 00 */	li r5, 0x100                            
+/* 801820F8  4B EF 2F D9 */	bl ChkGrpInf__4dBgSFRC13cBgS_PolyInfoUl  /* constant-address: 800750D0, symbol: ChkGrpInf__4dBgSFRC13cBgS_PolyInfoUl */
+/* 801820FC  28 03 00 00 */	cmplwi r3, 0                            
+/* 80182100  41 82 00 14 */	beq lbl_80182114                         /* constant-address: 80182114, symbol: lbl_80182114 */
+/* 80182104  38 00 00 06 */	li r0, 6                                
+/* 80182108  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)  /* constant-address: 80451368, symbol: mAudioMgrPtr__10Z2AudioMgr */
+/* 8018210C  90 03 04 D4 */	stw r0, 0x4d4(r3)                       
+/* 80182110  48 00 00 18 */	b lbl_80182128                           /* constant-address: 80182128, symbol: lbl_80182128 */
 lbl_80182114:
-/* 80182114 00000000  7F 63 DB 78 */	mr r3, r27
-/* 80182118 00000004  48 02 93 A9 */	bl dKy_pol_sound_get__FPC13cBgS_PolyInfo
-/* 8018211C 00000008  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 80182120 0000000C  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)
-/* 80182124 00000010  90 03 04 D4 */	stw r0, 0x4d4(r3)
+/* 80182114  7F 63 DB 78 */	mr r3, r27                              
+/* 80182118  48 02 93 A9 */	bl dKy_pol_sound_get__FPC13cBgS_PolyInfo /* constant-address: 801AB4C0, symbol: dKy_pol_sound_get__FPC13cBgS_PolyInfo */
+/* 8018211C  54 60 06 3E */	clrlwi r0, r3, 0x18                     
+/* 80182120  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)  /* constant-address: 80451368, symbol: mAudioMgrPtr__10Z2AudioMgr */
+/* 80182124  90 03 04 D4 */	stw r0, 0x4d4(r3)                       
 lbl_80182128:
-/* 80182128 00000000  7F E3 FB 78 */	mr r3, r31
-/* 8018212C 00000004  7F 64 DB 78 */	mr r4, r27
-/* 80182130 00000008  4B EF 2F 51 */	bl GetGrpSoundId__4dBgSFRC13cBgS_PolyInfo
-/* 80182134 0000000C  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 80182138 00000010  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)
-/* 8018213C 00000014  38 63 04 C4 */	addi r3, r3, 0x4c4
-/* 80182140 00000018  48 13 46 45 */	bl setCameraGroupInfo__11Z2StatusMgrFUc
-/* 80182144 0000001C  C0 1D 00 D8 */	lfs f0, 0xd8(r29)
-/* 80182148 00000020  D0 01 00 08 */	stfs f0, 8(r1)
-/* 8018214C 00000024  D3 E1 00 0C */	stfs f31, 0xc(r1)
-/* 80182150 00000028  C0 1D 00 E0 */	lfs f0, 0xe0(r29)
-/* 80182154 0000002C  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 80182158 00000030  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)
-/* 8018215C 00000034  38 63 04 C4 */	addi r3, r3, 0x4c4
-/* 80182160 00000038  38 81 00 08 */	addi r4, r1, 8
-/* 80182164 0000003C  48 13 45 FD */	bl setCameraPolygonPos__11Z2StatusMgrFP3Vec
-/* 80182168 00000040  48 00 00 14 */	b lbl_8018217C
+/* 80182128  7F E3 FB 78 */	mr r3, r31                              
+/* 8018212C  7F 64 DB 78 */	mr r4, r27                              
+/* 80182130  4B EF 2F 51 */	bl GetGrpSoundId__4dBgSFRC13cBgS_PolyInfo /* constant-address: 80075080, symbol: GetGrpSoundId__4dBgSFRC13cBgS_PolyInfo */
+/* 80182134  54 64 06 3E */	clrlwi r4, r3, 0x18                     
+/* 80182138  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)  /* constant-address: 80451368, symbol: mAudioMgrPtr__10Z2AudioMgr */
+/* 8018213C  38 63 04 C4 */	addi r3, r3, 0x4c4                      
+/* 80182140  48 13 46 45 */	bl setCameraGroupInfo__11Z2StatusMgrFUc  /* constant-address: 802B6784, symbol: setCameraGroupInfo__11Z2StatusMgrFUc */
+/* 80182144  C0 1D 00 D8 */	lfs f0, 0xd8(r29)                       
+/* 80182148  D0 01 00 08 */	stfs f0, 8(r1)                          
+/* 8018214C  D3 E1 00 0C */	stfs f31, 0xc(r1)                       
+/* 80182150  C0 1D 00 E0 */	lfs f0, 0xe0(r29)                       
+/* 80182154  D0 01 00 10 */	stfs f0, 0x10(r1)                       
+/* 80182158  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)  /* constant-address: 80451368, symbol: mAudioMgrPtr__10Z2AudioMgr */
+/* 8018215C  38 63 04 C4 */	addi r3, r3, 0x4c4                      
+/* 80182160  38 81 00 08 */	addi r4, r1, 8                          
+/* 80182164  48 13 45 FD */	bl setCameraPolygonPos__11Z2StatusMgrFP3Vec /* constant-address: 802B6760, symbol: setCameraPolygonPos__11Z2StatusMgrFP3Vec */
+/* 80182168  48 00 00 14 */	b lbl_8018217C                           /* constant-address: 8018217C, symbol: lbl_8018217C */
 lbl_8018216C:
-/* 8018216C 00000000  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)
-/* 80182170 00000004  38 63 04 C4 */	addi r3, r3, 0x4c4
-/* 80182174 00000008  38 80 00 00 */	li r4, 0
-/* 80182178 0000000C  48 13 45 E9 */	bl setCameraPolygonPos__11Z2StatusMgrFP3Vec
+/* 8018216C  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)  /* constant-address: 80451368, symbol: mAudioMgrPtr__10Z2AudioMgr */
+/* 80182170  38 63 04 C4 */	addi r3, r3, 0x4c4                      
+/* 80182174  38 80 00 00 */	li r4, 0                                
+/* 80182178  48 13 45 E9 */	bl setCameraPolygonPos__11Z2StatusMgrFP3Vec /* constant-address: 802B6760, symbol: setCameraPolygonPos__11Z2StatusMgrFP3Vec */
 lbl_8018217C:
-/* 8018217C 00000000  38 7D 01 40 */	addi r3, r29, 0x140
-/* 80182180 00000004  38 9D 01 E0 */	addi r4, r29, 0x1e0
-/* 80182184 00000008  48 1C 43 2D */	bl PSMTXCopy
-/* 80182188 0000000C  C0 02 9C A0 */	lfs f0, lit_5656(r2)
-/* 8018218C 00000010  D0 1D 01 EC */	stfs f0, 0x1ec(r29)
-/* 80182190 00000014  D0 1D 01 FC */	stfs f0, 0x1fc(r29)
-/* 80182194 00000018  D0 1D 02 0C */	stfs f0, 0x20c(r29)
-/* 80182198 0000001C  38 7D 01 00 */	addi r3, r29, 0x100
-/* 8018219C 00000020  38 9D 01 40 */	addi r4, r29, 0x140
-/* 801821A0 00000024  38 BD 01 A0 */	addi r5, r29, 0x1a0
-/* 801821A4 00000028  4B E8 A7 2D */	bl mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f
-/* 801821A8 0000002C  7F C3 F3 78 */	mr r3, r30
-/* 801821AC 00000030  4B FE 0F A9 */	bl Draw__9dCamera_cFv
-/* 801821B0 00000034  38 61 00 14 */	addi r3, r1, 0x14
-/* 801821B4 00000038  38 80 FF FF */	li r4, -1
-/* 801821B8 0000003C  4B EF 54 39 */	bl __dt__11dBgS_GndChkFv
-/* 801821BC 00000040  38 60 00 01 */	li r3, 1
-/* 801821C0 00000044  E3 E1 00 A8 */	psq_l f31, 168(r1), 0, 0 /* qr0 */
-/* 801821C4 00000000  CB E1 00 A0 */	lfd f31, 0xa0(r1)
-/* 801821C8 00000004  39 61 00 A0 */	addi r11, r1, 0xa0
-/* 801821CC 00000008  48 1E 00 55 */	bl _restgpr_27
-/* 801821D0 0000000C  80 01 00 B4 */	lwz r0, 0xb4(r1)
-/* 801821D4 00000010  7C 08 03 A6 */	mtlr r0
-/* 801821D8 00000014  38 21 00 B0 */	addi r1, r1, 0xb0
-/* 801821DC 00000018  4E 80 00 20 */	blr 
+/* 8018217C  38 7D 01 40 */	addi r3, r29, 0x140                     
+/* 80182180  38 9D 01 E0 */	addi r4, r29, 0x1e0                     
+/* 80182184  48 1C 43 2D */	bl PSMTXCopy                             /* constant-address: 803464B0, symbol: PSMTXCopy */
+/* 80182188  C0 02 9C A0 */	lfs f0, lit_5656(r2)                     /* constant-address: 804536A0, symbol: lit_5656 */
+/* 8018218C  D0 1D 01 EC */	stfs f0, 0x1ec(r29)                     
+/* 80182190  D0 1D 01 FC */	stfs f0, 0x1fc(r29)                     
+/* 80182194  D0 1D 02 0C */	stfs f0, 0x20c(r29)                     
+/* 80182198  38 7D 01 00 */	addi r3, r29, 0x100                     
+/* 8018219C  38 9D 01 40 */	addi r4, r29, 0x140                     
+/* 801821A0  38 BD 01 A0 */	addi r5, r29, 0x1a0                     
+/* 801821A4  4B E8 A7 2D */	bl mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f /* constant-address: 8000C8D0, symbol: mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f */
+/* 801821A8  7F C3 F3 78 */	mr r3, r30                              
+/* 801821AC  4B FE 0F A9 */	bl Draw__9dCamera_cFv                    /* constant-address: 80163154, symbol: Draw__9dCamera_cFv */
+/* 801821B0  38 61 00 14 */	addi r3, r1, 0x14                       
+/* 801821B4  38 80 FF FF */	li r4, -1                               
+/* 801821B8  4B EF 54 39 */	bl __dt__11dBgS_GndChkFv                 /* constant-address: 800775F0, symbol: __dt__11dBgS_GndChkFv */
+/* 801821BC  38 60 00 01 */	li r3, 1                                
+/* 801821C0  E3 E1 00 A8 */	psq_l f31, 168(r1), 0, 0 /* qr0 */      
+/* 801821C4  CB E1 00 A0 */	lfd f31, 0xa0(r1)                       
+/* 801821C8  39 61 00 A0 */	addi r11, r1, 0xa0                      
+/* 801821CC  48 1E 00 55 */	bl _restgpr_27                           /* constant-address: 80362220, symbol: _restgpr_27 */
+/* 801821D0  80 01 00 B4 */	lwz r0, 0xb4(r1)                        
+/* 801821D4  7C 08 03 A6 */	mtlr r0                                 
+/* 801821D8  38 21 00 B0 */	addi r1, r1, 0xb0                       
+/* 801821DC  4E 80 00 20 */	blr                                     

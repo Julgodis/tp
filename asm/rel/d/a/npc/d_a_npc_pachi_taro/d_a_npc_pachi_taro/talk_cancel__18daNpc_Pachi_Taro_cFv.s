@@ -1,25 +1,25 @@
 lbl_80A9E30C:
-/* 80A9E30C 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80A9E310 00000004  7C 08 02 A6 */	mflr r0
-/* 80A9E314 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80A9E318 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80A9E31C 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80A9E320 00000014  38 7F 0F 8C */	addi r3, r31, 0xf8c
-/* 80A9E324 00000018  4B 6A 73 E4 */	b getActorP__18daNpcT_ActorMngr_cFv
-/* 80A9E328 0000001C  28 03 00 00 */	cmplwi r3, 0
-/* 80A9E32C 00000020  41 82 00 0C */	beq lbl_80A9E338
-/* 80A9E330 00000024  38 00 00 00 */	li r0, 0
-/* 80A9E334 00000028  98 03 0F 84 */	stb r0, 0xf84(r3)
+/* 80A9E30C  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80A9E310  7C 08 02 A6 */	mflr r0
+/* 80A9E314  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80A9E318  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80A9E31C  7C 7F 1B 78 */	mr r31, r3
+/* 80A9E320  38 7F 0F 8C */	addi r3, r31, 0xf8c
+/* 80A9E324  4B 6A 73 E4 */	b getActorP__18daNpcT_ActorMngr_cFv
+/* 80A9E328  28 03 00 00 */	cmplwi r3, 0
+/* 80A9E32C  41 82 00 0C */	beq lbl_80A9E338
+/* 80A9E330  38 00 00 00 */	li r0, 0
+/* 80A9E334  98 03 0F 84 */	stb r0, 0xf84(r3)
 lbl_80A9E338:
-/* 80A9E338 00000000  38 7F 0F 94 */	addi r3, r31, 0xf94
-/* 80A9E33C 00000004  4B 6A 73 CC */	b getActorP__18daNpcT_ActorMngr_cFv
-/* 80A9E340 00000008  28 03 00 00 */	cmplwi r3, 0
-/* 80A9E344 0000000C  41 82 00 0C */	beq lbl_80A9E350
-/* 80A9E348 00000010  38 00 00 00 */	li r0, 0
-/* 80A9E34C 00000014  98 03 0F 81 */	stb r0, 0xf81(r3)
+/* 80A9E338  38 7F 0F 94 */	addi r3, r31, 0xf94
+/* 80A9E33C  4B 6A 73 CC */	b getActorP__18daNpcT_ActorMngr_cFv
+/* 80A9E340  28 03 00 00 */	cmplwi r3, 0
+/* 80A9E344  41 82 00 0C */	beq lbl_80A9E350
+/* 80A9E348  38 00 00 00 */	li r0, 0
+/* 80A9E34C  98 03 0F 81 */	stb r0, 0xf81(r3)
 lbl_80A9E350:
-/* 80A9E350 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80A9E354 00000004  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80A9E358 00000008  7C 08 03 A6 */	mtlr r0
-/* 80A9E35C 0000000C  38 21 00 10 */	addi r1, r1, 0x10
-/* 80A9E360 00000010  4E 80 00 20 */	blr 
+/* 80A9E350  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80A9E354  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80A9E358  7C 08 03 A6 */	mtlr r0
+/* 80A9E35C  38 21 00 10 */	addi r1, r1, 0x10
+/* 80A9E360  4E 80 00 20 */	blr 

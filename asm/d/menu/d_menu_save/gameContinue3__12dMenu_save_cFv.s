@@ -1,15 +1,15 @@
 lbl_801F2DA0:
-/* 801F2DA0 00000000  88 83 01 BD */	lbz r4, 0x1bd(r3)
-/* 801F2DA4 00000004  28 04 00 00 */	cmplwi r4, 0
-/* 801F2DA8 00000008  41 82 00 10 */	beq lbl_801F2DB8
-/* 801F2DAC 0000000C  38 04 FF FF */	addi r0, r4, -1
-/* 801F2DB0 00000010  98 03 01 BD */	stb r0, 0x1bd(r3)
-/* 801F2DB4 00000014  4E 80 00 20 */	blr 
+/* 801F2DA0  88 83 01 BD */	lbz r4, 0x1bd(r3)                       
+/* 801F2DA4  28 04 00 00 */	cmplwi r4, 0                            
+/* 801F2DA8  41 82 00 10 */	beq lbl_801F2DB8                         /* constant-address: 801F2DB8, symbol: lbl_801F2DB8 */
+/* 801F2DAC  38 04 FF FF */	addi r0, r4, -1                         
+/* 801F2DB0  98 03 01 BD */	stb r0, 0x1bd(r3)                       
+/* 801F2DB4  4E 80 00 20 */	blr                                     
 lbl_801F2DB8:
-/* 801F2DB8 00000000  38 00 00 29 */	li r0, 0x29
-/* 801F2DBC 00000004  98 03 01 B2 */	stb r0, 0x1b2(r3)
-/* 801F2DC0 00000008  38 00 00 03 */	li r0, 3
-/* 801F2DC4 0000000C  98 03 01 BA */	stb r0, 0x1ba(r3)
-/* 801F2DC8 00000010  38 00 00 00 */	li r0, 0
-/* 801F2DCC 00000014  98 03 01 BB */	stb r0, 0x1bb(r3)
-/* 801F2DD0 00000018  4E 80 00 20 */	blr 
+/* 801F2DB8  38 00 00 29 */	li r0, 0x29                             
+/* 801F2DBC  98 03 01 B2 */	stb r0, 0x1b2(r3)                       
+/* 801F2DC0  38 00 00 03 */	li r0, 3                                
+/* 801F2DC4  98 03 01 BA */	stb r0, 0x1ba(r3)                       
+/* 801F2DC8  38 00 00 00 */	li r0, 0                                
+/* 801F2DCC  98 03 01 BB */	stb r0, 0x1bb(r3)                       
+/* 801F2DD0  4E 80 00 20 */	blr                                     

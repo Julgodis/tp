@@ -1,57 +1,57 @@
 lbl_80129A80:
-/* 80129A80 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80129A84 00000004  7C 08 02 A6 */	mflr r0
-/* 80129A88 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80129A8C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80129A90 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80129A94 00000014  80 03 19 9C */	lwz r0, 0x199c(r3)
-/* 80129A98 00000018  54 00 06 B5 */	rlwinm. r0, r0, 0, 0x1a, 0x1a
-/* 80129A9C 0000001C  41 82 00 2C */	beq lbl_80129AC8
-/* 80129AA0 00000020  80 BF 31 A0 */	lwz r5, 0x31a0(r31)
-/* 80129AA4 00000024  3C 80 00 07 */	lis r4, 0x0007 /* 0x00070C52@ha */
-/* 80129AA8 00000028  38 04 0C 52 */	addi r0, r4, 0x0C52 /* 0x00070C52@l */
-/* 80129AAC 0000002C  7C A0 00 39 */	and. r0, r5, r0
-/* 80129AB0 00000030  40 82 00 18 */	bne lbl_80129AC8
-/* 80129AB4 00000034  80 1F 05 88 */	lwz r0, 0x588(r31)
-/* 80129AB8 00000038  54 00 07 FF */	clrlwi. r0, r0, 0x1f
-/* 80129ABC 0000003C  41 82 00 0C */	beq lbl_80129AC8
-/* 80129AC0 00000040  4B F9 DD 35 */	bl procCoMetamorphoseInit__9daAlink_cFv
-/* 80129AC4 00000044  48 00 00 6C */	b lbl_80129B30
+/* 80129A80  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 80129A84  7C 08 02 A6 */	mflr r0                                 
+/* 80129A88  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 80129A8C  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 80129A90  7C 7F 1B 78 */	mr r31, r3                              
+/* 80129A94  80 03 19 9C */	lwz r0, 0x199c(r3)                      
+/* 80129A98  54 00 06 B5 */	rlwinm. r0, r0, 0, 0x1a, 0x1a           
+/* 80129A9C  41 82 00 2C */	beq lbl_80129AC8                         /* constant-address: 80129AC8, symbol: lbl_80129AC8 */
+/* 80129AA0  80 BF 31 A0 */	lwz r5, 0x31a0(r31)                     
+/* 80129AA4  3C 80 00 07 */	lis r4, 0x0007 /* 0x00070C52@ha */      
+/* 80129AA8  38 04 0C 52 */	addi r0, r4, 0x0C52 /* 0x00070C52@l */   /* constant-address: 00070C52 */
+/* 80129AAC  7C A0 00 39 */	and. r0, r5, r0                         
+/* 80129AB0  40 82 00 18 */	bne lbl_80129AC8                         /* constant-address: 80129AC8, symbol: lbl_80129AC8 */
+/* 80129AB4  80 1F 05 88 */	lwz r0, 0x588(r31)                      
+/* 80129AB8  54 00 07 FF */	clrlwi. r0, r0, 0x1f                    
+/* 80129ABC  41 82 00 0C */	beq lbl_80129AC8                         /* constant-address: 80129AC8, symbol: lbl_80129AC8 */
+/* 80129AC0  4B F9 DD 35 */	bl procCoMetamorphoseInit__9daAlink_cFv  /* constant-address: 800C77F4, symbol: procCoMetamorphoseInit__9daAlink_cFv */
+/* 80129AC4  48 00 00 6C */	b lbl_80129B30                           /* constant-address: 80129B30, symbol: lbl_80129B30 */
 lbl_80129AC8:
-/* 80129AC8 00000000  88 1F 05 6A */	lbz r0, 0x56a(r31)
-/* 80129ACC 00000004  28 00 00 27 */	cmplwi r0, 0x27
-/* 80129AD0 00000008  41 82 00 0C */	beq lbl_80129ADC
-/* 80129AD4 0000000C  28 00 00 28 */	cmplwi r0, 0x28
-/* 80129AD8 00000010  40 82 00 10 */	bne lbl_80129AE8
+/* 80129AC8  88 1F 05 6A */	lbz r0, 0x56a(r31)                      
+/* 80129ACC  28 00 00 27 */	cmplwi r0, 0x27                         
+/* 80129AD0  41 82 00 0C */	beq lbl_80129ADC                         /* constant-address: 80129ADC, symbol: lbl_80129ADC */
+/* 80129AD4  28 00 00 28 */	cmplwi r0, 0x28                         
+/* 80129AD8  40 82 00 10 */	bne lbl_80129AE8                         /* constant-address: 80129AE8, symbol: lbl_80129AE8 */
 lbl_80129ADC:
-/* 80129ADC 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80129AE0 00000004  48 00 B6 81 */	bl procWolfGiantPuzzleInit__9daAlink_cFv
-/* 80129AE4 00000008  48 00 00 4C */	b lbl_80129B30
+/* 80129ADC  7F E3 FB 78 */	mr r3, r31                              
+/* 80129AE0  48 00 B6 81 */	bl procWolfGiantPuzzleInit__9daAlink_cFv /* constant-address: 80135160, symbol: procWolfGiantPuzzleInit__9daAlink_cFv */
+/* 80129AE4  48 00 00 4C */	b lbl_80129B30                           /* constant-address: 80129B30, symbol: lbl_80129B30 */
 lbl_80129AE8:
-/* 80129AE8 00000000  28 00 00 2C */	cmplwi r0, 0x2c
-/* 80129AEC 00000004  40 82 00 10 */	bne lbl_80129AFC
-/* 80129AF0 00000008  7F E3 FB 78 */	mr r3, r31
-/* 80129AF4 0000000C  48 01 40 79 */	bl procWolfCargoCarryInit__9daAlink_cFv
-/* 80129AF8 00000010  48 00 00 38 */	b lbl_80129B30
+/* 80129AE8  28 00 00 2C */	cmplwi r0, 0x2c                         
+/* 80129AEC  40 82 00 10 */	bne lbl_80129AFC                         /* constant-address: 80129AFC, symbol: lbl_80129AFC */
+/* 80129AF0  7F E3 FB 78 */	mr r3, r31                              
+/* 80129AF4  48 01 40 79 */	bl procWolfCargoCarryInit__9daAlink_cFv  /* constant-address: 8013DB6C, symbol: procWolfCargoCarryInit__9daAlink_cFv */
+/* 80129AF8  48 00 00 38 */	b lbl_80129B30                           /* constant-address: 80129B30, symbol: lbl_80129B30 */
 lbl_80129AFC:
-/* 80129AFC 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80129B00 00000004  4B F8 C4 6D */	bl checkSlideAction__9daAlink_cFv
-/* 80129B04 00000008  2C 03 00 00 */	cmpwi r3, 0
-/* 80129B08 0000000C  41 82 00 0C */	beq lbl_80129B14
-/* 80129B0C 00000010  38 60 00 01 */	li r3, 1
-/* 80129B10 00000014  48 00 00 20 */	b lbl_80129B30
+/* 80129AFC  7F E3 FB 78 */	mr r3, r31                              
+/* 80129B00  4B F8 C4 6D */	bl checkSlideAction__9daAlink_cFv        /* constant-address: 800B5F6C, symbol: checkSlideAction__9daAlink_cFv */
+/* 80129B04  2C 03 00 00 */	cmpwi r3, 0                             
+/* 80129B08  41 82 00 0C */	beq lbl_80129B14                         /* constant-address: 80129B14, symbol: lbl_80129B14 */
+/* 80129B0C  38 60 00 01 */	li r3, 1                                
+/* 80129B10  48 00 00 20 */	b lbl_80129B30                           /* constant-address: 80129B30, symbol: lbl_80129B30 */
 lbl_80129B14:
-/* 80129B14 00000000  80 1F 05 8C */	lwz r0, 0x58c(r31)
-/* 80129B18 00000004  54 00 07 FF */	clrlwi. r0, r0, 0x1f
-/* 80129B1C 00000008  41 82 00 10 */	beq lbl_80129B2C
-/* 80129B20 0000000C  7F E3 FB 78 */	mr r3, r31
-/* 80129B24 00000010  48 00 D4 31 */	bl procWolfScreamWaitInit__9daAlink_cFv
-/* 80129B28 00000014  48 00 00 08 */	b lbl_80129B30
+/* 80129B14  80 1F 05 8C */	lwz r0, 0x58c(r31)                      
+/* 80129B18  54 00 07 FF */	clrlwi. r0, r0, 0x1f                    
+/* 80129B1C  41 82 00 10 */	beq lbl_80129B2C                         /* constant-address: 80129B2C, symbol: lbl_80129B2C */
+/* 80129B20  7F E3 FB 78 */	mr r3, r31                              
+/* 80129B24  48 00 D4 31 */	bl procWolfScreamWaitInit__9daAlink_cFv  /* constant-address: 80136F54, symbol: procWolfScreamWaitInit__9daAlink_cFv */
+/* 80129B28  48 00 00 08 */	b lbl_80129B30                           /* constant-address: 80129B30, symbol: lbl_80129B30 */
 lbl_80129B2C:
-/* 80129B2C 00000000  38 60 00 00 */	li r3, 0
+/* 80129B2C  38 60 00 00 */	li r3, 0                                
 lbl_80129B30:
-/* 80129B30 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80129B34 00000004  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80129B38 00000008  7C 08 03 A6 */	mtlr r0
-/* 80129B3C 0000000C  38 21 00 10 */	addi r1, r1, 0x10
-/* 80129B40 00000010  4E 80 00 20 */	blr 
+/* 80129B30  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 80129B34  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 80129B38  7C 08 03 A6 */	mtlr r0                                 
+/* 80129B3C  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 80129B40  4E 80 00 20 */	blr                                     

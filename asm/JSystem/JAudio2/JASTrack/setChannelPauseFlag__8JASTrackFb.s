@@ -1,45 +1,45 @@
 lbl_802929A0:
-/* 802929A0 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 802929A4 00000004  7C 08 02 A6 */	mflr r0
-/* 802929A8 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 802929AC 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 802929B0 00000010  48 0C F8 29 */	bl _savegpr_28
-/* 802929B4 00000014  7C 7C 1B 78 */	mr r28, r3
-/* 802929B8 00000018  7C 9D 23 78 */	mr r29, r4
-/* 802929BC 0000001C  3B C0 00 00 */	li r30, 0
-/* 802929C0 00000020  3B E0 00 00 */	li r31, 0
-/* 802929C4 00000024  48 00 00 24 */	b lbl_802929E8
+/* 802929A0  94 21 FF E0 */	stwu r1, -0x20(r1)                      
+/* 802929A4  7C 08 02 A6 */	mflr r0                                 
+/* 802929A8  90 01 00 24 */	stw r0, 0x24(r1)                        
+/* 802929AC  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 802929B0  48 0C F8 29 */	bl _savegpr_28                           /* constant-address: 803621D8, symbol: _savegpr_28 */
+/* 802929B4  7C 7C 1B 78 */	mr r28, r3                              
+/* 802929B8  7C 9D 23 78 */	mr r29, r4                              
+/* 802929BC  3B C0 00 00 */	li r30, 0                               
+/* 802929C0  3B E0 00 00 */	li r31, 0                               
+/* 802929C4  48 00 00 24 */	b lbl_802929E8                           /* constant-address: 802929E8, symbol: lbl_802929E8 */
 lbl_802929C8:
-/* 802929C8 00000000  38 1F 01 70 */	addi r0, r31, 0x170
-/* 802929CC 00000004  7C 7C 00 2E */	lwzx r3, r28, r0
-/* 802929D0 00000008  28 03 00 00 */	cmplwi r3, 0
-/* 802929D4 0000000C  41 82 00 0C */	beq lbl_802929E0
-/* 802929D8 00000010  7F A4 EB 78 */	mr r4, r29
-/* 802929DC 00000014  48 00 08 C5 */	bl setPauseFlag__Q28JASTrack11TChannelMgrFb
+/* 802929C8  38 1F 01 70 */	addi r0, r31, 0x170                      /* constant-address: 00000170 */
+/* 802929CC  7C 7C 00 2E */	lwzx r3, r28, r0                        
+/* 802929D0  28 03 00 00 */	cmplwi r3, 0                            
+/* 802929D4  41 82 00 0C */	beq lbl_802929E0                         /* constant-address: 802929E0, symbol: lbl_802929E0 */
+/* 802929D8  7F A4 EB 78 */	mr r4, r29                              
+/* 802929DC  48 00 08 C5 */	bl setPauseFlag__Q28JASTrack11TChannelMgrFb /* constant-address: 802932A0, symbol: setPauseFlag__Q28JASTrack11TChannelMgrFb */
 lbl_802929E0:
-/* 802929E0 00000000  3B DE 00 01 */	addi r30, r30, 1
-/* 802929E4 00000004  3B FF 00 04 */	addi r31, r31, 4
+/* 802929E0  3B DE 00 01 */	addi r30, r30, 1                         /* constant-address: 00000001 */
+/* 802929E4  3B FF 00 04 */	addi r31, r31, 4                         /* constant-address: 00000004 */
 lbl_802929E8:
-/* 802929E8 00000000  80 1C 01 D0 */	lwz r0, 0x1d0(r28)
-/* 802929EC 00000004  7C 1E 00 40 */	cmplw r30, r0
-/* 802929F0 00000008  41 80 FF D8 */	blt lbl_802929C8
-/* 802929F4 0000000C  3B C0 00 00 */	li r30, 0
-/* 802929F8 00000010  3B E0 00 00 */	li r31, 0
+/* 802929E8  80 1C 01 D0 */	lwz r0, 0x1d0(r28)                      
+/* 802929EC  7C 1E 00 40 */	cmplw r30, r0                           
+/* 802929F0  41 80 FF D8 */	blt lbl_802929C8                         /* constant-address: 802929C8, symbol: lbl_802929C8 */
+/* 802929F4  3B C0 00 00 */	li r30, 0                               
+/* 802929F8  3B E0 00 00 */	li r31, 0                               
 lbl_802929FC:
-/* 802929FC 00000000  38 1F 01 30 */	addi r0, r31, 0x130
-/* 80292A00 00000004  7C 7C 00 2E */	lwzx r3, r28, r0
-/* 80292A04 00000008  28 03 00 00 */	cmplwi r3, 0
-/* 80292A08 0000000C  41 82 00 0C */	beq lbl_80292A14
-/* 80292A0C 00000010  7F A4 EB 78 */	mr r4, r29
-/* 80292A10 00000014  4B FF FF 91 */	bl setChannelPauseFlag__8JASTrackFb
+/* 802929FC  38 1F 01 30 */	addi r0, r31, 0x130                     
+/* 80292A00  7C 7C 00 2E */	lwzx r3, r28, r0                        
+/* 80292A04  28 03 00 00 */	cmplwi r3, 0                            
+/* 80292A08  41 82 00 0C */	beq lbl_80292A14                         /* constant-address: 80292A14, symbol: lbl_80292A14 */
+/* 80292A0C  7F A4 EB 78 */	mr r4, r29                              
+/* 80292A10  4B FF FF 91 */	bl setChannelPauseFlag__8JASTrackFb      /* constant-address: 802929A0, symbol: setChannelPauseFlag__8JASTrackFb */
 lbl_80292A14:
-/* 80292A14 00000000  3B DE 00 01 */	addi r30, r30, 1
-/* 80292A18 00000004  2C 1E 00 10 */	cmpwi r30, 0x10
-/* 80292A1C 00000008  3B FF 00 04 */	addi r31, r31, 4
-/* 80292A20 0000000C  41 80 FF DC */	blt lbl_802929FC
-/* 80292A24 00000010  39 61 00 20 */	addi r11, r1, 0x20
-/* 80292A28 00000014  48 0C F7 FD */	bl _restgpr_28
-/* 80292A2C 00000018  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 80292A30 0000001C  7C 08 03 A6 */	mtlr r0
-/* 80292A34 00000020  38 21 00 20 */	addi r1, r1, 0x20
-/* 80292A38 00000024  4E 80 00 20 */	blr 
+/* 80292A14  3B DE 00 01 */	addi r30, r30, 1                        
+/* 80292A18  2C 1E 00 10 */	cmpwi r30, 0x10                         
+/* 80292A1C  3B FF 00 04 */	addi r31, r31, 4                        
+/* 80292A20  41 80 FF DC */	blt lbl_802929FC                         /* constant-address: 802929FC, symbol: lbl_802929FC */
+/* 80292A24  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 80292A28  48 0C F7 FD */	bl _restgpr_28                           /* constant-address: 80362224, symbol: _restgpr_28 */
+/* 80292A2C  80 01 00 24 */	lwz r0, 0x24(r1)                        
+/* 80292A30  7C 08 03 A6 */	mtlr r0                                 
+/* 80292A34  38 21 00 20 */	addi r1, r1, 0x20                       
+/* 80292A38  4E 80 00 20 */	blr                                     

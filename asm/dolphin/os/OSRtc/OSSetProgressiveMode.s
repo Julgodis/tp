@@ -1,46 +1,46 @@
 lbl_80340724:
-/* 80340724 00000000  7C 08 02 A6 */	mflr r0
-/* 80340728 00000004  3C 80 80 45 */	lis r4, Scb@ha
-/* 8034072C 00000008  90 01 00 04 */	stw r0, 4(r1)
-/* 80340730 0000000C  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 80340734 00000010  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80340738 00000014  3B E4 BB 20 */	addi r31, r4, Scb@l
-/* 8034073C 00000018  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 80340740 0000001C  54 7E 3E 30 */	rlwinm r30, r3, 7, 0x18, 0x18
-/* 80340744 00000020  4B FF CF B1 */	bl OSDisableInterrupts
-/* 80340748 00000024  80 1F 00 48 */	lwz r0, 0x48(r31)	/* effective address: 8044BB68 */
-/* 8034074C 00000028  38 9F 00 48 */	addi r4, r31, 0x48
-/* 80340750 0000002C  2C 00 00 00 */	cmpwi r0, 0
-/* 80340754 00000030  41 82 00 10 */	beq lbl_80340764
-/* 80340758 00000034  4B FF CF C5 */	bl OSRestoreInterrupts
-/* 8034075C 00000038  3B E0 00 00 */	li r31, 0
-/* 80340760 0000003C  48 00 00 10 */	b lbl_80340770
+/* 80340724  7C 08 02 A6 */	mflr r0                                 
+/* 80340728  3C 80 80 45 */	lis r4, Scb@ha                          
+/* 8034072C  90 01 00 04 */	stw r0, 4(r1)                           
+/* 80340730  94 21 FF E0 */	stwu r1, -0x20(r1)                      
+/* 80340734  93 E1 00 1C */	stw r31, 0x1c(r1)                       
+/* 80340738  3B E4 BB 20 */	addi r31, r4, Scb@l                      /* constant-address: 8044BB20, symbol: Scb */
+/* 8034073C  93 C1 00 18 */	stw r30, 0x18(r1)                       
+/* 80340740  54 7E 3E 30 */	rlwinm r30, r3, 7, 0x18, 0x18           
+/* 80340744  4B FF CF B1 */	bl OSDisableInterrupts                   /* constant-address: 8033D6F4, symbol: OSDisableInterrupts */
+/* 80340748  80 1F 00 48 */	lwz r0, 0x48(r31)                        /* constant-address: 8044BB68, symbol: None */
+/* 8034074C  38 9F 00 48 */	addi r4, r31, 0x48                       /* constant-address: 8044BB68, symbol: None */
+/* 80340750  2C 00 00 00 */	cmpwi r0, 0                             
+/* 80340754  41 82 00 10 */	beq lbl_80340764                         /* constant-address: 80340764, symbol: lbl_80340764 */
+/* 80340758  4B FF CF C5 */	bl OSRestoreInterrupts                   /* constant-address: 8033D71C, symbol: OSRestoreInterrupts */
+/* 8034075C  3B E0 00 00 */	li r31, 0                               
+/* 80340760  48 00 00 10 */	b lbl_80340770                           /* constant-address: 80340770, symbol: lbl_80340770 */
 lbl_80340764:
-/* 80340764 00000000  90 7F 00 44 */	stw r3, 0x44(r31)
-/* 80340768 00000004  38 00 00 01 */	li r0, 1
-/* 8034076C 00000008  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 8044BB68 */
+/* 80340764  90 7F 00 44 */	stw r3, 0x44(r31)                        /* constant-address: 8044BB64, symbol: None */
+/* 80340768  38 00 00 01 */	li r0, 1                                
+/* 8034076C  90 04 00 00 */	stw r0, 0(r4)                            /* constant-address: 8044BB68, symbol: None */
 lbl_80340770:
-/* 80340770 00000000  88 7F 00 13 */	lbz r3, 0x13(r31)
-/* 80340774 00000004  54 60 06 30 */	rlwinm r0, r3, 0, 0x18, 0x18
-/* 80340778 00000008  7C 1E 00 40 */	cmplw r30, r0
-/* 8034077C 0000000C  40 82 00 14 */	bne lbl_80340790
-/* 80340780 00000010  38 60 00 00 */	li r3, 0
-/* 80340784 00000014  38 80 00 00 */	li r4, 0
-/* 80340788 00000018  4B FF FA 75 */	bl UnlockSram
-/* 8034078C 0000001C  48 00 00 24 */	b lbl_803407B0
+/* 80340770  88 7F 00 13 */	lbz r3, 0x13(r31)                       
+/* 80340774  54 60 06 30 */	rlwinm r0, r3, 0, 0x18, 0x18            
+/* 80340778  7C 1E 00 40 */	cmplw r30, r0                           
+/* 8034077C  40 82 00 14 */	bne lbl_80340790                         /* constant-address: 80340790, symbol: lbl_80340790 */
+/* 80340780  38 60 00 00 */	li r3, 0                                
+/* 80340784  38 80 00 00 */	li r4, 0                                
+/* 80340788  4B FF FA 75 */	bl UnlockSram                            /* constant-address: 803401FC, symbol: UnlockSram */
+/* 8034078C  48 00 00 24 */	b lbl_803407B0                           /* constant-address: 803407B0, symbol: lbl_803407B0 */
 lbl_80340790:
-/* 80340790 00000000  54 60 06 6E */	rlwinm r0, r3, 0, 0x19, 0x17
-/* 80340794 00000004  98 1F 00 13 */	stb r0, 0x13(r31)
-/* 80340798 00000008  38 60 00 01 */	li r3, 1
-/* 8034079C 0000000C  38 80 00 00 */	li r4, 0
-/* 803407A0 00000010  88 1F 00 13 */	lbz r0, 0x13(r31)
-/* 803407A4 00000014  7C 00 F3 78 */	or r0, r0, r30
-/* 803407A8 00000018  98 1F 00 13 */	stb r0, 0x13(r31)
-/* 803407AC 0000001C  4B FF FA 51 */	bl UnlockSram
+/* 80340790  54 60 06 6E */	rlwinm r0, r3, 0, 0x19, 0x17            
+/* 80340794  98 1F 00 13 */	stb r0, 0x13(r31)                        /* constant-address: 00000013 */
+/* 80340798  38 60 00 01 */	li r3, 1                                
+/* 8034079C  38 80 00 00 */	li r4, 0                                
+/* 803407A0  88 1F 00 13 */	lbz r0, 0x13(r31)                        /* constant-address: 00000013 */
+/* 803407A4  7C 00 F3 78 */	or r0, r0, r30                          
+/* 803407A8  98 1F 00 13 */	stb r0, 0x13(r31)                        /* constant-address: 00000013 */
+/* 803407AC  4B FF FA 51 */	bl UnlockSram                            /* constant-address: 803401FC, symbol: UnlockSram */
 lbl_803407B0:
-/* 803407B0 00000000  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 803407B4 00000004  83 E1 00 1C */	lwz r31, 0x1c(r1)
-/* 803407B8 00000008  83 C1 00 18 */	lwz r30, 0x18(r1)
-/* 803407BC 0000000C  38 21 00 20 */	addi r1, r1, 0x20
-/* 803407C0 00000010  7C 08 03 A6 */	mtlr r0
-/* 803407C4 00000014  4E 80 00 20 */	blr 
+/* 803407B0  80 01 00 24 */	lwz r0, 0x24(r1)                        
+/* 803407B4  83 E1 00 1C */	lwz r31, 0x1c(r1)                       
+/* 803407B8  83 C1 00 18 */	lwz r30, 0x18(r1)                       
+/* 803407BC  38 21 00 20 */	addi r1, r1, 0x20                       
+/* 803407C0  7C 08 03 A6 */	mtlr r0                                 
+/* 803407C4  4E 80 00 20 */	blr                                     

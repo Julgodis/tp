@@ -1,28 +1,28 @@
 lbl_8034D7C4:
-/* 8034D7C4 00000000  7C 08 02 A6 */	mflr r0
-/* 8034D7C8 00000004  3C 80 80 45 */	lis r4, regs@ha
-/* 8034D7CC 00000008  90 01 00 04 */	stw r0, 4(r1)
-/* 8034D7D0 0000000C  94 21 FF E8 */	stwu r1, -0x18(r1)
-/* 8034D7D4 00000010  93 E1 00 14 */	stw r31, 0x14(r1)
-/* 8034D7D8 00000014  3B E4 CA 28 */	addi r31, r4, regs@l
-/* 8034D7DC 00000018  93 C1 00 10 */	stw r30, 0x10(r1)
-/* 8034D7E0 0000001C  3B C3 00 00 */	addi r30, r3, 0
-/* 8034D7E4 00000020  4B FE FF 11 */	bl OSDisableInterrupts
-/* 8034D7E8 00000024  93 DF 01 20 */	stw r30, 0x120(r31)	/* effective address: 8044CB48 */
-/* 8034D7EC 00000028  38 00 00 01 */	li r0, 1
-/* 8034D7F0 0000002C  3B C3 00 00 */	addi r30, r3, 0
-/* 8034D7F4 00000030  90 0D 92 B8 */	stw r0, FBSet(r13)
-/* 8034D7F8 00000034  38 7F 00 F0 */	addi r3, r31, 0xf0
-/* 8034D7FC 00000038  38 9F 01 24 */	addi r4, r31, 0x124
-/* 8034D800 0000003C  38 BF 01 28 */	addi r5, r31, 0x128
-/* 8034D804 00000040  38 DF 01 3C */	addi r6, r31, 0x13c
-/* 8034D808 00000044  38 FF 01 40 */	addi r7, r31, 0x140
-/* 8034D80C 00000048  4B FF F2 0D */	bl setFbbRegs
-/* 8034D810 0000004C  7F C3 F3 78 */	mr r3, r30
-/* 8034D814 00000050  4B FE FF 09 */	bl OSRestoreInterrupts
-/* 8034D818 00000054  80 01 00 1C */	lwz r0, 0x1c(r1)
-/* 8034D81C 00000058  83 E1 00 14 */	lwz r31, 0x14(r1)
-/* 8034D820 0000005C  83 C1 00 10 */	lwz r30, 0x10(r1)
-/* 8034D824 00000060  38 21 00 18 */	addi r1, r1, 0x18
-/* 8034D828 00000064  7C 08 03 A6 */	mtlr r0
-/* 8034D82C 00000068  4E 80 00 20 */	blr 
+/* 8034D7C4  7C 08 02 A6 */	mflr r0                                 
+/* 8034D7C8  3C 80 80 45 */	lis r4, regs@ha                         
+/* 8034D7CC  90 01 00 04 */	stw r0, 4(r1)                           
+/* 8034D7D0  94 21 FF E8 */	stwu r1, -0x18(r1)                      
+/* 8034D7D4  93 E1 00 14 */	stw r31, 0x14(r1)                       
+/* 8034D7D8  3B E4 CA 28 */	addi r31, r4, regs@l                     /* constant-address: 8044CA28, symbol: regs */
+/* 8034D7DC  93 C1 00 10 */	stw r30, 0x10(r1)                       
+/* 8034D7E0  3B C3 00 00 */	addi r30, r3, 0                         
+/* 8034D7E4  4B FE FF 11 */	bl OSDisableInterrupts                   /* constant-address: 8033D6F4, symbol: OSDisableInterrupts */
+/* 8034D7E8  93 DF 01 20 */	stw r30, 0x120(r31)                      /* constant-address: 8044CB48, symbol: None */
+/* 8034D7EC  38 00 00 01 */	li r0, 1                                
+/* 8034D7F0  3B C3 00 00 */	addi r30, r3, 0                         
+/* 8034D7F4  90 0D 92 B8 */	stw r0, FBSet(r13)                       /* constant-address: 80451838, symbol: FBSet */
+/* 8034D7F8  38 7F 00 F0 */	addi r3, r31, 0xf0                       /* constant-address: 8044CB18, symbol: HorVer */
+/* 8034D7FC  38 9F 01 24 */	addi r4, r31, 0x124                      /* constant-address: 8044CB4C, symbol: None */
+/* 8034D800  38 BF 01 28 */	addi r5, r31, 0x128                      /* constant-address: 8044CB50, symbol: None */
+/* 8034D804  38 DF 01 3C */	addi r6, r31, 0x13c                      /* constant-address: 8044CB64, symbol: None */
+/* 8034D808  38 FF 01 40 */	addi r7, r31, 0x140                      /* constant-address: 8044CB68, symbol: None */
+/* 8034D80C  4B FF F2 0D */	bl setFbbRegs                            /* constant-address: 8034CA18, symbol: setFbbRegs */
+/* 8034D810  7F C3 F3 78 */	mr r3, r30                              
+/* 8034D814  4B FE FF 09 */	bl OSRestoreInterrupts                   /* constant-address: 8033D71C, symbol: OSRestoreInterrupts */
+/* 8034D818  80 01 00 1C */	lwz r0, 0x1c(r1)                        
+/* 8034D81C  83 E1 00 14 */	lwz r31, 0x14(r1)                       
+/* 8034D820  83 C1 00 10 */	lwz r30, 0x10(r1)                       
+/* 8034D824  38 21 00 18 */	addi r1, r1, 0x18                       
+/* 8034D828  7C 08 03 A6 */	mtlr r0                                 
+/* 8034D82C  4E 80 00 20 */	blr                                     

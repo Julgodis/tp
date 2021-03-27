@@ -1,48 +1,48 @@
 lbl_800F6EFC:
-/* 800F6EFC 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 800F6F00 00000004  7C 08 02 A6 */	mflr r0
-/* 800F6F04 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 800F6F08 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 800F6F0C 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 800F6F10 00000014  4B FF D8 C9 */	bl canoeCommon__9daAlink_cFv
-/* 800F6F14 00000018  2C 03 00 00 */	cmpwi r3, 0
-/* 800F6F18 0000001C  41 82 00 0C */	beq lbl_800F6F24
-/* 800F6F1C 00000020  38 60 00 01 */	li r3, 1
-/* 800F6F20 00000024  48 00 00 70 */	b lbl_800F6F90
+/* 800F6EFC  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 800F6F00  7C 08 02 A6 */	mflr r0                                 
+/* 800F6F04  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 800F6F08  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 800F6F0C  7C 7F 1B 78 */	mr r31, r3                              
+/* 800F6F10  4B FF D8 C9 */	bl canoeCommon__9daAlink_cFv             /* constant-address: 800F47D8, symbol: canoeCommon__9daAlink_cFv */
+/* 800F6F14  2C 03 00 00 */	cmpwi r3, 0                             
+/* 800F6F18  41 82 00 0C */	beq lbl_800F6F24                         /* constant-address: 800F6F24, symbol: lbl_800F6F24 */
+/* 800F6F1C  38 60 00 01 */	li r3, 1                                
+/* 800F6F20  48 00 00 70 */	b lbl_800F6F90                           /* constant-address: 800F6F90, symbol: lbl_800F6F90 */
 lbl_800F6F24:
-/* 800F6F24 00000000  80 1F 28 30 */	lwz r0, 0x2830(r31)
-/* 800F6F28 00000004  28 00 00 00 */	cmplwi r0, 0
-/* 800F6F2C 00000008  40 82 00 24 */	bne lbl_800F6F50
-/* 800F6F30 0000000C  7F E3 FB 78 */	mr r3, r31
-/* 800F6F34 00000010  4B FE CD 39 */	bl checkGrabAnime__9daAlink_cCFv
-/* 800F6F38 00000014  2C 03 00 00 */	cmpwi r3, 0
-/* 800F6F3C 00000018  41 82 00 14 */	beq lbl_800F6F50
-/* 800F6F40 0000001C  7F E3 FB 78 */	mr r3, r31
-/* 800F6F44 00000020  38 80 00 02 */	li r4, 2
-/* 800F6F48 00000024  C0 22 92 C4 */	lfs f1, lit_6109(r2)
-/* 800F6F4C 00000028  4B FB 67 D9 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
+/* 800F6F24  80 1F 28 30 */	lwz r0, 0x2830(r31)                     
+/* 800F6F28  28 00 00 00 */	cmplwi r0, 0                            
+/* 800F6F2C  40 82 00 24 */	bne lbl_800F6F50                         /* constant-address: 800F6F50, symbol: lbl_800F6F50 */
+/* 800F6F30  7F E3 FB 78 */	mr r3, r31                              
+/* 800F6F34  4B FE CD 39 */	bl checkGrabAnime__9daAlink_cCFv         /* constant-address: 800E3C6C, symbol: checkGrabAnime__9daAlink_cCFv */
+/* 800F6F38  2C 03 00 00 */	cmpwi r3, 0                             
+/* 800F6F3C  41 82 00 14 */	beq lbl_800F6F50                         /* constant-address: 800F6F50, symbol: lbl_800F6F50 */
+/* 800F6F40  7F E3 FB 78 */	mr r3, r31                              
+/* 800F6F44  38 80 00 02 */	li r4, 2                                
+/* 800F6F48  C0 22 92 C4 */	lfs f1, lit_6109(r2)                     /* constant-address: 80452CC4, symbol: lit_6109 */
+/* 800F6F4C  4B FB 67 D9 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf /* constant-address: 800AD724, symbol: resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf */
 lbl_800F6F50:
-/* 800F6F50 00000000  7F E3 FB 78 */	mr r3, r31
-/* 800F6F54 00000004  4B FE CC C9 */	bl checkGrabThrowAnime__9daAlink_cCFv
-/* 800F6F58 00000008  2C 03 00 00 */	cmpwi r3, 0
-/* 800F6F5C 0000000C  41 82 00 28 */	beq lbl_800F6F84
-/* 800F6F60 00000010  7F E3 FB 78 */	mr r3, r31
-/* 800F6F64 00000014  C0 22 92 C4 */	lfs f1, lit_6109(r2)
-/* 800F6F68 00000018  4B FE E8 45 */	bl checkUpperGrabItemThrow__9daAlink_cFf
-/* 800F6F6C 0000001C  2C 03 00 00 */	cmpwi r3, 0
-/* 800F6F70 00000020  41 82 00 1C */	beq lbl_800F6F8C
-/* 800F6F74 00000024  7F E3 FB 78 */	mr r3, r31
-/* 800F6F78 00000028  38 80 00 00 */	li r4, 0
-/* 800F6F7C 0000002C  4B FF E2 69 */	bl procCanoeWaitInit__9daAlink_cFi
-/* 800F6F80 00000030  48 00 00 0C */	b lbl_800F6F8C
+/* 800F6F50  7F E3 FB 78 */	mr r3, r31                              
+/* 800F6F54  4B FE CC C9 */	bl checkGrabThrowAnime__9daAlink_cCFv    /* constant-address: 800E3C1C, symbol: checkGrabThrowAnime__9daAlink_cCFv */
+/* 800F6F58  2C 03 00 00 */	cmpwi r3, 0                             
+/* 800F6F5C  41 82 00 28 */	beq lbl_800F6F84                         /* constant-address: 800F6F84, symbol: lbl_800F6F84 */
+/* 800F6F60  7F E3 FB 78 */	mr r3, r31                              
+/* 800F6F64  C0 22 92 C4 */	lfs f1, lit_6109(r2)                     /* constant-address: 80452CC4, symbol: lit_6109 */
+/* 800F6F68  4B FE E8 45 */	bl checkUpperGrabItemThrow__9daAlink_cFf /* constant-address: 800E57AC, symbol: checkUpperGrabItemThrow__9daAlink_cFf */
+/* 800F6F6C  2C 03 00 00 */	cmpwi r3, 0                             
+/* 800F6F70  41 82 00 1C */	beq lbl_800F6F8C                         /* constant-address: 800F6F8C, symbol: lbl_800F6F8C */
+/* 800F6F74  7F E3 FB 78 */	mr r3, r31                              
+/* 800F6F78  38 80 00 00 */	li r4, 0                                
+/* 800F6F7C  4B FF E2 69 */	bl procCanoeWaitInit__9daAlink_cFi       /* constant-address: 800F51E4, symbol: procCanoeWaitInit__9daAlink_cFi */
+/* 800F6F80  48 00 00 0C */	b lbl_800F6F8C                           /* constant-address: 800F6F8C, symbol: lbl_800F6F8C */
 lbl_800F6F84:
-/* 800F6F84 00000000  7F E3 FB 78 */	mr r3, r31
-/* 800F6F88 00000004  4B FF D9 9D */	bl checkNextActionCanoe__9daAlink_cFv
+/* 800F6F84  7F E3 FB 78 */	mr r3, r31                              
+/* 800F6F88  4B FF D9 9D */	bl checkNextActionCanoe__9daAlink_cFv    /* constant-address: 800F4924, symbol: checkNextActionCanoe__9daAlink_cFv */
 lbl_800F6F8C:
-/* 800F6F8C 00000000  38 60 00 01 */	li r3, 1
+/* 800F6F8C  38 60 00 01 */	li r3, 1                                
 lbl_800F6F90:
-/* 800F6F90 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 800F6F94 00000004  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 800F6F98 00000008  7C 08 03 A6 */	mtlr r0
-/* 800F6F9C 0000000C  38 21 00 10 */	addi r1, r1, 0x10
-/* 800F6FA0 00000010  4E 80 00 20 */	blr 
+/* 800F6F90  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 800F6F94  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 800F6F98  7C 08 03 A6 */	mtlr r0                                 
+/* 800F6F9C  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 800F6FA0  4E 80 00 20 */	blr                                     

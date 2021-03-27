@@ -1,22 +1,22 @@
 lbl_80292808:
-/* 80292808 00000000  3D 20 80 3A */	lis r9, sEnvOsc__8JASTrack@ha
-/* 8029280C 00000004  84 09 AF E8 */	lwzu r0, sEnvOsc__8JASTrack@l(r9)
-/* 80292810 00000008  90 03 00 E4 */	stw r0, 0xe4(r3)
-/* 80292814 0000000C  C0 09 00 04 */	lfs f0, 4(r9)	/* effective address: 803A0004 */
-/* 80292818 00000010  D0 03 00 E8 */	stfs f0, 0xe8(r3)
-/* 8029281C 00000014  80 09 00 08 */	lwz r0, 8(r9)	/* effective address: 803A0008 */
-/* 80292820 00000018  90 03 00 EC */	stw r0, 0xec(r3)
-/* 80292824 0000001C  80 09 00 0C */	lwz r0, 0xc(r9)	/* effective address: 803A000C */
-/* 80292828 00000020  90 03 00 F0 */	stw r0, 0xf0(r3)
-/* 8029282C 00000024  C0 09 00 10 */	lfs f0, 0x10(r9)	/* effective address: 803A0010 */
-/* 80292830 00000028  D0 03 00 F4 */	stfs f0, 0xf4(r3)
-/* 80292834 0000002C  C0 09 00 14 */	lfs f0, 0x14(r9)	/* effective address: 803A0014 */
-/* 80292838 00000030  D0 03 00 F8 */	stfs f0, 0xf8(r3)
-/* 8029283C 00000034  38 03 01 14 */	addi r0, r3, 0x114
-/* 80292840 00000038  90 03 00 EC */	stw r0, 0xec(r3)
-/* 80292844 0000003C  B0 83 01 16 */	sth r4, 0x116(r3)
-/* 80292848 00000040  B0 A3 01 1C */	sth r5, 0x11c(r3)
-/* 8029284C 00000044  B0 C3 01 22 */	sth r6, 0x122(r3)
-/* 80292850 00000048  B0 E3 01 24 */	sth r7, 0x124(r3)
-/* 80292854 0000004C  B1 03 02 24 */	sth r8, 0x224(r3)
-/* 80292858 00000050  4E 80 00 20 */	blr 
+/* 80292808  3D 20 80 3A */	lis r9, sEnvOsc__8JASTrack@ha           
+/* 8029280C  84 09 AF E8 */	lwzu r0, sEnvOsc__8JASTrack@l(r9)        /* constant-address: 8039AFE8, symbol: sEnvOsc__8JASTrack */
+/* 80292810  90 03 00 E4 */	stw r0, 0xe4(r3)                        
+/* 80292814  C0 09 00 04 */	lfs f0, 4(r9)                            /* constant-address: 8039AFEC, symbol: None */
+/* 80292818  D0 03 00 E8 */	stfs f0, 0xe8(r3)                       
+/* 8029281C  80 09 00 08 */	lwz r0, 8(r9)                            /* constant-address: 8039AFF0, symbol: None */
+/* 80292820  90 03 00 EC */	stw r0, 0xec(r3)                        
+/* 80292824  80 09 00 0C */	lwz r0, 0xc(r9)                          /* constant-address: 8039AFF4, symbol: None */
+/* 80292828  90 03 00 F0 */	stw r0, 0xf0(r3)                        
+/* 8029282C  C0 09 00 10 */	lfs f0, 0x10(r9)                         /* constant-address: 8039AFF8, symbol: None */
+/* 80292830  D0 03 00 F4 */	stfs f0, 0xf4(r3)                       
+/* 80292834  C0 09 00 14 */	lfs f0, 0x14(r9)                         /* constant-address: 8039AFFC, symbol: None */
+/* 80292838  D0 03 00 F8 */	stfs f0, 0xf8(r3)                       
+/* 8029283C  38 03 01 14 */	addi r0, r3, 0x114                      
+/* 80292840  90 03 00 EC */	stw r0, 0xec(r3)                        
+/* 80292844  B0 83 01 16 */	sth r4, 0x116(r3)                       
+/* 80292848  B0 A3 01 1C */	sth r5, 0x11c(r3)                       
+/* 8029284C  B0 C3 01 22 */	sth r6, 0x122(r3)                       
+/* 80292850  B0 E3 01 24 */	sth r7, 0x124(r3)                       
+/* 80292854  B1 03 02 24 */	sth r8, 0x224(r3)                       
+/* 80292858  4E 80 00 20 */	blr                                     

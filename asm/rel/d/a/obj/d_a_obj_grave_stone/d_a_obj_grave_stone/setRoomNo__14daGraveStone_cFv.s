@@ -1,18 +1,18 @@
 lbl_80C12A94:
-/* 80C12A94 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80C12A98 00000004  7C 08 02 A6 */	mflr r0
-/* 80C12A9C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80C12AA0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80C12AA4 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80C12AA8 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80C12AAC 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80C12AB0 0000001C  38 63 0F 38 */	addi r3, r3, 0xf38
-/* 80C12AB4 00000020  38 9F 09 50 */	addi r4, r31, 0x950
-/* 80C12AB8 00000024  4B 46 26 48 */	b GetRoomId__4dBgSFRC13cBgS_PolyInfo
-/* 80C12ABC 00000028  98 7F 04 E2 */	stb r3, 0x4e2(r31)
-/* 80C12AC0 0000002C  98 7F 07 A6 */	stb r3, 0x7a6(r31)
-/* 80C12AC4 00000030  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80C12AC8 00000034  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80C12ACC 00000038  7C 08 03 A6 */	mtlr r0
-/* 80C12AD0 0000003C  38 21 00 10 */	addi r1, r1, 0x10
-/* 80C12AD4 00000040  4E 80 00 20 */	blr 
+/* 80C12A94  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80C12A98  7C 08 02 A6 */	mflr r0
+/* 80C12A9C  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80C12AA0  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80C12AA4  7C 7F 1B 78 */	mr r31, r3
+/* 80C12AA8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 80C12AAC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C12AB0  38 63 0F 38 */	addi r3, r3, 0xf38
+/* 80C12AB4  38 9F 09 50 */	addi r4, r31, 0x950
+/* 80C12AB8  4B 46 26 48 */	b GetRoomId__4dBgSFRC13cBgS_PolyInfo
+/* 80C12ABC  98 7F 04 E2 */	stb r3, 0x4e2(r31)
+/* 80C12AC0  98 7F 07 A6 */	stb r3, 0x7a6(r31)
+/* 80C12AC4  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80C12AC8  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80C12ACC  7C 08 03 A6 */	mtlr r0
+/* 80C12AD0  38 21 00 10 */	addi r1, r1, 0x10
+/* 80C12AD4  4E 80 00 20 */	blr 

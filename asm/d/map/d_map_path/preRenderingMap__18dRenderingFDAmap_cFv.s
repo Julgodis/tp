@@ -1,103 +1,103 @@
 lbl_8003D188:
-/* 8003D188 00000000  94 21 FF 90 */	stwu r1, -0x70(r1)
-/* 8003D18C 00000004  7C 08 02 A6 */	mflr r0
-/* 8003D190 00000008  90 01 00 74 */	stw r0, 0x74(r1)
-/* 8003D194 0000000C  93 E1 00 6C */	stw r31, 0x6c(r1)
-/* 8003D198 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8003D19C 00000014  C0 22 84 08 */	lfs f1, lit_3836(r2)
-/* 8003D1A0 00000018  FC 40 08 90 */	fmr f2, f1
-/* 8003D1A4 0000001C  A0 03 00 1C */	lhz r0, 0x1c(r3)
-/* 8003D1A8 00000020  C8 82 84 18 */	lfd f4, lit_3850(r2)
-/* 8003D1AC 00000024  90 01 00 54 */	stw r0, 0x54(r1)
-/* 8003D1B0 00000028  3C 60 43 30 */	lis r3, 0x4330
-/* 8003D1B4 0000002C  90 61 00 50 */	stw r3, 0x50(r1)
-/* 8003D1B8 00000030  C8 01 00 50 */	lfd f0, 0x50(r1)
-/* 8003D1BC 00000034  EC 60 20 28 */	fsubs f3, f0, f4
-/* 8003D1C0 00000038  A0 1F 00 1E */	lhz r0, 0x1e(r31)
-/* 8003D1C4 0000003C  90 01 00 5C */	stw r0, 0x5c(r1)
-/* 8003D1C8 00000040  90 61 00 58 */	stw r3, 0x58(r1)
-/* 8003D1CC 00000044  C8 01 00 58 */	lfd f0, 0x58(r1)
-/* 8003D1D0 00000048  EC 80 20 28 */	fsubs f4, f0, f4
-/* 8003D1D4 0000004C  FC A0 08 90 */	fmr f5, f1
-/* 8003D1D8 00000050  C0 C2 84 0C */	lfs f6, lit_3846(r2)
-/* 8003D1DC 00000054  48 32 32 89 */	bl GXSetViewport
-/* 8003D1E0 00000058  38 60 00 00 */	li r3, 0
-/* 8003D1E4 0000005C  38 80 00 00 */	li r4, 0
-/* 8003D1E8 00000060  A0 BF 00 1C */	lhz r5, 0x1c(r31)
-/* 8003D1EC 00000064  A0 DF 00 1E */	lhz r6, 0x1e(r31)
-/* 8003D1F0 00000068  48 32 32 E1 */	bl GXSetScissor
-/* 8003D1F4 0000006C  38 60 00 01 */	li r3, 1
-/* 8003D1F8 00000070  48 32 09 39 */	bl GXSetNumChans
-/* 8003D1FC 00000074  38 60 00 01 */	li r3, 1
-/* 8003D200 00000078  48 32 26 91 */	bl GXSetNumTevStages
-/* 8003D204 0000007C  38 60 00 04 */	li r3, 4
-/* 8003D208 00000080  38 80 00 00 */	li r4, 0
-/* 8003D20C 00000084  38 A0 00 00 */	li r5, 0
-/* 8003D210 00000088  38 C0 00 00 */	li r6, 0
-/* 8003D214 0000008C  38 E0 00 00 */	li r7, 0
-/* 8003D218 00000090  39 00 00 00 */	li r8, 0
-/* 8003D21C 00000094  39 20 00 02 */	li r9, 2
-/* 8003D220 00000098  48 32 09 4D */	bl GXSetChanCtrl
-/* 8003D224 0000009C  38 60 00 07 */	li r3, 7
-/* 8003D228 000000A0  38 80 00 00 */	li r4, 0
-/* 8003D22C 000000A4  38 A0 00 01 */	li r5, 1
-/* 8003D230 000000A8  38 C0 00 07 */	li r6, 7
-/* 8003D234 000000AC  38 E0 00 00 */	li r7, 0
-/* 8003D238 000000B0  48 32 23 ED */	bl GXSetAlphaCompare
-/* 8003D23C 000000B4  38 60 00 01 */	li r3, 1
-/* 8003D240 000000B8  48 32 2A 91 */	bl GXSetZCompLoc
-/* 8003D244 000000BC  38 60 00 00 */	li r3, 0
-/* 8003D248 000000C0  38 80 00 07 */	li r4, 7
-/* 8003D24C 000000C4  38 A0 00 00 */	li r5, 0
-/* 8003D250 000000C8  48 32 2A 4D */	bl GXSetZMode
-/* 8003D254 000000CC  38 60 00 00 */	li r3, 0
-/* 8003D258 000000D0  38 80 00 04 */	li r4, 4
-/* 8003D25C 000000D4  38 A0 00 05 */	li r5, 5
-/* 8003D260 000000D8  38 C0 00 00 */	li r6, 0
-/* 8003D264 000000DC  48 32 29 8D */	bl GXSetBlendMode
-/* 8003D268 000000E0  80 0D 80 80 */	lwz r0, g_clearColor(r13)
-/* 8003D26C 000000E4  90 01 00 08 */	stw r0, 8(r1)
-/* 8003D270 000000E8  38 60 00 00 */	li r3, 0
-/* 8003D274 000000EC  C0 22 84 08 */	lfs f1, lit_3836(r2)
-/* 8003D278 000000F0  FC 40 08 90 */	fmr f2, f1
-/* 8003D27C 000000F4  FC 60 08 90 */	fmr f3, f1
-/* 8003D280 000000F8  FC 80 08 90 */	fmr f4, f1
-/* 8003D284 000000FC  38 81 00 08 */	addi r4, r1, 8
-/* 8003D288 00000100  48 32 26 31 */	bl GXSetFog
-/* 8003D28C 00000104  38 60 00 00 */	li r3, 0
-/* 8003D290 00000108  48 31 F6 F5 */	bl GXSetCullMode
-/* 8003D294 0000010C  38 60 00 00 */	li r3, 0
-/* 8003D298 00000110  48 32 2B 41 */	bl GXSetDither
-/* 8003D29C 00000114  38 60 00 00 */	li r3, 0
-/* 8003D2A0 00000118  48 32 1E 35 */	bl GXSetNumIndStages
-/* 8003D2A4 0000011C  38 60 00 00 */	li r3, 0
-/* 8003D2A8 00000120  48 32 33 29 */	bl GXSetClipMode
-/* 8003D2AC 00000124  7F E3 FB 78 */	mr r3, r31
-/* 8003D2B0 00000128  4B FF FB C9 */	bl setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv
-/* 8003D2B4 0000012C  C0 22 84 10 */	lfs f1, lit_3847(r2)
-/* 8003D2B8 00000130  C0 1F 00 08 */	lfs f0, 8(r31)
-/* 8003D2BC 00000134  EC 81 00 32 */	fmuls f4, f1, f0
-/* 8003D2C0 00000138  C0 1F 00 0C */	lfs f0, 0xc(r31)
-/* 8003D2C4 0000013C  EC 21 00 32 */	fmuls f1, f1, f0
-/* 8003D2C8 00000140  38 61 00 0C */	addi r3, r1, 0xc
-/* 8003D2CC 00000144  FC 40 08 50 */	fneg f2, f1
-/* 8003D2D0 00000148  FC 60 20 50 */	fneg f3, f4
-/* 8003D2D4 0000014C  C0 A2 84 08 */	lfs f5, lit_3836(r2)
-/* 8003D2D8 00000150  C0 C2 84 14 */	lfs f6, lit_3848(r2)
-/* 8003D2DC 00000154  48 30 9D 1D */	bl C_MTXOrtho
-/* 8003D2E0 00000158  38 61 00 0C */	addi r3, r1, 0xc
-/* 8003D2E4 0000015C  38 80 00 01 */	li r4, 1
-/* 8003D2E8 00000160  48 32 2D ED */	bl GXSetProjection
-/* 8003D2EC 00000164  3C 60 80 3A */	lis r3, g_mDoMtx_identity@ha
-/* 8003D2F0 00000168  38 63 2F D8 */	addi r3, r3, g_mDoMtx_identity@l
-/* 8003D2F4 0000016C  38 80 00 00 */	li r4, 0
-/* 8003D2F8 00000170  48 32 2F 55 */	bl GXLoadPosMtxImm
-/* 8003D2FC 00000174  38 60 00 00 */	li r3, 0
-/* 8003D300 00000178  48 32 2F ED */	bl GXSetCurrentMtx
-/* 8003D304 0000017C  7F E3 FB 78 */	mr r3, r31
-/* 8003D308 00000180  4B FF FD A5 */	bl drawBack__18dRenderingFDAmap_cCFv
-/* 8003D30C 00000184  83 E1 00 6C */	lwz r31, 0x6c(r1)
-/* 8003D310 00000188  80 01 00 74 */	lwz r0, 0x74(r1)
-/* 8003D314 0000018C  7C 08 03 A6 */	mtlr r0
-/* 8003D318 00000190  38 21 00 70 */	addi r1, r1, 0x70
-/* 8003D31C 00000194  4E 80 00 20 */	blr 
+/* 8003D188  94 21 FF 90 */	stwu r1, -0x70(r1)                      
+/* 8003D18C  7C 08 02 A6 */	mflr r0                                 
+/* 8003D190  90 01 00 74 */	stw r0, 0x74(r1)                        
+/* 8003D194  93 E1 00 6C */	stw r31, 0x6c(r1)                       
+/* 8003D198  7C 7F 1B 78 */	mr r31, r3                              
+/* 8003D19C  C0 22 84 08 */	lfs f1, lit_3836(r2)                     /* constant-address: 80451E08, symbol: lit_3836 */
+/* 8003D1A0  FC 40 08 90 */	fmr f2, f1                              
+/* 8003D1A4  A0 03 00 1C */	lhz r0, 0x1c(r3)                        
+/* 8003D1A8  C8 82 84 18 */	lfd f4, lit_3850(r2)                     /* constant-address: 80451E18, symbol: lit_3850 */
+/* 8003D1AC  90 01 00 54 */	stw r0, 0x54(r1)                        
+/* 8003D1B0  3C 60 43 30 */	lis r3, 0x4330                          
+/* 8003D1B4  90 61 00 50 */	stw r3, 0x50(r1)                        
+/* 8003D1B8  C8 01 00 50 */	lfd f0, 0x50(r1)                        
+/* 8003D1BC  EC 60 20 28 */	fsubs f3, f0, f4                        
+/* 8003D1C0  A0 1F 00 1E */	lhz r0, 0x1e(r31)                       
+/* 8003D1C4  90 01 00 5C */	stw r0, 0x5c(r1)                        
+/* 8003D1C8  90 61 00 58 */	stw r3, 0x58(r1)                        
+/* 8003D1CC  C8 01 00 58 */	lfd f0, 0x58(r1)                        
+/* 8003D1D0  EC 80 20 28 */	fsubs f4, f0, f4                        
+/* 8003D1D4  FC A0 08 90 */	fmr f5, f1                              
+/* 8003D1D8  C0 C2 84 0C */	lfs f6, lit_3846(r2)                     /* constant-address: 80451E0C, symbol: lit_3846 */
+/* 8003D1DC  48 32 32 89 */	bl GXSetViewport                         /* constant-address: 80360464, symbol: GXSetViewport */
+/* 8003D1E0  38 60 00 00 */	li r3, 0                                
+/* 8003D1E4  38 80 00 00 */	li r4, 0                                
+/* 8003D1E8  A0 BF 00 1C */	lhz r5, 0x1c(r31)                       
+/* 8003D1EC  A0 DF 00 1E */	lhz r6, 0x1e(r31)                       
+/* 8003D1F0  48 32 32 E1 */	bl GXSetScissor                          /* constant-address: 803604D0, symbol: GXSetScissor */
+/* 8003D1F4  38 60 00 01 */	li r3, 1                                
+/* 8003D1F8  48 32 09 39 */	bl GXSetNumChans                         /* constant-address: 8035DB30, symbol: GXSetNumChans */
+/* 8003D1FC  38 60 00 01 */	li r3, 1                                
+/* 8003D200  48 32 26 91 */	bl GXSetNumTevStages                     /* constant-address: 8035F890, symbol: GXSetNumTevStages */
+/* 8003D204  38 60 00 04 */	li r3, 4                                
+/* 8003D208  38 80 00 00 */	li r4, 0                                
+/* 8003D20C  38 A0 00 00 */	li r5, 0                                
+/* 8003D210  38 C0 00 00 */	li r6, 0                                
+/* 8003D214  38 E0 00 00 */	li r7, 0                                
+/* 8003D218  39 00 00 00 */	li r8, 0                                
+/* 8003D21C  39 20 00 02 */	li r9, 2                                
+/* 8003D220  48 32 09 4D */	bl GXSetChanCtrl                         /* constant-address: 8035DB6C, symbol: GXSetChanCtrl */
+/* 8003D224  38 60 00 07 */	li r3, 7                                
+/* 8003D228  38 80 00 00 */	li r4, 0                                
+/* 8003D22C  38 A0 00 01 */	li r5, 1                                
+/* 8003D230  38 C0 00 07 */	li r6, 7                                
+/* 8003D234  38 E0 00 00 */	li r7, 0                                
+/* 8003D238  48 32 23 ED */	bl GXSetAlphaCompare                     /* constant-address: 8035F624, symbol: GXSetAlphaCompare */
+/* 8003D23C  38 60 00 01 */	li r3, 1                                
+/* 8003D240  48 32 2A 91 */	bl GXSetZCompLoc                         /* constant-address: 8035FCD0, symbol: GXSetZCompLoc */
+/* 8003D244  38 60 00 00 */	li r3, 0                                
+/* 8003D248  38 80 00 07 */	li r4, 7                                
+/* 8003D24C  38 A0 00 00 */	li r5, 0                                
+/* 8003D250  48 32 2A 4D */	bl GXSetZMode                            /* constant-address: 8035FC9C, symbol: GXSetZMode */
+/* 8003D254  38 60 00 00 */	li r3, 0                                
+/* 8003D258  38 80 00 04 */	li r4, 4                                
+/* 8003D25C  38 A0 00 05 */	li r5, 5                                
+/* 8003D260  38 C0 00 00 */	li r6, 0                                
+/* 8003D264  48 32 29 8D */	bl GXSetBlendMode                        /* constant-address: 8035FBF0, symbol: GXSetBlendMode */
+/* 8003D268  80 0D 80 80 */	lwz r0, g_clearColor(r13)                /* constant-address: 80450600, symbol: g_clearColor */
+/* 8003D26C  90 01 00 08 */	stw r0, 8(r1)                           
+/* 8003D270  38 60 00 00 */	li r3, 0                                
+/* 8003D274  C0 22 84 08 */	lfs f1, lit_3836(r2)                     /* constant-address: 80451E08, symbol: lit_3836 */
+/* 8003D278  FC 40 08 90 */	fmr f2, f1                              
+/* 8003D27C  FC 60 08 90 */	fmr f3, f1                              
+/* 8003D280  FC 80 08 90 */	fmr f4, f1                              
+/* 8003D284  38 81 00 08 */	addi r4, r1, 8                          
+/* 8003D288  48 32 26 31 */	bl GXSetFog                              /* constant-address: 8035F8B8, symbol: GXSetFog */
+/* 8003D28C  38 60 00 00 */	li r3, 0                                
+/* 8003D290  48 31 F6 F5 */	bl GXSetCullMode                         /* constant-address: 8035C984, symbol: GXSetCullMode */
+/* 8003D294  38 60 00 00 */	li r3, 0                                
+/* 8003D298  48 32 2B 41 */	bl GXSetDither                           /* constant-address: 8035FDD8, symbol: GXSetDither */
+/* 8003D29C  38 60 00 00 */	li r3, 0                                
+/* 8003D2A0  48 32 1E 35 */	bl GXSetNumIndStages                     /* constant-address: 8035F0D4, symbol: GXSetNumIndStages */
+/* 8003D2A4  38 60 00 00 */	li r3, 0                                
+/* 8003D2A8  48 32 33 29 */	bl GXSetClipMode                         /* constant-address: 803605D0, symbol: GXSetClipMode */
+/* 8003D2AC  7F E3 FB 78 */	mr r3, r31                              
+/* 8003D2B0  4B FF FB C9 */	bl setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv /* constant-address: 8003CE78, symbol: setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv */
+/* 8003D2B4  C0 22 84 10 */	lfs f1, lit_3847(r2)                     /* constant-address: 80451E10, symbol: lit_3847 */
+/* 8003D2B8  C0 1F 00 08 */	lfs f0, 8(r31)                          
+/* 8003D2BC  EC 81 00 32 */	fmuls f4, f1, f0                        
+/* 8003D2C0  C0 1F 00 0C */	lfs f0, 0xc(r31)                        
+/* 8003D2C4  EC 21 00 32 */	fmuls f1, f1, f0                        
+/* 8003D2C8  38 61 00 0C */	addi r3, r1, 0xc                        
+/* 8003D2CC  FC 40 08 50 */	fneg f2, f1                             
+/* 8003D2D0  FC 60 20 50 */	fneg f3, f4                             
+/* 8003D2D4  C0 A2 84 08 */	lfs f5, lit_3836(r2)                     /* constant-address: 80451E08, symbol: lit_3836 */
+/* 8003D2D8  C0 C2 84 14 */	lfs f6, lit_3848(r2)                     /* constant-address: 80451E14, symbol: lit_3848 */
+/* 8003D2DC  48 30 9D 1D */	bl C_MTXOrtho                            /* constant-address: 80346FF8, symbol: C_MTXOrtho */
+/* 8003D2E0  38 61 00 0C */	addi r3, r1, 0xc                        
+/* 8003D2E4  38 80 00 01 */	li r4, 1                                
+/* 8003D2E8  48 32 2D ED */	bl GXSetProjection                       /* constant-address: 803600D4, symbol: GXSetProjection */
+/* 8003D2EC  3C 60 80 3A */	lis r3, g_mDoMtx_identity@ha            
+/* 8003D2F0  38 63 2F D8 */	addi r3, r3, g_mDoMtx_identity@l         /* constant-address: 803A2FD8, symbol: g_mDoMtx_identity */
+/* 8003D2F4  38 80 00 00 */	li r4, 0                                
+/* 8003D2F8  48 32 2F 55 */	bl GXLoadPosMtxImm                       /* constant-address: 8036024C, symbol: GXLoadPosMtxImm */
+/* 8003D2FC  38 60 00 00 */	li r3, 0                                
+/* 8003D300  48 32 2F ED */	bl GXSetCurrentMtx                       /* constant-address: 803602EC, symbol: GXSetCurrentMtx */
+/* 8003D304  7F E3 FB 78 */	mr r3, r31                              
+/* 8003D308  4B FF FD A5 */	bl drawBack__18dRenderingFDAmap_cCFv     /* constant-address: 8003D0AC, symbol: drawBack__18dRenderingFDAmap_cCFv */
+/* 8003D30C  83 E1 00 6C */	lwz r31, 0x6c(r1)                       
+/* 8003D310  80 01 00 74 */	lwz r0, 0x74(r1)                        
+/* 8003D314  7C 08 03 A6 */	mtlr r0                                 
+/* 8003D318  38 21 00 70 */	addi r1, r1, 0x70                       
+/* 8003D31C  4E 80 00 20 */	blr                                     

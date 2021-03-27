@@ -1,3 +1,3 @@
 lbl_8033B29C:
-/* 8033B29C 00000000  90 6D 90 D0 */	stw r3, __OSArenaHi(r13)
-/* 8033B2A0 00000004  4E 80 00 20 */	blr 
+/* 8033B29C  90 6D 90 D0 */	stw r3, __OSArenaHi(r13)                 /* constant-address: 80451650, symbol: __OSArenaHi */
+/* 8033B2A0  4E 80 00 20 */	blr                                     

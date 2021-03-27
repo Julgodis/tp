@@ -1,46 +1,46 @@
 lbl_8013A7EC:
-/* 8013A7EC 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 8013A7F0 00000004  7C 08 02 A6 */	mflr r0
-/* 8013A7F4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8013A7F8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8013A7FC 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8013A800 00000014  38 80 01 1D */	li r4, 0x11d
-/* 8013A804 00000018  4B F8 77 69 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
-/* 8013A808 0000001C  7F E3 FB 78 */	mr r3, r31
-/* 8013A80C 00000020  38 80 00 6C */	li r4, 0x6c
-/* 8013A810 00000024  3C A0 80 39 */	lis r5, m__23daAlinkHIO_wlAtCjump_c0@ha
-/* 8013A814 00000028  38 A5 F5 B4 */	addi r5, r5, m__23daAlinkHIO_wlAtCjump_c0@l
-/* 8013A818 0000002C  38 A5 00 14 */	addi r5, r5, 0x14
-/* 8013A81C 00000030  4B FE F0 2D */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c
-/* 8013A820 00000034  C0 22 92 C0 */	lfs f1, lit_6108(r2)
-/* 8013A824 00000038  D0 3F 04 FC */	stfs f1, 0x4fc(r31)
-/* 8013A828 0000003C  D0 3F 33 98 */	stfs f1, 0x3398(r31)
-/* 8013A82C 00000040  7F E3 FB 78 */	mr r3, r31
-/* 8013A830 00000044  C0 5F 05 34 */	lfs f2, 0x534(r31)
-/* 8013A834 00000048  38 80 00 00 */	li r4, 0
-/* 8013A838 0000004C  4B F8 0F 39 */	bl setSpecialGravity__9daAlink_cFffi
-/* 8013A83C 00000050  7F E3 FB 78 */	mr r3, r31
-/* 8013A840 00000054  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010038@ha */
-/* 8013A844 00000058  38 84 00 38 */	addi r4, r4, 0x0038 /* 0x00010038@l */
-/* 8013A848 0000005C  81 9F 06 28 */	lwz r12, 0x628(r31)
-/* 8013A84C 00000060  81 8C 01 14 */	lwz r12, 0x114(r12)
-/* 8013A850 00000064  7D 89 03 A6 */	mtctr r12
-/* 8013A854 00000068  4E 80 04 21 */	bctrl 
-/* 8013A858 0000006C  7F E3 FB 78 */	mr r3, r31
-/* 8013A85C 00000070  3C 80 00 02 */	lis r4, 0x0002 /* 0x00020009@ha */
-/* 8013A860 00000074  38 84 00 09 */	addi r4, r4, 0x0009 /* 0x00020009@l */
-/* 8013A864 00000078  81 9F 06 28 */	lwz r12, 0x628(r31)
-/* 8013A868 0000007C  81 8C 01 18 */	lwz r12, 0x118(r12)
-/* 8013A86C 00000080  7D 89 03 A6 */	mtctr r12
-/* 8013A870 00000084  4E 80 04 21 */	bctrl 
-/* 8013A874 00000088  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8013A878 0000008C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8013A87C 00000090  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
-/* 8013A880 00000094  64 00 00 20 */	oris r0, r0, 0x20
-/* 8013A884 00000098  90 03 5F 1C */	stw r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
-/* 8013A888 0000009C  38 60 00 01 */	li r3, 1
-/* 8013A88C 000000A0  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8013A890 000000A4  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 8013A894 000000A8  7C 08 03 A6 */	mtlr r0
-/* 8013A898 000000AC  38 21 00 10 */	addi r1, r1, 0x10
-/* 8013A89C 000000B0  4E 80 00 20 */	blr 
+/* 8013A7EC  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 8013A7F0  7C 08 02 A6 */	mflr r0                                 
+/* 8013A7F4  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 8013A7F8  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 8013A7FC  7C 7F 1B 78 */	mr r31, r3                              
+/* 8013A800  38 80 01 1D */	li r4, 0x11d                            
+/* 8013A804  4B F8 77 69 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC /* constant-address: 800C1F6C, symbol: commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC */
+/* 8013A808  7F E3 FB 78 */	mr r3, r31                              
+/* 8013A80C  38 80 00 6C */	li r4, 0x6c                             
+/* 8013A810  3C A0 80 39 */	lis r5, m__23daAlinkHIO_wlAtCjump_c0@ha 
+/* 8013A814  38 A5 F5 B4 */	addi r5, r5, m__23daAlinkHIO_wlAtCjump_c0@l /* constant-address: 8038F5B4, symbol: m__23daAlinkHIO_wlAtCjump_c0 */
+/* 8013A818  38 A5 00 14 */	addi r5, r5, 0x14                        /* constant-address: 8038F5C8, symbol: None */
+/* 8013A81C  4B FE F0 2D */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c /* constant-address: 80129848, symbol: setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c */
+/* 8013A820  C0 22 92 C0 */	lfs f1, lit_6108(r2)                     /* constant-address: 80452CC0, symbol: lit_6108 */
+/* 8013A824  D0 3F 04 FC */	stfs f1, 0x4fc(r31)                     
+/* 8013A828  D0 3F 33 98 */	stfs f1, 0x3398(r31)                    
+/* 8013A82C  7F E3 FB 78 */	mr r3, r31                              
+/* 8013A830  C0 5F 05 34 */	lfs f2, 0x534(r31)                      
+/* 8013A834  38 80 00 00 */	li r4, 0                                
+/* 8013A838  4B F8 0F 39 */	bl setSpecialGravity__9daAlink_cFffi     /* constant-address: 800BB770, symbol: setSpecialGravity__9daAlink_cFffi */
+/* 8013A83C  7F E3 FB 78 */	mr r3, r31                              
+/* 8013A840  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010038@ha */      
+/* 8013A844  38 84 00 38 */	addi r4, r4, 0x0038 /* 0x00010038@l */   /* constant-address: 00010038 */
+/* 8013A848  81 9F 06 28 */	lwz r12, 0x628(r31)                     
+/* 8013A84C  81 8C 01 14 */	lwz r12, 0x114(r12)                     
+/* 8013A850  7D 89 03 A6 */	mtctr r12                               
+/* 8013A854  4E 80 04 21 */	bctrl                                   
+/* 8013A858  7F E3 FB 78 */	mr r3, r31                              
+/* 8013A85C  3C 80 00 02 */	lis r4, 0x0002 /* 0x00020009@ha */      
+/* 8013A860  38 84 00 09 */	addi r4, r4, 0x0009 /* 0x00020009@l */   /* constant-address: 00020009 */
+/* 8013A864  81 9F 06 28 */	lwz r12, 0x628(r31)                     
+/* 8013A868  81 8C 01 18 */	lwz r12, 0x118(r12)                     
+/* 8013A86C  7D 89 03 A6 */	mtctr r12                               
+/* 8013A870  4E 80 04 21 */	bctrl                                   
+/* 8013A874  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 8013A878  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 8013A87C  80 03 5F 1C */	lwz r0, 0x5f1c(r3)                       /* constant-address: 8040C0DC, symbol: None */
+/* 8013A880  64 00 00 20 */	oris r0, r0, 0x20                       
+/* 8013A884  90 03 5F 1C */	stw r0, 0x5f1c(r3)                       /* constant-address: 8040C0DC, symbol: None */
+/* 8013A888  38 60 00 01 */	li r3, 1                                
+/* 8013A88C  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 8013A890  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 8013A894  7C 08 03 A6 */	mtlr r0                                 
+/* 8013A898  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 8013A89C  4E 80 00 20 */	blr                                     

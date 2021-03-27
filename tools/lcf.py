@@ -174,40 +174,12 @@ def get_symbols_from_object_file(obj):
 
 def load_archive(path):
     symbols = []
-    with open(path, 'rb') as file:
-        header = libar.Header()
-        header.read(file)
-
-        if header.signature != 0x213C617263683E0A:
-            fail("invalid ar file: %016X" % header.signature)
-
-        while True:
-            info = libar.Info()
-            if not info.read(file):
-                break
-
-            if info.name.strip() == "/":
-                continue
-            if info.name.strip() == "//":
-                string_table = libar.utf8(info.data)
-                continue
-
-            ss = info.name.split("/")
-            name = ss[0]
-            if len(ss[0]) == 0:
-                str_index = ss[1].strip()
-                assert len(str_index) > 0
-                index = int(str_index)
-                name = string_table[index:].split("/")[0]
-
-            name = name.lstrip().rstrip(' ')
-            #print(info.name, name)
-            if name == "" or name == "/":
-                continue
-
-            info_file = io.BytesIO(info.data)
-            obj = libelf.load_object_from_file(None, name, info_file)
-            symbols.extend(get_symbols_from_object_file(obj))
+    
+    archive = libar.read(path)
+    for path, data in archive.files:
+        data_io = io.BytesIO(data)
+        obj = libelf.load_object_from_file(None, path, data_io)
+        symbols.extend(get_symbols_from_object_file(obj))
 
     return symbols
 

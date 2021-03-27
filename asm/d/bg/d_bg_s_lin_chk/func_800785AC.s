@@ -1,3 +1,3 @@
 lbl_800785AC:
-/* 800785AC 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 800785B0 00000004  4B FF FB B0 */	b __dt__15dBgS_BombLinChkFv
+/* 800785AC  38 63 FF EC */	addi r3, r3, -20                        
+/* 800785B0  4B FF FB B0 */	b __dt__15dBgS_BombLinChkFv              /* constant-address: 80078160, symbol: __dt__15dBgS_BombLinChkFv */

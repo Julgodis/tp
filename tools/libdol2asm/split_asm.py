@@ -26,9 +26,9 @@ from . import generate_symbols
 from . import merge_symbols
 from . import symbol_naming
 
-from . import libdol
-from . import librel
-from . import libarc
+import libdol
+import librel
+import libarc
 
 from .exporter import cpp
 from .exporter import makefile
@@ -51,7 +51,13 @@ sys.exit(1)
 
 class Dol2AsmSplitter:
 
-    def __init__(self, debug_logging, game_path, lib_path, src_path, asm_path, rel_path, inc_path, mk_gen, cpp_gen, asm_gen, sym_gen, rel_gen, process_count, select_modules):
+    def __init__(self, 
+        debug_logging, 
+        game_path, lib_path, src_path, 
+        asm_path, rel_path, inc_path, 
+        mk_gen, cpp_gen, asm_gen, sym_gen, rel_gen, 
+        process_count, select_modules,
+        select_tu, select_asm):
         self.debug_logging = debug_logging
         self.game_path = game_path
         self.lib_path = lib_path
@@ -66,6 +72,8 @@ class Dol2AsmSplitter:
         self.rel_gen = rel_gen
         self.process_count = process_count
         self.select_modules = select_modules
+        self.select_tu = select_tu
+        self.select_asm = select_asm
 
     def search_for_game_files(self):
         print(f"{self.step_count:2} Search for files in '{self.game_path}'")
@@ -459,16 +467,10 @@ class Dol2AsmSplitter:
                                                                       relocation]
                                 assert replace_symbol
 
-                                block = None
-                                for block in symbol.blocks:
-                                    if replace_offset >= block.start and replace_offset < block.end:
-                                        break
-
-                                assert block
                                 if not librel.apply_relocation(
                                         relocation.type,
                                         relocation.module,
-                                        block.data, block.start,
+                                        symbol.data, symbol.start,
                                         P=location,
                                         S=key_addr,
                                         A=0):
@@ -502,8 +504,6 @@ class Dol2AsmSplitter:
             task = progress.add_task(
                 f"processing...", total=total_rc_step_count)
             for module in self.modules:
-                if not module.index in self.gen_modules:
-                    continue
                 for lib in module.libraries.values():
                     for tu in lib.translation_units.values():
                         count = 0
@@ -522,6 +522,7 @@ class Dol2AsmSplitter:
                                         reference.add_sda_hack(symbol)
                             count += len(section.symbols)
                         progress.update(task, advance=count)
+
 
     def library_paths(self):
         print(f"{self.step_count:2} Determine library paths")
@@ -648,10 +649,9 @@ class Dol2AsmSplitter:
             if self.cpp_gen:
                 for lib_name, lib in module.libraries.items():
                     for tu_name, tu in lib.translation_units.items():
-                        #if tu_name != "ppc/Generic/mpc_7xx_603e":
-                        #    continue
-                        cpp_tasks.append((tu, tu.source_path(lib), tu.include_path(
-                            lib), tu.include_path(lib).relative_to(self.inc_path),))
+                        if len(self.select_tu) == 0 or tu_name in self.select_tu:
+                            cpp_tasks.append((tu, tu.source_path(lib), tu.include_path(
+                                lib), tu.include_path(lib).relative_to(self.inc_path),))
 
             if self.asm_gen:
                 asm_path_tasks = []
@@ -666,11 +666,10 @@ class Dol2AsmSplitter:
                                     if symbol.include_path.exists():
                                         continue
 
-                                #if symbol.label != "OSReport_FatalError":
-                                #    continue
-                                asm_path_tasks.append(
-                                    util.create_dirs_for_file(symbol.include_path))
-                                functions.append((symbol,))
+                                if len(self.select_asm) == 0 or symbol.label in self.select_asm:
+                                    asm_path_tasks.append(
+                                        util.create_dirs_for_file(symbol.include_path))
+                                    functions.append((symbol,))
                             if functions:
                                 for fs in util.chunks(functions, self.asm_group_count):
                                     asm_tasks.append((sec, fs))

@@ -1,26 +1,26 @@
 lbl_803401A0:
-/* 803401A0 00000000  7C 08 02 A6 */	mflr r0
-/* 803401A4 00000004  3C 60 80 45 */	lis r3, Scb@ha
-/* 803401A8 00000008  90 01 00 04 */	stw r0, 4(r1)
-/* 803401AC 0000000C  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 803401B0 00000010  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 803401B4 00000014  3B E3 BB 20 */	addi r31, r3, Scb@l
-/* 803401B8 00000018  4B FF D5 3D */	bl OSDisableInterrupts
-/* 803401BC 0000001C  80 1F 00 48 */	lwz r0, 0x48(r31)	/* effective address: 8044BB68 */
-/* 803401C0 00000020  38 9F 00 48 */	addi r4, r31, 0x48
-/* 803401C4 00000024  2C 00 00 00 */	cmpwi r0, 0
-/* 803401C8 00000028  41 82 00 10 */	beq lbl_803401D8
-/* 803401CC 0000002C  4B FF D5 51 */	bl OSRestoreInterrupts
-/* 803401D0 00000030  38 60 00 00 */	li r3, 0
-/* 803401D4 00000034  48 00 00 14 */	b lbl_803401E8
+/* 803401A0  7C 08 02 A6 */	mflr r0                                 
+/* 803401A4  3C 60 80 45 */	lis r3, Scb@ha                          
+/* 803401A8  90 01 00 04 */	stw r0, 4(r1)                           
+/* 803401AC  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 803401B0  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 803401B4  3B E3 BB 20 */	addi r31, r3, Scb@l                      /* constant-address: 8044BB20, symbol: Scb */
+/* 803401B8  4B FF D5 3D */	bl OSDisableInterrupts                   /* constant-address: 8033D6F4, symbol: OSDisableInterrupts */
+/* 803401BC  80 1F 00 48 */	lwz r0, 0x48(r31)                        /* constant-address: 8044BB68, symbol: None */
+/* 803401C0  38 9F 00 48 */	addi r4, r31, 0x48                       /* constant-address: 8044BB68, symbol: None */
+/* 803401C4  2C 00 00 00 */	cmpwi r0, 0                             
+/* 803401C8  41 82 00 10 */	beq lbl_803401D8                         /* constant-address: 803401D8, symbol: lbl_803401D8 */
+/* 803401CC  4B FF D5 51 */	bl OSRestoreInterrupts                   /* constant-address: 8033D71C, symbol: OSRestoreInterrupts */
+/* 803401D0  38 60 00 00 */	li r3, 0                                
+/* 803401D4  48 00 00 14 */	b lbl_803401E8                           /* constant-address: 803401E8, symbol: lbl_803401E8 */
 lbl_803401D8:
-/* 803401D8 00000000  90 7F 00 44 */	stw r3, 0x44(r31)	/* effective address: 8044BB64 */
-/* 803401DC 00000004  38 00 00 01 */	li r0, 1
-/* 803401E0 00000008  38 7F 00 14 */	addi r3, r31, 0x14
-/* 803401E4 0000000C  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 8044BB68 */
+/* 803401D8  90 7F 00 44 */	stw r3, 0x44(r31)                        /* constant-address: 8044BB64, symbol: None */
+/* 803401DC  38 00 00 01 */	li r0, 1                                
+/* 803401E0  38 7F 00 14 */	addi r3, r31, 0x14                       /* constant-address: 8044BB34, symbol: None */
+/* 803401E4  90 04 00 00 */	stw r0, 0(r4)                            /* constant-address: 8044BB68, symbol: None */
 lbl_803401E8:
-/* 803401E8 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 803401EC 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 803401F0 00000008  38 21 00 10 */	addi r1, r1, 0x10
-/* 803401F4 0000000C  7C 08 03 A6 */	mtlr r0
-/* 803401F8 00000010  4E 80 00 20 */	blr 
+/* 803401E8  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 803401EC  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 803401F0  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 803401F4  7C 08 03 A6 */	mtlr r0                                 
+/* 803401F8  4E 80 00 20 */	blr                                     

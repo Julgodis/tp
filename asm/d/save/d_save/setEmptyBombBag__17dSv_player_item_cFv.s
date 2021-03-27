@@ -1,36 +1,36 @@
 lbl_80033A88:
-/* 80033A88 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 80033A8C 00000004  7C 08 02 A6 */	mflr r0
-/* 80033A90 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80033A94 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80033A98 00000010  48 32 E7 45 */	bl _savegpr_29
-/* 80033A9C 00000014  3B A0 00 00 */	li r29, 0
-/* 80033AA0 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80033AA4 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80033AA8 00000020  3B E3 00 9C */	addi r31, r3, 0x9c
+/* 80033A88  94 21 FF E0 */	stwu r1, -0x20(r1)                      
+/* 80033A8C  7C 08 02 A6 */	mflr r0                                 
+/* 80033A90  90 01 00 24 */	stw r0, 0x24(r1)                        
+/* 80033A94  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 80033A98  48 32 E7 45 */	bl _savegpr_29                           /* constant-address: 803621DC, symbol: _savegpr_29 */
+/* 80033A9C  3B A0 00 00 */	li r29, 0                               
+/* 80033AA0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 80033AA4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 80033AA8  3B E3 00 9C */	addi r31, r3, 0x9c                       /* constant-address: 8040625C, symbol: None */
 lbl_80033AAC:
-/* 80033AAC 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80033AB0 00000004  38 1D 00 0F */	addi r0, r29, 0xf
-/* 80033AB4 00000008  54 1E 06 3E */	clrlwi r30, r0, 0x18
-/* 80033AB8 0000000C  7F C4 F3 78 */	mr r4, r30
-/* 80033ABC 00000010  38 A0 00 01 */	li r5, 1
-/* 80033AC0 00000014  4B FF F5 71 */	bl getItem__17dSv_player_item_cCFib
-/* 80033AC4 00000018  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 80033AC8 0000001C  28 00 00 FF */	cmplwi r0, 0xff
-/* 80033ACC 00000020  40 82 00 18 */	bne lbl_80033AE4
-/* 80033AD0 00000024  7F E3 FB 78 */	mr r3, r31
-/* 80033AD4 00000028  7F C4 F3 78 */	mr r4, r30
-/* 80033AD8 0000002C  38 A0 00 50 */	li r5, 0x50
-/* 80033ADC 00000030  4B FF F4 DD */	bl setItem__17dSv_player_item_cFiUc
-/* 80033AE0 00000034  48 00 00 10 */	b lbl_80033AF0
+/* 80033AAC  7F E3 FB 78 */	mr r3, r31                              
+/* 80033AB0  38 1D 00 0F */	addi r0, r29, 0xf                       
+/* 80033AB4  54 1E 06 3E */	clrlwi r30, r0, 0x18                    
+/* 80033AB8  7F C4 F3 78 */	mr r4, r30                              
+/* 80033ABC  38 A0 00 01 */	li r5, 1                                
+/* 80033AC0  4B FF F5 71 */	bl getItem__17dSv_player_item_cCFib      /* constant-address: 80033030, symbol: getItem__17dSv_player_item_cCFib */
+/* 80033AC4  54 60 06 3E */	clrlwi r0, r3, 0x18                     
+/* 80033AC8  28 00 00 FF */	cmplwi r0, 0xff                         
+/* 80033ACC  40 82 00 18 */	bne lbl_80033AE4                         /* constant-address: 80033AE4, symbol: lbl_80033AE4 */
+/* 80033AD0  7F E3 FB 78 */	mr r3, r31                              
+/* 80033AD4  7F C4 F3 78 */	mr r4, r30                              
+/* 80033AD8  38 A0 00 50 */	li r5, 0x50                             
+/* 80033ADC  4B FF F4 DD */	bl setItem__17dSv_player_item_cFiUc      /* constant-address: 80032FB8, symbol: setItem__17dSv_player_item_cFiUc */
+/* 80033AE0  48 00 00 10 */	b lbl_80033AF0                           /* constant-address: 80033AF0, symbol: lbl_80033AF0 */
 lbl_80033AE4:
-/* 80033AE4 00000000  3B BD 00 01 */	addi r29, r29, 1
-/* 80033AE8 00000004  2C 1D 00 03 */	cmpwi r29, 3
-/* 80033AEC 00000008  41 80 FF C0 */	blt lbl_80033AAC
+/* 80033AE4  3B BD 00 01 */	addi r29, r29, 1                         /* constant-address: 00000001 */
+/* 80033AE8  2C 1D 00 03 */	cmpwi r29, 3                            
+/* 80033AEC  41 80 FF C0 */	blt lbl_80033AAC                         /* constant-address: 80033AAC, symbol: lbl_80033AAC */
 lbl_80033AF0:
-/* 80033AF0 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80033AF4 00000004  48 32 E7 35 */	bl _restgpr_29
-/* 80033AF8 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 80033AFC 0000000C  7C 08 03 A6 */	mtlr r0
-/* 80033B00 00000010  38 21 00 20 */	addi r1, r1, 0x20
-/* 80033B04 00000014  4E 80 00 20 */	blr 
+/* 80033AF0  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 80033AF4  48 32 E7 35 */	bl _restgpr_29                           /* constant-address: 80362228, symbol: _restgpr_29 */
+/* 80033AF8  80 01 00 24 */	lwz r0, 0x24(r1)                        
+/* 80033AFC  7C 08 03 A6 */	mtlr r0                                 
+/* 80033B00  38 21 00 20 */	addi r1, r1, 0x20                       
+/* 80033B04  4E 80 00 20 */	blr                                     

@@ -1,11 +1,11 @@
 lbl_80007D74:
-/* 80007D74 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80007D78 00000004  7C 08 02 A6 */	mflr r0
-/* 80007D7C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80007D80 0000000C  48 2D 92 A5 */	bl clearForReset__10JUTGamePadFv
-/* 80007D84 00000010  3C 60 F0 00 */	lis r3, 0xf000
-/* 80007D88 00000014  48 2D 9C 51 */	bl setEnabled__Q210JUTGamePad7CRumbleFUl
-/* 80007D8C 00000018  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80007D90 0000001C  7C 08 03 A6 */	mtlr r0
-/* 80007D94 00000020  38 21 00 10 */	addi r1, r1, 0x10
-/* 80007D98 00000024  4E 80 00 20 */	blr 
+/* 80007D74  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 80007D78  7C 08 02 A6 */	mflr r0                                 
+/* 80007D7C  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 80007D80  48 2D 92 A5 */	bl clearForReset__10JUTGamePadFv         /* constant-address: 802E1024, symbol: clearForReset__10JUTGamePadFv */
+/* 80007D84  3C 60 F0 00 */	lis r3, 0xf000                          
+/* 80007D88  48 2D 9C 51 */	bl setEnabled__Q210JUTGamePad7CRumbleFUl /* constant-address: 802E19D8, symbol: setEnabled__Q210JUTGamePad7CRumbleFUl */
+/* 80007D8C  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 80007D90  7C 08 03 A6 */	mtlr r0                                 
+/* 80007D94  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 80007D98  4E 80 00 20 */	blr                                     

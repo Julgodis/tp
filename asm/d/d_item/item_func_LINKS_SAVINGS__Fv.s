@@ -1,7 +1,7 @@
 lbl_80099558:
-/* 80099558 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8009955C 00000004  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 80099560 00000008  80 64 5D C4 */	lwz r3, 0x5dc4(r4)	/* effective address: 8040BF84 */
-/* 80099564 0000000C  38 03 00 32 */	addi r0, r3, 0x32
-/* 80099568 00000010  90 04 5D C4 */	stw r0, 0x5dc4(r4)	/* effective address: 8040BF84 */
-/* 8009956C 00000014  4E 80 00 20 */	blr 
+/* 80099558  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 8009955C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 80099560  80 64 5D C4 */	lwz r3, 0x5dc4(r4)                       /* constant-address: 8040BF84, symbol: None */
+/* 80099564  38 03 00 32 */	addi r0, r3, 0x32                       
+/* 80099568  90 04 5D C4 */	stw r0, 0x5dc4(r4)                       /* constant-address: 8040BF84, symbol: None */
+/* 8009956C  4E 80 00 20 */	blr                                     

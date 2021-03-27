@@ -27,14 +27,14 @@ SECTIONS = [
 
 # Symbols
 SYMBOLS = [
-	{'addr':0x8046E620,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':0,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x8046E64C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':0,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x8046E678,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':0,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x8046E698,'size':60,'pad':0,'label':"initBaseMtx__14daObjBurnBox_cFv",'name':"initBaseMtx__14daObjBurnBox_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x8046E6D4,'size':100,'pad':0,'label':"setBaseMtx__14daObjBurnBox_cFv",'name':"setBaseMtx__14daObjBurnBox_cFv",'lib':-1,'tu':3,'section':0,'r':[2,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x8046E738,'size':388,'pad':0,'label':"Create__14daObjBurnBox_cFv",'name':"Create__14daObjBurnBox_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x8046E620,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':0,'section':0,'r':[0,0,1],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x8046E64C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':0,'section':0,'r':[0,0,1],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x8046E678,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':0,'section':0,'r':[0,0,2],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x8046E698,'size':60,'pad':0,'label':"initBaseMtx__14daObjBurnBox_cFv",'name':"initBaseMtx__14daObjBurnBox_cFv",'lib':-1,'tu':3,'section':0,'r':[0,0,2],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x8046E6D4,'size':100,'pad':0,'label':"setBaseMtx__14daObjBurnBox_cFv",'name':"setBaseMtx__14daObjBurnBox_cFv",'lib':-1,'tu':3,'section':0,'r':[0,0,1],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x8046E738,'size':388,'pad':0,'label':"Create__14daObjBurnBox_cFv",'name':"Create__14daObjBurnBox_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,2],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x8046E8BC,'size':128,'pad':0,'label':"CreateHeap__14daObjBurnBox_cFv",'name':"CreateHeap__14daObjBurnBox_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x8046E93C,'size':176,'pad':0,'label':"create1st__14daObjBurnBox_cFv",'name':"create1st__14daObjBurnBox_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x8046E93C,'size':176,'pad':0,'label':"create1st__14daObjBurnBox_cFv",'name':"create1st__14daObjBurnBox_cFv",'lib':-1,'tu':3,'section':0,'r':[0,0,1],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x8046E9EC,'size':208,'pad':0,'label':"Execute__14daObjBurnBox_cFPPA3_A4_f",'name':"Execute__14daObjBurnBox_cFPPA3_A4_f",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x8046EABC,'size':340,'pad':0,'label':"Draw__14daObjBurnBox_cFv",'name':"Draw__14daObjBurnBox_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x8046EC10,'size':64,'pad':0,'label':"Delete__14daObjBurnBox_cFv",'name':"Delete__14daObjBurnBox_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},

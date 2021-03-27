@@ -1,63 +1,63 @@
 lbl_80BD2670:
-/* 80BD2670 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80BD2674 00000004  7C 08 02 A6 */	mflr r0
-/* 80BD2678 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80BD267C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80BD2680 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 80BD2684 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80BD2688 00000018  3C 60 80 BD */	lis r3, l_arcName@ha
-/* 80BD268C 0000001C  38 63 31 F4 */	addi r3, r3, l_arcName@l
-/* 80BD2690 00000020  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80BD31F4 */
-/* 80BD2694 00000024  3C 80 80 BD */	lis r4, stringBase0@ha
-/* 80BD2698 00000028  38 84 31 BC */	addi r4, r4, stringBase0@l
-/* 80BD269C 0000002C  38 84 00 08 */	addi r4, r4, 8
-/* 80BD26A0 00000030  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
-/* 80BD26A4 00000034  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
-/* 80BD26A8 00000038  3F E5 00 02 */	addis r31, r5, 2
-/* 80BD26AC 0000003C  3B FF C2 F8 */	addi r31, r31, -15624
-/* 80BD26B0 00000040  7F E5 FB 78 */	mr r5, r31
-/* 80BD26B4 00000044  38 C0 00 80 */	li r6, 0x80
-/* 80BD26B8 00000048  4B 46 9C C4 */	b getRes__14dRes_control_cFPCcPCcP11dRes_info_ci
-/* 80BD26BC 0000004C  3C 80 00 08 */	lis r4, 8
-/* 80BD26C0 00000050  3C A0 11 00 */	lis r5, 0x1100 /* 0x11000084@ha */
-/* 80BD26C4 00000054  38 A5 00 84 */	addi r5, r5, 0x0084 /* 0x11000084@l */
-/* 80BD26C8 00000058  4B 44 25 8C */	b mDoExt_J3DModel__create__FP12J3DModelDataUlUl
-/* 80BD26CC 0000005C  90 7E 06 74 */	stw r3, 0x674(r30)
-/* 80BD26D0 00000060  80 1E 06 74 */	lwz r0, 0x674(r30)
-/* 80BD26D4 00000064  28 00 00 00 */	cmplwi r0, 0
-/* 80BD26D8 00000068  40 82 00 0C */	bne lbl_80BD26E4
-/* 80BD26DC 0000006C  38 60 00 00 */	li r3, 0
-/* 80BD26E0 00000070  48 00 00 60 */	b lbl_80BD2740
+/* 80BD2670  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80BD2674  7C 08 02 A6 */	mflr r0
+/* 80BD2678  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80BD267C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80BD2680  93 C1 00 08 */	stw r30, 8(r1)
+/* 80BD2684  7C 7E 1B 78 */	mr r30, r3
+/* 80BD2688  3C 60 80 BD */	lis r3, l_arcName@ha
+/* 80BD268C  38 63 31 F4 */	addi r3, r3, l_arcName@l
+/* 80BD2690  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80BD31F4 */
+/* 80BD2694  3C 80 80 BD */	lis r4, stringBase0@ha
+/* 80BD2698  38 84 31 BC */	addi r4, r4, stringBase0@l
+/* 80BD269C  38 84 00 08 */	addi r4, r4, 8
+/* 80BD26A0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
+/* 80BD26A4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80BD26A8  3F E5 00 02 */	addis r31, r5, 2
+/* 80BD26AC  3B FF C2 F8 */	addi r31, r31, -15624
+/* 80BD26B0  7F E5 FB 78 */	mr r5, r31
+/* 80BD26B4  38 C0 00 80 */	li r6, 0x80
+/* 80BD26B8  4B 46 9C C4 */	b getRes__14dRes_control_cFPCcPCcP11dRes_info_ci
+/* 80BD26BC  3C 80 00 08 */	lis r4, 8
+/* 80BD26C0  3C A0 11 00 */	lis r5, 0x1100 /* 0x11000084@ha */
+/* 80BD26C4  38 A5 00 84 */	addi r5, r5, 0x0084 /* 0x11000084@l */
+/* 80BD26C8  4B 44 25 8C */	b mDoExt_J3DModel__create__FP12J3DModelDataUlUl
+/* 80BD26CC  90 7E 06 74 */	stw r3, 0x674(r30)
+/* 80BD26D0  80 1E 06 74 */	lwz r0, 0x674(r30)
+/* 80BD26D4  28 00 00 00 */	cmplwi r0, 0
+/* 80BD26D8  40 82 00 0C */	bne lbl_80BD26E4
+/* 80BD26DC  38 60 00 00 */	li r3, 0
+/* 80BD26E0  48 00 00 60 */	b lbl_80BD2740
 lbl_80BD26E4:
-/* 80BD26E4 00000000  88 1E 05 AC */	lbz r0, 0x5ac(r30)
-/* 80BD26E8 00000004  28 00 00 00 */	cmplwi r0, 0
-/* 80BD26EC 00000008  40 82 00 3C */	bne lbl_80BD2728
-/* 80BD26F0 0000000C  3C 60 80 BD */	lis r3, l_arcName@ha
-/* 80BD26F4 00000010  38 63 31 F4 */	addi r3, r3, l_arcName@l
-/* 80BD26F8 00000014  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80BD31F4 */
-/* 80BD26FC 00000018  3C 80 80 BD */	lis r4, stringBase0@ha
-/* 80BD2700 0000001C  38 84 31 BC */	addi r4, r4, stringBase0@l
-/* 80BD2704 00000020  38 84 00 18 */	addi r4, r4, 0x18
-/* 80BD2708 00000024  7F E5 FB 78 */	mr r5, r31
-/* 80BD270C 00000028  38 C0 00 80 */	li r6, 0x80
-/* 80BD2710 0000002C  4B 46 9C 6C */	b getRes__14dRes_control_cFPCcPCcP11dRes_info_ci
-/* 80BD2714 00000030  3C 80 00 08 */	lis r4, 8
-/* 80BD2718 00000034  3C A0 11 00 */	lis r5, 0x1100 /* 0x11000084@ha */
-/* 80BD271C 00000038  38 A5 00 84 */	addi r5, r5, 0x0084 /* 0x11000084@l */
-/* 80BD2720 0000003C  4B 44 25 34 */	b mDoExt_J3DModel__create__FP12J3DModelDataUlUl
-/* 80BD2724 00000040  90 7E 06 78 */	stw r3, 0x678(r30)
+/* 80BD26E4  88 1E 05 AC */	lbz r0, 0x5ac(r30)
+/* 80BD26E8  28 00 00 00 */	cmplwi r0, 0
+/* 80BD26EC  40 82 00 3C */	bne lbl_80BD2728
+/* 80BD26F0  3C 60 80 BD */	lis r3, l_arcName@ha
+/* 80BD26F4  38 63 31 F4 */	addi r3, r3, l_arcName@l
+/* 80BD26F8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80BD31F4 */
+/* 80BD26FC  3C 80 80 BD */	lis r4, stringBase0@ha
+/* 80BD2700  38 84 31 BC */	addi r4, r4, stringBase0@l
+/* 80BD2704  38 84 00 18 */	addi r4, r4, 0x18
+/* 80BD2708  7F E5 FB 78 */	mr r5, r31
+/* 80BD270C  38 C0 00 80 */	li r6, 0x80
+/* 80BD2710  4B 46 9C 6C */	b getRes__14dRes_control_cFPCcPCcP11dRes_info_ci
+/* 80BD2714  3C 80 00 08 */	lis r4, 8
+/* 80BD2718  3C A0 11 00 */	lis r5, 0x1100 /* 0x11000084@ha */
+/* 80BD271C  38 A5 00 84 */	addi r5, r5, 0x0084 /* 0x11000084@l */
+/* 80BD2720  4B 44 25 34 */	b mDoExt_J3DModel__create__FP12J3DModelDataUlUl
+/* 80BD2724  90 7E 06 78 */	stw r3, 0x678(r30)
 lbl_80BD2728:
-/* 80BD2728 00000000  80 1E 06 74 */	lwz r0, 0x674(r30)
-/* 80BD272C 00000004  28 00 00 00 */	cmplwi r0, 0
-/* 80BD2730 00000008  40 82 00 0C */	bne lbl_80BD273C
-/* 80BD2734 0000000C  38 60 00 00 */	li r3, 0
-/* 80BD2738 00000010  48 00 00 08 */	b lbl_80BD2740
+/* 80BD2728  80 1E 06 74 */	lwz r0, 0x674(r30)
+/* 80BD272C  28 00 00 00 */	cmplwi r0, 0
+/* 80BD2730  40 82 00 0C */	bne lbl_80BD273C
+/* 80BD2734  38 60 00 00 */	li r3, 0
+/* 80BD2738  48 00 00 08 */	b lbl_80BD2740
 lbl_80BD273C:
-/* 80BD273C 00000000  38 60 00 01 */	li r3, 1
+/* 80BD273C  38 60 00 01 */	li r3, 1
 lbl_80BD2740:
-/* 80BD2740 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80BD2744 00000004  83 C1 00 08 */	lwz r30, 8(r1)
-/* 80BD2748 00000008  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80BD274C 0000000C  7C 08 03 A6 */	mtlr r0
-/* 80BD2750 00000010  38 21 00 10 */	addi r1, r1, 0x10
-/* 80BD2754 00000014  4E 80 00 20 */	blr 
+/* 80BD2740  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80BD2744  83 C1 00 08 */	lwz r30, 8(r1)
+/* 80BD2748  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80BD274C  7C 08 03 A6 */	mtlr r0
+/* 80BD2750  38 21 00 10 */	addi r1, r1, 0x10
+/* 80BD2754  4E 80 00 20 */	blr 

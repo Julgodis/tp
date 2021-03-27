@@ -1,78 +1,78 @@
 lbl_80254FB8:
-/* 80254FB8 00000000  94 21 FF C0 */	stwu r1, -0x40(r1)
-/* 80254FBC 00000004  7C 08 02 A6 */	mflr r0
-/* 80254FC0 00000008  90 01 00 44 */	stw r0, 0x44(r1)
-/* 80254FC4 0000000C  DB E1 00 30 */	stfd f31, 0x30(r1)
-/* 80254FC8 00000010  F3 E1 00 38 */	psq_st f31, 56(r1), 0, 0 /* qr0 */
-/* 80254FCC 00000014  39 61 00 30 */	addi r11, r1, 0x30
-/* 80254FD0 00000018  48 10 D2 0D */	bl _savegpr_29
-/* 80254FD4 0000001C  7C 7D 1B 78 */	mr r29, r3
-/* 80254FD8 00000020  7C 9E 23 78 */	mr r30, r4
-/* 80254FDC 00000024  7F C3 F3 78 */	mr r3, r30
-/* 80254FE0 00000028  48 0A 21 21 */	bl getBounds__7J2DPaneFv
-/* 80254FE4 0000002C  C0 03 00 00 */	lfs f0, 0(r3)
-/* 80254FE8 00000030  D0 01 00 08 */	stfs f0, 8(r1)
-/* 80254FEC 00000034  C0 03 00 04 */	lfs f0, 4(r3)
-/* 80254FF0 00000038  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80254FF4 0000003C  C0 03 00 08 */	lfs f0, 8(r3)
-/* 80254FF8 00000040  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 80254FFC 00000044  C0 03 00 0C */	lfs f0, 0xc(r3)
-/* 80255000 00000048  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 80255004 0000004C  7F C3 F3 78 */	mr r3, r30
-/* 80255008 00000050  48 0A 2A F5 */	bl getParentPane__7J2DPaneFv
-/* 8025500C 00000054  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80255010 00000058  41 82 00 54 */	beq lbl_80255064
-/* 80255014 0000005C  7F A3 EB 78 */	mr r3, r29
-/* 80255018 00000060  7F E4 FB 78 */	mr r4, r31
-/* 8025501C 00000064  4B FF FF 9D */	bl getBounds__8CPaneMgrFP7J2DPane
-/* 80255020 00000068  C3 E3 00 04 */	lfs f31, 4(r3)
-/* 80255024 0000006C  7F A3 EB 78 */	mr r3, r29
-/* 80255028 00000070  7F E4 FB 78 */	mr r4, r31
-/* 8025502C 00000074  4B FF FF 8D */	bl getBounds__8CPaneMgrFP7J2DPane
-/* 80255030 00000078  C0 23 00 00 */	lfs f1, 0(r3)
-/* 80255034 0000007C  C0 01 00 08 */	lfs f0, 8(r1)
-/* 80255038 00000080  EC 00 08 2A */	fadds f0, f0, f1
-/* 8025503C 00000084  D0 01 00 08 */	stfs f0, 8(r1)
-/* 80255040 00000088  C0 01 00 0C */	lfs f0, 0xc(r1)
-/* 80255044 0000008C  EC 00 F8 2A */	fadds f0, f0, f31
-/* 80255048 00000090  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 8025504C 00000094  C0 01 00 10 */	lfs f0, 0x10(r1)
-/* 80255050 00000098  EC 00 08 2A */	fadds f0, f0, f1
-/* 80255054 0000009C  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 80255058 000000A0  C0 01 00 14 */	lfs f0, 0x14(r1)
-/* 8025505C 000000A4  EC 00 F8 2A */	fadds f0, f0, f31
-/* 80255060 000000A8  D0 01 00 14 */	stfs f0, 0x14(r1)
+/* 80254FB8  94 21 FF C0 */	stwu r1, -0x40(r1)                      
+/* 80254FBC  7C 08 02 A6 */	mflr r0                                 
+/* 80254FC0  90 01 00 44 */	stw r0, 0x44(r1)                        
+/* 80254FC4  DB E1 00 30 */	stfd f31, 0x30(r1)                      
+/* 80254FC8  F3 E1 00 38 */	psq_st f31, 56(r1), 0, 0 /* qr0 */      
+/* 80254FCC  39 61 00 30 */	addi r11, r1, 0x30                      
+/* 80254FD0  48 10 D2 0D */	bl _savegpr_29                           /* constant-address: 803621DC, symbol: _savegpr_29 */
+/* 80254FD4  7C 7D 1B 78 */	mr r29, r3                              
+/* 80254FD8  7C 9E 23 78 */	mr r30, r4                              
+/* 80254FDC  7F C3 F3 78 */	mr r3, r30                              
+/* 80254FE0  48 0A 21 21 */	bl getBounds__7J2DPaneFv                 /* constant-address: 802F7100, symbol: getBounds__7J2DPaneFv */
+/* 80254FE4  C0 03 00 00 */	lfs f0, 0(r3)                           
+/* 80254FE8  D0 01 00 08 */	stfs f0, 8(r1)                          
+/* 80254FEC  C0 03 00 04 */	lfs f0, 4(r3)                           
+/* 80254FF0  D0 01 00 0C */	stfs f0, 0xc(r1)                        
+/* 80254FF4  C0 03 00 08 */	lfs f0, 8(r3)                           
+/* 80254FF8  D0 01 00 10 */	stfs f0, 0x10(r1)                       
+/* 80254FFC  C0 03 00 0C */	lfs f0, 0xc(r3)                         
+/* 80255000  D0 01 00 14 */	stfs f0, 0x14(r1)                       
+/* 80255004  7F C3 F3 78 */	mr r3, r30                              
+/* 80255008  48 0A 2A F5 */	bl getParentPane__7J2DPaneFv             /* constant-address: 802F7AFC, symbol: getParentPane__7J2DPaneFv */
+/* 8025500C  7C 7F 1B 79 */	or. r31, r3, r3                         
+/* 80255010  41 82 00 54 */	beq lbl_80255064                         /* constant-address: 80255064, symbol: lbl_80255064 */
+/* 80255014  7F A3 EB 78 */	mr r3, r29                              
+/* 80255018  7F E4 FB 78 */	mr r4, r31                              
+/* 8025501C  4B FF FF 9D */	bl getBounds__8CPaneMgrFP7J2DPane        /* constant-address: 80254FB8, symbol: getBounds__8CPaneMgrFP7J2DPane */
+/* 80255020  C3 E3 00 04 */	lfs f31, 4(r3)                          
+/* 80255024  7F A3 EB 78 */	mr r3, r29                              
+/* 80255028  7F E4 FB 78 */	mr r4, r31                              
+/* 8025502C  4B FF FF 8D */	bl getBounds__8CPaneMgrFP7J2DPane        /* constant-address: 80254FB8, symbol: getBounds__8CPaneMgrFP7J2DPane */
+/* 80255030  C0 23 00 00 */	lfs f1, 0(r3)                           
+/* 80255034  C0 01 00 08 */	lfs f0, 8(r1)                           
+/* 80255038  EC 00 08 2A */	fadds f0, f0, f1                        
+/* 8025503C  D0 01 00 08 */	stfs f0, 8(r1)                          
+/* 80255040  C0 01 00 0C */	lfs f0, 0xc(r1)                         
+/* 80255044  EC 00 F8 2A */	fadds f0, f0, f31                       
+/* 80255048  D0 01 00 0C */	stfs f0, 0xc(r1)                        
+/* 8025504C  C0 01 00 10 */	lfs f0, 0x10(r1)                        
+/* 80255050  EC 00 08 2A */	fadds f0, f0, f1                        
+/* 80255054  D0 01 00 10 */	stfs f0, 0x10(r1)                       
+/* 80255058  C0 01 00 14 */	lfs f0, 0x14(r1)                        
+/* 8025505C  EC 00 F8 2A */	fadds f0, f0, f31                       
+/* 80255060  D0 01 00 14 */	stfs f0, 0x14(r1)                       
 lbl_80255064:
-/* 80255064 00000000  C0 1E 00 D4 */	lfs f0, 0xd4(r30)
-/* 80255068 00000004  FC 20 00 50 */	fneg f1, f0
-/* 8025506C 00000008  C0 1E 00 D8 */	lfs f0, 0xd8(r30)
-/* 80255070 0000000C  FC 40 00 50 */	fneg f2, f0
-/* 80255074 00000010  C0 01 00 08 */	lfs f0, 8(r1)
-/* 80255078 00000014  EC 00 08 2A */	fadds f0, f0, f1
-/* 8025507C 00000018  D0 01 00 08 */	stfs f0, 8(r1)
-/* 80255080 0000001C  C0 01 00 0C */	lfs f0, 0xc(r1)
-/* 80255084 00000020  EC 00 10 2A */	fadds f0, f0, f2
-/* 80255088 00000024  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 8025508C 00000028  C0 01 00 10 */	lfs f0, 0x10(r1)
-/* 80255090 0000002C  EC 00 08 2A */	fadds f0, f0, f1
-/* 80255094 00000030  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 80255098 00000034  C0 01 00 14 */	lfs f0, 0x14(r1)
-/* 8025509C 00000038  EC 00 10 2A */	fadds f0, f0, f2
-/* 802550A0 0000003C  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 802550A4 00000040  3C 60 80 43 */	lis r3, static_mBounds@ha
-/* 802550A8 00000044  80 81 00 08 */	lwz r4, 8(r1)
-/* 802550AC 00000048  80 01 00 0C */	lwz r0, 0xc(r1)
-/* 802550B0 0000004C  94 83 07 48 */	stwu r4, static_mBounds@l(r3)
-/* 802550B4 00000050  90 03 00 04 */	stw r0, 4(r3)	/* effective address: 80430004 */
-/* 802550B8 00000054  80 81 00 10 */	lwz r4, 0x10(r1)
-/* 802550BC 00000058  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 802550C0 0000005C  90 83 00 08 */	stw r4, 8(r3)	/* effective address: 80430008 */
-/* 802550C4 00000060  90 03 00 0C */	stw r0, 0xc(r3)	/* effective address: 8043000C */
-/* 802550C8 00000064  E3 E1 00 38 */	psq_l f31, 56(r1), 0, 0 /* qr0 */
-/* 802550CC 00000000  CB E1 00 30 */	lfd f31, 0x30(r1)
-/* 802550D0 00000004  39 61 00 30 */	addi r11, r1, 0x30
-/* 802550D4 00000008  48 10 D1 55 */	bl _restgpr_29
-/* 802550D8 0000000C  80 01 00 44 */	lwz r0, 0x44(r1)
-/* 802550DC 00000010  7C 08 03 A6 */	mtlr r0
-/* 802550E0 00000014  38 21 00 40 */	addi r1, r1, 0x40
-/* 802550E4 00000018  4E 80 00 20 */	blr 
+/* 80255064  C0 1E 00 D4 */	lfs f0, 0xd4(r30)                       
+/* 80255068  FC 20 00 50 */	fneg f1, f0                             
+/* 8025506C  C0 1E 00 D8 */	lfs f0, 0xd8(r30)                       
+/* 80255070  FC 40 00 50 */	fneg f2, f0                             
+/* 80255074  C0 01 00 08 */	lfs f0, 8(r1)                           
+/* 80255078  EC 00 08 2A */	fadds f0, f0, f1                        
+/* 8025507C  D0 01 00 08 */	stfs f0, 8(r1)                          
+/* 80255080  C0 01 00 0C */	lfs f0, 0xc(r1)                         
+/* 80255084  EC 00 10 2A */	fadds f0, f0, f2                        
+/* 80255088  D0 01 00 0C */	stfs f0, 0xc(r1)                        
+/* 8025508C  C0 01 00 10 */	lfs f0, 0x10(r1)                        
+/* 80255090  EC 00 08 2A */	fadds f0, f0, f1                        
+/* 80255094  D0 01 00 10 */	stfs f0, 0x10(r1)                       
+/* 80255098  C0 01 00 14 */	lfs f0, 0x14(r1)                        
+/* 8025509C  EC 00 10 2A */	fadds f0, f0, f2                        
+/* 802550A0  D0 01 00 14 */	stfs f0, 0x14(r1)                       
+/* 802550A4  3C 60 80 43 */	lis r3, static_mBounds@ha               
+/* 802550A8  80 81 00 08 */	lwz r4, 8(r1)                           
+/* 802550AC  80 01 00 0C */	lwz r0, 0xc(r1)                         
+/* 802550B0  94 83 07 48 */	stwu r4, static_mBounds@l(r3)            /* constant-address: 80430748, symbol: static_mBounds */
+/* 802550B4  90 03 00 04 */	stw r0, 4(r3)                            /* constant-address: 8043074C, symbol: None */
+/* 802550B8  80 81 00 10 */	lwz r4, 0x10(r1)                        
+/* 802550BC  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 802550C0  90 83 00 08 */	stw r4, 8(r3)                            /* constant-address: 80430750, symbol: None */
+/* 802550C4  90 03 00 0C */	stw r0, 0xc(r3)                          /* constant-address: 80430754, symbol: None */
+/* 802550C8  E3 E1 00 38 */	psq_l f31, 56(r1), 0, 0 /* qr0 */       
+/* 802550CC  CB E1 00 30 */	lfd f31, 0x30(r1)                       
+/* 802550D0  39 61 00 30 */	addi r11, r1, 0x30                      
+/* 802550D4  48 10 D1 55 */	bl _restgpr_29                           /* constant-address: 80362228, symbol: _restgpr_29 */
+/* 802550D8  80 01 00 44 */	lwz r0, 0x44(r1)                        
+/* 802550DC  7C 08 03 A6 */	mtlr r0                                 
+/* 802550E0  38 21 00 40 */	addi r1, r1, 0x40                       
+/* 802550E4  4E 80 00 20 */	blr                                     

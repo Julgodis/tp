@@ -1,30 +1,30 @@
 lbl_8033ECA8:
-/* 8033ECA8 00000000  7C 08 02 A6 */	mflr r0
-/* 8033ECAC 00000004  3C 60 CC 00 */	lis r3, 0xCC00 /* 0xCC004000@ha */
-/* 8033ECB0 00000008  90 01 00 04 */	stw r0, 4(r1)
-/* 8033ECB4 0000000C  39 03 40 00 */	addi r8, r3, 0x4000 /* 0xCC004000@l */
-/* 8033ECB8 00000010  38 00 00 00 */	li r0, 0
-/* 8033ECBC 00000014  94 21 FF F8 */	stwu r1, -8(r1)
-/* 8033ECC0 00000018  A0 E3 40 24 */	lhz r7, 0x4024(r3)	/* effective address: CC004024 */
-/* 8033ECC4 0000001C  3C 60 80 45 */	lis r3, __OSErrorTable@ha
-/* 8033ECC8 00000020  A0 C8 00 22 */	lhz r6, 0x22(r8)	/* effective address: CC004022 */
-/* 8033ECCC 00000024  38 63 BA D0 */	addi r3, r3, __OSErrorTable@l
-/* 8033ECD0 00000028  A0 A8 00 1E */	lhz r5, 0x1e(r8)	/* effective address: CC00401E */
-/* 8033ECD4 0000002C  50 E6 81 9E */	rlwimi r6, r7, 0x10, 6, 0xf
-/* 8033ECD8 00000030  B0 08 00 20 */	sth r0, 0x20(r8)	/* effective address: CC004020 */
-/* 8033ECDC 00000034  81 83 00 3C */	lwz r12, 0x3c(r3)	/* effective address: 8044BB0C */
-/* 8033ECE0 00000038  28 0C 00 00 */	cmplwi r12, 0
-/* 8033ECE4 0000003C  41 82 00 18 */	beq lbl_8033ECFC
-/* 8033ECE8 00000040  7D 88 03 A6 */	mtlr r12
-/* 8033ECEC 00000044  38 60 00 0F */	li r3, 0xf
-/* 8033ECF0 00000048  4C C6 31 82 */	crclr 6
-/* 8033ECF4 0000004C  4E 80 00 21 */	blrl 
-/* 8033ECF8 00000050  48 00 00 0C */	b lbl_8033ED04
+/* 8033ECA8  7C 08 02 A6 */	mflr r0                                 
+/* 8033ECAC  3C 60 CC 00 */	lis r3, 0xCC00 /* 0xCC004000@ha */      
+/* 8033ECB0  90 01 00 04 */	stw r0, 4(r1)                           
+/* 8033ECB4  39 03 40 00 */	addi r8, r3, 0x4000 /* 0xCC004000@l */   /* constant-address: CC004000 */
+/* 8033ECB8  38 00 00 00 */	li r0, 0                                
+/* 8033ECBC  94 21 FF F8 */	stwu r1, -8(r1)                         
+/* 8033ECC0  A0 E3 40 24 */	lhz r7, 0x4024(r3)                       /* constant-address: CC004024 */
+/* 8033ECC4  3C 60 80 45 */	lis r3, __OSErrorTable@ha               
+/* 8033ECC8  A0 C8 00 22 */	lhz r6, 0x22(r8)                         /* constant-address: CC004022 */
+/* 8033ECCC  38 63 BA D0 */	addi r3, r3, __OSErrorTable@l            /* constant-address: 8044BAD0, symbol: __OSErrorTable */
+/* 8033ECD0  A0 A8 00 1E */	lhz r5, 0x1e(r8)                         /* constant-address: CC00401E */
+/* 8033ECD4  50 E6 81 9E */	rlwimi r6, r7, 0x10, 6, 0xf             
+/* 8033ECD8  B0 08 00 20 */	sth r0, 0x20(r8)                         /* constant-address: CC004020 */
+/* 8033ECDC  81 83 00 3C */	lwz r12, 0x3c(r3)                        /* constant-address: 8044BB0C, symbol: None */
+/* 8033ECE0  28 0C 00 00 */	cmplwi r12, 0                           
+/* 8033ECE4  41 82 00 18 */	beq lbl_8033ECFC                         /* constant-address: 8033ECFC, symbol: lbl_8033ECFC */
+/* 8033ECE8  7D 88 03 A6 */	mtlr r12                                
+/* 8033ECEC  38 60 00 0F */	li r3, 0xf                              
+/* 8033ECF0  4C C6 31 82 */	crclr 6                                 
+/* 8033ECF4  4E 80 00 21 */	blrl                                    
+/* 8033ECF8  48 00 00 0C */	b lbl_8033ED04                           /* constant-address: 8033ED04, symbol: lbl_8033ED04 */
 lbl_8033ECFC:
-/* 8033ECFC 00000000  38 60 00 0F */	li r3, 0xf
-/* 8033ED00 00000004  4B FF DA 99 */	bl __OSUnhandledException
+/* 8033ECFC  38 60 00 0F */	li r3, 0xf                              
+/* 8033ED00  4B FF DA 99 */	bl __OSUnhandledException                /* constant-address: 8033C798, symbol: __OSUnhandledException */
 lbl_8033ED04:
-/* 8033ED04 00000000  80 01 00 0C */	lwz r0, 0xc(r1)
-/* 8033ED08 00000004  38 21 00 08 */	addi r1, r1, 8
-/* 8033ED0C 00000008  7C 08 03 A6 */	mtlr r0
-/* 8033ED10 0000000C  4E 80 00 20 */	blr 
+/* 8033ED04  80 01 00 0C */	lwz r0, 0xc(r1)                         
+/* 8033ED08  38 21 00 08 */	addi r1, r1, 8                          
+/* 8033ED0C  7C 08 03 A6 */	mtlr r0                                 
+/* 8033ED10  4E 80 00 20 */	blr                                     

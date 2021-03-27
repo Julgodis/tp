@@ -1,77 +1,77 @@
 lbl_80199BF8:
-/* 80199BF8 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 80199BFC 00000004  7C 08 02 A6 */	mflr r0
-/* 80199C00 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80199C04 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80199C08 00000010  48 1C 85 D1 */	bl _savegpr_28
-/* 80199C0C 00000014  7C 7C 1B 78 */	mr r28, r3
-/* 80199C10 00000018  7C 9D 23 78 */	mr r29, r4
-/* 80199C14 0000001C  7C BE 2B 78 */	mr r30, r5
-/* 80199C18 00000020  38 80 00 02 */	li r4, 2
-/* 80199C1C 00000024  4B FF DA 55 */	bl checkController__13dShopSystem_cFUcP10dMsgFlow_c
-/* 80199C20 00000028  7C 7F 1B 78 */	mr r31, r3
-/* 80199C24 0000002C  38 00 00 22 */	li r0, 0x22
-/* 80199C28 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80199C2C 00000034  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 80199C30 00000038  98 04 5E 3C */	stb r0, 0x5e3c(r4)	/* effective address: 8040BFFC */
-/* 80199C34 0000003C  38 60 00 00 */	li r3, 0
-/* 80199C38 00000040  98 64 5E 57 */	stb r3, 0x5e57(r4)	/* effective address: 8040C017 */
-/* 80199C3C 00000044  88 1E 00 24 */	lbz r0, 0x24(r30)
-/* 80199C40 00000048  28 00 00 00 */	cmplwi r0, 0
-/* 80199C44 0000004C  40 82 00 14 */	bne lbl_80199C58
-/* 80199C48 00000050  38 00 00 2A */	li r0, 0x2a
-/* 80199C4C 00000054  98 04 5E 35 */	stb r0, 0x5e35(r4)	/* effective address: 8040BFF5 */
-/* 80199C50 00000058  98 64 5E 50 */	stb r3, 0x5e50(r4)	/* effective address: 8040C010 */
-/* 80199C54 0000005C  48 00 00 20 */	b lbl_80199C74
+/* 80199BF8  94 21 FF E0 */	stwu r1, -0x20(r1)                      
+/* 80199BFC  7C 08 02 A6 */	mflr r0                                 
+/* 80199C00  90 01 00 24 */	stw r0, 0x24(r1)                        
+/* 80199C04  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 80199C08  48 1C 85 D1 */	bl _savegpr_28                           /* constant-address: 803621D8, symbol: _savegpr_28 */
+/* 80199C0C  7C 7C 1B 78 */	mr r28, r3                              
+/* 80199C10  7C 9D 23 78 */	mr r29, r4                              
+/* 80199C14  7C BE 2B 78 */	mr r30, r5                              
+/* 80199C18  38 80 00 02 */	li r4, 2                                
+/* 80199C1C  4B FF DA 55 */	bl checkController__13dShopSystem_cFUcP10dMsgFlow_c /* constant-address: 80197670, symbol: checkController__13dShopSystem_cFUcP10dMsgFlow_c */
+/* 80199C20  7C 7F 1B 78 */	mr r31, r3                              
+/* 80199C24  38 00 00 22 */	li r0, 0x22                             
+/* 80199C28  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 80199C2C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 80199C30  98 04 5E 3C */	stb r0, 0x5e3c(r4)                       /* constant-address: 8040BFFC, symbol: None */
+/* 80199C34  38 60 00 00 */	li r3, 0                                
+/* 80199C38  98 64 5E 57 */	stb r3, 0x5e57(r4)                       /* constant-address: 8040C017, symbol: None */
+/* 80199C3C  88 1E 00 24 */	lbz r0, 0x24(r30)                       
+/* 80199C40  28 00 00 00 */	cmplwi r0, 0                            
+/* 80199C44  40 82 00 14 */	bne lbl_80199C58                         /* constant-address: 80199C58, symbol: lbl_80199C58 */
+/* 80199C48  38 00 00 2A */	li r0, 0x2a                             
+/* 80199C4C  98 04 5E 35 */	stb r0, 0x5e35(r4)                       /* constant-address: 8040BFF5, symbol: None */
+/* 80199C50  98 64 5E 50 */	stb r3, 0x5e50(r4)                       /* constant-address: 8040C010, symbol: None */
+/* 80199C54  48 00 00 20 */	b lbl_80199C74                           /* constant-address: 80199C74, symbol: lbl_80199C74 */
 lbl_80199C58:
-/* 80199C58 00000000  80 A4 5D BC */	lwz r5, 0x5dbc(r4)	/* effective address: 8040BF7C */
-/* 80199C5C 00000004  88 05 01 A1 */	lbz r0, 0x1a1(r5)
-/* 80199C60 00000008  28 00 00 00 */	cmplwi r0, 0
-/* 80199C64 0000000C  41 82 00 10 */	beq lbl_80199C74
-/* 80199C68 00000010  38 00 00 2A */	li r0, 0x2a
-/* 80199C6C 00000014  98 04 5E 35 */	stb r0, 0x5e35(r4)	/* effective address: 8040BFF5 */
-/* 80199C70 00000018  98 64 5E 50 */	stb r3, 0x5e50(r4)	/* effective address: 8040C010 */
+/* 80199C58  80 A4 5D BC */	lwz r5, 0x5dbc(r4)                       /* constant-address: 8040BF7C, symbol: None */
+/* 80199C5C  88 05 01 A1 */	lbz r0, 0x1a1(r5)                       
+/* 80199C60  28 00 00 00 */	cmplwi r0, 0                            
+/* 80199C64  41 82 00 10 */	beq lbl_80199C74                         /* constant-address: 80199C74, symbol: lbl_80199C74 */
+/* 80199C68  38 00 00 2A */	li r0, 0x2a                             
+/* 80199C6C  98 04 5E 35 */	stb r0, 0x5e35(r4)                       /* constant-address: 8040BFF5, symbol: None */
+/* 80199C70  98 64 5E 50 */	stb r3, 0x5e50(r4)                       /* constant-address: 8040C010, symbol: None */
 lbl_80199C74:
-/* 80199C74 00000000  2C 1F 00 00 */	cmpwi r31, 0
-/* 80199C78 00000004  41 82 00 6C */	beq lbl_80199CE4
-/* 80199C7C 00000008  7F 83 E3 78 */	mr r3, r28
-/* 80199C80 0000000C  7F E4 FB 78 */	mr r4, r31
-/* 80199C84 00000010  38 A0 00 02 */	li r5, 2
-/* 80199C88 00000014  4B FF E7 BD */	bl moveCursor__13dShopSystem_cFiUc
-/* 80199C8C 00000018  7C 66 1B 78 */	mr r6, r3
-/* 80199C90 0000001C  7F C3 F3 78 */	mr r3, r30
-/* 80199C94 00000020  7F A4 EB 78 */	mr r4, r29
-/* 80199C98 00000024  38 A0 00 00 */	li r5, 0
-/* 80199C9C 00000028  48 0B 06 3D */	bl doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci
-/* 80199CA0 0000002C  2C 03 00 00 */	cmpwi r3, 0
-/* 80199CA4 00000030  41 82 00 20 */	beq lbl_80199CC4
-/* 80199CA8 00000034  7F 83 E3 78 */	mr r3, r28
-/* 80199CAC 00000038  38 80 00 08 */	li r4, 8
-/* 80199CB0 0000003C  4B FF D9 2D */	bl offFlag__13dShopSystem_cFi
-/* 80199CB4 00000040  7F 83 E3 78 */	mr r3, r28
-/* 80199CB8 00000044  38 80 00 02 */	li r4, 2
-/* 80199CBC 00000048  48 00 06 89 */	bl setSeq__13dShopSystem_cFUc
-/* 80199CC0 0000004C  48 00 00 38 */	b lbl_80199CF8
+/* 80199C74  2C 1F 00 00 */	cmpwi r31, 0                            
+/* 80199C78  41 82 00 6C */	beq lbl_80199CE4                         /* constant-address: 80199CE4, symbol: lbl_80199CE4 */
+/* 80199C7C  7F 83 E3 78 */	mr r3, r28                              
+/* 80199C80  7F E4 FB 78 */	mr r4, r31                              
+/* 80199C84  38 A0 00 02 */	li r5, 2                                
+/* 80199C88  4B FF E7 BD */	bl moveCursor__13dShopSystem_cFiUc       /* constant-address: 80198444, symbol: moveCursor__13dShopSystem_cFiUc */
+/* 80199C8C  7C 66 1B 78 */	mr r6, r3                               
+/* 80199C90  7F C3 F3 78 */	mr r3, r30                              
+/* 80199C94  7F A4 EB 78 */	mr r4, r29                              
+/* 80199C98  38 A0 00 00 */	li r5, 0                                
+/* 80199C9C  48 0B 06 3D */	bl doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci /* constant-address: 8024A2D8, symbol: doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci */
+/* 80199CA0  2C 03 00 00 */	cmpwi r3, 0                             
+/* 80199CA4  41 82 00 20 */	beq lbl_80199CC4                         /* constant-address: 80199CC4, symbol: lbl_80199CC4 */
+/* 80199CA8  7F 83 E3 78 */	mr r3, r28                              
+/* 80199CAC  38 80 00 08 */	li r4, 8                                
+/* 80199CB0  4B FF D9 2D */	bl offFlag__13dShopSystem_cFi            /* constant-address: 801975DC, symbol: offFlag__13dShopSystem_cFi */
+/* 80199CB4  7F 83 E3 78 */	mr r3, r28                              
+/* 80199CB8  38 80 00 02 */	li r4, 2                                
+/* 80199CBC  48 00 06 89 */	bl setSeq__13dShopSystem_cFUc            /* constant-address: 8019A344, symbol: setSeq__13dShopSystem_cFUc */
+/* 80199CC0  48 00 00 38 */	b lbl_80199CF8                           /* constant-address: 80199CF8, symbol: lbl_80199CF8 */
 lbl_80199CC4:
-/* 80199CC4 00000000  88 1E 00 24 */	lbz r0, 0x24(r30)
-/* 80199CC8 00000004  28 00 00 00 */	cmplwi r0, 0
-/* 80199CCC 00000008  41 82 00 2C */	beq lbl_80199CF8
-/* 80199CD0 0000000C  93 FC 0F 58 */	stw r31, 0xf58(r28)
-/* 80199CD4 00000010  7F 83 E3 78 */	mr r3, r28
-/* 80199CD8 00000014  38 80 00 07 */	li r4, 7
-/* 80199CDC 00000018  48 00 06 69 */	bl setSeq__13dShopSystem_cFUc
-/* 80199CE0 0000001C  48 00 00 18 */	b lbl_80199CF8
+/* 80199CC4  88 1E 00 24 */	lbz r0, 0x24(r30)                       
+/* 80199CC8  28 00 00 00 */	cmplwi r0, 0                            
+/* 80199CCC  41 82 00 2C */	beq lbl_80199CF8                         /* constant-address: 80199CF8, symbol: lbl_80199CF8 */
+/* 80199CD0  93 FC 0F 58 */	stw r31, 0xf58(r28)                     
+/* 80199CD4  7F 83 E3 78 */	mr r3, r28                              
+/* 80199CD8  38 80 00 07 */	li r4, 7                                
+/* 80199CDC  48 00 06 69 */	bl setSeq__13dShopSystem_cFUc            /* constant-address: 8019A344, symbol: setSeq__13dShopSystem_cFUc */
+/* 80199CE0  48 00 00 18 */	b lbl_80199CF8                           /* constant-address: 80199CF8, symbol: lbl_80199CF8 */
 lbl_80199CE4:
-/* 80199CE4 00000000  7F C3 F3 78 */	mr r3, r30
-/* 80199CE8 00000004  7F A4 EB 78 */	mr r4, r29
-/* 80199CEC 00000008  38 A0 00 00 */	li r5, 0
-/* 80199CF0 0000000C  38 C0 00 00 */	li r6, 0
-/* 80199CF4 00000010  48 0B 05 E5 */	bl doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci
+/* 80199CE4  7F C3 F3 78 */	mr r3, r30                              
+/* 80199CE8  7F A4 EB 78 */	mr r4, r29                              
+/* 80199CEC  38 A0 00 00 */	li r5, 0                                
+/* 80199CF0  38 C0 00 00 */	li r6, 0                                
+/* 80199CF4  48 0B 05 E5 */	bl doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci /* constant-address: 8024A2D8, symbol: doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci */
 lbl_80199CF8:
-/* 80199CF8 00000000  38 60 00 00 */	li r3, 0
-/* 80199CFC 00000004  39 61 00 20 */	addi r11, r1, 0x20
-/* 80199D00 00000008  48 1C 85 25 */	bl _restgpr_28
-/* 80199D04 0000000C  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 80199D08 00000010  7C 08 03 A6 */	mtlr r0
-/* 80199D0C 00000014  38 21 00 20 */	addi r1, r1, 0x20
-/* 80199D10 00000018  4E 80 00 20 */	blr 
+/* 80199CF8  38 60 00 00 */	li r3, 0                                
+/* 80199CFC  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 80199D00  48 1C 85 25 */	bl _restgpr_28                           /* constant-address: 80362224, symbol: _restgpr_28 */
+/* 80199D04  80 01 00 24 */	lwz r0, 0x24(r1)                        
+/* 80199D08  7C 08 03 A6 */	mtlr r0                                 
+/* 80199D0C  38 21 00 20 */	addi r1, r1, 0x20                       
+/* 80199D10  4E 80 00 20 */	blr                                     

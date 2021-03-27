@@ -1,3 +1,3 @@
 lbl_8053614C:
-/* 8053614C 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 80536150 00000004  4B FF FD 44 */	b __dt__12dBgS_ObjAcchFv
+/* 8053614C  38 63 FF EC */	addi r3, r3, -20
+/* 80536150  4B FF FD 44 */	b __dt__12dBgS_ObjAcchFv

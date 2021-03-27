@@ -2,7 +2,7 @@
 
 dol2asm.py - script for splitting binary .dol and .rel files to C++ code.
 
-This is a front for the all the code located in the libdol2asm folder.
+This script only calls the underlaying libdol2asm code that does the heavy lifting.
 
 """
 
@@ -10,6 +10,7 @@ import click
 import libdol2asm
 
 from pathlib import Path
+
 
 @click.command()
 @click.version_option(libdol2asm.VERSION)
@@ -26,9 +27,11 @@ from pathlib import Path
 @click.option('--symbols/--no-symbols', 'sym_gen', default=True)
 @click.option('--rels/--no-rels', 'rel_gen', default=True)
 @click.option('--threads', '-j', 'process_count', default=8)
-@click.option('--select-module', '-g', 'select_modules', help = "Select what modules to generate. Default is everything.", multiple=True)
-def main(debug, game_path, asm_path, lib_path, src_path, rel_path, inc_path, mk_gen, cpp_gen, asm_gen, sym_gen, rel_gen, process_count, select_modules):
-    return libdol2asm.split(debug, game_path, lib_path, src_path, asm_path, rel_path, inc_path, mk_gen, cpp_gen, asm_gen, sym_gen, rel_gen, process_count, select_modules)
+@click.option('--select-module', '-g', 'select_modules', help="Select what modules to generate. Default is everything.", multiple=True)
+@click.option('--select-asm', '-n', 'select_asm', multiple=True)
+@click.option('--select-tu', '-t', 'select_tu', multiple=True)
+def main(debug, game_path, asm_path, lib_path, src_path, rel_path, inc_path, mk_gen, cpp_gen, asm_gen, sym_gen, rel_gen, process_count, select_modules, select_tu, select_asm):
+    return libdol2asm.split(debug, game_path, lib_path, src_path, asm_path, rel_path, inc_path, mk_gen, cpp_gen, asm_gen, sym_gen, rel_gen, process_count, select_modules, select_tu, select_asm)
 
 if __name__ == "__main__":
     main()

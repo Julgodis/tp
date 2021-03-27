@@ -1,26 +1,26 @@
 lbl_807E1CCC:
-/* 807E1CCC 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 807E1CD0 00000004  7C 08 02 A6 */	mflr r0
-/* 807E1CD4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 807E1CD8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 807E1CDC 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 807E1CE0 00000014  7C 7E 1B 79 */	or. r30, r3, r3
-/* 807E1CE4 00000018  7C 9F 23 78 */	mr r31, r4
-/* 807E1CE8 0000001C  41 82 00 28 */	beq lbl_807E1D10
-/* 807E1CEC 00000020  3C 80 80 7D */	lis r4, __dt__4cXyzFv@ha
-/* 807E1CF0 00000024  38 84 2B 48 */	addi r4, r4, __dt__4cXyzFv@l
-/* 807E1CF4 00000028  38 A0 00 0C */	li r5, 0xc
-/* 807E1CF8 0000002C  38 C0 00 10 */	li r6, 0x10
-/* 807E1CFC 00000030  4B B7 FF EC */	b __destroy_arr
-/* 807E1D00 00000034  7F E0 07 35 */	extsh. r0, r31
-/* 807E1D04 00000038  40 81 00 0C */	ble lbl_807E1D10
-/* 807E1D08 0000003C  7F C3 F3 78 */	mr r3, r30
-/* 807E1D0C 00000040  4B AE D0 30 */	b __dl__FPv
+/* 807E1CCC  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 807E1CD0  7C 08 02 A6 */	mflr r0
+/* 807E1CD4  90 01 00 14 */	stw r0, 0x14(r1)
+/* 807E1CD8  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 807E1CDC  93 C1 00 08 */	stw r30, 8(r1)
+/* 807E1CE0  7C 7E 1B 79 */	or. r30, r3, r3
+/* 807E1CE4  7C 9F 23 78 */	mr r31, r4
+/* 807E1CE8  41 82 00 28 */	beq lbl_807E1D10
+/* 807E1CEC  3C 80 80 7D */	lis r4, __dt__4cXyzFv@ha
+/* 807E1CF0  38 84 2B 48 */	addi r4, r4, __dt__4cXyzFv@l
+/* 807E1CF4  38 A0 00 0C */	li r5, 0xc
+/* 807E1CF8  38 C0 00 10 */	li r6, 0x10
+/* 807E1CFC  4B B7 FF EC */	b __destroy_arr
+/* 807E1D00  7F E0 07 35 */	extsh. r0, r31
+/* 807E1D04  40 81 00 0C */	ble lbl_807E1D10
+/* 807E1D08  7F C3 F3 78 */	mr r3, r30
+/* 807E1D0C  4B AE D0 30 */	b __dl__FPv
 lbl_807E1D10:
-/* 807E1D10 00000000  7F C3 F3 78 */	mr r3, r30
-/* 807E1D14 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 807E1D18 00000008  83 C1 00 08 */	lwz r30, 8(r1)
-/* 807E1D1C 0000000C  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 807E1D20 00000010  7C 08 03 A6 */	mtlr r0
-/* 807E1D24 00000014  38 21 00 10 */	addi r1, r1, 0x10
-/* 807E1D28 00000018  4E 80 00 20 */	blr 
+/* 807E1D10  7F C3 F3 78 */	mr r3, r30
+/* 807E1D14  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 807E1D18  83 C1 00 08 */	lwz r30, 8(r1)
+/* 807E1D1C  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 807E1D20  7C 08 03 A6 */	mtlr r0
+/* 807E1D24  38 21 00 10 */	addi r1, r1, 0x10
+/* 807E1D28  4E 80 00 20 */	blr 

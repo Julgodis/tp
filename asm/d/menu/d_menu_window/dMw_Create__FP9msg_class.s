@@ -1,27 +1,27 @@
 lbl_801FD8C0:
-/* 801FD8C0 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 801FD8C4 00000004  7C 08 02 A6 */	mflr r0
-/* 801FD8C8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 801FD8CC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 801FD8D0 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 801FD8D4 00000014  3C 60 80 43 */	lis r3, g_meter2_info@ha
-/* 801FD8D8 00000018  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801FD8DC 0000001C  93 E3 00 24 */	stw r31, 0x24(r3)	/* effective address: 804301AC */
-/* 801FD8E0 00000020  38 00 FF FF */	li r0, -1
-/* 801FD8E4 00000024  3C 60 80 43 */	lis r3, g_mwHIO@ha
-/* 801FD8E8 00000028  38 63 E8 6C */	addi r3, r3, g_mwHIO@l
-/* 801FD8EC 0000002C  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 8042E870 */
-/* 801FD8F0 00000030  3C 60 80 43 */	lis r3, g_mwDHIO@ha
-/* 801FD8F4 00000034  38 63 E9 A8 */	addi r3, r3, g_mwDHIO@l
-/* 801FD8F8 00000038  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 8042E9AC */
-/* 801FD8FC 0000003C  38 60 00 00 */	li r3, 0
-/* 801FD900 00000040  4B E3 08 89 */	bl dComIfGp_offHeapLockFlag__Fi
-/* 801FD904 00000044  7F E3 FB 78 */	mr r3, r31
-/* 801FD908 00000048  4B E2 20 AD */	bl fopMsgM_setStageLayer__FPv
-/* 801FD90C 0000004C  7F E3 FB 78 */	mr r3, r31
-/* 801FD910 00000050  4B FF F8 31 */	bl _create__5dMw_cFv
-/* 801FD914 00000054  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 801FD918 00000058  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 801FD91C 0000005C  7C 08 03 A6 */	mtlr r0
-/* 801FD920 00000060  38 21 00 10 */	addi r1, r1, 0x10
-/* 801FD924 00000064  4E 80 00 20 */	blr 
+/* 801FD8C0  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 801FD8C4  7C 08 02 A6 */	mflr r0                                 
+/* 801FD8C8  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 801FD8CC  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 801FD8D0  7C 7F 1B 78 */	mr r31, r3                              
+/* 801FD8D4  3C 60 80 43 */	lis r3, g_meter2_info@ha                
+/* 801FD8D8  38 63 01 88 */	addi r3, r3, g_meter2_info@l             /* constant-address: 80430188, symbol: g_meter2_info */
+/* 801FD8DC  93 E3 00 24 */	stw r31, 0x24(r3)                        /* constant-address: 804301AC, symbol: None */
+/* 801FD8E0  38 00 FF FF */	li r0, -1                               
+/* 801FD8E4  3C 60 80 43 */	lis r3, g_mwHIO@ha                      
+/* 801FD8E8  38 63 E8 6C */	addi r3, r3, g_mwHIO@l                   /* constant-address: 8042E86C, symbol: g_mwHIO */
+/* 801FD8EC  98 03 00 04 */	stb r0, 4(r3)                            /* constant-address: 8042E870, symbol: None */
+/* 801FD8F0  3C 60 80 43 */	lis r3, g_mwDHIO@ha                     
+/* 801FD8F4  38 63 E9 A8 */	addi r3, r3, g_mwDHIO@l                  /* constant-address: 8042E9A8, symbol: g_mwDHIO */
+/* 801FD8F8  98 03 00 04 */	stb r0, 4(r3)                            /* constant-address: 8042E9AC, symbol: None */
+/* 801FD8FC  38 60 00 00 */	li r3, 0                                
+/* 801FD900  4B E3 08 89 */	bl dComIfGp_offHeapLockFlag__Fi          /* constant-address: 8002E188, symbol: dComIfGp_offHeapLockFlag__Fi */
+/* 801FD904  7F E3 FB 78 */	mr r3, r31                              
+/* 801FD908  4B E2 20 AD */	bl fopMsgM_setStageLayer__FPv            /* constant-address: 8001F9B4, symbol: fopMsgM_setStageLayer__FPv */
+/* 801FD90C  7F E3 FB 78 */	mr r3, r31                              
+/* 801FD910  4B FF F8 31 */	bl _create__5dMw_cFv                     /* constant-address: 801FD140, symbol: _create__5dMw_cFv */
+/* 801FD914  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 801FD918  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 801FD91C  7C 08 03 A6 */	mtlr r0                                 
+/* 801FD920  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 801FD924  4E 80 00 20 */	blr                                     

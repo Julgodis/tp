@@ -1,3 +1,3 @@
 lbl_800852B0:
-/* 800852B0 00000000  38 63 FE DC */	addi r3, r3, -292
-/* 800852B4 00000004  4B FF FC 40 */	b __dt__8dCcD_TriFv
+/* 800852B0  38 63 FE DC */	addi r3, r3, -292                       
+/* 800852B4  4B FF FC 40 */	b __dt__8dCcD_TriFv                      /* constant-address: 80084EF4, symbol: __dt__8dCcD_TriFv */

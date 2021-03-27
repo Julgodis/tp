@@ -1,58 +1,58 @@
 lbl_80D50C64:
-/* 80D50C64 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80D50C68 00000004  7C 08 02 A6 */	mflr r0
-/* 80D50C6C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80D50C70 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80D50C74 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 80D50C78 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80D50C7C 00000018  80 03 04 A0 */	lwz r0, 0x4a0(r3)
-/* 80D50C80 0000001C  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
-/* 80D50C84 00000020  40 82 00 1C */	bne lbl_80D50CA0
-/* 80D50C88 00000024  28 1E 00 00 */	cmplwi r30, 0
-/* 80D50C8C 00000028  41 82 00 08 */	beq lbl_80D50C94
-/* 80D50C90 0000002C  4B 2C 7E D4 */	b __ct__10fopAc_ac_cFv
+/* 80D50C64  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80D50C68  7C 08 02 A6 */	mflr r0
+/* 80D50C6C  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80D50C70  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80D50C74  93 C1 00 08 */	stw r30, 8(r1)
+/* 80D50C78  7C 7E 1B 78 */	mr r30, r3
+/* 80D50C7C  80 03 04 A0 */	lwz r0, 0x4a0(r3)
+/* 80D50C80  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
+/* 80D50C84  40 82 00 1C */	bne lbl_80D50CA0
+/* 80D50C88  28 1E 00 00 */	cmplwi r30, 0
+/* 80D50C8C  41 82 00 08 */	beq lbl_80D50C94
+/* 80D50C90  4B 2C 7E D4 */	b __ct__10fopAc_ac_cFv
 lbl_80D50C94:
-/* 80D50C94 00000000  80 1E 04 A0 */	lwz r0, 0x4a0(r30)
-/* 80D50C98 00000004  60 00 00 08 */	ori r0, r0, 8
-/* 80D50C9C 00000008  90 1E 04 A0 */	stw r0, 0x4a0(r30)
+/* 80D50C94  80 1E 04 A0 */	lwz r0, 0x4a0(r30)
+/* 80D50C98  60 00 00 08 */	ori r0, r0, 8
+/* 80D50C9C  90 1E 04 A0 */	stw r0, 0x4a0(r30)
 lbl_80D50CA0:
-/* 80D50CA0 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D50CA4 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80D50CA8 00000008  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80D50CAC 0000000C  C0 23 04 D4 */	lfs f1, 0x4d4(r3)	/* effective address: 80406694 */
-/* 80D50CB0 00000010  3C 60 80 D5 */	lis r3, lit_3829@ha
-/* 80D50CB4 00000014  C0 03 1A D8 */	lfs f0, lit_3829@l(r3)
-/* 80D50CB8 00000018  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 80D50CBC 00000000  40 80 00 0C */	bge lbl_80D50CC8
-/* 80D50CC0 00000004  38 60 00 05 */	li r3, 5
-/* 80D50CC4 00000008  48 00 00 54 */	b lbl_80D50D18
+/* 80D50CA0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 80D50CA4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D50CA8  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80D50CAC  C0 23 04 D4 */	lfs f1, 0x4d4(r3)	/* effective address: 80406694 */
+/* 80D50CB0  3C 60 80 D5 */	lis r3, lit_3829@ha
+/* 80D50CB4  C0 03 1A D8 */	lfs f0, lit_3829@l(r3)
+/* 80D50CB8  FC 01 00 40 */	fcmpo cr0, f1, f0
+/* 80D50CBC  40 80 00 0C */	bge lbl_80D50CC8
+/* 80D50CC0  38 60 00 05 */	li r3, 5
+/* 80D50CC4  48 00 00 54 */	b lbl_80D50D18
 lbl_80D50CC8:
-/* 80D50CC8 00000000  38 7E 05 74 */	addi r3, r30, 0x574
-/* 80D50CCC 00000004  3C 80 80 D5 */	lis r4, l_arcName@ha
-/* 80D50CD0 00000008  38 84 1B 50 */	addi r4, r4, l_arcName@l
-/* 80D50CD4 0000000C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D51B50 */
-/* 80D50CD8 00000010  4B 2D C1 E4 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
-/* 80D50CDC 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80D50CE0 00000018  2C 1F 00 04 */	cmpwi r31, 4
-/* 80D50CE4 0000001C  40 82 00 30 */	bne lbl_80D50D14
-/* 80D50CE8 00000020  7F C3 F3 78 */	mr r3, r30
-/* 80D50CEC 00000024  3C 80 80 D5 */	lis r4, createSolidHeap__FP10fopAc_ac_c@ha
-/* 80D50CF0 00000028  38 84 0A B8 */	addi r4, r4, createSolidHeap__FP10fopAc_ac_c@l
-/* 80D50CF4 0000002C  38 A0 53 40 */	li r5, 0x5340
-/* 80D50CF8 00000030  4B 2C 97 B8 */	b fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
-/* 80D50CFC 00000034  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 80D50D00 00000038  40 82 00 0C */	bne lbl_80D50D0C
-/* 80D50D04 0000003C  38 60 00 05 */	li r3, 5
-/* 80D50D08 00000040  48 00 00 10 */	b lbl_80D50D18
+/* 80D50CC8  38 7E 05 74 */	addi r3, r30, 0x574
+/* 80D50CCC  3C 80 80 D5 */	lis r4, l_arcName@ha
+/* 80D50CD0  38 84 1B 50 */	addi r4, r4, l_arcName@l
+/* 80D50CD4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D51B50 */
+/* 80D50CD8  4B 2D C1 E4 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80D50CDC  7C 7F 1B 78 */	mr r31, r3
+/* 80D50CE0  2C 1F 00 04 */	cmpwi r31, 4
+/* 80D50CE4  40 82 00 30 */	bne lbl_80D50D14
+/* 80D50CE8  7F C3 F3 78 */	mr r3, r30
+/* 80D50CEC  3C 80 80 D5 */	lis r4, createSolidHeap__FP10fopAc_ac_c@ha
+/* 80D50CF0  38 84 0A B8 */	addi r4, r4, createSolidHeap__FP10fopAc_ac_c@l
+/* 80D50CF4  38 A0 53 40 */	li r5, 0x5340
+/* 80D50CF8  4B 2C 97 B8 */	b fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 80D50CFC  54 60 06 3F */	clrlwi. r0, r3, 0x18
+/* 80D50D00  40 82 00 0C */	bne lbl_80D50D0C
+/* 80D50D04  38 60 00 05 */	li r3, 5
+/* 80D50D08  48 00 00 10 */	b lbl_80D50D18
 lbl_80D50D0C:
-/* 80D50D0C 00000000  7F C3 F3 78 */	mr r3, r30
-/* 80D50D10 00000004  48 00 00 21 */	bl create_init__14daTagLv7Gate_cFv
+/* 80D50D0C  7F C3 F3 78 */	mr r3, r30
+/* 80D50D10  48 00 00 21 */	bl create_init__14daTagLv7Gate_cFv
 lbl_80D50D14:
-/* 80D50D14 00000000  7F E3 FB 78 */	mr r3, r31
+/* 80D50D14  7F E3 FB 78 */	mr r3, r31
 lbl_80D50D18:
-/* 80D50D18 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80D50D1C 00000004  83 C1 00 08 */	lwz r30, 8(r1)
-/* 80D50D20 00000008  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80D50D24 0000000C  7C 08 03 A6 */	mtlr r0
-/* 80D50D28 00000010  38 21 00 10 */	addi r1, r1, 0x10
-/* 80D50D2C 00000014  4E 80 00 20 */	blr 
+/* 80D50D18  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80D50D1C  83 C1 00 08 */	lwz r30, 8(r1)
+/* 80D50D20  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80D50D24  7C 08 03 A6 */	mtlr r0
+/* 80D50D28  38 21 00 10 */	addi r1, r1, 0x10
+/* 80D50D2C  4E 80 00 20 */	blr 

@@ -1,3 +1,3 @@
 lbl_802BBCD4:
-/* 802BBCD4 00000000  38 63 FF F8 */	addi r3, r3, -8
-/* 802BBCD8 00000004  4B FF FD B0 */	b getStreamFileEntry__11Z2SoundInfoF10JAISoundID
+/* 802BBCD4  38 63 FF F8 */	addi r3, r3, -8                         
+/* 802BBCD8  4B FF FD B0 */	b getStreamFileEntry__11Z2SoundInfoF10JAISoundID /* constant-address: 802BBA88, symbol: getStreamFileEntry__11Z2SoundInfoF10JAISoundID */

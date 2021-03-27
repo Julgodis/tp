@@ -1,7 +1,7 @@
 import struct
 
 from dataclasses import dataclass, field
-from typing import List, Set
+from typing import List, Set, Dict
 from pathlib import Path
 
 from ...builder import AsyncBuilder
@@ -10,7 +10,7 @@ from ... import util
 from ..base import *
 from .base import *
 
-
+"""
 @dataclass(eq=False)
 class Block(ArbitraryData):
     sda_hack_references: Set[int] = field(default=None, repr=False)
@@ -31,32 +31,65 @@ class Block(ArbitraryData):
             for x in collector.accesses.values()
         ]
         return set([(x._module, x.addr) for x in symbols if x])
+"""
 
+@dataclass
+class Block():
+    identifier: Identifier
+    addr: int
+    size: int
+
+    @property
+    def start(self):
+        return self.addr
+
+    @property
+    def end(self):
+        return self.addr + self.size
+
+    def asm_reference(self, addr):
+        if addr != self.addr:
+            return None
+        return self.identifier.label
+
+from .. import static_analyze
 
 @dataclass(eq=False)
 class ASMFunction(Function):
-    blocks: List[str] = field(default_factory=list, repr=False)
+    blocks: List[Block] = field(default_factory=list, repr=False)
     include_path: Path = None
     asm: bool = True
+    data: bytearray = None
+
+    ref_addrs: Dict[int, int] = field(default_factory=dict, repr=False)
 
     @property
     def sda_hack_references(self):
-        refs = set()
-        for block in self.blocks:
-            refs.update(
-                block.sda_hack_references if block.sda_hack_references else set())
-        return refs
+        return set()
+        #refs = set()
+        #for block in self.blocks:
+        #    refs.update(
+        #        block.sda_hack_references if block.sda_hack_references else set())
+        #return refs
 
     def _get_internal_references(self, context, symbol_table):
+        addrs = static_analyze.function(self.data, self.addr, self.size)
         refs = set()
-        for block in self.blocks:
-            refs.update(block.internal_references_addr(context, symbol_table))
+        for k, addr in addrs.items():
+            self.ref_addrs[k] = addr
+            symbol = symbol_table[-1, addr]
+            if not symbol:
+                continue
+            refs.add((symbol._module, symbol.addr))
+        #refs = set()
+        #for block in self.blocks:
+        #    refs.update(block.internal_references_addr(context, symbol_table))
         return refs
       
     def set_mlts(self, module: int, library: str, translation_unit: str, section: str):
         super().set_mlts(module, library, translation_unit, section)
-        for block in self.blocks:
-            block.set_mlts(module, library, translation_unit, section)
+        #for block in self.blocks:
+            #block.set_mlts(module, library, translation_unit, section)
 
     async def export_function_body(self, exporter, builder: AsyncBuilder):
         await builder.write(f" {{")
@@ -88,23 +121,27 @@ class ASMFunction(Function):
 
         blocks = []
         for symbol in group:
+            #block = Block(
+            #    Identifier("lbl", symbol.addr, None),
+            #    symbol.addr, symbol.size,
+            #    data=section.data_for_symbol(symbol))
             block = Block(
                 Identifier("lbl", symbol.addr, None),
                 symbol.addr, symbol.size,
-                data=section.data_for_symbol(symbol))
+            )
             blocks.append(block)
 
         # Calculate additional padding from zeros at the end of the function
+        data = section.get_data(start, end)
         end_padding = 0
-        last_data = list(util.chunks(blocks[-1].data, 4))
+        last_data = list(util.chunks(data, 4))
         for x in last_data[::-1]:
             if struct.unpack('>I', x)[0] != 0:
                 break
             end_padding += 4
 
         if end_padding > 0:
-            blocks[-1].data = blocks[-1].data[:-end_padding]
-            blocks[-1].size -= end_padding
+            data = data[:-end_padding]
             end -= end_padding
 
         return ASMFunction(
@@ -114,4 +151,5 @@ class ASMFunction(Function):
             padding=last.padding + end_padding,
             alignment=0,
             blocks=blocks,
-            source=first.source)
+            source=first.source,
+            data=data)

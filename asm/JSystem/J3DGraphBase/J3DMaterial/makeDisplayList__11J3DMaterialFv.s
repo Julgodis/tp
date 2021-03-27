@@ -1,20 +1,20 @@
 lbl_80316620:
-/* 80316620 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80316624 00000004  7C 08 02 A6 */	mflr r0
-/* 80316628 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8031662C 0000000C  3C 80 80 43 */	lis r4, j3dSys@ha
-/* 80316630 00000010  38 84 4A C8 */	addi r4, r4, j3dSys@l
-/* 80316634 00000014  80 A4 00 3C */	lwz r5, 0x3c(r4)	/* effective address: 80434B04 */
-/* 80316638 00000018  80 05 00 10 */	lwz r0, 0x10(r5)
-/* 8031663C 0000001C  54 00 07 FF */	clrlwi. r0, r0, 0x1f
-/* 80316640 00000020  40 82 00 18 */	bne lbl_80316658
-/* 80316644 00000024  80 03 00 20 */	lwz r0, 0x20(r3)
-/* 80316648 00000028  90 05 00 34 */	stw r0, 0x34(r5)
-/* 8031664C 0000002C  80 84 00 3C */	lwz r4, 0x3c(r4)	/* effective address: 80434B04 */
-/* 80316650 00000030  80 84 00 20 */	lwz r4, 0x20(r4)	/* effective address: 80434AE8 */
-/* 80316654 00000034  4B FF FC F1 */	bl makeDisplayList_private__11J3DMaterialFP17J3DDisplayListObj
+/* 80316620  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 80316624  7C 08 02 A6 */	mflr r0                                 
+/* 80316628  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 8031662C  3C 80 80 43 */	lis r4, j3dSys@ha                       
+/* 80316630  38 84 4A C8 */	addi r4, r4, j3dSys@l                    /* constant-address: 80434AC8, symbol: j3dSys */
+/* 80316634  80 A4 00 3C */	lwz r5, 0x3c(r4)                         /* constant-address: 80434B04, symbol: None */
+/* 80316638  80 05 00 10 */	lwz r0, 0x10(r5)                        
+/* 8031663C  54 00 07 FF */	clrlwi. r0, r0, 0x1f                    
+/* 80316640  40 82 00 18 */	bne lbl_80316658                         /* constant-address: 80316658, symbol: lbl_80316658 */
+/* 80316644  80 03 00 20 */	lwz r0, 0x20(r3)                        
+/* 80316648  90 05 00 34 */	stw r0, 0x34(r5)                        
+/* 8031664C  80 84 00 3C */	lwz r4, 0x3c(r4)                         /* constant-address: 80434B04, symbol: None */
+/* 80316650  80 84 00 20 */	lwz r4, 0x20(r4)                        
+/* 80316654  4B FF FC F1 */	bl makeDisplayList_private__11J3DMaterialFP17J3DDisplayListObj /* constant-address: 80316344, symbol: makeDisplayList_private__11J3DMaterialFP17J3DDisplayListObj */
 lbl_80316658:
-/* 80316658 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 8031665C 00000004  7C 08 03 A6 */	mtlr r0
-/* 80316660 00000008  38 21 00 10 */	addi r1, r1, 0x10
-/* 80316664 0000000C  4E 80 00 20 */	blr 
+/* 80316658  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 8031665C  7C 08 03 A6 */	mtlr r0                                 
+/* 80316660  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 80316664  4E 80 00 20 */	blr                                     

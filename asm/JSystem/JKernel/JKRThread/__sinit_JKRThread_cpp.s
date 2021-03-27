@@ -1,27 +1,27 @@
 lbl_802D1E94:
-/* 802D1E94 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 802D1E98 00000004  7C 08 02 A6 */	mflr r0
-/* 802D1E9C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802D1EA0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802D1EA4 00000010  3C 60 80 43 */	lis r3, lit_481@ha
-/* 802D1EA8 00000014  3B E3 42 80 */	addi r31, r3, lit_481@l
-/* 802D1EAC 00000018  38 7F 00 0C */	addi r3, r31, 0xc
-/* 802D1EB0 0000001C  38 80 00 00 */	li r4, 0
-/* 802D1EB4 00000020  48 00 9F C1 */	bl __ct__10JSUPtrListFb
-/* 802D1EB8 00000024  38 7F 00 0C */	addi r3, r31, 0xc
-/* 802D1EBC 00000028  3C 80 80 2D */	lis r4, func_802D1F50@ha
-/* 802D1EC0 0000002C  38 84 1F 50 */	addi r4, r4, func_802D1F50@l
-/* 802D1EC4 00000030  38 BF 00 00 */	addi r5, r31, 0
-/* 802D1EC8 00000034  48 08 FD 5D */	bl __register_global_object
-/* 802D1ECC 00000038  38 7F 00 24 */	addi r3, r31, 0x24
-/* 802D1ED0 0000003C  48 00 A0 45 */	bl initiate__10JSUPtrListFv
-/* 802D1ED4 00000040  38 7F 00 24 */	addi r3, r31, 0x24
-/* 802D1ED8 00000044  3C 80 80 2D */	lis r4, func_802D1EFC@ha
-/* 802D1EDC 00000048  38 84 1E FC */	addi r4, r4, func_802D1EFC@l
-/* 802D1EE0 0000004C  38 BF 00 18 */	addi r5, r31, 0x18
-/* 802D1EE4 00000050  48 08 FD 41 */	bl __register_global_object
-/* 802D1EE8 00000054  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 802D1EEC 00000058  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 802D1EF0 0000005C  7C 08 03 A6 */	mtlr r0
-/* 802D1EF4 00000060  38 21 00 10 */	addi r1, r1, 0x10
-/* 802D1EF8 00000064  4E 80 00 20 */	blr 
+/* 802D1E94  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 802D1E98  7C 08 02 A6 */	mflr r0                                 
+/* 802D1E9C  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 802D1EA0  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 802D1EA4  3C 60 80 43 */	lis r3, lit_481@ha                      
+/* 802D1EA8  3B E3 42 80 */	addi r31, r3, lit_481@l                  /* constant-address: 80434280, symbol: lit_481 */
+/* 802D1EAC  38 7F 00 0C */	addi r3, r31, 0xc                        /* constant-address: 8043428C, symbol: sThreadList__9JKRThread */
+/* 802D1EB0  38 80 00 00 */	li r4, 0                                
+/* 802D1EB4  48 00 9F C1 */	bl __ct__10JSUPtrListFb                  /* constant-address: 802DBE74, symbol: __ct__10JSUPtrListFb */
+/* 802D1EB8  38 7F 00 0C */	addi r3, r31, 0xc                        /* constant-address: 8043428C, symbol: sThreadList__9JKRThread */
+/* 802D1EBC  3C 80 80 2D */	lis r4, func_802D1F50@ha                
+/* 802D1EC0  38 84 1F 50 */	addi r4, r4, func_802D1F50@l             /* constant-address: 802D1F50, symbol: func_802D1F50 */
+/* 802D1EC4  38 BF 00 00 */	addi r5, r31, 0                          /* constant-address: 80434280, symbol: lit_481 */
+/* 802D1EC8  48 08 FD 5D */	bl __register_global_object              /* constant-address: 80361C24, symbol: __register_global_object */
+/* 802D1ECC  38 7F 00 24 */	addi r3, r31, 0x24                       /* constant-address: 804342A4, symbol: sTaskList__7JKRTask */
+/* 802D1ED0  48 00 A0 45 */	bl initiate__10JSUPtrListFv              /* constant-address: 802DBF14, symbol: initiate__10JSUPtrListFv */
+/* 802D1ED4  38 7F 00 24 */	addi r3, r31, 0x24                       /* constant-address: 804342A4, symbol: sTaskList__7JKRTask */
+/* 802D1ED8  3C 80 80 2D */	lis r4, func_802D1EFC@ha                
+/* 802D1EDC  38 84 1E FC */	addi r4, r4, func_802D1EFC@l             /* constant-address: 802D1EFC, symbol: func_802D1EFC */
+/* 802D1EE0  38 BF 00 18 */	addi r5, r31, 0x18                       /* constant-address: 80434298, symbol: lit_989 */
+/* 802D1EE4  48 08 FD 41 */	bl __register_global_object              /* constant-address: 80361C24, symbol: __register_global_object */
+/* 802D1EE8  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 802D1EEC  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 802D1EF0  7C 08 03 A6 */	mtlr r0                                 
+/* 802D1EF4  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 802D1EF8  4E 80 00 20 */	blr                                     

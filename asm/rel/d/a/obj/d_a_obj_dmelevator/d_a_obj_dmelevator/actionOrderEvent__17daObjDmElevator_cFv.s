@@ -1,43 +1,43 @@
 lbl_80BDEF60:
-/* 80BDEF60 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80BDEF64 00000004  7C 08 02 A6 */	mflr r0
-/* 80BDEF68 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80BDEF6C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80BDEF70 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80BDEF74 00000014  A0 03 00 F8 */	lhz r0, 0xf8(r3)
-/* 80BDEF78 00000018  28 00 00 02 */	cmplwi r0, 2
-/* 80BDEF7C 0000001C  40 82 00 48 */	bne lbl_80BDEFC4
-/* 80BDEF80 00000020  38 00 00 02 */	li r0, 2
-/* 80BDEF84 00000024  98 1F 05 E2 */	stb r0, 0x5e2(r31)
-/* 80BDEF88 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80BDEF8C 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80BDEF90 00000030  38 63 4F F8 */	addi r3, r3, 0x4ff8
-/* 80BDEF94 00000034  3C 80 80 BE */	lis r4, l_staffName@ha
-/* 80BDEF98 00000038  38 84 F9 74 */	addi r4, r4, l_staffName@l
-/* 80BDEF9C 0000003C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BDF974 */
-/* 80BDEFA0 00000040  38 A0 00 00 */	li r5, 0
-/* 80BDEFA4 00000044  38 C0 00 00 */	li r6, 0
-/* 80BDEFA8 00000048  4B 46 8B 74 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
-/* 80BDEFAC 0000004C  90 7F 05 DC */	stw r3, 0x5dc(r31)
-/* 80BDEFB0 00000050  7F E3 FB 78 */	mr r3, r31
-/* 80BDEFB4 00000054  48 00 01 B9 */	bl demoProc__17daObjDmElevator_cFv
-/* 80BDEFB8 00000058  38 00 00 00 */	li r0, 0
-/* 80BDEFBC 0000005C  98 1F 06 2D */	stb r0, 0x62d(r31)
-/* 80BDEFC0 00000060  48 00 00 2C */	b lbl_80BDEFEC
+/* 80BDEF60  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80BDEF64  7C 08 02 A6 */	mflr r0
+/* 80BDEF68  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80BDEF6C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80BDEF70  7C 7F 1B 78 */	mr r31, r3
+/* 80BDEF74  A0 03 00 F8 */	lhz r0, 0xf8(r3)
+/* 80BDEF78  28 00 00 02 */	cmplwi r0, 2
+/* 80BDEF7C  40 82 00 48 */	bne lbl_80BDEFC4
+/* 80BDEF80  38 00 00 02 */	li r0, 2
+/* 80BDEF84  98 1F 05 E2 */	stb r0, 0x5e2(r31)
+/* 80BDEF88  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 80BDEF8C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BDEF90  38 63 4F F8 */	addi r3, r3, 0x4ff8
+/* 80BDEF94  3C 80 80 BE */	lis r4, l_staffName@ha
+/* 80BDEF98  38 84 F9 74 */	addi r4, r4, l_staffName@l
+/* 80BDEF9C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BDF974 */
+/* 80BDEFA0  38 A0 00 00 */	li r5, 0
+/* 80BDEFA4  38 C0 00 00 */	li r6, 0
+/* 80BDEFA8  4B 46 8B 74 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
+/* 80BDEFAC  90 7F 05 DC */	stw r3, 0x5dc(r31)
+/* 80BDEFB0  7F E3 FB 78 */	mr r3, r31
+/* 80BDEFB4  48 00 01 B9 */	bl demoProc__17daObjDmElevator_cFv
+/* 80BDEFB8  38 00 00 00 */	li r0, 0
+/* 80BDEFBC  98 1F 06 2D */	stb r0, 0x62d(r31)
+/* 80BDEFC0  48 00 00 2C */	b lbl_80BDEFEC
 lbl_80BDEFC4:
-/* 80BDEFC4 00000000  A8 9F 05 E6 */	lha r4, 0x5e6(r31)
-/* 80BDEFC8 00000004  38 A0 00 FF */	li r5, 0xff
-/* 80BDEFCC 00000008  3C C0 00 01 */	lis r6, 0x0001 /* 0x0000FFFF@ha */
-/* 80BDEFD0 0000000C  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
-/* 80BDEFD4 00000010  38 E0 00 00 */	li r7, 0
-/* 80BDEFD8 00000014  39 00 00 01 */	li r8, 1
-/* 80BDEFDC 00000018  4B 43 C6 A0 */	b fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
-/* 80BDEFE0 0000001C  A0 1F 00 FA */	lhz r0, 0xfa(r31)
-/* 80BDEFE4 00000020  60 00 00 02 */	ori r0, r0, 2
-/* 80BDEFE8 00000024  B0 1F 00 FA */	sth r0, 0xfa(r31)
+/* 80BDEFC4  A8 9F 05 E6 */	lha r4, 0x5e6(r31)
+/* 80BDEFC8  38 A0 00 FF */	li r5, 0xff
+/* 80BDEFCC  3C C0 00 01 */	lis r6, 0x0001 /* 0x0000FFFF@ha */
+/* 80BDEFD0  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
+/* 80BDEFD4  38 E0 00 00 */	li r7, 0
+/* 80BDEFD8  39 00 00 01 */	li r8, 1
+/* 80BDEFDC  4B 43 C6 A0 */	b fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
+/* 80BDEFE0  A0 1F 00 FA */	lhz r0, 0xfa(r31)
+/* 80BDEFE4  60 00 00 02 */	ori r0, r0, 2
+/* 80BDEFE8  B0 1F 00 FA */	sth r0, 0xfa(r31)
 lbl_80BDEFEC:
-/* 80BDEFEC 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80BDEFF0 00000004  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80BDEFF4 00000008  7C 08 03 A6 */	mtlr r0
-/* 80BDEFF8 0000000C  38 21 00 10 */	addi r1, r1, 0x10
-/* 80BDEFFC 00000010  4E 80 00 20 */	blr 
+/* 80BDEFEC  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80BDEFF0  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80BDEFF4  7C 08 03 A6 */	mtlr r0
+/* 80BDEFF8  38 21 00 10 */	addi r1, r1, 0x10
+/* 80BDEFFC  4E 80 00 20 */	blr 

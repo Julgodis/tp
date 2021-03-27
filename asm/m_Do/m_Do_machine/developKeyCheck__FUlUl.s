@@ -1,50 +1,50 @@
 lbl_8000B68C:
-/* 8000B68C 00000000  28 04 00 74 */	cmplwi r4, 0x74
-/* 8000B690 00000004  40 82 00 4C */	bne lbl_8000B6DC
-/* 8000B694 00000008  28 03 00 04 */	cmplwi r3, 4
-/* 8000B698 0000000C  40 82 00 44 */	bne lbl_8000B6DC
-/* 8000B69C 00000010  88 0D 86 95 */	lbz r0, struct_80450C10+0x5(r13)
-/* 8000B6A0 00000014  28 00 00 03 */	cmplwi r0, 3
-/* 8000B6A4 00000018  40 82 00 28 */	bne lbl_8000B6CC
-/* 8000B6A8 0000001C  88 0D 86 96 */	lbz r0, struct_80450C10+0x6(r13)
-/* 8000B6AC 00000020  28 00 00 06 */	cmplwi r0, 6
-/* 8000B6B0 00000024  40 82 00 1C */	bne lbl_8000B6CC
-/* 8000B6B4 00000028  88 0D 86 97 */	lbz r0, struct_80450C10+0x7(r13)
-/* 8000B6B8 0000002C  28 00 00 05 */	cmplwi r0, 5
-/* 8000B6BC 00000030  40 82 00 10 */	bne lbl_8000B6CC
-/* 8000B6C0 00000034  38 00 00 01 */	li r0, 1
-/* 8000B6C4 00000038  98 0D 80 00 */	stb r0, data_80450580(r13)
-/* 8000B6C8 0000003C  48 00 00 14 */	b lbl_8000B6DC
+/* 8000B68C  28 04 00 74 */	cmplwi r4, 0x74                         
+/* 8000B690  40 82 00 4C */	bne lbl_8000B6DC                         /* constant-address: 8000B6DC, symbol: lbl_8000B6DC */
+/* 8000B694  28 03 00 04 */	cmplwi r3, 4                            
+/* 8000B698  40 82 00 44 */	bne lbl_8000B6DC                         /* constant-address: 8000B6DC, symbol: lbl_8000B6DC */
+/* 8000B69C  88 0D 86 95 */	lbz r0, struct_80450C10+0x5(r13)         /* constant-address: 80450C15, symbol: struct_80450C10+0x5 */
+/* 8000B6A0  28 00 00 03 */	cmplwi r0, 3                            
+/* 8000B6A4  40 82 00 28 */	bne lbl_8000B6CC                         /* constant-address: 8000B6CC, symbol: lbl_8000B6CC */
+/* 8000B6A8  88 0D 86 96 */	lbz r0, struct_80450C10+0x6(r13)         /* constant-address: 80450C16, symbol: struct_80450C10+0x6 */
+/* 8000B6AC  28 00 00 06 */	cmplwi r0, 6                            
+/* 8000B6B0  40 82 00 1C */	bne lbl_8000B6CC                         /* constant-address: 8000B6CC, symbol: lbl_8000B6CC */
+/* 8000B6B4  88 0D 86 97 */	lbz r0, struct_80450C10+0x7(r13)         /* constant-address: 80450C17, symbol: struct_80450C10+0x7 */
+/* 8000B6B8  28 00 00 05 */	cmplwi r0, 5                            
+/* 8000B6BC  40 82 00 10 */	bne lbl_8000B6CC                         /* constant-address: 8000B6CC, symbol: lbl_8000B6CC */
+/* 8000B6C0  38 00 00 01 */	li r0, 1                                
+/* 8000B6C4  98 0D 80 00 */	stb r0, data_80450580(r13)               /* constant-address: 80450580, symbol: data_80450580 */
+/* 8000B6C8  48 00 00 14 */	b lbl_8000B6DC                           /* constant-address: 8000B6DC, symbol: lbl_8000B6DC */
 lbl_8000B6CC:
-/* 8000B6CC 00000000  38 00 00 00 */	li r0, 0
-/* 8000B6D0 00000004  98 0D 86 95 */	stb r0, struct_80450C10+0x5(r13)
-/* 8000B6D4 00000008  98 0D 86 96 */	stb r0, struct_80450C10+0x6(r13)
-/* 8000B6D8 0000000C  98 0D 86 97 */	stb r0, struct_80450C10+0x7(r13)
+/* 8000B6CC  38 00 00 00 */	li r0, 0                                
+/* 8000B6D0  98 0D 86 95 */	stb r0, struct_80450C10+0x5(r13)         /* constant-address: 80450C15, symbol: struct_80450C10+0x5 */
+/* 8000B6D4  98 0D 86 96 */	stb r0, struct_80450C10+0x6(r13)         /* constant-address: 80450C16, symbol: struct_80450C10+0x6 */
+/* 8000B6D8  98 0D 86 97 */	stb r0, struct_80450C10+0x7(r13)         /* constant-address: 80450C17, symbol: struct_80450C10+0x7 */
 lbl_8000B6DC:
-/* 8000B6DC 00000000  28 04 00 42 */	cmplwi r4, 0x42
-/* 8000B6E0 00000004  40 82 00 18 */	bne lbl_8000B6F8
-/* 8000B6E4 00000008  28 03 00 40 */	cmplwi r3, 0x40
-/* 8000B6E8 0000000C  40 82 00 10 */	bne lbl_8000B6F8
-/* 8000B6EC 00000010  88 AD 86 95 */	lbz r5, struct_80450C10+0x5(r13)
-/* 8000B6F0 00000014  38 05 00 01 */	addi r0, r5, 1
-/* 8000B6F4 00000018  98 0D 86 95 */	stb r0, struct_80450C10+0x5(r13)
+/* 8000B6DC  28 04 00 42 */	cmplwi r4, 0x42                         
+/* 8000B6E0  40 82 00 18 */	bne lbl_8000B6F8                         /* constant-address: 8000B6F8, symbol: lbl_8000B6F8 */
+/* 8000B6E4  28 03 00 40 */	cmplwi r3, 0x40                         
+/* 8000B6E8  40 82 00 10 */	bne lbl_8000B6F8                         /* constant-address: 8000B6F8, symbol: lbl_8000B6F8 */
+/* 8000B6EC  88 AD 86 95 */	lbz r5, struct_80450C10+0x5(r13)         /* constant-address: 80450C15, symbol: struct_80450C10+0x5 */
+/* 8000B6F0  38 05 00 01 */	addi r0, r5, 1                          
+/* 8000B6F4  98 0D 86 95 */	stb r0, struct_80450C10+0x5(r13)         /* constant-address: 80450C15, symbol: struct_80450C10+0x5 */
 lbl_8000B6F8:
-/* 8000B6F8 00000000  28 04 00 28 */	cmplwi r4, 0x28
-/* 8000B6FC 00000004  40 82 00 18 */	bne lbl_8000B714
-/* 8000B700 00000008  28 03 00 20 */	cmplwi r3, 0x20
-/* 8000B704 0000000C  40 82 00 10 */	bne lbl_8000B714
-/* 8000B708 00000010  88 AD 86 96 */	lbz r5, struct_80450C10+0x6(r13)
-/* 8000B70C 00000014  38 05 00 01 */	addi r0, r5, 1
-/* 8000B710 00000018  98 0D 86 96 */	stb r0, struct_80450C10+0x6(r13)
+/* 8000B6F8  28 04 00 28 */	cmplwi r4, 0x28                         
+/* 8000B6FC  40 82 00 18 */	bne lbl_8000B714                         /* constant-address: 8000B714, symbol: lbl_8000B714 */
+/* 8000B700  28 03 00 20 */	cmplwi r3, 0x20                         
+/* 8000B704  40 82 00 10 */	bne lbl_8000B714                         /* constant-address: 8000B714, symbol: lbl_8000B714 */
+/* 8000B708  88 AD 86 96 */	lbz r5, struct_80450C10+0x6(r13)         /* constant-address: 80450C16, symbol: struct_80450C10+0x6 */
+/* 8000B70C  38 05 00 01 */	addi r0, r5, 1                          
+/* 8000B710  98 0D 86 96 */	stb r0, struct_80450C10+0x6(r13)         /* constant-address: 80450C16, symbol: struct_80450C10+0x6 */
 lbl_8000B714:
-/* 8000B714 00000000  28 04 00 11 */	cmplwi r4, 0x11
-/* 8000B718 00000004  40 82 00 18 */	bne lbl_8000B730
-/* 8000B71C 00000008  28 03 00 10 */	cmplwi r3, 0x10
-/* 8000B720 0000000C  40 82 00 10 */	bne lbl_8000B730
-/* 8000B724 00000010  88 6D 86 97 */	lbz r3, struct_80450C10+0x7(r13)
-/* 8000B728 00000014  38 03 00 01 */	addi r0, r3, 1
-/* 8000B72C 00000018  98 0D 86 97 */	stb r0, struct_80450C10+0x7(r13)
+/* 8000B714  28 04 00 11 */	cmplwi r4, 0x11                         
+/* 8000B718  40 82 00 18 */	bne lbl_8000B730                         /* constant-address: 8000B730, symbol: lbl_8000B730 */
+/* 8000B71C  28 03 00 10 */	cmplwi r3, 0x10                         
+/* 8000B720  40 82 00 10 */	bne lbl_8000B730                         /* constant-address: 8000B730, symbol: lbl_8000B730 */
+/* 8000B724  88 6D 86 97 */	lbz r3, struct_80450C10+0x7(r13)         /* constant-address: 80450C17, symbol: struct_80450C10+0x7 */
+/* 8000B728  38 03 00 01 */	addi r0, r3, 1                          
+/* 8000B72C  98 0D 86 97 */	stb r0, struct_80450C10+0x7(r13)         /* constant-address: 80450C17, symbol: struct_80450C10+0x7 */
 lbl_8000B730:
-/* 8000B730 00000000  88 6D 80 00 */	lbz r3, data_80450580(r13)
-/* 8000B734 00000004  7C 63 07 74 */	extsb r3, r3
-/* 8000B738 00000008  4E 80 00 20 */	blr 
+/* 8000B730  88 6D 80 00 */	lbz r3, data_80450580(r13)               /* constant-address: 80450580, symbol: data_80450580 */
+/* 8000B734  7C 63 07 74 */	extsb r3, r3                            
+/* 8000B738  4E 80 00 20 */	blr                                     

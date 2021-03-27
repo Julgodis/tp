@@ -1,36 +1,36 @@
 lbl_80953B8C:
-/* 80953B8C 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80953B90 00000004  7C 08 02 A6 */	mflr r0
-/* 80953B94 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80953B98 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80953B9C 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80953BA0 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80953BA4 00000018  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 80953BA8 0000001C  3C 80 80 95 */	lis r4, struct_8095781C+0x0@ha
-/* 80953BAC 00000020  38 84 78 1C */	addi r4, r4, struct_8095781C+0x0@l
-/* 80953BB0 00000024  38 84 00 C1 */	addi r4, r4, 0xc1
-/* 80953BB4 00000028  4B A1 4D E0 */	b strcmp
-/* 80953BB8 0000002C  2C 03 00 00 */	cmpwi r3, 0
-/* 80953BBC 00000030  40 82 00 34 */	bne lbl_80953BF0
-/* 80953BC0 00000034  3B E0 00 00 */	li r31, 0
-/* 80953BC4 00000038  38 60 00 00 */	li r3, 0
-/* 80953BC8 0000003C  4B 6D 8D B4 */	b getLayerNo__14dComIfG_play_cFi
-/* 80953BCC 00000040  2C 03 00 04 */	cmpwi r3, 4
-/* 80953BD0 00000044  41 82 00 14 */	beq lbl_80953BE4
-/* 80953BD4 00000048  38 60 00 00 */	li r3, 0
-/* 80953BD8 0000004C  4B 6D 8D A4 */	b getLayerNo__14dComIfG_play_cFi
-/* 80953BDC 00000050  2C 03 00 05 */	cmpwi r3, 5
-/* 80953BE0 00000054  40 82 00 08 */	bne lbl_80953BE8
+/* 80953B8C  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80953B90  7C 08 02 A6 */	mflr r0
+/* 80953B94  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80953B98  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80953B9C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 80953BA0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80953BA4  38 63 4E 00 */	addi r3, r3, 0x4e00
+/* 80953BA8  3C 80 80 95 */	lis r4, struct_8095781C+0x0@ha
+/* 80953BAC  38 84 78 1C */	addi r4, r4, struct_8095781C+0x0@l
+/* 80953BB0  38 84 00 C1 */	addi r4, r4, 0xc1
+/* 80953BB4  4B A1 4D E0 */	b strcmp
+/* 80953BB8  2C 03 00 00 */	cmpwi r3, 0
+/* 80953BBC  40 82 00 34 */	bne lbl_80953BF0
+/* 80953BC0  3B E0 00 00 */	li r31, 0
+/* 80953BC4  38 60 00 00 */	li r3, 0
+/* 80953BC8  4B 6D 8D B4 */	b getLayerNo__14dComIfG_play_cFi
+/* 80953BCC  2C 03 00 04 */	cmpwi r3, 4
+/* 80953BD0  41 82 00 14 */	beq lbl_80953BE4
+/* 80953BD4  38 60 00 00 */	li r3, 0
+/* 80953BD8  4B 6D 8D A4 */	b getLayerNo__14dComIfG_play_cFi
+/* 80953BDC  2C 03 00 05 */	cmpwi r3, 5
+/* 80953BE0  40 82 00 08 */	bne lbl_80953BE8
 lbl_80953BE4:
-/* 80953BE4 00000000  3B E0 00 01 */	li r31, 1
+/* 80953BE4  3B E0 00 01 */	li r31, 1
 lbl_80953BE8:
-/* 80953BE8 00000000  57 E3 06 3E */	clrlwi r3, r31, 0x18
-/* 80953BEC 00000004  48 00 00 08 */	b lbl_80953BF4
+/* 80953BE8  57 E3 06 3E */	clrlwi r3, r31, 0x18
+/* 80953BEC  48 00 00 08 */	b lbl_80953BF4
 lbl_80953BF0:
-/* 80953BF0 00000000  38 60 00 00 */	li r3, 0
+/* 80953BF0  38 60 00 00 */	li r3, 0
 lbl_80953BF4:
-/* 80953BF4 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80953BF8 00000004  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80953BFC 00000008  7C 08 03 A6 */	mtlr r0
-/* 80953C00 0000000C  38 21 00 10 */	addi r1, r1, 0x10
-/* 80953C04 00000010  4E 80 00 20 */	blr 
+/* 80953BF4  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80953BF8  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80953BFC  7C 08 03 A6 */	mtlr r0
+/* 80953C00  38 21 00 10 */	addi r1, r1, 0x10
+/* 80953C04  4E 80 00 20 */	blr 

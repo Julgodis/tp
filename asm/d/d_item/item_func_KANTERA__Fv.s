@@ -1,17 +1,17 @@
 lbl_800988E8:
-/* 800988E8 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 800988EC 00000004  7C 08 02 A6 */	mflr r0
-/* 800988F0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 800988F4 0000000C  38 00 54 60 */	li r0, 0x5460
-/* 800988F8 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 800988FC 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80098900 00000018  B0 03 00 06 */	sth r0, 6(r3)	/* effective address: 804061C6 */
-/* 80098904 0000001C  B0 03 00 08 */	sth r0, 8(r3)	/* effective address: 804061C8 */
-/* 80098908 00000020  38 63 00 9C */	addi r3, r3, 0x9c
-/* 8009890C 00000024  38 80 00 01 */	li r4, 1
-/* 80098910 00000028  38 A0 00 48 */	li r5, 0x48
-/* 80098914 0000002C  4B F9 A6 A5 */	bl setItem__17dSv_player_item_cFiUc
-/* 80098918 00000030  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 8009891C 00000034  7C 08 03 A6 */	mtlr r0
-/* 80098920 00000038  38 21 00 10 */	addi r1, r1, 0x10
-/* 80098924 0000003C  4E 80 00 20 */	blr 
+/* 800988E8  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 800988EC  7C 08 02 A6 */	mflr r0                                 
+/* 800988F0  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 800988F4  38 00 54 60 */	li r0, 0x5460                           
+/* 800988F8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 800988FC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 80098900  B0 03 00 06 */	sth r0, 6(r3)                            /* constant-address: 804061C6, symbol: None */
+/* 80098904  B0 03 00 08 */	sth r0, 8(r3)                            /* constant-address: 804061C8, symbol: None */
+/* 80098908  38 63 00 9C */	addi r3, r3, 0x9c                        /* constant-address: 8040625C, symbol: None */
+/* 8009890C  38 80 00 01 */	li r4, 1                                
+/* 80098910  38 A0 00 48 */	li r5, 0x48                             
+/* 80098914  4B F9 A6 A5 */	bl setItem__17dSv_player_item_cFiUc      /* constant-address: 80032FB8, symbol: setItem__17dSv_player_item_cFiUc */
+/* 80098918  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 8009891C  7C 08 03 A6 */	mtlr r0                                 
+/* 80098920  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 80098924  4E 80 00 20 */	blr                                     

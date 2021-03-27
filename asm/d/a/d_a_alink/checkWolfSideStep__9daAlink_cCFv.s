@@ -1,21 +1,21 @@
 lbl_80127DC4:
-/* 80127DC4 00000000  38 80 00 00 */	li r4, 0
-/* 80127DC8 00000004  88 03 2F 98 */	lbz r0, 0x2f98(r3)
-/* 80127DCC 00000008  28 00 00 00 */	cmplwi r0, 0
-/* 80127DD0 0000000C  41 82 00 30 */	beq lbl_80127E00
-/* 80127DD4 00000010  A0 A3 2F E8 */	lhz r5, 0x2fe8(r3)
-/* 80127DD8 00000014  28 05 00 F6 */	cmplwi r5, 0xf6
-/* 80127DDC 00000018  40 82 00 10 */	bne lbl_80127DEC
-/* 80127DE0 0000001C  80 03 31 A0 */	lwz r0, 0x31a0(r3)
-/* 80127DE4 00000020  54 00 07 FF */	clrlwi. r0, r0, 0x1f
-/* 80127DE8 00000024  41 82 00 14 */	beq lbl_80127DFC
+/* 80127DC4  38 80 00 00 */	li r4, 0                                
+/* 80127DC8  88 03 2F 98 */	lbz r0, 0x2f98(r3)                      
+/* 80127DCC  28 00 00 00 */	cmplwi r0, 0                            
+/* 80127DD0  41 82 00 30 */	beq lbl_80127E00                         /* constant-address: 80127E00, symbol: lbl_80127E00 */
+/* 80127DD4  A0 A3 2F E8 */	lhz r5, 0x2fe8(r3)                      
+/* 80127DD8  28 05 00 F6 */	cmplwi r5, 0xf6                         
+/* 80127DDC  40 82 00 10 */	bne lbl_80127DEC                         /* constant-address: 80127DEC, symbol: lbl_80127DEC */
+/* 80127DE0  80 03 31 A0 */	lwz r0, 0x31a0(r3)                      
+/* 80127DE4  54 00 07 FF */	clrlwi. r0, r0, 0x1f                    
+/* 80127DE8  41 82 00 14 */	beq lbl_80127DFC                         /* constant-address: 80127DFC, symbol: lbl_80127DFC */
 lbl_80127DEC:
-/* 80127DEC 00000000  28 05 00 F8 */	cmplwi r5, 0xf8
-/* 80127DF0 00000004  41 82 00 0C */	beq lbl_80127DFC
-/* 80127DF4 00000008  28 05 00 FA */	cmplwi r5, 0xfa
-/* 80127DF8 0000000C  40 82 00 08 */	bne lbl_80127E00
+/* 80127DEC  28 05 00 F8 */	cmplwi r5, 0xf8                         
+/* 80127DF0  41 82 00 0C */	beq lbl_80127DFC                         /* constant-address: 80127DFC, symbol: lbl_80127DFC */
+/* 80127DF4  28 05 00 FA */	cmplwi r5, 0xfa                         
+/* 80127DF8  40 82 00 08 */	bne lbl_80127E00                         /* constant-address: 80127E00, symbol: lbl_80127E00 */
 lbl_80127DFC:
-/* 80127DFC 00000000  38 80 00 01 */	li r4, 1
+/* 80127DFC  38 80 00 01 */	li r4, 1                                
 lbl_80127E00:
-/* 80127E00 00000000  54 83 06 3E */	clrlwi r3, r4, 0x18
-/* 80127E04 00000004  4E 80 00 20 */	blr 
+/* 80127E00  54 83 06 3E */	clrlwi r3, r4, 0x18                     
+/* 80127E04  4E 80 00 20 */	blr                                     

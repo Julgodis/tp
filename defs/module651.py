@@ -32,7 +32,7 @@ SYMBOLS = [
 	{'addr':0x80D06418,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':0,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80D06438,'size':44,'pad':0,'label':"daObjTable_Draw__FP12daObjTable_c",'name':"daObjTable_Draw__FP12daObjTable_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80D06464,'size':32,'pad':0,'label':"daObjTable_Execute__FP12daObjTable_c",'name':"daObjTable_Execute__FP12daObjTable_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80D06484,'size':8,'pad':0,'label':"daObjTable_IsDelete__FP12daObjTable_c",'name':"daObjTable_IsDelete__FP12daObjTable_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80D06484,'size':8,'pad':0,'label':"daObjTable_IsDelete__FP12daObjTable_c",'name':"daObjTable_IsDelete__FP12daObjTable_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
 	{'addr':0x80D0648C,'size':36,'pad':0,'label':"daObjTable_Delete__FP12daObjTable_c",'name':"daObjTable_Delete__FP12daObjTable_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80D064B0,'size':176,'pad':0,'label':"daObjTable_Create__FP10fopAc_ac_c",'name':"daObjTable_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80D06560,'size':112,'pad':0,'label':"CreateHeap__12daObjTable_cFv",'name':"CreateHeap__12daObjTable_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},

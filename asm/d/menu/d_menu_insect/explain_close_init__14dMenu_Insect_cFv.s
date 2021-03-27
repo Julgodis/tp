@@ -1,44 +1,44 @@
 lbl_801D9504:
-/* 801D9504 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 801D9508 00000004  7C 08 02 A6 */	mflr r0
-/* 801D950C 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 801D9510 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 801D9514 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 801D9518 00000014  38 80 00 00 */	li r4, 0
-/* 801D951C 00000018  48 00 0D E9 */	bl setAButtonString__14dMenu_Insect_cFUs
-/* 801D9520 0000001C  7F E3 FB 78 */	mr r3, r31
-/* 801D9524 00000020  38 80 03 F9 */	li r4, 0x3f9
-/* 801D9528 00000024  48 00 0E 8D */	bl setBButtonString__14dMenu_Insect_cFUs
-/* 801D952C 00000028  88 1F 00 F6 */	lbz r0, 0xf6(r31)
-/* 801D9530 0000002C  28 00 00 01 */	cmplwi r0, 1
-/* 801D9534 00000030  40 82 00 20 */	bne lbl_801D9554
-/* 801D9538 00000034  7F E3 FB 78 */	mr r3, r31
-/* 801D953C 00000038  88 9F 00 F4 */	lbz r4, 0xf4(r31)
-/* 801D9540 0000003C  88 BF 00 F5 */	lbz r5, 0xf5(r31)
-/* 801D9544 00000040  48 00 08 89 */	bl getInsectItemID__14dMenu_Insect_cFii
-/* 801D9548 00000044  3C 80 80 43 */	lis r4, g_meter2_info@ha
-/* 801D954C 00000048  38 84 01 88 */	addi r4, r4, g_meter2_info@l
-/* 801D9550 0000004C  98 64 00 C3 */	stb r3, 0xc3(r4)	/* effective address: 8043024B */
+/* 801D9504  94 21 FF E0 */	stwu r1, -0x20(r1)                      
+/* 801D9508  7C 08 02 A6 */	mflr r0                                 
+/* 801D950C  90 01 00 24 */	stw r0, 0x24(r1)                        
+/* 801D9510  93 E1 00 1C */	stw r31, 0x1c(r1)                       
+/* 801D9514  7C 7F 1B 78 */	mr r31, r3                              
+/* 801D9518  38 80 00 00 */	li r4, 0                                
+/* 801D951C  48 00 0D E9 */	bl setAButtonString__14dMenu_Insect_cFUs /* constant-address: 801DA304, symbol: setAButtonString__14dMenu_Insect_cFUs */
+/* 801D9520  7F E3 FB 78 */	mr r3, r31                              
+/* 801D9524  38 80 03 F9 */	li r4, 0x3f9                            
+/* 801D9528  48 00 0E 8D */	bl setBButtonString__14dMenu_Insect_cFUs /* constant-address: 801DA3B4, symbol: setBButtonString__14dMenu_Insect_cFUs */
+/* 801D952C  88 1F 00 F6 */	lbz r0, 0xf6(r31)                       
+/* 801D9530  28 00 00 01 */	cmplwi r0, 1                            
+/* 801D9534  40 82 00 20 */	bne lbl_801D9554                         /* constant-address: 801D9554, symbol: lbl_801D9554 */
+/* 801D9538  7F E3 FB 78 */	mr r3, r31                              
+/* 801D953C  88 9F 00 F4 */	lbz r4, 0xf4(r31)                       
+/* 801D9540  88 BF 00 F5 */	lbz r5, 0xf5(r31)                       
+/* 801D9544  48 00 08 89 */	bl getInsectItemID__14dMenu_Insect_cFii  /* constant-address: 801D9DCC, symbol: getInsectItemID__14dMenu_Insect_cFii */
+/* 801D9548  3C 80 80 43 */	lis r4, g_meter2_info@ha                
+/* 801D954C  38 84 01 88 */	addi r4, r4, g_meter2_info@l             /* constant-address: 80430188, symbol: g_meter2_info */
+/* 801D9550  98 64 00 C3 */	stb r3, 0xc3(r4)                         /* constant-address: 8043024B, symbol: None */
 lbl_801D9554:
-/* 801D9554 00000000  38 00 00 52 */	li r0, 0x52
-/* 801D9558 00000004  90 01 00 08 */	stw r0, 8(r1)
-/* 801D955C 00000008  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)
-/* 801D9560 0000000C  38 81 00 08 */	addi r4, r1, 8
-/* 801D9564 00000010  38 A0 00 00 */	li r5, 0
-/* 801D9568 00000014  38 C0 00 00 */	li r6, 0
-/* 801D956C 00000018  38 E0 00 00 */	li r7, 0
-/* 801D9570 0000001C  C0 22 A8 38 */	lfs f1, lit_3834(r2)
-/* 801D9574 00000020  FC 40 08 90 */	fmr f2, f1
-/* 801D9578 00000024  C0 62 A8 68 */	lfs f3, lit_4089(r2)
-/* 801D957C 00000028  FC 80 18 90 */	fmr f4, f3
-/* 801D9580 0000002C  39 00 00 00 */	li r8, 0
-/* 801D9584 00000030  48 0D 24 01 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
-/* 801D9588 00000034  48 04 54 49 */	bl dMeter2Info_set2DVibration__Fv
-/* 801D958C 00000038  38 00 00 00 */	li r0, 0
-/* 801D9590 0000003C  80 7F 00 68 */	lwz r3, 0x68(r31)
-/* 801D9594 00000040  B0 03 00 16 */	sth r0, 0x16(r3)
-/* 801D9598 00000044  83 E1 00 1C */	lwz r31, 0x1c(r1)
-/* 801D959C 00000048  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 801D95A0 0000004C  7C 08 03 A6 */	mtlr r0
-/* 801D95A4 00000050  38 21 00 20 */	addi r1, r1, 0x20
-/* 801D95A8 00000054  4E 80 00 20 */	blr 
+/* 801D9554  38 00 00 52 */	li r0, 0x52                             
+/* 801D9558  90 01 00 08 */	stw r0, 8(r1)                           
+/* 801D955C  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)  /* constant-address: 80451368, symbol: mAudioMgrPtr__10Z2AudioMgr */
+/* 801D9560  38 81 00 08 */	addi r4, r1, 8                          
+/* 801D9564  38 A0 00 00 */	li r5, 0                                
+/* 801D9568  38 C0 00 00 */	li r6, 0                                
+/* 801D956C  38 E0 00 00 */	li r7, 0                                
+/* 801D9570  C0 22 A8 38 */	lfs f1, lit_3834(r2)                     /* constant-address: 80454238, symbol: lit_3834 */
+/* 801D9574  FC 40 08 90 */	fmr f2, f1                              
+/* 801D9578  C0 62 A8 68 */	lfs f3, lit_4089(r2)                     /* constant-address: 80454268, symbol: lit_4089 */
+/* 801D957C  FC 80 18 90 */	fmr f4, f3                              
+/* 801D9580  39 00 00 00 */	li r8, 0                                
+/* 801D9584  48 0D 24 01 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc /* constant-address: 802AB984, symbol: seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc */
+/* 801D9588  48 04 54 49 */	bl dMeter2Info_set2DVibration__Fv        /* constant-address: 8021E9D0, symbol: dMeter2Info_set2DVibration__Fv */
+/* 801D958C  38 00 00 00 */	li r0, 0                                
+/* 801D9590  80 7F 00 68 */	lwz r3, 0x68(r31)                       
+/* 801D9594  B0 03 00 16 */	sth r0, 0x16(r3)                        
+/* 801D9598  83 E1 00 1C */	lwz r31, 0x1c(r1)                       
+/* 801D959C  80 01 00 24 */	lwz r0, 0x24(r1)                        
+/* 801D95A0  7C 08 03 A6 */	mtlr r0                                 
+/* 801D95A4  38 21 00 20 */	addi r1, r1, 0x20                       
+/* 801D95A8  4E 80 00 20 */	blr                                     

@@ -1,258 +1,258 @@
 lbl_802FDF88:
-/* 802FDF88 00000000  94 21 FF 10 */	stwu r1, -0xf0(r1)
-/* 802FDF8C 00000004  7C 08 02 A6 */	mflr r0
-/* 802FDF90 00000008  90 01 00 F4 */	stw r0, 0xf4(r1)
-/* 802FDF94 0000000C  DB E1 00 E0 */	stfd f31, 0xe0(r1)
-/* 802FDF98 00000010  F3 E1 00 E8 */	psq_st f31, 232(r1), 0, 0 /* qr0 */
-/* 802FDF9C 00000000  DB C1 00 D0 */	stfd f30, 0xd0(r1)
-/* 802FDFA0 00000018  F3 C1 00 D8 */	psq_st f30, 216(r1), 0, 0 /* qr0 */
-/* 802FDFA4 00000000  DB A1 00 C0 */	stfd f29, 0xc0(r1)
-/* 802FDFA8 00000020  F3 A1 00 C8 */	psq_st f29, 200(r1), 0, 0 /* qr0 */
-/* 802FDFAC 00000000  DB 81 00 B0 */	stfd f28, 0xb0(r1)
-/* 802FDFB0 00000004  F3 81 00 B8 */	psq_st f28, 184(r1), 0, 0 /* qr0 */
-/* 802FDFB4 00000008  39 61 00 B0 */	addi r11, r1, 0xb0
-/* 802FDFB8 0000000C  48 06 42 21 */	bl _savegpr_28
-/* 802FDFBC 00000010  7C 7C 1B 78 */	mr r28, r3
-/* 802FDFC0 00000014  7C 9F 23 78 */	mr r31, r4
-/* 802FDFC4 00000018  7C BD 2B 78 */	mr r29, r5
-/* 802FDFC8 0000001C  88 03 00 B0 */	lbz r0, 0xb0(r3)
-/* 802FDFCC 00000020  28 00 00 00 */	cmplwi r0, 0
-/* 802FDFD0 00000024  41 82 03 78 */	beq lbl_802FE348
-/* 802FDFD4 00000028  88 1C 01 08 */	lbz r0, 0x108(r28)
-/* 802FDFD8 0000002C  28 00 00 00 */	cmplwi r0, 0
-/* 802FDFDC 00000030  41 82 03 6C */	beq lbl_802FE348
-/* 802FDFE0 00000034  80 1C 01 00 */	lwz r0, 0x100(r28)
-/* 802FDFE4 00000038  28 00 00 00 */	cmplwi r0, 0
-/* 802FDFE8 0000003C  41 82 03 60 */	beq lbl_802FE348
-/* 802FDFEC 00000040  3B C0 00 00 */	li r30, 0
-/* 802FDFF0 00000044  48 00 00 20 */	b lbl_802FE010
+/* 802FDF88  94 21 FF 10 */	stwu r1, -0xf0(r1)                      
+/* 802FDF8C  7C 08 02 A6 */	mflr r0                                 
+/* 802FDF90  90 01 00 F4 */	stw r0, 0xf4(r1)                        
+/* 802FDF94  DB E1 00 E0 */	stfd f31, 0xe0(r1)                      
+/* 802FDF98  F3 E1 00 E8 */	psq_st f31, 232(r1), 0, 0 /* qr0 */     
+/* 802FDF9C  DB C1 00 D0 */	stfd f30, 0xd0(r1)                      
+/* 802FDFA0  F3 C1 00 D8 */	psq_st f30, 216(r1), 0, 0 /* qr0 */     
+/* 802FDFA4  DB A1 00 C0 */	stfd f29, 0xc0(r1)                      
+/* 802FDFA8  F3 A1 00 C8 */	psq_st f29, 200(r1), 0, 0 /* qr0 */     
+/* 802FDFAC  DB 81 00 B0 */	stfd f28, 0xb0(r1)                      
+/* 802FDFB0  F3 81 00 B8 */	psq_st f28, 184(r1), 0, 0 /* qr0 */     
+/* 802FDFB4  39 61 00 B0 */	addi r11, r1, 0xb0                      
+/* 802FDFB8  48 06 42 21 */	bl _savegpr_28                           /* constant-address: 803621D8, symbol: _savegpr_28 */
+/* 802FDFBC  7C 7C 1B 78 */	mr r28, r3                              
+/* 802FDFC0  7C 9F 23 78 */	mr r31, r4                              
+/* 802FDFC4  7C BD 2B 78 */	mr r29, r5                              
+/* 802FDFC8  88 03 00 B0 */	lbz r0, 0xb0(r3)                        
+/* 802FDFCC  28 00 00 00 */	cmplwi r0, 0                            
+/* 802FDFD0  41 82 03 78 */	beq lbl_802FE348                         /* constant-address: 802FE348, symbol: lbl_802FE348 */
+/* 802FDFD4  88 1C 01 08 */	lbz r0, 0x108(r28)                      
+/* 802FDFD8  28 00 00 00 */	cmplwi r0, 0                            
+/* 802FDFDC  41 82 03 6C */	beq lbl_802FE348                         /* constant-address: 802FE348, symbol: lbl_802FE348 */
+/* 802FDFE0  80 1C 01 00 */	lwz r0, 0x100(r28)                      
+/* 802FDFE4  28 00 00 00 */	cmplwi r0, 0                            
+/* 802FDFE8  41 82 03 60 */	beq lbl_802FE348                         /* constant-address: 802FE348, symbol: lbl_802FE348 */
+/* 802FDFEC  3B C0 00 00 */	li r30, 0                               
+/* 802FDFF0  48 00 00 20 */	b lbl_802FE010                           /* constant-address: 802FE010, symbol: lbl_802FE010 */
 lbl_802FDFF4:
-/* 802FDFF4 00000000  7F 83 E3 78 */	mr r3, r28
-/* 802FDFF8 00000004  7F C4 F3 78 */	mr r4, r30
-/* 802FDFFC 00000008  81 9C 00 00 */	lwz r12, 0(r28)
-/* 802FE000 0000000C  81 8C 01 00 */	lwz r12, 0x100(r12)
-/* 802FE004 00000010  7D 89 03 A6 */	mtctr r12
-/* 802FE008 00000014  4E 80 04 21 */	bctrl 
-/* 802FE00C 00000018  3B DE 00 01 */	addi r30, r30, 1
+/* 802FDFF4  7F 83 E3 78 */	mr r3, r28                              
+/* 802FDFF8  7F C4 F3 78 */	mr r4, r30                              
+/* 802FDFFC  81 9C 00 00 */	lwz r12, 0(r28)                         
+/* 802FE000  81 8C 01 00 */	lwz r12, 0x100(r12)                     
+/* 802FE004  7D 89 03 A6 */	mtctr r12                               
+/* 802FE008  4E 80 04 21 */	bctrl                                   
+/* 802FE00C  3B DE 00 01 */	addi r30, r30, 1                         /* constant-address: 00000001 */
 lbl_802FE010:
-/* 802FE010 00000000  57 C0 06 3E */	clrlwi r0, r30, 0x18
-/* 802FE014 00000004  88 7C 01 08 */	lbz r3, 0x108(r28)
-/* 802FE018 00000008  7C 00 18 40 */	cmplw r0, r3
-/* 802FE01C 0000000C  41 80 FF D8 */	blt lbl_802FDFF4
-/* 802FE020 00000010  48 05 DD DD */	bl GXSetNumTexGens
-/* 802FE024 00000014  C0 3D 00 00 */	lfs f1, 0(r29)
-/* 802FE028 00000018  C0 1F 00 00 */	lfs f0, 0(r31)
-/* 802FE02C 0000001C  EC 00 08 28 */	fsubs f0, f0, f1
-/* 802FE030 00000020  C0 7D 00 08 */	lfs f3, 8(r29)
-/* 802FE034 00000024  EC 43 08 28 */	fsubs f2, f3, f1
-/* 802FE038 00000028  EF E0 10 24 */	fdivs f31, f0, f2
-/* 802FE03C 0000002C  C0 22 C8 68 */	lfs f1, lit_1767(r2)
-/* 802FE040 00000030  C0 1F 00 08 */	lfs f0, 8(r31)
-/* 802FE044 00000034  EC 00 18 28 */	fsubs f0, f0, f3
-/* 802FE048 00000038  EC 00 10 24 */	fdivs f0, f0, f2
-/* 802FE04C 0000003C  EF C1 00 2A */	fadds f30, f1, f0
-/* 802FE050 00000040  C0 5D 00 04 */	lfs f2, 4(r29)
-/* 802FE054 00000044  C0 1F 00 04 */	lfs f0, 4(r31)
-/* 802FE058 00000048  EC 00 10 28 */	fsubs f0, f0, f2
-/* 802FE05C 0000004C  C0 7D 00 0C */	lfs f3, 0xc(r29)
-/* 802FE060 00000050  EC 43 10 28 */	fsubs f2, f3, f2
-/* 802FE064 00000054  EF A0 10 24 */	fdivs f29, f0, f2
-/* 802FE068 00000058  C0 1F 00 0C */	lfs f0, 0xc(r31)
-/* 802FE06C 0000005C  EC 00 18 28 */	fsubs f0, f0, f3
-/* 802FE070 00000060  EC 00 10 24 */	fdivs f0, f0, f2
-/* 802FE074 00000064  EF 81 00 2A */	fadds f28, f1, f0
-/* 802FE078 00000068  88 1C 00 B2 */	lbz r0, 0xb2(r28)
-/* 802FE07C 0000006C  98 1C 00 B3 */	stb r0, 0xb3(r28)
-/* 802FE080 00000070  38 00 FF FF */	li r0, -1
-/* 802FE084 00000074  90 01 00 08 */	stw r0, 8(r1)
-/* 802FE088 00000078  90 01 00 0C */	stw r0, 0xc(r1)
-/* 802FE08C 0000007C  90 01 00 10 */	stw r0, 0x10(r1)
-/* 802FE090 00000080  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802FE094 00000084  7F 83 E3 78 */	mr r3, r28
-/* 802FE098 00000088  38 81 00 08 */	addi r4, r1, 8
-/* 802FE09C 0000008C  48 00 0B C9 */	bl getNewColor__10J2DPictureFPQ28JUtility6TColor
-/* 802FE0A0 00000090  7F 83 E3 78 */	mr r3, r28
-/* 802FE0A4 00000094  48 00 05 2D */	bl setTevMode__10J2DPictureFv
-/* 802FE0A8 00000098  48 05 D4 E5 */	bl GXClearVtxDesc
-/* 802FE0AC 0000009C  38 60 00 09 */	li r3, 9
-/* 802FE0B0 000000A0  38 80 00 01 */	li r4, 1
-/* 802FE0B4 000000A4  48 05 CE 05 */	bl GXSetVtxDesc
-/* 802FE0B8 000000A8  38 60 00 0B */	li r3, 0xb
-/* 802FE0BC 000000AC  38 80 00 01 */	li r4, 1
-/* 802FE0C0 000000B0  48 05 CD F9 */	bl GXSetVtxDesc
-/* 802FE0C4 000000B4  38 60 00 0D */	li r3, 0xd
-/* 802FE0C8 000000B8  38 80 00 01 */	li r4, 1
-/* 802FE0CC 000000BC  48 05 CD ED */	bl GXSetVtxDesc
-/* 802FE0D0 000000C0  38 60 00 00 */	li r3, 0
-/* 802FE0D4 000000C4  38 80 00 0D */	li r4, 0xd
-/* 802FE0D8 000000C8  38 A0 00 01 */	li r5, 1
-/* 802FE0DC 000000CC  38 C0 00 04 */	li r6, 4
-/* 802FE0E0 000000D0  38 E0 00 00 */	li r7, 0
-/* 802FE0E4 000000D4  48 05 D4 E1 */	bl GXSetVtxAttrFmt
-/* 802FE0E8 000000D8  38 60 00 00 */	li r3, 0
-/* 802FE0EC 000000DC  38 80 00 09 */	li r4, 9
-/* 802FE0F0 000000E0  38 A0 00 01 */	li r5, 1
-/* 802FE0F4 000000E4  38 C0 00 04 */	li r6, 4
-/* 802FE0F8 000000E8  38 E0 00 00 */	li r7, 0
-/* 802FE0FC 000000EC  48 05 D4 C9 */	bl GXSetVtxAttrFmt
-/* 802FE100 000000F0  38 60 00 80 */	li r3, 0x80
-/* 802FE104 000000F4  38 80 00 00 */	li r4, 0
-/* 802FE108 000000F8  38 A0 00 04 */	li r5, 4
-/* 802FE10C 000000FC  48 05 E6 59 */	bl GXBegin
-/* 802FE110 00000100  C0 1F 00 04 */	lfs f0, 4(r31)
-/* 802FE114 00000104  FC 20 00 1E */	fctiwz f1, f0
-/* 802FE118 00000108  D8 21 00 18 */	stfd f1, 0x18(r1)
-/* 802FE11C 0000010C  80 01 00 1C */	lwz r0, 0x1c(r1)
-/* 802FE120 00000110  7C 00 07 34 */	extsh r0, r0
-/* 802FE124 00000114  C8 82 C8 70 */	lfd f4, lit_2021(r2)
-/* 802FE128 00000118  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 802FE12C 0000011C  90 01 00 24 */	stw r0, 0x24(r1)
-/* 802FE130 00000120  3C 80 43 30 */	lis r4, 0x4330
-/* 802FE134 00000124  90 81 00 20 */	stw r4, 0x20(r1)
-/* 802FE138 00000128  C8 01 00 20 */	lfd f0, 0x20(r1)
-/* 802FE13C 0000012C  EC 40 20 28 */	fsubs f2, f0, f4
-/* 802FE140 00000130  C0 1F 00 00 */	lfs f0, 0(r31)
-/* 802FE144 00000134  FC 60 00 1E */	fctiwz f3, f0
-/* 802FE148 00000138  D8 61 00 28 */	stfd f3, 0x28(r1)
-/* 802FE14C 0000013C  80 01 00 2C */	lwz r0, 0x2c(r1)
-/* 802FE150 00000140  7C 00 07 34 */	extsh r0, r0
-/* 802FE154 00000144  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 802FE158 00000148  90 01 00 34 */	stw r0, 0x34(r1)
-/* 802FE15C 0000014C  90 81 00 30 */	stw r4, 0x30(r1)
-/* 802FE160 00000150  C8 01 00 30 */	lfd f0, 0x30(r1)
-/* 802FE164 00000154  EC 00 20 28 */	fsubs f0, f0, f4
-/* 802FE168 00000158  3C 60 CC 01 */	lis r3, 0xCC01 /* 0xCC008000@ha */
-/* 802FE16C 0000015C  D0 03 80 00 */	stfs f0, 0x8000(r3)
-/* 802FE170 00000160  D0 43 80 00 */	stfs f2, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE174 00000164  C0 02 C8 6C */	lfs f0, lit_2017(r2)
-/* 802FE178 00000168  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE17C 0000016C  80 01 00 08 */	lwz r0, 8(r1)
-/* 802FE180 00000170  90 03 80 00 */	stw r0, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE184 00000174  D3 E3 80 00 */	stfs f31, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE188 00000178  D3 A3 80 00 */	stfs f29, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE18C 0000017C  D8 21 00 38 */	stfd f1, 0x38(r1)
-/* 802FE190 00000180  80 01 00 3C */	lwz r0, 0x3c(r1)
-/* 802FE194 00000184  7C 00 07 34 */	extsh r0, r0
-/* 802FE198 00000188  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 802FE19C 0000018C  90 01 00 44 */	stw r0, 0x44(r1)
-/* 802FE1A0 00000190  90 81 00 40 */	stw r4, 0x40(r1)
-/* 802FE1A4 00000194  C8 01 00 40 */	lfd f0, 0x40(r1)
-/* 802FE1A8 00000198  EC 20 20 28 */	fsubs f1, f0, f4
-/* 802FE1AC 0000019C  C0 1F 00 08 */	lfs f0, 8(r31)
-/* 802FE1B0 000001A0  FC 40 00 1E */	fctiwz f2, f0
-/* 802FE1B4 000001A4  D8 41 00 48 */	stfd f2, 0x48(r1)
-/* 802FE1B8 000001A8  80 01 00 4C */	lwz r0, 0x4c(r1)
-/* 802FE1BC 000001AC  7C 00 07 34 */	extsh r0, r0
-/* 802FE1C0 000001B0  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 802FE1C4 000001B4  90 01 00 54 */	stw r0, 0x54(r1)
-/* 802FE1C8 000001B8  90 81 00 50 */	stw r4, 0x50(r1)
-/* 802FE1CC 000001BC  C8 01 00 50 */	lfd f0, 0x50(r1)
-/* 802FE1D0 000001C0  EC 00 20 28 */	fsubs f0, f0, f4
-/* 802FE1D4 000001C4  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE1D8 000001C8  D0 23 80 00 */	stfs f1, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE1DC 000001CC  C0 02 C8 6C */	lfs f0, lit_2017(r2)
-/* 802FE1E0 000001D0  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE1E4 000001D4  80 01 00 0C */	lwz r0, 0xc(r1)
-/* 802FE1E8 000001D8  90 03 80 00 */	stw r0, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE1EC 000001DC  D3 C3 80 00 */	stfs f30, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE1F0 000001E0  D3 A3 80 00 */	stfs f29, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE1F4 000001E4  C0 1F 00 0C */	lfs f0, 0xc(r31)
-/* 802FE1F8 000001E8  FC 20 00 1E */	fctiwz f1, f0
-/* 802FE1FC 000001EC  D8 21 00 58 */	stfd f1, 0x58(r1)
-/* 802FE200 000001F0  80 01 00 5C */	lwz r0, 0x5c(r1)
-/* 802FE204 000001F4  7C 00 07 34 */	extsh r0, r0
-/* 802FE208 000001F8  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 802FE20C 000001FC  90 01 00 64 */	stw r0, 0x64(r1)
-/* 802FE210 00000200  90 81 00 60 */	stw r4, 0x60(r1)
-/* 802FE214 00000204  C8 01 00 60 */	lfd f0, 0x60(r1)
-/* 802FE218 00000208  EC A0 20 28 */	fsubs f5, f0, f4
-/* 802FE21C 0000020C  D8 41 00 68 */	stfd f2, 0x68(r1)
-/* 802FE220 00000210  80 01 00 6C */	lwz r0, 0x6c(r1)
-/* 802FE224 00000214  7C 00 07 34 */	extsh r0, r0
-/* 802FE228 00000218  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 802FE22C 0000021C  90 01 00 74 */	stw r0, 0x74(r1)
-/* 802FE230 00000220  90 81 00 70 */	stw r4, 0x70(r1)
-/* 802FE234 00000224  C8 01 00 70 */	lfd f0, 0x70(r1)
-/* 802FE238 00000228  EC 00 20 28 */	fsubs f0, f0, f4
-/* 802FE23C 0000022C  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE240 00000230  D0 A3 80 00 */	stfs f5, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE244 00000234  C0 02 C8 6C */	lfs f0, lit_2017(r2)
-/* 802FE248 00000238  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE24C 0000023C  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 802FE250 00000240  90 03 80 00 */	stw r0, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE254 00000244  D3 C3 80 00 */	stfs f30, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE258 00000248  D3 83 80 00 */	stfs f28, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE25C 0000024C  D8 21 00 78 */	stfd f1, 0x78(r1)
-/* 802FE260 00000250  80 01 00 7C */	lwz r0, 0x7c(r1)
-/* 802FE264 00000254  7C 00 07 34 */	extsh r0, r0
-/* 802FE268 00000258  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 802FE26C 0000025C  90 01 00 84 */	stw r0, 0x84(r1)
-/* 802FE270 00000260  90 81 00 80 */	stw r4, 0x80(r1)
-/* 802FE274 00000264  C8 01 00 80 */	lfd f0, 0x80(r1)
-/* 802FE278 00000268  EC 20 20 28 */	fsubs f1, f0, f4
-/* 802FE27C 0000026C  D8 61 00 88 */	stfd f3, 0x88(r1)
-/* 802FE280 00000270  80 01 00 8C */	lwz r0, 0x8c(r1)
-/* 802FE284 00000274  7C 00 07 34 */	extsh r0, r0
-/* 802FE288 00000278  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 802FE28C 0000027C  90 01 00 94 */	stw r0, 0x94(r1)
-/* 802FE290 00000280  90 81 00 90 */	stw r4, 0x90(r1)
-/* 802FE294 00000284  C8 01 00 90 */	lfd f0, 0x90(r1)
-/* 802FE298 00000288  EC 00 20 28 */	fsubs f0, f0, f4
-/* 802FE29C 0000028C  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE2A0 00000290  D0 23 80 00 */	stfs f1, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE2A4 00000294  C0 02 C8 6C */	lfs f0, lit_2017(r2)
-/* 802FE2A8 00000298  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE2AC 0000029C  80 01 00 10 */	lwz r0, 0x10(r1)
-/* 802FE2B0 000002A0  90 03 80 00 */	stw r0, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE2B4 000002A4  D3 E3 80 00 */	stfs f31, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE2B8 000002A8  D3 83 80 00 */	stfs f28, -0x8000(r3)	/* effective address: CC008000 */
-/* 802FE2BC 000002AC  38 60 00 00 */	li r3, 0
-/* 802FE2C0 000002B0  38 80 00 09 */	li r4, 9
-/* 802FE2C4 000002B4  38 A0 00 01 */	li r5, 1
-/* 802FE2C8 000002B8  38 C0 00 03 */	li r6, 3
-/* 802FE2CC 000002BC  38 E0 00 00 */	li r7, 0
-/* 802FE2D0 000002C0  48 05 D2 F5 */	bl GXSetVtxAttrFmt
-/* 802FE2D4 000002C4  38 60 00 00 */	li r3, 0
-/* 802FE2D8 000002C8  38 80 00 0D */	li r4, 0xd
-/* 802FE2DC 000002CC  38 A0 00 01 */	li r5, 1
-/* 802FE2E0 000002D0  38 C0 00 02 */	li r6, 2
-/* 802FE2E4 000002D4  38 E0 00 0F */	li r7, 0xf
-/* 802FE2E8 000002D8  48 05 D2 DD */	bl GXSetVtxAttrFmt
-/* 802FE2EC 000002DC  38 60 00 00 */	li r3, 0
-/* 802FE2F0 000002E0  48 05 DB 0D */	bl GXSetNumTexGens
-/* 802FE2F4 000002E4  38 60 00 01 */	li r3, 1
-/* 802FE2F8 000002E8  48 06 15 99 */	bl GXSetNumTevStages
-/* 802FE2FC 000002EC  38 60 00 00 */	li r3, 0
-/* 802FE300 000002F0  38 80 00 04 */	li r4, 4
-/* 802FE304 000002F4  48 06 0E 95 */	bl GXSetTevOp
-/* 802FE308 000002F8  38 60 00 00 */	li r3, 0
-/* 802FE30C 000002FC  38 80 00 FF */	li r4, 0xff
-/* 802FE310 00000300  38 A0 00 FF */	li r5, 0xff
-/* 802FE314 00000304  38 C0 00 04 */	li r6, 4
-/* 802FE318 00000308  48 06 13 DD */	bl GXSetTevOrder
-/* 802FE31C 0000030C  38 60 00 04 */	li r3, 4
-/* 802FE320 00000310  38 80 00 00 */	li r4, 0
-/* 802FE324 00000314  38 A0 00 00 */	li r5, 0
-/* 802FE328 00000318  38 C0 00 01 */	li r6, 1
-/* 802FE32C 0000031C  38 E0 00 00 */	li r7, 0
-/* 802FE330 00000320  39 00 00 00 */	li r8, 0
-/* 802FE334 00000324  39 20 00 02 */	li r9, 2
-/* 802FE338 00000328  48 05 F8 35 */	bl GXSetChanCtrl
-/* 802FE33C 0000032C  38 60 00 0D */	li r3, 0xd
-/* 802FE340 00000330  38 80 00 00 */	li r4, 0
-/* 802FE344 00000334  48 05 CB 75 */	bl GXSetVtxDesc
+/* 802FE010  57 C0 06 3E */	clrlwi r0, r30, 0x18                    
+/* 802FE014  88 7C 01 08 */	lbz r3, 0x108(r28)                      
+/* 802FE018  7C 00 18 40 */	cmplw r0, r3                            
+/* 802FE01C  41 80 FF D8 */	blt lbl_802FDFF4                         /* constant-address: 802FDFF4, symbol: lbl_802FDFF4 */
+/* 802FE020  48 05 DD DD */	bl GXSetNumTexGens                       /* constant-address: 8035BDFC, symbol: GXSetNumTexGens */
+/* 802FE024  C0 3D 00 00 */	lfs f1, 0(r29)                          
+/* 802FE028  C0 1F 00 00 */	lfs f0, 0(r31)                          
+/* 802FE02C  EC 00 08 28 */	fsubs f0, f0, f1                        
+/* 802FE030  C0 7D 00 08 */	lfs f3, 8(r29)                          
+/* 802FE034  EC 43 08 28 */	fsubs f2, f3, f1                        
+/* 802FE038  EF E0 10 24 */	fdivs f31, f0, f2                       
+/* 802FE03C  C0 22 C8 68 */	lfs f1, lit_1767(r2)                     /* constant-address: 80456268, symbol: lit_1767 */
+/* 802FE040  C0 1F 00 08 */	lfs f0, 8(r31)                          
+/* 802FE044  EC 00 18 28 */	fsubs f0, f0, f3                        
+/* 802FE048  EC 00 10 24 */	fdivs f0, f0, f2                        
+/* 802FE04C  EF C1 00 2A */	fadds f30, f1, f0                       
+/* 802FE050  C0 5D 00 04 */	lfs f2, 4(r29)                          
+/* 802FE054  C0 1F 00 04 */	lfs f0, 4(r31)                          
+/* 802FE058  EC 00 10 28 */	fsubs f0, f0, f2                        
+/* 802FE05C  C0 7D 00 0C */	lfs f3, 0xc(r29)                        
+/* 802FE060  EC 43 10 28 */	fsubs f2, f3, f2                        
+/* 802FE064  EF A0 10 24 */	fdivs f29, f0, f2                       
+/* 802FE068  C0 1F 00 0C */	lfs f0, 0xc(r31)                        
+/* 802FE06C  EC 00 18 28 */	fsubs f0, f0, f3                        
+/* 802FE070  EC 00 10 24 */	fdivs f0, f0, f2                        
+/* 802FE074  EF 81 00 2A */	fadds f28, f1, f0                       
+/* 802FE078  88 1C 00 B2 */	lbz r0, 0xb2(r28)                       
+/* 802FE07C  98 1C 00 B3 */	stb r0, 0xb3(r28)                       
+/* 802FE080  38 00 FF FF */	li r0, -1                               
+/* 802FE084  90 01 00 08 */	stw r0, 8(r1)                           
+/* 802FE088  90 01 00 0C */	stw r0, 0xc(r1)                         
+/* 802FE08C  90 01 00 10 */	stw r0, 0x10(r1)                        
+/* 802FE090  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 802FE094  7F 83 E3 78 */	mr r3, r28                              
+/* 802FE098  38 81 00 08 */	addi r4, r1, 8                          
+/* 802FE09C  48 00 0B C9 */	bl getNewColor__10J2DPictureFPQ28JUtility6TColor /* constant-address: 802FEC64, symbol: getNewColor__10J2DPictureFPQ28JUtility6TColor */
+/* 802FE0A0  7F 83 E3 78 */	mr r3, r28                              
+/* 802FE0A4  48 00 05 2D */	bl setTevMode__10J2DPictureFv            /* constant-address: 802FE5D0, symbol: setTevMode__10J2DPictureFv */
+/* 802FE0A8  48 05 D4 E5 */	bl GXClearVtxDesc                        /* constant-address: 8035B58C, symbol: GXClearVtxDesc */
+/* 802FE0AC  38 60 00 09 */	li r3, 9                                
+/* 802FE0B0  38 80 00 01 */	li r4, 1                                
+/* 802FE0B4  48 05 CE 05 */	bl GXSetVtxDesc                          /* constant-address: 8035AEB8, symbol: GXSetVtxDesc */
+/* 802FE0B8  38 60 00 0B */	li r3, 0xb                              
+/* 802FE0BC  38 80 00 01 */	li r4, 1                                
+/* 802FE0C0  48 05 CD F9 */	bl GXSetVtxDesc                          /* constant-address: 8035AEB8, symbol: GXSetVtxDesc */
+/* 802FE0C4  38 60 00 0D */	li r3, 0xd                              
+/* 802FE0C8  38 80 00 01 */	li r4, 1                                
+/* 802FE0CC  48 05 CD ED */	bl GXSetVtxDesc                          /* constant-address: 8035AEB8, symbol: GXSetVtxDesc */
+/* 802FE0D0  38 60 00 00 */	li r3, 0                                
+/* 802FE0D4  38 80 00 0D */	li r4, 0xd                              
+/* 802FE0D8  38 A0 00 01 */	li r5, 1                                
+/* 802FE0DC  38 C0 00 04 */	li r6, 4                                
+/* 802FE0E0  38 E0 00 00 */	li r7, 0                                
+/* 802FE0E4  48 05 D4 E1 */	bl GXSetVtxAttrFmt                       /* constant-address: 8035B5C4, symbol: GXSetVtxAttrFmt */
+/* 802FE0E8  38 60 00 00 */	li r3, 0                                
+/* 802FE0EC  38 80 00 09 */	li r4, 9                                
+/* 802FE0F0  38 A0 00 01 */	li r5, 1                                
+/* 802FE0F4  38 C0 00 04 */	li r6, 4                                
+/* 802FE0F8  38 E0 00 00 */	li r7, 0                                
+/* 802FE0FC  48 05 D4 C9 */	bl GXSetVtxAttrFmt                       /* constant-address: 8035B5C4, symbol: GXSetVtxAttrFmt */
+/* 802FE100  38 60 00 80 */	li r3, 0x80                             
+/* 802FE104  38 80 00 00 */	li r4, 0                                
+/* 802FE108  38 A0 00 04 */	li r5, 4                                
+/* 802FE10C  48 05 E6 59 */	bl GXBegin                               /* constant-address: 8035C764, symbol: GXBegin */
+/* 802FE110  C0 1F 00 04 */	lfs f0, 4(r31)                          
+/* 802FE114  FC 20 00 1E */	fctiwz f1, f0                           
+/* 802FE118  D8 21 00 18 */	stfd f1, 0x18(r1)                       
+/* 802FE11C  80 01 00 1C */	lwz r0, 0x1c(r1)                        
+/* 802FE120  7C 00 07 34 */	extsh r0, r0                            
+/* 802FE124  C8 82 C8 70 */	lfd f4, lit_2021(r2)                     /* constant-address: 80456270, symbol: lit_2021 */
+/* 802FE128  6C 00 80 00 */	xoris r0, r0, 0x8000                    
+/* 802FE12C  90 01 00 24 */	stw r0, 0x24(r1)                        
+/* 802FE130  3C 80 43 30 */	lis r4, 0x4330                          
+/* 802FE134  90 81 00 20 */	stw r4, 0x20(r1)                        
+/* 802FE138  C8 01 00 20 */	lfd f0, 0x20(r1)                        
+/* 802FE13C  EC 40 20 28 */	fsubs f2, f0, f4                        
+/* 802FE140  C0 1F 00 00 */	lfs f0, 0(r31)                          
+/* 802FE144  FC 60 00 1E */	fctiwz f3, f0                           
+/* 802FE148  D8 61 00 28 */	stfd f3, 0x28(r1)                       
+/* 802FE14C  80 01 00 2C */	lwz r0, 0x2c(r1)                        
+/* 802FE150  7C 00 07 34 */	extsh r0, r0                            
+/* 802FE154  6C 00 80 00 */	xoris r0, r0, 0x8000                    
+/* 802FE158  90 01 00 34 */	stw r0, 0x34(r1)                        
+/* 802FE15C  90 81 00 30 */	stw r4, 0x30(r1)                        
+/* 802FE160  C8 01 00 30 */	lfd f0, 0x30(r1)                        
+/* 802FE164  EC 00 20 28 */	fsubs f0, f0, f4                        
+/* 802FE168  3C 60 CC 01 */	lis r3, 0xCC01 /* 0xCC008000@ha */      
+/* 802FE16C  D0 03 80 00 */	stfs f0, 0x8000(r3)                      /* constant-address: CC008000 */
+/* 802FE170  D0 43 80 00 */	stfs f2, -0x8000(r3)                     /* constant-address: CC008000 */
+/* 802FE174  C0 02 C8 6C */	lfs f0, lit_2017(r2)                     /* constant-address: 8045626C, symbol: lit_2017 */
+/* 802FE178  D0 03 80 00 */	stfs f0, -0x8000(r3)                     /* constant-address: CC008000 */
+/* 802FE17C  80 01 00 08 */	lwz r0, 8(r1)                           
+/* 802FE180  90 03 80 00 */	stw r0, -0x8000(r3)                      /* constant-address: CC008000 */
+/* 802FE184  D3 E3 80 00 */	stfs f31, -0x8000(r3)                    /* constant-address: CC008000 */
+/* 802FE188  D3 A3 80 00 */	stfs f29, -0x8000(r3)                    /* constant-address: CC008000 */
+/* 802FE18C  D8 21 00 38 */	stfd f1, 0x38(r1)                       
+/* 802FE190  80 01 00 3C */	lwz r0, 0x3c(r1)                        
+/* 802FE194  7C 00 07 34 */	extsh r0, r0                            
+/* 802FE198  6C 00 80 00 */	xoris r0, r0, 0x8000                    
+/* 802FE19C  90 01 00 44 */	stw r0, 0x44(r1)                        
+/* 802FE1A0  90 81 00 40 */	stw r4, 0x40(r1)                        
+/* 802FE1A4  C8 01 00 40 */	lfd f0, 0x40(r1)                        
+/* 802FE1A8  EC 20 20 28 */	fsubs f1, f0, f4                        
+/* 802FE1AC  C0 1F 00 08 */	lfs f0, 8(r31)                          
+/* 802FE1B0  FC 40 00 1E */	fctiwz f2, f0                           
+/* 802FE1B4  D8 41 00 48 */	stfd f2, 0x48(r1)                       
+/* 802FE1B8  80 01 00 4C */	lwz r0, 0x4c(r1)                        
+/* 802FE1BC  7C 00 07 34 */	extsh r0, r0                            
+/* 802FE1C0  6C 00 80 00 */	xoris r0, r0, 0x8000                    
+/* 802FE1C4  90 01 00 54 */	stw r0, 0x54(r1)                        
+/* 802FE1C8  90 81 00 50 */	stw r4, 0x50(r1)                        
+/* 802FE1CC  C8 01 00 50 */	lfd f0, 0x50(r1)                        
+/* 802FE1D0  EC 00 20 28 */	fsubs f0, f0, f4                        
+/* 802FE1D4  D0 03 80 00 */	stfs f0, -0x8000(r3)                     /* constant-address: CC008000 */
+/* 802FE1D8  D0 23 80 00 */	stfs f1, -0x8000(r3)                     /* constant-address: CC008000 */
+/* 802FE1DC  C0 02 C8 6C */	lfs f0, lit_2017(r2)                     /* constant-address: 8045626C, symbol: lit_2017 */
+/* 802FE1E0  D0 03 80 00 */	stfs f0, -0x8000(r3)                     /* constant-address: CC008000 */
+/* 802FE1E4  80 01 00 0C */	lwz r0, 0xc(r1)                         
+/* 802FE1E8  90 03 80 00 */	stw r0, -0x8000(r3)                      /* constant-address: CC008000 */
+/* 802FE1EC  D3 C3 80 00 */	stfs f30, -0x8000(r3)                    /* constant-address: CC008000 */
+/* 802FE1F0  D3 A3 80 00 */	stfs f29, -0x8000(r3)                    /* constant-address: CC008000 */
+/* 802FE1F4  C0 1F 00 0C */	lfs f0, 0xc(r31)                        
+/* 802FE1F8  FC 20 00 1E */	fctiwz f1, f0                           
+/* 802FE1FC  D8 21 00 58 */	stfd f1, 0x58(r1)                       
+/* 802FE200  80 01 00 5C */	lwz r0, 0x5c(r1)                        
+/* 802FE204  7C 00 07 34 */	extsh r0, r0                            
+/* 802FE208  6C 00 80 00 */	xoris r0, r0, 0x8000                    
+/* 802FE20C  90 01 00 64 */	stw r0, 0x64(r1)                        
+/* 802FE210  90 81 00 60 */	stw r4, 0x60(r1)                        
+/* 802FE214  C8 01 00 60 */	lfd f0, 0x60(r1)                        
+/* 802FE218  EC A0 20 28 */	fsubs f5, f0, f4                        
+/* 802FE21C  D8 41 00 68 */	stfd f2, 0x68(r1)                       
+/* 802FE220  80 01 00 6C */	lwz r0, 0x6c(r1)                        
+/* 802FE224  7C 00 07 34 */	extsh r0, r0                            
+/* 802FE228  6C 00 80 00 */	xoris r0, r0, 0x8000                    
+/* 802FE22C  90 01 00 74 */	stw r0, 0x74(r1)                        
+/* 802FE230  90 81 00 70 */	stw r4, 0x70(r1)                        
+/* 802FE234  C8 01 00 70 */	lfd f0, 0x70(r1)                        
+/* 802FE238  EC 00 20 28 */	fsubs f0, f0, f4                        
+/* 802FE23C  D0 03 80 00 */	stfs f0, -0x8000(r3)                     /* constant-address: CC008000 */
+/* 802FE240  D0 A3 80 00 */	stfs f5, -0x8000(r3)                     /* constant-address: CC008000 */
+/* 802FE244  C0 02 C8 6C */	lfs f0, lit_2017(r2)                     /* constant-address: 8045626C, symbol: lit_2017 */
+/* 802FE248  D0 03 80 00 */	stfs f0, -0x8000(r3)                     /* constant-address: CC008000 */
+/* 802FE24C  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 802FE250  90 03 80 00 */	stw r0, -0x8000(r3)                      /* constant-address: CC008000 */
+/* 802FE254  D3 C3 80 00 */	stfs f30, -0x8000(r3)                    /* constant-address: CC008000 */
+/* 802FE258  D3 83 80 00 */	stfs f28, -0x8000(r3)                    /* constant-address: CC008000 */
+/* 802FE25C  D8 21 00 78 */	stfd f1, 0x78(r1)                       
+/* 802FE260  80 01 00 7C */	lwz r0, 0x7c(r1)                        
+/* 802FE264  7C 00 07 34 */	extsh r0, r0                            
+/* 802FE268  6C 00 80 00 */	xoris r0, r0, 0x8000                    
+/* 802FE26C  90 01 00 84 */	stw r0, 0x84(r1)                        
+/* 802FE270  90 81 00 80 */	stw r4, 0x80(r1)                        
+/* 802FE274  C8 01 00 80 */	lfd f0, 0x80(r1)                        
+/* 802FE278  EC 20 20 28 */	fsubs f1, f0, f4                        
+/* 802FE27C  D8 61 00 88 */	stfd f3, 0x88(r1)                       
+/* 802FE280  80 01 00 8C */	lwz r0, 0x8c(r1)                        
+/* 802FE284  7C 00 07 34 */	extsh r0, r0                            
+/* 802FE288  6C 00 80 00 */	xoris r0, r0, 0x8000                    
+/* 802FE28C  90 01 00 94 */	stw r0, 0x94(r1)                        
+/* 802FE290  90 81 00 90 */	stw r4, 0x90(r1)                        
+/* 802FE294  C8 01 00 90 */	lfd f0, 0x90(r1)                        
+/* 802FE298  EC 00 20 28 */	fsubs f0, f0, f4                        
+/* 802FE29C  D0 03 80 00 */	stfs f0, -0x8000(r3)                     /* constant-address: CC008000 */
+/* 802FE2A0  D0 23 80 00 */	stfs f1, -0x8000(r3)                     /* constant-address: CC008000 */
+/* 802FE2A4  C0 02 C8 6C */	lfs f0, lit_2017(r2)                     /* constant-address: 8045626C, symbol: lit_2017 */
+/* 802FE2A8  D0 03 80 00 */	stfs f0, -0x8000(r3)                     /* constant-address: CC008000 */
+/* 802FE2AC  80 01 00 10 */	lwz r0, 0x10(r1)                        
+/* 802FE2B0  90 03 80 00 */	stw r0, -0x8000(r3)                      /* constant-address: CC008000 */
+/* 802FE2B4  D3 E3 80 00 */	stfs f31, -0x8000(r3)                    /* constant-address: CC008000 */
+/* 802FE2B8  D3 83 80 00 */	stfs f28, -0x8000(r3)                    /* constant-address: CC008000 */
+/* 802FE2BC  38 60 00 00 */	li r3, 0                                
+/* 802FE2C0  38 80 00 09 */	li r4, 9                                
+/* 802FE2C4  38 A0 00 01 */	li r5, 1                                
+/* 802FE2C8  38 C0 00 03 */	li r6, 3                                
+/* 802FE2CC  38 E0 00 00 */	li r7, 0                                
+/* 802FE2D0  48 05 D2 F5 */	bl GXSetVtxAttrFmt                       /* constant-address: 8035B5C4, symbol: GXSetVtxAttrFmt */
+/* 802FE2D4  38 60 00 00 */	li r3, 0                                
+/* 802FE2D8  38 80 00 0D */	li r4, 0xd                              
+/* 802FE2DC  38 A0 00 01 */	li r5, 1                                
+/* 802FE2E0  38 C0 00 02 */	li r6, 2                                
+/* 802FE2E4  38 E0 00 0F */	li r7, 0xf                              
+/* 802FE2E8  48 05 D2 DD */	bl GXSetVtxAttrFmt                       /* constant-address: 8035B5C4, symbol: GXSetVtxAttrFmt */
+/* 802FE2EC  38 60 00 00 */	li r3, 0                                
+/* 802FE2F0  48 05 DB 0D */	bl GXSetNumTexGens                       /* constant-address: 8035BDFC, symbol: GXSetNumTexGens */
+/* 802FE2F4  38 60 00 01 */	li r3, 1                                
+/* 802FE2F8  48 06 15 99 */	bl GXSetNumTevStages                     /* constant-address: 8035F890, symbol: GXSetNumTevStages */
+/* 802FE2FC  38 60 00 00 */	li r3, 0                                
+/* 802FE300  38 80 00 04 */	li r4, 4                                
+/* 802FE304  48 06 0E 95 */	bl GXSetTevOp                            /* constant-address: 8035F198, symbol: GXSetTevOp */
+/* 802FE308  38 60 00 00 */	li r3, 0                                
+/* 802FE30C  38 80 00 FF */	li r4, 0xff                             
+/* 802FE310  38 A0 00 FF */	li r5, 0xff                             
+/* 802FE314  38 C0 00 04 */	li r6, 4                                
+/* 802FE318  48 06 13 DD */	bl GXSetTevOrder                         /* constant-address: 8035F6F4, symbol: GXSetTevOrder */
+/* 802FE31C  38 60 00 04 */	li r3, 4                                
+/* 802FE320  38 80 00 00 */	li r4, 0                                
+/* 802FE324  38 A0 00 00 */	li r5, 0                                
+/* 802FE328  38 C0 00 01 */	li r6, 1                                
+/* 802FE32C  38 E0 00 00 */	li r7, 0                                
+/* 802FE330  39 00 00 00 */	li r8, 0                                
+/* 802FE334  39 20 00 02 */	li r9, 2                                
+/* 802FE338  48 05 F8 35 */	bl GXSetChanCtrl                         /* constant-address: 8035DB6C, symbol: GXSetChanCtrl */
+/* 802FE33C  38 60 00 0D */	li r3, 0xd                              
+/* 802FE340  38 80 00 00 */	li r4, 0                                
+/* 802FE344  48 05 CB 75 */	bl GXSetVtxDesc                          /* constant-address: 8035AEB8, symbol: GXSetVtxDesc */
 lbl_802FE348:
-/* 802FE348 00000000  E3 E1 00 E8 */	psq_l f31, 232(r1), 0, 0 /* qr0 */
-/* 802FE34C 00000000  CB E1 00 E0 */	lfd f31, 0xe0(r1)
-/* 802FE350 00000008  E3 C1 00 D8 */	psq_l f30, 216(r1), 0, 0 /* qr0 */
-/* 802FE354 00000000  CB C1 00 D0 */	lfd f30, 0xd0(r1)
-/* 802FE358 00000010  E3 A1 00 C8 */	psq_l f29, 200(r1), 0, 0 /* qr0 */
-/* 802FE35C 00000000  CB A1 00 C0 */	lfd f29, 0xc0(r1)
-/* 802FE360 00000018  E3 81 00 B8 */	psq_l f28, 184(r1), 0, 0 /* qr0 */
-/* 802FE364 00000000  CB 81 00 B0 */	lfd f28, 0xb0(r1)
-/* 802FE368 00000004  39 61 00 B0 */	addi r11, r1, 0xb0
-/* 802FE36C 00000008  48 06 3E B9 */	bl _restgpr_28
-/* 802FE370 0000000C  80 01 00 F4 */	lwz r0, 0xf4(r1)
-/* 802FE374 00000010  7C 08 03 A6 */	mtlr r0
-/* 802FE378 00000014  38 21 00 F0 */	addi r1, r1, 0xf0
-/* 802FE37C 00000018  4E 80 00 20 */	blr 
+/* 802FE348  E3 E1 00 E8 */	psq_l f31, 232(r1), 0, 0 /* qr0 */      
+/* 802FE34C  CB E1 00 E0 */	lfd f31, 0xe0(r1)                       
+/* 802FE350  E3 C1 00 D8 */	psq_l f30, 216(r1), 0, 0 /* qr0 */      
+/* 802FE354  CB C1 00 D0 */	lfd f30, 0xd0(r1)                       
+/* 802FE358  E3 A1 00 C8 */	psq_l f29, 200(r1), 0, 0 /* qr0 */      
+/* 802FE35C  CB A1 00 C0 */	lfd f29, 0xc0(r1)                       
+/* 802FE360  E3 81 00 B8 */	psq_l f28, 184(r1), 0, 0 /* qr0 */      
+/* 802FE364  CB 81 00 B0 */	lfd f28, 0xb0(r1)                       
+/* 802FE368  39 61 00 B0 */	addi r11, r1, 0xb0                      
+/* 802FE36C  48 06 3E B9 */	bl _restgpr_28                           /* constant-address: 80362224, symbol: _restgpr_28 */
+/* 802FE370  80 01 00 F4 */	lwz r0, 0xf4(r1)                        
+/* 802FE374  7C 08 03 A6 */	mtlr r0                                 
+/* 802FE378  38 21 00 F0 */	addi r1, r1, 0xf0                       
+/* 802FE37C  4E 80 00 20 */	blr                                     

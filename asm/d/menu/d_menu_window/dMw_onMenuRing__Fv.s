@@ -1,10 +1,10 @@
 lbl_801FA0CC:
-/* 801FA0CC 00000000  3C 60 80 43 */	lis r3, g_meter2_info@ha
-/* 801FA0D0 00000004  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801FA0D4 00000008  80 63 00 24 */	lwz r3, 0x24(r3)	/* effective address: 804301AC */
-/* 801FA0D8 0000000C  28 03 00 00 */	cmplwi r3, 0
-/* 801FA0DC 00000010  4D 82 00 20 */	beqlr 
-/* 801FA0E0 00000014  88 03 01 47 */	lbz r0, 0x147(r3)
-/* 801FA0E4 00000018  60 00 00 01 */	ori r0, r0, 1
-/* 801FA0E8 0000001C  98 03 01 47 */	stb r0, 0x147(r3)
-/* 801FA0EC 00000020  4E 80 00 20 */	blr 
+/* 801FA0CC  3C 60 80 43 */	lis r3, g_meter2_info@ha                
+/* 801FA0D0  38 63 01 88 */	addi r3, r3, g_meter2_info@l             /* constant-address: 80430188, symbol: g_meter2_info */
+/* 801FA0D4  80 63 00 24 */	lwz r3, 0x24(r3)                         /* constant-address: 804301AC, symbol: None */
+/* 801FA0D8  28 03 00 00 */	cmplwi r3, 0                            
+/* 801FA0DC  4D 82 00 20 */	beqlr                                   
+/* 801FA0E0  88 03 01 47 */	lbz r0, 0x147(r3)                       
+/* 801FA0E4  60 00 00 01 */	ori r0, r0, 1                           
+/* 801FA0E8  98 03 01 47 */	stb r0, 0x147(r3)                       
+/* 801FA0EC  4E 80 00 20 */	blr                                     

@@ -1,76 +1,76 @@
 lbl_802EED64:
-/* 802EED64 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 802EED68 00000004  7C 08 02 A6 */	mflr r0
-/* 802EED6C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802EED70 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802EED74 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 802EED78 00000014  3C 60 80 3D */	lis r3, __vt__11J2DTevBlock@ha
-/* 802EED7C 00000018  38 03 CE 74 */	addi r0, r3, __vt__11J2DTevBlock@l
-/* 802EED80 0000001C  90 1F 00 00 */	stw r0, 0(r31)
-/* 802EED84 00000020  3C 60 80 3D */	lis r3, __vt__12J2DTevBlock8@ha
-/* 802EED88 00000024  38 03 CB 84 */	addi r0, r3, __vt__12J2DTevBlock8@l
-/* 802EED8C 00000028  90 1F 00 00 */	stw r0, 0(r31)
-/* 802EED90 0000002C  38 7F 00 16 */	addi r3, r31, 0x16
-/* 802EED94 00000030  3C 80 80 2F */	lis r4, __ct__11J2DTevOrderFv@ha
-/* 802EED98 00000034  38 84 1B 70 */	addi r4, r4, __ct__11J2DTevOrderFv@l
-/* 802EED9C 00000038  38 A0 00 00 */	li r5, 0
-/* 802EEDA0 0000003C  38 C0 00 04 */	li r6, 4
-/* 802EEDA4 00000040  38 E0 00 08 */	li r7, 8
-/* 802EEDA8 00000044  48 07 2F B9 */	bl __construct_array
-/* 802EEDAC 00000048  38 7F 00 36 */	addi r3, r31, 0x36
-/* 802EEDB0 0000004C  3C 80 80 2F */	lis r4, __ct__13J2DGXColorS10Fv@ha
-/* 802EEDB4 00000050  38 84 1B 90 */	addi r4, r4, __ct__13J2DGXColorS10Fv@l
-/* 802EEDB8 00000054  38 A0 00 00 */	li r5, 0
-/* 802EEDBC 00000058  38 C0 00 08 */	li r6, 8
-/* 802EEDC0 0000005C  38 E0 00 04 */	li r7, 4
-/* 802EEDC4 00000060  48 07 2F 9D */	bl __construct_array
-/* 802EEDC8 00000064  38 7F 00 57 */	addi r3, r31, 0x57
-/* 802EEDCC 00000068  3C 80 80 2F */	lis r4, __ct__11J2DTevStageFv@ha
-/* 802EEDD0 0000006C  38 84 19 40 */	addi r4, r4, __ct__11J2DTevStageFv@l
-/* 802EEDD4 00000070  38 A0 00 00 */	li r5, 0
-/* 802EEDD8 00000074  38 C0 00 08 */	li r6, 8
-/* 802EEDDC 00000078  38 E0 00 08 */	li r7, 8
-/* 802EEDE0 0000007C  48 07 2F 81 */	bl __construct_array
-/* 802EEDE4 00000080  38 7F 00 98 */	addi r3, r31, 0x98
-/* 802EEDE8 00000084  3C 80 80 19 */	lis r4, __ct__Q28JUtility6TColorFv@ha
-/* 802EEDEC 00000088  38 84 39 60 */	addi r4, r4, __ct__Q28JUtility6TColorFv@l
-/* 802EEDF0 0000008C  38 A0 00 00 */	li r5, 0
-/* 802EEDF4 00000090  38 C0 00 04 */	li r6, 4
-/* 802EEDF8 00000094  38 E0 00 04 */	li r7, 4
-/* 802EEDFC 00000098  48 07 2F 65 */	bl __construct_array
-/* 802EEE00 0000009C  38 7F 00 B8 */	addi r3, r31, 0xb8
-/* 802EEE04 000000A0  3C 80 80 2F */	lis r4, __ct__19J2DTevSwapModeTableFv@ha
-/* 802EEE08 000000A4  38 84 19 34 */	addi r4, r4, __ct__19J2DTevSwapModeTableFv@l
-/* 802EEE0C 000000A8  38 A0 00 00 */	li r5, 0
-/* 802EEE10 000000AC  38 C0 00 01 */	li r6, 1
-/* 802EEE14 000000B0  38 E0 00 04 */	li r7, 4
-/* 802EEE18 000000B4  48 07 2F 49 */	bl __construct_array
-/* 802EEE1C 000000B8  38 7F 00 BC */	addi r3, r31, 0xbc
-/* 802EEE20 000000BC  3C 80 80 2F */	lis r4, __ct__14J2DIndTevStageFv@ha
-/* 802EEE24 000000C0  38 84 18 A0 */	addi r4, r4, __ct__14J2DIndTevStageFv@l
-/* 802EEE28 000000C4  38 A0 00 00 */	li r5, 0
-/* 802EEE2C 000000C8  38 C0 00 04 */	li r6, 4
-/* 802EEE30 000000CC  38 E0 00 08 */	li r7, 8
-/* 802EEE34 000000D0  48 07 2F 2D */	bl __construct_array
-/* 802EEE38 000000D4  38 60 00 00 */	li r3, 0
-/* 802EEE3C 000000D8  7C 64 1B 78 */	mr r4, r3
-/* 802EEE40 000000DC  38 00 00 08 */	li r0, 8
-/* 802EEE44 000000E0  7C 09 03 A6 */	mtctr r0
+/* 802EED64  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 802EED68  7C 08 02 A6 */	mflr r0                                 
+/* 802EED6C  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 802EED70  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 802EED74  7C 7F 1B 78 */	mr r31, r3                              
+/* 802EED78  3C 60 80 3D */	lis r3, __vt__11J2DTevBlock@ha          
+/* 802EED7C  38 03 CE 74 */	addi r0, r3, __vt__11J2DTevBlock@l       /* constant-address: 803CCE74, symbol: __vt__11J2DTevBlock */
+/* 802EED80  90 1F 00 00 */	stw r0, 0(r31)                          
+/* 802EED84  3C 60 80 3D */	lis r3, __vt__12J2DTevBlock8@ha         
+/* 802EED88  38 03 CB 84 */	addi r0, r3, __vt__12J2DTevBlock8@l      /* constant-address: 803CCB84, symbol: __vt__12J2DTevBlock8 */
+/* 802EED8C  90 1F 00 00 */	stw r0, 0(r31)                          
+/* 802EED90  38 7F 00 16 */	addi r3, r31, 0x16                      
+/* 802EED94  3C 80 80 2F */	lis r4, __ct__11J2DTevOrderFv@ha        
+/* 802EED98  38 84 1B 70 */	addi r4, r4, __ct__11J2DTevOrderFv@l     /* constant-address: 802F1B70, symbol: __ct__11J2DTevOrderFv */
+/* 802EED9C  38 A0 00 00 */	li r5, 0                                
+/* 802EEDA0  38 C0 00 04 */	li r6, 4                                
+/* 802EEDA4  38 E0 00 08 */	li r7, 8                                
+/* 802EEDA8  48 07 2F B9 */	bl __construct_array                     /* constant-address: 80361D60, symbol: __construct_array */
+/* 802EEDAC  38 7F 00 36 */	addi r3, r31, 0x36                      
+/* 802EEDB0  3C 80 80 2F */	lis r4, __ct__13J2DGXColorS10Fv@ha      
+/* 802EEDB4  38 84 1B 90 */	addi r4, r4, __ct__13J2DGXColorS10Fv@l   /* constant-address: 802F1B90, symbol: __ct__13J2DGXColorS10Fv */
+/* 802EEDB8  38 A0 00 00 */	li r5, 0                                
+/* 802EEDBC  38 C0 00 08 */	li r6, 8                                
+/* 802EEDC0  38 E0 00 04 */	li r7, 4                                
+/* 802EEDC4  48 07 2F 9D */	bl __construct_array                     /* constant-address: 80361D60, symbol: __construct_array */
+/* 802EEDC8  38 7F 00 57 */	addi r3, r31, 0x57                      
+/* 802EEDCC  3C 80 80 2F */	lis r4, __ct__11J2DTevStageFv@ha        
+/* 802EEDD0  38 84 19 40 */	addi r4, r4, __ct__11J2DTevStageFv@l     /* constant-address: 802F1940, symbol: __ct__11J2DTevStageFv */
+/* 802EEDD4  38 A0 00 00 */	li r5, 0                                
+/* 802EEDD8  38 C0 00 08 */	li r6, 8                                
+/* 802EEDDC  38 E0 00 08 */	li r7, 8                                
+/* 802EEDE0  48 07 2F 81 */	bl __construct_array                     /* constant-address: 80361D60, symbol: __construct_array */
+/* 802EEDE4  38 7F 00 98 */	addi r3, r31, 0x98                      
+/* 802EEDE8  3C 80 80 19 */	lis r4, __ct__Q28JUtility6TColorFv@ha   
+/* 802EEDEC  38 84 39 60 */	addi r4, r4, __ct__Q28JUtility6TColorFv@l /* constant-address: 80193960, symbol: __ct__Q28JUtility6TColorFv */
+/* 802EEDF0  38 A0 00 00 */	li r5, 0                                
+/* 802EEDF4  38 C0 00 04 */	li r6, 4                                
+/* 802EEDF8  38 E0 00 04 */	li r7, 4                                
+/* 802EEDFC  48 07 2F 65 */	bl __construct_array                     /* constant-address: 80361D60, symbol: __construct_array */
+/* 802EEE00  38 7F 00 B8 */	addi r3, r31, 0xb8                      
+/* 802EEE04  3C 80 80 2F */	lis r4, __ct__19J2DTevSwapModeTableFv@ha
+/* 802EEE08  38 84 19 34 */	addi r4, r4, __ct__19J2DTevSwapModeTableFv@l /* constant-address: 802F1934, symbol: __ct__19J2DTevSwapModeTableFv */
+/* 802EEE0C  38 A0 00 00 */	li r5, 0                                
+/* 802EEE10  38 C0 00 01 */	li r6, 1                                
+/* 802EEE14  38 E0 00 04 */	li r7, 4                                
+/* 802EEE18  48 07 2F 49 */	bl __construct_array                     /* constant-address: 80361D60, symbol: __construct_array */
+/* 802EEE1C  38 7F 00 BC */	addi r3, r31, 0xbc                      
+/* 802EEE20  3C 80 80 2F */	lis r4, __ct__14J2DIndTevStageFv@ha     
+/* 802EEE24  38 84 18 A0 */	addi r4, r4, __ct__14J2DIndTevStageFv@l  /* constant-address: 802F18A0, symbol: __ct__14J2DIndTevStageFv */
+/* 802EEE28  38 A0 00 00 */	li r5, 0                                
+/* 802EEE2C  38 C0 00 04 */	li r6, 4                                
+/* 802EEE30  38 E0 00 08 */	li r7, 8                                
+/* 802EEE34  48 07 2F 2D */	bl __construct_array                     /* constant-address: 80361D60, symbol: __construct_array */
+/* 802EEE38  38 60 00 00 */	li r3, 0                                
+/* 802EEE3C  7C 64 1B 78 */	mr r4, r3                               
+/* 802EEE40  38 00 00 08 */	li r0, 8                                
+/* 802EEE44  7C 09 03 A6 */	mtctr r0                                
 lbl_802EEE48:
-/* 802EEE48 00000000  38 03 00 DC */	addi r0, r3, 0xdc
-/* 802EEE4C 00000004  7C 9F 01 2E */	stwx r4, r31, r0
-/* 802EEE50 00000008  38 63 00 04 */	addi r3, r3, 4
-/* 802EEE54 0000000C  42 00 FF F4 */	bdnz lbl_802EEE48
-/* 802EEE58 00000010  38 00 00 00 */	li r0, 0
-/* 802EEE5C 00000014  98 1F 01 20 */	stb r0, 0x120(r31)
-/* 802EEE60 00000018  7F E3 FB 78 */	mr r3, r31
-/* 802EEE64 0000001C  81 9F 00 00 */	lwz r12, 0(r31)
-/* 802EEE68 00000020  81 8C 00 08 */	lwz r12, 8(r12)
-/* 802EEE6C 00000024  7D 89 03 A6 */	mtctr r12
-/* 802EEE70 00000028  4E 80 04 21 */	bctrl 
-/* 802EEE74 0000002C  7F E3 FB 78 */	mr r3, r31
-/* 802EEE78 00000030  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 802EEE7C 00000034  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 802EEE80 00000038  7C 08 03 A6 */	mtlr r0
-/* 802EEE84 0000003C  38 21 00 10 */	addi r1, r1, 0x10
-/* 802EEE88 00000040  4E 80 00 20 */	blr 
+/* 802EEE48  38 03 00 DC */	addi r0, r3, 0xdc                       
+/* 802EEE4C  7C 9F 01 2E */	stwx r4, r31, r0                        
+/* 802EEE50  38 63 00 04 */	addi r3, r3, 4                          
+/* 802EEE54  42 00 FF F4 */	bdnz lbl_802EEE48                        /* constant-address: 802EEE48, symbol: lbl_802EEE48 */
+/* 802EEE58  38 00 00 00 */	li r0, 0                                
+/* 802EEE5C  98 1F 01 20 */	stb r0, 0x120(r31)                      
+/* 802EEE60  7F E3 FB 78 */	mr r3, r31                              
+/* 802EEE64  81 9F 00 00 */	lwz r12, 0(r31)                         
+/* 802EEE68  81 8C 00 08 */	lwz r12, 8(r12)                         
+/* 802EEE6C  7D 89 03 A6 */	mtctr r12                               
+/* 802EEE70  4E 80 04 21 */	bctrl                                   
+/* 802EEE74  7F E3 FB 78 */	mr r3, r31                              
+/* 802EEE78  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 802EEE7C  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 802EEE80  7C 08 03 A6 */	mtlr r0                                 
+/* 802EEE84  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 802EEE88  4E 80 00 20 */	blr                                     

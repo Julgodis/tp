@@ -1,10 +1,10 @@
 lbl_80003400:
-/* 80003400 00000000  7C 00 00 A6 */	mfmsr r0
-/* 80003404 00000004  60 00 20 00 */	ori r0, r0, 0x2000
-/* 80003408 00000008  7C 00 01 24 */	mtmsr r0
-/* 8000340C 0000000C  7F E8 02 A6 */	mflr r31
-/* 80003410 00000010  48 33 73 FD */	bl __OSPSInit
-/* 80003414 00000014  48 33 69 C1 */	bl __OSFPRInit
-/* 80003418 00000018  48 33 86 D9 */	bl __OSCacheInit
-/* 8000341C 0000001C  7F E8 03 A6 */	mtlr r31
-/* 80003420 00000020  4E 80 00 20 */	blr 
+/* 80003400  7C 00 00 A6 */	mfmsr r0                                
+/* 80003404  60 00 20 00 */	ori r0, r0, 0x2000                      
+/* 80003408  7C 00 01 24 */	mtmsr r0                                
+/* 8000340C  7F E8 02 A6 */	mflr r31                                
+/* 80003410  48 33 73 FD */	bl __OSPSInit                            /* constant-address: 8033A80C, symbol: __OSPSInit */
+/* 80003414  48 33 69 C1 */	bl __OSFPRInit                           /* constant-address: 80339DD4, symbol: __OSFPRInit */
+/* 80003418  48 33 86 D9 */	bl __OSCacheInit                         /* constant-address: 8033BAF0, symbol: __OSCacheInit */
+/* 8000341C  7F E8 03 A6 */	mtlr r31                                
+/* 80003420  4E 80 00 20 */	blr                                     

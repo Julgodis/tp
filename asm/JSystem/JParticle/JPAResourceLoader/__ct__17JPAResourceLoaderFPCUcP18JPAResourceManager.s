@@ -1,18 +1,18 @@
 lbl_8027D8A0:
-/* 8027D8A0 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 8027D8A4 00000004  7C 08 02 A6 */	mflr r0
-/* 8027D8A8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8027D8AC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8027D8B0 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8027D8B4 00000014  80 C4 00 04 */	lwz r6, 4(r4)
-/* 8027D8B8 00000018  3C 06 CD D3 */	addis r0, r6, 0xcdd3
-/* 8027D8BC 0000001C  28 00 31 30 */	cmplwi r0, 0x3130
-/* 8027D8C0 00000020  40 82 00 08 */	bne lbl_8027D8C8
-/* 8027D8C4 00000024  48 00 00 1D */	bl load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager
+/* 8027D8A0  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 8027D8A4  7C 08 02 A6 */	mflr r0                                 
+/* 8027D8A8  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 8027D8AC  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 8027D8B0  7C 7F 1B 78 */	mr r31, r3                              
+/* 8027D8B4  80 C4 00 04 */	lwz r6, 4(r4)                           
+/* 8027D8B8  3C 06 CD D3 */	addis r0, r6, 0xcdd3                    
+/* 8027D8BC  28 00 31 30 */	cmplwi r0, 0x3130                       
+/* 8027D8C0  40 82 00 08 */	bne lbl_8027D8C8                         /* constant-address: 8027D8C8, symbol: lbl_8027D8C8 */
+/* 8027D8C4  48 00 00 1D */	bl load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager /* constant-address: 8027D8E0, symbol: load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager */
 lbl_8027D8C8:
-/* 8027D8C8 00000000  7F E3 FB 78 */	mr r3, r31
-/* 8027D8CC 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8027D8D0 00000008  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 8027D8D4 0000000C  7C 08 03 A6 */	mtlr r0
-/* 8027D8D8 00000010  38 21 00 10 */	addi r1, r1, 0x10
-/* 8027D8DC 00000014  4E 80 00 20 */	blr 
+/* 8027D8C8  7F E3 FB 78 */	mr r3, r31                              
+/* 8027D8CC  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 8027D8D0  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 8027D8D4  7C 08 03 A6 */	mtlr r0                                 
+/* 8027D8D8  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 8027D8DC  4E 80 00 20 */	blr                                     

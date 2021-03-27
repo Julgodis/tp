@@ -1,38 +1,38 @@
 lbl_80071D6C:
-/* 80071D6C 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80071D70 00000004  7C 08 02 A6 */	mflr r0
-/* 80071D74 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80071D78 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80071D7C 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 80071D80 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80071D84 00000018  7C 9F 23 78 */	mr r31, r4
-/* 80071D88 0000001C  7F E3 FB 78 */	mr r3, r31
-/* 80071D8C 00000020  7F C4 F3 78 */	mr r4, r30
-/* 80071D90 00000024  4B FF FF 31 */	bl EnemyDistance__12dAttention_cFP10fopAc_ac_c
-/* 80071D94 00000028  C0 02 8C 50 */	lfs f0, lit_4071(r2)
-/* 80071D98 0000002C  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 80071D9C 00000000  40 80 00 0C */	bge lbl_80071DA8
-/* 80071DA0 00000004  38 60 00 00 */	li r3, 0
-/* 80071DA4 00000008  48 00 00 30 */	b lbl_80071DD4
+/* 80071D6C  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 80071D70  7C 08 02 A6 */	mflr r0                                 
+/* 80071D74  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 80071D78  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 80071D7C  93 C1 00 08 */	stw r30, 8(r1)                          
+/* 80071D80  7C 7E 1B 78 */	mr r30, r3                              
+/* 80071D84  7C 9F 23 78 */	mr r31, r4                              
+/* 80071D88  7F E3 FB 78 */	mr r3, r31                              
+/* 80071D8C  7F C4 F3 78 */	mr r4, r30                              
+/* 80071D90  4B FF FF 31 */	bl EnemyDistance__12dAttention_cFP10fopAc_ac_c /* constant-address: 80071CC0, symbol: EnemyDistance__12dAttention_cFP10fopAc_ac_c */
+/* 80071D94  C0 02 8C 50 */	lfs f0, lit_4071(r2)                     /* constant-address: 80452650, symbol: lit_4071 */
+/* 80071D98  FC 01 00 40 */	fcmpo cr0, f1, f0                       
+/* 80071D9C  40 80 00 0C */	bge lbl_80071DA8                         /* constant-address: 80071DA8, symbol: lbl_80071DA8 */
+/* 80071DA0  38 60 00 00 */	li r3, 0                                
+/* 80071DA4  48 00 00 30 */	b lbl_80071DD4                           /* constant-address: 80071DD4, symbol: lbl_80071DD4 */
 lbl_80071DA8:
-/* 80071DA8 00000000  C0 1F 05 18 */	lfs f0, 0x518(r31)
-/* 80071DAC 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 80071DB0 00000000  40 80 00 20 */	bge lbl_80071DD0
-/* 80071DB4 00000004  28 1E 00 00 */	cmplwi r30, 0
-/* 80071DB8 00000008  41 82 00 0C */	beq lbl_80071DC4
-/* 80071DBC 0000000C  80 1E 00 04 */	lwz r0, 4(r30)
-/* 80071DC0 00000010  48 00 00 08 */	b lbl_80071DC8
+/* 80071DA8  C0 1F 05 18 */	lfs f0, 0x518(r31)                      
+/* 80071DAC  FC 01 00 40 */	fcmpo cr0, f1, f0                       
+/* 80071DB0  40 80 00 20 */	bge lbl_80071DD0                         /* constant-address: 80071DD0, symbol: lbl_80071DD0 */
+/* 80071DB4  28 1E 00 00 */	cmplwi r30, 0                           
+/* 80071DB8  41 82 00 0C */	beq lbl_80071DC4                         /* constant-address: 80071DC4, symbol: lbl_80071DC4 */
+/* 80071DBC  80 1E 00 04 */	lwz r0, 4(r30)                          
+/* 80071DC0  48 00 00 08 */	b lbl_80071DC8                           /* constant-address: 80071DC8, symbol: lbl_80071DC8 */
 lbl_80071DC4:
-/* 80071DC4 00000000  38 00 FF FF */	li r0, -1
+/* 80071DC4  38 00 FF FF */	li r0, -1                               
 lbl_80071DC8:
-/* 80071DC8 00000000  90 1F 05 14 */	stw r0, 0x514(r31)
-/* 80071DCC 00000004  D0 3F 05 18 */	stfs f1, 0x518(r31)
+/* 80071DC8  90 1F 05 14 */	stw r0, 0x514(r31)                      
+/* 80071DCC  D0 3F 05 18 */	stfs f1, 0x518(r31)                     
 lbl_80071DD0:
-/* 80071DD0 00000000  38 60 00 00 */	li r3, 0
+/* 80071DD0  38 60 00 00 */	li r3, 0                                
 lbl_80071DD4:
-/* 80071DD4 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80071DD8 00000004  83 C1 00 08 */	lwz r30, 8(r1)
-/* 80071DDC 00000008  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80071DE0 0000000C  7C 08 03 A6 */	mtlr r0
-/* 80071DE4 00000010  38 21 00 10 */	addi r1, r1, 0x10
-/* 80071DE8 00000014  4E 80 00 20 */	blr 
+/* 80071DD4  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 80071DD8  83 C1 00 08 */	lwz r30, 8(r1)                          
+/* 80071DDC  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 80071DE0  7C 08 03 A6 */	mtlr r0                                 
+/* 80071DE4  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 80071DE8  4E 80 00 20 */	blr                                     

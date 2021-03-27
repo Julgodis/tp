@@ -1,8 +1,11 @@
+import sys
+
 from capstone import *
 from capstone.ppc import *
 from collections import defaultdict
 from itertools import chain
 from dataclasses import dataclass, field
+from intervaltree import IntervalTree, Interval
 
 from .. import util
 
@@ -306,10 +309,10 @@ class Disassembler:
         while offset < size:
             decoded_insns = list(self.cs.disasm(data[offset:], addr + offset))
             if len(decoded_insns) == 0:
-                instructions.append((addr + offset, offset, None, data[offset:][:4]))
+                instructions.append((addr + offset, None, data[offset:][:4]))
                 offset += 4
             else:
-                instructions += [(x.address, x.address - (addr + offset), x, x.bytes) for x in decoded_insns]
+                instructions += [(x.address, x, x.bytes) for x in decoded_insns]
                 offset += len(decoded_insns) * 4
             yield 0, addr + offset
             
@@ -341,26 +344,56 @@ class Disassembler:
         while offset < size:
             decoded_insns = list(self.cs.disasm(data[offset:], addr + offset))
             if len(decoded_insns) == 0:
-                instructions.append((addr + offset, offset, None, data[offset:][:4]))
+                instructions.append((addr + offset, None, data[offset:][:4]))
                 offset += 4
             else:
                 for x in decoded_insns:
                     insn = x
                     if insn.id in blacklistedInsns:
                         insn = None
-                    instructions.append((x.address, x.address - (addr + offset), insn, x.bytes))
+                    instructions.append((x.address, insn, x.bytes))
                 offset += len(decoded_insns) * 4
-            
+
         for insn in instructions:
             self.pre_callback(*insn)
         for insn in instructions:
             await self.callback(*insn)
+    
+    """
+    def execute_in_groups(self, addr, data, size):
+        if size <= 0:
+            return
 
-    def callback(self, address, offset, insn, bytes):
+        instructions = []
+        offset = 0
+        while offset < size:
+            decoded_insns = list(self.cs.disasm(data[offset:], addr + offset))
+            if len(decoded_insns) == 0:
+                instructions.append((addr + offset, None, data[offset:][:4]))
+                offset += 4
+            else:
+                for x in decoded_insns:
+                    insn = x
+                    if insn.id in blacklistedInsns:
+                        insn = None
+                    instructions.append((x.address, insn, x.bytes))
+                offset += len(decoded_insns) * 4
+
+        last_blr = 0
+        for i, xinsn in enumerate(instructions):
+            _, insn, _ = xinsn
+            if not insn:
+                continue
+            if insn.id in {PPC_INS_BLR, PPC_INS_RFI}:
+                self.execute_function(instructions[last_blr:i+1])
+                last_blr = i + 1
+    """
+
+    def callback(self, address, insn, bytes):
         """Callback function that should be overriden"""
         pass
 
-    def pre_callback(self, address, offset, insn, bytes):
+    def pre_callback(self, address, insn, bytes):
         """Pre-callback function. Used to find split loads and merge them. 
         Later the callback function can find these merged loads and do something special"""
 
@@ -372,9 +405,9 @@ class Disassembler:
 
         if insn.id in {PPC_INS_B, PPC_INS_BLR, PPC_INS_BL, PPC_INS_BC, PPC_INS_BDZ, PPC_INS_BDNZ}:
             self.lisInsns.clear()
-
-        if insn.id == PPC_INS_BLR:
             self.registers.clear()
+
+        #if insn.id == PPC_INS_BLR:
 
         if insn.id == PPC_INS_LIS:
             self.lisInsns[insn.operands[0].reg] = insn
@@ -400,19 +433,19 @@ class Disassembler:
                     self.r2_addr = value
                 elif insn.operands[0].reg == PPC_REG_R13:
                     self.r13_addr = value
-        elif insn.id in {PPC_INS_ADDI, PPC_INS_ORI} and insn.operands[1].reg in self.registers:
-            value = self.registers[insn.operands[1].reg]
-            if insn.id == PPC_INS_ORI:
-                value |= insn.operands[2].imm
-            elif insn.id == PPC_INS_ADDI:
-                value += sign_extend_16(insn.operands[2].imm)
-
-            self.registers[insn.operands[0].reg] = value
-        elif (is_load_store_reg_offset(insn, None) and insn.operands[1].mem.base in self.registers):
-            assert not insn.address in self.registerLoads
-            value = self.registers[insn.operands[1].mem.base]
-            value += sign_extend_16(insn.operands[1].mem.disp)
-            self.registerLoads[insn.address] = value
+        #elif insn.id in {PPC_INS_ADDI, PPC_INS_ORI} and insn.operands[1].reg in self.registers:
+        #    value = self.registers[insn.operands[1].reg]
+        #    if insn.id == PPC_INS_ORI:
+        #        value |= insn.operands[2].imm
+        #    elif insn.id == PPC_INS_ADDI:
+        #        value += sign_extend_16(insn.operands[2].imm)
+        #
+        #    self.registers[insn.operands[0].reg] = value
+        #elif (is_load_store_reg_offset(insn, None) and insn.operands[1].mem.base in self.registers):
+        #    assert not insn.address in self.registerLoads
+        #    value = self.registers[insn.operands[1].mem.base]
+        #    value += sign_extend_16(insn.operands[1].mem.disp)
+        #    self.registerLoads[insn.address] = value
 
         elif (not is_store_insn(insn)) and len(insn.operands) >= 1 and insn.operands[0].type == PPC_OP_REG:
             self.lisInsns.pop(insn.operands[0].reg, None)
@@ -454,6 +487,10 @@ class AccessCollector(Disassembler):
         if not self.is_label_candidate(value):
             return
 
+        if value == 0x8037a118:
+            assert False
+
+        assert not insn.address in self.accesses
         if insn.id in { PPC_INS_LFD, PPC_INS_LFDU }:
             self.accesses[insn.address] = DoubleLoadAccess(insn.address, value)
         elif insn.id in { PPC_INS_LFS, PPC_INS_LFSU }:
@@ -465,7 +502,7 @@ class AccessCollector(Disassembler):
         self.add_load_access(insn, value)
         self.sda_hack_references.add(value)
 
-    def callback(self, address, offset, insn, bytes):
+    def callback(self, address, insn, bytes):
         if insn == None:
             return
 
@@ -502,6 +539,6 @@ class AccessCollector(Disassembler):
         elif insn.address in self.splitDataLoads and is_load_store_reg_offset(insn, None):
             value = self.splitDataLoads[insn.address]
             self.add_load_access(insn, value)
-        elif insn.address in self.registerLoads and is_load_store_reg_offset(insn, None):
-            value = self.registerLoads[insn.address]
-            self.add_load_access(insn, value)
+        #elif insn.address in self.registerLoads and is_load_store_reg_offset(insn, None):
+        #    value = self.registerLoads[insn.address]
+        #    self.add_load_access(insn, value)

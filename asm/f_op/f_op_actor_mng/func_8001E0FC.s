@@ -1,3 +1,3 @@
 lbl_8001E0FC:
-/* 8001E0FC 00000000  38 63 FF DC */	addi r3, r3, -36
-/* 8001E100 00000004  4B FF FE 30 */	b __dt__11dBgS_WtrChkFv
+/* 8001E0FC  38 63 FF DC */	addi r3, r3, -36                        
+/* 8001E100  4B FF FE 30 */	b __dt__11dBgS_WtrChkFv                  /* constant-address: 8001DF30, symbol: __dt__11dBgS_WtrChkFv */

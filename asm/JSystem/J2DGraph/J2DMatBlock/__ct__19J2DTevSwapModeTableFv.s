@@ -1,4 +1,4 @@
 lbl_802F1934:
-/* 802F1934 00000000  88 02 C7 AC */	lbz r0, struct_804561AC+0x0(r2)
-/* 802F1938 00000004  98 03 00 00 */	stb r0, 0(r3)
-/* 802F193C 00000008  4E 80 00 20 */	blr 
+/* 802F1934  88 02 C7 AC */	lbz r0, struct_804561AC+0x0(r2)          /* constant-address: 804561AC, symbol: struct_804561AC+0x0 */
+/* 802F1938  98 03 00 00 */	stb r0, 0(r3)                           
+/* 802F193C  4E 80 00 20 */	blr                                     

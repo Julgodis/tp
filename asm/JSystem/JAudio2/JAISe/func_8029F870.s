@@ -1,3 +1,3 @@
 lbl_8029F870:
-/* 8029F870 00000000  38 63 FF F0 */	addi r3, r3, -16
-/* 8029F874 00000004  4B FF FD 54 */	b JAISound_tryDie___5JAISeFv
+/* 8029F870  38 63 FF F0 */	addi r3, r3, -16                        
+/* 8029F874  4B FF FD 54 */	b JAISound_tryDie___5JAISeFv             /* constant-address: 8029F5C8, symbol: JAISound_tryDie___5JAISeFv */

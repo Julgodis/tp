@@ -1,32 +1,32 @@
 lbl_800A4BC8:
-/* 800A4BC8 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 800A4BCC 00000004  7C 08 02 A6 */	mflr r0
-/* 800A4BD0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 800A4BD4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 800A4BD8 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 800A4BDC 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 800A4BE0 00000018  3B E0 00 00 */	li r31, 0
-/* 800A4BE4 0000001C  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
-/* 800A4BE8 00000020  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
-/* 800A4BEC 00000024  38 63 04 45 */	addi r3, r3, 0x445
-/* 800A4BF0 00000028  4B FF 8E 71 */	bl checkStageName__9daAlink_cFPCc
-/* 800A4BF4 0000002C  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 800A4BF8 00000030  41 82 00 2C */	beq lbl_800A4C24
-/* 800A4BFC 00000034  80 1E 00 B0 */	lwz r0, 0xb0(r30)
-/* 800A4C00 00000038  54 00 06 BE */	clrlwi r0, r0, 0x1a
-/* 800A4C04 0000003C  2C 00 00 03 */	cmpwi r0, 3
-/* 800A4C08 00000040  40 82 00 1C */	bne lbl_800A4C24
-/* 800A4C0C 00000044  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 800A4C10 00000048  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800A4C14 0000004C  A8 03 0D B8 */	lha r0, 0xdb8(r3)	/* effective address: 80406F78 */
-/* 800A4C18 00000050  7C 00 07 35 */	extsh. r0, r0
-/* 800A4C1C 00000054  40 82 00 08 */	bne lbl_800A4C24
-/* 800A4C20 00000058  3B E0 00 01 */	li r31, 1
+/* 800A4BC8  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 800A4BCC  7C 08 02 A6 */	mflr r0                                 
+/* 800A4BD0  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 800A4BD4  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 800A4BD8  93 C1 00 08 */	stw r30, 8(r1)                          
+/* 800A4BDC  7C 7E 1B 78 */	mr r30, r3                              
+/* 800A4BE0  3B E0 00 00 */	li r31, 0                               
+/* 800A4BE4  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha   
+/* 800A4BE8  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l /* constant-address: 80392094, symbol: d_a_d_a_alink__stringBase0 */
+/* 800A4BEC  38 63 04 45 */	addi r3, r3, 0x445                       /* constant-address: 803924D9, symbol: None */
+/* 800A4BF0  4B FF 8E 71 */	bl checkStageName__9daAlink_cFPCc        /* constant-address: 8009DA60, symbol: checkStageName__9daAlink_cFPCc */
+/* 800A4BF4  54 60 06 3F */	clrlwi. r0, r3, 0x18                    
+/* 800A4BF8  41 82 00 2C */	beq lbl_800A4C24                         /* constant-address: 800A4C24, symbol: lbl_800A4C24 */
+/* 800A4BFC  80 1E 00 B0 */	lwz r0, 0xb0(r30)                       
+/* 800A4C00  54 00 06 BE */	clrlwi r0, r0, 0x1a                     
+/* 800A4C04  2C 00 00 03 */	cmpwi r0, 3                             
+/* 800A4C08  40 82 00 1C */	bne lbl_800A4C24                         /* constant-address: 800A4C24, symbol: lbl_800A4C24 */
+/* 800A4C0C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 800A4C10  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 800A4C14  A8 03 0D B8 */	lha r0, 0xdb8(r3)                        /* constant-address: 80406F78, symbol: None */
+/* 800A4C18  7C 00 07 35 */	extsh. r0, r0                           
+/* 800A4C1C  40 82 00 08 */	bne lbl_800A4C24                         /* constant-address: 800A4C24, symbol: lbl_800A4C24 */
+/* 800A4C20  3B E0 00 01 */	li r31, 1                               
 lbl_800A4C24:
-/* 800A4C24 00000000  57 E3 06 3E */	clrlwi r3, r31, 0x18
-/* 800A4C28 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 800A4C2C 00000008  83 C1 00 08 */	lwz r30, 8(r1)
-/* 800A4C30 0000000C  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 800A4C34 00000010  7C 08 03 A6 */	mtlr r0
-/* 800A4C38 00000014  38 21 00 10 */	addi r1, r1, 0x10
-/* 800A4C3C 00000018  4E 80 00 20 */	blr 
+/* 800A4C24  57 E3 06 3E */	clrlwi r3, r31, 0x18                    
+/* 800A4C28  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 800A4C2C  83 C1 00 08 */	lwz r30, 8(r1)                          
+/* 800A4C30  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 800A4C34  7C 08 03 A6 */	mtlr r0                                 
+/* 800A4C38  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 800A4C3C  4E 80 00 20 */	blr                                     

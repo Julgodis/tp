@@ -32,7 +32,7 @@ SYMBOLS = [
 	{'addr':0x8057CBB8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':0,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x8057CBD8,'size':108,'pad':0,'label':"daObj_Fmobj_Draw__FP15obj_fmobj_class",'name':"daObj_Fmobj_Draw__FP15obj_fmobj_class",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x8057CC44,'size':64,'pad':0,'label':"daObj_Fmobj_Execute__FP15obj_fmobj_class",'name':"daObj_Fmobj_Execute__FP15obj_fmobj_class",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x8057CC84,'size':8,'pad':0,'label':"daObj_Fmobj_IsDelete__FP15obj_fmobj_class",'name':"daObj_Fmobj_IsDelete__FP15obj_fmobj_class",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x8057CC84,'size':8,'pad':0,'label':"daObj_Fmobj_IsDelete__FP15obj_fmobj_class",'name':"daObj_Fmobj_IsDelete__FP15obj_fmobj_class",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ReturnFunction"},
 	{'addr':0x8057CC8C,'size':80,'pad':0,'label':"daObj_Fmobj_Delete__FP15obj_fmobj_class",'name':"daObj_Fmobj_Delete__FP15obj_fmobj_class",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x8057CCDC,'size':260,'pad':0,'label':"useHeapInit__FP10fopAc_ac_c",'name':"useHeapInit__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x8057CDE0,'size':384,'pad':0,'label':"daObj_Fmobj_Create__FP10fopAc_ac_c",'name':"daObj_Fmobj_Create__FP10fopAc_ac_c",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},

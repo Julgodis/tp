@@ -1,11 +1,11 @@
 lbl_80264A6C:
-/* 80264A6C 00000000  3C 80 80 3C */	lis r4, __vt__4cCcS@ha
-/* 80264A70 00000004  38 04 37 48 */	addi r0, r4, __vt__4cCcS@l
-/* 80264A74 00000008  90 03 28 48 */	stw r0, 0x2848(r3)
-/* 80264A78 0000000C  3C 80 80 3A */	lis r4, __vt__8cM3dGAab@ha
-/* 80264A7C 00000010  38 04 72 18 */	addi r0, r4, __vt__8cM3dGAab@l
-/* 80264A80 00000014  90 03 28 20 */	stw r0, 0x2820(r3)
-/* 80264A84 00000018  3C 80 80 3A */	lis r4, __vt__15cCcD_DivideArea@ha
-/* 80264A88 0000001C  38 04 72 00 */	addi r0, r4, __vt__15cCcD_DivideArea@l
-/* 80264A8C 00000020  90 03 28 20 */	stw r0, 0x2820(r3)
-/* 80264A90 00000024  4E 80 00 20 */	blr 
+/* 80264A6C  3C 80 80 3C */	lis r4, __vt__4cCcS@ha                  
+/* 80264A70  38 04 37 48 */	addi r0, r4, __vt__4cCcS@l               /* constant-address: 803C3748, symbol: __vt__4cCcS */
+/* 80264A74  90 03 28 48 */	stw r0, 0x2848(r3)                      
+/* 80264A78  3C 80 80 3A */	lis r4, __vt__8cM3dGAab@ha              
+/* 80264A7C  38 04 72 18 */	addi r0, r4, __vt__8cM3dGAab@l           /* constant-address: 803A7218, symbol: __vt__8cM3dGAab */
+/* 80264A80  90 03 28 20 */	stw r0, 0x2820(r3)                      
+/* 80264A84  3C 80 80 3A */	lis r4, __vt__15cCcD_DivideArea@ha      
+/* 80264A88  38 04 72 00 */	addi r0, r4, __vt__15cCcD_DivideArea@l   /* constant-address: 803A7200, symbol: __vt__15cCcD_DivideArea */
+/* 80264A8C  90 03 28 20 */	stw r0, 0x2820(r3)                      
+/* 80264A90  4E 80 00 20 */	blr                                     

@@ -1,23 +1,23 @@
 lbl_80C39A00:
-/* 80C39A00 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80C39A04 00000004  7C 08 02 A6 */	mflr r0
-/* 80C39A08 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80C39A0C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80C39A10 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80C39A14 00000014  38 7F 09 70 */	addi r3, r31, 0x970
-/* 80C39A18 00000018  38 9F 04 D0 */	addi r4, r31, 0x4d0
-/* 80C39A1C 0000001C  4B 63 5C 2C */	b SetC__8cM3dGSphFRC4cXyz
-/* 80C39A20 00000020  38 7F 09 70 */	addi r3, r31, 0x970
-/* 80C39A24 00000024  3C 80 80 C4 */	lis r4, lit_3788@ha
-/* 80C39A28 00000028  C0 24 C6 BC */	lfs f1, lit_3788@l(r4)
-/* 80C39A2C 0000002C  4B 63 5C DC */	b SetR__8cM3dGSphFf
-/* 80C39A30 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80C39A34 00000034  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80C39A38 00000038  38 63 23 3C */	addi r3, r3, 0x233c
-/* 80C39A3C 0000003C  38 9F 08 4C */	addi r4, r31, 0x84c
-/* 80C39A40 00000040  4B 62 B1 68 */	b Set__4cCcSFP8cCcD_Obj
-/* 80C39A44 00000044  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80C39A48 00000048  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80C39A4C 0000004C  7C 08 03 A6 */	mtlr r0
-/* 80C39A50 00000050  38 21 00 10 */	addi r1, r1, 0x10
-/* 80C39A54 00000054  4E 80 00 20 */	blr 
+/* 80C39A00  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80C39A04  7C 08 02 A6 */	mflr r0
+/* 80C39A08  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80C39A0C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80C39A10  7C 7F 1B 78 */	mr r31, r3
+/* 80C39A14  38 7F 09 70 */	addi r3, r31, 0x970
+/* 80C39A18  38 9F 04 D0 */	addi r4, r31, 0x4d0
+/* 80C39A1C  4B 63 5C 2C */	b SetC__8cM3dGSphFRC4cXyz
+/* 80C39A20  38 7F 09 70 */	addi r3, r31, 0x970
+/* 80C39A24  3C 80 80 C4 */	lis r4, lit_3788@ha
+/* 80C39A28  C0 24 C6 BC */	lfs f1, lit_3788@l(r4)
+/* 80C39A2C  4B 63 5C DC */	b SetR__8cM3dGSphFf
+/* 80C39A30  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 80C39A34  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C39A38  38 63 23 3C */	addi r3, r3, 0x233c
+/* 80C39A3C  38 9F 08 4C */	addi r4, r31, 0x84c
+/* 80C39A40  4B 62 B1 68 */	b Set__4cCcSFP8cCcD_Obj
+/* 80C39A44  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80C39A48  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80C39A4C  7C 08 03 A6 */	mtlr r0
+/* 80C39A50  38 21 00 10 */	addi r1, r1, 0x10
+/* 80C39A54  4E 80 00 20 */	blr 

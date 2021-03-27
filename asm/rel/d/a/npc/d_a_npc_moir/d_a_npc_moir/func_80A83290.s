@@ -1,3 +1,3 @@
 lbl_80A83290:
-/* 80A83290 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 80A83294 00000004  4B FF FD 50 */	b __dt__12dBgS_ObjAcchFv
+/* 80A83290  38 63 FF EC */	addi r3, r3, -20
+/* 80A83294  4B FF FD 50 */	b __dt__12dBgS_ObjAcchFv

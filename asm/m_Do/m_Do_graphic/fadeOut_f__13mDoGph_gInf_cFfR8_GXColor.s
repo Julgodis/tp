@@ -1,23 +1,23 @@
 lbl_80008028:
-/* 80008028 00000000  38 00 00 81 */	li r0, 0x81
-/* 8000802C 00000004  98 0D 86 66 */	stb r0, struct_80450BE4+0x2(r13)
-/* 80008030 00000008  D0 2D 86 60 */	stfs f1, mFadeSpeed__13mDoGph_gInf_c(r13)
-/* 80008034 0000000C  88 03 00 00 */	lbz r0, 0(r3)
-/* 80008038 00000010  98 0D 80 14 */	stb r0, mFadeColor__13mDoGph_gInf_c(r13)
-/* 8000803C 00000014  88 03 00 01 */	lbz r0, 1(r3)
-/* 80008040 00000018  38 8D 80 14 */	addi r4, r13, 0x80450594-0x80458580 /* mFadeColor__13mDoGph_gInf_c-_SDA_BASE_ */
-/* 80008044 0000001C  98 04 00 01 */	stb r0, 1(r4)
-/* 80008048 00000020  88 03 00 02 */	lbz r0, 2(r3)
-/* 8000804C 00000024  98 04 00 02 */	stb r0, 2(r4)
-/* 80008050 00000028  88 03 00 03 */	lbz r0, 3(r3)
-/* 80008054 0000002C  98 04 00 03 */	stb r0, 3(r4)
-/* 80008058 00000030  C0 02 80 38 */	lfs f0, lit_4062(r2)
-/* 8000805C 00000034  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 80008060 00000000  4C 41 13 82 */	cror 2, 1, 2
-/* 80008064 00000004  40 82 00 08 */	bne lbl_8000806C
-/* 80008068 00000008  48 00 00 08 */	b lbl_80008070
+/* 80008028  38 00 00 81 */	li r0, 0x81                             
+/* 8000802C  98 0D 86 66 */	stb r0, struct_80450BE4+0x2(r13)         /* constant-address: 80450BE6, symbol: struct_80450BE4+0x2 */
+/* 80008030  D0 2D 86 60 */	stfs f1, mFadeSpeed__13mDoGph_gInf_c(r13) /* constant-address: 80450BE0, symbol: mFadeSpeed__13mDoGph_gInf_c */
+/* 80008034  88 03 00 00 */	lbz r0, 0(r3)                           
+/* 80008038  98 0D 80 14 */	stb r0, mFadeColor__13mDoGph_gInf_c(r13) /* constant-address: 80450594, symbol: mFadeColor__13mDoGph_gInf_c */
+/* 8000803C  88 03 00 01 */	lbz r0, 1(r3)                           
+/* 80008040  38 8D 80 14 */	la r4, mFadeColor__13mDoGph_gInf_c(r13) /* 80450594-_SDA_BASE_ */ /* constant-address: 80450594, symbol: mFadeColor__13mDoGph_gInf_c */
+/* 80008044  98 04 00 01 */	stb r0, 1(r4)                            /* constant-address: 80450595, symbol: None */
+/* 80008048  88 03 00 02 */	lbz r0, 2(r3)                           
+/* 8000804C  98 04 00 02 */	stb r0, 2(r4)                            /* constant-address: 80450596, symbol: None */
+/* 80008050  88 03 00 03 */	lbz r0, 3(r3)                           
+/* 80008054  98 04 00 03 */	stb r0, 3(r4)                            /* constant-address: 80450597, symbol: None */
+/* 80008058  C0 02 80 38 */	lfs f0, lit_4062(r2)                     /* constant-address: 80451A38, symbol: lit_4062 */
+/* 8000805C  FC 01 00 40 */	fcmpo cr0, f1, f0                       
+/* 80008060  4C 41 13 82 */	cror 2, 1, 2                            
+/* 80008064  40 82 00 08 */	bne lbl_8000806C                         /* constant-address: 8000806C, symbol: lbl_8000806C */
+/* 80008068  48 00 00 08 */	b lbl_80008070                           /* constant-address: 80008070, symbol: lbl_80008070 */
 lbl_8000806C:
-/* 8000806C 00000000  C0 02 80 3C */	lfs f0, lit_4063(r2)
+/* 8000806C  C0 02 80 3C */	lfs f0, lit_4063(r2)                     /* constant-address: 80451A3C, symbol: lit_4063 */
 lbl_80008070:
-/* 80008070 00000000  D0 0D 86 5C */	stfs f0, mFadeRate__13mDoGph_gInf_c(r13)
-/* 80008074 00000004  4E 80 00 20 */	blr 
+/* 80008070  D0 0D 86 5C */	stfs f0, mFadeRate__13mDoGph_gInf_c(r13) /* constant-address: 80450BDC, symbol: mFadeRate__13mDoGph_gInf_c */
+/* 80008074  4E 80 00 20 */	blr                                     

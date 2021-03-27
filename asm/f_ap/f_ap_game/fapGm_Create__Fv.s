@@ -1,17 +1,17 @@
 lbl_80018AA0:
-/* 80018AA0 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80018AA4 00000004  7C 08 02 A6 */	mflr r0
-/* 80018AA8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80018AAC 0000000C  48 00 98 0D */	bl fpcM_Init__Fv
-/* 80018AB0 00000010  48 00 63 81 */	bl fopScnM_Init__Fv
-/* 80018AB4 00000014  48 00 5C 35 */	bl fopOvlpM_Init__Fv
-/* 80018AB8 00000018  48 00 58 C1 */	bl fopCamM_Init__Fv
-/* 80018ABC 0000001C  48 00 7A 5D */	bl fopDwTg_CreateQueue__Fv
-/* 80018AC0 00000020  38 00 FF FF */	li r0, -1
-/* 80018AC4 00000024  3C 60 80 3F */	lis r3, g_HIO@ha
-/* 80018AC8 00000028  38 63 1B BC */	addi r3, r3, g_HIO@l
-/* 80018ACC 0000002C  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 803F1BC0 */
-/* 80018AD0 00000030  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80018AD4 00000034  7C 08 03 A6 */	mtlr r0
-/* 80018AD8 00000038  38 21 00 10 */	addi r1, r1, 0x10
-/* 80018ADC 0000003C  4E 80 00 20 */	blr 
+/* 80018AA0  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 80018AA4  7C 08 02 A6 */	mflr r0                                 
+/* 80018AA8  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 80018AAC  48 00 98 0D */	bl fpcM_Init__Fv                         /* constant-address: 800222B8, symbol: fpcM_Init__Fv */
+/* 80018AB0  48 00 63 81 */	bl fopScnM_Init__Fv                      /* constant-address: 8001EE30, symbol: fopScnM_Init__Fv */
+/* 80018AB4  48 00 5C 35 */	bl fopOvlpM_Init__Fv                     /* constant-address: 8001E6E8, symbol: fopOvlpM_Init__Fv */
+/* 80018AB8  48 00 58 C1 */	bl fopCamM_Init__Fv                      /* constant-address: 8001E378, symbol: fopCamM_Init__Fv */
+/* 80018ABC  48 00 7A 5D */	bl fopDwTg_CreateQueue__Fv               /* constant-address: 80020518, symbol: fopDwTg_CreateQueue__Fv */
+/* 80018AC0  38 00 FF FF */	li r0, -1                               
+/* 80018AC4  3C 60 80 3F */	lis r3, g_HIO@ha                        
+/* 80018AC8  38 63 1B BC */	addi r3, r3, g_HIO@l                     /* constant-address: 803F1BBC, symbol: g_HIO */
+/* 80018ACC  98 03 00 04 */	stb r0, 4(r3)                            /* constant-address: 803F1BC0, symbol: None */
+/* 80018AD0  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 80018AD4  7C 08 03 A6 */	mtlr r0                                 
+/* 80018AD8  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 80018ADC  4E 80 00 20 */	blr                                     

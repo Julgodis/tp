@@ -1,23 +1,23 @@
 lbl_8028CC68:
-/* 8028CC68 00000000  3C 80 80 43 */	lis r4, saoVVOutput_direction___Q214JStudio_JStage14TAdaptor_light@ha
-/* 8028CC6C 00000004  38 04 14 48 */	addi r0, r4, saoVVOutput_direction___Q214JStudio_JStage14TAdaptor_light@l
-/* 8028CC70 00000008  7C 05 03 78 */	mr r5, r0
-/* 8028CC74 0000000C  48 00 00 2C */	b lbl_8028CCA0
+/* 8028CC68  3C 80 80 43 */	lis r4, saoVVOutput_direction___Q214JStudio_JStage14TAdaptor_light@ha
+/* 8028CC6C  38 04 14 48 */	addi r0, r4, saoVVOutput_direction___Q214JStudio_JStage14TAdaptor_light@l /* constant-address: 80431448, symbol: saoVVOutput_direction___Q214JStudio_JStage14TAdaptor_light */
+/* 8028CC70  7C 05 03 78 */	mr r5, r0                               
+/* 8028CC74  48 00 00 2C */	b lbl_8028CCA0                           /* constant-address: 8028CCA0, symbol: lbl_8028CCA0 */
 lbl_8028CC78:
-/* 8028CC78 00000000  80 83 00 08 */	lwz r4, 8(r3)
-/* 8028CC7C 00000004  1C 00 00 14 */	mulli r0, r0, 0x14
-/* 8028CC80 00000008  7C 84 02 14 */	add r4, r4, r0
-/* 8028CC84 0000000C  28 05 00 00 */	cmplwi r5, 0
-/* 8028CC88 00000010  41 82 00 0C */	beq lbl_8028CC94
-/* 8028CC8C 00000014  7C A0 2B 78 */	mr r0, r5
-/* 8028CC90 00000018  48 00 00 08 */	b lbl_8028CC98
+/* 8028CC78  80 83 00 08 */	lwz r4, 8(r3)                           
+/* 8028CC7C  1C 00 00 14 */	mulli r0, r0, 0x14                      
+/* 8028CC80  7C 84 02 14 */	add r4, r4, r0                          
+/* 8028CC84  28 05 00 00 */	cmplwi r5, 0                            
+/* 8028CC88  41 82 00 0C */	beq lbl_8028CC94                         /* constant-address: 8028CC94, symbol: lbl_8028CC94 */
+/* 8028CC8C  7C A0 2B 78 */	mr r0, r5                               
+/* 8028CC90  48 00 00 08 */	b lbl_8028CC98                           /* constant-address: 8028CC98, symbol: lbl_8028CC98 */
 lbl_8028CC94:
-/* 8028CC94 00000000  38 0D 8C 70 */	addi r0, r13, 0x804511F0-0x80458580 /* soOutput_none___Q27JStudio14TVariableValue-_SDA_BASE_ */
+/* 8028CC94  38 0D 8C 70 */	la r0, soOutput_none___Q27JStudio14TVariableValue(r13) /* 804511F0-_SDA_BASE_ */ /* constant-address: 804511F0, symbol: soOutput_none___Q27JStudio14TVariableValue */
 lbl_8028CC98:
-/* 8028CC98 00000000  90 04 00 10 */	stw r0, 0x10(r4)
-/* 8028CC9C 00000004  38 A5 00 0C */	addi r5, r5, 0xc
+/* 8028CC98  90 04 00 10 */	stw r0, 0x10(r4)                        
+/* 8028CC9C  38 A5 00 0C */	addi r5, r5, 0xc                         /* constant-address: 80431454, symbol: None */
 lbl_8028CCA0:
-/* 8028CCA0 00000000  80 05 00 04 */	lwz r0, 4(r5)
-/* 8028CCA4 00000004  2C 00 FF FF */	cmpwi r0, -1
-/* 8028CCA8 00000008  40 82 FF D0 */	bne lbl_8028CC78
-/* 8028CCAC 0000000C  4E 80 00 20 */	blr 
+/* 8028CCA0  80 05 00 04 */	lwz r0, 4(r5)                           
+/* 8028CCA4  2C 00 FF FF */	cmpwi r0, -1                            
+/* 8028CCA8  40 82 FF D0 */	bne lbl_8028CC78                         /* constant-address: 8028CC78, symbol: lbl_8028CC78 */
+/* 8028CCAC  4E 80 00 20 */	blr                                     

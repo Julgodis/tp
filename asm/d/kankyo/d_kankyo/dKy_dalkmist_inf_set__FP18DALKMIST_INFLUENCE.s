@@ -1,24 +1,24 @@
 lbl_801A7814:
-/* 801A7814 00000000  38 E0 00 00 */	li r7, 0
-/* 801A7818 00000004  38 80 00 00 */	li r4, 0
-/* 801A781C 00000008  3C A0 80 43 */	lis r5, g_env_light@ha
-/* 801A7820 0000000C  38 C5 CA 54 */	addi r6, r5, g_env_light@l
-/* 801A7824 00000010  38 00 00 0A */	li r0, 0xa
-/* 801A7828 00000014  7C 09 03 A6 */	mtctr r0
+/* 801A7814  38 E0 00 00 */	li r7, 0                                
+/* 801A7818  38 80 00 00 */	li r4, 0                                
+/* 801A781C  3C A0 80 43 */	lis r5, g_env_light@ha                  
+/* 801A7820  38 C5 CA 54 */	addi r6, r5, g_env_light@l               /* constant-address: 8042CA54, symbol: g_env_light */
+/* 801A7824  38 00 00 0A */	li r0, 0xa                              
+/* 801A7828  7C 09 03 A6 */	mtctr r0                                
 lbl_801A782C:
-/* 801A782C 00000000  7C A6 22 14 */	add r5, r6, r4
-/* 801A7830 00000004  80 05 09 90 */	lwz r0, 0x990(r5)
-/* 801A7834 00000008  28 00 00 00 */	cmplwi r0, 0
-/* 801A7838 0000000C  40 82 00 20 */	bne lbl_801A7858
-/* 801A783C 00000010  3C A0 80 43 */	lis r5, g_env_light@ha
-/* 801A7840 00000014  38 05 CA 54 */	addi r0, r5, g_env_light@l
-/* 801A7844 00000018  7C 80 22 14 */	add r4, r0, r4
-/* 801A7848 0000001C  90 64 09 90 */	stw r3, 0x990(r4)
-/* 801A784C 00000020  80 64 09 90 */	lwz r3, 0x990(r4)
-/* 801A7850 00000024  98 E3 00 10 */	stb r7, 0x10(r3)
-/* 801A7854 00000028  4E 80 00 20 */	blr 
+/* 801A782C  7C A6 22 14 */	add r5, r6, r4                          
+/* 801A7830  80 05 09 90 */	lwz r0, 0x990(r5)                       
+/* 801A7834  28 00 00 00 */	cmplwi r0, 0                            
+/* 801A7838  40 82 00 20 */	bne lbl_801A7858                         /* constant-address: 801A7858, symbol: lbl_801A7858 */
+/* 801A783C  3C A0 80 43 */	lis r5, g_env_light@ha                  
+/* 801A7840  38 05 CA 54 */	addi r0, r5, g_env_light@l               /* constant-address: 8042CA54, symbol: g_env_light */
+/* 801A7844  7C 80 22 14 */	add r4, r0, r4                          
+/* 801A7848  90 64 09 90 */	stw r3, 0x990(r4)                       
+/* 801A784C  80 64 09 90 */	lwz r3, 0x990(r4)                       
+/* 801A7850  98 E3 00 10 */	stb r7, 0x10(r3)                        
+/* 801A7854  4E 80 00 20 */	blr                                     
 lbl_801A7858:
-/* 801A7858 00000000  38 E7 00 01 */	addi r7, r7, 1
-/* 801A785C 00000004  38 84 00 04 */	addi r4, r4, 4
-/* 801A7860 00000008  42 00 FF CC */	bdnz lbl_801A782C
-/* 801A7864 0000000C  4E 80 00 20 */	blr 
+/* 801A7858  38 E7 00 01 */	addi r7, r7, 1                           /* constant-address: 00000001 */
+/* 801A785C  38 84 00 04 */	addi r4, r4, 4                           /* constant-address: 00000004 */
+/* 801A7860  42 00 FF CC */	bdnz lbl_801A782C                        /* constant-address: 801A782C, symbol: lbl_801A782C */
+/* 801A7864  4E 80 00 20 */	blr                                     

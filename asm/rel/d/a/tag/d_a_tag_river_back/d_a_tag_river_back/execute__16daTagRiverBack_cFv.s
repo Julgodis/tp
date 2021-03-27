@@ -1,43 +1,43 @@
 lbl_80D5F3F0:
-/* 80D5F3F0 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80D5F3F4 00000004  7C 08 02 A6 */	mflr r0
-/* 80D5F3F8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80D5F3FC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80D5F400 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80D5F404 00000014  80 03 00 B0 */	lwz r0, 0xb0(r3)
-/* 80D5F408 00000018  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
-/* 80D5F40C 0000001C  28 04 00 FF */	cmplwi r4, 0xff
-/* 80D5F410 00000020  41 82 00 28 */	beq lbl_80D5F438
-/* 80D5F414 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D5F418 00000028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80D5F41C 0000002C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
-/* 80D5F420 00000030  7C 05 07 74 */	extsb r5, r0
-/* 80D5F424 00000034  4B 2D 5F 3C */	b isSwitch__10dSv_info_cCFii
-/* 80D5F428 00000038  2C 03 00 00 */	cmpwi r3, 0
-/* 80D5F42C 0000003C  41 82 00 0C */	beq lbl_80D5F438
-/* 80D5F430 00000040  38 60 00 01 */	li r3, 1
-/* 80D5F434 00000044  48 00 00 44 */	b lbl_80D5F478
+/* 80D5F3F0  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80D5F3F4  7C 08 02 A6 */	mflr r0
+/* 80D5F3F8  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80D5F3FC  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80D5F400  7C 7F 1B 78 */	mr r31, r3
+/* 80D5F404  80 03 00 B0 */	lwz r0, 0xb0(r3)
+/* 80D5F408  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
+/* 80D5F40C  28 04 00 FF */	cmplwi r4, 0xff
+/* 80D5F410  41 82 00 28 */	beq lbl_80D5F438
+/* 80D5F414  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 80D5F418  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D5F41C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
+/* 80D5F420  7C 05 07 74 */	extsb r5, r0
+/* 80D5F424  4B 2D 5F 3C */	b isSwitch__10dSv_info_cCFii
+/* 80D5F428  2C 03 00 00 */	cmpwi r3, 0
+/* 80D5F42C  41 82 00 0C */	beq lbl_80D5F438
+/* 80D5F430  38 60 00 01 */	li r3, 1
+/* 80D5F434  48 00 00 44 */	b lbl_80D5F478
 lbl_80D5F438:
-/* 80D5F438 00000000  80 1F 00 B0 */	lwz r0, 0xb0(r31)
-/* 80D5F43C 00000004  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
-/* 80D5F440 00000008  28 04 00 FF */	cmplwi r4, 0xff
-/* 80D5F444 0000000C  41 82 00 28 */	beq lbl_80D5F46C
-/* 80D5F448 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D5F44C 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80D5F450 00000018  88 1F 04 BA */	lbz r0, 0x4ba(r31)
-/* 80D5F454 0000001C  7C 05 07 74 */	extsb r5, r0
-/* 80D5F458 00000020  4B 2D 5F 08 */	b isSwitch__10dSv_info_cCFii
-/* 80D5F45C 00000024  2C 03 00 00 */	cmpwi r3, 0
-/* 80D5F460 00000028  40 82 00 0C */	bne lbl_80D5F46C
-/* 80D5F464 0000002C  38 60 00 01 */	li r3, 1
-/* 80D5F468 00000030  48 00 00 10 */	b lbl_80D5F478
+/* 80D5F438  80 1F 00 B0 */	lwz r0, 0xb0(r31)
+/* 80D5F43C  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
+/* 80D5F440  28 04 00 FF */	cmplwi r4, 0xff
+/* 80D5F444  41 82 00 28 */	beq lbl_80D5F46C
+/* 80D5F448  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 80D5F44C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D5F450  88 1F 04 BA */	lbz r0, 0x4ba(r31)
+/* 80D5F454  7C 05 07 74 */	extsb r5, r0
+/* 80D5F458  4B 2D 5F 08 */	b isSwitch__10dSv_info_cCFii
+/* 80D5F45C  2C 03 00 00 */	cmpwi r3, 0
+/* 80D5F460  40 82 00 0C */	bne lbl_80D5F46C
+/* 80D5F464  38 60 00 01 */	li r3, 1
+/* 80D5F468  48 00 00 10 */	b lbl_80D5F478
 lbl_80D5F46C:
-/* 80D5F46C 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80D5F470 00000004  48 00 00 1D */	bl event_proc_call__16daTagRiverBack_cFv
-/* 80D5F474 00000008  38 60 00 01 */	li r3, 1
+/* 80D5F46C  7F E3 FB 78 */	mr r3, r31
+/* 80D5F470  48 00 00 1D */	bl event_proc_call__16daTagRiverBack_cFv
+/* 80D5F474  38 60 00 01 */	li r3, 1
 lbl_80D5F478:
-/* 80D5F478 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80D5F47C 00000004  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80D5F480 00000008  7C 08 03 A6 */	mtlr r0
-/* 80D5F484 0000000C  38 21 00 10 */	addi r1, r1, 0x10
-/* 80D5F488 00000010  4E 80 00 20 */	blr 
+/* 80D5F478  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80D5F47C  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80D5F480  7C 08 03 A6 */	mtlr r0
+/* 80D5F484  38 21 00 10 */	addi r1, r1, 0x10
+/* 80D5F488  4E 80 00 20 */	blr 

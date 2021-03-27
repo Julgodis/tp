@@ -1,3 +1,3 @@
 lbl_80779920:
-/* 80779920 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 80779924 00000004  4B FF 79 0C */	b __dt__14dBgS_ObjGndChkFv
+/* 80779920  38 63 FF EC */	addi r3, r3, -20
+/* 80779924  4B FF 79 0C */	b __dt__14dBgS_ObjGndChkFv

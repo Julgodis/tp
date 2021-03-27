@@ -1,3 +1,3 @@
 lbl_801446EC:
-/* 801446EC 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 801446F0 00000004  4B FF C8 40 */	b __dt__13dBgS_LinkAcchFv
+/* 801446EC  38 63 FF EC */	addi r3, r3, -20                        
+/* 801446F0  4B FF C8 40 */	b __dt__13dBgS_LinkAcchFv                /* constant-address: 80140F30, symbol: __dt__13dBgS_LinkAcchFv */

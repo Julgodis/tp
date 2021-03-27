@@ -1,93 +1,93 @@
 lbl_801F3934:
-/* 801F3934 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 801F3938 00000004  7C 08 02 A6 */	mflr r0
-/* 801F393C 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 801F3940 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 801F3944 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 801F3948 00000014  80 6D 86 F8 */	lwz r3, mResetData__6mDoRst(r13)
-/* 801F394C 00000018  80 03 00 00 */	lwz r0, 0(r3)
-/* 801F3950 0000001C  2C 00 00 00 */	cmpwi r0, 0
-/* 801F3954 00000020  40 82 01 2C */	bne lbl_801F3A80
-/* 801F3958 00000024  80 7F 00 0C */	lwz r3, 0xc(r31)
-/* 801F395C 00000028  4B E3 E8 41 */	bl checkTrigger__9STControlFv
-/* 801F3960 0000002C  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
-/* 801F3964 00000030  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 801F3968 00000034  80 63 00 34 */	lwz r3, 0x34(r3)	/* effective address: 803DD31C */
-/* 801F396C 00000038  54 60 05 EF */	rlwinm. r0, r3, 0, 0x17, 0x17
-/* 801F3970 0000003C  41 82 00 10 */	beq lbl_801F3980
-/* 801F3974 00000040  7F E3 FB 78 */	mr r3, r31
-/* 801F3978 00000044  48 00 01 1D */	bl saveSelectStart__12dMenu_save_cFv
-/* 801F397C 00000048  48 00 01 04 */	b lbl_801F3A80
+/* 801F3934  94 21 FF E0 */	stwu r1, -0x20(r1)                      
+/* 801F3938  7C 08 02 A6 */	mflr r0                                 
+/* 801F393C  90 01 00 24 */	stw r0, 0x24(r1)                        
+/* 801F3940  93 E1 00 1C */	stw r31, 0x1c(r1)                       
+/* 801F3944  7C 7F 1B 78 */	mr r31, r3                              
+/* 801F3948  80 6D 86 F8 */	lwz r3, mResetData__6mDoRst(r13)         /* constant-address: 80450C78, symbol: mResetData__6mDoRst */
+/* 801F394C  80 03 00 00 */	lwz r0, 0(r3)                           
+/* 801F3950  2C 00 00 00 */	cmpwi r0, 0                             
+/* 801F3954  40 82 01 2C */	bne lbl_801F3A80                         /* constant-address: 801F3A80, symbol: lbl_801F3A80 */
+/* 801F3958  80 7F 00 0C */	lwz r3, 0xc(r31)                        
+/* 801F395C  4B E3 E8 41 */	bl checkTrigger__9STControlFv            /* constant-address: 8003219C, symbol: checkTrigger__9STControlFv */
+/* 801F3960  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha        
+/* 801F3964  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l     /* constant-address: 803DD2E8, symbol: m_cpadInfo__8mDoCPd_c */
+/* 801F3968  80 63 00 34 */	lwz r3, 0x34(r3)                         /* constant-address: 803DD31C, symbol: None */
+/* 801F396C  54 60 05 EF */	rlwinm. r0, r3, 0, 0x17, 0x17           
+/* 801F3970  41 82 00 10 */	beq lbl_801F3980                         /* constant-address: 801F3980, symbol: lbl_801F3980 */
+/* 801F3974  7F E3 FB 78 */	mr r3, r31                              
+/* 801F3978  48 00 01 1D */	bl saveSelectStart__12dMenu_save_cFv     /* constant-address: 801F3A94, symbol: saveSelectStart__12dMenu_save_cFv */
+/* 801F397C  48 00 01 04 */	b lbl_801F3A80                           /* constant-address: 801F3A80, symbol: lbl_801F3A80 */
 lbl_801F3980:
-/* 801F3980 00000000  54 60 05 AD */	rlwinm. r0, r3, 0, 0x16, 0x16
-/* 801F3984 00000004  41 82 00 10 */	beq lbl_801F3994
-/* 801F3988 00000008  7F E3 FB 78 */	mr r3, r31
-/* 801F398C 0000000C  4B FF E1 AD */	bl closeSelect__12dMenu_save_cFv
-/* 801F3990 00000010  48 00 00 F0 */	b lbl_801F3A80
+/* 801F3980  54 60 05 AD */	rlwinm. r0, r3, 0, 0x16, 0x16           
+/* 801F3984  41 82 00 10 */	beq lbl_801F3994                         /* constant-address: 801F3994, symbol: lbl_801F3994 */
+/* 801F3988  7F E3 FB 78 */	mr r3, r31                              
+/* 801F398C  4B FF E1 AD */	bl closeSelect__12dMenu_save_cFv         /* constant-address: 801F1B38, symbol: closeSelect__12dMenu_save_cFv */
+/* 801F3990  48 00 00 F0 */	b lbl_801F3A80                           /* constant-address: 801F3A80, symbol: lbl_801F3A80 */
 lbl_801F3994:
-/* 801F3994 00000000  80 7F 00 0C */	lwz r3, 0xc(r31)
-/* 801F3998 00000004  4B E3 EB 8D */	bl checkUpTrigger__9STControlFv
-/* 801F399C 00000008  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 801F39A0 0000000C  41 82 00 6C */	beq lbl_801F3A0C
-/* 801F39A4 00000010  88 1F 00 54 */	lbz r0, 0x54(r31)
-/* 801F39A8 00000014  28 00 00 00 */	cmplwi r0, 0
-/* 801F39AC 00000018  41 82 00 D4 */	beq lbl_801F3A80
-/* 801F39B0 0000001C  38 00 00 04 */	li r0, 4
-/* 801F39B4 00000020  90 01 00 0C */	stw r0, 0xc(r1)
-/* 801F39B8 00000024  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)
-/* 801F39BC 00000028  38 81 00 0C */	addi r4, r1, 0xc
-/* 801F39C0 0000002C  38 A0 00 00 */	li r5, 0
-/* 801F39C4 00000030  38 C0 00 00 */	li r6, 0
-/* 801F39C8 00000034  38 E0 00 00 */	li r7, 0
-/* 801F39CC 00000038  C0 22 AA 58 */	lfs f1, lit_4179(r2)
-/* 801F39D0 0000003C  FC 40 08 90 */	fmr f2, f1
-/* 801F39D4 00000040  C0 62 AA 78 */	lfs f3, lit_4879(r2)
-/* 801F39D8 00000044  FC 80 18 90 */	fmr f4, f3
-/* 801F39DC 00000048  39 00 00 00 */	li r8, 0
-/* 801F39E0 0000004C  48 0B 7F A5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
-/* 801F39E4 00000050  88 1F 00 54 */	lbz r0, 0x54(r31)
-/* 801F39E8 00000054  98 1F 00 55 */	stb r0, 0x55(r31)
-/* 801F39EC 00000058  88 7F 00 54 */	lbz r3, 0x54(r31)
-/* 801F39F0 0000005C  38 03 FF FF */	addi r0, r3, -1
-/* 801F39F4 00000060  98 1F 00 54 */	stb r0, 0x54(r31)
-/* 801F39F8 00000064  7F E3 FB 78 */	mr r3, r31
-/* 801F39FC 00000068  48 00 02 81 */	bl dataSelectAnmSet__12dMenu_save_cFv
-/* 801F3A00 0000006C  38 00 00 32 */	li r0, 0x32
-/* 801F3A04 00000070  98 1F 01 B2 */	stb r0, 0x1b2(r31)
-/* 801F3A08 00000074  48 00 00 78 */	b lbl_801F3A80
+/* 801F3994  80 7F 00 0C */	lwz r3, 0xc(r31)                        
+/* 801F3998  4B E3 EB 8D */	bl checkUpTrigger__9STControlFv          /* constant-address: 80032524, symbol: checkUpTrigger__9STControlFv */
+/* 801F399C  54 60 06 3F */	clrlwi. r0, r3, 0x18                    
+/* 801F39A0  41 82 00 6C */	beq lbl_801F3A0C                         /* constant-address: 801F3A0C, symbol: lbl_801F3A0C */
+/* 801F39A4  88 1F 00 54 */	lbz r0, 0x54(r31)                       
+/* 801F39A8  28 00 00 00 */	cmplwi r0, 0                            
+/* 801F39AC  41 82 00 D4 */	beq lbl_801F3A80                         /* constant-address: 801F3A80, symbol: lbl_801F3A80 */
+/* 801F39B0  38 00 00 04 */	li r0, 4                                
+/* 801F39B4  90 01 00 0C */	stw r0, 0xc(r1)                         
+/* 801F39B8  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)  /* constant-address: 80451368, symbol: mAudioMgrPtr__10Z2AudioMgr */
+/* 801F39BC  38 81 00 0C */	addi r4, r1, 0xc                        
+/* 801F39C0  38 A0 00 00 */	li r5, 0                                
+/* 801F39C4  38 C0 00 00 */	li r6, 0                                
+/* 801F39C8  38 E0 00 00 */	li r7, 0                                
+/* 801F39CC  C0 22 AA 58 */	lfs f1, lit_4179(r2)                     /* constant-address: 80454458, symbol: lit_4179 */
+/* 801F39D0  FC 40 08 90 */	fmr f2, f1                              
+/* 801F39D4  C0 62 AA 78 */	lfs f3, lit_4879(r2)                     /* constant-address: 80454478, symbol: lit_4879 */
+/* 801F39D8  FC 80 18 90 */	fmr f4, f3                              
+/* 801F39DC  39 00 00 00 */	li r8, 0                                
+/* 801F39E0  48 0B 7F A5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc /* constant-address: 802AB984, symbol: seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc */
+/* 801F39E4  88 1F 00 54 */	lbz r0, 0x54(r31)                       
+/* 801F39E8  98 1F 00 55 */	stb r0, 0x55(r31)                       
+/* 801F39EC  88 7F 00 54 */	lbz r3, 0x54(r31)                       
+/* 801F39F0  38 03 FF FF */	addi r0, r3, -1                         
+/* 801F39F4  98 1F 00 54 */	stb r0, 0x54(r31)                       
+/* 801F39F8  7F E3 FB 78 */	mr r3, r31                              
+/* 801F39FC  48 00 02 81 */	bl dataSelectAnmSet__12dMenu_save_cFv    /* constant-address: 801F3C7C, symbol: dataSelectAnmSet__12dMenu_save_cFv */
+/* 801F3A00  38 00 00 32 */	li r0, 0x32                             
+/* 801F3A04  98 1F 01 B2 */	stb r0, 0x1b2(r31)                      
+/* 801F3A08  48 00 00 78 */	b lbl_801F3A80                           /* constant-address: 801F3A80, symbol: lbl_801F3A80 */
 lbl_801F3A0C:
-/* 801F3A0C 00000000  80 7F 00 0C */	lwz r3, 0xc(r31)
-/* 801F3A10 00000004  4B E3 EB 91 */	bl checkDownTrigger__9STControlFv
-/* 801F3A14 00000008  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 801F3A18 0000000C  41 82 00 68 */	beq lbl_801F3A80
-/* 801F3A1C 00000010  88 1F 00 54 */	lbz r0, 0x54(r31)
-/* 801F3A20 00000014  28 00 00 02 */	cmplwi r0, 2
-/* 801F3A24 00000018  41 82 00 5C */	beq lbl_801F3A80
-/* 801F3A28 0000001C  38 00 00 04 */	li r0, 4
-/* 801F3A2C 00000020  90 01 00 08 */	stw r0, 8(r1)
-/* 801F3A30 00000024  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)
-/* 801F3A34 00000028  38 81 00 08 */	addi r4, r1, 8
-/* 801F3A38 0000002C  38 A0 00 00 */	li r5, 0
-/* 801F3A3C 00000030  38 C0 00 00 */	li r6, 0
-/* 801F3A40 00000034  38 E0 00 00 */	li r7, 0
-/* 801F3A44 00000038  C0 22 AA 58 */	lfs f1, lit_4179(r2)
-/* 801F3A48 0000003C  FC 40 08 90 */	fmr f2, f1
-/* 801F3A4C 00000040  C0 62 AA 78 */	lfs f3, lit_4879(r2)
-/* 801F3A50 00000044  FC 80 18 90 */	fmr f4, f3
-/* 801F3A54 00000048  39 00 00 00 */	li r8, 0
-/* 801F3A58 0000004C  48 0B 7F 2D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
-/* 801F3A5C 00000050  88 1F 00 54 */	lbz r0, 0x54(r31)
-/* 801F3A60 00000054  98 1F 00 55 */	stb r0, 0x55(r31)
-/* 801F3A64 00000058  88 7F 00 54 */	lbz r3, 0x54(r31)
-/* 801F3A68 0000005C  38 03 00 01 */	addi r0, r3, 1
-/* 801F3A6C 00000060  98 1F 00 54 */	stb r0, 0x54(r31)
-/* 801F3A70 00000064  7F E3 FB 78 */	mr r3, r31
-/* 801F3A74 00000068  48 00 02 09 */	bl dataSelectAnmSet__12dMenu_save_cFv
-/* 801F3A78 0000006C  38 00 00 32 */	li r0, 0x32
-/* 801F3A7C 00000070  98 1F 01 B2 */	stb r0, 0x1b2(r31)
+/* 801F3A0C  80 7F 00 0C */	lwz r3, 0xc(r31)                        
+/* 801F3A10  4B E3 EB 91 */	bl checkDownTrigger__9STControlFv        /* constant-address: 800325A0, symbol: checkDownTrigger__9STControlFv */
+/* 801F3A14  54 60 06 3F */	clrlwi. r0, r3, 0x18                    
+/* 801F3A18  41 82 00 68 */	beq lbl_801F3A80                         /* constant-address: 801F3A80, symbol: lbl_801F3A80 */
+/* 801F3A1C  88 1F 00 54 */	lbz r0, 0x54(r31)                       
+/* 801F3A20  28 00 00 02 */	cmplwi r0, 2                            
+/* 801F3A24  41 82 00 5C */	beq lbl_801F3A80                         /* constant-address: 801F3A80, symbol: lbl_801F3A80 */
+/* 801F3A28  38 00 00 04 */	li r0, 4                                
+/* 801F3A2C  90 01 00 08 */	stw r0, 8(r1)                           
+/* 801F3A30  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)  /* constant-address: 80451368, symbol: mAudioMgrPtr__10Z2AudioMgr */
+/* 801F3A34  38 81 00 08 */	addi r4, r1, 8                          
+/* 801F3A38  38 A0 00 00 */	li r5, 0                                
+/* 801F3A3C  38 C0 00 00 */	li r6, 0                                
+/* 801F3A40  38 E0 00 00 */	li r7, 0                                
+/* 801F3A44  C0 22 AA 58 */	lfs f1, lit_4179(r2)                     /* constant-address: 80454458, symbol: lit_4179 */
+/* 801F3A48  FC 40 08 90 */	fmr f2, f1                              
+/* 801F3A4C  C0 62 AA 78 */	lfs f3, lit_4879(r2)                     /* constant-address: 80454478, symbol: lit_4879 */
+/* 801F3A50  FC 80 18 90 */	fmr f4, f3                              
+/* 801F3A54  39 00 00 00 */	li r8, 0                                
+/* 801F3A58  48 0B 7F 2D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc /* constant-address: 802AB984, symbol: seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc */
+/* 801F3A5C  88 1F 00 54 */	lbz r0, 0x54(r31)                       
+/* 801F3A60  98 1F 00 55 */	stb r0, 0x55(r31)                       
+/* 801F3A64  88 7F 00 54 */	lbz r3, 0x54(r31)                       
+/* 801F3A68  38 03 00 01 */	addi r0, r3, 1                          
+/* 801F3A6C  98 1F 00 54 */	stb r0, 0x54(r31)                       
+/* 801F3A70  7F E3 FB 78 */	mr r3, r31                              
+/* 801F3A74  48 00 02 09 */	bl dataSelectAnmSet__12dMenu_save_cFv    /* constant-address: 801F3C7C, symbol: dataSelectAnmSet__12dMenu_save_cFv */
+/* 801F3A78  38 00 00 32 */	li r0, 0x32                             
+/* 801F3A7C  98 1F 01 B2 */	stb r0, 0x1b2(r31)                      
 lbl_801F3A80:
-/* 801F3A80 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)
-/* 801F3A84 00000004  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 801F3A88 00000008  7C 08 03 A6 */	mtlr r0
-/* 801F3A8C 0000000C  38 21 00 20 */	addi r1, r1, 0x20
-/* 801F3A90 00000010  4E 80 00 20 */	blr 
+/* 801F3A80  83 E1 00 1C */	lwz r31, 0x1c(r1)                       
+/* 801F3A84  80 01 00 24 */	lwz r0, 0x24(r1)                        
+/* 801F3A88  7C 08 03 A6 */	mtlr r0                                 
+/* 801F3A8C  38 21 00 20 */	addi r1, r1, 0x20                       
+/* 801F3A90  4E 80 00 20 */	blr                                     

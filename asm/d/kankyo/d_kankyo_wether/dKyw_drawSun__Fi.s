@@ -1,13 +1,13 @@
 lbl_800570DC:
-/* 800570DC 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 800570E0 00000004  7C 08 02 A6 */	mflr r0
-/* 800570E4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 800570E8 0000000C  7C 64 1B 78 */	mr r4, r3
-/* 800570EC 00000010  3C 60 80 43 */	lis r3, g_env_light@ha
-/* 800570F0 00000014  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 800570F4 00000018  80 63 0E 74 */	lwz r3, 0xe74(r3)	/* effective address: 8042D8C8 */
-/* 800570F8 0000001C  4B FF FA 51 */	bl dKyw_setDrawPacketListSky__FP9J3DPacketi
-/* 800570FC 00000020  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80057100 00000024  7C 08 03 A6 */	mtlr r0
-/* 80057104 00000028  38 21 00 10 */	addi r1, r1, 0x10
-/* 80057108 0000002C  4E 80 00 20 */	blr 
+/* 800570DC  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 800570E0  7C 08 02 A6 */	mflr r0                                 
+/* 800570E4  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 800570E8  7C 64 1B 78 */	mr r4, r3                               
+/* 800570EC  3C 60 80 43 */	lis r3, g_env_light@ha                  
+/* 800570F0  38 63 CA 54 */	addi r3, r3, g_env_light@l               /* constant-address: 8042CA54, symbol: g_env_light */
+/* 800570F4  80 63 0E 74 */	lwz r3, 0xe74(r3)                        /* constant-address: 8042D8C8, symbol: None */
+/* 800570F8  4B FF FA 51 */	bl dKyw_setDrawPacketListSky__FP9J3DPacketi /* constant-address: 80056B48, symbol: dKyw_setDrawPacketListSky__FP9J3DPacketi */
+/* 800570FC  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 80057100  7C 08 03 A6 */	mtlr r0                                 
+/* 80057104  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 80057108  4E 80 00 20 */	blr                                     

@@ -1,327 +1,327 @@
 lbl_8033CDC0:
-/* 8033CDC0 00000000  7C 08 02 A6 */	mflr r0
-/* 8033CDC4 00000004  90 01 00 04 */	stw r0, 4(r1)
-/* 8033CDC8 00000008  94 21 FE D0 */	stwu r1, -0x130(r1)
-/* 8033CDCC 0000000C  BF 01 01 10 */	stmw r24, 0x110(r1)
-/* 8033CDD0 00000010  7C 7B 1B 78 */	mr r27, r3
-/* 8033CDD4 00000014  7C 98 23 78 */	mr r24, r4
-/* 8033CDD8 00000018  7C BC 2B 78 */	mr r28, r5
-/* 8033CDDC 0000001C  7C DD 33 78 */	mr r29, r6
-/* 8033CDE0 00000020  7C F9 3B 78 */	mr r25, r7
-/* 8033CDE4 00000024  7D 1A 43 78 */	mr r26, r8
-/* 8033CDE8 00000028  7D 3E 4B 78 */	mr r30, r9
-/* 8033CDEC 0000002C  48 00 09 09 */	bl OSDisableInterrupts
-/* 8033CDF0 00000030  38 60 00 1C */	li r3, 0x1c
-/* 8033CDF4 00000034  38 80 00 01 */	li r4, 1
-/* 8033CDF8 00000038  4B FF E4 B5 */	bl OSAllocFromArenaLo
-/* 8033CDFC 0000003C  7C 7F 1B 78 */	mr r31, r3
-/* 8033CE00 00000040  38 00 00 01 */	li r0, 1
-/* 8033CE04 00000044  90 1F 00 00 */	stw r0, 0(r31)
-/* 8033CE08 00000048  2C 19 00 00 */	cmpwi r25, 0
-/* 8033CE0C 0000004C  93 1F 00 04 */	stw r24, 4(r31)
-/* 8033CE10 00000050  93 9F 00 0C */	stw r28, 0xc(r31)
-/* 8033CE14 00000054  93 BF 00 10 */	stw r29, 0x10(r31)
-/* 8033CE18 00000058  93 3F 00 14 */	stw r25, 0x14(r31)
-/* 8033CE1C 0000005C  40 82 00 24 */	bne lbl_8033CE40
-/* 8033CE20 00000060  38 60 20 00 */	li r3, 0x2000
-/* 8033CE24 00000064  38 80 00 01 */	li r4, 1
-/* 8033CE28 00000068  4B FF E4 85 */	bl OSAllocFromArenaLo
-/* 8033CE2C 0000006C  90 7F 00 18 */	stw r3, 0x18(r31)
-/* 8033CE30 00000070  7F 44 D3 78 */	mr r4, r26
-/* 8033CE34 00000074  7F C5 F3 78 */	mr r5, r30
-/* 8033CE38 00000078  80 7F 00 18 */	lwz r3, 0x18(r31)
-/* 8033CE3C 0000007C  4B FF FC 45 */	bl PackArgs
+/* 8033CDC0  7C 08 02 A6 */	mflr r0                                 
+/* 8033CDC4  90 01 00 04 */	stw r0, 4(r1)                           
+/* 8033CDC8  94 21 FE D0 */	stwu r1, -0x130(r1)                     
+/* 8033CDCC  BF 01 01 10 */	stmw r24, 0x110(r1)                     
+/* 8033CDD0  7C 7B 1B 78 */	mr r27, r3                              
+/* 8033CDD4  7C 98 23 78 */	mr r24, r4                              
+/* 8033CDD8  7C BC 2B 78 */	mr r28, r5                              
+/* 8033CDDC  7C DD 33 78 */	mr r29, r6                              
+/* 8033CDE0  7C F9 3B 78 */	mr r25, r7                              
+/* 8033CDE4  7D 1A 43 78 */	mr r26, r8                              
+/* 8033CDE8  7D 3E 4B 78 */	mr r30, r9                              
+/* 8033CDEC  48 00 09 09 */	bl OSDisableInterrupts                   /* constant-address: 8033D6F4, symbol: OSDisableInterrupts */
+/* 8033CDF0  38 60 00 1C */	li r3, 0x1c                             
+/* 8033CDF4  38 80 00 01 */	li r4, 1                                
+/* 8033CDF8  4B FF E4 B5 */	bl OSAllocFromArenaLo                    /* constant-address: 8033B2AC, symbol: OSAllocFromArenaLo */
+/* 8033CDFC  7C 7F 1B 78 */	mr r31, r3                              
+/* 8033CE00  38 00 00 01 */	li r0, 1                                
+/* 8033CE04  90 1F 00 00 */	stw r0, 0(r31)                           /* constant-address: 0000001C */
+/* 8033CE08  2C 19 00 00 */	cmpwi r25, 0                            
+/* 8033CE0C  93 1F 00 04 */	stw r24, 4(r31)                          /* constant-address: 00000020 */
+/* 8033CE10  93 9F 00 0C */	stw r28, 0xc(r31)                        /* constant-address: 00000028 */
+/* 8033CE14  93 BF 00 10 */	stw r29, 0x10(r31)                       /* constant-address: 0000002C */
+/* 8033CE18  93 3F 00 14 */	stw r25, 0x14(r31)                       /* constant-address: 00000030 */
+/* 8033CE1C  40 82 00 24 */	bne lbl_8033CE40                         /* constant-address: 8033CE40, symbol: lbl_8033CE40 */
+/* 8033CE20  38 60 20 00 */	li r3, 0x2000                           
+/* 8033CE24  38 80 00 01 */	li r4, 1                                
+/* 8033CE28  4B FF E4 85 */	bl OSAllocFromArenaLo                    /* constant-address: 8033B2AC, symbol: OSAllocFromArenaLo */
+/* 8033CE2C  90 7F 00 18 */	stw r3, 0x18(r31)                        /* constant-address: 00000034 */
+/* 8033CE30  7F 44 D3 78 */	mr r4, r26                              
+/* 8033CE34  7F C5 F3 78 */	mr r5, r30                              
+/* 8033CE38  80 7F 00 18 */	lwz r3, 0x18(r31)                        /* constant-address: 00000034 */
+/* 8033CE3C  4B FF FC 45 */	bl PackArgs                              /* constant-address: 8033CA80, symbol: PackArgs */
 lbl_8033CE40:
-/* 8033CE40 00000000  48 00 C2 B1 */	bl DVDInit
-/* 8033CE44 00000004  38 60 00 01 */	li r3, 1
-/* 8033CE48 00000008  48 00 E4 2D */	bl DVDSetAutoInvalidation
-/* 8033CE4C 0000000C  48 00 E4 39 */	bl DVDResume
-/* 8033CE50 00000010  38 00 00 00 */	li r0, 0
-/* 8033CE54 00000014  3C 60 80 34 */	lis r3, Callback@ha
-/* 8033CE58 00000018  90 0D 90 D8 */	stw r0, Prepared(r13)
-/* 8033CE5C 0000001C  38 63 CC B0 */	addi r3, r3, Callback@l
-/* 8033CE60 00000020  48 00 E8 C1 */	bl __DVDPrepareResetAsync
-/* 8033CE64 00000024  38 60 FF E0 */	li r3, -32
-/* 8033CE68 00000028  48 00 0C 55 */	bl __OSMaskInterrupts
-/* 8033CE6C 0000002C  38 60 04 00 */	li r3, 0x400
-/* 8033CE70 00000030  48 00 0C D5 */	bl __OSUnmaskInterrupts
-/* 8033CE74 00000034  48 00 08 95 */	bl OSEnableInterrupts
-/* 8033CE78 00000038  48 00 00 04 */	b lbl_8033CE7C
+/* 8033CE40  48 00 C2 B1 */	bl DVDInit                               /* constant-address: 803490F0, symbol: DVDInit */
+/* 8033CE44  38 60 00 01 */	li r3, 1                                
+/* 8033CE48  48 00 E4 2D */	bl DVDSetAutoInvalidation                /* constant-address: 8034B274, symbol: DVDSetAutoInvalidation */
+/* 8033CE4C  48 00 E4 39 */	bl DVDResume                             /* constant-address: 8034B284, symbol: DVDResume */
+/* 8033CE50  38 00 00 00 */	li r0, 0                                
+/* 8033CE54  3C 60 80 34 */	lis r3, Callback@ha                     
+/* 8033CE58  90 0D 90 D8 */	stw r0, Prepared(r13)                    /* constant-address: 80451658, symbol: Prepared */
+/* 8033CE5C  38 63 CC B0 */	addi r3, r3, Callback@l                  /* constant-address: 8033CCB0, symbol: Callback */
+/* 8033CE60  48 00 E8 C1 */	bl __DVDPrepareResetAsync                /* constant-address: 8034B720, symbol: __DVDPrepareResetAsync */
+/* 8033CE64  38 60 FF E0 */	li r3, -32                              
+/* 8033CE68  48 00 0C 55 */	bl __OSMaskInterrupts                    /* constant-address: 8033DABC, symbol: __OSMaskInterrupts */
+/* 8033CE6C  38 60 04 00 */	li r3, 0x400                            
+/* 8033CE70  48 00 0C D5 */	bl __OSUnmaskInterrupts                  /* constant-address: 8033DB44, symbol: __OSUnmaskInterrupts */
+/* 8033CE74  48 00 08 95 */	bl OSEnableInterrupts                    /* constant-address: 8033D708, symbol: OSEnableInterrupts */
+/* 8033CE78  48 00 00 04 */	b lbl_8033CE7C                           /* constant-address: 8033CE7C, symbol: lbl_8033CE7C */
 lbl_8033CE7C:
-/* 8033CE7C 00000000  48 00 00 04 */	b lbl_8033CE80
+/* 8033CE7C  48 00 00 04 */	b lbl_8033CE80                           /* constant-address: 8033CE80, symbol: lbl_8033CE80 */
 lbl_8033CE80:
-/* 8033CE80 00000000  48 00 00 18 */	b lbl_8033CE98
+/* 8033CE80  48 00 00 18 */	b lbl_8033CE98                           /* constant-address: 8033CE98, symbol: lbl_8033CE98 */
 lbl_8033CE84:
-/* 8033CE84 00000000  48 00 E7 A5 */	bl DVDCheckDisk
-/* 8033CE88 00000004  2C 03 00 00 */	cmpwi r3, 0
-/* 8033CE8C 00000008  40 82 00 0C */	bne lbl_8033CE98
-/* 8033CE90 0000000C  38 60 00 00 */	li r3, 0
-/* 8033CE94 00000010  48 00 29 D1 */	bl __OSDoHotReset
+/* 8033CE84  48 00 E7 A5 */	bl DVDCheckDisk                          /* constant-address: 8034B628, symbol: DVDCheckDisk */
+/* 8033CE88  2C 03 00 00 */	cmpwi r3, 0                             
+/* 8033CE8C  40 82 00 0C */	bne lbl_8033CE98                         /* constant-address: 8033CE98, symbol: lbl_8033CE98 */
+/* 8033CE90  38 60 00 00 */	li r3, 0                                
+/* 8033CE94  48 00 29 D1 */	bl __OSDoHotReset                        /* constant-address: 8033F864, symbol: __OSDoHotReset */
 lbl_8033CE98:
-/* 8033CE98 00000000  80 0D 90 D8 */	lwz r0, Prepared(r13)
-/* 8033CE9C 00000004  2C 00 00 01 */	cmpwi r0, 1
-/* 8033CEA0 00000008  40 82 FF E4 */	bne lbl_8033CE84
-/* 8033CEA4 0000000C  80 0D 90 8C */	lwz r0, __OSIsGcam(r13)
-/* 8033CEA8 00000010  2C 00 00 00 */	cmpwi r0, 0
-/* 8033CEAC 00000014  40 82 00 7C */	bne lbl_8033CF28
-/* 8033CEB0 00000018  48 00 E7 71 */	bl DVDGetCurrentDiskID
-/* 8033CEB4 0000001C  88 03 00 08 */	lbz r0, 8(r3)
-/* 8033CEB8 00000020  28 00 00 00 */	cmplwi r0, 0
-/* 8033CEBC 00000024  41 82 00 0C */	beq lbl_8033CEC8
-/* 8033CEC0 00000028  38 00 00 01 */	li r0, 1
-/* 8033CEC4 0000002C  48 00 00 08 */	b lbl_8033CECC
+/* 8033CE98  80 0D 90 D8 */	lwz r0, Prepared(r13)                    /* constant-address: 80451658, symbol: Prepared */
+/* 8033CE9C  2C 00 00 01 */	cmpwi r0, 1                             
+/* 8033CEA0  40 82 FF E4 */	bne lbl_8033CE84                         /* constant-address: 8033CE84, symbol: lbl_8033CE84 */
+/* 8033CEA4  80 0D 90 8C */	lwz r0, __OSIsGcam(r13)                  /* constant-address: 8045160C, symbol: __OSIsGcam */
+/* 8033CEA8  2C 00 00 00 */	cmpwi r0, 0                             
+/* 8033CEAC  40 82 00 7C */	bne lbl_8033CF28                         /* constant-address: 8033CF28, symbol: lbl_8033CF28 */
+/* 8033CEB0  48 00 E7 71 */	bl DVDGetCurrentDiskID                   /* constant-address: 8034B620, symbol: DVDGetCurrentDiskID */
+/* 8033CEB4  88 03 00 08 */	lbz r0, 8(r3)                            /* constant-address: 00000408 */
+/* 8033CEB8  28 00 00 00 */	cmplwi r0, 0                            
+/* 8033CEBC  41 82 00 0C */	beq lbl_8033CEC8                         /* constant-address: 8033CEC8, symbol: lbl_8033CEC8 */
+/* 8033CEC0  38 00 00 01 */	li r0, 1                                
+/* 8033CEC4  48 00 00 08 */	b lbl_8033CECC                           /* constant-address: 8033CECC, symbol: lbl_8033CECC */
 lbl_8033CEC8:
-/* 8033CEC8 00000000  38 00 00 00 */	li r0, 0
+/* 8033CEC8  38 00 00 00 */	li r0, 0                                
 lbl_8033CECC:
-/* 8033CECC 00000000  2C 00 00 00 */	cmpwi r0, 0
-/* 8033CED0 00000004  41 82 00 58 */	beq lbl_8033CF28
-/* 8033CED4 00000008  38 60 00 00 */	li r3, 0
-/* 8033CED8 0000000C  48 01 31 55 */	bl AISetStreamVolLeft
-/* 8033CEDC 00000010  38 60 00 00 */	li r3, 0
-/* 8033CEE0 00000014  48 01 31 79 */	bl AISetStreamVolRight
-/* 8033CEE4 00000018  38 61 00 DC */	addi r3, r1, 0xdc
-/* 8033CEE8 0000001C  38 80 00 00 */	li r4, 0
-/* 8033CEEC 00000020  48 00 E0 C1 */	bl DVDCancelStreamAsync
-/* 8033CEF0 00000024  48 00 00 04 */	b lbl_8033CEF4
+/* 8033CECC  2C 00 00 00 */	cmpwi r0, 0                             
+/* 8033CED0  41 82 00 58 */	beq lbl_8033CF28                         /* constant-address: 8033CF28, symbol: lbl_8033CF28 */
+/* 8033CED4  38 60 00 00 */	li r3, 0                                
+/* 8033CED8  48 01 31 55 */	bl AISetStreamVolLeft                    /* constant-address: 8035002C, symbol: AISetStreamVolLeft */
+/* 8033CEDC  38 60 00 00 */	li r3, 0                                
+/* 8033CEE0  48 01 31 79 */	bl AISetStreamVolRight                   /* constant-address: 80350058, symbol: AISetStreamVolRight */
+/* 8033CEE4  38 61 00 DC */	addi r3, r1, 0xdc                       
+/* 8033CEE8  38 80 00 00 */	li r4, 0                                
+/* 8033CEEC  48 00 E0 C1 */	bl DVDCancelStreamAsync                  /* constant-address: 8034AFAC, symbol: DVDCancelStreamAsync */
+/* 8033CEF0  48 00 00 04 */	b lbl_8033CEF4                           /* constant-address: 8033CEF4, symbol: lbl_8033CEF4 */
 lbl_8033CEF4:
-/* 8033CEF4 00000000  48 00 00 04 */	b lbl_8033CEF8
+/* 8033CEF4  48 00 00 04 */	b lbl_8033CEF8                           /* constant-address: 8033CEF8, symbol: lbl_8033CEF8 */
 lbl_8033CEF8:
-/* 8033CEF8 00000000  48 00 00 18 */	b lbl_8033CF10
+/* 8033CEF8  48 00 00 18 */	b lbl_8033CF10                           /* constant-address: 8033CF10, symbol: lbl_8033CF10 */
 lbl_8033CEFC:
-/* 8033CEFC 00000000  48 00 E7 2D */	bl DVDCheckDisk
-/* 8033CF00 00000004  2C 03 00 00 */	cmpwi r3, 0
-/* 8033CF04 00000008  40 82 00 0C */	bne lbl_8033CF10
-/* 8033CF08 0000000C  38 60 00 00 */	li r3, 0
-/* 8033CF0C 00000010  48 00 29 59 */	bl __OSDoHotReset
+/* 8033CEFC  48 00 E7 2D */	bl DVDCheckDisk                          /* constant-address: 8034B628, symbol: DVDCheckDisk */
+/* 8033CF00  2C 03 00 00 */	cmpwi r3, 0                             
+/* 8033CF04  40 82 00 0C */	bne lbl_8033CF10                         /* constant-address: 8033CF10, symbol: lbl_8033CF10 */
+/* 8033CF08  38 60 00 00 */	li r3, 0                                
+/* 8033CF0C  48 00 29 59 */	bl __OSDoHotReset                        /* constant-address: 8033F864, symbol: __OSDoHotReset */
 lbl_8033CF10:
-/* 8033CF10 00000000  38 61 00 DC */	addi r3, r1, 0xdc
-/* 8033CF14 00000004  48 00 E2 69 */	bl DVDGetCommandBlockStatus
-/* 8033CF18 00000008  2C 03 00 00 */	cmpwi r3, 0
-/* 8033CF1C 0000000C  40 82 FF E0 */	bne lbl_8033CEFC
-/* 8033CF20 00000010  38 60 00 00 */	li r3, 0
-/* 8033CF24 00000014  48 01 2E 49 */	bl AISetStreamPlayState
+/* 8033CF10  38 61 00 DC */	addi r3, r1, 0xdc                       
+/* 8033CF14  48 00 E2 69 */	bl DVDGetCommandBlockStatus              /* constant-address: 8034B17C, symbol: DVDGetCommandBlockStatus */
+/* 8033CF18  2C 03 00 00 */	cmpwi r3, 0                             
+/* 8033CF1C  40 82 FF E0 */	bne lbl_8033CEFC                         /* constant-address: 8033CEFC, symbol: lbl_8033CEFC */
+/* 8033CF20  38 60 00 00 */	li r3, 0                                
+/* 8033CF24  48 01 2E 49 */	bl AISetStreamPlayState                  /* constant-address: 8034FD6C, symbol: AISetStreamPlayState */
 lbl_8033CF28:
-/* 8033CF28 00000000  38 60 00 20 */	li r3, 0x20
-/* 8033CF2C 00000004  38 80 00 20 */	li r4, 0x20
-/* 8033CF30 00000008  4B FF E3 7D */	bl OSAllocFromArenaLo
-/* 8033CF34 0000000C  7C 7E 1B 78 */	mr r30, r3
-/* 8033CF38 00000010  4B FF FD C5 */	bl GetApploaderPosition
-/* 8033CF3C 00000014  7C 65 1B 78 */	mr r5, r3
-/* 8033CF40 00000018  7F C3 F3 78 */	mr r3, r30
-/* 8033CF44 0000001C  38 80 00 20 */	li r4, 0x20
-/* 8033CF48 00000020  4B FF FC FD */	bl ReadDisc
-/* 8033CF4C 00000024  4B FF FD B1 */	bl GetApploaderPosition
-/* 8033CF50 00000028  80 9E 00 14 */	lwz r4, 0x14(r30)
-/* 8033CF54 0000002C  38 A3 00 20 */	addi r5, r3, 0x20
-/* 8033CF58 00000030  3C 60 81 20 */	lis r3, 0x8120
-/* 8033CF5C 00000034  38 04 00 1F */	addi r0, r4, 0x1f
-/* 8033CF60 00000038  54 04 00 34 */	rlwinm r4, r0, 0, 0, 0x1a
-/* 8033CF64 0000003C  4B FF FC E1 */	bl ReadDisc
-/* 8033CF68 00000040  80 9E 00 14 */	lwz r4, 0x14(r30)
-/* 8033CF6C 00000044  3C 60 81 20 */	lis r3, 0x8120
-/* 8033CF70 00000048  38 04 00 1F */	addi r0, r4, 0x1f
-/* 8033CF74 0000004C  54 04 00 34 */	rlwinm r4, r0, 0, 0, 0x1a
-/* 8033CF78 00000050  4B FF E7 19 */	bl ICInvalidateRange
-/* 8033CF7C 00000054  3C 60 80 3D */	lis r3, lit_115@ha
-/* 8033CF80 00000058  38 83 FC 38 */	addi r4, r3, lit_115@l
-/* 8033CF84 0000005C  7F C3 F3 78 */	mr r3, r30
-/* 8033CF88 00000060  38 A0 00 0A */	li r5, 0xa
-/* 8033CF8C 00000064  48 02 B9 C9 */	bl strncmp
-/* 8033CF90 00000068  2C 03 00 00 */	cmpwi r3, 0
-/* 8033CF94 0000006C  40 81 00 0C */	ble lbl_8033CFA0
-/* 8033CF98 00000070  38 00 00 01 */	li r0, 1
-/* 8033CF9C 00000074  48 00 00 08 */	b lbl_8033CFA4
+/* 8033CF28  38 60 00 20 */	li r3, 0x20                             
+/* 8033CF2C  38 80 00 20 */	li r4, 0x20                             
+/* 8033CF30  4B FF E3 7D */	bl OSAllocFromArenaLo                    /* constant-address: 8033B2AC, symbol: OSAllocFromArenaLo */
+/* 8033CF34  7C 7E 1B 78 */	mr r30, r3                              
+/* 8033CF38  4B FF FD C5 */	bl GetApploaderPosition                  /* constant-address: 8033CCFC, symbol: GetApploaderPosition */
+/* 8033CF3C  7C 65 1B 78 */	mr r5, r3                               
+/* 8033CF40  7F C3 F3 78 */	mr r3, r30                              
+/* 8033CF44  38 80 00 20 */	li r4, 0x20                             
+/* 8033CF48  4B FF FC FD */	bl ReadDisc                              /* constant-address: 8033CC44, symbol: ReadDisc */
+/* 8033CF4C  4B FF FD B1 */	bl GetApploaderPosition                  /* constant-address: 8033CCFC, symbol: GetApploaderPosition */
+/* 8033CF50  80 9E 00 14 */	lwz r4, 0x14(r30)                        /* constant-address: 00000034 */
+/* 8033CF54  38 A3 00 20 */	addi r5, r3, 0x20                        /* constant-address: 00000040 */
+/* 8033CF58  3C 60 81 20 */	lis r3, 0x8120                          
+/* 8033CF5C  38 04 00 1F */	addi r0, r4, 0x1f                       
+/* 8033CF60  54 04 00 34 */	rlwinm r4, r0, 0, 0, 0x1a               
+/* 8033CF64  4B FF FC E1 */	bl ReadDisc                              /* constant-address: 8033CC44, symbol: ReadDisc */
+/* 8033CF68  80 9E 00 14 */	lwz r4, 0x14(r30)                        /* constant-address: 00000034 */
+/* 8033CF6C  3C 60 81 20 */	lis r3, 0x8120                          
+/* 8033CF70  38 04 00 1F */	addi r0, r4, 0x1f                       
+/* 8033CF74  54 04 00 34 */	rlwinm r4, r0, 0, 0, 0x1a               
+/* 8033CF78  4B FF E7 19 */	bl ICInvalidateRange                     /* constant-address: 8033B690, symbol: ICInvalidateRange */
+/* 8033CF7C  3C 60 80 3D */	lis r3, lit_115@ha                      
+/* 8033CF80  38 83 FC 38 */	addi r4, r3, lit_115@l                   /* constant-address: 803CFC38, symbol: lit_115 */
+/* 8033CF84  7F C3 F3 78 */	mr r3, r30                              
+/* 8033CF88  38 A0 00 0A */	li r5, 0xa                              
+/* 8033CF8C  48 02 B9 C9 */	bl strncmp                               /* constant-address: 80368954, symbol: strncmp */
+/* 8033CF90  2C 03 00 00 */	cmpwi r3, 0                             
+/* 8033CF94  40 81 00 0C */	ble lbl_8033CFA0                         /* constant-address: 8033CFA0, symbol: lbl_8033CFA0 */
+/* 8033CF98  38 00 00 01 */	li r0, 1                                
+/* 8033CF9C  48 00 00 08 */	b lbl_8033CFA4                           /* constant-address: 8033CFA4, symbol: lbl_8033CFA4 */
 lbl_8033CFA0:
-/* 8033CFA0 00000000  38 00 00 00 */	li r0, 0
+/* 8033CFA0  38 00 00 00 */	li r0, 0                                
 lbl_8033CFA4:
-/* 8033CFA4 00000000  2C 00 00 00 */	cmpwi r0, 0
-/* 8033CFA8 00000004  41 82 01 EC */	beq lbl_8033D194
-/* 8033CFAC 00000008  3C 1B 00 01 */	addis r0, r27, 1
-/* 8033CFB0 0000000C  28 00 FF FF */	cmplwi r0, 0xffff
-/* 8033CFB4 00000010  40 82 00 B0 */	bne lbl_8033D064
-/* 8033CFB8 00000014  80 6D 90 DC */	lwz r3, data_8045165C(r13)
-/* 8033CFBC 00000018  2C 03 00 00 */	cmpwi r3, 0
-/* 8033CFC0 0000001C  41 82 00 08 */	beq lbl_8033CFC8
-/* 8033CFC4 00000020  48 00 00 94 */	b lbl_8033D058
+/* 8033CFA4  2C 00 00 00 */	cmpwi r0, 0                             
+/* 8033CFA8  41 82 01 EC */	beq lbl_8033D194                         /* constant-address: 8033D194, symbol: lbl_8033D194 */
+/* 8033CFAC  3C 1B 00 01 */	addis r0, r27, 1                        
+/* 8033CFB0  28 00 FF FF */	cmplwi r0, 0xffff                       
+/* 8033CFB4  40 82 00 B0 */	bne lbl_8033D064                         /* constant-address: 8033D064, symbol: lbl_8033D064 */
+/* 8033CFB8  80 6D 90 DC */	lwz r3, data_8045165C(r13)               /* constant-address: 8045165C, symbol: data_8045165C */
+/* 8033CFBC  2C 03 00 00 */	cmpwi r3, 0                             
+/* 8033CFC0  41 82 00 08 */	beq lbl_8033CFC8                         /* constant-address: 8033CFC8, symbol: lbl_8033CFC8 */
+/* 8033CFC4  48 00 00 94 */	b lbl_8033D058                           /* constant-address: 8033D058, symbol: lbl_8033D058 */
 lbl_8033CFC8:
-/* 8033CFC8 00000000  3F 60 80 00 */	lis r27, 0x8000 /* 0x800030F4@ha */
-/* 8033CFCC 00000004  80 1B 30 F4 */	lwz r0, 0x30F4(r27)
-/* 8033CFD0 00000008  2C 00 00 00 */	cmpwi r0, 0
-/* 8033CFD4 0000000C  41 82 00 78 */	beq lbl_8033D04C
-/* 8033CFD8 00000010  38 60 00 40 */	li r3, 0x40
-/* 8033CFDC 00000014  38 80 00 20 */	li r4, 0x20
-/* 8033CFE0 00000018  4B FF E2 CD */	bl OSAllocFromArenaLo
-/* 8033CFE4 0000001C  80 DB 30 F4 */	lwz r6, 0x30f4(r27)	/* effective address: 800030F4 */
-/* 8033CFE8 00000020  7C 7B 1B 78 */	mr r27, r3
-/* 8033CFEC 00000024  7F 64 DB 78 */	mr r4, r27
-/* 8033CFF0 00000028  38 61 00 5C */	addi r3, r1, 0x5c
-/* 8033CFF4 0000002C  38 A0 00 40 */	li r5, 0x40
-/* 8033CFF8 00000030  38 E0 00 00 */	li r7, 0
-/* 8033CFFC 00000034  39 00 00 00 */	li r8, 0
-/* 8033D000 00000038  48 00 DD 2D */	bl DVDReadAbsAsyncPrio
-/* 8033D004 0000003C  48 00 00 04 */	b lbl_8033D008
+/* 8033CFC8  3F 60 80 00 */	lis r27, 0x8000 /* 0x800030F4@ha */     
+/* 8033CFCC  80 1B 30 F4 */	lwz r0, 0x30F4(r27)                      /* constant-address: 800030F4 */
+/* 8033CFD0  2C 00 00 00 */	cmpwi r0, 0                             
+/* 8033CFD4  41 82 00 78 */	beq lbl_8033D04C                         /* constant-address: 8033D04C, symbol: lbl_8033D04C */
+/* 8033CFD8  38 60 00 40 */	li r3, 0x40                             
+/* 8033CFDC  38 80 00 20 */	li r4, 0x20                             
+/* 8033CFE0  4B FF E2 CD */	bl OSAllocFromArenaLo                    /* constant-address: 8033B2AC, symbol: OSAllocFromArenaLo */
+/* 8033CFE4  80 DB 30 F4 */	lwz r6, 0x30f4(r27)                      /* constant-address: 800030F4 */
+/* 8033CFE8  7C 7B 1B 78 */	mr r27, r3                              
+/* 8033CFEC  7F 64 DB 78 */	mr r4, r27                              
+/* 8033CFF0  38 61 00 5C */	addi r3, r1, 0x5c                       
+/* 8033CFF4  38 A0 00 40 */	li r5, 0x40                             
+/* 8033CFF8  38 E0 00 00 */	li r7, 0                                
+/* 8033CFFC  39 00 00 00 */	li r8, 0                                
+/* 8033D000  48 00 DD 2D */	bl DVDReadAbsAsyncPrio                   /* constant-address: 8034AD2C, symbol: DVDReadAbsAsyncPrio */
+/* 8033D004  48 00 00 04 */	b lbl_8033D008                           /* constant-address: 8033D008, symbol: lbl_8033D008 */
 lbl_8033D008:
-/* 8033D008 00000000  48 00 00 04 */	b lbl_8033D00C
+/* 8033D008  48 00 00 04 */	b lbl_8033D00C                           /* constant-address: 8033D00C, symbol: lbl_8033D00C */
 lbl_8033D00C:
-/* 8033D00C 00000000  48 00 00 18 */	b lbl_8033D024
+/* 8033D00C  48 00 00 18 */	b lbl_8033D024                           /* constant-address: 8033D024, symbol: lbl_8033D024 */
 lbl_8033D010:
-/* 8033D010 00000000  48 00 E6 19 */	bl DVDCheckDisk
-/* 8033D014 00000004  2C 03 00 00 */	cmpwi r3, 0
-/* 8033D018 00000008  40 82 00 0C */	bne lbl_8033D024
-/* 8033D01C 0000000C  38 60 00 00 */	li r3, 0
-/* 8033D020 00000010  48 00 28 45 */	bl __OSDoHotReset
+/* 8033D010  48 00 E6 19 */	bl DVDCheckDisk                          /* constant-address: 8034B628, symbol: DVDCheckDisk */
+/* 8033D014  2C 03 00 00 */	cmpwi r3, 0                             
+/* 8033D018  40 82 00 0C */	bne lbl_8033D024                         /* constant-address: 8033D024, symbol: lbl_8033D024 */
+/* 8033D01C  38 60 00 00 */	li r3, 0                                
+/* 8033D020  48 00 28 45 */	bl __OSDoHotReset                        /* constant-address: 8033F864, symbol: __OSDoHotReset */
 lbl_8033D024:
-/* 8033D024 00000000  38 61 00 5C */	addi r3, r1, 0x5c
-/* 8033D028 00000004  48 00 E1 55 */	bl DVDGetCommandBlockStatus
-/* 8033D02C 00000008  2C 03 00 00 */	cmpwi r3, 0
-/* 8033D030 0000000C  40 82 FF E0 */	bne lbl_8033D010
-/* 8033D034 00000010  3C 60 80 00 */	lis r3, 0x8000 /* 0x800030F4@ha */
-/* 8033D038 00000014  80 1B 00 38 */	lwz r0, 0x38(r27)
-/* 8033D03C 00000018  80 63 30 F4 */	lwz r3, 0x30F4(r3)
-/* 8033D040 0000001C  7C 03 02 14 */	add r0, r3, r0
-/* 8033D044 00000020  90 0D 90 DC */	stw r0, data_8045165C(r13)
-/* 8033D048 00000024  48 00 00 0C */	b lbl_8033D054
+/* 8033D024  38 61 00 5C */	addi r3, r1, 0x5c                       
+/* 8033D028  48 00 E1 55 */	bl DVDGetCommandBlockStatus              /* constant-address: 8034B17C, symbol: DVDGetCommandBlockStatus */
+/* 8033D02C  2C 03 00 00 */	cmpwi r3, 0                             
+/* 8033D030  40 82 FF E0 */	bne lbl_8033D010                         /* constant-address: 8033D010, symbol: lbl_8033D010 */
+/* 8033D034  3C 60 80 00 */	lis r3, 0x8000 /* 0x800030F4@ha */      
+/* 8033D038  80 1B 00 38 */	lwz r0, 0x38(r27)                        /* constant-address: 00000078 */
+/* 8033D03C  80 63 30 F4 */	lwz r3, 0x30F4(r3)                       /* constant-address: 800030F4 */
+/* 8033D040  7C 03 02 14 */	add r0, r3, r0                          
+/* 8033D044  90 0D 90 DC */	stw r0, data_8045165C(r13)               /* constant-address: 8045165C, symbol: data_8045165C */
+/* 8033D048  48 00 00 0C */	b lbl_8033D054                           /* constant-address: 8033D054, symbol: lbl_8033D054 */
 lbl_8033D04C:
-/* 8033D04C 00000000  38 00 24 40 */	li r0, 0x2440
-/* 8033D050 00000004  90 0D 90 DC */	stw r0, data_8045165C(r13)
+/* 8033D04C  38 00 24 40 */	li r0, 0x2440                           
+/* 8033D050  90 0D 90 DC */	stw r0, data_8045165C(r13)               /* constant-address: 8045165C, symbol: data_8045165C */
 lbl_8033D054:
-/* 8033D054 00000000  80 6D 90 DC */	lwz r3, data_8045165C(r13)
+/* 8033D054  80 6D 90 DC */	lwz r3, data_8045165C(r13)               /* constant-address: 8045165C, symbol: data_8045165C */
 lbl_8033D058:
-/* 8033D058 00000000  80 1E 00 14 */	lwz r0, 0x14(r30)
-/* 8033D05C 00000004  7F 63 02 14 */	add r27, r3, r0
-/* 8033D060 00000008  3B 7B 00 20 */	addi r27, r27, 0x20
+/* 8033D058  80 1E 00 14 */	lwz r0, 0x14(r30)                        /* constant-address: 00000034 */
+/* 8033D05C  7F 63 02 14 */	add r27, r3, r0                         
+/* 8033D060  3B 7B 00 20 */	addi r27, r27, 0x20                     
 lbl_8033D064:
-/* 8033D064 00000000  93 7F 00 08 */	stw r27, 8(r31)
-/* 8033D068 00000004  38 61 00 C0 */	addi r3, r1, 0xc0
-/* 8033D06C 00000008  38 81 00 C4 */	addi r4, r1, 0xc4
-/* 8033D070 0000000C  81 9E 00 10 */	lwz r12, 0x10(r30)
-/* 8033D074 00000010  38 A1 00 C8 */	addi r5, r1, 0xc8
-/* 8033D078 00000014  7D 88 03 A6 */	mtlr r12
-/* 8033D07C 00000018  4E 80 00 21 */	blrl 
-/* 8033D080 0000001C  38 60 00 1C */	li r3, 0x1c
-/* 8033D084 00000020  38 80 00 01 */	li r4, 1
-/* 8033D088 00000024  4B FF E2 25 */	bl OSAllocFromArenaLo
-/* 8033D08C 00000028  7C 7B 1B 78 */	mr r27, r3
-/* 8033D090 0000002C  7F 63 DB 78 */	mr r3, r27
-/* 8033D094 00000030  7F E4 FB 78 */	mr r4, r31
-/* 8033D098 00000034  38 A0 00 1C */	li r5, 0x1c
-/* 8033D09C 00000038  4B CC 64 A5 */	bl memcpy
-/* 8033D0A0 0000003C  3C 80 80 00 */	lis r4, 0x8000 /* 0x800030F0@ha */
-/* 8033D0A4 00000040  81 81 00 C0 */	lwz r12, 0xc0(r1)
-/* 8033D0A8 00000044  3C 60 80 00 */	lis r3, OSReport@ha
-/* 8033D0AC 00000048  93 64 30 F0 */	stw r27, 0x30F0(r4)
-/* 8033D0B0 0000004C  38 63 6A BC */	addi r3, r3, OSReport@l
-/* 8033D0B4 00000050  7D 88 03 A6 */	mtlr r12
-/* 8033D0B8 00000054  4E 80 00 21 */	blrl 
-/* 8033D0BC 00000058  7F 63 DB 78 */	mr r3, r27
-/* 8033D0C0 0000005C  4B FF E1 E5 */	bl OSSetArenaLo
-/* 8033D0C4 00000060  48 00 00 04 */	b lbl_8033D0C8
+/* 8033D064  93 7F 00 08 */	stw r27, 8(r31)                          /* constant-address: 00000024 */
+/* 8033D068  38 61 00 C0 */	addi r3, r1, 0xc0                       
+/* 8033D06C  38 81 00 C4 */	addi r4, r1, 0xc4                       
+/* 8033D070  81 9E 00 10 */	lwz r12, 0x10(r30)                       /* constant-address: 00000030 */
+/* 8033D074  38 A1 00 C8 */	addi r5, r1, 0xc8                       
+/* 8033D078  7D 88 03 A6 */	mtlr r12                                
+/* 8033D07C  4E 80 00 21 */	blrl                                    
+/* 8033D080  38 60 00 1C */	li r3, 0x1c                             
+/* 8033D084  38 80 00 01 */	li r4, 1                                
+/* 8033D088  4B FF E2 25 */	bl OSAllocFromArenaLo                    /* constant-address: 8033B2AC, symbol: OSAllocFromArenaLo */
+/* 8033D08C  7C 7B 1B 78 */	mr r27, r3                              
+/* 8033D090  7F 63 DB 78 */	mr r3, r27                              
+/* 8033D094  7F E4 FB 78 */	mr r4, r31                              
+/* 8033D098  38 A0 00 1C */	li r5, 0x1c                             
+/* 8033D09C  4B CC 64 A5 */	bl memcpy                                /* constant-address: 80003540, symbol: memcpy */
+/* 8033D0A0  3C 80 80 00 */	lis r4, 0x8000 /* 0x800030F0@ha */      
+/* 8033D0A4  81 81 00 C0 */	lwz r12, 0xc0(r1)                       
+/* 8033D0A8  3C 60 80 00 */	lis r3, OSReport@ha                     
+/* 8033D0AC  93 64 30 F0 */	stw r27, 0x30F0(r4)                      /* constant-address: 800030F0 */
+/* 8033D0B0  38 63 6A BC */	addi r3, r3, OSReport@l                  /* constant-address: 80006ABC, symbol: OSReport */
+/* 8033D0B4  7D 88 03 A6 */	mtlr r12                                
+/* 8033D0B8  4E 80 00 21 */	blrl                                    
+/* 8033D0BC  7F 63 DB 78 */	mr r3, r27                              
+/* 8033D0C0  4B FF E1 E5 */	bl OSSetArenaLo                          /* constant-address: 8033B2A4, symbol: OSSetArenaLo */
+/* 8033D0C4  48 00 00 04 */	b lbl_8033D0C8                           /* constant-address: 8033D0C8, symbol: lbl_8033D0C8 */
 lbl_8033D0C8:
-/* 8033D0C8 00000000  48 00 00 04 */	b lbl_8033D0CC
+/* 8033D0C8  48 00 00 04 */	b lbl_8033D0CC                           /* constant-address: 8033D0CC, symbol: lbl_8033D0CC */
 lbl_8033D0CC:
-/* 8033D0CC 00000000  48 00 00 50 */	b lbl_8033D11C
+/* 8033D0CC  48 00 00 50 */	b lbl_8033D11C                           /* constant-address: 8033D11C, symbol: lbl_8033D11C */
 lbl_8033D0D0:
-/* 8033D0D0 00000000  80 C1 00 D4 */	lwz r6, 0xd4(r1)
-/* 8033D0D4 00000004  38 61 00 2C */	addi r3, r1, 0x2c
-/* 8033D0D8 00000008  80 A1 00 D0 */	lwz r5, 0xd0(r1)
-/* 8033D0DC 0000000C  38 E0 00 00 */	li r7, 0
-/* 8033D0E0 00000010  80 81 00 CC */	lwz r4, 0xcc(r1)
-/* 8033D0E4 00000014  39 00 00 00 */	li r8, 0
-/* 8033D0E8 00000018  48 00 DC 45 */	bl DVDReadAbsAsyncPrio
-/* 8033D0EC 0000001C  48 00 00 04 */	b lbl_8033D0F0
+/* 8033D0D0  80 C1 00 D4 */	lwz r6, 0xd4(r1)                        
+/* 8033D0D4  38 61 00 2C */	addi r3, r1, 0x2c                       
+/* 8033D0D8  80 A1 00 D0 */	lwz r5, 0xd0(r1)                        
+/* 8033D0DC  38 E0 00 00 */	li r7, 0                                
+/* 8033D0E0  80 81 00 CC */	lwz r4, 0xcc(r1)                        
+/* 8033D0E4  39 00 00 00 */	li r8, 0                                
+/* 8033D0E8  48 00 DC 45 */	bl DVDReadAbsAsyncPrio                   /* constant-address: 8034AD2C, symbol: DVDReadAbsAsyncPrio */
+/* 8033D0EC  48 00 00 04 */	b lbl_8033D0F0                           /* constant-address: 8033D0F0, symbol: lbl_8033D0F0 */
 lbl_8033D0F0:
-/* 8033D0F0 00000000  48 00 00 04 */	b lbl_8033D0F4
+/* 8033D0F0  48 00 00 04 */	b lbl_8033D0F4                           /* constant-address: 8033D0F4, symbol: lbl_8033D0F4 */
 lbl_8033D0F4:
-/* 8033D0F4 00000000  48 00 00 18 */	b lbl_8033D10C
+/* 8033D0F4  48 00 00 18 */	b lbl_8033D10C                           /* constant-address: 8033D10C, symbol: lbl_8033D10C */
 lbl_8033D0F8:
-/* 8033D0F8 00000000  48 00 E5 31 */	bl DVDCheckDisk
-/* 8033D0FC 00000004  2C 03 00 00 */	cmpwi r3, 0
-/* 8033D100 00000008  40 82 00 0C */	bne lbl_8033D10C
-/* 8033D104 0000000C  38 60 00 00 */	li r3, 0
-/* 8033D108 00000010  48 00 27 5D */	bl __OSDoHotReset
+/* 8033D0F8  48 00 E5 31 */	bl DVDCheckDisk                          /* constant-address: 8034B628, symbol: DVDCheckDisk */
+/* 8033D0FC  2C 03 00 00 */	cmpwi r3, 0                             
+/* 8033D100  40 82 00 0C */	bne lbl_8033D10C                         /* constant-address: 8033D10C, symbol: lbl_8033D10C */
+/* 8033D104  38 60 00 00 */	li r3, 0                                
+/* 8033D108  48 00 27 5D */	bl __OSDoHotReset                        /* constant-address: 8033F864, symbol: __OSDoHotReset */
 lbl_8033D10C:
-/* 8033D10C 00000000  38 61 00 2C */	addi r3, r1, 0x2c
-/* 8033D110 00000004  48 00 E0 6D */	bl DVDGetCommandBlockStatus
-/* 8033D114 00000008  2C 03 00 00 */	cmpwi r3, 0
-/* 8033D118 0000000C  40 82 FF E0 */	bne lbl_8033D0F8
+/* 8033D10C  38 61 00 2C */	addi r3, r1, 0x2c                       
+/* 8033D110  48 00 E0 6D */	bl DVDGetCommandBlockStatus              /* constant-address: 8034B17C, symbol: DVDGetCommandBlockStatus */
+/* 8033D114  2C 03 00 00 */	cmpwi r3, 0                             
+/* 8033D118  40 82 FF E0 */	bne lbl_8033D0F8                         /* constant-address: 8033D0F8, symbol: lbl_8033D0F8 */
 lbl_8033D11C:
-/* 8033D11C 00000000  81 81 00 C4 */	lwz r12, 0xc4(r1)
-/* 8033D120 00000004  38 61 00 CC */	addi r3, r1, 0xcc
-/* 8033D124 00000008  38 81 00 D0 */	addi r4, r1, 0xd0
-/* 8033D128 0000000C  38 A1 00 D4 */	addi r5, r1, 0xd4
-/* 8033D12C 00000010  7D 88 03 A6 */	mtlr r12
-/* 8033D130 00000014  4E 80 00 21 */	blrl 
-/* 8033D134 00000018  2C 03 00 00 */	cmpwi r3, 0
-/* 8033D138 0000001C  40 82 FF 98 */	bne lbl_8033D0D0
-/* 8033D13C 00000020  81 81 00 C8 */	lwz r12, 0xc8(r1)
-/* 8033D140 00000024  7D 88 03 A6 */	mtlr r12
-/* 8033D144 00000028  4E 80 00 21 */	blrl 
-/* 8033D148 0000002C  7C 7C 1B 78 */	mr r28, r3
-/* 8033D14C 00000030  38 60 00 1C */	li r3, 0x1c
-/* 8033D150 00000034  38 80 00 01 */	li r4, 1
-/* 8033D154 00000038  4B FF E1 59 */	bl OSAllocFromArenaLo
-/* 8033D158 0000003C  7C 7B 1B 78 */	mr r27, r3
-/* 8033D15C 00000040  7F 63 DB 78 */	mr r3, r27
-/* 8033D160 00000044  7F E4 FB 78 */	mr r4, r31
-/* 8033D164 00000048  38 A0 00 1C */	li r5, 0x1c
-/* 8033D168 0000004C  4B CC 63 D9 */	bl memcpy
-/* 8033D16C 00000050  3C 80 80 00 */	lis r4, 0x8000 /* 0x800030F0@ha */
-/* 8033D170 00000054  3C 60 CC 00 */	lis r3, 0xCC00 /* 0xCC003000@ha */
-/* 8033D174 00000058  93 64 30 F0 */	stw r27, 0x30F0(r4)
-/* 8033D178 0000005C  38 63 30 00 */	addi r3, r3, 0x3000 /* 0xCC003000@l */
-/* 8033D17C 00000060  38 00 00 07 */	li r0, 7
-/* 8033D180 00000064  90 03 00 24 */	stw r0, 0x24(r3)	/* effective address: CC003024 */
-/* 8033D184 00000068  48 00 05 71 */	bl OSDisableInterrupts
-/* 8033D188 0000006C  7F 83 E3 78 */	mr r3, r28
-/* 8033D18C 00000070  4B FF FA 7D */	bl Run
-/* 8033D190 00000074  48 00 00 A0 */	b lbl_8033D230
+/* 8033D11C  81 81 00 C4 */	lwz r12, 0xc4(r1)                       
+/* 8033D120  38 61 00 CC */	addi r3, r1, 0xcc                       
+/* 8033D124  38 81 00 D0 */	addi r4, r1, 0xd0                       
+/* 8033D128  38 A1 00 D4 */	addi r5, r1, 0xd4                       
+/* 8033D12C  7D 88 03 A6 */	mtlr r12                                
+/* 8033D130  4E 80 00 21 */	blrl                                    
+/* 8033D134  2C 03 00 00 */	cmpwi r3, 0                             
+/* 8033D138  40 82 FF 98 */	bne lbl_8033D0D0                         /* constant-address: 8033D0D0, symbol: lbl_8033D0D0 */
+/* 8033D13C  81 81 00 C8 */	lwz r12, 0xc8(r1)                       
+/* 8033D140  7D 88 03 A6 */	mtlr r12                                
+/* 8033D144  4E 80 00 21 */	blrl                                    
+/* 8033D148  7C 7C 1B 78 */	mr r28, r3                              
+/* 8033D14C  38 60 00 1C */	li r3, 0x1c                             
+/* 8033D150  38 80 00 01 */	li r4, 1                                
+/* 8033D154  4B FF E1 59 */	bl OSAllocFromArenaLo                    /* constant-address: 8033B2AC, symbol: OSAllocFromArenaLo */
+/* 8033D158  7C 7B 1B 78 */	mr r27, r3                              
+/* 8033D15C  7F 63 DB 78 */	mr r3, r27                              
+/* 8033D160  7F E4 FB 78 */	mr r4, r31                              
+/* 8033D164  38 A0 00 1C */	li r5, 0x1c                             
+/* 8033D168  4B CC 63 D9 */	bl memcpy                                /* constant-address: 80003540, symbol: memcpy */
+/* 8033D16C  3C 80 80 00 */	lis r4, 0x8000 /* 0x800030F0@ha */      
+/* 8033D170  3C 60 CC 00 */	lis r3, 0xCC00 /* 0xCC003000@ha */      
+/* 8033D174  93 64 30 F0 */	stw r27, 0x30F0(r4)                      /* constant-address: 800030F0 */
+/* 8033D178  38 63 30 00 */	addi r3, r3, 0x3000 /* 0xCC003000@l */   /* constant-address: CC003000 */
+/* 8033D17C  38 00 00 07 */	li r0, 7                                
+/* 8033D180  90 03 00 24 */	stw r0, 0x24(r3)                         /* constant-address: CC003024 */
+/* 8033D184  48 00 05 71 */	bl OSDisableInterrupts                   /* constant-address: 8033D6F4, symbol: OSDisableInterrupts */
+/* 8033D188  7F 83 E3 78 */	mr r3, r28                              
+/* 8033D18C  4B FF FA 7D */	bl Run                                   /* constant-address: 8033CC08, symbol: Run */
+/* 8033D190  48 00 00 A0 */	b lbl_8033D230                           /* constant-address: 8033D230, symbol: lbl_8033D230 */
 lbl_8033D194:
-/* 8033D194 00000000  3C 80 81 30 */	lis r4, 0x8130 /* 0x812FDFF0@ha */
-/* 8033D198 00000004  93 84 DF F0 */	stw r28, 0xDFF0(r4)
-/* 8033D19C 00000008  38 00 00 01 */	li r0, 1
-/* 8033D1A0 0000000C  3C 60 80 00 */	lis r3, 0x8000 /* 0x800030E2@ha */
-/* 8033D1A4 00000010  93 A4 DF EC */	stw r29, -0x2014(r4)	/* effective address: 812FDFEC */
-/* 8033D1A8 00000014  98 03 30 E2 */	stb r0, 0x30E2(r3)
-/* 8033D1AC 00000018  4B FF FB 51 */	bl GetApploaderPosition
-/* 8033D1B0 0000001C  80 1E 00 14 */	lwz r0, 0x14(r30)
-/* 8033D1B4 00000020  3C 80 81 30 */	lis r4, 0x8130
-/* 8033D1B8 00000024  80 BE 00 18 */	lwz r5, 0x18(r30)
-/* 8033D1BC 00000028  38 E0 00 00 */	li r7, 0
-/* 8033D1C0 0000002C  7C C3 02 14 */	add r6, r3, r0
-/* 8033D1C4 00000030  38 05 00 1F */	addi r0, r5, 0x1f
-/* 8033D1C8 00000034  38 C6 00 20 */	addi r6, r6, 0x20
-/* 8033D1CC 00000038  54 05 00 34 */	rlwinm r5, r0, 0, 0, 0x1a
-/* 8033D1D0 0000003C  38 61 00 8C */	addi r3, r1, 0x8c
-/* 8033D1D4 00000040  39 00 00 00 */	li r8, 0
-/* 8033D1D8 00000044  48 00 DB 55 */	bl DVDReadAbsAsyncPrio
-/* 8033D1DC 00000048  48 00 00 04 */	b lbl_8033D1E0
+/* 8033D194  3C 80 81 30 */	lis r4, 0x8130 /* 0x812FDFF0@ha */      
+/* 8033D198  93 84 DF F0 */	stw r28, 0xDFF0(r4)                      /* constant-address: 812FDFF0 */
+/* 8033D19C  38 00 00 01 */	li r0, 1                                
+/* 8033D1A0  3C 60 80 00 */	lis r3, 0x8000 /* 0x800030E2@ha */      
+/* 8033D1A4  93 A4 DF EC */	stw r29, -0x2014(r4)                     /* constant-address: 812FDFEC */
+/* 8033D1A8  98 03 30 E2 */	stb r0, 0x30E2(r3)                       /* constant-address: 800030E2 */
+/* 8033D1AC  4B FF FB 51 */	bl GetApploaderPosition                  /* constant-address: 8033CCFC, symbol: GetApploaderPosition */
+/* 8033D1B0  80 1E 00 14 */	lwz r0, 0x14(r30)                        /* constant-address: 00000034 */
+/* 8033D1B4  3C 80 81 30 */	lis r4, 0x8130                          
+/* 8033D1B8  80 BE 00 18 */	lwz r5, 0x18(r30)                        /* constant-address: 00000038 */
+/* 8033D1BC  38 E0 00 00 */	li r7, 0                                
+/* 8033D1C0  7C C3 02 14 */	add r6, r3, r0                          
+/* 8033D1C4  38 05 00 1F */	addi r0, r5, 0x1f                       
+/* 8033D1C8  38 C6 00 20 */	addi r6, r6, 0x20                       
+/* 8033D1CC  54 05 00 34 */	rlwinm r5, r0, 0, 0, 0x1a               
+/* 8033D1D0  38 61 00 8C */	addi r3, r1, 0x8c                       
+/* 8033D1D4  39 00 00 00 */	li r8, 0                                
+/* 8033D1D8  48 00 DB 55 */	bl DVDReadAbsAsyncPrio                   /* constant-address: 8034AD2C, symbol: DVDReadAbsAsyncPrio */
+/* 8033D1DC  48 00 00 04 */	b lbl_8033D1E0                           /* constant-address: 8033D1E0, symbol: lbl_8033D1E0 */
 lbl_8033D1E0:
-/* 8033D1E0 00000000  48 00 00 04 */	b lbl_8033D1E4
+/* 8033D1E0  48 00 00 04 */	b lbl_8033D1E4                           /* constant-address: 8033D1E4, symbol: lbl_8033D1E4 */
 lbl_8033D1E4:
-/* 8033D1E4 00000000  48 00 00 18 */	b lbl_8033D1FC
+/* 8033D1E4  48 00 00 18 */	b lbl_8033D1FC                           /* constant-address: 8033D1FC, symbol: lbl_8033D1FC */
 lbl_8033D1E8:
-/* 8033D1E8 00000000  48 00 E4 41 */	bl DVDCheckDisk
-/* 8033D1EC 00000004  2C 03 00 00 */	cmpwi r3, 0
-/* 8033D1F0 00000008  40 82 00 0C */	bne lbl_8033D1FC
-/* 8033D1F4 0000000C  38 60 00 00 */	li r3, 0
-/* 8033D1F8 00000010  48 00 26 6D */	bl __OSDoHotReset
+/* 8033D1E8  48 00 E4 41 */	bl DVDCheckDisk                          /* constant-address: 8034B628, symbol: DVDCheckDisk */
+/* 8033D1EC  2C 03 00 00 */	cmpwi r3, 0                             
+/* 8033D1F0  40 82 00 0C */	bne lbl_8033D1FC                         /* constant-address: 8033D1FC, symbol: lbl_8033D1FC */
+/* 8033D1F4  38 60 00 00 */	li r3, 0                                
+/* 8033D1F8  48 00 26 6D */	bl __OSDoHotReset                        /* constant-address: 8033F864, symbol: __OSDoHotReset */
 lbl_8033D1FC:
-/* 8033D1FC 00000000  38 61 00 8C */	addi r3, r1, 0x8c
-/* 8033D200 00000004  48 00 DF 7D */	bl DVDGetCommandBlockStatus
-/* 8033D204 00000008  2C 03 00 00 */	cmpwi r3, 0
-/* 8033D208 0000000C  40 82 FF E0 */	bne lbl_8033D1E8
-/* 8033D20C 00000010  80 9E 00 18 */	lwz r4, 0x18(r30)
-/* 8033D210 00000014  3C 60 81 30 */	lis r3, 0x8130
-/* 8033D214 00000018  38 04 00 1F */	addi r0, r4, 0x1f
-/* 8033D218 0000001C  54 04 00 34 */	rlwinm r4, r0, 0, 0, 0x1a
-/* 8033D21C 00000020  4B FF E4 75 */	bl ICInvalidateRange
-/* 8033D220 00000024  48 00 04 D5 */	bl OSDisableInterrupts
-/* 8033D224 00000028  4B FF E4 A1 */	bl ICFlashInvalidate
-/* 8033D228 0000002C  3C 60 81 30 */	lis r3, 0x8130
-/* 8033D22C 00000030  4B FF F9 DD */	bl Run
+/* 8033D1FC  38 61 00 8C */	addi r3, r1, 0x8c                       
+/* 8033D200  48 00 DF 7D */	bl DVDGetCommandBlockStatus              /* constant-address: 8034B17C, symbol: DVDGetCommandBlockStatus */
+/* 8033D204  2C 03 00 00 */	cmpwi r3, 0                             
+/* 8033D208  40 82 FF E0 */	bne lbl_8033D1E8                         /* constant-address: 8033D1E8, symbol: lbl_8033D1E8 */
+/* 8033D20C  80 9E 00 18 */	lwz r4, 0x18(r30)                        /* constant-address: 00000038 */
+/* 8033D210  3C 60 81 30 */	lis r3, 0x8130                          
+/* 8033D214  38 04 00 1F */	addi r0, r4, 0x1f                       
+/* 8033D218  54 04 00 34 */	rlwinm r4, r0, 0, 0, 0x1a               
+/* 8033D21C  4B FF E4 75 */	bl ICInvalidateRange                     /* constant-address: 8033B690, symbol: ICInvalidateRange */
+/* 8033D220  48 00 04 D5 */	bl OSDisableInterrupts                   /* constant-address: 8033D6F4, symbol: OSDisableInterrupts */
+/* 8033D224  4B FF E4 A1 */	bl ICFlashInvalidate                     /* constant-address: 8033B6C4, symbol: ICFlashInvalidate */
+/* 8033D228  3C 60 81 30 */	lis r3, 0x8130                          
+/* 8033D22C  4B FF F9 DD */	bl Run                                   /* constant-address: 8033CC08, symbol: Run */
 lbl_8033D230:
-/* 8033D230 00000000  BB 01 01 10 */	lmw r24, 0x110(r1)
-/* 8033D234 00000004  80 01 01 34 */	lwz r0, 0x134(r1)
-/* 8033D238 00000008  38 21 01 30 */	addi r1, r1, 0x130
-/* 8033D23C 0000000C  7C 08 03 A6 */	mtlr r0
-/* 8033D240 00000010  4E 80 00 20 */	blr 
+/* 8033D230  BB 01 01 10 */	lmw r24, 0x110(r1)                      
+/* 8033D234  80 01 01 34 */	lwz r0, 0x134(r1)                       
+/* 8033D238  38 21 01 30 */	addi r1, r1, 0x130                      
+/* 8033D23C  7C 08 03 A6 */	mtlr r0                                 
+/* 8033D240  4E 80 00 20 */	blr                                     

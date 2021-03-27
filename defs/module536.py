@@ -27,11 +27,11 @@ SECTIONS = [
 
 # Symbols
 SYMBOLS = [
-	{'addr':0x80C68580,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':0,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80C685AC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':0,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80C685D8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':0,'section':0,'r':[0,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80C685F8,'size':144,'pad':0,'label':"create1st__14daObjPRElvtr_cFv",'name':"create1st__14daObjPRElvtr_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
-	{'addr':0x80C68688,'size':112,'pad':0,'label':"setMtx__14daObjPRElvtr_cFv",'name':"setMtx__14daObjPRElvtr_cFv",'lib':-1,'tu':3,'section':0,'r':[2,0,0],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80C68580,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':0,'section':0,'r':[0,0,4],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80C685AC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':0,'section':0,'r':[0,0,3],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80C685D8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':0,'section':0,'r':[0,0,3],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80C685F8,'size':144,'pad':0,'label':"create1st__14daObjPRElvtr_cFv",'name':"create1st__14daObjPRElvtr_cFv",'lib':-1,'tu':3,'section':0,'r':[0,0,3],'sh':[0,0,0],'type':"ASMFunction"},
+	{'addr':0x80C68688,'size':112,'pad':0,'label':"setMtx__14daObjPRElvtr_cFv",'name':"setMtx__14daObjPRElvtr_cFv",'lib':-1,'tu':3,'section':0,'r':[0,0,8],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80C686F8,'size':112,'pad':0,'label':"CreateHeap__14daObjPRElvtr_cFv",'name':"CreateHeap__14daObjPRElvtr_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80C68768,'size':104,'pad':0,'label':"Create__14daObjPRElvtr_cFv",'name':"Create__14daObjPRElvtr_cFv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},
 	{'addr':0x80C687D0,'size':116,'pad':0,'label':"searchObjSwTurn__FPvPv",'name':"searchObjSwTurn__FPvPv",'lib':-1,'tu':3,'section':0,'r':[1,0,0],'sh':[0,0,0],'type':"ASMFunction"},

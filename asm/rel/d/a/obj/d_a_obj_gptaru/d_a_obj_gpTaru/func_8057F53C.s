@@ -1,3 +1,3 @@
 lbl_8057F53C:
-/* 8057F53C 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 8057F540 00000004  4B FF E2 1C */	b __dt__12dBgS_ObjAcchFv
+/* 8057F53C  38 63 FF EC */	addi r3, r3, -20
+/* 8057F540  4B FF E2 1C */	b __dt__12dBgS_ObjAcchFv

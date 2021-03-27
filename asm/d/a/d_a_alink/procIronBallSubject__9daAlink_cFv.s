@@ -1,37 +1,37 @@
 lbl_80115564:
-/* 80115564 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80115568 00000004  7C 08 02 A6 */	mflr r0
-/* 8011556C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80115570 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80115574 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80115578 00000014  4B FF FB 6D */	bl checkIronBallAnime__9daAlink_cCFv
-/* 8011557C 00000018  2C 03 00 00 */	cmpwi r3, 0
-/* 80115580 0000001C  41 82 00 10 */	beq lbl_80115590
-/* 80115584 00000020  7F E3 FB 78 */	mr r3, r31
-/* 80115588 00000024  38 80 00 12 */	li r4, 0x12
-/* 8011558C 00000028  4B F9 DC C5 */	bl setDoStatus__9daAlink_cFUc
+/* 80115564  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 80115568  7C 08 02 A6 */	mflr r0                                 
+/* 8011556C  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 80115570  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 80115574  7C 7F 1B 78 */	mr r31, r3                              
+/* 80115578  4B FF FB 6D */	bl checkIronBallAnime__9daAlink_cCFv     /* constant-address: 801150E4, symbol: checkIronBallAnime__9daAlink_cCFv */
+/* 8011557C  2C 03 00 00 */	cmpwi r3, 0                             
+/* 80115580  41 82 00 10 */	beq lbl_80115590                         /* constant-address: 80115590, symbol: lbl_80115590 */
+/* 80115584  7F E3 FB 78 */	mr r3, r31                              
+/* 80115588  38 80 00 12 */	li r4, 0x12                             
+/* 8011558C  4B F9 DC C5 */	bl setDoStatus__9daAlink_cFUc            /* constant-address: 800B3250, symbol: setDoStatus__9daAlink_cFUc */
 lbl_80115590:
-/* 80115590 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80115594 00000004  38 80 00 00 */	li r4, 0
-/* 80115598 00000008  4B F9 E1 9D */	bl setShapeAngleToAtnActor__9daAlink_cFi
-/* 8011559C 0000000C  7F E3 FB 78 */	mr r3, r31
-/* 801155A0 00000010  38 80 00 00 */	li r4, 0
-/* 801155A4 00000014  4B FA 4B 2D */	bl checkNextAction__9daAlink_cFi
-/* 801155A8 00000018  2C 03 00 00 */	cmpwi r3, 0
-/* 801155AC 0000001C  40 82 00 28 */	bne lbl_801155D4
-/* 801155B0 00000020  7F E3 FB 78 */	mr r3, r31
-/* 801155B4 00000024  4B F9 D0 51 */	bl itemButton__9daAlink_cFv
-/* 801155B8 00000028  2C 03 00 00 */	cmpwi r3, 0
-/* 801155BC 0000002C  41 82 00 18 */	beq lbl_801155D4
-/* 801155C0 00000030  A8 1F 30 18 */	lha r0, 0x3018(r31)
-/* 801155C4 00000034  2C 00 00 02 */	cmpwi r0, 2
-/* 801155C8 00000038  40 82 00 0C */	bne lbl_801155D4
-/* 801155CC 0000003C  7F E3 FB 78 */	mr r3, r31
-/* 801155D0 00000040  4B FB 92 D1 */	bl setBodyAngleToCamera__9daAlink_cFv
+/* 80115590  7F E3 FB 78 */	mr r3, r31                              
+/* 80115594  38 80 00 00 */	li r4, 0                                
+/* 80115598  4B F9 E1 9D */	bl setShapeAngleToAtnActor__9daAlink_cFi /* constant-address: 800B3734, symbol: setShapeAngleToAtnActor__9daAlink_cFi */
+/* 8011559C  7F E3 FB 78 */	mr r3, r31                              
+/* 801155A0  38 80 00 00 */	li r4, 0                                
+/* 801155A4  4B FA 4B 2D */	bl checkNextAction__9daAlink_cFi         /* constant-address: 800BA0D0, symbol: checkNextAction__9daAlink_cFi */
+/* 801155A8  2C 03 00 00 */	cmpwi r3, 0                             
+/* 801155AC  40 82 00 28 */	bne lbl_801155D4                         /* constant-address: 801155D4, symbol: lbl_801155D4 */
+/* 801155B0  7F E3 FB 78 */	mr r3, r31                              
+/* 801155B4  4B F9 D0 51 */	bl itemButton__9daAlink_cFv              /* constant-address: 800B2604, symbol: itemButton__9daAlink_cFv */
+/* 801155B8  2C 03 00 00 */	cmpwi r3, 0                             
+/* 801155BC  41 82 00 18 */	beq lbl_801155D4                         /* constant-address: 801155D4, symbol: lbl_801155D4 */
+/* 801155C0  A8 1F 30 18 */	lha r0, 0x3018(r31)                     
+/* 801155C4  2C 00 00 02 */	cmpwi r0, 2                             
+/* 801155C8  40 82 00 0C */	bne lbl_801155D4                         /* constant-address: 801155D4, symbol: lbl_801155D4 */
+/* 801155CC  7F E3 FB 78 */	mr r3, r31                              
+/* 801155D0  4B FB 92 D1 */	bl setBodyAngleToCamera__9daAlink_cFv    /* constant-address: 800CE8A0, symbol: setBodyAngleToCamera__9daAlink_cFv */
 lbl_801155D4:
-/* 801155D4 00000000  38 60 00 01 */	li r3, 1
-/* 801155D8 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 801155DC 00000008  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 801155E0 0000000C  7C 08 03 A6 */	mtlr r0
-/* 801155E4 00000010  38 21 00 10 */	addi r1, r1, 0x10
-/* 801155E8 00000014  4E 80 00 20 */	blr 
+/* 801155D4  38 60 00 01 */	li r3, 1                                
+/* 801155D8  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 801155DC  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 801155E0  7C 08 03 A6 */	mtlr r0                                 
+/* 801155E4  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 801155E8  4E 80 00 20 */	blr                                     

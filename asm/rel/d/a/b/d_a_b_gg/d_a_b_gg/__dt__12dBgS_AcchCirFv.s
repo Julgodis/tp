@@ -1,30 +1,30 @@
 lbl_805EC6C4:
-/* 805EC6C4 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 805EC6C8 00000004  7C 08 02 A6 */	mflr r0
-/* 805EC6CC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 805EC6D0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 805EC6D4 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 805EC6D8 00000014  7C 7E 1B 79 */	or. r30, r3, r3
-/* 805EC6DC 00000018  7C 9F 23 78 */	mr r31, r4
-/* 805EC6E0 0000001C  41 82 00 38 */	beq lbl_805EC718
-/* 805EC6E4 00000020  3C 60 80 5F */	lis r3, __vt__12dBgS_AcchCir@ha
-/* 805EC6E8 00000024  38 03 D6 30 */	addi r0, r3, __vt__12dBgS_AcchCir@l
-/* 805EC6EC 00000028  90 1E 00 0C */	stw r0, 0xc(r30)
-/* 805EC6F0 0000002C  38 7E 00 14 */	addi r3, r30, 0x14
-/* 805EC6F4 00000030  38 80 FF FF */	li r4, -1
-/* 805EC6F8 00000034  4B C8 28 20 */	b __dt__8cM3dGCirFv
-/* 805EC6FC 00000038  7F C3 F3 78 */	mr r3, r30
-/* 805EC700 0000003C  38 80 00 00 */	li r4, 0
-/* 805EC704 00000040  4B C7 B9 AC */	b __dt__13cBgS_PolyInfoFv
-/* 805EC708 00000044  7F E0 07 35 */	extsh. r0, r31
-/* 805EC70C 00000048  40 81 00 0C */	ble lbl_805EC718
-/* 805EC710 0000004C  7F C3 F3 78 */	mr r3, r30
-/* 805EC714 00000050  4B CE 26 28 */	b __dl__FPv
+/* 805EC6C4  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 805EC6C8  7C 08 02 A6 */	mflr r0
+/* 805EC6CC  90 01 00 14 */	stw r0, 0x14(r1)
+/* 805EC6D0  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 805EC6D4  93 C1 00 08 */	stw r30, 8(r1)
+/* 805EC6D8  7C 7E 1B 79 */	or. r30, r3, r3
+/* 805EC6DC  7C 9F 23 78 */	mr r31, r4
+/* 805EC6E0  41 82 00 38 */	beq lbl_805EC718
+/* 805EC6E4  3C 60 80 5F */	lis r3, __vt__12dBgS_AcchCir@ha
+/* 805EC6E8  38 03 D6 30 */	addi r0, r3, __vt__12dBgS_AcchCir@l
+/* 805EC6EC  90 1E 00 0C */	stw r0, 0xc(r30)
+/* 805EC6F0  38 7E 00 14 */	addi r3, r30, 0x14
+/* 805EC6F4  38 80 FF FF */	li r4, -1
+/* 805EC6F8  4B C8 28 20 */	b __dt__8cM3dGCirFv
+/* 805EC6FC  7F C3 F3 78 */	mr r3, r30
+/* 805EC700  38 80 00 00 */	li r4, 0
+/* 805EC704  4B C7 B9 AC */	b __dt__13cBgS_PolyInfoFv
+/* 805EC708  7F E0 07 35 */	extsh. r0, r31
+/* 805EC70C  40 81 00 0C */	ble lbl_805EC718
+/* 805EC710  7F C3 F3 78 */	mr r3, r30
+/* 805EC714  4B CE 26 28 */	b __dl__FPv
 lbl_805EC718:
-/* 805EC718 00000000  7F C3 F3 78 */	mr r3, r30
-/* 805EC71C 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 805EC720 00000008  83 C1 00 08 */	lwz r30, 8(r1)
-/* 805EC724 0000000C  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 805EC728 00000010  7C 08 03 A6 */	mtlr r0
-/* 805EC72C 00000014  38 21 00 10 */	addi r1, r1, 0x10
-/* 805EC730 00000018  4E 80 00 20 */	blr 
+/* 805EC718  7F C3 F3 78 */	mr r3, r30
+/* 805EC71C  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 805EC720  83 C1 00 08 */	lwz r30, 8(r1)
+/* 805EC724  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 805EC728  7C 08 03 A6 */	mtlr r0
+/* 805EC72C  38 21 00 10 */	addi r1, r1, 0x10
+/* 805EC730  4E 80 00 20 */	blr 

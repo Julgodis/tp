@@ -1,87 +1,87 @@
 lbl_80140984:
-/* 80140984 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 80140988 00000004  7C 08 02 A6 */	mflr r0
-/* 8014098C 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80140990 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80140994 00000010  48 22 18 49 */	bl _savegpr_29
-/* 80140998 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 8014099C 00000018  88 03 2F BF */	lbz r0, 0x2fbf(r3)
-/* 801409A0 0000001C  28 00 00 00 */	cmplwi r0, 0
-/* 801409A4 00000020  40 82 01 0C */	bne lbl_80140AB0
-/* 801409A8 00000024  3C 60 80 43 */	lis r3, g_env_light@ha
-/* 801409AC 00000028  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 801409B0 0000002C  38 80 00 0C */	li r4, 0xc
-/* 801409B4 00000030  38 BD 04 D0 */	addi r5, r29, 0x4d0
-/* 801409B8 00000034  38 DD 01 0C */	addi r6, r29, 0x10c
-/* 801409BC 00000038  48 06 2E 09 */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 801409C0 0000003C  7F A3 EB 78 */	mr r3, r29
-/* 801409C4 00000040  4B F8 BE 19 */	bl initTevCustomColor__9daAlink_cFv
-/* 801409C8 00000044  80 1D 05 74 */	lwz r0, 0x574(r29)
-/* 801409CC 00000048  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
-/* 801409D0 0000004C  40 82 00 18 */	bne lbl_801409E8
-/* 801409D4 00000050  7F A3 EB 78 */	mr r3, r29
-/* 801409D8 00000054  38 82 97 E8 */	addi r4, r2, 0x804531E8-0x80459A00 /* data_804531E8-_SDA2_BASE_ */
-/* 801409DC 00000058  4B F8 B9 89 */	bl setWaterDropColor__9daAlink_cFPC13J3DGXColorS10
-/* 801409E0 0000005C  7F A3 EB 78 */	mr r3, r29
-/* 801409E4 00000060  4B F8 A5 E5 */	bl setDrawHand__9daAlink_cFv
+/* 80140984  94 21 FF E0 */	stwu r1, -0x20(r1)                      
+/* 80140988  7C 08 02 A6 */	mflr r0                                 
+/* 8014098C  90 01 00 24 */	stw r0, 0x24(r1)                        
+/* 80140990  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 80140994  48 22 18 49 */	bl _savegpr_29                           /* constant-address: 803621DC, symbol: _savegpr_29 */
+/* 80140998  7C 7D 1B 78 */	mr r29, r3                              
+/* 8014099C  88 03 2F BF */	lbz r0, 0x2fbf(r3)                      
+/* 801409A0  28 00 00 00 */	cmplwi r0, 0                            
+/* 801409A4  40 82 01 0C */	bne lbl_80140AB0                         /* constant-address: 80140AB0, symbol: lbl_80140AB0 */
+/* 801409A8  3C 60 80 43 */	lis r3, g_env_light@ha                  
+/* 801409AC  38 63 CA 54 */	addi r3, r3, g_env_light@l               /* constant-address: 8042CA54, symbol: g_env_light */
+/* 801409B0  38 80 00 0C */	li r4, 0xc                              
+/* 801409B4  38 BD 04 D0 */	addi r5, r29, 0x4d0                     
+/* 801409B8  38 DD 01 0C */	addi r6, r29, 0x10c                     
+/* 801409BC  48 06 2E 09 */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c /* constant-address: 801A37C4, symbol: settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c */
+/* 801409C0  7F A3 EB 78 */	mr r3, r29                              
+/* 801409C4  4B F8 BE 19 */	bl initTevCustomColor__9daAlink_cFv      /* constant-address: 800CC7DC, symbol: initTevCustomColor__9daAlink_cFv */
+/* 801409C8  80 1D 05 74 */	lwz r0, 0x574(r29)                      
+/* 801409CC  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6                 
+/* 801409D0  40 82 00 18 */	bne lbl_801409E8                         /* constant-address: 801409E8, symbol: lbl_801409E8 */
+/* 801409D4  7F A3 EB 78 */	mr r3, r29                              
+/* 801409D8  38 82 97 E8 */	la r4, data_804531E8(r2) /* 804531E8-_SDA2_BASE_ */ /* constant-address: 804531E8, symbol: data_804531E8 */
+/* 801409DC  4B F8 B9 89 */	bl setWaterDropColor__9daAlink_cFPC13J3DGXColorS10 /* constant-address: 800CC364, symbol: setWaterDropColor__9daAlink_cFPC13J3DGXColorS10 */
+/* 801409E0  7F A3 EB 78 */	mr r3, r29                              
+/* 801409E4  4B F8 A5 E5 */	bl setDrawHand__9daAlink_cFv             /* constant-address: 800CAFC8, symbol: setDrawHand__9daAlink_cFv */
 lbl_801409E8:
-/* 801409E8 00000000  7F A3 EB 78 */	mr r3, r29
-/* 801409EC 00000004  80 9D 06 50 */	lwz r4, 0x650(r29)
-/* 801409F0 00000008  4B F8 B8 A9 */	bl basicModelDraw__9daAlink_cFP8J3DModel
-/* 801409F4 0000000C  80 1D 05 74 */	lwz r0, 0x574(r29)
-/* 801409F8 00000010  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
-/* 801409FC 00000014  40 82 00 5C */	bne lbl_80140A58
-/* 80140A00 00000018  7F A3 EB 78 */	mr r3, r29
-/* 80140A04 0000001C  80 9D 06 5C */	lwz r4, 0x65c(r29)
-/* 80140A08 00000020  4B F8 B8 91 */	bl basicModelDraw__9daAlink_cFP8J3DModel
-/* 80140A0C 00000024  7F A3 EB 78 */	mr r3, r29
-/* 80140A10 00000028  80 9D 06 58 */	lwz r4, 0x658(r29)
-/* 80140A14 0000002C  4B F8 B8 85 */	bl basicModelDraw__9daAlink_cFP8J3DModel
-/* 80140A18 00000030  7F A3 EB 78 */	mr r3, r29
-/* 80140A1C 00000034  80 9D 06 54 */	lwz r4, 0x654(r29)
-/* 80140A20 00000038  4B F8 B8 79 */	bl basicModelDraw__9daAlink_cFP8J3DModel
-/* 80140A24 0000003C  80 1D 05 70 */	lwz r0, 0x570(r29)
-/* 80140A28 00000040  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
-/* 80140A2C 00000044  41 82 00 2C */	beq lbl_80140A58
-/* 80140A30 00000048  3B C0 00 00 */	li r30, 0
-/* 80140A34 0000004C  3B E0 00 00 */	li r31, 0
+/* 801409E8  7F A3 EB 78 */	mr r3, r29                              
+/* 801409EC  80 9D 06 50 */	lwz r4, 0x650(r29)                      
+/* 801409F0  4B F8 B8 A9 */	bl basicModelDraw__9daAlink_cFP8J3DModel /* constant-address: 800CC298, symbol: basicModelDraw__9daAlink_cFP8J3DModel */
+/* 801409F4  80 1D 05 74 */	lwz r0, 0x574(r29)                      
+/* 801409F8  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6                 
+/* 801409FC  40 82 00 5C */	bne lbl_80140A58                         /* constant-address: 80140A58, symbol: lbl_80140A58 */
+/* 80140A00  7F A3 EB 78 */	mr r3, r29                              
+/* 80140A04  80 9D 06 5C */	lwz r4, 0x65c(r29)                      
+/* 80140A08  4B F8 B8 91 */	bl basicModelDraw__9daAlink_cFP8J3DModel /* constant-address: 800CC298, symbol: basicModelDraw__9daAlink_cFP8J3DModel */
+/* 80140A0C  7F A3 EB 78 */	mr r3, r29                              
+/* 80140A10  80 9D 06 58 */	lwz r4, 0x658(r29)                      
+/* 80140A14  4B F8 B8 85 */	bl basicModelDraw__9daAlink_cFP8J3DModel /* constant-address: 800CC298, symbol: basicModelDraw__9daAlink_cFP8J3DModel */
+/* 80140A18  7F A3 EB 78 */	mr r3, r29                              
+/* 80140A1C  80 9D 06 54 */	lwz r4, 0x654(r29)                      
+/* 80140A20  4B F8 B8 79 */	bl basicModelDraw__9daAlink_cFP8J3DModel /* constant-address: 800CC298, symbol: basicModelDraw__9daAlink_cFP8J3DModel */
+/* 80140A24  80 1D 05 70 */	lwz r0, 0x570(r29)                      
+/* 80140A28  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6                 
+/* 80140A2C  41 82 00 2C */	beq lbl_80140A58                         /* constant-address: 80140A58, symbol: lbl_80140A58 */
+/* 80140A30  3B C0 00 00 */	li r30, 0                               
+/* 80140A34  3B E0 00 00 */	li r31, 0                               
 lbl_80140A38:
-/* 80140A38 00000000  7F A3 EB 78 */	mr r3, r29
-/* 80140A3C 00000004  38 1F 07 84 */	addi r0, r31, 0x784
-/* 80140A40 00000008  7C 9D 00 2E */	lwzx r4, r29, r0
-/* 80140A44 0000000C  4B F8 B8 55 */	bl basicModelDraw__9daAlink_cFP8J3DModel
-/* 80140A48 00000010  3B DE 00 01 */	addi r30, r30, 1
-/* 80140A4C 00000014  2C 1E 00 02 */	cmpwi r30, 2
-/* 80140A50 00000018  3B FF 00 04 */	addi r31, r31, 4
-/* 80140A54 0000001C  41 80 FF E4 */	blt lbl_80140A38
+/* 80140A38  7F A3 EB 78 */	mr r3, r29                              
+/* 80140A3C  38 1F 07 84 */	addi r0, r31, 0x784                     
+/* 80140A40  7C 9D 00 2E */	lwzx r4, r29, r0                        
+/* 80140A44  4B F8 B8 55 */	bl basicModelDraw__9daAlink_cFP8J3DModel /* constant-address: 800CC298, symbol: basicModelDraw__9daAlink_cFP8J3DModel */
+/* 80140A48  3B DE 00 01 */	addi r30, r30, 1                        
+/* 80140A4C  2C 1E 00 02 */	cmpwi r30, 2                            
+/* 80140A50  3B FF 00 04 */	addi r31, r31, 4                        
+/* 80140A54  41 80 FF E4 */	blt lbl_80140A38                         /* constant-address: 80140A38, symbol: lbl_80140A38 */
 lbl_80140A58:
-/* 80140A58 00000000  7F A3 EB 78 */	mr r3, r29
-/* 80140A5C 00000004  4B F8 AA 25 */	bl checkSwordDraw__9daAlink_cFv
-/* 80140A60 00000008  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 80140A64 0000000C  41 82 00 30 */	beq lbl_80140A94
-/* 80140A68 00000010  7F A3 EB 78 */	mr r3, r29
-/* 80140A6C 00000014  80 9D 06 B8 */	lwz r4, 0x6b8(r29)
-/* 80140A70 00000018  4B F8 B8 29 */	bl basicModelDraw__9daAlink_cFP8J3DModel
-/* 80140A74 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80140A78 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80140A7C 00000024  88 03 00 14 */	lbz r0, 0x14(r3)	/* effective address: 804061D4 */
-/* 80140A80 00000028  28 00 00 3F */	cmplwi r0, 0x3f
-/* 80140A84 0000002C  41 82 00 10 */	beq lbl_80140A94
-/* 80140A88 00000030  7F A3 EB 78 */	mr r3, r29
-/* 80140A8C 00000034  80 9D 06 BC */	lwz r4, 0x6bc(r29)
-/* 80140A90 00000038  4B F8 B8 09 */	bl basicModelDraw__9daAlink_cFP8J3DModel
+/* 80140A58  7F A3 EB 78 */	mr r3, r29                              
+/* 80140A5C  4B F8 AA 25 */	bl checkSwordDraw__9daAlink_cFv          /* constant-address: 800CB480, symbol: checkSwordDraw__9daAlink_cFv */
+/* 80140A60  54 60 06 3F */	clrlwi. r0, r3, 0x18                    
+/* 80140A64  41 82 00 30 */	beq lbl_80140A94                         /* constant-address: 80140A94, symbol: lbl_80140A94 */
+/* 80140A68  7F A3 EB 78 */	mr r3, r29                              
+/* 80140A6C  80 9D 06 B8 */	lwz r4, 0x6b8(r29)                      
+/* 80140A70  4B F8 B8 29 */	bl basicModelDraw__9daAlink_cFP8J3DModel /* constant-address: 800CC298, symbol: basicModelDraw__9daAlink_cFP8J3DModel */
+/* 80140A74  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 80140A78  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 80140A7C  88 03 00 14 */	lbz r0, 0x14(r3)                         /* constant-address: 804061D4, symbol: None */
+/* 80140A80  28 00 00 3F */	cmplwi r0, 0x3f                         
+/* 80140A84  41 82 00 10 */	beq lbl_80140A94                         /* constant-address: 80140A94, symbol: lbl_80140A94 */
+/* 80140A88  7F A3 EB 78 */	mr r3, r29                              
+/* 80140A8C  80 9D 06 BC */	lwz r4, 0x6bc(r29)                      
+/* 80140A90  4B F8 B8 09 */	bl basicModelDraw__9daAlink_cFP8J3DModel /* constant-address: 800CC298, symbol: basicModelDraw__9daAlink_cFP8J3DModel */
 lbl_80140A94:
-/* 80140A94 00000000  7F A3 EB 78 */	mr r3, r29
-/* 80140A98 00000004  4B F8 AA A5 */	bl checkShieldDraw__9daAlink_cFv
-/* 80140A9C 00000008  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 80140AA0 0000000C  41 82 00 10 */	beq lbl_80140AB0
-/* 80140AA4 00000010  7F A3 EB 78 */	mr r3, r29
-/* 80140AA8 00000014  80 9D 06 78 */	lwz r4, 0x678(r29)
-/* 80140AAC 00000018  4B F8 B7 ED */	bl basicModelDraw__9daAlink_cFP8J3DModel
+/* 80140A94  7F A3 EB 78 */	mr r3, r29                              
+/* 80140A98  4B F8 AA A5 */	bl checkShieldDraw__9daAlink_cFv         /* constant-address: 800CB53C, symbol: checkShieldDraw__9daAlink_cFv */
+/* 80140A9C  54 60 06 3F */	clrlwi. r0, r3, 0x18                    
+/* 80140AA0  41 82 00 10 */	beq lbl_80140AB0                         /* constant-address: 80140AB0, symbol: lbl_80140AB0 */
+/* 80140AA4  7F A3 EB 78 */	mr r3, r29                              
+/* 80140AA8  80 9D 06 78 */	lwz r4, 0x678(r29)                      
+/* 80140AAC  4B F8 B7 ED */	bl basicModelDraw__9daAlink_cFP8J3DModel /* constant-address: 800CC298, symbol: basicModelDraw__9daAlink_cFP8J3DModel */
 lbl_80140AB0:
-/* 80140AB0 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80140AB4 00000004  48 22 17 75 */	bl _restgpr_29
-/* 80140AB8 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 80140ABC 0000000C  7C 08 03 A6 */	mtlr r0
-/* 80140AC0 00000010  38 21 00 20 */	addi r1, r1, 0x20
-/* 80140AC4 00000014  4E 80 00 20 */	blr 
+/* 80140AB0  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 80140AB4  48 22 17 75 */	bl _restgpr_29                           /* constant-address: 80362228, symbol: _restgpr_29 */
+/* 80140AB8  80 01 00 24 */	lwz r0, 0x24(r1)                        
+/* 80140ABC  7C 08 03 A6 */	mtlr r0                                 
+/* 80140AC0  38 21 00 20 */	addi r1, r1, 0x20                       
+/* 80140AC4  4E 80 00 20 */	blr                                     

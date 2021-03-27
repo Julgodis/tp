@@ -1,108 +1,108 @@
 lbl_80D42B0C:
-/* 80D42B0C 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80D42B10 00000004  7C 08 02 A6 */	mflr r0
-/* 80D42B14 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80D42B18 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80D42B1C 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 80D42B20 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80D42B24 00000018  88 03 07 2E */	lbz r0, 0x72e(r3)
-/* 80D42B28 0000001C  28 00 00 01 */	cmplwi r0, 1
-/* 80D42B2C 00000020  40 82 00 7C */	bne lbl_80D42BA8
-/* 80D42B30 00000024  38 7F 07 54 */	addi r3, r31, 0x754
-/* 80D42B34 00000028  48 00 0F 41 */	bl draw__20_ZraMark_Hahen_Mng_cFv
-/* 80D42B38 0000002C  38 00 00 00 */	li r0, 0
-/* 80D42B3C 00000030  88 7F 07 2D */	lbz r3, 0x72d(r31)
-/* 80D42B40 00000034  28 03 00 00 */	cmplwi r3, 0
-/* 80D42B44 00000038  41 82 00 0C */	beq lbl_80D42B50
-/* 80D42B48 0000003C  28 03 00 02 */	cmplwi r3, 2
-/* 80D42B4C 00000040  40 82 00 08 */	bne lbl_80D42B54
+/* 80D42B0C  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80D42B10  7C 08 02 A6 */	mflr r0
+/* 80D42B14  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80D42B18  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80D42B1C  93 C1 00 08 */	stw r30, 8(r1)
+/* 80D42B20  7C 7F 1B 78 */	mr r31, r3
+/* 80D42B24  88 03 07 2E */	lbz r0, 0x72e(r3)
+/* 80D42B28  28 00 00 01 */	cmplwi r0, 1
+/* 80D42B2C  40 82 00 7C */	bne lbl_80D42BA8
+/* 80D42B30  38 7F 07 54 */	addi r3, r31, 0x754
+/* 80D42B34  48 00 0F 41 */	bl draw__20_ZraMark_Hahen_Mng_cFv
+/* 80D42B38  38 00 00 00 */	li r0, 0
+/* 80D42B3C  88 7F 07 2D */	lbz r3, 0x72d(r31)
+/* 80D42B40  28 03 00 00 */	cmplwi r3, 0
+/* 80D42B44  41 82 00 0C */	beq lbl_80D42B50
+/* 80D42B48  28 03 00 02 */	cmplwi r3, 2
+/* 80D42B4C  40 82 00 08 */	bne lbl_80D42B54
 lbl_80D42B50:
-/* 80D42B50 00000000  38 00 00 01 */	li r0, 1
+/* 80D42B50  38 00 00 01 */	li r0, 1
 lbl_80D42B54:
-/* 80D42B54 00000000  54 00 06 3F */	clrlwi. r0, r0, 0x18
-/* 80D42B58 00000004  41 82 00 48 */	beq lbl_80D42BA0
-/* 80D42B5C 00000008  80 7F 05 70 */	lwz r3, 0x570(r31)
-/* 80D42B60 0000000C  80 63 00 04 */	lwz r3, 4(r3)
-/* 80D42B64 00000010  80 63 00 60 */	lwz r3, 0x60(r3)
-/* 80D42B68 00000014  80 63 00 00 */	lwz r3, 0(r3)
-/* 80D42B6C 00000018  80 63 00 08 */	lwz r3, 8(r3)
-/* 80D42B70 0000001C  80 03 00 0C */	lwz r0, 0xc(r3)
-/* 80D42B74 00000020  60 00 00 01 */	ori r0, r0, 1
-/* 80D42B78 00000024  90 03 00 0C */	stw r0, 0xc(r3)
-/* 80D42B7C 00000028  80 7F 05 70 */	lwz r3, 0x570(r31)
-/* 80D42B80 0000002C  80 63 00 04 */	lwz r3, 4(r3)
-/* 80D42B84 00000030  80 63 00 60 */	lwz r3, 0x60(r3)
-/* 80D42B88 00000034  80 63 00 08 */	lwz r3, 8(r3)
-/* 80D42B8C 00000038  80 63 00 08 */	lwz r3, 8(r3)
-/* 80D42B90 0000003C  80 03 00 0C */	lwz r0, 0xc(r3)
-/* 80D42B94 00000040  60 00 00 01 */	ori r0, r0, 1
-/* 80D42B98 00000044  90 03 00 0C */	stw r0, 0xc(r3)
-/* 80D42B9C 00000048  48 00 00 70 */	b lbl_80D42C0C
+/* 80D42B54  54 00 06 3F */	clrlwi. r0, r0, 0x18
+/* 80D42B58  41 82 00 48 */	beq lbl_80D42BA0
+/* 80D42B5C  80 7F 05 70 */	lwz r3, 0x570(r31)
+/* 80D42B60  80 63 00 04 */	lwz r3, 4(r3)
+/* 80D42B64  80 63 00 60 */	lwz r3, 0x60(r3)
+/* 80D42B68  80 63 00 00 */	lwz r3, 0(r3)
+/* 80D42B6C  80 63 00 08 */	lwz r3, 8(r3)
+/* 80D42B70  80 03 00 0C */	lwz r0, 0xc(r3)
+/* 80D42B74  60 00 00 01 */	ori r0, r0, 1
+/* 80D42B78  90 03 00 0C */	stw r0, 0xc(r3)
+/* 80D42B7C  80 7F 05 70 */	lwz r3, 0x570(r31)
+/* 80D42B80  80 63 00 04 */	lwz r3, 4(r3)
+/* 80D42B84  80 63 00 60 */	lwz r3, 0x60(r3)
+/* 80D42B88  80 63 00 08 */	lwz r3, 8(r3)
+/* 80D42B8C  80 63 00 08 */	lwz r3, 8(r3)
+/* 80D42B90  80 03 00 0C */	lwz r0, 0xc(r3)
+/* 80D42B94  60 00 00 01 */	ori r0, r0, 1
+/* 80D42B98  90 03 00 0C */	stw r0, 0xc(r3)
+/* 80D42B9C  48 00 00 70 */	b lbl_80D42C0C
 lbl_80D42BA0:
-/* 80D42BA0 00000000  38 60 00 01 */	li r3, 1
-/* 80D42BA4 00000004  48 00 00 DC */	b lbl_80D42C80
+/* 80D42BA0  38 60 00 01 */	li r3, 1
+/* 80D42BA4  48 00 00 DC */	b lbl_80D42C80
 lbl_80D42BA8:
-/* 80D42BA8 00000000  38 00 00 00 */	li r0, 0
-/* 80D42BAC 00000004  88 7F 07 2D */	lbz r3, 0x72d(r31)
-/* 80D42BB0 00000008  28 03 00 00 */	cmplwi r3, 0
-/* 80D42BB4 0000000C  41 82 00 0C */	beq lbl_80D42BC0
-/* 80D42BB8 00000010  28 03 00 02 */	cmplwi r3, 2
-/* 80D42BBC 00000014  40 82 00 08 */	bne lbl_80D42BC4
+/* 80D42BA8  38 00 00 00 */	li r0, 0
+/* 80D42BAC  88 7F 07 2D */	lbz r3, 0x72d(r31)
+/* 80D42BB0  28 03 00 00 */	cmplwi r3, 0
+/* 80D42BB4  41 82 00 0C */	beq lbl_80D42BC0
+/* 80D42BB8  28 03 00 02 */	cmplwi r3, 2
+/* 80D42BBC  40 82 00 08 */	bne lbl_80D42BC4
 lbl_80D42BC0:
-/* 80D42BC0 00000000  38 00 00 01 */	li r0, 1
+/* 80D42BC0  38 00 00 01 */	li r0, 1
 lbl_80D42BC4:
-/* 80D42BC4 00000000  54 00 06 3F */	clrlwi. r0, r0, 0x18
-/* 80D42BC8 00000004  41 82 00 44 */	beq lbl_80D42C0C
-/* 80D42BCC 00000008  80 7F 05 70 */	lwz r3, 0x570(r31)
-/* 80D42BD0 0000000C  80 63 00 04 */	lwz r3, 4(r3)
-/* 80D42BD4 00000010  80 63 00 60 */	lwz r3, 0x60(r3)
-/* 80D42BD8 00000014  80 63 00 00 */	lwz r3, 0(r3)
-/* 80D42BDC 00000018  80 63 00 08 */	lwz r3, 8(r3)
-/* 80D42BE0 0000001C  80 03 00 0C */	lwz r0, 0xc(r3)
-/* 80D42BE4 00000020  54 00 00 3C */	rlwinm r0, r0, 0, 0, 0x1e
-/* 80D42BE8 00000024  90 03 00 0C */	stw r0, 0xc(r3)
-/* 80D42BEC 00000028  80 7F 05 70 */	lwz r3, 0x570(r31)
-/* 80D42BF0 0000002C  80 63 00 04 */	lwz r3, 4(r3)
-/* 80D42BF4 00000030  80 63 00 60 */	lwz r3, 0x60(r3)
-/* 80D42BF8 00000034  80 63 00 08 */	lwz r3, 8(r3)
-/* 80D42BFC 00000038  80 63 00 08 */	lwz r3, 8(r3)
-/* 80D42C00 0000003C  80 03 00 0C */	lwz r0, 0xc(r3)
-/* 80D42C04 00000040  54 00 00 3C */	rlwinm r0, r0, 0, 0, 0x1e
-/* 80D42C08 00000044  90 03 00 0C */	stw r0, 0xc(r3)
+/* 80D42BC4  54 00 06 3F */	clrlwi. r0, r0, 0x18
+/* 80D42BC8  41 82 00 44 */	beq lbl_80D42C0C
+/* 80D42BCC  80 7F 05 70 */	lwz r3, 0x570(r31)
+/* 80D42BD0  80 63 00 04 */	lwz r3, 4(r3)
+/* 80D42BD4  80 63 00 60 */	lwz r3, 0x60(r3)
+/* 80D42BD8  80 63 00 00 */	lwz r3, 0(r3)
+/* 80D42BDC  80 63 00 08 */	lwz r3, 8(r3)
+/* 80D42BE0  80 03 00 0C */	lwz r0, 0xc(r3)
+/* 80D42BE4  54 00 00 3C */	rlwinm r0, r0, 0, 0, 0x1e
+/* 80D42BE8  90 03 00 0C */	stw r0, 0xc(r3)
+/* 80D42BEC  80 7F 05 70 */	lwz r3, 0x570(r31)
+/* 80D42BF0  80 63 00 04 */	lwz r3, 4(r3)
+/* 80D42BF4  80 63 00 60 */	lwz r3, 0x60(r3)
+/* 80D42BF8  80 63 00 08 */	lwz r3, 8(r3)
+/* 80D42BFC  80 63 00 08 */	lwz r3, 8(r3)
+/* 80D42C00  80 03 00 0C */	lwz r0, 0xc(r3)
+/* 80D42C04  54 00 00 3C */	rlwinm r0, r0, 0, 0, 0x1e
+/* 80D42C08  90 03 00 0C */	stw r0, 0xc(r3)
 lbl_80D42C0C:
-/* 80D42C0C 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
-/* 80D42C10 00000004  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 80D42C14 00000008  38 80 00 10 */	li r4, 0x10
-/* 80D42C18 0000000C  38 BF 04 D0 */	addi r5, r31, 0x4d0
-/* 80D42C1C 00000010  38 DF 01 0C */	addi r6, r31, 0x10c
-/* 80D42C20 00000014  4B 46 0B A4 */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 80D42C24 00000018  3C 60 80 43 */	lis r3, g_env_light@ha
-/* 80D42C28 0000001C  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 80D42C2C 00000020  80 9F 05 70 */	lwz r4, 0x570(r31)
-/* 80D42C30 00000024  80 84 00 04 */	lwz r4, 4(r4)
-/* 80D42C34 00000028  38 BF 01 0C */	addi r5, r31, 0x10c
-/* 80D42C38 0000002C  4B 46 21 68 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80D42C3C 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D42C40 00000034  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 80D42C44 00000038  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
-/* 80D42C48 0000003C  3C 60 80 43 */	lis r3, j3dSys@ha
-/* 80D42C4C 00000040  3B C3 4A C8 */	addi r30, r3, j3dSys@l
-/* 80D42C50 00000044  90 1E 00 48 */	stw r0, 0x48(r30)	/* effective address: 80434B10 */
-/* 80D42C54 00000048  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80D42C58 0000004C  90 1E 00 4C */	stw r0, 0x4c(r30)	/* effective address: 80434B14 */
-/* 80D42C5C 00000050  80 7F 05 70 */	lwz r3, 0x570(r31)
-/* 80D42C60 00000054  4B 2C B0 64 */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 80D42C64 00000058  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D42C68 0000005C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80D42C6C 00000060  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
-/* 80D42C70 00000064  90 1E 00 48 */	stw r0, 0x48(r30)	/* effective address: 80434B10 */
-/* 80D42C74 00000068  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
-/* 80D42C78 0000006C  90 1E 00 4C */	stw r0, 0x4c(r30)	/* effective address: 80434B14 */
-/* 80D42C7C 00000070  38 60 00 01 */	li r3, 1
+/* 80D42C0C  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 80D42C10  38 63 CA 54 */	addi r3, r3, g_env_light@l
+/* 80D42C14  38 80 00 10 */	li r4, 0x10
+/* 80D42C18  38 BF 04 D0 */	addi r5, r31, 0x4d0
+/* 80D42C1C  38 DF 01 0C */	addi r6, r31, 0x10c
+/* 80D42C20  4B 46 0B A4 */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
+/* 80D42C24  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 80D42C28  38 63 CA 54 */	addi r3, r3, g_env_light@l
+/* 80D42C2C  80 9F 05 70 */	lwz r4, 0x570(r31)
+/* 80D42C30  80 84 00 04 */	lwz r4, 4(r4)
+/* 80D42C34  38 BF 01 0C */	addi r5, r31, 0x10c
+/* 80D42C38  4B 46 21 68 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
+/* 80D42C3C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 80D42C40  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
+/* 80D42C44  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80D42C48  3C 60 80 43 */	lis r3, j3dSys@ha
+/* 80D42C4C  3B C3 4A C8 */	addi r30, r3, j3dSys@l
+/* 80D42C50  90 1E 00 48 */	stw r0, 0x48(r30)	/* effective address: 80434B10 */
+/* 80D42C54  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
+/* 80D42C58  90 1E 00 4C */	stw r0, 0x4c(r30)	/* effective address: 80434B14 */
+/* 80D42C5C  80 7F 05 70 */	lwz r3, 0x570(r31)
+/* 80D42C60  4B 2C B0 64 */	b mDoExt_modelUpdateDL__FP8J3DModel
+/* 80D42C64  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 80D42C68  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D42C6C  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80D42C70  90 1E 00 48 */	stw r0, 0x48(r30)
+/* 80D42C74  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80D42C78  90 1E 00 4C */	stw r0, 0x4c(r30)
+/* 80D42C7C  38 60 00 01 */	li r3, 1
 lbl_80D42C80:
-/* 80D42C80 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80D42C84 00000004  83 C1 00 08 */	lwz r30, 8(r1)
-/* 80D42C88 00000008  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80D42C8C 0000000C  7C 08 03 A6 */	mtlr r0
-/* 80D42C90 00000010  38 21 00 10 */	addi r1, r1, 0x10
-/* 80D42C94 00000014  4E 80 00 20 */	blr 
+/* 80D42C80  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80D42C84  83 C1 00 08 */	lwz r30, 8(r1)
+/* 80D42C88  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80D42C8C  7C 08 03 A6 */	mtlr r0
+/* 80D42C90  38 21 00 10 */	addi r1, r1, 0x10
+/* 80D42C94  4E 80 00 20 */	blr 

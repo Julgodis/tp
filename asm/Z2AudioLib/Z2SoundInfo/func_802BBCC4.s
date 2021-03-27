@@ -1,3 +1,3 @@
 lbl_802BBCC4:
-/* 802BBCC4 00000000  38 63 FF FC */	addi r3, r3, -4
-/* 802BBCC8 00000004  4B FF F7 80 */	b getAudibleSw__11Z2SoundInfoCF10JAISoundID
+/* 802BBCC4  38 63 FF FC */	addi r3, r3, -4                         
+/* 802BBCC8  4B FF F7 80 */	b getAudibleSw__11Z2SoundInfoCF10JAISoundID /* constant-address: 802BB448, symbol: getAudibleSw__11Z2SoundInfoCF10JAISoundID */

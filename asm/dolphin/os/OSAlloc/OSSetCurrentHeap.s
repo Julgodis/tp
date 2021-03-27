@@ -1,5 +1,5 @@
 lbl_8033B1A0:
-/* 8033B1A0 00000000  80 0D 84 10 */	lwz r0, __OSCurrHeap(r13)
-/* 8033B1A4 00000004  90 6D 84 10 */	stw r3, __OSCurrHeap(r13)
-/* 8033B1A8 00000008  7C 03 03 78 */	mr r3, r0
-/* 8033B1AC 0000000C  4E 80 00 20 */	blr 
+/* 8033B1A0  80 0D 84 10 */	lwz r0, __OSCurrHeap(r13)                /* constant-address: 80450990, symbol: __OSCurrHeap */
+/* 8033B1A4  90 6D 84 10 */	stw r3, __OSCurrHeap(r13)                /* constant-address: 80450990, symbol: __OSCurrHeap */
+/* 8033B1A8  7C 03 03 78 */	mr r3, r0                               
+/* 8033B1AC  4E 80 00 20 */	blr                                     

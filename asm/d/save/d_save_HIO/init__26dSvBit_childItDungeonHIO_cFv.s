@@ -1,28 +1,28 @@
 lbl_8025BE40:
-/* 8025BE40 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 8025BE44 00000004  7C 08 02 A6 */	mflr r0
-/* 8025BE48 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 8025BE4C 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 8025BE50 00000010  48 10 63 8D */	bl _savegpr_29
-/* 8025BE54 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 8025BE58 00000018  3B C0 00 00 */	li r30, 0
-/* 8025BE5C 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8025BE60 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8025BE64 00000024  3B E3 09 78 */	addi r31, r3, 0x978
+/* 8025BE40  94 21 FF E0 */	stwu r1, -0x20(r1)                      
+/* 8025BE44  7C 08 02 A6 */	mflr r0                                 
+/* 8025BE48  90 01 00 24 */	stw r0, 0x24(r1)                        
+/* 8025BE4C  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 8025BE50  48 10 63 8D */	bl _savegpr_29                           /* constant-address: 803621DC, symbol: _savegpr_29 */
+/* 8025BE54  7C 7D 1B 78 */	mr r29, r3                              
+/* 8025BE58  3B C0 00 00 */	li r30, 0                               
+/* 8025BE5C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 8025BE60  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 8025BE64  3B E3 09 78 */	addi r31, r3, 0x978                      /* constant-address: 80406B38, symbol: None */
 lbl_8025BE68:
-/* 8025BE68 00000000  7F E3 FB 78 */	mr r3, r31
-/* 8025BE6C 00000004  7F C4 F3 78 */	mr r4, r30
-/* 8025BE70 00000008  4B DD 8E 05 */	bl isItem__12dSv_danBit_cCFi
-/* 8025BE74 0000000C  7C 9D F2 14 */	add r4, r29, r30
-/* 8025BE78 00000010  98 64 00 05 */	stb r3, 5(r4)
-/* 8025BE7C 00000014  88 04 00 05 */	lbz r0, 5(r4)
-/* 8025BE80 00000018  98 04 00 85 */	stb r0, 0x85(r4)
-/* 8025BE84 0000001C  3B DE 00 01 */	addi r30, r30, 1
-/* 8025BE88 00000020  2C 1E 00 80 */	cmpwi r30, 0x80
-/* 8025BE8C 00000024  41 80 FF DC */	blt lbl_8025BE68
-/* 8025BE90 00000028  39 61 00 20 */	addi r11, r1, 0x20
-/* 8025BE94 0000002C  48 10 63 95 */	bl _restgpr_29
-/* 8025BE98 00000030  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 8025BE9C 00000034  7C 08 03 A6 */	mtlr r0
-/* 8025BEA0 00000038  38 21 00 20 */	addi r1, r1, 0x20
-/* 8025BEA4 0000003C  4E 80 00 20 */	blr 
+/* 8025BE68  7F E3 FB 78 */	mr r3, r31                              
+/* 8025BE6C  7F C4 F3 78 */	mr r4, r30                              
+/* 8025BE70  4B DD 8E 05 */	bl isItem__12dSv_danBit_cCFi             /* constant-address: 80034C74, symbol: isItem__12dSv_danBit_cCFi */
+/* 8025BE74  7C 9D F2 14 */	add r4, r29, r30                        
+/* 8025BE78  98 64 00 05 */	stb r3, 5(r4)                           
+/* 8025BE7C  88 04 00 05 */	lbz r0, 5(r4)                           
+/* 8025BE80  98 04 00 85 */	stb r0, 0x85(r4)                        
+/* 8025BE84  3B DE 00 01 */	addi r30, r30, 1                        
+/* 8025BE88  2C 1E 00 80 */	cmpwi r30, 0x80                         
+/* 8025BE8C  41 80 FF DC */	blt lbl_8025BE68                         /* constant-address: 8025BE68, symbol: lbl_8025BE68 */
+/* 8025BE90  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 8025BE94  48 10 63 95 */	bl _restgpr_29                           /* constant-address: 80362228, symbol: _restgpr_29 */
+/* 8025BE98  80 01 00 24 */	lwz r0, 0x24(r1)                        
+/* 8025BE9C  7C 08 03 A6 */	mtlr r0                                 
+/* 8025BEA0  38 21 00 20 */	addi r1, r1, 0x20                       
+/* 8025BEA4  4E 80 00 20 */	blr                                     

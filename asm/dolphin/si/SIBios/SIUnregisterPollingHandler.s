@@ -1,67 +1,67 @@
 lbl_803453A0:
-/* 803453A0 00000000  7C 08 02 A6 */	mflr r0
-/* 803453A4 00000004  90 01 00 04 */	stw r0, 4(r1)
-/* 803453A8 00000008  94 21 FF E8 */	stwu r1, -0x18(r1)
-/* 803453AC 0000000C  93 E1 00 14 */	stw r31, 0x14(r1)
-/* 803453B0 00000010  93 C1 00 10 */	stw r30, 0x10(r1)
-/* 803453B4 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 803453B8 00000018  4B FF 83 3D */	bl OSDisableInterrupts
-/* 803453BC 0000001C  3C 80 80 45 */	lis r4, RDSTHandler@ha
-/* 803453C0 00000020  38 00 00 04 */	li r0, 4
-/* 803453C4 00000024  38 A4 C7 D0 */	addi r5, r4, RDSTHandler@l
-/* 803453C8 00000028  7C 09 03 A6 */	mtctr r0
-/* 803453CC 0000002C  3B E3 00 00 */	addi r31, r3, 0
-/* 803453D0 00000030  38 65 00 00 */	addi r3, r5, 0
-/* 803453D4 00000034  38 80 00 00 */	li r4, 0
+/* 803453A0  7C 08 02 A6 */	mflr r0                                 
+/* 803453A4  90 01 00 04 */	stw r0, 4(r1)                           
+/* 803453A8  94 21 FF E8 */	stwu r1, -0x18(r1)                      
+/* 803453AC  93 E1 00 14 */	stw r31, 0x14(r1)                       
+/* 803453B0  93 C1 00 10 */	stw r30, 0x10(r1)                       
+/* 803453B4  7C 7E 1B 78 */	mr r30, r3                              
+/* 803453B8  4B FF 83 3D */	bl OSDisableInterrupts                   /* constant-address: 8033D6F4, symbol: OSDisableInterrupts */
+/* 803453BC  3C 80 80 45 */	lis r4, RDSTHandler@ha                  
+/* 803453C0  38 00 00 04 */	li r0, 4                                
+/* 803453C4  38 A4 C7 D0 */	addi r5, r4, RDSTHandler@l               /* constant-address: 8044C7D0, symbol: RDSTHandler */
+/* 803453C8  7C 09 03 A6 */	mtctr r0                                
+/* 803453CC  3B E3 00 00 */	addi r31, r3, 0                         
+/* 803453D0  38 65 00 00 */	addi r3, r5, 0                           /* constant-address: 8044C7D0, symbol: RDSTHandler */
+/* 803453D4  38 80 00 00 */	li r4, 0                                
 lbl_803453D8:
-/* 803453D8 00000000  80 03 00 00 */	lwz r0, 0(r3)	/* effective address: 8044C7D0 */
-/* 803453DC 00000004  7C 00 F0 40 */	cmplw r0, r30
-/* 803453E0 00000008  40 82 00 84 */	bne lbl_80345464
-/* 803453E4 0000000C  3C 60 80 45 */	lis r3, RDSTHandler@ha
-/* 803453E8 00000010  54 84 10 3A */	slwi r4, r4, 2
-/* 803453EC 00000014  38 03 C7 D0 */	addi r0, r3, RDSTHandler@l
-/* 803453F0 00000018  7C 60 22 14 */	add r3, r0, r4
-/* 803453F4 0000001C  38 00 00 00 */	li r0, 0
-/* 803453F8 00000020  90 03 00 00 */	stw r0, 0(r3)
-/* 803453FC 00000024  38 80 00 00 */	li r4, 0
-/* 80345400 00000028  80 05 00 00 */	lwz r0, 0(r5)	/* effective address: 8044C7D0 */
-/* 80345404 0000002C  28 00 00 00 */	cmplwi r0, 0
-/* 80345408 00000030  40 82 00 3C */	bne lbl_80345444
-/* 8034540C 00000034  38 65 00 04 */	addi r3, r5, 4
-/* 80345410 00000038  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 8044C7D4 */
-/* 80345414 0000003C  38 80 00 01 */	li r4, 1
-/* 80345418 00000040  28 00 00 00 */	cmplwi r0, 0
-/* 8034541C 00000044  40 82 00 28 */	bne lbl_80345444
-/* 80345420 00000048  84 03 00 04 */	lwzu r0, 4(r3)	/* effective address: 8044C7D8 */
-/* 80345424 0000004C  38 80 00 02 */	li r4, 2
-/* 80345428 00000050  28 00 00 00 */	cmplwi r0, 0
-/* 8034542C 00000054  40 82 00 18 */	bne lbl_80345444
-/* 80345430 00000058  80 03 00 04 */	lwz r0, 4(r3)	/* effective address: 8044C7D8 */
-/* 80345434 0000005C  38 80 00 03 */	li r4, 3
-/* 80345438 00000060  28 00 00 00 */	cmplwi r0, 0
-/* 8034543C 00000064  40 82 00 08 */	bne lbl_80345444
-/* 80345440 00000068  38 80 00 04 */	li r4, 4
+/* 803453D8  80 03 00 00 */	lwz r0, 0(r3)                           
+/* 803453DC  7C 00 F0 40 */	cmplw r0, r30                           
+/* 803453E0  40 82 00 84 */	bne lbl_80345464                         /* constant-address: 80345464, symbol: lbl_80345464 */
+/* 803453E4  3C 60 80 45 */	lis r3, RDSTHandler@ha                  
+/* 803453E8  54 84 10 3A */	slwi r4, r4, 2                          
+/* 803453EC  38 03 C7 D0 */	addi r0, r3, RDSTHandler@l               /* constant-address: 8044C7D0, symbol: RDSTHandler */
+/* 803453F0  7C 60 22 14 */	add r3, r0, r4                          
+/* 803453F4  38 00 00 00 */	li r0, 0                                
+/* 803453F8  90 03 00 00 */	stw r0, 0(r3)                           
+/* 803453FC  38 80 00 00 */	li r4, 0                                
+/* 80345400  80 05 00 00 */	lwz r0, 0(r5)                            /* constant-address: 8044C7D0, symbol: RDSTHandler */
+/* 80345404  28 00 00 00 */	cmplwi r0, 0                            
+/* 80345408  40 82 00 3C */	bne lbl_80345444                         /* constant-address: 80345444, symbol: lbl_80345444 */
+/* 8034540C  38 65 00 04 */	addi r3, r5, 4                           /* constant-address: 8044C7D4, symbol: None */
+/* 80345410  80 05 00 04 */	lwz r0, 4(r5)                            /* constant-address: 8044C7D4, symbol: None */
+/* 80345414  38 80 00 01 */	li r4, 1                                
+/* 80345418  28 00 00 00 */	cmplwi r0, 0                            
+/* 8034541C  40 82 00 28 */	bne lbl_80345444                         /* constant-address: 80345444, symbol: lbl_80345444 */
+/* 80345420  84 03 00 04 */	lwzu r0, 4(r3)                           /* constant-address: 8044C7D8, symbol: None */
+/* 80345424  38 80 00 02 */	li r4, 2                                
+/* 80345428  28 00 00 00 */	cmplwi r0, 0                            
+/* 8034542C  40 82 00 18 */	bne lbl_80345444                         /* constant-address: 80345444, symbol: lbl_80345444 */
+/* 80345430  80 03 00 04 */	lwz r0, 4(r3)                            /* constant-address: 8044C7DC, symbol: None */
+/* 80345434  38 80 00 03 */	li r4, 3                                
+/* 80345438  28 00 00 00 */	cmplwi r0, 0                            
+/* 8034543C  40 82 00 08 */	bne lbl_80345444                         /* constant-address: 80345444, symbol: lbl_80345444 */
+/* 80345440  38 80 00 04 */	li r4, 4                                
 lbl_80345444:
-/* 80345444 00000000  2C 04 00 04 */	cmpwi r4, 4
-/* 80345448 00000004  40 82 00 0C */	bne lbl_80345454
-/* 8034544C 00000008  38 60 00 00 */	li r3, 0
-/* 80345450 0000000C  4B FF FD ED */	bl SIEnablePollingInterrupt
+/* 80345444  2C 04 00 04 */	cmpwi r4, 4                             
+/* 80345448  40 82 00 0C */	bne lbl_80345454                         /* constant-address: 80345454, symbol: lbl_80345454 */
+/* 8034544C  38 60 00 00 */	li r3, 0                                
+/* 80345450  4B FF FD ED */	bl SIEnablePollingInterrupt              /* constant-address: 8034523C, symbol: SIEnablePollingInterrupt */
 lbl_80345454:
-/* 80345454 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80345458 00000004  4B FF 82 C5 */	bl OSRestoreInterrupts
-/* 8034545C 00000008  38 60 00 01 */	li r3, 1
-/* 80345460 0000000C  48 00 00 1C */	b lbl_8034547C
+/* 80345454  7F E3 FB 78 */	mr r3, r31                              
+/* 80345458  4B FF 82 C5 */	bl OSRestoreInterrupts                   /* constant-address: 8033D71C, symbol: OSRestoreInterrupts */
+/* 8034545C  38 60 00 01 */	li r3, 1                                
+/* 80345460  48 00 00 1C */	b lbl_8034547C                           /* constant-address: 8034547C, symbol: lbl_8034547C */
 lbl_80345464:
-/* 80345464 00000000  38 63 00 04 */	addi r3, r3, 4
-/* 80345468 00000004  38 84 00 01 */	addi r4, r4, 1
-/* 8034546C 00000008  42 00 FF 6C */	bdnz lbl_803453D8
-/* 80345470 0000000C  7F E3 FB 78 */	mr r3, r31
-/* 80345474 00000010  4B FF 82 A9 */	bl OSRestoreInterrupts
-/* 80345478 00000014  38 60 00 00 */	li r3, 0
+/* 80345464  38 63 00 04 */	addi r3, r3, 4                           /* constant-address: 8044C7D4, symbol: None */
+/* 80345468  38 84 00 01 */	addi r4, r4, 1                           /* constant-address: 00000001 */
+/* 8034546C  42 00 FF 6C */	bdnz lbl_803453D8                        /* constant-address: 803453D8, symbol: lbl_803453D8 */
+/* 80345470  7F E3 FB 78 */	mr r3, r31                              
+/* 80345474  4B FF 82 A9 */	bl OSRestoreInterrupts                   /* constant-address: 8033D71C, symbol: OSRestoreInterrupts */
+/* 80345478  38 60 00 00 */	li r3, 0                                
 lbl_8034547C:
-/* 8034547C 00000000  80 01 00 1C */	lwz r0, 0x1c(r1)
-/* 80345480 00000004  83 E1 00 14 */	lwz r31, 0x14(r1)
-/* 80345484 00000008  83 C1 00 10 */	lwz r30, 0x10(r1)
-/* 80345488 0000000C  38 21 00 18 */	addi r1, r1, 0x18
-/* 8034548C 00000010  7C 08 03 A6 */	mtlr r0
-/* 80345490 00000014  4E 80 00 20 */	blr 
+/* 8034547C  80 01 00 1C */	lwz r0, 0x1c(r1)                        
+/* 80345480  83 E1 00 14 */	lwz r31, 0x14(r1)                       
+/* 80345484  83 C1 00 10 */	lwz r30, 0x10(r1)                       
+/* 80345488  38 21 00 18 */	addi r1, r1, 0x18                       
+/* 8034548C  7C 08 03 A6 */	mtlr r0                                 
+/* 80345490  4E 80 00 20 */	blr                                     

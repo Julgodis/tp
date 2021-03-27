@@ -1,60 +1,60 @@
 lbl_80D4A840:
-/* 80D4A840 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 80D4A844 00000004  7C 08 02 A6 */	mflr r0
-/* 80D4A848 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80D4A84C 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80D4A850 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 80D4A854 00000014  38 63 0E 48 */	addi r3, r3, 0xe48
-/* 80D4A858 00000018  4B 3F AE B0 */	b getActorP__18daNpcT_ActorMngr_cFv
-/* 80D4A85C 0000001C  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80D4A860 00000020  41 82 00 A8 */	beq lbl_80D4A908
-/* 80D4A864 00000024  4B E7 9A 54 */	b attr__14daObjCatDoor_cCFv
-/* 80D4A868 00000028  A8 03 00 02 */	lha r0, 2(r3)
-/* 80D4A86C 0000002C  B0 1F 07 90 */	sth r0, 0x790(r31)
-/* 80D4A870 00000030  3B DF 05 74 */	addi r30, r31, 0x574
-/* 80D4A874 00000034  7F C3 F3 78 */	mr r3, r30
-/* 80D4A878 00000038  4B 51 D9 5C */	b ChkUsed__9cBgW_BgIdCFv
-/* 80D4A87C 0000003C  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 80D4A880 00000040  41 82 00 18 */	beq lbl_80D4A898
-/* 80D4A884 00000044  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D4A888 00000048  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80D4A88C 0000004C  38 63 0F 38 */	addi r3, r3, 0xf38
-/* 80D4A890 00000050  7F C4 F3 78 */	mr r4, r30
-/* 80D4A894 00000054  4B 32 99 BC */	b Release__4cBgSFP9dBgW_Base
+/* 80D4A840  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 80D4A844  7C 08 02 A6 */	mflr r0
+/* 80D4A848  90 01 00 24 */	stw r0, 0x24(r1)
+/* 80D4A84C  93 E1 00 1C */	stw r31, 0x1c(r1)
+/* 80D4A850  93 C1 00 18 */	stw r30, 0x18(r1)
+/* 80D4A854  38 63 0E 48 */	addi r3, r3, 0xe48
+/* 80D4A858  4B 3F AE B0 */	b getActorP__18daNpcT_ActorMngr_cFv
+/* 80D4A85C  7C 7F 1B 79 */	or. r31, r3, r3
+/* 80D4A860  41 82 00 A8 */	beq lbl_80D4A908
+/* 80D4A864  4B E7 9A 54 */	b attr__14daObjCatDoor_cCFv
+/* 80D4A868  A8 03 00 02 */	lha r0, 2(r3)
+/* 80D4A86C  B0 1F 07 90 */	sth r0, 0x790(r31)
+/* 80D4A870  3B DF 05 74 */	addi r30, r31, 0x574
+/* 80D4A874  7F C3 F3 78 */	mr r3, r30
+/* 80D4A878  4B 51 D9 5C */	b ChkUsed__9cBgW_BgIdCFv
+/* 80D4A87C  54 60 06 3F */	clrlwi. r0, r3, 0x18
+/* 80D4A880  41 82 00 18 */	beq lbl_80D4A898
+/* 80D4A884  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 80D4A888  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D4A88C  38 63 0F 38 */	addi r3, r3, 0xf38
+/* 80D4A890  7F C4 F3 78 */	mr r4, r30
+/* 80D4A894  4B 32 99 BC */	b Release__4cBgSFP9dBgW_Base
 lbl_80D4A898:
-/* 80D4A898 00000000  3B DF 06 6C */	addi r30, r31, 0x66c
-/* 80D4A89C 00000004  7F C3 F3 78 */	mr r3, r30
-/* 80D4A8A0 00000008  4B 51 D9 34 */	b ChkUsed__9cBgW_BgIdCFv
-/* 80D4A8A4 0000000C  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 80D4A8A8 00000010  41 82 00 18 */	beq lbl_80D4A8C0
-/* 80D4A8AC 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D4A8B0 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80D4A8B4 0000001C  38 63 0F 38 */	addi r3, r3, 0xf38
-/* 80D4A8B8 00000020  7F C4 F3 78 */	mr r4, r30
-/* 80D4A8BC 00000024  4B 32 99 94 */	b Release__4cBgSFP9dBgW_Base
+/* 80D4A898  3B DF 06 6C */	addi r30, r31, 0x66c
+/* 80D4A89C  7F C3 F3 78 */	mr r3, r30
+/* 80D4A8A0  4B 51 D9 34 */	b ChkUsed__9cBgW_BgIdCFv
+/* 80D4A8A4  54 60 06 3F */	clrlwi. r0, r3, 0x18
+/* 80D4A8A8  41 82 00 18 */	beq lbl_80D4A8C0
+/* 80D4A8AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 80D4A8B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D4A8B4  38 63 0F 38 */	addi r3, r3, 0xf38
+/* 80D4A8B8  7F C4 F3 78 */	mr r4, r30
+/* 80D4A8BC  4B 32 99 94 */	b Release__4cBgSFP9dBgW_Base
 lbl_80D4A8C0:
-/* 80D4A8C0 00000000  3C 60 00 08 */	lis r3, 0x0008 /* 0x0008026B@ha */
-/* 80D4A8C4 00000004  38 03 02 6B */	addi r0, r3, 0x026B /* 0x0008026B@l */
-/* 80D4A8C8 00000008  90 01 00 08 */	stw r0, 8(r1)
-/* 80D4A8CC 0000000C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
-/* 80D4A8D0 00000010  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D4A8D4 00000014  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
-/* 80D4A8D8 00000018  38 81 00 08 */	addi r4, r1, 8
-/* 80D4A8DC 0000001C  38 BF 04 D0 */	addi r5, r31, 0x4d0
-/* 80D4A8E0 00000020  38 C0 00 00 */	li r6, 0
-/* 80D4A8E4 00000024  38 E0 00 00 */	li r7, 0
-/* 80D4A8E8 00000028  3D 00 80 D5 */	lis r8, lit_4348@ha
-/* 80D4A8EC 0000002C  C0 28 C1 14 */	lfs f1, lit_4348@l(r8)
-/* 80D4A8F0 00000030  FC 40 08 90 */	fmr f2, f1
-/* 80D4A8F4 00000034  3D 00 80 D5 */	lis r8, lit_4548@ha
-/* 80D4A8F8 00000038  C0 68 C1 28 */	lfs f3, lit_4548@l(r8)
-/* 80D4A8FC 0000003C  FC 80 18 90 */	fmr f4, f3
-/* 80D4A900 00000040  39 00 00 00 */	li r8, 0
-/* 80D4A904 00000044  4B 56 10 80 */	b seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
+/* 80D4A8C0  3C 60 00 08 */	lis r3, 0x0008 /* 0x0008026B@ha */
+/* 80D4A8C4  38 03 02 6B */	addi r0, r3, 0x026B /* 0x0008026B@l */
+/* 80D4A8C8  90 01 00 08 */	stw r0, 8(r1)
+/* 80D4A8CC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
+/* 80D4A8D0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
+/* 80D4A8D4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D4A8D8  38 81 00 08 */	addi r4, r1, 8
+/* 80D4A8DC  38 BF 04 D0 */	addi r5, r31, 0x4d0
+/* 80D4A8E0  38 C0 00 00 */	li r6, 0
+/* 80D4A8E4  38 E0 00 00 */	li r7, 0
+/* 80D4A8E8  3D 00 80 D5 */	lis r8, lit_4348@ha
+/* 80D4A8EC  C0 28 C1 14 */	lfs f1, lit_4348@l(r8)
+/* 80D4A8F0  FC 40 08 90 */	fmr f2, f1
+/* 80D4A8F4  3D 00 80 D5 */	lis r8, lit_4548@ha
+/* 80D4A8F8  C0 68 C1 28 */	lfs f3, lit_4548@l(r8)
+/* 80D4A8FC  FC 80 18 90 */	fmr f4, f3
+/* 80D4A900  39 00 00 00 */	li r8, 0
+/* 80D4A904  4B 56 10 80 */	b seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 lbl_80D4A908:
-/* 80D4A908 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)
-/* 80D4A90C 00000004  83 C1 00 18 */	lwz r30, 0x18(r1)
-/* 80D4A910 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 80D4A914 0000000C  7C 08 03 A6 */	mtlr r0
-/* 80D4A918 00000010  38 21 00 20 */	addi r1, r1, 0x20
-/* 80D4A91C 00000014  4E 80 00 20 */	blr 
+/* 80D4A908  83 E1 00 1C */	lwz r31, 0x1c(r1)
+/* 80D4A90C  83 C1 00 18 */	lwz r30, 0x18(r1)
+/* 80D4A910  80 01 00 24 */	lwz r0, 0x24(r1)
+/* 80D4A914  7C 08 03 A6 */	mtlr r0
+/* 80D4A918  38 21 00 20 */	addi r1, r1, 0x20
+/* 80D4A91C  4E 80 00 20 */	blr 

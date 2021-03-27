@@ -1,3 +1,3 @@
 lbl_8034D830:
-/* 8034D830 00000000  80 6D 92 B0 */	lwz r3, NextBufAddr(r13)
-/* 8034D834 00000004  4E 80 00 20 */	blr 
+/* 8034D830  80 6D 92 B0 */	lwz r3, NextBufAddr(r13)                 /* constant-address: 80451830, symbol: NextBufAddr */
+/* 8034D834  4E 80 00 20 */	blr                                     

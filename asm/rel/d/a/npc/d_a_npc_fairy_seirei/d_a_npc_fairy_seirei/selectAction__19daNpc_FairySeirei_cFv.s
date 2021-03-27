@@ -1,19 +1,19 @@
 lbl_80540A38:
-/* 80540A38 00000000  3C 80 80 3A */	lis r4, __ptmf_null@ha
-/* 80540A3C 00000004  38 A4 21 80 */	addi r5, r4, __ptmf_null@l
-/* 80540A40 00000008  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 803A2180 */
-/* 80540A44 0000000C  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 803A2184 */
-/* 80540A48 00000010  90 83 0F 84 */	stw r4, 0xf84(r3)
-/* 80540A4C 00000014  90 03 0F 88 */	stw r0, 0xf88(r3)
-/* 80540A50 00000018  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 803A2188 */
-/* 80540A54 0000001C  90 03 0F 8C */	stw r0, 0xf8c(r3)
-/* 80540A58 00000020  3C 80 80 54 */	lis r4, lit_4475@ha
-/* 80540A5C 00000024  38 A4 1F 24 */	addi r5, r4, lit_4475@l
-/* 80540A60 00000028  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80541F24 */
-/* 80540A64 0000002C  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80541F28 */
-/* 80540A68 00000030  90 83 0F 84 */	stw r4, 0xf84(r3)
-/* 80540A6C 00000034  90 03 0F 88 */	stw r0, 0xf88(r3)
-/* 80540A70 00000038  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80541F2C */
-/* 80540A74 0000003C  90 03 0F 8C */	stw r0, 0xf8c(r3)
-/* 80540A78 00000040  38 60 00 01 */	li r3, 1
-/* 80540A7C 00000044  4E 80 00 20 */	blr 
+/* 80540A38  3C 80 80 3A */	lis r4, __ptmf_null@ha
+/* 80540A3C  38 A4 21 80 */	addi r5, r4, __ptmf_null@l
+/* 80540A40  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 803A2180 */
+/* 80540A44  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 803A2184 */
+/* 80540A48  90 83 0F 84 */	stw r4, 0xf84(r3)
+/* 80540A4C  90 03 0F 88 */	stw r0, 0xf88(r3)
+/* 80540A50  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 803A2188 */
+/* 80540A54  90 03 0F 8C */	stw r0, 0xf8c(r3)
+/* 80540A58  3C 80 80 54 */	lis r4, lit_4475@ha
+/* 80540A5C  38 A4 1F 24 */	addi r5, r4, lit_4475@l
+/* 80540A60  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80541F24 */
+/* 80540A64  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80541F28 */
+/* 80540A68  90 83 0F 84 */	stw r4, 0xf84(r3)
+/* 80540A6C  90 03 0F 88 */	stw r0, 0xf88(r3)
+/* 80540A70  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80541F2C */
+/* 80540A74  90 03 0F 8C */	stw r0, 0xf8c(r3)
+/* 80540A78  38 60 00 01 */	li r3, 1
+/* 80540A7C  4E 80 00 20 */	blr 

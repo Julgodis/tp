@@ -1,5 +1,5 @@
 lbl_802CE428:
-/* 802CE428 00000000  80 0D 8D F0 */	lwz r0, sSystemHeap__7JKRHeap(r13)
-/* 802CE42C 00000004  90 6D 8D F0 */	stw r3, sSystemHeap__7JKRHeap(r13)
-/* 802CE430 00000008  7C 03 03 78 */	mr r3, r0
-/* 802CE434 0000000C  4E 80 00 20 */	blr 
+/* 802CE428  80 0D 8D F0 */	lwz r0, sSystemHeap__7JKRHeap(r13)       /* constant-address: 80451370, symbol: sSystemHeap__7JKRHeap */
+/* 802CE42C  90 6D 8D F0 */	stw r3, sSystemHeap__7JKRHeap(r13)       /* constant-address: 80451370, symbol: sSystemHeap__7JKRHeap */
+/* 802CE430  7C 03 03 78 */	mr r3, r0                               
+/* 802CE434  4E 80 00 20 */	blr                                     

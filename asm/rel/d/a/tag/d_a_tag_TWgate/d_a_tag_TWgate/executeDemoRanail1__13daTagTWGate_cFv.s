@@ -1,101 +1,101 @@
 lbl_80D53C5C:
-/* 80D53C5C 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 80D53C60 00000004  7C 08 02 A6 */	mflr r0
-/* 80D53C64 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80D53C68 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80D53C6C 00000010  4B 60 E5 68 */	b _savegpr_27
-/* 80D53C70 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 80D53C74 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80D53C78 0000001C  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
-/* 80D53C7C 00000020  3B FB 4F F8 */	addi r31, r27, 0x4ff8
-/* 80D53C80 00000024  7F E3 FB 78 */	mr r3, r31
-/* 80D53C84 00000028  3C 80 80 D5 */	lis r4, l_myName@ha
-/* 80D53C88 0000002C  38 84 59 94 */	addi r4, r4, l_myName@l
-/* 80D53C8C 00000030  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D55994 */
-/* 80D53C90 00000034  38 A0 00 00 */	li r5, 0
-/* 80D53C94 00000038  38 C0 00 00 */	li r6, 0
-/* 80D53C98 0000003C  4B 2F 3E 84 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
-/* 80D53C9C 00000040  7C 7E 1B 78 */	mr r30, r3
-/* 80D53CA0 00000044  2C 1E FF FF */	cmpwi r30, -1
-/* 80D53CA4 00000048  41 82 01 18 */	beq lbl_80D53DBC
-/* 80D53CA8 0000004C  7F E3 FB 78 */	mr r3, r31
-/* 80D53CAC 00000050  7F C4 F3 78 */	mr r4, r30
-/* 80D53CB0 00000054  4B 2F 42 AC */	b getMyNowCutName__16dEvent_manager_cFi
-/* 80D53CB4 00000058  7C 7C 1B 78 */	mr r28, r3
-/* 80D53CB8 0000005C  7F E3 FB 78 */	mr r3, r31
-/* 80D53CBC 00000060  7F C4 F3 78 */	mr r4, r30
-/* 80D53CC0 00000064  4B 2F 40 8C */	b getIsAddvance__16dEvent_manager_cFi
-/* 80D53CC4 00000068  2C 03 00 00 */	cmpwi r3, 0
-/* 80D53CC8 0000006C  41 82 00 34 */	beq lbl_80D53CFC
-/* 80D53CCC 00000070  80 9C 00 00 */	lwz r4, 0(r28)
-/* 80D53CD0 00000074  3C 60 30 30 */	lis r3, 0x3030 /* 0x30303031@ha */
-/* 80D53CD4 00000078  38 03 30 31 */	addi r0, r3, 0x3031 /* 0x30303031@l */
-/* 80D53CD8 0000007C  7C 04 00 00 */	cmpw r4, r0
-/* 80D53CDC 00000080  41 82 00 08 */	beq lbl_80D53CE4
-/* 80D53CE0 00000084  48 00 00 1C */	b lbl_80D53CFC
+/* 80D53C5C  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 80D53C60  7C 08 02 A6 */	mflr r0
+/* 80D53C64  90 01 00 24 */	stw r0, 0x24(r1)
+/* 80D53C68  39 61 00 20 */	addi r11, r1, 0x20
+/* 80D53C6C  4B 60 E5 68 */	b _savegpr_27
+/* 80D53C70  7C 7D 1B 78 */	mr r29, r3
+/* 80D53C74  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 80D53C78  3B 63 61 C0 */	addi r27, r3, struct_804061C0+0x0@l
+/* 80D53C7C  3B FB 4F F8 */	addi r31, r27, 0x4ff8
+/* 80D53C80  7F E3 FB 78 */	mr r3, r31
+/* 80D53C84  3C 80 80 D5 */	lis r4, l_myName@ha
+/* 80D53C88  38 84 59 94 */	addi r4, r4, l_myName@l
+/* 80D53C8C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D55994 */
+/* 80D53C90  38 A0 00 00 */	li r5, 0
+/* 80D53C94  38 C0 00 00 */	li r6, 0
+/* 80D53C98  4B 2F 3E 84 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
+/* 80D53C9C  7C 7E 1B 78 */	mr r30, r3
+/* 80D53CA0  2C 1E FF FF */	cmpwi r30, -1
+/* 80D53CA4  41 82 01 18 */	beq lbl_80D53DBC
+/* 80D53CA8  7F E3 FB 78 */	mr r3, r31
+/* 80D53CAC  7F C4 F3 78 */	mr r4, r30
+/* 80D53CB0  4B 2F 42 AC */	b getMyNowCutName__16dEvent_manager_cFi
+/* 80D53CB4  7C 7C 1B 78 */	mr r28, r3
+/* 80D53CB8  7F E3 FB 78 */	mr r3, r31
+/* 80D53CBC  7F C4 F3 78 */	mr r4, r30
+/* 80D53CC0  4B 2F 40 8C */	b getIsAddvance__16dEvent_manager_cFi
+/* 80D53CC4  2C 03 00 00 */	cmpwi r3, 0
+/* 80D53CC8  41 82 00 34 */	beq lbl_80D53CFC
+/* 80D53CCC  80 9C 00 00 */	lwz r4, 0(r28)
+/* 80D53CD0  3C 60 30 30 */	lis r3, 0x3030 /* 0x30303031@ha */
+/* 80D53CD4  38 03 30 31 */	addi r0, r3, 0x3031 /* 0x30303031@l */
+/* 80D53CD8  7C 04 00 00 */	cmpw r4, r0
+/* 80D53CDC  41 82 00 08 */	beq lbl_80D53CE4
+/* 80D53CE0  48 00 00 1C */	b lbl_80D53CFC
 lbl_80D53CE4:
-/* 80D53CE4 00000000  38 7B 4E C8 */	addi r3, r27, 0x4ec8
-/* 80D53CE8 00000004  7F A4 EB 78 */	mr r4, r29
-/* 80D53CEC 00000008  3C A0 80 04 */	lis r5, dEv_noFinishSkipProc__FPvi@ha
-/* 80D53CF0 0000000C  38 A5 28 DC */	addi r5, r5, dEv_noFinishSkipProc__FPvi@l
-/* 80D53CF4 00000010  38 C0 00 00 */	li r6, 0
-/* 80D53CF8 00000014  4B 2E EC 1C */	b setSkipProc__14dEvt_control_cFPvPFPvi_ii
+/* 80D53CE4  38 7B 4E C8 */	addi r3, r27, 0x4ec8
+/* 80D53CE8  7F A4 EB 78 */	mr r4, r29
+/* 80D53CEC  3C A0 80 04 */	lis r5, dEv_noFinishSkipProc__FPvi@ha
+/* 80D53CF0  38 A5 28 DC */	addi r5, r5, dEv_noFinishSkipProc__FPvi@l
+/* 80D53CF4  38 C0 00 00 */	li r6, 0
+/* 80D53CF8  4B 2E EC 1C */	b setSkipProc__14dEvt_control_cFPvPFPvi_ii
 lbl_80D53CFC:
-/* 80D53CFC 00000000  80 9C 00 00 */	lwz r4, 0(r28)
-/* 80D53D00 00000004  3C 60 30 30 */	lis r3, 0x3030 /* 0x30303031@ha */
-/* 80D53D04 00000008  38 03 30 31 */	addi r0, r3, 0x3031 /* 0x30303031@l */
-/* 80D53D08 0000000C  7C 04 00 00 */	cmpw r4, r0
-/* 80D53D0C 00000010  41 82 00 08 */	beq lbl_80D53D14
-/* 80D53D10 00000014  48 00 00 54 */	b lbl_80D53D64
+/* 80D53CFC  80 9C 00 00 */	lwz r4, 0(r28)
+/* 80D53D00  3C 60 30 30 */	lis r3, 0x3030 /* 0x30303031@ha */
+/* 80D53D04  38 03 30 31 */	addi r0, r3, 0x3031 /* 0x30303031@l */
+/* 80D53D08  7C 04 00 00 */	cmpw r4, r0
+/* 80D53D0C  41 82 00 08 */	beq lbl_80D53D14
+/* 80D53D10  48 00 00 54 */	b lbl_80D53D64
 lbl_80D53D14:
-/* 80D53D14 00000000  38 7B 4E C8 */	addi r3, r27, 0x4ec8
-/* 80D53D18 00000004  A0 1B 4F A2 */	lhz r0, 0x4fa2(r27)	/* effective address: 8040B162 */
-/* 80D53D1C 00000008  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
-/* 80D53D20 0000000C  41 82 00 38 */	beq lbl_80D53D58
-/* 80D53D24 00000010  4B 2E EC 84 */	b onSkipFade__14dEvt_control_cFv
-/* 80D53D28 00000014  38 00 00 08 */	li r0, 8
-/* 80D53D2C 00000018  90 1D 05 88 */	stw r0, 0x588(r29)
-/* 80D53D30 0000001C  80 1D 05 88 */	lwz r0, 0x588(r29)
-/* 80D53D34 00000020  1C 80 00 18 */	mulli r4, r0, 0x18
-/* 80D53D38 00000024  3C 60 80 D5 */	lis r3, ActionTable__13daTagTWGate_c@ha
-/* 80D53D3C 00000028  38 03 5A D0 */	addi r0, r3, ActionTable__13daTagTWGate_c@l
-/* 80D53D40 0000002C  7C 00 22 14 */	add r0, r0, r4
-/* 80D53D44 00000030  90 1D 05 84 */	stw r0, 0x584(r29)
-/* 80D53D48 00000034  7F A3 EB 78 */	mr r3, r29
-/* 80D53D4C 00000038  81 9D 05 84 */	lwz r12, 0x584(r29)
-/* 80D53D50 0000003C  4B 60 E3 34 */	b __ptmf_scall
-/* 80D53D54 00000040  60 00 00 00 */	nop 
+/* 80D53D14  38 7B 4E C8 */	addi r3, r27, 0x4ec8
+/* 80D53D18  A0 1B 4F A2 */	lhz r0, 0x4fa2(r27)
+/* 80D53D1C  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
+/* 80D53D20  41 82 00 38 */	beq lbl_80D53D58
+/* 80D53D24  4B 2E EC 84 */	b onSkipFade__14dEvt_control_cFv
+/* 80D53D28  38 00 00 08 */	li r0, 8
+/* 80D53D2C  90 1D 05 88 */	stw r0, 0x588(r29)
+/* 80D53D30  80 1D 05 88 */	lwz r0, 0x588(r29)
+/* 80D53D34  1C 80 00 18 */	mulli r4, r0, 0x18
+/* 80D53D38  3C 60 80 D5 */	lis r3, ActionTable__13daTagTWGate_c@ha
+/* 80D53D3C  38 03 5A D0 */	addi r0, r3, ActionTable__13daTagTWGate_c@l
+/* 80D53D40  7C 00 22 14 */	add r0, r0, r4
+/* 80D53D44  90 1D 05 84 */	stw r0, 0x584(r29)
+/* 80D53D48  7F A3 EB 78 */	mr r3, r29
+/* 80D53D4C  81 9D 05 84 */	lwz r12, 0x584(r29)
+/* 80D53D50  4B 60 E3 34 */	b __ptmf_scall
+/* 80D53D54  60 00 00 00 */	nop 
 lbl_80D53D58:
-/* 80D53D58 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80D53D5C 00000004  7F C4 F3 78 */	mr r4, r30
-/* 80D53D60 00000008  4B 2F 44 1C */	b cutEnd__16dEvent_manager_cFi
+/* 80D53D58  7F E3 FB 78 */	mr r3, r31
+/* 80D53D5C  7F C4 F3 78 */	mr r4, r30
+/* 80D53D60  4B 2F 44 1C */	b cutEnd__16dEvent_manager_cFi
 lbl_80D53D64:
-/* 80D53D64 00000000  A0 1D 00 F8 */	lhz r0, 0xf8(r29)
-/* 80D53D68 00000004  28 00 00 02 */	cmplwi r0, 2
-/* 80D53D6C 00000008  40 82 00 50 */	bne lbl_80D53DBC
-/* 80D53D70 0000000C  A8 9D 05 DC */	lha r4, 0x5dc(r29)
-/* 80D53D74 00000010  2C 04 FF FF */	cmpwi r4, -1
-/* 80D53D78 00000014  41 82 00 44 */	beq lbl_80D53DBC
-/* 80D53D7C 00000018  7F E3 FB 78 */	mr r3, r31
-/* 80D53D80 0000001C  4B 2F 3C F8 */	b endCheck__16dEvent_manager_cFs
-/* 80D53D84 00000020  2C 03 00 00 */	cmpwi r3, 0
-/* 80D53D88 00000024  41 82 00 34 */	beq lbl_80D53DBC
-/* 80D53D8C 00000028  38 00 00 08 */	li r0, 8
-/* 80D53D90 0000002C  90 1D 05 88 */	stw r0, 0x588(r29)
-/* 80D53D94 00000030  80 1D 05 88 */	lwz r0, 0x588(r29)
-/* 80D53D98 00000034  1C 80 00 18 */	mulli r4, r0, 0x18
-/* 80D53D9C 00000038  3C 60 80 D5 */	lis r3, ActionTable__13daTagTWGate_c@ha
-/* 80D53DA0 0000003C  38 03 5A D0 */	addi r0, r3, ActionTable__13daTagTWGate_c@l
-/* 80D53DA4 00000040  7C 00 22 14 */	add r0, r0, r4
-/* 80D53DA8 00000044  90 1D 05 84 */	stw r0, 0x584(r29)
-/* 80D53DAC 00000048  7F A3 EB 78 */	mr r3, r29
-/* 80D53DB0 0000004C  81 9D 05 84 */	lwz r12, 0x584(r29)
-/* 80D53DB4 00000050  4B 60 E2 D0 */	b __ptmf_scall
-/* 80D53DB8 00000054  60 00 00 00 */	nop 
+/* 80D53D64  A0 1D 00 F8 */	lhz r0, 0xf8(r29)
+/* 80D53D68  28 00 00 02 */	cmplwi r0, 2
+/* 80D53D6C  40 82 00 50 */	bne lbl_80D53DBC
+/* 80D53D70  A8 9D 05 DC */	lha r4, 0x5dc(r29)
+/* 80D53D74  2C 04 FF FF */	cmpwi r4, -1
+/* 80D53D78  41 82 00 44 */	beq lbl_80D53DBC
+/* 80D53D7C  7F E3 FB 78 */	mr r3, r31
+/* 80D53D80  4B 2F 3C F8 */	b endCheck__16dEvent_manager_cFs
+/* 80D53D84  2C 03 00 00 */	cmpwi r3, 0
+/* 80D53D88  41 82 00 34 */	beq lbl_80D53DBC
+/* 80D53D8C  38 00 00 08 */	li r0, 8
+/* 80D53D90  90 1D 05 88 */	stw r0, 0x588(r29)
+/* 80D53D94  80 1D 05 88 */	lwz r0, 0x588(r29)
+/* 80D53D98  1C 80 00 18 */	mulli r4, r0, 0x18
+/* 80D53D9C  3C 60 80 D5 */	lis r3, ActionTable__13daTagTWGate_c@ha
+/* 80D53DA0  38 03 5A D0 */	addi r0, r3, ActionTable__13daTagTWGate_c@l
+/* 80D53DA4  7C 00 22 14 */	add r0, r0, r4
+/* 80D53DA8  90 1D 05 84 */	stw r0, 0x584(r29)
+/* 80D53DAC  7F A3 EB 78 */	mr r3, r29
+/* 80D53DB0  81 9D 05 84 */	lwz r12, 0x584(r29)
+/* 80D53DB4  4B 60 E2 D0 */	b __ptmf_scall
+/* 80D53DB8  60 00 00 00 */	nop 
 lbl_80D53DBC:
-/* 80D53DBC 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80D53DC0 00000004  4B 60 E4 60 */	b _restgpr_27
-/* 80D53DC4 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 80D53DC8 0000000C  7C 08 03 A6 */	mtlr r0
-/* 80D53DCC 00000010  38 21 00 20 */	addi r1, r1, 0x20
-/* 80D53DD0 00000014  4E 80 00 20 */	blr 
+/* 80D53DBC  39 61 00 20 */	addi r11, r1, 0x20
+/* 80D53DC0  4B 60 E4 60 */	b _restgpr_27
+/* 80D53DC4  80 01 00 24 */	lwz r0, 0x24(r1)
+/* 80D53DC8  7C 08 03 A6 */	mtlr r0
+/* 80D53DCC  38 21 00 20 */	addi r1, r1, 0x20
+/* 80D53DD0  4E 80 00 20 */	blr 

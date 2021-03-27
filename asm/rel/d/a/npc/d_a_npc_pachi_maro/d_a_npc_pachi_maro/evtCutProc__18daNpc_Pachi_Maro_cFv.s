@@ -1,54 +1,54 @@
 lbl_80A98B9C:
-/* 80A98B9C 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80A98BA0 00000004  7C 08 02 A6 */	mflr r0
-/* 80A98BA4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80A98BA8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80A98BAC 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 80A98BB0 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80A98BB4 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80A98BB8 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80A98BBC 00000020  3B E3 4F F8 */	addi r31, r3, 0x4ff8
-/* 80A98BC0 00000024  7F E3 FB 78 */	mr r3, r31
-/* 80A98BC4 00000028  3C 80 80 AA */	lis r4, struct_80A9B988+0x0@ha
-/* 80A98BC8 0000002C  38 84 B9 88 */	addi r4, r4, struct_80A9B988+0x0@l
-/* 80A98BCC 00000030  38 84 00 E1 */	addi r4, r4, 0xe1
-/* 80A98BD0 00000034  7F C5 F3 78 */	mr r5, r30
-/* 80A98BD4 00000038  38 C0 FF FF */	li r6, -1
-/* 80A98BD8 0000003C  4B 5A EF 44 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
-/* 80A98BDC 00000040  2C 03 FF FF */	cmpwi r3, -1
-/* 80A98BE0 00000044  41 82 00 68 */	beq lbl_80A98C48
-/* 80A98BE4 00000048  90 7E 0D AC */	stw r3, 0xdac(r30)
-/* 80A98BE8 0000004C  7F E3 FB 78 */	mr r3, r31
-/* 80A98BEC 00000050  80 9E 0D AC */	lwz r4, 0xdac(r30)
-/* 80A98BF0 00000054  3C A0 80 AA */	lis r5, mCutNameList__18daNpc_Pachi_Maro_c@ha
-/* 80A98BF4 00000058  38 A5 BE 64 */	addi r5, r5, mCutNameList__18daNpc_Pachi_Maro_c@l
-/* 80A98BF8 0000005C  38 C0 00 0B */	li r6, 0xb
-/* 80A98BFC 00000060  38 E0 00 00 */	li r7, 0
-/* 80A98C00 00000064  39 00 00 00 */	li r8, 0
-/* 80A98C04 00000068  4B 5A F2 0C */	b getMyActIdx__16dEvent_manager_cFiPCPCciii
-/* 80A98C08 0000006C  7C 60 1B 78 */	mr r0, r3
-/* 80A98C0C 00000070  7F C3 F3 78 */	mr r3, r30
-/* 80A98C10 00000074  80 9E 0D AC */	lwz r4, 0xdac(r30)
-/* 80A98C14 00000078  1C C0 00 0C */	mulli r6, r0, 0xc
-/* 80A98C18 0000007C  3C A0 80 AA */	lis r5, mCutList__18daNpc_Pachi_Maro_c@ha
-/* 80A98C1C 00000080  38 05 BF 08 */	addi r0, r5, mCutList__18daNpc_Pachi_Maro_c@l
-/* 80A98C20 00000084  7D 80 32 14 */	add r12, r0, r6
-/* 80A98C24 00000088  4B 8C 94 60 */	b __ptmf_scall
-/* 80A98C28 0000008C  60 00 00 00 */	nop 
-/* 80A98C2C 00000090  2C 03 00 00 */	cmpwi r3, 0
-/* 80A98C30 00000094  41 82 00 10 */	beq lbl_80A98C40
-/* 80A98C34 00000098  7F E3 FB 78 */	mr r3, r31
-/* 80A98C38 0000009C  80 9E 0D AC */	lwz r4, 0xdac(r30)
-/* 80A98C3C 000000A0  4B 5A F5 40 */	b cutEnd__16dEvent_manager_cFi
+/* 80A98B9C  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80A98BA0  7C 08 02 A6 */	mflr r0
+/* 80A98BA4  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80A98BA8  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80A98BAC  93 C1 00 08 */	stw r30, 8(r1)
+/* 80A98BB0  7C 7E 1B 78 */	mr r30, r3
+/* 80A98BB4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 80A98BB8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A98BBC  3B E3 4F F8 */	addi r31, r3, 0x4ff8
+/* 80A98BC0  7F E3 FB 78 */	mr r3, r31
+/* 80A98BC4  3C 80 80 AA */	lis r4, struct_80A9B988+0x0@ha
+/* 80A98BC8  38 84 B9 88 */	addi r4, r4, struct_80A9B988+0x0@l
+/* 80A98BCC  38 84 00 E1 */	addi r4, r4, 0xe1
+/* 80A98BD0  7F C5 F3 78 */	mr r5, r30
+/* 80A98BD4  38 C0 FF FF */	li r6, -1
+/* 80A98BD8  4B 5A EF 44 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
+/* 80A98BDC  2C 03 FF FF */	cmpwi r3, -1
+/* 80A98BE0  41 82 00 68 */	beq lbl_80A98C48
+/* 80A98BE4  90 7E 0D AC */	stw r3, 0xdac(r30)
+/* 80A98BE8  7F E3 FB 78 */	mr r3, r31
+/* 80A98BEC  80 9E 0D AC */	lwz r4, 0xdac(r30)
+/* 80A98BF0  3C A0 80 AA */	lis r5, mCutNameList__18daNpc_Pachi_Maro_c@ha
+/* 80A98BF4  38 A5 BE 64 */	addi r5, r5, mCutNameList__18daNpc_Pachi_Maro_c@l
+/* 80A98BF8  38 C0 00 0B */	li r6, 0xb
+/* 80A98BFC  38 E0 00 00 */	li r7, 0
+/* 80A98C00  39 00 00 00 */	li r8, 0
+/* 80A98C04  4B 5A F2 0C */	b getMyActIdx__16dEvent_manager_cFiPCPCciii
+/* 80A98C08  7C 60 1B 78 */	mr r0, r3
+/* 80A98C0C  7F C3 F3 78 */	mr r3, r30
+/* 80A98C10  80 9E 0D AC */	lwz r4, 0xdac(r30)
+/* 80A98C14  1C C0 00 0C */	mulli r6, r0, 0xc
+/* 80A98C18  3C A0 80 AA */	lis r5, mCutList__18daNpc_Pachi_Maro_c@ha
+/* 80A98C1C  38 05 BF 08 */	addi r0, r5, mCutList__18daNpc_Pachi_Maro_c@l
+/* 80A98C20  7D 80 32 14 */	add r12, r0, r6
+/* 80A98C24  4B 8C 94 60 */	b __ptmf_scall
+/* 80A98C28  60 00 00 00 */	nop 
+/* 80A98C2C  2C 03 00 00 */	cmpwi r3, 0
+/* 80A98C30  41 82 00 10 */	beq lbl_80A98C40
+/* 80A98C34  7F E3 FB 78 */	mr r3, r31
+/* 80A98C38  80 9E 0D AC */	lwz r4, 0xdac(r30)
+/* 80A98C3C  4B 5A F5 40 */	b cutEnd__16dEvent_manager_cFi
 lbl_80A98C40:
-/* 80A98C40 00000000  38 60 00 01 */	li r3, 1
-/* 80A98C44 00000004  48 00 00 08 */	b lbl_80A98C4C
+/* 80A98C40  38 60 00 01 */	li r3, 1
+/* 80A98C44  48 00 00 08 */	b lbl_80A98C4C
 lbl_80A98C48:
-/* 80A98C48 00000000  38 60 00 00 */	li r3, 0
+/* 80A98C48  38 60 00 00 */	li r3, 0
 lbl_80A98C4C:
-/* 80A98C4C 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80A98C50 00000004  83 C1 00 08 */	lwz r30, 8(r1)
-/* 80A98C54 00000008  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80A98C58 0000000C  7C 08 03 A6 */	mtlr r0
-/* 80A98C5C 00000010  38 21 00 10 */	addi r1, r1, 0x10
-/* 80A98C60 00000014  4E 80 00 20 */	blr 
+/* 80A98C4C  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80A98C50  83 C1 00 08 */	lwz r30, 8(r1)
+/* 80A98C54  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80A98C58  7C 08 03 A6 */	mtlr r0
+/* 80A98C5C  38 21 00 10 */	addi r1, r1, 0x10
+/* 80A98C60  4E 80 00 20 */	blr 

@@ -1,68 +1,68 @@
 lbl_8003AD08:
-/* 8003AD08 00000000  94 21 FF D0 */	stwu r1, -0x30(r1)
-/* 8003AD0C 00000004  7C 08 02 A6 */	mflr r0
-/* 8003AD10 00000008  90 01 00 34 */	stw r0, 0x34(r1)
-/* 8003AD14 0000000C  DB E1 00 20 */	stfd f31, 0x20(r1)
-/* 8003AD18 00000010  F3 E1 00 28 */	psq_st f31, 40(r1), 0, 0 /* qr0 */
-/* 8003AD1C 00000000  DB C1 00 10 */	stfd f30, 0x10(r1)
-/* 8003AD20 00000018  F3 C1 00 18 */	psq_st f30, 24(r1), 0, 0 /* qr0 */
-/* 8003AD24 00000000  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8003AD28 00000004  93 C1 00 08 */	stw r30, 8(r1)
-/* 8003AD2C 00000008  7C 9E 23 78 */	mr r30, r4
-/* 8003AD30 0000000C  FF C0 08 90 */	fmr f30, f1
-/* 8003AD34 00000010  FF E0 10 90 */	fmr f31, f2
-/* 8003AD38 00000014  80 63 00 60 */	lwz r3, 0x60(r3)
-/* 8003AD3C 00000018  80 63 00 00 */	lwz r3, 0(r3)
-/* 8003AD40 0000001C  83 E3 00 28 */	lwz r31, 0x28(r3)
-/* 8003AD44 00000020  7F E3 FB 78 */	mr r3, r31
-/* 8003AD48 00000024  81 9F 00 00 */	lwz r12, 0(r31)
-/* 8003AD4C 00000028  81 8C 00 40 */	lwz r12, 0x40(r12)
-/* 8003AD50 0000002C  7D 89 03 A6 */	mtctr r12
-/* 8003AD54 00000030  4E 80 04 21 */	bctrl 
-/* 8003AD58 00000034  7C 64 1B 78 */	mr r4, r3
-/* 8003AD5C 00000038  7F E3 FB 78 */	mr r3, r31
-/* 8003AD60 0000003C  38 84 FF FF */	addi r4, r4, -1
-/* 8003AD64 00000040  81 9F 00 00 */	lwz r12, 0(r31)
-/* 8003AD68 00000044  81 8C 00 50 */	lwz r12, 0x50(r12)
-/* 8003AD6C 00000048  7D 89 03 A6 */	mtctr r12
-/* 8003AD70 0000004C  4E 80 04 21 */	bctrl 
-/* 8003AD74 00000050  7C 7F 1B 78 */	mr r31, r3
-/* 8003AD78 00000054  D3 C3 00 1C */	stfs f30, 0x1c(r3)
-/* 8003AD7C 00000058  D3 E3 00 20 */	stfs f31, 0x20(r3)
-/* 8003AD80 0000005C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
-/* 8003AD84 00000060  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8003AD88 00000064  C0 1E 00 00 */	lfs f0, 0(r30)
-/* 8003AD8C 00000068  FC 20 00 50 */	fneg f1, f0
-/* 8003AD90 0000006C  C0 1E 00 04 */	lfs f0, 4(r30)
-/* 8003AD94 00000070  FC 40 00 50 */	fneg f2, f0
-/* 8003AD98 00000074  C0 1E 00 08 */	lfs f0, 8(r30)
-/* 8003AD9C 00000078  FC 60 00 50 */	fneg f3, f0
-/* 8003ADA0 0000007C  48 30 BB 49 */	bl PSMTXTrans
-/* 8003ADA4 00000080  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8003ADA8 00000084  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8003ADAC 00000088  88 03 5D B0 */	lbz r0, 0x5db0(r3)	/* effective address: 8040BF70 */
-/* 8003ADB0 0000008C  7C 00 07 74 */	extsb r0, r0
-/* 8003ADB4 00000090  1C 00 00 38 */	mulli r0, r0, 0x38
-/* 8003ADB8 00000094  7C 63 02 14 */	add r3, r3, r0
-/* 8003ADBC 00000098  80 63 5D 74 */	lwz r3, 0x5d74(r3)
-/* 8003ADC0 0000009C  A8 83 02 32 */	lha r4, 0x232(r3)
-/* 8003ADC4 000000A0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
-/* 8003ADC8 000000A4  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8003ADCC 000000A8  4B FD 16 69 */	bl mDoMtx_YrotM__FPA4_fs
-/* 8003ADD0 000000AC  3C 60 80 38 */	lis r3, l_texMtxInfo@ha
-/* 8003ADD4 000000B0  38 63 98 40 */	addi r3, r3, l_texMtxInfo@l
-/* 8003ADD8 000000B4  38 63 00 24 */	addi r3, r3, 0x24
-/* 8003ADDC 000000B8  3C 80 80 3E */	lis r4, now__14mDoMtx_stack_c@ha
-/* 8003ADE0 000000BC  38 84 D4 70 */	addi r4, r4, now__14mDoMtx_stack_c@l
-/* 8003ADE4 000000C0  38 BF 00 24 */	addi r5, r31, 0x24
-/* 8003ADE8 000000C4  48 30 B6 FD */	bl PSMTXConcat
-/* 8003ADEC 000000E4  E3 E1 00 28 */	psq_l f31, 40(r1), 0, 0 /* qr0 */
-/* 8003ADF0 00000000  CB E1 00 20 */	lfd f31, 0x20(r1)
-/* 8003ADF4 000000EC  E3 C1 00 18 */	psq_l f30, 24(r1), 0, 0 /* qr0 */
-/* 8003ADF8 00000000  CB C1 00 10 */	lfd f30, 0x10(r1)
-/* 8003ADFC 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8003AE00 00000008  83 C1 00 08 */	lwz r30, 8(r1)
-/* 8003AE04 0000000C  80 01 00 34 */	lwz r0, 0x34(r1)
-/* 8003AE08 00000010  7C 08 03 A6 */	mtlr r0
-/* 8003AE0C 00000014  38 21 00 30 */	addi r1, r1, 0x30
-/* 8003AE10 00000018  4E 80 00 20 */	blr 
+/* 8003AD08  94 21 FF D0 */	stwu r1, -0x30(r1)                      
+/* 8003AD0C  7C 08 02 A6 */	mflr r0                                 
+/* 8003AD10  90 01 00 34 */	stw r0, 0x34(r1)                        
+/* 8003AD14  DB E1 00 20 */	stfd f31, 0x20(r1)                      
+/* 8003AD18  F3 E1 00 28 */	psq_st f31, 40(r1), 0, 0 /* qr0 */      
+/* 8003AD1C  DB C1 00 10 */	stfd f30, 0x10(r1)                      
+/* 8003AD20  F3 C1 00 18 */	psq_st f30, 24(r1), 0, 0 /* qr0 */      
+/* 8003AD24  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 8003AD28  93 C1 00 08 */	stw r30, 8(r1)                          
+/* 8003AD2C  7C 9E 23 78 */	mr r30, r4                              
+/* 8003AD30  FF C0 08 90 */	fmr f30, f1                             
+/* 8003AD34  FF E0 10 90 */	fmr f31, f2                             
+/* 8003AD38  80 63 00 60 */	lwz r3, 0x60(r3)                        
+/* 8003AD3C  80 63 00 00 */	lwz r3, 0(r3)                           
+/* 8003AD40  83 E3 00 28 */	lwz r31, 0x28(r3)                       
+/* 8003AD44  7F E3 FB 78 */	mr r3, r31                              
+/* 8003AD48  81 9F 00 00 */	lwz r12, 0(r31)                         
+/* 8003AD4C  81 8C 00 40 */	lwz r12, 0x40(r12)                      
+/* 8003AD50  7D 89 03 A6 */	mtctr r12                               
+/* 8003AD54  4E 80 04 21 */	bctrl                                   
+/* 8003AD58  7C 64 1B 78 */	mr r4, r3                               
+/* 8003AD5C  7F E3 FB 78 */	mr r3, r31                              
+/* 8003AD60  38 84 FF FF */	addi r4, r4, -1                         
+/* 8003AD64  81 9F 00 00 */	lwz r12, 0(r31)                         
+/* 8003AD68  81 8C 00 50 */	lwz r12, 0x50(r12)                      
+/* 8003AD6C  7D 89 03 A6 */	mtctr r12                               
+/* 8003AD70  4E 80 04 21 */	bctrl                                   
+/* 8003AD74  7C 7F 1B 78 */	mr r31, r3                              
+/* 8003AD78  D3 C3 00 1C */	stfs f30, 0x1c(r3)                      
+/* 8003AD7C  D3 E3 00 20 */	stfs f31, 0x20(r3)                      
+/* 8003AD80  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha        
+/* 8003AD84  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l     /* constant-address: 803DD470, symbol: now__14mDoMtx_stack_c */
+/* 8003AD88  C0 1E 00 00 */	lfs f0, 0(r30)                          
+/* 8003AD8C  FC 20 00 50 */	fneg f1, f0                             
+/* 8003AD90  C0 1E 00 04 */	lfs f0, 4(r30)                          
+/* 8003AD94  FC 40 00 50 */	fneg f2, f0                             
+/* 8003AD98  C0 1E 00 08 */	lfs f0, 8(r30)                          
+/* 8003AD9C  FC 60 00 50 */	fneg f3, f0                             
+/* 8003ADA0  48 30 BB 49 */	bl PSMTXTrans                            /* constant-address: 803468E8, symbol: PSMTXTrans */
+/* 8003ADA4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 8003ADA8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 8003ADAC  88 03 5D B0 */	lbz r0, 0x5db0(r3)                       /* constant-address: 8040BF70, symbol: None */
+/* 8003ADB0  7C 00 07 74 */	extsb r0, r0                            
+/* 8003ADB4  1C 00 00 38 */	mulli r0, r0, 0x38                      
+/* 8003ADB8  7C 63 02 14 */	add r3, r3, r0                          
+/* 8003ADBC  80 63 5D 74 */	lwz r3, 0x5d74(r3)                      
+/* 8003ADC0  A8 83 02 32 */	lha r4, 0x232(r3)                       
+/* 8003ADC4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha        
+/* 8003ADC8  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l     /* constant-address: 803DD470, symbol: now__14mDoMtx_stack_c */
+/* 8003ADCC  4B FD 16 69 */	bl mDoMtx_YrotM__FPA4_fs                 /* constant-address: 8000C434, symbol: mDoMtx_YrotM__FPA4_fs */
+/* 8003ADD0  3C 60 80 38 */	lis r3, l_texMtxInfo@ha                 
+/* 8003ADD4  38 63 98 40 */	addi r3, r3, l_texMtxInfo@l              /* constant-address: 80379840, symbol: l_texMtxInfo */
+/* 8003ADD8  38 63 00 24 */	addi r3, r3, 0x24                        /* constant-address: 80379864, symbol: None */
+/* 8003ADDC  3C 80 80 3E */	lis r4, now__14mDoMtx_stack_c@ha        
+/* 8003ADE0  38 84 D4 70 */	addi r4, r4, now__14mDoMtx_stack_c@l     /* constant-address: 803DD470, symbol: now__14mDoMtx_stack_c */
+/* 8003ADE4  38 BF 00 24 */	addi r5, r31, 0x24                      
+/* 8003ADE8  48 30 B6 FD */	bl PSMTXConcat                           /* constant-address: 803464E4, symbol: PSMTXConcat */
+/* 8003ADEC  E3 E1 00 28 */	psq_l f31, 40(r1), 0, 0 /* qr0 */       
+/* 8003ADF0  CB E1 00 20 */	lfd f31, 0x20(r1)                       
+/* 8003ADF4  E3 C1 00 18 */	psq_l f30, 24(r1), 0, 0 /* qr0 */       
+/* 8003ADF8  CB C1 00 10 */	lfd f30, 0x10(r1)                       
+/* 8003ADFC  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 8003AE00  83 C1 00 08 */	lwz r30, 8(r1)                          
+/* 8003AE04  80 01 00 34 */	lwz r0, 0x34(r1)                        
+/* 8003AE08  7C 08 03 A6 */	mtlr r0                                 
+/* 8003AE0C  38 21 00 30 */	addi r1, r1, 0x30                       
+/* 8003AE10  4E 80 00 20 */	blr                                     

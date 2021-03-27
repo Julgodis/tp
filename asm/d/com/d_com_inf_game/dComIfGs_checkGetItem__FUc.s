@@ -1,65 +1,65 @@
 lbl_8002E4CC:
-/* 8002E4CC 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 8002E4D0 00000004  7C 08 02 A6 */	mflr r0
-/* 8002E4D4 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 8002E4D8 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 8002E4DC 00000010  48 33 3C F9 */	bl _savegpr_27
-/* 8002E4E0 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 8002E4E4 00000018  3B E0 00 00 */	li r31, 0
-/* 8002E4E8 0000001C  3B 60 00 00 */	li r27, 0
-/* 8002E4EC 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8002E4F0 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8002E4F4 00000028  3B 83 00 9C */	addi r28, r3, 0x9c
-/* 8002E4F8 0000002C  57 DD 06 3E */	clrlwi r29, r30, 0x18
+/* 8002E4CC  94 21 FF E0 */	stwu r1, -0x20(r1)                      
+/* 8002E4D0  7C 08 02 A6 */	mflr r0                                 
+/* 8002E4D4  90 01 00 24 */	stw r0, 0x24(r1)                        
+/* 8002E4D8  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 8002E4DC  48 33 3C F9 */	bl _savegpr_27                           /* constant-address: 803621D4, symbol: _savegpr_27 */
+/* 8002E4E0  7C 7E 1B 78 */	mr r30, r3                              
+/* 8002E4E4  3B E0 00 00 */	li r31, 0                               
+/* 8002E4E8  3B 60 00 00 */	li r27, 0                               
+/* 8002E4EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 8002E4F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 8002E4F4  3B 83 00 9C */	addi r28, r3, 0x9c                       /* constant-address: 8040625C, symbol: None */
+/* 8002E4F8  57 DD 06 3E */	clrlwi r29, r30, 0x18                   
 lbl_8002E4FC:
-/* 8002E4FC 00000000  7F 83 E3 78 */	mr r3, r28
-/* 8002E500 00000004  7F 64 DB 78 */	mr r4, r27
-/* 8002E504 00000008  38 A0 00 01 */	li r5, 1
-/* 8002E508 0000000C  48 00 4B 29 */	bl getItem__17dSv_player_item_cCFib
-/* 8002E50C 00000010  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 8002E510 00000014  7C 1D 00 40 */	cmplw r29, r0
-/* 8002E514 00000018  40 82 00 10 */	bne lbl_8002E524
-/* 8002E518 0000001C  57 E3 06 3E */	clrlwi r3, r31, 0x18
-/* 8002E51C 00000020  38 03 00 01 */	addi r0, r3, 1
-/* 8002E520 00000024  54 1F 06 3E */	clrlwi r31, r0, 0x18
+/* 8002E4FC  7F 83 E3 78 */	mr r3, r28                              
+/* 8002E500  7F 64 DB 78 */	mr r4, r27                              
+/* 8002E504  38 A0 00 01 */	li r5, 1                                
+/* 8002E508  48 00 4B 29 */	bl getItem__17dSv_player_item_cCFib      /* constant-address: 80033030, symbol: getItem__17dSv_player_item_cCFib */
+/* 8002E50C  54 60 06 3E */	clrlwi r0, r3, 0x18                     
+/* 8002E510  7C 1D 00 40 */	cmplw r29, r0                           
+/* 8002E514  40 82 00 10 */	bne lbl_8002E524                         /* constant-address: 8002E524, symbol: lbl_8002E524 */
+/* 8002E518  57 E3 06 3E */	clrlwi r3, r31, 0x18                    
+/* 8002E51C  38 03 00 01 */	addi r0, r3, 1                          
+/* 8002E520  54 1F 06 3E */	clrlwi r31, r0, 0x18                    
 lbl_8002E524:
-/* 8002E524 00000000  3B 7B 00 01 */	addi r27, r27, 1
-/* 8002E528 00000004  2C 1B 00 3C */	cmpwi r27, 0x3c
-/* 8002E52C 00000008  41 80 FF D0 */	blt lbl_8002E4FC
-/* 8002E530 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8002E534 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8002E538 00000014  88 63 00 13 */	lbz r3, 0x13(r3)	/* effective address: 804061D3 */
-/* 8002E53C 00000018  57 C0 06 3E */	clrlwi r0, r30, 0x18
-/* 8002E540 0000001C  7C 00 18 40 */	cmplw r0, r3
-/* 8002E544 00000020  40 82 00 10 */	bne lbl_8002E554
-/* 8002E548 00000024  57 E3 06 3E */	clrlwi r3, r31, 0x18
-/* 8002E54C 00000028  38 03 00 01 */	addi r0, r3, 1
-/* 8002E550 0000002C  54 1F 06 3E */	clrlwi r31, r0, 0x18
+/* 8002E524  3B 7B 00 01 */	addi r27, r27, 1                         /* constant-address: 00000001 */
+/* 8002E528  2C 1B 00 3C */	cmpwi r27, 0x3c                         
+/* 8002E52C  41 80 FF D0 */	blt lbl_8002E4FC                         /* constant-address: 8002E4FC, symbol: lbl_8002E4FC */
+/* 8002E530  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 8002E534  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 8002E538  88 63 00 13 */	lbz r3, 0x13(r3)                         /* constant-address: 804061D3, symbol: None */
+/* 8002E53C  57 C0 06 3E */	clrlwi r0, r30, 0x18                    
+/* 8002E540  7C 00 18 40 */	cmplw r0, r3                            
+/* 8002E544  40 82 00 10 */	bne lbl_8002E554                         /* constant-address: 8002E554, symbol: lbl_8002E554 */
+/* 8002E548  57 E3 06 3E */	clrlwi r3, r31, 0x18                    
+/* 8002E54C  38 03 00 01 */	addi r0, r3, 1                          
+/* 8002E550  54 1F 06 3E */	clrlwi r31, r0, 0x18                    
 lbl_8002E554:
-/* 8002E554 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8002E558 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8002E55C 00000008  88 63 00 14 */	lbz r3, 0x14(r3)	/* effective address: 804061D4 */
-/* 8002E560 0000000C  57 C0 06 3E */	clrlwi r0, r30, 0x18
-/* 8002E564 00000010  7C 00 18 40 */	cmplw r0, r3
-/* 8002E568 00000014  40 82 00 10 */	bne lbl_8002E578
-/* 8002E56C 00000018  57 E3 06 3E */	clrlwi r3, r31, 0x18
-/* 8002E570 0000001C  38 03 00 01 */	addi r0, r3, 1
-/* 8002E574 00000020  54 1F 06 3E */	clrlwi r31, r0, 0x18
+/* 8002E554  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 8002E558  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 8002E55C  88 63 00 14 */	lbz r3, 0x14(r3)                         /* constant-address: 804061D4, symbol: None */
+/* 8002E560  57 C0 06 3E */	clrlwi r0, r30, 0x18                    
+/* 8002E564  7C 00 18 40 */	cmplw r0, r3                            
+/* 8002E568  40 82 00 10 */	bne lbl_8002E578                         /* constant-address: 8002E578, symbol: lbl_8002E578 */
+/* 8002E56C  57 E3 06 3E */	clrlwi r3, r31, 0x18                    
+/* 8002E570  38 03 00 01 */	addi r0, r3, 1                          
+/* 8002E574  54 1F 06 3E */	clrlwi r31, r0, 0x18                    
 lbl_8002E578:
-/* 8002E578 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8002E57C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8002E580 00000008  88 63 00 15 */	lbz r3, 0x15(r3)	/* effective address: 804061D5 */
-/* 8002E584 0000000C  57 C0 06 3E */	clrlwi r0, r30, 0x18
-/* 8002E588 00000010  7C 00 18 40 */	cmplw r0, r3
-/* 8002E58C 00000014  40 82 00 10 */	bne lbl_8002E59C
-/* 8002E590 00000018  57 E3 06 3E */	clrlwi r3, r31, 0x18
-/* 8002E594 0000001C  38 03 00 01 */	addi r0, r3, 1
-/* 8002E598 00000020  54 1F 06 3E */	clrlwi r31, r0, 0x18
+/* 8002E578  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 8002E57C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 8002E580  88 63 00 15 */	lbz r3, 0x15(r3)                         /* constant-address: 804061D5, symbol: None */
+/* 8002E584  57 C0 06 3E */	clrlwi r0, r30, 0x18                    
+/* 8002E588  7C 00 18 40 */	cmplw r0, r3                            
+/* 8002E58C  40 82 00 10 */	bne lbl_8002E59C                         /* constant-address: 8002E59C, symbol: lbl_8002E59C */
+/* 8002E590  57 E3 06 3E */	clrlwi r3, r31, 0x18                    
+/* 8002E594  38 03 00 01 */	addi r0, r3, 1                          
+/* 8002E598  54 1F 06 3E */	clrlwi r31, r0, 0x18                    
 lbl_8002E59C:
-/* 8002E59C 00000000  7F E3 FB 78 */	mr r3, r31
-/* 8002E5A0 00000004  39 61 00 20 */	addi r11, r1, 0x20
-/* 8002E5A4 00000008  48 33 3C 7D */	bl _restgpr_27
-/* 8002E5A8 0000000C  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 8002E5AC 00000010  7C 08 03 A6 */	mtlr r0
-/* 8002E5B0 00000014  38 21 00 20 */	addi r1, r1, 0x20
-/* 8002E5B4 00000018  4E 80 00 20 */	blr 
+/* 8002E59C  7F E3 FB 78 */	mr r3, r31                              
+/* 8002E5A0  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 8002E5A4  48 33 3C 7D */	bl _restgpr_27                           /* constant-address: 80362220, symbol: _restgpr_27 */
+/* 8002E5A8  80 01 00 24 */	lwz r0, 0x24(r1)                        
+/* 8002E5AC  7C 08 03 A6 */	mtlr r0                                 
+/* 8002E5B0  38 21 00 20 */	addi r1, r1, 0x20                       
+/* 8002E5B4  4E 80 00 20 */	blr                                     

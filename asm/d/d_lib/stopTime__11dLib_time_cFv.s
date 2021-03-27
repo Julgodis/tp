@@ -1,17 +1,17 @@
 lbl_80032880:
-/* 80032880 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80032884 00000004  7C 08 02 A6 */	mflr r0
-/* 80032888 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8003288C 0000000C  88 0D 88 68 */	lbz r0, data_80450DE8(r13)
-/* 80032890 00000010  28 00 00 00 */	cmplwi r0, 0
-/* 80032894 00000014  40 82 00 18 */	bne lbl_800328AC
-/* 80032898 00000018  48 30 FE 65 */	bl OSGetTime
-/* 8003289C 0000001C  90 8D 88 64 */	stw r4, data_80450DE4(r13)
-/* 800328A0 00000020  90 6D 88 60 */	stw r3, m_stopTime__11dLib_time_c(r13)
-/* 800328A4 00000024  38 00 00 01 */	li r0, 1
-/* 800328A8 00000028  98 0D 88 68 */	stb r0, data_80450DE8(r13)
+/* 80032880  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 80032884  7C 08 02 A6 */	mflr r0                                 
+/* 80032888  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 8003288C  88 0D 88 68 */	lbz r0, data_80450DE8(r13)               /* constant-address: 80450DE8, symbol: data_80450DE8 */
+/* 80032890  28 00 00 00 */	cmplwi r0, 0                            
+/* 80032894  40 82 00 18 */	bne lbl_800328AC                         /* constant-address: 800328AC, symbol: lbl_800328AC */
+/* 80032898  48 30 FE 65 */	bl OSGetTime                             /* constant-address: 803426FC, symbol: OSGetTime */
+/* 8003289C  90 8D 88 64 */	stw r4, data_80450DE4(r13)               /* constant-address: 80450DE4, symbol: data_80450DE4 */
+/* 800328A0  90 6D 88 60 */	stw r3, m_stopTime__11dLib_time_c(r13)   /* constant-address: 80450DE0, symbol: m_stopTime__11dLib_time_c */
+/* 800328A4  38 00 00 01 */	li r0, 1                                
+/* 800328A8  98 0D 88 68 */	stb r0, data_80450DE8(r13)               /* constant-address: 80450DE8, symbol: data_80450DE8 */
 lbl_800328AC:
-/* 800328AC 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 800328B0 00000004  7C 08 03 A6 */	mtlr r0
-/* 800328B4 00000008  38 21 00 10 */	addi r1, r1, 0x10
-/* 800328B8 0000000C  4E 80 00 20 */	blr 
+/* 800328AC  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 800328B0  7C 08 03 A6 */	mtlr r0                                 
+/* 800328B4  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 800328B8  4E 80 00 20 */	blr                                     

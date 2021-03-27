@@ -1,182 +1,182 @@
 lbl_803053E0:
-/* 803053E0 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 803053E4 00000004  7C 08 02 A6 */	mflr r0
-/* 803053E8 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 803053EC 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 803053F0 00000010  48 05 CD E9 */	bl _savegpr_28
-/* 803053F4 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 803053F8 00000018  7C 9E 23 78 */	mr r30, r4
-/* 803053FC 0000001C  7C DC 33 78 */	mr r28, r6
-/* 80305400 00000020  54 80 06 3E */	clrlwi r0, r4, 0x18
-/* 80305404 00000024  28 00 00 01 */	cmplwi r0, 1
-/* 80305408 00000028  40 82 00 EC */	bne lbl_803054F4
-/* 8030540C 0000002C  80 7F 01 50 */	lwz r3, 0x150(r31)
-/* 80305410 00000030  80 63 00 70 */	lwz r3, 0x70(r3)
-/* 80305414 00000034  38 80 00 00 */	li r4, 0
-/* 80305418 00000038  81 83 00 00 */	lwz r12, 0(r3)
-/* 8030541C 0000003C  81 8C 00 60 */	lwz r12, 0x60(r12)
-/* 80305420 00000040  7D 89 03 A6 */	mtctr r12
-/* 80305424 00000044  4E 80 04 21 */	bctrl 
-/* 80305428 00000048  7C 7D 1B 78 */	mr r29, r3
-/* 8030542C 0000004C  80 7F 01 50 */	lwz r3, 0x150(r31)
-/* 80305430 00000050  80 63 00 70 */	lwz r3, 0x70(r3)
-/* 80305434 00000054  38 80 00 00 */	li r4, 0
-/* 80305438 00000058  81 83 00 00 */	lwz r12, 0(r3)
-/* 8030543C 0000005C  81 8C 00 A0 */	lwz r12, 0xa0(r12)
-/* 80305440 00000060  7D 89 03 A6 */	mtctr r12
-/* 80305444 00000064  4E 80 04 21 */	bctrl 
-/* 80305448 00000068  38 A0 00 00 */	li r5, 0
-/* 8030544C 0000006C  28 03 00 00 */	cmplwi r3, 0
-/* 80305450 00000070  41 82 00 34 */	beq lbl_80305484
-/* 80305454 00000074  80 63 00 20 */	lwz r3, 0x20(r3)
-/* 80305458 00000078  28 03 00 00 */	cmplwi r3, 0
-/* 8030545C 0000007C  41 82 00 28 */	beq lbl_80305484
-/* 80305460 00000080  88 03 00 00 */	lbz r0, 0(r3)
-/* 80305464 00000084  2C 00 00 00 */	cmpwi r0, 0
-/* 80305468 00000088  41 82 00 0C */	beq lbl_80305474
-/* 8030546C 0000008C  2C 00 00 01 */	cmpwi r0, 1
-/* 80305470 00000090  40 82 00 14 */	bne lbl_80305484
+/* 803053E0  94 21 FF E0 */	stwu r1, -0x20(r1)                      
+/* 803053E4  7C 08 02 A6 */	mflr r0                                 
+/* 803053E8  90 01 00 24 */	stw r0, 0x24(r1)                        
+/* 803053EC  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 803053F0  48 05 CD E9 */	bl _savegpr_28                           /* constant-address: 803621D8, symbol: _savegpr_28 */
+/* 803053F4  7C 7F 1B 78 */	mr r31, r3                              
+/* 803053F8  7C 9E 23 78 */	mr r30, r4                              
+/* 803053FC  7C DC 33 78 */	mr r28, r6                              
+/* 80305400  54 80 06 3E */	clrlwi r0, r4, 0x18                     
+/* 80305404  28 00 00 01 */	cmplwi r0, 1                            
+/* 80305408  40 82 00 EC */	bne lbl_803054F4                         /* constant-address: 803054F4, symbol: lbl_803054F4 */
+/* 8030540C  80 7F 01 50 */	lwz r3, 0x150(r31)                      
+/* 80305410  80 63 00 70 */	lwz r3, 0x70(r3)                        
+/* 80305414  38 80 00 00 */	li r4, 0                                
+/* 80305418  81 83 00 00 */	lwz r12, 0(r3)                          
+/* 8030541C  81 8C 00 60 */	lwz r12, 0x60(r12)                      
+/* 80305420  7D 89 03 A6 */	mtctr r12                               
+/* 80305424  4E 80 04 21 */	bctrl                                   
+/* 80305428  7C 7D 1B 78 */	mr r29, r3                              
+/* 8030542C  80 7F 01 50 */	lwz r3, 0x150(r31)                      
+/* 80305430  80 63 00 70 */	lwz r3, 0x70(r3)                        
+/* 80305434  38 80 00 00 */	li r4, 0                                
+/* 80305438  81 83 00 00 */	lwz r12, 0(r3)                          
+/* 8030543C  81 8C 00 A0 */	lwz r12, 0xa0(r12)                      
+/* 80305440  7D 89 03 A6 */	mtctr r12                               
+/* 80305444  4E 80 04 21 */	bctrl                                   
+/* 80305448  38 A0 00 00 */	li r5, 0                                
+/* 8030544C  28 03 00 00 */	cmplwi r3, 0                            
+/* 80305450  41 82 00 34 */	beq lbl_80305484                         /* constant-address: 80305484, symbol: lbl_80305484 */
+/* 80305454  80 63 00 20 */	lwz r3, 0x20(r3)                        
+/* 80305458  28 03 00 00 */	cmplwi r3, 0                            
+/* 8030545C  41 82 00 28 */	beq lbl_80305484                         /* constant-address: 80305484, symbol: lbl_80305484 */
+/* 80305460  88 03 00 00 */	lbz r0, 0(r3)                           
+/* 80305464  2C 00 00 00 */	cmpwi r0, 0                             
+/* 80305468  41 82 00 0C */	beq lbl_80305474                         /* constant-address: 80305474, symbol: lbl_80305474 */
+/* 8030546C  2C 00 00 01 */	cmpwi r0, 1                             
+/* 80305470  40 82 00 14 */	bne lbl_80305484                         /* constant-address: 80305484, symbol: lbl_80305484 */
 lbl_80305474:
-/* 80305474 00000000  88 03 00 01 */	lbz r0, 1(r3)
-/* 80305478 00000004  2C 00 00 00 */	cmpwi r0, 0
-/* 8030547C 00000008  40 82 00 08 */	bne lbl_80305484
-/* 80305480 0000000C  38 A0 00 01 */	li r5, 1
+/* 80305474  88 03 00 01 */	lbz r0, 1(r3)                           
+/* 80305478  2C 00 00 00 */	cmpwi r0, 0                             
+/* 8030547C  40 82 00 08 */	bne lbl_80305484                         /* constant-address: 80305484, symbol: lbl_80305484 */
+/* 80305480  38 A0 00 01 */	li r5, 1                                
 lbl_80305484:
-/* 80305484 00000000  57 80 06 3F */	clrlwi. r0, r28, 0x18
-/* 80305488 00000004  40 82 00 20 */	bne lbl_803054A8
-/* 8030548C 00000008  7F E3 FB 78 */	mr r3, r31
-/* 80305490 0000000C  7F A4 EB 78 */	mr r4, r29
-/* 80305494 00000010  54 A5 06 3E */	clrlwi r5, r5, 0x18
-/* 80305498 00000014  30 05 FF FF */	addic r0, r5, -1
-/* 8030549C 00000018  7C A0 29 10 */	subfe r5, r0, r5
-/* 803054A0 0000001C  48 00 01 E9 */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum
-/* 803054A4 00000020  48 00 01 CC */	b lbl_80305670
+/* 80305484  57 80 06 3F */	clrlwi. r0, r28, 0x18                   
+/* 80305488  40 82 00 20 */	bne lbl_803054A8                         /* constant-address: 803054A8, symbol: lbl_803054A8 */
+/* 8030548C  7F E3 FB 78 */	mr r3, r31                              
+/* 80305490  7F A4 EB 78 */	mr r4, r29                              
+/* 80305494  54 A5 06 3E */	clrlwi r5, r5, 0x18                     
+/* 80305498  30 05 FF FF */	addic r0, r5, -1                        
+/* 8030549C  7C A0 29 10 */	subfe r5, r0, r5                        
+/* 803054A0  48 00 01 E9 */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum /* constant-address: 80305688, symbol: setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum */
+/* 803054A4  48 00 01 CC */	b lbl_80305670                           /* constant-address: 80305670, symbol: lbl_80305670 */
 lbl_803054A8:
-/* 803054A8 00000000  7F E3 FB 78 */	mr r3, r31
-/* 803054AC 00000004  7F A4 EB 78 */	mr r4, r29
-/* 803054B0 00000008  54 A0 06 3F */	clrlwi. r0, r5, 0x18
-/* 803054B4 0000000C  38 A0 00 05 */	li r5, 5
-/* 803054B8 00000010  41 82 00 08 */	beq lbl_803054C0
-/* 803054BC 00000014  38 A0 00 06 */	li r5, 6
+/* 803054A8  7F E3 FB 78 */	mr r3, r31                              
+/* 803054AC  7F A4 EB 78 */	mr r4, r29                              
+/* 803054B0  54 A0 06 3F */	clrlwi. r0, r5, 0x18                    
+/* 803054B4  38 A0 00 05 */	li r5, 5                                
+/* 803054B8  41 82 00 08 */	beq lbl_803054C0                         /* constant-address: 803054C0, symbol: lbl_803054C0 */
+/* 803054BC  38 A0 00 06 */	li r5, 6                                
 lbl_803054C0:
-/* 803054C0 00000000  48 00 01 C9 */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum
-/* 803054C4 00000004  80 7F 01 50 */	lwz r3, 0x150(r31)
-/* 803054C8 00000008  80 63 00 70 */	lwz r3, 0x70(r3)
-/* 803054CC 0000000C  38 80 00 01 */	li r4, 1
-/* 803054D0 00000010  81 83 00 00 */	lwz r12, 0(r3)
-/* 803054D4 00000014  81 8C 00 60 */	lwz r12, 0x60(r12)
-/* 803054D8 00000018  7D 89 03 A6 */	mtctr r12
-/* 803054DC 0000001C  4E 80 04 21 */	bctrl 
-/* 803054E0 00000020  7C 64 1B 78 */	mr r4, r3
-/* 803054E4 00000024  7F E3 FB 78 */	mr r3, r31
-/* 803054E8 00000028  38 A0 00 04 */	li r5, 4
-/* 803054EC 0000002C  48 00 01 9D */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum
-/* 803054F0 00000030  48 00 01 80 */	b lbl_80305670
+/* 803054C0  48 00 01 C9 */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum /* constant-address: 80305688, symbol: setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum */
+/* 803054C4  80 7F 01 50 */	lwz r3, 0x150(r31)                      
+/* 803054C8  80 63 00 70 */	lwz r3, 0x70(r3)                        
+/* 803054CC  38 80 00 01 */	li r4, 1                                
+/* 803054D0  81 83 00 00 */	lwz r12, 0(r3)                          
+/* 803054D4  81 8C 00 60 */	lwz r12, 0x60(r12)                      
+/* 803054D8  7D 89 03 A6 */	mtctr r12                               
+/* 803054DC  4E 80 04 21 */	bctrl                                   
+/* 803054E0  7C 64 1B 78 */	mr r4, r3                               
+/* 803054E4  7F E3 FB 78 */	mr r3, r31                              
+/* 803054E8  38 A0 00 04 */	li r5, 4                                
+/* 803054EC  48 00 01 9D */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum /* constant-address: 80305688, symbol: setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum */
+/* 803054F0  48 00 01 80 */	b lbl_80305670                           /* constant-address: 80305670, symbol: lbl_80305670 */
 lbl_803054F4:
-/* 803054F4 00000000  57 80 06 3F */	clrlwi. r0, r28, 0x18
-/* 803054F8 00000004  40 82 00 A8 */	bne lbl_803055A0
-/* 803054FC 00000008  80 7F 01 50 */	lwz r3, 0x150(r31)
-/* 80305500 0000000C  80 63 00 70 */	lwz r3, 0x70(r3)
-/* 80305504 00000010  38 80 00 00 */	li r4, 0
-/* 80305508 00000014  81 83 00 00 */	lwz r12, 0(r3)
-/* 8030550C 00000018  81 8C 00 60 */	lwz r12, 0x60(r12)
-/* 80305510 0000001C  7D 89 03 A6 */	mtctr r12
-/* 80305514 00000020  4E 80 04 21 */	bctrl 
-/* 80305518 00000024  7C 64 1B 78 */	mr r4, r3
-/* 8030551C 00000028  7F E3 FB 78 */	mr r3, r31
-/* 80305520 0000002C  38 A0 00 02 */	li r5, 2
-/* 80305524 00000030  48 00 01 65 */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum
-/* 80305528 00000034  3B 80 00 01 */	li r28, 1
-/* 8030552C 00000038  57 DD 06 3E */	clrlwi r29, r30, 0x18
-/* 80305530 0000003C  48 00 00 34 */	b lbl_80305564
+/* 803054F4  57 80 06 3F */	clrlwi. r0, r28, 0x18                   
+/* 803054F8  40 82 00 A8 */	bne lbl_803055A0                         /* constant-address: 803055A0, symbol: lbl_803055A0 */
+/* 803054FC  80 7F 01 50 */	lwz r3, 0x150(r31)                      
+/* 80305500  80 63 00 70 */	lwz r3, 0x70(r3)                        
+/* 80305504  38 80 00 00 */	li r4, 0                                
+/* 80305508  81 83 00 00 */	lwz r12, 0(r3)                          
+/* 8030550C  81 8C 00 60 */	lwz r12, 0x60(r12)                      
+/* 80305510  7D 89 03 A6 */	mtctr r12                               
+/* 80305514  4E 80 04 21 */	bctrl                                   
+/* 80305518  7C 64 1B 78 */	mr r4, r3                               
+/* 8030551C  7F E3 FB 78 */	mr r3, r31                              
+/* 80305520  38 A0 00 02 */	li r5, 2                                
+/* 80305524  48 00 01 65 */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum /* constant-address: 80305688, symbol: setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum */
+/* 80305528  3B 80 00 01 */	li r28, 1                               
+/* 8030552C  57 DD 06 3E */	clrlwi r29, r30, 0x18                   
+/* 80305530  48 00 00 34 */	b lbl_80305564                           /* constant-address: 80305564, symbol: lbl_80305564 */
 lbl_80305534:
-/* 80305534 00000000  80 7F 01 50 */	lwz r3, 0x150(r31)
-/* 80305538 00000004  80 63 00 70 */	lwz r3, 0x70(r3)
-/* 8030553C 00000008  57 84 06 3E */	clrlwi r4, r28, 0x18
-/* 80305540 0000000C  81 83 00 00 */	lwz r12, 0(r3)
-/* 80305544 00000010  81 8C 00 60 */	lwz r12, 0x60(r12)
-/* 80305548 00000014  7D 89 03 A6 */	mtctr r12
-/* 8030554C 00000018  4E 80 04 21 */	bctrl 
-/* 80305550 0000001C  7C 64 1B 78 */	mr r4, r3
-/* 80305554 00000020  7F E3 FB 78 */	mr r3, r31
-/* 80305558 00000024  38 A0 00 03 */	li r5, 3
-/* 8030555C 00000028  48 00 01 2D */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum
-/* 80305560 0000002C  3B 9C 00 01 */	addi r28, r28, 1
+/* 80305534  80 7F 01 50 */	lwz r3, 0x150(r31)                      
+/* 80305538  80 63 00 70 */	lwz r3, 0x70(r3)                        
+/* 8030553C  57 84 06 3E */	clrlwi r4, r28, 0x18                    
+/* 80305540  81 83 00 00 */	lwz r12, 0(r3)                          
+/* 80305544  81 8C 00 60 */	lwz r12, 0x60(r12)                      
+/* 80305548  7D 89 03 A6 */	mtctr r12                               
+/* 8030554C  4E 80 04 21 */	bctrl                                   
+/* 80305550  7C 64 1B 78 */	mr r4, r3                               
+/* 80305554  7F E3 FB 78 */	mr r3, r31                              
+/* 80305558  38 A0 00 03 */	li r5, 3                                
+/* 8030555C  48 00 01 2D */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum /* constant-address: 80305688, symbol: setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum */
+/* 80305560  3B 9C 00 01 */	addi r28, r28, 1                         /* constant-address: 00000002 */
 lbl_80305564:
-/* 80305564 00000000  57 80 06 3E */	clrlwi r0, r28, 0x18
-/* 80305568 00000004  7C 00 E8 40 */	cmplw r0, r29
-/* 8030556C 00000008  41 80 FF C8 */	blt lbl_80305534
-/* 80305570 0000000C  80 7F 01 50 */	lwz r3, 0x150(r31)
-/* 80305574 00000010  80 63 00 70 */	lwz r3, 0x70(r3)
-/* 80305578 00000014  7F A4 EB 78 */	mr r4, r29
-/* 8030557C 00000018  81 83 00 00 */	lwz r12, 0(r3)
-/* 80305580 0000001C  81 8C 00 60 */	lwz r12, 0x60(r12)
-/* 80305584 00000020  7D 89 03 A6 */	mtctr r12
-/* 80305588 00000024  4E 80 04 21 */	bctrl 
-/* 8030558C 00000028  7C 64 1B 78 */	mr r4, r3
-/* 80305590 0000002C  7F E3 FB 78 */	mr r3, r31
-/* 80305594 00000030  38 A0 00 04 */	li r5, 4
-/* 80305598 00000034  48 00 00 F1 */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum
-/* 8030559C 00000038  48 00 00 D4 */	b lbl_80305670
+/* 80305564  57 80 06 3E */	clrlwi r0, r28, 0x18                    
+/* 80305568  7C 00 E8 40 */	cmplw r0, r29                           
+/* 8030556C  41 80 FF C8 */	blt lbl_80305534                         /* constant-address: 80305534, symbol: lbl_80305534 */
+/* 80305570  80 7F 01 50 */	lwz r3, 0x150(r31)                      
+/* 80305574  80 63 00 70 */	lwz r3, 0x70(r3)                        
+/* 80305578  7F A4 EB 78 */	mr r4, r29                              
+/* 8030557C  81 83 00 00 */	lwz r12, 0(r3)                          
+/* 80305580  81 8C 00 60 */	lwz r12, 0x60(r12)                      
+/* 80305584  7D 89 03 A6 */	mtctr r12                               
+/* 80305588  4E 80 04 21 */	bctrl                                   
+/* 8030558C  7C 64 1B 78 */	mr r4, r3                               
+/* 80305590  7F E3 FB 78 */	mr r3, r31                              
+/* 80305594  38 A0 00 04 */	li r5, 4                                
+/* 80305598  48 00 00 F1 */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum /* constant-address: 80305688, symbol: setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum */
+/* 8030559C  48 00 00 D4 */	b lbl_80305670                           /* constant-address: 80305670, symbol: lbl_80305670 */
 lbl_803055A0:
-/* 803055A0 00000000  80 7F 01 50 */	lwz r3, 0x150(r31)
-/* 803055A4 00000004  80 63 00 70 */	lwz r3, 0x70(r3)
-/* 803055A8 00000008  38 80 00 00 */	li r4, 0
-/* 803055AC 0000000C  81 83 00 00 */	lwz r12, 0(r3)
-/* 803055B0 00000010  81 8C 00 60 */	lwz r12, 0x60(r12)
-/* 803055B4 00000014  7D 89 03 A6 */	mtctr r12
-/* 803055B8 00000018  4E 80 04 21 */	bctrl 
-/* 803055BC 0000001C  7C 64 1B 78 */	mr r4, r3
-/* 803055C0 00000020  7F E3 FB 78 */	mr r3, r31
-/* 803055C4 00000024  38 A0 00 02 */	li r5, 2
-/* 803055C8 00000028  48 00 00 C1 */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum
-/* 803055CC 0000002C  3B 80 00 01 */	li r28, 1
-/* 803055D0 00000030  57 DD 06 3E */	clrlwi r29, r30, 0x18
-/* 803055D4 00000034  48 00 00 34 */	b lbl_80305608
+/* 803055A0  80 7F 01 50 */	lwz r3, 0x150(r31)                      
+/* 803055A4  80 63 00 70 */	lwz r3, 0x70(r3)                        
+/* 803055A8  38 80 00 00 */	li r4, 0                                
+/* 803055AC  81 83 00 00 */	lwz r12, 0(r3)                          
+/* 803055B0  81 8C 00 60 */	lwz r12, 0x60(r12)                      
+/* 803055B4  7D 89 03 A6 */	mtctr r12                               
+/* 803055B8  4E 80 04 21 */	bctrl                                   
+/* 803055BC  7C 64 1B 78 */	mr r4, r3                               
+/* 803055C0  7F E3 FB 78 */	mr r3, r31                              
+/* 803055C4  38 A0 00 02 */	li r5, 2                                
+/* 803055C8  48 00 00 C1 */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum /* constant-address: 80305688, symbol: setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum */
+/* 803055CC  3B 80 00 01 */	li r28, 1                               
+/* 803055D0  57 DD 06 3E */	clrlwi r29, r30, 0x18                   
+/* 803055D4  48 00 00 34 */	b lbl_80305608                           /* constant-address: 80305608, symbol: lbl_80305608 */
 lbl_803055D8:
-/* 803055D8 00000000  80 7F 01 50 */	lwz r3, 0x150(r31)
-/* 803055DC 00000004  80 63 00 70 */	lwz r3, 0x70(r3)
-/* 803055E0 00000008  57 84 06 3E */	clrlwi r4, r28, 0x18
-/* 803055E4 0000000C  81 83 00 00 */	lwz r12, 0(r3)
-/* 803055E8 00000010  81 8C 00 60 */	lwz r12, 0x60(r12)
-/* 803055EC 00000014  7D 89 03 A6 */	mtctr r12
-/* 803055F0 00000018  4E 80 04 21 */	bctrl 
-/* 803055F4 0000001C  7C 64 1B 78 */	mr r4, r3
-/* 803055F8 00000020  7F E3 FB 78 */	mr r3, r31
-/* 803055FC 00000024  38 A0 00 03 */	li r5, 3
-/* 80305600 00000028  48 00 00 89 */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum
-/* 80305604 0000002C  3B 9C 00 01 */	addi r28, r28, 1
+/* 803055D8  80 7F 01 50 */	lwz r3, 0x150(r31)                      
+/* 803055DC  80 63 00 70 */	lwz r3, 0x70(r3)                        
+/* 803055E0  57 84 06 3E */	clrlwi r4, r28, 0x18                    
+/* 803055E4  81 83 00 00 */	lwz r12, 0(r3)                          
+/* 803055E8  81 8C 00 60 */	lwz r12, 0x60(r12)                      
+/* 803055EC  7D 89 03 A6 */	mtctr r12                               
+/* 803055F0  4E 80 04 21 */	bctrl                                   
+/* 803055F4  7C 64 1B 78 */	mr r4, r3                               
+/* 803055F8  7F E3 FB 78 */	mr r3, r31                              
+/* 803055FC  38 A0 00 03 */	li r5, 3                                
+/* 80305600  48 00 00 89 */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum /* constant-address: 80305688, symbol: setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum */
+/* 80305604  3B 9C 00 01 */	addi r28, r28, 1                         /* constant-address: 00000002 */
 lbl_80305608:
-/* 80305608 00000000  57 80 06 3E */	clrlwi r0, r28, 0x18
-/* 8030560C 00000004  7C 00 E8 40 */	cmplw r0, r29
-/* 80305610 00000008  41 80 FF C8 */	blt lbl_803055D8
-/* 80305614 0000000C  80 7F 01 50 */	lwz r3, 0x150(r31)
-/* 80305618 00000010  80 63 00 70 */	lwz r3, 0x70(r3)
-/* 8030561C 00000014  7F A4 EB 78 */	mr r4, r29
-/* 80305620 00000018  81 83 00 00 */	lwz r12, 0(r3)
-/* 80305624 0000001C  81 8C 00 60 */	lwz r12, 0x60(r12)
-/* 80305628 00000020  7D 89 03 A6 */	mtctr r12
-/* 8030562C 00000024  4E 80 04 21 */	bctrl 
-/* 80305630 00000028  7C 64 1B 78 */	mr r4, r3
-/* 80305634 0000002C  7F E3 FB 78 */	mr r3, r31
-/* 80305638 00000030  38 A0 00 07 */	li r5, 7
-/* 8030563C 00000034  48 00 00 4D */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum
-/* 80305640 00000038  80 7F 01 50 */	lwz r3, 0x150(r31)
-/* 80305644 0000003C  80 63 00 70 */	lwz r3, 0x70(r3)
-/* 80305648 00000040  38 1E 00 01 */	addi r0, r30, 1
-/* 8030564C 00000044  54 04 06 3E */	clrlwi r4, r0, 0x18
-/* 80305650 00000048  81 83 00 00 */	lwz r12, 0(r3)
-/* 80305654 0000004C  81 8C 00 60 */	lwz r12, 0x60(r12)
-/* 80305658 00000050  7D 89 03 A6 */	mtctr r12
-/* 8030565C 00000054  4E 80 04 21 */	bctrl 
-/* 80305660 00000058  7C 64 1B 78 */	mr r4, r3
-/* 80305664 0000005C  7F E3 FB 78 */	mr r3, r31
-/* 80305668 00000060  38 A0 00 04 */	li r5, 4
-/* 8030566C 00000064  48 00 00 1D */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum
+/* 80305608  57 80 06 3E */	clrlwi r0, r28, 0x18                    
+/* 8030560C  7C 00 E8 40 */	cmplw r0, r29                           
+/* 80305610  41 80 FF C8 */	blt lbl_803055D8                         /* constant-address: 803055D8, symbol: lbl_803055D8 */
+/* 80305614  80 7F 01 50 */	lwz r3, 0x150(r31)                      
+/* 80305618  80 63 00 70 */	lwz r3, 0x70(r3)                        
+/* 8030561C  7F A4 EB 78 */	mr r4, r29                              
+/* 80305620  81 83 00 00 */	lwz r12, 0(r3)                          
+/* 80305624  81 8C 00 60 */	lwz r12, 0x60(r12)                      
+/* 80305628  7D 89 03 A6 */	mtctr r12                               
+/* 8030562C  4E 80 04 21 */	bctrl                                   
+/* 80305630  7C 64 1B 78 */	mr r4, r3                               
+/* 80305634  7F E3 FB 78 */	mr r3, r31                              
+/* 80305638  38 A0 00 07 */	li r5, 7                                
+/* 8030563C  48 00 00 4D */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum /* constant-address: 80305688, symbol: setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum */
+/* 80305640  80 7F 01 50 */	lwz r3, 0x150(r31)                      
+/* 80305644  80 63 00 70 */	lwz r3, 0x70(r3)                        
+/* 80305648  38 1E 00 01 */	addi r0, r30, 1                         
+/* 8030564C  54 04 06 3E */	clrlwi r4, r0, 0x18                     
+/* 80305650  81 83 00 00 */	lwz r12, 0(r3)                          
+/* 80305654  81 8C 00 60 */	lwz r12, 0x60(r12)                      
+/* 80305658  7D 89 03 A6 */	mtctr r12                               
+/* 8030565C  4E 80 04 21 */	bctrl                                   
+/* 80305660  7C 64 1B 78 */	mr r4, r3                               
+/* 80305664  7F E3 FB 78 */	mr r3, r31                              
+/* 80305668  38 A0 00 04 */	li r5, 4                                
+/* 8030566C  48 00 00 1D */	bl setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum /* constant-address: 80305688, symbol: setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum */
 lbl_80305670:
-/* 80305670 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80305674 00000004  48 05 CB B1 */	bl _restgpr_28
-/* 80305678 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 8030567C 0000000C  7C 08 03 A6 */	mtlr r0
-/* 80305680 00000010  38 21 00 20 */	addi r1, r1, 0x20
-/* 80305684 00000014  4E 80 00 20 */	blr 
+/* 80305670  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 80305674  48 05 CB B1 */	bl _restgpr_28                           /* constant-address: 80362224, symbol: _restgpr_28 */
+/* 80305678  80 01 00 24 */	lwz r0, 0x24(r1)                        
+/* 8030567C  7C 08 03 A6 */	mtlr r0                                 
+/* 80305680  38 21 00 20 */	addi r1, r1, 0x20                       
+/* 80305684  4E 80 00 20 */	blr                                     

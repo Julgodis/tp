@@ -1,18 +1,18 @@
 lbl_800F3FC4:
-/* 800F3FC4 00000000  38 00 00 01 */	li r0, 1
-/* 800F3FC8 00000004  B0 03 30 12 */	sth r0, 0x3012(r3)
-/* 800F3FCC 00000008  3C 80 80 42 */	lis r4, l_waitBaseAnime@ha
-/* 800F3FD0 0000000C  C4 04 55 14 */	lfsu f0, l_waitBaseAnime@l(r4)
-/* 800F3FD4 00000010  D0 03 35 88 */	stfs f0, 0x3588(r3)
-/* 800F3FD8 00000014  C0 04 00 04 */	lfs f0, 4(r4)	/* effective address: 80420004 */
-/* 800F3FDC 00000018  D0 03 35 8C */	stfs f0, 0x358c(r3)
-/* 800F3FE0 0000001C  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80420008 */
-/* 800F3FE4 00000020  D0 03 35 90 */	stfs f0, 0x3590(r3)
-/* 800F3FE8 00000024  3C 80 80 42 */	lis r4, l_canoeBaseAnime@ha
-/* 800F3FEC 00000028  38 04 55 EC */	addi r0, r4, l_canoeBaseAnime@l
-/* 800F3FF0 0000002C  90 03 38 4C */	stw r0, 0x384c(r3)
-/* 800F3FF4 00000030  38 00 00 03 */	li r0, 3
-/* 800F3FF8 00000034  98 03 2F AA */	stb r0, 0x2faa(r3)
-/* 800F3FFC 00000038  38 00 00 00 */	li r0, 0
-/* 800F4000 0000003C  B0 03 30 10 */	sth r0, 0x3010(r3)
-/* 800F4004 00000040  4E 80 00 20 */	blr 
+/* 800F3FC4  38 00 00 01 */	li r0, 1                                
+/* 800F3FC8  B0 03 30 12 */	sth r0, 0x3012(r3)                      
+/* 800F3FCC  3C 80 80 42 */	lis r4, l_waitBaseAnime@ha              
+/* 800F3FD0  C4 04 55 14 */	lfsu f0, l_waitBaseAnime@l(r4)           /* constant-address: 80425514, symbol: l_waitBaseAnime */
+/* 800F3FD4  D0 03 35 88 */	stfs f0, 0x3588(r3)                     
+/* 800F3FD8  C0 04 00 04 */	lfs f0, 4(r4)                            /* constant-address: 80425518, symbol: None */
+/* 800F3FDC  D0 03 35 8C */	stfs f0, 0x358c(r3)                     
+/* 800F3FE0  C0 04 00 08 */	lfs f0, 8(r4)                            /* constant-address: 8042551C, symbol: None */
+/* 800F3FE4  D0 03 35 90 */	stfs f0, 0x3590(r3)                     
+/* 800F3FE8  3C 80 80 42 */	lis r4, l_canoeBaseAnime@ha             
+/* 800F3FEC  38 04 55 EC */	addi r0, r4, l_canoeBaseAnime@l          /* constant-address: 804255EC, symbol: l_canoeBaseAnime */
+/* 800F3FF0  90 03 38 4C */	stw r0, 0x384c(r3)                      
+/* 800F3FF4  38 00 00 03 */	li r0, 3                                
+/* 800F3FF8  98 03 2F AA */	stb r0, 0x2faa(r3)                      
+/* 800F3FFC  38 00 00 00 */	li r0, 0                                
+/* 800F4000  B0 03 30 10 */	sth r0, 0x3010(r3)                      
+/* 800F4004  4E 80 00 20 */	blr                                     

@@ -124,6 +124,8 @@ def find_bad_symbol_addr(truth, build_path, expected_path):
                 print(f"\texpected size: 0x{closest_symbol.size:04X}")
                 sys.exit()
 
+            sys.exit()
+
     for symbol in expected_symbols:
         addr = elf_symbol_addr(symbol)
 
@@ -216,8 +218,6 @@ def symbols_from_object(obj):
     for sym in obj.symbols:
         if sym.isSection():
             continue
-        if sym.isObject():
-            continue
         if sym.isFile():
             continue
         if not isinstance(sym, libelf.OffsetSymbol):
@@ -231,6 +231,77 @@ def symbols_from_elf(path):
         obj = libelf.load_object_from_file(path, path.name, file)
         return symbols_from_object(obj)
     return []  
+
+@difftools.command(name="section")
+@click.option('--truth', '-t', default="SYMDEF", type=click.Choice(['SYMDEF', 'EXPECTED', 'S', 'E'], case_sensitive=False))
+@click.option('--build_path', 'build_path', required=False, type=PathPath(file_okay=False, dir_okay=True), default="build/dolzel2/")
+@click.option('--expected_path', 'expected_path', required=False, type=PathPath(file_okay=False, dir_okay=True), default="expected/build/dolzel2/")
+@click.argument('section', nargs=1)
+def section_diff(truth, build_path, expected_path, section):
+    
+    build_symbols = []
+    build_elf = build_path.joinpath("main.elf")
+    if not build_elf.exists():
+        fail(f"file not found: elf file '{build_elf}'")
+    build_symbols.extend(symbols_from_elf(build_elf))
+
+    expected_symbols = []
+    if truth == "EXPECTED" or truth == "E":
+        if not expected_path:
+            fail(f"when 'truth={truth}' the input argument 'expected_path' must be provided")
+
+        expected_elf = expected_path.joinpath("main.elf")
+        if not expected_elf.exists():
+            fail(f"file not found: expected elf file '{expected_elf}'")
+        expected_symbols.extend(symbols_from_elf(expected_elf))
+    else:
+        assert False
+
+    build_symbols.sort(key=lambda x:elf_symbol_addr(x))
+    expected_symbols.sort(key=lambda x:elf_symbol_addr(x))
+
+    build_dict = dict()
+    expected_dict = dict()
+
+    for symbol in build_symbols:
+        if symbol.section.name != ".rodata":
+            continue
+        build_dict[elf_symbol_addr(symbol)] = symbol
+    for symbol in expected_symbols:
+        if symbol.section.name != ".rodata":
+            continue
+        expected_dict[elf_symbol_addr(symbol)] = symbol
+
+    keys = set([*build_dict.keys(), *expected_dict.keys()])
+    keys_list = list(keys)
+    keys_list.sort()
+
+    for key in keys_list:
+        in_build = key in build_dict
+        in_expected = key in expected_dict
+
+        if in_build and not in_expected:
+            print(f"+ {key:08X} {build_dict[key].size:04X} {build_dict[key].section.name:<10} '{build_dict[key].name}'")
+        elif not in_build and in_expected:
+            print(f"- {key:08X} {expected_dict[key].size:04X} {expected_dict[key].section.name:<10} '{expected_dict[key].name}'")
+        else:
+            build_sym = build_dict[key]
+            expected_sym = expected_dict[key]
+            print(f"= {key:08X} {build_sym.size:04X}/{expected_sym.size:04X}  {build_sym.section.name:<10} '{build_sym.name}' '{expected_sym.name}'")
+            #if build_sym.name != expected_sym.name:
+            #    sys.exit(1)
+
+    #section_build_symbols = [ x for x in build_symbols ]
+    #section_expected_symbols = [ x for x in expected_symbols  ]
+    #for build, expected in zip(section_build_symbols, section_expected_symbols):
+    #    build_addr = elf_symbol_addr(build)
+    #    expected_addr = elf_symbol_addr(expected)
+    #
+    #    print(f"{build_addr:08X} {build.size:04X} {expected_addr:08X} {expected.size:04X}: '{build.name}' '{expected.name}' {build.section.name} {expected.section.name}")
+    #    if build.name == expected.name:
+    #        if build_addr != expected_addr:
+    #            sys.exit(1)
+
 
 """
 import elf

@@ -1,62 +1,62 @@
 lbl_8032FAF4:
-/* 8032FAF4 00000000  94 21 FF D0 */	stwu r1, -0x30(r1)
-/* 8032FAF8 00000004  7C 08 02 A6 */	mflr r0
-/* 8032FAFC 00000008  90 01 00 34 */	stw r0, 0x34(r1)
-/* 8032FB00 0000000C  39 61 00 30 */	addi r11, r1, 0x30
-/* 8032FB04 00000010  48 03 26 D1 */	bl _savegpr_27
-/* 8032FB08 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 8032FB0C 00000018  7C 9F 23 78 */	mr r31, r4
-/* 8032FB10 0000001C  3B 80 00 00 */	li r28, 0
-/* 8032FB14 00000020  A0 64 00 14 */	lhz r3, 0x14(r4)
-/* 8032FB18 00000024  A0 1E 00 1C */	lhz r0, 0x1c(r30)
-/* 8032FB1C 00000028  28 00 00 01 */	cmplwi r0, 1
-/* 8032FB20 0000002C  40 82 00 0C */	bne lbl_8032FB2C
-/* 8032FB24 00000030  38 60 00 02 */	li r3, 2
-/* 8032FB28 00000034  48 00 00 88 */	b lbl_8032FBB0
+/* 8032FAF4  94 21 FF D0 */	stwu r1, -0x30(r1)                      
+/* 8032FAF8  7C 08 02 A6 */	mflr r0                                 
+/* 8032FAFC  90 01 00 34 */	stw r0, 0x34(r1)                        
+/* 8032FB00  39 61 00 30 */	addi r11, r1, 0x30                      
+/* 8032FB04  48 03 26 D1 */	bl _savegpr_27                           /* constant-address: 803621D4, symbol: _savegpr_27 */
+/* 8032FB08  7C 7E 1B 78 */	mr r30, r3                              
+/* 8032FB0C  7C 9F 23 78 */	mr r31, r4                              
+/* 8032FB10  3B 80 00 00 */	li r28, 0                               
+/* 8032FB14  A0 64 00 14 */	lhz r3, 0x14(r4)                        
+/* 8032FB18  A0 1E 00 1C */	lhz r0, 0x1c(r30)                       
+/* 8032FB1C  28 00 00 01 */	cmplwi r0, 1                            
+/* 8032FB20  40 82 00 0C */	bne lbl_8032FB2C                         /* constant-address: 8032FB2C, symbol: lbl_8032FB2C */
+/* 8032FB24  38 60 00 02 */	li r3, 2                                
+/* 8032FB28  48 00 00 88 */	b lbl_8032FBB0                           /* constant-address: 8032FBB0, symbol: lbl_8032FBB0 */
 lbl_8032FB2C:
-/* 8032FB2C 00000000  3B 60 00 00 */	li r27, 0
-/* 8032FB30 00000004  54 7D 04 3E */	clrlwi r29, r3, 0x10
-/* 8032FB34 00000008  48 00 00 6C */	b lbl_8032FBA0
+/* 8032FB2C  3B 60 00 00 */	li r27, 0                               
+/* 8032FB30  54 7D 04 3E */	clrlwi r29, r3, 0x10                    
+/* 8032FB34  48 00 00 6C */	b lbl_8032FBA0                           /* constant-address: 8032FBA0, symbol: lbl_8032FBA0 */
 lbl_8032FB38:
-/* 8032FB38 00000000  80 7F 00 18 */	lwz r3, 0x18(r31)
-/* 8032FB3C 00000004  57 60 0B FC */	rlwinm r0, r27, 1, 0xf, 0x1e
-/* 8032FB40 00000008  7C 03 02 2E */	lhzx r0, r3, r0
-/* 8032FB44 0000000C  28 00 FF FF */	cmplwi r0, 0xffff
-/* 8032FB48 00000010  41 82 00 54 */	beq lbl_8032FB9C
-/* 8032FB4C 00000014  80 7E 00 08 */	lwz r3, 8(r30)
-/* 8032FB50 00000018  54 00 13 BA */	rlwinm r0, r0, 2, 0xe, 0x1d
-/* 8032FB54 0000001C  7C 63 00 2E */	lwzx r3, r3, r0
-/* 8032FB58 00000020  80 63 00 3C */	lwz r3, 0x3c(r3)
-/* 8032FB5C 00000024  3C 00 C0 00 */	lis r0, 0xc000
-/* 8032FB60 00000028  7C 03 00 40 */	cmplw r3, r0
-/* 8032FB64 0000002C  40 80 00 08 */	bge lbl_8032FB6C
-/* 8032FB68 00000030  48 00 00 08 */	b lbl_8032FB70
+/* 8032FB38  80 7F 00 18 */	lwz r3, 0x18(r31)                       
+/* 8032FB3C  57 60 0B FC */	rlwinm r0, r27, 1, 0xf, 0x1e            
+/* 8032FB40  7C 03 02 2E */	lhzx r0, r3, r0                         
+/* 8032FB44  28 00 FF FF */	cmplwi r0, 0xffff                       
+/* 8032FB48  41 82 00 54 */	beq lbl_8032FB9C                         /* constant-address: 8032FB9C, symbol: lbl_8032FB9C */
+/* 8032FB4C  80 7E 00 08 */	lwz r3, 8(r30)                          
+/* 8032FB50  54 00 13 BA */	rlwinm r0, r0, 2, 0xe, 0x1d             
+/* 8032FB54  7C 63 00 2E */	lwzx r3, r3, r0                         
+/* 8032FB58  80 63 00 3C */	lwz r3, 0x3c(r3)                        
+/* 8032FB5C  3C 00 C0 00 */	lis r0, 0xc000                          
+/* 8032FB60  7C 03 00 40 */	cmplw r3, r0                            
+/* 8032FB64  40 80 00 08 */	bge lbl_8032FB6C                         /* constant-address: 8032FB6C, symbol: lbl_8032FB6C */
+/* 8032FB68  48 00 00 08 */	b lbl_8032FB70                           /* constant-address: 8032FB70, symbol: lbl_8032FB70 */
 lbl_8032FB6C:
-/* 8032FB6C 00000000  38 60 00 00 */	li r3, 0
+/* 8032FB6C  38 60 00 00 */	li r3, 0                                
 lbl_8032FB70:
-/* 8032FB70 00000000  28 03 00 00 */	cmplwi r3, 0
-/* 8032FB74 00000004  40 82 00 0C */	bne lbl_8032FB80
-/* 8032FB78 00000008  3B 80 00 01 */	li r28, 1
-/* 8032FB7C 0000000C  48 00 00 20 */	b lbl_8032FB9C
+/* 8032FB70  28 03 00 00 */	cmplwi r3, 0                            
+/* 8032FB74  40 82 00 0C */	bne lbl_8032FB80                         /* constant-address: 8032FB80, symbol: lbl_8032FB80 */
+/* 8032FB78  3B 80 00 01 */	li r28, 1                               
+/* 8032FB7C  48 00 00 20 */	b lbl_8032FB9C                           /* constant-address: 8032FB9C, symbol: lbl_8032FB9C */
 lbl_8032FB80:
-/* 8032FB80 00000000  B3 61 00 08 */	sth r27, 8(r1)
-/* 8032FB84 00000004  38 00 00 01 */	li r0, 1
-/* 8032FB88 00000008  B0 01 00 0A */	sth r0, 0xa(r1)
-/* 8032FB8C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8032FB90 00000010  38 80 00 00 */	li r4, 0
-/* 8032FB94 00000014  38 A1 00 08 */	addi r5, r1, 8
-/* 8032FB98 00000018  4B FF CA 0D */	bl setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm
+/* 8032FB80  B3 61 00 08 */	sth r27, 8(r1)                          
+/* 8032FB84  38 00 00 01 */	li r0, 1                                
+/* 8032FB88  B0 01 00 0A */	sth r0, 0xa(r1)                         
+/* 8032FB8C  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 8032FB90  38 80 00 00 */	li r4, 0                                
+/* 8032FB94  38 A1 00 08 */	addi r5, r1, 8                          
+/* 8032FB98  4B FF CA 0D */	bl setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm /* constant-address: 8032C5A4, symbol: setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm */
 lbl_8032FB9C:
-/* 8032FB9C 00000000  3B 7B 00 01 */	addi r27, r27, 1
+/* 8032FB9C  3B 7B 00 01 */	addi r27, r27, 1                         /* constant-address: 00000001 */
 lbl_8032FBA0:
-/* 8032FBA0 00000000  57 60 04 3E */	clrlwi r0, r27, 0x10
-/* 8032FBA4 00000004  7C 00 E8 40 */	cmplw r0, r29
-/* 8032FBA8 00000008  41 80 FF 90 */	blt lbl_8032FB38
-/* 8032FBAC 0000000C  7F 83 E3 78 */	mr r3, r28
+/* 8032FBA0  57 60 04 3E */	clrlwi r0, r27, 0x10                    
+/* 8032FBA4  7C 00 E8 40 */	cmplw r0, r29                           
+/* 8032FBA8  41 80 FF 90 */	blt lbl_8032FB38                         /* constant-address: 8032FB38, symbol: lbl_8032FB38 */
+/* 8032FBAC  7F 83 E3 78 */	mr r3, r28                              
 lbl_8032FBB0:
-/* 8032FBB0 00000000  39 61 00 30 */	addi r11, r1, 0x30
-/* 8032FBB4 00000004  48 03 26 6D */	bl _restgpr_27
-/* 8032FBB8 00000008  80 01 00 34 */	lwz r0, 0x34(r1)
-/* 8032FBBC 0000000C  7C 08 03 A6 */	mtlr r0
-/* 8032FBC0 00000010  38 21 00 30 */	addi r1, r1, 0x30
-/* 8032FBC4 00000014  4E 80 00 20 */	blr 
+/* 8032FBB0  39 61 00 30 */	addi r11, r1, 0x30                      
+/* 8032FBB4  48 03 26 6D */	bl _restgpr_27                           /* constant-address: 80362220, symbol: _restgpr_27 */
+/* 8032FBB8  80 01 00 34 */	lwz r0, 0x34(r1)                        
+/* 8032FBBC  7C 08 03 A6 */	mtlr r0                                 
+/* 8032FBC0  38 21 00 30 */	addi r1, r1, 0x30                       
+/* 8032FBC4  4E 80 00 20 */	blr                                     

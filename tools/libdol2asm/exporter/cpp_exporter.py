@@ -6,6 +6,8 @@ import subprocess
 import struct
 import asyncio
 import functools
+import librel
+import libdemangle
 
 from pathlib import Path
 from collections import defaultdict
@@ -16,14 +18,12 @@ from capstone import *
 from capstone.ppc import *
 
 from .. import util
-from .. import librel
 from .. import settings
 
 from ..builder import AsyncBuilder
 from ..disassemble import *
 from ..context import Context
 from ..symbol_table import GlobalSymbolTable
-from ..demangle import demangle
 from ..types import *
 from ..data import *
 
@@ -107,7 +107,7 @@ class CPPDisassembler(Disassembler):
 
         return symbol.asm_reference(addr)
 
-    async def callback(self, address, offset, insn, bytes):
+    async def callback(self, address, insn, bytes):
         if address in self.block_map:
             block = self.block_map[address]
             await self.builder.write("%s:" % block.identifier.label)
@@ -140,9 +140,17 @@ class CPPDisassembler(Disassembler):
         if asm == None:
             asm = f".4byte 0x{raw:08X}  /* unknown instruction */"
 
-        prefixComment = '/* %08X %08X  %02X %02X %02X %02X */' % (
-            address, offset, bytes[0], bytes[1], bytes[2], bytes[3])
-        await self.builder.write(f"{prefixComment}\t{asm}")
+        prefixComment = '/* %08X  %02X %02X %02X %02X */' % (
+            address, bytes[0], bytes[1], bytes[2], bytes[3])
+        comment = ""
+        if address in self.function.ref_addrs:
+            sym = ""
+            addr = self.function.ref_addrs[address]
+            symbol = self.get_symbol(addr)
+            if symbol:
+                sym = f", symbol: {symbol.asm_reference(addr)}"
+            comment = f" /* constant-address: {addr:08X}{sym} */"
+        await self.builder.write(f"{prefixComment}\t{asm:<40}{comment}")
 
     def insn_to_text(self, addr, insn, raw) -> str:
         id = insn.id
@@ -264,7 +272,9 @@ class CPPDisassembler(Disassembler):
                 rB = insn.reg_name(insn.operands[1].reg)
                 name = self.addr_to_label(value)
                 if name:
-                    return f"{insn.mnemonic} {rA}, {rB}, 0x{value:08X}-0x{SDA_BASE:08X} /* {name}-_SDA_BASE_ */"
+                    # simplified mnemonic for: la rD,d(rA) equivalent to addi rD,rA,d
+                    # https://www.nxp.com/docs/en/application-note/AN2491.pdf
+                    return f"la {rA}, {name}({rB}) /* {value:08X}-_SDA_BASE_ */"
             if is_load_store_reg_offset(insn, PPC_REG_R13):
                 value = r13_addr + \
                     sign_extend_16(insn.operands[1].mem.disp)
@@ -282,7 +292,9 @@ class CPPDisassembler(Disassembler):
                 rB = insn.reg_name(insn.operands[1].reg)
                 name = self.addr_to_label(value)
                 if name:
-                    return f"{insn.mnemonic} {rA}, {rB}, 0x{value:08X}-0x{SDA2_BASE:08X} /* {name}-_SDA2_BASE_ */"
+                    # simplified mnemonic for: la rD,d(rA) equivalent to addi rD,rA,d
+                    # https://www.nxp.com/docs/en/application-note/AN2491.pdf
+                    return f"la {rA}, {name}({rB}) /* {value:08X}-_SDA2_BASE_ */"
             if is_load_store_reg_offset(insn, PPC_REG_R2):
                 value = r2_addr + \
                     sign_extend_16(insn.operands[1].mem.disp)
@@ -1331,8 +1343,8 @@ async def export_function2(function: Function, symbol_table: GlobalSymbolTable, 
     async with AsyncBuilder(function.include_path) as include_builder:
         cppd = CPPDisassembler(include_builder, function,
                                block_map, symbol_table, relocations, context)
-        for block in function.blocks:
-            await cppd.async_execute(block.addr, block.data, block.size)
+        
+        await cppd.async_execute(function.addr, function.data, function.size)
 
     context.debug(f"generated asm: '{function.include_path}'")
 

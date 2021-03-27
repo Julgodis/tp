@@ -1,19 +1,19 @@
 lbl_80353B7C:
-/* 80353B7C 00000000  28 03 00 00 */	cmplwi r3, 0
-/* 80353B80 00000004  3C 80 80 45 */	lis r4, __CARDBlock@ha
-/* 80353B84 00000008  38 84 CB C0 */	addi r4, r4, __CARDBlock@l
-/* 80353B88 0000000C  41 82 00 0C */	beq lbl_80353B94
-/* 80353B8C 00000010  7C 60 1B 78 */	mr r0, r3
-/* 80353B90 00000014  48 00 00 08 */	b lbl_80353B98
+/* 80353B7C  28 03 00 00 */	cmplwi r3, 0                            
+/* 80353B80  3C 80 80 45 */	lis r4, __CARDBlock@ha                  
+/* 80353B84  38 84 CB C0 */	addi r4, r4, __CARDBlock@l               /* constant-address: 8044CBC0, symbol: __CARDBlock */
+/* 80353B88  41 82 00 0C */	beq lbl_80353B94                         /* constant-address: 80353B94, symbol: lbl_80353B94 */
+/* 80353B8C  7C 60 1B 78 */	mr r0, r3                               
+/* 80353B90  48 00 00 08 */	b lbl_80353B98                           /* constant-address: 80353B98, symbol: lbl_80353B98 */
 lbl_80353B94:
-/* 80353B94 00000000  38 04 02 20 */	addi r0, r4, 0x220
+/* 80353B94  38 04 02 20 */	addi r0, r4, 0x220                       /* constant-address: 8044CDE0, symbol: __CARDDiskNone */
 lbl_80353B98:
-/* 80353B98 00000000  28 03 00 00 */	cmplwi r3, 0
-/* 80353B9C 00000004  90 04 01 0C */	stw r0, 0x10c(r4)	/* effective address: 8044CCCC */
-/* 80353BA0 00000008  41 82 00 08 */	beq lbl_80353BA8
-/* 80353BA4 0000000C  48 00 00 08 */	b lbl_80353BAC
+/* 80353B98  28 03 00 00 */	cmplwi r3, 0                            
+/* 80353B9C  90 04 01 0C */	stw r0, 0x10c(r4)                        /* constant-address: 8044CCCC, symbol: None */
+/* 80353BA0  41 82 00 08 */	beq lbl_80353BA8                         /* constant-address: 80353BA8, symbol: lbl_80353BA8 */
+/* 80353BA4  48 00 00 08 */	b lbl_80353BAC                           /* constant-address: 80353BAC, symbol: lbl_80353BAC */
 lbl_80353BA8:
-/* 80353BA8 00000000  38 64 02 20 */	addi r3, r4, 0x220
+/* 80353BA8  38 64 02 20 */	addi r3, r4, 0x220                       /* constant-address: 8044CDE0, symbol: __CARDDiskNone */
 lbl_80353BAC:
-/* 80353BAC 00000000  90 64 02 1C */	stw r3, 0x21c(r4)	/* effective address: 8044CDDC */
-/* 80353BB0 00000004  4E 80 00 20 */	blr 
+/* 80353BAC  90 64 02 1C */	stw r3, 0x21c(r4)                        /* constant-address: 8044CDDC, symbol: None */
+/* 80353BB0  4E 80 00 20 */	blr                                     

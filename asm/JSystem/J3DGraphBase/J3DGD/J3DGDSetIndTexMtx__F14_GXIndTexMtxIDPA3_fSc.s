@@ -1,192 +1,192 @@
 lbl_8030EB30:
-/* 8030EB30 00000000  94 21 FF A0 */	stwu r1, -0x60(r1)
-/* 8030EB34 00000004  7C 08 02 A6 */	mflr r0
-/* 8030EB38 00000008  90 01 00 64 */	stw r0, 0x64(r1)
-/* 8030EB3C 0000000C  39 61 00 60 */	addi r11, r1, 0x60
-/* 8030EB40 00000010  48 05 36 89 */	bl _savegpr_24
-/* 8030EB44 00000014  7C B8 2B 78 */	mr r24, r5
-/* 8030EB48 00000018  2C 03 00 08 */	cmpwi r3, 8
-/* 8030EB4C 0000001C  41 82 00 44 */	beq lbl_8030EB90
-/* 8030EB50 00000020  40 80 00 1C */	bge lbl_8030EB6C
-/* 8030EB54 00000024  2C 03 00 04 */	cmpwi r3, 4
-/* 8030EB58 00000028  41 82 00 38 */	beq lbl_8030EB90
-/* 8030EB5C 0000002C  40 80 00 24 */	bge lbl_8030EB80
-/* 8030EB60 00000030  2C 03 00 01 */	cmpwi r3, 1
-/* 8030EB64 00000034  40 80 00 14 */	bge lbl_8030EB78
-/* 8030EB68 00000038  48 00 00 28 */	b lbl_8030EB90
+/* 8030EB30  94 21 FF A0 */	stwu r1, -0x60(r1)                      
+/* 8030EB34  7C 08 02 A6 */	mflr r0                                 
+/* 8030EB38  90 01 00 64 */	stw r0, 0x64(r1)                        
+/* 8030EB3C  39 61 00 60 */	addi r11, r1, 0x60                      
+/* 8030EB40  48 05 36 89 */	bl _savegpr_24                           /* constant-address: 803621C8, symbol: _savegpr_24 */
+/* 8030EB44  7C B8 2B 78 */	mr r24, r5                              
+/* 8030EB48  2C 03 00 08 */	cmpwi r3, 8                             
+/* 8030EB4C  41 82 00 44 */	beq lbl_8030EB90                         /* constant-address: 8030EB90, symbol: lbl_8030EB90 */
+/* 8030EB50  40 80 00 1C */	bge lbl_8030EB6C                         /* constant-address: 8030EB6C, symbol: lbl_8030EB6C */
+/* 8030EB54  2C 03 00 04 */	cmpwi r3, 4                             
+/* 8030EB58  41 82 00 38 */	beq lbl_8030EB90                         /* constant-address: 8030EB90, symbol: lbl_8030EB90 */
+/* 8030EB5C  40 80 00 24 */	bge lbl_8030EB80                         /* constant-address: 8030EB80, symbol: lbl_8030EB80 */
+/* 8030EB60  2C 03 00 01 */	cmpwi r3, 1                             
+/* 8030EB64  40 80 00 14 */	bge lbl_8030EB78                         /* constant-address: 8030EB78, symbol: lbl_8030EB78 */
+/* 8030EB68  48 00 00 28 */	b lbl_8030EB90                           /* constant-address: 8030EB90, symbol: lbl_8030EB90 */
 lbl_8030EB6C:
-/* 8030EB6C 00000000  2C 03 00 0C */	cmpwi r3, 0xc
-/* 8030EB70 00000004  40 80 00 20 */	bge lbl_8030EB90
-/* 8030EB74 00000008  48 00 00 14 */	b lbl_8030EB88
+/* 8030EB6C  2C 03 00 0C */	cmpwi r3, 0xc                           
+/* 8030EB70  40 80 00 20 */	bge lbl_8030EB90                         /* constant-address: 8030EB90, symbol: lbl_8030EB90 */
+/* 8030EB74  48 00 00 14 */	b lbl_8030EB88                           /* constant-address: 8030EB88, symbol: lbl_8030EB88 */
 lbl_8030EB78:
-/* 8030EB78 00000000  3B 23 FF FF */	addi r25, r3, -1
-/* 8030EB7C 00000004  48 00 00 18 */	b lbl_8030EB94
+/* 8030EB78  3B 23 FF FF */	addi r25, r3, -1                        
+/* 8030EB7C  48 00 00 18 */	b lbl_8030EB94                           /* constant-address: 8030EB94, symbol: lbl_8030EB94 */
 lbl_8030EB80:
-/* 8030EB80 00000000  3B 23 FF FB */	addi r25, r3, -5
-/* 8030EB84 00000004  48 00 00 10 */	b lbl_8030EB94
+/* 8030EB80  3B 23 FF FB */	addi r25, r3, -5                        
+/* 8030EB84  48 00 00 10 */	b lbl_8030EB94                           /* constant-address: 8030EB94, symbol: lbl_8030EB94 */
 lbl_8030EB88:
-/* 8030EB88 00000000  3B 23 FF F7 */	addi r25, r3, -9
-/* 8030EB8C 00000004  48 00 00 08 */	b lbl_8030EB94
+/* 8030EB88  3B 23 FF F7 */	addi r25, r3, -9                        
+/* 8030EB8C  48 00 00 08 */	b lbl_8030EB94                           /* constant-address: 8030EB94, symbol: lbl_8030EB94 */
 lbl_8030EB90:
-/* 8030EB90 00000000  3B 20 00 00 */	li r25, 0
+/* 8030EB90  3B 20 00 00 */	li r25, 0                               
 lbl_8030EB94:
-/* 8030EB94 00000000  C0 22 C9 30 */	lfs f1, lit_1233(r2)
-/* 8030EB98 00000004  C0 04 00 00 */	lfs f0, 0(r4)
-/* 8030EB9C 00000008  EC 01 00 32 */	fmuls f0, f1, f0
-/* 8030EBA0 0000000C  FC 00 00 1E */	fctiwz f0, f0
-/* 8030EBA4 00000010  D8 01 00 08 */	stfd f0, 8(r1)
-/* 8030EBA8 00000014  80 01 00 0C */	lwz r0, 0xc(r1)
-/* 8030EBAC 00000018  54 1F 05 7E */	clrlwi r31, r0, 0x15
-/* 8030EBB0 0000001C  C0 04 00 0C */	lfs f0, 0xc(r4)
-/* 8030EBB4 00000020  EC 01 00 32 */	fmuls f0, f1, f0
-/* 8030EBB8 00000024  FC 00 00 1E */	fctiwz f0, f0
-/* 8030EBBC 00000028  D8 01 00 10 */	stfd f0, 0x10(r1)
-/* 8030EBC0 0000002C  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 8030EBC4 00000030  54 1E 05 7E */	clrlwi r30, r0, 0x15
-/* 8030EBC8 00000034  C0 04 00 04 */	lfs f0, 4(r4)
-/* 8030EBCC 00000038  EC 01 00 32 */	fmuls f0, f1, f0
-/* 8030EBD0 0000003C  FC 00 00 1E */	fctiwz f0, f0
-/* 8030EBD4 00000040  D8 01 00 18 */	stfd f0, 0x18(r1)
-/* 8030EBD8 00000044  80 01 00 1C */	lwz r0, 0x1c(r1)
-/* 8030EBDC 00000048  54 1D 05 7E */	clrlwi r29, r0, 0x15
-/* 8030EBE0 0000004C  C0 04 00 10 */	lfs f0, 0x10(r4)
-/* 8030EBE4 00000050  EC 01 00 32 */	fmuls f0, f1, f0
-/* 8030EBE8 00000054  FC 00 00 1E */	fctiwz f0, f0
-/* 8030EBEC 00000058  D8 01 00 20 */	stfd f0, 0x20(r1)
-/* 8030EBF0 0000005C  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 8030EBF4 00000060  54 1C 05 7E */	clrlwi r28, r0, 0x15
-/* 8030EBF8 00000064  C0 04 00 08 */	lfs f0, 8(r4)
-/* 8030EBFC 00000068  EC 01 00 32 */	fmuls f0, f1, f0
-/* 8030EC00 0000006C  FC 00 00 1E */	fctiwz f0, f0
-/* 8030EC04 00000070  D8 01 00 28 */	stfd f0, 0x28(r1)
-/* 8030EC08 00000074  80 01 00 2C */	lwz r0, 0x2c(r1)
-/* 8030EC0C 00000078  54 1B 05 7E */	clrlwi r27, r0, 0x15
-/* 8030EC10 0000007C  C0 04 00 14 */	lfs f0, 0x14(r4)
-/* 8030EC14 00000080  EC 01 00 32 */	fmuls f0, f1, f0
-/* 8030EC18 00000084  FC 00 00 1E */	fctiwz f0, f0
-/* 8030EC1C 00000088  D8 01 00 30 */	stfd f0, 0x30(r1)
-/* 8030EC20 0000008C  80 01 00 34 */	lwz r0, 0x34(r1)
-/* 8030EC24 00000090  54 1A 05 7E */	clrlwi r26, r0, 0x15
-/* 8030EC28 00000094  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030EC2C 00000098  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030EC30 0000009C  38 63 00 0F */	addi r3, r3, 0xf
-/* 8030EC34 000000A0  80 04 00 0C */	lwz r0, 0xc(r4)
-/* 8030EC38 000000A4  7C 03 00 40 */	cmplw r3, r0
-/* 8030EC3C 000000A8  40 81 00 08 */	ble lbl_8030EC44
-/* 8030EC40 000000AC  48 05 24 95 */	bl GDOverflowed
+/* 8030EB94  C0 22 C9 30 */	lfs f1, lit_1233(r2)                     /* constant-address: 80456330, symbol: lit_1233 */
+/* 8030EB98  C0 04 00 00 */	lfs f0, 0(r4)                           
+/* 8030EB9C  EC 01 00 32 */	fmuls f0, f1, f0                        
+/* 8030EBA0  FC 00 00 1E */	fctiwz f0, f0                           
+/* 8030EBA4  D8 01 00 08 */	stfd f0, 8(r1)                          
+/* 8030EBA8  80 01 00 0C */	lwz r0, 0xc(r1)                         
+/* 8030EBAC  54 1F 05 7E */	clrlwi r31, r0, 0x15                    
+/* 8030EBB0  C0 04 00 0C */	lfs f0, 0xc(r4)                         
+/* 8030EBB4  EC 01 00 32 */	fmuls f0, f1, f0                        
+/* 8030EBB8  FC 00 00 1E */	fctiwz f0, f0                           
+/* 8030EBBC  D8 01 00 10 */	stfd f0, 0x10(r1)                       
+/* 8030EBC0  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 8030EBC4  54 1E 05 7E */	clrlwi r30, r0, 0x15                    
+/* 8030EBC8  C0 04 00 04 */	lfs f0, 4(r4)                           
+/* 8030EBCC  EC 01 00 32 */	fmuls f0, f1, f0                        
+/* 8030EBD0  FC 00 00 1E */	fctiwz f0, f0                           
+/* 8030EBD4  D8 01 00 18 */	stfd f0, 0x18(r1)                       
+/* 8030EBD8  80 01 00 1C */	lwz r0, 0x1c(r1)                        
+/* 8030EBDC  54 1D 05 7E */	clrlwi r29, r0, 0x15                    
+/* 8030EBE0  C0 04 00 10 */	lfs f0, 0x10(r4)                        
+/* 8030EBE4  EC 01 00 32 */	fmuls f0, f1, f0                        
+/* 8030EBE8  FC 00 00 1E */	fctiwz f0, f0                           
+/* 8030EBEC  D8 01 00 20 */	stfd f0, 0x20(r1)                       
+/* 8030EBF0  80 01 00 24 */	lwz r0, 0x24(r1)                        
+/* 8030EBF4  54 1C 05 7E */	clrlwi r28, r0, 0x15                    
+/* 8030EBF8  C0 04 00 08 */	lfs f0, 8(r4)                           
+/* 8030EBFC  EC 01 00 32 */	fmuls f0, f1, f0                        
+/* 8030EC00  FC 00 00 1E */	fctiwz f0, f0                           
+/* 8030EC04  D8 01 00 28 */	stfd f0, 0x28(r1)                       
+/* 8030EC08  80 01 00 2C */	lwz r0, 0x2c(r1)                        
+/* 8030EC0C  54 1B 05 7E */	clrlwi r27, r0, 0x15                    
+/* 8030EC10  C0 04 00 14 */	lfs f0, 0x14(r4)                        
+/* 8030EC14  EC 01 00 32 */	fmuls f0, f1, f0                        
+/* 8030EC18  FC 00 00 1E */	fctiwz f0, f0                           
+/* 8030EC1C  D8 01 00 30 */	stfd f0, 0x30(r1)                       
+/* 8030EC20  80 01 00 34 */	lwz r0, 0x34(r1)                        
+/* 8030EC24  54 1A 05 7E */	clrlwi r26, r0, 0x15                    
+/* 8030EC28  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030EC2C  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030EC30  38 63 00 0F */	addi r3, r3, 0xf                        
+/* 8030EC34  80 04 00 0C */	lwz r0, 0xc(r4)                         
+/* 8030EC38  7C 03 00 40 */	cmplw r3, r0                            
+/* 8030EC3C  40 81 00 08 */	ble lbl_8030EC44                         /* constant-address: 8030EC44, symbol: lbl_8030EC44 */
+/* 8030EC40  48 05 24 95 */	bl GDOverflowed                          /* constant-address: 803610D4, symbol: GDOverflowed */
 lbl_8030EC44:
-/* 8030EC44 00000000  38 18 00 11 */	addi r0, r24, 0x11
-/* 8030EC48 00000004  7C 03 07 74 */	extsb r3, r0
-/* 8030EC4C 00000008  54 64 B2 12 */	rlwinm r4, r3, 0x16, 8, 9
-/* 8030EC50 0000000C  57 C0 58 28 */	slwi r0, r30, 0xb
-/* 8030EC54 00000010  7F E0 03 78 */	or r0, r31, r0
-/* 8030EC58 00000014  7C 85 03 78 */	or r5, r4, r0
-/* 8030EC5C 00000018  1C 99 00 03 */	mulli r4, r25, 3
-/* 8030EC60 0000001C  38 04 00 06 */	addi r0, r4, 6
-/* 8030EC64 00000020  54 00 C0 0E */	slwi r0, r0, 0x18
-/* 8030EC68 00000024  7C A9 03 78 */	or r9, r5, r0
-/* 8030EC6C 00000028  38 00 00 61 */	li r0, 0x61
-/* 8030EC70 0000002C  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)
-/* 8030EC74 00000030  80 C7 00 08 */	lwz r6, 8(r7)
-/* 8030EC78 00000034  38 A6 00 01 */	addi r5, r6, 1
-/* 8030EC7C 00000038  90 A7 00 08 */	stw r5, 8(r7)
-/* 8030EC80 0000003C  98 06 00 00 */	stb r0, 0(r6)
-/* 8030EC84 00000040  55 28 46 3E */	srwi r8, r9, 0x18
-/* 8030EC88 00000044  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)
-/* 8030EC8C 00000048  80 C7 00 08 */	lwz r6, 8(r7)
-/* 8030EC90 0000004C  38 A6 00 01 */	addi r5, r6, 1
-/* 8030EC94 00000050  90 A7 00 08 */	stw r5, 8(r7)
-/* 8030EC98 00000054  99 06 00 00 */	stb r8, 0(r6)
-/* 8030EC9C 00000058  55 28 86 3E */	rlwinm r8, r9, 0x10, 0x18, 0x1f
-/* 8030ECA0 0000005C  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)
-/* 8030ECA4 00000060  80 C7 00 08 */	lwz r6, 8(r7)
-/* 8030ECA8 00000064  38 A6 00 01 */	addi r5, r6, 1
-/* 8030ECAC 00000068  90 A7 00 08 */	stw r5, 8(r7)
-/* 8030ECB0 0000006C  99 06 00 00 */	stb r8, 0(r6)
-/* 8030ECB4 00000070  55 28 C6 3E */	rlwinm r8, r9, 0x18, 0x18, 0x1f
-/* 8030ECB8 00000074  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)
-/* 8030ECBC 00000078  80 C7 00 08 */	lwz r6, 8(r7)
-/* 8030ECC0 0000007C  38 A6 00 01 */	addi r5, r6, 1
-/* 8030ECC4 00000080  90 A7 00 08 */	stw r5, 8(r7)
-/* 8030ECC8 00000084  99 06 00 00 */	stb r8, 0(r6)
-/* 8030ECCC 00000088  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)
-/* 8030ECD0 0000008C  80 C7 00 08 */	lwz r6, 8(r7)
-/* 8030ECD4 00000090  38 A6 00 01 */	addi r5, r6, 1
-/* 8030ECD8 00000094  90 A7 00 08 */	stw r5, 8(r7)
-/* 8030ECDC 00000098  99 26 00 00 */	stb r9, 0(r6)
-/* 8030ECE0 0000009C  54 66 A2 12 */	rlwinm r6, r3, 0x14, 8, 9
-/* 8030ECE4 000000A0  57 85 58 28 */	slwi r5, r28, 0xb
-/* 8030ECE8 000000A4  7F A5 2B 78 */	or r5, r29, r5
-/* 8030ECEC 000000A8  7C C6 2B 78 */	or r6, r6, r5
-/* 8030ECF0 000000AC  38 A4 00 07 */	addi r5, r4, 7
-/* 8030ECF4 000000B0  54 A5 C0 0E */	slwi r5, r5, 0x18
-/* 8030ECF8 000000B4  7C C9 2B 78 */	or r9, r6, r5
-/* 8030ECFC 000000B8  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)
-/* 8030ED00 000000BC  80 C7 00 08 */	lwz r6, 8(r7)
-/* 8030ED04 000000C0  38 A6 00 01 */	addi r5, r6, 1
-/* 8030ED08 000000C4  90 A7 00 08 */	stw r5, 8(r7)
-/* 8030ED0C 000000C8  98 06 00 00 */	stb r0, 0(r6)
-/* 8030ED10 000000CC  55 28 46 3E */	srwi r8, r9, 0x18
-/* 8030ED14 000000D0  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)
-/* 8030ED18 000000D4  80 C7 00 08 */	lwz r6, 8(r7)
-/* 8030ED1C 000000D8  38 A6 00 01 */	addi r5, r6, 1
-/* 8030ED20 000000DC  90 A7 00 08 */	stw r5, 8(r7)
-/* 8030ED24 000000E0  99 06 00 00 */	stb r8, 0(r6)
-/* 8030ED28 000000E4  55 28 86 3E */	rlwinm r8, r9, 0x10, 0x18, 0x1f
-/* 8030ED2C 000000E8  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)
-/* 8030ED30 000000EC  80 C7 00 08 */	lwz r6, 8(r7)
-/* 8030ED34 000000F0  38 A6 00 01 */	addi r5, r6, 1
-/* 8030ED38 000000F4  90 A7 00 08 */	stw r5, 8(r7)
-/* 8030ED3C 000000F8  99 06 00 00 */	stb r8, 0(r6)
-/* 8030ED40 000000FC  55 28 C6 3E */	rlwinm r8, r9, 0x18, 0x18, 0x1f
-/* 8030ED44 00000100  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)
-/* 8030ED48 00000104  80 C7 00 08 */	lwz r6, 8(r7)
-/* 8030ED4C 00000108  38 A6 00 01 */	addi r5, r6, 1
-/* 8030ED50 0000010C  90 A7 00 08 */	stw r5, 8(r7)
-/* 8030ED54 00000110  99 06 00 00 */	stb r8, 0(r6)
-/* 8030ED58 00000114  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)
-/* 8030ED5C 00000118  80 C7 00 08 */	lwz r6, 8(r7)
-/* 8030ED60 0000011C  38 A6 00 01 */	addi r5, r6, 1
-/* 8030ED64 00000120  90 A7 00 08 */	stw r5, 8(r7)
-/* 8030ED68 00000124  99 26 00 00 */	stb r9, 0(r6)
-/* 8030ED6C 00000128  54 65 92 12 */	rlwinm r5, r3, 0x12, 8, 9
-/* 8030ED70 0000012C  57 43 58 28 */	slwi r3, r26, 0xb
-/* 8030ED74 00000130  7F 63 1B 78 */	or r3, r27, r3
-/* 8030ED78 00000134  7C A5 1B 78 */	or r5, r5, r3
-/* 8030ED7C 00000138  38 64 00 08 */	addi r3, r4, 8
-/* 8030ED80 0000013C  54 63 C0 0E */	slwi r3, r3, 0x18
-/* 8030ED84 00000140  7C A6 1B 78 */	or r6, r5, r3
-/* 8030ED88 00000144  80 AD 94 00 */	lwz r5, __GDCurrentDL(r13)
-/* 8030ED8C 00000148  80 85 00 08 */	lwz r4, 8(r5)
-/* 8030ED90 0000014C  38 64 00 01 */	addi r3, r4, 1
-/* 8030ED94 00000150  90 65 00 08 */	stw r3, 8(r5)
-/* 8030ED98 00000154  98 04 00 00 */	stb r0, 0(r4)
-/* 8030ED9C 00000158  54 C5 46 3E */	srwi r5, r6, 0x18
-/* 8030EDA0 0000015C  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030EDA4 00000160  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030EDA8 00000164  38 03 00 01 */	addi r0, r3, 1
-/* 8030EDAC 00000168  90 04 00 08 */	stw r0, 8(r4)
-/* 8030EDB0 0000016C  98 A3 00 00 */	stb r5, 0(r3)
-/* 8030EDB4 00000170  54 C5 86 3E */	rlwinm r5, r6, 0x10, 0x18, 0x1f
-/* 8030EDB8 00000174  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030EDBC 00000178  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030EDC0 0000017C  38 03 00 01 */	addi r0, r3, 1
-/* 8030EDC4 00000180  90 04 00 08 */	stw r0, 8(r4)
-/* 8030EDC8 00000184  98 A3 00 00 */	stb r5, 0(r3)
-/* 8030EDCC 00000188  54 C5 C6 3E */	rlwinm r5, r6, 0x18, 0x18, 0x1f
-/* 8030EDD0 0000018C  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030EDD4 00000190  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030EDD8 00000194  38 03 00 01 */	addi r0, r3, 1
-/* 8030EDDC 00000198  90 04 00 08 */	stw r0, 8(r4)
-/* 8030EDE0 0000019C  98 A3 00 00 */	stb r5, 0(r3)
-/* 8030EDE4 000001A0  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)
-/* 8030EDE8 000001A4  80 64 00 08 */	lwz r3, 8(r4)
-/* 8030EDEC 000001A8  38 03 00 01 */	addi r0, r3, 1
-/* 8030EDF0 000001AC  90 04 00 08 */	stw r0, 8(r4)
-/* 8030EDF4 000001B0  98 C3 00 00 */	stb r6, 0(r3)
-/* 8030EDF8 000001B4  39 61 00 60 */	addi r11, r1, 0x60
-/* 8030EDFC 000001B8  48 05 34 19 */	bl _restgpr_24
-/* 8030EE00 000001BC  80 01 00 64 */	lwz r0, 0x64(r1)
-/* 8030EE04 000001C0  7C 08 03 A6 */	mtlr r0
-/* 8030EE08 000001C4  38 21 00 60 */	addi r1, r1, 0x60
-/* 8030EE0C 000001C8  4E 80 00 20 */	blr 
+/* 8030EC44  38 18 00 11 */	addi r0, r24, 0x11                      
+/* 8030EC48  7C 03 07 74 */	extsb r3, r0                            
+/* 8030EC4C  54 64 B2 12 */	rlwinm r4, r3, 0x16, 8, 9               
+/* 8030EC50  57 C0 58 28 */	slwi r0, r30, 0xb                       
+/* 8030EC54  7F E0 03 78 */	or r0, r31, r0                          
+/* 8030EC58  7C 85 03 78 */	or r5, r4, r0                           
+/* 8030EC5C  1C 99 00 03 */	mulli r4, r25, 3                        
+/* 8030EC60  38 04 00 06 */	addi r0, r4, 6                          
+/* 8030EC64  54 00 C0 0E */	slwi r0, r0, 0x18                       
+/* 8030EC68  7C A9 03 78 */	or r9, r5, r0                           
+/* 8030EC6C  38 00 00 61 */	li r0, 0x61                             
+/* 8030EC70  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030EC74  80 C7 00 08 */	lwz r6, 8(r7)                           
+/* 8030EC78  38 A6 00 01 */	addi r5, r6, 1                          
+/* 8030EC7C  90 A7 00 08 */	stw r5, 8(r7)                           
+/* 8030EC80  98 06 00 00 */	stb r0, 0(r6)                           
+/* 8030EC84  55 28 46 3E */	srwi r8, r9, 0x18                       
+/* 8030EC88  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030EC8C  80 C7 00 08 */	lwz r6, 8(r7)                           
+/* 8030EC90  38 A6 00 01 */	addi r5, r6, 1                          
+/* 8030EC94  90 A7 00 08 */	stw r5, 8(r7)                           
+/* 8030EC98  99 06 00 00 */	stb r8, 0(r6)                           
+/* 8030EC9C  55 28 86 3E */	rlwinm r8, r9, 0x10, 0x18, 0x1f         
+/* 8030ECA0  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030ECA4  80 C7 00 08 */	lwz r6, 8(r7)                           
+/* 8030ECA8  38 A6 00 01 */	addi r5, r6, 1                          
+/* 8030ECAC  90 A7 00 08 */	stw r5, 8(r7)                           
+/* 8030ECB0  99 06 00 00 */	stb r8, 0(r6)                           
+/* 8030ECB4  55 28 C6 3E */	rlwinm r8, r9, 0x18, 0x18, 0x1f         
+/* 8030ECB8  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030ECBC  80 C7 00 08 */	lwz r6, 8(r7)                           
+/* 8030ECC0  38 A6 00 01 */	addi r5, r6, 1                          
+/* 8030ECC4  90 A7 00 08 */	stw r5, 8(r7)                           
+/* 8030ECC8  99 06 00 00 */	stb r8, 0(r6)                           
+/* 8030ECCC  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030ECD0  80 C7 00 08 */	lwz r6, 8(r7)                           
+/* 8030ECD4  38 A6 00 01 */	addi r5, r6, 1                          
+/* 8030ECD8  90 A7 00 08 */	stw r5, 8(r7)                           
+/* 8030ECDC  99 26 00 00 */	stb r9, 0(r6)                           
+/* 8030ECE0  54 66 A2 12 */	rlwinm r6, r3, 0x14, 8, 9               
+/* 8030ECE4  57 85 58 28 */	slwi r5, r28, 0xb                       
+/* 8030ECE8  7F A5 2B 78 */	or r5, r29, r5                          
+/* 8030ECEC  7C C6 2B 78 */	or r6, r6, r5                           
+/* 8030ECF0  38 A4 00 07 */	addi r5, r4, 7                          
+/* 8030ECF4  54 A5 C0 0E */	slwi r5, r5, 0x18                       
+/* 8030ECF8  7C C9 2B 78 */	or r9, r6, r5                           
+/* 8030ECFC  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030ED00  80 C7 00 08 */	lwz r6, 8(r7)                           
+/* 8030ED04  38 A6 00 01 */	addi r5, r6, 1                          
+/* 8030ED08  90 A7 00 08 */	stw r5, 8(r7)                           
+/* 8030ED0C  98 06 00 00 */	stb r0, 0(r6)                           
+/* 8030ED10  55 28 46 3E */	srwi r8, r9, 0x18                       
+/* 8030ED14  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030ED18  80 C7 00 08 */	lwz r6, 8(r7)                           
+/* 8030ED1C  38 A6 00 01 */	addi r5, r6, 1                          
+/* 8030ED20  90 A7 00 08 */	stw r5, 8(r7)                           
+/* 8030ED24  99 06 00 00 */	stb r8, 0(r6)                           
+/* 8030ED28  55 28 86 3E */	rlwinm r8, r9, 0x10, 0x18, 0x1f         
+/* 8030ED2C  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030ED30  80 C7 00 08 */	lwz r6, 8(r7)                           
+/* 8030ED34  38 A6 00 01 */	addi r5, r6, 1                          
+/* 8030ED38  90 A7 00 08 */	stw r5, 8(r7)                           
+/* 8030ED3C  99 06 00 00 */	stb r8, 0(r6)                           
+/* 8030ED40  55 28 C6 3E */	rlwinm r8, r9, 0x18, 0x18, 0x1f         
+/* 8030ED44  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030ED48  80 C7 00 08 */	lwz r6, 8(r7)                           
+/* 8030ED4C  38 A6 00 01 */	addi r5, r6, 1                          
+/* 8030ED50  90 A7 00 08 */	stw r5, 8(r7)                           
+/* 8030ED54  99 06 00 00 */	stb r8, 0(r6)                           
+/* 8030ED58  80 ED 94 00 */	lwz r7, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030ED5C  80 C7 00 08 */	lwz r6, 8(r7)                           
+/* 8030ED60  38 A6 00 01 */	addi r5, r6, 1                          
+/* 8030ED64  90 A7 00 08 */	stw r5, 8(r7)                           
+/* 8030ED68  99 26 00 00 */	stb r9, 0(r6)                           
+/* 8030ED6C  54 65 92 12 */	rlwinm r5, r3, 0x12, 8, 9               
+/* 8030ED70  57 43 58 28 */	slwi r3, r26, 0xb                       
+/* 8030ED74  7F 63 1B 78 */	or r3, r27, r3                          
+/* 8030ED78  7C A5 1B 78 */	or r5, r5, r3                           
+/* 8030ED7C  38 64 00 08 */	addi r3, r4, 8                          
+/* 8030ED80  54 63 C0 0E */	slwi r3, r3, 0x18                       
+/* 8030ED84  7C A6 1B 78 */	or r6, r5, r3                           
+/* 8030ED88  80 AD 94 00 */	lwz r5, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030ED8C  80 85 00 08 */	lwz r4, 8(r5)                           
+/* 8030ED90  38 64 00 01 */	addi r3, r4, 1                          
+/* 8030ED94  90 65 00 08 */	stw r3, 8(r5)                           
+/* 8030ED98  98 04 00 00 */	stb r0, 0(r4)                           
+/* 8030ED9C  54 C5 46 3E */	srwi r5, r6, 0x18                       
+/* 8030EDA0  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030EDA4  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030EDA8  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030EDAC  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030EDB0  98 A3 00 00 */	stb r5, 0(r3)                           
+/* 8030EDB4  54 C5 86 3E */	rlwinm r5, r6, 0x10, 0x18, 0x1f         
+/* 8030EDB8  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030EDBC  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030EDC0  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030EDC4  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030EDC8  98 A3 00 00 */	stb r5, 0(r3)                           
+/* 8030EDCC  54 C5 C6 3E */	rlwinm r5, r6, 0x18, 0x18, 0x1f         
+/* 8030EDD0  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030EDD4  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030EDD8  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030EDDC  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030EDE0  98 A3 00 00 */	stb r5, 0(r3)                           
+/* 8030EDE4  80 8D 94 00 */	lwz r4, __GDCurrentDL(r13)               /* constant-address: 80451980, symbol: __GDCurrentDL */
+/* 8030EDE8  80 64 00 08 */	lwz r3, 8(r4)                           
+/* 8030EDEC  38 03 00 01 */	addi r0, r3, 1                          
+/* 8030EDF0  90 04 00 08 */	stw r0, 8(r4)                           
+/* 8030EDF4  98 C3 00 00 */	stb r6, 0(r3)                           
+/* 8030EDF8  39 61 00 60 */	addi r11, r1, 0x60                      
+/* 8030EDFC  48 05 34 19 */	bl _restgpr_24                           /* constant-address: 80362214, symbol: _restgpr_24 */
+/* 8030EE00  80 01 00 64 */	lwz r0, 0x64(r1)                        
+/* 8030EE04  7C 08 03 A6 */	mtlr r0                                 
+/* 8030EE08  38 21 00 60 */	addi r1, r1, 0x60                       
+/* 8030EE0C  4E 80 00 20 */	blr                                     

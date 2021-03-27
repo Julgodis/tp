@@ -1,9 +1,9 @@
 lbl_80261F04:
-/* 80261F04 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80261F08 00000004  7C 08 02 A6 */	mflr r0
-/* 80261F0C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80261F10 0000000C  4B FF FC 45 */	bl create__11dkWpillar_cFv
-/* 80261F14 00000010  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80261F18 00000014  7C 08 03 A6 */	mtlr r0
-/* 80261F1C 00000018  38 21 00 10 */	addi r1, r1, 0x10
-/* 80261F20 0000001C  4E 80 00 20 */	blr 
+/* 80261F04  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 80261F08  7C 08 02 A6 */	mflr r0                                 
+/* 80261F0C  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 80261F10  4B FF FC 45 */	bl create__11dkWpillar_cFv               /* constant-address: 80261B54, symbol: create__11dkWpillar_cFv */
+/* 80261F14  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 80261F18  7C 08 03 A6 */	mtlr r0                                 
+/* 80261F1C  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 80261F20  4E 80 00 20 */	blr                                     

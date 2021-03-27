@@ -1,3 +1,3 @@
 lbl_80077B28:
-/* 80077B28 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 80077B2C 00000004  4B FF FB E4 */	b __dt__18dBgS_ObjGndChk_WtrFv
+/* 80077B28  38 63 FF EC */	addi r3, r3, -20                        
+/* 80077B2C  4B FF FB E4 */	b __dt__18dBgS_ObjGndChk_WtrFv           /* constant-address: 80077710, symbol: __dt__18dBgS_ObjGndChk_WtrFv */

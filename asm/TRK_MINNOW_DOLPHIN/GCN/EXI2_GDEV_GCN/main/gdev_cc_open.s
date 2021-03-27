@@ -1,11 +1,11 @@
 lbl_80372BA0:
-/* 80372BA0 00000000  80 0D 94 48 */	lwz r0, gIsInitialized(r13)
-/* 80372BA4 00000004  2C 00 00 00 */	cmpwi r0, 0
-/* 80372BA8 00000008  41 82 00 0C */	beq lbl_80372BB4
-/* 80372BAC 0000000C  38 60 D8 EB */	li r3, -10005
-/* 80372BB0 00000010  4E 80 00 20 */	blr 
+/* 80372BA0  80 0D 94 48 */	lwz r0, gIsInitialized(r13)              /* constant-address: 804519C8, symbol: gIsInitialized */
+/* 80372BA4  2C 00 00 00 */	cmpwi r0, 0                             
+/* 80372BA8  41 82 00 0C */	beq lbl_80372BB4                         /* constant-address: 80372BB4, symbol: lbl_80372BB4 */
+/* 80372BAC  38 60 D8 EB */	li r3, -10005                           
+/* 80372BB0  4E 80 00 20 */	blr                                     
 lbl_80372BB4:
-/* 80372BB4 00000000  38 00 00 01 */	li r0, 1
-/* 80372BB8 00000004  38 60 00 00 */	li r3, 0
-/* 80372BBC 00000008  90 0D 94 48 */	stw r0, gIsInitialized(r13)
-/* 80372BC0 0000000C  4E 80 00 20 */	blr 
+/* 80372BB4  38 00 00 01 */	li r0, 1                                
+/* 80372BB8  38 60 00 00 */	li r3, 0                                
+/* 80372BBC  90 0D 94 48 */	stw r0, gIsInitialized(r13)              /* constant-address: 804519C8, symbol: gIsInitialized */
+/* 80372BC0  4E 80 00 20 */	blr                                     

@@ -1,3 +1,3 @@
 lbl_80699880:
-/* 80699880 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 80699884 00000004  4B FF FE 48 */	b __dt__12dBgS_ObjAcchFv
+/* 80699880  38 63 FF EC */	addi r3, r3, -20
+/* 80699884  4B FF FE 48 */	b __dt__12dBgS_ObjAcchFv

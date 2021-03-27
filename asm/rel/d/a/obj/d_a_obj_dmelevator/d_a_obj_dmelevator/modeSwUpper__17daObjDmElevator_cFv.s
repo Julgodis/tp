@@ -1,33 +1,33 @@
 lbl_80BDED64:
-/* 80BDED64 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 80BDED68 00000004  7C 08 02 A6 */	mflr r0
-/* 80BDED6C 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80BDED70 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80BDED74 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80BDED78 00000014  3C 60 80 BE */	lis r3, lit_3719@ha
-/* 80BDED7C 00000018  C0 23 F8 80 */	lfs f1, lit_3719@l(r3)
-/* 80BDED80 0000001C  C0 1F 06 38 */	lfs f0, 0x638(r31)
-/* 80BDED84 00000020  FC 01 00 00 */	fcmpu cr0, f1, f0
-/* 80BDED88 00000024  40 82 00 44 */	bne lbl_80BDEDCC
-/* 80BDED8C 00000028  D0 21 00 08 */	stfs f1, 8(r1)
-/* 80BDED90 0000002C  3C 60 80 BE */	lis r3, lit_4092@ha
-/* 80BDED94 00000030  C0 03 F8 D8 */	lfs f0, lit_4092@l(r3)
-/* 80BDED98 00000034  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80BDED9C 00000038  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 80BDEDA0 0000003C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80BDEDA4 00000040  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80BDEDA8 00000044  38 63 5B D4 */	addi r3, r3, 0x5bd4
-/* 80BDEDAC 00000048  38 80 00 04 */	li r4, 4
-/* 80BDEDB0 0000004C  38 A0 00 1F */	li r5, 0x1f
-/* 80BDEDB4 00000050  38 C1 00 08 */	addi r6, r1, 8
-/* 80BDEDB8 00000054  4B 49 0C 6C */	b StartShock__12dVibration_cFii4cXyz
-/* 80BDEDBC 00000058  7F E3 FB 78 */	mr r3, r31
-/* 80BDEDC0 0000005C  4B FF FC 5D */	bl modeSwWaitLowerInit__17daObjDmElevator_cFv
-/* 80BDEDC4 00000060  38 00 00 00 */	li r0, 0
-/* 80BDEDC8 00000064  98 1F 06 2B */	stb r0, 0x62b(r31)
+/* 80BDED64  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 80BDED68  7C 08 02 A6 */	mflr r0
+/* 80BDED6C  90 01 00 24 */	stw r0, 0x24(r1)
+/* 80BDED70  93 E1 00 1C */	stw r31, 0x1c(r1)
+/* 80BDED74  7C 7F 1B 78 */	mr r31, r3
+/* 80BDED78  3C 60 80 BE */	lis r3, lit_3719@ha
+/* 80BDED7C  C0 23 F8 80 */	lfs f1, lit_3719@l(r3)
+/* 80BDED80  C0 1F 06 38 */	lfs f0, 0x638(r31)
+/* 80BDED84  FC 01 00 00 */	fcmpu cr0, f1, f0
+/* 80BDED88  40 82 00 44 */	bne lbl_80BDEDCC
+/* 80BDED8C  D0 21 00 08 */	stfs f1, 8(r1)
+/* 80BDED90  3C 60 80 BE */	lis r3, lit_4092@ha
+/* 80BDED94  C0 03 F8 D8 */	lfs f0, lit_4092@l(r3)
+/* 80BDED98  D0 01 00 0C */	stfs f0, 0xc(r1)
+/* 80BDED9C  D0 21 00 10 */	stfs f1, 0x10(r1)
+/* 80BDEDA0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 80BDEDA4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BDEDA8  38 63 5B D4 */	addi r3, r3, 0x5bd4
+/* 80BDEDAC  38 80 00 04 */	li r4, 4
+/* 80BDEDB0  38 A0 00 1F */	li r5, 0x1f
+/* 80BDEDB4  38 C1 00 08 */	addi r6, r1, 8
+/* 80BDEDB8  4B 49 0C 6C */	b StartShock__12dVibration_cFii4cXyz
+/* 80BDEDBC  7F E3 FB 78 */	mr r3, r31
+/* 80BDEDC0  4B FF FC 5D */	bl modeSwWaitLowerInit__17daObjDmElevator_cFv
+/* 80BDEDC4  38 00 00 00 */	li r0, 0
+/* 80BDEDC8  98 1F 06 2B */	stb r0, 0x62b(r31)
 lbl_80BDEDCC:
-/* 80BDEDCC 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)
-/* 80BDEDD0 00000004  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 80BDEDD4 00000008  7C 08 03 A6 */	mtlr r0
-/* 80BDEDD8 0000000C  38 21 00 20 */	addi r1, r1, 0x20
-/* 80BDEDDC 00000010  4E 80 00 20 */	blr 
+/* 80BDEDCC  83 E1 00 1C */	lwz r31, 0x1c(r1)
+/* 80BDEDD0  80 01 00 24 */	lwz r0, 0x24(r1)
+/* 80BDEDD4  7C 08 03 A6 */	mtlr r0
+/* 80BDEDD8  38 21 00 20 */	addi r1, r1, 0x20
+/* 80BDEDDC  4E 80 00 20 */	blr 

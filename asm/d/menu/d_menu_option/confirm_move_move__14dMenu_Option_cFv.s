@@ -1,99 +1,99 @@
 lbl_801E4D20:
-/* 801E4D20 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 801E4D24 00000004  7C 08 02 A6 */	mflr r0
-/* 801E4D28 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 801E4D2C 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 801E4D30 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 801E4D34 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 801E4D38 00000018  4B FF ED 6D */	bl checkLeftTrigger__14dMenu_Option_cFv
-/* 801E4D3C 0000001C  7C 7E 1B 78 */	mr r30, r3
-/* 801E4D40 00000020  7F E3 FB 78 */	mr r3, r31
-/* 801E4D44 00000024  4B FF ED 85 */	bl checkRightTrigger__14dMenu_Option_cFv
-/* 801E4D48 00000028  3C 80 80 3E */	lis r4, m_cpadInfo__8mDoCPd_c@ha
-/* 801E4D4C 0000002C  38 84 D2 E8 */	addi r4, r4, m_cpadInfo__8mDoCPd_c@l
-/* 801E4D50 00000030  80 84 00 34 */	lwz r4, 0x34(r4)	/* effective address: 803DD31C */
-/* 801E4D54 00000034  54 80 05 EF */	rlwinm. r0, r4, 0, 0x17, 0x17
-/* 801E4D58 00000038  41 82 00 1C */	beq lbl_801E4D74
-/* 801E4D5C 0000003C  7F E3 FB 78 */	mr r3, r31
-/* 801E4D60 00000040  48 00 3C 99 */	bl yesNoSelectStart__14dMenu_Option_cFv
-/* 801E4D64 00000044  38 00 00 07 */	li r0, 7
-/* 801E4D68 00000048  98 1F 03 EF */	stb r0, 0x3ef(r31)
-/* 801E4D6C 0000004C  48 03 9C 69 */	bl dMeter2Info_set2DVibrationM__Fv
-/* 801E4D70 00000050  48 00 01 00 */	b lbl_801E4E70
+/* 801E4D20  94 21 FF E0 */	stwu r1, -0x20(r1)                      
+/* 801E4D24  7C 08 02 A6 */	mflr r0                                 
+/* 801E4D28  90 01 00 24 */	stw r0, 0x24(r1)                        
+/* 801E4D2C  93 E1 00 1C */	stw r31, 0x1c(r1)                       
+/* 801E4D30  93 C1 00 18 */	stw r30, 0x18(r1)                       
+/* 801E4D34  7C 7F 1B 78 */	mr r31, r3                              
+/* 801E4D38  4B FF ED 6D */	bl checkLeftTrigger__14dMenu_Option_cFv  /* constant-address: 801E3AA4, symbol: checkLeftTrigger__14dMenu_Option_cFv */
+/* 801E4D3C  7C 7E 1B 78 */	mr r30, r3                              
+/* 801E4D40  7F E3 FB 78 */	mr r3, r31                              
+/* 801E4D44  4B FF ED 85 */	bl checkRightTrigger__14dMenu_Option_cFv /* constant-address: 801E3AC8, symbol: checkRightTrigger__14dMenu_Option_cFv */
+/* 801E4D48  3C 80 80 3E */	lis r4, m_cpadInfo__8mDoCPd_c@ha        
+/* 801E4D4C  38 84 D2 E8 */	addi r4, r4, m_cpadInfo__8mDoCPd_c@l     /* constant-address: 803DD2E8, symbol: m_cpadInfo__8mDoCPd_c */
+/* 801E4D50  80 84 00 34 */	lwz r4, 0x34(r4)                         /* constant-address: 803DD31C, symbol: None */
+/* 801E4D54  54 80 05 EF */	rlwinm. r0, r4, 0, 0x17, 0x17           
+/* 801E4D58  41 82 00 1C */	beq lbl_801E4D74                         /* constant-address: 801E4D74, symbol: lbl_801E4D74 */
+/* 801E4D5C  7F E3 FB 78 */	mr r3, r31                              
+/* 801E4D60  48 00 3C 99 */	bl yesNoSelectStart__14dMenu_Option_cFv  /* constant-address: 801E89F8, symbol: yesNoSelectStart__14dMenu_Option_cFv */
+/* 801E4D64  38 00 00 07 */	li r0, 7                                
+/* 801E4D68  98 1F 03 EF */	stb r0, 0x3ef(r31)                      
+/* 801E4D6C  48 03 9C 69 */	bl dMeter2Info_set2DVibrationM__Fv       /* constant-address: 8021E9D4, symbol: dMeter2Info_set2DVibrationM__Fv */
+/* 801E4D70  48 00 01 00 */	b lbl_801E4E70                           /* constant-address: 801E4E70, symbol: lbl_801E4E70 */
 lbl_801E4D74:
-/* 801E4D74 00000000  54 80 05 AD */	rlwinm. r0, r4, 0, 0x16, 0x16
-/* 801E4D78 00000004  41 82 00 24 */	beq lbl_801E4D9C
-/* 801E4D7C 00000008  38 00 00 00 */	li r0, 0
-/* 801E4D80 0000000C  98 1F 03 F9 */	stb r0, 0x3f9(r31)
-/* 801E4D84 00000010  7F E3 FB 78 */	mr r3, r31
-/* 801E4D88 00000014  48 00 3E B1 */	bl yesnoCancelAnmSet__14dMenu_Option_cFv
-/* 801E4D8C 00000018  38 00 00 07 */	li r0, 7
-/* 801E4D90 0000001C  98 1F 03 EF */	stb r0, 0x3ef(r31)
-/* 801E4D94 00000020  48 03 9C 41 */	bl dMeter2Info_set2DVibrationM__Fv
-/* 801E4D98 00000024  48 00 00 D8 */	b lbl_801E4E70
+/* 801E4D74  54 80 05 AD */	rlwinm. r0, r4, 0, 0x16, 0x16           
+/* 801E4D78  41 82 00 24 */	beq lbl_801E4D9C                         /* constant-address: 801E4D9C, symbol: lbl_801E4D9C */
+/* 801E4D7C  38 00 00 00 */	li r0, 0                                
+/* 801E4D80  98 1F 03 F9 */	stb r0, 0x3f9(r31)                      
+/* 801E4D84  7F E3 FB 78 */	mr r3, r31                              
+/* 801E4D88  48 00 3E B1 */	bl yesnoCancelAnmSet__14dMenu_Option_cFv /* constant-address: 801E8C38, symbol: yesnoCancelAnmSet__14dMenu_Option_cFv */
+/* 801E4D8C  38 00 00 07 */	li r0, 7                                
+/* 801E4D90  98 1F 03 EF */	stb r0, 0x3ef(r31)                      
+/* 801E4D94  48 03 9C 41 */	bl dMeter2Info_set2DVibrationM__Fv       /* constant-address: 8021E9D4, symbol: dMeter2Info_set2DVibrationM__Fv */
+/* 801E4D98  48 00 00 D8 */	b lbl_801E4E70                           /* constant-address: 801E4E70, symbol: lbl_801E4E70 */
 lbl_801E4D9C:
-/* 801E4D9C 00000000  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 801E4DA0 00000004  41 82 00 68 */	beq lbl_801E4E08
-/* 801E4DA4 00000008  88 1F 03 F9 */	lbz r0, 0x3f9(r31)
-/* 801E4DA8 0000000C  28 00 00 00 */	cmplwi r0, 0
-/* 801E4DAC 00000010  41 82 00 C4 */	beq lbl_801E4E70
-/* 801E4DB0 00000014  38 00 00 A0 */	li r0, 0xa0
-/* 801E4DB4 00000018  90 01 00 0C */	stw r0, 0xc(r1)
-/* 801E4DB8 0000001C  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)
-/* 801E4DBC 00000020  38 81 00 0C */	addi r4, r1, 0xc
-/* 801E4DC0 00000024  38 A0 00 00 */	li r5, 0
-/* 801E4DC4 00000028  38 C0 00 00 */	li r6, 0
-/* 801E4DC8 0000002C  38 E0 00 00 */	li r7, 0
-/* 801E4DCC 00000030  C0 22 A9 30 */	lfs f1, lit_4069(r2)
-/* 801E4DD0 00000034  FC 40 08 90 */	fmr f2, f1
-/* 801E4DD4 00000038  C0 62 A9 54 */	lfs f3, lit_4472(r2)
-/* 801E4DD8 0000003C  FC 80 18 90 */	fmr f4, f3
-/* 801E4DDC 00000040  39 00 00 00 */	li r8, 0
-/* 801E4DE0 00000044  48 0C 6B A5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
-/* 801E4DE4 00000048  88 1F 03 F9 */	lbz r0, 0x3f9(r31)
-/* 801E4DE8 0000004C  98 1F 03 FA */	stb r0, 0x3fa(r31)
-/* 801E4DEC 00000050  38 00 00 00 */	li r0, 0
-/* 801E4DF0 00000054  98 1F 03 F9 */	stb r0, 0x3f9(r31)
-/* 801E4DF4 00000058  7F E3 FB 78 */	mr r3, r31
-/* 801E4DF8 0000005C  48 00 3C D1 */	bl yesnoSelectAnmSet__14dMenu_Option_cFv
-/* 801E4DFC 00000060  38 00 00 06 */	li r0, 6
-/* 801E4E00 00000064  98 1F 03 EF */	stb r0, 0x3ef(r31)
-/* 801E4E04 00000068  48 00 00 6C */	b lbl_801E4E70
+/* 801E4D9C  54 60 06 3F */	clrlwi. r0, r3, 0x18                    
+/* 801E4DA0  41 82 00 68 */	beq lbl_801E4E08                         /* constant-address: 801E4E08, symbol: lbl_801E4E08 */
+/* 801E4DA4  88 1F 03 F9 */	lbz r0, 0x3f9(r31)                      
+/* 801E4DA8  28 00 00 00 */	cmplwi r0, 0                            
+/* 801E4DAC  41 82 00 C4 */	beq lbl_801E4E70                         /* constant-address: 801E4E70, symbol: lbl_801E4E70 */
+/* 801E4DB0  38 00 00 A0 */	li r0, 0xa0                             
+/* 801E4DB4  90 01 00 0C */	stw r0, 0xc(r1)                         
+/* 801E4DB8  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)  /* constant-address: 80451368, symbol: mAudioMgrPtr__10Z2AudioMgr */
+/* 801E4DBC  38 81 00 0C */	addi r4, r1, 0xc                        
+/* 801E4DC0  38 A0 00 00 */	li r5, 0                                
+/* 801E4DC4  38 C0 00 00 */	li r6, 0                                
+/* 801E4DC8  38 E0 00 00 */	li r7, 0                                
+/* 801E4DCC  C0 22 A9 30 */	lfs f1, lit_4069(r2)                     /* constant-address: 80454330, symbol: lit_4069 */
+/* 801E4DD0  FC 40 08 90 */	fmr f2, f1                              
+/* 801E4DD4  C0 62 A9 54 */	lfs f3, lit_4472(r2)                     /* constant-address: 80454354, symbol: lit_4472 */
+/* 801E4DD8  FC 80 18 90 */	fmr f4, f3                              
+/* 801E4DDC  39 00 00 00 */	li r8, 0                                
+/* 801E4DE0  48 0C 6B A5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc /* constant-address: 802AB984, symbol: seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc */
+/* 801E4DE4  88 1F 03 F9 */	lbz r0, 0x3f9(r31)                      
+/* 801E4DE8  98 1F 03 FA */	stb r0, 0x3fa(r31)                      
+/* 801E4DEC  38 00 00 00 */	li r0, 0                                
+/* 801E4DF0  98 1F 03 F9 */	stb r0, 0x3f9(r31)                      
+/* 801E4DF4  7F E3 FB 78 */	mr r3, r31                              
+/* 801E4DF8  48 00 3C D1 */	bl yesnoSelectAnmSet__14dMenu_Option_cFv /* constant-address: 801E8AC8, symbol: yesnoSelectAnmSet__14dMenu_Option_cFv */
+/* 801E4DFC  38 00 00 06 */	li r0, 6                                
+/* 801E4E00  98 1F 03 EF */	stb r0, 0x3ef(r31)                      
+/* 801E4E04  48 00 00 6C */	b lbl_801E4E70                           /* constant-address: 801E4E70, symbol: lbl_801E4E70 */
 lbl_801E4E08:
-/* 801E4E08 00000000  57 C0 06 3F */	clrlwi. r0, r30, 0x18
-/* 801E4E0C 00000004  41 82 00 64 */	beq lbl_801E4E70
-/* 801E4E10 00000008  88 1F 03 F9 */	lbz r0, 0x3f9(r31)
-/* 801E4E14 0000000C  28 00 00 01 */	cmplwi r0, 1
-/* 801E4E18 00000010  41 82 00 58 */	beq lbl_801E4E70
-/* 801E4E1C 00000014  38 00 00 A0 */	li r0, 0xa0
-/* 801E4E20 00000018  90 01 00 08 */	stw r0, 8(r1)
-/* 801E4E24 0000001C  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)
-/* 801E4E28 00000020  38 81 00 08 */	addi r4, r1, 8
-/* 801E4E2C 00000024  38 A0 00 00 */	li r5, 0
-/* 801E4E30 00000028  38 C0 00 00 */	li r6, 0
-/* 801E4E34 0000002C  38 E0 00 00 */	li r7, 0
-/* 801E4E38 00000030  C0 22 A9 30 */	lfs f1, lit_4069(r2)
-/* 801E4E3C 00000034  FC 40 08 90 */	fmr f2, f1
-/* 801E4E40 00000038  C0 62 A9 54 */	lfs f3, lit_4472(r2)
-/* 801E4E44 0000003C  FC 80 18 90 */	fmr f4, f3
-/* 801E4E48 00000040  39 00 00 00 */	li r8, 0
-/* 801E4E4C 00000044  48 0C 6B 39 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
-/* 801E4E50 00000048  88 1F 03 F9 */	lbz r0, 0x3f9(r31)
-/* 801E4E54 0000004C  98 1F 03 FA */	stb r0, 0x3fa(r31)
-/* 801E4E58 00000050  38 00 00 01 */	li r0, 1
-/* 801E4E5C 00000054  98 1F 03 F9 */	stb r0, 0x3f9(r31)
-/* 801E4E60 00000058  7F E3 FB 78 */	mr r3, r31
-/* 801E4E64 0000005C  48 00 3C 65 */	bl yesnoSelectAnmSet__14dMenu_Option_cFv
-/* 801E4E68 00000060  38 00 00 06 */	li r0, 6
-/* 801E4E6C 00000064  98 1F 03 EF */	stb r0, 0x3ef(r31)
+/* 801E4E08  57 C0 06 3F */	clrlwi. r0, r30, 0x18                   
+/* 801E4E0C  41 82 00 64 */	beq lbl_801E4E70                         /* constant-address: 801E4E70, symbol: lbl_801E4E70 */
+/* 801E4E10  88 1F 03 F9 */	lbz r0, 0x3f9(r31)                      
+/* 801E4E14  28 00 00 01 */	cmplwi r0, 1                            
+/* 801E4E18  41 82 00 58 */	beq lbl_801E4E70                         /* constant-address: 801E4E70, symbol: lbl_801E4E70 */
+/* 801E4E1C  38 00 00 A0 */	li r0, 0xa0                             
+/* 801E4E20  90 01 00 08 */	stw r0, 8(r1)                           
+/* 801E4E24  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)  /* constant-address: 80451368, symbol: mAudioMgrPtr__10Z2AudioMgr */
+/* 801E4E28  38 81 00 08 */	addi r4, r1, 8                          
+/* 801E4E2C  38 A0 00 00 */	li r5, 0                                
+/* 801E4E30  38 C0 00 00 */	li r6, 0                                
+/* 801E4E34  38 E0 00 00 */	li r7, 0                                
+/* 801E4E38  C0 22 A9 30 */	lfs f1, lit_4069(r2)                     /* constant-address: 80454330, symbol: lit_4069 */
+/* 801E4E3C  FC 40 08 90 */	fmr f2, f1                              
+/* 801E4E40  C0 62 A9 54 */	lfs f3, lit_4472(r2)                     /* constant-address: 80454354, symbol: lit_4472 */
+/* 801E4E44  FC 80 18 90 */	fmr f4, f3                              
+/* 801E4E48  39 00 00 00 */	li r8, 0                                
+/* 801E4E4C  48 0C 6B 39 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc /* constant-address: 802AB984, symbol: seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc */
+/* 801E4E50  88 1F 03 F9 */	lbz r0, 0x3f9(r31)                      
+/* 801E4E54  98 1F 03 FA */	stb r0, 0x3fa(r31)                      
+/* 801E4E58  38 00 00 01 */	li r0, 1                                
+/* 801E4E5C  98 1F 03 F9 */	stb r0, 0x3f9(r31)                      
+/* 801E4E60  7F E3 FB 78 */	mr r3, r31                              
+/* 801E4E64  48 00 3C 65 */	bl yesnoSelectAnmSet__14dMenu_Option_cFv /* constant-address: 801E8AC8, symbol: yesnoSelectAnmSet__14dMenu_Option_cFv */
+/* 801E4E68  38 00 00 06 */	li r0, 6                                
+/* 801E4E6C  98 1F 03 EF */	stb r0, 0x3ef(r31)                      
 lbl_801E4E70:
-/* 801E4E70 00000000  80 7F 00 34 */	lwz r3, 0x34(r31)
-/* 801E4E74 00000004  4B FA D0 A5 */	bl _move__15dFile_warning_cFv
-/* 801E4E78 00000008  7F E3 FB 78 */	mr r3, r31
-/* 801E4E7C 0000000C  4B FF EC 71 */	bl setAnimation__14dMenu_Option_cFv
-/* 801E4E80 00000010  83 E1 00 1C */	lwz r31, 0x1c(r1)
-/* 801E4E84 00000014  83 C1 00 18 */	lwz r30, 0x18(r1)
-/* 801E4E88 00000018  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 801E4E8C 0000001C  7C 08 03 A6 */	mtlr r0
-/* 801E4E90 00000020  38 21 00 20 */	addi r1, r1, 0x20
-/* 801E4E94 00000024  4E 80 00 20 */	blr 
+/* 801E4E70  80 7F 00 34 */	lwz r3, 0x34(r31)                       
+/* 801E4E74  4B FA D0 A5 */	bl _move__15dFile_warning_cFv            /* constant-address: 80191F18, symbol: _move__15dFile_warning_cFv */
+/* 801E4E78  7F E3 FB 78 */	mr r3, r31                              
+/* 801E4E7C  4B FF EC 71 */	bl setAnimation__14dMenu_Option_cFv      /* constant-address: 801E3AEC, symbol: setAnimation__14dMenu_Option_cFv */
+/* 801E4E80  83 E1 00 1C */	lwz r31, 0x1c(r1)                       
+/* 801E4E84  83 C1 00 18 */	lwz r30, 0x18(r1)                       
+/* 801E4E88  80 01 00 24 */	lwz r0, 0x24(r1)                        
+/* 801E4E8C  7C 08 03 A6 */	mtlr r0                                 
+/* 801E4E90  38 21 00 20 */	addi r1, r1, 0x20                       
+/* 801E4E94  4E 80 00 20 */	blr                                     

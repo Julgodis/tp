@@ -1,74 +1,74 @@
 lbl_807844BC:
-/* 807844BC 00000000  94 21 FF D0 */	stwu r1, -0x30(r1)
-/* 807844C0 00000004  7C 08 02 A6 */	mflr r0
-/* 807844C4 00000008  90 01 00 34 */	stw r0, 0x34(r1)
-/* 807844C8 0000000C  39 61 00 30 */	addi r11, r1, 0x30
-/* 807844CC 00000010  4B BD DD 10 */	b _savegpr_29
-/* 807844D0 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 807844D4 00000018  3C 60 80 78 */	lis r3, lit_3658@ha
-/* 807844D8 0000001C  3B C3 4D 68 */	addi r30, r3, lit_3658@l
-/* 807844DC 00000020  80 7F 06 1C */	lwz r3, 0x61c(r31)
-/* 807844E0 00000024  83 A3 00 04 */	lwz r29, 4(r3)
-/* 807844E4 00000028  3C 60 80 43 */	lis r3, g_env_light@ha
-/* 807844E8 0000002C  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 807844EC 00000030  38 80 00 00 */	li r4, 0
-/* 807844F0 00000034  38 BF 04 D0 */	addi r5, r31, 0x4d0
-/* 807844F4 00000038  38 DF 01 0C */	addi r6, r31, 0x10c
-/* 807844F8 0000003C  4B A1 F2 CC */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 807844FC 00000040  3C 60 80 43 */	lis r3, g_env_light@ha
-/* 80784500 00000044  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 80784504 00000048  80 9D 00 04 */	lwz r4, 4(r29)
-/* 80784508 0000004C  38 BF 01 0C */	addi r5, r31, 0x10c
-/* 8078450C 00000050  4B A2 08 94 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80784510 00000054  80 7F 06 1C */	lwz r3, 0x61c(r31)
-/* 80784514 00000058  80 63 00 04 */	lwz r3, 4(r3)
-/* 80784518 0000005C  80 63 00 04 */	lwz r3, 4(r3)
-/* 8078451C 00000060  80 63 00 60 */	lwz r3, 0x60(r3)
-/* 80784520 00000064  80 63 00 04 */	lwz r3, 4(r3)
-/* 80784524 00000068  80 63 00 08 */	lwz r3, 8(r3)
-/* 80784528 0000006C  28 03 00 00 */	cmplwi r3, 0
-/* 8078452C 00000070  41 82 00 2C */	beq lbl_80784558
-/* 80784530 00000074  80 1F 05 B0 */	lwz r0, 0x5b0(r31)
-/* 80784534 00000078  2C 00 00 02 */	cmpwi r0, 2
-/* 80784538 0000007C  40 82 00 14 */	bne lbl_8078454C
-/* 8078453C 00000080  80 03 00 0C */	lwz r0, 0xc(r3)
-/* 80784540 00000084  60 00 00 01 */	ori r0, r0, 1
-/* 80784544 00000088  90 03 00 0C */	stw r0, 0xc(r3)
-/* 80784548 0000008C  48 00 00 10 */	b lbl_80784558
+/* 807844BC  94 21 FF D0 */	stwu r1, -0x30(r1)
+/* 807844C0  7C 08 02 A6 */	mflr r0
+/* 807844C4  90 01 00 34 */	stw r0, 0x34(r1)
+/* 807844C8  39 61 00 30 */	addi r11, r1, 0x30
+/* 807844CC  4B BD DD 10 */	b _savegpr_29
+/* 807844D0  7C 7F 1B 78 */	mr r31, r3
+/* 807844D4  3C 60 80 78 */	lis r3, lit_3658@ha
+/* 807844D8  3B C3 4D 68 */	addi r30, r3, lit_3658@l
+/* 807844DC  80 7F 06 1C */	lwz r3, 0x61c(r31)
+/* 807844E0  83 A3 00 04 */	lwz r29, 4(r3)
+/* 807844E4  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 807844E8  38 63 CA 54 */	addi r3, r3, g_env_light@l
+/* 807844EC  38 80 00 00 */	li r4, 0
+/* 807844F0  38 BF 04 D0 */	addi r5, r31, 0x4d0
+/* 807844F4  38 DF 01 0C */	addi r6, r31, 0x10c
+/* 807844F8  4B A1 F2 CC */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
+/* 807844FC  3C 60 80 43 */	lis r3, g_env_light@ha
+/* 80784500  38 63 CA 54 */	addi r3, r3, g_env_light@l
+/* 80784504  80 9D 00 04 */	lwz r4, 4(r29)
+/* 80784508  38 BF 01 0C */	addi r5, r31, 0x10c
+/* 8078450C  4B A2 08 94 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
+/* 80784510  80 7F 06 1C */	lwz r3, 0x61c(r31)
+/* 80784514  80 63 00 04 */	lwz r3, 4(r3)
+/* 80784518  80 63 00 04 */	lwz r3, 4(r3)
+/* 8078451C  80 63 00 60 */	lwz r3, 0x60(r3)
+/* 80784520  80 63 00 04 */	lwz r3, 4(r3)
+/* 80784524  80 63 00 08 */	lwz r3, 8(r3)
+/* 80784528  28 03 00 00 */	cmplwi r3, 0
+/* 8078452C  41 82 00 2C */	beq lbl_80784558
+/* 80784530  80 1F 05 B0 */	lwz r0, 0x5b0(r31)
+/* 80784534  2C 00 00 02 */	cmpwi r0, 2
+/* 80784538  40 82 00 14 */	bne lbl_8078454C
+/* 8078453C  80 03 00 0C */	lwz r0, 0xc(r3)
+/* 80784540  60 00 00 01 */	ori r0, r0, 1
+/* 80784544  90 03 00 0C */	stw r0, 0xc(r3)
+/* 80784548  48 00 00 10 */	b lbl_80784558
 lbl_8078454C:
-/* 8078454C 00000000  80 03 00 0C */	lwz r0, 0xc(r3)
-/* 80784550 00000004  54 00 00 3C */	rlwinm r0, r0, 0, 0, 0x1e
-/* 80784554 00000008  90 03 00 0C */	stw r0, 0xc(r3)
+/* 8078454C  80 03 00 0C */	lwz r0, 0xc(r3)
+/* 80784550  54 00 00 3C */	rlwinm r0, r0, 0, 0, 0x1e
+/* 80784554  90 03 00 0C */	stw r0, 0xc(r3)
 lbl_80784558:
-/* 80784558 00000000  80 7F 06 1C */	lwz r3, 0x61c(r31)
-/* 8078455C 00000004  4B 88 CC 64 */	b entryDL__16mDoExt_McaMorfSOFv
-/* 80784560 00000008  C0 5F 04 D8 */	lfs f2, 0x4d8(r31)
-/* 80784564 0000000C  C0 1E 00 7C */	lfs f0, 0x7c(r30)	/* effective address: 80784DE4 */
-/* 80784568 00000010  C0 7F 04 D4 */	lfs f3, 0x4d4(r31)
-/* 8078456C 00000014  EC 20 18 2A */	fadds f1, f0, f3
-/* 80784570 00000018  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)
-/* 80784574 0000001C  D0 01 00 08 */	stfs f0, 8(r1)
-/* 80784578 00000020  D0 21 00 0C */	stfs f1, 0xc(r1)
-/* 8078457C 00000024  D0 41 00 10 */	stfs f2, 0x10(r1)
-/* 80784580 00000028  80 7F 06 28 */	lwz r3, 0x628(r31)
-/* 80784584 0000002C  38 80 00 01 */	li r4, 1
-/* 80784588 00000030  7F A5 EB 78 */	mr r5, r29
-/* 8078458C 00000034  38 C1 00 08 */	addi r6, r1, 8
-/* 80784590 00000038  C0 3E 00 28 */	lfs f1, 0x28(r30)	/* effective address: 80784D90 */
-/* 80784594 0000003C  C0 5E 00 C8 */	lfs f2, 0xc8(r30)	/* effective address: 80784E30 */
-/* 80784598 00000040  C0 9F 07 A8 */	lfs f4, 0x7a8(r31)
-/* 8078459C 00000044  38 FF 08 00 */	addi r7, r31, 0x800
-/* 807845A0 00000048  39 1F 01 0C */	addi r8, r31, 0x10c
-/* 807845A4 0000004C  39 20 00 00 */	li r9, 0
-/* 807845A8 00000050  C0 BE 00 1C */	lfs f5, 0x1c(r30)	/* effective address: 80784D84 */
-/* 807845AC 00000054  3D 40 80 42 */	lis r10, mSimpleTexObj__21dDlst_shadowControl_c@ha
-/* 807845B0 00000058  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
-/* 807845B4 0000005C  4B 8A A3 5C */	b dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj
-/* 807845B8 00000060  90 7F 06 28 */	stw r3, 0x628(r31)
-/* 807845BC 00000064  38 60 00 01 */	li r3, 1
-/* 807845C0 00000068  39 61 00 30 */	addi r11, r1, 0x30
-/* 807845C4 0000006C  4B BD DC 64 */	b _restgpr_29
-/* 807845C8 00000070  80 01 00 34 */	lwz r0, 0x34(r1)
-/* 807845CC 00000074  7C 08 03 A6 */	mtlr r0
-/* 807845D0 00000078  38 21 00 30 */	addi r1, r1, 0x30
-/* 807845D4 0000007C  4E 80 00 20 */	blr 
+/* 80784558  80 7F 06 1C */	lwz r3, 0x61c(r31)
+/* 8078455C  4B 88 CC 64 */	b entryDL__16mDoExt_McaMorfSOFv
+/* 80784560  C0 5F 04 D8 */	lfs f2, 0x4d8(r31)
+/* 80784564  C0 1E 00 7C */	lfs f0, 0x7c(r30)
+/* 80784568  C0 7F 04 D4 */	lfs f3, 0x4d4(r31)
+/* 8078456C  EC 20 18 2A */	fadds f1, f0, f3
+/* 80784570  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)
+/* 80784574  D0 01 00 08 */	stfs f0, 8(r1)
+/* 80784578  D0 21 00 0C */	stfs f1, 0xc(r1)
+/* 8078457C  D0 41 00 10 */	stfs f2, 0x10(r1)
+/* 80784580  80 7F 06 28 */	lwz r3, 0x628(r31)
+/* 80784584  38 80 00 01 */	li r4, 1
+/* 80784588  7F A5 EB 78 */	mr r5, r29
+/* 8078458C  38 C1 00 08 */	addi r6, r1, 8
+/* 80784590  C0 3E 00 28 */	lfs f1, 0x28(r30)
+/* 80784594  C0 5E 00 C8 */	lfs f2, 0xc8(r30)
+/* 80784598  C0 9F 07 A8 */	lfs f4, 0x7a8(r31)
+/* 8078459C  38 FF 08 00 */	addi r7, r31, 0x800
+/* 807845A0  39 1F 01 0C */	addi r8, r31, 0x10c
+/* 807845A4  39 20 00 00 */	li r9, 0
+/* 807845A8  C0 BE 00 1C */	lfs f5, 0x1c(r30)
+/* 807845AC  3D 40 80 42 */	lis r10, mSimpleTexObj__21dDlst_shadowControl_c@ha
+/* 807845B0  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
+/* 807845B4  4B 8A A3 5C */	b dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj
+/* 807845B8  90 7F 06 28 */	stw r3, 0x628(r31)
+/* 807845BC  38 60 00 01 */	li r3, 1
+/* 807845C0  39 61 00 30 */	addi r11, r1, 0x30
+/* 807845C4  4B BD DC 64 */	b _restgpr_29
+/* 807845C8  80 01 00 34 */	lwz r0, 0x34(r1)
+/* 807845CC  7C 08 03 A6 */	mtlr r0
+/* 807845D0  38 21 00 30 */	addi r1, r1, 0x30
+/* 807845D4  4E 80 00 20 */	blr 

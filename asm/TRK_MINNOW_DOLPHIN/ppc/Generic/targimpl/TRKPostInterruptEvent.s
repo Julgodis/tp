@@ -1,50 +1,50 @@
 lbl_80370134:
-/* 80370134 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 80370138 00000004  7C 08 02 A6 */	mflr r0
-/* 8037013C 00000008  3C 60 80 45 */	lis r3, gTRKState@ha
-/* 80370140 0000000C  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80370144 00000010  38 63 F2 94 */	addi r3, r3, gTRKState@l
-/* 80370148 00000014  80 03 00 9C */	lwz r0, 0x9c(r3)	/* effective address: 8044F330 */
-/* 8037014C 00000018  2C 00 00 00 */	cmpwi r0, 0
-/* 80370150 0000001C  41 82 00 10 */	beq lbl_80370160
-/* 80370154 00000020  38 00 00 00 */	li r0, 0
-/* 80370158 00000024  90 03 00 9C */	stw r0, 0x9c(r3)	/* effective address: 8044F330 */
-/* 8037015C 00000028  48 00 00 74 */	b lbl_803701D0
+/* 80370134  94 21 FF E0 */	stwu r1, -0x20(r1)                      
+/* 80370138  7C 08 02 A6 */	mflr r0                                 
+/* 8037013C  3C 60 80 45 */	lis r3, gTRKState@ha                    
+/* 80370140  90 01 00 24 */	stw r0, 0x24(r1)                        
+/* 80370144  38 63 F2 94 */	addi r3, r3, gTRKState@l                 /* constant-address: 8044F294, symbol: gTRKState */
+/* 80370148  80 03 00 9C */	lwz r0, 0x9c(r3)                         /* constant-address: 8044F330, symbol: None */
+/* 8037014C  2C 00 00 00 */	cmpwi r0, 0                             
+/* 80370150  41 82 00 10 */	beq lbl_80370160                         /* constant-address: 80370160, symbol: lbl_80370160 */
+/* 80370154  38 00 00 00 */	li r0, 0                                
+/* 80370158  90 03 00 9C */	stw r0, 0x9c(r3)                         /* constant-address: 8044F330, symbol: None */
+/* 8037015C  48 00 00 74 */	b lbl_803701D0                           /* constant-address: 803701D0, symbol: lbl_803701D0 */
 lbl_80370160:
-/* 80370160 00000000  3C 60 80 45 */	lis r3, gTRKCPUState@ha
-/* 80370164 00000004  38 63 F3 38 */	addi r3, r3, gTRKCPUState@l
-/* 80370168 00000008  80 03 02 F8 */	lwz r0, 0x2f8(r3)	/* effective address: 8044F630 */
-/* 8037016C 0000000C  54 00 04 3E */	clrlwi r0, r0, 0x10
-/* 80370170 00000010  2C 00 0D 00 */	cmpwi r0, 0xd00
-/* 80370174 00000014  41 82 00 14 */	beq lbl_80370188
-/* 80370178 00000018  40 80 00 44 */	bge lbl_803701BC
-/* 8037017C 0000001C  2C 00 07 00 */	cmpwi r0, 0x700
-/* 80370180 00000020  41 82 00 08 */	beq lbl_80370188
-/* 80370184 00000024  48 00 00 38 */	b lbl_803701BC
+/* 80370160  3C 60 80 45 */	lis r3, gTRKCPUState@ha                 
+/* 80370164  38 63 F3 38 */	addi r3, r3, gTRKCPUState@l              /* constant-address: 8044F338, symbol: gTRKCPUState */
+/* 80370168  80 03 02 F8 */	lwz r0, 0x2f8(r3)                        /* constant-address: 8044F630, symbol: None */
+/* 8037016C  54 00 04 3E */	clrlwi r0, r0, 0x10                     
+/* 80370170  2C 00 0D 00 */	cmpwi r0, 0xd00                         
+/* 80370174  41 82 00 14 */	beq lbl_80370188                         /* constant-address: 80370188, symbol: lbl_80370188 */
+/* 80370178  40 80 00 44 */	bge lbl_803701BC                         /* constant-address: 803701BC, symbol: lbl_803701BC */
+/* 8037017C  2C 00 07 00 */	cmpwi r0, 0x700                         
+/* 80370180  41 82 00 08 */	beq lbl_80370188                         /* constant-address: 80370188, symbol: lbl_80370188 */
+/* 80370184  48 00 00 38 */	b lbl_803701BC                           /* constant-address: 803701BC, symbol: lbl_803701BC */
 lbl_80370188:
-/* 80370188 00000000  3C 80 80 45 */	lis r4, gTRKCPUState@ha
-/* 8037018C 00000004  38 61 00 08 */	addi r3, r1, 8
-/* 80370190 00000008  38 84 F3 38 */	addi r4, r4, gTRKCPUState@l
-/* 80370194 0000000C  80 84 00 80 */	lwz r4, 0x80(r4)	/* effective address: 8044F3B8 */
-/* 80370198 00000010  48 00 0B F1 */	bl TRKTargetReadInstruction
-/* 8037019C 00000014  80 61 00 08 */	lwz r3, 8(r1)
-/* 803701A0 00000018  3C 03 F0 20 */	addis r0, r3, 0xf020
-/* 803701A4 0000001C  28 00 00 00 */	cmplwi r0, 0
-/* 803701A8 00000020  40 82 00 0C */	bne lbl_803701B4
-/* 803701AC 00000024  38 80 00 05 */	li r4, 5
-/* 803701B0 00000028  48 00 00 10 */	b lbl_803701C0
+/* 80370188  3C 80 80 45 */	lis r4, gTRKCPUState@ha                 
+/* 8037018C  38 61 00 08 */	addi r3, r1, 8                          
+/* 80370190  38 84 F3 38 */	addi r4, r4, gTRKCPUState@l              /* constant-address: 8044F338, symbol: gTRKCPUState */
+/* 80370194  80 84 00 80 */	lwz r4, 0x80(r4)                         /* constant-address: 8044F3B8, symbol: None */
+/* 80370198  48 00 0B F1 */	bl TRKTargetReadInstruction              /* constant-address: 80370D88, symbol: TRKTargetReadInstruction */
+/* 8037019C  80 61 00 08 */	lwz r3, 8(r1)                           
+/* 803701A0  3C 03 F0 20 */	addis r0, r3, 0xf020                    
+/* 803701A4  28 00 00 00 */	cmplwi r0, 0                            
+/* 803701A8  40 82 00 0C */	bne lbl_803701B4                         /* constant-address: 803701B4, symbol: lbl_803701B4 */
+/* 803701AC  38 80 00 05 */	li r4, 5                                
+/* 803701B0  48 00 00 10 */	b lbl_803701C0                           /* constant-address: 803701C0, symbol: lbl_803701C0 */
 lbl_803701B4:
-/* 803701B4 00000000  38 80 00 03 */	li r4, 3
-/* 803701B8 00000004  48 00 00 08 */	b lbl_803701C0
+/* 803701B4  38 80 00 03 */	li r4, 3                                
+/* 803701B8  48 00 00 08 */	b lbl_803701C0                           /* constant-address: 803701C0, symbol: lbl_803701C0 */
 lbl_803701BC:
-/* 803701BC 00000000  38 80 00 04 */	li r4, 4
+/* 803701BC  38 80 00 04 */	li r4, 4                                
 lbl_803701C0:
-/* 803701C0 00000000  38 61 00 0C */	addi r3, r1, 0xc
-/* 803701C4 00000004  4B FF CA 79 */	bl TRKConstructEvent
-/* 803701C8 00000008  38 61 00 0C */	addi r3, r1, 0xc
-/* 803701CC 0000000C  4B FF CA 89 */	bl TRKPostEvent
+/* 803701C0  38 61 00 0C */	addi r3, r1, 0xc                        
+/* 803701C4  4B FF CA 79 */	bl TRKConstructEvent                     /* constant-address: 8036CC3C, symbol: TRKConstructEvent */
+/* 803701C8  38 61 00 0C */	addi r3, r1, 0xc                        
+/* 803701CC  4B FF CA 89 */	bl TRKPostEvent                          /* constant-address: 8036CC54, symbol: TRKPostEvent */
 lbl_803701D0:
-/* 803701D0 00000000  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 803701D4 00000004  7C 08 03 A6 */	mtlr r0
-/* 803701D8 00000008  38 21 00 20 */	addi r1, r1, 0x20
-/* 803701DC 0000000C  4E 80 00 20 */	blr 
+/* 803701D0  80 01 00 24 */	lwz r0, 0x24(r1)                        
+/* 803701D4  7C 08 03 A6 */	mtlr r0                                 
+/* 803701D8  38 21 00 20 */	addi r1, r1, 0x20                       
+/* 803701DC  4E 80 00 20 */	blr                                     

@@ -150,6 +150,7 @@ def load_object_from_file(path, name, file) -> Object:
             else:
                 if not sym.st_shndx in idx_sections:
                     fail("symbol '%s' has invalid section-id (st_shndx: %i)" % (name, sym.st_shndx))
+                s = idx_sections[sym.st_shndx]
                 symbol = OffsetSymbol(sym, name, idx_sections[sym.st_shndx], sym.st_value)
 
             assert symbol

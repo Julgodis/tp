@@ -1,30 +1,30 @@
 lbl_800D2304:
-/* 800D2304 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 800D2308 00000004  7C 08 02 A6 */	mflr r0
-/* 800D230C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 800D2310 0000000C  A0 03 2F E8 */	lhz r0, 0x2fe8(r3)
-/* 800D2314 00000010  28 00 00 26 */	cmplwi r0, 0x26
-/* 800D2318 00000014  41 82 00 10 */	beq lbl_800D2328
-/* 800D231C 00000018  88 03 05 69 */	lbz r0, 0x569(r3)
-/* 800D2320 0000001C  28 00 00 04 */	cmplwi r0, 4
-/* 800D2324 00000020  40 82 00 14 */	bne lbl_800D2338
+/* 800D2304  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 800D2308  7C 08 02 A6 */	mflr r0                                 
+/* 800D230C  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 800D2310  A0 03 2F E8 */	lhz r0, 0x2fe8(r3)                      
+/* 800D2314  28 00 00 26 */	cmplwi r0, 0x26                         
+/* 800D2318  41 82 00 10 */	beq lbl_800D2328                         /* constant-address: 800D2328, symbol: lbl_800D2328 */
+/* 800D231C  88 03 05 69 */	lbz r0, 0x569(r3)                       
+/* 800D2320  28 00 00 04 */	cmplwi r0, 4                            
+/* 800D2324  40 82 00 14 */	bne lbl_800D2338                         /* constant-address: 800D2338, symbol: lbl_800D2338 */
 lbl_800D2328:
-/* 800D2328 00000000  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010001@ha */
-/* 800D232C 00000004  38 84 00 01 */	addi r4, r4, 0x0001 /* 0x00010001@l */
-/* 800D2330 00000008  4B FF FF 55 */	bl setSwordVoiceSe__9daAlink_cFUl
-/* 800D2334 0000000C  48 00 00 24 */	b lbl_800D2358
+/* 800D2328  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010001@ha */      
+/* 800D232C  38 84 00 01 */	addi r4, r4, 0x0001 /* 0x00010001@l */   /* constant-address: 00010001 */
+/* 800D2330  4B FF FF 55 */	bl setSwordVoiceSe__9daAlink_cFUl        /* constant-address: 800D2284, symbol: setSwordVoiceSe__9daAlink_cFUl */
+/* 800D2334  48 00 00 24 */	b lbl_800D2358                           /* constant-address: 800D2358, symbol: lbl_800D2358 */
 lbl_800D2338:
-/* 800D2338 00000000  28 00 00 01 */	cmplwi r0, 1
-/* 800D233C 00000004  40 82 00 10 */	bne lbl_800D234C
-/* 800D2340 00000008  3C 80 00 01 */	lis r4, 1
-/* 800D2344 0000000C  4B FF FF 41 */	bl setSwordVoiceSe__9daAlink_cFUl
-/* 800D2348 00000010  48 00 00 10 */	b lbl_800D2358
+/* 800D2338  28 00 00 01 */	cmplwi r0, 1                            
+/* 800D233C  40 82 00 10 */	bne lbl_800D234C                         /* constant-address: 800D234C, symbol: lbl_800D234C */
+/* 800D2340  3C 80 00 01 */	lis r4, 1                               
+/* 800D2344  4B FF FF 41 */	bl setSwordVoiceSe__9daAlink_cFUl        /* constant-address: 800D2284, symbol: setSwordVoiceSe__9daAlink_cFUl */
+/* 800D2348  48 00 00 10 */	b lbl_800D2358                           /* constant-address: 800D2358, symbol: lbl_800D2358 */
 lbl_800D234C:
-/* 800D234C 00000000  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010004@ha */
-/* 800D2350 00000004  38 84 00 04 */	addi r4, r4, 0x0004 /* 0x00010004@l */
-/* 800D2354 00000008  4B FF FF 31 */	bl setSwordVoiceSe__9daAlink_cFUl
+/* 800D234C  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010004@ha */      
+/* 800D2350  38 84 00 04 */	addi r4, r4, 0x0004 /* 0x00010004@l */   /* constant-address: 00010004 */
+/* 800D2354  4B FF FF 31 */	bl setSwordVoiceSe__9daAlink_cFUl        /* constant-address: 800D2284, symbol: setSwordVoiceSe__9daAlink_cFUl */
 lbl_800D2358:
-/* 800D2358 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 800D235C 00000004  7C 08 03 A6 */	mtlr r0
-/* 800D2360 00000008  38 21 00 10 */	addi r1, r1, 0x10
-/* 800D2364 0000000C  4E 80 00 20 */	blr 
+/* 800D2358  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 800D235C  7C 08 03 A6 */	mtlr r0                                 
+/* 800D2360  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 800D2364  4E 80 00 20 */	blr                                     

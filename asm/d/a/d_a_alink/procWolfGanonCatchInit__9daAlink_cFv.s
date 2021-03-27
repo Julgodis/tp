@@ -1,68 +1,68 @@
 lbl_8013DF30:
-/* 8013DF30 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 8013DF34 00000004  7C 08 02 A6 */	mflr r0
-/* 8013DF38 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8013DF3C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8013DF40 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8013DF44 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 8013DF48 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8013DF4C 0000001C  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 8013DF50 00000020  7F E4 FB 78 */	mr r4, r31
-/* 8013DF54 00000024  38 A0 00 00 */	li r5, 0
-/* 8013DF58 00000028  3C C0 00 01 */	lis r6, 0x0001 /* 0x0000FFEF@ha */
-/* 8013DF5C 0000002C  38 C6 FF EF */	addi r6, r6, 0xFFEF /* 0x0000FFEF@l */
-/* 8013DF60 00000030  4B F0 52 0D */	bl compulsory__14dEvt_control_cFPvPCcUs
-/* 8013DF64 00000034  2C 03 00 00 */	cmpwi r3, 0
-/* 8013DF68 00000038  40 82 00 0C */	bne lbl_8013DF74
-/* 8013DF6C 0000003C  38 60 00 00 */	li r3, 0
-/* 8013DF70 00000040  48 00 00 B0 */	b lbl_8013E020
+/* 8013DF30  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 8013DF34  7C 08 02 A6 */	mflr r0                                 
+/* 8013DF38  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 8013DF3C  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 8013DF40  7C 7F 1B 78 */	mr r31, r3                              
+/* 8013DF44  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 8013DF48  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 8013DF4C  38 63 4E C8 */	addi r3, r3, 0x4ec8                      /* constant-address: 8040B088, symbol: None */
+/* 8013DF50  7F E4 FB 78 */	mr r4, r31                              
+/* 8013DF54  38 A0 00 00 */	li r5, 0                                
+/* 8013DF58  3C C0 00 01 */	lis r6, 0x0001 /* 0x0000FFEF@ha */      
+/* 8013DF5C  38 C6 FF EF */	addi r6, r6, 0xFFEF /* 0x0000FFEF@l */   /* constant-address: 0000FFEF */
+/* 8013DF60  4B F0 52 0D */	bl compulsory__14dEvt_control_cFPvPCcUs  /* constant-address: 8004316C, symbol: compulsory__14dEvt_control_cFPvPCcUs */
+/* 8013DF64  2C 03 00 00 */	cmpwi r3, 0                             
+/* 8013DF68  40 82 00 0C */	bne lbl_8013DF74                         /* constant-address: 8013DF74, symbol: lbl_8013DF74 */
+/* 8013DF6C  38 60 00 00 */	li r3, 0                                
+/* 8013DF70  48 00 00 B0 */	b lbl_8013E020                           /* constant-address: 8013E020, symbol: lbl_8013E020 */
 lbl_8013DF74:
-/* 8013DF74 00000000  38 00 00 05 */	li r0, 5
-/* 8013DF78 00000004  B0 1F 06 04 */	sth r0, 0x604(r31)
-/* 8013DF7C 00000008  80 7F 27 F4 */	lwz r3, 0x27f4(r31)
-/* 8013DF80 0000000C  80 03 04 9C */	lwz r0, 0x49c(r3)
-/* 8013DF84 00000010  60 00 08 00 */	ori r0, r0, 0x800
-/* 8013DF88 00000014  90 03 04 9C */	stw r0, 0x49c(r3)
-/* 8013DF8C 00000018  7F E3 FB 78 */	mr r3, r31
-/* 8013DF90 0000001C  38 80 01 3C */	li r4, 0x13c
-/* 8013DF94 00000020  4B F8 3F D9 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
-/* 8013DF98 00000024  38 7F 28 0C */	addi r3, r31, 0x280c
-/* 8013DF9C 00000028  80 9F 27 F4 */	lwz r4, 0x27f4(r31)
-/* 8013DFA0 0000002C  48 02 0D 19 */	bl setData__16daPy_actorKeep_cFP10fopAc_ac_c
-/* 8013DFA4 00000030  80 7F 27 F4 */	lwz r3, 0x27f4(r31)
-/* 8013DFA8 00000034  88 03 05 8D */	lbz r0, 0x58d(r3)
-/* 8013DFAC 00000038  60 00 00 02 */	ori r0, r0, 2
-/* 8013DFB0 0000003C  98 03 05 8D */	stb r0, 0x58d(r3)
-/* 8013DFB4 00000040  7F E3 FB 78 */	mr r3, r31
-/* 8013DFB8 00000044  38 80 00 8D */	li r4, 0x8d
-/* 8013DFBC 00000048  4B FE B6 BD */	bl setSingleAnimeWolfBase__9daAlink_cFQ29daAlink_c12daAlink_WANM
-/* 8013DFC0 0000004C  38 7F 04 D0 */	addi r3, r31, 0x4d0
-/* 8013DFC4 00000050  80 9F 27 F4 */	lwz r4, 0x27f4(r31)
-/* 8013DFC8 00000054  38 84 04 D0 */	addi r4, r4, 0x4d0
-/* 8013DFCC 00000058  48 13 2C 39 */	bl cLib_targetAngleY__FPC3VecPC3Vec
-/* 8013DFD0 0000005C  B0 7F 04 E6 */	sth r3, 0x4e6(r31)
-/* 8013DFD4 00000060  A8 7F 04 E6 */	lha r3, 0x4e6(r31)
-/* 8013DFD8 00000064  3C 63 00 01 */	addis r3, r3, 1
-/* 8013DFDC 00000068  38 03 80 00 */	addi r0, r3, -32768
-/* 8013DFE0 0000006C  B0 1F 04 DE */	sth r0, 0x4de(r31)
-/* 8013DFE4 00000070  C0 02 93 00 */	lfs f0, lit_6895(r2)
-/* 8013DFE8 00000074  D0 1F 33 98 */	stfs f0, 0x3398(r31)
-/* 8013DFEC 00000078  38 00 00 1E */	li r0, 0x1e
-/* 8013DFF0 0000007C  B0 1F 30 12 */	sth r0, 0x3012(r31)
-/* 8013DFF4 00000080  38 00 00 00 */	li r0, 0
-/* 8013DFF8 00000084  B0 1F 30 0C */	sth r0, 0x300c(r31)
-/* 8013DFFC 00000088  B0 1F 30 0E */	sth r0, 0x300e(r31)
-/* 8013E000 0000008C  7F E3 FB 78 */	mr r3, r31
-/* 8013E004 00000090  38 80 00 00 */	li r4, 0
-/* 8013E008 00000094  4B FE 31 B9 */	bl setFootEffectProcType__9daAlink_cFi
-/* 8013E00C 00000098  38 00 00 60 */	li r0, 0x60
-/* 8013E010 0000009C  98 1F 2F 9D */	stb r0, 0x2f9d(r31)
-/* 8013E014 000000A0  38 00 00 04 */	li r0, 4
-/* 8013E018 000000A4  B0 1F 30 10 */	sth r0, 0x3010(r31)
-/* 8013E01C 000000A8  38 60 00 01 */	li r3, 1
+/* 8013DF74  38 00 00 05 */	li r0, 5                                
+/* 8013DF78  B0 1F 06 04 */	sth r0, 0x604(r31)                      
+/* 8013DF7C  80 7F 27 F4 */	lwz r3, 0x27f4(r31)                     
+/* 8013DF80  80 03 04 9C */	lwz r0, 0x49c(r3)                       
+/* 8013DF84  60 00 08 00 */	ori r0, r0, 0x800                       
+/* 8013DF88  90 03 04 9C */	stw r0, 0x49c(r3)                       
+/* 8013DF8C  7F E3 FB 78 */	mr r3, r31                              
+/* 8013DF90  38 80 01 3C */	li r4, 0x13c                            
+/* 8013DF94  4B F8 3F D9 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC /* constant-address: 800C1F6C, symbol: commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC */
+/* 8013DF98  38 7F 28 0C */	addi r3, r31, 0x280c                    
+/* 8013DF9C  80 9F 27 F4 */	lwz r4, 0x27f4(r31)                     
+/* 8013DFA0  48 02 0D 19 */	bl setData__16daPy_actorKeep_cFP10fopAc_ac_c /* constant-address: 8015ECB8, symbol: setData__16daPy_actorKeep_cFP10fopAc_ac_c */
+/* 8013DFA4  80 7F 27 F4 */	lwz r3, 0x27f4(r31)                     
+/* 8013DFA8  88 03 05 8D */	lbz r0, 0x58d(r3)                       
+/* 8013DFAC  60 00 00 02 */	ori r0, r0, 2                           
+/* 8013DFB0  98 03 05 8D */	stb r0, 0x58d(r3)                       
+/* 8013DFB4  7F E3 FB 78 */	mr r3, r31                              
+/* 8013DFB8  38 80 00 8D */	li r4, 0x8d                             
+/* 8013DFBC  4B FE B6 BD */	bl setSingleAnimeWolfBase__9daAlink_cFQ29daAlink_c12daAlink_WANM /* constant-address: 80129678, symbol: setSingleAnimeWolfBase__9daAlink_cFQ29daAlink_c12daAlink_WANM */
+/* 8013DFC0  38 7F 04 D0 */	addi r3, r31, 0x4d0                     
+/* 8013DFC4  80 9F 27 F4 */	lwz r4, 0x27f4(r31)                     
+/* 8013DFC8  38 84 04 D0 */	addi r4, r4, 0x4d0                      
+/* 8013DFCC  48 13 2C 39 */	bl cLib_targetAngleY__FPC3VecPC3Vec      /* constant-address: 80270C04, symbol: cLib_targetAngleY__FPC3VecPC3Vec */
+/* 8013DFD0  B0 7F 04 E6 */	sth r3, 0x4e6(r31)                      
+/* 8013DFD4  A8 7F 04 E6 */	lha r3, 0x4e6(r31)                      
+/* 8013DFD8  3C 63 00 01 */	addis r3, r3, 1                         
+/* 8013DFDC  38 03 80 00 */	addi r0, r3, -32768                     
+/* 8013DFE0  B0 1F 04 DE */	sth r0, 0x4de(r31)                      
+/* 8013DFE4  C0 02 93 00 */	lfs f0, lit_6895(r2)                     /* constant-address: 80452D00, symbol: lit_6895 */
+/* 8013DFE8  D0 1F 33 98 */	stfs f0, 0x3398(r31)                    
+/* 8013DFEC  38 00 00 1E */	li r0, 0x1e                             
+/* 8013DFF0  B0 1F 30 12 */	sth r0, 0x3012(r31)                     
+/* 8013DFF4  38 00 00 00 */	li r0, 0                                
+/* 8013DFF8  B0 1F 30 0C */	sth r0, 0x300c(r31)                     
+/* 8013DFFC  B0 1F 30 0E */	sth r0, 0x300e(r31)                     
+/* 8013E000  7F E3 FB 78 */	mr r3, r31                              
+/* 8013E004  38 80 00 00 */	li r4, 0                                
+/* 8013E008  4B FE 31 B9 */	bl setFootEffectProcType__9daAlink_cFi   /* constant-address: 801211C0, symbol: setFootEffectProcType__9daAlink_cFi */
+/* 8013E00C  38 00 00 60 */	li r0, 0x60                             
+/* 8013E010  98 1F 2F 9D */	stb r0, 0x2f9d(r31)                     
+/* 8013E014  38 00 00 04 */	li r0, 4                                
+/* 8013E018  B0 1F 30 10 */	sth r0, 0x3010(r31)                     
+/* 8013E01C  38 60 00 01 */	li r3, 1                                
 lbl_8013E020:
-/* 8013E020 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 8013E024 00000004  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 8013E028 00000008  7C 08 03 A6 */	mtlr r0
-/* 8013E02C 0000000C  38 21 00 10 */	addi r1, r1, 0x10
-/* 8013E030 00000010  4E 80 00 20 */	blr 
+/* 8013E020  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 8013E024  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 8013E028  7C 08 03 A6 */	mtlr r0                                 
+/* 8013E02C  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 8013E030  4E 80 00 20 */	blr                                     

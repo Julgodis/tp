@@ -1,41 +1,41 @@
 lbl_802A20F0:
-/* 802A20F0 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 802A20F4 00000004  7C 08 02 A6 */	mflr r0
-/* 802A20F8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802A20FC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802A2100 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 802A2104 00000014  7C 7E 1B 79 */	or. r30, r3, r3
-/* 802A2108 00000018  7C 9F 23 78 */	mr r31, r4
-/* 802A210C 0000001C  41 82 00 5C */	beq lbl_802A2168
-/* 802A2110 00000020  3C 60 80 3D */	lis r3, __vt__9JAISeqMgr@ha
-/* 802A2114 00000024  38 03 99 58 */	addi r0, r3, __vt__9JAISeqMgr@l
-/* 802A2118 00000028  90 1E 00 00 */	stw r0, 0(r30)
-/* 802A211C 0000002C  34 1E 00 64 */	addic. r0, r30, 0x64
-/* 802A2120 00000030  41 82 00 10 */	beq lbl_802A2130
-/* 802A2124 00000034  38 7E 00 64 */	addi r3, r30, 0x64
-/* 802A2128 00000038  38 80 00 00 */	li r4, 0
-/* 802A212C 0000003C  48 03 9D 81 */	bl __dt__10JSUPtrListFv
+/* 802A20F0  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 802A20F4  7C 08 02 A6 */	mflr r0                                 
+/* 802A20F8  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 802A20FC  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 802A2100  93 C1 00 08 */	stw r30, 8(r1)                          
+/* 802A2104  7C 7E 1B 79 */	or. r30, r3, r3                         
+/* 802A2108  7C 9F 23 78 */	mr r31, r4                              
+/* 802A210C  41 82 00 5C */	beq lbl_802A2168                         /* constant-address: 802A2168, symbol: lbl_802A2168 */
+/* 802A2110  3C 60 80 3D */	lis r3, __vt__9JAISeqMgr@ha             
+/* 802A2114  38 03 99 58 */	addi r0, r3, __vt__9JAISeqMgr@l          /* constant-address: 803C9958, symbol: __vt__9JAISeqMgr */
+/* 802A2118  90 1E 00 00 */	stw r0, 0(r30)                          
+/* 802A211C  34 1E 00 64 */	addic. r0, r30, 0x64                    
+/* 802A2120  41 82 00 10 */	beq lbl_802A2130                         /* constant-address: 802A2130, symbol: lbl_802A2130 */
+/* 802A2124  38 7E 00 64 */	addi r3, r30, 0x64                      
+/* 802A2128  38 80 00 00 */	li r4, 0                                
+/* 802A212C  48 03 9D 81 */	bl __dt__10JSUPtrListFv                  /* constant-address: 802DBEAC, symbol: __dt__10JSUPtrListFv */
 lbl_802A2130:
-/* 802A2130 00000000  7F C3 F3 78 */	mr r3, r30
-/* 802A2134 00000004  38 80 00 00 */	li r4, 0
-/* 802A2138 00000008  4B FF F6 3D */	bl __dt__14JAISeqDataUserFv
-/* 802A213C 0000000C  28 1E 00 00 */	cmplwi r30, 0
-/* 802A2140 00000010  41 82 00 18 */	beq lbl_802A2158
-/* 802A2144 00000014  80 0D 85 E8 */	lwz r0, data_80450B68(r13)
-/* 802A2148 00000018  7C 00 F0 40 */	cmplw r0, r30
-/* 802A214C 0000001C  40 82 00 0C */	bne lbl_802A2158
-/* 802A2150 00000020  38 00 00 00 */	li r0, 0
-/* 802A2154 00000024  90 0D 85 E8 */	stw r0, data_80450B68(r13)
+/* 802A2130  7F C3 F3 78 */	mr r3, r30                              
+/* 802A2134  38 80 00 00 */	li r4, 0                                
+/* 802A2138  4B FF F6 3D */	bl __dt__14JAISeqDataUserFv              /* constant-address: 802A1774, symbol: __dt__14JAISeqDataUserFv */
+/* 802A213C  28 1E 00 00 */	cmplwi r30, 0                           
+/* 802A2140  41 82 00 18 */	beq lbl_802A2158                         /* constant-address: 802A2158, symbol: lbl_802A2158 */
+/* 802A2144  80 0D 85 E8 */	lwz r0, data_80450B68(r13)               /* constant-address: 80450B68, symbol: data_80450B68 */
+/* 802A2148  7C 00 F0 40 */	cmplw r0, r30                           
+/* 802A214C  40 82 00 0C */	bne lbl_802A2158                         /* constant-address: 802A2158, symbol: lbl_802A2158 */
+/* 802A2150  38 00 00 00 */	li r0, 0                                
+/* 802A2154  90 0D 85 E8 */	stw r0, data_80450B68(r13)               /* constant-address: 80450B68, symbol: data_80450B68 */
 lbl_802A2158:
-/* 802A2158 00000000  7F E0 07 35 */	extsh. r0, r31
-/* 802A215C 00000004  40 81 00 0C */	ble lbl_802A2168
-/* 802A2160 00000008  7F C3 F3 78 */	mr r3, r30
-/* 802A2164 0000000C  48 02 CB D9 */	bl __dl__FPv
+/* 802A2158  7F E0 07 35 */	extsh. r0, r31                          
+/* 802A215C  40 81 00 0C */	ble lbl_802A2168                         /* constant-address: 802A2168, symbol: lbl_802A2168 */
+/* 802A2160  7F C3 F3 78 */	mr r3, r30                              
+/* 802A2164  48 02 CB D9 */	bl __dl__FPv                             /* constant-address: 802CED3C, symbol: __dl__FPv */
 lbl_802A2168:
-/* 802A2168 00000000  7F C3 F3 78 */	mr r3, r30
-/* 802A216C 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 802A2170 00000008  83 C1 00 08 */	lwz r30, 8(r1)
-/* 802A2174 0000000C  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 802A2178 00000010  7C 08 03 A6 */	mtlr r0
-/* 802A217C 00000014  38 21 00 10 */	addi r1, r1, 0x10
-/* 802A2180 00000018  4E 80 00 20 */	blr 
+/* 802A2168  7F C3 F3 78 */	mr r3, r30                              
+/* 802A216C  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 802A2170  83 C1 00 08 */	lwz r30, 8(r1)                          
+/* 802A2174  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 802A2178  7C 08 03 A6 */	mtlr r0                                 
+/* 802A217C  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 802A2180  4E 80 00 20 */	blr                                     

@@ -1,34 +1,34 @@
 lbl_8009EC28:
-/* 8009EC28 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 8009EC2C 00000004  7C 08 02 A6 */	mflr r0
-/* 8009EC30 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8009EC34 0000000C  A0 A3 00 14 */	lhz r5, 0x14(r3)
-/* 8009EC38 00000010  3C 60 80 43 */	lis r3, j3dSys@ha
-/* 8009EC3C 00000014  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 8009EC40 00000018  80 63 00 38 */	lwz r3, 0x38(r3)	/* effective address: 80434B00 */
-/* 8009EC44 0000001C  80 63 00 14 */	lwz r3, 0x14(r3)	/* effective address: 80434ADC */
-/* 8009EC48 00000020  2C 04 00 00 */	cmpwi r4, 0
-/* 8009EC4C 00000024  40 82 00 10 */	bne lbl_8009EC5C
-/* 8009EC50 00000028  7C A4 2B 78 */	mr r4, r5
-/* 8009EC54 0000002C  4B FF FF 05 */	bl modelCallBack__9daAlink_cFi
-/* 8009EC58 00000030  48 00 00 34 */	b lbl_8009EC8C
+/* 8009EC28  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 8009EC2C  7C 08 02 A6 */	mflr r0                                 
+/* 8009EC30  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 8009EC34  A0 A3 00 14 */	lhz r5, 0x14(r3)                        
+/* 8009EC38  3C 60 80 43 */	lis r3, j3dSys@ha                       
+/* 8009EC3C  38 63 4A C8 */	addi r3, r3, j3dSys@l                    /* constant-address: 80434AC8, symbol: j3dSys */
+/* 8009EC40  80 63 00 38 */	lwz r3, 0x38(r3)                         /* constant-address: 80434B00, symbol: None */
+/* 8009EC44  80 63 00 14 */	lwz r3, 0x14(r3)                        
+/* 8009EC48  2C 04 00 00 */	cmpwi r4, 0                             
+/* 8009EC4C  40 82 00 10 */	bne lbl_8009EC5C                         /* constant-address: 8009EC5C, symbol: lbl_8009EC5C */
+/* 8009EC50  7C A4 2B 78 */	mr r4, r5                               
+/* 8009EC54  4B FF FF 05 */	bl modelCallBack__9daAlink_cFi           /* constant-address: 8009EB58, symbol: modelCallBack__9daAlink_cFi */
+/* 8009EC58  48 00 00 34 */	b lbl_8009EC8C                           /* constant-address: 8009EC8C, symbol: lbl_8009EC8C */
 lbl_8009EC5C:
-/* 8009EC5C 00000000  2C 04 00 01 */	cmpwi r4, 1
-/* 8009EC60 00000004  40 82 00 2C */	bne lbl_8009EC8C
-/* 8009EC64 00000008  38 80 00 00 */	li r4, 0
-/* 8009EC68 0000000C  88 03 2F 90 */	lbz r0, 0x2f90(r3)	/* effective address: 80437A58 */
-/* 8009EC6C 00000010  28 00 00 00 */	cmplwi r0, 0
-/* 8009EC70 00000014  41 82 00 10 */	beq lbl_8009EC80
-/* 8009EC74 00000018  2C 05 00 01 */	cmpwi r5, 1
-/* 8009EC78 0000001C  40 82 00 08 */	bne lbl_8009EC80
-/* 8009EC7C 00000020  38 80 00 01 */	li r4, 1
+/* 8009EC5C  2C 04 00 01 */	cmpwi r4, 1                             
+/* 8009EC60  40 82 00 2C */	bne lbl_8009EC8C                         /* constant-address: 8009EC8C, symbol: lbl_8009EC8C */
+/* 8009EC64  38 80 00 00 */	li r4, 0                                
+/* 8009EC68  88 03 2F 90 */	lbz r0, 0x2f90(r3)                      
+/* 8009EC6C  28 00 00 00 */	cmplwi r0, 0                            
+/* 8009EC70  41 82 00 10 */	beq lbl_8009EC80                         /* constant-address: 8009EC80, symbol: lbl_8009EC80 */
+/* 8009EC74  2C 05 00 01 */	cmpwi r5, 1                             
+/* 8009EC78  40 82 00 08 */	bne lbl_8009EC80                         /* constant-address: 8009EC80, symbol: lbl_8009EC80 */
+/* 8009EC7C  38 80 00 01 */	li r4, 1                                
 lbl_8009EC80:
-/* 8009EC80 00000000  54 80 06 3F */	clrlwi. r0, r4, 0x18
-/* 8009EC84 00000004  41 82 00 08 */	beq lbl_8009EC8C
-/* 8009EC88 00000008  4B FF FE 91 */	bl resetRootMtx__9daAlink_cFv
+/* 8009EC80  54 80 06 3F */	clrlwi. r0, r4, 0x18                    
+/* 8009EC84  41 82 00 08 */	beq lbl_8009EC8C                         /* constant-address: 8009EC8C, symbol: lbl_8009EC8C */
+/* 8009EC88  4B FF FE 91 */	bl resetRootMtx__9daAlink_cFv            /* constant-address: 8009EB18, symbol: resetRootMtx__9daAlink_cFv */
 lbl_8009EC8C:
-/* 8009EC8C 00000000  38 60 00 01 */	li r3, 1
-/* 8009EC90 00000004  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 8009EC94 00000008  7C 08 03 A6 */	mtlr r0
-/* 8009EC98 0000000C  38 21 00 10 */	addi r1, r1, 0x10
-/* 8009EC9C 00000010  4E 80 00 20 */	blr 
+/* 8009EC8C  38 60 00 01 */	li r3, 1                                
+/* 8009EC90  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 8009EC94  7C 08 03 A6 */	mtlr r0                                 
+/* 8009EC98  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 8009EC9C  4E 80 00 20 */	blr                                     

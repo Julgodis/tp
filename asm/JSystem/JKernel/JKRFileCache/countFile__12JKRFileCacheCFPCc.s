@@ -1,35 +1,35 @@
 lbl_802D52A0:
-/* 802D52A0 00000000  94 21 FF D0 */	stwu r1, -0x30(r1)
-/* 802D52A4 00000004  7C 08 02 A6 */	mflr r0
-/* 802D52A8 00000008  90 01 00 34 */	stw r0, 0x34(r1)
-/* 802D52AC 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
-/* 802D52B0 00000010  93 C1 00 28 */	stw r30, 0x28(r1)
-/* 802D52B4 00000014  3B E0 00 00 */	li r31, 0
-/* 802D52B8 00000018  48 00 02 65 */	bl getDvdPathName__12JKRFileCacheCFPCc
-/* 802D52BC 0000001C  7C 7E 1B 78 */	mr r30, r3
-/* 802D52C0 00000020  38 81 00 14 */	addi r4, r1, 0x14
-/* 802D52C4 00000024  48 07 3C BD */	bl DVDOpenDir
-/* 802D52C8 00000028  2C 03 00 00 */	cmpwi r3, 0
-/* 802D52CC 0000002C  41 82 00 28 */	beq lbl_802D52F4
-/* 802D52D0 00000030  48 00 00 08 */	b lbl_802D52D8
+/* 802D52A0  94 21 FF D0 */	stwu r1, -0x30(r1)                      
+/* 802D52A4  7C 08 02 A6 */	mflr r0                                 
+/* 802D52A8  90 01 00 34 */	stw r0, 0x34(r1)                        
+/* 802D52AC  93 E1 00 2C */	stw r31, 0x2c(r1)                       
+/* 802D52B0  93 C1 00 28 */	stw r30, 0x28(r1)                       
+/* 802D52B4  3B E0 00 00 */	li r31, 0                               
+/* 802D52B8  48 00 02 65 */	bl getDvdPathName__12JKRFileCacheCFPCc   /* constant-address: 802D551C, symbol: getDvdPathName__12JKRFileCacheCFPCc */
+/* 802D52BC  7C 7E 1B 78 */	mr r30, r3                              
+/* 802D52C0  38 81 00 14 */	addi r4, r1, 0x14                       
+/* 802D52C4  48 07 3C BD */	bl DVDOpenDir                            /* constant-address: 80348F80, symbol: DVDOpenDir */
+/* 802D52C8  2C 03 00 00 */	cmpwi r3, 0                             
+/* 802D52CC  41 82 00 28 */	beq lbl_802D52F4                         /* constant-address: 802D52F4, symbol: lbl_802D52F4 */
+/* 802D52D0  48 00 00 08 */	b lbl_802D52D8                           /* constant-address: 802D52D8, symbol: lbl_802D52D8 */
 lbl_802D52D4:
-/* 802D52D4 00000000  3B FF 00 01 */	addi r31, r31, 1
+/* 802D52D4  3B FF 00 01 */	addi r31, r31, 1                         /* constant-address: 00000001 */
 lbl_802D52D8:
-/* 802D52D8 00000000  38 61 00 14 */	addi r3, r1, 0x14
-/* 802D52DC 00000004  38 81 00 08 */	addi r4, r1, 8
-/* 802D52E0 00000008  48 07 3D 61 */	bl DVDReadDir
-/* 802D52E4 0000000C  2C 03 00 00 */	cmpwi r3, 0
-/* 802D52E8 00000010  40 82 FF EC */	bne lbl_802D52D4
-/* 802D52EC 00000014  38 61 00 14 */	addi r3, r1, 0x14
-/* 802D52F0 00000018  48 07 3D F5 */	bl DVDCloseDir
+/* 802D52D8  38 61 00 14 */	addi r3, r1, 0x14                       
+/* 802D52DC  38 81 00 08 */	addi r4, r1, 8                          
+/* 802D52E0  48 07 3D 61 */	bl DVDReadDir                            /* constant-address: 80349040, symbol: DVDReadDir */
+/* 802D52E4  2C 03 00 00 */	cmpwi r3, 0                             
+/* 802D52E8  40 82 FF EC */	bne lbl_802D52D4                         /* constant-address: 802D52D4, symbol: lbl_802D52D4 */
+/* 802D52EC  38 61 00 14 */	addi r3, r1, 0x14                       
+/* 802D52F0  48 07 3D F5 */	bl DVDCloseDir                           /* constant-address: 803490E4, symbol: DVDCloseDir */
 lbl_802D52F4:
-/* 802D52F4 00000000  80 6D 8D F0 */	lwz r3, sSystemHeap__7JKRHeap(r13)
-/* 802D52F8 00000004  7F C4 F3 78 */	mr r4, r30
-/* 802D52FC 00000008  4B FF 92 4D */	bl free__7JKRHeapFPv
-/* 802D5300 0000000C  7F E3 FB 78 */	mr r3, r31
-/* 802D5304 00000010  83 E1 00 2C */	lwz r31, 0x2c(r1)
-/* 802D5308 00000014  83 C1 00 28 */	lwz r30, 0x28(r1)
-/* 802D530C 00000018  80 01 00 34 */	lwz r0, 0x34(r1)
-/* 802D5310 0000001C  7C 08 03 A6 */	mtlr r0
-/* 802D5314 00000020  38 21 00 30 */	addi r1, r1, 0x30
-/* 802D5318 00000024  4E 80 00 20 */	blr 
+/* 802D52F4  80 6D 8D F0 */	lwz r3, sSystemHeap__7JKRHeap(r13)       /* constant-address: 80451370, symbol: sSystemHeap__7JKRHeap */
+/* 802D52F8  7F C4 F3 78 */	mr r4, r30                              
+/* 802D52FC  4B FF 92 4D */	bl free__7JKRHeapFPv                     /* constant-address: 802CE548, symbol: free__7JKRHeapFPv */
+/* 802D5300  7F E3 FB 78 */	mr r3, r31                              
+/* 802D5304  83 E1 00 2C */	lwz r31, 0x2c(r1)                       
+/* 802D5308  83 C1 00 28 */	lwz r30, 0x28(r1)                       
+/* 802D530C  80 01 00 34 */	lwz r0, 0x34(r1)                        
+/* 802D5310  7C 08 03 A6 */	mtlr r0                                 
+/* 802D5314  38 21 00 30 */	addi r1, r1, 0x30                       
+/* 802D5318  4E 80 00 20 */	blr                                     

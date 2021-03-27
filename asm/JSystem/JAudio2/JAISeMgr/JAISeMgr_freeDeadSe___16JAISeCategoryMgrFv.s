@@ -1,72 +1,72 @@
 lbl_8029FB30:
-/* 8029FB30 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 8029FB34 00000004  7C 08 02 A6 */	mflr r0
-/* 8029FB38 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 8029FB3C 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 8029FB40 00000010  48 0C 26 99 */	bl _savegpr_28
-/* 8029FB44 00000014  7C 7C 1B 78 */	mr r28, r3
-/* 8029FB48 00000018  83 C3 00 58 */	lwz r30, 0x58(r3)
-/* 8029FB4C 0000001C  3C 60 80 3D */	lis r3, __vt__5JAISe@ha
-/* 8029FB50 00000020  38 63 98 58 */	addi r3, r3, __vt__5JAISe@l
-/* 8029FB54 00000024  3B A3 00 08 */	addi r29, r3, 8
-/* 8029FB58 00000028  48 00 00 BC */	b lbl_8029FC14
+/* 8029FB30  94 21 FF E0 */	stwu r1, -0x20(r1)                      
+/* 8029FB34  7C 08 02 A6 */	mflr r0                                 
+/* 8029FB38  90 01 00 24 */	stw r0, 0x24(r1)                        
+/* 8029FB3C  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 8029FB40  48 0C 26 99 */	bl _savegpr_28                           /* constant-address: 803621D8, symbol: _savegpr_28 */
+/* 8029FB44  7C 7C 1B 78 */	mr r28, r3                              
+/* 8029FB48  83 C3 00 58 */	lwz r30, 0x58(r3)                       
+/* 8029FB4C  3C 60 80 3D */	lis r3, __vt__5JAISe@ha                 
+/* 8029FB50  38 63 98 58 */	addi r3, r3, __vt__5JAISe@l              /* constant-address: 803C9858, symbol: __vt__5JAISe */
+/* 8029FB54  3B A3 00 08 */	addi r29, r3, 8                          /* constant-address: 803C9860, symbol: None */
+/* 8029FB58  48 00 00 BC */	b lbl_8029FC14                           /* constant-address: 8029FC14, symbol: lbl_8029FC14 */
 lbl_8029FB5C:
-/* 8029FB5C 00000000  83 FE 00 0C */	lwz r31, 0xc(r30)
-/* 8029FB60 00000004  80 7E 00 00 */	lwz r3, 0(r30)
-/* 8029FB64 00000008  88 03 00 2E */	lbz r0, 0x2e(r3)
-/* 8029FB68 0000000C  28 00 00 06 */	cmplwi r0, 6
-/* 8029FB6C 00000010  40 82 00 A4 */	bne lbl_8029FC10
-/* 8029FB70 00000014  38 7C 00 58 */	addi r3, r28, 0x58
-/* 8029FB74 00000018  7F C4 F3 78 */	mr r4, r30
-/* 8029FB78 0000001C  48 03 C5 E5 */	bl remove__10JSUPtrListFP10JSUPtrLink
-/* 8029FB7C 00000020  83 DE 00 00 */	lwz r30, 0(r30)
-/* 8029FB80 00000024  28 1E 00 00 */	cmplwi r30, 0
-/* 8029FB84 00000028  41 82 00 8C */	beq lbl_8029FC10
-/* 8029FB88 0000002C  3C 60 80 3D */	lis r3, __vt__5JAISe@ha
-/* 8029FB8C 00000030  38 03 98 58 */	addi r0, r3, __vt__5JAISe@l
-/* 8029FB90 00000034  90 1E 00 A8 */	stw r0, 0xa8(r30)
-/* 8029FB94 00000038  93 BE 00 10 */	stw r29, 0x10(r30)
-/* 8029FB98 0000003C  34 1E 00 AC */	addic. r0, r30, 0xac
-/* 8029FB9C 00000040  41 82 00 10 */	beq lbl_8029FBAC
-/* 8029FBA0 00000044  38 7E 00 C8 */	addi r3, r30, 0xc8
-/* 8029FBA4 00000048  38 80 FF FF */	li r4, -1
-/* 8029FBA8 0000004C  4B FF 17 75 */	bl __dt__8JASTrackFv
+/* 8029FB5C  83 FE 00 0C */	lwz r31, 0xc(r30)                       
+/* 8029FB60  80 7E 00 00 */	lwz r3, 0(r30)                          
+/* 8029FB64  88 03 00 2E */	lbz r0, 0x2e(r3)                        
+/* 8029FB68  28 00 00 06 */	cmplwi r0, 6                            
+/* 8029FB6C  40 82 00 A4 */	bne lbl_8029FC10                         /* constant-address: 8029FC10, symbol: lbl_8029FC10 */
+/* 8029FB70  38 7C 00 58 */	addi r3, r28, 0x58                      
+/* 8029FB74  7F C4 F3 78 */	mr r4, r30                              
+/* 8029FB78  48 03 C5 E5 */	bl remove__10JSUPtrListFP10JSUPtrLink    /* constant-address: 802DC15C, symbol: remove__10JSUPtrListFP10JSUPtrLink */
+/* 8029FB7C  83 DE 00 00 */	lwz r30, 0(r30)                         
+/* 8029FB80  28 1E 00 00 */	cmplwi r30, 0                           
+/* 8029FB84  41 82 00 8C */	beq lbl_8029FC10                         /* constant-address: 8029FC10, symbol: lbl_8029FC10 */
+/* 8029FB88  3C 60 80 3D */	lis r3, __vt__5JAISe@ha                 
+/* 8029FB8C  38 03 98 58 */	addi r0, r3, __vt__5JAISe@l              /* constant-address: 803C9858, symbol: __vt__5JAISe */
+/* 8029FB90  90 1E 00 A8 */	stw r0, 0xa8(r30)                       
+/* 8029FB94  93 BE 00 10 */	stw r29, 0x10(r30)                      
+/* 8029FB98  34 1E 00 AC */	addic. r0, r30, 0xac                    
+/* 8029FB9C  41 82 00 10 */	beq lbl_8029FBAC                         /* constant-address: 8029FBAC, symbol: lbl_8029FBAC */
+/* 8029FBA0  38 7E 00 C8 */	addi r3, r30, 0xc8                      
+/* 8029FBA4  38 80 FF FF */	li r4, -1                               
+/* 8029FBA8  4B FF 17 75 */	bl __dt__8JASTrackFv                     /* constant-address: 8029131C, symbol: __dt__8JASTrackFv */
 lbl_8029FBAC:
-/* 8029FBAC 00000000  28 1E 00 00 */	cmplwi r30, 0
-/* 8029FBB0 00000004  41 82 00 10 */	beq lbl_8029FBC0
-/* 8029FBB4 00000008  7F C3 F3 78 */	mr r3, r30
-/* 8029FBB8 0000000C  38 80 00 00 */	li r4, 0
-/* 8029FBBC 00000010  48 03 C2 59 */	bl __dt__10JSUPtrLinkFv
+/* 8029FBAC  28 1E 00 00 */	cmplwi r30, 0                           
+/* 8029FBB0  41 82 00 10 */	beq lbl_8029FBC0                         /* constant-address: 8029FBC0, symbol: lbl_8029FBC0 */
+/* 8029FBB4  7F C3 F3 78 */	mr r3, r30                              
+/* 8029FBB8  38 80 00 00 */	li r4, 0                                
+/* 8029FBBC  48 03 C2 59 */	bl __dt__10JSUPtrLinkFv                  /* constant-address: 802DBE14, symbol: __dt__10JSUPtrLinkFv */
 lbl_8029FBC0:
-/* 8029FBC0 00000000  88 0D 8D 90 */	lbz r0, data_80451310(r13)
-/* 8029FBC4 00000004  7C 00 07 75 */	extsb. r0, r0
-/* 8029FBC8 00000008  40 82 00 34 */	bne lbl_8029FBFC
-/* 8029FBCC 0000000C  3C 60 80 43 */	lis r3, data_80434084@ha
-/* 8029FBD0 00000010  38 63 40 84 */	addi r3, r3, data_80434084@l
-/* 8029FBD4 00000014  4B FF 0C 75 */	bl __ct__17JASGenericMemPoolFv
-/* 8029FBD8 00000018  3C 60 80 43 */	lis r3, data_80434084@ha
-/* 8029FBDC 0000001C  38 63 40 84 */	addi r3, r3, data_80434084@l
-/* 8029FBE0 00000020  3C 80 80 2A */	lis r4, func_8029FC34@ha
-/* 8029FBE4 00000024  38 84 FC 34 */	addi r4, r4, func_8029FC34@l
-/* 8029FBE8 00000028  3C A0 80 43 */	lis r5, lit_744@ha
-/* 8029FBEC 0000002C  38 A5 40 78 */	addi r5, r5, lit_744@l
-/* 8029FBF0 00000030  48 0C 20 35 */	bl __register_global_object
-/* 8029FBF4 00000034  38 00 00 01 */	li r0, 1
-/* 8029FBF8 00000038  98 0D 8D 90 */	stb r0, data_80451310(r13)
+/* 8029FBC0  88 0D 8D 90 */	lbz r0, data_80451310(r13)               /* constant-address: 80451310, symbol: data_80451310 */
+/* 8029FBC4  7C 00 07 75 */	extsb. r0, r0                           
+/* 8029FBC8  40 82 00 34 */	bne lbl_8029FBFC                         /* constant-address: 8029FBFC, symbol: lbl_8029FBFC */
+/* 8029FBCC  3C 60 80 43 */	lis r3, data_80434084@ha                
+/* 8029FBD0  38 63 40 84 */	addi r3, r3, data_80434084@l             /* constant-address: 80434084, symbol: data_80434084 */
+/* 8029FBD4  4B FF 0C 75 */	bl __ct__17JASGenericMemPoolFv           /* constant-address: 80290848, symbol: __ct__17JASGenericMemPoolFv */
+/* 8029FBD8  3C 60 80 43 */	lis r3, data_80434084@ha                
+/* 8029FBDC  38 63 40 84 */	addi r3, r3, data_80434084@l             /* constant-address: 80434084, symbol: data_80434084 */
+/* 8029FBE0  3C 80 80 2A */	lis r4, func_8029FC34@ha                
+/* 8029FBE4  38 84 FC 34 */	addi r4, r4, func_8029FC34@l             /* constant-address: 8029FC34, symbol: func_8029FC34 */
+/* 8029FBE8  3C A0 80 43 */	lis r5, lit_744@ha                      
+/* 8029FBEC  38 A5 40 78 */	addi r5, r5, lit_744@l                   /* constant-address: 80434078, symbol: lit_744 */
+/* 8029FBF0  48 0C 20 35 */	bl __register_global_object              /* constant-address: 80361C24, symbol: __register_global_object */
+/* 8029FBF4  38 00 00 01 */	li r0, 1                                
+/* 8029FBF8  98 0D 8D 90 */	stb r0, data_80451310(r13)               /* constant-address: 80451310, symbol: data_80451310 */
 lbl_8029FBFC:
-/* 8029FBFC 00000000  3C 60 80 43 */	lis r3, data_80434084@ha
-/* 8029FC00 00000004  38 63 40 84 */	addi r3, r3, data_80434084@l
-/* 8029FC04 00000008  7F C4 F3 78 */	mr r4, r30
-/* 8029FC08 0000000C  38 A0 03 38 */	li r5, 0x338
-/* 8029FC0C 00000010  4B FF 0D 89 */	bl free__17JASGenericMemPoolFPvUl
+/* 8029FBFC  3C 60 80 43 */	lis r3, data_80434084@ha                
+/* 8029FC00  38 63 40 84 */	addi r3, r3, data_80434084@l             /* constant-address: 80434084, symbol: data_80434084 */
+/* 8029FC04  7F C4 F3 78 */	mr r4, r30                              
+/* 8029FC08  38 A0 03 38 */	li r5, 0x338                            
+/* 8029FC0C  4B FF 0D 89 */	bl free__17JASGenericMemPoolFPvUl        /* constant-address: 80290994, symbol: free__17JASGenericMemPoolFPvUl */
 lbl_8029FC10:
-/* 8029FC10 00000000  7F FE FB 78 */	mr r30, r31
+/* 8029FC10  7F FE FB 78 */	mr r30, r31                             
 lbl_8029FC14:
-/* 8029FC14 00000000  28 1E 00 00 */	cmplwi r30, 0
-/* 8029FC18 00000004  40 82 FF 44 */	bne lbl_8029FB5C
-/* 8029FC1C 00000008  39 61 00 20 */	addi r11, r1, 0x20
-/* 8029FC20 0000000C  48 0C 26 05 */	bl _restgpr_28
-/* 8029FC24 00000010  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 8029FC28 00000014  7C 08 03 A6 */	mtlr r0
-/* 8029FC2C 00000018  38 21 00 20 */	addi r1, r1, 0x20
-/* 8029FC30 0000001C  4E 80 00 20 */	blr 
+/* 8029FC14  28 1E 00 00 */	cmplwi r30, 0                           
+/* 8029FC18  40 82 FF 44 */	bne lbl_8029FB5C                         /* constant-address: 8029FB5C, symbol: lbl_8029FB5C */
+/* 8029FC1C  39 61 00 20 */	addi r11, r1, 0x20                      
+/* 8029FC20  48 0C 26 05 */	bl _restgpr_28                           /* constant-address: 80362224, symbol: _restgpr_28 */
+/* 8029FC24  80 01 00 24 */	lwz r0, 0x24(r1)                        
+/* 8029FC28  7C 08 03 A6 */	mtlr r0                                 
+/* 8029FC2C  38 21 00 20 */	addi r1, r1, 0x20                       
+/* 8029FC30  4E 80 00 20 */	blr                                     

@@ -1,11 +1,11 @@
 lbl_803725EC:
-/* 803725EC 00000000  80 0D 94 40 */	lwz r0, gIsInitialized(r13)
-/* 803725F0 00000004  2C 00 00 00 */	cmpwi r0, 0
-/* 803725F4 00000008  41 82 00 0C */	beq lbl_80372600
-/* 803725F8 0000000C  38 60 D8 EB */	li r3, -10005
-/* 803725FC 00000010  4E 80 00 20 */	blr 
+/* 803725EC  80 0D 94 40 */	lwz r0, gIsInitialized(r13)              /* constant-address: 804519C0, symbol: gIsInitialized */
+/* 803725F0  2C 00 00 00 */	cmpwi r0, 0                             
+/* 803725F4  41 82 00 0C */	beq lbl_80372600                         /* constant-address: 80372600, symbol: lbl_80372600 */
+/* 803725F8  38 60 D8 EB */	li r3, -10005                           
+/* 803725FC  4E 80 00 20 */	blr                                     
 lbl_80372600:
-/* 80372600 00000000  38 00 00 01 */	li r0, 1
-/* 80372604 00000004  38 60 00 00 */	li r3, 0
-/* 80372608 00000008  90 0D 94 40 */	stw r0, gIsInitialized(r13)
-/* 8037260C 0000000C  4E 80 00 20 */	blr 
+/* 80372600  38 00 00 01 */	li r0, 1                                
+/* 80372604  38 60 00 00 */	li r3, 0                                
+/* 80372608  90 0D 94 40 */	stw r0, gIsInitialized(r13)              /* constant-address: 804519C0, symbol: gIsInitialized */
+/* 8037260C  4E 80 00 20 */	blr                                     

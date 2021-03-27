@@ -1,34 +1,34 @@
 lbl_80048348:
-/* 80048348 00000000  94 21 FF D0 */	stwu r1, -0x30(r1)
-/* 8004834C 00000004  7C 08 02 A6 */	mflr r0
-/* 80048350 00000008  90 01 00 34 */	stw r0, 0x34(r1)
-/* 80048354 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
-/* 80048358 00000010  7C 9F 23 78 */	mr r31, r4
-/* 8004835C 00000014  7F E3 FB 78 */	mr r3, r31
-/* 80048360 00000018  3C 80 80 38 */	lis r4, d_event_d_event_manager__stringBase0@ha
-/* 80048364 0000001C  38 84 9F 60 */	addi r4, r4, d_event_d_event_manager__stringBase0@l
-/* 80048368 00000020  38 84 01 4B */	addi r4, r4, 0x14b
-/* 8004836C 00000024  48 32 06 29 */	bl strcmp
-/* 80048370 00000028  2C 03 00 00 */	cmpwi r3, 0
-/* 80048374 0000002C  40 82 00 18 */	bne lbl_8004838C
-/* 80048378 00000030  3C 60 80 04 */	lis r3, extraOffObjectCallBack__FP10fopAc_ac_cPv@ha
-/* 8004837C 00000034  38 63 6C 88 */	addi r3, r3, extraOffObjectCallBack__FP10fopAc_ac_cPv@l
-/* 80048380 00000038  38 80 00 00 */	li r4, 0
-/* 80048384 0000003C  4B FD 14 75 */	bl fopAcIt_Judge__FPFPvPv_PvPv
-/* 80048388 00000040  48 00 00 28 */	b lbl_800483B0
+/* 80048348  94 21 FF D0 */	stwu r1, -0x30(r1)                      
+/* 8004834C  7C 08 02 A6 */	mflr r0                                 
+/* 80048350  90 01 00 34 */	stw r0, 0x34(r1)                        
+/* 80048354  93 E1 00 2C */	stw r31, 0x2c(r1)                       
+/* 80048358  7C 9F 23 78 */	mr r31, r4                              
+/* 8004835C  7F E3 FB 78 */	mr r3, r31                              
+/* 80048360  3C 80 80 38 */	lis r4, d_event_d_event_manager__stringBase0@ha
+/* 80048364  38 84 9F 60 */	addi r4, r4, d_event_d_event_manager__stringBase0@l /* constant-address: 80379F60, symbol: d_event_d_event_manager__stringBase0 */
+/* 80048368  38 84 01 4B */	addi r4, r4, 0x14b                       /* constant-address: 8037A0AB, symbol: None */
+/* 8004836C  48 32 06 29 */	bl strcmp                                /* constant-address: 80368994, symbol: strcmp */
+/* 80048370  2C 03 00 00 */	cmpwi r3, 0                             
+/* 80048374  40 82 00 18 */	bne lbl_8004838C                         /* constant-address: 8004838C, symbol: lbl_8004838C */
+/* 80048378  3C 60 80 04 */	lis r3, extraOffObjectCallBack__FP10fopAc_ac_cPv@ha
+/* 8004837C  38 63 6C 88 */	addi r3, r3, extraOffObjectCallBack__FP10fopAc_ac_cPv@l /* constant-address: 80046C88, symbol: extraOffObjectCallBack__FP10fopAc_ac_cPv */
+/* 80048380  38 80 00 00 */	li r4, 0                                
+/* 80048384  4B FD 14 75 */	bl fopAcIt_Judge__FPFPvPv_PvPv           /* constant-address: 800197F8, symbol: fopAcIt_Judge__FPFPvPv_PvPv */
+/* 80048388  48 00 00 28 */	b lbl_800483B0                           /* constant-address: 800483B0, symbol: lbl_800483B0 */
 lbl_8004838C:
-/* 8004838C 00000000  38 61 00 08 */	addi r3, r1, 8
-/* 80048390 00000004  7F E4 FB 78 */	mr r4, r31
-/* 80048394 00000008  48 32 07 99 */	bl strcpy
-/* 80048398 0000000C  38 61 00 08 */	addi r3, r1, 8
-/* 8004839C 00000010  38 80 FF FF */	li r4, -1
-/* 800483A0 00000014  4B FD 54 01 */	bl fopAcM_searchFromName4Event__FPCcs
-/* 800483A4 00000018  80 03 04 9C */	lwz r0, 0x49c(r3)
-/* 800483A8 0000001C  54 00 05 66 */	rlwinm r0, r0, 0, 0x15, 0x13
-/* 800483AC 00000020  90 03 04 9C */	stw r0, 0x49c(r3)
+/* 8004838C  38 61 00 08 */	addi r3, r1, 8                          
+/* 80048390  7F E4 FB 78 */	mr r4, r31                              
+/* 80048394  48 32 07 99 */	bl strcpy                                /* constant-address: 80368B2C, symbol: strcpy */
+/* 80048398  38 61 00 08 */	addi r3, r1, 8                          
+/* 8004839C  38 80 FF FF */	li r4, -1                               
+/* 800483A0  4B FD 54 01 */	bl fopAcM_searchFromName4Event__FPCcs    /* constant-address: 8001D7A0, symbol: fopAcM_searchFromName4Event__FPCcs */
+/* 800483A4  80 03 04 9C */	lwz r0, 0x49c(r3)                       
+/* 800483A8  54 00 05 66 */	rlwinm r0, r0, 0, 0x15, 0x13            
+/* 800483AC  90 03 04 9C */	stw r0, 0x49c(r3)                       
 lbl_800483B0:
-/* 800483B0 00000000  83 E1 00 2C */	lwz r31, 0x2c(r1)
-/* 800483B4 00000004  80 01 00 34 */	lwz r0, 0x34(r1)
-/* 800483B8 00000008  7C 08 03 A6 */	mtlr r0
-/* 800483BC 0000000C  38 21 00 30 */	addi r1, r1, 0x30
-/* 800483C0 00000010  4E 80 00 20 */	blr 
+/* 800483B0  83 E1 00 2C */	lwz r31, 0x2c(r1)                       
+/* 800483B4  80 01 00 34 */	lwz r0, 0x34(r1)                        
+/* 800483B8  7C 08 03 A6 */	mtlr r0                                 
+/* 800483BC  38 21 00 30 */	addi r1, r1, 0x30                       
+/* 800483C0  4E 80 00 20 */	blr                                     

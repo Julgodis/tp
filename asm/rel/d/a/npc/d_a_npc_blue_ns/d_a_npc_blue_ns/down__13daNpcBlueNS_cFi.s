@@ -1,64 +1,64 @@
 lbl_8096AD70:
-/* 8096AD70 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 8096AD74 00000004  7C 08 02 A6 */	mflr r0
-/* 8096AD78 00000008  90 01 00 24 */	stw r0, 0x24(r1)
-/* 8096AD7C 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 8096AD80 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8096AD84 00000014  A0 03 0D C0 */	lhz r0, 0xdc0(r3)
-/* 8096AD88 00000018  2C 00 00 02 */	cmpwi r0, 2
-/* 8096AD8C 0000001C  41 82 00 58 */	beq lbl_8096ADE4
-/* 8096AD90 00000020  40 80 00 B4 */	bge lbl_8096AE44
-/* 8096AD94 00000024  2C 00 00 00 */	cmpwi r0, 0
-/* 8096AD98 00000028  41 82 00 0C */	beq lbl_8096ADA4
-/* 8096AD9C 0000002C  48 00 00 A8 */	b lbl_8096AE44
-/* 8096ADA0 00000030  48 00 00 A4 */	b lbl_8096AE44
+/* 8096AD70  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 8096AD74  7C 08 02 A6 */	mflr r0
+/* 8096AD78  90 01 00 24 */	stw r0, 0x24(r1)
+/* 8096AD7C  93 E1 00 1C */	stw r31, 0x1c(r1)
+/* 8096AD80  7C 7F 1B 78 */	mr r31, r3
+/* 8096AD84  A0 03 0D C0 */	lhz r0, 0xdc0(r3)
+/* 8096AD88  2C 00 00 02 */	cmpwi r0, 2
+/* 8096AD8C  41 82 00 58 */	beq lbl_8096ADE4
+/* 8096AD90  40 80 00 B4 */	bge lbl_8096AE44
+/* 8096AD94  2C 00 00 00 */	cmpwi r0, 0
+/* 8096AD98  41 82 00 0C */	beq lbl_8096ADA4
+/* 8096AD9C  48 00 00 A8 */	b lbl_8096AE44
+/* 8096ADA0  48 00 00 A4 */	b lbl_8096AE44
 lbl_8096ADA4:
-/* 8096ADA4 00000000  80 9F 0E 08 */	lwz r4, 0xe08(r31)
-/* 8096ADA8 00000004  3C A0 80 97 */	lis r5, lit_4307@ha
-/* 8096ADAC 00000008  C0 25 C9 EC */	lfs f1, lit_4307@l(r5)
-/* 8096ADB0 0000000C  38 A0 00 00 */	li r5, 0
-/* 8096ADB4 00000010  81 83 0B 44 */	lwz r12, 0xb44(r3)
-/* 8096ADB8 00000014  81 8C 00 3C */	lwz r12, 0x3c(r12)
-/* 8096ADBC 00000018  7D 89 03 A6 */	mtctr r12
-/* 8096ADC0 0000001C  4E 80 04 21 */	bctrl 
-/* 8096ADC4 00000020  3C 60 80 97 */	lis r3, lit_4393@ha
-/* 8096ADC8 00000024  C0 03 C9 F4 */	lfs f0, lit_4393@l(r3)
-/* 8096ADCC 00000028  D0 1F 05 2C */	stfs f0, 0x52c(r31)
-/* 8096ADD0 0000002C  7F E3 FB 78 */	mr r3, r31
-/* 8096ADD4 00000030  48 00 05 4D */	bl downSE__13daNpcBlueNS_cFv
-/* 8096ADD8 00000034  38 00 00 02 */	li r0, 2
-/* 8096ADDC 00000038  B0 1F 0D C0 */	sth r0, 0xdc0(r31)
-/* 8096ADE0 0000003C  48 00 00 64 */	b lbl_8096AE44
+/* 8096ADA4  80 9F 0E 08 */	lwz r4, 0xe08(r31)
+/* 8096ADA8  3C A0 80 97 */	lis r5, lit_4307@ha
+/* 8096ADAC  C0 25 C9 EC */	lfs f1, lit_4307@l(r5)
+/* 8096ADB0  38 A0 00 00 */	li r5, 0
+/* 8096ADB4  81 83 0B 44 */	lwz r12, 0xb44(r3)
+/* 8096ADB8  81 8C 00 3C */	lwz r12, 0x3c(r12)
+/* 8096ADBC  7D 89 03 A6 */	mtctr r12
+/* 8096ADC0  4E 80 04 21 */	bctrl 
+/* 8096ADC4  3C 60 80 97 */	lis r3, lit_4393@ha
+/* 8096ADC8  C0 03 C9 F4 */	lfs f0, lit_4393@l(r3)
+/* 8096ADCC  D0 1F 05 2C */	stfs f0, 0x52c(r31)
+/* 8096ADD0  7F E3 FB 78 */	mr r3, r31
+/* 8096ADD4  48 00 05 4D */	bl downSE__13daNpcBlueNS_cFv
+/* 8096ADD8  38 00 00 02 */	li r0, 2
+/* 8096ADDC  B0 1F 0D C0 */	sth r0, 0xdc0(r31)
+/* 8096ADE0  48 00 00 64 */	b lbl_8096AE44
 lbl_8096ADE4:
-/* 8096ADE4 00000000  80 9F 05 68 */	lwz r4, 0x568(r31)
-/* 8096ADE8 00000004  38 A0 00 01 */	li r5, 1
-/* 8096ADEC 00000008  88 04 00 11 */	lbz r0, 0x11(r4)
-/* 8096ADF0 0000000C  54 00 07 FF */	clrlwi. r0, r0, 0x1f
-/* 8096ADF4 00000010  40 82 00 1C */	bne lbl_8096AE10
-/* 8096ADF8 00000014  3C 60 80 97 */	lis r3, lit_4393@ha
-/* 8096ADFC 00000018  C0 23 C9 F4 */	lfs f1, lit_4393@l(r3)
-/* 8096AE00 0000001C  C0 04 00 18 */	lfs f0, 0x18(r4)
-/* 8096AE04 00000020  FC 01 00 00 */	fcmpu cr0, f1, f0
-/* 8096AE08 00000024  41 82 00 08 */	beq lbl_8096AE10
-/* 8096AE0C 00000028  38 A0 00 00 */	li r5, 0
+/* 8096ADE4  80 9F 05 68 */	lwz r4, 0x568(r31)
+/* 8096ADE8  38 A0 00 01 */	li r5, 1
+/* 8096ADEC  88 04 00 11 */	lbz r0, 0x11(r4)
+/* 8096ADF0  54 00 07 FF */	clrlwi. r0, r0, 0x1f
+/* 8096ADF4  40 82 00 1C */	bne lbl_8096AE10
+/* 8096ADF8  3C 60 80 97 */	lis r3, lit_4393@ha
+/* 8096ADFC  C0 23 C9 F4 */	lfs f1, lit_4393@l(r3)
+/* 8096AE00  C0 04 00 18 */	lfs f0, 0x18(r4)
+/* 8096AE04  FC 01 00 00 */	fcmpu cr0, f1, f0
+/* 8096AE08  41 82 00 08 */	beq lbl_8096AE10
+/* 8096AE0C  38 A0 00 00 */	li r5, 0
 lbl_8096AE10:
-/* 8096AE10 00000000  54 A0 06 3F */	clrlwi. r0, r5, 0x18
-/* 8096AE14 00000004  41 82 00 30 */	beq lbl_8096AE44
-/* 8096AE18 00000008  3C 60 80 97 */	lis r3, lit_5100@ha
-/* 8096AE1C 0000000C  38 83 CD 28 */	addi r4, r3, lit_5100@l
-/* 8096AE20 00000010  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 8096CD28 */
-/* 8096AE24 00000014  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 8096CD2C */
-/* 8096AE28 00000018  90 61 00 08 */	stw r3, 8(r1)
-/* 8096AE2C 0000001C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8096AE30 00000020  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 8096CD30 */
-/* 8096AE34 00000024  90 01 00 10 */	stw r0, 0x10(r1)
-/* 8096AE38 00000028  7F E3 FB 78 */	mr r3, r31
-/* 8096AE3C 0000002C  38 81 00 08 */	addi r4, r1, 8
-/* 8096AE40 00000030  4B FF F9 11 */	bl setAction__13daNpcBlueNS_cFM13daNpcBlueNS_cFPCvPvi_i
+/* 8096AE10  54 A0 06 3F */	clrlwi. r0, r5, 0x18
+/* 8096AE14  41 82 00 30 */	beq lbl_8096AE44
+/* 8096AE18  3C 60 80 97 */	lis r3, lit_5100@ha
+/* 8096AE1C  38 83 CD 28 */	addi r4, r3, lit_5100@l
+/* 8096AE20  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 8096CD28 */
+/* 8096AE24  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 8096CD2C */
+/* 8096AE28  90 61 00 08 */	stw r3, 8(r1)
+/* 8096AE2C  90 01 00 0C */	stw r0, 0xc(r1)
+/* 8096AE30  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 8096CD30 */
+/* 8096AE34  90 01 00 10 */	stw r0, 0x10(r1)
+/* 8096AE38  7F E3 FB 78 */	mr r3, r31
+/* 8096AE3C  38 81 00 08 */	addi r4, r1, 8
+/* 8096AE40  4B FF F9 11 */	bl setAction__13daNpcBlueNS_cFM13daNpcBlueNS_cFPCvPvi_i
 lbl_8096AE44:
-/* 8096AE44 00000000  38 60 00 01 */	li r3, 1
-/* 8096AE48 00000004  83 E1 00 1C */	lwz r31, 0x1c(r1)
-/* 8096AE4C 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 8096AE50 0000000C  7C 08 03 A6 */	mtlr r0
-/* 8096AE54 00000010  38 21 00 20 */	addi r1, r1, 0x20
-/* 8096AE58 00000014  4E 80 00 20 */	blr 
+/* 8096AE44  38 60 00 01 */	li r3, 1
+/* 8096AE48  83 E1 00 1C */	lwz r31, 0x1c(r1)
+/* 8096AE4C  80 01 00 24 */	lwz r0, 0x24(r1)
+/* 8096AE50  7C 08 03 A6 */	mtlr r0
+/* 8096AE54  38 21 00 20 */	addi r1, r1, 0x20
+/* 8096AE58  4E 80 00 20 */	blr 

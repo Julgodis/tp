@@ -1,245 +1,245 @@
 lbl_800DE008:
-/* 800DE008 00000000  94 21 FF B0 */	stwu r1, -0x50(r1)
-/* 800DE00C 00000004  7C 08 02 A6 */	mflr r0
-/* 800DE010 00000008  90 01 00 54 */	stw r0, 0x54(r1)
-/* 800DE014 0000000C  39 61 00 50 */	addi r11, r1, 0x50
-/* 800DE018 00000010  48 28 41 C1 */	bl _savegpr_28
-/* 800DE01C 00000014  7C 7C 1B 78 */	mr r28, r3
-/* 800DE020 00000018  7C 9D 23 78 */	mr r29, r4
-/* 800DE024 0000001C  4B FF ED CD */	bl checkUpperGuardAnime__9daAlink_cCFv
-/* 800DE028 00000020  7C 7F 1B 78 */	mr r31, r3
-/* 800DE02C 00000024  83 DC 27 EC */	lwz r30, 0x27ec(r28)
-/* 800DE030 00000028  7F 83 E3 78 */	mr r3, r28
-/* 800DE034 0000002C  38 80 00 20 */	li r4, 0x20
-/* 800DE038 00000030  4B FE 3F 35 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
-/* 800DE03C 00000034  C0 02 92 C0 */	lfs f0, lit_6108(r2)
-/* 800DE040 00000038  D0 1C 33 98 */	stfs f0, 0x3398(r28)
-/* 800DE044 0000003C  2C 1D 00 02 */	cmpwi r29, 2
-/* 800DE048 00000040  40 82 00 0C */	bne lbl_800DE054
-/* 800DE04C 00000044  3B A0 00 F0 */	li r29, 0xf0
-/* 800DE050 00000048  48 00 00 4C */	b lbl_800DE09C
+/* 800DE008  94 21 FF B0 */	stwu r1, -0x50(r1)                      
+/* 800DE00C  7C 08 02 A6 */	mflr r0                                 
+/* 800DE010  90 01 00 54 */	stw r0, 0x54(r1)                        
+/* 800DE014  39 61 00 50 */	addi r11, r1, 0x50                      
+/* 800DE018  48 28 41 C1 */	bl _savegpr_28                           /* constant-address: 803621D8, symbol: _savegpr_28 */
+/* 800DE01C  7C 7C 1B 78 */	mr r28, r3                              
+/* 800DE020  7C 9D 23 78 */	mr r29, r4                              
+/* 800DE024  4B FF ED CD */	bl checkUpperGuardAnime__9daAlink_cCFv   /* constant-address: 800DCDF0, symbol: checkUpperGuardAnime__9daAlink_cCFv */
+/* 800DE028  7C 7F 1B 78 */	mr r31, r3                              
+/* 800DE02C  83 DC 27 EC */	lwz r30, 0x27ec(r28)                    
+/* 800DE030  7F 83 E3 78 */	mr r3, r28                              
+/* 800DE034  38 80 00 20 */	li r4, 0x20                             
+/* 800DE038  4B FE 3F 35 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC /* constant-address: 800C1F6C, symbol: commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC */
+/* 800DE03C  C0 02 92 C0 */	lfs f0, lit_6108(r2)                     /* constant-address: 80452CC0, symbol: lit_6108 */
+/* 800DE040  D0 1C 33 98 */	stfs f0, 0x3398(r28)                    
+/* 800DE044  2C 1D 00 02 */	cmpwi r29, 2                            
+/* 800DE048  40 82 00 0C */	bne lbl_800DE054                         /* constant-address: 800DE054, symbol: lbl_800DE054 */
+/* 800DE04C  3B A0 00 F0 */	li r29, 0xf0                            
+/* 800DE050  48 00 00 4C */	b lbl_800DE09C                           /* constant-address: 800DE09C, symbol: lbl_800DE09C */
 lbl_800DE054:
-/* 800DE054 00000000  2C 1D 00 03 */	cmpwi r29, 3
-/* 800DE058 00000004  40 82 00 0C */	bne lbl_800DE064
-/* 800DE05C 00000008  3B A0 00 F1 */	li r29, 0xf1
-/* 800DE060 0000000C  48 00 00 3C */	b lbl_800DE09C
+/* 800DE054  2C 1D 00 03 */	cmpwi r29, 3                            
+/* 800DE058  40 82 00 0C */	bne lbl_800DE064                         /* constant-address: 800DE064, symbol: lbl_800DE064 */
+/* 800DE05C  3B A0 00 F1 */	li r29, 0xf1                            
+/* 800DE060  48 00 00 3C */	b lbl_800DE09C                           /* constant-address: 800DE09C, symbol: lbl_800DE09C */
 lbl_800DE064:
-/* 800DE064 00000000  C0 3C 33 AC */	lfs f1, 0x33ac(r28)
-/* 800DE068 00000004  C0 02 92 A4 */	lfs f0, lit_6021(r2)
-/* 800DE06C 00000008  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 800DE070 00000000  40 81 00 28 */	ble lbl_800DE098
-/* 800DE074 00000004  A8 7C 04 E6 */	lha r3, 0x4e6(r28)
-/* 800DE078 00000008  A8 1C 2F E2 */	lha r0, 0x2fe2(r28)
-/* 800DE07C 0000000C  7C 03 00 50 */	subf r0, r3, r0
-/* 800DE080 00000010  7C 00 07 35 */	extsh. r0, r0
-/* 800DE084 00000014  41 80 00 0C */	blt lbl_800DE090
-/* 800DE088 00000018  3B A0 00 F0 */	li r29, 0xf0
-/* 800DE08C 0000001C  48 00 00 10 */	b lbl_800DE09C
+/* 800DE064  C0 3C 33 AC */	lfs f1, 0x33ac(r28)                     
+/* 800DE068  C0 02 92 A4 */	lfs f0, lit_6021(r2)                     /* constant-address: 80452CA4, symbol: lit_6021 */
+/* 800DE06C  FC 01 00 40 */	fcmpo cr0, f1, f0                       
+/* 800DE070  40 81 00 28 */	ble lbl_800DE098                         /* constant-address: 800DE098, symbol: lbl_800DE098 */
+/* 800DE074  A8 7C 04 E6 */	lha r3, 0x4e6(r28)                      
+/* 800DE078  A8 1C 2F E2 */	lha r0, 0x2fe2(r28)                     
+/* 800DE07C  7C 03 00 50 */	subf r0, r3, r0                         
+/* 800DE080  7C 00 07 35 */	extsh. r0, r0                           
+/* 800DE084  41 80 00 0C */	blt lbl_800DE090                         /* constant-address: 800DE090, symbol: lbl_800DE090 */
+/* 800DE088  3B A0 00 F0 */	li r29, 0xf0                            
+/* 800DE08C  48 00 00 10 */	b lbl_800DE09C                           /* constant-address: 800DE09C, symbol: lbl_800DE09C */
 lbl_800DE090:
-/* 800DE090 00000000  3B A0 00 F1 */	li r29, 0xf1
-/* 800DE094 00000004  48 00 00 08 */	b lbl_800DE09C
+/* 800DE090  3B A0 00 F1 */	li r29, 0xf1                            
+/* 800DE094  48 00 00 08 */	b lbl_800DE09C                           /* constant-address: 800DE09C, symbol: lbl_800DE09C */
 lbl_800DE098:
-/* 800DE098 00000000  3B A0 00 F0 */	li r29, 0xf0
+/* 800DE098  3B A0 00 F0 */	li r29, 0xf0                            
 lbl_800DE09C:
-/* 800DE09C 00000000  3C 60 80 39 */	lis r3, m__22daAlinkHIO_turnMove_c0@ha
-/* 800DE0A0 00000004  38 63 DF 70 */	addi r3, r3, m__22daAlinkHIO_turnMove_c0@l
-/* 800DE0A4 00000008  C0 23 00 04 */	lfs f1, 4(r3)	/* effective address: 8038DF74 */
-/* 800DE0A8 0000000C  A8 03 00 16 */	lha r0, 0x16(r3)	/* effective address: 8038DF86 */
-/* 800DE0AC 00000010  B0 1C 30 0A */	sth r0, 0x300a(r28)
-/* 800DE0B0 00000014  80 1C 05 70 */	lwz r0, 0x570(r28)
-/* 800DE0B4 00000018  54 00 02 11 */	rlwinm. r0, r0, 0, 8, 8
-/* 800DE0B8 0000001C  41 82 00 44 */	beq lbl_800DE0FC
-/* 800DE0BC 00000020  A8 1C 30 0A */	lha r0, 0x300a(r28)
-/* 800DE0C0 00000024  C8 42 92 B0 */	lfd f2, lit_6025(r2)
-/* 800DE0C4 00000028  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 800DE0C8 0000002C  90 01 00 34 */	stw r0, 0x34(r1)
-/* 800DE0CC 00000030  3C 00 43 30 */	lis r0, 0x4330
-/* 800DE0D0 00000034  90 01 00 30 */	stw r0, 0x30(r1)
-/* 800DE0D4 00000038  C8 01 00 30 */	lfd f0, 0x30(r1)
-/* 800DE0D8 0000003C  EC 40 10 28 */	fsubs f2, f0, f2
-/* 800DE0DC 00000040  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
-/* 800DE0E0 00000044  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
-/* 800DE0E4 00000048  C0 03 00 3C */	lfs f0, 0x3c(r3)	/* effective address: 8038E830 */
-/* 800DE0E8 0000004C  EC 02 00 32 */	fmuls f0, f2, f0
-/* 800DE0EC 00000050  FC 00 00 1E */	fctiwz f0, f0
-/* 800DE0F0 00000054  D8 01 00 38 */	stfd f0, 0x38(r1)
-/* 800DE0F4 00000058  80 01 00 3C */	lwz r0, 0x3c(r1)
-/* 800DE0F8 0000005C  B0 1C 30 0A */	sth r0, 0x300a(r28)
+/* 800DE09C  3C 60 80 39 */	lis r3, m__22daAlinkHIO_turnMove_c0@ha  
+/* 800DE0A0  38 63 DF 70 */	addi r3, r3, m__22daAlinkHIO_turnMove_c0@l /* constant-address: 8038DF70, symbol: m__22daAlinkHIO_turnMove_c0 */
+/* 800DE0A4  C0 23 00 04 */	lfs f1, 4(r3)                            /* constant-address: 8038DF74, symbol: None */
+/* 800DE0A8  A8 03 00 16 */	lha r0, 0x16(r3)                         /* constant-address: 8038DF86, symbol: None */
+/* 800DE0AC  B0 1C 30 0A */	sth r0, 0x300a(r28)                     
+/* 800DE0B0  80 1C 05 70 */	lwz r0, 0x570(r28)                      
+/* 800DE0B4  54 00 02 11 */	rlwinm. r0, r0, 0, 8, 8                 
+/* 800DE0B8  41 82 00 44 */	beq lbl_800DE0FC                         /* constant-address: 800DE0FC, symbol: lbl_800DE0FC */
+/* 800DE0BC  A8 1C 30 0A */	lha r0, 0x300a(r28)                     
+/* 800DE0C0  C8 42 92 B0 */	lfd f2, lit_6025(r2)                     /* constant-address: 80452CB0, symbol: lit_6025 */
+/* 800DE0C4  6C 00 80 00 */	xoris r0, r0, 0x8000                    
+/* 800DE0C8  90 01 00 34 */	stw r0, 0x34(r1)                        
+/* 800DE0CC  3C 00 43 30 */	lis r0, 0x4330                          
+/* 800DE0D0  90 01 00 30 */	stw r0, 0x30(r1)                        
+/* 800DE0D4  C8 01 00 30 */	lfd f0, 0x30(r1)                        
+/* 800DE0D8  EC 40 10 28 */	fsubs f2, f0, f2                        
+/* 800DE0DC  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
+/* 800DE0E0  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l /* constant-address: 8038E7F4, symbol: m__24daAlinkHIO_magneBoots_c0 */
+/* 800DE0E4  C0 03 00 3C */	lfs f0, 0x3c(r3)                         /* constant-address: 8038E830, symbol: None */
+/* 800DE0E8  EC 02 00 32 */	fmuls f0, f2, f0                        
+/* 800DE0EC  FC 00 00 1E */	fctiwz f0, f0                           
+/* 800DE0F0  D8 01 00 38 */	stfd f0, 0x38(r1)                       
+/* 800DE0F4  80 01 00 3C */	lwz r0, 0x3c(r1)                        
+/* 800DE0F8  B0 1C 30 0A */	sth r0, 0x300a(r28)                     
 lbl_800DE0FC:
-/* 800DE0FC 00000000  7F 83 E3 78 */	mr r3, r28
-/* 800DE100 00000004  7F A4 EB 78 */	mr r4, r29
-/* 800DE104 00000008  3C A0 80 39 */	lis r5, m__22daAlinkHIO_turnMove_c0@ha
-/* 800DE108 0000000C  38 C5 DF 70 */	addi r6, r5, m__22daAlinkHIO_turnMove_c0@l
-/* 800DE10C 00000010  C0 46 00 08 */	lfs f2, 8(r6)	/* effective address: 8038DF78 */
-/* 800DE110 00000014  A8 A6 00 00 */	lha r5, 0(r6)	/* effective address: 8038DF70 */
-/* 800DE114 00000018  C0 66 00 0C */	lfs f3, 0xc(r6)	/* effective address: 8038DF7C */
-/* 800DE118 0000001C  4B FC EE F5 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
-/* 800DE11C 00000020  2C 1D 00 F0 */	cmpwi r29, 0xf0
-/* 800DE120 00000024  40 82 00 18 */	bne lbl_800DE138
-/* 800DE124 00000028  38 00 80 10 */	li r0, -32752
-/* 800DE128 0000002C  B0 1C 30 0C */	sth r0, 0x300c(r28)
-/* 800DE12C 00000030  38 00 00 02 */	li r0, 2
-/* 800DE130 00000034  98 1C 2F 98 */	stb r0, 0x2f98(r28)
-/* 800DE134 00000038  48 00 00 14 */	b lbl_800DE148
+/* 800DE0FC  7F 83 E3 78 */	mr r3, r28                              
+/* 800DE100  7F A4 EB 78 */	mr r4, r29                              
+/* 800DE104  3C A0 80 39 */	lis r5, m__22daAlinkHIO_turnMove_c0@ha  
+/* 800DE108  38 C5 DF 70 */	addi r6, r5, m__22daAlinkHIO_turnMove_c0@l /* constant-address: 8038DF70, symbol: m__22daAlinkHIO_turnMove_c0 */
+/* 800DE10C  C0 46 00 08 */	lfs f2, 8(r6)                            /* constant-address: 8038DF78, symbol: None */
+/* 800DE110  A8 A6 00 00 */	lha r5, 0(r6)                            /* constant-address: 8038DF70, symbol: m__22daAlinkHIO_turnMove_c0 */
+/* 800DE114  C0 66 00 0C */	lfs f3, 0xc(r6)                          /* constant-address: 8038DF7C, symbol: None */
+/* 800DE118  4B FC EE F5 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf /* constant-address: 800AD00C, symbol: setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf */
+/* 800DE11C  2C 1D 00 F0 */	cmpwi r29, 0xf0                         
+/* 800DE120  40 82 00 18 */	bne lbl_800DE138                         /* constant-address: 800DE138, symbol: lbl_800DE138 */
+/* 800DE124  38 00 80 10 */	li r0, -32752                           
+/* 800DE128  B0 1C 30 0C */	sth r0, 0x300c(r28)                     
+/* 800DE12C  38 00 00 02 */	li r0, 2                                
+/* 800DE130  98 1C 2F 98 */	stb r0, 0x2f98(r28)                     
+/* 800DE134  48 00 00 14 */	b lbl_800DE148                           /* constant-address: 800DE148, symbol: lbl_800DE148 */
 lbl_800DE138:
-/* 800DE138 00000000  38 00 7F F0 */	li r0, 0x7ff0
-/* 800DE13C 00000004  B0 1C 30 0C */	sth r0, 0x300c(r28)
-/* 800DE140 00000008  38 00 00 03 */	li r0, 3
-/* 800DE144 0000000C  98 1C 2F 98 */	stb r0, 0x2f98(r28)
+/* 800DE138  38 00 7F F0 */	li r0, 0x7ff0                           
+/* 800DE13C  B0 1C 30 0C */	sth r0, 0x300c(r28)                     
+/* 800DE140  38 00 00 03 */	li r0, 3                                
+/* 800DE144  98 1C 2F 98 */	stb r0, 0x2f98(r28)                     
 lbl_800DE148:
-/* 800DE148 00000000  28 1E 00 00 */	cmplwi r30, 0
-/* 800DE14C 00000004  41 82 01 54 */	beq lbl_800DE2A0
-/* 800DE150 00000008  38 61 00 18 */	addi r3, r1, 0x18
-/* 800DE154 0000000C  38 9C 04 D0 */	addi r4, r28, 0x4d0
-/* 800DE158 00000010  38 BE 04 D0 */	addi r5, r30, 0x4d0
-/* 800DE15C 00000014  48 18 89 D9 */	bl __mi__4cXyzCFRC3Vec
-/* 800DE160 00000018  C0 01 00 18 */	lfs f0, 0x18(r1)
-/* 800DE164 0000001C  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 800DE168 00000020  C0 01 00 1C */	lfs f0, 0x1c(r1)
-/* 800DE16C 00000024  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 800DE170 00000028  C0 01 00 20 */	lfs f0, 0x20(r1)
-/* 800DE174 0000002C  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 800DE178 00000030  7F 83 E3 78 */	mr r3, r28
-/* 800DE17C 00000034  7F C4 F3 78 */	mr r4, r30
-/* 800DE180 00000038  4B F3 C5 91 */	bl fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
-/* 800DE184 0000003C  B0 7C 04 E6 */	sth r3, 0x4e6(r28)
-/* 800DE188 00000040  C0 01 00 24 */	lfs f0, 0x24(r1)
-/* 800DE18C 00000044  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 800DE190 00000048  C0 02 92 C0 */	lfs f0, lit_6108(r2)
-/* 800DE194 0000004C  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 800DE198 00000050  C0 01 00 2C */	lfs f0, 0x2c(r1)
-/* 800DE19C 00000054  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 800DE1A0 00000058  38 61 00 0C */	addi r3, r1, 0xc
-/* 800DE1A4 0000005C  48 26 8F 95 */	bl PSVECSquareMag
-/* 800DE1A8 00000060  C0 02 92 C0 */	lfs f0, lit_6108(r2)
-/* 800DE1AC 00000064  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 800DE1B0 00000000  40 81 00 58 */	ble lbl_800DE208
-/* 800DE1B4 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800DE1B8 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
-/* 800DE1BC 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 800DE1C0 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
-/* 800DE1C4 00000014  FC 00 00 32 */	fmul f0, f0, f0
-/* 800DE1C8 00000018  FC 01 00 32 */	fmul f0, f1, f0
-/* 800DE1CC 0000001C  FC 03 00 28 */	fsub f0, f3, f0
-/* 800DE1D0 00000020  FC 02 00 32 */	fmul f0, f2, f0
-/* 800DE1D4 00000024  FC 44 00 32 */	fmul f2, f4, f0
-/* 800DE1D8 00000028  FC 00 00 32 */	fmul f0, f0, f0
-/* 800DE1DC 0000002C  FC 01 00 32 */	fmul f0, f1, f0
-/* 800DE1E0 00000030  FC 03 00 28 */	fsub f0, f3, f0
-/* 800DE1E4 00000034  FC 02 00 32 */	fmul f0, f2, f0
-/* 800DE1E8 00000038  FC 44 00 32 */	fmul f2, f4, f0
-/* 800DE1EC 0000003C  FC 00 00 32 */	fmul f0, f0, f0
-/* 800DE1F0 00000040  FC 01 00 32 */	fmul f0, f1, f0
-/* 800DE1F4 00000044  FC 03 00 28 */	fsub f0, f3, f0
-/* 800DE1F8 00000048  FC 02 00 32 */	fmul f0, f2, f0
-/* 800DE1FC 0000004C  FC 21 00 32 */	fmul f1, f1, f0
-/* 800DE200 00000050  FC 20 08 18 */	frsp f1, f1
-/* 800DE204 00000054  48 00 00 88 */	b lbl_800DE28C
+/* 800DE148  28 1E 00 00 */	cmplwi r30, 0                           
+/* 800DE14C  41 82 01 54 */	beq lbl_800DE2A0                         /* constant-address: 800DE2A0, symbol: lbl_800DE2A0 */
+/* 800DE150  38 61 00 18 */	addi r3, r1, 0x18                       
+/* 800DE154  38 9C 04 D0 */	addi r4, r28, 0x4d0                     
+/* 800DE158  38 BE 04 D0 */	addi r5, r30, 0x4d0                     
+/* 800DE15C  48 18 89 D9 */	bl __mi__4cXyzCFRC3Vec                   /* constant-address: 80266B34, symbol: __mi__4cXyzCFRC3Vec */
+/* 800DE160  C0 01 00 18 */	lfs f0, 0x18(r1)                        
+/* 800DE164  D0 01 00 24 */	stfs f0, 0x24(r1)                       
+/* 800DE168  C0 01 00 1C */	lfs f0, 0x1c(r1)                        
+/* 800DE16C  D0 01 00 28 */	stfs f0, 0x28(r1)                       
+/* 800DE170  C0 01 00 20 */	lfs f0, 0x20(r1)                        
+/* 800DE174  D0 01 00 2C */	stfs f0, 0x2c(r1)                       
+/* 800DE178  7F 83 E3 78 */	mr r3, r28                              
+/* 800DE17C  7F C4 F3 78 */	mr r4, r30                              
+/* 800DE180  4B F3 C5 91 */	bl fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c /* constant-address: 8001A710, symbol: fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c */
+/* 800DE184  B0 7C 04 E6 */	sth r3, 0x4e6(r28)                      
+/* 800DE188  C0 01 00 24 */	lfs f0, 0x24(r1)                        
+/* 800DE18C  D0 01 00 0C */	stfs f0, 0xc(r1)                        
+/* 800DE190  C0 02 92 C0 */	lfs f0, lit_6108(r2)                     /* constant-address: 80452CC0, symbol: lit_6108 */
+/* 800DE194  D0 01 00 10 */	stfs f0, 0x10(r1)                       
+/* 800DE198  C0 01 00 2C */	lfs f0, 0x2c(r1)                        
+/* 800DE19C  D0 01 00 14 */	stfs f0, 0x14(r1)                       
+/* 800DE1A0  38 61 00 0C */	addi r3, r1, 0xc                        
+/* 800DE1A4  48 26 8F 95 */	bl PSVECSquareMag                        /* constant-address: 80347138, symbol: PSVECSquareMag */
+/* 800DE1A8  C0 02 92 C0 */	lfs f0, lit_6108(r2)                     /* constant-address: 80452CC0, symbol: lit_6108 */
+/* 800DE1AC  FC 01 00 40 */	fcmpo cr0, f1, f0                       
+/* 800DE1B0  40 81 00 58 */	ble lbl_800DE208                         /* constant-address: 800DE208, symbol: lbl_800DE208 */
+/* 800DE1B4  FC 00 08 34 */	frsqrte f0, f1                          
+/* 800DE1B8  C8 82 92 E8 */	lfd f4, lit_6846(r2)                     /* constant-address: 80452CE8, symbol: lit_6846 */
+/* 800DE1BC  FC 44 00 32 */	fmul f2, f4, f0                         
+/* 800DE1C0  C8 62 92 F0 */	lfd f3, lit_6847(r2)                     /* constant-address: 80452CF0, symbol: lit_6847 */
+/* 800DE1C4  FC 00 00 32 */	fmul f0, f0, f0                         
+/* 800DE1C8  FC 01 00 32 */	fmul f0, f1, f0                         
+/* 800DE1CC  FC 03 00 28 */	fsub f0, f3, f0                         
+/* 800DE1D0  FC 02 00 32 */	fmul f0, f2, f0                         
+/* 800DE1D4  FC 44 00 32 */	fmul f2, f4, f0                         
+/* 800DE1D8  FC 00 00 32 */	fmul f0, f0, f0                         
+/* 800DE1DC  FC 01 00 32 */	fmul f0, f1, f0                         
+/* 800DE1E0  FC 03 00 28 */	fsub f0, f3, f0                         
+/* 800DE1E4  FC 02 00 32 */	fmul f0, f2, f0                         
+/* 800DE1E8  FC 44 00 32 */	fmul f2, f4, f0                         
+/* 800DE1EC  FC 00 00 32 */	fmul f0, f0, f0                         
+/* 800DE1F0  FC 01 00 32 */	fmul f0, f1, f0                         
+/* 800DE1F4  FC 03 00 28 */	fsub f0, f3, f0                         
+/* 800DE1F8  FC 02 00 32 */	fmul f0, f2, f0                         
+/* 800DE1FC  FC 21 00 32 */	fmul f1, f1, f0                         
+/* 800DE200  FC 20 08 18 */	frsp f1, f1                             
+/* 800DE204  48 00 00 88 */	b lbl_800DE28C                           /* constant-address: 800DE28C, symbol: lbl_800DE28C */
 lbl_800DE208:
-/* 800DE208 00000000  C8 02 92 F8 */	lfd f0, lit_6848(r2)
-/* 800DE20C 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 800DE210 00000000  40 80 00 10 */	bge lbl_800DE220
-/* 800DE214 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
-/* 800DE218 00000008  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
-/* 800DE21C 0000000C  48 00 00 70 */	b lbl_800DE28C
+/* 800DE208  C8 02 92 F8 */	lfd f0, lit_6848(r2)                     /* constant-address: 80452CF8, symbol: lit_6848 */
+/* 800DE20C  FC 01 00 40 */	fcmpo cr0, f1, f0                       
+/* 800DE210  40 80 00 10 */	bge lbl_800DE220                         /* constant-address: 800DE220, symbol: lbl_800DE220 */
+/* 800DE214  3C 60 80 45 */	lis r3, __float_nan@ha                  
+/* 800DE218  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)                /* constant-address: 80450AE0, symbol: __float_nan */
+/* 800DE21C  48 00 00 70 */	b lbl_800DE28C                           /* constant-address: 800DE28C, symbol: lbl_800DE28C */
 lbl_800DE220:
-/* 800DE220 00000000  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800DE224 00000004  80 81 00 08 */	lwz r4, 8(r1)
-/* 800DE228 00000008  54 83 00 50 */	rlwinm r3, r4, 0, 1, 8
-/* 800DE22C 0000000C  3C 00 7F 80 */	lis r0, 0x7f80
-/* 800DE230 00000010  7C 03 00 00 */	cmpw r3, r0
-/* 800DE234 00000014  41 82 00 14 */	beq lbl_800DE248
-/* 800DE238 00000018  40 80 00 40 */	bge lbl_800DE278
-/* 800DE23C 0000001C  2C 03 00 00 */	cmpwi r3, 0
-/* 800DE240 00000020  41 82 00 20 */	beq lbl_800DE260
-/* 800DE244 00000024  48 00 00 34 */	b lbl_800DE278
+/* 800DE220  D0 21 00 08 */	stfs f1, 8(r1)                          
+/* 800DE224  80 81 00 08 */	lwz r4, 8(r1)                           
+/* 800DE228  54 83 00 50 */	rlwinm r3, r4, 0, 1, 8                  
+/* 800DE22C  3C 00 7F 80 */	lis r0, 0x7f80                          
+/* 800DE230  7C 03 00 00 */	cmpw r3, r0                             
+/* 800DE234  41 82 00 14 */	beq lbl_800DE248                         /* constant-address: 800DE248, symbol: lbl_800DE248 */
+/* 800DE238  40 80 00 40 */	bge lbl_800DE278                         /* constant-address: 800DE278, symbol: lbl_800DE278 */
+/* 800DE23C  2C 03 00 00 */	cmpwi r3, 0                             
+/* 800DE240  41 82 00 20 */	beq lbl_800DE260                         /* constant-address: 800DE260, symbol: lbl_800DE260 */
+/* 800DE244  48 00 00 34 */	b lbl_800DE278                           /* constant-address: 800DE278, symbol: lbl_800DE278 */
 lbl_800DE248:
-/* 800DE248 00000000  54 80 02 7F */	clrlwi. r0, r4, 9
-/* 800DE24C 00000004  41 82 00 0C */	beq lbl_800DE258
-/* 800DE250 00000008  38 00 00 01 */	li r0, 1
-/* 800DE254 0000000C  48 00 00 28 */	b lbl_800DE27C
+/* 800DE248  54 80 02 7F */	clrlwi. r0, r4, 9                       
+/* 800DE24C  41 82 00 0C */	beq lbl_800DE258                         /* constant-address: 800DE258, symbol: lbl_800DE258 */
+/* 800DE250  38 00 00 01 */	li r0, 1                                
+/* 800DE254  48 00 00 28 */	b lbl_800DE27C                           /* constant-address: 800DE27C, symbol: lbl_800DE27C */
 lbl_800DE258:
-/* 800DE258 00000000  38 00 00 02 */	li r0, 2
-/* 800DE25C 00000004  48 00 00 20 */	b lbl_800DE27C
+/* 800DE258  38 00 00 02 */	li r0, 2                                
+/* 800DE25C  48 00 00 20 */	b lbl_800DE27C                           /* constant-address: 800DE27C, symbol: lbl_800DE27C */
 lbl_800DE260:
-/* 800DE260 00000000  54 80 02 7F */	clrlwi. r0, r4, 9
-/* 800DE264 00000004  41 82 00 0C */	beq lbl_800DE270
-/* 800DE268 00000008  38 00 00 05 */	li r0, 5
-/* 800DE26C 0000000C  48 00 00 10 */	b lbl_800DE27C
+/* 800DE260  54 80 02 7F */	clrlwi. r0, r4, 9                       
+/* 800DE264  41 82 00 0C */	beq lbl_800DE270                         /* constant-address: 800DE270, symbol: lbl_800DE270 */
+/* 800DE268  38 00 00 05 */	li r0, 5                                
+/* 800DE26C  48 00 00 10 */	b lbl_800DE27C                           /* constant-address: 800DE27C, symbol: lbl_800DE27C */
 lbl_800DE270:
-/* 800DE270 00000000  38 00 00 03 */	li r0, 3
-/* 800DE274 00000004  48 00 00 08 */	b lbl_800DE27C
+/* 800DE270  38 00 00 03 */	li r0, 3                                
+/* 800DE274  48 00 00 08 */	b lbl_800DE27C                           /* constant-address: 800DE27C, symbol: lbl_800DE27C */
 lbl_800DE278:
-/* 800DE278 00000000  38 00 00 04 */	li r0, 4
+/* 800DE278  38 00 00 04 */	li r0, 4                                
 lbl_800DE27C:
-/* 800DE27C 00000000  2C 00 00 01 */	cmpwi r0, 1
-/* 800DE280 00000004  40 82 00 0C */	bne lbl_800DE28C
-/* 800DE284 00000008  3C 60 80 45 */	lis r3, __float_nan@ha
-/* 800DE288 0000000C  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
+/* 800DE27C  2C 00 00 01 */	cmpwi r0, 1                             
+/* 800DE280  40 82 00 0C */	bne lbl_800DE28C                         /* constant-address: 800DE28C, symbol: lbl_800DE28C */
+/* 800DE284  3C 60 80 45 */	lis r3, __float_nan@ha                  
+/* 800DE288  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)                /* constant-address: 80450AE0, symbol: __float_nan */
 lbl_800DE28C:
-/* 800DE28C 00000000  D0 3C 34 78 */	stfs f1, 0x3478(r28)
-/* 800DE290 00000004  38 61 00 24 */	addi r3, r1, 0x24
-/* 800DE294 00000008  48 18 8E 95 */	bl atan2sX_Z__4cXyzCFv
-/* 800DE298 0000000C  B0 7C 30 0E */	sth r3, 0x300e(r28)
-/* 800DE29C 00000010  48 00 00 1C */	b lbl_800DE2B8
+/* 800DE28C  D0 3C 34 78 */	stfs f1, 0x3478(r28)                    
+/* 800DE290  38 61 00 24 */	addi r3, r1, 0x24                       
+/* 800DE294  48 18 8E 95 */	bl atan2sX_Z__4cXyzCFv                   /* constant-address: 80267128, symbol: atan2sX_Z__4cXyzCFv */
+/* 800DE298  B0 7C 30 0E */	sth r3, 0x300e(r28)                     
+/* 800DE29C  48 00 00 1C */	b lbl_800DE2B8                           /* constant-address: 800DE2B8, symbol: lbl_800DE2B8 */
 lbl_800DE2A0:
-/* 800DE2A0 00000000  C0 02 93 68 */	lfs f0, lit_8472(r2)
-/* 800DE2A4 00000004  D0 1C 34 78 */	stfs f0, 0x3478(r28)
-/* 800DE2A8 00000008  A8 7C 04 E6 */	lha r3, 0x4e6(r28)
-/* 800DE2AC 0000000C  3C 63 00 01 */	addis r3, r3, 1
-/* 800DE2B0 00000010  38 03 80 00 */	addi r0, r3, -32768
-/* 800DE2B4 00000014  B0 1C 30 0E */	sth r0, 0x300e(r28)
+/* 800DE2A0  C0 02 93 68 */	lfs f0, lit_8472(r2)                     /* constant-address: 80452D68, symbol: lit_8472 */
+/* 800DE2A4  D0 1C 34 78 */	stfs f0, 0x3478(r28)                    
+/* 800DE2A8  A8 7C 04 E6 */	lha r3, 0x4e6(r28)                      
+/* 800DE2AC  3C 63 00 01 */	addis r3, r3, 1                         
+/* 800DE2B0  38 03 80 00 */	addi r0, r3, -32768                     
+/* 800DE2B4  B0 1C 30 0E */	sth r0, 0x300e(r28)                     
 lbl_800DE2B8:
-/* 800DE2B8 00000000  C0 3C 34 78 */	lfs f1, 0x3478(r28)
-/* 800DE2BC 00000004  C0 02 93 E0 */	lfs f0, lit_11673(r2)
-/* 800DE2C0 00000008  EC 41 00 28 */	fsubs f2, f1, f0
-/* 800DE2C4 0000000C  A8 1C 30 0C */	lha r0, 0x300c(r28)
-/* 800DE2C8 00000010  C8 22 92 B0 */	lfd f1, lit_6025(r2)
-/* 800DE2CC 00000014  6C 00 80 00 */	xoris r0, r0, 0x8000
-/* 800DE2D0 00000018  90 01 00 3C */	stw r0, 0x3c(r1)
-/* 800DE2D4 0000001C  3C 00 43 30 */	lis r0, 0x4330
-/* 800DE2D8 00000020  90 01 00 38 */	stw r0, 0x38(r1)
-/* 800DE2DC 00000024  C8 01 00 38 */	lfd f0, 0x38(r1)
-/* 800DE2E0 00000028  EC 00 08 28 */	fsubs f0, f0, f1
-/* 800DE2E4 0000002C  EC 02 00 24 */	fdivs f0, f2, f0
-/* 800DE2E8 00000030  D0 1C 34 7C */	stfs f0, 0x347c(r28)
-/* 800DE2EC 00000034  7F 83 E3 78 */	mr r3, r28
-/* 800DE2F0 00000038  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010096@ha */
-/* 800DE2F4 0000003C  38 84 00 96 */	addi r4, r4, 0x0096 /* 0x00010096@l */
-/* 800DE2F8 00000040  81 9C 06 28 */	lwz r12, 0x628(r28)
-/* 800DE2FC 00000044  81 8C 01 14 */	lwz r12, 0x114(r12)
-/* 800DE300 00000048  7D 89 03 A6 */	mtctr r12
-/* 800DE304 0000004C  4E 80 04 21 */	bctrl 
-/* 800DE308 00000050  80 1C 06 14 */	lwz r0, 0x614(r28)
-/* 800DE30C 00000054  28 00 00 52 */	cmplwi r0, 0x52
-/* 800DE310 00000058  40 82 00 10 */	bne lbl_800DE320
-/* 800DE314 0000005C  38 00 00 01 */	li r0, 1
-/* 800DE318 00000060  B0 1C 30 08 */	sth r0, 0x3008(r28)
-/* 800DE31C 00000064  48 00 00 0C */	b lbl_800DE328
+/* 800DE2B8  C0 3C 34 78 */	lfs f1, 0x3478(r28)                     
+/* 800DE2BC  C0 02 93 E0 */	lfs f0, lit_11673(r2)                    /* constant-address: 80452DE0, symbol: lit_11673 */
+/* 800DE2C0  EC 41 00 28 */	fsubs f2, f1, f0                        
+/* 800DE2C4  A8 1C 30 0C */	lha r0, 0x300c(r28)                     
+/* 800DE2C8  C8 22 92 B0 */	lfd f1, lit_6025(r2)                     /* constant-address: 80452CB0, symbol: lit_6025 */
+/* 800DE2CC  6C 00 80 00 */	xoris r0, r0, 0x8000                    
+/* 800DE2D0  90 01 00 3C */	stw r0, 0x3c(r1)                        
+/* 800DE2D4  3C 00 43 30 */	lis r0, 0x4330                          
+/* 800DE2D8  90 01 00 38 */	stw r0, 0x38(r1)                        
+/* 800DE2DC  C8 01 00 38 */	lfd f0, 0x38(r1)                        
+/* 800DE2E0  EC 00 08 28 */	fsubs f0, f0, f1                        
+/* 800DE2E4  EC 02 00 24 */	fdivs f0, f2, f0                        
+/* 800DE2E8  D0 1C 34 7C */	stfs f0, 0x347c(r28)                    
+/* 800DE2EC  7F 83 E3 78 */	mr r3, r28                              
+/* 800DE2F0  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010096@ha */      
+/* 800DE2F4  38 84 00 96 */	addi r4, r4, 0x0096 /* 0x00010096@l */   /* constant-address: 00010096 */
+/* 800DE2F8  81 9C 06 28 */	lwz r12, 0x628(r28)                     
+/* 800DE2FC  81 8C 01 14 */	lwz r12, 0x114(r12)                     
+/* 800DE300  7D 89 03 A6 */	mtctr r12                               
+/* 800DE304  4E 80 04 21 */	bctrl                                   
+/* 800DE308  80 1C 06 14 */	lwz r0, 0x614(r28)                      
+/* 800DE30C  28 00 00 52 */	cmplwi r0, 0x52                         
+/* 800DE310  40 82 00 10 */	bne lbl_800DE320                         /* constant-address: 800DE320, symbol: lbl_800DE320 */
+/* 800DE314  38 00 00 01 */	li r0, 1                                
+/* 800DE318  B0 1C 30 08 */	sth r0, 0x3008(r28)                     
+/* 800DE31C  48 00 00 0C */	b lbl_800DE328                           /* constant-address: 800DE328, symbol: lbl_800DE328 */
 lbl_800DE320:
-/* 800DE320 00000000  38 00 00 00 */	li r0, 0
-/* 800DE324 00000004  B0 1C 30 08 */	sth r0, 0x3008(r28)
+/* 800DE320  38 00 00 00 */	li r0, 0                                
+/* 800DE324  B0 1C 30 08 */	sth r0, 0x3008(r28)                     
 lbl_800DE328:
-/* 800DE328 00000000  7F 83 E3 78 */	mr r3, r28
-/* 800DE32C 00000004  38 80 00 00 */	li r4, 0
-/* 800DE330 00000008  48 04 2E 91 */	bl setFootEffectProcType__9daAlink_cFi
-/* 800DE334 0000000C  38 00 00 04 */	li r0, 4
-/* 800DE338 00000010  98 1C 2F 9D */	stb r0, 0x2f9d(r28)
-/* 800DE33C 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 800DE340 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800DE344 0000001C  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
-/* 800DE348 00000020  60 00 00 04 */	ori r0, r0, 4
-/* 800DE34C 00000024  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
-/* 800DE350 00000028  2C 1F 00 00 */	cmpwi r31, 0
-/* 800DE354 0000002C  41 82 00 10 */	beq lbl_800DE364
-/* 800DE358 00000030  80 1C 05 70 */	lwz r0, 0x570(r28)
-/* 800DE35C 00000034  60 00 00 02 */	ori r0, r0, 2
-/* 800DE360 00000038  90 1C 05 70 */	stw r0, 0x570(r28)
+/* 800DE328  7F 83 E3 78 */	mr r3, r28                              
+/* 800DE32C  38 80 00 00 */	li r4, 0                                
+/* 800DE330  48 04 2E 91 */	bl setFootEffectProcType__9daAlink_cFi   /* constant-address: 801211C0, symbol: setFootEffectProcType__9daAlink_cFi */
+/* 800DE334  38 00 00 04 */	li r0, 4                                
+/* 800DE338  98 1C 2F 9D */	stb r0, 0x2f9d(r28)                     
+/* 800DE33C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 800DE340  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 800DE344  80 03 5F 18 */	lwz r0, 0x5f18(r3)                       /* constant-address: 8040C0D8, symbol: None */
+/* 800DE348  60 00 00 04 */	ori r0, r0, 4                           
+/* 800DE34C  90 03 5F 18 */	stw r0, 0x5f18(r3)                       /* constant-address: 8040C0D8, symbol: None */
+/* 800DE350  2C 1F 00 00 */	cmpwi r31, 0                            
+/* 800DE354  41 82 00 10 */	beq lbl_800DE364                         /* constant-address: 800DE364, symbol: lbl_800DE364 */
+/* 800DE358  80 1C 05 70 */	lwz r0, 0x570(r28)                      
+/* 800DE35C  60 00 00 02 */	ori r0, r0, 2                           
+/* 800DE360  90 1C 05 70 */	stw r0, 0x570(r28)                      
 lbl_800DE364:
-/* 800DE364 00000000  38 60 00 01 */	li r3, 1
-/* 800DE368 00000004  39 61 00 50 */	addi r11, r1, 0x50
-/* 800DE36C 00000008  48 28 3E B9 */	bl _restgpr_28
-/* 800DE370 0000000C  80 01 00 54 */	lwz r0, 0x54(r1)
-/* 800DE374 00000010  7C 08 03 A6 */	mtlr r0
-/* 800DE378 00000014  38 21 00 50 */	addi r1, r1, 0x50
-/* 800DE37C 00000018  4E 80 00 20 */	blr 
+/* 800DE364  38 60 00 01 */	li r3, 1                                
+/* 800DE368  39 61 00 50 */	addi r11, r1, 0x50                      
+/* 800DE36C  48 28 3E B9 */	bl _restgpr_28                           /* constant-address: 80362224, symbol: _restgpr_28 */
+/* 800DE370  80 01 00 54 */	lwz r0, 0x54(r1)                        
+/* 800DE374  7C 08 03 A6 */	mtlr r0                                 
+/* 800DE378  38 21 00 50 */	addi r1, r1, 0x50                       
+/* 800DE37C  4E 80 00 20 */	blr                                     

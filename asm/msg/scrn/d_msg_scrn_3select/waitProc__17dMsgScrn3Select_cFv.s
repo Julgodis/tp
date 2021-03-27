@@ -1,13 +1,13 @@
 lbl_8023AC14:
-/* 8023AC14 00000000  A8 83 01 0A */	lha r4, 0x10a(r3)
-/* 8023AC18 00000004  38 04 00 01 */	addi r0, r4, 1
-/* 8023AC1C 00000008  B0 03 01 0A */	sth r0, 0x10a(r3)
-/* 8023AC20 0000000C  A8 A3 01 0A */	lha r5, 0x10a(r3)
-/* 8023AC24 00000010  3C 80 80 43 */	lis r4, g_MsgObject_HIO_c@ha
-/* 8023AC28 00000014  38 84 02 8C */	addi r4, r4, g_MsgObject_HIO_c@l
-/* 8023AC2C 00000018  A8 04 02 FA */	lha r0, 0x2fa(r4)	/* effective address: 80430586 */
-/* 8023AC30 0000001C  7C 05 00 00 */	cmpw r5, r0
-/* 8023AC34 00000020  4C 81 00 20 */	blelr 
-/* 8023AC38 00000024  38 00 00 03 */	li r0, 3
-/* 8023AC3C 00000028  98 03 01 13 */	stb r0, 0x113(r3)
-/* 8023AC40 0000002C  4E 80 00 20 */	blr 
+/* 8023AC14  A8 83 01 0A */	lha r4, 0x10a(r3)                       
+/* 8023AC18  38 04 00 01 */	addi r0, r4, 1                          
+/* 8023AC1C  B0 03 01 0A */	sth r0, 0x10a(r3)                       
+/* 8023AC20  A8 A3 01 0A */	lha r5, 0x10a(r3)                       
+/* 8023AC24  3C 80 80 43 */	lis r4, g_MsgObject_HIO_c@ha            
+/* 8023AC28  38 84 02 8C */	addi r4, r4, g_MsgObject_HIO_c@l         /* constant-address: 8043028C, symbol: g_MsgObject_HIO_c */
+/* 8023AC2C  A8 04 02 FA */	lha r0, 0x2fa(r4)                        /* constant-address: 80430586, symbol: None */
+/* 8023AC30  7C 05 00 00 */	cmpw r5, r0                             
+/* 8023AC34  4C 81 00 20 */	blelr                                   
+/* 8023AC38  38 00 00 03 */	li r0, 3                                
+/* 8023AC3C  98 03 01 13 */	stb r0, 0x113(r3)                       
+/* 8023AC40  4E 80 00 20 */	blr                                     

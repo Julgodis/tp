@@ -1,10 +1,10 @@
 lbl_8005BA24:
-/* 8005BA24 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 8005BA28 00000004  7C 08 02 A6 */	mflr r0
-/* 8005BA2C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8005BA30 0000000C  38 A0 00 00 */	li r5, 0
-/* 8005BA34 00000010  4B FF FE F9 */	bl dKyr_set_btitex_common__FP9_GXTexObjP7ResTIMG11_GXTexMapID
-/* 8005BA38 00000014  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 8005BA3C 00000018  7C 08 03 A6 */	mtlr r0
-/* 8005BA40 0000001C  38 21 00 10 */	addi r1, r1, 0x10
-/* 8005BA44 00000020  4E 80 00 20 */	blr 
+/* 8005BA24  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 8005BA28  7C 08 02 A6 */	mflr r0                                 
+/* 8005BA2C  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 8005BA30  38 A0 00 00 */	li r5, 0                                
+/* 8005BA34  4B FF FE F9 */	bl dKyr_set_btitex_common__FP9_GXTexObjP7ResTIMG11_GXTexMapID /* constant-address: 8005B92C, symbol: dKyr_set_btitex_common__FP9_GXTexObjP7ResTIMG11_GXTexMapID */
+/* 8005BA38  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 8005BA3C  7C 08 03 A6 */	mtlr r0                                 
+/* 8005BA40  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 8005BA44  4E 80 00 20 */	blr                                     

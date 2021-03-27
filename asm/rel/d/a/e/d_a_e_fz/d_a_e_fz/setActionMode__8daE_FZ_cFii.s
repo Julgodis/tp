@@ -1,4 +1,4 @@
 lbl_806BEAF8:
-/* 806BEAF8 00000000  90 83 06 F4 */	stw r4, 0x6f4(r3)
-/* 806BEAFC 00000004  90 A3 06 F8 */	stw r5, 0x6f8(r3)
-/* 806BEB00 00000008  4E 80 00 20 */	blr 
+/* 806BEAF8  90 83 06 F4 */	stw r4, 0x6f4(r3)
+/* 806BEAFC  90 A3 06 F8 */	stw r5, 0x6f8(r3)
+/* 806BEB00  4E 80 00 20 */	blr 

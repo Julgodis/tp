@@ -1,51 +1,51 @@
 lbl_8036F8B4:
-/* 8036F8B4 00000000  3C 60 80 44 */	lis r3, gTRKState@h
-/* 8036F8B8 00000004  60 63 F2 94 */	ori r3, r3, gTRKState@l
-/* 8036F8BC 00000008  BC 03 00 00 */	stmw r0, 0(r3)	/* effective address: 8044F294 */
-/* 8036F8C0 0000000C  7C 00 00 A6 */	mfmsr r0
-/* 8036F8C4 00000010  90 03 00 8C */	stw r0, 0x8c(r3)	/* effective address: 8044F320 */
-/* 8036F8C8 00000014  7C 08 02 A6 */	mflr r0
-/* 8036F8CC 00000018  90 03 00 80 */	stw r0, 0x80(r3)	/* effective address: 8044F314 */
-/* 8036F8D0 0000001C  7C 09 02 A6 */	mfctr r0
-/* 8036F8D4 00000020  90 03 00 84 */	stw r0, 0x84(r3)	/* effective address: 8044F318 */
-/* 8036F8D8 00000024  7C 01 02 A6 */	mfxer r0
-/* 8036F8DC 00000028  90 03 00 88 */	stw r0, 0x88(r3)	/* effective address: 8044F31C */
-/* 8036F8E0 0000002C  7C 12 02 A6 */	mfdsisr r0
-/* 8036F8E4 00000030  90 03 00 94 */	stw r0, 0x94(r3)	/* effective address: 8044F328 */
-/* 8036F8E8 00000034  7C 13 02 A6 */	mfdar r0
-/* 8036F8EC 00000038  90 03 00 90 */	stw r0, 0x90(r3)	/* effective address: 8044F324 */
-/* 8036F8F0 0000003C  38 20 80 02 */	li r1, -32766
-/* 8036F8F4 00000040  7C 21 08 F8 */	nor r1, r1, r1
-/* 8036F8F8 00000044  7C 60 00 A6 */	mfmsr r3
-/* 8036F8FC 00000048  7C 63 08 38 */	and r3, r3, r1
-/* 8036F900 0000004C  7C 60 01 24 */	mtmsr r3
-/* 8036F904 00000050  3C 40 80 44 */	lis r2, gTRKState@h
-/* 8036F908 00000054  60 42 F2 94 */	ori r2, r2, gTRKState@l
-/* 8036F90C 00000058  80 42 00 A0 */	lwz r2, 0xa0(r2)	/* effective address: 8044F334 */
-/* 8036F910 0000005C  88 42 00 00 */	lbz r2, 0(r2)	/* effective address: 8044F294 */
-/* 8036F914 00000060  2C 02 00 00 */	cmpwi r2, 0
-/* 8036F918 00000064  41 82 00 18 */	beq lbl_8036F930
-/* 8036F91C 00000068  3C 40 80 44 */	lis r2, gTRKState@h
-/* 8036F920 0000006C  60 42 F2 94 */	ori r2, r2, gTRKState@l
-/* 8036F924 00000070  38 60 00 01 */	li r3, 1
-/* 8036F928 00000074  98 62 00 9C */	stb r3, 0x9c(r2)	/* effective address: 8044F330 */
-/* 8036F92C 00000078  48 00 00 4C */	b TRKInterruptHandlerEnableInterrupts
+/* 8036F8B4  3C 60 80 44 */	lis r3, gTRKState@h                     
+/* 8036F8B8  60 63 F2 94 */	ori r3, r3, gTRKState@l                  /* constant-address: 8044F294, symbol: gTRKState */
+/* 8036F8BC  BC 03 00 00 */	stmw r0, 0(r3)                          
+/* 8036F8C0  7C 00 00 A6 */	mfmsr r0                                
+/* 8036F8C4  90 03 00 8C */	stw r0, 0x8c(r3)                         /* constant-address: 8044F320, symbol: None */
+/* 8036F8C8  7C 08 02 A6 */	mflr r0                                 
+/* 8036F8CC  90 03 00 80 */	stw r0, 0x80(r3)                         /* constant-address: 8044F314, symbol: None */
+/* 8036F8D0  7C 09 02 A6 */	mfctr r0                                
+/* 8036F8D4  90 03 00 84 */	stw r0, 0x84(r3)                         /* constant-address: 8044F318, symbol: None */
+/* 8036F8D8  7C 01 02 A6 */	mfxer r0                                
+/* 8036F8DC  90 03 00 88 */	stw r0, 0x88(r3)                         /* constant-address: 8044F31C, symbol: None */
+/* 8036F8E0  7C 12 02 A6 */	mfdsisr r0                              
+/* 8036F8E4  90 03 00 94 */	stw r0, 0x94(r3)                         /* constant-address: 8044F328, symbol: None */
+/* 8036F8E8  7C 13 02 A6 */	mfdar r0                                
+/* 8036F8EC  90 03 00 90 */	stw r0, 0x90(r3)                         /* constant-address: 8044F324, symbol: None */
+/* 8036F8F0  38 20 80 02 */	li r1, -32766                           
+/* 8036F8F4  7C 21 08 F8 */	nor r1, r1, r1                          
+/* 8036F8F8  7C 60 00 A6 */	mfmsr r3                                
+/* 8036F8FC  7C 63 08 38 */	and r3, r3, r1                          
+/* 8036F900  7C 60 01 24 */	mtmsr r3                                
+/* 8036F904  3C 40 80 44 */	lis r2, gTRKState@h                     
+/* 8036F908  60 42 F2 94 */	ori r2, r2, gTRKState@l                  /* constant-address: 8044F294, symbol: gTRKState */
+/* 8036F90C  80 42 00 A0 */	lwz r2, 0xa0(r2)                         /* constant-address: 8044F334, symbol: None */
+/* 8036F910  88 42 00 00 */	lbz r2, 0(r2)                           
+/* 8036F914  2C 02 00 00 */	cmpwi r2, 0                             
+/* 8036F918  41 82 00 18 */	beq lbl_8036F930                         /* constant-address: 8036F930, symbol: lbl_8036F930 */
+/* 8036F91C  3C 40 80 44 */	lis r2, gTRKState@h                     
+/* 8036F920  60 42 F2 94 */	ori r2, r2, gTRKState@l                  /* constant-address: 8044F294, symbol: gTRKState */
+/* 8036F924  38 60 00 01 */	li r3, 1                                
+/* 8036F928  98 62 00 9C */	stb r3, 0x9c(r2)                         /* constant-address: 8044F330, symbol: None */
+/* 8036F92C  48 00 00 4C */	b TRKInterruptHandlerEnableInterrupts    /* constant-address: 8036F978, symbol: TRKInterruptHandlerEnableInterrupts */
 lbl_8036F930:
-/* 8036F930 00000000  3C 40 80 3D */	lis r2, gTRKExceptionStatus@h
-/* 8036F934 00000004  60 42 32 44 */	ori r2, r2, gTRKExceptionStatus@l
-/* 8036F938 00000008  38 60 00 00 */	li r3, 0
-/* 8036F93C 0000000C  98 62 00 0C */	stb r3, 0xc(r2)	/* effective address: 803D3250 */
-/* 8036F940 00000010  48 00 1A 69 */	bl TRKRestoreExtended1Block
-/* 8036F944 00000014  3C 40 80 44 */	lis r2, gTRKCPUState@h
-/* 8036F948 00000018  60 42 F3 38 */	ori r2, r2, gTRKCPUState@l
-/* 8036F94C 0000001C  BB 62 00 80 */	lmw r27, 0x80(r2)	/* effective address: 8044F3B8 */
-/* 8036F950 00000020  7F 7A 03 A6 */	mtspr 0x1a, r27
-/* 8036F954 00000024  7F 88 03 A6 */	mtlr r28
-/* 8036F958 00000028  7F AF F1 20 */	mtcrf 0xff, r29
-/* 8036F95C 0000002C  7F C9 03 A6 */	mtctr r30
-/* 8036F960 00000030  7F E1 03 A6 */	mtxer r31
-/* 8036F964 00000034  B8 62 00 0C */	lmw r3, 0xc(r2)	/* effective address: 8044F344 */
-/* 8036F968 00000038  80 02 00 00 */	lwz r0, 0(r2)	/* effective address: 8044F338 */
-/* 8036F96C 0000003C  80 22 00 04 */	lwz r1, 4(r2)	/* effective address: 8044F33C */
-/* 8036F970 00000040  80 42 00 08 */	lwz r2, 8(r2)	/* effective address: 8044F340 */
-/* 8036F974 00000044  4C 00 00 64 */	rfi 
+/* 8036F930  3C 40 80 3D */	lis r2, gTRKExceptionStatus@h           
+/* 8036F934  60 42 32 44 */	ori r2, r2, gTRKExceptionStatus@l        /* constant-address: 803D3244, symbol: gTRKExceptionStatus */
+/* 8036F938  38 60 00 00 */	li r3, 0                                
+/* 8036F93C  98 62 00 0C */	stb r3, 0xc(r2)                          /* constant-address: 803D3250, symbol: None */
+/* 8036F940  48 00 1A 69 */	bl TRKRestoreExtended1Block              /* constant-address: 803713A8, symbol: TRKRestoreExtended1Block */
+/* 8036F944  3C 40 80 44 */	lis r2, gTRKCPUState@h                  
+/* 8036F948  60 42 F3 38 */	ori r2, r2, gTRKCPUState@l               /* constant-address: 8044F338, symbol: gTRKCPUState */
+/* 8036F94C  BB 62 00 80 */	lmw r27, 0x80(r2)                       
+/* 8036F950  7F 7A 03 A6 */	mtspr 0x1a, r27                         
+/* 8036F954  7F 88 03 A6 */	mtlr r28                                
+/* 8036F958  7F AF F1 20 */	mtcrf 0xff, r29                         
+/* 8036F95C  7F C9 03 A6 */	mtctr r30                               
+/* 8036F960  7F E1 03 A6 */	mtxer r31                               
+/* 8036F964  B8 62 00 0C */	lmw r3, 0xc(r2)                         
+/* 8036F968  80 02 00 00 */	lwz r0, 0(r2)                            /* constant-address: 8044F338, symbol: gTRKCPUState */
+/* 8036F96C  80 22 00 04 */	lwz r1, 4(r2)                            /* constant-address: 8044F33C, symbol: None */
+/* 8036F970  80 42 00 08 */	lwz r2, 8(r2)                            /* constant-address: 8044F340, symbol: None */
+/* 8036F974  4C 00 00 64 */	rfi                                     

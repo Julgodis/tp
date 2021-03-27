@@ -1,10 +1,10 @@
 lbl_802CEC74:
-/* 802CEC74 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 802CEC78 00000004  7C 08 02 A6 */	mflr r0
-/* 802CEC7C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802CEC80 0000000C  38 A0 00 00 */	li r5, 0
-/* 802CEC84 00000010  4B FF F7 F1 */	bl alloc__7JKRHeapFUliP7JKRHeap
-/* 802CEC88 00000014  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 802CEC8C 00000018  7C 08 03 A6 */	mtlr r0
-/* 802CEC90 0000001C  38 21 00 10 */	addi r1, r1, 0x10
-/* 802CEC94 00000020  4E 80 00 20 */	blr 
+/* 802CEC74  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 802CEC78  7C 08 02 A6 */	mflr r0                                 
+/* 802CEC7C  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 802CEC80  38 A0 00 00 */	li r5, 0                                
+/* 802CEC84  4B FF F7 F1 */	bl alloc__7JKRHeapFUliP7JKRHeap          /* constant-address: 802CE474, symbol: alloc__7JKRHeapFUliP7JKRHeap */
+/* 802CEC88  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 802CEC8C  7C 08 03 A6 */	mtlr r0                                 
+/* 802CEC90  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 802CEC94  4E 80 00 20 */	blr                                     

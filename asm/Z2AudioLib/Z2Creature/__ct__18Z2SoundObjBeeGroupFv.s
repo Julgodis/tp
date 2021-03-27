@@ -1,16 +1,16 @@
 lbl_802C1D10:
-/* 802C1D10 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 802C1D14 00000004  7C 08 02 A6 */	mflr r0
-/* 802C1D18 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802C1D1C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802C1D20 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 802C1D24 00000014  4B FF C1 CD */	bl __ct__14Z2SoundObjBaseFv
-/* 802C1D28 00000018  3C 60 80 3D */	lis r3, __vt__18Z2SoundObjBeeGroup@ha
-/* 802C1D2C 0000001C  38 03 B8 10 */	addi r0, r3, __vt__18Z2SoundObjBeeGroup@l
-/* 802C1D30 00000020  90 1F 00 10 */	stw r0, 0x10(r31)
-/* 802C1D34 00000024  7F E3 FB 78 */	mr r3, r31
-/* 802C1D38 00000028  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 802C1D3C 0000002C  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 802C1D40 00000030  7C 08 03 A6 */	mtlr r0
-/* 802C1D44 00000034  38 21 00 10 */	addi r1, r1, 0x10
-/* 802C1D48 00000038  4E 80 00 20 */	blr 
+/* 802C1D10  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 802C1D14  7C 08 02 A6 */	mflr r0                                 
+/* 802C1D18  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 802C1D1C  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 802C1D20  7C 7F 1B 78 */	mr r31, r3                              
+/* 802C1D24  4B FF C1 CD */	bl __ct__14Z2SoundObjBaseFv              /* constant-address: 802BDEF0, symbol: __ct__14Z2SoundObjBaseFv */
+/* 802C1D28  3C 60 80 3D */	lis r3, __vt__18Z2SoundObjBeeGroup@ha   
+/* 802C1D2C  38 03 B8 10 */	addi r0, r3, __vt__18Z2SoundObjBeeGroup@l /* constant-address: 803CB810, symbol: __vt__18Z2SoundObjBeeGroup */
+/* 802C1D30  90 1F 00 10 */	stw r0, 0x10(r31)                       
+/* 802C1D34  7F E3 FB 78 */	mr r3, r31                              
+/* 802C1D38  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 802C1D3C  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 802C1D40  7C 08 03 A6 */	mtlr r0                                 
+/* 802C1D44  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 802C1D48  4E 80 00 20 */	blr                                     

@@ -1,9 +1,9 @@
+import librel
 
 from intervaltree import Interval, IntervalTree
 from dataclasses import dataclass, field
 from typing import Dict, Tuple
 
-from . import librel
 from .globals import *
 
 class AIT(IntervalTree):

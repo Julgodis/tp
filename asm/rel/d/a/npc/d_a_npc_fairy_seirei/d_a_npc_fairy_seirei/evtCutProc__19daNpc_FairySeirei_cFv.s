@@ -1,54 +1,54 @@
 lbl_805406BC:
-/* 805406BC 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 805406C0 00000004  7C 08 02 A6 */	mflr r0
-/* 805406C4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 805406C8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 805406CC 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 805406D0 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 805406D4 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 805406D8 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 805406DC 00000020  3B E3 4F F8 */	addi r31, r3, 0x4ff8
-/* 805406E0 00000024  7F E3 FB 78 */	mr r3, r31
-/* 805406E4 00000028  3C 80 80 54 */	lis r4, stringBase0@ha
-/* 805406E8 0000002C  38 84 1E 58 */	addi r4, r4, stringBase0@l
-/* 805406EC 00000030  38 84 00 01 */	addi r4, r4, 1
-/* 805406F0 00000034  7F C5 F3 78 */	mr r5, r30
-/* 805406F4 00000038  38 C0 FF FF */	li r6, -1
-/* 805406F8 0000003C  4B B0 74 24 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
-/* 805406FC 00000040  2C 03 FF FF */	cmpwi r3, -1
-/* 80540700 00000044  41 82 00 68 */	beq lbl_80540768
-/* 80540704 00000048  90 7E 0D AC */	stw r3, 0xdac(r30)
-/* 80540708 0000004C  7F E3 FB 78 */	mr r3, r31
-/* 8054070C 00000050  80 9E 0D AC */	lwz r4, 0xdac(r30)
-/* 80540710 00000054  3C A0 80 54 */	lis r5, mCutNameList__19daNpc_FairySeirei_c@ha
-/* 80540714 00000058  38 A5 1E FC */	addi r5, r5, mCutNameList__19daNpc_FairySeirei_c@l
-/* 80540718 0000005C  38 C0 00 01 */	li r6, 1
-/* 8054071C 00000060  38 E0 00 00 */	li r7, 0
-/* 80540720 00000064  39 00 00 00 */	li r8, 0
-/* 80540724 00000068  4B B0 76 EC */	b getMyActIdx__16dEvent_manager_cFiPCPCciii
-/* 80540728 0000006C  7C 60 1B 78 */	mr r0, r3
-/* 8054072C 00000070  7F C3 F3 78 */	mr r3, r30
-/* 80540730 00000074  80 9E 0D AC */	lwz r4, 0xdac(r30)
-/* 80540734 00000078  1C C0 00 0C */	mulli r6, r0, 0xc
-/* 80540738 0000007C  3C A0 80 54 */	lis r5, mCutList__19daNpc_FairySeirei_c@ha
-/* 8054073C 00000080  38 05 1F 00 */	addi r0, r5, mCutList__19daNpc_FairySeirei_c@l
-/* 80540740 00000084  7D 80 32 14 */	add r12, r0, r6
-/* 80540744 00000088  4B E2 19 40 */	b __ptmf_scall
-/* 80540748 0000008C  60 00 00 00 */	nop 
-/* 8054074C 00000090  2C 03 00 00 */	cmpwi r3, 0
-/* 80540750 00000094  41 82 00 10 */	beq lbl_80540760
-/* 80540754 00000098  7F E3 FB 78 */	mr r3, r31
-/* 80540758 0000009C  80 9E 0D AC */	lwz r4, 0xdac(r30)
-/* 8054075C 000000A0  4B B0 7A 20 */	b cutEnd__16dEvent_manager_cFi
+/* 805406BC  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 805406C0  7C 08 02 A6 */	mflr r0
+/* 805406C4  90 01 00 14 */	stw r0, 0x14(r1)
+/* 805406C8  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 805406CC  93 C1 00 08 */	stw r30, 8(r1)
+/* 805406D0  7C 7E 1B 78 */	mr r30, r3
+/* 805406D4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
+/* 805406D8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805406DC  3B E3 4F F8 */	addi r31, r3, 0x4ff8
+/* 805406E0  7F E3 FB 78 */	mr r3, r31
+/* 805406E4  3C 80 80 54 */	lis r4, stringBase0@ha
+/* 805406E8  38 84 1E 58 */	addi r4, r4, stringBase0@l
+/* 805406EC  38 84 00 01 */	addi r4, r4, 1
+/* 805406F0  7F C5 F3 78 */	mr r5, r30
+/* 805406F4  38 C0 FF FF */	li r6, -1
+/* 805406F8  4B B0 74 24 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
+/* 805406FC  2C 03 FF FF */	cmpwi r3, -1
+/* 80540700  41 82 00 68 */	beq lbl_80540768
+/* 80540704  90 7E 0D AC */	stw r3, 0xdac(r30)
+/* 80540708  7F E3 FB 78 */	mr r3, r31
+/* 8054070C  80 9E 0D AC */	lwz r4, 0xdac(r30)
+/* 80540710  3C A0 80 54 */	lis r5, mCutNameList__19daNpc_FairySeirei_c@ha
+/* 80540714  38 A5 1E FC */	addi r5, r5, mCutNameList__19daNpc_FairySeirei_c@l
+/* 80540718  38 C0 00 01 */	li r6, 1
+/* 8054071C  38 E0 00 00 */	li r7, 0
+/* 80540720  39 00 00 00 */	li r8, 0
+/* 80540724  4B B0 76 EC */	b getMyActIdx__16dEvent_manager_cFiPCPCciii
+/* 80540728  7C 60 1B 78 */	mr r0, r3
+/* 8054072C  7F C3 F3 78 */	mr r3, r30
+/* 80540730  80 9E 0D AC */	lwz r4, 0xdac(r30)
+/* 80540734  1C C0 00 0C */	mulli r6, r0, 0xc
+/* 80540738  3C A0 80 54 */	lis r5, mCutList__19daNpc_FairySeirei_c@ha
+/* 8054073C  38 05 1F 00 */	addi r0, r5, mCutList__19daNpc_FairySeirei_c@l
+/* 80540740  7D 80 32 14 */	add r12, r0, r6
+/* 80540744  4B E2 19 40 */	b __ptmf_scall
+/* 80540748  60 00 00 00 */	nop 
+/* 8054074C  2C 03 00 00 */	cmpwi r3, 0
+/* 80540750  41 82 00 10 */	beq lbl_80540760
+/* 80540754  7F E3 FB 78 */	mr r3, r31
+/* 80540758  80 9E 0D AC */	lwz r4, 0xdac(r30)
+/* 8054075C  4B B0 7A 20 */	b cutEnd__16dEvent_manager_cFi
 lbl_80540760:
-/* 80540760 00000000  38 60 00 01 */	li r3, 1
-/* 80540764 00000004  48 00 00 08 */	b lbl_8054076C
+/* 80540760  38 60 00 01 */	li r3, 1
+/* 80540764  48 00 00 08 */	b lbl_8054076C
 lbl_80540768:
-/* 80540768 00000000  38 60 00 00 */	li r3, 0
+/* 80540768  38 60 00 00 */	li r3, 0
 lbl_8054076C:
-/* 8054076C 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80540770 00000004  83 C1 00 08 */	lwz r30, 8(r1)
-/* 80540774 00000008  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80540778 0000000C  7C 08 03 A6 */	mtlr r0
-/* 8054077C 00000010  38 21 00 10 */	addi r1, r1, 0x10
-/* 80540780 00000014  4E 80 00 20 */	blr 
+/* 8054076C  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80540770  83 C1 00 08 */	lwz r30, 8(r1)
+/* 80540774  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80540778  7C 08 03 A6 */	mtlr r0
+/* 8054077C  38 21 00 10 */	addi r1, r1, 0x10
+/* 80540780  4E 80 00 20 */	blr 

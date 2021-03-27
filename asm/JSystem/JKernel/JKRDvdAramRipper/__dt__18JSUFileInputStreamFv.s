@@ -1,31 +1,31 @@
 lbl_802DADD8:
-/* 802DADD8 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 802DADDC 00000004  7C 08 02 A6 */	mflr r0
-/* 802DADE0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802DADE4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802DADE8 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 802DADEC 00000014  7C 7E 1B 79 */	or. r30, r3, r3
-/* 802DADF0 00000018  7C 9F 23 78 */	mr r31, r4
-/* 802DADF4 0000001C  41 82 00 38 */	beq lbl_802DAE2C
-/* 802DADF8 00000020  3C 80 80 3D */	lis r4, __vt__18JSUFileInputStream@ha
-/* 802DADFC 00000024  38 04 C5 18 */	addi r0, r4, __vt__18JSUFileInputStream@l
-/* 802DAE00 00000028  90 1E 00 00 */	stw r0, 0(r30)
-/* 802DAE04 0000002C  41 82 00 18 */	beq lbl_802DAE1C
-/* 802DAE08 00000030  3C 80 80 3D */	lis r4, __vt__20JSURandomInputStream@ha
-/* 802DAE0C 00000034  38 04 C4 B0 */	addi r0, r4, __vt__20JSURandomInputStream@l
-/* 802DAE10 00000038  90 1E 00 00 */	stw r0, 0(r30)
-/* 802DAE14 0000003C  38 80 00 00 */	li r4, 0
-/* 802DAE18 00000040  48 00 14 25 */	bl __dt__14JSUInputStreamFv
+/* 802DADD8  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 802DADDC  7C 08 02 A6 */	mflr r0                                 
+/* 802DADE0  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 802DADE4  93 E1 00 0C */	stw r31, 0xc(r1)                        
+/* 802DADE8  93 C1 00 08 */	stw r30, 8(r1)                          
+/* 802DADEC  7C 7E 1B 79 */	or. r30, r3, r3                         
+/* 802DADF0  7C 9F 23 78 */	mr r31, r4                              
+/* 802DADF4  41 82 00 38 */	beq lbl_802DAE2C                         /* constant-address: 802DAE2C, symbol: lbl_802DAE2C */
+/* 802DADF8  3C 80 80 3D */	lis r4, __vt__18JSUFileInputStream@ha   
+/* 802DADFC  38 04 C5 18 */	addi r0, r4, __vt__18JSUFileInputStream@l /* constant-address: 803CC518, symbol: __vt__18JSUFileInputStream */
+/* 802DAE00  90 1E 00 00 */	stw r0, 0(r30)                          
+/* 802DAE04  41 82 00 18 */	beq lbl_802DAE1C                         /* constant-address: 802DAE1C, symbol: lbl_802DAE1C */
+/* 802DAE08  3C 80 80 3D */	lis r4, __vt__20JSURandomInputStream@ha 
+/* 802DAE0C  38 04 C4 B0 */	addi r0, r4, __vt__20JSURandomInputStream@l /* constant-address: 803CC4B0, symbol: __vt__20JSURandomInputStream */
+/* 802DAE10  90 1E 00 00 */	stw r0, 0(r30)                          
+/* 802DAE14  38 80 00 00 */	li r4, 0                                
+/* 802DAE18  48 00 14 25 */	bl __dt__14JSUInputStreamFv              /* constant-address: 802DC23C, symbol: __dt__14JSUInputStreamFv */
 lbl_802DAE1C:
-/* 802DAE1C 00000000  7F E0 07 35 */	extsh. r0, r31
-/* 802DAE20 00000004  40 81 00 0C */	ble lbl_802DAE2C
-/* 802DAE24 00000008  7F C3 F3 78 */	mr r3, r30
-/* 802DAE28 0000000C  4B FF 3F 15 */	bl __dl__FPv
+/* 802DAE1C  7F E0 07 35 */	extsh. r0, r31                          
+/* 802DAE20  40 81 00 0C */	ble lbl_802DAE2C                         /* constant-address: 802DAE2C, symbol: lbl_802DAE2C */
+/* 802DAE24  7F C3 F3 78 */	mr r3, r30                              
+/* 802DAE28  4B FF 3F 15 */	bl __dl__FPv                             /* constant-address: 802CED3C, symbol: __dl__FPv */
 lbl_802DAE2C:
-/* 802DAE2C 00000000  7F C3 F3 78 */	mr r3, r30
-/* 802DAE30 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 802DAE34 00000008  83 C1 00 08 */	lwz r30, 8(r1)
-/* 802DAE38 0000000C  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 802DAE3C 00000010  7C 08 03 A6 */	mtlr r0
-/* 802DAE40 00000014  38 21 00 10 */	addi r1, r1, 0x10
-/* 802DAE44 00000018  4E 80 00 20 */	blr 
+/* 802DAE2C  7F C3 F3 78 */	mr r3, r30                              
+/* 802DAE30  83 E1 00 0C */	lwz r31, 0xc(r1)                        
+/* 802DAE34  83 C1 00 08 */	lwz r30, 8(r1)                          
+/* 802DAE38  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 802DAE3C  7C 08 03 A6 */	mtlr r0                                 
+/* 802DAE40  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 802DAE44  4E 80 00 20 */	blr                                     

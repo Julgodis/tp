@@ -1,326 +1,326 @@
 lbl_80252F28:
-/* 80252F28 00000000  94 21 FF 90 */	stwu r1, -0x70(r1)
-/* 80252F2C 00000004  7C 08 02 A6 */	mflr r0
-/* 80252F30 00000008  90 01 00 74 */	stw r0, 0x74(r1)
-/* 80252F34 0000000C  93 E1 00 6C */	stw r31, 0x6c(r1)
-/* 80252F38 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80252F3C 00000014  C0 22 B4 5C */	lfs f1, lit_3800(r2)
-/* 80252F40 00000018  FC 40 08 90 */	fmr f2, f1
-/* 80252F44 0000001C  C0 62 B4 60 */	lfs f3, lit_3801(r2)
-/* 80252F48 00000020  C0 82 B4 64 */	lfs f4, lit_3802(r2)
-/* 80252F4C 00000024  FC A0 08 90 */	fmr f5, f1
-/* 80252F50 00000028  C0 C2 B4 68 */	lfs f6, lit_3803(r2)
-/* 80252F54 0000002C  48 10 D5 11 */	bl GXSetViewport
-/* 80252F58 00000030  38 60 00 00 */	li r3, 0
-/* 80252F5C 00000034  38 80 00 00 */	li r4, 0
-/* 80252F60 00000038  38 A0 02 60 */	li r5, 0x260
-/* 80252F64 0000003C  38 C0 01 C0 */	li r6, 0x1c0
-/* 80252F68 00000040  48 10 D5 69 */	bl GXSetScissor
-/* 80252F6C 00000044  38 60 00 00 */	li r3, 0
-/* 80252F70 00000048  38 80 00 09 */	li r4, 9
-/* 80252F74 0000004C  38 A0 00 00 */	li r5, 0
-/* 80252F78 00000050  38 C0 00 03 */	li r6, 3
-/* 80252F7C 00000054  38 E0 00 00 */	li r7, 0
-/* 80252F80 00000058  48 10 86 45 */	bl GXSetVtxAttrFmt
-/* 80252F84 0000005C  48 10 86 09 */	bl GXClearVtxDesc
-/* 80252F88 00000060  38 60 00 09 */	li r3, 9
-/* 80252F8C 00000064  38 80 00 01 */	li r4, 1
-/* 80252F90 00000068  48 10 7F 29 */	bl GXSetVtxDesc
-/* 80252F94 0000006C  38 60 00 01 */	li r3, 1
-/* 80252F98 00000070  48 10 AB 99 */	bl GXSetNumChans
-/* 80252F9C 00000074  38 60 00 04 */	li r3, 4
-/* 80252FA0 00000078  38 80 00 00 */	li r4, 0
-/* 80252FA4 0000007C  38 A0 00 00 */	li r5, 0
-/* 80252FA8 00000080  38 C0 00 00 */	li r6, 0
-/* 80252FAC 00000084  38 E0 00 00 */	li r7, 0
-/* 80252FB0 00000088  39 00 00 00 */	li r8, 0
-/* 80252FB4 0000008C  39 20 00 02 */	li r9, 2
-/* 80252FB8 00000090  48 10 AB B5 */	bl GXSetChanCtrl
-/* 80252FBC 00000094  38 60 00 00 */	li r3, 0
-/* 80252FC0 00000098  48 10 8E 3D */	bl GXSetNumTexGens
-/* 80252FC4 0000009C  38 60 00 01 */	li r3, 1
-/* 80252FC8 000000A0  48 10 C8 C9 */	bl GXSetNumTevStages
-/* 80252FCC 000000A4  38 60 00 00 */	li r3, 0
-/* 80252FD0 000000A8  38 80 00 FF */	li r4, 0xff
-/* 80252FD4 000000AC  38 A0 00 FF */	li r5, 0xff
-/* 80252FD8 000000B0  38 C0 00 04 */	li r6, 4
-/* 80252FDC 000000B4  48 10 C7 19 */	bl GXSetTevOrder
-/* 80252FE0 000000B8  38 60 00 00 */	li r3, 0
-/* 80252FE4 000000BC  38 80 00 0F */	li r4, 0xf
-/* 80252FE8 000000C0  38 A0 00 0F */	li r5, 0xf
-/* 80252FEC 000000C4  38 C0 00 0F */	li r6, 0xf
-/* 80252FF0 000000C8  38 E0 00 0F */	li r7, 0xf
-/* 80252FF4 000000CC  48 10 C2 31 */	bl GXSetTevColorIn
-/* 80252FF8 000000D0  38 60 00 00 */	li r3, 0
-/* 80252FFC 000000D4  38 80 00 00 */	li r4, 0
-/* 80253000 000000D8  38 A0 00 00 */	li r5, 0
-/* 80253004 000000DC  38 C0 00 00 */	li r6, 0
-/* 80253008 000000E0  38 E0 00 01 */	li r7, 1
-/* 8025300C 000000E4  39 00 00 00 */	li r8, 0
-/* 80253010 000000E8  48 10 C2 9D */	bl GXSetTevColorOp
-/* 80253014 000000EC  38 60 00 00 */	li r3, 0
-/* 80253018 000000F0  38 80 00 07 */	li r4, 7
-/* 8025301C 000000F4  38 A0 00 07 */	li r5, 7
-/* 80253020 000000F8  38 C0 00 07 */	li r6, 7
-/* 80253024 000000FC  38 E0 00 07 */	li r7, 7
-/* 80253028 00000100  48 10 C2 41 */	bl GXSetTevAlphaIn
-/* 8025302C 00000104  38 60 00 00 */	li r3, 0
-/* 80253030 00000108  38 80 00 00 */	li r4, 0
-/* 80253034 0000010C  38 A0 00 00 */	li r5, 0
-/* 80253038 00000110  38 C0 00 00 */	li r6, 0
-/* 8025303C 00000114  38 E0 00 01 */	li r7, 1
-/* 80253040 00000118  39 00 00 00 */	li r8, 0
-/* 80253044 0000011C  48 10 C2 D1 */	bl GXSetTevAlphaOp
-/* 80253048 00000120  38 60 00 01 */	li r3, 1
-/* 8025304C 00000124  48 10 CC 85 */	bl GXSetZCompLoc
-/* 80253050 00000128  38 60 00 00 */	li r3, 0
-/* 80253054 0000012C  38 80 00 07 */	li r4, 7
-/* 80253058 00000130  38 A0 00 00 */	li r5, 0
-/* 8025305C 00000134  48 10 CC 41 */	bl GXSetZMode
-/* 80253060 00000138  38 60 00 00 */	li r3, 0
-/* 80253064 0000013C  38 80 00 04 */	li r4, 4
-/* 80253068 00000140  38 A0 00 05 */	li r5, 5
-/* 8025306C 00000144  38 C0 00 00 */	li r6, 0
-/* 80253070 00000148  48 10 CB 81 */	bl GXSetBlendMode
-/* 80253074 0000014C  38 60 00 07 */	li r3, 7
-/* 80253078 00000150  38 80 00 00 */	li r4, 0
-/* 8025307C 00000154  38 A0 00 01 */	li r5, 1
-/* 80253080 00000158  38 C0 00 07 */	li r6, 7
-/* 80253084 0000015C  38 E0 00 00 */	li r7, 0
-/* 80253088 00000160  48 10 C5 9D */	bl GXSetAlphaCompare
-/* 8025308C 00000164  80 0D 80 80 */	lwz r0, g_clearColor(r13)
-/* 80253090 00000168  90 01 00 10 */	stw r0, 0x10(r1)
-/* 80253094 0000016C  38 60 00 00 */	li r3, 0
-/* 80253098 00000170  C0 22 B4 5C */	lfs f1, lit_3800(r2)
-/* 8025309C 00000174  FC 40 08 90 */	fmr f2, f1
-/* 802530A0 00000178  FC 60 08 90 */	fmr f3, f1
-/* 802530A4 0000017C  FC 80 08 90 */	fmr f4, f1
-/* 802530A8 00000180  38 81 00 10 */	addi r4, r1, 0x10
-/* 802530AC 00000184  48 10 C8 0D */	bl GXSetFog
-/* 802530B0 00000188  38 60 00 00 */	li r3, 0
-/* 802530B4 0000018C  48 10 98 D1 */	bl GXSetCullMode
-/* 802530B8 00000190  38 60 00 01 */	li r3, 1
-/* 802530BC 00000194  48 10 CD 1D */	bl GXSetDither
-/* 802530C0 00000198  38 60 00 01 */	li r3, 1
-/* 802530C4 0000019C  48 10 D5 0D */	bl GXSetClipMode
-/* 802530C8 000001A0  3C 60 80 3A */	lis r3, g_mDoMtx_identity@ha
-/* 802530CC 000001A4  38 63 2F D8 */	addi r3, r3, g_mDoMtx_identity@l
-/* 802530D0 000001A8  38 80 00 00 */	li r4, 0
-/* 802530D4 000001AC  48 10 D1 79 */	bl GXLoadPosMtxImm
-/* 802530D8 000001B0  38 60 00 00 */	li r3, 0
-/* 802530DC 000001B4  48 10 D2 11 */	bl GXSetCurrentMtx
-/* 802530E0 000001B8  38 60 00 80 */	li r3, 0x80
-/* 802530E4 000001BC  38 80 00 00 */	li r4, 0
-/* 802530E8 000001C0  38 A0 00 04 */	li r5, 4
-/* 802530EC 000001C4  48 10 96 79 */	bl GXBegin
-/* 802530F0 000001C8  38 80 00 00 */	li r4, 0
-/* 802530F4 000001CC  3C 60 CC 01 */	lis r3, 0xCC01 /* 0xCC008000@ha */
-/* 802530F8 000001D0  B0 83 80 00 */	sth r4, 0x8000(r3)
-/* 802530FC 000001D4  B0 83 80 00 */	sth r4, -0x8000(r3)	/* effective address: CC008000 */
-/* 80253100 000001D8  38 00 02 60 */	li r0, 0x260
-/* 80253104 000001DC  B0 03 80 00 */	sth r0, -0x8000(r3)	/* effective address: CC008000 */
-/* 80253108 000001E0  B0 83 80 00 */	sth r4, -0x8000(r3)	/* effective address: CC008000 */
-/* 8025310C 000001E4  B0 03 80 00 */	sth r0, -0x8000(r3)	/* effective address: CC008000 */
-/* 80253110 000001E8  38 00 01 C0 */	li r0, 0x1c0
-/* 80253114 000001EC  B0 03 80 00 */	sth r0, -0x8000(r3)	/* effective address: CC008000 */
-/* 80253118 000001F0  B0 83 80 00 */	sth r4, -0x8000(r3)	/* effective address: CC008000 */
-/* 8025311C 000001F4  B0 03 80 00 */	sth r0, -0x8000(r3)	/* effective address: CC008000 */
-/* 80253120 000001F8  38 61 00 24 */	addi r3, r1, 0x24
-/* 80253124 000001FC  C0 22 B4 6C */	lfs f1, lit_3804(r2)
-/* 80253128 00000200  C0 42 B4 70 */	lfs f2, lit_3805(r2)
-/* 8025312C 00000204  C0 62 B4 74 */	lfs f3, lit_3806(r2)
-/* 80253130 00000208  C0 82 B4 78 */	lfs f4, lit_3807(r2)
-/* 80253134 0000020C  48 0F 3D F5 */	bl C_MTXPerspective
-/* 80253138 00000210  38 61 00 24 */	addi r3, r1, 0x24
-/* 8025313C 00000214  38 80 00 00 */	li r4, 0
-/* 80253140 00000218  48 10 CF 95 */	bl GXSetProjection
-/* 80253144 0000021C  3C 60 80 3E */	lis r3, mFrameBufferTexObj__13mDoGph_gInf_c@ha
-/* 80253148 00000220  38 63 D3 E8 */	addi r3, r3, mFrameBufferTexObj__13mDoGph_gInf_c@l
-/* 8025314C 00000224  80 8D 86 50 */	lwz r4, mFrameBufferTex__13mDoGph_gInf_c(r13)
-/* 80253150 00000228  38 A0 01 30 */	li r5, 0x130
-/* 80253154 0000022C  38 C0 00 E0 */	li r6, 0xe0
-/* 80253158 00000230  38 E0 00 06 */	li r7, 6
-/* 8025315C 00000234  39 00 00 00 */	li r8, 0
-/* 80253160 00000238  39 20 00 00 */	li r9, 0
-/* 80253164 0000023C  39 40 00 00 */	li r10, 0
-/* 80253168 00000240  48 10 AC D9 */	bl GXInitTexObj
-/* 8025316C 00000244  3C 60 80 3E */	lis r3, mFrameBufferTexObj__13mDoGph_gInf_c@ha
-/* 80253170 00000248  38 63 D3 E8 */	addi r3, r3, mFrameBufferTexObj__13mDoGph_gInf_c@l
-/* 80253174 0000024C  38 80 00 01 */	li r4, 1
-/* 80253178 00000250  38 A0 00 01 */	li r5, 1
-/* 8025317C 00000254  C0 22 B4 5C */	lfs f1, lit_3800(r2)
-/* 80253180 00000258  FC 40 08 90 */	fmr f2, f1
-/* 80253184 0000025C  FC 60 08 90 */	fmr f3, f1
-/* 80253188 00000260  38 C0 00 00 */	li r6, 0
-/* 8025318C 00000264  38 E0 00 00 */	li r7, 0
-/* 80253190 00000268  39 00 00 00 */	li r8, 0
-/* 80253194 0000026C  48 10 AF 41 */	bl GXInitTexObjLOD
-/* 80253198 00000270  3C 60 80 3E */	lis r3, mFrameBufferTexObj__13mDoGph_gInf_c@ha
-/* 8025319C 00000274  38 63 D3 E8 */	addi r3, r3, mFrameBufferTexObj__13mDoGph_gInf_c@l
-/* 802531A0 00000278  38 80 00 00 */	li r4, 0
-/* 802531A4 0000027C  48 10 B2 71 */	bl GXLoadTexObj
-/* 802531A8 00000280  38 60 00 01 */	li r3, 1
-/* 802531AC 00000284  48 10 A9 85 */	bl GXSetNumChans
-/* 802531B0 00000288  38 60 00 00 */	li r3, 0
-/* 802531B4 0000028C  38 80 00 00 */	li r4, 0
-/* 802531B8 00000290  38 A0 00 00 */	li r5, 0
-/* 802531BC 00000294  38 C0 00 00 */	li r6, 0
-/* 802531C0 00000298  38 E0 00 00 */	li r7, 0
-/* 802531C4 0000029C  39 00 00 00 */	li r8, 0
-/* 802531C8 000002A0  39 20 00 02 */	li r9, 2
-/* 802531CC 000002A4  48 10 A9 A1 */	bl GXSetChanCtrl
-/* 802531D0 000002A8  80 02 B4 58 */	lwz r0, lit_3748(r2)
-/* 802531D4 000002AC  90 01 00 0C */	stw r0, 0xc(r1)
-/* 802531D8 000002B0  38 60 00 00 */	li r3, 0
-/* 802531DC 000002B4  38 81 00 0C */	addi r4, r1, 0xc
-/* 802531E0 000002B8  48 10 A8 69 */	bl GXSetChanMatColor
-/* 802531E4 000002BC  38 60 00 01 */	li r3, 1
-/* 802531E8 000002C0  48 10 8C 15 */	bl GXSetNumTexGens
-/* 802531EC 000002C4  38 60 00 00 */	li r3, 0
-/* 802531F0 000002C8  38 80 00 01 */	li r4, 1
-/* 802531F4 000002CC  38 A0 00 04 */	li r5, 4
-/* 802531F8 000002D0  38 C0 00 3C */	li r6, 0x3c
-/* 802531FC 000002D4  38 E0 00 00 */	li r7, 0
-/* 80253200 000002D8  39 00 00 7D */	li r8, 0x7d
-/* 80253204 000002DC  48 10 89 79 */	bl GXSetTexCoordGen2
-/* 80253208 000002E0  38 60 00 01 */	li r3, 1
-/* 8025320C 000002E4  48 10 C6 85 */	bl GXSetNumTevStages
-/* 80253210 000002E8  38 60 00 00 */	li r3, 0
-/* 80253214 000002EC  38 80 00 00 */	li r4, 0
-/* 80253218 000002F0  38 A0 00 00 */	li r5, 0
-/* 8025321C 000002F4  38 C0 00 04 */	li r6, 4
-/* 80253220 000002F8  48 10 C4 D5 */	bl GXSetTevOrder
-/* 80253224 000002FC  38 60 00 00 */	li r3, 0
-/* 80253228 00000300  38 80 00 0F */	li r4, 0xf
-/* 8025322C 00000304  38 A0 00 0A */	li r5, 0xa
-/* 80253230 00000308  38 C0 00 08 */	li r6, 8
-/* 80253234 0000030C  38 E0 00 0F */	li r7, 0xf
-/* 80253238 00000310  48 10 BF ED */	bl GXSetTevColorIn
-/* 8025323C 00000314  38 60 00 00 */	li r3, 0
-/* 80253240 00000318  38 80 00 00 */	li r4, 0
-/* 80253244 0000031C  38 A0 00 00 */	li r5, 0
-/* 80253248 00000320  38 C0 00 00 */	li r6, 0
-/* 8025324C 00000324  38 E0 00 01 */	li r7, 1
-/* 80253250 00000328  39 00 00 00 */	li r8, 0
-/* 80253254 0000032C  48 10 C0 59 */	bl GXSetTevColorOp
-/* 80253258 00000330  38 60 00 00 */	li r3, 0
-/* 8025325C 00000334  38 80 00 07 */	li r4, 7
-/* 80253260 00000338  38 A0 00 07 */	li r5, 7
-/* 80253264 0000033C  38 C0 00 07 */	li r6, 7
-/* 80253268 00000340  38 E0 00 07 */	li r7, 7
-/* 8025326C 00000344  48 10 BF FD */	bl GXSetTevAlphaIn
-/* 80253270 00000348  38 60 00 00 */	li r3, 0
-/* 80253274 0000034C  38 80 00 00 */	li r4, 0
-/* 80253278 00000350  38 A0 00 00 */	li r5, 0
-/* 8025327C 00000354  38 C0 00 00 */	li r6, 0
-/* 80253280 00000358  38 E0 00 01 */	li r7, 1
-/* 80253284 0000035C  39 00 00 00 */	li r8, 0
-/* 80253288 00000360  48 10 C0 8D */	bl GXSetTevAlphaOp
-/* 8025328C 00000364  38 60 00 01 */	li r3, 1
-/* 80253290 00000368  48 10 CA 41 */	bl GXSetZCompLoc
-/* 80253294 0000036C  38 60 00 00 */	li r3, 0
-/* 80253298 00000370  38 80 00 07 */	li r4, 7
-/* 8025329C 00000374  38 A0 00 00 */	li r5, 0
-/* 802532A0 00000378  48 10 C9 FD */	bl GXSetZMode
-/* 802532A4 0000037C  38 60 00 00 */	li r3, 0
-/* 802532A8 00000380  38 80 00 04 */	li r4, 4
-/* 802532AC 00000384  38 A0 00 05 */	li r5, 5
-/* 802532B0 00000388  38 C0 00 00 */	li r6, 0
-/* 802532B4 0000038C  48 10 C9 3D */	bl GXSetBlendMode
-/* 802532B8 00000390  38 60 00 07 */	li r3, 7
-/* 802532BC 00000394  38 80 00 00 */	li r4, 0
-/* 802532C0 00000398  38 A0 00 01 */	li r5, 1
-/* 802532C4 0000039C  38 C0 00 07 */	li r6, 7
-/* 802532C8 000003A0  38 E0 00 00 */	li r7, 0
-/* 802532CC 000003A4  48 10 C3 59 */	bl GXSetAlphaCompare
-/* 802532D0 000003A8  80 0D 80 80 */	lwz r0, g_clearColor(r13)
-/* 802532D4 000003AC  90 01 00 08 */	stw r0, 8(r1)
-/* 802532D8 000003B0  38 60 00 00 */	li r3, 0
-/* 802532DC 000003B4  C0 22 B4 5C */	lfs f1, lit_3800(r2)
-/* 802532E0 000003B8  FC 40 08 90 */	fmr f2, f1
-/* 802532E4 000003BC  FC 60 08 90 */	fmr f3, f1
-/* 802532E8 000003C0  FC 80 08 90 */	fmr f4, f1
-/* 802532EC 000003C4  38 81 00 08 */	addi r4, r1, 8
-/* 802532F0 000003C8  48 10 C5 C9 */	bl GXSetFog
-/* 802532F4 000003CC  38 60 00 00 */	li r3, 0
-/* 802532F8 000003D0  48 10 96 8D */	bl GXSetCullMode
-/* 802532FC 000003D4  38 60 00 01 */	li r3, 1
-/* 80253300 000003D8  48 10 CA D9 */	bl GXSetDither
-/* 80253304 000003DC  38 60 00 00 */	li r3, 0
-/* 80253308 000003E0  48 10 D2 C9 */	bl GXSetClipMode
-/* 8025330C 000003E4  38 7F 00 04 */	addi r3, r31, 4
-/* 80253310 000003E8  38 80 00 00 */	li r4, 0
-/* 80253314 000003EC  48 10 CF 39 */	bl GXLoadPosMtxImm
-/* 80253318 000003F0  38 60 00 00 */	li r3, 0
-/* 8025331C 000003F4  48 10 CF D1 */	bl GXSetCurrentMtx
-/* 80253320 000003F8  48 10 82 6D */	bl GXClearVtxDesc
-/* 80253324 000003FC  38 60 00 09 */	li r3, 9
-/* 80253328 00000400  38 80 00 01 */	li r4, 1
-/* 8025332C 00000404  48 10 7B 8D */	bl GXSetVtxDesc
-/* 80253330 00000408  38 60 00 0D */	li r3, 0xd
-/* 80253334 0000040C  38 80 00 01 */	li r4, 1
-/* 80253338 00000410  48 10 7B 81 */	bl GXSetVtxDesc
-/* 8025333C 00000414  38 60 00 00 */	li r3, 0
-/* 80253340 00000418  38 80 00 09 */	li r4, 9
-/* 80253344 0000041C  38 A0 00 00 */	li r5, 0
-/* 80253348 00000420  38 C0 00 03 */	li r6, 3
-/* 8025334C 00000424  38 E0 00 00 */	li r7, 0
-/* 80253350 00000428  48 10 82 75 */	bl GXSetVtxAttrFmt
-/* 80253354 0000042C  38 60 00 00 */	li r3, 0
-/* 80253358 00000430  38 80 00 0D */	li r4, 0xd
-/* 8025335C 00000434  38 A0 00 01 */	li r5, 1
-/* 80253360 00000438  38 C0 00 01 */	li r6, 1
-/* 80253364 0000043C  38 E0 00 00 */	li r7, 0
-/* 80253368 00000440  48 10 82 5D */	bl GXSetVtxAttrFmt
-/* 8025336C 00000444  38 60 00 80 */	li r3, 0x80
-/* 80253370 00000448  38 80 00 00 */	li r4, 0
-/* 80253374 0000044C  38 A0 00 04 */	li r5, 4
-/* 80253378 00000450  48 10 93 ED */	bl GXBegin
-/* 8025337C 00000454  38 C0 FE D0 */	li r6, -304
-/* 80253380 00000458  3C A0 CC 01 */	lis r5, 0xCC01 /* 0xCC008000@ha */
-/* 80253384 0000045C  B0 C5 80 00 */	sth r6, 0x8000(r5)
-/* 80253388 00000460  38 60 00 E0 */	li r3, 0xe0
-/* 8025338C 00000464  B0 65 80 00 */	sth r3, -0x8000(r5)	/* effective address: CC008000 */
-/* 80253390 00000468  38 80 00 00 */	li r4, 0
-/* 80253394 0000046C  98 85 80 00 */	stb r4, -0x8000(r5)	/* effective address: CC008000 */
-/* 80253398 00000470  98 85 80 00 */	stb r4, -0x8000(r5)	/* effective address: CC008000 */
-/* 8025339C 00000474  38 00 01 30 */	li r0, 0x130
-/* 802533A0 00000478  B0 05 80 00 */	sth r0, -0x8000(r5)	/* effective address: CC008000 */
-/* 802533A4 0000047C  B0 65 80 00 */	sth r3, -0x8000(r5)	/* effective address: CC008000 */
-/* 802533A8 00000480  38 60 00 01 */	li r3, 1
-/* 802533AC 00000484  98 65 80 00 */	stb r3, -0x8000(r5)	/* effective address: CC008000 */
-/* 802533B0 00000488  98 85 80 00 */	stb r4, -0x8000(r5)	/* effective address: CC008000 */
-/* 802533B4 0000048C  B0 05 80 00 */	sth r0, -0x8000(r5)	/* effective address: CC008000 */
-/* 802533B8 00000490  38 00 FF 20 */	li r0, -224
-/* 802533BC 00000494  B0 05 80 00 */	sth r0, -0x8000(r5)	/* effective address: CC008000 */
-/* 802533C0 00000498  98 65 80 00 */	stb r3, -0x8000(r5)	/* effective address: CC008000 */
-/* 802533C4 0000049C  98 65 80 00 */	stb r3, -0x8000(r5)	/* effective address: CC008000 */
-/* 802533C8 000004A0  B0 C5 80 00 */	sth r6, -0x8000(r5)	/* effective address: CC008000 */
-/* 802533CC 000004A4  B0 05 80 00 */	sth r0, -0x8000(r5)	/* effective address: CC008000 */
-/* 802533D0 000004A8  98 85 80 00 */	stb r4, -0x8000(r5)	/* effective address: CC008000 */
-/* 802533D4 000004AC  98 65 80 00 */	stb r3, -0x8000(r5)	/* effective address: CC008000 */
-/* 802533D8 000004B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 802533DC 000004B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 802533E0 000004B8  83 E3 5F 50 */	lwz r31, 0x5f50(r3)	/* effective address: 8040C110 */
-/* 802533E4 000004BC  C0 02 B4 5C */	lfs f0, lit_3800(r2)
-/* 802533E8 000004C0  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 802533EC 000004C4  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 802533F0 000004C8  C0 02 B4 60 */	lfs f0, lit_3801(r2)
-/* 802533F4 000004CC  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 802533F8 000004D0  C0 02 B4 64 */	lfs f0, lit_3802(r2)
-/* 802533FC 000004D4  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 80253400 000004D8  7F E3 FB 78 */	mr r3, r31
-/* 80253404 000004DC  38 81 00 14 */	addi r4, r1, 0x14
-/* 80253408 000004E0  C0 22 B4 7C */	lfs f1, lit_3808(r2)
-/* 8025340C 000004E4  C0 42 B4 68 */	lfs f2, lit_3803(r2)
-/* 80253410 000004E8  48 09 63 FD */	bl func_802E980C
-/* 80253414 000004EC  7F E3 FB 78 */	mr r3, r31
-/* 80253418 000004F0  81 9F 00 00 */	lwz r12, 0(r31)
-/* 8025341C 000004F4  81 8C 00 18 */	lwz r12, 0x18(r12)
-/* 80253420 000004F8  7D 89 03 A6 */	mtctr r12
-/* 80253424 000004FC  4E 80 04 21 */	bctrl 
-/* 80253428 00000500  83 E1 00 6C */	lwz r31, 0x6c(r1)
-/* 8025342C 00000504  80 01 00 74 */	lwz r0, 0x74(r1)
-/* 80253430 00000508  7C 08 03 A6 */	mtlr r0
-/* 80253434 0000050C  38 21 00 70 */	addi r1, r1, 0x70
-/* 80253438 00000510  4E 80 00 20 */	blr 
+/* 80252F28  94 21 FF 90 */	stwu r1, -0x70(r1)                      
+/* 80252F2C  7C 08 02 A6 */	mflr r0                                 
+/* 80252F30  90 01 00 74 */	stw r0, 0x74(r1)                        
+/* 80252F34  93 E1 00 6C */	stw r31, 0x6c(r1)                       
+/* 80252F38  7C 7F 1B 78 */	mr r31, r3                              
+/* 80252F3C  C0 22 B4 5C */	lfs f1, lit_3800(r2)                     /* constant-address: 80454E5C, symbol: lit_3800 */
+/* 80252F40  FC 40 08 90 */	fmr f2, f1                              
+/* 80252F44  C0 62 B4 60 */	lfs f3, lit_3801(r2)                     /* constant-address: 80454E60, symbol: lit_3801 */
+/* 80252F48  C0 82 B4 64 */	lfs f4, lit_3802(r2)                     /* constant-address: 80454E64, symbol: lit_3802 */
+/* 80252F4C  FC A0 08 90 */	fmr f5, f1                              
+/* 80252F50  C0 C2 B4 68 */	lfs f6, lit_3803(r2)                     /* constant-address: 80454E68, symbol: lit_3803 */
+/* 80252F54  48 10 D5 11 */	bl GXSetViewport                         /* constant-address: 80360464, symbol: GXSetViewport */
+/* 80252F58  38 60 00 00 */	li r3, 0                                
+/* 80252F5C  38 80 00 00 */	li r4, 0                                
+/* 80252F60  38 A0 02 60 */	li r5, 0x260                            
+/* 80252F64  38 C0 01 C0 */	li r6, 0x1c0                            
+/* 80252F68  48 10 D5 69 */	bl GXSetScissor                          /* constant-address: 803604D0, symbol: GXSetScissor */
+/* 80252F6C  38 60 00 00 */	li r3, 0                                
+/* 80252F70  38 80 00 09 */	li r4, 9                                
+/* 80252F74  38 A0 00 00 */	li r5, 0                                
+/* 80252F78  38 C0 00 03 */	li r6, 3                                
+/* 80252F7C  38 E0 00 00 */	li r7, 0                                
+/* 80252F80  48 10 86 45 */	bl GXSetVtxAttrFmt                       /* constant-address: 8035B5C4, symbol: GXSetVtxAttrFmt */
+/* 80252F84  48 10 86 09 */	bl GXClearVtxDesc                        /* constant-address: 8035B58C, symbol: GXClearVtxDesc */
+/* 80252F88  38 60 00 09 */	li r3, 9                                
+/* 80252F8C  38 80 00 01 */	li r4, 1                                
+/* 80252F90  48 10 7F 29 */	bl GXSetVtxDesc                          /* constant-address: 8035AEB8, symbol: GXSetVtxDesc */
+/* 80252F94  38 60 00 01 */	li r3, 1                                
+/* 80252F98  48 10 AB 99 */	bl GXSetNumChans                         /* constant-address: 8035DB30, symbol: GXSetNumChans */
+/* 80252F9C  38 60 00 04 */	li r3, 4                                
+/* 80252FA0  38 80 00 00 */	li r4, 0                                
+/* 80252FA4  38 A0 00 00 */	li r5, 0                                
+/* 80252FA8  38 C0 00 00 */	li r6, 0                                
+/* 80252FAC  38 E0 00 00 */	li r7, 0                                
+/* 80252FB0  39 00 00 00 */	li r8, 0                                
+/* 80252FB4  39 20 00 02 */	li r9, 2                                
+/* 80252FB8  48 10 AB B5 */	bl GXSetChanCtrl                         /* constant-address: 8035DB6C, symbol: GXSetChanCtrl */
+/* 80252FBC  38 60 00 00 */	li r3, 0                                
+/* 80252FC0  48 10 8E 3D */	bl GXSetNumTexGens                       /* constant-address: 8035BDFC, symbol: GXSetNumTexGens */
+/* 80252FC4  38 60 00 01 */	li r3, 1                                
+/* 80252FC8  48 10 C8 C9 */	bl GXSetNumTevStages                     /* constant-address: 8035F890, symbol: GXSetNumTevStages */
+/* 80252FCC  38 60 00 00 */	li r3, 0                                
+/* 80252FD0  38 80 00 FF */	li r4, 0xff                             
+/* 80252FD4  38 A0 00 FF */	li r5, 0xff                             
+/* 80252FD8  38 C0 00 04 */	li r6, 4                                
+/* 80252FDC  48 10 C7 19 */	bl GXSetTevOrder                         /* constant-address: 8035F6F4, symbol: GXSetTevOrder */
+/* 80252FE0  38 60 00 00 */	li r3, 0                                
+/* 80252FE4  38 80 00 0F */	li r4, 0xf                              
+/* 80252FE8  38 A0 00 0F */	li r5, 0xf                              
+/* 80252FEC  38 C0 00 0F */	li r6, 0xf                              
+/* 80252FF0  38 E0 00 0F */	li r7, 0xf                              
+/* 80252FF4  48 10 C2 31 */	bl GXSetTevColorIn                       /* constant-address: 8035F224, symbol: GXSetTevColorIn */
+/* 80252FF8  38 60 00 00 */	li r3, 0                                
+/* 80252FFC  38 80 00 00 */	li r4, 0                                
+/* 80253000  38 A0 00 00 */	li r5, 0                                
+/* 80253004  38 C0 00 00 */	li r6, 0                                
+/* 80253008  38 E0 00 01 */	li r7, 1                                
+/* 8025300C  39 00 00 00 */	li r8, 0                                
+/* 80253010  48 10 C2 9D */	bl GXSetTevColorOp                       /* constant-address: 8035F2AC, symbol: GXSetTevColorOp */
+/* 80253014  38 60 00 00 */	li r3, 0                                
+/* 80253018  38 80 00 07 */	li r4, 7                                
+/* 8025301C  38 A0 00 07 */	li r5, 7                                
+/* 80253020  38 C0 00 07 */	li r6, 7                                
+/* 80253024  38 E0 00 07 */	li r7, 7                                
+/* 80253028  48 10 C2 41 */	bl GXSetTevAlphaIn                       /* constant-address: 8035F268, symbol: GXSetTevAlphaIn */
+/* 8025302C  38 60 00 00 */	li r3, 0                                
+/* 80253030  38 80 00 00 */	li r4, 0                                
+/* 80253034  38 A0 00 00 */	li r5, 0                                
+/* 80253038  38 C0 00 00 */	li r6, 0                                
+/* 8025303C  38 E0 00 01 */	li r7, 1                                
+/* 80253040  39 00 00 00 */	li r8, 0                                
+/* 80253044  48 10 C2 D1 */	bl GXSetTevAlphaOp                       /* constant-address: 8035F314, symbol: GXSetTevAlphaOp */
+/* 80253048  38 60 00 01 */	li r3, 1                                
+/* 8025304C  48 10 CC 85 */	bl GXSetZCompLoc                         /* constant-address: 8035FCD0, symbol: GXSetZCompLoc */
+/* 80253050  38 60 00 00 */	li r3, 0                                
+/* 80253054  38 80 00 07 */	li r4, 7                                
+/* 80253058  38 A0 00 00 */	li r5, 0                                
+/* 8025305C  48 10 CC 41 */	bl GXSetZMode                            /* constant-address: 8035FC9C, symbol: GXSetZMode */
+/* 80253060  38 60 00 00 */	li r3, 0                                
+/* 80253064  38 80 00 04 */	li r4, 4                                
+/* 80253068  38 A0 00 05 */	li r5, 5                                
+/* 8025306C  38 C0 00 00 */	li r6, 0                                
+/* 80253070  48 10 CB 81 */	bl GXSetBlendMode                        /* constant-address: 8035FBF0, symbol: GXSetBlendMode */
+/* 80253074  38 60 00 07 */	li r3, 7                                
+/* 80253078  38 80 00 00 */	li r4, 0                                
+/* 8025307C  38 A0 00 01 */	li r5, 1                                
+/* 80253080  38 C0 00 07 */	li r6, 7                                
+/* 80253084  38 E0 00 00 */	li r7, 0                                
+/* 80253088  48 10 C5 9D */	bl GXSetAlphaCompare                     /* constant-address: 8035F624, symbol: GXSetAlphaCompare */
+/* 8025308C  80 0D 80 80 */	lwz r0, g_clearColor(r13)                /* constant-address: 80450600, symbol: g_clearColor */
+/* 80253090  90 01 00 10 */	stw r0, 0x10(r1)                        
+/* 80253094  38 60 00 00 */	li r3, 0                                
+/* 80253098  C0 22 B4 5C */	lfs f1, lit_3800(r2)                     /* constant-address: 80454E5C, symbol: lit_3800 */
+/* 8025309C  FC 40 08 90 */	fmr f2, f1                              
+/* 802530A0  FC 60 08 90 */	fmr f3, f1                              
+/* 802530A4  FC 80 08 90 */	fmr f4, f1                              
+/* 802530A8  38 81 00 10 */	addi r4, r1, 0x10                       
+/* 802530AC  48 10 C8 0D */	bl GXSetFog                              /* constant-address: 8035F8B8, symbol: GXSetFog */
+/* 802530B0  38 60 00 00 */	li r3, 0                                
+/* 802530B4  48 10 98 D1 */	bl GXSetCullMode                         /* constant-address: 8035C984, symbol: GXSetCullMode */
+/* 802530B8  38 60 00 01 */	li r3, 1                                
+/* 802530BC  48 10 CD 1D */	bl GXSetDither                           /* constant-address: 8035FDD8, symbol: GXSetDither */
+/* 802530C0  38 60 00 01 */	li r3, 1                                
+/* 802530C4  48 10 D5 0D */	bl GXSetClipMode                         /* constant-address: 803605D0, symbol: GXSetClipMode */
+/* 802530C8  3C 60 80 3A */	lis r3, g_mDoMtx_identity@ha            
+/* 802530CC  38 63 2F D8 */	addi r3, r3, g_mDoMtx_identity@l         /* constant-address: 803A2FD8, symbol: g_mDoMtx_identity */
+/* 802530D0  38 80 00 00 */	li r4, 0                                
+/* 802530D4  48 10 D1 79 */	bl GXLoadPosMtxImm                       /* constant-address: 8036024C, symbol: GXLoadPosMtxImm */
+/* 802530D8  38 60 00 00 */	li r3, 0                                
+/* 802530DC  48 10 D2 11 */	bl GXSetCurrentMtx                       /* constant-address: 803602EC, symbol: GXSetCurrentMtx */
+/* 802530E0  38 60 00 80 */	li r3, 0x80                             
+/* 802530E4  38 80 00 00 */	li r4, 0                                
+/* 802530E8  38 A0 00 04 */	li r5, 4                                
+/* 802530EC  48 10 96 79 */	bl GXBegin                               /* constant-address: 8035C764, symbol: GXBegin */
+/* 802530F0  38 80 00 00 */	li r4, 0                                
+/* 802530F4  3C 60 CC 01 */	lis r3, 0xCC01 /* 0xCC008000@ha */      
+/* 802530F8  B0 83 80 00 */	sth r4, 0x8000(r3)                       /* constant-address: CC008000 */
+/* 802530FC  B0 83 80 00 */	sth r4, -0x8000(r3)                      /* constant-address: CC008000 */
+/* 80253100  38 00 02 60 */	li r0, 0x260                            
+/* 80253104  B0 03 80 00 */	sth r0, -0x8000(r3)                      /* constant-address: CC008000 */
+/* 80253108  B0 83 80 00 */	sth r4, -0x8000(r3)                      /* constant-address: CC008000 */
+/* 8025310C  B0 03 80 00 */	sth r0, -0x8000(r3)                      /* constant-address: CC008000 */
+/* 80253110  38 00 01 C0 */	li r0, 0x1c0                            
+/* 80253114  B0 03 80 00 */	sth r0, -0x8000(r3)                      /* constant-address: CC008000 */
+/* 80253118  B0 83 80 00 */	sth r4, -0x8000(r3)                      /* constant-address: CC008000 */
+/* 8025311C  B0 03 80 00 */	sth r0, -0x8000(r3)                      /* constant-address: CC008000 */
+/* 80253120  38 61 00 24 */	addi r3, r1, 0x24                       
+/* 80253124  C0 22 B4 6C */	lfs f1, lit_3804(r2)                     /* constant-address: 80454E6C, symbol: lit_3804 */
+/* 80253128  C0 42 B4 70 */	lfs f2, lit_3805(r2)                     /* constant-address: 80454E70, symbol: lit_3805 */
+/* 8025312C  C0 62 B4 74 */	lfs f3, lit_3806(r2)                     /* constant-address: 80454E74, symbol: lit_3806 */
+/* 80253130  C0 82 B4 78 */	lfs f4, lit_3807(r2)                     /* constant-address: 80454E78, symbol: lit_3807 */
+/* 80253134  48 0F 3D F5 */	bl C_MTXPerspective                      /* constant-address: 80346F28, symbol: C_MTXPerspective */
+/* 80253138  38 61 00 24 */	addi r3, r1, 0x24                       
+/* 8025313C  38 80 00 00 */	li r4, 0                                
+/* 80253140  48 10 CF 95 */	bl GXSetProjection                       /* constant-address: 803600D4, symbol: GXSetProjection */
+/* 80253144  3C 60 80 3E */	lis r3, mFrameBufferTexObj__13mDoGph_gInf_c@ha
+/* 80253148  38 63 D3 E8 */	addi r3, r3, mFrameBufferTexObj__13mDoGph_gInf_c@l /* constant-address: 803DD3E8, symbol: mFrameBufferTexObj__13mDoGph_gInf_c */
+/* 8025314C  80 8D 86 50 */	lwz r4, mFrameBufferTex__13mDoGph_gInf_c(r13) /* constant-address: 80450BD0, symbol: mFrameBufferTex__13mDoGph_gInf_c */
+/* 80253150  38 A0 01 30 */	li r5, 0x130                            
+/* 80253154  38 C0 00 E0 */	li r6, 0xe0                             
+/* 80253158  38 E0 00 06 */	li r7, 6                                
+/* 8025315C  39 00 00 00 */	li r8, 0                                
+/* 80253160  39 20 00 00 */	li r9, 0                                
+/* 80253164  39 40 00 00 */	li r10, 0                               
+/* 80253168  48 10 AC D9 */	bl GXInitTexObj                          /* constant-address: 8035DE40, symbol: GXInitTexObj */
+/* 8025316C  3C 60 80 3E */	lis r3, mFrameBufferTexObj__13mDoGph_gInf_c@ha
+/* 80253170  38 63 D3 E8 */	addi r3, r3, mFrameBufferTexObj__13mDoGph_gInf_c@l /* constant-address: 803DD3E8, symbol: mFrameBufferTexObj__13mDoGph_gInf_c */
+/* 80253174  38 80 00 01 */	li r4, 1                                
+/* 80253178  38 A0 00 01 */	li r5, 1                                
+/* 8025317C  C0 22 B4 5C */	lfs f1, lit_3800(r2)                     /* constant-address: 80454E5C, symbol: lit_3800 */
+/* 80253180  FC 40 08 90 */	fmr f2, f1                              
+/* 80253184  FC 60 08 90 */	fmr f3, f1                              
+/* 80253188  38 C0 00 00 */	li r6, 0                                
+/* 8025318C  38 E0 00 00 */	li r7, 0                                
+/* 80253190  39 00 00 00 */	li r8, 0                                
+/* 80253194  48 10 AF 41 */	bl GXInitTexObjLOD                       /* constant-address: 8035E0D4, symbol: GXInitTexObjLOD */
+/* 80253198  3C 60 80 3E */	lis r3, mFrameBufferTexObj__13mDoGph_gInf_c@ha
+/* 8025319C  38 63 D3 E8 */	addi r3, r3, mFrameBufferTexObj__13mDoGph_gInf_c@l /* constant-address: 803DD3E8, symbol: mFrameBufferTexObj__13mDoGph_gInf_c */
+/* 802531A0  38 80 00 00 */	li r4, 0                                
+/* 802531A4  48 10 B2 71 */	bl GXLoadTexObj                          /* constant-address: 8035E414, symbol: GXLoadTexObj */
+/* 802531A8  38 60 00 01 */	li r3, 1                                
+/* 802531AC  48 10 A9 85 */	bl GXSetNumChans                         /* constant-address: 8035DB30, symbol: GXSetNumChans */
+/* 802531B0  38 60 00 00 */	li r3, 0                                
+/* 802531B4  38 80 00 00 */	li r4, 0                                
+/* 802531B8  38 A0 00 00 */	li r5, 0                                
+/* 802531BC  38 C0 00 00 */	li r6, 0                                
+/* 802531C0  38 E0 00 00 */	li r7, 0                                
+/* 802531C4  39 00 00 00 */	li r8, 0                                
+/* 802531C8  39 20 00 02 */	li r9, 2                                
+/* 802531CC  48 10 A9 A1 */	bl GXSetChanCtrl                         /* constant-address: 8035DB6C, symbol: GXSetChanCtrl */
+/* 802531D0  80 02 B4 58 */	lwz r0, lit_3748(r2)                     /* constant-address: 80454E58, symbol: lit_3748 */
+/* 802531D4  90 01 00 0C */	stw r0, 0xc(r1)                         
+/* 802531D8  38 60 00 00 */	li r3, 0                                
+/* 802531DC  38 81 00 0C */	addi r4, r1, 0xc                        
+/* 802531E0  48 10 A8 69 */	bl GXSetChanMatColor                     /* constant-address: 8035DA48, symbol: GXSetChanMatColor */
+/* 802531E4  38 60 00 01 */	li r3, 1                                
+/* 802531E8  48 10 8C 15 */	bl GXSetNumTexGens                       /* constant-address: 8035BDFC, symbol: GXSetNumTexGens */
+/* 802531EC  38 60 00 00 */	li r3, 0                                
+/* 802531F0  38 80 00 01 */	li r4, 1                                
+/* 802531F4  38 A0 00 04 */	li r5, 4                                
+/* 802531F8  38 C0 00 3C */	li r6, 0x3c                             
+/* 802531FC  38 E0 00 00 */	li r7, 0                                
+/* 80253200  39 00 00 7D */	li r8, 0x7d                             
+/* 80253204  48 10 89 79 */	bl GXSetTexCoordGen2                     /* constant-address: 8035BB7C, symbol: GXSetTexCoordGen2 */
+/* 80253208  38 60 00 01 */	li r3, 1                                
+/* 8025320C  48 10 C6 85 */	bl GXSetNumTevStages                     /* constant-address: 8035F890, symbol: GXSetNumTevStages */
+/* 80253210  38 60 00 00 */	li r3, 0                                
+/* 80253214  38 80 00 00 */	li r4, 0                                
+/* 80253218  38 A0 00 00 */	li r5, 0                                
+/* 8025321C  38 C0 00 04 */	li r6, 4                                
+/* 80253220  48 10 C4 D5 */	bl GXSetTevOrder                         /* constant-address: 8035F6F4, symbol: GXSetTevOrder */
+/* 80253224  38 60 00 00 */	li r3, 0                                
+/* 80253228  38 80 00 0F */	li r4, 0xf                              
+/* 8025322C  38 A0 00 0A */	li r5, 0xa                              
+/* 80253230  38 C0 00 08 */	li r6, 8                                
+/* 80253234  38 E0 00 0F */	li r7, 0xf                              
+/* 80253238  48 10 BF ED */	bl GXSetTevColorIn                       /* constant-address: 8035F224, symbol: GXSetTevColorIn */
+/* 8025323C  38 60 00 00 */	li r3, 0                                
+/* 80253240  38 80 00 00 */	li r4, 0                                
+/* 80253244  38 A0 00 00 */	li r5, 0                                
+/* 80253248  38 C0 00 00 */	li r6, 0                                
+/* 8025324C  38 E0 00 01 */	li r7, 1                                
+/* 80253250  39 00 00 00 */	li r8, 0                                
+/* 80253254  48 10 C0 59 */	bl GXSetTevColorOp                       /* constant-address: 8035F2AC, symbol: GXSetTevColorOp */
+/* 80253258  38 60 00 00 */	li r3, 0                                
+/* 8025325C  38 80 00 07 */	li r4, 7                                
+/* 80253260  38 A0 00 07 */	li r5, 7                                
+/* 80253264  38 C0 00 07 */	li r6, 7                                
+/* 80253268  38 E0 00 07 */	li r7, 7                                
+/* 8025326C  48 10 BF FD */	bl GXSetTevAlphaIn                       /* constant-address: 8035F268, symbol: GXSetTevAlphaIn */
+/* 80253270  38 60 00 00 */	li r3, 0                                
+/* 80253274  38 80 00 00 */	li r4, 0                                
+/* 80253278  38 A0 00 00 */	li r5, 0                                
+/* 8025327C  38 C0 00 00 */	li r6, 0                                
+/* 80253280  38 E0 00 01 */	li r7, 1                                
+/* 80253284  39 00 00 00 */	li r8, 0                                
+/* 80253288  48 10 C0 8D */	bl GXSetTevAlphaOp                       /* constant-address: 8035F314, symbol: GXSetTevAlphaOp */
+/* 8025328C  38 60 00 01 */	li r3, 1                                
+/* 80253290  48 10 CA 41 */	bl GXSetZCompLoc                         /* constant-address: 8035FCD0, symbol: GXSetZCompLoc */
+/* 80253294  38 60 00 00 */	li r3, 0                                
+/* 80253298  38 80 00 07 */	li r4, 7                                
+/* 8025329C  38 A0 00 00 */	li r5, 0                                
+/* 802532A0  48 10 C9 FD */	bl GXSetZMode                            /* constant-address: 8035FC9C, symbol: GXSetZMode */
+/* 802532A4  38 60 00 00 */	li r3, 0                                
+/* 802532A8  38 80 00 04 */	li r4, 4                                
+/* 802532AC  38 A0 00 05 */	li r5, 5                                
+/* 802532B0  38 C0 00 00 */	li r6, 0                                
+/* 802532B4  48 10 C9 3D */	bl GXSetBlendMode                        /* constant-address: 8035FBF0, symbol: GXSetBlendMode */
+/* 802532B8  38 60 00 07 */	li r3, 7                                
+/* 802532BC  38 80 00 00 */	li r4, 0                                
+/* 802532C0  38 A0 00 01 */	li r5, 1                                
+/* 802532C4  38 C0 00 07 */	li r6, 7                                
+/* 802532C8  38 E0 00 00 */	li r7, 0                                
+/* 802532CC  48 10 C3 59 */	bl GXSetAlphaCompare                     /* constant-address: 8035F624, symbol: GXSetAlphaCompare */
+/* 802532D0  80 0D 80 80 */	lwz r0, g_clearColor(r13)                /* constant-address: 80450600, symbol: g_clearColor */
+/* 802532D4  90 01 00 08 */	stw r0, 8(r1)                           
+/* 802532D8  38 60 00 00 */	li r3, 0                                
+/* 802532DC  C0 22 B4 5C */	lfs f1, lit_3800(r2)                     /* constant-address: 80454E5C, symbol: lit_3800 */
+/* 802532E0  FC 40 08 90 */	fmr f2, f1                              
+/* 802532E4  FC 60 08 90 */	fmr f3, f1                              
+/* 802532E8  FC 80 08 90 */	fmr f4, f1                              
+/* 802532EC  38 81 00 08 */	addi r4, r1, 8                          
+/* 802532F0  48 10 C5 C9 */	bl GXSetFog                              /* constant-address: 8035F8B8, symbol: GXSetFog */
+/* 802532F4  38 60 00 00 */	li r3, 0                                
+/* 802532F8  48 10 96 8D */	bl GXSetCullMode                         /* constant-address: 8035C984, symbol: GXSetCullMode */
+/* 802532FC  38 60 00 01 */	li r3, 1                                
+/* 80253300  48 10 CA D9 */	bl GXSetDither                           /* constant-address: 8035FDD8, symbol: GXSetDither */
+/* 80253304  38 60 00 00 */	li r3, 0                                
+/* 80253308  48 10 D2 C9 */	bl GXSetClipMode                         /* constant-address: 803605D0, symbol: GXSetClipMode */
+/* 8025330C  38 7F 00 04 */	addi r3, r31, 4                         
+/* 80253310  38 80 00 00 */	li r4, 0                                
+/* 80253314  48 10 CF 39 */	bl GXLoadPosMtxImm                       /* constant-address: 8036024C, symbol: GXLoadPosMtxImm */
+/* 80253318  38 60 00 00 */	li r3, 0                                
+/* 8025331C  48 10 CF D1 */	bl GXSetCurrentMtx                       /* constant-address: 803602EC, symbol: GXSetCurrentMtx */
+/* 80253320  48 10 82 6D */	bl GXClearVtxDesc                        /* constant-address: 8035B58C, symbol: GXClearVtxDesc */
+/* 80253324  38 60 00 09 */	li r3, 9                                
+/* 80253328  38 80 00 01 */	li r4, 1                                
+/* 8025332C  48 10 7B 8D */	bl GXSetVtxDesc                          /* constant-address: 8035AEB8, symbol: GXSetVtxDesc */
+/* 80253330  38 60 00 0D */	li r3, 0xd                              
+/* 80253334  38 80 00 01 */	li r4, 1                                
+/* 80253338  48 10 7B 81 */	bl GXSetVtxDesc                          /* constant-address: 8035AEB8, symbol: GXSetVtxDesc */
+/* 8025333C  38 60 00 00 */	li r3, 0                                
+/* 80253340  38 80 00 09 */	li r4, 9                                
+/* 80253344  38 A0 00 00 */	li r5, 0                                
+/* 80253348  38 C0 00 03 */	li r6, 3                                
+/* 8025334C  38 E0 00 00 */	li r7, 0                                
+/* 80253350  48 10 82 75 */	bl GXSetVtxAttrFmt                       /* constant-address: 8035B5C4, symbol: GXSetVtxAttrFmt */
+/* 80253354  38 60 00 00 */	li r3, 0                                
+/* 80253358  38 80 00 0D */	li r4, 0xd                              
+/* 8025335C  38 A0 00 01 */	li r5, 1                                
+/* 80253360  38 C0 00 01 */	li r6, 1                                
+/* 80253364  38 E0 00 00 */	li r7, 0                                
+/* 80253368  48 10 82 5D */	bl GXSetVtxAttrFmt                       /* constant-address: 8035B5C4, symbol: GXSetVtxAttrFmt */
+/* 8025336C  38 60 00 80 */	li r3, 0x80                             
+/* 80253370  38 80 00 00 */	li r4, 0                                
+/* 80253374  38 A0 00 04 */	li r5, 4                                
+/* 80253378  48 10 93 ED */	bl GXBegin                               /* constant-address: 8035C764, symbol: GXBegin */
+/* 8025337C  38 C0 FE D0 */	li r6, -304                             
+/* 80253380  3C A0 CC 01 */	lis r5, 0xCC01 /* 0xCC008000@ha */      
+/* 80253384  B0 C5 80 00 */	sth r6, 0x8000(r5)                       /* constant-address: CC008000 */
+/* 80253388  38 60 00 E0 */	li r3, 0xe0                             
+/* 8025338C  B0 65 80 00 */	sth r3, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 80253390  38 80 00 00 */	li r4, 0                                
+/* 80253394  98 85 80 00 */	stb r4, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 80253398  98 85 80 00 */	stb r4, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 8025339C  38 00 01 30 */	li r0, 0x130                            
+/* 802533A0  B0 05 80 00 */	sth r0, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 802533A4  B0 65 80 00 */	sth r3, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 802533A8  38 60 00 01 */	li r3, 1                                
+/* 802533AC  98 65 80 00 */	stb r3, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 802533B0  98 85 80 00 */	stb r4, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 802533B4  B0 05 80 00 */	sth r0, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 802533B8  38 00 FF 20 */	li r0, -224                             
+/* 802533BC  B0 05 80 00 */	sth r0, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 802533C0  98 65 80 00 */	stb r3, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 802533C4  98 65 80 00 */	stb r3, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 802533C8  B0 C5 80 00 */	sth r6, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 802533CC  B0 05 80 00 */	sth r0, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 802533D0  98 85 80 00 */	stb r4, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 802533D4  98 65 80 00 */	stb r3, -0x8000(r5)                      /* constant-address: CC008000 */
+/* 802533D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha           
+/* 802533DC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l        /* constant-address: 804061C0, symbol: g_dComIfG_gameInfo */
+/* 802533E0  83 E3 5F 50 */	lwz r31, 0x5f50(r3)                      /* constant-address: 8040C110, symbol: None */
+/* 802533E4  C0 02 B4 5C */	lfs f0, lit_3800(r2)                     /* constant-address: 80454E5C, symbol: lit_3800 */
+/* 802533E8  D0 01 00 14 */	stfs f0, 0x14(r1)                       
+/* 802533EC  D0 01 00 18 */	stfs f0, 0x18(r1)                       
+/* 802533F0  C0 02 B4 60 */	lfs f0, lit_3801(r2)                     /* constant-address: 80454E60, symbol: lit_3801 */
+/* 802533F4  D0 01 00 1C */	stfs f0, 0x1c(r1)                       
+/* 802533F8  C0 02 B4 64 */	lfs f0, lit_3802(r2)                     /* constant-address: 80454E64, symbol: lit_3802 */
+/* 802533FC  D0 01 00 20 */	stfs f0, 0x20(r1)                       
+/* 80253400  7F E3 FB 78 */	mr r3, r31                              
+/* 80253404  38 81 00 14 */	addi r4, r1, 0x14                       
+/* 80253408  C0 22 B4 7C */	lfs f1, lit_3808(r2)                     /* constant-address: 80454E7C, symbol: lit_3808 */
+/* 8025340C  C0 42 B4 68 */	lfs f2, lit_3803(r2)                     /* constant-address: 80454E68, symbol: lit_3803 */
+/* 80253410  48 09 63 FD */	bl func_802E980C                         /* constant-address: 802E980C, symbol: func_802E980C */
+/* 80253414  7F E3 FB 78 */	mr r3, r31                              
+/* 80253418  81 9F 00 00 */	lwz r12, 0(r31)                         
+/* 8025341C  81 8C 00 18 */	lwz r12, 0x18(r12)                      
+/* 80253420  7D 89 03 A6 */	mtctr r12                               
+/* 80253424  4E 80 04 21 */	bctrl                                   
+/* 80253428  83 E1 00 6C */	lwz r31, 0x6c(r1)                       
+/* 8025342C  80 01 00 74 */	lwz r0, 0x74(r1)                        
+/* 80253430  7C 08 03 A6 */	mtlr r0                                 
+/* 80253434  38 21 00 70 */	addi r1, r1, 0x70                       
+/* 80253438  4E 80 00 20 */	blr                                     

@@ -1,20 +1,20 @@
 lbl_80021358:
-/* 80021358 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 8002135C 00000004  7C 08 02 A6 */	mflr r0
-/* 80021360 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80021364 0000000C  90 61 00 08 */	stw r3, 8(r1)
-/* 80021368 00000010  38 03 00 02 */	addi r0, r3, 2
-/* 8002136C 00000014  28 00 00 01 */	cmplwi r0, 1
-/* 80021370 00000018  41 81 00 0C */	bgt lbl_8002137C
-/* 80021374 0000001C  38 60 00 00 */	li r3, 0
-/* 80021378 00000020  48 00 00 14 */	b lbl_8002138C
+/* 80021358  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 8002135C  7C 08 02 A6 */	mflr r0                                 
+/* 80021360  90 01 00 14 */	stw r0, 0x14(r1)                        
+/* 80021364  90 61 00 08 */	stw r3, 8(r1)                           
+/* 80021368  38 03 00 02 */	addi r0, r3, 2                          
+/* 8002136C  28 00 00 01 */	cmplwi r0, 1                            
+/* 80021370  41 81 00 0C */	bgt lbl_8002137C                         /* constant-address: 8002137C, symbol: lbl_8002137C */
+/* 80021374  38 60 00 00 */	li r3, 0                                
+/* 80021378  48 00 00 14 */	b lbl_8002138C                           /* constant-address: 8002138C, symbol: lbl_8002138C */
 lbl_8002137C:
-/* 8002137C 00000000  3C 60 80 02 */	lis r3, fpcSch_JudgeByID__FPvPv@ha
-/* 80021380 00000004  38 63 35 90 */	addi r3, r3, fpcSch_JudgeByID__FPvPv@l
-/* 80021384 00000008  38 81 00 08 */	addi r4, r1, 8
-/* 80021388 0000000C  4B FF FF B1 */	bl fpcEx_Search__FPFPvPv_PvPv
+/* 8002137C  3C 60 80 02 */	lis r3, fpcSch_JudgeByID__FPvPv@ha      
+/* 80021380  38 63 35 90 */	addi r3, r3, fpcSch_JudgeByID__FPvPv@l   /* constant-address: 80023590, symbol: fpcSch_JudgeByID__FPvPv */
+/* 80021384  38 81 00 08 */	addi r4, r1, 8                          
+/* 80021388  4B FF FF B1 */	bl fpcEx_Search__FPFPvPv_PvPv            /* constant-address: 80021338, symbol: fpcEx_Search__FPFPvPv_PvPv */
 lbl_8002138C:
-/* 8002138C 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80021390 00000004  7C 08 03 A6 */	mtlr r0
-/* 80021394 00000008  38 21 00 10 */	addi r1, r1, 0x10
-/* 80021398 0000000C  4E 80 00 20 */	blr 
+/* 8002138C  80 01 00 14 */	lwz r0, 0x14(r1)                        
+/* 80021390  7C 08 03 A6 */	mtlr r0                                 
+/* 80021394  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 80021398  4E 80 00 20 */	blr                                     

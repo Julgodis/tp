@@ -1,3 +1,3 @@
 lbl_80232A3C:
-/* 80232A3C 00000000  A8 6D 8B 48 */	lha r3, s_groupID(r13)
-/* 80232A40 00000004  4E 80 00 20 */	blr 
+/* 80232A3C  A8 6D 8B 48 */	lha r3, s_groupID(r13)                   /* constant-address: 804510C8, symbol: s_groupID */
+/* 80232A40  4E 80 00 20 */	blr                                     

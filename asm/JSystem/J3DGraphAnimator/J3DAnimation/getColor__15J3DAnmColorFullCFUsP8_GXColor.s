@@ -1,102 +1,102 @@
 lbl_8032A990:
-/* 8032A990 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 8032A994 00000004  80 C3 00 3C */	lwz r6, 0x3c(r3)
-/* 8032A998 00000008  54 80 23 36 */	rlwinm r0, r4, 4, 0xc, 0x1b
-/* 8032A99C 0000000C  7C 86 02 14 */	add r4, r6, r0
-/* 8032A9A0 00000010  C0 23 00 08 */	lfs f1, 8(r3)
-/* 8032A9A4 00000014  C0 02 CA 34 */	lfs f0, lit_853(r2)
-/* 8032A9A8 00000018  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8032A9AC 00000000  40 80 00 48 */	bge lbl_8032A9F4
-/* 8032A9B0 00000004  80 C3 00 2C */	lwz r6, 0x2c(r3)
-/* 8032A9B4 00000008  A0 04 00 02 */	lhz r0, 2(r4)
-/* 8032A9B8 0000000C  7C 06 00 AE */	lbzx r0, r6, r0
-/* 8032A9BC 00000010  98 05 00 00 */	stb r0, 0(r5)
-/* 8032A9C0 00000014  80 C3 00 30 */	lwz r6, 0x30(r3)
-/* 8032A9C4 00000018  A0 04 00 06 */	lhz r0, 6(r4)
-/* 8032A9C8 0000001C  7C 06 00 AE */	lbzx r0, r6, r0
-/* 8032A9CC 00000020  98 05 00 01 */	stb r0, 1(r5)
-/* 8032A9D0 00000024  80 C3 00 34 */	lwz r6, 0x34(r3)
-/* 8032A9D4 00000028  A0 04 00 0A */	lhz r0, 0xa(r4)
-/* 8032A9D8 0000002C  7C 06 00 AE */	lbzx r0, r6, r0
-/* 8032A9DC 00000030  98 05 00 02 */	stb r0, 2(r5)
-/* 8032A9E0 00000034  80 63 00 38 */	lwz r3, 0x38(r3)
-/* 8032A9E4 00000038  A0 04 00 0E */	lhz r0, 0xe(r4)
-/* 8032A9E8 0000003C  7C 03 00 AE */	lbzx r0, r3, r0
-/* 8032A9EC 00000040  98 05 00 03 */	stb r0, 3(r5)
-/* 8032A9F0 00000044  48 00 01 08 */	b lbl_8032AAF8
+/* 8032A990  94 21 FF F0 */	stwu r1, -0x10(r1)                      
+/* 8032A994  80 C3 00 3C */	lwz r6, 0x3c(r3)                        
+/* 8032A998  54 80 23 36 */	rlwinm r0, r4, 4, 0xc, 0x1b             
+/* 8032A99C  7C 86 02 14 */	add r4, r6, r0                          
+/* 8032A9A0  C0 23 00 08 */	lfs f1, 8(r3)                           
+/* 8032A9A4  C0 02 CA 34 */	lfs f0, lit_853(r2)                      /* constant-address: 80456434, symbol: lit_853 */
+/* 8032A9A8  FC 01 00 40 */	fcmpo cr0, f1, f0                       
+/* 8032A9AC  40 80 00 48 */	bge lbl_8032A9F4                         /* constant-address: 8032A9F4, symbol: lbl_8032A9F4 */
+/* 8032A9B0  80 C3 00 2C */	lwz r6, 0x2c(r3)                        
+/* 8032A9B4  A0 04 00 02 */	lhz r0, 2(r4)                           
+/* 8032A9B8  7C 06 00 AE */	lbzx r0, r6, r0                         
+/* 8032A9BC  98 05 00 00 */	stb r0, 0(r5)                           
+/* 8032A9C0  80 C3 00 30 */	lwz r6, 0x30(r3)                        
+/* 8032A9C4  A0 04 00 06 */	lhz r0, 6(r4)                           
+/* 8032A9C8  7C 06 00 AE */	lbzx r0, r6, r0                         
+/* 8032A9CC  98 05 00 01 */	stb r0, 1(r5)                           
+/* 8032A9D0  80 C3 00 34 */	lwz r6, 0x34(r3)                        
+/* 8032A9D4  A0 04 00 0A */	lhz r0, 0xa(r4)                         
+/* 8032A9D8  7C 06 00 AE */	lbzx r0, r6, r0                         
+/* 8032A9DC  98 05 00 02 */	stb r0, 2(r5)                           
+/* 8032A9E0  80 63 00 38 */	lwz r3, 0x38(r3)                        
+/* 8032A9E4  A0 04 00 0E */	lhz r0, 0xe(r4)                         
+/* 8032A9E8  7C 03 00 AE */	lbzx r0, r3, r0                         
+/* 8032A9EC  98 05 00 03 */	stb r0, 3(r5)                           
+/* 8032A9F0  48 00 01 08 */	b lbl_8032AAF8                           /* constant-address: 8032AAF8, symbol: lbl_8032AAF8 */
 lbl_8032A9F4:
-/* 8032A9F4 00000000  C0 02 CA 48 */	lfs f0, lit_1092(r2)
-/* 8032A9F8 00000004  EC 00 08 2A */	fadds f0, f0, f1
-/* 8032A9FC 00000008  FC 00 00 1E */	fctiwz f0, f0
-/* 8032AA00 0000000C  D8 01 00 08 */	stfd f0, 8(r1)
-/* 8032AA04 00000010  80 01 00 0C */	lwz r0, 0xc(r1)
-/* 8032AA08 00000014  A1 04 00 00 */	lhz r8, 0(r4)
-/* 8032AA0C 00000018  7C 00 40 00 */	cmpw r0, r8
-/* 8032AA10 0000001C  41 80 00 20 */	blt lbl_8032AA30
-/* 8032AA14 00000020  80 E3 00 2C */	lwz r7, 0x2c(r3)
-/* 8032AA18 00000024  A0 C4 00 02 */	lhz r6, 2(r4)
-/* 8032AA1C 00000028  7C C7 32 14 */	add r6, r7, r6
-/* 8032AA20 0000002C  7C C6 42 14 */	add r6, r6, r8
-/* 8032AA24 00000030  88 C6 FF FF */	lbz r6, -1(r6)
-/* 8032AA28 00000034  98 C5 00 00 */	stb r6, 0(r5)
-/* 8032AA2C 00000038  48 00 00 18 */	b lbl_8032AA44
+/* 8032A9F4  C0 02 CA 48 */	lfs f0, lit_1092(r2)                     /* constant-address: 80456448, symbol: lit_1092 */
+/* 8032A9F8  EC 00 08 2A */	fadds f0, f0, f1                        
+/* 8032A9FC  FC 00 00 1E */	fctiwz f0, f0                           
+/* 8032AA00  D8 01 00 08 */	stfd f0, 8(r1)                          
+/* 8032AA04  80 01 00 0C */	lwz r0, 0xc(r1)                         
+/* 8032AA08  A1 04 00 00 */	lhz r8, 0(r4)                           
+/* 8032AA0C  7C 00 40 00 */	cmpw r0, r8                             
+/* 8032AA10  41 80 00 20 */	blt lbl_8032AA30                         /* constant-address: 8032AA30, symbol: lbl_8032AA30 */
+/* 8032AA14  80 E3 00 2C */	lwz r7, 0x2c(r3)                        
+/* 8032AA18  A0 C4 00 02 */	lhz r6, 2(r4)                           
+/* 8032AA1C  7C C7 32 14 */	add r6, r7, r6                          
+/* 8032AA20  7C C6 42 14 */	add r6, r6, r8                          
+/* 8032AA24  88 C6 FF FF */	lbz r6, -1(r6)                          
+/* 8032AA28  98 C5 00 00 */	stb r6, 0(r5)                           
+/* 8032AA2C  48 00 00 18 */	b lbl_8032AA44                           /* constant-address: 8032AA44, symbol: lbl_8032AA44 */
 lbl_8032AA30:
-/* 8032AA30 00000000  80 E3 00 2C */	lwz r7, 0x2c(r3)
-/* 8032AA34 00000004  A0 C4 00 02 */	lhz r6, 2(r4)
-/* 8032AA38 00000008  7C C6 02 14 */	add r6, r6, r0
-/* 8032AA3C 0000000C  7C C7 30 AE */	lbzx r6, r7, r6
-/* 8032AA40 00000010  98 C5 00 00 */	stb r6, 0(r5)
+/* 8032AA30  80 E3 00 2C */	lwz r7, 0x2c(r3)                        
+/* 8032AA34  A0 C4 00 02 */	lhz r6, 2(r4)                           
+/* 8032AA38  7C C6 02 14 */	add r6, r6, r0                          
+/* 8032AA3C  7C C7 30 AE */	lbzx r6, r7, r6                         
+/* 8032AA40  98 C5 00 00 */	stb r6, 0(r5)                           
 lbl_8032AA44:
-/* 8032AA44 00000000  A1 04 00 04 */	lhz r8, 4(r4)
-/* 8032AA48 00000004  7C 00 40 00 */	cmpw r0, r8
-/* 8032AA4C 00000008  41 80 00 20 */	blt lbl_8032AA6C
-/* 8032AA50 0000000C  80 E3 00 30 */	lwz r7, 0x30(r3)
-/* 8032AA54 00000010  A0 C4 00 06 */	lhz r6, 6(r4)
-/* 8032AA58 00000014  7C C7 32 14 */	add r6, r7, r6
-/* 8032AA5C 00000018  7C C6 42 14 */	add r6, r6, r8
-/* 8032AA60 0000001C  88 C6 FF FF */	lbz r6, -1(r6)
-/* 8032AA64 00000020  98 C5 00 01 */	stb r6, 1(r5)
-/* 8032AA68 00000024  48 00 00 18 */	b lbl_8032AA80
+/* 8032AA44  A1 04 00 04 */	lhz r8, 4(r4)                           
+/* 8032AA48  7C 00 40 00 */	cmpw r0, r8                             
+/* 8032AA4C  41 80 00 20 */	blt lbl_8032AA6C                         /* constant-address: 8032AA6C, symbol: lbl_8032AA6C */
+/* 8032AA50  80 E3 00 30 */	lwz r7, 0x30(r3)                        
+/* 8032AA54  A0 C4 00 06 */	lhz r6, 6(r4)                           
+/* 8032AA58  7C C7 32 14 */	add r6, r7, r6                          
+/* 8032AA5C  7C C6 42 14 */	add r6, r6, r8                          
+/* 8032AA60  88 C6 FF FF */	lbz r6, -1(r6)                          
+/* 8032AA64  98 C5 00 01 */	stb r6, 1(r5)                           
+/* 8032AA68  48 00 00 18 */	b lbl_8032AA80                           /* constant-address: 8032AA80, symbol: lbl_8032AA80 */
 lbl_8032AA6C:
-/* 8032AA6C 00000000  80 E3 00 30 */	lwz r7, 0x30(r3)
-/* 8032AA70 00000004  A0 C4 00 06 */	lhz r6, 6(r4)
-/* 8032AA74 00000008  7C C6 02 14 */	add r6, r6, r0
-/* 8032AA78 0000000C  7C C7 30 AE */	lbzx r6, r7, r6
-/* 8032AA7C 00000010  98 C5 00 01 */	stb r6, 1(r5)
+/* 8032AA6C  80 E3 00 30 */	lwz r7, 0x30(r3)                        
+/* 8032AA70  A0 C4 00 06 */	lhz r6, 6(r4)                           
+/* 8032AA74  7C C6 02 14 */	add r6, r6, r0                          
+/* 8032AA78  7C C7 30 AE */	lbzx r6, r7, r6                         
+/* 8032AA7C  98 C5 00 01 */	stb r6, 1(r5)                           
 lbl_8032AA80:
-/* 8032AA80 00000000  A1 04 00 08 */	lhz r8, 8(r4)
-/* 8032AA84 00000004  7C 00 40 00 */	cmpw r0, r8
-/* 8032AA88 00000008  41 80 00 20 */	blt lbl_8032AAA8
-/* 8032AA8C 0000000C  80 E3 00 34 */	lwz r7, 0x34(r3)
-/* 8032AA90 00000010  A0 C4 00 0A */	lhz r6, 0xa(r4)
-/* 8032AA94 00000014  7C C7 32 14 */	add r6, r7, r6
-/* 8032AA98 00000018  7C C6 42 14 */	add r6, r6, r8
-/* 8032AA9C 0000001C  88 C6 FF FF */	lbz r6, -1(r6)
-/* 8032AAA0 00000020  98 C5 00 02 */	stb r6, 2(r5)
-/* 8032AAA4 00000024  48 00 00 18 */	b lbl_8032AABC
+/* 8032AA80  A1 04 00 08 */	lhz r8, 8(r4)                           
+/* 8032AA84  7C 00 40 00 */	cmpw r0, r8                             
+/* 8032AA88  41 80 00 20 */	blt lbl_8032AAA8                         /* constant-address: 8032AAA8, symbol: lbl_8032AAA8 */
+/* 8032AA8C  80 E3 00 34 */	lwz r7, 0x34(r3)                        
+/* 8032AA90  A0 C4 00 0A */	lhz r6, 0xa(r4)                         
+/* 8032AA94  7C C7 32 14 */	add r6, r7, r6                          
+/* 8032AA98  7C C6 42 14 */	add r6, r6, r8                          
+/* 8032AA9C  88 C6 FF FF */	lbz r6, -1(r6)                          
+/* 8032AAA0  98 C5 00 02 */	stb r6, 2(r5)                           
+/* 8032AAA4  48 00 00 18 */	b lbl_8032AABC                           /* constant-address: 8032AABC, symbol: lbl_8032AABC */
 lbl_8032AAA8:
-/* 8032AAA8 00000000  80 E3 00 34 */	lwz r7, 0x34(r3)
-/* 8032AAAC 00000004  A0 C4 00 0A */	lhz r6, 0xa(r4)
-/* 8032AAB0 00000008  7C C6 02 14 */	add r6, r6, r0
-/* 8032AAB4 0000000C  7C C7 30 AE */	lbzx r6, r7, r6
-/* 8032AAB8 00000010  98 C5 00 02 */	stb r6, 2(r5)
+/* 8032AAA8  80 E3 00 34 */	lwz r7, 0x34(r3)                        
+/* 8032AAAC  A0 C4 00 0A */	lhz r6, 0xa(r4)                         
+/* 8032AAB0  7C C6 02 14 */	add r6, r6, r0                          
+/* 8032AAB4  7C C7 30 AE */	lbzx r6, r7, r6                         
+/* 8032AAB8  98 C5 00 02 */	stb r6, 2(r5)                           
 lbl_8032AABC:
-/* 8032AABC 00000000  A0 C4 00 0C */	lhz r6, 0xc(r4)
-/* 8032AAC0 00000004  7C 00 30 00 */	cmpw r0, r6
-/* 8032AAC4 00000008  41 80 00 20 */	blt lbl_8032AAE4
-/* 8032AAC8 0000000C  80 63 00 38 */	lwz r3, 0x38(r3)
-/* 8032AACC 00000010  A0 04 00 0E */	lhz r0, 0xe(r4)
-/* 8032AAD0 00000014  7C 03 02 14 */	add r0, r3, r0
-/* 8032AAD4 00000018  7C 60 32 14 */	add r3, r0, r6
-/* 8032AAD8 0000001C  88 03 FF FF */	lbz r0, -1(r3)
-/* 8032AADC 00000020  98 05 00 03 */	stb r0, 3(r5)
-/* 8032AAE0 00000024  48 00 00 18 */	b lbl_8032AAF8
+/* 8032AABC  A0 C4 00 0C */	lhz r6, 0xc(r4)                         
+/* 8032AAC0  7C 00 30 00 */	cmpw r0, r6                             
+/* 8032AAC4  41 80 00 20 */	blt lbl_8032AAE4                         /* constant-address: 8032AAE4, symbol: lbl_8032AAE4 */
+/* 8032AAC8  80 63 00 38 */	lwz r3, 0x38(r3)                        
+/* 8032AACC  A0 04 00 0E */	lhz r0, 0xe(r4)                         
+/* 8032AAD0  7C 03 02 14 */	add r0, r3, r0                          
+/* 8032AAD4  7C 60 32 14 */	add r3, r0, r6                          
+/* 8032AAD8  88 03 FF FF */	lbz r0, -1(r3)                          
+/* 8032AADC  98 05 00 03 */	stb r0, 3(r5)                           
+/* 8032AAE0  48 00 00 18 */	b lbl_8032AAF8                           /* constant-address: 8032AAF8, symbol: lbl_8032AAF8 */
 lbl_8032AAE4:
-/* 8032AAE4 00000000  80 C3 00 38 */	lwz r6, 0x38(r3)
-/* 8032AAE8 00000004  A0 64 00 0E */	lhz r3, 0xe(r4)
-/* 8032AAEC 00000008  7C 03 02 14 */	add r0, r3, r0
-/* 8032AAF0 0000000C  7C 06 00 AE */	lbzx r0, r6, r0
-/* 8032AAF4 00000010  98 05 00 03 */	stb r0, 3(r5)
+/* 8032AAE4  80 C3 00 38 */	lwz r6, 0x38(r3)                        
+/* 8032AAE8  A0 64 00 0E */	lhz r3, 0xe(r4)                         
+/* 8032AAEC  7C 03 02 14 */	add r0, r3, r0                          
+/* 8032AAF0  7C 06 00 AE */	lbzx r0, r6, r0                         
+/* 8032AAF4  98 05 00 03 */	stb r0, 3(r5)                           
 lbl_8032AAF8:
-/* 8032AAF8 00000000  38 21 00 10 */	addi r1, r1, 0x10
-/* 8032AAFC 00000004  4E 80 00 20 */	blr 
+/* 8032AAF8  38 21 00 10 */	addi r1, r1, 0x10                       
+/* 8032AAFC  4E 80 00 20 */	blr                                     
