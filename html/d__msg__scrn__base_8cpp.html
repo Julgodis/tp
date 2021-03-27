@@ -81,9 +81,9 @@ $(function() {
 <div class="title">d_msg_scrn_base.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="d__msg__scrn__base_8h_source.html">msg/scrn/d_msg_scrn_base.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="d__msg__scrn__base_8h_source.html">msg/scrn/d_msg_scrn_base.h</a>&quot;</code><br />
 <code>#include &quot;asm/msg/scrn/d_msg_scrn_base/__ct__14dMsgScrnBase_cFv.s&quot;</code><br />
 <code>#include &quot;asm/msg/scrn/d_msg_scrn_base/__dt__14dMsgScrnBase_cFv.s&quot;</code><br />
 <code>#include &quot;asm/msg/scrn/d_msg_scrn_base/init__14dMsgScrnBase_cFv.s&quot;</code><br />
@@ -223,8 +223,8 @@ Variables</h2></td></tr>
 <tr class="separator:a960ca0923cbf07477d0559aff4af3c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96e3e1da9e8aff1e04e8c2f315fd3b3d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__msg__scrn__base_8cpp.html#a96e3e1da9e8aff1e04e8c2f315fd3b3d">lit_3820</a> [4]</td></tr>
 <tr class="separator:a96e3e1da9e8aff1e04e8c2f315fd3b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a346d57ac7eb8e4848b446482b5f8a12d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__msg__scrn__base_8cpp.html#a346d57ac7eb8e4848b446482b5f8a12d">lit_3821</a> = 1.0f</td></tr>
-<tr class="separator:a346d57ac7eb8e4848b446482b5f8a12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e9a987b34d059a70eda77c0437d200"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__msg__scrn__base_8cpp.html#ac5e9a987b34d059a70eda77c0437d200">lit_3821</a> = 0x3F800000</td></tr>
+<tr class="separator:ac5e9a987b34d059a70eda77c0437d200"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="aace9a1b3a643fbb85e4eac8e2ba0dec4"></a>
@@ -1040,16 +1040,13 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a346d57ac7eb8e4848b446482b5f8a12d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a346d57ac7eb8e4848b446482b5f8a12d">&#9670;&nbsp;</a></span>lit_3821</h2>
+<a id="ac5e9a987b34d059a70eda77c0437d200"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5e9a987b34d059a70eda77c0437d200">&#9670;&nbsp;</a></span>lit_3821</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1058,7 +1055,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_3821 = 1.0f</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> lit_3821 = 0x3F800000</td>
         </tr>
       </table>
   </td>
@@ -1090,26 +1087,26 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x38),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x38),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x38),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x38),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x38),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x40),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x40),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x40),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x40),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x40),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x38),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x38),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x40),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x40),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x40),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x38),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x40),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x40),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x40),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>) + 0x38),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x38),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x38),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x38),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x38),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x38),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x40),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x40),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x40),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x40),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x40),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x38),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x38),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x40),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x40),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x40),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x38),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x40),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x40),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x40),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a>)+0x38),</div>
 <div class="line">}</div>
 <div class="ttc" id="ad__msg__scrn__base_8cpp_html_a8b8d4d1af65a25e9f4036a9fe4530239"><div class="ttname"><a href="d__msg__scrn__base_8cpp.html#a8b8d4d1af65a25e9f4036a9fe4530239">isTalkNow__14dMsgScrnBase_cFv</a></div><div class="ttdeci">void isTalkNow__14dMsgScrnBase_cFv()</div></div>
 </div><!-- fragment -->

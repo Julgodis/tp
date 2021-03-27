@@ -1,8 +1,8 @@
 <map id="libs/JSystem/JKernel/JKRHeap.cpp" name="libs/JSystem/JKernel/JKRHeap.cpp">
 <area shape="rect" id="node1" title=" " alt="" coords="4904,5,5049,47"/>
-<area shape="rect" id="node2" href="$JKRHeap_8h.html" title=" " alt="" coords="5,117,196,143"/>
-<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="113,213,221,240"/>
-<area shape="rect" id="node4" href="$dol2asm_8h.html" title=" " alt="" coords="272,117,353,143"/>
+<area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,117,87,143"/>
+<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="137,213,245,240"/>
+<area shape="rect" id="node4" href="$JKRHeap_8h.html" title=" " alt="" coords="163,117,353,143"/>
 <area shape="rect" id="node5" title=" " alt="" coords="377,102,589,158"/>
 <area shape="rect" id="node6" title=" " alt="" coords="614,109,827,151"/>
 <area shape="rect" id="node7" title=" " alt="" coords="851,102,1011,158"/>

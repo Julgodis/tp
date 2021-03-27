@@ -81,9 +81,9 @@ $(function() {
 <div class="title">J3DStruct.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="J3DStruct_8h_source.html">JSystem/J3DGraphBase/J3DStruct.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="J3DStruct_8h_source.html">JSystem/J3DGraphBase/J3DStruct.h</a>&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DStruct/__as__12J3DLightInfoFRC12J3DLightInfo.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DStruct/__as__13J3DTexMtxInfoFRC13J3DTexMtxInfo.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DStruct/setEffectMtx__13J3DTexMtxInfoFPA4_f.s&quot;</code><br />
@@ -129,8 +129,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:af5742dc885b5371e10aba8620a0ee7e0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DStruct_8cpp.html#af5742dc885b5371e10aba8620a0ee7e0">lit_409</a> = 1.0f</td></tr>
-<tr class="separator:af5742dc885b5371e10aba8620a0ee7e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3ecbd9a54f50eb956c0963e9f672926"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DStruct_8cpp.html#af3ecbd9a54f50eb956c0963e9f672926">lit_409</a> = 0x3F800000</td></tr>
+<tr class="separator:af3ecbd9a54f50eb956c0963e9f672926"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f2ee2ad07b897e9c92fdd3922c60adc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DStruct_8cpp.html#a4f2ee2ad07b897e9c92fdd3922c60adc">lit_410</a> [4]</td></tr>
 <tr class="separator:a4f2ee2ad07b897e9c92fdd3922c60adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -238,8 +238,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="af5742dc885b5371e10aba8620a0ee7e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5742dc885b5371e10aba8620a0ee7e0">&#9670;&nbsp;</a></span>lit_409</h2>
+<a id="af3ecbd9a54f50eb956c0963e9f672926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3ecbd9a54f50eb956c0963e9f672926">&#9670;&nbsp;</a></span>lit_409</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -248,7 +248,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_409 = 1.0f</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> lit_409 = 0x3F800000</td>
         </tr>
       </table>
   </td>
@@ -280,10 +280,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>

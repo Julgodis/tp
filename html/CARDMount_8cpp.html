@@ -80,9 +80,9 @@ $(function() {
 <div class="title">CARDMount.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="CARDMount_8h_source.html">dolphin/card/CARDMount.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="CARDMount_8h_source.html">dolphin/card/CARDMount.h</a>&quot;</code><br />
 <code>#include &quot;asm/dolphin/card/CARDMount/IsCard.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/card/CARDMount/CARDProbe.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/card/CARDMount/CARDProbeEx.s&quot;</code><br />
@@ -1004,15 +1004,9 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    </div>
-<div class="line">    0xFF,</div>
-<div class="line">    0xFF,</div>
+<div class="line">    0xFF, 0xFF,</div>
 <div class="line">    </div>
-<div class="line">    0x1C,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x1C, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>

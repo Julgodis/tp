@@ -1,13 +1,13 @@
 <map id="src/d/d_ky_thunder.cpp" name="src/d/d_ky_thunder.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="699,5,855,32"/>
-<area shape="rect" id="node2" href="$d__ky__thunder_8h.html" title=" " alt="" coords="5,95,125,121"/>
-<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="59,184,167,211"/>
-<area shape="rect" id="node4" href="$dol2asm_8h.html" title=" " alt="" coords="201,95,282,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="306,87,521,129"/>
-<area shape="rect" id="node6" title=" " alt="" coords="545,87,759,129"/>
+<area shape="rect" id="node1" title=" " alt="" coords="700,5,856,32"/>
+<area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,95,87,121"/>
+<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="119,184,227,211"/>
+<area shape="rect" id="node4" href="$d__ky__thunder_8h.html" title=" " alt="" coords="162,95,282,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="307,87,521,129"/>
+<area shape="rect" id="node6" title=" " alt="" coords="546,87,759,129"/>
 <area shape="rect" id="node7" title=" " alt="" coords="783,87,1023,129"/>
 <area shape="rect" id="node8" title=" " alt="" coords="1047,87,1303,129"/>
-<area shape="rect" id="node9" title=" " alt="" coords="1327,87,1574,129"/>
-<area shape="rect" id="node10" title=" " alt="" coords="1597,80,1808,136"/>
-<area shape="rect" id="node11" title=" " alt="" coords="1833,87,2015,129"/>
+<area shape="rect" id="node9" title=" " alt="" coords="1328,87,1575,129"/>
+<area shape="rect" id="node10" title=" " alt="" coords="1598,80,1809,136"/>
+<area shape="rect" id="node11" title=" " alt="" coords="1833,87,2016,129"/>
 </map>

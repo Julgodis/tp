@@ -1,8 +1,8 @@
 <map id="libs/Z2AudioLib/Z2AudioMgr.cpp" name="libs/Z2AudioLib/Z2AudioMgr.cpp">
 <area shape="rect" id="node1" title=" " alt="" coords="1466,5,1677,32"/>
-<area shape="rect" id="node2" href="$Z2AudioMgr_8h.html" title=" " alt="" coords="5,95,177,121"/>
-<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="99,184,207,211"/>
-<area shape="rect" id="node4" href="$dol2asm_8h.html" title=" " alt="" coords="253,95,335,121"/>
+<area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,95,87,121"/>
+<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="132,184,240,211"/>
+<area shape="rect" id="node4" href="$Z2AudioMgr_8h.html" title=" " alt="" coords="163,95,335,121"/>
 <area shape="rect" id="node5" title=" " alt="" coords="359,87,549,129"/>
 <area shape="rect" id="node6" title=" " alt="" coords="574,80,801,136"/>
 <area shape="rect" id="node7" title=" " alt="" coords="825,87,1016,129"/>

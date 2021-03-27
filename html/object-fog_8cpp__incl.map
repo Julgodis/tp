@@ -1,8 +1,8 @@
 <map id="libs/JSystem/JStudio/JStudio_JStage/object&#45;fog.cpp" name="libs/JSystem/JStudio/JStudio_JStage/object&#45;fog.cpp">
 <area shape="rect" id="node1" title=" " alt="" coords="1034,5,1191,61"/>
-<area shape="rect" id="node2" href="$object-fog_8h.html" title=" " alt="" coords="5,131,175,173"/>
-<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="97,243,205,269"/>
-<area shape="rect" id="node4" href="$dol2asm_8h.html" title=" " alt="" coords="251,139,332,165"/>
+<area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,139,87,165"/>
+<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="132,243,240,269"/>
+<area shape="rect" id="node4" href="$object-fog_8h.html" title=" " alt="" coords="163,131,332,173"/>
 <area shape="rect" id="node5" title=" " alt="" coords="357,124,514,180"/>
 <area shape="rect" id="node6" title=" " alt="" coords="538,117,725,187"/>
 <area shape="rect" id="node7" title=" " alt="" coords="749,109,975,195"/>

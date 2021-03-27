@@ -81,9 +81,9 @@ $(function() {
 <div class="title">d_map_path_fmap.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="d__map__path__fmap_8h_source.html">d/map/d_map_path_fmap.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="d__map__path__fmap_8h_source.html">d/map/d_map_path_fmap.h</a>&quot;</code><br />
 <code>#include &quot;asm/d/map/d_map_path_fmap/addTypeGroupData__26fmpTresTypeGroupDataList_cFUcPCQ27dTres_c6data_s.s&quot;</code><br />
 <code>#include &quot;asm/d/map/d_map_path_fmap/isArrival__22dMenu_Fmap_room_data_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/map/d_map_path_fmap/buildTresTypeGroup__22dMenu_Fmap_room_data_cFiii.s&quot;</code><br />
@@ -1403,15 +1403,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">    </div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1436,21 +1430,21 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>) + 0x40C),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>) + 0xA8),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>) + 0x40C),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>) + 0x40C),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>) + 0x154),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>) + 0x1FC),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>) + 0x308),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>) + 0x40C),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>) + 0xA8),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>) + 0x40C),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>) + 0x35C),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>) + 0x40C),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>) + 0x40C),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>) + 0x388),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>) + 0x388),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>)+0x40C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>)+0xA8),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>)+0x40C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>)+0x40C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>)+0x154),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>)+0x1FC),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>)+0x308),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>)+0x40C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>)+0xA8),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>)+0x40C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>)+0x35C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>)+0x40C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>)+0x40C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>)+0x388),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="d__map__path__fmap_8cpp.html#aac57755a5d65fb601be7a4bed2e6faf8">isDrawDisp__19dMenuFmapIconDisp_cFv</a>)+0x388),</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>

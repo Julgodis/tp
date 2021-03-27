@@ -81,9 +81,9 @@ $(function() {
 <div class="title">d_menu_window_HIO.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="d__menu__window__HIO_8h_source.html">d/menu/d_menu_window_HIO.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="d__menu__window__HIO_8h_source.html">d/menu/d_menu_window_HIO.h</a>&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_window_HIO/__ct__9dMw_HIO_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_window_HIO/init__9dMw_HIO_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_window_HIO/__ct__10dMw_DHIO_cFv.s&quot;</code><br />
@@ -145,8 +145,6 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a41dbe2fde06d82dbf07f3491466786cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__window__HIO_8cpp.html#a41dbe2fde06d82dbf07f3491466786cb">g_mwHIO</a> [304]</td></tr>
 <tr class="separator:a41dbe2fde06d82dbf07f3491466786cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67c55e2de3176b11d106aff0217f92e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__window__HIO_8cpp.html#a67c55e2de3176b11d106aff0217f92e7">lit_3774</a> [12]</td></tr>
-<tr class="separator:a67c55e2de3176b11d106aff0217f92e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7452d52354c029a477a2678050a6947f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__window__HIO_8cpp.html#a7452d52354c029a477a2678050a6947f">g_mwDHIO</a> [520]</td></tr>
 <tr class="separator:a7452d52354c029a477a2678050a6947f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50ad47c26bcc2867f2c14d349753f58e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__window__HIO_8cpp.html#a50ad47c26bcc2867f2c14d349753f58e">g_dComIfG_gameInfo</a> [122384]</td></tr>
@@ -163,6 +161,8 @@ Variables</h2></td></tr>
 <tr class="separator:a33ad372352a8483ac41a0a3daf568570"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad2ec4843f77451747ad1f2eb07162b4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__window__HIO_8cpp.html#aad2ec4843f77451747ad1f2eb07162b4">lit_3773</a> [12]</td></tr>
 <tr class="separator:aad2ec4843f77451747ad1f2eb07162b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33709594088ed067684106f1df10c6ba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__window__HIO_8cpp.html#a33709594088ed067684106f1df10c6ba">lit_3774</a> [12]</td></tr>
+<tr class="separator:a33709594088ed067684106f1df10c6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a89091f69f409de997596c04756f0ba4b"></a>
@@ -499,9 +499,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x2F,</div>
-<div class="line">    0x30,</div>
-<div class="line">    0x31,</div>
+<div class="line">    0x2F, 0x30, 0x31,</div>
 <div class="line">    </div>
 <div class="line">    0x00,</div>
 <div class="line">}</div>
@@ -528,10 +526,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x28,</div>
-<div class="line">    0x29,</div>
-<div class="line">    0x49,</div>
-<div class="line">    0x3F,</div>
+<div class="line">    0x28, 0x29, 0x49, 0x3F,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -556,15 +551,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x2B,</div>
-<div class="line">    0x2C,</div>
-<div class="line">    0x2A,</div>
+<div class="line">    0x2B, 0x2C, 0x2A,</div>
 <div class="line">    </div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -641,16 +630,24 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a67c55e2de3176b11d106aff0217f92e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67c55e2de3176b11d106aff0217f92e7">&#9670;&nbsp;</a></span>lit_3774</h2>
+<a id="a33709594088ed067684106f1df10c6ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33709594088ed067684106f1df10c6ba">&#9670;&nbsp;</a></span>lit_3774</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_3774</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_3774[12]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

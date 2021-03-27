@@ -82,9 +82,9 @@ $(function() {
 <div class="title">d_msg_string_base.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="d__msg__string__base_8h_source.html">d/msg/d_msg_string_base.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="d__msg__string__base_8h_source.html">d/msg/d_msg_string_base.h</a>&quot;</code><br />
 <code>#include &quot;asm/d/msg/d_msg_string_base/__ct__16dMsgStringBase_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/msg/d_msg_string_base/__dt__16dMsgStringBase_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/msg/d_msg_string_base/getResource__16dMsgStringBase_cFv.s&quot;</code><br />
@@ -108,9 +108,9 @@ $(function() {
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCOutFont__c.html">COutFont_c</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJUTFont.html">JUTFont</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ2DTextBox.html">J2DTextBox</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJUTFont.html">JUTFont</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdMsgStringBase__c.html">dMsgStringBase_c</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -247,7 +247,7 @@ Variables</h2></td></tr>
 <tr class="separator:ac1101f2953fe60681bfab028696f9f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0b49a39a554037d9f4bb831b9973cdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__msg__string__base_8cpp.html#ab0b49a39a554037d9f4bb831b9973cdd">stringBase_80399C98</a> = &quot;zel_00.bmg&quot;</td></tr>
 <tr class="separator:ab0b49a39a554037d9f4bb831b9973cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad060da7fd92932cc0c44a432eff48264"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__msg__string__base_8cpp.html#ad060da7fd92932cc0c44a432eff48264">stringBase_80399CA3</a></td></tr>
+<tr class="memitem:ad060da7fd92932cc0c44a432eff48264"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__msg__string__base_8cpp.html#ad060da7fd92932cc0c44a432eff48264">stringBase_80399CA3</a> = &quot;&quot;&quot;\x1B&quot;&quot;CR[%d]&quot;</td></tr>
 <tr class="separator:ad060da7fd92932cc0c44a432eff48264"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a629076f5d024554c6181116baafc86ab"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__msg__string__base_8cpp.html#a629076f5d024554c6181116baafc86ab">pad_80399CAB</a> = &quot;\0\0\0\0&quot;</td></tr>
 <tr class="separator:a629076f5d024554c6181116baafc86ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -994,11 +994,8 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
-<div class="line">    </div>
-<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="d__msg__string__base_8cpp.html#adca97acb412b5fa7680e413277013de2">getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc</a>,</div>
-<div class="line">    </div>
-<div class="line">    (<span class="keywordtype">void</span>*)</div>
-<div class="line">        <a class="code" href="d__msg__string__base_8cpp.html#a67db5d4049f9a82eb265013d123c099b">getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__msg__string__base_8cpp.html#adca97acb412b5fa7680e413277013de2">getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__msg__string__base_8cpp.html#a67db5d4049f9a82eb265013d123c099b">getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__msg__string__base_8cpp.html#a75b641099e2c22ce98ef8a418c11deeb">getMessage__16dMsgStringBase_cFUlPc</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__msg__string__base_8cpp.html#abc6d08a4d0b3bf168f89469adc3cdd86">resetStringLocal__16dMsgStringBase_cFP10J2DTextBox</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__msg__string__base_8cpp.html#aa875b8dfabdd286ee10f4e4839cb9dfd">drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf</a>,</div>
@@ -1100,15 +1097,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">    </div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1156,14 +1147,11 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const* const stringBase_80399CA3</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const* const stringBase_80399CA3 = &quot;&quot;&quot;\x1B&quot;&quot;CR[%d]&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <span class="stringliteral">&quot;&quot;</span></div>
-<div class="line">                                                     <span class="stringliteral">&quot;\x1B&quot;</span></div>
-<div class="line">                                                     <span class="stringliteral">&quot;CR[%d]&quot;</span></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

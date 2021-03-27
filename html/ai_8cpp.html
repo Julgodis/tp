@@ -80,9 +80,9 @@ $(function() {
 <div class="title">ai.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="ai_8h_source.html">dolphin/ai/ai.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ai_8h_source.html">dolphin/ai/ai.h</a>&quot;</code><br />
 <code>#include &quot;asm/dolphin/ai/ai/AIRegisterDMACallback.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/ai/ai/AIInitDMA.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/ai/ai/AIStartDMA.s&quot;</code><br />
@@ -129,8 +129,8 @@ Functions</h2></td></tr>
 <tr class="separator:a21b3779a0a20dbe25742567bedfb8b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bf2a7b2875510ce674e483a39445818"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ai_8cpp.html#a7bf2a7b2875510ce674e483a39445818">AIGetDSPSampleRate</a> ()</td></tr>
 <tr class="separator:a7bf2a7b2875510ce674e483a39445818"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61168245ce6036ea659dec50b285c274"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ai_8cpp.html#a61168245ce6036ea659dec50b285c274">__AI_set_stream_sample_rate</a> ()</td></tr>
-<tr class="separator:a61168245ce6036ea659dec50b285c274"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa46b371af48c0bf752c834e2d8f1d425"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ai_8cpp.html#aa46b371af48c0bf752c834e2d8f1d425">__AI_set_stream_sample_rate</a> ()</td></tr>
+<tr class="separator:aa46b371af48c0bf752c834e2d8f1d425"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a89cde9a973ea4c100f4e442f04f8cc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ai_8cpp.html#a5a89cde9a973ea4c100f4e442f04f8cc">AIGetStreamSampleRate</a> ()</td></tr>
 <tr class="separator:a5a89cde9a973ea4c100f4e442f04f8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab84924712fdffd71f8f7a4aec2c4e645"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ai_8cpp.html#ab84924712fdffd71f8f7a4aec2c4e645">AISetStreamVolLeft</a> ()</td></tr>
@@ -208,27 +208,19 @@ Variables</h2></td></tr>
 <tr class="separator:a9741f797e982dedfa6ebbf218d47d62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a61168245ce6036ea659dec50b285c274"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61168245ce6036ea659dec50b285c274">&#9670;&nbsp;</a></span>__AI_set_stream_sample_rate()</h2>
+<a id="aa46b371af48c0bf752c834e2d8f1d425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa46b371af48c0bf752c834e2d8f1d425">&#9670;&nbsp;</a></span>__AI_set_stream_sample_rate()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static asm void __AI_set_stream_sample_rate </td>
+          <td class="memname">asm void __AI_set_stream_sample_rate </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -852,7 +844,7 @@ Variables</h2></td></tr>
 <div class="line">    </div>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aai_8cpp_html_a7b9b175b1c468973cfd16a844456e6fa"><div class="ttname"><a href="ai_8cpp.html#a7b9b175b1c468973cfd16a844456e6fa">lit_1</a></div><div class="ttdeci">static SECTION_DATA u8 lit_1[68+4]</div><div class="ttdef"><b>Definition:</b> ai.cpp:200</div></div>
+<div class="ttc" id="aai_8cpp_html_a7b9b175b1c468973cfd16a844456e6fa"><div class="ttname"><a href="ai_8cpp.html#a7b9b175b1c468973cfd16a844456e6fa">lit_1</a></div><div class="ttdeci">static SECTION_DATA u8 lit_1[68+4]</div><div class="ttdef"><b>Definition:</b> ai.cpp:216</div></div>
 <div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
 </div><!-- fragment -->
 </div>
@@ -1096,7 +1088,16 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,</div>
+<div class="line">    0x20, 0x41, 0x49, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,</div>
+<div class="line">    0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20, 0x30,</div>
+<div class="line">    0x34, 0x3A, 0x31, 0x35, 0x3A, 0x30, 0x32, 0x20, 0x28, 0x30, 0x78, 0x32, 0x33, 0x30, 0x31, 0x29,</div>
+<div class="line">    0x20, 0x3E, 0x3E, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad7c2ea8bdc073fb0da49d968c319dbca"></a>

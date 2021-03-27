@@ -81,9 +81,9 @@ $(function() {
 <div class="title">JPAFieldBlock.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="JPAFieldBlock_8h_source.html">JSystem/JParticle/JPAFieldBlock.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JPAFieldBlock_8h_source.html">JSystem/JParticle/JPAFieldBlock.h</a>&quot;</code><br />
 <code>#include &quot;asm/JSystem/JParticle/JPAFieldBlock/calcAffect__12JPAFieldBaseFP13JPAFieldBlockP15JPABaseParticle.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JParticle/JPAFieldBlock/calcFadeAffect__12JPAFieldBaseCFP13JPAFieldBlockf.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JParticle/JPAFieldBlock/prepare__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlock.s&quot;</code><br />
@@ -125,13 +125,13 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRHeap.html">JKRHeap</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJPAFieldBlock.html">JPAFieldBlock</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJPABaseParticle.html">JPABaseParticle</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJPAEmitterWorkData.html">JPAEmitterWorkData</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJPAFieldBase.html">JPAFieldBase</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -243,18 +243,18 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:abf8a4db654c31b18010c7cd255393a4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPAFieldBlock_8cpp.html#abf8a4db654c31b18010c7cd255393a4a">__float_epsilon</a></td></tr>
 <tr class="separator:abf8a4db654c31b18010c7cd255393a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab0166ccc4c8026ab0c10a373a56a060"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPAFieldBlock_8cpp.html#aab0166ccc4c8026ab0c10a373a56a060">lit_2353</a> = 1.0f</td></tr>
-<tr class="separator:aab0166ccc4c8026ab0c10a373a56a060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e5e942863e098cb56591d7e51d2b69d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPAFieldBlock_8cpp.html#a6e5e942863e098cb56591d7e51d2b69d">lit_2353</a> = 0x3F800000</td></tr>
+<tr class="separator:a6e5e942863e098cb56591d7e51d2b69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27abca301e0456d9ec42b70f7b52309c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPAFieldBlock_8cpp.html#a27abca301e0456d9ec42b70f7b52309c">lit_2354</a> [4]</td></tr>
 <tr class="separator:a27abca301e0456d9ec42b70f7b52309c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca2c391668c5e8d83de4e6c47adbda15"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPAFieldBlock_8cpp.html#aca2c391668c5e8d83de4e6c47adbda15">lit_2459</a> = 32.0f</td></tr>
-<tr class="separator:aca2c391668c5e8d83de4e6c47adbda15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af38fa5d434d221589957fe1af84ab981"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPAFieldBlock_8cpp.html#af38fa5d434d221589957fe1af84ab981">lit_2460</a> = 0.5f</td></tr>
-<tr class="separator:af38fa5d434d221589957fe1af84ab981"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8f294c2febaaaea99ce43c42800caed"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPAFieldBlock_8cpp.html#ae8f294c2febaaaea99ce43c42800caed">lit_2461</a> = 3.0f</td></tr>
-<tr class="separator:ae8f294c2febaaaea99ce43c42800caed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a540d673cb93c2acaabd4a58cb88acbf4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPAFieldBlock_8cpp.html#a540d673cb93c2acaabd4a58cb88acbf4">lit_2656</a> = 10.0f</td></tr>
-<tr class="separator:a540d673cb93c2acaabd4a58cb88acbf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2742f72eddd902c5f569fdb6c8718cc0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPAFieldBlock_8cpp.html#a2742f72eddd902c5f569fdb6c8718cc0">lit_2459</a> = 0x42000000</td></tr>
+<tr class="separator:a2742f72eddd902c5f569fdb6c8718cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77fa338cd8608e59f0a4e549710eb958"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPAFieldBlock_8cpp.html#a77fa338cd8608e59f0a4e549710eb958">lit_2460</a> = 0x3F000000</td></tr>
+<tr class="separator:a77fa338cd8608e59f0a4e549710eb958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12e38a9d57bab3dc1f918c3de406ffd1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPAFieldBlock_8cpp.html#a12e38a9d57bab3dc1f918c3de406ffd1">lit_2461</a> = 0x40400000</td></tr>
+<tr class="separator:a12e38a9d57bab3dc1f918c3de406ffd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab6e307f34d588797cd5558515304e16"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPAFieldBlock_8cpp.html#aab6e307f34d588797cd5558515304e16">lit_2656</a> = 0x41200000</td></tr>
+<tr class="separator:aab6e307f34d588797cd5558515304e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebfef403bd8af655ee1ab21579381fb1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPAFieldBlock_8cpp.html#aebfef403bd8af655ee1ab21579381fb1">lit_3259</a> [9]</td></tr>
 <tr class="separator:aebfef403bd8af655ee1ab21579381fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab53c66a1674aa7d1eaec1a906afed001"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JPAFieldBlock_8cpp.html#ab53c66a1674aa7d1eaec1a906afed001">__vt__12JPAFieldBase</a> [5]</td></tr>
@@ -1168,8 +1168,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#aeb17321b3c74627cc3c0a5796972446d">__dt__14JPAFieldMagnetFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#af65ae5f8a836613a6dc4d2c26a7b445c">prepare__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlock</a>,</div>
-<div class="line">    </div>
-<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#adccea84d8a9d32ae56a5beb71d62dba3">calc__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#adccea84d8a9d32ae56a5beb71d62dba3">calc__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle</a>,</div>
 <div class="line">}</div>
 <div class="ttc" id="aJPAFieldBlock_8cpp_html_adccea84d8a9d32ae56a5beb71d62dba3"><div class="ttname"><a href="JPAFieldBlock_8cpp.html#adccea84d8a9d32ae56a5beb71d62dba3">calc__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle</a></div><div class="ttdeci">void calc__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle()</div></div>
 <div class="ttc" id="aJPAFieldBlock_8cpp_html_aeb17321b3c74627cc3c0a5796972446d"><div class="ttname"><a href="JPAFieldBlock_8cpp.html#aeb17321b3c74627cc3c0a5796972446d">__dt__14JPAFieldMagnetFv</a></div><div class="ttdeci">void __dt__14JPAFieldMagnetFv()</div></div>
@@ -1201,8 +1200,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a1348771d7b1684642647d5ebd9935633">__dt__14JPAFieldNewtonFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a5958c7d668c2f75f6a846adab67a4004">prepare__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlock</a>,</div>
-<div class="line">    </div>
-<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a8cf1ec3d35f640375ee009dccdfa0edf">calc__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a8cf1ec3d35f640375ee009dccdfa0edf">calc__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle</a>,</div>
 <div class="line">}</div>
 <div class="ttc" id="aJPAFieldBlock_8cpp_html_a1348771d7b1684642647d5ebd9935633"><div class="ttname"><a href="JPAFieldBlock_8cpp.html#a1348771d7b1684642647d5ebd9935633">__dt__14JPAFieldNewtonFv</a></div><div class="ttdeci">void __dt__14JPAFieldNewtonFv()</div></div>
 <div class="ttc" id="aJPAFieldBlock_8cpp_html_a5958c7d668c2f75f6a846adab67a4004"><div class="ttname"><a href="JPAFieldBlock_8cpp.html#a5958c7d668c2f75f6a846adab67a4004">prepare__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlock</a></div><div class="ttdeci">void prepare__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlock()</div></div>
@@ -1234,8 +1232,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a24c62c933dd3be700cdef6ad7fbfa4eb">__dt__14JPAFieldRandomFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a0c390fb5fb59574a48cd532f9ff0d06e">prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock</a>,</div>
-<div class="line">    </div>
-<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a347f808db8a9e43dd66806fdbac184f4">calc__14JPAFieldRandomFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a347f808db8a9e43dd66806fdbac184f4">calc__14JPAFieldRandomFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle</a>,</div>
 <div class="line">}</div>
 <div class="ttc" id="aJPAFieldBlock_8cpp_html_a24c62c933dd3be700cdef6ad7fbfa4eb"><div class="ttname"><a href="JPAFieldBlock_8cpp.html#a24c62c933dd3be700cdef6ad7fbfa4eb">__dt__14JPAFieldRandomFv</a></div><div class="ttdeci">void __dt__14JPAFieldRandomFv()</div></div>
 <div class="ttc" id="aJPAFieldBlock_8cpp_html_a347f808db8a9e43dd66806fdbac184f4"><div class="ttname"><a href="JPAFieldBlock_8cpp.html#a347f808db8a9e43dd66806fdbac184f4">calc__14JPAFieldRandomFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle</a></div><div class="ttdeci">void calc__14JPAFieldRandomFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle()</div></div>
@@ -1266,8 +1263,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a39177f3a9d4389f4abc7d0ff7d8fb0e2">__dt__14JPAFieldVortexFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a86a6dbd0869df594eb505d113ed40c0f">prepare__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlock</a>,</div>
-<div class="line">    </div>
-<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a2b31c6a560dfbeddd5013ae7a794c4bf">calc__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a2b31c6a560dfbeddd5013ae7a794c4bf">calc__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle</a>,</div>
 <div class="line">}</div>
 <div class="ttc" id="aJPAFieldBlock_8cpp_html_a2b31c6a560dfbeddd5013ae7a794c4bf"><div class="ttname"><a href="JPAFieldBlock_8cpp.html#a2b31c6a560dfbeddd5013ae7a794c4bf">calc__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle</a></div><div class="ttdeci">void calc__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle()</div></div>
 <div class="ttc" id="aJPAFieldBlock_8cpp_html_a39177f3a9d4389f4abc7d0ff7d8fb0e2"><div class="ttname"><a href="JPAFieldBlock_8cpp.html#a39177f3a9d4389f4abc7d0ff7d8fb0e2">__dt__14JPAFieldVortexFv</a></div><div class="ttdeci">void __dt__14JPAFieldVortexFv()</div></div>
@@ -1299,8 +1295,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#aa41a706e8a42041c74c7a145b44d7a73">__dt__15JPAFieldGravityFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9123b91cfcb7e0bcf9c00cfabe5e4f13">prepare__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlock</a>,</div>
-<div class="line">    </div>
-<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#abf440ef71fcadb1117e2bf422410c6f5">calc__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#abf440ef71fcadb1117e2bf422410c6f5">calc__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle</a>,</div>
 <div class="line">    </div>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
@@ -1334,8 +1329,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a77ba9f932ad2b7d9c797041f6403e3f0">__dt__18JPAFieldConvectionFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#ad22ed487a2b37e94cf8d0d9836642d0b">prepare__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlock</a>,</div>
-<div class="line">    </div>
-<div class="line">    (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a650668c6b897c3e72f742f393ba7161a">calc__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a650668c6b897c3e72f742f393ba7161a">calc__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle</a>,</div>
 <div class="line">}</div>
 <div class="ttc" id="aJPAFieldBlock_8cpp_html_a650668c6b897c3e72f742f393ba7161a"><div class="ttname"><a href="JPAFieldBlock_8cpp.html#a650668c6b897c3e72f742f393ba7161a">calc__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle</a></div><div class="ttdeci">void calc__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle()</div></div>
 <div class="ttc" id="aJPAFieldBlock_8cpp_html_a77ba9f932ad2b7d9c797041f6403e3f0"><div class="ttname"><a href="JPAFieldBlock_8cpp.html#a77ba9f932ad2b7d9c797041f6403e3f0">__dt__18JPAFieldConvectionFv</a></div><div class="ttdeci">void __dt__18JPAFieldConvectionFv()</div></div>
@@ -1343,8 +1337,8 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="aab0166ccc4c8026ab0c10a373a56a060"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab0166ccc4c8026ab0c10a373a56a060">&#9670;&nbsp;</a></span>lit_2353</h2>
+<a id="a6e5e942863e098cb56591d7e51d2b69d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e5e942863e098cb56591d7e51d2b69d">&#9670;&nbsp;</a></span>lit_2353</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1353,7 +1347,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_2353 = 1.0f</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> lit_2353 = 0x3F800000</td>
         </tr>
       </table>
   </td>
@@ -1385,16 +1379,13 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="aca2c391668c5e8d83de4e6c47adbda15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca2c391668c5e8d83de4e6c47adbda15">&#9670;&nbsp;</a></span>lit_2459</h2>
+<a id="a2742f72eddd902c5f569fdb6c8718cc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2742f72eddd902c5f569fdb6c8718cc0">&#9670;&nbsp;</a></span>lit_2459</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1403,7 +1394,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_2459 = 32.0f</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> lit_2459 = 0x42000000</td>
         </tr>
       </table>
   </td>
@@ -1415,8 +1406,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="af38fa5d434d221589957fe1af84ab981"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af38fa5d434d221589957fe1af84ab981">&#9670;&nbsp;</a></span>lit_2460</h2>
+<a id="a77fa338cd8608e59f0a4e549710eb958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77fa338cd8608e59f0a4e549710eb958">&#9670;&nbsp;</a></span>lit_2460</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1425,7 +1416,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_2460 = 0.5f</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> lit_2460 = 0x3F000000</td>
         </tr>
       </table>
   </td>
@@ -1437,8 +1428,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae8f294c2febaaaea99ce43c42800caed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8f294c2febaaaea99ce43c42800caed">&#9670;&nbsp;</a></span>lit_2461</h2>
+<a id="a12e38a9d57bab3dc1f918c3de406ffd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12e38a9d57bab3dc1f918c3de406ffd1">&#9670;&nbsp;</a></span>lit_2461</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1447,7 +1438,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_2461 = 3.0f</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> lit_2461 = 0x40400000</td>
         </tr>
       </table>
   </td>
@@ -1459,8 +1450,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a540d673cb93c2acaabd4a58cb88acbf4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a540d673cb93c2acaabd4a58cb88acbf4">&#9670;&nbsp;</a></span>lit_2656</h2>
+<a id="aab6e307f34d588797cd5558515304e16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab6e307f34d588797cd5558515304e16">&#9670;&nbsp;</a></span>lit_2656</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1469,7 +1460,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_2656 = 10.0f</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> lit_2656 = 0x41200000</td>
         </tr>
       </table>
   </td>
@@ -1501,15 +1492,15 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0xFC),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0x130),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0x164),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0x198),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0x1CC),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0x200),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0x234),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0x268),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>) + 0x29C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0xFC),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0x130),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0x164),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0x198),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0x1CC),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0x200),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0x234),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0x268),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a>)+0x29C),</div>
 <div class="line">}</div>
 <div class="ttc" id="aJPAFieldBlock_8cpp_html_a9627195f3cccdc33dcba746a61b2b085"><div class="ttname"><a href="JPAFieldBlock_8cpp.html#a9627195f3cccdc33dcba746a61b2b085">init__13JPAFieldBlockFP7JKRHeap</a></div><div class="ttdeci">void init__13JPAFieldBlockFP7JKRHeap()</div></div>
 </div><!-- fragment -->

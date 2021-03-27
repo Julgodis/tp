@@ -80,9 +80,9 @@ $(function() {
 <div class="title">SISamplingRate.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="SISamplingRate_8h_source.html">dolphin/si/SISamplingRate.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SISamplingRate_8h_source.html">dolphin/si/SISamplingRate.h</a>&quot;</code><br />
 <code>#include &quot;asm/dolphin/si/SISamplingRate/SISetSamplingRate.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/si/SISamplingRate/SIRefreshSamplingRate.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -113,12 +113,12 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a3cc306e75e5d8d6993dfc67f0037548a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SISamplingRate_8cpp.html#a3cc306e75e5d8d6993dfc67f0037548a">XYPAL</a> [48]</td></tr>
-<tr class="separator:a3cc306e75e5d8d6993dfc67f0037548a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0e0c5a76ba153c963ce23bd3cd6e6e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SISamplingRate_8cpp.html#af0e0c5a76ba153c963ce23bd3cd6e6e3">lit_16</a> [51+5]</td></tr>
-<tr class="separator:af0e0c5a76ba153c963ce23bd3cd6e6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90f5f3e5f0c63df1db39c81aab32f230"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SISamplingRate_8cpp.html#a90f5f3e5f0c63df1db39c81aab32f230">XYNTSC</a> [48]</td></tr>
 <tr class="separator:a90f5f3e5f0c63df1db39c81aab32f230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90926e95f86c43b9b9e8aa3bbc4c23eb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SISamplingRate_8cpp.html#a90926e95f86c43b9b9e8aa3bbc4c23eb">XYPAL</a> [48]</td></tr>
+<tr class="separator:a90926e95f86c43b9b9e8aa3bbc4c23eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c3f537bcee34b22bbc7a0143c62858c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SISamplingRate_8cpp.html#a5c3f537bcee34b22bbc7a0143c62858c">lit_16</a> [51+5]</td></tr>
+<tr class="separator:a5c3f537bcee34b22bbc7a0143c62858c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab526ee3a2d1895bba14eaafd85b833d0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SISamplingRate_8cpp.html#ab526ee3a2d1895bba14eaafd85b833d0">SamplingRate</a> [4+4]</td></tr>
 <tr class="separator:ab526ee3a2d1895bba14eaafd85b833d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -243,18 +243,34 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="af0e0c5a76ba153c963ce23bd3cd6e6e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0e0c5a76ba153c963ce23bd3cd6e6e3">&#9670;&nbsp;</a></span>lit_16</h2>
+<a id="a5c3f537bcee34b22bbc7a0143c62858c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c3f537bcee34b22bbc7a0143c62858c">&#9670;&nbsp;</a></span>lit_16</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_16</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_16[51+5]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x53, 0x49, 0x53, 0x65, 0x74, 0x53, 0x61, 0x6D, 0x70, 0x6C, 0x69, 0x6E, 0x67, 0x52, 0x61, 0x74,</div>
+<div class="line">    0x65, 0x3A, 0x20, 0x75, 0x6E, 0x6B, 0x6E, 0x6F, 0x77, 0x6E, 0x20, 0x54, 0x56, 0x20, 0x66, 0x6F,</div>
+<div class="line">    0x72, 0x6D, 0x61, 0x74, 0x2E, 0x20, 0x55, 0x73, 0x65, 0x20, 0x64, 0x65, 0x66, 0x61, 0x75, 0x6C,</div>
+<div class="line">    0x74, 0x2E, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab526ee3a2d1895bba14eaafd85b833d0"></a>
@@ -306,16 +322,24 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a3cc306e75e5d8d6993dfc67f0037548a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3cc306e75e5d8d6993dfc67f0037548a">&#9670;&nbsp;</a></span>XYPAL</h2>
+<a id="a90926e95f86c43b9b9e8aa3bbc4c23eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90926e95f86c43b9b9e8aa3bbc4c23eb">&#9670;&nbsp;</a></span>XYPAL</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> XYPAL</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> XYPAL[48]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    0x01, 0x28, 0x02, 0x00, 0x00, 0x0F, 0x15, 0x00, 0x00, 0x1D, 0x0B, 0x00, 0x00, 0x2D, 0x07, 0x00,</div>

@@ -81,9 +81,9 @@ $(function() {
 <div class="title">JASBNKParser.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="JASBNKParser_8h_source.html">JSystem/JAudio2/JASBNKParser.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JASBNKParser_8h_source.html">JSystem/JAudio2/JASBNKParser.h</a>&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JASBNKParser/createBank__12JASBNKParserFPCvP7JKRHeap.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JASBNKParser/createBasicBank__12JASBNKParserFPCvP7JKRHeap.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JASBNKParser/findChunk__Q212JASBNKParser4Ver1FPCvUl.s&quot;</code><br />
@@ -110,8 +110,6 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRHeap.html">JKRHeap</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASOscillator.html">JASOscillator</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASOscillator_1_1Point.html">JASOscillator::Point</a></td></tr>
@@ -119,6 +117,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASOscillator_1_1Data.html">JASOscillator::Data</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASInst.html">JASInst</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRHeap.html">JKRHeap</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASBasicBank.html">JASBasicBank</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,12 +262,12 @@ Variables</h2></td></tr>
 <tr class="separator:af0bd9a39e05240d11bfa6c9f141ad567"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaed444c7ab2f8f5027e81d8942019fbe"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASBNKParser_8cpp.html#aaed444c7ab2f8f5027e81d8942019fbe">lit_835</a> [1+1]</td></tr>
 <tr class="separator:aaed444c7ab2f8f5027e81d8942019fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a888391dbeedaf1fabf08c82d0514e600"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASBNKParser_8cpp.html#a888391dbeedaf1fabf08c82d0514e600">lit_838</a> = 4503599627370496.0</td></tr>
-<tr class="separator:a888391dbeedaf1fabf08c82d0514e600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7fc76413893f0d8e2cdcd9b40cf4c7b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASBNKParser_8cpp.html#ae7fc76413893f0d8e2cdcd9b40cf4c7b">lit_990</a> = 4503601774854144.0</td></tr>
-<tr class="separator:ae7fc76413893f0d8e2cdcd9b40cf4c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae673e0ad067fb4e0d4d86a51755dec0e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASBNKParser_8cpp.html#ae673e0ad067fb4e0d4d86a51755dec0e">lit_1045</a> = 1.0f</td></tr>
-<tr class="separator:ae673e0ad067fb4e0d4d86a51755dec0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1bf36b3efa97386a882d8cb7cee4e1e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASBNKParser_8cpp.html#ae1bf36b3efa97386a882d8cb7cee4e1e">lit_838</a> [8]</td></tr>
+<tr class="separator:ae1bf36b3efa97386a882d8cb7cee4e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a071874a2e1fa555ba5167ba6b2304f9a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASBNKParser_8cpp.html#a071874a2e1fa555ba5167ba6b2304f9a">lit_990</a> [8]</td></tr>
+<tr class="separator:a071874a2e1fa555ba5167ba6b2304f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86893c6b871412f430bdc68451480de4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASBNKParser_8cpp.html#a86893c6b871412f430bdc68451480de4">lit_1045</a> = 0x3F800000</td></tr>
+<tr class="separator:a86893c6b871412f430bdc68451480de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a146f2c800a92b7faf353ac7632d40d4b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASBNKParser_8cpp.html#a146f2c800a92b7faf353ac7632d40d4b">lit_1046</a> [4]</td></tr>
 <tr class="separator:a146f2c800a92b7faf353ac7632d40d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87ba40de473dda1d934ce4fb08038a02"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASBNKParser_8cpp.html#a87ba40de473dda1d934ce4fb08038a02">lit_1047</a> [1+1]</td></tr>
@@ -1454,8 +1454,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae673e0ad067fb4e0d4d86a51755dec0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae673e0ad067fb4e0d4d86a51755dec0e">&#9670;&nbsp;</a></span>lit_1045</h2>
+<a id="a86893c6b871412f430bdc68451480de4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86893c6b871412f430bdc68451480de4">&#9670;&nbsp;</a></span>lit_1045</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1464,7 +1464,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_1045 = 1.0f</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> lit_1045 = 0x3F800000</td>
         </tr>
       </table>
   </td>
@@ -1496,10 +1496,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1580,8 +1577,8 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a888391dbeedaf1fabf08c82d0514e600"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a888391dbeedaf1fabf08c82d0514e600">&#9670;&nbsp;</a></span>lit_838</h2>
+<a id="ae1bf36b3efa97386a882d8cb7cee4e1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1bf36b3efa97386a882d8cb7cee4e1e">&#9670;&nbsp;</a></span>lit_838</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1590,7 +1587,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a> lit_838 = 4503599627370496.0</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_838[8]</td>
         </tr>
       </table>
   </td>
@@ -1599,11 +1596,14 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="ae7fc76413893f0d8e2cdcd9b40cf4c7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7fc76413893f0d8e2cdcd9b40cf4c7b">&#9670;&nbsp;</a></span>lit_990</h2>
+<a id="a071874a2e1fa555ba5167ba6b2304f9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a071874a2e1fa555ba5167ba6b2304f9a">&#9670;&nbsp;</a></span>lit_990</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1612,7 +1612,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a> lit_990 = 4503601774854144.0</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_990[8]</td>
         </tr>
       </table>
   </td>
@@ -1621,7 +1621,10 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af0bd9a39e05240d11bfa6c9f141ad567"></a>

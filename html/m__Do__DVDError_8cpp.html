@@ -81,9 +81,9 @@ $(function() {
 <div class="title">m_Do_DVDError.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="m__Do__DVDError_8h_source.html">m_Do/m_Do_DVDError.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="m__Do__DVDError_8h_source.html">m_Do/m_Do_DVDError.h</a>&quot;</code><br />
 <code>#include &quot;asm/m_Do/m_Do_DVDError/mDoDvdErr_ThdInit__Fv.s&quot;</code><br />
 <code>#include &quot;asm/m_Do/m_Do_DVDError/mDoDvdErr_ThdCleanup__Fv.s&quot;</code><br />
 <code>#include &quot;asm/m_Do/m_Do_DVDError/mDoDvdErr_Watch__FPv.s&quot;</code><br />
@@ -173,12 +173,12 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a049985f7f41e0a3f8f3e875a0b585e36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__DVDError_8cpp.html#a049985f7f41e0a3f8f3e875a0b585e36">DvdErr_stack</a> [3072]</td></tr>
-<tr class="separator:a049985f7f41e0a3f8f3e875a0b585e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff05c8320c5a3b0da4796640221f39f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__DVDError_8cpp.html#aff05c8320c5a3b0da4796640221f39f1">data_80450C88</a> [8]</td></tr>
 <tr class="separator:aff05c8320c5a3b0da4796640221f39f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acde2dc01e39eced9fa5da45d8ab467df"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__DVDError_8cpp.html#acde2dc01e39eced9fa5da45d8ab467df">DvdErr_thread</a> [792+8]</td></tr>
 <tr class="separator:acde2dc01e39eced9fa5da45d8ab467df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76bfe7ddd91b4351175b5ae523a306eb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__DVDError_8cpp.html#a76bfe7ddd91b4351175b5ae523a306eb">DvdErr_stack</a> [3072]</td></tr>
+<tr class="separator:a76bfe7ddd91b4351175b5ae523a306eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae97ee6e9016fedcdd2247b9948ef8541"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__DVDError_8cpp.html#ae97ee6e9016fedcdd2247b9948ef8541">Alarm</a> [40+24]</td></tr>
 <tr class="separator:ae97ee6e9016fedcdd2247b9948ef8541"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -748,16 +748,24 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a049985f7f41e0a3f8f3e875a0b585e36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a049985f7f41e0a3f8f3e875a0b585e36">&#9670;&nbsp;</a></span>DvdErr_stack</h2>
+<a id="a76bfe7ddd91b4351175b5ae523a306eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76bfe7ddd91b4351175b5ae523a306eb">&#9670;&nbsp;</a></span>DvdErr_stack</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> DvdErr_stack</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> DvdErr_stack[3072]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

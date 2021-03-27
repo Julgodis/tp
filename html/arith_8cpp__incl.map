@@ -1,8 +1,8 @@
 <map id="libs/MSL_C.PPCEABI.bare.H/MSL_Common/Src/arith.cpp" name="libs/MSL_C.PPCEABI.bare.H/MSL_Common/Src/arith.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="197,5,397,47"/>
-<area shape="rect" id="node2" href="$arith_8h.html" title=" " alt="" coords="5,95,181,136"/>
-<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="102,184,210,211"/>
-<area shape="rect" id="node4" href="$dol2asm_8h.html" title=" " alt="" coords="257,102,338,129"/>
-<area shape="rect" id="node5" title=" " alt="" coords="363,95,560,136"/>
-<area shape="rect" id="node6" title=" " alt="" coords="585,95,786,136"/>
+<area shape="rect" id="node1" title=" " alt="" coords="150,5,350,47"/>
+<area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,102,87,129"/>
+<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="133,184,241,211"/>
+<area shape="rect" id="node4" href="$arith_8h.html" title=" " alt="" coords="162,95,338,136"/>
+<area shape="rect" id="node5" title=" " alt="" coords="362,95,559,136"/>
+<area shape="rect" id="node6" title=" " alt="" coords="584,95,785,136"/>
 </map>

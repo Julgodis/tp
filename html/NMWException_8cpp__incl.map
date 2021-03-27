@@ -1,8 +1,8 @@
 <map id="libs/Runtime.PPCEABI.H/NMWException.cpp" name="libs/Runtime.PPCEABI.H/NMWException.cpp">
 <area shape="rect" id="node1" title=" " alt="" coords="543,5,709,47"/>
-<area shape="rect" id="node2" href="$NMWException_8h.html" title=" " alt="" coords="5,109,252,136"/>
-<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="155,199,263,225"/>
-<area shape="rect" id="node4" href="$dol2asm_8h.html" title=" " alt="" coords="327,109,408,136"/>
+<area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,109,87,136"/>
+<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="151,199,259,225"/>
+<area shape="rect" id="node4" href="$NMWException_8h.html" title=" " alt="" coords="161,109,408,136"/>
 <area shape="rect" id="node5" title=" " alt="" coords="432,95,607,151"/>
 <area shape="rect" id="node6" title=" " alt="" coords="631,102,837,143"/>
 <area shape="rect" id="node7" title=" " alt="" coords="862,95,1049,151"/>

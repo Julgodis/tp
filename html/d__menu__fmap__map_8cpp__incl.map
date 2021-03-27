@@ -1,8 +1,8 @@
 <map id="src/d/menu/d_menu_fmap_map.cpp" name="src/d/menu/d_menu_fmap_map.cpp">
 <area shape="rect" id="node1" title=" " alt="" coords="4541,5,4714,47"/>
-<area shape="rect" id="node2" href="$d__menu__fmap__map_8h.html" title=" " alt="" coords="5,109,156,151"/>
-<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="83,213,191,240"/>
-<area shape="rect" id="node4" href="$dol2asm_8h.html" title=" " alt="" coords="232,117,313,143"/>
+<area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,117,87,143"/>
+<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="127,213,235,240"/>
+<area shape="rect" id="node4" href="$d__menu__fmap__map_8h.html" title=" " alt="" coords="163,109,313,151"/>
 <area shape="rect" id="node5" title=" " alt="" coords="338,102,546,158"/>
 <area shape="rect" id="node6" title=" " alt="" coords="570,95,797,165"/>
 <area shape="rect" id="node7" title=" " alt="" coords="821,102,1010,158"/>

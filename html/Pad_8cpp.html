@@ -80,9 +80,9 @@ $(function() {
 <div class="title">Pad.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="Pad_8h_source.html">dolphin/pad/Pad.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Pad_8h_source.html">dolphin/pad/Pad.h</a>&quot;</code><br />
 <code>#include &quot;asm/dolphin/pad/Pad/UpdateOrigin.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/pad/Pad/PADOriginCallback.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/pad/Pad/PADOriginUpdateCallback.s&quot;</code><br />
@@ -205,8 +205,6 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a561599387beae6cbef873f7f854a1745"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Pad_8cpp.html#a561599387beae6cbef873f7f854a1745">CmdProbeDevice</a> [16]</td></tr>
-<tr class="separator:a561599387beae6cbef873f7f854a1745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3791ae4fbf61ef9b793e8639b12bfb77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Pad_8cpp.html#a3791ae4fbf61ef9b793e8639b12bfb77">__PADSpec</a> [4+4]</td></tr>
 <tr class="separator:a3791ae4fbf61ef9b793e8639b12bfb77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06003f298056368c8f7e905fa7428f6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Pad_8cpp.html#a06003f298056368c8f7e905fa7428f6c">__PADFixBits</a> [4+4]</td></tr>
@@ -251,6 +249,8 @@ Variables</h2></td></tr>
 <tr class="separator:ac0e0a10205f1968d6a3f3707765a2eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb9df7ae202123e8b5397d2937b5d1a1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Pad_8cpp.html#aeb9df7ae202123e8b5397d2937b5d1a1">ResetFunctionInfo</a> [4]</td></tr>
 <tr class="separator:aeb9df7ae202123e8b5397d2937b5d1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cabdeab34b8dbc66dcaf0c9b53e878f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Pad_8cpp.html#a6cabdeab34b8dbc66dcaf0c9b53e878f">CmdProbeDevice</a> [16]</td></tr>
+<tr class="separator:a6cabdeab34b8dbc66dcaf0c9b53e878f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a152165e65f651577208d07e1124ca13e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Pad_8cpp.html#a152165e65f651577208d07e1124ca13e">SamplingCallback</a> [4]</td></tr>
 <tr class="separator:a152165e65f651577208d07e1124ca13e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ce6a6bd75950d19332b9e445f655295"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Pad_8cpp.html#a0ce6a6bd75950d19332b9e445f655295">data_8045186C</a> [4]</td></tr>
@@ -1248,16 +1248,24 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a561599387beae6cbef873f7f854a1745"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a561599387beae6cbef873f7f854a1745">&#9670;&nbsp;</a></span>CmdProbeDevice</h2>
+<a id="a6cabdeab34b8dbc66dcaf0c9b53e878f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cabdeab34b8dbc66dcaf0c9b53e878f">&#9670;&nbsp;</a></span>CmdProbeDevice</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> CmdProbeDevice</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> CmdProbeDevice[16]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1369,7 +1377,16 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,</div>
+<div class="line">    0x20, 0x50, 0x41, 0x44, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69,</div>
+<div class="line">    0x6C, 0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20,</div>
+<div class="line">    0x30, 0x34, 0x3A, 0x31, 0x34, 0x3A, 0x34, 0x39, 0x20, 0x28, 0x30, 0x78, 0x32, 0x33, 0x30, 0x31,</div>
+<div class="line">    0x29, 0x20, 0x3E, 0x3E, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7d2db082d078613ae565687caf827d2f"></a>
@@ -1485,7 +1502,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aPad_8cpp_html_a9462ff26e8664066b54c1969eb75668d"><div class="ttname"><a href="Pad_8cpp.html#a9462ff26e8664066b54c1969eb75668d">OnReset</a></div><div class="ttdeci">static void OnReset()</div><div class="ttdef"><b>Definition:</b> Pad.cpp:388</div></div>
+<div class="ttc" id="aPad_8cpp_html_a9462ff26e8664066b54c1969eb75668d"><div class="ttname"><a href="Pad_8cpp.html#a9462ff26e8664066b54c1969eb75668d">OnReset</a></div><div class="ttdeci">static void OnReset()</div><div class="ttdef"><b>Definition:</b> Pad.cpp:342</div></div>
 <div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
 </div><!-- fragment -->
 </div>

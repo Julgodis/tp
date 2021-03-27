@@ -81,9 +81,9 @@ $(function() {
 <div class="title">J3DJoint.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="J3DJoint_8h_source.html">JSystem/J3DGraphAnimator/J3DJoint.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="J3DJoint_8h_source.html">JSystem/J3DGraphAnimator/J3DJoint.h</a>&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphAnimator/J3DJoint/init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphAnimator/J3DJoint/init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphAnimator/J3DJoint/calcTransform__28J3DMtxCalcCalcTransformBasicFRC16J3DTransformInfo.s&quot;</code><br />
@@ -190,8 +190,8 @@ Variables</h2></td></tr>
 <tr class="separator:a73e3a63cf58f5b97da2c7721fced5035"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfcb2680f8c9ae3d6a6422413845fadd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DJoint_8cpp.html#acfcb2680f8c9ae3d6a6422413845fadd">lit_893</a> [12]</td></tr>
 <tr class="separator:acfcb2680f8c9ae3d6a6422413845fadd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a29a38c245b13f4fe0d4cb9beccf021"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DJoint_8cpp.html#a5a29a38c245b13f4fe0d4cb9beccf021">lit_922</a> = 1.0f</td></tr>
-<tr class="separator:a5a29a38c245b13f4fe0d4cb9beccf021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d4f7adc2e5b373d3fa4194a8abaf401"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DJoint_8cpp.html#a9d4f7adc2e5b373d3fa4194a8abaf401">lit_922</a> = 0x3F800000</td></tr>
+<tr class="separator:a9d4f7adc2e5b373d3fa4194a8abaf401"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2eff927d50515607ad5696de52dcab72"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DJoint_8cpp.html#a2eff927d50515607ad5696de52dcab72">lit_1257</a> [12]</td></tr>
 <tr class="separator:a2eff927d50515607ad5696de52dcab72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a209191dbcc947240a6fb3febc5ed9a26"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DJoint_8cpp.html#a209191dbcc947240a6fb3febc5ed9a26">lit_1259</a> [12]</td></tr>
@@ -712,10 +712,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -820,8 +817,8 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a5a29a38c245b13f4fe0d4cb9beccf021"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a29a38c245b13f4fe0d4cb9beccf021">&#9670;&nbsp;</a></span>lit_922</h2>
+<a id="a9d4f7adc2e5b373d3fa4194a8abaf401"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d4f7adc2e5b373d3fa4194a8abaf401">&#9670;&nbsp;</a></span>lit_922</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -830,7 +827,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_922 = 1.0f</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> lit_922 = 0x3F800000</td>
         </tr>
       </table>
   </td>

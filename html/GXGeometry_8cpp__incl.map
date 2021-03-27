@@ -1,8 +1,8 @@
 <map id="libs/dolphin/gx/GXGeometry.cpp" name="libs/dolphin/gx/GXGeometry.cpp">
 <area shape="rect" id="node1" title=" " alt="" coords="876,5,1083,32"/>
-<area shape="rect" id="node2" href="$GXGeometry_8h.html" title=" " alt="" coords="5,87,175,114"/>
-<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="97,169,205,196"/>
-<area shape="rect" id="node4" href="$dol2asm_8h.html" title=" " alt="" coords="251,87,332,114"/>
+<area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,87,87,114"/>
+<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="132,169,240,196"/>
+<area shape="rect" id="node4" href="$GXGeometry_8h.html" title=" " alt="" coords="163,87,332,114"/>
 <area shape="rect" id="node5" title=" " alt="" coords="356,80,544,121"/>
 <area shape="rect" id="node6" title=" " alt="" coords="568,80,756,121"/>
 <area shape="rect" id="node7" title=" " alt="" coords="780,80,968,121"/>

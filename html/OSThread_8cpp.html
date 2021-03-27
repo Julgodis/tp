@@ -80,9 +80,9 @@ $(function() {
 <div class="title">OSThread.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="OSThread_8h_source.html">dolphin/os/OSThread.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="OSThread_8h_source.html">dolphin/os/OSThread.h</a>&quot;</code><br />
 <code>#include &quot;asm/dolphin/os/OSThread/OSSetSwitchThreadCallback.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/os/OSThread/__OSThreadInit.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/os/OSThread/OSInitThreadQueue.s&quot;</code><br />
@@ -207,63 +207,13 @@ Functions</h2></td></tr>
 <tr class="separator:a208db0ef100e31988dcb53cc3cc4cc62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ee4377f61a14c4d3fb22f93d6a9211f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a0ee4377f61a14c4d3fb22f93d6a9211f">__OSCheckMutexes</a> ()</td></tr>
 <tr class="separator:a0ee4377f61a14c4d3fb22f93d6a9211f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af90e75c1dedf80a81439d70e3c9bc0eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#af90e75c1dedf80a81439d70e3c9bc0eb">_epilog</a> ()</td></tr>
+<tr class="separator:af90e75c1dedf80a81439d70e3c9bc0eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a39ca9ba0590c2a0078c9d085efa51944"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a39ca9ba0590c2a0078c9d085efa51944">lit_832</a> [11+1]</td></tr>
-<tr class="separator:a39ca9ba0590c2a0078c9d085efa51944"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cbef4fa3f245da825ee5ff28908e182"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a1cbef4fa3f245da825ee5ff28908e182">lit_834</a> [95+1]</td></tr>
-<tr class="separator:a1cbef4fa3f245da825ee5ff28908e182"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ad6f9efb11e96ca2e2ab5c1304b5271"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a0ad6f9efb11e96ca2e2ab5c1304b5271">lit_835</a> [70+2]</td></tr>
-<tr class="separator:a0ad6f9efb11e96ca2e2ab5c1304b5271"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a402165593c658757481a2dbefd0cc210"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a402165593c658757481a2dbefd0cc210">lit_836</a> [126+2]</td></tr>
-<tr class="separator:a402165593c658757481a2dbefd0cc210"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0859281c2335e48d6be9cd381ac5b7c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a0859281c2335e48d6be9cd381ac5b7c1">lit_837</a> [126+2]</td></tr>
-<tr class="separator:a0859281c2335e48d6be9cd381ac5b7c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8a2b731640e39fc303d1622606c1baa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#ab8a2b731640e39fc303d1622606c1baa">lit_838</a> [122+2]</td></tr>
-<tr class="separator:ab8a2b731640e39fc303d1622606c1baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81f7342aec6e1c85e338486100bbff0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a81f7342aec6e1c85e338486100bbff0a">lit_839</a> [122+2]</td></tr>
-<tr class="separator:a81f7342aec6e1c85e338486100bbff0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e4ec677e89da63af499a8352a6f4457"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a4e4ec677e89da63af499a8352a6f4457">lit_840</a> [81+3]</td></tr>
-<tr class="separator:a4e4ec677e89da63af499a8352a6f4457"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4f9051ad21e35dd589f0ddd2e33bb3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#ab4f9051ad21e35dd589f0ddd2e33bb3b">lit_841</a> [113+3]</td></tr>
-<tr class="separator:ab4f9051ad21e35dd589f0ddd2e33bb3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1e99e3070db77d13e56ac6c2d56d6e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#ac1e99e3070db77d13e56ac6c2d56d6e8">lit_842</a> [57+3]</td></tr>
-<tr class="separator:ac1e99e3070db77d13e56ac6c2d56d6e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae340e226ce526b4d60406268a20fd54f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#ae340e226ce526b4d60406268a20fd54f">lit_843</a> [73+3]</td></tr>
-<tr class="separator:ae340e226ce526b4d60406268a20fd54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7263d00832a9870a5545e06974f87b1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a7263d00832a9870a5545e06974f87b1c">lit_844</a> [81+3]</td></tr>
-<tr class="separator:a7263d00832a9870a5545e06974f87b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab67c0b06a32aa1fff52d048dc00bcbb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#ab67c0b06a32aa1fff52d048dc00bcbb8">lit_845</a> [82+2]</td></tr>
-<tr class="separator:ab67c0b06a32aa1fff52d048dc00bcbb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acaa7d1b1427e5b5dccd14062f6d10a8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#acaa7d1b1427e5b5dccd14062f6d10a8b">lit_846</a> [89+3]</td></tr>
-<tr class="separator:acaa7d1b1427e5b5dccd14062f6d10a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7abfad1777ebfcab92ecb19c5d68749"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#ab7abfad1777ebfcab92ecb19c5d68749">lit_847</a> [66+2]</td></tr>
-<tr class="separator:ab7abfad1777ebfcab92ecb19c5d68749"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11d834f40a293b0d81173a897786d028"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a11d834f40a293b0d81173a897786d028">lit_848</a> [58+2]</td></tr>
-<tr class="separator:a11d834f40a293b0d81173a897786d028"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe59df40e9a88b20bfd994b598ea3ef4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#afe59df40e9a88b20bfd994b598ea3ef4">lit_849</a> [58+2]</td></tr>
-<tr class="separator:afe59df40e9a88b20bfd994b598ea3ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ccd22af5a378b8f2efba05807eca777"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a8ccd22af5a378b8f2efba05807eca777">lit_850</a> [68]</td></tr>
-<tr class="separator:a8ccd22af5a378b8f2efba05807eca777"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f06243f3bd74fec0842f702fffd6c93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a1f06243f3bd74fec0842f702fffd6c93">lit_851</a> [68]</td></tr>
-<tr class="separator:a1f06243f3bd74fec0842f702fffd6c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa029e419741a5bc55ad7669bdff1dac9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#aa029e419741a5bc55ad7669bdff1dac9">lit_852</a> [59+1]</td></tr>
-<tr class="separator:aa029e419741a5bc55ad7669bdff1dac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5f15e25490c1f47e79107ff725a8c55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#aa5f15e25490c1f47e79107ff725a8c55">lit_853</a> [63+1]</td></tr>
-<tr class="separator:aa5f15e25490c1f47e79107ff725a8c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af48dcb680ceca70f66079755395de89c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#af48dcb680ceca70f66079755395de89c">lit_854</a> [103+1]</td></tr>
-<tr class="separator:af48dcb680ceca70f66079755395de89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3e011ac149bbaebb071c5de3d1a1b38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#af3e011ac149bbaebb071c5de3d1a1b38">lit_855</a> [69+3]</td></tr>
-<tr class="separator:af3e011ac149bbaebb071c5de3d1a1b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf14c33de65035192804b2b8a45a649a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#acf14c33de65035192804b2b8a45a649a">lit_856</a> [61+3]</td></tr>
-<tr class="separator:acf14c33de65035192804b2b8a45a649a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6613235fa9ed1c46291901ecbc4567e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a6613235fa9ed1c46291901ecbc4567e0">IdleThread</a> [792]</td></tr>
 <tr class="separator:a6613235fa9ed1c46291901ecbc4567e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adffdccdec477689ffd50a91e215fd9c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#adffdccdec477689ffd50a91e215fd9c7">DefaultThread</a> [792]</td></tr>
-<tr class="separator:adffdccdec477689ffd50a91e215fd9c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d73eab7fd1aa3f435fe4afa302ac854"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a8d73eab7fd1aa3f435fe4afa302ac854">IdleContext</a> [712]</td></tr>
-<tr class="separator:a8d73eab7fd1aa3f435fe4afa302ac854"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6009103ef6e25ffbe3ed283740a170c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a6009103ef6e25ffbe3ed283740a170c8">data_804516D0</a> [8]</td></tr>
 <tr class="separator:a6009103ef6e25ffbe3ed283740a170c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01dd0c20e4599e93a4c3ac8e7e8984e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a01dd0c20e4599e93a4c3ac8e7e8984e7">__OSErrorTable</a> [68+12]</td></tr>
@@ -274,6 +224,10 @@ Variables</h2></td></tr>
 <tr class="separator:af6923b4ad760e11d44ddc82f96fd553d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61e513d686e0e813e7692b883c4f04f5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a61e513d686e0e813e7692b883c4f04f5">RunQueue</a> [256]</td></tr>
 <tr class="separator:a61e513d686e0e813e7692b883c4f04f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab52fc49d846a353de19c20e4f0dbea27"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#ab52fc49d846a353de19c20e4f0dbea27">DefaultThread</a> [792]</td></tr>
+<tr class="separator:ab52fc49d846a353de19c20e4f0dbea27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36f77bbb320bf2e4a8b6072fb59969b9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a36f77bbb320bf2e4a8b6072fb59969b9">IdleContext</a> [712]</td></tr>
+<tr class="separator:a36f77bbb320bf2e4a8b6072fb59969b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bf094ca35b6ea7dc5089565f905968a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a0bf094ca35b6ea7dc5089565f905968a">RunQueueBits</a> [4]</td></tr>
 <tr class="separator:a0bf094ca35b6ea7dc5089565f905968a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70244231b99534c76a3836cc1da4f2fb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a70244231b99534c76a3836cc1da4f2fb">RunQueueHint</a> [4]</td></tr>
@@ -282,6 +236,54 @@ Variables</h2></td></tr>
 <tr class="separator:a01ef072b96a599635c78f64ff9b36c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51403b7fb7b0efb47b95b85b0db64293"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a51403b7fb7b0efb47b95b85b0db64293">lit_831</a> [95+1]</td></tr>
 <tr class="separator:a51403b7fb7b0efb47b95b85b0db64293"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafa857b3a87df69f8c62ac09f831e07b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#aafa857b3a87df69f8c62ac09f831e07b">lit_832</a> [11+1]</td></tr>
+<tr class="separator:aafa857b3a87df69f8c62ac09f831e07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a3809236eeb0dd60204de224994b6a1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a7a3809236eeb0dd60204de224994b6a1">lit_834</a> [95+1]</td></tr>
+<tr class="separator:a7a3809236eeb0dd60204de224994b6a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc01e47cc9a74ae2c4324bb4d0b37e99"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#abc01e47cc9a74ae2c4324bb4d0b37e99">lit_835</a> [70+2]</td></tr>
+<tr class="separator:abc01e47cc9a74ae2c4324bb4d0b37e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e7b9b01d2449d56e9c8c3e626c187d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#ae1e7b9b01d2449d56e9c8c3e626c187d">lit_836</a> [126+2]</td></tr>
+<tr class="separator:ae1e7b9b01d2449d56e9c8c3e626c187d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f77e5f409e10ee38fe6410054b96a2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#ab1f77e5f409e10ee38fe6410054b96a2">lit_837</a> [126+2]</td></tr>
+<tr class="separator:ab1f77e5f409e10ee38fe6410054b96a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad87486bca05b4c753248b629c46c9bad"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#ad87486bca05b4c753248b629c46c9bad">lit_838</a> [122+2]</td></tr>
+<tr class="separator:ad87486bca05b4c753248b629c46c9bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ae8339421b64533adc4b4b4d21d363f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a2ae8339421b64533adc4b4b4d21d363f">lit_839</a> [122+2]</td></tr>
+<tr class="separator:a2ae8339421b64533adc4b4b4d21d363f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ad74bb49baf57cf618e7a2630da0bcc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a3ad74bb49baf57cf618e7a2630da0bcc">lit_840</a> [81+3]</td></tr>
+<tr class="separator:a3ad74bb49baf57cf618e7a2630da0bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb569ee372be4273b3ffc765fe76a749"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#aeb569ee372be4273b3ffc765fe76a749">lit_841</a> [113+3]</td></tr>
+<tr class="separator:aeb569ee372be4273b3ffc765fe76a749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa33dda853b0aa5b207c7c596b21384ba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#aa33dda853b0aa5b207c7c596b21384ba">lit_842</a> [57+3]</td></tr>
+<tr class="separator:aa33dda853b0aa5b207c7c596b21384ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f98d6e9cbdcff4f935183b5710109dc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a8f98d6e9cbdcff4f935183b5710109dc">lit_843</a> [73+3]</td></tr>
+<tr class="separator:a8f98d6e9cbdcff4f935183b5710109dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc7dbe1bd5119780bebf073c9018fadb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#afc7dbe1bd5119780bebf073c9018fadb">lit_844</a> [81+3]</td></tr>
+<tr class="separator:afc7dbe1bd5119780bebf073c9018fadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a918f1d001a57d28e26d5ed59e0022364"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a918f1d001a57d28e26d5ed59e0022364">lit_845</a> [82+2]</td></tr>
+<tr class="separator:a918f1d001a57d28e26d5ed59e0022364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb66942ac6c05ba5fc2d583ca097aff3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#acb66942ac6c05ba5fc2d583ca097aff3">lit_846</a> [89+3]</td></tr>
+<tr class="separator:acb66942ac6c05ba5fc2d583ca097aff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04fcd764eef61b357b9d45b6f3a4546a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a04fcd764eef61b357b9d45b6f3a4546a">lit_847</a> [66+2]</td></tr>
+<tr class="separator:a04fcd764eef61b357b9d45b6f3a4546a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e384ec59fd111bab5126686b2d0e473"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a8e384ec59fd111bab5126686b2d0e473">lit_848</a> [58+2]</td></tr>
+<tr class="separator:a8e384ec59fd111bab5126686b2d0e473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfbda6f299076a4936d72e9c8d71ff1e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#adfbda6f299076a4936d72e9c8d71ff1e">lit_849</a> [58+2]</td></tr>
+<tr class="separator:adfbda6f299076a4936d72e9c8d71ff1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf909a5376eacdc1d8c008e27a55ceac"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#acf909a5376eacdc1d8c008e27a55ceac">lit_850</a> [68]</td></tr>
+<tr class="separator:acf909a5376eacdc1d8c008e27a55ceac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a9aa92ab18a00fc9453f3647f63442"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#aa0a9aa92ab18a00fc9453f3647f63442">lit_851</a> [68]</td></tr>
+<tr class="separator:aa0a9aa92ab18a00fc9453f3647f63442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe4c4d5e6465fc088acac1339ad74009"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#abe4c4d5e6465fc088acac1339ad74009">lit_852</a> [59+1]</td></tr>
+<tr class="separator:abe4c4d5e6465fc088acac1339ad74009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92a9f3c8da9f653d9e32aa3a6873073c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a92a9f3c8da9f653d9e32aa3a6873073c">lit_853</a> [63+1]</td></tr>
+<tr class="separator:a92a9f3c8da9f653d9e32aa3a6873073c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0f423065e39aca91ce823a2c1243c35"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#ae0f423065e39aca91ce823a2c1243c35">lit_854</a> [103+1]</td></tr>
+<tr class="separator:ae0f423065e39aca91ce823a2c1243c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab21d69988025d67664924c32ab14a58"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#aab21d69988025d67664924c32ab14a58">lit_855</a> [69+3]</td></tr>
+<tr class="separator:aab21d69988025d67664924c32ab14a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4a3163006e9c3d070096df40b072dbe"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#ac4a3163006e9c3d070096df40b072dbe">lit_856</a> [61+3]</td></tr>
+<tr class="separator:ac4a3163006e9c3d070096df40b072dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad1eddc468de0475bbf0a148152fd5ae"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#aad1eddc468de0475bbf0a148152fd5ae">lit_833</a> [1+3]</td></tr>
 <tr class="separator:aad1eddc468de0475bbf0a148152fd5ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -396,6 +398,23 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">void __OSUnlockAllMutex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af90e75c1dedf80a81439d70e3c9bc0eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af90e75c1dedf80a81439d70e3c9bc0eb">&#9670;&nbsp;</a></span>_epilog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _epilog </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1124,30 +1143,46 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="adffdccdec477689ffd50a91e215fd9c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adffdccdec477689ffd50a91e215fd9c7">&#9670;&nbsp;</a></span>DefaultThread</h2>
+<a id="ab52fc49d846a353de19c20e4f0dbea27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab52fc49d846a353de19c20e4f0dbea27">&#9670;&nbsp;</a></span>DefaultThread</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> DefaultThread</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> DefaultThread[792]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a8d73eab7fd1aa3f435fe4afa302ac854"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d73eab7fd1aa3f435fe4afa302ac854">&#9670;&nbsp;</a></span>IdleContext</h2>
+<a id="a36f77bbb320bf2e4a8b6072fb59969b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36f77bbb320bf2e4a8b6072fb59969b9">&#9670;&nbsp;</a></span>IdleContext</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> IdleContext</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> IdleContext[712]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1185,32 +1220,40 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x52, 0x75, 0x6E,</div>
+<div class="line">    0x51, 0x75, 0x65, 0x75, 0x65, 0x5B, 0x70, 0x72, 0x69, 0x6F, 0x5D, 0x2E, 0x68, 0x65, 0x61, 0x64,</div>
+<div class="line">    0x20, 0x21, 0x3D, 0x20, 0x4E, 0x55, 0x4C, 0x4C, 0x20, 0x26, 0x26, 0x20, 0x52, 0x75, 0x6E, 0x51,</div>
+<div class="line">    0x75, 0x65, 0x75, 0x65, 0x5B, 0x70, 0x72, 0x69, 0x6F, 0x5D, 0x2E, 0x74, 0x61, 0x69, 0x6C, 0x20,</div>
+<div class="line">    0x21, 0x3D, 0x20, 0x4E, 0x55, 0x4C, 0x4C, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a39ca9ba0590c2a0078c9d085efa51944"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39ca9ba0590c2a0078c9d085efa51944">&#9670;&nbsp;</a></span>lit_832</h2>
+<a id="aafa857b3a87df69f8c62ac09f831e07b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafa857b3a87df69f8c62ac09f831e07b">&#9670;&nbsp;</a></span>lit_832</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_832</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_832[11+1]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x4F,</div>
-<div class="line">    0x53,</div>
-<div class="line">    0x54,</div>
-<div class="line">    0x68,</div>
-<div class="line">    0x72,</div>
-<div class="line">    0x65,</div>
-<div class="line">    0x61,</div>
-<div class="line">    0x64,</div>
-<div class="line">    0x2E,</div>
-<div class="line">    0x63,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x4F, 0x53, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2E, 0x63, 0x00,</div>
 <div class="line">    </div>
 <div class="line">    0x00,</div>
 <div class="line">}</div>
@@ -1239,347 +1282,734 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    0x00,</div>
 <div class="line">    </div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x00, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a1cbef4fa3f245da825ee5ff28908e182"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cbef4fa3f245da825ee5ff28908e182">&#9670;&nbsp;</a></span>lit_834</h2>
+<a id="a7a3809236eeb0dd60204de224994b6a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a3809236eeb0dd60204de224994b6a1">&#9670;&nbsp;</a></span>lit_834</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_834</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_834[95+1]</td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0ad6f9efb11e96ca2e2ab5c1304b5271"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ad6f9efb11e96ca2e2ab5c1304b5271">&#9670;&nbsp;</a></span>lit_835</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_835</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a402165593c658757481a2dbefd0cc210"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a402165593c658757481a2dbefd0cc210">&#9670;&nbsp;</a></span>lit_836</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_836</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0859281c2335e48d6be9cd381ac5b7c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0859281c2335e48d6be9cd381ac5b7c1">&#9670;&nbsp;</a></span>lit_837</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_837</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab8a2b731640e39fc303d1622606c1baa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8a2b731640e39fc303d1622606c1baa">&#9670;&nbsp;</a></span>lit_838</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_838</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a81f7342aec6e1c85e338486100bbff0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81f7342aec6e1c85e338486100bbff0a">&#9670;&nbsp;</a></span>lit_839</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_839</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4e4ec677e89da63af499a8352a6f4457"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e4ec677e89da63af499a8352a6f4457">&#9670;&nbsp;</a></span>lit_840</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_840</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab4f9051ad21e35dd589f0ddd2e33bb3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4f9051ad21e35dd589f0ddd2e33bb3b">&#9670;&nbsp;</a></span>lit_841</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_841</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac1e99e3070db77d13e56ac6c2d56d6e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1e99e3070db77d13e56ac6c2d56d6e8">&#9670;&nbsp;</a></span>lit_842</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_842</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae340e226ce526b4d60406268a20fd54f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae340e226ce526b4d60406268a20fd54f">&#9670;&nbsp;</a></span>lit_843</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_843</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7263d00832a9870a5545e06974f87b1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7263d00832a9870a5545e06974f87b1c">&#9670;&nbsp;</a></span>lit_844</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_844</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab67c0b06a32aa1fff52d048dc00bcbb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab67c0b06a32aa1fff52d048dc00bcbb8">&#9670;&nbsp;</a></span>lit_845</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_845</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="acaa7d1b1427e5b5dccd14062f6d10a8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acaa7d1b1427e5b5dccd14062f6d10a8b">&#9670;&nbsp;</a></span>lit_846</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_846</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab7abfad1777ebfcab92ecb19c5d68749"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7abfad1777ebfcab92ecb19c5d68749">&#9670;&nbsp;</a></span>lit_847</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_847</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a11d834f40a293b0d81173a897786d028"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11d834f40a293b0d81173a897786d028">&#9670;&nbsp;</a></span>lit_848</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_848</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afe59df40e9a88b20bfd994b598ea3ef4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe59df40e9a88b20bfd994b598ea3ef4">&#9670;&nbsp;</a></span>lit_849</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_849</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8ccd22af5a378b8f2efba05807eca777"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ccd22af5a378b8f2efba05807eca777">&#9670;&nbsp;</a></span>lit_850</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_850</td>
-        </tr>
-      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54,</div>
-<div class="line">    0x68, 0x72, 0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64,</div>
-<div class="line">    0x20, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x51, 0x75,</div>
-<div class="line">    0x65, 0x75, 0x65, 0x28, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2D, 0x3E, 0x71, 0x75,</div>
-<div class="line">    0x65, 0x75, 0x65, 0x29, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x52, 0x75, 0x6E,</div>
+<div class="line">    0x51, 0x75, 0x65, 0x75, 0x65, 0x5B, 0x70, 0x72, 0x69, 0x6F, 0x5D, 0x2E, 0x68, 0x65, 0x61, 0x64,</div>
+<div class="line">    0x20, 0x3D, 0x3D, 0x20, 0x4E, 0x55, 0x4C, 0x4C, 0x20, 0x26, 0x26, 0x20, 0x52, 0x75, 0x6E, 0x51,</div>
+<div class="line">    0x75, 0x65, 0x75, 0x65, 0x5B, 0x70, 0x72, 0x69, 0x6F, 0x5D, 0x2E, 0x74, 0x61, 0x69, 0x6C, 0x20,</div>
+<div class="line">    0x3D, 0x3D, 0x20, 0x4E, 0x55, 0x4C, 0x4C, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a1f06243f3bd74fec0842f702fffd6c93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f06243f3bd74fec0842f702fffd6c93">&#9670;&nbsp;</a></span>lit_851</h2>
+<a id="abc01e47cc9a74ae2c4324bb4d0b37e99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc01e47cc9a74ae2c4324bb4d0b37e99">&#9670;&nbsp;</a></span>lit_835</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_851</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_835[70+2]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54,</div>
-<div class="line">    0x68, 0x72, 0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64,</div>
-<div class="line">    0x20, 0x49, 0x73, 0x4D, 0x65, 0x6D, 0x62, 0x65, 0x72, 0x28, 0x74, 0x68, 0x72, 0x65,</div>
-<div class="line">    0x61, 0x64, 0x2D, 0x3E, 0x71, 0x75, 0x65, 0x75, 0x65, 0x2C, 0x20, 0x74, 0x68, 0x72,</div>
-<div class="line">    0x65, 0x61, 0x64, 0x29, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x43, 0x68, 0x65,</div>
+<div class="line">    0x63, 0x6B, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x51, 0x75, 0x65, 0x75, 0x65, 0x28, 0x26, 0x52,</div>
+<div class="line">    0x75, 0x6E, 0x51, 0x75, 0x65, 0x75, 0x65, 0x5B, 0x70, 0x72, 0x69, 0x6F, 0x5D, 0x29, 0x20, 0x69,</div>
+<div class="line">    0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="aa029e419741a5bc55ad7669bdff1dac9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa029e419741a5bc55ad7669bdff1dac9">&#9670;&nbsp;</a></span>lit_852</h2>
+<a id="ae1e7b9b01d2449d56e9c8c3e626c187d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e7b9b01d2449d56e9c8c3e626c187d">&#9670;&nbsp;</a></span>lit_836</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_852</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_836[126+2]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x5F, 0x5F, 0x4F,</div>
+<div class="line">    0x53, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x51, 0x75, 0x65,</div>
+<div class="line">    0x75, 0x65, 0x2E, 0x68, 0x65, 0x61, 0x64, 0x20, 0x3D, 0x3D, 0x20, 0x4E, 0x55, 0x4C, 0x4C, 0x20,</div>
+<div class="line">    0x7C, 0x7C, 0x20, 0x5F, 0x5F, 0x4F, 0x53, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x51, 0x75, 0x65, 0x75, 0x65, 0x2E, 0x68, 0x65, 0x61, 0x64, 0x2D, 0x3E, 0x6C,</div>
+<div class="line">    0x69, 0x6E, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2E, 0x70, 0x72, 0x65, 0x76, 0x20, 0x3D,</div>
+<div class="line">    0x3D, 0x20, 0x4E, 0x55, 0x4C, 0x4C, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="aa5f15e25490c1f47e79107ff725a8c55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5f15e25490c1f47e79107ff725a8c55">&#9670;&nbsp;</a></span>lit_853</h2>
+<a id="ab1f77e5f409e10ee38fe6410054b96a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1f77e5f409e10ee38fe6410054b96a2">&#9670;&nbsp;</a></span>lit_837</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_853</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_837[126+2]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x5F, 0x5F, 0x4F,</div>
+<div class="line">    0x53, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x51, 0x75, 0x65,</div>
+<div class="line">    0x75, 0x65, 0x2E, 0x74, 0x61, 0x69, 0x6C, 0x20, 0x3D, 0x3D, 0x20, 0x4E, 0x55, 0x4C, 0x4C, 0x20,</div>
+<div class="line">    0x7C, 0x7C, 0x20, 0x5F, 0x5F, 0x4F, 0x53, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x51, 0x75, 0x65, 0x75, 0x65, 0x2E, 0x74, 0x61, 0x69, 0x6C, 0x2D, 0x3E, 0x6C,</div>
+<div class="line">    0x69, 0x6E, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2E, 0x6E, 0x65, 0x78, 0x74, 0x20, 0x3D,</div>
+<div class="line">    0x3D, 0x20, 0x4E, 0x55, 0x4C, 0x4C, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="af48dcb680ceca70f66079755395de89c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af48dcb680ceca70f66079755395de89c">&#9670;&nbsp;</a></span>lit_854</h2>
+<a id="ad87486bca05b4c753248b629c46c9bad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad87486bca05b4c753248b629c46c9bad">&#9670;&nbsp;</a></span>lit_838</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_854</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_838[122+2]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x2D, 0x3E, 0x6C, 0x69, 0x6E, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2E,</div>
+<div class="line">    0x6E, 0x65, 0x78, 0x74, 0x20, 0x3D, 0x3D, 0x20, 0x4E, 0x55, 0x4C, 0x4C, 0x20, 0x7C, 0x7C, 0x20,</div>
+<div class="line">    0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x20, 0x3D, 0x3D, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64,</div>
+<div class="line">    0x2D, 0x3E, 0x6C, 0x69, 0x6E, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2E, 0x6E, 0x65, 0x78,</div>
+<div class="line">    0x74, 0x2D, 0x3E, 0x6C, 0x69, 0x6E, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2E, 0x70, 0x72,</div>
+<div class="line">    0x65, 0x76, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="af3e011ac149bbaebb071c5de3d1a1b38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3e011ac149bbaebb071c5de3d1a1b38">&#9670;&nbsp;</a></span>lit_855</h2>
+<a id="a2ae8339421b64533adc4b4b4d21d363f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ae8339421b64533adc4b4b4d21d363f">&#9670;&nbsp;</a></span>lit_839</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_855</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_839[122+2]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x2D, 0x3E, 0x6C, 0x69, 0x6E, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2E,</div>
+<div class="line">    0x70, 0x72, 0x65, 0x76, 0x20, 0x3D, 0x3D, 0x20, 0x4E, 0x55, 0x4C, 0x4C, 0x20, 0x7C, 0x7C, 0x20,</div>
+<div class="line">    0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x20, 0x3D, 0x3D, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64,</div>
+<div class="line">    0x2D, 0x3E, 0x6C, 0x69, 0x6E, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2E, 0x70, 0x72, 0x65,</div>
+<div class="line">    0x76, 0x2D, 0x3E, 0x6C, 0x69, 0x6E, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2E, 0x6E, 0x65,</div>
+<div class="line">    0x78, 0x74, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="acf14c33de65035192804b2b8a45a649a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf14c33de65035192804b2b8a45a649a">&#9670;&nbsp;</a></span>lit_856</h2>
+<a id="a3ad74bb49baf57cf618e7a2630da0bcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ad74bb49baf57cf618e7a2630da0bcc">&#9670;&nbsp;</a></span>lit_840</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_856</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_840[81+3]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x2A, 0x28, 0x74,</div>
+<div class="line">    0x68, 0x72, 0x65, 0x61, 0x64, 0x2D, 0x3E, 0x73, 0x74, 0x61, 0x63, 0x6B, 0x45, 0x6E, 0x64, 0x29,</div>
+<div class="line">    0x20, 0x3D, 0x3D, 0x20, 0x4F, 0x53, 0x5F, 0x54, 0x48, 0x52, 0x45, 0x41, 0x44, 0x5F, 0x53, 0x54,</div>
+<div class="line">    0x41, 0x43, 0x4B, 0x5F, 0x4D, 0x41, 0x47, 0x49, 0x43, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A,</div>
+<div class="line">    0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aeb569ee372be4273b3ffc765fe76a749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb569ee372be4273b3ffc765fe76a749">&#9670;&nbsp;</a></span>lit_841</h2>
 
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_841[113+3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x4F, 0x53, 0x5F,</div>
+<div class="line">    0x50, 0x52, 0x49, 0x4F, 0x52, 0x49, 0x54, 0x59, 0x5F, 0x4D, 0x49, 0x4E, 0x20, 0x3C, 0x3D, 0x20,</div>
+<div class="line">    0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2D, 0x3E, 0x70, 0x72, 0x69, 0x6F, 0x72, 0x69, 0x74, 0x79,</div>
+<div class="line">    0x20, 0x26, 0x26, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2D, 0x3E, 0x70, 0x72, 0x69, 0x6F,</div>
+<div class="line">    0x72, 0x69, 0x74, 0x79, 0x20, 0x3C, 0x3D, 0x20, 0x4F, 0x53, 0x5F, 0x50, 0x52, 0x49, 0x4F, 0x52,</div>
+<div class="line">    0x49, 0x54, 0x59, 0x5F, 0x4D, 0x41, 0x58, 0x2B, 0x31, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A,</div>
+<div class="line">    0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa33dda853b0aa5b207c7c596b21384ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa33dda853b0aa5b207c7c596b21384ba">&#9670;&nbsp;</a></span>lit_842</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_842[57+3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x30, 0x20, 0x3C,</div>
+<div class="line">    0x3D, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2D, 0x3E, 0x73, 0x75, 0x73, 0x70, 0x65, 0x6E,</div>
+<div class="line">    0x64, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8f98d6e9cbdcff4f935183b5710109dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f98d6e9cbdcff4f935183b5710109dc">&#9670;&nbsp;</a></span>lit_843</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_843[73+3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x43, 0x68, 0x65,</div>
+<div class="line">    0x63, 0x6B, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x51, 0x75, 0x65, 0x75, 0x65, 0x28, 0x26, 0x74,</div>
+<div class="line">    0x68, 0x72, 0x65, 0x61, 0x64, 0x2D, 0x3E, 0x71, 0x75, 0x65, 0x75, 0x65, 0x4A, 0x6F, 0x69, 0x6E,</div>
+<div class="line">    0x29, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afc7dbe1bd5119780bebf073c9018fadb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc7dbe1bd5119780bebf073c9018fadb">&#9670;&nbsp;</a></span>lit_844</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_844[81+3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x2D, 0x3E, 0x71, 0x75, 0x65, 0x75, 0x65, 0x20, 0x3D, 0x3D, 0x20, 0x26, 0x52,</div>
+<div class="line">    0x75, 0x6E, 0x51, 0x75, 0x65, 0x75, 0x65, 0x5B, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2D, 0x3E,</div>
+<div class="line">    0x70, 0x72, 0x69, 0x6F, 0x72, 0x69, 0x74, 0x79, 0x5D, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A,</div>
+<div class="line">    0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a918f1d001a57d28e26d5ed59e0022364"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a918f1d001a57d28e26d5ed59e0022364">&#9670;&nbsp;</a></span>lit_845</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_845[82+2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x49, 0x73, 0x4D,</div>
+<div class="line">    0x65, 0x6D, 0x62, 0x65, 0x72, 0x28, 0x26, 0x52, 0x75, 0x6E, 0x51, 0x75, 0x65, 0x75, 0x65, 0x5B,</div>
+<div class="line">    0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2D, 0x3E, 0x70, 0x72, 0x69, 0x6F, 0x72, 0x69, 0x74, 0x79,</div>
+<div class="line">    0x5D, 0x2C, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x29, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64,</div>
+<div class="line">    0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acb66942ac6c05ba5fc2d583ca097aff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb66942ac6c05ba5fc2d583ca097aff3">&#9670;&nbsp;</a></span>lit_846</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_846[89+3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x2D, 0x3E, 0x70, 0x72, 0x69, 0x6F, 0x72, 0x69, 0x74, 0x79, 0x20, 0x3D, 0x3D,</div>
+<div class="line">    0x20, 0x5F, 0x5F, 0x4F, 0x53, 0x47, 0x65, 0x74, 0x45, 0x66, 0x66, 0x65, 0x63, 0x74, 0x69, 0x76,</div>
+<div class="line">    0x65, 0x50, 0x72, 0x69, 0x6F, 0x72, 0x69, 0x74, 0x79, 0x28, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64,</div>
+<div class="line">    0x29, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a04fcd764eef61b357b9d45b6f3a4546a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04fcd764eef61b357b9d45b6f3a4546a">&#9670;&nbsp;</a></span>lit_847</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_847[66+2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x21, 0x49, 0x73,</div>
+<div class="line">    0x53, 0x75, 0x73, 0x70, 0x65, 0x6E, 0x64, 0x65, 0x64, 0x28, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64,</div>
+<div class="line">    0x2D, 0x3E, 0x73, 0x75, 0x73, 0x70, 0x65, 0x6E, 0x64, 0x29, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64,</div>
+<div class="line">    0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8e384ec59fd111bab5126686b2d0e473"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e384ec59fd111bab5126686b2d0e473">&#9670;&nbsp;</a></span>lit_848</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_848[58+2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x2D, 0x3E, 0x71, 0x75, 0x65, 0x75, 0x65, 0x20, 0x3D, 0x3D, 0x20, 0x4E, 0x55,</div>
+<div class="line">    0x4C, 0x4C, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adfbda6f299076a4936d72e9c8d71ff1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfbda6f299076a4936d72e9c8d71ff1e">&#9670;&nbsp;</a></span>lit_849</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_849[58+2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x2D, 0x3E, 0x71, 0x75, 0x65, 0x75, 0x65, 0x20, 0x21, 0x3D, 0x20, 0x4E, 0x55,</div>
+<div class="line">    0x4C, 0x4C, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acf909a5376eacdc1d8c008e27a55ceac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf909a5376eacdc1d8c008e27a55ceac">&#9670;&nbsp;</a></span>lit_850</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_850[68]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x43, 0x68, 0x65,</div>
+<div class="line">    0x63, 0x6B, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x51, 0x75, 0x65, 0x75, 0x65, 0x28, 0x74, 0x68,</div>
+<div class="line">    0x72, 0x65, 0x61, 0x64, 0x2D, 0x3E, 0x71, 0x75, 0x65, 0x75, 0x65, 0x29, 0x20, 0x69, 0x6E, 0x20,</div>
+<div class="line">    0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa0a9aa92ab18a00fc9453f3647f63442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0a9aa92ab18a00fc9453f3647f63442">&#9670;&nbsp;</a></span>lit_851</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_851[68]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x49, 0x73, 0x4D,</div>
+<div class="line">    0x65, 0x6D, 0x62, 0x65, 0x72, 0x28, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2D, 0x3E, 0x71, 0x75,</div>
+<div class="line">    0x65, 0x75, 0x65, 0x2C, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x29, 0x20, 0x69, 0x6E, 0x20,</div>
+<div class="line">    0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abe4c4d5e6465fc088acac1339ad74009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe4c4d5e6465fc088acac1339ad74009">&#9670;&nbsp;</a></span>lit_852</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_852[59+1]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x2D, 0x3E, 0x70, 0x72, 0x69, 0x6F, 0x72, 0x69, 0x74, 0x79, 0x20, 0x3D, 0x3D,</div>
+<div class="line">    0x20, 0x33, 0x32, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a92a9f3c8da9f653d9e32aa3a6873073c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92a9f3c8da9f653d9e32aa3a6873073c">&#9670;&nbsp;</a></span>lit_853</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_853[63+1]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x21, 0x5F, 0x5F,</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x44, 0x65, 0x61, 0x64, 0x4C, 0x6F, 0x63, 0x6B, 0x28,</div>
+<div class="line">    0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x29, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae0f423065e39aca91ce823a2c1243c35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0f423065e39aca91ce823a2c1243c35">&#9670;&nbsp;</a></span>lit_854</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_854[103+1]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x2D, 0x3E, 0x71, 0x75, 0x65, 0x75, 0x65, 0x4D, 0x75, 0x74, 0x65, 0x78, 0x2E,</div>
+<div class="line">    0x68, 0x65, 0x61, 0x64, 0x20, 0x3D, 0x3D, 0x20, 0x4E, 0x55, 0x4C, 0x4C, 0x20, 0x26, 0x26, 0x20,</div>
+<div class="line">    0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2D, 0x3E, 0x71, 0x75, 0x65, 0x75, 0x65, 0x4D, 0x75, 0x74,</div>
+<div class="line">    0x65, 0x78, 0x2E, 0x74, 0x61, 0x69, 0x6C, 0x20, 0x3D, 0x3D, 0x20, 0x4E, 0x55, 0x4C, 0x4C, 0x20,</div>
+<div class="line">    0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aab21d69988025d67664924c32ab14a58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab21d69988025d67664924c32ab14a58">&#9670;&nbsp;</a></span>lit_855</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_855[69+3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x2E, 0x20, 0x75, 0x6E,</div>
+<div class="line">    0x6B, 0x6F, 0x77, 0x6E, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x20, 0x73, 0x74, 0x61, 0x74,</div>
+<div class="line">    0x65, 0x20, 0x28, 0x25, 0x64, 0x29, 0x20, 0x6F, 0x66, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64,</div>
+<div class="line">    0x20, 0x25, 0x70, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac4a3163006e9c3d070096df40b072dbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4a3163006e9c3d070096df40b072dbe">&#9670;&nbsp;</a></span>lit_856</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_856[61+3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4F, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72,</div>
+<div class="line">    0x65, 0x61, 0x64, 0x73, 0x3A, 0x20, 0x46, 0x61, 0x69, 0x6C, 0x65, 0x64, 0x20, 0x5F, 0x5F, 0x4F,</div>
+<div class="line">    0x53, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x4D, 0x75, 0x74, 0x65, 0x78, 0x65, 0x73, 0x28, 0x74, 0x68,</div>
+<div class="line">    0x72, 0x65, 0x61, 0x64, 0x29, 0x20, 0x69, 0x6E, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a01ef072b96a599635c78f64ff9b36c61"></a>

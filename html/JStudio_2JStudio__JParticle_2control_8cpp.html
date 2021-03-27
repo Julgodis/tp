@@ -82,9 +82,9 @@ $(function() {
 <div class="title">control.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="JStudio_2JStudio__JParticle_2control_8h_source.html">JSystem/JStudio/JStudio_JParticle/control.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JStudio_2JStudio__JParticle_2control_8h_source.html">JSystem/JStudio/JStudio_JParticle/control.h</a>&quot;</code><br />
 <code>#include &quot;asm/JSystem/JStudio/JStudio_JParticle/control/__dt__Q217JStudio_JParticle13TCreateObjectFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JStudio/JStudio_JParticle/control/func_8028E400.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JStudio/JStudio_JParticle/control/emitter_create__Q217JStudio_JParticle13TCreateObjectFUl.s&quot;</code><br />
@@ -121,7 +121,7 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStudio__JParticle_1_1TAdaptor__particle.html">JStudio_JParticle::TAdaptor_particle</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJPAEmitterCallBack.html">JPAEmitterCallBack</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJPAParticleCallBack.html">JPAParticleCallBack</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJGeometry.html">JGeometry</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,7 +129,7 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJGeometry_1_1TVec3____template0.html">JGeometry::TVec3__template0</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJPAParticleCallBack.html">JPAParticleCallBack</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJPAEmitterCallBack.html">JPAEmitterCallBack</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJPAEmitterManager.html">JPAEmitterManager</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -474,9 +474,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JStudio_2JStudio__JParticle_2control_8cpp.html#a70834242ea98d45df68dca29981e8755">__dt__Q217JStudio_JParticle13TCreateObjectFv</a>,</div>
-<div class="line">    </div>
-<div class="line">    (<span class="keywordtype">void</span>*)</div>
-<div class="line">        <a class="code" href="JStudio_2JStudio__JParticle_2control_8cpp.html#a17ba8a3e984cd41208af5679f8adc122">create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JStudio_2JStudio__JParticle_2control_8cpp.html#a17ba8a3e984cd41208af5679f8adc122">create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JStudio_2JStudio__JParticle_2control_8cpp.html#a03a15b0d4250f84f3f37fc9debddaab9">emitter_create__Q217JStudio_JParticle13TCreateObjectFUl</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JStudio_2JStudio__JParticle_2control_8cpp.html#a6b97ef1a1aea2171e386e06e7487c8aa">emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter</a>,</div>
 <div class="line">}</div>
@@ -508,23 +506,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">    </div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>

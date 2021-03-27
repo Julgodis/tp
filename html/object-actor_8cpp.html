@@ -82,9 +82,9 @@ $(function() {
 <div class="title">object-actor.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="object-actor_8h_source.html">JSystem/JStudio/JStudio_JStage/object-actor.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="object-actor_8h_source.html">JSystem/JStudio/JStudio_JStage/object-actor.h</a>&quot;</code><br />
 <code>#include &quot;asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028A5F0.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JStudio/JStudio_JStage/object-actor/__dt__Q214JStudio_JStage14TAdaptor_actorFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JStudio/JStudio_JStage/object-actor/adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_actorFv.s&quot;</code><br />
@@ -124,14 +124,6 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStage.html">JStage</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStage_1_1TSystem.html">JStage::TSystem</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStage_1_1TActor.html">JStage::TActor</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStage_1_1TObject.html">JStage::TObject</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVec.html">Vec</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStudio_1_1data.html">JStudio::data</a></td></tr>
@@ -153,6 +145,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStudio_1_1math.html">JStudio::math</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStudio_1_1TAdaptor__actor.html">JStudio::TAdaptor_actor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStage.html">JStage</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStage_1_1TSystem.html">JStage::TSystem</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStage_1_1TActor.html">JStage::TActor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStage_1_1TObject.html">JStage::TObject</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJStudio__JStage.html">JStudio_JStage</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -281,14 +281,6 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a425c47085155daf1299c449f08bde5c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object-actor_8cpp.html#a425c47085155daf1299c449f08bde5c4">lit_1088</a> [12]</td></tr>
-<tr class="separator:a425c47085155daf1299c449f08bde5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fbf82a2b556f08d3bc5fd6a63b4232e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object-actor_8cpp.html#a1fbf82a2b556f08d3bc5fd6a63b4232e">lit_1095</a> [12]</td></tr>
-<tr class="separator:a1fbf82a2b556f08d3bc5fd6a63b4232e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc27badcc7ef296fb9c9bba21dccf0c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object-actor_8cpp.html#abc27badcc7ef296fb9c9bba21dccf0c8">lit_1102</a> [12]</td></tr>
-<tr class="separator:abc27badcc7ef296fb9c9bba21dccf0c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa361a0483fe6e74743512d587904788d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object-actor_8cpp.html#aa361a0483fe6e74743512d587904788d">lit_1103</a> [12]</td></tr>
-<tr class="separator:aa361a0483fe6e74743512d587904788d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a233174f8c7c79acf24185f83a3448c37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object-actor_8cpp.html#a233174f8c7c79acf24185f83a3448c37">sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio14TAdaptor_actor</a> [12]</td></tr>
 <tr class="separator:a233174f8c7c79acf24185f83a3448c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b8b196d363c043ca8ff780c96018e2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object-actor_8cpp.html#a9b8b196d363c043ca8ff780c96018e2f">sauVariableValue_3_ROTATION_XYZ__Q27JStudio14TAdaptor_actor</a> [12]</td></tr>
@@ -333,8 +325,16 @@ Variables</h2></td></tr>
 <tr class="separator:a191c1bf410d4019cb3a4b13f074836c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26d935f34e463672f692067cd59df122"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object-actor_8cpp.html#a26d935f34e463672f692067cd59df122">lit_1087</a> [12]</td></tr>
 <tr class="separator:a26d935f34e463672f692067cd59df122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af10ae55e5236c454420e4d37a0af9df2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object-actor_8cpp.html#af10ae55e5236c454420e4d37a0af9df2">lit_1088</a> [12]</td></tr>
+<tr class="separator:af10ae55e5236c454420e4d37a0af9df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5591580e2029ca3df0aca481554db8b8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object-actor_8cpp.html#a5591580e2029ca3df0aca481554db8b8">saoVVOutput___Q214JStudio_JStage14TAdaptor_actor</a> [64]</td></tr>
 <tr class="separator:a5591580e2029ca3df0aca481554db8b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78c5d4c91cb31b96a4835a08eec001bd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object-actor_8cpp.html#a78c5d4c91cb31b96a4835a08eec001bd">lit_1095</a> [12]</td></tr>
+<tr class="separator:a78c5d4c91cb31b96a4835a08eec001bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a031695d3a1bbed577e3459dc21e6f13b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object-actor_8cpp.html#a031695d3a1bbed577e3459dc21e6f13b">lit_1102</a> [12]</td></tr>
+<tr class="separator:a031695d3a1bbed577e3459dc21e6f13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85cef7b6fe6aa816b3edc0ec2cb3fc74"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object-actor_8cpp.html#a85cef7b6fe6aa816b3edc0ec2cb3fc74">lit_1103</a> [12]</td></tr>
+<tr class="separator:a85cef7b6fe6aa816b3edc0ec2cb3fc74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4af8f44c598bcc4d742aea292f22d877"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object-actor_8cpp.html#a4af8f44c598bcc4d742aea292f22d877">saoVVOutput_ANIMATION_FRAME___Q214JStudio_JStage14TAdaptor_actor</a> [144+4]</td></tr>
 <tr class="separator:a4af8f44c598bcc4d742aea292f22d877"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a71bfa67e96fd8bcb874978b113a55"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object-actor_8cpp.html#a26a71bfa67e96fd8bcb874978b113a55">lit_1081</a> [4+4]</td></tr>
@@ -1339,9 +1339,7 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
-<div class="line">    </div>
-<div class="line">    (<span class="keywordtype">void</span>*)</div>
-<div class="line">        <a class="code" href="object-actor_8cpp.html#aef0d5c9e83c5041690f00a965b75803b">__cl__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_CFfPQ27JStudio8TAdaptor</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="object-actor_8cpp.html#aef0d5c9e83c5041690f00a965b75803b">__cl__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_CFfPQ27JStudio8TAdaptor</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="object-actor_8cpp.html#a3e3ccf315c41a3063f2fe973f288f97b">__dt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_Fv</a>,</div>
 <div class="line">}</div>
 <div class="ttc" id="aobject-actor_8cpp_html_a3e3ccf315c41a3063f2fe973f288f97b"><div class="ttname"><a href="object-actor_8cpp.html#a3e3ccf315c41a3063f2fe973f288f97b">__dt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_Fv</a></div><div class="ttdeci">void __dt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_Fv()</div></div>
@@ -1428,15 +1426,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">    </div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1513,16 +1505,24 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a425c47085155daf1299c449f08bde5c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a425c47085155daf1299c449f08bde5c4">&#9670;&nbsp;</a></span>lit_1088</h2>
+<a id="af10ae55e5236c454420e4d37a0af9df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af10ae55e5236c454420e4d37a0af9df2">&#9670;&nbsp;</a></span>lit_1088</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_1088</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_1088[12]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1602,16 +1602,24 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a1fbf82a2b556f08d3bc5fd6a63b4232e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fbf82a2b556f08d3bc5fd6a63b4232e">&#9670;&nbsp;</a></span>lit_1095</h2>
+<a id="a78c5d4c91cb31b96a4835a08eec001bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78c5d4c91cb31b96a4835a08eec001bd">&#9670;&nbsp;</a></span>lit_1095</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_1095</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_1095[12]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1691,30 +1699,46 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="abc27badcc7ef296fb9c9bba21dccf0c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc27badcc7ef296fb9c9bba21dccf0c8">&#9670;&nbsp;</a></span>lit_1102</h2>
+<a id="a031695d3a1bbed577e3459dc21e6f13b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a031695d3a1bbed577e3459dc21e6f13b">&#9670;&nbsp;</a></span>lit_1102</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_1102</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_1102[12]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aa361a0483fe6e74743512d587904788d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa361a0483fe6e74743512d587904788d">&#9670;&nbsp;</a></span>lit_1103</h2>
+<a id="a85cef7b6fe6aa816b3edc0ec2cb3fc74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85cef7b6fe6aa816b3edc0ec2cb3fc74">&#9670;&nbsp;</a></span>lit_1103</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_1103</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_1103[12]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

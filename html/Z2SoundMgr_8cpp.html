@@ -81,9 +81,9 @@ $(function() {
 <div class="title">Z2SoundMgr.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="Z2SoundMgr_8h_source.html">Z2AudioLib/Z2SoundMgr.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Z2SoundMgr_8h_source.html">Z2AudioLib/Z2SoundMgr.h</a>&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2SoundMgr/seqCallback__FP8JASTrackUs.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2SoundMgr/__ct__10Z2SoundMgrFv.s&quot;</code><br />
 <code>#include &quot;asm/Z2AudioLib/Z2SoundMgr/func_802A9EE8.s&quot;</code><br />
@@ -115,13 +115,13 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJAISound.html">JAISound</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJAISoundID.html">JAISoundID</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJGeometry.html">JGeometry</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJGeometry_1_1TVec3.html">JGeometry::TVec3&lt; A1 &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJGeometry_1_1TVec3____template0.html">JGeometry::TVec3__template0</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJAISoundID.html">JAISoundID</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJAISoundHandle.html">JAISoundHandle</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -315,22 +315,22 @@ Variables</h2></td></tr>
 <tr class="separator:aa2823738dd642f976c559da0a472ac05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf7315c1aebaba9004438d24c85b49c4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SoundMgr_8cpp.html#adf7315c1aebaba9004438d24c85b49c4">lit_3690</a> [22]</td></tr>
 <tr class="separator:adf7315c1aebaba9004438d24c85b49c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ee95b6af778b82d5ba1009586604611"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SoundMgr_8cpp.html#a8ee95b6af778b82d5ba1009586604611">lit_3688</a> = 1.0f</td></tr>
-<tr class="separator:a8ee95b6af778b82d5ba1009586604611"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b1f0a499a530375d951a5553af9c4a9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SoundMgr_8cpp.html#a8b1f0a499a530375d951a5553af9c4a9">lit_3689</a> = -1.0f</td></tr>
-<tr class="separator:a8b1f0a499a530375d951a5553af9c4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb17e20cee9deac78d6020fad3374031"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SoundMgr_8cpp.html#afb17e20cee9deac78d6020fad3374031">lit_3688</a> = 0x3F800000</td></tr>
+<tr class="separator:afb17e20cee9deac78d6020fad3374031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd5ad1571c3dc1cbd3b3bdec867ae372"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SoundMgr_8cpp.html#abd5ad1571c3dc1cbd3b3bdec867ae372">lit_3689</a> = 0xBF800000</td></tr>
+<tr class="separator:abd5ad1571c3dc1cbd3b3bdec867ae372"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c1ddeb181b32d8329cb4a3fab337158"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SoundMgr_8cpp.html#a9c1ddeb181b32d8329cb4a3fab337158">cResetFilterTable</a> [16]</td></tr>
 <tr class="separator:a9c1ddeb181b32d8329cb4a3fab337158"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7700426ef96d0b1d90a5a1aae76549fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SoundMgr_8cpp.html#a7700426ef96d0b1d90a5a1aae76549fb">stringBase_8039B9D0</a> = &quot;Unknown Sound-<a class="el" href="SIBios_8cpp.html#a717c7dff78d44f3cdd9acc0d3a7dec41">Type</a> id :%08x\n&quot;</td></tr>
 <tr class="separator:a7700426ef96d0b1d90a5a1aae76549fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d31361643108e665ea220ad9686ab3c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SoundMgr_8cpp.html#a0d31361643108e665ea220ad9686ab3c">pad_8039B9ED</a> = &quot;\0\0&quot;</td></tr>
 <tr class="separator:a0d31361643108e665ea220ad9686ab3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1aaa2a08862e399425f1aa3632302e71"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SoundMgr_8cpp.html#a1aaa2a08862e399425f1aa3632302e71">lit_3904</a> = 3.0f / 10.0f</td></tr>
-<tr class="separator:a1aaa2a08862e399425f1aa3632302e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a941466f0e23d60e6203f07eaf74b1e51"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SoundMgr_8cpp.html#a941466f0e23d60e6203f07eaf74b1e51">lit_3904</a> = 0x3E99999A</td></tr>
+<tr class="separator:a941466f0e23d60e6203f07eaf74b1e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae44b73667ea1a260aaf9ad4590378f9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SoundMgr_8cpp.html#aae44b73667ea1a260aaf9ad4590378f9">lit_3905</a> [4]</td></tr>
 <tr class="separator:aae44b73667ea1a260aaf9ad4590378f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab09bfa92a95c4bdeaa1b476d5cd0f143"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SoundMgr_8cpp.html#ab09bfa92a95c4bdeaa1b476d5cd0f143">lit_3909</a> = 4503599627370496.0</td></tr>
-<tr class="separator:ab09bfa92a95c4bdeaa1b476d5cd0f143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b19b3ad4404591a3145a6c0d5675ccd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SoundMgr_8cpp.html#a2b19b3ad4404591a3145a6c0d5675ccd">lit_3909</a> [8]</td></tr>
+<tr class="separator:a2b19b3ad4404591a3145a6c0d5675ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97b40643cd753b2012b1f10c72b71c29"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z2SoundMgr_8cpp.html#a97b40643cd753b2012b1f10c72b71c29">lit_4313</a> [1+1]</td></tr>
 <tr class="separator:a97b40643cd753b2012b1f10c72b71c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -1727,8 +1727,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a8ee95b6af778b82d5ba1009586604611"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ee95b6af778b82d5ba1009586604611">&#9670;&nbsp;</a></span>lit_3688</h2>
+<a id="afb17e20cee9deac78d6020fad3374031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb17e20cee9deac78d6020fad3374031">&#9670;&nbsp;</a></span>lit_3688</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1737,7 +1737,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_3688 = 1.0f</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> lit_3688 = 0x3F800000</td>
         </tr>
       </table>
   </td>
@@ -1749,8 +1749,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a8b1f0a499a530375d951a5553af9c4a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b1f0a499a530375d951a5553af9c4a9">&#9670;&nbsp;</a></span>lit_3689</h2>
+<a id="abd5ad1571c3dc1cbd3b3bdec867ae372"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd5ad1571c3dc1cbd3b3bdec867ae372">&#9670;&nbsp;</a></span>lit_3689</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1759,7 +1759,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_3689 = -1.0f</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> lit_3689 = 0xBF800000</td>
         </tr>
       </table>
   </td>
@@ -1791,35 +1791,35 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x40),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x7C),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x88),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x94),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0xA4),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0xB4),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0xC4),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x1AC),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x1BC),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x1D0),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x1D0),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x1D0),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x1D0),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x1D0),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x1D0),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x1D0),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x1D0),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x1D0),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x1D0),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x1D0),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x1CC),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>) + 0x148),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x40),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x7C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x88),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x94),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0xA4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0xB4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0xC4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x1AC),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x1BC),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x1D0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x1D0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x1D0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x1D0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x1D0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x1D0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x1D0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x1D0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x1D0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x1D0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x1D0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x1CC),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a>)+0x148),</div>
 <div class="line">}</div>
 <div class="ttc" id="aZ2SoundMgr_8cpp_html_a6f01022ad31b1b8da1e523427a63fbfd"><div class="ttname"><a href="Z2SoundMgr_8cpp.html#a6f01022ad31b1b8da1e523427a63fbfd">seqCallback__FP8JASTrackUs</a></div><div class="ttdeci">void seqCallback__FP8JASTrackUs()</div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a1aaa2a08862e399425f1aa3632302e71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1aaa2a08862e399425f1aa3632302e71">&#9670;&nbsp;</a></span>lit_3904</h2>
+<a id="a941466f0e23d60e6203f07eaf74b1e51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a941466f0e23d60e6203f07eaf74b1e51">&#9670;&nbsp;</a></span>lit_3904</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1828,7 +1828,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_3904 = 3.0f / 10.0f</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> lit_3904 = 0x3E99999A</td>
         </tr>
       </table>
   </td>
@@ -1860,16 +1860,13 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
-<div class="line">    0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ab09bfa92a95c4bdeaa1b476d5cd0f143"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab09bfa92a95c4bdeaa1b476d5cd0f143">&#9670;&nbsp;</a></span>lit_3909</h2>
+<a id="a2b19b3ad4404591a3145a6c0d5675ccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b19b3ad4404591a3145a6c0d5675ccd">&#9670;&nbsp;</a></span>lit_3909</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1878,7 +1875,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a> lit_3909 = 4503599627370496.0</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_3909[8]</td>
         </tr>
       </table>
   </td>
@@ -1887,7 +1884,10 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a97b40643cd753b2012b1f10c72b71c29"></a>

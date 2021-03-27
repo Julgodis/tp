@@ -59,57 +59,57 @@ var sectionId = 'dynsection-0';
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="225,-134.5 225,-164.5 336,-164.5 336,-134.5 225,-134.5"/>
-<text text-anchor="start" x="233" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">libs/JSystem/JAudio2</text>
-<text text-anchor="middle" x="280.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JAISoundChild.cpp</text>
+<polygon fill="#bfbfbf" stroke="black" points="206,-134.5 206,-164.5 317,-164.5 317,-134.5 206,-134.5"/>
+<text text-anchor="start" x="214" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">libs/JSystem/JAudio2</text>
+<text text-anchor="middle" x="261.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JAISoundChild.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="JAISoundChild_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="0,-62 0,-92 139,-92 139,-62 0,-62"/>
-<text text-anchor="start" x="8" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">JSystem/JAudio2/JAISound</text>
-<text text-anchor="middle" x="69.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">Child.h</text>
+<g id="a_node2"><a xlink:href="dol2asm_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="0,-67.5 0,-86.5 61,-86.5 61,-67.5 0,-67.5"/>
+<text text-anchor="middle" x="30.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">dol2asm.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M238.56,-134.49C204.95,-123.26 157.6,-107.44 121.56,-95.4"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="122.31,-91.96 111.72,-92.11 120.1,-98.6 122.31,-91.96"/>
+<path fill="none" stroke="midnightblue" d="M205.88,-135.77C168.56,-126.64 118.53,-113.3 75.5,-98 69.62,-95.91 63.43,-93.38 57.59,-90.84"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="58.76,-87.53 48.2,-86.62 55.89,-93.91 58.76,-87.53"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:href="types_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="78,-0.5 78,-19.5 159,-19.5 159,-0.5 78,-0.5"/>
-<text text-anchor="middle" x="118.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">dolphin/types.h</text>
+<polygon fill="white" stroke="black" points="98,-0.5 98,-19.5 179,-19.5 179,-0.5 98,-0.5"/>
+<text text-anchor="middle" x="138.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">dolphin/types.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
-<g id="edge4" class="edge">
+<g id="edge2" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M247.06,-134.39C228.39,-125.56 205.36,-113.01 187.5,-98 163.01,-77.42 141.27,-46.96 129.01,-28.08"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="131.95,-26.18 123.64,-19.6 126.04,-29.92 131.95,-26.18"/>
+<path fill="none" stroke="midnightblue" d="M205.69,-145.61C171.93,-140.64 131.3,-128.22 109.5,-98 94.05,-76.59 110.79,-46.4 124.5,-27.8"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="127.44,-29.72 130.83,-19.69 121.92,-25.42 127.44,-29.72"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="dol2asm_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="196,-67.5 196,-86.5 257,-86.5 257,-67.5 196,-67.5"/>
-<text text-anchor="middle" x="226.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">dol2asm.h</text>
+<g id="a_node4"><a xlink:href="JAISoundChild_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="118,-62 118,-92 257,-92 257,-62 118,-62"/>
+<text text-anchor="start" x="126" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">JSystem/JAudio2/JAISound</text>
+<text text-anchor="middle" x="187.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">Child.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M269.57,-134.23C260.93,-122.95 248.83,-107.15 239.65,-95.17"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="242.17,-92.7 233.31,-86.89 236.61,-96.96 242.17,-92.7"/>
+<path fill="none" stroke="midnightblue" d="M246.52,-134.23C235.99,-124.2 221.72,-110.6 209.84,-99.29"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="212.11,-96.61 202.45,-92.25 207.28,-101.68 212.11,-96.61"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
@@ -125,8 +125,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M291.63,-134.23C298.06,-126 306.35,-115.36 314,-105.56"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="316.83,-107.63 320.22,-97.59 311.31,-103.32 316.83,-107.63"/>
+<path fill="none" stroke="midnightblue" d="M276.48,-134.23C285.38,-125.75 296.96,-114.72 307.5,-104.68"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="310.11,-107.02 314.94,-97.59 305.28,-101.95 310.11,-107.02"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
@@ -142,8 +142,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node6 -->
 <g id="edge6" class="edge">
 <title>Node1&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M324.03,-134.49C354.02,-124.83 394.53,-111.79 429.07,-100.67"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="430.19,-103.99 438.64,-97.59 428.05,-97.32 430.19,-103.99"/>
+<path fill="none" stroke="midnightblue" d="M308.81,-134.49C341.53,-124.79 385.8,-111.68 423.44,-100.53"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="424.77,-103.79 433.36,-97.59 422.78,-97.08 424.77,-103.79"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
@@ -159,14 +159,14 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node7 -->
 <g id="edge7" class="edge">
 <title>Node1&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M336.2,-141.64C397.12,-133.68 497.76,-119.14 592.61,-98.31"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="593.65,-101.66 602.65,-96.08 592.13,-94.83 593.65,-101.66"/>
+<path fill="none" stroke="midnightblue" d="M317,-142.35C381.36,-134.72 490.74,-120.19 592.81,-98.25"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="593.63,-101.65 602.66,-96.11 592.14,-94.81 593.63,-101.65"/>
 </g>
-<!-- Node2&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
-<title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M80.13,-61.9C87.7,-51.86 97.89,-38.34 105.87,-27.75"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="108.72,-29.79 111.95,-19.69 103.13,-25.57 108.72,-29.79"/>
+<!-- Node4&#45;&gt;Node3 -->
+<g id="edge4" class="edge">
+<title>Node4&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M176.87,-61.9C169.3,-51.86 159.11,-38.34 151.13,-27.75"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="153.87,-25.57 145.05,-19.69 148.28,-29.79 153.87,-25.57"/>
 </g>
 </g>
 </svg>

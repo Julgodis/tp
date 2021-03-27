@@ -5,239 +5,239 @@
  -->
 <!-- Title: libs/JSystem/JUtility/JUTVideo.cpp Pages: 1 -->
 <svg width="2032pt" height="173pt"
- viewBox="0.00 0.00 2031.50 173.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ viewBox="0.00 0.00 2032.00 173.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 169)">
 <title>libs/JSystem/JUtility/JUTVideo.cpp</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-169 2027.5,-169 2027.5,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-169 2028,-169 2028,4 -4,4"/>
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="873,-134.5 873,-164.5 979,-164.5 979,-134.5 873,-134.5"/>
-<text text-anchor="start" x="881" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">libs/JSystem/JUtility</text>
-<text text-anchor="middle" x="926" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo.cpp</text>
+<polygon fill="#bfbfbf" stroke="black" points="873.5,-134.5 873.5,-164.5 979.5,-164.5 979.5,-134.5 873.5,-134.5"/>
+<text text-anchor="start" x="881.5" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">libs/JSystem/JUtility</text>
+<text text-anchor="middle" x="926.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="JUTVideo_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="0,-67.5 0,-86.5 142,-86.5 142,-67.5 0,-67.5"/>
-<text text-anchor="middle" x="71" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">JSystem/JUtility/JUTVideo.h</text>
+<g id="a_node2"><a xlink:href="dol2asm_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="0,-67.5 0,-86.5 61,-86.5 61,-67.5 0,-67.5"/>
+<text text-anchor="middle" x="30.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">dol2asm.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M872.93,-148.04C747.53,-146.29 423.31,-137.93 156,-98 141.4,-95.82 125.61,-92.4 111.65,-89.01"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="112.4,-85.59 101.85,-86.56 110.7,-92.38 112.4,-85.59"/>
+<path fill="none" stroke="midnightblue" d="M873.23,-147.83C711.51,-145.39 227.93,-135.1 75.5,-98 68.85,-96.38 61.96,-93.82 55.63,-91.06"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="56.79,-87.74 46.25,-86.68 53.83,-94.08 56.79,-87.74"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:href="types_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="79.5,-0.5 79.5,-19.5 160.5,-19.5 160.5,-0.5 79.5,-0.5"/>
-<text text-anchor="middle" x="120" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">dolphin/types.h</text>
+<polygon fill="white" stroke="black" points="98,-0.5 98,-19.5 179,-19.5 179,-0.5 98,-0.5"/>
+<text text-anchor="middle" x="138.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">dolphin/types.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
-<g id="edge4" class="edge">
+<g id="edge2" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M872.74,-147.3C713.79,-143.38 250.08,-129.34 190,-98 174.74,-90.04 146.98,-51.28 131.4,-28.26"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="134.18,-26.14 125.71,-19.77 128.37,-30.03 134.18,-26.14"/>
+<path fill="none" stroke="midnightblue" d="M873.22,-147.2C695.81,-142.6 134.74,-125.91 108.5,-98 89.99,-78.32 109.03,-46.68 124.08,-27.46"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="126.9,-29.54 130.57,-19.6 121.5,-25.09 126.9,-29.54"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="dol2asm_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="198.5,-67.5 198.5,-86.5 259.5,-86.5 259.5,-67.5 198.5,-67.5"/>
-<text text-anchor="middle" x="229" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">dol2asm.h</text>
+<g id="a_node4"><a xlink:href="JUTVideo_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="117.5,-67.5 117.5,-86.5 259.5,-86.5 259.5,-67.5 117.5,-67.5"/>
+<text text-anchor="middle" x="188.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">JSystem/JUtility/JUTVideo.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M872.61,-147.04C737.05,-142.92 382.28,-129.37 269,-98 263.29,-96.42 257.44,-94.01 252.03,-91.4"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="253.39,-88.16 242.9,-86.62 250.14,-94.36 253.39,-88.16"/>
+<path fill="none" stroke="midnightblue" d="M873.35,-147.39C761.12,-144.39 492.01,-133.77 269.5,-98 255.96,-95.82 241.35,-92.52 228.32,-89.22"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="228.82,-85.74 218.26,-86.6 227.06,-92.51 228.82,-85.74"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
 <g id="a_node5"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="277.5,-56.5 277.5,-97.5 480.5,-97.5 480.5,-56.5 277.5,-56.5"/>
-<text text-anchor="start" x="285.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
-<text text-anchor="start" x="285.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/createManager</text>
-<text text-anchor="middle" x="379" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__8JUTVideoFPC16_GXRenderModeObj.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="278,-56.5 278,-97.5 481,-97.5 481,-56.5 278,-56.5"/>
+<text text-anchor="start" x="286" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
+<text text-anchor="start" x="286" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/createManager</text>
+<text text-anchor="middle" x="379.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__8JUTVideoFPC16_GXRenderModeObj.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M872.84,-143.43C792.42,-135.53 634.85,-119.1 490.51,-98.03"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="490.98,-94.56 480.58,-96.57 489.97,-101.48 490.98,-94.56"/>
+<path fill="none" stroke="midnightblue" d="M873.34,-143.43C792.92,-135.53 635.35,-119.1 491.01,-98.03"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="491.48,-94.56 481.08,-96.57 490.47,-101.48 491.48,-94.56"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
 <g id="a_node6"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="498.5,-56.5 498.5,-97.5 633.5,-97.5 633.5,-56.5 498.5,-56.5"/>
-<text text-anchor="start" x="506.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
-<text text-anchor="start" x="506.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/destroyManager</text>
-<text text-anchor="middle" x="566" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__8JUTVideoFv.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="499,-56.5 499,-97.5 634,-97.5 634,-56.5 499,-56.5"/>
+<text text-anchor="start" x="507" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
+<text text-anchor="start" x="507" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/destroyManager</text>
+<text text-anchor="middle" x="566.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__8JUTVideoFv.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node6 -->
 <g id="edge6" class="edge">
 <title>Node1&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M872.82,-140.27C817.87,-131.49 729.46,-116.57 643.46,-98.02"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="644.05,-94.56 633.53,-95.86 642.56,-101.4 644.05,-94.56"/>
+<path fill="none" stroke="midnightblue" d="M873.32,-140.27C818.37,-131.49 729.96,-116.57 643.96,-98.02"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="644.55,-94.56 634.03,-95.86 643.06,-101.4 644.55,-94.56"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
 <g id="a_node7"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="652,-56.5 652,-97.5 826,-97.5 826,-56.5 652,-56.5"/>
-<text text-anchor="start" x="660" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
-<text text-anchor="start" x="660" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/__ct__8JUTVideoFPC16</text>
-<text text-anchor="middle" x="739" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">_GXRenderModeObj.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="652.5,-56.5 652.5,-97.5 826.5,-97.5 826.5,-56.5 652.5,-56.5"/>
+<text text-anchor="start" x="660.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
+<text text-anchor="start" x="660.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/__ct__8JUTVideoFPC16</text>
+<text text-anchor="middle" x="739.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">_GXRenderModeObj.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node7 -->
 <g id="edge7" class="edge">
 <title>Node1&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M888.61,-134.4C863.42,-124.91 829.62,-112.16 800.52,-101.19"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="801.44,-97.8 790.85,-97.55 798.97,-104.35 801.44,-97.8"/>
+<path fill="none" stroke="midnightblue" d="M889.11,-134.4C863.92,-124.91 830.12,-112.16 801.02,-101.19"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="801.94,-97.8 791.35,-97.55 799.47,-104.35 801.94,-97.8"/>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
 <g id="a_node8"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="844.5,-62 844.5,-92 1007.5,-92 1007.5,-62 844.5,-62"/>
-<text text-anchor="start" x="852.5" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
-<text text-anchor="middle" x="926" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/__dt__8JUTVideoFv.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="845,-62 845,-92 1008,-92 1008,-62 845,-62"/>
+<text text-anchor="start" x="853" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
+<text text-anchor="middle" x="926.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/__dt__8JUTVideoFv.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node8 -->
 <g id="edge8" class="edge">
 <title>Node1&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M926,-134.23C926,-125.16 926,-113.16 926,-102.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="929.5,-102.25 926,-92.25 922.5,-102.25 929.5,-102.25"/>
+<path fill="none" stroke="midnightblue" d="M926.5,-134.23C926.5,-125.16 926.5,-113.16 926.5,-102.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="930,-102.25 926.5,-92.25 923,-102.25 930,-102.25"/>
 </g>
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
 <g id="a_node9"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="1026,-56.5 1026,-97.5 1160,-97.5 1160,-56.5 1026,-56.5"/>
-<text text-anchor="start" x="1034" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
-<text text-anchor="start" x="1034" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/preRetraceProc</text>
-<text text-anchor="middle" x="1093" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__8JUTVideoFUl.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="1026.5,-56.5 1026.5,-97.5 1160.5,-97.5 1160.5,-56.5 1026.5,-56.5"/>
+<text text-anchor="start" x="1034.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
+<text text-anchor="start" x="1034.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/preRetraceProc</text>
+<text text-anchor="middle" x="1093.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__8JUTVideoFUl.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node9 -->
 <g id="edge9" class="edge">
 <title>Node1&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M959.39,-134.4C981.69,-124.99 1011.55,-112.39 1037.38,-101.48"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1038.85,-104.66 1046.7,-97.55 1036.12,-98.21 1038.85,-104.66"/>
+<path fill="none" stroke="midnightblue" d="M959.89,-134.4C982.19,-124.99 1012.05,-112.39 1037.88,-101.48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1039.35,-104.66 1047.2,-97.55 1036.62,-98.21 1039.35,-104.66"/>
 </g>
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
 <g id="a_node10"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="1178.5,-56.5 1178.5,-97.5 1309.5,-97.5 1309.5,-56.5 1178.5,-56.5"/>
-<text text-anchor="start" x="1186.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
-<text text-anchor="start" x="1186.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/drawDoneStart</text>
-<text text-anchor="middle" x="1244" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__8JUTVideoFv.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="1179,-56.5 1179,-97.5 1310,-97.5 1310,-56.5 1179,-56.5"/>
+<text text-anchor="start" x="1187" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
+<text text-anchor="start" x="1187" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/drawDoneStart</text>
+<text text-anchor="middle" x="1244.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__8JUTVideoFv.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node10 -->
 <g id="edge10" class="edge">
 <title>Node1&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M979.28,-138.31C1026.42,-129.1 1097.29,-114.77 1168.2,-98.13"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1169.27,-101.47 1178.2,-95.77 1167.67,-94.66 1169.27,-101.47"/>
+<path fill="none" stroke="midnightblue" d="M979.78,-138.31C1026.92,-129.1 1097.79,-114.77 1168.7,-98.13"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1169.77,-101.47 1178.7,-95.77 1168.17,-94.66 1169.77,-101.47"/>
 </g>
 <!-- Node11 -->
 <g id="node11" class="node">
 <title>Node11</title>
 <g id="a_node11"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="1328,-56.5 1328,-97.5 1480,-97.5 1480,-56.5 1328,-56.5"/>
-<text text-anchor="start" x="1336" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
-<text text-anchor="start" x="1336" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/dummyNoDrawWait</text>
-<text text-anchor="middle" x="1404" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__8JUTVideoFv.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="1328.5,-56.5 1328.5,-97.5 1480.5,-97.5 1480.5,-56.5 1328.5,-56.5"/>
+<text text-anchor="start" x="1336.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
+<text text-anchor="start" x="1336.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/dummyNoDrawWait</text>
+<text text-anchor="middle" x="1404.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__8JUTVideoFv.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node11 -->
 <g id="edge11" class="edge">
 <title>Node1&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M979.03,-143.44C1052.86,-136.02 1190.94,-120.72 1317.74,-98.14"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1318.4,-101.58 1327.62,-96.36 1317.16,-94.69 1318.4,-101.58"/>
+<path fill="none" stroke="midnightblue" d="M979.53,-143.44C1053.36,-136.02 1191.44,-120.72 1318.24,-98.14"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1318.9,-101.58 1328.12,-96.36 1317.66,-94.69 1318.9,-101.58"/>
 </g>
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
 <g id="a_node12"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="1498.5,-56.5 1498.5,-97.5 1645.5,-97.5 1645.5,-56.5 1498.5,-56.5"/>
-<text text-anchor="start" x="1506.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
-<text text-anchor="start" x="1506.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/drawDoneCallback</text>
-<text text-anchor="middle" x="1572" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__8JUTVideoFv.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="1499,-56.5 1499,-97.5 1646,-97.5 1646,-56.5 1499,-56.5"/>
+<text text-anchor="start" x="1507" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
+<text text-anchor="start" x="1507" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/drawDoneCallback</text>
+<text text-anchor="middle" x="1572.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__8JUTVideoFv.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node12 -->
 <g id="edge12" class="edge">
 <title>Node1&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M979.11,-146.34C1077.64,-141.77 1295.47,-129.01 1488.31,-97.98"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1489.04,-101.4 1498.35,-96.34 1487.92,-94.5 1489.04,-101.4"/>
+<path fill="none" stroke="midnightblue" d="M979.61,-146.34C1078.14,-141.77 1295.97,-129.01 1488.81,-97.98"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1489.54,-101.4 1498.85,-96.34 1488.42,-94.5 1489.54,-101.4"/>
 </g>
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
 <g id="a_node13"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="1663.5,-56.5 1663.5,-97.5 1802.5,-97.5 1802.5,-56.5 1663.5,-56.5"/>
-<text text-anchor="start" x="1671.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
-<text text-anchor="start" x="1671.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/postRetraceProc</text>
-<text text-anchor="middle" x="1733" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__8JUTVideoFUl.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="1664,-56.5 1664,-97.5 1803,-97.5 1803,-56.5 1664,-56.5"/>
+<text text-anchor="start" x="1672" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
+<text text-anchor="start" x="1672" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/postRetraceProc</text>
+<text text-anchor="middle" x="1733.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__8JUTVideoFUl.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node13 -->
 <g id="edge13" class="edge">
 <title>Node1&#45;&gt;Node13</title>
-<path fill="none" stroke="midnightblue" d="M979.43,-148.11C1098.93,-146.54 1396.82,-138.65 1653.51,-98.1"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1654.07,-101.55 1663.39,-96.52 1652.96,-94.64 1654.07,-101.55"/>
+<path fill="none" stroke="midnightblue" d="M979.93,-148.11C1099.43,-146.54 1397.32,-138.65 1654.01,-98.1"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1654.57,-101.55 1663.89,-96.52 1653.46,-94.64 1654.57,-101.55"/>
 </g>
 <!-- Node14 -->
 <g id="node14" class="node">
 <title>Node14</title>
 <g id="a_node14"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="1820.5,-56.5 1820.5,-97.5 2023.5,-97.5 2023.5,-56.5 1820.5,-56.5"/>
-<text text-anchor="start" x="1828.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
-<text text-anchor="start" x="1828.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/setRenderMode</text>
-<text text-anchor="middle" x="1922" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__8JUTVideoFPC16_GXRenderModeObj.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="1821,-56.5 1821,-97.5 2024,-97.5 2024,-56.5 1821,-56.5"/>
+<text text-anchor="start" x="1829" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JUtility</text>
+<text text-anchor="start" x="1829" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JUTVideo/setRenderMode</text>
+<text text-anchor="middle" x="1922.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__8JUTVideoFPC16_GXRenderModeObj.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node14 -->
 <g id="edge14" class="edge">
 <title>Node1&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M979.13,-147.75C1115.62,-145.32 1489.83,-135.6 1810.53,-98.1"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1810.96,-101.58 1820.48,-96.93 1810.14,-94.62 1810.96,-101.58"/>
+<path fill="none" stroke="midnightblue" d="M979.63,-147.75C1116.12,-145.32 1490.33,-135.6 1811.03,-98.1"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1811.46,-101.58 1820.98,-96.93 1810.64,-94.62 1811.46,-101.58"/>
 </g>
-<!-- Node2&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
-<title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M77.61,-67.23C85.18,-57.2 97.75,-40.51 107.24,-27.92"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="110.27,-29.72 113.5,-19.63 104.68,-25.51 110.27,-29.72"/>
+<!-- Node4&#45;&gt;Node3 -->
+<g id="edge4" class="edge">
+<title>Node4&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M181.76,-67.23C173.96,-57.1 160.95,-40.19 151.24,-27.56"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="154.01,-25.42 145.14,-19.63 148.46,-29.69 154.01,-25.42"/>
 </g>
 </g>
 </svg>
