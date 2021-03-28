@@ -80,20 +80,20 @@ $(function() {
 <a href="dol2asm_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DOL2ASM</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define DOL2ASM</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef IN_VSCODE_EDITOR</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#adc00f0d3ad529c0cb72985d54bfe7ccf">    5</a></span>&#160;<span class="preprocessor">#define SECTION_INIT extern &quot;C&quot;</span> __declspec(section &quot;.init&quot;)</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">    6</a></span>&#160;<span class="preprocessor">#define SECTION_RODATA extern &quot;C&quot;</span> __declspec(section &quot;.rodata&quot;)</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">    7</a></span>&#160;<span class="preprocessor">#define SECTION_DATA extern &quot;C&quot;</span> __declspec(section &quot;.data&quot;)</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">    8</a></span>&#160;<span class="preprocessor">#define SECTION_SDATA extern &quot;C&quot;</span> __declspec(section &quot;.sdata&quot;)</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">    9</a></span>&#160;<span class="preprocessor">#define SECTION_SDATA2 extern &quot;C&quot;</span> __declspec(section &quot;.sdata2&quot;)</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a7873e820b6567070fa316a6dac0a74dd">   10</a></span>&#160;<span class="preprocessor">#define SECTION_BSS extern &quot;C&quot;</span> __declspec(section &quot;.data&quot;)</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a09536a9e7de1a4cecdd62a1686ddbf13">   11</a></span>&#160;<span class="preprocessor">#define SECTION_SBSS extern &quot;C&quot;</span> __declspec(section &quot;.sdata&quot;)</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a4f4769b6050d0b45c649c757062be78d">   12</a></span>&#160;<span class="preprocessor">#define SECTION_SBSS2 extern &quot;C&quot;</span> __declspec(section &quot;.sdata2&quot;)</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a344cd9f1efa3d4d358d9d988f604a10d">   13</a></span>&#160;<span class="preprocessor">#define SECTION_CTORS extern &quot;C&quot;</span> __declspec(section &quot;.ctors&quot;)</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a0437b07276494cfa4e5bcf248090266b">   14</a></span>&#160;<span class="preprocessor">#define SECTION_DTORS extern &quot;C&quot;</span> __declspec(section &quot;.dtors&quot;)</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a44286215b09482bbba1c4c0fcf008369">   15</a></span>&#160;<span class="preprocessor">#define SECTION_EXTAB extern &quot;C&quot;</span> __declspec(section &quot;extab_&quot;)</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a519748bb54f7a7b008aa5413dc405072">   16</a></span>&#160;<span class="preprocessor">#define SECTION_EXTABINDEX extern &quot;C&quot;</span> __declspec(section &quot;extabindex_&quot;)</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// this helps remove useless error from the linter when using vscode.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef IN_VSCODE_EDITOR</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#adc00f0d3ad529c0cb72985d54bfe7ccf">    6</a></span>&#160;<span class="preprocessor">#define SECTION_INIT extern &quot;C&quot;</span> __declspec(section &quot;.init&quot;)</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">    7</a></span>&#160;<span class="preprocessor">#define SECTION_RODATA extern &quot;C&quot;</span> __declspec(section &quot;.rodata&quot;)</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">    8</a></span>&#160;<span class="preprocessor">#define SECTION_DATA extern &quot;C&quot;</span> __declspec(section &quot;.data&quot;)</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">    9</a></span>&#160;<span class="preprocessor">#define SECTION_SDATA extern &quot;C&quot;</span> __declspec(section &quot;.sdata&quot;)</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">   10</a></span>&#160;<span class="preprocessor">#define SECTION_SDATA2 extern &quot;C&quot;</span> __declspec(section &quot;.sdata2&quot;)</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a7873e820b6567070fa316a6dac0a74dd">   11</a></span>&#160;<span class="preprocessor">#define SECTION_BSS extern &quot;C&quot;</span> __declspec(section &quot;.data&quot;)</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a09536a9e7de1a4cecdd62a1686ddbf13">   12</a></span>&#160;<span class="preprocessor">#define SECTION_SBSS extern &quot;C&quot;</span> __declspec(section &quot;.sdata&quot;)</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a4f4769b6050d0b45c649c757062be78d">   13</a></span>&#160;<span class="preprocessor">#define SECTION_SBSS2 extern &quot;C&quot;</span> __declspec(section &quot;.sdata2&quot;)</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a344cd9f1efa3d4d358d9d988f604a10d">   14</a></span>&#160;<span class="preprocessor">#define SECTION_CTORS extern &quot;C&quot;</span> __declspec(section &quot;.ctors&quot;)</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a0437b07276494cfa4e5bcf248090266b">   15</a></span>&#160;<span class="preprocessor">#define SECTION_DTORS extern &quot;C&quot;</span> __declspec(section &quot;.dtors&quot;)</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a44286215b09482bbba1c4c0fcf008369">   16</a></span>&#160;<span class="preprocessor">#define SECTION_EXTAB extern &quot;C&quot;</span> __declspec(section &quot;extab_&quot;)</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a519748bb54f7a7b008aa5413dc405072">   17</a></span>&#160;<span class="preprocessor">#define SECTION_EXTABINDEX extern &quot;C&quot;</span> __declspec(section &quot;extabindex_&quot;)</div>
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">   18</a></span>&#160;<span class="preprocessor">#define SECTION_DEAD extern &quot;C&quot;</span> __declspec(section &quot;.dead&quot;)</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define SECTION_INIT</span></div>
@@ -108,23 +108,25 @@ $(function() {
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define SECTION_DTORS</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define SECTION_EXTAB</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define SECTION_EXTABINDEX</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define SECTION_DEAD</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define SECTION_DEAD</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">// vscode doesn&#39;t like asm and nofralloc very much</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define asm</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#define nofralloc</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a52a6517f60c82a7de26b237be9e86110">   39</a></span>&#160;<span class="preprocessor">#define _HUGE_ENUF 1e+300</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a956e2723d559858d08644ac99146e910">   40</a></span>&#160;<span class="preprocessor">#define INFINITY ((float)(_HUGE_ENUF * _HUGE_ENUF))</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#af2164b2db92d8a0ed3838ad5c28db971">   41</a></span>&#160;<span class="preprocessor">#define HUGE_VAL ((double)INFINITY)</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#acd69981d54c27fe0ff514645dbfc6359">   42</a></span>&#160;<span class="preprocessor">#define HUGE_VALF ((float)INFINITY)</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#ab8b359c356d4311bf5d4ae6c03f43182">   43</a></span>&#160;<span class="preprocessor">#define HUGE_VALL ((long double)INFINITY)</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#ac93cd804695f999a50f816740b18182d">   45</a></span>&#160;<span class="preprocessor">#define FLOAT_INF HUGE_VALF</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a84ee4d57a351467bb65314cdbfa12087">   46</a></span>&#160;<span class="preprocessor">#define DOUBLE_INF HUGE_VAL</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOL2ASM */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// floating-point constants</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// TODO: move to different header</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a52a6517f60c82a7de26b237be9e86110">   41</a></span>&#160;<span class="preprocessor">#define _HUGE_ENUF 1e+300</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a956e2723d559858d08644ac99146e910">   42</a></span>&#160;<span class="preprocessor">#define INFINITY ((float)(_HUGE_ENUF * _HUGE_ENUF))</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#af2164b2db92d8a0ed3838ad5c28db971">   43</a></span>&#160;<span class="preprocessor">#define HUGE_VAL ((double)INFINITY)</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#acd69981d54c27fe0ff514645dbfc6359">   44</a></span>&#160;<span class="preprocessor">#define HUGE_VALF ((float)INFINITY)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#ab8b359c356d4311bf5d4ae6c03f43182">   45</a></span>&#160;<span class="preprocessor">#define HUGE_VALL ((long double)INFINITY)</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#ac93cd804695f999a50f816740b18182d">   47</a></span>&#160;<span class="preprocessor">#define FLOAT_INF HUGE_VALF</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="dol2asm_8h.html#a84ee4d57a351467bb65314cdbfa12087">   48</a></span>&#160;<span class="preprocessor">#define DOUBLE_INF HUGE_VAL</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOL2ASM */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
