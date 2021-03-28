@@ -64,11 +64,6 @@ class ASMFunction(Function):
 
     def gather_references(self, context, valid_range):
         addrs = static_analyze.function(self.data, self.addr, self.size)
-        if self.addr == 0x80361c3c:
-            context.debug(self.identifier)
-            for k,v in addrs.items():
-                context.debug(f"{k:08X}: {v:08X}")
-
         function_range = AddressRange(self.start, self.end)
         self.references = [ 
             addr 
