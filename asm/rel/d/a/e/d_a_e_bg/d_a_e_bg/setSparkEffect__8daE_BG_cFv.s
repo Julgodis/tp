@@ -18,8 +18,8 @@ lbl_80685DBC:
 /* 80685DFC  3B 80 00 00 */	li r28, 0
 /* 80685E00  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80685E04  3B 23 61 C0 */	addi r25, r3, g_dComIfG_gameInfo@l
-/* 80685E08  3C 60 80 69 */	lis r3, data_8068A394@ha
-/* 80685E0C  3B 43 A3 94 */	addi r26, r3, data_8068A394@l
+/* 80685E08  3C 60 80 69 */	lis r3, enemyBombID@ha
+/* 80685E0C  3B 43 A3 94 */	addi r26, r3, enemyBombID@l
 /* 80685E10  3C 60 80 69 */	lis r3, lit_3891@ha
 /* 80685E14  3B 63 A2 68 */	addi r27, r3, lit_3891@l
 lbl_80685E18:

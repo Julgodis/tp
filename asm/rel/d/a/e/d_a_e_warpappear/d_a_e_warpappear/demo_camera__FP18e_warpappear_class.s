@@ -1229,8 +1229,8 @@ lbl_807D1558:
 /* 807D15B8  D0 01 00 D4 */	stfs f0, 0xd4(r1)
 /* 807D15BC  3B 20 00 00 */	li r25, 0
 /* 807D15C0  3B 40 00 00 */	li r26, 0
-/* 807D15C4  3C 60 80 7D */	lis r3, data_807D2290@ha
-/* 807D15C8  3B 63 22 90 */	addi r27, r3, data_807D2290@l
+/* 807D15C4  3C 60 80 7D */	lis r3, w_id@ha
+/* 807D15C8  3B 63 22 90 */	addi r27, r3, w_id@l
 lbl_807D15CC:
 /* 807D15CC  7C 7B D2 2E */	lhzx r3, r27, r26
 /* 807D15D0  38 81 00 CC */	addi r4, r1, 0xcc

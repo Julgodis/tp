@@ -21,8 +21,8 @@ lbl_806AF460:
 /* 806AF4AC  80 9E 11 4C */	lwz r4, 0x114c(r30)
 /* 806AF4B0  38 A0 00 00 */	li r5, 0
 /* 806AF4B4  54 C0 08 3C */	slwi r0, r6, 1
-/* 806AF4B8  3C C0 80 6B */	lis r6, data_806B6088@ha
-/* 806AF4BC  38 C6 60 88 */	addi r6, r6, data_806B6088@l
+/* 806AF4B8  3C C0 80 6B */	lis r6, w_eff_id_4547@ha
+/* 806AF4BC  38 C6 60 88 */	addi r6, r6, w_eff_id_4547@l
 /* 806AF4C0  7C C6 02 2E */	lhzx r6, r6, r0
 /* 806AF4C4  38 FE 04 D0 */	addi r7, r30, 0x4d0
 /* 806AF4C8  39 1E 01 0C */	addi r8, r30, 0x10c

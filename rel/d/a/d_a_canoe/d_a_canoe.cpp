@@ -95,10 +95,10 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -735,7 +735,7 @@ SECTION_RODATA static u32 const lit_5172 = 0x3F333333;
 SECTION_RODATA static u32 const lit_5173 = 0x3E99999A;
 
 /* 804DD6B8-804DD6BC 0004+00 s=1 e=0 z=0  None .rodata    effName$5177                                                 */
-SECTION_RODATA static u8 const data_804DD6B8[4] = {
+SECTION_RODATA static u8 const effName[4] = {
 	0x8A, 0x5A, 0x8A, 0x5B,
 };
 
@@ -1145,7 +1145,7 @@ u8 lit_1009[1 + 3 /* padding */];
 static u8 lit_5103[12 + 4 /* padding */];
 
 /* 804DD848-804DD854 000C+00 s=1 e=0 z=0  None .bss       paddleRippleScale$5102                                       */
-static u8 data_804DD848[12];
+static u8 paddleRippleScale[12];
 
 /* 804DC330-804DC554 0224+00 s=1 e=0 z=0  None .text      setPaddleEffect__9daCanoe_cFv                                */
 #pragma push
@@ -1174,7 +1174,7 @@ asm void daCanoe_c::setCanoeSliderEffect() {
 static u8 lit_5356[12 + 4 /* padding */];
 
 /* 804DD864-804DD870 000C+00 s=1 e=0 z=0  None .bss       bodyRippleScale$5355                                         */
-static u8 data_804DD864[12];
+static u8 bodyRippleScale[12];
 
 /* 804DC7B4-804DD33C 0B88+00 s=1 e=0 z=0  None .text      execute__9daCanoe_cFv                                        */
 #pragma push

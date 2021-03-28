@@ -12,8 +12,8 @@ lbl_80CDF990:
 /* 80CDF9B8  3F 63 00 02 */	addis r27, r3, 2
 /* 80CDF9BC  3C 60 80 CE */	lis r3, l_arcName@ha
 /* 80CDF9C0  3B 83 02 80 */	addi r28, r3, l_arcName@l
-/* 80CDF9C4  3C 60 80 CE */	lis r3, data_80CE0248@ha
-/* 80CDF9C8  3B A3 02 48 */	addi r29, r3, data_80CE0248@l
+/* 80CDF9C4  3C 60 80 CE */	lis r3, BMD_IDX@ha
+/* 80CDF9C8  3B A3 02 48 */	addi r29, r3, BMD_IDX@l
 /* 80CDF9CC  3F C0 11 00 */	lis r30, 0x1100
 /* 80CDF9D0  3B 7B C2 F8 */	addi r27, r27, -15624
 lbl_80CDF9D4:

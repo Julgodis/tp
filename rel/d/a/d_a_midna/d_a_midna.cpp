@@ -62,10 +62,10 @@ struct mDoExt_blkAnm {
 	/* 8000DA08 */ void init(J3DDeformData*, J3DAnmCluster*, int, int, f32, s16, s16);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -81,15 +81,15 @@ struct mDoExt_baseAnm {
 struct J3DTransformInfo {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 	/* 802C0628 */ void initAnime(void*, bool, f32, f32);
 	/* 802C06D0 */ void updateAnime(f32, f32);
+};
+
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -353,8 +353,10 @@ struct J3DTevColorAnm {
 	/* 804BD128 */ J3DTevColorAnm();
 };
 
-struct J3DAnmTextureSRTKey {
-	/* 8032B1D4 */ void searchUpdateMaterialID(J3DModelData*);
+struct J3DAnmTevRegKey {
+	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
+	/* 8032B4BC */ void getTevKonstReg(u16, _GXColor*) const;
+	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
 };
 
 struct J3DAnmTexPattern {
@@ -362,10 +364,8 @@ struct J3DAnmTexPattern {
 	/* 8032B09C */ void searchUpdateMaterialID(J3DModelData*);
 };
 
-struct J3DAnmTevRegKey {
-	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
-	/* 8032B4BC */ void getTevKonstReg(u16, _GXColor*) const;
-	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+struct J3DAnmTextureSRTKey {
+	/* 8032B1D4 */ void searchUpdateMaterialID(J3DModelData*);
 };
 
 struct J3DMaterialTable {
@@ -1053,7 +1053,7 @@ SECTION_RODATA static u32 const lit_5780 = 0x40D00000;
 SECTION_RODATA static u32 const lit_5781 = 0x41A00000;
 
 /* 804C68D8-804C68E4 000C+00 s=1 e=0 z=0  None .rodata    localItemPos$5798                                            */
-SECTION_RODATA static u8 const data_804C68D8[12] = {
+SECTION_RODATA static u8 const localItemPos[12] = {
 	0x00, 0x00, 0x00, 0x00, 0xC2, 0x88, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -1126,7 +1126,7 @@ SECTION_RODATA static u8 const lit_6968[8] = {
 };
 
 /* 804C6948-804C696C 0024+00 s=1 e=0 z=0  None .rodata    motionTable$7191                                             */
-SECTION_RODATA static u8 const data_804C6948[36] = {
+SECTION_RODATA static u8 const motionTable[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03,
 	0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x18, 0x00, 0x00, 0x00, 0x19, 0x00, 0x00, 0x00, 0x1A,
 	0x00, 0x00, 0x00, 0x17,
@@ -1196,7 +1196,7 @@ SECTION_RODATA static u32 const lit_8189 = 0x3E4CCCCD;
 SECTION_RODATA static u32 const lit_8190 = 0x3CF5C28F;
 
 /* 804C69C0-804C69CC 000C+00 s=1 e=0 z=0  None .rodata    localOffset$8274                                             */
-SECTION_RODATA static u8 const data_804C69C0[12] = {
+SECTION_RODATA static u8 const localOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x43, 0x08, 0x00, 0x00, 0xC0, 0x19, 0x99, 0x9A,
 };
 
@@ -1204,7 +1204,7 @@ SECTION_RODATA static u8 const data_804C69C0[12] = {
 SECTION_RODATA static u32 const lit_8304 = 0x41E00000;
 
 /* 804C69D0-804C69DC 000C+00 s=1 e=0 z=0  None .rodata    hairOffset$8310                                              */
-SECTION_RODATA static u8 const data_804C69D0[12] = {
+SECTION_RODATA static u8 const hairOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x41, 0xE0, 0x00, 0x00,
 };
 
@@ -1233,7 +1233,7 @@ SECTION_RODATA static u32 const lit_8652 = 0xBF13CE53;
 SECTION_RODATA static u32 const lit_9021 = 0x442F0000;
 
 /* 804C69FC-804C6A1C 0020+00 s=1 e=0 z=0  None .rodata    anmSoundLabel$9101                                           */
-SECTION_RODATA static u8 const data_804C69FC[32] = {
+SECTION_RODATA static u8 const anmSoundLabel[32] = {
 	0x00, 0x06, 0x00, 0xDE, 0x00, 0x06, 0x00, 0xDF, 0x00, 0x06, 0x00, 0xE9, 0x00, 0x06, 0x00, 0xEA,
 	0x00, 0x06, 0x00, 0xEB, 0x00, 0x06, 0x00, 0xEC, 0x00, 0x06, 0x00, 0xE0, 0x00, 0x06, 0x00, 0xE1,
 };
@@ -1260,12 +1260,12 @@ SECTION_RODATA static u32 const lit_9224 = 0x42860000;
 SECTION_RODATA static u32 const lit_9225 = 0x42080000;
 
 /* 804C6A38-804C6A44 000C+00 s=1 e=0 z=0  None .rodata    throughEffectJoint$9352                                      */
-SECTION_RODATA static u8 const data_804C6A38[12] = {
+SECTION_RODATA static u8 const throughEffectJoint[12] = {
 	0x00, 0x04, 0x00, 0x02, 0x00, 0x14, 0x00, 0x04, 0x00, 0x02, 0x00, 0x14,
 };
 
 /* 804C6A44-804C6A50 000C+00 s=1 e=0 z=0  None .rodata    throughEffectName$9353                                       */
-SECTION_RODATA static u8 const data_804C6A44[12] = {
+SECTION_RODATA static u8 const throughEffectName[12] = {
 	0x84, 0xDA, 0x84, 0xD9, 0x84, 0xDB, 0x84, 0xDD, 0x84, 0xDC, 0x84, 0xDE,
 };
 

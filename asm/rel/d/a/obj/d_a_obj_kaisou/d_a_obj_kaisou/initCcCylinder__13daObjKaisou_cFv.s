@@ -10,8 +10,8 @@ lbl_80C34390:
 /* 80C343B0  7F E6 FB 78 */	mr r6, r31
 /* 80C343B4  4B 44 F4 AC */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80C343B8  38 7F 06 38 */	addi r3, r31, 0x638
-/* 80C343BC  3C 80 80 C3 */	lis r4, data_80C34EFC@ha
-/* 80C343C0  38 84 4E FC */	addi r4, r4, data_80C34EFC@l
+/* 80C343BC  3C 80 80 C3 */	lis r4, ccCylSrc@ha
+/* 80C343C0  38 84 4E FC */	addi r4, r4, ccCylSrc@l
 /* 80C343C4  4B 45 04 F0 */	b Set__8dCcD_CylFRC11dCcD_SrcCyl
 /* 80C343C8  38 1F 05 FC */	addi r0, r31, 0x5fc
 /* 80C343CC  90 1F 06 7C */	stw r0, 0x67c(r31)

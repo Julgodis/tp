@@ -76,7 +76,7 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 /* ############################################################################################## */
 /* 804D5724-804D5728 0002+02 s=1 e=0 z=0  None .rodata    l_dist_tbl$3641                                              */
-SECTION_RODATA static u8 const data_804D5724[2 + 2 /* padding */] = {
+SECTION_RODATA static u8 const l_dist_tbl[2 + 2 /* padding */] = {
 	0x23, 0x24,
 	/* padding */
 	0x00, 0x00,

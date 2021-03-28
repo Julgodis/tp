@@ -18,6 +18,11 @@ struct daPy_py_c {
 	/* 8015F398 */ void checkMasterSwordEquip();
 };
 
+struct dCcD_GObjInf {
+	/* 800844F8 */ void GetTgHitObj();
+	/* 8008457C */ void GetTgHitObjSe();
+};
+
 struct Quaternion {
 };
 
@@ -30,11 +35,6 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80266C18 */ void operator/(f32) const;
 	/* 80266CBC */ void outprod(Vec const&) const;
-};
-
-struct dCcD_GObjInf {
-	/* 800844F8 */ void GetTgHitObj();
-	/* 8008457C */ void GetTgHitObjSe();
 };
 
 struct daObj {
@@ -56,13 +56,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct J3DModelData {
+};
+
 struct JPABaseEmitter {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dPa_modelEcallBack {
@@ -72,10 +72,10 @@ struct dPa_modelEcallBack {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -178,7 +178,7 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 /* ############################################################################################## */
 /* 80379298-803792A8 0010+00 s=1 e=0 z=0  None .rodata    zero_quat$3920                                               */
-SECTION_RODATA static u8 const data_80379298[16] = {
+SECTION_RODATA static u8 const zero_quat[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
@@ -210,7 +210,7 @@ asm void daObj::eff_break_tsubo(fopAc_ac_c* param_0, cXyz param_1, int param_2) 
 static u8 lit_3677[12];
 
 /* 804245F4-80424600 000C+00 s=1 e=0 z=0  None .bss       scale$3676                                                   */
-static f32 data_804245F4[3];
+static f32 scale_3676[3];
 
 /* 80037180-80037210 0090+00 s=0 e=0 z=2  None .text      make_eff_break_kotubo__5daObjFP10fopAc_ac_c                  */
 #pragma push
@@ -228,7 +228,7 @@ asm void daObj::make_eff_break_kotubo(fopAc_ac_c* param_0) {
 static u8 lit_3692[12];
 
 /* 8042460C-80424618 000C+00 s=1 e=0 z=0  None .bss       scale$3691                                                   */
-static f32 data_8042460C[3];
+static f32 scale_3691[3];
 
 /* 80037210-800372A0 0090+00 s=0 e=0 z=2  None .text      make_eff_break_kotubo2__5daObjFP10fopAc_ac_c                 */
 #pragma push
@@ -246,7 +246,7 @@ asm void daObj::make_eff_break_kotubo2(fopAc_ac_c* param_0) {
 static u8 lit_3719[12];
 
 /* 80424624-80424630 000C+00 s=1 e=0 z=0  None .bss       scale$3718                                                   */
-static f32 data_80424624[3];
+static f32 scale_3718[3];
 
 /* 800372A0-80037330 0090+00 s=0 e=0 z=1  None .text      make_eff_break_gm_kotubo__5daObjFP10fopAc_ac_c               */
 #pragma push
@@ -264,7 +264,7 @@ asm void daObj::make_eff_break_gm_kotubo(fopAc_ac_c* param_0) {
 static u8 lit_3732[12];
 
 /* 8042463C-80424648 000C+00 s=1 e=0 z=0  None .bss       scale$3731                                                   */
-static f32 data_8042463C[3];
+static f32 scale_3731[3];
 
 /* 80451D9C-80451DA0 0004+00 s=1 e=0 z=0  None .sdata2    @3714                                                        */
 SECTION_SDATA2 static u32 lit_3714 = 0x40000000;

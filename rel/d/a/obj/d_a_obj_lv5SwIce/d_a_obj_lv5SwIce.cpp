@@ -49,13 +49,13 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -73,10 +73,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -309,7 +309,7 @@ SECTION_DATA static void* lit_3838[3] = {
 };
 
 /* 80C6D5DC-80C6D5F4 0018+00 s=1 e=0 z=0  None .data      mode_proc$3836                                               */
-SECTION_DATA static u8 data_80C6D5DC[24] = {
+SECTION_DATA static u8 mode_proc[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
@@ -458,7 +458,7 @@ SECTION_RODATA static u8 const mCcDObjInfo__12daLv5SwIce_c[48] = {
 };
 
 /* 80C6D538-80C6D53C 0004+00 s=1 e=0 z=0  None .rodata    l_eff_r$3861                                                 */
-SECTION_RODATA static u8 const data_80C6D538[4] = {
+SECTION_RODATA static u8 const l_eff_r[4] = {
 	0x8A, 0xE1, 0x8A, 0xE2,
 };
 
@@ -478,7 +478,7 @@ SECTION_RODATA static u32 const lit_3905 = 0x435C0000;
 SECTION_RODATA static u32 const lit_3906 = 0x3F19999A;
 
 /* 80C6D550-80C6D554 0004+00 s=1 e=0 z=0  None .rodata    l_eff_break$3922                                             */
-SECTION_RODATA static u8 const data_80C6D550[4] = {
+SECTION_RODATA static u8 const l_eff_break[4] = {
 	0x8A, 0xDF, 0x8A, 0xE0,
 };
 

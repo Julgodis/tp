@@ -17,6 +17,9 @@ struct J3DVertexBuffer {
 struct J3DModel {
 };
 
+struct J3DClusterKey {
+};
+
 struct J3DCluster {
 };
 
@@ -29,9 +32,6 @@ struct J3DDeformData {
 	/* 8032E298 */ void deform(J3DVertexBuffer*);
 	/* 8032E274 */ void deform(J3DModel*);
 	/* 8032E364 */ void setAnm(J3DAnmCluster*);
-};
-
-struct J3DClusterKey {
 };
 
 struct J3DDeformer {

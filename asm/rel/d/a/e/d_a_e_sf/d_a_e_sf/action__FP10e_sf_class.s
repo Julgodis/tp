@@ -651,8 +651,8 @@ lbl_80787D14:
 lbl_80787D28:
 /* 80787D28  80 7C 00 84 */	lwz r3, 0x84(r28)
 /* 80787D2C  80 83 00 0C */	lwz r4, 0xc(r3)
-/* 80787D30  3C 60 80 79 */	lis r3, data_80789E08@ha
-/* 80787D34  38 63 9E 08 */	addi r3, r3, data_80789E08@l
+/* 80787D30  3C 60 80 79 */	lis r3, foot_idx@ha
+/* 80787D34  38 63 9E 08 */	addi r3, r3, foot_idx@l
 /* 80787D38  7C 03 D8 2E */	lwzx r0, r3, r27
 /* 80787D3C  1C 00 00 30 */	mulli r0, r0, 0x30
 /* 80787D40  7C 64 02 14 */	add r3, r4, r0

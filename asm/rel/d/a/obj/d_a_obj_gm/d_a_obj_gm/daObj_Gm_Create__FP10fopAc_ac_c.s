@@ -191,8 +191,8 @@ lbl_80BFCE84:
 /* 80BFCECC  7F E6 FB 78 */	mr r6, r31
 /* 80BFCED0  4B 48 69 90 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80BFCED4  38 7F 09 88 */	addi r3, r31, 0x988
-/* 80BFCED8  3C 80 80 C0 */	lis r4, data_80BFD494@ha
-/* 80BFCEDC  38 84 D4 94 */	addi r4, r4, data_80BFD494@l
+/* 80BFCED8  3C 80 80 C0 */	lis r4, cc_sph_src@ha
+/* 80BFCEDC  38 84 D4 94 */	addi r4, r4, cc_sph_src@l
 /* 80BFCEE0  4B 48 7B 54 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80BFCEE4  38 1F 09 4C */	addi r0, r31, 0x94c
 /* 80BFCEE8  90 1F 09 CC */	stw r0, 0x9cc(r31)

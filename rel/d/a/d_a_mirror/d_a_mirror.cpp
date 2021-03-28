@@ -56,10 +56,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -315,7 +315,7 @@ asm static void daMirror_c_createHeap(fopAc_ac_c* param_0) {
 SECTION_RODATA static u32 const lit_3884 = 0x000000FF;
 
 /* 80872590-80872598 0008+00 s=1 e=0 z=0  None .rodata    l_texCoord$3899                                              */
-SECTION_RODATA static u8 const data_80872590[8] = {
+SECTION_RODATA static u8 const l_texCoord[8] = {
 	0x00, 0x00, 0x01, 0x00, 0x01, 0x01, 0x00, 0x01,
 };
 

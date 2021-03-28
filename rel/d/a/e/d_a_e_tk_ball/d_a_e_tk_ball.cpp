@@ -25,6 +25,9 @@ struct fopAc_ac_c {
 struct e_tk_ball_class {
 };
 
+struct J3DModelData {
+};
+
 struct Vec {
 };
 
@@ -34,9 +37,6 @@ struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -54,10 +54,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -404,7 +404,7 @@ SECTION_RODATA static u32 const lit_4118 = 0x3FC00000;
 SECTION_RODATA static u32 const lit_4119 = 0x3F4CCCCD;
 
 /* 807BD5D0-807BD5D8 0006+02 s=1 e=0 z=0  None .data      e_id$3988                                                    */
-SECTION_DATA static u8 data_807BD5D0[6 + 2 /* padding */] = {
+SECTION_DATA static u8 e_id[6 + 2 /* padding */] = {
 	0x81, 0x9D, 0x81, 0x9E, 0x81, 0x9A,
 	/* padding */
 	0x00, 0x00,
@@ -471,7 +471,7 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 
 /* ############################################################################################## */
 /* 807BD5D8-807BD618 0040+00 s=1 e=0 z=0  None .data      at_sph_src$4199                                              */
-SECTION_DATA static u8 data_807BD5D8[64] = {
+SECTION_DATA static u8 at_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x09, 0x01, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -479,7 +479,7 @@ SECTION_DATA static u8 data_807BD5D8[64] = {
 };
 
 /* 807BD618-807BD658 0040+00 s=1 e=0 z=0  None .data      tg_sph_src$4200                                              */
-SECTION_DATA static u8 data_807BD618[64] = {
+SECTION_DATA static u8 tg_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x09, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,

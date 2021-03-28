@@ -7,8 +7,8 @@ lbl_8066FAB8:
 /* 8066FACC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8066FAD0  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 8066FAD4  80 84 05 88 */	lwz r4, 0x588(r4)
-/* 8066FAD8  3C A0 80 67 */	lis r5, data_80670A40@ha
-/* 8066FADC  38 A5 0A 40 */	addi r5, r5, data_80670A40@l
+/* 8066FAD8  3C A0 80 67 */	lis r5, action_table@ha
+/* 8066FADC  38 A5 0A 40 */	addi r5, r5, action_table@l
 /* 8066FAE0  38 C0 00 0B */	li r6, 0xb
 /* 8066FAE4  38 E0 00 00 */	li r7, 0
 /* 8066FAE8  39 00 00 00 */	li r8, 0

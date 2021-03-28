@@ -106,8 +106,8 @@ lbl_80157E7C:
 /* 80157E84  90 1C 0A A4 */	stw r0, 0xaa4(r28)
 lbl_80157E88:
 /* 80157E88  1C 1D 00 0C */	mulli r0, r29, 0xc
-/* 80157E8C  3C 60 80 39 */	lis r3, data_80393994@ha
-/* 80157E90  38 63 39 94 */	addi r3, r3, data_80393994@l
+/* 80157E8C  3C 60 80 39 */	lis r3, a_transScaleTbl@ha
+/* 80157E90  38 63 39 94 */	addi r3, r3, a_transScaleTbl@l
 /* 80157E94  7C 43 04 2E */	lfsx f2, r3, r0
 /* 80157E98  D0 41 00 18 */	stfs f2, 0x18(r1)
 /* 80157E9C  7C 63 02 14 */	add r3, r3, r0

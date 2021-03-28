@@ -27,10 +27,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -38,10 +38,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -177,15 +177,15 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
+struct _GXColor {
+};
+
 struct cBgS_PolyInfo {
 	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct csXyz {
 	/* 802673F4 */ csXyz(s16, s16, s16);
-};
-
-struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -663,19 +663,19 @@ SECTION_RODATA static u32 const lit_4676 = 0xC28C0000;
 SECTION_RODATA u32 const lit_4677 = 0x42160000;
 
 /* 806775DC-806775E0 0004+00 s=1 e=0 z=0  None .rodata    l_eff_id$4696                                                */
-SECTION_RODATA static u8 const data_806775DC[4] = {
+SECTION_RODATA static u8 const l_eff_id[4] = {
 	0x82, 0x95, 0x82, 0x96,
 };
 
 /* 806775E0-806775EC 000A+02 s=1 e=0 z=0  None .rodata    l_eff_id_lv3$4705                                            */
-SECTION_RODATA static u8 const data_806775E0[10 + 2 /* padding */] = {
+SECTION_RODATA static u8 const l_eff_id_lv3[10 + 2 /* padding */] = {
 	0x87, 0x62, 0x87, 0x63, 0x87, 0x64, 0x87, 0x65, 0x87, 0x66,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 806775EC-806775F8 000A+02 s=1 e=0 z=0  None .rodata    l_eff_id_lv4$4706                                            */
-SECTION_RODATA static u8 const data_806775EC[10 + 2 /* padding */] = {
+SECTION_RODATA static u8 const l_eff_id_lv4[10 + 2 /* padding */] = {
 	0x8A, 0xEB, 0x8A, 0xEC, 0x8A, 0xED, 0x8A, 0xEE, 0x8A, 0xEF,
 	/* padding */
 	0x00, 0x00,
@@ -1190,7 +1190,7 @@ SECTION_RODATA static u8 const struct_80677948[40] = {
 };
 
 /* 80677A88-80677AF0 0068+00 s=1 e=0 z=0  None .data      action_table$4271                                            */
-SECTION_DATA static void* data_80677A88[26] = {
+SECTION_DATA static void* action_table[26] = {
 	(void*)(((char*)&struct_80677758)+0x11F) /* None */,
 	(void*)(((char*)&struct_8067787C)+0x0) /* None */,
 	(void*)(((char*)&struct_8067787C)+0x9) /* None */,
@@ -1280,7 +1280,7 @@ SECTION_DATA static void* lit_4678[26] = {
 };
 
 /* 80677BC0-80677BD0 0010+00 s=1 e=0 z=0  None .data      bck_table$4947                                               */
-SECTION_DATA static void* data_80677BC0[4] = {
+SECTION_DATA static void* bck_table[4] = {
 	(void*)(((char*)&struct_80677758)+0x106) /* None */,
 	(void*)(((char*)&struct_80677948)+0xB) /* None */,
 	(void*)(((char*)&struct_80677758)+0x106) /* None */,
@@ -1337,7 +1337,7 @@ SECTION_DATA static void* lit_5730[3] = {
 };
 
 /* 80677C24-80677C78 0054+00 s=1 e=0 z=0  None .data      l_action$5723                                                */
-SECTION_DATA static u8 data_80677C24[84] = {
+SECTION_DATA static u8 l_action[84] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

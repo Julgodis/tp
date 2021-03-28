@@ -137,8 +137,8 @@ lbl_80C3ED90:
 /* 80C3EDD0  7F C6 F3 78 */	mr r6, r30
 /* 80C3EDD4  4B 44 4A 8C */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80C3EDD8  38 7E 08 14 */	addi r3, r30, 0x814
-/* 80C3EDDC  3C 80 80 C4 */	lis r4, data_80C3F134@ha
-/* 80C3EDE0  38 84 F1 34 */	addi r4, r4, data_80C3F134@l
+/* 80C3EDDC  3C 80 80 C4 */	lis r4, cc_sph_src@ha
+/* 80C3EDE0  38 84 F1 34 */	addi r4, r4, cc_sph_src@l
 /* 80C3EDE4  4B 44 5C 50 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80C3EDE8  38 1E 07 D8 */	addi r0, r30, 0x7d8
 /* 80C3EDEC  90 1E 08 58 */	stw r0, 0x858(r30)

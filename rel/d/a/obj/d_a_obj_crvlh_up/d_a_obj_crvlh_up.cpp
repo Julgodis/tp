@@ -49,10 +49,10 @@ struct daObjCRVHAHEN_c {
 	/* 80BD342C */ void HahenSet(cXyz, cXyz, cXyz, cXyz, f32);
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

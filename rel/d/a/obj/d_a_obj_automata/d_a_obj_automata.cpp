@@ -41,7 +41,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Vec {
@@ -53,13 +56,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -424,17 +424,17 @@ SECTION_RODATA static u32 const lit_4197 = 0x44160000;
 SECTION_RODATA static u32 const lit_4198 = 0x41A00000;
 
 /* 80BA6C78-80BA6C80 0008+00 s=1 e=0 z=0  None .rodata    bckArcIx$4220                                                */
-SECTION_RODATA static u8 const data_80BA6C78[8] = {
+SECTION_RODATA static u8 const bckArcIx[8] = {
 	0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x06,
 };
 
 /* 80BA6C80-80BA6C88 0008+00 s=1 e=0 z=0  None .rodata    btkArcIx$4221                                                */
-SECTION_RODATA static u8 const data_80BA6C80[8] = {
+SECTION_RODATA static u8 const btkArcIx[8] = {
 	0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x0D,
 };
 
 /* 80BA6C88-80BA6C90 0008+00 s=1 e=0 z=0  None .rodata    playMode$4222                                                */
-SECTION_RODATA static u8 const data_80BA6C88[8] = {
+SECTION_RODATA static u8 const playMode[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02,
 };
 

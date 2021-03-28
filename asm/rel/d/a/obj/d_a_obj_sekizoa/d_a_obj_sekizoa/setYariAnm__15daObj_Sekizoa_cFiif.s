@@ -18,8 +18,8 @@ lbl_80CD04FC:
 /* 80CD053C  28 00 00 00 */	cmplwi r0, 0
 /* 80CD0540  41 82 00 6C */	beq lbl_80CD05AC
 /* 80CD0544  54 80 18 38 */	slwi r0, r4, 3
-/* 80CD0548  3C 80 80 CD */	lis r4, data_80CD6534@ha
-/* 80CD054C  38 84 65 34 */	addi r4, r4, data_80CD6534@l
+/* 80CD0548  3C 80 80 CD */	lis r4, yariAnmData@ha
+/* 80CD054C  38 84 65 34 */	addi r4, r4, yariAnmData@l
 /* 80CD0550  7C A4 00 2E */	lwzx r5, r4, r0
 /* 80CD0554  2C 05 00 00 */	cmpwi r5, 0
 /* 80CD0558  40 81 00 24 */	ble lbl_80CD057C

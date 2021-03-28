@@ -34,13 +34,13 @@ struct dSv_memBit_c {
 	/* 80034934 */ void isDungeonItem(int) const;
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -224,12 +224,12 @@ extern "C" void __register_global_object(); // 1
 SECTION_RODATA static u32 const lit_3647 = 0x3F800000;
 
 /* 80BF2BAC-80BF2BB4 0008+00 s=1 e=0 z=0  None .data      bmdd$3836                                                    */
-SECTION_DATA static u8 data_80BF2BAC[8] = {
+SECTION_DATA static u8 bmdd[8] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05,
 };
 
 /* 80BF2BB4-80BF2BBC 0008+00 s=1 e=0 z=0  None .data      dzbd$3837                                                    */
-SECTION_DATA static u8 data_80BF2BB4[8] = {
+SECTION_DATA static u8 dzbd[8] = {
 	0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x09,
 };
 

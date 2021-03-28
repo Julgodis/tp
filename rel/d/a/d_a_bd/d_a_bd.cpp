@@ -18,10 +18,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -35,13 +35,13 @@ struct mDoExt_McaMorfCallBack2_c {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct Vec {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Vec {
 };
 
 struct mDoExt_McaMorf {
@@ -486,7 +486,7 @@ SECTION_DATA static void* lit_4761[8] = {
 };
 
 /* 804DA234-804DA274 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$4956                                              */
-SECTION_DATA static u8 data_804DA234[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,

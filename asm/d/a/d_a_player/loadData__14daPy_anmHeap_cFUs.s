@@ -40,8 +40,8 @@ lbl_8015EFF4:
 /* 8015F018  4B ED D3 E9 */	bl getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci
 /* 8015F01C  48 00 00 34 */	b lbl_8015F050
 lbl_8015F020:
-/* 8015F020  3C 60 80 3C */	lis r3, data_803BA0A0@ha
-/* 8015F024  38 63 A0 A0 */	addi r3, r3, data_803BA0A0@l
+/* 8015F020  3C 60 80 3C */	lis r3, arcName@ha
+/* 8015F024  38 63 A0 A0 */	addi r3, r3, arcName@l
 /* 8015F028  54 00 13 BA */	rlwinm r0, r0, 2, 0xe, 0x1d
 /* 8015F02C  7C 63 02 14 */	add r3, r3, r0
 /* 8015F030  80 63 FF FC */	lwz r3, -4(r3)

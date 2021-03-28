@@ -83,10 +83,10 @@ struct dVibration_c {
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -554,17 +554,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 806C1A20-806C1A28 0008+00 s=1 e=0 z=0  None .data      e_prim$3682                                                  */
-SECTION_DATA static u8 data_806C1A20[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 806C1A28-806C1A30 0008+00 s=1 e=0 z=0  None .data      e_env$3683                                                   */
-SECTION_DATA static u8 data_806C1A28[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 806C1A30-806C1A38 0006+02 s=1 e=0 z=0  None .data      eff_id$3691                                                  */
-SECTION_DATA static u8 data_806C1A30[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -598,7 +598,7 @@ SECTION_DATA static void* lit_4324[7] = {
 };
 
 /* 806C1AD4-806C1ADC 0006+02 s=1 e=0 z=0  None .data      ice_name$4578                                                */
-SECTION_DATA static u8 data_806C1AD4[6 + 2 /* padding */] = {
+SECTION_DATA static u8 ice_name[6 + 2 /* padding */] = {
 	0x82, 0x21, 0x82, 0x22, 0x82, 0x23,
 	/* padding */
 	0x00, 0x00,

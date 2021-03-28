@@ -23,10 +23,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -38,19 +38,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -159,11 +159,11 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct _GXColor {
 };
 
-struct _GXColor {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dPa_control_c {
@@ -735,7 +735,7 @@ SECTION_DATA static void* lit_4883[17] = {
 };
 
 /* 8082F5A0-8082F5A8 0008+00 s=1 e=0 z=0  None .data      effId$5059                                                   */
-SECTION_DATA static u8 data_8082F5A0[8] = {
+SECTION_DATA static u8 effId[8] = {
 	0x8A, 0x6D, 0x8A, 0x6E, 0x8A, 0x6F, 0x8A, 0x70,
 };
 
@@ -1061,7 +1061,7 @@ SECTION_RODATA static u32 const lit_4318 = 0x44160000;
 SECTION_RODATA static u32 const lit_4319 = 0x41000000;
 
 /* 8082F288-8082F2E0 0058+00 s=1 e=0 z=0  None .rodata    START_EFF_DT$4324                                            */
-SECTION_RODATA static u8 const data_8082F288[88] = {
+SECTION_RODATA static u8 const START_EFF_DT[88] = {
 	0x8A, 0x62, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0x8A, 0x63, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07,
 	0x8A, 0x64, 0x00, 0x00, 0x00, 0x00, 0x00, 0x09, 0x8A, 0x65, 0x00, 0x00, 0x00, 0x00, 0x00, 0x09,
 	0x8A, 0x66, 0x00, 0x00, 0x00, 0x00, 0x00, 0x10, 0x8A, 0x67, 0x00, 0x00, 0x00, 0x00, 0x00, 0x10,
@@ -1411,7 +1411,7 @@ static u8 lit_4085[12];
 static u8 lit_4086[12];
 
 /* 8082F7A0-8082F7E8 0048+00 s=1 e=0 z=0  None .bss       mRoomLine_dt$4078                                            */
-static u8 data_8082F7A0[72];
+static u8 mRoomLine_dt[72];
 
 /* 80829AD8-80829E44 036C+00 s=2 e=0 z=0  None .text      mReturnLineMove__8daE_ZH_cFv                                 */
 #pragma push

@@ -80,8 +80,8 @@ lbl_806EBE44:
 /* 806EBE74  3B 80 00 00 */	li r28, 0
 /* 806EBE78  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 806EBE7C  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
-/* 806EBE80  3C 60 80 6F */	lis r3, data_806F09AC@ha
-/* 806EBE84  3B 63 09 AC */	addi r27, r3, data_806F09AC@l
+/* 806EBE80  3C 60 80 6F */	lis r3, d_HZ_JUMP_EFFECT_ID@ha
+/* 806EBE84  3B 63 09 AC */	addi r27, r3, d_HZ_JUMP_EFFECT_ID@l
 lbl_806EBE88:
 /* 806EBE88  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 806EBE8C  38 00 00 FF */	li r0, 0xff

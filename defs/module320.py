@@ -84,8 +84,8 @@ SYMBOLS = [
 	{'addr':0x80A0E0C4,'size':4,'pad':0,'label':"lit_4461",'name':"@4461",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"Integer"},
 	{'addr':0x80A0E0C8,'size':4,'pad':0,'label':"lit_4462",'name':"@4462",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"Integer"},
 	{'addr':0x80A0E0CC,'size':9,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':3,'section':3,'r':[4,0,0],'sh':[0,0,0],'type':"StringBase"},
-	{'addr':0x80A0E0D8,'size':16,'pad':0,'label':"data_80A0E0D8",'name':"mes_0$3966",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
-	{'addr':0x80A0E0E8,'size':16,'pad':0,'label':"data_80A0E0E8",'name':"mes_1$3967",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
+	{'addr':0x80A0E0D8,'size':16,'pad':0,'label':"mes_0",'name':"mes_0$3966",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
+	{'addr':0x80A0E0E8,'size':16,'pad':0,'label':"mes_1",'name':"mes_1$3967",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80A0E0F8,'size':32,'pad':0,'label':"l_daNpc_Inko_Method",'name':"l_daNpc_Inko_Method",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x80A0E118,'size':48,'pad':0,'label':"g_profile_NPC_INKO",'name':"g_profile_NPC_INKO",'lib':-1,'tu':3,'section':4,'r':[0,0,1],'sh':[0,0,0],'type':"ReferenceArray"},
 ]
@@ -149,8 +149,8 @@ SYMBOL_NAMES = {
 	"lit_4461":54,
 	"lit_4462":55,
 	"stringBase0":56,
-	"data_80A0E0D8":57,
-	"data_80A0E0E8":58,
+	"mes_0":57,
+	"mes_1":58,
 	"l_daNpc_Inko_Method":59,
 	"g_profile_NPC_INKO":60,
 }

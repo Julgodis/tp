@@ -68,14 +68,14 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
-	/* 80018BD0 */ ~csXyz();
-};
-
 struct _GXColor {
 };
 
 struct cXyz {
+};
+
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
 };
 
 struct dPa_control_c {
@@ -106,12 +106,12 @@ struct create_tag_class {
 struct J3DModel {
 };
 
-struct J3DAnmTextureSRTKey {
-	/* 8032B1D4 */ void searchUpdateMaterialID(J3DModelData*);
-};
-
 struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct J3DAnmTextureSRTKey {
+	/* 8032B1D4 */ void searchUpdateMaterialID(J3DModelData*);
 };
 
 struct J3DMaterialTable {

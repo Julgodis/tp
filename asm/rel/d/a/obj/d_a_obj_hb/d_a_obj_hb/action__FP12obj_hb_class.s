@@ -360,8 +360,8 @@ lbl_80C1AC50:
 /* 80C1AC90  3B 80 00 00 */	li r28, 0
 /* 80C1AC94  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80C1AC98  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
-/* 80C1AC9C  3C 60 80 C2 */	lis r3, data_80C1B708@ha
-/* 80C1ACA0  3B 63 B7 08 */	addi r27, r3, data_80C1B708@l
+/* 80C1AC9C  3C 60 80 C2 */	lis r3, w_eff_id@ha
+/* 80C1ACA0  3B 63 B7 08 */	addi r27, r3, w_eff_id@l
 lbl_80C1ACA4:
 /* 80C1ACA4  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 80C1ACA8  38 00 00 FF */	li r0, 0xff

@@ -27,13 +27,13 @@ struct daCowdoor_c {
 	/* 80BCCAEC */ void Delete();
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {

@@ -5,8 +5,8 @@ lbl_804D0988:
 /* 804D0994  39 61 00 80 */	addi r11, r1, 0x80
 /* 804D0998  4B E9 18 44 */	b _savegpr_29
 /* 804D099C  7C 7F 1B 78 */	mr r31, r3
-/* 804D09A0  3C 60 80 4D */	lis r3, data_804D15F0@ha
-/* 804D09A4  3B C3 15 F0 */	addi r30, r3, data_804D15F0@l
+/* 804D09A0  3C 60 80 4D */	lis r3, ccSphSrc@ha
+/* 804D09A4  3B C3 15 F0 */	addi r30, r3, ccSphSrc@l
 /* 804D09A8  3B A1 00 14 */	addi r29, r1, 0x14
 /* 804D09AC  7F A3 EB 78 */	mr r3, r29
 /* 804D09B0  4B BA 6B CC */	b __ct__11dBgS_GndChkFv

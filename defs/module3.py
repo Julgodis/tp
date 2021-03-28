@@ -83,7 +83,7 @@ SYMBOLS = [
 	{'addr':0x8045956C,'size':52,'pad':0,'label':"g_profile_BG",'name':"g_profile_BG",'lib':-1,'tu':3,'section':4,'r':[0,0,1],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x804595A0,'size':12,'pad':0,'label':"__vt__12J3DFrameCtrl",'name':"__vt__12J3DFrameCtrl",'lib':-1,'tu':3,'section':4,'r':[3,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x804595AC,'size':12,'pad':0,'label':"__vt__11J3DTexNoAnm",'name':"__vt__11J3DTexNoAnm",'lib':-1,'tu':3,'section':4,'r':[2,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
-	{'addr':0x804595B8,'size':32,'pad':0,'label':"data_804595B8",'name':"arcName$3823",'lib':-1,'tu':3,'section':5,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
+	{'addr':0x804595B8,'size':32,'pad':0,'label':"arcName",'name':"arcName$3823",'lib':-1,'tu':3,'section':5,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
 ]
 
 # Names
@@ -143,6 +143,6 @@ SYMBOL_NAMES = {
 	"g_profile_BG":52,
 	"__vt__12J3DFrameCtrl":53,
 	"__vt__11J3DTexNoAnm":54,
-	"data_804595B8":55,
+	"arcName":55,
 }
 

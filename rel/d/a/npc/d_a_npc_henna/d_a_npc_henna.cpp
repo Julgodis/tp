@@ -34,10 +34,10 @@ struct mDoGph_gInf_c {
 	/* 8054A4CC */ void fadeIn(f32, _GXColor&);
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
 struct mDoExt_btpAnm {
@@ -53,10 +53,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -684,7 +684,7 @@ SECTION_DATA static void* lit_4753[12] = {
 };
 
 /* 8054AD14-8054AD1C 0008+00 s=1 e=0 z=0  None .data      check_size$5372                                              */
-SECTION_DATA static u8 data_8054AD14[8] = {
+SECTION_DATA static u8 check_size[8] = {
 	0x00, 0x2B, 0x00, 0x32, 0x00, 0x38, 0x00, 0x3C,
 };
 
@@ -799,18 +799,18 @@ SECTION_DATA static void* lit_5824[82] = {
 };
 
 /* 8054AEB4-8054AEC0 000C+00 s=1 e=0 z=0  None .data      btk_d$6463                                                   */
-SECTION_DATA static u8 data_8054AEB4[12] = {
+SECTION_DATA static u8 btk_d[12] = {
 	0x00, 0x00, 0x00, 0x29, 0x00, 0x00, 0x00, 0x2A, 0x00, 0x00, 0x00, 0x2B,
 };
 
 /* 8054AEC0-8054AEE0 0020+00 s=1 e=0 z=0  None .data      btp_d$6474                                                   */
-SECTION_DATA static u8 data_8054AEC0[32] = {
+SECTION_DATA static u8 btp_d[32] = {
 	0x00, 0x00, 0x00, 0x2E, 0x00, 0x00, 0x00, 0x35, 0x00, 0x00, 0x00, 0x32, 0x00, 0x00, 0x00, 0x33,
 	0x00, 0x00, 0x00, 0x2E, 0x00, 0x00, 0x00, 0x34, 0x00, 0x00, 0x00, 0x31, 0x00, 0x00, 0x00, 0x31,
 };
 
 /* 8054AEE0-8054AF00 0020+00 s=1 e=0 z=0  None .data      facebck_d$6485                                               */
-SECTION_DATA static u8 data_8054AEE0[32] = {
+SECTION_DATA static u8 facebck_d[32] = {
 	0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x0F, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x0D,
 	0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x0E, 0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x0B,
 };

@@ -48,8 +48,8 @@ lbl_800412C0:
 /* 80041378  3B E0 00 00 */	li r31, 0
 /* 8004137C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80041380  3B A3 D4 70 */	addi r29, r3, now__14mDoMtx_stack_c@l
-/* 80041384  3C 60 80 38 */	lis r3, data_80379D5C@ha
-/* 80041388  3B C3 9D 5C */	addi r30, r3, data_80379D5C@l
+/* 80041384  3C 60 80 38 */	lis r3, l_offset@ha
+/* 80041388  3B C3 9D 5C */	addi r30, r3, l_offset@l
 lbl_8004138C:
 /* 8004138C  7F A3 EB 78 */	mr r3, r29
 /* 80041390  7C 9E FA 14 */	add r4, r30, r31
@@ -71,8 +71,8 @@ lbl_8004138C:
 /* 800413D0  38 E0 00 00 */	li r7, 0
 /* 800413D4  48 31 A1 F1 */	bl GXSetVtxAttrFmt
 /* 800413D8  57 60 16 3A */	rlwinm r0, r27, 2, 0x18, 0x1d
-/* 800413DC  98 0D 80 B8 */	stb r0, data_80450638(r13)
-/* 800413E0  80 0D 80 B8 */	lwz r0, data_80450638(r13)
+/* 800413DC  98 0D 80 B8 */	stb r0, l_cursorColor(r13)
+/* 800413E0  80 0D 80 B8 */	lwz r0, l_cursorColor(r13)
 /* 800413E4  90 01 00 08 */	stw r0, 8(r1)
 /* 800413E8  38 60 00 01 */	li r3, 1
 /* 800413EC  38 81 00 08 */	addi r4, r1, 8

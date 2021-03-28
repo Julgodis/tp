@@ -48,10 +48,10 @@ struct daDoorPush_c {
 	/* 80678D2C */ void Delete();
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -466,7 +466,7 @@ SECTION_DATA static void* lit_3792[3] = {
 };
 
 /* 80678F98-80678FA4 000C+00 s=1 e=0 z=0  None .data      l_func$3791                                                  */
-SECTION_DATA static u8 data_80678F98[12] = {
+SECTION_DATA static u8 l_func_3791[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -526,7 +526,7 @@ SECTION_DATA static void* lit_3880[3] = {
 };
 
 /* 80678FC8-80678FEC 0024+00 s=1 e=0 z=0  None .data      l_func$3877                                                  */
-SECTION_DATA static u8 data_80678FC8[36] = {
+SECTION_DATA static u8 l_func_3877[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
@@ -584,7 +584,7 @@ SECTION_RODATA static u8 const data_80678F38[24] = {
 };
 
 /* 80678FEC-80678FF8 000C+00 s=1 e=0 z=0  None .data      action_table$3910                                            */
-SECTION_DATA static void* data_80678FEC[3] = {
+SECTION_DATA static void* action_table[3] = {
 	(void*)(((char*)&struct_80678F18)+0x16) /* None */,
 	(void*)(((char*)&struct_80678F18)+0x1B) /* None */,
 	(void*)&data_80678F38,

@@ -6,8 +6,8 @@ lbl_809B1EA8:
 /* 809B1EB8  93 C1 00 08 */	stw r30, 8(r1)
 /* 809B1EBC  7C 7E 1B 78 */	mr r30, r3
 /* 809B1EC0  1F E4 00 0C */	mulli r31, r4, 0xc
-/* 809B1EC4  3C 60 80 9C */	lis r3, data_809B93DC@ha
-/* 809B1EC8  38 83 93 DC */	addi r4, r3, data_809B93DC@l
+/* 809B1EC4  3C 60 80 9C */	lis r3, sBtkPrm@ha
+/* 809B1EC8  38 83 93 DC */	addi r4, r3, sBtkPrm@l
 /* 809B1ECC  7C 64 FA 14 */	add r3, r4, r31
 /* 809B1ED0  80 03 00 08 */	lwz r0, 8(r3)
 /* 809B1ED4  54 00 10 3A */	slwi r0, r0, 2
@@ -32,8 +32,8 @@ lbl_809B1F10:
 /* 809B1F1C  38 7E 00 0C */	addi r3, r30, 0xc
 /* 809B1F20  38 84 00 58 */	addi r4, r4, 0x58
 /* 809B1F24  38 C0 00 01 */	li r6, 1
-/* 809B1F28  3C E0 80 9C */	lis r7, data_809B93DC@ha
-/* 809B1F2C  38 07 93 DC */	addi r0, r7, data_809B93DC@l
+/* 809B1F28  3C E0 80 9C */	lis r7, sBtkPrm@ha
+/* 809B1F2C  38 07 93 DC */	addi r0, r7, sBtkPrm@l
 /* 809B1F30  7C E0 FA 14 */	add r7, r0, r31
 /* 809B1F34  80 E7 00 04 */	lwz r7, 4(r7)
 /* 809B1F38  3D 00 80 9C */	lis r8, lit_3916@ha

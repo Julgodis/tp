@@ -35,10 +35,10 @@ struct daObjBurnBox_c {
 	/* 8046EC10 */ void Delete();
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -56,10 +56,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -250,7 +250,7 @@ SECTION_RODATA static u8 const l_cyl_src[68] = {
 };
 
 /* 8046EEA4-8046EEB0 000A+02 s=1 e=0 z=0  None .rodata    particle_id$3649                                             */
-SECTION_RODATA static u8 const data_8046EEA4[10 + 2 /* padding */] = {
+SECTION_RODATA static u8 const particle_id[10 + 2 /* padding */] = {
 	0x85, 0x26, 0x85, 0x27, 0x85, 0x28, 0x85, 0x29, 0x87, 0x46,
 	/* padding */
 	0x00, 0x00,

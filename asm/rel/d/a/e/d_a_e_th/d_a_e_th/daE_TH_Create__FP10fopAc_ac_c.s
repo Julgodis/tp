@@ -177,8 +177,8 @@ lbl_807B38E0:
 /* 807B3970  4B 8C FE F0 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 807B3974  3B 00 00 00 */	li r24, 0
 /* 807B3978  3B 80 00 00 */	li r28, 0
-/* 807B397C  3C 60 80 7B */	lis r3, data_807B4754@ha
-/* 807B3980  3B 43 47 54 */	addi r26, r3, data_807B4754@l
+/* 807B397C  3C 60 80 7B */	lis r3, cc_sph_src@ha
+/* 807B3980  3B 43 47 54 */	addi r26, r3, cc_sph_src@l
 /* 807B3984  3B 7E 09 0C */	addi r27, r30, 0x90c
 lbl_807B3988:
 /* 807B3988  7F 3E E2 14 */	add r25, r30, r28

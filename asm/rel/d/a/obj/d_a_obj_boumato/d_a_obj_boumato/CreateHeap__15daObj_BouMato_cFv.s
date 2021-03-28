@@ -25,8 +25,8 @@ lbl_80BBB770:
 lbl_80BBB7CC:
 /* 80BBB7CC  38 7F 09 E8 */	addi r3, r31, 0x9e8
 /* 80BBB7D0  7F E4 FB 78 */	mr r4, r31
-/* 80BBB7D4  3C A0 80 BC */	lis r5, data_80BBC58C@ha
-/* 80BBB7D8  38 A5 C5 8C */	addi r5, r5, data_80BBC58C@l
+/* 80BBB7D4  3C A0 80 BC */	lis r5, jntCoData@ha
+/* 80BBB7D8  38 A5 C5 8C */	addi r5, r5, jntCoData@l
 /* 80BBB7DC  38 E0 00 01 */	li r7, 1
 /* 80BBB7E0  4B 47 A4 C0 */	b init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli
 /* 80BBB7E4  30 03 FF FF */	addic r0, r3, -1

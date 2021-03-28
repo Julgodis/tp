@@ -12,14 +12,14 @@ lbl_800218C8:
 /* 800218F0  7C 00 07 75 */	extsb. r0, r0
 /* 800218F4  40 82 00 10 */	bne lbl_80021904
 /* 800218F8  38 00 00 01 */	li r0, 1
-/* 800218FC  90 0D 87 9C */	stw r0, data_80450D1C(r13)
+/* 800218FC  90 0D 87 9C */	stw r0, IsInitOfLayerList(r13)
 /* 80021900  98 0D 87 A0 */	stb r0, data_80450D20(r13)
 lbl_80021904:
 /* 80021904  88 0D 87 A8 */	lbz r0, data_80450D28(r13)
 /* 80021908  7C 00 07 75 */	extsb. r0, r0
 /* 8002190C  40 82 00 14 */	bne lbl_80021920
 /* 80021910  38 00 00 00 */	li r0, 0
-/* 80021914  90 0D 87 A4 */	stw r0, data_80450D24(r13)
+/* 80021914  90 0D 87 A4 */	stw r0, layer_id(r13)
 /* 80021918  38 00 00 01 */	li r0, 1
 /* 8002191C  98 0D 87 A8 */	stb r0, data_80450D28(r13)
 lbl_80021920:
@@ -50,16 +50,16 @@ lbl_80021920:
 /* 80021980  7F 83 E3 78 */	mr r3, r28
 /* 80021984  38 80 00 00 */	li r4, 0
 /* 80021988  48 24 49 89 */	bl cNd_Create__FP10node_classPv
-/* 8002198C  80 6D 87 A4 */	lwz r3, data_80450D24(r13)
+/* 8002198C  80 6D 87 A4 */	lwz r3, layer_id(r13)
 /* 80021990  38 03 00 01 */	addi r0, r3, 1
-/* 80021994  90 0D 87 A4 */	stw r0, data_80450D24(r13)
+/* 80021994  90 0D 87 A4 */	stw r0, layer_id(r13)
 /* 80021998  90 7C 00 0C */	stw r3, 0xc(r28)
 /* 8002199C  93 BC 00 18 */	stw r29, 0x18(r28)
-/* 800219A0  80 0D 87 9C */	lwz r0, data_80450D1C(r13)
+/* 800219A0  80 0D 87 9C */	lwz r0, IsInitOfLayerList(r13)
 /* 800219A4  2C 00 00 01 */	cmpwi r0, 1
 /* 800219A8  40 82 00 20 */	bne lbl_800219C8
 /* 800219AC  38 00 00 00 */	li r0, 0
-/* 800219B0  90 0D 87 9C */	stw r0, data_80450D1C(r13)
+/* 800219B0  90 0D 87 9C */	stw r0, IsInitOfLayerList(r13)
 /* 800219B4  3C 60 80 3A */	lis r3, l_fpcLy_LayerList@ha
 /* 800219B8  38 63 39 DC */	addi r3, r3, l_fpcLy_LayerList@l
 /* 800219BC  48 24 46 85 */	bl cLs_Create__FP15node_list_class

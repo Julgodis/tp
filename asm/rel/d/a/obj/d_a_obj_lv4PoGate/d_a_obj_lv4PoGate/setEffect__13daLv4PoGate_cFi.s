@@ -17,8 +17,8 @@ lbl_80C60568:
 /* 80C60568  7C 1A 03 78 */	mr r26, r0
 /* 80C6056C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80C60570  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 80C60574  3C 60 80 C6 */	lis r3, data_80C60834@ha
-/* 80C60578  3B A3 08 34 */	addi r29, r3, data_80C60834@l
+/* 80C60574  3C 60 80 C6 */	lis r3, particle_id@ha
+/* 80C60578  3B A3 08 34 */	addi r29, r3, particle_id@l
 /* 80C6057C  3C 60 80 C6 */	lis r3, lit_3772@ha
 /* 80C60580  3B C3 08 24 */	addi r30, r3, lit_3772@l
 /* 80C60584  54 1F 08 3C */	slwi r31, r0, 1

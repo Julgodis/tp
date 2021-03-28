@@ -105,8 +105,8 @@ lbl_806C331C:
 /* 806C331C  3B 40 00 00 */	li r26, 0
 /* 806C3320  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 806C3324  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
-/* 806C3328  3C 60 80 6C */	lis r3, data_806C76FC@ha
-/* 806C332C  3B 83 76 FC */	addi r28, r3, data_806C76FC@l
+/* 806C3328  3C 60 80 6C */	lis r3, eno_4381@ha
+/* 806C332C  3B 83 76 FC */	addi r28, r3, eno_4381@l
 lbl_806C3330:
 /* 806C3330  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 806C3334  38 80 00 00 */	li r4, 0

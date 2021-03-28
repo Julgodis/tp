@@ -37,8 +37,8 @@ lbl_8083FF24:
 /* 8083FF34  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 8083FF38  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 8083FF3C  38 63 04 50 */	addi r3, r3, 0x450
-/* 8083FF40  3C 80 80 84 */	lis r4, data_80845770@ha
-/* 8083FF44  38 84 57 70 */	addi r4, r4, data_80845770@l
+/* 8083FF40  3C 80 80 84 */	lis r4, zeldaLocalLeft@ha
+/* 8083FF44  38 84 57 70 */	addi r4, r4, zeldaLocalLeft@l
 /* 8083FF48  80 BA 11 50 */	lwz r5, 0x1150(r26)
 /* 8083FF4C  1C 1C 00 0C */	mulli r0, r28, 0xc
 /* 8083FF50  7C A5 02 14 */	add r5, r5, r0
@@ -47,8 +47,8 @@ lbl_8083FF24:
 /* 8083FF5C  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 8083FF60  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 8083FF64  38 63 04 50 */	addi r3, r3, 0x450
-/* 8083FF68  3C 80 80 84 */	lis r4, data_8084577C@ha
-/* 8083FF6C  38 84 57 7C */	addi r4, r4, data_8084577C@l
+/* 8083FF68  3C 80 80 84 */	lis r4, zeldaLocalRight@ha
+/* 8083FF6C  38 84 57 7C */	addi r4, r4, zeldaLocalRight@l
 /* 8083FF70  80 BA 11 78 */	lwz r5, 0x1178(r26)
 /* 8083FF74  1C 1F 00 0C */	mulli r0, r31, 0xc
 /* 8083FF78  7C A5 02 14 */	add r5, r5, r0

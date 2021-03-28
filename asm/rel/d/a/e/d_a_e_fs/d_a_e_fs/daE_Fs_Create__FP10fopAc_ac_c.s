@@ -275,14 +275,14 @@ lbl_806BDBD0:
 /* 806BDC50  7F C6 F3 78 */	mr r6, r30
 /* 806BDC54  4B 9C 5C 0C */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 806BDC58  38 7E 08 E8 */	addi r3, r30, 0x8e8
-/* 806BDC5C  3C 80 80 6C */	lis r4, data_806BE608@ha
-/* 806BDC60  38 84 E6 08 */	addi r4, r4, data_806BE608@l
+/* 806BDC5C  3C 80 80 6C */	lis r4, cc_cyl_src@ha
+/* 806BDC60  38 84 E6 08 */	addi r4, r4, cc_cyl_src@l
 /* 806BDC64  4B 9C 6C 50 */	b Set__8dCcD_CylFRC11dCcD_SrcCyl
 /* 806BDC68  38 1E 08 AC */	addi r0, r30, 0x8ac
 /* 806BDC6C  90 1E 09 2C */	stw r0, 0x92c(r30)
 /* 806BDC70  38 7E 0A 24 */	addi r3, r30, 0xa24
-/* 806BDC74  3C 80 80 6C */	lis r4, data_806BE64C@ha
-/* 806BDC78  38 84 E6 4C */	addi r4, r4, data_806BE64C@l
+/* 806BDC74  3C 80 80 6C */	lis r4, at_sph_src@ha
+/* 806BDC78  38 84 E6 4C */	addi r4, r4, at_sph_src@l
 /* 806BDC7C  4B 9C 6D B8 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 806BDC80  38 1E 08 AC */	addi r0, r30, 0x8ac
 /* 806BDC84  90 1E 0A 68 */	stw r0, 0xa68(r30)

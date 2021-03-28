@@ -26,8 +26,8 @@ lbl_80B284DC:
 /* 80B2853C  4B 67 C8 64 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 80B28540  80 7D 00 84 */	lwz r3, 0x84(r29)
 /* 80B28544  80 83 00 0C */	lwz r4, 0xc(r3)
-/* 80B28548  3C 60 80 B3 */	lis r3, data_80B2CF44@ha
-/* 80B2854C  80 03 CF 44 */	lwz r0, data_80B2CF44@l(r3)
+/* 80B28548  3C 60 80 B3 */	lis r3, jointNo@ha
+/* 80B2854C  80 03 CF 44 */	lwz r0, jointNo@l(r3)
 /* 80B28550  1C 00 00 30 */	mulli r0, r0, 0x30
 /* 80B28554  7C 64 02 14 */	add r3, r4, r0
 /* 80B28558  3C 80 80 3E */	lis r4, now__14mDoMtx_stack_c@ha

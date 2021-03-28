@@ -30,8 +30,8 @@ lbl_807BE304:
 /* 807BE314  3B A0 00 00 */	li r29, 0
 /* 807BE318  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 807BE31C  3A E3 61 C0 */	addi r23, r3, g_dComIfG_gameInfo@l
-/* 807BE320  3C 60 80 7C */	lis r3, data_807C21C8@ha
-/* 807BE324  3B 63 21 C8 */	addi r27, r3, data_807C21C8@l
+/* 807BE320  3C 60 80 7C */	lis r3, w_eff_id_4272@ha
+/* 807BE324  3B 63 21 C8 */	addi r27, r3, w_eff_id_4272@l
 /* 807BE328  3B 80 00 01 */	li r28, 1
 /* 807BE32C  7F B8 EB 78 */	mr r24, r29
 /* 807BE330  3B 20 FF FF */	li r25, -1

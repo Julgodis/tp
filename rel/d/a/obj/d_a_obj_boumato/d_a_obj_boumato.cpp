@@ -66,10 +66,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -84,10 +84,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dJntColData_c {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct dJntColData_c {
 };
 
 struct dJntCol_c {
@@ -478,16 +478,16 @@ SECTION_DATA static u8 l_ccDCyl[68] = {
 SECTION_DATA static void* l_resName = (void*)(((char*)&struct_80BBC518)+0x1) /* None */;
 
 /* 80BBC574-80BBC58C 0018+00 s=1 e=0 z=0  None .data      jntCoOffset$4044                                             */
-SECTION_DATA static u8 data_80BBC574[24] = {
+SECTION_DATA static u8 jntCoOffset[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x43, 0x96, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80BBC58C-80BBC598 000C+00 s=1 e=0 z=0  None .data      jntCoData$4045                                               */
-SECTION_DATA static void* data_80BBC58C[3] = {
+SECTION_DATA static void* jntCoData[3] = {
 	(void*)0x01010000,
 	(void*)0x40800000,
-	(void*)&data_80BBC574,
+	(void*)&jntCoOffset,
 };
 
 /* 80BBC598-80BBC5B8 0020+00 s=1 e=0 z=0  None .data      daObj_BouMato_MethodTable                                    */

@@ -47,14 +47,14 @@ lbl_8077AFA8:
 /* 8077AFF0  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8077AFF4  40 82 00 18 */	bne lbl_8077B00C
 /* 8077AFF8  38 00 00 01 */	li r0, 1
-/* 8077AFFC  3C 60 80 78 */	lis r3, data_807813B8@ha
-/* 8077B000  38 63 13 B8 */	addi r3, r3, data_807813B8@l
+/* 8077AFFC  3C 60 80 78 */	lis r3, check_index@ha
+/* 8077B000  38 63 13 B8 */	addi r3, r3, check_index@l
 /* 8077B004  7C 03 D9 AE */	stbx r0, r3, r27
 /* 8077B008  48 00 00 14 */	b lbl_8077B01C
 lbl_8077B00C:
 /* 8077B00C  38 00 00 00 */	li r0, 0
-/* 8077B010  3C 60 80 78 */	lis r3, data_807813B8@ha
-/* 8077B014  38 63 13 B8 */	addi r3, r3, data_807813B8@l
+/* 8077B010  3C 60 80 78 */	lis r3, check_index@ha
+/* 8077B014  38 63 13 B8 */	addi r3, r3, check_index@l
 /* 8077B018  7C 03 D9 AE */	stbx r0, r3, r27
 lbl_8077B01C:
 /* 8077B01C  3B 7B 00 01 */	addi r27, r27, 1
@@ -79,8 +79,8 @@ lbl_8077B044:
 lbl_8077B060:
 /* 8077B060  2C 07 00 FF */	cmpwi r7, 0xff
 /* 8077B064  40 80 00 B4 */	bge lbl_8077B118
-/* 8077B068  3C 60 80 78 */	lis r3, data_807813B8@ha
-/* 8077B06C  38 63 13 B8 */	addi r3, r3, data_807813B8@l
+/* 8077B068  3C 60 80 78 */	lis r3, check_index@ha
+/* 8077B06C  38 63 13 B8 */	addi r3, r3, check_index@l
 /* 8077B070  7C 03 38 AE */	lbzx r0, r3, r7
 /* 8077B074  28 00 00 00 */	cmplwi r0, 0
 /* 8077B078  41 82 00 A0 */	beq lbl_8077B118

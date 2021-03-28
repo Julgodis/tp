@@ -31,8 +31,8 @@ lbl_806CE184:
 /* 806CE1F8  3B C0 00 00 */	li r30, 0
 /* 806CE1FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 806CE200  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
-/* 806CE204  3C 60 80 6D */	lis r3, data_806D103C@ha
-/* 806CE208  3B 83 10 3C */	addi r28, r3, data_806D103C@l
+/* 806CE204  3C 60 80 6D */	lis r3, gi_damage_eff_id@ha
+/* 806CE208  3B 83 10 3C */	addi r28, r3, gi_damage_eff_id@l
 /* 806CE20C  3C 60 80 6D */	lis r3, lit_3909@ha
 /* 806CE210  3B A3 0E 68 */	addi r29, r3, lit_3909@l
 lbl_806CE214:

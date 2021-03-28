@@ -53,9 +53,6 @@ struct JKRHeap {
 	/* 802CEBA8 */ void isSubHeap(JKRHeap*) const;
 };
 
-struct JKRThreadName_ {
-};
-
 struct JKRThread {
 	/* 802D1568 */ JKRThread(u32, int, int);
 	/* 802D16B8 */ JKRThread(OSThread*, int);
@@ -66,6 +63,9 @@ struct JKRThread {
 	/* 802D1934 */ void start(void*);
 	/* 802D1960 */ void searchThread(OSThread*);
 	/* 802D1E14 */ bool run();
+};
+
+struct JKRThreadName_ {
 };
 
 struct JKRThreadSwitch {

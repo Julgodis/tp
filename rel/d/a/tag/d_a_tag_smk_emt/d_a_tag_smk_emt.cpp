@@ -30,17 +30,17 @@ struct daTagSmkEmt_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct cXyz {
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 struct dPa_control_c {
@@ -186,7 +186,7 @@ bool daTagSmkEmt_c::execute() {
 
 /* ############################################################################################## */
 /* 80D61600-80D61608 0006+02 s=1 e=0 z=0  None .rodata    PARTICLE_NAME$3654                                           */
-SECTION_RODATA static u8 const data_80D61600[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const PARTICLE_NAME[6 + 2 /* padding */] = {
 	0x87, 0xE7, 0x87, 0xE8, 0x87, 0xE9,
 	/* padding */
 	0x00, 0x00,

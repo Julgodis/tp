@@ -822,7 +822,7 @@ asm void dDlst_TimerScrnDraw_c::setShowType(u8 param_0) {
 
 /* ############################################################################################## */
 /* 80454F60-80454F68 0006+02 s=1 e=0 z=0  None .sdata2    animeFrame$5017                                              */
-SECTION_SDATA2 static u8 data_80454F60[6 + 2 /* padding */] = {
+SECTION_SDATA2 static u8 animeFrame[6 + 2 /* padding */] = {
 	0x00, 0x07, 0x00, 0x0F, 0x00, 0x16,
 	/* padding */
 	0x00, 0x00,

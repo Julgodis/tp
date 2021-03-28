@@ -753,8 +753,8 @@ lbl_807E0E88:
 /* 807E0E90  41 82 00 34 */	beq lbl_807E0EC4
 /* 807E0E94  80 7A 00 84 */	lwz r3, 0x84(r26)
 /* 807E0E98  80 83 00 0C */	lwz r4, 0xc(r3)
-/* 807E0E9C  3C 60 80 7E */	lis r3, data_807E33DC@ha
-/* 807E0EA0  38 63 33 DC */	addi r3, r3, data_807E33DC@l
+/* 807E0E9C  3C 60 80 7E */	lis r3, foot_no_B@ha
+/* 807E0EA0  38 63 33 DC */	addi r3, r3, foot_no_B@l
 /* 807E0EA4  7C 03 E8 2E */	lwzx r0, r3, r29
 /* 807E0EA8  1C 00 00 30 */	mulli r0, r0, 0x30
 /* 807E0EAC  7C 64 02 14 */	add r3, r4, r0
@@ -766,8 +766,8 @@ lbl_807E0E88:
 lbl_807E0EC4:
 /* 807E0EC4  80 7A 00 84 */	lwz r3, 0x84(r26)
 /* 807E0EC8  80 83 00 0C */	lwz r4, 0xc(r3)
-/* 807E0ECC  3C 60 80 7E */	lis r3, data_807E33CC@ha
-/* 807E0ED0  38 63 33 CC */	addi r3, r3, data_807E33CC@l
+/* 807E0ECC  3C 60 80 7E */	lis r3, foot_no@ha
+/* 807E0ED0  38 63 33 CC */	addi r3, r3, foot_no@l
 /* 807E0ED4  7C 03 E8 2E */	lwzx r0, r3, r29
 /* 807E0ED8  1C 00 00 30 */	mulli r0, r0, 0x30
 /* 807E0EDC  7C 64 02 14 */	add r3, r4, r0

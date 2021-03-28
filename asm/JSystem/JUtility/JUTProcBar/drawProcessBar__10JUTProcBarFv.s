@@ -25,7 +25,7 @@ lbl_802E5E90:
 /* 802E5E94  7C 00 07 75 */	extsb. r0, r0
 /* 802E5E98  40 82 00 14 */	bne lbl_802E5EAC
 /* 802E5E9C  38 00 00 00 */	li r0, 0
-/* 802E5EA0  90 0D 8F DC */	stw r0, data_8045155C(r13)
+/* 802E5EA0  90 0D 8F DC */	stw r0, cnt(r13)
 /* 802E5EA4  38 00 00 01 */	li r0, 1
 /* 802E5EA8  98 0D 8F E0 */	stb r0, data_80451560(r13)
 lbl_802E5EAC:
@@ -34,7 +34,7 @@ lbl_802E5EAC:
 /* 802E5EB4  38 AD 83 80 */	la r5, oneFrameRate(r13) /* 80450900-_SDA_BASE_ */
 /* 802E5EB8  C0 22 C7 10 */	lfs f1, lit_2580(r2)
 /* 802E5EBC  C0 42 C6 DC */	lfs f2, lit_2259(r2)
-/* 802E5EC0  38 CD 8F DC */	la r6, data_8045155C(r13) /* 8045155C-_SDA_BASE_ */
+/* 802E5EC0  38 CD 8F DC */	la r6, cnt(r13) /* 8045155C-_SDA_BASE_ */
 /* 802E5EC4  4B FF FE 01 */	bl adjustMeterLength__10JUTProcBarFUlPfffPi
 /* 802E5EC8  C0 22 C6 F0 */	lfs f1, lit_2308(r2)
 /* 802E5ECC  C0 0D 83 80 */	lfs f0, oneFrameRate(r13)
@@ -665,7 +665,7 @@ lbl_802E6820:
 /* 802E6840  7C 00 07 75 */	extsb. r0, r0
 /* 802E6844  40 82 00 14 */	bne lbl_802E6858
 /* 802E6848  38 00 00 00 */	li r0, 0
-/* 802E684C  90 0D 8F E4 */	stw r0, data_80451564(r13)
+/* 802E684C  90 0D 8F E4 */	stw r0, cntUser(r13)
 /* 802E6850  38 00 00 01 */	li r0, 1
 /* 802E6854  98 0D 8F E8 */	stb r0, data_80451568(r13)
 lbl_802E6858:
@@ -673,7 +673,7 @@ lbl_802E6858:
 /* 802E685C  38 AD 83 84 */	la r5, oneFrameRateUser(r13) /* 80450904-_SDA_BASE_ */
 /* 802E6860  C0 22 C7 10 */	lfs f1, lit_2580(r2)
 /* 802E6864  C0 42 C6 DC */	lfs f2, lit_2259(r2)
-/* 802E6868  38 CD 8F E4 */	la r6, data_80451564(r13) /* 80451564-_SDA_BASE_ */
+/* 802E6868  38 CD 8F E4 */	la r6, cntUser(r13) /* 80451564-_SDA_BASE_ */
 /* 802E686C  4B FF F4 59 */	bl adjustMeterLength__10JUTProcBarFUlPfffPi
 /* 802E6870  C0 22 C6 F0 */	lfs f1, lit_2308(r2)
 /* 802E6874  C0 0D 83 84 */	lfs f0, oneFrameRateUser(r13)

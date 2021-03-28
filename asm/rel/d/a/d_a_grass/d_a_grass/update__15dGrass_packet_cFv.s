@@ -120,8 +120,8 @@ lbl_805201B4:
 /* 805201F8  28 00 00 01 */	cmplwi r0, 1
 /* 805201FC  40 82 00 14 */	bne lbl_80520210
 /* 80520200  38 00 00 00 */	li r0, 0
-/* 80520204  3C 80 80 52 */	lis r4, data_80527930@ha
-/* 80520208  38 84 79 30 */	addi r4, r4, data_80527930@l
+/* 80520204  3C 80 80 52 */	lis r4, mAngleZ@ha
+/* 80520208  38 84 79 30 */	addi r4, r4, mAngleZ@l
 /* 8052020C  7C 04 FB 2E */	sthx r0, r4, r31
 lbl_80520210:
 /* 80520210  C0 1D 00 0C */	lfs f0, 0xc(r29)
@@ -187,8 +187,8 @@ lbl_805202DC:
 /* 805202F8  41 81 00 98 */	bgt lbl_80520390
 /* 805202FC  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80520300  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80520304  3C 80 80 52 */	lis r4, data_80527930@ha
-/* 80520308  3A 84 79 30 */	addi r20, r4, data_80527930@l
+/* 80520304  3C 80 80 52 */	lis r4, mAngleZ@ha
+/* 80520308  3A 84 79 30 */	addi r20, r4, mAngleZ@l
 /* 8052030C  7C 94 FA AE */	lhax r4, r20, r31
 /* 80520310  4B AE C1 BC */	b mDoMtx_ZrotM__FPA4_fs
 /* 80520314  FC 20 F8 90 */	fmr f1, f31
@@ -235,8 +235,8 @@ lbl_80520390:
 /* 805203B4  41 82 00 1C */	beq lbl_805203D0
 /* 805203B8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 805203BC  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 805203C0  3C 80 80 52 */	lis r4, data_80527930@ha
-/* 805203C4  38 84 79 30 */	addi r4, r4, data_80527930@l
+/* 805203C0  3C 80 80 52 */	lis r4, mAngleZ@ha
+/* 805203C4  38 84 79 30 */	addi r4, r4, mAngleZ@l
 /* 805203C8  7C 84 FA AE */	lhax r4, r4, r31
 /* 805203CC  4B AE C1 00 */	b mDoMtx_ZrotM__FPA4_fs
 lbl_805203D0:
@@ -257,8 +257,8 @@ lbl_805203D0:
 /* 80520408  41 82 00 24 */	beq lbl_8052042C
 /* 8052040C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80520410  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80520414  3C 80 80 52 */	lis r4, data_80527930@ha
-/* 80520418  38 84 79 30 */	addi r4, r4, data_80527930@l
+/* 80520414  3C 80 80 52 */	lis r4, mAngleZ@ha
+/* 80520418  38 84 79 30 */	addi r4, r4, mAngleZ@l
 /* 8052041C  7C 04 FA AE */	lhax r0, r4, r31
 /* 80520420  7C 00 00 D0 */	neg r0, r0
 /* 80520424  7C 04 07 34 */	extsh r4, r0
@@ -317,8 +317,8 @@ lbl_80520474:
 /* 805204F0  FC 00 00 1E */	fctiwz f0, f0
 /* 805204F4  D8 01 00 30 */	stfd f0, 0x30(r1)
 /* 805204F8  80 81 00 34 */	lwz r4, 0x34(r1)
-/* 805204FC  3C 60 80 52 */	lis r3, data_80527930@ha
-/* 80520500  38 63 79 30 */	addi r3, r3, data_80527930@l
+/* 805204FC  3C 60 80 52 */	lis r3, mAngleZ@ha
+/* 80520500  38 63 79 30 */	addi r3, r3, mAngleZ@l
 /* 80520504  7C 03 FA AE */	lhax r0, r3, r31
 /* 80520508  7C 00 22 14 */	add r0, r0, r4
 /* 8052050C  7C 03 FB 2E */	sthx r0, r3, r31

@@ -130,7 +130,7 @@ lbl_8004C9F8:
 /* 8004CA08  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8004CA0C  80 77 5D 3C */	lwz r3, 0x5d3c(r23)
 /* 8004CA10  80 9A 00 00 */	lwz r4, 0(r26)
-/* 8004CA14  38 A2 85 90 */	la r5, data_80451F90(r2) /* 80451F90-_SDA2_BASE_ */
+/* 8004CA14  38 A2 85 90 */	la r5, particleID(r2) /* 80451F90-_SDA2_BASE_ */
 /* 8004CA18  7C A5 C2 2E */	lhzx r5, r5, r24
 /* 8004CA1C  7F 66 DB 78 */	mr r6, r27
 /* 8004CA20  7F 87 E3 78 */	mr r7, r28

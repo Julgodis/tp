@@ -81,8 +81,8 @@ lbl_80788EB4:
 /* 80788ECC  38 63 9D 84 */	addi r3, r3, stringBase0@l
 /* 80788ED0  88 1F 05 B8 */	lbz r0, 0x5b8(r31)
 /* 80788ED4  54 00 10 3A */	slwi r0, r0, 2
-/* 80788ED8  3C 80 80 79 */	lis r4, data_80789E9C@ha
-/* 80788EDC  38 84 9E 9C */	addi r4, r4, data_80789E9C@l
+/* 80788ED8  3C 80 80 79 */	lis r4, wepon_data@ha
+/* 80788EDC  38 84 9E 9C */	addi r4, r4, wepon_data@l
 /* 80788EE0  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80788EE4  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 80788EE8  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
@@ -106,8 +106,8 @@ lbl_80788F28:
 /* 80788F2C  38 63 9D 84 */	addi r3, r3, stringBase0@l
 /* 80788F30  88 1F 05 B9 */	lbz r0, 0x5b9(r31)
 /* 80788F34  54 00 10 3A */	slwi r0, r0, 2
-/* 80788F38  3C 80 80 79 */	lis r4, data_80789EA4@ha
-/* 80788F3C  38 84 9E A4 */	addi r4, r4, data_80789EA4@l
+/* 80788F38  3C 80 80 79 */	lis r4, tate_data@ha
+/* 80788F3C  38 84 9E A4 */	addi r4, r4, tate_data@l
 /* 80788F40  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80788F44  7F 85 E3 78 */	mr r5, r28
 /* 80788F48  38 C0 00 80 */	li r6, 0x80

@@ -101,8 +101,8 @@ lbl_80C1B350:
 /* 80C1B374  7F C6 F3 78 */	mr r6, r30
 /* 80C1B378  4B 46 84 E8 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80C1B37C  38 7E 09 0C */	addi r3, r30, 0x90c
-/* 80C1B380  3C 80 80 C2 */	lis r4, data_80C1B710@ha
-/* 80C1B384  38 84 B7 10 */	addi r4, r4, data_80C1B710@l
+/* 80C1B380  3C 80 80 C2 */	lis r4, cc_sph_src@ha
+/* 80C1B384  38 84 B7 10 */	addi r4, r4, cc_sph_src@l
 /* 80C1B388  4B 46 96 AC */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80C1B38C  38 1E 08 D0 */	addi r0, r30, 0x8d0
 /* 80C1B390  90 1E 09 50 */	stw r0, 0x950(r30)

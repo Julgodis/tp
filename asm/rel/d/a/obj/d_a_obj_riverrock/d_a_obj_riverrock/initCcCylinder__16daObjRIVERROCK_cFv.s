@@ -10,8 +10,8 @@ lbl_80CBC6F4:
 /* 80CBC714  7F E6 FB 78 */	mr r6, r31
 /* 80CBC718  4B 3C 71 48 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80CBC71C  38 7F 06 5C */	addi r3, r31, 0x65c
-/* 80CBC720  3C 80 80 CC */	lis r4, data_80CBDA60@ha
-/* 80CBC724  38 84 DA 60 */	addi r4, r4, data_80CBDA60@l
+/* 80CBC720  3C 80 80 CC */	lis r4, ccCylSrc@ha
+/* 80CBC724  38 84 DA 60 */	addi r4, r4, ccCylSrc@l
 /* 80CBC728  4B 3C 81 8C */	b Set__8dCcD_CylFRC11dCcD_SrcCyl
 /* 80CBC72C  38 1F 06 20 */	addi r0, r31, 0x620
 /* 80CBC730  90 1F 06 A0 */	stw r0, 0x6a0(r31)

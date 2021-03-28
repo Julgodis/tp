@@ -48,10 +48,10 @@ struct daObjFlag3_c {
 	/* 80BEFBC4 */ void create_init();
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

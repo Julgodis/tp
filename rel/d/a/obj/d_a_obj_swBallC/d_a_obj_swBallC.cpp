@@ -18,10 +18,10 @@ struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -69,13 +69,13 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -487,14 +487,14 @@ SECTION_DATA static void* lit_3899[3] = {
 };
 
 /* 80CF6DEC-80CF6E1C 0030+00 s=1 e=0 z=0  None .data      l_func$3895                                                  */
-SECTION_DATA static u8 data_80CF6DEC[48] = {
+SECTION_DATA static u8 l_func[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80CF6E1C-80CF6E50 0034+00 s=1 e=0 z=0  None .data      action_table$3966                                            */
-SECTION_DATA static void* data_80CF6E1C[13] = {
+SECTION_DATA static void* action_table[13] = {
 	(void*)(((char*)&struct_80CF6D08)+0x22) /* None */,
 	(void*)(((char*)&struct_80CF6D08)+0x27) /* None */,
 	(void*)(((char*)&struct_80CF6D08)+0x2A) /* None */,

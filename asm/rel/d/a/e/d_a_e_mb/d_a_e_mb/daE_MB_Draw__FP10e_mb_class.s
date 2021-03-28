@@ -60,8 +60,8 @@ lbl_80706318:
 lbl_80706344:
 /* 80706344  38 7F 06 B4 */	addi r3, r31, 0x6b4
 /* 80706348  38 80 00 10 */	li r4, 0x10
-/* 8070634C  3C A0 80 71 */	lis r5, data_80708AF0@ha
-/* 80706350  38 A5 8A F0 */	addi r5, r5, data_80708AF0@l
+/* 8070634C  3C A0 80 71 */	lis r5, l_color@ha
+/* 80706350  38 A5 8A F0 */	addi r5, r5, l_color@l
 /* 80706354  38 DF 01 0C */	addi r6, r31, 0x10c
 /* 80706358  4B 90 DC 58 */	b update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c
 /* 8070635C  38 7F 06 B4 */	addi r3, r31, 0x6b4

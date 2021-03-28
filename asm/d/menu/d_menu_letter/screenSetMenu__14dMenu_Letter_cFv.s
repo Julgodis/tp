@@ -5,8 +5,8 @@ lbl_801DF010:
 /* 801DF01C  39 61 00 80 */	addi r11, r1, 0x80
 /* 801DF020  48 18 31 81 */	bl __save_gpr
 /* 801DF024  7C 7E 1B 78 */	mr r30, r3
-/* 801DF028  3C 60 80 39 */	lis r3, data_803969C8@ha
-/* 801DF02C  3B E3 69 C8 */	addi r31, r3, data_803969C8@l
+/* 801DF028  3C 60 80 39 */	lis r3, tag_sub0@ha
+/* 801DF02C  3B E3 69 C8 */	addi r31, r3, tag_sub0@l
 /* 801DF030  38 60 01 18 */	li r3, 0x118
 /* 801DF034  48 0E FC 19 */	bl __nw__FUl
 /* 801DF038  7C 60 1B 79 */	or. r0, r3, r3

@@ -35,10 +35,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -91,10 +91,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -457,7 +457,7 @@ SECTION_RODATA static u8 const lit_3882[8] = {
 };
 
 /* 80C7DF44-80C7DF50 000C+00 s=1 e=0 z=0  None .rodata    l_particle_id$3914                                           */
-SECTION_RODATA static u8 const data_80C7DF44[12] = {
+SECTION_RODATA static u8 const l_particle_id[12] = {
 	0x82, 0x8F, 0x82, 0x90, 0x82, 0x91, 0x82, 0x92, 0x82, 0x93, 0x82, 0x94,
 };
 
@@ -553,7 +553,7 @@ SECTION_DATA static void* lit_3941[3] = {
 };
 
 /* 80C7E024-80C7E048 0024+00 s=1 e=0 z=0  None .data      l_func$3938                                                  */
-SECTION_DATA static u8 data_80C7E024[36] = {
+SECTION_DATA static u8 l_func[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,

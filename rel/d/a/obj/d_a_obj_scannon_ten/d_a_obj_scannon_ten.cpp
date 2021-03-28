@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -99,10 +99,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -462,7 +462,7 @@ SECTION_RODATA static u32 const lit_4200 = 0x436B0000;
 SECTION_RODATA static u32 const lit_4228 = 0x437F0000;
 
 /* 80CCCC78-80CCCC80 0006+02 s=1 e=0 z=0  None .rodata    PARTICLE_NAME$4297                                           */
-SECTION_RODATA static u8 const data_80CCCC78[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const PARTICLE_NAME[6 + 2 /* padding */] = {
 	0x89, 0xD9, 0x89, 0xDA, 0x89, 0xDB,
 	/* padding */
 	0x00, 0x00,
@@ -651,7 +651,7 @@ SECTION_DATA static u8 s_demoExeProc__17daObjSCannonTen_c[144] = {
 };
 
 /* 80CCCE7C-80CCCE94 0018+00 s=1 e=0 z=0  None .data      CUT_TYPE_TABLE_FIRE_SECOND$4058                              */
-SECTION_DATA static void* data_80CCCE7C[6] = {
+SECTION_DATA static void* CUT_TYPE_TABLE_FIRE_SECOND[6] = {
 	(void*)(((char*)&struct_80CCCC88)+0x19) /* None */,
 	(void*)(((char*)&struct_80CCCC88)+0x21) /* None */,
 	(void*)(((char*)&struct_80CCCC88)+0x25) /* None */,

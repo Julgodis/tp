@@ -8,8 +8,8 @@ lbl_807B09E8:
 /* 807B0A00  38 80 00 0F */	li r4, 0xf
 /* 807B0A04  3C A0 80 7B */	lis r5, lit_4087@ha
 /* 807B0A08  C0 25 45 04 */	lfs f1, lit_4087@l(r5)
-/* 807B0A0C  3C A0 80 7B */	lis r5, data_807B4684@ha
-/* 807B0A10  38 A5 46 84 */	addi r5, r5, data_807B4684@l
+/* 807B0A0C  3C A0 80 7B */	lis r5, l_color@ha
+/* 807B0A10  38 A5 46 84 */	addi r5, r5, l_color@l
 /* 807B0A14  38 C0 00 01 */	li r6, 1
 /* 807B0A18  38 FF 01 0C */	addi r7, r31, 0x10c
 /* 807B0A1C  4B 86 1E 58 */	b update__19mDoExt_3DlineMat0_cFifR8_GXColorUsP12dKy_tevstr_c

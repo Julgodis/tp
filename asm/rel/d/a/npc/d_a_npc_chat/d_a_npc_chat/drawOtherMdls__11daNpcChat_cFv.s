@@ -14,8 +14,8 @@ lbl_809835D0:
 /* 80983600  7C 05 00 34 */	cntlzw r5, r0
 /* 80983604  80 DD 0E 14 */	lwz r6, 0xe14(r29)
 /* 80983608  54 C4 18 38 */	slwi r4, r6, 3
-/* 8098360C  3C 60 80 98 */	lis r3, data_80986F64@ha
-/* 80983610  38 03 6F 64 */	addi r0, r3, data_80986F64@l
+/* 8098360C  3C 60 80 98 */	lis r3, a_jntNumTbl@ha
+/* 80983610  38 03 6F 64 */	addi r0, r3, a_jntNumTbl@l
 /* 80983614  7C 60 22 14 */	add r3, r0, r4
 /* 80983618  54 A0 E8 FA */	rlwinm r0, r5, 0x1d, 3, 0x1d
 /* 8098361C  7F C3 00 2E */	lwzx r30, r3, r0

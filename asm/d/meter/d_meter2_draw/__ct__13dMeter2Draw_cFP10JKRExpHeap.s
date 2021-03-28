@@ -5,8 +5,8 @@ lbl_8020FAB4:
 /* 8020FAC0  39 61 00 70 */	addi r11, r1, 0x70
 /* 8020FAC4  48 15 26 FD */	bl _savegpr_22
 /* 8020FAC8  7C 7F 1B 78 */	mr r31, r3
-/* 8020FACC  3C A0 80 3A */	lis r5, data_80398258@ha
-/* 8020FAD0  3B 05 82 58 */	addi r24, r5, data_80398258@l
+/* 8020FACC  3C A0 80 3A */	lis r5, a_tag@ha
+/* 8020FAD0  3B 05 82 58 */	addi r24, r5, a_tag@l
 /* 8020FAD4  3C A0 80 3A */	lis r5, __vt__12dDlst_base_c@ha
 /* 8020FAD8  38 05 6F 88 */	addi r0, r5, __vt__12dDlst_base_c@l
 /* 8020FADC  90 03 00 00 */	stw r0, 0(r3)
@@ -39,8 +39,8 @@ lbl_8020FAB4:
 /* 8020FB48  48 02 2E F5 */	bl dMsgObject_getGroupID__Fv
 /* 8020FB4C  7C 60 07 34 */	extsh r0, r3
 /* 8020FB50  54 00 10 3A */	slwi r0, r0, 2
-/* 8020FB54  3C 80 80 3C */	lis r4, data_803BF328@ha
-/* 8020FB58  38 84 F3 28 */	addi r4, r4, data_803BF328@l
+/* 8020FB54  3C 80 80 3C */	lis r4, bmg_filename@ha
+/* 8020FB58  38 84 F3 28 */	addi r4, r4, bmg_filename@l
 /* 8020FB5C  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8020FB60  3C A0 52 4F */	lis r5, 0x524F /* 0x524F4F54@ha */
 /* 8020FB64  38 65 4F 54 */	addi r3, r5, 0x4F54 /* 0x524F4F54@l */

@@ -35,7 +35,7 @@ extern "C" extern u8 data_804508B0[8];
 
 /* ############################################################################################## */
 /* 804508A8-804508B0 0004+04 s=1 e=0 z=0  None .sdata     cm2hw$539                                                    */
-SECTION_SDATA static u8 data_804508A8[4 + 4 /* padding */] = {
+SECTION_SDATA static u8 cm2hw[4 + 4 /* padding */] = {
 	0x00, 0x02, 0x01, 0x03,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,

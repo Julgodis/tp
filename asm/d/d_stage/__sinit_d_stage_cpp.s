@@ -43,8 +43,8 @@ lbl_8002824C:
 /* 800282F0  38 E0 00 40 */	li r7, 0x40
 /* 800282F4  48 33 9A 6D */	bl __construct_array
 /* 800282F8  38 60 00 00 */	li r3, 0
-/* 800282FC  3C 80 80 03 */	lis r4, func_80028328@ha
-/* 80028300  38 84 83 28 */	addi r4, r4, func_80028328@l
+/* 800282FC  3C 80 80 03 */	lis r4, __arraydtor@ha
+/* 80028300  38 84 83 28 */	addi r4, r4, __arraydtor@l
 /* 80028304  38 BF 12 20 */	addi r5, r31, 0x1220
 /* 80028308  48 33 99 1D */	bl __register_global_object
 /* 8002830C  38 00 00 00 */	li r0, 0

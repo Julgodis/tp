@@ -117,7 +117,7 @@ asm void fpcBs_Is_JustOfType(int param_0, int param_1) {
 static u8 g_fpcBs_type[4];
 
 /* 80450D04-80450D08 0004+00 s=1 e=0 z=0  None .sbss      t_type$2207                                                  */
-static u8 data_80450D04[4];
+static u8 t_type[4];
 
 /* 80450D08-80450D0C 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450D08[4];
@@ -135,7 +135,7 @@ asm void fpcBs_MakeOfType(int* param_0) {
 
 /* ############################################################################################## */
 /* 80450D0C-80450D10 0004+00 s=1 e=0 z=0  None .sbss      process_id$2216                                              */
-static u8 data_80450D0C[4];
+static u8 process_id[4];
 
 /* 80450D10-80450D18 0008+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450D10[8];

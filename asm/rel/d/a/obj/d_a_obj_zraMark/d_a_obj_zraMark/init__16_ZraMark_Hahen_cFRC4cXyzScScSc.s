@@ -19,13 +19,13 @@ lbl_80D4357C:
 /* 80D435C0  7C 00 07 75 */	extsb. r0, r0
 /* 80D435C4  40 82 00 18 */	bne lbl_80D435DC
 /* 80D435C8  38 00 FF FF */	li r0, -1
-/* 80D435CC  3C 60 80 D4 */	lis r3, data_80D44020@ha
-/* 80D435D0  90 03 40 20 */	stw r0, data_80D44020@l(r3)
+/* 80D435CC  3C 60 80 D4 */	lis r3, roottype@ha
+/* 80D435D0  90 03 40 20 */	stw r0, roottype@l(r3)
 /* 80D435D4  38 00 00 01 */	li r0, 1
 /* 80D435D8  98 04 00 00 */	stb r0, 0(r4)
 lbl_80D435DC:
-/* 80D435DC  3C 60 80 D4 */	lis r3, data_80D44020@ha
-/* 80D435E0  38 83 40 20 */	addi r4, r3, data_80D44020@l
+/* 80D435DC  3C 60 80 D4 */	lis r3, roottype@ha
+/* 80D435E0  38 83 40 20 */	addi r4, r3, roottype@l
 /* 80D435E4  80 64 00 00 */	lwz r3, 0(r4)
 /* 80D435E8  38 03 00 01 */	addi r0, r3, 1
 /* 80D435EC  54 00 07 BE */	clrlwi r0, r0, 0x1e
@@ -72,8 +72,8 @@ lbl_80D435DC:
 /* 80D43690  38 7F 00 CC */	addi r3, r31, 0xcc
 /* 80D43694  7C 03 04 2E */	lfsx f0, r3, r0
 /* 80D43698  EC 41 00 2A */	fadds f2, f1, f0
-/* 80D4369C  3C 60 80 D4 */	lis r3, data_80D44020@ha
-/* 80D436A0  80 03 40 20 */	lwz r0, data_80D44020@l(r3)
+/* 80D4369C  3C 60 80 D4 */	lis r3, roottype@ha
+/* 80D436A0  80 03 40 20 */	lwz r0, roottype@l(r3)
 /* 80D436A4  1C A0 00 38 */	mulli r5, r0, 0x38
 /* 80D436A8  38 7F 01 04 */	addi r3, r31, 0x104
 /* 80D436AC  57 A4 18 38 */	slwi r4, r29, 3

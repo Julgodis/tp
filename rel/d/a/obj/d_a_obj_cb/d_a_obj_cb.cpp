@@ -30,6 +30,9 @@ struct daObj_Cb_HIO_c {
 	/* 80BC573C */ ~daObj_Cb_HIO_c();
 };
 
+struct J3DModelData {
+};
+
 struct Vec {
 };
 
@@ -38,9 +41,6 @@ struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {

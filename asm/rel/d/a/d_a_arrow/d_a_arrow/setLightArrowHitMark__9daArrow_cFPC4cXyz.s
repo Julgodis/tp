@@ -10,8 +10,8 @@ lbl_8049A110:
 /* 8049A130  3B E0 00 00 */	li r31, 0
 /* 8049A134  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8049A138  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 8049A13C  3C 60 80 4A */	lis r3, data_8049DD40@ha
-/* 8049A140  3B A3 DD 40 */	addi r29, r3, data_8049DD40@l
+/* 8049A13C  3C 60 80 4A */	lis r3, effName_4192@ha
+/* 8049A140  3B A3 DD 40 */	addi r29, r3, effName_4192@l
 /* 8049A144  3C 60 80 4A */	lis r3, lit_4187@ha
 /* 8049A148  3B C3 DD 3C */	addi r30, r3, lit_4187@l
 lbl_8049A14C:

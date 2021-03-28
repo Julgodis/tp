@@ -39,19 +39,19 @@ struct mDoGph_gInf_c {
 	/* 80008078 */ void onBlure();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -70,10 +70,10 @@ struct daPy_py_c {
 	/* 8015F914 */ void setPlayerDamage(int, int);
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daE_DT_c {
@@ -847,58 +847,58 @@ SECTION_DATA static void* lit_3874[39] = {
 };
 
 /* 806B6058-806B6064 000A+02 s=1 e=0 z=0  None .data      w_eff_id$4386                                                */
-SECTION_DATA static u8 data_806B6058[10 + 2 /* padding */] = {
+SECTION_DATA static u8 w_eff_id_4386[10 + 2 /* padding */] = {
 	0x85, 0x72, 0x85, 0x73, 0x85, 0x74, 0x85, 0x75, 0x85, 0x76,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 806B6064-806B6070 000A+02 s=1 e=0 z=0  None .data      w_eff_id$4410                                                */
-SECTION_DATA static u8 data_806B6064[10 + 2 /* padding */] = {
+SECTION_DATA static u8 w_eff_id_4410[10 + 2 /* padding */] = {
 	0x85, 0x6D, 0x85, 0x6E, 0x85, 0x6F, 0x85, 0x70, 0x85, 0x71,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 806B6070-806B6078 0008+00 s=1 e=0 z=0  None .data      w_eff_id$4434                                                */
-SECTION_DATA static u8 data_806B6070[8] = {
+SECTION_DATA static u8 w_eff_id_4434[8] = {
 	0x85, 0x63, 0x85, 0x64, 0x85, 0x61, 0x85, 0x62,
 };
 
 /* 806B6078-806B6084 000A+02 s=1 e=0 z=0  None .data      w_eff_id$4470                                                */
-SECTION_DATA static u8 data_806B6078[10 + 2 /* padding */] = {
+SECTION_DATA static u8 w_eff_id_4470[10 + 2 /* padding */] = {
 	0x85, 0x65, 0x85, 0x66, 0x85, 0x67, 0x85, 0x68, 0x85, 0x69,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 806B6084-806B6088 0004+00 s=1 e=0 z=0  None .data      w_eff_id$4529                                                */
-SECTION_DATA static u8 data_806B6084[4] = {
+SECTION_DATA static u8 w_eff_id_4529[4] = {
 	0x85, 0x5D, 0x85, 0x5F,
 };
 
 /* 806B6088-806B608C 0004+00 s=1 e=0 z=0  None .data      w_eff_id$4547                                                */
-SECTION_DATA static u8 data_806B6088[4] = {
+SECTION_DATA static u8 w_eff_id_4547[4] = {
 	0x85, 0x5E, 0x85, 0x60,
 };
 
 /* 806B608C-806B6094 0008+00 s=1 e=0 z=0  None .data      w_eff_id$4635                                                */
-SECTION_DATA static u8 data_806B608C[8] = {
+SECTION_DATA static u8 w_eff_id_4635[8] = {
 	0x85, 0x52, 0x85, 0x53, 0x85, 0x54, 0x85, 0x55,
 };
 
 /* 806B6094-806B6098 0004+00 s=1 e=0 z=0  None .data      w_eff_id$4713                                                */
-SECTION_DATA static u8 data_806B6094[4] = {
+SECTION_DATA static u8 w_eff_id_4713[4] = {
 	0x85, 0x57, 0x85, 0x58,
 };
 
 /* 806B6098-806B60A0 0008+00 s=1 e=0 z=0  None .data      w_eff_id$4737                                                */
-SECTION_DATA static u8 data_806B6098[8] = {
+SECTION_DATA static u8 w_eff_id_4737[8] = {
 	0x85, 0x59, 0x85, 0x5A, 0x85, 0x5B, 0x85, 0x5C,
 };
 
 /* 806B60A0-806B60A4 0004+00 s=1 e=0 z=0  None .data      w_eff_id$4815                                                */
-SECTION_DATA static u8 data_806B60A0[4] = {
+SECTION_DATA static u8 w_eff_id_4815[4] = {
 	0x85, 0x99, 0x85, 0x9A,
 };
 

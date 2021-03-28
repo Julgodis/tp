@@ -15,8 +15,8 @@ lbl_80485D78:
 /* 80485DAC  4B BB 65 D0 */	b getRes__14dRes_control_cFPCcPCcP11dRes_info_ci
 /* 80485DB0  A0 03 00 00 */	lhz r0, 0(r3)
 /* 80485DB4  54 00 08 3C */	slwi r0, r0, 1
-/* 80485DB8  3C 60 80 48 */	lis r3, data_80485F10@ha
-/* 80485DBC  38 63 5F 10 */	addi r3, r3, data_80485F10@l
+/* 80485DB8  3C 60 80 48 */	lis r3, l_bg_profName@ha
+/* 80485DBC  38 63 5F 10 */	addi r3, r3, l_bg_profName@l
 /* 80485DC0  7C 63 02 AE */	lhax r3, r3, r0
 /* 80485DC4  80 9F 00 B0 */	lwz r4, 0xb0(r31)
 /* 80485DC8  38 BF 04 D0 */	addi r5, r31, 0x4d0

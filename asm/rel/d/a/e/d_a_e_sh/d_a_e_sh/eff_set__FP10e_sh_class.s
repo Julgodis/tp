@@ -26,8 +26,8 @@ lbl_807902B4:
 /* 807902D4  3A E0 00 00 */	li r23, 0
 /* 807902D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 807902DC  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 807902E0  3C 60 80 79 */	lis r3, data_80791F40@ha
-/* 807902E4  3B A3 1F 40 */	addi r29, r3, data_80791F40@l
+/* 807902E0  3C 60 80 79 */	lis r3, p_name@ha
+/* 807902E4  3B A3 1F 40 */	addi r29, r3, p_name@l
 /* 807902E8  3C 60 80 79 */	lis r3, lit_3904@ha
 /* 807902EC  3B C3 1D 78 */	addi r30, r3, lit_3904@l
 lbl_807902F0:
@@ -60,8 +60,8 @@ lbl_807902F0:
 /* 80790358  41 82 00 5C */	beq lbl_807903B4
 /* 8079035C  80 7B 00 84 */	lwz r3, 0x84(r27)
 /* 80790360  80 83 00 0C */	lwz r4, 0xc(r3)
-/* 80790364  3C 60 80 79 */	lis r3, data_80791F44@ha
-/* 80790368  38 63 1F 44 */	addi r3, r3, data_80791F44@l
+/* 80790364  3C 60 80 79 */	lis r3, p_idx@ha
+/* 80790368  38 63 1F 44 */	addi r3, r3, p_idx@l
 /* 8079036C  7C 03 B8 2E */	lwzx r0, r3, r23
 /* 80790370  1C 00 00 30 */	mulli r0, r0, 0x30
 /* 80790374  7C 64 02 14 */	add r3, r4, r0

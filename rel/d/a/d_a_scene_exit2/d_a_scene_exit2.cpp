@@ -276,7 +276,7 @@ SECTION_DATA static void* lit_3702[3] = {
 };
 
 /* 8059E890-8059E8C0 0030+00 s=1 e=0 z=0  None .data      l_func$3698                                                  */
-SECTION_DATA static u8 data_8059E890[48] = {
+SECTION_DATA static u8 l_func[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -339,7 +339,7 @@ SECTION_RODATA static u8 const data_8059E828[16] = {
 };
 
 /* 8059E8C0-8059E8CC 000C+00 s=1 e=0 z=0  None .data      action_table$3745                                            */
-SECTION_DATA static void* data_8059E8C0[3] = {
+SECTION_DATA static void* action_table[3] = {
 	(void*)(((char*)&struct_8059E808)+0x15) /* None */,
 	(void*)(((char*)&struct_8059E808)+0x1A) /* None */,
 	(void*)&data_8059E828,

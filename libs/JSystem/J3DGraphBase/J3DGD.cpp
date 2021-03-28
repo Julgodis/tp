@@ -181,7 +181,7 @@ extern "C" extern u8 __GDCurrentDL[4];
 
 /* ############################################################################################## */
 /* 80450908-8045090C 0004+00 s=1 e=0 z=0  None .sdata     cm2hw$552                                                    */
-SECTION_SDATA static u8 data_80450908[4] = {
+SECTION_SDATA static u8 cm2hw[4] = {
 	0x00, 0x02, 0x01, 0x03,
 };
 
@@ -476,7 +476,7 @@ asm void J3DGDSetIndTexOrder(u32 param_0, _GXTexCoordID param_1, _GXTexMapID par
 
 /* ############################################################################################## */
 /* 803CD880-803CD8A0 0010+10 s=1 e=0 z=0  None .data      c2r$1302                                                     */
-SECTION_DATA static u8 data_803CD880[16 + 16 /* padding */] = {
+SECTION_DATA static u8 c2r[16 + 16 /* padding */] = {
 	0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x07, 0x05, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

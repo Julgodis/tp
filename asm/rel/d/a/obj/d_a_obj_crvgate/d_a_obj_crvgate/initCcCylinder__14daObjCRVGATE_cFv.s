@@ -11,8 +11,8 @@ lbl_80BD0398:
 /* 80BD03BC  39 61 00 30 */	addi r11, r1, 0x30
 /* 80BD03C0  4B 79 1E 10 */	b _savegpr_26
 /* 80BD03C4  7C 7A 1B 78 */	mr r26, r3
-/* 80BD03C8  3C 60 80 BD */	lis r3, data_80BD30C0@ha
-/* 80BD03CC  3B 83 30 C0 */	addi r28, r3, data_80BD30C0@l
+/* 80BD03C8  3C 60 80 BD */	lis r3, ccCylSrc@ha
+/* 80BD03CC  3B 83 30 C0 */	addi r28, r3, ccCylSrc@l
 /* 80BD03D0  38 7A 08 9C */	addi r3, r26, 0x89c
 /* 80BD03D4  38 80 00 FF */	li r4, 0xff
 /* 80BD03D8  38 A0 00 FF */	li r5, 0xff

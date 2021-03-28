@@ -57,10 +57,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -78,10 +78,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -550,7 +550,7 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 8046B118-8046B120 0008+00 s=1 e=0 z=0  None .data      w_eff_id$3717                                                */
-SECTION_DATA static u8 data_8046B118[8] = {
+SECTION_DATA static u8 w_eff_id[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
@@ -790,7 +790,7 @@ asm static void ep_switch_event_begin(ep_class* param_0) {
 
 /* ############################################################################################## */
 /* 8046B120-8046B128 0008+00 s=1 e=0 z=0  None .data      actions$4245                                                 */
-SECTION_DATA static void* data_8046B120[2] = {
+SECTION_DATA static void* actions[2] = {
 	(void*)(((char*)&struct_8046B0D0)+0x19) /* None */,
 	(void*)(((char*)&struct_8046B0D0)+0x1E) /* None */,
 };
@@ -808,17 +808,17 @@ asm static void ep_switch_event_move(ep_class* param_0) {
 
 /* ############################################################################################## */
 /* 8046B128-8046B12C 0004+00 s=1 e=0 z=0  None .data      l_particle_fire_A$4270                                       */
-SECTION_DATA static u8 data_8046B128[4] = {
+SECTION_DATA static u8 l_particle_fire_A[4] = {
 	0x01, 0x00, 0x81, 0x10,
 };
 
 /* 8046B12C-8046B130 0004+00 s=1 e=0 z=0  None .data      l_particle_fire_B$4271                                       */
-SECTION_DATA static u8 data_8046B12C[4] = {
+SECTION_DATA static u8 l_particle_fire_B[4] = {
 	0x01, 0x01, 0x81, 0x11,
 };
 
 /* 8046B130-8046B134 0004+00 s=1 e=0 z=0  None .data      l_particle_kagerou$4272                                      */
-SECTION_DATA static u8 data_8046B130[4] = {
+SECTION_DATA static u8 l_particle_kagerou[4] = {
 	0x01, 0x03, 0x81, 0x12,
 };
 
@@ -846,7 +846,7 @@ asm static void daEp_set_mtx(ep_class* param_0) {
 
 /* ############################################################################################## */
 /* 8046B134-8046B13C 0006+02 s=1 e=0 z=0  None .data      eff_name$4560                                                */
-SECTION_DATA static u8 data_8046B134[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_name[6 + 2 /* padding */] = {
 	0x83, 0x40, 0x83, 0x41, 0x83, 0x42,
 	/* padding */
 	0x00, 0x00,
@@ -911,7 +911,7 @@ asm static void daEp_CreateInit(fopAc_ac_c* param_0) {
 
 /* ############################################################################################## */
 /* 8046B15C-8046B19C 0040+00 s=1 e=0 z=0  None .data      sph_src$4695                                                 */
-SECTION_DATA static u8 data_8046B15C[64] = {
+SECTION_DATA static u8 sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x10,
 	0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -919,7 +919,7 @@ SECTION_DATA static u8 data_8046B15C[64] = {
 };
 
 /* 8046B19C-8046B1E0 0044+00 s=1 e=0 z=0  None .data      co_cyl_src$4702                                              */
-SECTION_DATA static u8 data_8046B19C[68] = {
+SECTION_DATA static u8 co_cyl_src[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xBF, 0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -928,7 +928,7 @@ SECTION_DATA static u8 data_8046B19C[68] = {
 };
 
 /* 8046B1E0-8046B220 0040+00 s=1 e=0 z=0  None .data      at_sph_src$4710                                              */
-SECTION_DATA static u8 data_8046B1E0[64] = {
+SECTION_DATA static u8 at_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1F,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x12, 0x01, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,

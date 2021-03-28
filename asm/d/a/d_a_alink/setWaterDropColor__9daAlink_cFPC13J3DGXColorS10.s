@@ -20,8 +20,8 @@ lbl_800CC364:
 /* 800CC3AC  2C 03 00 00 */	cmpwi r3, 0
 /* 800CC3B0  41 82 00 10 */	beq lbl_800CC3C0
 lbl_800CC3B4:
-/* 800CC3B4  3B E2 99 3C */	la r31, data_8045333C(r2) /* 8045333C-_SDA2_BASE_ */
-/* 800CC3B8  3B C2 99 3C */	la r30, data_8045333C(r2) /* 8045333C-_SDA2_BASE_ */
+/* 800CC3B4  3B E2 99 3C */	la r31, notColor0(r2) /* 8045333C-_SDA2_BASE_ */
+/* 800CC3B8  3B C2 99 3C */	la r30, notColor0(r2) /* 8045333C-_SDA2_BASE_ */
 /* 800CC3BC  48 00 00 10 */	b lbl_800CC3CC
 lbl_800CC3C0:
 /* 800CC3C0  3B FE 00 08 */	addi r31, r30, 8

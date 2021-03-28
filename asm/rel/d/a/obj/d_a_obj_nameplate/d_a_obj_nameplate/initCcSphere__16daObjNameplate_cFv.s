@@ -10,8 +10,8 @@ lbl_80594248:
 /* 80594268  7F E6 FB 78 */	mr r6, r31
 /* 8059426C  4B AE F5 F4 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80594270  38 7F 05 E0 */	addi r3, r31, 0x5e0
-/* 80594274  3C 80 80 59 */	lis r4, data_80594EB4@ha
-/* 80594278  38 84 4E B4 */	addi r4, r4, data_80594EB4@l
+/* 80594274  3C 80 80 59 */	lis r4, ccSphSrc@ha
+/* 80594278  38 84 4E B4 */	addi r4, r4, ccSphSrc@l
 /* 8059427C  4B AF 07 B8 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80594280  38 1F 05 A4 */	addi r0, r31, 0x5a4
 /* 80594284  90 1F 06 24 */	stw r0, 0x624(r31)

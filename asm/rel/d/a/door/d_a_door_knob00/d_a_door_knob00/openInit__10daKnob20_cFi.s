@@ -9,8 +9,8 @@ lbl_8045FA98:
 /* 8045FAB4  3C 80 80 46 */	lis r4, lit_3876@ha
 /* 8045FAB8  3B E4 06 68 */	addi r31, r4, lit_3876@l
 /* 8045FABC  57 80 10 3A */	slwi r0, r28, 2
-/* 8045FAC0  3C 80 80 46 */	lis r4, data_80460968@ha
-/* 8045FAC4  38 84 09 68 */	addi r4, r4, data_80460968@l
+/* 8045FAC0  3C 80 80 46 */	lis r4, bck_table@ha
+/* 8045FAC4  38 84 09 68 */	addi r4, r4, bck_table@l
 /* 8045FAC8  7F A4 00 2E */	lwzx r29, r4, r0
 /* 8045FACC  4B FF ED BD */	bl getAlwaysArcName__10daKnob20_cFv
 /* 8045FAD0  7F A4 EB 78 */	mr r4, r29

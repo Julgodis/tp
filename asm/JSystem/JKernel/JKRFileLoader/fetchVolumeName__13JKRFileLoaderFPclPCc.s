@@ -14,9 +14,9 @@ lbl_802D44C4:
 /* 802D44F4  2C 03 00 00 */	cmpwi r3, 0
 /* 802D44F8  40 82 00 18 */	bne lbl_802D4510
 /* 802D44FC  7F A3 EB 78 */	mr r3, r29
-/* 802D4500  38 8D 83 40 */	la r4, data_804508C0(r13) /* 804508C0-_SDA_BASE_ */
+/* 802D4500  38 8D 83 40 */	la r4, rootPath(r13) /* 804508C0-_SDA_BASE_ */
 /* 802D4504  48 09 46 29 */	bl strcpy
-/* 802D4508  38 6D 83 40 */	la r3, data_804508C0(r13) /* 804508C0-_SDA_BASE_ */
+/* 802D4508  38 6D 83 40 */	la r3, rootPath(r13) /* 804508C0-_SDA_BASE_ */
 /* 802D450C  48 00 00 7C */	b lbl_802D4588
 lbl_802D4510:
 /* 802D4510  3C 60 80 3D */	lis r3, __lower_map@ha
@@ -53,7 +53,7 @@ lbl_802D456C:
 /* 802D4574  88 1F 00 00 */	lbz r0, 0(r31)
 /* 802D4578  7C 00 07 75 */	extsb. r0, r0
 /* 802D457C  40 82 00 08 */	bne lbl_802D4584
-/* 802D4580  3B ED 83 40 */	la r31, data_804508C0(r13) /* 804508C0-_SDA_BASE_ */
+/* 802D4580  3B ED 83 40 */	la r31, rootPath(r13) /* 804508C0-_SDA_BASE_ */
 lbl_802D4584:
 /* 802D4584  7F E3 FB 78 */	mr r3, r31
 lbl_802D4588:

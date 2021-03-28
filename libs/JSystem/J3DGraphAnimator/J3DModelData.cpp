@@ -148,7 +148,7 @@ asm void J3DModelData::newSharedDisplayList(u32 param_0) {
 
 /* ############################################################################################## */
 /* 804515E8-804515EC 0004+00 s=1 e=0 z=0  None .sbss      sInterruptFlag$965                                           */
-static u8 data_804515E8[4];
+static u8 sInterruptFlag[4];
 
 /* 804515EC-804515F0 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_804515EC[4];

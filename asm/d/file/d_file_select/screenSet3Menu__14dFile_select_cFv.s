@@ -154,7 +154,7 @@ lbl_8018CAFC:
 /* 8018CB44  7D 89 03 A6 */	mtctr r12
 /* 8018CB48  4E 80 04 21 */	bctrl 
 /* 8018CB4C  38 61 00 08 */	addi r3, r1, 8
-/* 8018CB50  38 8D 81 4C */	la r4, data_804506CC(r13) /* 804506CC-_SDA_BASE_ */
+/* 8018CB50  38 8D 81 4C */	la r4, l_msgNum(r13) /* 804506CC-_SDA_BASE_ */
 /* 8018CB54  7C 84 D8 AE */	lbzx r4, r4, r27
 /* 8018CB58  4B E9 35 69 */	bl fopMsgM_messageGet__FPcUl
 /* 8018CB5C  80 7D 03 94 */	lwz r3, 0x394(r29)

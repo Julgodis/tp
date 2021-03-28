@@ -47,10 +47,10 @@ struct daOBJ_ICE_S_HIO_c {
 	/* 80C21A60 */ ~daOBJ_ICE_S_HIO_c();
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

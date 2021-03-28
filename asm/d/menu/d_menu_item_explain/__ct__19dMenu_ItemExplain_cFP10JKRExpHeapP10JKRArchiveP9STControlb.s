@@ -212,8 +212,8 @@ lbl_801DA9F4:
 /* 801DAA70  3B 80 00 00 */	li r28, 0
 /* 801DAA74  3B 20 00 00 */	li r25, 0
 /* 801DAA78  3B 40 00 00 */	li r26, 0
-/* 801DAA7C  3C 60 80 39 */	lis r3, data_80396950@ha
-/* 801DAA80  3A E3 69 50 */	addi r23, r3, data_80396950@l
+/* 801DAA7C  3C 60 80 39 */	lis r3, name_tag@ha
+/* 801DAA80  3A E3 69 50 */	addi r23, r3, name_tag@l
 /* 801DAA84  3C 60 80 39 */	lis r3, d_menu_d_menu_item_explain__stringBase0@ha
 /* 801DAA88  3A C3 69 90 */	addi r22, r3, d_menu_d_menu_item_explain__stringBase0@l
 lbl_801DAA8C:
@@ -222,8 +222,8 @@ lbl_801DAA8C:
 /* 801DAA94  7C 60 1B 79 */	or. r0, r3, r3
 /* 801DAA98  41 82 00 2C */	beq lbl_801DAAC4
 /* 801DAA9C  80 9F 00 70 */	lwz r4, 0x70(r31)
-/* 801DAAA0  3C A0 80 39 */	lis r5, data_80396970@ha
-/* 801DAAA4  38 05 69 70 */	addi r0, r5, data_80396970@l
+/* 801DAAA0  3C A0 80 39 */	lis r5, fame_tag@ha
+/* 801DAAA4  38 05 69 70 */	addi r0, r5, fame_tag@l
 /* 801DAAA8  7C C0 D2 14 */	add r6, r0, r26
 /* 801DAAAC  80 A6 00 00 */	lwz r5, 0(r6)
 /* 801DAAB0  80 C6 00 04 */	lwz r6, 4(r6)

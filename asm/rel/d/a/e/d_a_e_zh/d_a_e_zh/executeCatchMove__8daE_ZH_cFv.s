@@ -281,8 +281,8 @@ lbl_8082C1C8:
 /* 8082C22C  3B 80 00 00 */	li r28, 0
 /* 8082C230  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8082C234  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
-/* 8082C238  3C 60 80 83 */	lis r3, data_8082F5A0@ha
-/* 8082C23C  3B 63 F5 A0 */	addi r27, r3, data_8082F5A0@l
+/* 8082C238  3C 60 80 83 */	lis r3, effId@ha
+/* 8082C23C  3B 63 F5 A0 */	addi r27, r3, effId@l
 lbl_8082C240:
 /* 8082C240  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 8082C244  38 00 00 FF */	li r0, 0xff
@@ -318,8 +318,8 @@ lbl_8082C240:
 /* 8082C2BC  90 61 00 14 */	stw r3, 0x14(r1)
 /* 8082C2C0  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 8082C2C4  80 9E 0D E8 */	lwz r4, 0xde8(r30)
-/* 8082C2C8  3C A0 80 83 */	lis r5, data_8082F5A0@ha
-/* 8082C2CC  38 A5 F5 A0 */	addi r5, r5, data_8082F5A0@l
+/* 8082C2C8  3C A0 80 83 */	lis r5, effId@ha
+/* 8082C2CC  38 A5 F5 A0 */	addi r5, r5, effId@l
 /* 8082C2D0  A0 A5 00 06 */	lhz r5, 6(r5)
 /* 8082C2D4  38 DE 08 E4 */	addi r6, r30, 0x8e4
 /* 8082C2D8  38 FE 06 68 */	addi r7, r30, 0x668

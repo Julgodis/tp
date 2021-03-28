@@ -25,8 +25,8 @@ lbl_8085350C:
 /* 80853568  3B A0 00 00 */	li r29, 0
 /* 8085356C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80853570  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
-/* 80853574  3C 60 80 85 */	lis r3, data_80854E84@ha
-/* 80853578  3B 63 4E 84 */	addi r27, r3, data_80854E84@l
+/* 80853574  3C 60 80 85 */	lis r3, kago_wave_id_7737@ha
+/* 80853578  3B 63 4E 84 */	addi r27, r3, kago_wave_id_7737@l
 /* 8085357C  3C 60 80 85 */	lis r3, lit_3932@ha
 /* 80853580  3B 83 4B 10 */	addi r28, r3, lit_3932@l
 lbl_80853584:

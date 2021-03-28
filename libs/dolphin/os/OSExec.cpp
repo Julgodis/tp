@@ -122,7 +122,7 @@ extern "C" asm void __OSGetExecParams() {
 
 /* ############################################################################################## */
 /* 8045165C-80451660 0004+00 s=2 e=0 z=0  None .sbss      apploaderPosition$69                                         */
-static u8 data_8045165C[4];
+static u8 apploaderPosition[4];
 
 /* 8033CCFC-8033CDC0 00C4+00 s=1 e=0 z=0  None .text      GetApploaderPosition                                         */
 #pragma push

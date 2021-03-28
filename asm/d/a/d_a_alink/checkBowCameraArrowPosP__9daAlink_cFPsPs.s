@@ -57,8 +57,8 @@ lbl_800DE920:
 /* 800DE94C  4B F2 D9 55 */	bl mDoMtx_ZXYrotM__FPA4_fsss
 /* 800DE950  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 800DE954  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 800DE958  3C 80 80 39 */	lis r4, data_803918C4@ha
-/* 800DE95C  38 84 18 C4 */	addi r4, r4, data_803918C4@l
+/* 800DE958  3C 80 80 39 */	lis r4, localPos@ha
+/* 800DE95C  38 84 18 C4 */	addi r4, r4, localPos@l
 /* 800DE960  38 BD 37 E0 */	addi r5, r29, 0x37e0
 /* 800DE964  48 26 84 09 */	bl PSMTXMultVec
 /* 800DE968  A8 1D 05 9C */	lha r0, 0x59c(r29)

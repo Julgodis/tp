@@ -10,8 +10,8 @@ lbl_80D19200:
 /* 80D19220  7F E6 FB 78 */	mr r6, r31
 /* 80D19224  4B 36 A6 3C */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80D19228  38 7F 05 CC */	addi r3, r31, 0x5cc
-/* 80D1922C  3C 80 80 D2 */	lis r4, data_80D1B6E4@ha
-/* 80D19230  38 84 B6 E4 */	addi r4, r4, data_80D1B6E4@l
+/* 80D1922C  3C 80 80 D2 */	lis r4, ccSphSrc@ha
+/* 80D19230  38 84 B6 E4 */	addi r4, r4, ccSphSrc@l
 /* 80D19234  4B 36 B8 00 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80D19238  38 1F 05 90 */	addi r0, r31, 0x590
 /* 80D1923C  90 1F 06 10 */	stw r0, 0x610(r31)

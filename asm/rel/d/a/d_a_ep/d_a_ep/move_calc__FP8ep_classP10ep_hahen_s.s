@@ -437,8 +437,8 @@ lbl_804688B4:
 /* 80468978  3B 40 00 00 */	li r26, 0
 /* 8046897C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80468980  3B 03 61 C0 */	addi r24, r3, g_dComIfG_gameInfo@l
-/* 80468984  3C 60 80 47 */	lis r3, data_8046B118@ha
-/* 80468988  3B 23 B1 18 */	addi r25, r3, data_8046B118@l
+/* 80468984  3C 60 80 47 */	lis r3, w_eff_id@ha
+/* 80468988  3B 23 B1 18 */	addi r25, r3, w_eff_id@l
 lbl_8046898C:
 /* 8046898C  80 78 5D 3C */	lwz r3, 0x5d3c(r24)
 /* 80468990  38 00 00 FF */	li r0, 0xff

@@ -51,9 +51,9 @@ lbl_80055A14:
 /* 80055AD8  48 30 7F 71 */	bl GXSetChanMatColor
 /* 80055ADC  38 6D 80 10 */	la r3, mBackColor__13mDoGph_gInf_c(r13) /* 80450590-_SDA_BASE_ */
 /* 80055AE0  88 03 00 03 */	lbz r0, 3(r3)
-/* 80055AE4  38 6D 80 D8 */	la r3, data_80450658(r13) /* 80450658-_SDA_BASE_ */
+/* 80055AE4  38 6D 80 D8 */	la r3, clearColor(r13) /* 80450658-_SDA_BASE_ */
 /* 80055AE8  98 03 00 03 */	stb r0, 3(r3)
-/* 80055AEC  80 0D 80 D8 */	lwz r0, data_80450658(r13)
+/* 80055AEC  80 0D 80 D8 */	lwz r0, clearColor(r13)
 /* 80055AF0  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80055AF4  38 60 00 02 */	li r3, 2
 /* 80055AF8  38 81 00 0C */	addi r4, r1, 0xc

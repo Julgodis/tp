@@ -58,8 +58,8 @@ lbl_800F1DEC:
 /* 800F1DF0  B0 1F 30 10 */	sth r0, 0x3010(r31)
 /* 800F1DF4  B0 1F 30 12 */	sth r0, 0x3012(r31)
 /* 800F1DF8  7F E3 FB 78 */	mr r3, r31
-/* 800F1DFC  3C 80 80 39 */	lis r4, data_803919D8@ha
-/* 800F1E00  38 84 19 D8 */	addi r4, r4, data_803919D8@l
+/* 800F1DFC  3C 80 80 39 */	lis r4, anmIdx@ha
+/* 800F1E00  38 84 19 D8 */	addi r4, r4, anmIdx@l
 /* 800F1E04  A0 84 00 08 */	lhz r4, 8(r4)
 /* 800F1E08  38 A0 00 02 */	li r5, 2
 /* 800F1E0C  3C C0 80 39 */	lis r6, m__22daAlinkHIO_damHorse_c0@ha
@@ -150,8 +150,8 @@ lbl_800F1F24:
 /* 800F1F40  7C 60 1B 78 */	mr r0, r3
 /* 800F1F44  7F E3 FB 78 */	mr r3, r31
 /* 800F1F48  54 00 08 3C */	slwi r0, r0, 1
-/* 800F1F4C  3C 80 80 39 */	lis r4, data_803919D8@ha
-/* 800F1F50  38 84 19 D8 */	addi r4, r4, data_803919D8@l
+/* 800F1F4C  3C 80 80 39 */	lis r4, anmIdx@ha
+/* 800F1F50  38 84 19 D8 */	addi r4, r4, anmIdx@l
 /* 800F1F54  7C 84 02 2E */	lhzx r4, r4, r0
 /* 800F1F58  38 A0 00 02 */	li r5, 2
 /* 800F1F5C  3C C0 80 39 */	lis r6, m__22daAlinkHIO_damHorse_c0@ha

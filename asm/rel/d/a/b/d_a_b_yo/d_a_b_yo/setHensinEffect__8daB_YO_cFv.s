@@ -39,8 +39,8 @@ lbl_8063040C:
 /* 806304A0  3B 80 00 00 */	li r28, 0
 /* 806304A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 806304A8  3B 23 61 C0 */	addi r25, r3, g_dComIfG_gameInfo@l
-/* 806304AC  3C 60 80 64 */	lis r3, data_80639C58@ha
-/* 806304B0  3B 43 9C 58 */	addi r26, r3, data_80639C58@l
+/* 806304AC  3C 60 80 64 */	lis r3, hensin_effect_id@ha
+/* 806304B0  3B 43 9C 58 */	addi r26, r3, hensin_effect_id@l
 lbl_806304B4:
 /* 806304B4  80 79 5D 3C */	lwz r3, 0x5d3c(r25)
 /* 806304B8  38 00 00 FF */	li r0, 0xff

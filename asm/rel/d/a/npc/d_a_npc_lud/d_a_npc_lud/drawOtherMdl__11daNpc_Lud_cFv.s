@@ -71,8 +71,8 @@ lbl_80A6CB90:
 /* 80A6CBA0  4B 73 82 00 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 80A6CBA4  80 7F 00 84 */	lwz r3, 0x84(r31)
 /* 80A6CBA8  80 83 00 0C */	lwz r4, 0xc(r3)
-/* 80A6CBAC  3C 60 80 A7 */	lis r3, data_80A6FEA8@ha
-/* 80A6CBB0  38 63 FE A8 */	addi r3, r3, data_80A6FEA8@l
+/* 80A6CBAC  3C 60 80 A7 */	lis r3, jointNo@ha
+/* 80A6CBB0  38 63 FE A8 */	addi r3, r3, jointNo@l
 /* 80A6CBB4  7C 03 D0 2E */	lwzx r0, r3, r26
 /* 80A6CBB8  1C 00 00 30 */	mulli r0, r0, 0x30
 /* 80A6CBBC  7C 64 02 14 */	add r3, r4, r0

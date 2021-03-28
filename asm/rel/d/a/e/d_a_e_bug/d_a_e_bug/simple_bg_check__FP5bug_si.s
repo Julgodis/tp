@@ -102,10 +102,10 @@ lbl_80694E0C:
 /* 80694E34  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80694E38  3B 23 0F 38 */	addi r25, r3, 0xf38
 /* 80694E3C  C3 DA 00 2C */	lfs f30, 0x2c(r26)
-/* 80694E40  3C 60 80 69 */	lis r3, data_80697DA8@ha
-/* 80694E44  3B 43 7D A8 */	addi r26, r3, data_80697DA8@l
-/* 80694E48  3C 60 80 69 */	lis r3, data_80697DB8@ha
-/* 80694E4C  3B 63 7D B8 */	addi r27, r3, data_80697DB8@l
+/* 80694E40  3C 60 80 69 */	lis r3, c_x@ha
+/* 80694E44  3B 43 7D A8 */	addi r26, r3, c_x@l
+/* 80694E48  3C 60 80 69 */	lis r3, c_z@ha
+/* 80694E4C  3B 63 7D B8 */	addi r27, r3, c_z@l
 /* 80694E50  3B DE 00 03 */	addi r30, r30, 3
 /* 80694E54  48 00 00 C4 */	b lbl_80694F18
 lbl_80694E58:

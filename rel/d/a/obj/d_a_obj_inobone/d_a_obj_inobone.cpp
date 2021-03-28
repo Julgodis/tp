@@ -42,10 +42,10 @@ struct daObjIBone_c {
 	/* 80C28050 */ void _delete();
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -367,7 +367,7 @@ SECTION_RODATA static u8 const lit_3926[4] = {
 };
 
 /* 80C281B8-80C281BC 0002+02 s=1 e=0 z=0  None .rodata    particle_id$3930                                             */
-SECTION_RODATA static u8 const data_80C281B8[2 + 2 /* padding */] = {
+SECTION_RODATA static u8 const particle_id[2 + 2 /* padding */] = {
 	0x82, 0xE3,
 	/* padding */
 	0x00, 0x00,

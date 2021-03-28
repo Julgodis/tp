@@ -95,8 +95,8 @@ lbl_8071F2B8:
 /* 8071F2D0  7F C6 F3 78 */	mr r6, r30
 /* 8071F2D4  4B 96 45 8C */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 8071F2D8  38 7E 08 58 */	addi r3, r30, 0x858
-/* 8071F2DC  3C 80 80 72 */	lis r4, data_8071F71C@ha
-/* 8071F2E0  38 84 F7 1C */	addi r4, r4, data_8071F71C@l
+/* 8071F2DC  3C 80 80 72 */	lis r4, at_sph_src@ha
+/* 8071F2E0  38 84 F7 1C */	addi r4, r4, at_sph_src@l
 /* 8071F2E4  4B 96 57 50 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 8071F2E8  38 1E 08 1C */	addi r0, r30, 0x81c
 /* 8071F2EC  90 1E 08 9C */	stw r0, 0x89c(r30)

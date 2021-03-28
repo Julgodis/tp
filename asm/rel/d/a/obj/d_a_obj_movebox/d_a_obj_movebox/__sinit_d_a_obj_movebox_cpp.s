@@ -14,8 +14,8 @@ lbl_80480CF4:
 /* 80480D24  38 E0 00 17 */	li r7, 0x17
 /* 80480D28  4B EE 10 38 */	b __construct_array
 /* 80480D2C  38 60 00 00 */	li r3, 0
-/* 80480D30  3C 80 80 48 */	lis r4, func_80480E50@ha
-/* 80480D34  38 84 0E 50 */	addi r4, r4, func_80480E50@l
+/* 80480D30  3C 80 80 48 */	lis r4, __arraydtor_3668@ha
+/* 80480D34  38 84 0E 50 */	addi r4, r4, __arraydtor_3668@l
 /* 80480D38  38 BF 00 40 */	addi r5, r31, 0x40
 /* 80480D3C  4B FF CD 3D */	bl __register_global_object
 /* 80480D40  38 7F 07 E4 */	addi r3, r31, 0x7e4
@@ -33,8 +33,8 @@ lbl_80480CF4:
 /* 80480D70  38 E0 00 17 */	li r7, 0x17
 /* 80480D74  4B EE 0F EC */	b __construct_array
 /* 80480D78  38 60 00 00 */	li r3, 0
-/* 80480D7C  3C 80 80 48 */	lis r4, func_80480DA0@ha
-/* 80480D80  38 84 0D A0 */	addi r4, r4, func_80480DA0@l
+/* 80480D7C  3C 80 80 48 */	lis r4, __arraydtor_3671@ha
+/* 80480D80  38 84 0D A0 */	addi r4, r4, __arraydtor_3671@l
 /* 80480D84  38 BF 08 38 */	addi r5, r31, 0x838
 /* 80480D88  4B FF CC F1 */	bl __register_global_object
 /* 80480D8C  83 E1 00 0C */	lwz r31, 0xc(r1)

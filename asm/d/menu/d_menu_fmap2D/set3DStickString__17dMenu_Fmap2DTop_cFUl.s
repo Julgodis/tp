@@ -9,8 +9,8 @@ lbl_801D74EC:
 /* 801D7508  40 82 00 8C */	bne lbl_801D7594
 /* 801D750C  3B 60 00 00 */	li r27, 0
 /* 801D7510  3B C0 00 00 */	li r30, 0
-/* 801D7514  3C 60 80 39 */	lis r3, data_803965A8@ha
-/* 801D7518  3B A3 65 A8 */	addi r29, r3, data_803965A8@l
+/* 801D7514  3C 60 80 39 */	lis r3, ast_c_6233@ha
+/* 801D7518  3B A3 65 A8 */	addi r29, r3, ast_c_6233@l
 /* 801D751C  3C 60 80 39 */	lis r3, d_menu_d_menu_fmap2D__stringBase0@ha
 /* 801D7520  3B 83 65 D0 */	addi r28, r3, d_menu_d_menu_fmap2D__stringBase0@l
 lbl_801D7524:
@@ -45,8 +45,8 @@ lbl_801D7524:
 lbl_801D7594:
 /* 801D7594  3B 60 00 00 */	li r27, 0
 /* 801D7598  3B C0 00 00 */	li r30, 0
-/* 801D759C  3C 60 80 39 */	lis r3, data_803965A8@ha
-/* 801D75A0  3B 83 65 A8 */	addi r28, r3, data_803965A8@l
+/* 801D759C  3C 60 80 39 */	lis r3, ast_c_6233@ha
+/* 801D75A0  3B 83 65 A8 */	addi r28, r3, ast_c_6233@l
 /* 801D75A4  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801D75A8  3B A3 01 88 */	addi r29, r3, g_meter2_info@l
 lbl_801D75AC:

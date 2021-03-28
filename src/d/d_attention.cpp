@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -38,10 +38,10 @@ struct mDoExt_bpkAnm {
 	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -426,14 +426,14 @@ SECTION_DATA static u8 act_type_tbl__12dAttention_c[20] = {
 };
 
 /* 803A9C18-803A9C3C 0024+00 s=1 e=0 z=0  None .data      ftp_table$4417                                               */
-SECTION_DATA static u8 data_803A9C18[36] = {
+SECTION_DATA static u8 ftp_table[36] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x08,
 	0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x80,
 	0x00, 0x00, 0x01, 0x00,
 };
 
 /* 803A9C3C-803A9C48 000C+00 s=1 e=0 z=0  None .data      ang_table2$4419                                              */
-SECTION_DATA static u8 data_803A9C3C[12] = {
+SECTION_DATA static u8 ang_table2[12] = {
 	0x0A, 0xAA, 0x20, 0x00, 0x2A, 0xAA, 0x40, 0x00, 0x4E, 0x38, 0x60, 0x00,
 };
 
@@ -658,7 +658,7 @@ SECTION_SDATA static u32 chk_type_num__12dAttention_c = 0x00000001;
 SECTION_SDATA static u32 data_80450670 = 0x01000000;
 
 /* 80450674-8045067C 0006+02 s=1 e=0 z=0  None .sdata     ang_table$4418                                               */
-SECTION_SDATA static u8 data_80450674[6 + 2 /* padding */] = {
+SECTION_SDATA static u8 ang_table[6 + 2 /* padding */] = {
 	0x40, 0x00, 0x20, 0x00, 0x0A, 0xAA,
 	/* padding */
 	0x00, 0x00,

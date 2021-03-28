@@ -7,8 +7,8 @@ lbl_80CBBD68:
 /* 80CBBD7C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CBBD80  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80CBBD84  80 84 0B A4 */	lwz r4, 0xba4(r4)
-/* 80CBBD88  3C A0 80 CC */	lis r5, data_80CBC50C@ha
-/* 80CBBD8C  38 A5 C5 0C */	addi r5, r5, data_80CBC50C@l
+/* 80CBBD88  3C A0 80 CC */	lis r5, action_table@ha
+/* 80CBBD8C  38 A5 C5 0C */	addi r5, r5, action_table@l
 /* 80CBBD90  38 C0 00 04 */	li r6, 4
 /* 80CBBD94  38 E0 00 00 */	li r7, 0
 /* 80CBBD98  39 00 00 00 */	li r8, 0

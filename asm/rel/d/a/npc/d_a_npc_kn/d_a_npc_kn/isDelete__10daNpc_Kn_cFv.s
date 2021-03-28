@@ -20,16 +20,16 @@ lbl_80A2B8A8:
 /* 80A2B8BC  48 00 00 4C */	b lbl_80A2B908
 lbl_80A2B8C0:
 /* 80A2B8C0  54 00 08 3C */	slwi r0, r0, 1
-/* 80A2B8C4  3C 60 80 A4 */	lis r3, data_80A417E8@ha
-/* 80A2B8C8  38 63 17 E8 */	addi r3, r3, data_80A417E8@l
+/* 80A2B8C4  3C 60 80 A4 */	lis r3, l_appearFlag@ha
+/* 80A2B8C8  38 63 17 E8 */	addi r3, r3, l_appearFlag@l
 /* 80A2B8CC  7C 63 02 AE */	lhax r3, r3, r0
 /* 80A2B8D0  4B 72 11 DC */	b daNpcT_chkEvtBit__FUl
 /* 80A2B8D4  2C 03 00 00 */	cmpwi r3, 0
 /* 80A2B8D8  41 82 00 2C */	beq lbl_80A2B904
 /* 80A2B8DC  88 1F 15 AC */	lbz r0, 0x15ac(r31)
 /* 80A2B8E0  54 00 08 3C */	slwi r0, r0, 1
-/* 80A2B8E4  3C 60 80 A4 */	lis r3, data_80A417F8@ha
-/* 80A2B8E8  38 63 17 F8 */	addi r3, r3, data_80A417F8@l
+/* 80A2B8E4  3C 60 80 A4 */	lis r3, l_delFlag@ha
+/* 80A2B8E8  38 63 17 F8 */	addi r3, r3, l_delFlag@l
 /* 80A2B8EC  7C 63 02 AE */	lhax r3, r3, r0
 /* 80A2B8F0  4B 72 11 BC */	b daNpcT_chkEvtBit__FUl
 /* 80A2B8F4  2C 03 00 00 */	cmpwi r3, 0

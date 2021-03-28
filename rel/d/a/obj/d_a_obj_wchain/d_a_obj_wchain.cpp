@@ -70,10 +70,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -446,7 +446,7 @@ asm static void daObjWchain_Delete(daObjWchain_c* param_0) {
 
 /* ############################################################################################## */
 /* 80D3196C-80D31978 000C+00 s=1 e=0 z=0  None .rodata    eyeOffset$3803                                               */
-SECTION_RODATA static u8 const data_80D3196C[12] = {
+SECTION_RODATA static u8 const eyeOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x57, 0x00, 0x00,
 };
 
@@ -499,12 +499,12 @@ asm void daObjWchain_c::getChainAngleZ(cXyz* param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 80D3199C-80D319A8 000C+00 s=1 e=0 z=0  None .rodata    currentOffset$3872                                           */
-SECTION_RODATA static u8 const data_80D3199C[12] = {
+SECTION_RODATA static u8 const currentOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC2, 0x57, 0x00, 0x00,
 };
 
 /* 80D319A8-80D319B4 000C+00 s=1 e=0 z=0  None .rodata    chainOffset$3873                                             */
-SECTION_RODATA static u8 const data_80D319A8[12] = {
+SECTION_RODATA static u8 const chainOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC1, 0x8C, 0x00, 0x00,
 };
 

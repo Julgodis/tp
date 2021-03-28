@@ -59,10 +59,10 @@ struct daObj_Gadget_Param_c {
 	/* 80BF48D8 */ ~daObj_Gadget_Param_c();
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -582,7 +582,7 @@ SECTION_DATA static u8 l_ccDCyl[68] = {
 };
 
 /* 80BF4AA8-80BF4AB0 0008+00 s=1 e=0 z=0  None .data      emttrId$4553                                                 */
-SECTION_DATA static u8 data_80BF4AA8[8] = {
+SECTION_DATA static u8 emttrId[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
@@ -984,7 +984,7 @@ static u8 l_HIO[4];
 static u8 lit_4550[12 + 4 /* padding */];
 
 /* 80BF4BF8-80BF4C04 000C+00 s=1 e=0 z=0  None .bss       scl$4549                                                     */
-static u8 data_80BF4BF8[12];
+static u8 scl[12];
 
 /* 80BF4600-80BF4728 0128+00 s=1 e=0 z=0  None .text      setWaterPrtcl__14daObj_Gadget_cFv                            */
 #pragma push

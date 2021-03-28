@@ -51,8 +51,8 @@ lbl_804FF298:
 /* 804FF2C8  3B F7 12 34 */	addi r31, r23, 0x1234
 /* 804FF2CC  7C 99 F8 2E */	lwzx r4, r25, r31
 /* 804FF2D0  38 A0 00 00 */	li r5, 0
-/* 804FF2D4  3C C0 80 50 */	lis r6, data_80500CB4@ha
-/* 804FF2D8  38 C6 0C B4 */	addi r6, r6, data_80500CB4@l
+/* 804FF2D4  3C C0 80 50 */	lis r6, p_name@ha
+/* 804FF2D8  38 C6 0C B4 */	addi r6, r6, p_name@l
 /* 804FF2DC  7C C6 C2 2E */	lhzx r6, r6, r24
 /* 804FF2E0  38 F9 04 D0 */	addi r7, r25, 0x4d0
 /* 804FF2E4  39 00 00 00 */	li r8, 0
@@ -80,8 +80,8 @@ lbl_804FF2FC:
 lbl_804FF338:
 /* 804FF338  80 7C 00 84 */	lwz r3, 0x84(r28)
 /* 804FF33C  80 83 00 0C */	lwz r4, 0xc(r3)
-/* 804FF340  3C 60 80 50 */	lis r3, data_80500CBC@ha
-/* 804FF344  38 63 0C BC */	addi r3, r3, data_80500CBC@l
+/* 804FF340  3C 60 80 50 */	lis r3, p_idx@ha
+/* 804FF344  38 63 0C BC */	addi r3, r3, p_idx@l
 /* 804FF348  7C 03 B8 2E */	lwzx r0, r3, r23
 /* 804FF34C  1C 00 00 30 */	mulli r0, r0, 0x30
 /* 804FF350  7C 64 02 14 */	add r3, r4, r0

@@ -352,13 +352,13 @@ asm void fpcLy_Cancel(layer_class* param_0) {
 
 /* ############################################################################################## */
 /* 80450D1C-80450D20 0004+00 s=1 e=0 z=0  None .sbss      IsInitOfLayerList$2308                                       */
-static u8 data_80450D1C[4];
+static u8 IsInitOfLayerList[4];
 
 /* 80450D20-80450D24 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450D20[4];
 
 /* 80450D24-80450D28 0004+00 s=1 e=0 z=0  None .sbss      layer_id$2311                                                */
-static u8 data_80450D24[4];
+static u8 layer_id[4];
 
 /* 80450D28-80450D30 0008+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450D28[8];

@@ -93,7 +93,7 @@ asm void fpcLyTg_Move(layer_management_tag_class* param_0, unsigned int param_1,
 
 /* ############################################################################################## */
 /* 803A3A00-803A3A20 001C+04 s=1 e=0 z=0  None .data      crear$2239                                                   */
-SECTION_DATA static u8 data_803A3A00[28 + 4 /* padding */] = {
+SECTION_DATA static u8 crear[28 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
 	/* padding */

@@ -43,8 +43,8 @@ lbl_807BDFE4:
 /* 807BE000  3B 5E 0F 38 */	addi r26, r30, 0xf38
 /* 807BE004  3B 01 00 28 */	addi r24, r1, 0x28
 /* 807BE008  3B 21 00 18 */	addi r25, r1, 0x18
-/* 807BE00C  3C 60 80 7C */	lis r3, data_807C21B8@ha
-/* 807BE010  3B E3 21 B8 */	addi r31, r3, data_807C21B8@l
+/* 807BE00C  3C 60 80 7C */	lis r3, foot_jnt_no_4152@ha
+/* 807BE010  3B E3 21 B8 */	addi r31, r3, foot_jnt_no_4152@l
 /* 807BE014  C3 FC 00 64 */	lfs f31, 0x64(r28)
 lbl_807BE018:
 /* 807BE018  38 00 00 00 */	li r0, 0

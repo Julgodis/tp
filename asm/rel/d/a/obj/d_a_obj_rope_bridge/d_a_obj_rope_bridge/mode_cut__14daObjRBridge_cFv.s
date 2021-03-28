@@ -17,8 +17,8 @@ lbl_805973E4:
 /* 80597420  40 82 00 5C */	bne lbl_8059747C
 /* 80597424  88 1E 0A F0 */	lbz r0, 0xaf0(r30)
 /* 80597428  54 00 10 3A */	slwi r0, r0, 2
-/* 8059742C  3C 60 80 5A */	lis r3, data_8059802C@ha
-/* 80597430  38 63 80 2C */	addi r3, r3, data_8059802C@l
+/* 8059742C  3C 60 80 5A */	lis r3, l_fall_start_se@ha
+/* 80597430  38 63 80 2C */	addi r3, r3, l_fall_start_se@l
 /* 80597434  7F A3 00 2E */	lwzx r29, r3, r0
 /* 80597438  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 8059743C  7C 03 07 74 */	extsb r3, r0
@@ -102,8 +102,8 @@ lbl_8059748C:
 /* 8059756C  4B AD 84 B8 */	b StartShock__12dVibration_cFii4cXyz
 /* 80597570  88 1E 0A F0 */	lbz r0, 0xaf0(r30)
 /* 80597574  54 00 10 3A */	slwi r0, r0, 2
-/* 80597578  3C 60 80 5A */	lis r3, data_80598034@ha
-/* 8059757C  38 63 80 34 */	addi r3, r3, data_80598034@l
+/* 80597578  3C 60 80 5A */	lis r3, l_fall_end_se@ha
+/* 8059757C  38 63 80 34 */	addi r3, r3, l_fall_end_se@l
 /* 80597580  7F A3 00 2E */	lwzx r29, r3, r0
 /* 80597584  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80597588  7C 03 07 74 */	extsb r3, r0

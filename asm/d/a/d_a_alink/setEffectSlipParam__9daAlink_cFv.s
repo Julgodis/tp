@@ -44,8 +44,8 @@ lbl_80120914:
 /* 8012091C  D0 03 00 44 */	stfs f0, 0x44(r3)
 /* 80120920  C0 02 93 A0 */	lfs f0, lit_9054(r2)
 /* 80120924  D0 03 00 40 */	stfs f0, 0x40(r3)
-/* 80120928  3C 80 80 39 */	lis r4, data_80391BAC@ha
-/* 8012092C  38 84 1B AC */	addi r4, r4, data_80391BAC@l
+/* 80120928  3C 80 80 39 */	lis r4, smokeParticleScale_39643@ha
+/* 8012092C  38 84 1B AC */	addi r4, r4, smokeParticleScale_39643@l
 /* 80120930  E0 24 00 00 */	psq_l f1, 0(r4), 0, 0 /* qr0 */
 /* 80120934  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80120938  F0 21 00 14 */	psq_st f1, 20(r1), 0, 0 /* qr0 */
@@ -87,8 +87,8 @@ lbl_8012099C:
 /* 801209BC  80 18 05 74 */	lwz r0, 0x574(r24)
 /* 801209C0  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 801209C4  41 82 00 3C */	beq lbl_80120A00
-/* 801209C8  3C 80 80 39 */	lis r4, data_80391BB8@ha
-/* 801209CC  38 84 1B B8 */	addi r4, r4, data_80391BB8@l
+/* 801209C8  3C 80 80 39 */	lis r4, wolfWaterCenterScale@ha
+/* 801209CC  38 84 1B B8 */	addi r4, r4, wolfWaterCenterScale@l
 /* 801209D0  E0 04 00 00 */	psq_l f0, 0(r4), 0, 0 /* qr0 */
 /* 801209D4  C0 44 00 08 */	lfs f2, 8(r4)
 /* 801209D8  F0 01 00 08 */	psq_st f0, 8(r1), 0, 0 /* qr0 */

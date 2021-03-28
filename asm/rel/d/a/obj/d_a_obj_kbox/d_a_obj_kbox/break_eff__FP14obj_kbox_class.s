@@ -60,8 +60,8 @@ lbl_80C3D74C:
 /* 80C3D834  4B 40 D3 CC */	b setModel__18dPa_modelEcallBackFP14JPABaseEmitterP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc
 /* 80C3D838  3B 60 00 00 */	li r27, 0
 /* 80C3D83C  3B C0 00 00 */	li r30, 0
-/* 80C3D840  3C 60 80 C4 */	lis r3, data_80C3F068@ha
-/* 80C3D844  3B 83 F0 68 */	addi r28, r3, data_80C3F068@l
+/* 80C3D840  3C 60 80 C4 */	lis r3, particle_id@ha
+/* 80C3D844  3B 83 F0 68 */	addi r28, r3, particle_id@l
 /* 80C3D848  3C 60 80 C4 */	lis r3, lit_3704@ha
 /* 80C3D84C  3B A3 F0 70 */	addi r29, r3, lit_3704@l
 lbl_80C3D850:

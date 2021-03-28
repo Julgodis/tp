@@ -108,7 +108,7 @@ SECTION_DATA static void* lit_3688[3] = {
 };
 
 /* 80C451C8-80C451D4 000C+00 s=1 e=0 z=0  None .data      mode_proc$3687                                               */
-SECTION_DATA static u8 data_80C451C8[12] = {
+SECTION_DATA static u8 mode_proc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 

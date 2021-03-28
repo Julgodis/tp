@@ -47,8 +47,8 @@ lbl_8096959C:
 /* 809695AC  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 809695B0  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 809695B4  54 C0 08 3C */	slwi r0, r6, 1
-/* 809695B8  3C 60 80 97 */	lis r3, data_8096CA04@ha
-/* 809695BC  38 63 CA 04 */	addi r3, r3, data_8096CA04@l
+/* 809695B8  3C 60 80 97 */	lis r3, sNameYami@ha
+/* 809695BC  38 63 CA 04 */	addi r3, r3, sNameYami@l
 /* 809695C0  7C 63 02 AE */	lhax r3, r3, r0
 /* 809695C4  38 A1 00 1C */	addi r5, r1, 0x1c
 /* 809695C8  88 07 04 E2 */	lbz r0, 0x4e2(r7)

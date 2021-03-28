@@ -35,12 +35,12 @@ lbl_801B71C4:
 /* 801B7248  3C 80 80 39 */	lis r4, d_menu_d_menu_collect__stringBase0@ha
 /* 801B724C  38 84 53 30 */	addi r4, r4, d_menu_d_menu_collect__stringBase0@l
 /* 801B7250  38 84 01 CF */	addi r4, r4, 0x1cf
-/* 801B7254  3C A0 80 3C */	lis r5, data_803BC73C@ha
-/* 801B7258  38 05 C7 3C */	addi r0, r5, data_803BC73C@l
+/* 801B7254  3C A0 80 3C */	lis r5, bck_name_7687@ha
+/* 801B7258  38 05 C7 3C */	addi r0, r5, bck_name_7687@l
 /* 801B725C  7C A0 3A 14 */	add r5, r0, r7
 /* 801B7260  80 A5 FF FC */	lwz r5, -4(r5)
-/* 801B7264  3C C0 80 3C */	lis r6, data_803BC74C@ha
-/* 801B7268  38 06 C7 4C */	addi r0, r6, data_803BC74C@l
+/* 801B7264  3C C0 80 3C */	lis r6, brk_name_7688@ha
+/* 801B7268  38 06 C7 4C */	addi r0, r6, brk_name_7688@l
 /* 801B726C  7C C0 3A 14 */	add r6, r0, r7
 /* 801B7270  80 C6 FF FC */	lwz r6, -4(r6)
 /* 801B7274  4B FF F7 BD */	bl setJ3D__17dMenu_Collect3D_cFPCcPCcPCc

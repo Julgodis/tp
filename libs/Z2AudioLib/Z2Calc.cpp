@@ -122,7 +122,7 @@ asm void Z2Calc::getRandom(f32 param_0, f32 param_1, f32 param_2) {
 static u8 data_80451330[4];
 
 /* 80451334-80451338 0004+00 s=1 e=0 z=0  None .sbss      oRandom$401                                                  */
-static u8 data_80451334[4];
+static u8 oRandom[4];
 
 /* 802A98D4-802A9944 0070+00 s=1 e=1 z=0  None .text      getRandom_0_1__6Z2CalcFv                                     */
 #pragma push

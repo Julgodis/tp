@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct JASSoundParams {
+	/* 8029E3B0 */ void clamp();
+	/* 8029E47C */ void combine(JASSoundParams const&, JASSoundParams const&);
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -18,11 +23,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JASSoundParams {
-	/* 8029E3B0 */ void clamp();
-	/* 8029E47C */ void combine(JASSoundParams const&, JASSoundParams const&);
 };
 
 struct Z2Audible {

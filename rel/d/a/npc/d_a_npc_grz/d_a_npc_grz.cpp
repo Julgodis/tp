@@ -29,14 +29,14 @@ struct mDoMtx_stack_c {
 	/* 8000CE70 */ void scaleM(cXyz const&);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTevRegKey {
 };
 
 struct J3DAnmTexPattern {
 	/* 8032AF50 */ void getTexNo(u16, u16*) const;
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmTextureSRTKey {
 };
 
 struct J3DMaterialTable {
@@ -64,7 +64,7 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct Z2Creature {
@@ -73,10 +73,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -163,12 +163,12 @@ struct daNpc_Grz_Param_c {
 	/* 809EF188 */ ~daNpc_Grz_Param_c();
 };
 
-struct J3DAnmTransformKey {
-};
-
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct dCcD_SrcCyl {
@@ -285,11 +285,11 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct _GXColor {
 };
 
-struct _GXColor {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dPa_control_c {
@@ -301,14 +301,14 @@ struct dPa_control_c {
 	/* 8004D6A4 */ void setPoly(u32, u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
 };
 
+struct dBgS {
+};
+
 struct dBgS_AcchCir {
 	/* 80075EAC */ dBgS_AcchCir();
 	/* 80075F40 */ void SetWallR(f32);
 	/* 80075F58 */ void SetWall(f32, f32);
 	/* 809EEE94 */ ~dBgS_AcchCir();
-};
-
-struct dBgS {
 };
 
 struct dBgS_Acch {
@@ -862,7 +862,7 @@ SECTION_RODATA static u8 const m__17daNpc_Grz_Param_c[128] = {
 };
 
 /* 809EF274-809EF288 0014+00 s=1 e=0 z=0  None .rodata    heapSize$4217                                                */
-SECTION_RODATA static u8 const data_809EF274[20] = {
+SECTION_RODATA static u8 const heapSize[20] = {
 	0x00, 0x00, 0x3A, 0xE0, 0x00, 0x00, 0x3A, 0xF0, 0x00, 0x00, 0x3A, 0xE0, 0x00, 0x00, 0x3A, 0xF0,
 	0x00, 0x00, 0x00, 0x00,
 };
@@ -1353,7 +1353,7 @@ SECTION_RODATA static u32 const lit_6205 = 0x43160000;
 SECTION_RODATA static u32 const lit_6206 = 0x447F0000;
 
 /* 809EF61C-809EF624 0006+02 s=1 e=0 z=0  None .rodata    l_prticles_id$6299                                           */
-SECTION_RODATA static u8 const data_809EF61C[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const l_prticles_id[6 + 2 /* padding */] = {
 	0x83, 0xB5, 0x83, 0xB6, 0x83, 0xB7,
 	/* padding */
 	0x00, 0x00,
@@ -1598,7 +1598,7 @@ SECTION_DATA static u8 mEvtCutList__11daNpc_Grz_c[84] = {
 };
 
 /* 809EF9BC-809EF9CC 0010+00 s=1 e=0 z=0  None .data      l_attack_jnt$4889                                            */
-SECTION_DATA static u8 data_809EF9BC[16] = {
+SECTION_DATA static u8 l_attack_jnt[16] = {
 	0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x0E, 0x00, 0x00, 0x00, 0x13, 0x00, 0x00, 0x00, 0x14,
 };
 
@@ -2224,7 +2224,7 @@ static u8 l_HIO[4];
 static u8 lit_4691[12 + 4 /* padding */];
 
 /* 809EFC68-809EFC74 000C+00 s=1 e=0 z=0  None .bss       eyeOffset$4690                                               */
-static u8 data_809EFC68[12];
+static u8 eyeOffset[12];
 
 /* 809E9BB4-809EA1DC 0628+00 s=1 e=0 z=0  None .text      setAttnPos__11daNpc_Grz_cFv                                  */
 #pragma push

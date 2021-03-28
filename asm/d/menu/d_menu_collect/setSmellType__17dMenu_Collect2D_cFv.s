@@ -44,8 +44,8 @@ lbl_801B35AC:
 /* 801B35AC  7C 1D F0 00 */	cmpw r29, r30
 /* 801B35B0  40 82 00 38 */	bne lbl_801B35E8
 /* 801B35B4  80 7C 00 18 */	lwz r3, 0x18(r28)
-/* 801B35B8  3C 80 80 39 */	lis r4, data_80395050@ha
-/* 801B35BC  38 04 50 50 */	addi r0, r4, data_80395050@l
+/* 801B35B8  3C 80 80 39 */	lis r4, smell_tag@ha
+/* 801B35BC  38 04 50 50 */	addi r0, r4, smell_tag@l
 /* 801B35C0  7C 80 FA 14 */	add r4, r0, r31
 /* 801B35C4  80 A4 00 00 */	lwz r5, 0(r4)
 /* 801B35C8  80 C4 00 04 */	lwz r6, 4(r4)
@@ -58,8 +58,8 @@ lbl_801B35AC:
 /* 801B35E4  48 00 00 34 */	b lbl_801B3618
 lbl_801B35E8:
 /* 801B35E8  80 7C 00 18 */	lwz r3, 0x18(r28)
-/* 801B35EC  3C 80 80 39 */	lis r4, data_80395050@ha
-/* 801B35F0  38 04 50 50 */	addi r0, r4, data_80395050@l
+/* 801B35EC  3C 80 80 39 */	lis r4, smell_tag@ha
+/* 801B35F0  38 04 50 50 */	addi r0, r4, smell_tag@l
 /* 801B35F4  7C 80 FA 14 */	add r4, r0, r31
 /* 801B35F8  80 A4 00 00 */	lwz r5, 0(r4)
 /* 801B35FC  80 C4 00 04 */	lwz r6, 4(r4)

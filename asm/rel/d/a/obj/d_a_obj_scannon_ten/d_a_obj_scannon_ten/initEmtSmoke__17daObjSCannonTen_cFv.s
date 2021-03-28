@@ -33,8 +33,8 @@ lbl_80CCC628:
 /* 80CCC6A4  3B A0 00 00 */	li r29, 0
 /* 80CCC6A8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80CCC6AC  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
-/* 80CCC6B0  3C 60 80 CD */	lis r3, data_80CCCC78@ha
-/* 80CCC6B4  3B 83 CC 78 */	addi r28, r3, data_80CCCC78@l
+/* 80CCC6B0  3C 60 80 CD */	lis r3, PARTICLE_NAME@ha
+/* 80CCC6B4  3B 83 CC 78 */	addi r28, r3, PARTICLE_NAME@l
 lbl_80CCC6B8:
 /* 80CCC6B8  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 80CCC6BC  38 80 00 00 */	li r4, 0

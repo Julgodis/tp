@@ -35,8 +35,8 @@ lbl_801510B8:
 /* 8015113C  7C 00 07 75 */	extsb. r0, r0
 /* 80151140  40 82 00 38 */	bne lbl_80151178
 /* 80151144  C0 02 99 D8 */	lfs f0, lit_4116(r2)
-/* 80151148  3C 60 80 42 */	lis r3, data_804257DC@ha
-/* 8015114C  D4 03 57 DC */	stfsu f0, data_804257DC@l(r3)
+/* 80151148  3C 60 80 42 */	lis r3, vec@ha
+/* 8015114C  D4 03 57 DC */	stfsu f0, vec@l(r3)
 /* 80151150  D0 03 00 04 */	stfs f0, 4(r3)
 /* 80151154  C0 02 9A 98 */	lfs f0, lit_9971(r2)
 /* 80151158  D0 03 00 08 */	stfs f0, 8(r3)
@@ -133,8 +133,8 @@ lbl_80151178:
 /* 801512C0  4B EB B1 75 */	bl mDoMtx_YrotM__FPA4_fs
 /* 801512C4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 801512C8  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 801512CC  3C 80 80 42 */	lis r4, data_804257DC@ha
-/* 801512D0  38 84 57 DC */	addi r4, r4, data_804257DC@l
+/* 801512CC  3C 80 80 42 */	lis r4, vec@ha
+/* 801512D0  38 84 57 DC */	addi r4, r4, vec@l
 /* 801512D4  38 BD 00 24 */	addi r5, r29, 0x24
 /* 801512D8  48 1F 5A 95 */	bl PSMTXMultVec
 /* 801512DC  38 00 00 00 */	li r0, 0

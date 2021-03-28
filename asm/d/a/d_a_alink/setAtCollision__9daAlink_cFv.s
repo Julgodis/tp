@@ -15,8 +15,8 @@ lbl_800AAABC:
 /* 800AAAF0  7C 00 07 75 */	extsb. r0, r0
 /* 800AAAF4  40 82 00 1C */	bne lbl_800AAB10
 /* 800AAAF8  C0 02 93 D4 */	lfs f0, lit_11442(r2)
-/* 800AAAFC  3C 60 80 3B */	lis r3, data_803B2D88@ha
-/* 800AAB00  38 63 2D 88 */	addi r3, r3, data_803B2D88@l
+/* 800AAAFC  3C 60 80 3B */	lis r3, rodTopOffset@ha
+/* 800AAB00  38 63 2D 88 */	addi r3, r3, rodTopOffset@l
 /* 800AAB04  D0 03 00 04 */	stfs f0, 4(r3)
 /* 800AAB08  38 00 00 01 */	li r0, 1
 /* 800AAB0C  98 0D 8A 51 */	stb r0, struct_80450FD0+0x1(r13)
@@ -90,8 +90,8 @@ lbl_800AABC4:
 /* 800AAC10  4B F6 16 91 */	bl mDoMtx_ZXYrotM__FPA4_fsss
 /* 800AAC14  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 800AAC18  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 800AAC1C  3C 80 80 3B */	lis r4, data_803B2D88@ha
-/* 800AAC20  38 84 2D 88 */	addi r4, r4, data_803B2D88@l
+/* 800AAC1C  3C 80 80 3B */	lis r4, rodTopOffset@ha
+/* 800AAC20  38 84 2D 88 */	addi r4, r4, rodTopOffset@l
 /* 800AAC24  38 A1 00 CC */	addi r5, r1, 0xcc
 /* 800AAC28  48 29 C1 45 */	bl PSMTXMultVec
 /* 800AAC2C  7F C3 F3 78 */	mr r3, r30

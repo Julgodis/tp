@@ -74,8 +74,8 @@ lbl_80D3E34C:
 /* 80D3E368  3B A0 00 00 */	li r29, 0
 /* 80D3E36C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80D3E370  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
-/* 80D3E374  3C 60 80 D4 */	lis r3, data_80D3ECFC@ha
-/* 80D3E378  3B 83 EC FC */	addi r28, r3, data_80D3ECFC@l
+/* 80D3E374  3C 60 80 D4 */	lis r3, mirror_effect_id@ha
+/* 80D3E378  3B 83 EC FC */	addi r28, r3, mirror_effect_id@l
 lbl_80D3E37C:
 /* 80D3E37C  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 80D3E380  38 80 00 00 */	li r4, 0

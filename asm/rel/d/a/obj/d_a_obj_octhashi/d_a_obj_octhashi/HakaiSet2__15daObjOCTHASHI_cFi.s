@@ -16,8 +16,8 @@ lbl_80CA4F24:
 /* 80CA4F5C  4B 6B D2 5C */	b _savegpr_20
 /* 80CA4F60  7C 7F 1B 78 */	mr r31, r3
 /* 80CA4F64  7C 97 23 78 */	mr r23, r4
-/* 80CA4F68  3C 60 80 CA */	lis r3, data_80CA6480@ha
-/* 80CA4F6C  3B 63 64 80 */	addi r27, r3, data_80CA6480@l
+/* 80CA4F68  3C 60 80 CA */	lis r3, ccSphSrc@ha
+/* 80CA4F6C  3B 63 64 80 */	addi r27, r3, ccSphSrc@l
 /* 80CA4F70  3B 37 FF FF */	addi r25, r23, -1
 /* 80CA4F74  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80CA4F78  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l

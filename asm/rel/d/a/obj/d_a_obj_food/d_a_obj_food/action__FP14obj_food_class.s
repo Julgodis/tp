@@ -233,8 +233,8 @@ lbl_80BF143C:
 /* 80BF14DC  3B 80 00 00 */	li r28, 0
 /* 80BF14E0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80BF14E4  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
-/* 80BF14E8  3C 60 80 BF */	lis r3, data_80BF1E18@ha
-/* 80BF14EC  3B 63 1E 18 */	addi r27, r3, data_80BF1E18@l
+/* 80BF14E8  3C 60 80 BF */	lis r3, w_eff_id@ha
+/* 80BF14EC  3B 63 1E 18 */	addi r27, r3, w_eff_id@l
 lbl_80BF14F0:
 /* 80BF14F0  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 80BF14F4  38 00 00 FF */	li r0, 0xff

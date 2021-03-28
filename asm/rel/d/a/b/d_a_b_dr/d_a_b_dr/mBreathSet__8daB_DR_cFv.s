@@ -27,8 +27,8 @@ lbl_805BF4C8:
 /* 805BF52C  3B 20 00 00 */	li r25, 0
 /* 805BF530  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 805BF534  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
-/* 805BF538  3C 60 80 5C */	lis r3, data_805C76A0@ha
-/* 805BF53C  3B E3 76 A0 */	addi r31, r3, data_805C76A0@l
+/* 805BF538  3C 60 80 5C */	lis r3, effId@ha
+/* 805BF53C  3B E3 76 A0 */	addi r31, r3, effId@l
 lbl_805BF540:
 /* 805BF540  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 805BF544  38 00 00 FF */	li r0, 0xff

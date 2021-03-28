@@ -54,8 +54,8 @@ lbl_800ED58C:
 /* 800ED59C  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 800ED5A0  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 800ED5A4  38 63 03 F0 */	addi r3, r3, 0x3f0
-/* 800ED5A8  3C 80 80 39 */	lis r4, data_80391954@ha
-/* 800ED5AC  38 84 19 54 */	addi r4, r4, data_80391954@l
+/* 800ED5A8  3C 80 80 39 */	lis r4, localHorseRun_18095@ha
+/* 800ED5AC  38 84 19 54 */	addi r4, r4, localHorseRun_18095@l
 /* 800ED5B0  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 800ED5B4  48 25 97 B9 */	bl PSMTXMultVec
 /* 800ED5B8  38 60 00 00 */	li r3, 0
@@ -106,8 +106,8 @@ lbl_800ED65C:
 /* 800ED660  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 800ED664  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 800ED668  38 63 03 F0 */	addi r3, r3, 0x3f0
-/* 800ED66C  3C 80 80 39 */	lis r4, data_80391960@ha
-/* 800ED670  38 84 19 60 */	addi r4, r4, data_80391960@l
+/* 800ED66C  3C 80 80 39 */	lis r4, localHorseRun_18103@ha
+/* 800ED670  38 84 19 60 */	addi r4, r4, localHorseRun_18103@l
 /* 800ED674  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 800ED678  48 25 96 F5 */	bl PSMTXMultVec
 lbl_800ED67C:

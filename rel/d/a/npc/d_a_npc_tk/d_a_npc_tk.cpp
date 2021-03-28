@@ -38,7 +38,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
@@ -46,13 +49,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -1078,7 +1078,7 @@ SECTION_RODATA static u8 const struct_80B0C3AC[72] = {
 };
 
 /* 80B0C3F4-80B0C404 0010+00 s=1 e=0 z=0  None .data      action_table$4814                                            */
-SECTION_DATA static void* data_80B0C3F4[4] = {
+SECTION_DATA static void* action_table[4] = {
 	(void*)(((char*)&struct_80B0C3A0)+0x7) /* None */,
 	(void*)(((char*)&struct_80B0C3AC)+0x0) /* None */,
 	(void*)(((char*)&struct_80B0C3AC)+0x7) /* None */,
@@ -1086,18 +1086,18 @@ SECTION_DATA static void* data_80B0C3F4[4] = {
 };
 
 /* 80B0C404-80B0C40C 0008+00 s=1 e=0 z=0  None .data      action_table_w$4815                                          */
-SECTION_DATA static void* data_80B0C404[2] = {
+SECTION_DATA static void* action_table_w[2] = {
 	(void*)(((char*)&struct_80B0C3A0)+0x7) /* None */,
 	(void*)(((char*)&struct_80B0C3AC)+0x0) /* None */,
 };
 
 /* 80B0C40C-80B0C41C 0010+00 s=1 e=0 z=0  None .data      taka_attack_dist$4969                                        */
-SECTION_DATA static u8 data_80B0C40C[16] = {
+SECTION_DATA static u8 taka_attack_dist[16] = {
 	0x45, 0xA2, 0x80, 0x00, 0x45, 0x1C, 0x40, 0x00, 0x44, 0xE1, 0x00, 0x00, 0x45, 0x3B, 0x80, 0x00,
 };
 
 /* 80B0C41C-80B0C424 0008+00 s=1 e=0 z=0  None .data      w_eff_id$5014                                                */
-SECTION_DATA static u8 data_80B0C41C[8] = {
+SECTION_DATA static u8 w_eff_id[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
@@ -1158,7 +1158,7 @@ SECTION_DATA static void* lit_7877[14] = {
 };
 
 /* 80B0C4D4-80B0C514 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$8096                                              */
-SECTION_DATA static u8 data_80B0C4D4[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1F,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x69, 0x09, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1546,7 +1546,7 @@ asm void daNPC_TK_c::checkWaterSurface(f32 param_0) {
 static u8 lit_5011[12 + 4 /* padding */];
 
 /* 80B0C65C-80B0C668 000C+00 s=1 e=0 z=0  None .bss       sc$5010                                                      */
-static u8 data_80B0C65C[12];
+static u8 sc[12];
 
 /* 80B03A70-80B048BC 0E4C+00 s=1 e=0 z=0  None .text      executeAttack__10daNPC_TK_cFv                                */
 #pragma push

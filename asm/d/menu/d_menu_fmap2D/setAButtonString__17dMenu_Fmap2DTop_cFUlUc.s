@@ -14,8 +14,8 @@ lbl_801D72D4:
 lbl_801D7304:
 /* 801D7304  3B 80 00 00 */	li r28, 0
 /* 801D7308  3B E0 00 00 */	li r31, 0
-/* 801D730C  3C 60 80 39 */	lis r3, data_80396558@ha
-/* 801D7310  3B A3 65 58 */	addi r29, r3, data_80396558@l
+/* 801D730C  3C 60 80 39 */	lis r3, font_at_6194@ha
+/* 801D7310  3B A3 65 58 */	addi r29, r3, font_at_6194@l
 /* 801D7314  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801D7318  3B C3 01 88 */	addi r30, r3, g_meter2_info@l
 lbl_801D731C:

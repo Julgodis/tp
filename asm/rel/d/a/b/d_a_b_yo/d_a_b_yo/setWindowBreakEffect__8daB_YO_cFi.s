@@ -9,8 +9,8 @@ lbl_80630330:
 /* 8063034C  38 61 00 20 */	addi r3, r1, 0x20
 /* 80630350  38 80 00 00 */	li r4, 0
 /* 80630354  54 00 08 3C */	slwi r0, r0, 1
-/* 80630358  3C A0 80 64 */	lis r5, data_80639C44@ha
-/* 8063035C  38 A5 9C 44 */	addi r5, r5, data_80639C44@l
+/* 80630358  3C A0 80 64 */	lis r5, yo_window_angle@ha
+/* 8063035C  38 A5 9C 44 */	addi r5, r5, yo_window_angle@l
 /* 80630360  7C A5 02 AE */	lhax r5, r5, r0
 /* 80630364  38 C0 00 00 */	li r6, 0
 /* 80630368  4B C3 70 8C */	b __ct__5csXyzFsss
@@ -23,8 +23,8 @@ lbl_80630330:
 /* 80630384  3B C0 00 00 */	li r30, 0
 /* 80630388  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8063038C  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
-/* 80630390  3C 60 80 64 */	lis r3, data_80639C50@ha
-/* 80630394  3B 83 9C 50 */	addi r28, r3, data_80639C50@l
+/* 80630390  3C 60 80 64 */	lis r3, madoware_effect_id@ha
+/* 80630394  3B 83 9C 50 */	addi r28, r3, madoware_effect_id@l
 /* 80630398  3C 60 80 64 */	lis r3, lit_3795@ha
 /* 8063039C  3B A3 98 10 */	addi r29, r3, lit_3795@l
 lbl_806303A0:

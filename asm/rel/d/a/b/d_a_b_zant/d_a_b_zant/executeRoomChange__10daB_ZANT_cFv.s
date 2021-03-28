@@ -367,8 +367,8 @@ lbl_8064BDA8:
 /* 8064BDEC  D0 1B 06 C8 */	stfs f0, 0x6c8(r27)
 /* 8064BDF0  88 1B 06 FB */	lbz r0, 0x6fb(r27)
 /* 8064BDF4  54 00 10 3A */	slwi r0, r0, 2
-/* 8064BDF8  3C 60 80 65 */	lis r3, data_8064F350@ha
-/* 8064BDFC  38 63 F3 50 */	addi r3, r3, data_8064F350@l
+/* 8064BDF8  3C 60 80 65 */	lis r3, mahojin_se@ha
+/* 8064BDFC  38 63 F3 50 */	addi r3, r3, mahojin_se@l
 /* 8064BE00  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8064BE04  90 01 00 20 */	stw r0, 0x20(r1)
 /* 8064BE08  38 7B 05 F0 */	addi r3, r27, 0x5f0

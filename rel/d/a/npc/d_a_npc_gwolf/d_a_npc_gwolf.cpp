@@ -34,14 +34,14 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTevRegKey {
 };
 
 struct J3DAnmTexPattern {
 	/* 8032AF50 */ void getTexNo(u16, u16*) const;
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmTextureSRTKey {
 };
 
 struct J3DMaterialTable {
@@ -69,7 +69,7 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct Z2Creature {
@@ -78,10 +78,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -106,10 +106,10 @@ struct dBgS_ObjAcch {
 struct _GXColorS10 {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daNpc_GWolf_c {
@@ -164,12 +164,12 @@ struct daNpc_GWolf_Param_c {
 	/* 809F8488 */ ~daNpc_GWolf_Param_c();
 };
 
-struct J3DAnmTransformKey {
-};
-
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct dCcD_SrcCyl {
@@ -1290,14 +1290,14 @@ SECTION_DATA static void* lit_5060[8] = {
 };
 
 /* 809F8A6C-809F8A7C 000E+02 s=1 e=0 z=0  None .data      l_delFlag$5064                                               */
-SECTION_DATA static u8 data_809F8A6C[14 + 2 /* padding */] = {
+SECTION_DATA static u8 l_delFlag[14 + 2 /* padding */] = {
 	0x01, 0x53, 0x01, 0xEC, 0x01, 0xED, 0x01, 0xEE, 0x01, 0xEF, 0x01, 0xF0, 0x01, 0xF1,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 809F8A7C-809F8A8C 000E+02 s=1 e=0 z=0  None .data      l_playerNoList$5071                                          */
-SECTION_DATA static u8 data_809F8A7C[14 + 2 /* padding */] = {
+SECTION_DATA static u8 l_playerNoList[14 + 2 /* padding */] = {
 	0xFF, 0xFF, 0x00, 0x02, 0x00, 0x03, 0x00, 0x04, 0x00, 0x05, 0x00, 0x06, 0x00, 0x07,
 	/* padding */
 	0x00, 0x00,
@@ -1526,7 +1526,7 @@ SECTION_DATA static void* lit_5816[41] = {
 };
 
 /* 809F8D64-809F8D7C 0018+00 s=1 e=0 z=0  None .data      l_warpIdList$5862                                            */
-SECTION_DATA static u8 data_809F8D64[24] = {
+SECTION_DATA static u8 l_warpIdList[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x0A,
 	0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x0C,
 };
@@ -2020,7 +2020,7 @@ static u8 l_HIO[4];
 static u8 lit_4815[12 + 4 /* padding */];
 
 /* 809F8F28-809F8F34 000C+00 s=1 e=0 z=0  None .bss       eyeOffset$4814                                               */
-static u8 data_809F8F28[12];
+static u8 eyeOffset[12];
 
 /* 809F4698-809F4BB0 0518+00 s=1 e=0 z=0  None .text      setAttnPos__13daNpc_GWolf_cFv                                */
 #pragma push

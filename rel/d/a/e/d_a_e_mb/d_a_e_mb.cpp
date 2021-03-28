@@ -22,10 +22,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
 struct mDoExt_btpAnm {
@@ -33,19 +33,19 @@ struct mDoExt_btpAnm {
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -75,13 +75,13 @@ struct mDoExt_3DlineMatSortPacket {
 	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -402,7 +402,7 @@ SECTION_RODATA static u8 const lit_3767[4] = {
 SECTION_RODATA static u32 const lit_3768 = 0x428C0000;
 
 /* 80708AF0-80708AF4 0004+00 s=1 e=0 z=0  None .data      l_color$3793                                                 */
-SECTION_DATA static u8 data_80708AF0[4] = {
+SECTION_DATA static u8 l_color[4] = {
 	0x14, 0x0F, 0x00, 0xFF,
 };
 
@@ -418,7 +418,7 @@ SECTION_DATA static void* lit_3884[7] = {
 };
 
 /* 80708B10-80708B50 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$4733                                              */
-SECTION_DATA static u8 data_80708B10[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,

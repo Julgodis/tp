@@ -61,6 +61,9 @@ struct dStage_roomControl_c {
 	/* 800244E8 */ void checkRoomDisp(int) const;
 };
 
+struct J3DModelData {
+};
+
 struct Vec {
 };
 
@@ -69,9 +72,6 @@ struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -417,7 +417,7 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 SECTION_DATA static void* l_bmd_base_name = (void*)(((char*)&struct_8045E56C)+0x0) /* @stringBase0 */;
 
 /* 8045E7B0-8045E7D0 0020+00 s=1 e=0 z=0  None .bss       l_bmdName$3699                                               */
-static u8 data_8045E7B0[32];
+static u8 l_bmdName[32];
 
 /* 8045D4B0-8045D504 0054+00 s=1 e=0 z=0  None .text      getBmdName__12daDbDoor00_cFv                                 */
 #pragma push
@@ -514,7 +514,7 @@ SECTION_RODATA static u8 const struct_8045E5FC[104] = {
 };
 
 /* 8045E688-8045E6AC 0024+00 s=1 e=0 z=0  None .data      action_table$3865                                            */
-SECTION_DATA static void* data_8045E688[9] = {
+SECTION_DATA static void* action_table[9] = {
 	(void*)(((char*)&struct_8045E56C)+0x6E) /* None */,
 	(void*)(((char*)&struct_8045E56C)+0x73) /* None */,
 	(void*)(((char*)&struct_8045E56C)+0x7D) /* None */,
@@ -689,7 +689,7 @@ SECTION_DATA static void* lit_4097[3] = {
 };
 
 /* 8045E718-8045E760 0048+00 s=1 e=0 z=0  None .data      l_action$4091                                                */
-SECTION_DATA static u8 data_8045E718[72] = {
+SECTION_DATA static u8 l_action[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

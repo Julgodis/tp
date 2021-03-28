@@ -102,8 +102,8 @@ lbl_8079A6A4:
 /* 8079A6D4  98 1A 06 AA */	stb r0, 0x6aa(r26)
 /* 8079A6D8  88 1A 08 3C */	lbz r0, 0x83c(r26)
 /* 8079A6DC  54 00 08 3C */	slwi r0, r0, 1
-/* 8079A6E0  3C 60 80 7A */	lis r3, data_8079D87C@ha
-/* 8079A6E4  38 63 D8 7C */	addi r3, r3, data_8079D87C@l
+/* 8079A6E0  3C 60 80 7A */	lis r3, swsp_d@ha
+/* 8079A6E4  38 63 D8 7C */	addi r3, r3, swsp_d@l
 /* 8079A6E8  7F 63 02 AE */	lhax r27, r3, r0
 lbl_8079A6EC:
 /* 8079A6EC  C3 BF 00 04 */	lfs f29, 4(r31)

@@ -36,8 +36,8 @@ lbl_80720438:
 /* 80720460  3A F8 0B 9C */	addi r23, r24, 0xb9c
 /* 80720464  7C 9A B8 2E */	lwzx r4, r26, r23
 /* 80720468  38 A0 00 00 */	li r5, 0
-/* 8072046C  3C C0 80 72 */	lis r6, data_80722D34@ha
-/* 80720470  38 C6 2D 34 */	addi r6, r6, data_80722D34@l
+/* 8072046C  3C C0 80 72 */	lis r6, mDushEff@ha
+/* 80720470  38 C6 2D 34 */	addi r6, r6, mDushEff@l
 /* 80720474  7C C6 CA 2E */	lhzx r6, r6, r25
 /* 80720478  38 FA 04 D0 */	addi r7, r26, 0x4d0
 /* 8072047C  39 00 00 00 */	li r8, 0

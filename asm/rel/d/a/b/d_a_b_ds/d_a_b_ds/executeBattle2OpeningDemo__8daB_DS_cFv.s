@@ -561,8 +561,8 @@ lbl_805D3140:
 /* 805D315C  3A C0 00 00 */	li r22, 0
 /* 805D3160  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 805D3164  3B 23 61 C0 */	addi r25, r3, g_dComIfG_gameInfo@l
-/* 805D3168  3C 60 80 5E */	lis r3, data_805DD638@ha
-/* 805D316C  3A 83 D6 38 */	addi r20, r3, data_805DD638@l
+/* 805D3168  3C 60 80 5E */	lis r3, eff_Sand_id@ha
+/* 805D316C  3A 83 D6 38 */	addi r20, r3, eff_Sand_id@l
 lbl_805D3170:
 /* 805D3170  80 79 5D 3C */	lwz r3, 0x5d3c(r25)
 /* 805D3174  38 00 00 FF */	li r0, 0xff

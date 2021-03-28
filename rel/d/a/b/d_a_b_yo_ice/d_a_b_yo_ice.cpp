@@ -84,10 +84,10 @@ struct dVibration_c {
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -459,26 +459,26 @@ SECTION_DATA static void* lit_3891[11] = {
 };
 
 /* 8063DEBC-8063DEC4 0006+02 s=1 e=0 z=0  None .data      break_effect_id$3901                                         */
-SECTION_DATA static u8 data_8063DEBC[6 + 2 /* padding */] = {
+SECTION_DATA static u8 break_effect_id[6 + 2 /* padding */] = {
 	0x87, 0xBB, 0x87, 0xBC, 0x87, 0xBD,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 8063DEC4-8063DECC 0006+02 s=1 e=0 z=0  None .data      wall_break_effect_id$3920                                    */
-SECTION_DATA static u8 data_8063DEC4[6 + 2 /* padding */] = {
+SECTION_DATA static u8 wall_break_effect_id[6 + 2 /* padding */] = {
 	0x87, 0xB8, 0x87, 0xB9, 0x87, 0xBA,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 8063DECC-8063DED0 0004+00 s=1 e=0 z=0  None .data      apper_effect_id$3948                                         */
-SECTION_DATA static u8 data_8063DECC[4] = {
+SECTION_DATA static u8 apper_effect_id[4] = {
 	0x87, 0xB6, 0x87, 0xB7,
 };
 
 /* 8063DED0-8063DEDC 000C+00 s=1 e=0 z=0  None .data      l_landing_effect_id$3966                                     */
-SECTION_DATA static u8 data_8063DED0[12] = {
+SECTION_DATA static u8 l_landing_effect_id[12] = {
 	0x86, 0xDC, 0x86, 0xDD, 0x86, 0xDE, 0x86, 0xDF, 0x86, 0xE0, 0x86, 0xE1,
 };
 

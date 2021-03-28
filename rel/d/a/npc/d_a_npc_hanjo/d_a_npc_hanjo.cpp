@@ -33,7 +33,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
@@ -42,13 +45,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -75,16 +75,16 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 809FF8BC */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct daNpcT_evtData_c {
 };
 
 struct daNpcT_motionAnmData_c {
 };
 
-struct daNpcT_evtData_c {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpc_Hanjo_c {
@@ -294,13 +294,13 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
+struct dBgS {
+};
+
 struct dBgS_AcchCir {
 	/* 80075EAC */ dBgS_AcchCir();
 	/* 80075F40 */ void SetWallR(f32);
 	/* 809FF904 */ ~dBgS_AcchCir();
-};
-
-struct dBgS {
 };
 
 struct dBgS_Acch {
@@ -933,7 +933,7 @@ SECTION_RODATA static u8 const mStoneCcDObjInfo__13daNpc_Hanjo_c[48] = {
 };
 
 /* 80A006E4-80A006F8 0014+00 s=1 e=0 z=0  None .rodata    heapSize$4058                                                */
-SECTION_RODATA static u8 const data_80A006E4[20] = {
+SECTION_RODATA static u8 const heapSize[20] = {
 	0x00, 0x00, 0x61, 0xB0, 0x00, 0x00, 0x41, 0xD0, 0x00, 0x00, 0x39, 0xD0, 0x00, 0x00, 0x39, 0xC0,
 	0x00, 0x00, 0x00, 0x00,
 };
@@ -959,7 +959,7 @@ SECTION_RODATA static u32 const lit_4384 = 0x47800000;
 SECTION_RODATA static u32 const lit_4385 = 0x3E4CCCCD;
 
 /* 80A00710-80A00718 0008+00 s=1 e=0 z=0  None .rodata    bmdTypeList$4495                                             */
-SECTION_RODATA static u8 const data_80A00710[8] = {
+SECTION_RODATA static u8 const bmdTypeList[8] = {
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03,
 };
 
@@ -2073,7 +2073,7 @@ static u8 l_HIO[4];
 static u8 lit_5144[12 + 4 /* padding */];
 
 /* 80A012E8-80A012F4 000C+00 s=1 e=0 z=0  None .bss       prtclScl$5143                                                */
-static u8 data_80A012E8[12];
+static u8 prtclScl[12];
 
 /* 809FABB8-809FAF90 03D8+00 s=1 e=0 z=0  None .text      setAttnPos__13daNpc_Hanjo_cFv                                */
 #pragma push

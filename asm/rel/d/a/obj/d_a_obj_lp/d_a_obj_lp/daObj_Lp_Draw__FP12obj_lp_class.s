@@ -65,8 +65,8 @@ lbl_80C54264:
 /* 80C54284  40 82 00 5C */	bne lbl_80C542E0
 /* 80C54288  7F 23 CB 78 */	mr r3, r25
 /* 80C5428C  38 80 00 03 */	li r4, 3
-/* 80C54290  3C A0 80 C5 */	lis r5, data_80C55AD8@ha
-/* 80C54294  38 A5 5A D8 */	addi r5, r5, data_80C55AD8@l
+/* 80C54290  3C A0 80 C5 */	lis r5, l_color@ha
+/* 80C54294  38 A5 5A D8 */	addi r5, r5, l_color@l
 /* 80C54298  38 DA 01 0C */	addi r6, r26, 0x10c
 /* 80C5429C  38 63 AD 7C */	addi r3, r3, -21124
 /* 80C542A0  4B 3B EB 9C */	b update__19mDoExt_3DlineMat0_cFiR8_GXColorP12dKy_tevstr_c

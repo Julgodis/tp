@@ -216,8 +216,8 @@ lbl_80790C58:
 /* 80790C6C  D8 01 00 58 */	stfd f0, 0x58(r1)
 /* 80790C70  80 01 00 5C */	lwz r0, 0x5c(r1)
 /* 80790C74  54 00 10 3A */	slwi r0, r0, 2
-/* 80790C78  3C 60 80 79 */	lis r3, data_80791F4C@ha
-/* 80790C7C  38 63 1F 4C */	addi r3, r3, data_80791F4C@l
+/* 80790C78  3C 60 80 79 */	lis r3, time_scale@ha
+/* 80790C7C  38 63 1F 4C */	addi r3, r3, time_scale@l
 /* 80790C80  7C 03 04 2E */	lfsx f0, r3, r0
 /* 80790C84  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80790C88  EF FF 00 32 */	fmuls f31, f31, f0

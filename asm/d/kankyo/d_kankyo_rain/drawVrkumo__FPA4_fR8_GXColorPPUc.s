@@ -330,7 +330,7 @@ lbl_8006A53C:
 /* 8006A57C  7C 00 07 75 */	extsb. r0, r0
 /* 8006A580  40 82 00 14 */	bne lbl_8006A594
 /* 8006A584  C0 02 87 B8 */	lfs f0, lit_3954(r2)
-/* 8006A588  D0 0D 89 A8 */	stfs f0, data_80450F28(r13)
+/* 8006A588  D0 0D 89 A8 */	stfs f0, howa_loop_cnt(r13)
 /* 8006A58C  38 00 00 01 */	li r0, 1
 /* 8006A590  98 0D 89 AC */	stb r0, data_80450F2C(r13)
 lbl_8006A594:
@@ -366,7 +366,7 @@ lbl_8006A5D0:
 /* 8006A600  C8 01 01 38 */	lfd f0, 0x138(r1)
 /* 8006A604  EC 40 08 28 */	fsubs f2, f0, f1
 /* 8006A608  C0 22 87 D0 */	lfs f1, lit_4103(r2)
-/* 8006A60C  C0 0D 89 A8 */	lfs f0, data_80450F28(r13)
+/* 8006A60C  C0 0D 89 A8 */	lfs f0, howa_loop_cnt(r13)
 /* 8006A610  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8006A614  EC 22 00 2A */	fadds f1, f2, f0
 /* 8006A618  48 1F CF CD */	bl cM_rad2s__Ff
@@ -376,11 +376,11 @@ lbl_8006A5D0:
 /* 8006A628  7C 23 04 2E */	lfsx f1, r3, r0
 /* 8006A62C  C0 0F 00 44 */	lfs f0, 0x44(r15)
 /* 8006A630  EC 41 00 32 */	fmuls f2, f1, f0
-/* 8006A634  C0 2D 89 A8 */	lfs f1, data_80450F28(r13)
+/* 8006A634  C0 2D 89 A8 */	lfs f1, howa_loop_cnt(r13)
 /* 8006A638  C0 02 89 34 */	lfs f0, lit_5721(r2)
 /* 8006A63C  EC 00 06 72 */	fmuls f0, f0, f25
 /* 8006A640  EC 01 00 2A */	fadds f0, f1, f0
-/* 8006A644  D0 0D 89 A8 */	stfs f0, data_80450F28(r13)
+/* 8006A644  D0 0D 89 A8 */	stfs f0, howa_loop_cnt(r13)
 /* 8006A648  C0 02 88 1C */	lfs f0, lit_4356(r2)
 /* 8006A64C  EC 00 06 32 */	fmuls f0, f0, f24
 /* 8006A650  EC 00 00 B2 */	fmuls f0, f0, f2

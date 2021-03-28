@@ -14,21 +14,18 @@
 struct msg_class {
 };
 
+struct JKRHeap {
+	/* 802CE784 */ void getTotalFreeSize();
+};
+
 struct JKRArchive {
 	struct EMountMode {
 	};
 
 };
 
-struct JKRHeap {
-	/* 802CE784 */ void getTotalFreeSize();
-};
-
 struct mDoDvdThd_mountXArchive_c {
 	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
-};
-
-struct jmessage_tControl {
 };
 
 struct Vec {
@@ -47,6 +44,9 @@ struct jmessage_tReference {
 	/* 80229810 */ void resetCharCountBuffer();
 	/* 8022994C */ void isLightEnd();
 	/* 80238C78 */ void setActorPos(cXyz);
+};
+
+struct jmessage_tControl {
 };
 
 struct jmessage_tSequenceProcessor {
@@ -1332,7 +1332,7 @@ asm void dMsgObject_c::isSend() {
 
 /* ############################################################################################## */
 /* 8043069C-804306B8 0016+06 s=1 e=0 z=0  None .bss       arcName$6106                                                 */
-static u8 data_8043069C[22 + 6 /* padding */];
+static u8 arcName[22 + 6 /* padding */];
 
 /* 80236BF8-80236C90 0098+00 s=1 e=0 z=0  None .text      readMessageGroupLocal__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c */
 #pragma push

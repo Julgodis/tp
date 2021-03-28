@@ -18,10 +18,10 @@ struct mDoHIO_entry_c {
 	/* 80BF93E8 */ ~mDoHIO_entry_c();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -92,10 +92,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -113,10 +113,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -506,44 +506,44 @@ SECTION_DATA static void* lit_3936[3] = {
 };
 
 /* 80BFAA80-80BFAAA4 0024+00 s=1 e=0 z=0  None .data      l_func$3933                                                  */
-SECTION_DATA static u8 data_80BFAA80[36] = {
+SECTION_DATA static u8 l_func[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80BFAAA4-80BFAAA8 0004+00 s=1 e=0 z=0  None .data      l_eff$3973                                                   */
-SECTION_DATA static u8 data_80BFAAA4[4] = {
+SECTION_DATA static u8 l_eff[4] = {
 	0x87, 0x4F, 0x87, 0x50,
 };
 
 /* 80BFAAA8-80BFAAAC 0004+00 s=1 e=0 z=0  None .data      l_colorKR$4109                                               */
-SECTION_DATA static u8 data_80BFAAA8[4] = {
+SECTION_DATA static u8 l_colorKR[4] = {
 	0x3C, 0x50, 0x50, 0x00,
 };
 
 /* 80BFAAAC-80BFAAB0 0004+00 s=1 e=0 z=0  None .data      l_colorKG$4110                                               */
-SECTION_DATA static u8 data_80BFAAAC[4] = {
+SECTION_DATA static u8 l_colorKG[4] = {
 	0x32, 0x00, 0x23, 0x14,
 };
 
 /* 80BFAAB0-80BFAAB4 0004+00 s=1 e=0 z=0  None .data      l_colorKB$4111                                               */
-SECTION_DATA static u8 data_80BFAAB0[4] = {
+SECTION_DATA static u8 l_colorKB[4] = {
 	0x3C, 0x23, 0x00, 0x50,
 };
 
 /* 80BFAAB4-80BFAAB8 0004+00 s=1 e=0 z=0  None .data      l_colorCR$4112                                               */
-SECTION_DATA static u8 data_80BFAAB4[4] = {
+SECTION_DATA static u8 l_colorCR[4] = {
 	0x96, 0xFF, 0xFF, 0x00,
 };
 
 /* 80BFAAB8-80BFAABC 0004+00 s=1 e=0 z=0  None .data      l_colorCG$4113                                               */
-SECTION_DATA static u8 data_80BFAAB8[4] = {
+SECTION_DATA static u8 l_colorCG[4] = {
 	0x96, 0x64, 0xFF, 0x96,
 };
 
 /* 80BFAABC-80BFAAC0 0004+00 s=1 e=0 z=0  None .data      l_colorCB$4114                                               */
-SECTION_DATA static u8 data_80BFAABC[4] = {
+SECTION_DATA static u8 l_colorCB[4] = {
 	0x96, 0x64, 0x00, 0xFF,
 };
 
@@ -943,7 +943,7 @@ asm void daGlwSph_c::effectSet() {
 
 /* ############################################################################################## */
 /* 80BFAFD4-80BFAFE8 0014+00 s=1 e=0 z=0  None .bss       sSeId$4016                                                   */
-static u8 data_80BFAFD4[20];
+static u8 sSeId[20];
 
 /* 80BF9F30-80BFA010 00E0+00 s=1 e=0 z=0  None .text      getSE__10daGlwSph_cFv                                        */
 #pragma push

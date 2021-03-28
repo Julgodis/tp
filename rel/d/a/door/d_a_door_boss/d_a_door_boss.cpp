@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -554,7 +554,7 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80670A40-80670A6C 002C+00 s=1 e=0 z=0  None .data      action_table$3817                                            */
-SECTION_DATA static void* data_80670A40[11] = {
+SECTION_DATA static void* action_table[11] = {
 	(void*)(((char*)&struct_806709D0)+0x0) /* None */,
 	(void*)(((char*)&struct_806709D0)+0x5) /* None */,
 	(void*)(((char*)&struct_806709DC)+0x0) /* None */,
@@ -627,7 +627,7 @@ SECTION_DATA static void* lit_4152[3] = {
 };
 
 /* 80670AF4-80670B24 0030+00 s=1 e=0 z=0  None .data      l_action$4148                                                */
-SECTION_DATA static u8 data_80670AF4[48] = {
+SECTION_DATA static u8 l_action[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

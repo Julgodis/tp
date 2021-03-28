@@ -167,8 +167,8 @@ lbl_804A3928:
 /* 804A3934  7C 00 07 75 */	extsb. r0, r0
 /* 804A3938  40 82 00 24 */	bne lbl_804A395C
 /* 804A393C  C0 1E 00 2C */	lfs f0, 0x2c(r30)
-/* 804A3940  3C 60 80 4A */	lis r3, data_804A4188@ha
-/* 804A3944  38 63 41 88 */	addi r3, r3, data_804A4188@l
+/* 804A3940  3C 60 80 4A */	lis r3, shootInitLocalPos@ha
+/* 804A3944  38 63 41 88 */	addi r3, r3, shootInitLocalPos@l
 /* 804A3948  D0 03 00 04 */	stfs f0, 4(r3)
 /* 804A394C  C0 1E 00 20 */	lfs f0, 0x20(r30)
 /* 804A3950  D0 03 00 08 */	stfs f0, 8(r3)
@@ -202,8 +202,8 @@ lbl_804A395C:
 /* 804A39BC  4B B6 88 E4 */	b mDoMtx_ZXYrotM__FPA4_fsss
 /* 804A39C0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 804A39C4  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 804A39C8  3C 80 80 4A */	lis r4, data_804A4188@ha
-/* 804A39CC  38 84 41 88 */	addi r4, r4, data_804A4188@l
+/* 804A39C8  3C 80 80 4A */	lis r4, shootInitLocalPos@ha
+/* 804A39CC  38 84 41 88 */	addi r4, r4, shootInitLocalPos@l
 /* 804A39D0  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 804A39D4  4B EA 33 98 */	b PSMTXMultVec
 /* 804A39D8  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)

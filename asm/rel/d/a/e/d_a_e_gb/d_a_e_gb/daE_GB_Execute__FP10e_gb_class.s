@@ -508,8 +508,8 @@ lbl_806C60F8:
 /* 806C6190  3B 00 00 00 */	li r24, 0
 /* 806C6194  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 806C6198  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
-/* 806C619C  3C 60 80 6C */	lis r3, data_806C77C4@ha
-/* 806C61A0  3B 23 77 C4 */	addi r25, r3, data_806C77C4@l
+/* 806C619C  3C 60 80 6C */	lis r3, key_eno@ha
+/* 806C61A0  3B 23 77 C4 */	addi r25, r3, key_eno@l
 lbl_806C61A4:
 /* 806C61A4  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 806C61A8  38 00 00 FF */	li r0, 0xff

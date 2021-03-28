@@ -14,10 +14,10 @@
 struct fopAc_ac_c {
 };
 
-struct JPABaseEmitter {
+struct JPABaseParticle {
 };
 
-struct JPABaseParticle {
+struct JPABaseEmitter {
 };
 
 struct JPTraceParticleCallBack4 {

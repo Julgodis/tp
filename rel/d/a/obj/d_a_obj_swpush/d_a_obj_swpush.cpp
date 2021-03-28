@@ -109,10 +109,10 @@ struct dSv_info_c {
 	/* 8003542C */ void revSwitch(int, int);
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -481,7 +481,7 @@ SECTION_RODATA static u32 const lit_3880 = 0x3F800000;
 SECTION_RODATA static u32 const lit_3881 = 0xC20E0000;
 
 /* 80484E34-80484E3C 0006+02 s=1 e=0 z=0  None .rodata    tri_id$3921                                                  */
-SECTION_RODATA static u8 const data_80484E34[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const tri_id[6 + 2 /* padding */] = {
 	0x00, 0x01, 0x02, 0x03, 0x00, 0x02,
 	/* padding */
 	0x00, 0x00,
@@ -650,7 +650,7 @@ SECTION_DATA static void* lit_4522[3] = {
 };
 
 /* 80484EEC-80484F28 003C+00 s=1 e=0 z=0  None .data      demo_proc$4517                                               */
-SECTION_DATA static u8 data_80484EEC[60] = {
+SECTION_DATA static u8 demo_proc[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -686,7 +686,7 @@ SECTION_DATA static void* lit_4529[3] = {
 };
 
 /* 80484F58-80484F88 0030+00 s=1 e=0 z=0  None .data      mode_proc$4525                                               */
-SECTION_DATA static u8 data_80484F58[48] = {
+SECTION_DATA static u8 mode_proc[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -795,7 +795,7 @@ static u8 lit_3919[12];
 static u8 lit_3920[12];
 
 /* 8048506C-8048509C 0030+00 s=1 e=0 z=0  None .bss       no_push_vec$3914                                             */
-static u8 data_8048506C[48];
+static u8 no_push_vec[48];
 
 /* 80483574-80483910 039C+00 s=1 e=0 z=0  None .text      rideCB__Q211daObjSwpush5Act_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c */
 #pragma push

@@ -19,8 +19,8 @@ lbl_80BBACC0:
 lbl_80BBAD04:
 /* 80BBAD04  80 7F 05 70 */	lwz r3, 0x570(r31)
 /* 80BBAD08  38 63 00 24 */	addi r3, r3, 0x24
-/* 80BBAD0C  3C 80 80 BC */	lis r4, data_80BBAE9C@ha
-/* 80BBAD10  38 84 AE 9C */	addi r4, r4, data_80BBAE9C@l
+/* 80BBAD0C  3C 80 80 BC */	lis r4, bombOffset@ha
+/* 80BBAD10  38 84 AE 9C */	addi r4, r4, bombOffset@l
 /* 80BBAD14  38 A1 00 14 */	addi r5, r1, 0x14
 /* 80BBAD18  4B 78 C0 54 */	b PSMTXMultVec
 /* 80BBAD1C  38 00 00 00 */	li r0, 0
@@ -63,8 +63,8 @@ lbl_80BBAD98:
 /* 80BBADA0  41 82 00 1C */	beq lbl_80BBADBC
 /* 80BBADA4  80 7F 05 70 */	lwz r3, 0x570(r31)
 /* 80BBADA8  38 63 00 24 */	addi r3, r3, 0x24
-/* 80BBADAC  3C 80 80 BC */	lis r4, data_80BBAE9C@ha
-/* 80BBADB0  38 84 AE 9C */	addi r4, r4, data_80BBAE9C@l
+/* 80BBADAC  3C 80 80 BC */	lis r4, bombOffset@ha
+/* 80BBADB0  38 84 AE 9C */	addi r4, r4, bombOffset@l
 /* 80BBADB4  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80BBADB8  4B 78 BF B4 */	b PSMTXMultVec
 lbl_80BBADBC:

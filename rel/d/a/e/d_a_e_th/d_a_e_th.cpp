@@ -24,19 +24,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -618,24 +618,24 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 807B466C-807B4674 0008+00 s=1 e=0 z=0  None .data      e_prim$3785                                                  */
-SECTION_DATA static u8 data_807B466C[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 807B4674-807B467C 0008+00 s=1 e=0 z=0  None .data      e_env$3786                                                   */
-SECTION_DATA static u8 data_807B4674[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 807B467C-807B4684 0006+02 s=1 e=0 z=0  None .data      eff_id$3794                                                  */
-SECTION_DATA static u8 data_807B467C[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 807B4684-807B4688 0004+00 s=1 e=0 z=0  None .data      l_color$4083                                                 */
-SECTION_DATA static u8 data_807B4684[4] = {
+SECTION_DATA static u8 l_color[4] = {
 	0x50, 0x0A, 0x0A, 0xFF,
 };
 
@@ -703,7 +703,7 @@ SECTION_DATA static void* lit_5133[14] = {
 };
 
 /* 807B4754-807B4794 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$5396                                              */
-SECTION_DATA static u8 data_807B4754[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,

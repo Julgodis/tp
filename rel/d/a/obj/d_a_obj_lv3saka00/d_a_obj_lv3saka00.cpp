@@ -49,10 +49,10 @@ struct dBgW {
 	/* 8007B9C0 */ void Move();
 };
 
-struct cBgS_PolyInfo {
+struct cXyz {
 };
 
-struct cXyz {
+struct cBgS_PolyInfo {
 };
 
 struct csXyz {

@@ -35,6 +35,9 @@ struct daNPC_LF_HIO_c {
 	/* 80A6A8E4 */ ~daNPC_LF_HIO_c();
 };
 
+struct J3DModelData {
+};
+
 struct Vec {
 };
 
@@ -43,9 +46,6 @@ struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -184,7 +184,7 @@ SECTION_RODATA static u32 const lit_3772 = 0x3F19999A;
 SECTION_RODATA static u32 const lit_3773 = 0x437A0000;
 
 /* 80A6AA1C-80A6AA28 000C+00 s=1 e=0 z=0  None .data      wp$3976                                                      */
-SECTION_DATA static u8 data_80A6AA1C[12] = {
+SECTION_DATA static u8 wp[12] = {
 	0x3F, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x40, 0x20, 0x00, 0x00,
 };
 

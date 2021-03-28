@@ -64,8 +64,8 @@ lbl_801CD6A4:
 lbl_801CD6AC:
 /* 801CD6AC  38 7E 02 50 */	addi r3, r30, 0x250
 /* 801CD6B0  57 80 10 3A */	slwi r0, r28, 2
-/* 801CD6B4  3C 80 80 3C */	lis r4, data_803BD63C@ha
-/* 801CD6B8  38 84 D6 3C */	addi r4, r4, data_803BD63C@l
+/* 801CD6B4  3C 80 80 3C */	lis r4, stage_name_7304@ha
+/* 801CD6B8  38 84 D6 3C */	addi r4, r4, stage_name_7304@l
 /* 801CD6BC  7C 84 00 2E */	lwzx r4, r4, r0
 /* 801CD6C0  48 19 B4 6D */	bl strcpy
 /* 801CD6C4  57 E0 06 3F */	clrlwi. r0, r31, 0x18

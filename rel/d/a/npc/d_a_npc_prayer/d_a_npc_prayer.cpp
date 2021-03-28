@@ -24,19 +24,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF0C */ void ZXYrotS(csXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -94,10 +94,10 @@ struct daNpcPray_Param_c {
 	/* 80AB579C */ ~daNpcPray_Param_c();
 };
 
-struct J3DAnmTransformKey {
+struct _GXColorS10 {
 };
 
-struct _GXColorS10 {
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {

@@ -10,8 +10,8 @@ lbl_8057F9B8:
 /* 8057F9D8  7F E6 FB 78 */	mr r6, r31
 /* 8057F9DC  4B B0 3E 84 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 8057F9E0  38 7F 10 5C */	addi r3, r31, 0x105c
-/* 8057F9E4  3C 80 80 58 */	lis r4, data_805814AC@ha
-/* 8057F9E8  38 84 14 AC */	addi r4, r4, data_805814AC@l
+/* 8057F9E4  3C 80 80 58 */	lis r4, ccCylSrc@ha
+/* 8057F9E8  38 84 14 AC */	addi r4, r4, ccCylSrc@l
 /* 8057F9EC  4B B0 4E C8 */	b Set__8dCcD_CylFRC11dCcD_SrcCyl
 /* 8057F9F0  38 1F 10 20 */	addi r0, r31, 0x1020
 /* 8057F9F4  90 1F 10 A0 */	stw r0, 0x10a0(r31)

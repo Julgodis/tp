@@ -38,13 +38,13 @@ struct daLv6FurikoTrap_HIO_c {
 	/* 80C73050 */ ~daLv6FurikoTrap_HIO_c();
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -263,12 +263,12 @@ SECTION_DATA static u8 mCcDSph__17daLv6FurikoTrap_c[64] = {
 };
 
 /* 80C731E4-80C731F0 000C+00 s=1 e=0 z=0  None .data      posx$3810                                                    */
-SECTION_DATA static u8 data_80C731E4[12] = {
+SECTION_DATA static u8 posx[12] = {
 	0x43, 0xBF, 0x80, 0x00, 0x43, 0xB2, 0x00, 0x00, 0x43, 0xA4, 0x80, 0x00,
 };
 
 /* 80C731F0-80C731FC 000C+00 s=1 e=0 z=0  None .data      posy$3811                                                    */
-SECTION_DATA static u8 data_80C731F0[12] = {
+SECTION_DATA static u8 posy[12] = {
 	0xC4, 0x25, 0x00, 0x00, 0xC4, 0x2F, 0x00, 0x00, 0xC4, 0x39, 0x00, 0x00,
 };
 
@@ -280,7 +280,7 @@ SECTION_DATA static void* lit_3884[3] = {
 };
 
 /* 80C73208-80C73214 000C+00 s=1 e=0 z=0  None .data      mode_proc$3883                                               */
-SECTION_DATA static u8 data_80C73208[12] = {
+SECTION_DATA static u8 mode_proc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 

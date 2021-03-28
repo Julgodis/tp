@@ -181,9 +181,9 @@ extern "C" void chkSttsFlag__12daObjCarry_cFiUc(); // 1
 extern "C" void setRoomNo__12daObjCarry_cFiSc(); // 1
 extern "C" void getRoomNo__12daObjCarry_cFi(); // 1
 extern "C" void __sinit_d_com_static_cpp(); // 1
-extern "C" static void func_80031EAC(); // 1
+extern "C" static void __arraydtor_4479(); // 1
 extern "C" void __ct__Q27daSus_c6room_cFv(); // 1
-extern "C" static void func_80031EF0(); // 1
+extern "C" static void __arraydtor_3839(); // 1
 extern "C" void __dt__Q27daSus_c6data_cFv(); // 1
 extern "C" void __ct__Q27daSus_c6data_cFv(); // 1
 extern "C" extern char const* const d_com_d_com_static__stringBase0;
@@ -535,7 +535,7 @@ u8 m_path__8daYkgr_c[4];
 u8 m_emitter__8daYkgr_c[4];
 
 /* 80450D9C-80450DA4 0008+00 s=1 e=0 z=0  None .sbss      arcName$4309                                                 */
-static u8 data_80450D9C[8];
+static u8 arcName[8];
 
 /* 80031870-800318B4 0044+00 s=0 e=0 z=19  None .text      getArcName__12daSetBgObj_cFP10fopAc_ac_c                     */
 #pragma push
@@ -920,9 +920,9 @@ extern "C" asm void __sinit_d_com_static_cpp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80031EAC() {
+extern "C" asm static void __arraydtor_4479() {
 	nofralloc
-#include "asm/d/com/d_com_static/func_80031EAC.s"
+#include "asm/d/com/d_com_static/__arraydtor_4479.s"
 }
 #pragma pop
 
@@ -942,9 +942,9 @@ asm daSus_c::room_c::room_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80031EF0() {
+extern "C" asm static void __arraydtor_3839() {
 	nofralloc
-#include "asm/d/com/d_com_static/func_80031EF0.s"
+#include "asm/d/com/d_com_static/__arraydtor_3839.s"
 }
 #pragma pop
 

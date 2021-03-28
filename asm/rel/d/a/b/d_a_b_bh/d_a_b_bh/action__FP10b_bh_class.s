@@ -593,8 +593,8 @@ lbl_805B1DC4:
 /* 805B1DF8  3B 60 00 00 */	li r27, 0
 /* 805B1DFC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 805B1E00  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
-/* 805B1E04  3C 60 80 5B */	lis r3, data_805B3258@ha
-/* 805B1E08  3B 83 32 58 */	addi r28, r3, data_805B3258@l
+/* 805B1E04  3C 60 80 5B */	lis r3, eno_4831@ha
+/* 805B1E08  3B 83 32 58 */	addi r28, r3, eno_4831@l
 lbl_805B1E0C:
 /* 805B1E0C  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 805B1E10  38 80 00 00 */	li r4, 0
@@ -637,8 +637,8 @@ lbl_805B1E60:
 /* 805B1EA0  3B 60 00 00 */	li r27, 0
 /* 805B1EA4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 805B1EA8  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
-/* 805B1EAC  3C 60 80 5B */	lis r3, data_805B3264@ha
-/* 805B1EB0  3B 83 32 64 */	addi r28, r3, data_805B3264@l
+/* 805B1EAC  3C 60 80 5B */	lis r3, eno_4839@ha
+/* 805B1EB0  3B 83 32 64 */	addi r28, r3, eno_4839@l
 lbl_805B1EB4:
 /* 805B1EB4  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 805B1EB8  38 80 00 00 */	li r4, 0

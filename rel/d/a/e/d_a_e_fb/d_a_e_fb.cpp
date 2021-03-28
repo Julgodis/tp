@@ -23,11 +23,11 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModel {
-};
-
 struct cXyz {
 	/* 80267150 */ void atan2sY_XZ() const;
+};
+
+struct J3DModel {
 };
 
 struct mDoExt_invisibleModel {
@@ -35,10 +35,10 @@ struct mDoExt_invisibleModel {
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
 struct mDoExt_brkAnm {
@@ -46,19 +46,19 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -511,39 +511,39 @@ SECTION_DATA static u8 data_806B9074[64] = {
 };
 
 /* 806B90B4-806B90BC 0006+02 s=1 e=0 z=0  None .data      a_eff_id$3974                                                */
-SECTION_DATA static u8 data_806B90B4[6 + 2 /* padding */] = {
+SECTION_DATA static u8 a_eff_id[6 + 2 /* padding */] = {
 	0x85, 0xAA, 0x85, 0xAB, 0x86, 0x83,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 806B90BC-806B90C0 0004+00 s=1 e=0 z=0  None .data      d_eff_id$4275                                                */
-SECTION_DATA static u8 data_806B90BC[4] = {
+SECTION_DATA static u8 d_eff_id_4275[4] = {
 	0x85, 0xB1, 0x85, 0xB2,
 };
 
 /* 806B90C0-806B90CC 000A+02 s=1 e=0 z=0  None .data      n_eff_id$4612                                                */
-SECTION_DATA static u8 data_806B90C0[10 + 2 /* padding */] = {
+SECTION_DATA static u8 n_eff_id[10 + 2 /* padding */] = {
 	0x85, 0xB3, 0x85, 0xB4, 0x85, 0xB5, 0x85, 0xB6, 0x85, 0xB7,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 806B90CC-806B90E0 0014+00 s=1 e=0 z=0  None .data      n_joint_id$4613                                              */
-SECTION_DATA static u8 data_806B90CC[20] = {
+SECTION_DATA static u8 n_joint_id[20] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 806B90E0-806B90EC 000A+02 s=1 e=0 z=0  None .data      d_eff_id$4669                                                */
-SECTION_DATA static u8 data_806B90E0[10 + 2 /* padding */] = {
+SECTION_DATA static u8 d_eff_id_4669[10 + 2 /* padding */] = {
 	0x85, 0xAC, 0x85, 0xAD, 0x85, 0xAE, 0x85, 0xAF, 0x85, 0xB0,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 806B90EC-806B9100 0014+00 s=1 e=0 z=0  None .data      d_joint_id$4670                                              */
-SECTION_DATA static u8 data_806B90EC[20] = {
+SECTION_DATA static u8 d_joint_id[20] = {
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x02,
 	0x00, 0x00, 0x00, 0x01,
 };

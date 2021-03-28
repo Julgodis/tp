@@ -525,8 +525,8 @@ lbl_80819D94:
 /* 80819DB0  D0 1D 04 FC */	stfs f0, 0x4fc(r29)
 /* 80819DB4  80 1D 06 EC */	lwz r0, 0x6ec(r29)
 /* 80819DB8  54 00 08 3C */	slwi r0, r0, 1
-/* 80819DBC  3C 60 80 82 */	lis r3, data_80821C98@ha
-/* 80819DC0  38 63 1C 98 */	addi r3, r3, data_80821C98@l
+/* 80819DBC  3C 60 80 82 */	lis r3, ymb_chance_time@ha
+/* 80819DC0  38 63 1C 98 */	addi r3, r3, ymb_chance_time@l
 /* 80819DC4  7C 03 02 AE */	lhax r0, r3, r0
 /* 80819DC8  90 1D 06 FC */	stw r0, 0x6fc(r29)
 lbl_80819DCC:

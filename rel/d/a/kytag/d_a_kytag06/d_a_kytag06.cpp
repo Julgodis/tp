@@ -30,17 +30,17 @@ struct dSv_event_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct cXyz {
 	/* 808589A4 */ ~cXyz();
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -288,65 +288,65 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80859FC0-80859FE0 0020+00 s=1 e=0 z=0  None .data      S_time_table$3766                                            */
-SECTION_DATA static u8 data_80859FC0[32] = {
+SECTION_DATA static u8 S_time_table[32] = {
 	0x42, 0x34, 0x00, 0x00, 0x42, 0x96, 0x00, 0x00, 0x42, 0xF0, 0x00, 0x00, 0x43, 0x16, 0x00, 0x00,
 	0x43, 0x34, 0x00, 0x00, 0x43, 0x70, 0x00, 0x00, 0x43, 0x87, 0x00, 0x00, 0x43, 0xB4, 0x00, 0x00,
 };
 
 /* 80859FE0-80859FE8 0008+00 s=1 e=0 z=0  None .data      S_wether_table$3767                                          */
-SECTION_DATA static u8 data_80859FE0[8] = {
+SECTION_DATA static u8 S_wether_table[8] = {
 	0x00, 0x01, 0x02, 0x03, 0x04, 0x00, 0x01, 0x02,
 };
 
 /* 80859FE8-80859FEC 0004+00 s=1 e=0 z=0  None .data      S_wether_mode_pat01$3768                                     */
-SECTION_DATA static u8 data_80859FE8[4] = {
+SECTION_DATA static u8 S_wether_mode_pat01[4] = {
 	0x01, 0x02, 0x01, 0xFF,
 };
 
 /* 80859FEC-80859FF8 000C+00 s=1 e=0 z=0  None .data      S_wether_time_pat01$3769                                     */
-SECTION_DATA static u8 data_80859FEC[12] = {
+SECTION_DATA static u8 S_wether_time_pat01[12] = {
 	0x40, 0xF0, 0x00, 0x00, 0x40, 0xF0, 0x00, 0x00, 0x40, 0xF0, 0x00, 0x00,
 };
 
 /* 80859FF8-80859FFC 0004+00 s=1 e=0 z=0  None .data      S_wether_mode_pat02$3770                                     */
-SECTION_DATA static u8 data_80859FF8[4] = {
+SECTION_DATA static u8 S_wether_mode_pat02[4] = {
 	0x01, 0x04, 0x01, 0xFF,
 };
 
 /* 80859FFC-8085A008 000C+00 s=1 e=0 z=0  None .data      S_wether_time_pat02$3771                                     */
-SECTION_DATA static u8 data_80859FFC[12] = {
+SECTION_DATA static u8 S_wether_time_pat02[12] = {
 	0x40, 0xA0, 0x00, 0x00, 0x41, 0x70, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00,
 };
 
 /* 8085A008-8085A00C 0004+00 s=1 e=0 z=0  None .data      S_wether_mode_pat03$3772                                     */
-SECTION_DATA static u8 data_8085A008[4] = {
+SECTION_DATA static u8 S_wether_mode_pat03[4] = {
 	0x01, 0x03, 0x01, 0xFF,
 };
 
 /* 8085A00C-8085A018 000C+00 s=1 e=0 z=0  None .data      S_wether_time_pat03$3773                                     */
-SECTION_DATA static u8 data_8085A00C[12] = {
+SECTION_DATA static u8 S_wether_time_pat03[12] = {
 	0x40, 0xF0, 0x00, 0x00, 0x41, 0x70, 0x00, 0x00, 0x40, 0xF0, 0x00, 0x00,
 };
 
 /* 8085A018-8085A01C 0002+02 s=1 e=0 z=0  None .data      S_wether_mode_pat04$3774                                     */
-SECTION_DATA static u8 data_8085A018[2 + 2 /* padding */] = {
+SECTION_DATA static u8 S_wether_mode_pat04[2 + 2 /* padding */] = {
 	0x01, 0xFF,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 8085A01C-8085A020 0004+00 s=1 e=0 z=0  None .data      S_wether_time_pat04$3775                                     */
-SECTION_DATA static u8 data_8085A01C[4] = {
+SECTION_DATA static u8 S_wether_time_pat04[4] = {
 	0x41, 0xF0, 0x00, 0x00,
 };
 
 /* 8085A020-8085A024 0004+00 s=1 e=0 z=0  None .data      S_wether_mode_pat05$3776                                     */
-SECTION_DATA static u8 data_8085A020[4] = {
+SECTION_DATA static u8 S_wether_mode_pat05[4] = {
 	0x01, 0x05, 0x01, 0xFF,
 };
 
 /* 8085A024-8085A030 000C+00 s=1 e=0 z=0  None .data      S_wether_time_pat05$3777                                     */
-SECTION_DATA static u8 data_8085A024[12] = {
+SECTION_DATA static u8 S_wether_time_pat05[12] = {
 	0x40, 0x70, 0x00, 0x00, 0x40, 0xF0, 0x00, 0x00, 0x40, 0x70, 0x00, 0x00,
 };
 
@@ -623,7 +623,7 @@ SECTION_RODATA static u32 const lit_4208 = 0x41A00000;
 SECTION_RODATA static u32 const lit_4209 = 0x43020000;
 
 /* 8085A06C-8085A074 0008+00 s=1 e=0 z=0  None .data      w_eff_name$4163                                              */
-SECTION_DATA static u8 data_8085A06C[8] = {
+SECTION_DATA static u8 w_eff_name[8] = {
 	0x87, 0x53, 0x87, 0x54, 0x87, 0x55, 0x87, 0x56,
 };
 
@@ -679,7 +679,7 @@ u8 lit_1009[1 + 3 /* padding */];
 static u8 lit_4165[12 + 4 /* padding */];
 
 /* 8085A180-8085A18C 000C+00 s=1 e=0 z=0  None .bss       c_pos$4164                                                   */
-static u8 data_8085A180[12];
+static u8 c_pos[12];
 
 /* 808589E0-80858CD4 02F4+00 s=1 e=0 z=0  None .text      daKytag06_type_06_Execute__FP13kytag06_class                 */
 #pragma push

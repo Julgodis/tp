@@ -18,19 +18,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -87,10 +87,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -504,17 +504,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 8069479C-806947A4 0008+00 s=1 e=0 z=0  None .data      e_prim$3667                                                  */
-SECTION_DATA static u8 data_8069479C[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 806947A4-806947AC 0008+00 s=1 e=0 z=0  None .data      e_env$3668                                                   */
-SECTION_DATA static u8 data_806947A4[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 806947AC-806947B4 0006+02 s=1 e=0 z=0  None .data      eff_id$3676                                                  */
-SECTION_DATA static u8 data_806947AC[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -564,19 +564,19 @@ SECTION_DATA static void* lit_4547[22] = {
 };
 
 /* 80694840-80694848 0008+00 s=1 e=0 z=0  None .data      fire_name$4572                                               */
-SECTION_DATA static u8 data_80694840[8] = {
+SECTION_DATA static u8 fire_name[8] = {
 	0x82, 0x1D, 0x82, 0x1E, 0x82, 0x1F, 0x82, 0x20,
 };
 
 /* 80694848-80694850 0006+02 s=1 e=0 z=0  None .data      ice_name$4573                                                */
-SECTION_DATA static u8 data_80694848[6 + 2 /* padding */] = {
+SECTION_DATA static u8 ice_name[6 + 2 /* padding */] = {
 	0x82, 0x21, 0x82, 0x22, 0x82, 0x23,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80694850-80694890 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$4803                                              */
-SECTION_DATA static u8 data_80694850[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x0B, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -898,7 +898,7 @@ asm static void damage_check(e_bu_class* param_0) {
 
 /* ############################################################################################## */
 /* 80694984-80694A83 00FF+00 s=1 e=0 z=0  None .bss       check_index$4007                                             */
-static u8 data_80694984[255];
+static u8 check_index[255];
 
 /* 8069182C-80691A94 0268+00 s=2 e=0 z=0  None .text      path_check__FP10e_bu_class                                   */
 #pragma push

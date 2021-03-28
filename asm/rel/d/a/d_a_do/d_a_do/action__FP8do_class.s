@@ -557,8 +557,8 @@ lbl_8066D6DC:
 /* 8066D6E4  3B 40 00 00 */	li r26, 0
 /* 8066D6E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8066D6EC  3B 03 61 C0 */	addi r24, r3, g_dComIfG_gameInfo@l
-/* 8066D6F0  3C 60 80 67 */	lis r3, data_8066F0E4@ha
-/* 8066D6F4  3B 63 F0 E4 */	addi r27, r3, data_8066F0E4@l
+/* 8066D6F0  3C 60 80 67 */	lis r3, w_eff_id@ha
+/* 8066D6F4  3B 63 F0 E4 */	addi r27, r3, w_eff_id@l
 lbl_8066D6F8:
 /* 8066D6F8  80 78 5D 3C */	lwz r3, 0x5d3c(r24)
 /* 8066D6FC  38 00 00 FF */	li r0, 0xff

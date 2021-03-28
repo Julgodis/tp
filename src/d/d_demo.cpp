@@ -52,14 +52,14 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct dKy_tevstr_c {
 };
 
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -114,10 +114,10 @@ struct JStage {
 		/* 80280B88 */ void JSGGetColor() const;
 	};
 
-	struct TECameraView {
+	struct TECameraProjection {
 	};
 
-	struct TECameraProjection {
+	struct TECameraView {
 	};
 
 	struct TCamera {
@@ -997,7 +997,7 @@ asm void dDemo_actor_c::getPrm_Morf() {
 
 /* ############################################################################################## */
 /* 80424648-8042465C 0014+00 s=1 e=0 z=0  None .bss       dummy$4203                                                   */
-static u8 data_80424648[20];
+static u8 dummy[20];
 
 /* 80450E00-80450E04 0004+00 s=2 e=0 z=0  None .sbss      m_system__7dDemo_c                                           */
 static u8 m_system__7dDemo_c[4];
@@ -1057,7 +1057,7 @@ static u8 m_branchData__7dDemo_c[4];
 static u8 struct_80450E48[4];
 
 /* 80450E4C-80450E50 0004+00 s=1 e=0 z=0  None .sbss      it$4206                                                      */
-static u8 data_80450E4C[4];
+static u8 it[4];
 
 /* 80038338-80038490 0158+00 s=0 e=1 z=5  None .text      getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc                  */
 #pragma push
@@ -1781,7 +1781,7 @@ asm jmessage_tControl::~jmessage_tControl() {
 static u8 lit_5233[12];
 
 /* 80424668-80424678 000C+04 s=1 e=0 z=0  None .bss       l_translation$5232                                           */
-static u8 data_80424668[12 + 4 /* padding */];
+static u8 l_translation[12 + 4 /* padding */];
 
 /* 80450E50-80450E58 0008+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450E50[8];

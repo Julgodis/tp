@@ -21,7 +21,7 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct Vec {
@@ -33,10 +33,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -50,10 +50,10 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daNpcMoiR_c {
@@ -100,17 +100,17 @@ struct daNpcMoiR_Param_c {
 	/* 80A83240 */ ~daNpcMoiR_Param_c();
 };
 
-struct J3DAnmTransformKey {
+struct _GXColorS10 {
 };
 
-struct _GXColorS10 {
+struct J3DAnmTexPattern {
+	/* 8032AF50 */ void getTexNo(u16, u16*) const;
 };
 
 struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTexPattern {
-	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {

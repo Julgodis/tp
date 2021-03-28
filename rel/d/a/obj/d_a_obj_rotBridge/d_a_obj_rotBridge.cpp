@@ -18,10 +18,10 @@ struct mDoHIO_entry_c {
 	/* 80CBE9DC */ ~mDoHIO_entry_c();
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {

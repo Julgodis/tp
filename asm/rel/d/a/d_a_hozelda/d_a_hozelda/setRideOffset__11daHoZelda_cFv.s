@@ -13,13 +13,13 @@ lbl_8084819C:
 /* 808481C8  4E 80 04 21 */	bctrl 
 /* 808481CC  28 03 00 00 */	cmplwi r3, 0
 /* 808481D0  41 82 00 14 */	beq lbl_808481E4
-/* 808481D4  3C 60 80 85 */	lis r3, data_80848EB0@ha
-/* 808481D8  38 03 8E B0 */	addi r0, r3, data_80848EB0@l
+/* 808481D4  3C 60 80 85 */	lis r3, baseRidePos@ha
+/* 808481D8  38 03 8E B0 */	addi r0, r3, baseRidePos@l
 /* 808481DC  90 1F 07 04 */	stw r0, 0x704(r31)
 /* 808481E0  48 00 00 10 */	b lbl_808481F0
 lbl_808481E4:
-/* 808481E4  3C 60 80 85 */	lis r3, data_80848EBC@ha
-/* 808481E8  38 03 8E BC */	addi r0, r3, data_80848EBC@l
+/* 808481E4  3C 60 80 85 */	lis r3, frontRidePos@ha
+/* 808481E8  38 03 8E BC */	addi r0, r3, frontRidePos@l
 /* 808481EC  90 1F 07 04 */	stw r0, 0x704(r31)
 lbl_808481F0:
 /* 808481F0  83 E1 00 0C */	lwz r31, 0xc(r1)

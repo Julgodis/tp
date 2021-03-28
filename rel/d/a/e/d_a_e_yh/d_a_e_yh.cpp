@@ -18,10 +18,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
 struct mDoExt_brkAnm {
@@ -33,19 +33,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -72,13 +72,13 @@ struct mDoExt_3DlineMatSortPacket {
 	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -660,29 +660,29 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80804408-80804410 0008+00 s=1 e=0 z=0  None .data      e_prim$3781                                                  */
-SECTION_DATA static u8 data_80804408[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 80804410-80804418 0008+00 s=1 e=0 z=0  None .data      e_env$3782                                                   */
-SECTION_DATA static u8 data_80804410[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 80804418-80804420 0006+02 s=1 e=0 z=0  None .data      eff_id$3790                                                  */
-SECTION_DATA static u8 data_80804418[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80804420-80804424 0004+00 s=1 e=0 z=0  None .data      l_color$4007                                                 */
-SECTION_DATA static u8 data_80804420[4] = {
+SECTION_DATA static u8 l_color[4] = {
 	0x14, 0x0F, 0x00, 0xFF,
 };
 
 /* 80804424-8080443C 0016+02 s=1 e=0 z=0  None .data      pow_xa$4877                                                  */
-SECTION_DATA static u8 data_80804424[22 + 2 /* padding */] = {
+SECTION_DATA static u8 pow_xa[22 + 2 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x10, 0x00, 0x20, 0x00, 0x30, 0x00, 0x40, 0x00, 0x30, 0x00, 0x20, 0x00,
 	0x10, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -771,19 +771,19 @@ SECTION_DATA static void* lit_5595[22] = {
 };
 
 /* 80804560-80804568 0006+02 s=1 e=0 z=0  None .data      p_name$5603                                                  */
-SECTION_DATA static u8 data_80804560[6 + 2 /* padding */] = {
+SECTION_DATA static u8 p_name[6 + 2 /* padding */] = {
 	0x88, 0x11, 0x88, 0x12, 0x88, 0x13,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80804568-80804574 000C+00 s=1 e=0 z=0  None .data      p_idx$5604                                                   */
-SECTION_DATA static u8 data_80804568[12] = {
+SECTION_DATA static u8 p_idx[12] = {
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x06,
 };
 
 /* 80804574-808045B4 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$5967                                              */
-SECTION_DATA static u8 data_80804574[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x25, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -791,7 +791,7 @@ SECTION_DATA static u8 data_80804574[64] = {
 };
 
 /* 808045B4-808045F4 0040+00 s=1 e=0 z=0  None .data      at_sph_src$5968                                              */
-SECTION_DATA static u8 data_808045B4[64] = {
+SECTION_DATA static u8 at_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -799,7 +799,7 @@ SECTION_DATA static u8 data_808045B4[64] = {
 };
 
 /* 808045F4-80804634 0040+00 s=1 e=0 z=0  None .data      kuki_sph_src$5969                                            */
-SECTION_DATA static u8 data_808045F4[64] = {
+SECTION_DATA static u8 kuki_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,

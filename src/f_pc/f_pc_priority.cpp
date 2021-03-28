@@ -143,7 +143,7 @@ asm static void fpcPi_GetFromQueue() {
 
 /* ############################################################################################## */
 /* 804505E8-804505F0 0008+00 s=1 e=0 z=0  None .sdata     crear$2224                                                   */
-SECTION_SDATA static u8 data_804505E8[8] = {
+SECTION_SDATA static u8 crear[8] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 };
 

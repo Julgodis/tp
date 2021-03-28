@@ -9,8 +9,8 @@ lbl_807A7AC0:
 /* 807A7ADC  3B E0 00 00 */	li r31, 0
 /* 807A7AE0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 807A7AE4  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 807A7AE8  3C 60 80 7B */	lis r3, data_807AFEFC@ha
-/* 807A7AEC  3B A3 FE FC */	addi r29, r3, data_807AFEFC@l
+/* 807A7AE8  3C 60 80 7B */	lis r3, l_SW_HIDE_EFFECT_ID@ha
+/* 807A7AEC  3B A3 FE FC */	addi r29, r3, l_SW_HIDE_EFFECT_ID@l
 /* 807A7AF0  3C 60 80 7B */	lis r3, lit_3911@ha
 /* 807A7AF4  3B C3 FD 34 */	addi r30, r3, lit_3911@l
 lbl_807A7AF8:

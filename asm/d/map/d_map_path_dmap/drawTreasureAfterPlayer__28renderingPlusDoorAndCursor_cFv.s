@@ -34,18 +34,18 @@ lbl_80040E84:
 /* 80040F04  38 E0 00 00 */	li r7, 0
 /* 80040F08  48 31 A6 BD */	bl GXSetVtxAttrFmt
 /* 80040F0C  38 60 00 0D */	li r3, 0xd
-/* 80040F10  38 82 84 AC */	la r4, data_80451EAC(r2) /* 80451EAC-_SDA2_BASE_ */
+/* 80040F10  38 82 84 AC */	la r4, l_iconTex0_4605(r2) /* 80451EAC-_SDA2_BASE_ */
 /* 80040F14  38 A0 00 02 */	li r5, 2
 /* 80040F18  48 31 AC 11 */	bl GXSetArray
 /* 80040F1C  7F E3 FB 78 */	mr r3, r31
 /* 80040F20  4B FF C0 21 */	bl setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv
 /* 80040F24  3A E0 00 00 */	li r23, 0
 /* 80040F28  3B C0 00 00 */	li r30, 0
-/* 80040F2C  3B 42 84 B4 */	la r26, data_80451EB4(r2) /* 80451EB4-_SDA2_BASE_ */
+/* 80040F2C  3B 42 84 B4 */	la r26, tboxNotStayColor_4624(r2) /* 80451EB4-_SDA2_BASE_ */
 /* 80040F30  3B 22 84 7C */	la r25, l_treasureStartColor(r2) /* 80451E7C-_SDA2_BASE_ */
 /* 80040F34  56 98 06 3E */	clrlwi r24, r20, 0x18
-/* 80040F38  3C 60 80 38 */	lis r3, data_80379CB8@ha
-/* 80040F3C  3B 63 9C B8 */	addi r27, r3, data_80379CB8@l
+/* 80040F38  3C 60 80 38 */	lis r3, l_treasureDispList_4606@ha
+/* 80040F3C  3B 63 9C B8 */	addi r27, r3, l_treasureDispList_4606@l
 lbl_80040F40:
 /* 80040F40  7F BB F2 14 */	add r29, r27, r30
 /* 80040F44  88 9D 00 00 */	lbz r4, 0(r29)
@@ -121,7 +121,7 @@ lbl_8004102C:
 /* 80041058  7C 00 07 74 */	extsb r0, r0
 /* 8004105C  7C 03 00 00 */	cmpw r3, r0
 /* 80041060  41 82 00 28 */	beq lbl_80041088
-/* 80041064  88 02 84 B4 */	lbz r0, data_80451EB4(r2)
+/* 80041064  88 02 84 B4 */	lbz r0, tboxNotStayColor_4624(r2)
 /* 80041068  98 01 00 18 */	stb r0, 0x18(r1)
 /* 8004106C  88 1A 00 01 */	lbz r0, 1(r26)
 /* 80041070  98 01 00 19 */	stb r0, 0x19(r1)

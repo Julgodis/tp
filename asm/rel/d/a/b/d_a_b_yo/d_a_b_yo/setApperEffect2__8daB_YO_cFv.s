@@ -19,8 +19,8 @@ lbl_80630CA0:
 /* 80630CE4  3B E0 00 00 */	li r31, 0
 /* 80630CE8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80630CEC  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 80630CF0  3C 60 80 64 */	lis r3, data_80639C98@ha
-/* 80630CF4  3B A3 9C 98 */	addi r29, r3, data_80639C98@l
+/* 80630CF0  3C 60 80 64 */	lis r3, apper_effect_id@ha
+/* 80630CF4  3B A3 9C 98 */	addi r29, r3, apper_effect_id@l
 /* 80630CF8  3C 60 80 64 */	lis r3, lit_3795@ha
 /* 80630CFC  3B C3 98 10 */	addi r30, r3, lit_3795@l
 lbl_80630D00:

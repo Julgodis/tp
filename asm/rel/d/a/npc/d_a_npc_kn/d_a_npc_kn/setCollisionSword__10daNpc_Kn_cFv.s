@@ -52,8 +52,8 @@ lbl_80A2CA08:
 /* 80A2CA3C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80A2CA40  4C 40 13 82 */	cror 2, 0, 2
 /* 80A2CA44  40 82 00 98 */	bne lbl_80A2CADC
-/* 80A2CA48  3C 60 80 A4 */	lis r3, data_80A41874@ha
-/* 80A2CA4C  38 63 18 74 */	addi r3, r3, data_80A41874@l
+/* 80A2CA48  3C 60 80 A4 */	lis r3, l_swordOffset@ha
+/* 80A2CA4C  38 63 18 74 */	addi r3, r3, l_swordOffset@l
 /* 80A2CA50  7C 03 CC 2E */	lfsx f0, r3, r25
 /* 80A2CA54  D0 01 00 08 */	stfs f0, 8(r1)
 /* 80A2CA58  C0 1F 00 38 */	lfs f0, 0x38(r31)

@@ -16,8 +16,8 @@ lbl_80684B64:
 /* 80684B9C  3B 43 0F 38 */	addi r26, r3, 0xf38
 /* 80684BA0  3C 60 80 68 */	lis r3, stringBase0@ha
 /* 80684BA4  3B 83 55 24 */	addi r28, r3, stringBase0@l
-/* 80684BA8  3C 60 80 68 */	lis r3, data_806854F8@ha
-/* 80684BAC  3B A3 54 F8 */	addi r29, r3, data_806854F8@l
+/* 80684BA8  3C 60 80 68 */	lis r3, l_bmdidx_4715@ha
+/* 80684BAC  3B A3 54 F8 */	addi r29, r3, l_bmdidx_4715@l
 /* 80684BB0  3B 7B C2 F8 */	addi r27, r27, -15624
 lbl_80684BB4:
 /* 80684BB4  7F 83 E3 78 */	mr r3, r28

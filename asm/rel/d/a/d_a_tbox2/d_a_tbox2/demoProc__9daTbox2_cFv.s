@@ -10,8 +10,8 @@ lbl_8049724C:
 /* 8049726C  3B C3 4F F8 */	addi r30, r3, 0x4ff8
 /* 80497270  7F C3 F3 78 */	mr r3, r30
 /* 80497274  80 9D 0A C4 */	lwz r4, 0xac4(r29)
-/* 80497278  3C A0 80 4A */	lis r5, data_804982C8@ha
-/* 8049727C  38 A5 82 C8 */	addi r5, r5, data_804982C8@l
+/* 80497278  3C A0 80 4A */	lis r5, action_table@ha
+/* 8049727C  38 A5 82 C8 */	addi r5, r5, action_table@l
 /* 80497280  38 C0 00 04 */	li r6, 4
 /* 80497284  38 E0 00 00 */	li r7, 0
 /* 80497288  39 00 00 00 */	li r8, 0

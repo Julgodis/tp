@@ -99,11 +99,11 @@ struct STControl {
 	/* 8003219C */ void checkTrigger();
 };
 
-struct JKRExpHeap {
-	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+struct CSTControl {
 };
 
-struct CSTControl {
+struct JKRExpHeap {
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
 struct dMenu_Fmap_c {
@@ -655,7 +655,7 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 /* ############################################################################################## */
 /* 803960D0-803960E8 0018+00 s=1 e=0 z=0  None .rodata    i_swBit$7362                                                 */
-SECTION_RODATA static u8 const data_803960D0[24] = {
+SECTION_RODATA static u8 const i_swBit[24] = {
 	0x00, 0x00, 0x00, 0x41, 0x00, 0x00, 0x00, 0x29, 0x00, 0x00, 0x00, 0x2A, 0x00, 0x00, 0x00, 0x32,
 	0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x32,
 };
@@ -1166,7 +1166,7 @@ SECTION_DATA static u8 move_process[360] = {
 };
 
 /* 803BD63C-803BD64C 0010+00 s=1 e=0 z=0  None .data      stage_name$7304                                              */
-SECTION_DATA static void* data_803BD63C[4] = {
+SECTION_DATA static void* stage_name_7304[4] = {
 	(void*)(((char*)&d_menu_d_menu_fmap__stringBase0)+0x87),
 	(void*)(((char*)&d_menu_d_menu_fmap__stringBase0)+0x8F),
 	(void*)(((char*)&d_menu_d_menu_fmap__stringBase0)+0x97),
@@ -1174,7 +1174,7 @@ SECTION_DATA static void* data_803BD63C[4] = {
 };
 
 /* 803BD64C-803BD664 0018+00 s=1 e=0 z=0  None .data      stage_name$7361                                              */
-SECTION_DATA static void* data_803BD64C[6] = {
+SECTION_DATA static void* stage_name_7361[6] = {
 	(void*)(((char*)&d_menu_d_menu_fmap__stringBase0)+0xA7),
 	(void*)(((char*)&d_menu_d_menu_fmap__stringBase0)+0xAF),
 	(void*)(((char*)&d_menu_d_menu_fmap__stringBase0)+0xAF),
@@ -1221,7 +1221,7 @@ asm dMf_HIO_c::dMf_HIO_c() {
 
 /* ############################################################################################## */
 /* 804510A4-804510AC 0008+00 s=1 e=0 z=0  None .sbss      virtual_stage$3999                                           */
-static u8 data_804510A4[8];
+static u8 virtual_stage[8];
 
 /* 801C662C-801C66E4 00B8+00 s=5 e=2 z=0  None .text      dMenuFmap_getStartStageName__FPv                             */
 #pragma push

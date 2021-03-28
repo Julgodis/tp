@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -397,10 +397,10 @@ u8 lit_1010[1 + 3 /* padding */];
 u8 lit_1009[1 + 3 /* padding */];
 
 /* 80D4D380-80D4D38C 0008+04 s=1 e=0 z=0  None .bss       TEV_COLOR_1$3795                                             */
-static u8 data_80D4D380[8 + 4 /* padding */];
+static u8 TEV_COLOR_1[8 + 4 /* padding */];
 
 /* 80D4D38C-80D4D394 0008+00 s=1 e=0 z=0  None .bss       TEV_COLOR_2$3800                                             */
-static u8 data_80D4D38C[8];
+static u8 TEV_COLOR_2[8];
 
 /* 80D4CB84-80D4CCF0 016C+00 s=1 e=0 z=0  None .text      draw__11daPPolamp_cFv                                        */
 #pragma push

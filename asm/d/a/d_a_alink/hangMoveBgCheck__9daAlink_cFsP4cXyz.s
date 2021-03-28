@@ -96,8 +96,8 @@ lbl_800FA19C:
 /* 800FA1D8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 800FA1DC  3B 43 0F 38 */	addi r26, r3, 0xf38
 /* 800FA1E0  3B 3D 1B 78 */	addi r25, r29, 0x1b78
-/* 800FA1E4  3C 60 80 39 */	lis r3, data_803919F0@ha
-/* 800FA1E8  3B 63 19 F0 */	addi r27, r3, data_803919F0@l
+/* 800FA1E4  3C 60 80 39 */	lis r3, underOffsetY@ha
+/* 800FA1E8  3B 63 19 F0 */	addi r27, r3, underOffsetY@l
 lbl_800FA1EC:
 /* 800FA1EC  7C 1B E4 2E */	lfsx f0, r27, r28
 /* 800FA1F0  EC 1F 00 28 */	fsubs f0, f31, f0

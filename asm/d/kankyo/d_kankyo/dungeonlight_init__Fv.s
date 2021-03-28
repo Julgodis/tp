@@ -11,12 +11,12 @@ lbl_8019E874:
 /* 8019E898  38 A0 00 00 */	li r5, 0
 /* 8019E89C  38 C0 00 00 */	li r6, 0
 /* 8019E8A0  38 E0 00 00 */	li r7, 0
-/* 8019E8A4  3D 00 80 3C */	lis r8, data_803BBF58@ha
-/* 8019E8A8  3B C8 BF 58 */	addi r30, r8, data_803BBF58@l
+/* 8019E8A4  3D 00 80 3C */	lis r8, test_pos_tbl@ha
+/* 8019E8A8  3B C8 BF 58 */	addi r30, r8, test_pos_tbl@l
 /* 8019E8AC  C0 E2 A2 48 */	lfs f7, lit_4505(r2)
 /* 8019E8B0  C0 C2 A2 90 */	lfs f6, lit_5191(r2)
-/* 8019E8B4  3D 00 80 3C */	lis r8, data_803BBFB8@ha
-/* 8019E8B8  3B E8 BF B8 */	addi r31, r8, data_803BBFB8@l
+/* 8019E8B4  3D 00 80 3C */	lis r8, test_color_tbl@ha
+/* 8019E8B8  3B E8 BF B8 */	addi r31, r8, test_color_tbl@l
 /* 8019E8BC  C0 A2 A2 94 */	lfs f5, lit_5192(r2)
 /* 8019E8C0  C0 82 A2 0C */	lfs f4, lit_4409(r2)
 /* 8019E8C4  C0 62 A2 2C */	lfs f3, lit_4442(r2)

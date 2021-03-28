@@ -14,8 +14,8 @@ lbl_801E7E98:
 /* 801E7EC8  40 82 00 5C */	bne lbl_801E7F24
 /* 801E7ECC  3B 60 00 00 */	li r27, 0
 /* 801E7ED0  3B C0 00 00 */	li r30, 0
-/* 801E7ED4  3C 60 80 39 */	lis r3, data_80397588@ha
-/* 801E7ED8  3B A3 75 88 */	addi r29, r3, data_80397588@l
+/* 801E7ED4  3C 60 80 39 */	lis r3, text_a_tag_6194@ha
+/* 801E7ED8  3B A3 75 88 */	addi r29, r3, text_a_tag_6194@l
 /* 801E7EDC  3C 60 80 39 */	lis r3, d_menu_d_menu_option__stringBase0@ha
 /* 801E7EE0  3B 83 75 D8 */	addi r28, r3, d_menu_d_menu_option__stringBase0@l
 lbl_801E7EE4:
@@ -38,8 +38,8 @@ lbl_801E7EE4:
 lbl_801E7F24:
 /* 801E7F24  3B 40 00 00 */	li r26, 0
 /* 801E7F28  3B C0 00 00 */	li r30, 0
-/* 801E7F2C  3C 60 80 39 */	lis r3, data_80397588@ha
-/* 801E7F30  3B 83 75 88 */	addi r28, r3, data_80397588@l
+/* 801E7F2C  3C 60 80 39 */	lis r3, text_a_tag_6194@ha
+/* 801E7F30  3B 83 75 88 */	addi r28, r3, text_a_tag_6194@l
 /* 801E7F34  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801E7F38  3B A3 01 88 */	addi r29, r3, g_meter2_info@l
 lbl_801E7F3C:

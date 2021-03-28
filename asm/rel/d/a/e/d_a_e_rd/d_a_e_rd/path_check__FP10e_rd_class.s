@@ -47,14 +47,14 @@ lbl_80506AC8:
 /* 80506B10  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80506B14  40 82 00 18 */	bne lbl_80506B2C
 /* 80506B18  38 00 00 01 */	li r0, 1
-/* 80506B1C  3C 60 80 52 */	lis r3, data_80519234@ha
-/* 80506B20  38 63 92 34 */	addi r3, r3, data_80519234@l
+/* 80506B1C  3C 60 80 52 */	lis r3, check_index@ha
+/* 80506B20  38 63 92 34 */	addi r3, r3, check_index@l
 /* 80506B24  7C 03 D9 AE */	stbx r0, r3, r27
 /* 80506B28  48 00 00 14 */	b lbl_80506B3C
 lbl_80506B2C:
 /* 80506B2C  38 00 00 00 */	li r0, 0
-/* 80506B30  3C 60 80 52 */	lis r3, data_80519234@ha
-/* 80506B34  38 63 92 34 */	addi r3, r3, data_80519234@l
+/* 80506B30  3C 60 80 52 */	lis r3, check_index@ha
+/* 80506B34  38 63 92 34 */	addi r3, r3, check_index@l
 /* 80506B38  7C 03 D9 AE */	stbx r0, r3, r27
 lbl_80506B3C:
 /* 80506B3C  3B 7B 00 01 */	addi r27, r27, 1
@@ -79,8 +79,8 @@ lbl_80506B64:
 lbl_80506B80:
 /* 80506B80  2C 07 00 FF */	cmpwi r7, 0xff
 /* 80506B84  40 80 00 78 */	bge lbl_80506BFC
-/* 80506B88  3C 60 80 52 */	lis r3, data_80519234@ha
-/* 80506B8C  38 63 92 34 */	addi r3, r3, data_80519234@l
+/* 80506B88  3C 60 80 52 */	lis r3, check_index@ha
+/* 80506B8C  38 63 92 34 */	addi r3, r3, check_index@l
 /* 80506B90  7C 03 38 AE */	lbzx r0, r3, r7
 /* 80506B94  28 00 00 00 */	cmplwi r0, 0
 /* 80506B98  41 82 00 64 */	beq lbl_80506BFC

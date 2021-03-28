@@ -6,8 +6,8 @@ lbl_809B3AB0:
 /* 809B3AC0  4B 9A E7 1C */	b _savegpr_29
 /* 809B3AC4  3B A0 00 00 */	li r29, 0
 /* 809B3AC8  3B E0 00 00 */	li r31, 0
-/* 809B3ACC  3C 60 80 9C */	lis r3, data_809B941C@ha
-/* 809B3AD0  3B C3 94 1C */	addi r30, r3, data_809B941C@l
+/* 809B3ACC  3C 60 80 9C */	lis r3, sTempBit@ha
+/* 809B3AD0  3B C3 94 1C */	addi r30, r3, sTempBit@l
 lbl_809B3AD4:
 /* 809B3AD4  7C 7E F8 2E */	lwzx r3, r30, r31
 /* 809B3AD8  4B 79 90 94 */	b daNpcT_chkTmpBit__FUl

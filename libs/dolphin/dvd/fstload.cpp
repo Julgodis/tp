@@ -93,7 +93,7 @@ SECTION_DATA static u8 lit_44[20] = {
 static u8 bb2Buf[63 + 1 /* padding */];
 
 /* 8044C9F8-8044CA28 0030+00 s=1 e=0 z=0  None .bss       block$18                                                     */
-static u8 data_8044C9F8[48];
+static u8 block[48];
 
 /* 80450A00-80450A04 0002+02 s=1 e=0 z=0  None .sdata     @37                                                          */
 SECTION_SDATA static u16 lit_37[1 + 1 /* padding */] = {

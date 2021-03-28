@@ -12,8 +12,8 @@ lbl_80CCA348:
 /* 80CCA370  3B 9E 4F F8 */	addi r28, r30, 0x4ff8
 /* 80CCA374  7F 83 E3 78 */	mr r3, r28
 /* 80CCA378  80 9B 06 3C */	lwz r4, 0x63c(r27)
-/* 80CCA37C  3C A0 80 CD */	lis r5, data_80CCB218@ha
-/* 80CCA380  38 A5 B2 18 */	addi r5, r5, data_80CCB218@l
+/* 80CCA37C  3C A0 80 CD */	lis r5, CUT_TYPE_TABLE@ha
+/* 80CCA380  38 A5 B2 18 */	addi r5, r5, CUT_TYPE_TABLE@l
 /* 80CCA384  38 C0 00 04 */	li r6, 4
 /* 80CCA388  38 E0 00 00 */	li r7, 0
 /* 80CCA38C  39 00 00 00 */	li r8, 0

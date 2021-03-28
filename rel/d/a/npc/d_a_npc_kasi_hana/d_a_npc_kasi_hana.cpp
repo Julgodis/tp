@@ -28,19 +28,19 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -88,19 +88,13 @@ struct daNpcKasi_Mng_c {
 	/* 80A2065C */ void getCenterPos();
 };
 
-struct J3DModel {
-};
-
-struct J3DJoint {
-};
-
-struct J3DAnmTransformKey {
-};
-
 struct _GXColorS10 {
 };
 
 struct J3DAnmTexPattern {
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {
@@ -137,6 +131,12 @@ struct daNpcF_c {
 	/* 80A20EAC */ bool setExpressionBtp(int);
 	/* 80A20EB4 */ void setExpression(int, f32);
 	/* 80A20EB8 */ void drawOtherMdls();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
 };
 
 struct daNpcKasiHana_c {

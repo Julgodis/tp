@@ -48,7 +48,7 @@ SYMBOLS = [
 	{'addr':0x80BBAE90,'size':4,'pad':0,'label':"lit_3688",'name':"@3688",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80BBAE94,'size':4,'pad':0,'label':"lit_3689",'name':"@3689",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"Integer"},
 	{'addr':0x80BBAE98,'size':4,'pad':0,'label':"lit_3690",'name':"@3690",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"Integer"},
-	{'addr':0x80BBAE9C,'size':12,'pad':0,'label':"data_80BBAE9C",'name':"bombOffset$3727",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
+	{'addr':0x80BBAE9C,'size':12,'pad':0,'label':"bombOffset",'name':"bombOffset$3727",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80BBAEA8,'size':32,'pad':0,'label':"l_daObjBombf_Method",'name':"l_daObjBombf_Method",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x80BBAEC8,'size':48,'pad':0,'label':"g_profile_Obj_Bombf",'name':"g_profile_Obj_Bombf",'lib':-1,'tu':3,'section':4,'r':[0,0,1],'sh':[0,0,0],'type':"ReferenceArray"},
 ]
@@ -76,7 +76,7 @@ SYMBOL_NAMES = {
 	"lit_3688":18,
 	"lit_3689":19,
 	"lit_3690":20,
-	"data_80BBAE9C":21,
+	"bombOffset":21,
 	"l_daObjBombf_Method":22,
 	"g_profile_Obj_Bombf":23,
 }

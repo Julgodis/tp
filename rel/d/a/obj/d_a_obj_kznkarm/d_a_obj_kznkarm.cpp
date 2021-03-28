@@ -56,10 +56,10 @@ struct daObjKazeNeko_c {
 	/* 80C3CC40 */ void getFirstVec(cXyz*, int);
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -511,7 +511,7 @@ asm void daObjKznkarm_c::initThrow() {
 
 /* ############################################################################################## */
 /* 80C50E88-80C50E90 0008+00 s=1 e=0 z=0  None .data      w_eff_id$3813                                                */
-SECTION_DATA static u8 data_80C50E88[8] = {
+SECTION_DATA static u8 w_eff_id[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 

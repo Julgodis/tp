@@ -119,10 +119,10 @@ struct daAlink_c {
 	/* 800E3760 */ void getBombExplodeTime() const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -652,17 +652,17 @@ SECTION_RODATA static u8 const lit_4133[8] = {
 SECTION_RODATA static u32 const lit_4187 = 0x3F800000;
 
 /* 8049DD40-8049DD4C 000C+00 s=1 e=0 z=0  None .rodata    effName$4192                                                 */
-SECTION_RODATA static u8 const data_8049DD40[12] = {
+SECTION_RODATA static u8 const effName_4192[12] = {
 	0x89, 0x6F, 0x89, 0x70, 0x89, 0x71, 0x89, 0x72, 0x89, 0x73, 0x89, 0x74,
 };
 
 /* 8049DD4C-8049DD54 0008+00 s=1 e=0 z=0  None .rodata    effName$4214                                                 */
-SECTION_RODATA static u8 const data_8049DD4C[8] = {
+SECTION_RODATA static u8 const effName_4214[8] = {
 	0x89, 0x75, 0x89, 0x76, 0x89, 0x77, 0x89, 0x78,
 };
 
 /* 8049DD54-8049DD60 000C+00 s=1 e=0 z=0  None .rodata    localEffPos$4215                                             */
-SECTION_RODATA static u8 const data_8049DD54[12] = {
+SECTION_RODATA static u8 const localEffPos[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0xB4, 0x00, 0x00,
 };
 
@@ -769,7 +769,7 @@ SECTION_RODATA static u32 const lit_5459 = 0x3F000000;
 SECTION_RODATA static u32 const lit_5460 = 0x459C4000;
 
 /* 8049DDE8-8049DDF0 0008+00 s=1 e=0 z=0  None .rodata    tmpColor$5589                                                */
-SECTION_RODATA static u8 const data_8049DDE8[8] = {
+SECTION_RODATA static u8 const tmpColor[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -1035,7 +1035,7 @@ u8 lit_1009[1 + 3 /* padding */];
 static u8 lit_4612[12 + 4 /* padding */];
 
 /* 8049DFB0-8049DFBC 000C+00 s=1 e=0 z=0  None .bss       localOffset$4611                                             */
-static u8 data_8049DFB0[12];
+static u8 localOffset[12];
 
 /* 8049AF18-8049AFEC 00D4+00 s=3 e=0 z=0  None .text      setSmokePos__9daArrow_cFv                                    */
 #pragma push

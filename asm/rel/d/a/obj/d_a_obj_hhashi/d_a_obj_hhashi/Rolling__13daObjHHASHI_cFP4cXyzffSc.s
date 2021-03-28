@@ -14,8 +14,8 @@ lbl_80580854:
 /* 80580884  7C 9E 23 78 */	mr r30, r4
 /* 80580888  FF A0 08 90 */	fmr f29, f1
 /* 8058088C  FF C0 10 90 */	fmr f30, f2
-/* 80580890  3C 60 80 58 */	lis r3, data_805814AC@ha
-/* 80580894  3B 83 14 AC */	addi r28, r3, data_805814AC@l
+/* 80580890  3C 60 80 58 */	lis r3, ccCylSrc@ha
+/* 80580894  3B 83 14 AC */	addi r28, r3, ccCylSrc@l
 /* 80580898  98 BD 05 A8 */	stb r5, 0x5a8(r29)
 /* 8058089C  80 1D 05 A4 */	lwz r0, 0x5a4(r29)
 /* 805808A0  2C 00 00 02 */	cmpwi r0, 2

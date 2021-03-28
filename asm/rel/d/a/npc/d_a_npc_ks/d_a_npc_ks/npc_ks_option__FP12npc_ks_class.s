@@ -1256,8 +1256,8 @@ lbl_80A54748:
 /* 80A54750  3A A0 00 00 */	li r21, 0
 /* 80A54754  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80A54758  3A E3 61 C0 */	addi r23, r3, g_dComIfG_gameInfo@l
-/* 80A5475C  3C 60 80 A6 */	lis r3, data_80A5E94C@ha
-/* 80A54760  3A C3 E9 4C */	addi r22, r3, data_80A5E94C@l
+/* 80A5475C  3C 60 80 A6 */	lis r3, w_eff_id@ha
+/* 80A54760  3A C3 E9 4C */	addi r22, r3, w_eff_id@l
 lbl_80A54764:
 /* 80A54764  80 77 5D 3C */	lwz r3, 0x5d3c(r23)
 /* 80A54768  38 00 00 FF */	li r0, 0xff

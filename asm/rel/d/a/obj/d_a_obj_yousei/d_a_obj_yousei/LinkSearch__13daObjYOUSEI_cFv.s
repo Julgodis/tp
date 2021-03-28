@@ -5,8 +5,8 @@ lbl_804D057C:
 /* 804D0588  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 804D058C  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 804D0590  7C 7E 1B 78 */	mr r30, r3
-/* 804D0594  3C 80 80 4D */	lis r4, data_804D15F0@ha
-/* 804D0598  3B E4 15 F0 */	addi r31, r4, data_804D15F0@l
+/* 804D0594  3C 80 80 4D */	lis r4, ccSphSrc@ha
+/* 804D0598  3B E4 15 F0 */	addi r31, r4, ccSphSrc@l
 /* 804D059C  C0 03 06 14 */	lfs f0, 0x614(r3)
 /* 804D05A0  C0 3F 00 D8 */	lfs f1, 0xd8(r31)
 /* 804D05A4  FC 00 08 40 */	fcmpo cr0, f0, f1

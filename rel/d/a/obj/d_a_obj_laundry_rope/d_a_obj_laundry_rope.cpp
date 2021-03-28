@@ -21,13 +21,13 @@ struct mDoExt_3DlineMatSortPacket {
 	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
 struct mDoExt_3DlineMat1_c {

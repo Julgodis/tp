@@ -30,19 +30,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -66,10 +66,10 @@ struct daPy_py_c {
 	/* 8015F398 */ void checkMasterSwordEquip();
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daE_SB_c {
@@ -638,7 +638,7 @@ asm daE_SB_HIO_c::daE_SB_HIO_c() {
 
 /* ############################################################################################## */
 /* 80784D94-80784DD8 0044+00 s=1 e=0 z=0  None .rodata    ccCylSrc$3693                                                */
-SECTION_RODATA static u8 const data_80784D94[68] = {
+SECTION_RODATA static u8 const ccCylSrc[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
 	0x00, 0x00, 0x60, 0x32, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x75, 0x0A, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00,

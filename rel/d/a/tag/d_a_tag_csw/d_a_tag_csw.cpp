@@ -18,10 +18,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
 struct mDoExt_brkAnm {
@@ -57,14 +57,14 @@ struct dSv_info_c {
 	/* 80035590 */ void isItem(int, int) const;
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 	/* 80266EF4 */ void normalize();
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {

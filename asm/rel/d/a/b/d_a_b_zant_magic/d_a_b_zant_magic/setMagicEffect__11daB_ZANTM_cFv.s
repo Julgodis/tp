@@ -33,8 +33,8 @@ lbl_8064F7D4:
 /* 8064F850  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8064F854  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
 /* 8064F858  3B 1E 05 DC */	addi r24, r30, 0x5dc
-/* 8064F85C  3C 60 80 65 */	lis r3, data_806505D4@ha
-/* 8064F860  3B 63 05 D4 */	addi r27, r3, data_806505D4@l
+/* 8064F85C  3C 60 80 65 */	lis r3, magic_effect_id_3667@ha
+/* 8064F860  3B 63 05 D4 */	addi r27, r3, magic_effect_id_3667@l
 lbl_8064F864:
 /* 8064F864  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 8064F868  38 00 00 FF */	li r0, 0xff

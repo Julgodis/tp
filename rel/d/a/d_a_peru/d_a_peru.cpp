@@ -20,7 +20,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF0C */ void ZXYrotS(csXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Vec {
@@ -32,13 +35,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -74,16 +74,16 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 80D4B7BC */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct daNpcT_evtData_c {
 };
 
 struct daNpcT_motionAnmData_c {
 };
 
-struct daNpcT_evtData_c {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daPeru_c {
@@ -1895,7 +1895,7 @@ static u8 l_HIO[4];
 static u8 lit_5484[12 + 4 /* padding */];
 
 /* 80D4C850-80D4C85C 000C+00 s=1 e=0 z=0  None .bss       see_pos$5483                                                 */
-static u8 data_80D4C850[12];
+static u8 see_pos[12];
 
 /* 80D49A40-80D4A334 08F4+00 s=1 e=0 z=0  None .text      _cutAppear_Init__8daPeru_cFRCi                               */
 #pragma push

@@ -28,7 +28,10 @@ struct mDoMtx_stack_c {
 	/* 8000CD64 */ void transS(cXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
@@ -36,13 +39,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -99,9 +99,6 @@ struct daNpc_myna2_Param_c {
 	/* 80A883C8 */ ~daNpc_myna2_Param_c();
 };
 
-struct J3DAnmTransformKey {
-};
-
 struct _GXColorS10 {
 };
 
@@ -112,6 +109,9 @@ struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
 	/* 80084658 */ void ChkCoHit();
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct dCcD_SrcCyl {
@@ -614,7 +614,7 @@ SECTION_RODATA static u8 const m__19daNpc_myna2_Param_c[116] = {
 };
 
 /* 80A884A8-80A884BC 0014+00 s=1 e=0 z=0  None .rodata    heapSize$4340                                                */
-SECTION_RODATA static u8 const data_80A884A8[20] = {
+SECTION_RODATA static u8 const heapSize[20] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x24, 0x50, 0x00, 0x00, 0x24, 0x40, 0x00, 0x00, 0x24, 0x50,
 	0x00, 0x00, 0x00, 0x00,
 };
@@ -1474,7 +1474,7 @@ static u8 l_HIO[4];
 static u8 lit_4583[12 + 4 /* padding */];
 
 /* 80A88B58-80A88B64 000C+00 s=1 e=0 z=0  None .bss       eyeOffset$4582                                               */
-static u8 data_80A88B58[12];
+static u8 eyeOffset[12];
 
 /* 80A84B64-80A84DAC 0248+00 s=1 e=0 z=0  None .text      setAttnPos__13daNpc_myna2_cFv                                */
 #pragma push

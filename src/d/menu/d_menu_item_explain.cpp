@@ -48,10 +48,16 @@ struct dMsgScrn3Select_c {
 	/* 8023A97C */ void getCharSpace();
 };
 
+struct JUTFont {
+};
+
 struct JMSMesgEntry_c {
 };
 
-struct JUTFont {
+struct ResTLUT {
+};
+
+struct ResTIMG {
 };
 
 struct JGeometry {
@@ -61,12 +67,6 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
-};
-
-struct ResTLUT {
-};
-
-struct ResTIMG {
 };
 
 struct J2DPicture {
@@ -89,10 +89,10 @@ struct STControl {
 struct JKRArchive {
 };
 
-struct JKRExpHeap {
+struct J2DOrthoGraph {
 };
 
-struct J2DOrthoGraph {
+struct JKRExpHeap {
 };
 
 struct dMenu_ItemExplain_c {
@@ -312,13 +312,13 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 /* ############################################################################################## */
 /* 80396950-80396970 0020+00 s=1 e=0 z=0  None .rodata    name_tag$3883                                                */
-SECTION_RODATA static u8 const data_80396950[32] = {
+SECTION_RODATA static u8 const name_tag[32] = {
 	0x69, 0x74, 0x65, 0x6D, 0x5F, 0x6E, 0x30, 0x34, 0x69, 0x74, 0x65, 0x6D, 0x5F, 0x6E, 0x30, 0x35,
 	0x69, 0x74, 0x65, 0x6D, 0x5F, 0x6E, 0x30, 0x36, 0x69, 0x74, 0x65, 0x6D, 0x5F, 0x6E, 0x30, 0x37,
 };
 
 /* 80396970-80396990 0020+00 s=1 e=0 z=0  None .rodata    fame_tag$3884                                                */
-SECTION_RODATA static u8 const data_80396970[32] = {
+SECTION_RODATA static u8 const fame_tag[32] = {
 	0x66, 0x5F, 0x69, 0x74, 0x65, 0x6D, 0x5F, 0x31, 0x66, 0x5F, 0x69, 0x74, 0x65, 0x6D, 0x5F, 0x32,
 	0x66, 0x5F, 0x69, 0x74, 0x65, 0x6D, 0x5F, 0x33, 0x66, 0x5F, 0x69, 0x74, 0x65, 0x6D, 0x5F, 0x34,
 };

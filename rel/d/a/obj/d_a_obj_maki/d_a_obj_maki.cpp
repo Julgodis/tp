@@ -17,10 +17,10 @@ struct request_of_phase_process_class {
 struct obj_maki_class {
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
 struct mDoExt_brkAnm {
@@ -46,13 +46,13 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -70,10 +70,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -253,19 +253,19 @@ extern "C" void __register_global_object(); // 1
 
 /* ############################################################################################## */
 /* 80C90974-80C90980 000A+02 s=1 e=0 z=0  None .data      eff_id$3814                                                  */
-SECTION_DATA static u8 data_80C90974[10 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id_3814[10 + 2 /* padding */] = {
 	0x82, 0x04, 0x82, 0x05, 0x82, 0x06, 0x82, 0x07, 0x82, 0x08,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80C90980-80C90984 0004+00 s=1 e=0 z=0  None .data      eff_id$3833                                                  */
-SECTION_DATA static u8 data_80C90980[4] = {
+SECTION_DATA static u8 eff_id_3833[4] = {
 	0x82, 0x09, 0x82, 0x0A,
 };
 
 /* 80C90984-80C909C4 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$4010                                              */
-SECTION_DATA static u8 data_80C90984[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
 	0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x09, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00,

@@ -39,13 +39,13 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -63,11 +63,11 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 struct dPa_control_c {
@@ -187,7 +187,7 @@ SECTION_RODATA static u8 const SOUP_MODEL_OFFSET[12] = {
 };
 
 /* 80CE0248-80CE0254 000C+00 s=1 e=0 z=0  None .rodata    BMD_IDX$3657                                                 */
-SECTION_RODATA static u8 const data_80CE0248[12] = {
+SECTION_RODATA static u8 const BMD_IDX[12] = {
 	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05,
 };
 
@@ -203,12 +203,12 @@ SECTION_RODATA static u32 const lit_3757 = 0x3F800000;
 SECTION_RODATA static u32 const lit_3758 = 0xBF800000;
 
 /* 80CE0260-80CE0268 0008+00 s=1 e=0 z=0  None .rodata    PARTICLE_NAME$3789                                           */
-SECTION_RODATA static u8 const data_80CE0260[8] = {
+SECTION_RODATA static u8 const PARTICLE_NAME_3789[8] = {
 	0x87, 0xE1, 0x87, 0xE2, 0x87, 0xE3, 0x87, 0xE6,
 };
 
 /* 80CE0268-80CE0274 000C+00 s=1 e=0 z=0  None .rodata    PARTICLE_NAME$3834                                           */
-SECTION_RODATA static u8 const data_80CE0268[12] = {
+SECTION_RODATA static u8 const PARTICLE_NAME_3834[12] = {
 	0x89, 0x84, 0x89, 0x85, 0x8A, 0x8B, 0x8A, 0x8D, 0x8A, 0x8C, 0x8A, 0x8E,
 };
 

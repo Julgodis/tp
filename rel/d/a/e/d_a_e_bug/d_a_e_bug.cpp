@@ -66,10 +66,10 @@ struct dPa_control_c {
 	/* 8004C218 */ void setHitMark(u16, fopAc_ac_c*, cXyz const*, csXyz const*, cXyz const*, u32);
 };
 
-struct J3DModel {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DModel {
 };
 
 struct dComIfG_play_c {
@@ -324,12 +324,12 @@ SECTION_RODATA static u32 const lit_3829 = 0x3FC00000;
 SECTION_RODATA static u32 const lit_3830 = 0x3F800000;
 
 /* 80697DA8-80697DB8 0010+00 s=1 e=0 z=0  None .data      c_x$3877                                                     */
-SECTION_DATA static u8 data_80697DA8[16] = {
+SECTION_DATA static u8 c_x[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0xBF, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80697DB8-80697DC8 0010+00 s=1 e=0 z=0  None .data      c_z$3878                                                     */
-SECTION_DATA static u8 data_80697DB8[16] = {
+SECTION_DATA static u8 c_z[16] = {
 	0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC0, 0x00, 0x00, 0x00,
 };
 
@@ -851,12 +851,12 @@ static bool daE_Bug_IsDelete(e_bug_class* param_0) {
 
 /* ############################################################################################## */
 /* 80697D80-80697D88 0008+00 s=1 e=0 z=0  None .rodata    l_bmdidx$4962                                                */
-SECTION_RODATA static u8 const data_80697D80[8] = {
+SECTION_RODATA static u8 const l_bmdidx_4962[8] = {
 	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04,
 };
 
 /* 80697D88-80697D90 0008+00 s=1 e=0 z=0  None .rodata    l_bmdidx$5049                                                */
-SECTION_RODATA static u8 const data_80697D88[8] = {
+SECTION_RODATA static u8 const l_bmdidx_5049[8] = {
 	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04,
 };
 

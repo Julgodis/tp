@@ -11,7 +11,10 @@
 // Types:
 // 
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Vec {
@@ -23,13 +26,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -54,19 +54,19 @@ struct daNpcT_MotionSeqMngr_c {
 struct daNpcT_faceMotionAnmData_c {
 };
 
-struct daNpcT_motionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct J3DJoint {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80A95B40 */ ~cXyz();
 	/* 80A961D0 */ cXyz();
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct J3DJoint {
 };
 
 struct daNpc_Pachi_Besu_c {
@@ -1771,7 +1771,7 @@ static u8 l_HIO[4];
 static u8 lit_4664[12 + 4 /* padding */];
 
 /* 80A97B28-80A97B34 000C+00 s=1 e=0 z=0  None .bss       center$4663                                                  */
-static u8 data_80A97B28[12];
+static u8 center[12];
 
 /* 80A93A88-80A93D70 02E8+00 s=1 e=0 z=0  None .text      afterMoved__18daNpc_Pachi_Besu_cFv                           */
 #pragma push

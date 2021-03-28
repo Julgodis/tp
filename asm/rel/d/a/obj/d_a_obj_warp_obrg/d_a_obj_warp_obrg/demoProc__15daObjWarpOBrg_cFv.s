@@ -15,8 +15,8 @@ lbl_80D2AA34:
 /* 80D2AA68  3B BB 40 C0 */	addi r29, r27, 0x40c0
 /* 80D2AA6C  7F A3 EB 78 */	mr r3, r29
 /* 80D2AA70  80 9F 06 30 */	lwz r4, 0x630(r31)
-/* 80D2AA74  3C A0 80 D3 */	lis r5, data_80D2B9F0@ha
-/* 80D2AA78  38 A5 B9 F0 */	addi r5, r5, data_80D2B9F0@l
+/* 80D2AA74  3C A0 80 D3 */	lis r5, action_table@ha
+/* 80D2AA78  38 A5 B9 F0 */	addi r5, r5, action_table@l
 /* 80D2AA7C  38 C0 00 04 */	li r6, 4
 /* 80D2AA80  38 E0 00 00 */	li r7, 0
 /* 80D2AA84  39 00 00 00 */	li r8, 0

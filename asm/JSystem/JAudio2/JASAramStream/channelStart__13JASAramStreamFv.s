@@ -36,7 +36,7 @@ lbl_802976CC:
 /* 802976D0  4B FF F0 41 */	bl getBlockSamples__13JASAramStreamCFv
 /* 802976D4  80 1D 01 5C */	lwz r0, 0x15c(r29)
 /* 802976D8  7E E0 19 D6 */	mullw r23, r0, r3
-/* 802976DC  3B 02 BC 28 */	la r24, data_80455628(r2) /* 80455628-_SDA2_BASE_ */
+/* 802976DC  3B 02 BC 28 */	la r24, one(r2) /* 80455628-_SDA2_BASE_ */
 /* 802976E0  88 0D 8C E2 */	lbz r0, struct_80451260+0x2(r13)
 /* 802976E4  7C 00 07 75 */	extsb. r0, r0
 /* 802976E8  40 82 00 34 */	bne lbl_8029771C

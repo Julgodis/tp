@@ -117,8 +117,8 @@ lbl_8072B958:
 /* 8072B980  7F E6 FB 78 */	mr r6, r31
 /* 8072B984  4B 95 7E DC */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 8072B988  38 7F 09 08 */	addi r3, r31, 0x908
-/* 8072B98C  3C 80 80 73 */	lis r4, data_8072C2E4@ha
-/* 8072B990  38 84 C2 E4 */	addi r4, r4, data_8072C2E4@l
+/* 8072B98C  3C 80 80 73 */	lis r4, cc_sph_src@ha
+/* 8072B990  38 84 C2 E4 */	addi r4, r4, cc_sph_src@l
 /* 8072B994  4B 95 90 A0 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 8072B998  38 1F 08 CC */	addi r0, r31, 0x8cc
 /* 8072B99C  90 1F 09 4C */	stw r0, 0x94c(r31)

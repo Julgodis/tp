@@ -1755,8 +1755,8 @@ lbl_80752ED4:
 /* 80752EF0  38 9D 05 04 */	addi r4, r29, 0x504
 /* 80752EF4  7C 84 02 14 */	add r4, r4, r0
 /* 80752EF8  48 00 46 99 */	bl set__4cXyzFRC3Vec
-/* 80752EFC  3C 60 80 75 */	lis r3, data_80757C1C@ha
-/* 80752F00  38 63 7C 1C */	addi r3, r3, data_80757C1C@l
+/* 80752EFC  3C 60 80 75 */	lis r3, mKAngInit_dt@ha
+/* 80752F00  38 63 7C 1C */	addi r3, r3, mKAngInit_dt@l
 /* 80752F04  88 1E 05 BC */	lbz r0, 0x5bc(r30)
 /* 80752F08  54 00 08 3C */	slwi r0, r0, 1
 /* 80752F0C  7C 63 02 14 */	add r3, r3, r0
@@ -3390,8 +3390,8 @@ lbl_8075476C:
 /* 8075477C  3B 00 00 00 */	li r24, 0
 /* 80754780  3B 60 00 00 */	li r27, 0
 /* 80754784  3B 80 00 00 */	li r28, 0
-/* 80754788  3C 60 80 75 */	lis r3, data_80757C18@ha
-/* 8075478C  3B 43 7C 18 */	addi r26, r3, data_80757C18@l
+/* 80754788  3C 60 80 75 */	lis r3, holl_demo_eff_Dt@ha
+/* 8075478C  3B 43 7C 18 */	addi r26, r3, holl_demo_eff_Dt@l
 lbl_80754790:
 /* 80754790  3B 3C 0E 7C */	addi r25, r28, 0xe7c
 /* 80754794  7C 7E C8 2E */	lwzx r3, r30, r25

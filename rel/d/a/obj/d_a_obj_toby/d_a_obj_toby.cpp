@@ -81,11 +81,11 @@ struct dPa_simpleEcallBack {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
-	/* 8026745C */ void operator+=(csXyz&);
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
+	/* 8026745C */ void operator+=(csXyz&);
 };
 
 struct dPa_control_c {
@@ -97,10 +97,10 @@ struct dEvt_control_c {
 	/* 80042468 */ void reset();
 };
 
-struct J3DModel {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DModel {
 };
 
 struct dComIfG_play_c {
@@ -607,7 +607,7 @@ SECTION_RODATA static u32 const lit_4090 = 0x41200000;
 static u8 lit_3946[12 + 4 /* padding */];
 
 /* 80D15928-80D15934 000C+00 s=1 e=0 z=0  None .bss       sc$3945                                                      */
-static u8 data_80D15928[12];
+static u8 sc_3945[12];
 
 /* 80D13B58-80D1417C 0624+00 s=1 e=0 z=0  None .text      yuka_ground__FP14obj_toby_classP6yuka_s                      */
 #pragma push
@@ -651,7 +651,7 @@ asm static void yuka_mtxset(obj_toby_class* param_0, yuka_s* param_1) {
 static u8 lit_4167[12 + 4 /* padding */];
 
 /* 80D15944-80D15950 000C+00 s=1 e=0 z=0  None .bss       sc$4166                                                      */
-static u8 data_80D15944[12];
+static u8 sc_4166[12];
 
 /* 80D14384-80D14584 0200+00 s=1 e=0 z=0  None .text      yuka_control__FP14obj_toby_class                             */
 #pragma push
@@ -713,7 +713,7 @@ static bool daObj_Toby_IsDelete(obj_toby_class* param_0) {
 
 /* ############################################################################################## */
 /* 80D15664-80D1566C 0008+00 s=1 e=0 z=0  None .rodata    l_bmdidx$4300                                                */
-SECTION_RODATA static u8 const data_80D15664[8] = {
+SECTION_RODATA static u8 const l_bmdidx_4300[8] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05,
 };
 
@@ -765,7 +765,7 @@ asm static void set_pos_check(obj_toby_class* param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 80D1567C-80D15684 0008+00 s=1 e=0 z=0  None .rodata    l_bmdidx$4530                                                */
-SECTION_RODATA static u8 const data_80D1567C[8] = {
+SECTION_RODATA static u8 const l_bmdidx_4530[8] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05,
 };
 

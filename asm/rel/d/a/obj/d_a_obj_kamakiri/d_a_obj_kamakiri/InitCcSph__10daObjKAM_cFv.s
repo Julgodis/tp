@@ -10,8 +10,8 @@ lbl_80C351BC:
 /* 80C351DC  7F E6 FB 78 */	mr r6, r31
 /* 80C351E0  4B 44 E6 80 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80C351E4  38 7F 05 CC */	addi r3, r31, 0x5cc
-/* 80C351E8  3C 80 80 C4 */	lis r4, data_80C38410@ha
-/* 80C351EC  38 84 84 10 */	addi r4, r4, data_80C38410@l
+/* 80C351E8  3C 80 80 C4 */	lis r4, ccSphSrc@ha
+/* 80C351EC  38 84 84 10 */	addi r4, r4, ccSphSrc@l
 /* 80C351F0  4B 44 F8 44 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80C351F4  38 1F 05 90 */	addi r0, r31, 0x590
 /* 80C351F8  90 1F 06 10 */	stw r0, 0x610(r31)

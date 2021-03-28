@@ -594,10 +594,10 @@ lbl_80212FAC:
 /* 80212FB0  3B A0 00 00 */	li r29, 0
 /* 80212FB4  3B 80 00 00 */	li r28, 0
 /* 80212FB8  3B 60 00 00 */	li r27, 0
-/* 80212FBC  3C 60 80 3A */	lis r3, data_80398828@ha
-/* 80212FC0  3B C3 88 28 */	addi r30, r3, data_80398828@l
-/* 80212FC4  3C 60 80 3A */	lis r3, data_80398850@ha
-/* 80212FC8  3B 43 88 50 */	addi r26, r3, data_80398850@l
+/* 80212FBC  3C 60 80 3A */	lis r3, juji_i_tag@ha
+/* 80212FC0  3B C3 88 28 */	addi r30, r3, juji_i_tag@l
+/* 80212FC4  3C 60 80 3A */	lis r3, juji_m_tag@ha
+/* 80212FC8  3B 43 88 50 */	addi r26, r3, juji_m_tag@l
 lbl_80212FCC:
 /* 80212FCC  7F 3E DA 14 */	add r25, r30, r27
 /* 80212FD0  80 19 00 00 */	lwz r0, 0(r25)

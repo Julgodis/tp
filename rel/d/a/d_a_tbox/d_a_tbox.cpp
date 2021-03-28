@@ -35,10 +35,10 @@ struct mDoHIO_entry_c {
 	/* 80490E08 */ ~mDoHIO_entry_c();
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
 struct mDoExt_brkAnm {
@@ -46,10 +46,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -208,11 +208,11 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct _GXColor {
 };
 
-struct _GXColor {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dPa_control_c {
@@ -802,13 +802,13 @@ SECTION_RODATA static u32 const lit_4405 = 0x41A00000;
 SECTION_RODATA static u32 const lit_4441 = 0x41A80000;
 
 /* 80496270-8049628C 001C+00 s=1 e=0 z=0  None .rodata    key_frame$4445                                               */
-SECTION_RODATA static u8 const data_80496270[28] = {
+SECTION_RODATA static u8 const key_frame[28] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x1E, 0x00, 0x00, 0x00, 0x25,
 	0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x5C, 0x00, 0x00, 0x00, 0x8C,
 };
 
 /* 8049628C-804962C4 0038+00 s=1 e=0 z=0  None .rodata    key_color$4446                                               */
-SECTION_RODATA static u8 const data_8049628C[56] = {
+SECTION_RODATA static u8 const key_color[56] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xC3, 0x00, 0x8A, 0x00, 0xFF,
 	0x00, 0xFF, 0x00, 0xC3, 0x00, 0x8A, 0x00, 0xFF, 0x00, 0x37, 0x00, 0x34, 0x00, 0x24, 0x00, 0xFF,
 	0x00, 0xFF, 0x00, 0xC3, 0x00, 0x8A, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xC3, 0x00, 0x8A, 0x00, 0xFF,
@@ -856,7 +856,7 @@ SECTION_RODATA static u32 const lit_4949 = 0x41200000;
 SECTION_RODATA static u32 const lit_4950 = 0x43C80000;
 
 /* 804962FC-80496308 000C+00 s=1 e=0 z=0  None .rodata    eff_id$4956                                                  */
-SECTION_RODATA static u8 const data_804962FC[12] = {
+SECTION_RODATA static u8 const eff_id[12] = {
 	0x88, 0x40, 0x88, 0x41, 0x88, 0x42, 0x88, 0x43, 0x88, 0x44, 0x88, 0x45,
 };
 
@@ -1059,7 +1059,7 @@ SECTION_DATA static void* lit_4279[3] = {
 };
 
 /* 804965C8-804965DC 0014+00 s=1 e=0 z=0  None .data      action_table$5025                                            */
-SECTION_DATA static void* data_804965C8[5] = {
+SECTION_DATA static void* action_table[5] = {
 	(void*)(((char*)&struct_80496334)+0x6B) /* None */,
 	(void*)(((char*)&struct_804963A4)+0x0) /* None */,
 	(void*)(((char*)&struct_804963A4)+0x5) /* None */,
@@ -1223,7 +1223,7 @@ SECTION_DATA static void* lit_6121[3] = {
 };
 
 /* 80496718-80496730 0018+00 s=1 e=0 z=0  None .data      l_func$6119                                                  */
-SECTION_DATA static u8 data_80496718[24] = {
+SECTION_DATA static u8 l_func[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };

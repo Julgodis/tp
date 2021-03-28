@@ -158,7 +158,7 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12 + 4 /* padding */] = {
 };
 
 /* 803BB4A8-803BB548 00A0+00 s=1 e=0 z=0  None .data      l_htag$3879                                                  */
-SECTION_DATA static u8 data_803BB4A8[160] = {
+SECTION_DATA static u8 l_htag[160] = {
 	0x00, 0x68, 0x65, 0x61, 0x72, 0x5F, 0x32, 0x30, 0x00, 0x68, 0x65, 0x61, 0x72, 0x5F, 0x32, 0x31,
 	0x00, 0x68, 0x65, 0x61, 0x72, 0x5F, 0x32, 0x32, 0x00, 0x68, 0x65, 0x61, 0x72, 0x5F, 0x32, 0x33,
 	0x00, 0x68, 0x65, 0x61, 0x72, 0x5F, 0x32, 0x34, 0x00, 0x68, 0x65, 0x61, 0x72, 0x5F, 0x32, 0x35,
@@ -172,7 +172,7 @@ SECTION_DATA static u8 data_803BB4A8[160] = {
 };
 
 /* 803BB548-803BB558 0010+00 s=1 e=0 z=0  None .data      amariheartTex$3880                                           */
-SECTION_DATA static void* data_803BB548[4] = {
+SECTION_DATA static void* amariheartTex[4] = {
 	(void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
 	(void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
 	(void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),

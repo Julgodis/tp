@@ -26,8 +26,8 @@ lbl_80BE5890:
 /* 80BE5898  40 82 00 38 */	bne lbl_80BE58D0
 /* 80BE589C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80BE58A0  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80BE58A4  3C 80 80 BE */	lis r4, data_80BE5E84@ha
-/* 80BE58A8  38 04 5E 84 */	addi r0, r4, data_80BE5E84@l
+/* 80BE58A4  3C 80 80 BE */	lis r4, l_offset_posM@ha
+/* 80BE58A8  38 04 5E 84 */	addi r0, r4, l_offset_posM@l
 /* 80BE58AC  7C 80 E2 14 */	add r4, r0, r28
 /* 80BE58B0  38 A1 00 08 */	addi r5, r1, 8
 /* 80BE58B4  4B 76 14 B8 */	b PSMTXMultVec
@@ -42,8 +42,8 @@ lbl_80BE58D0:
 /* 80BE58D4  40 82 00 34 */	bne lbl_80BE5908
 /* 80BE58D8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80BE58DC  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80BE58E0  3C 80 80 BE */	lis r4, data_80BE5EB4@ha
-/* 80BE58E4  38 04 5E B4 */	addi r0, r4, data_80BE5EB4@l
+/* 80BE58E0  3C 80 80 BE */	lis r4, l_offset_posL@ha
+/* 80BE58E4  38 04 5E B4 */	addi r0, r4, l_offset_posL@l
 /* 80BE58E8  7C 80 E2 14 */	add r4, r0, r28
 /* 80BE58EC  38 A1 00 08 */	addi r5, r1, 8
 /* 80BE58F0  4B 76 14 7C */	b PSMTXMultVec

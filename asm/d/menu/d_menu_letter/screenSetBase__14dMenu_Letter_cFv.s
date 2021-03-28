@@ -11,8 +11,8 @@ lbl_801DFA58:
 /* 801DFA7C  39 61 00 30 */	addi r11, r1, 0x30
 /* 801DFA80  48 18 27 49 */	bl _savegpr_24
 /* 801DFA84  7C 7F 1B 78 */	mr r31, r3
-/* 801DFA88  3C 60 80 39 */	lis r3, data_803969C8@ha
-/* 801DFA8C  3B C3 69 C8 */	addi r30, r3, data_803969C8@l
+/* 801DFA88  3C 60 80 39 */	lis r3, tag_sub0@ha
+/* 801DFA8C  3B C3 69 C8 */	addi r30, r3, tag_sub0@l
 /* 801DFA90  38 60 01 18 */	li r3, 0x118
 /* 801DFA94  48 0E F1 B9 */	bl __nw__FUl
 /* 801DFA98  7C 60 1B 79 */	or. r0, r3, r3

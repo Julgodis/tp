@@ -237,8 +237,8 @@ lbl_807498BC:
 /* 807498C4  3B 40 00 00 */	li r26, 0
 /* 807498C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 807498CC  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 807498D0  3C 60 80 75 */	lis r3, data_8074C234@ha
-/* 807498D4  3B 03 C2 34 */	addi r24, r3, data_8074C234@l
+/* 807498D0  3C 60 80 75 */	lis r3, gakki_eff_id_6954@ha
+/* 807498D4  3B 03 C2 34 */	addi r24, r3, gakki_eff_id_6954@l
 lbl_807498D8:
 /* 807498D8  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 807498DC  38 00 00 FF */	li r0, 0xff

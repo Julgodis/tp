@@ -85,7 +85,7 @@ lbl_801F9C44:
 /* 801F9C78  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801F9C7C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 801F9C80  3B 83 00 CC */	addi r28, r3, 0xcc
-/* 801F9C84  3B AD 81 CC */	la r29, data_8045074C(r13) /* 8045074C-_SDA_BASE_ */
+/* 801F9C84  3B AD 81 CC */	la r29, m_sword_item(r13) /* 8045074C-_SDA_BASE_ */
 lbl_801F9C88:
 /* 801F9C88  7F 83 E3 78 */	mr r3, r28
 /* 801F9C8C  88 9D 00 00 */	lbz r4, 0(r29)
@@ -100,8 +100,8 @@ lbl_801F9C88:
 /* 801F9CB0  3B BD 00 01 */	addi r29, r29, 1
 /* 801F9CB4  41 80 FF D4 */	blt lbl_801F9C88
 /* 801F9CB8  3B 40 00 00 */	li r26, 0
-/* 801F9CBC  3B AD 81 D0 */	la r29, data_80450750(r13) /* 80450750-_SDA_BASE_ */
-/* 801F9CC0  3B CD 81 C8 */	la r30, data_80450748(r13) /* 80450748-_SDA_BASE_ */
+/* 801F9CBC  3B AD 81 D0 */	la r29, m_shield_item(r13) /* 80450750-_SDA_BASE_ */
+/* 801F9CC0  3B CD 81 C8 */	la r30, m_cloth_item(r13) /* 80450748-_SDA_BASE_ */
 lbl_801F9CC4:
 /* 801F9CC4  7F 83 E3 78 */	mr r3, r28
 /* 801F9CC8  88 9D 00 00 */	lbz r4, 0(r29)

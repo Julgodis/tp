@@ -125,8 +125,8 @@ lbl_8086C4C0:
 /* 8086C4E4  3B A3 5F 64 */	addi r29, r3, 0x5f64
 /* 8086C4E8  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8086C4EC  3A A3 CA 54 */	addi r21, r3, g_env_light@l
-/* 8086C4F0  3C 60 80 87 */	lis r3, data_8087071C@ha
-/* 8086C4F4  3A C3 07 1C */	addi r22, r3, data_8087071C@l
+/* 8086C4F0  3C 60 80 87 */	lis r3, rod_color@ha
+/* 8086C4F4  3A C3 07 1C */	addi r22, r3, rod_color@l
 lbl_8086C4F8:
 /* 8086C4F8  7E A3 AB 78 */	mr r3, r21
 /* 8086C4FC  7E 9A C2 14 */	add r20, r26, r24
@@ -190,8 +190,8 @@ lbl_8086C5AC:
 /* 8086C5DC  38 7A 3F 88 */	addi r3, r26, 0x3f88
 /* 8086C5E0  38 80 00 0F */	li r4, 0xf
 /* 8086C5E4  C0 3F 00 18 */	lfs f1, 0x18(r31)
-/* 8086C5E8  3C A0 80 87 */	lis r5, data_80870728@ha
-/* 8086C5EC  38 A5 07 28 */	addi r5, r5, data_80870728@l
+/* 8086C5E8  3C A0 80 87 */	lis r5, l_color@ha
+/* 8086C5EC  38 A5 07 28 */	addi r5, r5, l_color@l
 /* 8086C5F0  38 C0 00 02 */	li r6, 2
 /* 8086C5F4  38 FA 01 0C */	addi r7, r26, 0x10c
 /* 8086C5F8  4B 7A 62 7C */	b update__19mDoExt_3DlineMat0_cFifR8_GXColorUsP12dKy_tevstr_c

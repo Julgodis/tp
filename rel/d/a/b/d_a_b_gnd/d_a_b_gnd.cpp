@@ -34,10 +34,10 @@ struct mDoExt_morf_c {
 	/* 806024EC */ void isStop();
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
 struct mDoExt_btpAnm {
@@ -65,19 +65,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -103,10 +103,10 @@ struct mDoExt_3DlineMatSortPacket {
 	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -543,7 +543,7 @@ extern "C" void __ct__11J3DLightObjFv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__13daB_GND_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_b_gnd_cpp(); // 1
-extern "C" static void func_806022F0(); // 1
+extern "C" static void __arraydtor(); // 1
 extern "C" static void func_80602328(); // 1
 extern "C" static void func_80602330(); // 1
 extern "C" void cancelOriginalDemo__9daPy_py_cFv(); // 1
@@ -997,17 +997,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 806029F0-806029F4 0004+00 s=1 e=0 z=0  None .data      l_color$3983                                                 */
-SECTION_DATA static u8 data_806029F0[4] = {
+SECTION_DATA static u8 l_color[4] = {
 	0x14, 0x0F, 0x00, 0xFF,
 };
 
 /* 806029F4-80602A04 0010+00 s=1 e=0 z=0  None .data      chk_x$4163                                                   */
-SECTION_DATA static u8 data_806029F4[16] = {
+SECTION_DATA static u8 chk_x[16] = {
 	0x46, 0x5D, 0x5C, 0x00, 0x47, 0x07, 0xD7, 0x00, 0xC6, 0xBC, 0xC8, 0x00, 0xC6, 0x35, 0xAC, 0x00,
 };
 
 /* 80602A04-80602A14 0010+00 s=1 e=0 z=0  None .data      chk_z$4164                                                   */
-SECTION_DATA static u8 data_80602A04[16] = {
+SECTION_DATA static u8 chk_z[16] = {
 	0x46, 0xAA, 0x1E, 0x00, 0xC6, 0x80, 0xA6, 0x00, 0x46, 0x18, 0x4C, 0x00, 0x46, 0xB0, 0x92, 0x00,
 };
 
@@ -1072,7 +1072,7 @@ SECTION_DATA static void* lit_5543[19] = {
 };
 
 /* 80602AD4-80602ADC 0006+02 s=1 e=0 z=0  None .data      w_eff_name$6034                                              */
-SECTION_DATA static u8 data_80602AD4[6 + 2 /* padding */] = {
+SECTION_DATA static u8 w_eff_name[6 + 2 /* padding */] = {
 	0x82, 0x5B, 0x82, 0x5C, 0x82, 0x5D,
 	/* padding */
 	0x00, 0x00,
@@ -1086,7 +1086,7 @@ SECTION_DATA u8 data_80602ADC[6 + 2 /* padding */] = {
 };
 
 /* 80602AE4-80602AEC 0006+02 s=1 e=0 z=0  None .data      e_name$6046                                                  */
-SECTION_DATA static u8 data_80602AE4[6 + 2 /* padding */] = {
+SECTION_DATA static u8 e_name_6046[6 + 2 /* padding */] = {
 	0x8B, 0x95, 0x8B, 0x96, 0x8B, 0x97,
 	/* padding */
 	0x00, 0x00,
@@ -1120,12 +1120,12 @@ SECTION_DATA static void* lit_6511[23] = {
 };
 
 /* 80602B48-80602B4C 0004+00 s=1 e=0 z=0  None .data      e_name$6757                                                  */
-SECTION_DATA static u8 data_80602B48[4] = {
+SECTION_DATA static u8 e_name_6757[4] = {
 	0x8B, 0x9B, 0x8B, 0x9C,
 };
 
 /* 80602B4C-80602B50 0004+00 s=1 e=0 z=0  None .data      e_name$6846                                                  */
-SECTION_DATA static u8 data_80602B4C[4] = {
+SECTION_DATA static u8 e_name_6846[4] = {
 	0x8B, 0x98, 0x8B, 0x99,
 };
 
@@ -1231,36 +1231,36 @@ SECTION_DATA static void* lit_7290[97] = {
 };
 
 /* 80602CD4-80602CE4 0010+00 s=1 e=0 z=0  None .data      footJ$7816                                                   */
-SECTION_DATA static u8 data_80602CD4[16] = {
+SECTION_DATA static u8 footJ[16] = {
 	0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x1E, 0x00, 0x00, 0x00, 0x22,
 };
 
 /* 80602CE4-80602CF0 000C+00 s=1 e=0 z=0  None .data      b_id$7902                                                    */
-SECTION_DATA static u8 data_80602CE4[12] = {
+SECTION_DATA static u8 b_id[12] = {
 	0x8A, 0x37, 0x8A, 0x38, 0x8A, 0x39, 0x8A, 0x3A, 0x8A, 0x3B, 0x8C, 0x24,
 };
 
 /* 80602CF0-80602CFC 000A+02 s=1 e=0 z=0  None .data      b_id2$7903                                                   */
-SECTION_DATA static u8 data_80602CF0[10 + 2 /* padding */] = {
+SECTION_DATA static u8 b_id2[10 + 2 /* padding */] = {
 	0x8A, 0x3D, 0x8A, 0x3E, 0x8A, 0x3F, 0x8A, 0x40, 0x8A, 0x41,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80602CFC-80602D10 0014+00 s=1 e=0 z=0  None .data      bun_xs$7913                                                  */
-SECTION_DATA static u8 data_80602CFC[20] = {
+SECTION_DATA static u8 bun_xs[20] = {
 	0xC3, 0x16, 0x00, 0x00, 0xC2, 0x96, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x96, 0x00, 0x00,
 	0x43, 0x16, 0x00, 0x00,
 };
 
 /* 80602D10-80602D28 0018+00 s=1 e=0 z=0  None .data      btk_d$8802                                                   */
-SECTION_DATA static u8 data_80602D10[24] = {
+SECTION_DATA static u8 btk_d[24] = {
 	0x00, 0x00, 0x00, 0x77, 0x00, 0x00, 0x00, 0x76, 0x00, 0x00, 0x00, 0x73, 0x00, 0x00, 0x00, 0x74,
 	0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x72,
 };
 
 /* 80602D28-80602D68 0040+00 s=1 e=0 z=0  None .data      h_cc_sph_src$9127                                            */
-SECTION_DATA static u8 data_80602D28[64] = {
+SECTION_DATA static u8 h_cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1F,
 	0x04, 0x00, 0x60, 0x20, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x0B, 0x00, 0x07, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -1268,7 +1268,7 @@ SECTION_DATA static u8 data_80602D28[64] = {
 };
 
 /* 80602D68-80602DA8 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$9128                                              */
-SECTION_DATA static u8 data_80602D68[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x04, 0x01, 0x20, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -1276,7 +1276,7 @@ SECTION_DATA static u8 data_80602D68[64] = {
 };
 
 /* 80602DA8-80602DE8 0040+00 s=1 e=0 z=0  None .data      at_sph_src$9129                                              */
-SECTION_DATA static u8 data_80602DA8[64] = {
+SECTION_DATA static u8 at_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1F,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -1284,7 +1284,7 @@ SECTION_DATA static u8 data_80602DA8[64] = {
 };
 
 /* 80602DE8-80602E28 0040+00 s=1 e=0 z=0  None .data      def_sph_src$9130                                             */
-SECTION_DATA static u8 data_80602DE8[64] = {
+SECTION_DATA static u8 def_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xDC, 0xFB, 0xFD, 0xFD, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x09, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -1292,7 +1292,7 @@ SECTION_DATA static u8 data_80602DE8[64] = {
 };
 
 /* 80602E28-80602E6C 0044+00 s=1 e=0 z=0  None .data      co_cyl_src$9131                                              */
-SECTION_DATA static u8 data_80602E28[68] = {
+SECTION_DATA static u8 co_cyl_src[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -2033,7 +2033,7 @@ SECTION_RODATA static u32 const lit_8751 = 0x44BB8000;
 SECTION_RODATA static u32 const lit_8752 = 0xC1700000;
 
 /* 806029A4-806029AC 0008+00 s=1 e=0 z=0  None .rodata    blur_model$8822                                              */
-SECTION_RODATA static u8 const data_806029A4[8] = {
+SECTION_RODATA static u8 const blur_model[8] = {
 	0x00, 0x00, 0x00, 0x66, 0x00, 0x00, 0x00, 0x65,
 };
 
@@ -2183,7 +2183,7 @@ static u8 l_HIO[28];
 static u8 lit_4187[12 + 4 /* padding */];
 
 /* 80602FE0-80602FEC 000C+00 s=1 e=0 z=0  None .bss       k_pos$4186                                                   */
-static u8 data_80602FE0[12];
+static u8 k_pos[12];
 
 /* 805F5574-805F5BE8 0674+00 s=1 e=0 z=0  None .text      gake_check__FP11b_gnd_class                                  */
 #pragma push
@@ -2835,9 +2835,9 @@ extern "C" asm void __sinit_d_a_b_gnd_cpp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_806022F0() {
+extern "C" asm static void __arraydtor() {
 	nofralloc
-#include "asm/rel/d/a/b/d_a_b_gnd/d_a_b_gnd/func_806022F0.s"
+#include "asm/rel/d/a/b/d_a_b_gnd/d_a_b_gnd/__arraydtor.s"
 }
 #pragma pop
 

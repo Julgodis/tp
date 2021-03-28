@@ -10,8 +10,8 @@ lbl_80742FB4:
 /* 80742FD4  3B 40 00 00 */	li r26, 0
 /* 80742FD8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80742FDC  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
-/* 80742FE0  3C 60 80 75 */	lis r3, data_8074C188@ha
-/* 80742FE4  3B E3 C1 88 */	addi r31, r3, data_8074C188@l
+/* 80742FE0  3C 60 80 75 */	lis r3, gakki_eff_id_4453@ha
+/* 80742FE4  3B E3 C1 88 */	addi r31, r3, gakki_eff_id_4453@l
 /* 80742FE8  3C 60 80 75 */	lis r3, lit_3912@ha
 /* 80742FEC  3B 03 BF 44 */	addi r24, r3, lit_3912@l
 lbl_80742FF0:

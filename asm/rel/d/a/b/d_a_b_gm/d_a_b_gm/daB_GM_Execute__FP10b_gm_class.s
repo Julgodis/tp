@@ -938,8 +938,8 @@ lbl_805F2D34:
 /* 805F2D60  3A E0 00 00 */	li r23, 0
 /* 805F2D64  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 805F2D68  3A A3 61 C0 */	addi r21, r3, g_dComIfG_gameInfo@l
-/* 805F2D6C  3C 60 80 5F */	lis r3, data_805F456C@ha
-/* 805F2D70  3A 83 45 6C */	addi r20, r3, data_805F456C@l
+/* 805F2D6C  3C 60 80 5F */	lis r3, name_5641@ha
+/* 805F2D70  3A 83 45 6C */	addi r20, r3, name_5641@l
 lbl_805F2D74:
 /* 805F2D74  80 75 5D 3C */	lwz r3, 0x5d3c(r21)
 /* 805F2D78  38 00 00 FF */	li r0, 0xff

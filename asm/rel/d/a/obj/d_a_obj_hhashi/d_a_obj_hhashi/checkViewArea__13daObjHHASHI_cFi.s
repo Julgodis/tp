@@ -4,8 +4,8 @@ lbl_805807C4:
 /* 805807CC  90 01 00 24 */	stw r0, 0x24(r1)
 /* 805807D0  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 805807D4  7C 60 1B 78 */	mr r0, r3
-/* 805807D8  3C 60 80 58 */	lis r3, data_805814AC@ha
-/* 805807DC  3B E3 14 AC */	addi r31, r3, data_805814AC@l
+/* 805807D8  3C 60 80 58 */	lis r3, ccCylSrc@ha
+/* 805807DC  3B E3 14 AC */	addi r31, r3, ccCylSrc@l
 /* 805807E0  1C 64 00 0C */	mulli r3, r4, 0xc
 /* 805807E4  38 63 05 B0 */	addi r3, r3, 0x5b0
 /* 805807E8  7C 60 1A 14 */	add r3, r0, r3

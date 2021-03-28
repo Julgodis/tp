@@ -41,13 +41,13 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -402,7 +402,7 @@ SECTION_DATA static void* lit_3772[3] = {
 };
 
 /* 80CEFF6C-80CEFF9C 0030+00 s=1 e=0 z=0  None .data      l_func$3768                                                  */
-SECTION_DATA static u8 data_80CEFF6C[48] = {
+SECTION_DATA static u8 l_func[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -460,7 +460,7 @@ void daObjStopper2_c::actionDead() {
 
 /* ############################################################################################## */
 /* 80CEFF9C-80CEFFA8 000C+00 s=1 e=0 z=0  None .data      action_table$3859                                            */
-SECTION_DATA static void* data_80CEFF9C[3] = {
+SECTION_DATA static void* action_table[3] = {
 	(void*)(((char*)&struct_80CEFECC)+0x2B) /* None */,
 	(void*)(((char*)&struct_80CEFEB0)+0x7) /* None */,
 	(void*)(((char*)&struct_80CEFEB0)+0x11) /* None */,

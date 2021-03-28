@@ -52,8 +52,8 @@ lbl_80630B2C:
 /* 80630B5C  80 9F 1B 64 */	lwz r4, 0x1b64(r31)
 /* 80630B60  38 A0 00 00 */	li r5, 0
 /* 80630B64  54 C0 08 3C */	slwi r0, r6, 1
-/* 80630B68  3C C0 80 64 */	lis r6, data_80639C90@ha
-/* 80630B6C  38 C6 9C 90 */	addi r6, r6, data_80639C90@l
+/* 80630B68  3C C0 80 64 */	lis r6, chill_effect_id@ha
+/* 80630B6C  38 C6 9C 90 */	addi r6, r6, chill_effect_id@l
 /* 80630B70  7C C6 02 2E */	lhzx r6, r6, r0
 /* 80630B74  38 E1 00 2C */	addi r7, r1, 0x2c
 /* 80630B78  39 1F 01 0C */	addi r8, r31, 0x10c

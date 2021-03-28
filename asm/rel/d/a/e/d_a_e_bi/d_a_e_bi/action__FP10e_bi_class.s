@@ -328,8 +328,8 @@ lbl_8068BF7C:
 /* 8068BF84  3B 20 00 00 */	li r25, 0
 /* 8068BF88  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8068BF8C  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
-/* 8068BF90  3C 60 80 69 */	lis r3, data_8068D930@ha
-/* 8068BF94  3B 43 D9 30 */	addi r26, r3, data_8068D930@l
+/* 8068BF90  3C 60 80 69 */	lis r3, w_eff_id@ha
+/* 8068BF94  3B 43 D9 30 */	addi r26, r3, w_eff_id@l
 lbl_8068BF98:
 /* 8068BF98  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 8068BF9C  38 00 00 FF */	li r0, 0xff

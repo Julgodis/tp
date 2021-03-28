@@ -60,7 +60,7 @@ lbl_8017AEA4:
 /* 8017AEA4  88 0D 8A CA */	lbz r0, struct_80451048+0x2(r13)
 /* 8017AEA8  7C 00 07 75 */	extsb. r0, r0
 /* 8017AEAC  40 82 00 28 */	bne lbl_8017AED4
-/* 8017AEB0  38 6D 8A CC */	la r3, data_8045104C(r13) /* 8045104C-_SDA_BASE_ */
+/* 8017AEB0  38 6D 8A CC */	la r3, LatMax(r13) /* 8045104C-_SDA_BASE_ */
 /* 8017AEB4  C0 22 9D 54 */	lfs f1, lit_9406(r2)
 /* 8017AEB8  48 0F 61 11 */	bl __ct__7cSAngleFf
 /* 8017AEBC  3C 80 80 03 */	lis r4, __dt__7cSAngleFv@ha
@@ -2684,11 +2684,11 @@ lbl_8017D528:
 /* 8017D608  48 0F 39 F1 */	bl Val__7cSAngleFRC7cSAngle
 /* 8017D60C  48 00 00 1C */	b lbl_8017D628
 lbl_8017D610:
-/* 8017D610  A8 0D 8A CC */	lha r0, data_8045104C(r13)
+/* 8017D610  A8 0D 8A CC */	lha r0, LatMax(r13)
 /* 8017D614  7C 03 00 00 */	cmpw r3, r0
 /* 8017D618  40 81 00 10 */	ble lbl_8017D628
 /* 8017D61C  38 61 01 34 */	addi r3, r1, 0x134
-/* 8017D620  38 8D 8A CC */	la r4, data_8045104C(r13) /* 8045104C-_SDA_BASE_ */
+/* 8017D620  38 8D 8A CC */	la r4, LatMax(r13) /* 8045104C-_SDA_BASE_ */
 /* 8017D624  48 0F 39 D5 */	bl Val__7cSAngleFRC7cSAngle
 lbl_8017D628:
 /* 8017D628  38 7F 00 5C */	addi r3, r31, 0x5c

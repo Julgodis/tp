@@ -31,10 +31,10 @@ lbl_8086D87C:
 /* 8086D8C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8086D8C8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8086D8CC  3B A3 0F 38 */	addi r29, r3, 0xf38
-/* 8086D8D0  3C 60 80 87 */	lis r3, data_808707A4@ha
-/* 8086D8D4  3B C3 07 A4 */	addi r30, r3, data_808707A4@l
-/* 8086D8D8  3C 60 80 87 */	lis r3, data_808707B4@ha
-/* 8086D8DC  3B E3 07 B4 */	addi r31, r3, data_808707B4@l
+/* 8086D8D0  3C 60 80 87 */	lis r3, c_x@ha
+/* 8086D8D4  3B C3 07 A4 */	addi r30, r3, c_x@l
+/* 8086D8D8  3C 60 80 87 */	lis r3, c_z@ha
+/* 8086D8DC  3B E3 07 B4 */	addi r31, r3, c_z@l
 lbl_8086D8E0:
 /* 8086D8E0  7C 1E D4 2E */	lfsx f0, r30, r26
 /* 8086D8E4  D0 01 00 14 */	stfs f0, 0x14(r1)

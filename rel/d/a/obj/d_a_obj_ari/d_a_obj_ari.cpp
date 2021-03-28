@@ -30,10 +30,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -53,7 +53,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
@@ -61,13 +64,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -92,10 +92,10 @@ struct daObj_AriHIO_c {
 	/* 80BA5360 */ ~daObj_AriHIO_c();
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daObjARI_c {
@@ -558,7 +558,7 @@ SECTION_RODATA static u16 const l_ari_itemno[1 + 1 /* padding */] = {
 };
 
 /* 80BA5414-80BA5454 0040+00 s=1 e=0 z=0  None .rodata    ccSphSrc$3781                                                */
-SECTION_RODATA static u8 const data_80BA5414[64] = {
+SECTION_RODATA static u8 const ccSphSrc[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x01, 0x40, 0x02, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

@@ -23,8 +23,8 @@ lbl_80048748:
 lbl_8004879C:
 /* 8004879C  7F E3 FB 78 */	mr r3, r31
 /* 800487A0  7F C4 F3 78 */	mr r4, r30
-/* 800487A4  3C A0 80 3B */	lis r5, data_803A82A8@ha
-/* 800487A8  38 A5 82 A8 */	addi r5, r5, data_803A82A8@l
+/* 800487A4  3C A0 80 3B */	lis r5, action_table@ha
+/* 800487A8  38 A5 82 A8 */	addi r5, r5, action_table@l
 /* 800487AC  38 C0 00 03 */	li r6, 3
 /* 800487B0  38 E0 00 00 */	li r7, 0
 /* 800487B4  39 00 00 00 */	li r8, 0

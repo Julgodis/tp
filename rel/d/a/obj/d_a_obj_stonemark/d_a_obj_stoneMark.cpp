@@ -186,7 +186,7 @@ SECTION_RODATA static u32 const lit_3643 = 0x42C80000;
 SECTION_RODATA static u32 const lit_3644 = 0x41F00000;
 
 /* 8059A3F4-8059A3FC 0008+00 s=1 e=0 z=0  None .rodata    l_shadow_size$3714                                           */
-SECTION_RODATA static u8 const data_8059A3F4[8] = {
+SECTION_RODATA static u8 const l_shadow_size[8] = {
 	0x42, 0x5C, 0x00, 0x00, 0x42, 0xAA, 0x00, 0x00,
 };
 

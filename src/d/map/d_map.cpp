@@ -33,6 +33,9 @@ struct renderingPlusDoorAndCursor_c {
 	/* 80040ADC */ void getIconPosition(dTres_c::typeGroupData_c*) const;
 };
 
+struct Vec {
+};
+
 struct dDrawPath_c {
 	struct room_class {
 	};
@@ -53,9 +56,6 @@ struct dDrawPath_c {
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
 	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CCC4 */ void drawPath();
-};
-
-struct Vec {
 };
 
 struct renderingDAmap_c {
@@ -372,7 +372,7 @@ extern "C" extern u8 mMaxZ__8dMpath_c[4];
 
 /* ############################################################################################## */
 /* 80378E48-80378E8C 0044+00 s=2 e=0 z=0  None .rodata    l_iconSize$3698                                              */
-SECTION_RODATA static u8 const data_80378E48[68] = {
+SECTION_RODATA static u8 const l_iconSize[68] = {
 	0x3D, 0xF5, 0xC2, 0x8F, 0x3D, 0xF5, 0xC2, 0x8F, 0x3D, 0xA3, 0xD7, 0x0A, 0x3D, 0xF5, 0xC2, 0x8F,
 	0x3D, 0xA3, 0xD7, 0x0A, 0x3E, 0x23, 0xD7, 0x0A, 0x3D, 0xF5, 0xC2, 0x8F, 0x00, 0x00, 0x00, 0x00,
 	0x3D, 0xF5, 0xC2, 0x8F, 0x3D, 0xA3, 0xD7, 0x0A, 0x3D, 0xA3, 0xD7, 0x0A, 0x3D, 0xA3, 0xD7, 0x0A,
@@ -576,21 +576,21 @@ asm void renderingAmap_c::isOutSideBlackLine() {
 
 /* ############################################################################################## */
 /* 80451CC0-80451CC8 0005+03 s=1 e=0 z=0  None .sdata2    l_lineWidthPatOff$3899                                       */
-SECTION_SDATA2 static u8 data_80451CC0[5 + 3 /* padding */] = {
+SECTION_SDATA2 static u8 l_lineWidthPatOff[5 + 3 /* padding */] = {
 	0x00, 0x00, 0x06, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 80451CC8-80451CD0 0005+03 s=1 e=0 z=0  None .sdata2    l_lineWidthPatOn$3900                                        */
-SECTION_SDATA2 static u8 data_80451CC8[5 + 3 /* padding */] = {
+SECTION_SDATA2 static u8 l_lineWidthPatOn[5 + 3 /* padding */] = {
 	0x06, 0x06, 0x06, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 80451CD0-80451CD8 0005+03 s=1 e=0 z=0  None .sdata2    l_lineWidthPatStay$3901                                      */
-SECTION_SDATA2 static u8 data_80451CD0[5 + 3 /* padding */] = {
+SECTION_SDATA2 static u8 l_lineWidthPatStay[5 + 3 /* padding */] = {
 	0x06, 0x06, 0x0C, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
@@ -631,21 +631,21 @@ asm void renderingAmap_c::getLineWidth(int param_0) {
 
 /* ############################################################################################## */
 /* 80378E8C-80378EB0 0024+00 s=1 e=0 z=0  None .rodata    l_dungeon_offColor$3937                                      */
-SECTION_RODATA static u8 const data_80378E8C[36] = {
+SECTION_RODATA static u8 const l_dungeon_offColor[36] = {
 	0x08, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
 	0x14, 0x00, 0x00, 0x00, 0x18, 0x00, 0x00, 0x00, 0x1C, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00,
 	0x24, 0x00, 0x00, 0x00,
 };
 
 /* 80378EB0-80378ED4 0024+00 s=1 e=0 z=0  None .rodata    l_dungeon_onColor$3938                                       */
-SECTION_RODATA static u8 const data_80378EB0[36] = {
+SECTION_RODATA static u8 const l_dungeon_onColor[36] = {
 	0x28, 0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x30, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
 	0x34, 0x00, 0x00, 0x00, 0x38, 0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00,
 	0x44, 0x00, 0x00, 0x00,
 };
 
 /* 80378ED4-80378EF8 0024+00 s=1 e=0 z=0  None .rodata    l_dungeon_stayColor$3939                                     */
-SECTION_RODATA static u8 const data_80378ED4[36] = {
+SECTION_RODATA static u8 const l_dungeon_stayColor[36] = {
 	0x48, 0x00, 0x00, 0x00, 0x4C, 0x00, 0x00, 0x00, 0x50, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
 	0x54, 0x00, 0x00, 0x00, 0x58, 0x00, 0x00, 0x00, 0x5C, 0x00, 0x00, 0x00, 0x60, 0x00, 0x00, 0x00,
 	0x64, 0x00, 0x00, 0x00,
@@ -664,19 +664,19 @@ asm void dMap_c::getColor(int param_0) {
 
 /* ############################################################################################## */
 /* 804505F8-80450600 0004+04 s=1 e=0 z=0  None .sdata     backColor$3972                                               */
-SECTION_SDATA static u8 data_804505F8[4 + 4 /* padding */] = {
+SECTION_SDATA static u8 backColor[4 + 4 /* padding */] = {
 	0x04, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80451CD8-80451CDC 0004+00 s=1 e=0 z=0  None .sdata2    borderColor0$3975                                            */
-SECTION_SDATA2 static u8 data_80451CD8[4] = {
+SECTION_SDATA2 static u8 borderColor0[4] = {
 	0xB4, 0x00, 0x00, 0x00,
 };
 
 /* 80451CDC-80451CE0 0004+00 s=1 e=0 z=0  None .sdata2    borderColor1$3976                                            */
-SECTION_SDATA2 static u8 data_80451CDC[4] = {
+SECTION_SDATA2 static u8 borderColor1[4] = {
 	0xB8, 0x00, 0x00, 0x00,
 };
 
@@ -693,7 +693,7 @@ asm void renderingAmap_c::getLineColor(int param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 80378EF8-80378F08 0010+00 s=1 e=0 z=0  None .rodata    colorTable$3993                                              */
-SECTION_RODATA static u8 const data_80378EF8[16] = {
+SECTION_RODATA static u8 const colorTable[16] = {
 	0xBC, 0x00, 0x00, 0x00, 0xC0, 0x00, 0x00, 0x00, 0xC4, 0x00, 0x00, 0x00, 0xC8, 0x00, 0x00, 0x00,
 };
 
@@ -783,7 +783,7 @@ asm void renderingAmap_c::isRendAllRoom() const {
 
 /* ############################################################################################## */
 /* 80378F08-80378F24 001C+00 s=1 e=0 z=0  None .rodata    l_stayType$4046                                              */
-SECTION_RODATA static u8 const data_80378F08[28] = {
+SECTION_RODATA static u8 const l_stayType[28] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };

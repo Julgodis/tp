@@ -54,8 +54,8 @@ lbl_804FBF3C:
 lbl_804FC00C:
 /* 804FC00C  38 7F 08 08 */	addi r3, r31, 0x808
 /* 804FC010  38 80 00 0C */	li r4, 0xc
-/* 804FC014  3C A0 80 50 */	lis r5, data_80500C74@ha
-/* 804FC018  38 A5 0C 74 */	addi r5, r5, data_80500C74@l
+/* 804FC014  3C A0 80 50 */	lis r5, l_color@ha
+/* 804FC018  38 A5 0C 74 */	addi r5, r5, l_color@l
 /* 804FC01C  38 DF 01 0C */	addi r6, r31, 0x10c
 /* 804FC020  4B B1 7F 90 */	b update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c
 /* 804FC024  38 7F 08 08 */	addi r3, r31, 0x808

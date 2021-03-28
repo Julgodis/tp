@@ -14,7 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Vec {
@@ -26,13 +29,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -107,10 +107,10 @@ struct daNpcF_ActorMngr_c {
 	/* 8096BFD8 */ daNpcF_ActorMngr_c();
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daNpcBlueNS_c {
@@ -647,12 +647,12 @@ SECTION_RODATA static u8 const lit_4393[4] = {
 };
 
 /* 8096C9F8-8096CA04 000C+00 s=1 e=0 z=0  None .rodata    sCallEvtName$4400                                            */
-SECTION_RODATA static u8 const data_8096C9F8[12] = {
+SECTION_RODATA static u8 const sCallEvtName[12] = {
 	0x00, 0x01, 0x00, 0x02, 0x00, 0x03, 0x00, 0x04, 0x00, 0x05, 0x00, 0x06,
 };
 
 /* 8096CA04-8096CA0C 0006+02 s=1 e=0 z=0  None .rodata    sNameYami$4420                                               */
-SECTION_RODATA static u8 const data_8096CA04[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const sNameYami[6 + 2 /* padding */] = {
 	0x02, 0x3F, 0x02, 0x3D, 0x02, 0x3E,
 	/* padding */
 	0x00, 0x00,
@@ -703,17 +703,17 @@ SECTION_RODATA static u32 const lit_4846 = 0x41200000;
 SECTION_RODATA static u32 const lit_4847 = 0x41700000;
 
 /* 8096CA50-8096CA5C 000C+00 s=1 e=0 z=0  None .rodata    sWaitAnm$4874                                                */
-SECTION_RODATA static u8 const data_8096CA50[12] = {
+SECTION_RODATA static u8 const sWaitAnm[12] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02,
 };
 
 /* 8096CA5C-8096CA68 000C+00 s=1 e=0 z=0  None .rodata    sDamageAnm$4875                                              */
-SECTION_RODATA static u8 const data_8096CA5C[12] = {
+SECTION_RODATA static u8 const sDamageAnm[12] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x05,
 };
 
 /* 8096CA68-8096CA74 000C+00 s=1 e=0 z=0  None .rodata    sAppearAnm$4876                                              */
-SECTION_RODATA static u8 const data_8096CA68[12] = {
+SECTION_RODATA static u8 const sAppearAnm[12] = {
 	0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x08,
 };
 
@@ -829,7 +829,7 @@ SECTION_RODATA static u32 const lit_5005 = 0x42A00000;
 SECTION_RODATA static u32 const lit_5006 = 0x42200000;
 
 /* 8096CB40-8096CB4C 000C+00 s=1 e=0 z=0  None .rodata    ptclOffsetY$5218                                             */
-SECTION_RODATA static u8 const data_8096CB40[12] = {
+SECTION_RODATA static u8 const ptclOffsetY[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x41, 0xA0, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
 };
 

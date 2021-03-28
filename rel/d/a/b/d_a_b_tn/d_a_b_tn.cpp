@@ -37,10 +37,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
 struct mDoExt_brkAnm {
@@ -48,19 +48,19 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -83,9 +83,6 @@ struct daPy_py_c {
 	/* 8062E608 */ void checkNowWolf();
 };
 
-struct J3DModel {
-};
-
 struct dCcD_SrcSph {
 };
 
@@ -97,6 +94,9 @@ struct dCcD_Sph {
 };
 
 struct J3DJoint {
+};
+
+struct J3DModel {
 };
 
 struct daB_TN_c {
@@ -206,11 +206,11 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct _GXColor {
 };
 
-struct _GXColor {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dPa_control_c {
@@ -871,17 +871,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 8062E924-8062E92C 0008+00 s=1 e=0 z=0  None .data      e_prim$3799                                                  */
-SECTION_DATA static u8 data_8062E924[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 8062E92C-8062E934 0008+00 s=1 e=0 z=0  None .data      e_env$3800                                                   */
-SECTION_DATA static u8 data_8062E92C[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 8062E934-8062E93C 0006+02 s=1 e=0 z=0  None .data      eff_id$3808                                                  */
-SECTION_DATA static u8 data_8062E934[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -983,7 +983,7 @@ SECTION_DATA static u8 data_8062EBE8[64] = {
 };
 
 /* 8062EC28-8062EC5C 0034+00 s=1 e=0 z=0  None .data      break_part_no$4188                                           */
-SECTION_DATA static u8 data_8062EC28[52] = {
+SECTION_DATA static u8 break_part_no[52] = {
 	0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x01,
 	0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x07,
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x02,
@@ -991,7 +991,7 @@ SECTION_DATA static u8 data_8062EC28[52] = {
 };
 
 /* 8062EC5C-8062EC90 0034+00 s=1 e=0 z=0  None .data      break_part_no2$4222                                          */
-SECTION_DATA static u8 data_8062EC5C[52] = {
+SECTION_DATA static u8 break_part_no2[52] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x06,
 	0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x0A,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x02,
@@ -999,7 +999,7 @@ SECTION_DATA static u8 data_8062EC5C[52] = {
 };
 
 /* 8062EC90-8062ECD0 0040+00 s=1 e=0 z=0  None .data      break_part_vib$4254                                          */
-SECTION_DATA static u8 data_8062EC90[64] = {
+SECTION_DATA static u8 break_part_vib[64] = {
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x02,
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01,
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01,
@@ -1062,12 +1062,12 @@ SECTION_DATA static void* lit_5007[39] = {
 };
 
 /* 8062ED8C-8062ED94 0008+00 s=1 e=0 z=0  None .data      blur_effect_id$5997                                          */
-SECTION_DATA static u8 data_8062ED8C[8] = {
+SECTION_DATA static u8 blur_effect_id_5997[8] = {
 	0x87, 0xDA, 0x87, 0xDB, 0x87, 0xDC, 0x87, 0xDD,
 };
 
 /* 8062ED94-8062ED9C 0006+02 s=1 e=0 z=0  None .data      blur_effect_id$6035                                          */
-SECTION_DATA static u8 data_8062ED94[6 + 2 /* padding */] = {
+SECTION_DATA static u8 blur_effect_id_6035[6 + 2 /* padding */] = {
 	0x87, 0xDE, 0x87, 0xDF, 0x87, 0xE0,
 	/* padding */
 	0x00, 0x00,
@@ -1184,7 +1184,7 @@ SECTION_DATA static void* lit_9574[16] = {
 };
 
 /* 8062EF04-8062EF10 000C+00 s=1 e=0 z=0  None .data      tn2_brk_index$10040                                          */
-SECTION_DATA static u8 data_8062EF04[12] = {
+SECTION_DATA static u8 tn2_brk_index[12] = {
 	0x00, 0x00, 0x00, 0x19, 0x00, 0x00, 0x00, 0x1A, 0x00, 0x00, 0x00, 0x1B,
 };
 

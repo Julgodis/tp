@@ -41,7 +41,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
@@ -49,13 +52,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -79,15 +79,15 @@ struct daNpcT_MotionSeqMngr_c {
 struct daNpcT_faceMotionAnmData_c {
 };
 
+struct daNpcT_evtData_c {
+};
+
 struct dMsgFlow_c {
 	/* 80249F00 */ dMsgFlow_c();
 	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
 };
 
 struct daNpcT_motionAnmData_c {
-};
-
-struct daNpcT_evtData_c {
 };
 
 struct J3DJoint {

@@ -28,13 +28,13 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 80541898 */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_motionAnmData_c {
 };
 
 struct daNpcT_evtData_c {
+};
+
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpc_FairySeirei_c {
@@ -67,15 +67,15 @@ struct daNpc_FairySeirei_Param_c {
 	/* 80541D20 */ ~daNpc_FairySeirei_Param_c();
 };
 
-struct J3DModel {
+struct cXyz {
+	/* 805412D0 */ ~cXyz();
+	/* 8054184C */ cXyz();
 };
 
 struct J3DJoint {
 };
 
-struct cXyz {
-	/* 805412D0 */ ~cXyz();
-	/* 8054184C */ cXyz();
+struct J3DModel {
 };
 
 struct daNpcT_c {
@@ -145,15 +145,15 @@ struct daNpcT_ActorMngr_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
-	/* 8054130C */ ~csXyz();
-	/* 8054174C */ csXyz();
-};
-
 struct _GXColor {
 };
 
 struct dKy_tevstr_c {
+};
+
+struct csXyz {
+	/* 8054130C */ ~csXyz();
+	/* 8054174C */ csXyz();
 };
 
 struct dPa_control_c {
@@ -531,7 +531,7 @@ SECTION_RODATA static u32 const lit_4325 = 0xBF800000;
 SECTION_RODATA static u32 const lit_4465 = 0x43AF0000;
 
 /* 80541E38-80541E40 0006+02 s=1 e=0 z=0  None .rodata    id$4489                                                      */
-SECTION_RODATA static u8 const data_80541E38[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const id[6 + 2 /* padding */] = {
 	0x8A, 0xA3, 0x8A, 0xA4, 0x8A, 0xA5,
 	/* padding */
 	0x00, 0x00,
@@ -544,7 +544,7 @@ SECTION_RODATA static u32 const lit_4530 = 0x3F800000;
 SECTION_RODATA static u32 const lit_4531 = 0x43480000;
 
 /* 80541E48-80541E58 0010+00 s=1 e=0 z=0  None .rodata    sTempBit$4575                                                */
-SECTION_RODATA static u8 const data_80541E48[16] = {
+SECTION_RODATA static u8 const sTempBit[16] = {
 	0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x7A, 0x00, 0x00, 0x00, 0x7B, 0x00, 0x00, 0x00, 0x7C,
 };
 

@@ -39,10 +39,10 @@ struct daObj_Sekizo_Param_c {
 	/* 80CCE118 */ ~daObj_Sekizo_Param_c();
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

@@ -26,10 +26,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
 struct mDoExt_btpAnm {
@@ -41,7 +41,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Vec {
@@ -52,13 +55,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -152,10 +152,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -1119,7 +1119,7 @@ SECTION_DATA static void* lit_7658[13] = {
 SECTION_DATA static u32 yuka_jump_x = 0x42A00000;
 
 /* 80A5E94C-80A5E954 0008+00 s=1 e=0 z=0  None .data      w_eff_id$7873                                                */
-SECTION_DATA static u8 data_80A5E94C[8] = {
+SECTION_DATA static u8 w_eff_id[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
@@ -1600,7 +1600,7 @@ SECTION_DATA static void* lit_11379[23] = {
 };
 
 /* 80A5FD30-80A5FD74 0044+00 s=1 e=0 z=0  None .data      cc_cyl_src$11445                                             */
-SECTION_DATA static u8 data_80A5FD30[68] = {
+SECTION_DATA static u8 cc_cyl_src[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFA, 0xFD, 0x3F, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -3192,7 +3192,7 @@ asm static void hang_end_check(npc_ks_class* param_0) {
 
 /* ############################################################################################## */
 /* 80A5FF44-80A5FF48 0002+02 s=1 e=0 z=0  None .bss       start_pya$6091                                               */
-static u8 data_80A5FF44[2 + 2 /* padding */];
+static u8 start_pya[2 + 2 /* padding */];
 
 /* 80A4E000-80A4E800 0800+00 s=2 e=0 z=0  None .text      npc_ks_hang__FP12npc_ks_class                                */
 #pragma push

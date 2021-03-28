@@ -11,6 +11,13 @@
 // Types:
 // 
 
+struct dMenu_Fmap_region_data_c {
+	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, int, int*, int*);
+};
+
+struct dMenu_Fmap_world_data_c {
+};
+
 struct dDrawPath_c {
 	struct group_class {
 	};
@@ -30,13 +37,6 @@ struct dDrawPath_c {
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
 	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CCC4 */ void drawPath();
-};
-
-struct dMenu_Fmap_world_data_c {
-};
-
-struct dMenu_Fmap_region_data_c {
-	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, int, int*, int*);
 };
 
 struct renderingFmap_c {
@@ -306,27 +306,27 @@ asm void renderingFmap_c::entry(dMenu_Fmap_world_data_c* param_0, int param_1, f
 
 /* ############################################################################################## */
 /* 803961B0-803961D0 0020+00 s=2 e=0 z=0  None .rodata    palNo$3985                                                   */
-SECTION_RODATA static u8 const data_803961B0[32] = {
+SECTION_RODATA static u8 const palNo[32] = {
 	0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x12, 0x00, 0x00, 0x00, 0x13, 0x00, 0x00, 0x00, 0x14,
 	0x00, 0x00, 0x00, 0x15, 0x00, 0x00, 0x00, 0x16, 0x00, 0x00, 0x00, 0x17, 0x00, 0x00, 0x00, 0x18,
 };
 
 /* 803961D0-803961F4 0024+00 s=1 e=0 z=0  None .rodata    l_dungeon_onColor$4186                                       */
-SECTION_RODATA static u8 const data_803961D0[36] = {
+SECTION_RODATA static u8 const l_dungeon_onColor[36] = {
 	0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x10, 0x00, 0x00, 0x00, 0x14, 0x00, 0x00, 0x00, 0x18, 0x00, 0x00, 0x00, 0x1C, 0x00, 0x00, 0x00,
 	0x20, 0x00, 0x00, 0x00,
 };
 
 /* 803961F4-80396218 0024+00 s=1 e=0 z=0  None .rodata    l_dungeon_stayColor$4187                                     */
-SECTION_RODATA static u8 const data_803961F4[36] = {
+SECTION_RODATA static u8 const l_dungeon_stayColor[36] = {
 	0x24, 0x00, 0x00, 0x00, 0x28, 0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x30, 0x00, 0x00, 0x00, 0x34, 0x00, 0x00, 0x00, 0x38, 0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00,
 	0x40, 0x00, 0x00, 0x00,
 };
 
 /* 80396218-8039623C 0024+00 s=1 e=0 z=0  None .rodata    l_dungeon_pointColor$4188                                    */
-SECTION_RODATA static u8 const data_80396218[36] = {
+SECTION_RODATA static u8 const l_dungeon_pointColor[36] = {
 	0x44, 0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00, 0x4C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x50, 0x00, 0x00, 0x00, 0x54, 0x00, 0x00, 0x00, 0x58, 0x00, 0x00, 0x00, 0x5C, 0x00, 0x00, 0x00,
 	0x60, 0x00, 0x00, 0x00,
@@ -732,14 +732,14 @@ asm void dMenu_FmapMap_c::rendering(dDrawPath_c::line_class const* param_0) {
 
 /* ############################################################################################## */
 /* 804541B0-804541B8 0005+03 s=1 e=0 z=0  None .sdata2    l_lineWidthPatData$4134                                      */
-SECTION_SDATA2 static u8 data_804541B0[5 + 3 /* padding */] = {
+SECTION_SDATA2 static u8 l_lineWidthPatData[5 + 3 /* padding */] = {
 	0x00, 0x06, 0x0C, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 804541B8-804541C0 0005+03 s=1 e=0 z=0  None .sdata2    l_lineWidthPatData2$4135                                     */
-SECTION_SDATA2 static u8 data_804541B8[5 + 3 /* padding */] = {
+SECTION_SDATA2 static u8 l_lineWidthPatData2[5 + 3 /* padding */] = {
 	0x00, 0x00, 0x06, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
@@ -783,19 +783,19 @@ asm void dMenu_FmapMap_c::setFlashOn(int param_0, int param_1, u8* param_2, int 
 
 /* ############################################################################################## */
 /* 80450728-80450730 0004+04 s=1 e=0 z=0  None .sdata     black$4166                                                   */
-SECTION_SDATA static u8 data_80450728[4 + 4 /* padding */] = {
+SECTION_SDATA static u8 black[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 804541C4-804541C8 0004+00 s=1 e=0 z=0  None .sdata2    borderColor0$4169                                            */
-SECTION_SDATA2 static u8 data_804541C4[4] = {
+SECTION_SDATA2 static u8 borderColor0[4] = {
 	0x64, 0x00, 0x00, 0x00,
 };
 
 /* 804541C8-804541CC 0004+00 s=1 e=0 z=0  None .sdata2    borderColor1$4170                                            */
-SECTION_SDATA2 static u8 data_804541C8[4] = {
+SECTION_SDATA2 static u8 borderColor1[4] = {
 	0x68, 0x00, 0x00, 0x00,
 };
 
@@ -812,7 +812,7 @@ asm void dMenu_FmapMap_c::getLineColor(int param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 804541CC-804541D0 0004+00 s=1 e=0 z=0  None .sdata2    l_mapBaseColor$4181                                          */
-SECTION_SDATA2 static u8 data_804541CC[4] = {
+SECTION_SDATA2 static u8 l_mapBaseColor[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 

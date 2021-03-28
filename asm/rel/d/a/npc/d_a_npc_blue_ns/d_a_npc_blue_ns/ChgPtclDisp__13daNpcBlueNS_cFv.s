@@ -17,8 +17,8 @@ lbl_8096B23C:
 /* 8096B23C  C0 5F 04 D8 */	lfs f2, 0x4d8(r31)
 /* 8096B240  C0 3F 04 D4 */	lfs f1, 0x4d4(r31)
 /* 8096B244  54 A0 10 3A */	slwi r0, r5, 2
-/* 8096B248  3C 60 80 97 */	lis r3, data_8096CB40@ha
-/* 8096B24C  38 63 CB 40 */	addi r3, r3, data_8096CB40@l
+/* 8096B248  3C 60 80 97 */	lis r3, ptclOffsetY@ha
+/* 8096B24C  38 63 CB 40 */	addi r3, r3, ptclOffsetY@l
 /* 8096B250  7C 03 04 2E */	lfsx f0, r3, r0
 /* 8096B254  EC 21 00 2A */	fadds f1, f1, f0
 /* 8096B258  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)

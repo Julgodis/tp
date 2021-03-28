@@ -12,9 +12,9 @@ lbl_80122BBC:
 /* 80122BE4  38 63 01 2C */	addi r3, r3, 0x12c
 /* 80122BE8  4B F7 AE 79 */	bl checkStageName__9daAlink_cFPCc
 /* 80122BEC  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 80122BF0  38 02 96 9C */	la r0, data_8045309C(r2) /* 8045309C-_SDA2_BASE_ */
+/* 80122BF0  38 02 96 9C */	la r0, effName0(r2) /* 8045309C-_SDA2_BASE_ */
 /* 80122BF4  41 82 00 08 */	beq lbl_80122BFC
-/* 80122BF8  38 02 96 A4 */	la r0, data_804530A4(r2) /* 804530A4-_SDA2_BASE_ */
+/* 80122BF8  38 02 96 A4 */	la r0, effName1(r2) /* 804530A4-_SDA2_BASE_ */
 lbl_80122BFC:
 /* 80122BFC  7C 1F 03 78 */	mr r31, r0
 /* 80122C00  80 1E 05 74 */	lwz r0, 0x574(r30)

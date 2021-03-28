@@ -38,11 +38,11 @@ lbl_801CF1A8:
 /* 801CF1AC  C0 02 A7 C0 */	lfs f0, lit_4152(r2)
 /* 801CF1B0  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801CF1B4  40 81 00 10 */	ble lbl_801CF1C4
-/* 801CF1B8  38 62 A7 B0 */	la r3, data_804541B0(r2) /* 804541B0-_SDA2_BASE_ */
+/* 801CF1B8  38 62 A7 B0 */	la r3, l_lineWidthPatData(r2) /* 804541B0-_SDA2_BASE_ */
 /* 801CF1BC  7C 63 20 AE */	lbzx r3, r3, r4
 /* 801CF1C0  48 00 00 0C */	b lbl_801CF1CC
 lbl_801CF1C4:
-/* 801CF1C4  38 62 A7 B8 */	la r3, data_804541B8(r2) /* 804541B8-_SDA2_BASE_ */
+/* 801CF1C4  38 62 A7 B8 */	la r3, l_lineWidthPatData2(r2) /* 804541B8-_SDA2_BASE_ */
 /* 801CF1C8  7C 63 20 AE */	lbzx r3, r3, r4
 lbl_801CF1CC:
 /* 801CF1CC  38 21 00 20 */	addi r1, r1, 0x20

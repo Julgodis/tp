@@ -10,8 +10,8 @@ lbl_8059D320:
 /* 8059D340  7F E6 FB 78 */	mr r6, r31
 /* 8059D344  4B AE 65 1C */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 8059D348  38 7F 05 F0 */	addi r3, r31, 0x5f0
-/* 8059D34C  3C 80 80 5A */	lis r4, data_8059DEE0@ha
-/* 8059D350  38 84 DE E0 */	addi r4, r4, data_8059DEE0@l
+/* 8059D34C  3C 80 80 5A */	lis r4, ccCylSrc@ha
+/* 8059D350  38 84 DE E0 */	addi r4, r4, ccCylSrc@l
 /* 8059D354  4B AE 75 60 */	b Set__8dCcD_CylFRC11dCcD_SrcCyl
 /* 8059D358  38 1F 05 B4 */	addi r0, r31, 0x5b4
 /* 8059D35C  90 1F 06 34 */	stw r0, 0x634(r31)

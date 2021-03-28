@@ -6,8 +6,8 @@ lbl_80056390:
 /* 800563A0  48 30 BE 39 */	bl _savegpr_28
 /* 800563A4  7C 7F 1B 78 */	mr r31, r3
 /* 800563A8  7F FE FB 78 */	mr r30, r31
-/* 800563AC  3C 60 80 38 */	lis r3, data_8037A178@ha
-/* 800563B0  38 03 A1 78 */	addi r0, r3, data_8037A178@l
+/* 800563AC  3C 60 80 38 */	lis r3, l_drawlistSize@ha
+/* 800563B0  38 03 A1 78 */	addi r0, r3, l_drawlistSize@l
 /* 800563B4  7C 1D 03 78 */	mr r29, r0
 /* 800563B8  3B 80 00 00 */	li r28, 0
 lbl_800563BC:
@@ -19,8 +19,8 @@ lbl_800563BC:
 /* 800563D0  2C 1C 00 15 */	cmpwi r28, 0x15
 /* 800563D4  3B DE 00 04 */	addi r30, r30, 4
 /* 800563D8  41 80 FF E4 */	blt lbl_800563BC
-/* 800563DC  3C 60 80 38 */	lis r3, data_8037A1A4@ha
-/* 800563E0  38 03 A1 A4 */	addi r0, r3, data_8037A1A4@l
+/* 800563DC  3C 60 80 38 */	lis r3, l_nonSortId@ha
+/* 800563E0  38 03 A1 A4 */	addi r0, r3, l_nonSortId@l
 /* 800563E4  7C 05 03 78 */	mr r5, r0
 /* 800563E8  38 60 00 05 */	li r3, 5
 /* 800563EC  38 00 00 09 */	li r0, 9
@@ -32,7 +32,7 @@ lbl_800563F4:
 /* 80056400  90 64 00 0C */	stw r3, 0xc(r4)
 /* 80056404  38 A5 00 01 */	addi r5, r5, 1
 /* 80056408  42 00 FF EC */	bdnz lbl_800563F4
-/* 8005640C  38 A2 86 C4 */	la r5, data_804520C4(r2) /* 804520C4-_SDA2_BASE_ */
+/* 8005640C  38 A2 86 C4 */	la r5, l_zSortId(r2) /* 804520C4-_SDA2_BASE_ */
 /* 80056410  38 60 00 02 */	li r3, 2
 /* 80056414  38 00 00 06 */	li r0, 6
 /* 80056418  7C 09 03 A6 */	mtctr r0

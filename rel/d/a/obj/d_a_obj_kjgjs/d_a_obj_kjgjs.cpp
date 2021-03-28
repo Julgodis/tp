@@ -29,13 +29,13 @@ struct daObjKJgjs_c {
 	/* 80C464CC */ ~daObjKJgjs_c();
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {

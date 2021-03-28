@@ -33,8 +33,8 @@ lbl_806AAE80:
 /* 806AAE88  3A E0 00 00 */	li r23, 0
 /* 806AAE8C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 806AAE90  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
-/* 806AAE94  3C 60 80 6B */	lis r3, data_806AD714@ha
-/* 806AAE98  3B C3 D7 14 */	addi r30, r3, data_806AD714@l
+/* 806AAE94  3C 60 80 6B */	lis r3, elect_effect_name@ha
+/* 806AAE98  3B C3 D7 14 */	addi r30, r3, elect_effect_name@l
 lbl_806AAE9C:
 /* 806AAE9C  38 80 00 00 */	li r4, 0
 /* 806AAEA0  B0 81 00 24 */	sth r4, 0x24(r1)

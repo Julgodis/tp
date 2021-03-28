@@ -3,7 +3,7 @@ lbl_8033CCFC:
 /* 8033CD00  90 01 00 04 */	stw r0, 4(r1)
 /* 8033CD04  94 21 FF B8 */	stwu r1, -0x48(r1)
 /* 8033CD08  93 E1 00 44 */	stw r31, 0x44(r1)
-/* 8033CD0C  80 6D 90 DC */	lwz r3, data_8045165C(r13)
+/* 8033CD0C  80 6D 90 DC */	lwz r3, apploaderPosition(r13)
 /* 8033CD10  2C 03 00 00 */	cmpwi r3, 0
 /* 8033CD14  41 82 00 08 */	beq lbl_8033CD1C
 /* 8033CD18  48 00 00 94 */	b lbl_8033CDAC
@@ -43,13 +43,13 @@ lbl_8033CD78:
 /* 8033CD8C  80 1F 00 38 */	lwz r0, 0x38(r31)
 /* 8033CD90  80 63 30 F4 */	lwz r3, 0x30F4(r3)
 /* 8033CD94  7C 03 02 14 */	add r0, r3, r0
-/* 8033CD98  90 0D 90 DC */	stw r0, data_8045165C(r13)
+/* 8033CD98  90 0D 90 DC */	stw r0, apploaderPosition(r13)
 /* 8033CD9C  48 00 00 0C */	b lbl_8033CDA8
 lbl_8033CDA0:
 /* 8033CDA0  38 00 24 40 */	li r0, 0x2440
-/* 8033CDA4  90 0D 90 DC */	stw r0, data_8045165C(r13)
+/* 8033CDA4  90 0D 90 DC */	stw r0, apploaderPosition(r13)
 lbl_8033CDA8:
-/* 8033CDA8  80 6D 90 DC */	lwz r3, data_8045165C(r13)
+/* 8033CDA8  80 6D 90 DC */	lwz r3, apploaderPosition(r13)
 lbl_8033CDAC:
 /* 8033CDAC  80 01 00 4C */	lwz r0, 0x4c(r1)
 /* 8033CDB0  83 E1 00 44 */	lwz r31, 0x44(r1)

@@ -42,8 +42,8 @@ lbl_80529DFC:
 /* 80529E14  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80529E18  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80529E1C  54 00 10 3A */	slwi r0, r0, 2
-/* 80529E20  3C 80 80 53 */	lis r4, data_805364CC@ha
-/* 80529E24  38 84 64 CC */	addi r4, r4, data_805364CC@l
+/* 80529E20  3C 80 80 53 */	lis r4, vib_p@ha
+/* 80529E24  38 84 64 CC */	addi r4, r4, vib_p@l
 /* 80529E28  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80529E2C  38 A0 00 01 */	li r5, 1
 /* 80529E30  38 C1 00 0C */	addi r6, r1, 0xc

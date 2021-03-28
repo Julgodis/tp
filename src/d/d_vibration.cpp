@@ -165,7 +165,7 @@ extern "C" asm static void func_8006F1D8() {
 
 /* ############################################################################################## */
 /* 80450F50-80450F58 0008+00 s=1 e=0 z=0  None .sbss      data$3831                                                    */
-static u8 data_80450F50[8];
+static u8 data[8];
 
 /* 8006F268-8006FA24 07BC+00 s=0 e=2 z=0  None .text      Run__12dVibration_cFv                                        */
 #pragma push

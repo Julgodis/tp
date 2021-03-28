@@ -140,8 +140,8 @@ lbl_80123610:
 /* 80123630  3B 60 00 00 */	li r27, 0
 /* 80123634  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80123638  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
-/* 8012363C  3C 60 80 39 */	lis r3, data_80391D38@ha
-/* 80123640  3B C3 1D 38 */	addi r30, r3, data_80391D38@l
+/* 8012363C  3C 60 80 39 */	lis r3, effName_41208@ha
+/* 80123640  3B C3 1D 38 */	addi r30, r3, effName_41208@l
 lbl_80123644:
 /* 80123644  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 80123648  38 80 00 00 */	li r4, 0

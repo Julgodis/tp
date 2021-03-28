@@ -47,13 +47,13 @@ struct daZrTuraRc_HIO_c {
 	/* 80D422D0 */ ~daZrTuraRc_HIO_c();
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -323,7 +323,7 @@ SECTION_DATA static void* lit_3872[3] = {
 };
 
 /* 80D424B8-80D424D0 0018+00 s=1 e=0 z=0  None .data      mode_proc$3870                                               */
-SECTION_DATA static u8 data_80D424B8[24] = {
+SECTION_DATA static u8 mode_proc[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };

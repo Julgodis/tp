@@ -85,10 +85,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -478,12 +478,12 @@ SECTION_RODATA static u8 const lit_4097[8] = {
 };
 
 /* 80D23E3C-80D23E48 000C+00 s=1 e=0 z=0  None .rodata    l_effect_id$4157                                             */
-SECTION_RODATA static u8 const data_80D23E3C[12] = {
+SECTION_RODATA static u8 const l_effect_id[12] = {
 	0x84, 0xA8, 0x84, 0xA9, 0x84, 0xAA, 0x84, 0xAB, 0x84, 0xAC, 0x84, 0xAD,
 };
 
 /* 80D23E48-80D23E50 0008+00 s=1 e=0 z=0  None .rodata    l_fall_effect_id$4173                                        */
-SECTION_RODATA static u8 const data_80D23E48[8] = {
+SECTION_RODATA static u8 const l_fall_effect_id[8] = {
 	0x84, 0xAE, 0x84, 0xAF, 0x84, 0xB0, 0x84, 0xB1,
 };
 
@@ -679,7 +679,7 @@ SECTION_DATA static void* lit_3934[3] = {
 };
 
 /* 80D23FA0-80D23FE8 0048+00 s=1 e=0 z=0  None .data      l_func$3928                                                  */
-SECTION_DATA static u8 data_80D23FA0[72] = {
+SECTION_DATA static u8 l_func[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

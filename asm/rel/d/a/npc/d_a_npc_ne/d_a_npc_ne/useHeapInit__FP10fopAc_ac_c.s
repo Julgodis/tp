@@ -197,8 +197,8 @@ lbl_80A91A20:
 /* 80A91A70  41 82 00 90 */	beq lbl_80A91B00
 /* 80A91A74  80 7F 05 E4 */	lwz r3, 0x5e4(r31)
 /* 80A91A78  57 80 10 3A */	slwi r0, r28, 2
-/* 80A91A7C  3C 80 80 A9 */	lis r4, data_80A92948@ha
-/* 80A91A80  38 84 29 48 */	addi r4, r4, data_80A92948@l
+/* 80A91A7C  3C 80 80 A9 */	lis r4, dish_bck@ha
+/* 80A91A80  38 84 29 48 */	addi r4, r4, dish_bck@l
 /* 80A91A84  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80A91A88  7F C5 F3 78 */	mr r5, r30
 /* 80A91A8C  38 C0 00 80 */	li r6, 0x80

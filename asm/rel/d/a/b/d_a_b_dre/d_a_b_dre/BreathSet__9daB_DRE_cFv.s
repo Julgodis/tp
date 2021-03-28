@@ -27,8 +27,8 @@ lbl_805CA4FC:
 /* 805CA560  3B 40 00 00 */	li r26, 0
 /* 805CA564  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 805CA568  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 805CA56C  3C 60 80 5D */	lis r3, data_805CAFAC@ha
-/* 805CA570  3A C3 AF AC */	addi r22, r3, data_805CAFAC@l
+/* 805CA56C  3C 60 80 5D */	lis r3, effId@ha
+/* 805CA570  3A C3 AF AC */	addi r22, r3, effId@l
 /* 805CA574  3C 60 80 5D */	lis r3, data_805CB098@ha
 /* 805CA578  3A E3 B0 98 */	addi r23, r3, data_805CB098@l
 /* 805CA57C  3C 60 00 07 */	lis r3, 0x0007 /* 0x0007047C@ha */

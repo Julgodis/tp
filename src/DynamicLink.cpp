@@ -225,7 +225,7 @@ SECTION_DEAD static char const* const pad_8039A7E4 = "\0\0\0";
 #pragma pop
 
 /* 803C34B0-803C34C0 0010+00 s=1 e=0 z=0  None .data      strings$4165                                                 */
-SECTION_DATA static void* data_803C34B0[4] = {
+SECTION_DATA static void* strings[4] = {
 	(void*)(((char*)&DynamicLink__stringBase0)+0x2BE),
 	(void*)(((char*)&DynamicLink__stringBase0)+0x2C3),
 	(void*)(((char*)&DynamicLink__stringBase0)+0x2C7),

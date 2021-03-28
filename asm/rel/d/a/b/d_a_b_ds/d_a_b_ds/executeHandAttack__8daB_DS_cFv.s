@@ -22,8 +22,8 @@ lbl_805D255C:
 /* 805D256C  1C 00 00 03 */	mulli r0, r0, 3
 /* 805D2570  7C 04 02 14 */	add r0, r4, r0
 /* 805D2574  54 00 10 3A */	slwi r0, r0, 2
-/* 805D2578  3C 80 80 5E */	lis r4, data_805DD614@ha
-/* 805D257C  38 84 D6 14 */	addi r4, r4, data_805DD614@l
+/* 805D2578  3C 80 80 5E */	lis r4, Ds_HandAt_id@ha
+/* 805D257C  38 84 D6 14 */	addi r4, r4, Ds_HandAt_id@l
 /* 805D2580  7C 84 00 2E */	lwzx r4, r4, r0
 /* 805D2584  38 A0 00 00 */	li r5, 0
 /* 805D2588  C0 3F 01 90 */	lfs f1, 0x190(r31)

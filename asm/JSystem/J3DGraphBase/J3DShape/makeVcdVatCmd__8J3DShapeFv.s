@@ -8,7 +8,7 @@ lbl_80315260:
 /* 80315278  7C 00 07 75 */	extsb. r0, r0
 /* 8031527C  40 82 00 14 */	bne lbl_80315290
 /* 80315280  48 02 84 75 */	bl OSDisableInterrupts
-/* 80315284  90 6D 90 48 */	stw r3, data_804515C8(r13)
+/* 80315284  90 6D 90 48 */	stw r3, sInterruptFlag(r13)
 /* 80315288  38 00 00 01 */	li r0, 1
 /* 8031528C  98 0D 90 4C */	stb r0, data_804515CC(r13)
 lbl_80315290:
@@ -33,7 +33,7 @@ lbl_80315290:
 /* 803152D8  38 00 00 00 */	li r0, 0
 /* 803152DC  90 0D 94 00 */	stw r0, __GDCurrentDL(r13)
 /* 803152E0  48 02 BA 25 */	bl OSEnableScheduler
-/* 803152E4  80 6D 90 48 */	lwz r3, data_804515C8(r13)
+/* 803152E4  80 6D 90 48 */	lwz r3, sInterruptFlag(r13)
 /* 803152E8  48 02 84 35 */	bl OSRestoreInterrupts
 /* 803152EC  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 803152F0  80 01 00 24 */	lwz r0, 0x24(r1)

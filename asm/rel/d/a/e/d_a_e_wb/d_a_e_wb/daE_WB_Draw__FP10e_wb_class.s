@@ -435,8 +435,8 @@ lbl_807D3550:
 /* 807D3574  4B FF F6 11 */	bl himo_control2__FP10e_wb_classP4cXyziSc
 /* 807D3578  38 7B 15 D0 */	addi r3, r27, 0x15d0
 /* 807D357C  38 80 00 10 */	li r4, 0x10
-/* 807D3580  3C A0 80 7E */	lis r5, data_807E2F78@ha
-/* 807D3584  38 A5 2F 78 */	addi r5, r5, data_807E2F78@l
+/* 807D3580  3C A0 80 7E */	lis r5, l_color@ha
+/* 807D3584  38 A5 2F 78 */	addi r5, r5, l_color@l
 /* 807D3588  38 DB 01 0C */	addi r6, r27, 0x10c
 /* 807D358C  4B 84 0A 24 */	b update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c
 /* 807D3590  38 7B 15 D0 */	addi r3, r27, 0x15d0
@@ -455,8 +455,8 @@ lbl_807D3550:
 /* 807D35C4  4B 84 11 74 */	b setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c
 /* 807D35C8  38 7B 16 0C */	addi r3, r27, 0x160c
 /* 807D35CC  38 80 00 10 */	li r4, 0x10
-/* 807D35D0  3C A0 80 7E */	lis r5, data_807E2F78@ha
-/* 807D35D4  38 A5 2F 78 */	addi r5, r5, data_807E2F78@l
+/* 807D35D0  3C A0 80 7E */	lis r5, l_color@ha
+/* 807D35D4  38 A5 2F 78 */	addi r5, r5, l_color@l
 /* 807D35D8  38 DB 01 0C */	addi r6, r27, 0x10c
 /* 807D35DC  4B 84 09 D4 */	b update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c
 /* 807D35E0  38 7B 16 0C */	addi r3, r27, 0x160c
@@ -472,8 +472,8 @@ lbl_807D3550:
 /* 807D3608  4B 84 11 30 */	b setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c
 /* 807D360C  38 7B 16 48 */	addi r3, r27, 0x1648
 /* 807D3610  38 80 00 02 */	li r4, 2
-/* 807D3614  3C A0 80 7E */	lis r5, data_807E2F78@ha
-/* 807D3618  38 A5 2F 78 */	addi r5, r5, data_807E2F78@l
+/* 807D3614  3C A0 80 7E */	lis r5, l_color@ha
+/* 807D3618  38 A5 2F 78 */	addi r5, r5, l_color@l
 /* 807D361C  38 DB 01 0C */	addi r6, r27, 0x10c
 /* 807D3620  4B 84 09 90 */	b update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c
 /* 807D3624  38 7B 16 48 */	addi r3, r27, 0x1648

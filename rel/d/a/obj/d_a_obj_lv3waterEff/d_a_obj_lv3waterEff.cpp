@@ -25,10 +25,10 @@ struct daObjWaterEff_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct cXyz {
@@ -36,7 +36,7 @@ struct cXyz {
 	/* 80C5C6AC */ cXyz();
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
 };
 
 struct dPa_control_c {

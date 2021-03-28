@@ -51,10 +51,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -72,13 +72,13 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
+struct _GXColor {
+};
+
 struct csXyz {
 	/* 80CE3920 */ csXyz();
 	/* 802673F4 */ csXyz(s16, s16, s16);
 	/* 80CE0F58 */ ~csXyz();
-};
-
-struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -445,14 +445,14 @@ extern "C" void __register_global_object(); // 1
 SECTION_RODATA static u32 const lit_3779 = 0x3F4CCCCD;
 
 /* 80CE3B70-80CE3B78 0006+02 s=1 e=0 z=0  None .data      e_id$4326                                                    */
-SECTION_DATA static u8 data_80CE3B70[6 + 2 /* padding */] = {
+SECTION_DATA static u8 e_id[6 + 2 /* padding */] = {
 	0x82, 0xAB, 0x82, 0xAC, 0x82, 0xAD,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80CE3B78-80CE3BBC 0044+00 s=1 e=0 z=0  None .data      cc_cyl_src$5220                                              */
-SECTION_DATA static u8 data_80CE3B78[68] = {
+SECTION_DATA static u8 cc_cyl_src[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFA, 0xFD, 0x3F, 0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,

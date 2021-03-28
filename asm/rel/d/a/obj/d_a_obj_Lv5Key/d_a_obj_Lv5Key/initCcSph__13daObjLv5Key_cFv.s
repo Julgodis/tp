@@ -10,8 +10,8 @@ lbl_80B9BBCC:
 /* 80B9BBEC  7F E6 FB 78 */	mr r6, r31
 /* 80B9BBF0  4B 4E 7C 70 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80B9BBF4  38 7F 08 0C */	addi r3, r31, 0x80c
-/* 80B9BBF8  3C 80 80 BA */	lis r4, data_80B9C940@ha
-/* 80B9BBFC  38 84 C9 40 */	addi r4, r4, data_80B9C940@l
+/* 80B9BBF8  3C 80 80 BA */	lis r4, ccShpSrc@ha
+/* 80B9BBFC  38 84 C9 40 */	addi r4, r4, ccShpSrc@l
 /* 80B9BC00  4B 4E 8E 34 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80B9BC04  38 1F 07 D0 */	addi r0, r31, 0x7d0
 /* 80B9BC08  90 1F 08 50 */	stw r0, 0x850(r31)

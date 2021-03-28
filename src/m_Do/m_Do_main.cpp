@@ -440,7 +440,7 @@ asm void HeapCheck::heapDisplay() const {
 
 /* ############################################################################################## */
 /* 803A2F14-803A2F28 0014+00 s=1 e=0 z=0  None .data      desc1$3717                                                   */
-SECTION_DATA static void* data_803A2F14[5] = {
+SECTION_DATA static void* desc1[5] = {
 	(void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x14F),
 	(void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x150),
 	(void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x15A),
@@ -449,7 +449,7 @@ SECTION_DATA static void* data_803A2F14[5] = {
 };
 
 /* 803A2F28-803A2F40 0014+04 s=1 e=0 z=0  None .data      desc2$3718                                                   */
-SECTION_DATA static void* data_803A2F28[5 + 1 /* padding */] = {
+SECTION_DATA static void* desc2[5 + 1 /* padding */] = {
 	(void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x14F),
 	(void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x178),
 	(void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x182),
@@ -501,19 +501,19 @@ asm static void debugDisplay() {
 
 /* ############################################################################################## */
 /* 80450B1C-80450B20 0004+00 s=1 e=0 z=0  None .sbss      console_position_x$3776                                      */
-static f32 data_80450B1C;
+static f32 console_position_x;
 
 /* 80450B20-80450B24 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450B20[4];
 
 /* 80450B24-80450B28 0004+00 s=1 e=0 z=0  None .sbss      console_position_y$3779                                      */
-static f32 data_80450B24;
+static f32 console_position_y;
 
 /* 80450B28-80450B2C 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450B28[4];
 
 /* 80450B2C-80450B30 0004+00 s=1 e=0 z=0  None .sbss      console_scroll$3782                                          */
-static u8 data_80450B2C[4];
+static u8 console_scroll[4];
 
 /* 80450B30-80450B34 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450B30[4];
@@ -579,7 +579,7 @@ asm static void debug() {
 
 /* ############################################################################################## */
 /* 80450B34-80450B38 0004+00 s=1 e=0 z=0  None .sbss      frame$3939                                                   */
-static u8 data_80450B34[4];
+static u8 frame[4];
 
 /* 8000628C-80006454 01C8+00 s=1 e=0 z=0  None .text      main01__Fv                                                   */
 #pragma push

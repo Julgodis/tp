@@ -20,8 +20,8 @@ lbl_8078DCCC:
 /* 8078DD14  38 E0 00 0A */	li r7, 0xa
 /* 8078DD18  4B BD 40 48 */	b __construct_array
 /* 8078DD1C  38 60 00 00 */	li r3, 0
-/* 8078DD20  3C 80 80 79 */	lis r4, func_8078DD44@ha
-/* 8078DD24  38 84 DD 44 */	addi r4, r4, func_8078DD44@l
+/* 8078DD20  3C 80 80 79 */	lis r4, __arraydtor@ha
+/* 8078DD24  38 84 DD 44 */	addi r4, r4, __arraydtor@l
 /* 8078DD28  38 BF 00 9C */	addi r5, r31, 0x9c
 /* 8078DD2C  4B FF C4 8D */	bl __register_global_object
 /* 8078DD30  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -626,8 +626,8 @@ lbl_8064D868:
 /* 8064D87C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8064D880  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8064D884  3B 83 23 3C */	addi r28, r3, 0x233c
-/* 8064D888  3C 60 80 65 */	lis r3, data_8064F428@ha
-/* 8064D88C  3A E3 F4 28 */	addi r23, r3, data_8064F428@l
+/* 8064D888  3C 60 80 65 */	lis r3, ice_sph_jnt@ha
+/* 8064D88C  3A E3 F4 28 */	addi r23, r3, ice_sph_jnt@l
 lbl_8064D890:
 /* 8064D890  7C 77 D2 14 */	add r3, r23, r26
 /* 8064D894  80 03 00 00 */	lwz r0, 0(r3)
@@ -671,8 +671,8 @@ lbl_8064D890:
 /* 8064D92C  3B 60 00 00 */	li r27, 0
 /* 8064D930  3B 40 00 00 */	li r26, 0
 /* 8064D934  3B 20 00 00 */	li r25, 0
-/* 8064D938  3C 60 80 65 */	lis r3, data_8064F428@ha
-/* 8064D93C  3A E3 F4 28 */	addi r23, r3, data_8064F428@l
+/* 8064D938  3C 60 80 65 */	lis r3, ice_sph_jnt@ha
+/* 8064D93C  3A E3 F4 28 */	addi r23, r3, ice_sph_jnt@l
 /* 8064D940  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8064D944  3B 03 D4 70 */	addi r24, r3, now__14mDoMtx_stack_c@l
 /* 8064D948  C3 FE 00 10 */	lfs f31, 0x10(r30)

@@ -12,8 +12,8 @@ lbl_8045EFCC:
 /* 8045EFF4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045EFF8  3B 63 4F F8 */	addi r27, r3, 0x4ff8
 /* 8045EFFC  3B 80 00 FF */	li r28, 0xff
-/* 8045F000  3C 60 80 46 */	lis r3, data_80460898@ha
-/* 8045F004  3B A3 08 98 */	addi r29, r3, data_80460898@l
+/* 8045F000  3C 60 80 46 */	lis r3, ev_name_table@ha
+/* 8045F004  3B A3 08 98 */	addi r29, r3, ev_name_table@l
 lbl_8045F008:
 /* 8045F008  38 1A 05 B2 */	addi r0, r26, 0x5b2
 /* 8045F00C  7F 99 01 AE */	stbx r28, r25, r0

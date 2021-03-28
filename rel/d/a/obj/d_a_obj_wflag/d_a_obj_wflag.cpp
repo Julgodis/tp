@@ -29,10 +29,10 @@ struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
 struct mDoExt_btpAnm {
@@ -58,13 +58,13 @@ struct mDoExt_McaMorfCallBack2_c {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct Vec {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Vec {
 };
 
 struct mDoExt_McaMorf {
@@ -266,7 +266,7 @@ SECTION_RODATA static u32 const lit_3887 = 0x3E99999A;
 SECTION_RODATA static u32 const lit_3888 = 0xC1A00000;
 
 /* 80D378CC-80D37918 004C+00 s=1 e=0 z=0  None .data      pd$3822                                                      */
-SECTION_DATA static u8 data_80D378CC[76] = {
+SECTION_DATA static u8 pd[76] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x66, 0x66, 0x66, 0x3F, 0x4C, 0xCC, 0xCD, 0x3F, 0x33, 0x33, 0x33,
 	0x3F, 0x19, 0x99, 0x9A, 0x3F, 0x00, 0x00, 0x00, 0x3E, 0xCC, 0xCC, 0xCD, 0x3E, 0x99, 0x99, 0x9A,
 	0x3E, 0x4C, 0xCC, 0xCD, 0x3E, 0x4C, 0xCC, 0xCD, 0x3E, 0x4C, 0xCC, 0xCD, 0x3E, 0x4C, 0xCC, 0xCD,

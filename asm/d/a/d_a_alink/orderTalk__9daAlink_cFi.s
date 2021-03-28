@@ -64,7 +64,7 @@ lbl_800B7CB8:
 /* 800B7CE0  2C 03 00 00 */	cmpwi r3, 0
 /* 800B7CE4  41 82 00 2C */	beq lbl_800B7D10
 /* 800B7CE8  57 C0 08 3C */	slwi r0, r30, 1
-/* 800B7CEC  38 62 98 B0 */	la r3, data_804532B0(r2) /* 804532B0-_SDA2_BASE_ */
+/* 800B7CEC  38 62 98 B0 */	la r3, itemTalkType(r2) /* 804532B0-_SDA2_BASE_ */
 /* 800B7CF0  7C 63 02 2E */	lhzx r3, r3, r0
 /* 800B7CF4  7F 84 E3 78 */	mr r4, r28
 /* 800B7CF8  80 BC 27 F8 */	lwz r5, 0x27f8(r28)

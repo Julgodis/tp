@@ -1149,8 +1149,8 @@ lbl_805D762C:
 /* 805D76B8  4B A9 83 6C */	b StartShock__12dVibration_cFii4cXyz
 /* 805D76BC  3B 20 00 00 */	li r25, 0
 /* 805D76C0  3B 60 00 00 */	li r27, 0
-/* 805D76C4  3C 60 80 5E */	lis r3, data_805DD680@ha
-/* 805D76C8  3B 43 D6 80 */	addi r26, r3, data_805DD680@l
+/* 805D76C4  3C 60 80 5E */	lis r3, eff_Demo_sasi_id@ha
+/* 805D76C8  3B 43 D6 80 */	addi r26, r3, eff_Demo_sasi_id@l
 lbl_805D76CC:
 /* 805D76CC  7C 7A DA 2E */	lhzx r3, r26, r27
 /* 805D76D0  38 81 01 78 */	addi r4, r1, 0x178

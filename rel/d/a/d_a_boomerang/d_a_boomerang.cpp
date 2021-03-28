@@ -33,10 +33,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -148,9 +148,6 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct dBgS_AcchCir {
-};
-
 struct cBgS_PolyInfo {
 };
 
@@ -159,6 +156,9 @@ struct dBgS {
 	/* 80074DAC */ void GetUnderwaterRoofCode(cBgS_PolyInfo const&);
 	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
+};
+
+struct dBgS_AcchCir {
 };
 
 struct dBgS_Acch {
@@ -1432,16 +1432,16 @@ u8 lit_1009[1 + 3 /* padding */];
 u8 l_HIO[1 + 3 /* padding */];
 
 /* 804A2D14-804A2D24 000C+04 s=1 e=0 z=0  None .bss       effDirection$5075                                            */
-static u8 data_804A2D14[12 + 4 /* padding */];
+static u8 effDirection[12 + 4 /* padding */];
 
 /* 804A2D24-804A2D34 000C+04 s=1 e=0 z=0  None .bss       effScale0$5078                                               */
-static u8 data_804A2D24[12 + 4 /* padding */];
+static u8 effScale0[12 + 4 /* padding */];
 
 /* 804A2D34-804A2D44 000C+04 s=1 e=0 z=0  None .bss       effScaleSand$5081                                            */
-static u8 data_804A2D34[12 + 4 /* padding */];
+static u8 effScaleSand[12 + 4 /* padding */];
 
 /* 804A2D44-804A2D50 000C+00 s=1 e=0 z=0  None .bss       effScaleGrass$5084                                           */
-static u8 data_804A2D44[12];
+static u8 effScaleGrass[12];
 
 /* 804A012C-804A082C 0700+00 s=1 e=0 z=0  None .text      setEffect__13daBoomerang_cFv                                 */
 #pragma push

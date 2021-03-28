@@ -1805,7 +1805,7 @@ SECTION_DATA static void* lit_1124[11] = {
 static u8 data_80451244[4];
 
 /* 80451248-80451250 0004+04 s=1 e=0 z=0  None .sbss      oRandom$1099                                                 */
-static u8 data_80451248[4 + 4 /* padding */];
+static u8 oRandom[4 + 4 /* padding */];
 
 /* 80294DA8-80294F10 0168+00 s=3 e=0 z=0  None .text      cmdReg__12JASSeqParserFP8JASTrackPUl                         */
 #pragma push

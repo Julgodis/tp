@@ -35,10 +35,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -54,10 +54,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -566,7 +566,7 @@ SECTION_RODATA static u32 const lit_4175 = 0x42480000;
 SECTION_RODATA static u32 const lit_4176 = 0x41200000;
 
 /* 80C81C64-80C81C6C 0006+02 s=1 e=0 z=0  None .rodata    l_particle_id$4205                                           */
-SECTION_RODATA static u8 const data_80C81C64[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const l_particle_id[6 + 2 /* padding */] = {
 	0x88, 0xDB, 0x88, 0xDC, 0x88, 0xDD,
 	/* padding */
 	0x00, 0x00,
@@ -617,7 +617,7 @@ SECTION_RODATA static u8 const lit_4545[8] = {
 };
 
 /* 80C81CAC-80C81CB0 0004+00 s=1 e=0 z=0  None .rodata    eff_id$4596                                                  */
-SECTION_RODATA static u8 const data_80C81CAC[4] = {
+SECTION_RODATA static u8 const eff_id_4596[4] = {
 	0x88, 0xD9, 0x88, 0xDA,
 };
 
@@ -625,12 +625,12 @@ SECTION_RODATA static u8 const data_80C81CAC[4] = {
 SECTION_RODATA static u32 const lit_4764 = 0x43480000;
 
 /* 80C81CB4-80C81CBC 0008+00 s=1 e=0 z=0  None .rodata    eff_id$4844                                                  */
-SECTION_RODATA static u8 const data_80C81CB4[8] = {
+SECTION_RODATA static u8 const eff_id_4844[8] = {
 	0x88, 0xD5, 0x88, 0xD6, 0x88, 0xD7, 0x88, 0xD8,
 };
 
 /* 80C81CBC-80C81CC0 0004+00 s=1 e=0 z=0  None .rodata    l_eff_id$4949                                                */
-SECTION_RODATA static u8 const data_80C81CBC[4] = {
+SECTION_RODATA static u8 const l_eff_id[4] = {
 	0x88, 0xD3, 0x88, 0xD4,
 };
 
@@ -787,7 +787,7 @@ SECTION_DATA static void* lit_4186[3] = {
 };
 
 /* 80C81E84-80C81ECC 0048+00 s=1 e=0 z=0  None .data      l_func$4180                                                  */
-SECTION_DATA static u8 data_80C81E84[72] = {
+SECTION_DATA static u8 l_func[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -810,7 +810,7 @@ SECTION_DATA static void* lit_4563[3] = {
 };
 
 /* 80C81EE4-80C81EFC 0018+00 s=1 e=0 z=0  None .data      l_eff_func$4561                                              */
-SECTION_DATA static u8 data_80C81EE4[24] = {
+SECTION_DATA static u8 l_eff_func[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };

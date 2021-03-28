@@ -181,16 +181,16 @@ u8 __peReg[4];
 u8 __memReg[4];
 
 /* 80451930-80451938 0004+04 s=1 e=0 z=0  None .sbss      peCount$35                                                   */
-static u8 data_80451930[4 + 4 /* padding */];
+static u8 peCount[4 + 4 /* padding */];
 
 /* 80451938-8045193C 0004+00 s=1 e=0 z=0  None .sbss      time$36                                                      */
-static u8 data_80451938[4];
+static u8 time[4];
 
 /* 8045193C-80451940 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_8045193C[4];
 
 /* 80451940-80451944 0004+00 s=1 e=0 z=0  None .sbss      calledOnce$37                                                */
-static u8 data_80451940[4];
+static u8 calledOnce[4];
 
 /* 8035933C-803594CC 0190+00 s=1 e=0 z=0  None .text      __GXShutdown                                                 */
 #pragma push
@@ -290,7 +290,7 @@ SECTION_SDATA static void* __GXVersion[1 + 1 /* padding */] = {
 };
 
 /* 80451944-80451948 0004+00 s=1 e=0 z=0  None .sbss      resetFuncRegistered$145                                      */
-static u8 data_80451944[4];
+static u8 resetFuncRegistered[4];
 
 /* 80456584-80456588 0004+00 s=1 e=0 z=0  None .sdata2    @267                                                         */
 SECTION_SDATA2 static u32 lit_267 = 0x4B800000;

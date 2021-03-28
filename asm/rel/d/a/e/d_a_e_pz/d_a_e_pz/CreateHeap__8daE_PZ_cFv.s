@@ -77,8 +77,8 @@ lbl_8075FC64:
 /* 8075FC68  3B 80 00 00 */	li r28, 0
 /* 8075FC6C  3C 60 80 76 */	lis r3, stringBase0@ha
 /* 8075FC70  3B 23 17 B4 */	addi r25, r3, stringBase0@l
-/* 8075FC74  3C 60 80 76 */	lis r3, data_80761CD8@ha
-/* 8075FC78  3B 43 1C D8 */	addi r26, r3, data_80761CD8@l
+/* 8075FC74  3C 60 80 76 */	lis r3, mPzDarkHoll_dt@ha
+/* 8075FC78  3B 43 1C D8 */	addi r26, r3, mPzDarkHoll_dt@l
 /* 8075FC7C  3C 60 80 76 */	lis r3, lit_3908@ha
 /* 8075FC80  3B 63 15 04 */	addi r27, r3, lit_3908@l
 lbl_8075FC84:

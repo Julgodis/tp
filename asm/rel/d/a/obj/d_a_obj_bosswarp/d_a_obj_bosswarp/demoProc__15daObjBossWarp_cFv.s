@@ -41,8 +41,8 @@ lbl_8057AA94:
 /* 8057AB30  3B 63 4F F8 */	addi r27, r3, 0x4ff8
 /* 8057AB34  7F 63 DB 78 */	mr r3, r27
 /* 8057AB38  80 9F 05 9C */	lwz r4, 0x59c(r31)
-/* 8057AB3C  3C A0 80 58 */	lis r5, data_8057B7B0@ha
-/* 8057AB40  38 A5 B7 B0 */	addi r5, r5, data_8057B7B0@l
+/* 8057AB3C  3C A0 80 58 */	lis r5, action_table@ha
+/* 8057AB40  38 A5 B7 B0 */	addi r5, r5, action_table@l
 /* 8057AB44  38 C0 00 0F */	li r6, 0xf
 /* 8057AB48  38 E0 00 00 */	li r7, 0
 /* 8057AB4C  39 00 00 00 */	li r8, 0

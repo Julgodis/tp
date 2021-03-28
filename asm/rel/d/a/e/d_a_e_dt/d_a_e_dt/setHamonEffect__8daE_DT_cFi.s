@@ -22,8 +22,8 @@ lbl_806AF150:
 /* 806AF1A0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 806AF1A4  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
 /* 806AF1A8  54 9B 08 3C */	slwi r27, r4, 1
-/* 806AF1AC  3C 60 80 6B */	lis r3, data_806B6070@ha
-/* 806AF1B0  3B A3 60 70 */	addi r29, r3, data_806B6070@l
+/* 806AF1AC  3C 60 80 6B */	lis r3, w_eff_id_4434@ha
+/* 806AF1B0  3B A3 60 70 */	addi r29, r3, w_eff_id_4434@l
 /* 806AF1B4  3C 60 80 6B */	lis r3, lit_3868@ha
 /* 806AF1B8  3B C3 5C FC */	addi r30, r3, lit_3868@l
 lbl_806AF1BC:

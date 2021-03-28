@@ -20,7 +20,7 @@ lbl_80140984:
 /* 801409CC  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 801409D0  40 82 00 18 */	bne lbl_801409E8
 /* 801409D4  7F A3 EB 78 */	mr r3, r29
-/* 801409D8  38 82 97 E8 */	la r4, data_804531E8(r2) /* 804531E8-_SDA2_BASE_ */
+/* 801409D8  38 82 97 E8 */	la r4, waterColor(r2) /* 804531E8-_SDA2_BASE_ */
 /* 801409DC  4B F8 B9 89 */	bl setWaterDropColor__9daAlink_cFPC13J3DGXColorS10
 /* 801409E0  7F A3 EB 78 */	mr r3, r29
 /* 801409E4  4B F8 A5 E5 */	bl setDrawHand__9daAlink_cFv

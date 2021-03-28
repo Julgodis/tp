@@ -10,8 +10,8 @@ lbl_806AF740:
 /* 806AF760  3B 60 00 00 */	li r27, 0
 /* 806AF764  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 806AF768  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 806AF76C  3C 60 80 6B */	lis r3, data_806B608C@ha
-/* 806AF770  3B 03 60 8C */	addi r24, r3, data_806B608C@l
+/* 806AF76C  3C 60 80 6B */	lis r3, w_eff_id_4635@ha
+/* 806AF770  3B 03 60 8C */	addi r24, r3, w_eff_id_4635@l
 /* 806AF774  3C 60 80 6B */	lis r3, lit_3868@ha
 /* 806AF778  3B 23 5C FC */	addi r25, r3, lit_3868@l
 lbl_806AF77C:

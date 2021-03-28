@@ -18,7 +18,10 @@ struct mDoGph_gInf_c {
 	/* 80008028 */ void fadeOut_f(f32, _GXColor&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Vec {
@@ -30,13 +33,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -57,16 +57,16 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 80AB1824 */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct daNpcT_evtData_c {
 };
 
 struct daNpcT_motionAnmData_c {
 };
 
-struct daNpcT_evtData_c {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpc_Pouya_c {
@@ -116,19 +116,10 @@ struct daNpc_Pouya_Param_c {
 	/* 80AB1F94 */ ~daNpc_Pouya_Param_c();
 };
 
-struct _GXColorS10 {
-};
-
-struct J3DModel {
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 800844F8 */ void GetTgHitObj();
-};
-
 struct J3DAnmTevRegKey {
+};
+
+struct _GXColorS10 {
 };
 
 struct cXyz {
@@ -138,9 +129,18 @@ struct cXyz {
 	/* 80AB17D8 */ cXyz();
 };
 
+struct J3DModel {
+};
+
 struct csXyz {
 	/* 80AB11C0 */ ~csXyz();
 	/* 80AB16D8 */ csXyz();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 800844F8 */ void GetTgHitObj();
 };
 
 struct daNpcT_c {
@@ -732,7 +732,7 @@ SECTION_RODATA static u8 const m__19daNpc_Pouya_Param_c[140] = {
 };
 
 /* 80AB208C-80AB20A4 0018+00 s=1 e=0 z=0  None .rodata    heapSize$3971                                                */
-SECTION_RODATA static u8 const data_80AB208C[24] = {
+SECTION_RODATA static u8 const heapSize[24] = {
 	0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x54, 0x40, 0x00, 0x00, 0x36, 0x80, 0x00, 0x00, 0x36, 0x80,
 	0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x80, 0x00,
 };
@@ -764,7 +764,7 @@ SECTION_RODATA static u32 const lit_4205 = 0x47800000;
 SECTION_RODATA static u32 const lit_4206 = 0x3E4CCCCD;
 
 /* 80AB20C4-80AB20C8 0004+00 s=1 e=0 z=0  None .rodata    bmdTypeList$4325                                             */
-SECTION_RODATA static u8 const data_80AB20C4[4] = {
+SECTION_RODATA static u8 const bmdTypeList[4] = {
 	0x00, 0x00, 0x00, 0x01,
 };
 
@@ -820,7 +820,7 @@ SECTION_RODATA static u8 const lit_4978[8] = {
 };
 
 /* 80AB2110-80AB2114 0004+00 s=1 e=0 z=0  None .rodata    jointNo$5024                                                 */
-SECTION_RODATA static u8 const data_80AB2110[4] = {
+SECTION_RODATA static u8 const jointNo[4] = {
 	0x00, 0x00, 0x00, 0x04,
 };
 
@@ -1105,55 +1105,55 @@ SECTION_DATA static u8 mCutList__13daNpc_Pouya_c[36] = {
 };
 
 /* 80AB29CC-80AB29D8 000C+00 s=1 e=0 z=0  None .data      normal$4547                                                  */
-SECTION_DATA static u8 data_80AB29CC[12] = {
+SECTION_DATA static u8 normal[12] = {
 	0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01,
 };
 
 /* 80AB29D8-80AB29E4 000C+00 s=1 e=0 z=0  None .data      uttae01$4548                                                 */
-SECTION_DATA static u8 data_80AB29D8[12] = {
+SECTION_DATA static u8 uttae01[12] = {
 	0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01,
 };
 
 /* 80AB29E4-80AB29F0 000C+00 s=1 e=0 z=0  None .data      uttae02$4549                                                 */
-SECTION_DATA static u8 data_80AB29E4[12] = {
+SECTION_DATA static u8 uttae02[12] = {
 	0x00, 0x00, 0x00, 0x21, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01,
 };
 
 /* 80AB29F0-80AB29FC 000C+00 s=1 e=0 z=0  None .data      koufun01$4550                                                */
-SECTION_DATA static u8 data_80AB29F0[12] = {
+SECTION_DATA static u8 koufun01[12] = {
 	0x00, 0x00, 0x00, 0x1D, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01,
 };
 
 /* 80AB29FC-80AB2A08 000C+00 s=1 e=0 z=0  None .data      koufun02$4551                                                */
-SECTION_DATA static u8 data_80AB29FC[12] = {
+SECTION_DATA static u8 koufun02[12] = {
 	0x00, 0x00, 0x00, 0x1E, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01,
 };
 
 /* 80AB2A08-80AB2A10 0008+00 s=1 e=0 z=0  None .data      brkSeq_normal$4552                                           */
-SECTION_DATA static void* data_80AB2A08[2] = {
-	(void*)&data_80AB29CC,
+SECTION_DATA static void* brkSeq_normal[2] = {
+	(void*)&normal,
 	(void*)NULL,
 };
 
 /* 80AB2A10-80AB2A1C 000C+00 s=1 e=0 z=0  None .data      brkSeq_uttae01_uttae02$4553                                  */
-SECTION_DATA static void* data_80AB2A10[3] = {
-	(void*)&data_80AB29D8,
-	(void*)&data_80AB29E4,
+SECTION_DATA static void* brkSeq_uttae01_uttae02[3] = {
+	(void*)&uttae01,
+	(void*)&uttae02,
 	(void*)NULL,
 };
 
 /* 80AB2A1C-80AB2A28 000C+00 s=1 e=0 z=0  None .data      brkSeq_koufun01_koufun02$4554                                */
-SECTION_DATA static void* data_80AB2A1C[3] = {
-	(void*)&data_80AB29F0,
-	(void*)&data_80AB29FC,
+SECTION_DATA static void* brkSeq_koufun01_koufun02[3] = {
+	(void*)&koufun01,
+	(void*)&koufun02,
 	(void*)NULL,
 };
 
 /* 80AB2A28-80AB2A34 000C+00 s=1 e=0 z=0  None .data      brkSeqList$4555                                              */
-SECTION_DATA static void* data_80AB2A28[3] = {
-	(void*)&data_80AB2A08,
-	(void*)&data_80AB2A10,
-	(void*)&data_80AB2A1C,
+SECTION_DATA static void* brkSeqList[3] = {
+	(void*)&brkSeq_normal,
+	(void*)&brkSeq_uttae01_uttae02,
+	(void*)&brkSeq_koufun01_koufun02,
 };
 
 /* 80AB2A34-80AB2A50 001C+00 s=1 e=0 z=0  None .data      @4598                                                        */

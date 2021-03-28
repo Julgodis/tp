@@ -15,7 +15,7 @@ lbl_80005D4C:
 /* 80005D80  7C 00 07 75 */	extsb. r0, r0
 /* 80005D84  40 82 00 14 */	bne lbl_80005D98
 /* 80005D88  C0 02 80 00 */	lfs f0, lit_3884(r2)
-/* 80005D8C  D0 0D 85 9C */	stfs f0, data_80450B1C(r13)
+/* 80005D8C  D0 0D 85 9C */	stfs f0, console_position_x(r13)
 /* 80005D90  38 00 00 01 */	li r0, 1
 /* 80005D94  98 0D 85 A0 */	stb r0, data_80450B20(r13)
 lbl_80005D98:
@@ -23,7 +23,7 @@ lbl_80005D98:
 /* 80005D9C  7C 00 07 75 */	extsb. r0, r0
 /* 80005DA0  40 82 00 14 */	bne lbl_80005DB4
 /* 80005DA4  C0 02 80 04 */	lfs f0, lit_3885(r2)
-/* 80005DA8  D0 0D 85 A4 */	stfs f0, data_80450B24(r13)
+/* 80005DA8  D0 0D 85 A4 */	stfs f0, console_position_y(r13)
 /* 80005DAC  38 00 00 01 */	li r0, 1
 /* 80005DB0  98 0D 85 A8 */	stb r0, data_80450B28(r13)
 lbl_80005DB4:
@@ -31,7 +31,7 @@ lbl_80005DB4:
 /* 80005DB8  7C 00 07 75 */	extsb. r0, r0
 /* 80005DBC  40 82 00 14 */	bne lbl_80005DD0
 /* 80005DC0  C0 02 80 08 */	lfs f0, lit_3886(r2)
-/* 80005DC4  D0 0D 85 AC */	stfs f0, data_80450B2C(r13)
+/* 80005DC4  D0 0D 85 AC */	stfs f0, console_scroll(r13)
 /* 80005DC8  38 00 00 01 */	li r0, 1
 /* 80005DCC  98 0D 85 B0 */	stb r0, data_80450B30(r13)
 lbl_80005DD0:
@@ -84,9 +84,9 @@ lbl_80005E78:
 /* 80005E78  80 7C 00 00 */	lwz r3, 0(r28)
 /* 80005E7C  54 60 05 2B */	rlwinm. r0, r3, 0, 0x14, 0x15
 /* 80005E80  40 82 00 90 */	bne lbl_80005F10
-/* 80005E84  C0 0D 85 AC */	lfs f0, data_80450B2C(r13)
+/* 80005E84  C0 0D 85 AC */	lfs f0, console_scroll(r13)
 /* 80005E88  EC 20 F0 28 */	fsubs f1, f0, f30
-/* 80005E8C  D0 2D 85 AC */	stfs f1, data_80450B2C(r13)
+/* 80005E8C  D0 2D 85 AC */	stfs f1, console_scroll(r13)
 /* 80005E90  C0 02 80 0C */	lfs f0, lit_3887(r2)
 /* 80005E94  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80005E98  40 81 00 14 */	ble lbl_80005EAC
@@ -109,7 +109,7 @@ lbl_80005ED0:
 lbl_80005ED4:
 /* 80005ED4  2C 04 00 00 */	cmpwi r4, 0
 /* 80005ED8  41 82 00 60 */	beq lbl_80005F38
-/* 80005EDC  C0 4D 85 AC */	lfs f2, data_80450B2C(r13)
+/* 80005EDC  C0 4D 85 AC */	lfs f2, console_scroll(r13)
 /* 80005EE0  C8 22 80 18 */	lfd f1, lit_3890(r2)
 /* 80005EE4  6C 80 80 00 */	xoris r0, r4, 0x8000
 /* 80005EE8  90 01 00 0C */	stw r0, 0xc(r1)
@@ -118,22 +118,22 @@ lbl_80005ED4:
 /* 80005EF4  C8 01 00 08 */	lfd f0, 8(r1)
 /* 80005EF8  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80005EFC  EC 02 00 28 */	fsubs f0, f2, f0
-/* 80005F00  D0 0D 85 AC */	stfs f0, data_80450B2C(r13)
+/* 80005F00  D0 0D 85 AC */	stfs f0, console_scroll(r13)
 /* 80005F04  7F E3 FB 78 */	mr r3, r31
 /* 80005F08  48 2E 21 A1 */	bl scroll__10JUTConsoleFi
 /* 80005F0C  48 00 00 2C */	b lbl_80005F38
 lbl_80005F10:
 /* 80005F10  54 60 05 6B */	rlwinm. r0, r3, 0, 0x15, 0x15
 /* 80005F14  41 82 00 10 */	beq lbl_80005F24
-/* 80005F18  C0 0D 85 9C */	lfs f0, data_80450B1C(r13)
+/* 80005F18  C0 0D 85 9C */	lfs f0, console_position_x(r13)
 /* 80005F1C  EC 00 F8 2A */	fadds f0, f0, f31
-/* 80005F20  D0 0D 85 9C */	stfs f0, data_80450B1C(r13)
+/* 80005F20  D0 0D 85 9C */	stfs f0, console_position_x(r13)
 lbl_80005F24:
 /* 80005F24  54 60 05 29 */	rlwinm. r0, r3, 0, 0x14, 0x14
 /* 80005F28  41 82 00 10 */	beq lbl_80005F38
-/* 80005F2C  C0 0D 85 A4 */	lfs f0, data_80450B24(r13)
+/* 80005F2C  C0 0D 85 A4 */	lfs f0, console_position_y(r13)
 /* 80005F30  EC 00 F0 28 */	fsubs f0, f0, f30
-/* 80005F34  D0 0D 85 A4 */	stfs f0, data_80450B24(r13)
+/* 80005F34  D0 0D 85 A4 */	stfs f0, console_position_y(r13)
 lbl_80005F38:
 /* 80005F38  80 1E 00 00 */	lwz r0, 0(r30)
 /* 80005F3C  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
@@ -253,11 +253,11 @@ lbl_800060B0:
 /* 800060E8  4C C6 31 82 */	crclr 6
 /* 800060EC  48 2D A5 15 */	bl JUTReport__FiiiPCce
 lbl_800060F0:
-/* 800060F0  C0 0D 85 A4 */	lfs f0, data_80450B24(r13)
+/* 800060F0  C0 0D 85 A4 */	lfs f0, console_position_y(r13)
 /* 800060F4  FC 00 00 1E */	fctiwz f0, f0
 /* 800060F8  D8 01 00 08 */	stfd f0, 8(r1)
 /* 800060FC  80 61 00 0C */	lwz r3, 0xc(r1)
-/* 80006100  C0 0D 85 9C */	lfs f0, data_80450B1C(r13)
+/* 80006100  C0 0D 85 9C */	lfs f0, console_position_x(r13)
 /* 80006104  FC 00 00 1E */	fctiwz f0, f0
 /* 80006108  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 8000610C  80 01 00 14 */	lwz r0, 0x14(r1)

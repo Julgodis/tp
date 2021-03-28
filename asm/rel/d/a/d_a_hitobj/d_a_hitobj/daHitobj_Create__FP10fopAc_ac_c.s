@@ -66,8 +66,8 @@ lbl_8046B4C8:
 /* 8046B4F8  7F E6 FB 78 */	mr r6, r31
 /* 8046B4FC  4B C1 83 64 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 8046B500  38 7F 05 B0 */	addi r3, r31, 0x5b0
-/* 8046B504  3C 80 80 47 */	lis r4, data_8046B5DC@ha
-/* 8046B508  38 84 B5 DC */	addi r4, r4, data_8046B5DC@l
+/* 8046B504  3C 80 80 47 */	lis r4, cc_sph_src@ha
+/* 8046B508  38 84 B5 DC */	addi r4, r4, cc_sph_src@l
 /* 8046B50C  4B C1 95 28 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 8046B510  38 1F 05 74 */	addi r0, r31, 0x574
 /* 8046B514  90 1F 05 F4 */	stw r0, 0x5f4(r31)

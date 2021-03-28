@@ -27,8 +27,8 @@ lbl_80D61410:
 /* 80D61474  3B C0 00 00 */	li r30, 0
 /* 80D61478  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80D6147C  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 80D61480  3C 60 80 D6 */	lis r3, data_80D61600@ha
-/* 80D61484  3B A3 16 00 */	addi r29, r3, data_80D61600@l
+/* 80D61480  3C 60 80 D6 */	lis r3, PARTICLE_NAME@ha
+/* 80D61484  3B A3 16 00 */	addi r29, r3, PARTICLE_NAME@l
 lbl_80D61488:
 /* 80D61488  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
 /* 80D6148C  38 80 00 00 */	li r4, 0

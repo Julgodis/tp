@@ -45,10 +45,10 @@ struct daObjDust_c {
 	/* 80BE2F40 */ void Delete();
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

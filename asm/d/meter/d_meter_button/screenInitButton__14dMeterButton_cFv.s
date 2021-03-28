@@ -534,10 +534,10 @@ lbl_80204F98:
 /* 80204FE0  3B 00 00 00 */	li r24, 0
 /* 80204FE4  3B 80 00 00 */	li r28, 0
 /* 80204FE8  3B A0 00 00 */	li r29, 0
-/* 80204FEC  3C 60 80 3A */	lis r3, data_80398098@ha
-/* 80204FF0  3B 63 80 98 */	addi r27, r3, data_80398098@l
-/* 80204FF4  3C 60 80 3A */	lis r3, data_80398048@ha
-/* 80204FF8  3B 43 80 48 */	addi r26, r3, data_80398048@l
+/* 80204FEC  3C 60 80 3A */	lis r3, ftext_tag@ha
+/* 80204FF0  3B 63 80 98 */	addi r27, r3, ftext_tag@l
+/* 80204FF4  3C 60 80 3A */	lis r3, text_tag@ha
+/* 80204FF8  3B 43 80 48 */	addi r26, r3, text_tag@l
 /* 80204FFC  3C 60 80 3A */	lis r3, d_meter_d_meter_button__stringBase0@ha
 /* 80205000  3B 23 80 E8 */	addi r25, r3, d_meter_d_meter_button__stringBase0@l
 lbl_80205004:

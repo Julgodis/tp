@@ -21,8 +21,8 @@ lbl_804C8500:
 lbl_804C8520:
 /* 804C8520  80 7F 05 74 */	lwz r3, 0x574(r31)
 /* 804C8524  38 63 00 24 */	addi r3, r3, 0x24
-/* 804C8528  3C 80 80 4D */	lis r4, data_804CC3E8@ha
-/* 804C852C  38 84 C3 E8 */	addi r4, r4, data_804CC3E8@l
+/* 804C8528  3C 80 80 4D */	lis r4, localOffset@ha
+/* 804C852C  38 84 C3 E8 */	addi r4, r4, localOffset@l
 /* 804C8530  38 BF 0B CC */	addi r5, r31, 0xbcc
 /* 804C8534  4B E7 E8 38 */	b PSMTXMultVec
 lbl_804C8538:

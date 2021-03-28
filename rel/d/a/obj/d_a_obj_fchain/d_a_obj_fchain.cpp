@@ -63,10 +63,10 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -240,7 +240,7 @@ asm static void daObjFchain_createHeap(fopAc_ac_c* param_0) {
 
 /* ############################################################################################## */
 /* 80BE7440-80BE744C 000C+00 s=1 e=0 z=0  None .rodata    localVec$3662                                                */
-SECTION_RODATA static u8 const data_80BE7440[12] = {
+SECTION_RODATA static u8 const localVec[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC1, 0x10, 0x00, 0x00,
 };
 
@@ -448,7 +448,7 @@ asm void daObjFchain_c::setGroundVec(cXyz* param_0, f32 param_1) {
 
 /* ############################################################################################## */
 /* 80BE74A4-80BE74B0 000C+00 s=1 e=0 z=0  None .rodata    wolfChainBaseOffset$3862                                     */
-SECTION_RODATA static u8 const data_80BE74A4[12] = {
+SECTION_RODATA static u8 const wolfChainBaseOffset[12] = {
 	0x41, 0xB0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC1, 0x40, 0x00, 0x00,
 };
 

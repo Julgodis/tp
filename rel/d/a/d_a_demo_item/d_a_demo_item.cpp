@@ -69,14 +69,14 @@ struct dSv_event_c {
 	/* 80034A04 */ void getEventReg(u16) const;
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 	/* 804E00A0 */ ~cXyz();
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -91,10 +91,10 @@ struct dPa_followEcallBack {
 	/* 80049580 */ dPa_followEcallBack(u8, u8);
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -430,7 +430,7 @@ SECTION_RODATA static u32 const lit_4175 = 0x3E4CCCCD;
 SECTION_RODATA static u32 const lit_4176 = 0x40400000;
 
 /* 804E19F8-804E1A04 000C+00 s=1 e=0 z=0  None .rodata    l_event_reg$4260                                             */
-SECTION_RODATA static u8 const data_804E19F8[12] = {
+SECTION_RODATA static u8 const l_event_reg[12] = {
 	0xF0, 0xFF, 0xEF, 0xFF, 0xEE, 0xFF, 0xED, 0xFF, 0xEC, 0xFF, 0xEB, 0xFF,
 };
 
@@ -459,7 +459,7 @@ SECTION_RODATA static u32 const lit_4394 = 0x3F000000;
 SECTION_RODATA static u32 const lit_4395 = 0x41000000;
 
 /* 804E1A24-804E1A2C 0008+00 s=1 e=0 z=0  None .rodata    nodisp_mat$4435                                              */
-SECTION_RODATA static u8 const data_804E1A24[8] = {
+SECTION_RODATA static u8 const nodisp_mat[8] = {
 	0x70, 0x61, 0x72, 0x74, 0x73, 0x5F, 0x6D, 0x00,
 };
 
@@ -673,7 +673,7 @@ static u8 lit_4278[12];
 static u8 lit_4279[12];
 
 /* 804E1C98-804E1CBC 0024+00 s=1 e=0 z=0  None .bss       offset_tbl$4274                                              */
-static u8 data_804E1C98[36];
+static u8 offset_tbl[36];
 
 /* 804E0DB4-804E105C 02A8+00 s=1 e=0 z=0  None .text      set_pos__9daDitem_cFv                                        */
 #pragma push

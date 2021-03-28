@@ -40,10 +40,10 @@ struct mDoExt_invisibleModel {
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTevRegKey {
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmTextureSRTKey {
 };
 
 struct J3DMaterialTable {
@@ -59,7 +59,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
@@ -68,13 +71,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -105,13 +105,13 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 80CD52AC */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct daNpcT_evtData_c {
 };
 
 struct daNpcT_motionAnmData_c {
 };
 
-struct daNpcT_evtData_c {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daObj_Sekizoa_c {
@@ -181,6 +181,9 @@ struct daObj_SekiDoor_c {
 struct _GXColorS10 {
 };
 
+struct J3DJoint {
+};
+
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
@@ -189,9 +192,6 @@ struct dCcD_GObjInf {
 	/* 800845B0 */ void getHitSeID(u8, int);
 	/* 80084658 */ void ChkCoHit();
 	/* 800846F0 */ void GetCoHitObj();
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_c {
@@ -869,7 +869,7 @@ SECTION_RODATA static u8 const m__21daObj_Sekizoa_Param_c[156] = {
 };
 
 /* 80CD5D98-80CD5DB8 0020+00 s=1 e=0 z=0  None .rodata    heapSize$4093                                                */
-SECTION_RODATA static u8 const data_80CD5D98[32] = {
+SECTION_RODATA static u8 const heapSize[32] = {
 	0x00, 0x00, 0x23, 0x90, 0x00, 0x00, 0x23, 0x80, 0x00, 0x00, 0x23, 0x90, 0x00, 0x00, 0x23, 0x80,
 	0x00, 0x00, 0x23, 0x50, 0x00, 0x00, 0x23, 0x40, 0x00, 0x00, 0x33, 0xE0, 0x00, 0x00, 0x00, 0x00,
 };
@@ -1308,7 +1308,7 @@ SECTION_DATA static void* lit_4916[3] = {
 };
 
 /* 80CD6534-80CD65F4 00C0+00 s=1 e=0 z=0  None .data      yariAnmData$5297                                             */
-SECTION_DATA static u8 data_80CD6534[192] = {
+SECTION_DATA static u8 yariAnmData[192] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1D, 0x00, 0x00, 0x00, 0x01,
 	0x00, 0x00, 0x00, 0x1D, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x1D, 0x00, 0x00, 0x00, 0x01,
 	0x00, 0x00, 0x00, 0x1D, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x1C, 0x00, 0x00, 0x00, 0x01,

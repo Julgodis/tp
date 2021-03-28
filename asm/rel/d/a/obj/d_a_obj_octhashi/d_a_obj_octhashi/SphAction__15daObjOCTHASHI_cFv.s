@@ -5,8 +5,8 @@ lbl_80CA55C4:
 /* 80CA55D0  39 61 00 40 */	addi r11, r1, 0x40
 /* 80CA55D4  4B 6B CB F8 */	b _savegpr_25
 /* 80CA55D8  7C 7B 1B 78 */	mr r27, r3
-/* 80CA55DC  3C 60 80 CA */	lis r3, data_80CA6480@ha
-/* 80CA55E0  3B E3 64 80 */	addi r31, r3, data_80CA6480@l
+/* 80CA55DC  3C 60 80 CA */	lis r3, ccSphSrc@ha
+/* 80CA55E0  3B E3 64 80 */	addi r31, r3, ccSphSrc@l
 /* 80CA55E4  3B 80 00 00 */	li r28, 0
 /* 80CA55E8  3B A0 00 00 */	li r29, 0
 /* 80CA55EC  48 00 01 C8 */	b lbl_80CA57B4

@@ -38,8 +38,8 @@ lbl_805D0214:
 /* 805D021C  7F A3 EB 78 */	mr r3, r29
 /* 805D0220  88 1D 08 4F */	lbz r0, 0x84f(r29)
 /* 805D0224  54 00 10 3A */	slwi r0, r0, 2
-/* 805D0228  3C 80 80 5E */	lis r4, data_805DD57C@ha
-/* 805D022C  38 84 D5 7C */	addi r4, r4, data_805DD57C@l
+/* 805D0228  3C 80 80 5E */	lis r4, Ds_circle_id@ha
+/* 805D022C  38 84 D5 7C */	addi r4, r4, Ds_circle_id@l
 /* 805D0230  7C 84 00 2E */	lwzx r4, r4, r0
 /* 805D0234  38 A0 00 02 */	li r5, 2
 /* 805D0238  C0 3E 01 90 */	lfs f1, 0x190(r30)
@@ -48,8 +48,8 @@ lbl_805D0214:
 /* 805D0244  48 00 00 30 */	b lbl_805D0274
 lbl_805D0248:
 /* 805D0248  7F A3 EB 78 */	mr r3, r29
-/* 805D024C  3C 80 80 5E */	lis r4, data_805DD57C@ha
-/* 805D0250  38 84 D5 7C */	addi r4, r4, data_805DD57C@l
+/* 805D024C  3C 80 80 5E */	lis r4, Ds_circle_id@ha
+/* 805D0250  38 84 D5 7C */	addi r4, r4, Ds_circle_id@l
 /* 805D0254  88 1D 08 4F */	lbz r0, 0x84f(r29)
 /* 805D0258  54 00 10 3A */	slwi r0, r0, 2
 /* 805D025C  7C 84 02 14 */	add r4, r4, r0

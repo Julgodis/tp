@@ -21,8 +21,8 @@ lbl_806E06F8:
 /* 806E0708  4B 9A 31 58 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 lbl_806E070C:
 /* 806E070C  38 7F 09 28 */	addi r3, r31, 0x928
-/* 806E0710  3C 80 80 6E */	lis r4, data_806E5960@ha
-/* 806E0714  38 84 59 60 */	addi r4, r4, data_806E5960@l
+/* 806E0710  3C 80 80 6E */	lis r4, ccShpSrc@ha
+/* 806E0714  38 84 59 60 */	addi r4, r4, ccShpSrc@l
 /* 806E0718  4B 9A 43 1C */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 806E071C  38 1F 08 EC */	addi r0, r31, 0x8ec
 /* 806E0720  90 1F 09 6C */	stw r0, 0x96c(r31)

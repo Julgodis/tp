@@ -47,13 +47,13 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {

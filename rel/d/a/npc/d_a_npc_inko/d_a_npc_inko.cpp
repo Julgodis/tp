@@ -27,13 +27,13 @@ struct mDoExt_McaMorfCallBack2_c {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct Vec {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Vec {
 };
 
 struct mDoExt_McaMorf {
@@ -383,12 +383,12 @@ asm static void anm_init(npc_inko_class* param_0, int param_1, f32 param_2, u8 p
 
 /* ############################################################################################## */
 /* 80A0E0D8-80A0E0E8 0010+00 s=1 e=0 z=0  None .data      mes_0$3966                                                   */
-SECTION_DATA static u8 data_80A0E0D8[16] = {
+SECTION_DATA static u8 mes_0[16] = {
 	0x00, 0x00, 0x03, 0x57, 0x00, 0x00, 0x03, 0x58, 0x00, 0x00, 0x03, 0x59, 0x00, 0x00, 0x03, 0x5A,
 };
 
 /* 80A0E0E8-80A0E0F8 0010+00 s=1 e=0 z=0  None .data      mes_1$3967                                                   */
-SECTION_DATA static u8 data_80A0E0E8[16] = {
+SECTION_DATA static u8 mes_1[16] = {
 	0x00, 0x00, 0x03, 0x5B, 0x00, 0x00, 0x03, 0x5C, 0x00, 0x00, 0x03, 0x5D, 0x00, 0x00, 0x03, 0x5E,
 };
 

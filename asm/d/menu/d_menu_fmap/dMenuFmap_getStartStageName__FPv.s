@@ -29,10 +29,10 @@ lbl_801C668C:
 /* 801C6694  48 1A 23 01 */	bl strcmp
 /* 801C6698  2C 03 00 00 */	cmpwi r3, 0
 /* 801C669C  40 82 00 18 */	bne lbl_801C66B4
-/* 801C66A0  38 6D 8B 24 */	la r3, data_804510A4(r13) /* 804510A4-_SDA_BASE_ */
+/* 801C66A0  38 6D 8B 24 */	la r3, virtual_stage(r13) /* 804510A4-_SDA_BASE_ */
 /* 801C66A4  38 9B 00 08 */	addi r4, r27, 8
 /* 801C66A8  48 1A 24 85 */	bl strcpy
-/* 801C66AC  38 6D 8B 24 */	la r3, data_804510A4(r13) /* 804510A4-_SDA_BASE_ */
+/* 801C66AC  38 6D 8B 24 */	la r3, virtual_stage(r13) /* 804510A4-_SDA_BASE_ */
 /* 801C66B0  48 00 00 1C */	b lbl_801C66CC
 lbl_801C66B4:
 /* 801C66B4  3B 5A 00 01 */	addi r26, r26, 1

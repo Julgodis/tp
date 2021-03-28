@@ -9,8 +9,8 @@ lbl_805805F4:
 /* 80580610  39 61 00 40 */	addi r11, r1, 0x40
 /* 80580614  4B DE 1B BC */	b _savegpr_26
 /* 80580618  7C 7D 1B 78 */	mr r29, r3
-/* 8058061C  3C 60 80 58 */	lis r3, data_805814AC@ha
-/* 80580620  3B 63 14 AC */	addi r27, r3, data_805814AC@l
+/* 8058061C  3C 60 80 58 */	lis r3, ccCylSrc@ha
+/* 80580620  3B 63 14 AC */	addi r27, r3, ccCylSrc@l
 /* 80580624  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80580628  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8058062C  83 43 5D AC */	lwz r26, 0x5dac(r3)

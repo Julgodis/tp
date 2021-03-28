@@ -5,9 +5,9 @@ lbl_80023268:
 /* 80023274  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80023278  7C 7F 1B 78 */	mr r31, r3
 /* 8002327C  4B FF FE D5 */	bl fpcPi_QueueTo__FP22process_priority_class
-/* 80023280  80 0D 80 68 */	lwz r0, data_804505E8(r13)
+/* 80023280  80 0D 80 68 */	lwz r0, crear(r13)
 /* 80023284  90 1F 00 30 */	stw r0, 0x30(r31)
-/* 80023288  38 6D 80 68 */	la r3, data_804505E8(r13) /* 804505E8-_SDA_BASE_ */
+/* 80023288  38 6D 80 68 */	la r3, crear(r13) /* 804505E8-_SDA_BASE_ */
 /* 8002328C  A0 03 00 04 */	lhz r0, 4(r3)
 /* 80023290  B0 1F 00 34 */	sth r0, 0x34(r31)
 /* 80023294  A0 03 00 06 */	lhz r0, 6(r3)

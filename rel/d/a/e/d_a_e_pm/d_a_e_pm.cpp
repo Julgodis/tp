@@ -31,10 +31,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
 struct mDoExt_btpAnm {
@@ -42,19 +42,19 @@ struct mDoExt_btpAnm {
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -85,10 +85,10 @@ struct fopAcM_gc_c {
 	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daE_PM_c {
@@ -805,24 +805,24 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 8074C170-8074C178 0008+00 s=1 e=0 z=0  None .data      e_prim$3789                                                  */
-SECTION_DATA static u8 data_8074C170[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 8074C178-8074C180 0008+00 s=1 e=0 z=0  None .data      e_env$3790                                                   */
-SECTION_DATA static u8 data_8074C178[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 8074C180-8074C188 0006+02 s=1 e=0 z=0  None .data      eff_id$3798                                                  */
-SECTION_DATA static u8 data_8074C180[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 8074C188-8074C190 0006+02 s=1 e=0 z=0  None .data      gakki_eff_id$4453                                            */
-SECTION_DATA static u8 data_8074C188[6 + 2 /* padding */] = {
+SECTION_DATA static u8 gakki_eff_id_4453[6 + 2 /* padding */] = {
 	0x82, 0x01, 0x82, 0x02, 0x82, 0x03,
 	/* padding */
 	0x00, 0x00,
@@ -890,7 +890,7 @@ SECTION_DATA static void* lit_6659[7] = {
 };
 
 /* 8074C234-8074C23C 0006+02 s=1 e=0 z=0  None .data      gakki_eff_id$6954                                            */
-SECTION_DATA static u8 data_8074C234[6 + 2 /* padding */] = {
+SECTION_DATA static u8 gakki_eff_id_6954[6 + 2 /* padding */] = {
 	0x82, 0x01, 0x82, 0x02, 0x82, 0x03,
 	/* padding */
 	0x00, 0x00,
@@ -1044,7 +1044,7 @@ asm void daE_PM_c::DemoSkipCallBack(void* param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 8074BF8C-8074BFD0 0044+00 s=1 e=0 z=0  None .rodata    ccCylSrc$4052                                                */
-SECTION_RODATA static u8 const data_8074BF8C[68] = {
+SECTION_RODATA static u8 const ccCylSrc[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x51, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

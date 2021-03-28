@@ -5,8 +5,8 @@ lbl_805771EC:
 /* 805771F8  39 61 00 60 */	addi r11, r1, 0x60
 /* 805771FC  4B DE AF DC */	b _savegpr_28
 /* 80577200  7C 7D 1B 78 */	mr r29, r3
-/* 80577204  3C 60 80 58 */	lis r3, data_80578A88@ha
-/* 80577208  3B E3 8A 88 */	addi r31, r3, data_80578A88@l
+/* 80577204  3C 60 80 58 */	lis r3, ccCylSrc@ha
+/* 80577208  3B E3 8A 88 */	addi r31, r3, ccCylSrc@l
 /* 8057720C  A8 1D 11 E4 */	lha r0, 0x11e4(r29)
 /* 80577210  2C 00 00 00 */	cmpwi r0, 0
 /* 80577214  40 82 02 D4 */	bne lbl_805774E8

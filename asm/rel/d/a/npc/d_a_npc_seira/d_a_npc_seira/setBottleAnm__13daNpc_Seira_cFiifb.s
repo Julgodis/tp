@@ -23,8 +23,8 @@ lbl_80ACD458:
 /* 80ACD4AC  38 83 00 1B */	addi r4, r3, 0x1b
 lbl_80ACD4B0:
 /* 80ACD4B0  54 80 18 38 */	slwi r0, r4, 3
-/* 80ACD4B4  3C 60 80 AD */	lis r3, data_80AD0784@ha
-/* 80ACD4B8  38 83 07 84 */	addi r4, r3, data_80AD0784@l
+/* 80ACD4B4  3C 60 80 AD */	lis r3, bottlAnmData@ha
+/* 80ACD4B8  38 83 07 84 */	addi r4, r3, bottlAnmData@l
 /* 80ACD4BC  7C A4 00 2E */	lwzx r5, r4, r0
 /* 80ACD4C0  2C 05 00 00 */	cmpwi r5, 0
 /* 80ACD4C4  40 81 00 28 */	ble lbl_80ACD4EC

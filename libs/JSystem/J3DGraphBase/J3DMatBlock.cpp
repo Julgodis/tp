@@ -135,13 +135,13 @@ struct J3DTevStage {
 struct J3DTevOrder {
 };
 
+struct J3DIndTevStage {
+};
+
 struct J3DGXColorS10 {
 };
 
 struct J3DGXColor {
-};
-
-struct J3DIndTevStage {
 };
 
 struct J3DTevBlock {
@@ -471,13 +471,13 @@ struct J3DPEBlockOpa {
 	/* 80323334 */ ~J3DPEBlockOpa();
 };
 
+struct J3DFog {
+};
+
 struct J3DAlphaComp {
 };
 
 struct J3DBlend {
-};
-
-struct J3DFog {
 };
 
 struct J3DPEBlock {

@@ -538,7 +538,7 @@ SECTION_DATA static void* l_arcName = (void*)(((char*)&struct_80D3B6D4)+0x0) /* 
 SECTION_DATA static void* l_eventName = (void*)(((char*)&struct_80D3B6D4)+0x7) /* None */;
 
 /* 80D3B744-80D3B754 0010+00 s=1 e=0 z=0  None .data      action_table$4273                                            */
-SECTION_DATA static void* data_80D3B744[4] = {
+SECTION_DATA static void* action_table[4] = {
 	(void*)(((char*)&struct_80D3B6D4)+0x27) /* None */,
 	(void*)(((char*)&struct_80D3B700)+0x0) /* None */,
 	(void*)(((char*)&struct_80D3B700)+0x5) /* None */,
@@ -581,7 +581,7 @@ SECTION_DATA static void* lit_4360[3] = {
 };
 
 /* 80D3B790-80D3B7CC 003C+00 s=1 e=0 z=0  None .data      l_demoFunc$4355                                              */
-SECTION_DATA static u8 data_80D3B790[60] = {
+SECTION_DATA static u8 l_demoFunc[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

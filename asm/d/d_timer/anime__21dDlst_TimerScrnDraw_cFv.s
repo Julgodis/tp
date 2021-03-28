@@ -13,7 +13,7 @@ lbl_8025FB74:
 /* 8025FBA0  28 00 00 00 */	cmplwi r0, 0
 /* 8025FBA4  40 82 03 CC */	bne lbl_8025FF70
 /* 8025FBA8  80 7D 03 D8 */	lwz r3, 0x3d8(r29)
-/* 8025FBAC  3B C2 B5 60 */	la r30, data_80454F60(r2) /* 80454F60-_SDA2_BASE_ */
+/* 8025FBAC  3B C2 B5 60 */	la r30, animeFrame(r2) /* 80454F60-_SDA2_BASE_ */
 /* 8025FBB0  A8 1E 00 04 */	lha r0, 4(r30)
 /* 8025FBB4  7C 03 00 00 */	cmpw r3, r0
 /* 8025FBB8  41 81 00 10 */	bgt lbl_8025FBC8
@@ -25,7 +25,7 @@ lbl_8025FBC8:
 /* 8025FBCC  98 1D 03 DE */	stb r0, 0x3de(r29)
 lbl_8025FBD0:
 /* 8025FBD0  80 1D 03 D8 */	lwz r0, 0x3d8(r29)
-/* 8025FBD4  3B E2 B5 60 */	la r31, data_80454F60(r2) /* 80454F60-_SDA2_BASE_ */
+/* 8025FBD4  3B E2 B5 60 */	la r31, animeFrame(r2) /* 80454F60-_SDA2_BASE_ */
 /* 8025FBD8  A8 9F 00 02 */	lha r4, 2(r31)
 /* 8025FBDC  7C 00 20 00 */	cmpw r0, r4
 /* 8025FBE0  41 81 01 AC */	bgt lbl_8025FD8C
@@ -141,7 +141,7 @@ lbl_8025FD74:
 /* 8025FD88  98 1D 03 DF */	stb r0, 0x3df(r29)
 lbl_8025FD8C:
 /* 8025FD8C  80 7D 03 D8 */	lwz r3, 0x3d8(r29)
-/* 8025FD90  A8 82 B5 60 */	lha r4, data_80454F60(r2)
+/* 8025FD90  A8 82 B5 60 */	lha r4, animeFrame(r2)
 /* 8025FD94  7C 03 20 00 */	cmpw r3, r4
 /* 8025FD98  40 81 01 D8 */	ble lbl_8025FF70
 /* 8025FD9C  A8 1E 00 04 */	lha r0, 4(r30)

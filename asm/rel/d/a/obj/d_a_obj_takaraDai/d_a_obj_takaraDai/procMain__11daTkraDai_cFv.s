@@ -9,8 +9,8 @@ lbl_80D073A4:
 /* 80D073C0  88 06 00 00 */	lbz r0, 0(r6)
 /* 80D073C4  7C 00 07 75 */	extsb. r0, r0
 /* 80D073C8  40 82 00 34 */	bne lbl_80D073FC
-/* 80D073CC  3C 60 80 D0 */	lis r3, data_80D0786C@ha
-/* 80D073D0  38 A3 78 6C */	addi r5, r3, data_80D0786C@l
+/* 80D073CC  3C 60 80 D0 */	lis r3, mode_proc@ha
+/* 80D073D0  38 A3 78 6C */	addi r5, r3, mode_proc@l
 /* 80D073D4  3C 60 80 D0 */	lis r3, lit_3799@ha
 /* 80D073D8  38 83 78 60 */	addi r4, r3, lit_3799@l
 /* 80D073DC  80 64 00 00 */	lwz r3, 0(r4)
@@ -25,8 +25,8 @@ lbl_80D073FC:
 /* 80D073FC  7F E3 FB 78 */	mr r3, r31
 /* 80D07400  88 1F 05 B0 */	lbz r0, 0x5b0(r31)
 /* 80D07404  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 80D07408  3C 80 80 D0 */	lis r4, data_80D0786C@ha
-/* 80D0740C  38 04 78 6C */	addi r0, r4, data_80D0786C@l
+/* 80D07408  3C 80 80 D0 */	lis r4, mode_proc@ha
+/* 80D0740C  38 04 78 6C */	addi r0, r4, mode_proc@l
 /* 80D07410  7D 80 2A 14 */	add r12, r0, r5
 /* 80D07414  4B 65 AC 70 */	b __ptmf_scall
 /* 80D07418  60 00 00 00 */	nop 

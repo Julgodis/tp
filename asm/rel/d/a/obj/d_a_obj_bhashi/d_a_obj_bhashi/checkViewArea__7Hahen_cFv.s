@@ -3,8 +3,8 @@ lbl_80577DA4:
 /* 80577DA8  7C 08 02 A6 */	mflr r0
 /* 80577DAC  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80577DB0  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80577DB4  3C 80 80 58 */	lis r4, data_80578A88@ha
-/* 80577DB8  3B E4 8A 88 */	addi r31, r4, data_80578A88@l
+/* 80577DB4  3C 80 80 58 */	lis r4, ccCylSrc@ha
+/* 80577DB8  3B E4 8A 88 */	addi r31, r4, ccCylSrc@l
 /* 80577DBC  38 81 00 08 */	addi r4, r1, 8
 /* 80577DC0  4B A9 D5 50 */	b mDoLib_project__FP3VecP3Vec
 /* 80577DC4  38 60 00 00 */	li r3, 0

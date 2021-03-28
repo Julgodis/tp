@@ -20,8 +20,8 @@ lbl_806AF3D0:
 /* 806AF418  90 81 00 18 */	stw r4, 0x18(r1)
 /* 806AF41C  38 80 00 00 */	li r4, 0
 /* 806AF420  54 A0 08 3C */	slwi r0, r5, 1
-/* 806AF424  3C A0 80 6B */	lis r5, data_806B6084@ha
-/* 806AF428  38 A5 60 84 */	addi r5, r5, data_806B6084@l
+/* 806AF424  3C A0 80 6B */	lis r5, w_eff_id_4529@ha
+/* 806AF428  38 A5 60 84 */	addi r5, r5, w_eff_id_4529@l
 /* 806AF42C  7C A5 02 2E */	lhzx r5, r5, r0
 /* 806AF430  38 C8 04 D0 */	addi r6, r8, 0x4d0
 /* 806AF434  38 E8 01 0C */	addi r7, r8, 0x10c

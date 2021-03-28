@@ -29,32 +29,32 @@ lbl_8012B724:
 /* 8012B790  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 8012B794  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 8012B798  38 63 03 90 */	addi r3, r3, 0x390
-/* 8012B79C  3C 80 80 39 */	lis r4, data_80391E18@ha
-/* 8012B7A0  38 84 1E 18 */	addi r4, r4, data_80391E18@l
+/* 8012B79C  3C 80 80 39 */	lis r4, localFootOffset@ha
+/* 8012B7A0  38 84 1E 18 */	addi r4, r4, localFootOffset@l
 /* 8012B7A4  38 A1 00 90 */	addi r5, r1, 0x90
 /* 8012B7A8  48 21 B5 C5 */	bl PSMTXMultVec
 /* 8012B7AC  80 6F 06 50 */	lwz r3, 0x650(r15)
 /* 8012B7B0  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 8012B7B4  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 8012B7B8  38 63 04 80 */	addi r3, r3, 0x480
-/* 8012B7BC  3C 80 80 39 */	lis r4, data_80391E18@ha
-/* 8012B7C0  38 84 1E 18 */	addi r4, r4, data_80391E18@l
+/* 8012B7BC  3C 80 80 39 */	lis r4, localFootOffset@ha
+/* 8012B7C0  38 84 1E 18 */	addi r4, r4, localFootOffset@l
 /* 8012B7C4  38 A1 00 9C */	addi r5, r1, 0x9c
 /* 8012B7C8  48 21 B5 A5 */	bl PSMTXMultVec
 /* 8012B7CC  80 6F 06 50 */	lwz r3, 0x650(r15)
 /* 8012B7D0  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 8012B7D4  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 8012B7D8  38 63 05 D0 */	addi r3, r3, 0x5d0
-/* 8012B7DC  3C 80 80 39 */	lis r4, data_80391E18@ha
-/* 8012B7E0  38 84 1E 18 */	addi r4, r4, data_80391E18@l
+/* 8012B7DC  3C 80 80 39 */	lis r4, localFootOffset@ha
+/* 8012B7E0  38 84 1E 18 */	addi r4, r4, localFootOffset@l
 /* 8012B7E4  38 A1 00 A8 */	addi r5, r1, 0xa8
 /* 8012B7E8  48 21 B5 85 */	bl PSMTXMultVec
 /* 8012B7EC  80 6F 06 50 */	lwz r3, 0x650(r15)
 /* 8012B7F0  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 8012B7F4  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 8012B7F8  38 63 06 C0 */	addi r3, r3, 0x6c0
-/* 8012B7FC  3C 80 80 39 */	lis r4, data_80391E18@ha
-/* 8012B800  38 84 1E 18 */	addi r4, r4, data_80391E18@l
+/* 8012B7FC  3C 80 80 39 */	lis r4, localFootOffset@ha
+/* 8012B800  38 84 1E 18 */	addi r4, r4, localFootOffset@l
 /* 8012B804  38 A1 00 B4 */	addi r5, r1, 0xb4
 /* 8012B808  48 21 B5 65 */	bl PSMTXMultVec
 /* 8012B80C  38 A0 00 00 */	li r5, 0
@@ -411,8 +411,8 @@ lbl_8012BCA8:
 /* 8012BD14  4B EE 07 21 */	bl mDoMtx_YrotM__FPA4_fs
 /* 8012BD18  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8012BD1C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8012BD20  3C 80 80 39 */	lis r4, data_80391E24@ha
-/* 8012BD24  38 84 1E 24 */	addi r4, r4, data_80391E24@l
+/* 8012BD20  3C 80 80 39 */	lis r4, frontOffset@ha
+/* 8012BD24  38 84 1E 24 */	addi r4, r4, frontOffset@l
 /* 8012BD28  38 A1 00 5C */	addi r5, r1, 0x5c
 /* 8012BD2C  48 21 B0 41 */	bl PSMTXMultVec
 /* 8012BD30  38 61 00 38 */	addi r3, r1, 0x38

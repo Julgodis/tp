@@ -10,8 +10,8 @@ lbl_80C2AEA4:
 /* 80C2AEC4  7F E6 FB 78 */	mr r6, r31
 /* 80C2AEC8  4B 45 89 98 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80C2AECC  38 7F 05 CC */	addi r3, r31, 0x5cc
-/* 80C2AED0  3C 80 80 C3 */	lis r4, data_80C2E11C@ha
-/* 80C2AED4  38 84 E1 1C */	addi r4, r4, data_80C2E11C@l
+/* 80C2AED0  3C 80 80 C3 */	lis r4, ccSphSrc@ha
+/* 80C2AED4  38 84 E1 1C */	addi r4, r4, ccSphSrc@l
 /* 80C2AED8  4B 45 9B 5C */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80C2AEDC  38 1F 05 90 */	addi r0, r31, 0x590
 /* 80C2AEE0  90 1F 06 10 */	stw r0, 0x610(r31)

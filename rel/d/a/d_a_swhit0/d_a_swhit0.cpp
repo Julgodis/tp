@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
 struct mDoExt_brkAnm {
@@ -25,10 +25,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -432,7 +432,7 @@ asm static void CheckCreateHeap(fopAc_ac_c* param_0) {
 
 /* ############################################################################################## */
 /* 80487400-80487408 0008+00 s=1 e=0 z=0  None .data      action_table$3953                                            */
-SECTION_DATA static void* data_80487400[2] = {
+SECTION_DATA static void* action_table[2] = {
 	(void*)(((char*)&struct_80487388)+0x19) /* None */,
 	(void*)(((char*)&struct_80487388)+0x1E) /* None */,
 };

@@ -12,7 +12,7 @@ lbl_80272CB0:
 /* 80272CD8  40 82 00 18 */	bne lbl_80272CF0
 /* 80272CDC  48 0C FA 21 */	bl OSGetTime
 /* 80272CE0  90 8D 8C 54 */	stw r4, data_804511D4(r13)
-/* 80272CE4  90 6D 8C 50 */	stw r3, data_804511D0(r13)
+/* 80272CE4  90 6D 8C 50 */	stw r3, nextTick(r13)
 /* 80272CE8  38 00 00 01 */	li r0, 1
 /* 80272CEC  98 0D 8C 58 */	stb r0, data_804511D8(r13)
 lbl_80272CF0:
@@ -27,7 +27,7 @@ lbl_80272CFC:
 /* 80272D0C  48 0C F9 F1 */	bl OSGetTime
 /* 80272D10  7C 68 1B 78 */	mr r8, r3
 lbl_80272D14:
-/* 80272D14  80 ED 8C 50 */	lwz r7, data_804511D0(r13)
+/* 80272D14  80 ED 8C 50 */	lwz r7, nextTick(r13)
 /* 80272D18  80 CD 8C 54 */	lwz r6, data_804511D4(r13)
 /* 80272D1C  6D 05 80 00 */	xoris r5, r8, 0x8000
 /* 80272D20  6C E3 80 00 */	xoris r3, r7, 0x8000
@@ -40,14 +40,14 @@ lbl_80272D14:
 /* 80272D3C  7C 64 F8 14 */	addc r3, r4, r31
 /* 80272D40  7C 08 01 14 */	adde r0, r8, r0
 /* 80272D44  90 6D 8C 54 */	stw r3, data_804511D4(r13)
-/* 80272D48  90 0D 8C 50 */	stw r0, data_804511D0(r13)
+/* 80272D48  90 0D 8C 50 */	stw r0, nextTick(r13)
 /* 80272D4C  48 00 00 6C */	b lbl_80272DB8
 lbl_80272D50:
 /* 80272D50  88 0D 8C 60 */	lbz r0, data_804511E0(r13)
 /* 80272D54  7C 00 07 75 */	extsb. r0, r0
 /* 80272D58  40 82 00 14 */	bne lbl_80272D6C
 /* 80272D5C  48 0D AB 61 */	bl VIGetRetraceCount
-/* 80272D60  90 6D 8C 5C */	stw r3, data_804511DC(r13)
+/* 80272D60  90 6D 8C 5C */	stw r3, nextCount(r13)
 /* 80272D64  38 00 00 01 */	li r0, 1
 /* 80272D68  98 0D 8C 60 */	stb r0, data_804511E0(r13)
 lbl_80272D6C:
@@ -67,12 +67,12 @@ lbl_80272D80:
 /* 80272D98  40 82 00 08 */	bne lbl_80272DA0
 /* 80272D9C  93 E1 00 08 */	stw r31, 8(r1)
 lbl_80272DA0:
-/* 80272DA0  80 0D 8C 5C */	lwz r0, data_804511DC(r13)
+/* 80272DA0  80 0D 8C 5C */	lwz r0, nextCount(r13)
 /* 80272DA4  80 61 00 08 */	lwz r3, 8(r1)
 /* 80272DA8  7C 00 18 51 */	subf. r0, r0, r3
 /* 80272DAC  41 80 FF D4 */	blt lbl_80272D80
 /* 80272DB0  7C 03 F2 14 */	add r0, r3, r30
-/* 80272DB4  90 0D 8C 5C */	stw r0, data_804511DC(r13)
+/* 80272DB4  90 0D 8C 5C */	stw r0, nextCount(r13)
 lbl_80272DB8:
 /* 80272DB8  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80272DBC  83 C1 00 18 */	lwz r30, 0x18(r1)

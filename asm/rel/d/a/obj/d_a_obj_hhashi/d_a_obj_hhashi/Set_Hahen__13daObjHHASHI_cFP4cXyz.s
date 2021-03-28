@@ -6,8 +6,8 @@ lbl_8057FA90:
 /* 8057FAA0  4B DE 27 38 */	b _savegpr_28
 /* 8057FAA4  7C 7C 1B 78 */	mr r28, r3
 /* 8057FAA8  7C 9D 23 78 */	mr r29, r4
-/* 8057FAAC  3C 60 80 58 */	lis r3, data_805814AC@ha
-/* 8057FAB0  3B C3 14 AC */	addi r30, r3, data_805814AC@l
+/* 8057FAAC  3C 60 80 58 */	lis r3, ccCylSrc@ha
+/* 8057FAB0  3B C3 14 AC */	addi r30, r3, ccCylSrc@l
 /* 8057FAB4  38 61 00 24 */	addi r3, r1, 0x24
 /* 8057FAB8  38 80 00 00 */	li r4, 0
 /* 8057FABC  38 A0 00 00 */	li r5, 0

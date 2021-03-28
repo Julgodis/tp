@@ -33,6 +33,9 @@ struct dDlst_shadowTri_c {
 	/* 80056344 */ dDlst_shadowTri_c();
 };
 
+struct _GXTexObj {
+};
+
 struct Vec {
 };
 
@@ -42,9 +45,6 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266EF4 */ void normalize();
 	/* 802670AC */ void isZero() const;
-};
-
-struct _GXTexObj {
 };
 
 struct dDlst_shadowSimple_c {
@@ -72,10 +72,10 @@ struct dDlst_shadowRealPoly_c {
 	/* 800569A8 */ s32 getTriMax();
 };
 
-struct cBgD_Vtx_t {
+struct cM3dGPla {
 };
 
-struct cM3dGPla {
+struct cBgD_Vtx_t {
 };
 
 struct dDlst_shadowPoly_c {
@@ -592,7 +592,7 @@ asm void dDlst_2DPoint_c::draw() {
 
 /* ############################################################################################## */
 /* 80450648-8045064C 0004+00 s=1 e=0 z=0  None .sdata     l_color$4033                                                 */
-SECTION_SDATA static u8 data_80450648[4] = {
+SECTION_SDATA static u8 l_color_4033[4] = {
 	0xFF, 0xFF, 0xFF, 0xE0,
 };
 
@@ -821,7 +821,7 @@ SECTION_DATA static u8 l_shadowSealDL[105 + 23 /* padding */] = {
 };
 
 /* 803A8D00-803A8D7C 007B+01 s=1 e=0 z=0  None .data      l_matDL$5404                                                 */
-SECTION_DATA static u8 data_803A8D00[123 + 1 /* padding */] = {
+SECTION_DATA static u8 l_matDL[123 + 1 /* padding */] = {
 	0x10, 0x00, 0x00, 0x10, 0x0E, 0x00, 0x00, 0x04, 0x00, 0x10, 0x00, 0x00, 0x10, 0x10, 0x00, 0x00,
 	0x04, 0x00, 0x61, 0x28, 0x38, 0x00, 0x00, 0x61, 0xC0, 0x08, 0xFF, 0xF2, 0x61, 0xC1, 0x08, 0xFF,
 	0x90, 0x61, 0x43, 0x00, 0x00, 0x41, 0x61, 0xF3, 0x7F, 0x00, 0x00, 0x10, 0x00, 0x00, 0x10, 0x3F,
@@ -835,12 +835,12 @@ SECTION_DATA static u8 data_803A8D00[123 + 1 /* padding */] = {
 };
 
 /* 803A8D7C-803A8D8C 0010+00 s=1 e=0 z=0  None .data      l_imageDrawColor$5405                                        */
-SECTION_DATA static u8 data_803A8D7C[16] = {
+SECTION_DATA static u8 l_imageDrawColor[16] = {
 	0xFF, 0x00, 0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0x00, 0xFF,
 };
 
 /* 803A8D8C-803A8D9C 0010+00 s=1 e=0 z=0  None .data      l_tevColorChan$5438                                          */
-SECTION_DATA static u8 data_803A8D8C[16] = {
+SECTION_DATA static u8 l_tevColorChan[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03,
 };
 
@@ -1274,7 +1274,7 @@ asm void dDlst_shadowReal_c::imageDraw(f32 (* param_0)[4]) {
 
 /* ############################################################################################## */
 /* 8045064C-80450650 0004+00 s=1 e=0 z=0  None .sdata     l_color$5004                                                 */
-SECTION_SDATA static u8 data_8045064C[4] = {
+SECTION_SDATA static u8 l_color_5004[4] = {
 	0x00, 0x00, 0x00, 0x40,
 };
 
@@ -1433,7 +1433,7 @@ asm void dDlst_shadowReal_c::add(J3DModel* param_0) {
 
 /* ############################################################################################## */
 /* 80450650-80450654 0004+00 s=1 e=0 z=0  None .sdata     l_color$5326                                                 */
-SECTION_SDATA static u8 data_80450650[4] = {
+SECTION_SDATA static u8 l_color_5326[4] = {
 	0x00, 0x00, 0x00, 0x40,
 };
 
@@ -1474,7 +1474,7 @@ asm void dDlst_shadowSimple_c::set(cXyz* param_0, f32 param_1, f32 param_2, cXyz
 
 /* ############################################################################################## */
 /* 80450654-80450658 0004+00 s=1 e=0 z=0  None .sdata     l_realImageSize$5383                                         */
-SECTION_SDATA static u8 data_80450654[4] = {
+SECTION_SDATA static u8 l_realImageSize[4] = {
 	0x00, 0xC0, 0x00, 0x40,
 };
 
@@ -1513,7 +1513,7 @@ asm void dDlst_shadowControl_c::imageDraw(f32 (* param_0)[4]) {
 
 /* ############################################################################################## */
 /* 80450658-8045065C 0004+00 s=1 e=0 z=0  None .sdata     clearColor$5435                                              */
-SECTION_SDATA static u8 data_80450658[4] = {
+SECTION_SDATA static u8 clearColor[4] = {
 	0x00, 0x00, 0x00, 0x40,
 };
 
@@ -1685,7 +1685,7 @@ dDlst_shadowSimple_c::dDlst_shadowSimple_c() {
 
 /* ############################################################################################## */
 /* 8037A178-8037A1A4 002A+02 s=1 e=0 z=0  None .rodata    l_drawlistSize$5656                                          */
-SECTION_RODATA static u8 const data_8037A178[42 + 2 /* padding */] = {
+SECTION_RODATA static u8 const l_drawlistSize[42 + 2 /* padding */] = {
 	0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x80, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x80,
 	0x01, 0x00, 0x00, 0x01, 0x01, 0x00, 0x00, 0x01, 0x00, 0x20, 0x00, 0x10, 0x00, 0x10, 0x00, 0x20,
 	0x00, 0x20, 0x01, 0x00, 0x00, 0x01, 0x00, 0x04, 0x00, 0x04,
@@ -1694,14 +1694,14 @@ SECTION_RODATA static u8 const data_8037A178[42 + 2 /* padding */] = {
 };
 
 /* 8037A1A4-8037A1B0 0009+03 s=1 e=0 z=0  None .rodata    l_nonSortId$5662                                             */
-SECTION_RODATA static u8 const data_8037A1A4[9 + 3 /* padding */] = {
+SECTION_RODATA static u8 const l_nonSortId[9 + 3 /* padding */] = {
 	0x00, 0x01, 0x02, 0x04, 0x05, 0x06, 0x09, 0x12, 0x0D,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 804520C4-804520CC 0006+02 s=1 e=0 z=0  None .sdata2    l_zSortId$5668                                               */
-SECTION_SDATA2 static u8 data_804520C4[6 + 2 /* padding */] = {
+SECTION_SDATA2 static u8 l_zSortId[6 + 2 /* padding */] = {
 	0x08, 0x0A, 0x0C, 0x0E, 0x10, 0x11,
 	/* padding */
 	0x00, 0x00,

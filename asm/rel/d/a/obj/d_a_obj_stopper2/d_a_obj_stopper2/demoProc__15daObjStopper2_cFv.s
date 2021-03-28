@@ -12,8 +12,8 @@ lbl_80CEFAD8:
 /* 80CEFB00  3B A3 4F F8 */	addi r29, r3, 0x4ff8
 /* 80CEFB04  7F A3 EB 78 */	mr r3, r29
 /* 80CEFB08  80 9C 05 78 */	lwz r4, 0x578(r28)
-/* 80CEFB0C  3C A0 80 CF */	lis r5, data_80CEFF9C@ha
-/* 80CEFB10  38 A5 FF 9C */	addi r5, r5, data_80CEFF9C@l
+/* 80CEFB0C  3C A0 80 CF */	lis r5, action_table@ha
+/* 80CEFB10  38 A5 FF 9C */	addi r5, r5, action_table@l
 /* 80CEFB14  38 C0 00 03 */	li r6, 3
 /* 80CEFB18  38 E0 00 00 */	li r7, 0
 /* 80CEFB1C  39 00 00 00 */	li r8, 0

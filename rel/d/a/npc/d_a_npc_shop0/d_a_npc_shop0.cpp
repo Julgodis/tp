@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -90,14 +90,14 @@ struct dEvent_manager_c {
 	/* 800487F0 */ void ChkPresentEnd();
 };
 
+struct _GXTexObj {
+};
+
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct _GXTexObj {
 };
 
 struct dDlst_shadowControl_c {

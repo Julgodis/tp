@@ -4,8 +4,8 @@ lbl_80BD2758:
 /* 80BD2760  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80BD2764  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80BD2768  7C 7F 1B 78 */	mr r31, r3
-/* 80BD276C  3C 60 80 BD */	lis r3, data_80BD30C0@ha
-/* 80BD2770  38 83 30 C0 */	addi r4, r3, data_80BD30C0@l
+/* 80BD276C  3C 60 80 BD */	lis r3, ccCylSrc@ha
+/* 80BD2770  38 83 30 C0 */	addi r4, r3, ccCylSrc@l
 /* 80BD2774  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 80BD2778  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
 /* 80BD277C  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha

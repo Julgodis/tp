@@ -30,10 +30,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -132,19 +132,19 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F40 */ void SetWallR(f32);
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 804D1EF8 */ ~dBgS_AcchCir();
-};
-
 struct dBgS {
 	/* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
 	/* 80074CBC */ void GetSpecialCode(cBgS_PolyInfo const&);
 	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
 	/* 80074EF0 */ void GetGroundCode(cBgS_PolyInfo const&);
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F40 */ void SetWallR(f32);
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 804D1EF8 */ ~dBgS_AcchCir();
 };
 
 struct dBgS_Acch {
@@ -924,13 +924,13 @@ u8 lit_1010[1 + 3 /* padding */];
 u8 lit_1009[1 + 3 /* padding */];
 
 /* 804D5008-804D5014 000C+00 s=1 e=0 z=0  None .bss       effDirection$4433                                            */
-static u8 data_804D5008[12];
+static u8 effDirection[12];
 
 /* 804D5014-804D5024 000C+04 s=1 e=0 z=0  None .bss       @4437                                                        */
 static u8 lit_4437[12 + 4 /* padding */];
 
 /* 804D5024-804D5030 000C+00 s=1 e=0 z=0  None .bss       particleScale$4436                                           */
-static u8 data_804D5024[12];
+static u8 particleScale[12];
 
 /* 804D2320-804D25F4 02D4+00 s=1 e=0 z=0  None .text      setEffect__11daSpinner_cFv                                   */
 #pragma push
@@ -1079,32 +1079,32 @@ asm void daSpinner_c::getPathNextPos() {
 
 /* ############################################################################################## */
 /* 804D4E18-804D4E24 000C+00 s=1 e=0 z=0  None .rodata    sideCheckVec0$5143                                           */
-SECTION_RODATA static u8 const data_804D4E18[12] = {
+SECTION_RODATA static u8 const sideCheckVec0[12] = {
 	0x41, 0xF0, 0x00, 0x00, 0x41, 0x20, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00,
 };
 
 /* 804D4E24-804D4E30 000C+00 s=1 e=0 z=0  None .rodata    sideCheckVec1$5144                                           */
-SECTION_RODATA static u8 const data_804D4E24[12] = {
+SECTION_RODATA static u8 const sideCheckVec1[12] = {
 	0xC1, 0xF0, 0x00, 0x00, 0x41, 0x20, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00,
 };
 
 /* 804D4E30-804D4E3C 000C+00 s=1 e=0 z=0  None .rodata    initSide0$5145                                               */
-SECTION_RODATA static u8 const data_804D4E30[12] = {
+SECTION_RODATA static u8 const initSide0[12] = {
 	0x42, 0x54, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 804D4E3C-804D4E48 000C+00 s=1 e=0 z=0  None .rodata    initSide1$5146                                               */
-SECTION_RODATA static u8 const data_804D4E3C[12] = {
+SECTION_RODATA static u8 const initSide1[12] = {
 	0xC2, 0x54, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 804D4E48-804D4E54 000C+00 s=1 e=0 z=0  None .rodata    initSideOld0$5147                                            */
-SECTION_RODATA static u8 const data_804D4E48[12] = {
+SECTION_RODATA static u8 const initSideOld0[12] = {
 	0x42, 0x9C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 804D4E54-804D4E60 000C+00 s=1 e=0 z=0  None .rodata    initSideOld1$5148                                            */
-SECTION_RODATA static u8 const data_804D4E54[12] = {
+SECTION_RODATA static u8 const initSideOld1[12] = {
 	0xC2, 0x9C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -1114,7 +1114,7 @@ SECTION_RODATA static u8 const lit_5295[8] = {
 };
 
 /* 804D4E68-804D4E6C 0004+00 s=1 e=0 z=0  None .rodata    effName$5299                                                 */
-SECTION_RODATA static u8 const data_804D4E68[4] = {
+SECTION_RODATA static u8 const effName[4] = {
 	0x08, 0xC5, 0x08, 0xC6,
 };
 

@@ -247,7 +247,7 @@ SECTION_DEAD char const* const stringBase_80499B06 = "vrbox_kasumiM.bmd";
 #pragma pop
 
 /* 80499B78-80499B7C 0002+02 s=1 e=0 z=0  None .bss       mangZ$3688                                                   */
-static u8 data_80499B78[2 + 2 /* padding */];
+static u8 mangZ[2 + 2 /* padding */];
 
 /* 80498ACC-804990DC 0610+00 s=1 e=0 z=0  None .text      daVrbox2_Draw__FP12vrbox2_class                              */
 #pragma push

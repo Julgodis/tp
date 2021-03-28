@@ -102,12 +102,12 @@ struct dBgS_AcchCir {
 struct dBgS {
 };
 
-struct csXyz {
-	/* 809BB0D0 */ ~csXyz();
-};
-
 struct cXyz {
 	/* 809BB2E0 */ ~cXyz();
+};
+
+struct csXyz {
+	/* 809BB0D0 */ ~csXyz();
 };
 
 struct dBgS_Acch {

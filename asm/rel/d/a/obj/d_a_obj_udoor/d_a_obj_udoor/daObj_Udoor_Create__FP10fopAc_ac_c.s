@@ -97,8 +97,8 @@ lbl_80D20C9C:
 /* 80D20CA8  7F C6 F3 78 */	mr r6, r30
 /* 80D20CAC  4B 36 2B B4 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80D20CB0  38 7E 05 F8 */	addi r3, r30, 0x5f8
-/* 80D20CB4  3C 80 80 D2 */	lis r4, data_80D20E2C@ha
-/* 80D20CB8  38 84 0E 2C */	addi r4, r4, data_80D20E2C@l
+/* 80D20CB4  3C 80 80 D2 */	lis r4, cc_sph_src@ha
+/* 80D20CB8  38 84 0E 2C */	addi r4, r4, cc_sph_src@l
 /* 80D20CBC  4B 36 3D 78 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80D20CC0  38 1E 05 BC */	addi r0, r30, 0x5bc
 /* 80D20CC4  90 1E 06 3C */	stw r0, 0x63c(r30)

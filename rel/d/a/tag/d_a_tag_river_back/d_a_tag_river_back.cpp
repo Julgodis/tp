@@ -235,7 +235,7 @@ SECTION_DATA static void* lit_3715[3] = {
 };
 
 /* 80D5F9DC-80D5FA0C 0030+00 s=1 e=0 z=0  None .data      l_func$3711                                                  */
-SECTION_DATA static u8 data_80D5F9DC[48] = {
+SECTION_DATA static u8 l_func[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -293,7 +293,7 @@ void daTagRiverBack_c::actionDead() {
 
 /* ############################################################################################## */
 /* 80D5FA0C-80D5FA14 0008+00 s=1 e=0 z=0  None .data      action_table$3769                                            */
-SECTION_DATA static void* data_80D5FA0C[2] = {
+SECTION_DATA static void* action_table[2] = {
 	(void*)(((char*)&struct_80D5F950)+0x19) /* None */,
 	(void*)(((char*)&struct_80D5F950)+0x1E) /* None */,
 };

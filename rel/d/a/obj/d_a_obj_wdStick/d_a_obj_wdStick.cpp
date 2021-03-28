@@ -67,10 +67,10 @@ struct daWdStick_HIO_c {
 	/* 80D34030 */ ~daWdStick_HIO_c();
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -88,10 +88,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -452,7 +452,7 @@ SECTION_DATA static void* lit_4474[3] = {
 };
 
 /* 80D342B8-80D342F4 003C+00 s=1 e=0 z=0  None .data      l_mode_func$4469                                             */
-SECTION_DATA static u8 data_80D342B8[60] = {
+SECTION_DATA static u8 l_mode_func[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

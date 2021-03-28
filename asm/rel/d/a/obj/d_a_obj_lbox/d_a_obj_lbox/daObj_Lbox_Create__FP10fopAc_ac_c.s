@@ -156,8 +156,8 @@ lbl_80C53D4C:
 /* 80C53D8C  7F 66 DB 78 */	mr r6, r27
 /* 80C53D90  4B 42 FA D0 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80C53D94  38 7B 07 DC */	addi r3, r27, 0x7dc
-/* 80C53D98  3C 80 80 C5 */	lis r4, data_80C54008@ha
-/* 80C53D9C  38 84 40 08 */	addi r4, r4, data_80C54008@l
+/* 80C53D98  3C 80 80 C5 */	lis r4, cc_sph_src@ha
+/* 80C53D9C  38 84 40 08 */	addi r4, r4, cc_sph_src@l
 /* 80C53DA0  4B 43 0C 94 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80C53DA4  38 1B 07 A0 */	addi r0, r27, 0x7a0
 /* 80C53DA8  90 1B 08 20 */	stw r0, 0x820(r27)

@@ -29,10 +29,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -77,11 +77,11 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
-};
-
 struct J3DModelData {
 	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -402,12 +402,12 @@ SECTION_RODATA static u8 const lit_3724[8] = {
 SECTION_RODATA static u32 const lit_3823 = 0x3F800000;
 
 /* 80C93DEC-80C93DF4 0008+00 s=1 e=0 z=0  None .rodata    l_eff_id_L$4030                                              */
-SECTION_RODATA static u8 const data_80C93DEC[8] = {
+SECTION_RODATA static u8 const l_eff_id_L[8] = {
 	0x86, 0xEF, 0x86, 0xF0, 0x86, 0xF1, 0x86, 0xF2,
 };
 
 /* 80C93DF4-80C93DFC 0008+00 s=1 e=0 z=0  None .rodata    l_eff_id_S$4031                                              */
-SECTION_RODATA static u8 const data_80C93DF4[8] = {
+SECTION_RODATA static u8 const l_eff_id_S[8] = {
 	0x86, 0xF3, 0x86, 0xF4, 0x86, 0xF5, 0x86, 0xF6,
 };
 

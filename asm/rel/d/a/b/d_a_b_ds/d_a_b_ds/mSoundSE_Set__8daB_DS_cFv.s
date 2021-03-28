@@ -14,8 +14,8 @@ lbl_805D80F0:
 /* 805D8120  40 82 00 2C */	bne lbl_805D814C
 /* 805D8124  3C 80 00 07 */	lis r4, 0x0007 /* 0x000704CF@ha */
 /* 805D8128  38 04 04 CF */	addi r0, r4, 0x04CF /* 0x000704CF@l */
-/* 805D812C  3C 60 80 5E */	lis r3, data_805DE1A8@ha
-/* 805D8130  94 03 E1 A8 */	stwu r0, data_805DE1A8@l(r3)
+/* 805D812C  3C 60 80 5E */	lis r3, mWaitDt@ha
+/* 805D8130  94 03 E1 A8 */	stwu r0, mWaitDt@l(r3)
 /* 805D8134  38 04 04 D0 */	addi r0, r4, 0x4d0
 /* 805D8138  90 03 00 04 */	stw r0, 4(r3)
 /* 805D813C  38 04 04 D1 */	addi r0, r4, 0x4d1
@@ -49,8 +49,8 @@ lbl_805D8174:
 /* 805D81A4  80 7E 06 8C */	lwz r3, 0x68c(r30)
 /* 805D81A8  38 03 FF C4 */	addi r0, r3, -60
 /* 805D81AC  54 00 10 3A */	slwi r0, r0, 2
-/* 805D81B0  3C 60 80 5E */	lis r3, data_805DE1A8@ha
-/* 805D81B4  38 63 E1 A8 */	addi r3, r3, data_805DE1A8@l
+/* 805D81B0  3C 60 80 5E */	lis r3, mWaitDt@ha
+/* 805D81B4  38 63 E1 A8 */	addi r3, r3, mWaitDt@l
 /* 805D81B8  7C 03 00 2E */	lwzx r0, r3, r0
 /* 805D81BC  90 01 00 84 */	stw r0, 0x84(r1)
 /* 805D81C0  38 7E 05 DC */	addi r3, r30, 0x5dc

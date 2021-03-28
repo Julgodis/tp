@@ -31,10 +31,10 @@ lbl_8003A840:
 /* 8003A8B4  48 2E AE 65 */	bl __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo
 lbl_8003A8B8:
 /* 8003A8B8  3B 20 00 00 */	li r25, 0
-/* 8003A8BC  3B 6D 80 A8 */	la r27, data_80450628(r13) /* 80450628-_SDA_BASE_ */
-/* 8003A8C0  3B 42 83 F0 */	la r26, data_80451DF0(r2) /* 80451DF0-_SDA2_BASE_ */
-/* 8003A8C4  3C 60 80 38 */	lis r3, data_803798A4@ha
-/* 8003A8C8  3B E3 98 A4 */	addi r31, r3, data_803798A4@l
+/* 8003A8BC  3B 6D 80 A8 */	la r27, l_texCoordInfo(r13) /* 80450628-_SDA_BASE_ */
+/* 8003A8C0  3B 42 83 F0 */	la r26, l_alphaCompInfo(r2) /* 80451DF0-_SDA2_BASE_ */
+/* 8003A8C4  3C 60 80 38 */	lis r3, l_tevStageInfo@ha
+/* 8003A8C8  3B E3 98 A4 */	addi r31, r3, l_tevStageInfo@l
 /* 8003A8CC  48 00 01 D8 */	b lbl_8003AAA4
 lbl_8003A8D0:
 /* 8003A8D0  80 77 00 60 */	lwz r3, 0x60(r23)
@@ -56,7 +56,7 @@ lbl_8003A8D0:
 /* 8003A910  1C 98 00 03 */	mulli r4, r24, 3
 /* 8003A914  38 04 00 1E */	addi r0, r4, 0x1e
 /* 8003A918  98 1B 00 02 */	stb r0, 2(r27)
-/* 8003A91C  80 0D 80 A8 */	lwz r0, data_80450628(r13)
+/* 8003A91C  80 0D 80 A8 */	lwz r0, l_texCoordInfo(r13)
 /* 8003A920  90 03 00 00 */	stw r0, 0(r3)
 /* 8003A924  88 03 00 02 */	lbz r0, 2(r3)
 /* 8003A928  B0 03 00 04 */	sth r0, 4(r3)
@@ -80,7 +80,7 @@ lbl_8003A8D0:
 /* 8003A970  7D 89 03 A6 */	mtctr r12
 /* 8003A974  4E 80 04 21 */	bctrl 
 /* 8003A978  7C 76 1B 78 */	mr r22, r3
-/* 8003A97C  9B 0D 80 AC */	stb r24, data_8045062C(r13)
+/* 8003A97C  9B 0D 80 AC */	stb r24, l_tevOrderInfo(r13)
 /* 8003A980  7E A3 AB 78 */	mr r3, r21
 /* 8003A984  38 80 00 03 */	li r4, 3
 /* 8003A988  7F C5 F3 78 */	mr r5, r30
@@ -88,7 +88,7 @@ lbl_8003A8D0:
 /* 8003A990  81 8C 00 4C */	lwz r12, 0x4c(r12)
 /* 8003A994  7D 89 03 A6 */	mtctr r12
 /* 8003A998  4E 80 04 21 */	bctrl 
-/* 8003A99C  80 0D 80 AC */	lwz r0, data_8045062C(r13)
+/* 8003A99C  80 0D 80 AC */	lwz r0, l_tevOrderInfo(r13)
 /* 8003A9A0  90 01 00 08 */	stw r0, 8(r1)
 /* 8003A9A4  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8003A9A8  7E A3 AB 78 */	mr r3, r21
@@ -140,7 +140,7 @@ lbl_8003A8D0:
 /* 8003AA60  88 1A 00 04 */	lbz r0, 4(r26)
 /* 8003AA64  98 03 00 03 */	stb r0, 3(r3)
 /* 8003AA68  88 BA 00 03 */	lbz r5, 3(r26)
-/* 8003AA6C  88 02 83 F0 */	lbz r0, data_80451DF0(r2)
+/* 8003AA6C  88 02 83 F0 */	lbz r0, l_alphaCompInfo(r2)
 /* 8003AA70  54 04 2C F4 */	rlwinm r4, r0, 5, 0x13, 0x1a
 /* 8003AA74  88 1A 00 02 */	lbz r0, 2(r26)
 /* 8003AA78  54 00 1D 78 */	rlwinm r0, r0, 3, 0x15, 0x1c

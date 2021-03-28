@@ -1275,8 +1275,8 @@ lbl_805468CC:
 /* 805468D0  3B 00 00 00 */	li r24, 0
 /* 805468D4  3C 60 80 55 */	lis r3, check_kind@ha
 /* 805468D8  3A C3 AC A8 */	addi r22, r3, check_kind@l
-/* 805468DC  3C 60 80 55 */	lis r3, data_8054AD14@ha
-/* 805468E0  3A E3 AD 14 */	addi r23, r3, data_8054AD14@l
+/* 805468DC  3C 60 80 55 */	lis r3, check_size@ha
+/* 805468E0  3A E3 AD 14 */	addi r23, r3, check_size@l
 lbl_805468E4:
 /* 805468E4  7C 76 C2 2E */	lhzx r3, r22, r24
 /* 805468E8  48 00 3F 41 */	bl dComIfGs_getEventReg__FUs

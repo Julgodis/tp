@@ -41,10 +41,10 @@ struct mDoGph_gInf_c {
 	/* 80008078 */ void onBlure();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTevRegKey {
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmTextureSRTKey {
 };
 
 struct J3DMaterialTable {
@@ -66,19 +66,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -104,10 +104,10 @@ struct daObjBHASHI_c {
 	/* 80577500 */ void Obj_Damage(cXyz);
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daB_MGN_c {
@@ -795,17 +795,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 806100B4-806100BC 0008+00 s=1 e=0 z=0  None .data      e_prim$3807                                                  */
-SECTION_DATA static u8 data_806100B4[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 806100BC-806100C4 0008+00 s=1 e=0 z=0  None .data      e_env$3808                                                   */
-SECTION_DATA static u8 data_806100BC[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 806100C4-806100CC 0006+02 s=1 e=0 z=0  None .data      eff_id$3816                                                  */
-SECTION_DATA static u8 data_806100C4[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -843,18 +843,18 @@ SECTION_DATA static u8 data_8061018C[15 + 1 /* padding */] = {
 };
 
 /* 8061019C-806101BC 0020+00 s=1 e=0 z=0  None .data      foot_rand_frame$4145                                         */
-SECTION_DATA static u8 data_8061019C[32] = {
+SECTION_DATA static u8 foot_rand_frame[32] = {
 	0x41, 0x20, 0x00, 0x00, 0x41, 0x80, 0x00, 0x00, 0x41, 0x90, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00,
 	0x42, 0x80, 0x00, 0x00, 0x42, 0x88, 0x00, 0x00, 0x42, 0x7C, 0x00, 0x00, 0x42, 0x8A, 0x00, 0x00,
 };
 
 /* 806101BC-806101CC 0010+00 s=1 e=0 z=0  None .data      foot_jnt$4276                                                */
-SECTION_DATA static u8 data_806101BC[16] = {
+SECTION_DATA static u8 foot_jnt_4276[16] = {
 	0x00, 0x00, 0x00, 0x34, 0x00, 0x00, 0x00, 0x25, 0x00, 0x00, 0x00, 0x47, 0x00, 0x00, 0x00, 0x43,
 };
 
 /* 806101CC-806101D4 0008+00 s=1 e=0 z=0  None .data      foot_jnt$4418                                                */
-SECTION_DATA static u8 data_806101CC[8] = {
+SECTION_DATA static u8 foot_jnt_4418[8] = {
 	0x00, 0x00, 0x00, 0x34, 0x00, 0x00, 0x00, 0x25,
 };
 
@@ -1631,7 +1631,7 @@ SECTION_RODATA static u32 const lit_7686 = 0x42A00000;
 SECTION_RODATA u32 const lit_7853 = 0x3BA3D70A;
 
 /* 8060FFFC-80610038 003C+00 s=1 e=0 z=0  None .rodata    cc_set_radius$7874                                           */
-SECTION_RODATA static u8 const data_8060FFFC[60] = {
+SECTION_RODATA static u8 const cc_set_radius[60] = {
 	0x43, 0x48, 0x00, 0x00, 0x43, 0x8C, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00,
 	0x42, 0xC8, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00, 0x42, 0x8C, 0x00, 0x00, 0x42, 0x8C, 0x00, 0x00,
 	0x42, 0x8C, 0x00, 0x00, 0x42, 0x8C, 0x00, 0x00, 0x42, 0x8C, 0x00, 0x00, 0x42, 0x8C, 0x00, 0x00,
@@ -1639,7 +1639,7 @@ SECTION_RODATA static u8 const data_8060FFFC[60] = {
 };
 
 /* 80610038-80610074 003C+00 s=1 e=0 z=0  None .rodata    cc_set_jnt$7875                                              */
-SECTION_RODATA static u8 const data_80610038[60] = {
+SECTION_RODATA static u8 const cc_set_jnt[60] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x25, 0x00, 0x00, 0x00, 0x34,
 	0x00, 0x00, 0x00, 0x23, 0x00, 0x00, 0x00, 0x32, 0x00, 0x00, 0x00, 0x41, 0x00, 0x00, 0x00, 0x43,
 	0x00, 0x00, 0x00, 0x45, 0x00, 0x00, 0x00, 0x47, 0x00, 0x00, 0x00, 0x49, 0x00, 0x00, 0x00, 0x4A,

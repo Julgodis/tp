@@ -21,8 +21,8 @@ lbl_80640478:
 /* 806404C4  3B A0 00 00 */	li r29, 0
 /* 806404C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 806404CC  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
-/* 806404D0  3C 60 80 65 */	lis r3, data_8064F04C@ha
-/* 806404D4  3B 63 F0 4C */	addi r27, r3, data_8064F04C@l
+/* 806404D0  3C 60 80 65 */	lis r3, l_roll_effect_id@ha
+/* 806404D4  3B 63 F0 4C */	addi r27, r3, l_roll_effect_id@l
 /* 806404D8  3C 60 80 65 */	lis r3, lit_4169@ha
 /* 806404DC  3B 83 EB 28 */	addi r28, r3, lit_4169@l
 lbl_806404E0:

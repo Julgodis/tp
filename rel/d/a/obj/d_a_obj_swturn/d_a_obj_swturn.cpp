@@ -56,10 +56,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -394,7 +394,7 @@ SECTION_DATA static void* lit_3814[3] = {
 };
 
 /* 80D0210C-80D02124 0018+00 s=1 e=0 z=0  None .data      l_func$3812                                                  */
-SECTION_DATA static u8 data_80D0210C[24] = {
+SECTION_DATA static u8 l_func[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };

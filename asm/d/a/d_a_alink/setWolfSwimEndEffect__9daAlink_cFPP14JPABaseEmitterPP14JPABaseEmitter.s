@@ -18,7 +18,7 @@ lbl_80123C28:
 /* 80123C28  7F 63 DB 78 */	mr r3, r27
 /* 80123C2C  38 9B 32 CC */	addi r4, r27, 0x32cc
 /* 80123C30  57 DF 08 3C */	slwi r31, r30, 1
-/* 80123C34  38 A2 96 D8 */	la r5, data_804530D8(r2) /* 804530D8-_SDA2_BASE_ */
+/* 80123C34  38 A2 96 D8 */	la r5, name0(r2) /* 804530D8-_SDA2_BASE_ */
 /* 80123C38  7C A5 FA 2E */	lhzx r5, r5, r31
 /* 80123C3C  38 DB 37 C8 */	addi r6, r27, 0x37c8
 /* 80123C40  38 FB 04 E4 */	addi r7, r27, 0x4e4
@@ -28,7 +28,7 @@ lbl_80123C28:
 /* 80123C50  41 82 00 24 */	beq lbl_80123C74
 /* 80123C54  7F 63 DB 78 */	mr r3, r27
 /* 80123C58  38 9B 31 BC */	addi r4, r27, 0x31bc
-/* 80123C5C  38 A2 96 E0 */	la r5, data_804530E0(r2) /* 804530E0-_SDA2_BASE_ */
+/* 80123C5C  38 A2 96 E0 */	la r5, name1(r2) /* 804530E0-_SDA2_BASE_ */
 /* 80123C60  7C A5 FA 2E */	lhzx r5, r5, r31
 /* 80123C64  38 DB 37 C8 */	addi r6, r27, 0x37c8
 /* 80123C68  38 FB 04 E4 */	addi r7, r27, 0x4e4

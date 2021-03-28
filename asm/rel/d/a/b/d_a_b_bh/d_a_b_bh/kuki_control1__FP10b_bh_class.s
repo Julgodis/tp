@@ -44,8 +44,8 @@ lbl_805B0B04:
 /* 805B0BAC  3B E3 9A 20 */	addi r31, r3, sincosTable___5JMath@l
 /* 805B0BB0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805B0BB4  3A E3 07 68 */	addi r23, r3, calc_mtx@l
-/* 805B0BB8  3C 60 80 5B */	lis r3, data_805B3234@ha
-/* 805B0BBC  3B 03 32 34 */	addi r24, r3, data_805B3234@l
+/* 805B0BB8  3C 60 80 5B */	lis r3, pow_xa@ha
+/* 805B0BBC  3B 03 32 34 */	addi r24, r3, pow_xa@l
 /* 805B0BC0  C3 E4 00 94 */	lfs f31, 0x94(r4)
 lbl_805B0BC4:
 /* 805B0BC4  A8 7C 06 68 */	lha r3, 0x668(r28)

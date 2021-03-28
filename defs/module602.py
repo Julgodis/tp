@@ -115,8 +115,8 @@ SYMBOLS = [
 	{'addr':0x80CBC4C4,'size':12,'pad':0,'label':"lit_4797",'name':"@4797",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x80CBC4D0,'size':12,'pad':0,'label':"lit_4798",'name':"@4798",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x80CBC4DC,'size':12,'pad':0,'label':"lit_4799",'name':"@4799",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
-	{'addr':0x80CBC4E8,'size':36,'pad':0,'label':"data_80CBC4E8",'name':"l_func$4796",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
-	{'addr':0x80CBC50C,'size':16,'pad':0,'label':"data_80CBC50C",'name':"action_table$4852",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x80CBC4E8,'size':36,'pad':0,'label':"l_func",'name':"l_func$4796",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
+	{'addr':0x80CBC50C,'size':16,'pad':0,'label':"action_table",'name':"action_table$4852",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x80CBC51C,'size':32,'pad':0,'label':"daObjRgate_METHODS",'name':"daObjRgate_METHODS",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x80CBC53C,'size':48,'pad':0,'label':"g_profile_Obj_RiderGate",'name':"g_profile_Obj_RiderGate",'lib':-1,'tu':3,'section':4,'r':[0,0,1],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x80CBC56C,'size':12,'pad':0,'label':"__vt__10cCcD_GStts",'name':"__vt__10cCcD_GStts",'lib':-1,'tu':3,'section':4,'r':[2,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
@@ -124,7 +124,7 @@ SYMBOLS = [
 	{'addr':0x80CBC584,'size':12,'pad':0,'label':"__vt__8cM3dGAab",'name':"__vt__8cM3dGAab",'lib':-1,'tu':3,'section':4,'r':[3,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x80CBC590,'size':12,'pad':0,'label':"__vt__8cM3dGCyl",'name':"__vt__8cM3dGCyl",'lib':-1,'tu':3,'section':4,'r':[3,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x80CBC59C,'size':40,'pad':0,'label':"__vt__12daObjRgate_c",'name':"__vt__12daObjRgate_c",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
-	{'addr':0x80CBC5C8,'size':4,'pad':0,'label':"data_80CBC5C8",'name':"l_evName$4049",'lib':-1,'tu':3,'section':5,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
+	{'addr':0x80CBC5C8,'size':4,'pad':0,'label':"l_evName",'name':"l_evName$4049",'lib':-1,'tu':3,'section':5,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80CBC5CC,'size':4,'pad':0,'label':"struct_80CBC5CC",'name':None,'lib':-1,'tu':3,'section':5,'r':[2,0,0],'sh':[0,0,0],'type':"Structure"},
 ]
 
@@ -217,8 +217,8 @@ SYMBOL_NAMES = {
 	"lit_4797":84,
 	"lit_4798":85,
 	"lit_4799":86,
-	"data_80CBC4E8":87,
-	"data_80CBC50C":88,
+	"l_func":87,
+	"action_table":88,
 	"daObjRgate_METHODS":89,
 	"g_profile_Obj_RiderGate":90,
 	"__vt__10cCcD_GStts":91,
@@ -226,7 +226,7 @@ SYMBOL_NAMES = {
 	"__vt__8cM3dGAab":93,
 	"__vt__8cM3dGCyl":94,
 	"__vt__12daObjRgate_c":95,
-	"data_80CBC5C8":96,
+	"l_evName":96,
 	"struct_80CBC5CC":97,
 }
 

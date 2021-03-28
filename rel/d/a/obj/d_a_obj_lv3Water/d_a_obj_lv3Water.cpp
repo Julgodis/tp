@@ -18,10 +18,10 @@ struct mDoHIO_entry_c {
 	/* 80C587F0 */ ~mDoHIO_entry_c();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -61,14 +61,14 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct J3DModelData {
+	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
-	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
 };
 
 struct dScnKy_env_light_c {
@@ -86,10 +86,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -320,7 +320,7 @@ SECTION_RODATA static u8 const l_btkIdrIdx[84] = {
 SECTION_RODATA static u32 const lit_3737 = 0x3F800000;
 
 /* 80C5A018-80C5A048 002A+06 s=1 e=0 z=0  None .rodata    estimateSizeTbl$3746                                         */
-SECTION_RODATA static u8 const data_80C5A018[42 + 6 /* padding */] = {
+SECTION_RODATA static u8 const estimateSizeTbl[42 + 6 /* padding */] = {
 	0x1C, 0xE0, 0x4F, 0x90, 0x1C, 0x80, 0x1C, 0x30, 0x1C, 0x30, 0x1C, 0x30, 0x1C, 0x30, 0x80, 0x00,
 	0x27, 0xD0, 0x24, 0x90, 0x1E, 0x60, 0x1C, 0x80, 0x1C, 0x80, 0x1C, 0x80, 0x4F, 0x90, 0x28, 0x80,
 	0x29, 0xD0, 0x2B, 0x00, 0x20, 0x40, 0x13, 0x60, 0x13, 0x60,

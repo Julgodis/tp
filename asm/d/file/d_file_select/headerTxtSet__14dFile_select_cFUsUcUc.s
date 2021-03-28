@@ -37,7 +37,7 @@ lbl_8018D148:
 /* 8018D168  81 8C 00 9C */	lwz r12, 0x9c(r12)
 /* 8018D16C  7D 89 03 A6 */	mtctr r12
 /* 8018D170  4E 80 04 21 */	bctrl 
-/* 8018D174  38 6D 81 50 */	la r3, data_804506D0(r13) /* 804506D0-_SDA_BASE_ */
+/* 8018D174  38 6D 81 50 */	la r3, fontsize(r13) /* 804506D0-_SDA_BASE_ */
 /* 8018D178  7C 23 E4 2E */	lfsx f1, r3, r28
 /* 8018D17C  80 7B 02 0C */	lwz r3, 0x20c(r27)
 /* 8018D180  80 63 00 04 */	lwz r3, 4(r3)
@@ -57,12 +57,12 @@ lbl_8018D1AC:
 /* 8018D1AC  D0 23 01 20 */	stfs f1, 0x120(r3)
 /* 8018D1B0  80 7B 02 0C */	lwz r3, 0x20c(r27)
 /* 8018D1B4  80 83 00 04 */	lwz r4, 4(r3)
-/* 8018D1B8  38 6D 81 58 */	la r3, data_804506D8(r13) /* 804506D8-_SDA_BASE_ */
+/* 8018D1B8  38 6D 81 58 */	la r3, linespace(r13) /* 804506D8-_SDA_BASE_ */
 /* 8018D1BC  7C 03 E4 2E */	lfsx f0, r3, r28
 /* 8018D1C0  D0 04 01 18 */	stfs f0, 0x118(r4)
 /* 8018D1C4  80 7B 02 0C */	lwz r3, 0x20c(r27)
 /* 8018D1C8  80 83 00 04 */	lwz r4, 4(r3)
-/* 8018D1CC  38 6D 81 60 */	la r3, data_804506E0(r13) /* 804506E0-_SDA_BASE_ */
+/* 8018D1CC  38 6D 81 60 */	la r3, charspace(r13) /* 804506E0-_SDA_BASE_ */
 /* 8018D1D0  7C 03 E4 2E */	lfsx f0, r3, r28
 /* 8018D1D4  D0 04 01 14 */	stfs f0, 0x114(r4)
 /* 8018D1D8  80 7B 02 0C */	lwz r3, 0x20c(r27)

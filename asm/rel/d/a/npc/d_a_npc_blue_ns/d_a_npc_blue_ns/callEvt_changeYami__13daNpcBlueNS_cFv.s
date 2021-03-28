@@ -16,8 +16,8 @@ lbl_80969468:
 /* 809694A0  4B 6C BD 60 */	b onSwitch__10dSv_info_cFii
 /* 809694A4  88 1F 0E 11 */	lbz r0, 0xe11(r31)
 /* 809694A8  54 00 08 3C */	slwi r0, r0, 1
-/* 809694AC  3C 60 80 97 */	lis r3, data_8096C9F8@ha
-/* 809694B0  38 63 C9 F8 */	addi r3, r3, data_8096C9F8@l
+/* 809694AC  3C 60 80 97 */	lis r3, sCallEvtName@ha
+/* 809694B0  38 63 C9 F8 */	addi r3, r3, sCallEvtName@l
 /* 809694B4  7C 03 02 2E */	lhzx r0, r3, r0
 /* 809694B8  B0 1F 09 E6 */	sth r0, 0x9e6(r31)
 /* 809694BC  38 00 00 01 */	li r0, 1

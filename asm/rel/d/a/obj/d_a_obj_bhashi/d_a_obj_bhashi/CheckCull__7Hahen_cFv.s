@@ -5,8 +5,8 @@ lbl_80577C1C:
 /* 80577C28  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80577C2C  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 80577C30  7C 7E 1B 78 */	mr r30, r3
-/* 80577C34  3C 60 80 58 */	lis r3, data_80578A88@ha
-/* 80577C38  3B E3 8A 88 */	addi r31, r3, data_80578A88@l
+/* 80577C34  3C 60 80 58 */	lis r3, ccCylSrc@ha
+/* 80577C38  3B E3 8A 88 */	addi r31, r3, ccCylSrc@l
 /* 80577C3C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80577C40  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80577C44  80 63 5D AC */	lwz r3, 0x5dac(r3)

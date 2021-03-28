@@ -91,19 +91,19 @@ asm dMw_HIO_c::dMw_HIO_c() {
 
 /* ############################################################################################## */
 /* 80450748-8045074C 0003+01 s=1 e=0 z=0  None .sdata     m_cloth_item$3797                                            */
-SECTION_SDATA static u8 data_80450748[3 + 1 /* padding */] = {
+SECTION_SDATA static u8 m_cloth_item[3 + 1 /* padding */] = {
 	0x2F, 0x30, 0x31,
 	/* padding */
 	0x00,
 };
 
 /* 8045074C-80450750 0004+00 s=1 e=0 z=0  None .sdata     m_sword_item$3798                                            */
-SECTION_SDATA static u8 data_8045074C[4] = {
+SECTION_SDATA static u8 m_sword_item[4] = {
 	0x28, 0x29, 0x49, 0x3F,
 };
 
 /* 80450750-80450758 0003+05 s=1 e=0 z=0  None .sdata     m_shield_item$3799                                           */
-SECTION_SDATA static u8 data_80450750[3 + 5 /* padding */] = {
+SECTION_SDATA static u8 m_shield_item[3 + 5 /* padding */] = {
 	0x2B, 0x2C, 0x2A,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00,

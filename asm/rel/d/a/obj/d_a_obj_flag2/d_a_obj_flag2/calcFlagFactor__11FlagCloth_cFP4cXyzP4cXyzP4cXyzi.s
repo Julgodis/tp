@@ -29,8 +29,8 @@ lbl_80BEC818:
 /* 80BEC834  48 00 00 DC */	b lbl_80BEC910
 lbl_80BEC838:
 /* 80BEC838  1C 9F 00 18 */	mulli r4, r31, 0x18
-/* 80BEC83C  3C 60 80 BF */	lis r3, data_80BEE518@ha
-/* 80BEC840  38 03 E5 18 */	addi r0, r3, data_80BEE518@l
+/* 80BEC83C  3C 60 80 BF */	lis r3, rel_pos_idx_tbl_3652@ha
+/* 80BEC840  38 03 E5 18 */	addi r0, r3, rel_pos_idx_tbl_3652@l
 /* 80BEC844  7F 00 22 14 */	add r24, r0, r4
 /* 80BEC848  7C E3 3B 78 */	mr r3, r7
 /* 80BEC84C  1F 3F 00 0C */	mulli r25, r31, 0xc

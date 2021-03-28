@@ -282,7 +282,7 @@ SECTION_DATA static void* sFontData2__14JUTDirectPrint[77] = {
 };
 
 /* 803CC96C-803CC980 0010+04 s=1 e=0 z=0  None .data      twiceBit$371                                                 */
-SECTION_DATA static u8 data_803CC96C[16 + 4 /* padding */] = {
+SECTION_DATA static u8 twiceBit[16 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x0F,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,

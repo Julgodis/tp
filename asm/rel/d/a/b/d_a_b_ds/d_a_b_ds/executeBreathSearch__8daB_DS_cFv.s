@@ -19,8 +19,8 @@ lbl_805D276C:
 /* 805D276C  7F C3 F3 78 */	mr r3, r30
 /* 805D2770  88 1E 08 4F */	lbz r0, 0x84f(r30)
 /* 805D2774  54 00 10 3A */	slwi r0, r0, 2
-/* 805D2778  3C 80 80 5E */	lis r4, data_805DD62C@ha
-/* 805D277C  38 84 D6 2C */	addi r4, r4, data_805DD62C@l
+/* 805D2778  3C 80 80 5E */	lis r4, Ds_BS_id@ha
+/* 805D277C  38 84 D6 2C */	addi r4, r4, Ds_BS_id@l
 /* 805D2780  7C 84 00 2E */	lwzx r4, r4, r0
 /* 805D2784  38 A0 00 00 */	li r5, 0
 /* 805D2788  C0 3F 01 90 */	lfs f1, 0x190(r31)

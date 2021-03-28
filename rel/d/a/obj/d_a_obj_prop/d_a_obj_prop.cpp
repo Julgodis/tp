@@ -31,13 +31,13 @@ struct daObjProp_c {
 	/* 80CB54F4 */ void setModelMtx();
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -133,12 +133,12 @@ asm static void daObjProp_c_createHeap(fopAc_ac_c* param_0) {
 
 /* ############################################################################################## */
 /* 80CB5614-80CB561C 0008+00 s=1 e=0 z=0  None .rodata    BMD_IDX$3638                                                 */
-SECTION_RODATA static u8 const data_80CB5614[8] = {
+SECTION_RODATA static u8 const BMD_IDX[8] = {
 	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04,
 };
 
 /* 80CB561C-80CB5620 0004+00 s=1 e=0 z=0  None .rodata    ADD_ANGLE$3689                                               */
-SECTION_RODATA static u8 const data_80CB561C[4] = {
+SECTION_RODATA static u8 const ADD_ANGLE[4] = {
 	0x18, 0x00, 0xE8, 0x00,
 };
 

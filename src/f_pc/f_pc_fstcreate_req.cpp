@@ -83,7 +83,7 @@ static bool fpcFCtRq_Delete(fast_create_request* param_0) {
 
 /* ############################################################################################## */
 /* 803A3AE0-803A3AF0 000C+04 s=1 e=0 z=0  None .data      submethod$2214                                               */
-SECTION_DATA static void* data_803A3AE0[3 + 1 /* padding */] = {
+SECTION_DATA static void* submethod[3 + 1 /* padding */] = {
 	(void*)fpcFCtRq_Do__FP19fast_create_request,
 	(void*)NULL,
 	(void*)fpcFCtRq_Delete__FP19fast_create_request,

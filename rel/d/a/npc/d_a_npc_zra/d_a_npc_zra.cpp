@@ -44,17 +44,17 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTevRegKey {
+};
+
+struct J3DAnmColor {
 };
 
 struct J3DAnmTexPattern {
 	/* 8032AF50 */ void getTexNo(u16, u16*) const;
 };
 
-struct J3DAnmColor {
-};
-
-struct J3DAnmTevRegKey {
+struct J3DAnmTextureSRTKey {
 };
 
 struct J3DMaterialTable {
@@ -93,7 +93,7 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct Z2Creature {
@@ -102,10 +102,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -124,10 +124,10 @@ struct daObjZraMark_c {
 	/* 80D43314 */ void entryPointer(fopAc_ac_c*);
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daNpc_zrA_c {
@@ -252,13 +252,13 @@ struct daNpc_Hoz_c {
 	/* 80A01F54 */ void getType();
 };
 
-struct J3DAnmTransformKey {
-};
-
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
 	/* 80084460 */ void ChkTgHit();
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {
@@ -370,14 +370,14 @@ struct dRes_control_c {
 struct dPnt {
 };
 
+struct dBgS {
+};
+
 struct dBgS_AcchCir {
 	/* 80075EAC */ dBgS_AcchCir();
 	/* 80075F40 */ void SetWallR(f32);
 	/* 80075F58 */ void SetWall(f32, f32);
 	/* 80B7F524 */ ~dBgS_AcchCir();
-};
-
-struct dBgS {
 };
 
 struct dBgS_Acch {
@@ -1288,7 +1288,7 @@ SECTION_RODATA static u32 const lit_5776 = 0x44480000;
 SECTION_RODATA static u32 const lit_5777 = 0xC3160000;
 
 /* 80B8C588-80B8C5AC 0024+00 s=1 e=0 z=0  None .rodata    l_jntNumTbl$6051                                             */
-SECTION_RODATA static u8 const data_80B8C588[36] = {
+SECTION_RODATA static u8 const l_jntNumTbl[36] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x19, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x04,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF,
@@ -3686,7 +3686,7 @@ static u8 l_HIO[4];
 static u8 lit_5533[12 + 4 /* padding */];
 
 /* 80B8DAA8-80B8DAB4 000C+00 s=1 e=0 z=0  None .bss       eyeOffset$5532                                               */
-static u8 data_80B8DAA8[12];
+static u8 eyeOffset[12];
 
 /* 80B7B1DC-80B7B91C 0740+00 s=1 e=0 z=0  None .text      setAttnPos__11daNpc_zrA_cFv                                  */
 #pragma push

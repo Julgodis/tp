@@ -12,8 +12,8 @@ lbl_80BFE244:
 /* 80BFE26C  4B 48 55 F4 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80BFE270  3B 60 00 00 */	li r27, 0
 /* 80BFE274  3B E0 00 00 */	li r31, 0
-/* 80BFE278  3C 60 80 C0 */	lis r3, data_80BFFC1C@ha
-/* 80BFE27C  3B A3 FC 1C */	addi r29, r3, data_80BFFC1C@l
+/* 80BFE278  3C 60 80 C0 */	lis r3, ccSphSrc@ha
+/* 80BFE27C  3B A3 FC 1C */	addi r29, r3, ccSphSrc@l
 /* 80BFE280  3B DA 0F B8 */	addi r30, r26, 0xfb8
 lbl_80BFE284:
 /* 80BFE284  7F 9A FA 14 */	add r28, r26, r31

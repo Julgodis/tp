@@ -27,10 +27,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -157,12 +157,12 @@ struct LIGHT_INFLUENCE {
 struct J3DModel {
 };
 
-struct J3DAnmTextureSRTKey {
-	/* 8032B1D4 */ void searchUpdateMaterialID(J3DModelData*);
-};
-
 struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct J3DAnmTextureSRTKey {
+	/* 8032B1D4 */ void searchUpdateMaterialID(J3DModelData*);
 };
 
 struct J3DMaterialTable {
@@ -347,7 +347,7 @@ SECTION_DATA static u8 l_atCpsSrc[76] = {
 };
 
 /* 804A4188-804A4194 000C+00 s=1 e=0 z=0  None .data      shootInitLocalPos$4524                                       */
-SECTION_DATA static u8 data_804A4188[12] = {
+SECTION_DATA static u8 shootInitLocalPos[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 

@@ -83,7 +83,7 @@ SYMBOLS = [
 	{'addr':0x8045E664,'size':12,'pad':0,'label':"cNullVec__6Z2Calc",'name':"cNullVec__6Z2Calc",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x8045E670,'size':4,'pad':16,'label':"lit_1787",'name':"@1787",'lib':-1,'tu':3,'section':4,'r':[0,0,0],'sh':[0,0,0],'type':"Integer"},
 	{'addr':0x8045E684,'size':4,'pad':0,'label':"l_bmd_base_name",'name':"l_bmd_base_name",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
-	{'addr':0x8045E688,'size':36,'pad':0,'label':"data_8045E688",'name':"action_table$3865",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
+	{'addr':0x8045E688,'size':36,'pad':0,'label':"action_table",'name':"action_table$3865",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x8045E6AC,'size':36,'pad':0,'label':"lit_3957",'name':"@3957",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x8045E6D0,'size':12,'pad':0,'label':"lit_4092",'name':"@4092",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x8045E6DC,'size':12,'pad':0,'label':"lit_4093",'name':"@4093",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
@@ -91,10 +91,10 @@ SYMBOLS = [
 	{'addr':0x8045E6F4,'size':12,'pad':0,'label':"lit_4095",'name':"@4095",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x8045E700,'size':12,'pad':0,'label':"lit_4096",'name':"@4096",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x8045E70C,'size':12,'pad':0,'label':"lit_4097",'name':"@4097",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
-	{'addr':0x8045E718,'size':72,'pad':0,'label':"data_8045E718",'name':"l_action$4091",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
+	{'addr':0x8045E718,'size':72,'pad':0,'label':"l_action",'name':"l_action$4091",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x8045E760,'size':32,'pad':0,'label':"l_daDbdoor00_Method",'name':"l_daDbdoor00_Method",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x8045E780,'size':48,'pad':0,'label':"g_profile_DBDOOR",'name':"g_profile_DBDOOR",'lib':-1,'tu':3,'section':4,'r':[0,0,1],'sh':[0,0,0],'type':"ReferenceArray"},
-	{'addr':0x8045E7B0,'size':32,'pad':0,'label':"data_8045E7B0",'name':"l_bmdName$3699",'lib':-1,'tu':3,'section':5,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
+	{'addr':0x8045E7B0,'size':32,'pad':0,'label':"l_bmdName",'name':"l_bmdName$3699",'lib':-1,'tu':3,'section':5,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x8045E7D0,'size':4,'pad':0,'label':"data_8045E7D0",'name':None,'lib':-1,'tu':3,'section':5,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
 ]
 
@@ -155,7 +155,7 @@ SYMBOL_NAMES = {
 	"cNullVec__6Z2Calc":52,
 	"lit_1787":53,
 	"l_bmd_base_name":54,
-	"data_8045E688":55,
+	"action_table":55,
 	"lit_3957":56,
 	"lit_4092":57,
 	"lit_4093":58,
@@ -163,10 +163,10 @@ SYMBOL_NAMES = {
 	"lit_4095":60,
 	"lit_4096":61,
 	"lit_4097":62,
-	"data_8045E718":63,
+	"l_action":63,
 	"l_daDbdoor00_Method":64,
 	"g_profile_DBDOOR":65,
-	"data_8045E7B0":66,
+	"l_bmdName":66,
 	"data_8045E7D0":67,
 }
 

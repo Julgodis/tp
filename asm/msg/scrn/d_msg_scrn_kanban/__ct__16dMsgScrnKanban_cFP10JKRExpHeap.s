@@ -167,8 +167,8 @@ lbl_802450A8:
 /* 802450B0  7C 64 1B 79 */	or. r4, r3, r3
 /* 802450B4  41 82 00 2C */	beq lbl_802450E0
 /* 802450B8  80 9F 00 04 */	lwz r4, 4(r31)
-/* 802450BC  3C A0 80 3A */	lis r5, data_80399AA0@ha
-/* 802450C0  38 05 9A A0 */	addi r0, r5, data_80399AA0@l
+/* 802450BC  3C A0 80 3A */	lis r5, t_tag@ha
+/* 802450C0  38 05 9A A0 */	addi r0, r5, t_tag@l
 /* 802450C4  7C C0 EA 14 */	add r6, r0, r29
 /* 802450C8  80 A6 00 00 */	lwz r5, 0(r6)
 /* 802450CC  80 C6 00 04 */	lwz r6, 4(r6)

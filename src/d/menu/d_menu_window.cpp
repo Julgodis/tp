@@ -159,10 +159,10 @@ struct STControl {
 	/* 8003219C */ void checkTrigger();
 };
 
-struct JKRExpHeap {
+struct CSTControl {
 };
 
-struct CSTControl {
+struct JKRExpHeap {
 };
 
 struct dMenu_Skill_c {

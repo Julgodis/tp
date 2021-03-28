@@ -20,8 +20,8 @@ lbl_802E20C0:
 lbl_802E2108:
 /* 802E2108  48 05 9D 8D */	bl OSGetCurrentContext
 /* 802E210C  7C 64 1B 78 */	mr r4, r3
-/* 802E2110  3C 60 80 43 */	lis r3, data_804345A8@ha
-/* 802E2114  38 63 45 A8 */	addi r3, r3, data_804345A8@l
+/* 802E2110  3C 60 80 43 */	lis r3, context@ha
+/* 802E2114  38 63 45 A8 */	addi r3, r3, context@l
 /* 802E2118  38 A0 02 C8 */	li r5, 0x2c8
 /* 802E211C  4B D2 14 25 */	bl memcpy
 /* 802E2120  48 05 9E D9 */	bl OSGetStackPointer
@@ -33,8 +33,8 @@ lbl_802E2108:
 /* 802E2138  90 04 00 00 */	stw r0, 0(r4)
 /* 802E213C  38 00 00 FF */	li r0, 0xff
 /* 802E2140  B0 04 00 04 */	sth r0, 4(r4)
-/* 802E2144  3C 60 80 43 */	lis r3, data_804345A8@ha
-/* 802E2148  38 03 45 A8 */	addi r0, r3, data_804345A8@l
+/* 802E2144  3C 60 80 43 */	lis r3, context@ha
+/* 802E2148  38 03 45 A8 */	addi r0, r3, context@l
 /* 802E214C  90 04 00 08 */	stw r0, 8(r4)
 /* 802E2150  38 00 00 00 */	li r0, 0
 /* 802E2154  90 04 00 0C */	stw r0, 0xc(r4)

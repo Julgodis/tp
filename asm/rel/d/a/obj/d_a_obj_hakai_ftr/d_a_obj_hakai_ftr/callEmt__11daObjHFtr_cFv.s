@@ -24,8 +24,8 @@ lbl_80C17EDC:
 /* 80C17F34  3B E0 00 00 */	li r31, 0
 /* 80C17F38  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80C17F3C  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
-/* 80C17F40  3C 60 80 C2 */	lis r3, data_80C18160@ha
-/* 80C17F44  3B C3 81 60 */	addi r30, r3, data_80C18160@l
+/* 80C17F40  3C 60 80 C2 */	lis r3, PARTICLE_NAME@ha
+/* 80C17F44  3B C3 81 60 */	addi r30, r3, PARTICLE_NAME@l
 lbl_80C17F48:
 /* 80C17F48  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 80C17F4C  38 80 00 00 */	li r4, 0

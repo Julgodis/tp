@@ -249,7 +249,7 @@ asm void J3DShape::makeVtxArrayCmd() {
 
 /* ############################################################################################## */
 /* 804515C8-804515CC 0004+00 s=1 e=0 z=0  None .sbss      sInterruptFlag$903                                           */
-static u8 data_804515C8[4];
+static u8 sInterruptFlag[4];
 
 /* 804515CC-804515D0 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_804515CC[4];

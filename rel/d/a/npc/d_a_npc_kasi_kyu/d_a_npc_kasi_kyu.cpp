@@ -27,19 +27,19 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -52,28 +52,13 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DModel {
-};
-
-struct J3DJoint {
-};
-
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-	/* 80A25174 */ ~cXyz();
-	/* 80A251B0 */ cXyz();
-};
-
-struct J3DAnmTransformKey {
-};
-
 struct _GXColorS10 {
 };
 
 struct J3DAnmTexPattern {
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {
@@ -106,6 +91,21 @@ struct daNpcF_c {
 	/* 80A25788 */ bool setExpressionBtp(int);
 	/* 80A25790 */ void setExpression(int, f32);
 	/* 80A25794 */ void drawOtherMdls();
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+	/* 80A25174 */ ~cXyz();
+	/* 80A251B0 */ cXyz();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
 };
 
 struct daNpcKasiKyu_c {
@@ -1076,7 +1076,7 @@ SECTION_DATA static void* lit_4383[3] = {
 };
 
 /* 80A25D14-80A25E04 00F0+00 s=1 e=0 z=0  None .data      sSygnalAct$4364                                              */
-SECTION_DATA static u8 data_80A25D14[240] = {
+SECTION_DATA static u8 sSygnalAct[240] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

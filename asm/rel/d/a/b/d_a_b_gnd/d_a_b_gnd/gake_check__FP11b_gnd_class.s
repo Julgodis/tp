@@ -34,10 +34,10 @@ lbl_805F5574:
 lbl_805F55F4:
 /* 805F55F4  3B 20 00 00 */	li r25, 0
 /* 805F55F8  3B A0 00 00 */	li r29, 0
-/* 805F55FC  3C 60 80 60 */	lis r3, data_806029F4@ha
-/* 805F5600  3B 43 29 F4 */	addi r26, r3, data_806029F4@l
-/* 805F5604  3C 60 80 60 */	lis r3, data_80602A04@ha
-/* 805F5608  3B 63 2A 04 */	addi r27, r3, data_80602A04@l
+/* 805F55FC  3C 60 80 60 */	lis r3, chk_x@ha
+/* 805F5600  3B 43 29 F4 */	addi r26, r3, chk_x@l
+/* 805F5604  3C 60 80 60 */	lis r3, chk_z@ha
+/* 805F5608  3B 63 2A 04 */	addi r27, r3, chk_z@l
 /* 805F560C  C3 DF 00 14 */	lfs f30, 0x14(r31)
 /* 805F5610  C3 FF 00 50 */	lfs f31, 0x50(r31)
 lbl_805F5614:

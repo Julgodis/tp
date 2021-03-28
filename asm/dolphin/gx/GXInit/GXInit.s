@@ -37,13 +37,13 @@ lbl_80359670:
 /* 803596FC  48 00 10 C9 */	bl GXSetCPUFifo
 /* 80359700  7F E3 FB 78 */	mr r3, r31
 /* 80359704  48 00 11 E9 */	bl GXSetGPFifo
-/* 80359708  80 0D 93 C4 */	lwz r0, data_80451944(r13)
+/* 80359708  80 0D 93 C4 */	lwz r0, resetFuncRegistered(r13)
 /* 8035970C  28 00 00 00 */	cmplwi r0, 0
 /* 80359710  40 82 00 14 */	bne lbl_80359724
 /* 80359714  3C 60 80 3D */	lis r3, GXResetFuncInfo@ha
 /* 80359718  38 63 22 6C */	addi r3, r3, GXResetFuncInfo@l
 /* 8035971C  4B FE 5F 45 */	bl OSRegisterResetFunction
-/* 80359720  93 8D 93 C4 */	stw r28, data_80451944(r13)
+/* 80359720  93 8D 93 C4 */	stw r28, resetFuncRegistered(r13)
 lbl_80359724:
 /* 80359724  48 00 2F 4D */	bl __GXPEInit
 /* 80359728  4B FE 06 65 */	bl PPCMfhid2

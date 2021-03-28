@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct JKRHeap {
-	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
 struct JKRArchive {
 	/* 802D5D38 */ void getResource(u16);
 	/* 802D610C */ void countResource() const;
+};
+
+struct JKRHeap {
+	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 struct Z2FxLineConfig {

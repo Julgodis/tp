@@ -12,8 +12,8 @@ lbl_80622BE0:
 /* 80622C08  3B 80 00 00 */	li r28, 0
 /* 80622C0C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80622C10  3B 03 61 C0 */	addi r24, r3, g_dComIfG_gameInfo@l
-/* 80622C14  3C 60 80 63 */	lis r3, data_8062ED8C@ha
-/* 80622C18  3B 23 ED 8C */	addi r25, r3, data_8062ED8C@l
+/* 80622C14  3C 60 80 63 */	lis r3, blur_effect_id_5997@ha
+/* 80622C18  3B 23 ED 8C */	addi r25, r3, blur_effect_id_5997@l
 /* 80622C1C  3C 60 80 63 */	lis r3, lit_3922@ha
 /* 80622C20  3B 43 E6 3C */	addi r26, r3, lit_3922@l
 lbl_80622C24:

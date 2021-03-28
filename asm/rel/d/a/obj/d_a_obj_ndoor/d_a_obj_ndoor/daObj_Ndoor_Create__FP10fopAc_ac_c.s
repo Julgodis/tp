@@ -74,8 +74,8 @@ lbl_80CA3950:
 /* 80CA395C  7F E6 FB 78 */	mr r6, r31
 /* 80CA3960  4B 3D FF 00 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80CA3964  38 7F 05 BC */	addi r3, r31, 0x5bc
-/* 80CA3968  3C 80 80 CA */	lis r4, data_80CA3A78@ha
-/* 80CA396C  38 84 3A 78 */	addi r4, r4, data_80CA3A78@l
+/* 80CA3968  3C 80 80 CA */	lis r4, cc_sph_src@ha
+/* 80CA396C  38 84 3A 78 */	addi r4, r4, cc_sph_src@l
 /* 80CA3970  4B 3E 10 C4 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80CA3974  38 1F 05 80 */	addi r0, r31, 0x580
 /* 80CA3978  90 1F 06 00 */	stw r0, 0x600(r31)

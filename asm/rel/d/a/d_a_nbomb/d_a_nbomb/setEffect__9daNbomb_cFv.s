@@ -31,8 +31,8 @@ lbl_804C85E4:
 /* 804C85F8  41 82 01 04 */	beq lbl_804C86FC
 lbl_804C85FC:
 /* 804C85FC  3B FD 0B B8 */	addi r31, r29, 0xbb8
-/* 804C8600  3C 60 80 4D */	lis r3, data_804CC530@ha
-/* 804C8604  38 03 C5 30 */	addi r0, r3, data_804CC530@l
+/* 804C8600  3C 60 80 4D */	lis r3, enemyBombID@ha
+/* 804C8604  38 03 C5 30 */	addi r0, r3, enemyBombID@l
 /* 804C8608  7C 1E 03 78 */	mr r30, r0
 /* 804C860C  80 7D 05 74 */	lwz r3, 0x574(r29)
 /* 804C8610  80 63 00 84 */	lwz r3, 0x84(r3)

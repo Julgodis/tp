@@ -42,19 +42,19 @@ struct mDoExt_invisibleModel {
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -625,17 +625,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 806EA308-806EA310 0008+00 s=1 e=0 z=0  None .data      e_prim$3784                                                  */
-SECTION_DATA static u8 data_806EA308[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 806EA310-806EA318 0008+00 s=1 e=0 z=0  None .data      e_env$3785                                                   */
-SECTION_DATA static u8 data_806EA310[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 806EA318-806EA320 0006+02 s=1 e=0 z=0  None .data      eff_id$3793                                                  */
-SECTION_DATA static u8 data_806EA318[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -668,7 +668,7 @@ SECTION_DATA static u8 data_806EA3A4[68] = {
 };
 
 /* 806EA3E8-806EA3EC 0004+00 s=1 e=0 z=0  None .data      particleNmaeDt$4030                                          */
-SECTION_DATA static u8 data_806EA3E8[4] = {
+SECTION_DATA static u8 particleNmaeDt[4] = {
 	0x87, 0x89, 0x87, 0x8A,
 };
 

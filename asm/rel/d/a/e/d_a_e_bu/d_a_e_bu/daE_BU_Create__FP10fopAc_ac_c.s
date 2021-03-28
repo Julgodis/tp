@@ -204,8 +204,8 @@ lbl_80693E78:
 /* 80693ED0  7F C6 F3 78 */	mr r6, r30
 /* 80693ED4  4B 9E F9 8C */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80693ED8  38 7E 09 20 */	addi r3, r30, 0x920
-/* 80693EDC  3C 80 80 69 */	lis r4, data_80694850@ha
-/* 80693EE0  38 84 48 50 */	addi r4, r4, data_80694850@l
+/* 80693EDC  3C 80 80 69 */	lis r4, cc_sph_src@ha
+/* 80693EE0  38 84 48 50 */	addi r4, r4, cc_sph_src@l
 /* 80693EE4  4B 9F 0B 50 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80693EE8  38 1E 08 E4 */	addi r0, r30, 0x8e4
 /* 80693EEC  90 1E 09 64 */	stw r0, 0x964(r30)

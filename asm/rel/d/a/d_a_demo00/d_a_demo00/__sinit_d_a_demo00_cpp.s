@@ -14,8 +14,8 @@ lbl_804A8720:
 /* 804A8750  38 E0 00 10 */	li r7, 0x10
 /* 804A8754  4B EB 96 0C */	b __construct_array
 /* 804A8758  38 60 00 00 */	li r3, 0
-/* 804A875C  3C 80 80 4B */	lis r4, func_804A8814@ha
-/* 804A8760  38 84 88 14 */	addi r4, r4, func_804A8814@l
+/* 804A875C  3C 80 80 4B */	lis r4, __arraydtor_5211@ha
+/* 804A8760  38 84 88 14 */	addi r4, r4, __arraydtor_5211@l
 /* 804A8764  38 BF 00 40 */	addi r5, r31, 0x40
 /* 804A8768  4B FF BB 31 */	bl __register_global_object
 /* 804A876C  38 7F 01 18 */	addi r3, r31, 0x118
@@ -27,8 +27,8 @@ lbl_804A8720:
 /* 804A8784  38 E0 00 10 */	li r7, 0x10
 /* 804A8788  4B EB 95 D8 */	b __construct_array
 /* 804A878C  38 60 00 00 */	li r3, 0
-/* 804A8790  3C 80 80 4B */	lis r4, func_804A87DC@ha
-/* 804A8794  38 84 87 DC */	addi r4, r4, func_804A87DC@l
+/* 804A8790  3C 80 80 4B */	lis r4, __arraydtor_5213@ha
+/* 804A8794  38 84 87 DC */	addi r4, r4, __arraydtor_5213@l
 /* 804A8798  38 BF 01 0C */	addi r5, r31, 0x10c
 /* 804A879C  4B FF BA FD */	bl __register_global_object
 /* 804A87A0  38 7F 01 E4 */	addi r3, r31, 0x1e4

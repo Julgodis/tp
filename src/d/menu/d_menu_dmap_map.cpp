@@ -47,6 +47,9 @@ struct renderingDmap_c {
 	/* 801C263C */ bool isRendIcon() const;
 };
 
+struct Vec {
+};
+
 struct dDrawPath_c {
 	struct line_class {
 	};
@@ -66,9 +69,6 @@ struct dDrawPath_c {
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
 	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CCC4 */ void drawPath();
-};
-
-struct Vec {
 };
 
 struct renderingDAmap_c {
@@ -440,21 +440,21 @@ asm void renderingDmap_c::getPlayerCursorSize() {
 
 /* ############################################################################################## */
 /* 80454064-8045406C 0005+03 s=1 e=0 z=0  None .sdata2    l_lineWidthPatOff$3807                                       */
-SECTION_SDATA2 static u8 data_80454064[5 + 3 /* padding */] = {
+SECTION_SDATA2 static u8 l_lineWidthPatOff_3807[5 + 3 /* padding */] = {
 	0x00, 0x00, 0x06, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 8045406C-80454074 0005+03 s=1 e=0 z=0  None .sdata2    l_lineWidthPatOn$3808                                        */
-SECTION_SDATA2 static u8 data_8045406C[5 + 3 /* padding */] = {
+SECTION_SDATA2 static u8 l_lineWidthPatOn_3808[5 + 3 /* padding */] = {
 	0x06, 0x06, 0x0C, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 80454074-8045407C 0005+03 s=1 e=0 z=0  None .sdata2    l_lineWidthPatStay$3809                                      */
-SECTION_SDATA2 static u8 data_80454074[5 + 3 /* padding */] = {
+SECTION_SDATA2 static u8 l_lineWidthPatStay_3809[5 + 3 /* padding */] = {
 	0x06, 0x06, 0x0C, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
@@ -473,21 +473,21 @@ asm void renderingDmap_c::getLineWidthZoomBig(int param_0) {
 
 /* ############################################################################################## */
 /* 8045407C-80454084 0005+03 s=1 e=0 z=0  None .sdata2    l_lineWidthPatOff$3820                                       */
-SECTION_SDATA2 static u8 data_8045407C[5 + 3 /* padding */] = {
+SECTION_SDATA2 static u8 l_lineWidthPatOff_3820[5 + 3 /* padding */] = {
 	0x00, 0x00, 0x06, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 80454084-8045408C 0005+03 s=1 e=0 z=0  None .sdata2    l_lineWidthPatOn$3821                                        */
-SECTION_SDATA2 static u8 data_80454084[5 + 3 /* padding */] = {
+SECTION_SDATA2 static u8 l_lineWidthPatOn_3821[5 + 3 /* padding */] = {
 	0x00, 0x00, 0x06, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 8045408C-80454094 0005+03 s=1 e=0 z=0  None .sdata2    l_lineWidthPatStay$3822                                      */
-SECTION_SDATA2 static u8 data_8045408C[5 + 3 /* padding */] = {
+SECTION_SDATA2 static u8 l_lineWidthPatStay_3822[5 + 3 /* padding */] = {
 	0x00, 0x00, 0x06, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
@@ -585,21 +585,21 @@ SECTION_RODATA static void* const l_paletteDmap_m[60] = {
 };
 
 /* 80395950-80395974 0024+00 s=1 e=0 z=0  None .rodata    l_dungeon_offColor$3841                                      */
-SECTION_RODATA static u8 const data_80395950[36] = {
+SECTION_RODATA static u8 const l_dungeon_offColor[36] = {
 	0x08, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
 	0x14, 0x00, 0x00, 0x00, 0x18, 0x00, 0x00, 0x00, 0x1C, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00,
 	0x24, 0x00, 0x00, 0x00,
 };
 
 /* 80395974-80395998 0024+00 s=1 e=0 z=0  None .rodata    l_dungeon_onColor$3842                                       */
-SECTION_RODATA static u8 const data_80395974[36] = {
+SECTION_RODATA static u8 const l_dungeon_onColor[36] = {
 	0x28, 0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x30, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
 	0x34, 0x00, 0x00, 0x00, 0x38, 0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00,
 	0x44, 0x00, 0x00, 0x00,
 };
 
 /* 80395998-803959C0 0024+04 s=1 e=0 z=0  None .rodata    l_dungeon_stayColor$3843                                     */
-SECTION_RODATA static u8 const data_80395998[36 + 4 /* padding */] = {
+SECTION_RODATA static u8 const l_dungeon_stayColor[36 + 4 /* padding */] = {
 	0x48, 0x00, 0x00, 0x00, 0x4C, 0x00, 0x00, 0x00, 0x50, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
 	0x54, 0x00, 0x00, 0x00, 0x58, 0x00, 0x00, 0x00, 0x5C, 0x00, 0x00, 0x00, 0x60, 0x00, 0x00, 0x00,
 	0x64, 0x00, 0x00, 0x00,

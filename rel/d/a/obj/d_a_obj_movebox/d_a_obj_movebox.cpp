@@ -41,20 +41,17 @@ struct mDoMtx_stack_c {
 struct fopAc_ac_c {
 };
 
-struct dBgW {
-	/* 8007B9C0 */ void Move();
-};
-
 struct dBgW_Base {
 	struct PushPullLabel {
 	};
 
 };
 
-struct daObjMovebox {
-	struct BgcSrc_c {
-	};
+struct dBgW {
+	/* 8007B9C0 */ void Move();
+};
 
+struct daObjMovebox {
 	struct Act_c {
 		struct Prm_e {
 		};
@@ -92,6 +89,9 @@ struct daObjMovebox {
 		/* 804808FC */ void Delete();
 	};
 
+	struct BgcSrc_c {
+	};
+
 	struct Bgc_c {
 		/* 8047DAEC */ Bgc_c();
 		/* 8047DBF0 */ void gnd_pos(daObjMovebox::Act_c const*, daObjMovebox::BgcSrc_c const*, int, f32);
@@ -125,10 +125,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -357,9 +357,9 @@ extern "C" static void func_80480C64(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void func_80480CD8(); // 1
 extern "C" void __sinit_d_a_obj_movebox_cpp(); // 1
-extern "C" static void func_80480DA0(); // 1
+extern "C" static void __arraydtor_3671(); // 1
 extern "C" void __dt__11dBgS_WtrChkFv(); // 1
-extern "C" static void func_80480E50(); // 1
+extern "C" static void __arraydtor_3668(); // 1
 extern "C" void __ct__14dBgS_ObjGndChkFv(); // 1
 extern "C" static void func_80480EE4(); // 1
 extern "C" static void func_80480EEC(); // 1
@@ -783,7 +783,7 @@ SECTION_RODATA static u32 const lit_3960 = 0x41200000;
 static u8 lit_3909[12 + 4 /* padding */];
 
 /* 80482AEC-80482B5C 0070+00 s=1 e=0 z=0  None .bss       touch_work$3908                                              */
-static u8 data_80482AEC[112];
+static u8 touch_work[112];
 
 /* 8047E350-8047E5A0 0250+00 s=1 e=0 z=0  None .text      chk_wall_touch__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ212daObjMovebox8BgcSrc_cs */
 #pragma push
@@ -992,7 +992,7 @@ SECTION_RODATA u32 const lit_4775 = 0x42960000;
 SECTION_RODATA static u32 const lit_4890 = 0x3FD55555;
 
 /* 80481698-804816A0 0006+02 s=1 e=0 z=0  None .rodata    particle_id$4913                                             */
-SECTION_RODATA static u8 const data_80481698[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const particle_id[6 + 2 /* padding */] = {
 	0x82, 0xAB, 0x82, 0xAC, 0x82, 0xAD,
 	/* padding */
 	0x00, 0x00,
@@ -1178,7 +1178,7 @@ asm void daObjMovebox::Act_c::chk_appear() const {
 static u8 lit_4501[12 + 4 /* padding */];
 
 /* 80482B6C-80482B78 000C+00 s=1 e=0 z=0  None .bss       scl$4500                                                     */
-static u8 data_80482B6C[12];
+static u8 scl[12];
 
 /* 8047F5CC-8047F634 0068+00 s=1 e=0 z=0  None .text      eff_smoke_slip_start__Q212daObjMovebox5Act_cFv               */
 #pragma push
@@ -1238,7 +1238,7 @@ static u8 lit_4578[12];
 static u8 lit_4579[12];
 
 /* 80482BAC-80482BDC 0030+00 s=1 e=0 z=0  None .bss       dir_vec$4573                                                 */
-static u8 data_80482BAC[48];
+static u8 dir_vec[48];
 
 /* 8047F8F4-8047FCBC 03C8+00 s=1 e=0 z=0  None .text      mode_walk__Q212daObjMovebox5Act_cFv                          */
 #pragma push
@@ -1728,9 +1728,9 @@ extern "C" asm void __sinit_d_a_obj_movebox_cpp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80480DA0() {
+extern "C" asm static void __arraydtor_3671() {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_movebox/d_a_obj_movebox/func_80480DA0.s"
+#include "asm/rel/d/a/obj/d_a_obj_movebox/d_a_obj_movebox/__arraydtor_3671.s"
 }
 #pragma pop
 
@@ -1767,9 +1767,9 @@ asm dBgS_WtrChk::~dBgS_WtrChk() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80480E50() {
+extern "C" asm static void __arraydtor_3668() {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_movebox/d_a_obj_movebox/func_80480E50.s"
+#include "asm/rel/d/a/obj/d_a_obj_movebox/d_a_obj_movebox/__arraydtor_3668.s"
 }
 #pragma pop
 

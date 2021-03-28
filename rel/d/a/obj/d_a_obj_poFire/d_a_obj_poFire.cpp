@@ -75,10 +75,10 @@ struct dSv_player_get_item_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct Vec {
@@ -90,7 +90,7 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -425,7 +425,7 @@ SECTION_DATA static void* lit_3748[3] = {
 };
 
 /* 80CB3FE0-80CB404C 006C+00 s=1 e=0 z=0  None .data      mode_proc$3739                                               */
-SECTION_DATA static u8 data_80CB3FE0[108] = {
+SECTION_DATA static u8 mode_proc[108] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -436,7 +436,7 @@ SECTION_DATA static u8 data_80CB3FE0[108] = {
 };
 
 /* 80CB404C-80CB4050 0004+00 s=1 e=0 z=0  None .data      action_table$4176                                            */
-SECTION_DATA static void* data_80CB404C = (void*)(((char*)&struct_80CB3F3C)+0xE) /* None */;
+SECTION_DATA static void* action_table = (void*)(((char*)&struct_80CB3F3C)+0xE) /* None */;
 
 /* 80CB4050-80CB4070 0020+00 s=1 e=0 z=0  None .data      l_daPoFire_Method                                            */
 SECTION_DATA static void* l_daPoFire_Method[8] = {

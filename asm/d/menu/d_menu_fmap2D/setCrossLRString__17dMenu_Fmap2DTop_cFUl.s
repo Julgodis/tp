@@ -9,8 +9,8 @@ lbl_801D7398:
 /* 801D73B4  40 82 00 8C */	bne lbl_801D7440
 /* 801D73B8  3B 60 00 00 */	li r27, 0
 /* 801D73BC  3B C0 00 00 */	li r30, 0
-/* 801D73C0  3C 60 80 39 */	lis r3, data_80396580@ha
-/* 801D73C4  3B A3 65 80 */	addi r29, r3, data_80396580@l
+/* 801D73C0  3C 60 80 39 */	lis r3, juji_c_6209@ha
+/* 801D73C4  3B A3 65 80 */	addi r29, r3, juji_c_6209@l
 /* 801D73C8  3C 60 80 39 */	lis r3, d_menu_d_menu_fmap2D__stringBase0@ha
 /* 801D73CC  3B 83 65 D0 */	addi r28, r3, d_menu_d_menu_fmap2D__stringBase0@l
 lbl_801D73D0:
@@ -45,8 +45,8 @@ lbl_801D73D0:
 lbl_801D7440:
 /* 801D7440  3B 60 00 00 */	li r27, 0
 /* 801D7444  3B C0 00 00 */	li r30, 0
-/* 801D7448  3C 60 80 39 */	lis r3, data_80396580@ha
-/* 801D744C  3B 83 65 80 */	addi r28, r3, data_80396580@l
+/* 801D7448  3C 60 80 39 */	lis r3, juji_c_6209@ha
+/* 801D744C  3B 83 65 80 */	addi r28, r3, juji_c_6209@l
 /* 801D7450  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801D7454  3B A3 01 88 */	addi r29, r3, g_meter2_info@l
 lbl_801D7458:

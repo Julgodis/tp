@@ -28,8 +28,8 @@ lbl_80576C50:
 /* 80576CB8  4B DE B5 0C */	b _savegpr_23
 /* 80576CBC  7C 79 1B 78 */	mr r25, r3
 /* 80576CC0  FF 20 10 90 */	fmr f25, f2
-/* 80576CC4  3C 60 80 58 */	lis r3, data_80578A88@ha
-/* 80576CC8  3B C3 8A 88 */	addi r30, r3, data_80578A88@l
+/* 80576CC4  3C 60 80 58 */	lis r3, ccCylSrc@ha
+/* 80576CC8  3B C3 8A 88 */	addi r30, r3, ccCylSrc@l
 /* 80576CCC  7C 9B 07 34 */	extsh r27, r4
 /* 80576CD0  7C BC 07 34 */	extsh r28, r5
 /* 80576CD4  3B BC FF D8 */	addi r29, r28, -40

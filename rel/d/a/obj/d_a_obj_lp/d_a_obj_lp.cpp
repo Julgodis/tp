@@ -63,10 +63,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct J3DModel {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DModel {
 };
 
 struct dComIfG_play_c {
@@ -278,7 +278,7 @@ extern "C" extern u32 __float_nan;
 
 /* ############################################################################################## */
 /* 80C55AD8-80C55ADC 0004+00 s=1 e=0 z=0  None .data      l_color$3793                                                 */
-SECTION_DATA static u8 data_80C55AD8[4] = {
+SECTION_DATA static u8 l_color[4] = {
 	0x14, 0x0A, 0x0A, 0xFF,
 };
 

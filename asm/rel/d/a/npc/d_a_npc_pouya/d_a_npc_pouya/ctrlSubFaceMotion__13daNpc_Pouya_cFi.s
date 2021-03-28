@@ -83,8 +83,8 @@ lbl_80AAECE8:
 /* 80AAECF4  88 7F 0F CC */	lbz r3, 0xfcc(r31)
 /* 80AAECF8  7C 63 07 74 */	extsb r3, r3
 /* 80AAECFC  54 64 10 3A */	slwi r4, r3, 2
-/* 80AAED00  3C 60 80 AB */	lis r3, data_80AB2A28@ha
-/* 80AAED04  38 63 2A 28 */	addi r3, r3, data_80AB2A28@l
+/* 80AAED00  3C 60 80 AB */	lis r3, brkSeqList@ha
+/* 80AAED04  38 63 2A 28 */	addi r3, r3, brkSeqList@l
 /* 80AAED08  7C 83 20 2E */	lwzx r4, r3, r4
 /* 80AAED0C  88 7F 0F CD */	lbz r3, 0xfcd(r31)
 /* 80AAED10  7C 63 07 74 */	extsb r3, r3

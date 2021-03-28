@@ -96,7 +96,7 @@ extern "C" void TRKUARTInterruptHandler() {
 
 /* ############################################################################################## */
 /* 803A2C08-803A2C0C 0004+00 s=2 e=0 z=0  None .rodata    EndofProgramInstruction$162                                  */
-SECTION_RODATA static u8 const data_803A2C08[4] = {
+SECTION_RODATA static u8 const EndofProgramInstruction[4] = {
 	0x00, 0x45, 0x4E, 0x44,
 };
 

@@ -29,6 +29,9 @@ struct fast_create_request {
 struct e_arrow_class {
 };
 
+struct csXyz {
+};
+
 struct Vec {
 };
 
@@ -39,9 +42,6 @@ struct cXyz {
 	/* 8067CB68 */ ~cXyz();
 };
 
-struct csXyz {
-};
-
 struct daAlink_c {
 	/* 800DC8C4 */ void setArrowShieldActor(fopAc_ac_c*, int);
 	/* 800DCA2C */ void checkWoodShieldEquipNotIronBall() const;
@@ -49,10 +49,10 @@ struct daAlink_c {
 	/* 800DCD74 */ void setArrowShieldPos(cXyz*, csXyz*, cXyz const*, cXyz const*) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -642,7 +642,7 @@ u8 lit_1009[1 + 3 /* padding */];
 static u8 lit_4411[12 + 4 /* padding */];
 
 /* 8067EB68-8067EB74 000C+00 s=1 e=0 z=0  None .bss       localOffset$4410                                             */
-static u8 data_8067EB68[12];
+static u8 localOffset_4410[12];
 
 /* 8067CBA4-8067D21C 0678+00 s=1 e=0 z=0  None .text      hit_check__FP13e_arrow_class                                 */
 #pragma push
@@ -758,12 +758,12 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 8067E998-8067E9A0 0008+00 s=1 e=0 z=0  None .data      fire_name$4663                                               */
-SECTION_DATA static u8 data_8067E998[8] = {
+SECTION_DATA static u8 fire_name[8] = {
 	0x84, 0xEE, 0x84, 0xEF, 0x84, 0xF0, 0x84, 0xF1,
 };
 
 /* 8067E9A0-8067E9E0 0040+00 s=1 e=0 z=0  None .data      at_sph_src$5035                                              */
-SECTION_DATA static u8 data_8067E9A0[64] = {
+SECTION_DATA static u8 at_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1D,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0x00, 0x08, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -771,7 +771,7 @@ SECTION_DATA static u8 data_8067E9A0[64] = {
 };
 
 /* 8067E9E0-8067EA20 0040+00 s=1 e=0 z=0  None .data      tg_sph_src$5036                                              */
-SECTION_DATA static u8 data_8067E9E0[64] = {
+SECTION_DATA static u8 tg_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFA, 0xFD, 0xB7, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x09, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00, 0x22, 0x00, 0x00, 0x00, 0x00,
@@ -779,7 +779,7 @@ SECTION_DATA static u8 data_8067E9E0[64] = {
 };
 
 /* 8067EA20-8067EA60 0040+00 s=1 e=0 z=0  None .data      fire_eff_sph_src$5039                                        */
-SECTION_DATA static u8 data_8067EA20[64] = {
+SECTION_DATA static u8 fire_eff_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1D,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x75, 0x07, 0x00, 0x00, 0x01,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -896,7 +896,7 @@ asm static void atHit_CB(fopAc_ac_c* param_0, dCcD_GObjInf* param_1, fopAc_ac_c*
 static u8 lit_4787[12 + 4 /* padding */];
 
 /* 8067EB84-8067EB90 000C+00 s=1 e=0 z=0  None .bss       localOffset$4786                                             */
-static u8 data_8067EB84[12];
+static u8 localOffset_4786[12];
 
 /* 8067DB5C-8067DC58 00FC+00 s=1 e=0 z=0  None .text      e_arrow_shield__FP13e_arrow_class                            */
 #pragma push

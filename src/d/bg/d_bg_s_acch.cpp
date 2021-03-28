@@ -62,6 +62,9 @@ struct dBgS_AcchCir {
 	/* 80077414 */ ~dBgS_AcchCir();
 };
 
+struct Vec {
+};
+
 struct cBgS_PolyInfo {
 	/* 80268074 */ cBgS_PolyInfo();
 	/* 802680B0 */ ~cBgS_PolyInfo();
@@ -81,9 +84,6 @@ struct dBgS {
 	/* 80075564 */ void SplGrpChk(dBgS_SplGrpChk*);
 	/* 80075774 */ void MoveBgCrrPos(cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*, bool, bool);
 	/* 80075B84 */ void RideCallBack(cBgS_PolyInfo const&, fopAc_ac_c*);
-};
-
-struct Vec {
 };
 
 struct dBgS_Acch {
@@ -450,7 +450,7 @@ asm void dBgS_Acch::GroundCheckInit(dBgS& param_0) {
 static u8 lit_4166[12];
 
 /* 80424B2C-80424B80 0050+04 s=1 e=0 z=0  None .bss       tmpRoofChk$4165                                              */
-static u8 data_80424B2C[80 + 4 /* padding */];
+static u8 tmpRoofChk[80 + 4 /* padding */];
 
 /* 80076350-8007654C 01FC+00 s=2 e=0 z=0  None .text      GroundCheck__9dBgS_AcchFR4dBgS                               */
 #pragma push

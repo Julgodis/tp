@@ -164,8 +164,8 @@ lbl_808619D8:
 /* 808619E0  C3 38 39 50 */	lfs f25, 0x3950(r24)
 /* 808619E4  38 61 00 24 */	addi r3, r1, 0x24
 /* 808619E8  38 81 00 90 */	addi r4, r1, 0x90
-/* 808619EC  3C A0 80 87 */	lis r5, data_8086BED8@ha
-/* 808619F0  38 05 BE D8 */	addi r0, r5, data_8086BED8@l
+/* 808619EC  3C A0 80 87 */	lis r5, d_p@ha
+/* 808619F0  38 05 BE D8 */	addi r0, r5, d_p@l
 /* 808619F4  7C A0 AA 14 */	add r5, r0, r21
 /* 808619F8  C0 25 FF FC */	lfs f1, -4(r5)
 /* 808619FC  4B A0 51 88 */	b __ml__4cXyzCFf

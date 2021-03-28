@@ -10,8 +10,8 @@ lbl_80D4443C:
 /* 80D4445C  88 1F 04 99 */	lbz r0, 0x499(r31)
 /* 80D44460  7C 00 07 74 */	extsb r0, r0
 /* 80D44464  54 00 10 3A */	slwi r0, r0, 2
-/* 80D44468  3C 80 80 D4 */	lis r4, data_80D44BC8@ha
-/* 80D4446C  38 84 4B C8 */	addi r4, r4, data_80D44BC8@l
+/* 80D44468  3C 80 80 D4 */	lis r4, l_bmdName@ha
+/* 80D4446C  38 84 4B C8 */	addi r4, r4, l_bmdName@l
 /* 80D44470  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80D44474  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 80D44478  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l

@@ -8,8 +8,8 @@ lbl_801D9E20:
 /* 801D9E38  1C 05 00 06 */	mulli r0, r5, 6
 /* 801D9E3C  7C 04 02 14 */	add r0, r4, r0
 /* 801D9E40  54 00 10 3A */	slwi r0, r0, 2
-/* 801D9E44  3C 80 80 39 */	lis r4, data_80396860@ha
-/* 801D9E48  38 84 68 60 */	addi r4, r4, data_80396860@l
+/* 801D9E44  3C 80 80 39 */	lis r4, i_evtID@ha
+/* 801D9E48  38 84 68 60 */	addi r4, r4, i_evtID@l
 /* 801D9E4C  7C 04 00 2E */	lwzx r0, r4, r0
 /* 801D9E50  54 00 08 3C */	slwi r0, r0, 1
 /* 801D9E54  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha

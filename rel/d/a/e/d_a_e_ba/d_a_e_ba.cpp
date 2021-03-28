@@ -18,19 +18,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -96,10 +96,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -633,17 +633,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 806824BC-806824C4 0008+00 s=1 e=0 z=0  None .data      e_prim$3826                                                  */
-SECTION_DATA static u8 data_806824BC[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 806824C4-806824CC 0008+00 s=1 e=0 z=0  None .data      e_env$3827                                                   */
-SECTION_DATA static u8 data_806824C4[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 806824CC-806824D4 0006+02 s=1 e=0 z=0  None .data      eff_id$3835                                                  */
-SECTION_DATA static u8 data_806824CC[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -670,26 +670,26 @@ SECTION_DATA static void* lit_4748[16] = {
 };
 
 /* 80682514-8068251C 0008+00 s=1 e=0 z=0  None .data      fire_name$4786                                               */
-SECTION_DATA static u8 data_80682514[8] = {
+SECTION_DATA static u8 fire_name[8] = {
 	0x82, 0x16, 0x82, 0x17, 0x82, 0x18, 0x82, 0x19,
 };
 
 /* 8068251C-80682524 0006+02 s=1 e=0 z=0  None .data      ice_name$4787                                                */
-SECTION_DATA static u8 data_8068251C[6 + 2 /* padding */] = {
+SECTION_DATA static u8 ice_name[6 + 2 /* padding */] = {
 	0x82, 0x1A, 0x82, 0x1B, 0x82, 0x1C,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80682524-80682530 000C+00 s=1 e=0 z=0  None .data      arc_name$4985                                                */
-SECTION_DATA static void* data_80682524[3] = {
+SECTION_DATA static void* arc_name[3] = {
 	(void*)(((char*)&struct_8068248C)+0x0) /* @stringBase0 */,
 	(void*)(((char*)&struct_8068248C)+0x5) /* None */,
 	(void*)(((char*)&struct_8068248C)+0xA) /* None */,
 };
 
 /* 80682530-80682570 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$5011                                              */
-SECTION_DATA static u8 data_80682530[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x0B, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -878,7 +878,7 @@ static u8 lit_3963[12];
 static u8 l_HIO[28];
 
 /* 80682664-80682763 00FF+00 s=1 e=0 z=0  None .bss       check_index$4162                                             */
-static u8 data_80682664[255];
+static u8 check_index[255];
 
 /* 8067F2DC-8067F544 0268+00 s=3 e=0 z=0  None .text      path_check__FP10e_ba_class                                   */
 #pragma push

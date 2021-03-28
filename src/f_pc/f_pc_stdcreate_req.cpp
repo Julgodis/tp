@@ -171,14 +171,14 @@ bool fpcSCtRq_Cancel(standard_create_request_class* param_0) {
 
 /* ############################################################################################## */
 /* 803A3AF0-803A3AFC 000C+00 s=1 e=0 z=0  None .data      submethod$2261                                               */
-SECTION_DATA static void* data_803A3AF0[3] = {
+SECTION_DATA static void* submethod[3] = {
 	(void*)fpcSCtRq_Handler__FP29standard_create_request_class,
 	(void*)fpcSCtRq_Cancel__FP29standard_create_request_class,
 	(void*)fpcSCtRq_Delete__FP29standard_create_request_class,
 };
 
 /* 803A3AFC-803A3B18 001C+00 s=1 e=0 z=0  None .data      method$2262                                                  */
-SECTION_DATA static void* data_803A3AFC[7] = {
+SECTION_DATA static void* method[7] = {
 	(void*)fpcSCtRq_phase_Load__FP29standard_create_request_class,
 	(void*)fpcSCtRq_phase_CreateProcess__FP29standard_create_request_class,
 	(void*)fpcSCtRq_phase_SubCreateProcess__FP29standard_create_request_class,

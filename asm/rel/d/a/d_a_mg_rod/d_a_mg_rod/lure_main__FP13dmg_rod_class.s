@@ -260,10 +260,10 @@ lbl_804B2064:
 /* 804B20D8  4B BC 6E 08 */	b SetRope__16dBgS_PolyPassChkFv
 /* 804B20DC  3A E0 00 00 */	li r23, 0
 /* 804B20E0  3B 60 00 00 */	li r27, 0
-/* 804B20E4  3C 60 80 4C */	lis r3, data_804BB9CC@ha
-/* 804B20E8  3B 23 B9 CC */	addi r25, r3, data_804BB9CC@l
-/* 804B20EC  3C 60 80 4C */	lis r3, data_804BB9DC@ha
-/* 804B20F0  3B A3 B9 DC */	addi r29, r3, data_804BB9DC@l
+/* 804B20E4  3C 60 80 4C */	lis r3, ax@ha
+/* 804B20E8  3B 23 B9 CC */	addi r25, r3, ax@l
+/* 804B20EC  3C 60 80 4C */	lis r3, az@ha
+/* 804B20F0  3B A3 B9 DC */	addi r29, r3, az@l
 lbl_804B20F4:
 /* 804B20F4  C0 3E 04 D0 */	lfs f1, 0x4d0(r30)
 /* 804B20F8  7C 19 DC 2E */	lfsx f0, r25, r27

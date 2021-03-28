@@ -71,21 +71,21 @@ lbl_80026548:
 /* 8002655C  98 1B 00 04 */	stb r0, 4(r27)
 /* 80026560  7F 43 D3 78 */	mr r3, r26
 /* 80026564  7F 64 DB 78 */	mr r4, r27
-/* 80026568  3C A0 80 3A */	lis r5, data_803A65CC@ha
-/* 8002656C  38 A5 65 CC */	addi r5, r5, data_803A65CC@l
+/* 80026568  3C A0 80 3A */	lis r5, l_roomFuncTable@ha
+/* 8002656C  38 A5 65 CC */	addi r5, r5, l_roomFuncTable@l
 /* 80026570  38 C0 00 04 */	li r6, 4
 /* 80026574  4B FF FB 41 */	bl dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei
 /* 80026578  38 60 00 00 */	li r3, 0
 /* 8002657C  48 00 64 01 */	bl getLayerNo__14dComIfG_play_cFi
 /* 80026580  7C 65 1B 78 */	mr r5, r3
-/* 80026584  3C 60 80 3A */	lis r3, data_803A65FC@ha
-/* 80026588  38 63 65 FC */	addi r3, r3, data_803A65FC@l
+/* 80026584  3C 60 80 3A */	lis r3, l_layerFuncTable_5053@ha
+/* 80026588  38 63 65 FC */	addi r3, r3, l_layerFuncTable_5053@l
 /* 8002658C  38 80 00 03 */	li r4, 3
 /* 80026590  4B FF FA F1 */	bl dStage_setLayerTagName__FP9FuncTableii
 /* 80026594  7F 43 D3 78 */	mr r3, r26
 /* 80026598  7F 64 DB 78 */	mr r4, r27
-/* 8002659C  3C A0 80 3A */	lis r5, data_803A65FC@ha
-/* 800265A0  38 A5 65 FC */	addi r5, r5, data_803A65FC@l
+/* 8002659C  3C A0 80 3A */	lis r5, l_layerFuncTable_5053@ha
+/* 800265A0  38 A5 65 FC */	addi r5, r5, l_layerFuncTable_5053@l
 /* 800265A4  38 C0 00 03 */	li r6, 3
 /* 800265A8  4B FF FB 0D */	bl dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei
 lbl_800265AC:

@@ -18,10 +18,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
 struct mDoExt_btpAnm {
@@ -43,13 +43,13 @@ struct mDoExt_McaMorfCallBack2_c {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct Vec {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Vec {
 };
 
 struct mDoExt_McaMorf {
@@ -107,10 +107,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -686,7 +686,7 @@ SECTION_DATA static void* lit_5348[8] = {
 };
 
 /* 8066F0E4-8066F0EC 0008+00 s=1 e=0 z=0  None .data      w_eff_id$5581                                                */
-SECTION_DATA static u8 data_8066F0E4[8] = {
+SECTION_DATA static u8 w_eff_id[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
@@ -735,7 +735,7 @@ SECTION_DATA static void* lit_5955[40] = {
 };
 
 /* 8066F18C-8066F1CC 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$6355                                              */
-SECTION_DATA static u8 data_8066F18C[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,

@@ -33,8 +33,8 @@ lbl_8022866C:
 /* 80228678  41 81 00 1C */	bgt lbl_80228694
 /* 8022867C  38 03 FF 60 */	addi r0, r3, -160
 /* 80228680  54 00 08 3C */	slwi r0, r0, 1
-/* 80228684  3C 60 80 3C */	lis r3, data_803BFDF8@ha
-/* 80228688  38 63 FD F8 */	addi r3, r3, data_803BFDF8@l
+/* 80228684  3C 60 80 3C */	lis r3, char_table@ha
+/* 80228688  38 63 FD F8 */	addi r3, r3, char_table@l
 /* 8022868C  7C 83 02 2E */	lhzx r4, r3, r0
 /* 80228690  48 00 01 A0 */	b lbl_80228830
 lbl_80228694:

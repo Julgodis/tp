@@ -18,19 +18,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -83,10 +83,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -518,31 +518,31 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80791EE8-80791EF0 0008+00 s=1 e=0 z=0  None .data      e_prim$3781                                                  */
-SECTION_DATA static u8 data_80791EE8[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 80791EF0-80791EF8 0008+00 s=1 e=0 z=0  None .data      e_env$3782                                                   */
-SECTION_DATA static u8 data_80791EF0[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 80791EF8-80791F00 0006+02 s=1 e=0 z=0  None .data      eff_id$3790                                                  */
-SECTION_DATA static u8 data_80791EF8[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80791F00-80791F08 0006+02 s=1 e=0 z=0  None .data      ap_name$4188                                                 */
-SECTION_DATA static u8 data_80791F00[6 + 2 /* padding */] = {
+SECTION_DATA static u8 ap_name[6 + 2 /* padding */] = {
 	0x81, 0xCD, 0x81, 0xCE, 0x81, 0xCF,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80791F08-80791F10 0006+02 s=1 e=0 z=0  None .data      dp_name$4457                                                 */
-SECTION_DATA static u8 data_80791F08[6 + 2 /* padding */] = {
+SECTION_DATA static u8 dp_name[6 + 2 /* padding */] = {
 	0x81, 0xD0, 0x81, 0xD1, 0x81, 0xD2,
 	/* padding */
 	0x00, 0x00,
@@ -565,17 +565,17 @@ SECTION_DATA static void* lit_4637[12] = {
 };
 
 /* 80791F40-80791F44 0004+00 s=1 e=0 z=0  None .data      p_name$4647                                                  */
-SECTION_DATA static u8 data_80791F40[4] = {
+SECTION_DATA static u8 p_name[4] = {
 	0x81, 0xD4, 0x81, 0xD5,
 };
 
 /* 80791F44-80791F4C 0008+00 s=1 e=0 z=0  None .data      p_idx$4648                                                   */
-SECTION_DATA static u8 data_80791F44[8] = {
+SECTION_DATA static u8 p_idx[8] = {
 	0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x0E,
 };
 
 /* 80791F4C-80791FB0 0064+00 s=1 e=0 z=0  None .data      time_scale$4874                                              */
-SECTION_DATA static u8 data_80791F4C[100] = {
+SECTION_DATA static u8 time_scale[100] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 	0x3F, 0x4C, 0xCC, 0xCD, 0x3F, 0x19, 0x99, 0x9A, 0x3E, 0xCC, 0xCC, 0xCD, 0x3E, 0x4C, 0xCC, 0xCD,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -586,7 +586,7 @@ SECTION_DATA static u8 data_80791F4C[100] = {
 };
 
 /* 80791FB0-80791FF0 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$5107                                              */
-SECTION_DATA static u8 data_80791FB0[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -594,7 +594,7 @@ SECTION_DATA static u8 data_80791FB0[64] = {
 };
 
 /* 80791FF0-80792030 0040+00 s=1 e=0 z=0  None .data      at_sph_src$5108                                              */
-SECTION_DATA static u8 data_80791FF0[64] = {
+SECTION_DATA static u8 at_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,

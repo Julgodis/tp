@@ -28,10 +28,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -39,10 +39,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -201,15 +201,15 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
+struct _GXColor {
+};
+
 struct cBgS_PolyInfo {
 	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct csXyz {
 	/* 802673F4 */ csXyz(s16, s16, s16);
-};
-
-struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -650,21 +650,21 @@ SECTION_RODATA static u32 const lit_4350 = 0x3F4CCCCD;
 SECTION_RODATA static u32 const lit_4351 = 0x3E4CCCCD;
 
 /* 8046684C-80466858 000A+02 s=1 e=0 z=0  None .rodata    l_eff_id_lv3$4376                                            */
-SECTION_RODATA static u8 const data_8046684C[10 + 2 /* padding */] = {
+SECTION_RODATA static u8 const l_eff_id_lv3[10 + 2 /* padding */] = {
 	0x87, 0x62, 0x87, 0x63, 0x87, 0x64, 0x87, 0x65, 0x87, 0x66,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80466858-80466864 000A+02 s=1 e=0 z=0  None .rodata    l_eff_id_lv4$4377                                            */
-SECTION_RODATA static u8 const data_80466858[10 + 2 /* padding */] = {
+SECTION_RODATA static u8 const l_eff_id_lv4[10 + 2 /* padding */] = {
 	0x8A, 0xEB, 0x8A, 0xEC, 0x8A, 0xED, 0x8A, 0xEE, 0x8A, 0xEF,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80466864-80466868 0004+00 s=1 e=0 z=0  None .rodata    l_eff_id$4449                                                */
-SECTION_RODATA static u8 const data_80466864[4] = {
+SECTION_RODATA static u8 const l_eff_id[4] = {
 	0x82, 0x95, 0x82, 0x96,
 };
 
@@ -865,7 +865,7 @@ asm void daDoor20_c::getArcName() {
 
 /* ############################################################################################## */
 /* 80467340-80467360 0020+00 s=1 e=0 z=0  None .bss       bmdName$3984                                                 */
-static u8 data_80467340[32];
+static u8 bmdName[32];
 
 /* 80460C40-80460CF0 00B0+00 s=1 e=0 z=0  None .text      getBmdName__10daDoor20_cFv                                   */
 #pragma push
@@ -1311,7 +1311,7 @@ SECTION_DATA static void* lit_5341[29] = {
 };
 
 /* 80467124-80467170 004C+00 s=1 e=0 z=0  None .data      table$5809                                                   */
-SECTION_DATA static void* data_80467124[19] = {
+SECTION_DATA static void* table[19] = {
 	(void*)(((char*)&struct_804668D8)+0x1CE) /* None */,
 	(void*)(((char*)&struct_804668D8)+0x1CE) /* None */,
 	(void*)NULL,
@@ -1334,7 +1334,7 @@ SECTION_DATA static void* data_80467124[19] = {
 };
 
 /* 80467170-80467180 0010+00 s=1 e=0 z=0  None .data      tate_table$5815                                              */
-SECTION_DATA static void* data_80467170[4] = {
+SECTION_DATA static void* tate_table[4] = {
 	(void*)&data_80466AB8,
 	(void*)&data_80466AB8,
 	(void*)&data_80466AD0,
@@ -1342,7 +1342,7 @@ SECTION_DATA static void* data_80467170[4] = {
 };
 
 /* 80467180-80467190 0010+00 s=1 e=0 z=0  None .data      tate_w_table$5816                                            */
-SECTION_DATA static void* data_80467180[4] = {
+SECTION_DATA static void* tate_w_table[4] = {
 	(void*)(((char*)&struct_80466AEC)+0x0) /* None */,
 	(void*)(((char*)&struct_80466AEC)+0x0) /* None */,
 	(void*)(((char*)&struct_80466AEC)+0x15) /* None */,
@@ -1350,7 +1350,7 @@ SECTION_DATA static void* data_80467180[4] = {
 };
 
 /* 80467190-804671A0 0010+00 s=1 e=0 z=0  None .data      yoko_table$5817                                              */
-SECTION_DATA static void* data_80467190[4] = {
+SECTION_DATA static void* yoko_table[4] = {
 	(void*)(((char*)&struct_80466AEC)+0x2E) /* None */,
 	(void*)(((char*)&struct_80466AEC)+0x2E) /* None */,
 	(void*)(((char*)&struct_80466AEC)+0x46) /* None */,
@@ -1358,7 +1358,7 @@ SECTION_DATA static void* data_80467190[4] = {
 };
 
 /* 804671A0-804671B0 0010+00 s=1 e=0 z=0  None .data      yoko_w_table$5818                                            */
-SECTION_DATA static void* data_804671A0[4] = {
+SECTION_DATA static void* yoko_w_table[4] = {
 	(void*)(((char*)&struct_80466AEC)+0x65) /* None */,
 	(void*)(((char*)&struct_80466AEC)+0x65) /* None */,
 	(void*)(((char*)&struct_80466AEC)+0x7A) /* None */,
@@ -1366,7 +1366,7 @@ SECTION_DATA static void* data_804671A0[4] = {
 };
 
 /* 804671B0-804671C0 0010+00 s=1 e=0 z=0  None .data      lv8_table$5819                                               */
-SECTION_DATA static void* data_804671B0[4] = {
+SECTION_DATA static void* lv8_table[4] = {
 	(void*)(((char*)&struct_80466AEC)+0x96) /* None */,
 	(void*)(((char*)&struct_80466AEC)+0x96) /* None */,
 	(void*)(((char*)&struct_80466AEC)+0xAE) /* None */,
@@ -1374,7 +1374,7 @@ SECTION_DATA static void* data_804671B0[4] = {
 };
 
 /* 804671C0-804671D0 0010+00 s=1 e=0 z=0  None .data      lv8_w_table$5820                                             */
-SECTION_DATA static void* data_804671C0[4] = {
+SECTION_DATA static void* lv8_w_table[4] = {
 	(void*)(((char*)&struct_80466AEC)+0xCD) /* None */,
 	(void*)(((char*)&struct_80466AEC)+0xCD) /* None */,
 	(void*)(((char*)&struct_80466AEC)+0xE2) /* None */,
@@ -1382,7 +1382,7 @@ SECTION_DATA static void* data_804671C0[4] = {
 };
 
 /* 804671D0-804671EC 001C+00 s=1 e=0 z=0  None .data      knob_table$5821                                              */
-SECTION_DATA static void* data_804671D0[7] = {
+SECTION_DATA static void* knob_table[7] = {
 	(void*)(((char*)&struct_80466AEC)+0xFE) /* None */,
 	(void*)(((char*)&struct_80466AEC)+0x112) /* None */,
 	(void*)(((char*)&struct_80466AEC)+0x126) /* None */,
@@ -1393,7 +1393,7 @@ SECTION_DATA static void* data_804671D0[7] = {
 };
 
 /* 804671EC-804671FC 0010+00 s=1 e=0 z=0  None .data      lv7_table$5822                                               */
-SECTION_DATA static void* data_804671EC[4] = {
+SECTION_DATA static void* lv7_table[4] = {
 	(void*)(((char*)&struct_80466C7C)+0x21) /* None */,
 	(void*)(((char*)&struct_80466C7C)+0x21) /* None */,
 	(void*)(((char*)&struct_80466C7C)+0x39) /* None */,
@@ -1401,7 +1401,7 @@ SECTION_DATA static void* data_804671EC[4] = {
 };
 
 /* 804671FC-8046720C 0010+00 s=1 e=0 z=0  None .data      lv7_w_table$5823                                             */
-SECTION_DATA static void* data_804671FC[4] = {
+SECTION_DATA static void* lv7_w_table[4] = {
 	(void*)(((char*)&struct_80466CD4)+0x0) /* None */,
 	(void*)(((char*)&struct_80466CD4)+0x0) /* None */,
 	(void*)(((char*)&struct_80466CD4)+0x15) /* None */,
@@ -1409,7 +1409,7 @@ SECTION_DATA static void* data_804671FC[4] = {
 };
 
 /* 8046720C-8046721C 0010+00 s=1 e=0 z=0  None .data      lv9_table$5824                                               */
-SECTION_DATA static void* data_8046720C[4] = {
+SECTION_DATA static void* lv9_table[4] = {
 	(void*)(((char*)&struct_80466CD4)+0x31) /* None */,
 	(void*)(((char*)&struct_80466CD4)+0x31) /* None */,
 	(void*)(((char*)&struct_80466CD4)+0x49) /* None */,
@@ -1417,7 +1417,7 @@ SECTION_DATA static void* data_8046720C[4] = {
 };
 
 /* 8046721C-8046722C 0010+00 s=1 e=0 z=0  None .data      lv9_w_table$5825                                             */
-SECTION_DATA static void* data_8046721C[4] = {
+SECTION_DATA static void* lv9_w_table[4] = {
 	(void*)(((char*)&struct_80466D3C)+0x0) /* None */,
 	(void*)(((char*)&struct_80466D3C)+0x0) /* None */,
 	(void*)(((char*)&struct_80466D3C)+0x15) /* None */,
@@ -1425,7 +1425,7 @@ SECTION_DATA static void* data_8046721C[4] = {
 };
 
 /* 8046722C-804672A0 0074+00 s=1 e=0 z=0  None .data      action_table$6155                                            */
-SECTION_DATA static void* data_8046722C[29] = {
+SECTION_DATA static void* action_table[29] = {
 	(void*)(((char*)&struct_80466D3C)+0x31) /* None */,
 	(void*)(((char*)&struct_80466D3C)+0x36) /* None */,
 	(void*)(((char*)&struct_80466D7C)+0x0) /* None */,

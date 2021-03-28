@@ -22,8 +22,8 @@ lbl_80BA0A94:
 /* 80BA0AE4  7F C3 F3 78 */	mr r3, r30
 /* 80BA0AE8  4B FF F9 75 */	bl shotCheck__14daObjYtaihou_cFv
 /* 80BA0AEC  38 7E 05 B8 */	addi r3, r30, 0x5b8
-/* 80BA0AF0  3C 80 80 BA */	lis r4, data_80BA11C8@ha
-/* 80BA0AF4  38 84 11 C8 */	addi r4, r4, data_80BA11C8@l
+/* 80BA0AF0  3C 80 80 BA */	lis r4, l_cc_offset@ha
+/* 80BA0AF4  38 84 11 C8 */	addi r4, r4, l_cc_offset@l
 /* 80BA0AF8  38 A1 00 08 */	addi r5, r1, 8
 /* 80BA0AFC  4B 7A 62 70 */	b PSMTXMultVec
 /* 80BA0B00  38 7E 07 4C */	addi r3, r30, 0x74c

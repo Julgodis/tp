@@ -2,8 +2,8 @@ lbl_80BD2E88:
 /* 80BD2E88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80BD2E8C  7C 08 02 A6 */	mflr r0
 /* 80BD2E90  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80BD2E94  3C 80 80 BD */	lis r4, data_80BD30C0@ha
-/* 80BD2E98  38 84 30 C0 */	addi r4, r4, data_80BD30C0@l
+/* 80BD2E94  3C 80 80 BD */	lis r4, ccCylSrc@ha
+/* 80BD2E98  38 84 30 C0 */	addi r4, r4, ccCylSrc@l
 /* 80BD2E9C  C0 24 00 F0 */	lfs f1, 0xf0(r4)
 /* 80BD2EA0  C0 44 00 F4 */	lfs f2, 0xf4(r4)
 /* 80BD2EA4  FC 60 08 90 */	fmr f3, f1

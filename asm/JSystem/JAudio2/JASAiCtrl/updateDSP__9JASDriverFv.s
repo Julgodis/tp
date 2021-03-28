@@ -14,20 +14,20 @@ lbl_8029C6C4:
 /* 8029C6F4  7C 00 07 75 */	extsb. r0, r0
 /* 8029C6F8  40 82 00 14 */	bne lbl_8029C70C
 /* 8029C6FC  38 00 00 00 */	li r0, 0
-/* 8029C700  90 0D 8D 50 */	stw r0, data_804512D0(r13)
+/* 8029C700  90 0D 8D 50 */	stw r0, old_time(r13)
 /* 8029C704  38 00 00 01 */	li r0, 1
 /* 8029C708  98 0D 8D 54 */	stb r0, data_804512D4(r13)
 lbl_8029C70C:
 /* 8029C70C  48 0A 60 09 */	bl OSGetTick
-/* 8029C710  80 0D 8D 50 */	lwz r0, data_804512D0(r13)
+/* 8029C710  80 0D 8D 50 */	lwz r0, old_time(r13)
 /* 8029C714  7F E0 18 50 */	subf r31, r0, r3
-/* 8029C718  90 6D 8D 50 */	stw r3, data_804512D0(r13)
+/* 8029C718  90 6D 8D 50 */	stw r3, old_time(r13)
 /* 8029C71C  48 00 02 D5 */	bl getSubFrames__9JASDriverFv
 /* 8029C720  80 AD 8D 58 */	lwz r5, snIntCount__14JASAudioThread(r13)
 /* 8029C724  7C 05 18 50 */	subf r0, r5, r3
 /* 8029C728  54 00 10 3A */	slwi r0, r0, 2
-/* 8029C72C  3C 80 80 3C */	lis r4, data_803C78B8@ha
-/* 8029C730  38 84 78 B8 */	addi r4, r4, data_803C78B8@l
+/* 8029C72C  3C 80 80 3C */	lis r4, history@ha
+/* 8029C730  38 84 78 B8 */	addi r4, r4, history@l
 /* 8029C734  7F E4 01 2E */	stwx r31, r4, r0
 /* 8029C738  7C 03 28 40 */	cmplw r3, r5
 /* 8029C73C  41 82 00 58 */	beq lbl_8029C794

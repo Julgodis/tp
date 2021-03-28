@@ -524,7 +524,7 @@ asm void dScnPly_c::calcPauseTimer() {
 
 /* ############################################################################################## */
 /* 803C3158-803C3188 002E+02 s=1 e=0 z=0  None .data      l_wipeType$4081                                              */
-SECTION_DATA static u8 data_803C3158[46 + 2 /* padding */] = {
+SECTION_DATA static u8 l_wipeType[46 + 2 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x11, 0x00, 0x02, 0x00, 0x02, 0x00, 0x01, 0x00, 0x03, 0x00, 0x01,
 	0x00, 0x04, 0x00, 0x04, 0x00, 0x05, 0x00, 0x05, 0x00, 0x06, 0x00, 0x07, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x02, 0x00, 0x02, 0x00, 0x02, 0x00, 0x02, 0x00, 0x02, 0x00, 0x08, 0x00, 0x08,
@@ -533,14 +533,14 @@ SECTION_DATA static u8 data_803C3158[46 + 2 /* padding */] = {
 };
 
 /* 803C3188-803C3194 000A+02 s=1 e=0 z=0  None .data      camparamarc$4608                                             */
-SECTION_DATA static u8 data_803C3188[10 + 2 /* padding */] = {
+SECTION_DATA static u8 camparamarc[10 + 2 /* padding */] = {
 	0x43, 0x61, 0x6D, 0x50, 0x61, 0x72, 0x61, 0x6D, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 803C3194-803C31C0 002C+00 s=1 e=0 z=0  None .data      l_method$4860                                                */
-SECTION_DATA static void* data_803C3194[11] = {
+SECTION_DATA static void* l_method[11] = {
 	(void*)phase_00__FP9dScnPly_c,
 	(void*)phase_1__FP9dScnPly_c,
 	(void*)phase_1_0__FP9dScnPly_c,

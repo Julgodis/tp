@@ -267,7 +267,7 @@ SECTION_RODATA static void* const sMixFuncs__9JASDriver[4] = {
 static u8 sSubFrameCounter__9JASDriver[4];
 
 /* 804512C8-804512CC 0004+00 s=1 e=0 z=0  None .sbss      dacp$239                                                     */
-static u8 data_804512C8[4];
+static u8 dacp[4];
 
 /* 804512CC-804512D0 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_804512CC[4];
@@ -298,14 +298,14 @@ SECTION_DEAD char const* const stringBase_8039B331 = "MIXING";
 #pragma pop
 
 /* 803C78B8-803C78E0 0028+00 s=1 e=0 z=0  None .data      history$267                                                  */
-SECTION_DATA static u8 data_803C78B8[40] = {
+SECTION_DATA static u8 history[40] = {
 	0x00, 0x0F, 0x42, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 804512D0-804512D4 0004+00 s=1 e=0 z=0  None .sbss      old_time$264                                                 */
-static u8 data_804512D0[4];
+static u8 old_time[4];
 
 /* 804512D4-804512D8 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_804512D4[4];

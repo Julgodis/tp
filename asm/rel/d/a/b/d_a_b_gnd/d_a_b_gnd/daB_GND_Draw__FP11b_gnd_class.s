@@ -233,8 +233,8 @@ lbl_805F52A4:
 /* 805F52AC  41 82 00 DC */	beq lbl_805F5388
 /* 805F52B0  38 7F 21 70 */	addi r3, r31, 0x2170
 /* 805F52B4  38 80 00 10 */	li r4, 0x10
-/* 805F52B8  3C A0 80 60 */	lis r5, data_806029F0@ha
-/* 805F52BC  38 A5 29 F0 */	addi r5, r5, data_806029F0@l
+/* 805F52B8  3C A0 80 60 */	lis r5, l_color@ha
+/* 805F52BC  38 A5 29 F0 */	addi r5, r5, l_color@l
 /* 805F52C0  38 DF 01 0C */	addi r6, r31, 0x10c
 /* 805F52C4  4B A1 EC EC */	b update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c
 /* 805F52C8  38 7F 21 70 */	addi r3, r31, 0x2170
@@ -253,8 +253,8 @@ lbl_805F52A4:
 /* 805F52FC  4B A1 F4 3C */	b setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c
 /* 805F5300  38 7F 21 AC */	addi r3, r31, 0x21ac
 /* 805F5304  38 80 00 10 */	li r4, 0x10
-/* 805F5308  3C A0 80 60 */	lis r5, data_806029F0@ha
-/* 805F530C  38 A5 29 F0 */	addi r5, r5, data_806029F0@l
+/* 805F5308  3C A0 80 60 */	lis r5, l_color@ha
+/* 805F530C  38 A5 29 F0 */	addi r5, r5, l_color@l
 /* 805F5310  38 DF 01 0C */	addi r6, r31, 0x10c
 /* 805F5314  4B A1 EC 9C */	b update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c
 /* 805F5318  38 7F 21 AC */	addi r3, r31, 0x21ac
@@ -270,8 +270,8 @@ lbl_805F52A4:
 /* 805F5340  4B A1 F3 F8 */	b setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c
 /* 805F5344  38 7F 21 E8 */	addi r3, r31, 0x21e8
 /* 805F5348  38 80 00 02 */	li r4, 2
-/* 805F534C  3C A0 80 60 */	lis r5, data_806029F0@ha
-/* 805F5350  38 A5 29 F0 */	addi r5, r5, data_806029F0@l
+/* 805F534C  3C A0 80 60 */	lis r5, l_color@ha
+/* 805F5350  38 A5 29 F0 */	addi r5, r5, l_color@l
 /* 805F5354  38 DF 01 0C */	addi r6, r31, 0x10c
 /* 805F5358  4B A1 EC 58 */	b update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c
 /* 805F535C  38 7F 21 E8 */	addi r3, r31, 0x21e8

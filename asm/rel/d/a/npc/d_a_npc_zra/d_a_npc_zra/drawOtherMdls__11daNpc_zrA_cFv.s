@@ -13,8 +13,8 @@ lbl_80B7C354:
 /* 80B7C380  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80B7C384  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B7C388  3B C3 61 C0 */	addi r30, r3, 0x61c0
-/* 80B7C38C  3C 60 80 B9 */	lis r3, data_80B8C588@ha
-/* 80B7C390  3B E3 C5 88 */	addi r31, r3, data_80B8C588@l
+/* 80B7C38C  3C 60 80 B9 */	lis r3, l_jntNumTbl@ha
+/* 80B7C390  3B E3 C5 88 */	addi r31, r3, l_jntNumTbl@l
 lbl_80B7C394:
 /* 80B7C394  88 1B 14 E9 */	lbz r0, 0x14e9(r27)
 /* 80B7C398  1C 00 00 0C */	mulli r0, r0, 0xc

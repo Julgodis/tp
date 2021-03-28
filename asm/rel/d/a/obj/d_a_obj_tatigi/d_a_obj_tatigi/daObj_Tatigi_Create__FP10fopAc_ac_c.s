@@ -209,8 +209,8 @@ lbl_80D082BC:
 /* 80D082F0  4B 37 B5 70 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80D082F4  3B 00 00 00 */	li r24, 0
 /* 80D082F8  3B 40 00 00 */	li r26, 0
-/* 80D082FC  3C 60 80 D1 */	lis r3, data_80D08628@ha
-/* 80D08300  3B E3 86 28 */	addi r31, r3, data_80D08628@l
+/* 80D082FC  3C 60 80 D1 */	lis r3, cc_cyl_src@ha
+/* 80D08300  3B E3 86 28 */	addi r31, r3, cc_cyl_src@l
 /* 80D08304  3B 7D 1B 80 */	addi r27, r29, 0x1b80
 /* 80D08308  48 00 00 20 */	b lbl_80D08328
 lbl_80D0830C:

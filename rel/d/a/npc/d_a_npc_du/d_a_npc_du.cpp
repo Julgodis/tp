@@ -21,10 +21,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
 struct mDoExt_btpAnm {
@@ -38,13 +38,13 @@ struct mDoExt_McaMorfCallBack2_c {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct Vec {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Vec {
 };
 
 struct mDoExt_McaMorf {
@@ -372,17 +372,17 @@ extern "C" void __register_global_object(); // 1
 SECTION_RODATA static u32 const lit_3762 = 0x3F800000;
 
 /* 809B18EC-809B18F4 0008+00 s=1 e=0 z=0  None .data      walk_se$4161                                                 */
-SECTION_DATA static u8 data_809B18EC[8] = {
+SECTION_DATA static u8 walk_se[8] = {
 	0x00, 0x06, 0x00, 0x58, 0x00, 0x06, 0x00, 0x59,
 };
 
 /* 809B18F4-809B18FC 0008+00 s=1 e=0 z=0  None .data      run_se$4162                                                  */
-SECTION_DATA static u8 data_809B18F4[8] = {
+SECTION_DATA static u8 run_se[8] = {
 	0x00, 0x06, 0x00, 0x5A, 0x00, 0x06, 0x00, 0x5B,
 };
 
 /* 809B18FC-809B193C 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$4342                                              */
-SECTION_DATA static u8 data_809B18FC[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,

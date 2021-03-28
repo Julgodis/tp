@@ -458,7 +458,7 @@ SECTION_DATA static u8 l_execFunc[192] = {
 };
 
 /* 803C2FC4-803C2FD0 000C+00 s=1 e=0 z=0  None .data      l_method$4611                                                */
-SECTION_DATA static void* data_803C2FC4[3] = {
+SECTION_DATA static void* l_method[3] = {
 	(void*)phase_0__FP10dScnLogo_c,
 	(void*)phase_1__FP10dScnLogo_c,
 	(void*)phase_2__FP10dScnLogo_c,

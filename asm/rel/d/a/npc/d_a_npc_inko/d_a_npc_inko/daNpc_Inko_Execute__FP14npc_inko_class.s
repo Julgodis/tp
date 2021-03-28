@@ -1002,14 +1002,14 @@ lbl_80A0DB6C:
 /* 80A0DB78  54 00 06 73 */	rlwinm. r0, r0, 0, 0x19, 0x19
 /* 80A0DB7C  41 82 00 18 */	beq lbl_80A0DB94
 /* 80A0DB80  54 60 10 3A */	slwi r0, r3, 2
-/* 80A0DB84  3C 60 80 A1 */	lis r3, data_80A0E0E8@ha
-/* 80A0DB88  38 63 E0 E8 */	addi r3, r3, data_80A0E0E8@l
+/* 80A0DB84  3C 60 80 A1 */	lis r3, mes_1@ha
+/* 80A0DB88  38 63 E0 E8 */	addi r3, r3, mes_1@l
 /* 80A0DB8C  7F 03 00 2E */	lwzx r24, r3, r0
 /* 80A0DB90  48 00 00 14 */	b lbl_80A0DBA4
 lbl_80A0DB94:
 /* 80A0DB94  54 60 10 3A */	slwi r0, r3, 2
-/* 80A0DB98  3C 60 80 A1 */	lis r3, data_80A0E0D8@ha
-/* 80A0DB9C  38 63 E0 D8 */	addi r3, r3, data_80A0E0D8@l
+/* 80A0DB98  3C 60 80 A1 */	lis r3, mes_0@ha
+/* 80A0DB9C  38 63 E0 D8 */	addi r3, r3, mes_0@l
 /* 80A0DBA0  7F 03 00 2E */	lwzx r24, r3, r0
 lbl_80A0DBA4:
 /* 80A0DBA4  38 7D 05 F8 */	addi r3, r29, 0x5f8

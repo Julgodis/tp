@@ -49,10 +49,10 @@ lbl_807D3900:
 lbl_807D3934:
 /* 807D3934  3B 40 00 00 */	li r26, 0
 /* 807D3938  3B A0 00 00 */	li r29, 0
-/* 807D393C  3C 60 80 7E */	lis r3, data_807E2F7C@ha
-/* 807D3940  3B 63 2F 7C */	addi r27, r3, data_807E2F7C@l
-/* 807D3944  3C 60 80 7E */	lis r3, data_807E2F8C@ha
-/* 807D3948  3B 83 2F 8C */	addi r28, r3, data_807E2F8C@l
+/* 807D393C  3C 60 80 7E */	lis r3, chk_x@ha
+/* 807D3940  3B 63 2F 7C */	addi r27, r3, chk_x@l
+/* 807D3944  3C 60 80 7E */	lis r3, chk_z@ha
+/* 807D3948  3B 83 2F 8C */	addi r28, r3, chk_z@l
 /* 807D394C  C3 DF 00 48 */	lfs f30, 0x48(r31)
 /* 807D3950  C3 FF 00 BC */	lfs f31, 0xbc(r31)
 lbl_807D3954:

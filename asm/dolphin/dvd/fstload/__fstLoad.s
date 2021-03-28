@@ -17,10 +17,10 @@ lbl_8034BE04:
 /* 8034BE40  90 6D 92 58 */	stw r3, idTmp(r13)
 /* 8034BE44  90 0D 92 54 */	stw r0, bb2(r13)
 /* 8034BE48  4B FF F2 F1 */	bl DVDReset
-/* 8034BE4C  3C 60 80 45 */	lis r3, data_8044C9F8@ha
+/* 8034BE4C  3C 60 80 45 */	lis r3, block@ha
 /* 8034BE50  80 8D 92 58 */	lwz r4, idTmp(r13)
 /* 8034BE54  3C A0 80 35 */	lis r5, cb@ha
-/* 8034BE58  38 63 C9 F8 */	addi r3, r3, data_8044C9F8@l
+/* 8034BE58  38 63 C9 F8 */	addi r3, r3, block@l
 /* 8034BE5C  38 A5 BD 2C */	addi r5, r5, cb@l
 /* 8034BE60  4B FF F0 79 */	bl DVDReadDiskID
 lbl_8034BE64:

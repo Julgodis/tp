@@ -715,12 +715,12 @@ asm void JASDsp::TChannel::isFinish() const {
 
 /* ############################################################################################## */
 /* 8045574C-80455754 0008+00 s=1 e=0 z=0  None .sdata2    COMP_BLOCKSAMPLES$331                                        */
-SECTION_SDATA2 static u8 data_8045574C[8] = {
+SECTION_SDATA2 static u8 COMP_BLOCKSAMPLES[8] = {
 	0x10, 0x10, 0x01, 0x01, 0x01, 0x10, 0x10, 0x01,
 };
 
 /* 80455754-8045575C 0008+00 s=1 e=0 z=0  None .sdata2    COMP_BLOCKBYTES$332                                          */
-SECTION_SDATA2 static u8 data_80455754[8] = {
+SECTION_SDATA2 static u8 COMP_BLOCKBYTES[8] = {
 	0x09, 0x05, 0x08, 0x10, 0x01, 0x01, 0x01, 0x01,
 };
 
@@ -880,7 +880,7 @@ asm void JASDsp::TChannel::setDistFilter(s16 param_0) {
 
 /* ############################################################################################## */
 /* 8039B8A0-8039B8B8 0018+00 s=1 e=0 z=0  None .rodata    connect_table$463                                            */
-SECTION_RODATA static u8 const data_8039B8A0[24] = {
+SECTION_RODATA static u8 const connect_table[24] = {
 	0x00, 0x00, 0x0D, 0x00, 0x0D, 0x60, 0x0D, 0xC0, 0x0E, 0x20, 0x0E, 0x80, 0x0E, 0xE0, 0x0C, 0xA0,
 	0x0F, 0x40, 0x0F, 0xA0, 0x0B, 0x00, 0x09, 0xA0,
 };

@@ -29,10 +29,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -40,10 +40,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -521,52 +521,52 @@ SECTION_DATA static void* lit_3936[3] = {
 };
 
 /* 80BEB5D4-80BEB5F8 0024+00 s=1 e=0 z=0  None .data      l_func$3933                                                  */
-SECTION_DATA static u8 data_80BEB5D4[36] = {
+SECTION_DATA static u8 l_func[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80BEB5F8-80BEB600 0006+02 s=1 e=0 z=0  None .data      l_pipe_fire_id$4005                                          */
-SECTION_DATA static u8 data_80BEB5F8[6 + 2 /* padding */] = {
+SECTION_DATA static u8 l_pipe_fire_id[6 + 2 /* padding */] = {
 	0x84, 0xE1, 0x84, 0xE2, 0x84, 0xE3,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80BEB600-80BEB608 0006+02 s=1 e=0 z=0  None .data      l_yogan_foot_id$4014                                         */
-SECTION_DATA static u8 data_80BEB600[6 + 2 /* padding */] = {
+SECTION_DATA static u8 l_yogan_foot_id[6 + 2 /* padding */] = {
 	0x81, 0x6F, 0x81, 0x70, 0x81, 0x71,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80BEB608-80BEB610 0006+02 s=1 e=0 z=0  None .data      l_yogan_headL_id$4092                                        */
-SECTION_DATA static u8 data_80BEB608[6 + 2 /* padding */] = {
+SECTION_DATA static u8 l_yogan_headL_id[6 + 2 /* padding */] = {
 	0x84, 0xE4, 0x84, 0xE5, 0x84, 0xE6,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80BEB610-80BEB618 0006+02 s=1 e=0 z=0  None .data      l_yogan_headM_id$4093                                        */
-SECTION_DATA static u8 data_80BEB610[6 + 2 /* padding */] = {
+SECTION_DATA static u8 l_yogan_headM_id[6 + 2 /* padding */] = {
 	0x84, 0xE7, 0x84, 0xE8, 0x84, 0xE9,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80BEB618-80BEB620 0006+02 s=1 e=0 z=0  None .data      l_yogan_headS_id$4094                                        */
-SECTION_DATA static u8 data_80BEB618[6 + 2 /* padding */] = {
+SECTION_DATA static u8 l_yogan_headS_id[6 + 2 /* padding */] = {
 	0x84, 0xEA, 0x84, 0xEB, 0x84, 0xEC,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80BEB620-80BEB62C 000C+00 s=1 e=0 z=0  None .data      l_yogan_head_id$4095                                         */
-SECTION_DATA static void* data_80BEB620[3] = {
-	(void*)&data_80BEB618,
-	(void*)&data_80BEB610,
-	(void*)&data_80BEB608,
+SECTION_DATA static void* l_yogan_head_id[3] = {
+	(void*)&l_yogan_headS_id,
+	(void*)&l_yogan_headM_id,
+	(void*)&l_yogan_headL_id,
 };
 
 /* 80BEB62C-80BEB64C 0020+00 s=1 e=0 z=0  None .data      l_daObjFPillar2_Method                                       */

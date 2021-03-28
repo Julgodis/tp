@@ -54,6 +54,9 @@ struct daTogeRoll_HIO_c {
 	/* 80C798D0 */ ~daTogeRoll_HIO_c();
 };
 
+struct J3DModelData {
+};
+
 struct Vec {
 };
 
@@ -65,9 +68,6 @@ struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -85,10 +85,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -469,7 +469,7 @@ SECTION_DATA static void* lit_3979[3] = {
 };
 
 /* 80C79C04-80C79C70 006C+00 s=1 e=0 z=0  None .data      mode_proc$3970                                               */
-SECTION_DATA static u8 data_80C79C04[108] = {
+SECTION_DATA static u8 mode_proc[108] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

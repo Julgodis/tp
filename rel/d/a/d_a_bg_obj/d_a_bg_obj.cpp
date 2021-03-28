@@ -25,10 +25,10 @@ struct mDoMtx_stack_c {
 	/* 8000CD64 */ void transS(cXyz const&);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -55,15 +55,15 @@ struct daSetBgObj_c {
 	/* 80031870 */ void getArcName(fopAc_ac_c*);
 };
 
-struct dBgW {
-	/* 8007B970 */ dBgW();
-	/* 8007B9C0 */ void Move();
-};
-
 struct cCcD_Obj {
 };
 
 struct J3DModel {
+};
+
+struct dBgW {
+	/* 8007B970 */ dBgW();
+	/* 8007B9C0 */ void Move();
 };
 
 struct daBgObj_c {
@@ -125,10 +125,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -154,10 +154,10 @@ struct dPa_modelEcallBack {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -561,7 +561,7 @@ SECTION_RODATA static u8 const struct_8045CA20[164] = {
 };
 
 /* 8045CE00-8045CE10 0010+00 s=1 e=0 z=0  None .bss       l_bmdName$3644                                               */
-static u8 data_8045CE00[16];
+static u8 l_bmdName[16];
 
 /* 80459658-804596C4 006C+00 s=2 e=0 z=0  None .text      getBmdName__Fii                                              */
 #pragma push
@@ -576,7 +576,7 @@ asm static void getBmdName(int param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 8045CE10-8045CE20 0010+00 s=1 e=0 z=0  None .bss       l_btkName$3652                                               */
-static u8 data_8045CE10[16];
+static u8 l_btkName[16];
 
 /* 804596C4-80459734 0070+00 s=2 e=0 z=0  None .text      getBtkName__Fii                                              */
 #pragma push
@@ -591,7 +591,7 @@ asm static void getBtkName(int param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 8045CE20-8045CE30 0010+00 s=1 e=0 z=0  None .bss       l_brkName$3660                                               */
-static u8 data_8045CE20[16];
+static u8 l_brkName[16];
 
 /* 80459734-804597A4 0070+00 s=2 e=0 z=0  None .text      getBrkName__Fii                                              */
 #pragma push
@@ -606,7 +606,7 @@ asm static void getBrkName(int param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 8045CE30-8045CE40 0010+00 s=1 e=0 z=0  None .bss       l_dzbName$3668                                               */
-static u8 data_8045CE30[16];
+static u8 l_dzbName[16];
 
 /* 804597A4-804597E8 0044+00 s=2 e=0 z=0  None .text      getDzbName__Fi                                               */
 #pragma push
@@ -999,7 +999,7 @@ SECTION_DATA static void* lit_4930[3] = {
 };
 
 /* 8045CD04-8045CD34 0030+00 s=1 e=0 z=0  None .data      l_func$4926                                                  */
-SECTION_DATA static u8 data_8045CD04[48] = {
+SECTION_DATA static u8 l_func[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

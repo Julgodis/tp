@@ -2,8 +2,8 @@ lbl_80BFF8D8:
 /* 80BFF8D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80BFF8DC  7C 08 02 A6 */	mflr r0
 /* 80BFF8E0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80BFF8E4  3C 80 80 C0 */	lis r4, data_80BFFC1C@ha
-/* 80BFF8E8  38 84 FC 1C */	addi r4, r4, data_80BFFC1C@l
+/* 80BFF8E4  3C 80 80 C0 */	lis r4, ccSphSrc@ha
+/* 80BFF8E8  38 84 FC 1C */	addi r4, r4, ccSphSrc@l
 /* 80BFF8EC  C0 E3 05 AC */	lfs f7, 0x5ac(r3)
 /* 80BFF8F0  C0 A3 05 A8 */	lfs f5, 0x5a8(r3)
 /* 80BFF8F4  C0 83 05 A4 */	lfs f4, 0x5a4(r3)

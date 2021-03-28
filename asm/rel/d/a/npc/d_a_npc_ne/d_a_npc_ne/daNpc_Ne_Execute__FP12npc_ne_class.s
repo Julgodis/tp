@@ -308,8 +308,8 @@ lbl_80A91414:
 /* 80A91498  3B 40 00 00 */	li r26, 0
 /* 80A9149C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80A914A0  3A E3 61 C0 */	addi r23, r3, g_dComIfG_gameInfo@l
-/* 80A914A4  3C 60 80 A9 */	lis r3, data_80A92944@ha
-/* 80A914A8  3B 03 29 44 */	addi r24, r3, data_80A92944@l
+/* 80A914A4  3C 60 80 A9 */	lis r3, e_name@ha
+/* 80A914A8  3B 03 29 44 */	addi r24, r3, e_name@l
 lbl_80A914AC:
 /* 80A914AC  80 77 5D 3C */	lwz r3, 0x5d3c(r23)
 /* 80A914B0  38 00 00 FF */	li r0, 0xff

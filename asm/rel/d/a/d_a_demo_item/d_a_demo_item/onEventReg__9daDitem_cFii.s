@@ -10,8 +10,8 @@ lbl_804E0D44:
 /* 804E0D64  3B A3 07 F0 */	addi r29, r3, 0x7f0
 /* 804E0D68  7F A3 EB 78 */	mr r3, r29
 /* 804E0D6C  54 9E 08 3C */	slwi r30, r4, 1
-/* 804E0D70  3C 80 80 4E */	lis r4, data_804E19F8@ha
-/* 804E0D74  3B E4 19 F8 */	addi r31, r4, data_804E19F8@l
+/* 804E0D70  3C 80 80 4E */	lis r4, l_event_reg@ha
+/* 804E0D74  3B E4 19 F8 */	addi r31, r4, l_event_reg@l
 /* 804E0D78  7C 9F F2 2E */	lhzx r4, r31, r30
 /* 804E0D7C  4B B5 3C 88 */	b getEventReg__11dSv_event_cCFUs
 /* 804E0D80  38 00 00 01 */	li r0, 1

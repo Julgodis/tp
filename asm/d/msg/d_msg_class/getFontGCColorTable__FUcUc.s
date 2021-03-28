@@ -21,8 +21,8 @@ lbl_802289BC:
 /* 802289F0  4E 80 00 20 */	blr 
 lbl_802289F4:
 /* 802289F4  54 60 15 BA */	rlwinm r0, r3, 2, 0x16, 0x1d
-/* 802289F8  3C 60 80 3A */	lis r3, data_803995EC@ha
-/* 802289FC  38 63 95 EC */	addi r3, r3, data_803995EC@l
+/* 802289F8  3C 60 80 3A */	lis r3, colorTable_3877@ha
+/* 802289FC  38 63 95 EC */	addi r3, r3, colorTable_3877@l
 /* 80228A00  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80228A04  28 06 00 00 */	cmplwi r6, 0
 /* 80228A08  4C 82 00 20 */	bnelr 

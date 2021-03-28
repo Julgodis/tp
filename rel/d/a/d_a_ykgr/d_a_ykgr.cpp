@@ -30,26 +30,26 @@ struct daYkgr_HIO_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct cXyz {
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
 };
 
 struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct JPABaseEmitter {
+struct JPABaseParticle {
 };
 
-struct JPABaseParticle {
+struct JPABaseEmitter {
 };
 
 struct dPa_YkgrPcallBack {

@@ -387,7 +387,7 @@ asm static void phase_2(char* param_0) {
 
 /* ############################################################################################## */
 /* 80450758-80450760 0008+00 s=1 e=0 z=0  None .sdata     l_method$3851                                                */
-SECTION_SDATA static void* data_80450758[2] = {
+SECTION_SDATA static void* l_method[2] = {
 	(void*)phase_1__FPc,
 	(void*)phase_2__FPc,
 };

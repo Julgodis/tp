@@ -16,8 +16,8 @@ lbl_80BEAC68:
 /* 80BEACA0  3B 40 00 00 */	li r26, 0
 /* 80BEACA4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80BEACA8  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 80BEACAC  3C 60 80 BF */	lis r3, data_80BEB620@ha
-/* 80BEACB0  3B 23 B6 20 */	addi r25, r3, data_80BEB620@l
+/* 80BEACAC  3C 60 80 BF */	lis r3, l_yogan_head_id@ha
+/* 80BEACB0  3B 23 B6 20 */	addi r25, r3, l_yogan_head_id@l
 lbl_80BEACB4:
 /* 80BEACB4  88 1C 04 E2 */	lbz r0, 0x4e2(r28)
 /* 80BEACB8  7C 04 07 74 */	extsb r4, r0

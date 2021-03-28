@@ -180,14 +180,14 @@ lbl_8068CE58:
 /* 8068CEB0  7F C6 F3 78 */	mr r6, r30
 /* 8068CEB4  4B 9F 69 AC */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 8068CEB8  38 7E 06 F0 */	addi r3, r30, 0x6f0
-/* 8068CEBC  3C 80 80 69 */	lis r4, data_8068D958@ha
-/* 8068CEC0  38 84 D9 58 */	addi r4, r4, data_8068D958@l
+/* 8068CEBC  3C 80 80 69 */	lis r4, cc_cyl_src@ha
+/* 8068CEC0  38 84 D9 58 */	addi r4, r4, cc_cyl_src@l
 /* 8068CEC4  4B 9F 79 F0 */	b Set__8dCcD_CylFRC11dCcD_SrcCyl
 /* 8068CEC8  38 1E 06 B4 */	addi r0, r30, 0x6b4
 /* 8068CECC  90 1E 07 34 */	stw r0, 0x734(r30)
 /* 8068CED0  38 7E 08 2C */	addi r3, r30, 0x82c
-/* 8068CED4  3C 80 80 69 */	lis r4, data_8068D99C@ha
-/* 8068CED8  38 84 D9 9C */	addi r4, r4, data_8068D99C@l
+/* 8068CED4  3C 80 80 69 */	lis r4, at_sph_src@ha
+/* 8068CED8  38 84 D9 9C */	addi r4, r4, at_sph_src@l
 /* 8068CEDC  4B 9F 7B 58 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 8068CEE0  38 1E 06 B4 */	addi r0, r30, 0x6b4
 /* 8068CEE4  90 1E 08 70 */	stw r0, 0x870(r30)

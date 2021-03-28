@@ -29,6 +29,9 @@ struct daZdoor_c {
 	/* 80D3FD8C */ void Delete();
 };
 
+struct J3DModelData {
+};
+
 struct Vec {
 };
 
@@ -37,9 +40,6 @@ struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -429,7 +429,7 @@ asm void daZdoor_c::Create() {
 
 /* ############################################################################################## */
 /* 80D402A4-80D402A8 0004+00 s=1 e=0 z=0  None .rodata    estimateSizeTbl$3848                                         */
-SECTION_RODATA static u8 const data_80D402A4[4] = {
+SECTION_RODATA static u8 const estimateSizeTbl[4] = {
 	0x0C, 0xF0, 0x0D, 0x30,
 };
 

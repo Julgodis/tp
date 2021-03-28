@@ -9,8 +9,8 @@ lbl_8063A6F8:
 /* 8063A714  3B E0 00 00 */	li r31, 0
 /* 8063A718  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8063A71C  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 8063A720  3C 60 80 64 */	lis r3, data_8063DEC4@ha
-/* 8063A724  3B A3 DE C4 */	addi r29, r3, data_8063DEC4@l
+/* 8063A720  3C 60 80 64 */	lis r3, wall_break_effect_id@ha
+/* 8063A724  3B A3 DE C4 */	addi r29, r3, wall_break_effect_id@l
 /* 8063A728  3C 60 80 64 */	lis r3, lit_3776@ha
 /* 8063A72C  3B C3 DC 84 */	addi r30, r3, lit_3776@l
 lbl_8063A730:

@@ -21,13 +21,13 @@ struct mDoExt_3DlineMatSortPacket {
 	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -316,7 +316,7 @@ SECTION_DATA static u8 l_sphSrc[64] = {
 };
 
 /* 80BCEB7C-80BCEB80 0004+00 s=1 e=0 z=0  None .data      color$4550                                                   */
-SECTION_DATA static u8 data_80BCEB7C[4] = {
+SECTION_DATA static u8 color[4] = {
 	0x00, 0x00, 0x00, 0xFF,
 };
 

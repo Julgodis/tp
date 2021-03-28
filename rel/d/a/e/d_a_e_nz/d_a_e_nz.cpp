@@ -18,9 +18,6 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModel {
-};
-
 struct Vec {
 };
 
@@ -30,24 +27,27 @@ struct cXyz {
 	/* 8072C130 */ ~cXyz();
 };
 
+struct J3DModel {
+};
+
 struct mDoExt_invisibleModel {
 	/* 8000E53C */ void create(J3DModel*, u8);
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -103,10 +103,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -537,17 +537,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 8072C26C-8072C274 0008+00 s=1 e=0 z=0  None .data      e_prim$3668                                                  */
-SECTION_DATA static u8 data_8072C26C[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 8072C274-8072C27C 0008+00 s=1 e=0 z=0  None .data      e_env$3669                                                   */
-SECTION_DATA static u8 data_8072C274[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 8072C27C-8072C284 0006+02 s=1 e=0 z=0  None .data      eff_id$3677                                                  */
-SECTION_DATA static u8 data_8072C27C[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id_3677[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -568,12 +568,12 @@ SECTION_DATA static u8 stick_d[80] = {
 };
 
 /* 8072C2DC-8072C2E4 0008+00 s=1 e=0 z=0  None .data      eff_id$4227                                                  */
-SECTION_DATA static u8 data_8072C2DC[8] = {
+SECTION_DATA static u8 eff_id_4227[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
 /* 8072C2E4-8072C324 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$4510                                              */
-SECTION_DATA static u8 data_8072C2E4[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -941,7 +941,7 @@ asm static void getPolyColor(cBgS_PolyInfo& param_0, int param_1, _GXColor* para
 static u8 lit_4220[12 + 4 /* padding */];
 
 /* 8072C468-8072C474 000C+00 s=1 e=0 z=0  None .bss       sc$4219                                                      */
-static u8 data_8072C468[12];
+static u8 sc[12];
 
 /* 8072AB68-8072B09C 0534+00 s=1 e=0 z=0  None .text      action__FP10e_nz_class                                       */
 #pragma push

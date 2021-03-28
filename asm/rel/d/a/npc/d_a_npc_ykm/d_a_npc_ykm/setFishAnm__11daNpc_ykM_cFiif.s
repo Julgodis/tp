@@ -16,8 +16,8 @@ lbl_80B56624:
 /* 80B5665C  28 00 00 00 */	cmplwi r0, 0
 /* 80B56660  41 82 00 64 */	beq lbl_80B566C4
 /* 80B56664  54 80 18 38 */	slwi r0, r4, 3
-/* 80B56668  3C 80 80 B6 */	lis r4, data_80B5E880@ha
-/* 80B5666C  38 84 E8 80 */	addi r4, r4, data_80B5E880@l
+/* 80B56668  3C 80 80 B6 */	lis r4, fishAnmData@ha
+/* 80B5666C  38 84 E8 80 */	addi r4, r4, fishAnmData@l
 /* 80B56670  7C A4 00 2E */	lwzx r5, r4, r0
 /* 80B56674  2C 05 00 00 */	cmpwi r5, 0
 /* 80B56678  40 81 00 24 */	ble lbl_80B5669C

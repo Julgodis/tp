@@ -263,14 +263,14 @@ lbl_80A91F18:
 /* 80A91F68  7F C6 F3 78 */	mr r6, r30
 /* 80A91F6C  4B 5F 18 F4 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80A91F70  38 7E 09 5C */	addi r3, r30, 0x95c
-/* 80A91F74  3C 80 80 A9 */	lis r4, data_80A92950@ha
-/* 80A91F78  38 84 29 50 */	addi r4, r4, data_80A92950@l
+/* 80A91F74  3C 80 80 A9 */	lis r4, cc_sph_src@ha
+/* 80A91F78  38 84 29 50 */	addi r4, r4, cc_sph_src@l
 /* 80A91F7C  4B 5F 2A B8 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80A91F80  38 1E 09 20 */	addi r0, r30, 0x920
 /* 80A91F84  90 1E 09 A0 */	stw r0, 0x9a0(r30)
 /* 80A91F88  38 7E 0A 94 */	addi r3, r30, 0xa94
-/* 80A91F8C  3C 80 80 A9 */	lis r4, data_80A92990@ha
-/* 80A91F90  38 84 29 90 */	addi r4, r4, data_80A92990@l
+/* 80A91F8C  3C 80 80 A9 */	lis r4, at_sph_src@ha
+/* 80A91F90  38 84 29 90 */	addi r4, r4, at_sph_src@l
 /* 80A91F94  4B 5F 2A A0 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80A91F98  38 1E 09 20 */	addi r0, r30, 0x920
 /* 80A91F9C  90 1E 0A D8 */	stw r0, 0xad8(r30)

@@ -111,7 +111,7 @@ lbl_8034506C:
 /* 80345098  39 04 5C F8 */	addi r8, r4, GetTypeCallback@l
 /* 8034509C  54 0A E8 FE */	srwi r10, r0, 3
 /* 803450A0  38 77 00 00 */	addi r3, r23, 0
-/* 803450A4  38 8D 91 70 */	la r4, data_804516F0(r13) /* 804516F0-_SDA_BASE_ */
+/* 803450A4  38 8D 91 70 */	la r4, cmdTypeAndStatus_78(r13) /* 804516F0-_SDA_BASE_ */
 /* 803450A8  38 A0 00 01 */	li r5, 1
 /* 803450AC  38 E0 00 03 */	li r7, 3
 /* 803450B0  39 20 00 00 */	li r9, 0

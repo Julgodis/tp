@@ -34,8 +34,8 @@ lbl_80582B70:
 /* 80582B78  3B 80 00 00 */	li r28, 0
 /* 80582B7C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80582B80  3B 23 61 C0 */	addi r25, r3, g_dComIfG_gameInfo@l
-/* 80582B84  3C 60 80 58 */	lis r3, data_80585B58@ha
-/* 80582B88  3B 43 5B 58 */	addi r26, r3, data_80585B58@l
+/* 80582B84  3C 60 80 58 */	lis r3, w_eff_id@ha
+/* 80582B88  3B 43 5B 58 */	addi r26, r3, w_eff_id@l
 /* 80582B8C  3C 60 80 58 */	lis r3, lit_3970@ha
 /* 80582B90  3B 63 56 20 */	addi r27, r3, lit_3970@l
 lbl_80582B94:

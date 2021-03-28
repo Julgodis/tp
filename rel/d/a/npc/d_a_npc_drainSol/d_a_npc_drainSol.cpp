@@ -14,7 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Vec {
@@ -26,13 +29,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -49,10 +49,10 @@ struct daPy_py_c {
 	/* 8015F424 */ void checkNowWolfEyeUp();
 };
 
-struct J3DAnmTransformKey {
+struct _GXColorS10 {
 };
 
-struct _GXColorS10 {
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {

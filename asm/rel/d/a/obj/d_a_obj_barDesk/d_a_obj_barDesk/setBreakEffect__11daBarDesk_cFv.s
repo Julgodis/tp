@@ -9,8 +9,8 @@ lbl_80BA9844:
 /* 80BA9860  3B E0 00 00 */	li r31, 0
 /* 80BA9864  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80BA9868  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 80BA986C  3C 60 80 BB */	lis r3, data_80BA9BB0@ha
-/* 80BA9870  3B A3 9B B0 */	addi r29, r3, data_80BA9BB0@l
+/* 80BA986C  3C 60 80 BB */	lis r3, particle_id@ha
+/* 80BA9870  3B A3 9B B0 */	addi r29, r3, particle_id@l
 /* 80BA9874  3C 60 80 BB */	lis r3, lit_3861@ha
 /* 80BA9878  3B C3 9B A4 */	addi r30, r3, lit_3861@l
 lbl_80BA987C:

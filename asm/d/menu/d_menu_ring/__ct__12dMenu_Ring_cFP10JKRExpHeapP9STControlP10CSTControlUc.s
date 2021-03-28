@@ -8,8 +8,8 @@ lbl_801E9118:
 /* 801E9130  48 17 90 81 */	bl _savegpr_18
 /* 801E9134  7C 7F 1B 78 */	mr r31, r3
 /* 801E9138  7C BA 2B 78 */	mr r26, r5
-/* 801E913C  3C 60 80 39 */	lis r3, data_80397738@ha
-/* 801E9140  3B C3 77 38 */	addi r30, r3, data_80397738@l
+/* 801E913C  3C 60 80 39 */	lis r3, xy_text@ha
+/* 801E9140  3B C3 77 38 */	addi r30, r3, xy_text@l
 /* 801E9144  3C 60 80 3A */	lis r3, __vt__12dDlst_base_c@ha
 /* 801E9148  38 03 6F 88 */	addi r0, r3, __vt__12dDlst_base_c@l
 /* 801E914C  90 1F 00 00 */	stw r0, 0(r31)

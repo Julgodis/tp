@@ -468,8 +468,8 @@ lbl_800E4610:
 /* 800E4634  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 800E4638  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 800E463C  38 63 01 E0 */	addi r3, r3, 0x1e0
-/* 800E4640  3C 80 80 39 */	lis r4, data_803918DC@ha
-/* 800E4644  38 84 18 DC */	addi r4, r4, data_803918DC@l
+/* 800E4640  3C 80 80 39 */	lis r4, localSidePos@ha
+/* 800E4644  38 84 18 DC */	addi r4, r4, localSidePos@l
 /* 800E4648  38 A1 01 3C */	addi r5, r1, 0x13c
 /* 800E464C  48 26 27 21 */	bl PSMTXMultVec
 /* 800E4650  38 61 00 4C */	addi r3, r1, 0x4c

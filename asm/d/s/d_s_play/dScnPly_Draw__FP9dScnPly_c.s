@@ -33,8 +33,8 @@ lbl_802594AC:
 /* 80259528  7F 83 E3 78 */	mr r3, r28
 /* 8025952C  38 80 00 0B */	li r4, 0xb
 /* 80259530  54 00 0D FC */	rlwinm r0, r0, 1, 0x17, 0x1e
-/* 80259534  3C A0 80 3C */	lis r5, data_803C3158@ha
-/* 80259538  38 A5 31 58 */	addi r5, r5, data_803C3158@l
+/* 80259534  3C A0 80 3C */	lis r5, l_wipeType@ha
+/* 80259538  38 A5 31 58 */	addi r5, r5, l_wipeType@l
 /* 8025953C  7C A5 02 AE */	lhax r5, r5, r0
 /* 80259540  38 C0 00 05 */	li r6, 5
 /* 80259544  4B DC 57 9D */	bl fopScnM_ChangeReq__FP11scene_classssUs

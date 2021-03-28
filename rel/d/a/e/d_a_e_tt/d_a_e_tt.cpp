@@ -23,19 +23,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -65,10 +65,10 @@ struct fopAcM_wt_c {
 	/* 8001DD84 */ void waterCheck(cXyz const*);
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daE_TT_c {
@@ -132,11 +132,11 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct _GXColor {
 };
 
-struct _GXColor {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dPa_control_c {
@@ -616,17 +616,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 807C20E8-807C20F0 0008+00 s=1 e=0 z=0  None .data      e_prim$3787                                                  */
-SECTION_DATA static u8 data_807C20E8[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 807C20F0-807C20F8 0008+00 s=1 e=0 z=0  None .data      e_env$3788                                                   */
-SECTION_DATA static u8 data_807C20F0[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 807C20F8-807C2100 0006+02 s=1 e=0 z=0  None .data      eff_id$3796                                                  */
-SECTION_DATA static u8 data_807C20F8[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -667,24 +667,24 @@ SECTION_DATA static void* lit_3973[14] = {
 };
 
 /* 807C21B8-807C21C8 0010+00 s=1 e=0 z=0  None .data      foot_jnt_no$4152                                             */
-SECTION_DATA static u8 data_807C21B8[16] = {
+SECTION_DATA static u8 foot_jnt_no_4152[16] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x11,
 };
 
 /* 807C21C8-807C21D0 0008+00 s=1 e=0 z=0  None .data      w_eff_id$4272                                                */
-SECTION_DATA static u8 data_807C21C8[8] = {
+SECTION_DATA static u8 w_eff_id_4272[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
 /* 807C21D0-807C21D8 0006+02 s=1 e=0 z=0  None .data      w_eff_id$4305                                                */
-SECTION_DATA static u8 data_807C21D0[6 + 2 /* padding */] = {
+SECTION_DATA static u8 w_eff_id_4305[6 + 2 /* padding */] = {
 	0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 807C21D8-807C21E8 0010+00 s=1 e=0 z=0  None .data      foot_jnt_no$4306                                             */
-SECTION_DATA static u8 data_807C21D8[16] = {
+SECTION_DATA static u8 foot_jnt_no_4306[16] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x11,
 };
 
@@ -1193,7 +1193,7 @@ asm void daE_TT_c::checkWaterSurface() {
 static u8 lit_4154[12 + 4 /* padding */];
 
 /* 807C2418-807C2424 000C+00 s=1 e=0 z=0  None .bss       sc$4153                                                      */
-static u8 data_807C2418[12];
+static u8 sc_4153[12];
 
 /* 807BDF60-807BE2A8 0348+00 s=1 e=0 z=0  None .text      checkFootGround__8daE_TT_cFv                                 */
 #pragma push
@@ -1211,7 +1211,7 @@ asm void daE_TT_c::checkFootGround() {
 static u8 lit_4269[12 + 4 /* padding */];
 
 /* 807C2434-807C2440 000C+00 s=1 e=0 z=0  None .bss       sc$4268                                                      */
-static u8 data_807C2434[12];
+static u8 sc_4268[12];
 
 /* 807BE2A8-807BE438 0190+00 s=1 e=0 z=0  None .text      setBodyLandEffect__8daE_TT_cFv                               */
 #pragma push
@@ -1229,7 +1229,7 @@ asm void daE_TT_c::setBodyLandEffect() {
 static u8 lit_4302[12 + 4 /* padding */];
 
 /* 807C2450-807C245C 000C+00 s=1 e=0 z=0  None .bss       sc$4301                                                      */
-static u8 data_807C2450[12];
+static u8 sc_4301[12];
 
 /* 807BE438-807BE708 02D0+00 s=4 e=0 z=0  None .text      setWaterEffect__8daE_TT_cFv                                  */
 #pragma push
@@ -1247,7 +1247,7 @@ asm void daE_TT_c::setWaterEffect() {
 static u8 lit_4400[12 + 4 /* padding */];
 
 /* 807C246C-807C2478 000C+00 s=1 e=0 z=0  None .bss       sc$4399                                                      */
-static u8 data_807C246C[12];
+static u8 sc_4399[12];
 
 /* 807BE708-807BE99C 0294+00 s=1 e=0 z=0  None .text      setDeathEyeEffect__8daE_TT_cFv                               */
 #pragma push
@@ -1265,7 +1265,7 @@ asm void daE_TT_c::setDeathEyeEffect() {
 static u8 lit_4489[12 + 4 /* padding */];
 
 /* 807C2488-807C2494 000C+00 s=1 e=0 z=0  None .bss       sc$4488                                                      */
-static u8 data_807C2488[12];
+static u8 sc_4488[12];
 
 /* 807BE99C-807BEBAC 0210+00 s=1 e=0 z=0  None .text      setDeathFootEffect__8daE_TT_cFv                              */
 #pragma push

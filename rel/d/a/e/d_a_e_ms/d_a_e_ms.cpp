@@ -19,19 +19,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -95,10 +95,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -566,17 +566,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80729630-80729638 0008+00 s=1 e=0 z=0  None .data      e_prim$3679                                                  */
-SECTION_DATA static u8 data_80729630[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 80729638-80729640 0008+00 s=1 e=0 z=0  None .data      e_env$3680                                                   */
-SECTION_DATA static u8 data_80729638[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 80729640-80729648 0006+02 s=1 e=0 z=0  None .data      eff_id$3688                                                  */
-SECTION_DATA static u8 data_80729640[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id_3688[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -598,12 +598,12 @@ SECTION_DATA static void* lit_4628[11] = {
 };
 
 /* 80729674-8072967C 0008+00 s=1 e=0 z=0  None .data      eff_id$4781                                                  */
-SECTION_DATA static u8 data_80729674[8] = {
+SECTION_DATA static u8 eff_id_4781[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
 /* 8072967C-807296BC 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$4909                                              */
-SECTION_DATA static u8 data_8072967C[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xDA, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -611,7 +611,7 @@ SECTION_DATA static u8 data_8072967C[64] = {
 };
 
 /* 807296BC-807296FC 0040+00 s=1 e=0 z=0  None .data      at_sph_src$4910                                              */
-SECTION_DATA static u8 data_807296BC[64] = {
+SECTION_DATA static u8 at_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -1144,7 +1144,7 @@ asm static void anm_se_set(e_ms_class* param_0) {
 static u8 lit_4778[12 + 4 /* padding */];
 
 /* 8072988C-80729898 000C+00 s=1 e=0 z=0  None .bss       sc$4777                                                      */
-static u8 data_8072988C[12];
+static u8 sc[12];
 
 /* 80728464-80728920 04BC+00 s=2 e=0 z=0  None .text      daE_MS_Execute__FP10e_ms_class                               */
 #pragma push

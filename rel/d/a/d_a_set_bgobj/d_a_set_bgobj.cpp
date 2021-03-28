@@ -85,7 +85,7 @@ SECTION_RODATA static u8 const l_specName[9 + 3 /* padding */] = {
 };
 
 /* 80485F10-80485F1C 000A+02 s=1 e=0 z=0  None .data      l_bg_profName$3618                                           */
-SECTION_DATA static u8 data_80485F10[10 + 2 /* padding */] = {
+SECTION_DATA static u8 l_bg_profName[10 + 2 /* padding */] = {
 	0x02, 0xDE, 0x02, 0xDE, 0x02, 0xDE, 0x01, 0x3C, 0x01, 0x3D,
 	/* padding */
 	0x00, 0x00,

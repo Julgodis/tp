@@ -22,10 +22,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -53,15 +53,15 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 	/* 80BF678C */ ~cXyz();
 	/* 80BF6DB0 */ cXyz();
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -328,22 +328,22 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80BF6E1C-80BF6E24 0008+00 s=1 e=0 z=0  None .data      bmd$3914                                                     */
-SECTION_DATA static u8 data_80BF6E1C[8] = {
+SECTION_DATA static u8 bmd[8] = {
 	0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x07,
 };
 
 /* 80BF6E24-80BF6E2C 0008+00 s=1 e=0 z=0  None .data      brk$3915                                                     */
-SECTION_DATA static u8 data_80BF6E24[8] = {
+SECTION_DATA static u8 brk[8] = {
 	0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x0B,
 };
 
 /* 80BF6E2C-80BF6E34 0008+00 s=1 e=0 z=0  None .data      btk$3916                                                     */
-SECTION_DATA static u8 data_80BF6E2C[8] = {
+SECTION_DATA static u8 btk[8] = {
 	0x00, 0x00, 0x00, 0x0E, 0x00, 0x00, 0x00, 0x0F,
 };
 
 /* 80BF6E34-80BF6E3C 0008+00 s=1 e=0 z=0  None .data      dzb$3917                                                     */
-SECTION_DATA static u8 data_80BF6E34[8] = {
+SECTION_DATA static u8 dzb[8] = {
 	0x00, 0x00, 0x00, 0x12, 0x00, 0x00, 0x00, 0x13,
 };
 

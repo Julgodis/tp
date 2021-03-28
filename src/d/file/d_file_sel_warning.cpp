@@ -66,10 +66,10 @@ struct J2DTextBox {
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
-struct J2DAnmTransform {
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct J2DAnmTransform {
 };
 
 struct J2DScreen {

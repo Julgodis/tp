@@ -29,19 +29,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -91,13 +91,13 @@ struct daNpcShoe_Param_c {
 	/* 80AEA344 */ ~daNpcShoe_Param_c();
 };
 
-struct J3DAnmTransformKey {
-};
-
 struct _GXColorS10 {
 };
 
 struct J3DAnmTexPattern {
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {

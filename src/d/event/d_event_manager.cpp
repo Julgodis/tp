@@ -43,6 +43,13 @@ struct dEvt_control_c {
 	/* 800436F4 */ void setPtD(void*);
 };
 
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
 struct dEvDtStaff_c {
 	/* 80044134 */ void init();
 };
@@ -50,13 +57,6 @@ struct dEvDtStaff_c {
 struct dEvDtEvent_c {
 	/* 80043E78 */ void finishCheck();
 	/* 80043F70 */ void specialStaffProc(dEvDtStaff_c*);
-};
-
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
 struct dEvDtData_c {
@@ -367,7 +367,7 @@ SECTION_DEAD static char const* const pad_8037A104 = "\0\0\0";
 #pragma pop
 
 /* 803A8270-803A82A8 0038+00 s=1 e=0 z=0  None .data      soecial_names$3966                                           */
-SECTION_DATA static void* data_803A8270[14] = {
+SECTION_DATA static void* soecial_names[14] = {
 	(void*)&d_event_d_event_manager__stringBase0,
 	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x10),
 	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x1E),
@@ -649,7 +649,7 @@ asm void dEvent_manager_c::getEventData(s16 param_0) {
 
 /* ############################################################################################## */
 /* 804246A0-804246B4 0011+03 s=1 e=0 z=0  None .bss       map_tool_name$4449                                           */
-static u8 data_804246A0[17 + 3 /* padding */];
+static u8 map_tool_name_4449[17 + 3 /* padding */];
 
 /* 80047514-80047698 0184+00 s=3 e=8 z=3  None .text      getEventIdx__16dEvent_manager_cFPCcUcl                       */
 #pragma push
@@ -664,7 +664,7 @@ asm void dEvent_manager_c::getEventIdx(char const* param_0, u8 param_1, s32 para
 
 /* ############################################################################################## */
 /* 804246B4-804246C8 0011+03 s=1 e=0 z=0  None .bss       map_tool_name$4498                                           */
-static u8 data_804246B4[17 + 3 /* padding */];
+static u8 map_tool_name_4498[17 + 3 /* padding */];
 
 /* 80047698-80047758 00C0+00 s=0 e=3 z=25  None .text      getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc              */
 #pragma push
@@ -679,7 +679,7 @@ asm void dEvent_manager_c::getEventIdx(fopAc_ac_c* param_0, u8 param_1) {
 
 /* ############################################################################################## */
 /* 804246C8-804246E0 0011+07 s=1 e=0 z=0  None .bss       map_tool_name$4511                                           */
-static u8 data_804246C8[17 + 7 /* padding */];
+static u8 map_tool_name_4511[17 + 7 /* padding */];
 
 /* 80047758-80047930 01D8+00 s=1 e=10 z=92  None .text      getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc           */
 #pragma push
@@ -969,7 +969,7 @@ asm void dEvent_manager_c::specialCast(char const* param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 803A82A8-803A82B8 000C+04 s=1 e=0 z=0  None .data      action_table$5100                                            */
-SECTION_DATA static void* data_803A82A8[3 + 1 /* padding */] = {
+SECTION_DATA static void* action_table[3 + 1 /* padding */] = {
 	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x18B),
 	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x190),
 	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x196),

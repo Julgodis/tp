@@ -39,10 +39,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -58,10 +58,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -453,9 +453,9 @@ extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" static void func_80BB3490(); // 1
 extern "C" static void func_80BB34AC(); // 1
 extern "C" void __sinit_d_a_obj_bemos_cpp(); // 1
-extern "C" static void func_80BB35A8(); // 1
+extern "C" static void __arraydtor_5103(); // 1
 extern "C" void __dt__11dBgS_WtrChkFv(); // 1
-extern "C" static void func_80BB3658(); // 1
+extern "C" static void __arraydtor_5100(); // 1
 extern "C" void __dt__14dBgS_ObjGndChkFv(); // 1
 extern "C" void __ct__14dBgS_ObjGndChkFv(); // 1
 extern "C" static void func_80BB3764(); // 1
@@ -851,12 +851,12 @@ SECTION_RODATA static u8 const lit_4716[8] = {
 };
 
 /* 80BB3880-80BB3884 0004+00 s=1 e=0 z=0  None .rodata    eff_id_f$4818                                                */
-SECTION_RODATA static u8 const data_80BB3880[4] = {
+SECTION_RODATA static u8 const eff_id_f[4] = {
 	0x84, 0x50, 0x84, 0x51,
 };
 
 /* 80BB3884-80BB388C 0008+00 s=1 e=0 z=0  None .rodata    hit_eff_id$4819                                              */
-SECTION_RODATA static u8 const data_80BB3884[8] = {
+SECTION_RODATA static u8 const hit_eff_id[8] = {
 	0x85, 0xA2, 0x85, 0xA3, 0x85, 0xA4, 0x85, 0xA5,
 };
 
@@ -915,7 +915,7 @@ SECTION_RODATA static u32 const lit_5242 = 0x42980000;
 SECTION_RODATA u32 const lit_5299 = 0x42DC0000;
 
 /* 80BB3A20-80BB3A24 0004+00 s=1 e=0 z=0  None .rodata    l_eff_id$5506                                                */
-SECTION_RODATA static u8 const data_80BB3A20[4] = {
+SECTION_RODATA static u8 const l_eff_id_5506[4] = {
 	0x84, 0x67, 0x84, 0x68,
 };
 
@@ -926,12 +926,12 @@ SECTION_RODATA static u32 const lit_5564 = 0x40D00000;
 SECTION_RODATA static u32 const lit_5565 = 0x42000000;
 
 /* 80BB3A2C-80BB3A30 0004+00 s=1 e=0 z=0  None .rodata    l_eff_id$5631                                                */
-SECTION_RODATA static u8 const data_80BB3A2C[4] = {
+SECTION_RODATA static u8 const l_eff_id_5631[4] = {
 	0x84, 0x62, 0x84, 0x63,
 };
 
 /* 80BB3A30-80BB3A38 0006+02 s=1 e=0 z=0  None .rodata    l_eff_id2$5639                                               */
-SECTION_RODATA static u8 const data_80BB3A30[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const l_eff_id2[6 + 2 /* padding */] = {
 	0x84, 0x65, 0x84, 0x66, 0x84, 0x6B,
 	/* padding */
 	0x00, 0x00,
@@ -1059,7 +1059,7 @@ SECTION_DATA static void* lit_4299[3] = {
 };
 
 /* 80BB3BC4-80BB3BDC 0018+00 s=1 e=0 z=0  None .data      l_func$4297                                                  */
-SECTION_DATA static u8 data_80BB3BC4[24] = {
+SECTION_DATA static u8 l_func_4297[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
@@ -1100,7 +1100,7 @@ SECTION_DATA static void* lit_4358[3] = {
 };
 
 /* 80BB3C18-80BB3C54 003C+00 s=1 e=0 z=0  None .data      l_func$4353                                                  */
-SECTION_DATA static u8 data_80BB3C18[60] = {
+SECTION_DATA static u8 l_func_4353[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1136,7 +1136,7 @@ SECTION_DATA static void* lit_4410[3] = {
 };
 
 /* 80BB3C84-80BB3CB4 0030+00 s=1 e=0 z=0  None .data      mode_proc$4406                                               */
-SECTION_DATA static u8 data_80BB3C84[48] = {
+SECTION_DATA static u8 mode_proc[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1171,7 +1171,7 @@ SECTION_DATA static void* lit_4736[3] = {
 };
 
 /* 80BB3CE4-80BB3D14 0030+00 s=1 e=0 z=0  None .data      l_eff_func$4732                                              */
-SECTION_DATA static u8 data_80BB3CE4[48] = {
+SECTION_DATA static u8 l_eff_func[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1650,7 +1650,7 @@ static u8 lit_4977[12];
 static u8 lit_4978[12];
 
 /* 80BB3F60-80BB3F90 0030+00 s=1 e=0 z=0  None .bss       dir_vec$4972                                                 */
-static u8 data_80BB3F60[48];
+static u8 dir_vec[48];
 
 /* 80BB09E0-80BB0DA8 03C8+00 s=1 e=0 z=0  None .text      mode_walk__9daObjBm_cFv                                      */
 #pragma push
@@ -2087,9 +2087,9 @@ extern "C" asm void __sinit_d_a_obj_bemos_cpp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BB35A8() {
+extern "C" asm static void __arraydtor_5103() {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/func_80BB35A8.s"
+#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__arraydtor_5103.s"
 }
 #pragma pop
 
@@ -2142,9 +2142,9 @@ asm dBgS_WtrChk::~dBgS_WtrChk() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BB3658() {
+extern "C" asm static void __arraydtor_5100() {
 	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/func_80BB3658.s"
+#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__arraydtor_5100.s"
 }
 #pragma pop
 

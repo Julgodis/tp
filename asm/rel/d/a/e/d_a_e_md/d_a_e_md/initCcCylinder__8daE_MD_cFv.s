@@ -10,8 +10,8 @@ lbl_80708DF8:
 /* 80708E18  7F E6 FB 78 */	mr r6, r31
 /* 80708E1C  4B 97 AA 44 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80708E20  38 7F 08 EC */	addi r3, r31, 0x8ec
-/* 80708E24  3C 80 80 71 */	lis r4, data_8070A4EC@ha
-/* 80708E28  38 84 A4 EC */	addi r4, r4, data_8070A4EC@l
+/* 80708E24  3C 80 80 71 */	lis r4, ccCylSrc@ha
+/* 80708E28  38 84 A4 EC */	addi r4, r4, ccCylSrc@l
 /* 80708E2C  4B 97 BA 88 */	b Set__8dCcD_CylFRC11dCcD_SrcCyl
 /* 80708E30  38 1F 08 B0 */	addi r0, r31, 0x8b0
 /* 80708E34  90 1F 09 30 */	stw r0, 0x930(r31)

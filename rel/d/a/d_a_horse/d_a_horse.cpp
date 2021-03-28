@@ -38,10 +38,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF7C */ void quatM(Quaternion const*);
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
 struct mDoExt_btpAnm {
@@ -65,13 +65,13 @@ struct mDoExt_3DlineMatSortPacket {
 	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -284,12 +284,6 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 808452E4 */ ~dBgS_AcchCir();
-};
-
 struct dBgS {
 	/* 80074B98 */ void GetExitId(cBgS_PolyInfo const&);
 	/* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
@@ -297,6 +291,12 @@ struct dBgS {
 	/* 80074CBC */ void GetSpecialCode(cBgS_PolyInfo const&);
 	/* 80074EF0 */ void GetGroundCode(cBgS_PolyInfo const&);
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 808452E4 */ ~dBgS_AcchCir();
 };
 
 struct dBgS_Acch {
@@ -1296,7 +1296,7 @@ SECTION_DATA static void* lit_10185[3] = {
 };
 
 /* 80845A30-80845A34 0004+00 s=1 e=0 z=0  None .data      reinLineColor$10541                                          */
-SECTION_DATA static u8 data_80845A30[4] = {
+SECTION_DATA static u8 reinLineColor[4] = {
 	0x00, 0x00, 0x00, 0xFF,
 };
 
@@ -1693,7 +1693,7 @@ SECTION_RODATA static u32 const lit_5889 = 0x461C4000;
 SECTION_RODATA static u32 const lit_5890 = 0x44C80000;
 
 /* 80845688-80845698 0010+00 s=1 e=0 z=0  None .rodata    footEffectRate$6303                                          */
-SECTION_RODATA static u8 const data_80845688[16] = {
+SECTION_RODATA static u8 const footEffectRate[16] = {
 	0x3E, 0x8A, 0x3D, 0x71, 0x3E, 0xCC, 0xCC, 0xCD, 0x3F, 0x66, 0x66, 0x66, 0x3E, 0x2E, 0x14, 0x7B,
 };
 
@@ -1800,7 +1800,7 @@ SECTION_RODATA static u32 const lit_7695 = 0xBF400000;
 SECTION_RODATA static u32 const lit_7696 = 0x3F400000;
 
 /* 80845724-80845730 000C+00 s=1 e=0 z=0  None .rodata    localHeadPos$7706                                            */
-SECTION_RODATA static u8 const data_80845724[12] = {
+SECTION_RODATA static u8 const localHeadPos[12] = {
 	0x41, 0xA0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -1853,12 +1853,12 @@ SECTION_RODATA static u32 const lit_8629 = 0x3A03126F;
 SECTION_RODATA static u32 const lit_8630 = 0x41A00000;
 
 /* 80845770-8084577C 000C+00 s=1 e=0 z=0  None .rodata    zeldaLocalLeft$8682                                          */
-SECTION_RODATA static u8 const data_80845770[12] = {
+SECTION_RODATA static u8 const zeldaLocalLeft[12] = {
 	0x40, 0x40, 0x00, 0x00, 0xBF, 0x00, 0x00, 0x00, 0xC0, 0xA0, 0x00, 0x00,
 };
 
 /* 8084577C-80845788 000C+00 s=1 e=0 z=0  None .rodata    zeldaLocalRight$8683                                         */
-SECTION_RODATA static u8 const data_8084577C[12] = {
+SECTION_RODATA static u8 const zeldaLocalRight[12] = {
 	0x40, 0x40, 0x00, 0x00, 0xBF, 0x00, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00,
 };
 
@@ -1905,14 +1905,14 @@ SECTION_RODATA static u32 const lit_9676 = 0x43AF0000;
 SECTION_RODATA static u32 const lit_9716 = 0x402CCCCD;
 
 /* 808457C0-808457F0 0030+00 s=1 e=0 z=0  None .rodata    stopFootEffectFrame$9720                                     */
-SECTION_RODATA static u8 const data_808457C0[48] = {
+SECTION_RODATA static u8 const stopFootEffectFrame[48] = {
 	0x41, 0x00, 0x00, 0x00, 0x41, 0x30, 0x00, 0x00, 0x41, 0xC0, 0x00, 0x00, 0x41, 0x30, 0x00, 0x00,
 	0x41, 0x60, 0x00, 0x00, 0x41, 0xD8, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00, 0x41, 0x00, 0x00, 0x00,
 	0x41, 0x90, 0x00, 0x00, 0x41, 0x00, 0x00, 0x00, 0x41, 0x50, 0x00, 0x00, 0x41, 0xB8, 0x00, 0x00,
 };
 
 /* 808457F0-80845820 0030+00 s=1 e=0 z=0  None .rodata    stopStandFootEffectFrame$9721                                */
-SECTION_RODATA static u8 const data_808457F0[48] = {
+SECTION_RODATA static u8 const stopStandFootEffectFrame[48] = {
 	0x40, 0xE0, 0x00, 0x00, 0x41, 0x40, 0x00, 0x00, 0x41, 0xC0, 0x00, 0x00, 0x41, 0x30, 0x00, 0x00,
 	0x41, 0x98, 0x00, 0x00, 0x41, 0xD0, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00, 0x41, 0x20, 0x00, 0x00,
 	0x41, 0x90, 0x00, 0x00, 0x40, 0xE0, 0x00, 0x00, 0x41, 0x90, 0x00, 0x00, 0x41, 0xD0, 0x00, 0x00,
@@ -2291,7 +2291,7 @@ static u8 l_backFootOffset[12];
 static u8 lit_7279[12 + 4 /* padding */];
 
 /* 80845C38-80845C44 000C+00 s=1 e=0 z=0  None .bss       localEyePos$7278                                             */
-static u8 data_80845C38[12];
+static u8 localEyePos[12];
 
 /* 8083D918-8083D9D8 00C0+00 s=2 e=0 z=0  None .text      setBodyPart__9daHorse_cFv                                    */
 #pragma push
@@ -2331,25 +2331,25 @@ asm void daHorse_c::setDashEffect(u32* param_0) {
 static u8 lit_7469[12 + 4 /* padding */];
 
 /* 80845C54-80845C60 000C+00 s=1 e=0 z=0  None .bss       runScale$7468                                                */
-static u8 data_80845C54[12];
+static u8 runScale[12];
 
 /* 80845C60-80845C70 000C+04 s=1 e=0 z=0  None .bss       @7473                                                        */
 static u8 lit_7473[12 + 4 /* padding */];
 
 /* 80845C70-80845C7C 000C+00 s=1 e=0 z=0  None .bss       landScale$7472                                               */
-static u8 data_80845C70[12];
+static u8 landScale[12];
 
 /* 80845C7C-80845C8C 000C+04 s=1 e=0 z=0  None .bss       @7477                                                        */
 static u8 lit_7477[12 + 4 /* padding */];
 
 /* 80845C8C-80845C98 000C+00 s=1 e=0 z=0  None .bss       grassRunScale$7476                                           */
-static u8 data_80845C8C[12];
+static u8 grassRunScale[12];
 
 /* 80845C98-80845CA8 000C+04 s=1 e=0 z=0  None .bss       @7481                                                        */
 static u8 lit_7481[12 + 4 /* padding */];
 
 /* 80845CA8-80845CB4 000C+00 s=1 e=0 z=0  None .bss       waterDirection$7480                                          */
-static u8 data_80845CA8[12];
+static u8 waterDirection[12];
 
 /* 8083DEEC-8083E4D8 05EC+00 s=1 e=0 z=0  None .text      setEffect__9daHorse_cFv                                      */
 #pragma push
@@ -2455,25 +2455,25 @@ asm void daHorse_c::footBgCheck() {
 static u8 lit_8516[12 + 4 /* padding */];
 
 /* 80845CC4-80845CD0 000C+00 s=1 e=0 z=0  None .bss       reinLeftStart$8515                                           */
-static u8 data_80845CC4[12];
+static u8 reinLeftStart[12];
 
 /* 80845CD0-80845CE0 000C+04 s=1 e=0 z=0  None .bss       @8520                                                        */
 static u8 lit_8520[12 + 4 /* padding */];
 
 /* 80845CE0-80845CEC 000C+00 s=1 e=0 z=0  None .bss       reinRightStart$8519                                          */
-static u8 data_80845CE0[12];
+static u8 reinRightStart[12];
 
 /* 80845CEC-80845CFC 000C+04 s=1 e=0 z=0  None .bss       @8524                                                        */
 static u8 lit_8524[12 + 4 /* padding */];
 
 /* 80845CFC-80845D08 000C+00 s=1 e=0 z=0  None .bss       localNeckLeft$8523                                           */
-static u8 data_80845CFC[12];
+static u8 localNeckLeft[12];
 
 /* 80845D08-80845D18 000C+04 s=1 e=0 z=0  None .bss       @8528                                                        */
 static u8 lit_8528[12 + 4 /* padding */];
 
 /* 80845D18-80845D24 000C+00 s=1 e=0 z=0  None .bss       localNeckRight$8527                                          */
-static u8 data_80845D18[12];
+static u8 localNeckRight[12];
 
 /* 8083F9AC-8083FDAC 0400+00 s=2 e=0 z=0  None .text      setReinPosMoveInit__9daHorse_cFi                             */
 #pragma push
@@ -2513,13 +2513,13 @@ asm void daHorse_c::setReinPosHandSubstance(int param_0) {
 static u8 lit_8753[12 + 4 /* padding */];
 
 /* 80845D34-80845D40 000C+00 s=1 e=0 z=0  None .bss       saddleLeft$8752                                              */
-static u8 data_80845D34[12];
+static u8 saddleLeft[12];
 
 /* 80845D40-80845D50 000C+04 s=1 e=0 z=0  None .bss       @8757                                                        */
 static u8 lit_8757[12 + 4 /* padding */];
 
 /* 80845D50-80845D5C 000C+00 s=1 e=0 z=0  None .bss       saddleRight$8756                                             */
-static u8 data_80845D50[12];
+static u8 saddleRight[12];
 
 /* 8084010C-808402F8 01EC+00 s=1 e=0 z=0  None .text      setReinPosNormalSubstance__9daHorse_cFv                      */
 #pragma push
@@ -2537,19 +2537,19 @@ asm void daHorse_c::setReinPosNormalSubstance() {
 static u8 lit_8813[12 + 4 /* padding */];
 
 /* 80845D6C-80845D78 000C+00 s=1 e=0 z=0  None .bss       localCenterPos$8812                                          */
-static u8 data_80845D6C[12];
+static u8 localCenterPos[12];
 
 /* 80845D78-80845D88 000C+04 s=1 e=0 z=0  None .bss       @8817                                                        */
 static u8 lit_8817[12 + 4 /* padding */];
 
 /* 80845D88-80845D94 000C+00 s=1 e=0 z=0  None .bss       localFrontPos$8816                                           */
-static u8 data_80845D88[12];
+static u8 localFrontPos[12];
 
 /* 80845D94-80845DA4 000C+04 s=1 e=0 z=0  None .bss       @8821                                                        */
 static u8 lit_8821[12 + 4 /* padding */];
 
 /* 80845DA4-80845DB0 000C+00 s=1 e=0 z=0  None .bss       localBackPos$8820                                            */
-static u8 data_80845DA4[12];
+static u8 localBackPos[12];
 
 /* 808402F8-80840714 041C+00 s=1 e=0 z=0  None .text      bgCheck__9daHorse_cFv                                        */
 #pragma push

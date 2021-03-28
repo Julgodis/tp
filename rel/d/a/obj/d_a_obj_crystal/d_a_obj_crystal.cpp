@@ -40,10 +40,10 @@ struct daObjCrystal_c {
 	/* 80BD67C8 */ void _delete();
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -191,17 +191,17 @@ asm void daObjCrystal_c::setBaseMtx() {
 SECTION_RODATA static u32 const lit_3693 = 0x3F800000;
 
 /* 80BD68C0-80BD68C8 0008+00 s=1 e=0 z=0  None .rodata    l_bmd$3697                                                   */
-SECTION_RODATA static u8 const data_80BD68C0[8] = {
+SECTION_RODATA static u8 const l_bmd[8] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x07,
 };
 
 /* 80BD68C8-80BD68D0 0008+00 s=1 e=0 z=0  None .rodata    l_diff_flag$3698                                             */
-SECTION_RODATA static u8 const data_80BD68C8[8] = {
+SECTION_RODATA static u8 const l_diff_flag[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00,
 };
 
 /* 80BD68D0-80BD68D8 0008+00 s=1 e=0 z=0  None .rodata    l_flag$3699                                                  */
-SECTION_RODATA static u8 const data_80BD68D0[8] = {
+SECTION_RODATA static u8 const l_flag[8] = {
 	0x19, 0x00, 0x00, 0x84, 0x11, 0x00, 0x00, 0x84,
 };
 

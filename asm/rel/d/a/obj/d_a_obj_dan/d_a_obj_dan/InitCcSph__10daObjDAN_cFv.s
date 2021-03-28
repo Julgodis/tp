@@ -10,8 +10,8 @@ lbl_80BDA5B4:
 /* 80BDA5D4  7F E6 FB 78 */	mr r6, r31
 /* 80BDA5D8  4B 4A 92 88 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80BDA5DC  38 7F 05 CC */	addi r3, r31, 0x5cc
-/* 80BDA5E0  3C 80 80 BE */	lis r4, data_80BDC3B4@ha
-/* 80BDA5E4  38 84 C3 B4 */	addi r4, r4, data_80BDC3B4@l
+/* 80BDA5E0  3C 80 80 BE */	lis r4, ccSphSrc@ha
+/* 80BDA5E4  38 84 C3 B4 */	addi r4, r4, ccSphSrc@l
 /* 80BDA5E8  4B 4A A4 4C */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80BDA5EC  38 1F 05 90 */	addi r0, r31, 0x590
 /* 80BDA5F0  90 1F 06 10 */	stw r0, 0x610(r31)

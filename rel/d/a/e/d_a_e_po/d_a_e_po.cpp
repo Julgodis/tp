@@ -24,9 +24,6 @@ struct mDoExt_morf_c {
 	/* 80757404 */ void isStop();
 };
 
-struct J3DModel {
-};
-
 struct Vec {
 };
 
@@ -46,24 +43,27 @@ struct cXyz {
 	/* 80757670 */ cXyz(cXyz const&);
 };
 
+struct J3DModel {
+};
+
 struct mDoExt_invisibleModel {
 	/* 8000E53C */ void create(J3DModel*, u8);
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -152,12 +152,12 @@ struct dPa_hermiteEcallBack_c {
 	/* 8004F6B8 */ void setOldPosP(cXyz const*, cXyz const*);
 };
 
+struct _GXColor {
+};
+
 struct csXyz {
 	/* 80756D8C */ csXyz();
 	/* 80757290 */ ~csXyz();
-};
-
-struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -832,12 +832,12 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80757AC4-80757ACC 0008+00 s=1 e=0 z=0  None .data      e_prim$3796                                                  */
-SECTION_DATA static u8 data_80757AC4[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 80757ACC-80757AD4 0008+00 s=1 e=0 z=0  None .data      e_env$3797                                                   */
-SECTION_DATA static u8 data_80757ACC[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
@@ -963,12 +963,12 @@ SECTION_DATA static void* lit_5903[16] = {
 };
 
 /* 80757C18-80757C1C 0004+00 s=1 e=0 z=0  None .data      holl_demo_eff_Dt$6023                                        */
-SECTION_DATA static u8 data_80757C18[4] = {
+SECTION_DATA static u8 holl_demo_eff_Dt[4] = {
 	0x86, 0x70, 0x86, 0x71,
 };
 
 /* 80757C1C-80757C24 0008+00 s=1 e=0 z=0  None .data      mKAngInit_dt$6091                                            */
-SECTION_DATA static u8 data_80757C1C[8] = {
+SECTION_DATA static u8 mKAngInit_dt[8] = {
 	0x00, 0x00, 0x80, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
@@ -1003,7 +1003,7 @@ SECTION_DATA u8 data_80757C78[4] = {
 };
 
 /* 80757C7C-80757CC0 0044+00 s=1 e=0 z=0  None .data      cc_cyl_src$7667                                              */
-SECTION_DATA static u8 data_80757C7C[68] = {
+SECTION_DATA static u8 cc_cyl_src[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x00,
@@ -1012,7 +1012,7 @@ SECTION_DATA static u8 data_80757C7C[68] = {
 };
 
 /* 80757CC0-80757D00 0040+00 s=1 e=0 z=0  None .data      at_sph_src$7668                                              */
-SECTION_DATA static u8 data_80757CC0[64] = {
+SECTION_DATA static u8 at_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x43, 0x00, 0x00, 0x00, 0x15, 0x09, 0x00, 0x01, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x00,
@@ -2080,7 +2080,7 @@ static u8 lit_6043[12];
 static u8 lit_6044[12];
 
 /* 80757F7C-80758054 00D8+00 s=1 e=0 z=0  None .bss       mKcenterInit_dt$6024                                         */
-static u8 data_80757F7C[216];
+static u8 mKcenterInit_dt[216];
 
 /* 80758054-80758064 000C+04 s=1 e=0 z=0  None .bss       @6046                                                        */
 static u8 lit_6046[12 + 4 /* padding */];
@@ -2137,7 +2137,7 @@ static u8 lit_6064[12];
 static u8 lit_6065[12];
 
 /* 80758130-80758208 00D8+00 s=1 e=0 z=0  None .bss       mKeyeInit_dt$6045                                            */
-static u8 data_80758130[216];
+static u8 mKeyeInit_dt[216];
 
 /* 80758208-80758218 000C+04 s=1 e=0 z=0  None .bss       @6067                                                        */
 static u8 lit_6067[12 + 4 /* padding */];
@@ -2206,7 +2206,7 @@ static u8 lit_6089[12];
 static u8 lit_6090[12];
 
 /* 80758314-8075841C 0108+00 s=1 e=0 z=0  None .bss       mKPosInit_dt$6066                                            */
-static u8 data_80758314[264];
+static u8 mKPosInit_dt[264];
 
 /* 80751408-807549C0 35B8+00 s=1 e=0 z=0  None .text      e_po_holl_demo__FP10e_po_class                               */
 #pragma push

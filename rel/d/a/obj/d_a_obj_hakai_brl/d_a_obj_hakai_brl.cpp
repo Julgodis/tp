@@ -33,13 +33,13 @@ struct daObjHBarrel_c {
 	/* 80C17090 */ void callEmt();
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -65,10 +65,10 @@ struct dPa_modelEcallBack {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -289,7 +289,7 @@ SECTION_RODATA static u32 const lit_3916 = 0x3F800000;
 SECTION_RODATA static u32 const lit_3917 = 0xBF800000;
 
 /* 80C17350-80C17358 0006+02 s=1 e=0 z=0  None .rodata    PARTICLE_NAME$3924                                           */
-SECTION_RODATA static u8 const data_80C17350[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const PARTICLE_NAME[6 + 2 /* padding */] = {
 	0x82, 0xAB, 0x82, 0xAC, 0x82, 0xAD,
 	/* padding */
 	0x00, 0x00,

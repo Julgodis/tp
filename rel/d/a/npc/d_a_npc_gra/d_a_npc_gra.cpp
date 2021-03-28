@@ -42,7 +42,7 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct Z2Creature {
@@ -51,10 +51,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -76,10 +76,10 @@ struct daTagGra_c {
 	/* 809C9D0C */ void getGraPos();
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daNpc_grA_c {
@@ -175,13 +175,16 @@ struct daNpcT_ActorMngr_c {
 	/* 80145708 */ void getActorP();
 };
 
-struct J3DAnmTransformKey {
-};
-
 struct _GXColorS10 {
 };
 
+struct J3DAnmTexPattern {
+};
+
 struct J3DAnmTextureSRTKey {
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct dCcD_SrcCyl {
@@ -189,9 +192,6 @@ struct dCcD_SrcCyl {
 
 struct dCcD_Cyl {
 	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-};
-
-struct J3DAnmTexPattern {
 };
 
 struct daNpcF_c {
@@ -291,11 +291,11 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct _GXColor {
 };
 
-struct _GXColor {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dPa_control_c {
@@ -307,14 +307,14 @@ struct dPa_control_c {
 	/* 8004D6A4 */ void setPoly(u32, u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
 };
 
+struct dBgS {
+};
+
 struct dBgS_AcchCir {
 	/* 80075EAC */ dBgS_AcchCir();
 	/* 80075F40 */ void SetWallR(f32);
 	/* 80075F58 */ void SetWall(f32, f32);
 	/* 809C98F8 */ ~dBgS_AcchCir();
-};
-
-struct dBgS {
 };
 
 struct dBgS_Acch {
@@ -1654,7 +1654,7 @@ SECTION_RODATA static u32 const lit_6363 = 0x40000000;
 SECTION_RODATA static u32 const lit_6364 = 0x40400000;
 
 /* 809CA42C-809CA434 0006+02 s=1 e=0 z=0  None .rodata    l_prticles_id$6368                                           */
-SECTION_RODATA static u8 const data_809CA42C[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const l_prticles_id[6 + 2 /* padding */] = {
 	0x83, 0xB5, 0x83, 0xB6, 0x83, 0xB7,
 	/* padding */
 	0x00, 0x00,
@@ -3133,7 +3133,7 @@ static u8 l_HIO[4];
 static u8 lit_5080[12 + 4 /* padding */];
 
 /* 809CB358-809CB364 000C+00 s=1 e=0 z=0  None .bss       eyeOffset$5079                                               */
-static u8 data_809CB358[12];
+static u8 eyeOffset[12];
 
 /* 809C02A0-809C0948 06A8+00 s=1 e=0 z=0  None .text      setAttnPos__11daNpc_grA_cFv                                  */
 #pragma push

@@ -134,8 +134,8 @@ lbl_8023C7BC:
 /* 8023C7C4  7C 64 1B 79 */	or. r4, r3, r3
 /* 8023C7C8  41 82 00 2C */	beq lbl_8023C7F4
 /* 8023C7CC  80 9E 00 04 */	lwz r4, 4(r30)
-/* 8023C7D0  3C A0 80 3C */	lis r5, data_803C0DB0@ha
-/* 8023C7D4  38 05 0D B0 */	addi r0, r5, data_803C0DB0@l
+/* 8023C7D0  3C A0 80 3C */	lis r5, t_tag@ha
+/* 8023C7D4  38 05 0D B0 */	addi r0, r5, t_tag@l
 /* 8023C7D8  7C C0 E2 14 */	add r6, r0, r28
 /* 8023C7DC  80 A6 00 00 */	lwz r5, 0(r6)
 /* 8023C7E0  80 C6 00 04 */	lwz r6, 4(r6)

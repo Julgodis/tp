@@ -1,4 +1,5 @@
 import libdemangle
+import re
 
 from collections import defaultdict
 
@@ -117,9 +118,19 @@ def type_from_demangled_param(param):
 
     return type
 
+dollar_re = re.compile(r'(\w+)\$([0-9]+)')
 
-def nameFix(context, label_collisions, reference_collisions, symbol):
+def nameFix(context, label_collisions, reference_collisions, dollar_names, symbol):
     util.escape_name(symbol.identifier)
+
+    if symbol.identifier.name and not symbol.identifier.override_name:
+        match = dollar_re.fullmatch(symbol.identifier.name)
+        if match and symbol.is_static:
+            if dollar_names[match.group(1)] == 1:
+                symbol.identifier.override_name = match.group(1)
+            else:
+                symbol.identifier.override_name = f"{match.group(1)}_{match.group(2)}"
+
 
     if (symbol.identifier.name and
             (not "@" in symbol.identifier.name) and isinstance(symbol, Function)):
@@ -192,10 +203,21 @@ def execute(context, libraries):
 
     for lib in libraries:
         for tu in lib.translation_units.values():
+            dollar_names = defaultdict(int)
+            for sec in tu.sections.values():
+                for symbol in sec.symbols:
+                    if not symbol.identifier.name:
+                        continue
+                    match = dollar_re.fullmatch(symbol.identifier.name)
+                    if not match:
+                        continue
+                    dollar_names[match.group(1)] += 1
+
+
             for sec in tu.sections.values():
                 for symbol in sec.symbols:
                     nameFix(context, label_collisions,
-                            reference_collisions, symbol)
+                            reference_collisions, dollar_names, symbol)
 
     for lib in libraries:
         for tu in lib.translation_units.values():

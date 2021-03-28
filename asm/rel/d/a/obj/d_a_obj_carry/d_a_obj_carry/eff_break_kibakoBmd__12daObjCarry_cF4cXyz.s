@@ -56,8 +56,8 @@ lbl_8047731C:
 /* 804773F4  4B BD 38 0C */	b setModel__18dPa_modelEcallBackFP14JPABaseEmitterP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc
 /* 804773F8  3B 40 00 00 */	li r26, 0
 /* 804773FC  3B A0 00 00 */	li r29, 0
-/* 80477400  3C 60 80 48 */	lis r3, data_8047A49C@ha
-/* 80477404  3B 63 A4 9C */	addi r27, r3, data_8047A49C@l
+/* 80477400  3C 60 80 48 */	lis r3, particle_id_7795@ha
+/* 80477404  3B 63 A4 9C */	addi r27, r3, particle_id_7795@l
 /* 80477408  3C 60 80 48 */	lis r3, lit_4685@ha
 /* 8047740C  3B 83 A3 CC */	addi r28, r3, lit_4685@l
 lbl_80477410:

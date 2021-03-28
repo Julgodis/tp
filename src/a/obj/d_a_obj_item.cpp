@@ -140,10 +140,10 @@ struct dSv_info_c {
 	/* 80035590 */ void isItem(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -632,7 +632,7 @@ SECTION_DATA static void* lit_4680[3] = {
 };
 
 /* 803B9DC4-803B9DDC 0018+00 s=1 e=0 z=0  None .data      mode_proc$4678                                               */
-SECTION_DATA static u8 data_803B9DC4[24] = {
+SECTION_DATA static u8 mode_proc[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };

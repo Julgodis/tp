@@ -74,10 +74,10 @@ struct dPa_control_c {
 	/* 8004C218 */ void setHitMark(u16, fopAc_ac_c*, cXyz const*, csXyz const*, cXyz const*, u32);
 };
 
-struct J3DModel {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DModel {
 };
 
 struct dComIfG_play_c {
@@ -404,7 +404,7 @@ extern "C" void __register_global_object(); // 1
 SECTION_RODATA static u32 const lit_3770 = 0x3F800000;
 
 /* 8068552C-80685570 0044+00 s=1 e=0 z=0  None .data      cc_cyl_src$4798                                              */
-SECTION_DATA static u8 data_8068552C[68] = {
+SECTION_DATA static u8 cc_cyl_src[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x41, 0x00, 0x22, 0x00, 0x00, 0x00, 0x23, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -413,7 +413,7 @@ SECTION_DATA static u8 data_8068552C[68] = {
 };
 
 /* 80685570-806855B0 0040+00 s=1 e=0 z=0  None .data      at_sph_src$4799                                              */
-SECTION_DATA static u8 data_80685570[64] = {
+SECTION_DATA static u8 at_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0C, 0x00,
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -786,7 +786,7 @@ SECTION_RODATA static u32 const lit_4681 = 0x3EB33333;
 static u8 lit_4455[12 + 4 /* padding */];
 
 /* 806856A8-806856B4 000C+00 s=1 e=0 z=0  None .bss       non$4454                                                     */
-static u8 data_806856A8[12];
+static u8 non[12];
 
 /* 80684248-80684A94 084C+00 s=1 e=0 z=0  None .text      bee_control__FP11e_bee_class                                 */
 #pragma push
@@ -818,12 +818,12 @@ static bool daE_Bee_IsDelete(e_bee_class* param_0) {
 
 /* ############################################################################################## */
 /* 806854F8-80685508 0010+00 s=1 e=0 z=0  None .rodata    l_bmdidx$4715                                                */
-SECTION_RODATA static u8 const data_806854F8[16] = {
+SECTION_RODATA static u8 const l_bmdidx_4715[16] = {
 	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x06,
 };
 
 /* 80685508-80685518 0010+00 s=1 e=0 z=0  None .rodata    l_bmdidx$4800                                                */
-SECTION_RODATA static u8 const data_80685508[16] = {
+SECTION_RODATA static u8 const l_bmdidx_4800[16] = {
 	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x06,
 };
 

@@ -18,8 +18,8 @@ lbl_80736310:
 /* 80736350  3B 80 00 00 */	li r28, 0
 /* 80736354  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80736358  3B 23 61 C0 */	addi r25, r3, g_dComIfG_gameInfo@l
-/* 8073635C  3C 60 80 74 */	lis r3, data_80739F00@ha
-/* 80736360  3B 43 9F 00 */	addi r26, r3, data_80739F00@l
+/* 8073635C  3C 60 80 74 */	lis r3, enemyBombID@ha
+/* 80736360  3B 43 9F 00 */	addi r26, r3, enemyBombID@l
 /* 80736364  3C 60 80 74 */	lis r3, lit_3823@ha
 /* 80736368  3B 63 9D 78 */	addi r27, r3, lit_3823@l
 lbl_8073636C:

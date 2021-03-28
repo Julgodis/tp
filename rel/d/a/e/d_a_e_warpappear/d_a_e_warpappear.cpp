@@ -18,10 +18,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -91,13 +91,13 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
-};
-
 struct _GXColor {
 };
 
 struct dKy_tevstr_c {
+};
+
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -894,7 +894,7 @@ SECTION_DEAD char const* const stringBase_807D2288 = "Kytag04";
 #pragma pop
 
 /* 807D2290-807D22B8 0028+00 s=1 e=0 z=0  None .data      w_id$4228                                                    */
-SECTION_DATA static u8 data_807D2290[40] = {
+SECTION_DATA static u8 w_id[40] = {
 	0x85, 0x0D, 0x85, 0x0E, 0x85, 0x0F, 0x85, 0x10, 0x85, 0x11, 0x85, 0x12, 0x85, 0x13, 0x85, 0x14,
 	0x85, 0x15, 0x85, 0x16, 0x85, 0x17, 0x85, 0x18, 0x85, 0x19, 0x85, 0x1A, 0x85, 0x1B, 0x85, 0x1C,
 	0x85, 0x1D, 0x85, 0x1E, 0x85, 0x1F, 0x85, 0x20,

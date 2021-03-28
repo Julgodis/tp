@@ -5,8 +5,8 @@ lbl_801C55D8:
 /* 801C55E4  39 61 00 50 */	addi r11, r1, 0x50
 /* 801C55E8  48 19 CB C9 */	bl _savegpr_18
 /* 801C55EC  7C 7F 1B 78 */	mr r31, r3
-/* 801C55F0  3C 60 80 39 */	lis r3, data_80395D90@ha
-/* 801C55F4  3B C3 5D 90 */	addi r30, r3, data_80395D90@l
+/* 801C55F0  3C 60 80 39 */	lis r3, fish_n@ha
+/* 801C55F4  3B C3 5D 90 */	addi r30, r3, fish_n@l
 /* 801C55F8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801C55FC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 801C5600  80 63 5D 30 */	lwz r3, 0x5d30(r3)

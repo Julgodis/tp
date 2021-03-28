@@ -41,6 +41,9 @@ struct dStage_roomControl_c {
 	/* 800244E8 */ void checkRoomDisp(int) const;
 };
 
+struct J3DModelData {
+};
+
 struct Vec {
 };
 
@@ -52,9 +55,6 @@ struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -72,21 +72,21 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct dJntColData_c {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct dJntColData_c {
 };
 
 struct dJntCol_c {
@@ -252,7 +252,7 @@ extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__12daE_SG_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_e_sg_cpp(); // 1
-extern "C" static void func_8078DD44(); // 1
+extern "C" static void __arraydtor(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
 extern "C" static void func_8078DD80(); // 1
 extern "C" static void func_8078DD88(); // 1
@@ -513,7 +513,7 @@ SECTION_DATA static void* lit_4810[11] = {
 };
 
 /* 8078DF9C-8078DFA4 0008+00 s=1 e=0 z=0  None .data      w_eff_id$4852                                                */
-SECTION_DATA static u8 data_8078DF9C[8] = {
+SECTION_DATA static u8 w_eff_id[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
@@ -530,7 +530,7 @@ SECTION_DATA static void* jc_data[3] = {
 };
 
 /* 8078DFBC-8078DFFC 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$5023                                              */
-SECTION_DATA static u8 data_8078DFBC[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x0B, 0x00, 0x0C, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -1054,7 +1054,7 @@ SECTION_RODATA static u32 const lit_4969 = 0x469C4000;
 static u8 lit_4849[12 + 4 /* padding */];
 
 /* 8078E1D4-8078E1E0 000C+00 s=1 e=0 z=0  None .bss       sc$4848                                                      */
-static u8 data_8078E1D4[12];
+static u8 sc[12];
 
 /* 8078CF34-8078D5F4 06C0+00 s=2 e=0 z=0  None .text      daE_SG_Execute__FP10e_sg_class                               */
 #pragma push
@@ -1188,9 +1188,9 @@ extern "C" asm void __sinit_d_a_e_sg_cpp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_8078DD44() {
+extern "C" asm static void __arraydtor() {
 	nofralloc
-#include "asm/rel/d/a/e/d_a_e_sg/d_a_e_sg/func_8078DD44.s"
+#include "asm/rel/d/a/e/d_a_e_sg/d_a_e_sg/__arraydtor.s"
 }
 #pragma pop
 

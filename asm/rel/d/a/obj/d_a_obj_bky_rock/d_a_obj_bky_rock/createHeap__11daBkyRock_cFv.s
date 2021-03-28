@@ -14,8 +14,8 @@ lbl_80BB6FD4:
 /* 80BB7004  3F E3 00 02 */	addis r31, r3, 2
 /* 80BB7008  3B FF C2 F8 */	addi r31, r31, -15624
 /* 80BB700C  1C 9A 00 0C */	mulli r4, r26, 0xc
-/* 80BB7010  3C 60 80 BB */	lis r3, data_80BB7F24@ha
-/* 80BB7014  38 03 7F 24 */	addi r0, r3, data_80BB7F24@l
+/* 80BB7010  3C 60 80 BB */	lis r3, BMD_IDX@ha
+/* 80BB7014  38 03 7F 24 */	addi r0, r3, BMD_IDX@l
 /* 80BB7018  7F 20 22 14 */	add r25, r0, r4
 /* 80BB701C  3C 60 80 BC */	lis r3, l_arcName@ha
 /* 80BB7020  3B 63 80 3C */	addi r27, r3, l_arcName@l

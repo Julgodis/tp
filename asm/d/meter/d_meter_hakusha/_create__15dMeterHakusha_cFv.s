@@ -8,8 +8,8 @@ lbl_8020C400:
 /* 8020C418  3B 60 00 00 */	li r27, 0
 /* 8020C41C  3B C0 00 00 */	li r30, 0
 /* 8020C420  3B A0 00 00 */	li r29, 0
-/* 8020C424  3C 60 80 3C */	lis r3, data_803BF288@ha
-/* 8020C428  3B 83 F2 88 */	addi r28, r3, data_803BF288@l
+/* 8020C424  3C 60 80 3C */	lis r3, haku_tag@ha
+/* 8020C428  3B 83 F2 88 */	addi r28, r3, haku_tag@l
 lbl_8020C42C:
 /* 8020C42C  38 60 00 6C */	li r3, 0x6c
 /* 8020C430  48 0C 28 1D */	bl __nw__FUl

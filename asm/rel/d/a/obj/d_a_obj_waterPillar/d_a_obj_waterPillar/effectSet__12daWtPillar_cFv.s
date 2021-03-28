@@ -43,8 +43,8 @@ lbl_80D2CF98:
 /* 80D2D03C  3B 80 00 00 */	li r28, 0
 /* 80D2D040  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80D2D044  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 80D2D048  3C 60 80 D3 */	lis r3, data_80D2EA04@ha
-/* 80D2D04C  3B 43 EA 04 */	addi r26, r3, data_80D2EA04@l
+/* 80D2D048  3C 60 80 D3 */	lis r3, l_eff@ha
+/* 80D2D04C  3B 43 EA 04 */	addi r26, r3, l_eff@l
 /* 80D2D050  3C 60 80 D3 */	lis r3, lit_3645@ha
 /* 80D2D054  3B 63 E7 70 */	addi r27, r3, lit_3645@l
 lbl_80D2D058:
@@ -89,8 +89,8 @@ lbl_80D2D058:
 /* 80D2D0F0  90 81 00 1C */	stw r4, 0x1c(r1)
 /* 80D2D0F4  80 9E 0B 54 */	lwz r4, 0xb54(r30)
 /* 80D2D0F8  38 A0 00 00 */	li r5, 0
-/* 80D2D0FC  3C C0 80 D3 */	lis r6, data_80D2EA04@ha
-/* 80D2D100  38 C6 EA 04 */	addi r6, r6, data_80D2EA04@l
+/* 80D2D0FC  3C C0 80 D3 */	lis r6, l_eff@ha
+/* 80D2D100  38 C6 EA 04 */	addi r6, r6, l_eff@l
 /* 80D2D104  A0 C6 00 06 */	lhz r6, 6(r6)
 /* 80D2D108  38 FE 0B 6C */	addi r7, r30, 0xb6c
 /* 80D2D10C  39 00 00 00 */	li r8, 0
@@ -116,8 +116,8 @@ lbl_80D2D128:
 /* 80D2D158  90 81 00 1C */	stw r4, 0x1c(r1)
 /* 80D2D15C  80 9E 0B 58 */	lwz r4, 0xb58(r30)
 /* 80D2D160  38 A0 00 00 */	li r5, 0
-/* 80D2D164  3C C0 80 D3 */	lis r6, data_80D2EA04@ha
-/* 80D2D168  38 C6 EA 04 */	addi r6, r6, data_80D2EA04@l
+/* 80D2D164  3C C0 80 D3 */	lis r6, l_eff@ha
+/* 80D2D168  38 C6 EA 04 */	addi r6, r6, l_eff@l
 /* 80D2D16C  A0 C6 00 08 */	lhz r6, 8(r6)
 /* 80D2D170  38 FE 04 D0 */	addi r7, r30, 0x4d0
 /* 80D2D174  39 00 00 00 */	li r8, 0
@@ -143,8 +143,8 @@ lbl_80D2D190:
 /* 80D2D1C0  90 81 00 1C */	stw r4, 0x1c(r1)
 /* 80D2D1C4  80 9E 0B 5C */	lwz r4, 0xb5c(r30)
 /* 80D2D1C8  38 A0 00 00 */	li r5, 0
-/* 80D2D1CC  3C C0 80 D3 */	lis r6, data_80D2EA04@ha
-/* 80D2D1D0  38 C6 EA 04 */	addi r6, r6, data_80D2EA04@l
+/* 80D2D1CC  3C C0 80 D3 */	lis r6, l_eff@ha
+/* 80D2D1D0  38 C6 EA 04 */	addi r6, r6, l_eff@l
 /* 80D2D1D4  A0 C6 00 0A */	lhz r6, 0xa(r6)
 /* 80D2D1D8  38 FE 04 D0 */	addi r7, r30, 0x4d0
 /* 80D2D1DC  39 00 00 00 */	li r8, 0
@@ -170,8 +170,8 @@ lbl_80D2D1F8:
 /* 80D2D228  90 81 00 1C */	stw r4, 0x1c(r1)
 /* 80D2D22C  80 9E 0B 60 */	lwz r4, 0xb60(r30)
 /* 80D2D230  38 A0 00 00 */	li r5, 0
-/* 80D2D234  3C C0 80 D3 */	lis r6, data_80D2EA04@ha
-/* 80D2D238  38 C6 EA 04 */	addi r6, r6, data_80D2EA04@l
+/* 80D2D234  3C C0 80 D3 */	lis r6, l_eff@ha
+/* 80D2D238  38 C6 EA 04 */	addi r6, r6, l_eff@l
 /* 80D2D23C  A0 C6 00 0C */	lhz r6, 0xc(r6)
 /* 80D2D240  38 FE 0B 6C */	addi r7, r30, 0xb6c
 /* 80D2D244  39 00 00 00 */	li r8, 0

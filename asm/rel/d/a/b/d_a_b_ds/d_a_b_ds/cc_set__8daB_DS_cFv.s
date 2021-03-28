@@ -127,8 +127,8 @@ lbl_805D9684:
 /* 805D970C  3B 00 00 00 */	li r24, 0
 /* 805D9710  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 805D9714  3A C3 D4 70 */	addi r22, r3, now__14mDoMtx_stack_c@l
-/* 805D9718  3C 60 80 5E */	lis r3, data_805DD924@ha
-/* 805D971C  3A E3 D9 24 */	addi r23, r3, data_805DD924@l
+/* 805D9718  3C 60 80 5E */	lis r3, head_setRdt@ha
+/* 805D971C  3A E3 D9 24 */	addi r23, r3, head_setRdt@l
 lbl_805D9720:
 /* 805D9720  38 7D 07 84 */	addi r3, r29, 0x784
 /* 805D9724  7C 63 C2 14 */	add r3, r3, r24

@@ -103,8 +103,8 @@ lbl_80604F1C:
 /* 80604FE0  7F C6 F3 78 */	mr r6, r30
 /* 80604FE4  4B A7 E8 7C */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80604FE8  38 7E 0B 68 */	addi r3, r30, 0xb68
-/* 80604FEC  3C 80 80 60 */	lis r4, data_80605514@ha
-/* 80604FF0  38 84 55 14 */	addi r4, r4, data_80605514@l
+/* 80604FEC  3C 80 80 60 */	lis r4, cc_cyl_src@ha
+/* 80604FF0  38 84 55 14 */	addi r4, r4, cc_cyl_src@l
 /* 80604FF4  4B A7 F8 C0 */	b Set__8dCcD_CylFRC11dCcD_SrcCyl
 /* 80604FF8  38 1E 08 BC */	addi r0, r30, 0x8bc
 /* 80604FFC  90 1E 0B AC */	stw r0, 0xbac(r30)

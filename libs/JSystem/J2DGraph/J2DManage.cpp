@@ -84,7 +84,7 @@ asm void J2DResReference::getResReference(u16 param_0) const {
 
 /* ############################################################################################## */
 /* 804349C0-80434AC8 0101+07 s=1 e=0 z=0  None .bss       p_name$494                                                   */
-static u8 data_804349C0[257 + 7 /* padding */];
+static u8 p_name[257 + 7 /* padding */];
 
 /* 8030CF44-8030D098 0154+00 s=0 e=2 z=0  None .text      getName__15J2DResReferenceCFUs                               */
 #pragma push

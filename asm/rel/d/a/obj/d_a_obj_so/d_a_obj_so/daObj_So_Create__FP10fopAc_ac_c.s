@@ -221,8 +221,8 @@ lbl_80CE352C:
 /* 80CE35C8  4B 3A 02 98 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80CE35CC  3A E0 00 00 */	li r23, 0
 /* 80CE35D0  3B 60 00 00 */	li r27, 0
-/* 80CE35D4  3C 60 80 CE */	lis r3, data_80CE3B78@ha
-/* 80CE35D8  3B 23 3B 78 */	addi r25, r3, data_80CE3B78@l
+/* 80CE35D4  3C 60 80 CE */	lis r3, cc_cyl_src@ha
+/* 80CE35D8  3B 23 3B 78 */	addi r25, r3, cc_cyl_src@l
 /* 80CE35DC  3B 5F 10 58 */	addi r26, r31, 0x1058
 lbl_80CE35E0:
 /* 80CE35E0  7F 1F DA 14 */	add r24, r31, r27

@@ -7,7 +7,7 @@ lbl_802CDDC8:
 /* 802CDDDC  90 09 80 00 */	stw r0, -0x8000(r9)
 /* 802CDDE0  99 49 80 00 */	stb r10, -0x8000(r9)
 /* 802CDDE4  54 C8 82 1E */	rlwinm r8, r6, 0x10, 8, 0xf
-/* 802CDDE8  38 CD 83 28 */	la r6, data_804508A8(r13) /* 804508A8-_SDA_BASE_ */
+/* 802CDDE8  38 CD 83 28 */	la r6, cm2hw(r13) /* 804508A8-_SDA_BASE_ */
 /* 802CDDEC  7C 06 38 AE */	lbzx r0, r6, r7
 /* 802CDDF0  54 06 70 22 */	slwi r6, r0, 0xe
 /* 802CDDF4  54 A5 06 3E */	clrlwi r5, r5, 0x18

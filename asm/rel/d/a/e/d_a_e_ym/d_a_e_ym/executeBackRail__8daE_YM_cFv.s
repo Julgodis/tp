@@ -169,8 +169,8 @@ lbl_808108C0:
 /* 808108F4  38 7E 06 DC */	addi r3, r30, 0x6dc
 /* 808108F8  88 1E 06 A5 */	lbz r0, 0x6a5(r30)
 /* 808108FC  54 00 10 3A */	slwi r0, r0, 2
-/* 80810900  3C 80 80 81 */	lis r4, data_80815BD0@ha
-/* 80810904  38 84 5B D0 */	addi r4, r4, data_80815BD0@l
+/* 80810900  3C 80 80 81 */	lis r4, YM_DIG_POS_Y@ha
+/* 80810904  38 84 5B D0 */	addi r4, r4, YM_DIG_POS_Y@l
 /* 80810908  7C 24 04 2E */	lfsx f1, r4, r0
 /* 8081090C  C0 5F 00 38 */	lfs f2, 0x38(r31)
 /* 80810910  4B A5 FE 30 */	b cLib_chaseF__FPfff

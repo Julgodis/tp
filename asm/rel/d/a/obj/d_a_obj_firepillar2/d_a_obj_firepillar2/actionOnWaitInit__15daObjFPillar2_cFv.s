@@ -13,8 +13,8 @@ lbl_80BEA98C:
 /* 80BEA9B8  3B A0 00 00 */	li r29, 0
 /* 80BEA9BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80BEA9C0  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
-/* 80BEA9C4  3C 60 80 BF */	lis r3, data_80BEB5F8@ha
-/* 80BEA9C8  3B 83 B5 F8 */	addi r28, r3, data_80BEB5F8@l
+/* 80BEA9C4  3C 60 80 BF */	lis r3, l_pipe_fire_id@ha
+/* 80BEA9C8  3B 83 B5 F8 */	addi r28, r3, l_pipe_fire_id@l
 /* 80BEA9CC  3C 60 80 BF */	lis r3, lit_3656@ha
 /* 80BEA9D0  3B 63 B4 C4 */	addi r27, r3, lit_3656@l
 lbl_80BEA9D4:
@@ -51,8 +51,8 @@ lbl_80BEAA3C:
 /* 80BEAA48  3B C0 00 00 */	li r30, 0
 /* 80BEAA4C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80BEAA50  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
-/* 80BEAA54  3C 60 80 BF */	lis r3, data_80BEB600@ha
-/* 80BEAA58  3B 83 B6 00 */	addi r28, r3, data_80BEB600@l
+/* 80BEAA54  3C 60 80 BF */	lis r3, l_yogan_foot_id@ha
+/* 80BEAA58  3B 83 B6 00 */	addi r28, r3, l_yogan_foot_id@l
 /* 80BEAA5C  3C 60 80 BF */	lis r3, lit_3656@ha
 /* 80BEAA60  3B A3 B4 C4 */	addi r29, r3, lit_3656@l
 lbl_80BEAA64:

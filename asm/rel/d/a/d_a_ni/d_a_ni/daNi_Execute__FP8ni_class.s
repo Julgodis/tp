@@ -272,8 +272,8 @@ lbl_809507A0:
 /* 809507D8  3B 80 00 00 */	li r28, 0
 /* 809507DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 809507E0  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
-/* 809507E4  3C 60 80 95 */	lis r3, data_8095143C@ha
-/* 809507E8  3B 63 14 3C */	addi r27, r3, data_8095143C@l
+/* 809507E4  3C 60 80 95 */	lis r3, key_eno@ha
+/* 809507E8  3B 63 14 3C */	addi r27, r3, key_eno@l
 lbl_809507EC:
 /* 809507EC  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 809507F0  38 00 00 FF */	li r0, 0xff

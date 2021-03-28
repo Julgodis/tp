@@ -121,28 +121,16 @@ struct dStage_startStage_c {
 	/* 8002419C */ void set(char const*, s8, s16, s8);
 };
 
-struct dStage_dPath_c {
-};
-
-struct dStage_DMap_c {
-};
-
-struct dStage_SoundInfo_c {
-};
-
-struct dStage_MemoryConfig_c {
+struct dStage_dPnt_c {
 };
 
 struct dStage_FileList_dt_c {
 };
 
-struct dStage_Elst_c {
-};
-
 struct dStage_FloorInfo_c {
 };
 
-struct dStage_MapEventInfo_c {
+struct dStage_DMap_c {
 };
 
 struct dStage_Multi_c {
@@ -151,13 +139,25 @@ struct dStage_Multi_c {
 struct dStage_MemoryMap_c {
 };
 
-struct dStage_FileList2_dt_c {
+struct dStage_dPath_c {
 };
 
 struct dStage_Lbnk_c {
 };
 
-struct dStage_dPnt_c {
+struct dStage_FileList2_dt_c {
+};
+
+struct dStage_Elst_c {
+};
+
+struct dStage_SoundInfo_c {
+};
+
+struct dStage_MapEventInfo_c {
+};
+
+struct dStage_MemoryConfig_c {
 };
 
 struct dStage_stageDt_c {
@@ -842,7 +842,7 @@ extern "C" void setMapPath__16dStage_stageDt_cFPv(); // 1
 extern "C" bool getMapPath__16dStage_stageDt_cFv(); // 1
 extern "C" void setElst__16dStage_stageDt_cFP13dStage_Elst_c(); // 1
 extern "C" void __sinit_d_stage_cpp(); // 1
-extern "C" static void func_80028328(); // 1
+extern "C" static void __arraydtor(); // 1
 extern "C" void __dt__19dStage_roomStatus_cFv(); // 1
 extern "C" void __ct__19dStage_roomStatus_cFv(); // 1
 extern "C" void __dt__19dStage_KeepDoorInfoFv(); // 1
@@ -1178,7 +1178,7 @@ static u8 lit_5376[12];
 u8 mStatus__20dStage_roomControl_c[65792];
 
 /* 80450D58-80450D60 0008+00 s=1 e=0 z=0  None .sbss      tmp_name$4456                                                */
-static u8 data_80450D58[8];
+static u8 tmp_name[8];
 
 /* 80450D60-80450D64 0004+00 s=1 e=3 z=1  None .sbss      mProcID__20dStage_roomControl_c                              */
 u8 mProcID__20dStage_roomControl_c[4];
@@ -1918,7 +1918,7 @@ SECTION_DATA static u8 l_objectName[10932] = {
 };
 
 /* 803A65CC-803A65FC 0030+00 s=1 e=0 z=0  None .data      l_roomFuncTable$5052                                         */
-SECTION_DATA static void* data_803A65CC[12] = {
+SECTION_DATA static void* l_roomFuncTable[12] = {
 	(void*)0x54524553,
 	(void*)NULL,
 	(void*)dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv,
@@ -1934,7 +1934,7 @@ SECTION_DATA static void* data_803A65CC[12] = {
 };
 
 /* 803A65FC-803A6620 0024+00 s=1 e=0 z=0  None .data      l_layerFuncTable$5053                                        */
-SECTION_DATA static void* data_803A65FC[9] = {
+SECTION_DATA static void* l_layerFuncTable_5053[9] = {
 	(void*)0x54524530,
 	(void*)NULL,
 	(void*)dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv,
@@ -1947,7 +1947,7 @@ SECTION_DATA static void* data_803A65FC[9] = {
 };
 
 /* 803A6620-803A6638 0018+00 s=1 e=0 z=0  None .data      l_layerFuncTable$5131                                        */
-SECTION_DATA static void* data_803A6620[6] = {
+SECTION_DATA static void* l_layerFuncTable_5131[6] = {
 	(void*)0x4D454D30,
 	(void*)NULL,
 	(void*)dStage_memaInfoInit__FP11dStage_dt_cPviPv,
@@ -1957,21 +1957,21 @@ SECTION_DATA static void* data_803A6620[6] = {
 };
 
 /* 803A6638-803A6644 000C+00 s=1 e=0 z=0  None .data      l_funcTable$5136                                             */
-SECTION_DATA static void* data_803A6638[3] = {
+SECTION_DATA static void* l_funcTable_5136[3] = {
 	(void*)0x53544147,
 	(void*)NULL,
 	(void*)dStage_stagInfoInit__FP11dStage_dt_cPviPv,
 };
 
 /* 803A6644-803A6650 000C+00 s=1 e=0 z=0  None .data      l_layerFuncTableA$5141                                       */
-SECTION_DATA static void* data_803A6644[3] = {
+SECTION_DATA static void* l_layerFuncTableA[3] = {
 	(void*)0x534F4E30,
 	(void*)NULL,
 	(void*)dStage_soundInfoInit__FP11dStage_dt_cPviPv,
 };
 
 /* 803A6650-803A668C 003C+00 s=1 e=0 z=0  None .data      l_envLayerFuncTable$5142                                     */
-SECTION_DATA static void* data_803A6650[15] = {
+SECTION_DATA static void* l_envLayerFuncTable[15] = {
 	(void*)0x4C475430,
 	(void*)NULL,
 	(void*)dStage_lgtvInfoInit__FP11dStage_dt_cPviPv,
@@ -1990,7 +1990,7 @@ SECTION_DATA static void* data_803A6650[15] = {
 };
 
 /* 803A668C-803A66BC 0030+00 s=1 e=0 z=0  None .data      l_layerFuncTable$5158                                        */
-SECTION_DATA static void* data_803A668C[12] = {
+SECTION_DATA static void* l_layerFuncTable_5158[12] = {
 	(void*)0x446F6F30,
 	(void*)NULL,
 	(void*)dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv,
@@ -2006,7 +2006,7 @@ SECTION_DATA static void* data_803A668C[12] = {
 };
 
 /* 803A66BC-803A67F4 0138+00 s=1 e=0 z=0  None .data      l_funcTable$5163                                             */
-SECTION_DATA static void* data_803A66BC[78] = {
+SECTION_DATA static void* l_funcTable_5163[78] = {
 	(void*)0x45564C59,
 	(void*)NULL,
 	(void*)dStage_elstInfoInit__FP11dStage_dt_cPviPv,
@@ -2088,7 +2088,7 @@ SECTION_DATA static void* data_803A66BC[78] = {
 };
 
 /* 803A67F4-803A689C 00A8+00 s=1 e=0 z=0  None .data      l_funcTable$5168                                             */
-SECTION_DATA static void* data_803A67F4[42] = {
+SECTION_DATA static void* l_funcTable_5168[42] = {
 	(void*)0x504C5952,
 	(void*)NULL,
 	(void*)dStage_playerInit__FP11dStage_dt_cPviPv,
@@ -2134,7 +2134,7 @@ SECTION_DATA static void* data_803A67F4[42] = {
 };
 
 /* 803A689C-803A68FC 0060+00 s=1 e=0 z=0  None .data      l_funcTable$5173                                             */
-SECTION_DATA static void* data_803A689C[24] = {
+SECTION_DATA static void* l_funcTable_5173[24] = {
 	(void*)0x446F6F72,
 	(void*)NULL,
 	(void*)dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv,
@@ -2162,7 +2162,7 @@ SECTION_DATA static void* data_803A689C[24] = {
 };
 
 /* 803A68FC-803A6920 0024+00 s=1 e=0 z=0  None .data      l_funcTable$5178                                             */
-SECTION_DATA static void* data_803A68FC[9] = {
+SECTION_DATA static void* l_funcTable_5178[9] = {
 	(void*)0x54524553,
 	(void*)NULL,
 	(void*)dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv,
@@ -5251,9 +5251,9 @@ extern "C" asm void __sinit_d_stage_cpp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80028328() {
+extern "C" asm static void __arraydtor() {
 	nofralloc
-#include "asm/d/d_stage/func_80028328.s"
+#include "asm/d/d_stage/__arraydtor.s"
 }
 #pragma pop
 

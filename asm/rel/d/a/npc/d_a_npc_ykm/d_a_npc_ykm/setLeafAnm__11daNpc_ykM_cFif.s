@@ -15,8 +15,8 @@ lbl_80B566E8:
 /* 80B5671C  28 00 00 00 */	cmplwi r0, 0
 /* 80B56720  41 82 00 70 */	beq lbl_80B56790
 /* 80B56724  1F C4 00 0C */	mulli r30, r4, 0xc
-/* 80B56728  3C 80 80 B6 */	lis r4, data_80B5EA18@ha
-/* 80B5672C  38 84 EA 18 */	addi r4, r4, data_80B5EA18@l
+/* 80B56728  3C 80 80 B6 */	lis r4, leafAnmData@ha
+/* 80B5672C  38 84 EA 18 */	addi r4, r4, leafAnmData@l
 /* 80B56730  7C A4 F0 2E */	lwzx r5, r4, r30
 /* 80B56734  2C 05 00 00 */	cmpwi r5, 0
 /* 80B56738  40 81 00 24 */	ble lbl_80B5675C
@@ -33,8 +33,8 @@ lbl_80B5675C:
 /* 80B56760  41 82 00 30 */	beq lbl_80B56790
 /* 80B56764  80 7D 0E 44 */	lwz r3, 0xe44(r29)
 /* 80B56768  7C C4 33 78 */	mr r4, r6
-/* 80B5676C  3C A0 80 B6 */	lis r5, data_80B5EA18@ha
-/* 80B56770  38 05 EA 18 */	addi r0, r5, data_80B5EA18@l
+/* 80B5676C  3C A0 80 B6 */	lis r5, leafAnmData@ha
+/* 80B56770  38 05 EA 18 */	addi r0, r5, leafAnmData@l
 /* 80B56774  7C A0 F2 14 */	add r5, r0, r30
 /* 80B56778  80 A5 00 04 */	lwz r5, 4(r5)
 /* 80B5677C  FC 20 F8 90 */	fmr f1, f31

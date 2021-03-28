@@ -209,8 +209,8 @@ lbl_804BAAC8:
 /* 804BAB48  7F 86 E3 78 */	mr r6, r28
 /* 804BAB4C  4B BC 8D 14 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 804BAB50  38 7C 15 54 */	addi r3, r28, 0x1554
-/* 804BAB54  3C 80 80 4C */	lis r4, data_804BBA6C@ha
-/* 804BAB58  38 84 BA 6C */	addi r4, r4, data_804BBA6C@l
+/* 804BAB54  3C 80 80 4C */	lis r4, cc_sph_src@ha
+/* 804BAB58  38 84 BA 6C */	addi r4, r4, cc_sph_src@l
 /* 804BAB5C  4B BC 9E D8 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 804BAB60  38 1C 15 18 */	addi r0, r28, 0x1518
 /* 804BAB64  90 1C 15 98 */	stw r0, 0x1598(r28)

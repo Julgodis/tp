@@ -10,10 +10,10 @@ lbl_8086C9D0:
 /* 8086C9F0  3A 80 00 00 */	li r20, 0
 /* 8086C9F4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8086C9F8  3A E3 D4 70 */	addi r23, r3, now__14mDoMtx_stack_c@l
-/* 8086C9FC  3C 60 80 87 */	lis r3, data_80870774@ha
-/* 8086CA00  3B 83 07 74 */	addi r28, r3, data_80870774@l
-/* 8086CA04  3C 60 80 87 */	lis r3, data_8087078C@ha
-/* 8086CA08  3B A3 07 8C */	addi r29, r3, data_8087078C@l
+/* 8086C9FC  3C 60 80 87 */	lis r3, guide_p@ha
+/* 8086CA00  3B 83 07 74 */	addi r28, r3, guide_p@l
+/* 8086CA04  3C 60 80 87 */	lis r3, guide_s@ha
+/* 8086CA08  3B A3 07 8C */	addi r29, r3, guide_s@l
 /* 8086CA0C  7E FE BB 78 */	mr r30, r23
 /* 8086CA10  7E FF BB 78 */	mr r31, r23
 /* 8086CA14  7E F8 BB 78 */	mr r24, r23

@@ -24,9 +24,6 @@ struct cM3dGAab {
 struct cCcD_GStts {
 };
 
-struct cCcD_GObjInf {
-};
-
 struct cCcD_Obj {
 	/* 80263A48 */ void GetAc();
 };
@@ -36,6 +33,9 @@ struct cCcD_Stts {
 	/* 8026395C */ void ClrCcMove();
 	/* 80263970 */ void PlusDmg(int);
 	/* 80263984 */ void GetWeightF() const;
+};
+
+struct cCcD_GObjInf {
 };
 
 struct cCcS {
@@ -292,7 +292,7 @@ asm void cCcS::ChkNoHitAtTg(cCcD_Obj* param_0, cCcD_Obj* param_1) {
 static u8 lit_2492[12];
 
 /* 80430CCC-80430CD8 000C+00 s=1 e=0 z=0  None .bss       cross$2491                                                   */
-static u8 data_80430CCC[12];
+static u8 cross[12];
 
 /* 80455038-8045503C 0004+00 s=2 e=0 z=0  None .sdata2    @2532                                                        */
 SECTION_SDATA2 static u8 lit_2532[4] = {

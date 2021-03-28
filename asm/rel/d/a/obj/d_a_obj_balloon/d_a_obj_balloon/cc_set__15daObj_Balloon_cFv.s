@@ -27,8 +27,8 @@ lbl_80BA810C:
 /* 80BA8170  38 04 90 0C */	addi r0, r4, l_HIO@l
 /* 80BA8174  7C 80 2A 14 */	add r4, r0, r5
 /* 80BA8178  C0 24 00 08 */	lfs f1, 8(r4)
-/* 80BA817C  3C 80 80 BB */	lis r4, data_80BA8E80@ha
-/* 80BA8180  38 84 8E 80 */	addi r4, r4, data_80BA8E80@l
+/* 80BA817C  3C 80 80 BB */	lis r4, balloon_radius@ha
+/* 80BA8180  38 84 8E 80 */	addi r4, r4, balloon_radius@l
 /* 80BA8184  7C 04 2C 2E */	lfsx f0, r4, r5
 /* 80BA8188  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80BA818C  4B 6C 75 7C */	b SetR__8cM3dGSphFf

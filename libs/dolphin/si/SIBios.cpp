@@ -152,7 +152,7 @@ u8 InputBuffer[32];
 static u8 InputBufferVcount[16];
 
 /* 804516F0-804516F4 0004+00 s=1 e=0 z=0  None .sbss      cmdTypeAndStatus$78                                          */
-static u8 data_804516F0[4];
+static u8 cmdTypeAndStatus_78[4];
 
 /* 80344EF8-8034523C 0344+00 s=1 e=0 z=0  None .text      SIInterruptHandler                                           */
 #pragma push
@@ -346,7 +346,7 @@ extern "C" asm void SITransfer() {
 
 /* ############################################################################################## */
 /* 804516F4-804516F8 0004+00 s=1 e=0 z=0  None .sbss      cmdTypeAndStatus$372                                         */
-static u8 data_804516F4[4];
+static u8 cmdTypeAndStatus_372[4];
 
 /* 804516F8-80451700 0004+04 s=1 e=1 z=0  None .sbss      __PADFixBits                                                 */
 u8 __PADFixBits[4 + 4 /* padding */];

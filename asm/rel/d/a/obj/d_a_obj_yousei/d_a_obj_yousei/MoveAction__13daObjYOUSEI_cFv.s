@@ -7,8 +7,8 @@ lbl_804CE9D0:
 /* 804CE9E4  39 61 00 70 */	addi r11, r1, 0x70
 /* 804CE9E8  4B E9 37 F4 */	b _savegpr_29
 /* 804CE9EC  7C 7E 1B 78 */	mr r30, r3
-/* 804CE9F0  3C 60 80 4D */	lis r3, data_804D15F0@ha
-/* 804CE9F4  3B E3 15 F0 */	addi r31, r3, data_804D15F0@l
+/* 804CE9F0  3C 60 80 4D */	lis r3, ccSphSrc@ha
+/* 804CE9F4  3B E3 15 F0 */	addi r31, r3, ccSphSrc@l
 /* 804CE9F8  A8 7E 05 CC */	lha r3, 0x5cc(r30)
 /* 804CE9FC  2C 03 00 01 */	cmpwi r3, 1
 /* 804CEA00  41 82 00 80 */	beq lbl_804CEA80

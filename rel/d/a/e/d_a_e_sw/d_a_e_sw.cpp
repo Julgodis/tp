@@ -24,19 +24,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -656,17 +656,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 807AFE9C-807AFEA4 0008+00 s=1 e=0 z=0  None .data      e_prim$3788                                                  */
-SECTION_DATA static u8 data_807AFE9C[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 807AFEA4-807AFEAC 0008+00 s=1 e=0 z=0  None .data      e_env$3789                                                   */
-SECTION_DATA static u8 data_807AFEA4[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 807AFEAC-807AFEB4 0006+02 s=1 e=0 z=0  None .data      eff_id$3797                                                  */
-SECTION_DATA static u8 data_807AFEAC[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -681,12 +681,12 @@ SECTION_DATA static u8 data_807AFEB4[64] = {
 };
 
 /* 807AFEF4-807AFEFC 0008+00 s=1 e=0 z=0  None .data      l_SW_DIVE_EFFECT_ID$4064                                     */
-SECTION_DATA static u8 data_807AFEF4[8] = {
+SECTION_DATA static u8 l_SW_DIVE_EFFECT_ID[8] = {
 	0x83, 0x6F, 0x83, 0x70, 0x83, 0x71, 0x83, 0x72,
 };
 
 /* 807AFEFC-807AFF04 0006+02 s=1 e=0 z=0  None .data      l_SW_HIDE_EFFECT_ID$4083                                     */
-SECTION_DATA static u8 data_807AFEFC[6 + 2 /* padding */] = {
+SECTION_DATA static u8 l_SW_HIDE_EFFECT_ID[6 + 2 /* padding */] = {
 	0x83, 0x7C, 0x83, 0x7D, 0x83, 0x7E,
 	/* padding */
 	0x00, 0x00,

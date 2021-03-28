@@ -9,8 +9,8 @@ lbl_80C772BC:
 /* 80C772D8  88 06 00 00 */	lbz r0, 0(r6)
 /* 80C772DC  7C 00 07 75 */	extsb. r0, r0
 /* 80C772E0  40 82 00 34 */	bne lbl_80C77314
-/* 80C772E4  3C 60 80 C7 */	lis r3, data_80C77A2C@ha
-/* 80C772E8  38 A3 7A 2C */	addi r5, r3, data_80C77A2C@l
+/* 80C772E4  3C 60 80 C7 */	lis r3, mode_proc@ha
+/* 80C772E8  38 A3 7A 2C */	addi r5, r3, mode_proc@l
 /* 80C772EC  3C 60 80 C7 */	lis r3, lit_3913@ha
 /* 80C772F0  38 83 7A 20 */	addi r4, r3, lit_3913@l
 /* 80C772F4  80 64 00 00 */	lwz r3, 0(r4)
@@ -25,8 +25,8 @@ lbl_80C77314:
 /* 80C77314  7F E3 FB 78 */	mr r3, r31
 /* 80C77318  88 1F 05 B0 */	lbz r0, 0x5b0(r31)
 /* 80C7731C  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 80C77320  3C 80 80 C7 */	lis r4, data_80C77A2C@ha
-/* 80C77324  38 04 7A 2C */	addi r0, r4, data_80C77A2C@l
+/* 80C77320  3C 80 80 C7 */	lis r4, mode_proc@ha
+/* 80C77324  38 04 7A 2C */	addi r0, r4, mode_proc@l
 /* 80C77328  7D 80 2A 14 */	add r12, r0, r5
 /* 80C7732C  4B 6E AD 58 */	b __ptmf_scall
 /* 80C77330  60 00 00 00 */	nop 

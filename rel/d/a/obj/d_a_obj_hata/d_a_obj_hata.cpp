@@ -41,13 +41,13 @@ struct daObjHata_c {
 	/* 80C1919C */ void moveSwing();
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -194,17 +194,17 @@ SECTION_RODATA static u32 const lit_3788 = 0x44A00000;
 SECTION_RODATA static u32 const lit_3789 = 0x3F800000;
 
 /* 80C19480-80C1948C 000C+00 s=1 e=0 z=0  None .rodata    SING$3793                                                    */
-SECTION_RODATA static u8 const data_80C19480[12] = {
+SECTION_RODATA static u8 const SING[12] = {
 	0x00, 0x00, 0x00, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x01,
 };
 
 /* 80C1948C-80C19498 000C+00 s=1 e=0 z=0  None .rodata    AIM_ANGLE_X$3794                                             */
-SECTION_RODATA static u8 const data_80C1948C[12] = {
+SECTION_RODATA static u8 const AIM_ANGLE_X[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xBC, 0x00, 0x00, 0x02, 0xBC,
 };
 
 /* 80C19498-80C194A4 000C+00 s=1 e=0 z=0  None .rodata    STEP_ANGLE_X$3795                                            */
-SECTION_RODATA static u8 const data_80C19498[12] = {
+SECTION_RODATA static u8 const STEP_ANGLE_X[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x5A,
 };
 

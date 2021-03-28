@@ -22,10 +22,10 @@ struct mDoHIO_entry_c {
 	/* 80D2C768 */ ~mDoHIO_entry_c();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -33,10 +33,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -124,10 +124,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -552,7 +552,7 @@ SECTION_DATA static void* lit_3963[3] = {
 };
 
 /* 80D2E98C-80D2EA04 0078+00 s=1 e=0 z=0  None .data      l_func$3953                                                  */
-SECTION_DATA static u8 data_80D2E98C[120] = {
+SECTION_DATA static u8 l_func[120] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -564,7 +564,7 @@ SECTION_DATA static u8 data_80D2E98C[120] = {
 };
 
 /* 80D2EA04-80D2EA14 000E+02 s=1 e=0 z=0  None .data      l_eff$3970                                                   */
-SECTION_DATA static u8 data_80D2EA04[14 + 2 /* padding */] = {
+SECTION_DATA static u8 l_eff[14 + 2 /* padding */] = {
 	0x86, 0xE3, 0x86, 0xE4, 0x86, 0xE7, 0x86, 0xE6, 0x86, 0xE5, 0x86, 0xEB, 0x86, 0xEA,
 	/* padding */
 	0x00, 0x00,

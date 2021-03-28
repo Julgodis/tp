@@ -14,12 +14,6 @@
 struct Vec {
 };
 
-struct JStage {
-	struct TObject {
-	};
-
-};
-
 namespace JStudio {
 	struct data {
 		struct TEOperationData {
@@ -53,6 +47,12 @@ namespace JStudio {
 		struct TTransform_position {
 		};
 
+	};
+
+};
+
+struct JStage {
+	struct TObject {
 	};
 
 };
@@ -325,7 +325,7 @@ asm JStudio_JAudio2::TAdaptor_sound::~TAdaptor_sound() {
 
 /* ############################################################################################## */
 /* 80431490-804314B0 0020+00 s=2 e=0 z=0  None .bss       aoData$1517                                                  */
-static u8 data_80431490[32];
+static u8 aoData[32];
 
 /* 804314B0-804314BC 000C+00 s=1 e=0 z=0  None .bss       @1817                                                        */
 static u8 lit_1817[12];

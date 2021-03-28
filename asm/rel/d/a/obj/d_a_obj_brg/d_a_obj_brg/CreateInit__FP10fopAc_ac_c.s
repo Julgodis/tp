@@ -26,8 +26,8 @@ lbl_80BC0900:
 /* 80BC0908  41 82 00 34 */	beq lbl_80BC093C
 /* 80BC090C  7F 1D CA 14 */	add r24, r29, r25
 /* 80BC0910  38 78 01 04 */	addi r3, r24, 0x104
-/* 80BC0914  3C 80 80 BC */	lis r4, data_80BC241C@ha
-/* 80BC0918  38 84 24 1C */	addi r4, r4, data_80BC241C@l
+/* 80BC0914  3C 80 80 BC */	lis r4, wire_cyl_src@ha
+/* 80BC0918  38 84 24 1C */	addi r4, r4, wire_cyl_src@l
 /* 80BC091C  4B 4C 3F 98 */	b Set__8dCcD_CylFRC11dCcD_SrcCyl
 /* 80BC0920  3C 7A 00 01 */	addis r3, r26, 1
 /* 80BC0924  38 03 B1 AC */	addi r0, r3, -20052
@@ -39,8 +39,8 @@ lbl_80BC0900:
 lbl_80BC093C:
 /* 80BC093C  7F 1D CA 14 */	add r24, r29, r25
 /* 80BC0940  38 78 01 04 */	addi r3, r24, 0x104
-/* 80BC0944  3C 80 80 BC */	lis r4, data_80BC23D8@ha
-/* 80BC0948  38 84 23 D8 */	addi r4, r4, data_80BC23D8@l
+/* 80BC0944  3C 80 80 BC */	lis r4, himo_cyl_src@ha
+/* 80BC0948  38 84 23 D8 */	addi r4, r4, himo_cyl_src@l
 /* 80BC094C  4B 4C 3F 68 */	b Set__8dCcD_CylFRC11dCcD_SrcCyl
 /* 80BC0950  3C 7A 00 01 */	addis r3, r26, 1
 /* 80BC0954  38 03 B1 AC */	addi r0, r3, -20052
@@ -70,15 +70,15 @@ lbl_80BC0998:
 /* 80BC09AC  7C 00 07 75 */	extsb. r0, r0
 /* 80BC09B0  41 82 00 78 */	beq lbl_80BC0A28
 /* 80BC09B4  7F E3 FB 78 */	mr r3, r31
-/* 80BC09B8  3C 80 80 BC */	lis r4, data_80BC23D8@ha
-/* 80BC09BC  38 84 23 D8 */	addi r4, r4, data_80BC23D8@l
+/* 80BC09B8  3C 80 80 BC */	lis r4, himo_cyl_src@ha
+/* 80BC09BC  38 84 23 D8 */	addi r4, r4, himo_cyl_src@l
 /* 80BC09C0  38 63 AF 34 */	addi r3, r3, -20684
 /* 80BC09C4  4B 4C 3E F0 */	b Set__8dCcD_CylFRC11dCcD_SrcCyl
 /* 80BC09C8  3C 7A 00 01 */	addis r3, r26, 1
 /* 80BC09CC  38 03 B1 AC */	addi r0, r3, -20052
 /* 80BC09D0  90 03 AF 78 */	stw r0, -0x5088(r3)
-/* 80BC09D4  3C 80 80 BC */	lis r4, data_80BC23D8@ha
-/* 80BC09D8  38 84 23 D8 */	addi r4, r4, data_80BC23D8@l
+/* 80BC09D4  3C 80 80 BC */	lis r4, himo_cyl_src@ha
+/* 80BC09D8  38 84 23 D8 */	addi r4, r4, himo_cyl_src@l
 /* 80BC09DC  38 63 B0 70 */	addi r3, r3, -20368
 /* 80BC09E0  4B 4C 3E D4 */	b Set__8dCcD_CylFRC11dCcD_SrcCyl
 /* 80BC09E4  3C 7A 00 01 */	addis r3, r26, 1

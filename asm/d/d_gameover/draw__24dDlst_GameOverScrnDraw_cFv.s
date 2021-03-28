@@ -115,8 +115,8 @@ lbl_8019BE18:
 /* 8019BEAC  83 41 00 24 */	lwz r26, 0x24(r1)
 /* 8019BEB0  83 61 00 28 */	lwz r27, 0x28(r1)
 /* 8019BEB4  C3 E2 A1 B4 */	lfs f31, lit_4376(r2)
-/* 8019BEB8  3C 60 80 3C */	lis r3, data_803BBD0C@ha
-/* 8019BEBC  3B 83 BD 0C */	addi r28, r3, data_803BBD0C@l
+/* 8019BEB8  3C 60 80 3C */	lis r3, offset@ha
+/* 8019BEBC  3B 83 BD 0C */	addi r28, r3, offset@l
 lbl_8019BEC0:
 /* 8019BEC0  93 41 00 10 */	stw r26, 0x10(r1)
 /* 8019BEC4  93 61 00 14 */	stw r27, 0x14(r1)

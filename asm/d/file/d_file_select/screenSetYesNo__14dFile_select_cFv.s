@@ -112,7 +112,7 @@ lbl_8018C684:
 /* 8018C6CC  7D 89 03 A6 */	mtctr r12
 /* 8018C6D0  4E 80 04 21 */	bctrl 
 /* 8018C6D4  38 61 00 08 */	addi r3, r1, 8
-/* 8018C6D8  38 8D 81 48 */	la r4, data_804506C8(r13) /* 804506C8-_SDA_BASE_ */
+/* 8018C6D8  38 8D 81 48 */	la r4, l_msgNum2(r13) /* 804506C8-_SDA_BASE_ */
 /* 8018C6DC  7C 84 E8 AE */	lbzx r4, r4, r29
 /* 8018C6E0  4B E9 39 E1 */	bl fopMsgM_messageGet__FPcUl
 /* 8018C6E4  80 78 01 C0 */	lwz r3, 0x1c0(r24)

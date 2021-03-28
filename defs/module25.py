@@ -39,7 +39,7 @@ SYMBOLS = [
 	{'addr':0x80485EFC,'size':4,'pad':0,'label':"data_80485EFC",'name':None,'lib':-1,'tu':2,'section':2,'r':[0,1,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80485F00,'size':9,'pad':3,'label':"l_specName",'name':"l_specName",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80485F0C,'size':3,'pad':0,'label':"stringBase0",'name':"@stringBase0",'lib':-1,'tu':3,'section':3,'r':[1,0,0],'sh':[0,0,0],'type':"StringBase"},
-	{'addr':0x80485F10,'size':10,'pad':2,'label':"data_80485F10",'name':"l_bg_profName$3618",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
+	{'addr':0x80485F10,'size':10,'pad':2,'label':"l_bg_profName",'name':"l_bg_profName$3618",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
 	{'addr':0x80485F1C,'size':32,'pad':0,'label':"l_daSetBgObj_Method",'name':"l_daSetBgObj_Method",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x80485F3C,'size':48,'pad':0,'label':"g_profile_SET_BG_OBJ",'name':"g_profile_SET_BG_OBJ",'lib':-1,'tu':3,'section':4,'r':[0,0,1],'sh':[0,0,0],'type':"ReferenceArray"},
 ]
@@ -58,7 +58,7 @@ SYMBOL_NAMES = {
 	"data_80485EFC":9,
 	"l_specName":10,
 	"stringBase0":11,
-	"data_80485F10":12,
+	"l_bg_profName":12,
 	"l_daSetBgObj_Method":13,
 	"g_profile_SET_BG_OBJ":14,
 }

@@ -31,10 +31,10 @@ struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -56,10 +56,10 @@ struct daObjOnCloth_c {
 	/* 80595638 */ void checkPlayerMove();
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

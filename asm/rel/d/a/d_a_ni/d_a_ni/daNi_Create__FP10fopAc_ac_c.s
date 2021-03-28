@@ -167,8 +167,8 @@ lbl_80950D3C:
 /* 80950DAC  7F C6 F3 78 */	mr r6, r30
 /* 80950DB0  4B 73 2A B0 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80950DB4  38 7E 08 88 */	addi r3, r30, 0x888
-/* 80950DB8  3C 80 80 95 */	lis r4, data_80951440@ha
-/* 80950DBC  38 84 14 40 */	addi r4, r4, data_80951440@l
+/* 80950DB8  3C 80 80 95 */	lis r4, cc_sph_src@ha
+/* 80950DBC  38 84 14 40 */	addi r4, r4, cc_sph_src@l
 /* 80950DC0  4B 73 3C 74 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80950DC4  38 1E 08 4C */	addi r0, r30, 0x84c
 /* 80950DC8  90 1E 08 CC */	stw r0, 0x8cc(r30)

@@ -155,14 +155,14 @@ lbl_807223A8:
 /* 807223D8  B0 1F 05 62 */	sth r0, 0x562(r31)
 /* 807223DC  B0 1F 05 60 */	sth r0, 0x560(r31)
 /* 807223E0  38 7F 09 04 */	addi r3, r31, 0x904
-/* 807223E4  3C 80 80 72 */	lis r4, data_80722D6C@ha
-/* 807223E8  38 84 2D 6C */	addi r4, r4, data_80722D6C@l
+/* 807223E4  3C 80 80 72 */	lis r4, cc_sph_src@ha
+/* 807223E8  38 84 2D 6C */	addi r4, r4, cc_sph_src@l
 /* 807223EC  4B 96 26 48 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 807223F0  38 1F 08 C8 */	addi r0, r31, 0x8c8
 /* 807223F4  90 1F 09 48 */	stw r0, 0x948(r31)
 /* 807223F8  38 7F 0A 3C */	addi r3, r31, 0xa3c
-/* 807223FC  3C 80 80 72 */	lis r4, data_80722DAC@ha
-/* 80722400  38 84 2D AC */	addi r4, r4, data_80722DAC@l
+/* 807223FC  3C 80 80 72 */	lis r4, cc_wind_sph_src@ha
+/* 80722400  38 84 2D AC */	addi r4, r4, cc_wind_sph_src@l
 /* 80722404  4B 96 26 30 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80722408  38 1F 08 C8 */	addi r0, r31, 0x8c8
 /* 8072240C  90 1F 0A 80 */	stw r0, 0xa80(r31)

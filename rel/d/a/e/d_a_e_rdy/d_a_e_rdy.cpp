@@ -28,19 +28,19 @@ struct mDoGph_gInf_c {
 	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -148,10 +148,10 @@ struct dMsgFlow_c {
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 };
 
-struct dJntColData_c {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct dJntColData_c {
 };
 
 struct dJntCol_c {
@@ -981,17 +981,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 8077A0FC-8077A104 0008+00 s=1 e=0 z=0  None .data      e_prim$3897                                                  */
-SECTION_DATA static u8 data_8077A0FC[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 8077A104-8077A10C 0008+00 s=1 e=0 z=0  None .data      e_env$3898                                                   */
-SECTION_DATA static u8 data_8077A104[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 8077A10C-8077A114 0006+02 s=1 e=0 z=0  None .data      eff_id$3906                                                  */
-SECTION_DATA static u8 data_8077A10C[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -1096,12 +1096,12 @@ SECTION_DATA static void* lit_6169[7] = {
 };
 
 /* 8077A24C-8077A254 0008+00 s=1 e=0 z=0  None .data      kado_bit$6208                                                */
-SECTION_DATA static u8 data_8077A24C[8] = {
+SECTION_DATA static u8 kado_bit[8] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 };
 
 /* 8077A254-8077A25C 0008+00 s=1 e=0 z=0  None .data      kado_check_x$6209                                            */
-SECTION_DATA static u8 data_8077A254[8] = {
+SECTION_DATA static u8 kado_check_x[8] = {
 	0x42, 0xA0, 0x00, 0x00, 0xC2, 0xA0, 0x00, 0x00,
 };
 
@@ -1176,7 +1176,7 @@ SECTION_DATA static void* lit_7053[12] = {
 };
 
 /* 8077A344-8077A35C 0016+02 s=1 e=0 z=0  None .data      j_spd$7550                                                   */
-SECTION_DATA static u8 data_8077A344[22 + 2 /* padding */] = {
+SECTION_DATA static u8 j_spd[22 + 2 /* padding */] = {
 	0x40, 0x00, 0x40, 0x00, 0x40, 0x00, 0x10, 0x00, 0x10, 0x00, 0x10, 0x00, 0x10, 0x00, 0x40, 0x00,
 	0x40, 0x00, 0x40, 0x00, 0x40, 0x00,
 	/* padding */
@@ -1184,7 +1184,7 @@ SECTION_DATA static u8 data_8077A344[22 + 2 /* padding */] = {
 };
 
 /* 8077A35C-8077A364 0006+02 s=1 e=0 z=0  None .data      w_eff_name$7595                                              */
-SECTION_DATA static u8 data_8077A35C[6 + 2 /* padding */] = {
+SECTION_DATA static u8 w_eff_name[6 + 2 /* padding */] = {
 	0x82, 0x58, 0x82, 0x59, 0x82, 0x5A,
 	/* padding */
 	0x00, 0x00,
@@ -1352,7 +1352,7 @@ SECTION_DATA static void* lit_8596[101] = {
 };
 
 /* 8077A5C8-8077A62C 0064+00 s=1 e=0 z=0  None .data      time_scale$8695                                              */
-SECTION_DATA static u8 data_8077A5C8[100] = {
+SECTION_DATA static u8 time_scale[100] = {
 	0x3F, 0x99, 0x99, 0x9A, 0x3F, 0x99, 0x99, 0x9A, 0x3F, 0x8C, 0xCC, 0xCD, 0x3F, 0x80, 0x00, 0x00,
 	0x3F, 0x4C, 0xCC, 0xCD, 0x3F, 0x19, 0x99, 0x9A, 0x3E, 0xCC, 0xCC, 0xCD, 0x3E, 0x4C, 0xCC, 0xCD,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1405,7 +1405,7 @@ SECTION_DATA static void* jc_data[33] = {
 };
 
 /* 8077A6BC-8077A6FC 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$9405                                              */
-SECTION_DATA static u8 data_8077A6BC[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -1413,7 +1413,7 @@ SECTION_DATA static u8 data_8077A6BC[64] = {
 };
 
 /* 8077A6FC-8077A73C 0040+00 s=1 e=0 z=0  None .data      at_sph_src$9406                                              */
-SECTION_DATA static u8 data_8077A6FC[64] = {
+SECTION_DATA static u8 at_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1D,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -1816,7 +1816,7 @@ asm static void way_check(e_rdy_class* param_0) {
 SECTION_RODATA static u32 const lit_4813 = 0x3F000000;
 
 /* 8077A91C-8077AA1C 00FF+01 s=1 e=0 z=0  None .bss       check_index$4747                                             */
-static u8 data_8077A91C[255 + 1 /* padding */];
+static u8 check_index[255 + 1 /* padding */];
 
 /* 8076D3C4-8076D5F0 022C+00 s=1 e=0 z=0  None .text      path_check__FP11e_rdy_class                                  */
 #pragma push

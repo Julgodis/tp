@@ -34,8 +34,8 @@ lbl_80BF465C:
 /* 80BF467C  3B 80 00 00 */	li r28, 0
 /* 80BF4680  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80BF4684  3B 23 61 C0 */	addi r25, r3, g_dComIfG_gameInfo@l
-/* 80BF4688  3C 60 80 BF */	lis r3, data_80BF4AA8@ha
-/* 80BF468C  3B 43 4A A8 */	addi r26, r3, data_80BF4AA8@l
+/* 80BF4688  3C 60 80 BF */	lis r3, emttrId@ha
+/* 80BF468C  3B 43 4A A8 */	addi r26, r3, emttrId@l
 /* 80BF4690  3C 60 80 BF */	lis r3, lit_4359@ha
 /* 80BF4694  3B 63 49 D8 */	addi r27, r3, lit_4359@l
 lbl_80BF4698:

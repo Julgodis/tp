@@ -12,8 +12,8 @@ lbl_80D5F710:
 /* 80D5F738  3B 83 4F F8 */	addi r28, r3, 0x4ff8
 /* 80D5F73C  7F 83 E3 78 */	mr r3, r28
 /* 80D5F740  80 9F 05 78 */	lwz r4, 0x578(r31)
-/* 80D5F744  3C A0 80 D6 */	lis r5, data_80D5FA0C@ha
-/* 80D5F748  38 A5 FA 0C */	addi r5, r5, data_80D5FA0C@l
+/* 80D5F744  3C A0 80 D6 */	lis r5, action_table@ha
+/* 80D5F748  38 A5 FA 0C */	addi r5, r5, action_table@l
 /* 80D5F74C  38 C0 00 02 */	li r6, 2
 /* 80D5F750  38 E0 00 00 */	li r7, 0
 /* 80D5F754  39 00 00 00 */	li r8, 0

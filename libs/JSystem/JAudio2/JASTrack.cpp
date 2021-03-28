@@ -34,24 +34,7 @@ struct JASTrackPort {
 	/* 802935E8 */ void writeExport(u32, u16);
 };
 
-struct JASOscillator {
-	struct Point {
-	};
-
-	struct Data {
-	};
-
-};
-
 struct JASSoundParams {
-};
-
-struct JASChannel {
-	/* 8029AAD0 */ void release(u16);
-	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
-	/* 8029AB98 */ void setMixConfig(u32, u16);
-	/* 8029ACD4 */ void setKeySweepTarget(s32, u32);
-	/* 8029BBFC */ void free();
 };
 
 struct JASDsp {
@@ -62,6 +45,23 @@ struct JASDsp {
 		/* 8029E094 */ void setDistFilter(s16);
 	};
 
+};
+
+struct JASOscillator {
+	struct Point {
+	};
+
+	struct Data {
+	};
+
+};
+
+struct JASChannel {
+	/* 8029AAD0 */ void release(u16);
+	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
+	/* 8029AB98 */ void setMixConfig(u32, u16);
+	/* 8029ACD4 */ void setKeySweepTarget(s32, u32);
+	/* 8029BBFC */ void free();
 };
 
 struct JASTrack {

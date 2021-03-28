@@ -99,16 +99,16 @@ lbl_80272C08:
 /* 80272C18  7C 00 07 75 */	extsb. r0, r0
 /* 80272C1C  40 82 00 14 */	bne lbl_80272C30
 /* 80272C20  48 0D AC 9D */	bl VIGetRetraceCount
-/* 80272C24  90 6D 8C 44 */	stw r3, data_804511C4(r13)
+/* 80272C24  90 6D 8C 44 */	stw r3, prevFrame(r13)
 /* 80272C28  38 00 00 01 */	li r0, 1
 /* 80272C2C  98 0D 8C 48 */	stb r0, data_804511C8(r13)
 lbl_80272C30:
 /* 80272C30  48 0D AC 8D */	bl VIGetRetraceCount
-/* 80272C34  80 0D 8C 44 */	lwz r0, data_804511C4(r13)
+/* 80272C34  80 0D 8C 44 */	lwz r0, prevFrame(r13)
 /* 80272C38  7C 00 18 50 */	subf r0, r0, r3
 /* 80272C3C  80 8D 8F D8 */	lwz r4, sManager__10JUTProcBar(r13)
 /* 80272C40  90 04 01 04 */	stw r0, 0x104(r4)
-/* 80272C44  90 6D 8C 44 */	stw r3, data_804511C4(r13)
+/* 80272C44  90 6D 8C 44 */	stw r3, prevFrame(r13)
 lbl_80272C48:
 /* 80272C48  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80272C4C  83 C1 00 08 */	lwz r30, 8(r1)

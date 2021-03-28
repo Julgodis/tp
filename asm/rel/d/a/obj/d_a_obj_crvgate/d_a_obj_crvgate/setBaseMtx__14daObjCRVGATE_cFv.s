@@ -5,8 +5,8 @@ lbl_80BD2528:
 /* 80BD2534  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80BD2538  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80BD253C  7C 7E 1B 78 */	mr r30, r3
-/* 80BD2540  3C 60 80 BD */	lis r3, data_80BD30C0@ha
-/* 80BD2544  3B E3 30 C0 */	addi r31, r3, data_80BD30C0@l
+/* 80BD2540  3C 60 80 BD */	lis r3, ccCylSrc@ha
+/* 80BD2544  3B E3 30 C0 */	addi r31, r3, ccCylSrc@l
 /* 80BD2548  C0 1F 00 48 */	lfs f0, 0x48(r31)
 /* 80BD254C  D0 01 00 08 */	stfs f0, 8(r1)
 /* 80BD2550  D0 01 00 0C */	stfs f0, 0xc(r1)

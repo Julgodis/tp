@@ -20,17 +20,17 @@ struct dSelect_icon_c {
 	/* 80195B70 */ void setPos(J2DPane*, f32, f32);
 };
 
-struct J2DAnmTransformKey {
-	/* 801959C0 */ ~J2DAnmTransformKey();
+struct J2DAnmColor {
 };
 
 struct J2DAnmTextureSRTKey {
 };
 
-struct J2DAnmColor {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DAnmTransformKey {
+	/* 801959C0 */ ~J2DAnmTransformKey();
 };
 
 struct dSelect_cursor_c {
@@ -163,19 +163,19 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 /* ############################################################################################## */
 /* 80394A10-80394A30 0020+00 s=1 e=0 z=0  None .rodata    corner_tag$3707                                              */
-SECTION_RODATA static u8 const data_80394A10[32] = {
+SECTION_RODATA static u8 const corner_tag[32] = {
 	0x6C, 0x5F, 0x75, 0x5F, 0x6E, 0x75, 0x6C, 0x6C, 0x6C, 0x5F, 0x64, 0x5F, 0x6E, 0x75, 0x6C, 0x6C,
 	0x72, 0x5F, 0x75, 0x5F, 0x6E, 0x75, 0x6C, 0x6C, 0x72, 0x5F, 0x64, 0x5F, 0x6E, 0x75, 0x6C, 0x6C,
 };
 
 /* 80394A30-80394A50 0020+00 s=1 e=0 z=0  None .rodata    tag$4181                                                     */
-SECTION_RODATA static u8 const data_80394A30[32] = {
+SECTION_RODATA static u8 const tag_4181[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x6C, 0x5F, 0x6C, 0x64, 0x00, 0x00, 0x00, 0x00, 0x6C, 0x5F, 0x6C, 0x75,
 	0x00, 0x00, 0x00, 0x00, 0x6C, 0x5F, 0x72, 0x64, 0x00, 0x00, 0x00, 0x00, 0x6C, 0x5F, 0x72, 0x75,
 };
 
 /* 80394A50-80394A90 0040+00 s=1 e=0 z=0  None .rodata    tag$4197                                                     */
-SECTION_RODATA static u8 const data_80394A50[64] = {
+SECTION_RODATA static u8 const tag_4197[64] = {
 	0x00, 0x69, 0x5F, 0x63, 0x5F, 0x6C, 0x64, 0x31, 0x00, 0x69, 0x5F, 0x63, 0x5F, 0x6C, 0x64, 0x32,
 	0x00, 0x69, 0x5F, 0x63, 0x5F, 0x6C, 0x75, 0x31, 0x00, 0x69, 0x5F, 0x63, 0x5F, 0x6C, 0x75, 0x32,
 	0x00, 0x69, 0x5F, 0x63, 0x5F, 0x72, 0x64, 0x31, 0x00, 0x69, 0x5F, 0x63, 0x5F, 0x72, 0x64, 0x32,
@@ -183,7 +183,7 @@ SECTION_RODATA static u8 const data_80394A50[64] = {
 };
 
 /* 80394A90-80394AA0 0010+00 s=1 e=0 z=0  None .rodata    tag$4204                                                     */
-SECTION_RODATA static u8 const data_80394A90[16] = {
+SECTION_RODATA static u8 const tag_4204[16] = {
 	0x00, 0x00, 0x67, 0x6F, 0x6C, 0x64, 0x30, 0x31, 0x00, 0x00, 0x67, 0x6F, 0x6C, 0x64, 0x30, 0x32,
 };
 
@@ -216,7 +216,7 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 };
 
 /* 803BB70C-803BB71C 0010+00 s=1 e=0 z=0  None .data      blo_name$3684                                                */
-SECTION_DATA static void* data_803BB70C[4] = {
+SECTION_DATA static void* blo_name[4] = {
 	(void*)&d_d_select_cursor__stringBase0,
 	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x1F),
 	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x3B),
@@ -224,7 +224,7 @@ SECTION_DATA static void* data_803BB70C[4] = {
 };
 
 /* 803BB71C-803BB72C 0010+00 s=1 e=0 z=0  None .data      bck_name$3685                                                */
-SECTION_DATA static void* data_803BB71C[4] = {
+SECTION_DATA static void* bck_name[4] = {
 	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
 	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x7C),
 	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
@@ -232,7 +232,7 @@ SECTION_DATA static void* data_803BB71C[4] = {
 };
 
 /* 803BB72C-803BB73C 0010+00 s=1 e=0 z=0  None .data      bpk_name$3686                                                */
-SECTION_DATA static void* data_803BB72C[4] = {
+SECTION_DATA static void* bpk_name[4] = {
 	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x98),
 	(void*)(((char*)&d_d_select_cursor__stringBase0)+0xB7),
 	(void*)(((char*)&d_d_select_cursor__stringBase0)+0xD3),
@@ -240,7 +240,7 @@ SECTION_DATA static void* data_803BB72C[4] = {
 };
 
 /* 803BB73C-803BB74C 0010+00 s=1 e=0 z=0  None .data      btk_name$3687                                                */
-SECTION_DATA static void* data_803BB73C[4] = {
+SECTION_DATA static void* btk_name[4] = {
 	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x113),
 	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x132),
 	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
@@ -248,7 +248,7 @@ SECTION_DATA static void* data_803BB73C[4] = {
 };
 
 /* 803BB74C-803BB78C 0010+30 s=1 e=0 z=0  None .data      btk2_name$3688                                               */
-SECTION_DATA static void* data_803BB74C[4 + 12 /* padding */] = {
+SECTION_DATA static void* btk2_name[4 + 12 /* padding */] = {
 	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
 	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x14E),
 	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),

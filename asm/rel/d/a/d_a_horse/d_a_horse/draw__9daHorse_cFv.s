@@ -97,8 +97,8 @@ lbl_808446F8:
 /* 808446F8  38 7E 11 C8 */	addi r3, r30, 0x11c8
 /* 808446FC  80 9E 12 04 */	lwz r4, 0x1204(r30)
 /* 80844700  C0 3F 02 68 */	lfs f1, 0x268(r31)
-/* 80844704  3C A0 80 84 */	lis r5, data_80845A30@ha
-/* 80844708  38 A5 5A 30 */	addi r5, r5, data_80845A30@l
+/* 80844704  3C A0 80 84 */	lis r5, reinLineColor@ha
+/* 80844708  38 A5 5A 30 */	addi r5, r5, reinLineColor@l
 /* 8084470C  38 C0 00 00 */	li r6, 0
 /* 80844710  38 FE 01 0C */	addi r7, r30, 0x10c
 /* 80844714  4B 7C F0 28 */	b update__19mDoExt_3DlineMat1_cFifR8_GXColorUsP12dKy_tevstr_c

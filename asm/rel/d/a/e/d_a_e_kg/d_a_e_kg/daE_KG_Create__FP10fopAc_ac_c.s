@@ -130,8 +130,8 @@ lbl_806F9BBC:
 /* 806F9BEC  7F E6 FB 78 */	mr r6, r31
 /* 806F9BF0  4B 98 9C 70 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 806F9BF4  38 7F 08 F8 */	addi r3, r31, 0x8f8
-/* 806F9BF8  3C 80 80 70 */	lis r4, data_806FA4D8@ha
-/* 806F9BFC  38 84 A4 D8 */	addi r4, r4, data_806FA4D8@l
+/* 806F9BF8  3C 80 80 70 */	lis r4, cc_sph_src@ha
+/* 806F9BFC  38 84 A4 D8 */	addi r4, r4, cc_sph_src@l
 /* 806F9C00  4B 98 AE 34 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 806F9C04  38 1F 08 BC */	addi r0, r31, 0x8bc
 /* 806F9C08  90 1F 09 3C */	stw r0, 0x93c(r31)

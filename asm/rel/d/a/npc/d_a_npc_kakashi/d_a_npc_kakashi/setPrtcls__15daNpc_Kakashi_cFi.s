@@ -51,8 +51,8 @@ lbl_8054D2F0:
 /* 8054D324  90 81 00 18 */	stw r4, 0x18(r1)
 /* 8054D328  38 80 00 00 */	li r4, 0
 /* 8054D32C  57 C0 08 3C */	slwi r0, r30, 1
-/* 8054D330  3C A0 80 55 */	lis r5, data_8054EBCC@ha
-/* 8054D334  38 A5 EB CC */	addi r5, r5, data_8054EBCC@l
+/* 8054D330  3C A0 80 55 */	lis r5, id@ha
+/* 8054D334  38 A5 EB CC */	addi r5, r5, id@l
 /* 8054D338  7C A5 02 2E */	lhzx r5, r5, r0
 /* 8054D33C  38 C1 00 20 */	addi r6, r1, 0x20
 /* 8054D340  38 E0 00 00 */	li r7, 0

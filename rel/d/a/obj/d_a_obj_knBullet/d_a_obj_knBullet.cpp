@@ -39,15 +39,15 @@ struct dPa_levelEcallBack {
 struct _GXColor {
 };
 
+struct dKy_tevstr_c {
+};
+
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266F48 */ void normalizeZP();
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -300,7 +300,7 @@ asm cM3dGAab::~cM3dGAab() {
 
 /* ############################################################################################## */
 /* 80C479AC-80C479B4 0006+02 s=1 e=0 z=0  None .rodata    l_prticles_id$3986                                           */
-SECTION_RODATA static u8 const data_80C479AC[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const l_prticles_id_3986[6 + 2 /* padding */] = {
 	0x8B, 0x7F, 0x8B, 0x80, 0x8B, 0x81,
 	/* padding */
 	0x00, 0x00,
@@ -379,7 +379,7 @@ asm void daObjKnBullet_c::col_chk() {
 
 /* ############################################################################################## */
 /* 80C479C4-80C479CA 0006+00 s=1 e=0 z=0  None .rodata    l_prticles_id$4141                                           */
-SECTION_RODATA static u8 const data_80C479C4[6] = {
+SECTION_RODATA static u8 const l_prticles_id_4141[6] = {
 	0x8B, 0x82, 0x8B, 0x83, 0x8B, 0x84,
 };
 

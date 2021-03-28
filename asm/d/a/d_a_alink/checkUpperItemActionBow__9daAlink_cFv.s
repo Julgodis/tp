@@ -13,8 +13,8 @@ lbl_800DF0BC:
 /* 800DF0E8  81 8C 00 20 */	lwz r12, 0x20(r12)
 /* 800DF0EC  7D 89 03 A6 */	mtctr r12
 /* 800DF0F0  4E 80 04 21 */	bctrl 
-/* 800DF0F4  3C 80 80 39 */	lis r4, data_803918D0@ha
-/* 800DF0F8  38 84 18 D0 */	addi r4, r4, data_803918D0@l
+/* 800DF0F4  3C 80 80 39 */	lis r4, slingLocalPos@ha
+/* 800DF0F8  38 84 18 D0 */	addi r4, r4, slingLocalPos@l
 /* 800DF0FC  38 BF 37 E0 */	addi r5, r31, 0x37e0
 /* 800DF100  48 26 7C 6D */	bl PSMTXMultVec
 lbl_800DF104:

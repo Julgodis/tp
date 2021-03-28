@@ -24,13 +24,13 @@ struct mDoExt_3DlineMatSortPacket {
 	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -568,12 +568,12 @@ SECTION_RODATA static u8 const lit_4222[8] = {
 };
 
 /* 80BC23A4-80BC23A8 0004+00 s=1 e=0 z=0  None .data      l_color$4002                                                 */
-SECTION_DATA static u8 data_80BC23A4[4] = {
+SECTION_DATA static u8 l_color_4002[4] = {
 	0x96, 0x96, 0x96, 0xFF,
 };
 
 /* 80BC23A8-80BC23AC 0004+00 s=1 e=0 z=0  None .data      l_color$4042                                                 */
-SECTION_DATA static u8 data_80BC23A8[4] = {
+SECTION_DATA static u8 l_color_4042[4] = {
 	0x96, 0x96, 0x96, 0xFF,
 };
 
@@ -875,7 +875,7 @@ SECTION_RODATA static u32 const lit_5566 = 0x43C80000;
 SECTION_RODATA static u32 const lit_5567 = 0x43FA0000;
 
 /* 80BC22A8-80BC22B4 000C+00 s=1 e=0 z=0  None .rodata    obj_brg_bmd$5576                                             */
-SECTION_RODATA static u8 const data_80BC22A8[12] = {
+SECTION_RODATA static u8 const obj_brg_bmd[12] = {
 	0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x07,
 };
 
@@ -1063,7 +1063,7 @@ asm static void daObj_Brg_Delete(obj_brg_class* param_0) {
 
 /* ############################################################################################## */
 /* 80BC23D8-80BC241C 0044+00 s=1 e=0 z=0  None .data      himo_cyl_src$5532                                            */
-SECTION_DATA static u8 data_80BC23D8[68] = {
+SECTION_DATA static u8 himo_cyl_src[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00,
@@ -1072,7 +1072,7 @@ SECTION_DATA static u8 data_80BC23D8[68] = {
 };
 
 /* 80BC241C-80BC2460 0044+00 s=1 e=0 z=0  None .data      wire_cyl_src$5533                                            */
-SECTION_DATA static u8 data_80BC241C[68] = {
+SECTION_DATA static u8 wire_cyl_src[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x09, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00,
@@ -1221,7 +1221,7 @@ static u8 lit_5808[12];
 static u8 lit_5809[12];
 
 /* 80BC2634-80BC273C 0108+00 s=1 e=0 z=0  None .bss       brg_init_pos$5785                                            */
-static u8 data_80BC2634[264];
+static u8 brg_init_pos[264];
 
 /* 80BC1050-80BC1D74 0D24+00 s=1 e=0 z=0  None .text      daObj_Brg_Create__FP10fopAc_ac_c                             */
 #pragma push

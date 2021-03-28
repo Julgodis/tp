@@ -29,10 +29,10 @@ struct mDoGph_gInf_c {
 	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -46,13 +46,13 @@ struct mDoExt_McaMorfCallBack2_c {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct Vec {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Vec {
 };
 
 struct mDoExt_McaMorf {
@@ -632,7 +632,7 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80951350-80951358 0008+00 s=1 e=0 z=0  None .data      hane_id$3986                                                 */
-SECTION_DATA static u8 data_80951350[8] = {
+SECTION_DATA static u8 hane_id[8] = {
 	0x82, 0xC2, 0x82, 0xC0, 0x82, 0xC1, 0x82, 0xC3,
 };
 
@@ -707,12 +707,12 @@ SECTION_DATA static void* lit_5666[16] = {
 };
 
 /* 8095143C-80951440 0004+00 s=1 e=0 z=0  None .data      key_eno$5736                                                 */
-SECTION_DATA static u8 data_8095143C[4] = {
+SECTION_DATA static u8 key_eno[4] = {
 	0x82, 0x7A, 0x82, 0x7B,
 };
 
 /* 80951440-80951480 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$5915                                              */
-SECTION_DATA static u8 data_80951440[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,

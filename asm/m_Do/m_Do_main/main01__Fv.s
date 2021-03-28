@@ -102,9 +102,9 @@ lbl_800063A8:
 /* 800063F8  3C 60 80 3F */	lis r3, g_mDoMemCd_control@ha
 /* 800063FC  3B E3 AF 40 */	addi r31, r3, g_mDoMemCd_control@l
 lbl_80006400:
-/* 80006400  80 6D 85 B4 */	lwz r3, data_80450B34(r13)
+/* 80006400  80 6D 85 B4 */	lwz r3, frame(r13)
 /* 80006404  38 63 00 01 */	addi r3, r3, 1
-/* 80006408  90 6D 85 B4 */	stw r3, data_80450B34(r13)
+/* 80006408  90 6D 85 B4 */	stw r3, frame(r13)
 /* 8000640C  88 8D 85 80 */	lbz r4, data_80450B00(r13)
 /* 80006410  28 04 00 00 */	cmplwi r4, 0
 /* 80006414  41 82 00 18 */	beq lbl_8000642C

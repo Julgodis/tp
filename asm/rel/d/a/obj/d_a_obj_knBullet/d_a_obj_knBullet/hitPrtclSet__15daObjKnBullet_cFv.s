@@ -30,8 +30,8 @@ lbl_80C47810:
 /* 80C4781C  41 80 FF C4 */	blt lbl_80C477E0
 /* 80C47820  3B 40 00 00 */	li r26, 0
 /* 80C47824  3B C0 00 00 */	li r30, 0
-/* 80C47828  3C 60 80 C4 */	lis r3, data_80C479C4@ha
-/* 80C4782C  3B 83 79 C4 */	addi r28, r3, data_80C479C4@l
+/* 80C47828  3C 60 80 C4 */	lis r3, l_prticles_id_4141@ha
+/* 80C4782C  3B 83 79 C4 */	addi r28, r3, l_prticles_id_4141@l
 /* 80C47830  3C 60 80 C4 */	lis r3, lit_4021@ha
 /* 80C47834  3B A3 79 B4 */	addi r29, r3, lit_4021@l
 lbl_80C47838:

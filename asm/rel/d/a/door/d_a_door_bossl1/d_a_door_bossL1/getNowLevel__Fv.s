@@ -9,8 +9,8 @@ lbl_804E1D98:
 /* 804E1DB4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 804E1DB8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804E1DBC  3B A3 4E 00 */	addi r29, r3, 0x4e00
-/* 804E1DC0  3C 60 80 4E */	lis r3, data_804E4E18@ha
-/* 804E1DC4  3B C3 4E 18 */	addi r30, r3, data_804E4E18@l
+/* 804E1DC0  3C 60 80 4E */	lis r3, l_stageName@ha
+/* 804E1DC4  3B C3 4E 18 */	addi r30, r3, l_stageName@l
 lbl_804E1DC8:
 /* 804E1DC8  7F A3 EB 78 */	mr r3, r29
 /* 804E1DCC  7C 9E F8 2E */	lwzx r4, r30, r31

@@ -34,7 +34,7 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct Z2Creature {
@@ -43,10 +43,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -112,9 +112,6 @@ struct daNpc_grS_Param_c {
 	/* 809E7D60 */ ~daNpc_grS_Param_c();
 };
 
-struct J3DAnmTransformKey {
-};
-
 struct _GXColorS10 {
 };
 
@@ -128,6 +125,9 @@ struct J3DAnmTextureSRTKey {
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct dCcD_SrcCyl {
@@ -896,12 +896,12 @@ SECTION_RODATA static u32 const lit_5311 = 0x42A00000;
 SECTION_RODATA static u32 const lit_5312 = 0x42200000;
 
 /* 809E7F74-809E7F80 000C+00 s=1 e=0 z=0  None .rodata    id$5516                                                      */
-SECTION_RODATA static u8 const data_809E7F74[12] = {
+SECTION_RODATA static u8 const id[12] = {
 	0x83, 0x81, 0x83, 0x82, 0x83, 0x83, 0x83, 0x84, 0x83, 0x85, 0x83, 0x86,
 };
 
 /* 809E7F80-809E7F98 0018+00 s=1 e=0 z=0  None .rodata    jointNo$5517                                                 */
-SECTION_RODATA static u8 const data_809E7F80[24] = {
+SECTION_RODATA static u8 const jointNo[24] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x02,
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x02,
 };
@@ -1510,7 +1510,7 @@ static u8 l_HIO[4];
 static u8 lit_4752[12 + 4 /* padding */];
 
 /* 809E8298-809E82A4 000C+00 s=1 e=0 z=0  None .bss       eyeOffset$4751                                               */
-static u8 data_809E8298[12];
+static u8 eyeOffset[12];
 
 /* 809E536C-809E5874 0508+00 s=1 e=0 z=0  None .text      setAttnPos__11daNpc_grS_cFv                                  */
 #pragma push

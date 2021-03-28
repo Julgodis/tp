@@ -29,11 +29,11 @@ lbl_802E4EB0:
 /* 802E4EB4  7C 00 07 75 */	extsb. r0, r0
 /* 802E4EB8  40 82 00 14 */	bne lbl_802E4ECC
 /* 802E4EBC  38 00 00 00 */	li r0, 0
-/* 802E4EC0  90 0D 8F C8 */	stw r0, data_80451548(r13)
+/* 802E4EC0  90 0D 8F C8 */	stw r0, frameBuffer(r13)
 /* 802E4EC4  38 00 00 01 */	li r0, 1
 /* 802E4EC8  98 0D 8F CC */	stb r0, data_8045154C(r13)
 lbl_802E4ECC:
-/* 802E4ECC  80 8D 8F C8 */	lwz r4, data_80451548(r13)
+/* 802E4ECC  80 8D 8F C8 */	lwz r4, frameBuffer(r13)
 /* 802E4ED0  28 04 00 00 */	cmplwi r4, 0
 /* 802E4ED4  41 82 00 1C */	beq lbl_802E4EF0
 /* 802E4ED8  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo(r13)
@@ -109,7 +109,7 @@ lbl_802E4FA8:
 lbl_802E4FD0:
 /* 802E4FD0  38 00 00 00 */	li r0, 0
 lbl_802E4FD4:
-/* 802E4FD4  90 0D 8F C8 */	stw r0, data_80451548(r13)
+/* 802E4FD4  90 0D 8F C8 */	stw r0, frameBuffer(r13)
 /* 802E4FD8  48 00 00 9C */	b lbl_802E5074
 lbl_802E4FDC:
 /* 802E4FDC  2C 00 00 01 */	cmpwi r0, 1
@@ -144,7 +144,7 @@ lbl_802E501C:
 lbl_802E5048:
 /* 802E5048  38 00 00 00 */	li r0, 0
 lbl_802E504C:
-/* 802E504C  90 0D 8F C8 */	stw r0, data_80451548(r13)
+/* 802E504C  90 0D 8F C8 */	stw r0, frameBuffer(r13)
 /* 802E5050  48 06 87 E1 */	bl VIGetNextFrameBuffer
 /* 802E5054  28 03 00 00 */	cmplwi r3, 0
 /* 802E5058  41 82 00 18 */	beq lbl_802E5070

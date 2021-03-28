@@ -42,8 +42,8 @@ lbl_805D00C0:
 /* 805D00C0  80 BF 06 8C */	lwz r5, 0x68c(r31)
 /* 805D00C4  88 1F 08 4F */	lbz r0, 0x84f(r31)
 /* 805D00C8  54 00 10 3A */	slwi r0, r0, 2
-/* 805D00CC  3C 60 80 5E */	lis r3, data_805DD570@ha
-/* 805D00D0  38 63 D5 70 */	addi r3, r3, data_805DD570@l
+/* 805D00CC  3C 60 80 5E */	lis r3, Ds_wait_id@ha
+/* 805D00D0  38 63 D5 70 */	addi r3, r3, Ds_wait_id@l
 /* 805D00D4  7C 83 00 2E */	lwzx r4, r3, r0
 /* 805D00D8  7C 05 20 00 */	cmpw r5, r4
 /* 805D00DC  41 82 00 18 */	beq lbl_805D00F4

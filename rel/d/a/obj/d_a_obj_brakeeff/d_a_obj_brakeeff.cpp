@@ -17,10 +17,10 @@ struct request_of_phase_process_class {
 struct obj_brakeeff_class {
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
 struct mDoExt_brkAnm {
@@ -36,6 +36,9 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
+struct J3DModelData {
+};
+
 struct Vec {
 };
 
@@ -44,9 +47,6 @@ struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -64,10 +64,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -355,7 +355,7 @@ SECTION_DATA static u8 bef_brk[8] = {
 };
 
 /* 8046E55C-8046E59C 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$4003                                              */
-SECTION_DATA static u8 data_8046E55C[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,

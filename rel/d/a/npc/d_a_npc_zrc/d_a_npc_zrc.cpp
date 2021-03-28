@@ -25,7 +25,7 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct Vec {
@@ -37,10 +37,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -71,15 +71,6 @@ struct daPy_py_c {
 	/* 8015F424 */ void checkNowWolfEyeUp();
 };
 
-struct J3DModel {
-};
-
-struct J3DJoint {
-};
-
-struct J3DAnmTransformKey {
-};
-
 struct _GXColorS10 {
 };
 
@@ -93,6 +84,9 @@ struct J3DAnmTextureSRTKey {
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct dCcD_SrcCyl {
@@ -139,6 +133,12 @@ struct daNpcF_c {
 	/* 80B92AF8 */ ~daNpcF_c();
 	/* 80B92D44 */ daNpcF_c();
 	/* 80B930B8 */ void setCollisions();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
 };
 
 struct daNpc_zrC_c {
@@ -703,7 +703,7 @@ SECTION_RODATA static u8 const m__17daNpc_zrC_Param_c[116] = {
 };
 
 /* 80B93270-80B93284 0014+00 s=1 e=0 z=0  None .rodata    heapSize$4316                                                */
-SECTION_RODATA static u8 const data_80B93270[20] = {
+SECTION_RODATA static u8 const heapSize[20] = {
 	0x00, 0x00, 0x60, 0x10, 0x00, 0x00, 0x46, 0x90, 0x00, 0x00, 0x60, 0x10, 0x00, 0x00, 0x60, 0x10,
 	0x00, 0x00, 0x00, 0x00,
 };
@@ -1979,7 +1979,7 @@ static u8 l_HIO[4];
 static u8 lit_4773[12 + 4 /* padding */];
 
 /* 80B93C70-80B93C7C 000C+00 s=1 e=0 z=0  None .bss       eyeOffset$4772                                               */
-static u8 data_80B93C70[12];
+static u8 eyeOffset[12];
 
 /* 80B8F00C-80B8F56C 0560+00 s=1 e=0 z=0  None .text      setAttnPos__11daNpc_zrC_cFv                                  */
 #pragma push

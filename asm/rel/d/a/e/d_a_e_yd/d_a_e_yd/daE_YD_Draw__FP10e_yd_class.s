@@ -37,8 +37,8 @@ lbl_807F2FA4:
 /* 807F3030  4B 81 E1 90 */	b entryDL__16mDoExt_McaMorfSOFv
 /* 807F3034  38 7C 08 0C */	addi r3, r28, 0x80c
 /* 807F3038  38 80 00 0C */	li r4, 0xc
-/* 807F303C  3C A0 80 7F */	lis r5, data_807F7B70@ha
-/* 807F3040  38 A5 7B 70 */	addi r5, r5, data_807F7B70@l
+/* 807F303C  3C A0 80 7F */	lis r5, l_color@ha
+/* 807F3040  38 A5 7B 70 */	addi r5, r5, l_color@l
 /* 807F3044  38 DC 01 0C */	addi r6, r28, 0x10c
 /* 807F3048  4B 82 0F 68 */	b update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c
 /* 807F304C  38 7C 08 0C */	addi r3, r28, 0x80c

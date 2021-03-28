@@ -241,8 +241,8 @@ lbl_8072AEB0:
 /* 8072AEF0  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 8072AEF4  3A 81 00 30 */	addi r20, r1, 0x30
 /* 8072AEF8  3A A1 00 2C */	addi r21, r1, 0x2c
-/* 8072AEFC  3C 60 80 73 */	lis r3, data_8072C2DC@ha
-/* 8072AF00  3A C3 C2 DC */	addi r22, r3, data_8072C2DC@l
+/* 8072AEFC  3C 60 80 73 */	lis r3, eff_id_4227@ha
+/* 8072AF00  3A C3 C2 DC */	addi r22, r3, eff_id_4227@l
 lbl_8072AF04:
 /* 8072AF04  3B 97 0A 68 */	addi r28, r23, 0xa68
 /* 8072AF08  7C 9B E0 2E */	lwzx r4, r27, r28

@@ -70,10 +70,10 @@ struct daNpcT_c {
 	/* 8014ACF0 */ void chkPointInArea(cXyz, cXyz, f32, f32, f32, s16);
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -601,7 +601,7 @@ SECTION_DATA static u8 l_ccDCyl[68] = {
 };
 
 /* 80CB84E0-80CB84E8 0008+00 s=1 e=0 z=0  None .data      emttrId$5110                                                 */
-SECTION_DATA static u8 data_80CB84E0[8] = {
+SECTION_DATA static u8 emttrId[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 

@@ -69,10 +69,10 @@ struct mDoExt_morf_c {
 	/* 8061AD20 */ void isStop();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -92,20 +92,20 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
 	/* 802C06F4 */ void stopAnime();
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -184,15 +184,15 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
+struct _GXColor {
+};
+
 struct csXyz {
 	/* 8061AAB8 */ csXyz(csXyz const&);
 	/* 8061A650 */ csXyz();
 	/* 802673F4 */ csXyz(s16, s16, s16);
 	/* 80611EF8 */ ~csXyz();
 	/* 8061A990 */ void operator=(csXyz const&);
-};
-
-struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -913,7 +913,7 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 8061B0C4-8061B0D0 000A+02 s=2 e=0 z=0  None .data      iso_eff$5401                                                 */
-SECTION_DATA static u8 data_8061B0C4[10 + 2 /* padding */] = {
+SECTION_DATA static u8 iso_eff_5401[10 + 2 /* padding */] = {
 	0x87, 0xF2, 0x87, 0xF3, 0x87, 0xF4, 0x87, 0xF5, 0x87, 0xF6,
 	/* padding */
 	0x00, 0x00,
@@ -938,14 +938,14 @@ SECTION_DATA static u8 size_p[76] = {
 };
 
 /* 8061B168-8061B174 000A+02 s=1 e=0 z=0  None .data      ex_eff$6145                                                  */
-SECTION_DATA static u8 data_8061B168[10 + 2 /* padding */] = {
+SECTION_DATA static u8 ex_eff[10 + 2 /* padding */] = {
 	0x86, 0x21, 0x86, 0x22, 0x86, 0x23, 0x86, 0x24, 0x86, 0x25,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 8061B174-8061B17C 0008+00 s=1 e=0 z=0  None .data      iso_eff$6219                                                 */
-SECTION_DATA static u8 data_8061B174[8] = {
+SECTION_DATA static u8 iso_eff_6219[8] = {
 	0x87, 0xF7, 0x87, 0xF8, 0x87, 0xF9, 0x87, 0xFA,
 };
 
@@ -1016,26 +1016,26 @@ SECTION_DATA static void* lit_6812[62] = {
 };
 
 /* 8061B274-8061B280 000A+02 s=1 e=0 z=0  None .data      iso_eff$6994                                                 */
-SECTION_DATA static u8 data_8061B274[10 + 2 /* padding */] = {
+SECTION_DATA static u8 iso_eff_6994[10 + 2 /* padding */] = {
 	0x87, 0xFC, 0x87, 0xFD, 0x87, 0xFE, 0x87, 0xFF, 0x88, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 8061B280-8061B288 0006+02 s=1 e=0 z=0  None .data      iso_eff$7005                                                 */
-SECTION_DATA static u8 data_8061B280[6 + 2 /* padding */] = {
+SECTION_DATA static u8 iso_eff_7005[6 + 2 /* padding */] = {
 	0x88, 0x05, 0x88, 0x06, 0x88, 0x07,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 8061B288-8061B290 0008+00 s=1 e=0 z=0  None .data      iso_eff$7014                                                 */
-SECTION_DATA static u8 data_8061B288[8] = {
+SECTION_DATA static u8 iso_eff_7014[8] = {
 	0x87, 0xEE, 0x87, 0xEF, 0x87, 0xF0, 0x87, 0xF1,
 };
 
 /* 8061B290-8061B2DC 004C+00 s=1 e=0 z=0  None .data      p_bmd$7370                                                   */
-SECTION_DATA static u8 data_8061B290[76] = {
+SECTION_DATA static u8 p_bmd[76] = {
 	0x00, 0x00, 0x00, 0x2B, 0x00, 0x00, 0x00, 0x22, 0x00, 0x00, 0x00, 0x22, 0x00, 0x00, 0x00, 0x22,
 	0x00, 0x00, 0x00, 0x22, 0x00, 0x00, 0x00, 0x22, 0x00, 0x00, 0x00, 0x22, 0x00, 0x00, 0x00, 0x22,
 	0x00, 0x00, 0x00, 0x22, 0x00, 0x00, 0x00, 0x22, 0x00, 0x00, 0x00, 0x22, 0x00, 0x00, 0x00, 0x22,
@@ -1044,7 +1044,7 @@ SECTION_DATA static u8 data_8061B290[76] = {
 };
 
 /* 8061B2DC-8061B31C 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$7742                                              */
-SECTION_DATA static u8 data_8061B2DC[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x09, 0x00, 0x02, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -1052,7 +1052,7 @@ SECTION_DATA static u8 data_8061B2DC[64] = {
 };
 
 /* 8061B31C-8061B35C 0040+00 s=1 e=0 z=0  None .data      body_sph_src$7743                                            */
-SECTION_DATA static u8 data_8061B31C[64] = {
+SECTION_DATA static u8 body_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00,
@@ -1060,7 +1060,7 @@ SECTION_DATA static u8 data_8061B31C[64] = {
 };
 
 /* 8061B35C-8061B39C 0040+00 s=1 e=0 z=0  None .data      parts_sph_src$7744                                           */
-SECTION_DATA static u8 data_8061B35C[64] = {
+SECTION_DATA static u8 parts_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00,
@@ -1068,7 +1068,7 @@ SECTION_DATA static u8 data_8061B35C[64] = {
 };
 
 /* 8061B39C-8061B3DC 0040+00 s=1 e=0 z=0  None .data      core_sph_src$7745                                            */
-SECTION_DATA static u8 data_8061B39C[64] = {
+SECTION_DATA static u8 core_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x40, 0x02, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -2126,7 +2126,7 @@ static u8 lit_5012[12];
 static u8 lit_5013[12];
 
 /* 8061B574-8061B5A4 0030+00 s=1 e=0 z=0  None .bss       sdemo_p$5007                                                 */
-static u8 data_8061B574[48];
+static u8 sdemo_p[48];
 
 /* 80613270-80613E00 0B90+00 s=1 e=0 z=0  None .text      fish_normal__FP10b_ob_class                                  */
 #pragma push

@@ -156,12 +156,12 @@ struct dBgS_AcchCir {
 struct dBgS {
 };
 
-struct csXyz {
-	/* 80AA6690 */ ~csXyz();
-};
-
 struct cXyz {
 	/* 80AA6654 */ ~cXyz();
+};
+
+struct csXyz {
+	/* 80AA6690 */ ~csXyz();
 };
 
 struct dBgS_Acch {

@@ -27,8 +27,8 @@ lbl_806AB1B0:
 /* 806AB1B8  3B 40 00 00 */	li r26, 0
 /* 806AB1BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 806AB1C0  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 806AB1C4  3C 60 80 6B */	lis r3, data_806AD720@ha
-/* 806AB1C8  3A E3 D7 20 */	addi r23, r3, data_806AD720@l
+/* 806AB1C4  3C 60 80 6B */	lis r3, dead_effect_name@ha
+/* 806AB1C8  3A E3 D7 20 */	addi r23, r3, dead_effect_name@l
 /* 806AB1CC  3C 60 80 6B */	lis r3, lit_3874@ha
 /* 806AB1D0  3B 03 D5 5C */	addi r24, r3, lit_3874@l
 lbl_806AB1D4:

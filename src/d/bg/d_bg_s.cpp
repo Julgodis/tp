@@ -42,18 +42,18 @@ struct dBgS_Acch {
 	/* 8007732C */ void CalcWallRR();
 };
 
+struct cXyz {
+};
+
+struct csXyz {
+};
+
 struct cBgS_PolyInfo {
 	/* 802680F8 */ void ChkSetInfo() const;
 	/* 80268120 */ void ClearPi();
 	/* 8026816C */ void SetActorInfo(int, void*, unsigned int);
 	/* 8026817C */ void ChkSafe(void const*, unsigned int) const;
 	/* 802681AC */ void ChkBgIndex() const;
-};
-
-struct csXyz {
-};
-
-struct cXyz {
 };
 
 struct dBgS {

@@ -11,7 +11,10 @@
 // Types:
 // 
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Vec {
@@ -23,13 +26,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -59,16 +59,16 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 8053DDB8 */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct daNpcT_evtData_c {
 };
 
 struct daNpcT_motionAnmData_c {
 };
 
-struct daNpcT_evtData_c {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpc_Besu_c {
@@ -144,12 +144,14 @@ struct daNpc_Besu_Param_c {
 struct _GXColorS10 {
 };
 
-struct J3DModel {
+struct cXyz {
+	/* 80266AE4 */ void operator+(Vec const&) const;
+	/* 80266B34 */ void operator-(Vec const&) const;
+	/* 8053D724 */ ~cXyz();
+	/* 8053DDB4 */ cXyz();
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
+struct J3DModel {
 };
 
 struct csXyz {
@@ -157,11 +159,9 @@ struct csXyz {
 	/* 8053DCB4 */ csXyz();
 };
 
-struct cXyz {
-	/* 80266AE4 */ void operator+(Vec const&) const;
-	/* 80266B34 */ void operator-(Vec const&) const;
-	/* 8053D724 */ ~cXyz();
-	/* 8053DDB4 */ cXyz();
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
 };
 
 struct daNpcT_c {
@@ -782,7 +782,7 @@ SECTION_RODATA static u8 const m__18daNpc_Besu_Param_c[144] = {
 };
 
 /* 8053E7E4-8053E830 004C+00 s=1 e=0 z=0  None .rodata    heapSize$4091                                                */
-SECTION_RODATA static u8 const data_8053E7E4[76] = {
+SECTION_RODATA static u8 const heapSize[76] = {
 	0x00, 0x00, 0x35, 0xC0, 0x00, 0x00, 0x35, 0xC0, 0x00, 0x00, 0x35, 0x10, 0x00, 0x00, 0x35, 0xD0,
 	0x00, 0x00, 0x35, 0xD0, 0x00, 0x00, 0x35, 0xD0, 0x00, 0x00, 0x3D, 0xC0, 0x00, 0x00, 0x3E, 0xC0,
 	0x00, 0x00, 0x3D, 0xD0, 0x00, 0x00, 0x35, 0xC0, 0x00, 0x00, 0x35, 0xC0, 0x00, 0x00, 0x35, 0xD0,
@@ -904,7 +904,7 @@ SECTION_RODATA static u32 const lit_5346 = 0x42AA0000;
 SECTION_RODATA static u32 const lit_5347 = 0x42F00000;
 
 /* 8053E8C8-8053E8CC 0004+00 s=1 e=0 z=0  None .rodata    jointNo$5355                                                 */
-SECTION_RODATA static u8 const data_8053E8C8[4] = {
+SECTION_RODATA static u8 const jointNo[4] = {
 	0x00, 0x00, 0x00, 0x0E,
 };
 
@@ -1679,7 +1679,7 @@ SECTION_DATA static void* lit_5060[3] = {
 };
 
 /* 8053FAAC-8053FBB4 0108+00 s=1 e=0 z=0  None .data      cupAnmData$5432                                              */
-SECTION_DATA static u8 data_8053FAAC[264] = {
+SECTION_DATA static u8 cupAnmData[264] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
 	0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
 	0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,

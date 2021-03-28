@@ -35,10 +35,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
 struct mDoExt_brkAnm {
@@ -50,19 +50,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -752,17 +752,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80815B24-80815B2C 0008+00 s=1 e=0 z=0  None .data      e_prim$3804                                                  */
-SECTION_DATA static u8 data_80815B24[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 80815B2C-80815B34 0008+00 s=1 e=0 z=0  None .data      e_env$3805                                                   */
-SECTION_DATA static u8 data_80815B2C[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 80815B34-80815B3C 0006+02 s=1 e=0 z=0  None .data      eff_id$3813                                                  */
-SECTION_DATA static u8 data_80815B34[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -809,7 +809,7 @@ SECTION_DATA static void* lit_7049[11] = {
 };
 
 /* 80815BD0-80815BDC 000C+00 s=1 e=0 z=0  None .data      YM_DIG_POS_Y$7355                                            */
-SECTION_DATA static u8 data_80815BD0[12] = {
+SECTION_DATA static u8 YM_DIG_POS_Y[12] = {
 	0xC1, 0x70, 0x00, 0x00, 0xC1, 0xF0, 0x00, 0x00, 0xC2, 0x8C, 0x00, 0x00,
 };
 

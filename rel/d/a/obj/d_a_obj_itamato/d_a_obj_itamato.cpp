@@ -70,10 +70,10 @@ struct dSv_event_c {
 	/* 80034A04 */ void getEventReg(u16) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -464,7 +464,7 @@ SECTION_RODATA static u8 const lit_4437[8] = {
 };
 
 /* 80C2AC18-80C2AC20 0006+02 s=1 e=0 z=0  None .rodata    id$4441                                                      */
-SECTION_RODATA static u8 const data_80C2AC18[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const id[6 + 2 /* padding */] = {
 	0x85, 0xF1, 0x85, 0xF2, 0x85, 0xF3,
 	/* padding */
 	0x00, 0x00,

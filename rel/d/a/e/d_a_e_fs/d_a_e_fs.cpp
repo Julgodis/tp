@@ -18,19 +18,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -92,10 +92,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -575,24 +575,24 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 806BE5A0-806BE5A8 0008+00 s=1 e=0 z=0  None .data      e_prim$3796                                                  */
-SECTION_DATA static u8 data_806BE5A0[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 806BE5A8-806BE5B0 0008+00 s=1 e=0 z=0  None .data      e_env$3797                                                   */
-SECTION_DATA static u8 data_806BE5A8[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 806BE5B0-806BE5B8 0006+02 s=1 e=0 z=0  None .data      eff_id$3805                                                  */
-SECTION_DATA static u8 data_806BE5B0[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 806BE5B8-806BE5C0 0008+00 s=1 e=0 z=0  None .data      w_eff_id$4278                                                */
-SECTION_DATA static u8 data_806BE5B8[8] = {
+SECTION_DATA static u8 w_eff_id[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
@@ -623,7 +623,7 @@ SECTION_DATA static void* lit_4546[11] = {
 };
 
 /* 806BE608-806BE64C 0044+00 s=1 e=0 z=0  None .data      cc_cyl_src$4689                                              */
-SECTION_DATA static u8 data_806BE608[68] = {
+SECTION_DATA static u8 cc_cyl_src[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x43, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -632,7 +632,7 @@ SECTION_DATA static u8 data_806BE608[68] = {
 };
 
 /* 806BE64C-806BE68C 0040+00 s=1 e=0 z=0  None .data      at_sph_src$4690                                              */
-SECTION_DATA static u8 data_806BE64C[64] = {
+SECTION_DATA static u8 at_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -1022,7 +1022,7 @@ asm static void e_fs_damage(e_fs_class* param_0) {
 static u8 lit_4275[12 + 4 /* padding */];
 
 /* 806BE7DC-806BE7E8 000C+00 s=1 e=0 z=0  None .bss       sc$4274                                                      */
-static u8 data_806BE7DC[12];
+static u8 sc[12];
 
 /* 806BC818-806BCC30 0418+00 s=1 e=0 z=0  None .text      e_fs_end__FP10e_fs_class                                     */
 #pragma push

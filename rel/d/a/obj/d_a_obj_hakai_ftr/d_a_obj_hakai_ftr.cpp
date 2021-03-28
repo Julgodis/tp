@@ -33,13 +33,13 @@ struct daObjHFtr_c {
 	/* 80C17EDC */ void callEmt();
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -57,10 +57,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -307,18 +307,18 @@ SECTION_RODATA static u32 const lit_3863 = 0x3F800000;
 SECTION_RODATA static u32 const lit_3864 = 0xBF800000;
 
 /* 80C18128-80C18140 0018+00 s=1 e=0 z=0  None .rodata    COL_OFFSET_X$3868                                            */
-SECTION_RODATA static u8 const data_80C18128[24] = {
+SECTION_RODATA static u8 const COL_OFFSET_X[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x32, 0xFF, 0xFF, 0xFF, 0xCE,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80C18140-80C1814C 000C+00 s=1 e=0 z=0  None .rodata    COL_HEIGHT$3869                                              */
-SECTION_RODATA static u8 const data_80C18140[12] = {
+SECTION_RODATA static u8 const COL_HEIGHT[12] = {
 	0x00, 0x00, 0x00, 0xAA, 0x00, 0x00, 0x00, 0xA0, 0x00, 0x00, 0x00, 0x6E,
 };
 
 /* 80C1814C-80C18158 000C+00 s=1 e=0 z=0  None .rodata    COL_RADIUS$3870                                              */
-SECTION_RODATA static u8 const data_80C1814C[12] = {
+SECTION_RODATA static u8 const COL_RADIUS[12] = {
 	0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x46, 0x00, 0x00, 0x00, 0x5A,
 };
 
@@ -328,7 +328,7 @@ SECTION_RODATA static u8 const lit_3896[8] = {
 };
 
 /* 80C18160-80C18168 0008+00 s=1 e=0 z=0  None .rodata    PARTICLE_NAME$3926                                           */
-SECTION_RODATA static u8 const data_80C18160[8] = {
+SECTION_RODATA static u8 const PARTICLE_NAME[8] = {
 	0x8A, 0xE7, 0x8A, 0xE8, 0x8A, 0xE9, 0x8A, 0xEA,
 };
 

@@ -125,8 +125,8 @@ lbl_80110AA8:
 lbl_80110AC0:
 /* 80110AC0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80110AC4  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80110AC8  3C 80 80 39 */	lis r4, data_80391A20@ha
-/* 80110ACC  38 84 1A 20 */	addi r4, r4, data_80391A20@l
+/* 80110AC8  3C 80 80 39 */	lis r4, kandelaarOffset@ha
+/* 80110ACC  38 84 1A 20 */	addi r4, r4, kandelaarOffset@l
 /* 80110AD0  38 BF 36 0C */	addi r5, r31, 0x360c
 /* 80110AD4  48 23 62 99 */	bl PSMTXMultVec
 /* 80110AD8  38 61 00 14 */	addi r3, r1, 0x14

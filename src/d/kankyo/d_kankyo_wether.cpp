@@ -29,10 +29,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct Vec {
@@ -47,7 +47,7 @@ struct cXyz {
 	/* 8026706C */ bool operator!=(Vec const&) const;
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -1584,7 +1584,7 @@ asm static void wether_move_moya() {
 static u8 lit_4965[12];
 
 /* 80424944-80424950 000C+00 s=1 e=0 z=0  None .bss       r09o$4964                                                    */
-static u8 data_80424944[12];
+static u8 r09o[12];
 
 /* 80452130-80452134 0004+00 s=1 e=0 z=0  None .sdata2    @5181                                                        */
 SECTION_SDATA2 static u32 lit_5181 = 0xC82FC800;

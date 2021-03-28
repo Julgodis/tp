@@ -86,10 +86,10 @@ struct JAISeqDataRegion {
 struct JAISeqDataMgr {
 };
 
-struct JAIAudience {
+struct JAISeCategoryArrangement {
 };
 
-struct JAISeCategoryArrangement {
+struct JAIAudience {
 };
 
 struct JAISeMgr {

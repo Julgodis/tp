@@ -22,10 +22,10 @@ struct mDoMtx_stack_c {
 	/* 8000CDD4 */ void transM(cXyz const&);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -85,10 +85,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -455,7 +455,7 @@ SECTION_RODATA static u8 const lit_3770[8] = {
 };
 
 /* 80C879E0-80C879E8 0008+00 s=1 e=0 z=0  None .rodata    l_bck$3780                                                   */
-SECTION_RODATA static u8 const data_80C879E0[8] = {
+SECTION_RODATA static u8 const l_bck[8] = {
 	0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x06,
 };
 
@@ -563,7 +563,7 @@ SECTION_DATA static void* lit_3942[3] = {
 };
 
 /* 80C87AB8-80C87AD0 0018+00 s=1 e=0 z=0  None .data      mode_proc$3940                                               */
-SECTION_DATA static u8 data_80C87AB8[24] = {
+SECTION_DATA static u8 mode_proc[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };

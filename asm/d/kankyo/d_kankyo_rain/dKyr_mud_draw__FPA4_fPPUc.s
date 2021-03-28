@@ -30,7 +30,7 @@ lbl_8006D01C:
 /* 8006D08C  7C 00 07 75 */	extsb. r0, r0
 /* 8006D090  40 82 00 14 */	bne lbl_8006D0A4
 /* 8006D094  C0 02 87 B8 */	lfs f0, lit_3954(r2)
-/* 8006D098  D0 0D 89 B8 */	stfs f0, data_80450F38(r13)
+/* 8006D098  D0 0D 89 B8 */	stfs f0, rot_11307(r13)
 /* 8006D09C  38 00 00 01 */	li r0, 1
 /* 8006D0A0  98 0D 89 BC */	stb r0, data_80450F3C(r13)
 lbl_8006D0A4:
@@ -426,7 +426,7 @@ lbl_8006D684:
 /* 8006D694  4B FF 54 49 */	bl dKr_cullVtx_Set__Fv
 /* 8006D698  38 61 00 78 */	addi r3, r1, 0x78
 /* 8006D69C  38 80 00 5A */	li r4, 0x5a
-/* 8006D6A0  C0 0D 89 B8 */	lfs f0, data_80450F38(r13)
+/* 8006D6A0  C0 0D 89 B8 */	lfs f0, rot_11307(r13)
 /* 8006D6A4  EC 38 00 32 */	fmuls f1, f24, f0
 /* 8006D6A8  48 2D 90 01 */	bl PSMTXRotRad
 /* 8006D6AC  38 61 00 A8 */	addi r3, r1, 0xa8

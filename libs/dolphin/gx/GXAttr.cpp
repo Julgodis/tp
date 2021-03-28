@@ -134,17 +134,17 @@ extern "C" asm void __GXSetVCD() {
 
 /* ############################################################################################## */
 /* 80450A80-80450A84 0004+00 s=1 e=0 z=0  None .sdata     tbl1$241                                                     */
-SECTION_SDATA static u8 data_80450A80[4] = {
+SECTION_SDATA static u8 tbl1[4] = {
 	0x00, 0x04, 0x01, 0x02,
 };
 
 /* 80450A84-80450A88 0004+00 s=1 e=0 z=0  None .sdata     tbl2$242                                                     */
-SECTION_SDATA static u8 data_80450A84[4] = {
+SECTION_SDATA static u8 tbl2[4] = {
 	0x00, 0x08, 0x01, 0x02,
 };
 
 /* 80450A88-80450A90 0004+04 s=1 e=0 z=0  None .sdata     tbl3$243                                                     */
-SECTION_SDATA static u8 data_80450A88[4 + 4 /* padding */] = {
+SECTION_SDATA static u8 tbl3[4 + 4 /* padding */] = {
 	0x00, 0x0C, 0x01, 0x02,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,

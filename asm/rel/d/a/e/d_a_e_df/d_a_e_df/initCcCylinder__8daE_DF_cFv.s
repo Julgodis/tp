@@ -10,8 +10,8 @@ lbl_806A7828:
 /* 806A7848  7F E6 FB 78 */	mr r6, r31
 /* 806A784C  4B 9D C0 14 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 806A7850  38 7F 06 B8 */	addi r3, r31, 0x6b8
-/* 806A7854  3C 80 80 6B */	lis r4, data_806A9F5C@ha
-/* 806A7858  38 84 9F 5C */	addi r4, r4, data_806A9F5C@l
+/* 806A7854  3C 80 80 6B */	lis r4, ccCylSrc@ha
+/* 806A7858  38 84 9F 5C */	addi r4, r4, ccCylSrc@l
 /* 806A785C  4B 9D D0 58 */	b Set__8dCcD_CylFRC11dCcD_SrcCyl
 /* 806A7860  38 1F 06 7C */	addi r0, r31, 0x67c
 /* 806A7864  90 1F 06 FC */	stw r0, 0x6fc(r31)

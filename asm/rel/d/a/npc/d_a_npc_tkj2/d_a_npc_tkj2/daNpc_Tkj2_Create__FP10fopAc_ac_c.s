@@ -150,8 +150,8 @@ lbl_80B14090:
 /* 80B140A0  4B 56 F7 C0 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 lbl_80B140A4:
 /* 80B140A4  38 7E 08 8C */	addi r3, r30, 0x88c
-/* 80B140A8  3C 80 80 B1 */	lis r4, data_80B143D4@ha
-/* 80B140AC  38 84 43 D4 */	addi r4, r4, data_80B143D4@l
+/* 80B140A8  3C 80 80 B1 */	lis r4, cc_sph_src@ha
+/* 80B140AC  38 84 43 D4 */	addi r4, r4, cc_sph_src@l
 /* 80B140B0  4B 57 09 84 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80B140B4  38 1E 08 50 */	addi r0, r30, 0x850
 /* 80B140B8  90 1E 08 D0 */	stw r0, 0x8d0(r30)

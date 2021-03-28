@@ -14,11 +14,11 @@
 struct Vec {
 };
 
-struct J3DModel;
 struct J3DModelData {
 	/* 803260F8 */ void syncJ3DSysFlags() const;
 };
 
+struct J3DModel;
 struct J3DSkinDeform {
 	/* 8032C9B0 */ void initSkinInfo(J3DModelData*);
 	/* 8032CF44 */ void initMtxIndexArray(J3DModelData*);

@@ -28,8 +28,8 @@ lbl_8025A480:
 /* 8025A49C  38 E0 00 00 */	li r7, 0
 /* 8025A4A0  39 00 00 00 */	li r8, 0
 /* 8025A4A4  4B DE 1B D5 */	bl setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap
-/* 8025A4A8  3C 60 80 3C */	lis r3, data_803C3188@ha
-/* 8025A4AC  38 03 31 88 */	addi r0, r3, data_803C3188@l
+/* 8025A4A8  3C 60 80 3C */	lis r3, camparamarc@ha
+/* 8025A4AC  38 03 31 88 */	addi r0, r3, camparamarc@l
 /* 8025A4B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8025A4B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8025A4B8  90 03 5D 88 */	stw r0, 0x5d88(r3)

@@ -80,8 +80,8 @@ lbl_806819A0:
 lbl_806819C0:
 /* 806819C0  88 1E 05 B6 */	lbz r0, 0x5b6(r30)
 /* 806819C4  54 00 10 3A */	slwi r0, r0, 2
-/* 806819C8  3C 60 80 68 */	lis r3, data_80682524@ha
-/* 806819CC  38 63 25 24 */	addi r3, r3, data_80682524@l
+/* 806819C8  3C 60 80 68 */	lis r3, arc_name@ha
+/* 806819CC  38 63 25 24 */	addi r3, r3, arc_name@l
 /* 806819D0  7C 03 00 2E */	lwzx r0, r3, r0
 /* 806819D4  90 1E 05 B8 */	stw r0, 0x5b8(r30)
 /* 806819D8  38 7E 05 AC */	addi r3, r30, 0x5ac
@@ -228,8 +228,8 @@ lbl_80681B8C:
 /* 80681BE4  7F C6 F3 78 */	mr r6, r30
 /* 80681BE8  4B A0 1C 78 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80681BEC  38 7E 09 20 */	addi r3, r30, 0x920
-/* 80681BF0  3C 80 80 68 */	lis r4, data_80682530@ha
-/* 80681BF4  38 84 25 30 */	addi r4, r4, data_80682530@l
+/* 80681BF0  3C 80 80 68 */	lis r4, cc_sph_src@ha
+/* 80681BF4  38 84 25 30 */	addi r4, r4, cc_sph_src@l
 /* 80681BF8  4B A0 2E 3C */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80681BFC  38 1E 08 E4 */	addi r0, r30, 0x8e4
 /* 80681C00  90 1E 09 64 */	stw r0, 0x964(r30)

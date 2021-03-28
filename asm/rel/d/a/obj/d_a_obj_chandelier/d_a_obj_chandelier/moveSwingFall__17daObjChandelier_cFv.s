@@ -50,14 +50,14 @@ lbl_80BC89B0:
 /* 80BC8A70  4B 44 44 D4 */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 80BC8A74  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80BC8A78  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80BC8A7C  3C 80 80 BD */	lis r4, data_80BC8DE0@ha
-/* 80BC8A80  38 84 8D E0 */	addi r4, r4, data_80BC8DE0@l
+/* 80BC8A7C  3C 80 80 BD */	lis r4, TOP_POS_Y_OFFSET@ha
+/* 80BC8A80  38 84 8D E0 */	addi r4, r4, TOP_POS_Y_OFFSET@l
 /* 80BC8A84  38 A1 00 44 */	addi r5, r1, 0x44
 /* 80BC8A88  4B 77 E2 E4 */	b PSMTXMultVec
 /* 80BC8A8C  38 61 00 20 */	addi r3, r1, 0x20
 /* 80BC8A90  38 81 00 50 */	addi r4, r1, 0x50
-/* 80BC8A94  3C A0 80 BD */	lis r5, data_80BC8DE0@ha
-/* 80BC8A98  38 A5 8D E0 */	addi r5, r5, data_80BC8DE0@l
+/* 80BC8A94  3C A0 80 BD */	lis r5, TOP_POS_Y_OFFSET@ha
+/* 80BC8A98  38 A5 8D E0 */	addi r5, r5, TOP_POS_Y_OFFSET@l
 /* 80BC8A9C  4B 69 E0 48 */	b __pl__4cXyzCFRC3Vec
 /* 80BC8AA0  C0 01 00 20 */	lfs f0, 0x20(r1)
 /* 80BC8AA4  D0 01 00 38 */	stfs f0, 0x38(r1)

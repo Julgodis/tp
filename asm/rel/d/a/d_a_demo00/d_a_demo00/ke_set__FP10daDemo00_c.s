@@ -62,8 +62,8 @@ lbl_804A6DC8:
 /* 804A6E04  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804A6E08  38 63 07 68 */	addi r3, r3, calc_mtx@l
 /* 804A6E0C  80 63 00 00 */	lwz r3, 0(r3)
-/* 804A6E10  3C 80 80 4B */	lis r4, data_804A8A3C@ha
-/* 804A6E14  38 84 8A 3C */	addi r4, r4, data_804A8A3C@l
+/* 804A6E10  3C 80 80 4B */	lis r4, ke_za@ha
+/* 804A6E14  38 84 8A 3C */	addi r4, r4, ke_za@l
 /* 804A6E18  7C 04 D2 AE */	lhax r0, r4, r26
 /* 804A6E1C  1C 00 00 05 */	mulli r0, r0, 5
 /* 804A6E20  7C 04 07 34 */	extsh r4, r0
@@ -85,8 +85,8 @@ lbl_804A6E5C:
 /* 804A6E5C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804A6E60  38 63 07 68 */	addi r3, r3, calc_mtx@l
 /* 804A6E64  80 63 00 00 */	lwz r3, 0(r3)
-/* 804A6E68  3C 80 80 4B */	lis r4, data_804A8A3C@ha
-/* 804A6E6C  38 84 8A 3C */	addi r4, r4, data_804A8A3C@l
+/* 804A6E68  3C 80 80 4B */	lis r4, ke_za@ha
+/* 804A6E6C  38 84 8A 3C */	addi r4, r4, ke_za@l
 /* 804A6E70  7C 04 D2 AE */	lhax r0, r4, r26
 /* 804A6E74  1C 80 00 05 */	mulli r4, r0, 5
 /* 804A6E78  3C 84 00 01 */	addis r4, r4, 1

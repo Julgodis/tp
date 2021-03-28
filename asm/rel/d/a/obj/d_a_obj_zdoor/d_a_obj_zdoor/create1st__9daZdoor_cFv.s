@@ -39,8 +39,8 @@ lbl_80D3F9F0:
 /* 80D3FA84  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80D3FA88  38 C0 00 00 */	li r6, 0
 /* 80D3FA8C  54 E0 08 3C */	slwi r0, r7, 1
-/* 80D3FA90  3C E0 80 D4 */	lis r7, data_80D402A4@ha
-/* 80D3FA94  38 E7 02 A4 */	addi r7, r7, data_80D402A4@l
+/* 80D3FA90  3C E0 80 D4 */	lis r7, estimateSizeTbl@ha
+/* 80D3FA94  38 E7 02 A4 */	addi r7, r7, estimateSizeTbl@l
 /* 80D3FA98  7C E7 02 2E */	lhzx r7, r7, r0
 /* 80D3FA9C  39 00 00 00 */	li r8, 0
 /* 80D3FAA0  4B 33 8D 1C */	b MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f

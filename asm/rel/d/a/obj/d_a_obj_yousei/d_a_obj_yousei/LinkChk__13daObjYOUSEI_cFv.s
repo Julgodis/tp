@@ -5,8 +5,8 @@ lbl_804CF098:
 /* 804CF0A4  39 61 00 50 */	addi r11, r1, 0x50
 /* 804CF0A8  4B E9 31 30 */	b _savegpr_28
 /* 804CF0AC  7C 7C 1B 78 */	mr r28, r3
-/* 804CF0B0  3C 60 80 4D */	lis r3, data_804D15F0@ha
-/* 804CF0B4  3B E3 15 F0 */	addi r31, r3, data_804D15F0@l
+/* 804CF0B0  3C 60 80 4D */	lis r3, ccSphSrc@ha
+/* 804CF0B4  3B E3 15 F0 */	addi r31, r3, ccSphSrc@l
 /* 804CF0B8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 804CF0BC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804CF0C0  83 C3 5D AC */	lwz r30, 0x5dac(r3)

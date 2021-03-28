@@ -142,8 +142,8 @@ lbl_80D34F4C:
 /* 80D34FA0  7F E6 FB 78 */	mr r6, r31
 /* 80D34FA4  4B 34 E8 BC */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80D34FA8  38 7F 06 00 */	addi r3, r31, 0x600
-/* 80D34FAC  3C 80 80 D3 */	lis r4, data_80D351C8@ha
-/* 80D34FB0  38 84 51 C8 */	addi r4, r4, data_80D351C8@l
+/* 80D34FAC  3C 80 80 D3 */	lis r4, cc_sph_src@ha
+/* 80D34FB0  38 84 51 C8 */	addi r4, r4, cc_sph_src@l
 /* 80D34FB4  4B 34 FA 80 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80D34FB8  38 1F 05 C4 */	addi r0, r31, 0x5c4
 /* 80D34FBC  90 1F 06 44 */	stw r0, 0x644(r31)

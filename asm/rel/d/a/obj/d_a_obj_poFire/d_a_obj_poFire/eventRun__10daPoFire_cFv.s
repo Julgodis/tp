@@ -10,8 +10,8 @@ lbl_80CB3BE0:
 /* 80CB3C00  3B E3 4F F8 */	addi r31, r3, 0x4ff8
 /* 80CB3C04  7F E3 FB 78 */	mr r3, r31
 /* 80CB3C08  80 9E 05 8C */	lwz r4, 0x58c(r30)
-/* 80CB3C0C  3C A0 80 CB */	lis r5, data_80CB404C@ha
-/* 80CB3C10  38 A5 40 4C */	addi r5, r5, data_80CB404C@l
+/* 80CB3C0C  3C A0 80 CB */	lis r5, action_table@ha
+/* 80CB3C10  38 A5 40 4C */	addi r5, r5, action_table@l
 /* 80CB3C14  38 C0 00 01 */	li r6, 1
 /* 80CB3C18  38 E0 00 00 */	li r7, 0
 /* 80CB3C1C  39 00 00 00 */	li r8, 0

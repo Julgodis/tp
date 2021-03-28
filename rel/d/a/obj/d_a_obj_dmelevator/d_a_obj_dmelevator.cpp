@@ -75,10 +75,10 @@ struct dVibration_c {
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -456,7 +456,7 @@ static u8 lit_3658[12];
 static u8 lit_3659[12];
 
 /* 80BDFBAC-80BDFBDC 0030+00 s=1 e=0 z=0  None .bss       l_push_check_pos$3653                                        */
-static u8 data_80BDFBAC[48];
+static u8 l_push_check_pos[48];
 
 /* 80BDD96C-80BDDBB4 0248+00 s=1 e=0 z=0  None .text      rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c              */
 #pragma push
@@ -738,7 +738,7 @@ SECTION_DATA static void* lit_4028[3] = {
 };
 
 /* 80BDF99C-80BDF9C0 0024+00 s=1 e=0 z=0  None .data      l_func$4025                                                  */
-SECTION_DATA static u8 data_80BDF99C[36] = {
+SECTION_DATA static u8 l_func_4025[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
@@ -860,7 +860,7 @@ SECTION_DATA static void* lit_4100[3] = {
 };
 
 /* 80BDF9F0-80BDFA20 0030+00 s=1 e=0 z=0  None .data      l_mode_func$4096                                             */
-SECTION_DATA static u8 data_80BDF9F0[48] = {
+SECTION_DATA static u8 l_mode_func[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1009,7 +1009,7 @@ SECTION_DATA static void* lit_4202[3] = {
 };
 
 /* 80BDFA68-80BDFAB0 0048+00 s=1 e=0 z=0  None .data      l_func$4196                                                  */
-SECTION_DATA static u8 data_80BDFA68[72] = {
+SECTION_DATA static u8 l_func_4196[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1091,7 +1091,7 @@ void daObjDmElevator_c::actionDead() {
 
 /* ############################################################################################## */
 /* 80BDFAB0-80BDFAB8 0008+00 s=1 e=0 z=0  None .data      action_table$4279                                            */
-SECTION_DATA static void* data_80BDFAB0[2] = {
+SECTION_DATA static void* action_table[2] = {
 	(void*)(((char*)&struct_80BDF91C)+0x16) /* None */,
 	(void*)(((char*)&struct_80BDF91C)+0x1B) /* None */,
 };

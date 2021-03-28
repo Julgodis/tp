@@ -31,14 +31,14 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTextureSRTKey {
-};
-
 struct J3DAnmTevRegKey {
 };
 
 struct J3DMaterialTable {
 	/* 8032F880 */ void removeTevRegAnimator(J3DAnmTevRegKey*);
+};
+
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -55,19 +55,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -90,10 +90,10 @@ struct fopAcM_gc_c {
 	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daE_HM_c {
@@ -682,17 +682,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 806E5A9C-806E5AA4 0008+00 s=1 e=0 z=0  None .data      e_prim$3670                                                  */
-SECTION_DATA static u8 data_806E5A9C[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 806E5AA4-806E5AAC 0008+00 s=1 e=0 z=0  None .data      e_env$3671                                                   */
-SECTION_DATA static u8 data_806E5AA4[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 806E5AAC-806E5AB4 0006+02 s=1 e=0 z=0  None .data      eff_id$3679                                                  */
-SECTION_DATA static u8 data_806E5AAC[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -834,7 +834,7 @@ asm daE_HM_HIO_c::daE_HM_HIO_c() {
 
 /* ############################################################################################## */
 /* 806E5960-806E59A0 0040+00 s=1 e=0 z=0  None .rodata    ccShpSrc$3893                                                */
-SECTION_RODATA static u8 const data_806E5960[64] = {
+SECTION_RODATA static u8 const ccShpSrc[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x43, 0x00, 0x00, 0x00, 0x75, 0x0A, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

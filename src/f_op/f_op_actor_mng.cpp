@@ -71,17 +71,17 @@ struct dSv_info_c {
 struct dPa_levelEcallBack {
 };
 
+struct _GXColor {
+};
+
+struct dKy_tevstr_c {
+};
+
 struct cBgS_PolyInfo {
 };
 
 struct csXyz {
 	/* 802673F4 */ csXyz(s16, s16, s16);
-};
-
-struct _GXColor {
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -715,7 +715,7 @@ SECTION_RODATA static u8 const lit_4933[12] = {
 };
 
 /* 80378898-803788C8 0030+00 s=1 e=0 z=0  None .rodata    mtx_adj$6195                                                 */
-SECTION_RODATA static u8 const data_80378898[48] = {
+SECTION_RODATA static u8 const mtx_adj[48] = {
 	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0xBF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1701,7 +1701,7 @@ asm void fopAcM_effSmokeSet1(u32* param_0, u32* param_1, cXyz const* param_2, cs
 
 /* ############################################################################################## */
 /* 80451C50-80451C54 0004+00 s=1 e=0 z=0  None .sdata2    hamon_name$6107                                              */
-SECTION_SDATA2 static u8 data_80451C50[4] = {
+SECTION_SDATA2 static u8 hamon_name[4] = {
 	0x01, 0xB2, 0x01, 0xB3,
 };
 

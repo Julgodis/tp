@@ -24,10 +24,10 @@ struct mDoGph_gInf_c {
 
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -66,6 +66,10 @@ struct dStage_roomControl_c {
 	/* 8019F780 */ void GetTimePass();
 };
 
+struct J3DModelData {
+	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+};
+
 struct _GXColorS10 {
 };
 
@@ -80,10 +84,6 @@ struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
-	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
 };
 
 struct dScnKy_env_light_c {
@@ -121,10 +121,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -1501,7 +1501,7 @@ asm static void bgparts_activelight_init() {
 
 /* ############################################################################################## */
 /* 803BBF58-803BBFB8 0060+00 s=1 e=0 z=0  None .data      test_pos_tbl$5126                                            */
-SECTION_DATA static u8 data_803BBF58[96] = {
+SECTION_DATA static u8 test_pos_tbl[96] = {
 	0x00, 0x00, 0x00, 0x00, 0xC7, 0xC3, 0x4F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xC7, 0xC3, 0x4F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC7, 0xC3, 0x4F, 0x80,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC7, 0xC3, 0x4F, 0x80, 0x00, 0x00, 0x00, 0x00,
@@ -1511,7 +1511,7 @@ SECTION_DATA static u8 data_803BBF58[96] = {
 };
 
 /* 803BBFB8-803BBFD0 0018+00 s=1 e=0 z=0  None .data      test_color_tbl$5127                                          */
-SECTION_DATA static u8 data_803BBFB8[24] = {
+SECTION_DATA static u8 test_color_tbl[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
@@ -1632,7 +1632,7 @@ SECTION_DATA static void* lit_5841[8] = {
 };
 
 /* 803BC010-803BC028 0018+00 s=1 e=0 z=0  None .data      now_shadow_alpha$5927                                        */
-SECTION_DATA static u8 data_803BC010[24] = {
+SECTION_DATA static u8 now_shadow_alpha[24] = {
 	0x3E, 0x80, 0x00, 0x00, 0x3E, 0xB3, 0x33, 0x33, 0x3F, 0x19, 0x99, 0x9A, 0x3F, 0x19, 0x99, 0x9A,
 	0x3E, 0x80, 0x00, 0x00, 0x3E, 0xB3, 0x33, 0x33,
 };
@@ -1664,17 +1664,17 @@ SECTION_DATA static void* lit_7029[8] = {
 };
 
 /* 803BC070-803BC080 0010+00 s=1 e=0 z=0  None .data      flush_col$7304                                               */
-SECTION_DATA static u8 data_803BC070[16] = {
+SECTION_DATA static u8 flush_col[16] = {
 	0x01, 0x00, 0x00, 0x00, 0x04, 0x43, 0x73, 0x58, 0x0A, 0x25, 0x3E, 0x2D, 0x14, 0x00, 0x00, 0x00,
 };
 
 /* 803BC080-803BC090 0010+00 s=1 e=0 z=0  None .data      flush_col2$7305                                              */
-SECTION_DATA static u8 data_803BC080[16] = {
+SECTION_DATA static u8 flush_col2[16] = {
 	0x01, 0x00, 0x00, 0x00, 0x04, 0x6E, 0x5A, 0x00, 0x08, 0x4B, 0x22, 0x00, 0x0F, 0x00, 0x00, 0x00,
 };
 
 /* 803BC090-803BC0A0 0010+00 s=1 e=0 z=0  None .data      flush_col3$7306                                              */
-SECTION_DATA static u8 data_803BC090[16] = {
+SECTION_DATA static u8 flush_col3[16] = {
 	0x01, 0x00, 0x00, 0x00, 0x04, 0x46, 0x4D, 0x43, 0x0F, 0x22, 0x1E, 0x00, 0x14, 0x00, 0x00, 0x00,
 };
 
@@ -1702,7 +1702,7 @@ SECTION_DATA void* g_profile_KANKYO[10] = {
 };
 
 /* 803BC0DC-803BC13C 0030+30 s=1 e=0 z=0  None .data      parcent_tabel$9036                                           */
-SECTION_DATA static u8 data_803BC0DC[48 + 48 /* padding */] = {
+SECTION_DATA static u8 parcent_tabel[48 + 48 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x33, 0x33, 0x33, 0x3E, 0x99, 0x99, 0x9A,
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x19, 0x99, 0x9A, 0x3E, 0x99, 0x99, 0x9A, 0x3D, 0xCC, 0xCC, 0xCD,
@@ -2357,13 +2357,13 @@ asm void dScnKy_env_light_c::drawKankyo() {
 static u8 lit_7485[12];
 
 /* 8042E7C8-8042E7D4 000C+00 s=1 e=0 z=0  None .bss       S_old_cameye$7484                                            */
-static u8 data_8042E7C8[12];
+static u8 S_old_cameye[12];
 
 /* 8042E7D4-8042E7E0 000C+00 s=1 e=0 z=0  None .bss       @7489                                                        */
 static u8 lit_7489[12];
 
 /* 8042E7E0-8042E7F0 000C+04 s=1 e=0 z=0  None .bss       S_old_camctr$7488                                            */
-static u8 data_8042E7E0[12 + 4 /* padding */];
+static u8 S_old_camctr[12 + 4 /* padding */];
 
 /* 80453DA0-80453DA4 0004+00 s=1 e=0 z=0  None .sdata2    @7608                                                        */
 SECTION_SDATA2 static u32 lit_7608 = 0x3BABB44E;

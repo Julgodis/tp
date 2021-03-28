@@ -58,10 +58,10 @@ struct daBalloon2D_c {
 	/* 80653FEC */ void addScoreCount(cXyz*, u32, u8);
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -380,27 +380,27 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 SECTION_DATA static u32 data_80BA8E7C = 0xFFFFFFFF;
 
 /* 80BA8E80-80BA8E8C 000C+00 s=1 e=0 z=0  None .data      balloon_radius$3706                                          */
-SECTION_DATA static u8 data_80BA8E80[12] = {
+SECTION_DATA static u8 balloon_radius[12] = {
 	0x44, 0x85, 0xC0, 0x00, 0x43, 0xC3, 0x00, 0x00, 0x42, 0xDC, 0x00, 0x00,
 };
 
 /* 80BA8E8C-80BA8E90 0004+00 s=1 e=0 z=0  None .data      kago_wall_hit_id$3736                                        */
-SECTION_DATA static u8 data_80BA8E8C[4] = {
+SECTION_DATA static u8 kago_wall_hit_id[4] = {
 	0x8A, 0x12, 0x8A, 0x13,
 };
 
 /* 80BA8E90-80BA8E9C 000C+00 s=1 e=0 z=0  None .data      kago_effect_scale$3737                                       */
-SECTION_DATA static u8 data_80BA8E90[12] = {
+SECTION_DATA static u8 kago_effect_scale[12] = {
 	0x40, 0x80, 0x00, 0x00, 0x3F, 0xC0, 0x00, 0x00, 0x3F, 0x4C, 0xCC, 0xCD,
 };
 
 /* 80BA8E9C-80BA8EA8 000C+00 s=1 e=0 z=0  None .data      break_sound_id$3749                                          */
-SECTION_DATA static u8 data_80BA8E9C[12] = {
+SECTION_DATA static u8 break_sound_id[12] = {
 	0x00, 0x08, 0x02, 0x55, 0x00, 0x08, 0x02, 0x54, 0x00, 0x08, 0x02, 0x53,
 };
 
 /* 80BA8EA8-80BA8EE8 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$3893                                              */
-SECTION_DATA static u8 data_80BA8EA8[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,

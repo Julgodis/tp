@@ -10,8 +10,8 @@ lbl_80BDF16C:
 /* 80BDF18C  3B 9D 4F F8 */	addi r28, r29, 0x4ff8
 /* 80BDF190  7F 83 E3 78 */	mr r3, r28
 /* 80BDF194  80 9F 05 DC */	lwz r4, 0x5dc(r31)
-/* 80BDF198  3C A0 80 BE */	lis r5, data_80BDFAB0@ha
-/* 80BDF19C  38 A5 FA B0 */	addi r5, r5, data_80BDFAB0@l
+/* 80BDF198  3C A0 80 BE */	lis r5, action_table@ha
+/* 80BDF19C  38 A5 FA B0 */	addi r5, r5, action_table@l
 /* 80BDF1A0  38 C0 00 02 */	li r6, 2
 /* 80BDF1A4  38 E0 00 00 */	li r7, 0
 /* 80BDF1A8  39 00 00 00 */	li r8, 0

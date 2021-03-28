@@ -39,7 +39,7 @@ lbl_8012467C:
 /* 8012467C  7F 63 DB 78 */	mr r3, r27
 /* 80124680  38 9E 31 E8 */	addi r4, r30, 0x31e8
 /* 80124684  7C 9B 22 14 */	add r4, r27, r4
-/* 80124688  3B A2 97 04 */	la r29, data_80453104(r2) /* 80453104-_SDA2_BASE_ */
+/* 80124688  3B A2 97 04 */	la r29, cutSplashName(r2) /* 80453104-_SDA2_BASE_ */
 /* 8012468C  7C BD FA 2E */	lhzx r5, r29, r31
 /* 80124690  38 DB 1A F0 */	addi r6, r27, 0x1af0
 /* 80124694  38 E1 00 14 */	addi r7, r1, 0x14
@@ -49,8 +49,8 @@ lbl_8012467C:
 /* 801246A4  41 82 00 68 */	beq lbl_8012470C
 /* 801246A8  38 00 00 05 */	li r0, 5
 /* 801246AC  98 03 00 56 */	stb r0, 0x56(r3)
-/* 801246B0  3C 80 80 39 */	lis r4, data_80391D54@ha
-/* 801246B4  38 84 1D 54 */	addi r4, r4, data_80391D54@l
+/* 801246B0  3C 80 80 39 */	lis r4, swordCutSplashScale@ha
+/* 801246B4  38 84 1D 54 */	addi r4, r4, swordCutSplashScale@l
 /* 801246B8  E0 04 00 00 */	psq_l f0, 0(r4), 0, 0 /* qr0 */
 /* 801246BC  C0 44 00 08 */	lfs f2, 8(r4)
 /* 801246C0  F0 01 00 08 */	psq_st f0, 8(r1), 0, 0 /* qr0 */

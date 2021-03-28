@@ -23,19 +23,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -518,17 +518,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80832DE4-80832DEC 0008+00 s=1 e=0 z=0  None .data      e_prim$3668                                                  */
-SECTION_DATA static u8 data_80832DE4[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 80832DEC-80832DF4 0008+00 s=1 e=0 z=0  None .data      e_env$3669                                                   */
-SECTION_DATA static u8 data_80832DEC[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 80832DF4-80832DFC 0006+02 s=1 e=0 z=0  None .data      eff_id$3677                                                  */
-SECTION_DATA static u8 data_80832DF4[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -552,19 +552,19 @@ SECTION_DATA static u8 data_80832E40[64] = {
 };
 
 /* 80832E80-80832E84 0004+00 s=1 e=0 z=0  None .data      eff_delete_id$4116                                           */
-SECTION_DATA static u8 data_80832E80[4] = {
+SECTION_DATA static u8 eff_delete_id[4] = {
 	0x88, 0x69, 0x88, 0x6A,
 };
 
 /* 80832E84-80832E8C 0006+02 s=1 e=0 z=0  None .data      eff_bullet_id$4543                                           */
-SECTION_DATA static u8 data_80832E84[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_bullet_id[6 + 2 /* padding */] = {
 	0x88, 0x66, 0x88, 0x67, 0x88, 0x68,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80832E8C-80832E94 0008+00 s=1 e=0 z=0  None .data      eff_bullet_delete_id$4544                                    */
-SECTION_DATA static u8 data_80832E8C[8] = {
+SECTION_DATA static u8 eff_bullet_delete_id[8] = {
 	0x88, 0x62, 0x88, 0x63, 0x88, 0x64, 0x88, 0x65,
 };
 

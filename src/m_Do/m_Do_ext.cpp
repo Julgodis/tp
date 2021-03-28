@@ -18,18 +18,6 @@ struct mDoExt_morf_c {
 	/* 8000FBC0 */ void frameUpdate();
 };
 
-struct J3DModelData {
-};
-
-struct J3DModel {
-	/* 80327100 */ void initialize();
-	/* 80327184 */ void entryModelData(J3DModelData*, u32, u32);
-	/* 803275FC */ void newDifferedDisplayList(u32);
-	/* 8032767C */ void lock();
-	/* 803276B4 */ void unlock();
-	/* 803279A0 */ void diff();
-};
-
 struct Vec {
 };
 
@@ -41,6 +29,18 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80266CBC */ void outprod(Vec const&) const;
 	/* 80266F48 */ void normalizeZP();
+};
+
+struct J3DModelData {
+};
+
+struct J3DModel {
+	/* 80327100 */ void initialize();
+	/* 80327184 */ void entryModelData(J3DModelData*, u32, u32);
+	/* 803275FC */ void newDifferedDisplayList(u32);
+	/* 8032767C */ void lock();
+	/* 803276B4 */ void unlock();
+	/* 803279A0 */ void diff();
 };
 
 struct mDoExt_invisibleModel {
@@ -56,17 +56,20 @@ struct mDoExt_invJntPacket {
 };
 
 struct J3DMaterialTable;
-struct J3DAnmTextureSRTKey {
-	/* 8032B0C0 */ void searchUpdateMaterialID(J3DMaterialTable*);
+struct J3DAnmTevRegKey {
+	/* 8032B780 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
-struct J3DAnmTexPattern;
 struct J3DAnmColor {
 	/* 8032A8A4 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
-struct J3DAnmTevRegKey {
-	/* 8032B780 */ void searchUpdateMaterialID(J3DMaterialTable*);
+struct J3DAnmTexPattern {
+	/* 8032B004 */ void searchUpdateMaterialID(J3DMaterialTable*);
+};
+
+struct J3DAnmTextureSRTKey {
+	/* 8032B0C0 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
 struct J3DMaterialTable {
@@ -74,10 +77,6 @@ struct J3DMaterialTable {
 	/* 8032FBC8 */ void entryTexNoAnimator(J3DAnmTexPattern*);
 	/* 8032FCC4 */ void entryTexMtxAnimator(J3DAnmTextureSRTKey*);
 	/* 8032FE70 */ void entryTevRegAnimator(J3DAnmTevRegKey*);
-};
-
-struct J3DAnmTexPattern {
-	/* 8032B004 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
 struct mDoExt_btpAnm {
@@ -144,12 +143,12 @@ struct mDoExt_MtxCalcAnmBlendTbl {
 struct J3DTransformInfo {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
 struct Z2Creature {
 	/* 802C0628 */ void initAnime(void*, bool, f32, f32);
 	/* 802C06D0 */ void updateAnime(f32, f32);
+};
+
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -209,13 +208,13 @@ struct mDoExt_3DlineMatSortPacket {
 	/* 80014E20 */ ~mDoExt_3DlineMatSortPacket();
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -387,16 +386,16 @@ struct J3DTevKColorAnm {
 struct J3DTevColorAnm {
 };
 
+struct J3DIndTevStage {
+	/* 8000E14C */ J3DIndTevStage();
+};
+
 struct J3DGXColorS10 {
 	/* 8000E460 */ J3DGXColorS10();
 };
 
 struct J3DGXColor {
 	/* 8000E538 */ J3DGXColor();
-};
-
-struct J3DIndTevStage {
-	/* 8000E14C */ J3DIndTevStage();
 };
 
 struct J3DTevBlock {
@@ -1174,7 +1173,7 @@ asm void mDoExt_brkAnm::entry(J3DMaterialTable* param_0, f32 param_1) {
 
 /* ############################################################################################## */
 /* 803A3020-803A30C0 0085+1B s=1 e=0 z=0  None .data      l_invisibleMat$7041                                          */
-SECTION_DATA static u8 data_803A3020[133 + 27 /* padding */] = {
+SECTION_DATA static u8 l_invisibleMat[133 + 27 /* padding */] = {
 	0x10, 0x00, 0x00, 0x10, 0x0E, 0x00, 0x00, 0x04, 0x00, 0x10, 0x00, 0x00, 0x10, 0x10, 0x00, 0x00,
 	0x04, 0x00, 0x61, 0x28, 0x38, 0x00, 0x00, 0x61, 0xC0, 0x08, 0xFF, 0xFC, 0x61, 0xC1, 0x08, 0xFF,
 	0xF0, 0x61, 0xF3, 0x7F, 0x00, 0x00, 0x61, 0x43, 0x00, 0x00, 0x41, 0x61, 0x40, 0x00, 0x00, 0x17,
@@ -2185,7 +2184,7 @@ asm void mDoExt_setupShareTexture(J3DModelData* param_0, J3DModelData* param_1) 
 
 /* ############################################################################################## */
 /* 803740C0-803740D4 0012+02 s=1 e=0 z=0  None .rodata    fontdata$8224                                                */
-SECTION_RODATA static u8 const data_803740C0[18 + 2 /* padding */] = {
+SECTION_RODATA static u8 const fontdata_8224[18 + 2 /* padding */] = {
 	0x72, 0x6F, 0x64, 0x61, 0x6E, 0x5F, 0x62, 0x5F, 0x32, 0x34, 0x5F, 0x32, 0x32, 0x2E, 0x62, 0x66,
 	0x6E, 0x00,
 	/* padding */
@@ -2193,13 +2192,13 @@ SECTION_RODATA static u8 const data_803740C0[18 + 2 /* padding */] = {
 };
 
 /* 803740D4-803740E8 0014+00 s=1 e=0 z=0  None .rodata    fontdata$8253                                                */
-SECTION_RODATA static u8 const data_803740D4[20] = {
+SECTION_RODATA static u8 const fontdata_8253[20] = {
 	0x72, 0x65, 0x69, 0x73, 0x68, 0x6F, 0x74, 0x61, 0x69, 0x5F, 0x32, 0x34, 0x5F, 0x32, 0x32, 0x2E,
 	0x62, 0x66, 0x6E, 0x00,
 };
 
 /* 803740E8-803740FC 0014+00 s=1 e=0 z=0  None .rodata    fontdata$8287                                                */
-SECTION_RODATA static u8 const data_803740E8[20] = {
+SECTION_RODATA static u8 const fontdata_8287[20] = {
 	0x72, 0x65, 0x69, 0x73, 0x68, 0x6F, 0x74, 0x61, 0x69, 0x5F, 0x32, 0x34, 0x5F, 0x32, 0x32, 0x2E,
 	0x62, 0x66, 0x6E, 0x00,
 };

@@ -648,8 +648,8 @@ lbl_80777C74:
 /* 80777C88  D8 01 00 E0 */	stfd f0, 0xe0(r1)
 /* 80777C8C  80 01 00 E4 */	lwz r0, 0xe4(r1)
 /* 80777C90  54 00 10 3A */	slwi r0, r0, 2
-/* 80777C94  3C 60 80 78 */	lis r3, data_8077A5C8@ha
-/* 80777C98  38 63 A5 C8 */	addi r3, r3, data_8077A5C8@l
+/* 80777C94  3C 60 80 78 */	lis r3, time_scale@ha
+/* 80777C98  38 63 A5 C8 */	addi r3, r3, time_scale@l
 /* 80777C9C  7C 03 04 2E */	lfsx f0, r3, r0
 /* 80777CA0  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80777CA4  EF FF 00 32 */	fmuls f31, f31, f0

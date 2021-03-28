@@ -36,8 +36,8 @@ lbl_804E97EC:
 /* 804E9874  C3 BE 00 F0 */	lfs f29, 0xf0(r30)
 /* 804E9878  C3 DE 00 44 */	lfs f30, 0x44(r30)
 /* 804E987C  C3 FE 00 F4 */	lfs f31, 0xf4(r30)
-/* 804E9880  3C 60 80 4F */	lis r3, data_804EEB00@ha
-/* 804E9884  3B C3 EB 00 */	addi r30, r3, data_804EEB00@l
+/* 804E9880  3C 60 80 4F */	lis r3, kado_check_x@ha
+/* 804E9884  3B C3 EB 00 */	addi r30, r3, kado_check_x@l
 lbl_804E9888:
 /* 804E9888  C0 1C 04 D0 */	lfs f0, 0x4d0(r28)
 /* 804E988C  D0 01 00 14 */	stfs f0, 0x14(r1)
@@ -78,8 +78,8 @@ lbl_804E9888:
 /* 804E9918  4B B8 AA 9C */	b LineCross__4cBgSFP11cBgS_LinChk
 /* 804E991C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 804E9920  41 82 00 14 */	beq lbl_804E9934
-/* 804E9924  3C 60 80 4F */	lis r3, data_804EEAF8@ha
-/* 804E9928  38 63 EA F8 */	addi r3, r3, data_804EEAF8@l
+/* 804E9924  3C 60 80 4F */	lis r3, kado_bit@ha
+/* 804E9928  38 63 EA F8 */	addi r3, r3, kado_bit@l
 /* 804E992C  7C 03 F8 2E */	lwzx r0, r3, r31
 /* 804E9930  7F 7B 03 78 */	or r27, r27, r0
 lbl_804E9934:

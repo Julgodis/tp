@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTevRegKey {
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmTextureSRTKey {
 };
 
 struct J3DMaterialTable {
@@ -36,7 +36,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Vec {
@@ -48,13 +51,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -79,16 +79,16 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 809B88E8 */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct daNpcT_evtData_c {
 };
 
 struct daNpcT_motionAnmData_c {
 };
 
-struct daNpcT_evtData_c {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpc_Fairy_c {
@@ -195,10 +195,16 @@ struct daNpc_Fairy_Param_c {
 	/* 809B9278 */ ~daNpc_Fairy_Param_c();
 };
 
-struct J3DAnmTransformKey {
+struct J3DAnmColor {
 };
 
 struct _GXColorS10 {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+	/* 809B2250 */ ~cXyz();
+	/* 809B889C */ cXyz();
 };
 
 struct J3DModel {
@@ -209,13 +215,7 @@ struct dCcD_GObjInf {
 	/* 800840E4 */ ~dCcD_GObjInf();
 };
 
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-	/* 809B2250 */ ~cXyz();
-	/* 809B889C */ cXyz();
-};
-
-struct J3DAnmColor {
+struct J3DAnmTransformKey {
 };
 
 struct daNpcT_c {
@@ -321,12 +321,12 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
+struct _GXColor {
+};
+
 struct csXyz {
 	/* 809B835C */ ~csXyz();
 	/* 809B879C */ csXyz();
-};
-
-struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -337,13 +337,13 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
+struct dBgS {
+};
+
 struct dBgS_AcchCir {
 	/* 80075EAC */ dBgS_AcchCir();
 	/* 80075F40 */ void SetWallR(f32);
 	/* 809B8930 */ ~dBgS_AcchCir();
-};
-
-struct dBgS {
 };
 
 struct dBgS_Acch {
@@ -914,7 +914,7 @@ SECTION_RODATA static u8 const m__19daNpc_Fairy_Param_c[148] = {
 SECTION_RODATA static u32 const lit_3916 = 0x3F800000;
 
 /* 809B937C-809B93C4 0048+00 s=1 e=0 z=0  None .rodata    sBckPrm$3920                                                 */
-SECTION_RODATA static u8 const data_809B937C[72] = {
+SECTION_RODATA static u8 const sBckPrm[72] = {
 	0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x12,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x02,
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x13, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01,
@@ -934,12 +934,12 @@ SECTION_RODATA static u32 const lit_3944 = 0x41400000;
 SECTION_RODATA static u32 const lit_3945 = 0xBF800000;
 
 /* 809B93D0-809B93DC 000C+00 s=1 e=0 z=0  None .rodata    sBrkPrm$3949                                                 */
-SECTION_RODATA static u8 const data_809B93D0[12] = {
+SECTION_RODATA static u8 const sBrkPrm[12] = {
 	0x00, 0x00, 0x00, 0x29, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01,
 };
 
 /* 809B93DC-809B93E8 000C+00 s=1 e=0 z=0  None .rodata    sBtkPrm$3970                                                 */
-SECTION_RODATA static u8 const data_809B93DC[12] = {
+SECTION_RODATA static u8 const sBtkPrm[12] = {
 	0x00, 0x00, 0x00, 0x2D, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01,
 };
 
@@ -974,19 +974,19 @@ SECTION_RODATA static u32 const lit_4769 = 0x42C80000;
 SECTION_RODATA static u32 const lit_4988 = 0x3F8CCCCD;
 
 /* 809B9410-809B9418 0006+02 s=1 e=0 z=0  None .rodata    id$4992                                                      */
-SECTION_RODATA static u8 const data_809B9410[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const id[6 + 2 /* padding */] = {
 	0x8A, 0xA3, 0x8A, 0xA4, 0x8A, 0xA5,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 809B9418-809B941C 0004+00 s=1 e=0 z=0  None .rodata    sFairyField$5036                                             */
-SECTION_RODATA static u8 const data_809B9418[4] = {
+SECTION_RODATA static u8 const sFairyField[4] = {
 	0x00, 0x01, 0x02, 0x03,
 };
 
 /* 809B941C-809B942C 0010+00 s=1 e=0 z=0  None .rodata    sTempBit$5049                                                */
-SECTION_RODATA static u8 const data_809B941C[16] = {
+SECTION_RODATA static u8 const sTempBit[16] = {
 	0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x7A, 0x00, 0x00, 0x00, 0x7B, 0x00, 0x00, 0x00, 0x7C,
 };
 
@@ -1024,21 +1024,21 @@ SECTION_RODATA static u8 const lit_5198[8] = {
 };
 
 /* 809B945C-809B9468 000A+02 s=1 e=0 z=0  None .rodata    sEvtType1$5356                                               */
-SECTION_RODATA static u8 const data_809B945C[10 + 2 /* padding */] = {
+SECTION_RODATA static u8 const sEvtType1[10 + 2 /* padding */] = {
 	0x00, 0x01, 0x00, 0x03, 0x00, 0x05, 0x00, 0x07, 0x00, 0x09,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 809B9468-809B9474 000A+02 s=1 e=0 z=0  None .rodata    sEvtType2$5357                                               */
-SECTION_RODATA static u8 const data_809B9468[10 + 2 /* padding */] = {
+SECTION_RODATA static u8 const sEvtType2[10 + 2 /* padding */] = {
 	0x00, 0x02, 0x00, 0x04, 0x00, 0x06, 0x00, 0x08, 0x00, 0x0A,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 809B9474-809B9480 000A+02 s=1 e=0 z=0  None .rodata    sEvtBitNo$5358                                               */
-SECTION_RODATA static u8 const data_809B9474[10 + 2 /* padding */] = {
+SECTION_RODATA static u8 const sEvtBitNo[10 + 2 /* padding */] = {
 	0x01, 0xF5, 0x01, 0xF6, 0x01, 0xF7, 0x01, 0xF8, 0x01, 0xF9,
 	/* padding */
 	0x00, 0x00,

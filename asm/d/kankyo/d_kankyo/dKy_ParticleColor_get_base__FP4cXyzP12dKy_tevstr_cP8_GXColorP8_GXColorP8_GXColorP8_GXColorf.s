@@ -487,8 +487,8 @@ lbl_801A9500:
 /* 801A9514  40 80 00 98 */	bge lbl_801A95AC
 /* 801A9518  57 C0 06 3E */	clrlwi r0, r30, 0x18
 /* 801A951C  1C 00 00 0C */	mulli r0, r0, 0xc
-/* 801A9520  3C 60 80 3C */	lis r3, data_803BC0DC@ha
-/* 801A9524  38 63 C0 DC */	addi r3, r3, data_803BC0DC@l
+/* 801A9520  3C 60 80 3C */	lis r3, parcent_tabel@ha
+/* 801A9524  38 63 C0 DC */	addi r3, r3, parcent_tabel@l
 /* 801A9528  7C 43 04 2E */	lfsx f2, r3, r0
 /* 801A952C  88 01 00 30 */	lbz r0, 0x30(r1)
 /* 801A9530  C8 22 A2 80 */	lfd f1, lit_4964(r2)
@@ -526,8 +526,8 @@ lbl_801A95AC:
 /* 801A95AC  38 60 00 04 */	li r3, 4
 /* 801A95B0  57 C0 06 3E */	clrlwi r0, r30, 0x18
 /* 801A95B4  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801A95B8  3C 80 80 3C */	lis r4, data_803BC0DC@ha
-/* 801A95BC  38 04 C0 DC */	addi r0, r4, data_803BC0DC@l
+/* 801A95B8  3C 80 80 3C */	lis r4, parcent_tabel@ha
+/* 801A95BC  38 04 C0 DC */	addi r0, r4, parcent_tabel@l
 /* 801A95C0  7C E0 2A 14 */	add r7, r0, r5
 /* 801A95C4  38 C1 00 18 */	addi r6, r1, 0x18
 /* 801A95C8  C0 42 A3 C0 */	lfs f2, lit_9258(r2)

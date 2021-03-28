@@ -221,7 +221,7 @@ SECTION_DEAD static char const* const pad_8039D152 = "\0\0\0\0\0";
 #pragma pop
 
 /* 804508C0-804508C8 0002+06 s=1 e=0 z=0  None .sdata     rootPath$2498                                                */
-SECTION_SDATA static u8 data_804508C0[2 + 6 /* padding */] = {
+SECTION_SDATA static u8 rootPath[2 + 6 /* padding */] = {
 	0x2F, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

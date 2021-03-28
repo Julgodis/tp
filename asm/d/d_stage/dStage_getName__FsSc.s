@@ -30,7 +30,7 @@ lbl_80024E90:
 /* 80024E94  42 00 FF D0 */	bdnz lbl_80024E64
 /* 80024E98  28 06 00 00 */	cmplwi r6, 0
 /* 80024E9C  40 82 00 2C */	bne lbl_80024EC8
-/* 80024EA0  38 6D 87 D8 */	la r3, data_80450D58(r13) /* 80450D58-_SDA_BASE_ */
+/* 80024EA0  38 6D 87 D8 */	la r3, tmp_name(r13) /* 80450D58-_SDA_BASE_ */
 /* 80024EA4  38 80 00 08 */	li r4, 8
 /* 80024EA8  3C A0 80 38 */	lis r5, d_d_stage__stringBase0@ha
 /* 80024EAC  38 A5 8A 50 */	addi r5, r5, d_d_stage__stringBase0@l
@@ -39,7 +39,7 @@ lbl_80024E90:
 /* 80024EB8  7C E7 07 74 */	extsb r7, r7
 /* 80024EBC  4C C6 31 82 */	crclr 6
 /* 80024EC0  48 34 16 FD */	bl snprintf
-/* 80024EC4  38 CD 87 D8 */	la r6, data_80450D58(r13) /* 80450D58-_SDA_BASE_ */
+/* 80024EC4  38 CD 87 D8 */	la r6, tmp_name(r13) /* 80450D58-_SDA_BASE_ */
 lbl_80024EC8:
 /* 80024EC8  7C C3 33 78 */	mr r3, r6
 lbl_80024ECC:

@@ -203,8 +203,8 @@ lbl_805B4FF4:
 /* 805B503C  3A C0 00 00 */	li r22, 0
 /* 805B5040  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 805B5044  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
-/* 805B5048  3C 60 80 5C */	lis r3, data_805BA93C@ha
-/* 805B504C  3B C3 A9 3C */	addi r30, r3, data_805BA93C@l
+/* 805B5048  3C 60 80 5C */	lis r3, fireno_4463@ha
+/* 805B504C  3B C3 A9 3C */	addi r30, r3, fireno_4463@l
 lbl_805B5050:
 /* 805B5050  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 805B5054  38 00 00 FF */	li r0, 0xff
@@ -321,8 +321,8 @@ lbl_805B510C:
 /* 805B520C  3B C0 00 00 */	li r30, 0
 /* 805B5210  3B 00 00 00 */	li r24, 0
 /* 805B5214  3B 20 00 00 */	li r25, 0
-/* 805B5218  3C 60 80 5C */	lis r3, data_805BA944@ha
-/* 805B521C  3A C3 A9 44 */	addi r22, r3, data_805BA944@l
+/* 805B5218  3C 60 80 5C */	lis r3, fireno_4473@ha
+/* 805B521C  3A C3 A9 44 */	addi r22, r3, fireno_4473@l
 lbl_805B5220:
 /* 805B5220  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 805B5224  38 00 00 FF */	li r0, 0xff

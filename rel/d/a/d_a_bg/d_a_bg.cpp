@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -341,7 +341,7 @@ extern "C" extern u8 m_frame__7dDemo_c[4];
 
 /* ############################################################################################## */
 /* 804595B8-804595D8 0020+00 s=1 e=0 z=0  None .bss       arcName$3823                                                 */
-static u8 data_804595B8[32];
+static u8 arcName[32];
 
 /* 80457BF8-80457C38 0040+00 s=1 e=0 z=0  None .text      setArcName__6daBg_cFv                                        */
 #pragma push

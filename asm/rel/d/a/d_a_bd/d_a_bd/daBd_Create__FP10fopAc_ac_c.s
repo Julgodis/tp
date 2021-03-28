@@ -149,8 +149,8 @@ lbl_804D99F0:
 /* 804D9A54  7F A6 EB 78 */	mr r6, r29
 /* 804D9A58  4B BA 9E 08 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 804D9A5C  38 7D 08 B0 */	addi r3, r29, 0x8b0
-/* 804D9A60  3C 80 80 4E */	lis r4, data_804DA234@ha
-/* 804D9A64  38 84 A2 34 */	addi r4, r4, data_804DA234@l
+/* 804D9A60  3C 80 80 4E */	lis r4, cc_sph_src@ha
+/* 804D9A64  38 84 A2 34 */	addi r4, r4, cc_sph_src@l
 /* 804D9A68  4B BA AF CC */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 804D9A6C  38 1D 08 74 */	addi r0, r29, 0x874
 /* 804D9A70  90 1D 08 F4 */	stw r0, 0x8f4(r29)

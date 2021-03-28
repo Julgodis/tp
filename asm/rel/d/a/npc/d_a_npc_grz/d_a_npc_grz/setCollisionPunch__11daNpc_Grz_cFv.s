@@ -259,8 +259,8 @@ lbl_809EA578:
 /* 809EA58C  80 63 00 04 */	lwz r3, 4(r3)
 /* 809EA590  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 809EA594  80 83 00 0C */	lwz r4, 0xc(r3)
-/* 809EA598  3C 60 80 9F */	lis r3, data_809EF9BC@ha
-/* 809EA59C  38 63 F9 BC */	addi r3, r3, data_809EF9BC@l
+/* 809EA598  3C 60 80 9F */	lis r3, l_attack_jnt@ha
+/* 809EA59C  38 63 F9 BC */	addi r3, r3, l_attack_jnt@l
 /* 809EA5A0  7C 03 C8 2E */	lwzx r0, r3, r25
 /* 809EA5A4  1C 00 00 30 */	mulli r0, r0, 0x30
 /* 809EA5A8  7C 64 02 14 */	add r3, r4, r0

@@ -41,13 +41,13 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -65,10 +65,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -359,7 +359,7 @@ SECTION_DATA static u8 l_cc_cyl_src[68] = {
 };
 
 /* 80C1C77C-80C1C790 0012+02 s=1 e=0 z=0  None .data      id$3767                                                      */
-SECTION_DATA static u8 data_80C1C77C[18 + 2 /* padding */] = {
+SECTION_DATA static u8 id[18 + 2 /* padding */] = {
 	0x85, 0x77, 0x85, 0x78, 0x85, 0x79, 0x85, 0x7A, 0x85, 0x7B, 0x85, 0x7C, 0x85, 0x7D, 0x85, 0x7E,
 	0x85, 0x7F,
 	/* padding */
@@ -367,7 +367,7 @@ SECTION_DATA static u8 data_80C1C77C[18 + 2 /* padding */] = {
 };
 
 /* 80C1C790-80C1C910 0180+00 s=1 e=0 z=0  None .data      ptable$3776                                                  */
-SECTION_DATA static u8 data_80C1C790[384] = {
+SECTION_DATA static u8 ptable[384] = {
 	0x85, 0x83, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x85, 0x84, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,

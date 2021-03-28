@@ -21,16 +21,16 @@ struct disappear_class {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct cXyz {
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -150,7 +150,7 @@ static bool daDisappear_Delete(disappear_class* param_0) {
 SECTION_RODATA static u32 const lit_3704 = 0x3F800000;
 
 /* 804A9480-804A9488 0008+00 s=1 e=0 z=0  None .data      da_name$3684                                                 */
-SECTION_DATA static u8 data_804A9480[8] = {
+SECTION_DATA static u8 da_name_3684[8] = {
 	0x82, 0x6C, 0x82, 0x6D, 0x82, 0x6E, 0x82, 0x6B,
 };
 
@@ -167,7 +167,7 @@ asm static void yami_disappear(disappear_class* param_0, f32 param_1) {
 
 /* ############################################################################################## */
 /* 804A9488-804A9494 000A+02 s=1 e=0 z=0  None .data      da_name$3710                                                 */
-SECTION_DATA static u8 data_804A9488[10 + 2 /* padding */] = {
+SECTION_DATA static u8 da_name_3710[10 + 2 /* padding */] = {
 	0x86, 0xA7, 0x86, 0xA8, 0x86, 0xA9, 0x86, 0xAA, 0x86, 0xAB,
 	/* padding */
 	0x00, 0x00,
@@ -192,7 +192,7 @@ SECTION_RODATA static u32 const lit_3787 = 0xBF800000;
 SECTION_RODATA static u32 const lit_3788 = 0x3FD53F7D;
 
 /* 804A9494-804A94A4 000E+02 s=1 e=0 z=0  None .data      da_name$3736                                                 */
-SECTION_DATA static u8 data_804A9494[14 + 2 /* padding */] = {
+SECTION_DATA static u8 da_name_3736[14 + 2 /* padding */] = {
 	0x01, 0x08, 0x01, 0x09, 0x01, 0x0A, 0x01, 0x0B, 0x01, 0x0C, 0x01, 0x54, 0x01, 0x55,
 	/* padding */
 	0x00, 0x00,

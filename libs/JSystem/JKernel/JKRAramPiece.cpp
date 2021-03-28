@@ -44,12 +44,12 @@ struct JKRDecomp {
 	/* 802DB8D0 */ void sendCommand(JKRDecompCommand*);
 };
 
+struct JKRAramBlock {
+};
+
 struct JKRAMCommand {
 	/* 802D39EC */ JKRAMCommand();
 	/* 802D3A5C */ ~JKRAMCommand();
-};
-
-struct JKRAramBlock {
 };
 
 struct JKRAramPiece {

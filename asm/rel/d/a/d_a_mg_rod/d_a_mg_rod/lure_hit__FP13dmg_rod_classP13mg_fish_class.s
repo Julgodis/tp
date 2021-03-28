@@ -422,8 +422,8 @@ lbl_804B0074:
 /* 804B0088  88 9B 07 50 */	lbz r4, 0x750(r27)
 /* 804B008C  88 1A 0F 80 */	lbz r0, 0xf80(r26)
 /* 804B0090  7C 00 07 74 */	extsb r0, r0
-/* 804B0094  3C 60 80 4C */	lis r3, data_804BB908@ha
-/* 804B0098  38 63 B9 08 */	addi r3, r3, data_804BB908@l
+/* 804B0094  3C 60 80 4C */	lis r3, learn_d@ha
+/* 804B0098  38 63 B9 08 */	addi r3, r3, learn_d@l
 /* 804B009C  7C 03 00 AE */	lbzx r0, r3, r0
 /* 804B00A0  7C 80 03 78 */	or r0, r4, r0
 /* 804B00A4  98 1B 07 50 */	stb r0, 0x750(r27)

@@ -91,8 +91,8 @@ lbl_8046E434:
 /* 8046E44C  7F E6 FB 78 */	mr r6, r31
 /* 8046E450  4B C1 54 10 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 8046E454  38 7F 05 C4 */	addi r3, r31, 0x5c4
-/* 8046E458  3C 80 80 47 */	lis r4, data_8046E55C@ha
-/* 8046E45C  38 84 E5 5C */	addi r4, r4, data_8046E55C@l
+/* 8046E458  3C 80 80 47 */	lis r4, cc_sph_src@ha
+/* 8046E45C  38 84 E5 5C */	addi r4, r4, cc_sph_src@l
 /* 8046E460  4B C1 65 D4 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 8046E464  38 1F 05 88 */	addi r0, r31, 0x588
 /* 8046E468  90 1F 06 08 */	stw r0, 0x608(r31)

@@ -85,10 +85,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -114,10 +114,10 @@ struct dPa_modelEcallBack {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -516,7 +516,7 @@ SECTION_DATA static void* lit_4344[3] = {
 };
 
 /* 8057F740-8057F794 0054+00 s=1 e=0 z=0  None .data      l_mode_func$4337                                             */
-SECTION_DATA static u8 data_8057F740[84] = {
+SECTION_DATA static u8 l_mode_func[84] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -526,7 +526,7 @@ SECTION_DATA static u8 data_8057F740[84] = {
 };
 
 /* 8057F794-8057F7A4 0010+00 s=1 e=0 z=0  None .data      effName$4666                                                 */
-SECTION_DATA static u8 data_8057F794[16] = {
+SECTION_DATA static u8 effName[16] = {
 	0x87, 0x45, 0x87, 0x47, 0x87, 0x48, 0x87, 0x49, 0x87, 0x4A, 0x87, 0x4B, 0x87, 0x4C, 0x87, 0x4D,
 };
 

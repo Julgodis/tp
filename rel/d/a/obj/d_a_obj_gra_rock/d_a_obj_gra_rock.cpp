@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
 struct mDoExt_btpAnm {
@@ -56,13 +56,13 @@ struct dSv_info_c {
 	/* 80035200 */ void onSwitch(int, int);
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -81,10 +81,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -421,7 +421,7 @@ asm void daObjGraRock_c::setBaseMtx() {
 
 /* ############################################################################################## */
 /* 80C12424-80C12428 0004+00 s=1 e=0 z=0  None .rodata    l_prticles_id$3890                                           */
-SECTION_RODATA static u8 const data_80C12424[4] = {
+SECTION_RODATA static u8 const l_prticles_id[4] = {
 	0x87, 0x5F, 0x87, 0x60,
 };
 

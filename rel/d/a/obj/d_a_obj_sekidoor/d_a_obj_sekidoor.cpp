@@ -46,10 +46,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -67,10 +67,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -239,7 +239,7 @@ SECTION_RODATA static u8 const lit_3962[8] = {
 };
 
 /* 80CCDA28-80CCDA30 0008+00 s=1 e=0 z=0  None .rodata    id$4006                                                      */
-SECTION_RODATA static u8 const data_80CCDA28[8] = {
+SECTION_RODATA static u8 const id[8] = {
 	0x8B, 0x85, 0x8B, 0x86, 0x8B, 0x87, 0x8B, 0x88,
 };
 

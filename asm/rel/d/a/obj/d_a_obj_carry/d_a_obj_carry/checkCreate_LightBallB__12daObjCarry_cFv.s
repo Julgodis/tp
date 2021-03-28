@@ -215,8 +215,8 @@ lbl_80471450:
 /* 80471458  90 03 B1 D8 */	stw r0, l_sw_id@l(r3)
 /* 8047145C  3B 60 00 00 */	li r27, 0
 /* 80471460  3B C0 00 00 */	li r30, 0
-/* 80471464  3C 60 80 48 */	lis r3, data_8047A3E0@ha
-/* 80471468  3B 83 A3 E0 */	addi r28, r3, data_8047A3E0@l
+/* 80471464  3C 60 80 48 */	lis r3, l_event_bitB@ha
+/* 80471468  3B 83 A3 E0 */	addi r28, r3, l_event_bitB@l
 lbl_8047146C:
 /* 8047146C  7F E3 FB 78 */	mr r3, r31
 /* 80471470  7C 9C F2 2E */	lhzx r4, r28, r30

@@ -33,12 +33,12 @@ struct mDoExt_morf_c {
 struct J3DModelData {
 };
 
-struct J3DAnmTextureSRTKey {
-	/* 8032B1D4 */ void searchUpdateMaterialID(J3DModelData*);
-};
-
 struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct J3DAnmTextureSRTKey {
+	/* 8032B1D4 */ void searchUpdateMaterialID(J3DModelData*);
 };
 
 struct J3DMaterialTable {
@@ -60,7 +60,7 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DAnmTransform {
 };
 
 struct Vec {
@@ -72,10 +72,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DAnmTransform {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -154,12 +154,6 @@ struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 804DE220 */ ~dBgS_AcchCir();
-};
-
 struct cBgS_PolyInfo {
 	/* 802680B0 */ ~cBgS_PolyInfo();
 };
@@ -167,6 +161,12 @@ struct cBgS_PolyInfo {
 struct dBgS {
 	/* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 804DE220 */ ~dBgS_AcchCir();
 };
 
 struct dBgS_Acch {
@@ -528,7 +528,7 @@ SECTION_RODATA static u8 const m_bckIdxTable__9daCstaF_c[16] = {
 };
 
 /* 804DF8EC-804DF8FC 0010+00 s=1 e=0 z=0  None .rodata    dataTbl$4160                                                 */
-SECTION_RODATA static u8 const data_804DF8EC[16] = {
+SECTION_RODATA static u8 const dataTbl[16] = {
 	0x00, 0x0C, 0x00, 0x09, 0x00, 0x10, 0x00, 0x13, 0x00, 0x0C, 0x00, 0x09, 0x00, 0x11, 0x00, 0x15,
 };
 
@@ -841,7 +841,7 @@ asm void daCstaF_c::setRoomInfo() {
 
 /* ############################################################################################## */
 /* 804DF93C-804DF948 000C+00 s=1 e=0 z=0  None .rodata    fieldLocalBallPos$4547                                       */
-SECTION_RODATA static u8 const data_804DF93C[12] = {
+SECTION_RODATA static u8 const fieldLocalBallPos[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -964,7 +964,7 @@ asm void daCstaF_c::initBrk(u16 param_0) {
 
 /* ############################################################################################## */
 /* 804DF988-804DF98C 0004+00 s=1 e=0 z=0  None .rodata    brkIdx$4903                                                  */
-SECTION_RODATA static u8 const data_804DF988[4] = {
+SECTION_RODATA static u8 const brkIdx[4] = {
 	0x00, 0x10, 0x00, 0x11,
 };
 
@@ -981,7 +981,7 @@ asm void daCstaF_c::initStopBrkBtk() {
 
 /* ############################################################################################## */
 /* 804DF98C-804DF990 0004+00 s=1 e=0 z=0  None .rodata    brIdx$4910                                                   */
-SECTION_RODATA static u8 const data_804DF98C[4] = {
+SECTION_RODATA static u8 const brIdx[4] = {
 	0x00, 0x0F, 0x00, 0x10,
 };
 

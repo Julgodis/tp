@@ -269,8 +269,8 @@ lbl_804A67DC:
 /* 804A67FC  42 00 FF E0 */	bdnz lbl_804A67DC
 /* 804A6800  7F E3 FB 78 */	mr r3, r31
 /* 804A6804  38 80 00 20 */	li r4, 0x20
-/* 804A6808  3C A0 80 4B */	lis r5, data_804A8A38@ha
-/* 804A680C  38 A5 8A 38 */	addi r5, r5, data_804A8A38@l
+/* 804A6808  3C A0 80 4B */	lis r5, l_color@ha
+/* 804A680C  38 A5 8A 38 */	addi r5, r5, l_color@l
 /* 804A6810  7F 86 E3 78 */	mr r6, r28
 /* 804A6814  4B B6 D7 9C */	b update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c
 /* 804A6818  7F E3 FB 78 */	mr r3, r31

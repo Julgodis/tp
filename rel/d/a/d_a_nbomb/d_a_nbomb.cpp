@@ -36,10 +36,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -799,7 +799,7 @@ asm static void daNbomb_searchEnemy(fopAc_ac_c* param_0, void* param_1) {
 
 /* ############################################################################################## */
 /* 804CC38C-804CC398 000C+00 s=1 e=0 z=0  None .rodata    bmdIdx$4269                                                  */
-SECTION_RODATA static u8 const data_804CC38C[12] = {
+SECTION_RODATA static u8 const bmdIdx[12] = {
 	0x00, 0x1E, 0x00, 0x27, 0x00, 0x26, 0x00, 0x03, 0x00, 0x0E, 0x00, 0x0A,
 };
 
@@ -822,7 +822,7 @@ SECTION_DATA static void* m_arcNameList__9daNbomb_c[6] = {
 };
 
 /* 804CC530-804CC53C 000A+02 s=1 e=0 z=0  None .data      enemyBombID$5072                                             */
-SECTION_DATA static u8 data_804CC530[10 + 2 /* padding */] = {
+SECTION_DATA static u8 enemyBombID[10 + 2 /* padding */] = {
 	0x0A, 0x0D, 0x0A, 0x0E, 0x0A, 0x0F, 0x0A, 0x10, 0x0A, 0x11,
 	/* padding */
 	0x00, 0x00,
@@ -1020,7 +1020,7 @@ asm static void daNbomb_createHeap(fopAc_ac_c* param_0) {
 
 /* ############################################################################################## */
 /* 804CC398-804CC3B0 0018+00 s=1 e=0 z=0  None .rodata    heapSize$4323                                                */
-SECTION_RODATA static u8 const data_804CC398[24] = {
+SECTION_RODATA static u8 const heapSize[24] = {
 	0x00, 0x00, 0x0E, 0xB0, 0x00, 0x00, 0x0E, 0xB0, 0x00, 0x00, 0x17, 0xC0, 0x00, 0x00, 0x0E, 0xB0,
 	0x00, 0x00, 0x25, 0x00, 0x00, 0x00, 0x0F, 0x90,
 };
@@ -1067,7 +1067,7 @@ SECTION_RODATA static u32 const lit_5021 = 0x3FC00000;
 SECTION_RODATA static u32 const lit_5036 = 0xCE6E6B28;
 
 /* 804CC3E8-804CC3F4 000C+00 s=1 e=0 z=0  None .rodata    localOffset$5044                                             */
-SECTION_RODATA static u8 const data_804CC3E8[12] = {
+SECTION_RODATA static u8 const localOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0x70, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -1081,7 +1081,7 @@ SECTION_RODATA static u32 const lit_5214 = 0x43360B61;
 SECTION_RODATA static u32 const lit_5289 = 0x3F7FBE77;
 
 /* 804CC400-804CC414 0012+02 s=1 e=0 z=0  None .rodata    normalNameID$5297                                            */
-SECTION_RODATA static u8 const data_804CC400[18 + 2 /* padding */] = {
+SECTION_RODATA static u8 const normalNameID[18 + 2 /* padding */] = {
 	0x01, 0x61, 0x01, 0x62, 0x01, 0x63, 0x01, 0x64, 0x01, 0x65, 0x01, 0x66, 0x01, 0x67, 0x01, 0x68,
 	0x01, 0xEC,
 	/* padding */
@@ -1089,12 +1089,12 @@ SECTION_RODATA static u8 const data_804CC400[18 + 2 /* padding */] = {
 };
 
 /* 804CC414-804CC424 0010+00 s=1 e=0 z=0  None .rodata    waterNameID$5298                                             */
-SECTION_RODATA static u8 const data_804CC414[16] = {
+SECTION_RODATA static u8 const waterNameID[16] = {
 	0x0A, 0x05, 0x0A, 0x06, 0x0A, 0x07, 0x0A, 0x08, 0x0A, 0x09, 0x0A, 0x0A, 0x0A, 0x0B, 0x0A, 0x0C,
 };
 
 /* 804CC424-804CC438 0012+02 s=1 e=0 z=0  None .rodata    waterNameID2$5299                                            */
-SECTION_RODATA static u8 const data_804CC424[18 + 2 /* padding */] = {
+SECTION_RODATA static u8 const waterNameID2[18 + 2 /* padding */] = {
 	0x09, 0xFC, 0x09, 0xFD, 0x09, 0xFE, 0x09, 0xFF, 0x0A, 0x00, 0x0A, 0x01, 0x0A, 0x02, 0x0A, 0x03,
 	0x0A, 0x04,
 	/* padding */
@@ -1425,7 +1425,7 @@ u8 lit_1009[1 + 3 /* padding */];
 static u8 lit_5069[12 + 4 /* padding */];
 
 /* 804CC6D8-804CC6E4 000C+00 s=1 e=0 z=0  None .bss       effectScale$5068                                             */
-static u8 data_804CC6D8[12];
+static u8 effectScale[12];
 
 /* 804C8588-804C87F0 0268+00 s=1 e=0 z=0  None .text      setEffect__9daNbomb_cFv                                      */
 #pragma push

@@ -117,7 +117,7 @@ lbl_8012311C:
 /* 80123134  4B F9 CC 7D */	bl checkZoraWearAbility__9daAlink_cCFv
 /* 80123138  2C 03 00 00 */	cmpwi r3, 0
 /* 8012313C  41 82 02 50 */	beq lbl_8012338C
-/* 80123140  3B 82 96 B8 */	la r28, data_804530B8(r2) /* 804530B8-_SDA2_BASE_ */
+/* 80123140  3B 82 96 B8 */	la r28, effNameWater(r2) /* 804530B8-_SDA2_BASE_ */
 /* 80123144  3B 7F 33 EC */	addi r27, r31, 0x33ec
 /* 80123148  3B 5E 46 C8 */	addi r26, r30, 0x46c8
 /* 8012314C  3B 20 00 02 */	li r25, 2
@@ -146,13 +146,13 @@ lbl_80123198:
 /* 80123198  80 16 05 7C */	lwz r0, 0x57c(r22)
 /* 8012319C  54 00 02 D7 */	rlwinm. r0, r0, 0, 0xb, 0xb
 /* 801231A0  41 82 00 18 */	beq lbl_801231B8
-/* 801231A4  3B 82 96 B0 */	la r28, data_804530B0(r2) /* 804530B0-_SDA2_BASE_ */
+/* 801231A4  3B 82 96 B0 */	la r28, effNameLight(r2) /* 804530B0-_SDA2_BASE_ */
 /* 801231A8  3B 7F 33 B0 */	addi r27, r31, 0x33b0
 /* 801231AC  3B 5E 46 44 */	addi r26, r30, 0x4644
 /* 801231B0  3B 20 00 04 */	li r25, 4
 /* 801231B4  48 00 00 14 */	b lbl_801231C8
 lbl_801231B8:
-/* 801231B8  3B 82 96 AC */	la r28, data_804530AC(r2) /* 804530AC-_SDA2_BASE_ */
+/* 801231B8  3B 82 96 AC */	la r28, effNameNormal(r2) /* 804530AC-_SDA2_BASE_ */
 /* 801231BC  3B 7F 33 A4 */	addi r27, r31, 0x33a4
 /* 801231C0  3B 5E 46 2C */	addi r26, r30, 0x462c
 /* 801231C4  3B 20 00 02 */	li r25, 2

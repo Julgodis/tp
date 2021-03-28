@@ -206,8 +206,8 @@ lbl_808074A0:
 /* 808074F8  7F C6 F3 78 */	mr r6, r30
 /* 808074FC  4B 87 C3 64 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80807500  38 7E 09 1C */	addi r3, r30, 0x91c
-/* 80807504  3C 80 80 80 */	lis r4, data_80807DF0@ha
-/* 80807508  38 84 7D F0 */	addi r4, r4, data_80807DF0@l
+/* 80807504  3C 80 80 80 */	lis r4, cc_sph_src@ha
+/* 80807508  38 84 7D F0 */	addi r4, r4, cc_sph_src@l
 /* 8080750C  4B 87 D5 28 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80807510  38 1E 08 E0 */	addi r0, r30, 0x8e0
 /* 80807514  90 1E 09 60 */	stw r0, 0x960(r30)

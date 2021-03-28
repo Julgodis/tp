@@ -9,10 +9,10 @@ lbl_807D3F2C:
 /* 807D3F48  3B 40 00 00 */	li r26, 0
 /* 807D3F4C  3B E0 00 00 */	li r31, 0
 /* 807D3F50  3B C0 00 00 */	li r30, 0
-/* 807D3F54  3C 60 80 7E */	lis r3, data_807E2F9C@ha
-/* 807D3F58  3B 83 2F 9C */	addi r28, r3, data_807E2F9C@l
-/* 807D3F5C  3C 60 80 7E */	lis r3, data_807E2FA4@ha
-/* 807D3F60  3B A3 2F A4 */	addi r29, r3, data_807E2FA4@l
+/* 807D3F54  3C 60 80 7E */	lis r3, yaa@ha
+/* 807D3F58  3B 83 2F 9C */	addi r28, r3, yaa@l
+/* 807D3F5C  3C 60 80 7E */	lis r3, saku_bit@ha
+/* 807D3F60  3B A3 2F A4 */	addi r29, r3, saku_bit@l
 lbl_807D3F64:
 /* 807D3F64  7F 23 CB 78 */	mr r3, r25
 /* 807D3F68  7C 9C F2 AE */	lhax r4, r28, r30

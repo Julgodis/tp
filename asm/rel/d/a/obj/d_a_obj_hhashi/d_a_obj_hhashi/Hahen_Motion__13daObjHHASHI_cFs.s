@@ -7,8 +7,8 @@ lbl_8058043C:
 /* 80580450  39 61 00 40 */	addi r11, r1, 0x40
 /* 80580454  4B DE 1D 78 */	b _savegpr_25
 /* 80580458  7C 79 1B 78 */	mr r25, r3
-/* 8058045C  3C A0 80 58 */	lis r5, data_805814AC@ha
-/* 80580460  3B E5 14 AC */	addi r31, r5, data_805814AC@l
+/* 8058045C  3C A0 80 58 */	lis r5, ccCylSrc@ha
+/* 80580460  3B E5 14 AC */	addi r31, r5, ccCylSrc@l
 /* 80580464  7C 9E 07 34 */	extsh r30, r4
 /* 80580468  7F 59 F2 14 */	add r26, r25, r30
 /* 8058046C  88 1A 0F 14 */	lbz r0, 0xf14(r26)

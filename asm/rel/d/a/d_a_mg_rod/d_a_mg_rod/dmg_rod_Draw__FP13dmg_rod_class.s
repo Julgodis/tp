@@ -106,8 +106,8 @@ lbl_804A9B34:
 lbl_804A9B64:
 /* 804A9B64  38 7F 0F 40 */	addi r3, r31, 0xf40
 /* 804A9B68  38 80 00 6A */	li r4, 0x6a
-/* 804A9B6C  3C A0 80 4C */	lis r5, data_804BB878@ha
-/* 804A9B70  38 A5 B8 78 */	addi r5, r5, data_804BB878@l
+/* 804A9B6C  3C A0 80 4C */	lis r5, l_color_4439@ha
+/* 804A9B70  38 A5 B8 78 */	addi r5, r5, l_color_4439@l
 /* 804A9B74  38 DF 01 0C */	addi r6, r31, 0x10c
 /* 804A9B78  4B B6 92 C4 */	b update__19mDoExt_3DlineMat0_cFiR8_GXColorP12dKy_tevstr_c
 /* 804A9B7C  38 7F 0F 40 */	addi r3, r31, 0xf40
@@ -176,8 +176,8 @@ lbl_804A9C34:
 /* 804A9C70  4B B6 40 54 */	b mDoExt_modelUpdateDL__FP8J3DModel
 /* 804A9C74  38 7F 0F 40 */	addi r3, r31, 0xf40
 /* 804A9C78  38 80 00 64 */	li r4, 0x64
-/* 804A9C7C  3C A0 80 4C */	lis r5, data_804BB87C@ha
-/* 804A9C80  38 A5 B8 7C */	addi r5, r5, data_804BB87C@l
+/* 804A9C7C  3C A0 80 4C */	lis r5, l_color_4445@ha
+/* 804A9C80  38 A5 B8 7C */	addi r5, r5, l_color_4445@l
 /* 804A9C84  38 DF 01 0C */	addi r6, r31, 0x10c
 /* 804A9C88  4B B6 91 B4 */	b update__19mDoExt_3DlineMat0_cFiR8_GXColorP12dKy_tevstr_c
 /* 804A9C8C  38 7F 0F 40 */	addi r3, r31, 0xf40

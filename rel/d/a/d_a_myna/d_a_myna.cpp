@@ -55,7 +55,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
@@ -64,13 +67,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -99,18 +99,18 @@ struct daObj_SSItem_c {
 	/* 80CE77F8 */ void getExchangeItemPtr();
 };
 
-struct J3DAnmTransformKey {
-};
-
-struct J3DModel {
-};
-
 struct J3DFrameCtrl {
 	/* 803283FC */ void init(s16);
 	/* 80946370 */ ~J3DFrameCtrl();
 };
 
 struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct daMyna_c {

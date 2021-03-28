@@ -641,8 +641,8 @@ lbl_801A0D98:
 /* 801A0DA8  2C 00 00 06 */	cmpwi r0, 6
 /* 801A0DAC  40 80 00 18 */	bge lbl_801A0DC4
 /* 801A0DB0  54 00 10 3A */	slwi r0, r0, 2
-/* 801A0DB4  3C 60 80 3C */	lis r3, data_803BC010@ha
-/* 801A0DB8  38 63 C0 10 */	addi r3, r3, data_803BC010@l
+/* 801A0DB4  3C 60 80 3C */	lis r3, now_shadow_alpha@ha
+/* 801A0DB8  38 63 C0 10 */	addi r3, r3, now_shadow_alpha@l
 /* 801A0DBC  7C 23 04 2E */	lfsx f1, r3, r0
 /* 801A0DC0  48 00 00 08 */	b lbl_801A0DC8
 lbl_801A0DC4:
@@ -652,8 +652,8 @@ lbl_801A0DC8:
 /* 801A0DCC  2C 00 00 06 */	cmpwi r0, 6
 /* 801A0DD0  40 80 00 18 */	bge lbl_801A0DE8
 /* 801A0DD4  54 00 10 3A */	slwi r0, r0, 2
-/* 801A0DD8  3C 60 80 3C */	lis r3, data_803BC010@ha
-/* 801A0DDC  38 63 C0 10 */	addi r3, r3, data_803BC010@l
+/* 801A0DD8  3C 60 80 3C */	lis r3, now_shadow_alpha@ha
+/* 801A0DDC  38 63 C0 10 */	addi r3, r3, now_shadow_alpha@l
 /* 801A0DE0  7C 43 04 2E */	lfsx f2, r3, r0
 /* 801A0DE4  48 00 00 08 */	b lbl_801A0DEC
 lbl_801A0DE8:

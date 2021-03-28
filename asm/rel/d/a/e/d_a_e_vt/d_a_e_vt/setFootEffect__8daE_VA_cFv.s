@@ -44,8 +44,8 @@ lbl_807C49F4:
 /* 807C4A58  80 84 0F 78 */	lwz r4, 0xf78(r4)
 /* 807C4A5C  38 A0 00 00 */	li r5, 0
 /* 807C4A60  54 DD 08 3C */	slwi r29, r6, 1
-/* 807C4A64  3C C0 80 7D */	lis r6, data_807CF174@ha
-/* 807C4A68  38 C6 F1 74 */	addi r6, r6, data_807CF174@l
+/* 807C4A64  3C C0 80 7D */	lis r6, va_foot_smoke_id@ha
+/* 807C4A68  38 C6 F1 74 */	addi r6, r6, va_foot_smoke_id@l
 /* 807C4A6C  7C C6 EA 2E */	lhzx r6, r6, r29
 /* 807C4A70  38 E1 00 2C */	addi r7, r1, 0x2c
 /* 807C4A74  39 1E 01 0C */	addi r8, r30, 0x10c
@@ -68,8 +68,8 @@ lbl_807C49F4:
 /* 807C4AB8  90 81 00 1C */	stw r4, 0x1c(r1)
 /* 807C4ABC  80 85 0F 7C */	lwz r4, 0xf7c(r5)
 /* 807C4AC0  38 A0 00 00 */	li r5, 0
-/* 807C4AC4  3C C0 80 7D */	lis r6, data_807CF174@ha
-/* 807C4AC8  38 06 F1 74 */	addi r0, r6, data_807CF174@l
+/* 807C4AC4  3C C0 80 7D */	lis r6, va_foot_smoke_id@ha
+/* 807C4AC8  38 06 F1 74 */	addi r0, r6, va_foot_smoke_id@l
 /* 807C4ACC  7C C0 EA 14 */	add r6, r0, r29
 /* 807C4AD0  A0 C6 00 02 */	lhz r6, 2(r6)
 /* 807C4AD4  38 E1 00 2C */	addi r7, r1, 0x2c

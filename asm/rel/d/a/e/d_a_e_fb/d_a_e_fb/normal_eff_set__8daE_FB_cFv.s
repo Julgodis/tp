@@ -16,10 +16,10 @@ lbl_806B82B4:
 /* 806B82EC  3B A3 D4 70 */	addi r29, r3, now__14mDoMtx_stack_c@l
 /* 806B82F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 806B82F4  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
-/* 806B82F8  3C 60 80 6C */	lis r3, data_806B90CC@ha
-/* 806B82FC  3B E3 90 CC */	addi r31, r3, data_806B90CC@l
-/* 806B8300  3C 60 80 6C */	lis r3, data_806B90C0@ha
-/* 806B8304  3A E3 90 C0 */	addi r23, r3, data_806B90C0@l
+/* 806B82F8  3C 60 80 6C */	lis r3, n_joint_id@ha
+/* 806B82FC  3B E3 90 CC */	addi r31, r3, n_joint_id@l
+/* 806B8300  3C 60 80 6C */	lis r3, n_eff_id@ha
+/* 806B8304  3A E3 90 C0 */	addi r23, r3, n_eff_id@l
 /* 806B8308  3C 60 80 6C */	lis r3, lit_3751@ha
 /* 806B830C  3B 03 8F A0 */	addi r24, r3, lit_3751@l
 lbl_806B8310:

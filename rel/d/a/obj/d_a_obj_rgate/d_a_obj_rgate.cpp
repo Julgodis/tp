@@ -73,10 +73,10 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -560,7 +560,7 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 SECTION_DATA static void* l_arcName = (void*)(((char*)&struct_80CBC458)+0x0) /* @stringBase0 */;
 
 /* 80CBC5C8-80CBC5CC 0004+00 s=1 e=0 z=0  None .bss       l_evName$4049                                                */
-static u8 data_80CBC5C8[4];
+static u8 l_evName[4];
 
 /* 80CBC5CC-80CBC5D0 0004+00 s=2 e=0 z=0  None .bss       None                                                         */
 static u8 struct_80CBC5CC[4];
@@ -748,7 +748,7 @@ SECTION_DATA static void* lit_4799[3] = {
 };
 
 /* 80CBC4E8-80CBC50C 0024+00 s=1 e=0 z=0  None .data      l_func$4796                                                  */
-SECTION_DATA static u8 data_80CBC4E8[36] = {
+SECTION_DATA static u8 l_func[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
@@ -783,7 +783,7 @@ SECTION_RODATA static u8 const data_80CBC498[8] = {
 };
 
 /* 80CBC50C-80CBC51C 0010+00 s=1 e=0 z=0  None .data      action_table$4852                                            */
-SECTION_DATA static void* data_80CBC50C[4] = {
+SECTION_DATA static void* action_table[4] = {
 	(void*)(((char*)&struct_80CBC458)+0x29) /* None */,
 	(void*)(((char*)&struct_80CBC458)+0x2E) /* None */,
 	(void*)(((char*)&struct_80CBC458)+0x39) /* None */,

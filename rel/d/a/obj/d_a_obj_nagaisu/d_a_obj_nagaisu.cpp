@@ -31,15 +31,15 @@ struct daObjNagaisu_c {
 	/* 80C9F944 */ void setIsu();
 };
 
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
 struct dMdl_obj_c {
 };
 
 struct dMdl_c {
 	/* 8009C668 */ void entryObj(dMdl_obj_c*);
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
 struct daObjIsuChild_c {
@@ -54,13 +54,13 @@ struct daObjIsuChild_c {
 	/* 80CA0180 */ void callEmt();
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -78,11 +78,11 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 struct dPa_control_c {
@@ -330,7 +330,7 @@ SECTION_RODATA static u32 const lit_3822 = 0x44458000;
 SECTION_RODATA static u32 const lit_3823 = 0x438C0000;
 
 /* 80CA03D0-80CA03D8 0008+00 s=1 e=0 z=0  None .rodata    COL_OFFSET_X$3919                                            */
-SECTION_RODATA static u8 const data_80CA03D0[8] = {
+SECTION_RODATA static u8 const COL_OFFSET_X[8] = {
 	0x00, 0x00, 0x00, 0x3C, 0xFF, 0xFF, 0xFF, 0xC4,
 };
 
@@ -355,7 +355,7 @@ SECTION_RODATA static u32 const lit_3963 = 0x3F800000;
 SECTION_RODATA static u32 const lit_3964 = 0xBF800000;
 
 /* 80CA03F4-80CA03FC 0008+00 s=1 e=0 z=0  None .rodata    PARTICLE_NAME$4004                                           */
-SECTION_RODATA static u8 const data_80CA03F4[8] = {
+SECTION_RODATA static u8 const PARTICLE_NAME[8] = {
 	0x8A, 0xE7, 0x8A, 0xE8, 0x8A, 0xE9, 0x8A, 0xEA,
 };
 

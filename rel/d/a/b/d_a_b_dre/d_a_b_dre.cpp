@@ -51,19 +51,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -831,7 +831,7 @@ SECTION_DATA static void* lit_4782[34] = {
 };
 
 /* 805CAFAC-805CAFB4 0008+00 s=1 e=0 z=0  None .data      effId$4884                                                   */
-SECTION_DATA static u8 data_805CAFAC[8] = {
+SECTION_DATA static u8 effId[8] = {
 	0x89, 0x9B, 0x89, 0x9C, 0x89, 0x9D, 0x89, 0x9E,
 };
 

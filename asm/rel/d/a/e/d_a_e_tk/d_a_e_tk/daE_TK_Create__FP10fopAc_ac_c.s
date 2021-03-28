@@ -157,8 +157,8 @@ lbl_807B9FAC:
 /* 807BA00C  7F C6 F3 78 */	mr r6, r30
 /* 807BA010  4B 8C 98 50 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 807BA014  38 7E 09 04 */	addi r3, r30, 0x904
-/* 807BA018  3C 80 80 7C */	lis r4, data_807BA358@ha
-/* 807BA01C  38 84 A3 58 */	addi r4, r4, data_807BA358@l
+/* 807BA018  3C 80 80 7C */	lis r4, cc_sph_src@ha
+/* 807BA01C  38 84 A3 58 */	addi r4, r4, cc_sph_src@l
 /* 807BA020  4B 8C AA 14 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 807BA024  38 1E 08 C8 */	addi r0, r30, 0x8c8
 /* 807BA028  90 1E 09 48 */	stw r0, 0x948(r30)

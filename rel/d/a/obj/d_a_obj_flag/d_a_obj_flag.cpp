@@ -51,10 +51,10 @@ struct daObjFlag_c {
 	/* 80BEBE64 */ void getSwingY(f32);
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

@@ -9,8 +9,8 @@ lbl_805B6348:
 /* 805B6364  7C 7C 1B 78 */	mr r28, r3
 /* 805B6368  3B A0 00 00 */	li r29, 0
 /* 805B636C  3B E0 00 00 */	li r31, 0
-/* 805B6370  3C 60 80 5C */	lis r3, data_805BAA4C@ha
-/* 805B6374  3B C3 AA 4C */	addi r30, r3, data_805BAA4C@l
+/* 805B6370  3C 60 80 5C */	lis r3, lf_pos@ha
+/* 805B6374  3B C3 AA 4C */	addi r30, r3, lf_pos@l
 /* 805B6378  3C 60 80 5C */	lis r3, lit_5284@ha
 /* 805B637C  C3 E3 A6 00 */	lfs f31, lit_5284@l(r3)
 lbl_805B6380:

@@ -57,10 +57,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct J3DModel {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DModel {
 };
 
 struct dComIfG_play_c {

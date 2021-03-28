@@ -181,10 +181,10 @@ struct dStage_nextStage_c {
 	/* 80023E28 */ void set(char const*, s8, s16, s8, s8, u8);
 };
 
-struct J3DModel {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DModel {
 };
 
 struct dSmplMdl_draw_c {
@@ -1366,7 +1366,7 @@ static s32 phase_3(char* param_0) {
 
 /* ############################################################################################## */
 /* 803A71B8-803A71C4 000C+00 s=1 e=0 z=0  None .data      l_method$5017                                                */
-SECTION_DATA static void* data_803A71B8[3] = {
+SECTION_DATA static void* l_method_5017[3] = {
 	(void*)phase_1__FPc,
 	(void*)phase_2__FPc,
 	(void*)phase_3__FPc,
@@ -1413,7 +1413,7 @@ static bool phase_03(phaseParam_c* param_0) {
 
 /* ############################################################################################## */
 /* 803A71C4-803A71D0 000C+00 s=1 e=0 z=0  None .data      l_method$5051                                                */
-SECTION_DATA static void* data_803A71C4[3] = {
+SECTION_DATA static void* l_method_5051[3] = {
 	(void*)phase_01__FP12phaseParam_c,
 	(void*)phase_02__FP12phaseParam_c,
 	(void*)phase_03__FP12phaseParam_c,
@@ -1939,7 +1939,7 @@ asm void dComIfGp_getSubHeap2D(int param_0) {
 
 /* ############################################################################################## */
 /* 803A71D0-803A71E8 0018+00 s=1 e=0 z=0  None .data      l_itemno$6402                                                */
-SECTION_DATA static u8 data_803A71D0[24] = {
+SECTION_DATA static u8 l_itemno[24] = {
 	0xC0, 0xC1, 0xC2, 0xC3, 0xC4, 0xC5, 0xC6, 0xC7, 0xC8, 0xC9, 0xCA, 0xCB, 0xCC, 0xCD, 0xCE, 0xCF,
 	0xD0, 0xD1, 0xD2, 0xD3, 0xD4, 0xD5, 0xD6, 0xD7,
 };
@@ -2306,7 +2306,7 @@ asm void dComIfG_getOldStageRes(char const* param_0) {
 
 /* ############################################################################################## */
 /* 80423FD0-80423FF0 0020+00 s=1 e=0 z=0  None .bss       buf$7371                                                     */
-static u8 data_80423FD0[32];
+static u8 buf[32];
 
 /* 8002F4BC-8002F500 0044+00 s=0 e=5 z=1  None .text      dComIfG_getRoomArcName__Fi                                   */
 #pragma push

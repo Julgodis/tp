@@ -325,8 +325,8 @@ lbl_807C371C:
 /* 807C3730  41 82 00 54 */	beq lbl_807C3784
 /* 807C3734  38 7F 09 58 */	addi r3, r31, 0x958
 /* 807C3738  38 80 00 6E */	li r4, 0x6e
-/* 807C373C  3C A0 80 7D */	lis r5, data_807CF170@ha
-/* 807C3740  38 A5 F1 70 */	addi r5, r5, data_807CF170@l
+/* 807C373C  3C A0 80 7D */	lis r5, l_color@ha
+/* 807C3740  38 A5 F1 70 */	addi r5, r5, l_color@l
 /* 807C3744  38 DF 01 0C */	addi r6, r31, 0x10c
 /* 807C3748  4B 85 08 68 */	b update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c
 /* 807C374C  38 7F 09 58 */	addi r3, r31, 0x958

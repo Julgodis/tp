@@ -67,10 +67,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -88,10 +88,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -284,7 +284,7 @@ SECTION_DATA static void* lit_3838[3] = {
 };
 
 /* 80CB9B1C-80CB9B4C 0030+00 s=1 e=0 z=0  None .data      mode_proc$3834                                               */
-SECTION_DATA static u8 data_80CB9B1C[48] = {
+SECTION_DATA static u8 mode_proc[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -402,7 +402,7 @@ SECTION_RODATA static u32 const lit_3820 = 0x3F800000;
 SECTION_RODATA static u32 const lit_3821 = 0xBF800000;
 
 /* 80CB9AB4-80CB9AC0 000A+02 s=1 e=0 z=0  None .rodata    particle_id$3917                                             */
-SECTION_RODATA static u8 const data_80CB9AB4[10 + 2 /* padding */] = {
+SECTION_RODATA static u8 const particle_id[10 + 2 /* padding */] = {
 	0x83, 0xB0, 0x83, 0xB1, 0x83, 0xB2, 0x83, 0xB3, 0x83, 0xB4,
 	/* padding */
 	0x00, 0x00,

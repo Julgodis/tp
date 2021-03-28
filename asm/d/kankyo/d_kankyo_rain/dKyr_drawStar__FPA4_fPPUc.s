@@ -43,7 +43,7 @@ lbl_800685DC:
 /* 80068680  7C 00 07 75 */	extsb. r0, r0
 /* 80068684  40 82 00 14 */	bne lbl_80068698
 /* 80068688  C0 02 87 B8 */	lfs f0, lit_3954(r2)
-/* 8006868C  D0 0D 89 98 */	stfs f0, data_80450F18(r13)
+/* 8006868C  D0 0D 89 98 */	stfs f0, rot_9421(r13)
 /* 80068690  38 00 00 01 */	li r0, 1
 /* 80068694  98 0D 89 9C */	stb r0, struct_80450F1C+0x0(r13)
 lbl_80068698:
@@ -445,7 +445,7 @@ lbl_80068B64:
 /* 80068CA4  38 61 00 F8 */	addi r3, r1, 0xf8
 /* 80068CA8  38 80 00 5A */	li r4, 0x5a
 /* 80068CAC  C0 22 8A 60 */	lfs f1, lit_7211(r2)
-/* 80068CB0  C0 0D 89 98 */	lfs f0, data_80450F18(r13)
+/* 80068CB0  C0 0D 89 98 */	lfs f0, rot_9421(r13)
 /* 80068CB4  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80068CB8  48 2D D9 F1 */	bl PSMTXRotRad
 /* 80068CBC  38 61 01 28 */	addi r3, r1, 0x128
@@ -457,15 +457,15 @@ lbl_80068B64:
 /* 80068CD4  48 2F 75 79 */	bl GXLoadPosMtxImm
 /* 80068CD8  38 60 00 00 */	li r3, 0
 /* 80068CDC  48 2F 76 11 */	bl GXSetCurrentMtx
-/* 80068CE0  C0 2D 89 98 */	lfs f1, data_80450F18(r13)
+/* 80068CE0  C0 2D 89 98 */	lfs f1, rot_9421(r13)
 /* 80068CE4  C0 02 8B 54 */	lfs f0, lit_9833(r2)
 /* 80068CE8  EC 21 00 2A */	fadds f1, f1, f0
-/* 80068CEC  D0 2D 89 98 */	stfs f1, data_80450F18(r13)
+/* 80068CEC  D0 2D 89 98 */	stfs f1, rot_9421(r13)
 /* 80068CF0  C0 02 8B 14 */	lfs f0, lit_9387(r2)
 /* 80068CF4  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80068CF8  40 81 00 0C */	ble lbl_80068D04
 /* 80068CFC  C0 02 87 B8 */	lfs f0, lit_3954(r2)
-/* 80068D00  D0 0D 89 98 */	stfs f0, data_80450F18(r13)
+/* 80068D00  D0 0D 89 98 */	stfs f0, rot_9421(r13)
 lbl_80068D04:
 /* 80068D04  C0 1E 00 D8 */	lfs f0, 0xd8(r30)
 /* 80068D08  D0 01 00 EC */	stfs f0, 0xec(r1)
@@ -689,8 +689,8 @@ lbl_80068F78:
 /* 80069058  EE C2 00 32 */	fmuls f22, f2, f0
 lbl_8006905C:
 /* 8006905C  56 C4 17 3A */	rlwinm r4, r22, 2, 0x1c, 0x1d
-/* 80069060  3C 60 80 38 */	lis r3, data_8037A568@ha
-/* 80069064  38 03 A5 68 */	addi r0, r3, data_8037A568@l
+/* 80069060  3C 60 80 38 */	lis r3, star_col@ha
+/* 80069064  38 03 A5 68 */	addi r0, r3, star_col@l
 /* 80069068  7C 60 22 14 */	add r3, r0, r4
 /* 8006906C  88 03 00 00 */	lbz r0, 0(r3)
 /* 80069070  98 01 00 14 */	stb r0, 0x14(r1)

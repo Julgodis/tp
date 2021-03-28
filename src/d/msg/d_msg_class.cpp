@@ -11,17 +11,6 @@
 // Types:
 // 
 
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct jmessage_tControl {
-	/* 802299EC */ jmessage_tControl();
-};
-
 struct jmessage_tReference {
 	/* 80228B04 */ jmessage_tReference();
 	/* 80228CB4 */ ~jmessage_tReference();
@@ -52,6 +41,17 @@ struct jmessage_tReference {
 	/* 8022994C */ void isLightEnd();
 	/* 802299AC */ void decideOutFontRupeeColor(int);
 	/* 80232A20 */ void getActorPos();
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct jmessage_tControl {
+	/* 802299EC */ jmessage_tControl();
 };
 
 struct jmessage_tSequenceProcessor {
@@ -120,11 +120,11 @@ struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
 };
 
-struct JUTFont {
-};
-
 struct COutFont_c {
 	/* 80226CF8 */ void initialize();
+};
+
+struct JUTFont {
 };
 
 struct jmessage_string_tReference {
@@ -601,7 +601,7 @@ asm static void checkCharInfoCharactor(int param_0) {
 
 /* ############################################################################################## */
 /* 804510C0-804510C8 0003+05 s=1 e=0 z=0  None .sbss      mMoji$3770                                                   */
-static u8 data_804510C0[3 + 5 /* padding */];
+static u8 mMoji[3 + 5 /* padding */];
 
 /* 802285CC-80228608 003C+00 s=3 e=0 z=0  None .text      changeCodeToChar__FUs                                        */
 #pragma push
@@ -616,7 +616,7 @@ asm static void changeCodeToChar(u16 param_0) {
 
 /* ############################################################################################## */
 /* 803BFDF8-803BFE78 0080+00 s=1 e=0 z=0  None .data      char_table$3795                                              */
-SECTION_DATA static u8 data_803BFDF8[128] = {
+SECTION_DATA static u8 char_table[128] = {
 	0x00, 0x00, 0x81, 0x42, 0x81, 0x75, 0x81, 0x76, 0x81, 0x41, 0x81, 0x45, 0x83, 0x92, 0x83, 0x40,
 	0x83, 0x42, 0x83, 0x44, 0x83, 0x46, 0x83, 0x48, 0x83, 0x83, 0x83, 0x85, 0x83, 0x87, 0x83, 0x62,
 	0x81, 0x5B, 0x83, 0x41, 0x83, 0x43, 0x83, 0x45, 0x83, 0x47, 0x83, 0x49, 0x83, 0x4A, 0x83, 0x4C,
@@ -730,7 +730,7 @@ asm static void isOutfontKanjiCode(int param_0) {
 
 /* ############################################################################################## */
 /* 803995C8-803995EC 0024+00 s=1 e=0 z=0  None .rodata    colorTable$3861                                              */
-SECTION_RODATA static u8 const data_803995C8[36] = {
+SECTION_RODATA static u8 const colorTable_3861[36] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xF0, 0x78, 0x78, 0xFF, 0xAA, 0xDC, 0x8C, 0xFF, 0xA0, 0xB4, 0xDC, 0xFF,
 	0xDC, 0xDC, 0x82, 0xFF, 0xB4, 0xC8, 0xE6, 0xFF, 0xC8, 0xA0, 0xDC, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xDC, 0xAA, 0x78, 0xFF,
@@ -749,7 +749,7 @@ asm static void getFontCCColorTable(u8 param_0, u8 param_1) {
 
 /* ############################################################################################## */
 /* 803995EC-80399610 0024+00 s=1 e=0 z=0  None .rodata    colorTable$3877                                              */
-SECTION_RODATA static u8 const data_803995EC[36] = {
+SECTION_RODATA static u8 const colorTable_3877[36] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xF0, 0x78, 0x78, 0xFF, 0xAA, 0xDC, 0x8C, 0xFF, 0xA0, 0xB4, 0xDC, 0xFF,
 	0xDC, 0xDC, 0x82, 0xFF, 0xB4, 0xC8, 0xE6, 0xFF, 0xC8, 0xA0, 0xDC, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xDC, 0xAA, 0x78, 0xFF,

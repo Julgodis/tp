@@ -13,8 +13,8 @@ lbl_80BFE2CC:
 /* 80BFE2F8  39 61 00 50 */	addi r11, r1, 0x50
 /* 80BFE2FC  4B 76 3E CC */	b _savegpr_24
 /* 80BFE300  7C 78 1B 78 */	mr r24, r3
-/* 80BFE304  3C 60 80 C0 */	lis r3, data_80BFFC1C@ha
-/* 80BFE308  3B A3 FC 1C */	addi r29, r3, data_80BFFC1C@l
+/* 80BFE304  3C 60 80 C0 */	lis r3, ccSphSrc@ha
+/* 80BFE308  3B A3 FC 1C */	addi r29, r3, ccSphSrc@l
 /* 80BFE30C  C3 9D 00 40 */	lfs f28, 0x40(r29)
 /* 80BFE310  D3 81 00 14 */	stfs f28, 0x14(r1)
 /* 80BFE314  C3 BD 00 44 */	lfs f29, 0x44(r29)

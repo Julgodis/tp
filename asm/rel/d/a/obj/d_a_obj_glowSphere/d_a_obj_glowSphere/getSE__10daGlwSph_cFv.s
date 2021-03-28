@@ -11,8 +11,8 @@ lbl_80BF9F30:
 /* 80BF9F54  40 82 00 3C */	bne lbl_80BF9F90
 /* 80BF9F58  3C 80 00 08 */	lis r4, 0x0008 /* 0x0008026D@ha */
 /* 80BF9F5C  38 04 02 6D */	addi r0, r4, 0x026D /* 0x0008026D@l */
-/* 80BF9F60  3C 60 80 C0 */	lis r3, data_80BFAFD4@ha
-/* 80BF9F64  94 03 AF D4 */	stwu r0, data_80BFAFD4@l(r3)
+/* 80BF9F60  3C 60 80 C0 */	lis r3, sSeId@ha
+/* 80BF9F64  94 03 AF D4 */	stwu r0, sSeId@l(r3)
 /* 80BF9F68  38 04 02 6E */	addi r0, r4, 0x26e
 /* 80BF9F6C  90 03 00 04 */	stw r0, 4(r3)
 /* 80BF9F70  38 04 02 6F */	addi r0, r4, 0x26f
@@ -32,8 +32,8 @@ lbl_80BF9F90:
 /* 80BF9FA4  C0 1F 04 D8 */	lfs f0, 0x4d8(r31)
 /* 80BF9FA8  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80BF9FAC  54 60 13 BA */	rlwinm r0, r3, 2, 0xe, 0x1d
-/* 80BF9FB0  3C 60 80 C0 */	lis r3, data_80BFAFD4@ha
-/* 80BF9FB4  38 63 AF D4 */	addi r3, r3, data_80BFAFD4@l
+/* 80BF9FB0  3C 60 80 C0 */	lis r3, sSeId@ha
+/* 80BF9FB4  38 63 AF D4 */	addi r3, r3, sSeId@l
 /* 80BF9FB8  7C 03 00 2E */	lwzx r0, r3, r0
 /* 80BF9FBC  90 01 00 08 */	stw r0, 8(r1)
 /* 80BF9FC0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha

@@ -9,8 +9,8 @@ lbl_80BF279C:
 /* 80BF27B8  38 63 2B A4 */	addi r3, r3, stringBase0@l
 /* 80BF27BC  88 1F 05 70 */	lbz r0, 0x570(r31)
 /* 80BF27C0  54 00 10 3A */	slwi r0, r0, 2
-/* 80BF27C4  3C 80 80 BF */	lis r4, data_80BF2BAC@ha
-/* 80BF27C8  38 84 2B AC */	addi r4, r4, data_80BF2BAC@l
+/* 80BF27C4  3C 80 80 BF */	lis r4, bmdd@ha
+/* 80BF27C8  38 84 2B AC */	addi r4, r4, bmdd@l
 /* 80BF27CC  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80BF27D0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 80BF27D4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
@@ -48,8 +48,8 @@ lbl_80BF2844:
 /* 80BF2848  38 63 2B A4 */	addi r3, r3, stringBase0@l
 /* 80BF284C  88 1F 05 70 */	lbz r0, 0x570(r31)
 /* 80BF2850  54 00 10 3A */	slwi r0, r0, 2
-/* 80BF2854  3C 80 80 BF */	lis r4, data_80BF2BB4@ha
-/* 80BF2858  38 84 2B B4 */	addi r4, r4, data_80BF2BB4@l
+/* 80BF2854  3C 80 80 BF */	lis r4, dzbd@ha
+/* 80BF2858  38 84 2B B4 */	addi r4, r4, dzbd@l
 /* 80BF285C  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80BF2860  7F C5 F3 78 */	mr r5, r30
 /* 80BF2864  38 C0 00 80 */	li r6, 0x80

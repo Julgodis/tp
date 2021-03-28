@@ -40,10 +40,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -61,10 +61,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -274,7 +274,7 @@ asm void daObjBBox_c::Create() {
 
 /* ############################################################################################## */
 /* 80BAD4B8-80BAD4C4 000A+02 s=1 e=0 z=0  None .rodata    particle_id$3793                                             */
-SECTION_RODATA static u8 const data_80BAD4B8[10 + 2 /* padding */] = {
+SECTION_RODATA static u8 const particle_id[10 + 2 /* padding */] = {
 	0x83, 0xB0, 0x83, 0xB1, 0x83, 0xB2, 0x83, 0xB3, 0x83, 0xB4,
 	/* padding */
 	0x00, 0x00,

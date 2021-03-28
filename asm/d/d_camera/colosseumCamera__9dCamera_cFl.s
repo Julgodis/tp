@@ -221,8 +221,8 @@ lbl_80176B2C:
 /* 80176B40  D0 01 00 34 */	stfs f0, 0x34(r1)
 lbl_80176B44:
 /* 80176B44  38 7D 05 D8 */	addi r3, r29, 0x5d8
-/* 80176B48  3C 80 80 3C */	lis r4, data_803BA4A4@ha
-/* 80176B4C  38 84 A4 A4 */	addi r4, r4, data_803BA4A4@l
+/* 80176B48  3C 80 80 3C */	lis r4, Dsp@ha
+/* 80176B4C  38 84 A4 A4 */	addi r4, r4, Dsp@l
 /* 80176B50  4B F2 10 19 */	bl Spot__14d2DBSplinePathFPff
 /* 80176B54  FF E0 08 90 */	fmr f31, f1
 /* 80176B58  38 61 00 78 */	addi r3, r1, 0x78

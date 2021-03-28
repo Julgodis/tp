@@ -21,14 +21,14 @@ struct mDoMemCd_Ctrl_c {
 	/* 80016F2C */ void FormatSync();
 };
 
+struct J3DMaterialTable {
+};
+
 struct J3DModelData {
 };
 
 struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
-};
-
-struct J3DMaterialTable {
 };
 
 struct mDoExt_brkAnm {
@@ -73,6 +73,10 @@ struct dSv_event_c {
 struct JKRArchive {
 };
 
+struct J2DAnmTextureSRTKey {
+	/* 80184274 */ ~J2DAnmTextureSRTKey();
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -80,10 +84,6 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
-};
-
-struct J2DAnmTextureSRTKey {
-	/* 80184274 */ ~J2DAnmTextureSRTKey();
 };
 
 struct J2DPane {
@@ -132,10 +132,10 @@ struct J2DTextBox {
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
-struct JUTFont {
+struct COutFont_c {
 };
 
-struct COutFont_c {
+struct JUTFont {
 };
 
 struct dMsgString_c {
@@ -958,37 +958,37 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 /* ############################################################################################## */
 /* 80394310-80394324 0014+00 s=2 e=0 z=0  None .rodata    m_kamen_offset_x$8678                                        */
-SECTION_RODATA static u8 const data_80394310[20] = {
+SECTION_RODATA static u8 const m_kamen_offset_x[20] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80394324-80394338 0014+00 s=1 e=0 z=0  None .rodata    m_kamen_offset_y$8679                                        */
-SECTION_RODATA static u8 const data_80394324[20] = {
+SECTION_RODATA static u8 const m_kamen_offset_y[20] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00,
 	0x40, 0xA0, 0x00, 0x00,
 };
 
 /* 80394338-8039434C 0014+00 s=1 e=0 z=0  None .rodata    m_kamen_scale$8680                                           */
-SECTION_RODATA static u8 const data_80394338[20] = {
+SECTION_RODATA static u8 const m_kamen_scale[20] = {
 	0x40, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x3F, 0xCC, 0xCC, 0xCD,
 	0x3F, 0xCC, 0xCC, 0xCD,
 };
 
 /* 8039434C-80394360 0014+00 s=1 e=0 z=0  None .rodata    m_mirror_offset_x$8781                                       */
-SECTION_RODATA static u8 const data_8039434C[20] = {
+SECTION_RODATA static u8 const m_mirror_offset_x[20] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80394360-80394374 0014+00 s=1 e=0 z=0  None .rodata    m_mirror_offset_y$8782                                       */
-SECTION_RODATA static u8 const data_80394360[20] = {
+SECTION_RODATA static u8 const m_mirror_offset_y[20] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80394374-80394388 0014+00 s=1 e=0 z=0  None .rodata    m_mirror_scale$8783                                          */
-SECTION_RODATA static u8 const data_80394374[20] = {
+SECTION_RODATA static u8 const m_mirror_scale[20] = {
 	0x3F, 0x19, 0x99, 0x9A, 0x3F, 0x19, 0x99, 0x9A, 0x3F, 0x19, 0x99, 0x9A, 0x3F, 0x19, 0x99, 0x9A,
 	0x3F, 0x19, 0x99, 0x9A,
 };
@@ -1472,12 +1472,12 @@ SECTION_DATA static u8 DataSelProc[564] = {
 };
 
 /* 803BAD20-803BAD30 0010+00 s=1 e=0 z=0  None .data      l_tagName101$5620                                            */
-SECTION_DATA static u8 data_803BAD20[16] = {
+SECTION_DATA static u8 l_tagName101[16] = {
 	0x00, 0x77, 0x5F, 0x6E, 0x75, 0x6E, 0x30, 0x31, 0x00, 0x77, 0x5F, 0x6E, 0x75, 0x6E, 0x30, 0x32,
 };
 
 /* 803BAD30-803BAD40 000C+04 s=1 e=0 z=0  None .data      l_numTex$5621                                                */
-SECTION_DATA static void* data_803BAD30[3 + 1 /* padding */] = {
+SECTION_DATA static void* l_numTex[3 + 1 /* padding */] = {
 	(void*)&d_file_d_file_select__stringBase0,
 	(void*)(((char*)&d_file_d_file_select__stringBase0)+0x15),
 	(void*)(((char*)&d_file_d_file_select__stringBase0)+0x2A),
@@ -1486,37 +1486,37 @@ SECTION_DATA static void* data_803BAD30[3 + 1 /* padding */] = {
 };
 
 /* 803BAD40-803BAD58 0018+00 s=1 e=0 z=0  None .data      l_tagName0$6517                                              */
-SECTION_DATA static u8 data_803BAD40[24] = {
+SECTION_DATA static u8 l_tagName0[24] = {
 	0x77, 0x5F, 0x73, 0x65, 0x6C, 0x5F, 0x30, 0x30, 0x77, 0x5F, 0x73, 0x65, 0x6C, 0x5F, 0x30, 0x31,
 	0x77, 0x5F, 0x73, 0x65, 0x6C, 0x5F, 0x30, 0x32,
 };
 
 /* 803BAD58-803BAD70 0018+00 s=1 e=0 z=0  None .data      l_tagName3$6528                                              */
-SECTION_DATA static u8 data_803BAD58[24] = {
+SECTION_DATA static u8 l_tagName3[24] = {
 	0x77, 0x5F, 0x6D, 0x6F, 0x79, 0x6F, 0x30, 0x30, 0x77, 0x5F, 0x6D, 0x6F, 0x79, 0x6F, 0x30, 0x31,
 	0x77, 0x5F, 0x6D, 0x6F, 0x79, 0x6F, 0x30, 0x32,
 };
 
 /* 803BAD70-803BAD88 0018+00 s=1 e=0 z=0  None .data      l_tagName4$6529                                              */
-SECTION_DATA static u8 data_803BAD70[24] = {
+SECTION_DATA static u8 l_tagName4[24] = {
 	0x77, 0x5F, 0x67, 0x6F, 0x6C, 0x64, 0x30, 0x30, 0x77, 0x5F, 0x67, 0x6F, 0x6C, 0x64, 0x30, 0x31,
 	0x77, 0x5F, 0x67, 0x6F, 0x6C, 0x64, 0x30, 0x32,
 };
 
 /* 803BAD88-803BADA0 0018+00 s=1 e=0 z=0  None .data      l_tagName5$6530                                              */
-SECTION_DATA static u8 data_803BAD88[24] = {
+SECTION_DATA static u8 l_tagName5[24] = {
 	0x77, 0x5F, 0x67, 0x6F, 0x32, 0x5F, 0x30, 0x30, 0x77, 0x5F, 0x67, 0x6F, 0x32, 0x5F, 0x30, 0x31,
 	0x77, 0x5F, 0x67, 0x6F, 0x32, 0x5F, 0x30, 0x32,
 };
 
 /* 803BADA0-803BADB8 0018+00 s=1 e=0 z=0  None .data      l_tagName12$6539                                             */
-SECTION_DATA static u8 data_803BADA0[24] = {
+SECTION_DATA static u8 l_tagName12[24] = {
 	0x77, 0x5F, 0x62, 0x6B, 0x5F, 0x6C, 0x30, 0x30, 0x77, 0x5F, 0x62, 0x6B, 0x5F, 0x6C, 0x30, 0x31,
 	0x77, 0x5F, 0x62, 0x6B, 0x5F, 0x6C, 0x30, 0x32,
 };
 
 /* 803BADB8-803BAE30 0078+00 s=1 e=0 z=0  None .data      l_nouseTag$6546                                              */
-SECTION_DATA static u8 data_803BADB8[120] = {
+SECTION_DATA static u8 l_nouseTag[120] = {
 	0x77, 0x5F, 0x6D, 0x63, 0x68, 0x65, 0x63, 0x6B, 0x00, 0x77, 0x5F, 0x74, 0x61, 0x62, 0x69, 0x31,
 	0x00, 0x77, 0x5F, 0x74, 0x61, 0x62, 0x69, 0x32, 0x00, 0x77, 0x5F, 0x74, 0x61, 0x62, 0x69, 0x33,
 	0x77, 0x5F, 0x64, 0x6F, 0x6B, 0x6F, 0x5F, 0x63, 0x00, 0x77, 0x5F, 0x75, 0x77, 0x61, 0x5F, 0x63,
@@ -1528,125 +1528,125 @@ SECTION_DATA static u8 data_803BADB8[120] = {
 };
 
 /* 803BAE30-803BAE40 0010+00 s=1 e=0 z=0  None .data      l_tagName21$6552                                             */
-SECTION_DATA static u8 data_803BAE30[16] = {
+SECTION_DATA static u8 l_tagName21[16] = {
 	0x00, 0x00, 0x00, 0x74, 0x5F, 0x66, 0x6F, 0x72, 0x00, 0x00, 0x74, 0x5F, 0x66, 0x6F, 0x72, 0x31,
 };
 
 /* 803BAE40-803BAE58 0018+00 s=1 e=0 z=0  None .data      l_tagName18$6559                                             */
-SECTION_DATA static u8 data_803BAE40[24] = {
+SECTION_DATA static u8 l_tagName18[24] = {
 	0x77, 0x5F, 0x64, 0x65, 0x5F, 0x65, 0x66, 0x30, 0x77, 0x5F, 0x64, 0x65, 0x5F, 0x65, 0x66, 0x31,
 	0x77, 0x5F, 0x64, 0x65, 0x5F, 0x65, 0x66, 0x32,
 };
 
 /* 803BAE58-803BAE70 0018+00 s=1 e=0 z=0  None .data      l_tagName19$6560                                             */
-SECTION_DATA static u8 data_803BAE58[24] = {
+SECTION_DATA static u8 l_tagName19[24] = {
 	0x77, 0x5F, 0x63, 0x70, 0x5F, 0x65, 0x66, 0x30, 0x77, 0x5F, 0x63, 0x70, 0x5F, 0x65, 0x66, 0x31,
 	0x77, 0x5F, 0x63, 0x70, 0x5F, 0x65, 0x66, 0x32,
 };
 
 /* 803BAE70-803BAE80 0010+00 s=1 e=0 z=0  None .data      l_tagName20$6568                                             */
-SECTION_DATA static u8 data_803BAE70[16] = {
+SECTION_DATA static u8 l_tagName20[16] = {
 	0x00, 0x65, 0x72, 0x5F, 0x66, 0x6F, 0x72, 0x30, 0x00, 0x65, 0x72, 0x5F, 0x66, 0x6F, 0x72, 0x31,
 };
 
 /* 803BAE80-803BAE98 0018+00 s=1 e=0 z=0  None .data      l_tagName131$6576                                            */
-SECTION_DATA static u8 data_803BAE80[24] = {
+SECTION_DATA static u8 l_tagName131[24] = {
 	0x4E, 0x5F, 0x73, 0x65, 0x6C, 0x5F, 0x30, 0x30, 0x4E, 0x5F, 0x73, 0x65, 0x6C, 0x5F, 0x30, 0x31,
 	0x4E, 0x5F, 0x73, 0x65, 0x6C, 0x5F, 0x30, 0x32,
 };
 
 /* 803BAE98-803BAEA8 0010+00 s=1 e=0 z=0  None .data      l_tagName000$6897                                            */
-SECTION_DATA static u8 data_803BAE98[16] = {
+SECTION_DATA static u8 l_tagName000[16] = {
 	0x77, 0x5F, 0x73, 0x65, 0x6C, 0x5F, 0x30, 0x31, 0x77, 0x5F, 0x73, 0x65, 0x6C, 0x5F, 0x30, 0x32,
 };
 
 /* 803BAEA8-803BAEB8 0010+00 s=1 e=0 z=0  None .data      l_tagName001$6898                                            */
-SECTION_DATA static u8 data_803BAEA8[16] = {
+SECTION_DATA static u8 l_tagName001[16] = {
 	0x77, 0x5F, 0x6D, 0x6F, 0x79, 0x6F, 0x30, 0x31, 0x77, 0x5F, 0x6D, 0x6F, 0x79, 0x6F, 0x30, 0x32,
 };
 
 /* 803BAEB8-803BAEC8 0010+00 s=1 e=0 z=0  None .data      l_tagName002$6899                                            */
-SECTION_DATA static u8 data_803BAEB8[16] = {
+SECTION_DATA static u8 l_tagName002[16] = {
 	0x77, 0x5F, 0x67, 0x6F, 0x6C, 0x64, 0x30, 0x31, 0x77, 0x5F, 0x67, 0x6F, 0x6C, 0x64, 0x30, 0x32,
 };
 
 /* 803BAEC8-803BAED8 0010+00 s=1 e=0 z=0  None .data      l_tagName003$6900                                            */
-SECTION_DATA static u8 data_803BAEC8[16] = {
+SECTION_DATA static u8 l_tagName003[16] = {
 	0x77, 0x5F, 0x67, 0x6F, 0x32, 0x5F, 0x30, 0x31, 0x77, 0x5F, 0x67, 0x6F, 0x32, 0x5F, 0x30, 0x32,
 };
 
 /* 803BAED8-803BAEE8 0010+00 s=1 e=0 z=0  None .data      l_tagName004$6901                                            */
-SECTION_DATA static u8 data_803BAED8[16] = {
+SECTION_DATA static u8 l_tagName004[16] = {
 	0x77, 0x5F, 0x62, 0x6B, 0x5F, 0x6C, 0x30, 0x31, 0x77, 0x5F, 0x62, 0x6B, 0x5F, 0x6C, 0x30, 0x32,
 };
 
 /* 803BAEE8-803BAEF8 0010+00 s=1 e=0 z=0  None .data      l_tagName005$6902                                            */
-SECTION_DATA static u8 data_803BAEE8[16] = {
+SECTION_DATA static u8 l_tagName005[16] = {
 	0x77, 0x5F, 0x63, 0x70, 0x5F, 0x65, 0x66, 0x31, 0x77, 0x5F, 0x63, 0x70, 0x5F, 0x65, 0x66, 0x32,
 };
 
 /* 803BAEF8-803BAF08 0010+00 s=1 e=0 z=0  None .data      l_tagName012$6999                                            */
-SECTION_DATA static u8 data_803BAEF8[16] = {
+SECTION_DATA static u8 l_tagName012[16] = {
 	0x00, 0x00, 0x77, 0x5F, 0x6E, 0x6F, 0x5F, 0x6E, 0x00, 0x77, 0x5F, 0x79, 0x65, 0x73, 0x5F, 0x6E,
 };
 
 /* 803BAF08-803BAF18 0010+00 s=1 e=0 z=0  None .data      l_tagName013$7000                                            */
-SECTION_DATA static u8 data_803BAF08[16] = {
+SECTION_DATA static u8 l_tagName013[16] = {
 	0x00, 0x00, 0x77, 0x5F, 0x6E, 0x6F, 0x5F, 0x74, 0x00, 0x77, 0x5F, 0x79, 0x65, 0x73, 0x5F, 0x74,
 };
 
 /* 803BAF18-803BAF28 0010+00 s=1 e=0 z=0  None .data      l_tagName013U$7001                                           */
-SECTION_DATA static u8 data_803BAF18[16] = {
+SECTION_DATA static u8 l_tagName013U[16] = {
 	0x00, 0x00, 0x66, 0x5F, 0x6E, 0x6F, 0x5F, 0x74, 0x00, 0x66, 0x5F, 0x79, 0x65, 0x73, 0x5F, 0x74,
 };
 
 /* 803BAF28-803BAF38 0010+00 s=1 e=0 z=0  None .data      l_tagName9$7010                                              */
-SECTION_DATA static u8 data_803BAF28[16] = {
+SECTION_DATA static u8 l_tagName9[16] = {
 	0x00, 0x00, 0x77, 0x5F, 0x6E, 0x6F, 0x5F, 0x6D, 0x00, 0x77, 0x5F, 0x79, 0x65, 0x73, 0x5F, 0x6D,
 };
 
 /* 803BAF38-803BAF48 0010+00 s=1 e=0 z=0  None .data      l_tagName10$7011                                             */
-SECTION_DATA static u8 data_803BAF38[16] = {
+SECTION_DATA static u8 l_tagName10[16] = {
 	0x00, 0x00, 0x77, 0x5F, 0x6E, 0x6F, 0x5F, 0x67, 0x00, 0x77, 0x5F, 0x79, 0x65, 0x73, 0x5F, 0x67,
 };
 
 /* 803BAF48-803BAF58 0010+00 s=1 e=0 z=0  None .data      l_tagName11$7012                                             */
-SECTION_DATA static u8 data_803BAF48[16] = {
+SECTION_DATA static u8 l_tagName11[16] = {
 	0x00, 0x77, 0x5F, 0x6E, 0x6F, 0x5F, 0x67, 0x72, 0x77, 0x5F, 0x79, 0x65, 0x73, 0x5F, 0x67, 0x72,
 };
 
 /* 803BAF58-803BAF70 0018+00 s=1 e=0 z=0  None .data      l_tagName6$7076                                              */
-SECTION_DATA static u8 data_803BAF58[24] = {
+SECTION_DATA static u8 l_tagName6[24] = {
 	0x77, 0x5F, 0x73, 0x61, 0x74, 0x5F, 0x6D, 0x6F, 0x77, 0x5F, 0x64, 0x65, 0x6C, 0x5F, 0x6D, 0x6F,
 	0x77, 0x5F, 0x63, 0x6F, 0x70, 0x5F, 0x6D, 0x6F,
 };
 
 /* 803BAF70-803BAF88 0018+00 s=1 e=0 z=0  None .data      l_tagName7$7077                                              */
-SECTION_DATA static u8 data_803BAF70[24] = {
+SECTION_DATA static u8 l_tagName7[24] = {
 	0x00, 0x77, 0x5F, 0x73, 0x61, 0x74, 0x5F, 0x67, 0x00, 0x77, 0x5F, 0x64, 0x65, 0x6C, 0x5F, 0x67,
 	0x00, 0x77, 0x5F, 0x63, 0x6F, 0x70, 0x5F, 0x67,
 };
 
 /* 803BAF88-803BAFA0 0018+00 s=1 e=0 z=0  None .data      l_tagName8$7078                                              */
-SECTION_DATA static u8 data_803BAF88[24] = {
+SECTION_DATA static u8 l_tagName8[24] = {
 	0x77, 0x5F, 0x73, 0x61, 0x74, 0x5F, 0x67, 0x72, 0x77, 0x5F, 0x64, 0x65, 0x6C, 0x5F, 0x67, 0x72,
 	0x77, 0x5F, 0x63, 0x6F, 0x70, 0x5F, 0x67, 0x72,
 };
 
 /* 803BAFA0-803BAFB8 0018+00 s=1 e=0 z=0  None .data      l_tagName1$7079                                              */
-SECTION_DATA static u8 data_803BAFA0[24] = {
+SECTION_DATA static u8 l_tagName1[24] = {
 	0x00, 0x77, 0x5F, 0x73, 0x74, 0x61, 0x5F, 0x6E, 0x00, 0x77, 0x5F, 0x64, 0x65, 0x6C, 0x5F, 0x6E,
 	0x00, 0x77, 0x5F, 0x63, 0x6F, 0x70, 0x5F, 0x6E,
 };
 
 /* 803BAFB8-803BAFD0 0018+00 s=1 e=0 z=0  None .data      l_tagName011$7080                                            */
-SECTION_DATA static u8 data_803BAFB8[24] = {
+SECTION_DATA static u8 l_tagName011[24] = {
 	0x00, 0x00, 0x00, 0x77, 0x5F, 0x73, 0x74, 0x61, 0x00, 0x00, 0x00, 0x77, 0x5F, 0x64, 0x65, 0x6C,
 	0x00, 0x77, 0x5F, 0x63, 0x6F, 0x70, 0x5F, 0x74,
 };
 
 /* 803BAFD0-803BAFE8 0018+00 s=1 e=0 z=0  None .data      l_tagName011U$7081                                           */
-SECTION_DATA static u8 data_803BAFD0[24] = {
+SECTION_DATA static u8 l_tagName011U[24] = {
 	0x00, 0x00, 0x00, 0x66, 0x5F, 0x73, 0x74, 0x61, 0x00, 0x00, 0x00, 0x66, 0x5F, 0x64, 0x65, 0x6C,
 	0x00, 0x66, 0x5F, 0x63, 0x6F, 0x70, 0x5F, 0x74,
 };
@@ -1939,7 +1939,7 @@ SECTION_DATA static void* lit_8083[3] = {
 };
 
 /* 803BB304-803BB314 0010+00 s=1 e=0 z=0  None .data      bck_name$8683                                                */
-SECTION_DATA static void* data_803BB304[4] = {
+SECTION_DATA static void* bck_name_8683[4] = {
 	(void*)(((char*)&d_file_d_file_select__stringBase0)+0x330),
 	(void*)(((char*)&d_file_d_file_select__stringBase0)+0x349),
 	(void*)(((char*)&d_file_d_file_select__stringBase0)+0x362),
@@ -1947,7 +1947,7 @@ SECTION_DATA static void* data_803BB304[4] = {
 };
 
 /* 803BB314-803BB324 0010+00 s=1 e=0 z=0  None .data      brk_name$8684                                                */
-SECTION_DATA static void* data_803BB314[4] = {
+SECTION_DATA static void* brk_name_8684[4] = {
 	(void*)(((char*)&d_file_d_file_select__stringBase0)+0x394),
 	(void*)(((char*)&d_file_d_file_select__stringBase0)+0x3AD),
 	(void*)(((char*)&d_file_d_file_select__stringBase0)+0x3AD),
@@ -1955,7 +1955,7 @@ SECTION_DATA static void* data_803BB314[4] = {
 };
 
 /* 803BB324-803BB334 0010+00 s=1 e=0 z=0  None .data      bck_name$8786                                                */
-SECTION_DATA static void* data_803BB324[4] = {
+SECTION_DATA static void* bck_name_8786[4] = {
 	(void*)(((char*)&d_file_d_file_select__stringBase0)+0x3F0),
 	(void*)(((char*)&d_file_d_file_select__stringBase0)+0x409),
 	(void*)(((char*)&d_file_d_file_select__stringBase0)+0x422),
@@ -1963,7 +1963,7 @@ SECTION_DATA static void* data_803BB324[4] = {
 };
 
 /* 803BB334-803BB35C 0010+18 s=1 e=0 z=0  None .data      brk_name$8787                                                */
-SECTION_DATA static void* data_803BB334[4 + 6 /* padding */] = {
+SECTION_DATA static void* brk_name_8787[4 + 6 /* padding */] = {
 	(void*)(((char*)&d_file_d_file_select__stringBase0)+0x454),
 	(void*)(((char*)&d_file_d_file_select__stringBase0)+0x46D),
 	(void*)(((char*)&d_file_d_file_select__stringBase0)+0x46D),
@@ -3223,7 +3223,7 @@ asm void dFile_select_c::screenSetCopySel() {
 
 /* ############################################################################################## */
 /* 804506C8-804506CC 0002+02 s=1 e=0 z=0  None .sdata     l_msgNum2$7002                                               */
-SECTION_SDATA static u8 data_804506C8[2 + 2 /* padding */] = {
+SECTION_SDATA static u8 l_msgNum2[2 + 2 /* padding */] = {
 	0x08, 0x07,
 	/* padding */
 	0x00, 0x00,
@@ -3242,7 +3242,7 @@ asm void dFile_select_c::screenSetYesNo() {
 
 /* ############################################################################################## */
 /* 804506CC-804506D0 0003+01 s=1 e=0 z=0  None .sdata     l_msgNum$7082                                                */
-SECTION_SDATA static u8 data_804506CC[3 + 1 /* padding */] = {
+SECTION_SDATA static u8 l_msgNum[3 + 1 /* padding */] = {
 	0x57, 0x58, 0x56,
 	/* padding */
 	0x00,
@@ -3312,17 +3312,17 @@ asm void dFile_select_c::setSaveData() {
 
 /* ############################################################################################## */
 /* 804506D0-804506D8 0008+00 s=1 e=0 z=0  None .sdata     fontsize$7230                                                */
-SECTION_SDATA static u8 data_804506D0[8] = {
+SECTION_SDATA static u8 fontsize[8] = {
 	0x41, 0xA8, 0x00, 0x00, 0x41, 0xD8, 0x00, 0x00,
 };
 
 /* 804506D8-804506E0 0008+00 s=1 e=0 z=0  None .sdata     linespace$7231                                               */
-SECTION_SDATA static u8 data_804506D8[8] = {
+SECTION_SDATA static u8 linespace[8] = {
 	0x41, 0xA8, 0x00, 0x00, 0x41, 0xA0, 0x00, 0x00,
 };
 
 /* 804506E0-804506E8 0008+00 s=1 e=0 z=0  None .sdata     charspace$7232                                               */
-SECTION_SDATA static u8 data_804506E0[8] = {
+SECTION_SDATA static u8 charspace[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 

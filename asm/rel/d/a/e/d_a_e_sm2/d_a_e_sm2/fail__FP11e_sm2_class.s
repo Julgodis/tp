@@ -66,8 +66,8 @@ lbl_8079A494:
 /* 8079A49C  38 63 5B 54 */	addi r3, r3, 0x5b54
 /* 8079A4A0  7F C4 F3 78 */	mr r4, r30
 /* 8079A4A4  88 1E 05 B7 */	lbz r0, 0x5b7(r30)
-/* 8079A4A8  3C A0 80 7A */	lis r5, data_8079D874@ha
-/* 8079A4AC  38 A5 D8 74 */	addi r5, r5, data_8079D874@l
+/* 8079A4A8  3C A0 80 7A */	lis r5, item_no@ha
+/* 8079A4AC  38 A5 D8 74 */	addi r5, r5, item_no@l
 /* 8079A4B0  7C A5 00 AE */	lbzx r5, r5, r0
 /* 8079A4B4  C0 3F 00 00 */	lfs f1, 0(r31)
 /* 8079A4B8  C0 5F 00 30 */	lfs f2, 0x30(r31)

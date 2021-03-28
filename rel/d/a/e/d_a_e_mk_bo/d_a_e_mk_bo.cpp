@@ -19,10 +19,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -40,13 +40,13 @@ struct mDoExt_McaMorfCallBack2_c {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct Vec {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Vec {
 };
 
 struct mDoExt_McaMorf {
@@ -97,10 +97,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -677,7 +677,7 @@ u8 lit_1009[1 + 3 /* padding */];
 static u8 lit_4243[12 + 4 /* padding */];
 
 /* 8071F870-8071F87C 000C+00 s=1 e=0 z=0  None .bss       sc$4242                                                      */
-static u8 data_8071F870[12];
+static u8 sc[12];
 
 /* 8071E200-8071E6C4 04C4+00 s=1 e=0 z=0  None .text      e_mk_bo_demo_spin__FP13e_mk_bo_class                         */
 #pragma push
@@ -722,22 +722,22 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 8071F700-8071F708 0008+00 s=1 e=0 z=0  None .data      bo_eno_1$4378                                                */
-SECTION_DATA static u8 data_8071F700[8] = {
+SECTION_DATA static u8 bo_eno_1[8] = {
 	0x82, 0x14, 0x82, 0x15, 0x82, 0x0F, 0x82, 0x10,
 };
 
 /* 8071F708-8071F710 0008+00 s=1 e=0 z=0  None .data      bo_eno_2$4379                                                */
-SECTION_DATA static u8 data_8071F708[8] = {
+SECTION_DATA static u8 bo_eno_2[8] = {
 	0x82, 0x60, 0x82, 0x61, 0x82, 0x5E, 0x82, 0x5F,
 };
 
 /* 8071F710-8071F714 0004+00 s=1 e=0 z=0  None .data      bo_eno_12$4402                                               */
-SECTION_DATA static u8 data_8071F710[4] = {
+SECTION_DATA static u8 bo_eno_12[4] = {
 	0x82, 0x0D, 0x82, 0x0E,
 };
 
 /* 8071F714-8071F71C 0008+00 s=1 e=0 z=0  None .data      bo_eno_end$4410                                              */
-SECTION_DATA static u8 data_8071F714[8] = {
+SECTION_DATA static u8 bo_eno_end[8] = {
 	0x02, 0x4C, 0x02, 0x4D, 0x02, 0x56, 0x02, 0x57,
 };
 
@@ -785,7 +785,7 @@ asm static void daE_MK_BO_Delete(e_mk_bo_class* param_0) {
 
 /* ############################################################################################## */
 /* 8071F71C-8071F75C 0040+00 s=1 e=0 z=0  None .data      at_sph_src$4657                                              */
-SECTION_DATA static u8 data_8071F71C[64] = {
+SECTION_DATA static u8 at_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1F,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x05, 0x01, 0x01, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x09, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,

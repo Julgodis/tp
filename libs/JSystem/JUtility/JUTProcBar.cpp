@@ -246,13 +246,13 @@ asm void JUTProcBar::draw() {
 
 /* ############################################################################################## */
 /* 8045155C-80451560 0004+00 s=1 e=0 z=0  None .sbss      cnt$2330                                                     */
-static u8 data_8045155C[4];
+static u8 cnt[4];
 
 /* 80451560-80451564 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80451560[4];
 
 /* 80451564-80451568 0004+00 s=1 e=0 z=0  None .sbss      cntUser$2379                                                 */
-static u8 data_80451564[4];
+static u8 cntUser[4];
 
 /* 80451568-80451570 0008+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80451568[8];

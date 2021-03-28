@@ -250,7 +250,7 @@ asm JStudio_JParticle::TAdaptor_particle::~TAdaptor_particle() {
 
 /* ############################################################################################## */
 /* 80431540-804315D0 0090+00 s=1 e=0 z=0  None .bss       aoData$1265                                                  */
-static u8 data_80431540[144];
+static u8 aoData[144];
 
 /* 80455520-80455524 0004+00 s=1 e=0 z=0  None .sdata2    @1361                                                        */
 SECTION_SDATA2 static u8 lit_1361[4] = {

@@ -563,7 +563,7 @@ lbl_801E28B4:
 /* 801E28D4  7D 89 03 A6 */	mtctr r12
 /* 801E28D8  4E 80 04 21 */	bctrl 
 /* 801E28DC  38 61 00 28 */	addi r3, r1, 0x28
-/* 801E28E0  38 82 A9 28 */	la r4, data_80454328(r2) /* 80454328-_SDA2_BASE_ */
+/* 801E28E0  38 82 A9 28 */	la r4, l_msgNum2(r2) /* 80454328-_SDA2_BASE_ */
 /* 801E28E4  7C 84 E8 AE */	lbzx r4, r4, r29
 /* 801E28E8  4B E3 D7 D9 */	bl fopMsgM_messageGet__FPcUl
 /* 801E28EC  80 79 01 E4 */	lwz r3, 0x1e4(r25)

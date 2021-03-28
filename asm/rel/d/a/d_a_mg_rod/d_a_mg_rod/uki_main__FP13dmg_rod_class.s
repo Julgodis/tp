@@ -973,8 +973,8 @@ lbl_804B5C08:
 /* 804B5C64  88 1F 10 2D */	lbz r0, 0x102d(r31)
 /* 804B5C68  7C 00 07 74 */	extsb r0, r0
 /* 804B5C6C  54 00 10 3A */	slwi r0, r0, 2
-/* 804B5C70  3C 60 80 4C */	lis r3, data_804BBA10@ha
-/* 804B5C74  38 63 BA 10 */	addi r3, r3, data_804BBA10@l
+/* 804B5C70  3C 60 80 4C */	lis r3, hook_size@ha
+/* 804B5C74  38 63 BA 10 */	addi r3, r3, hook_size@l
 /* 804B5C78  7C 23 04 2E */	lfsx f1, r3, r0
 /* 804B5C7C  FC 40 08 90 */	fmr f2, f1
 /* 804B5C80  FC 60 08 90 */	fmr f3, f1

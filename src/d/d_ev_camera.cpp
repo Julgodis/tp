@@ -899,7 +899,7 @@ static u8 data_804253CC[12];
 static u8 lit_5852[12];
 
 /* 804253E4-804253F0 000C+00 s=1 e=0 z=0  None .bss       DefaultGap$5851                                              */
-static f32 data_804253E4[3];
+static f32 DefaultGap_5851[3];
 
 /* 804528F0-804528F8 0004+04 s=1 e=0 z=0  None .sdata2    @5959                                                        */
 SECTION_SDATA2 static f32 lit_5959[1 + 1 /* padding */] = {
@@ -1046,7 +1046,7 @@ asm void cXyz::operator+=(Vec const& param_0) {
 static u8 lit_6756[12];
 
 /* 804253FC-80425408 000C+00 s=1 e=0 z=0  None .bss       DefaultGap$6755                                              */
-static u8 data_804253FC[12];
+static u8 DefaultGap_6755[12];
 
 /* 80452908-8045290C 0004+00 s=2 e=0 z=0  None .sdata2    @7334                                                        */
 SECTION_SDATA2 static u32 lit_7334 = 0x443B8000;
@@ -1132,7 +1132,7 @@ extern "C" asm static void func_8008FA94() {
 static u8 lit_7364[12];
 
 /* 80425414-80425420 000C+00 s=1 e=0 z=0  None .bss       DefaultGap$7363                                              */
-static f32 data_80425414[3];
+static f32 DefaultGap_7363[3];
 
 /* 8008FAE8-80090174 068C+00 s=0 e=1 z=0  None .text      restorePosEvCamera__9dCamera_cFv                             */
 #pragma push
@@ -1809,7 +1809,7 @@ asm void dCamera_c::bSplineEvCamera() {
 static u8 lit_10516[12];
 
 /* 8042542C-80425438 000C+00 s=1 e=0 z=0  None .bss       DefaultGap$10515                                             */
-static f32 data_8042542C[3];
+static f32 DefaultGap_10515[3];
 
 /* 80452B98-80452B9C 0004+00 s=1 e=0 z=0  None .sdata2    @10780                                                       */
 SECTION_SDATA2 static u32 lit_10780 = 0xBDCCCCCD;

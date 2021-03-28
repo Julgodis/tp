@@ -79,6 +79,9 @@ struct dSv_event_c {
 	/* 80034A04 */ void getEventReg(u16) const;
 };
 
+struct J3DModelData {
+};
+
 struct Vec {
 };
 
@@ -88,9 +91,6 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 8086CC30 */ ~cXyz();
 	/* 8086FF80 */ cXyz();
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -796,12 +796,12 @@ SECTION_DATA static void* koro2_union_model[6] = {
 };
 
 /* 8087071C-80870728 000C+00 s=1 e=0 z=0  None .data      rod_color$3900                                               */
-SECTION_DATA static u8 data_8087071C[12] = {
+SECTION_DATA static u8 rod_color[12] = {
 	0x96, 0x50, 0x14, 0xFF, 0x64, 0x96, 0x14, 0xFF, 0x96, 0x14, 0x14, 0xFF,
 };
 
 /* 80870728-8087072C 0004+00 s=1 e=0 z=0  None .data      l_color$3912                                                 */
-SECTION_DATA static u8 data_80870728[4] = {
+SECTION_DATA static u8 l_color[4] = {
 	0x32, 0x64, 0x1E, 0xFF,
 };
 
@@ -882,7 +882,7 @@ SECTION_DATA static u8 hook_2_offy[12] = {
 };
 
 /* 80870768-80870774 000C+00 s=1 e=0 z=0  None .data      lure_ofy$3993                                                */
-SECTION_DATA static u8 data_80870768[12] = {
+SECTION_DATA static u8 lure_ofy[12] = {
 	0xC1, 0x40, 0x00, 0x00, 0xC1, 0x20, 0x00, 0x00, 0xC1, 0x60, 0x00, 0x00,
 };
 
@@ -908,13 +908,13 @@ SECTION_RODATA static u32 const lit_4165 = 0xBF4CCCCD;
 SECTION_RODATA static u32 const lit_4166 = 0x40800000;
 
 /* 80870774-8087078C 0018+00 s=1 e=0 z=0  None .data      guide_p$4084                                                 */
-SECTION_DATA static u8 data_80870774[24] = {
+SECTION_DATA static u8 guide_p[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x3D, 0xCC, 0xCC, 0xCD, 0x3E, 0x61, 0x47, 0xAE, 0x3E, 0xB8, 0x51, 0xEC,
 	0x3F, 0x05, 0x1E, 0xB8, 0x3F, 0x33, 0x33, 0x33,
 };
 
 /* 8087078C-808707A4 0018+00 s=1 e=0 z=0  None .data      guide_s$4085                                                 */
-SECTION_DATA static u8 data_8087078C[24] = {
+SECTION_DATA static u8 guide_s[24] = {
 	0x3F, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00, 0x3F, 0x0C, 0xCC, 0xCD, 0x3F, 0x19, 0x99, 0x9A,
 	0x3F, 0x26, 0x66, 0x66, 0x3F, 0x4C, 0xCC, 0xCD,
 };
@@ -1114,7 +1114,7 @@ SECTION_RODATA static u32 const lit_4468 = 0xBE19999A;
 SECTION_RODATA static u32 const lit_4469 = 0xC5BB8000;
 
 /* 80870AC0-80870AC4 0004+00 s=1 e=0 z=0  None .bss       old_stick_x$4410                                             */
-static u8 data_80870AC0[4];
+static u8 old_stick_x[4];
 
 /* 80870AC4-80870AC8 0004+00 s=1 e=0 z=0  None .bss       None                                                         */
 static u8 data_80870AC4[4];
@@ -1132,12 +1132,12 @@ asm static void koro2_game(fshop_class* param_0) {
 
 /* ############################################################################################## */
 /* 808707A4-808707B4 0010+00 s=1 e=0 z=0  None .data      c_x$4477                                                     */
-SECTION_DATA static u8 data_808707A4[16] = {
+SECTION_DATA static u8 c_x[16] = {
 	0x41, 0x60, 0x00, 0x00, 0xC1, 0x60, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 808707B4-808707C4 0010+00 s=1 e=0 z=0  None .data      c_z$4478                                                     */
-SECTION_DATA static u8 data_808707B4[16] = {
+SECTION_DATA static u8 c_z[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x41, 0x60, 0x00, 0x00, 0xC1, 0x60, 0x00, 0x00,
 };
 
@@ -1392,7 +1392,7 @@ asm static void daFshop_Delete(fshop_class* param_0) {
 
 /* ############################################################################################## */
 /* 808707C4-80870800 003C+00 s=1 e=0 z=0  None .data      koro2_bmd$4909                                               */
-SECTION_DATA static u8 data_808707C4[60] = {
+SECTION_DATA static u8 koro2_bmd[60] = {
 	0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x0B,
 	0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x0F, 0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x0C,
 	0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x0E,
@@ -1400,7 +1400,7 @@ SECTION_DATA static u8 data_808707C4[60] = {
 };
 
 /* 80870800-8087083C 003C+00 s=1 e=0 z=0  None .data      koro2_dzb$4910                                               */
-SECTION_DATA static u8 data_80870800[60] = {
+SECTION_DATA static u8 koro2_dzb[60] = {
 	0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x20,
 	0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x24, 0x00, 0x00, 0x00, 0x22, 0x00, 0x00, 0x00, 0x21,
 	0x00, 0x00, 0x00, 0x21, 0x00, 0x00, 0x00, 0x21, 0x00, 0x00, 0x00, 0x21, 0x00, 0x00, 0x00, 0x23,
@@ -1408,7 +1408,7 @@ SECTION_DATA static u8 data_80870800[60] = {
 };
 
 /* 8087083C-8087084C 0010+00 s=1 e=0 z=0  None .data      pande_d$4911                                                 */
-SECTION_DATA static u8 data_8087083C[16] = {
+SECTION_DATA static u8 pande_d[16] = {
 	0x00, 0x01, 0x03, 0x02, 0x05, 0x04, 0x06, 0x07, 0x09, 0x08, 0x0B, 0x0A, 0x0C, 0x0D, 0x0F, 0x0E,
 };
 
@@ -1425,29 +1425,29 @@ asm static void koro2_heapinit(fopAc_ac_c* param_0) {
 
 /* ############################################################################################## */
 /* 8087084C-8087085C 0010+00 s=1 e=0 z=0  None .data      lure_d$5019                                                  */
-SECTION_DATA static u8 data_8087084C[16] = {
+SECTION_DATA static u8 lure_d[16] = {
 	0x00, 0x00, 0x00, 0x16, 0x00, 0x00, 0x00, 0x17, 0x00, 0x00, 0x00, 0x1C, 0x00, 0x00, 0x00, 0x14,
 };
 
 /* 8087085C-80870864 0008+00 s=1 e=0 z=0  None .data      rod_d$5056                                                   */
-SECTION_DATA static u8 data_8087085C[8] = {
+SECTION_DATA static u8 rod_d[8] = {
 	0x00, 0x00, 0x00, 0x19, 0x00, 0x00, 0x00, 0x18,
 };
 
 /* 80870864-80870884 0020+00 s=1 e=0 z=0  None .data      rod_w$5087                                                   */
-SECTION_DATA static u8 data_80870864[32] = {
+SECTION_DATA static u8 rod_w[32] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x66, 0x66, 0x66, 0x3F, 0x4C, 0xCC, 0xCD, 0x3F, 0x33, 0x33, 0x33,
 	0x3F, 0x19, 0x99, 0x9A, 0x3F, 0x00, 0x00, 0x00, 0x3E, 0xCC, 0xCC, 0xCD, 0x3E, 0x99, 0x99, 0x9A,
 };
 
 /* 80870884-8087089C 0018+00 s=1 e=0 z=0  None .data      koro2_union_bmd$5117                                         */
-SECTION_DATA static u8 data_80870884[24] = {
+SECTION_DATA static u8 koro2_union_bmd[24] = {
 	0x00, 0x00, 0x00, 0x0F, 0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x0B,
 	0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x0E,
 };
 
 /* 8087089C-808708B4 0018+00 s=1 e=0 z=0  None .data      koro2_union_no$5118                                          */
-SECTION_DATA static u8 data_8087089C[24] = {
+SECTION_DATA static u8 koro2_union_no[24] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00, 0x10,
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x08,
 };
@@ -1476,7 +1476,7 @@ asm static void BalluseHeapInit(fopAc_ac_c* param_0) {
 
 /* ############################################################################################## */
 /* 808708B4-808708BC 0008+00 s=1 e=0 z=0  None .data      check_kind$5285                                              */
-SECTION_DATA static u8 data_808708B4[8] = {
+SECTION_DATA static u8 check_kind[8] = {
 	0xF5, 0x7F, 0xF4, 0x7F, 0xF3, 0x7F, 0xF2, 0x7F,
 };
 

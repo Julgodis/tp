@@ -6,8 +6,8 @@ lbl_8058F3D4:
 /* 8058F3E4  93 C1 00 08 */	stw r30, 8(r1)
 /* 8058F3E8  7C 7E 1B 78 */	mr r30, r3
 /* 8058F3EC  7C 9F 23 78 */	mr r31, r4
-/* 8058F3F0  3C 60 80 59 */	lis r3, data_80592894@ha
-/* 8058F3F4  C4 03 28 94 */	lfsu f0, data_80592894@l(r3)
+/* 8058F3F0  3C 60 80 59 */	lis r3, l_offsetD_3657@ha
+/* 8058F3F4  C4 03 28 94 */	lfsu f0, l_offsetD_3657@l(r3)
 /* 8058F3F8  D0 04 00 00 */	stfs f0, 0(r4)
 /* 8058F3FC  C0 03 00 04 */	lfs f0, 4(r3)
 /* 8058F400  D0 04 00 04 */	stfs f0, 4(r4)

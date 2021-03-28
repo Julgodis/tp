@@ -9,8 +9,8 @@ lbl_80CB52B4:
 /* 80CB52D0  38 63 56 28 */	addi r3, r3, l_arcName@l
 /* 80CB52D4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CB52D8  54 00 16 BA */	rlwinm r0, r0, 2, 0x1a, 0x1d
-/* 80CB52DC  3C 80 80 CB */	lis r4, data_80CB5614@ha
-/* 80CB52E0  38 84 56 14 */	addi r4, r4, data_80CB5614@l
+/* 80CB52DC  3C 80 80 CB */	lis r4, BMD_IDX@ha
+/* 80CB52E0  38 84 56 14 */	addi r4, r4, BMD_IDX@l
 /* 80CB52E4  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80CB52E8  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 80CB52EC  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l

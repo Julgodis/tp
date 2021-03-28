@@ -18,10 +18,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
 struct mDoExt_brkAnm {
@@ -33,19 +33,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -102,10 +102,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -597,17 +597,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 806A72E0-806A72E8 0008+00 s=1 e=0 z=0  None .data      e_prim$3782                                                  */
-SECTION_DATA static u8 data_806A72E0[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 806A72E8-806A72F0 0008+00 s=1 e=0 z=0  None .data      e_env$3783                                                   */
-SECTION_DATA static u8 data_806A72E8[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 806A72F0-806A72F8 0006+02 s=1 e=0 z=0  None .data      eff_id$3791                                                  */
-SECTION_DATA static u8 data_806A72F0[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -629,22 +629,22 @@ SECTION_DATA static void* lit_5001[11] = {
 };
 
 /* 806A7324-806A732C 0008+00 s=1 e=0 z=0  None .data      bomb_eff_name$5033                                           */
-SECTION_DATA static u8 data_806A7324[8] = {
+SECTION_DATA static u8 bomb_eff_name[8] = {
 	0x84, 0xC6, 0x84, 0xC7, 0x84, 0xC8, 0x84, 0xC9,
 };
 
 /* 806A732C-806A7334 0008+00 s=1 e=0 z=0  None .data      fire_eff_name$5067                                           */
-SECTION_DATA static u8 data_806A732C[8] = {
+SECTION_DATA static u8 fire_eff_name_5067[8] = {
 	0x84, 0x6C, 0x84, 0x6D, 0x84, 0x6E, 0x84, 0x6F,
 };
 
 /* 806A7334-806A7338 0004+00 s=1 e=0 z=0  None .data      fire_eff_name$5082                                           */
-SECTION_DATA static u8 data_806A7334[4] = {
+SECTION_DATA static u8 fire_eff_name_5082[4] = {
 	0x84, 0x71, 0x84, 0x72,
 };
 
 /* 806A7338-806A734C 0014+00 s=1 e=0 z=0  None .data      brk_d$5494                                                   */
-SECTION_DATA static u8 data_806A7338[20] = {
+SECTION_DATA static u8 brk_d[20] = {
 	0x00, 0x00, 0x00, 0x1C, 0x00, 0x00, 0x00, 0x1E, 0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00, 0x20,
 	0x00, 0x00, 0x00, 0x1D,
 };
@@ -664,7 +664,7 @@ SECTION_DATA static u8 xa[10 + 2 /* padding */] = {
 };
 
 /* 806A7364-806A73A4 0040+00 s=1 e=0 z=0  None .data      fire_sph_src$5643                                            */
-SECTION_DATA static u8 data_806A7364[64] = {
+SECTION_DATA static u8 fire_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1D,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -672,7 +672,7 @@ SECTION_DATA static u8 data_806A7364[64] = {
 };
 
 /* 806A73A4-806A73E4 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$5644                                              */
-SECTION_DATA static u8 data_806A73A4[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1F,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x43, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00,
@@ -1017,7 +1017,7 @@ static u8 lit_3919[12];
 static u8 l_HIO[40];
 
 /* 806A74F0-806A75EF 00FF+00 s=1 e=0 z=0  None .bss       check_index$4196                                             */
-static u8 data_806A74F0[255];
+static u8 check_index[255];
 
 /* 806A2CE8-806A2F14 022C+00 s=2 e=0 z=0  None .text      path_check__FP10e_dd_class                                   */
 #pragma push

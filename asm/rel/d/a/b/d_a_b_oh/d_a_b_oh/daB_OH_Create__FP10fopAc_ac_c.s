@@ -156,8 +156,8 @@ lbl_8061D5AC:
 /* 8061D63C  4B A6 62 24 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 8061D640  3A E0 00 00 */	li r23, 0
 /* 8061D644  3B 60 00 00 */	li r27, 0
-/* 8061D648  3C 60 80 62 */	lis r3, data_8061DAAC@ha
-/* 8061D64C  3B 23 DA AC */	addi r25, r3, data_8061DAAC@l
+/* 8061D648  3C 60 80 62 */	lis r3, cc_sph_src@ha
+/* 8061D64C  3B 23 DA AC */	addi r25, r3, cc_sph_src@l
 /* 8061D650  3B 5F 0C B0 */	addi r26, r31, 0xcb0
 lbl_8061D654:
 /* 8061D654  7F 1F DA 14 */	add r24, r31, r27

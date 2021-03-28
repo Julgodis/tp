@@ -354,7 +354,7 @@ lbl_8006F750:
 /* 8006F760  4B FF FA 79 */	bl func_8006F1D8
 /* 8006F764  7F BD 1B 78 */	or r29, r29, r3
 /* 8006F768  93 DF 00 68 */	stw r30, 0x68(r31)
-/* 8006F76C  38 6D 89 D0 */	la r3, data_80450F50(r13) /* 80450F50-_SDA_BASE_ */
+/* 8006F76C  38 6D 89 D0 */	la r3, data(r13) /* 80450F50-_SDA_BASE_ */
 /* 8006F770  7F A4 EB 78 */	mr r4, r29
 /* 8006F774  7F C5 F3 78 */	mr r5, r30
 /* 8006F778  4B FF F9 F1 */	bl func_8006F168
@@ -381,7 +381,7 @@ lbl_8006F7A0:
 /* 8006F7C8  3C 60 80 00 */	lis r3, 0x8000 /* 0x7FFFFFFF@ha */
 /* 8006F7CC  38 03 FF FF */	addi r0, r3, 0xFFFF /* 0x7FFFFFFF@l */
 /* 8006F7D0  90 1F 00 84 */	stw r0, 0x84(r31)
-/* 8006F7D4  38 6D 89 D0 */	la r3, data_80450F50(r13) /* 80450F50-_SDA_BASE_ */
+/* 8006F7D4  38 6D 89 D0 */	la r3, data(r13) /* 80450F50-_SDA_BASE_ */
 /* 8006F7D8  7F A5 EB 78 */	mr r5, r29
 /* 8006F7DC  4B FF F9 8D */	bl func_8006F168
 /* 8006F7E0  7C 64 1B 78 */	mr r4, r3
@@ -421,7 +421,7 @@ lbl_8006F84C:
 /* 8006F860  38 00 00 00 */	li r0, 0
 /* 8006F864  90 1F 00 80 */	stw r0, 0x80(r31)
 /* 8006F868  90 1F 00 64 */	stw r0, 0x64(r31)
-/* 8006F86C  38 6D 89 D0 */	la r3, data_80450F50(r13) /* 80450F50-_SDA_BASE_ */
+/* 8006F86C  38 6D 89 D0 */	la r3, data(r13) /* 80450F50-_SDA_BASE_ */
 /* 8006F870  7F C4 F3 78 */	mr r4, r30
 /* 8006F874  7F A5 EB 78 */	mr r5, r29
 /* 8006F878  4B FF F8 F1 */	bl func_8006F168

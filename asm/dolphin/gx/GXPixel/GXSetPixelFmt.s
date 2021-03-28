@@ -1,8 +1,8 @@
 lbl_8035FD04:
-/* 8035FD04  3C A0 80 3D */	lis r5, data_803D2838@ha
+/* 8035FD04  3C A0 80 3D */	lis r5, p2f@ha
 /* 8035FD08  80 E2 CB 80 */	lwz r7, __GXData(r2)
 /* 8035FD0C  54 66 10 3A */	slwi r6, r3, 2
-/* 8035FD10  38 05 28 38 */	addi r0, r5, data_803D2838@l
+/* 8035FD10  38 05 28 38 */	addi r0, r5, p2f@l
 /* 8035FD14  80 A7 01 DC */	lwz r5, 0x1dc(r7)
 /* 8035FD18  7C C0 32 14 */	add r6, r0, r6
 /* 8035FD1C  80 06 00 00 */	lwz r0, 0(r6)

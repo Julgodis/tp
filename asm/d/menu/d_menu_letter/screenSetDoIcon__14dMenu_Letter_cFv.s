@@ -36,10 +36,10 @@ lbl_801E0A0C:
 /* 801E0A28  3B 00 00 00 */	li r24, 0
 /* 801E0A2C  3B C0 00 00 */	li r30, 0
 /* 801E0A30  3B A0 00 00 */	li r29, 0
-/* 801E0A34  3C 60 80 39 */	lis r3, data_80396D70@ha
-/* 801E0A38  3B 43 6D 70 */	addi r26, r3, data_80396D70@l
-/* 801E0A3C  3C 60 80 39 */	lis r3, data_80396D98@ha
-/* 801E0A40  3B 63 6D 98 */	addi r27, r3, data_80396D98@l
+/* 801E0A34  3C 60 80 39 */	lis r3, text_a_tag@ha
+/* 801E0A38  3B 43 6D 70 */	addi r26, r3, text_a_tag@l
+/* 801E0A3C  3C 60 80 39 */	lis r3, text_b_tag@ha
+/* 801E0A40  3B 63 6D 98 */	addi r27, r3, text_b_tag@l
 /* 801E0A44  3C 60 80 39 */	lis r3, d_menu_d_menu_letter__stringBase0@ha
 /* 801E0A48  3B 83 6D C0 */	addi r28, r3, d_menu_d_menu_letter__stringBase0@l
 lbl_801E0A4C:

@@ -92,8 +92,8 @@ lbl_806A6270:
 /* 806A62A4  3A E3 71 CC */	addi r23, r3, lit_3905@l
 /* 806A62A8  3C 60 80 6A */	lis r3, stringBase0@ha
 /* 806A62AC  3B 03 72 B4 */	addi r24, r3, stringBase0@l
-/* 806A62B0  3C 60 80 6A */	lis r3, data_806A7338@ha
-/* 806A62B4  3B 23 73 38 */	addi r25, r3, data_806A7338@l
+/* 806A62B0  3C 60 80 6A */	lis r3, brk_d@ha
+/* 806A62B4  3B 23 73 38 */	addi r25, r3, brk_d@l
 /* 806A62B8  3B DE C2 F8 */	addi r30, r30, -15624
 lbl_806A62BC:
 /* 806A62BC  38 60 00 18 */	li r3, 0x18

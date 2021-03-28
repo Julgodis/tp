@@ -42,10 +42,10 @@ struct mDoExt_invisibleModel {
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
 struct mDoExt_brkAnm {
@@ -57,19 +57,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -841,51 +841,51 @@ SECTION_DATA u8 data_80821C48[12] = {
 };
 
 /* 80821C54-80821C5C 0008+00 s=1 e=0 z=0  None .data      w_eff_id$4417                                                */
-SECTION_DATA static u8 data_80821C54[8] = {
+SECTION_DATA static u8 w_eff_id_4417[8] = {
 	0x86, 0x30, 0x86, 0x31, 0x86, 0x32, 0x86, 0x33,
 };
 
 /* 80821C5C-80821C68 000C+00 s=1 e=0 z=0  None .data      w_eff_id$4497                                                */
-SECTION_DATA static u8 data_80821C5C[12] = {
+SECTION_DATA static u8 w_eff_id_4497[12] = {
 	0x86, 0x36, 0x86, 0x37, 0x86, 0x38, 0x86, 0x39, 0x86, 0x3A, 0x86, 0x3B,
 };
 
 /* 80821C68-80821C78 000E+02 s=1 e=0 z=0  None .data      w_eff_id$4533                                                */
-SECTION_DATA static u8 data_80821C68[14 + 2 /* padding */] = {
+SECTION_DATA static u8 w_eff_id_4533[14 + 2 /* padding */] = {
 	0x86, 0x3C, 0x86, 0x3D, 0x86, 0x3E, 0x86, 0x3F, 0x86, 0x40, 0x86, 0x41, 0x86, 0x42,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80821C78-80821C88 000E+02 s=1 e=0 z=0  None .data      w_eff_id$4569                                                */
-SECTION_DATA static u8 data_80821C78[14 + 2 /* padding */] = {
+SECTION_DATA static u8 w_eff_id_4569[14 + 2 /* padding */] = {
 	0x86, 0x52, 0x86, 0x53, 0x86, 0x54, 0x86, 0x55, 0x86, 0x56, 0x86, 0x50, 0x86, 0x51,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80821C88-80821C8C 0004+00 s=1 e=0 z=0  None .data      w_eff_id$4611                                                */
-SECTION_DATA static u8 data_80821C88[4] = {
+SECTION_DATA static u8 w_eff_id_4611[4] = {
 	0x86, 0x43, 0x86, 0x46,
 };
 
 /* 80821C8C-80821C90 0004+00 s=1 e=0 z=0  None .data      w_eff_id$4637                                                */
-SECTION_DATA static u8 data_80821C8C[4] = {
+SECTION_DATA static u8 w_eff_id_4637[4] = {
 	0x86, 0x34, 0x86, 0x35,
 };
 
 /* 80821C90-80821C94 0004+00 s=1 e=0 z=0  None .data      w_eff_id$4677                                                */
-SECTION_DATA static u8 data_80821C90[4] = {
+SECTION_DATA static u8 w_eff_id_4677[4] = {
 	0x86, 0x5F, 0x86, 0x60,
 };
 
 /* 80821C94-80821C98 0004+00 s=1 e=0 z=0  None .data      w_eff_id$4777                                                */
-SECTION_DATA static u8 data_80821C94[4] = {
+SECTION_DATA static u8 w_eff_id_4777[4] = {
 	0x86, 0x5D, 0x86, 0x5E,
 };
 
 /* 80821C98-80821CA0 0006+02 s=1 e=0 z=0  None .data      ymb_chance_time$5424                                         */
-SECTION_DATA static u8 data_80821C98[6 + 2 /* padding */] = {
+SECTION_DATA static u8 ymb_chance_time[6 + 2 /* padding */] = {
 	0x00, 0x6E, 0x00, 0x50, 0x00, 0x32,
 	/* padding */
 	0x00, 0x00,
@@ -922,27 +922,27 @@ SECTION_DATA static void* lit_6089[10] = {
 };
 
 /* 80821CF8-80821CFC 0004+00 s=1 e=0 z=0  None .data      e_prim$6362                                                  */
-SECTION_DATA static u8 data_80821CF8[4] = {
+SECTION_DATA static u8 e_prim_6362[4] = {
 	0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 80821CFC-80821D00 0004+00 s=1 e=0 z=0  None .data      e_env$6363                                                   */
-SECTION_DATA static u8 data_80821CFC[4] = {
+SECTION_DATA static u8 e_env_6363[4] = {
 	0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 80821D00-80821D04 0004+00 s=1 e=0 z=0  None .data      e_prim$6449                                                  */
-SECTION_DATA static u8 data_80821D00[4] = {
+SECTION_DATA static u8 e_prim_6449[4] = {
 	0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 80821D04-80821D08 0004+00 s=1 e=0 z=0  None .data      e_env$6450                                                   */
-SECTION_DATA static u8 data_80821D04[4] = {
+SECTION_DATA static u8 e_env_6450[4] = {
 	0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 80821D08-80821D10 0006+02 s=1 e=0 z=0  None .data      eff_id$6451                                                  */
-SECTION_DATA static u8 data_80821D08[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -1822,7 +1822,7 @@ static u8 data_80821F38[180];
 static u8 lit_4494[12 + 4 /* padding */];
 
 /* 80821FFC-80822008 000C+00 s=1 e=0 z=0  None .bss       sc$4493                                                      */
-static u8 data_80821FFC[12];
+static u8 sc_4493[12];
 
 /* 80817744-8081785C 0118+00 s=4 e=0 z=0  None .text      setWaterEffect1__9daE_YMB_cFv                                */
 #pragma push
@@ -1840,7 +1840,7 @@ asm void daE_YMB_c::setWaterEffect1() {
 static u8 lit_4530[12 + 4 /* padding */];
 
 /* 80822018-80822024 000C+00 s=1 e=0 z=0  None .bss       sc$4529                                                      */
-static u8 data_80822018[12];
+static u8 sc_4529[12];
 
 /* 8081785C-80817974 0118+00 s=2 e=0 z=0  None .text      setWaterEffect2__9daE_YMB_cFv                                */
 #pragma push
@@ -1858,7 +1858,7 @@ asm void daE_YMB_c::setWaterEffect2() {
 static u8 lit_4566[12 + 4 /* padding */];
 
 /* 80822034-80822040 000C+00 s=1 e=0 z=0  None .bss       sc$4565                                                      */
-static u8 data_80822034[12];
+static u8 sc_4565[12];
 
 /* 80817974-80817AEC 0178+00 s=1 e=0 z=0  None .text      setBoilEffect__9daE_YMB_cFi                                  */
 #pragma push
@@ -1876,7 +1876,7 @@ asm void daE_YMB_c::setBoilEffect(int param_0) {
 static u8 lit_4608[12 + 4 /* padding */];
 
 /* 80822050-8082205C 000C+00 s=1 e=0 z=0  None .bss       sc$4607                                                      */
-static u8 data_80822050[12];
+static u8 sc_4607[12];
 
 /* 80817AEC-80817BD8 00EC+00 s=1 e=0 z=0  None .text      setDamageEffect__9daE_YMB_cFi                                */
 #pragma push
@@ -1894,7 +1894,7 @@ asm void daE_YMB_c::setDamageEffect(int param_0) {
 static u8 lit_4634[12 + 4 /* padding */];
 
 /* 8082206C-80822078 000C+00 s=1 e=0 z=0  None .bss       sc$4633                                                      */
-static u8 data_8082206C[12];
+static u8 sc_4633[12];
 
 /* 80817BD8-80817CF0 0118+00 s=2 e=0 z=0  None .text      setDownHamonEffect__9daE_YMB_cFv                             */
 #pragma push
@@ -1923,7 +1923,7 @@ asm void daE_YMB_c::setFlyBlurEffect() {
 static u8 lit_4736[12 + 4 /* padding */];
 
 /* 80822088-80822094 000C+00 s=1 e=0 z=0  None .bss       sc$4735                                                      */
-static u8 data_80822088[12];
+static u8 sc_4735[12];
 
 /* 80817E7C-80817FDC 0160+00 s=1 e=0 z=0  None .text      setRockDamageEffect__9daE_YMB_cFv                            */
 #pragma push
@@ -1941,7 +1941,7 @@ asm void daE_YMB_c::setRockDamageEffect() {
 static u8 lit_4774[12 + 4 /* padding */];
 
 /* 808220A4-808220B0 000C+00 s=1 e=0 z=0  None .bss       sc$4773                                                      */
-static u8 data_808220A4[12];
+static u8 sc_4773[12];
 
 /* 80817FDC-80818158 017C+00 s=1 e=0 z=0  None .text      setDeathEffect__9daE_YMB_cFv                                 */
 #pragma push

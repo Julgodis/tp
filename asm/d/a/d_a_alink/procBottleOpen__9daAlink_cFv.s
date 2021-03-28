@@ -93,8 +93,8 @@ lbl_8010F9FC:
 /* 8010FA38  40 82 01 E4 */	bne lbl_8010FC1C
 /* 8010FA3C  80 7E 07 08 */	lwz r3, 0x708(r30)
 /* 8010FA40  38 63 00 24 */	addi r3, r3, 0x24
-/* 8010FA44  3C 80 80 39 */	lis r4, data_80391A14@ha
-/* 8010FA48  38 84 1A 14 */	addi r4, r4, data_80391A14@l
+/* 8010FA44  3C 80 80 39 */	lis r4, bottleTop@ha
+/* 8010FA48  38 84 1A 14 */	addi r4, r4, bottleTop@l
 /* 8010FA4C  38 A1 00 0C */	addi r5, r1, 0xc
 /* 8010FA50  48 23 73 1D */	bl PSMTXMultVec
 /* 8010FA54  7F C3 F3 78 */	mr r3, r30
@@ -202,8 +202,8 @@ lbl_8010FB88:
 /* 8010FBD4  B0 1E 30 08 */	sth r0, 0x3008(r30)
 /* 8010FBD8  80 7E 07 08 */	lwz r3, 0x708(r30)
 /* 8010FBDC  38 63 00 24 */	addi r3, r3, 0x24
-/* 8010FBE0  3C 80 80 39 */	lis r4, data_80391A14@ha
-/* 8010FBE4  38 84 1A 14 */	addi r4, r4, data_80391A14@l
+/* 8010FBE0  3C 80 80 39 */	lis r4, bottleTop@ha
+/* 8010FBE4  38 84 1A 14 */	addi r4, r4, bottleTop@l
 /* 8010FBE8  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 8010FBEC  48 23 71 81 */	bl PSMTXMultVec
 /* 8010FBF0  80 1F 04 9C */	lwz r0, 0x49c(r31)

@@ -7,7 +7,7 @@ lbl_8029C568:
 /* 8029C57C  7C 00 07 75 */	extsb. r0, r0
 /* 8029C580  40 82 00 14 */	bne lbl_8029C594
 /* 8029C584  38 00 00 00 */	li r0, 0
-/* 8029C588  90 0D 8D 48 */	stw r0, data_804512C8(r13)
+/* 8029C588  90 0D 8D 48 */	stw r0, dacp(r13)
 /* 8029C58C  38 00 00 01 */	li r0, 1
 /* 8029C590  98 0D 8D 4C */	stb r0, data_804512CC(r13)
 lbl_8029C594:
@@ -23,7 +23,7 @@ lbl_8029C594:
 lbl_8029C5B8:
 /* 8029C5B8  48 00 04 4D */	bl getFrameSamples__9JASDriverFv
 /* 8029C5BC  7C 64 1B 78 */	mr r4, r3
-/* 8029C5C0  80 0D 8D 48 */	lwz r0, data_804512C8(r13)
+/* 8029C5C0  80 0D 8D 48 */	lwz r0, dacp(r13)
 /* 8029C5C4  54 00 10 3A */	slwi r0, r0, 2
 /* 8029C5C8  3C 60 80 43 */	lis r3, sDmaDacBuffer__9JASDriver@ha
 /* 8029C5CC  38 63 1C 58 */	addi r3, r3, sDmaDacBuffer__9JASDriver@l
@@ -38,7 +38,7 @@ lbl_8029C5EC:
 /* 8029C5EC  80 AD 8D 3C */	lwz r5, extMixCallback__9JASDriver(r13)
 /* 8029C5F0  28 05 00 00 */	cmplwi r5, 0
 /* 8029C5F4  41 82 00 38 */	beq lbl_8029C62C
-/* 8029C5F8  80 0D 8D 48 */	lwz r0, data_804512C8(r13)
+/* 8029C5F8  80 0D 8D 48 */	lwz r0, dacp(r13)
 /* 8029C5FC  54 00 10 3A */	slwi r0, r0, 2
 /* 8029C600  3C 60 80 43 */	lis r3, sDmaDacBuffer__9JASDriver@ha
 /* 8029C604  38 63 1C 58 */	addi r3, r3, sDmaDacBuffer__9JASDriver@l
@@ -56,7 +56,7 @@ lbl_8029C62C:
 /* 8029C630  90 61 00 08 */	stw r3, 8(r1)
 /* 8029C634  48 00 03 C5 */	bl getDacSize__9JASDriverFv
 /* 8029C638  54 64 08 3C */	slwi r4, r3, 1
-/* 8029C63C  80 0D 8D 48 */	lwz r0, data_804512C8(r13)
+/* 8029C63C  80 0D 8D 48 */	lwz r0, dacp(r13)
 /* 8029C640  54 00 10 3A */	slwi r0, r0, 2
 /* 8029C644  3C 60 80 43 */	lis r3, sDmaDacBuffer__9JASDriver@ha
 /* 8029C648  38 63 1C 58 */	addi r3, r3, sDmaDacBuffer__9JASDriver@l
@@ -64,18 +64,18 @@ lbl_8029C62C:
 /* 8029C650  48 09 EF 8D */	bl DCStoreRange
 /* 8029C654  80 61 00 08 */	lwz r3, 8(r1)
 /* 8029C658  48 0A 10 C5 */	bl OSRestoreInterrupts
-/* 8029C65C  80 8D 8D 48 */	lwz r4, data_804512C8(r13)
+/* 8029C65C  80 8D 8D 48 */	lwz r4, dacp(r13)
 /* 8029C660  54 80 10 3A */	slwi r0, r4, 2
 /* 8029C664  3C 60 80 43 */	lis r3, sDmaDacBuffer__9JASDriver@ha
 /* 8029C668  38 63 1C 58 */	addi r3, r3, sDmaDacBuffer__9JASDriver@l
 /* 8029C66C  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8029C670  90 0D 8D 34 */	stw r0, lastRspMadep__9JASDriver(r13)
 /* 8029C674  38 04 00 01 */	addi r0, r4, 1
-/* 8029C678  90 0D 8D 48 */	stw r0, data_804512C8(r13)
+/* 8029C678  90 0D 8D 48 */	stw r0, dacp(r13)
 /* 8029C67C  28 00 00 03 */	cmplwi r0, 3
 /* 8029C680  41 80 00 0C */	blt lbl_8029C68C
 /* 8029C684  38 00 00 00 */	li r0, 0
-/* 8029C688  90 0D 8D 48 */	stw r0, data_804512C8(r13)
+/* 8029C688  90 0D 8D 48 */	stw r0, dacp(r13)
 lbl_8029C68C:
 /* 8029C68C  80 0D 8D 38 */	lwz r0, dacCallbackFunc__9JASDriver(r13)
 /* 8029C690  28 00 00 00 */	cmplwi r0, 0

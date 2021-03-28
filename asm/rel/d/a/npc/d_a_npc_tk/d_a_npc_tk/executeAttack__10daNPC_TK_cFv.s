@@ -620,8 +620,8 @@ lbl_80B0432C:
 lbl_80B0433C:
 /* 80B0433C  88 1B 07 19 */	lbz r0, 0x719(r27)
 /* 80B04340  54 00 10 3A */	slwi r0, r0, 2
-/* 80B04344  3C 60 80 B1 */	lis r3, data_80B0C40C@ha
-/* 80B04348  38 63 C4 0C */	addi r3, r3, data_80B0C40C@l
+/* 80B04344  3C 60 80 B1 */	lis r3, taka_attack_dist@ha
+/* 80B04348  38 63 C4 0C */	addi r3, r3, taka_attack_dist@l
 /* 80B0434C  7C 03 04 2E */	lfsx f0, r3, r0
 /* 80B04350  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80B04354  4C 41 13 82 */	cror 2, 1, 2
@@ -928,8 +928,8 @@ lbl_80B047B4:
 /* 80B047B4  3A E0 00 00 */	li r23, 0
 /* 80B047B8  3B 80 00 00 */	li r28, 0
 /* 80B047BC  3B 40 00 00 */	li r26, 0
-/* 80B047C0  3C 60 80 B1 */	lis r3, data_80B0C41C@ha
-/* 80B047C4  3B 23 C4 1C */	addi r25, r3, data_80B0C41C@l
+/* 80B047C0  3C 60 80 B1 */	lis r3, w_eff_id@ha
+/* 80B047C4  3B 23 C4 1C */	addi r25, r3, w_eff_id@l
 lbl_80B047C8:
 /* 80B047C8  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 80B047CC  38 00 00 FF */	li r0, 0xff

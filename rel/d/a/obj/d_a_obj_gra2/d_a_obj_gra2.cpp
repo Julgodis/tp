@@ -48,17 +48,17 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -85,10 +85,10 @@ struct daPy_py_c {
 struct J3DModel {
 };
 
-struct J3DJoint {
+struct dBgW {
 };
 
-struct dBgW {
+struct J3DJoint {
 };
 
 struct daObj_GrA_c {
@@ -272,10 +272,10 @@ struct daBaseNpc_lookat_c {
 	/* 8014E6AC */ void getRot(int);
 };
 
-struct J3DAnmTransformKey {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DAnmTransformKey {
 };
 
 struct daBaseNpc_c {
@@ -354,15 +354,15 @@ struct dPa_control_c {
 	/* 8004D6A4 */ void setPoly(u32, u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
 };
 
-struct dBgS_AcchCir {
-	/* 80075F58 */ void SetWall(f32, f32);
-};
-
 struct dBgW_Base {
 };
 
 struct dBgS {
 	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
+};
+
+struct dBgS_AcchCir {
+	/* 80075F58 */ void SetWall(f32, f32);
 };
 
 struct dBgS_Acch {
@@ -1311,7 +1311,7 @@ SECTION_RODATA static u32 const lit_6054 = 0x3E800000;
 SECTION_RODATA static u32 const lit_6055 = 0x40600000;
 
 /* 80C0FCD0-80C0FCD8 0006+02 s=1 e=0 z=0  None .rodata    l_prticles_id$6229                                           */
-SECTION_RODATA static u8 const data_80C0FCD0[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const l_prticles_id[6 + 2 /* padding */] = {
 	0x83, 0xB5, 0x83, 0xB6, 0x83, 0xB7,
 	/* padding */
 	0x00, 0x00,
@@ -2965,7 +2965,7 @@ static u8 lit_5052[12];
 static u8 lit_5053[12];
 
 /* 80C109C0-80C10A74 00B4+00 s=1 e=0 z=0  None .bss       aTrembleTrans$5036                                           */
-static u8 data_80C109C0[180];
+static u8 aTrembleTrans[180];
 
 /* 80C01FE8-80C02614 062C+00 s=1 e=0 z=0  None .text      setMtx__11daObj_GrA_cFi                                      */
 #pragma push
@@ -2983,7 +2983,7 @@ asm void daObj_GrA_c::setMtx(int param_0) {
 static u8 lit_5298[12 + 4 /* padding */];
 
 /* 80C10A84-80C10A90 000C+00 s=1 e=0 z=0  None .bss       aOfst$5297                                                   */
-static u8 data_80C10A84[12];
+static u8 aOfst[12];
 
 /* 80C02614-80C02970 035C+00 s=1 e=0 z=0  None .text      setCollisions__11daObj_GrA_cFv                               */
 #pragma push
@@ -3001,7 +3001,7 @@ asm void daObj_GrA_c::setCollisions() {
 static u8 lit_5404[12 + 4 /* padding */];
 
 /* 80C10AA0-80C10AAC 000C+00 s=1 e=0 z=0  None .bss       aEyeOfst$5403                                                */
-static u8 data_80C10AA0[12];
+static u8 aEyeOfst[12];
 
 /* 80C02970-80C02A5C 00EC+00 s=1 e=0 z=0  None .text      setAttnPos__11daObj_GrA_cFv                                  */
 #pragma push

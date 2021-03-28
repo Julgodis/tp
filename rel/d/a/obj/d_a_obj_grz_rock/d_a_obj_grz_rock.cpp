@@ -34,13 +34,13 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -59,10 +59,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -259,7 +259,7 @@ asm void daObjGrzRock_c::setRoomNo() {
 
 /* ############################################################################################## */
 /* 80C15360-80C1536C 000C+00 s=1 e=0 z=0  None .rodata    l_prticles_id$3832                                           */
-SECTION_RODATA static u8 const data_80C15360[12] = {
+SECTION_RODATA static u8 const l_prticles_id[12] = {
 	0x89, 0xC2, 0x89, 0xC3, 0x89, 0xC4, 0x89, 0xC5, 0x89, 0xC6, 0x89, 0xC7,
 };
 

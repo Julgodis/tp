@@ -237,8 +237,8 @@ lbl_80CBE4A4:
 /* 80CBE4C0  4B 3C 53 A0 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80CBE4C4  3B 00 00 00 */	li r24, 0
 /* 80CBE4C8  3B 40 00 00 */	li r26, 0
-/* 80CBE4CC  3C 60 80 CC */	lis r3, data_80CBE7F0@ha
-/* 80CBE4D0  3B E3 E7 F0 */	addi r31, r3, data_80CBE7F0@l
+/* 80CBE4CC  3C 60 80 CC */	lis r3, cc_sph_src@ha
+/* 80CBE4D0  3B E3 E7 F0 */	addi r31, r3, cc_sph_src@l
 /* 80CBE4D4  3B 7D 1B 7C */	addi r27, r29, 0x1b7c
 /* 80CBE4D8  48 00 00 20 */	b lbl_80CBE4F8
 lbl_80CBE4DC:

@@ -193,6 +193,9 @@ struct dCcMassS_Mng {
 	/* 80085EB8 */ void GetCamTopPos(Vec*);
 };
 
+struct camera_class {
+};
+
 struct cSAngle {
 	/* 80030510 */ ~cSAngle();
 	/* 80271004 */ void Val(s16);
@@ -223,9 +226,6 @@ struct cSAngle {
 	/* 802711E8 */ void operator-=(cSAngle const&);
 	/* 80271264 */ void operator*(f32) const;
 	/* 802712B4 */ void operator*=(f32);
-};
-
-struct camera_class {
 };
 
 struct dCamMapToolData {
@@ -1375,7 +1375,7 @@ SECTION_RODATA static u8 const lit_16654[408] = {
 };
 
 /* 80393F58-80393F68 0010+00 s=1 e=0 z=0  None .rodata    wave$17181                                                   */
-SECTION_RODATA static u8 const data_80393F58[16] = {
+SECTION_RODATA static u8 const wave[16] = {
 	0x3E, 0xCC, 0xCC, 0xCD, 0x3F, 0x66, 0x66, 0x66, 0x40, 0x06, 0x66, 0x66, 0x40, 0x4C, 0xCC, 0xCD,
 };
 
@@ -1762,7 +1762,7 @@ SECTION_DATA static void* lit_12300[66] = {
 };
 
 /* 803BA4A4-803BA4B8 0014+00 s=1 e=0 z=0  None .data      Dsp$13137                                                    */
-SECTION_DATA static u8 data_803BA4A4[20] = {
+SECTION_DATA static u8 Dsp[20] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3E, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 	0x3F, 0x80, 0x00, 0x00,
 };
@@ -2006,7 +2006,7 @@ SECTION_DATA static void* lit_16653[3] = {
 };
 
 /* 803BA650-803BA6D8 0088+00 s=1 e=0 z=0  None .data      ActionNames$16655                                            */
-SECTION_DATA static void* data_803BA650[34] = {
+SECTION_DATA static void* ActionNames[34] = {
 	(void*)(((char*)&d_d_camera__stringBase0)+0x21C),
 	(void*)(((char*)&d_d_camera__stringBase0)+0x222),
 	(void*)(((char*)&d_d_camera__stringBase0)+0x227),
@@ -2044,7 +2044,7 @@ SECTION_DATA static void* data_803BA650[34] = {
 };
 
 /* 803BA6D8-803BA6E4 000C+00 s=1 e=0 z=0  None .data      l_method$17952                                               */
-SECTION_DATA static void* data_803BA6D8[3] = {
+SECTION_DATA static void* l_method[3] = {
 	(void*)init_phase1__FP12camera_class,
 	(void*)init_phase2__FP12camera_class,
 	(void*)NULL,
@@ -2905,13 +2905,13 @@ asm void dCamera_c::forwardCheckAngle() {
 
 /* ############################################################################################## */
 /* 80451024-80451028 0004+00 s=1 e=0 z=0  None .sbss      prev_plat1$8536                                              */
-static u8 data_80451024[4];
+static u8 prev_plat1[4];
 
 /* 80451028-8045102C 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80451028[4];
 
 /* 8045102C-80451030 0004+00 s=1 e=0 z=0  None .sbss      prev_plat2$8539                                              */
-static u8 data_8045102C[4];
+static u8 prev_plat2[4];
 
 /* 80451030-80451034 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80451030[4];
@@ -3071,7 +3071,7 @@ asm void dCamera_c::checkGroundInfo() {
 static u8 lit_9808[12];
 
 /* 80451034-80451038 0004+00 s=1 e=0 z=0  None .sbss      JumpCushion$9801                                             */
-static f32 data_80451034;
+static f32 JumpCushion;
 
 /* 80451038-8045103C 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 struct_80451038[4];
@@ -3671,7 +3671,7 @@ static u8 lit_14968[12 + 4 /* padding */];
 static u8 struct_80451048[4];
 
 /* 8045104C-80451050 0002+02 s=1 e=0 z=0  None .sbss      LatMax$14967                                                 */
-static u8 data_8045104C[2 + 2 /* padding */];
+static u8 LatMax[2 + 2 /* padding */];
 
 /* 804538C8-804538CC 0004+00 s=1 e=0 z=0  None .sdata2    @15474                                                       */
 SECTION_SDATA2 static u32 lit_15474 = 0x44960000;

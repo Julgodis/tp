@@ -137,8 +137,8 @@ lbl_80600D0C:
 /* 80600D10  3B 60 00 00 */	li r27, 0
 /* 80600D14  3C 60 80 60 */	lis r3, stringBase0@ha
 /* 80600D18  3B 23 29 AC */	addi r25, r3, stringBase0@l
-/* 80600D1C  3C 60 80 60 */	lis r3, data_80602D10@ha
-/* 80600D20  3B 03 2D 10 */	addi r24, r3, data_80602D10@l
+/* 80600D1C  3C 60 80 60 */	lis r3, btk_d@ha
+/* 80600D20  3B 03 2D 10 */	addi r24, r3, btk_d@l
 lbl_80600D24:
 /* 80600D24  38 60 00 18 */	li r3, 0x18
 /* 80600D28  4B CC DF 24 */	b __nw__FUl

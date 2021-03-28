@@ -15,8 +15,8 @@ lbl_804CF6C4:
 /* 804CF6F8  7C 7B 1B 78 */	mr r27, r3
 /* 804CF6FC  3C 60 80 4D */	lis r3, lit_1109@ha
 /* 804CF700  3B A3 17 E8 */	addi r29, r3, lit_1109@l
-/* 804CF704  3C 60 80 4D */	lis r3, data_804D15F0@ha
-/* 804CF708  3B C3 15 F0 */	addi r30, r3, data_804D15F0@l
+/* 804CF704  3C 60 80 4D */	lis r3, ccSphSrc@ha
+/* 804CF708  3B C3 15 F0 */	addi r30, r3, ccSphSrc@l
 /* 804CF70C  3B 80 00 00 */	li r28, 0
 /* 804CF710  C3 9E 00 48 */	lfs f28, 0x48(r30)
 /* 804CF714  FF E0 E0 90 */	fmr f31, f28

@@ -34,7 +34,7 @@ extern "C" extern u8 data_804519A0[8];
 
 /* ############################################################################################## */
 /* 8044D540-8044D578 0038+00 s=1 e=0 z=0  None .bss       protopool$192                                                */
-static u8 data_8044D540[56];
+static u8 protopool[56];
 
 /* 80362B58-80362BC8 0070+00 s=0 e=2 z=0  None .text      free                                                         */
 #pragma push

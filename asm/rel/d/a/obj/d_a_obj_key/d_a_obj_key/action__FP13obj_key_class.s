@@ -87,8 +87,8 @@ lbl_80C40810:
 /* 80C40820  3B 80 00 00 */	li r28, 0
 /* 80C40824  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80C40828  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
-/* 80C4082C  3C 60 80 C4 */	lis r3, data_80C41094@ha
-/* 80C40830  3B 63 10 94 */	addi r27, r3, data_80C41094@l
+/* 80C4082C  3C 60 80 C4 */	lis r3, key_eno@ha
+/* 80C40830  3B 63 10 94 */	addi r27, r3, key_eno@l
 lbl_80C40834:
 /* 80C40834  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 80C40838  38 00 00 FF */	li r0, 0xff

@@ -21,10 +21,10 @@ struct mDoMtx_stack_c {
 	/* 8000CD64 */ void transS(cXyz const&);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTevRegKey {
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmTextureSRTKey {
 };
 
 struct J3DMaterialTable {
@@ -71,10 +71,10 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

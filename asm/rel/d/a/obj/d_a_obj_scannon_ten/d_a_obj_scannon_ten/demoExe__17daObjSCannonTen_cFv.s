@@ -10,8 +10,8 @@ lbl_80CCBDD0:
 /* 80CCBDF0  3B C3 4F F8 */	addi r30, r3, 0x4ff8
 /* 80CCBDF4  7F C3 F3 78 */	mr r3, r30
 /* 80CCBDF8  80 9D 05 E4 */	lwz r4, 0x5e4(r29)
-/* 80CCBDFC  3C A0 80 CD */	lis r5, data_80CCCE7C@ha
-/* 80CCBE00  38 A5 CE 7C */	addi r5, r5, data_80CCCE7C@l
+/* 80CCBDFC  3C A0 80 CD */	lis r5, CUT_TYPE_TABLE_FIRE_SECOND@ha
+/* 80CCBE00  38 A5 CE 7C */	addi r5, r5, CUT_TYPE_TABLE_FIRE_SECOND@l
 /* 80CCBE04  38 C0 00 06 */	li r6, 6
 /* 80CCBE08  38 E0 00 00 */	li r7, 0
 /* 80CCBE0C  39 00 00 00 */	li r8, 0

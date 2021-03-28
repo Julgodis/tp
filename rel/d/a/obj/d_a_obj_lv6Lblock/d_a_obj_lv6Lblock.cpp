@@ -47,13 +47,13 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -237,7 +237,7 @@ SECTION_DATA static void* lit_3736[3] = {
 };
 
 /* 80C73D30-80C73D54 0024+00 s=1 e=0 z=0  None .data      mode_proc$3733                                               */
-SECTION_DATA static u8 data_80C73D30[36] = {
+SECTION_DATA static u8 mode_proc[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,

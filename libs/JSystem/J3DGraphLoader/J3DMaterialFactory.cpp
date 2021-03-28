@@ -85,16 +85,16 @@ struct J3DTevBlockPatched {
 	/* 803176E0 */ void initialize();
 };
 
+struct J3DIndTevStage {
+	/* 8000E14C */ J3DIndTevStage();
+};
+
 struct J3DGXColorS10 {
 	/* 8000E460 */ J3DGXColorS10();
 };
 
 struct J3DGXColor {
 	/* 8000E538 */ J3DGXColor();
-};
-
-struct J3DIndTevStage {
-	/* 8000E14C */ J3DIndTevStage();
 };
 
 struct J3DTevBlock {
@@ -209,6 +209,9 @@ struct J3DPEBlock {
 struct J3DMaterialBlock {
 };
 
+struct J3DMaterialDLBlock {
+};
+
 struct J3DMaterial {
 	/* 803157A0 */ void createColorBlock(u32);
 	/* 803159A0 */ void createTexGenBlock(u32);
@@ -222,9 +225,6 @@ struct J3DMaterial {
 	/* 803161D8 */ void calcSizePEBlock(u32, u32);
 	/* 80316240 */ void initialize();
 	/* 80332B94 */ ~J3DMaterial();
-};
-
-struct J3DMaterialDLBlock {
 };
 
 struct J3DMaterialFactory {

@@ -14,8 +14,8 @@ lbl_8059E508:
 /* 8059E538  3B A3 4F F8 */	addi r29, r3, 0x4ff8
 /* 8059E53C  7F A3 EB 78 */	mr r3, r29
 /* 8059E540  80 9C 05 70 */	lwz r4, 0x570(r28)
-/* 8059E544  3C A0 80 5A */	lis r5, data_8059E8C0@ha
-/* 8059E548  38 A5 E8 C0 */	addi r5, r5, data_8059E8C0@l
+/* 8059E544  3C A0 80 5A */	lis r5, action_table@ha
+/* 8059E548  38 A5 E8 C0 */	addi r5, r5, action_table@l
 /* 8059E54C  38 C0 00 03 */	li r6, 3
 /* 8059E550  38 E0 00 00 */	li r7, 0
 /* 8059E554  39 00 00 00 */	li r8, 0

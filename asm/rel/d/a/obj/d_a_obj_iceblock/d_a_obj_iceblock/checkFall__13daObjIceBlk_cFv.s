@@ -17,8 +17,8 @@ lbl_80C238B0:
 /* 80C238EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C238F0  3B 83 0F 38 */	addi r28, r3, 0xf38
 /* 80C238F4  3B 61 00 54 */	addi r27, r1, 0x54
-/* 80C238F8  3C 60 80 C2 */	lis r3, data_80C2445C@ha
-/* 80C238FC  3B A3 44 5C */	addi r29, r3, data_80C2445C@l
+/* 80C238F8  3C 60 80 C2 */	lis r3, l_check_offsetXZ_4641@ha
+/* 80C238FC  3B A3 44 5C */	addi r29, r3, l_check_offsetXZ_4641@l
 /* 80C23900  3C 60 80 C2 */	lis r3, lit_4696@ha
 /* 80C23904  C3 E3 44 98 */	lfs f31, lit_4696@l(r3)
 lbl_80C23908:

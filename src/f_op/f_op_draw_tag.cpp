@@ -94,7 +94,7 @@ asm void fopDwTg_Init(create_tag_class* param_0, void* param_1) {
 
 /* ############################################################################################## */
 /* 803F1E10-803F4CF0 2EE0+00 s=1 e=0 z=0  None .bss       lists$2216                                                   */
-static u8 data_803F1E10[12000];
+static u8 lists[12000];
 
 /* 80020518-80020548 0030+00 s=0 e=1 z=0  None .text      fopDwTg_CreateQueue__Fv                                      */
 #pragma push

@@ -2532,7 +2532,7 @@ bool cDylPhs::phase_03(void* param_0) {
 
 /* ############################################################################################## */
 /* 803A3590-803A35A0 000C+04 s=1 e=0 z=0  None .data      l_method$3807                                                */
-SECTION_DATA static void* data_803A3590[3 + 1 /* padding */] = {
+SECTION_DATA static void* l_method[3 + 1 /* padding */] = {
 	(void*)phase_01__7cDylPhsFPv,
 	(void*)phase_02__7cDylPhsFPs,
 	(void*)phase_03__7cDylPhsFPv,

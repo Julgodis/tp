@@ -29,8 +29,8 @@ lbl_80C7D3E8:
 /* 80C7D40C  3B A0 00 00 */	li r29, 0
 /* 80C7D410  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80C7D414  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
-/* 80C7D418  3C 60 80 C8 */	lis r3, data_80C7DF44@ha
-/* 80C7D41C  3B 63 DF 44 */	addi r27, r3, data_80C7DF44@l
+/* 80C7D418  3C 60 80 C8 */	lis r3, l_particle_id@ha
+/* 80C7D41C  3B 63 DF 44 */	addi r27, r3, l_particle_id@l
 /* 80C7D420  3C 60 80 C8 */	lis r3, lit_3880@ha
 /* 80C7D424  3B 83 DF 38 */	addi r28, r3, lit_3880@l
 lbl_80C7D428:

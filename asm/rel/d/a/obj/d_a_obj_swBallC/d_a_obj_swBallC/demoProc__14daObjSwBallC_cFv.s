@@ -13,8 +13,8 @@ lbl_80CF63F4:
 /* 80CF6420  3B 83 4F F8 */	addi r28, r3, 0x4ff8
 /* 80CF6424  7F 83 E3 78 */	mr r3, r28
 /* 80CF6428  80 9B 05 78 */	lwz r4, 0x578(r27)
-/* 80CF642C  3C A0 80 CF */	lis r5, data_80CF6E1C@ha
-/* 80CF6430  38 A5 6E 1C */	addi r5, r5, data_80CF6E1C@l
+/* 80CF642C  3C A0 80 CF */	lis r5, action_table@ha
+/* 80CF6430  38 A5 6E 1C */	addi r5, r5, action_table@l
 /* 80CF6434  38 C0 00 0D */	li r6, 0xd
 /* 80CF6438  38 E0 00 00 */	li r7, 0
 /* 80CF643C  39 00 00 00 */	li r8, 0

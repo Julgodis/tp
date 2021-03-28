@@ -341,8 +341,8 @@ lbl_8079C8B8:
 /* 8079C984  4B FF C7 DD */	bl cc_stts_init__FP11e_sm2_class
 /* 8079C988  3B 00 00 00 */	li r24, 0
 /* 8079C98C  3B 80 00 00 */	li r28, 0
-/* 8079C990  3C 60 80 7A */	lis r3, data_8079DA2C@ha
-/* 8079C994  3B 43 DA 2C */	addi r26, r3, data_8079DA2C@l
+/* 8079C990  3C 60 80 7A */	lis r3, cc_sph_src@ha
+/* 8079C994  3B 43 DA 2C */	addi r26, r3, cc_sph_src@l
 /* 8079C998  3B 7F 0A 6C */	addi r27, r31, 0xa6c
 lbl_8079C99C:
 /* 8079C99C  7F 3F E2 14 */	add r25, r31, r28

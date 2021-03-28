@@ -80,10 +80,10 @@ struct dSv_info_c {
 	/* 800356B4 */ void offActor(int, int);
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -675,7 +675,7 @@ SECTION_RODATA static u32 const lit_5074 = 0x43480000;
 SECTION_RODATA static u32 const lit_5075 = 0x3F266666;
 
 /* 80CECC20-80CECC2C 0006+06 s=1 e=0 z=0  None .rodata    l_eff_id$5089                                                */
-SECTION_RODATA static u8 const data_80CECC20[6 + 6 /* padding */] = {
+SECTION_RODATA static u8 const l_eff_id[6 + 6 /* padding */] = {
 	0x85, 0x9B, 0x85, 0x9C, 0x85, 0x9D,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -687,7 +687,7 @@ SECTION_RODATA static u8 const lit_5256[8] = {
 };
 
 /* 80CECC34-80CECC3C 0006+02 s=1 e=0 z=0  None .rodata    l_carry_eff_id$5307                                          */
-SECTION_RODATA static u8 const data_80CECC34[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const l_carry_eff_id[6 + 2 /* padding */] = {
 	0x85, 0x9E, 0x85, 0x9F, 0x85, 0xA0,
 	/* padding */
 	0x00, 0x00,
@@ -773,7 +773,7 @@ SECTION_DATA static void* lit_4021[3] = {
 };
 
 /* 80CECCD0-80CECD24 0054+00 s=1 e=0 z=0  None .data      l_func$4014                                                  */
-SECTION_DATA static u8 data_80CECCD0[84] = {
+SECTION_DATA static u8 l_func[84] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

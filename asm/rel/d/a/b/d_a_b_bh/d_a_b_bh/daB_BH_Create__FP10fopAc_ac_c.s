@@ -172,14 +172,14 @@ lbl_805B2D6C:
 /* 805B2D8C  7F E6 FB 78 */	mr r6, r31
 /* 805B2D90  4B AD 0A D0 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 805B2D94  38 7F 0A 70 */	addi r3, r31, 0xa70
-/* 805B2D98  3C 80 80 5B */	lis r4, data_805B328C@ha
-/* 805B2D9C  38 84 32 8C */	addi r4, r4, data_805B328C@l
+/* 805B2D98  3C 80 80 5B */	lis r4, cc_sph_src@ha
+/* 805B2D9C  38 84 32 8C */	addi r4, r4, cc_sph_src@l
 /* 805B2DA0  4B AD 1C 94 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 805B2DA4  38 1F 0A 34 */	addi r0, r31, 0xa34
 /* 805B2DA8  90 1F 0A B4 */	stw r0, 0xab4(r31)
 /* 805B2DAC  38 7F 0B A8 */	addi r3, r31, 0xba8
-/* 805B2DB0  3C 80 80 5B */	lis r4, data_805B32CC@ha
-/* 805B2DB4  38 84 32 CC */	addi r4, r4, data_805B32CC@l
+/* 805B2DB0  3C 80 80 5B */	lis r4, tg_sph_src@ha
+/* 805B2DB4  38 84 32 CC */	addi r4, r4, tg_sph_src@l
 /* 805B2DB8  4B AD 1C 7C */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 805B2DBC  38 1F 0A 34 */	addi r0, r31, 0xa34
 /* 805B2DC0  90 1F 0B EC */	stw r0, 0xbec(r31)

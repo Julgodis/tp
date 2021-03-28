@@ -110,8 +110,8 @@ lbl_8069A700:
 /* 8069A718  7F E6 FB 78 */	mr r6, r31
 /* 8069A71C  4B 9E 91 44 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 8069A720  38 7F 08 B0 */	addi r3, r31, 0x8b0
-/* 8069A724  3C 80 80 6A */	lis r4, data_8069A920@ha
-/* 8069A728  38 84 A9 20 */	addi r4, r4, data_8069A920@l
+/* 8069A724  3C 80 80 6A */	lis r4, cc_sph_src@ha
+/* 8069A728  38 84 A9 20 */	addi r4, r4, cc_sph_src@l
 /* 8069A72C  4B 9E A3 08 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 8069A730  38 1F 08 74 */	addi r0, r31, 0x874
 /* 8069A734  90 1F 08 F4 */	stw r0, 0x8f4(r31)

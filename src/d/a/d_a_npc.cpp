@@ -46,16 +46,16 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
-struct J3DAnmTexPattern {
-};
-
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTevRegKey {
 };
 
 struct J3DAnmColor {
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmTexPattern {
+};
+
+struct J3DAnmTextureSRTKey {
 };
 
 struct J3DMaterialTable {
@@ -85,10 +85,10 @@ struct mDoExt_bpkAnm {
 	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -127,24 +127,24 @@ struct daNpcT_motionAnmData_c {
 struct daNpcT_faceMotionAnmData_c {
 };
 
-struct J3DAnmTransformKey {
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
 };
 
 struct _GXColorS10 {
 };
 
+struct J3DJoint {
+};
+
 struct J3DModel {
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct dCcD_GObjInf {
 	/* 80084460 */ void ChkTgHit();
-};
-
-struct J3DJoint {
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
 };
 
 struct daNpcT_c {
@@ -447,13 +447,13 @@ struct daBaseNpc_path_c {
 	/* 801503FC */ ~daBaseNpc_path_c();
 };
 
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
+};
+
 struct dBgW {
 	/* 8007B970 */ dBgW();
 	/* 8007B9C0 */ void Move();
-};
-
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct daBaseNpc_moveBgActor_c {
@@ -2979,7 +2979,7 @@ asm void daNpcT_c::getShopItemTagP() {
 
 /* ############################################################################################## */
 /* 80453480-80453484 0004+00 s=1 e=0 z=0  None .sdata2    id$7388                                                      */
-SECTION_SDATA2 static u8 data_80453480[4] = {
+SECTION_SDATA2 static u8 id_7388[4] = {
 	0x84, 0x97, 0x84, 0x98,
 };
 
@@ -4503,7 +4503,7 @@ asm void daNpcF_Lookat_c::initialize() {
 static u8 lit_9946[12];
 
 /* 804257DC-804257E8 000C+00 s=1 e=0 z=0  None .bss       vec$9945                                                     */
-static u8 data_804257DC[12];
+static u8 vec[12];
 
 /* 80450FEC-80450FF0 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450FEC[4];
@@ -5141,7 +5141,7 @@ asm void daNpcF_c::chkFindPlayer2(int param_0, s16 param_1) {
 
 /* ############################################################################################## */
 /* 804534B4-804534B8 0004+00 s=1 e=0 z=0  None .sdata2    id$11798                                                     */
-SECTION_SDATA2 static u8 data_804534B4[4] = {
+SECTION_SDATA2 static u8 id_11798[4] = {
 	0x84, 0x97, 0x84, 0x98,
 };
 

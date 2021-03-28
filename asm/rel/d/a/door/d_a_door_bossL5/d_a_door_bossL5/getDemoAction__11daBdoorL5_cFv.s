@@ -7,8 +7,8 @@ lbl_806712DC:
 /* 806712F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806712F4  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 806712F8  80 84 05 9C */	lwz r4, 0x59c(r4)
-/* 806712FC  3C A0 80 67 */	lis r5, data_80672614@ha
-/* 80671300  38 A5 26 14 */	addi r5, r5, data_80672614@l
+/* 806712FC  3C A0 80 67 */	lis r5, action_table@ha
+/* 80671300  38 A5 26 14 */	addi r5, r5, action_table@l
 /* 80671304  38 C0 00 0E */	li r6, 0xe
 /* 80671308  38 E0 00 00 */	li r7, 0
 /* 8067130C  39 00 00 00 */	li r8, 0

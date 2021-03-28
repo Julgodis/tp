@@ -10,8 +10,8 @@ lbl_80BA26BC:
 /* 80BA26DC  7F E6 FB 78 */	mr r6, r31
 /* 80BA26E0  4B 4E 11 80 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80BA26E4  38 7F 06 78 */	addi r3, r31, 0x678
-/* 80BA26E8  3C 80 80 BA */	lis r4, data_80BA5414@ha
-/* 80BA26EC  38 84 54 14 */	addi r4, r4, data_80BA5414@l
+/* 80BA26E8  3C 80 80 BA */	lis r4, ccSphSrc@ha
+/* 80BA26EC  38 84 54 14 */	addi r4, r4, ccSphSrc@l
 /* 80BA26F0  4B 4E 23 44 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80BA26F4  38 1F 06 3C */	addi r0, r31, 0x63c
 /* 80BA26F8  90 1F 06 BC */	stw r0, 0x6bc(r31)

@@ -46,6 +46,9 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct J3DModelData {
+};
+
 struct Vec {
 };
 
@@ -54,9 +57,6 @@ struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -237,7 +237,7 @@ asm static void createSolidHeap(fopAc_ac_c* param_0) {
 SECTION_RODATA static u32 const lit_3840 = 0x47800000;
 
 /* 80D44B60-80D44B64 0004+00 s=1 e=0 z=0  None .rodata    id$3856                                                      */
-SECTION_RODATA static u8 const data_80D44B60[4] = {
+SECTION_RODATA static u8 const id[4] = {
 	0x84, 0x97, 0x84, 0x98,
 };
 
@@ -299,7 +299,7 @@ SECTION_RODATA static u8 const struct_80D44B8C[56] = {
 };
 
 /* 80D44BC8-80D44BD4 000C+00 s=1 e=0 z=0  None .data      l_bmdName$3845                                               */
-SECTION_DATA static void* data_80D44BC8[3] = {
+SECTION_DATA static void* l_bmdName[3] = {
 	(void*)(((char*)&struct_80D44B8C)+0x0) /* None */,
 	(void*)(((char*)&struct_80D44B8C)+0xD) /* None */,
 	(void*)(((char*)&struct_80D44B8C)+0x1D) /* None */,

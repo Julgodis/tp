@@ -18,10 +18,10 @@ struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
 struct mDoExt_brkAnm {
@@ -33,19 +33,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -66,10 +66,10 @@ struct fopAc_ac_c {
 struct fast_create_request {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daE_BG_c {
@@ -134,10 +134,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -541,7 +541,7 @@ SECTION_DATA static u8 data_8068A354[64] = {
 };
 
 /* 8068A394-8068A3A0 000A+02 s=1 e=0 z=0  None .data      enemyBombID$3951                                             */
-SECTION_DATA static u8 data_8068A394[10 + 2 /* padding */] = {
+SECTION_DATA static u8 enemyBombID[10 + 2 /* padding */] = {
 	0x0A, 0x0D, 0x0A, 0x0E, 0x0A, 0x0F, 0x0A, 0x10, 0x0A, 0x11,
 	/* padding */
 	0x00, 0x00,

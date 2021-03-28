@@ -14,19 +14,19 @@
 struct request_of_phase_process_class {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -39,13 +39,13 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DAnmTransformKey {
-};
-
 struct _GXColorS10 {
 };
 
 struct J3DAnmTexPattern {
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {

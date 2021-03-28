@@ -14,10 +14,10 @@
 struct J2DTextBox {
 };
 
-struct JUTFont {
+struct COutFont_c {
 };
 
-struct COutFont_c {
+struct JUTFont {
 };
 
 struct jmessage_string_tReference {

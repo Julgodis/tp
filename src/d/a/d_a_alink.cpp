@@ -68,10 +68,10 @@ struct mDoExt_blkAnm {
 	/* 8000DA08 */ void init(J3DDeformData*, J3DAnmCluster*, int, int, f32, s16, s16);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -512,6 +512,10 @@ struct daAlink_footData_c {
 	/* 800CFCF4 */ daAlink_footData_c();
 };
 
+struct dAttList_c {
+	/* 80073864 */ void getActor();
+};
+
 struct J3DAnmBase {
 };
 
@@ -519,35 +523,8 @@ struct dBgS_LinChk {
 	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
-struct _GXColorS10 {
-};
-
-struct J3DAnmTevRegKey {
-	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
-	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
-};
-
-struct daAlinkHIO_anm_c {
-};
-
-struct JKRHeap {
-	/* 802CE5CC */ void freeAll();
-};
-
-struct JKRExpHeap {
-	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
-struct dAttList_c {
-	/* 80073864 */ void getActor();
-};
-
-struct dDemo_actor_c {
-	/* 8003819C */ void getPrm_Morf();
-	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
-};
-
-struct JPABaseEmitter {
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
 };
 
 struct dCcD_GObjInf {
@@ -565,11 +542,12 @@ struct dCcD_GObjInf {
 	/* 800846B0 */ void ResetCoHit();
 };
 
-struct cM3dGPla {
-	/* 8001DB90 */ ~cM3dGPla();
-	/* 801411F0 */ cM3dGPla();
-	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
-	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
+struct JKRHeap {
+	/* 802CE5CC */ void freeAll();
+};
+
+struct JKRExpHeap {
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
 struct dBgW_Base {
@@ -578,11 +556,33 @@ struct dBgW_Base {
 
 };
 
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
+struct daAlinkHIO_anm_c {
+};
+
+struct dDemo_actor_c {
+	/* 8003819C */ void getPrm_Morf();
+	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
 };
 
 struct dCcG_At_Spl {
+};
+
+struct _GXColorS10 {
+};
+
+struct J3DAnmTevRegKey {
+	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
+	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct cM3dGPla {
+	/* 8001DB90 */ ~cM3dGPla();
+	/* 801411F0 */ cM3dGPla();
+	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
+	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
+};
+
+struct JPABaseEmitter {
 };
 
 struct daAlink_c {
@@ -2602,13 +2602,6 @@ struct dPa_control_c {
 	/* 8004D068 */ void setPoly(u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
 };
 
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F40 */ void SetWallR(f32);
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 80077414 */ ~dBgS_AcchCir();
-};
-
 struct dBgS_RoofChk {
 	/* 80078FF4 */ dBgS_RoofChk();
 	/* 80079090 */ ~dBgS_RoofChk();
@@ -2637,6 +2630,13 @@ struct dBgS {
 	/* 80075774 */ void MoveBgCrrPos(cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*, bool, bool);
 	/* 80075880 */ void MoveBgTransPos(cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*);
 	/* 80075C6C */ void PushPullCallBack(cBgS_PolyInfo const&, fopAc_ac_c*, s16, dBgW_Base::PushPullLabel);
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F40 */ void SetWallR(f32);
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 80077414 */ ~dBgS_AcchCir();
 };
 
 struct dBgS_Acch {
@@ -3145,12 +3145,12 @@ struct J3DShape {
 	/* 80315300 */ void loadPreDrawSetting() const;
 };
 
-struct J3DAnmTextureSRTKey {
-	/* 8032B1D4 */ void searchUpdateMaterialID(J3DModelData*);
-};
-
 struct J3DAnmTexPattern {
 	/* 8032B09C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct J3DAnmTextureSRTKey {
+	/* 8032B1D4 */ void searchUpdateMaterialID(J3DModelData*);
 };
 
 struct J3DMaterialTable {
@@ -3197,10 +3197,10 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-struct J2DAnmTevRegKey {
+struct J2DAnmColor {
 };
 
-struct J2DAnmColor {
+struct J2DAnmTevRegKey {
 };
 
 struct J2DPane {
@@ -6461,7 +6461,7 @@ asm static void daAlink_coHitCallback(fopAc_ac_c* param_0, dCcD_GObjInf* param_1
 
 /* ############################################################################################## */
 /* 80450FC0-80450FC4 0004+00 s=1 e=0 z=0  None .sbss      it$36766                                                     */
-static u8 data_80450FC0[4];
+static u8 it[4];
 
 /* 80450FC4-80450FC8 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 struct_80450FC4[4];
@@ -7240,7 +7240,7 @@ SECTION_SDATA2 static u32 lit_25874 = 0xB92AAAAB;
 SECTION_SDATA2 static u32 lit_25916 = 0x43560000;
 
 /* 80452FA8-80452FB0 0008+00 s=1 e=0 z=0  None .sdata2    offsetAngle$25945                                            */
-SECTION_SDATA2 static u8 data_80452FA8[8] = {
+SECTION_SDATA2 static u8 offsetAngle[8] = {
 	0x00, 0x00, 0x80, 0x00, 0x40, 0x00, 0xC0, 0x00,
 };
 
@@ -7328,7 +7328,7 @@ SECTION_SDATA2 static u32 lit_32832 = 0xBC23D70A;
 SECTION_SDATA2 static u32 lit_32833 = 0x4B7FFFFF;
 
 /* 80453020-80453024 0004+00 s=1 e=0 z=0  None .sdata2    grassWhistleIdx$33097                                        */
-SECTION_SDATA2 static u8 data_80453020[4] = {
+SECTION_SDATA2 static u8 grassWhistleIdx[4] = {
 	0x00, 0x03, 0x00, 0x03,
 };
 
@@ -7417,38 +7417,38 @@ SECTION_SDATA2 static u32 lit_40562 = 0x434D0000;
 SECTION_SDATA2 static u32 lit_40716 = 0x42A80000;
 
 /* 80453094-8045309C 0006+02 s=1 e=0 z=0  None .sdata2    effName$40765                                                */
-SECTION_SDATA2 static u8 data_80453094[6 + 2 /* padding */] = {
+SECTION_SDATA2 static u8 effName_40765[6 + 2 /* padding */] = {
 	0x04, 0x07, 0x04, 0x08, 0x04, 0x09,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 8045309C-804530A4 0006+02 s=1 e=0 z=0  None .sdata2    effName0$40950                                               */
-SECTION_SDATA2 static u8 data_8045309C[6 + 2 /* padding */] = {
+SECTION_SDATA2 static u8 effName0[6 + 2 /* padding */] = {
 	0x86, 0x7D, 0x86, 0x7E, 0x86, 0x7F,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 804530A4-804530AC 0006+02 s=1 e=0 z=0  None .sdata2    effName1$40951                                               */
-SECTION_SDATA2 static u8 data_804530A4[6 + 2 /* padding */] = {
+SECTION_SDATA2 static u8 effName1[6 + 2 /* padding */] = {
 	0x89, 0x81, 0x89, 0x82, 0x89, 0x83,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 804530AC-804530B0 0004+00 s=1 e=0 z=0  None .sdata2    effNameNormal$41086                                          */
-SECTION_SDATA2 static u8 data_804530AC[4] = {
+SECTION_SDATA2 static u8 effNameNormal[4] = {
 	0x01, 0x59, 0x01, 0x5A,
 };
 
 /* 804530B0-804530B8 0008+00 s=1 e=0 z=0  None .sdata2    effNameLight$41091                                           */
-SECTION_SDATA2 static u8 data_804530B0[8] = {
+SECTION_SDATA2 static u8 effNameLight[8] = {
 	0x0A, 0x28, 0x0A, 0x29, 0x0A, 0x2A, 0x0A, 0x2B,
 };
 
 /* 804530B8-804530BC 0004+00 s=1 e=0 z=0  None .sdata2    effNameWater$41101                                           */
-SECTION_SDATA2 static u8 data_804530B8[4] = {
+SECTION_SDATA2 static u8 effNameWater[4] = {
 	0x0C, 0x52, 0x0C, 0x53,
 };
 
@@ -7456,55 +7456,55 @@ SECTION_SDATA2 static u8 data_804530B8[4] = {
 SECTION_SDATA2 static u32 lit_41180 = 0x3BB400B4;
 
 /* 804530C0-804530C8 0008+00 s=1 e=0 z=0  None .sdata2    jointID$41285                                                */
-SECTION_SDATA2 static u8 data_804530C0[8] = {
+SECTION_SDATA2 static u8 jointID[8] = {
 	0x00, 0x14, 0x00, 0x13, 0x00, 0x18, 0x00, 0x19,
 };
 
 /* 804530C8-804530D0 0008+00 s=1 e=0 z=0  None .sdata2    effName$41286                                                */
-SECTION_SDATA2 static u8 data_804530C8[8] = {
+SECTION_SDATA2 static u8 effName_41286[8] = {
 	0x88, 0xE1, 0x88, 0xE2, 0x88, 0xE3, 0x88, 0xE4,
 };
 
 /* 804530D0-804530D8 0006+02 s=1 e=0 z=0  None .sdata2    effName$41312                                                */
-SECTION_SDATA2 static u8 data_804530D0[6 + 2 /* padding */] = {
+SECTION_SDATA2 static u8 effName_41312[6 + 2 /* padding */] = {
 	0x0A, 0x58, 0x0A, 0x59, 0x0B, 0x9D,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 804530D8-804530E0 0006+02 s=1 e=0 z=0  None .sdata2    name0$41422                                                  */
-SECTION_SDATA2 static u8 data_804530D8[6 + 2 /* padding */] = {
+SECTION_SDATA2 static u8 name0[6 + 2 /* padding */] = {
 	0x02, 0xA3, 0x83, 0xA2, 0x88, 0x4F,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 804530E0-804530E8 0006+02 s=1 e=0 z=0  None .sdata2    name1$41423                                                  */
-SECTION_SDATA2 static u8 data_804530E0[6 + 2 /* padding */] = {
+SECTION_SDATA2 static u8 name1[6 + 2 /* padding */] = {
 	0x02, 0xA3, 0x83, 0xA3, 0x88, 0x50,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 804530E8-804530F0 0006+02 s=1 e=0 z=0  None .sdata2    effID$41443                                                  */
-SECTION_SDATA2 static u8 data_804530E8[6 + 2 /* padding */] = {
+SECTION_SDATA2 static u8 effID[6 + 2 /* padding */] = {
 	0x02, 0x44, 0x02, 0x45, 0x02, 0x46,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 804530F0-804530F4 0004+00 s=1 e=0 z=0  None .sdata2    normalNameID$41521                                           */
-SECTION_SDATA2 static u8 data_804530F0[4] = {
+SECTION_SDATA2 static u8 normalNameID[4] = {
 	0x83, 0x90, 0x83, 0x91,
 };
 
 /* 804530F4-804530F8 0004+00 s=1 e=0 z=0  None .sdata2    ganonNameID$41522                                            */
-SECTION_SDATA2 static u8 data_804530F4[4] = {
+SECTION_SDATA2 static u8 ganonNameID[4] = {
 	0x8C, 0x2A, 0x8C, 0x2B,
 };
 
 /* 804530F8-80453100 0008+00 s=1 e=0 z=0  None .sdata2    effDataTable$41650                                           */
-SECTION_SDATA2 static u8 data_804530F8[8] = {
+SECTION_SDATA2 static u8 effDataTable[8] = {
 	0x02, 0xA5, 0x02, 0xA6, 0x02, 0xA7, 0x02, 0xA8,
 };
 
@@ -7512,22 +7512,22 @@ SECTION_SDATA2 static u8 data_804530F8[8] = {
 SECTION_SDATA2 static u32 lit_41718 = 0x3F266666;
 
 /* 80453104-8045310C 0008+00 s=1 e=0 z=0  None .sdata2    cutSplashName$41756                                          */
-SECTION_SDATA2 static u8 data_80453104[8] = {
+SECTION_SDATA2 static u8 cutSplashName[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
 /* 8045310C-80453110 0004+00 s=1 e=0 z=0  None .sdata2    effName$42224                                                */
-SECTION_SDATA2 static u8 data_8045310C[4] = {
+SECTION_SDATA2 static u8 effName_42224[4] = {
 	0x88, 0x18, 0x88, 0x19,
 };
 
 /* 80453110-80453114 0004+00 s=1 e=0 z=0  None .sdata2    effName$42309                                                */
-SECTION_SDATA2 static u8 data_80453110[4] = {
+SECTION_SDATA2 static u8 effName_42309[4] = {
 	0x08, 0x14, 0x08, 0x15,
 };
 
 /* 80453114-80453118 0004+00 s=1 e=0 z=0  None .sdata2    effName$42340                                                */
-SECTION_SDATA2 static u8 data_80453114[4] = {
+SECTION_SDATA2 static u8 effName_42340[4] = {
 	0x08, 0x16, 0x08, 0x17,
 };
 
@@ -7571,12 +7571,12 @@ SECTION_SDATA2 static u32 lit_44003 = 0xBEC3EF15;
 SECTION_SDATA2 static u32 lit_44004 = 0xBE31D0D4;
 
 /* 8045314C-80453150 0004+00 s=1 e=0 z=0  None .sdata2    fFootJoint$44785                                             */
-SECTION_SDATA2 static u8 data_8045314C[4] = {
+SECTION_SDATA2 static u8 fFootJoint[4] = {
 	0x00, 0x10, 0x00, 0x15,
 };
 
 /* 80453150-80453154 0004+00 s=1 e=0 z=0  None .sdata2    bFootJoint$44786                                             */
-SECTION_SDATA2 static u8 data_80453150[4] = {
+SECTION_SDATA2 static u8 bFootJoint[4] = {
 	0x00, 0x1C, 0x00, 0x21,
 };
 
@@ -7680,17 +7680,17 @@ SECTION_SDATA2 static u32 lit_52884 = 0x3F733333;
 SECTION_SDATA2 static u32 lit_53012 = 0x42840000;
 
 /* 804531D8-804531E0 0008+00 s=1 e=0 z=0  None .sdata2    snowID$53110                                                 */
-SECTION_SDATA2 static u8 data_804531D8[8] = {
+SECTION_SDATA2 static u8 snowID[8] = {
 	0x88, 0x4D, 0x88, 0x4E, 0x88, 0x51, 0x88, 0x52,
 };
 
 /* 804531E0-804531E8 0008+00 s=1 e=0 z=0  None .sdata2    smokeID$53111                                                */
-SECTION_SDATA2 static u8 data_804531E0[8] = {
+SECTION_SDATA2 static u8 smokeID[8] = {
 	0x83, 0xA0, 0x83, 0xA1, 0x83, 0xA4, 0x83, 0xA5,
 };
 
 /* 804531E8-804531F0 0008+00 s=1 e=0 z=0  None .sdata2    waterColor$53845                                             */
-SECTION_SDATA2 static u8 data_804531E8[8] = {
+SECTION_SDATA2 static u8 waterColor[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -9807,67 +9807,67 @@ SECTION_RODATA static u8 const lit_5908[12] = {
 };
 
 /* 80391740-80391754 0014+00 s=1 e=0 z=0  None .rodata    atnNormalType1$6976                                          */
-SECTION_RODATA static u8 const data_80391740[20] = {
+SECTION_RODATA static u8 const atnNormalType1[20] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391754-80391768 0014+00 s=1 e=0 z=0  None .rodata    atnNormalType2$6977                                          */
-SECTION_RODATA static u8 const data_80391754[20] = {
+SECTION_RODATA static u8 const atnNormalType2[20] = {
 	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01,
 	0x00, 0x00, 0x00, 0x01,
 };
 
 /* 80391768-8039177C 0014+00 s=1 e=0 z=0  None .rodata    atnNormalType3$6978                                          */
-SECTION_RODATA static u8 const data_80391768[20] = {
+SECTION_RODATA static u8 const atnNormalType3[20] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 8039177C-80391790 0014+00 s=1 e=0 z=0  None .rodata    atnFinishType$6979                                           */
-SECTION_RODATA static u8 const data_8039177C[20] = {
+SECTION_RODATA static u8 const atnFinishType[20] = {
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x05,
 	0x00, 0x00, 0x00, 0x01,
 };
 
 /* 80391790-803917A4 0014+00 s=1 e=0 z=0  None .rodata    hitType$6980                                                 */
-SECTION_RODATA static u8 const data_80391790[20] = {
+SECTION_RODATA static u8 const hitType[20] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x01,
 };
 
 /* 803917A4-803917B8 0014+00 s=1 e=0 z=0  None .rodata    hitFinishType$6981                                           */
-SECTION_RODATA static u8 const data_803917A4[20] = {
+SECTION_RODATA static u8 const hitFinishType[20] = {
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x05,
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803917B8-803917CC 0014+00 s=1 e=0 z=0  None .rodata    normalType1$6982                                             */
-SECTION_RODATA static u8 const data_803917B8[20] = {
+SECTION_RODATA static u8 const normalType1_6982[20] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 	0x00, 0x00, 0x00, 0x01,
 };
 
 /* 803917CC-803917E0 0014+00 s=1 e=0 z=0  None .rodata    normalType2$6983                                             */
-SECTION_RODATA static u8 const data_803917CC[20] = {
+SECTION_RODATA static u8 const normalType2[20] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01,
 	0x00, 0x00, 0x00, 0x02,
 };
 
 /* 803917E0-803917F4 0014+00 s=1 e=0 z=0  None .rodata    normalType3$6984                                             */
-SECTION_RODATA static u8 const data_803917E0[20] = {
+SECTION_RODATA static u8 const normalType3[20] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 	0x00, 0x00, 0x00, 0x01,
 };
 
 /* 803917F4-80391808 0014+00 s=1 e=0 z=0  None .rodata    finishType$6985                                              */
-SECTION_RODATA static u8 const data_803917F4[20] = {
+SECTION_RODATA static u8 const finishType[20] = {
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x05,
 	0x00, 0x00, 0x00, 0x01,
 };
 
 /* 80391808-80391858 0050+00 s=1 e=0 z=0  None .rodata    cutParamTable$7312                                           */
-SECTION_RODATA static u8 const data_80391808[80] = {
+SECTION_RODATA static u8 const cutParamTable_7312[80] = {
 	0x00, 0x00, 0x00, 0x62, 0x00, 0x00, 0x00, 0x6F, 0x01, 0x01, 0x00, 0x00, 0x40, 0xC0, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x63, 0x00, 0x00, 0x00, 0x6F, 0x04, 0x01, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x64, 0x00, 0x00, 0x00, 0x6F, 0x03, 0x01, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00,
@@ -9876,7 +9876,7 @@ SECTION_RODATA static u8 const data_80391808[80] = {
 };
 
 /* 80391858-803918B8 0060+00 s=1 e=0 z=0  None .rodata    cutParamTable$7455                                           */
-SECTION_RODATA static u8 const data_80391858[96] = {
+SECTION_RODATA static u8 const cutParamTable_7455[96] = {
 	0x00, 0x00, 0x00, 0x67, 0x00, 0x00, 0x00, 0x6F, 0x06, 0x01, 0x64, 0x64, 0x40, 0xA0, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x68, 0x00, 0x00, 0x00, 0x6F, 0x07, 0x01, 0x64, 0x64, 0x41, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x69, 0x00, 0x00, 0x00, 0x6F, 0x20, 0x0E, 0x64, 0x64, 0x41, 0x20, 0x00, 0x00,
@@ -9886,22 +9886,22 @@ SECTION_RODATA static u8 const data_80391858[96] = {
 };
 
 /* 803918B8-803918C4 000C+00 s=1 e=0 z=0  None .rodata    localCenter$11047                                            */
-SECTION_RODATA static u8 const data_803918B8[12] = {
+SECTION_RODATA static u8 const localCenter[12] = {
 	0xC1, 0x70, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x41, 0x90, 0x00, 0x00,
 };
 
 /* 803918C4-803918D0 000C+00 s=1 e=0 z=0  None .rodata    localPos$11819                                               */
-SECTION_RODATA static u8 const data_803918C4[12] = {
+SECTION_RODATA static u8 const localPos[12] = {
 	0x40, 0x5C, 0xCC, 0xCD, 0x42, 0x35, 0x47, 0xAE, 0xC0, 0xE0, 0x00, 0x00,
 };
 
 /* 803918D0-803918DC 000C+00 s=1 e=0 z=0  None .rodata    slingLocalPos$12042                                          */
-SECTION_RODATA static u8 const data_803918D0[12] = {
+SECTION_RODATA static u8 const slingLocalPos[12] = {
 	0x41, 0x20, 0x00, 0x00, 0x41, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803918DC-803918E8 000C+00 s=1 e=0 z=0  None .rodata    localSidePos$14270                                           */
-SECTION_RODATA static u8 const data_803918DC[12] = {
+SECTION_RODATA static u8 const localSidePos[12] = {
 	0x40, 0x13, 0x33, 0x33, 0xC1, 0x78, 0x00, 0x00, 0x41, 0x79, 0x99, 0x9A,
 };
 
@@ -9926,42 +9926,42 @@ SECTION_RODATA u8 const m_handRightInSidePos__9daAlink_c[12] = {
 };
 
 /* 80391918-80391924 000C+00 s=1 e=0 z=0  None .rodata    horseLocalLeft$17678                                         */
-SECTION_RODATA static u8 const data_80391918[12] = {
+SECTION_RODATA static u8 const horseLocalLeft[12] = {
 	0x41, 0xA0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391924-80391930 000C+00 s=1 e=0 z=0  None .rodata    horseLocalRight$17679                                        */
-SECTION_RODATA static u8 const data_80391924[12] = {
+SECTION_RODATA static u8 const horseLocalRight[12] = {
 	0xC1, 0xA0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391930-8039193C 000C+00 s=1 e=0 z=0  None .rodata    horseLocalBack$17680                                         */
-SECTION_RODATA static u8 const data_80391930[12] = {
+SECTION_RODATA static u8 const horseLocalBack[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC3, 0x48, 0x00, 0x00,
 };
 
 /* 8039193C-80391948 000C+00 s=1 e=0 z=0  None .rodata    boarLocalLeft$17681                                          */
-SECTION_RODATA static u8 const data_8039193C[12] = {
+SECTION_RODATA static u8 const boarLocalLeft[12] = {
 	0x43, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC1, 0x90, 0x00, 0x00,
 };
 
 /* 80391948-80391954 000C+00 s=1 e=0 z=0  None .rodata    boarLocalRight$17682                                         */
-SECTION_RODATA static u8 const data_80391948[12] = {
+SECTION_RODATA static u8 const boarLocalRight[12] = {
 	0xC3, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC1, 0x90, 0x00, 0x00,
 };
 
 /* 80391954-80391960 000C+00 s=1 e=0 z=0  None .rodata    localHorseRun$18095                                          */
-SECTION_RODATA static u8 const data_80391954[12] = {
+SECTION_RODATA static u8 const localHorseRun_18095[12] = {
 	0x41, 0x70, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC2, 0x34, 0x00, 0x00,
 };
 
 /* 80391960-8039196C 000C+00 s=1 e=0 z=0  None .rodata    localHorseRun$18103                                          */
-SECTION_RODATA static u8 const data_80391960[12] = {
+SECTION_RODATA static u8 const localHorseRun_18103[12] = {
 	0x41, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC1, 0x20, 0x00, 0x00,
 };
 
 /* 8039196C-80391978 000C+00 s=1 e=0 z=0  None .rodata    localOffset$18237                                            */
-SECTION_RODATA static u8 const data_8039196C[12] = {
+SECTION_RODATA static u8 const localOffset_18237[12] = {
 	0xC1, 0xF0, 0x00, 0x00, 0xC1, 0x90, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -9971,61 +9971,61 @@ SECTION_RODATA static u8 const lit_18938[12] = {
 };
 
 /* 80391984-80391990 000C+00 s=1 e=0 z=0  None .rodata    boarRideOffset$19147                                         */
-SECTION_RODATA static u8 const data_80391984[12] = {
+SECTION_RODATA static u8 const boarRideOffset[12] = {
 	0xBF, 0x5E, 0xB8, 0x52, 0x40, 0x55, 0x1E, 0xB8, 0xC1, 0xBE, 0x28, 0xF6,
 };
 
 /* 80391990-8039199C 000C+00 s=1 e=0 z=0  None .rodata    leftOffset$19386                                             */
-SECTION_RODATA static u8 const data_80391990[12] = {
+SECTION_RODATA static u8 const leftOffset[12] = {
 	0x42, 0x96, 0x00, 0x00, 0x42, 0xCC, 0x00, 0x00, 0x40, 0xC7, 0x2B, 0x02,
 };
 
 /* 8039199C-803919A8 000C+00 s=1 e=0 z=0  None .rodata    rightOffset$19387                                            */
-SECTION_RODATA static u8 const data_8039199C[12] = {
+SECTION_RODATA static u8 const rightOffset[12] = {
 	0xC2, 0x96, 0x00, 0x00, 0x42, 0xCC, 0x00, 0x00, 0x40, 0xC7, 0x12, 0x6F,
 };
 
 /* 803919A8-803919D8 0030+00 s=1 e=0 z=0  None .rodata    cutParamTable$19765                                          */
-SECTION_RODATA static u8 const data_803919A8[48] = {
+SECTION_RODATA static u8 const cutParamTable_19765[48] = {
 	0x00, 0x00, 0x00, 0x20, 0x00, 0x91, 0x01, 0x0C, 0x00, 0x0E, 0x22, 0x00, 0x00, 0x00, 0x00, 0x21,
 	0x00, 0x92, 0x01, 0x0D, 0x00, 0x13, 0x23, 0x00, 0x00, 0x00, 0x00, 0x22, 0x00, 0x93, 0x01, 0x0E,
 	0x00, 0x13, 0x2A, 0x00, 0x00, 0x00, 0x00, 0x23, 0x00, 0x94, 0x01, 0x0F, 0x00, 0x00, 0x2A, 0x00,
 };
 
 /* 803919D8-803919E4 000A+02 s=1 e=0 z=0  None .rodata    anmIdx$19945                                                 */
-SECTION_RODATA static u8 const data_803919D8[10 + 2 /* padding */] = {
+SECTION_RODATA static u8 const anmIdx[10 + 2 /* padding */] = {
 	0x00, 0xBA, 0x00, 0xB8, 0x00, 0xBB, 0x00, 0xBC, 0x00, 0xB9,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 803919E4-803919F0 000C+00 s=1 e=0 z=0  None .rodata    localPaddleTop$20605                                         */
-SECTION_RODATA static u8 const data_803919E4[12] = {
+SECTION_RODATA static u8 const localPaddleTop[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC3, 0x1E, 0x00, 0x00,
 };
 
 /* 803919F0-803919FC 000C+00 s=1 e=0 z=0  None .rodata    underOffsetY$23302                                           */
-SECTION_RODATA static u8 const data_803919F0[12] = {
+SECTION_RODATA static u8 const underOffsetY[12] = {
 	0x41, 0x70, 0x00, 0x00, 0x42, 0xB4, 0x00, 0x00, 0x43, 0x16, 0x00, 0x00,
 };
 
 /* 803919FC-80391A08 000C+00 s=1 e=0 z=0  None .rodata    hsVec$28749                                                  */
-SECTION_RODATA static u8 const data_803919FC[12] = {
+SECTION_RODATA static u8 const hsVec[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00,
 };
 
 /* 80391A08-80391A14 000C+00 s=1 e=0 z=0  None .rodata    hookRoot$29726                                               */
-SECTION_RODATA static u8 const data_80391A08[12] = {
+SECTION_RODATA static u8 const hookRoot[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x41, 0xBC, 0x00, 0x00,
 };
 
 /* 80391A14-80391A20 000C+00 s=1 e=0 z=0  None .rodata    bottleTop$32160                                              */
-SECTION_RODATA static u8 const data_80391A14[12] = {
+SECTION_RODATA static u8 const bottleTop[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x41, 0xC8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391A20-80391A2C 000C+00 s=1 e=0 z=0  None .rodata    kandelaarOffset$32655                                        */
-SECTION_RODATA static u8 const data_80391A20[12] = {
+SECTION_RODATA static u8 const kandelaarOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0xC1, 0x88, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -10035,12 +10035,12 @@ SECTION_RODATA static u8 const lit_33690[12] = {
 };
 
 /* 80391A38-80391A44 000C+00 s=1 e=0 z=0  None .rodata    ironBallPosVec$34212                                         */
-SECTION_RODATA static u8 const data_80391A38[12] = {
+SECTION_RODATA static u8 const ironBallPosVec[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC2, 0x28, 0x00, 0x00,
 };
 
 /* 80391A44-80391A50 000C+00 s=1 e=0 z=0  None .rodata    handCenterOffsetVec$34213                                    */
-SECTION_RODATA static u8 const data_80391A44[12] = {
+SECTION_RODATA static u8 const handCenterOffsetVec[12] = {
 	0x40, 0x00, 0x00, 0x00, 0xC1, 0xC8, 0x00, 0x00, 0x41, 0x48, 0x00, 0x00,
 };
 
@@ -10050,7 +10050,7 @@ SECTION_RODATA static u8 const lit_34968[12] = {
 };
 
 /* 80391A5C-80391B5C 00FF+01 s=1 e=0 z=0  None .rodata    getSeType$37390                                              */
-SECTION_RODATA static u8 const data_80391A5C[255 + 1 /* padding */] = {
+SECTION_RODATA static u8 const getSeType[255 + 1 /* padding */] = {
 	0x08, 0x03, 0x03, 0x03, 0x03, 0x03, 0x02, 0x02, 0x08, 0x08, 0x03, 0x03, 0x03, 0x03, 0x03, 0x03,
 	0x03, 0x03, 0x03, 0x08, 0x08, 0x08, 0x03, 0x03, 0x03, 0x03, 0x03, 0x03, 0x03, 0x03, 0x02, 0x08,
 	0x02, 0x02, 0x00, 0x01, 0x01, 0x02, 0x01, 0x08, 0x01, 0x08, 0x01, 0x01, 0x01, 0x08, 0x08, 0x08,
@@ -10072,137 +10072,137 @@ SECTION_RODATA static u8 const data_80391A5C[255 + 1 /* padding */] = {
 };
 
 /* 80391B5C-80391B7C 0020+00 s=1 e=0 z=0  None .rodata    bgmLabel$37391                                               */
-SECTION_RODATA static u8 const data_80391B5C[32] = {
+SECTION_RODATA static u8 const bgmLabel[32] = {
 	0x01, 0x00, 0x00, 0x1C, 0x01, 0x00, 0x00, 0x0A, 0x01, 0x00, 0x00, 0x0B, 0x01, 0x00, 0x00, 0x14,
 	0x01, 0x00, 0x00, 0x81, 0x01, 0x00, 0x00, 0x82, 0x01, 0x00, 0x00, 0x83, 0x01, 0x00, 0x00, 0xA0,
 };
 
 /* 80391B7C-80391B8C 0010+00 s=1 e=0 z=0  None .rodata    rupeeCount$37407                                             */
-SECTION_RODATA static u8 const data_80391B7C[16] = {
+SECTION_RODATA static u8 const rupeeCount[16] = {
 	0x00, 0x00, 0x00, 0x14, 0x00, 0x00, 0x00, 0x32, 0x00, 0x00, 0x00, 0x64, 0x00, 0x00, 0x00, 0xC8,
 };
 
 /* 80391B8C-80391BA0 0014+00 s=1 e=0 z=0  None .rodata    heartPieceMessage$37580                                      */
-SECTION_RODATA static u8 const data_80391B8C[20] = {
+SECTION_RODATA static u8 const heartPieceMessage[20] = {
 	0x00, 0x00, 0x00, 0x86, 0x00, 0x00, 0x00, 0x9C, 0x00, 0x00, 0x00, 0x9D, 0x00, 0x00, 0x00, 0x9E,
 	0x00, 0x00, 0x00, 0x9F,
 };
 
 /* 80391BA0-80391BAC 000C+00 s=1 e=0 z=0  None .rodata    effName$39419                                                */
-SECTION_RODATA static u8 const data_80391BA0[12] = {
+SECTION_RODATA static u8 const effName_39419[12] = {
 	0x09, 0xF5, 0x09, 0xF6, 0x09, 0xF7, 0x09, 0xF8, 0x09, 0xF9, 0x09, 0xFA,
 };
 
 /* 80391BAC-80391BB8 000C+00 s=1 e=0 z=0  None .rodata    smokeParticleScale$39643                                     */
-SECTION_RODATA static u8 const data_80391BAC[12] = {
+SECTION_RODATA static u8 const smokeParticleScale_39643[12] = {
 	0x3F, 0x33, 0x33, 0x33, 0x3F, 0x33, 0x33, 0x33, 0x3F, 0x33, 0x33, 0x33,
 };
 
 /* 80391BB8-80391BC4 000C+00 s=1 e=0 z=0  None .rodata    wolfWaterCenterScale$39644                                   */
-SECTION_RODATA static u8 const data_80391BB8[12] = {
+SECTION_RODATA static u8 const wolfWaterCenterScale[12] = {
 	0x3F, 0x99, 0x99, 0x9A, 0x3F, 0x99, 0x99, 0x9A, 0x3F, 0x99, 0x99, 0x9A,
 };
 
 /* 80391BC4-80391BD0 000C+00 s=1 e=0 z=0  None .rodata    waterScale$39762                                             */
-SECTION_RODATA static u8 const data_80391BC4[12] = {
+SECTION_RODATA static u8 const waterScale_39762[12] = {
 	0x3F, 0x14, 0x7A, 0xE1, 0x3F, 0x14, 0x7A, 0xE1, 0x3F, 0x14, 0x7A, 0xE1,
 };
 
 /* 80391BD0-80391BDC 000C+00 s=1 e=0 z=0  None .rodata    waterCenterScale$39763                                       */
-SECTION_RODATA static u8 const data_80391BD0[12] = {
+SECTION_RODATA static u8 const waterCenterScale[12] = {
 	0x3F, 0x99, 0x99, 0x9A, 0x3F, 0x99, 0x99, 0x9A, 0x3F, 0x99, 0x99, 0x9A,
 };
 
 /* 80391BDC-80391BE8 000C+00 s=1 e=0 z=0  None .rodata    waterSmokeScale$39764                                        */
-SECTION_RODATA static u8 const data_80391BDC[12] = {
+SECTION_RODATA static u8 const waterSmokeScale[12] = {
 	0x3F, 0x33, 0x33, 0x33, 0x3F, 0x33, 0x33, 0x33, 0x3F, 0x33, 0x33, 0x33,
 };
 
 /* 80391BE8-80391BF4 000C+00 s=1 e=0 z=0  None .rodata    smokeParticleScale$39891                                     */
-SECTION_RODATA static u8 const data_80391BE8[12] = {
+SECTION_RODATA static u8 const smokeParticleScale_39891[12] = {
 	0x3F, 0x4C, 0xCC, 0xCD, 0x3F, 0x4C, 0xCC, 0xCD, 0x3F, 0x4C, 0xCC, 0xCD,
 };
 
 /* 80391BF4-80391C00 000C+00 s=1 e=0 z=0  None .rodata    waterScale$39892                                             */
-SECTION_RODATA static u8 const data_80391BF4[12] = {
+SECTION_RODATA static u8 const waterScale_39892[12] = {
 	0x3F, 0xA0, 0x00, 0x00, 0x3F, 0xA0, 0x00, 0x00, 0x3F, 0xA0, 0x00, 0x00,
 };
 
 /* 80391C00-80391C0C 000C+00 s=1 e=0 z=0  None .rodata    wolfSmokeScale$39893                                         */
-SECTION_RODATA static u8 const data_80391C00[12] = {
+SECTION_RODATA static u8 const wolfSmokeScale[12] = {
 	0x3F, 0x33, 0x33, 0x33, 0x3F, 0x33, 0x33, 0x33, 0x3F, 0x33, 0x33, 0x33,
 };
 
 /* 80391C0C-80391C18 000C+00 s=1 e=0 z=0  None .rodata    shikoScale$40012                                             */
-SECTION_RODATA static u8 const data_80391C0C[12] = {
+SECTION_RODATA static u8 const shikoScale[12] = {
 	0x3F, 0x33, 0x33, 0x33, 0x3F, 0x33, 0x33, 0x33, 0x3F, 0x33, 0x33, 0x33,
 };
 
 /* 80391C18-80391C24 000C+00 s=1 e=0 z=0  None .rodata    pushedSlip$40013                                             */
-SECTION_RODATA static u8 const data_80391C18[12] = {
+SECTION_RODATA static u8 const pushedSlip[12] = {
 	0x3F, 0x4C, 0xCC, 0xCD, 0x3F, 0x4C, 0xCC, 0xCD, 0x3F, 0x4C, 0xCC, 0xCD,
 };
 
 /* 80391C24-80391C30 000C+00 s=1 e=0 z=0  None .rodata    loseScale$40014                                              */
-SECTION_RODATA static u8 const data_80391C24[12] = {
+SECTION_RODATA static u8 const loseScale[12] = {
 	0x3F, 0x8C, 0xCC, 0xCD, 0x3F, 0x8C, 0xCC, 0xCD, 0x3F, 0x8C, 0xCC, 0xCD,
 };
 
 /* 80391C30-80391C3C 000C+00 s=1 e=0 z=0  None .rodata    releaeScale$40567                                            */
-SECTION_RODATA static u8 const data_80391C30[12] = {
+SECTION_RODATA static u8 const releaeScale[12] = {
 	0x3F, 0x4C, 0xCC, 0xCD, 0x3F, 0x4C, 0xCC, 0xCD, 0x3F, 0x4C, 0xCC, 0xCD,
 };
 
 /* 80391C3C-80391C48 000C+00 s=1 e=0 z=0  None .rodata    lightAParticleScale$40829                                    */
-SECTION_RODATA static u8 const data_80391C3C[12] = {
+SECTION_RODATA static u8 const lightAParticleScale[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x95, 0xE3, 0x54, 0x3F, 0x80, 0x00, 0x00,
 };
 
 /* 80391C48-80391C54 000C+00 s=1 e=0 z=0  None .rodata    lightALocalTrans$40830                                       */
-SECTION_RODATA static u8 const data_80391C48[12] = {
+SECTION_RODATA static u8 const lightALocalTrans[12] = {
 	0x42, 0x88, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391C54-80391C60 000C+00 s=1 e=0 z=0  None .rodata    localOffset$40952                                            */
-SECTION_RODATA static u8 const data_80391C54[12] = {
+SECTION_RODATA static u8 const localOffset_40952[12] = {
 	0x00, 0x00, 0x00, 0x00, 0xC1, 0x20, 0x00, 0x00, 0xC1, 0x20, 0x00, 0x00,
 };
 
 /* 80391C60-80391C6C 000C+00 s=1 e=0 z=0  None .rodata    localScale0$40953                                            */
-SECTION_RODATA static u8 const data_80391C60[12] = {
+SECTION_RODATA static u8 const localScale0[12] = {
 	0x3F, 0x33, 0x33, 0x33, 0x3F, 0x59, 0x99, 0x9A, 0x3F, 0xC0, 0x00, 0x00,
 };
 
 /* 80391C6C-80391C78 000C+00 s=1 e=0 z=0  None .rodata    localScale1$40954                                            */
-SECTION_RODATA static u8 const data_80391C6C[12] = {
+SECTION_RODATA static u8 const localScale1[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x59, 0x99, 0x9A, 0x3F, 0xC0, 0x00, 0x00,
 };
 
 /* 80391C78-80391C84 000C+00 s=1 e=0 z=0  None .rodata    waterEffScale$41082                                          */
-SECTION_RODATA static u8 const data_80391C78[12] = {
+SECTION_RODATA static u8 const waterEffScale[12] = {
 	0x3F, 0xC0, 0x00, 0x00, 0x3F, 0xC0, 0x00, 0x00, 0x3F, 0xC0, 0x00, 0x00,
 };
 
 /* 80391C84-80391C9C 0018+00 s=1 e=0 z=0  None .rodata    leftTransNormal$41090                                        */
-SECTION_RODATA static u8 const data_80391C84[24] = {
+SECTION_RODATA static u8 const leftTransNormal[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x41, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391C9C-80391CCC 0030+00 s=1 e=0 z=0  None .rodata    leftTransLight$41095                                         */
-SECTION_RODATA static u8 const data_80391C9C[48] = {
+SECTION_RODATA static u8 const leftTransLight[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x0C, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391CCC-80391CD8 000C+00 s=1 e=0 z=0  None .rodata    effNameLarge$41096                                           */
-SECTION_RODATA static u8 const data_80391CCC[12] = {
+SECTION_RODATA static u8 const effNameLarge[12] = {
 	0x0B, 0xA5, 0x0B, 0xA6, 0x0B, 0xA7, 0x0B, 0xA8, 0x0B, 0xA9, 0x0B, 0xAA,
 };
 
 /* 80391CD8-80391D20 0048+00 s=1 e=0 z=0  None .rodata    leftTransLarge$41100                                         */
-SECTION_RODATA static u8 const data_80391CD8[72] = {
+SECTION_RODATA static u8 const leftTransLarge[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x42, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x34, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -10211,48 +10211,48 @@ SECTION_RODATA static u8 const data_80391CD8[72] = {
 };
 
 /* 80391D20-80391D38 0018+00 s=1 e=0 z=0  None .rodata    leftTransWater$41105                                         */
-SECTION_RODATA static u8 const data_80391D20[24] = {
+SECTION_RODATA static u8 const leftTransWater[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391D38-80391D44 000C+00 s=1 e=0 z=0  None .rodata    effName$41208                                                */
-SECTION_RODATA static u8 const data_80391D38[12] = {
+SECTION_RODATA static u8 const effName_41208[12] = {
 	0x09, 0xD0, 0x09, 0xD1, 0x09, 0xD2, 0x09, 0xD3, 0x09, 0xD4, 0x09, 0xD5,
 };
 
 /* 80391D44-80391D54 0010+00 s=1 e=0 z=0  None .rodata    swordUpColor$41733                                           */
-SECTION_RODATA static u8 const data_80391D44[16] = {
+SECTION_RODATA static u8 const swordUpColor[16] = {
 	0x00, 0x0D, 0x00, 0x0A, 0x00, 0x02, 0x00, 0xFF, 0x00, 0x1C, 0x00, 0x10, 0x00, 0x04, 0x00, 0xFF,
 };
 
 /* 80391D54-80391D60 000C+00 s=1 e=0 z=0  None .rodata    swordCutSplashScale$41755                                    */
-SECTION_RODATA static u8 const data_80391D54[12] = {
+SECTION_RODATA static u8 const swordCutSplashScale[12] = {
 	0x3F, 0x19, 0x99, 0x9A, 0x3F, 0x19, 0x99, 0x9A, 0x3F, 0x19, 0x99, 0x9A,
 };
 
 /* 80391D60-80391D6C 000C+00 s=1 e=0 z=0  None .rodata    fairyScale$41951                                             */
-SECTION_RODATA static u8 const data_80391D60[12] = {
+SECTION_RODATA static u8 const fairyScale[12] = {
 	0x3F, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00,
 };
 
 /* 80391D6C-80391D78 000C+00 s=1 e=0 z=0  None .rodata    chuchuLocalOffset$41952                                      */
-SECTION_RODATA static u8 const data_80391D6C[12] = {
+SECTION_RODATA static u8 const chuchuLocalOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x41, 0x70, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391D78-80391D84 000C+00 s=1 e=0 z=0  None .rodata    chuchuScale$41953                                            */
-SECTION_RODATA static u8 const data_80391D78[12] = {
+SECTION_RODATA static u8 const chuchuScale[12] = {
 	0x3F, 0x4C, 0xCC, 0xCD, 0x3F, 0x4C, 0xCC, 0xCD, 0x3F, 0x4C, 0xCC, 0xCD,
 };
 
 /* 80391D84-80391D94 0010+00 s=1 e=0 z=0  None .rodata    effJoint$42070                                               */
-SECTION_RODATA static u8 const data_80391D84[16] = {
+SECTION_RODATA static u8 const effJoint[16] = {
 	0x00, 0x07, 0x00, 0x0C, 0x00, 0x10, 0x00, 0x22, 0x00, 0x03, 0x00, 0x03, 0x00, 0x03, 0x00, 0x03,
 };
 
 /* 80391D94-80391DF4 0060+00 s=1 e=0 z=0  None .rodata    effOffset$42071                                              */
-SECTION_RODATA static u8 const data_80391D94[96] = {
+SECTION_RODATA static u8 const effOffset[96] = {
 	0xC0, 0xA0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x41, 0x70, 0x00, 0x00,
 	0x40, 0x40, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00, 0x40, 0x80, 0x00, 0x00, 0xC1, 0x20, 0x00, 0x00,
 	0x41, 0x70, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC0, 0xA0, 0x00, 0x00, 0xC0, 0xE0, 0x00, 0x00,
@@ -10262,77 +10262,77 @@ SECTION_RODATA static u8 const data_80391D94[96] = {
 };
 
 /* 80391DF4-80391E00 000C+00 s=1 e=0 z=0  None .rodata    effScale$42225                                               */
-SECTION_RODATA static u8 const data_80391DF4[12] = {
+SECTION_RODATA static u8 const effScale[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0xE6, 0x66, 0x66, 0x3F, 0x80, 0x00, 0x00,
 };
 
 /* 80391E00-80391E0C 000C+00 s=1 e=0 z=0  None .rodata    wolfEffScale$42226                                           */
-SECTION_RODATA static u8 const data_80391E00[12] = {
+SECTION_RODATA static u8 const wolfEffScale[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0xC0, 0x00, 0x00,
 };
 
 /* 80391E0C-80391E18 000C+00 s=1 e=0 z=0  None .rodata    offsetPos$42227                                              */
-SECTION_RODATA static u8 const data_80391E0C[12] = {
+SECTION_RODATA static u8 const offsetPos[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC1, 0x20, 0x00, 0x00,
 };
 
 /* 80391E18-80391E24 000C+00 s=1 e=0 z=0  None .rodata    localFootOffset$45107                                        */
-SECTION_RODATA static u8 const data_80391E18[12] = {
+SECTION_RODATA static u8 const localFootOffset[12] = {
 	0x40, 0xC0, 0x00, 0x00, 0xC0, 0xA0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391E24-80391E30 000C+00 s=1 e=0 z=0  None .rodata    frontOffset$45186                                            */
-SECTION_RODATA static u8 const data_80391E24[12] = {
+SECTION_RODATA static u8 const frontOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
 };
 
 /* 80391E30-80391E3C 000C+00 s=1 e=0 z=0  None .rodata    wolfChainBaseOffset$45513                                    */
-SECTION_RODATA static u8 const data_80391E30[12] = {
+SECTION_RODATA static u8 const wolfChainBaseOffset[12] = {
 	0x41, 0xB0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC1, 0x40, 0x00, 0x00,
 };
 
 /* 80391E3C-80391E48 000C+00 s=1 e=0 z=0  None .rodata    wolfChainVec$45514                                           */
-SECTION_RODATA static u8 const data_80391E3C[12] = {
+SECTION_RODATA static u8 const wolfChainVec[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC1, 0x10, 0x00, 0x00,
 };
 
 /* 80391E48-80391E78 0030+00 s=1 e=0 z=0  None .rodata    label$45760                                                  */
-SECTION_RODATA static u8 const data_80391E48[48] = {
+SECTION_RODATA static u8 const label[48] = {
 	0x00, 0x01, 0x00, 0x30, 0x00, 0x01, 0x00, 0x2E, 0x00, 0x01, 0x00, 0x31, 0x00, 0x01, 0x00, 0x2F,
 	0x00, 0x01, 0x00, 0x3D, 0x00, 0x01, 0x00, 0x33, 0x00, 0x01, 0x00, 0xB1, 0x00, 0x01, 0x00, 0xB5,
 	0x00, 0x01, 0x00, 0xB6, 0x00, 0x01, 0x00, 0xB7, 0x00, 0x01, 0x00, 0xB9, 0x00, 0x01, 0x00, 0x3F,
 };
 
 /* 80391E78-80391E8C 0014+00 s=1 e=0 z=0  None .rodata    normalType0$50859                                            */
-SECTION_RODATA static u8 const data_80391E78[20] = {
+SECTION_RODATA static u8 const normalType0[20] = {
 	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391E8C-80391EA0 0014+00 s=1 e=0 z=0  None .rodata    normalType1$50860                                            */
-SECTION_RODATA static u8 const data_80391E8C[20] = {
+SECTION_RODATA static u8 const normalType1_50860[20] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03,
 	0x00, 0x00, 0x00, 0x03,
 };
 
 /* 80391EA0-80391EC0 0020+00 s=1 e=0 z=0  None .rodata    dataTabl$51470                                               */
-SECTION_RODATA static u8 const data_80391EA0[32] = {
+SECTION_RODATA static u8 const dataTabl[32] = {
 	0x00, 0x00, 0x00, 0x40, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x2E, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x43, 0x2F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x41, 0x2D, 0x00, 0x00, 0x00,
 };
 
 /* 80391EC0-80391ECC 000C+00 s=1 e=0 z=0  None .rodata    arm1Vec$56040                                                */
-SECTION_RODATA static u8 const data_80391EC0[12] = {
+SECTION_RODATA static u8 const arm1Vec[12] = {
 	0x41, 0xE8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391ECC-80391ED8 000C+00 s=1 e=0 z=0  None .rodata    arm2Vec$56041                                                */
-SECTION_RODATA static u8 const data_80391ECC[12] = {
+SECTION_RODATA static u8 const arm2Vec[12] = {
 	0x41, 0xD4, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80453228-8045322C 0004+00 s=1 e=0 z=0  None .sdata2    armJointTable$56027                                          */
-SECTION_SDATA2 static u8 data_80453228[4] = {
+SECTION_SDATA2 static u8 armJointTable[4] = {
 	0x00, 0x07, 0x00, 0x0C,
 };
 
@@ -10349,22 +10349,22 @@ asm void daAlink_c::setArmMatrix() {
 
 /* ############################################################################################## */
 /* 80391ED8-80391EE4 000C+00 s=1 e=0 z=0  None .rodata    leg1Vec$56150                                                */
-SECTION_RODATA static u8 const data_80391ED8[12] = {
+SECTION_RODATA static u8 const leg1Vec[12] = {
 	0x41, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391EE4-80391EF0 000C+00 s=1 e=0 z=0  None .rodata    leg2Vec$56151                                                */
-SECTION_RODATA static u8 const data_80391EE4[12] = {
+SECTION_RODATA static u8 const leg2Vec[12] = {
 	0x42, 0x1D, 0x74, 0x39, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391EF0-80391EFC 000C+00 s=1 e=0 z=0  None .rodata    footVec$56152                                                */
-SECTION_RODATA static u8 const data_80391EF0[12] = {
+SECTION_RODATA static u8 const footVec[12] = {
 	0x41, 0x62, 0xE1, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 8045322C-80453230 0004+00 s=1 e=0 z=0  None .sdata2    footJointTable$56137                                         */
-SECTION_SDATA2 static u8 data_8045322C[4] = {
+SECTION_SDATA2 static u8 footJointTable[4] = {
 	0x00, 0x12, 0x00, 0x17,
 };
 
@@ -10403,22 +10403,22 @@ asm void daAlink_c::setLegAngle(f32 param_0, daAlink_footData_c* param_1, s16* p
 
 /* ############################################################################################## */
 /* 80391EFC-80391F08 000C+00 s=1 e=0 z=0  None .rodata    localLeftFootOffset$56542                                    */
-SECTION_RODATA static u8 const data_80391EFC[12] = {
+SECTION_RODATA static u8 const localLeftFootOffset[12] = {
 	0xC0, 0x40, 0x00, 0x00, 0x41, 0x50, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391F08-80391F14 000C+00 s=1 e=0 z=0  None .rodata    localRightFootOffset$56543                                   */
-SECTION_RODATA static u8 const data_80391F08[12] = {
+SECTION_RODATA static u8 const localRightFootOffset[12] = {
 	0xC0, 0x40, 0x00, 0x00, 0xC1, 0x50, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391F14-80391F20 000C+00 s=1 e=0 z=0  None .rodata    localLeftToeOffset$56544                                     */
-SECTION_RODATA static u8 const data_80391F14[12] = {
+SECTION_RODATA static u8 const localLeftToeOffset[12] = {
 	0x41, 0x20, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391F20-80391F2C 000C+00 s=1 e=0 z=0  None .rodata    localRightToeOffset$56545                                    */
-SECTION_RODATA static u8 const data_80391F20[12] = {
+SECTION_RODATA static u8 const localRightToeOffset[12] = {
 	0x41, 0x20, 0x00, 0x00, 0xC0, 0xA0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -10441,7 +10441,7 @@ asm void daAlink_c::footBgCheck() {
 
 /* ############################################################################################## */
 /* 80391F2C-80391F44 0018+00 s=1 e=0 z=0  None .rodata    localHandPos$56752                                           */
-SECTION_RODATA static u8 const data_80391F2C[24] = {
+SECTION_RODATA static u8 const localHandPos[24] = {
 	0x41, 0xB0, 0xC5, 0x60, 0x40, 0xAF, 0xC1, 0x20, 0x00, 0x00, 0x00, 0x00, 0xC1, 0xAF, 0x33, 0x80,
 	0x40, 0xB0, 0xCF, 0xDF, 0x00, 0x00, 0x00, 0x00,
 };
@@ -10547,52 +10547,52 @@ asm void daAlink_c::initDemoBck(mDoExt_bckAnm** param_0, char const* param_1) {
 
 /* ############################################################################################## */
 /* 80391F44-80391F50 000C+00 s=1 e=0 z=0  None .rodata    localHeadCenter$59872                                        */
-SECTION_RODATA static u8 const data_80391F44[12] = {
+SECTION_RODATA static u8 const localHeadCenter[12] = {
 	0x00, 0x00, 0x00, 0x00, 0xC1, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391F50-80391F5C 000C+00 s=1 e=0 z=0  None .rodata    localEye$59873                                               */
-SECTION_RODATA static u8 const data_80391F50[12] = {
+SECTION_RODATA static u8 const localEye[12] = {
 	0x41, 0x40, 0x00, 0x00, 0xC1, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391F5C-80391F68 000C+00 s=1 e=0 z=0  None .rodata    localHeadTop$59874                                           */
-SECTION_RODATA static u8 const data_80391F5C[12] = {
+SECTION_RODATA static u8 const localHeadTop[12] = {
 	0x00, 0x00, 0x00, 0x00, 0xC1, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391F68-80391F74 000C+00 s=1 e=0 z=0  None .rodata    wlLocalHeadCenter$59875                                      */
-SECTION_RODATA static u8 const data_80391F68[12] = {
+SECTION_RODATA static u8 const wlLocalHeadCenter[12] = {
 	0x00, 0x00, 0x00, 0x00, 0xC0, 0xA0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391F74-80391F80 000C+00 s=1 e=0 z=0  None .rodata    wlLocalEye$59876                                             */
-SECTION_RODATA static u8 const data_80391F74[12] = {
+SECTION_RODATA static u8 const wlLocalEye[12] = {
 	0x41, 0xF0, 0x00, 0x00, 0xC0, 0xA0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391F80-80391F8C 000C+00 s=1 e=0 z=0  None .rodata    wlLocalHeadTop$59877                                         */
-SECTION_RODATA static u8 const data_80391F80[12] = {
+SECTION_RODATA static u8 const wlLocalHeadTop[12] = {
 	0x00, 0x00, 0x00, 0x00, 0xC1, 0xA0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391F8C-80391F98 000C+00 s=1 e=0 z=0  None .rodata    localEyeFromRoot$59878                                       */
-SECTION_RODATA static u8 const data_80391F8C[12] = {
+SECTION_RODATA static u8 const localEyeFromRoot[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0x5F, 0x00, 0x00, 0x41, 0x70, 0x00, 0x00,
 };
 
 /* 80391F98-80391FA4 000C+00 s=1 e=0 z=0  None .rodata    boardLocalEyeFromRoot$59879                                  */
-SECTION_RODATA static u8 const data_80391F98[12] = {
+SECTION_RODATA static u8 const boardLocalEyeFromRoot[12] = {
 	0x41, 0x18, 0x00, 0x00, 0x42, 0x3C, 0x00, 0x00, 0x41, 0xC4, 0x00, 0x00,
 };
 
 /* 80391FA4-80391FB0 000C+00 s=1 e=0 z=0  None .rodata    horseLocalEyeFromRoot$59880                                  */
-SECTION_RODATA static u8 const data_80391FA4[12] = {
+SECTION_RODATA static u8 const horseLocalEyeFromRoot[12] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x42, 0x5C, 0x00, 0x00, 0x41, 0xCC, 0x00, 0x00,
 };
 
 /* 80391FB0-80391FBC 000C+00 s=1 e=0 z=0  None .rodata    canoeLocalEyeFromRoot$59881                                  */
-SECTION_RODATA static u8 const data_80391FB0[12] = {
+SECTION_RODATA static u8 const canoeLocalEyeFromRoot[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0x5C, 0x00, 0x00, 0x41, 0xC8, 0x00, 0x00,
 };
 
@@ -10602,37 +10602,37 @@ SECTION_RODATA u8 const data_80391FBC[12] = {
 };
 
 /* 80391FC8-80391FD4 000C+00 s=1 e=0 z=0  None .rodata    normalOffset$60101                                           */
-SECTION_RODATA static u8 const data_80391FC8[12] = {
+SECTION_RODATA static u8 const normalOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x43, 0x16, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391FD4-80391FE0 000C+00 s=1 e=0 z=0  None .rodata    crawlOffset$60141                                            */
-SECTION_RODATA static u8 const data_80391FD4[12] = {
+SECTION_RODATA static u8 const crawlOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00, 0x41, 0xF0, 0x00, 0x00,
 };
 
 /* 80391FE0-80391FEC 000C+00 s=1 e=0 z=0  None .rodata    crouchOffset$60142                                           */
-SECTION_RODATA static u8 const data_80391FE0[12] = {
+SECTION_RODATA static u8 const crouchOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0xBE, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391FEC-80391FF8 000C+00 s=1 e=0 z=0  None .rodata    swimOffset$60143                                             */
-SECTION_RODATA static u8 const data_80391FEC[12] = {
+SECTION_RODATA static u8 const swimOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x41, 0x60, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80391FF8-80392004 000C+00 s=1 e=0 z=0  None .rodata    swordMoveLocal0$60438                                        */
-SECTION_RODATA static u8 const data_80391FF8[12] = {
+SECTION_RODATA static u8 const swordMoveLocal0[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xBF, 0x80, 0x00, 0x00,
 };
 
 /* 80392004-80392010 000C+00 s=1 e=0 z=0  None .rodata    swordMoveLocal1$60439                                        */
-SECTION_RODATA static u8 const data_80392004[12] = {
+SECTION_RODATA static u8 const swordMoveLocal1[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
 /* 80392010-8039201C 000C+00 s=1 e=0 z=0  None .rodata    copyRodTop$60447                                             */
-SECTION_RODATA static u8 const data_80392010[12] = {
+SECTION_RODATA static u8 const copyRodTop[12] = {
 	0x41, 0xDC, 0x00, 0x00, 0xC0, 0xA0, 0x00, 0x00, 0xC1, 0x48, 0x00, 0x00,
 };
 
@@ -10642,12 +10642,12 @@ SECTION_RODATA static u8 const lit_61047[12] = {
 };
 
 /* 80392028-80392034 000C+00 s=1 e=0 z=0  None .rodata    bottleTopPos$61387                                           */
-SECTION_RODATA static u8 const data_80392028[12] = {
+SECTION_RODATA static u8 const bottleTopPos[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x41, 0xA0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80392034-80392040 000C+00 s=1 e=0 z=0  None .rodata    localHead$61779                                              */
-SECTION_RODATA static u8 const data_80392034[12] = {
+SECTION_RODATA static u8 const localHead[12] = {
 	0x41, 0x70, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -10682,7 +10682,7 @@ SECTION_RODATA static u8 const lit_74748[12] = {
 };
 
 /* 80392088-80392094 000C+00 s=1 e=0 z=0  None .rodata    localBoomCatchPos$74910                                      */
-SECTION_RODATA static u8 const data_80392088[12] = {
+SECTION_RODATA static u8 const localBoomCatchPos[12] = {
 	0x41, 0x95, 0x99, 0x9A, 0x43, 0x12, 0x4C, 0xCD, 0x42, 0x8A, 0x66, 0x66,
 };
 
@@ -14427,32 +14427,32 @@ SECTION_DATA static void* l_wolfJntColData[54] = {
 };
 
 /* 803B2C40-803B2C50 000D+03 s=1 e=0 z=0  None .data      defaultPortal$39238                                          */
-SECTION_DATA static u8 data_803B2C40[13 + 3 /* padding */] = {
+SECTION_DATA static u8 defaultPortal[13 + 3 /* padding */] = {
 	0x50, 0x4F, 0x54, 0x41, 0x4C, 0x5F, 0x57, 0x41, 0x52, 0x50, 0x49, 0x4E, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 803B2C50-803B2C64 0014+00 s=1 e=0 z=0  None .data      kBridgePortal$39239                                          */
-SECTION_DATA static u8 data_803B2C50[20] = {
+SECTION_DATA static u8 kBridgePortal[20] = {
 	0x50, 0x4F, 0x52, 0x54, 0x41, 0x4C, 0x5F, 0x57, 0x41, 0x52, 0x50, 0x5F, 0x4B, 0x42, 0x52, 0x49,
 	0x44, 0x47, 0x45, 0x00,
 };
 
 /* 803B2C64-803B2C78 0014+00 s=1 e=0 z=0  None .data      oBridgePortal$39240                                          */
-SECTION_DATA static u8 data_803B2C64[20] = {
+SECTION_DATA static u8 oBridgePortal[20] = {
 	0x50, 0x4F, 0x52, 0x54, 0x41, 0x4C, 0x5F, 0x57, 0x41, 0x52, 0x50, 0x5F, 0x4F, 0x42, 0x52, 0x49,
 	0x44, 0x47, 0x45, 0x00,
 };
 
 /* 803B2C78-803B2C8C 0014+00 s=1 e=0 z=0  None .data      volcBomPortal$39241                                          */
-SECTION_DATA static u8 data_803B2C78[20] = {
+SECTION_DATA static u8 volcBomPortal[20] = {
 	0x50, 0x4F, 0x52, 0x54, 0x41, 0x4C, 0x5F, 0x57, 0x41, 0x52, 0x50, 0x5F, 0x42, 0x49, 0x47, 0x56,
 	0x4F, 0x4C, 0x43, 0x00,
 };
 
 /* 803B2C8C-803B2CA4 0016+02 s=1 e=0 z=0  None .data      cannonPortal$39242                                           */
-SECTION_DATA static u8 data_803B2C8C[22 + 2 /* padding */] = {
+SECTION_DATA static u8 cannonPortal[22 + 2 /* padding */] = {
 	0x53, 0x4B, 0x59, 0x5F, 0x43, 0x41, 0x4E, 0x4E, 0x4F, 0x4E, 0x5F, 0x57, 0x41, 0x52, 0x50, 0x5F,
 	0x53, 0x54, 0x41, 0x52, 0x54, 0x00,
 	/* padding */
@@ -14511,42 +14511,42 @@ SECTION_DATA static u8 m_fEffParamProc__9daAlink_c[72] = {
 };
 
 /* 803B2D34-803B2D40 000C+00 s=1 e=0 z=0  None .data      leftRotNormal$41087                                          */
-SECTION_DATA static u8 data_803B2D34[12] = {
+SECTION_DATA static u8 leftRotNormal[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803B2D40-803B2D58 0018+00 s=1 e=0 z=0  None .data      leftRotLight$41092                                           */
-SECTION_DATA static u8 data_803B2D40[24] = {
+SECTION_DATA static u8 leftRotLight[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803B2D58-803B2D7C 0024+00 s=1 e=0 z=0  None .data      leftRotLarge$41097                                           */
-SECTION_DATA static u8 data_803B2D58[36] = {
+SECTION_DATA static u8 leftRotLarge[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803B2D7C-803B2D88 000C+00 s=1 e=0 z=0  None .data      leftRotWater$41102                                           */
-SECTION_DATA static u8 data_803B2D7C[12] = {
+SECTION_DATA static u8 leftRotWater[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803B2D88-803B2D94 000C+00 s=1 e=0 z=0  None .data      rodTopOffset$61388                                           */
-SECTION_DATA static u8 data_803B2D88[12] = {
+SECTION_DATA static u8 rodTopOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803B2D94-803B2DA0 000C+00 s=1 e=0 z=0  None .data      bodyBrkName$69118                                            */
-SECTION_DATA static void* data_803B2D94[3] = {
+SECTION_DATA static void* bodyBrkName[3] = {
 	(void*)(((char*)&d_a_d_a_alink__stringBase0)+0x494),
 	(void*)(((char*)&d_a_d_a_alink__stringBase0)+0x4AB),
 	(void*)(((char*)&d_a_d_a_alink__stringBase0)+0x4C2),
 };
 
 /* 803B2DA0-803B2DAC 000C+00 s=1 e=0 z=0  None .data      headBrkName$69119                                            */
-SECTION_DATA static void* data_803B2DA0[3] = {
+SECTION_DATA static void* headBrkName[3] = {
 	(void*)(((char*)&d_a_d_a_alink__stringBase0)+0x4D9),
 	(void*)(((char*)&d_a_d_a_alink__stringBase0)+0x4F0),
 	(void*)(((char*)&d_a_d_a_alink__stringBase0)+0x507),
@@ -15204,7 +15204,7 @@ asm void daAlink_c::setStartProcInit() {
 
 /* ############################################################################################## */
 /* 80450FCC-80450FD0 0004+00 s=1 e=0 z=0  None .sbss      bgWaitFlg$58404                                              */
-static u8 data_80450FCC[4];
+static u8 bgWaitFlg[4];
 
 /* 80450FD0-80450FD8 0008+00 s=2 e=0 z=0  None .sbss      None                                                         */
 static u8 struct_80450FD0[8];
@@ -15737,7 +15737,7 @@ asm void daAlink_c::setFrameCtrl(daPy_frameCtrl_c* param_0, u8 param_1, s16 para
 
 /* ############################################################################################## */
 /* 80453278-80453280 0008+00 s=1 e=0 z=0  None .sdata2    kandelaarAnm$62207                                           */
-SECTION_SDATA2 static u8 data_80453278[8] = {
+SECTION_SDATA2 static u8 kandelaarAnm[8] = {
 	0x02, 0x6A, 0x02, 0x68, 0x02, 0x66, 0x02, 0x64,
 };
 
@@ -17196,7 +17196,7 @@ asm void daAlink_c::orderPeep() {
 
 /* ############################################################################################## */
 /* 804532B0-804532B4 0004+00 s=1 e=0 z=0  None .sdata2    itemTalkType$67468                                           */
-SECTION_SDATA2 static u8 data_804532B0[4] = {
+SECTION_SDATA2 static u8 itemTalkType[4] = {
 	0x00, 0x06, 0x00, 0x07,
 };
 
@@ -19342,7 +19342,7 @@ asm void daAlink_c::modelDraw(J3DModel* param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 8045333C-80453344 0008+00 s=1 e=0 z=0  None .sdata2    notColor0$76211                                              */
-SECTION_SDATA2 static u8 data_8045333C[8] = {
+SECTION_SDATA2 static u8 notColor0[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF,
 };
 
@@ -24460,25 +24460,25 @@ static f32 l_wolfRopeBaseAnime[3];
 static u8 lit_14255[12];
 
 /* 8042564C-80425658 000C+00 s=1 e=0 z=0  None .bss       grabCarryOffset0$14254                                       */
-static u8 data_8042564C[12];
+static u8 grabCarryOffset0[12];
 
 /* 80425658-80425664 000C+00 s=1 e=0 z=0  None .bss       @14259                                                       */
 static u8 lit_14259[12];
 
 /* 80425664-80425670 000C+00 s=1 e=0 z=0  None .bss       grabCarryOffset1$14258                                       */
-static u8 data_80425664[12];
+static u8 grabCarryOffset1[12];
 
 /* 80425670-8042567C 000C+00 s=1 e=0 z=0  None .bss       @14263                                                       */
 static u8 lit_14263[12];
 
 /* 8042567C-80425688 000C+00 s=1 e=0 z=0  None .bss       grabCarryOffset2$14262                                       */
-static u8 data_8042567C[12];
+static u8 grabCarryOffset2[12];
 
 /* 80425688-80425694 000C+00 s=1 e=0 z=0  None .bss       @14267                                                       */
 static u8 lit_14267[12];
 
 /* 80425694-804256A0 000C+00 s=1 e=0 z=0  None .bss       grabCarryOffset3$14266                                       */
-static u8 data_80425694[12];
+static u8 grabCarryOffset3[12];
 
 /* 800E3F50-800E4BD4 0C84+00 s=1 e=0 z=0  None .text      setGrabItemPos__9daAlink_cFv                                 */
 #pragma push
@@ -30787,7 +30787,7 @@ asm static void daAlink_searchHawk(fopAc_ac_c* param_0, void* param_1) {
 
 /* ############################################################################################## */
 /* 8045069C-804506A4 0008+00 s=1 e=0 z=0  None .sdata     grassWhistleArcName$33096                                    */
-SECTION_SDATA static void* data_8045069C[2] = {
+SECTION_SDATA static void* grassWhistleArcName[2] = {
 	(void*)(((char*)&d_a_d_a_alink__stringBase0)+0xAD),
 	(void*)(((char*)&d_a_d_a_alink__stringBase0)+0xB4),
 };
@@ -31625,7 +31625,7 @@ asm void daAlink_c::setStickAnmData(J3DAnmBase* param_0, int param_1, int param_
 
 /* ############################################################################################## */
 /* 804256B8-804256CC 0014+00 s=1 e=0 z=0  None .bss       dummy$36763                                                  */
-static u8 data_804256B8[20];
+static u8 dummy[20];
 
 /* 80119464-801195C0 015C+00 s=1 e=0 z=0  None .text      daAlink_c_getDemoIDData__FP13dDemo_actor_cPiPiPiPUsPiPi      */
 #pragma push
@@ -33285,10 +33285,10 @@ asm void daAlink_blur_c::traceBlur(cXyz const* param_0, cXyz const* param_1, s16
 
 /* ############################################################################################## */
 /* 804256CC-804256EC 0020+00 s=1 e=0 z=0  None .bss       texObj$42524                                                 */
-static u8 data_804256CC[32];
+static u8 texObj[32];
 
 /* 804506A4-804506A8 0004+00 s=1 e=0 z=0  None .sdata     nColor0$42525                                                */
-SECTION_SDATA static u8 data_804506A4[4] = {
+SECTION_SDATA static u8 nColor0[4] = {
 	0xFF, 0xFF, 0xFF, 0x14,
 };
 

@@ -114,16 +114,16 @@ asm void JASBank::noteOn(JASBank const* param_0, int param_1, u8 param_2, u8 par
 
 /* ############################################################################################## */
 /* 8039B190-8039B19C 000C+00 s=1 e=0 z=0  None .rodata    OSC_RELEASE_TABLE$260                                        */
-SECTION_RODATA static u8 const data_8039B190[12] = {
+SECTION_RODATA static u8 const OSC_RELEASE_TABLE[12] = {
 	0x00, 0x01, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x0F, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 8039B19C-8039B1B8 0018+04 s=1 e=0 z=0  None .rodata    OSC_ENV$261                                                  */
-SECTION_RODATA static void* const data_8039B19C[6 + 1 /* padding */] = {
+SECTION_RODATA static void* const OSC_ENV[6 + 1 /* padding */] = {
 	(void*)NULL,
 	(void*)0x3F800000,
 	(void*)NULL,
-	(void*)&data_8039B190,
+	(void*)&OSC_RELEASE_TABLE,
 	(void*)0x3F800000,
 	(void*)NULL,
 	/* padding */

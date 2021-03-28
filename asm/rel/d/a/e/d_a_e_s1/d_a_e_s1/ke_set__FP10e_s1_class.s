@@ -63,8 +63,8 @@ lbl_8077E6C4:
 /* 8077E700  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8077E704  38 63 07 68 */	addi r3, r3, calc_mtx@l
 /* 8077E708  80 63 00 00 */	lwz r3, 0(r3)
-/* 8077E70C  3C 80 80 78 */	lis r4, data_80781108@ha
-/* 8077E710  38 84 11 08 */	addi r4, r4, data_80781108@l
+/* 8077E70C  3C 80 80 78 */	lis r4, ke_za@ha
+/* 8077E710  38 84 11 08 */	addi r4, r4, ke_za@l
 /* 8077E714  7C 04 D2 AE */	lhax r0, r4, r26
 /* 8077E718  1C 00 00 05 */	mulli r0, r0, 5
 /* 8077E71C  7C 04 07 34 */	extsh r4, r0
@@ -86,8 +86,8 @@ lbl_8077E758:
 /* 8077E758  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8077E75C  38 63 07 68 */	addi r3, r3, calc_mtx@l
 /* 8077E760  80 63 00 00 */	lwz r3, 0(r3)
-/* 8077E764  3C 80 80 78 */	lis r4, data_80781108@ha
-/* 8077E768  38 84 11 08 */	addi r4, r4, data_80781108@l
+/* 8077E764  3C 80 80 78 */	lis r4, ke_za@ha
+/* 8077E768  38 84 11 08 */	addi r4, r4, ke_za@l
 /* 8077E76C  7C 04 D2 AE */	lhax r0, r4, r26
 /* 8077E770  1C 80 00 05 */	mulli r4, r0, 5
 /* 8077E774  3C 84 00 01 */	addis r4, r4, 1

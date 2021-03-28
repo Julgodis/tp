@@ -161,8 +161,8 @@ lbl_801B44C0:
 /* 801B452C  3B A0 00 00 */	li r29, 0
 /* 801B4530  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 801B4534  3B 63 EB C8 */	addi r27, r3, g_drawHIO@l
-/* 801B4538  3C 60 80 39 */	lis r3, data_803950D0@ha
-/* 801B453C  3B 83 50 D0 */	addi r28, r3, data_803950D0@l
+/* 801B4538  3C 60 80 39 */	lis r3, kaz_n@ha
+/* 801B453C  3B 83 50 D0 */	addi r28, r3, kaz_n@l
 lbl_801B4540:
 /* 801B4540  80 7E 00 18 */	lwz r3, 0x18(r30)
 /* 801B4544  7C 9C EA 14 */	add r4, r28, r29

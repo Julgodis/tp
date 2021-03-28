@@ -157,8 +157,8 @@ lbl_80D35F14:
 /* 80D35F30  7F C6 F3 78 */	mr r6, r30
 /* 80D35F34  4B 34 D9 2C */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80D35F38  38 7E 06 30 */	addi r3, r30, 0x630
-/* 80D35F3C  3C 80 80 D3 */	lis r4, data_80D3612C@ha
-/* 80D35F40  38 84 61 2C */	addi r4, r4, data_80D3612C@l
+/* 80D35F3C  3C 80 80 D3 */	lis r4, cc_cyl_src@ha
+/* 80D35F40  38 84 61 2C */	addi r4, r4, cc_cyl_src@l
 /* 80D35F44  4B 34 E9 70 */	b Set__8dCcD_CylFRC11dCcD_SrcCyl
 /* 80D35F48  38 1E 05 F4 */	addi r0, r30, 0x5f4
 /* 80D35F4C  90 1E 06 74 */	stw r0, 0x674(r30)

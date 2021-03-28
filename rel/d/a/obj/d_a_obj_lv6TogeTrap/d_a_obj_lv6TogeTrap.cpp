@@ -73,6 +73,9 @@ struct daLv6TogeTrap_HIO_c {
 	/* 80C7C504 */ ~daLv6TogeTrap_HIO_c();
 };
 
+struct J3DModelData {
+};
+
 struct Vec {
 };
 
@@ -83,9 +86,6 @@ struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -103,10 +103,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -689,7 +689,7 @@ SECTION_DATA static void* lit_4051[3] = {
 };
 
 /* 80C7C8D0-80C7C978 00A8+00 s=1 e=0 z=0  None .data      mode_proc$4037                                               */
-SECTION_DATA static u8 data_80C7C8D0[168] = {
+SECTION_DATA static u8 mode_proc[168] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

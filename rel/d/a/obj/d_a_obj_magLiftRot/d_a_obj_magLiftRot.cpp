@@ -23,10 +23,10 @@ struct mDoHIO_entry_c {
 	/* 80C8E9E0 */ ~mDoHIO_entry_c();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -74,13 +74,13 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -385,19 +385,19 @@ SECTION_DATA static void* lit_3858[3] = {
 };
 
 /* 80C8FBE0-80C8FC04 0024+00 s=1 e=0 z=0  None .data      mode_proc$3855                                               */
-SECTION_DATA static u8 data_80C8FBE0[36] = {
+SECTION_DATA static u8 mode_proc[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80C8FC04-80C8FC10 000C+00 s=1 e=0 z=0  None .data      selLabel$3897                                                */
-SECTION_DATA static u8 data_80C8FC04[12] = {
+SECTION_DATA static u8 selLabel_3897[12] = {
 	0x00, 0x08, 0x01, 0x2F, 0x00, 0x08, 0x01, 0x31, 0x00, 0x08, 0x01, 0x33,
 };
 
 /* 80C8FC10-80C8FC1C 000C+00 s=1 e=0 z=0  None .data      selLabel$3963                                                */
-SECTION_DATA static u8 data_80C8FC10[12] = {
+SECTION_DATA static u8 selLabel_3963[12] = {
 	0x00, 0x08, 0x01, 0x30, 0x00, 0x08, 0x01, 0x32, 0x00, 0x08, 0x01, 0x34,
 };
 

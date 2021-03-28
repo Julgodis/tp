@@ -104,8 +104,8 @@ lbl_8066E918:
 /* 8066E9A0  7F A6 EB 78 */	mr r6, r29
 /* 8066E9A4  4B A1 4E BC */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 8066E9A8  38 7D 09 10 */	addi r3, r29, 0x910
-/* 8066E9AC  3C 80 80 67 */	lis r4, data_8066F18C@ha
-/* 8066E9B0  38 84 F1 8C */	addi r4, r4, data_8066F18C@l
+/* 8066E9AC  3C 80 80 67 */	lis r4, cc_sph_src@ha
+/* 8066E9B0  38 84 F1 8C */	addi r4, r4, cc_sph_src@l
 /* 8066E9B4  4B A1 60 80 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 8066E9B8  38 1D 08 D4 */	addi r0, r29, 0x8d4
 /* 8066E9BC  90 1D 09 54 */	stw r0, 0x954(r29)

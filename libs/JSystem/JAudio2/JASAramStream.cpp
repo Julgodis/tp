@@ -492,7 +492,7 @@ static u8 lit_792[12];
 u8 data_80431B34[16 + 4 /* padding */];
 
 /* 80455628-80455630 0004+04 s=1 e=0 z=0  None .sdata2    one$776                                                      */
-SECTION_SDATA2 static u8 data_80455628[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 one[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x01,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,

@@ -5,8 +5,8 @@ lbl_801B8A0C:
 /* 801B8A18  39 61 00 30 */	addi r11, r1, 0x30
 /* 801B8A1C  48 1A 97 A5 */	bl _savegpr_22
 /* 801B8A20  7C 7E 1B 78 */	mr r30, r3
-/* 801B8A24  3C 60 80 39 */	lis r3, data_80395518@ha
-/* 801B8A28  3B E3 55 18 */	addi r31, r3, data_80395518@l
+/* 801B8A24  3C 60 80 39 */	lis r3, cont_at_4145@ha
+/* 801B8A28  3B E3 55 18 */	addi r31, r3, cont_at_4145@l
 /* 801B8A2C  38 60 01 18 */	li r3, 0x118
 /* 801B8A30  48 11 62 1D */	bl __nw__FUl
 /* 801B8A34  7C 60 1B 79 */	or. r0, r3, r3

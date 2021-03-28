@@ -54,10 +54,10 @@ struct dScnKy_env_light_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -364,7 +364,7 @@ SECTION_DATA static u8 data_80650594[64] = {
 };
 
 /* 806505D4-806505DC 0008+00 s=1 e=0 z=0  None .data      magic_effect_id$3667                                         */
-SECTION_DATA static u8 data_806505D4[8] = {
+SECTION_DATA static u8 magic_effect_id_3667[8] = {
 	0x89, 0x0D, 0x89, 0x0E, 0x89, 0x0F, 0x89, 0x10,
 };
 
@@ -387,7 +387,7 @@ SECTION_RODATA static u32 const lit_3753 = 0xBF800000;
 SECTION_RODATA static u32 const lit_3754 = 0x41C80000;
 
 /* 806505DC-806505E4 0008+00 s=1 e=0 z=0  None .data      magic_effect_id$3729                                         */
-SECTION_DATA static u8 data_806505DC[8] = {
+SECTION_DATA static u8 magic_effect_id_3729[8] = {
 	0x88, 0x62, 0x88, 0x63, 0x88, 0x64, 0x88, 0x65,
 };
 

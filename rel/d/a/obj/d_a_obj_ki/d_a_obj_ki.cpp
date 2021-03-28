@@ -32,10 +32,10 @@ struct mDoExt_McaMorfCallBack2_c {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorf {
@@ -214,7 +214,7 @@ SECTION_DATA static u8 ki_bmd[8] = {
 };
 
 /* 80C44B98-80C44BA0 0008+00 s=1 e=0 z=0  None .data      ki_dzb$3829                                                  */
-SECTION_DATA static u8 data_80C44B98[8] = {
+SECTION_DATA static u8 ki_dzb[8] = {
 	0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x0E,
 };
 

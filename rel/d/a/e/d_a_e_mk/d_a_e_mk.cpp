@@ -19,10 +19,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
 struct mDoExt_btpAnm {
@@ -30,19 +30,19 @@ struct mDoExt_btpAnm {
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -125,10 +125,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -723,17 +723,17 @@ SECTION_DATA static void* lit_6244[36] = {
 };
 
 /* 8071C96C-8071C970 0004+00 s=1 e=0 z=0  None .data      bo_eno_1$6320                                                */
-SECTION_DATA static u8 data_8071C96C[4] = {
+SECTION_DATA static u8 bo_eno_1[4] = {
 	0x82, 0x14, 0x82, 0x15,
 };
 
 /* 8071C970-8071C978 0008+00 s=1 e=0 z=0  None .data      bo_eno_0$6330                                                */
-SECTION_DATA static u8 data_8071C970[8] = {
+SECTION_DATA static u8 bo_eno_0[8] = {
 	0x82, 0x11, 0x82, 0x12, 0x82, 0x13, 0x82, 0x0C,
 };
 
 /* 8071C978-8071C9B8 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$6839                                              */
-SECTION_DATA static u8 data_8071C978[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x43, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,

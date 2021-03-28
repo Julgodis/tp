@@ -37,10 +37,10 @@ struct daPy_py_c {
 	/* 80B2F050 */ void getLeftHandPos() const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

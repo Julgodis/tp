@@ -28,8 +28,8 @@ lbl_8094BD68:
 /* 8094BDD0  88 1E 05 F0 */	lbz r0, 0x5f0(r30)
 /* 8094BDD4  7C 00 07 74 */	extsb r0, r0
 /* 8094BDD8  54 00 08 3C */	slwi r0, r0, 1
-/* 8094BDDC  3C C0 80 95 */	lis r6, data_80951350@ha
-/* 8094BDE0  38 C6 13 50 */	addi r6, r6, data_80951350@l
+/* 8094BDDC  3C C0 80 95 */	lis r6, hane_id@ha
+/* 8094BDE0  38 C6 13 50 */	addi r6, r6, hane_id@l
 /* 8094BDE4  7C C6 02 2E */	lhzx r6, r6, r0
 /* 8094BDE8  38 FE 04 D0 */	addi r7, r30, 0x4d0
 /* 8094BDEC  39 00 00 00 */	li r8, 0

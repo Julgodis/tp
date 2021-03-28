@@ -12,16 +12,16 @@ lbl_80236BF8:
 /* 80236C20  7D 89 03 A6 */	mtctr r12
 /* 80236C24  4E 80 04 21 */	bctrl 
 /* 80236C28  8B E3 00 28 */	lbz r31, 0x28(r3)
-/* 80236C2C  3C 60 80 43 */	lis r3, data_8043069C@ha
-/* 80236C30  38 63 06 9C */	addi r3, r3, data_8043069C@l
+/* 80236C2C  3C 60 80 43 */	lis r3, arcName@ha
+/* 80236C30  38 63 06 9C */	addi r3, r3, arcName@l
 /* 80236C34  3C 80 80 3A */	lis r4, d_msg_d_msg_object__stringBase0@ha
 /* 80236C38  38 84 96 60 */	addi r4, r4, d_msg_d_msg_object__stringBase0@l
 /* 80236C3C  38 84 00 6F */	addi r4, r4, 0x6f
 /* 80236C40  7F E5 FB 78 */	mr r5, r31
 /* 80236C44  4C C6 31 82 */	crclr 6
 /* 80236C48  48 12 F8 95 */	bl sprintf
-/* 80236C4C  3C 60 80 43 */	lis r3, data_8043069C@ha
-/* 80236C50  38 63 06 9C */	addi r3, r3, data_8043069C@l
+/* 80236C4C  3C 60 80 43 */	lis r3, arcName@ha
+/* 80236C50  38 63 06 9C */	addi r3, r3, arcName@l
 /* 80236C54  38 80 00 00 */	li r4, 0
 /* 80236C58  38 A0 00 01 */	li r5, 1
 /* 80236C5C  38 C0 00 00 */	li r6, 0

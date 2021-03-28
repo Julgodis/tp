@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct cBgS_PolyInfo {
-};
-
 struct cXyz {
 };
 
-struct csXyz {
+struct cBgS_PolyInfo {
 };
 
 struct dKy_tevstr_c {
+};
+
+struct csXyz {
 };
 
 struct dPa_control_c {

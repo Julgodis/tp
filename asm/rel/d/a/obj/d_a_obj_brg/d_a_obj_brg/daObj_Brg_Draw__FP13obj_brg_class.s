@@ -405,8 +405,8 @@ lbl_80BBD254:
 lbl_80BBD320:
 /* 80BBD320  38 74 00 14 */	addi r3, r20, 0x14
 /* 80BBD324  38 80 00 05 */	li r4, 5
-/* 80BBD328  3C A0 80 BC */	lis r5, data_80BC23A4@ha
-/* 80BBD32C  38 A5 23 A4 */	addi r5, r5, data_80BC23A4@l
+/* 80BBD328  3C A0 80 BC */	lis r5, l_color_4002@ha
+/* 80BBD32C  38 A5 23 A4 */	addi r5, r5, l_color_4002@l
 /* 80BBD330  38 DF 01 0C */	addi r6, r31, 0x10c
 /* 80BBD334  4B 45 6C 7C */	b update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c
 /* 80BBD338  38 74 00 14 */	addi r3, r20, 0x14
@@ -646,8 +646,8 @@ lbl_80BBD694:
 /* 80BBD698  80 83 AE D8 */	lwz r4, -0x5128(r3)
 /* 80BBD69C  38 04 00 02 */	addi r0, r4, 2
 /* 80BBD6A0  54 04 04 3E */	clrlwi r4, r0, 0x10
-/* 80BBD6A4  3C A0 80 BC */	lis r5, data_80BC23A8@ha
-/* 80BBD6A8  38 A5 23 A8 */	addi r5, r5, data_80BC23A8@l
+/* 80BBD6A4  3C A0 80 BC */	lis r5, l_color_4042@ha
+/* 80BBD6A8  38 A5 23 A8 */	addi r5, r5, l_color_4042@l
 /* 80BBD6AC  38 C0 00 00 */	li r6, 0
 /* 80BBD6B0  38 FF 01 0C */	addi r7, r31, 0x10c
 /* 80BBD6B4  38 63 AE 90 */	addi r3, r3, -20848

@@ -77,10 +77,10 @@ struct daObj_Kanban2_HIO_c {
 	/* 80585578 */ ~daObj_Kanban2_HIO_c();
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -881,7 +881,7 @@ SECTION_DATA static void* lit_4286[10] = {
 };
 
 /* 80585B58-80585B60 0008+00 s=1 e=0 z=0  None .data      w_eff_id$4564                                                */
-SECTION_DATA static u8 data_80585B58[8] = {
+SECTION_DATA static u8 w_eff_id[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
@@ -918,7 +918,7 @@ SECTION_DATA static void* lit_5150[15] = {
 };
 
 /* 80585BC0-80585BCC 000C+00 s=1 e=0 z=0  None .data      kn2_speed_rate$5184                                          */
-SECTION_DATA static u8 data_80585BC0[12] = {
+SECTION_DATA static u8 kn2_speed_rate[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0xC0, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00,
 };
 
@@ -1259,7 +1259,7 @@ static u8 l_HIO[12];
 static u8 lit_4561[12 + 4 /* padding */];
 
 /* 80585CE0-80585CEC 000C+00 s=1 e=0 z=0  None .bss       sc$4560                                                      */
-static u8 data_80585CE0[12];
+static u8 sc[12];
 
 /* 80582AFC-80582C40 0144+00 s=2 e=0 z=0  None .text      setWaterEffect__15daObj_Kanban2_cFv                          */
 #pragma push

@@ -14,8 +14,8 @@ lbl_80577E24:
 /* 80577E54  7C 9E 23 78 */	mr r30, r4
 /* 80577E58  FF A0 08 90 */	fmr f29, f1
 /* 80577E5C  FF C0 10 90 */	fmr f30, f2
-/* 80577E60  3C 60 80 58 */	lis r3, data_80578A88@ha
-/* 80577E64  3B 83 8A 88 */	addi r28, r3, data_80578A88@l
+/* 80577E60  3C 60 80 58 */	lis r3, ccCylSrc@ha
+/* 80577E64  3B 83 8A 88 */	addi r28, r3, ccCylSrc@l
 /* 80577E68  80 1D 05 A4 */	lwz r0, 0x5a4(r29)
 /* 80577E6C  2C 00 00 02 */	cmpwi r0, 2
 /* 80577E70  40 82 01 40 */	bne lbl_80577FB0

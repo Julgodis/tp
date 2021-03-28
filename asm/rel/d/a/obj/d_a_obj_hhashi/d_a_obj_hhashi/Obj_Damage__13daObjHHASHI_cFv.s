@@ -5,8 +5,8 @@ lbl_805801B0:
 /* 805801BC  39 61 00 40 */	addi r11, r1, 0x40
 /* 805801C0  4B DE 20 18 */	b _savegpr_28
 /* 805801C4  7C 7D 1B 78 */	mr r29, r3
-/* 805801C8  3C 60 80 58 */	lis r3, data_805814AC@ha
-/* 805801CC  3B E3 14 AC */	addi r31, r3, data_805814AC@l
+/* 805801C8  3C 60 80 58 */	lis r3, ccCylSrc@ha
+/* 805801CC  3B E3 14 AC */	addi r31, r3, ccCylSrc@l
 /* 805801D0  A8 1D 0F 46 */	lha r0, 0xf46(r29)
 /* 805801D4  2C 00 00 00 */	cmpwi r0, 0
 /* 805801D8  40 82 01 68 */	bne lbl_80580340

@@ -155,7 +155,7 @@ asm JUTVideo::~JUTVideo() {
 static u8 data_80451544[4];
 
 /* 80451548-8045154C 0004+00 s=1 e=0 z=0  None .sbss      frameBuffer$2222                                             */
-static u8 data_80451548[4];
+static u8 frameBuffer[4];
 
 /* 8045154C-80451550 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_8045154C[4];

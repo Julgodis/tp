@@ -60,10 +60,10 @@ struct daObj_Kago_Param_c {
 	/* 80C33C14 */ ~daObj_Kago_Param_c();
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -449,7 +449,7 @@ SECTION_RODATA u8 const l_ccDObjData[48] = {
 };
 
 /* 80C33CDC-80C33CF0 0014+00 s=1 e=0 z=0  None .rodata    heapSize$3870                                                */
-SECTION_RODATA static u8 const data_80C33CDC[20] = {
+SECTION_RODATA static u8 const heapSize[20] = {
 	0x00, 0x00, 0x08, 0x20, 0x00, 0x00, 0x08, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x20,
 	0x00, 0x00, 0x00, 0x00,
 };
@@ -620,7 +620,7 @@ SECTION_DATA static u8 l_ccDCyl[68] = {
 };
 
 /* 80C33E1C-80C33E24 0008+00 s=1 e=0 z=0  None .data      emttrId$4731                                                 */
-SECTION_DATA static u8 data_80C33E1C[8] = {
+SECTION_DATA static u8 emttrId[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
@@ -1015,10 +1015,10 @@ static u8 l_HIO[4];
 static u8 lit_4686[12 + 4 /* padding */];
 
 /* 80C33F60-80C33F6C 000C+00 s=1 e=0 z=0  None .bss       pos$4685                                                     */
-static u8 data_80C33F60[12];
+static u8 pos[12];
 
 /* 80C33F6C-80C33F70 0002+02 s=1 e=0 z=0  None .bss       angle$4689                                                   */
-static u8 data_80C33F6C[2 + 2 /* padding */];
+static u8 angle[2 + 2 /* padding */];
 
 /* 80C337B0-80C338D0 0120+00 s=1 e=0 z=0  None .text      setGoalPosAndAngle__12daObj_Kago_cFv                         */
 #pragma push

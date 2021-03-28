@@ -22,10 +22,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -51,14 +51,14 @@ struct mDoExt_McaMorfCallBack2_c {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct Vec {
+struct J3DModelData {
+	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
-	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+struct Vec {
 };
 
 struct mDoExt_McaMorf {
@@ -103,11 +103,11 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 struct dPa_control_c {
@@ -544,32 +544,32 @@ asm static void daObj_Tp_Delete(obj_tp_class* param_0) {
 
 /* ############################################################################################## */
 /* 80D1EEE0-80D1EEE8 0008+00 s=1 e=0 z=0  None .data      bmd$4283                                                     */
-SECTION_DATA static u8 data_80D1EEE0[8] = {
+SECTION_DATA static u8 bmd[8] = {
 	0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x12,
 };
 
 /* 80D1EEE8-80D1EEF0 0008+00 s=1 e=0 z=0  None .data      brk$4284                                                     */
-SECTION_DATA static u8 data_80D1EEE8[8] = {
+SECTION_DATA static u8 brk[8] = {
 	0x00, 0x00, 0x00, 0x17, 0x00, 0x00, 0x00, 0x18,
 };
 
 /* 80D1EEF0-80D1EEF8 0008+00 s=1 e=0 z=0  None .data      eff_bmd$4296                                                 */
-SECTION_DATA static u8 data_80D1EEF0[8] = {
+SECTION_DATA static u8 eff_bmd[8] = {
 	0x00, 0x00, 0x00, 0x0F, 0x00, 0x00, 0x00, 0x10,
 };
 
 /* 80D1EEF8-80D1EF00 0008+00 s=1 e=0 z=0  None .data      eff_btk$4297                                                 */
-SECTION_DATA static u8 data_80D1EEF8[8] = {
+SECTION_DATA static u8 eff_btk[8] = {
 	0x00, 0x00, 0x00, 0x1B, 0x00, 0x00, 0x00, 0x1C,
 };
 
 /* 80D1EF00-80D1EF08 0008+00 s=1 e=0 z=0  None .data      eff_brk$4298                                                 */
-SECTION_DATA static u8 data_80D1EF00[8] = {
+SECTION_DATA static u8 eff_brk[8] = {
 	0x00, 0x00, 0x00, 0x15, 0x00, 0x00, 0x00, 0x16,
 };
 
 /* 80D1EF08-80D1EF4C 0044+00 s=1 e=0 z=0  None .data      cc_cyl_src$4468                                              */
-SECTION_DATA static u8 data_80D1EF08[68] = {
+SECTION_DATA static u8 cc_cyl_src[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFA, 0xFD, 0xBF, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x09, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00,

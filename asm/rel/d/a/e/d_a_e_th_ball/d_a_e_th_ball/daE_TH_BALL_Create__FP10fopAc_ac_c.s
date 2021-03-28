@@ -56,14 +56,14 @@ lbl_807B79B8:
 /* 807B79F8  7F C6 F3 78 */	mr r6, r30
 /* 807B79FC  4B 8C BE 64 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 807B7A00  38 7E 18 1C */	addi r3, r30, 0x181c
-/* 807B7A04  3C 80 80 7B */	lis r4, data_807B7FD0@ha
-/* 807B7A08  38 84 7F D0 */	addi r4, r4, data_807B7FD0@l
+/* 807B7A04  3C 80 80 7B */	lis r4, cc_sph_src@ha
+/* 807B7A08  38 84 7F D0 */	addi r4, r4, cc_sph_src@l
 /* 807B7A0C  4B 8C D0 28 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 807B7A10  38 1E 17 E0 */	addi r0, r30, 0x17e0
 /* 807B7A14  90 1E 18 60 */	stw r0, 0x1860(r30)
 /* 807B7A18  38 7E 19 54 */	addi r3, r30, 0x1954
-/* 807B7A1C  3C 80 80 7C */	lis r4, data_807B8010@ha
-/* 807B7A20  38 84 80 10 */	addi r4, r4, data_807B8010@l
+/* 807B7A1C  3C 80 80 7C */	lis r4, at_sph_src@ha
+/* 807B7A20  38 84 80 10 */	addi r4, r4, at_sph_src@l
 /* 807B7A24  4B 8C D0 10 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 807B7A28  38 1E 17 E0 */	addi r0, r30, 0x17e0
 /* 807B7A2C  90 1E 19 98 */	stw r0, 0x1998(r30)

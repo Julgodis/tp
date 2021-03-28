@@ -16,8 +16,8 @@ lbl_80AAA8A4:
 /* 80AAA8DC  28 00 00 00 */	cmplwi r0, 0
 /* 80AAA8E0  41 82 00 64 */	beq lbl_80AAA944
 /* 80AAA8E4  54 80 18 38 */	slwi r0, r4, 3
-/* 80AAA8E8  3C 80 80 AB */	lis r4, data_80AAD940@ha
-/* 80AAA8EC  38 84 D9 40 */	addi r4, r4, data_80AAD940@l
+/* 80AAA8E8  3C 80 80 AB */	lis r4, flagAnmData@ha
+/* 80AAA8EC  38 84 D9 40 */	addi r4, r4, flagAnmData@l
 /* 80AAA8F0  7C A4 00 2E */	lwzx r5, r4, r0
 /* 80AAA8F4  2C 05 00 00 */	cmpwi r5, 0
 /* 80AAA8F8  40 81 00 24 */	ble lbl_80AAA91C

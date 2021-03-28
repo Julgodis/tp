@@ -70,10 +70,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -595,7 +595,7 @@ SECTION_RODATA static u8 const lit_4800[8] = {
 };
 
 /* 8058AC88-8058ACB8 0030+00 s=1 e=0 z=0  None .rodata    l_tg_offset$4833                                             */
-SECTION_RODATA static u8 const data_8058AC88[48] = {
+SECTION_RODATA static u8 const l_tg_offset[48] = {
 	0xC3, 0x16, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x43, 0x16, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -649,7 +649,7 @@ SECTION_DATA static void* l_arcName[3] = {
 };
 
 /* 8058AD50-8058AD5C 000C+00 s=1 e=0 z=0  None .data      l_evName$4056                                                */
-SECTION_DATA static void* data_8058AD50[3] = {
+SECTION_DATA static void* l_evName[3] = {
 	(void*)(((char*)&struct_8058ACCC)+0xA) /* None */,
 	(void*)NULL,
 	(void*)(((char*)&struct_8058ACCC)+0x1B) /* None */,
@@ -788,7 +788,7 @@ SECTION_DATA static void* lit_4584[3] = {
 };
 
 /* 8058AD80-8058ADA4 0024+00 s=1 e=0 z=0  None .data      l_func$4581                                                  */
-SECTION_DATA static u8 data_8058AD80[36] = {
+SECTION_DATA static u8 l_func_4581[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
@@ -878,7 +878,7 @@ SECTION_DATA static void* lit_4933[3] = {
 };
 
 /* 8058ADC8-8058ADEC 0024+00 s=1 e=0 z=0  None .data      l_func$4930                                                  */
-SECTION_DATA static u8 data_8058ADC8[36] = {
+SECTION_DATA static u8 l_func_4930[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
@@ -908,7 +908,7 @@ asm void daObjKGate_c::demoProc() {
 
 /* ############################################################################################## */
 /* 8058ADEC-8058ADFC 0010+00 s=1 e=0 z=0  None .data      action_table$4986                                            */
-SECTION_DATA static void* data_8058ADEC[4] = {
+SECTION_DATA static void* action_table[4] = {
 	(void*)(((char*)&struct_8058ACCC)+0x3A) /* None */,
 	(void*)(((char*)&struct_8058ACCC)+0x3F) /* None */,
 	(void*)(((char*)&struct_8058ACCC)+0x4A) /* None */,

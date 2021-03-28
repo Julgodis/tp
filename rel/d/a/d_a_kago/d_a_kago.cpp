@@ -36,19 +36,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -76,10 +76,10 @@ struct daObj_Balloon_c {
 	/* 80BA80F4 */ void saveBestScore();
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daKago_c {
@@ -874,19 +874,19 @@ SECTION_DATA static void* lit_7130[7] = {
 };
 
 /* 80854E78-80854E84 000C+00 s=1 e=0 z=0  None .data      kago_wall_hit_id$7718                                        */
-SECTION_DATA static u8 data_80854E78[12] = {
+SECTION_DATA static u8 kago_wall_hit_id[12] = {
 	0x86, 0x58, 0x86, 0xF9, 0x86, 0xFA, 0x86, 0x59, 0x86, 0xFB, 0x86, 0xFC,
 };
 
 /* 80854E84-80854E8C 0006+02 s=1 e=0 z=0  None .data      kago_wave_id$7737                                            */
-SECTION_DATA static u8 data_80854E84[6 + 2 /* padding */] = {
+SECTION_DATA static u8 kago_wave_id_7737[6 + 2 /* padding */] = {
 	0x86, 0x5A, 0x86, 0x5B, 0x86, 0x5C,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80854E8C-80854E90 0004+00 s=1 e=0 z=0  None .data      kago_wave_id$7791                                            */
-SECTION_DATA static u8 data_80854E8C[4] = {
+SECTION_DATA static u8 kago_wave_id_7791[4] = {
 	0x86, 0x5B, 0x86, 0x5C,
 };
 

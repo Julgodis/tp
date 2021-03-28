@@ -32,10 +32,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
 struct mDoExt_btpAnm {
@@ -47,7 +47,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
@@ -55,13 +58,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -199,14 +199,14 @@ struct dRes_control_c {
 struct dPath {
 };
 
+struct dBgS {
+};
+
 struct dBgS_AcchCir {
 	/* 80075EAC */ dBgS_AcchCir();
 	/* 80075F40 */ void SetWallR(f32);
 	/* 80075F58 */ void SetWall(f32, f32);
 	/* 806625B4 */ ~dBgS_AcchCir();
-};
-
-struct dBgS {
 };
 
 struct dBgS_Acch {
@@ -1101,7 +1101,7 @@ static u8 data_806634D4[4];
 static u8 lit_4021[12 + 4 /* padding */];
 
 /* 806634E8-806634F4 000C+00 s=1 e=0 z=0  None .bss       runScale$4020                                                */
-static u8 data_806634E8[12];
+static u8 runScale[12];
 
 /* 80658830-80658A68 0238+00 s=1 e=0 z=0  None .text      setEffect__7daCow_cFv                                        */
 #pragma push
@@ -1389,7 +1389,7 @@ asm void daCow_c::setEnterCow20() {
 
 /* ############################################################################################## */
 /* 80663084-806630AC 0028+00 s=1 e=0 z=0  None .data      cow_number$4349                                              */
-SECTION_DATA static u8 data_80663084[40] = {
+SECTION_DATA static u8 cow_number[40] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03,
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x07,
 	0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x09,
@@ -2563,19 +2563,19 @@ u8 m_search_range[4];
 static u8 lit_7631[12 + 4 /* padding */];
 
 /* 80663514-80663520 000C+00 s=1 e=0 z=0  None .bss       headOfst$7630                                                */
-static u8 data_80663514[12];
+static u8 headOfst[12];
 
 /* 80663520-80663530 000C+04 s=1 e=0 z=0  None .bss       @7635                                                        */
 static u8 lit_7635[12 + 4 /* padding */];
 
 /* 80663530-8066353C 000C+00 s=1 e=0 z=0  None .bss       backBornOfst$7634                                            */
-static u8 data_80663530[12];
+static u8 backBornOfst[12];
 
 /* 8066353C-8066354C 000C+04 s=1 e=0 z=0  None .bss       @7639                                                        */
 static u8 lit_7639[12 + 4 /* padding */];
 
 /* 8066354C-80663558 000C+00 s=1 e=0 z=0  None .bss       waistOfst$7638                                               */
-static u8 data_8066354C[12];
+static u8 waistOfst[12];
 
 /* 80661720-80661940 0220+00 s=1 e=0 z=0  None .text      setCollisions__7daCow_cFv                                    */
 #pragma push

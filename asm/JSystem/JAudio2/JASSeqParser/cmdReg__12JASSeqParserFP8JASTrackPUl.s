@@ -50,19 +50,19 @@ lbl_80294DA8:
 /* 80294E68  88 0D 8C C4 */	lbz r0, data_80451244(r13)
 /* 80294E6C  7C 00 07 75 */	extsb. r0, r0
 /* 80294E70  40 82 00 18 */	bne lbl_80294E88
-/* 80294E74  38 6D 8C C8 */	la r3, data_80451248(r13) /* 80451248-_SDA_BASE_ */
+/* 80294E74  38 6D 8C C8 */	la r3, oRandom(r13) /* 80451248-_SDA_BASE_ */
 /* 80294E78  38 80 00 00 */	li r4, 0
 /* 80294E7C  48 0A 4C 69 */	bl __ct__Q25JMath13TRandom_fast_FUl
 /* 80294E80  38 00 00 01 */	li r0, 1
 /* 80294E84  98 0D 8C C4 */	stb r0, data_80451244(r13)
 lbl_80294E88:
-/* 80294E88  80 8D 8C C8 */	lwz r4, data_80451248(r13)
+/* 80294E88  80 8D 8C C8 */	lwz r4, oRandom(r13)
 /* 80294E8C  3C 60 00 19 */	lis r3, 0x0019 /* 0x0019660D@ha */
 /* 80294E90  38 03 66 0D */	addi r0, r3, 0x660D /* 0x0019660D@l */
 /* 80294E94  7C 64 01 D6 */	mullw r3, r4, r0
 /* 80294E98  3C 63 3C 6F */	addis r3, r3, 0x3c6f
 /* 80294E9C  38 03 F3 5F */	addi r0, r3, -3233
-/* 80294EA0  90 0D 8C C8 */	stw r0, data_80451248(r13)
+/* 80294EA0  90 0D 8C C8 */	stw r0, oRandom(r13)
 /* 80294EA4  54 03 BA 7E */	srwi r3, r0, 9
 /* 80294EA8  7C 03 F3 96 */	divwu r0, r3, r30
 /* 80294EAC  7C 00 F1 D6 */	mullw r0, r0, r30

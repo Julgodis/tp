@@ -42,8 +42,8 @@ lbl_8001D42C:
 /* 8001D4CC  48 32 94 9D */	bl PSMTXScale
 /* 8001D4D0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8001D4D4  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8001D4D8  3C 80 80 38 */	lis r4, data_80378898@ha
-/* 8001D4DC  38 84 88 98 */	addi r4, r4, data_80378898@l
+/* 8001D4D8  3C 80 80 38 */	lis r4, mtx_adj@ha
+/* 8001D4DC  38 84 88 98 */	addi r4, r4, mtx_adj@l
 /* 8001D4E0  7C 65 1B 78 */	mr r5, r3
 /* 8001D4E4  48 32 90 01 */	bl PSMTXConcat
 /* 8001D4E8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha

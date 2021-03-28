@@ -786,10 +786,10 @@ lbl_807D7840:
 /* 807D7848  3B 20 00 00 */	li r25, 0
 /* 807D784C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 807D7850  3A C3 61 C0 */	addi r22, r3, g_dComIfG_gameInfo@l
-/* 807D7854  3C 60 80 7E */	lis r3, data_807E2FE0@ha
-/* 807D7858  3B 43 2F E0 */	addi r26, r3, data_807E2FE0@l
-/* 807D785C  3C 60 80 7E */	lis r3, data_807E2FDC@ha
-/* 807D7860  3B 63 2F DC */	addi r27, r3, data_807E2FDC@l
+/* 807D7854  3C 60 80 7E */	lis r3, f_id@ha
+/* 807D7858  3B 43 2F E0 */	addi r26, r3, f_id@l
+/* 807D785C  3C 60 80 7E */	lis r3, f_ya@ha
+/* 807D7860  3B 63 2F DC */	addi r27, r3, f_ya@l
 lbl_807D7864:
 /* 807D7864  3B C0 00 00 */	li r30, 0
 /* 807D7868  B3 C1 00 3C */	sth r30, 0x3c(r1)

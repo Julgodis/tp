@@ -27,12 +27,12 @@ lbl_8034CEDC:
 /* 8034CEEC  28 00 00 04 */	cmplwi r0, 4
 /* 8034CEF0  7C 12 03 78 */	mr r18, r0
 /* 8034CEF4  40 82 00 6C */	bne lbl_8034CF60
-/* 8034CEF8  80 0D 92 C0 */	lwz r0, data_80451840(r13)
+/* 8034CEF8  80 0D 92 C0 */	lwz r0, message(r13)
 /* 8034CEFC  28 00 00 00 */	cmplwi r0, 0
 /* 8034CF00  40 82 00 60 */	bne lbl_8034CF60
 /* 8034CF04  38 00 00 01 */	li r0, 1
 /* 8034CF08  4C C6 31 82 */	crclr 6
-/* 8034CF0C  90 0D 92 C0 */	stw r0, data_80451840(r13)
+/* 8034CF0C  90 0D 92 C0 */	stw r0, message(r13)
 /* 8034CF10  38 70 02 70 */	addi r3, r16, 0x270
 /* 8034CF14  4B CB 9B A9 */	bl OSReport
 /* 8034CF18  38 70 02 9C */	addi r3, r16, 0x29c

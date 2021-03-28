@@ -811,7 +811,7 @@ asm void renderingDAmap_c::draw() {
 
 /* ############################################################################################## */
 /* 80451E48-80451E4C 0004+00 s=1 e=0 z=0  None .sdata2    l_mapBaseColor$4239                                          */
-SECTION_SDATA2 static u8 data_80451E48[4] = {
+SECTION_SDATA2 static u8 l_mapBaseColor[4] = {
 	0x04, 0x00, 0x00, 0x00,
 };
 
@@ -1027,7 +1027,7 @@ SECTION_SDATA2 static u32 l_doorWhite2 = 0x64000000;
 SECTION_SDATA2 static u32 l_doorWhiteNoStay2 = 0x6C000000;
 
 /* 80451E68-80451E70 0008+00 s=1 e=0 z=0  None .sdata2    l_tex0$4406                                                  */
-SECTION_SDATA2 static u8 data_80451E68[8] = {
+SECTION_SDATA2 static u8 l_tex0[8] = {
 	0x00, 0x00, 0x01, 0x00, 0x01, 0x01, 0x00, 0x01,
 };
 
@@ -1155,7 +1155,7 @@ extern "C" u32 l_treasureStartColor;
 extern "C" u32 l_destinationStartColor;
 
 /* 80379C88-80379CB8 0030+00 s=1 e=0 z=0  None .rodata    l_treasureDispList$4524                                      */
-SECTION_RODATA static void* const data_80379C88[12] = {
+SECTION_RODATA static void* const l_treasureDispList_4524[12] = {
 	(void*)0x01000000,
 	(void*)0x00000002,
 	(void*)&l_entranceStartColor,
@@ -1201,12 +1201,12 @@ SECTION_SDATA2 static u32 l_npcYkwStartColor = 0x8C000000;
 SECTION_SDATA2 static u32 l_tksStartColor = 0xA4000000;
 
 /* 80451E9C-80451EA4 0008+00 s=1 e=0 z=0  None .sdata2    l_iconTex0$4523                                              */
-SECTION_SDATA2 static u8 data_80451E9C[8] = {
+SECTION_SDATA2 static u8 l_iconTex0_4523[8] = {
 	0x00, 0x01, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00,
 };
 
 /* 80451EA4-80451EA8 0004+00 s=1 e=0 z=0  None .sdata2    tboxNotStayColor$4542                                        */
-SECTION_SDATA2 static u8 data_80451EA4[4] = {
+SECTION_SDATA2 static u8 tboxNotStayColor_4542[4] = {
 	0x80, 0x00, 0x00, 0x00,
 };
 
@@ -1244,7 +1244,7 @@ extern "C" u32 l_npcYkwStartColor;
 extern "C" u32 l_tksStartColor;
 
 /* 80379CB8-80379D3C 0084+00 s=1 e=0 z=0  None .rodata    l_treasureDispList$4606                                      */
-SECTION_RODATA static void* const data_80379CB8[33] = {
+SECTION_RODATA static void* const l_treasureDispList_4606[33] = {
 	(void*)0x10000000,
 	(void*)0x00000004,
 	(void*)&l_tksStartColor,
@@ -1281,12 +1281,12 @@ SECTION_RODATA static void* const data_80379CB8[33] = {
 };
 
 /* 80451EAC-80451EB4 0008+00 s=1 e=0 z=0  None .sdata2    l_iconTex0$4605                                              */
-SECTION_SDATA2 static u8 data_80451EAC[8] = {
+SECTION_SDATA2 static u8 l_iconTex0_4605[8] = {
 	0x00, 0x01, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00,
 };
 
 /* 80451EB4-80451EB8 0004+00 s=1 e=0 z=0  None .sdata2    tboxNotStayColor$4624                                        */
-SECTION_SDATA2 static u8 data_80451EB4[4] = {
+SECTION_SDATA2 static u8 tboxNotStayColor_4624[4] = {
 	0x80, 0x00, 0x00, 0x00,
 };
 
@@ -1303,7 +1303,7 @@ asm void renderingPlusDoorAndCursor_c::drawTreasureAfterPlayer() {
 
 /* ############################################################################################## */
 /* 80379D3C-80379D5C 0020+00 s=1 e=0 z=0  None .rodata    l_iconPosData$4686                                           */
-SECTION_RODATA static u8 const data_80379D3C[32] = {
+SECTION_RODATA static u8 const l_iconPosData[32] = {
 	0xC2, 0x48, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
 	0x42, 0x48, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00,
 };
@@ -1321,14 +1321,14 @@ asm void renderingPlusDoorAndCursor_c::drawIconSingle(Vec const& param_0, f32 pa
 
 /* ############################################################################################## */
 /* 80379D5C-80379D80 0024+00 s=1 e=0 z=0  None .rodata    l_offset$4703                                                */
-SECTION_RODATA static u8 const data_80379D5C[36] = {
+SECTION_RODATA static u8 const l_offset[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x43, 0xC8, 0x00, 0x00, 0xC3, 0x48, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0xC3, 0x70, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xC3, 0x70, 0x00, 0x00,
 };
 
 /* 80450638-80450640 0004+04 s=1 e=0 z=0  None .sdata     l_cursorColor$4709                                           */
-SECTION_SDATA static u8 data_80450638[4 + 4 /* padding */] = {
+SECTION_SDATA static u8 l_cursorColor[4 + 4 /* padding */] = {
 	0x78, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,

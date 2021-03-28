@@ -8,8 +8,8 @@ lbl_804E1230:
 /* 804E1248  83 C3 00 04 */	lwz r30, 4(r3)
 /* 804E124C  83 BE 00 64 */	lwz r29, 0x64(r30)
 /* 804E1250  3B 80 00 00 */	li r28, 0
-/* 804E1254  3C 60 80 4E */	lis r3, data_804E1A24@ha
-/* 804E1258  3B E3 1A 24 */	addi r31, r3, data_804E1A24@l
+/* 804E1254  3C 60 80 4E */	lis r3, nodisp_mat@ha
+/* 804E1258  3B E3 1A 24 */	addi r31, r3, nodisp_mat@l
 /* 804E125C  48 00 00 44 */	b lbl_804E12A0
 lbl_804E1260:
 /* 804E1260  7F A3 EB 78 */	mr r3, r29

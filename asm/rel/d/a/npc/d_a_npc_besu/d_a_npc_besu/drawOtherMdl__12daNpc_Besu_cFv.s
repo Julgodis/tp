@@ -61,8 +61,8 @@ lbl_8053953C:
 /* 8053957C  4B C6 B8 24 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 80539580  80 7D 00 84 */	lwz r3, 0x84(r29)
 /* 80539584  80 83 00 0C */	lwz r4, 0xc(r3)
-/* 80539588  3C 60 80 54 */	lis r3, data_8053E8C8@ha
-/* 8053958C  80 03 E8 C8 */	lwz r0, data_8053E8C8@l(r3)
+/* 80539588  3C 60 80 54 */	lis r3, jointNo@ha
+/* 8053958C  80 03 E8 C8 */	lwz r0, jointNo@l(r3)
 /* 80539590  1C 00 00 30 */	mulli r0, r0, 0x30
 /* 80539594  7C 64 02 14 */	add r3, r4, r0
 /* 80539598  3C 80 80 3E */	lis r4, now__14mDoMtx_stack_c@ha

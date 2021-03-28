@@ -29,8 +29,8 @@ lbl_805CD628:
 /* 805CD694  C0 3E 07 58 */	lfs f1, 0x758(r30)
 /* 805CD698  88 1E 08 4F */	lbz r0, 0x84f(r30)
 /* 805CD69C  54 00 10 3A */	slwi r0, r0, 2
-/* 805CD6A0  3C 60 80 5E */	lis r3, data_805DD49C@ha
-/* 805CD6A4  38 63 D4 9C */	addi r3, r3, data_805DD49C@l
+/* 805CD6A0  3C 60 80 5E */	lis r3, HeadAngleDt@ha
+/* 805CD6A4  38 63 D4 9C */	addi r3, r3, HeadAngleDt@l
 /* 805CD6A8  7C 03 04 2E */	lfsx f0, r3, r0
 /* 805CD6AC  EC 01 00 2A */	fadds f0, f1, f0
 /* 805CD6B0  EC 02 00 28 */	fsubs f0, f2, f0

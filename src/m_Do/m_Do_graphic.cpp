@@ -612,7 +612,7 @@ asm void mDoGph_AfterOfDraw() {
 
 /* ############################################################################################## */
 /* 80450598-8045059C 0004+00 s=1 e=0 z=0  None .sdata     l_tevColor0$4208                                             */
-SECTION_SDATA static u8 data_80450598[4] = {
+SECTION_SDATA static u8 l_tevColor0[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 

@@ -517,8 +517,8 @@ lbl_8010806C:
 /* 80108070  3B E3 9A 20 */	addi r31, r3, sincosTable___5JMath@l
 /* 80108074  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80108078  3A E3 D4 70 */	addi r23, r3, now__14mDoMtx_stack_c@l
-/* 8010807C  3C 60 80 39 */	lis r3, data_803919FC@ha
-/* 80108080  3B 03 19 FC */	addi r24, r3, data_803919FC@l
+/* 8010807C  3C 60 80 39 */	lis r3, hsVec@ha
+/* 80108080  3B 03 19 FC */	addi r24, r3, hsVec@l
 /* 80108084  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80108088  3B 83 4A C8 */	addi r28, r3, j3dSys@l
 /* 8010808C  7E FB BB 78 */	mr r27, r23

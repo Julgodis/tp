@@ -64,8 +64,8 @@ lbl_80297CF8:
 /* 80297D2C  B0 19 00 CA */	sth r0, 0xca(r25)
 /* 80297D30  7F 23 CB 78 */	mr r3, r25
 /* 80297D34  38 80 00 00 */	li r4, 0
-/* 80297D38  3C A0 80 3A */	lis r5, data_8039B19C@ha
-/* 80297D3C  38 A5 B1 9C */	addi r5, r5, data_8039B19C@l
+/* 80297D38  3C A0 80 3A */	lis r5, OSC_ENV@ha
+/* 80297D3C  38 A5 B1 9C */	addi r5, r5, OSC_ENV@l
 /* 80297D40  48 00 2E 25 */	bl setOscInit__10JASChannelFUlPCQ213JASOscillator4Data
 /* 80297D44  7F 23 CB 78 */	mr r3, r25
 /* 80297D48  48 00 2C A9 */	bl play__10JASChannelFv

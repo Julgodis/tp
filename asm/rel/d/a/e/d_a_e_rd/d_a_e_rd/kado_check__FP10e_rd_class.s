@@ -36,8 +36,8 @@ lbl_8050B0F4:
 /* 8050B17C  C3 BE 01 1C */	lfs f29, 0x11c(r30)
 /* 8050B180  C3 DE 00 7C */	lfs f30, 0x7c(r30)
 /* 8050B184  C3 FE 01 28 */	lfs f31, 0x128(r30)
-/* 8050B188  3C 60 80 52 */	lis r3, data_80518BB0@ha
-/* 8050B18C  3B C3 8B B0 */	addi r30, r3, data_80518BB0@l
+/* 8050B188  3C 60 80 52 */	lis r3, kado_check_x@ha
+/* 8050B18C  3B C3 8B B0 */	addi r30, r3, kado_check_x@l
 lbl_8050B190:
 /* 8050B190  C0 1C 04 D0 */	lfs f0, 0x4d0(r28)
 /* 8050B194  D0 01 00 14 */	stfs f0, 0x14(r1)
@@ -78,8 +78,8 @@ lbl_8050B190:
 /* 8050B220  4B B6 91 94 */	b LineCross__4cBgSFP11cBgS_LinChk
 /* 8050B224  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8050B228  41 82 00 14 */	beq lbl_8050B23C
-/* 8050B22C  3C 60 80 52 */	lis r3, data_80518BA8@ha
-/* 8050B230  38 63 8B A8 */	addi r3, r3, data_80518BA8@l
+/* 8050B22C  3C 60 80 52 */	lis r3, kado_bit@ha
+/* 8050B230  38 63 8B A8 */	addi r3, r3, kado_bit@l
 /* 8050B234  7C 03 F8 2E */	lwzx r0, r3, r31
 /* 8050B238  7F 7B 03 78 */	or r27, r27, r0
 lbl_8050B23C:

@@ -21,10 +21,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -44,19 +44,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -92,10 +92,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -271,7 +271,7 @@ SECTION_DATA static void* l_arcName[7] = {
 };
 
 /* 80D3ECD8-80D3ECFC 0024+00 s=1 e=0 z=0  None .data      l_stageName$3775                                             */
-SECTION_DATA static void* data_80D3ECD8[9] = {
+SECTION_DATA static void* l_stageName[9] = {
 	(void*)(((char*)&struct_80D3EC70)+0x12) /* None */,
 	(void*)(((char*)&struct_80D3EC70)+0x1A) /* None */,
 	(void*)(((char*)&struct_80D3EC70)+0x22) /* None */,
@@ -318,7 +318,7 @@ asm static void setModelBaseMtx(obj_ystone_class* param_0) {
 
 /* ############################################################################################## */
 /* 80D3ECFC-80D3ED10 0014+00 s=1 e=0 z=0  None .data      mirror_effect_id$3870                                        */
-SECTION_DATA static u8 data_80D3ECFC[20] = {
+SECTION_DATA static u8 mirror_effect_id[20] = {
 	0x89, 0xA0, 0x89, 0xA1, 0x89, 0xA2, 0x89, 0xA5, 0x89, 0xA6, 0x89, 0xA7, 0x89, 0xA8, 0x89, 0xA9,
 	0x89, 0xAA, 0x89, 0xAB,
 };

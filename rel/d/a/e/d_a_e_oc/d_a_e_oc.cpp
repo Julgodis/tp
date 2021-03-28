@@ -32,19 +32,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -62,10 +62,10 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daE_OC_c {
@@ -764,17 +764,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80735D4C-80735D54 0008+00 s=1 e=0 z=0  None .data      e_prim$3790                                                  */
-SECTION_DATA static u8 data_80735D4C[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 80735D54-80735D5C 0008+00 s=1 e=0 z=0  None .data      e_env$3791                                                   */
-SECTION_DATA static u8 data_80735D54[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 80735D5C-80735D64 0006+02 s=1 e=0 z=0  None .data      eff_id$3799                                                  */
-SECTION_DATA static u8 data_80735D5C[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -851,7 +851,7 @@ SECTION_DATA static void* lit_5924[7] = {
 };
 
 /* 80735E9C-80735EA4 0008+00 s=1 e=0 z=0  None .data      w_eff_id$6206                                                */
-SECTION_DATA static u8 data_80735E9C[8] = {
+SECTION_DATA static u8 w_eff_id[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
@@ -1862,7 +1862,7 @@ asm void daE_OC_c::executeDeath() {
 static u8 lit_6203[12 + 4 /* padding */];
 
 /* 80736098-807360A4 000C+00 s=1 e=0 z=0  None .bss       sc$6202                                                      */
-static u8 data_80736098[12];
+static u8 sc[12];
 
 /* 80731F5C-80732074 0118+00 s=1 e=0 z=0  None .text      setWaterEffect__8daE_OC_cFv                                  */
 #pragma push

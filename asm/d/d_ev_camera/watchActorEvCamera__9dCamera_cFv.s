@@ -10,8 +10,8 @@ lbl_8008E938:
 /* 8008E958  88 0D 8A 09 */	lbz r0, struct_80450F88+0x1(r13)
 /* 8008E95C  7C 00 07 75 */	extsb. r0, r0
 /* 8008E960  40 82 00 34 */	bne lbl_8008E994
-/* 8008E964  3C 60 80 42 */	lis r3, data_804253FC@ha
-/* 8008E968  38 63 53 FC */	addi r3, r3, data_804253FC@l
+/* 8008E964  3C 60 80 42 */	lis r3, DefaultGap_6755@ha
+/* 8008E968  38 63 53 FC */	addi r3, r3, DefaultGap_6755@l
 /* 8008E96C  3C 80 80 43 */	lis r4, Zero__4cXyz@ha
 /* 8008E970  38 84 0C F4 */	addi r4, r4, Zero__4cXyz@l
 /* 8008E974  48 00 8E 81 */	bl __ct__4cXyzFRC4cXyz
@@ -28,8 +28,8 @@ lbl_8008E994:
 /* 8008E99C  28 00 00 00 */	cmplwi r0, 0
 /* 8008E9A0  40 82 02 30 */	bne lbl_8008EBD0
 /* 8008E9A4  38 61 03 0C */	addi r3, r1, 0x30c
-/* 8008E9A8  3C 80 80 42 */	lis r4, data_804253FC@ha
-/* 8008E9AC  38 84 53 FC */	addi r4, r4, data_804253FC@l
+/* 8008E9A8  3C 80 80 42 */	lis r4, DefaultGap_6755@ha
+/* 8008E9AC  38 84 53 FC */	addi r4, r4, DefaultGap_6755@l
 /* 8008E9B0  48 00 8E 45 */	bl __ct__4cXyzFRC4cXyz
 /* 8008E9B4  7F 63 DB 78 */	mr r3, r27
 /* 8008E9B8  7F C4 F3 78 */	mr r4, r30

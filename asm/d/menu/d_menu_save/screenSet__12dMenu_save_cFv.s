@@ -201,7 +201,7 @@ lbl_801EFBB8:
 /* 801EFBFC  7D 89 03 A6 */	mtctr r12
 /* 801EFC00  4E 80 04 21 */	bctrl 
 /* 801EFC04  38 61 00 3C */	addi r3, r1, 0x3c
-/* 801EFC08  38 8D 81 C0 */	la r4, data_80450740(r13) /* 80450740-_SDA_BASE_ */
+/* 801EFC08  38 8D 81 C0 */	la r4, l_msgNum0(r13) /* 80450740-_SDA_BASE_ */
 /* 801EFC0C  7C 84 C0 AE */	lbzx r4, r4, r24
 /* 801EFC10  4B E3 04 B1 */	bl fopMsgM_messageGet__FPcUl
 /* 801EFC14  7C 7F E0 2E */	lwzx r3, r31, r28
@@ -352,7 +352,7 @@ lbl_801EFDE4:
 /* 801EFE44  7D 89 03 A6 */	mtctr r12
 /* 801EFE48  4E 80 04 21 */	bctrl 
 /* 801EFE4C  38 61 00 1C */	addi r3, r1, 0x1c
-/* 801EFE50  38 8D 81 C4 */	la r4, data_80450744(r13) /* 80450744-_SDA_BASE_ */
+/* 801EFE50  38 8D 81 C4 */	la r4, l_msgNum(r13) /* 80450744-_SDA_BASE_ */
 /* 801EFE54  7C 84 B8 AE */	lbzx r4, r4, r23
 /* 801EFE58  4B E3 02 69 */	bl fopMsgM_messageGet__FPcUl
 /* 801EFE5C  7F 03 C3 78 */	mr r3, r24

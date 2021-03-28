@@ -22,10 +22,10 @@ struct mDoHIO_entry_c {
 	/* 80C134F8 */ ~mDoHIO_entry_c();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -41,11 +41,11 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
-};
-
 struct J3DModelData {
 	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+};
+
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {

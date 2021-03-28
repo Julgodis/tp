@@ -39,7 +39,7 @@ lbl_8006DA7C:
 /* 8006DB10  7C 00 07 75 */	extsb. r0, r0
 /* 8006DB14  40 82 00 14 */	bne lbl_8006DB28
 /* 8006DB18  C0 02 87 B8 */	lfs f0, lit_3954(r2)
-/* 8006DB1C  D0 0D 89 C0 */	stfs f0, data_80450F40(r13)
+/* 8006DB1C  D0 0D 89 C0 */	stfs f0, rot_11586(r13)
 /* 8006DB20  38 00 00 01 */	li r0, 1
 /* 8006DB24  98 0D 89 C4 */	stb r0, data_80450F44(r13)
 lbl_8006DB28:
@@ -93,10 +93,10 @@ lbl_8006DB88:
 /* 8006DBE0  38 61 00 6C */	addi r3, r1, 0x6c
 /* 8006DBE4  80 98 00 04 */	lwz r4, 4(r24)
 /* 8006DBE8  4B FE DE 3D */	bl dKyr_set_btitex__FP9_GXTexObjP7ResTIMG
-/* 8006DBEC  C0 2D 89 C0 */	lfs f1, data_80450F40(r13)
+/* 8006DBEC  C0 2D 89 C0 */	lfs f1, rot_11586(r13)
 /* 8006DBF0  C0 02 8A 24 */	lfs f0, lit_6736(r2)
 /* 8006DBF4  EC 21 00 2A */	fadds f1, f1, f0
-/* 8006DBF8  D0 2D 89 C0 */	stfs f1, data_80450F40(r13)
+/* 8006DBF8  D0 2D 89 C0 */	stfs f1, rot_11586(r13)
 /* 8006DBFC  38 61 00 BC */	addi r3, r1, 0xbc
 /* 8006DC00  38 80 00 5A */	li r4, 0x5a
 /* 8006DC04  C0 02 8A 60 */	lfs f0, lit_7211(r2)

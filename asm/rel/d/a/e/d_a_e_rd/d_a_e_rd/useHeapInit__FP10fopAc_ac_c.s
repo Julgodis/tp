@@ -144,8 +144,8 @@ lbl_80516D00:
 /* 80516D14  40 80 00 50 */	bge lbl_80516D64
 /* 80516D18  3C 60 80 52 */	lis r3, stringBase0@ha
 /* 80516D1C  38 63 89 68 */	addi r3, r3, stringBase0@l
-/* 80516D20  3C 80 80 52 */	lis r4, data_80518FC0@ha
-/* 80516D24  38 84 8F C0 */	addi r4, r4, data_80518FC0@l
+/* 80516D20  3C 80 80 52 */	lis r4, ikki2_boss_part_bmd@ha
+/* 80516D24  38 84 8F C0 */	addi r4, r4, ikki2_boss_part_bmd@l
 /* 80516D28  7C 84 E0 2E */	lwzx r4, r4, r28
 /* 80516D2C  7F C5 F3 78 */	mr r5, r30
 /* 80516D30  38 C0 00 80 */	li r6, 0x80
@@ -174,8 +174,8 @@ lbl_80516D74:
 lbl_80516D84:
 /* 80516D84  3C 60 80 52 */	lis r3, stringBase0@ha
 /* 80516D88  38 63 89 68 */	addi r3, r3, stringBase0@l
-/* 80516D8C  3C 80 80 52 */	lis r4, data_80518F88@ha
-/* 80516D90  38 84 8F 88 */	addi r4, r4, data_80518F88@l
+/* 80516D8C  3C 80 80 52 */	lis r4, boss_part_bmd@ha
+/* 80516D90  38 84 8F 88 */	addi r4, r4, boss_part_bmd@l
 /* 80516D94  7C 84 E0 2E */	lwzx r4, r4, r28
 /* 80516D98  7F C5 F3 78 */	mr r5, r30
 /* 80516D9C  38 C0 00 80 */	li r6, 0x80

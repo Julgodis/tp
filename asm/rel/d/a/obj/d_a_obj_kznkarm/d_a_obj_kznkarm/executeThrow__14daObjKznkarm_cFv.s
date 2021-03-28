@@ -297,8 +297,8 @@ lbl_80C5019C:
 /* 80C501DC  3B 80 00 00 */	li r28, 0
 /* 80C501E0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80C501E4  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
-/* 80C501E8  3C 60 80 C5 */	lis r3, data_80C50E88@ha
-/* 80C501EC  3B 63 0E 88 */	addi r27, r3, data_80C50E88@l
+/* 80C501E8  3C 60 80 C5 */	lis r3, w_eff_id@ha
+/* 80C501EC  3B 63 0E 88 */	addi r27, r3, w_eff_id@l
 lbl_80C501F0:
 /* 80C501F0  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 80C501F4  38 00 00 FF */	li r0, 0xff

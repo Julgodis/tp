@@ -10,8 +10,8 @@ lbl_80C4A21C:
 /* 80C4A23C  7F E6 FB 78 */	mr r6, r31
 /* 80C4A240  4B 43 96 20 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80C4A244  38 7F 05 CC */	addi r3, r31, 0x5cc
-/* 80C4A248  3C 80 80 C5 */	lis r4, data_80C4D498@ha
-/* 80C4A24C  38 84 D4 98 */	addi r4, r4, data_80C4D498@l
+/* 80C4A248  3C 80 80 C5 */	lis r4, ccSphSrc@ha
+/* 80C4A24C  38 84 D4 98 */	addi r4, r4, ccSphSrc@l
 /* 80C4A250  4B 43 A7 E4 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80C4A254  38 1F 05 90 */	addi r0, r31, 0x590
 /* 80C4A258  90 1F 06 10 */	stw r0, 0x610(r31)

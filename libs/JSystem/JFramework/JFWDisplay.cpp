@@ -500,7 +500,7 @@ asm void JFWDisplay::endRender() {
 
 /* ############################################################################################## */
 /* 804511C4-804511C8 0004+00 s=1 e=0 z=0  None .sbss      prevFrame$2597                                               */
-static u8 data_804511C4[4];
+static u8 prevFrame[4];
 
 /* 804511C8-804511D0 0008+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_804511C8[8];
@@ -529,7 +529,7 @@ asm void JFWDisplay::waitBlanking(int param_0) {
 
 /* ############################################################################################## */
 /* 804511D0-804511D4 0004+00 s=1 e=0 z=0  None .sbss      nextTick$2642                                                */
-static u8 data_804511D0[4];
+static u8 nextTick[4];
 
 /* 804511D4-804511D8 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_804511D4[4];
@@ -538,7 +538,7 @@ static u8 data_804511D4[4];
 static u8 data_804511D8[4];
 
 /* 804511DC-804511E0 0004+00 s=1 e=0 z=0  None .sbss      nextCount$2650                                               */
-static u8 data_804511DC[4];
+static u8 nextCount[4];
 
 /* 804511E0-804511E8 0008+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_804511E0[8];

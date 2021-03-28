@@ -11,8 +11,8 @@ lbl_805C4E14:
 /* 805C4E38  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 805C4E3C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805C4E40  3B E3 23 3C */	addi r31, r3, 0x233c
-/* 805C4E44  3C 60 80 5C */	lis r3, data_805C70F8@ha
-/* 805C4E48  3B 43 70 F8 */	addi r26, r3, data_805C70F8@l
+/* 805C4E44  3C 60 80 5C */	lis r3, DOWN_CYL_DT@ha
+/* 805C4E48  3B 43 70 F8 */	addi r26, r3, DOWN_CYL_DT@l
 /* 805C4E4C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 805C4E50  3B 23 D4 70 */	addi r25, r3, now__14mDoMtx_stack_c@l
 lbl_805C4E54:
@@ -58,8 +58,8 @@ lbl_805C4E54:
 /* 805C4EF0  3B C0 00 00 */	li r30, 0
 /* 805C4EF4  3B 80 00 00 */	li r28, 0
 /* 805C4EF8  3B 60 00 00 */	li r27, 0
-/* 805C4EFC  3C 60 80 5C */	lis r3, data_805C7170@ha
-/* 805C4F00  3B 23 71 70 */	addi r25, r3, data_805C7170@l
+/* 805C4EFC  3C 60 80 5C */	lis r3, DOWN_SPH_DT@ha
+/* 805C4F00  3B 23 71 70 */	addi r25, r3, DOWN_SPH_DT@l
 /* 805C4F04  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 805C4F08  3B 43 D4 70 */	addi r26, r3, now__14mDoMtx_stack_c@l
 lbl_805C4F0C:

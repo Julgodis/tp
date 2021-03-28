@@ -18,8 +18,8 @@ lbl_80D2824C:
 /* 80D2828C  3B 9A 40 C0 */	addi r28, r26, 0x40c0
 /* 80D28290  7F 83 E3 78 */	mr r3, r28
 /* 80D28294  80 9F 05 D4 */	lwz r4, 0x5d4(r31)
-/* 80D28298  3C A0 80 D3 */	lis r5, data_80D29850@ha
-/* 80D2829C  38 A5 98 50 */	addi r5, r5, data_80D29850@l
+/* 80D28298  3C A0 80 D3 */	lis r5, action_table@ha
+/* 80D2829C  38 A5 98 50 */	addi r5, r5, action_table@l
 /* 80D282A0  38 C0 00 07 */	li r6, 7
 /* 80D282A4  38 E0 00 00 */	li r7, 0
 /* 80D282A8  39 00 00 00 */	li r8, 0

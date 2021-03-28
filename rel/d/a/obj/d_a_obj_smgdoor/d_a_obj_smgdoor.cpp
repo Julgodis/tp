@@ -58,10 +58,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -460,7 +460,7 @@ SECTION_RODATA static u8 const struct_80CDCC88[60] = {
 };
 
 /* 80CDCD1C-80CDCD34 0018+00 s=1 e=0 z=0  None .data      action_table$3763                                            */
-SECTION_DATA static void* data_80CDCD1C[6] = {
+SECTION_DATA static void* action_table[6] = {
 	(void*)(((char*)&struct_80CDCC88)+0x0) /* None */,
 	(void*)(((char*)&struct_80CDCC88)+0x5) /* None */,
 	(void*)(((char*)&struct_80CDCC88)+0xA) /* None */,
@@ -569,7 +569,7 @@ SECTION_DATA static void* lit_3926[3] = {
 };
 
 /* 80CDCD58-80CDCD7C 0024+00 s=1 e=0 z=0  None .data      l_func$3923                                                  */
-SECTION_DATA static u8 data_80CDCD58[36] = {
+SECTION_DATA static u8 l_func[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,

@@ -75,11 +75,11 @@ struct J2DTextBox {
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
-struct JUTFont {
-};
-
 struct COutFont_c {
 	/* 80225C94 */ COutFont_c(u8);
+};
+
+struct JUTFont {
 };
 
 struct dMsgObject_c {

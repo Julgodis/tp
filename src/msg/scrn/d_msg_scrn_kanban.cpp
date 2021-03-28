@@ -156,7 +156,7 @@ extern "C" extern u8 g_MsgObject_HIO_c[1040];
 
 /* ############################################################################################## */
 /* 80399AA0-80399AB8 0018+00 s=1 e=0 z=0  None .rodata    t_tag$3768                                                   */
-SECTION_RODATA static u8 const data_80399AA0[24] = {
+SECTION_RODATA static u8 const t_tag[24] = {
 	0x6D, 0x67, 0x5F, 0x65, 0x34, 0x6C, 0x69, 0x6E, 0x00, 0x00, 0x00, 0x00, 0x66, 0x34, 0x5F, 0x77,
 	0x00, 0x00, 0x00, 0x00, 0x74, 0x34, 0x5F, 0x73,
 };

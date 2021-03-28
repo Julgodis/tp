@@ -27,10 +27,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
 struct mDoExt_btpAnm {
@@ -56,13 +56,13 @@ struct mDoExt_McaMorfCallBack2_c {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct Vec {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Vec {
 };
 
 struct mDoExt_McaMorf {
@@ -751,12 +751,12 @@ SECTION_DATA static u8 check_kind[8] = {
 };
 
 /* 805364CC-805364DC 0010+00 s=1 e=0 z=0  None .data      vib_p$3694                                                   */
-SECTION_DATA static u8 data_805364CC[16] = {
+SECTION_DATA static u8 vib_p[16] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04,
 };
 
 /* 805364DC-805364E4 0005+03 s=1 e=0 z=0  None .data      learn_d$3913                                                 */
-SECTION_DATA static u8 data_805364DC[5 + 3 /* padding */] = {
+SECTION_DATA static u8 learn_d[5 + 3 /* padding */] = {
 	0x01, 0x02, 0x04, 0x08, 0x10,
 	/* padding */
 	0x00, 0x00, 0x00,
@@ -810,48 +810,48 @@ SECTION_DATA static u8 swim_path127[688] = {
 };
 
 /* 80536794-805367A0 000C+00 s=1 e=0 z=0  None .data      joint_offset_LM$5310                                         */
-SECTION_DATA static u8 data_80536794[12] = {
+SECTION_DATA static u8 joint_offset_LM[12] = {
 	0x41, 0xA0, 0x00, 0x00, 0x41, 0xA0, 0x00, 0x00, 0x41, 0xA0, 0x00, 0x00,
 };
 
 /* 805367A0-805367A8 0008+00 s=1 e=0 z=0  None .data      joint_offset_BG$5311                                         */
-SECTION_DATA static u8 data_805367A0[8] = {
+SECTION_DATA static u8 joint_offset_BG[8] = {
 	0x41, 0xA0, 0x00, 0x00, 0x41, 0xA0, 0x00, 0x00,
 };
 
 /* 805367A8-805367C0 0018+00 s=1 e=0 z=0  None .data      joint_offset_NP$5312                                         */
-SECTION_DATA static u8 data_805367A8[24] = {
+SECTION_DATA static u8 joint_offset_NP[24] = {
 	0x41, 0x78, 0x00, 0x00, 0x41, 0x78, 0x00, 0x00, 0x41, 0x78, 0x00, 0x00, 0x41, 0x20, 0x00, 0x00,
 	0x41, 0x20, 0x00, 0x00, 0x41, 0x70, 0x00, 0x00,
 };
 
 /* 805367C0-805367D8 0018+00 s=1 e=0 z=0  None .data      joint_offset_KS$5313                                         */
-SECTION_DATA static u8 data_805367C0[24] = {
+SECTION_DATA static u8 joint_offset_KS[24] = {
 	0x41, 0x78, 0x00, 0x00, 0x41, 0x78, 0x00, 0x00, 0x41, 0x20, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00,
 	0x41, 0x20, 0x00, 0x00, 0x41, 0x70, 0x00, 0x00,
 };
 
 /* 805367D8-805367F0 0018+00 s=1 e=0 z=0  None .data      joint_offset_CF$5314                                         */
-SECTION_DATA static u8 data_805367D8[24] = {
+SECTION_DATA static u8 joint_offset_CF[24] = {
 	0x41, 0x70, 0x00, 0x00, 0x41, 0x70, 0x00, 0x00, 0x41, 0x70, 0x00, 0x00, 0x41, 0x70, 0x00, 0x00,
 	0x41, 0x70, 0x00, 0x00, 0x41, 0x70, 0x00, 0x00,
 };
 
 /* 805367F0-80536808 0018+00 s=1 e=0 z=0  None .data      joint_offset_RI$5315                                         */
-SECTION_DATA static u8 data_805367F0[24] = {
+SECTION_DATA static u8 joint_offset_RI[24] = {
 	0x41, 0x84, 0x00, 0x00, 0x41, 0xB0, 0x00, 0x00, 0x41, 0xB0, 0x00, 0x00, 0x41, 0x20, 0x00, 0x00,
 	0x41, 0x70, 0x00, 0x00, 0x41, 0x70, 0x00, 0x00,
 };
 
 /* 80536808-80536810 0006+02 s=1 e=0 z=0  None .data      b_id$6145                                                    */
-SECTION_DATA static u8 data_80536808[6 + 2 /* padding */] = {
+SECTION_DATA static u8 b_id[6 + 2 /* padding */] = {
 	0x87, 0x3A, 0x87, 0x3B, 0x87, 0x3C,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80536810-80536828 0016+02 s=1 e=0 z=0  None .data      h_id$6156                                                    */
-SECTION_DATA static u8 data_80536810[22 + 2 /* padding */] = {
+SECTION_DATA static u8 h_id[22 + 2 /* padding */] = {
 	0x87, 0x38, 0x87, 0x39, 0x87, 0x39, 0x87, 0x37, 0x87, 0x39, 0x87, 0x36, 0x87, 0x38, 0x87, 0x39,
 	0x87, 0x39, 0x87, 0x37, 0x87, 0x39,
 	/* padding */
@@ -859,7 +859,7 @@ SECTION_DATA static u8 data_80536810[22 + 2 /* padding */] = {
 };
 
 /* 80536828-80536854 002C+00 s=1 e=0 z=0  None .data      h_jnt$6157                                                   */
-SECTION_DATA static u8 data_80536828[44] = {
+SECTION_DATA static u8 h_jnt[44] = {
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x02,
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x02,
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x02,
@@ -943,28 +943,28 @@ SECTION_DATA static void* lit_7242[73] = {
 };
 
 /* 80536978-805369A4 002C+00 s=1 e=0 z=0  None .data      mouth_idx$7453                                               */
-SECTION_DATA static u8 data_80536978[44] = {
+SECTION_DATA static u8 mouth_idx[44] = {
 	0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x07,
 	0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x09,
 };
 
 /* 805369A4-805369D0 002C+00 s=1 e=0 z=0  None .data      fish_bmd$8228                                                */
-SECTION_DATA static u8 data_805369A4[44] = {
+SECTION_DATA static u8 fish_bmd[44] = {
 	0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x03,
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x03,
 	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04,
 };
 
 /* 805369D0-805369FC 002C+00 s=1 e=0 z=0  None .data      fish_joint$8229                                              */
-SECTION_DATA static u8 data_805369D0[44] = {
+SECTION_DATA static u8 fish_joint[44] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x06,
 	0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x06,
 	0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x06,
 };
 
 /* 805369FC-80536A40 0044+00 s=1 e=0 z=0  None .data      cc_cyl_src$8395                                              */
-SECTION_DATA static u8 data_805369FC[68] = {
+SECTION_DATA static u8 cc_cyl_src[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -973,7 +973,7 @@ SECTION_DATA static u8 data_805369FC[68] = {
 };
 
 /* 80536A40-80536A6C 002C+00 s=1 e=0 z=0  None .data      fish_max$8453                                                */
-SECTION_DATA static u8 data_80536A40[44] = {
+SECTION_DATA static u8 fish_max[44] = {
 	0x3F, 0x53, 0xF7, 0xCF, 0x3F, 0x7F, 0x7C, 0xEE, 0x3F, 0x7F, 0x7C, 0xEE, 0x3F, 0x7F, 0x7C, 0xEE,
 	0x3F, 0x35, 0x3F, 0x7D, 0x3E, 0xDB, 0x22, 0xD1, 0x3E, 0xE5, 0x60, 0x42, 0x3F, 0x16, 0x87, 0x2B,
 	0x3F, 0x16, 0x87, 0x2B, 0x3F, 0x0C, 0x49, 0xBA, 0x3F, 0x35, 0x3F, 0x7D,
@@ -1769,36 +1769,36 @@ asm static void ri_swim(mg_fish_class* param_0) {
 
 /* ############################################################################################## */
 /* 80536794-805367A0 000C+00 s=1 e=0 z=0  None .data      joint_offset_LM$5310                                         */
-extern "C" u8 data_80536794[12];
+extern "C" u8 joint_offset_LM[12];
 
 /* 805367A0-805367A8 0008+00 s=1 e=0 z=0  None .data      joint_offset_BG$5311                                         */
-extern "C" u8 data_805367A0[8];
+extern "C" u8 joint_offset_BG[8];
 
 /* 805367A8-805367C0 0018+00 s=1 e=0 z=0  None .data      joint_offset_NP$5312                                         */
-extern "C" u8 data_805367A8[24];
+extern "C" u8 joint_offset_NP[24];
 
 /* 805367C0-805367D8 0018+00 s=1 e=0 z=0  None .data      joint_offset_KS$5313                                         */
-extern "C" u8 data_805367C0[24];
+extern "C" u8 joint_offset_KS[24];
 
 /* 805367D8-805367F0 0018+00 s=1 e=0 z=0  None .data      joint_offset_CF$5314                                         */
-extern "C" u8 data_805367D8[24];
+extern "C" u8 joint_offset_CF[24];
 
 /* 805367F0-80536808 0018+00 s=1 e=0 z=0  None .data      joint_offset_RI$5315                                         */
-extern "C" u8 data_805367F0[24];
+extern "C" u8 joint_offset_RI[24];
 
 /* 80536230-8053625C 002C+00 s=1 e=0 z=0  None .rodata    @5316                                                        */
 SECTION_RODATA static void* const lit_5316[11] = {
-	(void*)&data_80536794,
-	(void*)&data_805367F0,
-	(void*)&data_805367A8,
-	(void*)&data_805367D8,
-	(void*)&data_805367C0,
-	(void*)&data_805367A0,
-	(void*)&data_80536794,
-	(void*)&data_805367F0,
-	(void*)&data_805367A8,
-	(void*)&data_805367D8,
-	(void*)&data_805367C0,
+	(void*)&joint_offset_LM,
+	(void*)&joint_offset_RI,
+	(void*)&joint_offset_NP,
+	(void*)&joint_offset_CF,
+	(void*)&joint_offset_KS,
+	(void*)&joint_offset_BG,
+	(void*)&joint_offset_LM,
+	(void*)&joint_offset_RI,
+	(void*)&joint_offset_NP,
+	(void*)&joint_offset_CF,
+	(void*)&joint_offset_KS,
 };
 
 /* 8053625C-80536260 0004+00 s=4 e=0 z=0  None .rodata    @5379                                                        */
@@ -2389,7 +2389,7 @@ static u8 lit_7466[12];
 static u8 lit_7467[12];
 
 /* 80536C74-80536CF8 0084+00 s=1 e=0 z=0  None .bss       mouth_off$7454                                               */
-static u8 data_80536C74[132];
+static u8 mouth_off[132];
 
 /* 80533540-80534964 1424+00 s=2 e=0 z=0  None .text      daMg_Fish_Execute__FP13mg_fish_class                         */
 #pragma push

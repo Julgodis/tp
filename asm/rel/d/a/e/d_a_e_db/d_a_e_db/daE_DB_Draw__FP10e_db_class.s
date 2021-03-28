@@ -104,8 +104,8 @@ lbl_8069ADC8:
 lbl_8069AE44:
 /* 8069AE44  38 7D 08 04 */	addi r3, r29, 0x804
 /* 8069AE48  38 80 00 0C */	li r4, 0xc
-/* 8069AE4C  3C A0 80 6A */	lis r5, data_806A1AAC@ha
-/* 8069AE50  38 A5 1A AC */	addi r5, r5, data_806A1AAC@l
+/* 8069AE4C  3C A0 80 6A */	lis r5, l_color@ha
+/* 8069AE50  38 A5 1A AC */	addi r5, r5, l_color@l
 /* 8069AE54  38 DD 01 0C */	addi r6, r29, 0x10c
 /* 8069AE58  4B 97 91 58 */	b update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c
 /* 8069AE5C  38 7D 08 04 */	addi r3, r29, 0x804

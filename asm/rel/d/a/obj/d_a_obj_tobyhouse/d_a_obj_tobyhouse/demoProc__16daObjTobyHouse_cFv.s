@@ -62,8 +62,8 @@ lbl_80D168D0:
 /* 80D16950  3B 7D 4F F8 */	addi r27, r29, 0x4ff8
 /* 80D16954  7F 63 DB 78 */	mr r3, r27
 /* 80D16958  80 9F 05 CC */	lwz r4, 0x5cc(r31)
-/* 80D1695C  3C A0 80 D1 */	lis r5, data_80D178EC@ha
-/* 80D16960  38 A5 78 EC */	addi r5, r5, data_80D178EC@l
+/* 80D1695C  3C A0 80 D1 */	lis r5, action_table@ha
+/* 80D16960  38 A5 78 EC */	addi r5, r5, action_table@l
 /* 80D16964  38 C0 00 07 */	li r6, 7
 /* 80D16968  38 E0 00 00 */	li r7, 0
 /* 80D1696C  39 00 00 00 */	li r8, 0

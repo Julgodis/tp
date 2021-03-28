@@ -52,10 +52,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -74,10 +74,10 @@ struct dPa_followEcallBack {
 	/* 80CED4C8 */ void __defctor();
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -502,7 +502,7 @@ u8 lit_1009[1 + 3 /* padding */];
 static u8 lit_3627[12 + 4 /* padding */];
 
 /* 80CEF238-80CEF244 000C+00 s=1 e=0 z=0  None .bss       l_offset$3626                                                */
-static u8 data_80CEF238[12];
+static u8 l_offset[12];
 
 /* 80CECF34-80CECFE8 00B4+00 s=1 e=0 z=0  None .text      initBaseMtx__14daObjStopper_cFv                              */
 #pragma push
@@ -629,7 +629,7 @@ SECTION_DATA static void* lit_3850[3] = {
 };
 
 /* 80CEF080-80CEF0E0 0060+00 s=1 e=0 z=0  None .data      l_func$3842                                                  */
-SECTION_DATA static u8 data_80CEF080[96] = {
+SECTION_DATA static u8 l_func[96] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

@@ -10,8 +10,8 @@ lbl_801F9470:
 /* 801F9490  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801F9494  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 801F9498  3B 83 07 F0 */	addi r28, r3, 0x7f0
-/* 801F949C  3C 60 80 3C */	lis r3, data_803BE8A4@ha
-/* 801F94A0  3B A3 E8 A4 */	addi r29, r3, data_803BE8A4@l
+/* 801F949C  3C 60 80 3C */	lis r3, evt_id@ha
+/* 801F94A0  3B A3 E8 A4 */	addi r29, r3, evt_id@l
 /* 801F94A4  3C 60 80 3A */	lis r3, saveBitLabels__16dSv_event_flag_c@ha
 /* 801F94A8  3B C3 72 88 */	addi r30, r3, saveBitLabels__16dSv_event_flag_c@l
 lbl_801F94AC:

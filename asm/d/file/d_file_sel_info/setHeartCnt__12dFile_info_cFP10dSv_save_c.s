@@ -20,12 +20,12 @@ lbl_80192AE0:
 /* 80192AE4  3A E0 00 00 */	li r23, 0
 /* 80192AE8  3A C0 00 00 */	li r22, 0
 /* 80192AEC  57 64 10 3A */	slwi r4, r27, 2
-/* 80192AF0  3C 60 80 3C */	lis r3, data_803BB548@ha
-/* 80192AF4  38 03 B5 48 */	addi r0, r3, data_803BB548@l
+/* 80192AF0  3C 60 80 3C */	lis r3, amariheartTex@ha
+/* 80192AF4  38 03 B5 48 */	addi r0, r3, amariheartTex@l
 /* 80192AF8  7C 60 22 14 */	add r3, r0, r4
 /* 80192AFC  3B C3 FF FC */	addi r30, r3, -4
-/* 80192B00  3C 60 80 3C */	lis r3, data_803BB4A8@ha
-/* 80192B04  3B E3 B4 A8 */	addi r31, r3, data_803BB4A8@l
+/* 80192B00  3C 60 80 3C */	lis r3, l_htag@ha
+/* 80192B04  3B E3 B4 A8 */	addi r31, r3, l_htag@l
 /* 80192B08  3B A1 00 08 */	addi r29, r1, 8
 lbl_80192B0C:
 /* 80192B0C  80 78 00 0C */	lwz r3, 0xc(r24)

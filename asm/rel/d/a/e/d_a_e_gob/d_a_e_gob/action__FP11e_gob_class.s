@@ -534,10 +534,10 @@ lbl_806DBEF8:
 /* 806DBF18  3A 03 0F 38 */	addi r16, r3, 0xf38
 /* 806DBF1C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 806DBF20  3B 63 07 68 */	addi r27, r3, calc_mtx@l
-/* 806DBF24  3C 60 80 6E */	lis r3, data_806DF0E4@ha
-/* 806DBF28  3B 03 F0 E4 */	addi r24, r3, data_806DF0E4@l
-/* 806DBF2C  3C 60 80 6E */	lis r3, data_806DF0F4@ha
-/* 806DBF30  3A E3 F0 F4 */	addi r23, r3, data_806DF0F4@l
+/* 806DBF24  3C 60 80 6E */	lis r3, bg_x@ha
+/* 806DBF28  3B 03 F0 E4 */	addi r24, r3, bg_x@l
+/* 806DBF2C  3C 60 80 6E */	lis r3, bg_z@ha
+/* 806DBF30  3A E3 F0 F4 */	addi r23, r3, bg_z@l
 /* 806DBF34  48 00 00 B0 */	b lbl_806DBFE4
 lbl_806DBF38:
 /* 806DBF38  80 7B 00 00 */	lwz r3, 0(r27)

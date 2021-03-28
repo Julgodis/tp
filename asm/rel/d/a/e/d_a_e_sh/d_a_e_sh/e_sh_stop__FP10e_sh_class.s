@@ -70,8 +70,8 @@ lbl_8078EB08:
 /* 8078EB58  3B 40 00 00 */	li r26, 0
 /* 8078EB5C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8078EB60  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 8078EB64  3C 60 80 79 */	lis r3, data_80791F00@ha
-/* 8078EB68  3B A3 1F 00 */	addi r29, r3, data_80791F00@l
+/* 8078EB64  3C 60 80 79 */	lis r3, ap_name@ha
+/* 8078EB68  3B A3 1F 00 */	addi r29, r3, ap_name@l
 lbl_8078EB6C:
 /* 8078EB6C  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
 /* 8078EB70  38 80 00 00 */	li r4, 0

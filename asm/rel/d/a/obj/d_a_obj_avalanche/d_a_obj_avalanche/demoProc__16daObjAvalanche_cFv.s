@@ -10,8 +10,8 @@ lbl_80BA788C:
 /* 80BA78AC  3B C3 4F F8 */	addi r30, r3, 0x4ff8
 /* 80BA78B0  7F C3 F3 78 */	mr r3, r30
 /* 80BA78B4  80 9D 05 EC */	lwz r4, 0x5ec(r29)
-/* 80BA78B8  3C A0 80 BA */	lis r5, data_80BA7E14@ha
-/* 80BA78BC  38 A5 7E 14 */	addi r5, r5, data_80BA7E14@l
+/* 80BA78B8  3C A0 80 BA */	lis r5, action_table@ha
+/* 80BA78BC  38 A5 7E 14 */	addi r5, r5, action_table@l
 /* 80BA78C0  38 C0 00 02 */	li r6, 2
 /* 80BA78C4  38 E0 00 00 */	li r7, 0
 /* 80BA78C8  39 00 00 00 */	li r8, 0

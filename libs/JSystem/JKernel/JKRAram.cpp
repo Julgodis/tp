@@ -51,10 +51,10 @@ struct JKRAramStream {
 	/* 802D3B48 */ void create(s32);
 };
 
-struct JKRAMCommand {
+struct JKRAramBlock {
 };
 
-struct JKRAramBlock {
+struct JKRAMCommand {
 };
 
 struct JKRAramPiece {

@@ -172,7 +172,7 @@ asm static void fopOvlpReq_phase_Create(overlap_request_class* param_0) {
 
 /* ############################################################################################## */
 /* 803A3890-803A38B0 0020+00 s=1 e=0 z=0  None .data      phaseMethod$2260                                             */
-SECTION_DATA static void* data_803A3890[8] = {
+SECTION_DATA static void* phaseMethod[8] = {
 	(void*)fopOvlpReq_phase_Create__FP21overlap_request_class,
 	(void*)fopOvlpReq_phase_IsCreated__FP21overlap_request_class,
 	(void*)fopOvlpReq_phase_IsComplete__FP21overlap_request_class,

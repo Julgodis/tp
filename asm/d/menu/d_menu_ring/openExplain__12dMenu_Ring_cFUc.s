@@ -44,9 +44,9 @@ lbl_801EF51C:
 lbl_801EF52C:
 /* 801EF52C  54 A0 15 BA */	rlwinm r0, r5, 2, 0x16, 0x1d
 /* 801EF530  80 7E 03 70 */	lwz r3, 0x370(r30)
-/* 801EF534  38 82 AA 24 */	la r4, data_80454424(r2) /* 80454424-_SDA2_BASE_ */
+/* 801EF534  38 82 AA 24 */	la r4, i_nameID(r2) /* 80454424-_SDA2_BASE_ */
 /* 801EF538  7C 84 00 2E */	lwzx r4, r4, r0
-/* 801EF53C  38 A2 AA 2C */	la r5, data_8045442C(r2) /* 8045442C-_SDA2_BASE_ */
+/* 801EF53C  38 A2 AA 2C */	la r5, i_expID(r2) /* 8045442C-_SDA2_BASE_ */
 /* 801EF540  7C A5 00 2E */	lwzx r5, r5, r0
 /* 801EF544  4B FE D1 F5 */	bl openExplainTx__19dMenu_ItemExplain_cFUlUl
 lbl_801EF548:

@@ -11,8 +11,8 @@ lbl_8061F200:
 lbl_8061F224:
 /* 8061F224  38 E0 00 00 */	li r7, 0
 /* 8061F228  38 60 00 00 */	li r3, 0
-/* 8061F22C  3C A0 80 63 */	lis r5, data_8062EC28@ha
-/* 8061F230  38 C5 EC 28 */	addi r6, r5, data_8062EC28@l
+/* 8061F22C  3C A0 80 63 */	lis r5, break_part_no@ha
+/* 8061F230  38 C5 EC 28 */	addi r6, r5, break_part_no@l
 /* 8061F234  38 00 00 0D */	li r0, 0xd
 /* 8061F238  7C 09 03 A6 */	mtctr r0
 lbl_8061F23C:
@@ -30,8 +30,8 @@ lbl_8061F258:
 /* 8061F264  41 82 00 A0 */	beq lbl_8061F304
 /* 8061F268  3B 60 00 00 */	li r27, 0
 /* 8061F26C  3B C0 00 00 */	li r30, 0
-/* 8061F270  3C 60 80 63 */	lis r3, data_8062EC28@ha
-/* 8061F274  3B A3 EC 28 */	addi r29, r3, data_8062EC28@l
+/* 8061F270  3C 60 80 63 */	lis r3, break_part_no@ha
+/* 8061F274  3B A3 EC 28 */	addi r29, r3, break_part_no@l
 lbl_8061F278:
 /* 8061F278  7C 1D F0 2E */	lwzx r0, r29, r30
 /* 8061F27C  54 03 08 3C */	slwi r3, r0, 1

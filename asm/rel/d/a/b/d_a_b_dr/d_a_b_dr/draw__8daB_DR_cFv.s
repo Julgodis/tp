@@ -86,8 +86,8 @@ lbl_805BB26C:
 /* 805BB2A4  28 00 00 00 */	cmplwi r0, 0
 /* 805BB2A8  41 82 00 68 */	beq lbl_805BB310
 /* 805BB2AC  38 A0 00 01 */	li r5, 1
-/* 805BB2B0  3C 60 80 5C */	lis r3, data_805C7474@ha
-/* 805BB2B4  38 63 74 74 */	addi r3, r3, data_805C7474@l
+/* 805BB2B0  3C 60 80 5C */	lis r3, mBreakDt@ha
+/* 805BB2B4  38 63 74 74 */	addi r3, r3, mBreakDt@l
 /* 805BB2B8  38 63 00 01 */	addi r3, r3, 1
 /* 805BB2BC  48 00 00 40 */	b lbl_805BB2FC
 lbl_805BB2C0:

@@ -86,9 +86,7 @@ struct dPa_followEcallBack {
 	/* 80BE02B0 */ void __defctor();
 };
 
-struct csXyz {
-	/* 80BE02D8 */ ~csXyz();
-	/* 80BE0314 */ csXyz();
+struct dKy_tevstr_c {
 };
 
 struct cXyz {
@@ -97,7 +95,9 @@ struct cXyz {
 	/* 80BE0354 */ cXyz();
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
+	/* 80BE02D8 */ ~csXyz();
+	/* 80BE0314 */ csXyz();
 };
 
 struct dPa_control_c {
@@ -470,7 +470,7 @@ SECTION_DATA static void* lit_4818[3] = {
 };
 
 /* 80BE20B0-80BE20E0 0030+00 s=1 e=0 z=0  None .data      l_exeFunc$4814                                               */
-SECTION_DATA static u8 data_80BE20B0[48] = {
+SECTION_DATA static u8 l_exeFunc[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -512,7 +512,7 @@ SECTION_DATA static void* lit_4826[3] = {
 };
 
 /* 80BE211C-80BE2158 003C+00 s=1 e=0 z=0  None .data      l_completeDemoFunc$4821                                      */
-SECTION_DATA static u8 data_80BE211C[60] = {
+SECTION_DATA static u8 l_completeDemoFunc[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -793,14 +793,14 @@ SECTION_RODATA static u32 const lit_4183 = 0x42960000;
 SECTION_RODATA static u32 const lit_4252 = 0x43960000;
 
 /* 80BE2010-80BE2018 0006+02 s=1 e=0 z=0  None .rodata    target_rel_angle$4296                                        */
-SECTION_RODATA static u8 const data_80BE2010[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const target_rel_angle[6 + 2 /* padding */] = {
 	0xC0, 0x00, 0x00, 0x00, 0x40, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80BE2018-80BE2020 0006+02 s=1 e=0 z=0  None .rodata    target_angle_x$4297                                          */
-SECTION_RODATA static u8 const data_80BE2018[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const target_angle_x[6 + 2 /* padding */] = {
 	0x00, 0x00, 0x20, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00,

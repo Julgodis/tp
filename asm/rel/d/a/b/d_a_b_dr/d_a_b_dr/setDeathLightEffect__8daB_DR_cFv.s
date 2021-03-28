@@ -9,8 +9,8 @@ lbl_805BBFC0:
 /* 805BBFDC  3B C0 00 00 */	li r30, 0
 /* 805BBFE0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 805BBFE4  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
-/* 805BBFE8  3C 60 80 5C */	lis r3, data_805C7554@ha
-/* 805BBFEC  3B 83 75 54 */	addi r28, r3, data_805C7554@l
+/* 805BBFE8  3C 60 80 5C */	lis r3, w_eff_id@ha
+/* 805BBFEC  3B 83 75 54 */	addi r28, r3, w_eff_id@l
 /* 805BBFF0  3C 60 80 5C */	lis r3, lit_4012@ha
 /* 805BBFF4  3B A3 6C A8 */	addi r29, r3, lit_4012@l
 lbl_805BBFF8:

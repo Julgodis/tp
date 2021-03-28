@@ -15,8 +15,8 @@ lbl_804F11D8:
 /* 804F120C  3A E0 00 00 */	li r23, 0
 /* 804F1210  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 804F1214  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 804F1218  3C 60 80 50 */	lis r3, data_804FA9E0@ha
-/* 804F121C  3B A3 A9 E0 */	addi r29, r3, data_804FA9E0@l
+/* 804F1218  3C 60 80 50 */	lis r3, fire_name@ha
+/* 804F121C  3B A3 A9 E0 */	addi r29, r3, fire_name@l
 /* 804F1220  3C 60 80 50 */	lis r3, lit_3777@ha
 /* 804F1224  3B C3 A6 BC */	addi r30, r3, lit_3777@l
 lbl_804F1228:

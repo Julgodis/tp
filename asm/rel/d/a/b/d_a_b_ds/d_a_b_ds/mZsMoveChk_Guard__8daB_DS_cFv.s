@@ -29,8 +29,8 @@ lbl_805CC454:
 /* 805CC4C0  D8 01 00 88 */	stfd f0, 0x88(r1)
 /* 805CC4C4  80 C1 00 8C */	lwz r6, 0x8c(r1)
 /* 805CC4C8  38 A1 00 0C */	addi r5, r1, 0xc
-/* 805CC4CC  3C 60 80 5E */	lis r3, data_805DD474@ha
-/* 805CC4D0  38 63 D4 74 */	addi r3, r3, data_805DD474@l
+/* 805CC4CC  3C 60 80 5E */	lis r3, mGuardDt@ha
+/* 805CC4D0  38 63 D4 74 */	addi r3, r3, mGuardDt@l
 /* 805CC4D4  38 00 00 05 */	li r0, 5
 /* 805CC4D8  7C 09 03 A6 */	mtctr r0
 lbl_805CC4DC:

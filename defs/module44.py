@@ -68,7 +68,7 @@ SYMBOLS = [
 	{'addr':0x80499B18,'size':32,'pad':0,'label':"l_daVrbox2_Method",'name':"l_daVrbox2_Method",'lib':-1,'tu':3,'section':4,'r':[1,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x80499B38,'size':48,'pad':0,'label':"g_profile_VRBOX2",'name':"g_profile_VRBOX2",'lib':-1,'tu':3,'section':4,'r':[0,0,1],'sh':[0,0,0],'type':"ReferenceArray"},
 	{'addr':0x80499B68,'size':12,'pad':0,'label':"__vt__12J3DFrameCtrl",'name':"__vt__12J3DFrameCtrl",'lib':-1,'tu':3,'section':4,'r':[2,0,0],'sh':[0,0,0],'type':"ReferenceArray"},
-	{'addr':0x80499B78,'size':2,'pad':2,'label':"data_80499B78",'name':"mangZ$3688",'lib':-1,'tu':3,'section':5,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
+	{'addr':0x80499B78,'size':2,'pad':2,'label':"mangZ",'name':"mangZ$3688",'lib':-1,'tu':3,'section':5,'r':[1,0,0],'sh':[0,0,0],'type':"ArbitraryData"},
 ]
 
 # Names
@@ -113,6 +113,6 @@ SYMBOL_NAMES = {
 	"l_daVrbox2_Method":37,
 	"g_profile_VRBOX2":38,
 	"__vt__12J3DFrameCtrl":39,
-	"data_80499B78":40,
+	"mangZ":40,
 }
 

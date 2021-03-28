@@ -64,8 +64,8 @@ lbl_800DCA80:
 /* 800DCB78  48 26 A2 D5 */	bl PSMTXMultVecSR
 /* 800DCB7C  80 7C 06 78 */	lwz r3, 0x678(r28)
 /* 800DCB80  38 63 00 24 */	addi r3, r3, 0x24
-/* 800DCB84  3C 80 80 39 */	lis r4, data_803918B8@ha
-/* 800DCB88  38 84 18 B8 */	addi r4, r4, data_803918B8@l
+/* 800DCB84  3C 80 80 39 */	lis r4, localCenter@ha
+/* 800DCB88  38 84 18 B8 */	addi r4, r4, localCenter@l
 /* 800DCB8C  38 A1 00 48 */	addi r5, r1, 0x48
 /* 800DCB90  48 26 A1 DD */	bl PSMTXMultVec
 /* 800DCB94  38 7C 35 1C */	addi r3, r28, 0x351c

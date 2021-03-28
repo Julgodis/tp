@@ -36,8 +36,8 @@ lbl_805887DC:
 /* 80588824  7F C4 F3 78 */	mr r4, r30
 /* 80588828  88 1E 0B EC */	lbz r0, 0xbec(r30)
 /* 8058882C  54 00 10 3A */	slwi r0, r0, 2
-/* 80588830  3C A0 80 59 */	lis r5, data_8058AD50@ha
-/* 80588834  38 A5 AD 50 */	addi r5, r5, data_8058AD50@l
+/* 80588830  3C A0 80 59 */	lis r5, l_evName@ha
+/* 80588834  38 A5 AD 50 */	addi r5, r5, l_evName@l
 /* 80588838  7C A5 00 2E */	lwzx r5, r5, r0
 /* 8058883C  38 C0 00 FF */	li r6, 0xff
 /* 80588840  4B AB EF 18 */	b getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc

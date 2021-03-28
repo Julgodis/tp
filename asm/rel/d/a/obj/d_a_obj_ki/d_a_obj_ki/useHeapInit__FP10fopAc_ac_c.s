@@ -98,8 +98,8 @@ lbl_80C445E4:
 /* 80C445E8  38 63 4B 88 */	addi r3, r3, stringBase0@l
 /* 80C445EC  88 1F 05 70 */	lbz r0, 0x570(r31)
 /* 80C445F0  54 00 10 3A */	slwi r0, r0, 2
-/* 80C445F4  3C 80 80 C4 */	lis r4, data_80C44B98@ha
-/* 80C445F8  38 84 4B 98 */	addi r4, r4, data_80C44B98@l
+/* 80C445F4  3C 80 80 C4 */	lis r4, ki_dzb@ha
+/* 80C445F8  38 84 4B 98 */	addi r4, r4, ki_dzb@l
 /* 80C445FC  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80C44600  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 80C44604  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l

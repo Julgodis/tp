@@ -36,8 +36,8 @@ lbl_80BA0084:
 /* 80BA010C  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 80BA0110  C0 03 0C CC */	lfs f0, 0xccc(r3)
 /* 80BA0114  EC 01 00 32 */	fmuls f0, f1, f0
-/* 80BA0118  3C 60 80 BA */	lis r3, data_80BA1358@ha
-/* 80BA011C  D0 03 13 58 */	stfs f0, data_80BA1358@l(r3)
+/* 80BA0118  3C 60 80 BA */	lis r3, l_wheelMinR@ha
+/* 80BA011C  D0 03 13 58 */	stfs f0, l_wheelMinR@l(r3)
 /* 80BA0120  38 00 00 01 */	li r0, 1
 /* 80BA0124  98 04 00 00 */	stb r0, 0(r4)
 lbl_80BA0128:
@@ -49,8 +49,8 @@ lbl_80BA0128:
 /* 80BA013C  4B 7C 4F 94 */	b abs
 /* 80BA0140  38 03 F3 34 */	addi r0, r3, -3276
 /* 80BA0144  C0 5F 00 20 */	lfs f2, 0x20(r31)
-/* 80BA0148  3C 60 80 BA */	lis r3, data_80BA1358@ha
-/* 80BA014C  C0 23 13 58 */	lfs f1, data_80BA1358@l(r3)
+/* 80BA0148  3C 60 80 BA */	lis r3, l_wheelMinR@ha
+/* 80BA014C  C0 23 13 58 */	lfs f1, l_wheelMinR@l(r3)
 /* 80BA0150  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 80BA0154  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 80BA0158  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c

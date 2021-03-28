@@ -14,8 +14,8 @@ lbl_807A7A08:
 /* 807A7A38  3B E0 00 00 */	li r31, 0
 /* 807A7A3C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 807A7A40  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 807A7A44  3C 60 80 7B */	lis r3, data_807AFEF4@ha
-/* 807A7A48  3B A3 FE F4 */	addi r29, r3, data_807AFEF4@l
+/* 807A7A44  3C 60 80 7B */	lis r3, l_SW_DIVE_EFFECT_ID@ha
+/* 807A7A48  3B A3 FE F4 */	addi r29, r3, l_SW_DIVE_EFFECT_ID@l
 /* 807A7A4C  3C 60 80 7B */	lis r3, lit_3911@ha
 /* 807A7A50  3B C3 FD 34 */	addi r30, r3, lit_3911@l
 lbl_807A7A54:

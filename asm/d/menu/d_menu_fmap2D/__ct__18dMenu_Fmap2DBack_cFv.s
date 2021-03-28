@@ -431,8 +431,8 @@ lbl_801CFBC0:
 /* 801CFBF4  3B C0 00 00 */	li r30, 0
 /* 801CFBF8  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801CFBFC  3B 83 FC 60 */	addi r28, r3, g_fmapHIO@l
-/* 801CFC00  3C 60 80 39 */	lis r3, data_80396248@ha
-/* 801CFC04  3B A3 62 48 */	addi r29, r3, data_80396248@l
+/* 801CFC00  3C 60 80 39 */	lis r3, cur_tag_3868@ha
+/* 801CFC04  3B A3 62 48 */	addi r29, r3, cur_tag_3868@l
 lbl_801CFC08:
 /* 801CFC08  80 7F 0C D8 */	lwz r3, 0xcd8(r31)
 /* 801CFC0C  7C 9D F2 14 */	add r4, r29, r30

@@ -303,7 +303,7 @@ SECTION_DATA static void* lit_5000[65] = {
 };
 
 /* 803BFCAC-803BFDC4 0118+00 s=1 e=0 z=0  None .data      mpIconName$5045                                              */
-SECTION_DATA static void* data_803BFCAC[70] = {
+SECTION_DATA static void* mpIconName[70] = {
 	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x4B),
 	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x57),
 	(void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x63),

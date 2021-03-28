@@ -16,8 +16,8 @@ lbl_80964AD8:
 /* 80964B10  28 00 00 00 */	cmplwi r0, 0
 /* 80964B14  41 82 00 64 */	beq lbl_80964B78
 /* 80964B18  54 80 18 38 */	slwi r0, r4, 3
-/* 80964B1C  3C 80 80 97 */	lis r4, data_809685CC@ha
-/* 80964B20  38 84 85 CC */	addi r4, r4, data_809685CC@l
+/* 80964B1C  3C 80 80 97 */	lis r4, scoopAnmData@ha
+/* 80964B20  38 84 85 CC */	addi r4, r4, scoopAnmData@l
 /* 80964B24  7C A4 00 2E */	lwzx r5, r4, r0
 /* 80964B28  2C 05 00 00 */	cmpwi r5, 0
 /* 80964B2C  40 81 00 24 */	ble lbl_80964B50

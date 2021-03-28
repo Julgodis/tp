@@ -46,7 +46,7 @@ lbl_80168744:
 /* 801687F4  7C 00 07 75 */	extsb. r0, r0
 /* 801687F8  40 82 00 14 */	bne lbl_8016880C
 /* 801687FC  C0 02 9D 6C */	lfs f0, lit_10550(r2)
-/* 80168800  D0 0D 8A B4 */	stfs f0, data_80451034(r13)
+/* 80168800  D0 0D 8A B4 */	stfs f0, JumpCushion(r13)
 /* 80168804  38 00 00 01 */	li r0, 1
 /* 80168808  98 0D 8A B8 */	stb r0, struct_80451038+0x0(r13)
 lbl_8016880C:
@@ -2393,7 +2393,7 @@ lbl_8016AA4C:
 /* 8016AA88  EC 21 00 24 */	fdivs f1, f1, f0
 /* 8016AA8C  C0 42 9D D0 */	lfs f2, lit_10575(r2)
 /* 8016AA90  4B F1 D6 AD */	bl rationalBezierRatio__8dCamMathFff
-/* 8016AA94  C0 0D 8A B4 */	lfs f0, data_80451034(r13)
+/* 8016AA94  C0 0D 8A B4 */	lfs f0, JumpCushion(r13)
 /* 8016AA98  C0 5F 04 08 */	lfs f2, 0x408(r31)
 /* 8016AA9C  EC 00 10 28 */	fsubs f0, f0, f2
 /* 8016AAA0  EC 00 00 72 */	fmuls f0, f0, f1
@@ -3614,7 +3614,7 @@ lbl_8016BC38:
 /* 8016BC64  D0 1F 04 38 */	stfs f0, 0x438(r31)
 /* 8016BC68  C0 5F 04 60 */	lfs f2, 0x460(r31)
 /* 8016BC6C  C0 22 9C E8 */	lfs f1, lit_6630(r2)
-/* 8016BC70  C0 0D 8A B4 */	lfs f0, data_80451034(r13)
+/* 8016BC70  C0 0D 8A B4 */	lfs f0, JumpCushion(r13)
 /* 8016BC74  EC 00 10 28 */	fsubs f0, f0, f2
 /* 8016BC78  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8016BC7C  EC 02 00 2A */	fadds f0, f2, f0

@@ -38,7 +38,7 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct Z2Creature {
@@ -47,10 +47,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -67,17 +67,17 @@ struct daNpcWrestler_c {
 	/* 80B301BC */ void checkStartUp();
 };
 
-struct J3DAnmTransformKey {
+struct _GXColorS10 {
 };
 
-struct _GXColorS10 {
+struct J3DAnmTexPattern {
+	/* 8032AF50 */ void getTexNo(u16, u16*) const;
 };
 
 struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTexPattern {
-	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {

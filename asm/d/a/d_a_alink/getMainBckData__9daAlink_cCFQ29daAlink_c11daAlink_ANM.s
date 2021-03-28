@@ -13,12 +13,12 @@ lbl_800AC450:
 /* 800AC47C  40 82 00 28 */	bne lbl_800AC4A4
 /* 800AC480  2C 1E 00 19 */	cmpwi r30, 0x19
 /* 800AC484  40 82 00 0C */	bne lbl_800AC490
-/* 800AC488  38 62 98 78 */	la r3, data_80453278(r2) /* 80453278-_SDA2_BASE_ */
+/* 800AC488  38 62 98 78 */	la r3, kandelaarAnm(r2) /* 80453278-_SDA2_BASE_ */
 /* 800AC48C  48 00 00 B4 */	b lbl_800AC540
 lbl_800AC490:
 /* 800AC490  2C 1E 00 48 */	cmpwi r30, 0x48
 /* 800AC494  40 82 00 10 */	bne lbl_800AC4A4
-/* 800AC498  38 62 98 78 */	la r3, data_80453278(r2) /* 80453278-_SDA2_BASE_ */
+/* 800AC498  38 62 98 78 */	la r3, kandelaarAnm(r2) /* 80453278-_SDA2_BASE_ */
 /* 800AC49C  38 63 00 04 */	addi r3, r3, 4
 /* 800AC4A0  48 00 00 A0 */	b lbl_800AC540
 lbl_800AC4A4:

@@ -62,10 +62,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -83,10 +83,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -463,17 +463,17 @@ SECTION_RODATA static u8 const lit_3858[8] = {
 SECTION_RODATA static u32 const lit_3915 = 0x41200000;
 
 /* 80BA1190-80BA119C 000C+00 s=1 e=0 z=0  None .rodata    l_hibanaOffset$3954                                          */
-SECTION_RODATA static u8 const data_80BA1190[12] = {
+SECTION_RODATA static u8 const l_hibanaOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x43, 0x16, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
 };
 
 /* 80BA119C-80BA11A8 000C+00 s=1 e=0 z=0  None .rodata    l_shotOffset$3961                                            */
-SECTION_RODATA static u8 const data_80BA119C[12] = {
+SECTION_RODATA static u8 const l_shotOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x43, 0x02, 0x00, 0x00, 0xC2, 0xC8, 0x00, 0x00,
 };
 
 /* 80BA11A8-80BA11B4 000C+00 s=1 e=0 z=0  None .rodata    l_shotSmokeOffset$3962                                       */
-SECTION_RODATA static u8 const data_80BA11A8[12] = {
+SECTION_RODATA static u8 const l_shotSmokeOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -493,7 +493,7 @@ SECTION_RODATA static u32 const lit_4108 = 0x43520000;
 SECTION_RODATA static u32 const lit_4109 = 0x42200000;
 
 /* 80BA11C8-80BA11D4 000C+00 s=1 e=0 z=0  None .rodata    l_cc_offset$4147                                             */
-SECTION_RODATA static u8 const data_80BA11C8[12] = {
+SECTION_RODATA static u8 const l_cc_offset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00,
 };
 
@@ -573,7 +573,7 @@ SECTION_DATA static u8 l_cc_cyl_src[68] = {
 };
 
 /* 80BA1228-80BA1230 0008+00 s=1 e=0 z=0  None .data      l_offsetAngle$3829                                           */
-SECTION_DATA static u8 data_80BA1228[8] = {
+SECTION_DATA static u8 l_offsetAngle[8] = {
 	0x00, 0x00, 0xC0, 0x00, 0x80, 0x00, 0x40, 0x00,
 };
 
@@ -638,7 +638,7 @@ u8 lit_1010[1 + 3 /* padding */];
 u8 lit_1009[1 + 3 /* padding */];
 
 /* 80BA1358-80BA135C 0004+00 s=1 e=0 z=0  None .bss       l_wheelMinR$3836                                             */
-static u8 data_80BA1358[4];
+static u8 l_wheelMinR[4];
 
 /* 80BA135C-80BA1360 0004+00 s=1 e=0 z=0  None .bss       None                                                         */
 static u8 data_80BA135C[4];
@@ -670,7 +670,7 @@ asm void daObjYtaihou_c::rotateCheck() {
 static u8 lit_3951[12 + 4 /* padding */];
 
 /* 80BA1370-80BA137C 000C+00 s=1 e=0 z=0  None .bss       l_effectScale$3950                                           */
-static u8 data_80BA1370[12];
+static u8 l_effectScale[12];
 
 /* 80BA045C-80BA0964 0508+00 s=1 e=0 z=0  None .text      shotCheck__14daObjYtaihou_cFv                                */
 #pragma push

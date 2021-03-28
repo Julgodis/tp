@@ -37,13 +37,13 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTevRegKey {
 };
 
 struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmTextureSRTKey {
 };
 
 struct J3DMaterialTable {
@@ -64,19 +64,19 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -135,10 +135,10 @@ struct daNpcF_ActorMngr_c {
 struct _GXColorS10 {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daNpcChat_c {
@@ -1078,7 +1078,7 @@ SECTION_RODATA static u8 const m__17daNpcChat_Param_c[108] = {
 };
 
 /* 80986DA8-80986F10 0168+00 s=1 e=0 z=0  None .rodata    a_transScaleTbl$4174                                         */
-SECTION_RODATA static u8 const data_80986DA8[360] = {
+SECTION_RODATA static u8 const a_transScaleTbl[360] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 	0x3F, 0x99, 0x63, 0x54, 0x40, 0x0B, 0x18, 0x48, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x0E, 0xE0, 0xA7,
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x73, 0x33, 0x33, 0x3F, 0x80, 0x00, 0x00,
@@ -1165,7 +1165,7 @@ SECTION_RODATA static u32 const lit_5146 = 0x43360B61;
 SECTION_RODATA static u32 const lit_5348 = 0x41700000;
 
 /* 80986F64-80986FCC 0068+00 s=1 e=0 z=0  None .rodata    a_jntNumTbl$5570                                             */
-SECTION_RODATA static u8 const data_80986F64[104] = {
+SECTION_RODATA static u8 const a_jntNumTbl[104] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x07, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x00, 0x00, 0x00, 0x0B, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x0B,
 	0x00, 0x00, 0x00, 0x07, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x0B,
@@ -3996,7 +3996,7 @@ static u8 lit_4460[12];
 static u8 lit_4461[12];
 
 /* 8098BC3C-8098BDA4 0168+00 s=1 e=0 z=0  None .bss       a_eyeOfsTbl$4429                                             */
-static u8 data_8098BC3C[360];
+static u8 a_eyeOfsTbl[360];
 
 /* 809814DC-80981E90 09B4+00 s=1 e=0 z=0  None .text      setAttention__11daNpcChat_cFi                                */
 #pragma push

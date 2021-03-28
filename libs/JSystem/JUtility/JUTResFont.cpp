@@ -23,9 +23,6 @@ struct JUtility {
 
 };
 
-struct JKRHeap {
-};
-
 struct JUTFont {
 	struct TWidth {
 	};
@@ -35,6 +32,9 @@ struct JUTFont {
 	/* 802E0108 */ bool isLeadByte_1Byte(int);
 	/* 802E0110 */ bool isLeadByte_2Byte(int);
 	/* 802E0118 */ void isLeadByte_ShiftJIS(int);
+};
+
+struct JKRHeap {
 };
 
 struct JUTResFont {
@@ -264,7 +264,7 @@ SECTION_RODATA void* const saoAboutEncoding___10JUTResFont[3] = {
 };
 
 /* 8039D39C-8039D45C 00BE+02 s=1 e=0 z=0  None .rodata    halftofull$726                                               */
-SECTION_RODATA static u8 const data_8039D39C[190 + 2 /* padding */] = {
+SECTION_RODATA static u8 const halftofull[190 + 2 /* padding */] = {
 	0x81, 0x40, 0x81, 0x49, 0x81, 0x68, 0x81, 0x94, 0x81, 0x90, 0x81, 0x93, 0x81, 0x95, 0x81, 0x66,
 	0x81, 0x69, 0x81, 0x6A, 0x81, 0x96, 0x81, 0x7B, 0x81, 0x43, 0x81, 0x7C, 0x81, 0x44, 0x81, 0x5E,
 	0x82, 0x4F, 0x82, 0x50, 0x82, 0x51, 0x82, 0x52, 0x82, 0x53, 0x82, 0x54, 0x82, 0x55, 0x82, 0x56,

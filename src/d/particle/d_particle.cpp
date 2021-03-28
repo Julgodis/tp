@@ -63,21 +63,16 @@ struct dPa_wbPcallBack_c {
 struct _GXColor {
 };
 
-struct JPAEmitterCallBack {
-	/* 80050368 */ void execute(JPABaseEmitter*);
-	/* 8005036C */ void draw(JPABaseEmitter*);
-	/* 80050370 */ void drawAfter(JPABaseEmitter*);
-	/* 80050374 */ void executeAfter(JPABaseEmitter*);
-	/* 8027E6A4 */ ~JPAEmitterCallBack();
-};
-
-struct JPADrawInfo {
+struct dKy_tevstr_c {
 };
 
 struct JPAParticleCallBack {
 	/* 800183D4 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 800183D8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 8027EFA4 */ ~JPAParticleCallBack();
+};
+
+struct JPADrawInfo {
 };
 
 struct ResTIMG {
@@ -88,6 +83,14 @@ struct JPAResourceManager {
 	/* 80273EA8 */ void checkUserIndexDuplication(u16) const;
 	/* 80273EEC */ void swapTexture(ResTIMG const*, char const*);
 	/* 80273FCC */ void getResUserWork(u16) const;
+};
+
+struct JPAEmitterCallBack {
+	/* 80050368 */ void execute(JPABaseEmitter*);
+	/* 8005036C */ void draw(JPABaseEmitter*);
+	/* 80050370 */ void drawAfter(JPABaseEmitter*);
+	/* 80050374 */ void executeAfter(JPABaseEmitter*);
+	/* 8027E6A4 */ ~JPAEmitterCallBack();
 };
 
 struct JGeometry {
@@ -107,9 +110,6 @@ struct JPAEmitterManager {
 	/* 8027E220 */ void forceDeleteAllEmitter();
 	/* 8027E344 */ void entryResourceManager(JPAResourceManager*, u8);
 	/* 8027E354 */ void clearResourceManager(u8);
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dPa_simpleEcallBack {
@@ -344,12 +344,12 @@ struct J3DShape {
 	/* 80315300 */ void loadPreDrawSetting() const;
 };
 
-struct J3DAnmTexPattern {
-	/* 8032B09C */ void searchUpdateMaterialID(J3DModelData*);
-};
-
 struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct J3DAnmTexPattern {
+	/* 8032B09C */ void searchUpdateMaterialID(J3DModelData*);
 };
 
 struct J3DMaterialTable {
@@ -768,20 +768,20 @@ SECTION_DATA static u8 l_lifeBallColor[12] = {
 };
 
 /* 803A8314-803A832C 0018+00 s=1 e=0 z=0  None .data      effectIDTable$5499                                           */
-SECTION_DATA static u8 data_803A8314[24] = {
+SECTION_DATA static u8 effectIDTable[24] = {
 	0x00, 0xE6, 0x00, 0xE7, 0x01, 0x43, 0x01, 0x46, 0x01, 0xAF, 0x01, 0xB8, 0x88, 0x1B, 0x88, 0x1E,
 	0x88, 0x1C, 0x88, 0x1F, 0x86, 0xAE, 0x86, 0xAF,
 };
 
 /* 803A832C-803A835C 0030+00 s=1 e=0 z=0  None .data      ringID$5531                                                  */
-SECTION_DATA static u8 data_803A832C[48] = {
+SECTION_DATA static u8 ringID[48] = {
 	0x00, 0xE7, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x46, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x01, 0xAF, 0x01, 0xB0, 0x01, 0xB1, 0xFF, 0xFF, 0x88, 0x1E, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x88, 0x1F, 0x88, 0x20, 0xFF, 0xFF, 0xFF, 0xFF, 0x86, 0xAF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 };
 
 /* 803A835C-803A838C 0030+00 s=1 e=0 z=0  None .data      normalID$5532                                                */
-SECTION_DATA static u8 data_803A835C[48] = {
+SECTION_DATA static u8 normalID[48] = {
 	0x00, 0xE6, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x43, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB, 0x88, 0x1B, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x88, 0x1C, 0x88, 0x1D, 0xFF, 0xFF, 0xFF, 0xFF, 0x86, 0xAE, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -1581,7 +1581,7 @@ static u8 lit_4053[12];
 static u8 lit_4054[12];
 
 /* 80424728-80424734 000C+00 s=1 e=0 z=0  None .bss       pos$4424                                                     */
-static u8 data_80424728[12];
+static u8 pos[12];
 
 /* 8004B064-8004B168 0104+00 s=2 e=0 z=0  None .text      createEmitter__19dPa_simpleEcallBackFP17JPAEmitterManager    */
 #pragma push
@@ -1934,7 +1934,7 @@ asm void dPa_control_c::createRoomScene() {
 static u8 lit_4742[12];
 
 /* 804248AC-804248D0 0020+04 s=1 e=0 z=0  None .bss       jpcName$4821                                                 */
-static u8 data_804248AC[32 + 4 /* padding */];
+static u8 jpcName[32 + 4 /* padding */];
 
 /* 8004BDFC-8004BEB0 00B4+00 s=0 e=1 z=0  None .text      readScene__13dPa_control_cFUcPP21mDoDvdThd_toMainRam_c       */
 #pragma push
@@ -2052,7 +2052,7 @@ asm void dPa_control_c::setHitMark(u16 param_0, fopAc_ac_c* param_1, cXyz const*
 
 /* ############################################################################################## */
 /* 80451F90-80451F94 0004+00 s=1 e=0 z=0  None .sdata2    particleID$5076                                              */
-SECTION_SDATA2 static u8 data_80451F90[4] = {
+SECTION_SDATA2 static u8 particleID[4] = {
 	0x01, 0xB3, 0x01, 0xB2,
 };
 

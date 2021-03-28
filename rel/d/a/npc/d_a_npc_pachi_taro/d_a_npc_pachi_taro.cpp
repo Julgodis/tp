@@ -11,7 +11,10 @@
 // Types:
 // 
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Vec {
@@ -23,13 +26,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -54,19 +54,19 @@ struct daNpcT_MotionSeqMngr_c {
 struct daNpcT_faceMotionAnmData_c {
 };
 
-struct daNpcT_motionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct J3DJoint {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80AA06E0 */ ~cXyz();
 	/* 80AA0D70 */ cXyz();
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct J3DJoint {
 };
 
 struct daNpc_Pachi_Taro_c {
@@ -817,7 +817,7 @@ SECTION_RODATA static u32 const lit_4374 = 0x47800000;
 SECTION_RODATA static u32 const lit_4375 = 0x3E4CCCCD;
 
 /* 80AA16B0-80AA16B8 0008+00 s=1 e=0 z=0  None .rodata    bmdTypeList$4485                                             */
-SECTION_RODATA static u8 const data_80AA16B0[8] = {
+SECTION_RODATA static u8 const bmdTypeList[8] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 };
 
@@ -857,7 +857,7 @@ SECTION_RODATA static u8 const lit_5013[8] = {
 };
 
 /* 80AA16EC-80AA16F4 0008+00 s=1 e=0 z=0  None .rodata    jointNo$5051                                                 */
-SECTION_RODATA static u8 const data_80AA16EC[8] = {
+SECTION_RODATA static u8 const jointNo[8] = {
 	0x00, 0x00, 0x00, 0x0F, 0x00, 0x00, 0x00, 0x0F,
 };
 
@@ -974,7 +974,7 @@ SECTION_RODATA static u8 const lit_5757[12] = {
 };
 
 /* 80AA17CC-80AA17D8 000C+00 s=1 e=0 z=0  None .rodata    sHitMsg$5762                                                 */
-SECTION_RODATA static u8 const data_80AA17CC[12] = {
+SECTION_RODATA static u8 const sHitMsg[12] = {
 	0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00, 0x4A, 0x00, 0x00, 0x00, 0x49,
 };
 

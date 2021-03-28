@@ -32,7 +32,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
@@ -41,13 +44,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -82,16 +82,16 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 80B5CDC0 */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct daNpcT_evtData_c {
 };
 
 struct daNpcT_motionAnmData_c {
 };
 
-struct daNpcT_evtData_c {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpc_ykM_c {
@@ -1017,7 +1017,7 @@ SECTION_RODATA static u8 const m__17daNpc_ykM_Param_c[200] = {
 };
 
 /* 80B5D85C-80B5D87C 0020+00 s=1 e=0 z=0  None .rodata    heapSize$4109                                                */
-SECTION_RODATA static u8 const data_80B5D85C[32] = {
+SECTION_RODATA static u8 const heapSize[32] = {
 	0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x54, 0x60, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x44, 0x60,
 	0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x80, 0x00,
 };
@@ -1055,7 +1055,7 @@ SECTION_RODATA static u32 const lit_4393 = 0x47800000;
 SECTION_RODATA static u32 const lit_4394 = 0x3E4CCCCD;
 
 /* 80B5D8A4-80B5D8B0 000C+00 s=1 e=0 z=0  None .rodata    bmdTypeList$4504                                             */
-SECTION_RODATA static u8 const data_80B5D8A4[12] = {
+SECTION_RODATA static u8 const bmdTypeList[12] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03,
 };
 
@@ -1169,7 +1169,7 @@ SECTION_RODATA static u8 const lit_5600[16] = {
 SECTION_RODATA static u32 const lit_5701 = 0x432A0000;
 
 /* 80B5D958-80B5D964 000C+00 s=1 e=0 z=0  None .rodata    jointNo$5709                                                 */
-SECTION_RODATA static u8 const data_80B5D958[12] = {
+SECTION_RODATA static u8 const jointNo[12] = {
 	0x00, 0x00, 0x00, 0x14, 0x00, 0x00, 0x00, 0x1C, 0x00, 0x00, 0x00, 0x14,
 };
 
@@ -1283,12 +1283,12 @@ SECTION_RODATA u8 const lit_7385[8] = {
 };
 
 /* 80B5DA00-80B5DA10 0010+00 s=1 e=0 z=0  None .rodata    motionTbl2$7522                                              */
-SECTION_RODATA static u8 const data_80B5DA00[16] = {
+SECTION_RODATA static u8 const motionTbl2[16] = {
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x02,
 };
 
 /* 80B5DA10-80B5DA18 0008+00 s=1 e=0 z=0  None .rodata    motionTbl1$7524                                              */
-SECTION_RODATA static u8 const data_80B5DA10[8] = {
+SECTION_RODATA static u8 const motionTbl1[8] = {
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x0D,
 };
 
@@ -1785,7 +1785,7 @@ SECTION_DATA static void* lit_5122[3] = {
 };
 
 /* 80B5E880-80B5EA18 0198+00 s=1 e=0 z=0  None .data      fishAnmData$5818                                             */
-SECTION_DATA static u8 data_80B5E880[408] = {
+SECTION_DATA static u8 fishAnmData[408] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
 	0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
 	0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
@@ -1815,7 +1815,7 @@ SECTION_DATA static u8 data_80B5E880[408] = {
 };
 
 /* 80B5EA18-80B5EA3C 0024+00 s=1 e=0 z=0  None .data      leafAnmData$5831                                             */
-SECTION_DATA static u8 data_80B5EA18[36] = {
+SECTION_DATA static u8 leafAnmData[36] = {
 	0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x0A,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x02,
 	0x00, 0x00, 0x00, 0x04,

@@ -12,8 +12,8 @@ lbl_8003C85C:
 /* 8003C884  3F 83 00 02 */	addis r28, r3, 2
 /* 8003C888  3C 60 80 38 */	lis r3, d_map_d_map_path__stringBase0@ha
 /* 8003C88C  3B A3 9C 4C */	addi r29, r3, d_map_d_map_path__stringBase0@l
-/* 8003C890  3C 60 80 38 */	lis r3, data_80379C30@ha
-/* 8003C894  3B C3 9C 30 */	addi r30, r3, data_80379C30@l
+/* 8003C890  3C 60 80 38 */	lis r3, data@ha
+/* 8003C894  3B C3 9C 30 */	addi r30, r3, data@l
 /* 8003C898  3B 9C C2 F8 */	addi r28, r28, -15624
 lbl_8003C89C:
 /* 8003C89C  38 60 00 20 */	li r3, 0x20

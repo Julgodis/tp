@@ -114,8 +114,8 @@ lbl_80C90704:
 /* 80C90738  7F C6 F3 78 */	mr r6, r30
 /* 80C9073C  4B 3F 31 24 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80C90740  38 7E 05 C0 */	addi r3, r30, 0x5c0
-/* 80C90744  3C 80 80 C9 */	lis r4, data_80C90984@ha
-/* 80C90748  38 84 09 84 */	addi r4, r4, data_80C90984@l
+/* 80C90744  3C 80 80 C9 */	lis r4, cc_sph_src@ha
+/* 80C90748  38 84 09 84 */	addi r4, r4, cc_sph_src@l
 /* 80C9074C  4B 3F 42 E8 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80C90750  38 1E 05 84 */	addi r0, r30, 0x584
 /* 80C90754  90 1E 06 04 */	stw r0, 0x604(r30)

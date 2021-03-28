@@ -89,8 +89,8 @@ lbl_80765C8C:
 /* 80765CB4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80765CB8  90 81 00 18 */	stw r4, 0x18(r1)
 /* 80765CBC  38 80 00 00 */	li r4, 0
-/* 80765CC0  3C A0 80 77 */	lis r5, data_8076B730@ha
-/* 80765CC4  38 A5 B7 30 */	addi r5, r5, data_8076B730@l
+/* 80765CC0  3C A0 80 77 */	lis r5, ap_name_4291@ha
+/* 80765CC4  38 A5 B7 30 */	addi r5, r5, ap_name_4291@l
 /* 80765CC8  7C A5 E2 2E */	lhzx r5, r5, r28
 /* 80765CCC  38 DD 04 D0 */	addi r6, r29, 0x4d0
 /* 80765CD0  38 FD 01 0C */	addi r7, r29, 0x10c
@@ -110,8 +110,8 @@ lbl_80765CEC:
 /* 80765D04  90 81 00 14 */	stw r4, 0x14(r1)
 /* 80765D08  90 81 00 18 */	stw r4, 0x18(r1)
 /* 80765D0C  38 80 00 00 */	li r4, 0
-/* 80765D10  3C A0 80 77 */	lis r5, data_8076B730@ha
-/* 80765D14  38 A5 B7 30 */	addi r5, r5, data_8076B730@l
+/* 80765D10  3C A0 80 77 */	lis r5, ap_name_4291@ha
+/* 80765D14  38 A5 B7 30 */	addi r5, r5, ap_name_4291@l
 /* 80765D18  7C A5 E2 2E */	lhzx r5, r5, r28
 /* 80765D1C  38 DD 04 D0 */	addi r6, r29, 0x4d0
 /* 80765D20  38 E0 00 00 */	li r7, 0

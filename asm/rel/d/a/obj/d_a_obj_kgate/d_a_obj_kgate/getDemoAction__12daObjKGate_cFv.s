@@ -7,8 +7,8 @@ lbl_8058A508:
 /* 8058A51C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8058A520  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 8058A524  80 84 0B A8 */	lwz r4, 0xba8(r4)
-/* 8058A528  3C A0 80 59 */	lis r5, data_8058ADEC@ha
-/* 8058A52C  38 A5 AD EC */	addi r5, r5, data_8058ADEC@l
+/* 8058A528  3C A0 80 59 */	lis r5, action_table@ha
+/* 8058A52C  38 A5 AD EC */	addi r5, r5, action_table@l
 /* 8058A530  38 C0 00 04 */	li r6, 4
 /* 8058A534  38 E0 00 00 */	li r7, 0
 /* 8058A538  39 00 00 00 */	li r8, 0

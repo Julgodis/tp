@@ -12,8 +12,8 @@ lbl_806B9534:
 /* 806B955C  4B 9C A3 04 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 806B9560  3B 60 00 00 */	li r27, 0
 /* 806B9564  3B E0 00 00 */	li r31, 0
-/* 806B9568  3C 60 80 6C */	lis r3, data_806BB704@ha
-/* 806B956C  3B A3 B7 04 */	addi r29, r3, data_806BB704@l
+/* 806B9568  3C 60 80 6C */	lis r3, ccBodySphSrc@ha
+/* 806B956C  3B A3 B7 04 */	addi r29, r3, ccBodySphSrc@l
 /* 806B9570  3B DA 0F 08 */	addi r30, r26, 0xf08
 lbl_806B9574:
 /* 806B9574  7F 9A FA 14 */	add r28, r26, r31

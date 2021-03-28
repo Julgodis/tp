@@ -399,7 +399,7 @@ SECTION_SDATA static u8 lit_537[5 + 3 /* padding */] = {
 };
 
 /* 80451840-80451848 0004+04 s=1 e=0 z=0  None .sbss      message$351                                                  */
-static u8 data_80451840[4 + 4 /* padding */];
+static u8 message[4 + 4 /* padding */];
 
 /* 8034CE8C-8034D694 0808+00 s=0 e=2 z=0  None .text      VIConfigure                                                  */
 #pragma push

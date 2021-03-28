@@ -31,10 +31,10 @@ struct daCoachFire_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct Vec {
@@ -44,7 +44,7 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
 };
 
 struct dPa_control_c {

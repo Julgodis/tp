@@ -14,9 +14,6 @@
 struct request_of_phase_process_class {
 };
 
-struct J3DModel {
-};
-
 struct Vec {
 };
 
@@ -26,15 +23,18 @@ struct cXyz {
 	/* 8061EA2C */ cXyz();
 };
 
+struct J3DModel {
+};
+
 struct mDoExt_invisibleModel {
 	/* 8000E53C */ void create(J3DModel*, u8);
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -54,19 +54,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {

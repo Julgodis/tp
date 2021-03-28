@@ -383,8 +383,8 @@ lbl_805FBD10:
 /* 805FBD50  38 00 00 01 */	li r0, 1
 /* 805FBD54  98 1B 07 70 */	stb r0, 0x770(r27)
 /* 805FBD58  3A E0 00 00 */	li r23, 0
-/* 805FBD5C  3C 60 80 60 */	lis r3, data_80602B48@ha
-/* 805FBD60  3B 23 2B 48 */	addi r25, r3, data_80602B48@l
+/* 805FBD5C  3C 60 80 60 */	lis r3, e_name_6757@ha
+/* 805FBD60  3B 23 2B 48 */	addi r25, r3, e_name_6757@l
 lbl_805FBD64:
 /* 805FBD64  7C 79 D2 2E */	lhzx r3, r25, r26
 /* 805FBD68  38 9B 04 D0 */	addi r4, r27, 0x4d0
@@ -1209,8 +1209,8 @@ lbl_805FC960:
 /* 805FC9A0  3A C0 00 00 */	li r22, 0
 /* 805FC9A4  3B 00 00 00 */	li r24, 0
 /* 805FC9A8  3B 20 00 00 */	li r25, 0
-/* 805FC9AC  3C 60 80 60 */	lis r3, data_80602B4C@ha
-/* 805FC9B0  3B 43 2B 4C */	addi r26, r3, data_80602B4C@l
+/* 805FC9AC  3C 60 80 60 */	lis r3, e_name_6846@ha
+/* 805FC9B0  3B 43 2B 4C */	addi r26, r3, e_name_6846@l
 lbl_805FC9B4:
 /* 805FC9B4  3A F9 26 80 */	addi r23, r25, 0x2680
 /* 805FC9B8  7C 7B B8 2E */	lwzx r3, r27, r23

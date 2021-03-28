@@ -20,8 +20,8 @@ lbl_804BB0B8:
 /* 804BB100  38 E0 00 64 */	li r7, 0x64
 /* 804BB104  4B EA 6C 5C */	b __construct_array
 /* 804BB108  38 60 00 00 */	li r3, 0
-/* 804BB10C  3C 80 80 4C */	lis r4, func_804BB130@ha
-/* 804BB110  38 84 B1 30 */	addi r4, r4, func_804BB130@l
+/* 804BB10C  3C 80 80 4C */	lis r4, __arraydtor@ha
+/* 804BB110  38 84 B1 30 */	addi r4, r4, __arraydtor@l
 /* 804BB114  38 BF 00 7C */	addi r5, r31, 0x7c
 /* 804BB118  4B FE E4 61 */	bl __register_global_object
 /* 804BB11C  83 E1 00 0C */	lwz r31, 0xc(r1)

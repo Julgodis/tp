@@ -102,10 +102,10 @@ struct dBgS_AcchCir {
 struct dBgS {
 };
 
-struct csXyz {
+struct cXyz {
 };
 
-struct cXyz {
+struct csXyz {
 };
 
 struct dBgS_Acch {

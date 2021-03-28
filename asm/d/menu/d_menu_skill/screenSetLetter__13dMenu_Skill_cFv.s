@@ -83,10 +83,10 @@ lbl_801F8B08:
 /* 801F8B50  3B 00 00 00 */	li r24, 0
 /* 801F8B54  3B C0 00 00 */	li r30, 0
 /* 801F8B58  3B A0 00 00 */	li r29, 0
-/* 801F8B5C  3C 60 80 39 */	lis r3, data_80397D10@ha
-/* 801F8B60  3B 43 7D 10 */	addi r26, r3, data_80397D10@l
-/* 801F8B64  3C 60 80 39 */	lis r3, data_80397CF0@ha
-/* 801F8B68  3B 63 7C F0 */	addi r27, r3, data_80397CF0@l
+/* 801F8B5C  3C 60 80 39 */	lis r3, fame_tag@ha
+/* 801F8B60  3B 43 7D 10 */	addi r26, r3, fame_tag@l
+/* 801F8B64  3C 60 80 39 */	lis r3, name_tag@ha
+/* 801F8B68  3B 63 7C F0 */	addi r27, r3, name_tag@l
 /* 801F8B6C  3C 60 80 39 */	lis r3, d_menu_d_menu_skill__stringBase0@ha
 /* 801F8B70  3B 83 7D B8 */	addi r28, r3, d_menu_d_menu_skill__stringBase0@l
 lbl_801F8B74:

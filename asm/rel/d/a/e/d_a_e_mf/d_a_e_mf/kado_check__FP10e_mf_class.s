@@ -36,8 +36,8 @@ lbl_8070ED10:
 /* 8070ED98  C3 BE 00 F8 */	lfs f29, 0xf8(r30)
 /* 8070ED9C  C3 DE 00 44 */	lfs f30, 0x44(r30)
 /* 8070EDA0  C3 FE 00 FC */	lfs f31, 0xfc(r30)
-/* 8070EDA4  3C 60 80 71 */	lis r3, data_80713BC8@ha
-/* 8070EDA8  3B C3 3B C8 */	addi r30, r3, data_80713BC8@l
+/* 8070EDA4  3C 60 80 71 */	lis r3, kado_check_x@ha
+/* 8070EDA8  3B C3 3B C8 */	addi r30, r3, kado_check_x@l
 lbl_8070EDAC:
 /* 8070EDAC  C0 1C 04 D0 */	lfs f0, 0x4d0(r28)
 /* 8070EDB0  D0 01 00 14 */	stfs f0, 0x14(r1)
@@ -78,8 +78,8 @@ lbl_8070EDAC:
 /* 8070EE3C  4B 96 55 78 */	b LineCross__4cBgSFP11cBgS_LinChk
 /* 8070EE40  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8070EE44  41 82 00 14 */	beq lbl_8070EE58
-/* 8070EE48  3C 60 80 71 */	lis r3, data_80713BC0@ha
-/* 8070EE4C  38 63 3B C0 */	addi r3, r3, data_80713BC0@l
+/* 8070EE48  3C 60 80 71 */	lis r3, kado_bit@ha
+/* 8070EE4C  38 63 3B C0 */	addi r3, r3, kado_bit@l
 /* 8070EE50  7C 03 F8 2E */	lwzx r0, r3, r31
 /* 8070EE54  7F 7B 03 78 */	or r27, r27, r0
 lbl_8070EE58:

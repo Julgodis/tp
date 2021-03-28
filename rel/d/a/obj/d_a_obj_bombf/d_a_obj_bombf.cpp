@@ -28,13 +28,13 @@ struct daObjBombf_c {
 	/* 80BBADF8 */ void draw();
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -234,7 +234,7 @@ asm void daObjBombf_c::setMatrix() {
 
 /* ############################################################################################## */
 /* 80BBAE9C-80BBAEA8 000C+00 s=1 e=0 z=0  None .rodata    bombOffset$3727                                              */
-SECTION_RODATA static u8 const data_80BBAE9C[12] = {
+SECTION_RODATA static u8 const bombOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x40, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 

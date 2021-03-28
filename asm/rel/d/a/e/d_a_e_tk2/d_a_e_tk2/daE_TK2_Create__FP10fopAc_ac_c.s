@@ -133,8 +133,8 @@ lbl_807BBAE8:
 /* 807BBB48  7F C6 F3 78 */	mr r6, r30
 /* 807BBB4C  4B 8C 7D 14 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 807BBB50  38 7E 08 F0 */	addi r3, r30, 0x8f0
-/* 807BBB54  3C 80 80 7C */	lis r4, data_807BBE5C@ha
-/* 807BBB58  38 84 BE 5C */	addi r4, r4, data_807BBE5C@l
+/* 807BBB54  3C 80 80 7C */	lis r4, cc_sph_src@ha
+/* 807BBB58  38 84 BE 5C */	addi r4, r4, cc_sph_src@l
 /* 807BBB5C  4B 8C 8E D8 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 807BBB60  38 1E 08 B4 */	addi r0, r30, 0x8b4
 /* 807BBB64  90 1E 09 34 */	stw r0, 0x934(r30)

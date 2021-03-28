@@ -59,6 +59,13 @@ struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
 };
 
+struct JKRSolidHeap {
+	/* 802D0BF4 */ void adjustSize();
+};
+
+struct JAISoundID {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -66,13 +73,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JKRSolidHeap {
-	/* 802D0BF4 */ void adjustSize();
-};
-
-struct JAISoundID {
 };
 
 struct Z2AudioMgr {

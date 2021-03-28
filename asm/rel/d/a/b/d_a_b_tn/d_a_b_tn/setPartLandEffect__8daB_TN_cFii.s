@@ -60,8 +60,8 @@ lbl_8061F3D0:
 /* 8061F4B8  4B A2 D5 D8 */	b set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 lbl_8061F4BC:
 /* 8061F4BC  57 A0 10 3A */	slwi r0, r29, 2
-/* 8061F4C0  3C 60 80 63 */	lis r3, data_8062EC90@ha
-/* 8061F4C4  38 63 EC 90 */	addi r3, r3, data_8062EC90@l
+/* 8061F4C0  3C 60 80 63 */	lis r3, break_part_vib@ha
+/* 8061F4C4  38 63 EC 90 */	addi r3, r3, break_part_vib@l
 /* 8061F4C8  7C 83 00 2E */	lwzx r4, r3, r0
 /* 8061F4CC  2C 04 00 FF */	cmpwi r4, 0xff
 /* 8061F4D0  41 82 00 38 */	beq lbl_8061F508

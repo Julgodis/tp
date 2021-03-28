@@ -67,10 +67,10 @@ struct dStage_roomControl_c {
 struct dStage_dt_c {
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -88,12 +88,12 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
+struct _GXColor {
+};
+
 struct csXyz {
 	/* 80C40EE4 */ ~csXyz();
 	/* 80C40F20 */ csXyz();
-};
-
-struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -360,7 +360,7 @@ SECTION_RODATA static u32 const lit_3778 = 0x3F800000;
 SECTION_RODATA static u32 const lit_3779 = 0x3FC00000;
 
 /* 80C41094-80C41098 0004+00 s=1 e=0 z=0  None .data      key_eno$4387                                                 */
-SECTION_DATA static u8 data_80C41094[4] = {
+SECTION_DATA static u8 key_eno[4] = {
 	0x82, 0x7A, 0x82, 0x7B,
 };
 

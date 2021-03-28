@@ -9,8 +9,8 @@ lbl_806403D4:
 /* 806403F0  3B E0 00 00 */	li r31, 0
 /* 806403F4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 806403F8  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 806403FC  3C 60 80 65 */	lis r3, data_8064F044@ha
-/* 80640400  3B A3 F0 44 */	addi r29, r3, data_8064F044@l
+/* 806403FC  3C 60 80 65 */	lis r3, l_landing_effect_id_5284@ha
+/* 80640400  3B A3 F0 44 */	addi r29, r3, l_landing_effect_id_5284@l
 /* 80640404  3C 60 80 65 */	lis r3, lit_4169@ha
 /* 80640408  3B C3 EB 28 */	addi r30, r3, lit_4169@l
 lbl_8064040C:

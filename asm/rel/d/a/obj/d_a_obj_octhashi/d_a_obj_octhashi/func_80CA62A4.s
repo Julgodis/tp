@@ -2,8 +2,8 @@ lbl_80CA62A4:
 /* 80CA62A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80CA62A8  7C 08 02 A6 */	mflr r0
 /* 80CA62AC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80CA62B0  3C 80 80 CA */	lis r4, data_80CA6480@ha
-/* 80CA62B4  38 A4 64 80 */	addi r5, r4, data_80CA6480@l
+/* 80CA62B0  3C 80 80 CA */	lis r4, ccSphSrc@ha
+/* 80CA62B4  38 A4 64 80 */	addi r5, r4, ccSphSrc@l
 /* 80CA62B8  3C 80 80 CA */	lis r4, rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c@ha
 /* 80CA62BC  38 04 5A 88 */	addi r0, r4, rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c@l
 /* 80CA62C0  80 83 05 68 */	lwz r4, 0x568(r3)

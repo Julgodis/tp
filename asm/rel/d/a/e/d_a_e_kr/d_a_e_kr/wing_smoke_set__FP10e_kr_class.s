@@ -9,8 +9,8 @@ lbl_8070329C:
 /* 807032B8  3B 43 5A F8 */	addi r26, r3, lit_3903@l
 /* 807032BC  3B E0 00 00 */	li r31, 0
 /* 807032C0  3B A0 00 00 */	li r29, 0
-/* 807032C4  3C 60 80 70 */	lis r3, data_80705DCC@ha
-/* 807032C8  3B 63 5D CC */	addi r27, r3, data_80705DCC@l
+/* 807032C4  3C 60 80 70 */	lis r3, wing_j@ha
+/* 807032C8  3B 63 5D CC */	addi r27, r3, wing_j@l
 /* 807032CC  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807032D0  3B 83 07 68 */	addi r28, r3, calc_mtx@l
 lbl_807032D4:

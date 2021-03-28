@@ -14,8 +14,8 @@ lbl_80BCE9BC:
 /* 80BCE9EC  38 80 00 64 */	li r4, 0x64
 /* 80BCE9F0  3C A0 80 BD */	lis r5, lit_4407@ha
 /* 80BCE9F4  C0 25 EB 28 */	lfs f1, lit_4407@l(r5)
-/* 80BCE9F8  3C A0 80 BD */	lis r5, data_80BCEB7C@ha
-/* 80BCE9FC  38 A5 EB 7C */	addi r5, r5, data_80BCEB7C@l
+/* 80BCE9F8  3C A0 80 BD */	lis r5, color@ha
+/* 80BCE9FC  38 A5 EB 7C */	addi r5, r5, color@l
 /* 80BCEA00  38 C0 00 00 */	li r6, 0
 /* 80BCEA04  38 FF 01 0C */	addi r7, r31, 0x10c
 /* 80BCEA08  4B 44 4D 34 */	b update__19mDoExt_3DlineMat1_cFifR8_GXColorUsP12dKy_tevstr_c

@@ -52,8 +52,8 @@ lbl_8067D728:
 /* 8067D740  3B C0 00 00 */	li r30, 0
 /* 8067D744  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8067D748  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
-/* 8067D74C  3C 60 80 68 */	lis r3, data_8067E998@ha
-/* 8067D750  3B 83 E9 98 */	addi r28, r3, data_8067E998@l
+/* 8067D74C  3C 60 80 68 */	lis r3, fire_name@ha
+/* 8067D750  3B 83 E9 98 */	addi r28, r3, fire_name@l
 lbl_8067D754:
 /* 8067D754  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 8067D758  38 00 00 FF */	li r0, 0xff

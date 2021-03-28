@@ -449,7 +449,7 @@ asm static void phase_4(room_of_scene_class* param_0) {
 
 /* ############################################################################################## */
 /* 803C3260-803C3274 0014+00 s=1 e=0 z=0  None .data      l_method$4056                                                */
-SECTION_DATA static void* data_803C3260[5] = {
+SECTION_DATA static void* l_method[5] = {
 	(void*)phase_0__FP19room_of_scene_class,
 	(void*)phase_1__FP19room_of_scene_class,
 	(void*)phase_2__FP19room_of_scene_class,

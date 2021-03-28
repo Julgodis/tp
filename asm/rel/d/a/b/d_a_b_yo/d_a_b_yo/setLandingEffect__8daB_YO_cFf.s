@@ -27,8 +27,8 @@ lbl_80630608:
 /* 80630618  3B E0 00 00 */	li r31, 0
 /* 8063061C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80630620  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
-/* 80630624  3C 60 80 64 */	lis r3, data_80639C60@ha
-/* 80630628  3B C3 9C 60 */	addi r30, r3, data_80639C60@l
+/* 80630624  3C 60 80 64 */	lis r3, l_landing_effect_id@ha
+/* 80630628  3B C3 9C 60 */	addi r30, r3, l_landing_effect_id@l
 lbl_8063062C:
 /* 8063062C  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 80630630  38 80 00 00 */	li r4, 0

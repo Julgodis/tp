@@ -25,10 +25,10 @@ struct mDoMtx_stack_c {
 	/* 8000CD64 */ void transS(cXyz const&);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -552,7 +552,7 @@ SECTION_RODATA static u8 const data_80498200[92] = {
 };
 
 /* 804982C8-804982D8 0010+00 s=1 e=0 z=0  None .data      action_table$3964                                            */
-SECTION_DATA static void* data_804982C8[4] = {
+SECTION_DATA static void* action_table[4] = {
 	(void*)(((char*)&struct_804981E0)+0xF) /* None */,
 	(void*)(((char*)&struct_804981F4)+0x0) /* None */,
 	(void*)(((char*)&struct_804981F4)+0x5) /* None */,
@@ -574,7 +574,7 @@ SECTION_DATA static void* lit_4061[3] = {
 };
 
 /* 804982F0-80498308 0018+00 s=1 e=0 z=0  None .data      l_func$4059                                                  */
-SECTION_DATA static u8 data_804982F0[24] = {
+SECTION_DATA static u8 l_func_4059[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
@@ -608,7 +608,7 @@ SECTION_DATA static void* lit_4104[3] = {
 };
 
 /* 80498338-80498368 0030+00 s=1 e=0 z=0  None .data      l_func$4100                                                  */
-SECTION_DATA static u8 data_80498338[48] = {
+SECTION_DATA static u8 l_func_4100[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

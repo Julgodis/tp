@@ -1,10 +1,10 @@
 lbl_8029DD8C:
 /* 8029DD8C  90 A3 01 18 */	stw r5, 0x118(r3)
 /* 8029DD90  88 E4 00 00 */	lbz r7, 0(r4)
-/* 8029DD94  38 A2 BD 4C */	la r5, data_8045574C(r2) /* 8045574C-_SDA2_BASE_ */
+/* 8029DD94  38 A2 BD 4C */	la r5, COMP_BLOCKSAMPLES(r2) /* 8045574C-_SDA2_BASE_ */
 /* 8029DD98  7C 05 38 AE */	lbzx r0, r5, r7
 /* 8029DD9C  B0 03 00 64 */	sth r0, 0x64(r3)
-/* 8029DDA0  38 A2 BD 54 */	la r5, data_80455754(r2) /* 80455754-_SDA2_BASE_ */
+/* 8029DDA0  38 A2 BD 54 */	la r5, COMP_BLOCKBYTES(r2) /* 80455754-_SDA2_BASE_ */
 /* 8029DDA4  7C 05 38 AE */	lbzx r0, r5, r7
 /* 8029DDA8  B0 03 01 00 */	sth r0, 0x100(r3)
 /* 8029DDAC  38 00 00 00 */	li r0, 0

@@ -60,26 +60,26 @@ struct dScnKy_env_light_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
-	/* 8051EB4C */ ~csXyz();
-};
-
 struct _GXColor {
 };
 
 struct dKy_tevstr_c {
 };
 
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
+	/* 8051EB4C */ ~csXyz();
+};
+
 struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct dCcMassS_HitInf {
-	/* 8051ED98 */ ~dCcMassS_HitInf();
+struct cCcD_Obj {
 };
 
-struct cCcD_Obj {
+struct dCcMassS_HitInf {
+	/* 8051ED98 */ ~dCcMassS_HitInf();
 };
 
 struct dGrass_data_c {
@@ -1307,14 +1307,14 @@ SECTION_DATA static void* lit_4620[3] = {
 };
 
 /* 80524B4C-80524B74 0028+00 s=1 e=0 z=0  None .data      l_vtxDescList$4654                                           */
-SECTION_DATA static u8 data_80524B4C[40] = {
+SECTION_DATA static u8 l_vtxDescList[40] = {
 	0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x02,
 	0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x02,
 	0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80524B74-80524BD8 0050+14 s=1 e=0 z=0  None .data      l_vtxAttrFmtList$4655                                        */
-SECTION_DATA static u8 data_80524B74[80 + 20 /* padding */] = {
+SECTION_DATA static u8 l_vtxAttrFmtList[80 + 20 /* padding */] = {
 	0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x00,
@@ -2268,7 +2268,7 @@ static u8 lit_4293[12 + 4 /* padding */];
 static u8 struct_80527920[12 + 4 /* padding */];
 
 /* 80527930-805284E8 0BB8+00 s=1 e=0 z=0  None .bss       mAngleZ$5046                                                 */
-static u8 data_80527930[3000];
+static u8 mAngleZ[3000];
 
 /* 805284E8-805284EC 0004+00 s=2 e=0 z=0  None .bss       None                                                         */
 static u8 data_805284E8[4];
@@ -2277,7 +2277,7 @@ static u8 data_805284E8[4];
 static u8 lit_5442[12 + 4 /* padding */];
 
 /* 805284FC-80528504 0006+02 s=1 e=0 z=0  None .bss       ang$5441                                                     */
-static u8 data_805284FC[6 + 2 /* padding */];
+static u8 ang[6 + 2 /* padding */];
 
 /* 80528504-80528510 000C+00 s=1 e=0 z=0  None .bss       @6340                                                        */
 static u8 lit_6340[12];

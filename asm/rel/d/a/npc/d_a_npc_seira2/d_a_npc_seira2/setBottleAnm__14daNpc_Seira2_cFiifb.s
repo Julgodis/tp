@@ -23,8 +23,8 @@ lbl_80AD2630:
 /* 80AD2684  38 83 00 1A */	addi r4, r3, 0x1a
 lbl_80AD2688:
 /* 80AD2688  54 80 18 38 */	slwi r0, r4, 3
-/* 80AD268C  3C 60 80 AD */	lis r3, data_80AD5318@ha
-/* 80AD2690  38 83 53 18 */	addi r4, r3, data_80AD5318@l
+/* 80AD268C  3C 60 80 AD */	lis r3, bottlAnmData@ha
+/* 80AD2690  38 83 53 18 */	addi r4, r3, bottlAnmData@l
 /* 80AD2694  7C A4 00 2E */	lwzx r5, r4, r0
 /* 80AD2698  2C 05 00 00 */	cmpwi r5, 0
 /* 80AD269C  40 81 00 28 */	ble lbl_80AD26C4

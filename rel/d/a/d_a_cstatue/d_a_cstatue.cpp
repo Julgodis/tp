@@ -46,10 +46,10 @@ struct mDoExt_invisibleModel {
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -69,7 +69,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
@@ -78,13 +81,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -184,12 +184,6 @@ struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 80664768 */ ~dBgS_AcchCir();
-};
-
 struct cBgS_PolyInfo {
 	/* 802680B0 */ ~cBgS_PolyInfo();
 };
@@ -199,6 +193,12 @@ struct dBgS {
 	/* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
 	/* 80074E00 */ void GetWallCode(cBgS_PolyInfo const&);
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 80664768 */ ~dBgS_AcchCir();
 };
 
 struct dBgS_Acch {
@@ -665,7 +665,7 @@ SECTION_RODATA static u8 const m_bckIdxTable__11daCstatue_c[70 + 2 /* padding */
 };
 
 /* 806676FC-80667738 003C+00 s=1 e=0 z=0  None .rodata    dataTbl$4169                                                 */
-SECTION_RODATA static u8 const data_806676FC[60] = {
+SECTION_RODATA static u8 const dataTbl[60] = {
 	0x00, 0x13, 0x00, 0x0D, 0x00, 0x1F, 0x00, 0x23, 0x11, 0x00, 0x02, 0x84, 0x00, 0x14, 0x00, 0x08,
 	0x00, 0x1C, 0x00, 0x00, 0x11, 0x00, 0x00, 0x84, 0x00, 0x18, 0x00, 0x0D, 0x00, 0x1D, 0x00, 0x22,
 	0x11, 0x00, 0x02, 0x84, 0x00, 0x0E, 0x00, 0x0B, 0x00, 0x12, 0x00, 0x15, 0x11, 0x00, 0x02, 0x84,
@@ -905,14 +905,14 @@ asm static void daCstatue_createHeap(fopAc_ac_c* param_0) {
 
 /* ############################################################################################## */
 /* 80667740-80667764 0024+00 s=1 e=0 z=0  None .rodata    bossSphR$4389                                                */
-SECTION_RODATA static u8 const data_80667740[36] = {
+SECTION_RODATA static u8 const bossSphR[36] = {
 	0x43, 0xE1, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00, 0x43, 0x7A, 0x00, 0x00, 0x43, 0x5C, 0x00, 0x00,
 	0x43, 0x8C, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00, 0x43, 0x7A, 0x00, 0x00, 0x43, 0x5C, 0x00, 0x00,
 	0x43, 0x8C, 0x00, 0x00,
 };
 
 /* 80667764-80667778 0014+00 s=1 e=0 z=0  None .rodata    heapSize$4390                                                */
-SECTION_RODATA static u8 const data_80667764[20] = {
+SECTION_RODATA static u8 const heapSize[20] = {
 	0x00, 0x00, 0x11, 0x10, 0x00, 0x00, 0x08, 0xA0, 0x00, 0x00, 0x12, 0x50, 0x00, 0x00, 0x18, 0x60,
 	0x00, 0x00, 0x18, 0x60,
 };
@@ -1111,17 +1111,17 @@ asm void daCstatue_c::setRoomInfo() {
 
 /* ############################################################################################## */
 /* 806677F4-80667800 000C+00 s=1 e=0 z=0  None .rodata    normalLocalBallPos$4911                                      */
-SECTION_RODATA static u8 const data_806677F4[12] = {
+SECTION_RODATA static u8 const normalLocalBallPos[12] = {
 	0x42, 0x8C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80667800-8066780C 000C+00 s=1 e=0 z=0  None .rodata    smallLocalBallPos$4912                                       */
-SECTION_RODATA static u8 const data_80667800[12] = {
+SECTION_RODATA static u8 const smallLocalBallPos[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 8066780C-80667818 000C+00 s=1 e=0 z=0  None .rodata    bossLocalBallPos$4913                                        */
-SECTION_RODATA static u8 const data_8066780C[12] = {
+SECTION_RODATA static u8 const bossLocalBallPos[12] = {
 	0x43, 0xD2, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -1222,32 +1222,32 @@ asm cM3dGPla::~cM3dGPla() {
 
 /* ############################################################################################## */
 /* 8066786C-80667878 000C+00 s=1 e=0 z=0  None .rodata    localTop$5304                                                */
-SECTION_RODATA static u8 const data_8066786C[12] = {
+SECTION_RODATA static u8 const localTop[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0xB4, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80667878-80667884 000C+00 s=1 e=0 z=0  None .rodata    localRoot$5305                                               */
-SECTION_RODATA static u8 const data_80667878[12] = {
+SECTION_RODATA static u8 const localRoot[12] = {
 	0x00, 0x00, 0x00, 0x00, 0xC1, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80667884-80667890 000C+00 s=1 e=0 z=0  None .rodata    hammerSide0$5306                                             */
-SECTION_RODATA static u8 const data_80667884[12] = {
+SECTION_RODATA static u8 const hammerSide0[12] = {
 	0xC2, 0x20, 0x00, 0x00, 0x42, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80667890-8066789C 000C+00 s=1 e=0 z=0  None .rodata    hammerSide1$5307                                             */
-SECTION_RODATA static u8 const data_80667890[12] = {
+SECTION_RODATA static u8 const hammerSide1[12] = {
 	0x42, 0x20, 0x00, 0x00, 0x42, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 8066789C-806678A4 0008+00 s=1 e=0 z=0  None .rodata    effName$5309                                                 */
-SECTION_RODATA static u8 const data_8066789C[8] = {
+SECTION_RODATA static u8 const effName[8] = {
 	0x09, 0xD0, 0x09, 0xD1, 0x09, 0xD2, 0x09, 0xD5,
 };
 
 /* 806678A4-806678B8 0012+02 s=1 e=0 z=0  None .rodata    bossJntIdx$5353                                              */
-SECTION_RODATA static u8 const data_806678A4[18 + 2 /* padding */] = {
+SECTION_RODATA static u8 const bossJntIdx[18 + 2 /* padding */] = {
 	0x00, 0x02, 0x00, 0x06, 0x00, 0x07, 0x00, 0x07, 0x00, 0x08, 0x00, 0x03, 0x00, 0x04, 0x00, 0x04,
 	0x00, 0x05,
 	/* padding */
@@ -1255,7 +1255,7 @@ SECTION_RODATA static u8 const data_806678A4[18 + 2 /* padding */] = {
 };
 
 /* 806678B8-80667924 006C+00 s=1 e=0 z=0  None .rodata    bossLocalOffset$5354                                         */
-SECTION_RODATA static u8 const data_806678B8[108] = {
+SECTION_RODATA static u8 const bossLocalOffset[108] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x43, 0xBE, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1338,7 +1338,7 @@ u8 lit_1009[1 + 3 /* padding */];
 static u8 lit_5356[12 + 4 /* padding */];
 
 /* 80667BD0-80667BDC 000C+00 s=1 e=0 z=0  None .bss       effScale$5355                                                */
-static u8 data_80667BD0[12];
+static u8 effScale[12];
 
 /* 8066555C-80665E14 08B8+00 s=1 e=0 z=0  None .text      setCollision__11daCstatue_cFv                                */
 #pragma push
@@ -1364,32 +1364,32 @@ asm void daCstatue_c::checkHammerReverse() {
 
 /* ############################################################################################## */
 /* 80667940-8066794C 000C+00 s=1 e=0 z=0  None .rodata    hitEffectCenter$5688                                         */
-SECTION_RODATA static u8 const data_80667940[12] = {
+SECTION_RODATA static u8 const hitEffectCenter[12] = {
 	0xC0, 0x01, 0xFB, 0xE7, 0x42, 0xF0, 0xE0, 0xC4, 0x43, 0xA0, 0x3B, 0xC8,
 };
 
 /* 8066794C-80667958 000C+00 s=1 e=0 z=0  None .rodata    hitEffectEye$5689                                            */
-SECTION_RODATA static u8 const data_8066794C[12] = {
+SECTION_RODATA static u8 const hitEffectEye[12] = {
 	0xC0, 0x01, 0xFB, 0xE7, 0xC2, 0xA1, 0x85, 0xA2, 0x44, 0x20, 0xB4, 0xFE,
 };
 
 /* 80667958-80667964 000C+00 s=1 e=0 z=0  None .rodata    behindCenter$5690                                            */
-SECTION_RODATA static u8 const data_80667958[12] = {
+SECTION_RODATA static u8 const behindCenter[12] = {
 	0x41, 0xC3, 0xF9, 0xDB, 0x43, 0x4B, 0x1D, 0x30, 0xC2, 0xBE, 0xFA, 0x60,
 };
 
 /* 80667964-80667970 000C+00 s=1 e=0 z=0  None .rodata    behindEye$5691                                               */
-SECTION_RODATA static u8 const data_80667964[12] = {
+SECTION_RODATA static u8 const behindEye[12] = {
 	0x42, 0xF8, 0xCC, 0x4A, 0x43, 0x46, 0x44, 0x9C, 0xC3, 0xE7, 0x0B, 0x20,
 };
 
 /* 80667970-8066797C 000C+00 s=1 e=0 z=0  None .rodata    startAnimeCenter$5692                                        */
-SECTION_RODATA static u8 const data_80667970[12] = {
+SECTION_RODATA static u8 const startAnimeCenter[12] = {
 	0x42, 0xA1, 0x35, 0x3F, 0x43, 0x86, 0x81, 0xCA, 0x43, 0x93, 0x19, 0xFC,
 };
 
 /* 8066797C-80667988 000C+00 s=1 e=0 z=0  None .rodata    startAnimeEye$5693                                           */
-SECTION_RODATA static u8 const data_8066797C[12] = {
+SECTION_RODATA static u8 const startAnimeEye[12] = {
 	0x43, 0x2A, 0xFE, 0xFA, 0x43, 0x88, 0x52, 0x6E, 0x44, 0x23, 0x8C, 0x18,
 };
 
@@ -1438,7 +1438,7 @@ asm void daCstatue_c::initBrk(u16 param_0) {
 
 /* ############################################################################################## */
 /* 80667994-806679A0 000A+02 s=1 e=0 z=0  None .rodata    brkIdx$6108                                                  */
-SECTION_RODATA static u8 const data_80667994[10 + 2 /* padding */] = {
+SECTION_RODATA static u8 const brkIdx_6108[10 + 2 /* padding */] = {
 	0x00, 0x1F, 0x00, 0x1C, 0x00, 0x1D, 0x00, 0x12, 0x00, 0x12,
 	/* padding */
 	0x00, 0x00,
@@ -1457,7 +1457,7 @@ asm void daCstatue_c::initStopBrkBtk() {
 
 /* ############################################################################################## */
 /* 806679A0-806679AC 000A+02 s=1 e=0 z=0  None .rodata    brkIdx$6115                                                  */
-SECTION_RODATA static u8 const data_806679A0[10 + 2 /* padding */] = {
+SECTION_RODATA static u8 const brkIdx_6115[10 + 2 /* padding */] = {
 	0x00, 0x1E, 0x00, 0x1B, 0x00, 0x1D, 0x00, 0x11, 0x00, 0x11,
 	/* padding */
 	0x00, 0x00,

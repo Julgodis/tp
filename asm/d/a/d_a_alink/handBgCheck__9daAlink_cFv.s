@@ -45,8 +45,8 @@ lbl_800A3A28:
 /* 800A3A5C  3B 03 0F 38 */	addi r24, r3, 0xf38
 /* 800A3A60  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 800A3A64  3B 23 D4 70 */	addi r25, r3, now__14mDoMtx_stack_c@l
-/* 800A3A68  3C 60 80 39 */	lis r3, data_80391F2C@ha
-/* 800A3A6C  3B 43 1F 2C */	addi r26, r3, data_80391F2C@l
+/* 800A3A68  3C 60 80 39 */	lis r3, localHandPos@ha
+/* 800A3A6C  3B 43 1F 2C */	addi r26, r3, localHandPos@l
 /* 800A3A70  C3 E2 93 A4 */	lfs f31, lit_9138(r2)
 lbl_800A3A74:
 /* 800A3A74  7F 23 CB 78 */	mr r3, r25

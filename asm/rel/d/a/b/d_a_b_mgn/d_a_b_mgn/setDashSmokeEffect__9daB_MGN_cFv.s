@@ -24,8 +24,8 @@ lbl_80605DC8:
 /* 80605DC8  80 7B 05 BC */	lwz r3, 0x5bc(r27)
 /* 80605DCC  38 63 00 0C */	addi r3, r3, 0xc
 /* 80605DD0  57 DE 10 3A */	slwi r30, r30, 2
-/* 80605DD4  3C 80 80 61 */	lis r4, data_8061019C@ha
-/* 80605DD8  38 84 01 9C */	addi r4, r4, data_8061019C@l
+/* 80605DD4  3C 80 80 61 */	lis r4, foot_rand_frame@ha
+/* 80605DD8  38 84 01 9C */	addi r4, r4, foot_rand_frame@l
 /* 80605DDC  7C 24 F4 2E */	lfsx f1, r4, r30
 /* 80605DE0  4B D2 26 4C */	b checkPass__12J3DFrameCtrlFf
 /* 80605DE4  2C 03 00 00 */	cmpwi r3, 0
@@ -59,8 +59,8 @@ lbl_80605DC8:
 lbl_80605E54:
 /* 80605E54  80 7B 05 BC */	lwz r3, 0x5bc(r27)
 /* 80605E58  38 63 00 0C */	addi r3, r3, 0xc
-/* 80605E5C  3C 80 80 61 */	lis r4, data_8061019C@ha
-/* 80605E60  38 04 01 9C */	addi r0, r4, data_8061019C@l
+/* 80605E5C  3C 80 80 61 */	lis r4, foot_rand_frame@ha
+/* 80605E60  38 04 01 9C */	addi r0, r4, foot_rand_frame@l
 /* 80605E64  7C 80 F2 14 */	add r4, r0, r30
 /* 80605E68  C0 24 00 04 */	lfs f1, 4(r4)
 /* 80605E6C  4B D2 25 C0 */	b checkPass__12J3DFrameCtrlFf
@@ -95,8 +95,8 @@ lbl_80605E54:
 lbl_80605EE0:
 /* 80605EE0  80 7B 05 BC */	lwz r3, 0x5bc(r27)
 /* 80605EE4  38 63 00 0C */	addi r3, r3, 0xc
-/* 80605EE8  3C 80 80 61 */	lis r4, data_8061019C@ha
-/* 80605EEC  38 04 01 9C */	addi r0, r4, data_8061019C@l
+/* 80605EE8  3C 80 80 61 */	lis r4, foot_rand_frame@ha
+/* 80605EEC  38 04 01 9C */	addi r0, r4, foot_rand_frame@l
 /* 80605EF0  7C 80 F2 14 */	add r4, r0, r30
 /* 80605EF4  C0 24 00 08 */	lfs f1, 8(r4)
 /* 80605EF8  4B D2 25 34 */	b checkPass__12J3DFrameCtrlFf
@@ -108,8 +108,8 @@ lbl_80605EE0:
 lbl_80605F10:
 /* 80605F10  80 7B 05 BC */	lwz r3, 0x5bc(r27)
 /* 80605F14  38 63 00 0C */	addi r3, r3, 0xc
-/* 80605F18  3C 80 80 61 */	lis r4, data_8061019C@ha
-/* 80605F1C  38 04 01 9C */	addi r0, r4, data_8061019C@l
+/* 80605F18  3C 80 80 61 */	lis r4, foot_rand_frame@ha
+/* 80605F1C  38 04 01 9C */	addi r0, r4, foot_rand_frame@l
 /* 80605F20  7C 80 F2 14 */	add r4, r0, r30
 /* 80605F24  C0 24 00 0C */	lfs f1, 0xc(r4)
 /* 80605F28  4B D2 25 04 */	b checkPass__12J3DFrameCtrlFf

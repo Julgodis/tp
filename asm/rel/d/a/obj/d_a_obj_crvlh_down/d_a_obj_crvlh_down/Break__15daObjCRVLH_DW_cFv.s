@@ -5,8 +5,8 @@ lbl_80BD42D8:
 /* 80BD42E4  39 61 00 50 */	addi r11, r1, 0x50
 /* 80BD42E8  4B 78 DE F4 */	b _savegpr_29
 /* 80BD42EC  7C 7D 1B 78 */	mr r29, r3
-/* 80BD42F0  3C 80 80 BD */	lis r4, data_80BD4D04@ha
-/* 80BD42F4  3B C4 4D 04 */	addi r30, r4, data_80BD4D04@l
+/* 80BD42F0  3C 80 80 BD */	lis r4, ccCylSrc@ha
+/* 80BD42F4  3B C4 4D 04 */	addi r30, r4, ccCylSrc@l
 /* 80BD42F8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80BD42FC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80BD4300  80 84 5D AC */	lwz r4, 0x5dac(r4)

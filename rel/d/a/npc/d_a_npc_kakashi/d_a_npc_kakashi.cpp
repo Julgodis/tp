@@ -15,7 +15,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
@@ -23,13 +26,10 @@ struct Z2Creature {
 	/* 802C0420 */ ~Z2Creature();
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -53,13 +53,13 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 8054E460 */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_motionAnmData_c {
-};
-
 struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpcT_evtData_c {
+};
+
+struct daNpcT_motionAnmData_c {
 };
 
 struct J3DJoint {
@@ -112,12 +112,9 @@ struct daNpc_Kakashi_Param_c {
 struct _GXColorS10 {
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 80084460 */ void ChkTgHit();
-	/* 800844F8 */ void GetTgHitObj();
-	/* 800845B0 */ void getHitSeID(u8, int);
+struct cXyz {
+	/* 8054DDD0 */ ~cXyz();
+	/* 8054E414 */ cXyz();
 };
 
 struct csXyz {
@@ -125,9 +122,12 @@ struct csXyz {
 	/* 8054E8F8 */ csXyz();
 };
 
-struct cXyz {
-	/* 8054DDD0 */ ~cXyz();
-	/* 8054E414 */ cXyz();
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 80084460 */ void ChkTgHit();
+	/* 800844F8 */ void GetTgHitObj();
+	/* 800845B0 */ void getHitSeID(u8, int);
 };
 
 struct daNpcT_c {
@@ -804,7 +804,7 @@ SECTION_RODATA static u8 const lit_5170[8] = {
 };
 
 /* 8054EBCC-8054EBD0 0004+00 s=1 e=0 z=0  None .rodata    id$5174                                                      */
-SECTION_RODATA static u8 const data_8054EBCC[4] = {
+SECTION_RODATA static u8 const id[4] = {
 	0x82, 0x3F, 0x82, 0x3E,
 };
 
@@ -1537,19 +1537,19 @@ static u8 l_HIO[4];
 static u8 lit_4738[12 + 4 /* padding */];
 
 /* 8054F200-8054F20C 000C+00 s=1 e=0 z=0  None .bss       armROfst$4737                                                */
-static u8 data_8054F200[12];
+static u8 armROfst[12];
 
 /* 8054F20C-8054F21C 000C+04 s=1 e=0 z=0  None .bss       @4742                                                        */
 static u8 lit_4742[12 + 4 /* padding */];
 
 /* 8054F21C-8054F228 000C+00 s=1 e=0 z=0  None .bss       armLOfst$4741                                                */
-static u8 data_8054F21C[12];
+static u8 armLOfst[12];
 
 /* 8054F228-8054F238 000C+04 s=1 e=0 z=0  None .bss       @4746                                                        */
 static u8 lit_4746[12 + 4 /* padding */];
 
 /* 8054F238-8054F244 000C+00 s=1 e=0 z=0  None .bss       headOfst$4745                                                */
-static u8 data_8054F238[12];
+static u8 headOfst[12];
 
 /* 8054C584-8054C924 03A0+00 s=1 e=0 z=0  None .text      setCollision__15daNpc_Kakashi_cFv                            */
 #pragma push

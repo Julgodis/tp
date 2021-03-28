@@ -659,82 +659,82 @@ asm void daPy_anmHeap_c::createHeap(daPy_anmHeap_c::daAlinkHEAP_TYPE param_0) {
 
 /* ############################################################################################## */
 /* 80453648-80453650 0008+00 s=1 e=0 z=0  None .sdata2    sumouArcName$4614                                            */
-extern "C" u8 data_80453648[8];
+extern "C" u8 sumouArcName[8];
 
 /* 80453650-80453658 0005+03 s=1 e=0 z=0  None .sdata2    ocArcName$4615                                               */
-extern "C" u8 data_80453650[5 + 3 /* padding */];
+extern "C" u8 ocArcName[5 + 3 /* padding */];
 
 /* 80453658-80453660 0005+03 s=1 e=0 z=0  None .sdata2    drArcName$4618                                               */
-extern "C" u8 data_80453658[5 + 3 /* padding */];
+extern "C" u8 drArcName[5 + 3 /* padding */];
 
 /* 80453660-80453668 0008+00 s=1 e=0 z=0  None .sdata2    msDemoArcName$4619                                           */
-extern "C" u8 data_80453660[8];
+extern "C" u8 msDemoArcName[8];
 
 /* 80453668-80453670 0006+02 s=1 e=0 z=0  None .sdata2    lastGanonArcName$4620                                        */
-extern "C" u8 data_80453668[6 + 2 /* padding */];
+extern "C" u8 lastGanonArcName[6 + 2 /* padding */];
 
 /* 80453670-80453678 0006+02 s=1 e=0 z=0  None .sdata2    pigGanonArcName$4621                                         */
-extern "C" u8 data_80453670[6 + 2 /* padding */];
+extern "C" u8 pigGanonArcName[6 + 2 /* padding */];
 
 /* 80393DA8-80393DB4 000A+02 s=1 e=0 z=0  None .rodata    twglArcName$4616                                             */
-SECTION_RODATA static u8 const data_80393DA8[10 + 2 /* padding */] = {
+SECTION_RODATA static u8 const twglArcName[10 + 2 /* padding */] = {
 	0x54, 0x57, 0x47, 0x61, 0x74, 0x65, 0x5F, 0x4C, 0x6B, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80393DB4-80393DC0 000A+02 s=1 e=0 z=0  None .rodata    twgwArcName$4617                                             */
-SECTION_RODATA static u8 const data_80393DB4[10 + 2 /* padding */] = {
+SECTION_RODATA static u8 const twgwArcName[10 + 2 /* padding */] = {
 	0x54, 0x57, 0x47, 0x61, 0x74, 0x65, 0x5F, 0x57, 0x66, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 803BA0A0-803BA0C0 0020+00 s=1 e=0 z=0  None .data      arcName$4622                                                 */
-SECTION_DATA static void* data_803BA0A0[8] = {
-	(void*)&data_80453648,
-	(void*)&data_80453650,
-	(void*)&data_80393DA8,
-	(void*)&data_80393DB4,
-	(void*)&data_80453658,
-	(void*)&data_80453660,
-	(void*)&data_80453668,
-	(void*)&data_80453670,
+SECTION_DATA static void* arcName[8] = {
+	(void*)&sumouArcName,
+	(void*)&ocArcName,
+	(void*)&twglArcName,
+	(void*)&twgwArcName,
+	(void*)&drArcName,
+	(void*)&msDemoArcName,
+	(void*)&lastGanonArcName,
+	(void*)&pigGanonArcName,
 };
 
 /* 80453648-80453650 0008+00 s=1 e=0 z=0  None .sdata2    sumouArcName$4614                                            */
-SECTION_SDATA2 static u8 data_80453648[8] = {
+SECTION_SDATA2 static u8 sumouArcName[8] = {
 	0x61, 0x6C, 0x53, 0x75, 0x6D, 0x6F, 0x75, 0x00,
 };
 
 /* 80453650-80453658 0005+03 s=1 e=0 z=0  None .sdata2    ocArcName$4615                                               */
-SECTION_SDATA2 static u8 data_80453650[5 + 3 /* padding */] = {
+SECTION_SDATA2 static u8 ocArcName[5 + 3 /* padding */] = {
 	0x42, 0x5F, 0x6F, 0x68, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 80453658-80453660 0005+03 s=1 e=0 z=0  None .sdata2    drArcName$4618                                               */
-SECTION_SDATA2 static u8 data_80453658[5 + 3 /* padding */] = {
+SECTION_SDATA2 static u8 drArcName[5 + 3 /* padding */] = {
 	0x42, 0x5F, 0x44, 0x52, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 80453660-80453668 0008+00 s=1 e=0 z=0  None .sdata2    msDemoArcName$4619                                           */
-SECTION_SDATA2 static u8 data_80453660[8] = {
+SECTION_SDATA2 static u8 msDemoArcName[8] = {
 	0x4C, 0x76, 0x36, 0x47, 0x61, 0x74, 0x65, 0x00,
 };
 
 /* 80453668-80453670 0006+02 s=1 e=0 z=0  None .sdata2    lastGanonArcName$4620                                        */
-SECTION_SDATA2 static u8 data_80453668[6 + 2 /* padding */] = {
+SECTION_SDATA2 static u8 lastGanonArcName[6 + 2 /* padding */] = {
 	0x42, 0x5F, 0x67, 0x6E, 0x64, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80453670-80453678 0006+02 s=1 e=0 z=0  None .sdata2    pigGanonArcName$4621                                         */
-SECTION_SDATA2 static u8 data_80453670[6 + 2 /* padding */] = {
+SECTION_SDATA2 static u8 pigGanonArcName[6 + 2 /* padding */] = {
 	0x42, 0x5F, 0x6D, 0x67, 0x6E, 0x00,
 	/* padding */
 	0x00, 0x00,

@@ -4,7 +4,7 @@ lbl_8035B468:
 /* 8035B470  28 00 00 00 */	cmplwi r0, 0
 /* 8035B474  4D 82 00 20 */	beqlr 
 /* 8035B478  81 23 00 14 */	lwz r9, 0x14(r3)
-/* 8035B47C  38 AD 85 08 */	la r5, data_80450A88(r13) /* 80450A88-_SDA_BASE_ */
+/* 8035B47C  38 AD 85 08 */	la r5, tbl3(r13) /* 80450A88-_SDA_BASE_ */
 /* 8035B480  81 03 00 1C */	lwz r8, 0x1c(r3)
 /* 8035B484  55 20 07 FE */	clrlwi r0, r9, 0x1f
 /* 8035B488  80 83 00 18 */	lwz r4, 0x18(r3)
@@ -36,10 +36,10 @@ lbl_8035B4EC:
 /* 8035B4EC  39 00 00 01 */	li r8, 1
 lbl_8035B4F0:
 /* 8035B4F0  55 26 AF BE */	rlwinm r6, r9, 0x15, 0x1e, 0x1f
-/* 8035B4F4  38 AD 85 08 */	la r5, data_80450A88(r13) /* 80450A88-_SDA_BASE_ */
+/* 8035B4F4  38 AD 85 08 */	la r5, tbl3(r13) /* 80450A88-_SDA_BASE_ */
 /* 8035B4F8  7C C5 30 AE */	lbzx r6, r5, r6
 /* 8035B4FC  55 25 9F BE */	rlwinm r5, r9, 0x13, 0x1e, 0x1f
-/* 8035B500  38 ED 85 00 */	la r7, data_80450A80(r13) /* 80450A80-_SDA_BASE_ */
+/* 8035B500  38 ED 85 00 */	la r7, tbl1(r13) /* 80450A80-_SDA_BASE_ */
 /* 8035B504  7D 06 41 D6 */	mullw r8, r6, r8
 /* 8035B508  7C C7 28 AE */	lbzx r6, r7, r5
 /* 8035B50C  7C 00 42 14 */	add r0, r0, r8
@@ -47,7 +47,7 @@ lbl_8035B4F0:
 /* 8035B514  7D 27 28 AE */	lbzx r9, r7, r5
 /* 8035B518  7C 00 32 14 */	add r0, r0, r6
 /* 8035B51C  54 86 07 BE */	clrlwi r6, r4, 0x1e
-/* 8035B520  39 0D 85 04 */	la r8, data_80450A84(r13) /* 80450A84-_SDA_BASE_ */
+/* 8035B520  39 0D 85 04 */	la r8, tbl2(r13) /* 80450A84-_SDA_BASE_ */
 /* 8035B524  54 85 F7 BE */	rlwinm r5, r4, 0x1e, 0x1e, 0x1f
 /* 8035B528  7C E8 30 AE */	lbzx r7, r8, r6
 /* 8035B52C  7C 00 4A 14 */	add r0, r0, r9

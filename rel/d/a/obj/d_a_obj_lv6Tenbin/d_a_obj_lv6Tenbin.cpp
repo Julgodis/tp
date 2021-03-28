@@ -50,13 +50,13 @@ struct daTenbin_HIO_c {
 	/* 80C77904 */ ~daTenbin_HIO_c();
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -284,7 +284,7 @@ SECTION_DATA static void* lit_3913[3] = {
 };
 
 /* 80C77A2C-80C77A38 000C+00 s=1 e=0 z=0  None .data      mode_proc$3912                                               */
-SECTION_DATA static u8 data_80C77A2C[12] = {
+SECTION_DATA static u8 mode_proc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 

@@ -11,7 +11,10 @@
 // Types:
 // 
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Vec {
@@ -23,13 +26,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -53,19 +53,19 @@ struct daNpcT_MotionSeqMngr_c {
 struct daNpcT_faceMotionAnmData_c {
 };
 
-struct daNpcT_motionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct J3DJoint {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80A9A9C0 */ ~cXyz();
 	/* 80A9B050 */ cXyz();
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct J3DJoint {
 };
 
 struct daNpc_Pachi_Maro_c {

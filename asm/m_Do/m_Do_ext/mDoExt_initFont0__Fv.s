@@ -10,8 +10,8 @@ lbl_80014994:
 /* 800149B4  7C 65 1B 78 */	mr r5, r3
 /* 800149B8  38 6D 86 C4 */	la r3, mDoExt_font0(r13) /* 80450C44-_SDA_BASE_ */
 /* 800149BC  38 8D 86 CC */	la r4, mDoExt_resfont0(r13) /* 80450C4C-_SDA_BASE_ */
-/* 800149C0  3C C0 80 37 */	lis r6, data_803740C0@ha
-/* 800149C4  38 C6 40 C0 */	addi r6, r6, data_803740C0@l
+/* 800149C0  3C C0 80 37 */	lis r6, fontdata_8224@ha
+/* 800149C4  38 C6 40 C0 */	addi r6, r6, fontdata_8224@l
 /* 800149C8  7F E7 FB 78 */	mr r7, r31
 /* 800149CC  39 00 00 01 */	li r8, 1
 /* 800149D0  39 20 00 00 */	li r9, 0

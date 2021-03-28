@@ -10,8 +10,8 @@ lbl_80853460:
 /* 80853480  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80853484  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
 /* 80853488  1F 85 00 03 */	mulli r28, r5, 3
-/* 8085348C  3C 60 80 85 */	lis r3, data_80854E78@ha
-/* 80853490  3B C3 4E 78 */	addi r30, r3, data_80854E78@l
+/* 8085348C  3C 60 80 85 */	lis r3, kago_wall_hit_id@ha
+/* 80853490  3B C3 4E 78 */	addi r30, r3, kago_wall_hit_id@l
 /* 80853494  3C 60 80 85 */	lis r3, lit_3932@ha
 /* 80853498  3B E3 4B 10 */	addi r31, r3, lit_3932@l
 lbl_8085349C:

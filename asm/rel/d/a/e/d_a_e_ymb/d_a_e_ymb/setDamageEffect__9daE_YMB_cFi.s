@@ -42,8 +42,8 @@ lbl_80817B4C:
 /* 80817B88  80 9E 15 1C */	lwz r4, 0x151c(r30)
 /* 80817B8C  38 A0 00 00 */	li r5, 0
 /* 80817B90  57 A0 08 3C */	slwi r0, r29, 1
-/* 80817B94  3C C0 80 82 */	lis r6, data_80821C88@ha
-/* 80817B98  38 C6 1C 88 */	addi r6, r6, data_80821C88@l
+/* 80817B94  3C C0 80 82 */	lis r6, w_eff_id_4611@ha
+/* 80817B98  38 C6 1C 88 */	addi r6, r6, w_eff_id_4611@l
 /* 80817B9C  7C C6 02 2E */	lhzx r6, r6, r0
 /* 80817BA0  38 E1 00 20 */	addi r7, r1, 0x20
 /* 80817BA4  39 1E 01 0C */	addi r8, r30, 0x10c

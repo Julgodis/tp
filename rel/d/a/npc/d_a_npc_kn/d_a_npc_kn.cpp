@@ -49,16 +49,16 @@ struct mDoExt_invisibleModel {
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DAnmTexPattern {
-};
-
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTevRegKey {
 };
 
 struct J3DAnmColor {
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmTexPattern {
+};
+
+struct J3DAnmTextureSRTKey {
 };
 
 struct J3DMaterialTable {
@@ -86,10 +86,10 @@ struct mDoExt_bpkAnm {
 	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -102,13 +102,13 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -136,26 +136,18 @@ struct daPy_py_c {
 	/* 8015F3FC */ void getAttentionOffsetY();
 };
 
-struct J3DAnmTransformKey {
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80A3C62C */ ~J3DFrameCtrl();
+};
+
+struct daNpcT_evtData_c {
 };
 
 struct _GXColorS10 {
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 800842C0 */ void ChkAtHit();
-	/* 80084460 */ void ChkTgHit();
-	/* 800844F8 */ void GetTgHitObj();
-};
-
 struct J3DJoint {
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80A3C62C */ ~J3DFrameCtrl();
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -167,13 +159,21 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 80A3C4A8 */ ~daNpcT_MotionSeqMngr_c();
 };
 
+struct J3DAnmTransformKey {
+};
+
 struct daNpcT_motionAnmData_c {
 };
 
 struct daNpcT_faceMotionAnmData_c {
 };
 
-struct daNpcT_evtData_c {
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 800842C0 */ void ChkAtHit();
+	/* 80084460 */ void ChkTgHit();
+	/* 800844F8 */ void GetTgHitObj();
 };
 
 struct daNpc_Kn_c {
@@ -419,12 +419,6 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F40 */ void SetWallR(f32);
-	/* 80A3C4F0 */ ~dBgS_AcchCir();
-};
-
 struct cBgS_PolyInfo {
 	/* 802680B0 */ ~cBgS_PolyInfo();
 };
@@ -433,6 +427,12 @@ struct dBgS {
 	/* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
 	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F40 */ void SetWallR(f32);
+	/* 80A3C4F0 */ ~dBgS_AcchCir();
 };
 
 struct dBgS_Acch {
@@ -1330,7 +1330,7 @@ SECTION_RODATA static u32 const lit_5710 = 0x40C00000;
 SECTION_RODATA u32 const lit_5787 = 0x4E6E6B28;
 
 /* 80A4096C-80A40970 0004+00 s=1 e=0 z=0  None .rodata    id$5838                                                      */
-SECTION_RODATA static u8 const data_80A4096C[4] = {
+SECTION_RODATA static u8 const id[4] = {
 	0x84, 0x97, 0x84, 0x98,
 };
 
@@ -1351,7 +1351,7 @@ SECTION_RODATA static u8 const m__16daNpc_Kn_Param_c[180] = {
 };
 
 /* 80A40A24-80A40A44 0020+00 s=1 e=0 z=0  None .rodata    heapSize$6094                                                */
-SECTION_RODATA static u8 const data_80A40A24[32] = {
+SECTION_RODATA static u8 const heapSize[32] = {
 	0x00, 0x00, 0x4B, 0x10, 0x00, 0x00, 0x4B, 0x20, 0x00, 0x00, 0x4B, 0x10, 0x00, 0x00, 0x4B, 0x10,
 	0x00, 0x00, 0x5A, 0x00, 0x00, 0x00, 0x4B, 0x10, 0x00, 0x00, 0x4B, 0x20, 0x00, 0x00, 0x00, 0x00,
 };
@@ -2090,14 +2090,14 @@ SECTION_DATA static void* lit_6623[8] = {
 };
 
 /* 80A417E8-80A417F8 000E+02 s=1 e=0 z=0  None .data      l_appearFlag$6644                                            */
-SECTION_DATA static u8 data_80A417E8[14 + 2 /* padding */] = {
+SECTION_DATA static u8 l_appearFlag[14 + 2 /* padding */] = {
 	0xFF, 0xFF, 0x01, 0x53, 0x01, 0x52, 0x01, 0x54, 0x01, 0x55, 0x01, 0x56, 0x01, 0x57,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80A417F8-80A41808 000E+02 s=1 e=0 z=0  None .data      l_delFlag$6645                                               */
-SECTION_DATA static u8 data_80A417F8[14 + 2 /* padding */] = {
+SECTION_DATA static u8 l_delFlag[14 + 2 /* padding */] = {
 	0x01, 0x53, 0x01, 0x52, 0x01, 0x54, 0x01, 0x55, 0x01, 0x56, 0x01, 0x57, 0x01, 0x58,
 	/* padding */
 	0x00, 0x00,
@@ -2151,7 +2151,7 @@ SECTION_DATA static void* lit_7116[7] = {
 };
 
 /* 80A41874-80A4187C 0008+00 s=1 e=0 z=0  None .data      l_swordOffset$7120                                           */
-SECTION_DATA static u8 data_80A41874[8] = {
+SECTION_DATA static u8 l_swordOffset[8] = {
 	0x42, 0x70, 0x00, 0x00, 0x42, 0xF0, 0x00, 0x00,
 };
 
@@ -3647,7 +3647,7 @@ SECTION_DATA static void* lit_12911[3] = {
 };
 
 /* 80A42C38-80A42C74 003C+00 s=1 e=0 z=0  None .data      l_checkOffset$13216                                          */
-SECTION_DATA static u8 data_80A42C38[60] = {
+SECTION_DATA static u8 l_checkOffset[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
@@ -3655,7 +3655,7 @@ SECTION_DATA static u8 data_80A42C38[60] = {
 };
 
 /* 80A42C74-80A42CD4 0060+00 s=1 e=0 z=0  None .data      l_WarpInScaleTable$13228                                     */
-SECTION_DATA static u8 data_80A42C74[96] = {
+SECTION_DATA static u8 l_WarpInScaleTable[96] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0xCC, 0x08, 0x31,
 	0x3F, 0x52, 0xF1, 0xAA, 0x3F, 0xD5, 0xC2, 0x8F, 0x3F, 0xF4, 0x7A, 0xE1, 0x3F, 0x38, 0x51, 0xEC,
 	0x3F, 0xE5, 0x1E, 0xB8, 0x3F, 0xCC, 0x08, 0x31, 0x3F, 0x51, 0x26, 0xE9, 0x3F, 0xD5, 0xC2, 0x8F,
@@ -3665,19 +3665,19 @@ SECTION_DATA static u8 data_80A42C74[96] = {
 };
 
 /* 80A42CD4-80A42CDC 0008+00 s=1 e=0 z=0  None .data      l_warpInTimeTable$13229                                      */
-SECTION_DATA static u8 data_80A42CD4[8] = {
+SECTION_DATA static u8 l_warpInTimeTable[8] = {
 	0x01, 0x04, 0x08, 0x0B, 0x0D, 0x0E, 0x0F, 0x10,
 };
 
 /* 80A42CDC-80A42D0C 0030+00 s=1 e=0 z=0  None .data      l_WarpOutScaleTable$13245                                    */
-SECTION_DATA static u8 data_80A42CDC[48] = {
+SECTION_DATA static u8 l_WarpOutScaleTable[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x3F, 0xA8, 0xF5, 0xC3, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x18, 0x10, 0x62, 0x3F, 0xC0, 0x00, 0x00,
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
 /* 80A42D0C-80A42D10 0004+00 s=1 e=0 z=0  None .data      l_warpOutTimeTable$13246                                     */
-SECTION_DATA static u8 data_80A42D0C[4] = {
+SECTION_DATA static u8 l_warpOutTimeTable[4] = {
 	0x01, 0x03, 0x05, 0x06,
 };
 
@@ -5250,13 +5250,13 @@ static u8 l_HIO[4];
 static u8 lit_12316[12 + 4 /* padding */];
 
 /* 80A433EC-80A433F8 000C+00 s=1 e=0 z=0  None .bss       lightAParticleScale$12315                                    */
-static u8 data_80A433EC[12];
+static u8 lightAParticleScale[12];
 
 /* 80A433F8-80A43408 000C+04 s=1 e=0 z=0  None .bss       @12320                                                       */
 static u8 lit_12320[12 + 4 /* padding */];
 
 /* 80A43408-80A43414 000C+00 s=1 e=0 z=0  None .bss       lightALocalTrans$12319                                       */
-static u8 data_80A43408[12];
+static u8 lightALocalTrans[12];
 
 /* 80A37670-80A37B08 0498+00 s=1 e=0 z=0  None .text      setSwordChargePtcl__10daNpc_Kn_cFv                           */
 #pragma push

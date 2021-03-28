@@ -994,8 +994,8 @@ lbl_804EC164:
 /* 804EC168  3B 60 00 00 */	li r27, 0
 /* 804EC16C  3B 40 00 00 */	li r26, 0
 /* 804EC170  3B 20 00 00 */	li r25, 0
-/* 804EC174  3C 60 80 4F */	lis r3, data_804EEB88@ha
-/* 804EC178  3B C3 EB 88 */	addi r30, r3, data_804EEB88@l
+/* 804EC174  3C 60 80 4F */	lis r3, j_spd@ha
+/* 804EC178  3B C3 EB 88 */	addi r30, r3, j_spd@l
 lbl_804EC17C:
 /* 804EC17C  7F 1F CA 14 */	add r24, r31, r25
 /* 804EC180  38 78 07 62 */	addi r3, r24, 0x762
@@ -1383,8 +1383,8 @@ lbl_804EC71C:
 lbl_804EC730:
 /* 804EC730  80 79 00 84 */	lwz r3, 0x84(r25)
 /* 804EC734  80 83 00 0C */	lwz r4, 0xc(r3)
-/* 804EC738  3C 60 80 4F */	lis r3, data_804EEBA0@ha
-/* 804EC73C  38 63 EB A0 */	addi r3, r3, data_804EEBA0@l
+/* 804EC738  3C 60 80 4F */	lis r3, foot_idx@ha
+/* 804EC73C  38 63 EB A0 */	addi r3, r3, foot_idx@l
 /* 804EC740  7C 03 F0 2E */	lwzx r0, r3, r30
 /* 804EC744  1C 00 00 30 */	mulli r0, r0, 0x30
 /* 804EC748  7C 64 02 14 */	add r3, r4, r0

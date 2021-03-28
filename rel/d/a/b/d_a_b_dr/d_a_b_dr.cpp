@@ -35,10 +35,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
 struct mDoExt_brkAnm {
@@ -50,19 +50,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -81,10 +81,10 @@ struct daPy_py_c {
 	/* 8015F398 */ void checkMasterSwordEquip();
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daB_DR_c {
@@ -199,11 +199,11 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct _GXColor {
 };
 
-struct _GXColor {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dPa_control_c {
@@ -924,7 +924,7 @@ SECTION_DATA static u8 data_805C7434[64] = {
 };
 
 /* 805C7474-805C7478 0004+00 s=1 e=0 z=0  None .data      mBreakDt$3901                                                */
-SECTION_DATA static u8 data_805C7474[4] = {
+SECTION_DATA static u8 mBreakDt[4] = {
 	0x00, 0x03, 0x04, 0x02,
 };
 
@@ -988,7 +988,7 @@ SECTION_DATA static void* lit_4342[55] = {
 };
 
 /* 805C7554-805C755C 0008+00 s=1 e=0 z=0  None .data      w_eff_id$4346                                                */
-SECTION_DATA static u8 data_805C7554[8] = {
+SECTION_DATA static u8 w_eff_id[8] = {
 	0x85, 0x4C, 0x85, 0x4D, 0x85, 0x4E, 0x85, 0x4F,
 };
 
@@ -1086,7 +1086,7 @@ SECTION_DATA static void* lit_4662[22] = {
 };
 
 /* 805C76A0-805C76A8 0008+00 s=1 e=0 z=0  None .data      effId$5784                                                   */
-SECTION_DATA static u8 data_805C76A0[8] = {
+SECTION_DATA static u8 effId[8] = {
 	0x89, 0x9B, 0x89, 0x9C, 0x89, 0x9D, 0x89, 0x9E,
 };
 
@@ -1170,23 +1170,23 @@ SECTION_DATA static void* lit_7648[14] = {
 };
 
 /* 805C77A4-805C77AC 0008+00 s=1 e=0 z=0  None .data      effLId$7688                                                  */
-SECTION_DATA static u8 data_805C77A4[8] = {
+SECTION_DATA static u8 effLId[8] = {
 	0x89, 0xE4, 0x89, 0xE5, 0x89, 0xE6, 0x89, 0xE7,
 };
 
 /* 805C77AC-805C77B4 0008+00 s=1 e=0 z=0  None .data      effRId$7689                                                  */
-SECTION_DATA static u8 data_805C77AC[8] = {
+SECTION_DATA static u8 effRId[8] = {
 	0x89, 0xE8, 0x89, 0xE9, 0x89, 0xEA, 0x89, 0xEB,
 };
 
 /* 805C77B4-805C77CC 0018+00 s=1 e=0 z=0  None .data      mPartDt$8292                                                 */
-SECTION_DATA static u8 data_805C77B4[24] = {
+SECTION_DATA static u8 mPartDt[24] = {
 	0x00, 0x00, 0x00, 0x4A, 0x00, 0x00, 0x00, 0x4A, 0x00, 0x00, 0x00, 0x4B, 0x00, 0x00, 0x00, 0x4C,
 	0x00, 0x00, 0x00, 0x4D, 0x00, 0x00, 0x00, 0x4E,
 };
 
 /* 805C77CC-805C77E4 0018+00 s=1 e=0 z=0  None .data      mParts_EstimateSizeDt$8381                                   */
-SECTION_DATA static u8 data_805C77CC[24] = {
+SECTION_DATA static u8 mParts_EstimateSizeDt[24] = {
 	0x00, 0x00, 0x19, 0x80, 0x00, 0x00, 0x19, 0x90, 0x00, 0x00, 0x0D, 0x50, 0x00, 0x00, 0x0D, 0x40,
 	0x00, 0x00, 0x0D, 0x40, 0x00, 0x00, 0x0D, 0x40,
 };
@@ -1479,7 +1479,7 @@ SECTION_RODATA u32 const lit_4340 = 0x41D00000;
 SECTION_RODATA u32 const lit_4341 = 0x41F80000;
 
 /* 805C6D40-805C6FCC 0288+04 s=1 e=0 z=0  None .rodata    BREAK_PARTS_DT$4370                                          */
-SECTION_RODATA static u8 const data_805C6D40[648 + 4 /* padding */] = {
+SECTION_RODATA static u8 const BREAK_PARTS_DT[648 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x11,
 	0x00, 0x00, 0x00, 0x01, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x12, 0x00, 0x00, 0x00, 0x00,
 	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x12, 0x00, 0x00, 0x00, 0x01, 0x3F, 0x80, 0x00, 0x00,
@@ -1748,7 +1748,7 @@ SECTION_RODATA static u32 const lit_8056 = 0x3F666666;
 SECTION_RODATA static u32 const lit_8057 = 0x3A83126F;
 
 /* 805C70F8-805C7170 0078+00 s=1 e=0 z=0  None .rodata    DOWN_CYL_DT$8061                                             */
-SECTION_RODATA static u8 const data_805C70F8[120] = {
+SECTION_RODATA static u8 const DOWN_CYL_DT[120] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC2, 0xC8, 0x00, 0x00, 0x43, 0x0C, 0x00, 0x00,
 	0x43, 0x48, 0x00, 0x00, 0x43, 0x96, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0xC2, 0x48, 0x00, 0x00,
 	0x42, 0xC8, 0x00, 0x00, 0x43, 0x7A, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00, 0x43, 0x96, 0x00, 0x00,
@@ -1760,7 +1760,7 @@ SECTION_RODATA static u8 const data_805C70F8[120] = {
 };
 
 /* 805C7170-805C7224 00B4+00 s=1 e=0 z=0  None .rodata    DOWN_SPH_DT$8062                                             */
-SECTION_RODATA static u8 const data_805C7170[180] = {
+SECTION_RODATA static u8 const DOWN_SPH_DT[180] = {
 	0x00, 0x00, 0x00, 0x13, 0x42, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x43, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x2B, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x43, 0x16, 0x00, 0x00, 0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00,
@@ -2239,7 +2239,7 @@ static u8 lit_6786[12];
 static u8 lit_6787[12];
 
 /* 805C79AC-805C79DC 0030+00 s=1 e=0 z=0  None .bss       mPillarTop_dt$6781                                           */
-static u8 data_805C79AC[48];
+static u8 mPillarTop_dt[48];
 
 /* 805C1E0C-805C24BC 06B0+00 s=1 e=0 z=0  None .text      executePillarSearch__8daB_DR_cFv                             */
 #pragma push

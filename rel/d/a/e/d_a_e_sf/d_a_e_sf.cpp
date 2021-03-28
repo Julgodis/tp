@@ -18,19 +18,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -89,10 +89,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -651,17 +651,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80789DB0-80789DB8 0008+00 s=1 e=0 z=0  None .data      e_prim$3787                                                  */
-SECTION_DATA static u8 data_80789DB0[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 80789DB8-80789DC0 0008+00 s=1 e=0 z=0  None .data      e_env$3788                                                   */
-SECTION_DATA static u8 data_80789DB8[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 80789DC0-80789DC8 0006+02 s=1 e=0 z=0  None .data      eff_id$3796                                                  */
-SECTION_DATA static u8 data_80789DC0[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -686,14 +686,14 @@ SECTION_DATA static void* lit_4353[14] = {
 };
 
 /* 80789E00-80789E08 0006+02 s=1 e=0 z=0  None .data      ap_name$4773                                                 */
-SECTION_DATA static u8 data_80789E00[6 + 2 /* padding */] = {
+SECTION_DATA static u8 ap_name[6 + 2 /* padding */] = {
 	0x81, 0xDA, 0x81, 0xDB, 0x81, 0xDC,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80789E08-80789E10 0008+00 s=1 e=0 z=0  None .data      foot_idx$4976                                                */
-SECTION_DATA static u8 data_80789E08[8] = {
+SECTION_DATA static u8 foot_idx[8] = {
 	0x00, 0x00, 0x00, 0x14, 0x00, 0x00, 0x00, 0x18,
 };
 
@@ -736,22 +736,22 @@ SECTION_DATA static void* lit_5205[34] = {
 };
 
 /* 80789E98-80789E9C 0004+00 s=1 e=0 z=0  None .data      p_name$5509                                                  */
-SECTION_DATA static u8 data_80789E98[4] = {
+SECTION_DATA static u8 p_name[4] = {
 	0x81, 0xCB, 0x81, 0xCC,
 };
 
 /* 80789E9C-80789EA4 0008+00 s=1 e=0 z=0  None .data      wepon_data$5714                                              */
-SECTION_DATA static u8 data_80789E9C[8] = {
+SECTION_DATA static u8 wepon_data[8] = {
 	0x00, 0x00, 0x00, 0x16, 0x00, 0x00, 0x00, 0x17,
 };
 
 /* 80789EA4-80789EAC 0008+00 s=1 e=0 z=0  None .data      tate_data$5715                                               */
-SECTION_DATA static u8 data_80789EA4[8] = {
+SECTION_DATA static u8 tate_data[8] = {
 	0x00, 0x00, 0x00, 0x14, 0x00, 0x00, 0x00, 0x15,
 };
 
 /* 80789EAC-80789EEC 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$5780                                              */
-SECTION_DATA static u8 data_80789EAC[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -759,7 +759,7 @@ SECTION_DATA static u8 data_80789EAC[64] = {
 };
 
 /* 80789EEC-80789F2C 0040+00 s=1 e=0 z=0  None .data      at_sph_src$5781                                              */
-SECTION_DATA static u8 data_80789EEC[64] = {
+SECTION_DATA static u8 at_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
@@ -767,7 +767,7 @@ SECTION_DATA static u8 data_80789EEC[64] = {
 };
 
 /* 80789F2C-80789F6C 0040+00 s=1 e=0 z=0  None .data      tate_sph_src$5782                                            */
-SECTION_DATA static u8 data_80789F2C[64] = {
+SECTION_DATA static u8 tate_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x0A, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00,

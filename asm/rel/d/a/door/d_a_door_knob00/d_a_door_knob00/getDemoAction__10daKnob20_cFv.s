@@ -7,8 +7,8 @@ lbl_8045F520:
 /* 8045F534  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045F538  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 8045F53C  80 84 05 BC */	lwz r4, 0x5bc(r4)
-/* 8045F540  3C A0 80 46 */	lis r5, data_804608B4@ha
-/* 8045F544  38 A5 08 B4 */	addi r5, r5, data_804608B4@l
+/* 8045F540  3C A0 80 46 */	lis r5, action_table@ha
+/* 8045F544  38 A5 08 B4 */	addi r5, r5, action_table@l
 /* 8045F548  38 C0 00 10 */	li r6, 0x10
 /* 8045F54C  38 E0 00 00 */	li r7, 0
 /* 8045F550  39 00 00 00 */	li r8, 0

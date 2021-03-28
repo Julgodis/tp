@@ -20,8 +20,8 @@ lbl_80602278:
 /* 806022C0  38 E0 00 08 */	li r7, 8
 /* 806022C4  4B D5 FA 9C */	b __construct_array
 /* 806022C8  38 60 00 00 */	li r3, 0
-/* 806022CC  3C 80 80 60 */	lis r4, func_806022F0@ha
-/* 806022D0  38 84 22 F0 */	addi r4, r4, func_806022F0@l
+/* 806022CC  3C 80 80 60 */	lis r4, __arraydtor@ha
+/* 806022D0  38 84 22 F0 */	addi r4, r4, __arraydtor@l
 /* 806022D4  38 BF 00 84 */	addi r5, r31, 0x84
 /* 806022D8  4B FF 27 01 */	bl __register_global_object
 /* 806022DC  83 E1 00 0C */	lwz r31, 0xc(r1)

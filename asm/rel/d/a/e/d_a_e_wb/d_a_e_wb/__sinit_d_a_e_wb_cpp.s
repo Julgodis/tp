@@ -23,8 +23,8 @@ lbl_807E2124:
 /* 807E2178  38 E0 00 08 */	li r7, 8
 /* 807E217C  4B B7 FB E4 */	b __construct_array
 /* 807E2180  38 60 00 00 */	li r3, 0
-/* 807E2184  3C 80 80 7E */	lis r4, func_807E2270@ha
-/* 807E2188  38 84 22 70 */	addi r4, r4, func_807E2270@l
+/* 807E2184  3C 80 80 7E */	lis r4, __arraydtor_4745@ha
+/* 807E2188  38 84 22 70 */	addi r4, r4, __arraydtor_4745@l
 /* 807E218C  38 BE 00 AC */	addi r5, r30, 0xac
 /* 807E2190  4B FF 02 89 */	bl __register_global_object
 /* 807E2194  38 7E 01 24 */	addi r3, r30, 0x124
@@ -36,8 +36,8 @@ lbl_807E2124:
 /* 807E21AC  38 E0 00 08 */	li r7, 8
 /* 807E21B0  4B B7 FB B0 */	b __construct_array
 /* 807E21B4  38 60 00 00 */	li r3, 0
-/* 807E21B8  3C 80 80 7E */	lis r4, func_807E2238@ha
-/* 807E21BC  38 84 22 38 */	addi r4, r4, func_807E2238@l
+/* 807E21B8  3C 80 80 7E */	lis r4, __arraydtor_5742@ha
+/* 807E21BC  38 84 22 38 */	addi r4, r4, __arraydtor_5742@l
 /* 807E21C0  38 BE 01 18 */	addi r5, r30, 0x118
 /* 807E21C4  4B FF 02 55 */	bl __register_global_object
 /* 807E21C8  C0 1F 01 9C */	lfs f0, 0x19c(r31)

@@ -34,10 +34,10 @@ struct fopAcM_gc_c {
 	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daObjKaisou_c {
@@ -55,10 +55,10 @@ struct dSv_memBit_c {
 	/* 80034934 */ void isDungeonItem(int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -263,7 +263,7 @@ asm static void JointCallBack(J3DJoint* param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 80C34EFC-80C34F40 0044+00 s=1 e=0 z=0  None .rodata    ccCylSrc$3850                                                */
-SECTION_RODATA static u8 const data_80C34EFC[68] = {
+SECTION_RODATA static u8 const ccCylSrc[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00,

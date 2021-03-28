@@ -24,10 +24,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -47,19 +47,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -74,14 +74,14 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct cBgD_Vtx_t {
+struct cM3dGPla {
 };
 
 struct dBgS_SphChk {
 	/* 80078A14 */ dBgS_SphChk();
 };
 
-struct cM3dGPla {
+struct cBgD_Vtx_t {
 };
 
 struct daE_DK_c {
@@ -544,12 +544,12 @@ SECTION_DATA static u8 data_806AD6D4[64] = {
 };
 
 /* 806AD714-806AD720 000C+00 s=1 e=0 z=0  None .data      elect_effect_name$4066                                       */
-SECTION_DATA static u8 data_806AD714[12] = {
+SECTION_DATA static u8 elect_effect_name[12] = {
 	0x84, 0xBE, 0x84, 0xBF, 0x84, 0xC0, 0x84, 0xC1, 0x84, 0xC2, 0x84, 0xC3,
 };
 
 /* 806AD720-806AD724 0004+00 s=1 e=0 z=0  None .data      dead_effect_name$4178                                        */
-SECTION_DATA static u8 data_806AD720[4] = {
+SECTION_DATA static u8 dead_effect_name[4] = {
 	0x86, 0x0D, 0x86, 0x0E,
 };
 

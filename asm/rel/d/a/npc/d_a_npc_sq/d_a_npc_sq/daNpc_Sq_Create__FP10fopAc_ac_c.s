@@ -151,8 +151,8 @@ lbl_80AF716C:
 /* 80AF71D8  7F C6 F3 78 */	mr r6, r30
 /* 80AF71DC  4B 58 C6 84 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80AF71E0  38 7E 08 90 */	addi r3, r30, 0x890
-/* 80AF71E4  3C 80 80 AF */	lis r4, data_80AF74D0@ha
-/* 80AF71E8  38 84 74 D0 */	addi r4, r4, data_80AF74D0@l
+/* 80AF71E4  3C 80 80 AF */	lis r4, cc_sph_src@ha
+/* 80AF71E8  38 84 74 D0 */	addi r4, r4, cc_sph_src@l
 /* 80AF71EC  4B 58 D8 48 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80AF71F0  38 1E 08 54 */	addi r0, r30, 0x854
 /* 80AF71F4  90 1E 08 D4 */	stw r0, 0x8d4(r30)

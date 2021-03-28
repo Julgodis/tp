@@ -64,8 +64,8 @@ lbl_8057F104:
 /* 8057F1FC  3C 60 80 58 */	lis r3, l_HIO@ha
 /* 8057F200  38 63 F8 E4 */	addi r3, r3, l_HIO@l
 /* 8057F204  3B 43 00 30 */	addi r26, r3, 0x30
-/* 8057F208  3C 60 80 58 */	lis r3, data_8057F794@ha
-/* 8057F20C  3B 63 F7 94 */	addi r27, r3, data_8057F794@l
+/* 8057F208  3C 60 80 58 */	lis r3, effName@ha
+/* 8057F20C  3B 63 F7 94 */	addi r27, r3, effName@l
 /* 8057F210  3C 60 80 58 */	lis r3, lit_3660@ha
 /* 8057F214  3B 83 F5 80 */	addi r28, r3, lit_3660@l
 lbl_8057F218:

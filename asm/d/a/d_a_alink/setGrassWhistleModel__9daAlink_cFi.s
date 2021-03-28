@@ -9,10 +9,10 @@ lbl_80111784:
 /* 801117A0  4B F9 24 ED */	bl setItemHeap__9daAlink_cFv
 /* 801117A4  7C 7F 1B 78 */	mr r31, r3
 /* 801117A8  57 C0 10 3A */	slwi r0, r30, 2
-/* 801117AC  38 6D 81 1C */	la r3, data_8045069C(r13) /* 8045069C-_SDA_BASE_ */
+/* 801117AC  38 6D 81 1C */	la r3, grassWhistleArcName(r13) /* 8045069C-_SDA_BASE_ */
 /* 801117B0  7C 63 00 2E */	lwzx r3, r3, r0
 /* 801117B4  57 C0 08 3C */	slwi r0, r30, 1
-/* 801117B8  38 82 96 20 */	la r4, data_80453020(r2) /* 80453020-_SDA2_BASE_ */
+/* 801117B8  38 82 96 20 */	la r4, grassWhistleIdx(r2) /* 80453020-_SDA2_BASE_ */
 /* 801117BC  7C 84 02 2E */	lhzx r4, r4, r0
 /* 801117C0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 801117C4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l

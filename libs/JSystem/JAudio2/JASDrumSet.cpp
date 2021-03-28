@@ -112,10 +112,10 @@ asm void JASDrumSet::newPercArray(u8 param_0, JKRHeap* param_1) {
 
 /* ############################################################################################## */
 /* 80431B58-80431B70 0018+00 s=1 e=0 z=0  None .bss       osc$213                                                      */
-static u8 data_80431B58[24];
+static u8 osc[24];
 
 /* 80451270-80451274 0004+00 s=1 e=0 z=0  None .sbss      oscp$214                                                     */
-static u8 data_80451270[4];
+static u8 oscp[4];
 
 /* 80451274-80451278 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80451274[4];

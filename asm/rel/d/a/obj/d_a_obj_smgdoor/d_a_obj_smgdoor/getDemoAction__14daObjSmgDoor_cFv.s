@@ -7,8 +7,8 @@ lbl_80CDBFF0:
 /* 80CDC004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CDC008  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80CDC00C  80 84 05 B4 */	lwz r4, 0x5b4(r4)
-/* 80CDC010  3C A0 80 CE */	lis r5, data_80CDCD1C@ha
-/* 80CDC014  38 A5 CD 1C */	addi r5, r5, data_80CDCD1C@l
+/* 80CDC010  3C A0 80 CE */	lis r5, action_table@ha
+/* 80CDC014  38 A5 CD 1C */	addi r5, r5, action_table@l
 /* 80CDC018  38 C0 00 06 */	li r6, 6
 /* 80CDC01C  38 E0 00 00 */	li r7, 0
 /* 80CDC020  39 00 00 00 */	li r8, 0

@@ -134,14 +134,14 @@ lbl_8071BE50:
 /* 8071BF0C  7F C6 F3 78 */	mr r6, r30
 /* 8071BF10  4B 96 79 50 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 8071BF14  38 7E 0A D0 */	addi r3, r30, 0xad0
-/* 8071BF18  3C 80 80 72 */	lis r4, data_8071C978@ha
-/* 8071BF1C  38 84 C9 78 */	addi r4, r4, data_8071C978@l
+/* 8071BF18  3C 80 80 72 */	lis r4, cc_sph_src@ha
+/* 8071BF1C  38 84 C9 78 */	addi r4, r4, cc_sph_src@l
 /* 8071BF20  4B 96 8B 14 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 8071BF24  38 1E 09 5C */	addi r0, r30, 0x95c
 /* 8071BF28  90 1E 0B 14 */	stw r0, 0xb14(r30)
 /* 8071BF2C  38 7E 09 98 */	addi r3, r30, 0x998
-/* 8071BF30  3C 80 80 72 */	lis r4, data_8071C978@ha
-/* 8071BF34  38 84 C9 78 */	addi r4, r4, data_8071C978@l
+/* 8071BF30  3C 80 80 72 */	lis r4, cc_sph_src@ha
+/* 8071BF34  38 84 C9 78 */	addi r4, r4, cc_sph_src@l
 /* 8071BF38  4B 96 8A FC */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 8071BF3C  38 1E 09 5C */	addi r0, r30, 0x95c
 /* 8071BF40  90 1E 09 DC */	stw r0, 0x9dc(r30)

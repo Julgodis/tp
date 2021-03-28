@@ -26,6 +26,9 @@ struct fopAc_ac_c {
 struct e_cr_egg_class {
 };
 
+struct J3DModelData {
+};
+
 struct Vec {
 };
 
@@ -34,9 +37,6 @@ struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -54,10 +54,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -308,7 +308,7 @@ SECTION_RODATA static u32 const lit_3707 = 0xBF800000;
 SECTION_RODATA static u32 const lit_3708 = 0x3F000000;
 
 /* 8069A914-8069A920 000C+00 s=1 e=0 z=0  None .data      spy$3662                                                     */
-SECTION_DATA static u8 data_8069A914[12] = {
+SECTION_DATA static u8 spy[12] = {
 	0x41, 0x88, 0x00, 0x00, 0x41, 0x00, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00,
 };
 
@@ -399,7 +399,7 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 
 /* ############################################################################################## */
 /* 8069A920-8069A960 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$3802                                              */
-SECTION_DATA static u8 data_8069A920[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x00, 0x01, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,

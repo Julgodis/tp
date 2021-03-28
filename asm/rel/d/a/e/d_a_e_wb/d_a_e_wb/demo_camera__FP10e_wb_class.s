@@ -3282,8 +3282,8 @@ lbl_807DF2B8:
 /* 807DF2B8  3A A0 00 00 */	li r21, 0
 /* 807DF2BC  3B 00 00 00 */	li r24, 0
 /* 807DF2C0  3B 40 00 00 */	li r26, 0
-/* 807DF2C4  3C 60 80 7E */	lis r3, data_807E323C@ha
-/* 807DF2C8  3A E3 32 3C */	addi r23, r3, data_807E323C@l
+/* 807DF2C4  3C 60 80 7E */	lis r3, key_eno_8737@ha
+/* 807DF2C8  3A E3 32 3C */	addi r23, r3, key_eno_8737@l
 lbl_807DF2CC:
 /* 807DF2CC  3A DA 17 D0 */	addi r22, r26, 0x17d0
 /* 807DF2D0  7C 7F B0 2E */	lwzx r3, r31, r22
@@ -3374,8 +3374,8 @@ lbl_807DF41C:
 /* 807DF41C  3A A0 00 00 */	li r21, 0
 /* 807DF420  3B 00 00 00 */	li r24, 0
 /* 807DF424  3B 40 00 00 */	li r26, 0
-/* 807DF428  3C 60 80 7E */	lis r3, data_807E3240@ha
-/* 807DF42C  3B 63 32 40 */	addi r27, r3, data_807E3240@l
+/* 807DF428  3C 60 80 7E */	lis r3, key_eno_8748@ha
+/* 807DF42C  3B 63 32 40 */	addi r27, r3, key_eno_8748@l
 lbl_807DF430:
 /* 807DF430  3A DA 17 D0 */	addi r22, r26, 0x17d0
 /* 807DF434  7C 7F B0 2E */	lwzx r3, r31, r22

@@ -34,7 +34,7 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct Z2Creature {
@@ -43,10 +43,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -111,9 +111,6 @@ struct daNpc_Grd_Param_c {
 	/* 809D3998 */ ~daNpc_Grd_Param_c();
 };
 
-struct J3DAnmTransformKey {
-};
-
 struct _GXColorS10 {
 };
 
@@ -127,6 +124,9 @@ struct J3DAnmTextureSRTKey {
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct dCcD_SrcCyl {
@@ -1482,7 +1482,7 @@ static u8 l_HIO[4];
 static u8 lit_4716[12 + 4 /* padding */];
 
 /* 809D3F10-809D3F1C 000C+00 s=1 e=0 z=0  None .bss       eyeOffset$4715                                               */
-static u8 data_809D3F10[12];
+static u8 eyeOffset[12];
 
 /* 809D0F7C-809D14BC 0540+00 s=1 e=0 z=0  None .text      setAttnPos__11daNpc_Grd_cFv                                  */
 #pragma push

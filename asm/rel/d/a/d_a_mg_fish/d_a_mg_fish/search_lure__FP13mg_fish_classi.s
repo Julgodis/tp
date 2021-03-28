@@ -63,8 +63,8 @@ lbl_8052A538:
 /* 8052A548  2C 00 00 04 */	cmpwi r0, 4
 /* 8052A54C  41 82 00 24 */	beq lbl_8052A570
 /* 8052A550  88 9D 07 50 */	lbz r4, 0x750(r29)
-/* 8052A554  3C 60 80 53 */	lis r3, data_805364DC@ha
-/* 8052A558  38 63 64 DC */	addi r3, r3, data_805364DC@l
+/* 8052A554  3C 60 80 53 */	lis r3, learn_d@ha
+/* 8052A558  38 63 64 DC */	addi r3, r3, learn_d@l
 /* 8052A55C  7C 03 00 AE */	lbzx r0, r3, r0
 /* 8052A560  7C 80 00 39 */	and. r0, r4, r0
 /* 8052A564  41 82 00 0C */	beq lbl_8052A570

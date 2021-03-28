@@ -56,8 +56,8 @@ lbl_80CF06F0:
 /* 80CF0704  4B 4B 30 C0 */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
 /* 80CF0708  38 7F 0D 50 */	addi r3, r31, 0xd50
 /* 80CF070C  38 80 00 3F */	li r4, 0x3f
-/* 80CF0710  3C A0 80 CF */	lis r5, data_80CF30FC@ha
-/* 80CF0714  38 A5 30 FC */	addi r5, r5, data_80CF30FC@l
+/* 80CF0710  3C A0 80 CF */	lis r5, l_color@ha
+/* 80CF0714  38 A5 30 FC */	addi r5, r5, l_color@l
 /* 80CF0718  38 DF 01 0C */	addi r6, r31, 0x10c
 /* 80CF071C  4B 32 38 94 */	b update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c
 /* 80CF0720  38 7F 0D 50 */	addi r3, r31, 0xd50

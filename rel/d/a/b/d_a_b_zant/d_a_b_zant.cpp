@@ -34,10 +34,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -57,19 +57,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -238,11 +238,11 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct _GXColor {
 };
 
-struct _GXColor {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dPa_control_c {
@@ -989,24 +989,24 @@ SECTION_DATA static u8 data_8064F030[7 + 1 /* padding */] = {
 };
 
 /* 8064F038-8064F044 000C+00 s=1 e=0 z=0  None .data      l_landing_effect_id$5199                                     */
-SECTION_DATA static u8 data_8064F038[12] = {
+SECTION_DATA static u8 l_landing_effect_id_5199[12] = {
 	0x86, 0xDC, 0x86, 0xDD, 0x86, 0xDE, 0x86, 0xDF, 0x86, 0xE0, 0x86, 0xE1,
 };
 
 /* 8064F044-8064F04C 0006+02 s=1 e=0 z=0  None .data      l_landing_effect_id$5284                                     */
-SECTION_DATA static u8 data_8064F044[6 + 2 /* padding */] = {
+SECTION_DATA static u8 l_landing_effect_id_5284[6 + 2 /* padding */] = {
 	0x89, 0x01, 0x89, 0x02, 0x89, 0x03,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 8064F04C-8064F050 0004+00 s=1 e=0 z=0  None .data      l_roll_effect_id$5301                                        */
-SECTION_DATA static u8 data_8064F04C[4] = {
+SECTION_DATA static u8 l_roll_effect_id[4] = {
 	0x89, 0x04, 0x89, 0x05,
 };
 
 /* 8064F050-8064F058 0008+00 s=1 e=0 z=0  None .data      w_eff_id$6078                                                */
-SECTION_DATA static u8 data_8064F050[8] = {
+SECTION_DATA static u8 w_eff_id[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
@@ -1237,7 +1237,7 @@ SECTION_DATA static void* lit_9307[22] = {
 };
 
 /* 8064F350-8064F368 0018+00 s=1 e=0 z=0  None .data      mahojin_se$9642                                              */
-SECTION_DATA static u8 data_8064F350[24] = {
+SECTION_DATA static u8 mahojin_se[24] = {
 	0x00, 0x07, 0x04, 0x13, 0x00, 0x07, 0x04, 0x14, 0x00, 0x07, 0x04, 0x15, 0x00, 0x07, 0x04, 0x16,
 	0x00, 0x07, 0x04, 0x17, 0x00, 0x07, 0x04, 0x18,
 };
@@ -1303,7 +1303,7 @@ SECTION_DATA static void* lit_9987[24] = {
 };
 
 /* 8064F428-8064F4AC 0084+00 s=1 e=0 z=0  None .data      ice_sph_jnt$10159                                            */
-SECTION_DATA static u8 data_8064F428[132] = {
+SECTION_DATA static u8 ice_sph_jnt[132] = {
 	0x00, 0x00, 0x00, 0x23, 0x41, 0x20, 0x00, 0x00, 0x41, 0x70, 0x00, 0x00, 0x00, 0x00, 0x00, 0x22,
 	0x41, 0xA0, 0x00, 0x00, 0x41, 0xA0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x22, 0x00, 0x00, 0x00, 0x00,
 	0x41, 0xC8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x21, 0x41, 0xA0, 0x00, 0x00, 0x41, 0xF0, 0x00, 0x00,
@@ -1840,14 +1840,14 @@ SECTION_RODATA static u32 const lit_7705 = 0xC20C0000;
 SECTION_RODATA static u32 const lit_7706 = 0xC1F00000;
 
 /* 8064ED3C-8064ED68 002C+00 s=1 e=0 z=0  None .rodata    damage_scale$7711                                            */
-SECTION_RODATA static u8 const data_8064ED3C[44] = {
+SECTION_RODATA static u8 const damage_scale[44] = {
 	0x41, 0x20, 0x00, 0x00, 0x41, 0x00, 0x00, 0x00, 0x40, 0xF0, 0x00, 0x00, 0x40, 0xC0, 0x00, 0x00,
 	0x40, 0x90, 0x00, 0x00, 0x40, 0x40, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x3F, 0xB3, 0x33, 0x33,
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x33, 0x33, 0x33, 0x3F, 0x00, 0x00, 0x00,
 };
 
 /* 8064ED68-8064ED94 002C+00 s=1 e=0 z=0  None .rodata    damage_jump_speed$7712                                       */
-SECTION_RODATA static u8 const data_8064ED68[44] = {
+SECTION_RODATA static u8 const damage_jump_speed[44] = {
 	0x42, 0xC8, 0x00, 0x00, 0x42, 0xBE, 0x00, 0x00, 0x42, 0xB4, 0x00, 0x00, 0x42, 0xAA, 0x00, 0x00,
 	0x42, 0xA0, 0x00, 0x00, 0x42, 0x96, 0x00, 0x00, 0x42, 0x8C, 0x00, 0x00, 0x42, 0x82, 0x00, 0x00,
 	0x42, 0x70, 0x00, 0x00, 0x42, 0x5C, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,

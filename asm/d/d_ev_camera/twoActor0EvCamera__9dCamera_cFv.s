@@ -9,8 +9,8 @@ lbl_800956E4:
 /* 80095700  7C 00 07 75 */	extsb. r0, r0
 /* 80095704  40 82 00 34 */	bne lbl_80095738
 /* 80095708  C0 02 8E B8 */	lfs f0, lit_5141(r2)
-/* 8009570C  3C 60 80 42 */	lis r3, data_8042542C@ha
-/* 80095710  D4 03 54 2C */	stfsu f0, data_8042542C@l(r3)
+/* 8009570C  3C 60 80 42 */	lis r3, DefaultGap_10515@ha
+/* 80095710  D4 03 54 2C */	stfsu f0, DefaultGap_10515@l(r3)
 /* 80095714  D0 03 00 04 */	stfs f0, 4(r3)
 /* 80095718  D0 03 00 08 */	stfs f0, 8(r3)
 /* 8009571C  3C 80 80 01 */	lis r4, __dt__4cXyzFv@ha
@@ -65,8 +65,8 @@ lbl_800957C8:
 /* 800957C8  38 00 FF FF */	li r0, -1
 lbl_800957CC:
 /* 800957CC  90 1E 03 F8 */	stw r0, 0x3f8(r30)
-/* 800957D0  3C 60 80 42 */	lis r3, data_8042542C@ha
-/* 800957D4  C4 03 54 2C */	lfsu f0, data_8042542C@l(r3)
+/* 800957D0  3C 60 80 42 */	lis r3, DefaultGap_10515@ha
+/* 800957D4  C4 03 54 2C */	lfsu f0, DefaultGap_10515@l(r3)
 /* 800957D8  D0 01 01 14 */	stfs f0, 0x114(r1)
 /* 800957DC  C0 03 00 04 */	lfs f0, 4(r3)
 /* 800957E0  D0 01 01 18 */	stfs f0, 0x118(r1)

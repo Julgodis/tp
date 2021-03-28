@@ -221,10 +221,10 @@ asm void fpcM_Management(void (*)(void), void (*)(void)) {
 
 /* ############################################################################################## */
 /* 803F4DB0-803F4DDC 002C+00 s=1 e=0 z=0  None .bss       rootlayer$3716                                               */
-static u8 data_803F4DB0[44];
+static u8 rootlayer[44];
 
 /* 803F4DDC-803F4E58 0078+04 s=1 e=0 z=0  None .bss       queue$3717                                                   */
-static u8 data_803F4DDC[120 + 4 /* padding */];
+static u8 queue[120 + 4 /* padding */];
 
 /* 800222B8-800222F4 003C+00 s=0 e=1 z=0  None .text      fpcM_Init__Fv                                                */
 #pragma push

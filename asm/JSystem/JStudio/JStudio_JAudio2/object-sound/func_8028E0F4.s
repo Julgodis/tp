@@ -3,8 +3,8 @@ lbl_8028E0F4:
 /* 8028E0F8  7C 08 02 A6 */	mflr r0
 /* 8028E0FC  90 01 00 64 */	stw r0, 0x64(r1)
 /* 8028E100  93 E1 00 5C */	stw r31, 0x5c(r1)
-/* 8028E104  3C 60 80 43 */	lis r3, data_80431490@ha
-/* 8028E108  3B E3 14 90 */	addi r31, r3, data_80431490@l
+/* 8028E104  3C 60 80 43 */	lis r3, aoData@ha
+/* 8028E108  3B E3 14 90 */	addi r31, r3, aoData@l
 /* 8028E10C  3C 60 80 3C */	lis r3, __vt__Q37JStudio14TVariableValue7TOutput@ha
 /* 8028E110  38 C3 56 40 */	addi r6, r3, __vt__Q37JStudio14TVariableValue7TOutput@l
 /* 8028E114  90 C1 00 44 */	stw r6, 0x44(r1)

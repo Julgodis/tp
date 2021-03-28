@@ -36,8 +36,8 @@ lbl_805D1E80:
 /* 805D1EB0  7F C3 F3 78 */	mr r3, r30
 /* 805D1EB4  88 1E 08 4F */	lbz r0, 0x84f(r30)
 /* 805D1EB8  54 00 10 3A */	slwi r0, r0, 2
-/* 805D1EBC  3C 80 80 5E */	lis r4, data_805DD5B8@ha
-/* 805D1EC0  38 84 D5 B8 */	addi r4, r4, data_805DD5B8@l
+/* 805D1EBC  3C 80 80 5E */	lis r4, Ds_Etc_damage_id@ha
+/* 805D1EC0  38 84 D5 B8 */	addi r4, r4, Ds_Etc_damage_id@l
 /* 805D1EC4  7C 84 00 2E */	lwzx r4, r4, r0
 /* 805D1EC8  38 A0 00 00 */	li r5, 0
 /* 805D1ECC  C0 3F 03 B8 */	lfs f1, 0x3b8(r31)
@@ -62,8 +62,8 @@ lbl_805D1EEC:
 /* 805D1F14  38 C1 00 08 */	addi r6, r1, 8
 /* 805D1F18  4B A9 DB 0C */	b StartShock__12dVibration_cFii4cXyz
 /* 805D1F1C  7F C3 F3 78 */	mr r3, r30
-/* 805D1F20  3C 80 80 5E */	lis r4, data_805DD5B8@ha
-/* 805D1F24  38 84 D5 B8 */	addi r4, r4, data_805DD5B8@l
+/* 805D1F20  3C 80 80 5E */	lis r4, Ds_Etc_damage_id@ha
+/* 805D1F24  38 84 D5 B8 */	addi r4, r4, Ds_Etc_damage_id@l
 /* 805D1F28  88 1E 08 4F */	lbz r0, 0x84f(r30)
 /* 805D1F2C  54 00 10 3A */	slwi r0, r0, 2
 /* 805D1F30  7C 84 02 14 */	add r4, r4, r0
@@ -78,8 +78,8 @@ lbl_805D1EEC:
 /* 805D1F54  90 1E 06 84 */	stw r0, 0x684(r30)
 /* 805D1F58  48 00 00 CC */	b lbl_805D2024
 lbl_805D1F5C:
-/* 805D1F5C  3C 80 80 5E */	lis r4, data_805DD5B8@ha
-/* 805D1F60  38 84 D5 B8 */	addi r4, r4, data_805DD5B8@l
+/* 805D1F5C  3C 80 80 5E */	lis r4, Ds_Etc_damage_id@ha
+/* 805D1F60  38 84 D5 B8 */	addi r4, r4, Ds_Etc_damage_id@l
 /* 805D1F64  88 1E 08 4F */	lbz r0, 0x84f(r30)
 /* 805D1F68  54 00 10 3A */	slwi r0, r0, 2
 /* 805D1F6C  7C 84 02 14 */	add r4, r4, r0
@@ -98,8 +98,8 @@ lbl_805D1F98:
 /* 805D1F9C  C0 04 00 1C */	lfs f0, 0x1c(r4)
 /* 805D1FA0  88 1E 08 4F */	lbz r0, 0x84f(r30)
 /* 805D1FA4  54 00 10 3A */	slwi r0, r0, 2
-/* 805D1FA8  3C 80 80 5E */	lis r4, data_805DD5DC@ha
-/* 805D1FAC  38 84 D5 DC */	addi r4, r4, data_805DD5DC@l
+/* 805D1FA8  3C 80 80 5E */	lis r4, smokeSet_dt@ha
+/* 805D1FAC  38 84 D5 DC */	addi r4, r4, smokeSet_dt@l
 /* 805D1FB0  7C 84 00 2E */	lwzx r4, r4, r0
 /* 805D1FB4  FC 00 00 1E */	fctiwz f0, f0
 /* 805D1FB8  D8 01 00 20 */	stfd f0, 0x20(r1)

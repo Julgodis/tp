@@ -865,7 +865,7 @@ asm void dSv_player_item_c::getItem(int param_0, bool param_1) const {
 
 /* ############################################################################################## */
 /* 803A7270-803A7288 0017+01 s=1 e=0 z=0  None .data      i_item_lst$4006                                              */
-SECTION_DATA static u8 data_803A7270[23 + 1 /* padding */] = {
+SECTION_DATA static u8 i_item_lst[23 + 1 /* padding */] = {
 	0x0A, 0x08, 0x06, 0x02, 0x09, 0x04, 0x03, 0x00, 0x01, 0x17, 0x14, 0x05, 0x0F, 0x10, 0x11, 0x0B,
 	0x0C, 0x0D, 0x0E, 0x13, 0x12, 0x16, 0x15,
 	/* padding */

@@ -235,8 +235,8 @@ lbl_800EFBA4:
 /* 800EFCD0  41 82 00 40 */	beq lbl_800EFD10
 /* 800EFCD4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 800EFCD8  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 800EFCDC  3C 80 80 39 */	lis r4, data_80391984@ha
-/* 800EFCE0  38 84 19 84 */	addi r4, r4, data_80391984@l
+/* 800EFCDC  3C 80 80 39 */	lis r4, boarRideOffset@ha
+/* 800EFCE0  38 84 19 84 */	addi r4, r4, boarRideOffset@l
 /* 800EFCE4  38 A1 00 2C */	addi r5, r1, 0x2c
 /* 800EFCE8  48 25 70 85 */	bl PSMTXMultVec
 /* 800EFCEC  38 7A 04 D0 */	addi r3, r26, 0x4d0

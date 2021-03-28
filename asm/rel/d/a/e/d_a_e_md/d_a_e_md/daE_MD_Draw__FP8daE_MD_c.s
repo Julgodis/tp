@@ -5,8 +5,8 @@ lbl_80709E6C:
 /* 80709E78  39 61 00 30 */	addi r11, r1, 0x30
 /* 80709E7C  4B C5 83 5C */	b _savegpr_28
 /* 80709E80  7C 7E 1B 78 */	mr r30, r3
-/* 80709E84  3C 60 80 71 */	lis r3, data_8070A4EC@ha
-/* 80709E88  3B E3 A4 EC */	addi r31, r3, data_8070A4EC@l
+/* 80709E84  3C 60 80 71 */	lis r3, ccCylSrc@ha
+/* 80709E88  3B E3 A4 EC */	addi r31, r3, ccCylSrc@l
 /* 80709E8C  80 7E 06 8C */	lwz r3, 0x68c(r30)
 /* 80709E90  80 63 00 04 */	lwz r3, 4(r3)
 /* 80709E94  80 63 00 04 */	lwz r3, 4(r3)

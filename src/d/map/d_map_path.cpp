@@ -188,7 +188,7 @@ extern "C" extern u8 g_clearColor[4];
 
 /* ############################################################################################## */
 /* 80379C30-80379C4C 001C+00 s=1 e=0 z=0  None .rodata    data$3644                                                    */
-SECTION_RODATA static u8 const data_80379C30[28] = {
+SECTION_RODATA static u8 const data[28] = {
 	0x00, 0x00, 0x00, 0x4F, 0x00, 0x00, 0x00, 0x50, 0x00, 0x00, 0x00, 0x4D, 0x00, 0x00, 0x00, 0x4E,
 	0x00, 0x00, 0x00, 0x4C, 0x00, 0x00, 0x00, 0x51, 0x00, 0x00, 0x00, 0x52,
 };

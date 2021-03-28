@@ -42,13 +42,13 @@ struct mDoExt_3DlineMatSortPacket {
 	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -756,19 +756,19 @@ SECTION_DATA static void* lit_4220[3] = {
 };
 
 /* 80598008-8059802C 0024+00 s=1 e=0 z=0  None .data      mode_proc$4217                                               */
-SECTION_DATA static u8 data_80598008[36] = {
+SECTION_DATA static u8 mode_proc[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 8059802C-80598034 0008+00 s=1 e=0 z=0  None .data      l_fall_start_se$4321                                         */
-SECTION_DATA static u8 data_8059802C[8] = {
+SECTION_DATA static u8 l_fall_start_se[8] = {
 	0x00, 0x08, 0x01, 0x44, 0x00, 0x08, 0x01, 0x46,
 };
 
 /* 80598034-8059803C 0008+00 s=1 e=0 z=0  None .data      l_fall_end_se$4322                                           */
-SECTION_DATA static u8 data_80598034[8] = {
+SECTION_DATA static u8 l_fall_end_se[8] = {
 	0x00, 0x08, 0x01, 0x45, 0x00, 0x08, 0x01, 0x47,
 };
 

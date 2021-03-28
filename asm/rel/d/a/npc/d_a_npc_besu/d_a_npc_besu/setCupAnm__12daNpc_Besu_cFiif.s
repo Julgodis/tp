@@ -16,8 +16,8 @@ lbl_805395F4:
 /* 8053962C  28 00 00 00 */	cmplwi r0, 0
 /* 80539630  41 82 00 70 */	beq lbl_805396A0
 /* 80539634  54 80 18 38 */	slwi r0, r4, 3
-/* 80539638  3C 80 80 54 */	lis r4, data_8053FAAC@ha
-/* 8053963C  38 84 FA AC */	addi r4, r4, data_8053FAAC@l
+/* 80539638  3C 80 80 54 */	lis r4, cupAnmData@ha
+/* 8053963C  38 84 FA AC */	addi r4, r4, cupAnmData@l
 /* 80539640  7C A4 00 2E */	lwzx r5, r4, r0
 /* 80539644  2C 05 00 00 */	cmpwi r5, 0
 /* 80539648  40 81 00 24 */	ble lbl_8053966C

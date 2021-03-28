@@ -47,8 +47,8 @@ lbl_805BC14C:
 /* 805BC150  40 80 00 E0 */	bge lbl_805BC230
 /* 805BC154  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 805BC158  3B A3 D4 70 */	addi r29, r3, now__14mDoMtx_stack_c@l
-/* 805BC15C  3C 60 80 5C */	lis r3, data_805C6D40@ha
-/* 805BC160  3B C3 6D 40 */	addi r30, r3, data_805C6D40@l
+/* 805BC15C  3C 60 80 5C */	lis r3, BREAK_PARTS_DT@ha
+/* 805BC160  3B C3 6D 40 */	addi r30, r3, BREAK_PARTS_DT@l
 /* 805BC164  7F BF EB 78 */	mr r31, r29
 /* 805BC168  1E DB 00 0C */	mulli r22, r27, 0xc
 /* 805BC16C  48 00 00 B4 */	b lbl_805BC220

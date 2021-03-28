@@ -108,8 +108,8 @@ lbl_805DAC00:
 /* 805DAC3C  3A D7 23 3C */	addi r22, r23, 0x233c
 /* 805DAC40  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 805DAC44  3B 03 D4 70 */	addi r24, r3, now__14mDoMtx_stack_c@l
-/* 805DAC48  3C 60 80 5E */	lis r3, data_805DD980@ha
-/* 805DAC4C  3B 23 D9 80 */	addi r25, r3, data_805DD980@l
+/* 805DAC48  3C 60 80 5E */	lis r3, head2_setRdt@ha
+/* 805DAC4C  3B 23 D9 80 */	addi r25, r3, head2_setRdt@l
 lbl_805DAC50:
 /* 805DAC50  38 7F 08 00 */	addi r3, r31, 0x800
 /* 805DAC54  7C 63 D2 14 */	add r3, r3, r26

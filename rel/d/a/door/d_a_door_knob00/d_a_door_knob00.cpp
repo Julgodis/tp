@@ -18,10 +18,10 @@ struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -529,7 +529,7 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 SECTION_DATA static void* l_bmd_base_name = (void*)(((char*)&struct_804606C4)+0x0) /* @stringBase0 */;
 
 /* 80460A98-80460AB8 0020+00 s=1 e=0 z=0  None .bss       l_bmdName$3809                                               */
-static u8 data_80460A98[32];
+static u8 l_bmdName[32];
 
 /* 8045E8C8-8045E91C 0054+00 s=1 e=0 z=0  None .text      getBmd__10daKnob20_cFv                                       */
 #pragma push
@@ -670,7 +670,7 @@ SECTION_RODATA static u8 const struct_8046081C[88] = {
 };
 
 /* 80460898-804608B4 001C+00 s=1 e=0 z=0  None .data      ev_name_table$4009                                           */
-SECTION_DATA static void* data_80460898[7] = {
+SECTION_DATA static void* ev_name_table[7] = {
 	(void*)(((char*)&struct_804606C4)+0x57) /* None */,
 	(void*)(((char*)&struct_80460734)+0x0) /* None */,
 	(void*)(((char*)&struct_80460734)+0x19) /* None */,
@@ -681,7 +681,7 @@ SECTION_DATA static void* data_80460898[7] = {
 };
 
 /* 804608B4-804608F4 0040+00 s=1 e=0 z=0  None .data      action_table$4177                                            */
-SECTION_DATA static void* data_804608B4[16] = {
+SECTION_DATA static void* action_table[16] = {
 	(void*)(((char*)&struct_8046078C)+0x21) /* None */,
 	(void*)(((char*)&struct_8046078C)+0x26) /* None */,
 	(void*)(((char*)&struct_8046078C)+0x2F) /* None */,
@@ -738,7 +738,7 @@ SECTION_DATA static void* lit_4274[16] = {
 };
 
 /* 80460968-80460978 0010+00 s=1 e=0 z=0  None .data      bck_table$4335                                               */
-SECTION_DATA static void* data_80460968[4] = {
+SECTION_DATA static void* bck_table[4] = {
 	(void*)(((char*)&struct_804606C4)+0x46) /* None */,
 	(void*)(((char*)&struct_8046081C)+0x3A) /* None */,
 	(void*)(((char*)&struct_804606C4)+0x46) /* None */,
@@ -802,7 +802,7 @@ SECTION_DATA static void* lit_4555[3] = {
 };
 
 /* 804609D8-80460A38 0060+00 s=1 e=0 z=0  None .data      l_action$4547                                                */
-SECTION_DATA static u8 data_804609D8[96] = {
+SECTION_DATA static u8 l_action[96] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

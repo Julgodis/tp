@@ -57,10 +57,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -537,7 +537,7 @@ SECTION_DATA static void* lit_3832[3] = {
 };
 
 /* 80D0E6F8-80D0E728 0030+00 s=1 e=0 z=0  None .data      l_func$3828                                                  */
-SECTION_DATA static u8 data_80D0E6F8[48] = {
+SECTION_DATA static u8 l_func[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -605,7 +605,7 @@ SECTION_RODATA static u8 const struct_80D0E640[24] = {
 };
 
 /* 80D0E728-80D0E734 000C+00 s=1 e=0 z=0  None .data      action_table$3895                                            */
-SECTION_DATA static void* data_80D0E728[3] = {
+SECTION_DATA static void* action_table[3] = {
 	(void*)(((char*)&struct_80D0E640)+0x0) /* None */,
 	(void*)(((char*)&struct_80D0E640)+0x5) /* None */,
 	(void*)(((char*)&struct_80D0E640)+0x9) /* None */,

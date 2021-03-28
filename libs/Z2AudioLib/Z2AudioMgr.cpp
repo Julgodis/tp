@@ -58,7 +58,16 @@ struct Z2FxLineMgr {
 	/* 802BA7DC */ Z2FxLineMgr();
 };
 
+struct JKRArchive {
+};
+
 struct JAISoundHandle {
+};
+
+struct JKRSolidHeap {
+};
+
+struct JAISoundID {
 };
 
 struct JGeometry {
@@ -68,15 +77,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JKRSolidHeap {
-};
-
-struct JKRArchive {
-};
-
-struct JAISoundID {
 };
 
 struct Z2AudioMgr {
@@ -207,10 +207,10 @@ struct JAISoundInfo {
 struct JAISeqDataMgr {
 };
 
-struct JAIAudience {
+struct JAISeCategoryArrangement {
 };
 
-struct JAISeCategoryArrangement {
+struct JAIAudience {
 };
 
 struct JAISeMgr {

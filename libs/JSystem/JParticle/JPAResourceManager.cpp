@@ -21,10 +21,10 @@ struct JUTTexture {
 struct JPATexture {
 };
 
-struct JPAResource {
+struct JKRHeap {
 };
 
-struct JKRHeap {
+struct JPAResource {
 };
 
 struct JPAResourceManager {

@@ -16,8 +16,8 @@ lbl_80A6CC2C:
 /* 80A6CC64  28 00 00 00 */	cmplwi r0, 0
 /* 80A6CC68  41 82 00 70 */	beq lbl_80A6CCD8
 /* 80A6CC6C  54 80 18 38 */	slwi r0, r4, 3
-/* 80A6CC70  3C 80 80 A7 */	lis r4, data_80A708B8@ha
-/* 80A6CC74  38 84 08 B8 */	addi r4, r4, data_80A708B8@l
+/* 80A6CC70  3C 80 80 A7 */	lis r4, bowlAnmData@ha
+/* 80A6CC74  38 84 08 B8 */	addi r4, r4, bowlAnmData@l
 /* 80A6CC78  7C A4 00 2E */	lwzx r5, r4, r0
 /* 80A6CC7C  2C 05 00 00 */	cmpwi r5, 0
 /* 80A6CC80  40 81 00 24 */	ble lbl_80A6CCA4

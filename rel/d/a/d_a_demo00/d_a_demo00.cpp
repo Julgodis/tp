@@ -19,18 +19,6 @@ struct mDoGph_gInf_c {
 	/* 800080D0 */ void fadeOut(f32);
 };
 
-struct J3DSkinDeform {
-	/* 8032C96C */ J3DSkinDeform();
-};
-
-struct J3DDeformData {
-};
-
-struct J3DModel {
-	/* 80327A2C */ void setDeformData(J3DDeformData*, u32);
-	/* 80327AA0 */ void setSkinDeform(J3DSkinDeform*, u32);
-};
-
 struct Vec {
 };
 
@@ -44,21 +32,33 @@ struct cXyz {
 	/* 804A871C */ cXyz();
 };
 
+struct J3DSkinDeform {
+	/* 8032C96C */ J3DSkinDeform();
+};
+
+struct J3DDeformData {
+};
+
+struct J3DModel {
+	/* 80327A2C */ void setDeformData(J3DDeformData*, u32);
+	/* 80327AA0 */ void setSkinDeform(J3DSkinDeform*, u32);
+};
+
 struct mDoExt_invisibleModel {
 	/* 8000E53C */ void create(J3DModel*, u8);
 	/* 8000E7C0 */ void entryDL(cXyz*);
+};
+
+struct J3DAnmTevRegKey {
+};
+
+struct J3DAnmColor {
 };
 
 struct J3DAnmTexPattern {
 };
 
 struct J3DAnmTextureSRTKey {
-};
-
-struct J3DAnmColor {
-};
-
-struct J3DAnmTevRegKey {
 };
 
 struct J3DMaterialTable {
@@ -99,7 +99,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
@@ -108,13 +111,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -136,10 +136,10 @@ struct mDoExt_3DlineMatSortPacket {
 	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -326,8 +326,8 @@ extern "C" static void daDemo00_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __ct__12demo_s1_ke_sFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
 extern "C" void __sinit_d_a_demo00_cpp(); // 1
-extern "C" static void func_804A87DC(); // 1
-extern "C" static void func_804A8814(); // 1
+extern "C" static void __arraydtor_5213(); // 1
+extern "C" static void __arraydtor_5211(); // 1
 extern "C" extern u32 const lit_6393;
 extern "C" extern u32 const lit_6394;
 extern "C" extern char const* const stringBase0;
@@ -925,32 +925,32 @@ SECTION_DATA static void* lit_4999[3] = {
 };
 
 /* 804A8A28-804A8A2C 0004+00 s=1 e=0 z=0  None .data      l_blendInfoOPA$5172                                          */
-SECTION_DATA static u8 data_804A8A28[4] = {
+SECTION_DATA static u8 l_blendInfoOPA[4] = {
 	0x00, 0x01, 0x00, 0x03,
 };
 
 /* 804A8A2C-804A8A30 0004+00 s=1 e=0 z=0  None .data      l_blendInfo$5173                                             */
-SECTION_DATA static u8 data_804A8A2C[4] = {
+SECTION_DATA static u8 l_blendInfo[4] = {
 	0x01, 0x04, 0x05, 0x03,
 };
 
 /* 804A8A30-804A8A34 0004+00 s=1 e=0 z=0  None .data      l_zmodeInfoOPA$5174                                          */
-SECTION_DATA static u8 data_804A8A30[4] = {
+SECTION_DATA static u8 l_zmodeInfoOPA[4] = {
 	0x01, 0x03, 0x01, 0x00,
 };
 
 /* 804A8A34-804A8A38 0004+00 s=1 e=0 z=0  None .data      l_zmodeInfo$5175                                             */
-SECTION_DATA static u8 data_804A8A34[4] = {
+SECTION_DATA static u8 l_zmodeInfo[4] = {
 	0x01, 0x03, 0x00, 0x00,
 };
 
 /* 804A8A38-804A8A3C 0004+00 s=1 e=0 z=0  None .data      l_color$5341                                                 */
-SECTION_DATA static u8 data_804A8A38[4] = {
+SECTION_DATA static u8 l_color[4] = {
 	0x14, 0x0F, 0x00, 0xFF,
 };
 
 /* 804A8A3C-804A8A68 002C+00 s=1 e=0 z=0  None .data      ke_za$5515                                                   */
-SECTION_DATA static u8 data_804A8A3C[44] = {
+SECTION_DATA static u8 ke_za[44] = {
 	0xFC, 0xE0, 0xFE, 0x70, 0x00, 0x00, 0x01, 0x90, 0x03, 0x20, 0xFC, 0xE0, 0xFE, 0x70, 0x00, 0x00,
 	0x01, 0x90, 0x03, 0x20, 0xFC, 0xE0, 0xFE, 0x70, 0x00, 0x00, 0x01, 0x90, 0x03, 0x20, 0x04, 0xB0,
 	0xFC, 0xE0, 0xFE, 0x70, 0x00, 0x00, 0x01, 0x90, 0x03, 0x20, 0x04, 0xB0,
@@ -1481,9 +1481,9 @@ extern "C" asm void __sinit_d_a_demo00_cpp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_804A87DC() {
+extern "C" asm static void __arraydtor_5213() {
 	nofralloc
-#include "asm/rel/d/a/d_a_demo00/d_a_demo00/func_804A87DC.s"
+#include "asm/rel/d/a/d_a_demo00/d_a_demo00/__arraydtor_5213.s"
 }
 #pragma pop
 
@@ -1492,9 +1492,9 @@ extern "C" asm static void func_804A87DC() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_804A8814() {
+extern "C" asm static void __arraydtor_5211() {
 	nofralloc
-#include "asm/rel/d/a/d_a_demo00/d_a_demo00/func_804A8814.s"
+#include "asm/rel/d/a/d_a_demo00/d_a_demo00/__arraydtor_5211.s"
 }
 #pragma pop
 

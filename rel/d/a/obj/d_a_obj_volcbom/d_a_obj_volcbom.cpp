@@ -26,10 +26,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -45,10 +45,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -623,7 +623,7 @@ SECTION_RODATA static u32 const lit_4002 = 0xC37A0000;
 SECTION_RODATA static u32 const lit_4022 = 0x3F000000;
 
 /* 80D26BB0-80D26BC0 000E+02 s=1 e=0 z=0  None .rodata    l_effect_id$4032                                             */
-SECTION_RODATA static u8 const data_80D26BB0[14 + 2 /* padding */] = {
+SECTION_RODATA static u8 const l_effect_id[14 + 2 /* padding */] = {
 	0x85, 0xF7, 0x85, 0xF8, 0x85, 0xF9, 0x85, 0xFA, 0x85, 0xFB, 0x85, 0xFC, 0x85, 0xFD,
 	/* padding */
 	0x00, 0x00,
@@ -779,7 +779,7 @@ SECTION_DATA static void* lit_3936[3] = {
 };
 
 /* 80D26CF4-80D26D24 0030+00 s=1 e=0 z=0  None .data      mode_proc$3932                                               */
-SECTION_DATA static u8 data_80D26CF4[48] = {
+SECTION_DATA static u8 mode_proc[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -828,7 +828,7 @@ SECTION_DATA static void* lit_4371[3] = {
 };
 
 /* 80D26D6C-80D26DB4 0048+00 s=1 e=0 z=0  None .data      l_func$4365                                                  */
-SECTION_DATA static u8 data_80D26D6C[72] = {
+SECTION_DATA static u8 l_func[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -837,7 +837,7 @@ SECTION_DATA static u8 data_80D26D6C[72] = {
 };
 
 /* 80D26DB4-80D26DC4 0010+00 s=1 e=0 z=0  None .data      action_table$4540                                            */
-SECTION_DATA static void* data_80D26DB4[4] = {
+SECTION_DATA static void* action_table[4] = {
 	(void*)(((char*)&struct_80D26C0C)+0x2F) /* None */,
 	(void*)&data_80D26C40,
 	(void*)(((char*)&struct_80D26C44)+0x0) /* None */,

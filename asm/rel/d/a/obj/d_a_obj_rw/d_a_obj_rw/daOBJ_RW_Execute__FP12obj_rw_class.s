@@ -165,11 +165,11 @@ lbl_80CC3170:
 /* 80CC3194  3A A0 00 00 */	li r21, 0
 /* 80CC3198  3B 80 00 00 */	li r28, 0
 /* 80CC319C  3B 60 00 00 */	li r27, 0
-/* 80CC31A0  3C 60 80 CC */	lis r3, data_80CC3B54@ha
-/* 80CC31A4  3B 23 3B 54 */	addi r25, r3, data_80CC3B54@l
+/* 80CC31A0  3C 60 80 CC */	lis r3, pole_x@ha
+/* 80CC31A4  3B 23 3B 54 */	addi r25, r3, pole_x@l
 /* 80CC31A8  C3 BE 00 0C */	lfs f29, 0xc(r30)
-/* 80CC31AC  3C 60 80 CC */	lis r3, data_80CC3B64@ha
-/* 80CC31B0  3B 43 3B 64 */	addi r26, r3, data_80CC3B64@l
+/* 80CC31AC  3C 60 80 CC */	lis r3, pole_z@ha
+/* 80CC31B0  3B 43 3B 64 */	addi r26, r3, pole_z@l
 /* 80CC31B4  C3 DE 00 30 */	lfs f30, 0x30(r30)
 /* 80CC31B8  C3 FE 00 38 */	lfs f31, 0x38(r30)
 lbl_80CC31BC:

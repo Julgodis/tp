@@ -88,8 +88,8 @@ lbl_80A6A228:
 /* 80A6A300  38 A0 00 00 */	li r5, 0
 /* 80A6A304  3C C0 80 44 */	lis r6, sincosTable___5JMath@ha
 /* 80A6A308  39 06 9A 20 */	addi r8, r6, sincosTable___5JMath@l
-/* 80A6A30C  3C C0 80 A7 */	lis r6, data_80A6AA1C@ha
-/* 80A6A310  38 E6 AA 1C */	addi r7, r6, data_80A6AA1C@l
+/* 80A6A30C  3C C0 80 A7 */	lis r6, wp@ha
+/* 80A6A310  38 E6 AA 1C */	addi r7, r6, wp@l
 /* 80A6A314  38 00 00 03 */	li r0, 3
 /* 80A6A318  7C 09 03 A6 */	mtctr r0
 lbl_80A6A31C:

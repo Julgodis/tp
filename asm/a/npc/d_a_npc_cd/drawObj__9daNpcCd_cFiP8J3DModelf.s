@@ -19,8 +19,8 @@ lbl_80156E8C:
 /* 80156ED0  48 00 00 88 */	b lbl_80156F58
 lbl_80156ED4:
 /* 80156ED4  57 E0 10 3A */	slwi r0, r31, 2
-/* 80156ED8  3C 60 80 39 */	lis r3, data_80392FC4@ha
-/* 80156EDC  38 63 2F C4 */	addi r3, r3, data_80392FC4@l
+/* 80156ED8  3C 60 80 39 */	lis r3, a_jntNumTbl@ha
+/* 80156EDC  38 63 2F C4 */	addi r3, r3, a_jntNumTbl@l
 /* 80156EE0  7F E3 00 2E */	lwzx r31, r3, r0
 /* 80156EE4  28 1E 00 00 */	cmplwi r30, 0
 /* 80156EE8  41 82 00 6C */	beq lbl_80156F54

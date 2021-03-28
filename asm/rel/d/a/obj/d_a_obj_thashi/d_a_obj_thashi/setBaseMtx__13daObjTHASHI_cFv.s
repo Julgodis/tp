@@ -5,8 +5,8 @@ lbl_80D0C354:
 /* 80D0C360  39 61 00 20 */	addi r11, r1, 0x20
 /* 80D0C364  4B 65 5E 6C */	b _savegpr_26
 /* 80D0C368  7C 7E 1B 78 */	mr r30, r3
-/* 80D0C36C  3C 60 80 D1 */	lis r3, data_80D0D18C@ha
-/* 80D0C370  3B E3 D1 8C */	addi r31, r3, data_80D0D18C@l
+/* 80D0C36C  3C 60 80 D1 */	lis r3, ccCylSrc_3671@ha
+/* 80D0C370  3B E3 D1 8C */	addi r31, r3, ccCylSrc_3671@l
 /* 80D0C374  80 1E 05 A4 */	lwz r0, 0x5a4(r30)
 /* 80D0C378  28 00 00 08 */	cmplwi r0, 8
 /* 80D0C37C  41 81 02 74 */	bgt lbl_80D0C5F0

@@ -137,9 +137,9 @@ lbl_8013F648:
 lbl_8013F69C:
 /* 8013F69C  B3 DD 30 12 */	sth r30, 0x3012(r29)
 /* 8013F6A0  2C 1F 00 0D */	cmpwi r31, 0xd
-/* 8013F6A4  38 02 97 E0 */	la r0, data_804531E0(r2) /* 804531E0-_SDA2_BASE_ */
+/* 8013F6A4  38 02 97 E0 */	la r0, smokeID(r2) /* 804531E0-_SDA2_BASE_ */
 /* 8013F6A8  40 82 00 08 */	bne lbl_8013F6B0
-/* 8013F6AC  38 02 97 D8 */	la r0, data_804531D8(r2) /* 804531D8-_SDA2_BASE_ */
+/* 8013F6AC  38 02 97 D8 */	la r0, snowID(r2) /* 804531D8-_SDA2_BASE_ */
 lbl_8013F6B0:
 /* 8013F6B0  7C 1C 03 78 */	mr r28, r0
 /* 8013F6B4  3B E0 00 00 */	li r31, 0

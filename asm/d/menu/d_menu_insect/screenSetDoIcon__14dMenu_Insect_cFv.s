@@ -36,10 +36,10 @@ lbl_801D9C34:
 /* 801D9C50  3B 00 00 00 */	li r24, 0
 /* 801D9C54  3B C0 00 00 */	li r30, 0
 /* 801D9C58  3B A0 00 00 */	li r29, 0
-/* 801D9C5C  3C 60 80 39 */	lis r3, data_80396810@ha
-/* 801D9C60  3B 43 68 10 */	addi r26, r3, data_80396810@l
-/* 801D9C64  3C 60 80 39 */	lis r3, data_80396838@ha
-/* 801D9C68  3B 63 68 38 */	addi r27, r3, data_80396838@l
+/* 801D9C5C  3C 60 80 39 */	lis r3, text_a_tag@ha
+/* 801D9C60  3B 43 68 10 */	addi r26, r3, text_a_tag@l
+/* 801D9C64  3C 60 80 39 */	lis r3, text_b_tag@ha
+/* 801D9C68  3B 63 68 38 */	addi r27, r3, text_b_tag@l
 /* 801D9C6C  3C 60 80 39 */	lis r3, d_menu_d_menu_insect__stringBase0@ha
 /* 801D9C70  3B 83 68 C0 */	addi r28, r3, d_menu_d_menu_insect__stringBase0@l
 lbl_801D9C74:

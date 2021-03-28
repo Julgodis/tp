@@ -7,8 +7,8 @@ lbl_80BFEB90:
 /* 80BFEBA4  39 61 00 40 */	addi r11, r1, 0x40
 /* 80BFEBA8  4B 76 36 20 */	b _savegpr_24
 /* 80BFEBAC  7C 7E 1B 78 */	mr r30, r3
-/* 80BFEBB0  3C 60 80 C0 */	lis r3, data_80BFFC1C@ha
-/* 80BFEBB4  3B 43 FC 1C */	addi r26, r3, data_80BFFC1C@l
+/* 80BFEBB0  3C 60 80 C0 */	lis r3, ccSphSrc@ha
+/* 80BFEBB4  3B 43 FC 1C */	addi r26, r3, ccSphSrc@l
 /* 80BFEBB8  3B E0 00 00 */	li r31, 0
 /* 80BFEBBC  3B A0 00 00 */	li r29, 0
 /* 80BFEBC0  3B 80 00 00 */	li r28, 0

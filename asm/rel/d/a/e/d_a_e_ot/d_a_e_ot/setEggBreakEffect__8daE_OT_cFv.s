@@ -9,8 +9,8 @@ lbl_8073A99C:
 /* 8073A9B8  3B E0 00 00 */	li r31, 0
 /* 8073A9BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8073A9C0  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 8073A9C4  3C 60 80 74 */	lis r3, data_8073D144@ha
-/* 8073A9C8  3B A3 D1 44 */	addi r29, r3, data_8073D144@l
+/* 8073A9C4  3C 60 80 74 */	lis r3, w_eff_id_4129@ha
+/* 8073A9C8  3B A3 D1 44 */	addi r29, r3, w_eff_id_4129@l
 /* 8073A9CC  3C 60 80 74 */	lis r3, lit_3912@ha
 /* 8073A9D0  3B C3 CE B0 */	addi r30, r3, lit_3912@l
 lbl_8073A9D4:

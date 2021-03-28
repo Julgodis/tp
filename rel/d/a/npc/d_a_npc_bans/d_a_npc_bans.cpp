@@ -26,7 +26,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE70 */ void scaleM(cXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
@@ -34,13 +37,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -74,16 +74,16 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 8096741C */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct daNpcT_evtData_c {
 };
 
 struct daNpcT_motionAnmData_c {
 };
 
-struct daNpcT_evtData_c {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpc_Bans_c {
@@ -145,15 +145,15 @@ struct _GXColorS10 {
 struct J3DModel {
 };
 
+struct csXyz {
+	/* 80966ED8 */ ~csXyz();
+	/* 80967318 */ csXyz();
+};
+
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
 	/* 800844F8 */ void GetTgHitObj();
-};
-
-struct csXyz {
-	/* 80966ED8 */ ~csXyz();
-	/* 80967318 */ csXyz();
 };
 
 struct daNpcT_c {
@@ -811,7 +811,7 @@ SECTION_RODATA static u8 const m__18daNpc_Bans_Param_c[144] = {
 };
 
 /* 80967EB0-80967EC8 0018+00 s=1 e=0 z=0  None .rodata    heapSize$3924                                                */
-SECTION_RODATA static u8 const data_80967EB0[24] = {
+SECTION_RODATA static u8 const heapSize[24] = {
 	0x00, 0x00, 0x6C, 0x50, 0x00, 0x00, 0x4B, 0x40, 0x00, 0x00, 0x6C, 0x50, 0x00, 0x00, 0x75, 0x80,
 	0x00, 0x00, 0x64, 0x60, 0x00, 0x00, 0x00, 0x00,
 };
@@ -924,7 +924,7 @@ SECTION_RODATA static u32 const lit_5166 = 0x42200000;
 SECTION_RODATA static u32 const lit_5167 = 0x42DC0000;
 
 /* 80967F58-80967F60 0008+00 s=1 e=0 z=0  None .rodata    id$5349                                                      */
-SECTION_RODATA static u8 const data_80967F58[8] = {
+SECTION_RODATA static u8 const id[8] = {
 	0x86, 0x2C, 0x86, 0xA3, 0x86, 0x2D, 0x86, 0x2E,
 };
 
@@ -1245,7 +1245,7 @@ SECTION_DATA static void* lit_4831[3] = {
 };
 
 /* 809685CC-8096866C 00A0+00 s=1 e=0 z=0  None .data      scoopAnmData$5227                                            */
-SECTION_DATA static u8 data_809685CC[160] = {
+SECTION_DATA static u8 scoopAnmData[160] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
 	0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
 	0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,

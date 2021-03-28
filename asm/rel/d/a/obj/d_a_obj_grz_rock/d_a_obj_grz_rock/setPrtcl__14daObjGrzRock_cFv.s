@@ -5,8 +5,8 @@ lbl_80C14CF0:
 /* 80C14CFC  39 61 00 50 */	addi r11, r1, 0x50
 /* 80C14D00  4B 74 D4 D0 */	b _savegpr_26
 /* 80C14D04  7C 7A 1B 78 */	mr r26, r3
-/* 80C14D08  3C 60 80 C1 */	lis r3, data_80C15360@ha
-/* 80C14D0C  3B 83 53 60 */	addi r28, r3, data_80C15360@l
+/* 80C14D08  3C 60 80 C1 */	lis r3, l_prticles_id@ha
+/* 80C14D0C  3B 83 53 60 */	addi r28, r3, l_prticles_id@l
 /* 80C14D10  C0 1C 00 0C */	lfs f0, 0xc(r28)
 /* 80C14D14  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 80C14D18  D0 01 00 24 */	stfs f0, 0x24(r1)

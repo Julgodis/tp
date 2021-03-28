@@ -176,7 +176,7 @@ SECTION_RODATA u8 const CUTOFF_TO_IIR_TABLE__7JASCalc[1024] = {
 };
 
 /* 8039AFB8-8039AFD0 0018+00 s=1 e=0 z=0  None .rodata    __two_to_x$982                                               */
-SECTION_RODATA static u8 const data_8039AFB8[24] = {
+SECTION_RODATA static u8 const __two_to_x[24] = {
 	0x3F, 0x31, 0x72, 0x18, 0x3E, 0x75, 0xFD, 0xF7, 0x3D, 0x63, 0x57, 0x06, 0x3C, 0x1D, 0xB2, 0x45,
 	0x3A, 0xAC, 0x1C, 0x81, 0x39, 0x3F, 0xE5, 0xDA,
 };
@@ -199,12 +199,12 @@ SECTION_SDATA2 static u8 lit_969[4] = {
 };
 
 /* 8045556C-80455574 0008+00 s=1 e=0 z=0  None .sdata2    scale_frac$980                                               */
-SECTION_SDATA2 static u8 data_8045556C[8] = {
+SECTION_SDATA2 static u8 scale_frac[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00,
 };
 
 /* 80455574-8045557C 0008+00 s=1 e=0 z=0  None .sdata2    two_to_frac$981                                              */
-SECTION_SDATA2 static u8 data_80455574[8] = {
+SECTION_SDATA2 static u8 two_to_frac[8] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x35, 0x04, 0xF3,
 };
 

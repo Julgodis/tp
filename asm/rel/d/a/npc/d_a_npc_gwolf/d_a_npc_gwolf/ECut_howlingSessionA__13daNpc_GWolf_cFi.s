@@ -293,8 +293,8 @@ lbl_809F700C:
 /* 809F7028  4B 63 01 48 */	b dStage_changeScene__FifUlScsi
 /* 809F702C  48 00 00 3C */	b lbl_809F7068
 lbl_809F7030:
-/* 809F7030  3C 60 80 A0 */	lis r3, data_809F8D64@ha
-/* 809F7034  38 63 8D 64 */	addi r3, r3, data_809F8D64@l
+/* 809F7030  3C 60 80 A0 */	lis r3, l_warpIdList@ha
+/* 809F7034  38 63 8D 64 */	addi r3, r3, l_warpIdList@l
 /* 809F7038  54 80 10 3A */	slwi r0, r4, 2
 /* 809F703C  7C 63 02 14 */	add r3, r3, r0
 /* 809F7040  80 63 FF FC */	lwz r3, -4(r3)

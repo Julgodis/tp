@@ -24,9 +24,6 @@ struct mDoDvdThd_mountArchive_c {
 	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
 };
 
-struct cXyz {
-};
-
 struct JKRArchive {
 	/* 802D5CE4 */ void getIdxResource(u32);
 	/* 802D625C */ void getFileAttribute(u32) const;
@@ -38,6 +35,9 @@ struct J3DModelData {
 	/* 80325E14 */ void newSharedDisplayList(u32);
 	/* 80325F94 */ void makeSharedDL();
 	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+};
+
+struct cXyz {
 };
 
 struct dRes_info_c {
@@ -409,7 +409,7 @@ SECTION_RODATA static u8 const l_texMtxInfo[100] = {
 };
 
 /* 803798A4-803798B8 0014+00 s=1 e=0 z=0  None .rodata    l_tevStageInfo$3774                                          */
-SECTION_RODATA static u8 const data_803798A4[20] = {
+SECTION_RODATA static u8 const l_tevStageInfo[20] = {
 	0x05, 0x0F, 0x08, 0x00, 0x0F, 0x00, 0x00, 0x00, 0x01, 0x00, 0x07, 0x04, 0x00, 0x07, 0x00, 0x00,
 	0x00, 0x01, 0x00, 0x00,
 };
@@ -514,17 +514,17 @@ asm static void setAlpha(J3DModelData* param_0) {
 
 /* ############################################################################################## */
 /* 80450628-8045062C 0004+00 s=1 e=0 z=0  None .sdata     l_texCoordInfo$3772                                          */
-SECTION_SDATA static u8 data_80450628[4] = {
+SECTION_SDATA static u8 l_texCoordInfo[4] = {
 	0x00, 0x00, 0x27, 0x00,
 };
 
 /* 8045062C-80450630 0004+00 s=1 e=0 z=0  None .sdata     l_tevOrderInfo$3773                                          */
-SECTION_SDATA static u8 data_8045062C[4] = {
+SECTION_SDATA static u8 l_tevOrderInfo[4] = {
 	0x00, 0x03, 0xFF, 0x00,
 };
 
 /* 80451DF0-80451DF8 0008+00 s=1 e=0 z=0  None .sdata2    l_alphaCompInfo$3775                                         */
-SECTION_SDATA2 static u8 data_80451DF0[8] = {
+SECTION_SDATA2 static u8 l_alphaCompInfo[8] = {
 	0x04, 0x80, 0x00, 0x03, 0xFF, 0x00, 0x00, 0x00,
 };
 

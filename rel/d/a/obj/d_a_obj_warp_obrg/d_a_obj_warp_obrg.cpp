@@ -26,10 +26,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -37,10 +37,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -610,7 +610,7 @@ SECTION_DATA static void* lit_3900[3] = {
 };
 
 /* 80D2B99C-80D2B9F0 0054+00 s=1 e=0 z=0  None .data      l_func$3893                                                  */
-SECTION_DATA static u8 data_80D2B99C[84] = {
+SECTION_DATA static u8 l_func[84] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -620,7 +620,7 @@ SECTION_DATA static u8 data_80D2B99C[84] = {
 };
 
 /* 80D2B9F0-80D2BA00 0010+00 s=1 e=0 z=0  None .data      action_table$4165                                            */
-SECTION_DATA static void* data_80D2B9F0[4] = {
+SECTION_DATA static void* action_table[4] = {
 	(void*)(((char*)&struct_80D2B8AC)+0x45) /* None */,
 	(void*)(((char*)&struct_80D2B8AC)+0x4A) /* None */,
 	(void*)(((char*)&struct_80D2B8AC)+0x55) /* None */,

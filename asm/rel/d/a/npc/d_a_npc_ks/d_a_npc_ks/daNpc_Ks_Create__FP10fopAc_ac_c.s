@@ -325,8 +325,8 @@ lbl_80A5D7F8:
 /* 80A5D81C  7F 86 E3 78 */	mr r6, r28
 /* 80A5D820  4B 62 60 40 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80A5D824  38 7C 09 8C */	addi r3, r28, 0x98c
-/* 80A5D828  3C 80 80 A6 */	lis r4, data_80A5FD30@ha
-/* 80A5D82C  38 84 FD 30 */	addi r4, r4, data_80A5FD30@l
+/* 80A5D828  3C 80 80 A6 */	lis r4, cc_cyl_src@ha
+/* 80A5D82C  38 84 FD 30 */	addi r4, r4, cc_cyl_src@l
 /* 80A5D830  4B 62 70 84 */	b Set__8dCcD_CylFRC11dCcD_SrcCyl
 /* 80A5D834  38 1C 09 50 */	addi r0, r28, 0x950
 /* 80A5D838  90 1C 09 D0 */	stw r0, 0x9d0(r28)

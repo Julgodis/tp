@@ -95,10 +95,10 @@ lbl_80C72A5C:
 /* 80C72B24  3B A0 00 00 */	li r29, 0
 /* 80C72B28  3B 60 00 00 */	li r27, 0
 /* 80C72B2C  3B 40 00 00 */	li r26, 0
-/* 80C72B30  3C 60 80 C7 */	lis r3, data_80C731E4@ha
-/* 80C72B34  3A C3 31 E4 */	addi r22, r3, data_80C731E4@l
-/* 80C72B38  3C 60 80 C7 */	lis r3, data_80C731F0@ha
-/* 80C72B3C  3A E3 31 F0 */	addi r23, r3, data_80C731F0@l
+/* 80C72B30  3C 60 80 C7 */	lis r3, posx@ha
+/* 80C72B34  3A C3 31 E4 */	addi r22, r3, posx@l
+/* 80C72B38  3C 60 80 C7 */	lis r3, posy@ha
+/* 80C72B3C  3A E3 31 F0 */	addi r23, r3, posy@l
 /* 80C72B40  C3 FF 00 38 */	lfs f31, 0x38(r31)
 /* 80C72B44  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80C72B48  3B 03 D4 70 */	addi r24, r3, now__14mDoMtx_stack_c@l

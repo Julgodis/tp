@@ -5,8 +5,8 @@ lbl_8070A044:
 /* 8070A050  39 61 00 40 */	addi r11, r1, 0x40
 /* 8070A054  4B C5 81 84 */	b _savegpr_28
 /* 8070A058  7C 7D 1B 78 */	mr r29, r3
-/* 8070A05C  3C 80 80 71 */	lis r4, data_8070A4EC@ha
-/* 8070A060  3B E4 A4 EC */	addi r31, r4, data_8070A4EC@l
+/* 8070A05C  3C 80 80 71 */	lis r4, ccCylSrc@ha
+/* 8070A060  3B E4 A4 EC */	addi r31, r4, ccCylSrc@l
 /* 8070A064  80 03 04 A0 */	lwz r0, 0x4a0(r3)
 /* 8070A068  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
 /* 8070A06C  40 82 00 E8 */	bne lbl_8070A154

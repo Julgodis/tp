@@ -20,7 +20,7 @@ lbl_800A5D04:
 /* 800A5D08  7C 00 07 75 */	extsb. r0, r0
 /* 800A5D0C  40 82 00 14 */	bne lbl_800A5D20
 /* 800A5D10  38 00 00 00 */	li r0, 0
-/* 800A5D14  90 0D 8A 4C */	stw r0, data_80450FCC(r13)
+/* 800A5D14  90 0D 8A 4C */	stw r0, bgWaitFlg(r13)
 /* 800A5D18  38 00 00 01 */	li r0, 1
 /* 800A5D1C  98 0D 8A 50 */	stb r0, struct_80450FD0+0x0(r13)
 lbl_800A5D20:
@@ -57,7 +57,7 @@ lbl_800A5D20:
 /* 800A5D98  3B 00 00 01 */	li r24, 1
 lbl_800A5D9C:
 /* 800A5D9C  57 1A 06 3E */	clrlwi r26, r24, 0x18
-/* 800A5DA0  80 0D 8A 4C */	lwz r0, data_80450FCC(r13)
+/* 800A5DA0  80 0D 8A 4C */	lwz r0, bgWaitFlg(r13)
 /* 800A5DA4  2C 00 00 00 */	cmpwi r0, 0
 /* 800A5DA8  40 82 02 D8 */	bne lbl_800A6080
 /* 800A5DAC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -221,7 +221,7 @@ lbl_800A5FD8:
 /* 800A5FF4  7F E3 FB 78 */	mr r3, r31
 /* 800A5FF8  4B FF EC BD */	bl playerInit__9daAlink_cFv
 /* 800A5FFC  38 00 00 01 */	li r0, 1
-/* 800A6000  90 0D 8A 4C */	stw r0, data_80450FCC(r13)
+/* 800A6000  90 0D 8A 4C */	stw r0, bgWaitFlg(r13)
 /* 800A6004  7F E3 FB 78 */	mr r3, r31
 /* 800A6008  4B FF EC 39 */	bl checkCanoeStart__9daAlink_cFv
 /* 800A600C  2C 03 00 00 */	cmpwi r3, 0
@@ -361,7 +361,7 @@ lbl_800A61E0:
 /* 800A61F0  4B F9 D5 05 */	bl setPtD__14dEvt_control_cFPv
 lbl_800A61F4:
 /* 800A61F4  38 00 00 00 */	li r0, 0
-/* 800A61F8  90 0D 8A 4C */	stw r0, data_80450FCC(r13)
+/* 800A61F8  90 0D 8A 4C */	stw r0, bgWaitFlg(r13)
 /* 800A61FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800A6200  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 800A6204  38 63 0D B4 */	addi r3, r3, 0xdb4

@@ -11,8 +11,8 @@ lbl_80BD0500:
 /* 80BD0524  39 61 00 30 */	addi r11, r1, 0x30
 /* 80BD0528  4B 79 1C A4 */	b _savegpr_25
 /* 80BD052C  7C 79 1B 78 */	mr r25, r3
-/* 80BD0530  3C 60 80 BD */	lis r3, data_80BD30C0@ha
-/* 80BD0534  3B 63 30 C0 */	addi r27, r3, data_80BD30C0@l
+/* 80BD0530  3C 60 80 BD */	lis r3, ccCylSrc@ha
+/* 80BD0534  3B 63 30 C0 */	addi r27, r3, ccCylSrc@l
 /* 80BD0538  3B 40 00 00 */	li r26, 0
 /* 80BD053C  3B E0 00 00 */	li r31, 0
 /* 80BD0540  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha

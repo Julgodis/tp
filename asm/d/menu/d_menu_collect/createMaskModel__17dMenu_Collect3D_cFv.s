@@ -35,12 +35,12 @@ lbl_801B7014:
 /* 801B7098  3C 80 80 39 */	lis r4, d_menu_d_menu_collect__stringBase0@ha
 /* 801B709C  38 84 53 30 */	addi r4, r4, d_menu_d_menu_collect__stringBase0@l
 /* 801B70A0  38 84 01 26 */	addi r4, r4, 0x126
-/* 801B70A4  3C A0 80 3C */	lis r5, data_803BC71C@ha
-/* 801B70A8  38 05 C7 1C */	addi r0, r5, data_803BC71C@l
+/* 801B70A4  3C A0 80 3C */	lis r5, bck_name_7583@ha
+/* 801B70A8  38 05 C7 1C */	addi r0, r5, bck_name_7583@l
 /* 801B70AC  7C A0 3A 14 */	add r5, r0, r7
 /* 801B70B0  80 A5 FF FC */	lwz r5, -4(r5)
-/* 801B70B4  3C C0 80 3C */	lis r6, data_803BC72C@ha
-/* 801B70B8  38 06 C7 2C */	addi r0, r6, data_803BC72C@l
+/* 801B70B4  3C C0 80 3C */	lis r6, brk_name_7584@ha
+/* 801B70B8  38 06 C7 2C */	addi r0, r6, brk_name_7584@l
 /* 801B70BC  7C C0 3A 14 */	add r6, r0, r7
 /* 801B70C0  80 C6 FF FC */	lwz r6, -4(r6)
 /* 801B70C4  4B FF F9 6D */	bl setJ3D__17dMenu_Collect3D_cFPCcPCcPCc

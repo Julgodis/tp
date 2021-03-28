@@ -55,8 +55,8 @@ lbl_80D36CA0:
 /* 80D36D74  3B 00 EF 98 */	li r24, -4200
 /* 80D36D78  3A E0 F1 8C */	li r23, -3700
 /* 80D36D7C  3A C0 00 04 */	li r22, 4
-/* 80D36D80  3C 60 80 D3 */	lis r3, data_80D378CC@ha
-/* 80D36D84  3B C3 78 CC */	addi r30, r3, data_80D378CC@l
+/* 80D36D80  3C 60 80 D3 */	lis r3, pd@ha
+/* 80D36D84  3B C3 78 CC */	addi r30, r3, pd@l
 /* 80D36D88  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 80D36D8C  3B E3 9A 20 */	addi r31, r3, sincosTable___5JMath@l
 /* 80D36D90  C3 D5 00 10 */	lfs f30, 0x10(r21)

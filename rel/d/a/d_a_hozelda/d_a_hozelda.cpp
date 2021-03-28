@@ -32,11 +32,11 @@ struct mDoMtx_stack_c {
 	/* 8000CF7C */ void quatM(Quaternion const*);
 };
 
-struct J3DAnmTexPattern {
-	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
+	/* 8032AF50 */ void getTexNo(u16, u16*) const;
 };
 
 struct mDoExt_btpAnm {
@@ -52,10 +52,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -1014,12 +1014,12 @@ asm void daHoZelda_c::setAnm() {
 
 /* ############################################################################################## */
 /* 80848E74-80848E80 000C+00 s=1 e=0 z=0  None .rodata    localEyePos$4537                                             */
-SECTION_RODATA static u8 const data_80848E74[12] = {
+SECTION_RODATA static u8 const localEyePos[12] = {
 	0x41, 0x00, 0x00, 0x00, 0xC1, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80848E80-80848E8C 000C+00 s=1 e=0 z=0  None .rodata    localHeadCenterPos$4538                                      */
-SECTION_RODATA static u8 const data_80848E80[12] = {
+SECTION_RODATA static u8 const localHeadCenterPos[12] = {
 	0x41, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -1045,12 +1045,12 @@ asm void daHoZelda_c::setBowModel() {
 
 /* ############################################################################################## */
 /* 80848E98-80848EA4 000C+00 s=1 e=0 z=0  None .rodata    localHorseRidePos$4586                                       */
-SECTION_RODATA static u8 const data_80848E98[12] = {
+SECTION_RODATA static u8 const localHorseRidePos[12] = {
 	0xC0, 0xBC, 0x9B, 0xA6, 0x42, 0x52, 0x70, 0xA4, 0x40, 0x82, 0x87, 0x2B,
 };
 
 /* 80848EA4-80848EB0 000C+00 s=1 e=0 z=0  None .rodata    localFrontHorseRidePos$4587                                  */
-SECTION_RODATA static u8 const data_80848EA4[12] = {
+SECTION_RODATA static u8 const localFrontHorseRidePos[12] = {
 	0xC2, 0x97, 0xC9, 0xBA, 0x42, 0x66, 0x70, 0xA4, 0x40, 0x82, 0x87, 0x2B,
 };
 
@@ -1100,12 +1100,12 @@ asm void daHoZelda_c::setBowBck(u16 param_0) {
 
 /* ############################################################################################## */
 /* 80848EB0-80848EBC 000C+00 s=1 e=0 z=0  None .rodata    baseRidePos$4672                                             */
-SECTION_RODATA static u8 const data_80848EB0[12] = {
+SECTION_RODATA static u8 const baseRidePos[12] = {
 	0x3D, 0xCC, 0xCC, 0xCD, 0x43, 0x6C, 0xB3, 0x33, 0xC2, 0x7E, 0x37, 0x4C,
 };
 
 /* 80848EBC-80848EC8 000C+00 s=1 e=0 z=0  None .rodata    frontRidePos$4673                                            */
-SECTION_RODATA static u8 const data_80848EBC[12] = {
+SECTION_RODATA static u8 const frontRidePos[12] = {
 	0x3D, 0xCC, 0xCC, 0xCD, 0x43, 0x71, 0xB3, 0x33, 0x40, 0xCE, 0x45, 0xA0,
 };
 

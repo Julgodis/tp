@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -82,11 +82,11 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 struct dPa_control_c {
@@ -425,14 +425,14 @@ SECTION_DATA static void* lit_3854[3] = {
 };
 
 /* 80BA7DE4-80BA7E14 0030+00 s=1 e=0 z=0  None .data      l_func$3850                                                  */
-SECTION_DATA static u8 data_80BA7DE4[48] = {
+SECTION_DATA static u8 l_func[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80BA7E14-80BA7E1C 0008+00 s=1 e=0 z=0  None .data      action_table$3910                                            */
-SECTION_DATA static void* data_80BA7E14[2] = {
+SECTION_DATA static void* action_table[2] = {
 	(void*)(((char*)&struct_80BA7D3C)+0x1D) /* None */,
 	(void*)(((char*)&struct_80BA7D3C)+0x22) /* None */,
 };

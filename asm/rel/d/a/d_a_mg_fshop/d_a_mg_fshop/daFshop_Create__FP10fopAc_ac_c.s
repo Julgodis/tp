@@ -369,8 +369,8 @@ lbl_8086FB8C:
 /* 8086FBA0  4B 7A A3 50 */	b fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i
 /* 8086FBA4  3B 00 00 00 */	li r24, 0
 /* 8086FBA8  3B 60 00 00 */	li r27, 0
-/* 8086FBAC  3C 60 80 87 */	lis r3, data_808708B4@ha
-/* 8086FBB0  3B 23 08 B4 */	addi r25, r3, data_808708B4@l
+/* 8086FBAC  3C 60 80 87 */	lis r3, check_kind@ha
+/* 8086FBB0  3B 23 08 B4 */	addi r25, r3, check_kind@l
 /* 8086FBB4  C3 DE 01 C4 */	lfs f30, 0x1c4(r30)
 /* 8086FBB8  CB BE 01 E0 */	lfd f29, 0x1e0(r30)
 /* 8086FBBC  3F 40 43 30 */	lis r26, 0x4330

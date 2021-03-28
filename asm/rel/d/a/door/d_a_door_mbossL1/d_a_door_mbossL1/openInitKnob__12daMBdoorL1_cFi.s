@@ -9,8 +9,8 @@ lbl_80675470:
 /* 8067548C  3C 80 80 67 */	lis r4, l_staff_name@ha
 /* 80675490  3B E4 75 58 */	addi r31, r4, l_staff_name@l
 /* 80675494  57 C0 10 3A */	slwi r0, r30, 2
-/* 80675498  3C 80 80 67 */	lis r4, data_80677BC0@ha
-/* 8067549C  38 84 7B C0 */	addi r4, r4, data_80677BC0@l
+/* 80675498  3C 80 80 67 */	lis r4, bck_table@ha
+/* 8067549C  38 84 7B C0 */	addi r4, r4, bck_table@l
 /* 806754A0  7F 84 00 2E */	lwzx r28, r4, r0
 /* 806754A4  4B FF DA D1 */	bl getAlwaysArcName__12daMBdoorL1_cFv
 /* 806754A8  7F 84 E3 78 */	mr r4, r28

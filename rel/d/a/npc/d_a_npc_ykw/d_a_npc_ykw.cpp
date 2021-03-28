@@ -25,7 +25,10 @@ struct mDoMtx_stack_c {
 	/* 8000CD64 */ void transS(cXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
@@ -34,13 +37,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -70,10 +70,10 @@ struct daNpcT_MotionSeqMngr_c {
 struct daNpcT_faceMotionAnmData_c {
 };
 
-struct daNpcT_motionAnmData_c {
+struct daNpcT_evtData_c {
 };
 
-struct daNpcT_evtData_c {
+struct daNpcT_motionAnmData_c {
 };
 
 struct J3DJoint {
@@ -157,14 +157,14 @@ struct _GXColorS10 {
 struct J3DModel {
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-};
-
 struct csXyz {
 	/* 80B66C38 */ ~csXyz();
 	/* 80B671D4 */ csXyz();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
 };
 
 struct daNpcT_c {
@@ -313,14 +313,14 @@ struct dPa_control_c {
 	/* 8004D6A4 */ void setPoly(u32, u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
 };
 
+struct dBgS {
+	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
+};
+
 struct dBgS_AcchCir {
 	/* 80075EAC */ dBgS_AcchCir();
 	/* 80075F40 */ void SetWallR(f32);
 	/* 80B67320 */ ~dBgS_AcchCir();
-};
-
-struct dBgS {
-	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
 };
 
 struct dBgS_Acch {
@@ -984,7 +984,7 @@ SECTION_RODATA static u8 const m__17daNpc_ykW_Param_c[180] = {
 };
 
 /* 80B67CEC-80B67D0C 0020+00 s=1 e=0 z=0  None .rodata    heapSize$4289                                                */
-SECTION_RODATA static u8 const data_80B67CEC[32] = {
+SECTION_RODATA static u8 const heapSize[32] = {
 	0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x33, 0x10, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x80, 0x00,
 	0x00, 0x00, 0x33, 0x10, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x80, 0x00,
 };
@@ -1205,12 +1205,12 @@ SECTION_RODATA static u32 const lit_6929 = 0x41A00000;
 SECTION_RODATA static u32 const lit_6930 = 0x42A00000;
 
 /* 80B67E30-80B67E38 0008+00 s=1 e=0 z=0  None .rodata    motionTbl1$6944                                              */
-SECTION_RODATA static u8 const data_80B67E30[8] = {
+SECTION_RODATA static u8 const motionTbl1[8] = {
 	0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00, 0x06,
 };
 
 /* 80B67E38-80B67E40 0008+00 s=1 e=0 z=0  None .rodata    motionTbl2$6949                                              */
-SECTION_RODATA static u8 const data_80B67E38[8] = {
+SECTION_RODATA static u8 const motionTbl2[8] = {
 	0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00, 0x05,
 };
 
@@ -2463,7 +2463,7 @@ static u8 l_HIO[4];
 static u8 lit_5372[12 + 4 /* padding */];
 
 /* 80B68DC8-80B68DD4 000C+00 s=1 e=0 z=0  None .bss       prtclScl$5371                                                */
-static u8 data_80B68DC8[12];
+static u8 prtclScl[12];
 
 /* 80B60F08-80B614D0 05C8+00 s=1 e=0 z=0  None .text      setAttnPos__11daNpc_ykW_cFv                                  */
 #pragma push

@@ -242,7 +242,7 @@ static u8 CmdProbeDevice[16];
 static u8 SamplingCallback[4];
 
 /* 8045186C-80451870 0004+00 s=1 e=0 z=0  None .sbss      recalibrated$388                                             */
-static u8 data_8045186C[4];
+static u8 recalibrated[4];
 
 /* 80451870-80451878 0004+04 s=2 e=1 z=0  None .sbss      __PADSpec                                                    */
 u8 __PADSpec[4 + 4 /* padding */];

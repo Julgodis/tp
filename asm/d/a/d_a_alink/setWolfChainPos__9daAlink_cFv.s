@@ -45,8 +45,8 @@ lbl_8012C3AC:
 /* 8012C3B0  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 8012C3B4  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 8012C3B8  38 63 03 30 */	addi r3, r3, 0x330
-/* 8012C3BC  3C 80 80 39 */	lis r4, data_80391E30@ha
-/* 8012C3C0  38 84 1E 30 */	addi r4, r4, data_80391E30@l
+/* 8012C3BC  3C 80 80 39 */	lis r4, wolfChainBaseOffset@ha
+/* 8012C3C0  38 84 1E 30 */	addi r4, r4, wolfChainBaseOffset@l
 /* 8012C3C4  38 A1 00 7C */	addi r5, r1, 0x7c
 /* 8012C3C8  48 21 A9 A5 */	bl PSMTXMultVec
 /* 8012C3CC  80 7C 06 50 */	lwz r3, 0x650(r28)
@@ -168,8 +168,8 @@ lbl_8012C530:
 /* 8012C574  4B ED FD 2D */	bl mDoMtx_ZXYrotM__FPA4_fsss
 /* 8012C578  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8012C57C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8012C580  3C 80 80 39 */	lis r4, data_80391E3C@ha
-/* 8012C584  38 84 1E 3C */	addi r4, r4, data_80391E3C@l
+/* 8012C580  3C 80 80 39 */	lis r4, wolfChainVec@ha
+/* 8012C584  38 84 1E 3C */	addi r4, r4, wolfChainVec@l
 /* 8012C588  7F C5 F3 78 */	mr r5, r30
 /* 8012C58C  48 21 A7 E1 */	bl PSMTXMultVec
 /* 8012C590  38 00 E0 00 */	li r0, -8192
@@ -238,8 +238,8 @@ lbl_8012C64C:
 /* 8012C684  C3 62 92 B8 */	lfs f27, lit_6040(r2)
 /* 8012C688  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8012C68C  3A 03 D4 70 */	addi r16, r3, now__14mDoMtx_stack_c@l
-/* 8012C690  3C 60 80 39 */	lis r3, data_80391E3C@ha
-/* 8012C694  39 E3 1E 3C */	addi r15, r3, data_80391E3C@l
+/* 8012C690  3C 60 80 39 */	lis r3, wolfChainVec@ha
+/* 8012C694  39 E3 1E 3C */	addi r15, r3, wolfChainVec@l
 /* 8012C698  C3 82 93 30 */	lfs f28, lit_7625(r2)
 /* 8012C69C  C3 A2 92 C4 */	lfs f29, lit_6109(r2)
 lbl_8012C6A0:
@@ -466,8 +466,8 @@ lbl_8012C9AC:
 /* 8012C9B8  4B EE 05 8D */	bl ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 8012C9BC  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8012C9C0  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8012C9C4  3C 80 80 39 */	lis r4, data_80391E3C@ha
-/* 8012C9C8  38 84 1E 3C */	addi r4, r4, data_80391E3C@l
+/* 8012C9C4  3C 80 80 39 */	lis r4, wolfChainVec@ha
+/* 8012C9C8  38 84 1E 3C */	addi r4, r4, wolfChainVec@l
 /* 8012C9CC  7F C5 F3 78 */	mr r5, r30
 /* 8012C9D0  48 21 A3 9D */	bl PSMTXMultVec
 /* 8012C9D4  3C 60 80 3A */	lis r3, __vt__8cM3dGPla@ha

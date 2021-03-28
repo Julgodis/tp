@@ -22,10 +22,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -634,14 +634,14 @@ SECTION_DATA static void* lit_4295[3] = {
 };
 
 /* 80D178BC-80D178EC 0030+00 s=1 e=0 z=0  None .data      l_func$4291                                                  */
-SECTION_DATA static u8 data_80D178BC[48] = {
+SECTION_DATA static u8 l_func[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80D178EC-80D17908 001C+00 s=1 e=0 z=0  None .data      action_table$4349                                            */
-SECTION_DATA static void* data_80D178EC[7] = {
+SECTION_DATA static void* action_table[7] = {
 	(void*)(((char*)&struct_80D177C0)+0x5F) /* None */,
 	(void*)(((char*)&struct_80D17824)+0x0) /* None */,
 	(void*)(((char*)&struct_80D17824)+0x6) /* None */,
@@ -850,7 +850,7 @@ void daObjTobyHouse_c::actionDead() {
 static u8 lit_4351[12 + 4 /* padding */];
 
 /* 80D17A10-80D17A1C 000C+00 s=1 e=0 z=0  None .bss       l_shotSmokeScale$4350                                        */
-static u8 data_80D17A10[12];
+static u8 l_shotSmokeScale[12];
 
 /* 80D16864-80D171C0 095C+00 s=2 e=0 z=0  None .text      demoProc__16daObjTobyHouse_cFv                               */
 #pragma push

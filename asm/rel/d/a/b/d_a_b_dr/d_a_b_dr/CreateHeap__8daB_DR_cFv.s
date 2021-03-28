@@ -15,8 +15,8 @@ lbl_805C56D0:
 /* 805C56D4  38 63 72 40 */	addi r3, r3, stringBase0@l
 /* 805C56D8  88 1E 07 EB */	lbz r0, 0x7eb(r30)
 /* 805C56DC  54 00 10 3A */	slwi r0, r0, 2
-/* 805C56E0  3C 80 80 5C */	lis r4, data_805C77B4@ha
-/* 805C56E4  38 84 77 B4 */	addi r4, r4, data_805C77B4@l
+/* 805C56E0  3C 80 80 5C */	lis r4, mPartDt@ha
+/* 805C56E4  38 84 77 B4 */	addi r4, r4, mPartDt@l
 /* 805C56E8  7C 84 00 2E */	lwzx r4, r4, r0
 /* 805C56EC  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 805C56F0  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l

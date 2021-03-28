@@ -114,8 +114,8 @@ lbl_8078D904:
 /* 8078D930  7F C6 F3 78 */	mr r6, r30
 /* 8078D934  4B 8F 5F 2C */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 8078D938  38 7E 09 34 */	addi r3, r30, 0x934
-/* 8078D93C  3C 80 80 79 */	lis r4, data_8078DFBC@ha
-/* 8078D940  38 84 DF BC */	addi r4, r4, data_8078DFBC@l
+/* 8078D93C  3C 80 80 79 */	lis r4, cc_sph_src@ha
+/* 8078D940  38 84 DF BC */	addi r4, r4, cc_sph_src@l
 /* 8078D944  4B 8F 70 F0 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 8078D948  38 1E 08 F8 */	addi r0, r30, 0x8f8
 /* 8078D94C  90 1E 09 78 */	stw r0, 0x978(r30)

@@ -69,10 +69,10 @@ struct dSv_event_c {
 	/* 8003498C */ void onEventBit(u16);
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -90,10 +90,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -500,27 +500,27 @@ extern "C" void endHawkCamera__10daNPC_TK_cFv(); // 1
 SECTION_RODATA static u32 const lit_3999 = 0x3F800000;
 
 /* 805047FC-80504808 000C+00 s=1 e=0 z=0  None .data      c_x$4617                                                     */
-SECTION_DATA static u8 data_805047FC[12] = {
+SECTION_DATA static u8 c_x[12] = {
 	0x42, 0x48, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80504808-80504814 000C+00 s=1 e=0 z=0  None .data      c_z$4618                                                     */
-SECTION_DATA static u8 data_80504808[12] = {
+SECTION_DATA static u8 c_z[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
 };
 
 /* 80504814-8050481C 0008+00 s=1 e=0 z=0  None .data      w_eff_id$4885                                                */
-SECTION_DATA static u8 data_80504814[8] = {
+SECTION_DATA static u8 w_eff_id[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
 /* 8050481C-80504820 0004+00 s=1 e=0 z=0  None .data      b_eff_id$4895                                                */
-SECTION_DATA static u8 data_8050481C[4] = {
+SECTION_DATA static u8 b_eff_id[4] = {
 	0x83, 0x2C, 0x83, 0x2D,
 };
 
 /* 80504820-80504860 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$5262                                              */
-SECTION_DATA static u8 data_80504820[64] = {
+SECTION_DATA static u8 cc_sph_src[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x75, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -528,7 +528,7 @@ SECTION_DATA static u8 data_80504820[64] = {
 };
 
 /* 80504860-805048A4 0044+00 s=1 e=0 z=0  None .data      cc_cyl_src$5263                                              */
-SECTION_DATA static u8 data_80504860[68] = {
+SECTION_DATA static u8 cc_cyl_src[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x20, 0x20, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,

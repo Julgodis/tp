@@ -10,8 +10,8 @@ lbl_8073D48C:
 /* 8073D4AC  7F E6 FB 78 */	mr r6, r31
 /* 8073D4B0  4B 94 63 B0 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 8073D4B4  38 7F 09 74 */	addi r3, r31, 0x974
-/* 8073D4B8  3C 80 80 74 */	lis r4, data_80741C00@ha
-/* 8073D4BC  38 84 1C 00 */	addi r4, r4, data_80741C00@l
+/* 8073D4B8  3C 80 80 74 */	lis r4, ccSphSrc@ha
+/* 8073D4BC  38 84 1C 00 */	addi r4, r4, ccSphSrc@l
 /* 8073D4C0  4B 94 75 74 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 8073D4C4  38 1F 09 38 */	addi r0, r31, 0x938
 /* 8073D4C8  90 1F 09 B8 */	stw r0, 0x9b8(r31)

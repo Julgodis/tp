@@ -70,8 +70,8 @@ lbl_80C58B70:
 /* 80C58BC4  7C A5 30 2E */	lwzx r5, r5, r6
 /* 80C58BC8  38 C0 00 00 */	li r6, 0
 /* 80C58BCC  54 00 08 3C */	slwi r0, r0, 1
-/* 80C58BD0  3C E0 80 C6 */	lis r7, data_80C5A018@ha
-/* 80C58BD4  38 E7 A0 18 */	addi r7, r7, data_80C5A018@l
+/* 80C58BD0  3C E0 80 C6 */	lis r7, estimateSizeTbl@ha
+/* 80C58BD4  38 E7 A0 18 */	addi r7, r7, estimateSizeTbl@l
 /* 80C58BD8  7C E7 02 2E */	lhzx r7, r7, r0
 /* 80C58BDC  39 00 00 00 */	li r8, 0
 /* 80C58BE0  4B 41 FB DC */	b MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f

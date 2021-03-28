@@ -26,14 +26,14 @@ struct daNpcT_faceMotionAnmData_c {
 struct J3DModel {
 };
 
-struct J3DJoint {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct J3DJoint {
 };
 
 struct daNpcT_c {
@@ -1090,7 +1090,7 @@ SECTION_SDATA static void* shop_item_pos_data_tbl[1 + 1 /* padding */] = {
 };
 
 /* 80453B58-80453B60 0006+02 s=1 e=0 z=0  None .sdata2    item_no$5460                                                 */
-SECTION_SDATA2 static u8 data_80453B58[6 + 2 /* padding */] = {
+SECTION_SDATA2 static u8 item_no[6 + 2 /* padding */] = {
 	0x64, 0x76, 0x4B, 0x64, 0x76, 0xFF,
 	/* padding */
 	0x00, 0x00,

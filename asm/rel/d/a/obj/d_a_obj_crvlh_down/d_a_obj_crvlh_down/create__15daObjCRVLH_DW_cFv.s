@@ -5,8 +5,8 @@ lbl_80BD4764:
 /* 80BD4770  39 61 00 30 */	addi r11, r1, 0x30
 /* 80BD4774  4B 78 DA 68 */	b _savegpr_29
 /* 80BD4778  7C 7E 1B 78 */	mr r30, r3
-/* 80BD477C  3C 80 80 BD */	lis r4, data_80BD4D04@ha
-/* 80BD4780  3B E4 4D 04 */	addi r31, r4, data_80BD4D04@l
+/* 80BD477C  3C 80 80 BD */	lis r4, ccCylSrc@ha
+/* 80BD4780  3B E4 4D 04 */	addi r31, r4, ccCylSrc@l
 /* 80BD4784  80 03 04 A0 */	lwz r0, 0x4a0(r3)
 /* 80BD4788  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
 /* 80BD478C  40 82 00 B4 */	bne lbl_80BD4840

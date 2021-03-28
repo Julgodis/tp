@@ -44,10 +44,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -65,10 +65,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -242,7 +242,7 @@ SECTION_RODATA static u32 const lit_3799 = 0x42A00000;
 SECTION_RODATA static u32 const lit_3800 = 0x43480000;
 
 /* 80D36A34-80D36A3C 0006+02 s=1 e=0 z=0  None .rodata    particle_id$3806                                             */
-SECTION_RODATA static u8 const data_80D36A34[6 + 2 /* padding */] = {
+SECTION_RODATA static u8 const particle_id[6 + 2 /* padding */] = {
 	0x82, 0xAB, 0x82, 0xAC, 0x82, 0xAD,
 	/* padding */
 	0x00, 0x00,
@@ -300,7 +300,7 @@ SECTION_DATA static void* lit_3732[3] = {
 };
 
 /* 80D36A88-80D36AA0 0018+00 s=1 e=0 z=0  None .data      l_func$3730                                                  */
-SECTION_DATA static u8 data_80D36A88[24] = {
+SECTION_DATA static u8 l_func[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };

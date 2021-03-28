@@ -29,14 +29,14 @@ lbl_8034FAD8:
 /* 8034FAE8  40 82 00 08 */	bne lbl_8034FAF0
 /* 8034FAEC  3B E0 00 01 */	li r31, 1
 lbl_8034FAF0:
-/* 8034FAF0  80 0D 92 EC */	lwz r0, data_8045186C(r13)
+/* 8034FAF0  80 0D 92 EC */	lwz r0, recalibrated(r13)
 /* 8034FAF4  2C 00 00 00 */	cmpwi r0, 0
 /* 8034FAF8  40 82 00 20 */	bne lbl_8034FB18
 /* 8034FAFC  2C 1F 00 00 */	cmpwi r31, 0
 /* 8034FB00  41 82 00 18 */	beq lbl_8034FB18
 /* 8034FB04  3C 60 F0 00 */	lis r3, 0xf000
 /* 8034FB08  4B FF F1 35 */	bl PADRecalibrate
-/* 8034FB0C  90 6D 92 EC */	stw r3, data_8045186C(r13)
+/* 8034FB0C  90 6D 92 EC */	stw r3, recalibrated(r13)
 /* 8034FB10  38 60 00 00 */	li r3, 0
 /* 8034FB14  48 00 00 18 */	b lbl_8034FB2C
 lbl_8034FB18:
@@ -44,7 +44,7 @@ lbl_8034FB18:
 /* 8034FB1C  48 00 00 10 */	b lbl_8034FB2C
 lbl_8034FB20:
 /* 8034FB20  38 00 00 00 */	li r0, 0
-/* 8034FB24  90 0D 92 EC */	stw r0, data_8045186C(r13)
+/* 8034FB24  90 0D 92 EC */	stw r0, recalibrated(r13)
 /* 8034FB28  38 60 00 01 */	li r3, 1
 lbl_8034FB2C:
 /* 8034FB2C  80 01 00 24 */	lwz r0, 0x24(r1)

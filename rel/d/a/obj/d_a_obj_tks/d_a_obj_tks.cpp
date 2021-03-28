@@ -42,7 +42,7 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct Z2Creature {
@@ -51,10 +51,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -110,17 +110,17 @@ struct daObjTks_Param_c {
 	/* 80D126D0 */ ~daObjTks_Param_c();
 };
 
-struct J3DAnmTransformKey {
+struct _GXColorS10 {
 };
 
-struct _GXColorS10 {
+struct J3DAnmTexPattern {
+	/* 8032AF50 */ void getTexNo(u16, u16*) const;
 };
 
 struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTexPattern {
-	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {
@@ -609,7 +609,7 @@ SECTION_RODATA static u8 const m__16daObjTks_Param_c[128] = {
 };
 
 /* 80D127BC-80D127C0 0004+00 s=1 e=0 z=0  None .rodata    m_cameraItemNum$4211                                         */
-SECTION_RODATA static u8 const data_80D127BC[4] = {
+SECTION_RODATA static u8 const m_cameraItemNum[4] = {
 	0x00, 0x00, 0x00, 0x01,
 };
 

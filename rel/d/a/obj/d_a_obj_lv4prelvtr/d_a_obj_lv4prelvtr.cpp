@@ -33,13 +33,13 @@ struct daObjLv4PRwall_c {
 	/* 80C68C98 */ void create1st();
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {

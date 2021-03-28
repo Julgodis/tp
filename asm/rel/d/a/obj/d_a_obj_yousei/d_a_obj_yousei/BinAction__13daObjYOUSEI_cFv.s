@@ -5,8 +5,8 @@ lbl_804CEE50:
 /* 804CEE5C  39 61 00 50 */	addi r11, r1, 0x50
 /* 804CEE60  4B E9 33 7C */	b _savegpr_29
 /* 804CEE64  7C 7E 1B 78 */	mr r30, r3
-/* 804CEE68  3C 60 80 4D */	lis r3, data_804D15F0@ha
-/* 804CEE6C  3B E3 15 F0 */	addi r31, r3, data_804D15F0@l
+/* 804CEE68  3C 60 80 4D */	lis r3, ccSphSrc@ha
+/* 804CEE6C  3B E3 15 F0 */	addi r31, r3, ccSphSrc@l
 /* 804CEE70  A8 1E 05 CC */	lha r0, 0x5cc(r30)
 /* 804CEE74  2C 00 00 01 */	cmpwi r0, 1
 /* 804CEE78  41 82 00 98 */	beq lbl_804CEF10

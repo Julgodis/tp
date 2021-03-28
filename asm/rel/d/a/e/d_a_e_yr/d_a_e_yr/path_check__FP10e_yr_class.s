@@ -49,14 +49,14 @@ lbl_80822B78:
 /* 80822BB4  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80822BB8  40 82 00 18 */	bne lbl_80822BD0
 /* 80822BBC  38 00 00 01 */	li r0, 1
-/* 80822BC0  3C 60 80 83 */	lis r3, data_80828E34@ha
-/* 80822BC4  38 63 8E 34 */	addi r3, r3, data_80828E34@l
+/* 80822BC0  3C 60 80 83 */	lis r3, check_index@ha
+/* 80822BC4  38 63 8E 34 */	addi r3, r3, check_index@l
 /* 80822BC8  7C 03 D9 AE */	stbx r0, r3, r27
 /* 80822BCC  48 00 00 14 */	b lbl_80822BE0
 lbl_80822BD0:
 /* 80822BD0  38 00 00 00 */	li r0, 0
-/* 80822BD4  3C 60 80 83 */	lis r3, data_80828E34@ha
-/* 80822BD8  38 63 8E 34 */	addi r3, r3, data_80828E34@l
+/* 80822BD4  3C 60 80 83 */	lis r3, check_index@ha
+/* 80822BD8  38 63 8E 34 */	addi r3, r3, check_index@l
 /* 80822BDC  7C 03 D9 AE */	stbx r0, r3, r27
 lbl_80822BE0:
 /* 80822BE0  3B 7B 00 01 */	addi r27, r27, 1
@@ -69,8 +69,8 @@ lbl_80822BE8:
 /* 80822BF8  C0 DF 00 04 */	lfs f6, 4(r31)
 /* 80822BFC  38 C0 00 00 */	li r6, 0
 /* 80822C00  38 E0 00 00 */	li r7, 0
-/* 80822C04  3C 60 80 83 */	lis r3, data_80828E34@ha
-/* 80822C08  38 A3 8E 34 */	addi r5, r3, data_80828E34@l
+/* 80822C04  3C 60 80 83 */	lis r3, check_index@ha
+/* 80822C08  38 A3 8E 34 */	addi r5, r3, check_index@l
 /* 80822C0C  C0 1F 00 48 */	lfs f0, 0x48(r31)
 lbl_80822C10:
 /* 80822C10  80 7E 06 EC */	lwz r3, 0x6ec(r30)

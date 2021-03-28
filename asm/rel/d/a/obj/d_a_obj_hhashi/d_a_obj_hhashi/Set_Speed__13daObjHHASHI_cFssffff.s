@@ -30,8 +30,8 @@ lbl_8057FDA8:
 /* 8057FE18  FF 20 10 90 */	fmr f25, f2
 /* 8057FE1C  FF 40 18 90 */	fmr f26, f3
 /* 8057FE20  FF 60 20 90 */	fmr f27, f4
-/* 8057FE24  3C 60 80 58 */	lis r3, data_805814AC@ha
-/* 8057FE28  3B E3 14 AC */	addi r31, r3, data_805814AC@l
+/* 8057FE24  3C 60 80 58 */	lis r3, ccCylSrc@ha
+/* 8057FE28  3B E3 14 AC */	addi r31, r3, ccCylSrc@l
 /* 8057FE2C  7C 9C 07 34 */	extsh r28, r4
 /* 8057FE30  7C BD 07 34 */	extsh r29, r5
 /* 8057FE34  3B DD FF EC */	addi r30, r29, -20

@@ -28,10 +28,10 @@ struct mDoExt_morf_c {
 	/* 807613B0 */ void setFrame(f32);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -51,19 +51,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -732,17 +732,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 807617DC-807617E4 0008+00 s=1 e=0 z=0  None .data      e_prim$3785                                                  */
-SECTION_DATA static u8 data_807617DC[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 807617E4-807617EC 0008+00 s=1 e=0 z=0  None .data      e_env$3786                                                   */
-SECTION_DATA static u8 data_807617E4[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 807617EC-807617F4 0006+02 s=1 e=0 z=0  None .data      eff_id$3794                                                  */
-SECTION_DATA static u8 data_807617EC[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -992,7 +992,7 @@ SECTION_DATA static void* lit_5481[33] = {
 };
 
 /* 80761BF0-80761BF8 0006+02 s=1 e=0 z=0  None .data      eff_delete_id$5688                                           */
-SECTION_DATA static u8 data_80761BF0[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_delete_id[6 + 2 /* padding */] = {
 	0x88, 0x9E, 0x88, 0x9F, 0x88, 0xA0,
 	/* padding */
 	0x00, 0x00,
@@ -1069,24 +1069,24 @@ SECTION_DATA static void* lit_6713[34] = {
 };
 
 /* 80761CC4-80761CCC 0006+02 s=1 e=0 z=0  None .data      eff_bullet_id$6717                                           */
-SECTION_DATA static u8 data_80761CC4[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_bullet_id[6 + 2 /* padding */] = {
 	0x88, 0x66, 0x88, 0x67, 0x88, 0x68,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80761CCC-80761CD4 0008+00 s=1 e=0 z=0  None .data      eff_bullet_delete_id$6718                                    */
-SECTION_DATA static u8 data_80761CCC[8] = {
+SECTION_DATA static u8 eff_bullet_delete_id[8] = {
 	0x88, 0x62, 0x88, 0x63, 0x88, 0x64, 0x88, 0x65,
 };
 
 /* 80761CD4-80761CD8 0004+00 s=1 e=0 z=0  None .data      eff_darkHoll_id$6837                                         */
-SECTION_DATA static u8 data_80761CD4[4] = {
+SECTION_DATA static u8 eff_darkHoll_id[4] = {
 	0x84, 0xA6, 0x84, 0xA7,
 };
 
 /* 80761CD8-80761CE0 0008+00 s=1 e=0 z=0  None .data      mPzDarkHoll_dt$6994                                          */
-SECTION_DATA static u8 data_80761CD8[8] = {
+SECTION_DATA static u8 mPzDarkHoll_dt[8] = {
 	0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00, 0x20,
 };
 
@@ -1843,7 +1843,7 @@ static u8 lit_4357[12];
 static u8 lit_4358[12];
 
 /* 80761F08-80761FE0 00D8+00 s=1 e=0 z=0  None .bss       mPzCenterInit_dt$4338                                        */
-static u8 data_80761F08[216];
+static u8 mPzCenterInit_dt[216];
 
 /* 80761FE0-80761FF0 000C+04 s=1 e=0 z=0  None .bss       @4360                                                        */
 static u8 lit_4360[12 + 4 /* padding */];
@@ -1900,7 +1900,7 @@ static u8 lit_4378[12];
 static u8 lit_4379[12];
 
 /* 807620BC-80762194 00D8+00 s=1 e=0 z=0  None .bss       mPzEyeInit_dt$4359                                           */
-static u8 data_807620BC[216];
+static u8 mPzEyeInit_dt[216];
 
 /* 807593CC-8075B7CC 2400+00 s=2 e=0 z=0  None .text      executeOpeningDemo__8daE_PZ_cFv                              */
 #pragma push
@@ -1979,7 +1979,7 @@ static u8 lit_5680[12];
 static u8 lit_5681[12];
 
 /* 807621BC-807621E0 0024+00 s=1 e=0 z=0  None .bss       mPzDeadDemo_mCenter_dt$5676                                  */
-static u8 data_807621BC[36];
+static u8 mPzDeadDemo_mCenter_dt[36];
 
 /* 807621E0-807621F0 000C+04 s=1 e=0 z=0  None .bss       @5683                                                        */
 static u8 lit_5683[12 + 4 /* padding */];
@@ -1991,7 +1991,7 @@ static u8 lit_5686[12];
 static u8 lit_5687[12];
 
 /* 80762208-8076222C 0024+00 s=1 e=0 z=0  None .bss       mPzDeadDemo_mEye_dt$5682                                     */
-static u8 data_80762208[36];
+static u8 mPzDeadDemo_mEye_dt[36];
 
 /* 8075CE68-8075D94C 0AE4+00 s=2 e=0 z=0  None .text      executeDead__8daE_PZ_cFv                                     */
 #pragma push

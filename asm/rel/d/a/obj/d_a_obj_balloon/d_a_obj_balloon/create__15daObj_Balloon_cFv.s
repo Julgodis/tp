@@ -145,8 +145,8 @@ lbl_80BA8A54:
 /* 80BA8AEC  7F A6 EB 78 */	mr r6, r29
 /* 80BA8AF0  4B 4D AD 70 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80BA8AF4  38 7D 07 DC */	addi r3, r29, 0x7dc
-/* 80BA8AF8  3C 80 80 BB */	lis r4, data_80BA8EA8@ha
-/* 80BA8AFC  38 84 8E A8 */	addi r4, r4, data_80BA8EA8@l
+/* 80BA8AF8  3C 80 80 BB */	lis r4, cc_sph_src@ha
+/* 80BA8AFC  38 84 8E A8 */	addi r4, r4, cc_sph_src@l
 /* 80BA8B00  4B 4D BF 34 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 80BA8B04  38 1D 07 A0 */	addi r0, r29, 0x7a0
 /* 80BA8B08  90 1D 08 20 */	stw r0, 0x820(r29)

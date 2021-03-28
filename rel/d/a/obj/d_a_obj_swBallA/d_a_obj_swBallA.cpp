@@ -18,10 +18,10 @@ struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -68,13 +68,13 @@ struct dStage_roomControl_c {
 	/* 80024338 */ void initZone();
 };
 
+struct J3DModelData {
+};
+
 struct cXyz {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -403,7 +403,7 @@ SECTION_DATA static void* lit_3957[3] = {
 };
 
 /* 80CF4454-80CF446C 0018+00 s=1 e=0 z=0  None .data      l_func$3955                                                  */
-SECTION_DATA static u8 data_80CF4454[24] = {
+SECTION_DATA static u8 l_func[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };

@@ -28,10 +28,10 @@ struct dkWmark_c {
 	/* 802616C4 */ void setMatrix();
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

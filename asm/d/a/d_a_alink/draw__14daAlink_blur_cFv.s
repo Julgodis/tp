@@ -11,10 +11,10 @@ lbl_80125BF4:
 /* 80125C18  38 60 00 00 */	li r3, 0
 /* 80125C1C  48 23 94 B9 */	bl GXSetNumIndStages
 /* 80125C20  80 1F 00 20 */	lwz r0, 0x20(r31)
-/* 80125C24  38 6D 81 24 */	la r3, data_804506A4(r13) /* 804506A4-_SDA_BASE_ */
+/* 80125C24  38 6D 81 24 */	la r3, nColor0(r13) /* 804506A4-_SDA_BASE_ */
 /* 80125C28  98 03 00 03 */	stb r0, 3(r3)
-/* 80125C2C  3C 60 80 42 */	lis r3, data_804256CC@ha
-/* 80125C30  38 63 56 CC */	addi r3, r3, data_804256CC@l
+/* 80125C2C  3C 60 80 42 */	lis r3, texObj@ha
+/* 80125C30  38 63 56 CC */	addi r3, r3, texObj@l
 /* 80125C34  80 9F 00 10 */	lwz r4, 0x10(r31)
 /* 80125C38  80 04 00 1C */	lwz r0, 0x1c(r4)
 /* 80125C3C  7C 84 02 14 */	add r4, r4, r0
@@ -25,8 +25,8 @@ lbl_80125BF4:
 /* 80125C50  39 20 00 00 */	li r9, 0
 /* 80125C54  39 40 00 00 */	li r10, 0
 /* 80125C58  48 23 81 E9 */	bl GXInitTexObj
-/* 80125C5C  3C 60 80 42 */	lis r3, data_804256CC@ha
-/* 80125C60  38 63 56 CC */	addi r3, r3, data_804256CC@l
+/* 80125C5C  3C 60 80 42 */	lis r3, texObj@ha
+/* 80125C60  38 63 56 CC */	addi r3, r3, texObj@l
 /* 80125C64  38 80 00 01 */	li r4, 1
 /* 80125C68  38 A0 00 01 */	li r5, 1
 /* 80125C6C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
@@ -36,8 +36,8 @@ lbl_80125BF4:
 /* 80125C7C  38 E0 00 00 */	li r7, 0
 /* 80125C80  39 00 00 00 */	li r8, 0
 /* 80125C84  48 23 84 51 */	bl GXInitTexObjLOD
-/* 80125C88  3C 60 80 42 */	lis r3, data_804256CC@ha
-/* 80125C8C  38 63 56 CC */	addi r3, r3, data_804256CC@l
+/* 80125C88  3C 60 80 42 */	lis r3, texObj@ha
+/* 80125C8C  38 63 56 CC */	addi r3, r3, texObj@l
 /* 80125C90  38 80 00 00 */	li r4, 0
 /* 80125C94  48 23 87 81 */	bl GXLoadTexObj
 /* 80125C98  38 60 00 00 */	li r3, 0
@@ -61,7 +61,7 @@ lbl_80125BF4:
 /* 80125CE0  48 23 51 D9 */	bl GXSetVtxDesc
 /* 80125CE4  38 60 00 00 */	li r3, 0
 /* 80125CE8  48 23 7E 49 */	bl GXSetNumChans
-/* 80125CEC  80 0D 81 24 */	lwz r0, data_804506A4(r13)
+/* 80125CEC  80 0D 81 24 */	lwz r0, nColor0(r13)
 /* 80125CF0  90 01 00 08 */	stw r0, 8(r1)
 /* 80125CF4  38 60 00 01 */	li r3, 1
 /* 80125CF8  38 81 00 08 */	addi r4, r1, 8

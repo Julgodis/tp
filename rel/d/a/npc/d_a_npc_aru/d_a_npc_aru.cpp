@@ -11,7 +11,10 @@
 // Types:
 // 
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Vec {
@@ -23,13 +26,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -63,16 +63,16 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 80956DDC */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct daNpcT_evtData_c {
 };
 
 struct daNpcT_motionAnmData_c {
 };
 
-struct daNpcT_evtData_c {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpc_Aru_c {
@@ -145,15 +145,15 @@ struct _GXColorS10 {
 struct J3DModel {
 };
 
+struct csXyz {
+	/* 80956784 */ ~csXyz();
+	/* 80956CD8 */ csXyz();
+};
+
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
 	/* 800844F8 */ void GetTgHitObj();
-};
-
-struct csXyz {
-	/* 80956784 */ ~csXyz();
-	/* 80956CD8 */ csXyz();
 };
 
 struct daNpcT_c {
@@ -246,13 +246,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct dBgS {
+};
+
 struct dBgS_AcchCir {
 	/* 80075EAC */ dBgS_AcchCir();
 	/* 80075F40 */ void SetWallR(f32);
 	/* 80956E24 */ ~dBgS_AcchCir();
-};
-
-struct dBgS {
 };
 
 struct dBgS_Acch {
@@ -836,7 +836,7 @@ SECTION_RODATA static u8 const m__17daNpc_Aru_Param_c[160] = {
 };
 
 /* 80957770-80957788 0018+00 s=1 e=0 z=0  None .rodata    heapSize$4024                                                */
-SECTION_RODATA static u8 const data_80957770[24] = {
+SECTION_RODATA static u8 const heapSize[24] = {
 	0x00, 0x00, 0x3D, 0x50, 0x00, 0x00, 0x3D, 0x50, 0x00, 0x00, 0x3D, 0x50, 0x00, 0x00, 0x3D, 0x50,
 	0x00, 0x00, 0x3D, 0x50, 0x00, 0x00, 0x00, 0x00,
 };
@@ -1934,7 +1934,7 @@ static u8 l_HIO[4];
 static u8 lit_4931[12 + 4 /* padding */];
 
 /* 80958180-8095818C 000C+00 s=1 e=0 z=0  None .bss       prtclScl$4930                                                */
-static u8 data_80958180[12];
+static u8 prtclScl[12];
 
 /* 8095349C-80953798 02FC+00 s=1 e=0 z=0  None .text      setAttnPos__11daNpc_Aru_cFv                                  */
 #pragma push

@@ -31,10 +31,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -46,19 +46,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -565,17 +565,17 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 8073CF94-8073CF9C 0008+00 s=1 e=0 z=0  None .data      e_prim$3789                                                  */
-SECTION_DATA static u8 data_8073CF94[8] = {
+SECTION_DATA static u8 e_prim[8] = {
 	0xFF, 0x78, 0x00, 0x00, 0xFF, 0x64, 0x78, 0x00,
 };
 
 /* 8073CF9C-8073CFA4 0008+00 s=1 e=0 z=0  None .data      e_env$3790                                                   */
-SECTION_DATA static u8 data_8073CF9C[8] = {
+SECTION_DATA static u8 e_env[8] = {
 	0x5A, 0x2D, 0x2D, 0x00, 0x3C, 0x1E, 0x1E, 0x00,
 };
 
 /* 8073CFA4-8073CFAC 0006+02 s=1 e=0 z=0  None .data      eff_id$3798                                                  */
-SECTION_DATA static u8 data_8073CFA4[6 + 2 /* padding */] = {
+SECTION_DATA static u8 eff_id[6 + 2 /* padding */] = {
 	0x02, 0x9D, 0x02, 0x9E, 0x02, 0x9F,
 	/* padding */
 	0x00, 0x00,
@@ -632,17 +632,17 @@ SECTION_DATA static u8 data_8073D0FC[64] = {
 };
 
 /* 8073D13C-8073D144 0008+00 s=1 e=0 z=0  None .data      w_eff_id$4089                                                */
-SECTION_DATA static u8 data_8073D13C[8] = {
+SECTION_DATA static u8 w_eff_id_4089[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
 /* 8073D144-8073D148 0004+00 s=1 e=0 z=0  None .data      w_eff_id$4129                                                */
-SECTION_DATA static u8 data_8073D144[4] = {
+SECTION_DATA static u8 w_eff_id_4129[4] = {
 	0x85, 0x50, 0x85, 0x51,
 };
 
 /* 8073D148-8073D150 0008+00 s=1 e=0 z=0  None .data      w_eff_id$4146                                                */
-SECTION_DATA static u8 data_8073D148[8] = {
+SECTION_DATA static u8 w_eff_id_4146[8] = {
 	0x85, 0x4C, 0x85, 0x4D, 0x85, 0x4E, 0x85, 0x4F,
 };
 
@@ -1016,7 +1016,7 @@ static u8 struct_8073D2DC[4];
 static u8 lit_4086[12 + 4 /* padding */];
 
 /* 8073D2F0-8073D2FC 000C+00 s=1 e=0 z=0  None .bss       sc$4085                                                      */
-static u8 data_8073D2F0[12];
+static u8 sc[12];
 
 /* 8073A838-8073A99C 0164+00 s=3 e=0 z=0  None .text      setWaterEffect__8daE_OT_cFv                                  */
 #pragma push

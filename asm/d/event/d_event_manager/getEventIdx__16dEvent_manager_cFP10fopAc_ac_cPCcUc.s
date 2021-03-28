@@ -31,8 +31,8 @@ lbl_80047758:
 /* 800477CC  4B FF FF 8D */	bl getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc
 /* 800477D0  48 00 01 48 */	b lbl_80047918
 lbl_800477D4:
-/* 800477D4  3C 60 80 42 */	lis r3, data_804246C8@ha
-/* 800477D8  38 63 46 C8 */	addi r3, r3, data_804246C8@l
+/* 800477D4  3C 60 80 42 */	lis r3, map_tool_name_4511@ha
+/* 800477D8  38 63 46 C8 */	addi r3, r3, map_tool_name_4511@l
 /* 800477DC  3C 80 80 38 */	lis r4, d_event_d_event_manager__stringBase0@ha
 /* 800477E0  38 84 9F 60 */	addi r4, r4, d_event_d_event_manager__stringBase0@l
 /* 800477E4  38 84 01 4F */	addi r4, r4, 0x14f
@@ -41,8 +41,8 @@ lbl_800477D4:
 /* 800477F0  48 31 EC ED */	bl sprintf
 /* 800477F4  7F 43 D3 78 */	mr r3, r26
 /* 800477F8  7F 64 DB 78 */	mr r4, r27
-/* 800477FC  3C A0 80 42 */	lis r5, data_804246C8@ha
-/* 80047800  38 A5 46 C8 */	addi r5, r5, data_804246C8@l
+/* 800477FC  3C A0 80 42 */	lis r5, map_tool_name_4511@ha
+/* 80047800  38 A5 46 C8 */	addi r5, r5, map_tool_name_4511@l
 /* 80047804  38 C0 00 FF */	li r6, 0xff
 /* 80047808  4B FF FF 51 */	bl getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc
 /* 8004780C  48 00 01 0C */	b lbl_80047918

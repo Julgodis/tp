@@ -16,8 +16,8 @@ lbl_80D25EE8:
 /* 80D25F20  3B A3 4F F8 */	addi r29, r3, 0x4ff8
 /* 80D25F24  7F A3 EB 78 */	mr r3, r29
 /* 80D25F28  80 9F 09 F4 */	lwz r4, 0x9f4(r31)
-/* 80D25F2C  3C A0 80 D2 */	lis r5, data_80D26DB4@ha
-/* 80D25F30  38 A5 6D B4 */	addi r5, r5, data_80D26DB4@l
+/* 80D25F2C  3C A0 80 D2 */	lis r5, action_table@ha
+/* 80D25F30  38 A5 6D B4 */	addi r5, r5, action_table@l
 /* 80D25F34  38 C0 00 04 */	li r6, 4
 /* 80D25F38  38 E0 00 00 */	li r7, 0
 /* 80D25F3C  39 00 00 00 */	li r8, 0

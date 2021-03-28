@@ -48,14 +48,14 @@ struct mDoExt_invisibleModel {
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTevRegKey {
 };
 
 struct J3DAnmTexPattern {
 	/* 8032AF50 */ void getTexNo(u16, u16*) const;
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmTextureSRTKey {
 };
 
 struct J3DMaterialTable {
@@ -83,7 +83,7 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct Z2Creature {
@@ -92,10 +92,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -182,12 +182,12 @@ struct daNpc_zrZ_Param_c {
 	/* 80B9AF80 */ ~daNpc_zrZ_Param_c();
 };
 
-struct J3DAnmTransformKey {
-};
-
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct dCcD_SrcCyl {
@@ -1061,12 +1061,12 @@ SECTION_RODATA static u32 const lit_5700 = 0x40A00000;
 SECTION_RODATA static u32 const lit_5701 = 0x41600000;
 
 /* 80B9B188-80B9B198 0010+00 s=1 e=0 z=0  None .rodata    key_frame$5706                                               */
-SECTION_RODATA static u8 const data_80B9B188[16] = {
+SECTION_RODATA static u8 const key_frame[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x32, 0x00, 0x00, 0x00, 0xBE, 0x00, 0x00, 0x00, 0xDC,
 };
 
 /* 80B9B198-80B9B1B8 0020+00 s=1 e=0 z=0  None .rodata    key_color$5707                                               */
-SECTION_RODATA static u8 const data_80B9B198[32] = {
+SECTION_RODATA static u8 const key_color[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xC3, 0x00, 0x8A, 0x00, 0xFF,
 	0x00, 0xFF, 0x00, 0xC3, 0x00, 0x8A, 0x00, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF,
 };
@@ -2081,7 +2081,7 @@ static u8 l_HIO[4];
 static u8 lit_4997[12 + 4 /* padding */];
 
 /* 80B9B8C8-80B9B8D4 000C+00 s=1 e=0 z=0  None .bss       eyeOffset$4996                                               */
-static u8 data_80B9B8C8[12];
+static u8 eyeOffset[12];
 
 /* 80B956B4-80B95BB8 0504+00 s=1 e=0 z=0  None .text      setAttnPos__11daNpc_zrZ_cFv                                  */
 #pragma push

@@ -517,8 +517,8 @@ lbl_807A4978:
 /* 807A4988  3A C0 00 00 */	li r22, 0
 /* 807A498C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 807A4990  3B 03 61 C0 */	addi r24, r3, g_dComIfG_gameInfo@l
-/* 807A4994  3C 60 80 7A */	lis r3, data_807A6A80@ha
-/* 807A4998  3A E3 6A 80 */	addi r23, r3, data_807A6A80@l
+/* 807A4994  3C 60 80 7A */	lis r3, p_name@ha
+/* 807A4998  3A E3 6A 80 */	addi r23, r3, p_name@l
 lbl_807A499C:
 /* 807A499C  80 78 5D 3C */	lwz r3, 0x5d3c(r24)
 /* 807A49A0  38 00 00 FF */	li r0, 0xff

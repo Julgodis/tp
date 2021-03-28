@@ -67,10 +67,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -88,11 +88,11 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 struct dPa_control_c {
@@ -391,25 +391,25 @@ SECTION_RODATA static u8 const s_CcDCyl__11daBkyRock_c[68] = {
 };
 
 /* 80BB7F24-80BB7F3C 0018+00 s=1 e=0 z=0  None .rodata    BMD_IDX$3845                                                 */
-SECTION_RODATA static u8 const data_80BB7F24[24] = {
+SECTION_RODATA static u8 const BMD_IDX[24] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x06,
 	0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x08,
 };
 
 /* 80BB7F3C-80BB7F6C 0030+00 s=1 e=0 z=0  None .rodata    COL_OFFSET_POS$3888                                          */
-SECTION_RODATA static u8 const data_80BB7F3C[48] = {
+SECTION_RODATA static u8 const COL_OFFSET_POS[48] = {
 	0xC2, 0xC8, 0x00, 0x00, 0xC3, 0x7A, 0x00, 0x00, 0xC2, 0xC8, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00,
 	0xC3, 0x7A, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80BB7F6C-80BB7F7C 0010+00 s=1 e=0 z=0  None .rodata    COL_INIT_HEIGHT$3889                                         */
-SECTION_RODATA static u8 const data_80BB7F6C[16] = {
+SECTION_RODATA static u8 const COL_INIT_HEIGHT[16] = {
 	0x00, 0x00, 0x01, 0x90, 0x00, 0x00, 0x02, 0x8A, 0x00, 0x00, 0x03, 0x84, 0x00, 0x00, 0x03, 0x84,
 };
 
 /* 80BB7F7C-80BB7F8C 0010+00 s=1 e=0 z=0  None .rodata    COL_INIT_RADIUS$3890                                         */
-SECTION_RODATA static u8 const data_80BB7F7C[16] = {
+SECTION_RODATA static u8 const COL_INIT_RADIUS[16] = {
 	0x00, 0x00, 0x00, 0xFA, 0x00, 0x00, 0x02, 0x26, 0x00, 0x00, 0x02, 0x8A, 0x00, 0x00, 0x03, 0x20,
 };
 
@@ -445,7 +445,7 @@ SECTION_RODATA static u8 const lit_4018[4] = {
 };
 
 /* 80BB7FB4-80BB7FBC 0008+00 s=1 e=0 z=0  None .rodata    VIBMODE_TIMER$4051                                           */
-SECTION_RODATA static u8 const data_80BB7FB4[8] = {
+SECTION_RODATA static u8 const VIBMODE_TIMER[8] = {
 	0x00, 0x00, 0x00, 0x1E, 0x00, 0x00, 0x00, 0x28,
 };
 
@@ -471,27 +471,27 @@ SECTION_RODATA static u32 const lit_4091 = 0x3F666666;
 SECTION_RODATA static u32 const lit_4092 = 0x3D4CCCCD;
 
 /* 80BB7FD8-80BB7FE0 0008+00 s=1 e=0 z=0  None .rodata    DROP_OFFSET_POS$4096                                         */
-SECTION_RODATA static u8 const data_80BB7FD8[8] = {
+SECTION_RODATA static u8 const DROP_OFFSET_POS[8] = {
 	0x00, 0x00, 0x01, 0x5E, 0x00, 0x00, 0x0D, 0xAC,
 };
 
 /* 80BB7FE0-80BB7FE8 0008+00 s=1 e=0 z=0  None .rodata    INIT_SPEED_Y_BASE$4097                                       */
-SECTION_RODATA static u8 const data_80BB7FE0[8] = {
+SECTION_RODATA static u8 const INIT_SPEED_Y_BASE[8] = {
 	0x00, 0x00, 0x00, 0x14, 0x00, 0x00, 0x00, 0x28,
 };
 
 /* 80BB7FE8-80BB7FF0 0008+00 s=1 e=0 z=0  None .rodata    INIT_SPEED_Y_RANGE$4098                                      */
-SECTION_RODATA static u8 const data_80BB7FE8[8] = {
+SECTION_RODATA static u8 const INIT_SPEED_Y_RANGE[8] = {
 	0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x78,
 };
 
 /* 80BB7FF0-80BB7FF8 0008+00 s=1 e=0 z=0  None .rodata    PIECE_SCALE_RANGE$4099                                       */
-SECTION_RODATA static u8 const data_80BB7FF0[8] = {
+SECTION_RODATA static u8 const PIECE_SCALE_RANGE[8] = {
 	0x00, 0x00, 0x00, 0x19, 0x00, 0x00, 0x00, 0x23,
 };
 
 /* 80BB7FF8-80BB8000 0008+00 s=1 e=0 z=0  None .rodata    PIECE_SCALE_BASE$4100                                        */
-SECTION_RODATA static u8 const data_80BB7FF8[8] = {
+SECTION_RODATA static u8 const PIECE_SCALE_BASE[8] = {
 	0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x14,
 };
 

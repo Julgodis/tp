@@ -63,10 +63,10 @@ struct daNpc_Pouya_c {
 	/* 80AAE8E8 */ void getType();
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -549,7 +549,7 @@ SECTION_DATA static u8 l_ccDCyl[68] = {
 };
 
 /* 80C95BDC-80C95BE4 0008+00 s=1 e=0 z=0  None .data      emttrId$4602                                                 */
-SECTION_DATA static u8 data_80C95BDC[8] = {
+SECTION_DATA static u8 emttrId[8] = {
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB,
 };
 
@@ -951,7 +951,7 @@ static u8 l_HIO[4];
 static u8 lit_4599[12 + 4 /* padding */];
 
 /* 80C95D30-80C95D3C 000C+00 s=1 e=0 z=0  None .bss       scl$4598                                                     */
-static u8 data_80C95D30[12];
+static u8 scl[12];
 
 /* 80C95768-80C95890 0128+00 s=1 e=0 z=0  None .text      setWaterPrtcl__11daObj_Mie_cFv                               */
 #pragma push

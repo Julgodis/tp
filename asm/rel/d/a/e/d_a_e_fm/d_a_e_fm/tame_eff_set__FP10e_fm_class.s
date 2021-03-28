@@ -96,8 +96,8 @@ lbl_804F0D3C:
 /* 804F0EB4  3B A0 00 00 */	li r29, 0
 /* 804F0EB8  3B 60 00 00 */	li r27, 0
 /* 804F0EBC  3B 40 00 00 */	li r26, 0
-/* 804F0EC0  3C 60 80 50 */	lis r3, data_804FA9DC@ha
-/* 804F0EC4  3B 03 A9 DC */	addi r24, r3, data_804FA9DC@l
+/* 804F0EC0  3C 60 80 50 */	lis r3, tame_name@ha
+/* 804F0EC4  3B 03 A9 DC */	addi r24, r3, tame_name@l
 /* 804F0EC8  3C 60 80 50 */	lis r3, lit_3777@ha
 /* 804F0ECC  3B 23 A6 BC */	addi r25, r3, lit_3777@l
 lbl_804F0ED0:

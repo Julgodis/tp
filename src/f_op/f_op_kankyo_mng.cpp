@@ -17,16 +17,16 @@ struct layer_class {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct cXyz {
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -173,7 +173,7 @@ asm void fopKyM_createWpillar(cXyz const* param_0, f32 param_1, int param_2) {
 
 /* ############################################################################################## */
 /* 804505C0-804505C8 0004+04 s=1 e=0 z=0  None .sdata     m_name$3788                                                  */
-SECTION_SDATA static u8 data_804505C0[4 + 4 /* padding */] = {
+SECTION_SDATA static u8 m_name[4 + 4 /* padding */] = {
 	0x87, 0x57, 0x87, 0x58,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,

@@ -2,8 +2,8 @@ lbl_805811CC:
 /* 805811CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 805811D0  7C 08 02 A6 */	mflr r0
 /* 805811D4  90 01 00 14 */	stw r0, 0x14(r1)
-/* 805811D8  3C 80 80 58 */	lis r4, data_805814AC@ha
-/* 805811DC  38 84 14 AC */	addi r4, r4, data_805814AC@l
+/* 805811D8  3C 80 80 58 */	lis r4, ccCylSrc@ha
+/* 805811DC  38 84 14 AC */	addi r4, r4, ccCylSrc@l
 /* 805811E0  C0 24 00 EC */	lfs f1, 0xec(r4)
 /* 805811E4  C0 44 00 F0 */	lfs f2, 0xf0(r4)
 /* 805811E8  FC 60 08 90 */	fmr f3, f1

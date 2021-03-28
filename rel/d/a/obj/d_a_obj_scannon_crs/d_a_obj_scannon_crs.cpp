@@ -41,10 +41,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -61,10 +61,10 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct JPABaseEmitter {
+struct daMidna_c {
 };
 
-struct daMidna_c {
+struct JPABaseEmitter {
 };
 
 struct daSCannonCrs_c {
@@ -471,7 +471,7 @@ SECTION_RODATA static u32 const lit_4190 = 0x42B00000;
 SECTION_RODATA static u32 const lit_4191 = 0x43700000;
 
 /* 80CCB0E0-80CCB0EC 000C+00 s=1 e=0 z=0  None .rodata    MIDNA_WAIT_POS_OFFSET$4195                                   */
-SECTION_RODATA static u8 const data_80CCB0E0[12] = {
+SECTION_RODATA static u8 const MIDNA_WAIT_POS_OFFSET[12] = {
 	0x42, 0xC8, 0x00, 0x00, 0x44, 0x61, 0x00, 0x00, 0x42, 0xB4, 0x00, 0x00,
 };
 
@@ -491,7 +491,7 @@ SECTION_RODATA static u8 const lit_4208[8] = {
 };
 
 /* 80CCB100-80CCB10C 000C+00 s=1 e=0 z=0  None .rodata    MIDNA_BEAM_OFFSET$4360                                       */
-SECTION_RODATA static u8 const data_80CCB100[12] = {
+SECTION_RODATA static u8 const MIDNA_BEAM_OFFSET[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -601,7 +601,7 @@ SECTION_DATA static u8 s_exeProc__14daSCannonCrs_c[72] = {
 };
 
 /* 80CCB218-80CCB228 0010+00 s=1 e=0 z=0  None .data      CUT_TYPE_TABLE$4066                                          */
-SECTION_DATA static void* data_80CCB218[4] = {
+SECTION_DATA static void* CUT_TYPE_TABLE[4] = {
 	(void*)(((char*)&struct_80CCB11C)+0x26) /* None */,
 	(void*)(((char*)&struct_80CCB11C)+0x2B) /* None */,
 	(void*)(((char*)&struct_80CCB150)+0x0) /* None */,

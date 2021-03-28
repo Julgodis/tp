@@ -770,8 +770,8 @@ lbl_80CE2030:
 /* 80CE2040  3A 00 00 00 */	li r16, 0
 /* 80CE2044  3B 40 00 00 */	li r26, 0
 /* 80CE2048  3A F5 06 18 */	addi r23, r21, 0x618
-/* 80CE204C  3C 60 80 CE */	lis r3, data_80CE3B70@ha
-/* 80CE2050  39 C3 3B 70 */	addi r14, r3, data_80CE3B70@l
+/* 80CE204C  3C 60 80 CE */	lis r3, e_id@ha
+/* 80CE2050  39 C3 3B 70 */	addi r14, r3, e_id@l
 lbl_80CE2054:
 /* 80CE2054  80 79 5D 3C */	lwz r3, 0x5d3c(r25)
 /* 80CE2058  38 80 00 00 */	li r4, 0

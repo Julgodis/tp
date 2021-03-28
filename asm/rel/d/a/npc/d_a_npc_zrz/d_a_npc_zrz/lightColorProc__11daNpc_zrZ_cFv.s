@@ -10,8 +10,8 @@ lbl_80B972EC:
 /* 80B9730C  40 80 01 98 */	bge lbl_80B974A4
 /* 80B97310  39 40 00 00 */	li r10, 0
 /* 80B97314  38 80 00 00 */	li r4, 0
-/* 80B97318  3C 60 80 BA */	lis r3, data_80B9B188@ha
-/* 80B9731C  38 A3 B1 88 */	addi r5, r3, data_80B9B188@l
+/* 80B97318  3C 60 80 BA */	lis r3, key_frame@ha
+/* 80B9731C  38 A3 B1 88 */	addi r5, r3, key_frame@l
 /* 80B97320  38 60 00 04 */	li r3, 4
 /* 80B97324  7C 69 03 A6 */	mtctr r3
 lbl_80B97328:
@@ -23,8 +23,8 @@ lbl_80B97328:
 /* 80B9733C  7C 03 30 00 */	cmpw r3, r6
 /* 80B97340  40 81 00 20 */	ble lbl_80B97360
 /* 80B97344  7C E8 3B 78 */	mr r8, r7
-/* 80B97348  3C 60 80 BA */	lis r3, data_80B9B188@ha
-/* 80B9734C  38 03 B1 88 */	addi r0, r3, data_80B9B188@l
+/* 80B97348  3C 60 80 BA */	lis r3, key_frame@ha
+/* 80B9734C  38 03 B1 88 */	addi r0, r3, key_frame@l
 /* 80B97350  7C 60 22 14 */	add r3, r0, r4
 /* 80B97354  81 23 00 04 */	lwz r9, 4(r3)
 /* 80B97358  38 0A 00 01 */	addi r0, r10, 1
@@ -36,8 +36,8 @@ lbl_80B97360:
 lbl_80B9736C:
 /* 80B9736C  7C A8 48 50 */	subf r5, r8, r9
 /* 80B97370  55 4A 18 38 */	slwi r10, r10, 3
-/* 80B97374  3C 60 80 BA */	lis r3, data_80B9B198@ha
-/* 80B97378  39 03 B1 98 */	addi r8, r3, data_80B9B198@l
+/* 80B97374  3C 60 80 BA */	lis r3, key_color@ha
+/* 80B97378  39 03 B1 98 */	addi r8, r3, key_color@l
 /* 80B9737C  7C 88 52 AE */	lhax r4, r8, r10
 /* 80B97380  7C E8 52 14 */	add r7, r8, r10
 /* 80B97384  A8 67 00 08 */	lha r3, 8(r7)

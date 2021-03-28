@@ -27,8 +27,8 @@ lbl_80AAFA64:
 /* 80AAFAC8  4B 6F 52 D8 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 80AAFACC  80 7C 00 84 */	lwz r3, 0x84(r28)
 /* 80AAFAD0  80 83 00 0C */	lwz r4, 0xc(r3)
-/* 80AAFAD4  3C 60 80 AB */	lis r3, data_80AB2110@ha
-/* 80AAFAD8  80 03 21 10 */	lwz r0, data_80AB2110@l(r3)
+/* 80AAFAD4  3C 60 80 AB */	lis r3, jointNo@ha
+/* 80AAFAD8  80 03 21 10 */	lwz r0, jointNo@l(r3)
 /* 80AAFADC  1C 00 00 30 */	mulli r0, r0, 0x30
 /* 80AAFAE0  7C 64 02 14 */	add r3, r4, r0
 /* 80AAFAE4  3C 80 80 3E */	lis r4, now__14mDoMtx_stack_c@ha

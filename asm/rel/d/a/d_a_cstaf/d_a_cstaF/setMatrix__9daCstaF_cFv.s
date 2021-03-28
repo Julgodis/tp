@@ -17,8 +17,8 @@ lbl_804DE5F0:
 /* 804DE62C  4B B3 2B C0 */	b modelCalc__16mDoExt_McaMorfSOFv
 /* 804DE630  C0 5F 04 D8 */	lfs f2, 0x4d8(r31)
 /* 804DE634  C0 3F 04 D4 */	lfs f1, 0x4d4(r31)
-/* 804DE638  3C 60 80 4E */	lis r3, data_804DF93C@ha
-/* 804DE63C  38 83 F9 3C */	addi r4, r3, data_804DF93C@l
+/* 804DE638  3C 60 80 4E */	lis r3, fieldLocalBallPos@ha
+/* 804DE63C  38 83 F9 3C */	addi r4, r3, fieldLocalBallPos@l
 /* 804DE640  C0 04 00 04 */	lfs f0, 4(r4)
 /* 804DE644  EC 21 00 2A */	fadds f1, f1, f0
 /* 804DE648  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)

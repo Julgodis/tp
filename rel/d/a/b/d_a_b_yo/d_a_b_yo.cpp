@@ -44,13 +44,13 @@ struct mDoGph_gInf_c {
 	/* 80008078 */ void onBlure();
 };
 
+struct J3DAnmTevRegKey {
+};
+
 struct J3DAnmTexPattern {
 };
 
 struct J3DAnmTextureSRTKey {
-};
-
-struct J3DAnmTevRegKey {
 };
 
 struct J3DMaterialTable {
@@ -78,19 +78,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -937,43 +937,43 @@ SECTION_DATA static u8 yo_demo_btp_idx[76] = {
 };
 
 /* 80639C44-80639C50 000C+00 s=1 e=0 z=0  None .data      yo_window_angle$4294                                         */
-SECTION_DATA static u8 data_80639C44[12] = {
+SECTION_DATA static u8 yo_window_angle[12] = {
 	0xC0, 0x00, 0xE0, 0x00, 0x60, 0x00, 0x20, 0x00, 0x40, 0x00, 0x00, 0x00,
 };
 
 /* 80639C50-80639C58 0008+00 s=1 e=0 z=0  None .data      madoware_effect_id$4295                                      */
-SECTION_DATA static u8 data_80639C50[8] = {
+SECTION_DATA static u8 madoware_effect_id[8] = {
 	0x87, 0xC1, 0x87, 0xC2, 0x87, 0xC3, 0x87, 0xC4,
 };
 
 /* 80639C58-80639C60 0008+00 s=1 e=0 z=0  None .data      hensin_effect_id$4317                                        */
-SECTION_DATA static u8 data_80639C58[8] = {
+SECTION_DATA static u8 hensin_effect_id[8] = {
 	0x87, 0xB1, 0x87, 0xB2, 0x87, 0xB3, 0x87, 0xB4,
 };
 
 /* 80639C60-80639C6C 000C+00 s=1 e=0 z=0  None .data      l_landing_effect_id$4401                                     */
-SECTION_DATA static u8 data_80639C60[12] = {
+SECTION_DATA static u8 l_landing_effect_id[12] = {
 	0x86, 0xDC, 0x86, 0xDD, 0x86, 0xDE, 0x86, 0xDF, 0x86, 0xE0, 0x86, 0xE1,
 };
 
 /* 80639C6C-80639C84 0018+00 s=1 e=0 z=0  None .data      break_ice_effect_id$4436                                     */
-SECTION_DATA static u8 data_80639C6C[24] = {
+SECTION_DATA static u8 break_ice_effect_id[24] = {
 	0x86, 0xB4, 0x86, 0xB5, 0x87, 0x9C, 0x87, 0x9F, 0x87, 0xA0, 0x87, 0xA1, 0x87, 0xA3, 0x87, 0xA4,
 	0x87, 0xA5, 0x87, 0xA7, 0x87, 0xA8, 0x87, 0xA9,
 };
 
 /* 80639C84-80639C90 000C+00 s=1 e=0 z=0  None .data      wall_hit_effect_id$4479                                      */
-SECTION_DATA static u8 data_80639C84[12] = {
+SECTION_DATA static u8 wall_hit_effect_id[12] = {
 	0x87, 0x9D, 0x87, 0x9E, 0x87, 0x9D, 0x87, 0x9E, 0x87, 0xAA, 0x87, 0xAB,
 };
 
 /* 80639C90-80639C98 0008+00 s=1 e=0 z=0  None .data      chill_effect_id$4527                                         */
-SECTION_DATA static u8 data_80639C90[8] = {
+SECTION_DATA static u8 chill_effect_id[8] = {
 	0x86, 0xDA, 0x87, 0xA2, 0x87, 0xA6, 0x87, 0xAC,
 };
 
 /* 80639C98-80639C9C 0004+00 s=1 e=0 z=0  None .data      apper_effect_id$4594                                         */
-SECTION_DATA static u8 data_80639C98[4] = {
+SECTION_DATA static u8 apper_effect_id[4] = {
 	0x87, 0xAE, 0x87, 0xAF,
 };
 
@@ -1081,23 +1081,23 @@ SECTION_DATA static u8 yo_att_pos_y[28] = {
 };
 
 /* 80639E14-80639E34 0020+00 s=1 e=0 z=0  None .data      yo_at_sph_radius$7331                                        */
-SECTION_DATA static u8 data_80639E14[32] = {
+SECTION_DATA static u8 yo_at_sph_radius[32] = {
 	0x44, 0x24, 0x80, 0x00, 0x44, 0x16, 0x00, 0x00, 0x44, 0x09, 0x80, 0x00, 0x43, 0xDC, 0x00, 0x00,
 	0x43, 0x96, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00, 0x43, 0x16, 0x00, 0x00, 0x43, 0x8C, 0x00, 0x00,
 };
 
 /* 80639E34-80639E40 000C+00 s=1 e=0 z=0  None .data      yo_sph_pos_addy$7338                                         */
-SECTION_DATA static u8 data_80639E34[12] = {
+SECTION_DATA static u8 yo_sph_pos_addy[12] = {
 	0x43, 0xA0, 0x00, 0x00, 0x43, 0x3E, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00,
 };
 
 /* 80639E40-80639E4C 000C+00 s=1 e=0 z=0  None .data      yo_sph_pos_radius$7339                                       */
-SECTION_DATA static u8 data_80639E40[12] = {
+SECTION_DATA static u8 yo_sph_pos_radius[12] = {
 	0x42, 0x5C, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00, 0x42, 0xFA, 0x00, 0x00,
 };
 
 /* 80639E4C-80639E58 000C+00 s=1 e=0 z=0  None .data      yo_sph_pos_addy2$7340                                        */
-SECTION_DATA static u8 data_80639E4C[12] = {
+SECTION_DATA static u8 yo_sph_pos_addy2[12] = {
 	0x43, 0x7A, 0x00, 0x00, 0x43, 0xC8, 0x00, 0x00, 0x44, 0x09, 0x80, 0x00,
 };
 

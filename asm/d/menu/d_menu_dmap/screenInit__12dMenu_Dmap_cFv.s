@@ -9,8 +9,8 @@ lbl_801BB634:
 /* 801BB650  39 61 00 70 */	addi r11, r1, 0x70
 /* 801BB654  48 1A 6B 75 */	bl _savegpr_24
 /* 801BB658  7C 7F 1B 78 */	mr r31, r3
-/* 801BB65C  3C 60 80 39 */	lis r3, data_80395518@ha
-/* 801BB660  3B C3 55 18 */	addi r30, r3, data_80395518@l
+/* 801BB65C  3C 60 80 39 */	lis r3, cont_at_4145@ha
+/* 801BB660  3B C3 55 18 */	addi r30, r3, cont_at_4145@l
 /* 801BB664  38 60 00 6C */	li r3, 0x6c
 /* 801BB668  48 11 35 E5 */	bl __nw__FUl
 /* 801BB66C  7C 60 1B 79 */	or. r0, r3, r3

@@ -5,8 +5,8 @@ lbl_80BFF164:
 /* 80BFF170  39 61 00 60 */	addi r11, r1, 0x60
 /* 80BFF174  4B 76 30 50 */	b _savegpr_23
 /* 80BFF178  7C 7F 1B 78 */	mr r31, r3
-/* 80BFF17C  3C 80 80 C0 */	lis r4, data_80BFFC1C@ha
-/* 80BFF180  3B A4 FC 1C */	addi r29, r4, data_80BFFC1C@l
+/* 80BFF17C  3C 80 80 C0 */	lis r4, ccSphSrc@ha
+/* 80BFF180  3B A4 FC 1C */	addi r29, r4, ccSphSrc@l
 /* 80BFF184  80 03 04 A0 */	lwz r0, 0x4a0(r3)
 /* 80BFF188  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
 /* 80BFF18C  40 82 01 9C */	bne lbl_80BFF328

@@ -28,7 +28,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE70 */ void scaleM(cXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
@@ -37,13 +40,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -102,15 +102,15 @@ struct daNpc_SoldierB_Param_c {
 	/* 80AF5A68 */ ~daNpc_SoldierB_Param_c();
 };
 
-struct J3DAnmTransformKey {
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
 };
 
 struct _GXColorS10 {
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
+struct J3DAnmTransformKey {
 };
 
 struct dCcD_SrcCyl {
@@ -1165,7 +1165,7 @@ static u8 l_HIO[4];
 static u8 lit_4642[12 + 4 /* padding */];
 
 /* 80AF5E90-80AF5E9C 000C+00 s=1 e=0 z=0  None .bss       eyeOffset$4641                                               */
-static u8 data_80AF5E90[12];
+static u8 eyeOffset[12];
 
 /* 80AF3B38-80AF4030 04F8+00 s=1 e=0 z=0  None .text      setAttnPos__16daNpc_SoldierB_cFv                             */
 #pragma push

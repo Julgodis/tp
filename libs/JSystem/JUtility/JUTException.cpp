@@ -478,7 +478,7 @@ static u8 lit_2182[12];
 static u8 sMapFileList__12JUTException[12 + 4 /* padding */];
 
 /* 804345A8-80434870 02C8+00 s=1 e=0 z=0  None .bss       context$2230                                                 */
-static u8 data_804345A8[712];
+static u8 context[712];
 
 /* 802E20C0-802E21FC 013C+00 s=1 e=0 z=0  None .text      panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct        */
 #pragma push

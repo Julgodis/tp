@@ -11,7 +11,10 @@
 // Types:
 // 
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Vec {
@@ -23,13 +26,10 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -51,13 +51,13 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 80AD787C */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct daNpcT_evtData_c {
 };
 
 struct daNpcT_motionAnmData_c {
 };
 
-struct daNpcT_evtData_c {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpc_Seirei_c {
@@ -97,24 +97,24 @@ struct daNpc_Seirei_Param_c {
 	/* 80AD7C3C */ ~daNpc_Seirei_Param_c();
 };
 
+struct J3DAnmTevRegKey {
+};
+
 struct _GXColorS10 {
+};
+
+struct cXyz {
+	/* 80AD72B4 */ ~cXyz();
+	/* 80AD7830 */ cXyz();
+};
+
+struct J3DJoint {
 };
 
 struct J3DModel {
 };
 
 struct J3DAnmTextureSRTKey {
-};
-
-struct J3DAnmTevRegKey {
-};
-
-struct J3DJoint {
-};
-
-struct cXyz {
-	/* 80AD72B4 */ ~cXyz();
-	/* 80AD7830 */ cXyz();
 };
 
 struct daNpcT_c {
@@ -203,15 +203,15 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
-	/* 80AD72F0 */ ~csXyz();
-	/* 80AD7730 */ csXyz();
-};
-
 struct _GXColor {
 };
 
 struct dKy_tevstr_c {
+};
+
+struct csXyz {
+	/* 80AD72F0 */ ~csXyz();
+	/* 80AD7730 */ csXyz();
 };
 
 struct dPa_control_c {
@@ -598,14 +598,14 @@ SECTION_RODATA static u32 const lit_4515 = 0x44480000;
 SECTION_RODATA static u32 const lit_4516 = 0x43AF0000;
 
 /* 80AD7D68-80AD7D78 000E+02 s=1 e=0 z=0  None .rodata    id1$4627                                                     */
-SECTION_RODATA static u8 const data_80AD7D68[14 + 2 /* padding */] = {
+SECTION_RODATA static u8 const id1[14 + 2 /* padding */] = {
 	0x83, 0x99, 0x83, 0x9A, 0x83, 0x9B, 0x83, 0x9C, 0x83, 0x9D, 0x83, 0x9E, 0x83, 0x9F,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80AD7D78-80AD7D88 000E+02 s=1 e=0 z=0  None .rodata    id2$4628                                                     */
-SECTION_RODATA static u8 const data_80AD7D78[14 + 2 /* padding */] = {
+SECTION_RODATA static u8 const id2[14 + 2 /* padding */] = {
 	0x84, 0x04, 0x84, 0x05, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	/* padding */
 	0x00, 0x00,
@@ -749,12 +749,12 @@ SECTION_DATA static void* lit_4425[3] = {
 };
 
 /* 80AD7F28-80AD7F38 0010+00 s=1 e=0 z=0  None .data      btkAnmData$4524                                              */
-SECTION_DATA static u8 data_80AD7F28[16] = {
+SECTION_DATA static u8 btkAnmData[16] = {
 	0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x01,
 };
 
 /* 80AD7F38-80AD7F48 0010+00 s=1 e=0 z=0  None .data      brkAnmData$4525                                              */
-SECTION_DATA static u8 data_80AD7F38[16] = {
+SECTION_DATA static u8 brkAnmData[16] = {
 	0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x01,
 };
 

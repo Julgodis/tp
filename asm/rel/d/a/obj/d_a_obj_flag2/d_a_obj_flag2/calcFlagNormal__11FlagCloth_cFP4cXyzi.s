@@ -15,8 +15,8 @@ lbl_80BECAE0:
 /* 80BECB14  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80BECB18  D0 01 00 70 */	stfs f0, 0x70(r1)
 /* 80BECB1C  1C 85 00 1C */	mulli r4, r5, 0x1c
-/* 80BECB20  3C 60 80 BF */	lis r3, data_80BEE710@ha
-/* 80BECB24  38 03 E7 10 */	addi r0, r3, data_80BEE710@l
+/* 80BECB20  3C 60 80 BF */	lis r3, rel_pos_idx_tbl_3734@ha
+/* 80BECB24  38 03 E7 10 */	addi r0, r3, rel_pos_idx_tbl_3734@l
 /* 80BECB28  7F C0 22 14 */	add r30, r0, r4
 /* 80BECB2C  3C 60 80 BF */	lis r3, lit_3685@ha
 /* 80BECB30  C0 03 E0 F4 */	lfs f0, lit_3685@l(r3)
