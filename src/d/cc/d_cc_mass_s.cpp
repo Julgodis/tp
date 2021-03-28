@@ -13,9 +13,9 @@
 
 struct fopAc_ac_c {};
 
-struct cXyz {};
-
 struct cCcD_Obj {};
+
+struct cXyz {};
 
 struct dCcMassS_Obj {
     /* 800300F4 */ ~dCcMassS_Obj();
@@ -28,13 +28,13 @@ struct dCcMassS_HitInf {
     /* 80085334 */ void ClearPointer();
 };
 
-struct Vec {};
-
 struct cM3dGCps {
     /* 8026EF88 */ cM3dGCps();
     /* 8026EFA4 */ ~cM3dGCps();
     /* 8026F080 */ void SetCps(cM3dGCps const&);
 };
+
+struct Vec {};
 
 struct dCcMassS_Mng {
     /* 80085350 */ dCcMassS_Mng();

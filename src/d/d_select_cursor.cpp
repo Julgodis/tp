@@ -21,11 +21,11 @@ struct dSelect_icon_c {
 
 struct J2DAnmColor {};
 
-struct JKRArchive {};
-
 struct J2DAnmTransformKey {
     /* 801959C0 */ ~J2DAnmTransformKey();
 };
+
+struct JKRArchive {};
 
 struct J2DAnmTextureSRTKey {};
 

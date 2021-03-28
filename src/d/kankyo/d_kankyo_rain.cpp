@@ -36,10 +36,6 @@ struct dRes_control_c {
 
 struct dPa_levelEcallBack {};
 
-struct dKy_tevstr_c {};
-
-struct _GXColor {};
-
 struct Vec {};
 
 struct cXyz {
@@ -47,10 +43,14 @@ struct cXyz {
     /* 80266AE4 */ void operator+(Vec const&) const;
 };
 
+struct dKy_tevstr_c {};
+
 struct csXyz {
     /* 80018BD0 */ ~csXyz();
     /* 802673F4 */ csXyz(s16, s16, s16);
 };
+
+struct _GXColor {};
 
 struct dPa_control_c {
     /* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*,

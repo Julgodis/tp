@@ -23,15 +23,15 @@ struct mDoMtx_stack_c {
     /* 8000CF0C */ void ZXYrotS(csXyz const&);
 };
 
-struct J3DModelData {};
+struct J3DAnmTransform {};
+
+struct Z2Creature {};
 
 struct mDoExt_McaMorfCallBack1_c {};
 
-struct J3DAnmTransform {};
-
 struct mDoExt_McaMorfCallBack2_c {};
 
-struct Z2Creature {};
+struct J3DModelData {};
 
 struct mDoExt_McaMorfSO {
     /* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*,
@@ -45,9 +45,9 @@ struct fopAc_ac_c {
     /* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DJoint {};
-
 struct J3DModel {};
+
+struct J3DJoint {};
 
 struct daNpcPray_c {
     /* 80AB2DEC */ daNpcPray_c();

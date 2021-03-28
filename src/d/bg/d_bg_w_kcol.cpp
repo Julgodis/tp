@@ -27,33 +27,27 @@ struct dBgW_Base {
     /* 8007E6DC */ void CallArrowStickCallBack(fopAc_ac_c*, fopAc_ac_c*, cXyz&);
 };
 
-struct cBgS_GrpPassChk {};
-
 struct dBgS_SphChk {};
 
-struct dBgS_RoofChk {};
-
-struct KC_PrismData {};
-
-struct cBgS_ShdwDraw {};
-
-struct cBgS_PolyInfo {
-    /* 802681A4 */ void SetPolyIndex(int);
-};
-
-struct cBgS_LinChk {};
-
 struct cBgS_PolyPassChk {};
+
+struct cBgS_GndChk {};
+
+struct dBgS_CaptPoly {};
 
 struct dBgPc {
     /* 80074048 */ void setCode(sBgPc&);
 };
 
-struct dBgS_SplGrpChk {};
+struct KC_PrismData {};
 
-struct csXyz {};
+struct dBgS_RoofChk {};
 
-struct cBgS_GndChk {};
+struct cBgS_LinChk {};
+
+struct cBgS_PolyInfo {
+    /* 802681A4 */ void SetPolyIndex(int);
+};
 
 struct Vec {};
 
@@ -64,7 +58,13 @@ struct dBgS_Acch {
     /* 800772E8 */ void CalcMovePosWork();
 };
 
-struct dBgS_CaptPoly {};
+struct csXyz {};
+
+struct cBgS_GrpPassChk {};
+
+struct cBgS_ShdwDraw {};
+
+struct dBgS_SplGrpChk {};
 
 struct dBgWKCol {
     /* 8007E6F4 */ dBgWKCol();

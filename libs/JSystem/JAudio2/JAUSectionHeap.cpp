@@ -84,9 +84,9 @@ struct JAUSeqCollection {
     /* 802A66AC */ void init(void const*);
 };
 
-struct JAISeqDataUser {};
-
 struct JAISoundID {};
+
+struct JAISeqDataUser {};
 
 struct JAISeqData {};
 

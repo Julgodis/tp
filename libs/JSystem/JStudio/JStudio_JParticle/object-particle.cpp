@@ -15,10 +15,6 @@ struct _GXColor {};
 
 struct Vec {};
 
-struct JStage {
-    struct TObject {};
-};
-
 namespace JStudio {
 struct data {
     struct TEOperationData {};
@@ -48,6 +44,10 @@ struct TVariableValue {
 };
 
 };  // namespace JStudio
+
+struct JStage {
+    struct TObject {};
+};
 
 struct JStudio_JStage {
     /* 8028A1F8 */ void transform_toGlobalFromLocal(

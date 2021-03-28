@@ -67,11 +67,11 @@ struct dPa_levelEcallBack {};
 
 struct dKy_tevstr_c {};
 
-struct _GXColor {};
-
 struct csXyz {
     /* 802673F4 */ csXyz(s16, s16, s16);
 };
+
+struct _GXColor {};
 
 struct cBgS_PolyInfo {};
 

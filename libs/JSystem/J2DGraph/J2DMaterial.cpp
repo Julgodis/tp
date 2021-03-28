@@ -82,10 +82,8 @@ struct J2DPEBlock {
     /* 802F1840 */ void setGX();
 };
 
-struct J2DAnmTexPattern {
-    /* 8030BEE8 */ void getTexNo(u16, u16*) const;
-    /* 8030BF9C */ void getResTIMG(u16) const;
-    /* 8030BFF0 */ void getPalette(u16) const;
+struct J2DAnmColor {
+    /* 802EB390 */ void getColor(u16, _GXColor*) const;
 };
 
 struct J2DAnmTevRegKey {
@@ -93,8 +91,10 @@ struct J2DAnmTevRegKey {
     /* 8030C3B4 */ void getTevKonstReg(u16, _GXColor*) const;
 };
 
-struct J2DAnmColor {
-    /* 802EB390 */ void getColor(u16, _GXColor*) const;
+struct J2DAnmTexPattern {
+    /* 8030BEE8 */ void getTexNo(u16, u16*) const;
+    /* 8030BF9C */ void getResTIMG(u16) const;
+    /* 8030BFF0 */ void getPalette(u16) const;
 };
 
 struct J2DAnmTextureSRTKey {

@@ -19,13 +19,13 @@ struct disappear_class {};
 
 struct dPa_levelEcallBack {};
 
-struct dKy_tevstr_c {};
-
-struct _GXColor {};
-
 struct cXyz {};
 
+struct dKy_tevstr_c {};
+
 struct csXyz {};
+
+struct _GXColor {};
 
 struct dPa_control_c {
     /* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*,

@@ -49,14 +49,14 @@ struct daSetBgObj_c {
     /* 80031870 */ void getArcName(fopAc_ac_c*);
 };
 
+struct cCcD_Obj {};
+
+struct J3DModel {};
+
 struct dBgW {
     /* 8007B970 */ dBgW();
     /* 8007B9C0 */ void Move();
 };
-
-struct J3DModel {};
-
-struct cCcD_Obj {};
 
 struct daBgObj_c {
     struct spec_data_c {
@@ -117,9 +117,9 @@ struct dSv_info_c {
     /* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct J3DModelData {};
-
 struct dKy_tevstr_c {};
+
+struct J3DModelData {};
 
 struct dScnKy_env_light_c {
     /* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
@@ -142,9 +142,9 @@ struct dPa_modelEcallBack {
 
 struct dPa_levelEcallBack {};
 
-struct _GXColor {};
-
 struct csXyz {};
+
+struct _GXColor {};
 
 struct dPa_control_c {
     /* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*,

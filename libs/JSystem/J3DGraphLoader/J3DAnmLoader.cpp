@@ -81,13 +81,13 @@ struct J3DAnmLoader {
 
 struct J3DAnmClusterKey {};
 
+struct J3DAnmColorKeyData {};
+
 struct J3DAnmClusterKeyData {};
 
 struct J3DAnmColorKey {
     /* 8032AB00 */ J3DAnmColorKey();
 };
-
-struct J3DAnmColorKeyData {};
 
 struct J3DAnmKeyLoader_v15 {
     /* 803384E0 */ J3DAnmKeyLoader_v15();
@@ -112,9 +112,9 @@ struct J3DAnmColorFull {
     /* 8032A93C */ J3DAnmColorFull();
 };
 
-struct J3DAnmClusterFull {};
-
 struct J3DAnmColorFullData {};
+
+struct J3DAnmClusterFull {};
 
 struct J3DAnmClusterFullData {};
 

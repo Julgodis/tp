@@ -86,17 +86,17 @@ struct mDoExt_baseAnm {
     /* 8000D428 */ void play();
 };
 
-struct J3DModelData {};
-
-struct mDoExt_McaMorfCallBack1_c {};
-
 struct J3DAnmTransform {};
-
-struct mDoExt_McaMorfCallBack2_c {};
 
 struct Z2Creature {
     /* 802C06F4 */ void stopAnime();
 };
+
+struct mDoExt_McaMorfCallBack1_c {};
+
+struct mDoExt_McaMorfCallBack2_c {};
+
+struct J3DModelData {};
 
 struct mDoExt_McaMorfSO {
     /* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*,
@@ -172,8 +172,6 @@ struct dRes_control_c {
 
 struct dPa_levelEcallBack {};
 
-struct _GXColor {};
-
 struct csXyz {
     /* 8061AAB8 */ csXyz(csXyz const&);
     /* 8061A650 */ csXyz();
@@ -181,6 +179,8 @@ struct csXyz {
     /* 80611EF8 */ ~csXyz();
     /* 8061A990 */ void operator=(csXyz const&);
 };
+
+struct _GXColor {};
 
 struct dPa_control_c {
     struct level_c {

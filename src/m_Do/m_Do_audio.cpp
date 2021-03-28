@@ -52,16 +52,16 @@ struct Z2MultiSeMgr {
     /* 802AEB34 */ ~Z2MultiSeMgr();
 };
 
-struct JKRSolidHeap {
-    /* 802D0BF4 */ void adjustSize();
-};
-
 struct JAISoundHandle {
     /* 80007838 */ ~JAISoundHandle();
     /* 802A2184 */ void releaseSound();
 };
 
 struct JAISoundID {};
+
+struct JKRSolidHeap {
+    /* 802D0BF4 */ void adjustSize();
+};
 
 struct JGeometry {
     template <typename A1>

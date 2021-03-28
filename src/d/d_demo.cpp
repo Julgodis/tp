@@ -46,11 +46,11 @@ struct dRes_control_c {
 
 struct dPa_levelEcallBack {};
 
-struct dKy_tevstr_c {};
-
 struct cXyz {
     /* 80009184 */ ~cXyz();
 };
+
+struct dKy_tevstr_c {};
 
 struct csXyz {};
 
@@ -64,9 +64,9 @@ struct dMsgObject_c {
     /* 80237AB0 */ void setDemoMessage(u32);
 };
 
-struct _GXSpotFn {};
-
 struct _GXDistAttnFn {};
+
+struct _GXSpotFn {};
 
 struct JStage {
     struct TELight {};
@@ -259,8 +259,6 @@ struct JUTNameTab {
     /* 802DEA58 */ void getIndex(char const*) const;
 };
 
-struct JPABaseEmitter {};
-
 namespace JStudio {
 namespace ctb {
 struct TControl {
@@ -335,6 +333,8 @@ struct TObject_message {
 struct TObject {};
 
 };  // namespace JStudio
+
+struct JPABaseEmitter {};
 
 struct JStudio_JParticle {
     struct TCreateObject {

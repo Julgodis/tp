@@ -48,9 +48,9 @@ struct dMsgScrn3Select_c {
     /* 8023A97C */ void getCharSpace();
 };
 
-struct ResTLUT {};
+struct JMSMesgEntry_c {};
 
-struct ResTIMG {};
+struct ResTLUT {};
 
 struct JGeometry {
     template <typename A1>
@@ -59,6 +59,8 @@ struct JGeometry {
     struct TBox2__template0 {};
 };
 
+struct ResTIMG {};
+
 struct J2DPicture {
     /* 802FC708 */ J2DPicture(ResTIMG const*);
     /* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
@@ -66,14 +68,14 @@ struct J2DPicture {
 
 struct JUTFont {};
 
-struct JMSMesgEntry_c {};
-
 struct dMeter2Info_c {
     /* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
     /* 8021C7FC */ void getStringLength(JUTFont*, f32, f32, char*);
     /* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*,
                                         J2DPicture*, void*, J2DPicture*, int);
 };
+
+struct J2DOrthoGraph {};
 
 struct JKRArchive {};
 
@@ -84,8 +86,6 @@ struct STControl {
     /* 80032524 */ void checkUpTrigger();
     /* 800325A0 */ void checkDownTrigger();
 };
-
-struct J2DOrthoGraph {};
 
 struct dMenu_ItemExplain_c {
     /* 801DA754 */ dMenu_ItemExplain_c(JKRExpHeap*, JKRArchive*, STControl*, bool);

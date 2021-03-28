@@ -58,13 +58,13 @@ struct Z2FxLineMgr {
     /* 802BA7DC */ Z2FxLineMgr();
 };
 
-struct JKRSolidHeap {};
-
 struct JAISoundHandle {};
 
-struct JKRArchive {};
-
 struct JAISoundID {};
+
+struct JKRSolidHeap {};
+
+struct JKRArchive {};
 
 struct JGeometry {
     template <typename A1>

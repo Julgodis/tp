@@ -29,15 +29,15 @@ struct mDoMtx_stack_c {
     /* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {};
+struct J3DAnmTransform {};
+
+struct Z2Creature {};
 
 struct mDoExt_McaMorfCallBack1_c {};
 
-struct J3DAnmTransform {};
-
 struct mDoExt_McaMorfCallBack2_c {};
 
-struct Z2Creature {};
+struct J3DModelData {};
 
 struct mDoExt_McaMorfSO {
     /* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*,
@@ -55,9 +55,9 @@ struct fopAc_ac_c {
     /* 80018B64 */ fopAc_ac_c();
 };
 
-struct J3DJoint {};
-
 struct J3DModel {};
+
+struct J3DJoint {};
 
 struct daE_OC_c {
     /* 8072C630 */ void ctrlJoint(J3DJoint*, J3DModel*);

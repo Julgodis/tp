@@ -61,9 +61,9 @@ struct J2DTextBox {
     /* 8030074C */ void setString(s16, char const*, ...);
 };
 
-struct J2DGrafContext {};
-
 struct J2DAnmTransform {};
+
+struct J2DGrafContext {};
 
 struct J2DScreen {
     /* 80192414 */ void setAnimation(J2DAnmTransform*);

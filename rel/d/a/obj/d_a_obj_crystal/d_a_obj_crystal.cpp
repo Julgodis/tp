@@ -37,9 +37,9 @@ struct daObjCrystal_c {
     /* 80BD67C8 */ void _delete();
 };
 
-struct J3DModelData {};
-
 struct dKy_tevstr_c {};
+
+struct J3DModelData {};
 
 struct dScnKy_env_light_c {
     /* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);

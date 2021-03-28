@@ -22,15 +22,15 @@ struct mDoHIO_entry_c {
     /* 8015791C */ ~mDoHIO_entry_c();
 };
 
-struct J3DModelData {};
+struct J3DAnmTransform {};
+
+struct Z2Creature {};
 
 struct mDoExt_McaMorfCallBack1_c {};
 
-struct J3DAnmTransform {};
-
 struct mDoExt_McaMorfCallBack2_c {};
 
-struct Z2Creature {};
+struct J3DModelData {};
 
 struct mDoExt_McaMorfSO {
     /* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*,
@@ -50,9 +50,9 @@ struct daPy_py_c {
     /* 8015F424 */ void checkNowWolfEyeUp();
 };
 
-struct J3DJoint {};
-
 struct J3DModel {};
+
+struct J3DJoint {};
 
 struct J3DAnmTransformKey {};
 
@@ -110,9 +110,9 @@ struct dRes_control_c {
 
 struct dPa_levelEcallBack {};
 
-struct _GXColor {};
-
 struct csXyz {};
+
+struct _GXColor {};
 
 struct dPa_control_c {
     struct level_c {

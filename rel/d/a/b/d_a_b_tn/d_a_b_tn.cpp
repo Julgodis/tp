@@ -44,15 +44,15 @@ struct mDoExt_brkAnm {
     /* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {};
+struct J3DAnmTransform {};
+
+struct Z2Creature {};
 
 struct mDoExt_McaMorfCallBack1_c {};
 
-struct J3DAnmTransform {};
-
 struct mDoExt_McaMorfCallBack2_c {};
 
-struct Z2Creature {};
+struct J3DModelData {};
 
 struct mDoExt_McaMorfSO {
     /* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*,
@@ -75,9 +75,9 @@ struct daPy_py_c {
     /* 8062E608 */ void checkNowWolf();
 };
 
-struct J3DJoint {};
-
 struct J3DModel {};
+
+struct J3DJoint {};
 
 struct dCcD_SrcSph {};
 

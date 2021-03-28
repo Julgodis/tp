@@ -37,9 +37,9 @@ struct dPa_levelEcallBack {};
 
 struct dKy_tevstr_c {};
 
-struct _GXColor {};
-
 struct csXyz {};
+
+struct _GXColor {};
 
 struct dPa_control_c {
     struct level_c {

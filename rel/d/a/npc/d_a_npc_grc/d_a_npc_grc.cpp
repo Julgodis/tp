@@ -19,12 +19,6 @@ struct mDoExt_bckAnm {
     /* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct J3DModelData {};
-
-struct mDoExt_McaMorfCallBack1_c {};
-
-struct mDoExt_McaMorfCallBack2_c {};
-
 struct Vec {};
 
 struct Z2Creature {
@@ -32,6 +26,12 @@ struct Z2Creature {
     /* 802C0420 */ ~Z2Creature();
     /* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
+
+struct mDoExt_McaMorfCallBack1_c {};
+
+struct mDoExt_McaMorfCallBack2_c {};
+
+struct J3DModelData {};
 
 struct mDoExt_McaMorfSO {
     /* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*,
@@ -45,9 +45,9 @@ struct fopAc_ac_c {
     /* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DJoint {};
-
 struct J3DModel {};
+
+struct J3DJoint {};
 
 struct daNpc_grC_c {
     /* 809CB4CC */ daNpc_grC_c();
@@ -99,11 +99,17 @@ struct daNpc_grC_Param_c {
     /* 809CF4B0 */ ~daNpc_grC_Param_c();
 };
 
+struct _GXColorS10 {};
+
+struct J3DAnmTexPattern {};
+
 struct dCcD_SrcCyl {};
 
 struct dCcD_Cyl {
     /* 800848B4 */ void Set(dCcD_SrcCyl const&);
 };
+
+struct J3DAnmTransformKey {};
 
 struct dCcD_GObjInf {
     /* 80083A28 */ dCcD_GObjInf();
@@ -111,12 +117,6 @@ struct dCcD_GObjInf {
 };
 
 struct J3DAnmTextureSRTKey {};
-
-struct J3DAnmTexPattern {};
-
-struct _GXColorS10 {};
-
-struct J3DAnmTransformKey {};
 
 struct daNpcF_c {
     struct daNpcF_anmPlayData {};
@@ -190,7 +190,7 @@ struct dRes_control_c {
     /* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {};
+struct dBgS {};
 
 struct dBgS_AcchCir {
     /* 80075EAC */ dBgS_AcchCir();
@@ -199,14 +199,14 @@ struct dBgS_AcchCir {
     /* 809CF274 */ ~dBgS_AcchCir();
 };
 
-struct dBgS {};
-
 struct dBgS_Acch {
     /* 80075F94 */ ~dBgS_Acch();
     /* 800760A0 */ dBgS_Acch();
     /* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
     /* 80076AAC */ void CrrPos(dBgS&);
 };
+
+struct dKy_tevstr_c {};
 
 struct dPaPo_c {
     /* 80050C9C */ void init(dBgS_Acch*, f32, f32);

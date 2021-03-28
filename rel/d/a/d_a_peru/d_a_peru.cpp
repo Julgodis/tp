@@ -20,13 +20,7 @@ struct mDoMtx_stack_c {
     /* 8000CF0C */ void ZXYrotS(csXyz const&);
 };
 
-struct J3DModelData {};
-
-struct mDoExt_McaMorfCallBack1_c {};
-
 struct J3DAnmTransform {};
-
-struct mDoExt_McaMorfCallBack2_c {};
 
 struct Vec {};
 
@@ -35,6 +29,12 @@ struct Z2Creature {
     /* 802C0420 */ ~Z2Creature();
     /* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
+
+struct mDoExt_McaMorfCallBack1_c {};
+
+struct mDoExt_McaMorfCallBack2_c {};
+
+struct J3DModelData {};
 
 struct mDoExt_McaMorfSO {
     /* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*,
@@ -63,7 +63,11 @@ struct daPy_py_c {
     /* 80D4C034 */ void checkNowWolf();
 };
 
+struct daNpcT_motionAnmData_c {};
+
 struct daNpcT_faceMotionAnmData_c {};
+
+struct daNpcT_evtData_c {};
 
 struct daNpcT_MotionSeqMngr_c {
     struct sequenceStepData_c {};
@@ -72,11 +76,7 @@ struct daNpcT_MotionSeqMngr_c {
     /* 80D4B7BC */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_motionAnmData_c {};
-
 struct J3DJoint {};
-
-struct daNpcT_evtData_c {};
 
 struct daPeru_c {
     /* 80D46EEC */ ~daPeru_c();
@@ -142,14 +142,14 @@ struct daObjCatDoor_c {
     /* 80BC4454 */ void setBaseMtx();
 };
 
+struct _GXColorS10 {};
+
 struct J3DModel {};
 
 struct dCcD_GObjInf {
     /* 80083A28 */ dCcD_GObjInf();
     /* 800840E4 */ ~dCcD_GObjInf();
 };
-
-struct _GXColorS10 {};
 
 struct daNpcT_c {
     /* 80147FA4 */ void tgHitCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);

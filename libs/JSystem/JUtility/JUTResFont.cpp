@@ -19,6 +19,8 @@ struct JUtility {
     struct TColor {};
 };
 
+struct JKRHeap {};
+
 struct JUTFont {
     struct TWidth {};
 
@@ -28,8 +30,6 @@ struct JUTFont {
     /* 802E0110 */ bool isLeadByte_2Byte(int);
     /* 802E0118 */ void isLeadByte_ShiftJIS(int);
 };
-
-struct JKRHeap {};
 
 struct JUTResFont {
     /* 802DDFD8 */ void getResFont() const;

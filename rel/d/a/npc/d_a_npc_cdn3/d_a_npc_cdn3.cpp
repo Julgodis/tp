@@ -153,13 +153,13 @@ struct dScnKy_env_light_c {
     /* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
-struct cXyz {
-    /* 809799F8 */ ~cXyz();
-};
-
 struct csXyz {
     /* 802673F4 */ csXyz(s16, s16, s16);
     /* 8097D614 */ ~csXyz();
+};
+
+struct cXyz {
+    /* 809799F8 */ ~cXyz();
 };
 
 struct dNpcLib_lookat_c {

@@ -53,17 +53,17 @@ struct mDoExt_baseAnm {
     /* 8000D428 */ void play();
 };
 
-struct J3DModelData {};
-
-struct mDoExt_McaMorfCallBack1_c {};
-
-struct mDoExt_McaMorfCallBack2_c {};
-
 struct Z2Creature {
     /* 802C03C8 */ Z2Creature();
     /* 802C0420 */ ~Z2Creature();
     /* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
+
+struct mDoExt_McaMorfCallBack1_c {};
+
+struct mDoExt_McaMorfCallBack2_c {};
+
+struct J3DModelData {};
 
 struct mDoExt_McaMorfSO {
     /* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*,
@@ -78,11 +78,11 @@ struct fopAc_ac_c {
     /* 80018C8C */ ~fopAc_ac_c();
 };
 
+struct _GXColorS10 {};
+
 struct J3DAnmTexPattern {
     /* 8032AF50 */ void getTexNo(u16, u16*) const;
 };
-
-struct _GXColorS10 {};
 
 struct J3DAnmTransformKey {};
 
@@ -144,11 +144,11 @@ struct daNpcF_ActorMngr_c {
     /* 80990F14 */ daNpcF_ActorMngr_c();
 };
 
+struct J3DModel {};
+
 struct dKy_tevstr_c {};
 
 struct J3DJoint {};
-
-struct J3DModel {};
 
 struct daNpcChin_c {
     struct _SpotLight_c {

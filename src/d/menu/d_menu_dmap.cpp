@@ -46,14 +46,14 @@ struct dSv_event_c {
     /* 800349BC */ void isEventBit(u16) const;
 };
 
-struct JKRArchive {};
-
 struct J2DBasePosition {};
 
 struct J2DPane {
     /* 802F7100 */ void getBounds();
     /* 802F76F8 */ void setBasePosition(J2DBasePosition);
 };
+
+struct JKRArchive {};
 
 struct dSelect_cursor_c {
     /* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
@@ -86,6 +86,8 @@ struct dMeterHaihai_c {
     /* 8020BC20 */ void setScale(f32);
 };
 
+struct JMSMesgEntry_c {};
+
 struct ResTIMG {};
 
 struct J2DPicture {
@@ -93,8 +95,6 @@ struct J2DPicture {
     /* 801BDD70 */ void insert(ResTIMG const*, u8, f32);
     /* 802FC708 */ J2DPicture(ResTIMG const*);
 };
-
-struct JMSMesgEntry_c {};
 
 struct dMeter2Info_c {
     /* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
@@ -131,6 +131,8 @@ struct dMenu_StageMapCtrl_c {
     /* 801C2590 */ void setPlusZoomCenterZ(f32);
 };
 
+struct J2DOrthoGraph {};
+
 struct JKRExpHeap {
     /* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
@@ -143,8 +145,6 @@ struct STControl {
     /* 80032524 */ void checkUpTrigger();
     /* 800325A0 */ void checkDownTrigger();
 };
-
-struct J2DOrthoGraph {};
 
 struct dMenu_ItemExplain_c {
     /* 801DA754 */ dMenu_ItemExplain_c(JKRExpHeap*, JKRArchive*, STControl*, bool);

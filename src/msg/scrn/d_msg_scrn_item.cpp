@@ -16,9 +16,9 @@ struct dMsgScrnLight_c {
     /* 80245C04 */ void draw(f32*, f32, f32, f32, f32, f32, u8);
 };
 
-struct JKRExpHeap {};
-
 struct J2DAnmColor {};
+
+struct JKRExpHeap {};
 
 struct J2DAnmTextureSRTKey {};
 

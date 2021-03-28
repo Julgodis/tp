@@ -38,11 +38,11 @@ struct dSv_memBit_c {
 
 struct cXyz {};
 
+struct dKy_tevstr_c {};
+
 struct J3DModelData {
     /* 8032600C */ void simpleCalcMaterial(u16, f32 (*)[4]);
 };
-
-struct dKy_tevstr_c {};
 
 struct dScnKy_env_light_c {
     /* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);

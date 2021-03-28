@@ -74,11 +74,11 @@ struct dPa_simpleEcallBack {
 
 struct dPa_levelEcallBack {};
 
-struct _GXColor {};
-
 struct csXyz {
     /* 8026745C */ void operator+=(csXyz&);
 };
+
+struct _GXColor {};
 
 struct dPa_control_c {
     /* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*,
@@ -93,9 +93,9 @@ struct dEvt_control_c {
     /* 80042468 */ void reset();
 };
 
-struct J3DModelData {};
-
 struct J3DModel {};
+
+struct J3DModelData {};
 
 struct dComIfG_play_c {
     /* 8002CAF0 */ void addSimpleModel(J3DModelData*, int, u8);

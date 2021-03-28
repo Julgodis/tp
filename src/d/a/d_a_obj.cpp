@@ -17,8 +17,6 @@ struct daPy_py_c {
     /* 8015F398 */ void checkMasterSwordEquip();
 };
 
-struct Quaternion {};
-
 struct Vec {};
 
 struct cXyz {
@@ -33,6 +31,8 @@ struct dCcD_GObjInf {
     /* 800844F8 */ void GetTgHitObj();
     /* 8008457C */ void GetTgHitObjSe();
 };
+
+struct Quaternion {};
 
 struct daObj {
     /* 80037038 */ void eff_break_tsubo(fopAc_ac_c*, cXyz, int);
@@ -53,11 +53,11 @@ struct dRes_control_c {
     /* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct JPABaseEmitter {};
+
 struct dKy_tevstr_c {};
 
 struct J3DModelData {};
-
-struct JPABaseEmitter {};
 
 struct dPa_modelEcallBack {
     /* 8004AC00 */ void setModel(JPABaseEmitter*, J3DModelData*, dKy_tevstr_c const&, u8, void*, u8,
@@ -66,9 +66,9 @@ struct dPa_modelEcallBack {
 
 struct dPa_levelEcallBack {};
 
-struct _GXColor {};
-
 struct csXyz {};
+
+struct _GXColor {};
 
 struct dPa_control_c {
     /* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*,

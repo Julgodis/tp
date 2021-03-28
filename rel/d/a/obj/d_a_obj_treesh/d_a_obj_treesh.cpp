@@ -41,9 +41,9 @@ struct daTreeSh_HIO_c {
     /* 80D1F81C */ ~daTreeSh_HIO_c();
 };
 
-struct J3DModelData {};
-
 struct dKy_tevstr_c {};
+
+struct J3DModelData {};
 
 struct dScnKy_env_light_c {
     /* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
@@ -58,12 +58,12 @@ struct dRes_control_c {
 
 struct dBgW {};
 
-struct cBgS_PolyInfo {};
-
 struct csXyz {
     /* 80D1F10C */ ~csXyz();
     /* 80D1F7AC */ csXyz();
 };
+
+struct cBgS_PolyInfo {};
 
 struct dBgS_MoveBgActor {
     /* 80078624 */ dBgS_MoveBgActor();

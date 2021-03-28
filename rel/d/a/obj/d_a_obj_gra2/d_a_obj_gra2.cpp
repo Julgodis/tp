@@ -44,15 +44,15 @@ struct mDoExt_bckAnm {
     /* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct J3DModelData {};
+struct Z2Creature {
+    /* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
 
 struct mDoExt_McaMorfCallBack1_c {};
 
 struct mDoExt_McaMorfCallBack2_c {};
 
-struct Z2Creature {
-    /* 802C0530 */ void init(Vec*, Vec*, u8, u8);
-};
+struct J3DModelData {};
 
 struct mDoExt_McaMorfSO {
     /* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*,
@@ -264,9 +264,9 @@ struct daBaseNpc_lookat_c {
     /* 8014E6AC */ void getRot(int);
 };
 
-struct J3DAnmTexPattern {};
-
 struct J3DAnmTransformKey {};
+
+struct J3DAnmTexPattern {};
 
 struct daBaseNpc_c {
     /* 8014E89C */ ~daBaseNpc_c();
@@ -344,14 +344,14 @@ struct dPa_control_c {
                                 cXyz const*);
 };
 
-struct dBgS_AcchCir {
-    /* 80075F58 */ void SetWall(f32, f32);
-};
-
 struct dBgW_Base {};
 
 struct dBgS {
     /* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
+};
+
+struct dBgS_AcchCir {
+    /* 80075F58 */ void SetWall(f32, f32);
 };
 
 struct dBgS_Acch {

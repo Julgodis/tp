@@ -25,9 +25,9 @@ struct mDoMtx_stack_c {
 
 struct J3DAnmTextureSRTKey {};
 
-struct J3DAnmTevRegKey {};
-
 struct J3DAnmColor {};
+
+struct J3DAnmTevRegKey {};
 
 struct J3DMaterialTable {
     /* 8032F64C */ void removeMatColorAnimator(J3DAnmColor*);
@@ -131,9 +131,9 @@ struct dSv_info_c {
     /* 8003542C */ void revSwitch(int, int);
 };
 
-struct J3DModelData {};
-
 struct dKy_tevstr_c {};
+
+struct J3DModelData {};
 
 struct dScnKy_env_light_c {
     /* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);

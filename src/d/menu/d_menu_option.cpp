@@ -23,8 +23,6 @@ struct dSv_player_config_c {
     /* 8003469C */ void setVibration(u8);
 };
 
-struct JKRArchive {};
-
 struct J2DBasePosition {};
 
 struct J2DPane {
@@ -32,6 +30,8 @@ struct J2DPane {
     /* 802F76F8 */ void setBasePosition(J2DBasePosition);
     /* 802F7FCC */ void animationTransform();
 };
+
+struct JKRArchive {};
 
 struct dSelect_cursor_c {
     /* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);

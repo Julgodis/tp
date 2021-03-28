@@ -13,15 +13,15 @@
 
 struct request_of_phase_process_class {};
 
-struct J3DModelData {};
+struct J3DAnmTransform {};
+
+struct Z2Creature {};
 
 struct mDoExt_McaMorfCallBack1_c {};
 
-struct J3DAnmTransform {};
-
 struct mDoExt_McaMorfCallBack2_c {};
 
-struct Z2Creature {};
+struct J3DModelData {};
 
 struct mDoExt_McaMorfSO {
     /* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*,
@@ -35,11 +35,11 @@ struct fopAc_ac_c {
     /* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DAnmTexPattern {};
-
 struct _GXColorS10 {};
 
 struct J3DAnmTransformKey {};
+
+struct J3DAnmTexPattern {};
 
 struct daNpcF_c {
     struct daNpcF_anmPlayData {};
@@ -102,9 +102,9 @@ struct daNpcF_ActorMngr_c {
     /* 809AD118 */ daNpcF_ActorMngr_c();
 };
 
-struct J3DJoint {};
-
 struct J3DModel {};
+
+struct J3DJoint {};
 
 struct daNpcDoorBoy_c {
     /* 809AAC8C */ daNpcDoorBoy_c();

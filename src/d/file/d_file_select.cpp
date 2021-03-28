@@ -66,8 +66,6 @@ struct dSv_event_c {
     /* 800349BC */ void isEventBit(u16) const;
 };
 
-struct JKRArchive {};
-
 struct JGeometry {
     template <typename A1>
     struct TBox2 {};
@@ -85,6 +83,8 @@ struct J2DPane {
     /* 802F6714 */ void insertChild(J2DPane*, J2DPane*);
     /* 802F7FCC */ void animationTransform();
 };
+
+struct JKRArchive {};
 
 struct dSelect_cursor_c {
     /* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
@@ -110,8 +110,6 @@ struct dName_c {
     /* 80250560 */ void _draw();
 };
 
-struct JUTFont {};
-
 struct COutFont_c {};
 
 struct JUtility {
@@ -124,6 +122,8 @@ struct J2DTextBox {
     /* 80300660 */ void setString(char const*, ...);
     /* 8030074C */ void setString(s16, char const*, ...);
 };
+
+struct JUTFont {};
 
 struct dMsgString_c {
     /* 80191B6C */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);

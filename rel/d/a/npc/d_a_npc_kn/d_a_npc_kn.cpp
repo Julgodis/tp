@@ -46,13 +46,13 @@ struct mDoExt_invisibleModel {
     /* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DAnmTextureSRTKey {};
-
-struct J3DAnmTevRegKey {};
+struct J3DAnmTexPattern {};
 
 struct J3DAnmColor {};
 
-struct J3DAnmTexPattern {};
+struct J3DAnmTevRegKey {};
+
+struct J3DAnmTextureSRTKey {};
 
 struct J3DMaterialTable {
     /* 8032F64C */ void removeMatColorAnimator(J3DAnmColor*);
@@ -79,9 +79,9 @@ struct mDoExt_bpkAnm {
     /* 8000D518 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {};
-
 struct J3DAnmTransform {};
+
+struct J3DModelData {};
 
 struct mDoExt_bckAnm {
     /* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
@@ -93,15 +93,15 @@ struct mDoExt_baseAnm {
     /* 8000D428 */ void play();
 };
 
-struct mDoExt_McaMorfCallBack1_c {};
-
-struct mDoExt_McaMorfCallBack2_c {};
-
 struct Z2Creature {
     /* 802C03C8 */ Z2Creature();
     /* 802C0420 */ ~Z2Creature();
     /* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
+
+struct mDoExt_McaMorfCallBack1_c {};
+
+struct mDoExt_McaMorfCallBack2_c {};
 
 struct mDoExt_McaMorfSO {
     /* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*,
@@ -127,19 +127,9 @@ struct daPy_py_c {
     /* 8015F3FC */ void getAttentionOffsetY();
 };
 
-struct daNpcT_MotionSeqMngr_c {
-    struct sequenceStepData_c {};
-
-    /* 80145898 */ void initialize();
-    /* 801458C0 */ void play(u16, int*, f32*);
-    /* 80A3C4A8 */ ~daNpcT_MotionSeqMngr_c();
-};
-
-struct daNpcT_motionAnmData_c {};
-
 struct _GXColorS10 {};
 
-struct J3DAnmTransformKey {};
+struct daNpcT_evtData_c {};
 
 struct dCcD_GObjInf {
     /* 80083A28 */ dCcD_GObjInf();
@@ -149,16 +139,26 @@ struct dCcD_GObjInf {
     /* 800844F8 */ void GetTgHitObj();
 };
 
-struct J3DJoint {};
+struct daNpcT_MotionSeqMngr_c {
+    struct sequenceStepData_c {};
+
+    /* 80145898 */ void initialize();
+    /* 801458C0 */ void play(u16, int*, f32*);
+    /* 80A3C4A8 */ ~daNpcT_MotionSeqMngr_c();
+};
 
 struct daNpcT_faceMotionAnmData_c {};
+
+struct daNpcT_motionAnmData_c {};
+
+struct J3DAnmTransformKey {};
 
 struct J3DFrameCtrl {
     /* 803283FC */ void init(s16);
     /* 80A3C62C */ ~J3DFrameCtrl();
 };
 
-struct daNpcT_evtData_c {};
+struct J3DJoint {};
 
 struct daNpc_Kn_c {
     struct daNpc_Kn_prtclMngr_c {
@@ -405,12 +405,6 @@ struct dPa_control_c {
                             _GXColor const*, cXyz const*, f32);
 };
 
-struct dBgS_AcchCir {
-    /* 80075EAC */ dBgS_AcchCir();
-    /* 80075F40 */ void SetWallR(f32);
-    /* 80A3C4F0 */ ~dBgS_AcchCir();
-};
-
 struct cBgS_PolyInfo {
     /* 802680B0 */ ~cBgS_PolyInfo();
 };
@@ -419,6 +413,12 @@ struct dBgS {
     /* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
     /* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
     /* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
+};
+
+struct dBgS_AcchCir {
+    /* 80075EAC */ dBgS_AcchCir();
+    /* 80075F40 */ void SetWallR(f32);
+    /* 80A3C4F0 */ ~dBgS_AcchCir();
 };
 
 struct dBgS_Acch {

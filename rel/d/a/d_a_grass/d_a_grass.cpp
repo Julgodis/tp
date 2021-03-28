@@ -60,12 +60,12 @@ struct dPa_levelEcallBack {};
 
 struct dKy_tevstr_c {};
 
-struct _GXColor {};
-
 struct csXyz {
     /* 802673F4 */ csXyz(s16, s16, s16);
     /* 8051EB4C */ ~csXyz();
 };
+
+struct _GXColor {};
 
 struct dPa_control_c {
     /* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*,
@@ -73,11 +73,11 @@ struct dPa_control_c {
                             cXyz const*, f32);
 };
 
+struct cCcD_Obj {};
+
 struct dCcMassS_HitInf {
     /* 8051ED98 */ ~dCcMassS_HitInf();
 };
-
-struct cCcD_Obj {};
 
 struct dGrass_data_c {
     /* 8051D88C */ void WorkCo(fopAc_ac_c*, u32, int);

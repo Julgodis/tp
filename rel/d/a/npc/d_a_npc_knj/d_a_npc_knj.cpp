@@ -11,13 +11,7 @@
 // Types:
 //
 
-struct J3DModelData {};
-
-struct mDoExt_McaMorfCallBack1_c {};
-
 struct J3DAnmTransform {};
-
-struct mDoExt_McaMorfCallBack2_c {};
 
 struct Vec {};
 
@@ -26,6 +20,12 @@ struct Z2Creature {
     /* 802C0420 */ ~Z2Creature();
     /* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
+
+struct mDoExt_McaMorfCallBack1_c {};
+
+struct mDoExt_McaMorfCallBack2_c {};
+
+struct J3DModelData {};
 
 struct mDoExt_McaMorfSO {
     /* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*,
@@ -40,7 +40,11 @@ struct fopAc_ac_c {
     /* 80018C8C */ ~fopAc_ac_c();
 };
 
+struct daNpcT_motionAnmData_c {};
+
 struct daNpcT_faceMotionAnmData_c {};
+
+struct daNpcT_evtData_c {};
 
 struct daNpcT_MotionSeqMngr_c {
     struct sequenceStepData_c {};
@@ -48,10 +52,6 @@ struct daNpcT_MotionSeqMngr_c {
     /* 80145898 */ void initialize();
     /* 80A4511C */ ~daNpcT_MotionSeqMngr_c();
 };
-
-struct daNpcT_motionAnmData_c {};
-
-struct daNpcT_evtData_c {};
 
 struct daNpc_Knj_c {
     /* 80A4356C */ ~daNpc_Knj_c();
@@ -90,20 +90,20 @@ struct daNpc_Knj_Param_c {
     /* 80A454A4 */ ~daNpc_Knj_Param_c();
 };
 
-struct J3DAnmTevRegKey {};
-
-struct J3DModel {};
-
-struct J3DJoint {};
-
 struct cXyz {
     /* 80A44B54 */ ~cXyz();
     /* 80A450D0 */ cXyz();
 };
 
+struct _GXColorS10 {};
+
 struct J3DAnmTexPattern {};
 
-struct _GXColorS10 {};
+struct J3DModel {};
+
+struct J3DAnmTevRegKey {};
+
+struct J3DJoint {};
 
 struct daNpcT_c {
     /* 801480D0 */ void getTexPtrnAnmP(char const*, int);

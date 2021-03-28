@@ -68,9 +68,9 @@ struct dDlst_shadowRealPoly_c {
     /* 800569A8 */ s32 getTriMax();
 };
 
-struct cM3dGPla {};
-
 struct cBgD_Vtx_t {};
+
+struct cM3dGPla {};
 
 struct dDlst_shadowPoly_c {
     /* 80054288 */ void set(cBgD_Vtx_t*, u16, u16, u16, cM3dGPla*);

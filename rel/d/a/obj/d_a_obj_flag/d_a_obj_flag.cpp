@@ -28,15 +28,15 @@ struct daSetBgObj_c {
     /* 80031870 */ void getArcName(fopAc_ac_c*);
 };
 
-struct FlagJoint_c {
-    /* 80BEC3BC */ ~FlagJoint_c();
-    /* 80BEC4E0 */ FlagJoint_c();
-};
-
 struct csXyz {
     /* 8026745C */ void operator+=(csXyz&);
     /* 80267490 */ void operator-(csXyz&);
     /* 802674E8 */ void operator*(f32);
+};
+
+struct FlagJoint_c {
+    /* 80BEC3BC */ ~FlagJoint_c();
+    /* 80BEC4E0 */ FlagJoint_c();
 };
 
 struct daObjFlag_c {
@@ -49,9 +49,9 @@ struct daObjFlag_c {
     /* 80BEBE64 */ void getSwingY(f32);
 };
 
-struct J3DModelData {};
-
 struct dKy_tevstr_c {};
+
+struct J3DModelData {};
 
 struct dScnKy_env_light_c {
     /* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);

@@ -187,14 +187,6 @@ struct dCcMassS_Mng {
     /* 80085EB8 */ void GetCamTopPos(Vec*);
 };
 
-struct dBgS_LinChk {
-    /* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct dCamMapToolData {
-    /* 8015FEB8 */ void Set(s32, s32, fopAc_ac_c*, u16, u8);
-};
-
 struct cSAngle {
     /* 80030510 */ ~cSAngle();
     /* 80271004 */ void Val(s16);
@@ -225,6 +217,14 @@ struct cSAngle {
     /* 802711E8 */ void operator-=(cSAngle const&);
     /* 80271264 */ void operator*(f32) const;
     /* 802712B4 */ void operator*=(f32);
+};
+
+struct dBgS_LinChk {
+    /* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct dCamMapToolData {
+    /* 8015FEB8 */ void Set(s32, s32, fopAc_ac_c*, u16, u8);
 };
 
 struct camera_class {};

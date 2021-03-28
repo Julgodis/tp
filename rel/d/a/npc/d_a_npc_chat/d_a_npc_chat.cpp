@@ -36,11 +36,11 @@ struct mDoExt_morf_c {
     /* 8000FB7C */ void setMorf(f32);
 };
 
-struct J3DAnmTextureSRTKey {};
+struct J3DAnmTexPattern {};
 
 struct J3DAnmTevRegKey {};
 
-struct J3DAnmTexPattern {};
+struct J3DAnmTextureSRTKey {};
 
 struct J3DMaterialTable {
     /* 8032F6F8 */ void removeTexNoAnimator(J3DAnmTexPattern*);
@@ -60,15 +60,15 @@ struct mDoExt_brkAnm {
     /* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {};
+struct J3DAnmTransform {};
+
+struct Z2Creature {};
 
 struct mDoExt_McaMorfCallBack1_c {};
 
-struct J3DAnmTransform {};
-
 struct mDoExt_McaMorfCallBack2_c {};
 
-struct Z2Creature {};
+struct J3DModelData {};
 
 struct mDoExt_McaMorfSO {
     /* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*,
@@ -123,11 +123,11 @@ struct daNpcF_ActorMngr_c {
     /* 80985C9C */ daNpcF_ActorMngr_c();
 };
 
+struct _GXColorS10 {};
+
 struct J3DModel {};
 
 struct J3DJoint {};
-
-struct _GXColorS10 {};
 
 struct daNpcChat_c {
     /* 8098084C */ daNpcChat_c();

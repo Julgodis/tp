@@ -75,16 +75,8 @@ def lcf(output_path):
 
         # improve decompilation workflow by making so that function 
         # which, for what ever reason, cannot be named the same as
-        # the expected name work. This will happen for all symbols 
+        # the expected name to work. This will happen for all symbols 
         # with weird characters. 
-        # E.g., the symbol
-        #   J2DGrafContext::fillBox(JGeometry::TBox2<f32> const& param_0) 
-        # will be mangled as 
-        #   fillBox__14J2DGrafContextFRCQ29JGeometry8TBox2<f>
-        # because of < and > this will not be possible to reference from
-        # asm and C++ code. Instead we use the name 'func_802E9260' and
-        # here let the linker generate the symbol with the correct name
-        # at correct location.
         base_names = set(module0.SYMBOL_NAMES.keys())
         main_names = set([sym.name for sym in symbols])
         names = base_names - main_names
@@ -129,6 +121,8 @@ def lcf(output_path):
             # static variables and functions. i.e., if the static reference count is
             # non-zero then the symbol does not need force active.
             static_rc = rc[0]
+            extern_rc = rc[1]
+            rels_rc = rc[2]
 
             # the symbol is only referenced by rels and is required to be forceactive.
             # I assume the process of generating rels will generate a list of forceactive

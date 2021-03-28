@@ -45,29 +45,13 @@ struct J2DAnmVtxColor {
     /* 8030363C */ void getColor(u8, u16, _GXColor*) const;
 };
 
-struct J2DAnmTevRegKey {};
-
-struct J2DAnmBase {};
-
-struct J2DTevStage {};
-
 struct J2DAnmVisibilityFull {
     /* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
 struct J2DAnmTransform {};
 
-struct J2DAnmTexPattern {};
-
-struct J2DWindow {
-    struct TMaterial {};
-
-    /* 802F9A7C */ J2DWindow();
-    /* 802FA880 */ ~J2DWindow();
-    /* 802FB000 */ void resize(f32, f32);
-    /* 802FB1D8 */ void drawSelf(f32, f32);
-    /* 802FBF98 */ s32 getTypeID() const;
-};
+struct J2DAnmBase {};
 
 struct J2DPane {
     /* 80053BC0 */ void calcMtx();
@@ -95,9 +79,23 @@ struct J2DPane {
     /* 802F8474 */ void update();
 };
 
-struct J2DAnmColor {};
+struct J2DAnmTevRegKey {};
 
 struct J2DAnmTextureSRTKey {};
+
+struct J2DWindow {
+    struct TMaterial {};
+
+    /* 802F9A7C */ J2DWindow();
+    /* 802FA880 */ ~J2DWindow();
+    /* 802FB000 */ void resize(f32, f32);
+    /* 802FB1D8 */ void drawSelf(f32, f32);
+    /* 802FBF98 */ s32 getTypeID() const;
+};
+
+struct J2DAnmColor {};
+
+struct J2DAnmTexPattern {};
 
 struct J2DMaterial {
     /* 802EA38C */ void setGX();
@@ -106,6 +104,8 @@ struct J2DMaterial {
     /* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
     /* 802EA89C */ void setAnimation(J2DAnmColor*);
 };
+
+struct J2DTevStage {};
 
 struct J2DWindowEx {
     struct stage_enum {};

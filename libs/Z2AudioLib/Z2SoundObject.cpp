@@ -50,14 +50,14 @@ struct Z2SoundObjArrow {
     /* 802BEB74 */ void init(Vec*, u8);
 };
 
-struct JAUSoundAnimationSound {};
-
 struct JGeometry {
     template <typename A1>
     struct TVec3 {};
     /* TVec3<f32> */
     struct TVec3__template0 {};
 };
+
+struct JAUSoundAnimationSound {};
 
 struct Z2SoundObjAnime {
     /* 802BEB94 */ Z2SoundObjAnime();

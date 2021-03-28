@@ -52,9 +52,9 @@ struct daNpcF_ActorMngr_c {
     /* 80D43CB4 */ daNpcF_ActorMngr_c();
 };
 
-struct J3DModelData {};
-
 struct dKy_tevstr_c {};
+
+struct J3DModelData {};
 
 struct dScnKy_env_light_c {
     /* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);

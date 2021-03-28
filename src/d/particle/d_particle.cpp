@@ -60,11 +60,13 @@ struct dPa_wbPcallBack_c {
 
 struct dKy_tevstr_c {};
 
-struct JGeometry {
-    template <typename A1>
-    struct TVec3 {};
-    /* TVec3<f32> */
-    struct TVec3__template0 {};
+struct ResTIMG {};
+
+struct JPAResourceManager {
+    /* 80273E10 */ JPAResourceManager(void const*, JKRHeap*);
+    /* 80273EA8 */ void checkUserIndexDuplication(u16) const;
+    /* 80273EEC */ void swapTexture(ResTIMG const*, char const*);
+    /* 80273FCC */ void getResUserWork(u16) const;
 };
 
 struct JPADrawInfo {};
@@ -83,13 +85,11 @@ struct JPAParticleCallBack {
     /* 8027EFA4 */ ~JPAParticleCallBack();
 };
 
-struct ResTIMG {};
-
-struct JPAResourceManager {
-    /* 80273E10 */ JPAResourceManager(void const*, JKRHeap*);
-    /* 80273EA8 */ void checkUserIndexDuplication(u16) const;
-    /* 80273EEC */ void swapTexture(ResTIMG const*, char const*);
-    /* 80273FCC */ void getResUserWork(u16) const;
+struct JGeometry {
+    template <typename A1>
+    struct TVec3 {};
+    /* TVec3<f32> */
+    struct TVec3__template0 {};
 };
 
 struct JPAEmitterManager {
@@ -346,12 +346,12 @@ struct J3DShape {
     /* 80315300 */ void loadPreDrawSetting() const;
 };
 
-struct J3DAnmTevRegKey {
-    /* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
-};
-
 struct J3DAnmTexPattern {
     /* 8032B09C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct J3DAnmTevRegKey {
+    /* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
 };
 
 struct J3DMaterialTable {

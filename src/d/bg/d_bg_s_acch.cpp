@@ -60,8 +60,6 @@ struct dBgS_AcchCir {
     /* 80077414 */ ~dBgS_AcchCir();
 };
 
-struct Vec {};
-
 struct csXyz {};
 
 struct dBgS_Acch;
@@ -81,6 +79,8 @@ struct dBgS {
     /* 80075774 */ void MoveBgCrrPos(cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*, bool, bool);
     /* 80075B84 */ void RideCallBack(cBgS_PolyInfo const&, fopAc_ac_c*);
 };
+
+struct Vec {};
 
 struct dBgS_Acch {
     /* 80075F94 */ ~dBgS_Acch();

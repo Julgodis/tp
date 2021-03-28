@@ -24,19 +24,19 @@ struct mDoMtx_stack_c {
     /* 8000CD64 */ void transS(cXyz const&);
 };
 
-struct J3DModelData {};
-
-struct mDoExt_McaMorfCallBack1_c {};
-
 struct J3DAnmTransform {};
-
-struct mDoExt_McaMorfCallBack2_c {};
 
 struct Z2Creature {
     /* 802C03C8 */ Z2Creature();
     /* 802C0420 */ ~Z2Creature();
     /* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
+
+struct mDoExt_McaMorfCallBack1_c {};
+
+struct mDoExt_McaMorfCallBack2_c {};
+
+struct J3DModelData {};
 
 struct mDoExt_McaMorfSO {
     /* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*,
@@ -57,6 +57,10 @@ struct daTag_EvtArea_c {
 
 struct daNpcT_faceMotionAnmData_c {};
 
+struct daNpcT_motionAnmData_c {};
+
+struct daNpcT_evtData_c {};
+
 struct daNpcT_MotionSeqMngr_c {
     struct sequenceStepData_c {};
 
@@ -65,11 +69,7 @@ struct daNpcT_MotionSeqMngr_c {
     /* 80B672D8 */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_motionAnmData_c {};
-
 struct J3DJoint {};
-
-struct daNpcT_evtData_c {};
 
 struct daNpc_ykW_c {
     /* 80B5EF0C */ ~daNpc_ykW_c();
@@ -145,19 +145,19 @@ struct daNpc_ykM_c {
 
 struct daNpcT_pntData_c {};
 
-struct J3DModel {};
-
-struct dCcD_GObjInf {
-    /* 80083A28 */ dCcD_GObjInf();
-    /* 800840E4 */ ~dCcD_GObjInf();
-};
+struct _GXColorS10 {};
 
 struct csXyz {
     /* 80B66C38 */ ~csXyz();
     /* 80B671D4 */ csXyz();
 };
 
-struct _GXColorS10 {};
+struct J3DModel {};
+
+struct dCcD_GObjInf {
+    /* 80083A28 */ dCcD_GObjInf();
+    /* 800840E4 */ ~dCcD_GObjInf();
+};
 
 struct daNpcT_c {
     /* 80147FA4 */ void tgHitCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
@@ -307,14 +307,14 @@ struct dPa_control_c {
                                 cXyz const*);
 };
 
+struct dBgS {
+    /* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
+};
+
 struct dBgS_AcchCir {
     /* 80075EAC */ dBgS_AcchCir();
     /* 80075F40 */ void SetWallR(f32);
     /* 80B67320 */ ~dBgS_AcchCir();
-};
-
-struct dBgS {
-    /* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
 };
 
 struct dBgS_Acch {

@@ -47,11 +47,11 @@ struct mDoExt_3DlineMatSortPacket {
     /* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 };
 
+struct _GXColor {};
+
 struct dKy_tevstr_c {};
 
 struct ResTIMG {};
-
-struct _GXColor {};
 
 struct mDoExt_3DlineMat1_c {
     /* 80013360 */ void init(u16, u16, ResTIMG*, int);
@@ -176,12 +176,12 @@ struct dBgS_ObjAcch {
     /* 805926F0 */ ~dBgS_ObjAcch();
 };
 
-struct cBgS_PolyInfo {
-    /* 802680B0 */ ~cBgS_PolyInfo();
-};
-
 struct csXyz {
     /* 802673F4 */ csXyz(s16, s16, s16);
+};
+
+struct cBgS_PolyInfo {
+    /* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dBgS_MoveBgActor {

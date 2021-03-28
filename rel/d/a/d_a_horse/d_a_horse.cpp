@@ -13,8 +13,6 @@
 
 struct request_of_phase_process_class {};
 
-struct Quaternion {};
-
 struct Vec {};
 
 struct cXyz {
@@ -28,6 +26,8 @@ struct cXyz {
     /* 808392D8 */ cXyz();
 };
 
+struct Quaternion {};
+
 struct mDoMtx_stack_c {
     /* 8000CD64 */ void transS(cXyz const&);
     /* 8000CD9C */ void transM(f32, f32, f32);
@@ -35,9 +35,9 @@ struct mDoMtx_stack_c {
     /* 8000CF7C */ void quatM(Quaternion const*);
 };
 
-struct J3DMaterialTable {};
-
 struct J3DAnmTexPattern {};
+
+struct J3DMaterialTable {};
 
 struct mDoExt_btpAnm {
     /* 8000D54C */ void init(J3DMaterialTable*, J3DAnmTexPattern*, int, int, f32, s16, s16);
@@ -59,11 +59,11 @@ struct mDoExt_3DlineMatSortPacket {
     /* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 };
 
+struct _GXColor {};
+
 struct dKy_tevstr_c {};
 
 struct ResTIMG {};
-
-struct _GXColor {};
 
 struct mDoExt_3DlineMat1_c {
     /* 80013360 */ void init(u16, u16, ResTIMG*, int);
@@ -271,12 +271,6 @@ struct dPa_control_c {
                             _GXColor const*, cXyz const*, f32);
 };
 
-struct dBgS_AcchCir {
-    /* 80075EAC */ dBgS_AcchCir();
-    /* 80075F58 */ void SetWall(f32, f32);
-    /* 808452E4 */ ~dBgS_AcchCir();
-};
-
 struct dBgS {
     /* 80074B98 */ void GetExitId(cBgS_PolyInfo const&);
     /* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
@@ -284,6 +278,12 @@ struct dBgS {
     /* 80074CBC */ void GetSpecialCode(cBgS_PolyInfo const&);
     /* 80074EF0 */ void GetGroundCode(cBgS_PolyInfo const&);
     /* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
+};
+
+struct dBgS_AcchCir {
+    /* 80075EAC */ dBgS_AcchCir();
+    /* 80075F58 */ void SetWall(f32, f32);
+    /* 808452E4 */ ~dBgS_AcchCir();
 };
 
 struct dBgS_Acch {

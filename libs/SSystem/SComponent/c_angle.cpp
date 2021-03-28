@@ -13,7 +13,6 @@
 
 struct cXyz {};
 
-struct cSPolar;
 struct cSAngle {
     /* 80030510 */ ~cSAngle();
     /* 80270F98 */ cSAngle(s16);
@@ -41,6 +40,7 @@ struct cSAngle {
     /* 802712B4 */ void operator*=(f32);
 };
 
+struct cSPolar;
 struct cSGlobe {
     /* 80271820 */ cSGlobe(f32, s16, s16);
     /* 80271880 */ cSGlobe(cXyz const&);

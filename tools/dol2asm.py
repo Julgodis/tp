@@ -33,5 +33,6 @@ from pathlib import Path
 def main(debug, game_path, asm_path, lib_path, src_path, rel_path, inc_path, mk_gen, cpp_gen, asm_gen, sym_gen, rel_gen, process_count, select_modules, select_tu, select_asm):
     return libdol2asm.split(debug, game_path, lib_path, src_path, asm_path, rel_path, inc_path, mk_gen, cpp_gen, asm_gen, sym_gen, rel_gen, process_count, select_modules, select_tu, select_asm)
 
+
 if __name__ == "__main__":
     main()

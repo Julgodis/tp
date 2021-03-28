@@ -83,13 +83,13 @@ struct dPa_followEcallBack {
     /* 80BE02B0 */ void __defctor();
 };
 
-struct dKy_tevstr_c {};
-
 struct cXyz {
     /* 802670AC */ void isZero() const;
     /* 80BE0318 */ ~cXyz();
     /* 80BE0354 */ cXyz();
 };
+
+struct dKy_tevstr_c {};
 
 struct csXyz {
     /* 80BE02D8 */ ~csXyz();

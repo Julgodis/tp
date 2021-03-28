@@ -13,8 +13,6 @@
 
 struct request_of_phase_process_class {};
 
-struct Quaternion {};
-
 struct Vec {};
 
 struct cXyz {
@@ -24,6 +22,8 @@ struct cXyz {
 };
 
 struct csXyz {};
+
+struct Quaternion {};
 
 struct mDoMtx_stack_c {
     /* 8000CD64 */ void transS(cXyz const&);
@@ -36,12 +36,12 @@ struct mDoMtx_stack_c {
 
 struct fopAc_ac_c {};
 
-struct dBgW {
-    /* 8007B9C0 */ void Move();
-};
-
 struct dBgW_Base {
     struct PushPullLabel {};
+};
+
+struct dBgW {
+    /* 8007B9C0 */ void Move();
 };
 
 struct daObjMovebox {
@@ -121,9 +121,9 @@ struct dSv_info_c {
     /* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct J3DModelData {};
-
 struct dKy_tevstr_c {};
+
+struct J3DModelData {};
 
 struct dScnKy_env_light_c {
     /* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);

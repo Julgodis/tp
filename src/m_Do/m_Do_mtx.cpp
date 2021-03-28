@@ -11,8 +11,6 @@
 // Types:
 //
 
-struct Quaternion {};
-
 struct Vec {};
 
 struct cXyz {
@@ -23,6 +21,8 @@ struct cXyz {
 };
 
 struct csXyz {};
+
+struct Quaternion {};
 
 struct mDoMtx_stack_c {
     /* 8000CCC8 */ void push();

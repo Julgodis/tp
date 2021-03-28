@@ -52,9 +52,9 @@ struct dSv_memBit_c {
     /* 80034810 */ void onSwitch(int);
 };
 
-struct J3DModelData {};
-
 struct dKy_tevstr_c {};
+
+struct J3DModelData {};
 
 struct dScnKy_env_light_c {
     /* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);

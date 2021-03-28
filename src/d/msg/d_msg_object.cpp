@@ -138,11 +138,11 @@ struct dMsgScrnBase_c {
     /* 8023C3EC */ void setRubyString(char*);
 };
 
-struct J2DTextBox {};
-
 struct COutFont_c {
     /* 80225C94 */ COutFont_c(u8);
 };
+
+struct J2DTextBox {};
 
 struct dMsgObject_c {
     /* 80233284 */ void _create(msg_class*);

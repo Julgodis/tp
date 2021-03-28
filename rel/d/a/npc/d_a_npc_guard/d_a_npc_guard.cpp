@@ -102,13 +102,13 @@ struct dRes_control_c {
     /* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct cXyz {
-    /* 809F0148 */ ~cXyz();
-};
-
 struct csXyz {
     /* 802673F4 */ csXyz(s16, s16, s16);
     /* 809F1D6C */ ~csXyz();
+};
+
+struct cXyz {
+    /* 809F0148 */ ~cXyz();
 };
 
 struct dNpcLib_lookat_c {

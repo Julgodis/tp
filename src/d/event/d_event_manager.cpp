@@ -41,6 +41,12 @@ struct dEvt_control_c {
     /* 800436F4 */ void setPtD(void*);
 };
 
+struct Vec {};
+
+struct cXyz {
+    /* 80266B34 */ void operator-(Vec const&) const;
+};
+
 struct dEvDtData_c {};
 
 struct dEvDtStaff_c {
@@ -50,12 +56,6 @@ struct dEvDtStaff_c {
 struct dEvDtEvent_c {
     /* 80043E78 */ void finishCheck();
     /* 80043F70 */ void specialStaffProc(dEvDtStaff_c*);
-};
-
-struct Vec {};
-
-struct cXyz {
-    /* 80266B34 */ void operator-(Vec const&) const;
 };
 
 struct dEvent_manager_c {

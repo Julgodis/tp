@@ -23,11 +23,11 @@ struct dSv_letter_info_c {
     /* 8003449C */ void isLetterReadFlag(int) const;
 };
 
-struct JKRArchive {};
-
 struct J2DPane {
     /* 802F7100 */ void getBounds();
 };
+
+struct JKRArchive {};
 
 struct dSelect_cursor_c {
     /* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
@@ -37,8 +37,6 @@ struct dSelect_cursor_c {
     /* 801952A0 */ void setAlphaRate(f32);
 };
 
-struct JUTFont {};
-
 struct COutFont_c {};
 
 struct J2DTextBox {
@@ -47,6 +45,8 @@ struct J2DTextBox {
     /* 80300658 */ void getStringPtr() const;
     /* 8030074C */ void setString(s16, char const*, ...);
 };
+
+struct JUTFont {};
 
 struct dMsgString_c {
     /* 801E1D10 */ void getStringPage(u32, u8, u8, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*,

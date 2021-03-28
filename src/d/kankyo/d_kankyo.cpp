@@ -61,12 +61,6 @@ struct dStage_roomControl_c {
     /* 8019F780 */ void GetTimePass();
 };
 
-struct dKy_tevstr_c {};
-
-struct J3DModelData {
-    /* 8032600C */ void simpleCalcMaterial(u16, f32 (*)[4]);
-};
-
 struct Vec {};
 
 struct cXyz {
@@ -76,7 +70,13 @@ struct cXyz {
     /* 80266B84 */ void operator*(f32) const;
 };
 
+struct dKy_tevstr_c {};
+
 struct _GXColorS10 {};
+
+struct J3DModelData {
+    /* 8032600C */ void simpleCalcMaterial(u16, f32 (*)[4]);
+};
 
 struct dScnKy_env_light_c {
     /* 8019F2E8 */ dScnKy_env_light_c();
@@ -114,9 +114,9 @@ struct dRes_control_c {
 
 struct dPa_levelEcallBack {};
 
-struct _GXColor {};
-
 struct csXyz {};
+
+struct _GXColor {};
 
 struct dPa_control_c {
     /* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*,

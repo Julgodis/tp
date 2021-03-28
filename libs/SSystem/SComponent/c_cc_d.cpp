@@ -41,6 +41,11 @@ struct cM3dGAab {
     /* 8026EE68 */ void PlusR(f32);
 };
 
+struct cCcD_AabAttr {};
+
+struct cCcD_PntAttr {};
+
+struct cCcD_SphAttr;
 struct cCcD_ShapeAttr {
     struct Shape {};
 
@@ -53,12 +58,7 @@ struct cCcD_ShapeAttr {
 };
 
 struct cCcD_TriAttr;
-struct cCcD_PntAttr {};
-
-struct cCcD_SphAttr;
 struct cCcD_CylAttr;
-struct cCcD_AabAttr {};
-
 struct cCcD_CpsAttr {
     /* 80263DC0 */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
     /* 80263E04 */ void CrossAtTg(cCcD_TriAttr const&, cXyz*) const;

@@ -3,6 +3,7 @@
 
 difftools.py - Tools for finding differences between binaries
 
+TODO: NOT FINISHED!
 
 """
 
@@ -144,7 +145,7 @@ def find_bad_symbol_addr(truth, build_path, expected_path):
 @click.option('--expected_path', 'expected_path', required=False, type=PathPath(file_okay=False, dir_okay=True), default="expected/build/dolzel2/")
 @click.argument('names', nargs=-1)
 def info_about_symbol(truth, build_path, expected_path, names):
-    """ Display information about symbol (both in the build and the truth). """
+    """ Display information about symbols (both in the build and the truth). """
 
     build_symbols = []
     build_elf = build_path.joinpath("main.elf")
@@ -264,11 +265,11 @@ def section_diff(truth, build_path, expected_path, section):
     expected_dict = dict()
 
     for symbol in build_symbols:
-        if symbol.section.name != ".rodata":
+        if symbol.section.name != section:
             continue
         build_dict[elf_symbol_addr(symbol)] = symbol
     for symbol in expected_symbols:
-        if symbol.section.name != ".rodata":
+        if symbol.section.name != section:
             continue
         expected_dict[elf_symbol_addr(symbol)] = symbol
 

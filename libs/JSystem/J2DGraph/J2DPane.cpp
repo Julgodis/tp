@@ -17,11 +17,11 @@ struct ResTIMG {};
 
 struct ResFONT {};
 
-struct JKRArchive {};
-
 struct JSUInputStream {
     /* 802DC298 */ void read(void*, s32);
 };
+
+struct JKRArchive {};
 
 struct JUTResReference {
     /* 802DE078 */ void getResource(JSUInputStream*, u32, JKRArchive*);
@@ -56,28 +56,28 @@ struct JGeometry {
 
 struct J2DRotateAxis {};
 
-struct J2DBasePosition {};
-
 struct J2DAnmVtxColor {};
 
-struct J2DAnmBase {};
+struct J2DBasePosition {};
 
 struct J2DAnmTevRegKey {};
 
-struct J2DAnmVisibilityFull {};
+struct J2DAnmBase {};
 
-struct J2DAnmTransform {};
+struct J2DAnmTextureSRTKey {};
+
+struct J2DAnmVisibilityFull {};
 
 struct J2DGrafContext {
     /* 802E8E20 */ void setScissor();
     /* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
 };
 
-struct J2DAnmTexPattern {};
+struct J2DAnmTransform {};
 
 struct J2DAnmColor {};
 
-struct J2DAnmTextureSRTKey {};
+struct J2DAnmTexPattern {};
 
 struct J2DPane {
     /* 80020158 */ void setAlpha(u8);
