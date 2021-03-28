@@ -11,13 +11,18 @@
 // Types:
 // 
 
+struct dMsgString_c {
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
+struct J2DOrthoGraph {
+};
+
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
-};
-
-struct J2DOrthoGraph {
 };
 
 struct dMsgScrnExplain_c {
@@ -43,28 +48,11 @@ struct dMsgScrnExplain_c {
 	/* 8023E654 */ void checkTriggerB();
 };
 
-struct JMSMesgEntry_c {
-};
-
-struct JUTFont {
-};
-
-struct dMeter2Info_c {
-	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
-	/* 8021C7FC */ void getStringLength(JUTFont*, f32, f32, char*);
-};
-
-struct COutFont_c {
-	/* 80225C94 */ COutFont_c(u8);
-};
-
-struct J2DTextBox {
-	/* 80300658 */ void getStringPtr() const;
-	/* 8030074C */ void setString(s16, char const*, ...);
-};
-
-struct dMsgObject_c {
-	/* 802380F4 */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char*, char*, char*, s16*);
+struct dMsgScrnArrow_c {
+	/* 8023B9B4 */ dMsgScrnArrow_c();
+	/* 8023BDC0 */ void draw();
+	/* 8023BDF8 */ void setPos(f32, f32);
+	/* 8023BE34 */ void arwAnimeInit();
 };
 
 struct dMsgScrn3Select_c {
@@ -82,16 +70,48 @@ struct dMsgScrn3Select_c {
 	/* 8023A97C */ void getCharSpace();
 };
 
-struct dMsgScrnArrow_c {
-	/* 8023B9B4 */ dMsgScrnArrow_c();
-	/* 8023BDC0 */ void draw();
-	/* 8023BDF8 */ void setPos(f32, f32);
-	/* 8023BE34 */ void arwAnimeInit();
+struct COutFont_c {
+	/* 80225C94 */ COutFont_c(u8);
 };
 
-struct dMsgString_c {
-	/* 80249C20 */ dMsgString_c();
-	/* 80249D28 */ ~dMsgString_c();
+struct JUTFont {
+};
+
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
+};
+
+struct dMsgObject_c {
+	/* 802380F4 */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char*, char*, char*, s16*);
+};
+
+struct JMSMesgEntry_c {
+};
+
+struct dMeter2Info_c {
+	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
+	/* 8021C7FC */ void getStringLength(JUTFont*, f32, f32, char*);
+};
+
+struct Z2SpeechMgr2 {
+	/* 802CBF60 */ void setTextCount(s16);
+};
+
+struct Vec {
+};
+
+struct JAISoundID {
+};
+
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct ResTIMG {
+};
+
+struct JKRExpHeap {
 };
 
 struct JKRArchive {
@@ -106,42 +126,22 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
+struct J2DPicture {
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
 struct J2DPane {
 	/* 802F7100 */ void getBounds();
-};
-
-struct JKRExpHeap {
-};
-
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 802545B0 */ void paneTrans(f32, f32);
-	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 struct CPaneMgrAlpha {
 	/* 802557D0 */ void setAlphaRate(f32);
 };
 
-struct JAISoundID {
-};
-
-struct Vec {
-};
-
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-};
-
-struct Z2SpeechMgr2 {
-	/* 802CBF60 */ void setTextCount(s16);
-};
-
-struct ResTIMG {
-};
-
-struct J2DPicture {
-	/* 802FC708 */ J2DPicture(ResTIMG const*);
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 // 

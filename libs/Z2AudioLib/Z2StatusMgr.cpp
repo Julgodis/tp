@@ -32,28 +32,6 @@ struct Z2StatusMgr {
 	/* 802B6788 */ void setCameraInWaterDepth(f32);
 };
 
-struct JAISoundParamsMove {
-	/* 802A2DB4 */ void moveVolume(f32, u32);
-};
-
-struct Z2Calc {
-	struct CurveSign {
-	};
-
-	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
-};
-
-struct JAISoundID {
-};
-
-struct Z2SeMgr {
-	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-	/* 802AD9F4 */ void seMoveVolumeAll(f32, u32);
-	/* 802ADB50 */ void talkInSe();
-	/* 802ADC54 */ void talkOutSe();
-	/* 802ADD58 */ void menuInSe();
-};
-
 struct Z2SeqMgr {
 	/* 802AF49C */ void subBgmStart(u32);
 	/* 802AF884 */ void subBgmStop();
@@ -67,12 +45,34 @@ struct Z2SeqMgr {
 	/* 802B4164 */ void setBattleBgmOff(bool);
 };
 
+struct JAISoundID {
+};
+
+struct Z2SeMgr {
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+	/* 802AD9F4 */ void seMoveVolumeAll(f32, u32);
+	/* 802ADB50 */ void talkInSe();
+	/* 802ADC54 */ void talkOutSe();
+	/* 802ADD58 */ void menuInSe();
+};
+
 struct Z2SceneMgr {
 	/* 802BA294 */ void sceneBgmStart();
 };
 
 struct Z2FxLineMgr {
 	/* 802BAE48 */ void setUnderWaterFx(bool);
+};
+
+struct Z2Calc {
+	struct CurveSign {
+	};
+
+	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
+};
+
+struct JAISoundParamsMove {
+	/* 802A2DB4 */ void moveVolume(f32, u32);
 };
 
 // 
@@ -407,7 +407,7 @@ SECTION_SDATA2 static u8 lit_3731[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802B61E8-802B671C 0534+00 s=1 e=7 z=11  None .text      setDemoName__11Z2StatusMgrFPc                                */
+/* 802B61E8-802B671C 0534+00 s=1 e=7 z=0  None .text      setDemoName__11Z2StatusMgrFPc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

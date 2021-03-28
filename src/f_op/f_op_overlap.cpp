@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct leafdraw_method_class {
+struct request_base_class {
 };
 
 struct process_method_class {
 };
 
-struct request_base_class {
+struct leafdraw_method_class {
 };
 
 // 

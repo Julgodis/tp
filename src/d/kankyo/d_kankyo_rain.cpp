@@ -11,7 +11,31 @@
 // Types:
 // 
 
-struct DOUBLE_POS {
+struct daPy_py_c {
+	/* 8006F160 */ bool getKandelaarFlamePos();
+	/* 8015F424 */ void checkNowWolfEyeUp();
+};
+
+struct dSv_memBit_c {
+	/* 80034934 */ void isDungeonItem(int) const;
+};
+
+struct dStage_roomControl_c {
+	/* 80024384 */ void getStatusRoomDt(int);
+};
+
+struct dScnKy_env_light_c {
+	/* 8019FA08 */ void getDaytime();
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct dPa_levelEcallBack {
 };
 
 struct Vec {
@@ -22,27 +46,10 @@ struct cXyz {
 	/* 80266AE4 */ void operator+(Vec const&) const;
 };
 
-struct camera_class {
-};
-
-struct _GXTexObj {
-};
-
-struct ResTIMG {
-};
-
-struct _GXTexMapID {
-};
-
-struct dKankyo_rain_Packet {
+struct dKy_tevstr_c {
 };
 
 struct _GXColor {
-};
-
-struct daPy_py_c {
-	/* 8006F160 */ bool getKandelaarFlamePos();
-	/* 8015F424 */ void checkNowWolfEyeUp();
 };
 
 struct csXyz {
@@ -50,51 +57,57 @@ struct csXyz {
 	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
-struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(int);
+struct dPa_control_c {
+	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(int);
-};
-
-struct dSv_memBit_c {
-	/* 80034934 */ void isDungeonItem(int) const;
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+struct dKankyo_rain_Packet {
 };
 
 struct dEvent_manager_c {
 	/* 800483E8 */ void getRunEventName();
 };
 
-struct dKy_tevstr_c {
-};
-
-struct dPa_levelEcallBack {
-};
-
-struct dPa_control_c {
-	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-};
-
 struct dDlst_peekZ_c {
 	/* 80056018 */ void newData(s16, s16, u32*);
 };
 
-struct SNOW_EFF {
-	/* 80056D58 */ ~SNOW_EFF();
-	/* 80056D94 */ SNOW_EFF();
+struct dComIfG_play_c {
+	/* 8002C97C */ void getLayerNo(int);
 };
 
-struct STAR_EFF {
-	/* 80056DC8 */ ~STAR_EFF();
-	/* 80056E04 */ STAR_EFF();
+struct dCcMassS_Mng {
+	/* 80085690 */ void Prepare();
+};
+
+struct dBgS_RoofChk {
+	/* 80078FF4 */ dBgS_RoofChk();
+	/* 80079090 */ ~dBgS_RoofChk();
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+};
+
+struct dBgS_ObjGndChk_All {
+	/* 800778E8 */ ~dBgS_ObjGndChk_All();
+};
+
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
+};
+
+struct dBgS_CamGndChk_Wtr {
+	/* 80077A00 */ dBgS_CamGndChk_Wtr();
+	/* 80077A98 */ ~dBgS_CamGndChk_Wtr();
+};
+
+struct dBgS {
+	/* 8007549C */ void RoofChk(dBgS_RoofChk*);
+};
+
+struct camera_class {
 };
 
 struct cBgS_GndChk {
@@ -105,50 +118,37 @@ struct cBgS {
 	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
 };
 
-struct dBgS_RoofChk {
-	/* 80078FF4 */ dBgS_RoofChk();
-	/* 80079090 */ ~dBgS_RoofChk();
+struct _GXTexObj {
 };
 
-struct dBgS {
-	/* 8007549C */ void RoofChk(dBgS_RoofChk*);
-};
-
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
-};
-
-struct dBgS_ObjGndChk_All {
-	/* 800778E8 */ ~dBgS_ObjGndChk_All();
-};
-
-struct dBgS_CamGndChk_Wtr {
-	/* 80077A00 */ dBgS_CamGndChk_Wtr();
-	/* 80077A98 */ ~dBgS_CamGndChk_Wtr();
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcMassS_Mng {
-	/* 80085690 */ void Prepare();
-};
-
-struct dScnKy_env_light_c {
-	/* 8019FA08 */ void getDaytime();
-};
-
-struct LIGHT_INFLUENCE {
+struct _GXTexMapID {
 };
 
 struct Z2EnvSeMgr {
 	/* 802C7CF4 */ void startNearThunderSe(s8);
 };
 
+struct STAR_EFF {
+	/* 80056DC8 */ ~STAR_EFF();
+	/* 80056E04 */ STAR_EFF();
+};
+
+struct SNOW_EFF {
+	/* 80056D58 */ ~SNOW_EFF();
+	/* 80056D94 */ SNOW_EFF();
+};
+
+struct ResTIMG {
+};
+
+struct LIGHT_INFLUENCE {
+};
+
 struct J3DSys {
 	/* 8031073C */ void reinitGX();
+};
+
+struct DOUBLE_POS {
 };
 
 // 
@@ -497,7 +497,7 @@ asm static void get_vectle_calc(cXyz* param_0, cXyz* param_1, cXyz* param_2) {
 #pragma pop
 
 
-/* 8005B760-8005B780 0020+00 s=8 e=7 z=11  None .text      dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz                    */
+/* 8005B760-8005B780 0020+00 s=8 e=7 z=0  None .text      dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2003,7 +2003,7 @@ asm void dKyr_mud_draw(f32 (* param_0)[4], u8** param_1) {
 #pragma pop
 
 
-/* 8006D914-8006DA04 00F0+00 s=0 e=1 z=1  None .text      dKyr_evil_init__Fv                                           */
+/* 8006D914-8006DA04 00F0+00 s=0 e=1 z=0  None .text      dKyr_evil_init__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

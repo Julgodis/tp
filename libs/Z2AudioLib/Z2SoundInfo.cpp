@@ -11,10 +11,7 @@
 // Types:
 // 
 
-struct JAISe {
-};
-
-struct JAISoundID {
+struct JAISound {
 };
 
 struct JAIStream {
@@ -23,7 +20,10 @@ struct JAIStream {
 struct JAISeq {
 };
 
-struct JAISound {
+struct JAISoundID {
+};
+
+struct JAISe {
 };
 
 struct Z2SoundInfo {
@@ -43,12 +43,9 @@ struct Z2SoundInfo {
 	/* 802BBBE0 */ ~Z2SoundInfo();
 };
 
-struct JAISoundInfo {
-	/* 802A2D50 */ ~JAISoundInfo();
-};
-
-struct JAIStreamDataMgr {
-	/* 802A3AD8 */ ~JAIStreamDataMgr();
+struct Z2Calc {
+	/* 802A968C */ void linearTransform(f32, f32, f32, f32, f32, bool);
+	/* 802A98D4 */ void getRandom_0_1();
 };
 
 struct JAUSoundTable {
@@ -56,9 +53,12 @@ struct JAUSoundTable {
 	/* 802A728C */ void getData(JAISoundID) const;
 };
 
-struct Z2Calc {
-	/* 802A968C */ void linearTransform(f32, f32, f32, f32, f32, bool);
-	/* 802A98D4 */ void getRandom_0_1();
+struct JAIStreamDataMgr {
+	/* 802A3AD8 */ ~JAIStreamDataMgr();
+};
+
+struct JAISoundInfo {
+	/* 802A2D50 */ ~JAISoundInfo();
 };
 
 // 

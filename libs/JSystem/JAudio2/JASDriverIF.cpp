@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct JASDsp {
+	/* 8029DA04 */ void setDSPMixerLevel(f32);
+	/* 8029DA30 */ void getDSPMixerLevel();
+};
+
 struct JASDriver {
 	/* 8029CCD4 */ void getSubFrameCounter();
 	/* 8029E130 */ void setDSPLevel(f32);
@@ -35,11 +40,6 @@ struct JASCallbackMgr {
 	/* 8028FFA8 */ void regist(s32 (*)(void*), void*);
 	/* 80290030 */ void reject(s32 (*)(void*), void*);
 	/* 802900C4 */ void callback();
-};
-
-struct JASDsp {
-	/* 8029DA04 */ void setDSPMixerLevel(f32);
-	/* 8029DA30 */ void getDSPMixerLevel();
 };
 
 // 
@@ -138,7 +138,7 @@ asm void JASDriver::setOutputMode(u32 param_0) {
 #pragma pop
 
 
-/* 8029E180-8029E188 0008+00 s=0 e=4 z=1  None .text      getOutputMode__9JASDriverFv                                  */
+/* 8029E180-8029E188 0008+00 s=0 e=4 z=0  None .text      getOutputMode__9JASDriverFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

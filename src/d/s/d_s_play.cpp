@@ -11,35 +11,13 @@
 // Types:
 // 
 
-struct dScnPly_c {
-	/* 80259400 */ void calcPauseTimer();
-	/* 80259AC4 */ void resetGame();
-	/* 80259BFC */ void offReset();
-};
-
-struct dScnPly_env_otherHIO_c {
-	/* 80259440 */ dScnPly_env_otherHIO_c();
-	/* 8025AC0C */ ~dScnPly_env_otherHIO_c();
-};
-
-struct dScnPly_env_debugHIO_c {
-	/* 80259468 */ dScnPly_env_debugHIO_c();
-	/* 8025ABC4 */ ~dScnPly_env_debugHIO_c();
+struct stage_stag_info_class {
 };
 
 struct scene_class {
 };
 
-struct dScnPly_env_HIO_c {
-	/* 8025AD04 */ ~dScnPly_env_HIO_c();
-};
-
-struct dScnPly_reg_HIO_c {
-	/* 8025AD78 */ ~dScnPly_reg_HIO_c();
-};
-
-struct dScnPly_preLoad_HIO_c {
-	/* 8025ADC0 */ ~dScnPly_preLoad_HIO_c();
+struct request_of_phase_process_class {
 };
 
 struct mDoGph_gInf_c {
@@ -49,52 +27,34 @@ struct mDoGph_gInf_c {
 
 };
 
-struct request_of_phase_process_class {
+struct mDoDvdThd_toMainRam_c {
 };
 
-struct cDylPhs {
-	/* 8001884C */ void Link(request_of_phase_process_class*, s16);
-	/* 80018890 */ void Unlink(request_of_phase_process_class*, s16);
+struct mDoDvdThd_mountXArchive_c {
 };
 
-struct cXyz {
-};
-
-struct csXyz {
-};
-
-struct JKRHeap {
-};
-
-struct JKRExpHeap {
-};
-
-struct create_tag_class {
-};
-
-struct dStage_roomControl_c {
-	/* 80024954 */ void resetArchiveBank(int);
-};
-
-struct stage_stag_info_class {
-};
-
-struct dStage_startStage_c {
-};
-
-struct dComIfG_play_c {
-	/* 8002B22C */ void init();
-	/* 8002B3B8 */ void setStartStage(dStage_startStage_c*);
-	/* 8002B434 */ void getLayerNo_common_common(char const*, int, int);
-	/* 8002C950 */ void getLayerNo_common(char const*, int, int);
-	/* 8002C97C */ void getLayerNo(int);
-	/* 8002CA1C */ void createSimpleModel();
-	/* 8002CA70 */ void deleteSimpleModel();
+struct fopAc_ac_c {
 };
 
 struct daSus_c {
 	/* 800313BC */ void reset();
 	/* 800315A4 */ void execute();
+};
+
+struct daPy_py_c {
+	/* 8015F660 */ void checkRoomRestartStart();
+};
+
+struct dVibration_c {
+	/* 8006F268 */ void Run();
+	/* 8006FF04 */ void Init();
+	/* 8006FF38 */ void Pause();
+	/* 8006FFF8 */ void Remove();
+};
+
+struct dTres_c {
+	/* 8009BC18 */ void create();
+	/* 8009BC60 */ void remove();
 };
 
 struct dSv_player_status_b_c {
@@ -110,6 +70,10 @@ struct dSv_player_get_item_c {
 	/* 80033E60 */ void onFirstBit(u8);
 };
 
+struct dSv_info_c {
+	/* 80034FCC */ void init();
+};
+
 struct dSv_event_c {
 	/* 8003498C */ void onEventBit(u16);
 };
@@ -118,17 +82,45 @@ struct dSv_danBit_c {
 	/* 80034B98 */ void onSwitch(int);
 };
 
-struct dSv_info_c {
-	/* 80034FCC */ void init();
+struct dStage_startStage_c {
 };
 
-struct dDemo_c {
-	/* 80039678 */ void create();
-	/* 80039910 */ void remove();
-	/* 80039DA4 */ void update();
+struct dStage_roomControl_c {
+	/* 80024954 */ void resetArchiveBank(int);
+};
+
+struct dScnPly_reg_HIO_c {
+	/* 8025AD78 */ ~dScnPly_reg_HIO_c();
+};
+
+struct dScnPly_preLoad_HIO_c {
+	/* 8025ADC0 */ ~dScnPly_preLoad_HIO_c();
+};
+
+struct dScnPly_env_otherHIO_c {
+	/* 80259440 */ dScnPly_env_otherHIO_c();
+	/* 8025AC0C */ ~dScnPly_env_otherHIO_c();
+};
+
+struct dScnPly_env_debugHIO_c {
+	/* 80259468 */ dScnPly_env_debugHIO_c();
+	/* 8025ABC4 */ ~dScnPly_env_debugHIO_c();
+};
+
+struct dScnPly_env_HIO_c {
+	/* 8025AD04 */ ~dScnPly_env_HIO_c();
+};
+
+struct dScnPly_c {
+	/* 80259400 */ void calcPauseTimer();
+	/* 80259AC4 */ void resetGame();
+	/* 80259BFC */ void offReset();
 };
 
 struct dRes_info_c {
+};
+
+struct JKRHeap {
 };
 
 struct dRes_control_c {
@@ -136,19 +128,6 @@ struct dRes_control_c {
 	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, int);
 	/* 8003C470 */ void syncAllRes(dRes_info_c*, int);
 	/* 8003C5BC */ void setStageRes(char const*, JKRHeap*);
-};
-
-struct dMpath_c {
-	/* 8003FB70 */ void create();
-	/* 8003FC70 */ void remove();
-};
-
-struct dEvt_control_c {
-	/* 80042BBC */ void Step();
-	/* 800431E8 */ void remove();
-};
-
-struct mDoDvdThd_toMainRam_c {
 };
 
 struct dPa_control_c {
@@ -160,43 +139,13 @@ struct dPa_control_c {
 	/* 8004C0EC */ void calc2D();
 };
 
-struct dDlst_window_c {
-	/* 80051AC0 */ void setViewPort(f32, f32, f32, f32, f32, f32);
-	/* 80051ADC */ void setScissor(f32, f32, f32, f32);
+struct dMsgObject_c {
+	/* 8023800C */ void readMessageGroup(mDoDvdThd_mountXArchive_c**);
 };
 
-struct dVibration_c {
-	/* 8006F268 */ void Run();
-	/* 8006FF04 */ void Init();
-	/* 8006FF38 */ void Pause();
-	/* 8006FFF8 */ void Remove();
-};
-
-struct fopAc_ac_c {
-};
-
-struct dAttention_c {
-	/* 80070198 */ dAttention_c(fopAc_ac_c*, u32);
-	/* 80070774 */ ~dAttention_c();
-	/* 80072924 */ void Run();
-	/* 80072BD4 */ void Draw();
-};
-
-struct dBgS {
-	/* 8007493C */ void ClrMoveFlag();
-	/* 800749A8 */ void Move();
-};
-
-struct dCcS {
-	/* 80085ED4 */ void Ct();
-	/* 80085F08 */ void Dt();
-	/* 800872B0 */ void Move();
-	/* 800872D0 */ void Draw();
-};
-
-struct dTres_c {
-	/* 8009BC18 */ void create();
-	/* 8009BC60 */ void remove();
+struct dMpath_c {
+	/* 8003FB70 */ void create();
+	/* 8003FC70 */ void remove();
 };
 
 struct dMdl_mng_c {
@@ -209,15 +158,63 @@ struct dEyeHL_mng_c {
 	/* 8009CA48 */ void update();
 };
 
-struct daPy_py_c {
-	/* 8015F660 */ void checkRoomRestartStart();
+struct dEvt_control_c {
+	/* 80042BBC */ void Step();
+	/* 800431E8 */ void remove();
 };
 
-struct mDoDvdThd_mountXArchive_c {
+struct dDlst_window_c {
+	/* 80051AC0 */ void setViewPort(f32, f32, f32, f32, f32, f32);
+	/* 80051ADC */ void setScissor(f32, f32, f32, f32);
 };
 
-struct dMsgObject_c {
-	/* 8023800C */ void readMessageGroup(mDoDvdThd_mountXArchive_c**);
+struct dDemo_c {
+	/* 80039678 */ void create();
+	/* 80039910 */ void remove();
+	/* 80039DA4 */ void update();
+};
+
+struct dComIfG_play_c {
+	/* 8002B22C */ void init();
+	/* 8002B3B8 */ void setStartStage(dStage_startStage_c*);
+	/* 8002B434 */ void getLayerNo_common_common(char const*, int, int);
+	/* 8002C950 */ void getLayerNo_common(char const*, int, int);
+	/* 8002C97C */ void getLayerNo(int);
+	/* 8002CA1C */ void createSimpleModel();
+	/* 8002CA70 */ void deleteSimpleModel();
+};
+
+struct dCcS {
+	/* 80085ED4 */ void Ct();
+	/* 80085F08 */ void Dt();
+	/* 800872B0 */ void Move();
+	/* 800872D0 */ void Draw();
+};
+
+struct dBgS {
+	/* 8007493C */ void ClrMoveFlag();
+	/* 800749A8 */ void Move();
+};
+
+struct dAttention_c {
+	/* 80070198 */ dAttention_c(fopAc_ac_c*, u32);
+	/* 80070774 */ ~dAttention_c();
+	/* 80072924 */ void Run();
+	/* 80072BD4 */ void Draw();
+};
+
+struct csXyz {
+};
+
+struct create_tag_class {
+};
+
+struct cXyz {
+};
+
+struct cDylPhs {
+	/* 8001884C */ void Link(request_of_phase_process_class*, s16);
+	/* 80018890 */ void Unlink(request_of_phase_process_class*, s16);
 };
 
 struct cBgS_PolyInfo {
@@ -233,6 +230,9 @@ struct Z2SceneMgr {
 
 struct JUTAssertion {
 	/* 802E4C3C */ void setMessageCount(int);
+};
+
+struct JKRExpHeap {
 };
 
 // 
@@ -508,7 +508,7 @@ static u8 data_8045111C[4];
 /* 80451120-80451124 0004+00 s=1 e=0 z=0  None .sbss      g_preLoadHIO                                                 */
 static u8 g_preLoadHIO[4];
 
-/* 80451124-80451128 0004+00 s=3 e=7 z=38  None .sbss      None                                                         */
+/* 80451124-80451128 0004+00 s=3 e=7 z=0  None .sbss      None                                                         */
 u8 struct_80451124[4];
 
 /* 80259400-80259440 0040+00 s=1 e=0 z=0  None .text      calcPauseTimer__9dScnPly_cFv                                 */
@@ -563,7 +563,7 @@ SECTION_DATA static void* l_dScnPly_Method[5] = {
 	(void*)dScnPly_Draw__FP9dScnPly_c,
 };
 
-/* 803C31D4-803C31FC 0028+00 s=0 e=0 z=1  None .data      g_profile_PLAY_SCENE                                         */
+/* 803C31D4-803C31FC 0028+00 s=0 e=0 z=0  None .data      g_profile_PLAY_SCENE                                         */
 SECTION_DATA void* g_profile_PLAY_SCENE[10] = {
 	(void*)NULL,
 	(void*)0x0001FFFD,
@@ -577,7 +577,7 @@ SECTION_DATA void* g_profile_PLAY_SCENE[10] = {
 	(void*)NULL,
 };
 
-/* 803C31FC-803C3224 0028+00 s=0 e=0 z=1  None .data      g_profile_OPENING_SCENE                                      */
+/* 803C31FC-803C3224 0028+00 s=0 e=0 z=0  None .data      g_profile_OPENING_SCENE                                      */
 SECTION_DATA void* g_profile_OPENING_SCENE[10] = {
 	(void*)NULL,
 	(void*)0x0001FFFD,

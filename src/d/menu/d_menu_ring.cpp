@@ -11,13 +11,69 @@
 // Types:
 // 
 
+struct dSv_player_status_a_c {
+	/* 80032A5C */ void getSelectItemIndex(int) const;
+};
+
+struct dSv_player_item_record_c {
+	/* 80033F7C */ void getBombNum(u8) const;
+	/* 80034030 */ void getBottleNum(u8) const;
+};
+
+struct dSv_player_item_max_c {
+	/* 800340F8 */ void getBombNum(u8) const;
+};
+
+struct dSv_player_item_c {
+	/* 80033030 */ void getItem(int, bool) const;
+	/* 80033354 */ void getLineUpItem(int) const;
+};
+
+struct JKRArchive {
+};
+
+struct dSelect_cursor_c {
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
+	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
+	/* 801951C8 */ void setScale(f32);
+	/* 801952A0 */ void setAlphaRate(f32);
+};
+
+struct dMsgString_c {
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
+struct ResTIMG {
+};
+
+struct J2DPicture {
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
+struct dMeter2Info_c {
+	/* 8021CA04 */ void warpInProc();
+	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
+	/* 8021D36C */ void setItemColor(u8, J2DPicture*, J2DPicture*, J2DPicture*, J2DPicture*);
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct dMeter2Draw_c {
+	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
+};
+
 struct CSTControl {
 };
 
-struct STControl {
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct STControl {
 };
 
 struct dMenu_Ring_c {
@@ -77,42 +133,6 @@ struct dMenu_Ring_c {
 	/* 801EF560 */ void draw();
 };
 
-struct dSv_player_status_a_c {
-	/* 80032A5C */ void getSelectItemIndex(int) const;
-};
-
-struct dSv_player_item_c {
-	/* 80033030 */ void getItem(int, bool) const;
-	/* 80033354 */ void getLineUpItem(int) const;
-};
-
-struct dSv_player_item_record_c {
-	/* 80033F7C */ void getBombNum(u8) const;
-	/* 80034030 */ void getBottleNum(u8) const;
-};
-
-struct dSv_player_item_max_c {
-	/* 800340F8 */ void getBombNum(u8) const;
-};
-
-struct JKRArchive {
-};
-
-struct dSelect_cursor_c {
-	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
-	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
-	/* 801951C8 */ void setScale(f32);
-	/* 801952A0 */ void setAlphaRate(f32);
-};
-
-struct dKantera_icon_c {
-	/* 801AE938 */ dKantera_icon_c();
-	/* 801AEB7C */ void setAlphaRate(f32);
-	/* 801AEBA0 */ void setPos(f32, f32);
-	/* 801AEBF4 */ void setScale(f32, f32);
-	/* 801AEC44 */ void setNowGauge(u16, u16);
-};
-
 struct J2DOrthoGraph {
 };
 
@@ -125,32 +145,37 @@ struct dMenu_ItemExplain_c {
 	/* 801DC7AC */ void getAlphaRatio();
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
+struct dKantera_icon_c {
+	/* 801AE938 */ dKantera_icon_c();
+	/* 801AEB7C */ void setAlphaRate(f32);
+	/* 801AEBA0 */ void setPos(f32, f32);
+	/* 801AEBF4 */ void setScale(f32, f32);
+	/* 801AEC44 */ void setNowGauge(u16, u16);
 };
 
-struct dMeter2Draw_c {
-	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
+struct Vec {
 };
 
-struct ResTIMG {
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-struct J2DPicture {
-	/* 802FC708 */ J2DPicture(ResTIMG const*);
+struct JAISoundID {
 };
 
-struct dMeter2Info_c {
-	/* 8021CA04 */ void warpInProc();
-	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
-	/* 8021D36C */ void setItemColor(u8, J2DPicture*, J2DPicture*, J2DPicture*, J2DPicture*);
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-struct dMsgString_c {
-	/* 80249C20 */ dMsgString_c();
-	/* 80249D28 */ ~dMsgString_c();
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE548 */ void free(void*);
+	/* 802CE784 */ void getTotalFreeSize();
+};
+
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 struct J2DGrafContext {
@@ -168,20 +193,6 @@ struct J2DPane {
 	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
 };
 
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 80253930 */ CPaneMgr();
-	/* 80253A18 */ ~CPaneMgr();
-	/* 802545B0 */ void paneTrans(f32, f32);
-	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
-};
-
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE548 */ void free(void*);
-	/* 802CE784 */ void getTotalFreeSize();
-};
-
 struct CPaneMgrAlpha {
 	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802555C8 */ void show();
@@ -191,23 +202,12 @@ struct CPaneMgrAlpha {
 	/* 80255828 */ void getAlphaRate();
 };
 
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct JAISoundID {
-};
-
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-};
-
-struct J2DTextBox {
-	/* 80300658 */ void getStringPtr() const;
-	/* 8030074C */ void setString(s16, char const*, ...);
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 80253930 */ CPaneMgr();
+	/* 80253A18 */ ~CPaneMgr();
+	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 // 

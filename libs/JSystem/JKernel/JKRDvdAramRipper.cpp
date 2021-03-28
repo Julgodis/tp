@@ -11,74 +11,6 @@
 // Types:
 // 
 
-struct JKRDvdFile {
-	/* 802D9584 */ JKRDvdFile();
-	/* 802D9748 */ ~JKRDvdFile();
-	/* 802D98C4 */ void open(s32);
-};
-
-struct JKRADCommand {
-	/* 802DAF1C */ JKRADCommand();
-	/* 802DAF5C */ ~JKRADCommand();
-};
-
-struct JKRExpandSwitch {
-};
-
-struct JKRDvdAramRipper {
-	/* 802DA874 */ void loadToAram(s32, u32, JKRExpandSwitch, u32, u32, u32*);
-	/* 802DA918 */ void loadToAram(JKRDvdFile*, u32, JKRExpandSwitch, u32, u32, u32*);
-	/* 802DA9C0 */ void loadToAram_Async(JKRDvdFile*, u32, JKRExpandSwitch, void (*)(u32), u32, u32, u32*);
-	/* 802DAA74 */ void callCommand_Async(JKRADCommand*);
-	/* 802DAE48 */ void syncAram(JKRADCommand*, int);
-};
-
-struct JKRFile {
-};
-
-struct JSUFileInputStream {
-	/* 802DADD8 */ ~JSUFileInputStream();
-	/* 802DC638 */ JSUFileInputStream(JKRFile*);
-};
-
-template <typename A0>
-struct JSUList { };
-/* JSUList<JKRADCommand> */
-struct JSUList__template10 {
-	/* 802DB62C */ ~JSUList__template10();
-};
-
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
-struct JKRAramHeap {
-	struct EAllocMode {
-	};
-
-	/* 802D2FBC */ void alloc(u32, JKRAramHeap::EAllocMode);
-};
-
-struct JKRAramBlock {
-};
-
-struct JKRAramPiece {
-	/* 802D3838 */ void orderSync(int, u32, u32, u32, JKRAramBlock*);
-};
-
-struct JKRAramStreamCommand {
-};
-
-struct JKRAramStream {
-	/* 802D3ED0 */ void write_StreamToAram_Async(JSUFileInputStream*, u32, u32, u32, u32*);
-	/* 802D3FA0 */ void sync(JKRAramStreamCommand*, int);
-};
-
-struct JKRDecomp {
-	/* 802DBCF8 */ void checkCompressed(u8*);
-};
-
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
@@ -91,8 +23,76 @@ struct JSUPtrList {
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
+template <typename A0>
+struct JSUList { };
+/* JSUList<JKRADCommand> */
+struct JSUList__template10 {
+	/* 802DB62C */ ~JSUList__template10();
+};
+
 struct JSUInputStream {
 	/* 802DC23C */ ~JSUInputStream();
+};
+
+struct JKRFile {
+};
+
+struct JSUFileInputStream {
+	/* 802DADD8 */ ~JSUFileInputStream();
+	/* 802DC638 */ JSUFileInputStream(JKRFile*);
+};
+
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
+struct JKRExpandSwitch {
+};
+
+struct JKRDvdFile {
+	/* 802D9584 */ JKRDvdFile();
+	/* 802D9748 */ ~JKRDvdFile();
+	/* 802D98C4 */ void open(s32);
+};
+
+struct JKRADCommand {
+	/* 802DAF1C */ JKRADCommand();
+	/* 802DAF5C */ ~JKRADCommand();
+};
+
+struct JKRDvdAramRipper {
+	/* 802DA874 */ void loadToAram(s32, u32, JKRExpandSwitch, u32, u32, u32*);
+	/* 802DA918 */ void loadToAram(JKRDvdFile*, u32, JKRExpandSwitch, u32, u32, u32*);
+	/* 802DA9C0 */ void loadToAram_Async(JKRDvdFile*, u32, JKRExpandSwitch, void (*)(u32), u32, u32, u32*);
+	/* 802DAA74 */ void callCommand_Async(JKRADCommand*);
+	/* 802DAE48 */ void syncAram(JKRADCommand*, int);
+};
+
+struct JKRDecomp {
+	/* 802DBCF8 */ void checkCompressed(u8*);
+};
+
+struct JKRAramStreamCommand {
+};
+
+struct JKRAramStream {
+	/* 802D3ED0 */ void write_StreamToAram_Async(JSUFileInputStream*, u32, u32, u32, u32*);
+	/* 802D3FA0 */ void sync(JKRAramStreamCommand*, int);
+};
+
+struct JKRAramBlock {
+};
+
+struct JKRAramPiece {
+	/* 802D3838 */ void orderSync(int, u32, u32, u32, JKRAramBlock*);
+};
+
+struct JKRAramHeap {
+	struct EAllocMode {
+	};
+
+	/* 802D2FBC */ void alloc(u32, JKRAramHeap::EAllocMode);
 };
 
 // 

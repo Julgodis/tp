@@ -58,7 +58,7 @@ SECTION_SDATA2 static u8 lit_2201[8] = {
 /* 804550B0-804550B4 0004+00 s=1 e=0 z=0  None .sdata2    @2215                                                        */
 SECTION_SDATA2 static u32 lit_2215 = 0x4622F983;
 
-/* 802675E4-80267640 005C+00 s=0 e=23 z=11  None .text      cM_rad2s__Ff                                                 */
+/* 802675E4-80267640 005C+00 s=0 e=23 z=0  None .text      cM_rad2s__Ff                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,7 +225,7 @@ SECTION_SDATA2 static u8 lit_2277[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80267674-80267814 01A0+00 s=1 e=82 z=822  None .text      cM_atan2s__Fff                                               */
+/* 80267674-80267814 01A0+00 s=1 e=82 z=0  None .text      cM_atan2s__Fff                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -245,7 +245,7 @@ SECTION_SDATA2 static u8 lit_2284[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80267814-8026785C 0048+00 s=0 e=4 z=5  None .text      cM_atan2f__Fff                                               */
+/* 80267814-8026785C 0048+00 s=0 e=4 z=0  None .text      cM_atan2f__Fff                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -296,7 +296,7 @@ SECTION_SDATA2 static u8 lit_2299[8] = {
 	0x3F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8026786C-80267954 00E8+00 s=2 e=15 z=113  None .text      cM_rnd__Fv                                                   */
+/* 8026786C-80267954 00E8+00 s=2 e=15 z=0  None .text      cM_rnd__Fv                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -307,7 +307,7 @@ asm void cM_rnd() {
 #pragma pop
 
 
-/* 80267954-8026798C 0038+00 s=0 e=34 z=951  None .text      cM_rndF__Ff                                                  */
+/* 80267954-8026798C 0038+00 s=0 e=34 z=0  None .text      cM_rndF__Ff                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -325,7 +325,7 @@ SECTION_SDATA2 static u32 lit_2311 = 0x40000000;
 /* 804550E4-804550E8 0004+00 s=2 e=0 z=0  None .sdata2    @2312                                                        */
 SECTION_SDATA2 static u32 lit_2312 = 0x3F000000;
 
-/* 8026798C-802679D4 0048+00 s=0 e=24 z=450  None .text      cM_rndFX__Ff                                                 */
+/* 8026798C-802679D4 0048+00 s=0 e=24 z=0  None .text      cM_rndFX__Ff                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -346,7 +346,7 @@ static u8 data_80451178[4];
 /* 8045117C-80451180 0004+00 s=2 e=0 z=0  None .sbss      r22                                                          */
 static u8 data_8045117C[4];
 
-/* 802679D4-802679E4 0010+00 s=0 e=0 z=8  None .text      cM_initRnd2__Fiii                                            */
+/* 802679D4-802679E4 0010+00 s=0 e=0 z=0  None .text      cM_initRnd2__Fiii                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -368,7 +368,7 @@ asm static void cM_rnd2() {
 #pragma pop
 
 
-/* 80267ACC-80267B04 0038+00 s=0 e=0 z=14  None .text      cM_rndF2__Ff                                                 */
+/* 80267ACC-80267B04 0038+00 s=0 e=0 z=0  None .text      cM_rndF2__Ff                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -379,7 +379,7 @@ asm void cM_rndF2(f32 param_0) {
 #pragma pop
 
 
-/* 80267B04-80267B4C 0048+00 s=0 e=0 z=7  None .text      cM_rndFX2__Ff                                                */
+/* 80267B04-80267B4C 0048+00 s=0 e=0 z=0  None .text      cM_rndFX2__Ff                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

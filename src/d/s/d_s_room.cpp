@@ -11,10 +11,25 @@
 // Types:
 // 
 
+struct scene_class {
+};
+
 struct room_of_scene_class {
 };
 
-struct create_tag {
+struct request_of_phase_process_class {
+};
+
+struct layer_class {
+};
+
+struct dSv_zoneBit_c {
+	/* 80034CEC */ void clearRoomSwitch();
+	/* 80034CF8 */ void clearRoomItem();
+};
+
+struct dSv_info_c {
+	/* 800351A4 */ void createZone(int);
 };
 
 struct dStage_roomControl_c {
@@ -27,42 +42,14 @@ struct dStage_roomControl_c {
 	/* 8025BAAC */ void setZoneNo(int, int);
 };
 
-struct scene_class {
+struct dStage_dt_c {
+};
+
+struct dRes_info_c {
 };
 
 struct JKRHeap {
 	/* 802CE5CC */ void freeAll();
-};
-
-struct cXyz {
-};
-
-struct csXyz {
-};
-
-struct layer_class {
-};
-
-struct dStage_dt_c {
-};
-
-struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(int);
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dSv_zoneBit_c {
-	/* 80034CEC */ void clearRoomSwitch();
-	/* 80034CF8 */ void clearRoomItem();
-};
-
-struct dSv_info_c {
-	/* 800351A4 */ void createZone(int);
-};
-
-struct dRes_info_c {
 };
 
 struct dRes_control_c {
@@ -73,17 +60,30 @@ struct dRes_control_c {
 	/* 8003C5BC */ void setStageRes(char const*, JKRHeap*);
 };
 
+struct dPa_control_c {
+	struct level_c {
+		/* 8004B8E8 */ void allForceOnEventMove();
+	};
+
+};
+
 struct dEvent_manager_c {
 	/* 80046888 */ void demoInit();
 	/* 80046904 */ void roomInit(int);
 	/* 800469EC */ void roomFinish(int);
 };
 
-struct dPa_control_c {
-	struct level_c {
-		/* 8004B8E8 */ void allForceOnEventMove();
-	};
+struct dComIfG_play_c {
+	/* 8002C97C */ void getLayerNo(int);
+};
 
+struct csXyz {
+};
+
+struct create_tag {
+};
+
+struct cXyz {
 };
 
 struct JKRExpHeap {
@@ -478,7 +478,7 @@ SECTION_DATA static void* l_dScnRoom_Method[5] = {
 	(void*)dScnRoom_Draw__FP19room_of_scene_class,
 };
 
-/* 803C3288-803C32B0 0028+00 s=0 e=0 z=1  None .data      g_profile_ROOM_SCENE                                         */
+/* 803C3288-803C32B0 0028+00 s=0 e=0 z=0  None .data      g_profile_ROOM_SCENE                                         */
 SECTION_DATA void* g_profile_ROOM_SCENE[10] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0000FFFD,

@@ -22,6 +22,13 @@ struct dMsgScrnArrow_c {
 	/* 8023C010 */ void dotAnimeMove();
 };
 
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+};
+
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
@@ -35,11 +42,8 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-struct JKRExpHeap {
-};
-
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
 };
 
 struct CPaneMgrAlpha {
@@ -48,12 +52,8 @@ struct CPaneMgrAlpha {
 	/* 8025564C */ void isVisible();
 };
 
-struct JKRFileLoader {
-	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
-};
-
-struct J2DAnmLoaderDataBase {
-	/* 80308A6C */ void load(void const*);
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 };
 
 // 

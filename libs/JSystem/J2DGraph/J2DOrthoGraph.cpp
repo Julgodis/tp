@@ -11,6 +11,12 @@
 // Types:
 // 
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -35,12 +41,6 @@ struct J2DOrthoGraph {
 	/* 802E9840 */ void setLookat();
 	/* 802E987C */ void scissorBounds(JGeometry::TBox2<f32>*, JGeometry::TBox2<f32> const*);
 	/* 802E9C88 */ bool getGrafType() const;
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
 };
 
 struct J2DGrafContext {

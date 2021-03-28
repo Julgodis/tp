@@ -11,69 +11,14 @@
 // Types:
 // 
 
-struct dMeter_menuHIO_c {
-	/* 801FE330 */ dMeter_menuHIO_c();
-	/* 8020123C */ ~dMeter_menuHIO_c();
-};
-
-struct dMeter_drawCollectHIO_c {
-	/* 801FE348 */ dMeter_drawCollectHIO_c();
-	/* 80200FE0 */ ~dMeter_drawCollectHIO_c();
-};
-
-struct dMeter_drawOptionHIO_c {
-	/* 801FE4EC */ dMeter_drawOptionHIO_c();
-	/* 80200F98 */ ~dMeter_drawOptionHIO_c();
-};
-
-struct dMeter_drawLetterHIO_c {
-	/* 801FE5CC */ dMeter_drawLetterHIO_c();
-	/* 80200F50 */ ~dMeter_drawLetterHIO_c();
-};
-
-struct dMeter_drawFishingHIO_c {
-	/* 801FE730 */ dMeter_drawFishingHIO_c();
-	/* 80200F08 */ ~dMeter_drawFishingHIO_c();
-};
-
-struct dMeter_drawInsectHIO_c {
-	/* 801FE8DC */ dMeter_drawInsectHIO_c();
-	/* 80200EC0 */ ~dMeter_drawInsectHIO_c();
-};
-
-struct dMeter_drawCalibrationHIO_c {
-	/* 801FE954 */ dMeter_drawCalibrationHIO_c();
-	/* 80200E78 */ ~dMeter_drawCalibrationHIO_c();
-};
-
-struct dMeter_drawSkillHIO_c {
-	/* 801FE990 */ dMeter_drawSkillHIO_c();
-	/* 80200E30 */ ~dMeter_drawSkillHIO_c();
-};
-
-struct dMeter_drawEmpButtonHIO_c {
-	/* 801FEAF0 */ dMeter_drawEmpButtonHIO_c();
-	/* 80200DA0 */ ~dMeter_drawEmpButtonHIO_c();
-};
-
-struct dMeter_drawMiniGameHIO_c {
-	/* 801FEFF0 */ dMeter_drawMiniGameHIO_c();
-	/* 80200DE8 */ ~dMeter_drawMiniGameHIO_c();
-};
-
-struct dMeter_drawLightDropHIO_c {
-	/* 801FF31C */ dMeter_drawLightDropHIO_c();
-	/* 80200D58 */ ~dMeter_drawLightDropHIO_c();
-};
-
-struct dMeter_drawHIO_c {
-	/* 801FF5B8 */ dMeter_drawHIO_c();
-	/* 80201128 */ ~dMeter_drawHIO_c();
-};
-
 struct dMeter_ringHIO_c {
 	/* 802001AC */ dMeter_ringHIO_c();
 	/* 802010E0 */ ~dMeter_ringHIO_c();
+};
+
+struct dMeter_menuHIO_c {
+	/* 801FE330 */ dMeter_menuHIO_c();
+	/* 8020123C */ ~dMeter_menuHIO_c();
 };
 
 struct dMeter_mapIconHIO_c {
@@ -88,6 +33,61 @@ struct dMeter_fmapHIO_c {
 
 	/* 802006C8 */ dMeter_fmapHIO_c();
 	/* 80200BCC */ ~dMeter_fmapHIO_c();
+};
+
+struct dMeter_drawSkillHIO_c {
+	/* 801FE990 */ dMeter_drawSkillHIO_c();
+	/* 80200E30 */ ~dMeter_drawSkillHIO_c();
+};
+
+struct dMeter_drawOptionHIO_c {
+	/* 801FE4EC */ dMeter_drawOptionHIO_c();
+	/* 80200F98 */ ~dMeter_drawOptionHIO_c();
+};
+
+struct dMeter_drawMiniGameHIO_c {
+	/* 801FEFF0 */ dMeter_drawMiniGameHIO_c();
+	/* 80200DE8 */ ~dMeter_drawMiniGameHIO_c();
+};
+
+struct dMeter_drawLightDropHIO_c {
+	/* 801FF31C */ dMeter_drawLightDropHIO_c();
+	/* 80200D58 */ ~dMeter_drawLightDropHIO_c();
+};
+
+struct dMeter_drawLetterHIO_c {
+	/* 801FE5CC */ dMeter_drawLetterHIO_c();
+	/* 80200F50 */ ~dMeter_drawLetterHIO_c();
+};
+
+struct dMeter_drawInsectHIO_c {
+	/* 801FE8DC */ dMeter_drawInsectHIO_c();
+	/* 80200EC0 */ ~dMeter_drawInsectHIO_c();
+};
+
+struct dMeter_drawHIO_c {
+	/* 801FF5B8 */ dMeter_drawHIO_c();
+	/* 80201128 */ ~dMeter_drawHIO_c();
+};
+
+struct dMeter_drawFishingHIO_c {
+	/* 801FE730 */ dMeter_drawFishingHIO_c();
+	/* 80200F08 */ ~dMeter_drawFishingHIO_c();
+};
+
+struct dMeter_drawEmpButtonHIO_c {
+	/* 801FEAF0 */ dMeter_drawEmpButtonHIO_c();
+	/* 80200DA0 */ ~dMeter_drawEmpButtonHIO_c();
+};
+
+struct dMeter_drawCollectHIO_c {
+	/* 801FE348 */ dMeter_drawCollectHIO_c();
+	/* 80200FE0 */ ~dMeter_drawCollectHIO_c();
+};
+
+struct dMeter_drawCalibrationHIO_c {
+	/* 801FE954 */ dMeter_drawCalibrationHIO_c();
+	/* 80200E78 */ ~dMeter_drawCalibrationHIO_c();
 };
 
 struct dMeter_cursorHIO_c {
@@ -1290,7 +1290,7 @@ u8 g_fmapHIO[1188];
 /* 80430104-80430110 000C+00 s=1 e=0 z=0  None .bss       @3770                                                        */
 static u8 lit_3770[12];
 
-/* 80430110-80430158 0044+04 s=1 e=6 z=1  None .bss       g_cursorHIO                                                  */
+/* 80430110-80430158 0044+04 s=1 e=6 z=0  None .bss       g_cursorHIO                                                  */
 u8 g_cursorHIO[68 + 4 /* padding */];
 
 /* 804510B0-804510B8 0008+00 s=1 e=1 z=0  None .sbss      g_menuHIO                                                    */

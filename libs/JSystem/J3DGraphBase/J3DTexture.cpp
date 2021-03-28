@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct ResTIMG {
+struct _GXTexMapID {
 };
 
-struct _GXTexMapID {
+struct ResTIMG {
 };
 
 struct J3DTexture {

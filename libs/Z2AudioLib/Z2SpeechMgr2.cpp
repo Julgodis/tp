@@ -11,6 +11,28 @@
 // Types:
 // 
 
+struct JAISoundHandle {
+	/* 802A2184 */ void releaseSound();
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
+struct JAISoundID {
+};
+
+struct Z2SpeechStarter {
+	/* 802CBCEC */ ~Z2SpeechStarter();
+	/* 802CCFB8 */ Z2SpeechStarter();
+	/* 802CCFF8 */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*, u32, f32, f32, f32, f32, f32, u32);
+};
+
 struct Vec {
 };
 
@@ -25,44 +47,6 @@ struct Z2SpeechMgr2 {
 	/* 802CC9D0 */ void framework();
 	/* 802CCA18 */ void playOneShotVoice(u8, u16, Vec*, s8);
 	/* 802CCF88 */ void isMidnaSpeak();
-};
-
-struct JAISoundHandle {
-	/* 802A2184 */ void releaseSound();
-};
-
-struct JAISoundID {
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
-
-};
-
-struct Z2SpeechStarter {
-	/* 802CBCEC */ ~Z2SpeechStarter();
-	/* 802CCFB8 */ Z2SpeechStarter();
-	/* 802CCFF8 */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*, u32, f32, f32, f32, f32, f32, u32);
-};
-
-struct JAISound {
-	/* 802A2598 */ void stop();
-};
-
-struct JAISoundParamsMove {
-	/* 802A2DB4 */ void moveVolume(f32, u32);
-	/* 802A2E0C */ void movePitch(f32, u32);
-	/* 802A2E64 */ void moveFxMix(f32, u32);
-	/* 802A2EBC */ void movePan(f32, u32);
-	/* 802A2F14 */ void moveDolby(f32, u32);
-};
-
-struct JAISoundStarter {
-	/* 802A2F88 */ ~JAISoundStarter();
 };
 
 struct Z2SoundStarter {
@@ -84,6 +68,22 @@ struct JMath {
 		/* 80339AE4 */ TRandom_fast_(u32);
 	};
 
+};
+
+struct JAISoundStarter {
+	/* 802A2F88 */ ~JAISoundStarter();
+};
+
+struct JAISoundParamsMove {
+	/* 802A2DB4 */ void moveVolume(f32, u32);
+	/* 802A2E0C */ void movePitch(f32, u32);
+	/* 802A2E64 */ void moveFxMix(f32, u32);
+	/* 802A2EBC */ void movePan(f32, u32);
+	/* 802A2F14 */ void moveDolby(f32, u32);
+};
+
+struct JAISound {
+	/* 802A2598 */ void stop();
 };
 
 // 

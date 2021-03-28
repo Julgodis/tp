@@ -11,6 +11,94 @@
 // Types:
 // 
 
+struct msg_class {
+};
+
+struct dSv_player_status_a_c {
+	/* 80032A5C */ void getSelectItemIndex(int) const;
+	/* 80032AA8 */ void getRupeeMax() const;
+};
+
+struct dSv_player_item_record_c {
+	/* 80033F6C */ void setBombNum(u8, u8);
+	/* 80033F7C */ void getBombNum(u8) const;
+	/* 80034030 */ void getBottleNum(u8) const;
+};
+
+struct dSv_player_item_max_c {
+	/* 800340F8 */ void getBombNum(u8) const;
+};
+
+struct dSv_player_item_c {
+	/* 80032FB8 */ void setItem(int, u8);
+	/* 80033030 */ void getItem(int, bool) const;
+};
+
+struct dSv_player_collect_c {
+	/* 8003422C */ void onCollectCrystal(u8);
+	/* 8003424C */ void isCollectCrystal(u8) const;
+	/* 80034270 */ void onCollectMirror(u8);
+	/* 80034290 */ void isCollectMirror(u8) const;
+};
+
+struct dSv_light_drop_c {
+	/* 80034340 */ void getLightDropNum(u8) const;
+	/* 8003439C */ void isLightDropGetFlag(u8) const;
+};
+
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct dScope_c {
+	/* 80193690 */ dScope_c(u8);
+};
+
+struct dMw_HIO_c {
+	/* 801F9E14 */ bool getBombFlag();
+	/* 801F9E1C */ bool getArrowFlag();
+	/* 801F9E24 */ bool getPachinkoFlag();
+};
+
+struct dMsgObject_c {
+	/* 802371E4 */ void isPlaceMessage();
+	/* 8023822C */ void getStatus();
+};
+
+struct dMeterString_c {
+	/* 8020ED60 */ dMeterString_c(int);
+	/* 8020F5A4 */ void createString(int);
+};
+
+struct J2DScreen {
+};
+
+struct dMeterMap_c {
+	/* 8020D650 */ void isEnableDispMapAndMapDispSizeTypeNo();
+	/* 8020D75C */ void getMapDispEdgeTop();
+	/* 8020D8F8 */ void setMapAlpha(u8);
+	/* 8020D948 */ dMeterMap_c(J2DScreen*);
+	/* 8020DCE4 */ void _move(u32);
+	/* 8020DF1C */ void _draw();
+	/* 8020E754 */ void meter_map_move(u32);
+};
+
+struct dMeterHakusha_c {
+	/* 8020C320 */ dMeterHakusha_c(void*);
+};
+
+struct dMeterHaihai_c {
+	/* 8020AE8C */ dMeterHaihai_c(u8);
+};
+
+struct dMeterButton_c {
+	/* 80201328 */ dMeterButton_c();
+	/* 80201404 */ void _execute(u32, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool);
+	/* 80209474 */ void isClose();
+	/* 802095C0 */ void setString(char*, u8, u8, u8);
+	/* 80209CEC */ void hideAll();
+};
+
 struct dMeter2_c {
 	/* 8021EA14 */ void _create();
 	/* 8021F128 */ void _execute();
@@ -58,114 +146,13 @@ struct dMeter2_c {
 	/* 80225A64 */ void isPachinkoEquip();
 };
 
-struct msg_class {
-};
-
-struct JKRHeap {
-	/* 802CE5CC */ void freeAll();
-	/* 802CE784 */ void getTotalFreeSize();
+struct dMeter2Info_c {
+	/* 8021C1DC */ void isFloatingMessageVisible();
+	/* 8021C950 */ void isDirectUseItem(int);
+	/* 8021DCE0 */ void decHotSpringTimer();
 };
 
 struct JKRExpHeap {
-};
-
-struct dComIfG_play_c {
-	/* 8002B36C */ void setItemBombNumCount(u8, s16);
-	/* 8002B384 */ void getItemBombNumCount(u8);
-	/* 8002B394 */ void clearItemBombNumCount(u8);
-	/* 8002C97C */ void getLayerNo(int);
-	/* 8002CBBC */ void getTimerMode();
-};
-
-struct dSv_player_status_a_c {
-	/* 80032A5C */ void getSelectItemIndex(int) const;
-	/* 80032AA8 */ void getRupeeMax() const;
-};
-
-struct dSv_player_item_c {
-	/* 80032FB8 */ void setItem(int, u8);
-	/* 80033030 */ void getItem(int, bool) const;
-};
-
-struct dSv_player_item_record_c {
-	/* 80033F6C */ void setBombNum(u8, u8);
-	/* 80033F7C */ void getBombNum(u8) const;
-	/* 80034030 */ void getBottleNum(u8) const;
-};
-
-struct dSv_player_item_max_c {
-	/* 800340F8 */ void getBombNum(u8) const;
-};
-
-struct dSv_player_collect_c {
-	/* 8003422C */ void onCollectCrystal(u8);
-	/* 8003424C */ void isCollectCrystal(u8) const;
-	/* 80034270 */ void onCollectMirror(u8);
-	/* 80034290 */ void isCollectMirror(u8) const;
-};
-
-struct dSv_light_drop_c {
-	/* 80034340 */ void getLightDropNum(u8) const;
-	/* 8003439C */ void isLightDropGetFlag(u8) const;
-};
-
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
-};
-
-struct dDlst_base_c {
-};
-
-struct dDlst_list_c {
-	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
-};
-
-struct dCamera_c {
-	/* 80174EA4 */ bool CalcSubjectAngle(s16*, s16*);
-};
-
-struct dScope_c {
-	/* 80193690 */ dScope_c(u8);
-};
-
-struct dMw_HIO_c {
-	/* 801F9E14 */ bool getBombFlag();
-	/* 801F9E1C */ bool getArrowFlag();
-	/* 801F9E24 */ bool getPachinkoFlag();
-};
-
-struct dMeterButton_c {
-	/* 80201328 */ dMeterButton_c();
-	/* 80201404 */ void _execute(u32, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool);
-	/* 80209474 */ void isClose();
-	/* 802095C0 */ void setString(char*, u8, u8, u8);
-	/* 80209CEC */ void hideAll();
-};
-
-struct dMeterHaihai_c {
-	/* 8020AE8C */ dMeterHaihai_c(u8);
-};
-
-struct dMeterHakusha_c {
-	/* 8020C320 */ dMeterHakusha_c(void*);
-};
-
-struct J2DScreen {
-};
-
-struct dMeterMap_c {
-	/* 8020D650 */ void isEnableDispMapAndMapDispSizeTypeNo();
-	/* 8020D75C */ void getMapDispEdgeTop();
-	/* 8020D8F8 */ void setMapAlpha(u8);
-	/* 8020D948 */ dMeterMap_c(J2DScreen*);
-	/* 8020DCE4 */ void _move(u32);
-	/* 8020DF1C */ void _draw();
-	/* 8020E754 */ void meter_map_move(u32);
-};
-
-struct dMeterString_c {
-	/* 8020ED60 */ dMeterString_c(int);
-	/* 8020F5A4 */ void createString(int);
 };
 
 struct dMeter2Draw_c {
@@ -232,21 +219,33 @@ struct dMeter2Draw_c {
 	/* 8021BDD0 */ void getButtonTimer();
 };
 
-struct dMeter2Info_c {
-	/* 8021C1DC */ void isFloatingMessageVisible();
-	/* 8021C950 */ void isDirectUseItem(int);
-	/* 8021DCE0 */ void decHotSpringTimer();
+struct dDlst_base_c {
 };
 
-struct dMsgObject_c {
-	/* 802371E4 */ void isPlaceMessage();
-	/* 8023822C */ void getStatus();
+struct dDlst_list_c {
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct JAISoundID {
+struct dComIfG_play_c {
+	/* 8002B36C */ void setItemBombNumCount(u8, s16);
+	/* 8002B384 */ void getItemBombNumCount(u8);
+	/* 8002B394 */ void clearItemBombNumCount(u8);
+	/* 8002C97C */ void getLayerNo(int);
+	/* 8002CBBC */ void getTimerMode();
+};
+
+struct dCamera_c {
+	/* 80174EA4 */ bool CalcSubjectAngle(s16*, s16*);
+};
+
+struct Z2StatusMgr {
+	/* 802B5F70 */ void heartGaugeOn();
 };
 
 struct Vec {
+};
+
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -254,8 +253,9 @@ struct Z2SeMgr {
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-struct Z2StatusMgr {
-	/* 802B5F70 */ void heartGaugeOn();
+struct JKRHeap {
+	/* 802CE5CC */ void freeAll();
+	/* 802CE784 */ void getTotalFreeSize();
 };
 
 // 
@@ -598,7 +598,7 @@ asm void dMeter2_c::emphasisButtonDelete() {
 #pragma pop
 
 
-/* 8021F780-8021F7B0 0030+00 s=0 e=0 z=1  None .text      setLifeZero__9dMeter2_cFv                                    */
+/* 8021F780-8021F7B0 0030+00 s=0 e=0 z=0  None .text      setLifeZero__9dMeter2_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1146,7 +1146,7 @@ SECTION_DATA static void* l_dMeter2_Method[5] = {
 	(void*)dMeter2_Draw__FP9dMeter2_c,
 };
 
-/* 803BFA68-803BFA90 0028+00 s=0 e=0 z=1  None .data      g_profile_METER2                                             */
+/* 803BFA68-803BFA90 0028+00 s=0 e=0 z=0  None .data      g_profile_METER2                                             */
 SECTION_DATA void* g_profile_METER2[10] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000CFFFD,

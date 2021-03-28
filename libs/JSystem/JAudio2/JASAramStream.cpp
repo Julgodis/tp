@@ -11,16 +11,54 @@
 // Types:
 // 
 
+struct JKRHeap {
+};
+
+struct JKRExpandSwitch {
+};
+
+struct JKRAram {
+	/* 802D233C */ void mainRamToAram(u8*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
+};
+
+struct JASTaskThread {
+	/* 8028FB5C */ void sendCmdMsg(void (*)(void*), void const*, u32);
+	/* 8028FC54 */ void sendCmdMsg(void (*)(void*), void*);
+};
+
 struct JASOscillator {
 	struct Data {
 	};
 
 };
 
+template <typename A0>
+struct JASMemPool_MultiThreaded { };
+/* JASMemPool_MultiThreaded<JASChannel> */
+struct JASMemPool_MultiThreaded__template2 {
+	/* 802978DC */ ~JASMemPool_MultiThreaded__template2();
+};
+
+struct JASGenericMemPool {
+	/* 80290848 */ JASGenericMemPool();
+	/* 80290860 */ ~JASGenericMemPool();
+	/* 80290948 */ void alloc(u32);
+};
+
+struct JASDvd {
+	/* 8028FEFC */ void getThreadPointer();
+};
+
 struct JASDsp {
 	struct TChannel {
 	};
 
+};
+
+struct JASDriver {
+	/* 8029C9E8 */ void getDacRate();
+	/* 8029E1C4 */ void rejectCallback(s32 (*)(void*), void*);
+	/* 8029E274 */ void registerSubFrameCallback(s32 (*)(void*), void*);
 };
 
 struct JASChannel {
@@ -55,44 +93,6 @@ struct JASAramStream {
 	/* 802974AC */ void channelProc();
 	/* 80297658 */ void channelStart();
 	/* 80297870 */ void channelStop(u16);
-};
-
-template <typename A0>
-struct JASMemPool_MultiThreaded { };
-/* JASMemPool_MultiThreaded<JASChannel> */
-struct JASMemPool_MultiThreaded__template2 {
-	/* 802978DC */ ~JASMemPool_MultiThreaded__template2();
-};
-
-struct JASTaskThread {
-	/* 8028FB5C */ void sendCmdMsg(void (*)(void*), void const*, u32);
-	/* 8028FC54 */ void sendCmdMsg(void (*)(void*), void*);
-};
-
-struct JASDvd {
-	/* 8028FEFC */ void getThreadPointer();
-};
-
-struct JASGenericMemPool {
-	/* 80290848 */ JASGenericMemPool();
-	/* 80290860 */ ~JASGenericMemPool();
-	/* 80290948 */ void alloc(u32);
-};
-
-struct JASDriver {
-	/* 8029C9E8 */ void getDacRate();
-	/* 8029E1C4 */ void rejectCallback(s32 (*)(void*), void*);
-	/* 8029E274 */ void registerSubFrameCallback(s32 (*)(void*), void*);
-};
-
-struct JKRHeap {
-};
-
-struct JKRExpandSwitch {
-};
-
-struct JKRAram {
-	/* 802D233C */ void mainRamToAram(u8*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 };
 
 // 

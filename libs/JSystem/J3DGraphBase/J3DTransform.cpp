@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct Vec {
+};
+
 struct J3DTransformInfo {
 };
 
 struct J3DTextureSRTInfo {
-};
-
-struct Vec {
 };
 
 // 
@@ -123,7 +123,7 @@ SECTION_RODATA u8 const j3dDefaultScale[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 803A1E5C-803A1E8C 0030+00 s=0 e=8 z=7  None .rodata    j3dDefaultMtx                                                */
+/* 803A1E5C-803A1E8C 0030+00 s=0 e=8 z=0  None .rodata    j3dDefaultMtx                                                */
 SECTION_RODATA u8 const j3dDefaultMtx[48] = {
 	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -157,7 +157,7 @@ asm void J3DPSCalcInverseTranspose(f32 (* param_0)[4], f32 (* param_1)[3]) {
 #pragma pop
 
 
-/* 80311964-80311A24 00C0+00 s=0 e=2 z=2  None .text      J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f         */
+/* 80311964-80311A24 00C0+00 s=0 e=2 z=0  None .text      J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

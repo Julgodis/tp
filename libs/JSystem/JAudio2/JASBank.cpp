@@ -17,10 +17,26 @@ struct JASOscillator {
 
 };
 
+template <typename A0>
+struct JASMemPool_MultiThreaded { };
+/* JASMemPool_MultiThreaded<JASChannel> */
+struct JASMemPool_MultiThreaded__template2 {
+	/* 802978DC */ ~JASMemPool_MultiThreaded__template2();
+};
+
+struct JASGenericMemPool {
+	/* 80290848 */ JASGenericMemPool();
+	/* 80290948 */ void alloc(u32);
+};
+
 struct JASDsp {
 	struct TChannel {
 	};
 
+};
+
+struct JASDriver {
+	/* 8029C9E8 */ void getDacRate();
 };
 
 struct JASChannel {
@@ -32,22 +48,6 @@ struct JASChannel {
 struct JASBank {
 	/* 80297930 */ void noteOn(JASBank const*, int, u8, u8, u16, void (*)(u32, JASChannel*, JASDsp::TChannel*, void*), void*);
 	/* 80297C40 */ void noteOnOsc(int, u8, u8, u16, void (*)(u32, JASChannel*, JASDsp::TChannel*, void*), void*);
-};
-
-struct JASGenericMemPool {
-	/* 80290848 */ JASGenericMemPool();
-	/* 80290948 */ void alloc(u32);
-};
-
-template <typename A0>
-struct JASMemPool_MultiThreaded { };
-/* JASMemPool_MultiThreaded<JASChannel> */
-struct JASMemPool_MultiThreaded__template2 {
-	/* 802978DC */ ~JASMemPool_MultiThreaded__template2();
-};
-
-struct JASDriver {
-	/* 8029C9E8 */ void getDacRate();
 };
 
 // 

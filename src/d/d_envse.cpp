@@ -11,7 +11,14 @@
 // Types:
 // 
 
+struct dStage_roomControl_c {
+	/* 80024384 */ void getStatusRoomDt(int);
+};
+
 struct dStage_SoundInfo_c {
+};
+
+struct dPath {
 };
 
 struct dEnvSe_c {
@@ -19,18 +26,11 @@ struct dEnvSe_c {
 	/* 80183480 */ void execute();
 };
 
-struct cXyz {
-};
-
-struct dPath {
-};
-
-struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(int);
-};
-
 struct dCamera_c {
 	/* 80181E64 */ void Eye();
+};
+
+struct cXyz {
 };
 
 struct Vec {
@@ -231,7 +231,7 @@ SECTION_DATA static void* l_dEnvSe_Method[5] = {
 	(void*)dEnvSe_Draw__FP8dEnvSe_c,
 };
 
-/* 803BA81C-803BA848 0028+04 s=0 e=0 z=1  None .data      g_profile_ENVSE                                              */
+/* 803BA81C-803BA848 0028+04 s=0 e=0 z=0  None .data      g_profile_ENVSE                                              */
 SECTION_DATA void* g_profile_ENVSE[10 + 1 /* padding */] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0002FFFD,

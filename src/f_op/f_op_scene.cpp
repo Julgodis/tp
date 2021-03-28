@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct scene_class {
+struct scene_tag_class {
 };
 
-struct scene_tag_class {
+struct scene_class {
 };
 
 struct process_method_class {

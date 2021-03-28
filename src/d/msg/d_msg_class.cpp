@@ -47,21 +47,6 @@ struct jmessage_tControl {
 	/* 802299EC */ jmessage_tControl();
 };
 
-struct jmessage_tMeasureProcessor {
-	/* 80229A28 */ jmessage_tMeasureProcessor(jmessage_tReference const*);
-	/* 80229AC4 */ void do_begin(void const*, char const*);
-	/* 80229CB4 */ void do_end();
-	/* 80229E3C */ void do_character(int);
-	/* 8022A268 */ void do_tag(u32, void const*, u32);
-	/* 8022B0B0 */ void do_scale(f32);
-	/* 8022B18C */ void do_space(u32);
-	/* 8022B3EC */ void do_pageType(int);
-	/* 8022B454 */ void do_name1();
-	/* 8022B458 */ void do_rubyset(void const*, u32);
-	/* 8022B4E0 */ void push_word(char*);
-	/* 8022B5F4 */ ~jmessage_tMeasureProcessor();
-};
-
 struct Vec {
 };
 
@@ -116,11 +101,26 @@ struct jmessage_tRenderingProcessor {
 	/* 8023293C */ ~jmessage_tRenderingProcessor();
 };
 
-struct JUTFont {
+struct jmessage_tMeasureProcessor {
+	/* 80229A28 */ jmessage_tMeasureProcessor(jmessage_tReference const*);
+	/* 80229AC4 */ void do_begin(void const*, char const*);
+	/* 80229CB4 */ void do_end();
+	/* 80229E3C */ void do_character(int);
+	/* 8022A268 */ void do_tag(u32, void const*, u32);
+	/* 8022B0B0 */ void do_scale(f32);
+	/* 8022B18C */ void do_space(u32);
+	/* 8022B3EC */ void do_pageType(int);
+	/* 8022B454 */ void do_name1();
+	/* 8022B458 */ void do_rubyset(void const*, u32);
+	/* 8022B4E0 */ void push_word(char*);
+	/* 8022B5F4 */ ~jmessage_tMeasureProcessor();
 };
 
 struct COutFont_c {
 	/* 80226CF8 */ void initialize();
+};
+
+struct JUTFont {
 };
 
 struct J2DTextBox {
@@ -145,16 +145,6 @@ struct jmessage_string_tReference {
 struct jmessage_string_tControl {
 	/* 8022FB5C */ jmessage_string_tControl();
 	/* 802328DC */ ~jmessage_string_tControl();
-};
-
-struct jmessage_string_tMeasureProcessor {
-	/* 8022FB98 */ jmessage_string_tMeasureProcessor(jmessage_string_tReference const*);
-	/* 8022FBE4 */ void do_begin(void const*, char const*);
-	/* 8022FC14 */ void do_end();
-	/* 8022FC28 */ void do_character(int);
-	/* 8022FDF0 */ void do_tag(u32, void const*, u32);
-	/* 8023098C */ void do_rubyset(void const*, u32);
-	/* 80230A5C */ ~jmessage_string_tMeasureProcessor();
 };
 
 struct jmessage_string_tSequenceProcessor {
@@ -192,14 +182,14 @@ struct jmessage_string_tRenderingProcessor {
 	/* 802327F8 */ ~jmessage_string_tRenderingProcessor();
 };
 
-struct STControl {
-	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
-	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
-	/* 8003219C */ void checkTrigger();
-	/* 8003242C */ void checkLeftTrigger();
-	/* 800324A8 */ void checkRightTrigger();
-	/* 80032524 */ void checkUpTrigger();
-	/* 800325A0 */ void checkDownTrigger();
+struct jmessage_string_tMeasureProcessor {
+	/* 8022FB98 */ jmessage_string_tMeasureProcessor(jmessage_string_tReference const*);
+	/* 8022FBE4 */ void do_begin(void const*, char const*);
+	/* 8022FC14 */ void do_end();
+	/* 8022FC28 */ void do_character(int);
+	/* 8022FDF0 */ void do_tag(u32, void const*, u32);
+	/* 8023098C */ void do_rubyset(void const*, u32);
+	/* 80230A5C */ ~jmessage_string_tMeasureProcessor();
 };
 
 struct dSv_player_item_max_c {
@@ -209,6 +199,10 @@ struct dSv_player_item_max_c {
 struct dSv_event_c {
 	/* 8003498C */ void onEventBit(u16);
 	/* 80034A04 */ void getEventReg(u16) const;
+};
+
+struct dMsgUnit_c {
+	/* 80238CEC */ void setTag(int, int, char*, bool);
 };
 
 struct dMsgObject_c {
@@ -237,8 +231,26 @@ struct dMsgObject_c {
 	/* 80238638 */ void getItemEquipButton();
 };
 
-struct dMsgUnit_c {
-	/* 80238CEC */ void setTag(int, int, char*, bool);
+struct Z2SpeechMgr2 {
+	/* 802CBD88 */ void setString(u16 const*, s16, u8, u16);
+	/* 802CCA18 */ void playOneShotVoice(u8, u16, Vec*, s8);
+};
+
+struct JAISoundID {
+};
+
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct STControl {
+	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
+	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
+	/* 8003219C */ void checkTrigger();
+	/* 8003242C */ void checkLeftTrigger();
+	/* 800324A8 */ void checkRightTrigger();
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
 };
 
 struct JMessage {
@@ -285,18 +297,6 @@ struct JMessage {
 		/* 802A8BAC */ void do_tag_(u32, void const*, u32);
 	};
 
-};
-
-struct JAISoundID {
-};
-
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-};
-
-struct Z2SpeechMgr2 {
-	/* 802CBD88 */ void setString(u16 const*, s16, u8, u16);
-	/* 802CCA18 */ void playOneShotVoice(u8, u16, Vec*, s8);
 };
 
 struct J2DPane {

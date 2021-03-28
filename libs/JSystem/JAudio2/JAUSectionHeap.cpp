@@ -11,10 +11,34 @@
 // Types:
 // 
 
-struct JAISeqDataUser {
+namespace std {
+	template <typename A1>
+	struct __bitset_base { };
+	/* __bitset_base<8> */
+	struct __bitset_base__template0 {
+		/* 802A65D4 */ void set(u32, bool);
+		/* 802A6614 */ void reset(u32);
+		/* 802A6634 */ void test(u32) const;
+		/* 802A665C */ __bitset_base__template0();
+	};
+
 };
 
-struct JKRArchive {
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
+	/* 802DBE14 */ ~JSUPtrLink();
+};
+
+struct JSUPtrList {
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF14 */ void initiate();
+	/* 802DBF4C */ void append(JSUPtrLink*);
+};
+
+template <typename A0>
+struct JSULink { };
+/* JSULink<JAUBankTable> */
+struct JSULink__template0 {
 };
 
 struct JKRHeap {
@@ -25,6 +49,44 @@ struct JKRHeap {
 
 struct JKRSolidHeap {
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
+};
+
+struct JKRDisposer {
+	/* 802D147C */ JKRDisposer();
+	/* 802D14E4 */ ~JKRDisposer();
+};
+
+struct JKRArchive {
+};
+
+struct JAUStreamFileTable {
+	/* 802A7420 */ JAUStreamFileTable();
+	/* 802A742C */ void init(void const*);
+	/* 802A7478 */ void getNumFiles() const;
+	/* 802A7484 */ void getFilePath(int) const;
+};
+
+struct JAUSoundTable {
+	/* 802A7114 */ void init(void const*);
+};
+
+struct JAUSoundNameTable {
+	/* 802A73D4 */ void init(void const*);
+};
+
+struct JAUSeqDataMgr_SeqCollection {
+	/* 802A677C */ JAUSeqDataMgr_SeqCollection();
+};
+
+struct JAUSeqDataBlock {
+	/* 802A68F4 */ JAUSeqDataBlock();
+};
+
+struct JAUSeqCollection {
+	/* 802A66AC */ void init(void const*);
+};
+
+struct JAISeqDataUser {
 };
 
 struct JAISoundID {
@@ -77,72 +139,6 @@ struct JAUSection {
 	/* 802A6468 */ ~JAUSection();
 };
 
-namespace std {
-	template <typename A1>
-	struct __bitset_base { };
-	/* __bitset_base<8> */
-	struct __bitset_base__template0 {
-		/* 802A65D4 */ void set(u32, bool);
-		/* 802A6614 */ void reset(u32);
-		/* 802A6634 */ void test(u32) const;
-		/* 802A665C */ __bitset_base__template0();
-	};
-
-};
-
-struct JASResArcLoader {
-	/* 80290BD0 */ void getResSize(JKRArchive const*, u16);
-};
-
-struct JASWSParser {
-	/* 80298FD8 */ void createWaveBank(void const*, JKRHeap*);
-};
-
-struct JASBNKParser {
-	/* 80299538 */ void createBank(void const*, JKRHeap*);
-};
-
-struct JASHeap {
-};
-
-struct JASWaveArc {
-	/* 8029A4C0 */ void load(JASHeap*);
-};
-
-struct JAISeqDataMgr {
-	/* 802A17BC */ ~JAISeqDataMgr();
-};
-
-struct JAIStreamDataMgr {
-	/* 802A3AD8 */ ~JAIStreamDataMgr();
-};
-
-struct JAUBankTable {
-	/* 802A4AA0 */ void getBank(u32) const;
-};
-
-template <typename A0>
-struct JSULink { };
-/* JSULink<JAUBankTable> */
-struct JSULink__template0 {
-};
-
-struct JAUBankTableDictionary {
-	/* 802A4A80 */ void appendBankTable(JSULink<JAUBankTable>*);
-};
-
-struct JAUSeqCollection {
-	/* 802A66AC */ void init(void const*);
-};
-
-struct JAUSeqDataMgr_SeqCollection {
-	/* 802A677C */ JAUSeqDataMgr_SeqCollection();
-};
-
-struct JAUSeqDataBlock {
-	/* 802A68F4 */ JAUSeqDataBlock();
-};
-
 struct JAUDynamicSeqDataBlocks {
 	/* 802A6A58 */ JAUDynamicSeqDataBlocks();
 	/* 802A6AA0 */ void setSeqDataArchive(JKRArchive*);
@@ -152,35 +148,39 @@ struct JAUDynamicSeqDataBlocks {
 	/* 802A6D48 */ void releaseIdleDynamicSeqDataBlock(JAISeqDataUser*);
 };
 
-struct JAUSoundTable {
-	/* 802A7114 */ void init(void const*);
+struct JAUBankTable {
+	/* 802A4AA0 */ void getBank(u32) const;
 };
 
-struct JAUSoundNameTable {
-	/* 802A73D4 */ void init(void const*);
+struct JAUBankTableDictionary {
+	/* 802A4A80 */ void appendBankTable(JSULink<JAUBankTable>*);
 };
 
-struct JAUStreamFileTable {
-	/* 802A7420 */ JAUStreamFileTable();
-	/* 802A742C */ void init(void const*);
-	/* 802A7478 */ void getNumFiles() const;
-	/* 802A7484 */ void getFilePath(int) const;
+struct JASHeap {
 };
 
-struct JKRDisposer {
-	/* 802D147C */ JKRDisposer();
-	/* 802D14E4 */ ~JKRDisposer();
+struct JASWaveArc {
+	/* 8029A4C0 */ void load(JASHeap*);
 };
 
-struct JSUPtrLink {
-	/* 802DBDFC */ JSUPtrLink(void*);
-	/* 802DBE14 */ ~JSUPtrLink();
+struct JASWSParser {
+	/* 80298FD8 */ void createWaveBank(void const*, JKRHeap*);
 };
 
-struct JSUPtrList {
-	/* 802DBEAC */ ~JSUPtrList();
-	/* 802DBF14 */ void initiate();
-	/* 802DBF4C */ void append(JSUPtrLink*);
+struct JASResArcLoader {
+	/* 80290BD0 */ void getResSize(JKRArchive const*, u16);
+};
+
+struct JASBNKParser {
+	/* 80299538 */ void createBank(void const*, JKRHeap*);
+};
+
+struct JAIStreamDataMgr {
+	/* 802A3AD8 */ ~JAIStreamDataMgr();
+};
+
+struct JAISeqDataMgr {
+	/* 802A17BC */ ~JAISeqDataMgr();
 };
 
 // 

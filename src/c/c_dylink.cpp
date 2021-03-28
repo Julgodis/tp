@@ -14,30 +14,16 @@
 struct request_of_phase_process_class {
 };
 
+struct mDoDvdThd_callback_c {
+	/* 80015C74 */ void create(void* (*)(void*), void*);
+};
+
 struct cDylPhs {
 	/* 80018804 */ s32 phase_01(void*);
 	/* 8001880C */ void phase_02(s16*);
 	/* 80018844 */ bool phase_03(void*);
 	/* 8001884C */ void Link(request_of_phase_process_class*, s16);
 	/* 80018890 */ void Unlink(request_of_phase_process_class*, s16);
-};
-
-struct DynamicModuleControlBase {
-	/* 800188DC */ bool getModuleName() const;
-	/* 802621CC */ ~DynamicModuleControlBase();
-	/* 802622D0 */ void link();
-	/* 80262364 */ void unlink();
-	/* 802623EC */ void load_async();
-};
-
-struct DynamicModuleControl {
-	/* 800188E4 */ ~DynamicModuleControl();
-	/* 80262660 */ DynamicModuleControl(char const*);
-	/* 8026275C */ void initialize();
-};
-
-struct mDoDvdThd_callback_c {
-	/* 80015C74 */ void create(void* (*)(void*), void*);
 };
 
 struct JKRHeap {
@@ -56,6 +42,20 @@ struct JKRFileLoader {
 
 struct JKRFileCache {
 	/* 802D49B4 */ void mount(char const*, JKRHeap*, char const*);
+};
+
+struct DynamicModuleControlBase {
+	/* 800188DC */ bool getModuleName() const;
+	/* 802621CC */ ~DynamicModuleControlBase();
+	/* 802622D0 */ void link();
+	/* 80262364 */ void unlink();
+	/* 802623EC */ void load_async();
+};
+
+struct DynamicModuleControl {
+	/* 800188E4 */ ~DynamicModuleControl();
+	/* 80262660 */ DynamicModuleControl(char const*);
+	/* 8026275C */ void initialize();
 };
 
 // 

@@ -11,17 +11,7 @@
 // Types:
 // 
 
-struct cCcD_Obj {
-	/* 80263A48 */ void GetAc();
-};
-
-struct Z2Creature {
-};
-
 struct fopAc_ac_c {
-};
-
-struct dCcU_AtInfo {
 };
 
 struct daPy_py_c {
@@ -29,8 +19,18 @@ struct daPy_py_c {
 	/* 8015F398 */ void checkMasterSwordEquip();
 };
 
+struct dCcU_AtInfo {
+};
+
 struct dCcD_GObjInf {
 	/* 800845B0 */ void getHitSeID(u8, int);
+};
+
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
+};
+
+struct Z2Creature {
 };
 
 // 
@@ -38,21 +38,21 @@ struct dCcD_GObjInf {
 // 
 
 void pl_cut_LRC(int); // 2
-void cc_pl_cut_bit_get(); // 2
+static void cc_pl_cut_bit_get(); // 2
 static void getMapInfo(s8); // 2
 static void getHitId(cCcD_Obj*, int); // 2
 void def_se_set(Z2Creature*, cCcD_Obj*, u32, fopAc_ac_c*); // 2
 static void at_power_get(dCcU_AtInfo*); // 2
-void at_power_check(dCcU_AtInfo*); // 2
+static void at_power_check(dCcU_AtInfo*); // 2
 void cc_at_check(fopAc_ac_c*, dCcU_AtInfo*); // 2
 
 extern "C" void pl_cut_LRC__Fi(); // 1
-extern "C" void cc_pl_cut_bit_get__Fv(); // 1
+extern "C" static void cc_pl_cut_bit_get__Fv(); // 1
 extern "C" static void getMapInfo__FSc(); // 1
 extern "C" static void getHitId__FP8cCcD_Obji(); // 1
 extern "C" void def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c(); // 1
 extern "C" static void at_power_get__FP11dCcU_AtInfo(); // 1
-extern "C" void at_power_check__FP11dCcU_AtInfo(); // 1
+extern "C" static void at_power_check__FP11dCcU_AtInfo(); // 1
 extern "C" void cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo(); // 1
 extern "C" bool checkCutJumpCancelTurn__9daPy_py_cCFv(); // 1
 
@@ -101,7 +101,7 @@ SECTION_DATA static u8 plCutLRC[232] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800873B0-800873D4 0024+00 s=0 e=0 z=3  None .text      pl_cut_LRC__Fi                                               */
+/* 800873B0-800873D4 0024+00 s=0 e=0 z=0  None .text      pl_cut_LRC__Fi                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -112,11 +112,11 @@ asm void pl_cut_LRC(int param_0) {
 #pragma pop
 
 
-/* 800873D4-800874C4 00F0+00 s=1 e=0 z=14  None .text      cc_pl_cut_bit_get__Fv                                        */
+/* 800873D4-800874C4 00F0+00 s=1 e=0 z=0  None .text      cc_pl_cut_bit_get__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cc_pl_cut_bit_get() {
+asm static void cc_pl_cut_bit_get() {
 	nofralloc
 #include "asm/d/cc/d_cc_uty/cc_pl_cut_bit_get__Fv.s"
 }
@@ -145,7 +145,7 @@ asm static void getHitId(cCcD_Obj* param_0, int param_1) {
 #pragma pop
 
 
-/* 80087514-80087594 0080+00 s=0 e=0 z=47  None .text      def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c          */
+/* 80087514-80087594 0080+00 s=0 e=0 z=0  None .text      def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,11 +167,11 @@ asm static void at_power_get(dCcU_AtInfo* param_0) {
 #pragma pop
 
 
-/* 80087A58-80087C04 01AC+00 s=1 e=0 z=38  None .text      at_power_check__FP11dCcU_AtInfo                              */
+/* 80087A58-80087C04 01AC+00 s=1 e=0 z=0  None .text      at_power_check__FP11dCcU_AtInfo                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void at_power_check(dCcU_AtInfo* param_0) {
+asm static void at_power_check(dCcU_AtInfo* param_0) {
 	nofralloc
 #include "asm/d/cc/d_cc_uty/at_power_check__FP11dCcU_AtInfo.s"
 }
@@ -214,7 +214,7 @@ SECTION_SDATA2 static f32 lit_4218[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 80087C04-80088134 0530+00 s=0 e=0 z=84  None .text      cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo                    */
+/* 80087C04-80088134 0530+00 s=0 e=0 z=0  None .text      cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

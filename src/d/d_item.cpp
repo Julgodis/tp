@@ -11,13 +11,17 @@
 // Types:
 // 
 
-struct dComIfG_play_c {
-	/* 8002B36C */ void setItemBombNumCount(u8, s16);
-	/* 8002C97C */ void getLayerNo(int);
-};
-
 struct dSv_player_status_a_c {
 	/* 80032AF8 */ void isMagicFlag(u8) const;
+};
+
+struct dSv_player_item_record_c {
+	/* 80033F7C */ void getBombNum(u8) const;
+	/* 80033F8C */ void setBottleNum(u8, u8);
+};
+
+struct dSv_player_item_max_c {
+	/* 800340F8 */ void getBombNum(u8) const;
 };
 
 struct dSv_player_item_c {
@@ -39,23 +43,9 @@ struct dSv_player_get_item_c {
 	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
-struct dSv_player_item_record_c {
-	/* 80033F7C */ void getBombNum(u8) const;
-	/* 80033F8C */ void setBottleNum(u8, u8);
-};
-
-struct dSv_player_item_max_c {
-	/* 800340F8 */ void getBombNum(u8) const;
-};
-
 struct dSv_player_collect_c {
 	/* 800341E8 */ void setCollect(int, u8);
 	/* 80034208 */ void isCollect(int, u8) const;
-};
-
-struct dSv_light_drop_c {
-	/* 80034368 */ void onLightDropGetFlag(u8);
-	/* 8003439C */ void isLightDropGetFlag(u8) const;
 };
 
 struct dSv_memBit_c {
@@ -63,12 +53,22 @@ struct dSv_memBit_c {
 	/* 80034934 */ void isDungeonItem(int) const;
 };
 
-struct dSv_event_c {
-	/* 8003498C */ void onEventBit(u16);
+struct dSv_light_drop_c {
+	/* 80034368 */ void onLightDropGetFlag(u8);
+	/* 8003439C */ void isLightDropGetFlag(u8) const;
 };
 
 struct dSv_info_c {
 	/* 80035200 */ void onSwitch(int, int);
+};
+
+struct dSv_event_c {
+	/* 8003498C */ void onEventBit(u16);
+};
+
+struct dComIfG_play_c {
+	/* 8002B36C */ void setItemBombNumCount(u8, s16);
+	/* 8002C97C */ void getLayerNo(int);
 };
 
 // 
@@ -1167,7 +1167,7 @@ SECTION_DATA static void* item_func_ptr[256] = {
 	(void*)item_func_noentry__Fv,
 };
 
-/* 80097E8C-80097EE0 0054+00 s=0 e=4 z=7  None .text      execItemGet__FUc                                             */
+/* 80097E8C-80097EE0 0054+00 s=0 e=4 z=0  None .text      execItemGet__FUc                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1439,7 +1439,7 @@ SECTION_DATA static void* item_getcheck_func_ptr[256] = {
 	(void*)item_getcheck_func_noentry__Fv,
 };
 
-/* 80097EE0-80097F2C 004C+00 s=1 e=14 z=16  None .text      checkItemGet__FUci                                           */
+/* 80097EE0-80097F2C 004C+00 s=1 e=14 z=0  None .text      checkItemGet__FUci                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5082,7 +5082,7 @@ asm static void isArrow(u8 param_0) {
 #pragma pop
 
 
-/* 8009B708-8009B77C 0074+00 s=0 e=4 z=1  None .text      isBottleItem__FUc                                            */
+/* 8009B708-8009B77C 0074+00 s=0 e=4 z=0  None .text      isBottleItem__FUc                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5104,7 +5104,7 @@ asm void isHeart(u8 param_0) {
 #pragma pop
 
 
-/* 8009B79C-8009B7C4 0028+00 s=0 e=0 z=1  None .text      isInsect__FUc                                                */
+/* 8009B79C-8009B7C4 0028+00 s=0 e=0 z=0  None .text      isInsect__FUc                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

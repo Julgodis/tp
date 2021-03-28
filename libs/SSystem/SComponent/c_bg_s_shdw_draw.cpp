@@ -14,10 +14,14 @@
 struct cXyz {
 };
 
-struct cBgD_Vtx_t {
+struct cM3dGPla {
 };
 
-struct cM3dGPla {
+struct cM3dGAab {
+	/* 8026EC54 */ void Set(cXyz const*, cXyz const*);
+};
+
+struct cBgD_Vtx_t {
 };
 
 struct cBgS_ShdwDraw {
@@ -30,10 +34,6 @@ struct cBgS_ShdwDraw {
 struct cBgS_Chk {
 	/* 80267B4C */ cBgS_Chk();
 	/* 80267B70 */ ~cBgS_Chk();
-};
-
-struct cM3dGAab {
-	/* 8026EC54 */ void Set(cXyz const*, cXyz const*);
 };
 
 // 

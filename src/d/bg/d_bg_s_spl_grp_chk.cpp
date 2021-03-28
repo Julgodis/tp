@@ -28,15 +28,15 @@ struct dBgS_Chk {
 	/* 80077564 */ void GetGrpPassChkInfo();
 };
 
-struct cBgS_Chk {
-	/* 80267B4C */ cBgS_Chk();
-	/* 80267B70 */ ~cBgS_Chk();
-};
-
 struct cBgS_PolyInfo {
 	/* 80268074 */ cBgS_PolyInfo();
 	/* 802680B0 */ ~cBgS_PolyInfo();
 	/* 80268120 */ void ClearPi();
+};
+
+struct cBgS_Chk {
+	/* 80267B4C */ cBgS_Chk();
+	/* 80267B70 */ ~cBgS_Chk();
 };
 
 // 
@@ -73,7 +73,7 @@ extern "C" void __dl__FPv(); // 1
 // Declarations:
 // 
 
-/* 80078B90-80078BB0 0020+00 s=0 e=2 z=3  None .text      Set__14dBgS_SplGrpChkFR4cXyzf                                */
+/* 80078B90-80078BB0 0020+00 s=0 e=2 z=0  None .text      Set__14dBgS_SplGrpChkFR4cXyzf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -120,7 +120,7 @@ asm dBgS_SplGrpChk::dBgS_SplGrpChk() {
 #pragma pop
 
 
-/* 80078C78-80078D0C 0094+00 s=4 e=2 z=4  None .text      __dt__14dBgS_SplGrpChkFv                                     */
+/* 80078C78-80078D0C 0094+00 s=4 e=2 z=0  None .text      __dt__14dBgS_SplGrpChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

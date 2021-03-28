@@ -14,6 +14,12 @@
 struct Vec {
 };
 
+struct JStage {
+	struct TObject {
+	};
+
+};
+
 namespace JStudio {
 	struct data {
 		struct TEOperationData {
@@ -51,6 +57,10 @@ namespace JStudio {
 
 };
 
+struct JStudio_JStage {
+	/* 8028A290 */ void transform_toGlobalFromLocal(f32 (* )[4], JStudio::TControl::TTransform_position const&, JStage::TObject const*, u32);
+};
+
 struct JStudio_JAudio2 {
 	struct TCreateObject {
 	};
@@ -85,40 +95,6 @@ struct JStudio_JAudio2 {
 
 };
 
-struct JStage {
-	struct TObject {
-	};
-
-};
-
-struct JStudio_JStage {
-	/* 8028A290 */ void transform_toGlobalFromLocal(f32 (* )[4], JStudio::TControl::TTransform_position const&, JStage::TObject const*, u32);
-};
-
-struct JAISoundHandle {
-	/* 802A2184 */ void releaseSound();
-};
-
-struct JAISoundStatus_ {
-	/* 802A2220 */ void lockWhenPrepared();
-	/* 802A2244 */ void unlockIfLocked();
-};
-
-struct JAISound {
-	/* 802A2598 */ void stop();
-	/* 802A24DC */ void stop(u32);
-};
-
-struct JAISoundParamsMove {
-	/* 802A2DB4 */ void moveVolume(f32, u32);
-	/* 802A2E0C */ void movePitch(f32, u32);
-	/* 802A2E64 */ void moveFxMix(f32, u32);
-	/* 802A2EBC */ void movePan(f32, u32);
-};
-
-struct JAISoundID {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -128,8 +104,32 @@ struct JGeometry {
 
 };
 
+struct JAISoundStatus_ {
+	/* 802A2220 */ void lockWhenPrepared();
+	/* 802A2244 */ void unlockIfLocked();
+};
+
+struct JAISoundHandle {
+	/* 802A2184 */ void releaseSound();
+};
+
+struct JAISoundID {
+};
+
 struct JAISoundStarter {
 	/* 802A2FEC */ void startLevelSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
+};
+
+struct JAISoundParamsMove {
+	/* 802A2DB4 */ void moveVolume(f32, u32);
+	/* 802A2E0C */ void movePitch(f32, u32);
+	/* 802A2E64 */ void moveFxMix(f32, u32);
+	/* 802A2EBC */ void movePan(f32, u32);
+};
+
+struct JAISound {
+	/* 802A2598 */ void stop();
+	/* 802A24DC */ void stop(u32);
 };
 
 // 

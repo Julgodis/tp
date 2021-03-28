@@ -80,7 +80,7 @@ asm cM2dGCir::~cM2dGCir() {
 #pragma pop
 
 
-/* 8026EF18-8026EF74 005C+00 s=1 e=4 z=386  None .text      __dt__8cM3dGCirFv                                            */
+/* 8026EF18-8026EF74 005C+00 s=1 e=4 z=0  None .text      __dt__8cM3dGCirFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

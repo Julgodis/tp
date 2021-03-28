@@ -11,17 +11,13 @@
 // Types:
 // 
 
-struct JUTConsole {
-	/* 802E7C38 */ void print(char const*);
-	/* 802E7F7C */ void dumpToTerminal(unsigned int);
-};
-
 struct dRes_control_c {
 	/* 8003C638 */ void dump();
 };
 
-struct DynamicModuleControlBase {
-	/* 80262470 */ void dump();
+struct JUTConsole {
+	/* 802E7C38 */ void print(char const*);
+	/* 802E7F7C */ void dumpToTerminal(unsigned int);
 };
 
 struct JKRHeap {
@@ -31,6 +27,10 @@ struct JKRHeap {
 
 struct JKRAramHeap {
 	/* 802D3218 */ void dump();
+};
+
+struct DynamicModuleControlBase {
+	/* 80262470 */ void dump();
 };
 
 // 
@@ -202,9 +202,9 @@ asm void exception_addition(JUTConsole* param_0) {
 
 
 /* ############################################################################################## */
-/* 80450C98-80450C9C 0004+00 s=0 e=0 z=50  None .sbss      None                                                         */
+/* 80450C98-80450C9C 0004+00 s=0 e=0 z=0  None .sbss      None                                                         */
 u8 struct_80450C98[4];
 
-/* 80450C9C-80450CA0 0004+00 s=0 e=0 z=6  None .sbss      None                                                         */
+/* 80450C9C-80450CA0 0004+00 s=0 e=0 z=0  None .sbss      None                                                         */
 u8 struct_80450C9C[4];
 

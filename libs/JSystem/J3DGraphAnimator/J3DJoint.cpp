@@ -14,19 +14,15 @@
 struct Vec {
 };
 
-struct J3DMtxCalcJ3DSysInitBasic {
-	/* 8032EC28 */ void init(Vec const&, f32 const (& )[3][4]);
+struct J3DTransformInfo {
 };
 
 struct J3DMtxCalcJ3DSysInitMaya {
 	/* 8032ECAC */ void init(Vec const&, f32 const (& )[3][4]);
 };
 
-struct J3DTransformInfo {
-};
-
-struct J3DMtxCalcCalcTransformBasic {
-	/* 8032ED30 */ void calcTransform(J3DTransformInfo const&);
+struct J3DMtxCalcJ3DSysInitBasic {
+	/* 8032EC28 */ void init(Vec const&, f32 const (& )[3][4]);
 };
 
 struct J3DMtxCalcCalcTransformSoftimage {
@@ -37,15 +33,19 @@ struct J3DMtxCalcCalcTransformMaya {
 	/* 8032EFBC */ void calcTransform(J3DTransformInfo const&);
 };
 
+struct J3DMtxCalcCalcTransformBasic {
+	/* 8032ED30 */ void calcTransform(J3DTransformInfo const&);
+};
+
+struct J3DMaterial {
+	/* 80316AB0 */ void setCurrentMtx();
+};
+
 struct J3DJoint {
 	/* 8032F13C */ void appendChild(J3DJoint*);
 	/* 8032F170 */ J3DJoint();
 	/* 8032F254 */ void entryIn();
 	/* 8032F3F8 */ void recursiveCalc();
-};
-
-struct J3DMaterial {
-	/* 80316AB0 */ void setCurrentMtx();
 };
 
 // 
@@ -116,7 +116,7 @@ SECTION_RODATA static u8 const lit_893[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 8032ECAC-8032ED30 0084+00 s=0 e=2 z=2  None .text      init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf             */
+/* 8032ECAC-8032ED30 0084+00 s=0 e=2 z=0  None .text      init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -131,7 +131,7 @@ asm void J3DMtxCalcJ3DSysInitMaya::init(Vec const& param_0, f32 const (& param_1
 /* 804515F0-804515F4 0004+00 s=3 e=1 z=0  None .sbss      mMtxBuffer__10J3DMtxCalc                                     */
 u8 mMtxBuffer__10J3DMtxCalc[4];
 
-/* 804515F4-804515F8 0004+00 s=4 e=9 z=2  None .sbss      mJoint__10J3DMtxCalc                                         */
+/* 804515F4-804515F8 0004+00 s=4 e=9 z=0  None .sbss      mJoint__10J3DMtxCalc                                         */
 u8 mJoint__10J3DMtxCalc[4];
 
 /* 804564A0-804564A4 0004+00 s=3 e=0 z=0  None .sdata2    @922                                                         */
@@ -159,7 +159,7 @@ asm void J3DMtxCalcCalcTransformSoftimage::calcTransform(J3DTransformInfo const&
 #pragma pop
 
 
-/* 8032EFBC-8032F13C 0180+00 s=0 e=6 z=2  None .text      calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo */
+/* 8032EFBC-8032F13C 0180+00 s=0 e=6 z=0  None .text      calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

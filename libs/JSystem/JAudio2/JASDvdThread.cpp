@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct JASDvd {
-	/* 8028FEFC */ void getThreadPointer();
-	/* 8028FF04 */ void createThread(s32, int, u32);
+struct JKRHeap {
 };
 
 struct JASTaskThread {
 	/* 8028F6C4 */ JASTaskThread(int, int, u32);
 };
 
-struct JKRHeap {
+struct JASDvd {
+	/* 8028FEFC */ void getThreadPointer();
+	/* 8028FF04 */ void createThread(s32, int, u32);
 };
 
 // 

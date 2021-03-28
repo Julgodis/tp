@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct base_process_class {
+struct layer_class {
 };
 
-struct layer_class {
+struct base_process_class {
 };
 
 // 
@@ -63,7 +63,7 @@ asm void fpcDw_Execute(base_process_class* param_0) {
 #pragma pop
 
 
-/* 800239F4-80023A48 0054+00 s=0 e=2 z=10  None .text      fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i                         */
+/* 800239F4-80023A48 0054+00 s=0 e=2 z=0  None .text      fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

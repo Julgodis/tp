@@ -14,11 +14,11 @@
 struct JPAEmitterWorkData {
 };
 
-struct JPABaseParticle {
-};
-
 struct JPAChildShape {
 	/* 8027B038 */ JPAChildShape(u8 const*);
+};
+
+struct JPABaseParticle {
 };
 
 // 

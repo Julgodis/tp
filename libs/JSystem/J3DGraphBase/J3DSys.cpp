@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct _GXTexMapID {
+};
+
 struct _GXTexCacheSize {
 };
 
@@ -28,9 +31,6 @@ struct J3DSys {
 	/* 80310A3C */ void reinitTevStages();
 	/* 80310D44 */ void reinitIndStages();
 	/* 80310E3C */ void reinitPixelProc();
-};
-
-struct _GXTexMapID {
 };
 
 // 
@@ -136,10 +136,10 @@ extern "C" extern u32 j3dDefaultTevKColor;
 // 
 
 /* ############################################################################################## */
-/* 80434AC8-80434BE4 011C+00 s=1 e=151 z=486  None .bss       j3dSys                                                       */
+/* 80434AC8-80434BE4 011C+00 s=1 e=151 z=0  None .bss       j3dSys                                                       */
 u8 j3dSys[284];
 
-/* 80434BE4-80434C14 0030+00 s=0 e=17 z=154  None .bss       mCurrentMtx__6J3DSys                                         */
+/* 80434BE4-80434C14 0030+00 s=0 e=17 z=0  None .bss       mCurrentMtx__6J3DSys                                         */
 u8 mCurrentMtx__6J3DSys[48];
 
 /* 80434C14-80434C20 000C+00 s=0 e=6 z=0  None .bss       mCurrentS__6J3DSys                                           */
@@ -236,7 +236,7 @@ asm void J3DSys::drawInit() {
 #pragma pop
 
 
-/* 8031073C-8031079C 0060+00 s=0 e=16 z=6  None .text      reinitGX__6J3DSysFv                                          */
+/* 8031073C-8031079C 0060+00 s=0 e=16 z=0  None .text      reinitGX__6J3DSysFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

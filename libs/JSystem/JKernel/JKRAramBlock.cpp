@@ -11,19 +11,6 @@
 // Types:
 // 
 
-struct JKRAramHeap {
-};
-
-struct JKRAramBlock {
-	/* 802D3304 */ JKRAramBlock(u32, u32, u32, u8, bool);
-	/* 802D3378 */ ~JKRAramBlock();
-	/* 802D3434 */ void allocHead(u32, u8, JKRAramHeap*);
-	/* 802D34D0 */ void allocTail(u32, u8, JKRAramHeap*);
-};
-
-struct JKRHeap {
-};
-
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
@@ -32,6 +19,19 @@ struct JSUPtrLink {
 struct JSUPtrList {
 	/* 802DC094 */ void insert(JSUPtrLink*, JSUPtrLink*);
 	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
+struct JKRHeap {
+};
+
+struct JKRAramHeap {
+};
+
+struct JKRAramBlock {
+	/* 802D3304 */ JKRAramBlock(u32, u32, u32, u8, bool);
+	/* 802D3378 */ ~JKRAramBlock();
+	/* 802D3434 */ void allocHead(u32, u8, JKRAramHeap*);
+	/* 802D34D0 */ void allocTail(u32, u8, JKRAramHeap*);
 };
 
 // 

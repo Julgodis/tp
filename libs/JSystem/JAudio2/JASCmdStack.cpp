@@ -11,6 +11,15 @@
 // Types:
 // 
 
+struct JSUPtrLink {
+};
+
+struct JSUPtrList {
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF14 */ void initiate();
+	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
 struct JASPortCmd {
 	struct TPortHead {
 		/* 80291094 */ void execCommandOnce();
@@ -19,15 +28,6 @@ struct JASPortCmd {
 	};
 
 	/* 80291060 */ void execAllCommand();
-};
-
-struct JSUPtrLink {
-};
-
-struct JSUPtrList {
-	/* 802DBEAC */ ~JSUPtrList();
-	/* 802DBF14 */ void initiate();
-	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
 // 

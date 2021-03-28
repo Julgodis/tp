@@ -11,10 +11,39 @@
 // Types:
 // 
 
-struct JAISoundID {
+struct Z2StatusMgr {
+	/* 802B613C */ void menuIn();
+	/* 802B617C */ void menuOut();
+	/* 802B61BC */ void isMovieDemo();
 };
 
 struct Vec {
+};
+
+struct Z2SpeechMgr2 {
+	/* 802CCA18 */ void playOneShotVoice(u8, u16, Vec*, s8);
+};
+
+struct JAISoundHandle {
+	/* 80007838 */ ~JAISoundHandle();
+	/* 802A2184 */ void releaseSound();
+	/* 802A4AC4 */ JAISoundHandle();
+};
+
+struct Z2SoundStarter {
+	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
+};
+
+struct JAISoundID {
+};
+
+struct Z2SoundMgr {
+	/* 802AA7DC */ void stopSoundID(JAISoundID);
+	/* 802AA9E8 */ void multiVolumeSoundID(JAISoundID, f32);
+};
+
+struct Z2SeqMgr {
+	/* 802AF010 */ void bgmStart(u32, u32, s32);
 };
 
 struct Z2SeMgr {
@@ -54,58 +83,12 @@ struct Z2MultiSeMgr {
 	/* 802AEDC0 */ void getDolbyPower();
 };
 
-struct JAISoundHandle {
-	/* 80007838 */ ~JAISoundHandle();
-	/* 802A2184 */ void releaseSound();
-	/* 802A4AC4 */ JAISoundHandle();
-};
-
-struct JAISeCategoryMgr {
-	/* 8029FDE0 */ void stop(u32);
-};
-
-struct JAISound {
-	/* 802A24DC */ void stop(u32);
-};
-
-struct JAISoundHandles {
-	/* 802A2C98 */ void getHandleSoundID(JAISoundID);
-	/* 802A2CF4 */ void getFreeHandle();
-};
-
-struct JAISoundParamsMove {
-	/* 802A2DB4 */ void moveVolume(f32, u32);
-	/* 802A2E0C */ void movePitch(f32, u32);
-	/* 802A2E64 */ void moveFxMix(f32, u32);
-	/* 802A2EBC */ void movePan(f32, u32);
-	/* 802A2F14 */ void moveDolby(f32, u32);
-};
-
 struct Z2Calc {
 	struct CurveSign {
 	};
 
 	/* 802A968C */ void linearTransform(f32, f32, f32, f32, f32, bool);
 	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
-};
-
-struct Z2SoundMgr {
-	/* 802AA7DC */ void stopSoundID(JAISoundID);
-	/* 802AA9E8 */ void multiVolumeSoundID(JAISoundID, f32);
-};
-
-struct Z2SoundStarter {
-	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
-};
-
-struct Z2SeqMgr {
-	/* 802AF010 */ void bgmStart(u32, u32, s32);
-};
-
-struct Z2StatusMgr {
-	/* 802B613C */ void menuIn();
-	/* 802B617C */ void menuOut();
-	/* 802B61BC */ void isMovieDemo();
 };
 
 struct Z2Audience {
@@ -116,8 +99,25 @@ struct Z2Audience {
 	/* 802BDB44 */ void calcRelPosDolby(Vec const&, int);
 };
 
-struct Z2SpeechMgr2 {
-	/* 802CCA18 */ void playOneShotVoice(u8, u16, Vec*, s8);
+struct JAISoundParamsMove {
+	/* 802A2DB4 */ void moveVolume(f32, u32);
+	/* 802A2E0C */ void movePitch(f32, u32);
+	/* 802A2E64 */ void moveFxMix(f32, u32);
+	/* 802A2EBC */ void movePan(f32, u32);
+	/* 802A2F14 */ void moveDolby(f32, u32);
+};
+
+struct JAISoundHandles {
+	/* 802A2C98 */ void getHandleSoundID(JAISoundID);
+	/* 802A2CF4 */ void getFreeHandle();
+};
+
+struct JAISound {
+	/* 802A24DC */ void stop(u32);
+};
+
+struct JAISeCategoryMgr {
+	/* 8029FDE0 */ void stop(u32);
 };
 
 // 
@@ -404,7 +404,7 @@ SECTION_SDATA2 static u8 lit_4070[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 802AB984-802AC50C 0B88+00 s=1 e=196 z=549  None .text      seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc               */
+/* 802AB984-802AC50C 0B88+00 s=1 e=196 z=0  None .text      seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -562,7 +562,7 @@ SECTION_SDATA2 static u32 lit_4614 = 0x44160000;
 /* 8045598C-80455990 0004+00 s=1 e=0 z=0  None .sdata2    @4615                                                        */
 SECTION_SDATA2 static u32 lit_4615 = 0x42B40000;
 
-/* 802AC50C-802AD8B0 13A4+00 s=3 e=19 z=199  None .text      seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc          */
+/* 802AC50C-802AD8B0 13A4+00 s=3 e=19 z=0  None .text      seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -573,7 +573,7 @@ asm void Z2SeMgr::seStartLevel(JAISoundID param_0, Vec const* param_1, u32 param
 #pragma pop
 
 
-/* 802AD8B0-802AD94C 009C+00 s=1 e=0 z=4  None .text      seStop__7Z2SeMgrF10JAISoundIDUl                              */
+/* 802AD8B0-802AD94C 009C+00 s=1 e=0 z=0  None .text      seStop__7Z2SeMgrF10JAISoundIDUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -595,7 +595,7 @@ asm void Z2SeMgr::seStopAll(u32 param_0) {
 #pragma pop
 
 
-/* 802AD9F4-802ADB14 0120+00 s=3 e=5 z=1  None .text      seMoveVolumeAll__7Z2SeMgrFfUl                                */
+/* 802AD9F4-802ADB14 0120+00 s=3 e=5 z=0  None .text      seMoveVolumeAll__7Z2SeMgrFfUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

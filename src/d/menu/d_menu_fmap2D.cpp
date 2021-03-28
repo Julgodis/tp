@@ -11,10 +11,110 @@
 // Types:
 // 
 
-struct ResTIMG {
+struct dMenu_Fmap_region_data_c {
+};
+
+struct renderingFmap_c {
+	/* 801CE3C0 */ void getPointStagePathInnerNo(dMenu_Fmap_region_data_c*, f32, f32, int, int*, int*);
+};
+
+struct dSv_player_field_last_stay_info_c {
+	/* 80032E78 */ void isRegionBit(int) const;
+};
+
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct J2DOrthoGraph {
 };
 
 struct STControl {
+};
+
+struct dMsgScrnExplain_c {
+	/* 8023CC88 */ dMsgScrnExplain_c(STControl*, u8, bool, u8);
+	/* 8023D918 */ void draw(J2DOrthoGraph*);
+};
+
+struct dMeterHaihai_c {
+	/* 8020AE8C */ dMeterHaihai_c(u8);
+	/* 8020B518 */ void drawHaihai(u8);
+};
+
+struct JMSMesgEntry_c {
+};
+
+struct dMeter2Info_c {
+	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
+};
+
+struct J2DGrafContext {
+	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
+};
+
+struct JKRArchive {
+};
+
+struct J2DScreen {
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+	/* 802F9690 */ void animation();
+};
+
+struct JKRExpHeap {
+};
+
+struct CPaneMgrAlpha {
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 80255608 */ void hide();
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255828 */ void getAlphaRate();
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct dMenu_Fmap2DTop_c {
+	/* 801D5BD0 */ dMenu_Fmap2DTop_c(JKRExpHeap*, STControl*);
+	/* 801D6700 */ ~dMenu_Fmap2DTop_c();
+	/* 801D6A44 */ void _execute();
+	/* 801D6C44 */ void setAllAlphaRate(f32, bool);
+	/* 801D6C98 */ void draw();
+	/* 801D6DF8 */ void btkAnimeLoop(J2DAnmTextureSRTKey*, f32);
+	/* 801D6EDC */ void setMoyaAlpha(u8);
+	/* 801D6F38 */ void setTitleNameString(u32);
+	/* 801D7010 */ void setAreaNameString(u32);
+	/* 801D70E8 */ void setZButtonString(u32, u8);
+	/* 801D7210 */ void setBButtonString(u32, u8);
+	/* 801D72D4 */ void setAButtonString(u32, u8);
+	/* 801D7398 */ void setCrossLRString(u32);
+	/* 801D74EC */ void set3DStickString(u32);
+	/* 801D7640 */ void createExplain(JKRExpHeap*, STControl*);
+	/* 801D76C0 */ void deleteExplain();
+	/* 801D7714 */ void setArrowAlphaRatio(u8, f32);
+	/* 801D77C4 */ void setAlphaAnimeMin(CPaneMgrAlpha*);
+	/* 801D7858 */ void setAlphaAnimeMid(CPaneMgrAlpha*);
+	/* 801D78FC */ void setAlphaAnimeMax(CPaneMgrAlpha*);
+	/* 801D7994 */ void checkPlayerWarpAccept();
+	/* 801D7A08 */ void checkWarpAcceptRegion(int);
+	/* 801D7AB4 */ void checkWarpAcceptRegion4();
+	/* 801D7B58 */ void checkWarpAcceptCannon();
+	/* 801D7BCC */ void setHIO(bool);
+	/* 801D8088 */ void isWarpAccept();
+};
+
+struct ResTIMG {
 };
 
 struct dMenu_Fmap2DBack_c {
@@ -87,82 +187,6 @@ struct dMenu_Fmap2DBack_c {
 	/* 801D5BB8 */ void setArrowPosAxis(f32, f32);
 };
 
-struct JKRArchive {
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
-	};
-
-};
-
-struct J2DGrafContext {
-	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
-};
-
-struct J2DScreen {
-	/* 802F8498 */ J2DScreen();
-	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
-	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-	/* 802F9690 */ void animation();
-};
-
-struct JKRExpHeap {
-};
-
-struct CPaneMgrAlpha {
-	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 80255608 */ void hide();
-	/* 802557D0 */ void setAlphaRate(f32);
-	/* 80255828 */ void getAlphaRate();
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct dMenu_Fmap2DTop_c {
-	/* 801D5BD0 */ dMenu_Fmap2DTop_c(JKRExpHeap*, STControl*);
-	/* 801D6700 */ ~dMenu_Fmap2DTop_c();
-	/* 801D6A44 */ void _execute();
-	/* 801D6C44 */ void setAllAlphaRate(f32, bool);
-	/* 801D6C98 */ void draw();
-	/* 801D6DF8 */ void btkAnimeLoop(J2DAnmTextureSRTKey*, f32);
-	/* 801D6EDC */ void setMoyaAlpha(u8);
-	/* 801D6F38 */ void setTitleNameString(u32);
-	/* 801D7010 */ void setAreaNameString(u32);
-	/* 801D70E8 */ void setZButtonString(u32, u8);
-	/* 801D7210 */ void setBButtonString(u32, u8);
-	/* 801D72D4 */ void setAButtonString(u32, u8);
-	/* 801D7398 */ void setCrossLRString(u32);
-	/* 801D74EC */ void set3DStickString(u32);
-	/* 801D7640 */ void createExplain(JKRExpHeap*, STControl*);
-	/* 801D76C0 */ void deleteExplain();
-	/* 801D7714 */ void setArrowAlphaRatio(u8, f32);
-	/* 801D77C4 */ void setAlphaAnimeMin(CPaneMgrAlpha*);
-	/* 801D7858 */ void setAlphaAnimeMid(CPaneMgrAlpha*);
-	/* 801D78FC */ void setAlphaAnimeMax(CPaneMgrAlpha*);
-	/* 801D7994 */ void checkPlayerWarpAccept();
-	/* 801D7A08 */ void checkWarpAcceptRegion(int);
-	/* 801D7AB4 */ void checkWarpAcceptRegion4();
-	/* 801D7B58 */ void checkWarpAcceptCannon();
-	/* 801D7BCC */ void setHIO(bool);
-	/* 801D8088 */ void isWarpAccept();
-};
-
-struct JKRHeap {
-};
-
-struct dSv_player_field_last_stay_info_c {
-	/* 80032E78 */ void isRegionBit(int) const;
-};
-
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
-};
-
 struct dMenuMapCommon_c {
 	/* 801C2718 */ dMenuMapCommon_c();
 	/* 801C27B4 */ ~dMenuMapCommon_c();
@@ -173,65 +197,14 @@ struct dMenuMapCommon_c {
 	/* 801C4600 */ void moveLightDropAnime();
 };
 
-struct dMenu_Fmap_region_data_c {
-};
-
-struct renderingFmap_c {
-	/* 801CE3C0 */ void getPointStagePathInnerNo(dMenu_Fmap_region_data_c*, f32, f32, int, int*, int*);
-};
-
-struct dMeterHaihai_c {
-	/* 8020AE8C */ dMeterHaihai_c(u8);
-	/* 8020B518 */ void drawHaihai(u8);
-};
-
-struct JMSMesgEntry_c {
-};
-
-struct dMeter2Info_c {
-	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
-};
-
-struct J2DOrthoGraph {
-};
-
-struct dMsgScrnExplain_c {
-	/* 8023CC88 */ dMsgScrnExplain_c(STControl*, u8, bool, u8);
-	/* 8023D918 */ void draw(J2DOrthoGraph*);
-};
-
-struct J2DRotateAxis {
-};
-
-struct J2DPane {
-	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
-	/* 802F7AFC */ void getParentPane();
-};
-
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 802545B0 */ void paneTrans(f32, f32);
-	/* 80254C90 */ void getGlobalVtx(J2DPane*, f32 (* )[3][4], u8, bool, s16);
-};
-
-struct CPaneMgrAlphaMorf {
-	/* 80255C68 */ CPaneMgrAlphaMorf(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 80255DD0 */ void setBackupAlpha();
-	/* 80255E28 */ void setAlphaMorfRate(f32);
+struct Vec {
 };
 
 struct JAISoundID {
 };
 
-struct Vec {
-};
-
 struct Z2SeMgr {
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-};
-
-struct JKRFileLoader {
-	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
 };
 
 struct JUtility {
@@ -240,8 +213,11 @@ struct JUtility {
 
 };
 
-struct J2DPicture {
-	/* 802FC708 */ J2DPicture(ResTIMG const*);
+struct JKRHeap {
+};
+
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
 };
 
 struct J2DTextBox {
@@ -249,8 +225,32 @@ struct J2DTextBox {
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
+struct J2DRotateAxis {
+};
+
+struct J2DPicture {
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
+struct J2DPane {
+	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
+	/* 802F7AFC */ void getParentPane();
+};
+
 struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
+};
+
+struct CPaneMgrAlphaMorf {
+	/* 80255C68 */ CPaneMgrAlphaMorf(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 80255DD0 */ void setBackupAlpha();
+	/* 80255E28 */ void setAlphaMorfRate(f32);
+};
+
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 80254C90 */ void getGlobalVtx(J2DPane*, f32 (* )[3][4], u8, bool, s16);
 };
 
 // 

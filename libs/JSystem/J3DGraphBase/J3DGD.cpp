@@ -11,19 +11,22 @@
 // Types:
 // 
 
-struct _GXCullMode {
-};
-
-struct _GXLightID {
-};
-
-struct _GXColor {
-};
-
 struct _GXVtxFmt {
 };
 
 struct _GXVtxAttrFmtList {
+};
+
+struct _GXTlutSize {
+};
+
+struct _GXTlutFmt {
+};
+
+struct _GXTexWrapMode {
+};
+
+struct _GXTexMapID {
 };
 
 struct _GXTexGenType {
@@ -32,31 +35,28 @@ struct _GXTexGenType {
 struct _GXTexGenSrc {
 };
 
-struct _GXTexCoordID {
-};
-
-struct _GXTexMapID {
-};
-
-struct _GXTexWrapMode {
+struct _GXTexFmt {
 };
 
 struct _GXTexFilter {
 };
 
-struct _GXAnisotropy {
+struct _GXTexCoordID {
 };
 
-struct _GXTexFmt {
+struct _GXTexCacheSize {
 };
 
-struct _GXTlutFmt {
+struct _GXTevStageID {
 };
 
-struct _GXTlutSize {
+struct _GXTevRegID {
 };
 
-struct _GXIndTexMtxID {
+struct _GXTevKColorID {
+};
+
+struct _GXLightID {
 };
 
 struct _GXIndTexStageID {
@@ -65,19 +65,7 @@ struct _GXIndTexStageID {
 struct _GXIndTexScale {
 };
 
-struct _GXTevStageID {
-};
-
-struct _GXChannelID {
-};
-
-struct _GXTevKColorID {
-};
-
-struct _GXTevRegID {
-};
-
-struct _GXColorS10 {
+struct _GXIndTexMtxID {
 };
 
 struct _GXFogType {
@@ -86,7 +74,19 @@ struct _GXFogType {
 struct _GXFogAdjTable {
 };
 
-struct _GXTexCacheSize {
+struct _GXCullMode {
+};
+
+struct _GXColorS10 {
+};
+
+struct _GXColor {
+};
+
+struct _GXChannelID {
+};
+
+struct _GXAnisotropy {
 };
 
 // 

@@ -11,6 +11,26 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+};
+
+struct dLib_time_c {
+	/* 80032804 */ void getTime();
+	/* 80032880 */ void stopTime();
+	/* 800328BC */ void startTime();
+};
+
+struct dEvt_control_c {
+	/* 800434D8 */ void searchMapEventData(u8);
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
 struct STControl {
 	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
 	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
@@ -26,47 +46,27 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
-struct CSTControl {
-	/* 8003217C */ void getValueStick();
-	/* 8003218C */ void getAngleStick();
-};
-
-struct fopAc_ac_c {
-};
-
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct JKRAramArchive {
-	/* 802D781C */ void getAramAddress(char const*);
-};
-
-struct dLib_time_c {
-	/* 80032804 */ void getTime();
-	/* 80032880 */ void stopTime();
-	/* 800328BC */ void startTime();
-};
-
-struct dEvt_control_c {
-	/* 800434D8 */ void searchMapEventData(u8);
-};
-
 struct JKRHeap {
 };
 
 struct JKRExpandSwitch {
 };
 
+struct JKRArchive {
+	/* 802D65A4 */ void findFsResource(char const*, u32) const;
+};
+
+struct JKRAramArchive {
+	/* 802D781C */ void getAramAddress(char const*);
+};
+
 struct JKRAram {
 	/* 802D25B4 */ void aramToMainRam(u32, u8*, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 };
 
-struct JKRArchive {
-	/* 802D65A4 */ void findFsResource(char const*, u32) const;
+struct CSTControl {
+	/* 8003217C */ void getValueStick();
+	/* 8003218C */ void getAngleStick();
 };
 
 // 
@@ -127,7 +127,7 @@ extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803A7240-803A7250 0010+00 s=0 e=0 z=6  None .data      ZeroQuat                                                     */
+/* 803A7240-803A7250 0010+00 s=0 e=0 z=0  None .data      ZeroQuat                                                     */
 SECTION_DATA u8 ZeroQuat[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
@@ -302,7 +302,7 @@ asm void STControl::checkDownTrigger() {
 #pragma pop
 
 
-/* 8003261C-80032654 0038+00 s=0 e=0 z=1  None .text      dLib_getEventSwitchNo__Fi                                    */
+/* 8003261C-80032654 0038+00 s=0 e=0 z=0  None .text      dLib_getEventSwitchNo__Fi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -313,7 +313,7 @@ asm void dLib_getEventSwitchNo(int param_0) {
 #pragma pop
 
 
-/* 80032654-80032738 00E4+00 s=0 e=0 z=8  None .text      dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz */
+/* 80032654-80032738 00E4+00 s=0 e=0 z=0  None .text      dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -11,6 +11,10 @@
 // Types:
 // 
 
+struct dMeterSub_c {
+	/* 80194138 */ bool isDead();
+};
+
 struct dMeterString_c {
 	/* 8020ED60 */ dMeterString_c(int);
 	/* 8020EDF4 */ ~dMeterString_c();
@@ -24,8 +28,12 @@ struct dMeterString_c {
 	/* 8020FA88 */ void isLeadByte(int);
 };
 
-struct dMeterSub_c {
-	/* 80194138 */ bool isDead();
+struct JMSMesgEntry_c {
+};
+
+struct dMeter2Info_c {
+	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
+	/* 8021CC00 */ void resetMeterString();
 };
 
 struct JUtility {
@@ -38,15 +46,19 @@ struct dMeter2Draw_c {
 	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
 };
 
-struct JMSMesgEntry_c {
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
 };
 
-struct dMeter2Info_c {
-	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
-	/* 8021CC00 */ void resetMeterString();
+struct JKRExpHeap {
 };
 
 struct JKRArchive {
+};
+
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 struct J2DGrafContext {
@@ -63,30 +75,18 @@ struct J2DPane {
 	/* 802F7FCC */ void animationTransform();
 };
 
-struct JKRExpHeap {
-};
-
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 802545B0 */ void paneTrans(f32, f32);
-	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
 };
 
 struct CPaneMgrAlpha {
 	/* 802557D0 */ void setAlphaRate(f32);
 };
 
-struct JKRFileLoader {
-	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
-};
-
-struct J2DTextBox {
-	/* 80300658 */ void getStringPtr() const;
-	/* 8030074C */ void setString(s16, char const*, ...);
-};
-
-struct J2DAnmLoaderDataBase {
-	/* 80308A6C */ void load(void const*);
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 // 

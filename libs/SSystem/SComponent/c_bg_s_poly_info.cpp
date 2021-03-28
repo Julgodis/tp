@@ -60,7 +60,7 @@ SECTION_DATA static void* __vt__13cBgS_PolyInfo[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80268074-802680B0 003C+00 s=0 e=7 z=9  None .text      __ct__13cBgS_PolyInfoFv                                      */
+/* 80268074-802680B0 003C+00 s=0 e=7 z=0  None .text      __ct__13cBgS_PolyInfoFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,7 +71,7 @@ asm cBgS_PolyInfo::cBgS_PolyInfo() {
 #pragma pop
 
 
-/* 802680B0-802680F8 0048+00 s=1 e=10 z=393  None .text      __dt__13cBgS_PolyInfoFv                                      */
+/* 802680B0-802680F8 0048+00 s=1 e=10 z=0  None .text      __dt__13cBgS_PolyInfoFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -104,7 +104,7 @@ asm void cBgS_PolyInfo::ClearPi() {
 #pragma pop
 
 
-/* 80268148-8026816C 0024+00 s=0 e=11 z=1  None .text      SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo               */
+/* 80268148-8026816C 0024+00 s=0 e=11 z=0  None .text      SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

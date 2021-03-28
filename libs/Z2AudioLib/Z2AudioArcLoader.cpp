@@ -11,6 +11,20 @@
 // Types:
 // 
 
+struct JKRHeap {
+};
+
+struct JKRArchive {
+	struct EMountDirection {
+	};
+
+	/* 802D5840 */ void mount(void*, JKRHeap*, JKRArchive::EMountDirection);
+};
+
+struct Z2FxLineMgr {
+	/* 802BA7FC */ void initDataArc(JKRArchive*, JKRHeap*);
+};
+
 struct JAUSection {
 };
 
@@ -22,8 +36,8 @@ struct Z2AudioArcLoader {
 	/* 802A9B58 */ ~Z2AudioArcLoader();
 };
 
-struct JAUAudioArcInterpreter {
-	/* 802A4260 */ ~JAUAudioArcInterpreter();
+struct JAUSectionHeap {
+	/* 802A6094 */ void getOpenSection();
 };
 
 struct JAUAudioArcLoader {
@@ -42,22 +56,8 @@ struct JAUAudioArcLoader {
 	/* 802A49D8 */ void readMaxSeCategory(int, int, int);
 };
 
-struct JAUSectionHeap {
-	/* 802A6094 */ void getOpenSection();
-};
-
-struct JKRHeap {
-};
-
-struct JKRArchive {
-	struct EMountDirection {
-	};
-
-	/* 802D5840 */ void mount(void*, JKRHeap*, JKRArchive::EMountDirection);
-};
-
-struct Z2FxLineMgr {
-	/* 802BA7FC */ void initDataArc(JKRArchive*, JKRHeap*);
+struct JAUAudioArcInterpreter {
+	/* 802A4260 */ ~JAUAudioArcInterpreter();
 };
 
 // 

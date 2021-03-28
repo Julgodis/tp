@@ -25,7 +25,7 @@ extern "C" void __ieee754_acos(); // 1
 // Declarations:
 // 
 
-/* 8036C6E0-8036C700 0020+00 s=0 e=2 z=3  None .text      acos                                                         */
+/* 8036C6E0-8036C700 0020+00 s=0 e=2 z=0  None .text      acos                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

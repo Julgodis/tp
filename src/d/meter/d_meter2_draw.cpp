@@ -11,11 +11,60 @@
 // Types:
 // 
 
-struct JKRArchive {
-	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
+struct dSv_player_item_c {
+	/* 80033030 */ void getItem(int, bool) const;
+};
+
+struct dSv_light_drop_c {
+	/* 80034340 */ void getLightDropNum(u8) const;
+	/* 8003439C */ void isLightDropGetFlag(u8) const;
+};
+
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct dMsgObject_c {
+	/* 802370E8 */ void isHowlMessage();
+	/* 8023822C */ void getStatus();
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
+};
+
+struct ResTLUT {
+};
+
+struct ResTIMG {
+};
+
+struct J2DPicture {
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
+	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
+};
+
+struct JMSMesgEntry_c {
+};
+
+struct dMeter2Info_c {
+	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
+	/* 8021C370 */ void getStringKana(u32, char*, JMSMesgEntry_c*);
+	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
+	/* 8021C950 */ void isDirectUseItem(int);
+	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
 };
 
 struct J2DGrafContext {
+};
+
+struct JKRArchive {
+	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
 };
 
 struct J2DScreen {
@@ -25,16 +74,13 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct J2DRotateAxis {
+struct JKRExpHeap {
 };
 
 struct J2DBasePosition {
+};
+
+struct J2DRotateAxis {
 };
 
 struct J2DPane {
@@ -45,7 +91,10 @@ struct J2DPane {
 	/* 802F7FCC */ void animationTransform();
 };
 
-struct JKRExpHeap {
+struct JUtility {
+	struct TColor {
+	};
+
 };
 
 struct CPaneMgr {
@@ -166,24 +215,6 @@ struct dMeter2Draw_c {
 	/* 8021BDD0 */ void getButtonTimer();
 };
 
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE548 */ void free(void*);
-};
-
-struct dSv_player_item_c {
-	/* 80033030 */ void getItem(int, bool) const;
-};
-
-struct dSv_light_drop_c {
-	/* 80034340 */ void getLightDropNum(u8) const;
-	/* 8003439C */ void isLightDropGetFlag(u8) const;
-};
-
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
-};
-
 struct dKantera_icon_c {
 	/* 801AE938 */ dKantera_icon_c();
 	/* 801AEB7C */ void setAlphaRate(f32);
@@ -192,51 +223,20 @@ struct dKantera_icon_c {
 	/* 801AEC44 */ void setNowGauge(u16, u16);
 };
 
-struct JMSMesgEntry_c {
-};
-
-struct ResTIMG {
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
-	};
-
-};
-
-struct ResTLUT {
-};
-
-struct J2DPicture {
-	/* 802FC708 */ J2DPicture(ResTIMG const*);
-	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
-};
-
-struct dMeter2Info_c {
-	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
-	/* 8021C370 */ void getStringKana(u32, char*, JMSMesgEntry_c*);
-	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
-	/* 8021C950 */ void isDirectUseItem(int);
-	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
-};
-
-struct dMsgObject_c {
-	/* 802370E8 */ void isHowlMessage();
-	/* 8023822C */ void getStatus();
+struct Vec {
 };
 
 struct JAISoundID {
 };
 
-struct Vec {
-};
-
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE548 */ void free(void*);
 };
 
 struct JKRFileLoader {

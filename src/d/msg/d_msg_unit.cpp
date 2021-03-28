@@ -11,14 +11,14 @@
 // Types:
 // 
 
+struct dScnKy_env_light_c {
+	/* 8019FA08 */ void getDaytime();
+};
+
 struct dMsgUnit_c {
 	/* 80238C94 */ dMsgUnit_c();
 	/* 80238CA4 */ ~dMsgUnit_c();
 	/* 80238CEC */ void setTag(int, int, char*, bool);
-};
-
-struct dScnKy_env_light_c {
-	/* 8019FA08 */ void getDaytime();
 };
 
 // 

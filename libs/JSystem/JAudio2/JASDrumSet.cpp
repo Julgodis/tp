@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JASInstParam {
+struct JKRHeap {
 };
 
-struct JKRHeap {
+struct JASInstParam {
 };
 
 struct JASDrumSet {

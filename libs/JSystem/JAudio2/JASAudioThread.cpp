@@ -11,19 +11,12 @@
 // Types:
 // 
 
-struct JASAudioThread {
-	/* 8029CCDC */ JASAudioThread(int, int, u32);
-	/* 8029CD4C */ void create(s32);
-	/* 8029CDC0 */ void stop();
-	/* 8029CDEC */ void run();
-	/* 8029CF68 */ void DMACallback();
-	/* 8029CFBC */ void DSPCallback(void*);
-	/* 8029D028 */ ~JASAudioThread();
+struct JKRHeap {
 };
 
-struct JASGenericMemPool {
-	/* 80290848 */ JASGenericMemPool();
-	/* 802908C8 */ void newMemPool(u32, int);
+struct JKRThread {
+	/* 802D1610 */ JKRThread(JKRHeap*, u32, int, int);
+	/* 802D1758 */ ~JKRThread();
 };
 
 struct JASProbe {
@@ -36,6 +29,17 @@ struct JASMemPool_MultiThreaded { };
 /* JASMemPool_MultiThreaded<JASChannel> */
 struct JASMemPool_MultiThreaded__template2 {
 	/* 802978DC */ ~JASMemPool_MultiThreaded__template2();
+};
+
+struct JASGenericMemPool {
+	/* 80290848 */ JASGenericMemPool();
+	/* 802908C8 */ void newMemPool(u32, int);
+};
+
+struct JASDsp {
+	/* 8029D958 */ void boot(void (*)(void*));
+	/* 8029D9C4 */ void finishWork(u16);
+	/* 8029DAC8 */ void initBuffer();
 };
 
 struct JASDriver {
@@ -52,18 +56,14 @@ struct JASDSPChannel {
 	/* 8029D3C8 */ void initAll();
 };
 
-struct JASDsp {
-	/* 8029D958 */ void boot(void (*)(void*));
-	/* 8029D9C4 */ void finishWork(u16);
-	/* 8029DAC8 */ void initBuffer();
-};
-
-struct JKRHeap {
-};
-
-struct JKRThread {
-	/* 802D1610 */ JKRThread(JKRHeap*, u32, int, int);
-	/* 802D1758 */ ~JKRThread();
+struct JASAudioThread {
+	/* 8029CCDC */ JASAudioThread(int, int, u32);
+	/* 8029CD4C */ void create(s32);
+	/* 8029CDC0 */ void stop();
+	/* 8029CDEC */ void run();
+	/* 8029CF68 */ void DMACallback();
+	/* 8029CFBC */ void DSPCallback(void*);
+	/* 8029D028 */ ~JASAudioThread();
 };
 
 // 

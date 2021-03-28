@@ -39,13 +39,13 @@ struct JGeometry {
 
 };
 
+struct J2DOrthoGraph {
+	/* 802E9670 */ J2DOrthoGraph();
+};
+
 struct J2DGrafContext {
 	/* 802E9118 */ void setColor(JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
 	/* 802E9260 */ void fillBox(JGeometry::TBox2<f32> const&);
-};
-
-struct J2DOrthoGraph {
-	/* 802E9670 */ J2DOrthoGraph();
 };
 
 // 

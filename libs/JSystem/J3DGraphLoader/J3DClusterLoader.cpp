@@ -11,24 +11,6 @@
 // Types:
 // 
 
-struct J3DClusterLoaderDataBase {
-	/* 80334130 */ void load(void const*);
-};
-
-struct J3DClusterBlock {
-};
-
-struct J3DClusterLoader_v15 {
-	/* 803341CC */ J3DClusterLoader_v15();
-	/* 803341E8 */ ~J3DClusterLoader_v15();
-	/* 80334244 */ void load(void const*);
-	/* 803342F8 */ void readCluster(J3DClusterBlock const*);
-};
-
-struct J3DClusterLoader {
-	/* 803345FC */ ~J3DClusterLoader();
-};
-
 struct ResNTAB {
 };
 
@@ -42,6 +24,24 @@ struct J3DDeformData {
 
 struct J3DDeformer {
 	/* 8032E39C */ J3DDeformer(J3DDeformData*);
+};
+
+struct J3DClusterBlock {
+};
+
+struct J3DClusterLoader_v15 {
+	/* 803341CC */ J3DClusterLoader_v15();
+	/* 803341E8 */ ~J3DClusterLoader_v15();
+	/* 80334244 */ void load(void const*);
+	/* 803342F8 */ void readCluster(J3DClusterBlock const*);
+};
+
+struct J3DClusterLoaderDataBase {
+	/* 80334130 */ void load(void const*);
+};
+
+struct J3DClusterLoader {
+	/* 803345FC */ ~J3DClusterLoader();
 };
 
 // 

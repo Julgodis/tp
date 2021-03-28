@@ -58,7 +58,7 @@ extern "C" asm void C_MTXPerspective() {
 #pragma pop
 
 
-/* 80346FF8-80347090 0098+00 s=0 e=11 z=2  None .text      C_MTXOrtho                                                   */
+/* 80346FF8-80347090 0098+00 s=0 e=11 z=0  None .text      C_MTXOrtho                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

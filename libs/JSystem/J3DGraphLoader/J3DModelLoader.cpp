@@ -11,22 +11,127 @@
 // Types:
 // 
 
-struct J3DMaterialBlock {
+struct _GXVtxDescList {
 };
 
-struct J3DDrawBlock {
+struct _GXVtxAttrFmtList {
 };
 
-struct J3DMaterialBlock_v21 {
+struct _GXAttr {
+};
+
+struct Vec {
+};
+
+struct ResNTAB {
+};
+
+struct JUTNameTab {
+	/* 802DE9E0 */ JUTNameTab(ResNTAB const*);
+};
+
+struct JKRHeap {
+	/* 802CE784 */ void getTotalFreeSize();
+};
+
+struct J3DVertexData {
 };
 
 struct J3DVertexBlock {
 };
 
+struct J3DTransformInfo {
+};
+
 struct J3DTextureBlock {
 };
 
-struct J3DJointBlock {
+struct J3DTexture {
+	/* 803366A4 */ ~J3DTexture();
+};
+
+struct J3DDrawMtxData {
+};
+
+struct J3DShapeTable {
+	/* 80325910 */ void initShapeNodes(J3DDrawMtxData*, J3DVertexData*);
+	/* 8032597C */ void sortVcdVatCmd();
+};
+
+struct J3DShapeBlock {
+};
+
+struct J3DShapeFactory {
+	/* 80337350 */ J3DShapeFactory(J3DShapeBlock const&);
+	/* 80337400 */ void create(int, u32, _GXVtxDescList*);
+	/* 803378D8 */ void allocVcdVatCmdBuffer(u32);
+};
+
+template <typename A0, typename B0>
+struct J3DMtxCalcNoAnm { };
+/* J3DMtxCalcNoAnm<J3DMtxCalcCalcTransformSoftimage, J3DMtxCalcJ3DSysInitSoftimage> */
+struct J3DMtxCalcNoAnm__template1 {
+	/* 803364B8 */ ~J3DMtxCalcNoAnm__template1();
+	/* 80336524 */ void init(Vec const&, f32 const (& )[3][4]);
+	/* 8033656C */ void calc();
+};
+
+/* J3DMtxCalcNoAnm<J3DMtxCalcCalcTransformBasic, J3DMtxCalcJ3DSysInitBasic> */
+struct J3DMtxCalcNoAnm__template2 {
+	/* 80336594 */ ~J3DMtxCalcNoAnm__template2();
+	/* 80336600 */ void init(Vec const&, f32 const (& )[3][4]);
+	/* 80336628 */ void calc();
+};
+
+struct J3DMtxCalcJ3DSysInitBasic {
+	/* 8032EC28 */ void init(Vec const&, f32 const (& )[3][4]);
+};
+
+struct J3DMtxCalcCalcTransformSoftimage {
+	/* 8032EE50 */ void calcTransform(J3DTransformInfo const&);
+};
+
+struct J3DMtxCalcCalcTransformBasic {
+	/* 8032ED30 */ void calcTransform(J3DTransformInfo const&);
+};
+
+struct J3DAnmTransform {
+};
+
+struct J3DMtxCalc {
+	/* 80014E8C */ void setAnmTransform(u8, J3DAnmTransform*);
+	/* 80014E90 */ void setAnmTransform(J3DAnmTransform*);
+	/* 80014E94 */ bool getAnmTransform(u8);
+	/* 80014E9C */ bool getAnmTransform();
+	/* 80014EA4 */ void setWeight(u8, f32);
+	/* 80014EA8 */ void getWeight(u8) const;
+};
+
+struct J3DMaterialBlock {
+};
+
+struct J3DModelLoader_v26 {
+	/* 80335614 */ void readMaterial(J3DMaterialBlock const*, u32);
+	/* 80335CE4 */ void readMaterialTable(J3DMaterialBlock const*, u32);
+	/* 80336398 */ ~J3DModelLoader_v26();
+	/* 80336DB4 */ void calcSizeMaterial(J3DMaterialBlock const*, u32);
+	/* 80336F60 */ void calcSizeMaterialTable(J3DMaterialBlock const*, u32);
+};
+
+struct J3DMaterialBlock_v21 {
+};
+
+struct J3DModelLoader_v21 {
+	/* 80335890 */ void readMaterial_v21(J3DMaterialBlock_v21 const*, u32);
+	/* 80335E20 */ void readMaterialTable_v21(J3DMaterialBlock_v21 const*, u32);
+	/* 803363F4 */ ~J3DModelLoader_v21();
+};
+
+struct J3DModelLoaderDataBase {
+	/* 803346BC */ void load(void const*, u32);
+};
+
+struct J3DDrawBlock {
 };
 
 struct J3DMaterialDLBlock {
@@ -38,7 +143,7 @@ struct J3DModelInfoBlock {
 struct J3DEnvelopeBlock {
 };
 
-struct J3DShapeBlock {
+struct J3DJointBlock {
 };
 
 struct J3DModelLoader {
@@ -71,107 +176,7 @@ struct J3DModelLoader {
 	/* 80336A98 */ void calcLoadBinaryDisplayListSize(void const*, u32);
 };
 
-struct J3DModelLoaderDataBase {
-	/* 803346BC */ void load(void const*, u32);
-};
-
-struct _GXVtxAttrFmtList {
-};
-
-struct _GXAttr {
-};
-
-struct J3DModelLoader_v26 {
-	/* 80335614 */ void readMaterial(J3DMaterialBlock const*, u32);
-	/* 80335CE4 */ void readMaterialTable(J3DMaterialBlock const*, u32);
-	/* 80336398 */ ~J3DModelLoader_v26();
-	/* 80336DB4 */ void calcSizeMaterial(J3DMaterialBlock const*, u32);
-	/* 80336F60 */ void calcSizeMaterialTable(J3DMaterialBlock const*, u32);
-};
-
-struct J3DModelLoader_v21 {
-	/* 80335890 */ void readMaterial_v21(J3DMaterialBlock_v21 const*, u32);
-	/* 80335E20 */ void readMaterialTable_v21(J3DMaterialBlock_v21 const*, u32);
-	/* 803363F4 */ ~J3DModelLoader_v21();
-};
-
-struct Vec {
-};
-
-template <typename A0, typename B0>
-struct J3DMtxCalcNoAnm { };
-/* J3DMtxCalcNoAnm<J3DMtxCalcCalcTransformSoftimage, J3DMtxCalcJ3DSysInitSoftimage> */
-struct J3DMtxCalcNoAnm__template1 {
-	/* 803364B8 */ ~J3DMtxCalcNoAnm__template1();
-	/* 80336524 */ void init(Vec const&, f32 const (& )[3][4]);
-	/* 8033656C */ void calc();
-};
-
-/* J3DMtxCalcNoAnm<J3DMtxCalcCalcTransformBasic, J3DMtxCalcJ3DSysInitBasic> */
-struct J3DMtxCalcNoAnm__template2 {
-	/* 80336594 */ ~J3DMtxCalcNoAnm__template2();
-	/* 80336600 */ void init(Vec const&, f32 const (& )[3][4]);
-	/* 80336628 */ void calc();
-};
-
-struct J3DMaterial {
-	/* 80316240 */ void initialize();
-	/* 80332B94 */ ~J3DMaterial();
-	/* 80336650 */ J3DMaterial();
-};
-
-struct J3DTexture {
-	/* 803366A4 */ ~J3DTexture();
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DMtxCalc {
-	/* 80014E8C */ void setAnmTransform(u8, J3DAnmTransform*);
-	/* 80014E90 */ void setAnmTransform(J3DAnmTransform*);
-	/* 80014E94 */ bool getAnmTransform(u8);
-	/* 80014E9C */ bool getAnmTransform();
-	/* 80014EA4 */ void setWeight(u8, f32);
-	/* 80014EA8 */ void getWeight(u8) const;
-};
-
-struct JKRHeap {
-	/* 802CE784 */ void getTotalFreeSize();
-};
-
-struct ResNTAB {
-};
-
-struct JUTNameTab {
-	/* 802DE9E0 */ JUTNameTab(ResNTAB const*);
-};
-
-struct J3DVertexData {
-};
-
-struct J3DDrawMtxData {
-};
-
-struct J3DShapeTable {
-	/* 80325910 */ void initShapeNodes(J3DDrawMtxData*, J3DVertexData*);
-	/* 8032597C */ void sortVcdVatCmd();
-};
-
-struct J3DJoint {
-};
-
-struct J3DMaterialTable {
-	/* 8032F5A8 */ void clear();
-	/* 8032F5D0 */ J3DMaterialTable();
-};
-
 struct J3DModelHierarchy {
-};
-
-struct J3DJointTree {
-	/* 80325A9C */ void makeHierarchy(J3DJoint*, J3DModelHierarchy const**, J3DMaterialTable*, J3DShapeTable*);
-	/* 80325C00 */ void findImportantMtxIndex();
 };
 
 struct J3DModelData {
@@ -180,19 +185,21 @@ struct J3DModelData {
 	/* 80325EC8 */ void indexToPtr();
 };
 
-struct J3DMtxCalcJ3DSysInitBasic {
-	/* 8032EC28 */ void init(Vec const&, f32 const (& )[3][4]);
+struct J3DMaterialTable {
+	/* 8032F5A8 */ void clear();
+	/* 8032F5D0 */ J3DMaterialTable();
 };
 
-struct J3DTransformInfo {
+struct J3DMaterial {
+	/* 80316240 */ void initialize();
+	/* 80332B94 */ ~J3DMaterial();
+	/* 80336650 */ J3DMaterial();
 };
 
-struct J3DMtxCalcCalcTransformBasic {
-	/* 8032ED30 */ void calcTransform(J3DTransformInfo const&);
-};
-
-struct J3DMtxCalcCalcTransformSoftimage {
-	/* 8032EE50 */ void calcTransform(J3DTransformInfo const&);
+struct J3DMaterialFactory_v21 {
+	/* 80332DA4 */ J3DMaterialFactory_v21(J3DMaterialBlock_v21 const&);
+	/* 80332F84 */ void countUniqueMaterials();
+	/* 80333068 */ void create(J3DMaterial*, int, u32) const;
 };
 
 struct J3DMaterialFactory {
@@ -206,24 +213,17 @@ struct J3DMaterialFactory {
 	/* 8033168C */ void modifyPatchedCurrentMtx(J3DMaterial*, int) const;
 };
 
-struct J3DMaterialFactory_v21 {
-	/* 80332DA4 */ J3DMaterialFactory_v21(J3DMaterialBlock_v21 const&);
-	/* 80332F84 */ void countUniqueMaterials();
-	/* 80333068 */ void create(J3DMaterial*, int, u32) const;
+struct J3DJoint {
+};
+
+struct J3DJointTree {
+	/* 80325A9C */ void makeHierarchy(J3DJoint*, J3DModelHierarchy const**, J3DMaterialTable*, J3DShapeTable*);
+	/* 80325C00 */ void findImportantMtxIndex();
 };
 
 struct J3DJointFactory {
 	/* 80337178 */ J3DJointFactory(J3DJointBlock const&);
 	/* 803371D0 */ void create(int);
-};
-
-struct _GXVtxDescList {
-};
-
-struct J3DShapeFactory {
-	/* 80337350 */ J3DShapeFactory(J3DShapeBlock const&);
-	/* 80337400 */ void create(int, u32, _GXVtxDescList*);
-	/* 803378D8 */ void allocVcdVatCmdBuffer(u32);
 };
 
 // 

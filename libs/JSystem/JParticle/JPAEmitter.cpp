@@ -11,11 +11,29 @@
 // Types:
 // 
 
+struct _GXTexMapID {
+};
+
+struct JUTTexture {
+	/* 802DE840 */ void load(_GXTexMapID);
+};
+
+struct JPAResource {
+};
+
+struct JPAEmitterWorkData {
+};
+
+struct JPAEmitterManager {
+};
+
 struct JPAEmitterCallBack {
 	/* 8027E6A4 */ ~JPAEmitterCallBack();
 };
 
-struct JPAEmitterManager {
+struct JPABaseParticle {
+	/* 8027EFEC */ void init_p(JPAEmitterWorkData*);
+	/* 8027F8C8 */ void init_c(JPAEmitterWorkData*, JPABaseParticle*);
 };
 
 struct JGeometry {
@@ -25,20 +43,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JPAResource {
-};
-
-struct JPAEmitterWorkData {
-};
-
-struct JPABaseParticle {
-	/* 8027EFEC */ void init_p(JPAEmitterWorkData*);
-	/* 8027F8C8 */ void init_c(JPAEmitterWorkData*, JPABaseParticle*);
-};
-
-struct _GXTexMapID {
 };
 
 struct JPABaseEmitter {
@@ -52,10 +56,6 @@ struct JPABaseEmitter {
 	/* 8027EF30 */ void getCurrentCreateNumber() const;
 	/* 8027EF40 */ void getDrawCount() const;
 	/* 8027EF50 */ void loadTexture(u8, _GXTexMapID);
-};
-
-struct JUTTexture {
-	/* 802DE840 */ void load(_GXTexMapID);
 };
 
 // 
@@ -96,7 +96,7 @@ extern "C" extern u32 __float_epsilon;
 // Declarations:
 // 
 
-/* 8027E6A4-8027E6EC 0048+00 s=0 e=14 z=16  None .text      __dt__18JPAEmitterCallBackFv                                 */
+/* 8027E6A4-8027E6EC 0048+00 s=0 e=14 z=0  None .text      __dt__18JPAEmitterCallBackFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -162,7 +162,7 @@ asm void JPABaseEmitter::createChild(JPABaseParticle* param_0) {
 #pragma pop
 
 
-/* 8027EC60-8027EDD4 0174+00 s=0 e=2 z=21  None .text      deleteAllParticle__14JPABaseEmitterFv                        */
+/* 8027EC60-8027EDD4 0174+00 s=0 e=2 z=0  None .text      deleteAllParticle__14JPABaseEmitterFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

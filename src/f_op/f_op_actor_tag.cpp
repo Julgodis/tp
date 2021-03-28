@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct create_tag_class {
+struct node_list_class {
 };
 
-struct node_list_class {
+struct create_tag_class {
 };
 
 // 

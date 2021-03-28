@@ -11,6 +11,13 @@
 // Types:
 // 
 
+struct overlap_task_class {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CE38 */ void scaleM(f32, f32, f32);
+};
+
 struct dOvlpFd2_dlst_c {
 	/* 8025247C */ void draw();
 	/* 80252E8C */ ~dOvlpFd2_dlst_c();
@@ -22,13 +29,6 @@ struct dOvlpFd2_c {
 	/* 80252A78 */ void execFadeOut();
 	/* 80252BC0 */ void execNextSnap();
 	/* 80252C68 */ void execFadeIn();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CE38 */ void scaleM(f32, f32, f32);
-};
-
-struct overlap_task_class {
 };
 
 struct dDlst_base_c {
@@ -237,7 +237,7 @@ SECTION_DATA static void* l_dOvlpFd2_Method[5] = {
 	(void*)dOvlpFd2_Draw__FP10dOvlpFd2_c,
 };
 
-/* 803C2D34-803C2D5C 0028+00 s=0 e=0 z=1  None .data      g_profile_OVERLAP2                                           */
+/* 803C2D34-803C2D5C 0028+00 s=0 e=0 z=0  None .data      g_profile_OVERLAP2                                           */
 SECTION_DATA void* g_profile_OVERLAP2[10] = {
 	(void*)NULL,
 	(void*)0x0002FFFD,

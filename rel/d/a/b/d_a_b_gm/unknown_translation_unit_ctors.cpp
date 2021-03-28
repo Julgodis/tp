@@ -12,18 +12,4 @@
 // 
 
 
-extern void* const data_805F4174[2];
-
-// 
-// External References:
-// 
-
-
-extern "C" void __sinit_d_a_b_gm_cpp(); // 1
-
-// 
-// Declarations:
-// 
-
-/* ############################################################################################## */
-#pragma section ".ctors$10"
+extern 

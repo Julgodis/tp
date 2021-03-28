@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct JKRHeap {
+};
+
 struct JASWaveInfo {
 };
 
@@ -59,9 +62,6 @@ struct JASDsp {
 
 struct JASCalc {
 	/* 8028F480 */ void bzero(void*, u32);
-};
-
-struct JKRHeap {
 };
 
 // 

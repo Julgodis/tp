@@ -11,7 +11,15 @@
 // Types:
 // 
 
+struct Vec {
+};
+
 struct J3DModel;
+struct J3DDeformData {
+	/* 8032E230 */ void offAllFlag(u32);
+	/* 8032E274 */ void deform(J3DModel*);
+};
+
 struct J3DModelData {
 	/* 803260F8 */ void syncJ3DSysFlags() const;
 };
@@ -22,11 +30,6 @@ struct J3DSkinDeform {
 	/* 8032D378 */ void changeFastSkinDL(J3DModelData*);
 	/* 8032D738 */ void transformVtxPosNrm(J3DModelData*);
 	/* 8032DFDC */ void deform(J3DModel*);
-};
-
-struct J3DDeformData {
-	/* 8032E230 */ void offAllFlag(u32);
-	/* 8032E274 */ void deform(J3DModel*);
 };
 
 struct J3DModel {
@@ -55,17 +58,8 @@ struct J3DModel {
 	/* 80328350 */ ~J3DModel();
 };
 
-struct Vec {
-};
-
-struct J3DMtxBuffer {
-	/* 80326214 */ void initialize();
-	/* 80326258 */ void create(J3DModelData*, u32);
-	/* 803268D4 */ void calcWeightEnvelopeMtx();
-	/* 80326ACC */ void calcDrawMtx(u32, Vec const&, f32 const (& )[3][4]);
-	/* 80326D3C */ void calcNrmMtx();
-	/* 80326EF0 */ void calcBBoardMtx();
-	/* 803283B4 */ ~J3DMtxBuffer();
+struct J3DVtxColorCalc {
+	/* 8032E180 */ void calc(J3DModel*);
 };
 
 struct J3DVertexData {
@@ -79,29 +73,24 @@ struct J3DVertexBuffer {
 	/* 8031152C */ void allocTransformedVtxNrmArray();
 };
 
-struct J3DDisplayListObj {
-	/* 8031256C */ void single_To_Double();
-};
-
-struct J3DDrawPacket {
-	/* 8031280C */ void newDisplayList(u32);
-	/* 80312898 */ void newSingleDisplayList(u32);
-};
-
 struct J3DShapePacket {
 	/* 80312B20 */ J3DShapePacket();
 	/* 80312B74 */ ~J3DShapePacket();
 	/* 80312DBC */ void newDifferedDisplayList(u32);
 };
 
-struct J3DMatPacket {
-	/* 80312948 */ J3DMatPacket();
-	/* 803129A4 */ ~J3DMatPacket();
-	/* 80312A04 */ void addShapePacket(J3DShapePacket*);
-};
-
 struct J3DShape {
 	/* 80314DA8 */ void calcNBTScale(Vec const&, f32 (* )[3][3], f32 (* )[3][3]);
+};
+
+struct J3DMtxBuffer {
+	/* 80326214 */ void initialize();
+	/* 80326258 */ void create(J3DModelData*, u32);
+	/* 803268D4 */ void calcWeightEnvelopeMtx();
+	/* 80326ACC */ void calcDrawMtx(u32, Vec const&, f32 const (& )[3][4]);
+	/* 80326D3C */ void calcNrmMtx();
+	/* 80326EF0 */ void calcBBoardMtx();
+	/* 803283B4 */ ~J3DMtxBuffer();
 };
 
 struct J3DMaterial {
@@ -110,12 +99,23 @@ struct J3DMaterial {
 	/* 80316F24 */ void newSingleSharedDisplayList(u32);
 };
 
-struct J3DVtxColorCalc {
-	/* 8032E180 */ void calc(J3DModel*);
+struct J3DMatPacket {
+	/* 80312948 */ J3DMatPacket();
+	/* 803129A4 */ ~J3DMatPacket();
+	/* 80312A04 */ void addShapePacket(J3DShapePacket*);
 };
 
 struct J3DJoint {
 	/* 8032F254 */ void entryIn();
+};
+
+struct J3DDrawPacket {
+	/* 8031280C */ void newDisplayList(u32);
+	/* 80312898 */ void newSingleDisplayList(u32);
+};
+
+struct J3DDisplayListObj {
+	/* 8031256C */ void single_To_Double();
 };
 
 // 
@@ -360,7 +360,7 @@ asm void J3DModel::diff() {
 #pragma pop
 
 
-/* 80327A2C-80327AA0 0074+00 s=0 e=1 z=2  None .text      setDeformData__8J3DModelFP13J3DDeformDataUl                  */
+/* 80327A2C-80327AA0 0074+00 s=0 e=1 z=0  None .text      setDeformData__8J3DModelFP13J3DDeformDataUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -371,7 +371,7 @@ asm void J3DModel::setDeformData(J3DDeformData* param_0, u32 param_1) {
 #pragma pop
 
 
-/* 80327AA0-80327BD4 0134+00 s=0 e=0 z=2  None .text      setSkinDeform__8J3DModelFP13J3DSkinDeformUl                  */
+/* 80327AA0-80327BD4 0134+00 s=0 e=0 z=0  None .text      setSkinDeform__8J3DModelFP13J3DSkinDeformUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -382,7 +382,7 @@ asm void J3DModel::setSkinDeform(J3DSkinDeform* param_0, u32 param_1) {
 #pragma pop
 
 
-/* 80327BD4-80327C58 0084+00 s=1 e=0 z=2  None .text      calcAnmMtx__8J3DModelFv                                      */
+/* 80327BD4-80327C58 0084+00 s=1 e=0 z=0  None .text      calcAnmMtx__8J3DModelFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -393,7 +393,7 @@ asm void J3DModel::calcAnmMtx() {
 #pragma pop
 
 
-/* 80327C58-80327CA4 004C+00 s=1 e=1 z=1  None .text      calcWeightEnvelopeMtx__8J3DModelFv                           */
+/* 80327C58-80327CA4 004C+00 s=1 e=1 z=0  None .text      calcWeightEnvelopeMtx__8J3DModelFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

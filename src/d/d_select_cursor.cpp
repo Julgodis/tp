@@ -11,25 +11,26 @@
 // Types:
 // 
 
-struct dSelect_cursorHIO_c {
-	/* 801941E4 */ dSelect_cursorHIO_c();
-	/* 80195978 */ ~dSelect_cursorHIO_c();
+struct J2DPane {
 };
 
-struct JKRArchive {
+struct dSelect_icon_c {
+	/* 80195A3C */ void animation();
+	/* 80195B40 */ void setAlpha(u8);
+	/* 80195B70 */ void setPos(J2DPane*, f32, f32);
 };
 
 struct J2DAnmColor {
 };
 
-struct J2DAnmTransformKey {
-	/* 801959C0 */ ~J2DAnmTransformKey();
+struct JKRArchive {
 };
 
 struct J2DAnmTextureSRTKey {
 };
 
-struct J2DPane {
+struct J2DAnmTransformKey {
+	/* 801959C0 */ ~J2DAnmTransformKey();
 };
 
 struct dSelect_cursor_c {
@@ -50,10 +51,16 @@ struct dSelect_cursor_c {
 	/* 80195940 */ void moveCenter(J2DPane*, f32, f32);
 };
 
-struct dSelect_icon_c {
-	/* 80195A3C */ void animation();
-	/* 80195B40 */ void setAlpha(u8);
-	/* 80195B70 */ void setPos(J2DPane*, f32, f32);
+struct dSelect_cursorHIO_c {
+	/* 801941E4 */ dSelect_cursorHIO_c();
+	/* 80195978 */ ~dSelect_cursorHIO_c();
+};
+
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+};
+
+struct JKRExpHeap {
 };
 
 struct J2DGrafContext {
@@ -66,12 +73,8 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-struct JKRExpHeap {
-};
-
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
 };
 
 struct CPaneMgrAlpha {
@@ -82,12 +85,9 @@ struct CPaneMgrAlpha {
 	/* 80255828 */ void getAlphaRate();
 };
 
-struct JKRFileLoader {
-	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
-};
-
-struct J2DAnmLoaderDataBase {
-	/* 80308A6C */ void load(void const*);
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 // 

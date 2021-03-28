@@ -11,19 +11,14 @@
 // Types:
 // 
 
-struct JPAEmitterWorkData {
+struct _GXTexMapID {
 };
 
-struct JPABaseParticle {
+struct _GXColor {
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
-
+struct JUTTexture {
+	/* 802DE840 */ void load(_GXTexMapID);
 };
 
 template <typename A0>
@@ -32,7 +27,7 @@ struct JPANode { };
 struct JPANode__template0 {
 };
 
-struct _GXColor {
+struct JPAEmitterWorkData {
 };
 
 struct JPAClrAnmKeyData {
@@ -47,15 +42,20 @@ struct JPABaseShape {
 	/* 8027A7E8 */ void setGX(JPAEmitterWorkData*) const;
 };
 
+struct JPABaseParticle {
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
 struct JPABaseEmitter {
 	/* 8027EEB0 */ void calcEmitterGlobalPosition(JGeometry::TVec3<f32>*) const;
-};
-
-struct _GXTexMapID {
-};
-
-struct JUTTexture {
-	/* 802DE840 */ void load(_GXTexMapID);
 };
 
 // 

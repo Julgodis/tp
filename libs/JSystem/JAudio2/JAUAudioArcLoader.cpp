@@ -11,6 +11,10 @@
 // Types:
 // 
 
+struct JAUSectionHeap {
+	/* 802A60AC */ void newDynamicSeqBlock(u32);
+};
+
 struct JAISoundID {
 };
 
@@ -53,10 +57,6 @@ struct JAUAudioArcInterpreter {
 	/* 802A4260 */ ~JAUAudioArcInterpreter();
 	/* 802A42A8 */ void parse(void const*);
 	/* 802A4314 */ bool readCommandMore(u32);
-};
-
-struct JAUSectionHeap {
-	/* 802A60AC */ void newDynamicSeqBlock(u32);
 };
 
 // 

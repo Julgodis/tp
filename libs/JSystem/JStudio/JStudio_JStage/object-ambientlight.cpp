@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct _GXColor {
+};
+
 struct JStage {
 	struct TSystem {
 	};
@@ -35,9 +38,6 @@ struct JStudio_JStage {
 		/* 8028A470 */ void adaptor_object_data_(void const*, u32, void const*, u32);
 	};
 
-};
-
-struct _GXColor {
 };
 
 namespace JStudio {

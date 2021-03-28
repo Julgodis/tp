@@ -33,16 +33,16 @@ struct JPAResourceLoader {
 	/* 8027D8E0 */ void load_jpc(u8 const*, JPAResourceManager*);
 };
 
-struct JPABaseShape {
-	/* 8027A6DC */ JPABaseShape(u8 const*, JKRHeap*);
+struct JPAKeyBlock {
+	/* 8027D730 */ JPAKeyBlock(u8 const*);
+};
+
+struct JPAFieldBlock {
+	/* 8027D088 */ JPAFieldBlock(u8 const*, JKRHeap*);
 };
 
 struct JPAExtraShape {
 	/* 8027AD88 */ JPAExtraShape(u8 const*);
-};
-
-struct JPAChildShape {
-	/* 8027B038 */ JPAChildShape(u8 const*);
 };
 
 struct JPAExTexShape {
@@ -53,12 +53,12 @@ struct JPADynamicsBlock {
 	/* 8027BB18 */ JPADynamicsBlock(u8 const*);
 };
 
-struct JPAFieldBlock {
-	/* 8027D088 */ JPAFieldBlock(u8 const*, JKRHeap*);
+struct JPAChildShape {
+	/* 8027B038 */ JPAChildShape(u8 const*);
 };
 
-struct JPAKeyBlock {
-	/* 8027D730 */ JPAKeyBlock(u8 const*);
+struct JPABaseShape {
+	/* 8027A6DC */ JPABaseShape(u8 const*, JKRHeap*);
 };
 
 // 

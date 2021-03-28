@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct create_tag_class {
-};
-
-struct leafdraw_class {
+struct process_method_class {
 };
 
 struct leafdraw_method_class {
 };
 
-struct process_method_class {
+struct leafdraw_class {
+};
+
+struct create_tag_class {
 };
 
 // 

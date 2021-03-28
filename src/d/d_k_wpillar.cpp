@@ -11,24 +11,10 @@
 // Types:
 // 
 
-struct dkWpillar_c {
-	/* 80261B54 */ void create();
-	/* 80261F24 */ ~dkWpillar_c();
-	/* 80262014 */ void execute();
-	/* 802620C8 */ void draw();
-};
-
-struct kankyo_class {
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
+struct J3DAnmTextureSRTKey {
 };
 
 struct J3DMaterialTable {
-};
-
-struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -55,14 +41,11 @@ struct mDoExt_bckAnm {
 	/* 8000D9CC */ void entry(J3DModelData*, f32);
 };
 
-struct J3DModel {
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
 };
 
-struct JKRSolidHeap {
-};
-
-struct J3DLightObj {
-	/* 80018C0C */ J3DLightObj();
+struct kankyo_class {
 };
 
 struct cXyz {
@@ -72,6 +55,21 @@ struct fopAcM_gc_c {
 	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
 
+struct dkWpillar_c {
+	/* 80261B54 */ void create();
+	/* 80261F24 */ ~dkWpillar_c();
+	/* 80262014 */ void execute();
+	/* 802620C8 */ void draw();
+};
+
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
 struct dRes_info_c {
 };
 
@@ -79,13 +77,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
+struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -103,9 +98,14 @@ struct dBgS {
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct JKRSolidHeap {
+};
+
+struct J3DModel {
+};
+
+struct J3DLightObj {
+	/* 80018C0C */ J3DLightObj();
 };
 
 struct J3DLightInfo {
@@ -319,7 +319,7 @@ SECTION_DATA static void* l_dkWpillar_Method[5] = {
 	(void*)dkWpillar_Draw__FP11dkWpillar_c,
 };
 
-/* 803C3484-803C34B0 0028+04 s=0 e=0 z=1  None .data      g_profile_WPILLAR                                            */
+/* 803C3484-803C34B0 0028+04 s=0 e=0 z=0  None .data      g_profile_WPILLAR                                            */
 SECTION_DATA void* g_profile_WPILLAR[10 + 1 /* padding */] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0009FFFD,

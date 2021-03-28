@@ -43,7 +43,14 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
+};
+
+struct J2DTextBox {
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 struct J2DScreen {
@@ -51,7 +58,8 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 };
 
-struct JKRExpHeap {
+struct CPaneMgrAlpha {
+	/* 802557D0 */ void setAlphaRate(f32);
 };
 
 struct CPaneMgr {
@@ -59,14 +67,6 @@ struct CPaneMgr {
 	/* 802542E8 */ void getGlobalPosX();
 	/* 80254364 */ void getGlobalPosY();
 	/* 802545B0 */ void paneTrans(f32, f32);
-};
-
-struct CPaneMgrAlpha {
-	/* 802557D0 */ void setAlphaRate(f32);
-};
-
-struct J2DTextBox {
-	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // 

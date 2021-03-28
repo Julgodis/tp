@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct JUTTransparency {
+struct _GXTlutFmt {
+};
+
+struct _GXTlut {
 };
 
 struct ResTLUT {
 };
 
-struct _GXTlutFmt {
-};
-
-struct _GXTlut {
+struct JUTTransparency {
 };
 
 struct JUTPalette {

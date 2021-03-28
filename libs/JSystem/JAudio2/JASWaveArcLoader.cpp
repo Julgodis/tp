@@ -11,6 +11,24 @@
 // Types:
 // 
 
+struct JSUPtrList {
+	/* 802DBEAC */ ~JSUPtrList();
+};
+
+struct JSUPtrLink {
+	/* 802DBE14 */ ~JSUPtrLink();
+};
+
+struct JKRHeap {
+};
+
+struct JKRExpandSwitch {
+};
+
+struct JKRDvdAramRipper {
+	/* 802DA874 */ void loadToAram(s32, u32, JKRExpandSwitch, u32, u32, u32*);
+};
+
 struct JASWaveArcLoader {
 	/* 8029A0A0 */ void getRootHeap();
 	/* 8029A0D0 */ void setCurrentDir(char const*);
@@ -50,31 +68,13 @@ struct JASTaskThread {
 	/* 8028FB5C */ void sendCmdMsg(void (*)(void*), void const*, u32);
 };
 
-struct JASDvd {
-	/* 8028FEFC */ void getThreadPointer();
-};
-
 struct JASKernel {
 	/* 80290AC0 */ void getSystemHeap();
 	/* 80290B08 */ void getAramHeap();
 };
 
-struct JKRHeap {
-};
-
-struct JKRExpandSwitch {
-};
-
-struct JKRDvdAramRipper {
-	/* 802DA874 */ void loadToAram(s32, u32, JKRExpandSwitch, u32, u32, u32*);
-};
-
-struct JSUPtrLink {
-	/* 802DBE14 */ ~JSUPtrLink();
-};
-
-struct JSUPtrList {
-	/* 802DBEAC */ ~JSUPtrList();
+struct JASDvd {
+	/* 8028FEFC */ void getThreadPointer();
 };
 
 // 

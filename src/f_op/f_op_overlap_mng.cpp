@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct overlap_task_class {
-};
-
-struct overlap_request_class {
-};
-
 struct scene_class {
 };
 
 struct request_base_class {
+};
+
+struct overlap_task_class {
+};
+
+struct overlap_request_class {
 };
 
 // 
@@ -146,7 +146,7 @@ asm void fopOvlpM_ToldAboutID(unsigned int param_0) {
 #pragma pop
 
 
-/* 8001E558-8001E574 001C+00 s=0 e=6 z=7  None .text      fopOvlpM_IsPeek__Fv                                          */
+/* 8001E558-8001E574 001C+00 s=0 e=6 z=0  None .text      fopOvlpM_IsPeek__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -168,7 +168,7 @@ asm void fopOvlpM_IsDone() {
 #pragma pop
 
 
-/* 8001E5A8-8001E5D0 0028+00 s=0 e=3 z=1  None .text      fopOvlpM_IsDoingReq__Fv                                      */
+/* 8001E5A8-8001E5D0 0028+00 s=0 e=3 z=0  None .text      fopOvlpM_IsDoingReq__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

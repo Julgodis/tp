@@ -11,9 +11,35 @@
 // Types:
 // 
 
-struct dLog_HIO_c {
-	/* 802560A4 */ dLog_HIO_c();
-	/* 8025855C */ ~dLog_HIO_c();
+struct scene_class {
+};
+
+struct request_of_phase_process_class {
+};
+
+struct JKRHeap {
+	/* 802CE438 */ void becomeCurrentHeap();
+	/* 802CE448 */ void destroy();
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
+struct mDoDvdThd_toMainRam_c {
+	/* 80016394 */ void create(char const*, u8, JKRHeap*);
+};
+
+struct JKRArchive {
+	struct EMountMode {
+	};
+
+};
+
+struct mDoDvdThd_mountXArchive_c {
+	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
+};
+
+struct dTres_c {
+	/* 8009BBD8 */ void createWork();
 };
 
 struct dScnLogo_c {
@@ -48,41 +74,6 @@ struct dScnLogo_c {
 	/* 8025854C */ void setRenderMode();
 };
 
-struct request_of_phase_process_class {
-};
-
-struct scene_class {
-};
-
-struct JKRHeap {
-	/* 802CE438 */ void becomeCurrentHeap();
-	/* 802CE448 */ void destroy();
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
-struct JKRArchive {
-	struct EMountMode {
-	};
-
-};
-
-struct mDoDvdThd_mountXArchive_c {
-	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
-};
-
-struct mDoDvdThd_toMainRam_c {
-	/* 80016394 */ void create(char const*, u8, JKRHeap*);
-};
-
-struct cDylPhs {
-	/* 8001884C */ void Link(request_of_phase_process_class*, s16);
-};
-
-struct dComIfG_play_c {
-	/* 8002C9D8 */ void createParticle();
-};
-
 struct dRes_info_c {
 };
 
@@ -93,19 +84,20 @@ struct dRes_control_c {
 	/* 8003C470 */ void syncAllRes(dRes_info_c*, int);
 };
 
-struct dMpath_c {
-	/* 8003F7E8 */ void createWork();
-};
-
 struct dPa_control_c {
 	/* 8004BB78 */ void createCommon(void const*);
 };
 
-struct ResTIMG {
+struct dMpath_c {
+	/* 8003F7E8 */ void createWork();
 };
 
-struct dDlst_2D_c {
-	/* 80053A00 */ dDlst_2D_c(ResTIMG*, s16, s16, s16, s16, u8);
+struct dLog_HIO_c {
+	/* 802560A4 */ dLog_HIO_c();
+	/* 8025855C */ ~dLog_HIO_c();
+};
+
+struct ResTIMG {
 };
 
 struct dDlst_shadowControl_c {
@@ -119,18 +111,22 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct dTres_c {
-	/* 8009BBD8 */ void createWork();
+struct dDlst_2D_c {
+	/* 80053A00 */ dDlst_2D_c(ResTIMG*, s16, s16, s16, s16, u8);
 };
 
-struct JFWDisplay {
-	/* 80272C60 */ void waitBlanking(int);
+struct dComIfG_play_c {
+	/* 8002C9D8 */ void createParticle();
 };
 
-struct JAISoundID {
+struct cDylPhs {
+	/* 8001884C */ void Link(request_of_phase_process_class*, s16);
 };
 
 struct Vec {
+};
+
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -153,6 +149,10 @@ struct JKRExpHeap {
 
 struct JKRAramHeap {
 	/* 802D31AC */ void getTotalFreeSize();
+};
+
+struct JFWDisplay {
+	/* 80272C60 */ void waitBlanking(int);
 };
 
 struct J2DPicture {
@@ -473,7 +473,7 @@ SECTION_DATA static void* l_dScnLogo_Method[5] = {
 	(void*)dScnLogo_Draw__FP10dScnLogo_c,
 };
 
-/* 803C2FE4-803C300C 0028+00 s=0 e=0 z=1  None .data      g_profile_LOGO_SCENE                                         */
+/* 803C2FE4-803C300C 0028+00 s=0 e=0 z=0  None .data      g_profile_LOGO_SCENE                                         */
 SECTION_DATA void* g_profile_LOGO_SCENE[10] = {
 	(void*)NULL,
 	(void*)0x0001FFFD,

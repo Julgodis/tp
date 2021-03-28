@@ -14,16 +14,6 @@
 struct JAISeqData {
 };
 
-struct JAISeqDataRegion {
-};
-
-struct JAUSeqCollection {
-	/* 802A66A0 */ JAUSeqCollection();
-	/* 802A66AC */ void init(void const*);
-	/* 802A66FC */ void getSeqData(int, int, JAISeqData*);
-	/* 802A6754 */ void getSeqDataRegion(JAISeqDataRegion*);
-};
-
 struct JAISeqDataUser {
 };
 
@@ -36,6 +26,16 @@ struct JAUSeqDataMgr_SeqCollection {
 	/* 802A67DC */ void releaseSeqData();
 	/* 802A683C */ void getSeqData(JAISoundID, JAISeqData*);
 	/* 802A6894 */ ~JAUSeqDataMgr_SeqCollection();
+};
+
+struct JAISeqDataRegion {
+};
+
+struct JAUSeqCollection {
+	/* 802A66A0 */ JAUSeqCollection();
+	/* 802A66AC */ void init(void const*);
+	/* 802A66FC */ void getSeqData(int, int, JAISeqData*);
+	/* 802A6754 */ void getSeqDataRegion(JAISeqDataRegion*);
 };
 
 struct JAISeqDataMgr {

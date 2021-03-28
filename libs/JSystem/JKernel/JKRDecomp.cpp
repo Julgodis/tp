@@ -11,6 +11,14 @@
 // Types:
 // 
 
+struct JKRThread {
+	/* 802D1568 */ JKRThread(u32, int, int);
+	/* 802D1758 */ ~JKRThread();
+};
+
+struct JKRHeap {
+};
+
 struct JKRDecompCommand {
 	/* 802DBD70 */ JKRDecompCommand();
 	/* 802DBDC0 */ ~JKRDecompCommand();
@@ -30,14 +38,6 @@ struct JKRDecomp {
 	/* 802DBA58 */ void decodeSZP(u8*, u8*, u32, u32);
 	/* 802DBC14 */ void decodeSZS(u8*, u8*, u32, u32);
 	/* 802DBCF8 */ void checkCompressed(u8*);
-};
-
-struct JKRHeap {
-};
-
-struct JKRThread {
-	/* 802D1568 */ JKRThread(u32, int, int);
-	/* 802D1758 */ ~JKRThread();
 };
 
 struct JKRAMCommand {

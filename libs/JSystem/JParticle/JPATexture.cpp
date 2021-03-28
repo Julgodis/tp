@@ -11,17 +11,17 @@
 // Types:
 // 
 
-struct JPATexture {
-	/* 8027D7D4 */ JPATexture(u8 const*);
-	/* 8027D83C */ ~JPATexture();
-};
-
 struct ResTIMG {
 };
 
 struct JUTTexture {
 	/* 802DE234 */ ~JUTTexture();
 	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
+};
+
+struct JPATexture {
+	/* 8027D7D4 */ JPATexture(u8 const*);
+	/* 8027D83C */ ~JPATexture();
 };
 
 // 

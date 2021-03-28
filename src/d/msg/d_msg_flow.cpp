@@ -11,16 +11,118 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-};
-
-struct mesg_flow_node {
+struct mesg_flow_node_event {
 };
 
 struct mesg_flow_node_branch {
 };
 
-struct mesg_flow_node_event {
+struct mesg_flow_node {
+};
+
+struct _GXColor {
+};
+
+struct mDoGph_gInf_c {
+	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
+};
+
+struct fopAc_ac_c {
+};
+
+struct daPy_py_c {
+	/* 8015F3FC */ void getAttentionOffsetY();
+	/* 8015F954 */ void setMidnaMotionNum(int);
+	/* 8015F968 */ void setMidnaFaceNum(int);
+};
+
+struct daAlink_c {
+	/* 800B4938 */ void setMidnaMsg();
+};
+
+struct dSv_player_status_a_c {
+	/* 80032A5C */ void getSelectItemIndex(int) const;
+	/* 80032AA8 */ void getRupeeMax() const;
+};
+
+struct dSv_player_item_record_c {
+	/* 80033F6C */ void setBombNum(u8, u8);
+	/* 80033F7C */ void getBombNum(u8) const;
+};
+
+struct dSv_player_item_max_c {
+	/* 800340F8 */ void getBombNum(u8) const;
+};
+
+struct dSv_player_item_c {
+	/* 80032FB8 */ void setItem(int, u8);
+	/* 80033030 */ void getItem(int, bool) const;
+	/* 80033370 */ void setBottleItemIn(u8, u8);
+	/* 80033450 */ void setEmptyBottleItemIn(u8);
+	/* 80033754 */ void checkInsectBottle();
+	/* 800337EC */ void checkEmptyBottle();
+	/* 80033BEC */ void checkBombBag(u8);
+	/* 80033C2C */ void setWarashibeItem(u8);
+};
+
+struct dSv_player_get_item_c {
+	/* 80033E94 */ void offFirstBit(u8);
+};
+
+struct dSv_memBit_c {
+	/* 800347E8 */ void isTbox(int) const;
+	/* 80034810 */ void onSwitch(int);
+	/* 80034838 */ void offSwitch(int);
+	/* 80034860 */ void isSwitch(int) const;
+	/* 800348EC */ void isItem(int) const;
+};
+
+struct dSv_light_drop_c {
+	/* 80034340 */ void getLightDropNum(u8) const;
+	/* 80034368 */ void onLightDropGetFlag(u8);
+};
+
+struct dSv_event_c {
+	/* 8003498C */ void onEventBit(u16);
+	/* 800349A4 */ void offEventBit(u16);
+	/* 800349BC */ void isEventBit(u16) const;
+	/* 800349E0 */ void setEventReg(u16, u8);
+	/* 80034A04 */ void getEventReg(u16) const;
+};
+
+struct dSv_danBit_c {
+	/* 80034B98 */ void onSwitch(int);
+	/* 80034BC0 */ void offSwitch(int);
+	/* 80034BE8 */ void isSwitch(int) const;
+	/* 80034C74 */ void isItem(int) const;
+};
+
+struct dStage_roomControl_c {
+	/* 80024384 */ void getStatusRoomDt(int);
+};
+
+struct dShopSystem_c {
+	/* 801975F8 */ void isFlag(int);
+	/* 8019A354 */ void setSoldOutFlag();
+};
+
+struct dMsgObject_c {
+	/* 802370FC */ void isMidonaMessage();
+	/* 80237980 */ void isKillMessageFlag();
+	/* 80237994 */ void onKillMessageFlag();
+	/* 80237A74 */ void setTalkPartner(fopAc_ac_c*);
+	/* 80237A88 */ void setNowTalkFlowNo(s16);
+	/* 8023803C */ void changeFlowGroup(s32);
+	/* 80238098 */ void endFlowGroup();
+	/* 80238174 */ void getMsgDtPtr();
+	/* 8023822C */ void getStatus();
+	/* 8023846C */ void setSelectCursorPos(u8);
+	/* 802384D8 */ void setArrowNum(u8);
+	/* 80238544 */ void setSelectWordFlag(u8);
+	/* 802385B4 */ void getSelectBombBagID();
+	/* 802385E0 */ void getSelectBombPrice();
+	/* 8023860C */ void setEquipBombInfo();
+	/* 8023864C */ void setSelectCancelPos(u8);
 };
 
 struct dMsgFlow_c {
@@ -147,76 +249,12 @@ struct dMsgFlow_c {
 	/* 8024DAA8 */ bool event042(mesg_flow_node_event*, fopAc_ac_c*);
 };
 
-struct _GXColor {
-};
-
-struct mDoGph_gInf_c {
-	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
-};
-
-struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(int);
+struct dMeter2Info_c {
+	/* 8021E0C4 */ void resetMiniGameItem(bool);
 };
 
 struct dComIfG_play_c {
 	/* 8002B36C */ void setItemBombNumCount(u8, s16);
-};
-
-struct dSv_player_status_a_c {
-	/* 80032A5C */ void getSelectItemIndex(int) const;
-	/* 80032AA8 */ void getRupeeMax() const;
-};
-
-struct dSv_player_item_c {
-	/* 80032FB8 */ void setItem(int, u8);
-	/* 80033030 */ void getItem(int, bool) const;
-	/* 80033370 */ void setBottleItemIn(u8, u8);
-	/* 80033450 */ void setEmptyBottleItemIn(u8);
-	/* 80033754 */ void checkInsectBottle();
-	/* 800337EC */ void checkEmptyBottle();
-	/* 80033BEC */ void checkBombBag(u8);
-	/* 80033C2C */ void setWarashibeItem(u8);
-};
-
-struct dSv_player_get_item_c {
-	/* 80033E94 */ void offFirstBit(u8);
-};
-
-struct dSv_player_item_record_c {
-	/* 80033F6C */ void setBombNum(u8, u8);
-	/* 80033F7C */ void getBombNum(u8) const;
-};
-
-struct dSv_player_item_max_c {
-	/* 800340F8 */ void getBombNum(u8) const;
-};
-
-struct dSv_light_drop_c {
-	/* 80034340 */ void getLightDropNum(u8) const;
-	/* 80034368 */ void onLightDropGetFlag(u8);
-};
-
-struct dSv_memBit_c {
-	/* 800347E8 */ void isTbox(int) const;
-	/* 80034810 */ void onSwitch(int);
-	/* 80034838 */ void offSwitch(int);
-	/* 80034860 */ void isSwitch(int) const;
-	/* 800348EC */ void isItem(int) const;
-};
-
-struct dSv_event_c {
-	/* 8003498C */ void onEventBit(u16);
-	/* 800349A4 */ void offEventBit(u16);
-	/* 800349BC */ void isEventBit(u16) const;
-	/* 800349E0 */ void setEventReg(u16, u8);
-	/* 80034A04 */ void getEventReg(u16) const;
-};
-
-struct dSv_danBit_c {
-	/* 80034B98 */ void onSwitch(int);
-	/* 80034BC0 */ void offSwitch(int);
-	/* 80034BE8 */ void isSwitch(int) const;
-	/* 80034C74 */ void isItem(int) const;
 };
 
 struct Vec {
@@ -231,50 +269,12 @@ struct dAttention_c {
 	/* 8014B010 */ void getDistTable(int);
 };
 
-struct daAlink_c {
-	/* 800B4938 */ void setMidnaMsg();
-};
-
-struct daPy_py_c {
-	/* 8015F3FC */ void getAttentionOffsetY();
-	/* 8015F954 */ void setMidnaMotionNum(int);
-	/* 8015F968 */ void setMidnaFaceNum(int);
-};
-
-struct dShopSystem_c {
-	/* 801975F8 */ void isFlag(int);
-	/* 8019A354 */ void setSoldOutFlag();
-};
-
-struct dMeter2Info_c {
-	/* 8021E0C4 */ void resetMiniGameItem(bool);
-};
-
-struct dMsgObject_c {
-	/* 802370FC */ void isMidonaMessage();
-	/* 80237980 */ void isKillMessageFlag();
-	/* 80237994 */ void onKillMessageFlag();
-	/* 80237A74 */ void setTalkPartner(fopAc_ac_c*);
-	/* 80237A88 */ void setNowTalkFlowNo(s16);
-	/* 8023803C */ void changeFlowGroup(s32);
-	/* 80238098 */ void endFlowGroup();
-	/* 80238174 */ void getMsgDtPtr();
-	/* 8023822C */ void getStatus();
-	/* 8023846C */ void setSelectCursorPos(u8);
-	/* 802384D8 */ void setArrowNum(u8);
-	/* 80238544 */ void setSelectWordFlag(u8);
-	/* 802385B4 */ void getSelectBombBagID();
-	/* 802385E0 */ void getSelectBombPrice();
-	/* 8023860C */ void setEquipBombInfo();
-	/* 8023864C */ void setSelectCancelPos(u8);
+struct cSGlobe {
+	/* 80271880 */ cSGlobe(cXyz const&);
 };
 
 struct cSAngle {
 	/* 80271228 */ void operator-(s16) const;
-};
-
-struct cSGlobe {
-	/* 80271880 */ cSGlobe(cXyz const&);
 };
 
 struct Z2SeMgr {
@@ -1456,7 +1456,7 @@ SECTION_DATA static void* __vt__10dMsgFlow_c[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80249F00-80249F48 0048+00 s=0 e=5 z=154  None .text      __ct__10dMsgFlow_cFv                                         */
+/* 80249F00-80249F48 0048+00 s=0 e=5 z=0  None .text      __ct__10dMsgFlow_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1467,7 +1467,7 @@ asm dMsgFlow_c::dMsgFlow_c() {
 #pragma pop
 
 
-/* 80249F48-80249F90 0048+00 s=1 e=7 z=111  None .text      __dt__10dMsgFlow_cFv                                         */
+/* 80249F48-80249F90 0048+00 s=1 e=7 z=0  None .text      __dt__10dMsgFlow_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1490,7 +1490,7 @@ SECTION_DEAD char const* const stringBase_80399CBB = "INF1";
 SECTION_DEAD char const* const stringBase_80399CC0 = "F_SP116";
 #pragma pop
 
-/* 80249F90-8024A13C 01AC+00 s=0 e=10 z=86  None .text      init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c             */
+/* 80249F90-8024A13C 01AC+00 s=0 e=10 z=0  None .text      init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1501,7 +1501,7 @@ asm void dMsgFlow_c::init(fopAc_ac_c* param_0, int param_1, int param_2, fopAc_a
 #pragma pop
 
 
-/* 8024A13C-8024A2D8 019C+00 s=2 e=0 z=2  None .text      checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi                  */
+/* 8024A13C-8024A2D8 019C+00 s=2 e=0 z=0  None .text      checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1512,7 +1512,7 @@ asm void dMsgFlow_c::checkOpenDoor(fopAc_ac_c* param_0, int* param_1) {
 #pragma pop
 
 
-/* 8024A2D8-8024A424 014C+00 s=0 e=21 z=78  None .text      doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci            */
+/* 8024A2D8-8024A424 014C+00 s=0 e=21 z=0  None .text      doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1523,7 +1523,7 @@ asm void dMsgFlow_c::doFlow(fopAc_ac_c* param_0, fopAc_ac_c** param_1, int param
 #pragma pop
 
 
-/* 8024A424-8024A4C4 00A0+00 s=0 e=2 z=1  None .text      checkEventRender__10dMsgFlow_cFPiPiPiPi                      */
+/* 8024A424-8024A4C4 00A0+00 s=0 e=2 z=0  None .text      checkEventRender__10dMsgFlow_cFPiPiPiPi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1534,7 +1534,7 @@ asm void dMsgFlow_c::checkEventRender(int* param_0, int* param_1, int* param_2, 
 #pragma pop
 
 
-/* 8024A4C4-8024A528 0064+00 s=0 e=0 z=10  None .text      remove__10dMsgFlow_cFv                                       */
+/* 8024A4C4-8024A528 0064+00 s=0 e=0 z=0  None .text      remove__10dMsgFlow_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1545,7 +1545,7 @@ asm void dMsgFlow_c::remove() {
 #pragma pop
 
 
-/* 8024A528-8024A538 0010+00 s=0 e=2 z=66  None .text      getEventId__10dMsgFlow_cFPi                                  */
+/* 8024A528-8024A538 0010+00 s=0 e=2 z=0  None .text      getEventId__10dMsgFlow_cFPi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1556,7 +1556,7 @@ asm void dMsgFlow_c::getEventId(int* param_0) {
 #pragma pop
 
 
-/* 8024A538-8024A540 0008+00 s=0 e=3 z=4  None .text      getMsgNo__10dMsgFlow_cFv                                     */
+/* 8024A538-8024A540 0008+00 s=0 e=3 z=0  None .text      getMsgNo__10dMsgFlow_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1567,7 +1567,7 @@ asm void dMsgFlow_c::getMsgNo() {
 #pragma pop
 
 
-/* 8024A540-8024A548 0008+00 s=0 e=0 z=12  None .text      getNowMsgNo__10dMsgFlow_cFv                                  */
+/* 8024A540-8024A548 0008+00 s=0 e=0 z=0  None .text      getNowMsgNo__10dMsgFlow_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1578,7 +1578,7 @@ asm void dMsgFlow_c::getNowMsgNo() {
 #pragma pop
 
 
-/* 8024A548-8024A580 0038+00 s=0 e=2 z=4  None .text      getMsg__10dMsgFlow_cFv                                       */
+/* 8024A548-8024A580 0038+00 s=0 e=2 z=0  None .text      getMsg__10dMsgFlow_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1800,7 +1800,7 @@ asm void dMsgFlow_c::query004(mesg_flow_node_branch* param_0, fopAc_ac_c* param_
 #pragma pop
 
 
-/* 8024B2C0-8024B2F8 0038+00 s=2 e=1 z=1  None .text      query005__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B2C0-8024B2F8 0038+00 s=2 e=1 z=0  None .text      query005__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -11,7 +11,11 @@
 // Types:
 // 
 
-struct _GXColor {
+struct dMenu_Fmap_world_data_c {
+};
+
+struct dMenu_Fmap_region_data_c {
+	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, int, int*, int*);
 };
 
 struct dDrawPath_c {
@@ -33,13 +37,6 @@ struct dDrawPath_c {
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
 	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CCC4 */ void drawPath();
-};
-
-struct dMenu_Fmap_region_data_c {
-	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, int, int*, int*);
-};
-
-struct dMenu_Fmap_world_data_c {
 };
 
 struct renderingFmap_c {
@@ -71,34 +68,6 @@ struct renderingFmap_c {
 	/* 801CF568 */ void afterDrawPath();
 };
 
-struct dMenu_FmapMap_c {
-	/* 801CEAAC */ void setFmapPaletteColor(renderingFmap_c::palette_e, _GXColor const&);
-	/* 801CEA38 */ void setFmapPaletteColor(renderingFmap_c::palette_e, u8, u8, u8, u8);
-	/* 801CEAE0 */ void isFlashRoomNoCheck(int) const;
-	/* 801CEB1C */ void setPointColor(f32);
-	/* 801CEC24 */ dMenu_FmapMap_c();
-	/* 801CED38 */ ~dMenu_FmapMap_c();
-	/* 801CEDE8 */ void _create(u16, u16, u16, u16, void*);
-	/* 801CEE3C */ void _delete();
-	/* 801CEE94 */ void draw();
-	/* 801CF0B4 */ void rendering(dDrawPath_c::line_class const*);
-	/* 801CF12C */ void getLineWidth(int);
-	/* 801CF1D4 */ void isDrawType(int);
-	/* 801CF1E0 */ void setFlashOn(int, int, u8*, int);
-	/* 801CF208 */ void getLineColor(int, int);
-	/* 801CF298 */ void getBackColor() const;
-	/* 801CF2A0 */ void getColor(int);
-	/* 801CF394 */ void setTexture(u16, u16, u16, u16);
-	/* 801CF450 */ void setRendering(dMenu_Fmap_world_data_c*, int, f32, f32, f32, f32);
-};
-
-struct Vec {
-};
-
-struct dDlst_base_c {
-	/* 8002ABEC */ void draw();
-};
-
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
@@ -123,8 +92,39 @@ struct dMenu_Fmap_room_data_c {
 	/* 8003D818 */ void isArrival();
 };
 
+struct _GXColor {
+};
+
+struct dMenu_FmapMap_c {
+	/* 801CEAAC */ void setFmapPaletteColor(renderingFmap_c::palette_e, _GXColor const&);
+	/* 801CEA38 */ void setFmapPaletteColor(renderingFmap_c::palette_e, u8, u8, u8, u8);
+	/* 801CEAE0 */ void isFlashRoomNoCheck(int) const;
+	/* 801CEB1C */ void setPointColor(f32);
+	/* 801CEC24 */ dMenu_FmapMap_c();
+	/* 801CED38 */ ~dMenu_FmapMap_c();
+	/* 801CEDE8 */ void _create(u16, u16, u16, u16, void*);
+	/* 801CEE3C */ void _delete();
+	/* 801CEE94 */ void draw();
+	/* 801CF0B4 */ void rendering(dDrawPath_c::line_class const*);
+	/* 801CF12C */ void getLineWidth(int);
+	/* 801CF1D4 */ void isDrawType(int);
+	/* 801CF1E0 */ void setFlashOn(int, int, u8*, int);
+	/* 801CF208 */ void getLineColor(int, int);
+	/* 801CF298 */ void getBackColor() const;
+	/* 801CF2A0 */ void getColor(int);
+	/* 801CF394 */ void setTexture(u16, u16, u16, u16);
+	/* 801CF450 */ void setRendering(dMenu_Fmap_world_data_c*, int, f32, f32, f32, f32);
+};
+
+struct dDlst_base_c {
+	/* 8002ABEC */ void draw();
+};
+
 struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
+};
+
+struct Vec {
 };
 
 // 

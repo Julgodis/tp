@@ -11,13 +11,17 @@
 // Types:
 // 
 
-struct J3DLightInfo {
-	/* 803256C4 */ void operator=(J3DLightInfo const&);
-};
-
 struct J3DTexMtxInfo {
 	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
 	/* 80325794 */ void setEffectMtx(f32 (* )[4]);
+};
+
+struct J3DNBTScaleInfo {
+	/* 8032587C */ void operator=(J3DNBTScaleInfo const&);
+};
+
+struct J3DLightInfo {
+	/* 803256C4 */ void operator=(J3DLightInfo const&);
 };
 
 struct J3DIndTexMtxInfo {
@@ -26,10 +30,6 @@ struct J3DIndTexMtxInfo {
 
 struct J3DFogInfo {
 	/* 80325800 */ void operator=(J3DFogInfo const&);
-};
-
-struct J3DNBTScaleInfo {
-	/* 8032587C */ void operator=(J3DNBTScaleInfo const&);
 };
 
 // 
@@ -54,7 +54,7 @@ extern "C" void __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo(); // 1
 // Declarations:
 // 
 
-/* 803256C4-80325718 0054+00 s=0 e=11 z=24  None .text      __as__12J3DLightInfoFRC12J3DLightInfo                        */
+/* 803256C4-80325718 0054+00 s=0 e=11 z=0  None .text      __as__12J3DLightInfoFRC12J3DLightInfo                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -85,7 +85,7 @@ SECTION_SDATA2 static u8 lit_410[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80325794-803257DC 0048+00 s=0 e=2 z=7  None .text      setEffectMtx__13J3DTexMtxInfoFPA4_f                          */
+/* 80325794-803257DC 0048+00 s=0 e=2 z=0  None .text      setEffectMtx__13J3DTexMtxInfoFPA4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

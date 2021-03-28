@@ -11,6 +11,36 @@
 // Types:
 // 
 
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
+	/* 802DBE14 */ ~JSUPtrLink();
+};
+
+struct JSUPtrList {
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF14 */ void initiate();
+	/* 802DC094 */ void insert(JSUPtrLink*, JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
+struct JKRSolidHeap {
+};
+
+struct JKRHeap {
+};
+
+struct JKRExpHeap {
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
+struct JASKernel {
+	/* 802909B8 */ void setupRootHeap(JKRSolidHeap*, u32);
+	/* 80290AC0 */ void getSystemHeap();
+	/* 80290AC8 */ void getCommandHeap();
+	/* 80290AD0 */ void setupAramHeap(u32, u32);
+	/* 80290B08 */ void getAramHeap();
+};
+
 struct JASDisposer {
 	/* 80290BCC */ void onDispose();
 };
@@ -34,36 +64,6 @@ struct JASGenericMemPool {
 	/* 802908C8 */ void newMemPool(u32, int);
 	/* 80290948 */ void alloc(u32);
 	/* 80290994 */ void free(void*, u32);
-};
-
-struct JKRSolidHeap {
-};
-
-struct JASKernel {
-	/* 802909B8 */ void setupRootHeap(JKRSolidHeap*, u32);
-	/* 80290AC0 */ void getSystemHeap();
-	/* 80290AC8 */ void getCommandHeap();
-	/* 80290AD0 */ void setupAramHeap(u32, u32);
-	/* 80290B08 */ void getAramHeap();
-};
-
-struct JKRHeap {
-};
-
-struct JKRExpHeap {
-	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
-struct JSUPtrLink {
-	/* 802DBDFC */ JSUPtrLink(void*);
-	/* 802DBE14 */ ~JSUPtrLink();
-};
-
-struct JSUPtrList {
-	/* 802DBEAC */ ~JSUPtrList();
-	/* 802DBF14 */ void initiate();
-	/* 802DC094 */ void insert(JSUPtrLink*, JSUPtrLink*);
-	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
 // 

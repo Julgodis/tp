@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct Z2CreatureEnemy {
-};
-
 template <typename A0>
 struct JSULink { };
 /* JSULink<Z2CreatureEnemy> */
 struct JSULink__template2 {
+};
+
+struct Z2CreatureEnemy {
 };
 
 struct Z2SoundObjMgr {
@@ -33,13 +33,6 @@ struct Z2SoundObjMgr {
 	/* 802C01E4 */ void isTwilightBattle();
 };
 
-struct Z2Calc {
-	struct CurveSign {
-	};
-
-	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
-};
-
 struct Z2SeqMgr {
 	/* 802AFF8C */ void changeBgmStatus(s32);
 	/* 802B1DF4 */ void changeSubBgmStatus(s32);
@@ -47,6 +40,13 @@ struct Z2SeqMgr {
 	/* 802B43E0 */ void setBattleGhostMute(bool);
 	/* 802B4498 */ void setBattleDistState(u8);
 	/* 802B5204 */ void stopBattleBgm(u8, u8);
+};
+
+struct Z2Calc {
+	struct CurveSign {
+	};
+
+	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
 };
 
 struct JSUPtrLink {
@@ -117,7 +117,7 @@ asm Z2SoundObjMgr::Z2SoundObjMgr() {
 #pragma pop
 
 
-/* 802BF980-802BF994 0014+00 s=1 e=3 z=3  None .text      setForceBattleArea__13Z2SoundObjMgrFbUsUsUs                  */
+/* 802BF980-802BF994 0014+00 s=1 e=3 z=0  None .text      setForceBattleArea__13Z2SoundObjMgrFbUsUsUs                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -17,6 +17,15 @@ struct _GXColor {
 struct Vec {
 };
 
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TLight {
+	};
+
+};
+
 namespace JStudio {
 	struct data {
 		struct TEOperationData {
@@ -42,15 +51,6 @@ namespace JStudio {
 
 	struct TAdaptor_light {
 		/* 80287308 */ ~TAdaptor_light();
-	};
-
-};
-
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TLight {
 	};
 
 };

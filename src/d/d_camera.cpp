@@ -11,11 +11,15 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
+namespace std {
+	/* 80182A3C */ void fabsf(f32);
+	/* 80182D10 */ void fabs(f32);
 };
 
-struct dCamMapToolData {
-	/* 8015FEB8 */ void Set(s32, s32, fopAc_ac_c*, u16, u8);
+struct stage_camera2_data_class {
+};
+
+struct request_of_phase_process_class {
 };
 
 struct Vec {
@@ -40,8 +44,153 @@ struct cXyz {
 	/* 8026706C */ bool operator!=(Vec const&) const;
 };
 
-struct dBgS_LinChk {
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+struct mDoMtx_stack_c {
+	/* 8000CD9C */ void transM(f32, f32, f32);
+	/* 8000CE70 */ void scaleM(cXyz const&);
+};
+
+struct mDoLib_clipper {
+	/* 8001528C */ void setup(f32, f32, f32, f32);
+};
+
+struct mDoGph_gInf_c {
+	/* 80008078 */ void onBlure();
+	/* 800080A0 */ void onBlure(f32 const (* )[4]);
+};
+
+struct mDoCPd_c {
+	/* 8016C314 */ void getHoldA(u32);
+	/* 80182BF8 */ void getTrigA(u32);
+};
+
+struct fopAc_ac_c {
+};
+
+struct daTagMwait_c {
+	/* 80182D9C */ void checkEndMessage();
+};
+
+struct daTagMstop_c {
+	/* 80182D64 */ void checkNoAttention() const;
+};
+
+struct daTagMhint_c {
+	/* 80182D78 */ void checkNoAttention() const;
+};
+
+struct daPy_py_c {
+	/* 801414CC */ void checkMagneBootsOn() const;
+	/* 8015DFF4 */ void getLeftHandPos() const;
+	/* 8015F8D0 */ void getThrowBoomerangActor();
+	/* 801829E0 */ void checkThrowDamage() const;
+	/* 80182A10 */ void checkGoronSideMove() const;
+	/* 80182AAC */ void getRightFootPosP();
+	/* 80182AB4 */ void getLeftFootPosP();
+	/* 80182ABC */ void getMidnaActor();
+	/* 80182AC4 */ void checkCopyRodThrowAfter() const;
+	/* 80182AD8 */ void checkRide() const;
+	/* 80182B9C */ void getRightHandPos() const;
+};
+
+struct daHorse_c {
+	/* 80182D04 */ void getLashDashStart() const;
+	/* 80182D1C */ void checkTurnStandCamera() const;
+	/* 80182D48 */ void checkJump() const;
+};
+
+struct daAlink_c {
+	/* 8009D87C */ bool getE3Zhint();
+	/* 800D2ABC */ void checkCutLargeTurnState() const;
+	/* 800DE884 */ void checkBowCameraArrowPosP(s16*, s16*);
+	/* 800E1390 */ void getCopyRodCameraActor();
+	/* 800F3CF8 */ void checkCanoeRideTandem();
+	/* 80112474 */ void checkIronBallThrowMode() const;
+	/* 801124B4 */ void checkIronBallThrowReturnMode() const;
+	/* 80133EF0 */ void checkMidnaLockJumpPoint() const;
+	/* 8018280C */ void getChainGrabActor();
+	/* 80182814 */ void checkCokkoGlide() const;
+	/* 8018283C */ void checkCameraLargeDamage() const;
+	/* 80182870 */ void getHsSubChainTopPos() const;
+	/* 80182888 */ void checkCutHeadProc() const;
+	/* 8018289C */ void getRideActor();
+};
+
+struct dVibration_c {
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct dStage_roomControl_c {
+	/* 80024384 */ void getStatusRoomDt(int);
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
+};
+
+struct dEvt_control_c {
+	/* 800434D8 */ void searchMapEventData(u8);
+};
+
+struct dEvent_manager_c {
+	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
+	/* 80047D4C */ void getIsAddvance(int);
+	/* 80047E10 */ void getMyActIdx(int, char const* const*, int, int, int);
+	/* 8004817C */ void cutEnd(int);
+};
+
+struct dDlst_window_c {
+	/* 80051AC0 */ void setViewPort(f32, f32, f32, f32, f32, f32);
+	/* 80051ADC */ void setScissor(f32, f32, f32, f32);
+};
+
+struct _GXColor {
+};
+
+struct dDlst_effectLine_c {
+	/* 800541F4 */ void update(cXyz&, _GXColor&, u16, u16, u16, u16, f32, f32, f32, f32);
+};
+
+struct dDemo_object_c {
+	/* 80039128 */ void getActiveCamera();
+};
+
+struct dCstick_c {
+	/* 8008845C */ bool Shift(u32);
+};
+
+struct cCcD_ShapeAttr {
+	struct Shape {
+		/* 80167BBC */ ~Shape();
+	};
+
+};
+
+struct dCcS {
+	/* 80086D8C */ void ChkCamera(cXyz&, cXyz&, f32, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*);
+	/* 80086FBC */ void chkCameraPoint(cXyz const&, cCcD_ShapeAttr::Shape*, fopAc_ac_c*, fopAc_ac_c*);
+};
+
+struct cM3dGCps {
+	/* 8026EF88 */ cM3dGCps();
+	/* 8026EFA4 */ ~cM3dGCps();
+	/* 8026F000 */ void Set(cXyz const&, cXyz const&, f32);
+};
+
+struct dCcMassS_Mng {
+	/* 80085E6C */ void SetCam(cM3dGCps const&);
+	/* 80085EB0 */ void GetResultCam() const;
+	/* 80085EB8 */ void GetCamTopPos(Vec*);
 };
 
 struct cSAngle {
@@ -79,7 +228,12 @@ struct cSAngle {
 struct camera_class {
 };
 
-struct stage_camera2_data_class {
+struct dCamMapToolData {
+	/* 8015FEB8 */ void Set(s32, s32, fopAc_ac_c*, u16, u8);
+};
+
+struct dBgS_LinChk {
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
 struct dCamera_c {
@@ -254,123 +408,6 @@ struct dCamera_c {
 	/* 801829AC */ void Bank();
 };
 
-struct dBgS_SphChk {
-	/* 80078A14 */ dBgS_SphChk();
-	/* 80078AC0 */ ~dBgS_SphChk();
-};
-
-struct cBgD_Vtx_t {
-};
-
-struct cM3dGPla {
-	/* 8001DB90 */ ~cM3dGPla();
-	/* 801411F0 */ cM3dGPla();
-	/* 801829EC */ void GetNP();
-};
-
-struct dBgS_CamSphChk {
-	/* 80165E74 */ ~dBgS_CamSphChk();
-};
-
-struct cCcD_ShapeAttr {
-	struct Shape {
-		/* 80167BBC */ ~Shape();
-	};
-
-};
-
-struct mDoCPd_c {
-	/* 8016C314 */ void getHoldA(u32);
-	/* 80182BF8 */ void getTrigA(u32);
-};
-
-struct cSGlobe {
-	/* 8007167C */ ~cSGlobe();
-	/* 8008E774 */ void operator=(cSGlobe const&);
-	/* 80182C84 */ void U() const;
-	/* 8008E894 */ void U(cSAngle const&);
-	/* 80182A08 */ void V() const;
-	/* 8008FA58 */ void V(cSAngle const&);
-	/* 8016E420 */ cSGlobe();
-	/* 80271820 */ cSGlobe(f32, s16, s16);
-	/* 80271880 */ cSGlobe(cXyz const&);
-	/* 802717F0 */ cSGlobe(cSGlobe const&);
-	/* 80271850 */ cSGlobe(f32, cSAngle const&, cSAngle const&);
-	/* 80182A64 */ void R() const;
-	/* 80182A4C */ void R(f32);
-	/* 802719A4 */ void Val(f32, s16, s16);
-	/* 80271A08 */ void Val(f32, cSAngle const&, cSAngle const&);
-	/* 80271A70 */ void Val(cXyz const&);
-	/* 80271AB4 */ void Xyz() const;
-	/* 80271B7C */ void Invert();
-};
-
-struct dAttention_c {
-	/* 8007353C */ void LockonTarget(s32);
-	/* 800735DC */ void LockonReleaseDistanse();
-	/* 80073734 */ void ActionTarget(s32);
-	/* 8007378C */ void CheckObjectTarget(s32);
-	/* 800737E4 */ void LockonTruth();
-	/* 8016E424 */ void LockEdge();
-	/* 80182994 */ void GetCheckObjectCount();
-	/* 80182AD0 */ void keepLock(int);
-};
-
-struct camera_process_class {
-};
-
-struct dCamForcusLine {
-	/* 801824C8 */ void Init();
-	/* 80182560 */ void Draw();
-	/* 801825E4 */ void Off();
-};
-
-struct daAlink_c {
-	/* 8009D87C */ bool getE3Zhint();
-	/* 800D2ABC */ void checkCutLargeTurnState() const;
-	/* 800DE884 */ void checkBowCameraArrowPosP(s16*, s16*);
-	/* 800E1390 */ void getCopyRodCameraActor();
-	/* 800F3CF8 */ void checkCanoeRideTandem();
-	/* 80112474 */ void checkIronBallThrowMode() const;
-	/* 801124B4 */ void checkIronBallThrowReturnMode() const;
-	/* 80133EF0 */ void checkMidnaLockJumpPoint() const;
-	/* 8018280C */ void getChainGrabActor();
-	/* 80182814 */ void checkCokkoGlide() const;
-	/* 8018283C */ void checkCameraLargeDamage() const;
-	/* 80182870 */ void getHsSubChainTopPos() const;
-	/* 80182888 */ void checkCutHeadProc() const;
-	/* 8018289C */ void getRideActor();
-};
-
-struct d2DBSplinePath {
-	/* 80097878 */ void Init(s32, s32);
-	/* 80097B68 */ void Spot(f32*, f32);
-	/* 801828D4 */ ~d2DBSplinePath();
-};
-
-struct daPy_py_c {
-	/* 801414CC */ void checkMagneBootsOn() const;
-	/* 8015DFF4 */ void getLeftHandPos() const;
-	/* 8015F8D0 */ void getThrowBoomerangActor();
-	/* 801829E0 */ void checkThrowDamage() const;
-	/* 80182A10 */ void checkGoronSideMove() const;
-	/* 80182AAC */ void getRightFootPosP();
-	/* 80182AB4 */ void getLeftFootPosP();
-	/* 80182ABC */ void getMidnaActor();
-	/* 80182AC4 */ void checkCopyRodThrowAfter() const;
-	/* 80182AD8 */ void checkRide() const;
-	/* 80182B9C */ void getRightHandPos() const;
-};
-
-struct cBgS_LinChk {
-	/* 801829F0 */ void GetCross();
-};
-
-namespace std {
-	/* 80182A3C */ void fabsf(f32);
-	/* 80182D10 */ void fabs(f32);
-};
-
 struct dCamSetup_c {
 	/* 80088668 */ dCamSetup_c();
 	/* 800888B8 */ ~dCamSetup_c();
@@ -407,130 +444,65 @@ struct dCamParam_c {
 	/* 80182CD0 */ void Val(s32, int);
 };
 
-struct daHorse_c {
-	/* 80182D04 */ void getLashDashStart() const;
-	/* 80182D1C */ void checkTurnStandCamera() const;
-	/* 80182D48 */ void checkJump() const;
+struct dCamMath {
+	/* 8008813C */ void rationalBezierRatio(f32, f32);
+	/* 80088284 */ void zoomFovy(f32, f32);
+	/* 8008831C */ void xyzRotateX(cXyz&, cSAngle);
+	/* 80088384 */ void xyzRotateY(cXyz&, cSAngle);
+	/* 800883EC */ void xyzHorizontalDistance(cXyz&, cXyz&);
 };
 
-struct cAngle {
-	/* 80182D28 */ void d2s(f32);
+struct dCamForcusLine {
+	/* 801824C8 */ void Init();
+	/* 80182560 */ void Draw();
+	/* 801825E4 */ void Off();
 };
 
-struct daTagMstop_c {
-	/* 80182D64 */ void checkNoAttention() const;
-};
-
-struct daTagMhint_c {
-	/* 80182D78 */ void checkNoAttention() const;
-};
-
-struct daTagMwait_c {
-	/* 80182D9C */ void checkEndMessage();
-};
-
-struct mDoGph_gInf_c {
-	/* 80008078 */ void onBlure();
-	/* 800080A0 */ void onBlure(f32 const (* )[4]);
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD9C */ void transM(f32, f32, f32);
-	/* 8000CE70 */ void scaleM(cXyz const&);
-};
-
-struct mDoLib_clipper {
-	/* 8001528C */ void setup(f32, f32, f32, f32);
-};
-
-struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(int);
-};
-
-struct request_of_phase_process_class {
-};
-
-struct cM3dGCyl {
-	/* 80030E3C */ ~cM3dGCyl();
-	/* 8026F0A8 */ cM3dGCyl(cXyz const*, f32, f32);
-};
-
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct cM3dGLin {
-	/* 80036A5C */ ~cM3dGLin();
-	/* 8026F2A8 */ cM3dGLin(cXyz const&, cXyz const&);
-	/* 8026F31C */ void SetStartEnd(Vec const&, Vec const&);
-};
-
-struct dDemo_object_c {
-	/* 80039128 */ void getActiveCamera();
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
-};
-
-struct dEvt_control_c {
-	/* 800434D8 */ void searchMapEventData(u8);
-};
-
-struct dEvent_manager_c {
-	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
-	/* 80047D4C */ void getIsAddvance(int);
-	/* 80047E10 */ void getMyActIdx(int, char const* const*, int, int, int);
-	/* 8004817C */ void cutEnd(int);
-};
-
-struct dDlst_window_c {
-	/* 80051AC0 */ void setViewPort(f32, f32, f32, f32, f32, f32);
-	/* 80051ADC */ void setScissor(f32, f32, f32, f32);
-};
-
-struct cM_rnd_c {
-	/* 80053CDC */ void init(int, int, int);
-};
-
-struct _GXColor {
-};
-
-struct dDlst_effectLine_c {
-	/* 800541F4 */ void update(cXyz&, _GXColor&, u16, u16, u16, u16, f32, f32, f32, f32);
-};
-
-struct dVibration_c {
-	/* 8006FA24 */ void StartShock(int, int, cXyz);
-};
-
-struct cBgS_PolyInfo {
-};
-
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
-};
-
-struct cBgS {
-	/* 800743B4 */ void LineCross(cBgS_LinChk*);
-	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
-	/* 80074618 */ void GetActorPointer(int) const;
-	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
-};
-
-struct csXyz {
+struct dBgS_SphChk {
+	/* 80078A14 */ dBgS_SphChk();
+	/* 80078AC0 */ ~dBgS_SphChk();
 };
 
 struct dBgS_RoofChk {
 	/* 80078FF4 */ dBgS_RoofChk();
 	/* 80079090 */ ~dBgS_RoofChk();
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+	/* 80078E74 */ void ClrObj();
+	/* 80078E80 */ void SetCam();
+	/* 80078E8C */ void ClrCam();
+	/* 80078EEC */ void SetUnderwaterRoof();
+};
+
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
+};
+
+struct dBgS_CamSphChk {
+	/* 80165E74 */ ~dBgS_CamSphChk();
+};
+
+struct dBgS_CamLinChk {
+	/* 80077DA4 */ dBgS_CamLinChk();
+	/* 80077E00 */ ~dBgS_CamLinChk();
+};
+
+struct dBgS_CamGndChk_Wtr {
+	/* 80077A00 */ dBgS_CamGndChk_Wtr();
+	/* 80077A98 */ ~dBgS_CamGndChk_Wtr();
+};
+
+struct dBgS_CamGndChk {
+	/* 80077988 */ ~dBgS_CamGndChk();
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct csXyz {
 };
 
 struct dBgS {
@@ -545,56 +517,74 @@ struct dBgS {
 	/* 8007595C */ void MoveBgMatrixCrrPos(cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*);
 };
 
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
+struct dAttention_c {
+	/* 8007353C */ void LockonTarget(s32);
+	/* 800735DC */ void LockonReleaseDistanse();
+	/* 80073734 */ void ActionTarget(s32);
+	/* 8007378C */ void CheckObjectTarget(s32);
+	/* 800737E4 */ void LockonTruth();
+	/* 8016E424 */ void LockEdge();
+	/* 80182994 */ void GetCheckObjectCount();
+	/* 80182AD0 */ void keepLock(int);
 };
 
-struct dBgS_CamGndChk {
-	/* 80077988 */ ~dBgS_CamGndChk();
+struct d2DBSplinePath {
+	/* 80097878 */ void Init(s32, s32);
+	/* 80097B68 */ void Spot(f32*, f32);
+	/* 801828D4 */ ~d2DBSplinePath();
 };
 
-struct dBgS_CamGndChk_Wtr {
-	/* 80077A00 */ dBgS_CamGndChk_Wtr();
-	/* 80077A98 */ ~dBgS_CamGndChk_Wtr();
+struct camera_process_class {
 };
 
-struct dBgS_CamLinChk {
-	/* 80077DA4 */ dBgS_CamLinChk();
-	/* 80077E00 */ ~dBgS_CamLinChk();
+struct cSPolar {
+	/* 802716EC */ void Xyz() const;
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-	/* 80078E74 */ void ClrObj();
-	/* 80078E80 */ void SetCam();
-	/* 80078E8C */ void ClrCam();
-	/* 80078EEC */ void SetUnderwaterRoof();
+struct cSGlobe {
+	/* 8007167C */ ~cSGlobe();
+	/* 8008E774 */ void operator=(cSGlobe const&);
+	/* 80182C84 */ void U() const;
+	/* 8008E894 */ void U(cSAngle const&);
+	/* 80182A08 */ void V() const;
+	/* 8008FA58 */ void V(cSAngle const&);
+	/* 8016E420 */ cSGlobe();
+	/* 80271820 */ cSGlobe(f32, s16, s16);
+	/* 80271880 */ cSGlobe(cXyz const&);
+	/* 802717F0 */ cSGlobe(cSGlobe const&);
+	/* 80271850 */ cSGlobe(f32, cSAngle const&, cSAngle const&);
+	/* 80182A64 */ void R() const;
+	/* 80182A4C */ void R(f32);
+	/* 802719A4 */ void Val(f32, s16, s16);
+	/* 80271A08 */ void Val(f32, cSAngle const&, cSAngle const&);
+	/* 80271A70 */ void Val(cXyz const&);
+	/* 80271AB4 */ void Xyz() const;
+	/* 80271B7C */ void Invert();
 };
 
-struct cM3dGCps {
-	/* 8026EF88 */ cM3dGCps();
-	/* 8026EFA4 */ ~cM3dGCps();
-	/* 8026F000 */ void Set(cXyz const&, cXyz const&, f32);
+struct cM_rnd_c {
+	/* 80053CDC */ void init(int, int, int);
 };
 
-struct dCcMassS_Mng {
-	/* 80085E6C */ void SetCam(cM3dGCps const&);
-	/* 80085EB0 */ void GetResultCam() const;
-	/* 80085EB8 */ void GetCamTopPos(Vec*);
+struct cM3dGSph {
+	/* 8026F664 */ void Set(cXyz const&, f32);
 };
 
-struct dCcS {
-	/* 80086D8C */ void ChkCamera(cXyz&, cXyz&, f32, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*);
-	/* 80086FBC */ void chkCameraPoint(cXyz const&, cCcD_ShapeAttr::Shape*, fopAc_ac_c*, fopAc_ac_c*);
+struct cM3dGPla {
+	/* 8001DB90 */ ~cM3dGPla();
+	/* 801411F0 */ cM3dGPla();
+	/* 801829EC */ void GetNP();
 };
 
-struct dCamMath {
-	/* 8008813C */ void rationalBezierRatio(f32, f32);
-	/* 80088284 */ void zoomFovy(f32, f32);
-	/* 8008831C */ void xyzRotateX(cXyz&, cSAngle);
-	/* 80088384 */ void xyzRotateY(cXyz&, cSAngle);
-	/* 800883EC */ void xyzHorizontalDistance(cXyz&, cXyz&);
+struct cM3dGLin {
+	/* 80036A5C */ ~cM3dGLin();
+	/* 8026F2A8 */ cM3dGLin(cXyz const&, cXyz const&);
+	/* 8026F31C */ void SetStartEnd(Vec const&, Vec const&);
+};
+
+struct cM3dGCyl {
+	/* 80030E3C */ ~cM3dGCyl();
+	/* 8026F0A8 */ cM3dGCyl(cXyz const*, f32, f32);
 };
 
 struct cDegree {
@@ -604,16 +594,32 @@ struct cDegree {
 	/* 80271440 */ void Tan() const;
 };
 
-struct dCstick_c {
-	/* 8008845C */ bool Shift(u32);
+struct cBgS_LinChk {
+	/* 801829F0 */ void GetCross();
 };
 
-struct cM3dGSph {
-	/* 8026F664 */ void Set(cXyz const&, f32);
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
-struct cSPolar {
-	/* 802716EC */ void Xyz() const;
+struct cBgS {
+	/* 800743B4 */ void LineCross(cBgS_LinChk*);
+	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
+	/* 80074618 */ void GetActorPointer(int) const;
+	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
+};
+
+struct cBgD_Vtx_t {
+};
+
+struct cAngle {
+	/* 80182D28 */ void d2s(f32);
+};
+
+struct Z2StatusMgr {
+	/* 802B6760 */ void setCameraPolygonPos(Vec*);
+	/* 802B6784 */ void setCameraGroupInfo(u8);
+	/* 802B6788 */ void setCameraInWaterDepth(f32);
 };
 
 struct JAISoundID {
@@ -621,12 +627,6 @@ struct JAISoundID {
 
 struct Z2SeMgr {
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-};
-
-struct Z2StatusMgr {
-	/* 802B6760 */ void setCameraPolygonPos(Vec*);
-	/* 802B6784 */ void setCameraGroupInfo(u8);
-	/* 802B6788 */ void setCameraInWaterDepth(f32);
 };
 
 struct Z2Audience {
@@ -2059,7 +2059,7 @@ SECTION_DATA static void* method[5] = {
 	(void*)camera_draw__FP20camera_process_class,
 };
 
-/* 803BA6F8-803BA73C 0044+00 s=0 e=0 z=1  None .data      g_profile_CAMERA                                             */
+/* 803BA6F8-803BA73C 0044+00 s=0 e=0 z=0  None .data      g_profile_CAMERA                                             */
 SECTION_DATA void* g_profile_CAMERA[17] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000BFFFD,
@@ -2080,7 +2080,7 @@ SECTION_DATA void* g_profile_CAMERA[17] = {
 	(void*)NULL,
 };
 
-/* 803BA73C-803BA798 0044+18 s=0 e=0 z=1  None .data      g_profile_CAMERA2                                            */
+/* 803BA73C-803BA798 0044+18 s=0 e=0 z=0  None .data      g_profile_CAMERA2                                            */
 SECTION_DATA void* g_profile_CAMERA2[17 + 6 /* padding */] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000BFFFD,
@@ -2229,7 +2229,7 @@ asm void dCamera_c::initialize(camera_class* param_0, fopAc_ac_c* param_1, u32 p
 #pragma pop
 
 
-/* 801614AC-801614C4 0018+00 s=0 e=1 z=106  None .text      Start__9dCamera_cFv                                          */
+/* 801614AC-801614C4 0018+00 s=0 e=1 z=0  None .text      Start__9dCamera_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2251,7 +2251,7 @@ asm void dCamera_c::QuickStart() {
 #pragma pop
 
 
-/* 801614D0-801614E8 0018+00 s=0 e=2 z=98  None .text      Stop__9dCamera_cFv                                           */
+/* 801614D0-801614E8 0018+00 s=0 e=2 z=0  None .text      Stop__9dCamera_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2423,7 +2423,7 @@ asm void dCamera_c::U() {
 #pragma pop
 
 
-/* 8016300C-80163028 001C+00 s=1 e=1 z=135  None .text      SetTrimSize__9dCamera_cFl                                    */
+/* 8016300C-80163028 001C+00 s=1 e=1 z=0  None .text      SetTrimSize__9dCamera_cFl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2434,7 +2434,7 @@ asm void dCamera_c::SetTrimSize(s32 param_0) {
 #pragma pop
 
 
-/* 80163028-80163034 000C+00 s=1 e=2 z=4  None .text      SetTrimTypeForce__9dCamera_cFl                               */
+/* 80163028-80163034 000C+00 s=1 e=2 z=0  None .text      SetTrimTypeForce__9dCamera_cFl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2493,7 +2493,7 @@ asm void dCamera_c::setMapToolData() {
 #pragma pop
 
 
-/* 80163558-801635AC 0054+00 s=0 e=0 z=1  None .text      SetTagData__9dCamera_cFP10fopAc_ac_clUsUc                    */
+/* 80163558-801635AC 0054+00 s=0 e=0 z=0  None .text      SetTagData__9dCamera_cFP10fopAc_ac_clUsUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2537,7 +2537,7 @@ asm void dCamera_c::onModeChange(s32 param_0, s32 param_1) {
 #pragma pop
 
 
-/* 80163D50-80163D5C 000C+00 s=0 e=0 z=4  None .text      ModeFix__9dCamera_cFl                                        */
+/* 80163D50-80163D5C 000C+00 s=0 e=0 z=0  None .text      ModeFix__9dCamera_cFl                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3496,7 +3496,7 @@ bool dCamera_c::CalcSubjectAngle(s16* param_0, s16* param_1) {
 }
 
 
-/* 80174EAC-80174ED4 0028+00 s=0 e=0 z=1  None .text      SaveZoomRatio__9dCamera_cFv                                  */
+/* 80174EAC-80174ED4 0028+00 s=0 e=0 z=0  None .text      SaveZoomRatio__9dCamera_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3855,7 +3855,7 @@ asm void dCamera_c::EventRecoverNotime() {
 #pragma pop
 
 
-/* 80180AA8-80180AE0 0038+00 s=0 e=0 z=24  None .text      Set__9dCamera_cF4cXyz4cXyz                                   */
+/* 80180AA8-80180AE0 0038+00 s=0 e=0 z=0  None .text      Set__9dCamera_cF4cXyz4cXyz                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3866,7 +3866,7 @@ asm void dCamera_c::Set(cXyz param_0, cXyz param_1) {
 #pragma pop
 
 
-/* 80180AE0-80180B40 0060+00 s=0 e=2 z=93  None .text      Set__9dCamera_cF4cXyz4cXyzfs                                 */
+/* 80180AE0-80180B40 0060+00 s=0 e=2 z=0  None .text      Set__9dCamera_cF4cXyz4cXyzfs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3877,7 +3877,7 @@ asm void dCamera_c::Set(cXyz param_0, cXyz param_1, f32 param_2, s16 param_3) {
 #pragma pop
 
 
-/* 80180B40-80180BA0 0060+00 s=0 e=0 z=11  None .text      Set__9dCamera_cF4cXyz4cXyzsf                                 */
+/* 80180B40-80180BA0 0060+00 s=0 e=0 z=0  None .text      Set__9dCamera_cF4cXyz4cXyzsf                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3888,7 +3888,7 @@ asm void dCamera_c::Set(cXyz param_0, cXyz param_1, s16 param_2, f32 param_3) {
 #pragma pop
 
 
-/* 80180BA0-80180C18 0078+00 s=1 e=1 z=18  None .text      Reset__9dCamera_cF4cXyz4cXyzfs                               */
+/* 80180BA0-80180C18 0078+00 s=1 e=1 z=0  None .text      Reset__9dCamera_cF4cXyz4cXyzfs                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3899,7 +3899,7 @@ asm void dCamera_c::Reset(cXyz param_0, cXyz param_1, f32 param_2, s16 param_3) 
 #pragma pop
 
 
-/* 80180C18-80180C68 0050+00 s=0 e=0 z=64  None .text      Reset__9dCamera_cF4cXyz4cXyz                                 */
+/* 80180C18-80180C68 0050+00 s=0 e=0 z=0  None .text      Reset__9dCamera_cF4cXyz4cXyz                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3910,7 +3910,7 @@ asm void dCamera_c::Reset(cXyz param_0, cXyz param_1) {
 #pragma pop
 
 
-/* 80180C68-80180D24 00BC+00 s=2 e=1 z=3  None .text      Reset__9dCamera_cFv                                          */
+/* 80180C68-80180D24 00BC+00 s=2 e=1 z=0  None .text      Reset__9dCamera_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3970,7 +3970,7 @@ asm void dCamera_c::StopShake() {
 #pragma pop
 
 
-/* 80181170-801811B8 0048+00 s=1 e=2 z=10  None .text      StartBlure__9dCamera_cFiP10fopAc_ac_cff                      */
+/* 80181170-801811B8 0048+00 s=1 e=2 z=0  None .text      StartBlure__9dCamera_cFiP10fopAc_ac_cff                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3981,7 +3981,7 @@ asm void dCamera_c::StartBlure(int param_0, fopAc_ac_c* param_1, f32 param_2, f3
 #pragma pop
 
 
-/* 801811B8-80181208 0050+00 s=0 e=0 z=1  None .text      ResetBlure__9dCamera_cFv                                     */
+/* 801811B8-80181208 0050+00 s=0 e=0 z=0  None .text      ResetBlure__9dCamera_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4062,7 +4062,7 @@ asm void dCamera_c::onHorseDush() {
 #pragma pop
 
 
-/* 80181500-80181534 0034+00 s=1 e=1 z=5  None .text      GetForceLockOnActor__9dCamera_cFv                            */
+/* 80181500-80181534 0034+00 s=1 e=1 z=0  None .text      GetForceLockOnActor__9dCamera_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4073,7 +4073,7 @@ asm void dCamera_c::GetForceLockOnActor() {
 #pragma pop
 
 
-/* 80181534-80181560 002C+00 s=0 e=0 z=9  None .text      ForceLockOn__9dCamera_cFP10fopAc_ac_c                        */
+/* 80181534-80181560 002C+00 s=0 e=0 z=0  None .text      ForceLockOn__9dCamera_cFP10fopAc_ac_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4095,7 +4095,7 @@ asm void dCamera_c::ForceLockOff(unsigned int param_0) {
 #pragma pop
 
 
-/* 8018159C-801815CC 0030+00 s=0 e=0 z=7  None .text      ForceLockOff__9dCamera_cFP10fopAc_ac_c                       */
+/* 8018159C-801815CC 0030+00 s=0 e=0 z=0  None .text      ForceLockOff__9dCamera_cFP10fopAc_ac_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4106,7 +4106,7 @@ asm void dCamera_c::ForceLockOff(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 801815CC-801815F0 0024+00 s=0 e=0 z=5  None .text      dCam_getAngleY__FP12camera_class                             */
+/* 801815CC-801815F0 0024+00 s=0 e=0 z=0  None .text      dCam_getAngleY__FP12camera_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4117,7 +4117,7 @@ asm void dCam_getAngleY(camera_class* param_0) {
 #pragma pop
 
 
-/* 801815F0-80181614 0024+00 s=0 e=0 z=5  None .text      dCam_getAngleX__FP12camera_class                             */
+/* 801815F0-80181614 0024+00 s=0 e=0 z=0  None .text      dCam_getAngleX__FP12camera_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4128,7 +4128,7 @@ asm void dCam_getAngleX(camera_class* param_0) {
 #pragma pop
 
 
-/* 80181614-80181630 001C+00 s=0 e=2 z=4  None .text      dCam_getControledAngleY__FP12camera_class                    */
+/* 80181614-80181630 001C+00 s=0 e=2 z=0  None .text      dCam_getControledAngleY__FP12camera_class                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4150,7 +4150,7 @@ asm void dCam_getCamera() {
 #pragma pop
 
 
-/* 80181640-80181664 0024+00 s=0 e=43 z=91  None .text      dCam_getBody__Fv                                             */
+/* 80181640-80181664 0024+00 s=0 e=43 z=0  None .text      dCam_getBody__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4209,7 +4209,7 @@ asm void dCamera_c::Up() {
 #pragma pop
 
 
-/* 80181E64-80181E98 0034+00 s=1 e=1 z=30  None .text      Eye__9dCamera_cFv                                            */
+/* 80181E64-80181E98 0034+00 s=1 e=1 z=0  None .text      Eye__9dCamera_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4220,7 +4220,7 @@ asm void dCamera_c::Eye() {
 #pragma pop
 
 
-/* 80181E98-80181ECC 0034+00 s=1 e=1 z=25  None .text      Center__9dCamera_cFv                                         */
+/* 80181E98-80181ECC 0034+00 s=1 e=1 z=0  None .text      Center__9dCamera_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

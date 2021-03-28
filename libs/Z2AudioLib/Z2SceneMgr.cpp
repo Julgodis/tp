@@ -11,6 +11,60 @@
 // Types:
 // 
 
+struct dSv_memBit_c {
+	/* 80034860 */ void isSwitch(int) const;
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct Z2StatusMgr {
+	/* 802B617C */ void menuOut();
+	/* 802B61E8 */ void setDemoName(char*);
+	/* 802B6734 */ void checkDayTime();
+};
+
+struct Z2SoundObjMgr {
+	/* 802BF980 */ void setForceBattleArea(bool, u16, u16, u16);
+	/* 802BFFEC */ void setGhostEnemyState(u8);
+	/* 802C013C */ void deleteEnemyAll();
+};
+
+struct Z2SoundMgr {
+	/* 802AA430 */ void resetFilterAll();
+};
+
+struct Z2SeqMgr {
+	/* 802AF010 */ void bgmStart(u32, u32, s32);
+	/* 802AF408 */ void bgmStop(u32, s32);
+	/* 802AFB94 */ void bgmStreamPrepare(u32);
+	/* 802AFDEC */ void bgmStreamCheckReady();
+	/* 802AFE18 */ void bgmStreamPlay();
+	/* 802AFF8C */ void changeBgmStatus(s32);
+	/* 802B3318 */ void setHeightVolMod(bool, u32);
+	/* 802B3398 */ void setTimeProcVolMod(bool, u32);
+	/* 802B3EAC */ void checkBgmIDPlaying(u32);
+	/* 802B4128 */ void resetBattleBgmParams();
+	/* 802B4164 */ void setBattleBgmOff(bool);
+	/* 802B9968 */ void setFieldBgmPlay(bool);
+	/* 802B99AC */ void unMuteSceneBgm(u32);
+	/* 802B9A24 */ void muteSceneBgm(u32, f32);
+	/* 802B9AD0 */ void setTwilightGateVol(f32);
+	/* 802B9AFC */ void setWindStoneVol(f32, u32);
+};
+
+struct Z2SeMgr {
+	/* 802AB80C */ void resetModY();
+	/* 802AD94C */ void seStopAll(u32);
+	/* 802AD9F4 */ void seMoveVolumeAll(f32, u32);
+	/* 802B9AC4 */ void resetCrowdSize();
+};
+
 struct JAISoundID {
 	/* 802B9B60 */ JAISoundID(u32);
 	/* 802B995C */ JAISoundID(JAISoundID const&);
@@ -41,32 +95,13 @@ struct Z2SceneMgr {
 	/* 802BA770 */ void loadBgmWave(u32);
 };
 
-struct Z2SeqMgr {
-	/* 802AF010 */ void bgmStart(u32, u32, s32);
-	/* 802AF408 */ void bgmStop(u32, s32);
-	/* 802AFB94 */ void bgmStreamPrepare(u32);
-	/* 802AFDEC */ void bgmStreamCheckReady();
-	/* 802AFE18 */ void bgmStreamPlay();
-	/* 802AFF8C */ void changeBgmStatus(s32);
-	/* 802B3318 */ void setHeightVolMod(bool, u32);
-	/* 802B3398 */ void setTimeProcVolMod(bool, u32);
-	/* 802B3EAC */ void checkBgmIDPlaying(u32);
-	/* 802B4128 */ void resetBattleBgmParams();
-	/* 802B4164 */ void setBattleBgmOff(bool);
-	/* 802B9968 */ void setFieldBgmPlay(bool);
-	/* 802B99AC */ void unMuteSceneBgm(u32);
-	/* 802B9A24 */ void muteSceneBgm(u32, f32);
-	/* 802B9AD0 */ void setTwilightGateVol(f32);
-	/* 802B9AFC */ void setWindStoneVol(f32, u32);
+struct Z2FxLineMgr {
+	/* 802BAEB8 */ void setSceneFx(s32);
 };
 
-struct JAIStreamMgr {
-	/* 802B9978 */ void isActive() const;
-};
-
-struct JAISound {
-	/* 802A24DC */ void stop(u32);
-	/* 802B9988 */ void getID() const;
+struct Z2EnvSeMgr {
+	/* 802C699C */ void resetSceneInner();
+	/* 802C6AC0 */ void initSceneEnvSe(s32, s8, f32);
 };
 
 template <typename A0>
@@ -76,23 +111,8 @@ struct JSUList__template2 {
 	/* 802B9994 */ void getFirst() const;
 };
 
-struct Z2SeMgr {
-	/* 802AB80C */ void resetModY();
-	/* 802AD94C */ void seStopAll(u32);
-	/* 802AD9F4 */ void seMoveVolumeAll(f32, u32);
-	/* 802B9AC4 */ void resetCrowdSize();
-};
-
-struct dSv_memBit_c {
-	/* 80034860 */ void isSwitch(int) const;
-};
-
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
+struct JAUSoundTable {
+	/* 802A7160 */ void getTypeID(JAISoundID) const;
 };
 
 struct JASHeap {
@@ -104,37 +124,17 @@ struct JASWaveArc {
 	/* 8029A640 */ void erase();
 };
 
+struct JAIStreamMgr {
+	/* 802B9978 */ void isActive() const;
+};
+
 struct JAISoundParamsMove {
 	/* 802A2DB4 */ void moveVolume(f32, u32);
 };
 
-struct JAUSoundTable {
-	/* 802A7160 */ void getTypeID(JAISoundID) const;
-};
-
-struct Z2SoundMgr {
-	/* 802AA430 */ void resetFilterAll();
-};
-
-struct Z2StatusMgr {
-	/* 802B617C */ void menuOut();
-	/* 802B61E8 */ void setDemoName(char*);
-	/* 802B6734 */ void checkDayTime();
-};
-
-struct Z2FxLineMgr {
-	/* 802BAEB8 */ void setSceneFx(s32);
-};
-
-struct Z2SoundObjMgr {
-	/* 802BF980 */ void setForceBattleArea(bool, u16, u16, u16);
-	/* 802BFFEC */ void setGhostEnemyState(u8);
-	/* 802C013C */ void deleteEnemyAll();
-};
-
-struct Z2EnvSeMgr {
-	/* 802C699C */ void resetSceneInner();
-	/* 802C6AC0 */ void initSceneEnvSe(s32, s8, f32);
+struct JAISound {
+	/* 802A24DC */ void stop(u32);
+	/* 802B9988 */ void getID() const;
 };
 
 // 
@@ -277,7 +277,7 @@ SECTION_SDATA2 static u8 lit_3511[4] = {
 /* 80455A3C-80455A40 0004+00 s=6 e=0 z=0  None .sdata2    @3512                                                        */
 SECTION_SDATA2 static u32 lit_3512 = 0x3F800000;
 
-/* 802B68E0-802B697C 009C+00 s=3 e=2 z=2  None .text      setSceneExist__10Z2SceneMgrFb                                */
+/* 802B68E0-802B697C 009C+00 s=3 e=2 z=0  None .text      setSceneExist__10Z2SceneMgrFb                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

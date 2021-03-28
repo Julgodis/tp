@@ -11,11 +11,22 @@
 // Types:
 // 
 
-struct J2DAnmTevRegKey {
+struct _GXCullMode {
 };
 
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
+struct ResTIMG {
+};
+
+struct ResFONT {
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct JUTFont {
 };
 
 struct JSUStreamSeekFrom {
@@ -26,16 +37,32 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct J2DAnmTransform {
+struct JSUInputStream {
+	/* 802DC298 */ void read(void*, s32);
 };
 
-struct J2DAnmTextureSRTKey {
+struct J2DTextBoxVBinding {
+};
+
+struct J2DTextBoxHBinding {
+};
+
+struct J2DAnmBase {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DTevStage {
+};
+
+struct J2DAnmTexPattern {
 };
 
 struct J2DAnmColor {
 };
 
-struct J2DAnmTexPattern {
+struct J2DAnmTextureSRTKey {
 };
 
 struct J2DMaterial {
@@ -46,31 +73,14 @@ struct J2DMaterial {
 	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
+struct J2DAnmTransform {
 };
 
-struct ResFONT {
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
 struct J2DAnmVtxColor {
-};
-
-struct J2DTextBoxHBinding {
-};
-
-struct _GXCullMode {
-};
-
-struct J2DTevStage {
-};
-
-struct ResTIMG {
-};
-
-struct J2DAnmBase {
 };
 
 struct J2DPane {
@@ -94,9 +104,6 @@ struct J2DPane {
 	/* 802F83D0 */ void setAnimationVF(J2DAnmVisibilityFull*);
 	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
 	/* 802F8474 */ void update();
-};
-
-struct JUTFont {
 };
 
 struct J2DTextBoxEx {
@@ -138,11 +145,13 @@ struct J2DTextBoxEx {
 	/* 8030896C */ void animationPane(J2DAnmTransform const*);
 };
 
-struct JSUInputStream {
-	/* 802DC298 */ void read(void*, s32);
-};
-
-struct J2DTextBoxVBinding {
+struct J2DTextBox {
+	/* 802FF660 */ J2DTextBox();
+	/* 803001E0 */ ~J2DTextBox();
+	/* 80300870 */ void setConnectParent(bool);
+	/* 803008E8 */ void drawSelf(f32, f32);
+	/* 80300AF8 */ void resize(f32, f32);
+	/* 80300C68 */ s32 getTypeID() const;
 };
 
 struct J2DPrint {
@@ -151,15 +160,6 @@ struct J2DPrint {
 	/* 802F475C */ void locate(f32, f32);
 	/* 802F4778 */ void print(f32, f32, u8, char const*, ...);
 	/* 802F4828 */ void printReturn(char const*, f32, f32, J2DTextBoxHBinding, J2DTextBoxVBinding, f32, f32, u8);
-};
-
-struct J2DTextBox {
-	/* 802FF660 */ J2DTextBox();
-	/* 803001E0 */ ~J2DTextBox();
-	/* 80300870 */ void setConnectParent(bool);
-	/* 803008E8 */ void drawSelf(f32, f32);
-	/* 80300AF8 */ void resize(f32, f32);
-	/* 80300C68 */ s32 getTypeID() const;
 };
 
 // 

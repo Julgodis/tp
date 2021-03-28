@@ -52,7 +52,7 @@ extern "C" void __dla__FPv(); // 1
 // Declarations:
 // 
 
-/* 80361C6C-80361CE8 007C+00 s=2 e=11 z=3  None .text      __destroy_new_array                                          */
+/* 80361C6C-80361CE8 007C+00 s=2 e=11 z=0  None .text      __destroy_new_array                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -63,7 +63,7 @@ extern "C" asm void __destroy_new_array() {
 #pragma pop
 
 
-/* 80361CE8-80361D60 0078+00 s=1 e=58 z=350  None .text      __destroy_arr                                                */
+/* 80361CE8-80361D60 0078+00 s=1 e=58 z=0  None .text      __destroy_arr                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -74,7 +74,7 @@ extern "C" asm void __destroy_arr() {
 #pragma pop
 
 
-/* 80361D60-80361E5C 00FC+00 s=1 e=98 z=461  None .text      __construct_array                                            */
+/* 80361D60-80361E5C 00FC+00 s=1 e=98 z=0  None .text      __construct_array                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -96,7 +96,7 @@ asm __partial_array_destructor::~__partial_array_destructor() {
 #pragma pop
 
 
-/* 80361F14-80362018 0104+00 s=1 e=28 z=13  None .text      __construct_new_array                                        */
+/* 80361F14-80362018 0104+00 s=1 e=28 z=0  None .text      __construct_new_array                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

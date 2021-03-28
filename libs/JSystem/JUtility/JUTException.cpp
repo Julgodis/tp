@@ -14,11 +14,31 @@
 struct __va_list_struct {
 };
 
-struct JUTDirectPrint {
-	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
+struct _GXRenderModeObj {
+};
+
+struct _GXGamma {
 };
 
 struct OSContext {
+};
+
+struct JUTGamePad {
+	struct EPadPort {
+	};
+
+	/* 802E06DC */ JUTGamePad(JUTGamePad::EPadPort);
+	/* 802E07B0 */ ~JUTGamePad();
+	/* 802E08E4 */ void read();
+	/* 802E0C6C */ void checkResetCallback(s64);
+};
+
+struct JUTExternalFB {
+	/* 802E40CC */ JUTExternalFB(_GXRenderModeObj*, _GXGamma, void*, u32);
+};
+
+struct JUTDirectPrint {
+	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
 };
 
 struct JUTException {
@@ -56,49 +76,12 @@ struct JUTException {
 	/* 802E40EC */ ~JUTException();
 };
 
-struct _GXGamma {
-};
-
-struct _GXRenderModeObj {
-};
-
-struct JUTExternalFB {
-	/* 802E40CC */ JUTExternalFB(_GXRenderModeObj*, _GXGamma, void*, u32);
-};
-
-template <typename A0>
-struct JSUList { };
-/* JSUList<JUTException::JUTExMapFile> */
-struct JSUList__template13 {
-	/* 802E4194 */ ~JSUList__template13();
-};
-
-struct JKRHeap {
-};
-
-struct JKRThread {
-	/* 802D1568 */ JKRThread(u32, int, int);
-	/* 802D1758 */ ~JKRThread();
-};
-
-struct JSUPtrLink {
-	/* 802DBDFC */ JSUPtrLink(void*);
-};
-
-struct JSUPtrList {
-	/* 802DBE74 */ JSUPtrList(bool);
-	/* 802DBEAC */ ~JSUPtrList();
-	/* 802DBF4C */ void append(JSUPtrLink*);
-};
-
-struct JUTGamePad {
-	struct EPadPort {
-	};
-
-	/* 802E06DC */ JUTGamePad(JUTGamePad::EPadPort);
-	/* 802E07B0 */ ~JUTGamePad();
-	/* 802E08E4 */ void read();
-	/* 802E0C6C */ void checkResetCallback(s64);
+struct JUTDirectFile {
+	/* 802E87F8 */ JUTDirectFile();
+	/* 802E881C */ ~JUTDirectFile();
+	/* 802E8860 */ void fopen(char const*);
+	/* 802E88FC */ void fclose();
+	/* 802E8958 */ void fgets(void*, int);
 };
 
 struct JUTConsole {
@@ -116,12 +99,29 @@ struct JUTConsoleManager {
 	/* 802E84C4 */ void setDirectConsole(JUTConsole*);
 };
 
-struct JUTDirectFile {
-	/* 802E87F8 */ JUTDirectFile();
-	/* 802E881C */ ~JUTDirectFile();
-	/* 802E8860 */ void fopen(char const*);
-	/* 802E88FC */ void fclose();
-	/* 802E8958 */ void fgets(void*, int);
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
+};
+
+struct JSUPtrList {
+	/* 802DBE74 */ JSUPtrList(bool);
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF4C */ void append(JSUPtrLink*);
+};
+
+template <typename A0>
+struct JSUList { };
+/* JSUList<JUTException::JUTExMapFile> */
+struct JSUList__template13 {
+	/* 802E4194 */ ~JSUList__template13();
+};
+
+struct JKRThread {
+	/* 802D1568 */ JKRThread(u32, int, int);
+	/* 802D1758 */ ~JKRThread();
+};
+
+struct JKRHeap {
 };
 
 // 

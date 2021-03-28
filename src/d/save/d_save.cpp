@@ -11,14 +11,58 @@
 // Types:
 // 
 
-struct dSv_player_status_a_c {
-	/* 80032958 */ void init();
-	/* 80032A48 */ void setSelectItemIndex(int, u8);
-	/* 80032A5C */ void getSelectItemIndex(int) const;
-	/* 80032A78 */ void setMixItemIndex(int, u8);
-	/* 80032A8C */ void getMixItemIndex(int) const;
-	/* 80032AA8 */ void getRupeeMax() const;
-	/* 80032AF8 */ void isMagicFlag(u8) const;
+struct daObjCarry_c {
+	/* 80031CF8 */ void clrSaveFlag();
+	/* 80031D04 */ void setSaveFlag();
+};
+
+struct dSv_zone_c {
+	/* 80034F44 */ void init(int);
+};
+
+struct dSv_zoneBit_c {
+	/* 80034CA0 */ void init();
+	/* 80034CEC */ void clearRoomSwitch();
+	/* 80034CF8 */ void clearRoomItem();
+	/* 80034D04 */ void onSwitch(int);
+	/* 80034D2C */ void offSwitch(int);
+	/* 80034D50 */ void isSwitch(int) const;
+	/* 80034D78 */ void revSwitch(int);
+	/* 80034DAC */ void onOneSwitch(int);
+	/* 80034DC8 */ void offOneSwitch(int);
+	/* 80034DE0 */ void isOneSwitch(int) const;
+	/* 80034DFC */ void revOneSwitch(int);
+	/* 80034E24 */ void onItem(int);
+	/* 80034E50 */ void isItem(int) const;
+	/* 80034E7C */ void onOneItem(int);
+	/* 80034E98 */ void isOneItem(int) const;
+};
+
+struct dSv_zoneActor_c {
+	/* 80034EB4 */ void init();
+	/* 80034ED4 */ void on(int);
+	/* 80034EF8 */ void off(int);
+	/* 80034F1C */ void is(int) const;
+};
+
+struct cXyz {
+};
+
+struct dSv_turnRestart_c {
+	/* 80034FA4 */ void set(cXyz const&, s16, s8, u32);
+};
+
+struct dSv_save_c {
+	/* 8003501C */ void init();
+	/* 800350A8 */ void getSave2(int);
+};
+
+struct dSv_restart_c {
+	/* 80034F80 */ void setRoom(cXyz const&, s16, s8);
+};
+
+struct dSv_player_wolf_c {
+	/* 800342B4 */ void init();
 };
 
 struct dSv_player_status_b_c {
@@ -29,12 +73,14 @@ struct dSv_player_status_b_c {
 	/* 80032BEC */ void isTransformLV(int) const;
 };
 
-struct cXyz {
-};
-
-struct dSv_horse_place_c {
-	/* 80032C0C */ void init();
-	/* 80032C64 */ void set(char const*, cXyz const&, s16, s8);
+struct dSv_player_status_a_c {
+	/* 80032958 */ void init();
+	/* 80032A48 */ void setSelectItemIndex(int, u8);
+	/* 80032A5C */ void getSelectItemIndex(int) const;
+	/* 80032A78 */ void setMixItemIndex(int, u8);
+	/* 80032A8C */ void getMixItemIndex(int) const;
+	/* 80032AA8 */ void getRupeeMax() const;
+	/* 80032AF8 */ void isMagicFlag(u8) const;
 };
 
 struct dSv_player_return_place_c {
@@ -42,16 +88,24 @@ struct dSv_player_return_place_c {
 	/* 80032D1C */ void set(char const*, s8, u8);
 };
 
-struct dSv_player_field_last_stay_info_c {
-	/* 80032D60 */ void init();
-	/* 80032DE0 */ void set(char const*, cXyz const&, s16, s8, u8);
-	/* 80032E4C */ void onRegionBit(int);
-	/* 80032E78 */ void isRegionBit(int) const;
-};
-
 struct dSv_player_last_mark_info_c {
 	/* 80032EB0 */ void init();
 	/* 80032F2C */ void setWarpItemData(char const*, cXyz const&, s16, s8, u8, u8);
+};
+
+struct dSv_player_item_record_c {
+	/* 80033F00 */ void init();
+	/* 80033F6C */ void setBombNum(u8, u8);
+	/* 80033F7C */ void getBombNum(u8) const;
+	/* 80033F8C */ void setBottleNum(u8, u8);
+	/* 80033F9C */ void addBottleNum(u8, s16);
+	/* 80034030 */ void getBottleNum(u8) const;
+};
+
+struct dSv_player_item_max_c {
+	/* 80034040 */ void init();
+	/* 800340B8 */ void setBombNum(u8, u8);
+	/* 800340F8 */ void getBombNum(u8) const;
 };
 
 struct dSv_player_item_c {
@@ -81,6 +135,10 @@ struct dSv_player_item_c {
 	/* 80033D40 */ void setBaitItem(u8);
 };
 
+struct dSv_player_info_c {
+	/* 80034518 */ void init();
+};
+
 struct dSv_player_get_item_c {
 	/* 80033E40 */ void init();
 	/* 80033E60 */ void onFirstBit(u8);
@@ -88,19 +146,20 @@ struct dSv_player_get_item_c {
 	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
-struct dSv_player_item_record_c {
-	/* 80033F00 */ void init();
-	/* 80033F6C */ void setBombNum(u8, u8);
-	/* 80033F7C */ void getBombNum(u8) const;
-	/* 80033F8C */ void setBottleNum(u8, u8);
-	/* 80033F9C */ void addBottleNum(u8, s16);
-	/* 80034030 */ void getBottleNum(u8) const;
+struct dSv_player_field_last_stay_info_c {
+	/* 80032D60 */ void init();
+	/* 80032DE0 */ void set(char const*, cXyz const&, s16, s8, u8);
+	/* 80032E4C */ void onRegionBit(int);
+	/* 80032E78 */ void isRegionBit(int) const;
 };
 
-struct dSv_player_item_max_c {
-	/* 80034040 */ void init();
-	/* 800340B8 */ void setBombNum(u8, u8);
-	/* 800340F8 */ void getBombNum(u8) const;
+struct dSv_player_config_c {
+	/* 800345AC */ void init();
+	/* 80034644 */ void checkVibration() const;
+	/* 80034684 */ void getSound();
+	/* 8003468C */ void setSound(u8);
+	/* 80034694 */ void getVibration();
+	/* 8003469C */ void setVibration(u8);
 };
 
 struct dSv_player_collect_c {
@@ -113,46 +172,21 @@ struct dSv_player_collect_c {
 	/* 80034290 */ void isCollectMirror(u8) const;
 };
 
-struct dSv_player_wolf_c {
-	/* 800342B4 */ void init();
-};
-
-struct dSv_light_drop_c {
-	/* 800342DC */ void init();
-	/* 80034320 */ void setLightDropNum(u8, u8);
-	/* 80034340 */ void getLightDropNum(u8) const;
-	/* 80034368 */ void onLightDropGetFlag(u8);
-	/* 8003439C */ void isLightDropGetFlag(u8) const;
-};
-
-struct dSv_letter_info_c {
-	/* 800343DC */ void init();
-	/* 80034428 */ void onLetterGetFlag(int);
-	/* 8003444C */ void isLetterGetFlag(int) const;
-	/* 80034474 */ void onLetterReadFlag(int);
-	/* 8003449C */ void isLetterReadFlag(int) const;
-};
-
-struct dSv_fishing_info_c {
-	/* 800344C8 */ void init();
-	/* 800344FC */ void addFishCount(u8);
-};
-
-struct dSv_player_info_c {
-	/* 80034518 */ void init();
-};
-
-struct dSv_player_config_c {
-	/* 800345AC */ void init();
-	/* 80034644 */ void checkVibration() const;
-	/* 80034684 */ void getSound();
-	/* 8003468C */ void setSound(u8);
-	/* 80034694 */ void getVibration();
-	/* 8003469C */ void setVibration(u8);
-};
-
 struct dSv_player_c {
 	/* 800346A4 */ void init();
+};
+
+struct dSv_memory_c {
+	/* 80030DB0 */ dSv_memory_c();
+	/* 80034A64 */ void init();
+};
+
+struct dSv_memory2_c {
+	/* 80030D80 */ dSv_memory2_c();
+	/* 80034A84 */ void init();
+	/* 80034AA4 */ void onVisitedRoom(int);
+	/* 80034AC8 */ void offVisitedRoom(int);
+	/* 80034AEC */ void isVisitedRoom(int);
 };
 
 struct dSv_memBit_c {
@@ -170,77 +204,20 @@ struct dSv_memBit_c {
 	/* 80034934 */ void isDungeonItem(int) const;
 };
 
-struct dSv_event_c {
-	/* 80034954 */ void init();
-	/* 8003498C */ void onEventBit(u16);
-	/* 800349A4 */ void offEventBit(u16);
-	/* 800349BC */ void isEventBit(u16) const;
-	/* 800349E0 */ void setEventReg(u16, u8);
-	/* 80034A04 */ void getEventReg(u16) const;
+struct dSv_light_drop_c {
+	/* 800342DC */ void init();
+	/* 80034320 */ void setLightDropNum(u8, u8);
+	/* 80034340 */ void getLightDropNum(u8) const;
+	/* 80034368 */ void onLightDropGetFlag(u8);
+	/* 8003439C */ void isLightDropGetFlag(u8) const;
 };
 
-struct dSv_MiniGame_c {
-	/* 80034A1C */ void init();
-};
-
-struct dSv_memory_c {
-	/* 80030DB0 */ dSv_memory_c();
-	/* 80034A64 */ void init();
-};
-
-struct dSv_memory2_c {
-	/* 80030D80 */ dSv_memory2_c();
-	/* 80034A84 */ void init();
-	/* 80034AA4 */ void onVisitedRoom(int);
-	/* 80034AC8 */ void offVisitedRoom(int);
-	/* 80034AEC */ void isVisitedRoom(int);
-};
-
-struct dSv_danBit_c {
-	/* 80034B14 */ void init(s8);
-	/* 80034B98 */ void onSwitch(int);
-	/* 80034BC0 */ void offSwitch(int);
-	/* 80034BE8 */ void isSwitch(int) const;
-	/* 80034C14 */ void revSwitch(int);
-	/* 80034C4C */ void onItem(int);
-	/* 80034C74 */ void isItem(int) const;
-};
-
-struct dSv_zoneBit_c {
-	/* 80034CA0 */ void init();
-	/* 80034CEC */ void clearRoomSwitch();
-	/* 80034CF8 */ void clearRoomItem();
-	/* 80034D04 */ void onSwitch(int);
-	/* 80034D2C */ void offSwitch(int);
-	/* 80034D50 */ void isSwitch(int) const;
-	/* 80034D78 */ void revSwitch(int);
-	/* 80034DAC */ void onOneSwitch(int);
-	/* 80034DC8 */ void offOneSwitch(int);
-	/* 80034DE0 */ void isOneSwitch(int) const;
-	/* 80034DFC */ void revOneSwitch(int);
-	/* 80034E24 */ void onItem(int);
-	/* 80034E50 */ void isItem(int) const;
-	/* 80034E7C */ void onOneItem(int);
-	/* 80034E98 */ void isOneItem(int) const;
-};
-
-struct dSv_zoneActor_c {
-	/* 80034EB4 */ void init();
-	/* 80034ED4 */ void on(int);
-	/* 80034EF8 */ void off(int);
-	/* 80034F1C */ void is(int) const;
-};
-
-struct dSv_zone_c {
-	/* 80034F44 */ void init(int);
-};
-
-struct dSv_restart_c {
-	/* 80034F80 */ void setRoom(cXyz const&, s16, s8);
-};
-
-struct dSv_turnRestart_c {
-	/* 80034FA4 */ void set(cXyz const&, s16, s8, u32);
+struct dSv_letter_info_c {
+	/* 800343DC */ void init();
+	/* 80034428 */ void onLetterGetFlag(int);
+	/* 8003444C */ void isLetterGetFlag(int) const;
+	/* 80034474 */ void onLetterReadFlag(int);
+	/* 8003449C */ void isLetterReadFlag(int) const;
 };
 
 struct dSv_info_c {
@@ -263,23 +240,41 @@ struct dSv_info_c {
 	/* 80035BD0 */ void initdata_to_card(char*, int);
 };
 
-struct dSv_save_c {
-	/* 8003501C */ void init();
-	/* 800350A8 */ void getSave2(int);
+struct dSv_horse_place_c {
+	/* 80032C0C */ void init();
+	/* 80032C64 */ void set(char const*, cXyz const&, s16, s8);
 };
 
-struct dComIfG_play_c {
-	/* 8002B3A8 */ void setNowVibration(u8);
-	/* 8002B3B0 */ void getNowVibration();
+struct dSv_fishing_info_c {
+	/* 800344C8 */ void init();
+	/* 800344FC */ void addFishCount(u8);
+};
+
+struct dSv_event_c {
+	/* 80034954 */ void init();
+	/* 8003498C */ void onEventBit(u16);
+	/* 800349A4 */ void offEventBit(u16);
+	/* 800349BC */ void isEventBit(u16) const;
+	/* 800349E0 */ void setEventReg(u16, u8);
+	/* 80034A04 */ void getEventReg(u16) const;
+};
+
+struct dSv_danBit_c {
+	/* 80034B14 */ void init(s8);
+	/* 80034B98 */ void onSwitch(int);
+	/* 80034BC0 */ void offSwitch(int);
+	/* 80034BE8 */ void isSwitch(int) const;
+	/* 80034C14 */ void revSwitch(int);
+	/* 80034C4C */ void onItem(int);
+	/* 80034C74 */ void isItem(int) const;
+};
+
+struct dSv_MiniGame_c {
+	/* 80034A1C */ void init();
 };
 
 struct dStage_roomControl_c {
 	/* 8002D9B0 */ void getZoneNo(int);
-};
-
-struct daObjCarry_c {
-	/* 80031CF8 */ void clrSaveFlag();
-	/* 80031D04 */ void setSaveFlag();
 };
 
 struct JMSMesgEntry_c {
@@ -289,6 +284,11 @@ struct dMeter2Info_c {
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 	/* 8021DCC4 */ void setHotSpringTimer(u8);
 	/* 8021E290 */ void setSaveStageName(char const*);
+};
+
+struct dComIfG_play_c {
+	/* 8002B3A8 */ void setNowVibration(u8);
+	/* 8002B3B0 */ void getNowVibration();
 };
 
 struct Z2AudioMgr {
@@ -636,7 +636,7 @@ asm void dSv_player_status_b_c::onDarkClearLV(int param_0) {
 #pragma pop
 
 
-/* 80032BB0-80032BD0 0020+00 s=0 e=4 z=8  None .text      isDarkClearLV__21dSv_player_status_b_cCFi                    */
+/* 80032BB0-80032BD0 0020+00 s=0 e=4 z=0  None .text      isDarkClearLV__21dSv_player_status_b_cCFi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -658,7 +658,7 @@ asm void dSv_player_status_b_c::onTransformLV(int param_0) {
 #pragma pop
 
 
-/* 80032BEC-80032C0C 0020+00 s=0 e=8 z=9  None .text      isTransformLV__21dSv_player_status_b_cCFi                    */
+/* 80032BEC-80032C0C 0020+00 s=0 e=8 z=0  None .text      isTransformLV__21dSv_player_status_b_cCFi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -670,7 +670,7 @@ asm void dSv_player_status_b_c::isTransformLV(int param_0) const {
 
 
 /* ############################################################################################## */
-/* 803790C0-80379234 0172+02 s=0 e=17 z=7  None .rodata    tempBitLabels__20dSv_event_tmp_flag_c                        */
+/* 803790C0-80379234 0172+02 s=0 e=17 z=0  None .rodata    tempBitLabels__20dSv_event_tmp_flag_c                        */
 SECTION_RODATA u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x0F, 0xFE, 0xFF, 0x00, 0x40, 0xFD, 0xFF, 0xFC, 0xFF, 0x00, 0x20,
 	0x00, 0x80, 0x00, 0x10, 0x00, 0x08, 0x00, 0x04, 0x00, 0x02, 0x00, 0x01, 0x01, 0x80, 0x01, 0x40,
@@ -731,7 +731,7 @@ asm void dSv_horse_place_c::init() {
 #pragma pop
 
 
-/* 80032C64-80032CC8 0064+00 s=0 e=0 z=1  None .text      set__17dSv_horse_place_cFPCcRC4cXyzsSc                       */
+/* 80032C64-80032CC8 0064+00 s=0 e=0 z=0  None .text      set__17dSv_horse_place_cFPCcRC4cXyzsSc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -753,7 +753,7 @@ asm void dSv_player_return_place_c::init() {
 #pragma pop
 
 
-/* 80032D1C-80032D60 0044+00 s=0 e=0 z=1  None .text      set__25dSv_player_return_place_cFPCcScUc                     */
+/* 80032D1C-80032D60 0044+00 s=0 e=0 z=0  None .text      set__25dSv_player_return_place_cFPCcScUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -841,7 +841,7 @@ asm void dSv_player_item_c::init() {
 #pragma pop
 
 
-/* 80032FB8-80033030 0078+00 s=11 e=45 z=2  None .text      setItem__17dSv_player_item_cFiUc                             */
+/* 80032FB8-80033030 0078+00 s=11 e=45 z=0  None .text      setItem__17dSv_player_item_cFiUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -852,7 +852,7 @@ asm void dSv_player_item_c::setItem(int param_0, u8 param_1) {
 #pragma pop
 
 
-/* 80033030-800332F8 02C8+00 s=7 e=70 z=2  None .text      getItem__17dSv_player_item_cCFib                             */
+/* 80033030-800332F8 02C8+00 s=7 e=70 z=0  None .text      getItem__17dSv_player_item_cCFib                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -916,7 +916,7 @@ asm void dSv_player_item_c::setEmptyBottleItemIn(u8 param_0) {
 #pragma pop
 
 
-/* 80033494-80033514 0080+00 s=0 e=1 z=1  None .text      setEmptyBottle__17dSv_player_item_cFv                        */
+/* 80033494-80033514 0080+00 s=0 e=1 z=0  None .text      setEmptyBottle__17dSv_player_item_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -972,7 +972,7 @@ asm void dSv_player_item_c::checkBottle(u8 param_0) {
 
 
 /* ############################################################################################## */
-/* 803A7288-803A78F8 066C+04 s=2 e=45 z=148  None .data      saveBitLabels__16dSv_event_flag_c                            */
+/* 803A7288-803A78F8 066C+04 s=2 e=45 z=0  None .data      saveBitLabels__16dSv_event_flag_c                            */
 SECTION_DATA u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */] = {
 	0xFF, 0xFF, 0x00, 0x80, 0x00, 0x40, 0x00, 0x20, 0x00, 0x10, 0x00, 0x08, 0x00, 0x04, 0x00, 0x02,
 	0x00, 0x01, 0x01, 0x80, 0x01, 0x40, 0x01, 0x20, 0x01, 0x10, 0x01, 0x08, 0x01, 0x04, 0x01, 0x02,
@@ -1092,7 +1092,7 @@ asm void dSv_player_item_c::checkInsectBottle() {
 #pragma pop
 
 
-/* 800337EC-80033828 003C+00 s=0 e=1 z=1  None .text      checkEmptyBottle__17dSv_player_item_cFv                      */
+/* 800337EC-80033828 003C+00 s=0 e=1 z=0  None .text      checkEmptyBottle__17dSv_player_item_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1136,7 +1136,7 @@ asm void dSv_player_item_c::setEmptyBombBagItemIn(u8 param_0, bool param_1) {
 #pragma pop
 
 
-/* 80033A50-80033A88 0038+00 s=0 e=1 z=1  None .text      setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb             */
+/* 80033A50-80033A88 0038+00 s=0 e=1 z=0  None .text      setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1180,7 +1180,7 @@ asm void dSv_player_item_c::checkBombBag(u8 param_0) {
 #pragma pop
 
 
-/* 80033C2C-80033CBC 0090+00 s=0 e=2 z=1  None .text      setWarashibeItem__17dSv_player_item_cFUc                     */
+/* 80033C2C-80033CBC 0090+00 s=0 e=2 z=0  None .text      setWarashibeItem__17dSv_player_item_cFUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1224,7 +1224,7 @@ asm void dSv_player_get_item_c::init() {
 #pragma pop
 
 
-/* 80033E60-80033E94 0034+00 s=0 e=3 z=1  None .text      onFirstBit__21dSv_player_get_item_cFUc                       */
+/* 80033E60-80033E94 0034+00 s=0 e=3 z=0  None .text      onFirstBit__21dSv_player_get_item_cFUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1235,7 +1235,7 @@ asm void dSv_player_get_item_c::onFirstBit(u8 param_0) {
 #pragma pop
 
 
-/* 80033E94-80033EC8 0034+00 s=0 e=7 z=1  None .text      offFirstBit__21dSv_player_get_item_cFUc                      */
+/* 80033E94-80033EC8 0034+00 s=0 e=7 z=0  None .text      offFirstBit__21dSv_player_get_item_cFUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1246,7 +1246,7 @@ asm void dSv_player_get_item_c::offFirstBit(u8 param_0) {
 #pragma pop
 
 
-/* 80033EC8-80033F00 0038+00 s=4 e=87 z=2  None .text      isFirstBit__21dSv_player_get_item_cCFUc                      */
+/* 80033EC8-80033F00 0038+00 s=4 e=87 z=0  None .text      isFirstBit__21dSv_player_get_item_cCFUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1279,7 +1279,7 @@ asm void dSv_player_item_record_c::setBombNum(u8 param_0, u8 param_1) {
 #pragma pop
 
 
-/* 80033F7C-80033F8C 0010+00 s=0 e=13 z=2  None .text      getBombNum__24dSv_player_item_record_cCFUc                   */
+/* 80033F7C-80033F8C 0010+00 s=0 e=13 z=0  None .text      getBombNum__24dSv_player_item_record_cCFUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1345,7 +1345,7 @@ asm void dSv_player_item_max_c::setBombNum(u8 param_0, u8 param_1) {
 #pragma pop
 
 
-/* 800340F8-800341AC 00B4+00 s=3 e=14 z=2  None .text      getBombNum__21dSv_player_item_max_cCFUc                      */
+/* 800340F8-800341AC 00B4+00 s=3 e=14 z=0  None .text      getBombNum__21dSv_player_item_max_cCFUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1378,7 +1378,7 @@ asm void dSv_player_collect_c::setCollect(int param_0, u8 param_1) {
 #pragma pop
 
 
-/* 80034208-8003422C 0024+00 s=0 e=4 z=4  None .text      isCollect__20dSv_player_collect_cCFiUc                       */
+/* 80034208-8003422C 0024+00 s=0 e=4 z=0  None .text      isCollect__20dSv_player_collect_cCFiUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1389,7 +1389,7 @@ asm void dSv_player_collect_c::isCollect(int param_0, u8 param_1) const {
 #pragma pop
 
 
-/* 8003422C-8003424C 0020+00 s=0 e=1 z=1  None .text      onCollectCrystal__20dSv_player_collect_cFUc                  */
+/* 8003422C-8003424C 0020+00 s=0 e=1 z=0  None .text      onCollectCrystal__20dSv_player_collect_cFUc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1411,7 +1411,7 @@ asm void dSv_player_collect_c::isCollectCrystal(u8 param_0) const {
 #pragma pop
 
 
-/* 80034270-80034290 0020+00 s=0 e=1 z=1  None .text      onCollectMirror__20dSv_player_collect_cFUc                   */
+/* 80034270-80034290 0020+00 s=0 e=1 z=0  None .text      onCollectMirror__20dSv_player_collect_cFUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1455,7 +1455,7 @@ asm void dSv_light_drop_c::init() {
 #pragma pop
 
 
-/* 80034320-80034340 0020+00 s=0 e=0 z=1  None .text      setLightDropNum__16dSv_light_drop_cFUcUc                     */
+/* 80034320-80034340 0020+00 s=0 e=0 z=0  None .text      setLightDropNum__16dSv_light_drop_cFUcUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1466,7 +1466,7 @@ asm void dSv_light_drop_c::setLightDropNum(u8 param_0, u8 param_1) {
 #pragma pop
 
 
-/* 80034340-80034368 0028+00 s=0 e=11 z=4  None .text      getLightDropNum__16dSv_light_drop_cCFUc                      */
+/* 80034340-80034368 0028+00 s=0 e=11 z=0  None .text      getLightDropNum__16dSv_light_drop_cCFUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1488,7 +1488,7 @@ asm void dSv_light_drop_c::onLightDropGetFlag(u8 param_0) {
 #pragma pop
 
 
-/* 8003439C-800343DC 0040+00 s=0 e=8 z=2  None .text      isLightDropGetFlag__16dSv_light_drop_cCFUc                   */
+/* 8003439C-800343DC 0040+00 s=0 e=8 z=0  None .text      isLightDropGetFlag__16dSv_light_drop_cCFUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1565,7 +1565,7 @@ asm void dSv_fishing_info_c::init() {
 #pragma pop
 
 
-/* 800344FC-80034518 001C+00 s=0 e=0 z=1  None .text      addFishCount__18dSv_fishing_info_cFUc                        */
+/* 800344FC-80034518 001C+00 s=0 e=0 z=0  None .text      addFishCount__18dSv_fishing_info_cFUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1675,7 +1675,7 @@ asm void dSv_memBit_c::init() {
 #pragma pop
 
 
-/* 800347A0-800347C4 0024+00 s=0 e=0 z=15  None .text      onTbox__12dSv_memBit_cFi                                     */
+/* 800347A0-800347C4 0024+00 s=0 e=0 z=0  None .text      onTbox__12dSv_memBit_cFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1686,7 +1686,7 @@ asm void dSv_memBit_c::onTbox(int param_0) {
 #pragma pop
 
 
-/* 800347C4-800347E8 0024+00 s=0 e=0 z=5  None .text      offTbox__12dSv_memBit_cFi                                    */
+/* 800347C4-800347E8 0024+00 s=0 e=0 z=0  None .text      offTbox__12dSv_memBit_cFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1697,7 +1697,7 @@ asm void dSv_memBit_c::offTbox(int param_0) {
 #pragma pop
 
 
-/* 800347E8-80034810 0028+00 s=0 e=6 z=7  None .text      isTbox__12dSv_memBit_cCFi                                    */
+/* 800347E8-80034810 0028+00 s=0 e=6 z=0  None .text      isTbox__12dSv_memBit_cCFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1708,7 +1708,7 @@ asm void dSv_memBit_c::isTbox(int param_0) const {
 #pragma pop
 
 
-/* 80034810-80034838 0028+00 s=1 e=5 z=18  None .text      onSwitch__12dSv_memBit_cFi                                   */
+/* 80034810-80034838 0028+00 s=1 e=5 z=0  None .text      onSwitch__12dSv_memBit_cFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1719,7 +1719,7 @@ asm void dSv_memBit_c::onSwitch(int param_0) {
 #pragma pop
 
 
-/* 80034838-80034860 0028+00 s=1 e=3 z=3  None .text      offSwitch__12dSv_memBit_cFi                                  */
+/* 80034838-80034860 0028+00 s=1 e=3 z=0  None .text      offSwitch__12dSv_memBit_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1730,7 +1730,7 @@ asm void dSv_memBit_c::offSwitch(int param_0) {
 #pragma pop
 
 
-/* 80034860-8003488C 002C+00 s=1 e=11 z=23  None .text      isSwitch__12dSv_memBit_cCFi                                  */
+/* 80034860-8003488C 002C+00 s=1 e=11 z=0  None .text      isSwitch__12dSv_memBit_cCFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1763,7 +1763,7 @@ asm void dSv_memBit_c::onItem(int param_0) {
 #pragma pop
 
 
-/* 800348EC-80034918 002C+00 s=1 e=2 z=1  None .text      isItem__12dSv_memBit_cCFi                                    */
+/* 800348EC-80034918 002C+00 s=1 e=2 z=0  None .text      isItem__12dSv_memBit_cCFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1774,7 +1774,7 @@ asm void dSv_memBit_c::isItem(int param_0) const {
 #pragma pop
 
 
-/* 80034918-80034934 001C+00 s=0 e=8 z=18  None .text      onDungeonItem__12dSv_memBit_cFi                              */
+/* 80034918-80034934 001C+00 s=0 e=8 z=0  None .text      onDungeonItem__12dSv_memBit_cFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1785,7 +1785,7 @@ asm void dSv_memBit_c::onDungeonItem(int param_0) {
 #pragma pop
 
 
-/* 80034934-80034954 0020+00 s=0 e=27 z=47  None .text      isDungeonItem__12dSv_memBit_cCFi                             */
+/* 80034934-80034954 0020+00 s=0 e=27 z=0  None .text      isDungeonItem__12dSv_memBit_cCFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1807,7 +1807,7 @@ asm void dSv_event_c::init() {
 #pragma pop
 
 
-/* 8003498C-800349A4 0018+00 s=1 e=27 z=58  None .text      onEventBit__11dSv_event_cFUs                                 */
+/* 8003498C-800349A4 0018+00 s=1 e=27 z=0  None .text      onEventBit__11dSv_event_cFUs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1818,7 +1818,7 @@ asm void dSv_event_c::onEventBit(u16 param_0) {
 #pragma pop
 
 
-/* 800349A4-800349BC 0018+00 s=1 e=14 z=23  None .text      offEventBit__11dSv_event_cFUs                                */
+/* 800349A4-800349BC 0018+00 s=1 e=14 z=0  None .text      offEventBit__11dSv_event_cFUs                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1829,7 +1829,7 @@ asm void dSv_event_c::offEventBit(u16 param_0) {
 #pragma pop
 
 
-/* 800349BC-800349E0 0024+00 s=3 e=77 z=153  None .text      isEventBit__11dSv_event_cCFUs                                */
+/* 800349BC-800349E0 0024+00 s=3 e=77 z=0  None .text      isEventBit__11dSv_event_cCFUs                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1840,7 +1840,7 @@ asm void dSv_event_c::isEventBit(u16 param_0) const {
 #pragma pop
 
 
-/* 800349E0-80034A04 0024+00 s=0 e=12 z=17  None .text      setEventReg__11dSv_event_cFUsUc                              */
+/* 800349E0-80034A04 0024+00 s=0 e=12 z=0  None .text      setEventReg__11dSv_event_cFUsUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1851,7 +1851,7 @@ asm void dSv_event_c::setEventReg(u16 param_0, u8 param_1) {
 #pragma pop
 
 
-/* 80034A04-80034A1C 0018+00 s=0 e=19 z=20  None .text      getEventReg__11dSv_event_cCFUs                               */
+/* 80034A04-80034A1C 0018+00 s=0 e=19 z=0  None .text      getEventReg__11dSv_event_cCFUs                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1895,7 +1895,7 @@ asm void dSv_memory2_c::init() {
 #pragma pop
 
 
-/* 80034AA4-80034AC8 0024+00 s=0 e=1 z=1  None .text      onVisitedRoom__13dSv_memory2_cFi                             */
+/* 80034AA4-80034AC8 0024+00 s=0 e=1 z=0  None .text      onVisitedRoom__13dSv_memory2_cFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1906,7 +1906,7 @@ asm void dSv_memory2_c::onVisitedRoom(int param_0) {
 #pragma pop
 
 
-/* 80034AC8-80034AEC 0024+00 s=0 e=1 z=1  None .text      offVisitedRoom__13dSv_memory2_cFi                            */
+/* 80034AC8-80034AEC 0024+00 s=0 e=1 z=0  None .text      offVisitedRoom__13dSv_memory2_cFi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1939,7 +1939,7 @@ asm void dSv_danBit_c::init(s8 param_0) {
 #pragma pop
 
 
-/* 80034B98-80034BC0 0028+00 s=1 e=2 z=26  None .text      onSwitch__12dSv_danBit_cFi                                   */
+/* 80034B98-80034BC0 0028+00 s=1 e=2 z=0  None .text      onSwitch__12dSv_danBit_cFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1950,7 +1950,7 @@ asm void dSv_danBit_c::onSwitch(int param_0) {
 #pragma pop
 
 
-/* 80034BC0-80034BE8 0028+00 s=1 e=1 z=10  None .text      offSwitch__12dSv_danBit_cFi                                  */
+/* 80034BC0-80034BE8 0028+00 s=1 e=1 z=0  None .text      offSwitch__12dSv_danBit_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1961,7 +1961,7 @@ asm void dSv_danBit_c::offSwitch(int param_0) {
 #pragma pop
 
 
-/* 80034BE8-80034C14 002C+00 s=1 e=6 z=14  None .text      isSwitch__12dSv_danBit_cCFi                                  */
+/* 80034BE8-80034C14 002C+00 s=1 e=6 z=0  None .text      isSwitch__12dSv_danBit_cCFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2225,7 +2225,7 @@ asm void dSv_zone_c::init(int param_0) {
 #pragma pop
 
 
-/* 80034F80-80034FA4 0024+00 s=0 e=3 z=14  None .text      setRoom__13dSv_restart_cFRC4cXyzsSc                          */
+/* 80034F80-80034FA4 0024+00 s=0 e=3 z=0  None .text      setRoom__13dSv_restart_cFRC4cXyzsSc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2269,7 +2269,7 @@ asm void dSv_save_c::init() {
 #pragma pop
 
 
-/* 800350A8-800350BC 0014+00 s=0 e=6 z=1  None .text      getSave2__10dSv_save_cFi                                     */
+/* 800350A8-800350BC 0014+00 s=0 e=6 z=0  None .text      getSave2__10dSv_save_cFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2324,7 +2324,7 @@ asm void dSv_info_c::createZone(int param_0) {
 #pragma pop
 
 
-/* 80035200-800352B0 00B0+00 s=0 e=8 z=352  None .text      onSwitch__10dSv_info_cFii                                    */
+/* 80035200-800352B0 00B0+00 s=0 e=8 z=0  None .text      onSwitch__10dSv_info_cFii                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2335,7 +2335,7 @@ asm void dSv_info_c::onSwitch(int param_0, int param_1) {
 #pragma pop
 
 
-/* 800352B0-80035360 00B0+00 s=0 e=2 z=93  None .text      offSwitch__10dSv_info_cFii                                   */
+/* 800352B0-80035360 00B0+00 s=0 e=2 z=0  None .text      offSwitch__10dSv_info_cFii                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2346,7 +2346,7 @@ asm void dSv_info_c::offSwitch(int param_0, int param_1) {
 #pragma pop
 
 
-/* 80035360-8003542C 00CC+00 s=0 e=27 z=734  None .text      isSwitch__10dSv_info_cCFii                                   */
+/* 80035360-8003542C 00CC+00 s=0 e=27 z=0  None .text      isSwitch__10dSv_info_cCFii                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2357,7 +2357,7 @@ asm void dSv_info_c::isSwitch(int param_0, int param_1) const {
 #pragma pop
 
 
-/* 8003542C-800354E0 00B4+00 s=0 e=0 z=2  None .text      revSwitch__10dSv_info_cFii                                   */
+/* 8003542C-800354E0 00B4+00 s=0 e=0 z=0  None .text      revSwitch__10dSv_info_cFii                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2368,7 +2368,7 @@ asm void dSv_info_c::revSwitch(int param_0, int param_1) {
 #pragma pop
 
 
-/* 800354E0-80035590 00B0+00 s=0 e=1 z=3  None .text      onItem__10dSv_info_cFii                                      */
+/* 800354E0-80035590 00B0+00 s=0 e=1 z=0  None .text      onItem__10dSv_info_cFii                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2379,7 +2379,7 @@ asm void dSv_info_c::onItem(int param_0, int param_1) {
 #pragma pop
 
 
-/* 80035590-80035644 00B4+00 s=0 e=1 z=3  None .text      isItem__10dSv_info_cCFii                                     */
+/* 80035590-80035644 00B4+00 s=0 e=1 z=0  None .text      isItem__10dSv_info_cCFii                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2390,7 +2390,7 @@ asm void dSv_info_c::isItem(int param_0, int param_1) const {
 #pragma pop
 
 
-/* 80035644-800356B4 0070+00 s=0 e=1 z=4  None .text      onActor__10dSv_info_cFii                                     */
+/* 80035644-800356B4 0070+00 s=0 e=1 z=0  None .text      onActor__10dSv_info_cFii                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2401,7 +2401,7 @@ asm void dSv_info_c::onActor(int param_0, int param_1) {
 #pragma pop
 
 
-/* 800356B4-80035724 0070+00 s=0 e=0 z=2  None .text      offActor__10dSv_info_cFii                                    */
+/* 800356B4-80035724 0070+00 s=0 e=0 z=0  None .text      offActor__10dSv_info_cFii                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

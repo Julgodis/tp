@@ -12,18 +12,4 @@
 // 
 
 
-extern void* const data_805DCA40[2];
-
-// 
-// External References:
-// 
-
-
-extern "C" void __sinit_d_a_b_ds_cpp(); // 1
-
-// 
-// Declarations:
-// 
-
-/* ############################################################################################## */
-#pragma section ".ctors$10"
+extern void* const data_805DCA40[2]

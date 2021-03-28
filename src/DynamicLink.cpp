@@ -11,6 +11,46 @@
 // Types:
 // 
 
+struct mDoDvdThd_callback_c {
+	/* 80015C74 */ void create(void* (*)(void*), void*);
+};
+
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+	/* 802CE624 */ void resize(void*, u32, JKRHeap*);
+	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
+};
+
+struct JKRFileLoader {
+	/* 802D43A0 */ void detachResource(void*, JKRFileLoader*);
+};
+
+struct JKRFileCache {
+	/* 802D49B4 */ void mount(char const*, JKRHeap*, char const*);
+};
+
+struct JKRExpandSwitch {
+};
+
+struct JKRDvdRipper {
+	struct EAllocDirection {
+	};
+
+	/* 802D9B98 */ void loadToMainRAM(char const*, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
+};
+
+struct JKRArchive {
+	struct EMountMode {
+	};
+
+	struct EMountDirection {
+	};
+
+	/* 802D57E4 */ void mount(char const*, JKRArchive::EMountMode, JKRHeap*, JKRArchive::EMountDirection);
+	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
+};
+
 struct DynamicModuleControlBase {
 	/* 800188DC */ bool getModuleName() const;
 	/* 802621CC */ ~DynamicModuleControlBase();
@@ -45,46 +85,6 @@ struct DynamicModuleControl {
 	/* 80263000 */ void getModuleSize() const;
 	/* 80263070 */ void getModuleTypeString() const;
 	/* 80263218 */ void getModuleName() const;
-};
-
-struct mDoDvdThd_callback_c {
-	/* 80015C74 */ void create(void* (*)(void*), void*);
-};
-
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-	/* 802CE624 */ void resize(void*, u32, JKRHeap*);
-	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
-};
-
-struct JKRFileLoader {
-	/* 802D43A0 */ void detachResource(void*, JKRFileLoader*);
-};
-
-struct JKRFileCache {
-	/* 802D49B4 */ void mount(char const*, JKRHeap*, char const*);
-};
-
-struct JKRArchive {
-	struct EMountMode {
-	};
-
-	struct EMountDirection {
-	};
-
-	/* 802D57E4 */ void mount(char const*, JKRArchive::EMountMode, JKRHeap*, JKRArchive::EMountDirection);
-	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
-};
-
-struct JKRExpandSwitch {
-};
-
-struct JKRDvdRipper {
-	struct EAllocDirection {
-	};
-
-	/* 802D9B98 */ void loadToMainRAM(char const*, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
 };
 
 // 
@@ -515,19 +515,19 @@ asm void DynamicModuleControl::getModuleTypeString() const {
 #pragma pop
 
 
-/* 80263088-8026308C 0004+00 s=0 e=0 z=756  None .text      ModuleProlog                                                 */
+/* 80263088-8026308C 0004+00 s=0 e=0 z=0  None .text      ModuleProlog                                                 */
 extern "C" void ModuleProlog() {
 	/* empty function */
 }
 
 
-/* 8026308C-80263090 0004+00 s=0 e=0 z=756  None .text      ModuleEpilog                                                 */
+/* 8026308C-80263090 0004+00 s=0 e=0 z=0  None .text      ModuleEpilog                                                 */
 extern "C" void ModuleEpilog() {
 	/* empty function */
 }
 
 
-/* 80263090-8026314C 00BC+00 s=0 e=0 z=757  None .text      ModuleUnresolved                                             */
+/* 80263090-8026314C 00BC+00 s=0 e=0 z=0  None .text      ModuleUnresolved                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -538,7 +538,7 @@ extern "C" asm void ModuleUnresolved() {
 #pragma pop
 
 
-/* 8026314C-80263190 0044+00 s=0 e=0 z=757  None .text      ModuleConstructorsX                                          */
+/* 8026314C-80263190 0044+00 s=0 e=0 z=0  None .text      ModuleConstructorsX                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -549,7 +549,7 @@ extern "C" asm void ModuleConstructorsX() {
 #pragma pop
 
 
-/* 80263190-802631D4 0044+00 s=0 e=0 z=757  None .text      ModuleDestructorsX                                           */
+/* 80263190-802631D4 0044+00 s=0 e=0 z=0  None .text      ModuleDestructorsX                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

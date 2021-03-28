@@ -11,12 +11,22 @@
 // Types:
 // 
 
+struct J2DPane {
+};
+
+struct JKRArchive {
+};
+
+struct dSelect_cursor_c {
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
+	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
+	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
+	/* 801952A0 */ void setAlphaRate(f32);
+};
+
 struct dNm_HIO_c {
 	/* 8024E3E0 */ dNm_HIO_c();
 	/* 802511A4 */ ~dNm_HIO_c();
-};
-
-struct J2DPane {
 };
 
 struct dName_c {
@@ -62,9 +72,26 @@ struct dName_c {
 	/* 80251048 */ void getMenuPosIdx(u8);
 };
 
+struct dDlst_base_c {
+};
+
+struct dDlst_list_c {
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
+};
+
 struct dDlst_NameIN_c {
 	/* 80251094 */ void draw();
 	/* 8025115C */ ~dDlst_NameIN_c();
+};
+
+struct Vec {
+};
+
+struct JAISoundID {
+};
+
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 struct STControl {
@@ -76,21 +103,17 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
-struct dDlst_base_c {
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
 };
 
-struct dDlst_list_c {
-	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
+struct JKRExpHeap {
 };
 
-struct JKRArchive {
-};
-
-struct dSelect_cursor_c {
-	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
-	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
-	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
-	/* 801952A0 */ void setAlphaRate(f32);
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+	/* 80300660 */ void setString(char const*, ...);
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 struct J2DGrafContext {
@@ -103,13 +126,8 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-struct JKRExpHeap {
-};
-
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 802547CC */ void scaleAnime(s16, f32, f32, u8);
-	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
 };
 
 struct CPaneMgrAlpha {
@@ -118,28 +136,10 @@ struct CPaneMgrAlpha {
 	/* 80255608 */ void hide();
 };
 
-struct JAISoundID {
-};
-
-struct Vec {
-};
-
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-};
-
-struct JKRFileLoader {
-	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
-};
-
-struct J2DTextBox {
-	/* 80300658 */ void getStringPtr() const;
-	/* 80300660 */ void setString(char const*, ...);
-	/* 8030074C */ void setString(s16, char const*, ...);
-};
-
-struct J2DAnmLoaderDataBase {
-	/* 80308A6C */ void load(void const*);
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 802547CC */ void scaleAnime(s16, f32, f32, u8);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 // 

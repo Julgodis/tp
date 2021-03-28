@@ -11,10 +11,16 @@
 // Types:
 // 
 
+struct _GXRenderModeObj {
+};
+
 struct _GXColor {
 };
 
-struct _GXRenderModeObj {
+struct OSContext {
+};
+
+struct OSAlarm {
 };
 
 struct JKRHeap {
@@ -26,6 +32,60 @@ struct JUTXfb {
 
 	/* 802E53B8 */ void createManager(JKRHeap*, JUTXfb::EXfbNumber);
 	/* 802E5424 */ void destroyManager();
+};
+
+struct JUTVideo {
+	/* 802E5088 */ void drawDoneStart();
+	/* 802E50B0 */ void dummyNoDrawWait();
+	/* 802E5198 */ void setRenderMode(_GXRenderModeObj const*);
+	/* 802E5210 */ void waitRetraceIfNeed();
+};
+
+struct JUTProcBar {
+	/* 802E59E0 */ void create();
+	/* 802E5A28 */ void destroy();
+	/* 802E5A60 */ void clear();
+	/* 802E5E08 */ void draw();
+};
+
+struct JUTFader {
+	/* 802E55DC */ void control();
+};
+
+struct JUTDirectPrint {
+	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
+};
+
+struct JUTDbPrint {
+	/* 802E02A4 */ void flush();
+};
+
+struct JUTConsoleManager {
+	/* 802E8384 */ void draw() const;
+};
+
+struct JUTAssertion {
+	/* 802E499C */ void flushMessage();
+	/* 802E4A54 */ void flushMessage_dbPrint();
+};
+
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
+	/* 802DBE14 */ ~JSUPtrLink();
+};
+
+struct JSUPtrList {
+	/* 802DBE74 */ JSUPtrList(bool);
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF4C */ void append(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
+template <typename A0>
+struct JSUList { };
+/* JSUList<JFWAlarm> */
+struct JSUList__template0 {
+	/* 80273724 */ ~JSUList__template0();
 };
 
 struct JFWDisplay {
@@ -50,66 +110,6 @@ struct JFWDisplay {
 	/* 80272F2C */ void clearEfb();
 	/* 80272F58 */ void clearEfb(_GXColor);
 	/* 8027331C */ void calcCombinationRatio();
-};
-
-struct OSAlarm {
-};
-
-struct OSContext {
-};
-
-template <typename A0>
-struct JSUList { };
-/* JSUList<JFWAlarm> */
-struct JSUList__template0 {
-	/* 80273724 */ ~JSUList__template0();
-};
-
-struct JSUPtrLink {
-	/* 802DBDFC */ JSUPtrLink(void*);
-	/* 802DBE14 */ ~JSUPtrLink();
-};
-
-struct JSUPtrList {
-	/* 802DBE74 */ JSUPtrList(bool);
-	/* 802DBEAC */ ~JSUPtrList();
-	/* 802DBF4C */ void append(JSUPtrLink*);
-	/* 802DC15C */ void remove(JSUPtrLink*);
-};
-
-struct JUTDbPrint {
-	/* 802E02A4 */ void flush();
-};
-
-struct JUTDirectPrint {
-	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
-};
-
-struct JUTAssertion {
-	/* 802E499C */ void flushMessage();
-	/* 802E4A54 */ void flushMessage_dbPrint();
-};
-
-struct JUTVideo {
-	/* 802E5088 */ void drawDoneStart();
-	/* 802E50B0 */ void dummyNoDrawWait();
-	/* 802E5198 */ void setRenderMode(_GXRenderModeObj const*);
-	/* 802E5210 */ void waitRetraceIfNeed();
-};
-
-struct JUTFader {
-	/* 802E55DC */ void control();
-};
-
-struct JUTProcBar {
-	/* 802E59E0 */ void create();
-	/* 802E5A28 */ void destroy();
-	/* 802E5A60 */ void clear();
-	/* 802E5E08 */ void draw();
-};
-
-struct JUTConsoleManager {
-	/* 802E8384 */ void draw() const;
 };
 
 struct J2DOrthoGraph {
@@ -358,7 +358,7 @@ asm JFWDisplay::~JFWDisplay() {
 
 
 /* ############################################################################################## */
-/* 804511C0-804511C4 0004+00 s=2 e=40 z=1  None .sbss      sManager__10JFWDisplay                                       */
+/* 804511C0-804511C4 0004+00 s=2 e=40 z=0  None .sbss      sManager__10JFWDisplay                                       */
 u8 sManager__10JFWDisplay[4];
 
 /* 802721DC-80272260 0084+00 s=0 e=1 z=0  None .text      createManager__10JFWDisplayFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumberb */

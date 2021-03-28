@@ -11,6 +11,27 @@
 // Types:
 // 
 
+struct dSv_memBit_c {
+	/* 80034934 */ void isDungeonItem(int) const;
+};
+
+struct dSv_event_c {
+	/* 8003498C */ void onEventBit(u16);
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct dStage_roomControl_c {
+	/* 80024384 */ void getStatusRoomDt(int);
+};
+
+struct dMsgObject_c {
+	/* 8023822C */ void getStatus();
+};
+
+struct dMpath_c {
+	/* 8003F758 */ void isExistMapPathData();
+};
+
 struct J2DScreen {
 };
 
@@ -44,31 +65,14 @@ struct dMeterMap_c {
 	/* 8020E9CC */ void keyCheck();
 };
 
-struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(int);
-};
-
 struct dMap_c {
 	/* 80029874 */ dMap_c(int, int, int, int);
 	/* 8002A32C */ void _move(f32, f32, int, f32);
 	/* 8002AB54 */ void _draw();
 };
 
-struct dSv_memBit_c {
-	/* 80034934 */ void isDungeonItem(int) const;
-};
-
-struct dSv_event_c {
-	/* 8003498C */ void onEventBit(u16);
-	/* 800349BC */ void isEventBit(u16) const;
-};
-
 struct dMapInfo_n {
 	/* 8003EE5C */ void getMapPlayerPos();
-};
-
-struct dMpath_c {
-	/* 8003F758 */ void isExistMapPathData();
 };
 
 struct dDlst_base_c {
@@ -78,14 +82,10 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct dMsgObject_c {
-	/* 8023822C */ void getStatus();
+struct Vec {
 };
 
 struct JAISoundID {
-};
-
-struct Vec {
 };
 
 struct Z2SeMgr {

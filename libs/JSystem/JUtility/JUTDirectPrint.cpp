@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct base_process_class {
+};
+
 struct __va_list_struct {
 };
 
@@ -31,9 +34,6 @@ struct JUTDirectPrint {
 	/* 802E4708 */ void drawString_f(u16, u16, char const*, ...);
 	/* 802E47C8 */ void setCharColor(u8, u8, u8);
 	/* 802E4798 */ void setCharColor(JUtility::TColor);
-};
-
-struct base_process_class {
 };
 
 namespace JStudio {

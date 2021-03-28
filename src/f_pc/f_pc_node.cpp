@@ -11,19 +11,19 @@
 // Types:
 // 
 
-struct nodedraw_method_class {
-};
-
 struct process_node_class {
 };
 
-struct layer_class {
+struct process_method_class {
+};
+
+struct nodedraw_method_class {
 };
 
 struct node_list_class {
 };
 
-struct process_method_class {
+struct layer_class {
 };
 
 // 

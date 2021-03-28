@@ -11,37 +11,45 @@
 // Types:
 // 
 
-struct dStage_FileList2_dt_c {
+struct stage_tgsc_data_class {
+};
+
+struct renderingPlusDoor_c {
+	/* 8002B0B4 */ ~renderingPlusDoor_c();
+	/* 80040518 */ void afterDrawPath();
+	/* 80040574 */ void drawDoor1();
+	/* 800405B8 */ void drawDoor2();
+	/* 800405FC */ void drawDoorCommon(stage_tgsc_data_class const*, int, bool);
+	/* 80040710 */ void checkDispDoorS(int, int, f32);
+	/* 80040838 */ void drawNormalDoorS(stage_tgsc_data_class const*, int, int, bool);
+	/* 8004145C */ void beforeDrawPath();
+};
+
+struct dTres_c {
+	struct data_s {
+	};
+
+	struct typeGroupData_c {
+	};
+
+	/* 8009C360 */ void getFirstData(u8);
+	/* 8009C3B4 */ void getNextData(dTres_c::typeGroupData_c const*);
+	/* 8009C39C */ void getNextData(dTres_c::typeGroupData_c*);
 };
 
 struct Vec {
 };
 
-struct dMapInfo_n {
-	/* 8003ECA0 */ void chkGetCompass();
-	/* 8003ECD8 */ void chkGetMap();
-	/* 8003ED10 */ void isVisitedRoom(int);
-	/* 8003ED60 */ void correctionOriginPos(s8, Vec*);
-	/* 8003EDC0 */ void offsetPlus(dStage_FileList2_dt_c const*, Vec*);
-	/* 8003EDEC */ void rotAngle(dStage_FileList2_dt_c const*, Vec*);
-	/* 8003EE5C */ void getMapPlayerPos();
-	/* 8003EF20 */ void getMapPlayerAngleY();
-	/* 8003EF70 */ void getConstRestartIconPointer();
-	/* 8003F02C */ void getMapRestartPos();
-	/* 8003F0F8 */ void getMapRestartAngleY();
-	/* 8003F19C */ void getRoomCenter(int, f32*, f32*);
-	/* 8003F1F4 */ void getRoomMinMaxXZ(int, f32*, f32*, f32*, f32*);
-	/* 8003F24C */ void getFloorParameter(f32, s8*, f32*, f32*, f32*, f32*);
-};
-
-struct dMapInfo_c {
-	/* 8003F40C */ void calcFloorNo(f32, bool, int);
-	/* 8003F570 */ void calcNowStayFloorNo(f32, bool);
-	/* 8003F6C8 */ void move(int, f32);
-	/* 8003F6FC */ void init();
-	/* 8003F714 */ void reset();
-	/* 8003F734 */ void create();
-	/* 8003F754 */ void remove();
+struct renderingPlusDoorAndCursor_c {
+	/* 8002B008 */ ~renderingPlusDoorAndCursor_c();
+	/* 800402FC */ void afterDrawPath();
+	/* 80040A94 */ void getFirstData(u8);
+	/* 80040AB8 */ void getNextData(dTres_c::typeGroupData_c*);
+	/* 80040ADC */ void getIconPosition(dTres_c::typeGroupData_c*) const;
+	/* 80040B00 */ void drawTreasure();
+	/* 80040E84 */ void drawTreasureAfterPlayer();
+	/* 80041208 */ void drawIconSingle(Vec const&, f32, f32);
+	/* 800412C0 */ void drawCursor(Vec const&, s16, int, f32);
 };
 
 struct dDrawPath_c {
@@ -63,29 +71,6 @@ struct dDrawPath_c {
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
 	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CCC4 */ void drawPath();
-};
-
-struct dMpath_c {
-	/* 8003F758 */ void isExistMapPathData();
-	/* 8003F760 */ void getTopBottomFloorNo(s8*, s8*);
-	/* 8003F7E8 */ void createWork();
-	/* 8003FA40 */ void setPointer(s8, void*, int);
-	/* 8003F810 */ void setPointer(dDrawPath_c::room_class*, s8*, s8*);
-	/* 8003FB70 */ void create();
-	/* 8003FBD0 */ void reset();
-	/* 8003FC70 */ void remove();
-};
-
-struct dTres_c {
-	struct data_s {
-	};
-
-	struct typeGroupData_c {
-	};
-
-	/* 8009C360 */ void getFirstData(u8);
-	/* 8009C3B4 */ void getNextData(dTres_c::typeGroupData_c const*);
-	/* 8009C39C */ void getNextData(dTres_c::typeGroupData_c*);
 };
 
 struct renderingDAmap_c {
@@ -114,32 +99,6 @@ struct renderingDAmap_c {
 	/* 80040AE4 */ void getIconGroupNumber(u8) const;
 };
 
-struct renderingPlusDoorAndCursor_c {
-	/* 8002B008 */ ~renderingPlusDoorAndCursor_c();
-	/* 800402FC */ void afterDrawPath();
-	/* 80040A94 */ void getFirstData(u8);
-	/* 80040AB8 */ void getNextData(dTres_c::typeGroupData_c*);
-	/* 80040ADC */ void getIconPosition(dTres_c::typeGroupData_c*) const;
-	/* 80040B00 */ void drawTreasure();
-	/* 80040E84 */ void drawTreasureAfterPlayer();
-	/* 80041208 */ void drawIconSingle(Vec const&, f32, f32);
-	/* 800412C0 */ void drawCursor(Vec const&, s16, int, f32);
-};
-
-struct stage_tgsc_data_class {
-};
-
-struct renderingPlusDoor_c {
-	/* 8002B0B4 */ ~renderingPlusDoor_c();
-	/* 80040518 */ void afterDrawPath();
-	/* 80040574 */ void drawDoor1();
-	/* 800405B8 */ void drawDoor2();
-	/* 800405FC */ void drawDoorCommon(stage_tgsc_data_class const*, int, bool);
-	/* 80040710 */ void checkDispDoorS(int, int, f32);
-	/* 80040838 */ void drawNormalDoorS(stage_tgsc_data_class const*, int, int, bool);
-	/* 8004145C */ void beforeDrawPath();
-};
-
 struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
@@ -152,12 +111,7 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dMpath_n {
-	struct dTexObjAggregate_c {
-		/* 8003C85C */ void create();
-		/* 8003C8F4 */ void remove();
-	};
-
+struct dStage_FileList2_dt_c {
 };
 
 struct dRenderingMap_c {
@@ -171,6 +125,52 @@ struct dRenderingFDAmap_c {
 	/* 8003D320 */ void postRenderingMap();
 	/* 8003D68C */ void getDecoLineColor(int, int);
 	/* 8003D6B8 */ void getDecorationLineWidth(int);
+};
+
+struct dMpath_n {
+	struct dTexObjAggregate_c {
+		/* 8003C85C */ void create();
+		/* 8003C8F4 */ void remove();
+	};
+
+};
+
+struct dMpath_c {
+	/* 8003F758 */ void isExistMapPathData();
+	/* 8003F760 */ void getTopBottomFloorNo(s8*, s8*);
+	/* 8003F7E8 */ void createWork();
+	/* 8003FA40 */ void setPointer(s8, void*, int);
+	/* 8003F810 */ void setPointer(dDrawPath_c::room_class*, s8*, s8*);
+	/* 8003FB70 */ void create();
+	/* 8003FBD0 */ void reset();
+	/* 8003FC70 */ void remove();
+};
+
+struct dMapInfo_n {
+	/* 8003ECA0 */ void chkGetCompass();
+	/* 8003ECD8 */ void chkGetMap();
+	/* 8003ED10 */ void isVisitedRoom(int);
+	/* 8003ED60 */ void correctionOriginPos(s8, Vec*);
+	/* 8003EDC0 */ void offsetPlus(dStage_FileList2_dt_c const*, Vec*);
+	/* 8003EDEC */ void rotAngle(dStage_FileList2_dt_c const*, Vec*);
+	/* 8003EE5C */ void getMapPlayerPos();
+	/* 8003EF20 */ void getMapPlayerAngleY();
+	/* 8003EF70 */ void getConstRestartIconPointer();
+	/* 8003F02C */ void getMapRestartPos();
+	/* 8003F0F8 */ void getMapRestartAngleY();
+	/* 8003F19C */ void getRoomCenter(int, f32*, f32*);
+	/* 8003F1F4 */ void getRoomMinMaxXZ(int, f32*, f32*, f32*, f32*);
+	/* 8003F24C */ void getFloorParameter(f32, s8*, f32*, f32*, f32*, f32*);
+};
+
+struct dMapInfo_c {
+	/* 8003F40C */ void calcFloorNo(f32, bool, int);
+	/* 8003F570 */ void calcNowStayFloorNo(f32, bool);
+	/* 8003F6C8 */ void move(int, f32);
+	/* 8003F6FC */ void init();
+	/* 8003F714 */ void reset();
+	/* 8003F734 */ void create();
+	/* 8003F754 */ void remove();
 };
 
 struct dDlst_base_c {
@@ -650,7 +650,7 @@ asm void dMpath_c::isExistMapPathData() {
 
 
 /* ############################################################################################## */
-/* 80450630-80450634 0004+00 s=0 e=1 z=2  None .sdata     mNextRoomNo__10dMapInfo_c                                    */
+/* 80450630-80450634 0004+00 s=0 e=1 z=0  None .sdata     mNextRoomNo__10dMapInfo_c                                    */
 SECTION_SDATA u32 mNextRoomNo__10dMapInfo_c = 0xFFFFFFFF;
 
 /* 80450634-80450638 0004+00 s=4 e=0 z=0  None .sdata     None                                                         */

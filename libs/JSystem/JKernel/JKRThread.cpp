@@ -14,6 +14,40 @@
 struct OSThread {
 };
 
+struct JUTConsole {
+	/* 802E75EC */ void clear();
+	/* 802E7BB8 */ void print_f(char const*, ...);
+	/* 802E7C38 */ void print(char const*);
+};
+
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
+	/* 802DBE14 */ ~JSUPtrLink();
+};
+
+struct JSUPtrList {
+	/* 802DBE74 */ JSUPtrList(bool);
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF14 */ void initiate();
+	/* 802DBF4C */ void append(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
+template <typename A0>
+struct JSUList { };
+/* JSUList<JKRTask> */
+struct JSUList__template3 {
+	/* 802D1EFC */ ~JSUList__template3();
+};
+
+/* JSUList<JKRThread> */
+struct JSUList__template4 {
+	/* 802D1F50 */ ~JSUList__template4();
+};
+
+struct JKRThreadName_ {
+};
+
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
@@ -34,15 +68,6 @@ struct JKRThread {
 	/* 802D1E14 */ bool run();
 };
 
-struct JKRThreadName_ {
-};
-
-struct JUTConsole {
-	/* 802E75EC */ void clear();
-	/* 802E7BB8 */ void print_f(char const*, ...);
-	/* 802E7C38 */ void print(char const*);
-};
-
 struct JKRThreadSwitch {
 	/* 802D199C */ JKRThreadSwitch(JKRHeap*);
 	/* 802D1A14 */ void createManager(JKRHeap*);
@@ -53,34 +78,9 @@ struct JKRThreadSwitch {
 	/* 802D1E4C */ ~JKRThreadSwitch();
 };
 
-template <typename A0>
-struct JSUList { };
-/* JSUList<JKRTask> */
-struct JSUList__template3 {
-	/* 802D1EFC */ ~JSUList__template3();
-};
-
-/* JSUList<JKRThread> */
-struct JSUList__template4 {
-	/* 802D1F50 */ ~JSUList__template4();
-};
-
 struct JKRDisposer {
 	/* 802D147C */ JKRDisposer();
 	/* 802D14E4 */ ~JKRDisposer();
-};
-
-struct JSUPtrLink {
-	/* 802DBDFC */ JSUPtrLink(void*);
-	/* 802DBE14 */ ~JSUPtrLink();
-};
-
-struct JSUPtrList {
-	/* 802DBE74 */ JSUPtrList(bool);
-	/* 802DBEAC */ ~JSUPtrList();
-	/* 802DBF14 */ void initiate();
-	/* 802DBF4C */ void append(JSUPtrLink*);
-	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
 // 

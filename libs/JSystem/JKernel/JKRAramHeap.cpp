@@ -11,18 +11,13 @@
 // Types:
 // 
 
-struct JKRAramHeap {
-	struct EAllocMode {
-	};
+struct JSUPtrLink {
+};
 
-	/* 802D2E44 */ JKRAramHeap(u32, u32);
-	/* 802D2F14 */ ~JKRAramHeap();
-	/* 802D2FBC */ void alloc(u32, JKRAramHeap::EAllocMode);
-	/* 802D3034 */ void allocFromHead(u32);
-	/* 802D30BC */ void allocFromTail(u32);
-	/* 802D3134 */ void getFreeSize();
-	/* 802D31AC */ void getTotalFreeSize();
-	/* 802D3218 */ void dump();
+struct JSUPtrList {
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF14 */ void initiate();
+	/* 802DBF4C */ void append(JSUPtrLink*);
 };
 
 template <typename A0>
@@ -41,19 +36,24 @@ struct JKRDisposer {
 	/* 802D14E4 */ ~JKRDisposer();
 };
 
+struct JKRAramHeap {
+	struct EAllocMode {
+	};
+
+	/* 802D2E44 */ JKRAramHeap(u32, u32);
+	/* 802D2F14 */ ~JKRAramHeap();
+	/* 802D2FBC */ void alloc(u32, JKRAramHeap::EAllocMode);
+	/* 802D3034 */ void allocFromHead(u32);
+	/* 802D30BC */ void allocFromTail(u32);
+	/* 802D3134 */ void getFreeSize();
+	/* 802D31AC */ void getTotalFreeSize();
+	/* 802D3218 */ void dump();
+};
+
 struct JKRAramBlock {
 	/* 802D3304 */ JKRAramBlock(u32, u32, u32, u8, bool);
 	/* 802D3434 */ void allocHead(u32, u8, JKRAramHeap*);
 	/* 802D34D0 */ void allocTail(u32, u8, JKRAramHeap*);
-};
-
-struct JSUPtrLink {
-};
-
-struct JSUPtrList {
-	/* 802DBEAC */ ~JSUPtrList();
-	/* 802DBF14 */ void initiate();
-	/* 802DBF4C */ void append(JSUPtrLink*);
 };
 
 // 

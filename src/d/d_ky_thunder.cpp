@@ -11,23 +11,6 @@
 // Types:
 // 
 
-struct dThunder_c {
-	/* 801ADF58 */ void createHeap();
-	/* 801ADFB4 */ void adjustHeap();
-	/* 801AE458 */ void create();
-};
-
-struct kankyo_class {
-};
-
-struct cXyz {
-	/* 80009184 */ ~cXyz();
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
-};
-
 struct J3DAnmTevRegKey {
 };
 
@@ -40,13 +23,17 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModel {
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
 };
 
-struct JKRSolidHeap {
+struct kankyo_class {
 };
 
-struct J3DModelData {
+struct dThunder_c {
+	/* 801ADF58 */ void createHeap();
+	/* 801ADFB4 */ void adjustHeap();
+	/* 801AE458 */ void create();
 };
 
 struct dRes_info_c {
@@ -56,11 +43,24 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct cXyz {
+	/* 80009184 */ ~cXyz();
+};
+
 struct Vec {
 };
 
 struct Z2EnvSeMgr {
 	/* 802C7E68 */ void startFarThunderSe(Vec*, s8);
+};
+
+struct JKRSolidHeap {
+};
+
+struct J3DModelData {
+};
+
+struct J3DModel {
 };
 
 struct J3DFrameCtrl {
@@ -379,7 +379,7 @@ SECTION_DATA static void* l_dThunder_Method[5] = {
 	(void*)dThunder_Draw__FP10dThunder_c,
 };
 
-/* 803BC1EC-803BC218 0028+04 s=0 e=0 z=1  None .data      g_profile_KY_THUNDER                                         */
+/* 803BC1EC-803BC218 0028+04 s=0 e=0 z=0  None .data      g_profile_KY_THUNDER                                         */
 SECTION_DATA void* g_profile_KY_THUNDER[10 + 1 /* padding */] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,

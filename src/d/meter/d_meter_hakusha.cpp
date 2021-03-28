@@ -11,6 +11,10 @@
 // Types:
 // 
 
+struct dMeterSub_c {
+	/* 80194138 */ bool isDead();
+};
+
 struct dMeterHakusha_c {
 	/* 8020C320 */ dMeterHakusha_c(void*);
 	/* 8020C384 */ ~dMeterHakusha_c();
@@ -25,14 +29,6 @@ struct dMeterHakusha_c {
 	/* 8020D3B8 */ void setAlphaButtonAnimeMin();
 	/* 8020D41C */ void setAlphaButtonAnimeMax();
 	/* 8020D480 */ void getHakushaNum();
-};
-
-struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(int);
-};
-
-struct dMeterSub_c {
-	/* 80194138 */ bool isDead();
 };
 
 struct CPaneMgrAlpha {
@@ -54,6 +50,13 @@ struct dMeter2Draw_c {
 	/* 8021AAA4 */ void setAlphaAnimeMax(CPaneMgrAlpha*, s16);
 };
 
+struct dComIfG_play_c {
+	/* 8002C97C */ void getLayerNo(int);
+};
+
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
@@ -67,9 +70,6 @@ struct J2DScreen {
 };
 
 struct J2DPane {
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {

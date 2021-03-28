@@ -11,10 +11,14 @@
 // Types:
 // 
 
-struct JAISoundHandle {
+struct JSUPtrLink {
+	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-struct JAISoundID {
+struct JSUPtrList {
+	/* 802DBF14 */ void initiate();
+	/* 802DBF4C */ void append(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
 struct JGeometry {
@@ -26,16 +30,7 @@ struct JGeometry {
 
 };
 
-struct JAIStreamMgr {
-	/* 802A3B68 */ JAIStreamMgr(bool);
-	/* 802A3C3C */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
-	/* 802A3D70 */ void freeDeadStream_();
-	/* 802A3EBC */ void calc();
-	/* 802A4028 */ void stop();
-	/* 802A4068 */ void stop(u32);
-	/* 802A40B8 */ void stopSoundID(JAISoundID);
-	/* 802A4118 */ void mixOut();
-	/* 802A4174 */ void newStream_();
+struct JASSoundParams {
 };
 
 template <typename A0>
@@ -52,16 +47,22 @@ struct JASGenericMemPool {
 	/* 80290994 */ void free(void*, u32);
 };
 
-struct JAISound {
-	/* 802A21BC */ void attachHandle(JAISoundHandle*);
-	/* 802A2598 */ void stop();
-	/* 802A24DC */ void stop(u32);
+struct JAISoundHandle {
 };
 
-struct JAISoundActivity {
+struct JAISoundID {
 };
 
-struct JASSoundParams {
+struct JAIStreamMgr {
+	/* 802A3B68 */ JAIStreamMgr(bool);
+	/* 802A3C3C */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
+	/* 802A3D70 */ void freeDeadStream_();
+	/* 802A3EBC */ void calc();
+	/* 802A4028 */ void stop();
+	/* 802A4068 */ void stop(u32);
+	/* 802A40B8 */ void stopSoundID(JAISoundID);
+	/* 802A4118 */ void mixOut();
+	/* 802A4174 */ void newStream_();
 };
 
 struct JAIAudience {
@@ -73,6 +74,9 @@ struct JAISoundStrategyMgr { };
 struct JAISoundStrategyMgr__template2 {
 };
 
+struct JAISoundActivity {
+};
+
 struct JAIStream {
 	/* 802A3104 */ JAIStream(JAIStreamMgr*, JAISoundStrategyMgr<JAIStream>*);
 	/* 802A319C */ void JAIStreamMgr_startID_(JAISoundID, s32, JGeometry::TVec3<f32> const*, JAIAudience*, int);
@@ -80,14 +84,10 @@ struct JAIStream {
 	/* 802A388C */ void JAIStreamMgr_calc_();
 };
 
-struct JSUPtrLink {
-	/* 802DBE14 */ ~JSUPtrLink();
-};
-
-struct JSUPtrList {
-	/* 802DBF14 */ void initiate();
-	/* 802DBF4C */ void append(JSUPtrLink*);
-	/* 802DC15C */ void remove(JSUPtrLink*);
+struct JAISound {
+	/* 802A21BC */ void attachHandle(JAISoundHandle*);
+	/* 802A2598 */ void stop();
+	/* 802A24DC */ void stop(u32);
 };
 
 // 

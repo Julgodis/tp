@@ -11,27 +11,13 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
+struct process_method_class {
 };
 
-struct csXyz {
-	/* 80018BD0 */ ~csXyz();
+struct leafdraw_method_class {
 };
 
-struct J3DLightObj {
-	/* 80018C0C */ J3DLightObj();
-};
-
-struct dEvt_info_c {
-	/* 80018C44 */ ~dEvt_info_c();
-	/* 800433F0 */ dEvt_info_c();
-	/* 800434CC */ void beforeProc();
-};
-
-struct dStage_roomDt_c {
-	/* 800193FC */ void getFileListInfo() const;
+struct leafdraw_class {
 };
 
 struct dKy_tevstr_c {
@@ -44,26 +30,9 @@ struct fopEn_enemy_c {
 	/* 800196A0 */ void drawBallModel(dKy_tevstr_c*);
 };
 
-struct J3DModel {
-};
-
-struct J3DModelData {
-};
-
-struct create_tag_class {
-};
-
-struct leafdraw_class {
-};
-
-struct leafdraw_method_class {
-};
-
-struct process_method_class {
-};
-
-struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(int);
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daSus_c {
@@ -74,12 +43,19 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dDemo_actor_c {
-	/* 8003815C */ void setActor(fopAc_ac_c*);
+struct dStage_roomDt_c {
+	/* 800193FC */ void getFileListInfo() const;
 };
 
-struct dDemo_object_c {
-	/* 80039088 */ void getActor(u8);
+struct dStage_roomControl_c {
+	/* 80024384 */ void getStatusRoomDt(int);
+};
+
+struct J3DModelData {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -89,8 +65,7 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dEvt_control_c {
-	/* 80042FA8 */ void moveApproval(void*);
+struct dPa_levelEcallBack {
 };
 
 struct cXyz {
@@ -99,19 +74,36 @@ struct cXyz {
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
 };
 
 struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct dScnKy_env_light_c {
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct dEvt_info_c {
+	/* 80018C44 */ ~dEvt_info_c();
+	/* 800433F0 */ dEvt_info_c();
+	/* 800434CC */ void beforeProc();
 };
 
-struct J3DLightInfo {
-	/* 803256C4 */ void operator=(J3DLightInfo const&);
+struct dEvt_control_c {
+	/* 80042FA8 */ void moveApproval(void*);
+};
+
+struct dDemo_object_c {
+	/* 80039088 */ void getActor(u8);
+};
+
+struct dDemo_actor_c {
+	/* 8003815C */ void setActor(fopAc_ac_c*);
+};
+
+struct create_tag_class {
+};
+
+struct J3DModel {
 };
 
 struct J3DAnmTextureSRTKey {
@@ -125,6 +117,14 @@ struct J3DAnmTevRegKey {
 struct J3DMaterialTable {
 	/* 8032FCC4 */ void entryTexMtxAnimator(J3DAnmTextureSRTKey*);
 	/* 8032FE70 */ void entryTevRegAnimator(J3DAnmTevRegKey*);
+};
+
+struct J3DLightObj {
+	/* 80018C0C */ J3DLightObj();
+};
+
+struct J3DLightInfo {
+	/* 803256C4 */ void operator=(J3DLightInfo const&);
 };
 
 // 
@@ -244,7 +244,7 @@ extern "C" extern u8 struct_80451124[4];
 // Declarations:
 // 
 
-/* 80018B64-80018BD0 006C+00 s=0 e=7 z=562  None .text      __ct__10fopAc_ac_cFv                                         */
+/* 80018B64-80018BD0 006C+00 s=0 e=7 z=0  None .text      __ct__10fopAc_ac_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -278,7 +278,7 @@ asm J3DLightObj::J3DLightObj() {
 
 
 /* ############################################################################################## */
-/* 803A35B0-803A35D0 0020+00 s=0 e=3 z=756  None .data      g_fopAc_Method                                               */
+/* 803A35B0-803A35D0 0020+00 s=0 e=3 z=0  None .data      g_fopAc_Method                                               */
 SECTION_DATA void* g_fopAc_Method[8] = {
 	(void*)fopAc_Create__FPv,
 	(void*)fopAc_Delete__FPv,
@@ -310,7 +310,7 @@ asm dEvt_info_c::~dEvt_info_c() {
 #pragma pop
 
 
-/* 80018C8C-80018CE0 0054+00 s=0 e=5 z=270  None .text      __dt__10fopAc_ac_cFv                                         */
+/* 80018C8C-80018CE0 0054+00 s=0 e=5 z=0  None .text      __dt__10fopAc_ac_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -325,7 +325,7 @@ asm fopAc_ac_c::~fopAc_ac_c() {
 /* 80450CB8-80450CBC 0004+00 s=2 e=0 z=0  None .sbss      g_fopAc_type                                                 */
 static u8 g_fopAc_type[4];
 
-/* 80018CE0-80018D0C 002C+00 s=0 e=12 z=391  None .text      fopAc_IsActor__FPv                                           */
+/* 80018CE0-80018D0C 002C+00 s=0 e=12 z=0  None .text      fopAc_IsActor__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -435,7 +435,7 @@ SECTION_DEAD char const* const stringBase_80378878 = "Alink";
 SECTION_DEAD static char const* const pad_8037887E = "\0";
 #pragma pop
 
-/* 80019404-800194FC 00F8+00 s=0 e=0 z=2  None .text      initBallModel__13fopEn_enemy_cFv                             */
+/* 80019404-800194FC 00F8+00 s=0 e=0 z=0  None .text      initBallModel__13fopEn_enemy_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -446,7 +446,7 @@ asm void fopEn_enemy_c::initBallModel() {
 #pragma pop
 
 
-/* 800194FC-80019520 0024+00 s=2 e=0 z=2  None .text      checkBallModelDraw__13fopEn_enemy_cFv                        */
+/* 800194FC-80019520 0024+00 s=2 e=0 z=0  None .text      checkBallModelDraw__13fopEn_enemy_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -470,7 +470,7 @@ SECTION_SDATA2 static u8 lit_4507[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80019520-800196A0 0180+00 s=0 e=0 z=2  None .text      setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c          */
+/* 80019520-800196A0 0180+00 s=0 e=0 z=0  None .text      setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -497,7 +497,7 @@ SECTION_SDATA2 static f32 lit_4557[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 800196A0-800197BC 011C+00 s=0 e=0 z=2  None .text      drawBallModel__13fopEn_enemy_cFP12dKy_tevstr_c               */
+/* 800196A0-800197BC 011C+00 s=0 e=0 z=0  None .text      drawBallModel__13fopEn_enemy_cFP12dKy_tevstr_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

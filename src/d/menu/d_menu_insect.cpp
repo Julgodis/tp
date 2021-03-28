@@ -11,7 +11,81 @@
 // Types:
 // 
 
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE548 */ void free(void*);
+};
+
+struct mDoDvdThd_mountArchive_c {
+	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
+};
+
+struct dSv_player_get_item_c {
+	/* 80033EC8 */ void isFirstBit(u8) const;
+};
+
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct J2DPane {
+};
+
+struct JKRArchive {
+};
+
+struct dSelect_cursor_c {
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
+	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
+	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
+	/* 801951C8 */ void setScale(f32);
+	/* 801952A0 */ void setAlphaRate(f32);
+};
+
+struct dMsgString_c {
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
+struct dMsgScrn3Select_c {
+	/* 802390B4 */ dMsgScrn3Select_c();
+	/* 80239C64 */ void isSelect();
+	/* 80239C78 */ void setString(char*, char*, char*);
+	/* 80239D08 */ void setRubyString(char*, char*, char*);
+	/* 80239D98 */ void translate(f32, f32);
+	/* 80239DD4 */ void draw(f32, f32);
+	/* 8023A094 */ void selAnimeInit(u8, u8, u8, f32, u8);
+	/* 8023A398 */ void selAnimeMove(u8, u8, bool);
+	/* 8023A680 */ void selAnimeEnd();
+	/* 8023A934 */ void getTextBoxWidth();
+	/* 8023A94C */ void getFontSize();
+	/* 8023A97C */ void getCharSpace();
+};
+
+struct JUTFont {
+};
+
+struct ResTIMG {
+};
+
+struct J2DPicture {
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
+struct JMSMesgEntry_c {
+};
+
+struct dMeter2Info_c {
+	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
+	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
+	/* 8021C7FC */ void getStringLength(JUTFont*, f32, f32, char*);
+	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
+};
+
 struct CSTControl {
+};
+
+struct JKRExpHeap {
 };
 
 struct STControl {
@@ -20,9 +94,6 @@ struct STControl {
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
-};
-
-struct JKRExpHeap {
 };
 
 struct dMenu_Insect_c {
@@ -64,75 +135,19 @@ struct dMenu_Insect_c {
 	/* 801DA630 */ void draw();
 };
 
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE548 */ void free(void*);
+struct Vec {
 };
 
-struct mDoDvdThd_mountArchive_c {
-	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
+struct JAISoundID {
 };
 
-struct dSv_player_get_item_c {
-	/* 80033EC8 */ void isFirstBit(u8) const;
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
-};
-
-struct JKRArchive {
-};
-
-struct J2DPane {
-};
-
-struct dSelect_cursor_c {
-	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
-	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
-	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
-	/* 801951C8 */ void setScale(f32);
-	/* 801952A0 */ void setAlphaRate(f32);
-};
-
-struct JMSMesgEntry_c {
-};
-
-struct JUTFont {
-};
-
-struct ResTIMG {
-};
-
-struct J2DPicture {
-	/* 802FC708 */ J2DPicture(ResTIMG const*);
-};
-
-struct dMeter2Info_c {
-	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
-	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
-	/* 8021C7FC */ void getStringLength(JUTFont*, f32, f32, char*);
-	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
-};
-
-struct dMsgScrn3Select_c {
-	/* 802390B4 */ dMsgScrn3Select_c();
-	/* 80239C64 */ void isSelect();
-	/* 80239C78 */ void setString(char*, char*, char*);
-	/* 80239D08 */ void setRubyString(char*, char*, char*);
-	/* 80239D98 */ void translate(f32, f32);
-	/* 80239DD4 */ void draw(f32, f32);
-	/* 8023A094 */ void selAnimeInit(u8, u8, u8, f32, u8);
-	/* 8023A398 */ void selAnimeMove(u8, u8, bool);
-	/* 8023A680 */ void selAnimeEnd();
-	/* 8023A934 */ void getTextBoxWidth();
-	/* 8023A94C */ void getFontSize();
-	/* 8023A97C */ void getCharSpace();
-};
-
-struct dMsgString_c {
-	/* 80249C20 */ dMsgString_c();
-	/* 80249D28 */ ~dMsgString_c();
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 struct J2DGrafContext {
@@ -144,12 +159,6 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 802545B0 */ void paneTrans(f32, f32);
-	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
-};
-
 struct CPaneMgrAlpha {
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
@@ -158,19 +167,10 @@ struct CPaneMgrAlpha {
 	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
 };
 
-struct JAISoundID {
-};
-
-struct Vec {
-};
-
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-};
-
-struct J2DTextBox {
-	/* 80300658 */ void getStringPtr() const;
-	/* 8030074C */ void setString(s16, char const*, ...);
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 // 
@@ -862,7 +862,7 @@ asm void dMenu_Insect_c::isGiveInsect(u8 param_0) {
 #pragma pop
 
 
-/* 801D9F3C-801D9F8C 0050+00 s=0 e=1 z=12  None .text      isCatchNotGiveInsect__14dMenu_Insect_cFUc                    */
+/* 801D9F3C-801D9F8C 0050+00 s=0 e=1 z=0  None .text      isCatchNotGiveInsect__14dMenu_Insect_cFUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

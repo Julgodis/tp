@@ -11,12 +11,163 @@
 // Types:
 // 
 
+struct mDoMemCd_Ctrl_c {
+	/* 800169B4 */ void load();
+	/* 80016AB0 */ void LoadSync(void*, u32, u32);
+	/* 80016B58 */ void save(void*, u32, u32);
+	/* 80016CE0 */ void SaveSync();
+	/* 80016D74 */ void getStatus(u32);
+	/* 80016E58 */ void command_format();
+	/* 80016F2C */ void FormatSync();
+};
+
+struct J3DModelData {
+};
+
+struct J3DAnmTevRegKey {
+	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct J3DMaterialTable {
+};
+
+struct mDoExt_brkAnm {
+	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
+	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
+};
+
+struct J3DAnmTransform {
+};
+
+struct mDoExt_bckAnm {
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
+};
+
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
+struct dSv_save_c {
+};
+
+struct dSv_player_get_item_c {
+	/* 80033EC8 */ void isFirstBit(u8) const;
+};
+
+struct dSv_player_collect_c {
+	/* 8003424C */ void isCollectCrystal(u8) const;
+	/* 80034290 */ void isCollectMirror(u8) const;
+};
+
+struct dSv_info_c {
+	/* 80034FCC */ void init();
+	/* 80035A04 */ void card_to_memory(char*, int);
+	/* 80035BD0 */ void initdata_to_card(char*, int);
+};
+
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct J2DAnmTextureSRTKey {
+	/* 80184274 */ ~J2DAnmTextureSRTKey();
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
+};
+
+struct J2DPane {
+	/* 8018BF28 */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802F5E88 */ J2DPane(u64, JGeometry::TBox2<f32> const&);
+	/* 802F6714 */ void insertChild(J2DPane*, J2DPane*);
+	/* 802F7FCC */ void animationTransform();
+};
+
+struct JKRArchive {
+};
+
+struct dSelect_cursor_c {
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
+	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
+	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
+	/* 801952A0 */ void setAlphaRate(f32);
+};
+
+struct cXyz {
+};
+
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct dName_c {
+	/* 8024E408 */ dName_c(J2DPane*);
+	/* 8024E7A4 */ void initial();
+	/* 8024E7EC */ void showIcon();
+	/* 8024E9A0 */ void _move();
+	/* 80250560 */ void _draw();
+};
+
+struct COutFont_c {
+};
+
+struct JUTFont {
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct J2DTextBox {
+	/* 80186C84 */ void setWhite(JUtility::TColor);
+	/* 80300658 */ void getStringPtr() const;
+	/* 80300660 */ void setString(char const*, ...);
+	/* 8030074C */ void setString(s16, char const*, ...);
+};
+
+struct dMsgString_c {
+	/* 80191B6C */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
+struct dMsgStringBase_c {
+	/* 80249768 */ void getStringLocal(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
+};
+
+struct JMSMesgEntry_c {
+};
+
+struct dMeter2Info_c {
+	/* 8021C238 */ void decMsgKeyWaitTimer();
+	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
+};
+
 struct dFs_HIO_c {
 	/* 801835F8 */ dFs_HIO_c();
 	/* 801913E0 */ ~dFs_HIO_c();
 };
 
-struct JKRArchive {
+struct dFile_warning_c {
+	/* 80191BAC */ dFile_warning_c(JKRArchive*, u8);
+	/* 80191F18 */ void _move();
+	/* 801920B8 */ void openInit();
+	/* 8019210C */ void closeInit();
+	/* 80192160 */ void init();
+	/* 80192190 */ void _draw();
 };
 
 struct dFile_select_c {
@@ -179,94 +330,6 @@ struct dFile_select_c {
 	/* 801902B8 */ void dataSave();
 };
 
-struct J2DAnmTevRegKey {
-	/* 801841EC */ ~J2DAnmTevRegKey();
-};
-
-struct J2DAnmTextureSRTKey {
-	/* 80184274 */ ~J2DAnmTextureSRTKey();
-};
-
-struct J2DAnmColor {
-	/* 801842FC */ ~J2DAnmColor();
-};
-
-struct J3DTransformInfo {
-};
-
-struct J2DAnmTransform {
-	/* 80184370 */ ~J2DAnmTransform();
-	/* 80191130 */ void getTransform(u16, J3DTransformInfo*) const;
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct J2DTextBox {
-	/* 80186C84 */ void setWhite(JUtility::TColor);
-	/* 80300658 */ void getStringPtr() const;
-	/* 80300660 */ void setString(char const*, ...);
-	/* 8030074C */ void setString(s16, char const*, ...);
-};
-
-struct ResTIMG {
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
-	};
-
-};
-
-struct ResTLUT {
-};
-
-struct J2DPicture {
-	/* 8018BEE0 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
-	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
-};
-
-struct J2DPane {
-	/* 8018BF28 */ void setAnimation(J2DAnmTextureSRTKey*);
-	/* 802F5E88 */ J2DPane(u64, JGeometry::TBox2<f32> const&);
-	/* 802F6714 */ void insertChild(J2DPane*, J2DPane*);
-	/* 802F7FCC */ void animationTransform();
-};
-
-struct dDlst_FileSel_c {
-	/* 8018DEBC */ void draw();
-	/* 8019135C */ ~dDlst_FileSel_c();
-};
-
-struct dDlst_FileSelDt_c {
-	/* 8018DEF4 */ void draw();
-	/* 801912E4 */ ~dDlst_FileSelDt_c();
-};
-
-struct dDlst_FileSelCp_c {
-	/* 8018DFFC */ void draw();
-	/* 8019126C */ ~dDlst_FileSelCp_c();
-};
-
-struct dDlst_FileSelYn_c {
-	/* 8018E0C0 */ void draw();
-	/* 801911F4 */ ~dDlst_FileSelYn_c();
-};
-
-struct dDlst_FileSel3m_c {
-	/* 8018E0F8 */ void draw();
-	/* 8019117C */ ~dDlst_FileSel3m_c();
-};
-
-struct cXyz {
-};
-
 struct dFile_select3D_c {
 	/* 801902F0 */ dFile_select3D_c();
 	/* 80190380 */ ~dFile_select3D_c();
@@ -285,80 +348,57 @@ struct dFile_select3D_c {
 	/* 801910D4 */ void calcViewMtx(f32 (* )[4]);
 };
 
-struct JUTNameTab {
-	/* 80191134 */ ~JUTNameTab();
+struct dFile_info_c {
+	/* 80192434 */ dFile_info_c(JKRArchive*, u8);
+	/* 80192954 */ void setSaveData(dSv_save_c*, int, u8);
+	/* 80192D60 */ void _draw();
 };
 
-struct JUTFont {
+struct dDlst_base_c {
 };
 
-struct COutFont_c {
+struct dDlst_list_c {
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct dMsgString_c {
-	/* 80191B6C */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
-	/* 80249C20 */ dMsgString_c();
-	/* 80249D28 */ ~dMsgString_c();
+struct dDlst_FileSel_c {
+	/* 8018DEBC */ void draw();
+	/* 8019135C */ ~dDlst_FileSel_c();
+};
+
+struct dDlst_FileSelYn_c {
+	/* 8018E0C0 */ void draw();
+	/* 801911F4 */ ~dDlst_FileSelYn_c();
+};
+
+struct dDlst_FileSelDt_c {
+	/* 8018DEF4 */ void draw();
+	/* 801912E4 */ ~dDlst_FileSelDt_c();
+};
+
+struct dDlst_FileSelCp_c {
+	/* 8018DFFC */ void draw();
+	/* 8019126C */ ~dDlst_FileSelCp_c();
+};
+
+struct dDlst_FileSel3m_c {
+	/* 8018E0F8 */ void draw();
+	/* 8019117C */ ~dDlst_FileSel3m_c();
+};
+
+struct dComIfG_play_c {
+	/* 8002B2C8 */ void itemInit();
 };
 
 struct Vec {
 };
 
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
+struct JAISoundID {
 };
 
-struct J3DMaterialTable {
-};
-
-struct J3DModelData {
-};
-
-struct J3DAnmTevRegKey {
-	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
-};
-
-struct mDoExt_brkAnm {
-	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
-	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
-};
-
-struct J3DAnmTransform {
-};
-
-struct mDoExt_bckAnm {
-	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
-	/* 8000D9CC */ void entry(J3DModelData*, f32);
-};
-
-struct J3DModel {
-	/* 80327100 */ void initialize();
-	/* 80327184 */ void entryModelData(J3DModelData*, u32, u32);
-};
-
-struct JKRHeap {
-};
-
-struct JKRSolidHeap {
-	/* 802D0BF4 */ void adjustSize();
-};
-
-struct mDoMemCd_Ctrl_c {
-	/* 800169B4 */ void load();
-	/* 80016AB0 */ void LoadSync(void*, u32, u32);
-	/* 80016B58 */ void save(void*, u32, u32);
-	/* 80016CE0 */ void SaveSync();
-	/* 80016D74 */ void getStatus(u32);
-	/* 80016E58 */ void command_format();
-	/* 80016F2C */ void FormatSync();
-};
-
-struct J3DLightObj {
-	/* 80018C0C */ J3DLightObj();
-};
-
-struct dComIfG_play_c {
-	/* 8002B2C8 */ void itemInit();
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 struct STControl {
@@ -370,33 +410,35 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
-struct dSv_player_get_item_c {
-	/* 80033EC8 */ void isFirstBit(u8) const;
+struct ResTLUT {
 };
 
-struct dSv_player_collect_c {
-	/* 8003424C */ void isCollectCrystal(u8) const;
-	/* 80034290 */ void isCollectMirror(u8) const;
+struct ResTIMG {
 };
 
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
+struct JUTNameTab {
+	/* 80191134 */ ~JUTNameTab();
 };
 
-struct dSv_info_c {
-	/* 80034FCC */ void init();
-	/* 80035A04 */ void card_to_memory(char*, int);
-	/* 80035BD0 */ void initdata_to_card(char*, int);
+struct JKRSolidHeap {
+	/* 802D0BF4 */ void adjustSize();
 };
 
-struct J3DTevKColorAnm {
-	/* 8003B150 */ ~J3DTevKColorAnm();
-	/* 8003B18C */ J3DTevKColorAnm();
+struct JKRHeap {
 };
 
-struct J3DTevColorAnm {
-	/* 8003B1A4 */ ~J3DTevColorAnm();
-	/* 8003B1E0 */ J3DTevColorAnm();
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+};
+
+struct JKRExpHeap {
+};
+
+struct J3DVertexBuffer {
+	/* 80310FD8 */ void init();
+};
+
+struct J3DTransformInfo {
 };
 
 struct J3DTexNoAnm {
@@ -409,16 +451,51 @@ struct J3DTexMtxAnm {
 	/* 8003B2A0 */ J3DTexMtxAnm();
 };
 
+struct J3DTevKColorAnm {
+	/* 8003B150 */ ~J3DTevKColorAnm();
+	/* 8003B18C */ J3DTevKColorAnm();
+};
+
+struct J3DTevColorAnm {
+	/* 8003B1A4 */ ~J3DTevColorAnm();
+	/* 8003B1E0 */ J3DTevColorAnm();
+};
+
+struct J3DModelLoaderDataBase {
+	/* 803346BC */ void load(void const*, u32);
+};
+
+struct J3DModel {
+	/* 80327100 */ void initialize();
+	/* 80327184 */ void entryModelData(J3DModelData*, u32, u32);
+};
+
+struct J3DMaterialAnm {
+	/* 8032C320 */ void initialize();
+};
+
 struct J3DMatColorAnm {
 	/* 8003B2B8 */ ~J3DMatColorAnm();
 	/* 8003B2F4 */ J3DMatColorAnm();
 };
 
-struct dDlst_base_c {
+struct J3DLightObj {
+	/* 80018C0C */ J3DLightObj();
 };
 
-struct dDlst_list_c {
-	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
+struct J3DLightInfo {
+	/* 803256C4 */ void operator=(J3DLightInfo const&);
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+};
+
+struct J3DAnmLoaderDataBaseFlag {
+};
+
+struct J3DAnmLoaderDataBase {
+	/* 80337B40 */ void load(void const*, J3DAnmLoaderDataBaseFlag);
 };
 
 struct J2DGrafContext {
@@ -431,72 +508,30 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
+struct J2DPicture {
+	/* 8018BEE0 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
+	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
+};
+
+struct J2DAnmTransform {
+	/* 80184370 */ ~J2DAnmTransform();
+	/* 80191130 */ void getTransform(u16, J3DTransformInfo*) const;
+};
+
+struct J2DAnmTevRegKey {
+	/* 801841EC */ ~J2DAnmTevRegKey();
+};
+
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
+};
+
+struct J2DAnmColor {
+	/* 801842FC */ ~J2DAnmColor();
+};
+
 struct J2DAnmBase {
 	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
-};
-
-struct dFile_warning_c {
-	/* 80191BAC */ dFile_warning_c(JKRArchive*, u8);
-	/* 80191F18 */ void _move();
-	/* 801920B8 */ void openInit();
-	/* 8019210C */ void closeInit();
-	/* 80192160 */ void init();
-	/* 80192190 */ void _draw();
-};
-
-struct dSv_save_c {
-};
-
-struct dFile_info_c {
-	/* 80192434 */ dFile_info_c(JKRArchive*, u8);
-	/* 80192954 */ void setSaveData(dSv_save_c*, int, u8);
-	/* 80192D60 */ void _draw();
-};
-
-struct dSelect_cursor_c {
-	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
-	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
-	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
-	/* 801952A0 */ void setAlphaRate(f32);
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct JMSMesgEntry_c {
-};
-
-struct dMeter2Info_c {
-	/* 8021C238 */ void decMsgKeyWaitTimer();
-	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
-};
-
-struct dMsgStringBase_c {
-	/* 80249768 */ void getStringLocal(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
-};
-
-struct dName_c {
-	/* 8024E408 */ dName_c(J2DPane*);
-	/* 8024E7A4 */ void initial();
-	/* 8024E7EC */ void showIcon();
-	/* 8024E9A0 */ void _move();
-	/* 80250560 */ void _draw();
-};
-
-struct JKRExpHeap {
-};
-
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 80253B2C */ void reinit();
-	/* 802547CC */ void scaleAnime(s16, f32, f32, u8);
-	/* 802548BC */ void colorAnime(s16, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, u8);
-	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 struct CPaneMgrAlpha {
@@ -506,47 +541,12 @@ struct CPaneMgrAlpha {
 	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
 };
 
-struct JAISoundID {
-};
-
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-};
-
-struct JKRFileLoader {
-	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
-};
-
-struct J2DAnmLoaderDataBase {
-	/* 80308A6C */ void load(void const*);
-};
-
-struct J3DVertexBuffer {
-	/* 80310FD8 */ void init();
-};
-
-struct J3DLightInfo {
-	/* 803256C4 */ void operator=(J3DLightInfo const&);
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-};
-
-struct J3DMaterialAnm {
-	/* 8032C320 */ void initialize();
-};
-
-struct J3DModelLoaderDataBase {
-	/* 803346BC */ void load(void const*, u32);
-};
-
-struct J3DAnmLoaderDataBaseFlag {
-};
-
-struct J3DAnmLoaderDataBase {
-	/* 80337B40 */ void load(void const*, J3DAnmLoaderDataBaseFlag);
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 80253B2C */ void reinit();
+	/* 802547CC */ void scaleAnime(s16, f32, f32, u8);
+	/* 802548BC */ void colorAnime(s16, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, u8);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 // 

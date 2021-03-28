@@ -250,7 +250,7 @@ extern "C" asm static void OSVReport() {
 #pragma pop
 
 
-/* 80006ABC-80006B3C 0080+00 s=0 e=97 z=10  None .text      OSReport                                                     */
+/* 80006ABC-80006B3C 0080+00 s=0 e=97 z=0  None .text      OSReport                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -289,7 +289,7 @@ extern "C" asm void OSReport_FatalError() {
 #pragma pop
 
 
-/* 80006C0C-80006CEC 00E0+00 s=0 e=31 z=10  None .text      OSReport_Error                                               */
+/* 80006C0C-80006CEC 00E0+00 s=0 e=31 z=0  None .text      OSReport_Error                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

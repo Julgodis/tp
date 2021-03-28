@@ -11,132 +11,38 @@
 // Types:
 // 
 
-struct cBgW_RwgElm {
-	/* 800791C4 */ cBgW_RwgElm();
-	/* 800791D4 */ ~cBgW_RwgElm();
+struct fopAc_ac_c {
 };
 
-struct cBgW_NodeTree {
-	/* 8007921C */ cBgW_NodeTree();
-	/* 80079238 */ ~cBgW_NodeTree();
+struct cXyz {
 };
 
-struct cBgS_GrpPassChk {
-};
-
-struct cBgS_LinChk {
-};
-
-struct cBgS_PolyPassChk {
+struct dBgW_Base {
+	/* 80074AB4 */ void SetOldShapeAngleY(s16);
+	/* 8007E5A8 */ dBgW_Base();
+	/* 8007E640 */ ~dBgW_Base();
+	/* 8007E6D8 */ void CallRideCallBack(fopAc_ac_c*, fopAc_ac_c*);
+	/* 8007E6DC */ void CallArrowStickCallBack(fopAc_ac_c*, fopAc_ac_c*, cXyz&);
 };
 
 struct cBgS_PolyInfo {
 	/* 802681A4 */ void SetPolyIndex(int);
 };
 
-struct cXyz {
-};
-
-struct cBgD_t {
-};
-
-struct cBgS_ShdwDraw {
-};
-
-struct cBgS_GndChk {
-};
-
-struct cBgW {
-	/* 80079294 */ cBgW();
-	/* 8007933C */ ~cBgW();
-	/* 800793A4 */ void FreeArea();
-	/* 800793C4 */ void GlobalVtx();
-	/* 80079484 */ void SetVtx();
-	/* 80079564 */ void CalcPlane();
-	/* 80079668 */ void SetTri();
-	/* 80079770 */ void BlckConnect(u16*, int*, int);
-	/* 800797BC */ void ClassifyPlane();
-	/* 8007998C */ void MakeBlckTransMinMax(cXyz*, cXyz*);
-	/* 800799E0 */ void MakeBlckMinMax(int, cXyz*, cXyz*);
-	/* 80079A68 */ void MakeBlckBnd(int, cXyz*, cXyz*);
-	/* 80079BDC */ void MakeNodeTreeRp(int);
-	/* 80079CC4 */ void MakeNodeTreeGrpRp(int);
-	/* 80079DF0 */ void MakeNodeTree();
-	/* 80079EEC */ void ChkMemoryError();
-	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
-	/* 8007A200 */ void RwgLineCheck(u16, cBgS_LinChk*);
-	/* 8007A3A0 */ void LineCheckRp(cBgS_LinChk*, int);
-	/* 8007A52C */ void LineCheckGrpRp(cBgS_LinChk*, int, int);
-	/* 8007A658 */ void LineCheck(cBgS_LinChk*);
-	/* 8007A680 */ void RwgGroundCheckCommon(f32, u16, cBgS_GndChk*);
-	/* 8007A774 */ void RwgGroundCheckGnd(u16, cBgS_GndChk*);
-	/* 8007A824 */ void RwgGroundCheckWall(u16, cBgS_GndChk*);
-	/* 8007A8F4 */ void GroundCrossRp(cBgS_GndChk*, int);
-	/* 8007AA50 */ void GroundCrossGrpRp(cBgS_GndChk*, int, int);
-	/* 8007AB9C */ void GroundCross(cBgS_GndChk*);
-	/* 8007ABC4 */ void CopyOldMtx();
-	/* 8007AC10 */ void Move();
-	/* 8007ADF0 */ void RwgShdwDraw(int, cBgS_ShdwDraw*);
-	/* 8007AEA4 */ void ShdwDrawRp(cBgS_ShdwDraw*, int);
-	/* 8007AFC0 */ void ShdwDrawGrpRp(cBgS_ShdwDraw*, int);
-	/* 8007B084 */ void ShdwDraw(cBgS_ShdwDraw*);
-	/* 8007B0A8 */ bool ChkPolyThrough(int, cBgS_PolyPassChk*);
-	/* 8007B0B0 */ void ChkShdwDrawThrough(int, cBgS_PolyPassChk*);
-	/* 8007B0DC */ bool ChkGrpThrough(int, cBgS_GrpPassChk*, int);
-	/* 8007B0E4 */ void GetGrpRoomIndex(cBgS_PolyInfo const&) const;
-	/* 8007B164 */ void GetBnd() const;
-	/* 8007B17C */ void GetTrans(cXyz*) const;
-	/* 8007B1B4 */ void GetTriPnt(cBgS_PolyInfo const&, cXyz*, cXyz*, cXyz*) const;
-	/* 8007B240 */ void GetTopUnder(f32*, f32*) const;
-	/* 8007B270 */ void GetTriPla(cBgS_PolyInfo const&) const;
-	/* 8007B2B0 */ void GetGrpInf(cBgS_PolyInfo const&) const;
-	/* 8007B2F4 */ void GetPolyInfId(int) const;
-	/* 8007B30C */ void GetPolyInf0(int, u32, u32) const;
-	/* 8007B360 */ void GetMaskPolyInf0_NoShift(int, u32) const;
-	/* 8007B654 */ void GetPolyInf1(int, u32, u32) const;
-	/* 8007B78C */ void GetMaskPolyInf1_NoShift(int, u32) const;
-	/* 8007B824 */ void GetPolyInf2(int, u32, u32) const;
-	/* 8007B930 */ void GetTriGrp(int) const;
-	/* 8007B948 */ void ChkNotReady() const;
-	/* 8007B958 */ void ChkLock() const;
-	/* 8007B964 */ void ChkMoveBg() const;
-};
-
-struct cBgW_TriElm {
-	/* 800796F8 */ ~cBgW_TriElm();
-	/* 80079754 */ cBgW_TriElm();
-};
-
-struct cBgW_GrpElm {
-	/* 8007A184 */ ~cBgW_GrpElm();
-	/* 8007A1E4 */ cBgW_GrpElm();
-};
-
-struct Vec {
+struct dBgS_SphChk {
 };
 
 struct cM3dGPla {
 	/* 8026F57C */ void getCrossY(cXyz const&, f32*) const;
 };
 
-struct cM3dGTri {
-	/* 8007A344 */ ~cM3dGTri();
-	/* 8026F85C */ void setBg(Vec const*, Vec const*, Vec const*, cM3dGPla const*);
-};
-
-struct fopAc_ac_c {
-};
-
-struct dBgS_RoofChk {
-};
-
 struct dBgS_SplGrpChk {
 };
 
-struct dBgS_CaptPoly {
+struct csXyz {
 };
 
-struct csXyz {
+struct Vec {
 };
 
 struct dBgS_Acch {
@@ -146,7 +52,16 @@ struct dBgS_Acch {
 	/* 800772E8 */ void CalcMovePosWork();
 };
 
-struct dBgS_SphChk {
+struct cBgS_GrpPassChk {
+};
+
+struct cBgS_PolyPassChk {
+};
+
+struct dBgS_RoofChk {
+};
+
+struct dBgS_CaptPoly {
 };
 
 struct dBgW {
@@ -220,19 +135,23 @@ struct dBgW {
 	/* 8007E548 */ ~dBgW();
 };
 
-struct dBgW_Base {
-	/* 80074AB4 */ void SetOldShapeAngleY(s16);
-	/* 8007E5A8 */ dBgW_Base();
-	/* 8007E640 */ ~dBgW_Base();
-	/* 8007E6D8 */ void CallRideCallBack(fopAc_ac_c*, fopAc_ac_c*);
-	/* 8007E6DC */ void CallArrowStickCallBack(fopAc_ac_c*, fopAc_ac_c*, cXyz&);
-};
-
 struct dBgS_PolyPassChk {
 	/* 80078F04 */ void ChkNoHorse();
 };
 
-struct cM2dGCir {
+struct cM3dGTri {
+	/* 8007A344 */ ~cM3dGTri();
+	/* 8026F85C */ void setBg(Vec const*, Vec const*, Vec const*, cM3dGPla const*);
+};
+
+struct cM3dGSph {
+};
+
+struct cM3dGLin {
+	/* 8026F3C0 */ void SetEnd(cXyz const&);
+};
+
+struct cM3dGCyl {
 };
 
 struct cM3dGAab {
@@ -245,14 +164,95 @@ struct cM3dGAab {
 	/* 8026EDE4 */ void SetMax(cXyz const&);
 };
 
-struct cM3dGCyl {
+struct cM2dGCir {
 };
 
-struct cM3dGSph {
+struct cBgW_TriElm {
+	/* 800796F8 */ ~cBgW_TriElm();
+	/* 80079754 */ cBgW_TriElm();
 };
 
-struct cM3dGLin {
-	/* 8026F3C0 */ void SetEnd(cXyz const&);
+struct cBgW_RwgElm {
+	/* 800791C4 */ cBgW_RwgElm();
+	/* 800791D4 */ ~cBgW_RwgElm();
+};
+
+struct cBgW_NodeTree {
+	/* 8007921C */ cBgW_NodeTree();
+	/* 80079238 */ ~cBgW_NodeTree();
+};
+
+struct cBgW_GrpElm {
+	/* 8007A184 */ ~cBgW_GrpElm();
+	/* 8007A1E4 */ cBgW_GrpElm();
+};
+
+struct cBgS_GndChk {
+};
+
+struct cBgD_t {
+};
+
+struct cBgS_ShdwDraw {
+};
+
+struct cBgS_LinChk {
+};
+
+struct cBgW {
+	/* 80079294 */ cBgW();
+	/* 8007933C */ ~cBgW();
+	/* 800793A4 */ void FreeArea();
+	/* 800793C4 */ void GlobalVtx();
+	/* 80079484 */ void SetVtx();
+	/* 80079564 */ void CalcPlane();
+	/* 80079668 */ void SetTri();
+	/* 80079770 */ void BlckConnect(u16*, int*, int);
+	/* 800797BC */ void ClassifyPlane();
+	/* 8007998C */ void MakeBlckTransMinMax(cXyz*, cXyz*);
+	/* 800799E0 */ void MakeBlckMinMax(int, cXyz*, cXyz*);
+	/* 80079A68 */ void MakeBlckBnd(int, cXyz*, cXyz*);
+	/* 80079BDC */ void MakeNodeTreeRp(int);
+	/* 80079CC4 */ void MakeNodeTreeGrpRp(int);
+	/* 80079DF0 */ void MakeNodeTree();
+	/* 80079EEC */ void ChkMemoryError();
+	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
+	/* 8007A200 */ void RwgLineCheck(u16, cBgS_LinChk*);
+	/* 8007A3A0 */ void LineCheckRp(cBgS_LinChk*, int);
+	/* 8007A52C */ void LineCheckGrpRp(cBgS_LinChk*, int, int);
+	/* 8007A658 */ void LineCheck(cBgS_LinChk*);
+	/* 8007A680 */ void RwgGroundCheckCommon(f32, u16, cBgS_GndChk*);
+	/* 8007A774 */ void RwgGroundCheckGnd(u16, cBgS_GndChk*);
+	/* 8007A824 */ void RwgGroundCheckWall(u16, cBgS_GndChk*);
+	/* 8007A8F4 */ void GroundCrossRp(cBgS_GndChk*, int);
+	/* 8007AA50 */ void GroundCrossGrpRp(cBgS_GndChk*, int, int);
+	/* 8007AB9C */ void GroundCross(cBgS_GndChk*);
+	/* 8007ABC4 */ void CopyOldMtx();
+	/* 8007AC10 */ void Move();
+	/* 8007ADF0 */ void RwgShdwDraw(int, cBgS_ShdwDraw*);
+	/* 8007AEA4 */ void ShdwDrawRp(cBgS_ShdwDraw*, int);
+	/* 8007AFC0 */ void ShdwDrawGrpRp(cBgS_ShdwDraw*, int);
+	/* 8007B084 */ void ShdwDraw(cBgS_ShdwDraw*);
+	/* 8007B0A8 */ bool ChkPolyThrough(int, cBgS_PolyPassChk*);
+	/* 8007B0B0 */ void ChkShdwDrawThrough(int, cBgS_PolyPassChk*);
+	/* 8007B0DC */ bool ChkGrpThrough(int, cBgS_GrpPassChk*, int);
+	/* 8007B0E4 */ void GetGrpRoomIndex(cBgS_PolyInfo const&) const;
+	/* 8007B164 */ void GetBnd() const;
+	/* 8007B17C */ void GetTrans(cXyz*) const;
+	/* 8007B1B4 */ void GetTriPnt(cBgS_PolyInfo const&, cXyz*, cXyz*, cXyz*) const;
+	/* 8007B240 */ void GetTopUnder(f32*, f32*) const;
+	/* 8007B270 */ void GetTriPla(cBgS_PolyInfo const&) const;
+	/* 8007B2B0 */ void GetGrpInf(cBgS_PolyInfo const&) const;
+	/* 8007B2F4 */ void GetPolyInfId(int) const;
+	/* 8007B30C */ void GetPolyInf0(int, u32, u32) const;
+	/* 8007B360 */ void GetMaskPolyInf0_NoShift(int, u32) const;
+	/* 8007B654 */ void GetPolyInf1(int, u32, u32) const;
+	/* 8007B78C */ void GetMaskPolyInf1_NoShift(int, u32) const;
+	/* 8007B824 */ void GetPolyInf2(int, u32, u32) const;
+	/* 8007B930 */ void GetTriGrp(int) const;
+	/* 8007B948 */ void ChkNotReady() const;
+	/* 8007B958 */ void ChkLock() const;
+	/* 8007B964 */ void ChkMoveBg() const;
 };
 
 // 
@@ -494,7 +494,7 @@ extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803ABA80-803ABB84 0104+00 s=2 e=1 z=5  None .data      __vt__4dBgW                                                  */
+/* 803ABA80-803ABB84 0104+00 s=2 e=1 z=0  None .data      __vt__4dBgW                                                  */
 SECTION_DATA void* __vt__4dBgW[65] = {
 	(void*)NULL,
 	(void*)NULL,
@@ -730,7 +730,7 @@ asm cBgW::cBgW() {
 #pragma pop
 
 
-/* 8007933C-800793A4 0068+00 s=2 e=1 z=5  None .text      __dt__4cBgWFv                                                */
+/* 8007933C-800793A4 0068+00 s=2 e=1 z=0  None .text      __dt__4cBgWFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -752,7 +752,7 @@ asm void cBgW::FreeArea() {
 #pragma pop
 
 
-/* 800793C4-80079484 00C0+00 s=2 e=0 z=1  None .text      GlobalVtx__4cBgWFv                                           */
+/* 800793C4-80079484 00C0+00 s=2 e=0 z=0  None .text      GlobalVtx__4cBgWFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -931,7 +931,7 @@ asm void cBgW::ChkMemoryError() {
 /* 80452708-8045270C 0004+00 s=1 e=0 z=0  None .sdata2    @4073                                                        */
 SECTION_SDATA2 static u32 lit_4073 = 0x43000000;
 
-/* 80079F38-8007A184 024C+00 s=1 e=3 z=85  None .text      Set__4cBgWFP6cBgD_tUlPA3_A4_f                                */
+/* 80079F38-8007A184 024C+00 s=1 e=3 z=0  None .text      Set__4cBgWFP6cBgD_tUlPA3_A4_f                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1673,7 +1673,7 @@ asm void cBgW::ChkMoveBg() const {
 #pragma pop
 
 
-/* 8007B970-8007B9C0 0050+00 s=1 e=2 z=87  None .text      __ct__4dBgWFv                                                */
+/* 8007B970-8007B9C0 0050+00 s=1 e=2 z=0  None .text      __ct__4dBgWFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1684,7 +1684,7 @@ asm dBgW::dBgW() {
 #pragma pop
 
 
-/* 8007B9C0-8007B9EC 002C+00 s=0 e=2 z=115  None .text      Move__4dBgWFv                                                */
+/* 8007B9C0-8007B9EC 002C+00 s=0 e=2 z=0  None .text      Move__4dBgWFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2120,7 +2120,7 @@ asm void dBgW::ChkMoveFlag() const {
 #pragma pop
 
 
-/* 8007E4C0-8007E548 0088+00 s=0 e=0 z=1  None .text      dBgW_NewSet__FP6cBgD_tUlPA3_A4_f                             */
+/* 8007E4C0-8007E548 0088+00 s=0 e=0 z=0  None .text      dBgW_NewSet__FP6cBgD_tUlPA3_A4_f                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

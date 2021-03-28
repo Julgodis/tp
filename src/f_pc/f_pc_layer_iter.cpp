@@ -11,22 +11,22 @@
 // Types:
 // 
 
-struct layer_class {
-};
-
 struct node_lists_tree_class {
 };
 
 struct node_class {
 };
 
-struct create_tag_class {
-};
-
 struct method_filter {
 };
 
+struct layer_class {
+};
+
 struct judge_filter {
+};
+
+struct create_tag_class {
 };
 
 // 
@@ -102,7 +102,7 @@ asm void fpcLyIt_Judge(layer_class* param_0, void* (*)(void*, void*), void* para
 #pragma pop
 
 
-/* 80021C60-80021CD4 0074+00 s=0 e=1 z=4  None .text      fpcLyIt_AllJudge__FPFPvPv_PvPv                               */
+/* 80021C60-80021CD4 0074+00 s=0 e=1 z=0  None .text      fpcLyIt_AllJudge__FPFPvPv_PvPv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

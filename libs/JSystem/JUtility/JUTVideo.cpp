@@ -87,7 +87,7 @@ extern "C" extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80451538-8045153C 0004+00 s=4 e=18 z=1  None .sbss      sManager__8JUTVideo                                          */
+/* 80451538-8045153C 0004+00 s=4 e=18 z=0  None .sbss      sManager__8JUTVideo                                          */
 u8 sManager__8JUTVideo[4];
 
 /* 802E4C54-802E4CAC 0058+00 s=0 e=1 z=0  None .text      createManager__8JUTVideoFPC16_GXRenderModeObj                */

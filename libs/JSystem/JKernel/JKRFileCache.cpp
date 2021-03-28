@@ -11,12 +11,31 @@
 // Types:
 // 
 
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
+	/* 802DBE14 */ ~JSUPtrLink();
+};
+
+struct JSUPtrList {
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF14 */ void initiate();
+	/* 802DBF4C */ void append(JSUPtrLink*);
+	/* 802DBFF0 */ void prepend(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 	/* 802CE548 */ void free(void*);
 	/* 802CE83C */ void findFromRoot(void*);
+};
+
+struct JKRFileLoader {
+	/* 802D40F0 */ JKRFileLoader();
+	/* 802D4148 */ ~JKRFileLoader();
+	/* 802D41D4 */ void unmount();
 };
 
 struct JKRFileCache {
@@ -49,36 +68,17 @@ struct JKRFileCache {
 	/* 802D574C */ void readNameResource(void*, u32, u32, char const*);
 };
 
-struct JKRFileLoader {
-	/* 802D40F0 */ JKRFileLoader();
-	/* 802D4148 */ ~JKRFileLoader();
-	/* 802D41D4 */ void unmount();
+struct JKRFile {
+	/* 802D9518 */ void read(void*, s32, s32);
 };
 
 struct JKRDvdFinder {
 	/* 802D4770 */ JKRDvdFinder(char const*);
 };
 
-struct JKRFile {
-	/* 802D9518 */ void read(void*, s32, s32);
-};
-
 struct JKRDvdFile {
 	/* 802D95F8 */ JKRDvdFile(char const*);
 	/* 802D9748 */ ~JKRDvdFile();
-};
-
-struct JSUPtrLink {
-	/* 802DBDFC */ JSUPtrLink(void*);
-	/* 802DBE14 */ ~JSUPtrLink();
-};
-
-struct JSUPtrList {
-	/* 802DBEAC */ ~JSUPtrList();
-	/* 802DBF14 */ void initiate();
-	/* 802DBF4C */ void append(JSUPtrLink*);
-	/* 802DBFF0 */ void prepend(JSUPtrLink*);
-	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
 // 

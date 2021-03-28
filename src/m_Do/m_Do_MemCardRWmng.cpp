@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct CARDFileInfo {
+struct mDoMemCdRWm_HeaderData {
 };
 
-struct mDoMemCdRWm_HeaderData {
+struct CARDFileInfo {
 };
 
 // 

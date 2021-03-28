@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct _GXColor {
+struct _GXSpotFn {
 };
 
 struct _GXDistAttnFn {
 };
 
-struct Vec {
+struct _GXColor {
 };
 
-struct _GXSpotFn {
+struct Vec {
 };
 
 struct JStage {

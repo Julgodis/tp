@@ -11,6 +11,14 @@
 // Types:
 // 
 
+struct mDoMemCd_Ctrl_c {
+	/* 80016730 */ void ThdInit();
+};
+
+struct mDoDvdThd {
+	/* 80015858 */ void create(s32);
+};
+
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE72C */ void getFreeSize();
@@ -19,54 +27,18 @@ struct JKRHeap {
 	/* 802CEB88 */ void setErrorHandler(void (*)(void*, u32, int));
 };
 
-struct OSContext {
-};
-
-struct mDoDvdThd {
-	/* 80015858 */ void create(s32);
-};
-
-struct mDoMemCd_Ctrl_c {
-	/* 80016730 */ void ThdInit();
-};
-
-struct JUTConsole {
-	/* 802E7BB8 */ void print_f(char const*, ...);
-	/* 802E7C38 */ void print(char const*);
-	/* 802E80A8 */ void scroll(int);
-	/* 802E8184 */ void getUsedLine() const;
-	/* 802E81A8 */ void getLineOffset() const;
-};
-
 struct cMl {
 	/* 80263220 */ void init(JKRHeap*);
-};
-
-struct JFWSystem {
-	/* 80271CD0 */ void firstInit();
-	/* 80271D18 */ void init();
 };
 
 struct OSThread {
 };
 
-struct JKRThread {
-	/* 802D16B8 */ JKRThread(OSThread*, int);
+struct OSContext {
 };
 
-struct JKRThreadSwitch {
-	/* 802D1A14 */ void createManager(JKRHeap*);
-};
-
-struct JKRAramStream {
-	/* 802D4034 */ void setTransBuffer(u8*, u32, JKRHeap*);
-};
-
-struct JUTFont {
-};
-
-struct JUTDbPrint {
-	/* 802E0190 */ void start(JUTFont*, JKRHeap*);
+struct JUTVideo {
+	/* 802E4CAC */ void destroyManager();
 };
 
 struct JUTGamePad {
@@ -75,6 +47,9 @@ struct JUTGamePad {
 
 	/* 802E06DC */ JUTGamePad(JUTGamePad::EPadPort);
 	/* 802E07B0 */ ~JUTGamePad();
+};
+
+struct JUTFont {
 };
 
 struct JUTException {
@@ -86,17 +61,42 @@ struct JUTException {
 	/* 802E3B0C */ void appendMapFile(char const*);
 };
 
-struct JUTAssertion {
-	/* 802E4C34 */ void setVisible(bool);
+struct JUTDbPrint {
+	/* 802E0190 */ void start(JUTFont*, JKRHeap*);
 };
 
-struct JUTVideo {
-	/* 802E4CAC */ void destroyManager();
+struct JUTConsole {
+	/* 802E7BB8 */ void print_f(char const*, ...);
+	/* 802E7C38 */ void print(char const*);
+	/* 802E80A8 */ void scroll(int);
+	/* 802E8184 */ void getUsedLine() const;
+	/* 802E81A8 */ void getLineOffset() const;
 };
 
 struct JUTConsoleManager {
 	/* 802E8450 */ void drawDirect(bool) const;
 	/* 802E84C4 */ void setDirectConsole(JUTConsole*);
+};
+
+struct JUTAssertion {
+	/* 802E4C34 */ void setVisible(bool);
+};
+
+struct JKRThreadSwitch {
+	/* 802D1A14 */ void createManager(JKRHeap*);
+};
+
+struct JKRThread {
+	/* 802D16B8 */ JKRThread(OSThread*, int);
+};
+
+struct JKRAramStream {
+	/* 802D4034 */ void setTransBuffer(u8*, u32, JKRHeap*);
+};
+
+struct JFWSystem {
+	/* 80271CD0 */ void firstInit();
+	/* 80271D18 */ void init();
 };
 
 // 

@@ -11,16 +11,23 @@
 // Types:
 // 
 
-struct cBgD_t {
+struct fopAc_ac_c {
 };
 
-struct cXyz {
+struct dBgW_Base {
+	/* 80074AB4 */ void SetOldShapeAngleY(s16);
 };
 
 struct csXyz {
 };
 
 struct cBgS_PolyInfo {
+};
+
+struct cXyz {
+};
+
+struct cBgD_t {
 };
 
 struct dBgWSv {
@@ -34,61 +41,25 @@ struct dBgWSv {
 	/* 800835DC */ ~dBgWSv();
 };
 
-struct dBgW_Base {
-	/* 80074AB4 */ void SetOldShapeAngleY(s16);
-};
-
-struct cBgS_LinChk {
-};
-
-struct cBgS_ShdwDraw {
-};
-
-struct cBgS_GndChk {
-};
-
-struct cBgW {
-	/* 8007933C */ ~cBgW();
-	/* 80079564 */ void CalcPlane();
-	/* 800797BC */ void ClassifyPlane();
-	/* 80079EEC */ void ChkMemoryError();
-	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
-	/* 8007A658 */ void LineCheck(cBgS_LinChk*);
-	/* 8007AB9C */ void GroundCross(cBgS_GndChk*);
-	/* 8007B084 */ void ShdwDraw(cBgS_ShdwDraw*);
-	/* 8007B0E4 */ void GetGrpRoomIndex(cBgS_PolyInfo const&) const;
-	/* 8007B164 */ void GetBnd() const;
-	/* 8007B1B4 */ void GetTriPnt(cBgS_PolyInfo const&, cXyz*, cXyz*, cXyz*) const;
-	/* 8007B240 */ void GetTopUnder(f32*, f32*) const;
-	/* 8007B270 */ void GetTriPla(cBgS_PolyInfo const&) const;
-	/* 8007B2B0 */ void GetGrpInf(cBgS_PolyInfo const&) const;
-	/* 8007B948 */ void ChkNotReady() const;
-	/* 8007B958 */ void ChkLock() const;
-	/* 8007B964 */ void ChkMoveBg() const;
-};
-
-struct cBgS_GrpPassChk {
-};
-
-struct fopAc_ac_c {
-};
-
-struct dBgS_RoofChk {
+struct dBgS_SphChk {
 };
 
 struct dBgS_SplGrpChk {
 };
 
-struct dBgS_CaptPoly {
+struct dBgS_Acch {
+};
+
+struct cBgS_GrpPassChk {
 };
 
 struct cBgS_PolyPassChk {
 };
 
-struct dBgS_Acch {
+struct dBgS_RoofChk {
 };
 
-struct dBgS_SphChk {
+struct dBgS_CaptPoly {
 };
 
 struct dBgW {
@@ -137,6 +108,35 @@ struct dBgW {
 	/* 8007E4B4 */ void ChkMoveFlag() const;
 };
 
+struct cBgS_ShdwDraw {
+};
+
+struct cBgS_GndChk {
+};
+
+struct cBgS_LinChk {
+};
+
+struct cBgW {
+	/* 8007933C */ ~cBgW();
+	/* 80079564 */ void CalcPlane();
+	/* 800797BC */ void ClassifyPlane();
+	/* 80079EEC */ void ChkMemoryError();
+	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
+	/* 8007A658 */ void LineCheck(cBgS_LinChk*);
+	/* 8007AB9C */ void GroundCross(cBgS_GndChk*);
+	/* 8007B084 */ void ShdwDraw(cBgS_ShdwDraw*);
+	/* 8007B0E4 */ void GetGrpRoomIndex(cBgS_PolyInfo const&) const;
+	/* 8007B164 */ void GetBnd() const;
+	/* 8007B1B4 */ void GetTriPnt(cBgS_PolyInfo const&, cXyz*, cXyz*, cXyz*) const;
+	/* 8007B240 */ void GetTopUnder(f32*, f32*) const;
+	/* 8007B270 */ void GetTriPla(cBgS_PolyInfo const&) const;
+	/* 8007B2B0 */ void GetGrpInf(cBgS_PolyInfo const&) const;
+	/* 8007B948 */ void ChkNotReady() const;
+	/* 8007B958 */ void ChkLock() const;
+	/* 8007B964 */ void ChkMoveBg() const;
+};
+
 // 
 // Forward References:
 // 
@@ -150,7 +150,6 @@ extern "C" void TransPosWork__6dBgWSvFP4cXyziii(); // 1
 extern "C" void TransPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void MatrixCrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __dt__6dBgWSvFv(); // 1
-extern "C" extern void* __vt__6dBgWSv[65 + 1 /* padding */];
 
 // 
 // External References:
@@ -231,7 +230,7 @@ extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 // Declarations:
 // 
 
-/* 80082F98-80083020 0088+00 s=0 e=0 z=2  None .text      Set__6dBgWSvFP6cBgD_tUl                                      */
+/* 80082F98-80083020 0088+00 s=0 e=0 z=0  None .text      Set__6dBgWSvFP6cBgD_tUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -242,7 +241,7 @@ asm void dBgWSv::Set(cBgD_t* param_0, u32 param_1) {
 #pragma pop
 
 
-/* 80083020-8008308C 006C+00 s=0 e=0 z=3  None .text      CopyBackVtx__6dBgWSvFv                                       */
+/* 80083020-8008308C 006C+00 s=0 e=0 z=0  None .text      CopyBackVtx__6dBgWSvFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -313,8 +312,8 @@ void dBgWSv::MatrixCrrPos(cBgS_PolyInfo const& param_0, void* param_1, bool para
 
 
 /* ############################################################################################## */
-/* 803ABEB8-803ABFC0 0104+04 s=1 e=0 z=2  None .data      __vt__6dBgWSv                                                */
-SECTION_DATA void* __vt__6dBgWSv[65 + 1 /* padding */] = {
+/* 803ABEB8-803ABFC0 0104+04 s=1 e=0 z=0  None .data      __vt__6dBgWSv                                                */
+SECTION_DATA static void* __vt__6dBgWSv[65 + 1 /* padding */] = {
 	(void*)NULL,
 	(void*)NULL,
 	(void*)__dt__6dBgWSvFv,

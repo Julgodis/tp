@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct JKRHeap {
+};
+
 struct JASOscillator {
 	struct Data {
 	};
@@ -20,7 +23,12 @@ struct JASOscillator {
 struct JASInstParam {
 };
 
-struct JKRHeap {
+struct JASInst {
+	/* 8029828C */ ~JASInst();
+};
+
+struct JASCalc {
+	/* 8028F480 */ void bzero(void*, u32);
 };
 
 struct JASBasicInst {
@@ -36,14 +44,6 @@ struct JASBasicInst {
 	/* 8029821C */ void setOsc(int, JASOscillator::Data const*);
 	/* 8029822C */ void getKeyRegion(int);
 	/* 802982E0 */ void getType() const;
-};
-
-struct JASInst {
-	/* 8029828C */ ~JASInst();
-};
-
-struct JASCalc {
-	/* 8028F480 */ void bzero(void*, u32);
 };
 
 // 

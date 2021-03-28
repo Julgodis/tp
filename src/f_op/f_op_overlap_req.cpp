@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct overlap_request_class {
-};
-
-struct layer_class {
-};
-
 struct request_of_phase_process_class {
 };
 
 struct request_base_class {
+};
+
+struct overlap_request_class {
+};
+
+struct layer_class {
 };
 
 // 

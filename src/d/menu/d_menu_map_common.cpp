@@ -14,6 +14,12 @@
 struct JKRArchive {
 };
 
+struct dSelect_cursor_c {
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
+	/* 801951C8 */ void setScale(f32);
+	/* 801952A0 */ void setAlphaRate(f32);
+};
+
 struct dMenuMapCommon_c {
 	/* 801C2718 */ dMenuMapCommon_c();
 	/* 801C27B4 */ ~dMenuMapCommon_c();
@@ -30,13 +36,14 @@ struct dMenuMapCommon_c {
 	/* 801C47C4 */ void debugIcon();
 };
 
-struct dSelect_cursor_c {
-	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
-	/* 801951C8 */ void setScale(f32);
-	/* 801952A0 */ void setAlphaRate(f32);
+struct ResTIMG {
 };
 
 struct J2DRotateAxis {
+};
+
+struct J2DPicture {
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
 struct J2DBasePosition {
@@ -46,13 +53,6 @@ struct J2DPane {
 	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
 	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
 	/* 802F77D0 */ void setInfluencedAlpha(bool, bool);
-};
-
-struct ResTIMG {
-};
-
-struct J2DPicture {
-	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
 // 

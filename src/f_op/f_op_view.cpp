@@ -14,10 +14,10 @@
 struct view_class {
 };
 
-struct leafdraw_method_class {
+struct process_method_class {
 };
 
-struct process_method_class {
+struct leafdraw_method_class {
 };
 
 // 

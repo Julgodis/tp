@@ -14,6 +14,58 @@
 struct Vec {
 };
 
+struct J3DTextureSRTInfo {
+};
+
+struct J3DSys {
+	/* 8030FEC0 */ void loadPosMtxIndx(int, u16) const;
+	/* 8030FEE4 */ void loadNrmMtxIndx(int, u16) const;
+};
+
+struct J3DShapeMtxYBBoardConcatView {
+	/* 803143E4 */ void load() const;
+	/* 80314520 */ ~J3DShapeMtxYBBoardConcatView();
+	/* 8031458C */ void getType() const;
+};
+
+struct J3DShapeMtxMultiConcatView {
+	/* 80313FA4 */ void load() const;
+	/* 803146AC */ void loadNrmMtx(int, u16) const;
+	/* 8031419C */ void loadNrmMtx(int, u16, f32 (* )[4]) const;
+	/* 8031461C */ ~J3DShapeMtxMultiConcatView();
+	/* 80314688 */ void getType() const;
+	/* 80314694 */ void getUseMtxNum() const;
+	/* 8031469C */ void getUseMtxIndex(u16) const;
+};
+
+struct J3DShapeMtxMulti {
+	/* 80313E4C */ void load() const;
+	/* 80313EEC */ void calcNBTScale(Vec const&, f32 (* )[3][3], f32 (* )[3][3]);
+	/* 803146B0 */ ~J3DShapeMtxMulti();
+	/* 8031470C */ void getType() const;
+	/* 80314718 */ void getUseMtxNum() const;
+	/* 80314720 */ void getUseMtxIndex(u16) const;
+};
+
+struct J3DShapeMtxConcatView {
+	/* 80313828 */ void loadMtxConcatView_PNGP(int, u16) const;
+	/* 803138C8 */ void loadMtxConcatView_PCPU(int, u16) const;
+	/* 8031396C */ void loadMtxConcatView_NCPU(int, u16) const;
+	/* 80313A14 */ void loadMtxConcatView_PNCPU(int, u16) const;
+	/* 80313AC8 */ void loadMtxConcatView_PNGP_LOD(int, u16) const;
+	/* 80313C54 */ void load() const;
+	/* 80313D28 */ void loadNrmMtx(int, u16, f32 (* )[4]) const;
+	/* 80314598 */ void loadNrmMtx(int, u16) const;
+	/* 80314730 */ ~J3DShapeMtxConcatView();
+	/* 8031478C */ void getType() const;
+};
+
+struct J3DShapeMtxBBoardConcatView {
+	/* 803142D4 */ void load() const;
+	/* 803145A4 */ ~J3DShapeMtxBBoardConcatView();
+	/* 80314610 */ void getType() const;
+};
+
 struct J3DShapeMtx {
 	/* 80273E08 */ bool getUseMtxNum() const;
 	/* 803130A8 */ void resetMtxLoadCache();
@@ -30,58 +82,6 @@ struct J3DShapeMtx {
 
 struct J3DDifferedTexMtx {
 	/* 8031322C */ void loadExecute(f32 const (* )[4]);
-};
-
-struct J3DShapeMtxConcatView {
-	/* 80313828 */ void loadMtxConcatView_PNGP(int, u16) const;
-	/* 803138C8 */ void loadMtxConcatView_PCPU(int, u16) const;
-	/* 8031396C */ void loadMtxConcatView_NCPU(int, u16) const;
-	/* 80313A14 */ void loadMtxConcatView_PNCPU(int, u16) const;
-	/* 80313AC8 */ void loadMtxConcatView_PNGP_LOD(int, u16) const;
-	/* 80313C54 */ void load() const;
-	/* 80313D28 */ void loadNrmMtx(int, u16, f32 (* )[4]) const;
-	/* 80314598 */ void loadNrmMtx(int, u16) const;
-	/* 80314730 */ ~J3DShapeMtxConcatView();
-	/* 8031478C */ void getType() const;
-};
-
-struct J3DShapeMtxMulti {
-	/* 80313E4C */ void load() const;
-	/* 80313EEC */ void calcNBTScale(Vec const&, f32 (* )[3][3], f32 (* )[3][3]);
-	/* 803146B0 */ ~J3DShapeMtxMulti();
-	/* 8031470C */ void getType() const;
-	/* 80314718 */ void getUseMtxNum() const;
-	/* 80314720 */ void getUseMtxIndex(u16) const;
-};
-
-struct J3DShapeMtxMultiConcatView {
-	/* 80313FA4 */ void load() const;
-	/* 803146AC */ void loadNrmMtx(int, u16) const;
-	/* 8031419C */ void loadNrmMtx(int, u16, f32 (* )[4]) const;
-	/* 8031461C */ ~J3DShapeMtxMultiConcatView();
-	/* 80314688 */ void getType() const;
-	/* 80314694 */ void getUseMtxNum() const;
-	/* 8031469C */ void getUseMtxIndex(u16) const;
-};
-
-struct J3DShapeMtxBBoardConcatView {
-	/* 803142D4 */ void load() const;
-	/* 803145A4 */ ~J3DShapeMtxBBoardConcatView();
-	/* 80314610 */ void getType() const;
-};
-
-struct J3DShapeMtxYBBoardConcatView {
-	/* 803143E4 */ void load() const;
-	/* 80314520 */ ~J3DShapeMtxYBBoardConcatView();
-	/* 8031458C */ void getType() const;
-};
-
-struct J3DSys {
-	/* 8030FEC0 */ void loadPosMtxIndx(int, u16) const;
-	/* 8030FEE4 */ void loadNrmMtxIndx(int, u16) const;
-};
-
-struct J3DTextureSRTInfo {
 };
 
 // 

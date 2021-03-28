@@ -64,7 +64,7 @@ asm void cBgW_BgId::Release() {
 #pragma pop
 
 
-/* 802681D4-802681E4 0010+00 s=0 e=7 z=121  None .text      ChkUsed__9cBgW_BgIdCFv                                       */
+/* 802681D4-802681E4 0010+00 s=0 e=7 z=0  None .text      ChkUsed__9cBgW_BgIdCFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,7 +79,7 @@ asm void cBgW_BgId::ChkUsed() const {
 /* 804550E8-804550EC 0004+00 s=1 e=0 z=0  None .sdata2    @2242                                                        */
 SECTION_SDATA2 static u32 lit_2242 = 0x3F000000;
 
-/* 802681E4-802681FC 0018+00 s=1 e=22 z=8  None .text      cBgW_CheckBGround__Ff                                        */
+/* 802681E4-802681FC 0018+00 s=1 e=22 z=0  None .text      cBgW_CheckBGround__Ff                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +105,7 @@ asm void cBgW_CheckBRoof(f32 param_0) {
 #pragma pop
 
 
-/* 80268210-80268260 0050+00 s=0 e=16 z=4  None .text      cBgW_CheckBWall__Ff                                          */
+/* 80268210-80268260 0050+00 s=0 e=16 z=0  None .text      cBgW_CheckBWall__Ff                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

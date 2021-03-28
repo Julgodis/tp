@@ -11,10 +11,49 @@
 // Types:
 // 
 
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct JAISoundHandle {
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
 struct JAISoundID {
 };
 
+struct Z2SoundStarter {
+	/* 802AAB94 */ Z2SoundStarter(bool);
+	/* 802AAC3C */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*, u32, f32, f32, f32, f32, f32, u32);
+	/* 802AABF4 */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
+	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
+};
+
+struct Z2SoundObjSimple {
+	/* 802BE844 */ Z2SoundObjSimple();
+};
+
+struct Z2SoundObjMgr {
+	/* 802BFFEC */ void setGhostEnemyState(u8);
+};
+
 struct Vec {
+};
+
+struct Z2SoundObjCoach {
+	/* 802C54B8 */ Z2SoundObjCoach();
+	/* 802C54FC */ void init(Vec*, u8);
+	/* 802C551C */ void startWheelSound(f32);
+	/* 802C56C0 */ void startFireSound(u16);
+	/* 802C57C0 */ void startSound(JAISoundID, u32, s8);
 };
 
 struct Z2SoundHandlePool {
@@ -31,6 +70,46 @@ struct Z2SoundObjBase {
 	/* 802BE144 */ void startSound(JAISoundID, u32, s8);
 	/* 802BE2D4 */ void startLevelSound(JAISoundID, u32, s8);
 	/* 802BE4A4 */ void startCollisionSE(u32, u32, Z2SoundObjBase*);
+};
+
+struct Z2SoundHandles {
+	/* 802AB254 */ void getHandleSoundID(JAISoundID);
+	/* 802AB4A0 */ void stopAllSounds(u32);
+	/* 802AB504 */ void isActive() const;
+};
+
+struct Z2SeqMgr {
+	/* 802B4844 */ void setBattleSeqState(u8);
+	/* 802B4AFC */ void setBattleLastHit(u8);
+};
+
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct Z2CreatureRide {
+	/* 802C4FFC */ Z2CreatureRide();
+	/* 802C5114 */ ~Z2CreatureRide();
+	/* 802C51EC */ void deleteObject();
+	/* 802C520C */ void init(Vec*, Vec*, u8, u8);
+	/* 802C522C */ void setLinkRiding(bool);
+};
+
+struct Z2RideSoundStarter {
+	/* 802C5078 */ ~Z2RideSoundStarter();
+	/* 802C5234 */ Z2RideSoundStarter(Z2CreatureRide*);
+	/* 802C5284 */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*, u32, f32, f32, f32, f32, f32, u32);
+};
+
+struct Z2LinkSoundStarter {
+	/* 802C3464 */ ~Z2LinkSoundStarter();
+	/* 802C48E8 */ Z2LinkSoundStarter();
+	/* 802C4928 */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*, u32, f32, f32, f32, f32, f32, u32);
+};
+
+struct Z2FxLineMgr {
+	/* 802BAE1C */ void setFxForceOff(bool);
 };
 
 struct Z2CreatureLink {
@@ -61,110 +140,6 @@ struct Z2CreatureLink {
 	/* 802C48D8 */ void setResumeAttack(bool);
 };
 
-struct JAISoundHandle {
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
-
-};
-
-struct Z2LinkSoundStarter {
-	/* 802C3464 */ ~Z2LinkSoundStarter();
-	/* 802C48E8 */ Z2LinkSoundStarter();
-	/* 802C4928 */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*, u32, f32, f32, f32, f32, f32, u32);
-};
-
-struct Z2CreatureRide {
-	/* 802C4FFC */ Z2CreatureRide();
-	/* 802C5114 */ ~Z2CreatureRide();
-	/* 802C51EC */ void deleteObject();
-	/* 802C520C */ void init(Vec*, Vec*, u8, u8);
-	/* 802C522C */ void setLinkRiding(bool);
-};
-
-struct Z2RideSoundStarter {
-	/* 802C5078 */ ~Z2RideSoundStarter();
-	/* 802C5234 */ Z2RideSoundStarter(Z2CreatureRide*);
-	/* 802C5284 */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*, u32, f32, f32, f32, f32, f32, u32);
-};
-
-struct Z2SoundObjCoach {
-	/* 802C54B8 */ Z2SoundObjCoach();
-	/* 802C54FC */ void init(Vec*, u8);
-	/* 802C551C */ void startWheelSound(f32);
-	/* 802C56C0 */ void startFireSound(u16);
-	/* 802C57C0 */ void startSound(JAISoundID, u32, s8);
-};
-
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
-};
-
-struct JAISound {
-	/* 802A24DC */ void stop(u32);
-};
-
-struct JAISoundParamsMove {
-	/* 802A2DB4 */ void moveVolume(f32, u32);
-	/* 802A2E0C */ void movePitch(f32, u32);
-};
-
-struct JAISoundStarter {
-	/* 802A2F88 */ ~JAISoundStarter();
-};
-
-struct Z2Calc {
-	struct CurveSign {
-	};
-
-	/* 802A968C */ void linearTransform(f32, f32, f32, f32, f32, bool);
-	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
-};
-
-struct Z2SoundStarter {
-	/* 802AAB94 */ Z2SoundStarter(bool);
-	/* 802AAC3C */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*, u32, f32, f32, f32, f32, f32, u32);
-	/* 802AABF4 */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
-	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
-};
-
-struct Z2SoundHandles {
-	/* 802AB254 */ void getHandleSoundID(JAISoundID);
-	/* 802AB4A0 */ void stopAllSounds(u32);
-	/* 802AB504 */ void isActive() const;
-};
-
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-};
-
-struct Z2SeqMgr {
-	/* 802B4844 */ void setBattleSeqState(u8);
-	/* 802B4AFC */ void setBattleLastHit(u8);
-};
-
-struct Z2FxLineMgr {
-	/* 802BAE1C */ void setFxForceOff(bool);
-};
-
-struct Z2Audience {
-	/* 802BD90C */ void setTargetVolume(f32, int);
-};
-
-struct Z2SoundObjSimple {
-	/* 802BE844 */ Z2SoundObjSimple();
-};
-
-struct Z2SoundObjMgr {
-	/* 802BFFEC */ void setGhostEnemyState(u8);
-};
-
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
@@ -180,6 +155,31 @@ struct Z2Creature {
 	/* 802C0B70 */ void startCreatureExtraSound(JAISoundID, u32, s8);
 	/* 802C0BAC */ void startCreatureExtraSoundLevel(JAISoundID, u32, s8);
 	/* 802C0BE8 */ void startCollisionSE(u32, u32);
+};
+
+struct Z2Calc {
+	struct CurveSign {
+	};
+
+	/* 802A968C */ void linearTransform(f32, f32, f32, f32, f32, bool);
+	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
+};
+
+struct Z2Audience {
+	/* 802BD90C */ void setTargetVolume(f32, int);
+};
+
+struct JAISoundStarter {
+	/* 802A2F88 */ ~JAISoundStarter();
+};
+
+struct JAISoundParamsMove {
+	/* 802A2DB4 */ void moveVolume(f32, u32);
+	/* 802A2E0C */ void movePitch(f32, u32);
+};
+
+struct JAISound {
+	/* 802A24DC */ void stop(u32);
 };
 
 // 
@@ -230,7 +230,6 @@ extern "C" void startFireSound__15Z2SoundObjCoachFUs(); // 1
 extern "C" void startSound__15Z2SoundObjCoachF10JAISoundIDUlSc(); // 1
 extern "C" static void func_802C588C(); // 1
 extern "C" static void func_802C5894(); // 1
-extern "C" extern void* __vt__15Z2SoundObjCoach[8];
 extern "C" extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
 
 // 
@@ -362,8 +361,8 @@ asm void Z2CreatureLink::setLinkBootsType(s32 param_0) {
 
 
 /* ############################################################################################## */
-/* 803CB8F0-803CB910 0020+00 s=1 e=0 z=1  None .data      __vt__15Z2SoundObjCoach                                      */
-SECTION_DATA void* __vt__15Z2SoundObjCoach[8] = {
+/* 803CB8F0-803CB910 0020+00 s=1 e=0 z=0  None .data      __vt__15Z2SoundObjCoach                                      */
+SECTION_DATA static void* __vt__15Z2SoundObjCoach[8] = {
 	(void*)NULL,
 	(void*)NULL,
 	(void*)framework__14Z2SoundObjBaseFUlSc,
@@ -749,7 +748,7 @@ asm void Z2CreatureLink::startCollisionSE(u32 param_0, u32 param_1) {
 /* 80455D18-80455D1C 0004+00 s=1 e=0 z=0  None .sdata2    @4178                                                        */
 SECTION_SDATA2 static u32 lit_4178 = 0x42C80000;
 
-/* 802C4814-802C48D8 00C4+00 s=0 e=4 z=2  None .text      startHitItemSE__14Z2CreatureLinkFUlUlP14Z2SoundObjBasef      */
+/* 802C4814-802C48D8 00C4+00 s=0 e=4 z=0  None .text      startHitItemSE__14Z2CreatureLinkFUlUlP14Z2SoundObjBasef      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -797,7 +796,7 @@ asm void Z2LinkSoundStarter::startSound(JAISoundID param_0, JAISoundHandle* para
 #pragma pop
 
 
-/* 802C4FFC-802C5078 007C+00 s=0 e=0 z=3  None .text      __ct__14Z2CreatureRideFv                                     */
+/* 802C4FFC-802C5078 007C+00 s=0 e=0 z=0  None .text      __ct__14Z2CreatureRideFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -819,7 +818,7 @@ asm Z2RideSoundStarter::~Z2RideSoundStarter() {
 #pragma pop
 
 
-/* 802C5114-802C51EC 00D8+00 s=2 e=0 z=2  None .text      __dt__14Z2CreatureRideFv                                     */
+/* 802C5114-802C51EC 00D8+00 s=2 e=0 z=0  None .text      __dt__14Z2CreatureRideFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -841,7 +840,7 @@ asm void Z2CreatureRide::deleteObject() {
 #pragma pop
 
 
-/* 802C520C-802C522C 0020+00 s=0 e=0 z=3  None .text      init__14Z2CreatureRideFP3VecP3VecUcUc                        */
+/* 802C520C-802C522C 0020+00 s=0 e=0 z=0  None .text      init__14Z2CreatureRideFP3VecP3VecUcUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -852,7 +851,7 @@ asm void Z2CreatureRide::init(Vec* param_0, Vec* param_1, u8 param_2, u8 param_3
 #pragma pop
 
 
-/* 802C522C-802C5234 0008+00 s=0 e=2 z=1  None .text      setLinkRiding__14Z2CreatureRideFb                            */
+/* 802C522C-802C5234 0008+00 s=0 e=2 z=0  None .text      setLinkRiding__14Z2CreatureRideFb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -885,7 +884,7 @@ asm void Z2RideSoundStarter::startSound(JAISoundID param_0, JAISoundHandle* para
 #pragma pop
 
 
-/* 802C54B8-802C54FC 0044+00 s=0 e=0 z=1  None .text      __ct__15Z2SoundObjCoachFv                                    */
+/* 802C54B8-802C54FC 0044+00 s=0 e=0 z=0  None .text      __ct__15Z2SoundObjCoachFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -923,7 +922,7 @@ SECTION_SDATA2 static u32 lit_4624 = 0x3FA00000;
 /* 80455D30-80455D34 0004+00 s=2 e=0 z=0  None .sdata2    @4625                                                        */
 SECTION_SDATA2 static u32 lit_4625 = 0x42480000;
 
-/* 802C551C-802C56C0 01A4+00 s=0 e=0 z=1  None .text      startWheelSound__15Z2SoundObjCoachFf                         */
+/* 802C551C-802C56C0 01A4+00 s=0 e=0 z=0  None .text      startWheelSound__15Z2SoundObjCoachFf                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -944,7 +943,7 @@ SECTION_SDATA2 static u32 lit_4646 = 0x3E4CCCCD;
 /* 80455D3C-80455D40 0004+00 s=2 e=0 z=0  None .sdata2    @4647                                                        */
 SECTION_SDATA2 static u32 lit_4647 = 0x3F59999A;
 
-/* 802C56C0-802C57C0 0100+00 s=0 e=0 z=1  None .text      startFireSound__15Z2SoundObjCoachFUs                         */
+/* 802C56C0-802C57C0 0100+00 s=0 e=0 z=0  None .text      startFireSound__15Z2SoundObjCoachFUs                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

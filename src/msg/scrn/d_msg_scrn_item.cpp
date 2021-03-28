@@ -11,13 +11,18 @@
 // Types:
 // 
 
-struct J2DAnmTextureSRTKey {
+struct dMsgScrnLight_c {
+	/* 80245934 */ dMsgScrnLight_c(u8, u8);
+	/* 80245C04 */ void draw(f32*, f32, f32, f32, f32, f32, u8);
 };
 
 struct J2DAnmColor {
 };
 
 struct JKRExpHeap {
+};
+
+struct J2DAnmTextureSRTKey {
 };
 
 struct dMsgScrnItem_c {
@@ -45,24 +50,25 @@ struct dMsgScrnItem_c {
 	/* 802408A4 */ void isOugiID();
 };
 
-struct Vec {
+struct dMsgScrnBase_c {
+	/* 8023C0DC */ dMsgScrnBase_c();
+	/* 8023C124 */ ~dMsgScrnBase_c();
+	/* 8023C16C */ void init();
+	/* 8023C234 */ void multiDraw();
+	/* 8023C274 */ void draw();
+	/* 8023C32C */ void drawOutFont(f32, f32, f32);
+	/* 8023C4F4 */ void fontAlpha(f32);
+	/* 8023C574 */ void isTalkNow();
 };
 
-struct ResTIMG {
-};
-
-struct J2DPicture {
-	/* 802FC708 */ J2DPicture(ResTIMG const*);
-};
-
-struct dMeter2Info_c {
-	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
-	/* 8021D36C */ void setItemColor(u8, J2DPicture*, J2DPicture*, J2DPicture*, J2DPicture*);
-};
-
-struct dMsgObject_c {
-	/* 8023819C */ void getActor();
-	/* 802383D0 */ void getMessageID();
+struct dMsgScrnArrow_c {
+	/* 8023B9B4 */ dMsgScrnArrow_c();
+	/* 8023BDC0 */ void draw();
+	/* 8023BDF8 */ void setPos(f32, f32);
+	/* 8023BE34 */ void arwAnimeInit();
+	/* 8023BE90 */ void arwAnimeMove();
+	/* 8023BFC4 */ void dotAnimeInit();
+	/* 8023C010 */ void dotAnimeMove();
 };
 
 struct dMsgScrn3Select_c {
@@ -84,30 +90,37 @@ struct dMsgScrn3Select_c {
 	/* 8023A9D8 */ void getTextBoxGlobalPosY(int);
 };
 
-struct dMsgScrnArrow_c {
-	/* 8023B9B4 */ dMsgScrnArrow_c();
-	/* 8023BDC0 */ void draw();
-	/* 8023BDF8 */ void setPos(f32, f32);
-	/* 8023BE34 */ void arwAnimeInit();
-	/* 8023BE90 */ void arwAnimeMove();
-	/* 8023BFC4 */ void dotAnimeInit();
-	/* 8023C010 */ void dotAnimeMove();
+struct dMsgObject_c {
+	/* 8023819C */ void getActor();
+	/* 802383D0 */ void getMessageID();
 };
 
-struct dMsgScrnBase_c {
-	/* 8023C0DC */ dMsgScrnBase_c();
-	/* 8023C124 */ ~dMsgScrnBase_c();
-	/* 8023C16C */ void init();
-	/* 8023C234 */ void multiDraw();
-	/* 8023C274 */ void draw();
-	/* 8023C32C */ void drawOutFont(f32, f32, f32);
-	/* 8023C4F4 */ void fontAlpha(f32);
-	/* 8023C574 */ void isTalkNow();
+struct ResTIMG {
 };
 
-struct dMsgScrnLight_c {
-	/* 80245934 */ dMsgScrnLight_c(u8, u8);
-	/* 80245C04 */ void draw(f32*, f32, f32, f32, f32, f32, u8);
+struct J2DPicture {
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
+struct dMeter2Info_c {
+	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
+	/* 8021D36C */ void setItemColor(u8, J2DPicture*, J2DPicture*, J2DPicture*, J2DPicture*);
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 8026702C */ bool operator==(Vec const&) const;
+};
+
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE548 */ void free(void*);
+};
+
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
 };
 
 struct JKRArchive {
@@ -132,13 +145,8 @@ struct J2DPane {
 	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
 };
 
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 80253B2C */ void reinit();
-	/* 802542E8 */ void getGlobalPosX();
-	/* 80254364 */ void getGlobalPosY();
-	/* 802545B0 */ void paneTrans(f32, f32);
-	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
 };
 
 struct CPaneMgrAlpha {
@@ -146,21 +154,13 @@ struct CPaneMgrAlpha {
 	/* 80255828 */ void getAlphaRate();
 };
 
-struct cXyz {
-	/* 8026702C */ bool operator==(Vec const&) const;
-};
-
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE548 */ void free(void*);
-};
-
-struct JKRFileLoader {
-	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
-};
-
-struct J2DAnmLoaderDataBase {
-	/* 80308A6C */ void load(void const*);
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 80253B2C */ void reinit();
+	/* 802542E8 */ void getGlobalPosX();
+	/* 80254364 */ void getGlobalPosY();
+	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 // 

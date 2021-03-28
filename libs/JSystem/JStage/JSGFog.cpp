@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct _GXColor {
+struct _GXFogType {
 };
 
-struct _GXFogType {
+struct _GXColor {
 };
 
 struct JStage {

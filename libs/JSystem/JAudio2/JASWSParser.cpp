@@ -15,6 +15,13 @@ struct JKRHeap {
 	/* 802CE72C */ void getFreeSize();
 };
 
+struct JASWaveInfo {
+};
+
+struct JASWaveArc {
+	/* 8029A70C */ void setFileName(char const*);
+};
+
 struct JASWSParser {
 	/* 80298FB0 */ void getGroupCount(void const*);
 	/* 80298FD8 */ void createWaveBank(void const*, JKRHeap*);
@@ -22,7 +29,10 @@ struct JASWSParser {
 	/* 80299264 */ void createSimpleWaveBank(void const*, JKRHeap*);
 };
 
-struct JASWaveInfo {
+struct JASSimpleWaveBank {
+	/* 80298C94 */ JASSimpleWaveBank();
+	/* 80298DE0 */ void setWaveTableSize(u32, JKRHeap*);
+	/* 80298E84 */ void setWaveInfo(u32, JASWaveInfo const&);
 };
 
 struct JASBasicWaveBank {
@@ -35,16 +45,6 @@ struct JASBasicWaveBank {
 	/* 80298664 */ void setGroupCount(u32, JKRHeap*);
 	/* 80298710 */ void setWaveTableSize(u32, JKRHeap*);
 	/* 80298910 */ void setWaveInfo(JASBasicWaveBank::TWaveGroup*, int, u16, JASWaveInfo const&);
-};
-
-struct JASSimpleWaveBank {
-	/* 80298C94 */ JASSimpleWaveBank();
-	/* 80298DE0 */ void setWaveTableSize(u32, JKRHeap*);
-	/* 80298E84 */ void setWaveInfo(u32, JASWaveInfo const&);
-};
-
-struct JASWaveArc {
-	/* 8029A70C */ void setFileName(char const*);
 };
 
 // 

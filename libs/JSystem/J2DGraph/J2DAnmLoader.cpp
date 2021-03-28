@@ -11,45 +11,93 @@
 // Types:
 // 
 
-struct J2DAnmLoaderDataBase {
-	/* 80308A6C */ void load(void const*);
+struct _GXColor {
 };
 
-struct J3DAnmColorKeyData {
+struct ResNTAB {
+};
+
+struct JUTNameTab {
+	/* 802DE9A0 */ JUTNameTab();
+	/* 802DEA1C */ void setResource(ResNTAB const*);
 };
 
 struct J3DAnmVtxColorKeyData {
 };
 
-struct J2DAnmTextureSRTKey {
+struct J3DAnmVtxColorFullData {
 };
 
-struct J3DAnmTevRegKeyData {
-};
-
-struct J2DAnmTransformKey {
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J3DAnmTextureSRTKeyData {
+struct J3DAnmVisibilityFullData {
 };
 
 struct J3DAnmTransformKeyData {
 };
 
-struct J2DAnmColorKey {
+struct J3DAnmTransformFullData {
+};
+
+struct J3DAnmTextureSRTKeyData {
+};
+
+struct J3DAnmTexPatternFullData {
+};
+
+struct J3DAnmTevRegKeyData {
+};
+
+struct J3DAnmColorKeyData {
+};
+
+struct J3DAnmColorFullData {
 };
 
 struct J2DScreen {
+};
+
+struct J2DAnmVtxColorKey {
+};
+
+struct J2DAnmVtxColorFull {
+};
+
+struct J2DAnmVtxColor {
+	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
+	/* 8030A358 */ ~J2DAnmVtxColor();
+};
+
+struct J2DAnmVisibilityFull {
+	/* 8030A3B4 */ ~J2DAnmVisibilityFull();
+};
+
+struct J2DAnmTransformKey {
+};
+
+struct J2DAnmTransformFull {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
+};
+
+struct J2DAnmLoader {
+	/* 8030A410 */ ~J2DAnmLoader();
 };
 
 struct J2DAnmBase {
 	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
 };
 
-struct J2DAnmVtxColorKey {
+struct J2DAnmColorKey {
 };
 
 struct J2DAnmKeyLoader_v15 {
@@ -69,35 +117,7 @@ struct J2DAnmKeyLoader_v15 {
 	/* 8030A004 */ void setAnmTevReg(J2DAnmTevRegKey*, J3DAnmTevRegKeyData const*);
 };
 
-struct J2DAnmTexPattern {
-};
-
-struct J3DAnmTexPatternFullData {
-};
-
 struct J2DAnmColorFull {
-};
-
-struct J3DAnmColorFullData {
-};
-
-struct J3DAnmVtxColorFullData {
-};
-
-struct J3DAnmVisibilityFullData {
-};
-
-struct J2DAnmVisibilityFull {
-	/* 8030A3B4 */ ~J2DAnmVisibilityFull();
-};
-
-struct J3DAnmTransformFullData {
-};
-
-struct J2DAnmVtxColorFull {
-};
-
-struct J2DAnmTransformFull {
 };
 
 struct J2DAnmFullLoader_v15 {
@@ -115,26 +135,6 @@ struct J2DAnmFullLoader_v15 {
 	/* 8030A1B8 */ void setAnmVisibility(J2DAnmVisibilityFull*, J3DAnmVisibilityFullData const*);
 	/* 8030A234 */ void readAnmVtxColor(J3DAnmVtxColorFullData const*);
 	/* 8030A25C */ void setAnmVtxColor(J2DAnmVtxColorFull*, J3DAnmVtxColorFullData const*);
-};
-
-struct _GXColor {
-};
-
-struct J2DAnmVtxColor {
-	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
-	/* 8030A358 */ ~J2DAnmVtxColor();
-};
-
-struct J2DAnmLoader {
-	/* 8030A410 */ ~J2DAnmLoader();
-};
-
-struct ResNTAB {
-};
-
-struct JUTNameTab {
-	/* 802DE9A0 */ JUTNameTab();
-	/* 802DEA1C */ void setResource(ResNTAB const*);
 };
 
 // 
@@ -292,7 +292,7 @@ SECTION_SDATA2 static u8 lit_1581[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80308A6C-80309290 0824+00 s=0 e=26 z=2  None .text      load__20J2DAnmLoaderDataBaseFPCv                             */
+/* 80308A6C-80309290 0824+00 s=0 e=26 z=0  None .text      load__20J2DAnmLoaderDataBaseFPCv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

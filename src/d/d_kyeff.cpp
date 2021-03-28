@@ -11,11 +11,11 @@
 // Types:
 // 
 
-struct dKyeff_c {
-	/* 801ADD5C */ void execute();
+struct kankyo_class {
 };
 
-struct kankyo_class {
+struct dKyeff_c {
+	/* 801ADD5C */ void execute();
 };
 
 struct Z2EnvSeMgr {
@@ -173,7 +173,7 @@ SECTION_DATA static void* l_dKyeff_Method[5] = {
 	(void*)dKyeff_Draw__FP8dKyeff_c,
 };
 
-/* 803BC16C-803BC198 0028+04 s=0 e=0 z=1  None .data      g_profile_KYEFF                                              */
+/* 803BC16C-803BC198 0028+04 s=0 e=0 z=0  None .data      g_profile_KYEFF                                              */
 SECTION_DATA void* g_profile_KYEFF[10 + 1 /* padding */] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000CFFFD,

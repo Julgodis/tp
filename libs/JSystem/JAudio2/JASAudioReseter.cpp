@@ -11,6 +11,21 @@
 // Types:
 // 
 
+struct JASDriver {
+	/* 8029E130 */ void setDSPLevel(f32);
+	/* 8029E158 */ void getDSPLevel();
+	/* 8029E240 */ void registerDspSyncCallback(s32 (*)(void*), void*);
+};
+
+struct JASDSPChannel {
+	/* 8029D340 */ void drop();
+	/* 8029D948 */ void getHandle(u32);
+};
+
+struct JASAudioThread {
+	/* 8029CDC0 */ void stop();
+};
+
 struct JASAudioReseter {
 	/* 8029D0B4 */ JASAudioReseter();
 	/* 8029D0FC */ ~JASAudioReseter();
@@ -19,21 +34,6 @@ struct JASAudioReseter {
 	/* 8029D1F8 */ void checkDone() const;
 	/* 8029D200 */ void calc();
 	/* 8029D2D4 */ void callback(void*);
-};
-
-struct JASAudioThread {
-	/* 8029CDC0 */ void stop();
-};
-
-struct JASDSPChannel {
-	/* 8029D340 */ void drop();
-	/* 8029D948 */ void getHandle(u32);
-};
-
-struct JASDriver {
-	/* 8029E130 */ void setDSPLevel(f32);
-	/* 8029E158 */ void getDSPLevel();
-	/* 8029E240 */ void registerDspSyncCallback(s32 (*)(void*), void*);
 };
 
 // 

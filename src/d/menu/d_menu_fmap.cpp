@@ -11,16 +11,13 @@
 // Types:
 // 
 
-struct dMf_HIO_c {
-	/* 801C65F8 */ dMf_HIO_c();
-	/* 801CDA2C */ ~dMf_HIO_c();
+struct dMenu_Fmap_region_data_c {
+	/* 8003DB48 */ void getMenuFmapStageData(int);
+	/* 8003DEE0 */ void buildFmapRegionData(int);
 };
 
-struct CSTControl {
-};
-
-struct STControl {
-	/* 8003219C */ void checkTrigger();
+struct renderingFmap_c {
+	/* 801CE3C0 */ void getPointStagePathInnerNo(dMenu_Fmap_region_data_c*, f32, f32, int, int*, int*);
 };
 
 struct JKRHeap {
@@ -29,11 +26,84 @@ struct JKRHeap {
 	/* 802CE784 */ void getTotalFreeSize();
 };
 
+struct mDoDvdThd_mountArchive_c {
+	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
+};
+
+struct fopAc_ac_c {
+};
+
+struct fmpTresTypeGroupDataList_c {
+	/* 8003EB10 */ ~fmpTresTypeGroupDataList_c();
+};
+
+struct dTres_c {
+	struct data_s {
+	};
+
+};
+
+struct dSv_event_c {
+	/* 8003498C */ void onEventBit(u16);
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct dStage_dt_c {
+};
+
+struct dMsgScrnExplain_c {
+	/* 8023D7D8 */ void move();
+	/* 8023E558 */ void openExplain(u32, u8, u8, u8, bool);
+};
+
+struct dMsgObject_c {
+	/* 80237AE0 */ void setTalkHeap(void*);
+	/* 80237B54 */ void getTalkHeap();
+	/* 802381FC */ void setStatus(u16);
+	/* 8023822C */ void getStatus();
+	/* 802383D0 */ void getMessageID();
+	/* 8023849C */ void setPortalMessageID(u16);
+};
+
+struct dMsgFlow_c {
+	/* 80249F00 */ dMsgFlow_c();
+	/* 80249F48 */ ~dMsgFlow_c();
+	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+};
+
+struct dMf_HIO_c {
+	/* 801C65F8 */ dMf_HIO_c();
+	/* 801CDA2C */ ~dMf_HIO_c();
+};
+
+struct dMeterMap_c {
+	/* 8020D650 */ void isEnableDispMapAndMapDispSizeTypeNo();
+};
+
+struct cXyz {
+};
+
+struct dMeter2Info_c {
+	/* 8021CC0C */ void setWarpInfo(char const*, cXyz const&, s16, u8, u8, u8);
+};
+
+struct dMenu_Fmap_world_data_c {
+	/* 8003E028 */ void create(dMenu_Fmap_region_data_c*);
+};
+
+struct dMenu_Fmap_stage_data_c {
+};
+
+struct CSTControl {
+};
+
 struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
-struct dMenu_Fmap_stage_data_c {
+struct STControl {
+	/* 8003219C */ void checkTrigger();
 };
 
 struct dMenu_Fmap_c {
@@ -159,82 +229,37 @@ struct dMenu_Fmap_c {
 	/* 801CD95C */ void getPlayerPos2D();
 };
 
-struct JKRArchive {
-	/* 801CC284 */ void getExpandedResSize(void const*) const;
-};
-
-struct mDoDvdThd_mountArchive_c {
-	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
-};
-
-struct dStage_dt_c {
-};
-
-struct JKRAramArchive {
-};
-
-struct dSv_event_c {
-	/* 8003498C */ void onEventBit(u16);
-	/* 800349BC */ void isEventBit(u16) const;
-};
-
-struct dMenu_Fmap_region_data_c {
-	/* 8003DB48 */ void getMenuFmapStageData(int);
-	/* 8003DEE0 */ void buildFmapRegionData(int);
-};
-
-struct dMenu_Fmap_world_data_c {
-	/* 8003E028 */ void create(dMenu_Fmap_region_data_c*);
-};
-
-struct dMenuFmapIconPointer_c {
-	/* 8003E114 */ void init(dMenu_Fmap_region_data_c*, dMenu_Fmap_stage_data_c*, u8, int, int);
-	/* 8003E490 */ void nextData();
-	/* 8003E510 */ void getValidData();
-};
-
-struct dTres_c {
-	struct data_s {
-	};
-
-};
-
-struct dMenuFmapIconDisp_c {
-	/* 8003E578 */ void getPosition(int*, int*, f32*, f32*, dTres_c::data_s const**);
-	/* 8003E6E8 */ void isDrawDisp();
-};
-
-struct fmpTresTypeGroupDataList_c {
-	/* 8003EB10 */ ~fmpTresTypeGroupDataList_c();
-};
-
-struct dMapInfo_n {
-	/* 8003EE5C */ void getMapPlayerPos();
-	/* 8003F02C */ void getMapRestartPos();
-};
-
-struct dDlst_base_c {
-};
-
-struct dDlst_list_c {
-	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
-};
-
-struct dMenuMapCommon_c {
-	/* 801C3EC4 */ void iconScale(int, f32, f32, f32);
-	/* 801C443C */ void clearIconInfo();
-};
-
-struct renderingFmap_c {
-	/* 801CE3C0 */ void getPointStagePathInnerNo(dMenu_Fmap_region_data_c*, f32, f32, int, int*, int*);
-};
-
 struct dMenu_FmapMap_c {
 	/* 801CEC24 */ dMenu_FmapMap_c();
 	/* 801CEDE8 */ void _create(u16, u16, u16, u16, void*);
 	/* 801CEE3C */ void _delete();
 	/* 801CF1E0 */ void setFlashOn(int, int, u8*, int);
 	/* 801CF450 */ void setRendering(dMenu_Fmap_world_data_c*, int, f32, f32, f32, f32);
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct dMenu_Fmap2DTop_c {
+	/* 801D5BD0 */ dMenu_Fmap2DTop_c(JKRExpHeap*, STControl*);
+	/* 801D6A44 */ void _execute();
+	/* 801D6C44 */ void setAllAlphaRate(f32, bool);
+	/* 801D6DF8 */ void btkAnimeLoop(J2DAnmTextureSRTKey*, f32);
+	/* 801D6EDC */ void setMoyaAlpha(u8);
+	/* 801D6F38 */ void setTitleNameString(u32);
+	/* 801D7010 */ void setAreaNameString(u32);
+	/* 801D70E8 */ void setZButtonString(u32, u8);
+	/* 801D7210 */ void setBButtonString(u32, u8);
+	/* 801D72D4 */ void setAButtonString(u32, u8);
+	/* 801D7398 */ void setCrossLRString(u32);
+	/* 801D74EC */ void set3DStickString(u32);
+	/* 801D7640 */ void createExplain(JKRExpHeap*, STControl*);
+	/* 801D76C0 */ void deleteExplain();
+	/* 801D7714 */ void setArrowAlphaRatio(u8, f32);
+	/* 801D7994 */ void checkPlayerWarpAccept();
+	/* 801D7AB4 */ void checkWarpAcceptRegion4();
+	/* 801D7B58 */ void checkWarpAcceptCannon();
+	/* 801D8088 */ void isWarpAccept();
 };
 
 struct ResTIMG {
@@ -272,74 +297,49 @@ struct dMenu_Fmap2DBack_c {
 	/* 801D5BB8 */ void setArrowPosAxis(f32, f32);
 };
 
-struct J2DAnmTextureSRTKey {
+struct dMenuMapCommon_c {
+	/* 801C3EC4 */ void iconScale(int, f32, f32, f32);
+	/* 801C443C */ void clearIconInfo();
 };
 
-struct dMenu_Fmap2DTop_c {
-	/* 801D5BD0 */ dMenu_Fmap2DTop_c(JKRExpHeap*, STControl*);
-	/* 801D6A44 */ void _execute();
-	/* 801D6C44 */ void setAllAlphaRate(f32, bool);
-	/* 801D6DF8 */ void btkAnimeLoop(J2DAnmTextureSRTKey*, f32);
-	/* 801D6EDC */ void setMoyaAlpha(u8);
-	/* 801D6F38 */ void setTitleNameString(u32);
-	/* 801D7010 */ void setAreaNameString(u32);
-	/* 801D70E8 */ void setZButtonString(u32, u8);
-	/* 801D7210 */ void setBButtonString(u32, u8);
-	/* 801D72D4 */ void setAButtonString(u32, u8);
-	/* 801D7398 */ void setCrossLRString(u32);
-	/* 801D74EC */ void set3DStickString(u32);
-	/* 801D7640 */ void createExplain(JKRExpHeap*, STControl*);
-	/* 801D76C0 */ void deleteExplain();
-	/* 801D7714 */ void setArrowAlphaRatio(u8, f32);
-	/* 801D7994 */ void checkPlayerWarpAccept();
-	/* 801D7AB4 */ void checkWarpAcceptRegion4();
-	/* 801D7B58 */ void checkWarpAcceptCannon();
-	/* 801D8088 */ void isWarpAccept();
+struct dMenuFmapIconPointer_c {
+	/* 8003E114 */ void init(dMenu_Fmap_region_data_c*, dMenu_Fmap_stage_data_c*, u8, int, int);
+	/* 8003E490 */ void nextData();
+	/* 8003E510 */ void getValidData();
 };
 
-struct dMeterMap_c {
-	/* 8020D650 */ void isEnableDispMapAndMapDispSizeTypeNo();
+struct dMenuFmapIconDisp_c {
+	/* 8003E578 */ void getPosition(int*, int*, f32*, f32*, dTres_c::data_s const**);
+	/* 8003E6E8 */ void isDrawDisp();
 };
 
-struct cXyz {
+struct dMapInfo_n {
+	/* 8003EE5C */ void getMapPlayerPos();
+	/* 8003F02C */ void getMapRestartPos();
 };
 
-struct dMeter2Info_c {
-	/* 8021CC0C */ void setWarpInfo(char const*, cXyz const&, s16, u8, u8, u8);
+struct dDlst_base_c {
 };
 
-struct dMsgObject_c {
-	/* 80237AE0 */ void setTalkHeap(void*);
-	/* 80237B54 */ void getTalkHeap();
-	/* 802381FC */ void setStatus(u16);
-	/* 8023822C */ void getStatus();
-	/* 802383D0 */ void getMessageID();
-	/* 8023849C */ void setPortalMessageID(u16);
-};
-
-struct dMsgScrnExplain_c {
-	/* 8023D7D8 */ void move();
-	/* 8023E558 */ void openExplain(u32, u8, u8, u8, bool);
-};
-
-struct fopAc_ac_c {
-};
-
-struct dMsgFlow_c {
-	/* 80249F00 */ dMsgFlow_c();
-	/* 80249F48 */ ~dMsgFlow_c();
-	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
-};
-
-struct JAISoundID {
+struct dDlst_list_c {
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
 struct Vec {
 };
 
+struct JAISoundID {
+};
+
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct JKRArchive {
+	/* 801CC284 */ void getExpandedResSize(void const*) const;
+};
+
+struct JKRAramArchive {
 };
 
 // 

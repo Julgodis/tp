@@ -11,19 +11,19 @@
 // Types:
 // 
 
-struct base_process_class {
-};
-
-struct layer_class {
+struct line_tag {
 };
 
 struct layer_management_tag_class {
 };
 
-struct line_tag {
+struct layer_class {
 };
 
 struct create_tag_class {
+};
+
+struct base_process_class {
 };
 
 // 
@@ -81,7 +81,7 @@ extern "C" extern u8 g_fpcNd_type[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 80021338-80021358 0020+00 s=1 e=9 z=291  None .text      fpcEx_Search__FPFPvPv_PvPv                                   */
+/* 80021338-80021358 0020+00 s=1 e=9 z=0  None .text      fpcEx_Search__FPFPvPv_PvPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +92,7 @@ asm void fpcEx_Search(void* (*)(void*, void*), void* param_1) {
 #pragma pop
 
 
-/* 80021358-8002139C 0044+00 s=1 e=5 z=30  None .text      fpcEx_SearchByID__FUi                                        */
+/* 80021358-8002139C 0044+00 s=1 e=5 z=0  None .text      fpcEx_SearchByID__FUi                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -103,7 +103,7 @@ asm void fpcEx_SearchByID(unsigned int param_0) {
 #pragma pop
 
 
-/* 8002139C-800213C4 0028+00 s=0 e=7 z=42  None .text      fpcEx_IsExist__FUi                                           */
+/* 8002139C-800213C4 0028+00 s=0 e=7 z=0  None .text      fpcEx_IsExist__FUi                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

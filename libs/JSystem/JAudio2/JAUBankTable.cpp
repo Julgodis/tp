@@ -11,8 +11,11 @@
 // Types:
 // 
 
-struct JAUBankTable {
-	/* 802A4AA0 */ void getBank(u32) const;
+struct JSUPtrLink {
+};
+
+struct JSUPtrList {
+	/* 802DBF4C */ void append(JSUPtrLink*);
 };
 
 template <typename A0>
@@ -21,15 +24,12 @@ struct JSULink { };
 struct JSULink__template0 {
 };
 
+struct JAUBankTable {
+	/* 802A4AA0 */ void getBank(u32) const;
+};
+
 struct JAUBankTableDictionary {
 	/* 802A4A80 */ void appendBankTable(JSULink<JAUBankTable>*);
-};
-
-struct JSUPtrLink {
-};
-
-struct JSUPtrList {
-	/* 802DBF4C */ void append(JSUPtrLink*);
 };
 
 // 

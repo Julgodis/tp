@@ -49,7 +49,7 @@ extern "C" asm void __GXSetDirtyState() {
 #pragma pop
 
 
-/* 8035C764-8035C834 00D0+00 s=0 e=66 z=3  None .text      GXBegin                                                      */
+/* 8035C764-8035C834 00D0+00 s=0 e=66 z=0  None .text      GXBegin                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -104,7 +104,7 @@ extern "C" asm void GXEnableTexOffsets() {
 #pragma pop
 
 
-/* 8035C984-8035C9AC 0028+00 s=0 e=33 z=5  None .text      GXSetCullMode                                                */
+/* 8035C984-8035C9AC 0028+00 s=0 e=33 z=0  None .text      GXSetCullMode                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

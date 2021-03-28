@@ -11,7 +11,13 @@
 // Types:
 // 
 
+struct _GXLogicOp {
+};
+
 struct _GXFogType {
+};
+
+struct _GXCompare {
 };
 
 struct _GXColor {
@@ -21,12 +27,6 @@ struct _GXBlendMode {
 };
 
 struct _GXBlendFactor {
-};
-
-struct _GXLogicOp {
-};
-
-struct _GXCompare {
 };
 
 // 

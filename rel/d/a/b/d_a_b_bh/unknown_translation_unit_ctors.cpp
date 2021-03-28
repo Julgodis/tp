@@ -11,19 +11,3 @@
 // Forward References:
 // 
 
-
-extern void* const data_805B312C[2];
-
-// 
-// External References:
-// 
-
-
-extern "C" void __sinit_d_a_b_bh_cpp(); // 1
-
-// 
-// Declarations:
-// 
-
-/* ############################################################################################## */
-#pragma section ".ctors$10"

@@ -11,7 +11,7 @@
 // Types:
 // 
 
-struct J3DMaterialTable {
+struct Vec {
 };
 
 struct J3DShapeTable {
@@ -20,15 +20,19 @@ struct J3DShapeTable {
 struct J3DMtxBuffer {
 };
 
-struct J3DJoint {
-	/* 8032F13C */ void appendChild(J3DJoint*);
-	/* 8032F3F8 */ void recursiveCalc();
+struct J3DMtxCalc {
+	/* 80325D1C */ void setMtxBuffer(J3DMtxBuffer*);
 };
 
 struct J3DModelHierarchy {
 };
 
-struct Vec {
+struct J3DMaterialTable {
+};
+
+struct J3DJoint {
+	/* 8032F13C */ void appendChild(J3DJoint*);
+	/* 8032F3F8 */ void recursiveCalc();
 };
 
 struct J3DJointTree {
@@ -37,10 +41,6 @@ struct J3DJointTree {
 	/* 80325C00 */ void findImportantMtxIndex();
 	/* 80325CAC */ void calc(J3DMtxBuffer*, Vec const&, f32 const (& )[3][4]);
 	/* 80325D24 */ ~J3DJointTree();
-};
-
-struct J3DMtxCalc {
-	/* 80325D1C */ void setMtxBuffer(J3DMtxBuffer*);
 };
 
 struct J3DDrawMtxData {

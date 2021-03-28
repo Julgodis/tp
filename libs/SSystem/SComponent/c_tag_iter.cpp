@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct create_tag_class {
-};
-
 struct method_filter {
 };
 
 struct judge_filter {
+};
+
+struct create_tag_class {
 };
 
 // 

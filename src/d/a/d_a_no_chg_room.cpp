@@ -11,9 +11,7 @@
 // Types:
 // 
 
-struct daNocrm_c {
-	/* 801452DC */ void execute();
-	/* 80145508 */ void getRoomNo(int);
+struct process_node_class {
 };
 
 struct fopAc_ac_c {
@@ -27,7 +25,9 @@ struct fopAcM_gc_c {
 	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
 
-struct process_node_class {
+struct daNocrm_c {
+	/* 801452DC */ void execute();
+	/* 80145508 */ void getRoomNo(int);
 };
 
 struct cBgS_PolyInfo {
@@ -198,7 +198,7 @@ SECTION_DATA static void* daNocrm_METHODS[8] = {
 	(void*)NULL,
 };
 
-/* 803B3678-803B36A8 0030+00 s=0 e=0 z=1  None .data      g_profile_NO_CHG_ROOM                                        */
+/* 803B3678-803B36A8 0030+00 s=0 e=0 z=0  None .data      g_profile_NO_CHG_ROOM                                        */
 SECTION_DATA void* g_profile_NO_CHG_ROOM[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0002FFFD,

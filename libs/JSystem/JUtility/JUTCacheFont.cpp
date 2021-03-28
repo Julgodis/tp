@@ -11,39 +11,10 @@
 // Types:
 // 
 
-struct JKRHeap {
-};
-
-struct ResFONT {
-};
-
 struct _GXTexMapID {
 };
 
-struct JUTCacheFont {
-	struct TGlyphCacheInfo {
-	};
-
-	struct TCachePage {
-	};
-
-	/* 802DD188 */ JUTCacheFont(ResFONT const*, u32, JKRHeap*);
-	/* 802DD208 */ ~JUTCacheFont();
-	/* 802DD29C */ void deleteMemBlocks_CacheFont();
-	/* 802DD320 */ void initialize_state();
-	/* 802DD35C */ void getMemorySize(ResFONT const*, u16*, u32*, u16*, u32*, u16*, u32*, u32*);
-	/* 802DD4EC */ void initiate(ResFONT const*, void*, u32, JKRHeap*);
-	/* 802DD54C */ void internal_initiate(ResFONT const*, void*, u32, JKRHeap*);
-	/* 802DD650 */ void allocArea(void*, u32, JKRHeap*);
-	/* 802DD804 */ void allocArray(JKRHeap*);
-	/* 802DD8EC */ void setBlock();
-	/* 802DDB0C */ void determineBlankPage();
-	/* 802DDBBC */ void getGlyphFromAram(JUTCacheFont::TGlyphCacheInfo*, JUTCacheFont::TCachePage*, int*, int*);
-	/* 802DDCE4 */ void loadImage(int, _GXTexMapID);
-	/* 802DDD98 */ void loadCache_char_subroutine(int*, bool);
-	/* 802DDEE0 */ void invalidiateAllCache();
-	/* 802DDF68 */ void unlink(JUTCacheFont::TGlyphCacheInfo*);
-	/* 802DDFAC */ void prepend(JUTCacheFont::TGlyphCacheInfo*);
+struct ResFONT {
 };
 
 struct JUtility {
@@ -80,12 +51,40 @@ struct JUTResFont {
 	/* 802DFDA4 */ void isLeadByte(int) const;
 };
 
-struct JKRExpandSwitch {
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };
 
-struct JKRAram {
-	/* 802D233C */ void mainRamToAram(u8*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
-	/* 802D25B4 */ void aramToMainRam(u32, u8*, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
+struct JKRHeap {
+};
+
+struct JUTCacheFont {
+	struct TGlyphCacheInfo {
+	};
+
+	struct TCachePage {
+	};
+
+	/* 802DD188 */ JUTCacheFont(ResFONT const*, u32, JKRHeap*);
+	/* 802DD208 */ ~JUTCacheFont();
+	/* 802DD29C */ void deleteMemBlocks_CacheFont();
+	/* 802DD320 */ void initialize_state();
+	/* 802DD35C */ void getMemorySize(ResFONT const*, u16*, u32*, u16*, u32*, u16*, u32*, u32*);
+	/* 802DD4EC */ void initiate(ResFONT const*, void*, u32, JKRHeap*);
+	/* 802DD54C */ void internal_initiate(ResFONT const*, void*, u32, JKRHeap*);
+	/* 802DD650 */ void allocArea(void*, u32, JKRHeap*);
+	/* 802DD804 */ void allocArray(JKRHeap*);
+	/* 802DD8EC */ void setBlock();
+	/* 802DDB0C */ void determineBlankPage();
+	/* 802DDBBC */ void getGlyphFromAram(JUTCacheFont::TGlyphCacheInfo*, JUTCacheFont::TCachePage*, int*, int*);
+	/* 802DDCE4 */ void loadImage(int, _GXTexMapID);
+	/* 802DDD98 */ void loadCache_char_subroutine(int*, bool);
+	/* 802DDEE0 */ void invalidiateAllCache();
+	/* 802DDF68 */ void unlink(JUTCacheFont::TGlyphCacheInfo*);
+	/* 802DDFAC */ void prepend(JUTCacheFont::TGlyphCacheInfo*);
+};
+
+struct JKRExpandSwitch {
 };
 
 struct JKRAramHeap {
@@ -95,8 +94,9 @@ struct JKRAramHeap {
 	/* 802D2FBC */ void alloc(u32, JKRAramHeap::EAllocMode);
 };
 
-struct JUTException {
-	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+struct JKRAram {
+	/* 802D233C */ void mainRamToAram(u8*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
+	/* 802D25B4 */ void aramToMainRam(u32, u8*, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 };
 
 // 

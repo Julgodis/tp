@@ -11,39 +11,17 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
+struct _GXColor {
 };
 
-struct Vec {
-};
-
-struct dDemo_actor_c {
-	/* 80038020 */ dDemo_actor_c();
-	/* 80038098 */ ~dDemo_actor_c();
-	/* 80038128 */ void getActor();
-	/* 8003815C */ void setActor(fopAc_ac_c*);
-	/* 8003819C */ void getPrm_Morf();
-	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
-	/* 800387EC */ void JSGSetData(u32, void const*, u32);
-	/* 80038920 */ void JSGSetTranslation(Vec const&);
-	/* 80038980 */ void JSGSetScaling(Vec const&);
-	/* 800389A8 */ void JSGSetRotation(Vec const&);
-	/* 80038A0C */ void JSGSetShape(u32);
-	/* 80038A20 */ void JSGSetAnimation(u32);
-	/* 80038A40 */ void JSGSetAnimationFrame(f32);
-	/* 80038A54 */ void JSGSetAnimationTransition(f32);
-	/* 80038A68 */ void JSGSetTextureAnimation(u32);
-	/* 80038A7C */ void JSGSetTextureAnimationFrame(f32);
-	/* 8003A05C */ void JSGFindNodeID(char const*) const;
-	/* 8003A088 */ void JSGGetNodeTransformation(u32, f32 (* )[4]) const;
-	/* 8003A0C8 */ void JSGGetAnimationFrameMax() const;
-	/* 8003A0D0 */ void JSGGetTextureAnimationFrameMax() const;
-	/* 8003A0D8 */ void JSGGetTranslation(Vec*) const;
-	/* 8003A0F4 */ void JSGGetScaling(Vec*) const;
-	/* 8003A110 */ void JSGGetRotation(Vec*) const;
+struct mDoGph_gInf_c {
+	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
 };
 
 struct J3DAnmTransform {
+};
+
+struct Vec {
 };
 
 struct mDoExt_McaMorf {
@@ -51,38 +29,51 @@ struct mDoExt_McaMorf {
 	/* 800105C8 */ void play(Vec*, u32, s8);
 };
 
-struct dDemo_camera_c {
-	/* 80038AC4 */ void JSGGetProjectionNear() const;
-	/* 80038AF8 */ void JSGSetProjectionNear(f32);
-	/* 80038B0C */ void JSGGetProjectionFar() const;
-	/* 80038B40 */ void JSGSetProjectionFar(f32);
-	/* 80038B54 */ void JSGGetProjectionFovy() const;
-	/* 80038B88 */ void JSGSetProjectionFovy(f32);
-	/* 80038B9C */ void JSGGetProjectionAspect() const;
-	/* 80038BD0 */ void JSGSetProjectionAspect(f32);
-	/* 80038BE4 */ void JSGGetViewPosition(Vec*) const;
-	/* 80038C44 */ void JSGSetViewPosition(Vec const&);
-	/* 80038C6C */ void JSGGetViewUpVector(Vec*) const;
-	/* 80038CD0 */ void JSGSetViewUpVector(Vec const&);
-	/* 80038CF8 */ void JSGGetViewTargetPosition(Vec*) const;
-	/* 80038D5C */ void JSGSetViewTargetPosition(Vec const&);
-	/* 80038D84 */ void JSGGetViewRoll() const;
-	/* 80038DDC */ void JSGSetViewRoll(f32);
-	/* 80039FFC */ ~dDemo_camera_c();
+struct jmessage_tControl {
+	/* 80039B0C */ ~jmessage_tControl();
+	/* 802299EC */ jmessage_tControl();
 };
 
-struct _GXColor {
+struct fopAc_ac_c {
 };
 
-struct dDemo_ambient_c {
-	/* 80038DF0 */ void JSGSetColor(_GXColor);
-	/* 800394C8 */ ~dDemo_ambient_c();
+struct daMP_c {
+	/* 80031AD0 */ void daMP_c_THPPlayerPlay();
 };
 
-struct _GXDistAttnFn {
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
+	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, int);
+};
+
+struct dPa_levelEcallBack {
+};
+
+struct cXyz {
+	/* 80009184 */ ~cXyz();
+};
+
+struct dKy_tevstr_c {
+};
+
+struct csXyz {
+};
+
+struct dPa_control_c {
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+};
+
+struct dMsgObject_c {
+	/* 80237AB0 */ void setDemoMessage(u32);
 };
 
 struct _GXSpotFn {
+};
+
+struct _GXDistAttnFn {
 };
 
 struct JStage {
@@ -171,6 +162,29 @@ struct JStage {
 
 };
 
+struct dDemo_system_c {
+	/* 80039528 */ void JSGFindObject(JStage::TObject**, char const*, JStage::TEObject) const;
+	/* 80039AAC */ ~dDemo_system_c();
+};
+
+struct dDemo_particle_c {
+	/* 80039F1C */ void emitter_create(u32);
+	/* 80039F9C */ ~dDemo_particle_c();
+};
+
+struct dDemo_object_c {
+	/* 80038F54 */ dDemo_object_c();
+	/* 80038F70 */ ~dDemo_object_c();
+	/* 80038FC0 */ void appendActor(fopAc_ac_c*);
+	/* 80039088 */ void getActor(u8);
+	/* 800390AC */ void createCamera();
+	/* 80039128 */ void getActiveCamera();
+	/* 8003913C */ void createAmbient();
+	/* 800391B8 */ void appendLight();
+	/* 80039258 */ void createFog();
+	/* 800392D4 */ void remove();
+};
+
 struct dDemo_light_c {
 	/* 80038E20 */ void JSGSetLightType(JStage::TELight);
 	/* 80038E34 */ void JSGSetPosition(Vec const&);
@@ -192,26 +206,24 @@ struct dDemo_fog_c {
 	/* 80039408 */ ~dDemo_fog_c();
 };
 
-struct dDemo_object_c {
-	/* 80038F54 */ dDemo_object_c();
-	/* 80038F70 */ ~dDemo_object_c();
-	/* 80038FC0 */ void appendActor(fopAc_ac_c*);
-	/* 80039088 */ void getActor(u8);
-	/* 800390AC */ void createCamera();
-	/* 80039128 */ void getActiveCamera();
-	/* 8003913C */ void createAmbient();
-	/* 800391B8 */ void appendLight();
-	/* 80039258 */ void createFog();
-	/* 800392D4 */ void remove();
-};
-
-struct dDemo_system_c {
-	/* 80039528 */ void JSGFindObject(JStage::TObject**, char const*, JStage::TEObject) const;
-	/* 80039AAC */ ~dDemo_system_c();
-};
-
-struct cXyz {
-	/* 80009184 */ ~cXyz();
+struct dDemo_camera_c {
+	/* 80038AC4 */ void JSGGetProjectionNear() const;
+	/* 80038AF8 */ void JSGSetProjectionNear(f32);
+	/* 80038B0C */ void JSGGetProjectionFar() const;
+	/* 80038B40 */ void JSGSetProjectionFar(f32);
+	/* 80038B54 */ void JSGGetProjectionFovy() const;
+	/* 80038B88 */ void JSGSetProjectionFovy(f32);
+	/* 80038B9C */ void JSGGetProjectionAspect() const;
+	/* 80038BD0 */ void JSGSetProjectionAspect(f32);
+	/* 80038BE4 */ void JSGGetViewPosition(Vec*) const;
+	/* 80038C44 */ void JSGSetViewPosition(Vec const&);
+	/* 80038C6C */ void JSGGetViewUpVector(Vec*) const;
+	/* 80038CD0 */ void JSGSetViewUpVector(Vec const&);
+	/* 80038CF8 */ void JSGGetViewTargetPosition(Vec*) const;
+	/* 80038D5C */ void JSGSetViewTargetPosition(Vec const&);
+	/* 80038D84 */ void JSGGetViewRoll() const;
+	/* 80038DDC */ void JSGSetViewRoll(f32);
+	/* 80039FFC */ ~dDemo_camera_c();
 };
 
 struct dDemo_c {
@@ -226,47 +238,39 @@ struct dDemo_c {
 	/* 80039F04 */ void reset();
 };
 
-struct jmessage_tControl {
-	/* 80039B0C */ ~jmessage_tControl();
-	/* 802299EC */ jmessage_tControl();
+struct dDemo_ambient_c {
+	/* 80038DF0 */ void JSGSetColor(_GXColor);
+	/* 800394C8 */ ~dDemo_ambient_c();
 };
 
-struct dDemo_particle_c {
-	/* 80039F1C */ void emitter_create(u32);
-	/* 80039F9C */ ~dDemo_particle_c();
+struct dDemo_actor_c {
+	/* 80038020 */ dDemo_actor_c();
+	/* 80038098 */ ~dDemo_actor_c();
+	/* 80038128 */ void getActor();
+	/* 8003815C */ void setActor(fopAc_ac_c*);
+	/* 8003819C */ void getPrm_Morf();
+	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
+	/* 800387EC */ void JSGSetData(u32, void const*, u32);
+	/* 80038920 */ void JSGSetTranslation(Vec const&);
+	/* 80038980 */ void JSGSetScaling(Vec const&);
+	/* 800389A8 */ void JSGSetRotation(Vec const&);
+	/* 80038A0C */ void JSGSetShape(u32);
+	/* 80038A20 */ void JSGSetAnimation(u32);
+	/* 80038A40 */ void JSGSetAnimationFrame(f32);
+	/* 80038A54 */ void JSGSetAnimationTransition(f32);
+	/* 80038A68 */ void JSGSetTextureAnimation(u32);
+	/* 80038A7C */ void JSGSetTextureAnimationFrame(f32);
+	/* 8003A05C */ void JSGFindNodeID(char const*) const;
+	/* 8003A088 */ void JSGGetNodeTransformation(u32, f32 (* )[4]) const;
+	/* 8003A0C8 */ void JSGGetAnimationFrameMax() const;
+	/* 8003A0D0 */ void JSGGetTextureAnimationFrameMax() const;
+	/* 8003A0D8 */ void JSGGetTranslation(Vec*) const;
+	/* 8003A0F4 */ void JSGGetScaling(Vec*) const;
+	/* 8003A110 */ void JSGGetRotation(Vec*) const;
 };
 
-struct mDoGph_gInf_c {
-	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
-};
-
-struct csXyz {
-};
-
-struct daMP_c {
-	/* 80031AD0 */ void daMP_c_THPPlayerPlay();
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
-	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, int);
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dPa_levelEcallBack {
-};
-
-struct dPa_control_c {
-	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-};
-
-struct dMsgObject_c {
-	/* 80237AB0 */ void setDemoMessage(u32);
+struct JUTNameTab {
+	/* 802DEA58 */ void getIndex(char const*) const;
 };
 
 namespace JStudio {
@@ -376,10 +380,6 @@ namespace JGadget {
 
 };
 
-struct JUTNameTab {
-	/* 802DEA58 */ void getIndex(char const*) const;
-};
-
 // 
 // Forward References:
 // 
@@ -483,7 +483,6 @@ extern "C" extern u16 m_branchId__7dDemo_c[1 + 3 /* padding */];
 extern "C" extern u8 m_control__7dDemo_c[4];
 extern "C" extern u8 m_mesgControl__7dDemo_c[4];
 extern "C" extern u8 m_object__7dDemo_c[4];
-extern "C" extern u8 m_frame__7dDemo_c[4];
 extern "C" extern u8 m_frameNoMsg__7dDemo_c[4];
 extern "C" extern u8 m_mode__7dDemo_c[4];
 extern "C" extern u8 m_status__7dDemo_c[4];
@@ -984,7 +983,7 @@ SECTION_SDATA2 static u8 lit_4127[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 8003819C-80038338 019C+00 s=1 e=1 z=1  None .text      getPrm_Morf__13dDemo_actor_cFv                               */
+/* 8003819C-80038338 019C+00 s=1 e=1 z=0  None .text      getPrm_Morf__13dDemo_actor_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1023,14 +1022,14 @@ static u8 m_factory__7dDemo_c[4];
 /* 80450E1C-80450E20 0004+00 s=2 e=1 z=0  None .sbss      m_mesgControl__7dDemo_c                                      */
 u8 m_mesgControl__7dDemo_c[4];
 
-/* 80450E20-80450E24 0004+00 s=5 e=9 z=7  None .sbss      m_object__7dDemo_c                                           */
+/* 80450E20-80450E24 0004+00 s=5 e=9 z=0  None .sbss      m_object__7dDemo_c                                           */
 u8 m_object__7dDemo_c[4];
 
 /* 80450E24-80450E28 0004+00 s=4 e=0 z=0  None .sbss      m_data__7dDemo_c                                             */
 static u8 m_data__7dDemo_c[4];
 
-/* 80450E28-80450E2C 0004+00 s=2 e=0 z=1  None .sbss      m_frame__7dDemo_c                                            */
-u8 m_frame__7dDemo_c[4];
+/* 80450E28-80450E2C 0004+00 s=2 e=0 z=0  None .sbss      m_frame__7dDemo_c                                            */
+static u8 m_frame__7dDemo_c[4];
 
 /* 80450E2C-80450E30 0004+00 s=2 e=0 z=0  None .sbss      m_translation__7dDemo_c                                      */
 static u8 m_translation__7dDemo_c[4];
@@ -1059,7 +1058,7 @@ static u8 struct_80450E48[4];
 /* 80450E4C-80450E50 0004+00 s=1 e=0 z=0  None .sbss      it$4206                                                      */
 static u8 data_80450E4C[4];
 
-/* 80038338-80038490 0158+00 s=0 e=1 z=5  None .text      getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc                  */
+/* 80038338-80038490 0158+00 s=0 e=1 z=0  None .text      getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1085,7 +1084,7 @@ asm static void dDemo_getJaiPointer(char const* param_0, u32 param_1, int param_
 /* 80451DC0-80451DC4 0004+00 s=1 e=0 z=0  None .sdata2    @4152                                                        */
 SECTION_SDATA2 static u32 lit_4152 = 0xBF800000;
 
-/* 80038518-800387A8 0290+00 s=0 e=0 z=2  None .text      dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc */
+/* 80038518-800387A8 0290+00 s=0 e=0 z=0  None .text      dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1605,7 +1604,7 @@ asm void dDemo_object_c::appendActor(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80039088-800390AC 0024+00 s=2 e=6 z=7  None .text      getActor__14dDemo_object_cFUc                                */
+/* 80039088-800390AC 0024+00 s=2 e=6 z=0  None .text      getActor__14dDemo_object_cFUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

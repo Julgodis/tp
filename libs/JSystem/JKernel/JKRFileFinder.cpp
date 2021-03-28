@@ -11,6 +11,16 @@
 // Types:
 // 
 
+struct JKRFileFinder {
+	/* 802D4910 */ ~JKRFileFinder();
+};
+
+struct JKRDvdFinder {
+	/* 802D4770 */ JKRDvdFinder(char const*);
+	/* 802D47F4 */ ~JKRDvdFinder();
+	/* 802D4874 */ void findNextFile();
+};
+
 struct JKRArchive {
 	struct SDirEntry {
 	};
@@ -22,16 +32,6 @@ struct JKRArcFinder {
 	/* 802D4638 */ JKRArcFinder(JKRArchive*, s32, s32);
 	/* 802D46C4 */ void findNextFile();
 	/* 802D4958 */ ~JKRArcFinder();
-};
-
-struct JKRDvdFinder {
-	/* 802D4770 */ JKRDvdFinder(char const*);
-	/* 802D47F4 */ ~JKRDvdFinder();
-	/* 802D4874 */ void findNextFile();
-};
-
-struct JKRFileFinder {
-	/* 802D4910 */ ~JKRFileFinder();
 };
 
 // 

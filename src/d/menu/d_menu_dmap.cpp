@@ -11,13 +11,9 @@
 // Types:
 // 
 
-struct STControl {
-	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
-	/* 8003219C */ void checkTrigger();
-	/* 8003242C */ void checkLeftTrigger();
-	/* 800324A8 */ void checkRightTrigger();
-	/* 80032524 */ void checkUpTrigger();
-	/* 800325A0 */ void checkDownTrigger();
+struct renderingDmap_c {
+	/* 801C0380 */ ~renderingDmap_c();
+	/* 801C051C */ renderingDmap_c();
 };
 
 struct JKRHeap {
@@ -27,46 +23,139 @@ struct JKRHeap {
 	/* 802CE784 */ void getTotalFreeSize();
 };
 
-struct JKRExpHeap {
-	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+struct mDoDvdThd_mountArchive_c {
+	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
 };
 
-struct dMenu_DmapBg_c {
-	/* 801B7F20 */ dMenu_DmapBg_c(JKRExpHeap*, STControl*);
-	/* 801B8110 */ void mapScreenInit();
-	/* 801B884C */ void mapScreenAnime();
-	/* 801B88F4 */ void mapIconScaleSet(u8);
-	/* 801B893C */ void iconScaleAnmInit(f32, f32, u8);
-	/* 801B8954 */ void iconScaleAnm();
-	/* 801B8A0C */ void buttonIconScreenInit();
-	/* 801B8DE4 */ void setAButtonString(u32);
-	/* 801B8EBC */ void setBButtonString(u32);
-	/* 801B8F94 */ void setCButtonString(u32);
-	/* 801B90BC */ void setJButtonString(u32);
-	/* 801B90E0 */ void createExplain();
-	/* 801B9164 */ void deleteExplain();
-	/* 801B91DC */ void baseScreenInit();
-	/* 801B944C */ void setFloorMessage();
-	/* 801BA0B4 */ bool dpdMove(s8, s8, s8, u8*, u8);
-	/* 801BA0BC */ ~dMenu_DmapBg_c();
-	/* 801BA60C */ void setAllAlphaRate(f32, bool);
-	/* 801BA700 */ void setGoldAnimation(bool);
-	/* 801BA7F0 */ void setGoldFrameAlphaRate(f32);
-	/* 801BA974 */ void addGoldFrameAlphaRate();
-	/* 801BAA4C */ void decGoldFrameAlphaRate();
-	/* 801BAB10 */ void draw();
-	/* 801BB334 */ void update();
-	/* 801BB464 */ void calcCursor();
-	/* 801BB468 */ void drawCursor();
+struct fopAc_ac_c {
 };
 
-struct CSTControl {
+struct dTres_c {
+	/* 8009C27C */ void getBossIconFloorNo(int*);
+};
+
+struct dSv_memBit_c {
+	/* 80034860 */ void isSwitch(int) const;
+	/* 80034934 */ void isDungeonItem(int) const;
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct J2DBasePosition {
+};
+
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
+};
+
+struct JKRArchive {
+};
+
+struct dSelect_cursor_c {
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
+	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
+	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
+	/* 801952A0 */ void setAlphaRate(f32);
+};
+
+struct dMsgString_c {
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
+struct dMsgObject_c {
+	/* 80237AE0 */ void setTalkHeap(void*);
+	/* 80237B54 */ void getTalkHeap();
+	/* 8023822C */ void getStatus();
+};
+
+struct dMsgFlow_c {
+	/* 80249F00 */ dMsgFlow_c();
+	/* 80249F48 */ ~dMsgFlow_c();
+	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+};
+
+struct dMeterHaihai_c {
+	/* 8020AE8C */ dMeterHaihai_c(u8);
+	/* 8020B814 */ void drawHaihai(u8, f32, f32, f32, f32);
+	/* 8020BC20 */ void setScale(f32);
+};
+
+struct ResTIMG {
+};
+
+struct J2DPicture {
+	/* 801BDD40 */ void append(ResTIMG const*, f32);
+	/* 801BDD70 */ void insert(ResTIMG const*, u8, f32);
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
+struct JMSMesgEntry_c {
+};
+
+struct dMeter2Info_c {
+	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
+	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
+	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
+};
+
+struct dMenu_StageMapCtrl_c {
+	/* 801C042C */ ~dMenu_StageMapCtrl_c();
+	/* 801C0EE0 */ void getMapBlendPer() const;
+	/* 801C0F24 */ void getPixelStageSizeX() const;
+	/* 801C0F3C */ void getPixelStageSizeZ() const;
+	/* 801C0F54 */ void getPixelCenterX() const;
+	/* 801C0F74 */ void getPixelCenterZ() const;
+	/* 801C0F94 */ void initGetTreasureList(u8, s8);
+	/* 801C0FF8 */ void getTreasureList(f32*, f32*, s8*, u8*, s8*);
+	/* 801C1194 */ void getPlayerDrawInfo(f32*, f32*, s16*) const;
+	/* 801C1218 */ void getRestartDrawInfo(f32*, f32*, s16*) const;
+	/* 801C12A8 */ void setPlusNowStayFloorNo(s8, u8);
+	/* 801C1C40 */ void initZoomIn(u8);
+	/* 801C1CEC */ void initZoomIn(u8, f32, f32);
+	/* 801C1E00 */ void initZoomInCenterHold(u8);
+	/* 801C1F2C */ void initZoomOut(u8);
+	/* 801C1F70 */ void initZoomWait(f32, f32);
+	/* 801C2234 */ void move();
+	/* 801C22F8 */ void getPlayerStayFloorNo() const;
+	/* 801C231C */ void _create(u16, u16, u16, u16, void*);
+	/* 801C235C */ void _create(u16, u16, u16, u16, s8, void*);
+	/* 801C2518 */ void _delete();
+	/* 801C2538 */ void isEnableZoomIn();
+	/* 801C2578 */ void isEnableZoomOut();
+	/* 801C2588 */ void setPlusZoomCenterX(f32);
+	/* 801C2590 */ void setPlusZoomCenterZ(f32);
 };
 
 struct J2DOrthoGraph {
 };
 
-struct JKRArchive {
+struct JKRExpHeap {
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
+struct STControl {
+	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
+	/* 8003219C */ void checkTrigger();
+	/* 8003242C */ void checkLeftTrigger();
+	/* 800324A8 */ void checkRightTrigger();
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct dMenu_ItemExplain_c {
+	/* 801DA754 */ dMenu_ItemExplain_c(JKRExpHeap*, JKRArchive*, STControl*, bool);
+	/* 801DB470 */ void move();
+	/* 801DB514 */ void draw(J2DOrthoGraph*);
+	/* 801DC3C8 */ void openExplainDmap(u8, u8, u8, bool, u8);
 };
 
 struct JGeometry {
@@ -87,6 +176,9 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct CSTControl {
 };
 
 struct dMenu_Dmap_c {
@@ -143,97 +235,41 @@ struct dMenu_Dmap_c {
 	/* 801C02F0 */ void zoomOut_proc();
 };
 
-struct dMenu_DmapMapCtrl_c {
-	/* 801BD144 */ ~dMenu_DmapMapCtrl_c();
-};
-
-struct ResTIMG {
-};
-
-struct J2DPicture {
-	/* 801BDD40 */ void append(ResTIMG const*, f32);
-	/* 801BDD70 */ void insert(ResTIMG const*, u8, f32);
-	/* 802FC708 */ J2DPicture(ResTIMG const*);
-};
-
-struct renderingDmap_c {
-	/* 801C0380 */ ~renderingDmap_c();
-	/* 801C051C */ renderingDmap_c();
-};
-
-struct dMenu_StageMapCtrl_c {
-	/* 801C042C */ ~dMenu_StageMapCtrl_c();
-	/* 801C0EE0 */ void getMapBlendPer() const;
-	/* 801C0F24 */ void getPixelStageSizeX() const;
-	/* 801C0F3C */ void getPixelStageSizeZ() const;
-	/* 801C0F54 */ void getPixelCenterX() const;
-	/* 801C0F74 */ void getPixelCenterZ() const;
-	/* 801C0F94 */ void initGetTreasureList(u8, s8);
-	/* 801C0FF8 */ void getTreasureList(f32*, f32*, s8*, u8*, s8*);
-	/* 801C1194 */ void getPlayerDrawInfo(f32*, f32*, s16*) const;
-	/* 801C1218 */ void getRestartDrawInfo(f32*, f32*, s16*) const;
-	/* 801C12A8 */ void setPlusNowStayFloorNo(s8, u8);
-	/* 801C1C40 */ void initZoomIn(u8);
-	/* 801C1CEC */ void initZoomIn(u8, f32, f32);
-	/* 801C1E00 */ void initZoomInCenterHold(u8);
-	/* 801C1F2C */ void initZoomOut(u8);
-	/* 801C1F70 */ void initZoomWait(f32, f32);
-	/* 801C2234 */ void move();
-	/* 801C22F8 */ void getPlayerStayFloorNo() const;
-	/* 801C231C */ void _create(u16, u16, u16, u16, void*);
-	/* 801C235C */ void _create(u16, u16, u16, u16, s8, void*);
-	/* 801C2518 */ void _delete();
-	/* 801C2538 */ void isEnableZoomIn();
-	/* 801C2578 */ void isEnableZoomOut();
-	/* 801C2588 */ void setPlusZoomCenterX(f32);
-	/* 801C2590 */ void setPlusZoomCenterZ(f32);
-};
-
 struct dMenu_DmapMap_c {
 	/* 801C04AC */ ~dMenu_DmapMap_c();
 };
 
-struct mDoDvdThd_mountArchive_c {
-	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
+struct dMenu_DmapMapCtrl_c {
+	/* 801BD144 */ ~dMenu_DmapMapCtrl_c();
 };
 
-struct dSv_memBit_c {
-	/* 80034860 */ void isSwitch(int) const;
-	/* 80034934 */ void isDungeonItem(int) const;
-};
-
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct dDlst_base_c {
-};
-
-struct dDlst_list_c {
-	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
-};
-
-struct dTres_c {
-	/* 8009C27C */ void getBossIconFloorNo(int*);
-};
-
-struct J2DBasePosition {
-};
-
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
-	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
-};
-
-struct dSelect_cursor_c {
-	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
-	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
-	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
-	/* 801952A0 */ void setAlphaRate(f32);
+struct dMenu_DmapBg_c {
+	/* 801B7F20 */ dMenu_DmapBg_c(JKRExpHeap*, STControl*);
+	/* 801B8110 */ void mapScreenInit();
+	/* 801B884C */ void mapScreenAnime();
+	/* 801B88F4 */ void mapIconScaleSet(u8);
+	/* 801B893C */ void iconScaleAnmInit(f32, f32, u8);
+	/* 801B8954 */ void iconScaleAnm();
+	/* 801B8A0C */ void buttonIconScreenInit();
+	/* 801B8DE4 */ void setAButtonString(u32);
+	/* 801B8EBC */ void setBButtonString(u32);
+	/* 801B8F94 */ void setCButtonString(u32);
+	/* 801B90BC */ void setJButtonString(u32);
+	/* 801B90E0 */ void createExplain();
+	/* 801B9164 */ void deleteExplain();
+	/* 801B91DC */ void baseScreenInit();
+	/* 801B944C */ void setFloorMessage();
+	/* 801BA0B4 */ bool dpdMove(s8, s8, s8, u8*, u8);
+	/* 801BA0BC */ ~dMenu_DmapBg_c();
+	/* 801BA60C */ void setAllAlphaRate(f32, bool);
+	/* 801BA700 */ void setGoldAnimation(bool);
+	/* 801BA7F0 */ void setGoldFrameAlphaRate(f32);
+	/* 801BA974 */ void addGoldFrameAlphaRate();
+	/* 801BAA4C */ void decGoldFrameAlphaRate();
+	/* 801BAB10 */ void draw();
+	/* 801BB334 */ void update();
+	/* 801BB464 */ void calcCursor();
+	/* 801BB468 */ void drawCursor();
 };
 
 struct dMenuMapCommon_c {
@@ -246,77 +282,17 @@ struct dMenuMapCommon_c {
 	/* 801C443C */ void clearIconInfo();
 };
 
-struct dMenu_ItemExplain_c {
-	/* 801DA754 */ dMenu_ItemExplain_c(JKRExpHeap*, JKRArchive*, STControl*, bool);
-	/* 801DB470 */ void move();
-	/* 801DB514 */ void draw(J2DOrthoGraph*);
-	/* 801DC3C8 */ void openExplainDmap(u8, u8, u8, bool, u8);
+struct dDlst_base_c {
 };
 
-struct dMeterHaihai_c {
-	/* 8020AE8C */ dMeterHaihai_c(u8);
-	/* 8020B814 */ void drawHaihai(u8, f32, f32, f32, f32);
-	/* 8020BC20 */ void setScale(f32);
-};
-
-struct JMSMesgEntry_c {
-};
-
-struct dMeter2Info_c {
-	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
-	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
-	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
-};
-
-struct dMsgObject_c {
-	/* 80237AE0 */ void setTalkHeap(void*);
-	/* 80237B54 */ void getTalkHeap();
-	/* 8023822C */ void getStatus();
-};
-
-struct dMsgString_c {
-	/* 80249C20 */ dMsgString_c();
-	/* 80249D28 */ ~dMsgString_c();
-};
-
-struct fopAc_ac_c {
-};
-
-struct dMsgFlow_c {
-	/* 80249F00 */ dMsgFlow_c();
-	/* 80249F48 */ ~dMsgFlow_c();
-	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
-};
-
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 80253930 */ CPaneMgr();
-	/* 80253A18 */ ~CPaneMgr();
-	/* 802545B0 */ void paneTrans(f32, f32);
-	/* 802547CC */ void scaleAnime(s16, f32, f32, u8);
-	/* 80254C90 */ void getGlobalVtx(J2DPane*, f32 (* )[3][4], u8, bool, s16);
-	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
-};
-
-struct CPaneMgrAlpha {
-	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 802555C8 */ void show();
-	/* 80255608 */ void hide();
-	/* 802557D0 */ void setAlphaRate(f32);
-	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
-};
-
-struct CPaneMgrAlphaMorf {
-	/* 80255C68 */ CPaneMgrAlphaMorf(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 80255DD0 */ void setBackupAlpha();
-	/* 80255E28 */ void setAlphaMorfRate(f32);
-};
-
-struct JAISoundID {
+struct dDlst_list_c {
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
 struct Vec {
+};
+
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -335,6 +311,30 @@ struct J2DTextBox {
 
 struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
+};
+
+struct CPaneMgrAlphaMorf {
+	/* 80255C68 */ CPaneMgrAlphaMorf(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 80255DD0 */ void setBackupAlpha();
+	/* 80255E28 */ void setAlphaMorfRate(f32);
+};
+
+struct CPaneMgrAlpha {
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 802555C8 */ void show();
+	/* 80255608 */ void hide();
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
+};
+
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 80253930 */ CPaneMgr();
+	/* 80253A18 */ ~CPaneMgr();
+	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 802547CC */ void scaleAnime(s16, f32, f32, u8);
+	/* 80254C90 */ void getGlobalVtx(J2DPane*, f32 (* )[3][4], u8, bool, s16);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 // 

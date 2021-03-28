@@ -11,30 +11,30 @@
 // Types:
 // 
 
-struct base_process_class {
-};
-
-struct delete_tag_class {
-};
-
-struct layer_class {
-};
-
-struct layer_management_tag_class {
+struct process_priority_class {
 };
 
 struct process_method_class {
 };
 
-struct process_priority_class {
+struct line_tag {
 };
 
-struct line_tag {
+struct layer_management_tag_class {
+};
+
+struct layer_class {
+};
+
+struct delete_tag_class {
 };
 
 struct cMl {
 	/* 80263228 */ void memalignB(int, u32);
 	/* 80263260 */ void free(void*);
+};
+
+struct base_process_class {
 };
 
 // 

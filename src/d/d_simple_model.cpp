@@ -11,22 +11,10 @@
 // Types:
 // 
 
-struct J3DModel {
+struct modelList_c {
 };
 
 struct J3DModelData {
-};
-
-struct dSmplMdl_draw_c {
-	/* 80048CB4 */ dSmplMdl_draw_c();
-	/* 80048D80 */ ~dSmplMdl_draw_c();
-	/* 80048E0C */ void draw();
-	/* 80048EBC */ void entry(J3DModel*, int);
-	/* 80048F70 */ void addModel(J3DModelData*, int, u8);
-	/* 80049058 */ void removeModel(J3DModelData*, int);
-};
-
-struct modelList_c {
 };
 
 struct diff_model_c {
@@ -41,7 +29,16 @@ struct diff_model_c {
 	/* 80049408 */ void insert(modelList_c*);
 };
 
-struct JKRSolidHeap {
+struct J3DModel {
+};
+
+struct dSmplMdl_draw_c {
+	/* 80048CB4 */ dSmplMdl_draw_c();
+	/* 80048D80 */ ~dSmplMdl_draw_c();
+	/* 80048E0C */ void draw();
+	/* 80048EBC */ void entry(J3DModel*, int);
+	/* 80048F70 */ void addModel(J3DModelData*, int, u8);
+	/* 80049058 */ void removeModel(J3DModelData*, int);
 };
 
 struct dKy_tevstr_c {
@@ -49,6 +46,9 @@ struct dKy_tevstr_c {
 
 struct dScnKy_env_light_c {
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct JKRSolidHeap {
 };
 
 // 

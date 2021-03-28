@@ -46,7 +46,7 @@ extern "C" void OSGetTime(); // 1
 // Declarations:
 // 
 
-/* 8033D6F4-8033D700 000C+00 s=2 e=200 z=5  None .text      OSDisableInterrupts                                          */
+/* 8033D6F4-8033D700 000C+00 s=2 e=200 z=0  None .text      OSDisableInterrupts                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -68,7 +68,7 @@ extern "C" asm void __RAS_OSDisableInterrupts_end() {
 #pragma pop
 
 
-/* 8033D708-8033D71C 0014+00 s=0 e=10 z=1  None .text      OSEnableInterrupts                                           */
+/* 8033D708-8033D71C 0014+00 s=0 e=10 z=0  None .text      OSEnableInterrupts                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,7 +79,7 @@ extern "C" asm void OSEnableInterrupts() {
 #pragma pop
 
 
-/* 8033D71C-8033D740 0024+00 s=2 e=197 z=6  None .text      OSRestoreInterrupts                                          */
+/* 8033D71C-8033D740 0024+00 s=2 e=197 z=0  None .text      OSRestoreInterrupts                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

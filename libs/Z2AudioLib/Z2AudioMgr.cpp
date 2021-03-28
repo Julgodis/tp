@@ -11,7 +11,54 @@
 // Types:
 // 
 
-struct JKRArchive {
+struct Z2StatusMgr {
+	/* 802B5F1C */ Z2StatusMgr();
+	/* 802B5F7C */ void processHeartGaugeSound();
+	/* 802B617C */ void menuOut();
+	/* 802B671C */ void processTime();
+};
+
+struct Z2SpeechMgr2 {
+	/* 802CBC60 */ Z2SpeechMgr2();
+	/* 802CC9D0 */ void framework();
+};
+
+struct Z2SoundStarter {
+	/* 802AAB94 */ Z2SoundStarter(bool);
+};
+
+struct Z2SoundObjMgr {
+	/* 802BF920 */ Z2SoundObjMgr();
+};
+
+struct Z2SoundMgr {
+	/* 802A9E80 */ Z2SoundMgr();
+	/* 802AA67C */ void framework();
+	/* 802AA84C */ void stopSync();
+	/* 802AA908 */ void initParams();
+};
+
+struct Z2SeqMgr {
+	/* 802AEEA0 */ Z2SeqMgr();
+	/* 802B33A8 */ void processBgmFramework();
+};
+
+struct Z2SeMgr {
+	/* 802AB64C */ Z2SeMgr();
+	/* 802AB750 */ void initSe();
+	/* 802AE184 */ void processSeFramework();
+};
+
+struct Z2SceneMgr {
+	/* 802B6840 */ Z2SceneMgr();
+	/* 802B9C50 */ void framework();
+};
+
+struct Z2FxLineMgr {
+	/* 802BA7DC */ Z2FxLineMgr();
+};
+
+struct JKRSolidHeap {
 };
 
 struct JGeometry {
@@ -23,13 +70,13 @@ struct JGeometry {
 
 };
 
-struct JKRSolidHeap {
-};
-
-struct JAISoundHandle {
+struct JKRArchive {
 };
 
 struct JAISoundID {
+};
+
+struct JAISoundHandle {
 };
 
 struct Z2AudioMgr {
@@ -44,88 +91,19 @@ struct Z2AudioMgr {
 	/* 802CDB1C */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
 };
 
-template <typename A0>
-struct JAUStreamAramMgrBase_ { };
-/* JAUStreamAramMgrBase_<1> */
-struct JAUStreamAramMgrBase___template0 {
-	/* 802CD7F8 */ ~JAUStreamAramMgrBase___template0();
+struct JAUSection {
+	/* 802A50F8 */ void finishBuild();
 };
 
-template <typename A0>
-struct JAUStreamStaticAramMgr_ { };
-/* JAUStreamStaticAramMgr_<1> */
-struct JAUStreamStaticAramMgr___template0 {
-	/* 802CDB68 */ ~JAUStreamStaticAramMgr___template0();
-	/* 802CDC08 */ void deleteStreamAram(u32);
-	/* 802CDCEC */ void newStreamAram(u32*);
+struct Z2AudioArcLoader {
+	/* 802A9A34 */ Z2AudioArcLoader(JAUSection*);
 };
 
-struct JASHeap {
-	/* 8029021C */ void alloc(JASHeap*, u32);
-	/* 802904E4 */ void free();
-	/* 80290B54 */ ~JASHeap();
-	/* 802A4A5C */ void __defctor();
+struct Z2Audience {
+	/* 802BD130 */ Z2Audience();
 };
 
-struct JASGenericMemPool {
-	/* 80290848 */ JASGenericMemPool();
-	/* 802908C8 */ void newMemPool(u32, int);
-};
-
-struct JASKernel {
-	/* 80290B08 */ void getAramHeap();
-};
-
-struct JASResArcLoader {
-	/* 80290C04 */ void getResMaxSize(JKRArchive const*);
-};
-
-struct JASDriver {
-	/* 8029C9F0 */ void getSubFrames();
-	/* 8029E178 */ void setOutputMode(u32);
-};
-
-struct JASAudioReseter {
-	/* 8029D0B4 */ JASAudioReseter();
-	/* 8029D138 */ void start(u32, bool);
-	/* 8029D1D4 */ void resume();
-	/* 8029D1F8 */ void checkDone() const;
-};
-
-struct JAISeCategoryArrangement {
-};
-
-struct JAISeqDataMgr {
-};
-
-struct JAIAudience {
-};
-
-struct JAISeMgr {
-	/* 802A0268 */ void setCategoryArrangement(JAISeCategoryArrangement const&);
-	/* 802A03D8 */ void setAudience(JAIAudience*);
-	/* 802A03E0 */ void setSeqDataMgr(JAISeqDataMgr*);
-	/* 802A08D0 */ void getNumActiveSe() const;
-};
-
-struct JAISoundInfo {
-	/* 802A2D34 */ JAISoundInfo(bool);
-};
-
-struct JAISoundParamsMove {
-	/* 802A2DB4 */ void moveVolume(f32, u32);
-};
-
-struct JAIStreamAramMgr {
-	/* 802A3B20 */ ~JAIStreamAramMgr();
-};
-
-struct JAUAudioArcInterpreter {
-	/* 802A4260 */ ~JAUAudioArcInterpreter();
-};
-
-struct JAUAudioArcLoader {
-	/* 802A478C */ void load(void const*);
+struct JKRHeap {
 };
 
 struct JAU_JASInitializer {
@@ -138,8 +116,20 @@ struct JAU_JAIInitializer {
 	/* 802A4D60 */ void initJAInterface();
 };
 
-struct JAUSection {
-	/* 802A50F8 */ void finishBuild();
+template <typename A0>
+struct JAUStreamStaticAramMgr_ { };
+/* JAUStreamStaticAramMgr_<1> */
+struct JAUStreamStaticAramMgr___template0 {
+	/* 802CDB68 */ ~JAUStreamStaticAramMgr___template0();
+	/* 802CDC08 */ void deleteStreamAram(u32);
+	/* 802CDCEC */ void newStreamAram(u32*);
+};
+
+template <typename A0>
+struct JAUStreamAramMgrBase_ { };
+/* JAUStreamAramMgrBase_<1> */
+struct JAUStreamAramMgrBase___template0 {
+	/* 802CD7F8 */ ~JAUStreamAramMgrBase___template0();
 };
 
 struct JAUSectionHeap {
@@ -147,22 +137,19 @@ struct JAUSectionHeap {
 	/* 802A60AC */ void newDynamicSeqBlock(u32);
 };
 
-struct Z2AudioArcLoader {
-	/* 802A9A34 */ Z2AudioArcLoader(JAUSection*);
+struct JAUAudioArcLoader {
+	/* 802A478C */ void load(void const*);
+};
+
+struct JAUAudioArcInterpreter {
+	/* 802A4260 */ ~JAUAudioArcInterpreter();
 };
 
 struct JASTrack {
 };
 
-struct Z2SoundMgr {
-	/* 802A9E80 */ Z2SoundMgr();
-	/* 802AA67C */ void framework();
-	/* 802AA84C */ void stopSync();
-	/* 802AA908 */ void initParams();
-};
-
-struct Z2SoundStarter {
-	/* 802AAB94 */ Z2SoundStarter(bool);
+struct JASResArcLoader {
+	/* 80290C04 */ void getResMaxSize(JKRArchive const*);
 };
 
 template <typename A0>
@@ -177,47 +164,60 @@ struct JASMemPool__template5 {
 	/* 802BD288 */ ~JASMemPool__template5();
 };
 
-struct Z2SeMgr {
-	/* 802AB64C */ Z2SeMgr();
-	/* 802AB750 */ void initSe();
-	/* 802AE184 */ void processSeFramework();
+struct JASKernel {
+	/* 80290B08 */ void getAramHeap();
 };
 
-struct Z2SeqMgr {
-	/* 802AEEA0 */ Z2SeqMgr();
-	/* 802B33A8 */ void processBgmFramework();
+struct JASHeap {
+	/* 8029021C */ void alloc(JASHeap*, u32);
+	/* 802904E4 */ void free();
+	/* 80290B54 */ ~JASHeap();
+	/* 802A4A5C */ void __defctor();
 };
 
-struct Z2StatusMgr {
-	/* 802B5F1C */ Z2StatusMgr();
-	/* 802B5F7C */ void processHeartGaugeSound();
-	/* 802B617C */ void menuOut();
-	/* 802B671C */ void processTime();
+struct JASGenericMemPool {
+	/* 80290848 */ JASGenericMemPool();
+	/* 802908C8 */ void newMemPool(u32, int);
 };
 
-struct Z2SceneMgr {
-	/* 802B6840 */ Z2SceneMgr();
-	/* 802B9C50 */ void framework();
+struct JASDriver {
+	/* 8029C9F0 */ void getSubFrames();
+	/* 8029E178 */ void setOutputMode(u32);
 };
 
-struct Z2FxLineMgr {
-	/* 802BA7DC */ Z2FxLineMgr();
+struct JASAudioReseter {
+	/* 8029D0B4 */ JASAudioReseter();
+	/* 8029D138 */ void start(u32, bool);
+	/* 8029D1D4 */ void resume();
+	/* 8029D1F8 */ void checkDone() const;
 };
 
-struct Z2Audience {
-	/* 802BD130 */ Z2Audience();
+struct JAIStreamAramMgr {
+	/* 802A3B20 */ ~JAIStreamAramMgr();
 };
 
-struct Z2SoundObjMgr {
-	/* 802BF920 */ Z2SoundObjMgr();
+struct JAISoundParamsMove {
+	/* 802A2DB4 */ void moveVolume(f32, u32);
 };
 
-struct Z2SpeechMgr2 {
-	/* 802CBC60 */ Z2SpeechMgr2();
-	/* 802CC9D0 */ void framework();
+struct JAISoundInfo {
+	/* 802A2D34 */ JAISoundInfo(bool);
 };
 
-struct JKRHeap {
+struct JAISeqDataMgr {
+};
+
+struct JAIAudience {
+};
+
+struct JAISeCategoryArrangement {
+};
+
+struct JAISeMgr {
+	/* 802A0268 */ void setCategoryArrangement(JAISeCategoryArrangement const&);
+	/* 802A03D8 */ void setAudience(JAIAudience*);
+	/* 802A03E0 */ void setSeqDataMgr(JAISeqDataMgr*);
+	/* 802A08D0 */ void getNumActiveSe() const;
 };
 
 // 
@@ -359,7 +359,7 @@ SECTION_DATA void* __vt__10Z2AudioMgr[3] = {
 	(void*)func_802CDB1C,
 };
 
-/* 80451368-80451370 0004+04 s=1 e=251 z=900  None .sbss      mAudioMgrPtr__10Z2AudioMgr                                   */
+/* 80451368-80451370 0004+04 s=1 e=251 z=0  None .sbss      mAudioMgrPtr__10Z2AudioMgr                                   */
 u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 /* 802CD248-802CD34C 0104+00 s=0 e=1 z=0  None .text      __ct__10Z2AudioMgrFv                                         */

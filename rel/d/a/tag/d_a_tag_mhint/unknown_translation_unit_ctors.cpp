@@ -11,18 +11,3 @@
 // Forward References:
 // 
 
-
-extern u8 const data_805A602C[4];
-
-// 
-// External References:
-// 
-
-
-
-// 
-// Declarations:
-// 
-
-/* ############################################################################################## */
-#pragma section ".ctors$10"

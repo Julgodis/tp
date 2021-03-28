@@ -11,9 +11,63 @@
 // Types:
 // 
 
-struct dDlst_Gameover_CAPTURE_c {
-	/* 8019ACF8 */ void draw();
-	/* 8019C2CC */ ~dDlst_Gameover_CAPTURE_c();
+struct request_of_phase_process_class {
+};
+
+struct msg_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct dSv_player_item_c {
+	/* 80032FB8 */ void setItem(int, u8);
+	/* 80033030 */ void getItem(int, bool) const;
+};
+
+struct dSv_player_get_item_c {
+	/* 80033EC8 */ void isFirstBit(u8) const;
+};
+
+struct dSv_event_c {
+	/* 800349A4 */ void offEventBit(u16);
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, int);
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct dMsgScrnLight_c {
+	/* 80245934 */ dMsgScrnLight_c(u8, u8);
+	/* 80245F90 */ void draw(f32*, f32, f32, f32, f32, f32, f32, JUtility::TColor, JUtility::TColor);
+};
+
+struct JMSMesgEntry_c {
+};
+
+struct dMeter2Info_c {
+	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
+	/* 8021E0C4 */ void resetMiniGameItem(bool);
+};
+
+struct dMenu_save_c {
+	/* 8019C314 */ ~dMenu_save_c();
+	/* 801EF6A0 */ dMenu_save_c();
+	/* 801EF7AC */ void _create();
+	/* 801F09AC */ void _open();
+	/* 801F0B28 */ void _delete();
+	/* 801F1048 */ void _move();
+	/* 801F69FC */ void _draw2();
 };
 
 struct dGov_HIO_c {
@@ -46,6 +100,18 @@ struct dGameover_c {
 	/* 8019B864 */ void _delete();
 };
 
+struct dDlst_base_c {
+};
+
+struct dDlst_list_c {
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
+};
+
+struct dDlst_Gameover_CAPTURE_c {
+	/* 8019ACF8 */ void draw();
+	/* 8019C2CC */ ~dDlst_Gameover_CAPTURE_c();
+};
+
 struct JKRArchive {
 };
 
@@ -56,90 +122,18 @@ struct dDlst_GameOverScrnDraw_c {
 	/* 8019BCF4 */ void draw();
 };
 
-struct msg_class {
+struct cXyz {
 };
 
-struct dMenu_save_c {
-	/* 8019C314 */ ~dMenu_save_c();
-	/* 801EF6A0 */ dMenu_save_c();
-	/* 801EF7AC */ void _create();
-	/* 801F09AC */ void _open();
-	/* 801F0B28 */ void _delete();
-	/* 801F1048 */ void _move();
-	/* 801F69FC */ void _draw2();
+struct ResTLUT {
+};
+
+struct ResTIMG {
 };
 
 struct JKRHeap {
 	/* 802CE5CC */ void freeAll();
 	/* 802CE784 */ void getTotalFreeSize();
-};
-
-struct fopAc_ac_c {
-};
-
-struct cXyz {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dSv_player_item_c {
-	/* 80032FB8 */ void setItem(int, u8);
-	/* 80033030 */ void getItem(int, bool) const;
-};
-
-struct dSv_player_get_item_c {
-	/* 80033EC8 */ void isFirstBit(u8) const;
-};
-
-struct dSv_event_c {
-	/* 800349A4 */ void offEventBit(u16);
-	/* 800349BC */ void isEventBit(u16) const;
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, int);
-};
-
-struct dDlst_base_c {
-};
-
-struct dDlst_list_c {
-	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
-};
-
-struct JMSMesgEntry_c {
-};
-
-struct dMeter2Info_c {
-	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
-	/* 8021E0C4 */ void resetMiniGameItem(bool);
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct dMsgScrnLight_c {
-	/* 80245934 */ dMsgScrnLight_c(u8, u8);
-	/* 80245F90 */ void draw(f32*, f32, f32, f32, f32, f32, f32, JUtility::TColor, JUtility::TColor);
-};
-
-struct J2DGrafContext {
-};
-
-struct J2DScreen {
-	/* 802F8498 */ J2DScreen();
-	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
-	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct ResTIMG {
 };
 
 struct JGeometry {
@@ -151,15 +145,21 @@ struct JGeometry {
 
 };
 
-struct ResTLUT {
+struct J2DTextBox {
+	/* 80300660 */ void setString(char const*, ...);
+};
+
+struct J2DGrafContext {
+};
+
+struct J2DScreen {
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
 struct J2DPicture {
 	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
-};
-
-struct J2DTextBox {
-	/* 80300660 */ void setString(char const*, ...);
 };
 
 // 
@@ -529,7 +529,7 @@ SECTION_DATA static void* l_dGameover_Method[5] = {
 	(void*)dGameover_Draw__FP11dGameover_c,
 };
 
-/* 803BBD40-803BBD68 0028+00 s=0 e=0 z=1  None .data      g_profile_GAMEOVER                                           */
+/* 803BBD40-803BBD68 0028+00 s=0 e=0 z=0  None .data      g_profile_GAMEOVER                                           */
 SECTION_DATA void* g_profile_GAMEOVER[10] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000CFFFD,

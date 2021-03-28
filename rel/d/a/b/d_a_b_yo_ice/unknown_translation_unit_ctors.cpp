@@ -11,19 +11,3 @@
 // Forward References:
 // 
 
-
-extern void* const data_8063DC70[2];
-
-// 
-// External References:
-// 
-
-
-extern "C" void __sinit_d_a_b_yo_ice_cpp(); // 1
-
-// 
-// Declarations:
-// 
-
-/* ############################################################################################## */
-#pragma section ".ctors$10"

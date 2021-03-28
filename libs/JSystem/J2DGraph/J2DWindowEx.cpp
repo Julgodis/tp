@@ -11,22 +11,22 @@
 // Types:
 // 
 
-struct J2DWindow {
-	struct TMaterial {
+struct _GXCullMode {
+};
+
+struct _GXColor {
+};
+
+struct ResTIMG {
+};
+
+struct ResFONT {
+};
+
+struct JUtility {
+	struct TColor {
 	};
 
-	/* 802F9A7C */ J2DWindow();
-	/* 802FA880 */ ~J2DWindow();
-	/* 802FB000 */ void resize(f32, f32);
-	/* 802FB1D8 */ void drawSelf(f32, f32);
-	/* 802FBF98 */ s32 getTypeID() const;
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
 struct JSUStreamSeekFrom {
@@ -37,49 +37,8 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct J2DAnmTransform {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DAnmColor {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct J2DMaterial {
-	/* 802EA38C */ void setGX();
-	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
-	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
-	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
-	/* 802EA89C */ void setAnimation(J2DAnmColor*);
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct ResFONT {
-};
-
-struct _GXColor {
-};
-
-struct J2DAnmVtxColor {
-	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
-};
-
-struct _GXCullMode {
-};
-
-struct J2DTevStage {
-};
-
-struct ResTIMG {
+struct JSUInputStream {
+	/* 802DC298 */ void read(void*, s32);
 };
 
 struct JGeometry {
@@ -92,6 +51,51 @@ struct JGeometry {
 };
 
 struct J2DAnmBase {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DTevStage {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DMaterial {
+	/* 802EA38C */ void setGX();
+	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
+	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
+	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802EA89C */ void setAnimation(J2DAnmColor*);
+};
+
+struct J2DWindow {
+	struct TMaterial {
+	};
+
+	/* 802F9A7C */ J2DWindow();
+	/* 802FA880 */ ~J2DWindow();
+	/* 802FB000 */ void resize(f32, f32);
+	/* 802FB1D8 */ void drawSelf(f32, f32);
+	/* 802FBF98 */ s32 getTypeID() const;
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
+};
+
+struct J2DAnmVtxColor {
+	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
 };
 
 struct J2DPane {
@@ -165,10 +169,6 @@ struct J2DWindowEx {
 	/* 80303510 */ void getFrameMaterial(u8) const;
 	/* 80303534 */ void getContentsMaterial() const;
 	/* 8030353C */ void getMaterial(J2DWindow::TMaterial&) const;
-};
-
-struct JSUInputStream {
-	/* 802DC298 */ void read(void*, s32);
 };
 
 // 

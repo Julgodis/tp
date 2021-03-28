@@ -11,6 +11,12 @@
 // Types:
 // 
 
+struct JPAEmitterWorkData {
+};
+
+struct JPABaseParticle {
+};
+
 struct JKRHeap {
 };
 
@@ -19,10 +25,50 @@ struct JPAFieldBlock {
 	/* 8027D0C0 */ void init(JKRHeap*);
 };
 
-struct JPABaseParticle {
+struct JPAFieldVortex {
+	/* 8027C56C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
+	/* 8027C674 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
+	/* 8027D564 */ ~JPAFieldVortex();
 };
 
-struct JPAEmitterWorkData {
+struct JPAFieldSpin {
+	/* 8027CE64 */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
+	/* 8027CFA8 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
+	/* 8027D3F4 */ ~JPAFieldSpin();
+};
+
+struct JPAFieldRandom {
+	/* 8027CCCC */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
+	/* 8027D4AC */ ~JPAFieldRandom();
+};
+
+struct JPAFieldNewton {
+	/* 8027C36C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
+	/* 8027C3E0 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
+	/* 8027D5C0 */ ~JPAFieldNewton();
+};
+
+struct JPAFieldMagnet {
+	/* 8027C24C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
+	/* 8027C29C */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
+	/* 8027D61C */ ~JPAFieldMagnet();
+};
+
+struct JPAFieldGravity {
+	/* 8027BFB4 */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
+	/* 8027C054 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
+	/* 8027D6D4 */ ~JPAFieldGravity();
+};
+
+struct JPAFieldDrag {
+	/* 8027CDE4 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
+	/* 8027D450 */ ~JPAFieldDrag();
+};
+
+struct JPAFieldConvection {
+	/* 8027C814 */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
+	/* 8027CA94 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
+	/* 8027D508 */ ~JPAFieldConvection();
 };
 
 struct JPAFieldBase {
@@ -32,56 +78,10 @@ struct JPAFieldBase {
 	/* 8027D3AC */ ~JPAFieldBase();
 };
 
-struct JPAFieldGravity {
-	/* 8027BFB4 */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
-	/* 8027C054 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
-	/* 8027D6D4 */ ~JPAFieldGravity();
-};
-
 struct JPAFieldAir {
 	/* 8027C07C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 	/* 8027C1B8 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D678 */ ~JPAFieldAir();
-};
-
-struct JPAFieldMagnet {
-	/* 8027C24C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
-	/* 8027C29C */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
-	/* 8027D61C */ ~JPAFieldMagnet();
-};
-
-struct JPAFieldNewton {
-	/* 8027C36C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
-	/* 8027C3E0 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
-	/* 8027D5C0 */ ~JPAFieldNewton();
-};
-
-struct JPAFieldVortex {
-	/* 8027C56C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
-	/* 8027C674 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
-	/* 8027D564 */ ~JPAFieldVortex();
-};
-
-struct JPAFieldConvection {
-	/* 8027C814 */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
-	/* 8027CA94 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
-	/* 8027D508 */ ~JPAFieldConvection();
-};
-
-struct JPAFieldRandom {
-	/* 8027CCCC */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
-	/* 8027D4AC */ ~JPAFieldRandom();
-};
-
-struct JPAFieldDrag {
-	/* 8027CDE4 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
-	/* 8027D450 */ ~JPAFieldDrag();
-};
-
-struct JPAFieldSpin {
-	/* 8027CE64 */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
-	/* 8027CFA8 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
-	/* 8027D3F4 */ ~JPAFieldSpin();
 };
 
 // 

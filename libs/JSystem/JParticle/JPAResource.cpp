@@ -11,6 +11,13 @@
 // Types:
 // 
 
+struct _GXTexMapID {
+};
+
+struct JUTTexture {
+	/* 802DE840 */ void load(_GXTexMapID);
+};
+
 struct JPAEmitterWorkData {
 };
 
@@ -45,6 +52,10 @@ struct JPAResource {
 	/* 80276A0C */ void calcWorkData_d(JPAEmitterWorkData*);
 };
 
+struct JPAKeyBlock {
+	/* 8027D740 */ void calc(f32);
+};
+
 struct JPAFieldBlock {
 };
 
@@ -52,16 +63,12 @@ struct JPAFieldBase {
 	/* 80276A8C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 };
 
-struct JPABaseShape {
-	/* 8027A7E8 */ void setGX(JPAEmitterWorkData*) const;
-};
-
 struct JPADynamicsBlock {
 	/* 8027BBE8 */ void create(JPAEmitterWorkData*);
 };
 
-struct JPAKeyBlock {
-	/* 8027D740 */ void calc(f32);
+struct JPABaseShape {
+	/* 8027A7E8 */ void setGX(JPAEmitterWorkData*) const;
 };
 
 struct JGeometry {
@@ -71,13 +78,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct _GXTexMapID {
-};
-
-struct JUTTexture {
-	/* 802DE840 */ void load(_GXTexMapID);
 };
 
 // 

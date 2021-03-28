@@ -11,6 +11,15 @@
 // Types:
 // 
 
+struct JKRHeap {
+	/* 802CE83C */ void findFromRoot(void*);
+};
+
+struct JKRFileLoader {
+	/* 802D40F0 */ JKRFileLoader();
+	/* 802D4148 */ ~JKRFileLoader();
+};
+
 struct JKRArchive {
 	struct EMountMode {
 	};
@@ -36,15 +45,6 @@ struct JKRArchive {
 	/* 802D6770 */ void findIdResource(u16) const;
 	/* 802D693C */ void setExpandSize(JKRArchive::SDIFileEntry*, u32);
 	/* 802D6978 */ void getExpandSize(JKRArchive::SDIFileEntry*) const;
-};
-
-struct JKRHeap {
-	/* 802CE83C */ void findFromRoot(void*);
-};
-
-struct JKRFileLoader {
-	/* 802D40F0 */ JKRFileLoader();
-	/* 802D4148 */ ~JKRFileLoader();
 };
 
 // 

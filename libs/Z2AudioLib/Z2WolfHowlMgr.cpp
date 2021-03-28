@@ -35,20 +35,24 @@ struct Z2WolfHowlMgr {
 	/* 802CBB58 */ void skipCorrectDemo();
 };
 
-struct JAISound {
-	/* 802A2598 */ void stop();
-	/* 802A24DC */ void stop(u32);
-};
-
-struct JAISoundParamsMove {
-	/* 802A2DB4 */ void moveVolume(f32, u32);
-	/* 802A2E0C */ void movePitch(f32, u32);
-};
-
-struct JAISoundHandle {
+struct Z2SeqMgr {
+	/* 802AF49C */ void subBgmStart(u32);
+	/* 802B327C */ void stopWolfHowlSong();
 };
 
 struct JAISoundID {
+};
+
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct Z2Calc {
+	struct CurveSign {
+	};
+
+	/* 802A968C */ void linearTransform(f32, f32, f32, f32, f32, bool);
+	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
 };
 
 struct JGeometry {
@@ -60,25 +64,21 @@ struct JGeometry {
 
 };
 
+struct JAISoundHandle {
+};
+
 struct JAISoundStarter {
 	/* 802A2FEC */ void startLevelSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
 };
 
-struct Z2Calc {
-	struct CurveSign {
-	};
-
-	/* 802A968C */ void linearTransform(f32, f32, f32, f32, f32, bool);
-	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
+struct JAISoundParamsMove {
+	/* 802A2DB4 */ void moveVolume(f32, u32);
+	/* 802A2E0C */ void movePitch(f32, u32);
 };
 
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-};
-
-struct Z2SeqMgr {
-	/* 802AF49C */ void subBgmStart(u32);
-	/* 802B327C */ void stopWolfHowlSong();
+struct JAISound {
+	/* 802A2598 */ void stop();
+	/* 802A24DC */ void stop(u32);
 };
 
 // 
@@ -490,7 +490,7 @@ SECTION_SDATA2 static f32 lit_4041[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 802CB6EC-802CBA88 039C+00 s=0 e=0 z=2  None .text      startWindStoneSound__13Z2WolfHowlMgrFScP3Vec                 */
+/* 802CB6EC-802CBA88 039C+00 s=0 e=0 z=0  None .text      startWindStoneSound__13Z2WolfHowlMgrFScP3Vec                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

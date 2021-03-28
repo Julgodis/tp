@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct JAISoundID {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -21,6 +18,9 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundID {
 };
 
 struct Z2SoundHandles {
@@ -35,6 +35,18 @@ struct Z2SoundHandles {
 	/* 802AB4A0 */ void stopAllSounds(u32);
 	/* 802AB504 */ void isActive() const;
 	/* 802AB538 */ void setPos(JGeometry::TVec3<f32> const&);
+};
+
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
+	/* 802DBE14 */ ~JSUPtrLink();
+};
+
+struct JSUPtrList {
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF14 */ void initiate();
+	/* 802DBF4C */ void append(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
 template <typename A0>
@@ -57,18 +69,6 @@ struct JAISoundHandle {
 
 struct JAISound {
 	/* 802A24DC */ void stop(u32);
-};
-
-struct JSUPtrLink {
-	/* 802DBDFC */ JSUPtrLink(void*);
-	/* 802DBE14 */ ~JSUPtrLink();
-};
-
-struct JSUPtrList {
-	/* 802DBEAC */ ~JSUPtrList();
-	/* 802DBF14 */ void initiate();
-	/* 802DBF4C */ void append(JSUPtrLink*);
-	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
 // 

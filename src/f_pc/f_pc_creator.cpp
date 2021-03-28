@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct base_process_class {
+struct create_request {
 };
 
-struct create_request {
+struct base_process_class {
 };
 
 // 

@@ -11,13 +11,6 @@
 // Types:
 // 
 
-struct JAISoundHandle {
-	/* 802A2184 */ void releaseSound();
-};
-
-struct JAIAudience {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -27,15 +20,31 @@ struct JGeometry {
 
 };
 
-struct JAISoundID {
-};
-
 struct JASSoundParams {
 };
 
 struct JASTrack {
 	/* 80291444 */ void setChannelMgrCount(u32);
 	/* 802919F4 */ void assignExtBuffer(u32, JASSoundParams*);
+};
+
+struct JAISoundStatus_ {
+	/* 802A2220 */ void lockWhenPrepared();
+	/* 802A2244 */ void unlockIfLocked();
+};
+
+struct JAISoundParams {
+	/* 802A2280 */ void mixOutAll(JASSoundParams const&, JASSoundParams*, f32);
+};
+
+struct JAISoundID {
+};
+
+struct JAISoundHandle {
+	/* 802A2184 */ void releaseSound();
+};
+
+struct JAIAudience {
 };
 
 struct JAISound {
@@ -54,15 +63,6 @@ struct JAISound {
 	/* 802A266C */ void increasePrepareCount_JAISound_();
 	/* 802A26B8 */ void calc_JAISound_();
 	/* 802A29DC */ void initTrack_JAISound_(JASTrack*);
-};
-
-struct JAISoundStatus_ {
-	/* 802A2220 */ void lockWhenPrepared();
-	/* 802A2244 */ void unlockIfLocked();
-};
-
-struct JAISoundParams {
-	/* 802A2280 */ void mixOutAll(JASSoundParams const&, JASSoundParams*, f32);
 };
 
 // 

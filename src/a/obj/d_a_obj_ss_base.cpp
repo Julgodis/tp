@@ -11,16 +11,16 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct daObj_SSBase_c {
 	/* 8015E3F8 */ daObj_SSBase_c();
 	/* 8015E450 */ ~daObj_SSBase_c();
 	/* 8015E4B0 */ void getProcessID();
 	/* 8015E4C8 */ void setSoldOut();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 // 
@@ -59,7 +59,7 @@ SECTION_DATA static void* __vt__14daObj_SSBase_c[5 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 8015E3F8-8015E450 0058+00 s=0 e=0 z=3  None .text      __ct__14daObj_SSBase_cFv                                     */
+/* 8015E3F8-8015E450 0058+00 s=0 e=0 z=0  None .text      __ct__14daObj_SSBase_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +70,7 @@ asm daObj_SSBase_c::daObj_SSBase_c() {
 #pragma pop
 
 
-/* 8015E450-8015E4B0 0060+00 s=1 e=0 z=3  None .text      __dt__14daObj_SSBase_cFv                                     */
+/* 8015E450-8015E4B0 0060+00 s=1 e=0 z=0  None .text      __dt__14daObj_SSBase_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -81,7 +81,7 @@ asm daObj_SSBase_c::~daObj_SSBase_c() {
 #pragma pop
 
 
-/* 8015E4B0-8015E4C8 0018+00 s=1 e=0 z=2  None .text      getProcessID__14daObj_SSBase_cFv                             */
+/* 8015E4B0-8015E4C8 0018+00 s=1 e=0 z=0  None .text      getProcessID__14daObj_SSBase_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

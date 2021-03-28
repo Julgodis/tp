@@ -11,10 +11,25 @@
 // Types:
 // 
 
+struct JAISoundHandle {
+	/* 802A2184 */ void releaseSound();
+};
+
+struct Z2SoundStarter {
+	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
+};
+
 struct Vec {
 };
 
 struct JAISoundID {
+};
+
+struct Z2SoundObjSimple {
+	/* 802BE844 */ Z2SoundObjSimple();
+	/* 802BE880 */ void init(Vec*, u8);
+	/* 802BE8A0 */ void startSound(JAISoundID, u32, s8);
+	/* 802BE9B0 */ void startLevelSound(JAISoundID, u32, s8);
 };
 
 struct Z2SoundHandlePool {
@@ -31,22 +46,6 @@ struct Z2SoundObjBase {
 	/* 802BE144 */ void startSound(JAISoundID, u32, s8);
 	/* 802BE2D4 */ void startLevelSound(JAISoundID, u32, s8);
 	/* 802BE4A4 */ void startCollisionSE(u32, u32, Z2SoundObjBase*);
-};
-
-struct Z2DopplerSoundObjBase {
-	/* 802BE5A0 */ Z2DopplerSoundObjBase();
-	/* 802BE5FC */ ~Z2DopplerSoundObjBase();
-	/* 802BE65C */ void init(Vec*, u8);
-	/* 802BE6B8 */ void framework(u32, s8);
-	/* 802BE714 */ void startSound(JAISoundID, u32, s8);
-	/* 802BE7AC */ void startLevelSound(JAISoundID, u32, s8);
-};
-
-struct Z2SoundObjSimple {
-	/* 802BE844 */ Z2SoundObjSimple();
-	/* 802BE880 */ void init(Vec*, u8);
-	/* 802BE8A0 */ void startSound(JAISoundID, u32, s8);
-	/* 802BE9B0 */ void startLevelSound(JAISoundID, u32, s8);
 };
 
 struct Z2SoundObjArrow {
@@ -66,14 +65,6 @@ struct JGeometry {
 
 };
 
-struct JAISoundHandle {
-	/* 802A2184 */ void releaseSound();
-};
-
-struct Z2SoundStarter {
-	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
-};
-
 struct Z2SoundObjAnime {
 	/* 802BEB94 */ Z2SoundObjAnime();
 	/* 802BEBDC */ void init(Vec*, u8);
@@ -86,31 +77,8 @@ struct Z2SoundObjAnime {
 	/* 802BF898 */ void playsSound(JAUSoundAnimationSound const*, JGeometry::TVec3<f32> const&, f32);
 };
 
-struct JAIAudience {
-};
-
-struct JAISound {
-	/* 802A244C */ void acceptsNewAudible() const;
-	/* 802A2474 */ void newAudible(JGeometry::TVec3<f32> const&, JGeometry::TVec3<f32> const*, u32, JAIAudience*);
-	/* 802A2598 */ void stop();
-};
-
-struct JAISoundParamsMove {
-	/* 802A2DB4 */ void moveVolume(f32, u32);
-	/* 802A2E0C */ void movePitch(f32, u32);
-	/* 802A2E64 */ void moveFxMix(f32, u32);
-};
-
-struct JAUSoundAnimation {
-	/* 802A6F70 */ void getStartSoundIndex(f32) const;
-	/* 802A7044 */ void getEndSoundIndex(f32) const;
-};
-
-struct Z2Calc {
-	struct CurveSign {
-	};
-
-	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
+struct Z2SoundInfo {
+	/* 802BBAC8 */ void getSwBit(JAISoundID) const;
 };
 
 struct Z2SoundHandles {
@@ -129,12 +97,44 @@ struct Z2SeMgr {
 	/* 802AE5B0 */ void isSoundCulling(JAISoundID);
 };
 
-struct Z2SoundInfo {
-	/* 802BBAC8 */ void getSwBit(JAISoundID) const;
+struct Z2DopplerSoundObjBase {
+	/* 802BE5A0 */ Z2DopplerSoundObjBase();
+	/* 802BE5FC */ ~Z2DopplerSoundObjBase();
+	/* 802BE65C */ void init(Vec*, u8);
+	/* 802BE6B8 */ void framework(u32, s8);
+	/* 802BE714 */ void startSound(JAISoundID, u32, s8);
+	/* 802BE7AC */ void startLevelSound(JAISoundID, u32, s8);
+};
+
+struct Z2Calc {
+	struct CurveSign {
+	};
+
+	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
 };
 
 struct JSUPtrList {
 	/* 802DC20C */ void getNthLink(u32) const;
+};
+
+struct JAUSoundAnimation {
+	/* 802A6F70 */ void getStartSoundIndex(f32) const;
+	/* 802A7044 */ void getEndSoundIndex(f32) const;
+};
+
+struct JAISoundParamsMove {
+	/* 802A2DB4 */ void moveVolume(f32, u32);
+	/* 802A2E0C */ void movePitch(f32, u32);
+	/* 802A2E64 */ void moveFxMix(f32, u32);
+};
+
+struct JAIAudience {
+};
+
+struct JAISound {
+	/* 802A244C */ void acceptsNewAudible() const;
+	/* 802A2474 */ void newAudible(JGeometry::TVec3<f32> const&, JGeometry::TVec3<f32> const*, u32, JAIAudience*);
+	/* 802A2598 */ void stop();
 };
 
 // 
@@ -174,7 +174,6 @@ extern "C" void func_802BF660(); // 1
 extern "C" void func_802BF890(); // 1
 extern "C" void func_802BF898(); // 1
 extern "C" extern void* __vt__15Z2SoundObjAnime[8];
-extern "C" extern void* __vt__15Z2SoundObjArrow[8];
 extern "C" extern void* __vt__16Z2SoundObjSimple[8];
 
 // 
@@ -236,8 +235,8 @@ SECTION_DATA void* __vt__15Z2SoundObjAnime[8] = {
 	(void*)startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
 };
 
-/* 803CACF0-803CAD10 0020+00 s=1 e=0 z=1  None .data      __vt__15Z2SoundObjArrow                                      */
-SECTION_DATA void* __vt__15Z2SoundObjArrow[8] = {
+/* 803CACF0-803CAD10 0020+00 s=1 e=0 z=0  None .data      __vt__15Z2SoundObjArrow                                      */
+SECTION_DATA static void* __vt__15Z2SoundObjArrow[8] = {
 	(void*)NULL,
 	(void*)NULL,
 	(void*)framework__21Z2DopplerSoundObjBaseFUlSc,
@@ -248,7 +247,7 @@ SECTION_DATA void* __vt__15Z2SoundObjArrow[8] = {
 	(void*)startLevelSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc,
 };
 
-/* 803CAD10-803CAD30 0020+00 s=1 e=3 z=14  None .data      __vt__16Z2SoundObjSimple                                     */
+/* 803CAD10-803CAD30 0020+00 s=1 e=3 z=0  None .data      __vt__16Z2SoundObjSimple                                     */
 SECTION_DATA void* __vt__16Z2SoundObjSimple[8] = {
 	(void*)NULL,
 	(void*)NULL,
@@ -295,7 +294,7 @@ asm Z2SoundObjBase::Z2SoundObjBase() {
 #pragma pop
 
 
-/* 802BDF48-802BDFB0 0068+00 s=1 e=3 z=15  None .text      __dt__14Z2SoundObjBaseFv                                     */
+/* 802BDF48-802BDFB0 0068+00 s=1 e=3 z=0  None .text      __dt__14Z2SoundObjBaseFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -317,7 +316,7 @@ asm void Z2SoundObjBase::init(Vec* param_0, u8 param_1) {
 #pragma pop
 
 
-/* 802BDFF8-802BE038 0040+00 s=1 e=8 z=61  None .text      deleteObject__14Z2SoundObjBaseFv                             */
+/* 802BDFF8-802BE038 0040+00 s=1 e=8 z=0  None .text      deleteObject__14Z2SoundObjBaseFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -402,7 +401,7 @@ asm void Z2SoundObjBase::startLevelSound(JAISoundID param_0, u32 param_1, s8 par
 #pragma pop
 
 
-/* 802BE4A4-802BE5A0 00FC+00 s=0 e=5 z=21  None .text      startCollisionSE__14Z2SoundObjBaseFUlUlP14Z2SoundObjBase     */
+/* 802BE4A4-802BE5A0 00FC+00 s=0 e=5 z=0  None .text      startCollisionSE__14Z2SoundObjBaseFUlUlP14Z2SoundObjBase     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -432,7 +431,7 @@ asm Z2DopplerSoundObjBase::Z2DopplerSoundObjBase() {
 #pragma pop
 
 
-/* 802BE5FC-802BE65C 0060+00 s=0 e=0 z=1  None .text      __dt__21Z2DopplerSoundObjBaseFv                              */
+/* 802BE5FC-802BE65C 0060+00 s=0 e=0 z=0  None .text      __dt__21Z2DopplerSoundObjBaseFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -487,7 +486,7 @@ asm void Z2DopplerSoundObjBase::startLevelSound(JAISoundID param_0, u32 param_1,
 #pragma pop
 
 
-/* 802BE844-802BE880 003C+00 s=0 e=8 z=65  None .text      __ct__16Z2SoundObjSimpleFv                                   */
+/* 802BE844-802BE880 003C+00 s=0 e=8 z=0  None .text      __ct__16Z2SoundObjSimpleFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -571,7 +570,7 @@ asm void Z2SoundObjSimple::startLevelSound(JAISoundID param_0, u32 param_1, s8 p
 #pragma pop
 
 
-/* 802BEB38-802BEB74 003C+00 s=0 e=0 z=2  None .text      __ct__15Z2SoundObjArrowFv                                    */
+/* 802BEB38-802BEB74 003C+00 s=0 e=0 z=0  None .text      __ct__15Z2SoundObjArrowFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

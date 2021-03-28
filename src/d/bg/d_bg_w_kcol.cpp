@@ -11,23 +11,48 @@
 // Types:
 // 
 
-struct cBgS_GrpPassChk {
+struct sBgPc {
 };
 
-struct KC_PrismData {
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+};
+
+struct dBgW_Base {
+	/* 80074AB4 */ void SetOldShapeAngleY(s16);
+	/* 8007E5A8 */ dBgW_Base();
+	/* 8007E640 */ ~dBgW_Base();
+	/* 8007E69C */ void ClrDBgWBase();
+	/* 8007E6D0 */ bool ChkMemoryError();
+	/* 8007E6D8 */ void CallRideCallBack(fopAc_ac_c*, fopAc_ac_c*);
+	/* 8007E6DC */ void CallArrowStickCallBack(fopAc_ac_c*, fopAc_ac_c*, cXyz&);
 };
 
 struct cBgS_PolyInfo {
 	/* 802681A4 */ void SetPolyIndex(int);
 };
 
-struct cBgS_PolyPassChk {
+struct dBgS_SplGrpChk {
+};
+
+struct csXyz {
+};
+
+struct cBgS_GndChk {
+};
+
+struct cBgS_GrpPassChk {
 };
 
 struct cBgS_ShdwDraw {
 };
 
-struct csXyz {
+struct cBgS_LinChk {
+};
+
+struct dBgS_SphChk {
 };
 
 struct Vec {
@@ -40,32 +65,20 @@ struct dBgS_Acch {
 	/* 800772E8 */ void CalcMovePosWork();
 };
 
-struct cBgS_LinChk {
-};
-
-struct dBgS_RoofChk {
-};
-
-struct dBgS_SplGrpChk {
-};
-
-struct cXyz {
-};
-
-struct sBgPc {
+struct cBgS_PolyPassChk {
 };
 
 struct dBgPc {
 	/* 80074048 */ void setCode(sBgPc&);
 };
 
+struct KC_PrismData {
+};
+
+struct dBgS_RoofChk {
+};
+
 struct dBgS_CaptPoly {
-};
-
-struct cBgS_GndChk {
-};
-
-struct dBgS_SphChk {
 };
 
 struct dBgWKCol {
@@ -135,6 +148,10 @@ struct dBgWKCol {
 	/* 80082F94 */ void MatrixCrrPos(cBgS_PolyInfo const&, void*, bool, cXyz*, csXyz*, csXyz*);
 };
 
+struct dBgS_PolyPassChk {
+	/* 80078F04 */ void ChkNoHorse();
+};
+
 struct dBgPlc {
 	/* 80074074 */ dBgPlc();
 	/* 80074080 */ ~dBgPlc();
@@ -143,40 +160,23 @@ struct dBgPlc {
 	/* 800740DC */ void getGrpCode(int) const;
 };
 
-struct fopAc_ac_c {
-};
-
-struct dBgW_Base {
-	/* 80074AB4 */ void SetOldShapeAngleY(s16);
-	/* 8007E5A8 */ dBgW_Base();
-	/* 8007E640 */ ~dBgW_Base();
-	/* 8007E69C */ void ClrDBgWBase();
-	/* 8007E6D0 */ bool ChkMemoryError();
-	/* 8007E6D8 */ void CallRideCallBack(fopAc_ac_c*, fopAc_ac_c*);
-	/* 8007E6DC */ void CallArrowStickCallBack(fopAc_ac_c*, fopAc_ac_c*, cXyz&);
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078F04 */ void ChkNoHorse();
-};
-
-struct cM2dGCir {
+struct cM3dGTri {
+	/* 8026F8C8 */ void set(Vec const*, Vec const*, Vec const*, Vec const*);
 };
 
 struct cM3dGSph {
 	/* 8026F76C */ void GetMinMaxCube(cXyz&, cXyz&) const;
 };
 
-struct cM3dGTri {
-	/* 8026F8C8 */ void set(Vec const*, Vec const*, Vec const*, Vec const*);
+struct cM3dGPla {
+	/* 8026F52C */ void SetupNP(Vec const&, Vec const&);
 };
 
 struct cM3dGCyl {
 	/* 8026F24C */ void calcMinMax(cXyz*, cXyz*);
 };
 
-struct cM3dGPla {
-	/* 8026F52C */ void SetupNP(Vec const&, Vec const&);
+struct cM2dGCir {
 };
 
 // 
@@ -388,7 +388,7 @@ SECTION_DATA static void* __vt__8dBgWKCol[60] = {
 	(void*)CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz,
 };
 
-/* 8007E6F4-8007E74C 0058+00 s=0 e=0 z=1  None .text      __ct__8dBgWKColFv                                            */
+/* 8007E6F4-8007E74C 0058+00 s=0 e=0 z=0  None .text      __ct__8dBgWKColFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -421,7 +421,7 @@ asm void dBgWKCol::initKCollision(void* param_0) {
 #pragma pop
 
 
-/* 8007E804-8007E850 004C+00 s=0 e=0 z=1  None .text      create__8dBgWKColFPvPv                                       */
+/* 8007E804-8007E850 004C+00 s=0 e=0 z=0  None .text      create__8dBgWKColFPvPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

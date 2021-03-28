@@ -12,17 +12,4 @@
 // 
 
 
-extern u8 const data_805A55CC[4];
-
-// 
-// External References:
-// 
-
-
-
-// 
-// Declarations:
-// 
-
-/* ############################################################################################## */
-#pragma section ".ctors$10"
+extern 

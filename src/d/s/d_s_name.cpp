@@ -11,12 +11,28 @@
 // Types:
 // 
 
+struct scene_class {
+};
+
+struct request_of_phase_process_class {
+};
+
+struct dVibration_c {
+	/* 8006F268 */ void Run();
+	/* 8006FF04 */ void Init();
+};
+
+struct dSv_player_get_item_c {
+	/* 80033E94 */ void offFirstBit(u8);
+};
+
 struct dSn_HIO_c {
 	/* 8025878C */ dSn_HIO_c();
 	/* 802592DC */ ~dSn_HIO_c();
 };
 
-struct request_of_phase_process_class {
+struct dScnName_camera_c {
+	/* 80259294 */ ~dScnName_camera_c();
 };
 
 struct dScnName_c {
@@ -34,26 +50,12 @@ struct dScnName_c {
 	/* 802590F8 */ void changeGameScene();
 };
 
-struct scene_class {
-};
-
-struct dScnName_camera_c {
-	/* 80259294 */ ~dScnName_camera_c();
-};
-
-struct Vec {
+struct dRes_info_c {
 };
 
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE448 */ void destroy();
-};
-
-struct dSv_player_get_item_c {
-	/* 80033E94 */ void offFirstBit(u8);
-};
-
-struct dRes_info_c {
 };
 
 struct dRes_control_c {
@@ -67,14 +69,8 @@ struct dPa_control_c {
 	/* 8004C054 */ void cleanup();
 };
 
-struct dDlst_window_c {
-	/* 80051AC0 */ void setViewPort(f32, f32, f32, f32, f32, f32);
-	/* 80051ADC */ void setScissor(f32, f32, f32, f32);
-};
-
-struct dVibration_c {
-	/* 8006F268 */ void Run();
-	/* 8006FF04 */ void Init();
+struct dMeter2Info_c {
+	/* 8021DD5C */ void changeWater(u8);
 };
 
 struct JKRArchive {
@@ -87,14 +83,15 @@ struct dFile_select_c {
 	/* 8018DD38 */ void _draw();
 };
 
+struct dDlst_window_c {
+	/* 80051AC0 */ void setViewPort(f32, f32, f32, f32, f32, f32);
+	/* 80051ADC */ void setScissor(f32, f32, f32, f32);
+};
+
 struct dBrightCheck_c {
 	/* 80192F10 */ dBrightCheck_c(JKRArchive*);
 	/* 801934D0 */ void _move();
 	/* 80193594 */ void _draw();
-};
-
-struct dMeter2Info_c {
-	/* 8021DD5C */ void changeWater(u8);
 };
 
 struct Z2SeqMgr {
@@ -102,6 +99,9 @@ struct Z2SeqMgr {
 	/* 802AF408 */ void bgmStop(u32, s32);
 	/* 802AFB94 */ void bgmStreamPrepare(u32);
 	/* 802AFE18 */ void bgmStreamPlay();
+};
+
+struct Vec {
 };
 
 struct JKRExpHeap {
@@ -298,7 +298,7 @@ SECTION_DATA static void* l_dScnName_Method[5] = {
 	(void*)dScnName_Draw__FP10dScnName_c,
 };
 
-/* 803C30F0-803C3118 0028+00 s=0 e=0 z=1  None .data      g_profile_NAME_SCENE                                         */
+/* 803C30F0-803C3118 0028+00 s=0 e=0 z=0  None .data      g_profile_NAME_SCENE                                         */
 SECTION_DATA void* g_profile_NAME_SCENE[10] = {
 	(void*)NULL,
 	(void*)0x0001FFFD,
@@ -312,7 +312,7 @@ SECTION_DATA void* g_profile_NAME_SCENE[10] = {
 	(void*)NULL,
 };
 
-/* 803C3118-803C3140 0028+00 s=0 e=0 z=1  None .data      g_profile_NAMEEX_SCENE                                       */
+/* 803C3118-803C3140 0028+00 s=0 e=0 z=0  None .data      g_profile_NAMEEX_SCENE                                       */
 SECTION_DATA void* g_profile_NAMEEX_SCENE[10] = {
 	(void*)NULL,
 	(void*)0x0001FFFD,

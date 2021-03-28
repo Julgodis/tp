@@ -232,7 +232,7 @@ extern "C" asm void PPCMtfpscr() {
 #pragma pop
 
 
-/* 80339D8C-80339D94 0008+00 s=0 e=4 z=1  None .text      PPCMfhid2                                                    */
+/* 80339D8C-80339D94 0008+00 s=0 e=4 z=0  None .text      PPCMfhid2                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

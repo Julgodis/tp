@@ -11,29 +11,13 @@
 // Types:
 // 
 
-struct JUTFont {
-};
-
 struct COutFont_c {
 };
 
-struct J2DTextBox {
+struct JUTFont {
 };
 
-struct dMsgStringBase_c {
-	/* 802493B4 */ dMsgStringBase_c();
-	/* 80249528 */ ~dMsgStringBase_c();
-	/* 80249700 */ void getResource();
-	/* 80249768 */ void getStringLocal(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
-	/* 802498D8 */ void getStringPageLocal(u32, u8, u8, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
-	/* 80249A48 */ void getPageMax(int);
-	/* 80249A70 */ void getMessageLocal(u32, char*);
-	/* 80249BAC */ void drawFontLocal(J2DTextBox*, u8, f32, f32, f32, f32, u32, u8);
-	/* 80249BB0 */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
-	/* 80249BD0 */ void getStringPage(u32, u8, u8, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
-	/* 80249BF8 */ void getMessage(u32, char*);
-	/* 80249C18 */ void resetStringLocal(J2DTextBox*);
-	/* 80249C1C */ void drawOutFontLocal(J2DTextBox*, f32);
+struct J2DTextBox {
 };
 
 struct jmessage_string_tReference {
@@ -52,6 +36,22 @@ struct jmessage_string_tSequenceProcessor {
 
 struct jmessage_string_tRenderingProcessor {
 	/* 80230BC8 */ jmessage_string_tRenderingProcessor(jmessage_string_tReference const*);
+};
+
+struct dMsgStringBase_c {
+	/* 802493B4 */ dMsgStringBase_c();
+	/* 80249528 */ ~dMsgStringBase_c();
+	/* 80249700 */ void getResource();
+	/* 80249768 */ void getStringLocal(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
+	/* 802498D8 */ void getStringPageLocal(u32, u8, u8, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
+	/* 80249A48 */ void getPageMax(int);
+	/* 80249A70 */ void getMessageLocal(u32, char*);
+	/* 80249BAC */ void drawFontLocal(J2DTextBox*, u8, f32, f32, f32, f32, u32, u8);
+	/* 80249BB0 */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
+	/* 80249BD0 */ void getStringPage(u32, u8, u8, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
+	/* 80249BF8 */ void getMessage(u32, char*);
+	/* 80249C18 */ void resetStringLocal(J2DTextBox*);
+	/* 80249C1C */ void drawOutFontLocal(J2DTextBox*, f32);
 };
 
 struct JMessage {

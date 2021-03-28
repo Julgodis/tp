@@ -11,23 +11,8 @@
 // Types:
 // 
 
-struct JASAramStream {
-	/* 802963A8 */ JASAramStream();
-	/* 8029649C */ void init(u32, u32, void (*)(u32, JASAramStream*, void*), void*);
-	/* 8029655C */ void prepare(s32, int);
-	/* 80296618 */ void start();
-	/* 8029664C */ void stop(u16);
-	/* 80296684 */ void pause(bool);
-	/* 802966CC */ void cancel();
-};
-
-struct JAISoundActivity {
-};
-
-struct JASSoundParams {
-};
-
-struct JAIAudience {
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
 };
 
 struct JGeometry {
@@ -39,6 +24,38 @@ struct JGeometry {
 
 };
 
+struct JASSoundParams {
+};
+
+template <typename A0>
+struct JASMemPool { };
+/* JASMemPool<JAISoundChild> */
+struct JASMemPool__template1 {
+	/* 802A1268 */ ~JASMemPool__template1();
+};
+
+struct JASGenericMemPool {
+	/* 80290848 */ JASGenericMemPool();
+	/* 80290948 */ void alloc(u32);
+	/* 80290994 */ void free(void*, u32);
+};
+
+struct JASAramStream {
+	/* 802963A8 */ JASAramStream();
+	/* 8029649C */ void init(u32, u32, void (*)(u32, JASAramStream*, void*), void*);
+	/* 8029655C */ void prepare(s32, int);
+	/* 80296618 */ void start();
+	/* 8029664C */ void stop(u16);
+	/* 80296684 */ void pause(bool);
+	/* 802966CC */ void cancel();
+};
+
+struct JAIStreamMgr {
+};
+
+struct JAIAudience {
+};
+
 template <typename A0>
 struct JAISoundStrategyMgr { };
 /* JAISoundStrategyMgr<JAIStream> */
@@ -48,7 +65,7 @@ struct JAISoundStrategyMgr__template2 {
 struct JAISoundID {
 };
 
-struct JAIStreamMgr {
+struct JAISoundActivity {
 };
 
 struct JAIStream {
@@ -70,21 +87,13 @@ struct JAIStream {
 	/* 802A3AD0 */ bool getTempoMgr();
 };
 
-struct JASGenericMemPool {
-	/* 80290848 */ JASGenericMemPool();
-	/* 80290948 */ void alloc(u32);
-	/* 80290994 */ void free(void*, u32);
-};
-
-template <typename A0>
-struct JASMemPool { };
-/* JASMemPool<JAISoundChild> */
-struct JASMemPool__template1 {
-	/* 802A1268 */ ~JASMemPool__template1();
-};
-
 struct JAISoundParams {
 	/* 802A2280 */ void mixOutAll(JASSoundParams const&, JASSoundParams*, f32);
+};
+
+struct JAISoundChild {
+	/* 802A2AB0 */ void init();
+	/* 802A2B7C */ void calc();
 };
 
 struct JAISound {
@@ -95,15 +104,6 @@ struct JAISound {
 	/* 802A25F0 */ void die_JAISound_();
 	/* 802A266C */ void increasePrepareCount_JAISound_();
 	/* 802A26B8 */ void calc_JAISound_();
-};
-
-struct JAISoundChild {
-	/* 802A2AB0 */ void init();
-	/* 802A2B7C */ void calc();
-};
-
-struct JSUPtrLink {
-	/* 802DBDFC */ JSUPtrLink(void*);
 };
 
 // 

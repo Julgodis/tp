@@ -14,6 +14,13 @@
 struct dSv_save_c {
 };
 
+struct JMSMesgEntry_c {
+};
+
+struct dMeter2Info_c {
+	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
+};
+
 struct JKRArchive {
 };
 
@@ -30,11 +37,6 @@ struct dFile_info_c {
 	/* 80192D60 */ void _draw();
 };
 
-struct dDlst_FileInfo_c {
-	/* 80192D9C */ void draw();
-	/* 80192EC8 */ ~dDlst_FileInfo_c();
-};
-
 struct dDlst_base_c {
 };
 
@@ -42,11 +44,17 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct JMSMesgEntry_c {
+struct dDlst_FileInfo_c {
+	/* 80192D9C */ void draw();
+	/* 80192EC8 */ ~dDlst_FileInfo_c();
 };
 
-struct dMeter2Info_c {
-	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
+struct JKRExpHeap {
+};
+
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 struct J2DGrafContext {
@@ -58,16 +66,8 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-struct JKRExpHeap {
-};
-
 struct CPaneMgrAlpha {
 	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
-};
-
-struct J2DTextBox {
-	/* 80300658 */ void getStringPtr() const;
-	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // 

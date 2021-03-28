@@ -11,6 +11,21 @@
 // Types:
 // 
 
+struct J2DPane {
+};
+
+struct dSelect_cursor_c {
+	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
+	/* 801952A0 */ void setAlphaRate(f32);
+};
+
+struct JMSMesgEntry_c {
+};
+
+struct dMeter2Info_c {
+	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
+};
+
 struct dMenu_Calibration_c {
 	/* 801AED64 */ ~dMenu_Calibration_c();
 	/* 801AEDAC */ void _move();
@@ -36,35 +51,10 @@ struct dMenu_Calibration_c {
 	/* 801AFBF4 */ void draw();
 };
 
-struct J2DPane {
-};
-
-struct dSelect_cursor_c {
-	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
-	/* 801952A0 */ void setAlphaRate(f32);
-};
-
-struct JMSMesgEntry_c {
-};
-
-struct dMeter2Info_c {
-	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
-};
-
-struct CPaneMgr {
-	/* 802545B0 */ void paneTrans(f32, f32);
-	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
-};
-
-struct CPaneMgrAlpha {
-	/* 802557D0 */ void setAlphaRate(f32);
-	/* 80255828 */ void getAlphaRate();
+struct Vec {
 };
 
 struct JAISoundID {
-};
-
-struct Vec {
 };
 
 struct Z2SeMgr {
@@ -73,6 +63,16 @@ struct Z2SeMgr {
 
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
+};
+
+struct CPaneMgrAlpha {
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255828 */ void getAlphaRate();
+};
+
+struct CPaneMgr {
+	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 // 

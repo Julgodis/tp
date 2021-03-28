@@ -14,6 +14,18 @@
 struct Vec {
 };
 
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TCamera {
+	};
+
+	struct TObject {
+	};
+
+};
+
 namespace JStudio {
 	struct data {
 		struct TEOperationData {
@@ -43,18 +55,6 @@ namespace JStudio {
 
 	struct TAdaptor_camera {
 		/* 80286E1C */ ~TAdaptor_camera();
-	};
-
-};
-
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TCamera {
-	};
-
-	struct TObject {
 	};
 
 };

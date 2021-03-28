@@ -11,11 +11,20 @@
 // Types:
 // 
 
-struct JKRDvdFile {
-	/* 802D9584 */ JKRDvdFile();
-	/* 802D9748 */ ~JKRDvdFile();
-	/* 802D9850 */ void open(char const*);
-	/* 802D98C4 */ void open(s32);
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+};
+
+struct JSUPtrList {
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF14 */ void initiate();
+};
+
+template <typename A0>
+struct JSUList { };
+/* JSUList<JKRDMCommand> */
+struct JSUList__template9 {
+	/* 802DA820 */ ~JSUList__template9();
 };
 
 struct JKRHeap {
@@ -25,6 +34,13 @@ struct JKRHeap {
 };
 
 struct JKRExpandSwitch {
+};
+
+struct JKRDvdFile {
+	/* 802D9584 */ JKRDvdFile();
+	/* 802D9748 */ ~JKRDvdFile();
+	/* 802D9850 */ void open(char const*);
+	/* 802D98C4 */ void open(s32);
 };
 
 struct JKRDvdRipper {
@@ -37,25 +53,9 @@ struct JKRDvdRipper {
 	/* 802DA7D4 */ void isErrorRetry();
 };
 
-template <typename A0>
-struct JSUList { };
-/* JSUList<JKRDMCommand> */
-struct JSUList__template9 {
-	/* 802DA820 */ ~JSUList__template9();
-};
-
 struct JKRDecomp {
 	/* 802DB988 */ void orderSync(u8*, u8*, u32, u32);
 	/* 802DBCF8 */ void checkCompressed(u8*);
-};
-
-struct JSUPtrList {
-	/* 802DBEAC */ ~JSUPtrList();
-	/* 802DBF14 */ void initiate();
-};
-
-struct JUTException {
-	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };
 
 // 

@@ -11,7 +11,17 @@
 // Types:
 // 
 
-struct cXyz {
+struct mDoExt_transAnmBas {
+	/* 8003C784 */ ~mDoExt_transAnmBas();
+};
+
+struct JKRHeap {
+	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
+	/* 802CE83C */ void findFromRoot(void*);
+};
+
+struct mDoDvdThd_mountArchive_c {
+	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
 };
 
 struct JKRArchive {
@@ -21,15 +31,13 @@ struct JKRArchive {
 	/* 802D66AC */ void findNameResource(char const*) const;
 };
 
-struct JKRHeap {
-	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
-	/* 802CE83C */ void findFromRoot(void*);
-};
-
 struct J3DModelData {
 	/* 80325E14 */ void newSharedDisplayList(u32);
 	/* 80325F94 */ void makeSharedDL();
 	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+};
+
+struct cXyz {
 };
 
 struct dRes_info_c {
@@ -46,66 +54,6 @@ struct dRes_info_c {
 	/* 8003BAF8 */ void setRes();
 	/* 8003BD2C */ void dump_long(dRes_info_c*, int);
 	/* 8003BE38 */ void dump(dRes_info_c*, int);
-};
-
-struct J3DMaterialTable {
-};
-
-struct J3DTevStageInfo {
-};
-
-struct J3DTevStage {
-	/* 8000E298 */ void setTevStageInfo(J3DTevStageInfo const&);
-	/* 8003AACC */ J3DTevStage(J3DTevStageInfo const&);
-};
-
-struct J3DTexMtx {
-};
-
-struct J3DTexGenBlock {
-	/* 8003AB2C */ void setTexMtx(u32, J3DTexMtx*);
-};
-
-struct J3DTevKColorAnm {
-	/* 8003B150 */ ~J3DTevKColorAnm();
-	/* 8003B18C */ J3DTevKColorAnm();
-};
-
-struct J3DTevColorAnm {
-	/* 8003B1A4 */ ~J3DTevColorAnm();
-	/* 8003B1E0 */ J3DTevColorAnm();
-};
-
-struct J3DTexNoAnm {
-	/* 8003B1F8 */ ~J3DTexNoAnm();
-	/* 8003B240 */ J3DTexNoAnm();
-	/* 8003C82C */ void calc(u16*) const;
-};
-
-struct J3DTexMtxAnm {
-	/* 8003B264 */ ~J3DTexMtxAnm();
-	/* 8003B2A0 */ J3DTexMtxAnm();
-};
-
-struct J3DMatColorAnm {
-	/* 8003B2B8 */ ~J3DMatColorAnm();
-	/* 8003B2F4 */ J3DMatColorAnm();
-};
-
-struct J3DTransformInfo {
-};
-
-struct J3DAnmTransformKey {
-	/* 8003B8D0 */ ~J3DAnmTransformKey();
-	/* 8003C800 */ s32 getKind() const;
-	/* 8003C808 */ void getTransform(u16, J3DTransformInfo*) const;
-	/* 80329A34 */ void calcTransform(f32, u16, J3DTransformInfo*) const;
-};
-
-struct J3DAnmTransform {
-	/* 8003B93C */ ~J3DAnmTransform();
-	/* 8003C77C */ bool getKind() const;
-	/* 80328E40 */ J3DAnmTransform(s16, f32*, s16*, f32*);
 };
 
 struct dRes_control_c {
@@ -126,27 +74,25 @@ struct dRes_control_c {
 	/* 8003C6B8 */ void getObjectResName2Index(char const*, char const*);
 };
 
-struct J3DAnmBase {
-	/* 8003C734 */ ~J3DAnmBase();
-};
-
-struct mDoExt_transAnmBas {
-	/* 8003C784 */ ~mDoExt_transAnmBas();
-};
-
-struct JKRSolidHeap {
-};
-
-struct mDoDvdThd_mountArchive_c {
-	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
+struct dBgWKCol {
+	/* 8007E7D0 */ void initKCollision(void*);
 };
 
 struct cBgS {
 	/* 80074578 */ void ConvDzb(void*);
 };
 
-struct dBgWKCol {
-	/* 8007E7D0 */ void initKCollision(void*);
+struct _GXAttr {
+};
+
+struct ResTIMG {
+};
+
+struct JUTNameTab {
+	/* 802DEAF8 */ void getName(u16) const;
+};
+
+struct JKRSolidHeap {
 };
 
 struct JKRMemBreakFlag {
@@ -156,18 +102,51 @@ struct JKRMemArchive {
 	/* 802D6A6C */ JKRMemArchive(void*, u32, JKRMemBreakFlag);
 };
 
-struct JUTNameTab {
-	/* 802DEAF8 */ void getName(u16) const;
-};
-
-struct ResTIMG {
+struct J3DTransformInfo {
 };
 
 struct J3DTexture {
 	/* 8031221C */ void addResTIMG(u16, ResTIMG const*);
 };
 
-struct _GXAttr {
+struct J3DTexNoAnm {
+	/* 8003B1F8 */ ~J3DTexNoAnm();
+	/* 8003B240 */ J3DTexNoAnm();
+	/* 8003C82C */ void calc(u16*) const;
+};
+
+struct J3DTexMtxInfo {
+	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
+};
+
+struct J3DTexMtxAnm {
+	/* 8003B264 */ ~J3DTexMtxAnm();
+	/* 8003B2A0 */ J3DTexMtxAnm();
+};
+
+struct J3DTexMtx {
+};
+
+struct J3DTexGenBlock {
+	/* 8003AB2C */ void setTexMtx(u32, J3DTexMtx*);
+};
+
+struct J3DTevStageInfo {
+};
+
+struct J3DTevStage {
+	/* 8000E298 */ void setTevStageInfo(J3DTevStageInfo const&);
+	/* 8003AACC */ J3DTevStage(J3DTevStageInfo const&);
+};
+
+struct J3DTevKColorAnm {
+	/* 8003B150 */ ~J3DTevKColorAnm();
+	/* 8003B18C */ J3DTevKColorAnm();
+};
+
+struct J3DTevColorAnm {
+	/* 8003B1A4 */ ~J3DTevColorAnm();
+	/* 8003B1E0 */ J3DTevColorAnm();
 };
 
 struct J3DShape {
@@ -175,27 +154,48 @@ struct J3DShape {
 	/* 80314CBC */ void addTexMtxIndexInVcd(_GXAttr);
 };
 
-struct J3DTexMtxInfo {
-	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
+struct J3DModelLoaderDataBase {
+	/* 803346BC */ void load(void const*, u32);
 };
 
-struct J3DAnmTexPattern {
-	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+struct J3DMaterialTable {
 };
 
 struct J3DMaterialAnm {
 	/* 8032C320 */ void initialize();
 };
 
+struct J3DMatColorAnm {
+	/* 8003B2B8 */ ~J3DMatColorAnm();
+	/* 8003B2F4 */ J3DMatColorAnm();
+};
+
 struct J3DClusterLoaderDataBase {
 	/* 80334130 */ void load(void const*);
 };
 
-struct J3DModelLoaderDataBase {
-	/* 803346BC */ void load(void const*, u32);
+struct J3DAnmTransformKey {
+	/* 8003B8D0 */ ~J3DAnmTransformKey();
+	/* 8003C800 */ s32 getKind() const;
+	/* 8003C808 */ void getTransform(u16, J3DTransformInfo*) const;
+	/* 80329A34 */ void calcTransform(f32, u16, J3DTransformInfo*) const;
+};
+
+struct J3DAnmTransform {
+	/* 8003B93C */ ~J3DAnmTransform();
+	/* 8003C77C */ bool getKind() const;
+	/* 80328E40 */ J3DAnmTransform(s16, f32*, s16*, f32*);
+};
+
+struct J3DAnmTexPattern {
+	/* 8032AF50 */ void getTexNo(u16, u16*) const;
 };
 
 struct J3DAnmLoaderDataBaseFlag {
+};
+
+struct J3DAnmBase {
+	/* 8003C734 */ ~J3DAnmBase();
 };
 
 struct J3DAnmLoaderDataBase {
@@ -922,7 +922,7 @@ asm void dRes_control_c::setRes(char const* param_0, dRes_info_c* param_1, int p
 #pragma pop
 
 
-/* 8003C160-8003C194 0034+00 s=0 e=10 z=1  None .text      syncRes__14dRes_control_cFPCcP11dRes_info_ci                 */
+/* 8003C160-8003C194 0034+00 s=0 e=10 z=0  None .text      syncRes__14dRes_control_cFPCcP11dRes_info_ci                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -944,7 +944,7 @@ asm void dRes_control_c::deleteRes(char const* param_0, dRes_info_c* param_1, in
 #pragma pop
 
 
-/* 8003C1E4-8003C260 007C+00 s=5 e=5 z=3  None .text      getResInfo__14dRes_control_cFPCcP11dRes_info_ci              */
+/* 8003C1E4-8003C260 007C+00 s=5 e=5 z=0  None .text      getResInfo__14dRes_control_cFPCcP11dRes_info_ci              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -977,7 +977,7 @@ asm void dRes_control_c::getResInfoLoaded(char const* param_0, dRes_info_c* para
 #pragma pop
 
 
-/* 8003C2EC-8003C37C 0090+00 s=1 e=54 z=894  None .text      getRes__14dRes_control_cFPCclP11dRes_info_ci                 */
+/* 8003C2EC-8003C37C 0090+00 s=1 e=54 z=0  None .text      getRes__14dRes_control_cFPCclP11dRes_info_ci                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -988,7 +988,7 @@ asm void dRes_control_c::getRes(char const* param_0, s32 param_1, dRes_info_c* p
 #pragma pop
 
 
-/* 8003C37C-8003C400 0084+00 s=0 e=18 z=109  None .text      getRes__14dRes_control_cFPCcPCcP11dRes_info_ci               */
+/* 8003C37C-8003C400 0084+00 s=0 e=18 z=0  None .text      getRes__14dRes_control_cFPCcPCcP11dRes_info_ci               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -999,7 +999,7 @@ asm void dRes_control_c::getRes(char const* param_0, char const* param_1, dRes_i
 #pragma pop
 
 
-/* 8003C400-8003C470 0070+00 s=0 e=7 z=4  None .text      getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci              */
+/* 8003C400-8003C470 0070+00 s=0 e=7 z=0  None .text      getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1054,7 +1054,7 @@ asm void dRes_control_c::dump() {
 #pragma pop
 
 
-/* 8003C6B8-8003C734 007C+00 s=0 e=0 z=32  None .text      getObjectResName2Index__14dRes_control_cFPCcPCc              */
+/* 8003C6B8-8003C734 007C+00 s=0 e=0 z=0  None .text      getObjectResName2Index__14dRes_control_cFPCcPCc              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

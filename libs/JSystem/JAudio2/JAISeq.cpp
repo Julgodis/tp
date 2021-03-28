@@ -11,16 +11,8 @@
 // Types:
 // 
 
-struct JAISeqMgr {
-};
-
-struct JAISoundActivity {
-};
-
-struct JASSoundParams {
-};
-
-struct JAIAudience {
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
 };
 
 struct JGeometry {
@@ -32,49 +24,7 @@ struct JGeometry {
 
 };
 
-template <typename A0>
-struct JAISoundStrategyMgr { };
-/* JAISoundStrategyMgr<JAISeq> */
-struct JAISoundStrategyMgr__template1 {
-};
-
-struct JAISoundID {
-};
-
-struct JAISeq {
-	/* 802A0A8C */ JAISeq(JAISeqMgr*, JAISoundStrategyMgr<JAISeq>*);
-	/* 802A0B64 */ void JAISeqMgr_startID_(JAISoundID, JGeometry::TVec3<f32> const*, JAIAudience*, int, int);
-	/* 802A0C04 */ void playSeqData_(JASSoundParams const&, JAISoundActivity);
-	/* 802A0CA4 */ void reserveChildTracks_(int);
-	/* 802A0E48 */ void releaseChildTracks_();
-	/* 802A0EDC */ void prepare_getSeqData_();
-	/* 802A0F90 */ void prepare_(JASSoundParams const&, JAISoundActivity);
-	/* 802A108C */ void JAISeqMgr_calc_();
-	/* 802A1180 */ void die_();
-	/* 802A12BC */ void JAISound_tryDie_();
-	/* 802A1348 */ void mixOut_(JASSoundParams const&, JAISoundActivity);
-	/* 802A14FC */ void JAISeqMgr_mixOut_(JASSoundParams const&, JAISoundActivity);
-	/* 802A1570 */ s32 getNumChild() const;
-	/* 802A1578 */ void getChild(int);
-	/* 802A165C */ void releaseChild(int);
-	/* 802A1728 */ void getTrack();
-	/* 802A1730 */ void getChildTrack(int);
-	/* 802A1768 */ void asSeq();
-	/* 802A176C */ void getTempoMgr();
-};
-
-template <typename A0>
-struct JASMemPool { };
-/* JASMemPool<JAISoundChild> */
-struct JASMemPool__template1 {
-	/* 802A1268 */ ~JASMemPool__template1();
-};
-
-struct JASGenericMemPool {
-	/* 80290848 */ JASGenericMemPool();
-	/* 80290860 */ ~JASGenericMemPool();
-	/* 80290948 */ void alloc(u32);
-	/* 80290994 */ void free(void*, u32);
+struct JASSoundParams {
 };
 
 struct JASTrack {
@@ -98,8 +48,43 @@ struct JASMemPool_MultiThreaded__template0 {
 	/* 802932E0 */ ~JASMemPool_MultiThreaded__template0();
 };
 
+template <typename A0>
+struct JASMemPool { };
+/* JASMemPool<JAISoundChild> */
+struct JASMemPool__template1 {
+	/* 802A1268 */ ~JASMemPool__template1();
+};
+
+struct JASGenericMemPool {
+	/* 80290848 */ JASGenericMemPool();
+	/* 80290860 */ ~JASGenericMemPool();
+	/* 80290948 */ void alloc(u32);
+	/* 80290994 */ void free(void*, u32);
+};
+
+template <typename A0>
+struct JAISoundStrategyMgr { };
+/* JAISoundStrategyMgr<JAISeq> */
+struct JAISoundStrategyMgr__template1 {
+};
+
 struct JAISoundParams {
 	/* 802A2280 */ void mixOutAll(JASSoundParams const&, JASSoundParams*, f32);
+};
+
+struct JAISoundID {
+};
+
+struct JAISoundChild {
+	/* 802A2AB0 */ void init();
+	/* 802A2B28 */ void mixOut(JASTrack*);
+	/* 802A2B7C */ void calc();
+};
+
+struct JAISoundActivity {
+};
+
+struct JAIAudience {
 };
 
 struct JAISound {
@@ -113,14 +98,29 @@ struct JAISound {
 	/* 802A29DC */ void initTrack_JAISound_(JASTrack*);
 };
 
-struct JAISoundChild {
-	/* 802A2AB0 */ void init();
-	/* 802A2B28 */ void mixOut(JASTrack*);
-	/* 802A2B7C */ void calc();
+struct JAISeqMgr {
 };
 
-struct JSUPtrLink {
-	/* 802DBDFC */ JSUPtrLink(void*);
+struct JAISeq {
+	/* 802A0A8C */ JAISeq(JAISeqMgr*, JAISoundStrategyMgr<JAISeq>*);
+	/* 802A0B64 */ void JAISeqMgr_startID_(JAISoundID, JGeometry::TVec3<f32> const*, JAIAudience*, int, int);
+	/* 802A0C04 */ void playSeqData_(JASSoundParams const&, JAISoundActivity);
+	/* 802A0CA4 */ void reserveChildTracks_(int);
+	/* 802A0E48 */ void releaseChildTracks_();
+	/* 802A0EDC */ void prepare_getSeqData_();
+	/* 802A0F90 */ void prepare_(JASSoundParams const&, JAISoundActivity);
+	/* 802A108C */ void JAISeqMgr_calc_();
+	/* 802A1180 */ void die_();
+	/* 802A12BC */ void JAISound_tryDie_();
+	/* 802A1348 */ void mixOut_(JASSoundParams const&, JAISoundActivity);
+	/* 802A14FC */ void JAISeqMgr_mixOut_(JASSoundParams const&, JAISoundActivity);
+	/* 802A1570 */ s32 getNumChild() const;
+	/* 802A1578 */ void getChild(int);
+	/* 802A165C */ void releaseChild(int);
+	/* 802A1728 */ void getTrack();
+	/* 802A1730 */ void getChildTrack(int);
+	/* 802A1768 */ void asSeq();
+	/* 802A176C */ void getTempoMgr();
 };
 
 // 

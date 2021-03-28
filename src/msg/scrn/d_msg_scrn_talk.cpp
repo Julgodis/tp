@@ -35,21 +35,30 @@ struct dMsgScrnTalk_c {
 	/* 8024835C */ void fukiPosCalc(u8);
 };
 
-struct Vec {
+struct dMsgScrnLight_c {
+	/* 80245934 */ dMsgScrnLight_c(u8, u8);
+	/* 80245C04 */ void draw(f32*, f32, f32, f32, f32, f32, u8);
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
+struct dMsgScrnBase_c {
+	/* 8023C0DC */ dMsgScrnBase_c();
+	/* 8023C124 */ ~dMsgScrnBase_c();
+	/* 8023C16C */ void init();
+	/* 8023C234 */ void multiDraw();
+	/* 8023C274 */ void draw();
+	/* 8023C32C */ void drawOutFont(f32, f32, f32);
+	/* 8023C4F4 */ void fontAlpha(f32);
+	/* 8023C574 */ void isTalkNow();
 };
 
-struct dMeter2Draw_c {
-	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
-};
-
-struct dMsgObject_c {
-	/* 8023819C */ void getActor();
+struct dMsgScrnArrow_c {
+	/* 8023B9B4 */ dMsgScrnArrow_c();
+	/* 8023BDC0 */ void draw();
+	/* 8023BDF8 */ void setPos(f32, f32);
+	/* 8023BE34 */ void arwAnimeInit();
+	/* 8023BE90 */ void arwAnimeMove();
+	/* 8023BFC4 */ void dotAnimeInit();
+	/* 8023C010 */ void dotAnimeMove();
 };
 
 struct dMsgScrn3Select_c {
@@ -71,33 +80,37 @@ struct dMsgScrn3Select_c {
 	/* 8023A9D8 */ void getTextBoxGlobalPosY(int);
 };
 
-struct dMsgScrnArrow_c {
-	/* 8023B9B4 */ dMsgScrnArrow_c();
-	/* 8023BDC0 */ void draw();
-	/* 8023BDF8 */ void setPos(f32, f32);
-	/* 8023BE34 */ void arwAnimeInit();
-	/* 8023BE90 */ void arwAnimeMove();
-	/* 8023BFC4 */ void dotAnimeInit();
-	/* 8023C010 */ void dotAnimeMove();
+struct dMsgObject_c {
+	/* 8023819C */ void getActor();
 };
 
-struct dMsgScrnBase_c {
-	/* 8023C0DC */ dMsgScrnBase_c();
-	/* 8023C124 */ ~dMsgScrnBase_c();
-	/* 8023C16C */ void init();
-	/* 8023C234 */ void multiDraw();
-	/* 8023C274 */ void draw();
-	/* 8023C32C */ void drawOutFont(f32, f32, f32);
-	/* 8023C4F4 */ void fontAlpha(f32);
-	/* 8023C574 */ void isTalkNow();
+struct JUtility {
+	struct TColor {
+	};
+
 };
 
-struct dMsgScrnLight_c {
-	/* 80245934 */ dMsgScrnLight_c(u8, u8);
-	/* 80245C04 */ void draw(f32*, f32, f32, f32, f32, f32, u8);
+struct dMeter2Draw_c {
+	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 8026702C */ bool operator==(Vec const&) const;
+};
+
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE548 */ void free(void*);
 };
 
 struct JKRArchive {
+};
+
+struct J2DTextBox {
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 struct J2DGrafContext {
@@ -113,6 +126,11 @@ struct J2DPane {
 	/* 802F7100 */ void getBounds();
 };
 
+struct CPaneMgrAlpha {
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255828 */ void getAlphaRate();
+};
+
 struct CPaneMgr {
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80253B2C */ void reinit();
@@ -120,24 +138,6 @@ struct CPaneMgr {
 	/* 80254364 */ void getGlobalPosY();
 	/* 80254458 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
-};
-
-struct CPaneMgrAlpha {
-	/* 802557D0 */ void setAlphaRate(f32);
-	/* 80255828 */ void getAlphaRate();
-};
-
-struct cXyz {
-	/* 8026702C */ bool operator==(Vec const&) const;
-};
-
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE548 */ void free(void*);
-};
-
-struct J2DTextBox {
-	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // 

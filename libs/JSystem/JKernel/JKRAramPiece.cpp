@@ -11,40 +11,8 @@
 // Types:
 // 
 
-struct JKRAMCommand {
-	/* 802D39EC */ JKRAMCommand();
-	/* 802D3A5C */ ~JKRAMCommand();
-};
-
-struct JKRAramBlock {
-};
-
-struct JKRAramPiece {
-	/* 802D3574 */ void prepareCommand(int, u32, u32, u32, JKRAramBlock*, void (*)(u32));
-	/* 802D35F4 */ void sendCommand(JKRAMCommand*);
-	/* 802D3614 */ void orderAsync(int, u32, u32, u32, JKRAramBlock*, void (*)(u32));
-	/* 802D3770 */ void sync(JKRAMCommand*, int);
-	/* 802D3838 */ void orderSync(int, u32, u32, u32, JKRAramBlock*);
-	/* 802D38CC */ void startDMA(JKRAMCommand*);
-	/* 802D3944 */ void doneDMA(u32);
-};
-
-struct JKRHeap {
-	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
-template <typename A0>
-struct JSUList { };
-/* JSUList<JKRAMCommand> */
-struct JSUList__template5 {
-	/* 802D2DF0 */ ~JSUList__template5();
-};
-
-struct JKRDecompCommand {
-};
-
-struct JKRDecomp {
-	/* 802DB8D0 */ void sendCommand(JKRDecompCommand*);
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };
 
 struct JSUPtrLink {
@@ -58,8 +26,40 @@ struct JSUPtrList {
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
-struct JUTException {
-	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+template <typename A0>
+struct JSUList { };
+/* JSUList<JKRAMCommand> */
+struct JSUList__template5 {
+	/* 802D2DF0 */ ~JSUList__template5();
+};
+
+struct JKRHeap {
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
+struct JKRDecompCommand {
+};
+
+struct JKRDecomp {
+	/* 802DB8D0 */ void sendCommand(JKRDecompCommand*);
+};
+
+struct JKRAramBlock {
+};
+
+struct JKRAMCommand {
+	/* 802D39EC */ JKRAMCommand();
+	/* 802D3A5C */ ~JKRAMCommand();
+};
+
+struct JKRAramPiece {
+	/* 802D3574 */ void prepareCommand(int, u32, u32, u32, JKRAramBlock*, void (*)(u32));
+	/* 802D35F4 */ void sendCommand(JKRAMCommand*);
+	/* 802D3614 */ void orderAsync(int, u32, u32, u32, JKRAramBlock*, void (*)(u32));
+	/* 802D3770 */ void sync(JKRAMCommand*, int);
+	/* 802D3838 */ void orderSync(int, u32, u32, u32, JKRAramBlock*);
+	/* 802D38CC */ void startDMA(JKRAMCommand*);
+	/* 802D3944 */ void doneDMA(u32);
 };
 
 // 

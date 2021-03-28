@@ -11,42 +11,10 @@
 // Types:
 // 
 
-struct daItemBase_c {
-	/* 80144724 */ void DeleteBase(char const*);
-	/* 8014474C */ bool clothCreate();
-	/* 80144754 */ bool __CreateHeap();
-	/* 8014475C */ void CreateItemHeap(char const*, s16, s16, s16, s16, s16, s16, s16);
-	/* 80144B94 */ void DrawBase();
-	/* 80144C30 */ void RotateYBase();
-	/* 80144C7C */ void setListStart();
-	/* 80144CA0 */ void setListEnd();
-	/* 80144CC4 */ void settingBeforeDraw();
-	/* 80144D18 */ void setTevStr();
-	/* 80144D70 */ void setShadow();
-	/* 80144EDC */ void animEntry();
-	/* 8014503C */ void animPlay(f32, f32, f32, f32, f32, f32);
-	/* 80145144 */ void chkFlag(int);
-	/* 80145164 */ void getTevFrm();
-	/* 80145180 */ void getBtpFrm();
-	/* 8014519C */ void getShadowSize();
-	/* 801451B4 */ void getCollisionH();
-	/* 801451D0 */ void getCollisionR();
-	/* 8015B0B8 */ void getData();
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
+struct request_of_phase_process_class {
 };
 
 struct J3DMaterialTable {
-};
-
-struct J3DAnmColor {
-};
-
-struct mDoExt_bpkAnm {
-	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, int, int, f32, s16, s16);
-	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
 };
 
 struct J3DAnmTexPattern {
@@ -73,6 +41,14 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
+struct J3DAnmColor {
+};
+
+struct mDoExt_bpkAnm {
+	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, int, int, f32, s16, s16);
+	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
+};
+
 struct J3DAnmTransform {
 };
 
@@ -84,25 +60,45 @@ struct mDoExt_bckAnm {
 	/* 8000D9CC */ void entry(J3DModelData*, f32);
 };
 
-struct J3DModel {
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
 };
 
 struct fopAc_ac_c {
 };
 
-struct request_of_phase_process_class {
+struct daItemBase_c {
+	/* 80144724 */ void DeleteBase(char const*);
+	/* 8014474C */ bool clothCreate();
+	/* 80144754 */ bool __CreateHeap();
+	/* 8014475C */ void CreateItemHeap(char const*, s16, s16, s16, s16, s16, s16, s16);
+	/* 80144B94 */ void DrawBase();
+	/* 80144C30 */ void RotateYBase();
+	/* 80144C7C */ void setListStart();
+	/* 80144CA0 */ void setListEnd();
+	/* 80144CC4 */ void settingBeforeDraw();
+	/* 80144D18 */ void setTevStr();
+	/* 80144D70 */ void setShadow();
+	/* 80144EDC */ void animEntry();
+	/* 8014503C */ void animPlay(f32, f32, f32, f32, f32, f32);
+	/* 80145144 */ void chkFlag(int);
+	/* 80145164 */ void getTevFrm();
+	/* 80145180 */ void getBtpFrm();
+	/* 8014519C */ void getShadowSize();
+	/* 801451B4 */ void getCollisionH();
+	/* 801451D0 */ void getCollisionR();
+	/* 8015B0B8 */ void getData();
 };
 
 struct cXyz {
 };
 
-struct cBgS_PolyInfo {
-};
-
-struct _GXTexObj {
-};
-
 struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -112,9 +108,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct cBgS_PolyInfo {
+};
+
+struct _GXTexObj {
+};
+
+struct J3DModel {
 };
 
 struct J3DFrameCtrl {
@@ -198,7 +198,7 @@ extern "C" extern u8 j3dSys[284];
 // Declarations:
 // 
 
-/* 80144724-8014474C 0028+00 s=0 e=1 z=8  None .text      DeleteBase__12daItemBase_cFPCc                               */
+/* 80144724-8014474C 0028+00 s=0 e=1 z=0  None .text      DeleteBase__12daItemBase_cFPCc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -209,13 +209,13 @@ asm void daItemBase_c::DeleteBase(char const* param_0) {
 #pragma pop
 
 
-/* 8014474C-80144754 0008+00 s=1 e=1 z=9  None .text      clothCreate__12daItemBase_cFv                                */
+/* 8014474C-80144754 0008+00 s=1 e=1 z=0  None .text      clothCreate__12daItemBase_cFv                                */
 bool daItemBase_c::clothCreate() {
 	return true;
 }
 
 
-/* 80144754-8014475C 0008+00 s=1 e=1 z=3  None .text      __CreateHeap__12daItemBase_cFv                               */
+/* 80144754-8014475C 0008+00 s=1 e=1 z=0  None .text      __CreateHeap__12daItemBase_cFv                               */
 bool daItemBase_c::__CreateHeap() {
 	return true;
 }
@@ -236,7 +236,7 @@ asm void daItemBase_c::CreateItemHeap(char const* param_0, s16 param_1, s16 para
 #pragma pop
 
 
-/* 80144B94-80144C30 009C+00 s=1 e=1 z=9  None .text      DrawBase__12daItemBase_cFv                                   */
+/* 80144B94-80144C30 009C+00 s=1 e=1 z=0  None .text      DrawBase__12daItemBase_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -247,7 +247,7 @@ asm void daItemBase_c::DrawBase() {
 #pragma pop
 
 
-/* 80144C30-80144C7C 004C+00 s=1 e=1 z=9  None .text      RotateYBase__12daItemBase_cFv                                */
+/* 80144C30-80144C7C 004C+00 s=1 e=1 z=0  None .text      RotateYBase__12daItemBase_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -258,7 +258,7 @@ asm void daItemBase_c::RotateYBase() {
 #pragma pop
 
 
-/* 80144C7C-80144CA0 0024+00 s=1 e=1 z=5  None .text      setListStart__12daItemBase_cFv                               */
+/* 80144C7C-80144CA0 0024+00 s=1 e=1 z=0  None .text      setListStart__12daItemBase_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,7 +280,7 @@ asm void daItemBase_c::setListEnd() {
 #pragma pop
 
 
-/* 80144CC4-80144D18 0054+00 s=1 e=1 z=9  None .text      settingBeforeDraw__12daItemBase_cFv                          */
+/* 80144CC4-80144D18 0054+00 s=1 e=1 z=0  None .text      settingBeforeDraw__12daItemBase_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,7 +291,7 @@ asm void daItemBase_c::settingBeforeDraw() {
 #pragma pop
 
 
-/* 80144D18-80144D70 0058+00 s=1 e=0 z=8  None .text      setTevStr__12daItemBase_cFv                                  */
+/* 80144D18-80144D70 0058+00 s=1 e=0 z=0  None .text      setTevStr__12daItemBase_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -320,7 +320,7 @@ SECTION_SDATA2 static u8 lit_3955[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80144D70-80144EDC 016C+00 s=1 e=1 z=9  None .text      setShadow__12daItemBase_cFv                                  */
+/* 80144D70-80144EDC 016C+00 s=1 e=1 z=0  None .text      setShadow__12daItemBase_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -337,7 +337,7 @@ SECTION_SDATA2 static u8 lit_4041[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80144EDC-8014503C 0160+00 s=1 e=1 z=9  None .text      animEntry__12daItemBase_cFv                                  */
+/* 80144EDC-8014503C 0160+00 s=1 e=1 z=0  None .text      animEntry__12daItemBase_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -348,7 +348,7 @@ asm void daItemBase_c::animEntry() {
 #pragma pop
 
 
-/* 8014503C-80145144 0108+00 s=0 e=2 z=4  None .text      animPlay__12daItemBase_cFffffff                              */
+/* 8014503C-80145144 0108+00 s=0 e=2 z=0  None .text      animPlay__12daItemBase_cFffffff                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -359,7 +359,7 @@ asm void daItemBase_c::animPlay(f32 param_0, f32 param_1, f32 param_2, f32 param
 #pragma pop
 
 
-/* 80145144-80145164 0020+00 s=1 e=1 z=8  None .text      chkFlag__12daItemBase_cFi                                    */
+/* 80145144-80145164 0020+00 s=1 e=1 z=0  None .text      chkFlag__12daItemBase_cFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -370,7 +370,7 @@ asm void daItemBase_c::chkFlag(int param_0) {
 #pragma pop
 
 
-/* 80145164-80145180 001C+00 s=1 e=1 z=8  None .text      getTevFrm__12daItemBase_cFv                                  */
+/* 80145164-80145180 001C+00 s=1 e=1 z=0  None .text      getTevFrm__12daItemBase_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -381,7 +381,7 @@ asm void daItemBase_c::getTevFrm() {
 #pragma pop
 
 
-/* 80145180-8014519C 001C+00 s=1 e=1 z=8  None .text      getBtpFrm__12daItemBase_cFv                                  */
+/* 80145180-8014519C 001C+00 s=1 e=1 z=0  None .text      getBtpFrm__12daItemBase_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -392,7 +392,7 @@ asm void daItemBase_c::getBtpFrm() {
 #pragma pop
 
 
-/* 8014519C-801451B4 0018+00 s=1 e=1 z=8  None .text      getShadowSize__12daItemBase_cFv                              */
+/* 8014519C-801451B4 0018+00 s=1 e=1 z=0  None .text      getShadowSize__12daItemBase_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -403,7 +403,7 @@ asm void daItemBase_c::getShadowSize() {
 #pragma pop
 
 
-/* 801451B4-801451D0 001C+00 s=1 e=1 z=8  None .text      getCollisionH__12daItemBase_cFv                              */
+/* 801451B4-801451D0 001C+00 s=1 e=1 z=0  None .text      getCollisionH__12daItemBase_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -414,7 +414,7 @@ asm void daItemBase_c::getCollisionH() {
 #pragma pop
 
 
-/* 801451D0-801451EC 001C+00 s=1 e=1 z=8  None .text      getCollisionR__12daItemBase_cFv                              */
+/* 801451D0-801451EC 001C+00 s=1 e=1 z=0  None .text      getCollisionR__12daItemBase_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -426,7 +426,7 @@ asm void daItemBase_c::getCollisionR() {
 
 
 /* ############################################################################################## */
-/* 803B3610-803B3658 0044+04 s=0 e=1 z=9  None .data      __vt__12daItemBase_c                                         */
+/* 803B3610-803B3658 0044+04 s=0 e=1 z=0  None .data      __vt__12daItemBase_c                                         */
 SECTION_DATA void* __vt__12daItemBase_c[17 + 1 /* padding */] = {
 	(void*)NULL,
 	(void*)NULL,

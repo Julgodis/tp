@@ -127,7 +127,7 @@ SECTION_DEAD char const* const stringBase_8037B0C7 = "O_wood";
 SECTION_DEAD static char const* const pad_8037B0CE = "\0";
 #pragma pop
 
-/* 803AC5A0-803ADD88 17E8+00 s=0 e=10 z=2  None .data      item_resource__10dItem_data                                  */
+/* 803AC5A0-803ADD88 17E8+00 s=0 e=10 z=0  None .data      item_resource__10dItem_data                                  */
 SECTION_DATA void* item_resource__10dItem_data[1530] = {
 	(void*)&d_d_item_data__stringBase0,
 	(void*)0x0004FFFF,
@@ -1661,7 +1661,7 @@ SECTION_DATA void* item_resource__10dItem_data[1530] = {
 	(void*)NULL,
 };
 
-/* 803ADD88-803AED78 0FF0+00 s=0 e=3 z=14  None .data      field_item_res__10dItem_data                                 */
+/* 803ADD88-803AED78 0FF0+00 s=0 e=3 z=0  None .data      field_item_res__10dItem_data                                 */
 SECTION_DATA void* field_item_res__10dItem_data[1020] = {
 	(void*)(((char*)&d_d_item_data__stringBase0)+0x327),
 	(void*)0x0014FFFF,
@@ -2685,7 +2685,7 @@ SECTION_DATA void* field_item_res__10dItem_data[1020] = {
 	(void*)0x10000000,
 };
 
-/* 803AED78-803AF178 03FC+04 s=0 e=9 z=9  None .data      item_info__10dItem_data                                      */
+/* 803AED78-803AF178 03FC+04 s=0 e=9 z=0  None .data      item_info__10dItem_data                                      */
 SECTION_DATA u8 item_info__10dItem_data[1020 + 4 /* padding */] = {
 	0x0F, 0x28, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04,
 	0x14, 0x46, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04,

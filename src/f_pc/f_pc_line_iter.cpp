@@ -11,7 +11,10 @@
 // Types:
 // 
 
-struct create_tag_class {
+struct node_lists_tree_class {
+};
+
+struct node_class {
 };
 
 struct method_filter {
@@ -20,10 +23,7 @@ struct method_filter {
 struct layer_class {
 };
 
-struct node_lists_tree_class {
-};
-
-struct node_class {
+struct create_tag_class {
 };
 
 // 

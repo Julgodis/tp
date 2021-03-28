@@ -15,16 +15,6 @@ struct JKRHeap {
 	/* 802CE72C */ void getFreeSize();
 };
 
-struct JASInst {
-};
-
-struct JASBasicBank {
-	/* 80297D78 */ JASBasicBank();
-	/* 80297DA4 */ void newInstTable(u8, JKRHeap*);
-	/* 80297E68 */ void setInst(int, JASInst*);
-	/* 80297E80 */ void getInst(int) const;
-};
-
 struct JASOscillator {
 	struct Point {
 	};
@@ -32,6 +22,49 @@ struct JASOscillator {
 	struct Data {
 	};
 
+};
+
+template <typename A0>
+struct JASMemPool_MultiThreaded { };
+/* JASMemPool_MultiThreaded<JASChannel> */
+struct JASMemPool_MultiThreaded__template2 {
+	/* 802978DC */ ~JASMemPool_MultiThreaded__template2();
+};
+
+struct JASInst {
+};
+
+struct JASGenericMemPool {
+	/* 80290848 */ JASGenericMemPool();
+};
+
+struct JASDrumSet {
+	struct TPerc {
+		/* 802984C4 */ TPerc();
+		/* 802984E4 */ void setRelease(u32);
+	};
+
+	/* 802982EC */ JASDrumSet();
+	/* 80298370 */ void newPercArray(u8, JKRHeap*);
+	/* 802984B4 */ void setPerc(int, JASDrumSet::TPerc*);
+};
+
+struct JASCalc {
+	/* 8028F354 */ void bcopy(void const*, void*, u32);
+};
+
+struct JASBasicInst {
+	/* 80298014 */ JASBasicInst();
+	/* 8029819C */ void setKeyRegionCount(u32, JKRHeap*);
+	/* 8029821C */ void setOsc(int, JASOscillator::Data const*);
+	/* 8029822C */ void getKeyRegion(int);
+};
+
+struct JASBasicBank {
+	/* 80297D78 */ JASBasicBank();
+	/* 80297DA4 */ void newInstTable(u8, JKRHeap*);
+	/* 80297E68 */ void setInst(int, JASInst*);
+	/* 80297E80 */ void getInst(int) const;
 };
 
 struct JASBNKParser {
@@ -54,39 +87,6 @@ struct JASBNKParser {
 
 	/* 80299538 */ void createBank(void const*, JKRHeap*);
 	/* 80299558 */ void createBasicBank(void const*, JKRHeap*);
-};
-
-struct JASCalc {
-	/* 8028F354 */ void bcopy(void const*, void*, u32);
-};
-
-struct JASGenericMemPool {
-	/* 80290848 */ JASGenericMemPool();
-};
-
-template <typename A0>
-struct JASMemPool_MultiThreaded { };
-/* JASMemPool_MultiThreaded<JASChannel> */
-struct JASMemPool_MultiThreaded__template2 {
-	/* 802978DC */ ~JASMemPool_MultiThreaded__template2();
-};
-
-struct JASBasicInst {
-	/* 80298014 */ JASBasicInst();
-	/* 8029819C */ void setKeyRegionCount(u32, JKRHeap*);
-	/* 8029821C */ void setOsc(int, JASOscillator::Data const*);
-	/* 8029822C */ void getKeyRegion(int);
-};
-
-struct JASDrumSet {
-	struct TPerc {
-		/* 802984C4 */ TPerc();
-		/* 802984E4 */ void setRelease(u32);
-	};
-
-	/* 802982EC */ JASDrumSet();
-	/* 80298370 */ void newPercArray(u8, JKRHeap*);
-	/* 802984B4 */ void setPerc(int, JASDrumSet::TPerc*);
 };
 
 // 

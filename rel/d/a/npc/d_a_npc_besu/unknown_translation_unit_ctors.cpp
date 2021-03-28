@@ -14,16 +14,3 @@
 
 extern void* const data_8053E740[2];
 
-// 
-// External References:
-// 
-
-
-extern "C" void __sinit_d_a_npc_besu_cpp(); // 1
-
-// 
-// Declarations:
-// 
-
-/* ############################################################################################## */
-#pragma section ".ctors$10"

@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct _GXColor {
+};
+
 struct JStage {
 	struct TSystem {
 	};
@@ -18,9 +21,6 @@ struct JStage {
 	struct TFog {
 	};
 
-};
-
-struct _GXColor {
 };
 
 namespace JStudio {

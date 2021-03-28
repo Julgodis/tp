@@ -12,19 +12,4 @@
 // 
 
 
-extern "C" extern u8 struct_804C6CD8[4];
-
-// 
-// External References:
-// 
-
-
-
-// 
-// Declarations:
-// 
-
-/* ############################################################################################## */
-/* 804C6CD8-804C6CDC 0004+00 s=0 e=5 z=0  None .bss       None                                                         */
-u8 struct_804C6CD8[4];
-
+extern "C" extern 

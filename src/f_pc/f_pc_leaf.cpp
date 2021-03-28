@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct leafdraw_class {
+struct process_method_class {
 };
 
 struct leafdraw_method_class {
 };
 
-struct draw_priority_class {
+struct leafdraw_class {
 };
 
-struct process_method_class {
+struct draw_priority_class {
 };
 
 // 
@@ -72,7 +72,7 @@ extern "C" void fpcMtd_Create__FP20process_method_classPv(); // 1
 // Declarations:
 // 
 
-/* 80021A00-80021A24 0024+00 s=0 e=4 z=2  None .text      fpcLf_GetPriority__FPC14leafdraw_class                       */
+/* 80021A00-80021A24 0024+00 s=0 e=4 z=0  None .text      fpcLf_GetPriority__FPC14leafdraw_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -154,7 +154,7 @@ asm static void fpcLf_Create(leafdraw_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 803A39E8-803A3A00 0014+04 s=0 e=27 z=756  None .data      g_fpcLf_Method                                               */
+/* 803A39E8-803A3A00 0014+04 s=0 e=27 z=0  None .data      g_fpcLf_Method                                               */
 SECTION_DATA void* g_fpcLf_Method[5 + 1 /* padding */] = {
 	(void*)fpcLf_Create__FP14leafdraw_class,
 	(void*)fpcLf_Delete__FP14leafdraw_class,

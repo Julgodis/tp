@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct msg_class {
+};
+
 struct dMw_c {
 	/* 801FA13C */ void key_wait_init(u8);
 	/* 801FA220 */ void ring_open_init(u8);
@@ -121,35 +124,33 @@ struct dMw_c {
 	/* 801FD67C */ void _delete();
 };
 
-struct msg_class {
+struct dMsgObject_c {
+	/* 802379AC */ void setKillMessageFlag();
+	/* 8023822C */ void getStatus();
 };
 
-struct dDlst_MENU_CAPTURE_c {
-	/* 801FDFCC */ void draw();
-	/* 801FE2E8 */ ~dDlst_MENU_CAPTURE_c();
+struct dMeterMap_c {
+	/* 8020D650 */ void isEnableDispMapAndMapDispSizeTypeNo();
+	/* 8020D874 */ void setDispPosInsideFlg_SE_On();
+	/* 8020D8BC */ void setDispPosOutsideFlg_SE_On();
 };
 
-struct JKRHeap {
-	/* 802CE5CC */ void freeAll();
-	/* 802CE784 */ void getTotalFreeSize();
+struct dMeter2_c {
+	/* 8021F6EC */ void emphasisButtonDelete();
 };
 
-struct STControl {
-	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
-	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
-	/* 8003219C */ void checkTrigger();
+struct dMeter2Info_c {
+	/* 8021C9DC */ void resetWarpStatus();
 };
 
-struct dDlst_base_c {
-};
-
-struct dDlst_list_c {
-	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
-};
-
-struct dMenu_Collect2D_c {
-	/* 801B5F84 */ void isKeyCheck();
-	/* 801B5FAC */ bool isOutCheck();
+struct dMenu_save_c {
+	/* 801EF6A0 */ dMenu_save_c();
+	/* 801EF7AC */ void _create();
+	/* 801F0938 */ void initialize();
+	/* 801F09AC */ void _open();
+	/* 801F0B28 */ void _delete();
+	/* 801F1048 */ void _move();
+	/* 801F69FC */ void _draw2();
 };
 
 struct CSTControl {
@@ -158,29 +159,52 @@ struct CSTControl {
 struct JKRExpHeap {
 };
 
-struct dMenu_Collect_c {
-	/* 801B78C0 */ dMenu_Collect_c(JKRExpHeap*, STControl*, CSTControl*);
-	/* 801B7A0C */ void _create();
-	/* 801B7A44 */ void _delete();
-	/* 801B7A7C */ void _move();
-	/* 801B7AC0 */ void draw();
+struct STControl {
+	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
+	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
+	/* 8003219C */ void checkTrigger();
 };
 
-struct dMenu_Dmap_c {
-	/* 801BB498 */ dMenu_Dmap_c(JKRExpHeap*, STControl*, CSTControl*, u8, u8);
-	/* 801BDDA4 */ void _move();
-	/* 801BE328 */ void isOpen();
-	/* 801BE670 */ void isClose();
-	/* 801BE7E0 */ void _draw();
-	/* 801BF334 */ void getNextStatus();
-	/* 801BF410 */ void isSync();
+struct dMenu_Skill_c {
+	/* 801F7224 */ dMenu_Skill_c(JKRExpHeap*, STControl*, CSTControl*);
+	/* 801F7718 */ void _move();
+	/* 801F7950 */ void isSync();
+	/* 801F7A40 */ void _open();
 };
 
-struct dMenu_Fishing_c {
-	/* 801C4D54 */ dMenu_Fishing_c(JKRExpHeap*, STControl*, CSTControl*);
-	/* 801C50B4 */ void _move();
-	/* 801C5204 */ void isSync();
-	/* 801C52E4 */ void _open();
+struct dMenu_Ring_c {
+	/* 801E9118 */ dMenu_Ring_c(JKRExpHeap*, STControl*, CSTControl*, u8);
+	/* 801EAB7C */ void _create();
+	/* 801EABE8 */ void _delete();
+	/* 801EABEC */ void _move();
+	/* 801EB0A4 */ void isOpen();
+	/* 801EB2B4 */ void isMoveEnd();
+	/* 801EB3CC */ void isClose();
+};
+
+struct JKRArchive {
+};
+
+struct dMenu_Option_c {
+	/* 801E1F10 */ dMenu_Option_c(JKRArchive*, STControl*);
+	/* 801E2C1C */ void _delete();
+	/* 801E3408 */ void _move();
+	/* 801E3A7C */ void isSync();
+	/* 801E3B98 */ void _open();
+};
+
+struct dMenu_Letter_c {
+	/* 801DCDC0 */ dMenu_Letter_c(JKRExpHeap*, STControl*, CSTControl*);
+	/* 801DD474 */ void _move();
+	/* 801DD934 */ void isSync();
+	/* 801DDA74 */ void _open();
+};
+
+struct dMenu_Insect_c {
+	/* 801D8114 */ dMenu_Insect_c(JKRExpHeap*, STControl*, CSTControl*, u8);
+	/* 801D86C8 */ void _move();
+	/* 801D88EC */ void isSync();
+	/* 801D894C */ void _open();
 };
 
 struct dMenu_Fmap_c {
@@ -199,85 +223,61 @@ struct dMenu_Fmap_c {
 	/* 801CB290 */ void getStageTransZ();
 };
 
-struct dMenu_Insect_c {
-	/* 801D8114 */ dMenu_Insect_c(JKRExpHeap*, STControl*, CSTControl*, u8);
-	/* 801D86C8 */ void _move();
-	/* 801D88EC */ void isSync();
-	/* 801D894C */ void _open();
+struct dMenu_Fishing_c {
+	/* 801C4D54 */ dMenu_Fishing_c(JKRExpHeap*, STControl*, CSTControl*);
+	/* 801C50B4 */ void _move();
+	/* 801C5204 */ void isSync();
+	/* 801C52E4 */ void _open();
 };
 
-struct dMenu_Letter_c {
-	/* 801DCDC0 */ dMenu_Letter_c(JKRExpHeap*, STControl*, CSTControl*);
-	/* 801DD474 */ void _move();
-	/* 801DD934 */ void isSync();
-	/* 801DDA74 */ void _open();
+struct dMenu_Dmap_c {
+	/* 801BB498 */ dMenu_Dmap_c(JKRExpHeap*, STControl*, CSTControl*, u8, u8);
+	/* 801BDDA4 */ void _move();
+	/* 801BE328 */ void isOpen();
+	/* 801BE670 */ void isClose();
+	/* 801BE7E0 */ void _draw();
+	/* 801BF334 */ void getNextStatus();
+	/* 801BF410 */ void isSync();
 };
 
-struct JKRArchive {
+struct dMenu_Collect_c {
+	/* 801B78C0 */ dMenu_Collect_c(JKRExpHeap*, STControl*, CSTControl*);
+	/* 801B7A0C */ void _create();
+	/* 801B7A44 */ void _delete();
+	/* 801B7A7C */ void _move();
+	/* 801B7AC0 */ void draw();
 };
 
-struct dMenu_Option_c {
-	/* 801E1F10 */ dMenu_Option_c(JKRArchive*, STControl*);
-	/* 801E2C1C */ void _delete();
-	/* 801E3408 */ void _move();
-	/* 801E3A7C */ void isSync();
-	/* 801E3B98 */ void _open();
+struct dMenu_Collect2D_c {
+	/* 801B5F84 */ void isKeyCheck();
+	/* 801B5FAC */ bool isOutCheck();
 };
 
-struct dMenu_Ring_c {
-	/* 801E9118 */ dMenu_Ring_c(JKRExpHeap*, STControl*, CSTControl*, u8);
-	/* 801EAB7C */ void _create();
-	/* 801EABE8 */ void _delete();
-	/* 801EABEC */ void _move();
-	/* 801EB0A4 */ void isOpen();
-	/* 801EB2B4 */ void isMoveEnd();
-	/* 801EB3CC */ void isClose();
+struct dDlst_base_c {
 };
 
-struct dMenu_save_c {
-	/* 801EF6A0 */ dMenu_save_c();
-	/* 801EF7AC */ void _create();
-	/* 801F0938 */ void initialize();
-	/* 801F09AC */ void _open();
-	/* 801F0B28 */ void _delete();
-	/* 801F1048 */ void _move();
-	/* 801F69FC */ void _draw2();
+struct dDlst_list_c {
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct dMenu_Skill_c {
-	/* 801F7224 */ dMenu_Skill_c(JKRExpHeap*, STControl*, CSTControl*);
-	/* 801F7718 */ void _move();
-	/* 801F7950 */ void isSync();
-	/* 801F7A40 */ void _open();
-};
-
-struct dMeterMap_c {
-	/* 8020D650 */ void isEnableDispMapAndMapDispSizeTypeNo();
-	/* 8020D874 */ void setDispPosInsideFlg_SE_On();
-	/* 8020D8BC */ void setDispPosOutsideFlg_SE_On();
-};
-
-struct dMeter2Info_c {
-	/* 8021C9DC */ void resetWarpStatus();
-};
-
-struct dMeter2_c {
-	/* 8021F6EC */ void emphasisButtonDelete();
-};
-
-struct dMsgObject_c {
-	/* 802379AC */ void setKillMessageFlag();
-	/* 8023822C */ void getStatus();
-};
-
-struct JAISoundID {
+struct dDlst_MENU_CAPTURE_c {
+	/* 801FDFCC */ void draw();
+	/* 801FE2E8 */ ~dDlst_MENU_CAPTURE_c();
 };
 
 struct Vec {
 };
 
+struct JAISoundID {
+};
+
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct JKRHeap {
+	/* 802CE5CC */ void freeAll();
+	/* 802CE784 */ void getTotalFreeSize();
 };
 
 // 
@@ -690,7 +690,7 @@ asm void dMw_START_TRIGGER() {
 #pragma pop
 
 
-/* 801FA08C-801FA0AC 0020+00 s=0 e=0 z=1  None .text      dMw_onPauseWindow__Fv                                        */
+/* 801FA08C-801FA0AC 0020+00 s=0 e=0 z=0  None .text      dMw_onPauseWindow__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -701,7 +701,7 @@ asm void dMw_onPauseWindow() {
 #pragma pop
 
 
-/* 801FA0AC-801FA0CC 0020+00 s=0 e=0 z=1  None .text      dMw_offPauseWindow__Fv                                       */
+/* 801FA0AC-801FA0CC 0020+00 s=0 e=0 z=0  None .text      dMw_offPauseWindow__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -712,7 +712,7 @@ asm void dMw_offPauseWindow() {
 #pragma pop
 
 
-/* 801FA0CC-801FA0F0 0024+00 s=0 e=0 z=4  None .text      dMw_onMenuRing__Fv                                           */
+/* 801FA0CC-801FA0F0 0024+00 s=0 e=0 z=0  None .text      dMw_onMenuRing__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -723,7 +723,7 @@ asm void dMw_onMenuRing() {
 #pragma pop
 
 
-/* 801FA0F0-801FA114 0024+00 s=0 e=0 z=2  None .text      dMw_offMenuRing__Fv                                          */
+/* 801FA0F0-801FA114 0024+00 s=0 e=0 z=0  None .text      dMw_offMenuRing__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2093,7 +2093,7 @@ SECTION_DATA static void* l_dMw_Method[5] = {
 	(void*)dMw_Draw__FP5dMw_c,
 };
 
-/* 803BF094-803BF0D4 0028+18 s=0 e=0 z=1  None .data      g_profile_MENUWINDOW                                         */
+/* 803BF094-803BF0D4 0028+18 s=0 e=0 z=0  None .data      g_profile_MENUWINDOW                                         */
 SECTION_DATA void* g_profile_MENUWINDOW[10 + 6 /* padding */] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000CFFFD,

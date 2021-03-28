@@ -11,6 +11,14 @@
 // Types:
 // 
 
+struct J3DVertexData {
+	/* 80310EF8 */ J3DVertexData();
+};
+
+struct J3DShapeTable {
+	/* 80326134 */ ~J3DShapeTable();
+};
+
 struct J3DModelData {
 	/* 80325D88 */ void clear();
 	/* 80325DA0 */ J3DModelData();
@@ -23,16 +31,9 @@ struct J3DModelData {
 	/* 8032617C */ ~J3DModelData();
 };
 
-struct J3DShapeTable {
-	/* 80326134 */ ~J3DShapeTable();
-};
-
-struct J3DVertexData {
-	/* 80310EF8 */ J3DVertexData();
-};
-
-struct J3DDrawMtxData {
-	/* 803115F4 */ ~J3DDrawMtxData();
+struct J3DMaterialTable {
+	/* 8032F5D0 */ J3DMaterialTable();
+	/* 8032F604 */ ~J3DMaterialTable();
 };
 
 struct J3DMaterial {
@@ -45,9 +46,8 @@ struct J3DJointTree {
 	/* 80325A18 */ J3DJointTree();
 };
 
-struct J3DMaterialTable {
-	/* 8032F5D0 */ J3DMaterialTable();
-	/* 8032F604 */ ~J3DMaterialTable();
+struct J3DDrawMtxData {
+	/* 803115F4 */ ~J3DDrawMtxData();
 };
 
 // 
@@ -175,7 +175,7 @@ asm void J3DModelData::makeSharedDL() {
 #pragma pop
 
 
-/* 8032600C-803260CC 00C0+00 s=0 e=3 z=7  None .text      simpleCalcMaterial__12J3DModelDataFUsPA4_f                   */
+/* 8032600C-803260CC 00C0+00 s=0 e=3 z=0  None .text      simpleCalcMaterial__12J3DModelDataFUsPA4_f                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

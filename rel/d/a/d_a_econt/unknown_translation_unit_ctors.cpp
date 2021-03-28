@@ -12,17 +12,4 @@
 // 
 
 
-extern u8 const data_80519774[4];
-
-// 
-// External References:
-// 
-
-
-
-// 
-// Declarations:
-// 
-
-/* ############################################################################################## */
-#pragma section ".ctors$10"
+extern u8 const data_80519774[4]

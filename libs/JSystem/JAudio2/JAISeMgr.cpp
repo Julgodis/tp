@@ -11,45 +11,14 @@
 // Types:
 // 
 
-struct JAISoundParamsMove {
+struct JSUPtrLink {
+	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-struct JAISoundActivity {
-};
-
-struct JAISoundID {
-};
-
-struct JAISeqDataRegion {
-};
-
-struct JAISeCategoryMgr {
-	/* 800078DC */ ~JAISeCategoryMgr();
-	/* 8029F8B0 */ void isUsingSeqData(JAISeqDataRegion const&);
-	/* 8029F91C */ void releaseSeqData(JAISeqDataRegion const&);
-	/* 8029F9C4 */ void JAISeMgr_calc_();
-	/* 8029FB30 */ void JAISeMgr_freeDeadSe_();
-	/* 8029FC88 */ void JAISeMgr_acceptsNewSe_(u32) const;
-	/* 8029FD40 */ void sortByPriority_();
-	/* 8029FDE0 */ void stop(u32);
-	/* 8029FE34 */ void stop();
-	/* 8029FE78 */ void stopSoundID(JAISoundID);
-	/* 8029FEEC */ void pause(bool);
-	/* 8029FF18 */ void JAISeMgr_mixOut_(JAISoundParamsMove const&, JAISoundActivity);
-	/* 802A0994 */ JAISeCategoryMgr();
-};
-
-template <typename A0>
-struct JASMemPool { };
-/* JASMemPool<JAISe> */
-struct JASMemPool__template0 {
-	/* 8029FC34 */ ~JASMemPool__template0();
-};
-
-struct JAISeqDataMgr {
-};
-
-struct JAIAudience {
+struct JSUPtrList {
+	/* 802DBF14 */ void initiate();
+	/* 802DBF4C */ void append(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
 struct JGeometry {
@@ -61,10 +30,66 @@ struct JGeometry {
 
 };
 
-struct JAISeCategoryArrangement {
+struct JASTrack {
+	/* 8029131C */ ~JASTrack();
+};
+
+struct JASSoundParams {
+	/* 8029E47C */ void combine(JASSoundParams const&, JASSoundParams const&);
+};
+
+template <typename A0>
+struct JASMemPool { };
+/* JASMemPool<JAISe> */
+struct JASMemPool__template0 {
+	/* 8029FC34 */ ~JASMemPool__template0();
+};
+
+struct JASGenericMemPool {
+	/* 80290848 */ JASGenericMemPool();
+	/* 80290860 */ ~JASGenericMemPool();
+	/* 80290948 */ void alloc(u32);
+	/* 80290994 */ void free(void*, u32);
+};
+
+template <typename A0>
+struct JAISoundStrategyMgr { };
+/* JAISoundStrategyMgr<JAISe> */
+struct JAISoundStrategyMgr__template0 {
+};
+
+struct JAISoundParamsMove {
+};
+
+struct JAISoundID {
 };
 
 struct JAISoundHandle {
+};
+
+struct JAISoundActivity {
+};
+
+struct JAISound {
+	/* 802A21BC */ void attachHandle(JAISoundHandle*);
+	/* 802A2598 */ void stop();
+	/* 802A24DC */ void stop(u32);
+};
+
+struct JAISeqDataUser {
+	/* 802A1774 */ ~JAISeqDataUser();
+};
+
+struct JAISeqDataRegion {
+};
+
+struct JAISeqDataMgr {
+};
+
+struct JAIAudience {
+};
+
+struct JAISeCategoryArrangement {
 };
 
 struct JAISeMgr {
@@ -86,25 +111,20 @@ struct JAISeMgr {
 	/* 802A08FC */ ~JAISeMgr();
 };
 
-struct JASGenericMemPool {
-	/* 80290848 */ JASGenericMemPool();
-	/* 80290860 */ ~JASGenericMemPool();
-	/* 80290948 */ void alloc(u32);
-	/* 80290994 */ void free(void*, u32);
-};
-
-struct JASTrack {
-	/* 8029131C */ ~JASTrack();
-};
-
-struct JASSoundParams {
-	/* 8029E47C */ void combine(JASSoundParams const&, JASSoundParams const&);
-};
-
-template <typename A0>
-struct JAISoundStrategyMgr { };
-/* JAISoundStrategyMgr<JAISe> */
-struct JAISoundStrategyMgr__template0 {
+struct JAISeCategoryMgr {
+	/* 800078DC */ ~JAISeCategoryMgr();
+	/* 8029F8B0 */ void isUsingSeqData(JAISeqDataRegion const&);
+	/* 8029F91C */ void releaseSeqData(JAISeqDataRegion const&);
+	/* 8029F9C4 */ void JAISeMgr_calc_();
+	/* 8029FB30 */ void JAISeMgr_freeDeadSe_();
+	/* 8029FC88 */ void JAISeMgr_acceptsNewSe_(u32) const;
+	/* 8029FD40 */ void sortByPriority_();
+	/* 8029FDE0 */ void stop(u32);
+	/* 8029FE34 */ void stop();
+	/* 8029FE78 */ void stopSoundID(JAISoundID);
+	/* 8029FEEC */ void pause(bool);
+	/* 8029FF18 */ void JAISeMgr_mixOut_(JAISoundParamsMove const&, JAISoundActivity);
+	/* 802A0994 */ JAISeCategoryMgr();
 };
 
 struct JAISe {
@@ -112,26 +132,6 @@ struct JAISe {
 	/* 8029F304 */ void JAISeCategoryMgr_mixOut_(bool, JASSoundParams const&, JAISoundActivity);
 	/* 8029F4CC */ void JAISeCategoryMgr_calc_();
 	/* 8029F650 */ void JAISeMgr_startID_(JAISoundID, JGeometry::TVec3<f32> const*, JAIAudience*);
-};
-
-struct JAISeqDataUser {
-	/* 802A1774 */ ~JAISeqDataUser();
-};
-
-struct JAISound {
-	/* 802A21BC */ void attachHandle(JAISoundHandle*);
-	/* 802A2598 */ void stop();
-	/* 802A24DC */ void stop(u32);
-};
-
-struct JSUPtrLink {
-	/* 802DBE14 */ ~JSUPtrLink();
-};
-
-struct JSUPtrList {
-	/* 802DBF14 */ void initiate();
-	/* 802DBF4C */ void append(JSUPtrLink*);
-	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
 // 

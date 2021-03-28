@@ -11,10 +11,16 @@
 // Types:
 // 
 
+struct _GXColor {
+};
+
 struct Vec {
 };
 
-struct _GXColor {
+struct JStage {
+	struct TObject {
+	};
+
 };
 
 namespace JStudio {
@@ -49,6 +55,10 @@ namespace JStudio {
 		/* 8028B568 */ TVariableValue();
 	};
 
+};
+
+struct JStudio_JStage {
+	/* 8028A1F8 */ void transform_toGlobalFromLocal(f32 (* )[4], JStudio::TControl::TTransform_translation_rotation_scaling const&, JStage::TObject const*, u32);
 };
 
 struct JPABaseEmitter {
@@ -100,16 +110,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JStage {
-	struct TObject {
-	};
-
-};
-
-struct JStudio_JStage {
-	/* 8028A1F8 */ void transform_toGlobalFromLocal(f32 (* )[4], JStudio::TControl::TTransform_translation_rotation_scaling const&, JStage::TObject const*, u32);
 };
 
 // 

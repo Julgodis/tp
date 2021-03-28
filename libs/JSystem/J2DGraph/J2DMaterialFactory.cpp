@@ -11,20 +11,37 @@
 // Types:
 // 
 
-struct J2DMaterial {
-	/* 802EA410 */ void createTevBlock(int, bool);
-	/* 802EA5C4 */ void createIndBlock(int, bool);
-};
-
-struct J2DMaterialBlock {
-};
-
 struct JKRArchive {
+};
+
+struct JUTResReference {
+	/* 802DE120 */ void getResource(void const*, u32, JKRArchive*);
+};
+
+struct J2DTexMtx {
+	/* 802E9CC4 */ void calc();
+};
+
+struct J2DTevStageInfo {
+};
+
+struct J2DTevStage {
+	/* 802F4110 */ J2DTevStage(J2DTevStageInfo const&);
+	/* 802F1940 */ J2DTevStage();
+	/* 802F19A8 */ void setTevStageInfo(J2DTevStageInfo const&);
 };
 
 struct J2DResReference {
 	/* 8030CF10 */ void getResReference(u16) const;
 	/* 8030CF44 */ void getName(u16) const;
+};
+
+struct J2DMaterialBlock {
+};
+
+struct J2DMaterial {
+	/* 802EA410 */ void createTevBlock(int, bool);
+	/* 802EA5C4 */ void createIndBlock(int, bool);
 };
 
 struct J2DMaterialFactory {
@@ -54,23 +71,6 @@ struct J2DMaterialFactory {
 	/* 802F3FE0 */ void newAlphaComp(int) const;
 	/* 802F405C */ void newBlend(int) const;
 	/* 802F40D8 */ void newDither(int) const;
-};
-
-struct J2DTevStageInfo {
-};
-
-struct J2DTevStage {
-	/* 802F4110 */ J2DTevStage(J2DTevStageInfo const&);
-	/* 802F1940 */ J2DTevStage();
-	/* 802F19A8 */ void setTevStageInfo(J2DTevStageInfo const&);
-};
-
-struct JUTResReference {
-	/* 802DE120 */ void getResource(void const*, u32, JKRArchive*);
-};
-
-struct J2DTexMtx {
-	/* 802E9CC4 */ void calc();
 };
 
 struct J2DDataManage {

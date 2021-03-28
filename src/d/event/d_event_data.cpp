@@ -11,11 +11,61 @@
 // Types:
 // 
 
-struct dEvDtFlag_c {
-	/* 80043D60 */ void flagCheck(int);
-	/* 80043DC8 */ void flagSet(int);
-	/* 80043E30 */ void flagMaxCheck(int);
-	/* 80043E58 */ void init();
+struct _GXColor {
+};
+
+struct mDoGph_gInf_c {
+	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
+	/* 800080D0 */ void fadeOut(f32);
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+};
+
+struct dVibration_c {
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
+	/* 8006FB10 */ void StartQuake(int, int, cXyz);
+	/* 8006FC0C */ void StartQuake(u8 const*, int, int, cXyz);
+	/* 8006FD94 */ void StopQuake(int);
+};
+
+struct dSv_event_c {
+	/* 8003498C */ void onEventBit(u16);
+	/* 800349A4 */ void offEventBit(u16);
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct dStage_roomControl_c {
+	/* 80024384 */ void getStatusRoomDt(int);
+};
+
+struct dMsgObject_c {
+	/* 8023806C */ void demoMessageGroup();
+};
+
+struct dEvt_control_c {
+	/* 80042914 */ void setSkipProc(void*, int (*)(void*, int), int);
+	/* 80042958 */ void setSkipZev(void*, char*);
+	/* 80043278 */ void getStageEventDt();
+	/* 800432EC */ void convPId(unsigned int);
+	/* 8004331C */ void getStbDemoData(char*);
+	/* 800434D8 */ void searchMapEventData(u8);
+	/* 8004365C */ void setPt2(void*);
+	/* 8004368C */ void setPtT(void*);
+	/* 800436BC */ void setPtI(void*);
+	/* 800436F4 */ void setPtD(void*);
+};
+
+struct dEvent_manager_c {
+	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
+	/* 80047D4C */ void getIsAddvance(int);
+	/* 80047F5C */ void getMyNowCutName(int);
+	/* 800480EC */ void getMySubstanceP(int, char const*, int);
+	/* 80048144 */ void getMySubstanceNum(int, char const*);
+	/* 8004817C */ void cutEnd(int);
 };
 
 struct dEvDtStaff_c {
@@ -32,6 +82,13 @@ struct dEvDtStaff_c {
 	/* 80045878 */ void specialProcPackage();
 	/* 80045AFC */ void specialProcTimekeeper();
 	/* 80045C34 */ void specialProcEffect();
+};
+
+struct dEvDtFlag_c {
+	/* 80043D60 */ void flagCheck(int);
+	/* 80043DC8 */ void flagSet(int);
+	/* 80043E30 */ void flagMaxCheck(int);
+	/* 80043E58 */ void init();
 };
 
 struct dEvDtEvent_c {
@@ -51,28 +108,8 @@ struct dEvDtBase_c {
 	/* 800462FC */ void advanceCutLocal(dEvDtStaff_c*);
 };
 
-struct _GXColor {
-};
-
-struct mDoGph_gInf_c {
-	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
-	/* 800080D0 */ void fadeOut(f32);
-};
-
-struct cXyz {
-};
-
-struct csXyz {
-};
-
-struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(int);
-};
-
-struct dSv_event_c {
-	/* 8003498C */ void onEventBit(u16);
-	/* 800349A4 */ void offEventBit(u16);
-	/* 800349BC */ void isEventBit(u16) const;
+struct dDlst_list_c {
+	/* 800568D8 */ void wipeIn(f32);
 };
 
 struct dDemo_c {
@@ -80,63 +117,26 @@ struct dDemo_c {
 	/* 80039CF8 */ void end();
 };
 
-struct dEvt_control_c {
-	/* 80042914 */ void setSkipProc(void*, int (*)(void*, int), int);
-	/* 80042958 */ void setSkipZev(void*, char*);
-	/* 80043278 */ void getStageEventDt();
-	/* 800432EC */ void convPId(unsigned int);
-	/* 8004331C */ void getStbDemoData(char*);
-	/* 800434D8 */ void searchMapEventData(u8);
-	/* 8004365C */ void setPt2(void*);
-	/* 8004368C */ void setPtT(void*);
-	/* 800436BC */ void setPtI(void*);
-	/* 800436F4 */ void setPtD(void*);
-};
-
-struct fopAc_ac_c {
-};
-
-struct dEvent_manager_c {
-	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
-	/* 80047D4C */ void getIsAddvance(int);
-	/* 80047F5C */ void getMyNowCutName(int);
-	/* 800480EC */ void getMySubstanceP(int, char const*, int);
-	/* 80048144 */ void getMySubstanceNum(int, char const*);
-	/* 8004817C */ void cutEnd(int);
-};
-
-struct dDlst_list_c {
-	/* 800568D8 */ void wipeIn(f32);
-};
-
-struct dVibration_c {
-	/* 8006FA24 */ void StartShock(int, int, cXyz);
-	/* 8006FB10 */ void StartQuake(int, int, cXyz);
-	/* 8006FC0C */ void StartQuake(u8 const*, int, int, cXyz);
-	/* 8006FD94 */ void StopQuake(int);
-};
-
 struct dCamera_c {
 	/* 80181170 */ void StartBlure(int, fopAc_ac_c*, f32, f32);
 };
 
-struct dMsgObject_c {
-	/* 8023806C */ void demoMessageGroup();
-};
-
-struct JAISoundID {
-};
-
-struct Vec {
-};
-
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+struct csXyz {
 };
 
 struct Z2SeqMgr {
 	/* 802AF408 */ void bgmStop(u32, s32);
 	/* 802AFE18 */ void bgmStreamPlay();
+};
+
+struct Vec {
+};
+
+struct JAISoundID {
+};
+
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // 

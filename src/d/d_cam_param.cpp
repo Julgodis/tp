@@ -11,6 +11,37 @@
 // Types:
 // 
 
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
+};
+
+struct dCstick_c {
+	/* 80088434 */ dCstick_c();
+	/* 8008845C */ bool Shift(u32);
+	/* 800889B0 */ ~dCstick_c();
+};
+
+struct dCamera_c {
+	/* 80180A40 */ void EventRecoverNotime();
+};
+
+struct dCamSetup_c {
+	/* 80088668 */ dCamSetup_c();
+	/* 800888B8 */ ~dCamSetup_c();
+	/* 80088918 */ void CheckLatitudeRange(s16*);
+	/* 80088988 */ void PlayerHideDist();
+};
+
+struct dCamParam_c {
+	/* 800884F0 */ dCamParam_c(s32);
+	/* 8008858C */ ~dCamParam_c();
+	/* 800885D4 */ void Change(s32);
+	/* 80088620 */ void SearchStyle(u32);
+};
+
 struct cXyz {
 };
 
@@ -25,46 +56,15 @@ struct dCamMath {
 	/* 800883EC */ void xyzHorizontalDistance(cXyz&, cXyz&);
 };
 
+struct dCamBGChk_c {
+	/* 80088464 */ dCamBGChk_c();
+};
+
 struct cDegree {
 	/* 800882E0 */ ~cDegree();
 	/* 8027134C */ cDegree(f32);
 	/* 802713F0 */ void Sin() const;
 	/* 80271418 */ void Cos() const;
-};
-
-struct dCstick_c {
-	/* 80088434 */ dCstick_c();
-	/* 8008845C */ bool Shift(u32);
-	/* 800889B0 */ ~dCstick_c();
-};
-
-struct dCamBGChk_c {
-	/* 80088464 */ dCamBGChk_c();
-};
-
-struct dCamParam_c {
-	/* 800884F0 */ dCamParam_c(s32);
-	/* 8008858C */ ~dCamParam_c();
-	/* 800885D4 */ void Change(s32);
-	/* 80088620 */ void SearchStyle(u32);
-};
-
-struct dCamSetup_c {
-	/* 80088668 */ dCamSetup_c();
-	/* 800888B8 */ ~dCamSetup_c();
-	/* 80088918 */ void CheckLatitudeRange(s16*);
-	/* 80088988 */ void PlayerHideDist();
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
-};
-
-struct dCamera_c {
-	/* 80180A40 */ void EventRecoverNotime();
 };
 
 // 

@@ -92,7 +92,7 @@ asm void JPAGetYZRotateMtx(s16 param_0, s16 param_1, f32 (* param_2)[4]) {
 #pragma pop
 
 
-/* 80280734-802807E0 00AC+00 s=0 e=6 z=11  None .text      JPAGetXYZRotateMtx__FsssPA4_f                                */
+/* 80280734-802807E0 00AC+00 s=0 e=6 z=0  None .text      JPAGetXYZRotateMtx__FsssPA4_f                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -103,7 +103,7 @@ asm void JPAGetXYZRotateMtx(s16 param_0, s16 param_1, s16 param_2, f32 (* param_
 #pragma pop
 
 
-/* 802807E0-80280808 0028+00 s=0 e=11 z=71  None .text      JPASetRMtxTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>    */
+/* 802807E0-80280808 0028+00 s=0 e=11 z=0  None .text      JPASetRMtxTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -114,7 +114,7 @@ asm void JPASetRMtxTVecfromMtx(f32 const (* param_0)[4], f32 (* param_1)[4], JGe
 #pragma pop
 
 
-/* 80280808-80280984 017C+00 s=1 e=1 z=53  None .text      JPASetRMtxSTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>PQ29JGeometry8TVec3<f> */
+/* 80280808-80280984 017C+00 s=1 e=1 z=0  None .text      JPASetRMtxSTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>PQ29JGeometry8TVec3<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

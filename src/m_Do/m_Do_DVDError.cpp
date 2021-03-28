@@ -11,26 +11,26 @@
 // Types:
 // 
 
-struct OSAlarm {
-};
-
-struct OSContext {
-};
-
 struct mDoDvdThd {
 	/* 800158B4 */ void suspend();
-};
-
-struct JKRHeap {
-	/* 802CE438 */ void becomeCurrentHeap();
 };
 
 struct OSThread {
 };
 
+struct OSContext {
+};
+
+struct OSAlarm {
+};
+
 struct JKRThread {
 	/* 802D16B8 */ JKRThread(OSThread*, int);
 	/* 802D1758 */ ~JKRThread();
+};
+
+struct JKRHeap {
+	/* 802CE438 */ void becomeCurrentHeap();
 };
 
 // 

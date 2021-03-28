@@ -11,6 +11,23 @@
 // Types:
 // 
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct JUTFont {
+	/* 802DED70 */ void setCharColor(JUtility::TColor);
+	/* 802DEE28 */ void drawString_size_scale(f32, f32, f32, f32, char const*, u32, bool);
+};
+
+struct JUTDirectPrint {
+	/* 802E4288 */ void erase(int, int, int, int);
+	/* 802E46D8 */ void drawString(u16, u16, char*);
+	/* 802E4798 */ void setCharColor(JUtility::TColor);
+};
+
 struct JKRHeap {
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 };
@@ -62,23 +79,6 @@ namespace JGadget {
 		/* 802DCBF8 */ void Remove(JGadget::TLinkListNode*);
 	};
 
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct JUTFont {
-	/* 802DED70 */ void setCharColor(JUtility::TColor);
-	/* 802DEE28 */ void drawString_size_scale(f32, f32, f32, f32, char const*, u32, bool);
-};
-
-struct JUTDirectPrint {
-	/* 802E4288 */ void erase(int, int, int, int);
-	/* 802E46D8 */ void drawString(u16, u16, char*);
-	/* 802E4798 */ void setCharColor(JUtility::TColor);
 };
 
 struct J2DOrthoGraph {

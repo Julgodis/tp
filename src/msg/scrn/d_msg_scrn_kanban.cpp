@@ -45,6 +45,14 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
+struct JKRHeap {
+	/* 802CE784 */ void getTotalFreeSize();
+};
+
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+};
+
 struct JKRArchive {
 };
 
@@ -58,30 +66,22 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 802542E8 */ void getGlobalPosX();
-	/* 80254364 */ void getGlobalPosY();
-};
-
-struct CPaneMgrAlpha {
-	/* 802557D0 */ void setAlphaRate(f32);
-};
-
-struct JKRHeap {
-	/* 802CE784 */ void getTotalFreeSize();
-};
-
-struct JKRFileLoader {
-	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
-};
-
 struct J2DPane {
 	/* 802F7FCC */ void animationTransform();
 };
 
 struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
+};
+
+struct CPaneMgrAlpha {
+	/* 802557D0 */ void setAlphaRate(f32);
+};
+
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 802542E8 */ void getGlobalPosX();
+	/* 80254364 */ void getGlobalPosY();
 };
 
 // 

@@ -11,25 +11,29 @@
 // Types:
 // 
 
+struct Vec {
+};
+
+struct J3DModel {
+};
+
+struct J3DVtxColorCalc {
+	/* 8032E180 */ void calc(J3DModel*);
+};
+
+struct J3DVertexBuffer {
+};
+
 struct J3DSkinNList {
 	/* 8032C6E4 */ J3DSkinNList();
 	/* 8032C85C */ void calcSkin_VtxPosF32(f32 (* )[4], void*, void*);
 	/* 8032C8E4 */ void calcSkin_VtxNrmF32(f32 (* )[4], void*, void*);
 };
 
-struct Vec {
-};
-
-struct J3DMtxBuffer {
-};
-
-struct J3DModel {
-};
-
 struct J3DModelData {
 };
 
-struct J3DVertexBuffer {
+struct J3DMtxBuffer {
 };
 
 struct J3DSkinDeform {
@@ -49,10 +53,6 @@ struct J3DSkinDeform {
 	/* 8032E064 */ void deform(J3DVertexBuffer*, J3DMtxBuffer*);
 	/* 8032DFDC */ void deform(J3DModel*);
 	/* 8032E1B0 */ ~J3DSkinDeform();
-};
-
-struct J3DVtxColorCalc {
-	/* 8032E180 */ void calc(J3DModel*);
 };
 
 struct J3DShape {
@@ -200,7 +200,7 @@ SECTION_DATA static void* __vt__13J3DSkinDeform[4] = {
 	(void*)__dt__13J3DSkinDeformFv,
 };
 
-/* 8032C96C-8032C9B0 0044+00 s=0 e=0 z=2  None .text      __ct__13J3DSkinDeformFv                                      */
+/* 8032C96C-8032C9B0 0044+00 s=0 e=0 z=0  None .text      __ct__13J3DSkinDeformFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -11,6 +11,12 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct csXyz {
+};
+
 struct Vec {
 };
 
@@ -22,31 +28,29 @@ struct cXyz {
 	/* 8026706C */ bool operator!=(Vec const&) const;
 };
 
-struct cBgS_PolyInfo {
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CD9C */ void transM(f32, f32, f32);
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct daItemBase_c {
-	/* 80037A64 */ void hide();
-	/* 80037A74 */ void show();
-	/* 80037A84 */ void changeDraw();
-	/* 80037ACC */ void chkDraw();
-	/* 80144724 */ void DeleteBase(char const*);
-	/* 8014474C */ bool clothCreate();
-	/* 80144754 */ bool __CreateHeap();
-	/* 80144B94 */ void DrawBase();
-	/* 80144C30 */ void RotateYBase();
-	/* 80144C7C */ void setListStart();
-	/* 80144CC4 */ void settingBeforeDraw();
-	/* 80144D70 */ void setShadow();
-	/* 80144EDC */ void animEntry();
-	/* 8014503C */ void animPlay(f32, f32, f32, f32, f32, f32);
-	/* 80145144 */ void chkFlag(int);
-	/* 80145164 */ void getTevFrm();
-	/* 80145180 */ void getBtpFrm();
-	/* 8014519C */ void getShadowSize();
-	/* 801451B4 */ void getCollisionH();
-	/* 801451D0 */ void getCollisionR();
-	/* 8015B0B8 */ void getData();
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
+struct fopAcM_lc_c {
+	/* 8001DC68 */ void lineCheck(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct daPy_py_c {
+	/* 8015DFD8 */ void getItemPos() const;
+	/* 8015DFF4 */ void getLeftHandPos() const;
+};
+
+struct daPy_boomerangMove_c {
+	/* 8015E5B0 */ void initOffset(cXyz const*);
+	/* 8015E654 */ void posMove(cXyz*, s16*, fopAc_ac_c*, s16);
+	/* 8015E87C */ void bgCheckAfterOffset(cXyz const*);
 };
 
 struct daItem_c {
@@ -102,41 +106,28 @@ struct daItem_c {
 	/* 8015DE38 */ void initAngle();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 80084460 */ void ChkTgHit();
-	/* 800844F8 */ void GetTgHitObj();
-	/* 80084658 */ void ChkCoHit();
-};
-
-struct Z2SoundObjSimple {
-	/* 8015BA3C */ ~Z2SoundObjSimple();
-	/* 802BE844 */ Z2SoundObjSimple();
-};
-
-struct daPy_py_c {
-	/* 8015DFD8 */ void getItemPos() const;
-	/* 8015DFF4 */ void getLeftHandPos() const;
-};
-
-struct csXyz {
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CD9C */ void transM(f32, f32, f32);
-	/* 8000CF44 */ void ZXYrotM(csXyz const&);
-};
-
-struct fopAcM_lc_c {
-	/* 8001DC68 */ void lineCheck(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct request_of_phase_process_class {
+struct daItemBase_c {
+	/* 80037A64 */ void hide();
+	/* 80037A74 */ void show();
+	/* 80037A84 */ void changeDraw();
+	/* 80037ACC */ void chkDraw();
+	/* 80144724 */ void DeleteBase(char const*);
+	/* 8014474C */ bool clothCreate();
+	/* 80144754 */ bool __CreateHeap();
+	/* 80144B94 */ void DrawBase();
+	/* 80144C30 */ void RotateYBase();
+	/* 80144C7C */ void setListStart();
+	/* 80144CC4 */ void settingBeforeDraw();
+	/* 80144D70 */ void setShadow();
+	/* 80144EDC */ void animEntry();
+	/* 8014503C */ void animPlay(f32, f32, f32, f32, f32, f32);
+	/* 80145144 */ void chkFlag(int);
+	/* 80145164 */ void getTevFrm();
+	/* 80145180 */ void getBtpFrm();
+	/* 8014519C */ void getShadowSize();
+	/* 801451B4 */ void getCollisionH();
+	/* 801451D0 */ void getCollisionR();
+	/* 8015B0B8 */ void getData();
 };
 
 struct dSv_player_get_item_c {
@@ -149,6 +140,31 @@ struct dSv_info_c {
 	/* 80035590 */ void isItem(int, int) const;
 };
 
+struct J3DModelData {
+};
+
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct dPa_levelEcallBack {
+};
+
+struct dPa_followEcallBack {
+	/* 80049580 */ dPa_followEcallBack(u8, u8);
+};
+
+struct _GXColor {
+};
+
+struct dPa_control_c {
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+};
+
 struct dEvt_control_c {
 	/* 80042468 */ void reset();
 	/* 800436EC */ void setPtI_Id(unsigned int);
@@ -158,38 +174,43 @@ struct dEvent_manager_c {
 	/* 80047ADC */ void endCheckOld(char const*);
 };
 
-struct dPa_followEcallBack {
-	/* 80049580 */ dPa_followEcallBack(u8, u8);
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
-struct dKy_tevstr_c {
+struct dCcD_SrcCyl {
 };
 
-struct _GXColor {
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
 };
 
-struct dPa_levelEcallBack {
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 80084460 */ void ChkTgHit();
+	/* 800844F8 */ void GetTgHitObj();
+	/* 80084658 */ void ChkCoHit();
 };
 
-struct dPa_control_c {
-	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
 };
 
-struct cM3dGPla {
-};
-
-struct cBgS {
-	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
-};
-
-struct dBgS {
-	/* 80074B40 */ void ChkMoveBG_NoDABg(cBgS_PolyInfo const&);
-	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
 };
 
 struct dBgS_AcchCir {
 	/* 80075EAC */ dBgS_AcchCir();
 	/* 80075F58 */ void SetWall(f32, f32);
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct dBgS {
+	/* 80074B40 */ void ChkMoveBG_NoDABg(cBgS_PolyInfo const&);
+	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
 };
 
 struct dBgS_Acch {
@@ -200,37 +221,13 @@ struct dBgS_Acch {
 	/* 800773A4 */ void ClrMoveBGOnly();
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
+struct cM3dGPla {
 };
 
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-};
-
-struct daPy_boomerangMove_c {
-	/* 8015E5B0 */ void initOffset(cXyz const*);
-	/* 8015E654 */ void posMove(cXyz*, s16*, fopAc_ac_c*, s16);
-	/* 8015E87C */ void bgCheckAfterOffset(cXyz const*);
-};
-
-struct J3DModelData {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
 };
 
 struct cCcD_Obj {
@@ -240,10 +237,19 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
+struct cBgS {
+	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
+};
+
+struct Z2SoundObjSimple {
+	/* 8015BA3C */ ~Z2SoundObjSimple();
+	/* 802BE844 */ Z2SoundObjSimple();
+};
+
+struct Z2SoundObjBase {
+	/* 802BDF48 */ ~Z2SoundObjBase();
+	/* 802BDFF8 */ void deleteObject();
+	/* 802BE4A4 */ void startCollisionSE(u32, u32, Z2SoundObjBase*);
 };
 
 struct JAISoundID {
@@ -251,12 +257,6 @@ struct JAISoundID {
 
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-};
-
-struct Z2SoundObjBase {
-	/* 802BDF48 */ ~Z2SoundObjBase();
-	/* 802BDFF8 */ void deleteObject();
-	/* 802BE4A4 */ void startCollisionSE(u32, u32, Z2SoundObjBase*);
 };
 
 // 
@@ -530,7 +530,7 @@ asm static void Reflect(cXyz* param_0, cBgS_PolyInfo const& param_1, f32 param_2
 #pragma pop
 
 
-/* 8015B0B8-8015B0C4 000C+00 s=10 e=1 z=1  None .text      getData__12daItemBase_cFv                                    */
+/* 8015B0B8-8015B0C4 000C+00 s=10 e=1 z=0  None .text      getData__12daItemBase_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -805,7 +805,7 @@ SECTION_DATA static void* l_daItem_Method[8] = {
 	(void*)NULL,
 };
 
-/* 803B9F74-803B9FA4 0030+00 s=0 e=0 z=1  None .data      g_profile_ITEM                                               */
+/* 803B9F74-803B9FA4 0030+00 s=0 e=0 z=0  None .data      g_profile_ITEM                                               */
 SECTION_DATA void* g_profile_ITEM[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,

@@ -12,18 +12,4 @@
 // 
 
 
-extern void* const data_8054EAB0[2];
-
-// 
-// External References:
-// 
-
-
-extern "C" void __sinit_d_a_npc_kakashi_cpp(); // 1
-
-// 
-// Declarations:
-// 
-
-/* ############################################################################################## */
-#pragma section ".ctors$10"
+extern 

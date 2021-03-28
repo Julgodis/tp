@@ -12,18 +12,3 @@
 // 
 
 
-extern void* const data_804961C0[2];
-
-// 
-// External References:
-// 
-
-
-extern "C" void __sinit_d_a_tbox_cpp(); // 1
-
-// 
-// Declarations:
-// 
-
-/* ############################################################################################## */
-#pragma section ".ctors$10"

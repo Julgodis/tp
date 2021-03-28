@@ -25,12 +25,12 @@ struct dSelect_icon_c {
 	/* 80195B70 */ void setPos(J2DPane*, f32, f32);
 };
 
-struct CPaneMgr {
-	/* 80254638 */ void paneScale(f32, f32);
-};
-
 struct J2DScreen {
 	/* 802F9690 */ void animation();
+};
+
+struct CPaneMgr {
+	/* 80254638 */ void paneScale(f32, f32);
 };
 
 // 

@@ -11,15 +11,29 @@
 // Types:
 // 
 
+struct csXyz {
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CF0C */ void ZXYrotS(csXyz const&);
+};
+
 struct fopAc_ac_c {
 };
 
-struct cCcD_GObjInf {
+struct cXyz {
 };
 
-struct cCcD_Stts {
-	/* 80263934 */ void PlusCcMove(f32, f32, f32);
-	/* 80263970 */ void PlusDmg(int);
+struct dPa_control_c {
+	/* 8004C218 */ void setHitMark(u16, fopAc_ac_c*, cXyz const*, csXyz const*, cXyz const*, u32);
+};
+
+struct dJntCol_c {
+	/* 80036C44 */ void getHitmarkPosAndAngle(cXyz const*, csXyz const*, cXyz*, csXyz*, int) const;
+};
+
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
 };
 
 struct cCcD_ShapeAttr {
@@ -28,24 +42,22 @@ struct cCcD_ShapeAttr {
 
 };
 
-struct cCcD_GStts {
+struct dCcD_GObjInf {
+	/* 800843DC */ void ChkAtNoGuard();
+};
+
+struct cCcD_GObjInf {
 };
 
 struct dCcD_GStts {
 };
 
-struct cXyz {
+struct cCcD_Stts {
+	/* 80263934 */ void PlusCcMove(f32, f32, f32);
+	/* 80263970 */ void PlusDmg(int);
 };
 
-struct csXyz {
-};
-
-struct dCcD_GObjInf {
-	/* 800843DC */ void ChkAtNoGuard();
-};
-
-struct cCcD_Obj {
-	/* 80263A48 */ void GetAc();
+struct cCcD_GStts {
 };
 
 struct dCcS {
@@ -74,21 +86,9 @@ struct dCcS {
 	/* 8008734C */ void ChkNoHitGAtTg(cCcD_GObjInf const*, cCcD_GObjInf const*, cCcD_GStts*, cCcD_GStts*);
 };
 
-struct cCcD_SphAttr {
-	/* 8008721C */ ~cCcD_SphAttr();
-	/* 802646E0 */ void CalcAabBox();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CF0C */ void ZXYrotS(csXyz const&);
-};
-
-struct dJntCol_c {
-	/* 80036C44 */ void getHitmarkPosAndAngle(cXyz const*, csXyz const*, cXyz*, csXyz*, int) const;
-};
-
-struct dPa_control_c {
-	/* 8004C218 */ void setHitMark(u16, fopAc_ac_c*, cXyz const*, csXyz const*, cXyz const*, u32);
+struct dCcMassS_Mng {
+	/* 800855E4 */ void Ct();
+	/* 80085CF0 */ void Clear();
 };
 
 struct dCcD_GAtTgCoCommonBase {
@@ -97,24 +97,20 @@ struct dCcD_GAtTgCoCommonBase {
 	/* 80083748 */ void ChkEffCounter();
 };
 
-struct dCcMassS_Mng {
-	/* 800855E4 */ void Ct();
-	/* 80085CF0 */ void Clear();
+struct cM3dGSphS {
 };
 
-struct cCcD_DivideInfo {
-	/* 80263368 */ void Chk(cCcD_DivideInfo const&) const;
+struct cM3dGSph {
+	/* 8026F6A8 */ void Set(cM3dGSphS const&);
+};
+
+struct cM3dGCps {
+	/* 8026EF88 */ cM3dGCps();
+	/* 8026EFA4 */ ~cM3dGCps();
+	/* 8026F000 */ void Set(cXyz const&, cXyz const&, f32);
 };
 
 struct cM3dGAab {
-};
-
-struct cCcD_DivideArea {
-	/* 802636A0 */ void CalcDivideInfoOverArea(cCcD_DivideInfo*, cM3dGAab const&);
-};
-
-struct cCcD_CpsAttr {
-	/* 80263FC4 */ void CalcAabBox();
 };
 
 struct cCcS {
@@ -125,20 +121,24 @@ struct cCcS {
 	/* 80265DF4 */ void SetCoGCorrectProc(cCcD_Obj*, cCcD_Obj*);
 };
 
+struct cCcD_SphAttr {
+	/* 8008721C */ ~cCcD_SphAttr();
+	/* 802646E0 */ void CalcAabBox();
+};
+
+struct cCcD_DivideInfo {
+	/* 80263368 */ void Chk(cCcD_DivideInfo const&) const;
+};
+
+struct cCcD_DivideArea {
+	/* 802636A0 */ void CalcDivideInfoOverArea(cCcD_DivideInfo*, cM3dGAab const&);
+};
+
+struct cCcD_CpsAttr {
+	/* 80263FC4 */ void CalcAabBox();
+};
+
 struct Vec {
-};
-
-struct cM3dGCps {
-	/* 8026EF88 */ cM3dGCps();
-	/* 8026EFA4 */ ~cM3dGCps();
-	/* 8026F000 */ void Set(cXyz const&, cXyz const&, f32);
-};
-
-struct cM3dGSphS {
-};
-
-struct cM3dGSph {
-	/* 8026F6A8 */ void Set(cM3dGSphS const&);
 };
 
 // 
@@ -486,7 +486,7 @@ asm void dCcS::Draw() {
 #pragma pop
 
 
-/* 8008730C-80087330 0024+00 s=0 e=0 z=1  None .text      MassClear__4dCcSFv                                           */
+/* 8008730C-80087330 0024+00 s=0 e=0 z=0  None .text      MassClear__4dCcSFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -11,52 +11,36 @@
 // Types:
 // 
 
-struct JFWSystem {
-	/* 80271CD0 */ void firstInit();
-	/* 80271D18 */ void init();
+struct _GXRenderModeObj {
+};
+
+struct ResFONT {
+};
+
+struct OSThread {
+};
+
+struct JUTVideo {
+	/* 802E4C54 */ void createManager(_GXRenderModeObj const*);
 };
 
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 };
 
-struct JKRExpHeap {
-	/* 802CEDB4 */ void createRoot(int, bool);
-	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
-struct OSThread {
-};
-
-struct JKRThread {
-	/* 802D16B8 */ JKRThread(OSThread*, int);
-};
-
-struct JKRAram {
-	/* 802D1FA4 */ void create(u32, u32, s32, s32, s32);
+struct JUTResFont {
+	/* 802DEF94 */ JUTResFont(ResFONT const*, JKRHeap*);
 };
 
 struct JUTGraphFifo {
 	/* 802DEB58 */ JUTGraphFifo(u32);
 };
 
-struct ResFONT {
-};
-
-struct JUTResFont {
-	/* 802DEF94 */ JUTResFont(ResFONT const*, JKRHeap*);
+struct JUTGamePad {
+	/* 802E0898 */ void init();
 };
 
 struct JUTFont {
-};
-
-struct JUTDbPrint {
-	/* 802E0190 */ void start(JUTFont*, JKRHeap*);
-	/* 802E0204 */ void changeFont(JUTFont*);
-};
-
-struct JUTGamePad {
-	/* 802E0898 */ void init();
 };
 
 struct JUTDirectPrint {
@@ -68,23 +52,39 @@ struct JUTException {
 	/* 802E3FEC */ void createConsole(void*, u32);
 };
 
-struct JUTAssertion {
-	/* 802E495C */ void create();
+struct JUTDbPrint {
+	/* 802E0190 */ void start(JUTFont*, JKRHeap*);
+	/* 802E0204 */ void changeFont(JUTFont*);
 };
 
-struct _GXRenderModeObj {
-};
-
-struct JUTVideo {
-	/* 802E4C54 */ void createManager(_GXRenderModeObj const*);
+struct JUTConsoleManager {
+	/* 802E81F4 */ void createManager(JKRHeap*);
 };
 
 struct JUTConsole {
 	/* 802E7354 */ void create(unsigned int, unsigned int, JKRHeap*);
 };
 
-struct JUTConsoleManager {
-	/* 802E81F4 */ void createManager(JKRHeap*);
+struct JUTAssertion {
+	/* 802E495C */ void create();
+};
+
+struct JKRThread {
+	/* 802D16B8 */ JKRThread(OSThread*, int);
+};
+
+struct JKRExpHeap {
+	/* 802CEDB4 */ void createRoot(int, bool);
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
+struct JKRAram {
+	/* 802D1FA4 */ void create(u32, u32, s32, s32, s32);
+};
+
+struct JFWSystem {
+	/* 80271CD0 */ void firstInit();
+	/* 80271D18 */ void init();
 };
 
 // 

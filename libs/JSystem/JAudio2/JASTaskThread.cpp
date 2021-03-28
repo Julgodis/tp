@@ -11,6 +11,14 @@
 // Types:
 // 
 
+struct JKRHeap {
+};
+
+struct JKRThread {
+	/* 802D1610 */ JKRThread(JKRHeap*, u32, int, int);
+	/* 802D1758 */ ~JKRThread();
+};
+
 struct JASTaskThread {
 	/* 8028F6C4 */ JASTaskThread(int, int, u32);
 	/* 8028F724 */ ~JASTaskThread();
@@ -22,21 +30,13 @@ struct JASTaskThread {
 	/* 8028FE88 */ void pause(bool);
 };
 
-struct JASCalc {
-	/* 8028F354 */ void bcopy(void const*, void*, u32);
-};
-
 struct JASKernel {
 	/* 80290AC0 */ void getSystemHeap();
 	/* 80290AC8 */ void getCommandHeap();
 };
 
-struct JKRHeap {
-};
-
-struct JKRThread {
-	/* 802D1610 */ JKRThread(JKRHeap*, u32, int, int);
-	/* 802D1758 */ ~JKRThread();
+struct JASCalc {
+	/* 8028F354 */ void bcopy(void const*, void*, u32);
 };
 
 // 

@@ -12,18 +12,4 @@
 // 
 
 
-extern u8 const data_8059B2C4[4];
-
-// 
-// External References:
-// 
-
-
-
-// 
-// Declarations:
-// 
-
-/* ############################################################################################## */
-#pragma section ".dtors$10"
-#pragma section ".dtors$15"
+extern 

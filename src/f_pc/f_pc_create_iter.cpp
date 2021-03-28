@@ -11,25 +11,25 @@
 // Types:
 // 
 
-struct create_tag {
-};
-
-struct fpcCtIt_jilprm_c {
-};
-
 struct node_list_class {
 };
 
 struct node_class {
 };
 
-struct create_tag_class {
-};
-
 struct method_filter {
 };
 
 struct judge_filter {
+};
+
+struct fpcCtIt_jilprm_c {
+};
+
+struct create_tag_class {
+};
+
+struct create_tag {
 };
 
 // 

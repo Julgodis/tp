@@ -11,6 +11,18 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+};
+
+struct dEvt_control_c {
+	/* 80042468 */ void reset();
+};
+
+struct dEvent_manager_c {
+	/* 80047698 */ void getEventIdx(fopAc_ac_c*, u8);
+	/* 80047A78 */ void endCheck(s16);
+};
+
 template <typename A0>
 struct action_class { };
 /* action_class<dEvLib_callback_c> */
@@ -28,18 +40,6 @@ struct dEvLib_callback_c {
 	/* 80048A70 */ void executeStart();
 	/* 80048B1C */ void initRun();
 	/* 80048B48 */ void executeRun();
-};
-
-struct fopAc_ac_c {
-};
-
-struct dEvt_control_c {
-	/* 80042468 */ void reset();
-};
-
-struct dEvent_manager_c {
-	/* 80047698 */ void getEventIdx(fopAc_ac_c*, u8);
-	/* 80047A78 */ void endCheck(s16);
 };
 
 // 
@@ -79,7 +79,7 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 // Declarations:
 // 
 
-/* 8004886C-800488A4 0038+00 s=0 e=0 z=23  None .text      eventUpdate__17dEvLib_callback_cFv                           */
+/* 8004886C-800488A4 0038+00 s=0 e=0 z=0  None .text      eventUpdate__17dEvLib_callback_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -94,7 +94,7 @@ asm void dEvLib_callback_c::eventUpdate() {
 /* 804246E0-804246F8 0018+00 s=2 e=0 z=0  None .bss       l_startAction                                                */
 static u8 l_startAction[24];
 
-/* 800488A4-80048940 009C+00 s=1 e=0 z=1  None .text      setEvent__17dEvLib_callback_cFiii                            */
+/* 800488A4-80048940 009C+00 s=1 e=0 z=0  None .text      setEvent__17dEvLib_callback_cFiii                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +105,7 @@ asm void dEvLib_callback_c::setEvent(int param_0, int param_1, int param_2) {
 #pragma pop
 
 
-/* 80048940-80048970 0030+00 s=0 e=0 z=21  None .text      orderEvent__17dEvLib_callback_cFiii                          */
+/* 80048940-80048970 0030+00 s=0 e=0 z=0  None .text      orderEvent__17dEvLib_callback_cFiii                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -11,6 +11,56 @@
 // Types:
 // 
 
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+};
+
+struct JSUPtrLink {
+};
+
+struct JSUPtrList {
+	/* 802DBFF0 */ void prepend(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+	/* 802CE548 */ void free(void*);
+	/* 802CEB18 */ void copyMemory(void*, void*, u32);
+};
+
+struct JKRFileLoader {
+	/* 802D41D4 */ void unmount();
+};
+
+struct JKRFile {
+	/* 802D7B90 */ ~JKRFile();
+};
+
+struct JKRExpandSwitch {
+};
+
+struct JKRDvdRipper {
+	struct EAllocDirection {
+	};
+
+	/* 802D9C54 */ void loadToMainRAM(s32, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
+};
+
+struct JKRDvdFile {
+	/* 802D96A0 */ JKRDvdFile(s32);
+};
+
+struct JKRDvdAramRipper {
+	/* 802DA874 */ void loadToAram(s32, u32, JKRExpandSwitch, u32, u32, u32*);
+};
+
+struct JKRDisposer {
+	/* 802D14E4 */ ~JKRDisposer();
+};
+
 struct JKRArchive {
 	struct EMountDirection {
 	};
@@ -40,12 +90,11 @@ struct JKRArchive {
 	/* 802D6978 */ void getExpandSize(JKRArchive::SDIFileEntry*) const;
 };
 
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-	/* 802CE548 */ void free(void*);
-	/* 802CEB18 */ void copyMemory(void*, void*, u32);
+struct JKRAramHeap {
+	struct EAllocMode {
+	};
+
+	/* 802D2FBC */ void alloc(u32, JKRAramHeap::EAllocMode);
 };
 
 struct JKRAramArchive {
@@ -61,57 +110,8 @@ struct JKRAramArchive {
 	/* 802D7A64 */ void getExpandedResSize(void const*) const;
 };
 
-struct JKRFile {
-	/* 802D7B90 */ ~JKRFile();
-};
-
-struct JKRDisposer {
-	/* 802D14E4 */ ~JKRDisposer();
-};
-
-struct JKRExpandSwitch {
-};
-
 struct JKRAram {
 	/* 802D25B4 */ void aramToMainRam(u32, u8*, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
-};
-
-struct JKRAramHeap {
-	struct EAllocMode {
-	};
-
-	/* 802D2FBC */ void alloc(u32, JKRAramHeap::EAllocMode);
-};
-
-struct JKRFileLoader {
-	/* 802D41D4 */ void unmount();
-};
-
-struct JKRDvdFile {
-	/* 802D96A0 */ JKRDvdFile(s32);
-};
-
-struct JKRDvdRipper {
-	struct EAllocDirection {
-	};
-
-	/* 802D9C54 */ void loadToMainRAM(s32, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
-};
-
-struct JKRDvdAramRipper {
-	/* 802DA874 */ void loadToAram(s32, u32, JKRExpandSwitch, u32, u32, u32*);
-};
-
-struct JSUPtrLink {
-};
-
-struct JSUPtrList {
-	/* 802DBFF0 */ void prepend(JSUPtrLink*);
-	/* 802DC15C */ void remove(JSUPtrLink*);
-};
-
-struct JUTException {
-	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };
 
 // 

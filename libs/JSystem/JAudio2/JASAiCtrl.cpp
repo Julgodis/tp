@@ -11,10 +11,31 @@
 // Types:
 // 
 
-struct JASMixMode {
+struct JKRHeap {
+};
+
+struct JASProbe {
+	/* 80290EE4 */ void start(s32, char const*);
+	/* 80290F24 */ void stop(s32);
+};
+
+struct JASPortCmd {
+	/* 80291060 */ void execAllCommand();
 };
 
 struct JASOutputRate {
+};
+
+struct JASMixMode {
+};
+
+struct JASLfo {
+	/* 8029BDD8 */ void incCounter(f32);
+};
+
+struct JASDsp {
+	/* 8029D9E4 */ void syncFrame(u32, u32, u32);
+	/* 8029DAA0 */ void invalChannelAll();
 };
 
 struct JASDriver {
@@ -40,6 +61,16 @@ struct JASDriver {
 	/* 8029E2D0 */ void DSPSyncCallback();
 };
 
+struct JASDSPChannel {
+	/* 8029D89C */ void updateAll();
+	/* 8029D910 */ void killActiveChannel();
+};
+
+struct JASChannel {
+	/* 8029BC0C */ void initBankDisposeMsgQueue();
+	/* 8029BC48 */ void receiveBankDisposeMsg();
+};
+
 struct JASCalc {
 	/* 8028F2E8 */ void imixcopy(s16 const*, s16 const*, s16*, u32);
 	/* 8028F480 */ void bzero(void*, u32);
@@ -48,37 +79,6 @@ struct JASCalc {
 	/* 8028F69C */ /* clamp<s16, s32> */
 	void clamp__template0(s32);
 
-};
-
-struct JASProbe {
-	/* 80290EE4 */ void start(s32, char const*);
-	/* 80290F24 */ void stop(s32);
-};
-
-struct JASPortCmd {
-	/* 80291060 */ void execAllCommand();
-};
-
-struct JASChannel {
-	/* 8029BC0C */ void initBankDisposeMsgQueue();
-	/* 8029BC48 */ void receiveBankDisposeMsg();
-};
-
-struct JASLfo {
-	/* 8029BDD8 */ void incCounter(f32);
-};
-
-struct JASDSPChannel {
-	/* 8029D89C */ void updateAll();
-	/* 8029D910 */ void killActiveChannel();
-};
-
-struct JASDsp {
-	/* 8029D9E4 */ void syncFrame(u32, u32, u32);
-	/* 8029DAA0 */ void invalChannelAll();
-};
-
-struct JKRHeap {
 };
 
 // 
@@ -358,7 +358,7 @@ asm void JASDriver::finishDSPFrame() {
 #pragma pop
 
 
-/* 8029C9DC-8029C9E8 000C+00 s=0 e=0 z=2  None .text      registerMixCallback__9JASDriverFPFl_Ps10JASMixMode           */
+/* 8029C9DC-8029C9E8 000C+00 s=0 e=0 z=0  None .text      registerMixCallback__9JASDriverFPFl_Ps10JASMixMode           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

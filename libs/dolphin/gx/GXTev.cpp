@@ -50,7 +50,7 @@ SECTION_DATA static u8 TEVCOpTableST0[20] = {
 	0xC0, 0x08, 0xFF, 0xFA,
 };
 
-/* 8035F198-8035F224 008C+00 s=0 e=15 z=1  None .text      GXSetTevOp                                                   */
+/* 8035F198-8035F224 008C+00 s=0 e=15 z=0  None .text      GXSetTevOp                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -61,7 +61,7 @@ extern "C" asm void GXSetTevOp() {
 #pragma pop
 
 
-/* 8035F224-8035F268 0044+00 s=0 e=49 z=5  None .text      GXSetTevColorIn                                              */
+/* 8035F224-8035F268 0044+00 s=0 e=49 z=0  None .text      GXSetTevColorIn                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +72,7 @@ extern "C" asm void GXSetTevColorIn() {
 #pragma pop
 
 
-/* 8035F268-8035F2AC 0044+00 s=0 e=49 z=6  None .text      GXSetTevAlphaIn                                              */
+/* 8035F268-8035F2AC 0044+00 s=0 e=49 z=0  None .text      GXSetTevAlphaIn                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -83,7 +83,7 @@ extern "C" asm void GXSetTevAlphaIn() {
 #pragma pop
 
 
-/* 8035F2AC-8035F314 0068+00 s=0 e=50 z=5  None .text      GXSetTevColorOp                                              */
+/* 8035F2AC-8035F314 0068+00 s=0 e=50 z=0  None .text      GXSetTevColorOp                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -94,7 +94,7 @@ extern "C" asm void GXSetTevColorOp() {
 #pragma pop
 
 
-/* 8035F314-8035F37C 0068+00 s=0 e=50 z=5  None .text      GXSetTevAlphaOp                                              */
+/* 8035F314-8035F37C 0068+00 s=0 e=50 z=0  None .text      GXSetTevAlphaOp                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +105,7 @@ extern "C" asm void GXSetTevAlphaOp() {
 #pragma pop
 
 
-/* 8035F37C-8035F3DC 0060+00 s=0 e=54 z=4  None .text      GXSetTevColor                                                */
+/* 8035F37C-8035F3DC 0060+00 s=0 e=54 z=0  None .text      GXSetTevColor                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -116,7 +116,7 @@ extern "C" asm void GXSetTevColor() {
 #pragma pop
 
 
-/* 8035F3DC-8035F440 0064+00 s=0 e=8 z=2  None .text      GXSetTevColorS10                                             */
+/* 8035F3DC-8035F440 0064+00 s=0 e=8 z=0  None .text      GXSetTevColorS10                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,7 +127,7 @@ extern "C" asm void GXSetTevColorS10() {
 #pragma pop
 
 
-/* 8035F440-8035F4A4 0064+00 s=0 e=8 z=4  None .text      GXSetTevKColor                                               */
+/* 8035F440-8035F4A4 0064+00 s=0 e=8 z=0  None .text      GXSetTevKColor                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -138,7 +138,7 @@ extern "C" asm void GXSetTevKColor() {
 #pragma pop
 
 
-/* 8035F4A4-8035F500 005C+00 s=0 e=9 z=4  None .text      GXSetTevKColorSel                                            */
+/* 8035F4A4-8035F500 005C+00 s=0 e=9 z=0  None .text      GXSetTevKColorSel                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -149,7 +149,7 @@ extern "C" asm void GXSetTevKColorSel() {
 #pragma pop
 
 
-/* 8035F500-8035F55C 005C+00 s=0 e=9 z=4  None .text      GXSetTevKAlphaSel                                            */
+/* 8035F500-8035F55C 005C+00 s=0 e=9 z=0  None .text      GXSetTevKAlphaSel                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,7 +160,7 @@ extern "C" asm void GXSetTevKAlphaSel() {
 #pragma pop
 
 
-/* 8035F55C-8035F5A4 0048+00 s=0 e=10 z=5  None .text      GXSetTevSwapMode                                             */
+/* 8035F55C-8035F5A4 0048+00 s=0 e=10 z=0  None .text      GXSetTevSwapMode                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -171,7 +171,7 @@ extern "C" asm void GXSetTevSwapMode() {
 #pragma pop
 
 
-/* 8035F5A4-8035F624 0080+00 s=0 e=17 z=2  None .text      GXSetTevSwapModeTable                                        */
+/* 8035F5A4-8035F624 0080+00 s=0 e=17 z=0  None .text      GXSetTevSwapModeTable                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -182,7 +182,7 @@ extern "C" asm void GXSetTevSwapModeTable() {
 #pragma pop
 
 
-/* 8035F624-8035F668 0044+00 s=0 e=43 z=5  None .text      GXSetAlphaCompare                                            */
+/* 8035F624-8035F668 0044+00 s=0 e=43 z=0  None .text      GXSetAlphaCompare                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -232,7 +232,7 @@ SECTION_DATA static u8 data_803D2810[36 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8035F6F4-8035F890 019C+00 s=0 e=65 z=6  None .text      GXSetTevOrder                                                */
+/* 8035F6F4-8035F890 019C+00 s=0 e=65 z=0  None .text      GXSetTevOrder                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -243,7 +243,7 @@ extern "C" asm void GXSetTevOrder() {
 #pragma pop
 
 
-/* 8035F890-8035F8B8 0028+00 s=0 e=63 z=6  None .text      GXSetNumTevStages                                            */
+/* 8035F890-8035F8B8 0028+00 s=0 e=63 z=0  None .text      GXSetNumTevStages                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

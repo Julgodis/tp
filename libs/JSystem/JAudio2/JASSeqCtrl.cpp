@@ -15,6 +15,15 @@ struct JASTrack {
 	/* 80292220 */ void checkNoteStop(u32) const;
 };
 
+struct JASSeqReader {
+	/* 80296108 */ void init();
+	/* 80296148 */ void init(void*);
+};
+
+struct JASSeqParser {
+	/* 80293CAC */ ~JASSeqParser();
+};
+
 struct JASSeqCtrl {
 	struct IntrType {
 	};
@@ -30,15 +39,6 @@ struct JASSeqCtrl {
 	/* 80293B28 */ void findIntr();
 	/* 80293B78 */ void checkIntr();
 	/* 80293BE8 */ void timerProcess();
-};
-
-struct JASSeqParser {
-	/* 80293CAC */ ~JASSeqParser();
-};
-
-struct JASSeqReader {
-	/* 80296108 */ void init();
-	/* 80296148 */ void init(void*);
 };
 
 // 

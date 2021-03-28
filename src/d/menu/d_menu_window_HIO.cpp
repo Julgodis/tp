@@ -11,6 +11,10 @@
 // Types:
 // 
 
+struct dSv_player_get_item_c {
+	/* 80033EC8 */ void isFirstBit(u8) const;
+};
+
 struct dMw_HIO_c {
 	/* 801F9AFC */ dMw_HIO_c();
 	/* 801F9B38 */ void init();
@@ -23,10 +27,6 @@ struct dMw_HIO_c {
 struct dMw_DHIO_c {
 	/* 801F9E2C */ dMw_DHIO_c();
 	/* 801F9E98 */ ~dMw_DHIO_c();
-};
-
-struct dSv_player_get_item_c {
-	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
 // 

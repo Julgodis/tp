@@ -11,6 +11,14 @@
 // Types:
 // 
 
+namespace std {
+	/*          */ template <typename A1, typename B1>
+	/*          */ void lower_bound(/* u32 const*, u32 const*, u32 const& */);
+	/* 802A94D4 */ /* lower_bound<u32 const*, u32> */
+	void lower_bound__template0(u32 const*, u32 const*, u32 const&);
+
+};
+
 struct JMessage {
 	struct TResource {
 		/* 802A8CDC */ void toMessageIndex_messageID(u32, u32, bool*) const;
@@ -43,14 +51,6 @@ struct JMessage {
 		/* 802A9528 */ void parseCharacter_ShiftJIS(char const**);
 		/* 802A958C */ void parseCharacter_UTF8(char const**);
 	};
-
-};
-
-namespace std {
-	/*          */ template <typename A1, typename B1>
-	/*          */ void lower_bound(/* u32 const*, u32 const*, u32 const& */);
-	/* 802A94D4 */ /* lower_bound<u32 const*, u32> */
-	void lower_bound__template0(u32 const*, u32 const*, u32 const&);
 
 };
 

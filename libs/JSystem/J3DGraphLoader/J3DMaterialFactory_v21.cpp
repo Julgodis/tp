@@ -11,7 +11,16 @@
 // Types:
 // 
 
-struct J3DMaterialBlock_v21 {
+struct J3DTexMtxInfo {
+	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
+};
+
+struct J3DTevStageInfo {
+};
+
+struct J3DTevStage {
+	/* 8000E230 */ J3DTevStage();
+	/* 8003AACC */ J3DTevStage(J3DTevStageInfo const&);
 };
 
 struct J3DMaterial {
@@ -21,6 +30,9 @@ struct J3DMaterial {
 	/* 80315E78 */ void createIndBlock(int);
 	/* 80315F60 */ void createPEBlock(u32, u32);
 	/* 80316240 */ void initialize();
+};
+
+struct J3DMaterialBlock_v21 {
 };
 
 struct J3DMaterialFactory_v21 {
@@ -50,18 +62,6 @@ struct J3DMaterialFactory_v21 {
 	/* 80334004 */ void newZCompLoc(int) const;
 	/* 8033403C */ void newDither(int) const;
 	/* 80334074 */ void newNBTScale(int) const;
-};
-
-struct J3DTevStageInfo {
-};
-
-struct J3DTevStage {
-	/* 8000E230 */ J3DTevStage();
-	/* 8003AACC */ J3DTevStage(J3DTevStageInfo const&);
-};
-
-struct J3DTexMtxInfo {
-	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
 };
 
 struct J3DFogInfo {

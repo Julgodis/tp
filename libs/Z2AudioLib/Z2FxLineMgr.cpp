@@ -14,13 +14,13 @@
 struct Z2FxLineConfig {
 };
 
+struct JKRHeap {
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
 struct JKRArchive {
 	/* 802D5D38 */ void getResource(u16);
 	/* 802D610C */ void countResource() const;
-};
-
-struct JKRHeap {
-	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 struct Z2FxLineMgr {
@@ -33,11 +33,8 @@ struct Z2FxLineMgr {
 	/* 802BAEB8 */ void setSceneFx(s32);
 };
 
-struct JASDsp {
-	struct FxlineConfig_ {
-	};
-
-	/* 8029DB78 */ void setFXLine(u8, s16*, JASDsp::FxlineConfig_*);
+struct JSUMemoryInputStream {
+	/* 802DC520 */ void setBuffer(void const*, s32);
 };
 
 struct JSUInputStream {
@@ -45,8 +42,11 @@ struct JSUInputStream {
 	/* 802DC298 */ void read(void*, s32);
 };
 
-struct JSUMemoryInputStream {
-	/* 802DC520 */ void setBuffer(void const*, s32);
+struct JASDsp {
+	struct FxlineConfig_ {
+	};
+
+	/* 8029DB78 */ void setFXLine(u8, s16*, JASDsp::FxlineConfig_*);
 };
 
 // 

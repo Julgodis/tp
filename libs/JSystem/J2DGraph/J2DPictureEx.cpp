@@ -11,11 +11,36 @@
 // Types:
 // 
 
-struct J2DAnmTevRegKey {
+struct _GXTlut {
 };
 
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
+struct _GXTexMapID {
+};
+
+struct _GXCullMode {
+};
+
+struct ResTLUT {
+};
+
+struct ResTIMG {
+};
+
+struct ResFONT {
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct JUTPalette {
+};
+
+struct JUTTexture {
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
+	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
 };
 
 struct JSUStreamSeekFrom {
@@ -26,16 +51,53 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct J2DAnmTransform {
+struct JSUInputStream {
+	/* 802DC298 */ void read(void*, s32);
 };
 
-struct J2DAnmTextureSRTKey {
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
+	template <typename A1>
+	struct TVec2 { };
+	/* TVec2<s16> */
+	struct TVec2__template0 {
+		/* 802FF204 */ TVec2__template0();
+	};
+
+};
+
+struct J2DTexMtx {
+};
+
+struct J2DTexGenBlock {
+	/* 802EB6A4 */ void setTexMtx(u32, J2DTexMtx&);
+};
+
+struct J2DTevStage {
+};
+
+struct J2DScreen {
+	/* 802F9640 */ void getNameResource(char const*);
+};
+
+struct J2DAnmBase {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmTexPattern {
 };
 
 struct J2DAnmColor {
 };
 
-struct J2DAnmTexPattern {
+struct J2DAnmTextureSRTKey {
 };
 
 struct J2DMaterial {
@@ -46,28 +108,14 @@ struct J2DMaterial {
 	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
+struct J2DAnmTransform {
 };
 
-struct ResFONT {
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
 struct J2DAnmVtxColor {
-};
-
-struct _GXCullMode {
-};
-
-struct J2DTevStage {
-};
-
-struct ResTIMG {
-};
-
-struct J2DAnmBase {
 };
 
 struct J2DPane {
@@ -93,39 +141,6 @@ struct J2DPane {
 	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
 	/* 802F8464 */ void setConnectParent(bool);
 	/* 802F8474 */ void update();
-};
-
-struct JUTPalette {
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
-	};
-
-	template <typename A1>
-	struct TVec2 { };
-	/* TVec2<s16> */
-	struct TVec2__template0 {
-		/* 802FF204 */ TVec2__template0();
-	};
-
-};
-
-struct _GXTlut {
-};
-
-struct JUTTexture {
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
-	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
-};
-
-struct _GXTexMapID {
-};
-
-struct ResTLUT {
 };
 
 struct J2DPictureEx {
@@ -216,21 +231,6 @@ struct J2DPicture {
 	/* 802FDB28 */ void drawSelf(f32, f32);
 	/* 802FF1D0 */ void getTlutID(ResTIMG const*, u8);
 	/* 802FF2E8 */ s32 getTypeID() const;
-};
-
-struct JSUInputStream {
-	/* 802DC298 */ void read(void*, s32);
-};
-
-struct J2DTexMtx {
-};
-
-struct J2DTexGenBlock {
-	/* 802EB6A4 */ void setTexMtx(u32, J2DTexMtx&);
-};
-
-struct J2DScreen {
-	/* 802F9640 */ void getNameResource(char const*);
 };
 
 // 

@@ -54,7 +54,7 @@ extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
 // Declarations:
 // 
 
-/* 8001ECB0-8001ECE0 0030+00 s=0 e=7 z=1  None .text      fopScnM_SearchByID__FUi                                      */
+/* 8001ECB0-8001ECE0 0030+00 s=0 e=7 z=0  None .text      fopScnM_SearchByID__FUi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -73,7 +73,7 @@ SECTION_SDATA static u32 l_scnRqID[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 8001ECE0-8001ED3C 005C+00 s=0 e=4 z=1  None .text      fopScnM_ChangeReq__FP11scene_classssUs                       */
+/* 8001ECE0-8001ED3C 005C+00 s=0 e=4 z=0  None .text      fopScnM_ChangeReq__FP11scene_classssUs                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

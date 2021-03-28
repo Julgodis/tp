@@ -14,20 +14,8 @@
 struct J2DAnmTransform {
 };
 
-struct J2DAnmVisibilityFull {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct J2DPane {
-	/* 80256018 */ void setAnimation(J2DAnmVtxColor*);
-	/* 80256020 */ void setAnimation(J2DAnmTexPattern*);
-	/* 802F7FC4 */ void setAnimation(J2DAnmTransform*);
-	/* 8025601C */ void setAnimation(J2DAnmVisibilityFull*);
+struct J2DWindowEx {
+	/* 80256084 */ void setAnimation(J2DAnmTransform*);
 };
 
 struct J2DTextBoxEx {
@@ -48,8 +36,20 @@ struct J2DPicture {
 	/* 8025603C */ bool getMaterial() const;
 };
 
-struct J2DWindowEx {
-	/* 80256084 */ void setAnimation(J2DAnmTransform*);
+struct J2DAnmVisibilityFull {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmVtxColor {
+};
+
+struct J2DPane {
+	/* 80256018 */ void setAnimation(J2DAnmVtxColor*);
+	/* 80256020 */ void setAnimation(J2DAnmTexPattern*);
+	/* 802F7FC4 */ void setAnimation(J2DAnmTransform*);
+	/* 8025601C */ void setAnimation(J2DAnmVisibilityFull*);
 };
 
 // 

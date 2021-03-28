@@ -11,7 +11,10 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
+	/* 80112C80 */ csXyz();
+	/* 8026745C */ void operator+=(csXyz&);
 };
 
 struct Vec {
@@ -25,10 +28,13 @@ struct cXyz {
 	/* 802670AC */ void isZero() const;
 };
 
-struct csXyz {
-	/* 80018BD0 */ ~csXyz();
-	/* 80112C80 */ csXyz();
-	/* 8026745C */ void operator+=(csXyz&);
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CE9C */ void XYZrotS(csXyz const&);
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
+};
+
+struct fopAc_ac_c {
 };
 
 struct J3DModel {
@@ -43,12 +49,6 @@ struct dNpcLib_lookat_c {
 	/* 80251EF8 */ void update();
 	/* 80252018 */ void limitter(s16*, s16, s16, s16);
 	/* 80252094 */ ~dNpcLib_lookat_c();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CE9C */ void XYZrotS(csXyz const&);
-	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
 // 
@@ -117,7 +117,7 @@ SECTION_DATA static void* __vt__16dNpcLib_lookat_c[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80251314-8025140C 00F8+00 s=0 e=0 z=4  None .text      __ct__16dNpcLib_lookat_cFv                                   */
+/* 80251314-8025140C 00F8+00 s=0 e=0 z=0  None .text      __ct__16dNpcLib_lookat_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -128,7 +128,7 @@ asm dNpcLib_lookat_c::dNpcLib_lookat_c() {
 #pragma pop
 
 
-/* 8025140C-80251534 0128+00 s=0 e=0 z=2  None .text      init__16dNpcLib_lookat_cFP8J3DModelPiP5csXyzP5csXyz          */
+/* 8025140C-80251534 0128+00 s=0 e=0 z=0  None .text      init__16dNpcLib_lookat_cFP8J3DModelPiP5csXyzP5csXyz          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -175,7 +175,7 @@ SECTION_SDATA2 static u8 lit_3873[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80251534-80251B60 062C+00 s=0 e=0 z=2  None .text      action__16dNpcLib_lookat_cF4cXyz4cXyzP10fopAc_ac_cPA4_fi     */
+/* 80251534-80251B60 062C+00 s=0 e=0 z=0  None .text      action__16dNpcLib_lookat_cF4cXyz4cXyzP10fopAc_ac_cPA4_fi     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -186,7 +186,7 @@ asm void dNpcLib_lookat_c::action(cXyz param_0, cXyz param_1, fopAc_ac_c* param_
 #pragma pop
 
 
-/* 80251B60-80251B64 0004+00 s=0 e=0 z=2  None .text      dbView__16dNpcLib_lookat_cFv                                 */
+/* 80251B60-80251B64 0004+00 s=0 e=0 z=0  None .text      dbView__16dNpcLib_lookat_cFv                                 */
 void dNpcLib_lookat_c::dbView() {
 	/* empty function */
 }

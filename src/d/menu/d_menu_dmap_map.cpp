@@ -11,6 +11,10 @@
 // Types:
 // 
 
+struct renderingPlusDoor_c {
+	/* 80040518 */ void afterDrawPath();
+};
+
 struct dTres_c {
 	struct data_s {
 	};
@@ -43,11 +47,83 @@ struct renderingDmap_c {
 	/* 801C263C */ bool isRendIcon() const;
 };
 
-struct dMenu_DmapMap_c {
-	/* 801C0CD8 */ void _create(u16, u16, u16, u16, void*);
-	/* 801C0D04 */ void _delete();
-	/* 801C0D70 */ void setTexture(u16, u16, u16, u16);
-	/* 801C0E4C */ void setPos(int, int, f32, f32, f32, bool, f32);
+struct dDrawPath_c {
+	struct line_class {
+	};
+
+	struct poly_class {
+	};
+
+	struct room_class {
+	};
+
+	struct group_class {
+	};
+
+	/* 8002ABF0 */ bool isDrawType(int);
+	/* 8002AD84 */ void getLineColor(int, int);
+	/* 8003CA40 */ void rendering(dDrawPath_c::poly_class const*);
+	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
+	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
+	/* 8003CCC4 */ void drawPath();
+};
+
+struct Vec {
+};
+
+struct renderingDAmap_c {
+	/* 8003FCC8 */ void init(u8*, u16, u16, u16, u16);
+	/* 8003FD08 */ void entry(f32, f32, f32, int, s8);
+	/* 8003FD9C */ void isSwitch(dDrawPath_c::group_class const*);
+	/* 8003FE18 */ void draw();
+	/* 8003FE4C */ void getBackColor() const;
+	/* 8003FE54 */ void isRenderingFloor(int);
+	/* 8003FE70 */ void isDrawRoom(int, int) const;
+	/* 8003FF14 */ void preDrawPath();
+	/* 8003FFC4 */ void postDrawPath();
+	/* 8003FFEC */ void getRoomNoSingle();
+	/* 80040134 */ void getFirstRoomPointer();
+	/* 800401E8 */ void getNextRoomPointer();
+	/* 800402C0 */ void isDrawPath();
+	/* 800402E0 */ bool getFirstDrawLayerNo();
+	/* 800402E8 */ void getNextDrawLayerNo(int);
+	/* 800409B4 */ void isDrawRoomIcon(int, int) const;
+	/* 800409E0 */ void isDrawIconSingle(dTres_c::data_s const*, int, int, bool, bool, Vec const*) const;
+	/* 80040AE4 */ void getIconGroupNumber(u8) const;
+};
+
+struct _GXColor {
+};
+
+struct mDoGph_gInf_c {
+	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
+};
+
+struct dSv_memBit_c {
+	/* 800347E8 */ void isTbox(int) const;
+	/* 80034934 */ void isDungeonItem(int) const;
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct ResTIMG {
+};
+
+struct dRenderingMap_c {
+	/* 8003CD38 */ void makeResTIMG(ResTIMG*, u16, u16, u8*, u8*, u16) const;
+};
+
+struct dRenderingFDAmap_c {
+	/* 8003D188 */ void preRenderingMap();
+	/* 8003D320 */ void postRenderingMap();
+	/* 8003D68C */ void getDecoLineColor(int, int);
+	/* 8003D6B8 */ void getDecorationLineWidth(int);
+};
+
+struct dMpath_c {
+	/* 8003F760 */ void getTopBottomFloorNo(s8*, s8*);
 };
 
 struct dMenu_StageMapCtrl_c {
@@ -88,6 +164,13 @@ struct dMenu_StageMapCtrl_c {
 	/* 801C2590 */ void setPlusZoomCenterZ(f32);
 };
 
+struct dMenu_DmapMap_c {
+	/* 801C0CD8 */ void _create(u16, u16, u16, u16, void*);
+	/* 801C0D04 */ void _delete();
+	/* 801C0D70 */ void setTexture(u16, u16, u16, u16);
+	/* 801C0E4C */ void setPos(int, int, f32, f32, f32, bool, f32);
+};
+
 struct dMenu_DmapMapCtrl_c {
 	/* 801BD144 */ ~dMenu_DmapMapCtrl_c();
 	/* 801C18C0 */ void getZoomMinMaxCheck(f32*, f32*, f32*, f32*, bool*, bool*);
@@ -97,57 +180,6 @@ struct dMenu_DmapMapCtrl_c {
 	/* 801C22A8 */ void draw();
 	/* 801C2598 */ void getInitWholeMapScale(f32*, f32, f32, f32, f32);
 	/* 801C25C0 */ void getInitDispCenter(f32*, f32*);
-};
-
-struct _GXColor {
-};
-
-struct mDoGph_gInf_c {
-	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
-};
-
-struct dDrawPath_c {
-	struct line_class {
-	};
-
-	struct poly_class {
-	};
-
-	struct room_class {
-	};
-
-	struct group_class {
-	};
-
-	/* 8002ABF0 */ bool isDrawType(int);
-	/* 8002AD84 */ void getLineColor(int, int);
-	/* 8003CA40 */ void rendering(dDrawPath_c::poly_class const*);
-	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
-	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
-	/* 8003CCC4 */ void drawPath();
-};
-
-struct dSv_memBit_c {
-	/* 800347E8 */ void isTbox(int) const;
-	/* 80034934 */ void isDungeonItem(int) const;
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct ResTIMG {
-};
-
-struct dRenderingMap_c {
-	/* 8003CD38 */ void makeResTIMG(ResTIMG*, u16, u16, u8*, u8*, u16) const;
-};
-
-struct dRenderingFDAmap_c {
-	/* 8003D188 */ void preRenderingMap();
-	/* 8003D320 */ void postRenderingMap();
-	/* 8003D68C */ void getDecoLineColor(int, int);
-	/* 8003D6B8 */ void getDecorationLineWidth(int);
 };
 
 struct dMapInfo_n {
@@ -164,38 +196,6 @@ struct dMapInfo_n {
 
 struct dMapInfo_c {
 	/* 8003F570 */ void calcNowStayFloorNo(f32, bool);
-};
-
-struct dMpath_c {
-	/* 8003F760 */ void getTopBottomFloorNo(s8*, s8*);
-};
-
-struct Vec {
-};
-
-struct renderingDAmap_c {
-	/* 8003FCC8 */ void init(u8*, u16, u16, u16, u16);
-	/* 8003FD08 */ void entry(f32, f32, f32, int, s8);
-	/* 8003FD9C */ void isSwitch(dDrawPath_c::group_class const*);
-	/* 8003FE18 */ void draw();
-	/* 8003FE4C */ void getBackColor() const;
-	/* 8003FE54 */ void isRenderingFloor(int);
-	/* 8003FE70 */ void isDrawRoom(int, int) const;
-	/* 8003FF14 */ void preDrawPath();
-	/* 8003FFC4 */ void postDrawPath();
-	/* 8003FFEC */ void getRoomNoSingle();
-	/* 80040134 */ void getFirstRoomPointer();
-	/* 800401E8 */ void getNextRoomPointer();
-	/* 800402C0 */ void isDrawPath();
-	/* 800402E0 */ bool getFirstDrawLayerNo();
-	/* 800402E8 */ void getNextDrawLayerNo(int);
-	/* 800409B4 */ void isDrawRoomIcon(int, int) const;
-	/* 800409E0 */ void isDrawIconSingle(dTres_c::data_s const*, int, int, bool, bool, Vec const*) const;
-	/* 80040AE4 */ void getIconGroupNumber(u8) const;
-};
-
-struct renderingPlusDoor_c {
-	/* 80040518 */ void afterDrawPath();
 };
 
 // 

@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct JASWaveInfo {
+};
+
 struct JASOscillator {
 	struct Data {
 	};
@@ -26,7 +29,23 @@ struct JASOscillator {
 	/* 8029C0E0 */ void update();
 };
 
-struct JASWaveInfo {
+template <typename A0>
+struct JASMemPool_MultiThreaded { };
+/* JASMemPool_MultiThreaded<JASChannel> */
+struct JASMemPool_MultiThreaded__template2 {
+	/* 802978DC */ ~JASMemPool_MultiThreaded__template2();
+};
+
+struct JASLfo {
+	/* 8029BD14 */ JASLfo();
+	/* 8029BD44 */ void getValue() const;
+	/* 8029BDD8 */ void incCounter(f32);
+	/* 8029BE2C */ void resetCounter();
+};
+
+struct JASGenericMemPool {
+	/* 80290848 */ JASGenericMemPool();
+	/* 80290994 */ void free(void*, u32);
 };
 
 struct JASDsp {
@@ -42,6 +61,21 @@ struct JASDsp {
 		/* 8029E09C */ void setBusConnect(u8, u8);
 	};
 
+};
+
+struct JASDriver {
+	/* 8029C9E8 */ void getDacRate();
+	/* 8029E150 */ void getChannelLevel_dsp();
+	/* 8029E180 */ void getOutputMode();
+};
+
+struct JASDSPChannel {
+	/* 8029D320 */ void free();
+	/* 8029D330 */ void start();
+	/* 8029D340 */ void drop();
+	/* 8029D44C */ void alloc(u8, s32 (*)(u32, JASDsp::TChannel*, void*), void*);
+	/* 8029D4BC */ void allocForce(u8, s32 (*)(u32, JASDsp::TChannel*, void*), void*);
+	/* 8029D534 */ void setPriority(u8);
 };
 
 struct JASChannel {
@@ -73,40 +107,6 @@ struct JASChannel {
 
 struct JASCalc {
 	/* 8028F578 */ void pow2(f32);
-};
-
-struct JASGenericMemPool {
-	/* 80290848 */ JASGenericMemPool();
-	/* 80290994 */ void free(void*, u32);
-};
-
-template <typename A0>
-struct JASMemPool_MultiThreaded { };
-/* JASMemPool_MultiThreaded<JASChannel> */
-struct JASMemPool_MultiThreaded__template2 {
-	/* 802978DC */ ~JASMemPool_MultiThreaded__template2();
-};
-
-struct JASLfo {
-	/* 8029BD14 */ JASLfo();
-	/* 8029BD44 */ void getValue() const;
-	/* 8029BDD8 */ void incCounter(f32);
-	/* 8029BE2C */ void resetCounter();
-};
-
-struct JASDriver {
-	/* 8029C9E8 */ void getDacRate();
-	/* 8029E150 */ void getChannelLevel_dsp();
-	/* 8029E180 */ void getOutputMode();
-};
-
-struct JASDSPChannel {
-	/* 8029D320 */ void free();
-	/* 8029D330 */ void start();
-	/* 8029D340 */ void drop();
-	/* 8029D44C */ void alloc(u8, s32 (*)(u32, JASDsp::TChannel*, void*), void*);
-	/* 8029D4BC */ void allocForce(u8, s32 (*)(u32, JASDsp::TChannel*, void*), void*);
-	/* 8029D534 */ void setPriority(u8);
 };
 
 // 

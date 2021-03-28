@@ -40,6 +40,10 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
+struct dMsgObject_c {
+	/* 8023822C */ void getStatus();
+};
+
 struct dDlst_base_c {
 };
 
@@ -47,17 +51,8 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct dMsgObject_c {
-	/* 8023822C */ void getStatus();
-};
-
-struct CPaneMgr {
-	/* 802545B0 */ void paneTrans(f32, f32);
-	/* 80254638 */ void paneScale(f32, f32);
-};
-
-struct CPaneMgrAlpha {
-	/* 802557D0 */ void setAlphaRate(f32);
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
 };
 
 struct J2DGrafContext {
@@ -67,8 +62,13 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-struct J2DTextBox {
-	/* 80300658 */ void getStringPtr() const;
+struct CPaneMgrAlpha {
+	/* 802557D0 */ void setAlphaRate(f32);
+};
+
+struct CPaneMgr {
+	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 80254638 */ void paneScale(f32, f32);
 };
 
 // 

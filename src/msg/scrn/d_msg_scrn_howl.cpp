@@ -51,23 +51,6 @@ struct dMsgScrnHowl_c {
 	/* 8024438C */ void getGuideDataType(int);
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct dMeter2Draw_c {
-	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
-};
-
-struct JMSMesgEntry_c {
-};
-
-struct dMeter2Info_c {
-	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
-};
-
 struct dMsgScrnBase_c {
 	/* 80238C40 */ void setSelectRubyString(char*, char*, char*);
 	/* 80238C44 */ void setSelectString(char*, char*, char*);
@@ -88,35 +71,21 @@ struct dMsgScrnBase_c {
 	/* 8023C4F4 */ void fontAlpha(f32);
 };
 
-struct JKRArchive {
+struct JMSMesgEntry_c {
 };
 
-struct J2DScreen {
-	/* 802F8498 */ J2DScreen();
-	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+struct dMeter2Info_c {
+	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
 };
 
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
+struct JUtility {
+	struct TColor {
+	};
+
 };
 
-struct JKRExpHeap {
-};
-
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 80253930 */ CPaneMgr();
-	/* 80253A18 */ ~CPaneMgr();
-	/* 802542E8 */ void getGlobalPosX();
-	/* 80254364 */ void getGlobalPosY();
-	/* 802545B0 */ void paneTrans(f32, f32);
-	/* 80254C90 */ void getGlobalVtx(J2DPane*, f32 (* )[3][4], u8, bool, s16);
-	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
-};
-
-struct CPaneMgrAlpha {
-	/* 802557D0 */ void setAlphaRate(f32);
-	/* 80255828 */ void getAlphaRate();
+struct dMeter2Draw_c {
+	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
 };
 
 struct Z2WolfHowlMgr {
@@ -125,6 +94,15 @@ struct Z2WolfHowlMgr {
 	/* 802CB370 */ void getCorrectLineNum();
 	/* 802CB650 */ void getOnLineNum();
 	/* 802CBA88 */ void startGuideMelody(bool);
+};
+
+struct ResTIMG {
+};
+
+struct JKRExpHeap {
+};
+
+struct JKRArchive {
 };
 
 struct JGeometry {
@@ -136,20 +114,42 @@ struct JGeometry {
 
 };
 
-struct J2DGrafContext {
-	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
-struct ResTIMG {
+struct J2DScreen {
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 };
 
 struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-struct J2DTextBox {
-	/* 80300658 */ void getStringPtr() const;
-	/* 8030074C */ void setString(s16, char const*, ...);
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+};
+
+struct J2DGrafContext {
+	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
+};
+
+struct CPaneMgrAlpha {
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255828 */ void getAlphaRate();
+};
+
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 80253930 */ CPaneMgr();
+	/* 80253A18 */ ~CPaneMgr();
+	/* 802542E8 */ void getGlobalPosX();
+	/* 80254364 */ void getGlobalPosY();
+	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 80254C90 */ void getGlobalVtx(J2DPane*, f32 (* )[3][4], u8, bool, s16);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 // 

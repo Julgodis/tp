@@ -14,6 +14,27 @@
 struct fopAc_ac_c {
 };
 
+struct daPy_py_c {
+	/* 800977B4 */ void checkMidnaRide() const;
+	/* 80097850 */ bool checkCanoeRide() const;
+	/* 80097858 */ bool checkBoardRide() const;
+	/* 80097860 */ bool checkSpinnerRide() const;
+	/* 80097868 */ bool checkBoarRide() const;
+};
+
+struct daMidna_c {
+	/* 800977A8 */ void checkNoDraw() const;
+};
+
+struct daAlink_c {
+	/* 80097870 */ void getShadowTalkAtnPos();
+};
+
+struct dEvt_control_c {
+	/* 800432EC */ void convPId(unsigned int);
+	/* 800434D8 */ void searchMapEventData(u8);
+};
+
 struct Vec {
 };
 
@@ -29,6 +50,20 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80266CE4 */ void norm() const;
 	/* 80266EF4 */ void normalize();
+};
+
+struct dEvent_manager_c {
+	/* 800480EC */ void getMySubstanceP(int, char const*, int);
+	/* 80048144 */ void getMySubstanceNum(int, char const*);
+	/* 800483C4 */ void setGoal(cXyz*);
+};
+
+struct dDemo_object_c {
+	/* 80039128 */ void getActiveCamera();
+};
+
+struct dCcS {
+	/* 80086D8C */ void ChkCamera(cXyz&, cXyz&, f32, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*);
 };
 
 struct dCamera_c {
@@ -101,6 +136,10 @@ struct dCamera_c {
 	/* 80181220 */ void SetBlurePosition(f32, f32, f32);
 };
 
+struct dCamParam_c {
+	/* 80088620 */ void SearchStyle(u32);
+};
+
 struct cSAngle {
 	/* 80030510 */ ~cSAngle();
 	/* 80270F68 */ cSAngle(cSAngle const&);
@@ -120,6 +159,22 @@ struct cSAngle {
 	/* 802712B4 */ void operator*=(f32);
 };
 
+struct dCamMath {
+	/* 8008813C */ void rationalBezierRatio(f32, f32);
+	/* 80088384 */ void xyzRotateY(cXyz&, cSAngle);
+	/* 800883EC */ void xyzHorizontalDistance(cXyz&, cXyz&);
+};
+
+struct d2DBSplinePath {
+	/* 80097878 */ void Init(s32, s32);
+	/* 80097904 */ void Step();
+	/* 80097B20 */ void Calc(f32*);
+	/* 80097A6C */ void Calc(cXyz*);
+};
+
+struct camera_class {
+};
+
 struct cSGlobe {
 	/* 8007167C */ ~cSGlobe();
 	/* 8008E774 */ void operator=(cSGlobe const&);
@@ -135,27 +190,8 @@ struct cSGlobe {
 	/* 80271B7C */ void Invert();
 };
 
-struct daMidna_c {
-	/* 800977A8 */ void checkNoDraw() const;
-};
-
-struct daPy_py_c {
-	/* 800977B4 */ void checkMidnaRide() const;
-	/* 80097850 */ bool checkCanoeRide() const;
-	/* 80097858 */ bool checkBoardRide() const;
-	/* 80097860 */ bool checkSpinnerRide() const;
-	/* 80097868 */ bool checkBoarRide() const;
-};
-
-struct daAlink_c {
-	/* 80097870 */ void getShadowTalkAtnPos();
-};
-
 struct cM3dGPla {
 	/* 8001DB90 */ ~cM3dGPla();
-};
-
-struct camera_class {
 };
 
 struct cM3dGLin {
@@ -163,47 +199,11 @@ struct cM3dGLin {
 	/* 8026F2A8 */ cM3dGLin(cXyz const&, cXyz const&);
 };
 
-struct dDemo_object_c {
-	/* 80039128 */ void getActiveCamera();
-};
-
-struct dEvt_control_c {
-	/* 800432EC */ void convPId(unsigned int);
-	/* 800434D8 */ void searchMapEventData(u8);
-};
-
-struct dEvent_manager_c {
-	/* 800480EC */ void getMySubstanceP(int, char const*, int);
-	/* 80048144 */ void getMySubstanceNum(int, char const*);
-	/* 800483C4 */ void setGoal(cXyz*);
-};
-
 struct cBgS_PolyInfo {
 };
 
 struct cBgS {
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
-};
-
-struct dCcS {
-	/* 80086D8C */ void ChkCamera(cXyz&, cXyz&, f32, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*);
-};
-
-struct dCamMath {
-	/* 8008813C */ void rationalBezierRatio(f32, f32);
-	/* 80088384 */ void xyzRotateY(cXyz&, cSAngle);
-	/* 800883EC */ void xyzHorizontalDistance(cXyz&, cXyz&);
-};
-
-struct dCamParam_c {
-	/* 80088620 */ void SearchStyle(u32);
-};
-
-struct d2DBSplinePath {
-	/* 80097878 */ void Init(s32, s32);
-	/* 80097904 */ void Step();
-	/* 80097B20 */ void Calc(f32*);
-	/* 80097A6C */ void Calc(cXyz*);
 };
 
 // 
@@ -431,7 +431,7 @@ extern "C" asm static void func_800889F8() {
 #pragma pop
 
 
-/* 80088A7C-80088BBC 0140+00 s=0 e=15 z=2  None .text      StartEventCamera__9dCamera_cFiie                             */
+/* 80088A7C-80088BBC 0140+00 s=0 e=15 z=0  None .text      StartEventCamera__9dCamera_cFiie                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -442,7 +442,7 @@ asm void dCamera_c::StartEventCamera(int param_0, int param_1, ...) {
 #pragma pop
 
 
-/* 80088BBC-80088C24 0068+00 s=0 e=3 z=4  None .text      EndEventCamera__9dCamera_cFi                                 */
+/* 80088BBC-80088C24 0068+00 s=0 e=3 z=0  None .text      EndEventCamera__9dCamera_cFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

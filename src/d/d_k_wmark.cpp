@@ -14,31 +14,29 @@
 struct kankyo_class {
 };
 
-struct dkWmark_c {
-	/* 80261640 */ ~dkWmark_c();
-	/* 802616C4 */ void setMatrix();
-};
-
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 	/* 80267128 */ void atan2sX_Z() const;
 };
 
-struct J3DModel {
+struct fopAcM_gc_c {
+	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
 
-struct JKRSolidHeap {
+struct dkWmark_c {
+	/* 80261640 */ ~dkWmark_c();
+	/* 802616C4 */ void setMatrix();
 };
 
 struct J3DModelData {
 };
 
-struct J3DLightObj {
-	/* 80018C0C */ J3DLightObj();
+struct dKy_tevstr_c {
 };
 
-struct fopAcM_gc_c {
-	/* 8001DCBC */ void gndCheck(cXyz const*);
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 struct dRes_info_c {
@@ -51,6 +49,10 @@ struct dRes_control_c {
 struct cBgS_PolyInfo {
 };
 
+struct dBgS {
+	/* 80074ABC */ void ChkMoveBG(cBgS_PolyInfo const&);
+};
+
 struct cM3dGPla {
 };
 
@@ -58,23 +60,21 @@ struct cBgS {
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
-struct dBgS {
-	/* 80074ABC */ void ChkMoveBG(cBgS_PolyInfo const&);
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
 struct Vec {
+};
+
+struct JKRSolidHeap {
 };
 
 struct J3DUClipper {
 	/* 802738FC */ void clip(f32 const (* )[4], Vec, f32) const;
+};
+
+struct J3DModel {
+};
+
+struct J3DLightObj {
+	/* 80018C0C */ J3DLightObj();
 };
 
 struct J3DLightInfo {
@@ -315,7 +315,7 @@ SECTION_DATA static void* l_dkWmark_Method[5] = {
 	(void*)dkWmark_Draw__FP9dkWmark_c,
 };
 
-/* 803C3444-803C3470 0028+04 s=0 e=0 z=1  None .data      g_profile_WMARK                                              */
+/* 803C3444-803C3470 0028+04 s=0 e=0 z=0  None .data      g_profile_WMARK                                              */
 SECTION_DATA void* g_profile_WMARK[10 + 1 /* padding */] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0009FFFD,

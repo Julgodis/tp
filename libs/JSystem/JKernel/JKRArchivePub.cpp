@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct JKRMemBreakFlag {
+};
+
 struct JKRHeap {
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
@@ -64,24 +67,13 @@ struct JKRArchive {
 	/* 802D6978 */ void getExpandSize(JKRArchive::SDIFileEntry*) const;
 };
 
-struct JKRFileLoader {
-	/* 802D41D4 */ void unmount();
-};
-
-struct JKRArcFinder {
-	/* 802D4638 */ JKRArcFinder(JKRArchive*, s32, s32);
-};
-
-struct JKRMemBreakFlag {
-};
-
 struct JKRMemArchive {
 	/* 802D69B8 */ JKRMemArchive(s32, JKRArchive::EMountDirection);
 	/* 802D6A6C */ JKRMemArchive(void*, u32, JKRMemBreakFlag);
 };
 
-struct JKRAramArchive {
-	/* 802D70C0 */ JKRAramArchive(s32, JKRArchive::EMountDirection);
+struct JKRFileLoader {
+	/* 802D41D4 */ void unmount();
 };
 
 struct JKRDvdArchive {
@@ -90,6 +82,14 @@ struct JKRDvdArchive {
 
 struct JKRCompArchive {
 	/* 802D87D4 */ JKRCompArchive(s32, JKRArchive::EMountDirection);
+};
+
+struct JKRArcFinder {
+	/* 802D4638 */ JKRArcFinder(JKRArchive*, s32, s32);
+};
+
+struct JKRAramArchive {
+	/* 802D70C0 */ JKRAramArchive(s32, JKRArchive::EMountDirection);
 };
 
 // 
@@ -308,7 +308,7 @@ asm void JKRArchive::readResource(void* param_0, u32 param_1, char const* param_
 #pragma pop
 
 
-/* 802D5ECC-802D5F40 0074+00 s=0 e=7 z=1  None .text      readIdxResource__10JKRArchiveFPvUlUl                         */
+/* 802D5ECC-802D5F40 0074+00 s=0 e=7 z=0  None .text      readIdxResource__10JKRArchiveFPvUlUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

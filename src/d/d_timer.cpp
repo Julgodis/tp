@@ -11,6 +11,12 @@
 // Types:
 // 
 
+struct request_of_phase_process_class {
+};
+
+struct msg_class {
+};
+
 struct cXyz {
 };
 
@@ -35,12 +41,51 @@ struct dTimer_c {
 	/* 802613DC */ void createGetIn(cXyz);
 };
 
-struct JKRArchive {
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, int);
+};
+
+struct dMsgObject_c {
+	/* 8023822C */ void getStatus();
+};
+
+struct JMSMesgEntry_c {
+};
+
+struct dMeter2Info_c {
+	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct dMeter2Draw_c {
+	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
+};
+
+struct dLib_time_c {
+	/* 80032804 */ void getTime();
+};
+
+struct dDlst_base_c {
+};
+
+struct dDlst_list_c {
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
 struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 	/* 802F7FCC */ void animationTransform();
+};
+
+struct JKRArchive {
 };
 
 struct dDlst_TimerScrnDraw_c {
@@ -72,19 +117,6 @@ struct dDlst_TimerScrnDraw_c {
 	/* 80261394 */ ~dDlst_TimerScrnDraw_c();
 };
 
-struct msg_class {
-};
-
-struct JKRHeap {
-	/* 802CE784 */ void getTotalFreeSize();
-};
-
-struct Vec {
-};
-
-struct JKRExpHeap {
-};
-
 struct dComIfG_play_c {
 	/* 8002CB94 */ void setTimerNowTimeMs(int);
 	/* 8002CB9C */ void getTimerNowTimeMs();
@@ -98,46 +130,29 @@ struct dComIfG_play_c {
 	/* 8002CBDC */ void getTimerPtr();
 };
 
-struct request_of_phase_process_class {
+struct Vec {
 };
 
-struct dLib_time_c {
-	/* 80032804 */ void getTime();
+struct JAISoundID {
 };
 
-struct dRes_info_c {
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-struct dRes_control_c {
-	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, int);
+struct JKRHeap {
+	/* 802CE784 */ void getTotalFreeSize();
 };
 
-struct dDlst_base_c {
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
 };
 
-struct dDlst_list_c {
-	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
+struct JKRExpHeap {
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct dMeter2Draw_c {
-	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
-};
-
-struct JMSMesgEntry_c {
-};
-
-struct dMeter2Info_c {
-	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
-};
-
-struct dMsgObject_c {
-	/* 8023822C */ void getStatus();
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
 };
 
 struct J2DGrafContext {
@@ -149,10 +164,8 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 802545B0 */ void paneTrans(f32, f32);
-	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
 };
 
 struct CPaneMgrAlpha {
@@ -161,23 +174,10 @@ struct CPaneMgrAlpha {
 	/* 802557D0 */ void setAlphaRate(f32);
 };
 
-struct JAISoundID {
-};
-
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-};
-
-struct JKRFileLoader {
-	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
-};
-
-struct J2DTextBox {
-	/* 80300658 */ void getStringPtr() const;
-};
-
-struct J2DAnmLoaderDataBase {
-	/* 80308A6C */ void load(void const*);
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 // 
@@ -550,7 +550,7 @@ asm void dTimer_c::getLimitTimeMs() {
 #pragma pop
 
 
-/* 8025DA9C-8025DB10 0074+00 s=2 e=0 z=1  None .text      getRestTimeMs__8dTimer_cFv                                   */
+/* 8025DA9C-8025DB10 0074+00 s=2 e=0 z=0  None .text      getRestTimeMs__8dTimer_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -561,7 +561,7 @@ asm void dTimer_c::getRestTimeMs() {
 #pragma pop
 
 
-/* 8025DB10-8025DB38 0028+00 s=1 e=0 z=4  None .text      isStart__8dTimer_cFv                                         */
+/* 8025DB10-8025DB38 0028+00 s=1 e=0 z=0  None .text      isStart__8dTimer_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -595,7 +595,7 @@ SECTION_DATA static void* l_dTimer_Method[5] = {
 	(void*)dTimer_Draw__FP8dTimer_c,
 };
 
-/* 803C33F8-803C3420 0028+00 s=0 e=0 z=1  None .data      g_profile_TIMER                                              */
+/* 803C33F8-803C3420 0028+00 s=0 e=0 z=0  None .data      g_profile_TIMER                                              */
 SECTION_DATA void* g_profile_TIMER[10] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000CFFFD,
@@ -1011,7 +1011,7 @@ asm static void dTimer_Create(msg_class* param_0) {
 #pragma pop
 
 
-/* 80260F8C-80261034 00A8+00 s=0 e=1 z=9  None .text      dTimer_createTimer__FlUlUcUcffff                             */
+/* 80260F8C-80261034 00A8+00 s=0 e=1 z=0  None .text      dTimer_createTimer__FlUlUcUcffff                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1046,7 +1046,7 @@ asm void dTimer_createStockTimer() {
 #pragma pop
 
 
-/* 80261100-80261188 0088+00 s=0 e=0 z=1  None .text      dTimer_createGetIn2D__Fl4cXyz                                */
+/* 80261100-80261188 0088+00 s=0 e=0 z=0  None .text      dTimer_createGetIn2D__Fl4cXyz                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1068,7 +1068,7 @@ asm static void dTimer_createStart2D(s32 param_0, u16 param_1) {
 #pragma pop
 
 
-/* 802611F0-80261244 0054+00 s=0 e=0 z=5  None .text      dTimer_isStart__Fv                                           */
+/* 802611F0-80261244 0054+00 s=0 e=0 z=0  None .text      dTimer_isStart__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1079,7 +1079,7 @@ asm void dTimer_isStart() {
 #pragma pop
 
 
-/* 80261244-80261298 0054+00 s=0 e=0 z=2  None .text      dTimer_getRestTimeMs__Fv                                     */
+/* 80261244-80261298 0054+00 s=0 e=0 z=0  None .text      dTimer_getRestTimeMs__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1090,7 +1090,7 @@ asm void dTimer_getRestTimeMs() {
 #pragma pop
 
 
-/* 80261298-802612EC 0054+00 s=0 e=0 z=2  None .text      dTimer_show__Fv                                              */
+/* 80261298-802612EC 0054+00 s=0 e=0 z=0  None .text      dTimer_show__Fv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1101,7 +1101,7 @@ asm void dTimer_show() {
 #pragma pop
 
 
-/* 802612EC-80261340 0054+00 s=0 e=0 z=2  None .text      dTimer_hide__Fv                                              */
+/* 802612EC-80261340 0054+00 s=0 e=0 z=0  None .text      dTimer_hide__Fv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1112,7 +1112,7 @@ asm void dTimer_hide() {
 #pragma pop
 
 
-/* 80261340-80261394 0054+00 s=0 e=0 z=1  None .text      dTimer_isReadyFlag__Fv                                       */
+/* 80261340-80261394 0054+00 s=0 e=0 z=0  None .text      dTimer_isReadyFlag__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -11,16 +11,24 @@
 // Types:
 // 
 
+struct _GXCullMode {
+};
+
+struct ResTIMG {
+};
+
+struct ResFONT {
+};
+
+struct JSUInputStream {
+	/* 802DC298 */ void read(void*, s32);
+};
+
 struct JKRArchive {
 };
 
-struct J2DAnmTevRegKey {
-};
-
-struct J2DBasePosition {
-};
-
-struct J2DAnmTransform {
+struct JUTResReference {
+	/* 802DE078 */ void getResource(JSUInputStream*, u32, JKRArchive*);
 };
 
 struct JSUStreamSeekFrom {
@@ -32,22 +40,16 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct J2DAnmVisibilityFull {
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
+	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-struct ResFONT {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct _GXCullMode {
-};
-
-struct ResTIMG {
-};
-
-struct J2DAnmColor {
+struct JSUPtrList {
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF14 */ void initiate();
+	/* 802DBF4C */ void append(JSUPtrLink*);
+	/* 802DC094 */ void insert(JSUPtrLink*, JSUPtrLink*);
 };
 
 struct JGeometry {
@@ -59,6 +61,21 @@ struct JGeometry {
 
 };
 
+struct J2DRotateAxis {
+};
+
+struct J2DAnmBase {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DBasePosition {
+};
+
 struct J2DGrafContext {
 	/* 802E8E20 */ void setScissor();
 	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
@@ -67,13 +84,16 @@ struct J2DGrafContext {
 struct J2DAnmTexPattern {
 };
 
+struct J2DAnmTransform {
+};
+
+struct J2DAnmVisibilityFull {
+};
+
 struct J2DAnmTextureSRTKey {
 };
 
-struct J2DRotateAxis {
-};
-
-struct J2DAnmBase {
+struct J2DAnmVtxColor {
 };
 
 struct J2DPane {
@@ -140,26 +160,6 @@ struct J2DPane {
 	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
 	/* 802F8464 */ void setConnectParent(bool);
 	/* 802F8474 */ void update();
-};
-
-struct JSUPtrLink {
-	/* 802DBDFC */ JSUPtrLink(void*);
-	/* 802DBE14 */ ~JSUPtrLink();
-};
-
-struct JSUPtrList {
-	/* 802DBEAC */ ~JSUPtrList();
-	/* 802DBF14 */ void initiate();
-	/* 802DBF4C */ void append(JSUPtrLink*);
-	/* 802DC094 */ void insert(JSUPtrLink*, JSUPtrLink*);
-};
-
-struct JSUInputStream {
-	/* 802DC298 */ void read(void*, s32);
-};
-
-struct JUTResReference {
-	/* 802DE078 */ void getResource(JSUInputStream*, u32, JKRArchive*);
 };
 
 struct J2DOrthoGraph {
@@ -555,7 +555,7 @@ asm void J2DPane::resize(f32 param_0, f32 param_1) {
 /* 804349B0-804349C0 0010+00 s=2 e=0 z=0  None .bss       static_mBounds__7J2DPane                                     */
 static u8 static_mBounds__7J2DPane[16];
 
-/* 802F7100-802F71DC 00DC+00 s=0 e=25 z=1  None .text      getBounds__7J2DPaneFv                                        */
+/* 802F7100-802F71DC 00DC+00 s=0 e=25 z=0  None .text      getBounds__7J2DPaneFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

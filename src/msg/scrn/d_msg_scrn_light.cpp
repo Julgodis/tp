@@ -11,12 +11,6 @@
 // Types:
 // 
 
-struct dMsgScrnLight_HIO_c {
-	/* 8024575C */ dMsgScrnLight_HIO_c();
-	/* 802457C4 */ void updateColor(u8);
-	/* 80246348 */ ~dMsgScrnLight_HIO_c();
-};
-
 struct JUtility {
 	struct TColor {
 	};
@@ -29,6 +23,19 @@ struct dMsgScrnLight_c {
 	/* 80245C04 */ void draw(f32*, f32, f32, f32, f32, f32, u8);
 	/* 80245F90 */ void draw(f32*, f32, f32, f32, f32, f32, f32, JUtility::TColor, JUtility::TColor);
 	/* 802460DC */ void drawCommon(f32, f32, f32, f32, f32);
+};
+
+struct dMsgScrnLight_HIO_c {
+	/* 8024575C */ dMsgScrnLight_HIO_c();
+	/* 802457C4 */ void updateColor(u8);
+	/* 80246348 */ ~dMsgScrnLight_HIO_c();
+};
+
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+};
+
+struct JKRExpHeap {
 };
 
 struct JKRArchive {
@@ -44,12 +51,12 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-struct JKRExpHeap {
+struct J2DPane {
+	/* 802F7FCC */ void animationTransform();
 };
 
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 80254458 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
 };
 
 struct CPaneMgrAlpha {
@@ -57,16 +64,9 @@ struct CPaneMgrAlpha {
 	/* 80255828 */ void getAlphaRate();
 };
 
-struct JKRFileLoader {
-	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
-};
-
-struct J2DPane {
-	/* 802F7FCC */ void animationTransform();
-};
-
-struct J2DAnmLoaderDataBase {
-	/* 80308A6C */ void load(void const*);
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 80254458 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
 };
 
 // 
@@ -178,7 +178,7 @@ SECTION_SDATA2 static u8 lit_3808[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80245934-80245B00 01CC+00 s=0 e=4 z=1  None .text      __ct__15dMsgScrnLight_cFUcUc                                 */
+/* 80245934-80245B00 01CC+00 s=0 e=4 z=0  None .text      __ct__15dMsgScrnLight_cFUcUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -220,7 +220,7 @@ asm void dMsgScrnLight_c::draw(f32* param_0, f32 param_1, f32 param_2, f32 param
 #pragma pop
 
 
-/* 80245F90-802460DC 014C+00 s=0 e=1 z=1  None .text      draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor */
+/* 80245F90-802460DC 014C+00 s=0 e=1 z=0  None .text      draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

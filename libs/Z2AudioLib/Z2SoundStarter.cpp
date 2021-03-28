@@ -14,9 +14,6 @@
 struct JAISoundHandle {
 };
 
-struct JAISoundID {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -24,6 +21,9 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundID {
 };
 
 struct Z2SoundStarter {
@@ -35,10 +35,19 @@ struct Z2SoundStarter {
 	/* 802AAFF0 */ ~Z2SoundStarter();
 };
 
+struct Z2EnvSeMgr {
+	/* 802C93E4 */ void getFogDensity();
+};
+
 struct JASTrack {
 	/* 80291C30 */ void openChild(u32);
 	/* 80292918 */ void writePort(u32, u16);
 	/* 8029297C */ void readPort(u32);
+};
+
+struct JAISoundStarter {
+	/* 802A2F6C */ JAISoundStarter(bool);
+	/* 802A2F88 */ ~JAISoundStarter();
 };
 
 struct JAISoundParamsMove {
@@ -47,15 +56,6 @@ struct JAISoundParamsMove {
 	/* 802A2E64 */ void moveFxMix(f32, u32);
 	/* 802A2EBC */ void movePan(f32, u32);
 	/* 802A2F14 */ void moveDolby(f32, u32);
-};
-
-struct JAISoundStarter {
-	/* 802A2F6C */ JAISoundStarter(bool);
-	/* 802A2F88 */ ~JAISoundStarter();
-};
-
-struct Z2EnvSeMgr {
-	/* 802C93E4 */ void getFogDensity();
 };
 
 // 

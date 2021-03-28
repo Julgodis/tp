@@ -11,7 +11,18 @@
 // Types:
 // 
 
+struct JKRThread {
+};
+
+struct JKRThreadSwitch {
+	/* 802D1A70 */ void enter(JKRThread*, int);
+};
+
 struct JKRSolidHeap {
+};
+
+struct JKRHeap {
+	/* 802CE72C */ void getFreeSize();
 };
 
 struct JAU_JASInitializer {
@@ -24,19 +35,8 @@ struct JAU_JAIInitializer {
 	/* 802A4D60 */ void initJAInterface();
 };
 
-struct JASDvd {
-	/* 8028FEFC */ void getThreadPointer();
-	/* 8028FF04 */ void createThread(s32, int, u32);
-};
-
-struct JASGenericMemPool {
-	/* 80290848 */ JASGenericMemPool();
-	/* 802908C8 */ void newMemPool(u32, int);
-};
-
-struct JASKernel {
-	/* 802909B8 */ void setupRootHeap(JKRSolidHeap*, u32);
-	/* 80290AD0 */ void setupAramHeap(u32, u32);
+struct JASWaveArcLoader {
+	/* 8029A0D0 */ void setCurrentDir(char const*);
 };
 
 template <typename A0>
@@ -49,23 +49,6 @@ struct JASMemPool_MultiThreaded__template0 {
 /* JASMemPool_MultiThreaded<JASTrack::TChannelMgr> */
 struct JASMemPool_MultiThreaded__template1 {
 	/* 80293334 */ ~JASMemPool_MultiThreaded__template1();
-};
-
-struct JASAramStream {
-	/* 8029631C */ void initSystem(u32, u32);
-};
-
-struct JASWaveArcLoader {
-	/* 8029A0D0 */ void setCurrentDir(char const*);
-};
-
-struct JASAudioThread {
-	/* 8029CD4C */ void create(s32);
-};
-
-struct JASDriver {
-	/* 8029E130 */ void setDSPLevel(f32);
-	/* 8029E178 */ void setOutputMode(u32);
 };
 
 template <typename A0>
@@ -90,15 +73,32 @@ struct JASMemPool__template3 {
 	/* 802A3E68 */ ~JASMemPool__template3();
 };
 
-struct JKRHeap {
-	/* 802CE72C */ void getFreeSize();
+struct JASKernel {
+	/* 802909B8 */ void setupRootHeap(JKRSolidHeap*, u32);
+	/* 80290AD0 */ void setupAramHeap(u32, u32);
 };
 
-struct JKRThread {
+struct JASGenericMemPool {
+	/* 80290848 */ JASGenericMemPool();
+	/* 802908C8 */ void newMemPool(u32, int);
 };
 
-struct JKRThreadSwitch {
-	/* 802D1A70 */ void enter(JKRThread*, int);
+struct JASDvd {
+	/* 8028FEFC */ void getThreadPointer();
+	/* 8028FF04 */ void createThread(s32, int, u32);
+};
+
+struct JASDriver {
+	/* 8029E130 */ void setDSPLevel(f32);
+	/* 8029E178 */ void setOutputMode(u32);
+};
+
+struct JASAudioThread {
+	/* 8029CD4C */ void create(s32);
+};
+
+struct JASAramStream {
+	/* 8029631C */ void initSystem(u32, u32);
 };
 
 // 

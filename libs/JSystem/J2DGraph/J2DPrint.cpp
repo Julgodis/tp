@@ -21,6 +21,9 @@ struct JUTFont {
 	/* 802DEDC4 */ void setGradColor(JUtility::TColor, JUtility::TColor);
 };
 
+struct JKRHeap {
+};
+
 struct J2DTextBoxVBinding {
 };
 
@@ -45,9 +48,6 @@ struct J2DPrint {
 	/* 802F594C */ void initchar();
 	/* 802F59C0 */ void getNumberS32(u8 const**, s32, s32, int);
 	/* 802F5AC4 */ void getNumberF32(u8 const**, f32, f32, int);
-};
-
-struct JKRHeap {
 };
 
 // 

@@ -11,14 +11,36 @@
 // Types:
 // 
 
-struct HeapCheck {
-	/* 80005728 */ void CheckHeap1();
-	/* 800058A0 */ void getUsedCount() const;
-	/* 800058C4 */ void heapDisplay() const;
+struct mDoMemCd_Ctrl_c {
+	/* 80016894 */ void update();
 };
 
-struct JKRExpHeap {
-	/* 802CFD64 */ void getTotalUsedSize() const;
+struct mDoDvdThd_callback_c {
+	/* 80015C74 */ void create(void* (*)(void*), void*);
+};
+
+struct mDoCPd_c {
+	/* 80007954 */ void create();
+	/* 80007A94 */ void read();
+};
+
+struct dRes_control_c {
+	/* 8003C638 */ void dump();
+};
+
+struct dComIfG_inf_c {
+	/* 8002CBE4 */ void ct();
+};
+
+struct JUTConsole {
+	/* 802E75EC */ void clear();
+	/* 802E7F7C */ void dumpToTerminal(unsigned int);
+	/* 802E80A8 */ void scroll(int);
+	/* 802E81A8 */ void getLineOffset() const;
+};
+
+struct JUTAssertion {
+	/* 802E4C3C */ void setMessageCount(int);
 };
 
 struct JKRHeap {
@@ -27,33 +49,12 @@ struct JKRHeap {
 	/* 802CE784 */ void getTotalFreeSize();
 };
 
-struct mDoCPd_c {
-	/* 80007954 */ void create();
-	/* 80007A94 */ void read();
-};
-
-struct mDoDvdThd_callback_c {
-	/* 80015C74 */ void create(void* (*)(void*), void*);
-};
-
-struct mDoMemCd_Ctrl_c {
-	/* 80016894 */ void update();
-};
-
-struct dComIfG_inf_c {
-	/* 8002CBE4 */ void ct();
-};
-
-struct dRes_control_c {
-	/* 8003C638 */ void dump();
-};
-
-struct DynamicModuleControlBase {
-	/* 80262470 */ void dump();
-};
-
 struct JKRSolidHeap {
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
+};
+
+struct JKRExpHeap {
+	/* 802CFD64 */ void getTotalUsedSize() const;
 };
 
 struct JKRAramHeap {
@@ -62,15 +63,14 @@ struct JKRAramHeap {
 	/* 802D3218 */ void dump();
 };
 
-struct JUTAssertion {
-	/* 802E4C3C */ void setMessageCount(int);
+struct HeapCheck {
+	/* 80005728 */ void CheckHeap1();
+	/* 800058A0 */ void getUsedCount() const;
+	/* 800058C4 */ void heapDisplay() const;
 };
 
-struct JUTConsole {
-	/* 802E75EC */ void clear();
-	/* 802E7F7C */ void dumpToTerminal(unsigned int);
-	/* 802E80A8 */ void scroll(int);
-	/* 802E81A8 */ void getLineOffset() const;
+struct DynamicModuleControlBase {
+	/* 80262470 */ void dump();
 };
 
 // 

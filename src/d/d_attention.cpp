@@ -11,24 +11,64 @@
 // Types:
 // 
 
-struct dAttParam_c {
-	/* 80070038 */ dAttParam_c(s32);
-	/* 80070110 */ ~dAttParam_c();
+struct J3DAnmTextureSRTKey {
 };
 
-struct dAttDrawParam_c {
-	/* 80070158 */ dAttDrawParam_c();
-	/* 80073FC4 */ ~dAttDrawParam_c();
+struct J3DMaterialTable {
 };
 
-struct J3DTransformInfo {
+struct mDoExt_btkAnm {
+	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
+	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct dAttDraw_CallBack_c {
-	/* 80070178 */ void execute(u16, J3DTransformInfo*);
+struct J3DAnmTevRegKey {
+};
+
+struct mDoExt_brkAnm {
+	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
+	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
+};
+
+struct J3DAnmColor {
+};
+
+struct mDoExt_bpkAnm {
+	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, int, int, f32, s16, s16);
+	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
+};
+
+struct J3DAnmTransform {
+};
+
+struct J3DModelData {
+};
+
+struct mDoExt_bckAnm {
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
+};
+
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
 };
 
 struct fopAc_ac_c {
+};
+
+struct daPy_py_c {
+	/* 8015F3FC */ void getAttentionOffsetY();
+};
+
+struct dSv_danBit_c {
+	/* 80034BE8 */ void isSwitch(int) const;
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 struct Vec {
@@ -84,25 +124,16 @@ struct dAttention_c {
 	/* 80073838 */ void checkDistance(cXyz*, s16, cXyz*, f32, f32, f32, f32);
 };
 
-struct cSGlobe {
-	/* 8007167C */ ~cSGlobe();
-	/* 80271880 */ cSGlobe(cXyz const&);
+struct dAttParam_c {
+	/* 80070038 */ dAttParam_c(s32);
+	/* 80070110 */ ~dAttParam_c();
 };
 
-struct dAttDraw_c {
-	/* 8003054C */ ~dAttDraw_c();
-	/* 800307F0 */ dAttDraw_c();
-	/* 80072DD8 */ void setAnm(u8, f32);
-	/* 80072FE8 */ void setAlphaAnm(u8, u8);
-	/* 80073004 */ void alphaAnm();
-	/* 800732B0 */ void draw(cXyz&, f32 (* )[4]);
-};
-
-struct J3DGXColor {
-};
-
-struct J3DTevBlock {
-	/* 800732AC */ void setTevKColor(u32, J3DGXColor const*);
+struct dAttLook_c {
+	/* 80073CA4 */ void convPId(unsigned int);
+	/* 80073CD4 */ void init();
+	/* 80073CEC */ void proc();
+	/* 80073D08 */ void request(fopAc_ac_c*, f32, f32, f32, s16, int);
 };
 
 struct dAttList_c {
@@ -120,6 +151,27 @@ struct dAttHint_c {
 	/* 80073970 */ void proc();
 };
 
+struct dAttDraw_c {
+	/* 8003054C */ ~dAttDraw_c();
+	/* 800307F0 */ dAttDraw_c();
+	/* 80072DD8 */ void setAnm(u8, f32);
+	/* 80072FE8 */ void setAlphaAnm(u8, u8);
+	/* 80073004 */ void alphaAnm();
+	/* 800732B0 */ void draw(cXyz&, f32 (* )[4]);
+};
+
+struct J3DTransformInfo {
+};
+
+struct dAttDraw_CallBack_c {
+	/* 80070178 */ void execute(u16, J3DTransformInfo*);
+};
+
+struct dAttDrawParam_c {
+	/* 80070158 */ dAttDrawParam_c();
+	/* 80073FC4 */ ~dAttDrawParam_c();
+};
+
 struct dAttCatch_c {
 	/* 8007398C */ void convPId(unsigned int);
 	/* 800739BC */ void init();
@@ -127,74 +179,13 @@ struct dAttCatch_c {
 	/* 80073A08 */ void request(fopAc_ac_c*, u8, f32, f32, f32, s16, int);
 };
 
-struct dAttLook_c {
-	/* 80073CA4 */ void convPId(unsigned int);
-	/* 80073CD4 */ void init();
-	/* 80073CEC */ void proc();
-	/* 80073D08 */ void request(fopAc_ac_c*, f32, f32, f32, s16, int);
+struct cSGlobe {
+	/* 8007167C */ ~cSGlobe();
+	/* 80271880 */ cSGlobe(cXyz const&);
 };
 
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
-};
-
-struct J3DMaterialTable {
-};
-
-struct J3DAnmColor {
-};
-
-struct mDoExt_bpkAnm {
-	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, int, int, f32, s16, s16);
-	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
-};
-
-struct J3DAnmTextureSRTKey {
-};
-
-struct mDoExt_btkAnm {
-	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
-	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
-};
-
-struct J3DAnmTevRegKey {
-};
-
-struct mDoExt_brkAnm {
-	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
-	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
-};
-
-struct mDoExt_bckAnm {
-	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
-	/* 8000D9CC */ void entry(J3DModelData*, f32);
-};
-
-struct J3DModel {
-};
-
-struct JKRSolidHeap {
-};
-
-struct dSv_danBit_c {
-	/* 80034BE8 */ void isSwitch(int) const;
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
-};
-
-struct daPy_py_c {
-	/* 8015F3FC */ void getAttentionOffsetY();
+struct Z2SeqMgr {
+	/* 802B5E88 */ void bgmNowBattle(f32);
 };
 
 struct JAISoundID {
@@ -204,8 +195,17 @@ struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-struct Z2SeqMgr {
-	/* 802B5E88 */ void bgmNowBattle(f32);
+struct JKRSolidHeap {
+};
+
+struct J3DGXColor {
+};
+
+struct J3DTevBlock {
+	/* 800732AC */ void setTevKColor(u32, J3DGXColor const*);
+};
+
+struct J3DModel {
 };
 
 // 
@@ -585,7 +585,7 @@ asm dAttention_c::~dAttention_c() {
 #pragma pop
 
 
-/* 80070844-80070880 003C+00 s=2 e=2 z=8  None .text      GetLockonList__12dAttention_cFl                              */
+/* 80070844-80070880 003C+00 s=2 e=2 z=0  None .text      GetLockonList__12dAttention_cFl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -596,7 +596,7 @@ asm void dAttention_c::GetLockonList(s32 param_0) {
 #pragma pop
 
 
-/* 80070880-80070974 00F4+00 s=0 e=5 z=2  None .text      getActionBtnB__12dAttention_cFv                              */
+/* 80070880-80070974 00F4+00 s=0 e=5 z=0  None .text      getActionBtnB__12dAttention_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1102,7 +1102,7 @@ asm void dAttDraw_c::draw(cXyz& param_0, f32 (* param_1)[4]) {
 #pragma pop
 
 
-/* 8007353C-800735DC 00A0+00 s=8 e=13 z=21  None .text      LockonTarget__12dAttention_cFl                               */
+/* 8007353C-800735DC 00A0+00 s=8 e=13 z=0  None .text      LockonTarget__12dAttention_cFl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1135,7 +1135,7 @@ asm void dAttention_c::LockonTargetPId(s32 param_0) {
 #pragma pop
 
 
-/* 80073734-8007378C 0058+00 s=0 e=3 z=2  None .text      ActionTarget__12dAttention_cFl                               */
+/* 80073734-8007378C 0058+00 s=0 e=3 z=0  None .text      ActionTarget__12dAttention_cFl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1157,7 +1157,7 @@ asm void dAttention_c::CheckObjectTarget(s32 param_0) {
 #pragma pop
 
 
-/* 800737E4-80073838 0054+00 s=3 e=53 z=37  None .text      LockonTruth__12dAttention_cFv                                */
+/* 800737E4-80073838 0054+00 s=3 e=53 z=0  None .text      LockonTruth__12dAttention_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1179,7 +1179,7 @@ asm void dAttention_c::checkDistance(cXyz* param_0, s16 param_1, cXyz* param_2, 
 #pragma pop
 
 
-/* 80073864-80073898 0034+00 s=11 e=3 z=8  None .text      getActor__10dAttList_cFv                                     */
+/* 80073864-80073898 0034+00 s=11 e=3 z=0  None .text      getActor__10dAttList_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1223,7 +1223,7 @@ asm void dAttHint_c::convPId(unsigned int param_0) {
 #pragma pop
 
 
-/* 800738FC-80073958 005C+00 s=0 e=0 z=6  None .text      request__10dAttHint_cFP10fopAc_ac_ci                         */
+/* 800738FC-80073958 005C+00 s=0 e=0 z=0  None .text      request__10dAttHint_cFP10fopAc_ac_ci                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1289,7 +1289,7 @@ asm void dAttCatch_c::proc() {
 #pragma pop
 
 
-/* 80073A08-80073CA4 029C+00 s=0 e=0 z=10  None .text      request__11dAttCatch_cFP10fopAc_ac_cUcfffsi                  */
+/* 80073A08-80073CA4 029C+00 s=0 e=0 z=0  None .text      request__11dAttCatch_cFP10fopAc_ac_cUcfffsi                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1333,7 +1333,7 @@ asm void dAttLook_c::proc() {
 #pragma pop
 
 
-/* 80073D08-80073FC4 02BC+00 s=0 e=0 z=7  None .text      request__10dAttLook_cFP10fopAc_ac_cfffsi                     */
+/* 80073D08-80073FC4 02BC+00 s=0 e=0 z=0  None .text      request__10dAttLook_cFP10fopAc_ac_cfffsi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

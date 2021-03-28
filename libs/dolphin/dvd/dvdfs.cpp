@@ -136,7 +136,7 @@ SECTION_DATA static u8 lit_140[55 + 1 /* padding */] = {
 	0x00,
 };
 
-/* 80348890-80348958 00C8+00 s=0 e=3 z=1  None .text      DVDOpen                                                      */
+/* 80348890-80348958 00C8+00 s=0 e=3 z=0  None .text      DVDOpen                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -147,7 +147,7 @@ extern "C" asm void DVDOpen() {
 #pragma pop
 
 
-/* 80348958-8034897C 0024+00 s=0 e=4 z=2  None .text      DVDClose                                                     */
+/* 80348958-8034897C 0024+00 s=0 e=4 z=0  None .text      DVDClose                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -246,7 +246,7 @@ SECTION_DATA static u8 lit_265[47 + 1 /* padding */] = {
 /* 80451770-80451778 0008+00 s=2 e=3 z=0  None .sbss      __DVDThreadQueue                                             */
 u8 __DVDThreadQueue[8];
 
-/* 80348E44-80348F5C 0118+00 s=0 e=9 z=3  None .text      DVDReadPrio                                                  */
+/* 80348E44-80348F5C 0118+00 s=0 e=9 z=0  None .text      DVDReadPrio                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

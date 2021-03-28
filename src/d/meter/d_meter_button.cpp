@@ -11,10 +11,49 @@
 // Types:
 // 
 
-struct JKRArchive {
+struct dSv_player_item_c {
+	/* 80033030 */ void getItem(int, bool) const;
+};
+
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct dMsgString_c {
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
+struct COutFont_c {
+	/* 80225C94 */ COutFont_c(u8);
+};
+
+struct JUTFont {
+};
+
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
+};
+
+struct dMsgObject_c {
+	/* 802370A8 */ void isGetItemMessage();
+	/* 802370BC */ void isKanbanMessage();
+	/* 802370E8 */ void isHowlMessage();
+	/* 802371B0 */ void isMidonaTalkWait();
+	/* 802371E4 */ void isPlaceMessage();
+	/* 802371F8 */ void isBossMessage();
+	/* 8023720C */ bool isBookMessage();
+	/* 80237214 */ void isStaffMessage();
+	/* 802380F4 */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char*, char*, char*, s16*);
+	/* 8023822C */ void getStatus();
+	/* 80238258 */ void getScrnDrawPtr();
 };
 
 struct J2DGrafContext {
+};
+
+struct JKRArchive {
 };
 
 struct J2DScreen {
@@ -23,11 +62,11 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
 };
 
 struct CPaneMgr {
@@ -133,16 +172,14 @@ struct dMeterButton_c {
 	/* 8020AE68 */ void paneTrans(CPaneMgr*, f32, f32, u8);
 };
 
-struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(int);
+struct J2DPicture {
 };
 
-struct dSv_player_item_c {
-	/* 80033030 */ void getItem(int, bool) const;
-};
-
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
+struct dMeter2Info_c {
+	/* 8021C1F0 */ void decFloatingMessageTimer();
+	/* 8021C218 */ void resetFloatingMessage();
+	/* 8021C6A4 */ void getStringLength(J2DTextBox*, char*);
+	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
 };
 
 struct CPaneMgrAlpha {
@@ -164,51 +201,14 @@ struct dMeter2Draw_c {
 	/* 8021BBB4 */ void getCanoeFishing();
 };
 
-struct J2DPicture {
-};
-
-struct J2DTextBox {
-	/* 80300658 */ void getStringPtr() const;
-	/* 8030074C */ void setString(s16, char const*, ...);
-};
-
-struct dMeter2Info_c {
-	/* 8021C1F0 */ void decFloatingMessageTimer();
-	/* 8021C218 */ void resetFloatingMessage();
-	/* 8021C6A4 */ void getStringLength(J2DTextBox*, char*);
-	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
-};
-
-struct COutFont_c {
-	/* 80225C94 */ COutFont_c(u8);
-};
-
-struct JUTFont {
-};
-
-struct dMsgObject_c {
-	/* 802370A8 */ void isGetItemMessage();
-	/* 802370BC */ void isKanbanMessage();
-	/* 802370E8 */ void isHowlMessage();
-	/* 802371B0 */ void isMidonaTalkWait();
-	/* 802371E4 */ void isPlaceMessage();
-	/* 802371F8 */ void isBossMessage();
-	/* 8023720C */ bool isBookMessage();
-	/* 80237214 */ void isStaffMessage();
-	/* 802380F4 */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char*, char*, char*, s16*);
-	/* 8023822C */ void getStatus();
-	/* 80238258 */ void getScrnDrawPtr();
-};
-
-struct dMsgString_c {
-	/* 80249C20 */ dMsgString_c();
-	/* 80249D28 */ ~dMsgString_c();
-};
-
-struct JAISoundID {
+struct dComIfG_play_c {
+	/* 8002C97C */ void getLayerNo(int);
 };
 
 struct Vec {
+};
+
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -469,7 +469,7 @@ SECTION_DATA static void* __vt__14dMeterButton_c[4] = {
 	(void*)__dt__14dMeterButton_cFv,
 };
 
-/* 80201328-80201370 0048+00 s=0 e=1 z=1  None .text      __ct__14dMeterButton_cFv                                     */
+/* 80201328-80201370 0048+00 s=0 e=1 z=0  None .text      __ct__14dMeterButton_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -149,7 +149,7 @@ extern "C" asm void VISetPreRetraceCallback() {
 #pragma pop
 
 
-/* 8034C224-8034C268 0044+00 s=0 e=4 z=2  None .text      VISetPostRetraceCallback                                     */
+/* 8034C224-8034C268 0044+00 s=0 e=4 z=0  None .text      VISetPostRetraceCallback                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -500,7 +500,7 @@ extern "C" asm static void getCurrentFieldEvenOdd() {
 #pragma pop
 
 
-/* 8034D968-8034DA04 009C+00 s=0 e=0 z=2  None .text      VIGetNextField                                               */
+/* 8034D968-8034DA04 009C+00 s=0 e=0 z=0  None .text      VIGetNextField                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -537,7 +537,7 @@ SECTION_DATA static void* lit_740[8 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 8034DA9C-8034DB04 0068+00 s=1 e=2 z=1  None .text      VIGetTvFormat                                                */
+/* 8034DA9C-8034DB04 0068+00 s=1 e=2 z=0  None .text      VIGetTvFormat                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -17,7 +17,7 @@ struct scene_request_class {
 struct scene_class {
 };
 
-struct node_create_request {
+struct request_of_phase_process_class {
 };
 
 struct process_node_class {
@@ -26,7 +26,7 @@ struct process_node_class {
 struct node_create_request_method_class {
 };
 
-struct request_of_phase_process_class {
+struct node_create_request {
 };
 
 // 

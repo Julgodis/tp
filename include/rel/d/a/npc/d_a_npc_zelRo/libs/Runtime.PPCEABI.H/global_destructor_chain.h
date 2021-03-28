@@ -3,5 +3,3 @@
 
 #include "dolphin/types.h"
 
-
-#endif /* GLOBAL_DESTRUCTOR_CHAIN_H */

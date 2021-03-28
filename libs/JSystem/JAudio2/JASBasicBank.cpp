@@ -11,13 +11,17 @@
 // Types:
 // 
 
-struct JASInstParam {
-};
-
 struct JKRHeap {
 };
 
+struct JASInstParam {
+};
+
 struct JASInst {
+};
+
+struct JASCalc {
+	/* 8028F480 */ void bzero(void*, u32);
 };
 
 struct JASBasicBank {
@@ -32,10 +36,6 @@ struct JASBasicBank {
 
 struct JASBank {
 	/* 80297EC4 */ ~JASBank();
-};
-
-struct JASCalc {
-	/* 8028F480 */ void bzero(void*, u32);
 };
 
 // 

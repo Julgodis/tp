@@ -13,17 +13,3 @@
 
 
 extern u8 const data_8059E7F0[4];
-
-// 
-// External References:
-// 
-
-
-
-// 
-// Declarations:
-// 
-
-/* ############################################################################################## */
-#pragma section ".dtors$10"
-#pragma section ".dtors$15"

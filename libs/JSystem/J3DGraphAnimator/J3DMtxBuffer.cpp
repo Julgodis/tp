@@ -14,6 +14,10 @@
 struct Vec {
 };
 
+struct J3DShape {
+	/* 80314E28 */ void countBumpMtxNum() const;
+};
+
 struct J3DModelData {
 };
 
@@ -29,10 +33,6 @@ struct J3DMtxBuffer {
 	/* 80326ACC */ void calcDrawMtx(u32, Vec const&, f32 const (& )[3][4]);
 	/* 80326D3C */ void calcNrmMtx();
 	/* 80326EF0 */ void calcBBoardMtx();
-};
-
-struct J3DShape {
-	/* 80314E28 */ void countBumpMtxNum() const;
 };
 
 // 

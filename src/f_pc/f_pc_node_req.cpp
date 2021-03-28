@@ -11,33 +11,33 @@
 // Types:
 // 
 
-struct node_create_request {
+struct request_of_phase_process_class {
 };
 
 struct process_node_class {
 };
 
+struct process_method_tag_class {
+};
+
+struct node_list_class {
+};
+
 struct node_create_request_method_class {
 };
 
-struct process_method_tag_class {
+struct node_create_request {
 };
 
 struct layer_class {
 };
 
-struct cMl {
-	/* 80263228 */ void memalignB(int, u32);
-	/* 80263260 */ void free(void*);
-};
-
-struct request_of_phase_process_class {
-};
-
 struct create_tag_class {
 };
 
-struct node_list_class {
+struct cMl {
+	/* 80263228 */ void memalignB(int, u32);
+	/* 80263260 */ void free(void*);
 };
 
 // 

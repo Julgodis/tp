@@ -11,23 +11,59 @@
 // Types:
 // 
 
+struct _GXColorS10 {
+};
+
+struct _GXColor {
+};
+
+struct JUTNameTab {
+	/* 802DE9A0 */ JUTNameTab();
+	/* 802DEA58 */ void getIndex(char const*) const;
+	/* 802DEAF8 */ void getName(u16) const;
+};
+
+struct J3DTransformInfo {
+};
+
+struct J3DTextureSRTInfo {
+};
+
+struct J3DModelData {
+};
+
+struct J3DMaterialTable {
+};
+
 struct J3DFrameCtrl {
 	/* 803283FC */ void init(s16);
 	/* 8032842C */ void checkPass(f32);
 	/* 803289CC */ void update();
 };
 
-struct J3DAnmTransform {
-	/* 80328E40 */ J3DAnmTransform(s16, f32*, s16*, f32*);
+struct J3DAnmVtxColorKey {
+	/* 8032A4E0 */ J3DAnmVtxColorKey();
+	/* 8032A53C */ void getColor(u8, u16, _GXColor*) const;
+	/* 8032BF50 */ ~J3DAnmVtxColorKey();
+	/* 8032BFBC */ s32 getKind() const;
 };
 
-struct J3DTransformInfo {
+struct J3DAnmVtxColorFull {
+	/* 8032A30C */ J3DAnmVtxColorFull();
+	/* 8032A368 */ void getColor(u8, u16, _GXColor*) const;
+	/* 8032BFC4 */ ~J3DAnmVtxColorFull();
+	/* 8032C030 */ s32 getKind() const;
 };
 
-struct J3DAnmTransformFull {
-	/* 80328E90 */ void getTransform(u16, J3DTransformInfo*) const;
-	/* 8032C2AC */ ~J3DAnmTransformFull();
-	/* 8032C318 */ s32 getKind() const;
+struct J3DAnmVtxColor {
+	/* 8032A29C */ J3DAnmVtxColor();
+	/* 8032BC50 */ ~J3DAnmVtxColor();
+	/* 8032C038 */ s32 getKind() const;
+	/* 8032C040 */ void getColor(u8, u16, _GXColor*) const;
+};
+
+struct J3DAnmTransformKey {
+	/* 80329A34 */ void calcTransform(f32, u16, J3DTransformInfo*) const;
 };
 
 struct J3DAnmTransformFullWithLerp {
@@ -36,17 +72,14 @@ struct J3DAnmTransformFullWithLerp {
 	/* 8032C2A4 */ s32 getKind() const;
 };
 
-struct J3DAnmTransformKey {
-	/* 80329A34 */ void calcTransform(f32, u16, J3DTransformInfo*) const;
+struct J3DAnmTransformFull {
+	/* 80328E90 */ void getTransform(u16, J3DTransformInfo*) const;
+	/* 8032C2AC */ ~J3DAnmTransformFull();
+	/* 8032C318 */ s32 getKind() const;
 };
 
-struct J3DMaterialTable {
-};
-
-struct J3DTextureSRTInfo {
-};
-
-struct J3DModelData {
+struct J3DAnmTransform {
+	/* 80328E40 */ J3DAnmTransform(s16, f32*, s16*, f32*);
 };
 
 struct J3DAnmTextureSRTKey {
@@ -58,65 +91,13 @@ struct J3DAnmTextureSRTKey {
 	/* 8032C220 */ s32 getKind() const;
 };
 
-struct J3DAnmClusterFull {
-	/* 8032A184 */ void getWeight(u16) const;
-	/* 8032C124 */ ~J3DAnmClusterFull();
-	/* 8032C190 */ s32 getKind() const;
-};
-
-struct J3DAnmClusterKey {
-	/* 8032A218 */ void getWeight(u16) const;
-	/* 8032C044 */ ~J3DAnmClusterKey();
-	/* 8032C0B0 */ s32 getKind() const;
-};
-
-struct _GXColor {
-};
-
-struct J3DAnmVtxColor {
-	/* 8032A29C */ J3DAnmVtxColor();
-	/* 8032BC50 */ ~J3DAnmVtxColor();
-	/* 8032C038 */ s32 getKind() const;
-	/* 8032C040 */ void getColor(u8, u16, _GXColor*) const;
-};
-
-struct J3DAnmVtxColorFull {
-	/* 8032A30C */ J3DAnmVtxColorFull();
-	/* 8032A368 */ void getColor(u8, u16, _GXColor*) const;
-	/* 8032BFC4 */ ~J3DAnmVtxColorFull();
-	/* 8032C030 */ s32 getKind() const;
-};
-
-struct J3DAnmVtxColorKey {
-	/* 8032A4E0 */ J3DAnmVtxColorKey();
-	/* 8032A53C */ void getColor(u8, u16, _GXColor*) const;
-	/* 8032BF50 */ ~J3DAnmVtxColorKey();
-	/* 8032BFBC */ s32 getKind() const;
-};
-
-struct J3DAnmColor {
-	/* 8032A828 */ J3DAnmColor();
-	/* 8032A8A4 */ void searchUpdateMaterialID(J3DMaterialTable*);
-	/* 8032BCAC */ ~J3DAnmColor();
-	/* 8032BF44 */ bool getKind() const;
-	/* 8032BF4C */ void getColor(u16, _GXColor*) const;
-};
-
-struct J3DAnmColorFull {
-	/* 8032A93C */ J3DAnmColorFull();
-	/* 8032A990 */ void getColor(u16, _GXColor*) const;
-	/* 8032BEB8 */ ~J3DAnmColorFull();
-	/* 8032BF3C */ s32 getKind() const;
-};
-
-struct J3DAnmColorKey {
-	/* 8032AB00 */ J3DAnmColorKey();
-	/* 8032AB54 */ void getColor(u16, _GXColor*) const;
-	/* 8032BE2C */ ~J3DAnmColorKey();
-	/* 8032BEB0 */ s32 getKind() const;
-};
-
-struct _GXColorS10 {
+struct J3DAnmTexPattern {
+	/* 8032AED8 */ J3DAnmTexPattern();
+	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+	/* 8032B004 */ void searchUpdateMaterialID(J3DMaterialTable*);
+	/* 8032B09C */ void searchUpdateMaterialID(J3DModelData*);
+	/* 8032BD20 */ ~J3DAnmTexPattern();
+	/* 8032BD94 */ s32 getKind() const;
 };
 
 struct J3DAnmTevRegKey {
@@ -129,28 +110,47 @@ struct J3DAnmTevRegKey {
 	/* 8032BE24 */ s32 getKind() const;
 };
 
-struct J3DAnmTexPattern {
-	/* 8032AED8 */ J3DAnmTexPattern();
-	/* 8032AF50 */ void getTexNo(u16, u16*) const;
-	/* 8032B004 */ void searchUpdateMaterialID(J3DMaterialTable*);
-	/* 8032B09C */ void searchUpdateMaterialID(J3DModelData*);
-	/* 8032BD20 */ ~J3DAnmTexPattern();
-	/* 8032BD94 */ s32 getKind() const;
+struct J3DAnmKeyTableBase {
 };
 
-struct J3DAnmKeyTableBase {
+struct J3DAnmColorKey {
+	/* 8032AB00 */ J3DAnmColorKey();
+	/* 8032AB54 */ void getColor(u16, _GXColor*) const;
+	/* 8032BE2C */ ~J3DAnmColorKey();
+	/* 8032BEB0 */ s32 getKind() const;
+};
+
+struct J3DAnmColorFull {
+	/* 8032A93C */ J3DAnmColorFull();
+	/* 8032A990 */ void getColor(u16, _GXColor*) const;
+	/* 8032BEB8 */ ~J3DAnmColorFull();
+	/* 8032BF3C */ s32 getKind() const;
+};
+
+struct J3DAnmColor {
+	/* 8032A828 */ J3DAnmColor();
+	/* 8032A8A4 */ void searchUpdateMaterialID(J3DMaterialTable*);
+	/* 8032BCAC */ ~J3DAnmColor();
+	/* 8032BF44 */ bool getKind() const;
+	/* 8032BF4C */ void getColor(u16, _GXColor*) const;
+};
+
+struct J3DAnmClusterKey {
+	/* 8032A218 */ void getWeight(u16) const;
+	/* 8032C044 */ ~J3DAnmClusterKey();
+	/* 8032C0B0 */ s32 getKind() const;
+};
+
+struct J3DAnmClusterFull {
+	/* 8032A184 */ void getWeight(u16) const;
+	/* 8032C124 */ ~J3DAnmClusterFull();
+	/* 8032C190 */ s32 getKind() const;
 };
 
 struct J3DAnmCluster {
 	/* 8032C0B8 */ ~J3DAnmCluster();
 	/* 8032C114 */ s32 getKind() const;
 	/* 8032C11C */ void getWeight(u16) const;
-};
-
-struct JUTNameTab {
-	/* 802DE9A0 */ JUTNameTab();
-	/* 802DEA58 */ void getIndex(char const*) const;
-	/* 802DEAF8 */ void getName(u16) const;
 };
 
 // 
@@ -268,7 +268,7 @@ SECTION_SDATA2 static u8 lit_853[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803283FC-8032842C 0030+00 s=0 e=25 z=285  None .text      init__12J3DFrameCtrlFs                                       */
+/* 803283FC-8032842C 0030+00 s=0 e=25 z=0  None .text      init__12J3DFrameCtrlFs                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -292,7 +292,7 @@ SECTION_SDATA2 static u8 lit_975[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 8032842C-803289CC 05A0+00 s=0 e=92 z=382  None .text      checkPass__12J3DFrameCtrlFf                                  */
+/* 8032842C-803289CC 05A0+00 s=0 e=92 z=0  None .text      checkPass__12J3DFrameCtrlFf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -669,7 +669,7 @@ asm J3DAnmTexPattern::J3DAnmTexPattern() {
 #pragma pop
 
 
-/* 8032AF50-8032B004 00B4+00 s=0 e=1 z=72  None .text      getTexNo__16J3DAnmTexPatternCFUsPUs                          */
+/* 8032AF50-8032B004 00B4+00 s=0 e=1 z=0  None .text      getTexNo__16J3DAnmTexPatternCFUsPUs                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -691,7 +691,7 @@ asm void J3DAnmTexPattern::searchUpdateMaterialID(J3DMaterialTable* param_0) {
 #pragma pop
 
 
-/* 8032B09C-8032B0C0 0024+00 s=0 e=4 z=1  None .text      searchUpdateMaterialID__16J3DAnmTexPatternFP12J3DModelData   */
+/* 8032B09C-8032B0C0 0024+00 s=0 e=4 z=0  None .text      searchUpdateMaterialID__16J3DAnmTexPatternFP12J3DModelData   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -713,7 +713,7 @@ asm void J3DAnmTextureSRTKey::searchUpdateMaterialID(J3DMaterialTable* param_0) 
 #pragma pop
 
 
-/* 8032B1D4-8032B1F8 0024+00 s=0 e=8 z=6  None .text      searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP12J3DModelData */
+/* 8032B1D4-8032B1F8 0024+00 s=0 e=8 z=0  None .text      searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP12J3DModelData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -735,7 +735,7 @@ SECTION_SDATA2 static f32 lit_1818[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 8032B1F8-8032B4BC 02C4+00 s=0 e=2 z=1  None .text      getTevColorReg__15J3DAnmTevRegKeyCFUsP11_GXColorS10          */
+/* 8032B1F8-8032B4BC 02C4+00 s=0 e=2 z=0  None .text      getTevColorReg__15J3DAnmTevRegKeyCFUsP11_GXColorS10          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -746,7 +746,7 @@ asm void J3DAnmTevRegKey::getTevColorReg(u16 param_0, _GXColorS10* param_1) cons
 #pragma pop
 
 
-/* 8032B4BC-8032B780 02C4+00 s=0 e=1 z=1  None .text      getTevKonstReg__15J3DAnmTevRegKeyCFUsP8_GXColor              */
+/* 8032B4BC-8032B780 02C4+00 s=0 e=1 z=0  None .text      getTevKonstReg__15J3DAnmTevRegKeyCFUsP8_GXColor              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -768,7 +768,7 @@ asm void J3DAnmTevRegKey::searchUpdateMaterialID(J3DMaterialTable* param_0) {
 #pragma pop
 
 
-/* 8032B87C-8032B8A0 0024+00 s=0 e=9 z=4  None .text      searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData    */
+/* 8032B87C-8032B8A0 0024+00 s=0 e=9 z=0  None .text      searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

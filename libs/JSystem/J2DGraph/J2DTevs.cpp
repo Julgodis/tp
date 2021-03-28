@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J2DTextureSRTInfo {
+struct Vec {
 };
 
-struct Vec {
+struct J2DTextureSRTInfo {
 };
 
 struct J2DTexMtx {
@@ -22,22 +22,6 @@ struct J2DTexMtx {
 	/* 802E9CC4 */ void calc();
 	/* 802E9D2C */ void getTextureMtx(J2DTextureSRTInfo const&, Vec, f32 (* )[4]);
 	/* 802E9EBC */ void getTextureMtxMaya(J2DTextureSRTInfo const&, f32 (* )[4]);
-};
-
-struct J2DIndTevStage {
-	/* 802EA044 */ void load(u8);
-};
-
-struct J2DIndTexMtx {
-	/* 802EA098 */ void load(u8);
-};
-
-struct J2DIndTexCoordScale {
-	/* 802EA0CC */ void load(u8);
-};
-
-struct J2DIndTexOrder {
-	/* 802EA0FC */ void load(u8);
 };
 
 struct J2DTevBlock {
@@ -52,6 +36,22 @@ struct J2DTevBlock {
 	/* 802EA170 */ void getTexNo(u32) const;
 	/* 802EA17C */ bool getTevStageNum() const;
 	/* 802EA184 */ bool getIndTevStage(u32);
+};
+
+struct J2DIndTexOrder {
+	/* 802EA0FC */ void load(u8);
+};
+
+struct J2DIndTexMtx {
+	/* 802EA098 */ void load(u8);
+};
+
+struct J2DIndTexCoordScale {
+	/* 802EA0CC */ void load(u8);
+};
+
+struct J2DIndTevStage {
+	/* 802EA044 */ void load(u8);
 };
 
 struct J2DIndBlock {

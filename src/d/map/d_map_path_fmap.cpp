@@ -11,6 +11,10 @@
 // Types:
 // 
 
+struct fmpTresTypeGroupData_c {
+	/* 8003EB70 */ ~fmpTresTypeGroupData_c();
+};
+
 struct dTres_c {
 	struct data_s {
 	};
@@ -30,15 +34,24 @@ struct fmpTresTypeGroupDataList_c {
 	/* 8003EC90 */ fmpTresTypeGroupDataList_c();
 };
 
-struct dMenu_Fmap_room_data_c {
-	/* 8003D818 */ void isArrival();
-	/* 8003D868 */ void buildTresTypeGroup(int, int, int);
-	/* 8003D92C */ void buildFmapRoomData(int, int, f32, f32, f32, f32);
+struct dSv_save_c {
+	/* 800350A8 */ void getSave2(int);
 };
 
-struct dMenu_Fmap_stage_data_c {
-	/* 8003D95C */ void isArrival();
-	/* 8003D9D8 */ void buildFmapStageData(int, f32, f32);
+struct dSv_memory2_c {
+	/* 80034AEC */ void isVisitedRoom(int);
+};
+
+struct dSv_memBit_c {
+	/* 800347E8 */ void isTbox(int) const;
+};
+
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
 };
 
 struct dMenu_Fmap_region_data_c {
@@ -50,6 +63,17 @@ struct dMenu_Fmap_region_data_c {
 struct dMenu_Fmap_world_data_c {
 	/* 8003E028 */ void create(dMenu_Fmap_region_data_c*);
 	/* 8003E04C */ void buildFmapWorldData();
+};
+
+struct dMenu_Fmap_stage_data_c {
+	/* 8003D95C */ void isArrival();
+	/* 8003D9D8 */ void buildFmapStageData(int, f32, f32);
+};
+
+struct dMenu_Fmap_room_data_c {
+	/* 8003D818 */ void isArrival();
+	/* 8003D868 */ void buildTresTypeGroup(int, int, int);
+	/* 8003D92C */ void buildFmapRoomData(int, int, f32, f32, f32, f32);
 };
 
 struct dMenuFmapIconPointer_c {
@@ -67,30 +91,6 @@ struct dMenuFmapIconPointer_c {
 struct dMenuFmapIconDisp_c {
 	/* 8003E578 */ void getPosition(int*, int*, f32*, f32*, dTres_c::data_s const**);
 	/* 8003E6E8 */ void isDrawDisp();
-};
-
-struct fmpTresTypeGroupData_c {
-	/* 8003EB70 */ ~fmpTresTypeGroupData_c();
-};
-
-struct dSv_memBit_c {
-	/* 800347E8 */ void isTbox(int) const;
-};
-
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
-};
-
-struct dSv_memory2_c {
-	/* 80034AEC */ void isVisitedRoom(int);
-};
-
-struct dSv_save_c {
-	/* 800350A8 */ void getSave2(int);
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // 

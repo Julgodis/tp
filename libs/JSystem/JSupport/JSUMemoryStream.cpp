@@ -14,6 +14,11 @@
 struct JSUStreamSeekFrom {
 };
 
+struct JSURandomInputStream {
+	/* 802D4094 */ void getAvailable() const;
+	/* 802DC3FC */ void skip(s32);
+};
+
 struct JSUMemoryInputStream {
 	/* 802552B8 */ ~JSUMemoryInputStream();
 	/* 802DC520 */ void setBuffer(void const*, s32);
@@ -21,11 +26,6 @@ struct JSUMemoryInputStream {
 	/* 802DC5AC */ void seekPos(s32, JSUStreamSeekFrom);
 	/* 802DC628 */ void getLength() const;
 	/* 802DC630 */ void getPosition() const;
-};
-
-struct JSURandomInputStream {
-	/* 802D4094 */ void getAvailable() const;
-	/* 802DC3FC */ void skip(s32);
 };
 
 // 

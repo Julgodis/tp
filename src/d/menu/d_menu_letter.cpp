@@ -11,15 +11,84 @@
 // Types:
 // 
 
+struct JKRHeap {
+};
+
+struct mDoDvdThd_mountArchive_c {
+	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
+};
+
+struct dSv_letter_info_c {
+	/* 80034428 */ void onLetterGetFlag(int);
+	/* 80034474 */ void onLetterReadFlag(int);
+	/* 8003449C */ void isLetterReadFlag(int) const;
+};
+
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+};
+
+struct JKRArchive {
+};
+
+struct dSelect_cursor_c {
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
+	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
+	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
+	/* 801951C8 */ void setScale(f32);
+	/* 801952A0 */ void setAlphaRate(f32);
+};
+
+struct COutFont_c {
+};
+
+struct JUTFont {
+};
+
+struct J2DTextBox {
+	/* 801DFA28 */ void getWhite() const;
+	/* 801DFA34 */ void getBlack() const;
+	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
+};
+
+struct dMsgString_c {
+	/* 801E1D10 */ void getStringPage(u32, u8, u8, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
+struct dMsgStringBase_c {
+	/* 802498D8 */ void getStringPageLocal(u32, u8, u8, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
+	/* 80249A48 */ void getPageMax(int);
+};
+
+struct dMsgScrnArrow_c {
+	/* 8023B9B4 */ dMsgScrnArrow_c();
+	/* 8023BDC0 */ void draw();
+	/* 8023BDF8 */ void setPos(f32, f32);
+	/* 8023BE34 */ void arwAnimeInit();
+	/* 8023BE90 */ void arwAnimeMove();
+	/* 8023BFC4 */ void dotAnimeInit();
+	/* 8023C010 */ void dotAnimeMove();
+};
+
+struct JMSMesgEntry_c {
+};
+
+struct dMeter2Info_c {
+	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
+};
+
 struct CSTControl {
+};
+
+struct JKRExpHeap {
 };
 
 struct STControl {
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
-};
-
-struct JKRExpHeap {
 };
 
 struct dMenu_Letter_c {
@@ -67,45 +136,17 @@ struct dMenu_Letter_c {
 	/* 801E1D5C */ void draw();
 };
 
-struct J2DTextBox {
-	/* 801DFA28 */ void getWhite() const;
-	/* 801DFA34 */ void getBlack() const;
-	/* 80300658 */ void getStringPtr() const;
-	/* 8030074C */ void setString(s16, char const*, ...);
+struct Vec {
+};
+
+struct JAISoundID {
+};
+
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 struct ResTIMG {
-};
-
-struct J2DPicture {
-	/* 801DFA40 */ void getWhite() const;
-	/* 801DFA4C */ void getBlack() const;
-	/* 802FC708 */ J2DPicture(ResTIMG const*);
-};
-
-struct JUTFont {
-};
-
-struct COutFont_c {
-};
-
-struct dMsgString_c {
-	/* 801E1D10 */ void getStringPage(u32, u8, u8, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
-	/* 80249C20 */ dMsgString_c();
-	/* 80249D28 */ ~dMsgString_c();
-};
-
-struct JKRHeap {
-};
-
-struct mDoDvdThd_mountArchive_c {
-	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
-};
-
-struct dSv_letter_info_c {
-	/* 80034428 */ void onLetterGetFlag(int);
-	/* 80034474 */ void onLetterReadFlag(int);
-	/* 8003449C */ void isLetterReadFlag(int) const;
 };
 
 struct JUtility {
@@ -113,43 +154,6 @@ struct JUtility {
 		/* 80193960 */ TColor();
 	};
 
-};
-
-struct JKRArchive {
-};
-
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
-};
-
-struct dSelect_cursor_c {
-	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
-	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
-	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
-	/* 801951C8 */ void setScale(f32);
-	/* 801952A0 */ void setAlphaRate(f32);
-};
-
-struct JMSMesgEntry_c {
-};
-
-struct dMeter2Info_c {
-	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
-};
-
-struct dMsgScrnArrow_c {
-	/* 8023B9B4 */ dMsgScrnArrow_c();
-	/* 8023BDC0 */ void draw();
-	/* 8023BDF8 */ void setPos(f32, f32);
-	/* 8023BE34 */ void arwAnimeInit();
-	/* 8023BE90 */ void arwAnimeMove();
-	/* 8023BFC4 */ void dotAnimeInit();
-	/* 8023C010 */ void dotAnimeMove();
-};
-
-struct dMsgStringBase_c {
-	/* 802498D8 */ void getStringPageLocal(u32, u8, u8, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
-	/* 80249A48 */ void getPageMax(int);
 };
 
 struct JGeometry {
@@ -171,6 +175,16 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
+struct J2DPicture {
+	/* 801DFA40 */ void getWhite() const;
+	/* 801DFA4C */ void getBlack() const;
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
+struct CPaneMgrAlpha {
+	/* 802557D0 */ void setAlphaRate(f32);
+};
+
 struct CPaneMgr {
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80253930 */ CPaneMgr();
@@ -178,20 +192,6 @@ struct CPaneMgr {
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254C90 */ void getGlobalVtx(J2DPane*, f32 (* )[3][4], u8, bool, s16);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
-};
-
-struct CPaneMgrAlpha {
-	/* 802557D0 */ void setAlphaRate(f32);
-};
-
-struct JAISoundID {
-};
-
-struct Vec {
-};
-
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // 

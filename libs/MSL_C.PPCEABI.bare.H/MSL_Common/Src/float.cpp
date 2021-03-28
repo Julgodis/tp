@@ -29,13 +29,13 @@ extern "C" extern u32 data_80450AF0;
 // 
 
 /* ############################################################################################## */
-/* 80450AE0-80450AE4 0004+00 s=0 e=204 z=1060  None .sdata     __float_nan                                                  */
+/* 80450AE0-80450AE4 0004+00 s=0 e=204 z=0  None .sdata     __float_nan                                                  */
 SECTION_SDATA u32 __float_nan = 0x7FFFFFFF;
 
 /* 80450AE4-80450AE8 0004+00 s=0 e=1 z=0  None .sdata     __float_huge                                                 */
 SECTION_SDATA u32 __float_huge = 0x7F800000;
 
-/* 80450AE8-80450AEC 0004+00 s=0 e=18 z=14  None .sdata     __float_max                                                  */
+/* 80450AE8-80450AEC 0004+00 s=0 e=18 z=0  None .sdata     __float_max                                                  */
 SECTION_SDATA u32 __float_max = 0x7F7FFFFF;
 
 /* 80450AEC-80450AF0 0004+00 s=0 e=28 z=0  None .sdata     __float_epsilon                                              */

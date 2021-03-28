@@ -14,23 +14,20 @@
 struct fopAc_ac_c {
 };
 
-struct cXyz {
+struct dBgS_RopeLinChk {
+	/* 8007838C */ dBgS_RopeLinChk();
+	/* 800783E8 */ ~dBgS_RopeLinChk();
 };
 
-struct dBgS_LinChk {
-	/* 80077C68 */ dBgS_LinChk();
-	/* 80077CDC */ ~dBgS_LinChk();
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct dBgS_CamLinChk {
-	/* 80077DA4 */ dBgS_CamLinChk();
-	/* 80077E00 */ ~dBgS_CamLinChk();
-};
-
-struct dBgS_CamLinChk_NorWtr {
-	/* 80077E78 */ dBgS_CamLinChk_NorWtr();
-	/* 80077EE4 */ ~dBgS_CamLinChk_NorWtr();
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+	/* 80078E80 */ void SetCam();
+	/* 80078E98 */ void SetLink();
+	/* 80078EB0 */ void SetArrow();
+	/* 80078EBC */ void SetBomb();
+	/* 80078ED4 */ void SetBoomerang();
+	/* 80078EE0 */ void SetRope();
+	/* 80078EF8 */ void SetHorse();
 };
 
 struct dBgS_ObjLinChk {
@@ -43,24 +40,13 @@ struct dBgS_LinkLinChk {
 	/* 8007808C */ ~dBgS_LinkLinChk();
 };
 
-struct dBgS_BombLinChk {
-	/* 80078104 */ dBgS_BombLinChk();
-	/* 80078160 */ ~dBgS_BombLinChk();
+struct cXyz {
 };
 
-struct dBgS_ArrowLinChk {
-	/* 800781D8 */ dBgS_ArrowLinChk();
-	/* 80078240 */ ~dBgS_ArrowLinChk();
-};
-
-struct dBgS_BoomerangLinChk {
-	/* 800782B8 */ dBgS_BoomerangLinChk();
-	/* 80078314 */ ~dBgS_BoomerangLinChk();
-};
-
-struct dBgS_RopeLinChk {
-	/* 8007838C */ dBgS_RopeLinChk();
-	/* 800783E8 */ ~dBgS_RopeLinChk();
+struct dBgS_LinChk {
+	/* 80077C68 */ dBgS_LinChk();
+	/* 80077CDC */ ~dBgS_LinChk();
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
 struct dBgS_HorseLinChk {
@@ -75,15 +61,29 @@ struct dBgS_Chk {
 	/* 80077564 */ void GetGrpPassChkInfo();
 };
 
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-	/* 80078E80 */ void SetCam();
-	/* 80078E98 */ void SetLink();
-	/* 80078EB0 */ void SetArrow();
-	/* 80078EBC */ void SetBomb();
-	/* 80078ED4 */ void SetBoomerang();
-	/* 80078EE0 */ void SetRope();
-	/* 80078EF8 */ void SetHorse();
+struct dBgS_CamLinChk_NorWtr {
+	/* 80077E78 */ dBgS_CamLinChk_NorWtr();
+	/* 80077EE4 */ ~dBgS_CamLinChk_NorWtr();
+};
+
+struct dBgS_CamLinChk {
+	/* 80077DA4 */ dBgS_CamLinChk();
+	/* 80077E00 */ ~dBgS_CamLinChk();
+};
+
+struct dBgS_BoomerangLinChk {
+	/* 800782B8 */ dBgS_BoomerangLinChk();
+	/* 80078314 */ ~dBgS_BoomerangLinChk();
+};
+
+struct dBgS_BombLinChk {
+	/* 80078104 */ dBgS_BombLinChk();
+	/* 80078160 */ ~dBgS_BombLinChk();
+};
+
+struct dBgS_ArrowLinChk {
+	/* 800781D8 */ dBgS_ArrowLinChk();
+	/* 80078240 */ ~dBgS_ArrowLinChk();
 };
 
 struct cBgS_LinChk {
@@ -337,7 +337,7 @@ SECTION_DATA static void* __vt__11dBgS_LinChk[12] = {
 	(void*)func_8007853C,
 };
 
-/* 80077C68-80077CDC 0074+00 s=8 e=3 z=388  None .text      __ct__11dBgS_LinChkFv                                        */
+/* 80077C68-80077CDC 0074+00 s=8 e=3 z=0  None .text      __ct__11dBgS_LinChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -348,7 +348,7 @@ asm dBgS_LinChk::dBgS_LinChk() {
 #pragma pop
 
 
-/* 80077CDC-80077D64 0088+00 s=12 e=5 z=378  None .text      __dt__11dBgS_LinChkFv                                        */
+/* 80077CDC-80077D64 0088+00 s=12 e=5 z=0  None .text      __dt__11dBgS_LinChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -359,7 +359,7 @@ asm dBgS_LinChk::~dBgS_LinChk() {
 #pragma pop
 
 
-/* 80077D64-80077DA4 0040+00 s=0 e=15 z=307  None .text      Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c              */
+/* 80077D64-80077DA4 0040+00 s=0 e=15 z=0  None .text      Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -370,7 +370,7 @@ asm void dBgS_LinChk::Set(cXyz const* param_0, cXyz const* param_1, fopAc_ac_c c
 #pragma pop
 
 
-/* 80077DA4-80077E00 005C+00 s=1 e=12 z=1  None .text      __ct__14dBgS_CamLinChkFv                                     */
+/* 80077DA4-80077E00 005C+00 s=1 e=12 z=0  None .text      __ct__14dBgS_CamLinChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -381,7 +381,7 @@ asm dBgS_CamLinChk::dBgS_CamLinChk() {
 #pragma pop
 
 
-/* 80077E00-80077E78 0078+00 s=5 e=12 z=1  None .text      __dt__14dBgS_CamLinChkFv                                     */
+/* 80077E00-80077E78 0078+00 s=5 e=12 z=0  None .text      __dt__14dBgS_CamLinChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -392,7 +392,7 @@ asm dBgS_CamLinChk::~dBgS_CamLinChk() {
 #pragma pop
 
 
-/* 80077E78-80077EE4 006C+00 s=0 e=0 z=1  None .text      __ct__21dBgS_CamLinChk_NorWtrFv                              */
+/* 80077E78-80077EE4 006C+00 s=0 e=0 z=0  None .text      __ct__21dBgS_CamLinChk_NorWtrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -403,7 +403,7 @@ asm dBgS_CamLinChk_NorWtr::dBgS_CamLinChk_NorWtr() {
 #pragma pop
 
 
-/* 80077EE4-80077F5C 0078+00 s=4 e=0 z=1  None .text      __dt__21dBgS_CamLinChk_NorWtrFv                              */
+/* 80077EE4-80077F5C 0078+00 s=4 e=0 z=0  None .text      __dt__21dBgS_CamLinChk_NorWtrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -414,7 +414,7 @@ asm dBgS_CamLinChk_NorWtr::~dBgS_CamLinChk_NorWtr() {
 #pragma pop
 
 
-/* 80077F5C-80077FB8 005C+00 s=0 e=4 z=9  None .text      __ct__14dBgS_ObjLinChkFv                                     */
+/* 80077F5C-80077FB8 005C+00 s=0 e=4 z=0  None .text      __ct__14dBgS_ObjLinChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -425,7 +425,7 @@ asm dBgS_ObjLinChk::dBgS_ObjLinChk() {
 #pragma pop
 
 
-/* 80077FB8-80078030 0078+00 s=4 e=2 z=11  None .text      __dt__14dBgS_ObjLinChkFv                                     */
+/* 80077FB8-80078030 0078+00 s=4 e=2 z=0  None .text      __dt__14dBgS_ObjLinChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -436,7 +436,7 @@ asm dBgS_ObjLinChk::~dBgS_ObjLinChk() {
 #pragma pop
 
 
-/* 80078030-8007808C 005C+00 s=0 e=1 z=4  None .text      __ct__15dBgS_LinkLinChkFv                                    */
+/* 80078030-8007808C 005C+00 s=0 e=1 z=0  None .text      __ct__15dBgS_LinkLinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -447,7 +447,7 @@ asm dBgS_LinkLinChk::dBgS_LinkLinChk() {
 #pragma pop
 
 
-/* 8007808C-80078104 0078+00 s=4 e=1 z=5  None .text      __dt__15dBgS_LinkLinChkFv                                    */
+/* 8007808C-80078104 0078+00 s=4 e=1 z=0  None .text      __dt__15dBgS_LinkLinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -458,7 +458,7 @@ asm dBgS_LinkLinChk::~dBgS_LinkLinChk() {
 #pragma pop
 
 
-/* 80078104-80078160 005C+00 s=0 e=0 z=1  None .text      __ct__15dBgS_BombLinChkFv                                    */
+/* 80078104-80078160 005C+00 s=0 e=0 z=0  None .text      __ct__15dBgS_BombLinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -469,7 +469,7 @@ asm dBgS_BombLinChk::dBgS_BombLinChk() {
 #pragma pop
 
 
-/* 80078160-800781D8 0078+00 s=4 e=0 z=1  None .text      __dt__15dBgS_BombLinChkFv                                    */
+/* 80078160-800781D8 0078+00 s=4 e=0 z=0  None .text      __dt__15dBgS_BombLinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -480,7 +480,7 @@ asm dBgS_BombLinChk::~dBgS_BombLinChk() {
 #pragma pop
 
 
-/* 800781D8-80078240 0068+00 s=0 e=1 z=2  None .text      __ct__16dBgS_ArrowLinChkFv                                   */
+/* 800781D8-80078240 0068+00 s=0 e=1 z=0  None .text      __ct__16dBgS_ArrowLinChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -491,7 +491,7 @@ asm dBgS_ArrowLinChk::dBgS_ArrowLinChk() {
 #pragma pop
 
 
-/* 80078240-800782B8 0078+00 s=4 e=1 z=2  None .text      __dt__16dBgS_ArrowLinChkFv                                   */
+/* 80078240-800782B8 0078+00 s=4 e=1 z=0  None .text      __dt__16dBgS_ArrowLinChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -502,7 +502,7 @@ asm dBgS_ArrowLinChk::~dBgS_ArrowLinChk() {
 #pragma pop
 
 
-/* 800782B8-80078314 005C+00 s=0 e=1 z=1  None .text      __ct__20dBgS_BoomerangLinChkFv                               */
+/* 800782B8-80078314 005C+00 s=0 e=1 z=0  None .text      __ct__20dBgS_BoomerangLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -513,7 +513,7 @@ asm dBgS_BoomerangLinChk::dBgS_BoomerangLinChk() {
 #pragma pop
 
 
-/* 80078314-8007838C 0078+00 s=4 e=1 z=1  None .text      __dt__20dBgS_BoomerangLinChkFv                               */
+/* 80078314-8007838C 0078+00 s=4 e=1 z=0  None .text      __dt__20dBgS_BoomerangLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -546,7 +546,7 @@ asm dBgS_RopeLinChk::~dBgS_RopeLinChk() {
 #pragma pop
 
 
-/* 80078460-800784BC 005C+00 s=0 e=0 z=1  None .text      __ct__16dBgS_HorseLinChkFv                                   */
+/* 80078460-800784BC 005C+00 s=0 e=0 z=0  None .text      __ct__16dBgS_HorseLinChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -557,7 +557,7 @@ asm dBgS_HorseLinChk::dBgS_HorseLinChk() {
 #pragma pop
 
 
-/* 800784BC-80078534 0078+00 s=4 e=0 z=1  None .text      __dt__16dBgS_HorseLinChkFv                                   */
+/* 800784BC-80078534 0078+00 s=4 e=0 z=0  None .text      __dt__16dBgS_HorseLinChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

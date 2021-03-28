@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct create_tag_class {
-};
-
 struct node_lists_tree_class {
 };
 
 struct node_list_class {
+};
+
+struct create_tag_class {
 };
 
 // 
@@ -59,7 +59,7 @@ SECTION_SDATA u8 g_fopDwTg_Queue[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800204AC-800204D4 0028+00 s=0 e=4 z=2  None .text      fopDwTg_ToDrawQ__FP16create_tag_classi                       */
+/* 800204AC-800204D4 0028+00 s=0 e=4 z=0  None .text      fopDwTg_ToDrawQ__FP16create_tag_classi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +70,7 @@ asm void fopDwTg_ToDrawQ(create_tag_class* param_0, int param_1) {
 #pragma pop
 
 
-/* 800204D4-800204F4 0020+00 s=0 e=8 z=3  None .text      fopDwTg_DrawQTo__FP16create_tag_class                        */
+/* 800204D4-800204F4 0020+00 s=0 e=8 z=0  None .text      fopDwTg_DrawQTo__FP16create_tag_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

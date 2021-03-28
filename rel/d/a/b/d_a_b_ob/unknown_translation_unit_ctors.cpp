@@ -12,18 +12,4 @@
 // 
 
 
-extern void* const data_8061AD70[2];
-
-// 
-// External References:
-// 
-
-
-extern "C" void __sinit_d_a_b_ob_cpp(); // 1
-
-// 
-// Declarations:
-// 
-
-/* ############################################################################################## */
-#pragma section ".ctors$10"
+extern void* const data_8061AD70[2]

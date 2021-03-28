@@ -11,6 +11,14 @@
 // Types:
 // 
 
+struct dPath {
+};
+
+struct dPathCurve {
+	/* 80097C5C */ void Init(dPath*);
+	/* 80097C74 */ void bSpline2(f32);
+};
+
 struct cXyz {
 };
 
@@ -20,14 +28,6 @@ struct d2DBSplinePath {
 	/* 80097B20 */ void Calc(f32*);
 	/* 80097A6C */ void Calc(cXyz*);
 	/* 80097B68 */ void Spot(f32*, f32);
-};
-
-struct dPath {
-};
-
-struct dPathCurve {
-	/* 80097C5C */ void Init(dPath*);
-	/* 80097C74 */ void bSpline2(f32);
 };
 
 // 
@@ -122,7 +122,7 @@ asm void d2DBSplinePath::Spot(f32* param_0, f32 param_1) {
 #pragma pop
 
 
-/* 80097C5C-80097C74 0018+00 s=0 e=0 z=1  None .text      Init__10dPathCurveFP5dPath                                   */
+/* 80097C5C-80097C74 0018+00 s=0 e=0 z=0  None .text      Init__10dPathCurveFP5dPath                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -133,7 +133,7 @@ asm void dPathCurve::Init(dPath* param_0) {
 #pragma pop
 
 
-/* 80097C74-80097E8C 0218+00 s=0 e=0 z=1  None .text      bSpline2__10dPathCurveFf                                     */
+/* 80097C74-80097E8C 0218+00 s=0 e=0 z=0  None .text      bSpline2__10dPathCurveFf                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

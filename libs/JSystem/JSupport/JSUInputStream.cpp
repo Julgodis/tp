@@ -11,12 +11,6 @@
 // Types:
 // 
 
-struct JSUInputStream {
-	/* 802DC23C */ ~JSUInputStream();
-	/* 802DC298 */ void read(void*, s32);
-	/* 802DC2F0 */ void skip(s32);
-};
-
 struct JSUStreamSeekFrom {
 };
 
@@ -27,6 +21,12 @@ struct JSURandomInputStream {
 	/* 802DC3FC */ void skip(s32);
 	/* 802DC458 */ void peek(void*, s32);
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+struct JSUInputStream {
+	/* 802DC23C */ ~JSUInputStream();
+	/* 802DC298 */ void read(void*, s32);
+	/* 802DC2F0 */ void skip(s32);
 };
 
 // 

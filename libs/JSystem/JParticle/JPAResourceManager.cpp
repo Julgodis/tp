@@ -11,10 +11,14 @@
 // Types:
 // 
 
-struct JPATexture {
+struct ResTIMG {
 };
 
-struct ResTIMG {
+struct JUTTexture {
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
+};
+
+struct JPATexture {
 };
 
 struct JKRHeap {
@@ -35,10 +39,6 @@ struct JPAResourceManager {
 
 struct JPAResourceLoader {
 	/* 8027D8A0 */ JPAResourceLoader(u8 const*, JPAResourceManager*);
-};
-
-struct JUTTexture {
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
 };
 
 // 

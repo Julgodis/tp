@@ -11,33 +11,48 @@
 // Types:
 // 
 
-struct JAISoundID {
+struct dSv_memBit_c {
+	/* 80034860 */ void isSwitch(int) const;
+};
+
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct JAISoundHandle {
+	/* 802A2184 */ void releaseSound();
+};
+
+struct Z2SoundStarter {
+	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
+};
+
+struct JAISound {
+	/* 802A21A0 */ void releaseHandle();
+	/* 802A24DC */ void stop(u32);
+};
+
+struct Z2SoundMgr {
+	/* 802AA270 */ void setIIR(JAISound*, s16 const*);
 };
 
 struct Vec {
 };
 
-struct Z2EnvSeBase {
-	/* 802C589C */ Z2EnvSeBase(Vec*);
-	/* 802C58AC */ ~Z2EnvSeBase();
-	/* 802C5908 */ void startEnvSe(JAISoundID, f32, f32, f32, f32, f32, u32);
-	/* 802C5AB4 */ void startEnvSeLevel(JAISoundID, f32, f32, f32, f32, f32, u32);
+struct JAISoundID {
 };
 
-struct Z2EnvSeDir {
-	/* 802C5C9C */ Z2EnvSeDir(Vec*);
-	/* 802C5D1C */ ~Z2EnvSeDir();
-	/* 802C5D70 */ void setPanDir(Vec*);
-	/* 802C5D9C */ void calcPan(f32);
-	/* 802C5E90 */ void startEnvSeDirLevel(JAISoundID, f32, f32);
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-struct Z2EnvSeAutoPan {
-	/* 802C5ECC */ Z2EnvSeAutoPan();
-	/* 802C5F28 */ ~Z2EnvSeAutoPan();
-	/* 802C5F7C */ void setPanParam(f32, f32, bool, bool, f32, f32);
-	/* 802C5F98 */ void calcPan();
-	/* 802C60E0 */ void startEnvSeAutoPanLevel(JAISoundID, f32, f32, f32);
+struct Z2MultiSeMgr {
+	/* 802AEB04 */ Z2MultiSeMgr();
+	/* 802AEB34 */ ~Z2MultiSeMgr();
+	/* 802AEB70 */ void registMultiSePos(Vec*);
+	/* 802AECBC */ void resetMultiSePos();
+	/* 802AECE0 */ void getPanPower();
+	/* 802AEDC0 */ void getDolbyPower();
 };
 
 struct Z2EnvSeMgr {
@@ -78,42 +93,27 @@ struct Z2EnvSeMgr {
 	/* 802CA794 */ void startLv3WaterSe(s8);
 };
 
-struct dSv_memBit_c {
-	/* 80034860 */ void isSwitch(int) const;
+struct Z2EnvSeDir {
+	/* 802C5C9C */ Z2EnvSeDir(Vec*);
+	/* 802C5D1C */ ~Z2EnvSeDir();
+	/* 802C5D70 */ void setPanDir(Vec*);
+	/* 802C5D9C */ void calcPan(f32);
+	/* 802C5E90 */ void startEnvSeDirLevel(JAISoundID, f32, f32);
 };
 
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
+struct Z2EnvSeBase {
+	/* 802C589C */ Z2EnvSeBase(Vec*);
+	/* 802C58AC */ ~Z2EnvSeBase();
+	/* 802C5908 */ void startEnvSe(JAISoundID, f32, f32, f32, f32, f32, u32);
+	/* 802C5AB4 */ void startEnvSeLevel(JAISoundID, f32, f32, f32, f32, f32, u32);
 };
 
-struct JAISoundHandle {
-	/* 802A2184 */ void releaseSound();
-};
-
-struct JAISound {
-	/* 802A21A0 */ void releaseHandle();
-	/* 802A24DC */ void stop(u32);
-};
-
-struct JAISoundParamsMove {
-	/* 802A2DB4 */ void moveVolume(f32, u32);
-	/* 802A2E0C */ void movePitch(f32, u32);
-	/* 802A2E64 */ void moveFxMix(f32, u32);
-	/* 802A2EBC */ void movePan(f32, u32);
-	/* 802A2F14 */ void moveDolby(f32, u32);
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
-
-};
-
-struct JAISoundStarter {
-	/* 802A2FEC */ void startLevelSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
+struct Z2EnvSeAutoPan {
+	/* 802C5ECC */ Z2EnvSeAutoPan();
+	/* 802C5F28 */ ~Z2EnvSeAutoPan();
+	/* 802C5F7C */ void setPanParam(f32, f32, bool, bool, f32, f32);
+	/* 802C5F98 */ void calcPan();
+	/* 802C60E0 */ void startEnvSeAutoPanLevel(JAISoundID, f32, f32, f32);
 };
 
 struct Z2Calc {
@@ -130,32 +130,32 @@ struct Z2Calc {
 	/* 802A9814 */ void getRandom(f32, f32, f32);
 };
 
-struct Z2SoundMgr {
-	/* 802AA270 */ void setIIR(JAISound*, s16 const*);
-};
-
-struct Z2SoundStarter {
-	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
-};
-
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-};
-
-struct Z2MultiSeMgr {
-	/* 802AEB04 */ Z2MultiSeMgr();
-	/* 802AEB34 */ ~Z2MultiSeMgr();
-	/* 802AEB70 */ void registMultiSePos(Vec*);
-	/* 802AECBC */ void resetMultiSePos();
-	/* 802AECE0 */ void getPanPower();
-	/* 802AEDC0 */ void getDolbyPower();
-};
-
 struct Z2Audience {
 	/* 802BD92C */ void convertAbsToRel(Vec&, Vec*, int);
 	/* 802BD95C */ void calcRelPosVolume(Vec const&, f32, int);
 	/* 802BDA44 */ void calcRelPosPan(Vec const&, int);
 	/* 802BDB44 */ void calcRelPosDolby(Vec const&, int);
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
+struct JAISoundStarter {
+	/* 802A2FEC */ void startLevelSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
+};
+
+struct JAISoundParamsMove {
+	/* 802A2DB4 */ void moveVolume(f32, u32);
+	/* 802A2E0C */ void movePitch(f32, u32);
+	/* 802A2E64 */ void moveFxMix(f32, u32);
+	/* 802A2EBC */ void movePan(f32, u32);
+	/* 802A2F14 */ void moveDolby(f32, u32);
 };
 
 // 
@@ -803,7 +803,7 @@ asm void Z2EnvSeMgr::startFarThunderSe(Vec* param_0, s8 param_1) {
 #pragma pop
 
 
-/* 802C7FB4-802C7FBC 0008+00 s=0 e=0 z=3  None .text      setSnowPower__10Z2EnvSeMgrFSc                                */
+/* 802C7FB4-802C7FBC 0008+00 s=0 e=0 z=0  None .text      setSnowPower__10Z2EnvSeMgrFSc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -814,7 +814,7 @@ asm void Z2EnvSeMgr::setSnowPower(s8 param_0) {
 #pragma pop
 
 
-/* 802C7FBC-802C7FC8 000C+00 s=0 e=1 z=1  None .text      initStrongWindSe__10Z2EnvSeMgrFv                             */
+/* 802C7FBC-802C7FC8 000C+00 s=0 e=1 z=0  None .text      initStrongWindSe__10Z2EnvSeMgrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -825,7 +825,7 @@ asm void Z2EnvSeMgr::initStrongWindSe() {
 #pragma pop
 
 
-/* 802C7FC8-802C800C 0044+00 s=0 e=1 z=1  None .text      setWindDirection__10Z2EnvSeMgrFP3Vec                         */
+/* 802C7FC8-802C800C 0044+00 s=0 e=1 z=0  None .text      setWindDirection__10Z2EnvSeMgrFP3Vec                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -836,7 +836,7 @@ asm void Z2EnvSeMgr::setWindDirection(Vec* param_0) {
 #pragma pop
 
 
-/* 802C800C-802C80F8 00EC+00 s=0 e=1 z=1  None .text      startStrongWindSe__10Z2EnvSeMgrFSc                           */
+/* 802C800C-802C80F8 00EC+00 s=0 e=1 z=0  None .text      startStrongWindSe__10Z2EnvSeMgrFSc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -876,7 +876,7 @@ asm void Z2EnvSeMgr::registRiverSePos(Vec* param_0) {
 #pragma pop
 
 
-/* 802C8258-802C8300 00A8+00 s=0 e=0 z=1  None .text      setHyrulSewerOpen__10Z2EnvSeMgrFb                            */
+/* 802C8258-802C8300 00A8+00 s=0 e=0 z=0  None .text      setHyrulSewerOpen__10Z2EnvSeMgrFb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1093,7 +1093,7 @@ asm void Z2EnvSeMgr::startEtcSe(s8 param_0) {
 #pragma pop
 
 
-/* 802C92C8-802C92EC 0024+00 s=0 e=0 z=1  None .text      registWolfSmellSePos__10Z2EnvSeMgrFP3Vec                     */
+/* 802C92C8-802C92EC 0024+00 s=0 e=0 z=0  None .text      registWolfSmellSePos__10Z2EnvSeMgrFP3Vec                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1108,7 +1108,7 @@ asm void Z2EnvSeMgr::registWolfSmellSePos(Vec* param_0) {
 /* 80455E58-80455E5C 0004+00 s=1 e=0 z=0  None .sdata2    @4856                                                        */
 SECTION_SDATA2 static u32 lit_4856 = 0x43AA0000;
 
-/* 802C92EC-802C93A0 00B4+00 s=0 e=0 z=1  None .text      startFogWipeTrigger__10Z2EnvSeMgrFP3Vec                      */
+/* 802C92EC-802C93A0 00B4+00 s=0 e=0 z=0  None .text      startFogWipeTrigger__10Z2EnvSeMgrFP3Vec                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1119,7 +1119,7 @@ asm void Z2EnvSeMgr::startFogWipeTrigger(Vec* param_0) {
 #pragma pop
 
 
-/* 802C93A0-802C93E4 0044+00 s=0 e=0 z=1  None .text      setFogWipeWidth__10Z2EnvSeMgrFf                              */
+/* 802C93A0-802C93E4 0044+00 s=0 e=0 z=0  None .text      setFogWipeWidth__10Z2EnvSeMgrFf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1145,7 +1145,7 @@ asm void Z2EnvSeMgr::getFogDensity() {
 /* 80455E5C-80455E60 0004+00 s=1 e=0 z=0  None .sdata2    @4879                                                        */
 SECTION_SDATA2 static u32 lit_4879 = 0x41A00000;
 
-/* 802C9400-802C950C 010C+00 s=0 e=0 z=1  None .text      startFogSe__10Z2EnvSeMgrFv                                   */
+/* 802C9400-802C950C 010C+00 s=0 e=0 z=0  None .text      startFogSe__10Z2EnvSeMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

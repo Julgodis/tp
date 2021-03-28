@@ -11,6 +11,10 @@
 // Types:
 // 
 
+struct dMsgScrnLight_c {
+	/* 80245934 */ dMsgScrnLight_c(u8, u8);
+};
+
 struct JKRExpHeap {
 };
 
@@ -46,11 +50,22 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
-struct dMsgScrnLight_c {
-	/* 80245934 */ dMsgScrnLight_c(u8, u8);
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE548 */ void free(void*);
 };
 
 struct JKRArchive {
+};
+
+struct J2DTextBox {
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 struct J2DScreen {
@@ -58,10 +73,8 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
+struct CPaneMgrAlpha {
+	/* 802557D0 */ void setAlphaRate(f32);
 };
 
 struct CPaneMgr {
@@ -70,19 +83,6 @@ struct CPaneMgr {
 	/* 80254364 */ void getGlobalPosY();
 	/* 80254458 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
 	/* 802545B0 */ void paneTrans(f32, f32);
-};
-
-struct CPaneMgrAlpha {
-	/* 802557D0 */ void setAlphaRate(f32);
-};
-
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE548 */ void free(void*);
-};
-
-struct J2DTextBox {
-	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // 

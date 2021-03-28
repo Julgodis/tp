@@ -53,7 +53,7 @@ SECTION_SDATA2 static u8 lit_97[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80346484-803464B0 002C+00 s=0 e=27 z=13  None .text      PSMTXIdentity                                                */
+/* 80346484-803464B0 002C+00 s=0 e=27 z=0  None .text      PSMTXIdentity                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -64,7 +64,7 @@ extern "C" asm void PSMTXIdentity() {
 #pragma pop
 
 
-/* 803464B0-803464E4 0034+00 s=0 e=119 z=1436  None .text      PSMTXCopy                                                    */
+/* 803464B0-803464E4 0034+00 s=0 e=119 z=0  None .text      PSMTXCopy                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -81,7 +81,7 @@ SECTION_SDATA static u8 Unit01[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 803464E4-803465B0 00CC+00 s=0 e=109 z=30  None .text      PSMTXConcat                                                  */
+/* 803464E4-803465B0 00CC+00 s=0 e=109 z=0  None .text      PSMTXConcat                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +92,7 @@ extern "C" asm void PSMTXConcat() {
 #pragma pop
 
 
-/* 803465B0-803466A8 00F8+00 s=0 e=43 z=39  None .text      PSMTXInverse                                                 */
+/* 803465B0-803466A8 00F8+00 s=0 e=43 z=0  None .text      PSMTXInverse                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -143,7 +143,7 @@ extern "C" asm static void __PSMTXRotAxisRadInternal() {
 #pragma pop
 
 
-/* 80346878-803468E8 0070+00 s=0 e=6 z=8  None .text      PSMTXRotAxisRad                                              */
+/* 80346878-803468E8 0070+00 s=0 e=6 z=0  None .text      PSMTXRotAxisRad                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -154,7 +154,7 @@ extern "C" asm void PSMTXRotAxisRad() {
 #pragma pop
 
 
-/* 803468E8-8034691C 0034+00 s=0 e=38 z=471  None .text      PSMTXTrans                                                   */
+/* 803468E8-8034691C 0034+00 s=0 e=38 z=0  None .text      PSMTXTrans                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -176,7 +176,7 @@ extern "C" asm void PSMTXTransApply() {
 #pragma pop
 
 
-/* 80346968-80346990 0028+00 s=0 e=14 z=8  None .text      PSMTXScale                                                   */
+/* 80346968-80346990 0028+00 s=0 e=14 z=0  None .text      PSMTXScale                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,7 +198,7 @@ extern "C" asm void PSMTXScaleApply() {
 #pragma pop
 
 
-/* 803469E8-80346A8C 00A4+00 s=0 e=8 z=2  None .text      PSMTXQuat                                                    */
+/* 803469E8-80346A8C 00A4+00 s=0 e=8 z=0  None .text      PSMTXQuat                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -234,7 +234,7 @@ SECTION_SDATA2 static f32 lit_230[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 80346C18-80346CE4 00CC+00 s=0 e=4 z=7  None .text      C_MTXLightPerspective                                        */
+/* 80346C18-80346CE4 00CC+00 s=0 e=4 z=0  None .text      C_MTXLightPerspective                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -245,7 +245,7 @@ extern "C" asm void C_MTXLightPerspective() {
 #pragma pop
 
 
-/* 80346CE4-80346D6C 0088+00 s=0 e=2 z=5  None .text      C_MTXLightOrtho                                              */
+/* 80346CE4-80346D6C 0088+00 s=0 e=2 z=0  None .text      C_MTXLightOrtho                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

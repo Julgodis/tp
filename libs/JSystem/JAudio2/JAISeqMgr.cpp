@@ -11,7 +11,15 @@
 // Types:
 // 
 
-struct JAISoundID {
+struct JSUPtrLink {
+	/* 802DBE14 */ ~JSUPtrLink();
+};
+
+struct JSUPtrList {
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF14 */ void initiate();
+	/* 802DBF4C */ void append(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
 struct JGeometry {
@@ -23,26 +31,53 @@ struct JGeometry {
 
 };
 
-struct JAISeqDataRegion {
-};
-
-struct JAISoundHandle {
-};
-
-struct JAISeqMgr;
-struct JAISoundActivity {
+struct JASTrack {
+	/* 8029131C */ ~JASTrack();
 };
 
 struct JASSoundParams {
 };
 
-struct JAIAudience {
+template <typename A0>
+struct JASMemPool { };
+/* JASMemPool<JAISeq> */
+struct JASMemPool__template2 {
+	/* 802A1AF4 */ ~JASMemPool__template2();
+};
+
+struct JASGenericMemPool {
+	/* 80290848 */ JASGenericMemPool();
+	/* 80290860 */ ~JASGenericMemPool();
+	/* 80290948 */ void alloc(u32);
+	/* 80290994 */ void free(void*, u32);
 };
 
 template <typename A0>
 struct JAISoundStrategyMgr { };
 /* JAISoundStrategyMgr<JAISeq> */
 struct JAISoundStrategyMgr__template1 {
+};
+
+struct JAISoundID {
+};
+
+struct JAISoundHandle {
+};
+
+struct JAISoundActivity {
+};
+
+struct JAISound {
+	/* 802A21BC */ void attachHandle(JAISoundHandle*);
+	/* 802A2598 */ void stop();
+	/* 802A24DC */ void stop(u32);
+};
+
+struct JAISeqDataRegion {
+};
+
+struct JAISeqMgr;
+struct JAIAudience {
 };
 
 struct JAISeq {
@@ -68,43 +103,8 @@ struct JAISeqMgr {
 	/* 802A20F0 */ ~JAISeqMgr();
 };
 
-template <typename A0>
-struct JASMemPool { };
-/* JASMemPool<JAISeq> */
-struct JASMemPool__template2 {
-	/* 802A1AF4 */ ~JASMemPool__template2();
-};
-
-struct JASGenericMemPool {
-	/* 80290848 */ JASGenericMemPool();
-	/* 80290860 */ ~JASGenericMemPool();
-	/* 80290948 */ void alloc(u32);
-	/* 80290994 */ void free(void*, u32);
-};
-
-struct JASTrack {
-	/* 8029131C */ ~JASTrack();
-};
-
 struct JAISeqDataUser {
 	/* 802A1774 */ ~JAISeqDataUser();
-};
-
-struct JAISound {
-	/* 802A21BC */ void attachHandle(JAISoundHandle*);
-	/* 802A2598 */ void stop();
-	/* 802A24DC */ void stop(u32);
-};
-
-struct JSUPtrLink {
-	/* 802DBE14 */ ~JSUPtrLink();
-};
-
-struct JSUPtrList {
-	/* 802DBEAC */ ~JSUPtrList();
-	/* 802DBF14 */ void initiate();
-	/* 802DBF4C */ void append(JSUPtrLink*);
-	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
 // 

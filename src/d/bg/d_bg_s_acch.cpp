@@ -11,6 +11,47 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+};
+
+struct daPy_py_c {
+	/* 80077494 */ bool checkPlayerFly() const;
+};
+
+struct dBgS_WtrChk {
+	/* 80079164 */ dBgS_WtrChk();
+};
+
+struct cXyz {
+};
+
+struct dBgS_SplGrpChk {
+	/* 80078B90 */ void Set(cXyz&, f32);
+	/* 80078C78 */ ~dBgS_SplGrpChk();
+};
+
+struct dBgS_RoofChk {
+	/* 80078FF4 */ dBgS_RoofChk();
+	/* 80079090 */ ~dBgS_RoofChk();
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E0C */ void SetPassChkInfo(dBgS_PolyPassChk&);
+	/* 80078EEC */ void SetUnderwaterRoof();
+};
+
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
+};
+
+struct dBgS_Chk {
+	/* 8007749C */ dBgS_Chk();
+	/* 800774E8 */ ~dBgS_Chk();
+	/* 80077560 */ void GetPolyPassChkInfo();
+	/* 80077564 */ void GetGrpPassChkInfo();
+};
+
 struct dBgS_AcchCir {
 	/* 80075EAC */ dBgS_AcchCir();
 	/* 80075F14 */ void ClrWallHit();
@@ -21,15 +62,6 @@ struct dBgS_AcchCir {
 	/* 80077414 */ ~dBgS_AcchCir();
 };
 
-struct fopAc_ac_c {
-};
-
-struct cXyz {
-};
-
-struct csXyz {
-};
-
 struct cBgS_PolyInfo {
 	/* 80268074 */ cBgS_PolyInfo();
 	/* 802680B0 */ ~cBgS_PolyInfo();
@@ -38,14 +70,7 @@ struct cBgS_PolyInfo {
 	/* 802681A4 */ void SetPolyIndex(int);
 };
 
-struct dBgS_RoofChk {
-	/* 80078FF4 */ dBgS_RoofChk();
-	/* 80079090 */ ~dBgS_RoofChk();
-};
-
-struct dBgS_SplGrpChk {
-	/* 80078B90 */ void Set(cXyz&, f32);
-	/* 80078C78 */ ~dBgS_SplGrpChk();
+struct csXyz {
 };
 
 struct dBgS_Acch;
@@ -94,8 +119,22 @@ struct dBgS_Acch {
 	/* 80077408 */ void ChkLineDown();
 };
 
-struct daPy_py_c {
-	/* 80077494 */ bool checkPlayerFly() const;
+struct cM3dGPla {
+	/* 8026F5D4 */ void getCrossYLessD(Vec const&, f32*) const;
+};
+
+struct cM3dGLin {
+	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
+};
+
+struct cM3dGCyl {
+	/* 8026F180 */ void Set(cXyz const&, f32, f32);
+};
+
+struct cM3dGCir {
+	/* 8026EEB4 */ cM3dGCir();
+	/* 8026EF18 */ ~cM3dGCir();
+	/* 8026EF74 */ void Set(f32, f32, f32, f32);
 };
 
 struct cBgS_LinChk {
@@ -108,55 +147,16 @@ struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
-struct cM3dGPla {
-	/* 8026F5D4 */ void getCrossYLessD(Vec const&, f32*) const;
-};
-
-struct cBgS {
-	/* 800743B4 */ void LineCross(cBgS_LinChk*);
-	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
-	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
-};
-
-struct dBgS_Chk {
-	/* 8007749C */ dBgS_Chk();
-	/* 800774E8 */ ~dBgS_Chk();
-	/* 80077560 */ void GetPolyPassChkInfo();
-	/* 80077564 */ void GetGrpPassChkInfo();
-};
-
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E0C */ void SetPassChkInfo(dBgS_PolyPassChk&);
-	/* 80078EEC */ void SetUnderwaterRoof();
-};
-
-struct dBgS_WtrChk {
-	/* 80079164 */ dBgS_WtrChk();
-};
-
 struct cBgS_Chk {
 	/* 80267B4C */ cBgS_Chk();
 	/* 80267B70 */ ~cBgS_Chk();
 	/* 80267BB8 */ void SetExtChk(cBgS_Chk&);
 };
 
-struct cM3dGCir {
-	/* 8026EEB4 */ cM3dGCir();
-	/* 8026EF18 */ ~cM3dGCir();
-	/* 8026EF74 */ void Set(f32, f32, f32, f32);
-};
-
-struct cM3dGCyl {
-	/* 8026F180 */ void Set(cXyz const&, f32, f32);
-};
-
-struct cM3dGLin {
-	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
+struct cBgS {
+	/* 800743B4 */ void LineCross(cBgS_LinChk*);
+	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
+	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
 // 
@@ -300,7 +300,7 @@ SECTION_SDATA2 static u8 lit_4025[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80075EAC-80075F14 0068+00 s=0 e=4 z=336  None .text      __ct__12dBgS_AcchCirFv                                       */
+/* 80075EAC-80075F14 0068+00 s=0 e=4 z=0  None .text      __ct__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -322,7 +322,7 @@ asm void dBgS_AcchCir::ClrWallHit() {
 #pragma pop
 
 
-/* 80075F40-80075F48 0008+00 s=1 e=2 z=109  None .text      SetWallR__12dBgS_AcchCirFf                                   */
+/* 80075F40-80075F48 0008+00 s=1 e=2 z=0  None .text      SetWallR__12dBgS_AcchCirFf                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -344,7 +344,7 @@ asm void dBgS_AcchCir::CalcWallRR() {
 #pragma pop
 
 
-/* 80075F58-80075F80 0028+00 s=0 e=3 z=272  None .text      SetWall__12dBgS_AcchCirFff                                   */
+/* 80075F58-80075F80 0028+00 s=0 e=3 z=0  None .text      SetWall__12dBgS_AcchCirFff                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -355,7 +355,7 @@ asm void dBgS_AcchCir::SetWall(f32 param_0, f32 param_1) {
 #pragma pop
 
 
-/* 80075F80-80075F94 0014+00 s=1 e=0 z=1  None .text      SetWallHDirect__12dBgS_AcchCirFf                             */
+/* 80075F80-80075F94 0014+00 s=1 e=0 z=0  None .text      SetWallHDirect__12dBgS_AcchCirFf                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -366,7 +366,7 @@ asm void dBgS_AcchCir::SetWallHDirect(f32 param_0) {
 #pragma pop
 
 
-/* 80075F94-800760A0 010C+00 s=3 e=6 z=468  None .text      __dt__9dBgS_AcchFv                                           */
+/* 80075F94-800760A0 010C+00 s=3 e=6 z=0  None .text      __dt__9dBgS_AcchFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -390,7 +390,7 @@ SECTION_SDATA2 static u32 lit_4091 = 0x4E6E6B28;
 /* 804526D0-804526D4 0004+00 s=1 e=0 z=0  None .sdata2    @4092                                                        */
 SECTION_SDATA2 static u32 lit_4092 = 0x447A0000;
 
-/* 800760A0-800761CC 012C+00 s=0 e=4 z=338  None .text      __ct__9dBgS_AcchFv                                           */
+/* 800760A0-800761CC 012C+00 s=0 e=4 z=0  None .text      __ct__9dBgS_AcchFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -412,7 +412,7 @@ asm void dBgS_Acch::Init() {
 #pragma pop
 
 
-/* 80076248-80076288 0040+00 s=0 e=2 z=314  None .text      Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz */
+/* 80076248-80076288 0040+00 s=0 e=2 z=0  None .text      Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -423,7 +423,7 @@ asm void dBgS_Acch::Set(cXyz* param_0, cXyz* param_1, fopAc_ac_c* param_2, int p
 #pragma pop
 
 
-/* 80076288-800762D8 0050+00 s=0 e=1 z=7  None .text      Set__9dBgS_AcchFP10fopAc_ac_ciP12dBgS_AcchCir                */
+/* 80076288-800762D8 0050+00 s=0 e=1 z=0  None .text      Set__9dBgS_AcchFP10fopAc_ac_ciP12dBgS_AcchCir                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -496,7 +496,7 @@ SECTION_SDATA2 static u32 lit_4554 = 0x42480000;
 /* 804526DC-804526E0 0004+00 s=1 e=0 z=0  None .sdata2    @4555                                                        */
 SECTION_SDATA2 static u32 lit_4555 = 0x49742400;
 
-/* 80076AAC-80076F84 04D8+00 s=0 e=15 z=414  None .text      CrrPos__9dBgS_AcchFR4dBgS                                    */
+/* 80076AAC-80076F84 04D8+00 s=0 e=15 z=0  None .text      CrrPos__9dBgS_AcchFR4dBgS                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -540,7 +540,7 @@ asm void dBgS_Acch::CalcWallBmdCyl() {
 #pragma pop
 
 
-/* 80077114-80077128 0014+00 s=0 e=0 z=24  None .text      SetGroundUpY__9dBgS_AcchFf                                   */
+/* 80077114-80077128 0014+00 s=0 e=0 z=0  None .text      SetGroundUpY__9dBgS_AcchFf                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -658,7 +658,7 @@ asm void dBgS_Acch::SetMoveBGOnly() {
 #pragma pop
 
 
-/* 800773A4-800773C0 001C+00 s=0 e=4 z=17  None .text      ClrMoveBGOnly__9dBgS_AcchFv                                  */
+/* 800773A4-800773C0 001C+00 s=0 e=4 z=0  None .text      ClrMoveBGOnly__9dBgS_AcchFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -669,7 +669,7 @@ asm void dBgS_Acch::ClrMoveBGOnly() {
 #pragma pop
 
 
-/* 800773C0-800773D0 0010+00 s=0 e=1 z=2  None .text      SetGndThinCellingOff__9dBgS_AcchFv                           */
+/* 800773C0-800773D0 0010+00 s=0 e=1 z=0  None .text      SetGndThinCellingOff__9dBgS_AcchFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -702,7 +702,7 @@ asm void dBgS_Acch::ChkGndThinCellingOff() {
 #pragma pop
 
 
-/* 800773EC-800773FC 0010+00 s=0 e=1 z=1  None .text      OnWallSort__9dBgS_AcchFv                                     */
+/* 800773EC-800773FC 0010+00 s=0 e=1 z=0  None .text      OnWallSort__9dBgS_AcchFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -11,6 +11,18 @@
 // Types:
 // 
 
+struct JMath {
+	struct TRandom_fast_ {
+		/* 80339AE4 */ TRandom_fast_(u32);
+	};
+
+};
+
+struct JASTrackPort {
+	/* 8029360C */ void checkImport(u32) const;
+	/* 80293628 */ void checkExport(u32) const;
+};
+
 struct JASOscillator {
 	struct Point {
 	};
@@ -39,6 +51,14 @@ struct JASTrack {
 	/* 8029297C */ void readPort(u32);
 	/* 80292B58 */ void setTempo(u16);
 	/* 80292BC0 */ void setTimebase(u16);
+};
+
+struct JASSeqReader {
+	/* 8029618C */ void call(u32);
+	/* 802961CC */ void loopStart(u32);
+	/* 80296210 */ void loopEnd();
+	/* 8029627C */ void ret();
+	/* 802962B0 */ void readMidiValue();
 };
 
 struct JASSeqParser {
@@ -116,9 +136,11 @@ struct JASSeqParser {
 	/* 802958D4 */ void parse(JASTrack*);
 };
 
-struct JASTrackPort {
-	/* 8029360C */ void checkImport(u32) const;
-	/* 80293628 */ void checkExport(u32) const;
+struct JASSeqCtrl {
+	/* 80293AE0 */ void setIntrMask(u32);
+	/* 80293AF0 */ void clrIntrMask(u32);
+	/* 80293B00 */ void retIntr();
+	/* 80293B78 */ void checkIntr();
 };
 
 struct JASRegisterParam {
@@ -127,28 +149,6 @@ struct JASRegisterParam {
 
 	/* 80293684 */ void write(JASRegisterParam::RegID, u32);
 	/* 802937B8 */ void read(JASRegisterParam::RegID);
-};
-
-struct JASSeqCtrl {
-	/* 80293AE0 */ void setIntrMask(u32);
-	/* 80293AF0 */ void clrIntrMask(u32);
-	/* 80293B00 */ void retIntr();
-	/* 80293B78 */ void checkIntr();
-};
-
-struct JASSeqReader {
-	/* 8029618C */ void call(u32);
-	/* 802961CC */ void loopStart(u32);
-	/* 80296210 */ void loopEnd();
-	/* 8029627C */ void ret();
-	/* 802962B0 */ void readMidiValue();
-};
-
-struct JMath {
-	struct TRandom_fast_ {
-		/* 80339AE4 */ TRandom_fast_(u32);
-	};
-
 };
 
 // 

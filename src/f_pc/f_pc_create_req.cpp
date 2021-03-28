@@ -11,27 +11,27 @@
 // Types:
 // 
 
-struct create_tag {
-};
-
-struct create_request {
+struct process_method_tag_class {
 };
 
 struct layer_class {
 };
 
+struct create_tag {
+};
+
 struct create_request_method_class {
 };
 
-struct base_process_class {
-};
-
-struct process_method_tag_class {
+struct create_request {
 };
 
 struct cMl {
 	/* 80263228 */ void memalignB(int, u32);
 	/* 80263260 */ void free(void*);
+};
+
+struct base_process_class {
 };
 
 // 

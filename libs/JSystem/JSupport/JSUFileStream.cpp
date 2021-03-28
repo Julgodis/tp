@@ -14,6 +14,11 @@
 struct JSUStreamSeekFrom {
 };
 
+struct JSURandomInputStream {
+	/* 802D4094 */ void getAvailable() const;
+	/* 802DC3FC */ void skip(s32);
+};
+
 struct JKRFile {
 };
 
@@ -24,11 +29,6 @@ struct JSUFileInputStream {
 	/* 802DC74C */ void seekPos(s32, JSUStreamSeekFrom);
 	/* 802DC82C */ void getLength() const;
 	/* 802DC85C */ void getPosition() const;
-};
-
-struct JSURandomInputStream {
-	/* 802D4094 */ void getAvailable() const;
-	/* 802DC3FC */ void skip(s32);
 };
 
 // 

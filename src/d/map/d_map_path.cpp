@@ -11,13 +11,19 @@
 // Types:
 // 
 
-struct dMpath_n {
-	struct dTexObjAggregate_c {
-		/* 8003C85C */ void create();
-		/* 8003C8F4 */ void remove();
-		/* 8003D740 */ ~dTexObjAggregate_c();
-	};
+struct dRes_info_c {
+};
 
+struct dRes_control_c {
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+};
+
+struct ResTIMG {
+};
+
+struct dRenderingMap_c {
+	/* 8003CD38 */ void makeResTIMG(ResTIMG*, u16, u16, u8*, u8*, u16) const;
+	/* 8003CDAC */ void renderingMap();
 };
 
 struct dDrawPath_c {
@@ -47,14 +53,6 @@ struct dDrawPath_c {
 	/* 8003CCC4 */ void drawPath();
 };
 
-struct ResTIMG {
-};
-
-struct dRenderingMap_c {
-	/* 8003CD38 */ void makeResTIMG(ResTIMG*, u16, u16, u8*, u8*, u16) const;
-	/* 8003CDAC */ void renderingMap();
-};
-
 struct dRenderingFDAmap_c {
 	/* 8002ABF8 */ ~dRenderingFDAmap_c();
 	/* 8003CE78 */ void setTevSettingNonTextureDirectColor() const;
@@ -67,21 +65,23 @@ struct dRenderingFDAmap_c {
 	/* 8003D6B8 */ void getDecorationLineWidth(int);
 };
 
-struct _GXTexObj {
-};
+struct dMpath_n {
+	struct dTexObjAggregate_c {
+		/* 8003C85C */ void create();
+		/* 8003C8F4 */ void remove();
+		/* 8003D740 */ ~dTexObjAggregate_c();
+	};
 
-struct _GXTlutObj {
 };
 
 struct dDlst_base_c {
 	/* 8002ABEC */ void draw();
 };
 
-struct dRes_info_c {
+struct _GXTlutObj {
 };
 
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+struct _GXTexObj {
 };
 
 // 

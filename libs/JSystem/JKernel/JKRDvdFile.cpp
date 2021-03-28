@@ -11,6 +11,29 @@
 // Types:
 // 
 
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+};
+
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
+	/* 802DBE14 */ ~JSUPtrLink();
+};
+
+struct JSUPtrList {
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF14 */ void initiate();
+	/* 802DBF4C */ void append(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
+template <typename A0>
+struct JSUList { };
+/* JSUList<JKRDvdFile> */
+struct JSUList__template8 {
+	/* 802D9B44 */ ~JSUList__template8();
+};
+
 struct DVDFileInfo {
 };
 
@@ -30,32 +53,9 @@ struct JKRDvdFile {
 	/* 802D9AF8 */ void getFileSize() const;
 };
 
-template <typename A0>
-struct JSUList { };
-/* JSUList<JKRDvdFile> */
-struct JSUList__template8 {
-	/* 802D9B44 */ ~JSUList__template8();
-};
-
 struct JKRDisposer {
 	/* 802D147C */ JKRDisposer();
 	/* 802D14E4 */ ~JKRDisposer();
-};
-
-struct JSUPtrLink {
-	/* 802DBDFC */ JSUPtrLink(void*);
-	/* 802DBE14 */ ~JSUPtrLink();
-};
-
-struct JSUPtrList {
-	/* 802DBEAC */ ~JSUPtrList();
-	/* 802DBF14 */ void initiate();
-	/* 802DBF4C */ void append(JSUPtrLink*);
-	/* 802DC15C */ void remove(JSUPtrLink*);
-};
-
-struct JUTException {
-	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };
 
 // 

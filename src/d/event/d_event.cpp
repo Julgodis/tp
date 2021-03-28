@@ -11,9 +11,57 @@
 // Types:
 // 
 
+struct mDoGph_gInf_c {
+	/* 800080D0 */ void fadeOut(f32);
+};
+
+struct fopAc_ac_c {
+};
+
+struct daItemBase_c {
+	/* 80037AE4 */ void dead();
+};
+
+struct dVibration_c {
+	/* 8006FD94 */ void StopQuake(int);
+};
+
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dSv_event_c {
+	/* 800349A4 */ void offEventBit(u16);
+};
+
+struct dStage_roomControl_c {
+	/* 80024384 */ void getStatusRoomDt(int);
+};
+
+struct dRes_info_c {
+};
+
+struct dRes_control_c {
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
+};
+
+struct dMsgObject_c {
+	/* 80237994 */ void onKillMessageFlag();
+	/* 802379AC */ void setKillMessageFlag();
+	/* 80238098 */ void endFlowGroup();
+};
+
 struct dEvt_order_c {
 	/* 80030154 */ ~dEvt_order_c();
 	/* 800415D4 */ dEvt_order_c();
+};
+
+struct dEvt_info_c {
+	/* 800433F0 */ dEvt_info_c();
+	/* 80043428 */ void setEventName(char*);
+	/* 80043480 */ void getEventName();
+	/* 800434CC */ void beforeProc();
 };
 
 struct dEvt_control_c {
@@ -66,56 +114,6 @@ struct dEvt_control_c {
 	/* 80043724 */ void setGtItm(u8);
 };
 
-struct dEvt_info_c {
-	/* 800433F0 */ dEvt_info_c();
-	/* 80043428 */ void setEventName(char*);
-	/* 80043480 */ void getEventName();
-	/* 800434CC */ void beforeProc();
-};
-
-struct mDoGph_gInf_c {
-	/* 800080D0 */ void fadeOut(f32);
-};
-
-struct fopAc_ac_c {
-};
-
-struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(int);
-};
-
-struct dSv_event_c {
-	/* 800349A4 */ void offEventBit(u16);
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct daItemBase_c {
-	/* 80037AE4 */ void dead();
-};
-
-struct dDemo_c {
-	/* 80039CF8 */ void end();
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
-};
-
-struct dEvDtEvent_c {
-	/* 80043EFC */ void forceFinish();
-};
-
-struct dEvent_exception_c {
-	/* 800463F0 */ void setStartDemo(int);
-};
-
 struct dEvent_manager_c {
 	/* 80046800 */ void setObjectArchive(char*);
 	/* 80046DAC */ void endProc(s16, int);
@@ -129,18 +127,20 @@ struct dEvent_manager_c {
 	/* 80048348 */ void cancelStaff(char const*);
 };
 
-struct dVibration_c {
-	/* 8006FD94 */ void StopQuake(int);
+struct dEvent_exception_c {
+	/* 800463F0 */ void setStartDemo(int);
+};
+
+struct dEvDtEvent_c {
+	/* 80043EFC */ void forceFinish();
+};
+
+struct dDemo_c {
+	/* 80039CF8 */ void end();
 };
 
 struct dCamera_c {
 	/* 801614C4 */ void QuickStart();
-};
-
-struct dMsgObject_c {
-	/* 80237994 */ void onKillMessageFlag();
-	/* 802379AC */ void setKillMessageFlag();
-	/* 80238098 */ void endFlowGroup();
 };
 
 struct Z2StatusMgr {
@@ -570,7 +570,7 @@ asm void dEvt_control_c::entry() {
 #pragma pop
 
 
-/* 80042468-80042518 00B0+00 s=1 e=8 z=388  None .text      reset__14dEvt_control_cFv                                    */
+/* 80042468-80042518 00B0+00 s=1 e=8 z=0  None .text      reset__14dEvt_control_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -581,7 +581,7 @@ asm void dEvt_control_c::reset() {
 #pragma pop
 
 
-/* 80042518-800425B4 009C+00 s=3 e=3 z=46  None .text      reset__14dEvt_control_cFPv                                   */
+/* 80042518-800425B4 009C+00 s=3 e=3 z=0  None .text      reset__14dEvt_control_cFPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -603,7 +603,7 @@ asm void dEvt_control_c::clearSkipSystem() {
 #pragma pop
 
 
-/* 800425E8-8004261C 0034+00 s=0 e=2 z=5  None .text      dEv_defaultSkipProc__FPvi                                    */
+/* 800425E8-8004261C 0034+00 s=0 e=2 z=0  None .text      dEv_defaultSkipProc__FPvi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -636,7 +636,7 @@ asm void dEv_defaultSkipStb(void* param_0, int param_1) {
 #pragma pop
 
 
-/* 800428DC-8004290C 0030+00 s=0 e=1 z=33  None .text      dEv_noFinishSkipProc__FPvi                                   */
+/* 800428DC-8004290C 0030+00 s=0 e=1 z=0  None .text      dEv_noFinishSkipProc__FPvi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -658,7 +658,7 @@ asm void dEvt_control_c::getSkipEventName() {
 #pragma pop
 
 
-/* 80042914-80042958 0044+00 s=1 e=3 z=64  None .text      setSkipProc__14dEvt_control_cFPvPFPvi_ii                     */
+/* 80042914-80042958 0044+00 s=1 e=3 z=0  None .text      setSkipProc__14dEvt_control_cFPvPFPvi_ii                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -669,7 +669,7 @@ asm void dEvt_control_c::setSkipProc(void* param_0, int (*)(void*, int), int par
 #pragma pop
 
 
-/* 80042958-800429A8 0050+00 s=0 e=1 z=14  None .text      setSkipZev__14dEvt_control_cFPvPc                            */
+/* 80042958-800429A8 0050+00 s=0 e=1 z=0  None .text      setSkipZev__14dEvt_control_cFPvPc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -680,7 +680,7 @@ asm void dEvt_control_c::setSkipZev(void* param_0, char* param_1) {
 #pragma pop
 
 
-/* 800429A8-800429B4 000C+00 s=0 e=1 z=30  None .text      onSkipFade__14dEvt_control_cFv                               */
+/* 800429A8-800429B4 000C+00 s=0 e=1 z=0  None .text      onSkipFade__14dEvt_control_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -804,7 +804,7 @@ asm void dEvt_control_c::getPId(void* param_0) {
 #pragma pop
 
 
-/* 800432EC-8004331C 0030+00 s=7 e=13 z=16  None .text      convPId__14dEvt_control_cFUi                                 */
+/* 800432EC-8004331C 0030+00 s=7 e=13 z=0  None .text      convPId__14dEvt_control_cFUi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -837,7 +837,7 @@ asm dEvt_info_c::dEvt_info_c() {
 #pragma pop
 
 
-/* 80043428-80043480 0058+00 s=0 e=0 z=4  None .text      setEventName__11dEvt_info_cFPc                               */
+/* 80043428-80043480 0058+00 s=0 e=0 z=0  None .text      setEventName__11dEvt_info_cFPc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -870,7 +870,7 @@ asm void dEvt_info_c::beforeProc() {
 #pragma pop
 
 
-/* 800434D8-80043500 0028+00 s=0 e=4 z=1  None .text      searchMapEventData__14dEvt_control_cFUc                      */
+/* 800434D8-80043500 0028+00 s=0 e=4 z=0  None .text      searchMapEventData__14dEvt_control_cFUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -881,7 +881,7 @@ asm void dEvt_control_c::searchMapEventData(u8 param_0) {
 #pragma pop
 
 
-/* 80043500-8004360C 010C+00 s=3 e=7 z=5  None .text      searchMapEventData__14dEvt_control_cFUcl                     */
+/* 80043500-8004360C 010C+00 s=3 e=7 z=0  None .text      searchMapEventData__14dEvt_control_cFUcl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -914,7 +914,7 @@ asm void dEvt_control_c::setPt1(void* param_0) {
 #pragma pop
 
 
-/* 8004365C-8004368C 0030+00 s=1 e=2 z=28  None .text      setPt2__14dEvt_control_cFPv                                  */
+/* 8004365C-8004368C 0030+00 s=1 e=2 z=0  None .text      setPt2__14dEvt_control_cFPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -925,7 +925,7 @@ asm void dEvt_control_c::setPt2(void* param_0) {
 #pragma pop
 
 
-/* 8004368C-800436BC 0030+00 s=1 e=4 z=21  None .text      setPtT__14dEvt_control_cFPv                                  */
+/* 8004368C-800436BC 0030+00 s=1 e=4 z=0  None .text      setPtT__14dEvt_control_cFPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -936,7 +936,7 @@ asm void dEvt_control_c::setPtT(void* param_0) {
 #pragma pop
 
 
-/* 800436BC-800436EC 0030+00 s=1 e=2 z=3  None .text      setPtI__14dEvt_control_cFPv                                  */
+/* 800436BC-800436EC 0030+00 s=1 e=2 z=0  None .text      setPtI__14dEvt_control_cFPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -947,7 +947,7 @@ asm void dEvt_control_c::setPtI(void* param_0) {
 #pragma pop
 
 
-/* 800436EC-800436F4 0008+00 s=0 e=6 z=43  None .text      setPtI_Id__14dEvt_control_cFUi                               */
+/* 800436EC-800436F4 0008+00 s=0 e=6 z=0  None .text      setPtI_Id__14dEvt_control_cFUi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

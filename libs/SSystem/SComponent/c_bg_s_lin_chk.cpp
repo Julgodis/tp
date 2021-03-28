@@ -14,6 +14,16 @@
 struct cXyz {
 };
 
+struct cM3dGLin {
+	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
+};
+
+struct cBgS_PolyInfo {
+	/* 80268074 */ cBgS_PolyInfo();
+	/* 802680B0 */ ~cBgS_PolyInfo();
+	/* 80268120 */ void ClearPi();
+};
+
 struct cBgS_LinChk {
 	/* 80267D5C */ cBgS_LinChk();
 	/* 80267DBC */ ~cBgS_LinChk();
@@ -25,16 +35,6 @@ struct cBgS_LinChk {
 struct cBgS_Chk {
 	/* 80267B4C */ cBgS_Chk();
 	/* 80267B70 */ ~cBgS_Chk();
-};
-
-struct cBgS_PolyInfo {
-	/* 80268074 */ cBgS_PolyInfo();
-	/* 802680B0 */ ~cBgS_PolyInfo();
-	/* 80268120 */ void ClearPi();
-};
-
-struct cM3dGLin {
-	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
 };
 
 // 

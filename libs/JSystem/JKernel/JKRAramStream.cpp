@@ -11,6 +11,30 @@
 // Types:
 // 
 
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+};
+
+struct JSUStreamSeekFrom {
+};
+
+struct JSURandomInputStream {
+	/* 802D4094 */ void getAvailable() const;
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+struct JSUInputStream {
+	/* 802DC298 */ void read(void*, s32);
+};
+
+struct JSUFileInputStream {
+};
+
+struct JKRThread {
+	/* 802D1568 */ JKRThread(u32, int, int);
+	/* 802D1758 */ ~JKRThread();
+};
+
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
@@ -19,9 +43,6 @@ struct JKRHeap {
 
 struct JKRAramStreamCommand {
 	/* 802D4088 */ JKRAramStreamCommand();
-};
-
-struct JSUFileInputStream {
 };
 
 struct JKRAramStream {
@@ -36,32 +57,11 @@ struct JKRAramStream {
 	/* 802D4034 */ void setTransBuffer(u8*, u32, JKRHeap*);
 };
 
-struct JSUStreamSeekFrom {
-};
-
-struct JSURandomInputStream {
-	/* 802D4094 */ void getAvailable() const;
-	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
-};
-
-struct JKRThread {
-	/* 802D1568 */ JKRThread(u32, int, int);
-	/* 802D1758 */ ~JKRThread();
-};
-
 struct JKRAramBlock {
 };
 
 struct JKRAramPiece {
 	/* 802D3838 */ void orderSync(int, u32, u32, u32, JKRAramBlock*);
-};
-
-struct JSUInputStream {
-	/* 802DC298 */ void read(void*, s32);
-};
-
-struct JUTException {
-	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };
 
 // 

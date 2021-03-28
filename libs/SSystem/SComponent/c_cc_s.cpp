@@ -15,7 +15,14 @@ struct cXyz {
 	/* 80009184 */ ~cXyz();
 };
 
-struct cCcD_GObjInf {
+struct cM3dGAab {
+	/* 8026ECF8 */ void ClearForMinMax();
+	/* 8026ED60 */ void SetMinMax(cM3dGAab const&);
+	/* 8026EE24 */ void CalcCenter(cXyz*) const;
+};
+
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
 };
 
 struct cCcD_Stts {
@@ -28,8 +35,7 @@ struct cCcD_Stts {
 struct cCcD_GStts {
 };
 
-struct cCcD_Obj {
-	/* 80263A48 */ void GetAc();
+struct cCcD_GObjInf {
 };
 
 struct cCcS {
@@ -62,31 +68,25 @@ struct cCcS {
 	/* 80265E18 */ void MoveAfterCheck();
 };
 
-struct cCcD_DivideInfo {
-	/* 80263368 */ void Chk(cCcD_DivideInfo const&) const;
-};
-
-struct cM3dGAab {
-	/* 8026ECF8 */ void ClearForMinMax();
-	/* 8026ED60 */ void SetMinMax(cM3dGAab const&);
-	/* 8026EE24 */ void CalcCenter(cXyz*) const;
-};
-
-struct cCcD_DivideArea {
-	/* 802633A8 */ void SetArea(cM3dGAab const&);
-	/* 802634D4 */ void CalcDivideInfo(cCcD_DivideInfo*, cM3dGAab const&, u32);
-};
-
-struct cCcD_ObjAt {
-	/* 8026483C */ void SetHit(cCcD_Obj*);
-};
-
 struct cCcD_ObjTg {
 	/* 802648C8 */ void SetHit(cCcD_Obj*);
 };
 
 struct cCcD_ObjCo {
 	/* 802648D8 */ void SetHit(cCcD_Obj*);
+};
+
+struct cCcD_ObjAt {
+	/* 8026483C */ void SetHit(cCcD_Obj*);
+};
+
+struct cCcD_DivideInfo {
+	/* 80263368 */ void Chk(cCcD_DivideInfo const&) const;
+};
+
+struct cCcD_DivideArea {
+	/* 802633A8 */ void SetArea(cM3dGAab const&);
+	/* 802634D4 */ void CalcDivideInfo(cCcD_DivideInfo*, cM3dGAab const&, u32);
 };
 
 // 
@@ -232,7 +232,7 @@ asm void cCcS::GetWt(u8 param_0) const {
 #pragma pop
 
 
-/* 80264BA8-80264C5C 00B4+00 s=0 e=7 z=454  None .text      Set__4cCcSFP8cCcD_Obj                                        */
+/* 80264BA8-80264C5C 00B4+00 s=0 e=7 z=0  None .text      Set__4cCcSFP8cCcD_Obj                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

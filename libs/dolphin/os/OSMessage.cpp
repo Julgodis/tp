@@ -32,7 +32,7 @@ extern "C" void OSWakeupThread(); // 1
 // Declarations:
 // 
 
-/* 8033E994-8033E9F4 0060+00 s=0 e=13 z=5  None .text      OSInitMessageQueue                                           */
+/* 8033E994-8033E9F4 0060+00 s=0 e=13 z=0  None .text      OSInitMessageQueue                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -43,7 +43,7 @@ extern "C" asm void OSInitMessageQueue() {
 #pragma pop
 
 
-/* 8033E9F4-8033EABC 00C8+00 s=0 e=21 z=9  None .text      OSSendMessage                                                */
+/* 8033E9F4-8033EABC 00C8+00 s=0 e=21 z=0  None .text      OSSendMessage                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -54,7 +54,7 @@ extern "C" asm void OSSendMessage() {
 #pragma pop
 
 
-/* 8033EABC-8033EB98 00DC+00 s=0 e=15 z=9  None .text      OSReceiveMessage                                             */
+/* 8033EABC-8033EB98 00DC+00 s=0 e=15 z=0  None .text      OSReceiveMessage                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -11,27 +11,33 @@
 // Types:
 // 
 
-struct dDvdErrorMsg_c {
-	/* 8009D194 */ void draw(s32);
-	/* 8009D354 */ void execute();
+struct mDoGph_gInf_c {
+	/* 80007F90 */ void beginRender();
 };
 
 struct dShutdownErrorMsg_c {
 	/* 8009D790 */ void execute();
 };
 
-struct mDoGph_gInf_c {
-	/* 80007F90 */ void beginRender();
+struct dDvdErrorMsg_c {
+	/* 8009D194 */ void draw(s32);
+	/* 8009D354 */ void execute();
 };
 
 struct Z2AudioMgr {
 	/* 802CD974 */ void resetProcess(u32, bool);
 };
 
-struct JKRHeap {
+struct ResTLUT {
+};
+
+struct ResTIMG {
 };
 
 struct ResFONT {
+};
+
+struct JKRHeap {
 };
 
 struct JUTResFont {
@@ -48,22 +54,8 @@ struct JGeometry {
 
 };
 
-struct J2DOrthoGraph {
-	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
-	/* 802E97B4 */ void setPort();
-	/* 802E980C */ void setOrtho(JGeometry::TBox2<f32> const&, f32, f32);
-};
-
-struct ResTIMG {
-};
-
-struct ResTLUT {
-};
-
-struct J2DPicture {
-	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
-	/* 802FCFF0 */ ~J2DPicture();
-	/* 802FDC70 */ void draw(f32, f32, f32, f32, bool, bool, bool);
+struct J3DSys {
+	/* 803100BC */ void drawInit();
 };
 
 struct J2DTextBoxVBinding {
@@ -79,8 +71,16 @@ struct J2DTextBox {
 	/* 80300490 */ void draw(f32, f32, f32, J2DTextBoxHBinding);
 };
 
-struct J3DSys {
-	/* 803100BC */ void drawInit();
+struct J2DPicture {
+	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
+	/* 802FCFF0 */ ~J2DPicture();
+	/* 802FDC70 */ void draw(f32, f32, f32, f32, bool, bool, bool);
+};
+
+struct J2DOrthoGraph {
+	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
+	/* 802E97B4 */ void setPort();
+	/* 802E980C */ void setOrtho(JGeometry::TBox2<f32> const&, f32, f32);
 };
 
 // 

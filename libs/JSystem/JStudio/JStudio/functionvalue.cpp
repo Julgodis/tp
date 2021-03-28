@@ -11,18 +11,6 @@
 // Types:
 // 
 
-namespace std {
-	template <typename A1>
-	struct less { };
-	/* less<f64> */
-	struct less__template0 {
-	};
-
-	/*          */ template <typename A1, typename B1, typename C1>
-	/*          */ void upper_bound(/* JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, f64 const&, std::less */);
-
-};
-
 namespace JGadget {
 	template <typename A1>
 	struct TVector_pointer { };
@@ -168,9 +156,20 @@ namespace JStudio {
 };
 
 namespace std {
-/* 80283EB8 */ void upper_bound__template1(JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, f64 const&, std::less__template0);
-/* 80283E24 */ void upper_bound__template0(JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, f64 const&, std::less__template0);
-}
+	template <typename A1>
+	struct less { };
+	/* less<f64> */
+	struct less__template0 {
+	};
+
+	/*          */ template <typename A1, typename B1, typename C1>
+	/*          */ void upper_bound(/* JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, f64 const&, std::less */);
+	/* 80283EB8 */ /* upper_bound<JStudio::TFunctionValue_hermite::TIterator_data_, f64, std::less<f64>> */
+	void upper_bound__template1(JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, f64 const&, std::less__template0);
+	/* 80283E24 */ /* upper_bound<JStudio::TFunctionValue_list_parameter::TIterator_data_, f64, std::less<f64>> */
+	void upper_bound__template0(JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, f64 const&, std::less__template0);
+
+};
 
 namespace JGadget {
 /* 80283858 */ void findUpperBound_binary_current__template2(JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, f64 const&);

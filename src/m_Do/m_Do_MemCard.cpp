@@ -35,19 +35,19 @@ struct mDoMemCd_Ctrl_c {
 	/* 80017360 */ void setCardState(s32);
 };
 
-struct CARDFileInfo {
-};
-
-struct JKRHeap {
-	/* 802CE438 */ void becomeCurrentHeap();
-};
-
 struct OSThread {
 };
 
 struct JKRThread {
 	/* 802D16B8 */ JKRThread(OSThread*, int);
 	/* 802D1758 */ ~JKRThread();
+};
+
+struct JKRHeap {
+	/* 802CE438 */ void becomeCurrentHeap();
+};
+
+struct CARDFileInfo {
 };
 
 // 

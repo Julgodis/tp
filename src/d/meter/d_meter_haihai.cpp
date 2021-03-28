@@ -11,13 +11,17 @@
 // Types:
 // 
 
+struct dMeterSub_c {
+	/* 80194138 */ bool isDead();
+};
+
+struct J2DAnmColor {
+};
+
 struct J2DAnmTransformKey {
 };
 
 struct J2DAnmTextureSRTKey {
-};
-
-struct J2DAnmColor {
 };
 
 struct dMeterHaihai_c {
@@ -41,8 +45,11 @@ struct dMeterHaihai_c {
 	/* 8020C1CC */ void playBpkAnime(J2DAnmColor*);
 };
 
-struct dMeterSub_c {
-	/* 80194138 */ bool isDead();
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+};
+
+struct JKRExpHeap {
 };
 
 struct JKRArchive {
@@ -58,17 +65,6 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-struct JKRExpHeap {
-};
-
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-};
-
-struct JKRFileLoader {
-	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
-};
-
 struct J2DRotateAxis {
 };
 
@@ -79,6 +75,10 @@ struct J2DPane {
 
 struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
+};
+
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 };
 
 // 

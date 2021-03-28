@@ -11,15 +11,6 @@
 // Types:
 // 
 
-struct JUTAssertion {
-	/* 802E495C */ void create();
-	/* 802E4960 */ void flush_subroutine();
-	/* 802E499C */ void flushMessage();
-	/* 802E4A54 */ void flushMessage_dbPrint();
-	/* 802E4C34 */ void setVisible(bool);
-	/* 802E4C3C */ void setMessageCount(int);
-};
-
 struct JUtility {
 	struct TColor {
 	};
@@ -34,6 +25,15 @@ struct JUTFont {
 struct JUTDirectPrint {
 	/* 802E46D8 */ void drawString(u16, u16, char*);
 	/* 802E4798 */ void setCharColor(JUtility::TColor);
+};
+
+struct JUTAssertion {
+	/* 802E495C */ void create();
+	/* 802E4960 */ void flush_subroutine();
+	/* 802E499C */ void flushMessage();
+	/* 802E4A54 */ void flushMessage_dbPrint();
+	/* 802E4C34 */ void setVisible(bool);
+	/* 802E4C3C */ void setMessageCount(int);
 };
 
 // 

@@ -17,15 +17,15 @@ struct JKRArchive {
 	/* 802D6770 */ void findIdResource(u16) const;
 };
 
+struct JASTaskThread {
+	/* 8028FB5C */ void sendCmdMsg(void (*)(void*), void const*, u32);
+};
+
 struct JASResArcLoader {
 	/* 80290BD0 */ void getResSize(JKRArchive const*, u16);
 	/* 80290C04 */ void getResMaxSize(JKRArchive const*);
 	/* 80290C7C */ void loadResourceCallback(void*);
 	/* 80290D18 */ void loadResourceAsync(JKRArchive*, u16, u8*, u32, void (*)(u32, u32), u32);
-};
-
-struct JASTaskThread {
-	/* 8028FB5C */ void sendCmdMsg(void (*)(void*), void const*, u32);
 };
 
 struct JASDvd {

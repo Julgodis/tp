@@ -11,9 +11,10 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
+struct stage_stag_info_class {
+};
+
+struct request_of_phase_process_class {
 };
 
 struct csXyz {
@@ -22,16 +23,7 @@ struct csXyz {
 	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
-struct dDemo_actor_c {
-	/* 8003819C */ void getPrm_Morf();
-	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
-};
-
-struct cBgS_PolyInfo {
-	/* 80268074 */ cBgS_PolyInfo();
-	/* 802680B0 */ ~cBgS_PolyInfo();
-	/* 80268120 */ void ClearPi();
-	/* 80268148 */ void SetPolyInfo(cBgS_PolyInfo const&);
+struct Quaternion {
 };
 
 struct Vec {
@@ -54,6 +46,113 @@ struct cXyz {
 	/* 80266F48 */ void normalizeZP();
 	/* 80267128 */ void atan2sX_Z() const;
 	/* 80267150 */ void atan2sY_XZ() const;
+};
+
+struct mDoMtx_stack_c {
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CDD4 */ void transM(cXyz const&);
+	/* 8000CD9C */ void transM(f32, f32, f32);
+	/* 8000CE38 */ void scaleM(f32, f32, f32);
+	/* 8000CF0C */ void ZXYrotS(csXyz const&);
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
+	/* 8000CF7C */ void quatM(Quaternion const*);
+};
+
+struct J3DDeformData {
+};
+
+struct J3DAnmCluster {
+};
+
+struct mDoExt_blkAnm {
+	/* 8000DA08 */ void init(J3DDeformData*, J3DAnmCluster*, int, int, f32, s16, s16);
+};
+
+struct J3DAnmTransform {
+};
+
+struct J3DModelData {
+};
+
+struct mDoExt_bckAnm {
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
+	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
+};
+
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
+struct mDoExt_MtxCalcOldFrame {
+	/* 8000F848 */ void initOldFrameMorf(f32, u16, u16);
+};
+
+struct mDoExt_MtxCalcAnmBlendTbl {
+	/* 800D00BC */ void getAnm(int);
+};
+
+struct mDoExt_AnmRatioPack {
+	/* 80140DF0 */ ~mDoExt_AnmRatioPack();
+	/* 80140E2C */ mDoExt_AnmRatioPack();
+};
+
+struct layer_class {
+};
+
+struct fopEn_enemy_c {
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct fopAcM_wt_c {
+	/* 8001DD84 */ void waterCheck(cXyz const*);
+};
+
+struct fopAcM_lc_c {
+	/* 8001DC68 */ void lineCheck(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct fopAcM_gc_c {
+	/* 8001DCBC */ void gndCheck(cXyz const*);
+};
+
+struct e_wb_class {
+	/* 80037C7C */ void checkWait();
+	/* 80037C90 */ void setPlayerRideNow();
+	/* 80037CB0 */ void setPlayerRide();
+	/* 80037CF4 */ void getOff();
+	/* 80037D68 */ void checkDownDamage();
+	/* 80037D94 */ void checkNormalRideMode() const;
+	/* 80037DBC */ void setRunRideMode();
+};
+
+struct daTagMist_c {
+	/* 80031CF0 */ void getPlayerNo();
+};
+
+struct cBgS_PolyInfo {
+	/* 80268074 */ cBgS_PolyInfo();
+	/* 802680B0 */ ~cBgS_PolyInfo();
+	/* 80268120 */ void ClearPi();
+	/* 80268148 */ void SetPolyInfo(cBgS_PolyInfo const&);
+};
+
+struct daTagMagne_c {
+	/* 80031B50 */ void checkMagnetCode(cBgS_PolyInfo&);
+};
+
+struct ResTIMG {
+};
+
+struct daPy_sightPacket_c {
+	/* 80140CDC */ ~daPy_sightPacket_c();
+	/* 8015F1A0 */ void draw();
+	/* 8015F2FC */ void setSight();
+	/* 8015F384 */ void setSightImage(ResTIMG*);
 };
 
 struct daPy_py_c {
@@ -286,66 +385,6 @@ struct daPy_py_c {
 	/* 8015F730 */ void checkCarryStartLightBallB();
 };
 
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
-};
-
-struct mDoExt_bckAnm {
-	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
-	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
-	/* 8000D9CC */ void entry(J3DModelData*, f32);
-};
-
-struct fopEn_enemy_c {
-};
-
-struct JPABaseEmitter {
-};
-
-struct dBgW_Base {
-	struct PushPullLabel {
-	};
-
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 800842C0 */ void ChkAtHit();
-	/* 80084318 */ void ResetAtHit();
-	/* 800843A8 */ void GetAtHitGObj();
-	/* 80084460 */ void ChkTgHit();
-	/* 800844B8 */ void ResetTgHit();
-	/* 80084548 */ void GetTgHitGObj();
-	/* 8008457C */ void GetTgHitObjSe();
-	/* 800845B0 */ void getHitSeID(u8, int);
-	/* 80084658 */ void ChkCoHit();
-	/* 800846B0 */ void ResetCoHit();
-};
-
-struct JKRHeap {
-	/* 802CE5CC */ void freeAll();
-};
-
-struct JKRExpHeap {
-	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
-struct cM3dGPla {
-	/* 8001DB90 */ ~cM3dGPla();
-	/* 801411F0 */ cM3dGPla();
-	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
-	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
-};
-
-struct dCcG_At_Spl {
-};
-
-struct daAlinkHIO_anm_c {
-};
-
 struct daPy_frameCtrl_c {
 	/* 80140D24 */ ~daPy_frameCtrl_c();
 	/* 80140D80 */ daPy_frameCtrl_c();
@@ -354,40 +393,8 @@ struct daPy_frameCtrl_c {
 	/* 8015E544 */ void setFrameCtrl(u8, s16, s16, f32, f32);
 };
 
-struct dBgS_LinChk {
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct _GXColorS10 {
-};
-
-struct J3DAnmTevRegKey {
-	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
-	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
-};
-
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
-};
-
-struct daAlink_footData_c {
-	/* 800CFCB8 */ ~daAlink_footData_c();
-	/* 800CFCF4 */ daAlink_footData_c();
-};
-
-struct J3DDeformData {
-};
-
-struct J3DModel {
-	/* 800CFFE0 */ void getAnmMtx(int);
-	/* 800CFFF4 */ void setBaseTRMtx(f32 (* )[4]);
-	/* 803279A0 */ void diff();
-	/* 80327A2C */ void setDeformData(J3DDeformData*, u32);
-	/* 80327C58 */ void calcWeightEnvelopeMtx();
-};
-
-struct dAttList_c {
-	/* 80073864 */ void getActor();
+struct daPy_demo_c {
+	/* 8014137C */ void setSpecialDemoType();
 };
 
 struct daPy_anmHeap_c {
@@ -405,7 +412,177 @@ struct daPy_anmHeap_c {
 	/* 8015F168 */ void setAnimeHeap();
 };
 
+struct daPy_actorKeep_c {
+	/* 801410EC */ daPy_actorKeep_c();
+	/* 8015EC48 */ void setActor();
+	/* 8015ECB8 */ void setData(fopAc_ac_c*);
+	/* 8015ECFC */ void clearData();
+};
+
+struct daObj_Sekizoa_c {
+	/* 801312C8 */ void setWolfHowling();
+};
+
+struct daObjSwHang_c {
+	/* 80101874 */ void getHangPos();
+};
+
+struct daObjMovebox {
+	struct Act_c {
+		struct Prm_e {
+		};
+
+	};
+
+};
+
+struct daObj {
+	/*          */ template <typename A1>
+	/*          */ void PrmAbstract(/* fopAc_ac_c const*, daObjMovebox::Act_c::Prm_e, daObjMovebox::Act_c::Prm_e */);
+	/* 80141ACC */ /* PrmAbstract<daObjMovebox::Act_c::Prm_e> */
+	void PrmAbstract__template0(fopAc_ac_c const*, daObjMovebox::Act_c::Prm_e, daObjMovebox::Act_c::Prm_e);
+
+};
+
+struct daNpcT_ActorMngr_c {
+	/* 80145708 */ void getActorP();
+};
+
+struct J3DModel {
+	/* 800CFFE0 */ void getAnmMtx(int);
+	/* 800CFFF4 */ void setBaseTRMtx(f32 (* )[4]);
+	/* 803279A0 */ void diff();
+	/* 80327A2C */ void setDeformData(J3DDeformData*, u32);
+	/* 80327C58 */ void calcWeightEnvelopeMtx();
+};
+
+struct daMirror_c {
+	/* 8003194C */ void entry(J3DModel*);
+};
+
+struct daMidna_c {
+	/* 801419F4 */ void onForcePanic();
+	/* 80141A04 */ void checkForceNormalColor() const;
+	/* 80141A10 */ void checkForceTiredColor() const;
+	/* 80141A1C */ void checkMidnaTired();
+	/* 80141A84 */ void onNoServiceWait();
+};
+
+struct daItemBase_c {
+	/* 80037A5C */ void getItemNo();
+	/* 80037A64 */ void hide();
+	/* 80037A74 */ void show();
+	/* 80037AE4 */ void dead();
+};
+
+struct daHorse_c {
+	/* 80141944 */ void getZeldaActor();
+};
+
+struct daCrod_c {
+	/* 80141A94 */ void setControllActorData();
+};
+
+struct daAlink_sight_c {
+	/* 800CFDF4 */ ~daAlink_sight_c();
+	/* 80126650 */ void create();
+	/* 801266C0 */ void draw();
+	/* 80126710 */ void onLockFlg();
+};
+
+struct J3DMaterial {
+};
+
+struct daAlink_matAnm_c {
+	/* 8009D8E4 */ void init();
+	/* 8009D90C */ void calc(J3DMaterial*) const;
+	/* 800D0180 */ void offSetFlg();
+	/* 800D0B8C */ ~daAlink_matAnm_c();
+};
+
+struct daAlink_lockCursor_c {
+	/* 800CFE68 */ ~daAlink_lockCursor_c();
+	/* 80125F14 */ void create();
+	/* 80126358 */ void update();
+	/* 80126424 */ void draw();
+};
+
+struct daAlink_footData_c {
+	/* 800CFCB8 */ ~daAlink_footData_c();
+	/* 800CFCF4 */ daAlink_footData_c();
+};
+
+struct JPABaseEmitter {
+};
+
+struct dBgW_Base {
+	struct PushPullLabel {
+	};
+
+};
+
+struct JKRHeap {
+	/* 802CE5CC */ void freeAll();
+};
+
+struct JKRExpHeap {
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
+};
+
+struct dBgS_LinChk {
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct cM3dGPla {
+	/* 8001DB90 */ ~cM3dGPla();
+	/* 801411F0 */ cM3dGPla();
+	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
+	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
+};
+
+struct dDemo_actor_c {
+	/* 8003819C */ void getPrm_Morf();
+	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
+};
+
+struct daAlinkHIO_anm_c {
+};
+
 struct J3DAnmBase {
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 800842C0 */ void ChkAtHit();
+	/* 80084318 */ void ResetAtHit();
+	/* 800843A8 */ void GetAtHitGObj();
+	/* 80084460 */ void ChkTgHit();
+	/* 800844B8 */ void ResetTgHit();
+	/* 80084548 */ void GetTgHitGObj();
+	/* 8008457C */ void GetTgHitObjSe();
+	/* 800845B0 */ void getHitSeID(u8, int);
+	/* 80084658 */ void ChkCoHit();
+	/* 800846B0 */ void ResetCoHit();
+};
+
+struct dCcG_At_Spl {
+};
+
+struct _GXColorS10 {
+};
+
+struct J3DAnmTevRegKey {
+	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
+	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct dAttList_c {
+	/* 80073864 */ void getActor();
 };
 
 struct daAlink_c {
@@ -2298,43 +2475,6 @@ struct daAlink_c {
 	/* 80140AC8 */ void resetStatusWindow();
 };
 
-struct J3DMaterial {
-};
-
-struct daAlink_matAnm_c {
-	/* 8009D8E4 */ void init();
-	/* 8009D90C */ void calc(J3DMaterial*) const;
-	/* 800D0180 */ void offSetFlg();
-	/* 800D0B8C */ ~daAlink_matAnm_c();
-};
-
-struct J3DJoint {
-};
-
-struct J3DMaterialAnm {
-	/* 800A4820 */ ~J3DMaterialAnm();
-	/* 8032C320 */ void initialize();
-	/* 8032C3C4 */ void calc(J3DMaterial*) const;
-};
-
-struct dBgS_RoofChk {
-	/* 80078FF4 */ dBgS_RoofChk();
-	/* 80079090 */ ~dBgS_RoofChk();
-	/* 800B146C */ void SetPos(cXyz const&);
-};
-
-struct LIGHT_INFLUENCE {
-	/* 800CFC7C */ ~LIGHT_INFLUENCE();
-};
-
-struct JPABaseParticle {
-};
-
-struct dAlink_bottleWaterPcallBack_c {
-	/* 800CFCF8 */ ~dAlink_bottleWaterPcallBack_c();
-	/* 80124A2C */ void execute(JPABaseEmitter*, JPABaseParticle*);
-};
-
 struct daAlink_blur_c {
 	/* 800CFD58 */ ~daAlink_blur_c();
 	/* 801256EC */ void initBlur(f32, int, cXyz const*, cXyz const*, cXyz const*);
@@ -2343,22 +2483,129 @@ struct daAlink_blur_c {
 	/* 80125BF4 */ void draw();
 };
 
-struct daAlink_sight_c {
-	/* 800CFDF4 */ ~daAlink_sight_c();
-	/* 80126650 */ void create();
-	/* 801266C0 */ void draw();
-	/* 80126710 */ void onLockFlg();
+struct daAlinkHIO_wolf_c {
+	/* 80140B98 */ ~daAlinkHIO_wolf_c();
 };
 
-struct daAlink_lockCursor_c {
-	/* 800CFE68 */ ~daAlink_lockCursor_c();
-	/* 80125F14 */ void create();
-	/* 80126358 */ void update();
-	/* 80126424 */ void draw();
+struct daAlinkHIO_cut_c {
+	/* 80140BD4 */ ~daAlinkHIO_cut_c();
 };
 
-struct mDoExt_MtxCalcAnmBlendTbl {
-	/* 800D00BC */ void getAnm(int);
+struct daAlinkHIO_c {
+	/* 80140B88 */ daAlinkHIO_c();
+	/* 80140C10 */ ~daAlinkHIO_c();
+};
+
+struct dVibration_c {
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
+	/* 8006FB10 */ void StartQuake(int, int, cXyz);
+	/* 8006FD94 */ void StopQuake(int);
+};
+
+struct dSv_turnRestart_c {
+	/* 80034FA4 */ void set(cXyz const&, s16, s8, u32);
+};
+
+struct dSv_restart_c {
+	/* 80034F80 */ void setRoom(cXyz const&, s16, s8);
+};
+
+struct dSv_player_status_b_c {
+	/* 80032BEC */ void isTransformLV(int) const;
+};
+
+struct dSv_player_status_a_c {
+	/* 80032AA8 */ void getRupeeMax() const;
+};
+
+struct dSv_player_item_c {
+	/* 80032FB8 */ void setItem(int, u8);
+	/* 80033370 */ void setBottleItemIn(u8, u8);
+	/* 80033598 */ void setEquipBottleItemIn(u8, u8);
+	/* 800336BC */ void setEquipBottleItemEmpty(u8);
+	/* 800336E0 */ void checkBottle(u8);
+	/* 80033D40 */ void setBaitItem(u8);
+};
+
+struct dSv_player_get_item_c {
+	/* 80033EC8 */ void isFirstBit(u8) const;
+};
+
+struct dSv_memBit_c {
+	/* 80034934 */ void isDungeonItem(int) const;
+};
+
+struct dSv_light_drop_c {
+	/* 80034340 */ void getLightDropNum(u8) const;
+};
+
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(int, int);
+	/* 800352B0 */ void offSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
+};
+
+struct dSv_event_c {
+	/* 8003498C */ void onEventBit(u16);
+	/* 800349A4 */ void offEventBit(u16);
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct dSv_danBit_c {
+	/* 80034BE8 */ void isSwitch(int) const;
+};
+
+struct dKy_tevstr_c {
+};
+
+struct dScnKy_env_light_c {
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+struct dRes_info_c {
+	/* 8003AB30 */ void onWarpMaterial(J3DModelData*);
+	/* 8003AC1C */ void offWarpMaterial(J3DModelData*);
+	/* 8003AD08 */ void setWarpSRT(J3DModelData*, cXyz const&, f32, f32);
+	/* 8003AE14 */ void loaderBasicBmd(u32, void*);
+};
+
+struct dRes_control_c {
+	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, int);
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, int);
+};
+
+struct dPa_levelEcallBack {
+};
+
+struct dPa_hermiteEcallBack_c {
+	/* 8004F6B8 */ void setOldPosP(cXyz const*, cXyz const*);
+};
+
+struct _GXColor {
+};
+
+struct dPa_control_c {
+	struct level_c {
+		/* 8004B8B4 */ void forceOnEventMove(u32);
+		/* 8004B918 */ void getEmitter(u32);
+	};
+
+	/* 8004C218 */ void setHitMark(u16, fopAc_ac_c*, cXyz const*, csXyz const*, cXyz const*, u32);
+	/* 8004C838 */ void setWaterRipple(u32*, cBgS_PolyInfo&, cXyz const*, f32, dKy_tevstr_c const*, cXyz const*, s8);
+	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+	/* 8004CF90 */ void getPolyColor(cBgS_PolyInfo&, int, _GXColor*, _GXColor*, u8*, f32*);
+	/* 8004D6A4 */ void setPoly(u32, u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
+	/* 8004D068 */ void setPoly(u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
+};
+
+struct dBgS_RoofChk {
+	/* 80078FF4 */ dBgS_RoofChk();
+	/* 80079090 */ ~dBgS_RoofChk();
+	/* 800B146C */ void SetPos(cXyz const&);
 };
 
 struct dBgS {
@@ -2406,48 +2653,49 @@ struct dBgS_Acch {
 	/* 80141404 */ void ChkGroundHit() const;
 };
 
-struct dBgS_ObjAcch {
-	/* 800D0C6C */ ~dBgS_ObjAcch();
+struct dPaPo_c {
+	/* 80050C9C */ void init(dBgS_Acch*, f32, f32);
+	/* 80051008 */ void setEffectCenter(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
 };
 
-struct daObjSwHang_c {
-	/* 80101874 */ void getHangPos();
+struct dPaPoF_c {
+	/* 800512E8 */ void setEffectFour(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, cXyz const*, cXyz const*, cXyz const*, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
+	/* 80051424 */ void clearFourAllID();
+};
+
+struct dMsgObject_c {
+	/* 8023822C */ void getStatus();
+	/* 80238320 */ void onMsgSend();
+	/* 80238410 */ void setSmellType(u8);
+	/* 80238588 */ void isHowlHearingMode();
+};
+
+struct dMsgFlow_c {
+	/* 80249F00 */ dMsgFlow_c();
+	/* 80249F48 */ ~dMsgFlow_c();
+	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+};
+
+struct dMeter2Info_c {
+	/* 8021C0E0 */ void setFloatingMessage(u16, s16, bool);
+	/* 8021C934 */ void onDirectUseItem(int);
+	/* 8021C9DC */ void resetWarpStatus();
+	/* 8021CA04 */ void warpInProc();
+	/* 8021CA70 */ void warpOutProc();
+};
+
+struct dJntColData_c {
+};
+
+struct dJntCol_c {
+	/* 80035C8C */ dJntCol_c();
+	/* 80035CA0 */ void init(fopAc_ac_c*, dJntColData_c const*, J3DModel*, int);
+	/* 80036C44 */ void getHitmarkPosAndAngle(cXyz const*, csXyz const*, cXyz*, csXyz*, int) const;
 };
 
 struct dInsect_c {
 	/* 80110648 */ void Insect_Release();
-};
-
-struct J3DTevBlock {
-	/* 80110E80 */ void setTevColor(u32, J3DGXColorS10 const*);
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmColor {
-};
-
-struct J2DPane {
-	/* 80126350 */ void setAnimation(J2DAnmTevRegKey*);
-	/* 80126354 */ void setAnimation(J2DAnmColor*);
-};
-
-struct daObj_Sekizoa_c {
-	/* 801312C8 */ void setWolfHowling();
-};
-
-struct daAlinkHIO_c {
-	/* 80140B88 */ daAlinkHIO_c();
-	/* 80140C10 */ ~daAlinkHIO_c();
-};
-
-struct daAlinkHIO_wolf_c {
-	/* 80140B98 */ ~daAlinkHIO_wolf_c();
-};
-
-struct daAlinkHIO_cut_c {
-	/* 80140BD4 */ ~daAlinkHIO_cut_c();
 };
 
 struct dEyeHL_c {
@@ -2456,73 +2704,11 @@ struct dEyeHL_c {
 	/* 80140C80 */ ~dEyeHL_c();
 };
 
-struct ResTIMG {
-};
-
-struct daPy_sightPacket_c {
-	/* 80140CDC */ ~daPy_sightPacket_c();
-	/* 8015F1A0 */ void draw();
-	/* 8015F2FC */ void setSight();
-	/* 8015F384 */ void setSightImage(ResTIMG*);
-};
-
-struct mDoExt_AnmRatioPack {
-	/* 80140DF0 */ ~mDoExt_AnmRatioPack();
-	/* 80140E2C */ mDoExt_AnmRatioPack();
-};
-
-struct dBgS_LinkRoofChk {
-	/* 80140E40 */ ~dBgS_LinkRoofChk();
-};
-
-struct dBgS_LinkGndChk {
-	/* 80140EB8 */ ~dBgS_LinkGndChk();
-};
-
-struct dBgS_LinkAcch {
-	/* 80140F30 */ ~dBgS_LinkAcch();
-};
-
-struct dCcD_SrcCps {
-};
-
-struct dCcD_Cps {
-	/* 800847D0 */ void Set(dCcD_SrcCps const&);
-	/* 8008506C */ ~dCcD_Cps();
-	/* 80140FA0 */ dCcD_Cps();
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-	/* 80084908 */ void StartCAt(cXyz&);
-	/* 80084954 */ void MoveCAt(cXyz&);
-	/* 80084D60 */ ~dCcD_Cyl();
-	/* 80141020 */ dCcD_Cyl();
-};
-
-struct cCcD_Stts {
-	/* 801410A4 */ ~cCcD_Stts();
-	/* 8026395C */ void ClrCcMove();
-};
-
-struct daPy_actorKeep_c {
-	/* 801410EC */ daPy_actorKeep_c();
-	/* 8015EC48 */ void setActor();
-	/* 8015ECB8 */ void setData(fopAc_ac_c*);
-	/* 8015ECFC */ void clearData();
-};
-
 struct dEvt_info_c {
 	/* 801411E0 */ void onCondition(u16);
 	/* 80141200 */ void offCondition(u16);
 	/* 80141388 */ void checkCommandCatch();
 	/* 80141450 */ void checkCommandDoor();
-};
-
-struct stage_stag_info_class {
 };
 
 struct dEvt_control_c {
@@ -2536,19 +2722,296 @@ struct dEvt_control_c {
 	/* 801412D4 */ void isOrderOK();
 };
 
-struct daPy_demo_c {
-	/* 8014137C */ void setSpecialDemoType();
+struct dEvent_manager_c {
+	/* 80046800 */ void setObjectArchive(char*);
+	/* 80046A58 */ void orderStartDemo();
+	/* 80047758 */ void getEventIdx(fopAc_ac_c*, char const*, u8);
+	/* 80047A38 */ void startCheckOld(char const*);
+	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
+	/* 80047F5C */ void getMyNowCutName(int);
+	/* 800480EC */ void getMySubstanceP(int, char const*, int);
+	/* 8004817C */ void cutEnd(int);
+	/* 800483C4 */ void setGoal(cXyz*);
+	/* 800483E0 */ void getGoal();
+	/* 800483E8 */ void getRunEventName();
+	/* 8004882C */ void checkStartDemo();
 };
 
-struct daHorse_c {
-	/* 80141944 */ void getZeldaActor();
+struct dEvent_exception_c {
+	/* 800463F0 */ void setStartDemo(int);
+};
+
+struct dDlst_shadowControl_c {
+	/* 80055F1C */ void addReal(u32, J3DModel*);
+};
+
+struct dDlst_peekZ_c {
+	/* 80056018 */ void newData(s16, s16, u32*);
+};
+
+struct J3DDrawBuffer;
+struct J3DPacket {
+	/* 80312750 */ bool entry(J3DDrawBuffer*);
+};
+
+struct J3DDrawBuffer {
+	/* 8032548C */ void entryImm(J3DPacket*, u16);
+};
+
+struct dDlst_list_c {
+	/* 800565EC */ void entryZSortXluDrawList(J3DDrawBuffer*, J3DPacket*, cXyz&);
+};
+
+struct dDemo_object_c {
+	/* 80039088 */ void getActor(u8);
+};
+
+struct dDemo_c {
+	/* 80039EEC */ void setBranchId(u16, s16);
+};
+
+struct dComIfG_play_c {
+	/* 8002C97C */ void getLayerNo(int);
+};
+
+struct cCcD_Obj {
+};
+
+struct dCcMassS_Mng {
+	/* 80085D98 */ void Set(cCcD_Obj*, u8);
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
+};
+
+struct dCcD_SrcSph {
+};
+
+struct dCcD_SrcCyl {
+};
+
+struct dCcD_SrcCps {
+};
+
+struct dCcD_Sph {
+	/* 80084A34 */ void Set(dCcD_SrcSph const&);
+	/* 80084A78 */ void StartCAt(cXyz&);
+	/* 80084AC4 */ void MoveCAt(cXyz&);
+};
+
+struct dCcD_GStts {
+	/* 80083760 */ dCcD_GStts();
+	/* 80083830 */ void Move();
+};
+
+struct dCcD_GAtTgCoCommonBase {
+	/* 80083688 */ void GetAc();
+};
+
+struct dCcD_Cyl {
+	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+	/* 80084908 */ void StartCAt(cXyz&);
+	/* 80084954 */ void MoveCAt(cXyz&);
+	/* 80084D60 */ ~dCcD_Cyl();
+	/* 80141020 */ dCcD_Cyl();
+};
+
+struct dCcD_Cps {
+	/* 800847D0 */ void Set(dCcD_SrcCps const&);
+	/* 8008506C */ ~dCcD_Cps();
+	/* 80140FA0 */ dCcD_Cps();
+};
+
+struct dCamera_c {
+	/* 80088A7C */ void StartEventCamera(int, int, ...);
+	/* 80088BBC */ void EndEventCamera(int);
+	/* 801614AC */ void Start();
+	/* 801614D0 */ void Stop();
+	/* 801614F4 */ void ChangeModeOK(s32);
+	/* 80163028 */ void SetTrimTypeForce(s32);
+	/* 80164B64 */ void GetCameraTypeFromCameraName(char const*);
+	/* 80181500 */ void GetForceLockOnActor();
+};
+
+struct dBgS_RopeLinChk {
+	/* 8007838C */ dBgS_RopeLinChk();
+	/* 800783E8 */ ~dBgS_RopeLinChk();
+};
+
+struct dBgS_PolyPassChk {
+	/* 80078E68 */ void SetObj();
+	/* 80078E74 */ void ClrObj();
+	/* 80078E98 */ void SetLink();
+	/* 80078EA4 */ void ClrLink();
+	/* 80078EBC */ void SetBomb();
+	/* 80078EC8 */ void ClrBomb();
+	/* 80078F7C */ void SetStatue();
+	/* 80078F88 */ void ClrStatue();
+	/* 80078F94 */ void SetIronBall();
+};
+
+struct dBgS_ObjLinChk {
+	/* 80077F5C */ dBgS_ObjLinChk();
+	/* 80077FB8 */ ~dBgS_ObjLinChk();
+};
+
+struct dBgS_ObjAcch {
+	/* 800D0C6C */ ~dBgS_ObjAcch();
+};
+
+struct dBgS_LinkRoofChk {
+	/* 80140E40 */ ~dBgS_LinkRoofChk();
+};
+
+struct dBgS_LinkLinChk {
+	/* 80078030 */ dBgS_LinkLinChk();
+	/* 8007808C */ ~dBgS_LinkLinChk();
+};
+
+struct dBgS_LinkGndChk {
+	/* 80140EB8 */ ~dBgS_LinkGndChk();
+};
+
+struct dBgS_LinkAcch {
+	/* 80140F30 */ ~dBgS_LinkAcch();
+};
+
+struct dBgS_GndChk {
+	/* 8007757C */ dBgS_GndChk();
+	/* 800775F0 */ ~dBgS_GndChk();
+};
+
+struct dBgS_BoomerangLinChk {
+	/* 800782B8 */ dBgS_BoomerangLinChk();
+	/* 80078314 */ ~dBgS_BoomerangLinChk();
+};
+
+struct dBgS_ArrowLinChk {
+	/* 800781D8 */ dBgS_ArrowLinChk();
+	/* 80078240 */ ~dBgS_ArrowLinChk();
+};
+
+struct dAttention_c {
+	/* 80070844 */ void GetLockonList(s32);
+	/* 80070880 */ void getActionBtnB();
+	/* 80070974 */ void getActionBtnXY();
+	/* 8007353C */ void LockonTarget(s32);
+	/* 800737E4 */ void LockonTruth();
+};
+
+struct dAttLook_c {
+	/* 80073CA4 */ void convPId(unsigned int);
+};
+
+struct dAttHint_c {
+	/* 800738CC */ void convPId(unsigned int);
+};
+
+struct dAttCatch_c {
+	/* 8007398C */ void convPId(unsigned int);
+};
+
+struct JPABaseParticle {
+};
+
+struct dAlink_bottleWaterPcallBack_c {
+	/* 800CFCF8 */ ~dAlink_bottleWaterPcallBack_c();
+	/* 80124A2C */ void execute(JPABaseEmitter*, JPABaseParticle*);
+};
+
+struct camera_class {
+};
+
+struct cM3dGSph {
+	/* 8026F648 */ void SetC(cXyz const&);
+	/* 8026F708 */ void SetR(f32);
+};
+
+struct cM3dGLin {
+	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
+};
+
+struct cM3dGCyl {
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+};
+
+struct cM3dGCps {
+	/* 8026EF88 */ cM3dGCps();
+	/* 8026EFA4 */ ~cM3dGCps();
+};
+
+struct cCcS {
+	/* 80264BA8 */ void Set(cCcD_Obj*);
+};
+
+struct cCcD_Stts {
+	/* 801410A4 */ ~cCcD_Stts();
+	/* 8026395C */ void ClrCcMove();
+};
+
+struct cCcD_ObjCo {
+	/* 80264900 */ void SetIGrp(u32);
+	/* 8026491C */ void SetVsGrp(u32);
+};
+
+struct cBgS_LinChk {
+};
+
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
+};
+
+struct cBgS {
+	/* 800743B4 */ void LineCross(cBgS_LinChk*);
+	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
+	/* 80074618 */ void GetActorPointer(int) const;
+	/* 80074628 */ void GetBgWBasePointer(cBgS_PolyInfo const&) const;
+	/* 80074660 */ void ChkPolySafe(cBgS_PolyInfo const&);
+	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
+	/* 800747F0 */ void GetTriPnt(cBgS_PolyInfo const&, cXyz*, cXyz*, cXyz*) const;
+};
+
+struct _GXTexObj {
+};
+
+struct Z2WolfHowlData {
+};
+
+struct Z2WolfHowlMgr {
+	/* 802CAAC0 */ Z2WolfHowlMgr();
+	/* 802CAED4 */ void startWolfHowlSound(f32, f32, bool, f32);
+	/* 802CB100 */ void setCorrectData(s8, Z2WolfHowlData*);
+	/* 802CBB58 */ void skipCorrectDemo();
+};
+
+struct Z2SoundObjSimple {
+	/* 802BE844 */ Z2SoundObjSimple();
+};
+
+struct Z2SoundObjBase {
+	/* 802BDFF8 */ void deleteObject();
+};
+
+struct Z2SeqMgr {
+	/* 802AF010 */ void bgmStart(u32, u32, s32);
+	/* 802AF49C */ void subBgmStart(u32);
+	/* 802AF884 */ void subBgmStop();
+	/* 802AFF8C */ void changeBgmStatus(s32);
+	/* 802B1DF4 */ void changeSubBgmStatus(s32);
+	/* 802B5E84 */ void bgmSetSwordUsing(s32);
+	/* 802B5E8C */ void taktModeMute();
+	/* 802B5ED4 */ void taktModeMuteOff();
 };
 
 struct JAISoundID {
 };
 
-struct Z2SoundObjBase {
-	/* 802BDFF8 */ void deleteObject();
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 struct Z2CreatureLink {
@@ -2577,522 +3040,14 @@ struct Z2CreatureLink {
 	/* 802C48D8 */ void setResumeAttack(bool);
 };
 
-struct daMidna_c {
-	/* 801419F4 */ void onForcePanic();
-	/* 80141A04 */ void checkForceNormalColor() const;
-	/* 80141A10 */ void checkForceTiredColor() const;
-	/* 80141A1C */ void checkMidnaTired();
-	/* 80141A84 */ void onNoServiceWait();
+struct Z2Creature {
+	/* 802C0628 */ void initAnime(void*, bool, f32, f32);
+	/* 802C06D0 */ void updateAnime(f32, f32);
+	/* 802C0BE8 */ void startCollisionSE(u32, u32);
 };
 
-struct daCrod_c {
-	/* 80141A94 */ void setControllActorData();
-};
-
-struct daObjMovebox {
-	struct Act_c {
-		struct Prm_e {
-		};
-
-	};
-
-};
-
-struct daObj {
-	/*          */ template <typename A1>
-	/*          */ void PrmAbstract(/* fopAc_ac_c const*, daObjMovebox::Act_c::Prm_e, daObjMovebox::Act_c::Prm_e */);
-	/* 80141ACC */ /* PrmAbstract<daObjMovebox::Act_c::Prm_e> */
-	void PrmAbstract__template0(fopAc_ac_c const*, daObjMovebox::Act_c::Prm_e, daObjMovebox::Act_c::Prm_e);
-
-};
-
-struct Quaternion {
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CDD4 */ void transM(cXyz const&);
-	/* 8000CD9C */ void transM(f32, f32, f32);
-	/* 8000CE38 */ void scaleM(f32, f32, f32);
-	/* 8000CF0C */ void ZXYrotS(csXyz const&);
-	/* 8000CF44 */ void ZXYrotM(csXyz const&);
-	/* 8000CF7C */ void quatM(Quaternion const*);
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
-};
-
-struct J3DAnmCluster {
-};
-
-struct mDoExt_blkAnm {
-	/* 8000DA08 */ void init(J3DDeformData*, J3DAnmCluster*, int, int, f32, s16, s16);
-};
-
-struct mDoExt_MtxCalcOldFrame {
-	/* 8000F848 */ void initOldFrameMorf(f32, u16, u16);
-};
-
-struct JPAParticleCallBack {
-	/* 800183D8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
-	/* 8027EFA4 */ ~JPAParticleCallBack();
-};
-
-struct fopAcM_lc_c {
-	/* 8001DC68 */ void lineCheck(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct fopAcM_gc_c {
-	/* 8001DCBC */ void gndCheck(cXyz const*);
-};
-
-struct fopAcM_wt_c {
-	/* 8001DD84 */ void waterCheck(cXyz const*);
-};
-
-struct layer_class {
-};
-
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
-};
-
-struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(int);
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dKy_tevstr_c {
-};
-
-struct _GXTexObj {
-};
-
-struct daMirror_c {
-	/* 8003194C */ void entry(J3DModel*);
-};
-
-struct daTagMagne_c {
-	/* 80031B50 */ void checkMagnetCode(cBgS_PolyInfo&);
-};
-
-struct daTagMist_c {
-	/* 80031CF0 */ void getPlayerNo();
-};
-
-struct dSv_player_status_a_c {
-	/* 80032AA8 */ void getRupeeMax() const;
-};
-
-struct dSv_player_status_b_c {
-	/* 80032BEC */ void isTransformLV(int) const;
-};
-
-struct dSv_player_item_c {
-	/* 80032FB8 */ void setItem(int, u8);
-	/* 80033370 */ void setBottleItemIn(u8, u8);
-	/* 80033598 */ void setEquipBottleItemIn(u8, u8);
-	/* 800336BC */ void setEquipBottleItemEmpty(u8);
-	/* 800336E0 */ void checkBottle(u8);
-	/* 80033D40 */ void setBaitItem(u8);
-};
-
-struct dSv_player_get_item_c {
-	/* 80033EC8 */ void isFirstBit(u8) const;
-};
-
-struct dSv_light_drop_c {
-	/* 80034340 */ void getLightDropNum(u8) const;
-};
-
-struct dSv_memBit_c {
-	/* 80034934 */ void isDungeonItem(int) const;
-};
-
-struct dSv_event_c {
-	/* 8003498C */ void onEventBit(u16);
-	/* 800349A4 */ void offEventBit(u16);
-	/* 800349BC */ void isEventBit(u16) const;
-};
-
-struct dSv_danBit_c {
-	/* 80034BE8 */ void isSwitch(int) const;
-};
-
-struct dSv_restart_c {
-	/* 80034F80 */ void setRoom(cXyz const&, s16, s8);
-};
-
-struct dSv_turnRestart_c {
-	/* 80034FA4 */ void set(cXyz const&, s16, s8, u32);
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 800352B0 */ void offSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct dJntColData_c {
-};
-
-struct dJntCol_c {
-	/* 80035C8C */ dJntCol_c();
-	/* 80035CA0 */ void init(fopAc_ac_c*, dJntColData_c const*, J3DModel*, int);
-	/* 80036C44 */ void getHitmarkPosAndAngle(cXyz const*, csXyz const*, cXyz*, csXyz*, int) const;
-};
-
-struct daItemBase_c {
-	/* 80037A5C */ void getItemNo();
-	/* 80037A64 */ void hide();
-	/* 80037A74 */ void show();
-	/* 80037AE4 */ void dead();
-};
-
-struct e_wb_class {
-	/* 80037C7C */ void checkWait();
-	/* 80037C90 */ void setPlayerRideNow();
-	/* 80037CB0 */ void setPlayerRide();
-	/* 80037CF4 */ void getOff();
-	/* 80037D68 */ void checkDownDamage();
-	/* 80037D94 */ void checkNormalRideMode() const;
-	/* 80037DBC */ void setRunRideMode();
-};
-
-struct dDemo_object_c {
-	/* 80039088 */ void getActor(u8);
-};
-
-struct dDemo_c {
-	/* 80039EEC */ void setBranchId(u16, s16);
-};
-
-struct dRes_info_c {
-	/* 8003AB30 */ void onWarpMaterial(J3DModelData*);
-	/* 8003AC1C */ void offWarpMaterial(J3DModelData*);
-	/* 8003AD08 */ void setWarpSRT(J3DModelData*, cXyz const&, f32, f32);
-	/* 8003AE14 */ void loaderBasicBmd(u32, void*);
-};
-
-struct J3DTevKColorAnm {
-	/* 8003B150 */ ~J3DTevKColorAnm();
-	/* 8003B18C */ J3DTevKColorAnm();
-};
-
-struct J3DTevColorAnm {
-	/* 8003B1A4 */ ~J3DTevColorAnm();
-	/* 8003B1E0 */ J3DTevColorAnm();
-};
-
-struct J3DTexNoAnm {
-	/* 8003B1F8 */ ~J3DTexNoAnm();
-	/* 8003B240 */ J3DTexNoAnm();
-};
-
-struct J3DTexMtxAnm {
-	/* 8003B264 */ ~J3DTexMtxAnm();
-	/* 8003B2A0 */ J3DTexMtxAnm();
-};
-
-struct J3DMatColorAnm {
-	/* 8003B2B8 */ ~J3DMatColorAnm();
-	/* 8003B2F4 */ J3DMatColorAnm();
-};
-
-struct dRes_control_c {
-	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, int);
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
-	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, int);
-};
-
-struct dEvent_exception_c {
-	/* 800463F0 */ void setStartDemo(int);
-};
-
-struct dEvent_manager_c {
-	/* 80046800 */ void setObjectArchive(char*);
-	/* 80046A58 */ void orderStartDemo();
-	/* 80047758 */ void getEventIdx(fopAc_ac_c*, char const*, u8);
-	/* 80047A38 */ void startCheckOld(char const*);
-	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
-	/* 80047F5C */ void getMyNowCutName(int);
-	/* 800480EC */ void getMySubstanceP(int, char const*, int);
-	/* 8004817C */ void cutEnd(int);
-	/* 800483C4 */ void setGoal(cXyz*);
-	/* 800483E0 */ void getGoal();
-	/* 800483E8 */ void getRunEventName();
-	/* 8004882C */ void checkStartDemo();
-};
-
-struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
-};
-
-struct dPa_control_c {
-	struct level_c {
-		/* 8004B8B4 */ void forceOnEventMove(u32);
-		/* 8004B918 */ void getEmitter(u32);
-	};
-
-	/* 8004C218 */ void setHitMark(u16, fopAc_ac_c*, cXyz const*, csXyz const*, cXyz const*, u32);
-	/* 8004C838 */ void setWaterRipple(u32*, cBgS_PolyInfo&, cXyz const*, f32, dKy_tevstr_c const*, cXyz const*, s8);
-	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-	/* 8004CF90 */ void getPolyColor(cBgS_PolyInfo&, int, _GXColor*, _GXColor*, u8*, f32*);
-	/* 8004D6A4 */ void setPoly(u32, u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
-	/* 8004D068 */ void setPoly(u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
-};
-
-struct dPa_hermiteEcallBack_c {
-	/* 8004F6B8 */ void setOldPosP(cXyz const*, cXyz const*);
-};
-
-struct dPaPo_c {
-	/* 80050C9C */ void init(dBgS_Acch*, f32, f32);
-	/* 80051008 */ void setEffectCenter(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
-};
-
-struct dPaPoF_c {
-	/* 800512E8 */ void setEffectFour(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, cXyz const*, cXyz const*, cXyz const*, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
-	/* 80051424 */ void clearFourAllID();
-};
-
-struct dDlst_shadowControl_c {
-	/* 80055F1C */ void addReal(u32, J3DModel*);
-};
-
-struct dDlst_peekZ_c {
-	/* 80056018 */ void newData(s16, s16, u32*);
-};
-
-struct J3DPacket;
-struct J3DDrawBuffer {
-	/* 8032548C */ void entryImm(J3DPacket*, u16);
-};
-
-struct J3DPacket {
-	/* 80312750 */ bool entry(J3DDrawBuffer*);
-};
-
-struct dDlst_list_c {
-	/* 800565EC */ void entryZSortXluDrawList(J3DDrawBuffer*, J3DPacket*, cXyz&);
-};
-
-struct dVibration_c {
-	/* 8006FA24 */ void StartShock(int, int, cXyz);
-	/* 8006FB10 */ void StartQuake(int, int, cXyz);
-	/* 8006FD94 */ void StopQuake(int);
-};
-
-struct dAttention_c {
-	/* 80070844 */ void GetLockonList(s32);
-	/* 80070880 */ void getActionBtnB();
-	/* 80070974 */ void getActionBtnXY();
-	/* 8007353C */ void LockonTarget(s32);
-	/* 800737E4 */ void LockonTruth();
-};
-
-struct dAttHint_c {
-	/* 800738CC */ void convPId(unsigned int);
-};
-
-struct dAttCatch_c {
-	/* 8007398C */ void convPId(unsigned int);
-};
-
-struct dAttLook_c {
-	/* 80073CA4 */ void convPId(unsigned int);
-};
-
-struct cBgS_LinChk {
-};
-
-struct cBgS {
-	/* 800743B4 */ void LineCross(cBgS_LinChk*);
-	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
-	/* 80074618 */ void GetActorPointer(int) const;
-	/* 80074628 */ void GetBgWBasePointer(cBgS_PolyInfo const&) const;
-	/* 80074660 */ void ChkPolySafe(cBgS_PolyInfo const&);
-	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
-	/* 800747F0 */ void GetTriPnt(cBgS_PolyInfo const&, cXyz*, cXyz*, cXyz*) const;
-};
-
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
-};
-
-struct dBgS_ObjLinChk {
-	/* 80077F5C */ dBgS_ObjLinChk();
-	/* 80077FB8 */ ~dBgS_ObjLinChk();
-};
-
-struct dBgS_LinkLinChk {
-	/* 80078030 */ dBgS_LinkLinChk();
-	/* 8007808C */ ~dBgS_LinkLinChk();
-};
-
-struct dBgS_ArrowLinChk {
-	/* 800781D8 */ dBgS_ArrowLinChk();
-	/* 80078240 */ ~dBgS_ArrowLinChk();
-};
-
-struct dBgS_BoomerangLinChk {
-	/* 800782B8 */ dBgS_BoomerangLinChk();
-	/* 80078314 */ ~dBgS_BoomerangLinChk();
-};
-
-struct dBgS_RopeLinChk {
-	/* 8007838C */ dBgS_RopeLinChk();
-	/* 800783E8 */ ~dBgS_RopeLinChk();
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-	/* 80078E74 */ void ClrObj();
-	/* 80078E98 */ void SetLink();
-	/* 80078EA4 */ void ClrLink();
-	/* 80078EBC */ void SetBomb();
-	/* 80078EC8 */ void ClrBomb();
-	/* 80078F7C */ void SetStatue();
-	/* 80078F88 */ void ClrStatue();
-	/* 80078F94 */ void SetIronBall();
-};
-
-struct dCcD_GAtTgCoCommonBase {
-	/* 80083688 */ void GetAc();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80083830 */ void Move();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_SrcSph {
-};
-
-struct dCcD_Sph {
-	/* 80084A34 */ void Set(dCcD_SrcSph const&);
-	/* 80084A78 */ void StartCAt(cXyz&);
-	/* 80084AC4 */ void MoveCAt(cXyz&);
-};
-
-struct cCcD_Obj {
-};
-
-struct dCcMassS_Mng {
-	/* 80085D98 */ void Set(cCcD_Obj*, u8);
-};
-
-struct dCamera_c {
-	/* 80088A7C */ void StartEventCamera(int, int, ...);
-	/* 80088BBC */ void EndEventCamera(int);
-	/* 801614AC */ void Start();
-	/* 801614D0 */ void Stop();
-	/* 801614F4 */ void ChangeModeOK(s32);
-	/* 80163028 */ void SetTrimTypeForce(s32);
-	/* 80164B64 */ void GetCameraTypeFromCameraName(char const*);
-	/* 80181500 */ void GetForceLockOnActor();
-};
-
-struct daNpcT_ActorMngr_c {
-	/* 80145708 */ void getActorP();
-};
-
-struct camera_class {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct dMeter2Info_c {
-	/* 8021C0E0 */ void setFloatingMessage(u16, s16, bool);
-	/* 8021C934 */ void onDirectUseItem(int);
-	/* 8021C9DC */ void resetWarpStatus();
-	/* 8021CA04 */ void warpInProc();
-	/* 8021CA70 */ void warpOutProc();
-};
-
-struct dMsgObject_c {
-	/* 8023822C */ void getStatus();
-	/* 80238320 */ void onMsgSend();
-	/* 80238410 */ void setSmellType(u8);
-	/* 80238588 */ void isHowlHearingMode();
-};
-
-struct dMsgFlow_c {
-	/* 80249F00 */ dMsgFlow_c();
-	/* 80249F48 */ ~dMsgFlow_c();
-	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
-};
-
-struct JKRArchive {
-	/* 802D5ECC */ void readIdxResource(void*, u32, u32);
-};
-
-struct J2DGrafContext {
-};
-
-struct J2DScreen {
-	/* 802F8498 */ J2DScreen();
-	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
-	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-	/* 802F9690 */ void animation();
-};
-
-struct cCcD_ObjCo {
-	/* 80264900 */ void SetIGrp(u32);
-	/* 8026491C */ void SetVsGrp(u32);
-};
-
-struct cCcS {
-	/* 80264BA8 */ void Set(cCcD_Obj*);
-};
-
-struct cM3dGCps {
-	/* 8026EF88 */ cM3dGCps();
-	/* 8026EFA4 */ ~cM3dGCps();
-};
-
-struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
-};
-
-struct cM3dGLin {
-	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
-};
-
-struct cM3dGSph {
-	/* 8026F648 */ void SetC(cXyz const&);
-	/* 8026F708 */ void SetR(f32);
-};
-
-struct JPAEmitterCallBack {
-	/* 8027E6A4 */ ~JPAEmitterCallBack();
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
-
+struct LIGHT_INFLUENCE {
+	/* 800CFC7C */ ~LIGHT_INFLUENCE();
 };
 
 namespace JStudio {
@@ -3111,6 +3066,32 @@ namespace JStudio {
 
 };
 
+struct JPAParticleCallBack {
+	/* 800183D8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
+	/* 8027EFA4 */ ~JPAParticleCallBack();
+};
+
+struct JPAEmitterCallBack {
+	/* 8027E6A4 */ ~JPAEmitterCallBack();
+};
+
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+};
+
+struct JKRArchive {
+	/* 802D5ECC */ void readIdxResource(void*, u32, u32);
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
 struct JASKernel {
 	/* 80290B08 */ void getAramHeap();
 };
@@ -3121,6 +3102,10 @@ struct JAISoundStrategyMgr { };
 struct JAISoundStrategyMgr__template1 {
 };
 
+struct JAISoundHandle {
+	/* 802A2184 */ void releaseSound();
+};
+
 struct JAISeqMgr {
 };
 
@@ -3128,52 +3113,28 @@ struct JAISeq {
 	/* 802A0A8C */ JAISeq(JAISeqMgr*, JAISoundStrategyMgr<JAISeq>*);
 };
 
-struct JAISoundHandle {
-	/* 802A2184 */ void releaseSound();
+struct J3DTexNoAnm {
+	/* 8003B1F8 */ ~J3DTexNoAnm();
+	/* 8003B240 */ J3DTexNoAnm();
 };
 
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+struct J3DTexMtxAnm {
+	/* 8003B264 */ ~J3DTexMtxAnm();
+	/* 8003B2A0 */ J3DTexMtxAnm();
 };
 
-struct Z2SeqMgr {
-	/* 802AF010 */ void bgmStart(u32, u32, s32);
-	/* 802AF49C */ void subBgmStart(u32);
-	/* 802AF884 */ void subBgmStop();
-	/* 802AFF8C */ void changeBgmStatus(s32);
-	/* 802B1DF4 */ void changeSubBgmStatus(s32);
-	/* 802B5E84 */ void bgmSetSwordUsing(s32);
-	/* 802B5E8C */ void taktModeMute();
-	/* 802B5ED4 */ void taktModeMuteOff();
+struct J3DTevKColorAnm {
+	/* 8003B150 */ ~J3DTevKColorAnm();
+	/* 8003B18C */ J3DTevKColorAnm();
 };
 
-struct Z2SoundObjSimple {
-	/* 802BE844 */ Z2SoundObjSimple();
+struct J3DTevColorAnm {
+	/* 8003B1A4 */ ~J3DTevColorAnm();
+	/* 8003B1E0 */ J3DTevColorAnm();
 };
 
-struct Z2Creature {
-	/* 802C0628 */ void initAnime(void*, bool, f32, f32);
-	/* 802C06D0 */ void updateAnime(f32, f32);
-	/* 802C0BE8 */ void startCollisionSE(u32, u32);
-};
-
-struct Z2WolfHowlData {
-};
-
-struct Z2WolfHowlMgr {
-	/* 802CAAC0 */ Z2WolfHowlMgr();
-	/* 802CAED4 */ void startWolfHowlSound(f32, f32, bool, f32);
-	/* 802CB100 */ void setCorrectData(s8, Z2WolfHowlData*);
-	/* 802CBB58 */ void skipCorrectDemo();
-};
-
-struct JKRFileLoader {
-	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
-};
-
-struct J2DAnmLoaderDataBase {
-	/* 80308A6C */ void load(void const*);
+struct J3DTevBlock {
+	/* 80110E80 */ void setTevColor(u32, J3DGXColorS10 const*);
 };
 
 struct J3DSys {
@@ -3184,17 +3145,12 @@ struct J3DShape {
 	/* 80315300 */ void loadPreDrawSetting() const;
 };
 
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 8032842C */ void checkPass(f32);
+struct J3DAnmTextureSRTKey {
+	/* 8032B1D4 */ void searchUpdateMaterialID(J3DModelData*);
 };
 
 struct J3DAnmTexPattern {
 	/* 8032B09C */ void searchUpdateMaterialID(J3DModelData*);
-};
-
-struct J3DAnmTextureSRTKey {
-	/* 8032B1D4 */ void searchUpdateMaterialID(J3DModelData*);
 };
 
 struct J3DMaterialTable {
@@ -3205,11 +3161,55 @@ struct J3DMaterialTable {
 	/* 8032FE70 */ void entryTevRegAnimator(J3DAnmTevRegKey*);
 };
 
+struct J3DMaterialAnm {
+	/* 800A4820 */ ~J3DMaterialAnm();
+	/* 8032C320 */ void initialize();
+	/* 8032C3C4 */ void calc(J3DMaterial*) const;
+};
+
+struct J3DMatColorAnm {
+	/* 8003B2B8 */ ~J3DMatColorAnm();
+	/* 8003B2F4 */ J3DMatColorAnm();
+};
+
+struct J3DJoint {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 8032842C */ void checkPass(f32);
+};
+
 struct J3DAnmLoaderDataBaseFlag {
 };
 
 struct J3DAnmLoaderDataBase {
 	/* 80337B40 */ void load(void const*, J3DAnmLoaderDataBaseFlag);
+};
+
+struct J2DGrafContext {
+};
+
+struct J2DScreen {
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+	/* 802F9690 */ void animation();
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DPane {
+	/* 80126350 */ void setAnimation(J2DAnmTevRegKey*);
+	/* 80126354 */ void setAnimation(J2DAnmColor*);
+};
+
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
 };
 
 // 
@@ -5478,8 +5478,6 @@ extern "C" extern u8 const m__20daAlinkHIO_wlBall_c0[56];
 extern "C" extern u8 const l_worldChangeEventName[16];
 extern "C" extern u8 const l_wolfWorldChangeEventName[21 + 3 /* padding */];
 extern "C" extern u8 const l_crawlStartFrontOffset[12];
-extern "C" extern u8 const m_handLeftInSidePos__9daAlink_c[12];
-extern "C" extern u8 const m_handRightInSidePos__9daAlink_c[12];
 extern "C" extern u8 const data_80391FBC[12];
 extern "C" extern char const* const d_a_d_a_alink__stringBase0;
 extern "C" extern void* g_profile_ALINK[12 + 9 /* padding */];
@@ -6426,7 +6424,7 @@ SECTION_SDATA2 static u8 l_arcName[6 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 8009D884-8009D88C 0008+00 s=0 e=0 z=13  None .text      getAlinkArcName__9daAlink_cFv                                */
+/* 8009D884-8009D88C 0008+00 s=0 e=0 z=0  None .text      getAlinkArcName__9daAlink_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -6525,7 +6523,7 @@ asm void daAlink_matAnm_c::calc(J3DMaterial* param_0) const {
 #pragma pop
 
 
-/* 8009DA60-8009DA98 0038+00 s=48 e=0 z=5  None .text      checkStageName__9daAlink_cFPCc                               */
+/* 8009DA60-8009DA98 0038+00 s=48 e=0 z=0  None .text      checkStageName__9daAlink_cFPCc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -8930,7 +8928,7 @@ asm void daAlink_c::commonLineCheck(cXyz* param_0, cXyz* param_1) {
 #pragma pop
 
 
-/* 800A21E0-800A2280 00A0+00 s=18 e=0 z=2  None .text      getMoveBGActorName__9daAlink_cFR13cBgS_PolyInfoi             */
+/* 800A21E0-800A2280 00A0+00 s=18 e=0 z=0  None .text      getMoveBGActorName__9daAlink_cFR13cBgS_PolyInfoi             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -9915,13 +9913,13 @@ SECTION_RODATA static u8 const m_handRightOutSidePos__9daAlink_c[12] = {
 	0x41, 0x10, 0x00, 0x00, 0xC0, 0xA0, 0x00, 0x00, 0xC0, 0x40, 0x00, 0x00,
 };
 
-/* 80391900-8039190C 000C+00 s=1 e=0 z=1  None .rodata    m_handLeftInSidePos__9daAlink_c                              */
-SECTION_RODATA u8 const m_handLeftInSidePos__9daAlink_c[12] = {
+/* 80391900-8039190C 000C+00 s=1 e=0 z=0  None .rodata    m_handLeftInSidePos__9daAlink_c                              */
+SECTION_RODATA static u8 const m_handLeftInSidePos__9daAlink_c[12] = {
 	0x41, 0x10, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00, 0x40, 0x40, 0x00, 0x00,
 };
 
-/* 8039190C-80391918 000C+00 s=1 e=0 z=1  None .rodata    m_handRightInSidePos__9daAlink_c                             */
-SECTION_RODATA u8 const m_handRightInSidePos__9daAlink_c[12] = {
+/* 8039190C-80391918 000C+00 s=1 e=0 z=0  None .rodata    m_handRightInSidePos__9daAlink_c                             */
+SECTION_RODATA static u8 const m_handRightInSidePos__9daAlink_c[12] = {
 	0x41, 0x10, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00, 0xC0, 0x40, 0x00, 0x00,
 };
 
@@ -10534,7 +10532,7 @@ asm void daAlink_c::initDemoModel(J3DModel** param_0, char const* param_1, u32 p
 #pragma pop
 
 
-/* 800A3F98-800A4068 00D0+00 s=1 e=0 z=1  None .text      initDemoBck__9daAlink_cFPP13mDoExt_bckAnmPCc                 */
+/* 800A3F98-800A4068 00D0+00 s=1 e=0 z=0  None .text      initDemoBck__9daAlink_cFPP13mDoExt_bckAnmPCc                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -14564,7 +14562,7 @@ SECTION_DATA static void* l_daAlink_Method[8] = {
 	(void*)NULL,
 };
 
-/* 803B2DCC-803B2E20 0030+24 s=0 e=0 z=1  None .data      g_profile_ALINK                                              */
+/* 803B2DCC-803B2E20 0030+24 s=0 e=0 z=0  None .data      g_profile_ALINK                                              */
 SECTION_DATA void* g_profile_ALINK[12 + 9 /* padding */] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0005FFFD,
@@ -15477,7 +15475,7 @@ asm void daAlink_c::setMatrix() {
 #pragma pop
 
 
-/* 800A9248-800A92F0 00A8+00 s=15 e=0 z=5  None .text      simpleAnmPlay__9daAlink_cFP10J3DAnmBase                      */
+/* 800A9248-800A92F0 00A8+00 s=15 e=0 z=0  None .text      simpleAnmPlay__9daAlink_cFP10J3DAnmBase                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -15752,7 +15750,7 @@ asm void daAlink_c::getMainBckData(daAlink_c::daAlink_ANM param_0) const {
 #pragma pop
 
 
-/* 800AC558-800AC5B4 005C+00 s=51 e=0 z=2  None .text      checkUnderMove0BckNoArc__9daAlink_cCFQ29daAlink_c11daAlink_ANM */
+/* 800AC558-800AC5B4 005C+00 s=51 e=0 z=0  None .text      checkUnderMove0BckNoArc__9daAlink_cCFQ29daAlink_c11daAlink_ANM */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -16596,7 +16594,7 @@ asm void daAlink_c::setItemActionButtonStatus(u8 param_0) {
 #pragma pop
 
 
-/* 800B26FC-800B271C 0020+00 s=2 e=0 z=1  None .text      itemActionTrigger__9daAlink_cFv                              */
+/* 800B26FC-800B271C 0020+00 s=2 e=0 z=0  None .text      itemActionTrigger__9daAlink_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -16871,7 +16869,7 @@ asm void daAlink_c::setJumpMode() {
 #pragma pop
 
 
-/* 800B4908-800B4918 0010+00 s=0 e=0 z=1  None .text      getMetamorphoseNearDis__9daAlink_cCFv                        */
+/* 800B4908-800B4918 0010+00 s=0 e=0 z=0  None .text      getMetamorphoseNearDis__9daAlink_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -16882,7 +16880,7 @@ asm void daAlink_c::getMetamorphoseNearDis() const {
 #pragma pop
 
 
-/* 800B4918-800B4928 0010+00 s=0 e=0 z=1  None .text      getMetamorphoseFarDis__9daAlink_cCFv                         */
+/* 800B4918-800B4928 0010+00 s=0 e=0 z=0  None .text      getMetamorphoseFarDis__9daAlink_cCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -16893,7 +16891,7 @@ asm void daAlink_c::getMetamorphoseFarDis() const {
 #pragma pop
 
 
-/* 800B4928-800B4938 0010+00 s=0 e=0 z=1  None .text      getMetamorphoseFarAngle__9daAlink_cCFv                       */
+/* 800B4928-800B4938 0010+00 s=0 e=0 z=0  None .text      getMetamorphoseFarAngle__9daAlink_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -17342,7 +17340,7 @@ asm void daAlink_c::checkItemEquipAnime() const {
 #pragma pop
 
 
-/* 800B9340-800B9398 0058+00 s=30 e=0 z=1  None .text      checkEquipAnime__9daAlink_cCFv                               */
+/* 800B9340-800B9398 0058+00 s=30 e=0 z=0  None .text      checkEquipAnime__9daAlink_cCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -18161,7 +18159,7 @@ asm void daAlink_c::checkCastleTown() {
 #pragma pop
 
 
-/* 800C03A0-800C03E8 0048+00 s=6 e=0 z=1  None .text      checkCloudSea__9daAlink_cFv                                  */
+/* 800C03A0-800C03E8 0048+00 s=6 e=0 z=0  None .text      checkCloudSea__9daAlink_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -19270,7 +19268,7 @@ asm void daAlink_c::checkItemDraw() {
 #pragma pop
 
 
-/* 800CB694-800CBA38 03A4+00 s=0 e=0 z=1  None .text      initShadowScaleLight__9daAlink_cFv                           */
+/* 800CB694-800CBA38 03A4+00 s=0 e=0 z=0  None .text      initShadowScaleLight__9daAlink_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -19285,7 +19283,7 @@ asm void daAlink_c::initShadowScaleLight() {
 /* 80453338-8045333C 0004+00 s=1 e=0 z=0  None .sdata2    @75939                                                       */
 SECTION_SDATA2 static u32 lit_75939 = 0x47435000;
 
-/* 800CBA38-800CBC18 01E0+00 s=0 e=0 z=1  None .text      moveShadowScaleLight__9daAlink_cFv                           */
+/* 800CBA38-800CBC18 01E0+00 s=0 e=0 z=0  None .text      moveShadowScaleLight__9daAlink_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -21435,7 +21433,7 @@ asm void daAlink_c::setSwordAtParam(dCcG_At_Spl param_0, u8 param_1, u8 param_2,
 #pragma pop
 
 
-/* 800D1788-800D17EC 0064+00 s=1 e=0 z=1  None .text      notSwordHitVibActor__9daAlink_cFP10fopAc_ac_c                */
+/* 800D1788-800D17EC 0064+00 s=1 e=0 z=0  None .text      notSwordHitVibActor__9daAlink_cFP10fopAc_ac_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22128,7 +22126,7 @@ asm void daAlink_c::procSwordUnequipSp() {
 #pragma pop
 
 
-/* 800D6D94-800D6DA4 0010+00 s=0 e=0 z=2  None .text      getFreezeR__9daAlink_cCFv                                    */
+/* 800D6D94-800D6DA4 0010+00 s=0 e=0 z=0  None .text      getFreezeR__9daAlink_cCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22139,7 +22137,7 @@ asm void daAlink_c::getFreezeR() const {
 #pragma pop
 
 
-/* 800D6DA4-800D6DB4 0010+00 s=0 e=0 z=2  None .text      getFreezeG__9daAlink_cCFv                                    */
+/* 800D6DA4-800D6DB4 0010+00 s=0 e=0 z=0  None .text      getFreezeG__9daAlink_cCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22150,7 +22148,7 @@ asm void daAlink_c::getFreezeG() const {
 #pragma pop
 
 
-/* 800D6DB4-800D6DC4 0010+00 s=0 e=0 z=2  None .text      getFreezeB__9daAlink_cCFv                                    */
+/* 800D6DB4-800D6DC4 0010+00 s=0 e=0 z=0  None .text      getFreezeB__9daAlink_cCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22315,7 +22313,7 @@ asm void daAlink_c::setDashDamage() {
 #pragma pop
 
 
-/* 800D7768-800D77C8 0060+00 s=2 e=0 z=3  None .text      checkIcePolygonDamage__9daAlink_cFP13cBgS_PolyInfo           */
+/* 800D7768-800D77C8 0060+00 s=2 e=0 z=0  None .text      checkIcePolygonDamage__9daAlink_cFP13cBgS_PolyInfo           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22755,7 +22753,7 @@ asm void daAlink_c::stickArrowIncrement(int param_0) {
 #pragma pop
 
 
-/* 800DC8C4-800DCA2C 0168+00 s=0 e=0 z=1  None .text      setArrowShieldActor__9daAlink_cFP10fopAc_ac_ci               */
+/* 800DC8C4-800DCA2C 0168+00 s=0 e=0 z=0  None .text      setArrowShieldActor__9daAlink_cFP10fopAc_ac_ci               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22766,7 +22764,7 @@ asm void daAlink_c::setArrowShieldActor(fopAc_ac_c* param_0, int param_1) {
 #pragma pop
 
 
-/* 800DCA2C-800DCA80 0054+00 s=1 e=0 z=2  None .text      checkWoodShieldEquipNotIronBall__9daAlink_cCFv               */
+/* 800DCA2C-800DCA80 0054+00 s=1 e=0 z=0  None .text      checkWoodShieldEquipNotIronBall__9daAlink_cCFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22777,7 +22775,7 @@ asm void daAlink_c::checkWoodShieldEquipNotIronBall() const {
 #pragma pop
 
 
-/* 800DCA80-800DCD74 02F4+00 s=0 e=0 z=1  None .text      getArrowShieldOffset__9daAlink_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz */
+/* 800DCA80-800DCD74 02F4+00 s=0 e=0 z=0  None .text      getArrowShieldOffset__9daAlink_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22788,7 +22786,7 @@ asm void daAlink_c::getArrowShieldOffset(cXyz const* param_0, csXyz const* param
 #pragma pop
 
 
-/* 800DCD74-800DCDF0 007C+00 s=0 e=0 z=2  None .text      setArrowShieldPos__9daAlink_cCFP4cXyzP5csXyzPC4cXyzPC4cXyz   */
+/* 800DCD74-800DCDF0 007C+00 s=0 e=0 z=0  None .text      setArrowShieldPos__9daAlink_cCFP4cXyzP5csXyzPC4cXyzPC4cXyz   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22975,7 +22973,7 @@ asm void daAlink_c::procTurnMove() {
 #pragma pop
 
 
-/* 800DE64C-800DE740 00F4+00 s=1 e=0 z=2  None .text      getArrowFlyData__9daAlink_cCFPfPfi                           */
+/* 800DE64C-800DE740 00F4+00 s=1 e=0 z=0  None .text      getArrowFlyData__9daAlink_cCFPfPfi                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22986,7 +22984,7 @@ asm void daAlink_c::getArrowFlyData(f32* param_0, f32* param_1, int param_2) con
 #pragma pop
 
 
-/* 800DE740-800DE750 0010+00 s=0 e=0 z=1  None .text      getArrowIncAtR__9daAlink_cCFv                                */
+/* 800DE740-800DE750 0010+00 s=0 e=0 z=0  None .text      getArrowIncAtR__9daAlink_cCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -22997,7 +22995,7 @@ asm void daAlink_c::getArrowIncAtR() const {
 #pragma pop
 
 
-/* 800DE750-800DE760 0010+00 s=0 e=0 z=1  None .text      getBombArrowFlyExplodeTime__9daAlink_cCFv                    */
+/* 800DE750-800DE760 0010+00 s=0 e=0 z=0  None .text      getBombArrowFlyExplodeTime__9daAlink_cCFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23008,7 +23006,7 @@ asm void daAlink_c::getBombArrowFlyExplodeTime() const {
 #pragma pop
 
 
-/* 800DE760-800DE770 0010+00 s=0 e=0 z=1  None .text      getArrowIncAtMaxStart__9daAlink_cCFv                         */
+/* 800DE760-800DE770 0010+00 s=0 e=0 z=0  None .text      getArrowIncAtMaxStart__9daAlink_cCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23019,7 +23017,7 @@ asm void daAlink_c::getArrowIncAtMaxStart() const {
 #pragma pop
 
 
-/* 800DE770-800DE780 0010+00 s=0 e=0 z=1  None .text      getArrowIncAtMax__9daAlink_cCFv                              */
+/* 800DE770-800DE780 0010+00 s=0 e=0 z=0  None .text      getArrowIncAtMax__9daAlink_cCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23052,7 +23050,7 @@ asm void daAlink_c::setSlingModel() {
 #pragma pop
 
 
-/* 800DE884-800DE990 010C+00 s=0 e=1 z=1  None .text      checkBowCameraArrowPosP__9daAlink_cFPsPs                     */
+/* 800DE884-800DE990 010C+00 s=0 e=1 z=0  None .text      checkBowCameraArrowPosP__9daAlink_cFPsPs                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23316,7 +23314,7 @@ asm void daAlink_c::procBowMove() {
 #pragma pop
 
 
-/* 800DFFE0-800E0010 0030+00 s=0 e=0 z=1  None .text      checkBoomerangLockAccept__9daAlink_cFv                       */
+/* 800DFFE0-800E0010 0030+00 s=0 e=0 z=0  None .text      checkBoomerangLockAccept__9daAlink_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23327,7 +23325,7 @@ asm void daAlink_c::checkBoomerangLockAccept() {
 #pragma pop
 
 
-/* 800E0010-800E00B0 00A0+00 s=0 e=0 z=1  None .text      getBoomSpeed__9daAlink_cFv                                   */
+/* 800E0010-800E00B0 00A0+00 s=0 e=0 z=0  None .text      getBoomSpeed__9daAlink_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23338,7 +23336,7 @@ asm void daAlink_c::getBoomSpeed() {
 #pragma pop
 
 
-/* 800E00B0-800E00C0 0010+00 s=0 e=0 z=1  None .text      getBoomCatchSpeed__9daAlink_cCFv                             */
+/* 800E00B0-800E00C0 0010+00 s=0 e=0 z=0  None .text      getBoomCatchSpeed__9daAlink_cCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23349,7 +23347,7 @@ asm void daAlink_c::getBoomCatchSpeed() const {
 #pragma pop
 
 
-/* 800E00C0-800E011C 005C+00 s=1 e=0 z=1  None .text      getBoomFlyMax__9daAlink_cCFv                                 */
+/* 800E00C0-800E011C 005C+00 s=1 e=0 z=0  None .text      getBoomFlyMax__9daAlink_cCFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23360,7 +23358,7 @@ asm void daAlink_c::getBoomFlyMax() const {
 #pragma pop
 
 
-/* 800E011C-800E0190 0074+00 s=1 e=0 z=2  None .text      getBoomLockMax__9daAlink_cFv                                 */
+/* 800E011C-800E0190 0074+00 s=1 e=0 z=0  None .text      getBoomLockMax__9daAlink_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23371,7 +23369,7 @@ asm void daAlink_c::getBoomLockMax() {
 #pragma pop
 
 
-/* 800E0190-800E01A0 0010+00 s=0 e=0 z=1  None .text      getBoomBgThroughTime__9daAlink_cCFv                          */
+/* 800E0190-800E01A0 0010+00 s=0 e=0 z=0  None .text      getBoomBgThroughTime__9daAlink_cCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23525,7 +23523,7 @@ asm void daAlink_c::throwBoomerang() {
 #pragma pop
 
 
-/* 800E08C4-800E0A9C 01D8+00 s=0 e=0 z=1  None .text      returnBoomerang__9daAlink_cFi                                */
+/* 800E08C4-800E0A9C 01D8+00 s=0 e=0 z=0  None .text      returnBoomerang__9daAlink_cFi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23668,7 +23666,7 @@ asm void daAlink_c::checkLv6BossRoom() {
 #pragma pop
 
 
-/* 800E1310-800E1320 0010+00 s=0 e=0 z=1  None .text      getCopyRodBallSpeed__9daAlink_cCFv                           */
+/* 800E1310-800E1320 0010+00 s=0 e=0 z=0  None .text      getCopyRodBallSpeed__9daAlink_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23679,7 +23677,7 @@ asm void daAlink_c::getCopyRodBallSpeed() const {
 #pragma pop
 
 
-/* 800E1320-800E1330 0010+00 s=0 e=0 z=1  None .text      getCopyRodBallReturnSpeed__9daAlink_cCFv                     */
+/* 800E1320-800E1330 0010+00 s=0 e=0 z=0  None .text      getCopyRodBallReturnSpeed__9daAlink_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23690,7 +23688,7 @@ asm void daAlink_c::getCopyRodBallReturnSpeed() const {
 #pragma pop
 
 
-/* 800E1330-800E1374 0044+00 s=3 e=0 z=2  None .text      getCopyRodBallDisMax__9daAlink_cCFv                          */
+/* 800E1330-800E1374 0044+00 s=3 e=0 z=0  None .text      getCopyRodBallDisMax__9daAlink_cCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23701,7 +23699,7 @@ asm void daAlink_c::getCopyRodBallDisMax() const {
 #pragma pop
 
 
-/* 800E1374-800E1390 001C+00 s=6 e=0 z=7  None .text      getCopyRodControllActor__9daAlink_cFv                        */
+/* 800E1374-800E1390 001C+00 s=6 e=0 z=0  None .text      getCopyRodControllActor__9daAlink_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23712,7 +23710,7 @@ asm void daAlink_c::getCopyRodControllActor() {
 #pragma pop
 
 
-/* 800E1390-800E13AC 001C+00 s=0 e=4 z=1  None .text      getCopyRodCameraActor__9daAlink_cFv                          */
+/* 800E1390-800E13AC 001C+00 s=0 e=4 z=0  None .text      getCopyRodCameraActor__9daAlink_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -23822,7 +23820,7 @@ asm void daAlink_c::throwCopyRod() {
 #pragma pop
 
 
-/* 800E1A30-800E1ADC 00AC+00 s=0 e=0 z=1  None .text      returnCopyRod__9daAlink_cFv                                  */
+/* 800E1A30-800E1ADC 00AC+00 s=0 e=0 z=0  None .text      returnCopyRod__9daAlink_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24119,7 +24117,7 @@ asm void daAlink_c::procMagneBootsFly() {
 #pragma pop
 
 
-/* 800E3760-800E3770 0010+00 s=0 e=0 z=7  None .text      getBombExplodeTime__9daAlink_cCFv                            */
+/* 800E3760-800E3770 0010+00 s=0 e=0 z=0  None .text      getBombExplodeTime__9daAlink_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24130,7 +24128,7 @@ asm void daAlink_c::getBombExplodeTime() const {
 #pragma pop
 
 
-/* 800E3770-800E3780 0010+00 s=0 e=0 z=2  None .text      getBombGravity__9daAlink_cCFv                                */
+/* 800E3770-800E3780 0010+00 s=0 e=0 z=0  None .text      getBombGravity__9daAlink_cCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24141,7 +24139,7 @@ asm void daAlink_c::getBombGravity() const {
 #pragma pop
 
 
-/* 800E3780-800E3790 0010+00 s=0 e=0 z=2  None .text      getBombMaxFallSpeed__9daAlink_cCFv                           */
+/* 800E3780-800E3790 0010+00 s=0 e=0 z=0  None .text      getBombMaxFallSpeed__9daAlink_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24152,7 +24150,7 @@ asm void daAlink_c::getBombMaxFallSpeed() const {
 #pragma pop
 
 
-/* 800E3790-800E37A0 0010+00 s=0 e=0 z=1  None .text      getBombBoundRate__9daAlink_cCFv                              */
+/* 800E3790-800E37A0 0010+00 s=0 e=0 z=0  None .text      getBombBoundRate__9daAlink_cCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24163,7 +24161,7 @@ asm void daAlink_c::getBombBoundRate() const {
 #pragma pop
 
 
-/* 800E37A0-800E37B0 0010+00 s=0 e=0 z=1  None .text      getBombStopSpeedY__9daAlink_cCFv                             */
+/* 800E37A0-800E37B0 0010+00 s=0 e=0 z=0  None .text      getBombStopSpeedY__9daAlink_cCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24174,7 +24172,7 @@ asm void daAlink_c::getBombStopSpeedY() const {
 #pragma pop
 
 
-/* 800E37B0-800E37C0 0010+00 s=0 e=0 z=1  None .text      getBombMaxSpeedY__9daAlink_cCFv                              */
+/* 800E37B0-800E37C0 0010+00 s=0 e=0 z=0  None .text      getBombMaxSpeedY__9daAlink_cCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24185,7 +24183,7 @@ asm void daAlink_c::getBombMaxSpeedY() const {
 #pragma pop
 
 
-/* 800E37C0-800E37D0 0010+00 s=0 e=0 z=1  None .text      getBombEffScale__9daAlink_cCFv                               */
+/* 800E37C0-800E37D0 0010+00 s=0 e=0 z=0  None .text      getBombEffScale__9daAlink_cCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24196,7 +24194,7 @@ asm void daAlink_c::getBombEffScale() const {
 #pragma pop
 
 
-/* 800E37D0-800E37E0 0010+00 s=0 e=0 z=1  None .text      getBombAtR__9daAlink_cCFv                                    */
+/* 800E37D0-800E37E0 0010+00 s=0 e=0 z=0  None .text      getBombAtR__9daAlink_cCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24207,7 +24205,7 @@ asm void daAlink_c::getBombAtR() const {
 #pragma pop
 
 
-/* 800E37E0-800E37F0 0010+00 s=0 e=0 z=1  None .text      getEnemyBombColorR__9daAlink_cCFv                            */
+/* 800E37E0-800E37F0 0010+00 s=0 e=0 z=0  None .text      getEnemyBombColorR__9daAlink_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24218,7 +24216,7 @@ asm void daAlink_c::getEnemyBombColorR() const {
 #pragma pop
 
 
-/* 800E37F0-800E3800 0010+00 s=0 e=0 z=2  None .text      getBombWaterGravity__9daAlink_cCFv                           */
+/* 800E37F0-800E3800 0010+00 s=0 e=0 z=0  None .text      getBombWaterGravity__9daAlink_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24229,7 +24227,7 @@ asm void daAlink_c::getBombWaterGravity() const {
 #pragma pop
 
 
-/* 800E3800-800E3810 0010+00 s=0 e=0 z=2  None .text      getBombWaterMaxFallSpeed__9daAlink_cCFv                      */
+/* 800E3800-800E3810 0010+00 s=0 e=0 z=0  None .text      getBombWaterMaxFallSpeed__9daAlink_cCFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24240,7 +24238,7 @@ asm void daAlink_c::getBombWaterMaxFallSpeed() const {
 #pragma pop
 
 
-/* 800E3810-800E3820 0010+00 s=0 e=0 z=1  None .text      getBombExplodeWaterEffectLimit__9daAlink_cCFv                */
+/* 800E3810-800E3820 0010+00 s=0 e=0 z=0  None .text      getBombExplodeWaterEffectLimit__9daAlink_cCFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24251,7 +24249,7 @@ asm void daAlink_c::getBombExplodeWaterEffectLimit() const {
 #pragma pop
 
 
-/* 800E3820-800E3830 0010+00 s=0 e=0 z=1  None .text      getBombInsectLimitAngle__9daAlink_cCFv                       */
+/* 800E3820-800E3830 0010+00 s=0 e=0 z=0  None .text      getBombInsectLimitAngle__9daAlink_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -25624,7 +25622,7 @@ asm void daAlink_c::checkHorseNotDamageReaction() const {
 #pragma pop
 
 
-/* 800ECDC4-800ECDEC 0028+00 s=1 e=0 z=2  None .text      checkHorseWaitLashAnime__9daAlink_cCFv                       */
+/* 800ECDC4-800ECDEC 0028+00 s=1 e=0 z=0  None .text      checkHorseWaitLashAnime__9daAlink_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -25657,7 +25655,7 @@ asm void daAlink_c::getReinHandType() const {
 #pragma pop
 
 
-/* 800ECF04-800ECF5C 0058+00 s=5 e=0 z=1  None .text      checkHorseLieAnime__9daAlink_cCFv                            */
+/* 800ECF04-800ECF5C 0058+00 s=5 e=0 z=0  None .text      checkHorseLieAnime__9daAlink_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -25668,7 +25666,7 @@ asm void daAlink_c::checkHorseLieAnime() const {
 #pragma pop
 
 
-/* 800ECF5C-800ECF9C 0040+00 s=0 e=0 z=3  None .text      checkHorseSubjectivity__9daAlink_cCFv                        */
+/* 800ECF5C-800ECF9C 0040+00 s=0 e=0 z=0  None .text      checkHorseSubjectivity__9daAlink_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -25712,7 +25710,7 @@ asm void daAlink_c::checkHorseNoUpperAnime() const {
 #pragma pop
 
 
-/* 800ED0D4-800ED1F0 011C+00 s=0 e=0 z=2  None .text      getHorseReinHandPos__9daAlink_cFP4cXyzP4cXyz                 */
+/* 800ED0D4-800ED1F0 011C+00 s=0 e=0 z=0  None .text      getHorseReinHandPos__9daAlink_cFP4cXyzP4cXyz                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -25723,7 +25721,7 @@ asm void daAlink_c::getHorseReinHandPos(cXyz* param_0, cXyz* param_1) {
 #pragma pop
 
 
-/* 800ED1F0-800ED310 0120+00 s=1 e=0 z=1  None .text      checkHorseNotGrab__9daAlink_cCFv                             */
+/* 800ED1F0-800ED310 0120+00 s=1 e=0 z=0  None .text      checkHorseNotGrab__9daAlink_cCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26614,7 +26612,7 @@ asm void daAlink_c::procBoarRun() {
 #pragma pop
 
 
-/* 800F3BB0-800F3BDC 002C+00 s=1 e=0 z=2  None .text      getCanoeMaxSpeed__9daAlink_cCFv                              */
+/* 800F3BB0-800F3BDC 002C+00 s=1 e=0 z=0  None .text      getCanoeMaxSpeed__9daAlink_cCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26625,7 +26623,7 @@ asm void daAlink_c::getCanoeMaxSpeed() const {
 #pragma pop
 
 
-/* 800F3BDC-800F3BEC 0010+00 s=0 e=0 z=1  None .text      getCanoeBackMaxSpeed__9daAlink_cCFv                          */
+/* 800F3BDC-800F3BEC 0010+00 s=0 e=0 z=0  None .text      getCanoeBackMaxSpeed__9daAlink_cCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26636,7 +26634,7 @@ asm void daAlink_c::getCanoeBackMaxSpeed() const {
 #pragma pop
 
 
-/* 800F3BEC-800F3C18 002C+00 s=0 e=0 z=1  None .text      getCanoeCres__9daAlink_cCFv                                  */
+/* 800F3BEC-800F3C18 002C+00 s=0 e=0 z=0  None .text      getCanoeCres__9daAlink_cCFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26658,7 +26656,7 @@ asm void daAlink_c::getCanoeSpeedRate() const {
 #pragma pop
 
 
-/* 800F3C44-800F3CCC 0088+00 s=0 e=0 z=1  None .text      getCanoeMaxRotSpeed__9daAlink_cCFv                           */
+/* 800F3C44-800F3CCC 0088+00 s=0 e=0 z=0  None .text      getCanoeMaxRotSpeed__9daAlink_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26669,7 +26667,7 @@ asm void daAlink_c::getCanoeMaxRotSpeed() const {
 #pragma pop
 
 
-/* 800F3CCC-800F3CD8 000C+00 s=1 e=0 z=1  None .text      getCanoeLocalPaddleTop__9daAlink_cFv                         */
+/* 800F3CCC-800F3CD8 000C+00 s=1 e=0 z=0  None .text      getCanoeLocalPaddleTop__9daAlink_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26724,7 +26722,7 @@ asm void daAlink_c::initFishingRodHand() {
 #pragma pop
 
 
-/* 800F3DFC-800F3E4C 0050+00 s=1 e=0 z=1  None .text      getCanoePaddleMatrix__9daAlink_cFv                           */
+/* 800F3DFC-800F3E4C 0050+00 s=1 e=0 z=0  None .text      getCanoePaddleMatrix__9daAlink_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26735,7 +26733,7 @@ asm void daAlink_c::getCanoePaddleMatrix() {
 #pragma pop
 
 
-/* 800F3E4C-800F3EB8 006C+00 s=0 e=0 z=4  None .text      checkFishingRodGrab__9daAlink_cCFP10fopAc_ac_c               */
+/* 800F3E4C-800F3EB8 006C+00 s=0 e=0 z=0  None .text      checkFishingRodGrab__9daAlink_cCFP10fopAc_ac_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26746,7 +26744,7 @@ asm void daAlink_c::checkFishingRodGrab(fopAc_ac_c* param_0) const {
 #pragma pop
 
 
-/* 800F3EB8-800F3F38 0080+00 s=0 e=0 z=2  None .text      checkCanoePaddleGrab__9daAlink_cCFP10fopAc_ac_c              */
+/* 800F3EB8-800F3F38 0080+00 s=0 e=0 z=0  None .text      checkCanoePaddleGrab__9daAlink_cCFP10fopAc_ac_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -26757,7 +26755,7 @@ asm void daAlink_c::checkCanoePaddleGrab(fopAc_ac_c* param_0) const {
 #pragma pop
 
 
-/* 800F3F38-800F3FC4 008C+00 s=0 e=0 z=1  None .text      checkCanoeFishingRodGrabOrPut__9daAlink_cCFv                 */
+/* 800F3F38-800F3FC4 008C+00 s=0 e=0 z=0  None .text      checkCanoeFishingRodGrabOrPut__9daAlink_cCFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -29199,7 +29197,7 @@ asm void daAlink_c::checkSnowCode() const {
 #pragma pop
 
 
-/* 80105ABC-80105B10 0054+00 s=1 e=0 z=1  None .text      checkSnowCodePolygon__9daAlink_cFR13cBgS_PolyInfo            */
+/* 80105ABC-80105B10 0054+00 s=1 e=0 z=0  None .text      checkSnowCodePolygon__9daAlink_cFR13cBgS_PolyInfo            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -29551,7 +29549,7 @@ asm void daAlink_c::resetHookshotMode() {
 #pragma pop
 
 
-/* 8010871C-80108784 0068+00 s=0 e=0 z=1  None .text      setEnemyBombHookshot__9daAlink_cFP10fopAc_ac_c               */
+/* 8010871C-80108784 0068+00 s=0 e=0 z=0  None .text      setEnemyBombHookshot__9daAlink_cFP10fopAc_ac_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30119,7 +30117,7 @@ asm void daAlink_c::procHookshotWallShoot() {
 #pragma pop
 
 
-/* 8010D93C-8010D94C 0010+00 s=0 e=0 z=1  None .text      getSpinnerGravity__9daAlink_cCFv                             */
+/* 8010D93C-8010D94C 0010+00 s=0 e=0 z=0  None .text      getSpinnerGravity__9daAlink_cCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30130,7 +30128,7 @@ asm void daAlink_c::getSpinnerGravity() const {
 #pragma pop
 
 
-/* 8010D94C-8010D95C 0010+00 s=0 e=0 z=1  None .text      getSpinnerMaxFallSpeed__9daAlink_cCFv                        */
+/* 8010D94C-8010D95C 0010+00 s=0 e=0 z=0  None .text      getSpinnerMaxFallSpeed__9daAlink_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30141,7 +30139,7 @@ asm void daAlink_c::getSpinnerMaxFallSpeed() const {
 #pragma pop
 
 
-/* 8010D95C-8010D96C 0010+00 s=0 e=0 z=1  None .text      getSpinnerJumpRate__9daAlink_cCFv                            */
+/* 8010D95C-8010D96C 0010+00 s=0 e=0 z=0  None .text      getSpinnerJumpRate__9daAlink_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30152,7 +30150,7 @@ asm void daAlink_c::getSpinnerJumpRate() const {
 #pragma pop
 
 
-/* 8010D96C-8010D9B0 0044+00 s=1 e=0 z=2  None .text      getSpinnerRideMoveTime__9daAlink_cFv                         */
+/* 8010D96C-8010D9B0 0044+00 s=1 e=0 z=0  None .text      getSpinnerRideMoveTime__9daAlink_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30163,7 +30161,7 @@ asm void daAlink_c::getSpinnerRideMoveTime() {
 #pragma pop
 
 
-/* 8010D9B0-8010D9F4 0044+00 s=1 e=0 z=3  None .text      getSpinnerRideSpeedF__9daAlink_cFv                           */
+/* 8010D9B0-8010D9F4 0044+00 s=1 e=0 z=0  None .text      getSpinnerRideSpeedF__9daAlink_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30174,7 +30172,7 @@ asm void daAlink_c::getSpinnerRideSpeedF() {
 #pragma pop
 
 
-/* 8010D9F4-8010DA04 0010+00 s=0 e=0 z=1  None .text      getSpinnerRideDecSpeedMax__9daAlink_cCFv                     */
+/* 8010D9F4-8010DA04 0010+00 s=0 e=0 z=0  None .text      getSpinnerRideDecSpeedMax__9daAlink_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30185,7 +30183,7 @@ asm void daAlink_c::getSpinnerRideDecSpeedMax() const {
 #pragma pop
 
 
-/* 8010DA04-8010DA14 0010+00 s=0 e=0 z=1  None .text      getSpinnerRideDecSpeedMin__9daAlink_cCFv                     */
+/* 8010DA04-8010DA14 0010+00 s=0 e=0 z=0  None .text      getSpinnerRideDecSpeedMin__9daAlink_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30196,7 +30194,7 @@ asm void daAlink_c::getSpinnerRideDecSpeedMin() const {
 #pragma pop
 
 
-/* 8010DA14-8010DA24 0010+00 s=0 e=0 z=1  None .text      getSpinnerRideDecSpeedRate__9daAlink_cCFv                    */
+/* 8010DA14-8010DA24 0010+00 s=0 e=0 z=0  None .text      getSpinnerRideDecSpeedRate__9daAlink_cCFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30207,7 +30205,7 @@ asm void daAlink_c::getSpinnerRideDecSpeedRate() const {
 #pragma pop
 
 
-/* 8010DA24-8010DA34 0010+00 s=0 e=0 z=1  None .text      getSpinnerRideRotAngleMax__9daAlink_cCFv                     */
+/* 8010DA24-8010DA34 0010+00 s=0 e=0 z=0  None .text      getSpinnerRideRotAngleMax__9daAlink_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30218,7 +30216,7 @@ asm void daAlink_c::getSpinnerRideRotAngleMax() const {
 #pragma pop
 
 
-/* 8010DA34-8010DA44 0010+00 s=0 e=0 z=1  None .text      getSpinnerRideRotAngleMin__9daAlink_cCFv                     */
+/* 8010DA34-8010DA44 0010+00 s=0 e=0 z=0  None .text      getSpinnerRideRotAngleMin__9daAlink_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30946,7 +30944,7 @@ asm void daAlink_c::getIronBallBgHit() const {
 #pragma pop
 
 
-/* 80112474-801124B4 0040+00 s=0 e=2 z=1  None .text      checkIronBallThrowMode__9daAlink_cCFv                        */
+/* 80112474-801124B4 0040+00 s=0 e=2 z=0  None .text      checkIronBallThrowMode__9daAlink_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30957,7 +30955,7 @@ asm void daAlink_c::checkIronBallThrowMode() const {
 #pragma pop
 
 
-/* 801124B4-801124FC 0048+00 s=0 e=1 z=1  None .text      checkIronBallThrowReturnMode__9daAlink_cCFv                  */
+/* 801124B4-801124FC 0048+00 s=0 e=1 z=0  None .text      checkIronBallThrowReturnMode__9daAlink_cCFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -33700,7 +33698,7 @@ asm void daAlink_c::checkWolfLandAction(int param_0) {
 #pragma pop
 
 
-/* 80129958-801299A8 0050+00 s=1 e=0 z=1  None .text      checkMidnaUseAbility__9daAlink_cCFv                          */
+/* 80129958-801299A8 0050+00 s=1 e=0 z=0  None .text      checkMidnaUseAbility__9daAlink_cCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -34751,7 +34749,7 @@ asm void daAlink_c::procWolfRopeSubjectivity() {
 #pragma pop
 
 
-/* 80133D6C-80133EF0 0184+00 s=0 e=0 z=1  None .text      getWolfTagJumpTime__9daAlink_cCFv                            */
+/* 80133D6C-80133EF0 0184+00 s=0 e=0 z=0  None .text      getWolfTagJumpTime__9daAlink_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -34762,7 +34760,7 @@ asm void daAlink_c::getWolfTagJumpTime() const {
 #pragma pop
 
 
-/* 80133EF0-80134000 0110+00 s=3 e=1 z=1  None .text      checkMidnaLockJumpPoint__9daAlink_cCFv                       */
+/* 80133EF0-80134000 0110+00 s=3 e=1 z=0  None .text      checkMidnaLockJumpPoint__9daAlink_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -35081,7 +35079,7 @@ asm void daAlink_c::getWolfLieMoveSpeed() {
 #pragma pop
 
 
-/* 801371A0-801371FC 005C+00 s=0 e=0 z=2  None .text      checkMidnaDisappearMode__9daAlink_cCFv                       */
+/* 801371A0-801371FC 005C+00 s=0 e=0 z=0  None .text      checkMidnaDisappearMode__9daAlink_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -35422,7 +35420,7 @@ asm void daAlink_c::cancelWolfLock(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 801391DC-801391E4 0008+00 s=0 e=0 z=1  None .text      getWolfLockActorEnd__9daAlink_cFv                            */
+/* 801391DC-801391E4 0008+00 s=0 e=0 z=0  None .text      getWolfLockActorEnd__9daAlink_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

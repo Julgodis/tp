@@ -11,97 +11,62 @@
 // Types:
 // 
 
-struct J3DMaterial {
-	/* 803157A0 */ void createColorBlock(u32);
-	/* 803159A0 */ void createTexGenBlock(u32);
-	/* 80315B04 */ void createTevBlock(int);
-	/* 80315E78 */ void createIndBlock(int);
-	/* 80315F60 */ void createPEBlock(u32, u32);
-	/* 80316100 */ void calcSizeColorBlock(u32);
-	/* 80316150 */ void calcSizeTexGenBlock(u32);
-	/* 8031617C */ void calcSizeTevBlock(int);
-	/* 803161C4 */ void calcSizeIndBlock(int);
-	/* 803161D8 */ void calcSizePEBlock(u32, u32);
-	/* 80316240 */ void initialize();
-	/* 80332B94 */ ~J3DMaterial();
+struct J3DZMode {
 };
 
-struct J3DMaterialDLBlock {
+struct J3DTexMtxInfo {
+	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
 };
 
-struct J3DMaterialBlock {
+struct J3DTexMtx {
 };
 
-struct J3DMaterialFactory {
-	struct MaterialType {
-	};
-
-	/* 80330234 */ J3DMaterialFactory(J3DMaterialDLBlock const&);
-	/* 8032FFEC */ J3DMaterialFactory(J3DMaterialBlock const&);
-	/* 803302BC */ void countUniqueMaterials();
-	/* 80330304 */ void countTexGens(int) const;
-	/* 8033033C */ void countStages(int) const;
-	/* 803303C4 */ void create(J3DMaterial*, J3DMaterialFactory::MaterialType, int, u32) const;
-	/* 80330440 */ void createNormalMaterial(J3DMaterial*, int, u32) const;
-	/* 80330D84 */ void createPatchedMaterial(J3DMaterial*, int, u32) const;
-	/* 8033168C */ void modifyPatchedCurrentMtx(J3DMaterial*, int) const;
-	/* 803317D4 */ void createLockedMaterial(J3DMaterial*, int, u32) const;
-	/* 80331A7C */ void calcSize(J3DMaterial*, J3DMaterialFactory::MaterialType, int, u32) const;
-	/* 80331AFC */ void calcSizeNormalMaterial(J3DMaterial*, int, u32) const;
-	/* 80331C30 */ void calcSizePatchedMaterial(J3DMaterial*, int, u32) const;
-	/* 80331D00 */ void calcSizeLockedMaterial(J3DMaterial*, int, u32) const;
-	/* 80331D18 */ void newMatColor(int, int) const;
-	/* 80331D74 */ void newColorChanNum(int) const;
-	/* 80331DAC */ void newColorChan(int, int) const;
-	/* 80331F50 */ void newAmbColor(int, int) const;
-	/* 80331FAC */ void newTexGenNum(int) const;
-	/* 80331FE4 */ void newTexCoord(int, int) const;
-	/* 80332044 */ void newTexMtx(int, int) const;
-	/* 803320CC */ void newCullMode(int) const;
-	/* 8033210C */ void newTexNo(int, int) const;
-	/* 80332154 */ void newTevOrder(int, int) const;
-	/* 803321A0 */ void newTevColor(int, int) const;
-	/* 80332210 */ void newTevKColor(int, int) const;
-	/* 8033226C */ void newTevStageNum(int) const;
-	/* 803322A4 */ void newTevStage(int, int) const;
-	/* 80332304 */ void newTevSwapModeTable(int, int) const;
-	/* 803323A0 */ void newIndTexStageNum(int) const;
-	/* 803323C8 */ void newIndTexOrder(int, int) const;
-	/* 8033240C */ void newIndTexMtx(int, int) const;
-	/* 803324B4 */ void newIndTevStage(int, int) const;
-	/* 80332648 */ void newIndTexCoordScale(int, int) const;
-	/* 8033268C */ void newFog(int) const;
-	/* 80332768 */ void newAlphaComp(int) const;
-	/* 803327E8 */ void newBlend(int) const;
-	/* 8033282C */ void newZMode(int) const;
-	/* 8033288C */ void newZCompLoc(int) const;
-	/* 803328C4 */ void newDither(int) const;
-	/* 803328FC */ void newNBTScale(int) const;
+struct J3DTexGenBlockPatched {
+	/* 80317644 */ void initialize();
 };
 
-struct J3DPEBlockNull {
-	/* 803329A0 */ void load();
-	/* 803329A4 */ void getType();
-	/* 803329B0 */ ~J3DPEBlockNull();
+struct J3DTexGenBlockNull {
+	/* 80332AA0 */ void calc(f32 const (* )[4]);
+	/* 80332AA4 */ void calcWithoutViewMtx(f32 const (* )[4]);
+	/* 80332AA8 */ void calcPostTexMtx(f32 const (* )[4]);
+	/* 80332AAC */ void calcPostTexMtxWithoutViewMtx(f32 const (* )[4]);
+	/* 80332AB0 */ void load();
+	/* 80332AB4 */ void patch();
+	/* 80332AB8 */ void diff(u32);
+	/* 80332ABC */ void diffTexMtx();
+	/* 80332AC0 */ void diffTexGen();
+	/* 80332AC4 */ void getType();
+	/* 80332AD0 */ ~J3DTexGenBlockNull();
 };
 
-struct J3DIndTevStage {
-	/* 8000E14C */ J3DIndTevStage();
+struct J3DTexCoord {
+	/* 8000E464 */ J3DTexCoord();
+};
+
+struct J3DNBTScale {
+};
+
+struct J3DTexGenBlock {
+	/* 8000DFD8 */ bool getTexMtx(u32);
+	/* 8000DFE0 */ bool getTexCoord(u32);
+	/* 8000DFE8 */ bool getTexGenNum() const;
+	/* 8000E0CC */ void setTexCoord(u32, J3DTexCoord const*);
+	/* 8031741C */ void setTexGenNum(u32 const*);
+	/* 8000E0D0 */ void setTexGenNum(u32);
+	/* 8003AB2C */ void setTexMtx(u32, J3DTexMtx*);
+	/* 803172FC */ bool countDLSize();
+	/* 80317334 */ bool getNBTScale();
+	/* 80317354 */ void reset(J3DTexGenBlock*);
+	/* 80317420 */ void setNBTScale(J3DNBTScale);
+	/* 80317424 */ void setNBTScale(J3DNBTScale const*);
+	/* 80317428 */ bool getTexMtxOffset() const;
+	/* 80317430 */ void setTexMtxOffset(u32);
 };
 
 struct J3DTevSwapModeTable {
 };
 
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
-};
-
-struct J3DGXColor {
-	/* 8000E538 */ J3DGXColor();
-};
-
-struct J3DTevOrder {
-	/* 8000E140 */ J3DTevOrder();
+struct J3DTevSwapModeInfo {
 };
 
 struct J3DTevStageInfo {
@@ -112,7 +77,24 @@ struct J3DTevStage {
 	/* 8003AACC */ J3DTevStage(J3DTevStageInfo const&);
 };
 
-struct J3DTevSwapModeInfo {
+struct J3DTevOrder {
+	/* 8000E140 */ J3DTevOrder();
+};
+
+struct J3DTevBlockPatched {
+	/* 803176E0 */ void initialize();
+};
+
+struct J3DIndTevStage {
+	/* 8000E14C */ J3DIndTevStage();
+};
+
+struct J3DGXColor {
+	/* 8000E538 */ J3DGXColor();
+};
+
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
 };
 
 struct J3DTevBlock {
@@ -176,35 +158,23 @@ struct J3DTevBlockNull {
 	/* 80332A44 */ ~J3DTevBlockNull();
 };
 
-struct J3DTexGenBlockNull {
-	/* 80332AA0 */ void calc(f32 const (* )[4]);
-	/* 80332AA4 */ void calcWithoutViewMtx(f32 const (* )[4]);
-	/* 80332AA8 */ void calcPostTexMtx(f32 const (* )[4]);
-	/* 80332AAC */ void calcPostTexMtxWithoutViewMtx(f32 const (* )[4]);
-	/* 80332AB0 */ void load();
-	/* 80332AB4 */ void patch();
-	/* 80332AB8 */ void diff(u32);
-	/* 80332ABC */ void diffTexMtx();
-	/* 80332AC0 */ void diffTexGen();
-	/* 80332AC4 */ void getType();
-	/* 80332AD0 */ ~J3DTexGenBlockNull();
+struct J3DPatchedMaterial {
+	/* 80316FB8 */ void initialize();
 };
 
-struct J3DColorBlockNull {
-	/* 80332B2C */ void getType();
-	/* 80332B38 */ ~J3DColorBlockNull();
-};
-
-struct J3DZMode {
+struct J3DPEBlockNull {
+	/* 803329A0 */ void load();
+	/* 803329A4 */ void getType();
+	/* 803329B0 */ ~J3DPEBlockNull();
 };
 
 struct J3DBlend {
 };
 
-struct J3DAlphaComp {
+struct J3DFog {
 };
 
-struct J3DFog {
+struct J3DAlphaComp {
 };
 
 struct J3DPEBlock {
@@ -236,10 +206,99 @@ struct J3DPEBlock {
 	/* 80317394 */ void setFogOffset(u32);
 };
 
+struct J3DMaterial {
+	/* 803157A0 */ void createColorBlock(u32);
+	/* 803159A0 */ void createTexGenBlock(u32);
+	/* 80315B04 */ void createTevBlock(int);
+	/* 80315E78 */ void createIndBlock(int);
+	/* 80315F60 */ void createPEBlock(u32, u32);
+	/* 80316100 */ void calcSizeColorBlock(u32);
+	/* 80316150 */ void calcSizeTexGenBlock(u32);
+	/* 8031617C */ void calcSizeTevBlock(int);
+	/* 803161C4 */ void calcSizeIndBlock(int);
+	/* 803161D8 */ void calcSizePEBlock(u32, u32);
+	/* 80316240 */ void initialize();
+	/* 80332B94 */ ~J3DMaterial();
+};
+
+struct J3DMaterialBlock {
+};
+
+struct J3DMaterialDLBlock {
+};
+
+struct J3DMaterialFactory {
+	struct MaterialType {
+	};
+
+	/* 80330234 */ J3DMaterialFactory(J3DMaterialDLBlock const&);
+	/* 8032FFEC */ J3DMaterialFactory(J3DMaterialBlock const&);
+	/* 803302BC */ void countUniqueMaterials();
+	/* 80330304 */ void countTexGens(int) const;
+	/* 8033033C */ void countStages(int) const;
+	/* 803303C4 */ void create(J3DMaterial*, J3DMaterialFactory::MaterialType, int, u32) const;
+	/* 80330440 */ void createNormalMaterial(J3DMaterial*, int, u32) const;
+	/* 80330D84 */ void createPatchedMaterial(J3DMaterial*, int, u32) const;
+	/* 8033168C */ void modifyPatchedCurrentMtx(J3DMaterial*, int) const;
+	/* 803317D4 */ void createLockedMaterial(J3DMaterial*, int, u32) const;
+	/* 80331A7C */ void calcSize(J3DMaterial*, J3DMaterialFactory::MaterialType, int, u32) const;
+	/* 80331AFC */ void calcSizeNormalMaterial(J3DMaterial*, int, u32) const;
+	/* 80331C30 */ void calcSizePatchedMaterial(J3DMaterial*, int, u32) const;
+	/* 80331D00 */ void calcSizeLockedMaterial(J3DMaterial*, int, u32) const;
+	/* 80331D18 */ void newMatColor(int, int) const;
+	/* 80331D74 */ void newColorChanNum(int) const;
+	/* 80331DAC */ void newColorChan(int, int) const;
+	/* 80331F50 */ void newAmbColor(int, int) const;
+	/* 80331FAC */ void newTexGenNum(int) const;
+	/* 80331FE4 */ void newTexCoord(int, int) const;
+	/* 80332044 */ void newTexMtx(int, int) const;
+	/* 803320CC */ void newCullMode(int) const;
+	/* 8033210C */ void newTexNo(int, int) const;
+	/* 80332154 */ void newTevOrder(int, int) const;
+	/* 803321A0 */ void newTevColor(int, int) const;
+	/* 80332210 */ void newTevKColor(int, int) const;
+	/* 8033226C */ void newTevStageNum(int) const;
+	/* 803322A4 */ void newTevStage(int, int) const;
+	/* 80332304 */ void newTevSwapModeTable(int, int) const;
+	/* 803323A0 */ void newIndTexStageNum(int) const;
+	/* 803323C8 */ void newIndTexOrder(int, int) const;
+	/* 8033240C */ void newIndTexMtx(int, int) const;
+	/* 803324B4 */ void newIndTevStage(int, int) const;
+	/* 80332648 */ void newIndTexCoordScale(int, int) const;
+	/* 8033268C */ void newFog(int) const;
+	/* 80332768 */ void newAlphaComp(int) const;
+	/* 803327E8 */ void newBlend(int) const;
+	/* 8033282C */ void newZMode(int) const;
+	/* 8033288C */ void newZCompLoc(int) const;
+	/* 803328C4 */ void newDither(int) const;
+	/* 803328FC */ void newNBTScale(int) const;
+};
+
+struct J3DLockedMaterial {
+	/* 80317044 */ void initialize();
+};
+
 struct J3DLightObj {
 };
 
+struct J3DIndTexMtxInfo {
+	/* 803257DC */ void operator=(J3DIndTexMtxInfo const&);
+};
+
+struct J3DFogInfo {
+	/* 80325800 */ void operator=(J3DFogInfo const&);
+};
+
+struct J3DDisplayListObj {
+	/* 803125E4 */ void setSingleDisplayList(void*, u32);
+};
+
 struct J3DColorChan {
+};
+
+struct J3DColorBlockNull {
+	/* 80332B2C */ void getType();
+	/* 80332B38 */ ~J3DColorBlockNull();
 };
 
 struct J3DColorBlock {
@@ -275,65 +334,6 @@ struct J3DColorBlock {
 	/* 8031746C */ bool getColorChanOffset() const;
 	/* 80317474 */ void setMatColorOffset(u32);
 	/* 80317478 */ void setColorChanOffset(u32);
-};
-
-struct J3DTexMtx {
-};
-
-struct J3DNBTScale {
-};
-
-struct J3DTexCoord {
-	/* 8000E464 */ J3DTexCoord();
-};
-
-struct J3DTexGenBlock {
-	/* 8000DFD8 */ bool getTexMtx(u32);
-	/* 8000DFE0 */ bool getTexCoord(u32);
-	/* 8000DFE8 */ bool getTexGenNum() const;
-	/* 8000E0CC */ void setTexCoord(u32, J3DTexCoord const*);
-	/* 8031741C */ void setTexGenNum(u32 const*);
-	/* 8000E0D0 */ void setTexGenNum(u32);
-	/* 8003AB2C */ void setTexMtx(u32, J3DTexMtx*);
-	/* 803172FC */ bool countDLSize();
-	/* 80317334 */ bool getNBTScale();
-	/* 80317354 */ void reset(J3DTexGenBlock*);
-	/* 80317420 */ void setNBTScale(J3DNBTScale);
-	/* 80317424 */ void setNBTScale(J3DNBTScale const*);
-	/* 80317428 */ bool getTexMtxOffset() const;
-	/* 80317430 */ void setTexMtxOffset(u32);
-};
-
-struct J3DDisplayListObj {
-	/* 803125E4 */ void setSingleDisplayList(void*, u32);
-};
-
-struct J3DPatchedMaterial {
-	/* 80316FB8 */ void initialize();
-};
-
-struct J3DLockedMaterial {
-	/* 80317044 */ void initialize();
-};
-
-struct J3DTexGenBlockPatched {
-	/* 80317644 */ void initialize();
-};
-
-struct J3DTevBlockPatched {
-	/* 803176E0 */ void initialize();
-};
-
-struct J3DTexMtxInfo {
-	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
-};
-
-struct J3DIndTexMtxInfo {
-	/* 803257DC */ void operator=(J3DIndTexMtxInfo const&);
-};
-
-struct J3DFogInfo {
-	/* 80325800 */ void operator=(J3DFogInfo const&);
 };
 
 // 

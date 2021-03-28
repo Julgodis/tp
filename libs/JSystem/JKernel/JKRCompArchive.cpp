@@ -11,6 +11,61 @@
 // Types:
 // 
 
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+};
+
+struct JSUPtrLink {
+};
+
+struct JSUPtrList {
+	/* 802DBFF0 */ void prepend(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
+struct JKRMemArchive {
+	/* 802D6F5C */ void fetchResource_subroutine(u8*, u32, u8*, u32, int);
+};
+
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+	/* 802CE548 */ void free(void*);
+	/* 802CEB18 */ void copyMemory(void*, void*, u32);
+};
+
+struct JKRFileLoader {
+	/* 802D41D4 */ void unmount();
+};
+
+struct JKRExpandSwitch {
+};
+
+struct JKRDvdRipper {
+	struct EAllocDirection {
+	};
+
+	/* 802D9C54 */ void loadToMainRAM(s32, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
+};
+
+struct JKRDvdFile {
+	/* 802D96A0 */ JKRDvdFile(s32);
+};
+
+struct JKRDvdArchive {
+	/* 802D8474 */ void fetchResource_subroutine(s32, u32, u32, JKRHeap*, int, int, u8**);
+	/* 802D826C */ void fetchResource_subroutine(s32, u32, u32, u8*, u32, int, int);
+};
+
+struct JKRDvdAramRipper {
+	/* 802DA874 */ void loadToAram(s32, u32, JKRExpandSwitch, u32, u32, u32*);
+};
+
+struct JKRDecomp {
+	/* 802DB988 */ void orderSync(u8*, u8*, u32, u32);
+};
+
 struct JKRArchive {
 	struct EMountDirection {
 	};
@@ -48,22 +103,6 @@ struct JKRCompArchive {
 	/* 802D9360 */ void getExpandedResSize(void const*) const;
 };
 
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-	/* 802CE548 */ void free(void*);
-	/* 802CEB18 */ void copyMemory(void*, void*, u32);
-};
-
-struct JKRExpandSwitch {
-};
-
-struct JKRAram {
-	/* 802D233C */ void mainRamToAram(u8*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
-	/* 802D25B4 */ void aramToMainRam(u32, u8*, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
-};
-
 struct JKRAramHeap {
 	struct EAllocMode {
 	};
@@ -71,53 +110,14 @@ struct JKRAramHeap {
 	/* 802D2FBC */ void alloc(u32, JKRAramHeap::EAllocMode);
 };
 
-struct JKRFileLoader {
-	/* 802D41D4 */ void unmount();
-};
-
-struct JKRMemArchive {
-	/* 802D6F5C */ void fetchResource_subroutine(u8*, u32, u8*, u32, int);
-};
-
 struct JKRAramArchive {
 	/* 802D7858 */ void fetchResource_subroutine(u32, u32, u8*, u32, int);
 	/* 802D7914 */ void fetchResource_subroutine(u32, u32, JKRHeap*, int, u8**);
 };
 
-struct JKRDvdArchive {
-	/* 802D8474 */ void fetchResource_subroutine(s32, u32, u32, JKRHeap*, int, int, u8**);
-	/* 802D826C */ void fetchResource_subroutine(s32, u32, u32, u8*, u32, int, int);
-};
-
-struct JKRDvdFile {
-	/* 802D96A0 */ JKRDvdFile(s32);
-};
-
-struct JKRDvdRipper {
-	struct EAllocDirection {
-	};
-
-	/* 802D9C54 */ void loadToMainRAM(s32, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
-};
-
-struct JKRDvdAramRipper {
-	/* 802DA874 */ void loadToAram(s32, u32, JKRExpandSwitch, u32, u32, u32*);
-};
-
-struct JKRDecomp {
-	/* 802DB988 */ void orderSync(u8*, u8*, u32, u32);
-};
-
-struct JSUPtrLink {
-};
-
-struct JSUPtrList {
-	/* 802DBFF0 */ void prepend(JSUPtrLink*);
-	/* 802DC15C */ void remove(JSUPtrLink*);
-};
-
-struct JUTException {
-	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+struct JKRAram {
+	/* 802D233C */ void mainRamToAram(u8*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
+	/* 802D25B4 */ void aramToMainRam(u32, u8*, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 };
 
 // 

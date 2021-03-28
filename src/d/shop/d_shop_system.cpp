@@ -11,7 +11,22 @@
 // Types:
 // 
 
+struct mesg_flow_node_branch {
+};
+
 struct fopAc_ac_c {
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 struct Vec {
@@ -19,107 +34,6 @@ struct Vec {
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct mesg_flow_node_branch {
-};
-
-struct dMsgFlow_c {
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
-	/* 8024A528 */ void getEventId(int*);
-	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
-};
-
-struct STControl {
-	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
-	/* 800320AC */ void init();
-	/* 8003219C */ void checkTrigger();
-	/* 8003242C */ void checkLeftTrigger();
-	/* 800324A8 */ void checkRightTrigger();
-	/* 80032524 */ void checkUpTrigger();
-	/* 800325A0 */ void checkDownTrigger();
-};
-
-struct dShopSystem_c {
-	/* 80197338 */ void initShopSystem();
-	/* 801974E4 */ ~dShopSystem_c();
-	/* 801975C0 */ void onFlag(int);
-	/* 801975DC */ void offFlag(int);
-	/* 801975F8 */ void isFlag(int);
-	/* 80197618 */ void onSoldOutItemFlag(int);
-	/* 80197634 */ void offSoldOutItemFlag(int);
-	/* 80197650 */ void isSoldOutItemFlag(int);
-	/* 80197670 */ void checkController(u8, dMsgFlow_c*);
-	/* 80197808 */ void chooseItem3(u8);
-	/* 80197DD0 */ void chooseItem5(u8);
-	/* 80198250 */ void chooseItem4(u8);
-	/* 80198444 */ void moveCursor(int, u8);
-	/* 80198488 */ void moveCursor0(int, u8);
-	/* 80198708 */ void moveCursor1(int, u8);
-	/* 80198878 */ void drawCursor();
-	/* 80198950 */ void itemRotate();
-	/* 80198A2C */ void itemZoom(cXyz*);
-	/* 801990B0 */ bool seq_wait(fopAc_ac_c*, dMsgFlow_c*);
-	/* 801990B8 */ void seq_start(fopAc_ac_c*, dMsgFlow_c*);
-	/* 8019936C */ void seq_select_wait(fopAc_ac_c*, dMsgFlow_c*);
-	/* 801993C4 */ void seq_select_start(fopAc_ac_c*, dMsgFlow_c*);
-	/* 8019959C */ void seq_select(fopAc_ac_c*, dMsgFlow_c*);
-	/* 80199A18 */ void seq_moving(fopAc_ac_c*, dMsgFlow_c*);
-	/* 80199BF8 */ void seq_decide(fopAc_ac_c*, dMsgFlow_c*);
-	/* 80199D14 */ void seq_choose(fopAc_ac_c*, dMsgFlow_c*);
-	/* 80199E28 */ void seq_decide_yes(fopAc_ac_c*, dMsgFlow_c*);
-	/* 80199FA4 */ void seq_decide_no(fopAc_ac_c*, dMsgFlow_c*);
-	/* 8019A020 */ void seq_finish(fopAc_ac_c*, dMsgFlow_c*);
-	/* 8019A0C0 */ void seq_event(fopAc_ac_c*, dMsgFlow_c*);
-	/* 8019A0D0 */ void shop_init(bool);
-	/* 8019A158 */ void shop_process(fopAc_ac_c*, dMsgFlow_c*);
-	/* 8019A238 */ void createShopItem(int);
-	/* 8019A344 */ void setSeq(u8);
-	/* 8019A354 */ void setSoldOutFlag();
-	/* 8019A364 */ void setSoldOut();
-	/* 8019A4F4 */ void setSoldOutItemHide();
-	/* 8019A564 */ void deleteObject();
-	/* 8019A5D0 */ void searchItemActor();
-	/* 8019AB00 */ void getFlowNodeNum();
-	/* 8019AB1C */ void setSellItemMax(u8);
-	/* 8019AB24 */ void checkShopOpen();
-	/* 8019AB60 */ void checkLeftTrigger(STControl*);
-	/* 8019AB84 */ void checkRightTrigger(STControl*);
-	/* 8019ABA8 */ bool dpdMove();
-	/* 8019ACE0 */ bool beforeStartSeqAction(dMsgFlow_c*, int);
-	/* 8019ACE8 */ bool beforeSelectSeqAction(dMsgFlow_c*, int);
-	/* 8019ACF0 */ bool getResName2(int);
-};
-
-struct csXyz {
-};
-
-struct dSv_memBit_c {
-	/* 80034810 */ void onSwitch(int);
-	/* 80034860 */ void isSwitch(int) const;
-};
-
-struct daItemBase_c {
-	/* 80037A64 */ void hide();
-};
-
-struct dDlst_base_c {
-};
-
-struct dDlst_list_c {
-	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
-};
-
-struct daNpcT_faceMotionAnmData_c {
-};
-
-struct J3DJoint {
-};
-
-struct daNpcT_motionAnmData_c {
-};
-
-struct J3DModel {
 };
 
 struct daNpcT_c {
@@ -174,6 +88,90 @@ struct daNpcT_c {
 	/* 8014D0B8 */ bool getEyeballMaterialNo();
 };
 
+struct daItemBase_c {
+	/* 80037A64 */ void hide();
+};
+
+struct dSv_memBit_c {
+	/* 80034810 */ void onSwitch(int);
+	/* 80034860 */ void isSwitch(int) const;
+};
+
+struct STControl {
+	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
+	/* 800320AC */ void init();
+	/* 8003219C */ void checkTrigger();
+	/* 8003242C */ void checkLeftTrigger();
+	/* 800324A8 */ void checkRightTrigger();
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct dMsgFlow_c {
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+	/* 8024A528 */ void getEventId(int*);
+	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
+};
+
+struct dShopSystem_c {
+	/* 80197338 */ void initShopSystem();
+	/* 801974E4 */ ~dShopSystem_c();
+	/* 801975C0 */ void onFlag(int);
+	/* 801975DC */ void offFlag(int);
+	/* 801975F8 */ void isFlag(int);
+	/* 80197618 */ void onSoldOutItemFlag(int);
+	/* 80197634 */ void offSoldOutItemFlag(int);
+	/* 80197650 */ void isSoldOutItemFlag(int);
+	/* 80197670 */ void checkController(u8, dMsgFlow_c*);
+	/* 80197808 */ void chooseItem3(u8);
+	/* 80197DD0 */ void chooseItem5(u8);
+	/* 80198250 */ void chooseItem4(u8);
+	/* 80198444 */ void moveCursor(int, u8);
+	/* 80198488 */ void moveCursor0(int, u8);
+	/* 80198708 */ void moveCursor1(int, u8);
+	/* 80198878 */ void drawCursor();
+	/* 80198950 */ void itemRotate();
+	/* 80198A2C */ void itemZoom(cXyz*);
+	/* 801990B0 */ bool seq_wait(fopAc_ac_c*, dMsgFlow_c*);
+	/* 801990B8 */ void seq_start(fopAc_ac_c*, dMsgFlow_c*);
+	/* 8019936C */ void seq_select_wait(fopAc_ac_c*, dMsgFlow_c*);
+	/* 801993C4 */ void seq_select_start(fopAc_ac_c*, dMsgFlow_c*);
+	/* 8019959C */ void seq_select(fopAc_ac_c*, dMsgFlow_c*);
+	/* 80199A18 */ void seq_moving(fopAc_ac_c*, dMsgFlow_c*);
+	/* 80199BF8 */ void seq_decide(fopAc_ac_c*, dMsgFlow_c*);
+	/* 80199D14 */ void seq_choose(fopAc_ac_c*, dMsgFlow_c*);
+	/* 80199E28 */ void seq_decide_yes(fopAc_ac_c*, dMsgFlow_c*);
+	/* 80199FA4 */ void seq_decide_no(fopAc_ac_c*, dMsgFlow_c*);
+	/* 8019A020 */ void seq_finish(fopAc_ac_c*, dMsgFlow_c*);
+	/* 8019A0C0 */ void seq_event(fopAc_ac_c*, dMsgFlow_c*);
+	/* 8019A0D0 */ void shop_init(bool);
+	/* 8019A158 */ void shop_process(fopAc_ac_c*, dMsgFlow_c*);
+	/* 8019A238 */ void createShopItem(int);
+	/* 8019A344 */ void setSeq(u8);
+	/* 8019A354 */ void setSoldOutFlag();
+	/* 8019A364 */ void setSoldOut();
+	/* 8019A4F4 */ void setSoldOutItemHide();
+	/* 8019A564 */ void deleteObject();
+	/* 8019A5D0 */ void searchItemActor();
+	/* 8019AB00 */ void getFlowNodeNum();
+	/* 8019AB1C */ void setSellItemMax(u8);
+	/* 8019AB24 */ void checkShopOpen();
+	/* 8019AB60 */ void checkLeftTrigger(STControl*);
+	/* 8019AB84 */ void checkRightTrigger(STControl*);
+	/* 8019ABA8 */ bool dpdMove();
+	/* 8019ACE0 */ bool beforeStartSeqAction(dMsgFlow_c*, int);
+	/* 8019ACE8 */ bool beforeSelectSeqAction(dMsgFlow_c*, int);
+	/* 8019ACF0 */ bool getResName2(int);
+};
+
+struct dShopItemCtrl_c {
+	/* 80196958 */ ~dShopItemCtrl_c();
+	/* 801969A0 */ void getCurrentPos(int);
+	/* 80196A3C */ void isHomePos(int);
+	/* 80196AF0 */ void setRotateAnime(int);
+	/* 80196BA4 */ void setZoomAnime(int, cXyz*, s16, bool);
+};
+
 struct JKRArchive {
 };
 
@@ -185,20 +183,6 @@ struct dSelect_cursor_c {
 	/* 801953CC */ void decAlpha();
 };
 
-struct ShopCam_action_c {
-	/* 80196544 */ void setCamDataIdx(fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, cXyz*, cXyz*);
-	/* 80196608 */ void setCamDataIdx2(fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, cXyz*, cXyz*);
-	/* 801968B8 */ void setMasterCamCtrPos(cXyz*);
-};
-
-struct dShopItemCtrl_c {
-	/* 80196958 */ ~dShopItemCtrl_c();
-	/* 801969A0 */ void getCurrentPos(int);
-	/* 80196A3C */ void isHomePos(int);
-	/* 80196AF0 */ void setRotateAnime(int);
-	/* 80196BA4 */ void setZoomAnime(int, cXyz*, s16, bool);
-};
-
 struct dMsgObject_c {
 	/* 802378B8 */ void setShopWaitTimer(u8);
 	/* 8023822C */ void getStatus();
@@ -207,11 +191,27 @@ struct dMsgObject_c {
 	/* 802383D0 */ void getMessageID();
 };
 
+struct dDlst_base_c {
+};
+
+struct dDlst_list_c {
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
+};
+
+struct csXyz {
+};
+
 struct JAISoundID {
 };
 
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct ShopCam_action_c {
+	/* 80196544 */ void setCamDataIdx(fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, cXyz*, cXyz*);
+	/* 80196608 */ void setCamDataIdx2(fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*, cXyz*, cXyz*);
+	/* 801968B8 */ void setMasterCamCtrPos(cXyz*);
 };
 
 // 
@@ -273,7 +273,6 @@ extern "C" bool beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
 extern "C" bool beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
 extern "C" bool getResName2__13dShopSystem_cFi(); // 1
 extern "C" extern char const* const d_shop_d_shop_system__stringBase0;
-extern "C" extern void* __vt__13dShopSystem_c[52 + 1 /* padding */];
 
 // 
 // External References:
@@ -493,7 +492,7 @@ SECTION_SDATA2 static u32 lit_4100 = 0x3DCCCCCD;
 /* 80453B10-80453B14 0004+00 s=1 e=0 z=0  None .sdata2    @4101                                                        */
 SECTION_SDATA2 static u32 lit_4101 = 0x3F333333;
 
-/* 80197338-801974E4 01AC+00 s=0 e=0 z=19  None .text      initShopSystem__13dShopSystem_cFv                            */
+/* 80197338-801974E4 01AC+00 s=0 e=0 z=0  None .text      initShopSystem__13dShopSystem_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -618,8 +617,8 @@ SECTION_DATA static u8 process[144 + 120 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BBA7C-803BBB50 00D0+04 s=1 e=0 z=10  None .data      __vt__13dShopSystem_c                                        */
-SECTION_DATA void* __vt__13dShopSystem_c[52 + 1 /* padding */] = {
+/* 803BBA7C-803BBB50 00D0+04 s=1 e=0 z=0  None .data      __vt__13dShopSystem_c                                        */
+SECTION_DATA static void* __vt__13dShopSystem_c[52 + 1 /* padding */] = {
 	(void*)NULL,
 	(void*)NULL,
 	(void*)__dt__13dShopSystem_cFv,
@@ -676,7 +675,7 @@ SECTION_DATA void* __vt__13dShopSystem_c[52 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 801974E4-801975C0 00DC+00 s=1 e=0 z=10  None .text      __dt__13dShopSystem_cFv                                      */
+/* 801974E4-801975C0 00DC+00 s=1 e=0 z=0  None .text      __dt__13dShopSystem_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -843,7 +842,7 @@ asm void dShopSystem_c::moveCursor1(int param_0, u8 param_1) {
 #pragma pop
 
 
-/* 80198878-80198950 00D8+00 s=0 e=0 z=9  None .text      drawCursor__13dShopSystem_cFv                                */
+/* 80198878-80198950 00D8+00 s=0 e=0 z=0  None .text      drawCursor__13dShopSystem_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -854,7 +853,7 @@ asm void dShopSystem_c::drawCursor() {
 #pragma pop
 
 
-/* 80198950-80198A2C 00DC+00 s=0 e=0 z=9  None .text      itemRotate__13dShopSystem_cFv                                */
+/* 80198950-80198A2C 00DC+00 s=0 e=0 z=0  None .text      itemRotate__13dShopSystem_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -902,7 +901,7 @@ SECTION_SDATA2 static u32 lit_5006 = 0x43570000;
 /* 80453B40-80453B44 0004+00 s=1 e=0 z=0  None .sdata2    @5007                                                        */
 SECTION_SDATA2 static u32 lit_5007 = 0x41700000;
 
-/* 80198A2C-801990B0 0684+00 s=0 e=0 z=9  None .text      itemZoom__13dShopSystem_cFP4cXyz                             */
+/* 80198A2C-801990B0 0684+00 s=0 e=0 z=0  None .text      itemZoom__13dShopSystem_cFP4cXyz                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1059,7 +1058,7 @@ asm void dShopSystem_c::seq_event(fopAc_ac_c* param_0, dMsgFlow_c* param_1) {
 #pragma pop
 
 
-/* 8019A0D0-8019A158 0088+00 s=0 e=0 z=9  None .text      shop_init__13dShopSystem_cFb                                 */
+/* 8019A0D0-8019A158 0088+00 s=0 e=0 z=0  None .text      shop_init__13dShopSystem_cFb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1070,7 +1069,7 @@ asm void dShopSystem_c::shop_init(bool param_0) {
 #pragma pop
 
 
-/* 8019A158-8019A238 00E0+00 s=0 e=0 z=9  None .text      shop_process__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c     */
+/* 8019A158-8019A238 00E0+00 s=0 e=0 z=0  None .text      shop_process__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1096,7 +1095,7 @@ SECTION_SDATA2 static u8 data_80453B58[6 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 8019A238-8019A344 010C+00 s=0 e=0 z=1  None .text      createShopItem__13dShopSystem_cFi                            */
+/* 8019A238-8019A344 010C+00 s=0 e=0 z=0  None .text      createShopItem__13dShopSystem_cFi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1151,7 +1150,7 @@ asm void dShopSystem_c::setSoldOutItemHide() {
 #pragma pop
 
 
-/* 8019A564-8019A5D0 006C+00 s=1 e=0 z=10  None .text      deleteObject__13dShopSystem_cFv                              */
+/* 8019A564-8019A5D0 006C+00 s=1 e=0 z=0  None .text      deleteObject__13dShopSystem_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1187,7 +1186,7 @@ SECTION_SDATA2 static u32 lit_5693 = 0x43750000;
 /* 80453B7C-80453B80 0004+00 s=1 e=0 z=0  None .sdata2    @5694                                                        */
 SECTION_SDATA2 static u32 lit_5694 = 0xC3BE0000;
 
-/* 8019A5D0-8019AB00 0530+00 s=1 e=0 z=8  None .text      searchItemActor__13dShopSystem_cFv                           */
+/* 8019A5D0-8019AB00 0530+00 s=1 e=0 z=0  None .text      searchItemActor__13dShopSystem_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1209,7 +1208,7 @@ asm void dShopSystem_c::getFlowNodeNum() {
 #pragma pop
 
 
-/* 8019AB1C-8019AB24 0008+00 s=0 e=0 z=8  None .text      setSellItemMax__13dShopSystem_cFUc                           */
+/* 8019AB1C-8019AB24 0008+00 s=0 e=0 z=0  None .text      setSellItemMax__13dShopSystem_cFUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1220,7 +1219,7 @@ asm void dShopSystem_c::setSellItemMax(u8 param_0) {
 #pragma pop
 
 
-/* 8019AB24-8019AB60 003C+00 s=0 e=0 z=9  None .text      checkShopOpen__13dShopSystem_cFv                             */
+/* 8019AB24-8019AB60 003C+00 s=0 e=0 z=0  None .text      checkShopOpen__13dShopSystem_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

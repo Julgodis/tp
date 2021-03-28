@@ -11,10 +11,24 @@
 // Types:
 // 
 
+struct JKRHeap {
+};
+
 struct JASWaveInfo {
 };
 
-struct JKRHeap {
+struct JASWaveHandle {
+	/* 80298BD0 */ ~JASWaveHandle();
+};
+
+struct JASWaveBank {
+	/* 80298B88 */ ~JASWaveBank();
+};
+
+struct JASWaveArc {
+	/* 8029A13C */ JASWaveArc();
+	/* 8029A1B4 */ ~JASWaveArc();
+	/* 8029A664 */ void onDispose();
 };
 
 struct JASBasicWaveBank {
@@ -49,20 +63,6 @@ struct JASBasicWaveBank {
 	/* 80298910 */ void setWaveInfo(JASBasicWaveBank::TWaveGroup*, int, u16, JASWaveInfo const&);
 	/* 80298C6C */ void getWaveArc(u32);
 	/* 80298C8C */ void getArcCount() const;
-};
-
-struct JASWaveBank {
-	/* 80298B88 */ ~JASWaveBank();
-};
-
-struct JASWaveHandle {
-	/* 80298BD0 */ ~JASWaveHandle();
-};
-
-struct JASWaveArc {
-	/* 8029A13C */ JASWaveArc();
-	/* 8029A1B4 */ ~JASWaveArc();
-	/* 8029A664 */ void onDispose();
 };
 
 // 

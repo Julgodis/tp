@@ -11,10 +11,22 @@
 // Types:
 // 
 
-struct mDoDvdThd {
-	/* 800157FC */ void main(void*);
-	/* 80015858 */ void create(s32);
-	/* 800158B4 */ void suspend();
+struct node_list_class {
+};
+
+struct node_class {
+};
+
+struct JKRHeap {
+	/* 802CE438 */ void becomeCurrentHeap();
+	/* 802CE700 */ void getSize(void*);
+};
+
+struct mDoDvdThd_toMainRam_c {
+	/* 80016338 */ mDoDvdThd_toMainRam_c(u8);
+	/* 80016394 */ void create(char const*, u8, JKRHeap*);
+	/* 8001645C */ ~mDoDvdThd_toMainRam_c();
+	/* 800164BC */ void execute();
 };
 
 struct mDoDvdThd_command_c {
@@ -30,25 +42,6 @@ struct mDoDvdThd_param_c {
 	/* 800159E4 */ void addition(mDoDvdThd_command_c*);
 	/* 80015A3C */ void cut(mDoDvdThd_command_c*);
 	/* 80015AD8 */ void mainLoop();
-};
-
-struct mDoDvdThd_callback_c {
-	/* 80015BB8 */ ~mDoDvdThd_callback_c();
-	/* 80015C18 */ mDoDvdThd_callback_c(void* (*)(void*), void*);
-	/* 80015C74 */ void create(void* (*)(void*), void*);
-	/* 80015CF0 */ void execute();
-};
-
-struct JKRHeap {
-	/* 802CE438 */ void becomeCurrentHeap();
-	/* 802CE700 */ void getSize(void*);
-};
-
-struct mDoDvdThd_mountArchive_c {
-	/* 80015D44 */ ~mDoDvdThd_mountArchive_c();
-	/* 80015DA4 */ mDoDvdThd_mountArchive_c(u8);
-	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
-	/* 80015EDC */ void execute();
 };
 
 struct JKRArchive {
@@ -68,25 +61,24 @@ struct mDoDvdThd_mountXArchive_c {
 	/* 800162B0 */ void execute();
 };
 
-struct mDoDvdThd_toMainRam_c {
-	/* 80016338 */ mDoDvdThd_toMainRam_c(u8);
-	/* 80016394 */ void create(char const*, u8, JKRHeap*);
-	/* 8001645C */ ~mDoDvdThd_toMainRam_c();
-	/* 800164BC */ void execute();
+struct mDoDvdThd_mountArchive_c {
+	/* 80015D44 */ ~mDoDvdThd_mountArchive_c();
+	/* 80015DA4 */ mDoDvdThd_mountArchive_c(u8);
+	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
+	/* 80015EDC */ void execute();
 };
 
-struct node_class {
+struct mDoDvdThd_callback_c {
+	/* 80015BB8 */ ~mDoDvdThd_callback_c();
+	/* 80015C18 */ mDoDvdThd_callback_c(void* (*)(void*), void*);
+	/* 80015C74 */ void create(void* (*)(void*), void*);
+	/* 80015CF0 */ void execute();
 };
 
-struct node_list_class {
-};
-
-struct JASTaskThread {
-	/* 8028FB5C */ void sendCmdMsg(void (*)(void*), void const*, u32);
-};
-
-struct JASDvd {
-	/* 8028FEFC */ void getThreadPointer();
+struct mDoDvdThd {
+	/* 800157FC */ void main(void*);
+	/* 80015858 */ void create(s32);
+	/* 800158B4 */ void suspend();
 };
 
 struct OSThread {
@@ -109,6 +101,14 @@ struct JKRDvdRipper {
 	};
 
 	/* 802D9C54 */ void loadToMainRAM(s32, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
+};
+
+struct JASTaskThread {
+	/* 8028FB5C */ void sendCmdMsg(void (*)(void*), void const*, u32);
+};
+
+struct JASDvd {
+	/* 8028FEFC */ void getThreadPointer();
 };
 
 // 
@@ -527,7 +527,7 @@ asm mDoDvdThd_mountArchive_c::mDoDvdThd_mountArchive_c(u8 param_0) {
 #pragma pop
 
 
-/* 80015E14-80015EDC 00C8+00 s=0 e=10 z=1  None .text      create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap            */
+/* 80015E14-80015EDC 00C8+00 s=0 e=10 z=0  None .text      create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

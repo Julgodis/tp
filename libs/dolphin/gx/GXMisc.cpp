@@ -132,7 +132,7 @@ extern "C" asm void GXSetDrawDone() {
 /* 80451974-8045197C 0008+00 s=3 e=0 z=0  None .sbss      FinishQueue                                                  */
 static u8 FinishQueue[8];
 
-/* 8035C2F4-8035C374 0080+00 s=0 e=3 z=1  None .text      GXDrawDone                                                   */
+/* 8035C2F4-8035C374 0080+00 s=0 e=3 z=0  None .text      GXDrawDone                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

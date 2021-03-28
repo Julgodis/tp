@@ -11,9 +11,93 @@
 // Types:
 // 
 
+struct mDoMemCd_Ctrl_c {
+	/* 800169B4 */ void load();
+	/* 80016AB0 */ void LoadSync(void*, u32, u32);
+	/* 80016B58 */ void save(void*, u32, u32);
+	/* 80016CE0 */ void SaveSync();
+	/* 80016D74 */ void getStatus(u32);
+	/* 80016E58 */ void command_format();
+	/* 80016F2C */ void FormatSync();
+	/* 800170B8 */ void command_attach();
+};
+
+struct JKRHeap {
+};
+
+struct mDoDvdThd_mountArchive_c {
+	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
+};
+
+struct dSv_save_c {
+};
+
+struct dSv_player_item_c {
+	/* 80032FB8 */ void setItem(int, u8);
+	/* 80033030 */ void getItem(int, bool) const;
+};
+
+struct dSv_player_get_item_c {
+	/* 80033EC8 */ void isFirstBit(u8) const;
+};
+
+struct dSv_info_c {
+	/* 800350F0 */ void putSave(int);
+	/* 80035798 */ void memory_to_card(char*, int);
+	/* 80035BD0 */ void initdata_to_card(char*, int);
+};
+
+struct dSv_event_c {
+	/* 800349A4 */ void offEventBit(u16);
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+struct J2DPane {
+	/* 802F7FCC */ void animationTransform();
+};
+
+struct JKRArchive {
+};
+
+struct dSelect_cursor_c {
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
+	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
+	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
+	/* 801952A0 */ void setAlphaRate(f32);
+};
+
+struct dMsgString_c {
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
+struct J2DOrthoGraph {
+};
+
+struct STControl {
+	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
+	/* 8003219C */ void checkTrigger();
+	/* 8003242C */ void checkLeftTrigger();
+	/* 800324A8 */ void checkRightTrigger();
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct dMsgScrnExplain_c {
+	/* 8023CC88 */ dMsgScrnExplain_c(STControl*, u8, bool, u8);
+	/* 8023D7D8 */ void move();
+	/* 8023D918 */ void draw(J2DOrthoGraph*);
+	/* 8023E558 */ void openExplain(u32, u8, u8, u8, bool);
+};
+
 struct dMs_HIO_c {
 	/* 801EF654 */ dMs_HIO_c();
 	/* 801F6BD4 */ ~dMs_HIO_c();
+};
+
+struct dMeter2Info_c {
+	/* 8021DE18 */ void setMiniGameItem(u8);
+	/* 8021E0C4 */ void resetMiniGameItem(bool);
 };
 
 struct dMenu_save_c {
@@ -141,73 +225,6 @@ struct dMenu_save_c {
 	/* 801F69FC */ void _draw2();
 };
 
-struct dDlst_MenuSaveExplain_c {
-	/* 801F6ADC */ void draw();
-	/* 801F6B8C */ ~dDlst_MenuSaveExplain_c();
-};
-
-struct dDlst_MenuSave_c {
-	/* 801F6B0C */ void draw();
-	/* 801F6B44 */ ~dDlst_MenuSave_c();
-};
-
-struct JKRHeap {
-};
-
-struct mDoDvdThd_mountArchive_c {
-	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
-};
-
-struct mDoMemCd_Ctrl_c {
-	/* 800169B4 */ void load();
-	/* 80016AB0 */ void LoadSync(void*, u32, u32);
-	/* 80016B58 */ void save(void*, u32, u32);
-	/* 80016CE0 */ void SaveSync();
-	/* 80016D74 */ void getStatus(u32);
-	/* 80016E58 */ void command_format();
-	/* 80016F2C */ void FormatSync();
-	/* 800170B8 */ void command_attach();
-};
-
-struct STControl {
-	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
-	/* 8003219C */ void checkTrigger();
-	/* 8003242C */ void checkLeftTrigger();
-	/* 800324A8 */ void checkRightTrigger();
-	/* 80032524 */ void checkUpTrigger();
-	/* 800325A0 */ void checkDownTrigger();
-};
-
-struct dSv_player_item_c {
-	/* 80032FB8 */ void setItem(int, u8);
-	/* 80033030 */ void getItem(int, bool) const;
-};
-
-struct dSv_player_get_item_c {
-	/* 80033EC8 */ void isFirstBit(u8) const;
-};
-
-struct dSv_event_c {
-	/* 800349A4 */ void offEventBit(u16);
-	/* 800349BC */ void isEventBit(u16) const;
-};
-
-struct dSv_info_c {
-	/* 800350F0 */ void putSave(int);
-	/* 80035798 */ void memory_to_card(char*, int);
-	/* 80035BD0 */ void initdata_to_card(char*, int);
-};
-
-struct dDlst_base_c {
-};
-
-struct dDlst_list_c {
-	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
-};
-
-struct JKRArchive {
-};
-
 struct dFile_warning_c {
 	/* 80191BAC */ dFile_warning_c(JKRArchive*, u8);
 	/* 80191F18 */ void _move();
@@ -217,44 +234,61 @@ struct dFile_warning_c {
 	/* 80192190 */ void _draw();
 };
 
-struct dSv_save_c {
-};
-
 struct dFile_info_c {
 	/* 80192434 */ dFile_info_c(JKRArchive*, u8);
 	/* 80192954 */ void setSaveData(dSv_save_c*, int, u8);
 	/* 80192D60 */ void _draw();
 };
 
-struct J2DPane {
-	/* 802F7FCC */ void animationTransform();
+struct dDlst_base_c {
 };
 
-struct dSelect_cursor_c {
-	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
-	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
-	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
-	/* 801952A0 */ void setAlphaRate(f32);
+struct dDlst_list_c {
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct dMeter2Info_c {
-	/* 8021DE18 */ void setMiniGameItem(u8);
-	/* 8021E0C4 */ void resetMiniGameItem(bool);
+struct dDlst_MenuSave_c {
+	/* 801F6B0C */ void draw();
+	/* 801F6B44 */ ~dDlst_MenuSave_c();
 };
 
-struct J2DOrthoGraph {
+struct dDlst_MenuSaveExplain_c {
+	/* 801F6ADC */ void draw();
+	/* 801F6B8C */ ~dDlst_MenuSaveExplain_c();
 };
 
-struct dMsgScrnExplain_c {
-	/* 8023CC88 */ dMsgScrnExplain_c(STControl*, u8, bool, u8);
-	/* 8023D7D8 */ void move();
-	/* 8023D918 */ void draw(J2DOrthoGraph*);
-	/* 8023E558 */ void openExplain(u32, u8, u8, u8, bool);
+struct Z2SeqMgr {
+	/* 802B3EAC */ void checkBgmIDPlaying(u32);
 };
 
-struct dMsgString_c {
-	/* 80249C20 */ dMsgString_c();
-	/* 80249D28 */ ~dMsgString_c();
+struct Vec {
+};
+
+struct JAISoundID {
+};
+
+struct Z2SeMgr {
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+};
+
+struct JKRExpHeap {
+};
+
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+	/* 80300660 */ void setString(char const*, ...);
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 struct J2DGrafContext {
@@ -267,19 +301,8 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct JKRExpHeap {
-};
-
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 802548BC */ void colorAnime(s16, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, u8);
-	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
 };
 
 struct CPaneMgrAlpha {
@@ -288,33 +311,10 @@ struct CPaneMgrAlpha {
 	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
 };
 
-struct JAISoundID {
-};
-
-struct Vec {
-};
-
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-};
-
-struct Z2SeqMgr {
-	/* 802B3EAC */ void checkBgmIDPlaying(u32);
-};
-
-struct JKRFileLoader {
-	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
-};
-
-struct J2DTextBox {
-	/* 80300658 */ void getStringPtr() const;
-	/* 80300660 */ void setString(char const*, ...);
-	/* 8030074C */ void setString(s16, char const*, ...);
-};
-
-struct J2DAnmLoaderDataBase {
-	/* 80308A6C */ void load(void const*);
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 802548BC */ void colorAnime(s16, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, u8);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 // 

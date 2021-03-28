@@ -11,6 +11,44 @@
 // Types:
 // 
 
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+};
+
+struct JSUPtrLink {
+};
+
+struct JSUPtrList {
+	/* 802DBFF0 */ void prepend(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+	/* 802CE548 */ void free(void*);
+	/* 802CEB18 */ void copyMemory(void*, void*, u32);
+};
+
+struct JKRFileLoader {
+	/* 802D41D4 */ void unmount();
+};
+
+struct JKRExpandSwitch {
+};
+
+struct JKRDvdRipper {
+	struct EAllocDirection {
+	};
+
+	/* 802D9C54 */ void loadToMainRAM(s32, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
+};
+
+struct JKRDvdFile {
+	/* 802D96A0 */ JKRDvdFile(s32);
+};
+
 struct JKRArchive {
 	struct EMountDirection {
 	};
@@ -39,14 +77,6 @@ struct JKRArchive {
 	/* 802D6978 */ void getExpandSize(JKRArchive::SDIFileEntry*) const;
 };
 
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-	/* 802CE548 */ void free(void*);
-	/* 802CEB18 */ void copyMemory(void*, void*, u32);
-};
-
 struct JKRDvdArchive {
 	/* 802D7BF0 */ JKRDvdArchive(s32, JKRArchive::EMountDirection);
 	/* 802D7C98 */ ~JKRDvdArchive();
@@ -56,36 +86,6 @@ struct JKRDvdArchive {
 	/* 802D826C */ void fetchResource_subroutine(s32, u32, u32, u8*, u32, int, int);
 	/* 802D8474 */ void fetchResource_subroutine(s32, u32, u32, JKRHeap*, int, int, u8**);
 	/* 802D8698 */ void getExpandedResSize(void const*) const;
-};
-
-struct JKRFileLoader {
-	/* 802D41D4 */ void unmount();
-};
-
-struct JKRDvdFile {
-	/* 802D96A0 */ JKRDvdFile(s32);
-};
-
-struct JKRExpandSwitch {
-};
-
-struct JKRDvdRipper {
-	struct EAllocDirection {
-	};
-
-	/* 802D9C54 */ void loadToMainRAM(s32, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
-};
-
-struct JSUPtrLink {
-};
-
-struct JSUPtrList {
-	/* 802DBFF0 */ void prepend(JSUPtrLink*);
-	/* 802DC15C */ void remove(JSUPtrLink*);
-};
-
-struct JUTException {
-	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };
 
 // 

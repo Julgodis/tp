@@ -11,6 +11,23 @@
 // Types:
 // 
 
+struct dMsgString_c {
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
+struct dDlst_base_c {
+};
+
+struct dDlst_list_c {
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
+};
+
+struct dDlst_BrightCheck_c {
+	/* 801935D0 */ void draw();
+	/* 80193648 */ ~dDlst_BrightCheck_c();
+};
+
 struct JKRArchive {
 };
 
@@ -24,31 +41,18 @@ struct dBrightCheck_c {
 	/* 80193594 */ void _draw();
 };
 
-struct dDlst_BrightCheck_c {
-	/* 801935D0 */ void draw();
-	/* 80193648 */ ~dDlst_BrightCheck_c();
-};
-
-struct dDlst_base_c {
-};
-
-struct dDlst_list_c {
-	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
-};
-
-struct dMsgString_c {
-	/* 80249C20 */ dMsgString_c();
-	/* 80249D28 */ ~dMsgString_c();
+struct Vec {
 };
 
 struct JAISoundID {
 };
 
-struct Vec {
-};
-
 struct Z2SeMgr {
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+};
+
+struct J2DTextBox {
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 struct J2DGrafContext {
@@ -58,10 +62,6 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct J2DTextBox {
-	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // 

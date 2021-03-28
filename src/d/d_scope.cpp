@@ -25,13 +25,6 @@ struct dScope_c {
 	/* 80194054 */ void close_proc();
 };
 
-struct JUtility {
-	struct TColor {
-		/* 80193960 */ TColor();
-	};
-
-};
-
 struct dMeterSub_c {
 	/* 801940D4 */ ~dMeterSub_c();
 	/* 8019411C */ bool _create();
@@ -42,6 +35,13 @@ struct dMeterSub_c {
 };
 
 struct ResTIMG {
+};
+
+struct JUtility {
+	struct TColor {
+		/* 80193960 */ TColor();
+	};
+
 };
 
 struct J2DPicture {

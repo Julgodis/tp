@@ -11,7 +11,59 @@
 // Types:
 // 
 
+struct JKRHeap {
+};
+
+struct mDoDvdThd_mountArchive_c {
+	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
+};
+
+struct dSv_player_config_c {
+	/* 80034684 */ void getSound();
+	/* 8003468C */ void setSound(u8);
+	/* 8003469C */ void setVibration(u8);
+};
+
+struct J2DBasePosition {
+};
+
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
+	/* 802F7FCC */ void animationTransform();
+};
+
 struct JKRArchive {
+};
+
+struct dSelect_cursor_c {
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
+	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
+	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
+	/* 801951C8 */ void setScale(f32);
+	/* 801952A0 */ void setAlphaRate(f32);
+};
+
+struct dMw_c {
+	/* 801FCE08 */ void dMw_fade_out();
+	/* 801FCE78 */ void dMw_fade_in();
+};
+
+struct dMsgString_c {
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
+struct dMeterHaihai_c {
+	/* 8020AE8C */ dMeterHaihai_c(u8);
+	/* 8020B814 */ void drawHaihai(u8, f32, f32, f32, f32);
+};
+
+struct JMSMesgEntry_c {
+};
+
+struct dMeter2Info_c {
+	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
 };
 
 struct STControl {
@@ -96,22 +148,8 @@ struct dMenu_Option_c {
 	/* 801E8E6C */ void draw();
 };
 
-struct JKRHeap {
-};
-
-struct mDoDvdThd_mountArchive_c {
-	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
-};
-
-struct dComIfG_play_c {
-	/* 8002B3A8 */ void setNowVibration(u8);
-	/* 8002B3B0 */ void getNowVibration();
-};
-
-struct dSv_player_config_c {
-	/* 80034684 */ void getSound();
-	/* 8003468C */ void setSound(u8);
-	/* 8003469C */ void setVibration(u8);
+struct dMenu_Calibration_c {
+	/* 801AEDAC */ void _move();
 };
 
 struct JUtility {
@@ -131,82 +169,15 @@ struct dFile_warning_c {
 	/* 80192240 */ void setFontColor(JUtility::TColor, JUtility::TColor);
 };
 
-struct J2DBasePosition {
-};
-
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
-	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
-	/* 802F7FCC */ void animationTransform();
-};
-
-struct dSelect_cursor_c {
-	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
-	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
-	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
-	/* 801951C8 */ void setScale(f32);
-	/* 801952A0 */ void setAlphaRate(f32);
-};
-
-struct dMenu_Calibration_c {
-	/* 801AEDAC */ void _move();
-};
-
-struct dMw_c {
-	/* 801FCE08 */ void dMw_fade_out();
-	/* 801FCE78 */ void dMw_fade_in();
-};
-
-struct dMeterHaihai_c {
-	/* 8020AE8C */ dMeterHaihai_c(u8);
-	/* 8020B814 */ void drawHaihai(u8, f32, f32, f32, f32);
-};
-
-struct JMSMesgEntry_c {
-};
-
-struct dMeter2Info_c {
-	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
-};
-
-struct dMsgString_c {
-	/* 80249C20 */ dMsgString_c();
-	/* 80249D28 */ ~dMsgString_c();
-};
-
-struct J2DGrafContext {
-};
-
-struct J2DScreen {
-	/* 802F8498 */ J2DScreen();
-	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
-	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-	/* 802F9690 */ void animation();
-};
-
-struct JKRExpHeap {
-};
-
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 80253930 */ CPaneMgr();
-	/* 80253A18 */ ~CPaneMgr();
-	/* 802545B0 */ void paneTrans(f32, f32);
-	/* 802548BC */ void colorAnime(s16, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, u8);
-	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
-};
-
-struct CPaneMgrAlpha {
-	/* 802555C8 */ void show();
-	/* 80255608 */ void hide();
-	/* 802557D0 */ void setAlphaRate(f32);
-	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
-};
-
-struct JAISoundID {
+struct dComIfG_play_c {
+	/* 8002B3A8 */ void setNowVibration(u8);
+	/* 8002B3B0 */ void getNowVibration();
 };
 
 struct Vec {
+};
+
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -217,8 +188,7 @@ struct Z2AudioMgr {
 	/* 802CD888 */ void setOutputMode(u32);
 };
 
-struct JKRFileLoader {
-	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+struct ResTIMG {
 };
 
 struct JUTGamePad {
@@ -231,11 +201,11 @@ struct JUTGamePad {
 
 };
 
-struct ResTIMG {
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
 };
 
-struct J2DPicture {
-	/* 802FC708 */ J2DPicture(ResTIMG const*);
+struct JKRExpHeap {
 };
 
 struct J2DTextBox {
@@ -243,8 +213,38 @@ struct J2DTextBox {
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
+struct J2DGrafContext {
+};
+
+struct J2DScreen {
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+	/* 802F9690 */ void animation();
+};
+
+struct J2DPicture {
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
 struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
+};
+
+struct CPaneMgrAlpha {
+	/* 802555C8 */ void show();
+	/* 80255608 */ void hide();
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
+};
+
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 80253930 */ CPaneMgr();
+	/* 80253A18 */ ~CPaneMgr();
+	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 802548BC */ void colorAnime(s16, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, u8);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 // 

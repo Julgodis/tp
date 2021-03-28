@@ -11,6 +11,21 @@
 // Types:
 // 
 
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+};
+
+struct JSUPtrLink {
+};
+
+struct JSUPtrList {
+	/* 802DBFF0 */ void prepend(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
+struct JKRMemBreakFlag {
+};
+
 struct JKRArchive {
 	struct EMountDirection {
 	};
@@ -35,9 +50,6 @@ struct JKRArchive {
 	/* 802D6734 */ void findPtrResource(void const*) const;
 	/* 802D693C */ void setExpandSize(JKRArchive::SDIFileEntry*, u32);
 	/* 802D6978 */ void getExpandSize(JKRArchive::SDIFileEntry*) const;
-};
-
-struct JKRMemBreakFlag {
 };
 
 struct JKRMemArchive {
@@ -75,18 +87,6 @@ struct JKRDvdRipper {
 
 struct JKRDecomp {
 	/* 802DB988 */ void orderSync(u8*, u8*, u32, u32);
-};
-
-struct JSUPtrLink {
-};
-
-struct JSUPtrList {
-	/* 802DBFF0 */ void prepend(JSUPtrLink*);
-	/* 802DC15C */ void remove(JSUPtrLink*);
-};
-
-struct JUTException {
-	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };
 
 // 

@@ -20,11 +20,6 @@ struct JGeometry {
 
 };
 
-struct Z2AudibleAbsPos {
-	/* 802BBCDC */ void calc(JGeometry::TVec3<f32> const&);
-	/* 802BBD18 */ void init(JGeometry::TVec3<f32>*, JGeometry::TVec3<f32> const&, JGeometry::TVec3<f32> const*);
-};
-
 struct JASSoundParams {
 	/* 8029E3B0 */ void clamp();
 	/* 8029E47C */ void combine(JASSoundParams const&, JASSoundParams const&);
@@ -38,19 +33,6 @@ struct Z2Audible {
 	/* 802BC204 */ void getChannel(int);
 	/* 802BC218 */ void getDistVolBit();
 	/* 802BD510 */ ~Z2Audible();
-};
-
-struct Z2AudibleChannel {
-	/* 802BBE74 */ Z2AudibleChannel();
-};
-
-struct Z2Audience3DSetting {
-	/* 802BC248 */ Z2Audience3DSetting();
-	/* 802BC284 */ void init();
-	/* 802BC308 */ void initVolumeDist();
-	/* 802BC4D0 */ void updateVolumeDist(f32);
-	/* 802BC6A4 */ void initDolbyDist();
-	/* 802BC6F8 */ void updateDolbyDist(f32, f32);
 };
 
 struct Vec {
@@ -76,11 +58,36 @@ struct Z2SpotMic {
 	/* 802BD03C */ void calcMicVolume(f32, int, f32);
 };
 
-struct JAIAudible {
-	/* 8029EFAC */ ~JAIAudible();
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Z2SoundInfo {
+	/* 802BB158 */ void getAudibleSwFull(JAISoundID);
+};
+
+struct Z2Calc {
+	struct CurveSign {
+	};
+
+	/* 802A968C */ void linearTransform(f32, f32, f32, f32, f32, bool);
+	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
+};
+
+struct Z2Audience3DSetting {
+	/* 802BC248 */ Z2Audience3DSetting();
+	/* 802BC284 */ void init();
+	/* 802BC308 */ void initVolumeDist();
+	/* 802BC4D0 */ void updateVolumeDist(f32);
+	/* 802BC6A4 */ void initDolbyDist();
+	/* 802BC6F8 */ void updateDolbyDist(f32, f32);
+};
+
+struct Z2AudibleChannel {
+	/* 802BBE74 */ Z2AudibleChannel();
+};
+
+struct JAIAudible {
+	/* 8029EFAC */ ~JAIAudible();
 };
 
 struct Z2Audience {
@@ -105,6 +112,11 @@ struct Z2Audience {
 	/* 802BDED4 */ void getMaxChannels();
 };
 
+struct Z2AudibleAbsPos {
+	/* 802BBCDC */ void calc(JGeometry::TVec3<f32> const&);
+	/* 802BBD18 */ void init(JGeometry::TVec3<f32>*, JGeometry::TVec3<f32> const&, JGeometry::TVec3<f32> const*);
+};
+
 template <typename A0>
 struct JASMemPool { };
 /* JASMemPool<Z2Audible> */
@@ -121,18 +133,6 @@ struct JASGenericMemPool {
 
 struct JAIAudience {
 	/* 8029EFF4 */ ~JAIAudience();
-};
-
-struct Z2Calc {
-	struct CurveSign {
-	};
-
-	/* 802A968C */ void linearTransform(f32, f32, f32, f32, f32, bool);
-	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
-};
-
-struct Z2SoundInfo {
-	/* 802BB158 */ void getAudibleSwFull(JAISoundID);
 };
 
 // 

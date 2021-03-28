@@ -11,15 +11,15 @@
 // Types:
 // 
 
+struct JPAExtraShape {
+	/* 8027AD88 */ JPAExtraShape(u8 const*);
+	/* 8027ADBC */ void init();
+};
+
 struct JPAEmitterWorkData {
 };
 
 struct JPABaseParticle {
-};
-
-struct JPAExtraShape {
-	/* 8027AD88 */ JPAExtraShape(u8 const*);
-	/* 8027ADBC */ void init();
 };
 
 // 

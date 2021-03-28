@@ -11,21 +11,66 @@
 // Types:
 // 
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct JSURandomInputStream {
 	/* 80255328 */ ~JSURandomInputStream();
+};
+
+struct JSUMemoryInputStream {
+	/* 802552B8 */ ~JSUMemoryInputStream();
+	/* 802DC520 */ void setBuffer(void const*, s32);
+};
+
+struct JSUIosBase {
+	/* 80255388 */ ~JSUIosBase();
+};
+
+struct JSUInputStream {
+	/* 802DC23C */ ~JSUInputStream();
+};
+
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE548 */ void free(void*);
+};
+
+struct JKRExpHeap {
 };
 
 struct JKRArchive {
 };
 
-struct J2DScreen {
-	/* 802F8748 */ void setPriority(JSURandomInputStream*, u32, JKRArchive*);
+struct JKRAramArchive {
 };
 
-struct JUtility {
-	struct TColor {
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
 	};
 
+};
+
+struct J2DWindow {
+	/* 80254000 */ void getBlack() const;
+	/* 8025400C */ void getWhite() const;
+	/* 802543E0 */ void setWhite(JUtility::TColor);
+	/* 80254430 */ void setBlack(JUtility::TColor);
+	/* 80254568 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
+};
+
+struct J2DTextBox {
+	/* 80254408 */ void setBlack(JUtility::TColor);
+};
+
+struct J2DScreen {
+	/* 802F8748 */ void setPriority(JSURandomInputStream*, u32, JKRArchive*);
 };
 
 struct J2DRotateAxis {
@@ -39,7 +84,18 @@ struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 };
 
-struct JKRExpHeap {
+struct J2DOrthoGraph {
+	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
+	/* 802E980C */ void setOrtho(JGeometry::TBox2<f32> const&, f32, f32);
+};
+
+struct CPaneMgrAlpha {
+	/* 802553EC */ CPaneMgrAlpha();
+	/* 8025546C */ ~CPaneMgrAlpha();
+	/* 80255658 */ void rateCalc(s16, s16, u8);
+	/* 80255A60 */ void childPaneCount(J2DPane*);
+	/* 80255ACC */ void childPaneGetAlpha(J2DPane*);
+	/* 80255B5C */ void childPaneSetAlpha(J2DPane*, u8);
 };
 
 struct CPaneMgr {
@@ -61,62 +117,6 @@ struct CPaneMgr {
 	/* 80254C90 */ void getGlobalVtx(J2DPane*, f32 (* )[3][4], u8, bool, s16);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 	/* 80254FB8 */ void getBounds(J2DPane*);
-};
-
-struct J2DWindow {
-	/* 80254000 */ void getBlack() const;
-	/* 8025400C */ void getWhite() const;
-	/* 802543E0 */ void setWhite(JUtility::TColor);
-	/* 80254430 */ void setBlack(JUtility::TColor);
-	/* 80254568 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
-};
-
-struct J2DTextBox {
-	/* 80254408 */ void setBlack(JUtility::TColor);
-};
-
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE548 */ void free(void*);
-};
-
-struct JSUMemoryInputStream {
-	/* 802552B8 */ ~JSUMemoryInputStream();
-	/* 802DC520 */ void setBuffer(void const*, s32);
-};
-
-struct JSUIosBase {
-	/* 80255388 */ ~JSUIosBase();
-};
-
-struct JKRAramArchive {
-};
-
-struct CPaneMgrAlpha {
-	/* 802553EC */ CPaneMgrAlpha();
-	/* 8025546C */ ~CPaneMgrAlpha();
-	/* 80255658 */ void rateCalc(s16, s16, u8);
-	/* 80255A60 */ void childPaneCount(J2DPane*);
-	/* 80255ACC */ void childPaneGetAlpha(J2DPane*);
-	/* 80255B5C */ void childPaneSetAlpha(J2DPane*, u8);
-};
-
-struct JSUInputStream {
-	/* 802DC23C */ ~JSUInputStream();
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
-	};
-
-};
-
-struct J2DOrthoGraph {
-	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
-	/* 802E980C */ void setOrtho(JGeometry::TBox2<f32> const&, f32, f32);
 };
 
 // 
@@ -242,7 +242,7 @@ asm CPaneMgr::CPaneMgr() {
 #pragma pop
 
 
-/* 80253984-80253A18 0094+00 s=0 e=58 z=2  None .text      __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap                 */
+/* 80253984-80253A18 0094+00 s=0 e=58 z=0  None .text      __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -439,7 +439,7 @@ SECTION_SDATA2 static f32 lit_4046[1 + 1 /* padding */] = {
 	0.0f,
 };
 
-/* 802545B0-80254638 0088+00 s=0 e=51 z=3  None .text      paneTrans__8CPaneMgrFff                                      */
+/* 802545B0-80254638 0088+00 s=0 e=51 z=0  None .text      paneTrans__8CPaneMgrFff                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -513,7 +513,7 @@ asm void CPaneMgr::getGlobalVtx(J2DPane* param_0, f32 (* param_1)[3][4], u8 para
 #pragma pop
 
 
-/* 80254EBC-80254FB8 00FC+00 s=0 e=56 z=1  None .text      getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs                    */
+/* 80254EBC-80254FB8 00FC+00 s=0 e=56 z=0  None .text      getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -539,7 +539,7 @@ asm void CPaneMgr::getBounds(J2DPane* param_0) {
 #pragma pop
 
 
-/* 802550E8-8025512C 0044+00 s=0 e=54 z=3  None .text      dPaneClass_showNullPane__FP9J2DScreen                        */
+/* 802550E8-8025512C 0044+00 s=0 e=54 z=0  None .text      dPaneClass_showNullPane__FP9J2DScreen                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

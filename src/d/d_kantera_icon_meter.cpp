@@ -26,6 +26,9 @@ struct dDlst_KanteraIcon_c {
 	/* 801AED1C */ ~dDlst_KanteraIcon_c();
 };
 
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
@@ -38,15 +41,12 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-struct JKRExpHeap {
+struct CPaneMgrAlpha {
+	/* 802557D0 */ void setAlphaRate(f32);
 };
 
 struct CPaneMgr {
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-};
-
-struct CPaneMgrAlpha {
-	/* 802557D0 */ void setAlphaRate(f32);
 };
 
 // 

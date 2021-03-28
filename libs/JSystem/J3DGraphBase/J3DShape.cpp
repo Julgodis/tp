@@ -11,10 +11,25 @@
 // Types:
 // 
 
-struct Vec {
+struct _GXVtxFmt {
+};
+
+struct _GXVtxAttrFmtList {
 };
 
 struct _GXAttr {
+};
+
+struct Vec {
+};
+
+struct J3DShapeMtx {
+	/* 803130A8 */ void resetMtxLoadCache();
+};
+
+struct J3DShapeDraw {
+	/* 80314974 */ void addTexMtxIndexInDL(u32, u32, u32);
+	/* 80314AD4 */ void draw() const;
 };
 
 struct J3DShape {
@@ -33,21 +48,6 @@ struct J3DShape {
 	/* 803155E0 */ void draw() const;
 	/* 80315628 */ void simpleDraw() const;
 	/* 803156AC */ void simpleDrawCache() const;
-};
-
-struct _GXVtxFmt {
-};
-
-struct _GXVtxAttrFmtList {
-};
-
-struct J3DShapeMtx {
-	/* 803130A8 */ void resetMtxLoadCache();
-};
-
-struct J3DShapeDraw {
-	/* 80314974 */ void addTexMtxIndexInDL(u32, u32, u32);
-	/* 80314AD4 */ void draw() const;
 };
 
 // 
@@ -266,10 +266,10 @@ asm void J3DShape::makeVcdVatCmd() {
 
 
 /* ############################################################################################## */
-/* 804515D0-804515D4 0004+00 s=5 e=25 z=9  None .sbss      sOldVcdVatCmd__8J3DShape                                     */
+/* 804515D0-804515D4 0004+00 s=5 e=25 z=0  None .sbss      sOldVcdVatCmd__8J3DShape                                     */
 u8 sOldVcdVatCmd__8J3DShape[4];
 
-/* 80315300-80315398 0098+00 s=2 e=6 z=3  None .text      loadPreDrawSetting__8J3DShapeCFv                             */
+/* 80315300-80315398 0098+00 s=2 e=6 z=0  None .text      loadPreDrawSetting__8J3DShapeCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

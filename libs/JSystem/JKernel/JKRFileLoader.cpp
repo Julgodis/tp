@@ -11,6 +11,23 @@
 // Types:
 // 
 
+struct JSUPtrList {
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF14 */ void initiate();
+};
+
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
+	/* 802DBE14 */ ~JSUPtrLink();
+};
+
+template <typename A0>
+struct JSUList { };
+/* JSUList<JKRFileLoader> */
+struct JSUList__template7 {
+	/* 802D45E4 */ ~JSUList__template7();
+};
+
 struct JKRFileLoader {
 	/* 802D40F0 */ JKRFileLoader();
 	/* 802D4148 */ ~JKRFileLoader();
@@ -23,26 +40,9 @@ struct JKRFileLoader {
 	/* 802D44C4 */ void fetchVolumeName(char*, s32, char const*);
 };
 
-template <typename A0>
-struct JSUList { };
-/* JSUList<JKRFileLoader> */
-struct JSUList__template7 {
-	/* 802D45E4 */ ~JSUList__template7();
-};
-
 struct JKRDisposer {
 	/* 802D147C */ JKRDisposer();
 	/* 802D14E4 */ ~JKRDisposer();
-};
-
-struct JSUPtrLink {
-	/* 802DBDFC */ JSUPtrLink(void*);
-	/* 802DBE14 */ ~JSUPtrLink();
-};
-
-struct JSUPtrList {
-	/* 802DBEAC */ ~JSUPtrList();
-	/* 802DBF14 */ void initiate();
 };
 
 // 
@@ -166,7 +166,7 @@ static u8 lit_2182[12];
 /* 80434354-80434360 000C+00 s=5 e=14 z=0  None .bss       sVolumeList__13JKRFileLoader                                 */
 u8 sVolumeList__13JKRFileLoader[12];
 
-/* 802D4270-802D4308 0098+00 s=0 e=29 z=1  None .text      getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader          */
+/* 802D4270-802D4308 0098+00 s=0 e=29 z=0  None .text      getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

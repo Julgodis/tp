@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct dMsgString_c {
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
 struct JUtility {
 	struct TColor {
 	};
@@ -37,9 +42,11 @@ struct dFile_warning_c {
 	/* 80192240 */ void setFontColor(JUtility::TColor, JUtility::TColor);
 };
 
-struct J2DTextBox {
-	/* 8019230C */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
-	/* 8030074C */ void setString(s16, char const*, ...);
+struct dDlst_base_c {
+};
+
+struct dDlst_list_c {
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
 struct dDlst_FileWarn_c {
@@ -47,10 +54,22 @@ struct dDlst_FileWarn_c {
 	/* 801923CC */ ~dDlst_FileWarn_c();
 };
 
-struct J2DAnmTransform {
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+};
+
+struct JKRExpHeap {
+};
+
+struct J2DTextBox {
+	/* 8019230C */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 struct J2DGrafContext {
+};
+
+struct J2DAnmTransform {
 };
 
 struct J2DScreen {
@@ -61,35 +80,16 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-struct dDlst_base_c {
-};
-
-struct dDlst_list_c {
-	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
-};
-
-struct dMsgString_c {
-	/* 80249C20 */ dMsgString_c();
-	/* 80249D28 */ ~dMsgString_c();
-};
-
-struct JKRExpHeap {
-};
-
-struct CPaneMgr {
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
-};
-
-struct JKRFileLoader {
-	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
-};
-
 struct J2DPane {
 	/* 802F7FC4 */ void setAnimation(J2DAnmTransform*);
 };
 
 struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
+};
+
+struct CPaneMgr {
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 };
 
 // 

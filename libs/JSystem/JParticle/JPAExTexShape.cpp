@@ -11,18 +11,18 @@
 // Types:
 // 
 
-struct JPAEmitterWorkData {
+struct _GXTexMapID {
+};
+
+struct JUTTexture {
+	/* 802DE840 */ void load(_GXTexMapID);
 };
 
 struct JPAExTexShape {
 	/* 8027B13C */ JPAExTexShape(u8 const*);
 };
 
-struct _GXTexMapID {
-};
-
-struct JUTTexture {
-	/* 802DE840 */ void load(_GXTexMapID);
+struct JPAEmitterWorkData {
 };
 
 // 

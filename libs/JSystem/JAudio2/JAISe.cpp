@@ -11,22 +11,8 @@
 // Types:
 // 
 
-struct JAISoundActivity {
-};
-
-struct JASSoundParams {
-};
-
-struct JAIAudience {
-};
-
-template <typename A0>
-struct JAISoundStrategyMgr { };
-/* JAISoundStrategyMgr<JAISe> */
-struct JAISoundStrategyMgr__template0 {
-};
-
-struct JAISeMgr {
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
 };
 
 struct JGeometry {
@@ -38,7 +24,53 @@ struct JGeometry {
 
 };
 
+struct JASSoundParams {
+};
+
+struct JASTrack {
+	/* 80291228 */ JASTrack();
+	/* 80291444 */ void setChannelMgrCount(u32);
+	/* 802915D4 */ void init();
+	/* 802919F4 */ void assignExtBuffer(u32, JASSoundParams*);
+	/* 80291A08 */ void setSeqData(void*, u32);
+	/* 80291A28 */ void startSeq();
+	/* 80291A78 */ void stopSeq();
+	/* 802927A0 */ void mute(bool);
+	/* 80292A3C */ void pause(bool);
+	/* 80292B8C */ void setTempoRate(f32);
+};
+
+template <typename A0>
+struct JAISoundStrategyMgr { };
+/* JAISoundStrategyMgr<JAISe> */
+struct JAISoundStrategyMgr__template0 {
+};
+
+struct JAISoundParams {
+	/* 802A2280 */ void mixOutAll(JASSoundParams const&, JASSoundParams*, f32);
+};
+
 struct JAISoundID {
+};
+
+struct JAISoundActivity {
+};
+
+struct JAIAudience {
+};
+
+struct JAISound {
+	/* 802A22F8 */ JAISound();
+	/* 802A2328 */ void start_JAISound_(JAISoundID, JGeometry::TVec3<f32> const*, JAIAudience*);
+	/* 802A25E0 */ bool asSeq();
+	/* 802A25E8 */ bool asStream();
+	/* 802A25F0 */ void die_JAISound_();
+	/* 802A266C */ void increasePrepareCount_JAISound_();
+	/* 802A26B8 */ void calc_JAISound_();
+	/* 802A29DC */ void initTrack_JAISound_(JASTrack*);
+};
+
+struct JAISeMgr {
 };
 
 struct JAISe {
@@ -59,38 +91,6 @@ struct JAISe {
 	/* 8029F854 */ void getChildTrack(int);
 	/* 8029F864 */ void asSe();
 	/* 8029F868 */ void getTempoMgr();
-};
-
-struct JASTrack {
-	/* 80291228 */ JASTrack();
-	/* 80291444 */ void setChannelMgrCount(u32);
-	/* 802915D4 */ void init();
-	/* 802919F4 */ void assignExtBuffer(u32, JASSoundParams*);
-	/* 80291A08 */ void setSeqData(void*, u32);
-	/* 80291A28 */ void startSeq();
-	/* 80291A78 */ void stopSeq();
-	/* 802927A0 */ void mute(bool);
-	/* 80292A3C */ void pause(bool);
-	/* 80292B8C */ void setTempoRate(f32);
-};
-
-struct JAISoundParams {
-	/* 802A2280 */ void mixOutAll(JASSoundParams const&, JASSoundParams*, f32);
-};
-
-struct JAISound {
-	/* 802A22F8 */ JAISound();
-	/* 802A2328 */ void start_JAISound_(JAISoundID, JGeometry::TVec3<f32> const*, JAIAudience*);
-	/* 802A25E0 */ bool asSeq();
-	/* 802A25E8 */ bool asStream();
-	/* 802A25F0 */ void die_JAISound_();
-	/* 802A266C */ void increasePrepareCount_JAISound_();
-	/* 802A26B8 */ void calc_JAISound_();
-	/* 802A29DC */ void initTrack_JAISound_(JASTrack*);
-};
-
-struct JSUPtrLink {
-	/* 802DBDFC */ JSUPtrLink(void*);
 };
 
 // 

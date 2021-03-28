@@ -11,16 +11,14 @@
 // Types:
 // 
 
-struct JASTrack {
-	/* 8029285C */ void setFIR(s16 const*);
-	/* 8029289C */ void setIIR(s16 const*);
-	/* 80292918 */ void writePort(u32, u16);
+struct Z2SpeechMgr2 {
+	/* 802CC190 */ void speakOneWord(bool);
+};
+
+struct JAISound {
 };
 
 struct JAISoundHandle {
-};
-
-struct JAISoundID {
 };
 
 struct JGeometry {
@@ -32,7 +30,7 @@ struct JGeometry {
 
 };
 
-struct JAISound {
+struct JAISoundID {
 };
 
 struct Z2SoundMgr {
@@ -53,12 +51,59 @@ struct Z2SoundMgr {
 	/* 802AAAC4 */ void isPlayingSoundID(JAISoundID);
 };
 
+struct Z2SoundInfo {
+	/* 802BBAC8 */ void getSwBit(JAISoundID) const;
+};
+
+struct Z2SeqMgr {
+	/* 802AF010 */ void bgmStart(u32, u32, s32);
+	/* 802AFF8C */ void changeBgmStatus(s32);
+	/* 802B299C */ void onVariantBgmJumpEnd(bool);
+	/* 802B3FEC */ void setChildTrackVolume(JAISoundHandle*, int, f32, u32, f32, f32);
+	/* 802B5750 */ void onFieldBgmJumpStart();
+	/* 802B579C */ void onFieldBgmJumpEnd();
+};
+
+struct Z2SeMgr {
+	/* 802AD9F4 */ void seMoveVolumeAll(f32, u32);
+};
+
+struct JAUSectionHeap {
+	/* 802A5EC0 */ void loadDynamicSeq(JAISoundID, bool);
+	/* 802A5EF8 */ void releaseIdleDynamicSeqDataBlock();
+};
+
+struct JASTrack {
+	/* 8029285C */ void setFIR(s16 const*);
+	/* 8029289C */ void setIIR(s16 const*);
+	/* 80292918 */ void writePort(u32, u16);
+};
+
 struct JASDriver {
 	/* 8029E188 */ void waitSubFrame();
 };
 
-struct JAISeCategoryMgr {
-	/* 8029FEEC */ void pause(bool);
+struct JAIStreamMgr {
+	/* 802A3B68 */ JAIStreamMgr(bool);
+	/* 802A3C3C */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
+	/* 802A3EBC */ void calc();
+	/* 802A4028 */ void stop();
+	/* 802A4068 */ void stop(u32);
+	/* 802A40B8 */ void stopSoundID(JAISoundID);
+	/* 802A4118 */ void mixOut();
+};
+
+struct JAISoundParamsMove {
+	/* 802A2DB4 */ void moveVolume(f32, u32);
+};
+
+struct JAISeqMgr {
+	/* 802A1914 */ JAISeqMgr(bool);
+	/* 802A1B48 */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
+	/* 802A1C90 */ void calc();
+	/* 802A1DFC */ void stop();
+	/* 802A1E8C */ void stopSoundID(JAISoundID);
+	/* 802A1EFC */ void mixOut();
 };
 
 struct JAISeMgr {
@@ -72,53 +117,8 @@ struct JAISeMgr {
 	/* 802A08D0 */ void getNumActiveSe() const;
 };
 
-struct JAISeqMgr {
-	/* 802A1914 */ JAISeqMgr(bool);
-	/* 802A1B48 */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
-	/* 802A1C90 */ void calc();
-	/* 802A1DFC */ void stop();
-	/* 802A1E8C */ void stopSoundID(JAISoundID);
-	/* 802A1EFC */ void mixOut();
-};
-
-struct JAISoundParamsMove {
-	/* 802A2DB4 */ void moveVolume(f32, u32);
-};
-
-struct JAIStreamMgr {
-	/* 802A3B68 */ JAIStreamMgr(bool);
-	/* 802A3C3C */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
-	/* 802A3EBC */ void calc();
-	/* 802A4028 */ void stop();
-	/* 802A4068 */ void stop(u32);
-	/* 802A40B8 */ void stopSoundID(JAISoundID);
-	/* 802A4118 */ void mixOut();
-};
-
-struct JAUSectionHeap {
-	/* 802A5EC0 */ void loadDynamicSeq(JAISoundID, bool);
-	/* 802A5EF8 */ void releaseIdleDynamicSeqDataBlock();
-};
-
-struct Z2SeMgr {
-	/* 802AD9F4 */ void seMoveVolumeAll(f32, u32);
-};
-
-struct Z2SeqMgr {
-	/* 802AF010 */ void bgmStart(u32, u32, s32);
-	/* 802AFF8C */ void changeBgmStatus(s32);
-	/* 802B299C */ void onVariantBgmJumpEnd(bool);
-	/* 802B3FEC */ void setChildTrackVolume(JAISoundHandle*, int, f32, u32, f32, f32);
-	/* 802B5750 */ void onFieldBgmJumpStart();
-	/* 802B579C */ void onFieldBgmJumpEnd();
-};
-
-struct Z2SoundInfo {
-	/* 802BBAC8 */ void getSwBit(JAISoundID) const;
-};
-
-struct Z2SpeechMgr2 {
-	/* 802CC190 */ void speakOneWord(bool);
+struct JAISeCategoryMgr {
+	/* 8029FEEC */ void pause(bool);
 };
 
 // 

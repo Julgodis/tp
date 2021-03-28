@@ -11,27 +11,13 @@
 // Types:
 // 
 
-struct JKRAramBlock {
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };
 
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
-struct JKRExpandSwitch {
-};
-
-struct JKRAram {
-	/* 802D1FA4 */ void create(u32, u32, s32, s32, s32);
-	/* 802D2040 */ JKRAram(u32, u32, s32);
-	/* 802D214C */ ~JKRAram();
-	/* 802D21DC */ void run();
-	/* 802D2248 */ void checkOkAddress(u8*, u32, JKRAramBlock*, u32);
-	/* 802D22DC */ void changeGroupIdIfNeed(u8*, int);
-	/* 802D233C */ void mainRamToAram(u8*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
-	/* 802D25B4 */ void aramToMainRam(u32, u8*, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
+struct JSUPtrList {
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF14 */ void initiate();
 };
 
 template <typename A0>
@@ -46,12 +32,26 @@ struct JKRThread {
 	/* 802D1758 */ ~JKRThread();
 };
 
-struct JKRAramHeap {
-	struct EAllocMode {
-	};
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
 
-	/* 802D2E44 */ JKRAramHeap(u32, u32);
-	/* 802D2FBC */ void alloc(u32, JKRAramHeap::EAllocMode);
+struct JKRExpandSwitch {
+};
+
+struct JKRDecomp {
+	/* 802DB680 */ void create(s32);
+	/* 802DB988 */ void orderSync(u8*, u8*, u32, u32);
+	/* 802DBCF8 */ void checkCompressed(u8*);
+};
+
+struct JKRAramStream {
+	/* 802D3B48 */ void create(s32);
+};
+
+struct JKRAramBlock {
 };
 
 struct JKRAMCommand {
@@ -62,23 +62,23 @@ struct JKRAramPiece {
 	/* 802D38CC */ void startDMA(JKRAMCommand*);
 };
 
-struct JKRAramStream {
-	/* 802D3B48 */ void create(s32);
+struct JKRAramHeap {
+	struct EAllocMode {
+	};
+
+	/* 802D2E44 */ JKRAramHeap(u32, u32);
+	/* 802D2FBC */ void alloc(u32, JKRAramHeap::EAllocMode);
 };
 
-struct JKRDecomp {
-	/* 802DB680 */ void create(s32);
-	/* 802DB988 */ void orderSync(u8*, u8*, u32, u32);
-	/* 802DBCF8 */ void checkCompressed(u8*);
-};
-
-struct JSUPtrList {
-	/* 802DBEAC */ ~JSUPtrList();
-	/* 802DBF14 */ void initiate();
-};
-
-struct JUTException {
-	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+struct JKRAram {
+	/* 802D1FA4 */ void create(u32, u32, s32, s32, s32);
+	/* 802D2040 */ JKRAram(u32, u32, s32);
+	/* 802D214C */ ~JKRAram();
+	/* 802D21DC */ void run();
+	/* 802D2248 */ void checkOkAddress(u8*, u32, JKRAramBlock*, u32);
+	/* 802D22DC */ void changeGroupIdIfNeed(u8*, int);
+	/* 802D233C */ void mainRamToAram(u8*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
+	/* 802D25B4 */ void aramToMainRam(u32, u8*, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 };
 
 // 

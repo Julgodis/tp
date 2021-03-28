@@ -11,10 +11,27 @@
 // Types:
 // 
 
-struct Vec {
+struct csXyz {
 };
 
 struct cXyz {
+};
+
+struct cM3d_Range {
+};
+
+struct cM3dGTri {
+};
+
+struct cM3dGSph {
+	/* 8026F648 */ void SetC(cXyz const&);
+	/* 8026F708 */ void SetR(f32);
+};
+
+struct cM3dGPla {
+};
+
+struct Vec {
 };
 
 struct cM3dGLin {
@@ -23,30 +40,13 @@ struct cM3dGLin {
 	/* 8026F350 */ void CalcPos(Vec*, f32) const;
 };
 
-struct cM3dGPla {
-};
-
-struct cM3dGAab {
-};
-
 struct cM3dGCyl {
-};
-
-struct cM3dGSph {
-	/* 8026F648 */ void SetC(cXyz const&);
-	/* 8026F708 */ void SetR(f32);
-};
-
-struct cM3dGTri {
-};
-
-struct cM3d_Range {
 };
 
 struct cM3dGCps {
 };
 
-struct csXyz {
+struct cM3dGAab {
 };
 
 // 
@@ -74,7 +74,7 @@ static void cM3d_InclusionCheckPosIn3PosBox2d(f32, f32, f32, f32, f32, f32, f32,
 static void cM3d_CrossX_Tri(cM3dGTri const*, Vec const*, f32); // 2
 static void cM3d_CrossX_Tri(cM3dGTri const*, Vec const*); // 2
 static void cM3d_CrossX_LinTri_proc(cM3dGTri const*, Vec const*); // 2
-void cM3d_CrossY_Tri(cM3dGTri const*, Vec const*); // 2
+static void cM3d_CrossY_Tri(cM3dGTri const*, Vec const*); // 2
 static void cM3d_CrossY_LinTri_proc(cM3dGTri const*, Vec const*); // 2
 void cM3d_CrossY_Tri(Vec const&, Vec const&, Vec const&, cM3dGPla const&, Vec const*); // 2
 void cM3d_CrossY_Tri_Front(Vec const&, Vec const&, Vec const&, Vec const*); // 2
@@ -87,7 +87,7 @@ static void cM3d_CrossZ_LinTri_proc(cM3dGTri const*, Vec const*); // 2
 void cM3d_Cross_LinTri(cM3dGLin const*, cM3dGTri const*, Vec*, bool, bool); // 2
 static void cM3d_Cross_LinTri_Easy(cM3dGTri const*, Vec const*); // 2
 static void cM3d_Cross_SphPnt(cM3dGSph const*, Vec const*); // 2
-void cM3d_Cross_LinSph(cM3dGLin const*, cM3dGSph const*, Vec*); // 2
+static void cM3d_Cross_LinSph(cM3dGLin const*, cM3dGSph const*, Vec*); // 2
 void cM3d_Cross_LinSph_CrossPos(cM3dGSph const&, cM3dGLin const&, Vec*, Vec*); // 2
 void cM3d_Cross_CylSph(cM3dGCyl const*, cM3dGSph const*, f32*); // 2
 void cM3d_Cross_CylSph(cM3dGCyl const*, cM3dGSph const*, Vec*, f32*); // 2
@@ -139,7 +139,7 @@ extern "C" static void cM3d_InclusionCheckPosIn3PosBox2d__Ffffffffff(); // 1
 extern "C" static void cM3d_CrossX_Tri__FPC8cM3dGTriPC3Vecf(); // 1
 extern "C" static void cM3d_CrossX_Tri__FPC8cM3dGTriPC3Vec(); // 1
 extern "C" static void cM3d_CrossX_LinTri_proc__FPC8cM3dGTriPC3Vec(); // 1
-extern "C" void cM3d_CrossY_Tri__FPC8cM3dGTriPC3Vec(); // 1
+extern "C" static void cM3d_CrossY_Tri__FPC8cM3dGTriPC3Vec(); // 1
 extern "C" static void cM3d_CrossY_LinTri_proc__FPC8cM3dGTriPC3Vec(); // 1
 extern "C" void cM3d_CrossY_Tri__FRC3VecRC3VecRC3VecRC8cM3dGPlaPC3Vec(); // 1
 extern "C" void cM3d_CrossY_Tri_Front__FRC3VecRC3VecRC3VecPC3Vec(); // 1
@@ -152,7 +152,7 @@ extern "C" static void cM3d_CrossZ_LinTri_proc__FPC8cM3dGTriPC3Vec(); // 1
 extern "C" void cM3d_Cross_LinTri__FPC8cM3dGLinPC8cM3dGTriP3Vecbb(); // 1
 extern "C" static void cM3d_Cross_LinTri_Easy__FPC8cM3dGTriPC3Vec(); // 1
 extern "C" static void cM3d_Cross_SphPnt__FPC8cM3dGSphPC3Vec(); // 1
-extern "C" void cM3d_Cross_LinSph__FPC8cM3dGLinPC8cM3dGSphP3Vec(); // 1
+extern "C" static void cM3d_Cross_LinSph__FPC8cM3dGLinPC8cM3dGSphP3Vec(); // 1
 extern "C" void cM3d_Cross_LinSph_CrossPos__FRC8cM3dGSphRC8cM3dGLinP3VecP3Vec(); // 1
 extern "C" void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphPf(); // 1
 extern "C" void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphP3VecPf(); // 1
@@ -235,7 +235,7 @@ asm static void cM3d_InDivPos1(Vec const* param_0, Vec const* param_1, f32 param
 #pragma pop
 
 
-/* 802685B0-80268614 0064+00 s=2 e=1 z=2  None .text      cM3d_InDivPos2__FPC3VecPC3VecfP3Vec                          */
+/* 802685B0-80268614 0064+00 s=2 e=1 z=0  None .text      cM3d_InDivPos2__FPC3VecPC3VecfP3Vec                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -258,7 +258,7 @@ asm void cM3d_Len2dSq(f32 param_0, f32 param_1, f32 param_2, f32 param_3) {
 
 
 /* ############################################################################################## */
-/* 80451180-80451188 0004+04 s=29 e=44 z=65  None .sbss      G_CM3D_F_ABS_MIN                                             */
+/* 80451180-80451188 0004+04 s=29 e=44 z=0  None .sbss      G_CM3D_F_ABS_MIN                                             */
 f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
 /* 80455118-80455120 0004+04 s=28 e=0 z=0  None .sdata2    @2256                                                        */
@@ -286,7 +286,7 @@ SECTION_SDATA2 static u8 lit_2259[8] = {
 /* 80455138-8045513C 0004+00 s=14 e=0 z=0  None .sdata2    @2273                                                        */
 SECTION_SDATA2 static u32 lit_2273 = 0x3F800000;
 
-/* 8026862C-80268710 00E4+00 s=0 e=10 z=3  None .text      cM3d_Len2dSqPntAndSegLine__FffffffPfPfPf                     */
+/* 8026862C-80268710 00E4+00 s=0 e=10 z=0  None .text      cM3d_Len2dSqPntAndSegLine__FffffffPfPfPf                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -297,7 +297,7 @@ asm void cM3d_Len2dSqPntAndSegLine(f32 param_0, f32 param_1, f32 param_2, f32 pa
 #pragma pop
 
 
-/* 80268710-80268814 0104+00 s=2 e=8 z=9  None .text      cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf         */
+/* 80268710-80268814 0104+00 s=2 e=8 z=0  None .text      cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -319,7 +319,7 @@ asm void cM3d_SignedLenPlaAndPos(cM3dGPla const* param_0, Vec const* param_1) {
 #pragma pop
 
 
-/* 80268894-802688B4 0020+00 s=11 e=2 z=2  None .text      cM3d_VectorProduct2d__Fffffff                                */
+/* 80268894-802688B4 0020+00 s=11 e=2 z=0  None .text      cM3d_VectorProduct2d__Fffffff                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -330,7 +330,7 @@ asm void cM3d_VectorProduct2d(f32 param_0, f32 param_1, f32 param_2, f32 param_3
 #pragma pop
 
 
-/* 802688B4-8026891C 0068+00 s=0 e=0 z=1  None .text      cM3d_VectorProduct__FPC4cXyzPC4cXyzPC4cXyzP4cXyz             */
+/* 802688B4-8026891C 0068+00 s=0 e=0 z=0  None .text      cM3d_VectorProduct__FPC4cXyzPC4cXyzPC4cXyzP4cXyz             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -581,11 +581,11 @@ asm static void cM3d_CrossX_LinTri_proc(cM3dGTri const* param_0, Vec const* para
 #pragma pop
 
 
-/* 8026A2E4-8026A488 01A4+00 s=2 e=0 z=1  None .text      cM3d_CrossY_Tri__FPC8cM3dGTriPC3Vec                          */
+/* 8026A2E4-8026A488 01A4+00 s=2 e=0 z=0  None .text      cM3d_CrossY_Tri__FPC8cM3dGTriPC3Vec                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cM3d_CrossY_Tri(cM3dGTri const* param_0, Vec const* param_1) {
+asm static void cM3d_CrossY_Tri(cM3dGTri const* param_0, Vec const* param_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d/cM3d_CrossY_Tri__FPC8cM3dGTriPC3Vec.s"
 }
@@ -728,11 +728,11 @@ asm static void cM3d_Cross_SphPnt(cM3dGSph const* param_0, Vec const* param_1) {
 #pragma pop
 
 
-/* 8026B280-8026B4E8 0268+00 s=1 e=0 z=2  None .text      cM3d_Cross_LinSph__FPC8cM3dGLinPC8cM3dGSphP3Vec              */
+/* 8026B280-8026B4E8 0268+00 s=1 e=0 z=0  None .text      cM3d_Cross_LinSph__FPC8cM3dGLinPC8cM3dGSphP3Vec              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cM3d_Cross_LinSph(cM3dGLin const* param_0, cM3dGSph const* param_1, Vec* param_2) {
+asm static void cM3d_Cross_LinSph(cM3dGLin const* param_0, cM3dGSph const* param_1, Vec* param_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d/cM3d_Cross_LinSph__FPC8cM3dGLinPC8cM3dGSphP3Vec.s"
 }
@@ -875,7 +875,7 @@ asm void cM3d_Cross_CylTri(cM3dGCyl const* param_0, cM3dGTri const* param_1, Vec
 #pragma pop
 
 
-/* 8026C944-8026D044 0700+00 s=1 e=2 z=1  None .text      cM3d_Cross_CylLin__FPC8cM3dGCylPC8cM3dGLinP3VecP3Vec         */
+/* 8026C944-8026D044 0700+00 s=1 e=2 z=0  None .text      cM3d_Cross_CylLin__FPC8cM3dGCylPC8cM3dGLinP3VecP3Vec         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -974,7 +974,7 @@ asm void cM3d_Cross_CpsTri(cM3dGCps const& param_0, cM3dGTri param_1, Vec* param
 #pragma pop
 
 
-/* 8026E4FC-8026E570 0074+00 s=0 e=0 z=1  None .text      cM3d_CalcVecAngle__FRC3VecPsPs                               */
+/* 8026E4FC-8026E570 0074+00 s=0 e=0 z=0  None .text      cM3d_CalcVecAngle__FRC3VecPsPs                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

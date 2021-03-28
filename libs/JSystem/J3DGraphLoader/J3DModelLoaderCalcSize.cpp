@@ -11,16 +11,27 @@
 // Types:
 // 
 
-struct J3DMaterialBlock {
-};
-
-struct J3DDrawBlock {
-};
-
 struct J3DTextureBlock {
 };
 
-struct J3DJointBlock {
+struct J3DShapeBlock {
+};
+
+struct J3DShapeFactory {
+	/* 80337350 */ J3DShapeFactory(J3DShapeBlock const&);
+	/* 80337944 */ void calcSize(int, u32);
+	/* 803379D8 */ void calcSizeVcdVatCmdBuffer(u32);
+};
+
+struct J3DMaterialBlock {
+};
+
+struct J3DModelLoader_v26 {
+	/* 80336DB4 */ void calcSizeMaterial(J3DMaterialBlock const*, u32);
+	/* 80336F60 */ void calcSizeMaterialTable(J3DMaterialBlock const*, u32);
+};
+
+struct J3DDrawBlock {
 };
 
 struct J3DMaterialDLBlock {
@@ -32,7 +43,7 @@ struct J3DModelInfoBlock {
 struct J3DEnvelopeBlock {
 };
 
-struct J3DShapeBlock {
+struct J3DJointBlock {
 };
 
 struct J3DModelLoader {
@@ -51,11 +62,6 @@ struct J3DModelLoader {
 	/* 803370A0 */ void calcSizeMaterialDL(J3DMaterialDLBlock const*, u32);
 };
 
-struct J3DModelLoader_v26 {
-	/* 80336DB4 */ void calcSizeMaterial(J3DMaterialBlock const*, u32);
-	/* 80336F60 */ void calcSizeMaterialTable(J3DMaterialBlock const*, u32);
-};
-
 struct J3DMaterial {
 };
 
@@ -67,12 +73,6 @@ struct J3DMaterialFactory {
 	/* 80330234 */ J3DMaterialFactory(J3DMaterialDLBlock const&);
 	/* 803302BC */ void countUniqueMaterials();
 	/* 80331A7C */ void calcSize(J3DMaterial*, J3DMaterialFactory::MaterialType, int, u32) const;
-};
-
-struct J3DShapeFactory {
-	/* 80337350 */ J3DShapeFactory(J3DShapeBlock const&);
-	/* 80337944 */ void calcSize(int, u32);
-	/* 803379D8 */ void calcSizeVcdVatCmdBuffer(u32);
 };
 
 // 

@@ -12,18 +12,3 @@
 // 
 
 
-extern void* const data_8048F134[2];
-
-// 
-// External References:
-// 
-
-
-extern "C" void __sinit_d_a_tag_lantern_cpp(); // 1
-
-// 
-// Declarations:
-// 
-
-/* ############################################################################################## */
-#pragma section ".ctors$10"

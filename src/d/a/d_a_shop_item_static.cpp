@@ -11,12 +11,12 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+};
+
 struct daShopItem_c {
 	/* 80037C14 */ void getRotateP();
 	/* 80037C1C */ void getPosP();
-};
-
-struct fopAc_ac_c {
 };
 
 struct daItemBase_c {
@@ -32,7 +32,6 @@ void CheckShopItemCreateHeap(fopAc_ac_c*); // 2
 extern "C" void getRotateP__12daShopItem_cFv(); // 1
 extern "C" void getPosP__12daShopItem_cFv(); // 1
 extern "C" void CheckShopItemCreateHeap__FP10fopAc_ac_c(); // 1
-extern "C" extern void* const mData__12daShopItem_c[276];
 extern "C" extern char const* const d_a_d_a_shop_item_static__stringBase0;
 
 // 
@@ -69,8 +68,8 @@ asm void daShopItem_c::getPosP() {
 
 
 /* ############################################################################################## */
-/* 803792E8-80379738 0450+00 s=1 e=0 z=9  None .rodata    mData__12daShopItem_c                                        */
-SECTION_RODATA void* const mData__12daShopItem_c[276] = {
+/* 803792E8-80379738 0450+00 s=1 e=0 z=0  None .rodata    mData__12daShopItem_c                                        */
+SECTION_RODATA static void* const mData__12daShopItem_c[276] = {
 	(void*)&d_a_d_a_shop_item_static__stringBase0,
 	(void*)0x0003FFFF,
 	(void*)0xFFFFFFFF,
@@ -377,7 +376,7 @@ SECTION_DEAD char const* const stringBase_803797ED = "O_mD_gren";
 SECTION_DEAD static char const* const pad_803797F7 = "";
 #pragma pop
 
-/* 80037C24-80037C7C 0058+00 s=0 e=0 z=1  None .text      CheckShopItemCreateHeap__FP10fopAc_ac_c                      */
+/* 80037C24-80037C7C 0058+00 s=0 e=0 z=0  None .text      CheckShopItemCreateHeap__FP10fopAc_ac_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

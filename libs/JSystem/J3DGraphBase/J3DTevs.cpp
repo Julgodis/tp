@@ -11,11 +11,46 @@
 // Types:
 // 
 
-struct J3DLightObj {
-	/* 80323590 */ void load(u32) const;
+struct _GXTlutSize {
 };
 
-struct J3DTexCoord {
+struct _GXTlutFmt {
+};
+
+struct _GXTexWrapMode {
+};
+
+struct _GXTexMtxType {
+};
+
+struct _GXTexMapID {
+};
+
+struct _GXTexGenType {
+};
+
+struct _GXTexGenSrc {
+};
+
+struct _GXTexFmt {
+};
+
+struct _GXTexFilter {
+};
+
+struct _GXLightID {
+};
+
+struct _GXColor {
+};
+
+struct _GXAnisotropy {
+};
+
+struct Vec {
+};
+
+struct J3DTextureSRTInfo {
 };
 
 struct J3DTexMtx {
@@ -27,49 +62,14 @@ struct J3DTexMtx {
 	/* 803243BC */ void loadPostTexMtx(u32) const;
 };
 
+struct J3DTexCoord {
+};
+
 struct J3DNBTScale {
 };
 
-struct _GXTexMtxType {
-};
-
-struct _GXLightID {
-};
-
-struct _GXColor {
-};
-
-struct _GXTexGenType {
-};
-
-struct _GXTexGenSrc {
-};
-
-struct _GXTexMapID {
-};
-
-struct _GXTexWrapMode {
-};
-
-struct _GXTexFilter {
-};
-
-struct _GXAnisotropy {
-};
-
-struct _GXTexFmt {
-};
-
-struct _GXTlutFmt {
-};
-
-struct _GXTlutSize {
-};
-
-struct J3DTextureSRTInfo {
-};
-
-struct Vec {
+struct J3DLightObj {
+	/* 80323590 */ void load(u32) const;
 };
 
 // 
@@ -382,7 +382,7 @@ asm void loadNBTScale(J3DNBTScale& param_0) {
 
 
 /* ############################################################################################## */
-/* 803A1EC8-803A1EFC 0034+00 s=0 e=9 z=24  None .rodata    j3dDefaultLightInfo                                          */
+/* 803A1EC8-803A1EFC 0034+00 s=0 e=9 z=0  None .rodata    j3dDefaultLightInfo                                          */
 SECTION_RODATA u8 const j3dDefaultLightInfo[52] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xBF, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x3F, 0x80, 0x00, 0x00,
@@ -476,7 +476,7 @@ asm void makeAlphaCmpTable() {
 
 
 /* ############################################################################################## */
-/* 80437160-804371C0 0060+00 s=1 e=4 z=5  None .bss       j3dZModeTable                                                */
+/* 80437160-804371C0 0060+00 s=1 e=4 z=0  None .bss       j3dZModeTable                                                */
 u8 j3dZModeTable[96];
 
 /* 803242A8-80324314 006C+00 s=0 e=1 z=0  None .text      makeZModeTable__Fv                                           */

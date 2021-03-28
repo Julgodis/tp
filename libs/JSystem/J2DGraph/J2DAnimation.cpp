@@ -11,12 +11,70 @@
 // Types:
 // 
 
+struct _GXTlutFmt {
+};
+
+struct _GXTlut {
+};
+
+struct _GXColorS10 {
+};
+
+struct _GXColor {
+};
+
+struct JUTTransparency {
+};
+
+struct JKRArchive {
+};
+
+struct JUTResReference {
+	/* 802DE120 */ void getResource(void const*, u32, JKRArchive*);
+};
+
+struct JUTPalette {
+	/* 802DE91C */ void storeTLUT(_GXTlut, _GXTlutFmt, JUTTransparency, u16, void*);
+};
+
+struct JUTNameTab {
+	/* 802DEA58 */ void getIndex(char const*) const;
+	/* 802DEAF8 */ void getName(u16) const;
+};
+
 struct J3DTransformInfo {
 };
 
-struct J2DAnmTransformFull {
-	/* 8030A590 */ void getTransform(u16, J3DTransformInfo*) const;
-	/* 8030CDAC */ ~J2DAnmTransformFull();
+struct J3DTextureSRTInfo {
+};
+
+struct J3DAnmKeyTableBase {
+};
+
+struct J2DScreen {
+};
+
+struct J2DResReference {
+	/* 8030CF10 */ void getResReference(u16) const;
+	/* 8030CF44 */ void getName(u16) const;
+};
+
+struct J2DDataManage {
+	/* 8030CE18 */ void get(char const*);
+};
+
+struct J2DAnmVtxColorKey {
+	/* 8030B704 */ void getColor(u8, u16, _GXColor*) const;
+	/* 8030CC20 */ ~J2DAnmVtxColorKey();
+};
+
+struct J2DAnmVtxColorFull {
+	/* 8030B4C4 */ void getColor(u8, u16, _GXColor*) const;
+	/* 8030CC8C */ ~J2DAnmVtxColorFull();
+};
+
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
 struct J2DAnmTransformKey {
@@ -25,39 +83,9 @@ struct J2DAnmTransformKey {
 	/* 8030CD7C */ void getTransform(u16, J3DTransformInfo*) const;
 };
 
-struct J2DScreen {
-};
-
-struct _GXColor {
-};
-
-struct J2DAnmColor {
-	/* 801842FC */ ~J2DAnmColor();
-	/* 802EB390 */ void getColor(u16, _GXColor*) const;
-	/* 8030AF24 */ void searchUpdateMaterialID(J2DScreen*);
-};
-
-struct J2DAnmColorFull {
-	/* 8030AFC8 */ void getColor(u16, _GXColor*) const;
-	/* 8030CCF8 */ ~J2DAnmColorFull();
-};
-
-struct J2DAnmColorKey {
-	/* 80239BE0 */ ~J2DAnmColorKey();
-	/* 8030B200 */ void getColor(u16, _GXColor*) const;
-};
-
-struct J2DAnmVtxColorFull {
-	/* 8030B4C4 */ void getColor(u8, u16, _GXColor*) const;
-	/* 8030CC8C */ ~J2DAnmVtxColorFull();
-};
-
-struct J2DAnmVtxColorKey {
-	/* 8030B704 */ void getColor(u8, u16, _GXColor*) const;
-	/* 8030CC20 */ ~J2DAnmVtxColorKey();
-};
-
-struct J3DTextureSRTInfo {
+struct J2DAnmTransformFull {
+	/* 8030A590 */ void getTransform(u16, J3DTransformInfo*) const;
+	/* 8030CDAC */ ~J2DAnmTransformFull();
 };
 
 struct J2DAnmTextureSRTKey {
@@ -79,13 +107,6 @@ struct J2DAnmTexPattern {
 	/* 8030CB90 */ ~J2DAnmTexPattern();
 };
 
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
-};
-
-struct _GXColorS10 {
-};
-
 struct J2DAnmTevRegKey {
 	/* 801841EC */ ~J2DAnmTevRegKey();
 	/* 8030C0F0 */ void getTevColorReg(u16, _GXColorS10*) const;
@@ -93,45 +114,24 @@ struct J2DAnmTevRegKey {
 	/* 8030C678 */ void searchUpdateMaterialID(J2DScreen*);
 };
 
-struct J3DAnmKeyTableBase {
+struct J2DAnmColorKey {
+	/* 80239BE0 */ ~J2DAnmColorKey();
+	/* 8030B200 */ void getColor(u16, _GXColor*) const;
+};
+
+struct J2DAnmColorFull {
+	/* 8030AFC8 */ void getColor(u16, _GXColor*) const;
+	/* 8030CCF8 */ ~J2DAnmColorFull();
+};
+
+struct J2DAnmColor {
+	/* 801842FC */ ~J2DAnmColor();
+	/* 802EB390 */ void getColor(u16, _GXColor*) const;
+	/* 8030AF24 */ void searchUpdateMaterialID(J2DScreen*);
 };
 
 struct J2DAnmBase {
 	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
-};
-
-struct JKRArchive {
-};
-
-struct JUTResReference {
-	/* 802DE120 */ void getResource(void const*, u32, JKRArchive*);
-};
-
-struct JUTTransparency {
-};
-
-struct _GXTlutFmt {
-};
-
-struct _GXTlut {
-};
-
-struct JUTPalette {
-	/* 802DE91C */ void storeTLUT(_GXTlut, _GXTlutFmt, JUTTransparency, u16, void*);
-};
-
-struct JUTNameTab {
-	/* 802DEA58 */ void getIndex(char const*) const;
-	/* 802DEAF8 */ void getName(u16) const;
-};
-
-struct J2DDataManage {
-	/* 8030CE18 */ void get(char const*);
-};
-
-struct J2DResReference {
-	/* 8030CF10 */ void getResReference(u16) const;
-	/* 8030CF44 */ void getName(u16) const;
 };
 
 // 

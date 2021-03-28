@@ -11,22 +11,10 @@
 // Types:
 // 
 
-struct base_process_class {
-};
-
-struct delete_tag_class {
-};
-
-struct layer_class {
-};
-
-struct process_node_class {
-};
-
 struct process_priority_class {
 };
 
-struct line_tag {
+struct process_node_class {
 };
 
 struct node_list_class {
@@ -35,7 +23,19 @@ struct node_list_class {
 struct node_class {
 };
 
+struct line_tag {
+};
+
+struct layer_class {
+};
+
+struct delete_tag_class {
+};
+
 struct create_tag_class {
+};
+
+struct base_process_class {
 };
 
 // 

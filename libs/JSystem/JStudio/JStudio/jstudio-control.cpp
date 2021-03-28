@@ -15,10 +15,6 @@ struct Vec {
 };
 
 namespace JStudio {
-	struct TCreateObject {
-		/* 80285488 */ ~TCreateObject();
-	};
-
 	namespace stb {
 		struct data {
 			struct TParse_TBlock_object {
@@ -54,6 +50,10 @@ namespace JStudio {
 			/* 80289820 */ void parseBlock_object(JStudio::stb::data::TParse_TBlock_object const&, u32);
 		};
 
+	};
+
+	struct TCreateObject {
+		/* 80285488 */ ~TCreateObject();
 	};
 
 	struct TFactory {

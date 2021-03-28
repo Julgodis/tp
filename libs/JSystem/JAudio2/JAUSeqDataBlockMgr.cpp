@@ -11,17 +11,30 @@
 // Types:
 // 
 
-struct JAUSeqDataBlock {
-	/* 802A68F4 */ JAUSeqDataBlock();
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
 };
 
-struct JAISoundID {
+struct JSUPtrList {
+	/* 802DBF14 */ void initiate();
+	/* 802DBF4C */ void append(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
 template <typename A0>
 struct JSULink { };
 /* JSULink<JAUSeqDataBlock> */
 struct JSULink__template1 {
+};
+
+struct JKRArchive {
+};
+
+struct JAUSeqDataBlock {
+	/* 802A68F4 */ JAUSeqDataBlock();
+};
+
+struct JAISoundID {
 };
 
 struct JAUSeqDataBlocks {
@@ -33,9 +46,6 @@ struct JAUSeqDataBlocks {
 };
 
 struct JAISeqDataUser {
-};
-
-struct JKRArchive {
 };
 
 struct JAISeqData {
@@ -55,16 +65,6 @@ struct JAUDynamicSeqDataBlocks {
 struct JASResArcLoader {
 	/* 80290BD0 */ void getResSize(JKRArchive const*, u16);
 	/* 80290D18 */ void loadResourceAsync(JKRArchive*, u16, u8*, u32, void (*)(u32, u32), u32);
-};
-
-struct JSUPtrLink {
-	/* 802DBDFC */ JSUPtrLink(void*);
-};
-
-struct JSUPtrList {
-	/* 802DBF14 */ void initiate();
-	/* 802DBF4C */ void append(JSUPtrLink*);
-	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
 // 

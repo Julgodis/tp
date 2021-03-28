@@ -11,96 +11,29 @@
 // Types:
 // 
 
+struct mDoMtx_stack_c {
+	/* 8000CE38 */ void scaleM(f32, f32, f32);
+};
+
+struct mDoExt_3DlineMatSortPacket {
+	/* 80014E20 */ ~mDoExt_3DlineMatSortPacket();
+	/* 800561C8 */ mDoExt_3DlineMatSortPacket();
+};
+
+struct dKy_tevstr_c {
+};
+
 struct dDlst_window_c {
 	/* 80051AC0 */ void setViewPort(f32, f32, f32, f32, f32, f32);
 	/* 80051ADC */ void setScissor(f32, f32, f32, f32);
 };
 
-struct dDlst_2DTri_c {
-	/* 80051AF0 */ void draw();
+struct dDlst_shadowTri_c {
+	/* 80056270 */ ~dDlst_shadowTri_c();
+	/* 80056344 */ dDlst_shadowTri_c();
 };
 
-struct dDlst_2DQuad_c {
-	/* 80051CF0 */ void draw();
-};
-
-struct dDlst_2DPoint_c {
-	/* 80051E5C */ void draw();
-};
-
-struct dDlst_2DT_c {
-	/* 80051F98 */ void draw();
-};
-
-struct ResTIMG {
-};
-
-struct dDlst_2DT2_c {
-	/* 80052354 */ void draw();
-	/* 80052B00 */ dDlst_2DT2_c();
-	/* 80052B4C */ void init(ResTIMG*, f32, f32, f32, f32, u8, u8, u8, f32, f32);
-};
-
-struct dDlst_2DM_c {
-	/* 80052C58 */ void draw();
-};
-
-struct dDlst_2Dm_c {
-	/* 8005312C */ void draw();
-};
-
-struct dDlst_2DMt_c {
-	/* 8005364C */ void draw();
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct J2DPicture {
-	/* 800539DC */ void getTexture(u8) const;
-	/* 80053C44 */ void setWhite(JUtility::TColor);
-	/* 80053C6C */ void setBlack(JUtility::TColor);
-	/* 802FC050 */ J2DPicture();
-};
-
-struct dDlst_2D_c {
-	/* 80053A00 */ dDlst_2D_c(ResTIMG*, s16, s16, s16, s16, u8);
-	/* 80053A9C */ void draw();
-};
-
-struct dDlst_blo_c {
-	/* 80053B64 */ void draw();
-};
-
-struct J2DGrafContext {
-};
-
-struct J2DScreen {
-	/* 80053BA0 */ void clearAnmTransform();
-	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct J2DPane {
-	/* 80053BC0 */ void calcMtx();
-	/* 80053C00 */ void makeMatrix(f32, f32);
-	/* 80053C3C */ s32 getTypeID() const;
-	/* 802F8004 */ void clearAnmTransform();
-};
-
-struct J2DAnmBase {
-	/* 80053C94 */ ~J2DAnmBase();
-	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
-};
-
-struct cM_rnd_c {
-	/* 80053CDC */ void init(int, int, int);
-	/* 80053CEC */ void get();
-	/* 80053DE0 */ void getF(f32);
-	/* 80053E18 */ void getFX(f32);
-	/* 80053E60 */ void getValue(f32, f32);
+struct _GXTexObj {
 };
 
 struct Vec {
@@ -114,26 +47,10 @@ struct cXyz {
 	/* 802670AC */ void isZero() const;
 };
 
-struct _GXColor {
-};
-
-struct dDlst_effectLine_c {
-	/* 80053E9C */ void draw();
-	/* 800541F4 */ void update(cXyz&, _GXColor&, u16, u16, u16, u16, f32, f32, f32, f32);
-};
-
-struct cBgD_Vtx_t {
-};
-
-struct cM3dGPla {
-};
-
-struct dDlst_shadowPoly_c {
-	/* 80054288 */ void set(cBgD_Vtx_t*, u16, u16, u16, cM3dGPla*);
-	/* 800543B4 */ void draw();
-};
-
-struct dKy_tevstr_c {
+struct dDlst_shadowSimple_c {
+	/* 8005520C */ void draw();
+	/* 800553EC */ void set(cXyz*, f32, f32, cXyz*, s16, f32, _GXTexObj*);
+	/* 8005638C */ dDlst_shadowSimple_c();
 };
 
 struct J3DModel {
@@ -150,24 +67,23 @@ struct dDlst_shadowReal_c {
 	/* 800562D0 */ dDlst_shadowReal_c();
 };
 
-struct cBgS_ShdwDraw {
-	/* 80267F88 */ cBgS_ShdwDraw();
-	/* 80267FD0 */ ~cBgS_ShdwDraw();
-	/* 80268048 */ void Set(cXyz&, cXyz&);
-	/* 8026806C */ void SetCallback(int (*)(cBgS_ShdwDraw*, cBgD_Vtx_t*, int, int, int, cM3dGPla*));
+struct dDlst_shadowRealPoly_c {
+	/* 800569A0 */ void getTri();
+	/* 800569A8 */ s32 getTriMax();
 };
 
-struct ShdwDrawPoly_c {
-	/* 80054A6C */ ~ShdwDrawPoly_c();
+struct cM3dGPla {
 };
 
-struct _GXTexObj {
+struct cBgD_Vtx_t {
 };
 
-struct dDlst_shadowSimple_c {
-	/* 8005520C */ void draw();
-	/* 800553EC */ void set(cXyz*, f32, f32, cXyz*, s16, f32, _GXTexObj*);
-	/* 8005638C */ dDlst_shadowSimple_c();
+struct dDlst_shadowPoly_c {
+	/* 80054288 */ void set(cBgD_Vtx_t*, u16, u16, u16, cM3dGPla*);
+	/* 800543B4 */ void draw();
+};
+
+struct ResTIMG {
 };
 
 struct dDlst_shadowControl_c {
@@ -186,10 +102,10 @@ struct dDlst_peekZ_c {
 	/* 80056080 */ void peekData();
 };
 
-struct dDlst_base_c {
+struct J3DPacket {
 };
 
-struct J3DPacket {
+struct _GXColor {
 };
 
 struct J3DDrawBuffer {
@@ -199,6 +115,9 @@ struct J3DDrawBuffer {
 	/* 80325068 */ void frameInit();
 	/* 8032548C */ void entryImm(J3DPacket*, u16);
 	/* 803254AC */ void draw() const;
+};
+
+struct dDlst_base_c {
 };
 
 struct dDlst_list_c {
@@ -218,39 +137,93 @@ struct dDlst_list_c {
 	/* 80056900 */ void calcWipe();
 };
 
-struct mDoExt_3DlineMatSortPacket {
-	/* 80014E20 */ ~mDoExt_3DlineMatSortPacket();
-	/* 800561C8 */ mDoExt_3DlineMatSortPacket();
+struct dDlst_effectLine_c {
+	/* 80053E9C */ void draw();
+	/* 800541F4 */ void update(cXyz&, _GXColor&, u16, u16, u16, u16, f32, f32, f32, f32);
 };
 
-struct dDlst_shadowTri_c {
-	/* 80056270 */ ~dDlst_shadowTri_c();
-	/* 80056344 */ dDlst_shadowTri_c();
+struct dDlst_blo_c {
+	/* 80053B64 */ void draw();
 };
 
-struct dDlst_shadowRealPoly_c {
-	/* 800569A0 */ void getTri();
-	/* 800569A8 */ s32 getTriMax();
+struct dDlst_2Dm_c {
+	/* 8005312C */ void draw();
 };
 
-struct mDoMtx_stack_c {
-	/* 8000CE38 */ void scaleM(f32, f32, f32);
+struct dDlst_2D_c {
+	/* 80053A00 */ dDlst_2D_c(ResTIMG*, s16, s16, s16, s16, u8);
+	/* 80053A9C */ void draw();
 };
 
-struct _GXTlutObj {
+struct dDlst_2DTri_c {
+	/* 80051AF0 */ void draw();
+};
+
+struct dDlst_2DT_c {
+	/* 80051F98 */ void draw();
+};
+
+struct dDlst_2DT2_c {
+	/* 80052354 */ void draw();
+	/* 80052B00 */ dDlst_2DT2_c();
+	/* 80052B4C */ void init(ResTIMG*, f32, f32, f32, f32, u8, u8, u8, f32, f32);
+};
+
+struct dDlst_2DQuad_c {
+	/* 80051CF0 */ void draw();
+};
+
+struct dDlst_2DPoint_c {
+	/* 80051E5C */ void draw();
+};
+
+struct dDlst_2DMt_c {
+	/* 8005364C */ void draw();
+};
+
+struct dDlst_2DM_c {
+	/* 80052C58 */ void draw();
+};
+
+struct cM_rnd_c {
+	/* 80053CDC */ void init(int, int, int);
+	/* 80053CEC */ void get();
+	/* 80053DE0 */ void getF(f32);
+	/* 80053E18 */ void getFX(f32);
+	/* 80053E60 */ void getValue(f32, f32);
+};
+
+struct cBgS_ShdwDraw {
+	/* 80267F88 */ cBgS_ShdwDraw();
+	/* 80267FD0 */ ~cBgS_ShdwDraw();
+	/* 80268048 */ void Set(cXyz&, cXyz&);
+	/* 8026806C */ void SetCallback(int (*)(cBgS_ShdwDraw*, cBgD_Vtx_t*, int, int, int, cM3dGPla*));
 };
 
 struct cBgS {
 	/* 80074840 */ void ShdwDraw(cBgS_ShdwDraw*);
 };
 
-struct J3DUClipper {
-	/* 8027378C */ void calcViewFrustum();
-	/* 80273A44 */ void clip(f32 const (* )[4], Vec*, Vec*) const;
+struct _GXTlutObj {
+};
+
+struct ShdwDrawPoly_c {
+	/* 80054A6C */ ~ShdwDrawPoly_c();
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
 };
 
 struct JKRArchive {
 	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
+};
+
+struct J3DUClipper {
+	/* 8027378C */ void calcViewFrustum();
+	/* 80273A44 */ void clip(f32 const (* )[4], Vec*, Vec*) const;
 };
 
 struct J3DSys {
@@ -263,6 +236,33 @@ struct J3DShapePacket {
 
 struct J3DShape {
 	/* 80315300 */ void loadPreDrawSetting() const;
+};
+
+struct J2DGrafContext {
+};
+
+struct J2DScreen {
+	/* 80053BA0 */ void clearAnmTransform();
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+struct J2DPicture {
+	/* 800539DC */ void getTexture(u8) const;
+	/* 80053C44 */ void setWhite(JUtility::TColor);
+	/* 80053C6C */ void setBlack(JUtility::TColor);
+	/* 802FC050 */ J2DPicture();
+};
+
+struct J2DPane {
+	/* 80053BC0 */ void calcMtx();
+	/* 80053C00 */ void makeMatrix(f32, f32);
+	/* 80053C3C */ s32 getTypeID() const;
+	/* 802F8004 */ void clearAnmTransform();
+};
+
+struct J2DAnmBase {
+	/* 80053C94 */ ~J2DAnmBase();
+	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
 };
 
 // 
@@ -1541,7 +1541,7 @@ SECTION_SDATA2 static u32 lit_5552 = 0xC47A0000;
 /* 804520C0-804520C4 0004+00 s=1 e=0 z=0  None .sdata2    @5553                                                        */
 SECTION_SDATA2 static u32 lit_5553 = 0x3A83126F;
 
-/* 80055C74-80055F1C 02A8+00 s=0 e=1 z=1  None .text      setReal__21dDlst_shadowControl_cFUlScP8J3DModelP4cXyzffP12dKy_tevstr_c */
+/* 80055C74-80055F1C 02A8+00 s=0 e=1 z=0  None .text      setReal__21dDlst_shadowControl_cFUlScP8J3DModelP4cXyzffP12dKy_tevstr_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1552,7 +1552,7 @@ asm void dDlst_shadowControl_c::setReal(u32 param_0, s8 param_1, J3DModel* param
 #pragma pop
 
 
-/* 80055F1C-80055F84 0068+00 s=0 e=1 z=45  None .text      addReal__21dDlst_shadowControl_cFUlP8J3DModel                */
+/* 80055F1C-80055F84 0068+00 s=0 e=1 z=0  None .text      addReal__21dDlst_shadowControl_cFUlP8J3DModel                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1563,7 +1563,7 @@ asm void dDlst_shadowControl_c::addReal(u32 param_0, J3DModel* param_1) {
 #pragma pop
 
 
-/* 80055F84-80055FE8 0064+00 s=0 e=1 z=10  None .text      setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj */
+/* 80055F84-80055FE8 0064+00 s=0 e=1 z=0  None .text      setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1575,7 +1575,7 @@ asm void dDlst_shadowControl_c::setSimple(cXyz* param_0, f32 param_1, f32 param_
 
 
 /* ############################################################################################## */
-/* 804248D0-804248F0 0020+00 s=1 e=6 z=173  None .bss       mSimpleTexObj__21dDlst_shadowControl_c                       */
+/* 804248D0-804248F0 0020+00 s=1 e=6 z=0  None .bss       mSimpleTexObj__21dDlst_shadowControl_c                       */
 u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
 
 /* 80055FE8-80056018 0030+00 s=0 e=1 z=0  None .text      setSimpleTex__21dDlst_shadowControl_cFPC7ResTIMG             */
@@ -1589,7 +1589,7 @@ asm void dDlst_shadowControl_c::setSimpleTex(ResTIMG const* param_0) {
 #pragma pop
 
 
-/* 80056018-80056080 0068+00 s=0 e=3 z=9  None .text      newData__13dDlst_peekZ_cFssPUl                               */
+/* 80056018-80056080 0068+00 s=0 e=3 z=0  None .text      newData__13dDlst_peekZ_cFssPUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1799,7 +1799,7 @@ asm void dDlst_list_c::drawXluListItem3d() {
 #pragma pop
 
 
-/* 80056794-800567C4 0030+00 s=2 e=35 z=6  None .text      set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c */
+/* 80056794-800567C4 0030+00 s=2 e=35 z=0  None .text      set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

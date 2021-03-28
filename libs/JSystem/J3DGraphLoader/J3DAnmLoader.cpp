@@ -11,48 +11,28 @@
 // Types:
 // 
 
-struct J3DAnmBase {
+struct ResNTAB {
 };
 
-struct J3DAnmLoaderDataBaseFlag {
+struct JUTNameTab {
+	/* 802DEA1C */ void setResource(ResNTAB const*);
 };
 
-struct J3DAnmLoaderDataBase {
-	/* 80337B40 */ void load(void const*, J3DAnmLoaderDataBaseFlag);
-	/* 80338134 */ void setResource(J3DAnmBase*, void const*);
+struct J3DAnmVtxColorKeyData {
+};
+
+struct J3DAnmVtxColorKey {
+	/* 8032A4E0 */ J3DAnmVtxColorKey();
+};
+
+struct J3DAnmVtxColorFullData {
 };
 
 struct J3DAnmVtxColorFull {
 	/* 8032A30C */ J3DAnmVtxColorFull();
 };
 
-struct J3DAnmTexPattern {
-	/* 8032AED8 */ J3DAnmTexPattern();
-};
-
-struct J3DAnmColorFull {
-	/* 8032A93C */ J3DAnmColorFull();
-};
-
-struct J3DAnmTexPatternFullData {
-};
-
-struct J3DAnmColorFullData {
-};
-
-struct J3DAnmClusterFullData {
-};
-
 struct J3DAnmVisibilityFullData {
-};
-
-struct J3DAnmVtxColorFullData {
-};
-
-struct J3DAnmClusterFull {
-};
-
-struct J3DAnmTransformFull {
 };
 
 struct J3DAnmVisibilityFull {
@@ -60,66 +40,69 @@ struct J3DAnmVisibilityFull {
 	/* 803397F8 */ s32 getKind() const;
 };
 
+struct J3DAnmTransformKeyData {
+};
+
+struct J3DAnmTransformKey {
+};
+
 struct J3DAnmTransformFullData {
 };
 
-struct J3DAnmFullLoader_v15 {
-	/* 80338468 */ J3DAnmFullLoader_v15();
-	/* 80338484 */ ~J3DAnmFullLoader_v15();
-	/* 80338558 */ void load(void const*);
-	/* 803386A0 */ void setResource(J3DAnmBase*, void const*);
-	/* 80338800 */ void readAnmTransform(J3DAnmTransformFullData const*);
-	/* 80338828 */ void setAnmTransform(J3DAnmTransformFull*, J3DAnmTransformFullData const*);
-	/* 803388BC */ void readAnmColor(J3DAnmColorFullData const*);
-	/* 803388E4 */ void setAnmColor(J3DAnmColorFull*, J3DAnmColorFullData const*);
-	/* 803389B0 */ void readAnmTexPattern(J3DAnmTexPatternFullData const*);
-	/* 803389D8 */ void setAnmTexPattern(J3DAnmTexPattern*, J3DAnmTexPatternFullData const*);
-	/* 80338A7C */ void readAnmVisibility(J3DAnmVisibilityFullData const*);
-	/* 80338AA4 */ void setAnmVisibility(J3DAnmVisibilityFull*, J3DAnmVisibilityFullData const*);
-	/* 80338B20 */ void readAnmCluster(J3DAnmClusterFullData const*);
-	/* 80338B48 */ void setAnmCluster(J3DAnmClusterFull*, J3DAnmClusterFullData const*);
-	/* 80338BB4 */ void readAnmVtxColor(J3DAnmVtxColorFullData const*);
-	/* 80338BDC */ void setAnmVtxColor(J3DAnmVtxColorFull*, J3DAnmVtxColorFullData const*);
+struct J3DAnmTransformFull {
 };
 
-struct J3DAnmColorKeyData {
+struct J3DAnmTransform {
+	/* 80328E40 */ J3DAnmTransform(s16, f32*, s16*, f32*);
 };
 
-struct J3DAnmTevRegKeyData {
-};
-
-struct J3DAnmVtxColorKeyData {
-};
-
-struct J3DAnmTevRegKey {
-	/* 8032AE18 */ J3DAnmTevRegKey();
+struct J3DAnmTextureSRTKeyData {
 };
 
 struct J3DAnmTextureSRTKey {
 	/* 80329E5C */ J3DAnmTextureSRTKey();
 };
 
-struct J3DAnmClusterKeyData {
+struct J3DAnmTexPatternFullData {
 };
 
-struct J3DAnmTransformKey {
+struct J3DAnmTexPattern {
+	/* 8032AED8 */ J3DAnmTexPattern();
 };
 
-struct J3DAnmVtxColorKey {
-	/* 8032A4E0 */ J3DAnmVtxColorKey();
+struct J3DAnmTevRegKeyData {
 };
 
-struct J3DAnmClusterKey {
+struct J3DAnmTevRegKey {
+	/* 8032AE18 */ J3DAnmTevRegKey();
+};
+
+struct J3DAnmLoaderDataBaseFlag {
+};
+
+struct J3DAnmBase {
+};
+
+struct J3DAnmLoaderDataBase {
+	/* 80337B40 */ void load(void const*, J3DAnmLoaderDataBaseFlag);
+	/* 80338134 */ void setResource(J3DAnmBase*, void const*);
+};
+
+struct J3DAnmLoader {
+	/* 80339800 */ ~J3DAnmLoader();
 };
 
 struct J3DAnmColorKey {
 	/* 8032AB00 */ J3DAnmColorKey();
 };
 
-struct J3DAnmTextureSRTKeyData {
+struct J3DAnmClusterKeyData {
 };
 
-struct J3DAnmTransformKeyData {
+struct J3DAnmClusterKey {
+};
+
+struct J3DAnmColorKeyData {
 };
 
 struct J3DAnmKeyLoader_v15 {
@@ -141,19 +124,36 @@ struct J3DAnmKeyLoader_v15 {
 	/* 80339634 */ void setAnmVtxColor(J3DAnmVtxColorKey*, J3DAnmVtxColorKeyData const*);
 };
 
-struct J3DAnmLoader {
-	/* 80339800 */ ~J3DAnmLoader();
+struct J3DAnmClusterFullData {
 };
 
-struct ResNTAB {
+struct J3DAnmColorFullData {
 };
 
-struct JUTNameTab {
-	/* 802DEA1C */ void setResource(ResNTAB const*);
+struct J3DAnmClusterFull {
 };
 
-struct J3DAnmTransform {
-	/* 80328E40 */ J3DAnmTransform(s16, f32*, s16*, f32*);
+struct J3DAnmColorFull {
+	/* 8032A93C */ J3DAnmColorFull();
+};
+
+struct J3DAnmFullLoader_v15 {
+	/* 80338468 */ J3DAnmFullLoader_v15();
+	/* 80338484 */ ~J3DAnmFullLoader_v15();
+	/* 80338558 */ void load(void const*);
+	/* 803386A0 */ void setResource(J3DAnmBase*, void const*);
+	/* 80338800 */ void readAnmTransform(J3DAnmTransformFullData const*);
+	/* 80338828 */ void setAnmTransform(J3DAnmTransformFull*, J3DAnmTransformFullData const*);
+	/* 803388BC */ void readAnmColor(J3DAnmColorFullData const*);
+	/* 803388E4 */ void setAnmColor(J3DAnmColorFull*, J3DAnmColorFullData const*);
+	/* 803389B0 */ void readAnmTexPattern(J3DAnmTexPatternFullData const*);
+	/* 803389D8 */ void setAnmTexPattern(J3DAnmTexPattern*, J3DAnmTexPatternFullData const*);
+	/* 80338A7C */ void readAnmVisibility(J3DAnmVisibilityFullData const*);
+	/* 80338AA4 */ void setAnmVisibility(J3DAnmVisibilityFull*, J3DAnmVisibilityFullData const*);
+	/* 80338B20 */ void readAnmCluster(J3DAnmClusterFullData const*);
+	/* 80338B48 */ void setAnmCluster(J3DAnmClusterFull*, J3DAnmClusterFullData const*);
+	/* 80338BB4 */ void readAnmVtxColor(J3DAnmVtxColorFullData const*);
+	/* 80338BDC */ void setAnmVtxColor(J3DAnmVtxColorFull*, J3DAnmVtxColorFullData const*);
 };
 
 // 
@@ -327,7 +327,7 @@ SECTION_SDATA2 static u8 lit_889[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80337B40-80338134 05F4+00 s=0 e=7 z=1  None .text      load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag   */
+/* 80337B40-80338134 05F4+00 s=0 e=7 z=0  None .text      load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

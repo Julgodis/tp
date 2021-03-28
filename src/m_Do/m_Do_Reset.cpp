@@ -19,24 +19,24 @@ struct mDoDvdThd {
 	/* 800157FC */ void main(void*);
 };
 
-struct JASTaskThread {
-	/* 8028FE88 */ void pause(bool);
-};
-
-struct JASDvd {
-	/* 8028FEFC */ void getThreadPointer();
-};
-
 struct Z2AudioMgr {
 	/* 802CDA6C */ void hasReset() const;
+};
+
+struct JUTXfb {
+	/* 802E5214 */ void clearIndex();
 };
 
 struct JUTVideo {
 	/* 802E4CAC */ void destroyManager();
 };
 
-struct JUTXfb {
-	/* 802E5214 */ void clearIndex();
+struct JASTaskThread {
+	/* 8028FE88 */ void pause(bool);
+};
+
+struct JASDvd {
+	/* 8028FEFC */ void getThreadPointer();
 };
 
 // 
@@ -132,7 +132,7 @@ asm static void destroyVideo() {
 SECTION_DEAD char const* const stringBase_80374198 = "DVD_STATE_BUSY\n";
 #pragma pop
 
-/* 80450C78-80450C80 0004+04 s=3 e=42 z=2  None .sbss      mResetData__6mDoRst                                          */
+/* 80450C78-80450C80 0004+04 s=3 e=42 z=0  None .sbss      mResetData__6mDoRst                                          */
 u8 mResetData__6mDoRst[4 + 4 /* padding */];
 
 /* 80015614-8001574C 0138+00 s=0 e=3 z=0  None .text      mDoRst_reset__FiUli                                          */

@@ -11,8 +11,35 @@
 // Types:
 // 
 
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
+	/* 802DBE14 */ ~JSUPtrLink();
+};
+
+struct JSUPtrList {
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF14 */ void initiate();
+	/* 802DBF4C */ void append(JSUPtrLink*);
+	/* 802DBFF0 */ void prepend(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
+template <typename A0>
+struct JSUList { };
+/* JSUList<JPABaseEmitter> */
+struct JSUList__template1 {
+	/* 8027E51C */ JSUList__template1();
+	/* 8027E598 */ ~JSUList__template1();
+};
+
 struct JPAResourceManager {
 	/* 80273E68 */ void getResource(u16) const;
+};
+
+struct JPAEmitterWorkData {
+};
+
+struct JPAEmitterCallBack {
 };
 
 struct JGeometry {
@@ -24,29 +51,10 @@ struct JGeometry {
 
 };
 
-struct JPAEmitterCallBack {
-};
-
 struct JPADrawInfo {
 };
 
-struct JPAEmitterManager;
-struct JPAEmitterWorkData {
-};
-
 struct JPABaseEmitter;
-struct JPAResource {
-	/* 802755E8 */ void calc(JPAEmitterWorkData*, JPABaseEmitter*);
-	/* 80275A94 */ void draw(JPAEmitterWorkData*, JPABaseEmitter*);
-};
-
-struct JPABaseEmitter {
-	/* 8027E5EC */ ~JPABaseEmitter();
-	/* 8027E64C */ JPABaseEmitter();
-	/* 8027E6EC */ void init(JPAEmitterManager*, JPAResource*);
-	/* 8027EC60 */ void deleteAllParticle();
-};
-
 struct JPAParticleCallBack {
 };
 
@@ -66,12 +74,17 @@ struct JPAEmitterManager {
 	/* 8027E3F4 */ void calcYBBCam();
 };
 
-template <typename A0>
-struct JSUList { };
-/* JSUList<JPABaseEmitter> */
-struct JSUList__template1 {
-	/* 8027E51C */ JSUList__template1();
-	/* 8027E598 */ ~JSUList__template1();
+struct JPAResource;
+struct JPABaseEmitter {
+	/* 8027E5EC */ ~JPABaseEmitter();
+	/* 8027E64C */ JPABaseEmitter();
+	/* 8027E6EC */ void init(JPAEmitterManager*, JPAResource*);
+	/* 8027EC60 */ void deleteAllParticle();
+};
+
+struct JPAResource {
+	/* 802755E8 */ void calc(JPAEmitterWorkData*, JPABaseEmitter*);
+	/* 80275A94 */ void draw(JPAEmitterWorkData*, JPABaseEmitter*);
 };
 
 template <typename A0>
@@ -80,19 +93,6 @@ struct JPANode { };
 struct JPANode__template0 {
 	/* 8027E54C */ ~JPANode__template0();
 	/* 8027E588 */ JPANode__template0();
-};
-
-struct JSUPtrLink {
-	/* 802DBDFC */ JSUPtrLink(void*);
-	/* 802DBE14 */ ~JSUPtrLink();
-};
-
-struct JSUPtrList {
-	/* 802DBEAC */ ~JSUPtrList();
-	/* 802DBF14 */ void initiate();
-	/* 802DBF4C */ void append(JSUPtrLink*);
-	/* 802DBFF0 */ void prepend(JSUPtrLink*);
-	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
 // 

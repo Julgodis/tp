@@ -11,6 +11,29 @@
 // Types:
 // 
 
+namespace JGadget {
+	struct TLinkListNode {
+	};
+
+	struct TNodeLinkList {
+		struct iterator {
+		};
+
+		/* 802DCA1C */ ~TNodeLinkList();
+		/* 802DCBA8 */ void Insert(JGadget::TNodeLinkList::iterator, JGadget::TLinkListNode*);
+		/* 802DCBF8 */ void Remove(JGadget::TLinkListNode*);
+	};
+
+};
+
+struct JASTrackPort {
+	/* 8029354C */ void init();
+	/* 8029357C */ void readImport(u32);
+	/* 802935A0 */ void readExport(u32);
+	/* 802935C4 */ void writeImport(u32, u16);
+	/* 802935E8 */ void writeExport(u32, u16);
+};
+
 struct JASOscillator {
 	struct Point {
 	};
@@ -115,6 +138,22 @@ struct JASTrack {
 	/* 80292E9C */ void seqMain();
 };
 
+struct JASSeqCtrl {
+	struct IntrType {
+	};
+
+	/* 802938BC */ JASSeqCtrl();
+	/* 80293924 */ void init();
+	/* 80293980 */ void start(void*, u32);
+	/* 802939C4 */ void tickProc(JASTrack*);
+	/* 80293ABC */ void interrupt(JASSeqCtrl::IntrType);
+};
+
+struct JASRegisterParam {
+	/* 80293644 */ JASRegisterParam();
+	/* 80293664 */ void init();
+};
+
 template <typename A0>
 struct JASMemPool_MultiThreaded { };
 /* JASMemPool_MultiThreaded<JASTrack> */
@@ -125,6 +164,19 @@ struct JASMemPool_MultiThreaded__template0 {
 /* JASMemPool_MultiThreaded<JASTrack::TChannelMgr> */
 struct JASMemPool_MultiThreaded__template1 {
 	/* 80293334 */ ~JASMemPool_MultiThreaded__template1();
+};
+
+struct JASGenericMemPool {
+	/* 80290848 */ JASGenericMemPool();
+	/* 80290860 */ ~JASGenericMemPool();
+	/* 80290948 */ void alloc(u32);
+	/* 80290994 */ void free(void*, u32);
+};
+
+struct JASDriver {
+	/* 8029C9E8 */ void getDacRate();
+	/* 8029C9F0 */ void getSubFrames();
+	/* 8029E274 */ void registerSubFrameCallback(s32 (*)(void*), void*);
 };
 
 struct JASDefaultBankTable {
@@ -138,60 +190,8 @@ struct JASBankTable__template0 {
 	/* 80293528 */ void getBank(u32) const;
 };
 
-struct JASGenericMemPool {
-	/* 80290848 */ JASGenericMemPool();
-	/* 80290860 */ ~JASGenericMemPool();
-	/* 80290948 */ void alloc(u32);
-	/* 80290994 */ void free(void*, u32);
-};
-
-struct JASTrackPort {
-	/* 8029354C */ void init();
-	/* 8029357C */ void readImport(u32);
-	/* 802935A0 */ void readExport(u32);
-	/* 802935C4 */ void writeImport(u32, u16);
-	/* 802935E8 */ void writeExport(u32, u16);
-};
-
-struct JASRegisterParam {
-	/* 80293644 */ JASRegisterParam();
-	/* 80293664 */ void init();
-};
-
-struct JASSeqCtrl {
-	struct IntrType {
-	};
-
-	/* 802938BC */ JASSeqCtrl();
-	/* 80293924 */ void init();
-	/* 80293980 */ void start(void*, u32);
-	/* 802939C4 */ void tickProc(JASTrack*);
-	/* 80293ABC */ void interrupt(JASSeqCtrl::IntrType);
-};
-
 struct JASBank {
 	/* 80297930 */ void noteOn(JASBank const*, int, u8, u8, u16, void (*)(u32, JASChannel*, JASDsp::TChannel*, void*), void*);
-};
-
-struct JASDriver {
-	/* 8029C9E8 */ void getDacRate();
-	/* 8029C9F0 */ void getSubFrames();
-	/* 8029E274 */ void registerSubFrameCallback(s32 (*)(void*), void*);
-};
-
-namespace JGadget {
-	struct TLinkListNode {
-	};
-
-	struct TNodeLinkList {
-		struct iterator {
-		};
-
-		/* 802DCA1C */ ~TNodeLinkList();
-		/* 802DCBA8 */ void Insert(JGadget::TNodeLinkList::iterator, JGadget::TLinkListNode*);
-		/* 802DCBF8 */ void Remove(JGadget::TLinkListNode*);
-	};
-
 };
 
 // 

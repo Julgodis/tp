@@ -11,19 +11,53 @@
 // Types:
 // 
 
-struct JKRArchive {
+struct _GXTlut {
+};
+
+struct _GXTexMapID {
+};
+
+struct _GXCullMode {
+};
+
+struct ResTLUT {
 };
 
 struct ResTIMG {
 };
 
-struct J2DAnmTevRegKey {
-};
-
 struct ResFONT {
 };
 
-struct J2DAnmColor {
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct JUTTexture {
+	/* 802DE234 */ ~JUTTexture();
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
+	/* 802DE840 */ void load(_GXTexMapID);
+};
+
+struct JUTPalette {
+	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
+};
+
+struct JSUStreamSeekFrom {
+};
+
+struct JSURandomInputStream {
+	/* 802DC458 */ void peek(void*, s32);
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+struct JSUInputStream {
+	/* 802DC298 */ void read(void*, s32);
+};
+
+struct JKRArchive {
 };
 
 struct JGeometry {
@@ -35,33 +69,31 @@ struct JGeometry {
 
 };
 
-struct J2DAnmVisibilityFull {
-};
-
-struct JSUStreamSeekFrom {
-};
-
-struct JSURandomInputStream {
-	/* 802DC458 */ void peek(void*, s32);
-	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
-};
-
-struct J2DAnmTransform {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct J2DAnmTextureSRTKey {
+struct J2DMaterial {
 };
 
 struct J2DAnmBase {
 };
 
-struct _GXCullMode {
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmVisibilityFull {
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmVtxColor {
 };
 
 struct J2DPane {
@@ -103,24 +135,6 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-struct _GXTexMapID {
-};
-
-struct JUTTexture {
-	/* 802DE234 */ ~JUTTexture();
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
-	/* 802DE840 */ void load(_GXTexMapID);
-};
-
-struct J2DMaterial {
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
 struct J2DWindow {
 	struct TMaterial {
 	};
@@ -158,20 +172,6 @@ struct J2DWindow {
 	/* 802FC01C */ bool getFrameMaterial(u8) const;
 	/* 802FC024 */ bool getContentsMaterial() const;
 	/* 802FC04C */ void rewriteAlpha();
-};
-
-struct JSUInputStream {
-	/* 802DC298 */ void read(void*, s32);
-};
-
-struct ResTLUT {
-};
-
-struct _GXTlut {
-};
-
-struct JUTPalette {
-	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
 };
 
 // 

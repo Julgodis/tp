@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct JKRHeap {
+};
+
 struct JASDsp {
 	struct TChannel {
 		/* 8029DCA4 */ void init();
@@ -41,9 +44,6 @@ struct JASDSPChannel {
 	/* 8029D89C */ void updateAll();
 	/* 8029D910 */ void killActiveChannel();
 	/* 8029D948 */ void getHandle(u32);
-};
-
-struct JKRHeap {
 };
 
 // 

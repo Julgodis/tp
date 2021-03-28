@@ -11,21 +11,22 @@
 // Types:
 // 
 
+struct ResTIMG {
+};
+
 struct J2DTextBox {
 };
 
-struct COutFontSet_c {
-	/* 80225BB8 */ COutFontSet_c();
-	/* 80225BF4 */ ~COutFontSet_c();
-	/* 80225C3C */ void initialize();
-	/* 80225C70 */ void drawFont(J2DTextBox*, u8, f32, f32, f32, f32, u32, u8);
-};
-
-struct ResTIMG {
+struct J2DRotateAxis {
 };
 
 struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
+struct J2DPane {
+	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
+	/* 802F7AFC */ void getParentPane();
 };
 
 struct COutFont_c {
@@ -42,12 +43,11 @@ struct COutFont_c {
 	/* 80228530 */ void getBtiName(int);
 };
 
-struct J2DRotateAxis {
-};
-
-struct J2DPane {
-	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
-	/* 802F7AFC */ void getParentPane();
+struct COutFontSet_c {
+	/* 80225BB8 */ COutFontSet_c();
+	/* 80225BF4 */ ~COutFontSet_c();
+	/* 80225C3C */ void initialize();
+	/* 80225C70 */ void drawFont(J2DTextBox*, u8, f32, f32, f32, f32, u32, u8);
 };
 
 // 
