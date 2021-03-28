@@ -186,7 +186,7 @@ def find_function_ranges(asm_files):
                     continue
 
                 line_values = line[line_start+3:line_end].split(" ")
-                assert len(line_values) == 7
+                assert len(line_values) == 6
                 addr = int(line_values[0], 16)
                 if not first:
                     first = addr
