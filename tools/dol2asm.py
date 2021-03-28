@@ -1,8 +1,8 @@
 """
 
-dol2asm.py - script for splitting binary .dol and .rel files to C++ code.
+dol2asm.py - Script for splitting .dol and .rel binaries into C++ and .s code.
 
-This script only calls the underlaying libdol2asm code that does the heavy lifting.
+This script only calls the underlaying libdol2asm code that does the heavy-lifting.
 
 """
 
@@ -16,11 +16,11 @@ from pathlib import Path
 @click.version_option(libdol2asm.VERSION)
 @click.option('--debug/--no-debug', help="enable/disable debug logging", default=False)
 @click.option('--game', 'game_path', help=f"Path to extracted game files. (same directory as 'main.dol' is in)", required=False, type=libdol2asm.util.PathPath(file_okay=False, dir_okay=True), default="game/")
-@click.option('--lib-path', 'lib_path', help="Location of the generate library source files.", required=False, type=libdol2asm.util.PathPath(file_okay=False, dir_okay=True), default="libs/")
-@click.option('--src-path', 'src_path', help="Location of the generate source files.", required=False, type=libdol2asm.util.PathPath(file_okay=False, dir_okay=True), default="src/")
-@click.option('--asm-path', 'asm_path', help="Location of the generate asm files.", required=False, type=libdol2asm.util.PathPath(file_okay=False, dir_okay=True), default="asm/")
-@click.option('--rel-path', 'rel_path', help="Location of the generate rel source files.", required=False, type=libdol2asm.util.PathPath(file_okay=False, dir_okay=True), default="rel/")
-@click.option('--include-path', 'inc_path', help="Location of the generate include files.", required=False, type=libdol2asm.util.PathPath(file_okay=False, dir_okay=True), default="include/")
+@click.option('--lib-path', 'lib_path', help="Where to put generated library source files.", required=False, type=libdol2asm.util.PathPath(file_okay=False, dir_okay=True), default="libs/")
+@click.option('--src-path', 'src_path', help="Where to put generated source files.", required=False, type=libdol2asm.util.PathPath(file_okay=False, dir_okay=True), default="src/")
+@click.option('--asm-path', 'asm_path', help="Where to put generated asm files.", required=False, type=libdol2asm.util.PathPath(file_okay=False, dir_okay=True), default="asm/")
+@click.option('--rel-path', 'rel_path', help="Where to put generated rel source files.", required=False, type=libdol2asm.util.PathPath(file_okay=False, dir_okay=True), default="rel/")
+@click.option('--include-path', 'inc_path', help="Where to put generated include files.", required=False, type=libdol2asm.util.PathPath(file_okay=False, dir_okay=True), default="include/")
 @click.option('--cpp/--no-cpp', 'cpp_gen', default=True)
 @click.option('--asm/--no-asm', 'asm_gen', default=True)
 @click.option('--makefile/--no-makefile', 'mk_gen', default=True)

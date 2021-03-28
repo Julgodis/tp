@@ -123,24 +123,12 @@ def lcf(output_path):
                 continue
 
             rc = x['r']
-            sh = x['sh']
-
-            # there are cases where dol2asm cannot generate code which uses the symbol
-            # directly. one such case is for "addi r3, r2, SYMBOL-SDA2_ADDR" where 
-            # calculating the relative address to r2 is not support by the assembler.
-            # this case one is (and the one for r13) is quite common for the compiler 
-            # to generate. rc contains the "real" reference count and sh the reference 
-            # count of invalid references.
-            extern_rc = rc[1] - sh[1]
-            rels_rc = rc[2] - sh[2]
+            require_force_active = False
 
             # the static reference count is unchanged as the linker seems not to strip
             # static variables and functions. i.e., if the static reference count is
             # non-zero then the symbol does not need force active.
             static_rc = rc[0]
-
-
-            require_force_active = False
 
             # the symbol is only referenced by rels and is required to be forceactive.
             # I assume the process of generating rels will generate a list of forceactive
