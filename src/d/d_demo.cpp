@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct Vec {
+struct fopAc_ac_c {
 };
 
-struct fopAc_ac_c {
+struct Vec {
 };
 
 struct dDemo_actor_c {
@@ -79,10 +79,10 @@ struct dDemo_ambient_c {
 	/* 800394C8 */ ~dDemo_ambient_c();
 };
 
-struct _GXSpotFn {
+struct _GXDistAttnFn {
 };
 
-struct _GXDistAttnFn {
+struct _GXSpotFn {
 };
 
 struct JStage {
@@ -123,10 +123,10 @@ struct JStage {
 		/* 80280B88 */ void JSGGetColor() const;
 	};
 
-	struct TECameraView {
+	struct TECameraProjection {
 	};
 
-	struct TECameraProjection {
+	struct TECameraView {
 	};
 
 	struct TCamera {

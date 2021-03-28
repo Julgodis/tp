@@ -19,6 +19,7 @@ extern void* const data_805716B4[2];
 // 
 
 
+extern "C" void __sinit_d_a_npc_taro_cpp(); // 1
 
 // 
 // Declarations:

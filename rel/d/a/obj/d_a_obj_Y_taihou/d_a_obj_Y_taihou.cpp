@@ -112,10 +112,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -138,6 +138,9 @@ struct cBgS_PolyInfo {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -181,10 +184,10 @@ struct Z2SeMgr {
 static void ccHitCallback(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*); // 2
 static void pushPullcallBack(fopAc_ac_c*, fopAc_ac_c*, s16, dBgW_Base::PushPullLabel); // 2
 static void searchIronBallCallback(void*, void*); // 2
-void daObjYtaihou_create1st(daObjYtaihou_c*); // 2
-void daObjYtaihou_MoveBGDelete(daObjYtaihou_c*); // 2
-void daObjYtaihou_MoveBGExecute(daObjYtaihou_c*); // 2
-void daObjYtaihou_MoveBGDraw(daObjYtaihou_c*); // 2
+static void daObjYtaihou_create1st(daObjYtaihou_c*); // 2
+static void daObjYtaihou_MoveBGDelete(daObjYtaihou_c*); // 2
+static void daObjYtaihou_MoveBGExecute(daObjYtaihou_c*); // 2
+static void daObjYtaihou_MoveBGDraw(daObjYtaihou_c*); // 2
 static void cLib_calcTimer__template0(s16*); // 2
 
 extern "C" static void ccHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf(); // 1
@@ -206,13 +209,13 @@ extern "C" void Create__14daObjYtaihou_cFv(); // 1
 extern "C" void Execute__14daObjYtaihou_cFPPA3_A4_f(); // 1
 extern "C" void Draw__14daObjYtaihou_cFv(); // 1
 extern "C" void Delete__14daObjYtaihou_cFv(); // 1
-extern "C" void daObjYtaihou_create1st__FP14daObjYtaihou_c(); // 1
+extern "C" static void daObjYtaihou_create1st__FP14daObjYtaihou_c(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void daObjYtaihou_MoveBGDelete__FP14daObjYtaihou_c(); // 1
-extern "C" void daObjYtaihou_MoveBGExecute__FP14daObjYtaihou_c(); // 1
-extern "C" void daObjYtaihou_MoveBGDraw__FP14daObjYtaihou_c(); // 1
+extern "C" static void daObjYtaihou_MoveBGDelete__FP14daObjYtaihou_c(); // 1
+extern "C" static void daObjYtaihou_MoveBGExecute__FP14daObjYtaihou_c(); // 1
+extern "C" static void daObjYtaihou_MoveBGDraw__FP14daObjYtaihou_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__17dEvLib_callback_cFv(); // 1
 extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
@@ -220,10 +223,9 @@ extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
 extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
 extern "C" void __dt__14daObjYtaihou_cFv(); // 1
 extern "C" static void func_80BA1118(); // 1
-extern "C" void func_80BA1134(); // 1
-extern "C" void func_80BA113C(); // 1
+extern "C" static void func_80BA1134(); // 1
+extern "C" static void func_80BA113C(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* daObjYtaihou_METHODS[8];
 extern "C" extern void* g_profile_Obj_Ytaihou[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -316,6 +318,9 @@ extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXy
 extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -342,6 +347,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void abs(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__16dBgS_MoveBgActor[10];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -428,8 +435,77 @@ asm static void searchIronBallCallback(void* param_0, void* param_1) {
 
 
 /* ############################################################################################## */
+/* 80BA116C-80BA1170 0004+00 s=1 e=0 z=0  None .rodata    @3852                                                        */
+SECTION_RODATA static u32 const lit_3852 = 0x3F4CCCCD;
+
+/* 80BA1170-80BA1174 0004+00 s=1 e=0 z=0  None .rodata    @3853                                                        */
+SECTION_RODATA static u32 const lit_3853 = 0x42700000;
+
+/* 80BA1174-80BA1178 0004+00 s=1 e=0 z=0  None .rodata    @3854                                                        */
+SECTION_RODATA static u32 const lit_3854 = 0x426C0000;
+
+/* 80BA1178-80BA117C 0004+00 s=1 e=0 z=0  None .rodata    @3855                                                        */
+SECTION_RODATA static u32 const lit_3855 = 0x3F19999A;
+
+/* 80BA117C-80BA1184 0004+04 s=1 e=0 z=0  None .rodata    @3856                                                        */
+SECTION_RODATA static u32 const lit_3856[1 + 1 /* padding */] = {
+	0x3ECCCCCD,
+	/* padding */
+	0x00000000,
+};
+
+/* 80BA1184-80BA118C 0008+00 s=1 e=0 z=0  None .rodata    @3858                                                        */
+SECTION_RODATA static u8 const lit_3858[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
+/* 80BA118C-80BA1190 0004+00 s=1 e=0 z=0  None .rodata    @3915                                                        */
+SECTION_RODATA static u32 const lit_3915 = 0x41200000;
+
+/* 80BA1190-80BA119C 000C+00 s=1 e=0 z=0  None .rodata    l_hibanaOffset$3954                                          */
+SECTION_RODATA static u8 const data_80BA1190[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x43, 0x16, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
+};
+
+/* 80BA119C-80BA11A8 000C+00 s=1 e=0 z=0  None .rodata    l_shotOffset$3961                                            */
+SECTION_RODATA static u8 const data_80BA119C[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x43, 0x02, 0x00, 0x00, 0xC2, 0xC8, 0x00, 0x00,
+};
+
+/* 80BA11A8-80BA11B4 000C+00 s=1 e=0 z=0  None .rodata    l_shotSmokeOffset$3962                                       */
+SECTION_RODATA static u8 const data_80BA11A8[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BA11B4-80BA11B8 0004+00 s=1 e=0 z=0  None .rodata    @4105                                                        */
+SECTION_RODATA static u32 const lit_4105 = 0x425C0000;
+
+/* 80BA11B8-80BA11BC 0004+00 s=1 e=0 z=0  None .rodata    @4106                                                        */
+SECTION_RODATA static u32 const lit_4106 = 0x42BE0000;
+
+/* 80BA11BC-80BA11C0 0004+00 s=1 e=0 z=0  None .rodata    @4107                                                        */
+SECTION_RODATA static u32 const lit_4107 = 0x3FE66666;
+
+/* 80BA11C0-80BA11C4 0004+00 s=1 e=0 z=0  None .rodata    @4108                                                        */
+SECTION_RODATA static u32 const lit_4108 = 0x43520000;
+
+/* 80BA11C4-80BA11C8 0004+00 s=1 e=0 z=0  None .rodata    @4109                                                        */
+SECTION_RODATA static u32 const lit_4109 = 0x42200000;
+
+/* 80BA11C8-80BA11D4 000C+00 s=1 e=0 z=0  None .rodata    l_cc_offset$4147                                             */
+SECTION_RODATA static u8 const data_80BA11C8[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00,
+};
+
+/* 80BA11D4-80BA11DD 0009+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80BA11D4 = "Y_taihou";
+#pragma pop
+
 /* 80BA11E0-80BA11E4 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
 
 /* 80B9FDE8-80B9FEB0 00C8+00 s=1 e=0 z=0  None .text      create1st__14daObjYtaihou_cFv                                */
 #pragma push
@@ -513,30 +589,6 @@ asm void daObjYtaihou_c::setNextAngle() {
 
 
 /* ############################################################################################## */
-/* 80BA116C-80BA1170 0004+00 s=1 e=0 z=0  None .rodata    @3852                                                        */
-SECTION_RODATA static u32 const lit_3852 = 0x3F4CCCCD;
-
-/* 80BA1170-80BA1174 0004+00 s=1 e=0 z=0  None .rodata    @3853                                                        */
-SECTION_RODATA static u32 const lit_3853 = 0x42700000;
-
-/* 80BA1174-80BA1178 0004+00 s=1 e=0 z=0  None .rodata    @3854                                                        */
-SECTION_RODATA static u32 const lit_3854 = 0x426C0000;
-
-/* 80BA1178-80BA117C 0004+00 s=1 e=0 z=0  None .rodata    @3855                                                        */
-SECTION_RODATA static u32 const lit_3855 = 0x3F19999A;
-
-/* 80BA117C-80BA1184 0004+04 s=1 e=0 z=0  None .rodata    @3856                                                        */
-SECTION_RODATA static u32 const lit_3856[1 + 1 /* padding */] = {
-	0x3ECCCCCD,
-	/* padding */
-	0x00000000,
-};
-
-/* 80BA1184-80BA118C 0008+00 s=1 e=0 z=0  None .rodata    @3858                                                        */
-SECTION_RODATA static u8 const lit_3858[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
 /* 80BA1318-80BA131C 0001+03 s=1 e=0 z=0  None .bss       @1109                                                        */
 static u8 lit_1109[1 + 3 /* padding */];
 
@@ -602,10 +654,6 @@ asm void daObjYtaihou_c::setMtx() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80BA118C-80BA1190 0004+00 s=1 e=0 z=0  None .rodata    @3915                                                        */
-SECTION_RODATA static u32 const lit_3915 = 0x41200000;
-
 /* 80BA0208-80BA045C 0254+00 s=1 e=0 z=0  None .text      rotateCheck__14daObjYtaihou_cFv                              */
 #pragma push
 #pragma optimization_level 0
@@ -618,36 +666,6 @@ asm void daObjYtaihou_c::rotateCheck() {
 
 
 /* ############################################################################################## */
-/* 80BA1190-80BA119C 000C+00 s=1 e=0 z=0  None .rodata    l_hibanaOffset$3954                                          */
-SECTION_RODATA static u8 const data_80BA1190[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x43, 0x16, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
-};
-
-/* 80BA119C-80BA11A8 000C+00 s=1 e=0 z=0  None .rodata    l_shotOffset$3961                                            */
-SECTION_RODATA static u8 const data_80BA119C[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x43, 0x02, 0x00, 0x00, 0xC2, 0xC8, 0x00, 0x00,
-};
-
-/* 80BA11A8-80BA11B4 000C+00 s=1 e=0 z=0  None .rodata    l_shotSmokeOffset$3962                                       */
-SECTION_RODATA static u8 const data_80BA11A8[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BA11B4-80BA11B8 0004+00 s=1 e=0 z=0  None .rodata    @4105                                                        */
-SECTION_RODATA static u32 const lit_4105 = 0x425C0000;
-
-/* 80BA11B8-80BA11BC 0004+00 s=1 e=0 z=0  None .rodata    @4106                                                        */
-SECTION_RODATA static u32 const lit_4106 = 0x42BE0000;
-
-/* 80BA11BC-80BA11C0 0004+00 s=1 e=0 z=0  None .rodata    @4107                                                        */
-SECTION_RODATA static u32 const lit_4107 = 0x3FE66666;
-
-/* 80BA11C0-80BA11C4 0004+00 s=1 e=0 z=0  None .rodata    @4108                                                        */
-SECTION_RODATA static u32 const lit_4108 = 0x43520000;
-
-/* 80BA11C4-80BA11C8 0004+00 s=1 e=0 z=0  None .rodata    @4109                                                        */
-SECTION_RODATA static u32 const lit_4109 = 0x42200000;
-
 /* 80BA1360-80BA1370 000C+04 s=1 e=0 z=0  None .bss       @3951                                                        */
 static u8 lit_3951[12 + 4 /* padding */];
 
@@ -665,7 +683,7 @@ asm void daObjYtaihou_c::shotCheck() {
 #pragma pop
 
 
-/* 80BA0964-80BA0974 0010+00 s=1 e=0 z=0  None .text      eventStart__14daObjYtaihou_cFv                               */
+/* 80BA0964-80BA0974 0010+00 s=2 e=0 z=0  None .text      eventStart__14daObjYtaihou_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -676,7 +694,7 @@ asm void daObjYtaihou_c::eventStart() {
 #pragma pop
 
 
-/* 80BA0974-80BA09E4 0070+00 s=0 e=0 z=0  None .text      CreateHeap__14daObjYtaihou_cFv                               */
+/* 80BA0974-80BA09E4 0070+00 s=1 e=0 z=0  None .text      CreateHeap__14daObjYtaihou_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -687,7 +705,7 @@ asm void daObjYtaihou_c::CreateHeap() {
 #pragma pop
 
 
-/* 80BA09E4-80BA0A94 00B0+00 s=0 e=0 z=0  None .text      Create__14daObjYtaihou_cFv                                   */
+/* 80BA09E4-80BA0A94 00B0+00 s=1 e=0 z=0  None .text      Create__14daObjYtaihou_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -698,13 +716,7 @@ asm void daObjYtaihou_c::Create() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80BA11C8-80BA11D4 000C+00 s=1 e=0 z=0  None .rodata    l_cc_offset$4147                                             */
-SECTION_RODATA static u8 const data_80BA11C8[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00,
-};
-
-/* 80BA0A94-80BA0B4C 00B8+00 s=0 e=0 z=0  None .text      Execute__14daObjYtaihou_cFPPA3_A4_f                          */
+/* 80BA0A94-80BA0B4C 00B8+00 s=1 e=0 z=0  None .text      Execute__14daObjYtaihou_cFPPA3_A4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -715,7 +727,7 @@ asm void daObjYtaihou_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80BA0B4C-80BA0C1C 00D0+00 s=0 e=0 z=0  None .text      Draw__14daObjYtaihou_cFv                                     */
+/* 80BA0B4C-80BA0C1C 00D0+00 s=1 e=0 z=0  None .text      Draw__14daObjYtaihou_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -726,7 +738,7 @@ asm void daObjYtaihou_c::Draw() {
 #pragma pop
 
 
-/* 80BA0C1C-80BA0C88 006C+00 s=0 e=0 z=0  None .text      Delete__14daObjYtaihou_cFv                                   */
+/* 80BA0C1C-80BA0C88 006C+00 s=1 e=0 z=0  None .text      Delete__14daObjYtaihou_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -738,30 +750,30 @@ asm void daObjYtaihou_c::Delete() {
 
 
 /* ############################################################################################## */
-/* 80BA1230-80BA1250 0020+00 s=0 e=0 z=0  None .data      daObjYtaihou_METHODS                                         */
-SECTION_DATA void* daObjYtaihou_METHODS[8] = {
+/* 80BA1230-80BA1250 0020+00 s=1 e=0 z=0  None .data      daObjYtaihou_METHODS                                         */
+SECTION_DATA static void* daObjYtaihou_METHODS[8] = {
+	(void*)daObjYtaihou_create1st__FP14daObjYtaihou_c,
+	(void*)daObjYtaihou_MoveBGDelete__FP14daObjYtaihou_c,
+	(void*)daObjYtaihou_MoveBGExecute__FP14daObjYtaihou_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjYtaihou_MoveBGDraw__FP14daObjYtaihou_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80BA1250-80BA1280 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Ytaihou                                        */
+/* 80BA1250-80BA1280 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Ytaihou                                        */
 SECTION_DATA void* g_profile_Obj_Ytaihou[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00910000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000778,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x027B0000,
-	(void*)NULL,
+	(void*)&daObjYtaihou_METHODS,
 	(void*)0x00044100,
 	(void*)0x000E0000,
 };
@@ -770,74 +782,74 @@ SECTION_DATA void* g_profile_Obj_Ytaihou[12] = {
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80BA128C-80BA1298 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80BA1298-80BA12A4 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 80BA12A4-80BA12B0 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80BA12B0-80BA12C8 0018+00 s=3 e=0 z=0  None .data      __vt__17dEvLib_callback_c                                    */
 SECTION_DATA static void* __vt__17dEvLib_callback_c[6] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__17dEvLib_callback_cFv,
+	(void*)eventStart__17dEvLib_callback_cFv,
+	(void*)eventRun__17dEvLib_callback_cFv,
+	(void*)eventEnd__17dEvLib_callback_cFv,
 };
 
 /* 80BA12C8-80BA1310 0048+00 s=2 e=0 z=0  None .data      __vt__14daObjYtaihou_c                                       */
 SECTION_DATA static void* __vt__14daObjYtaihou_c[18] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)CreateHeap__14daObjYtaihou_cFv,
+	(void*)Create__14daObjYtaihou_cFv,
+	(void*)Execute__14daObjYtaihou_cFPPA3_A4_f,
+	(void*)Draw__14daObjYtaihou_cFv,
+	(void*)Delete__14daObjYtaihou_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80BA113C,
+	(void*)func_80BA1134,
+	(void*)eventRun__17dEvLib_callback_cFv,
+	(void*)eventEnd__17dEvLib_callback_cFv,
+	(void*)eventStart__14daObjYtaihou_cFv,
+	(void*)__dt__14daObjYtaihou_cFv,
 };
 
-/* 80BA0C88-80BA0DA4 011C+00 s=0 e=0 z=0  None .text      daObjYtaihou_create1st__FP14daObjYtaihou_c                   */
+/* 80BA0C88-80BA0DA4 011C+00 s=1 e=0 z=0  None .text      daObjYtaihou_create1st__FP14daObjYtaihou_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjYtaihou_create1st(daObjYtaihou_c* param_0) {
+asm static void daObjYtaihou_create1st(daObjYtaihou_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/daObjYtaihou_create1st__FP14daObjYtaihou_c.s"
 }
 #pragma pop
 
 
-/* 80BA0DA4-80BA0DEC 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80BA0DA4-80BA0DEC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -848,7 +860,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80BA0DEC-80BA0E34 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80BA0DEC-80BA0E34 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -859,7 +871,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80BA0E34-80BA0E90 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80BA0E34-80BA0E90 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -870,40 +882,40 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80BA0E90-80BA0EB0 0020+00 s=0 e=0 z=0  None .text      daObjYtaihou_MoveBGDelete__FP14daObjYtaihou_c                */
+/* 80BA0E90-80BA0EB0 0020+00 s=1 e=0 z=0  None .text      daObjYtaihou_MoveBGDelete__FP14daObjYtaihou_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjYtaihou_MoveBGDelete(daObjYtaihou_c* param_0) {
+asm static void daObjYtaihou_MoveBGDelete(daObjYtaihou_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/daObjYtaihou_MoveBGDelete__FP14daObjYtaihou_c.s"
 }
 #pragma pop
 
 
-/* 80BA0EB0-80BA0ED0 0020+00 s=0 e=0 z=0  None .text      daObjYtaihou_MoveBGExecute__FP14daObjYtaihou_c               */
+/* 80BA0EB0-80BA0ED0 0020+00 s=1 e=0 z=0  None .text      daObjYtaihou_MoveBGExecute__FP14daObjYtaihou_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjYtaihou_MoveBGExecute(daObjYtaihou_c* param_0) {
+asm static void daObjYtaihou_MoveBGExecute(daObjYtaihou_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/daObjYtaihou_MoveBGExecute__FP14daObjYtaihou_c.s"
 }
 #pragma pop
 
 
-/* 80BA0ED0-80BA0EFC 002C+00 s=0 e=0 z=0  None .text      daObjYtaihou_MoveBGDraw__FP14daObjYtaihou_c                  */
+/* 80BA0ED0-80BA0EFC 002C+00 s=1 e=0 z=0  None .text      daObjYtaihou_MoveBGDraw__FP14daObjYtaihou_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjYtaihou_MoveBGDraw(daObjYtaihou_c* param_0) {
+asm static void daObjYtaihou_MoveBGDraw(daObjYtaihou_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/daObjYtaihou_MoveBGDraw__FP14daObjYtaihou_c.s"
 }
 #pragma pop
 
 
-/* 80BA0EFC-80BA0F44 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80BA0EFC-80BA0F44 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -914,7 +926,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80BA0F44-80BA0F8C 0048+00 s=0 e=0 z=0  None .text      __dt__17dEvLib_callback_cFv                                  */
+/* 80BA0F44-80BA0F8C 0048+00 s=1 e=0 z=0  None .text      __dt__17dEvLib_callback_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -925,25 +937,25 @@ asm dEvLib_callback_c::~dEvLib_callback_c() {
 #pragma pop
 
 
-/* 80BA0F8C-80BA0F94 0008+00 s=0 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
+/* 80BA0F8C-80BA0F94 0008+00 s=1 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
 bool dEvLib_callback_c::eventStart() {
 	return true;
 }
 
 
-/* 80BA0F94-80BA0F9C 0008+00 s=0 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
+/* 80BA0F94-80BA0F9C 0008+00 s=2 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
 bool dEvLib_callback_c::eventRun() {
 	return true;
 }
 
 
-/* 80BA0F9C-80BA0FA4 0008+00 s=0 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
+/* 80BA0F9C-80BA0FA4 0008+00 s=2 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
 bool dEvLib_callback_c::eventEnd() {
 	return true;
 }
 
 
-/* 80BA0FA4-80BA1118 0174+00 s=1 e=0 z=0  None .text      __dt__14daObjYtaihou_cFv                                     */
+/* 80BA0FA4-80BA1118 0174+00 s=2 e=0 z=0  None .text      __dt__14daObjYtaihou_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -965,22 +977,22 @@ asm static void cLib_calcTimer__template0(s16* param_0) {
 #pragma pop
 
 
-/* 80BA1134-80BA113C 0008+00 s=0 e=0 z=0  None .text      @1448@eventStart__14daObjYtaihou_cFv                         */
+/* 80BA1134-80BA113C 0008+00 s=1 e=0 z=0  None .text      @1448@eventStart__14daObjYtaihou_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BA1134() {
+extern "C" asm static void func_80BA1134() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/func_80BA1134.s"
 }
 #pragma pop
 
 
-/* 80BA113C-80BA1144 0008+00 s=0 e=0 z=0  None .text      @1448@__dt__14daObjYtaihou_cFv                               */
+/* 80BA113C-80BA1144 0008+00 s=1 e=0 z=0  None .text      @1448@__dt__14daObjYtaihou_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BA113C() {
+extern "C" asm static void func_80BA113C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/func_80BA113C.s"
 }
@@ -988,13 +1000,6 @@ extern "C" asm void func_80BA113C() {
 
 
 /* ############################################################################################## */
-/* 80BA11D4-80BA11DD 0009+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80BA11D4 = "Y_taihou";
-#pragma pop
-
 /* 80BA137C-80BA1380 0004+00 s=0 e=0 z=0  None .bss       sInstance__40JASGlobalInstance<19JASDefaultBankTable>        */
 u8 data_80BA137C[4];
 

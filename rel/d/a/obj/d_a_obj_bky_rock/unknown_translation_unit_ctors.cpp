@@ -19,6 +19,7 @@ extern void* const data_80BB7EA4[2];
 // 
 
 
+extern "C" void __sinit_d_a_obj_bky_rock_cpp(); // 1
 
 // 
 // Declarations:

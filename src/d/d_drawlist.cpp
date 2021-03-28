@@ -103,9 +103,6 @@ struct cM_rnd_c {
 	/* 80053E60 */ void getValue(f32, f32);
 };
 
-struct _GXColor {
-};
-
 struct Vec {
 };
 
@@ -117,15 +114,18 @@ struct cXyz {
 	/* 802670AC */ void isZero() const;
 };
 
+struct _GXColor {
+};
+
 struct dDlst_effectLine_c {
 	/* 80053E9C */ void draw();
 	/* 800541F4 */ void update(cXyz&, _GXColor&, u16, u16, u16, u16, f32, f32, f32, f32);
 };
 
-struct cM3dGPla {
+struct cBgD_Vtx_t {
 };
 
-struct cBgD_Vtx_t {
+struct cM3dGPla {
 };
 
 struct dDlst_shadowPoly_c {
@@ -133,10 +133,10 @@ struct dDlst_shadowPoly_c {
 	/* 800543B4 */ void draw();
 };
 
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct J3DModel {
 };
 
 struct dDlst_shadowReal_c {

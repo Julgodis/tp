@@ -79,10 +79,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -190,7 +190,7 @@ struct cCcS {
 // Forward References:
 // 
 
-void daOBJ_HB_Draw(obj_hb_class*); // 2
+static void daOBJ_HB_Draw(obj_hb_class*); // 2
 static void obj_hb_carry(obj_hb_class*); // 2
 static void wall_angle_get(obj_hb_class*); // 2
 static void water_check(obj_hb_class*); // 2
@@ -200,12 +200,12 @@ static void obj_hb_drop(obj_hb_class*); // 2
 static void obj_hb_float(obj_hb_class*); // 2
 static void action(obj_hb_class*); // 2
 static void daOBJ_HB_Execute(obj_hb_class*); // 2
-bool daOBJ_HB_IsDelete(obj_hb_class*); // 2
-void daOBJ_HB_Delete(obj_hb_class*); // 2
+static bool daOBJ_HB_IsDelete(obj_hb_class*); // 2
+static void daOBJ_HB_Delete(obj_hb_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daOBJ_HB_Create(fopAc_ac_c*); // 2
+static void daOBJ_HB_Create(fopAc_ac_c*); // 2
 
-extern "C" void daOBJ_HB_Draw__FP12obj_hb_class(); // 1
+extern "C" static void daOBJ_HB_Draw__FP12obj_hb_class(); // 1
 extern "C" static void obj_hb_carry__FP12obj_hb_class(); // 1
 extern "C" static void wall_angle_get__FP12obj_hb_class(); // 1
 extern "C" static void water_check__FP12obj_hb_class(); // 1
@@ -215,17 +215,16 @@ extern "C" static void obj_hb_drop__FP12obj_hb_class(); // 1
 extern "C" static void obj_hb_float__FP12obj_hb_class(); // 1
 extern "C" static void action__FP12obj_hb_class(); // 1
 extern "C" static void daOBJ_HB_Execute__FP12obj_hb_class(); // 1
-extern "C" bool daOBJ_HB_IsDelete__FP12obj_hb_class(); // 1
-extern "C" void daOBJ_HB_Delete__FP12obj_hb_class(); // 1
+extern "C" static bool daOBJ_HB_IsDelete__FP12obj_hb_class(); // 1
+extern "C" static void daOBJ_HB_Delete__FP12obj_hb_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daOBJ_HB_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daOBJ_HB_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" void func_80C1B5E8(); // 1
-extern "C" void func_80C1B5F0(); // 1
+extern "C" static void func_80C1B5E8(); // 1
+extern "C" static void func_80C1B5F0(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daOBJ_HB_Method[8];
 extern "C" extern void* g_profile_OBJ_HB[12];
 
 // 
@@ -352,6 +351,8 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -385,11 +386,11 @@ SECTION_RODATA static u8 const lit_3667[4] = {
 /* 80C1B60C-80C1B610 0004+00 s=7 e=0 z=0  None .rodata    @3668                                                        */
 SECTION_RODATA static u32 const lit_3668 = 0x3F800000;
 
-/* 80C195B8-80C19688 00D0+00 s=0 e=0 z=0  None .text      daOBJ_HB_Draw__FP12obj_hb_class                              */
+/* 80C195B8-80C19688 00D0+00 s=1 e=0 z=0  None .text      daOBJ_HB_Draw__FP12obj_hb_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daOBJ_HB_Draw(obj_hb_class* param_0) {
+asm static void daOBJ_HB_Draw(obj_hb_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/daOBJ_HB_Draw__FP12obj_hb_class.s"
 }
@@ -671,7 +672,7 @@ asm static void action(obj_hb_class* param_0) {
 #pragma pop
 
 
-/* 80C1AF80-80C1B124 01A4+00 s=1 e=0 z=0  None .text      daOBJ_HB_Execute__FP12obj_hb_class                           */
+/* 80C1AF80-80C1B124 01A4+00 s=2 e=0 z=0  None .text      daOBJ_HB_Execute__FP12obj_hb_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -682,8 +683,8 @@ asm static void daOBJ_HB_Execute(obj_hb_class* param_0) {
 #pragma pop
 
 
-/* 80C1B124-80C1B12C 0008+00 s=0 e=0 z=0  None .text      daOBJ_HB_IsDelete__FP12obj_hb_class                          */
-bool daOBJ_HB_IsDelete(obj_hb_class* param_0) {
+/* 80C1B124-80C1B12C 0008+00 s=1 e=0 z=0  None .text      daOBJ_HB_IsDelete__FP12obj_hb_class                          */
+static bool daOBJ_HB_IsDelete(obj_hb_class* param_0) {
 	return true;
 }
 
@@ -699,11 +700,11 @@ SECTION_RODATA static u32 const lit_4457 = 0x477FFF00;
 SECTION_DEAD char const* const stringBase_80C1B700 = "E_HB";
 #pragma pop
 
-/* 80C1B12C-80C1B188 005C+00 s=0 e=0 z=0  None .text      daOBJ_HB_Delete__FP12obj_hb_class                            */
+/* 80C1B12C-80C1B188 005C+00 s=1 e=0 z=0  None .text      daOBJ_HB_Delete__FP12obj_hb_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daOBJ_HB_Delete(obj_hb_class* param_0) {
+asm static void daOBJ_HB_Delete(obj_hb_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/daOBJ_HB_Delete__FP12obj_hb_class.s"
 }
@@ -730,30 +731,30 @@ SECTION_DATA static u8 data_80C1B710[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
 };
 
-/* 80C1B750-80C1B770 0020+00 s=0 e=0 z=0  None .data      l_daOBJ_HB_Method                                            */
-SECTION_DATA void* l_daOBJ_HB_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80C1B750-80C1B770 0020+00 s=1 e=0 z=0  None .data      l_daOBJ_HB_Method                                            */
+SECTION_DATA static void* l_daOBJ_HB_Method[8] = {
+	(void*)daOBJ_HB_Create__FP10fopAc_ac_c,
+	(void*)daOBJ_HB_Delete__FP12obj_hb_class,
+	(void*)daOBJ_HB_Execute__FP12obj_hb_class,
+	(void*)daOBJ_HB_IsDelete__FP12obj_hb_class,
+	(void*)daOBJ_HB_Draw__FP12obj_hb_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C1B770-80C1B7A0 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_HB                                             */
+/* 80C1B770-80C1B7A0 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_HB                                             */
 SECTION_DATA void* g_profile_OBJ_HB[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0008FFFD,
 	(void*)0x02FE0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000A8C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02C10000,
-	(void*)NULL,
+	(void*)&l_daOBJ_HB_Method,
 	(void*)0x00040100,
 	(void*)NULL,
 };
@@ -762,41 +763,41 @@ SECTION_DATA void* g_profile_OBJ_HB[12] = {
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80C1B7AC-80C1B7B8 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80C1B7B8-80C1B7DC 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80C1B5F0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80C1B5E8,
 };
 
-/* 80C1B1F4-80C1B4E8 02F4+00 s=0 e=0 z=0  None .text      daOBJ_HB_Create__FP10fopAc_ac_c                              */
+/* 80C1B1F4-80C1B4E8 02F4+00 s=1 e=0 z=0  None .text      daOBJ_HB_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daOBJ_HB_Create(fopAc_ac_c* param_0) {
+asm static void daOBJ_HB_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/daOBJ_HB_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C1B4E8-80C1B530 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80C1B4E8-80C1B530 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -807,7 +808,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80C1B530-80C1B578 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C1B530-80C1B578 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -818,7 +819,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80C1B578-80C1B5E8 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80C1B578-80C1B5E8 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -829,22 +830,22 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80C1B5E8-80C1B5F0 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C1B5E8-80C1B5F0 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C1B5E8() {
+extern "C" asm static void func_80C1B5E8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/func_80C1B5E8.s"
 }
 #pragma pop
 
 
-/* 80C1B5F0-80C1B5F8 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C1B5F0-80C1B5F8 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C1B5F0() {
+extern "C" asm static void func_80C1B5F0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/func_80C1B5F0.s"
 }

@@ -144,6 +144,9 @@ struct dBgS_Acch {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -166,10 +169,10 @@ struct cM3dGCir {
 	/* 8026EF18 */ ~cM3dGCir();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -181,10 +184,10 @@ struct Z2SeMgr {
 // 
 
 static void getStopModelData(); // 2
-void daObjStopper_Draw(daObjStopper_c*); // 2
-void daObjStopper_Execute(daObjStopper_c*); // 2
-void daObjStopper_Delete(daObjStopper_c*); // 2
-void daObjStopper_Create(fopAc_ac_c*); // 2
+static void daObjStopper_Draw(daObjStopper_c*); // 2
+static void daObjStopper_Execute(daObjStopper_c*); // 2
+static void daObjStopper_Delete(daObjStopper_c*); // 2
+static void daObjStopper_Create(fopAc_ac_c*); // 2
 static void cLib_calcTimer__template0(u16*); // 2
 static void cLib_calcTimer__template1(u8*); // 2
 
@@ -218,10 +221,10 @@ extern "C" void hint_action2__14daObjStopper_cFv(); // 1
 extern "C" void hint_action3__14daObjStopper_cFv(); // 1
 extern "C" void Draw__14daObjStopper_cFv(); // 1
 extern "C" void Delete__14daObjStopper_cFv(); // 1
-extern "C" void daObjStopper_Draw__FP14daObjStopper_c(); // 1
-extern "C" void daObjStopper_Execute__FP14daObjStopper_c(); // 1
-extern "C" void daObjStopper_Delete__FP14daObjStopper_c(); // 1
-extern "C" void daObjStopper_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjStopper_Draw__FP14daObjStopper_c(); // 1
+extern "C" static void daObjStopper_Execute__FP14daObjStopper_c(); // 1
+extern "C" static void daObjStopper_Delete__FP14daObjStopper_c(); // 1
+extern "C" static void daObjStopper_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__18dPa_levelEcallBackFv(); // 1
 extern "C" void execute__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
@@ -230,11 +233,10 @@ extern "C" void draw__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
 extern "C" void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
 extern "C" static void func_80CEEF48(); // 1
 extern "C" static void func_80CEEF64(); // 1
-extern "C" void func_80CEEF80(); // 1
-extern "C" void func_80CEEF88(); // 1
+extern "C" static void func_80CEEF80(); // 1
+extern "C" static void func_80CEEF88(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daObjStopper_Method[8];
 extern "C" extern void* g_profile_Obj_Stopper[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -321,6 +323,9 @@ extern "C" void __dt__9dBgS_AcchFv(); // 1
 extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -344,6 +349,8 @@ extern "C" void __construct_array(); // 1
 extern "C" void __ptmf_scall(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__19dPa_followEcallBack[10];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -530,7 +537,7 @@ asm void daObjStopper_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80CED0B8-80CED20C 0154+00 s=0 e=0 z=0  None .text      Create__14daObjStopper_cFv                                   */
+/* 80CED0B8-80CED20C 0154+00 s=1 e=0 z=0  None .text      Create__14daObjStopper_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -541,7 +548,7 @@ asm void daObjStopper_c::Create() {
 #pragma pop
 
 
-/* 80CED20C-80CED258 004C+00 s=0 e=0 z=0  None .text      CreateHeap__14daObjStopper_cFv                               */
+/* 80CED20C-80CED258 004C+00 s=1 e=0 z=0  None .text      CreateHeap__14daObjStopper_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -569,56 +576,56 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 SECTION_DATA static void* lit_3843[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionWait__14daObjStopper_cFv,
 };
 
 /* 80CEF02C-80CEF038 000C+00 s=1 e=0 z=0  None .data      @3844                                                        */
 SECTION_DATA static void* lit_3844[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionWaitOrderEvent__14daObjStopper_cFv,
 };
 
 /* 80CEF038-80CEF044 000C+00 s=1 e=0 z=0  None .data      @3845                                                        */
 SECTION_DATA static void* lit_3845[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionOrderEvent__14daObjStopper_cFv,
 };
 
 /* 80CEF044-80CEF050 000C+00 s=1 e=0 z=0  None .data      @3846                                                        */
 SECTION_DATA static void* lit_3846[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionEvent__14daObjStopper_cFv,
 };
 
 /* 80CEF050-80CEF05C 000C+00 s=1 e=0 z=0  None .data      @3847                                                        */
 SECTION_DATA static void* lit_3847[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionDead__14daObjStopper_cFv,
 };
 
 /* 80CEF05C-80CEF068 000C+00 s=1 e=0 z=0  None .data      @3848                                                        */
 SECTION_DATA static void* lit_3848[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionWaitClose__14daObjStopper_cFv,
 };
 
 /* 80CEF068-80CEF074 000C+00 s=1 e=0 z=0  None .data      @3849                                                        */
 SECTION_DATA static void* lit_3849[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionClose__14daObjStopper_cFv,
 };
 
 /* 80CEF074-80CEF080 000C+00 s=1 e=0 z=0  None .data      @3850                                                        */
 SECTION_DATA static void* lit_3850[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionCloseInit__14daObjStopper_cFv,
 };
 
 /* 80CEF080-80CEF0E0 0060+00 s=1 e=0 z=0  None .data      l_func$3842                                                  */
@@ -631,30 +638,30 @@ SECTION_DATA static u8 data_80CEF080[96] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80CEF0E0-80CEF100 0020+00 s=0 e=0 z=0  None .data      l_daObjStopper_Method                                        */
-SECTION_DATA void* l_daObjStopper_Method[8] = {
+/* 80CEF0E0-80CEF100 0020+00 s=1 e=0 z=0  None .data      l_daObjStopper_Method                                        */
+SECTION_DATA static void* l_daObjStopper_Method[8] = {
+	(void*)daObjStopper_Create__FP10fopAc_ac_c,
+	(void*)daObjStopper_Delete__FP14daObjStopper_c,
+	(void*)daObjStopper_Execute__FP14daObjStopper_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjStopper_Draw__FP14daObjStopper_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80CEF100-80CEF130 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Stopper                                        */
+/* 80CEF100-80CEF130 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Stopper                                        */
 SECTION_DATA void* g_profile_Obj_Stopper[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01600000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000A00,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01C60000,
-	(void*)NULL,
+	(void*)&l_daObjStopper_Method,
 	(void*)0x00044100,
 	(void*)0x000E0000,
 };
@@ -663,75 +670,75 @@ SECTION_DATA void* g_profile_Obj_Stopper[12] = {
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 80CEF13C-80CEF148 000C+00 s=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80CEF148-80CEF154 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80CEF154-80CEF178 0024+00 s=2 e=0 z=0  None .data      __vt__18dPa_levelEcallBack                                   */
 SECTION_DATA static void* __vt__18dPa_levelEcallBack[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__18dPa_levelEcallBackFv,
+	(void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)draw__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)cleanup__18dPa_levelEcallBackFv,
 };
 
 /* 80CEF178-80CEF184 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 80CEF184-80CEF190 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80CEF190-80CEF1B4 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80CEEF88,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80CEEF80,
 };
 
 /* 80CEF1B4-80CEF1DC 0028+00 s=1 e=0 z=0  None .data      __vt__14daObjStopper_c                                       */
 SECTION_DATA static void* __vt__14daObjStopper_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__14daObjStopper_cFv,
+	(void*)Create__14daObjStopper_cFv,
+	(void*)Execute__14daObjStopper_cFPPA3_A4_f,
+	(void*)Draw__14daObjStopper_cFv,
+	(void*)Delete__14daObjStopper_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
 /* 80CED258-80CED440 01E8+00 s=1 e=0 z=0  None .text      create__14daObjStopper_cFv                                   */
@@ -756,7 +763,7 @@ asm dPa_followEcallBack::~dPa_followEcallBack() {
 #pragma pop
 
 
-/* 80CED4C4-80CED4C8 0004+00 s=0 e=0 z=0  None .text      cleanup__18dPa_levelEcallBackFv                              */
+/* 80CED4C4-80CED4C8 0004+00 s=1 e=0 z=0  None .text      cleanup__18dPa_levelEcallBackFv                              */
 void dPa_levelEcallBack::cleanup() {
 	/* empty function */
 }
@@ -773,7 +780,7 @@ asm void dPa_followEcallBack::__defctor() {
 #pragma pop
 
 
-/* 80CED4F0-80CED538 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80CED4F0-80CED538 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -784,7 +791,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80CED538-80CED580 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80CED538-80CED580 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -795,7 +802,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80CED580-80CED5DC 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80CED580-80CED5DC 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -806,7 +813,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80CED5DC-80CED64C 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80CED5DC-80CED64C 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -817,7 +824,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 80CED64C-80CED6BC 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80CED64C-80CED6BC 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -828,7 +835,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80CED6BC-80CED708 004C+00 s=0 e=0 z=0  None .text      Execute__14daObjStopper_cFPPA3_A4_f                          */
+/* 80CED6BC-80CED708 004C+00 s=1 e=0 z=0  None .text      Execute__14daObjStopper_cFPPA3_A4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -854,7 +861,7 @@ asm void daObjStopper_c::action() {
 #pragma pop
 
 
-/* 80CED824-80CEDA24 0200+00 s=0 e=0 z=0  None .text      actionWait__14daObjStopper_cFv                               */
+/* 80CED824-80CEDA24 0200+00 s=1 e=0 z=0  None .text      actionWait__14daObjStopper_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -865,7 +872,7 @@ asm void daObjStopper_c::actionWait() {
 #pragma pop
 
 
-/* 80CEDA24-80CEDAAC 0088+00 s=0 e=0 z=0  None .text      actionWaitOrderEvent__14daObjStopper_cFv                     */
+/* 80CEDA24-80CEDAAC 0088+00 s=1 e=0 z=0  None .text      actionWaitOrderEvent__14daObjStopper_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -876,7 +883,7 @@ asm void daObjStopper_c::actionWaitOrderEvent() {
 #pragma pop
 
 
-/* 80CEDAAC-80CEDB2C 0080+00 s=0 e=0 z=0  None .text      actionOrderEvent__14daObjStopper_cFv                         */
+/* 80CEDAAC-80CEDB2C 0080+00 s=1 e=0 z=0  None .text      actionOrderEvent__14daObjStopper_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -887,7 +894,7 @@ asm void daObjStopper_c::actionOrderEvent() {
 #pragma pop
 
 
-/* 80CEDB2C-80CEE048 051C+00 s=0 e=0 z=0  None .text      actionEvent__14daObjStopper_cFv                              */
+/* 80CEDB2C-80CEE048 051C+00 s=1 e=0 z=0  None .text      actionEvent__14daObjStopper_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -898,13 +905,13 @@ asm void daObjStopper_c::actionEvent() {
 #pragma pop
 
 
-/* 80CEE048-80CEE04C 0004+00 s=0 e=0 z=0  None .text      actionDead__14daObjStopper_cFv                               */
+/* 80CEE048-80CEE04C 0004+00 s=1 e=0 z=0  None .text      actionDead__14daObjStopper_cFv                               */
 void daObjStopper_c::actionDead() {
 	/* empty function */
 }
 
 
-/* 80CEE04C-80CEE05C 0010+00 s=0 e=0 z=0  None .text      actionWaitClose__14daObjStopper_cFv                          */
+/* 80CEE04C-80CEE05C 0010+00 s=1 e=0 z=0  None .text      actionWaitClose__14daObjStopper_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -915,7 +922,7 @@ asm void daObjStopper_c::actionWaitClose() {
 #pragma pop
 
 
-/* 80CEE05C-80CEE0E0 0084+00 s=0 e=0 z=0  None .text      actionCloseInit__14daObjStopper_cFv                          */
+/* 80CEE05C-80CEE0E0 0084+00 s=1 e=0 z=0  None .text      actionCloseInit__14daObjStopper_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -926,7 +933,7 @@ asm void daObjStopper_c::actionCloseInit() {
 #pragma pop
 
 
-/* 80CEE0E0-80CEE148 0068+00 s=0 e=0 z=0  None .text      actionClose__14daObjStopper_cFv                              */
+/* 80CEE0E0-80CEE148 0068+00 s=1 e=0 z=0  None .text      actionClose__14daObjStopper_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -970,7 +977,7 @@ asm void daObjStopper_c::hint_action3() {
 #pragma pop
 
 
-/* 80CEECFC-80CEED60 0064+00 s=0 e=0 z=0  None .text      Draw__14daObjStopper_cFv                                     */
+/* 80CEECFC-80CEED60 0064+00 s=1 e=0 z=0  None .text      Draw__14daObjStopper_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -981,7 +988,7 @@ asm void daObjStopper_c::Draw() {
 #pragma pop
 
 
-/* 80CEED60-80CEEDF0 0090+00 s=0 e=0 z=0  None .text      Delete__14daObjStopper_cFv                                   */
+/* 80CEED60-80CEEDF0 0090+00 s=1 e=0 z=0  None .text      Delete__14daObjStopper_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -992,51 +999,51 @@ asm void daObjStopper_c::Delete() {
 #pragma pop
 
 
-/* 80CEEDF0-80CEEE1C 002C+00 s=0 e=0 z=0  None .text      daObjStopper_Draw__FP14daObjStopper_c                        */
+/* 80CEEDF0-80CEEE1C 002C+00 s=1 e=0 z=0  None .text      daObjStopper_Draw__FP14daObjStopper_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjStopper_Draw(daObjStopper_c* param_0) {
+asm static void daObjStopper_Draw(daObjStopper_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/daObjStopper_Draw__FP14daObjStopper_c.s"
 }
 #pragma pop
 
 
-/* 80CEEE1C-80CEEE3C 0020+00 s=0 e=0 z=0  None .text      daObjStopper_Execute__FP14daObjStopper_c                     */
+/* 80CEEE1C-80CEEE3C 0020+00 s=1 e=0 z=0  None .text      daObjStopper_Execute__FP14daObjStopper_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjStopper_Execute(daObjStopper_c* param_0) {
+asm static void daObjStopper_Execute(daObjStopper_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/daObjStopper_Execute__FP14daObjStopper_c.s"
 }
 #pragma pop
 
 
-/* 80CEEE3C-80CEEE5C 0020+00 s=0 e=0 z=0  None .text      daObjStopper_Delete__FP14daObjStopper_c                      */
+/* 80CEEE3C-80CEEE5C 0020+00 s=1 e=0 z=0  None .text      daObjStopper_Delete__FP14daObjStopper_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjStopper_Delete(daObjStopper_c* param_0) {
+asm static void daObjStopper_Delete(daObjStopper_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/daObjStopper_Delete__FP14daObjStopper_c.s"
 }
 #pragma pop
 
 
-/* 80CEEE5C-80CEEE7C 0020+00 s=0 e=0 z=0  None .text      daObjStopper_Create__FP10fopAc_ac_c                          */
+/* 80CEEE5C-80CEEE7C 0020+00 s=1 e=0 z=0  None .text      daObjStopper_Create__FP10fopAc_ac_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjStopper_Create(fopAc_ac_c* param_0) {
+asm static void daObjStopper_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/daObjStopper_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80CEEE7C-80CEEEC4 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80CEEE7C-80CEEEC4 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1047,7 +1054,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80CEEEC4-80CEEF38 0074+00 s=0 e=0 z=0  None .text      __dt__18dPa_levelEcallBackFv                                 */
+/* 80CEEEC4-80CEEF38 0074+00 s=1 e=0 z=0  None .text      __dt__18dPa_levelEcallBackFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1058,25 +1065,25 @@ asm dPa_levelEcallBack::~dPa_levelEcallBack() {
 #pragma pop
 
 
-/* 80CEEF38-80CEEF3C 0004+00 s=0 e=0 z=0  None .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
+/* 80CEEF38-80CEEF3C 0004+00 s=1 e=0 z=0  None .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
 void JPAEmitterCallBack::execute(JPABaseEmitter* param_0) {
 	/* empty function */
 }
 
 
-/* 80CEEF3C-80CEEF40 0004+00 s=0 e=0 z=0  None .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
+/* 80CEEF3C-80CEEF40 0004+00 s=1 e=0 z=0  None .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
 void JPAEmitterCallBack::executeAfter(JPABaseEmitter* param_0) {
 	/* empty function */
 }
 
 
-/* 80CEEF40-80CEEF44 0004+00 s=0 e=0 z=0  None .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
+/* 80CEEF40-80CEEF44 0004+00 s=1 e=0 z=0  None .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
 void JPAEmitterCallBack::draw(JPABaseEmitter* param_0) {
 	/* empty function */
 }
 
 
-/* 80CEEF44-80CEEF48 0004+00 s=0 e=0 z=0  None .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
+/* 80CEEF44-80CEEF48 0004+00 s=1 e=0 z=0  None .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
 void JPAEmitterCallBack::drawAfter(JPABaseEmitter* param_0) {
 	/* empty function */
 }
@@ -1104,22 +1111,22 @@ asm static void cLib_calcTimer__template1(u8* param_0) {
 #pragma pop
 
 
-/* 80CEEF80-80CEEF88 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80CEEF80-80CEEF88 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80CEEF80() {
+extern "C" asm static void func_80CEEF80() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/func_80CEEF80.s"
 }
 #pragma pop
 
 
-/* 80CEEF88-80CEEF90 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80CEEF88-80CEEF90 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80CEEF88() {
+extern "C" asm static void func_80CEEF88() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/func_80CEEF88.s"
 }

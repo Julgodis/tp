@@ -16,6 +16,9 @@ struct daE_DF_HIO_c {
 	/* 806A9A84 */ ~daE_DF_HIO_c();
 };
 
+struct J3DJoint {
+};
+
 struct J3DModel {
 };
 
@@ -24,9 +27,6 @@ struct Vec {
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct J3DJoint {
 };
 
 struct daE_DF_c {
@@ -100,19 +100,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
-};
-
-struct Z2Creature {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
+struct J3DModelData {
+};
+
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DAnmTransform {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfSO {
@@ -150,10 +150,10 @@ struct dEvt_control_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -231,11 +231,11 @@ struct J3DFrameCtrl {
 static void useHeapInit(fopAc_ac_c*); // 2
 static void JointCallBack(J3DJoint*, int); // 2
 static void s_obj_sub(void*, void*); // 2
-void daE_DF_Draw(daE_DF_c*); // 2
+static void daE_DF_Draw(daE_DF_c*); // 2
 static void daE_DF_Execute(daE_DF_c*); // 2
-bool daE_DF_IsDelete(daE_DF_c*); // 2
-void daE_DF_Delete(daE_DF_c*); // 2
-void daE_DF_Create(fopAc_ac_c*); // 2
+static bool daE_DF_IsDelete(daE_DF_c*); // 2
+static void daE_DF_Delete(daE_DF_c*); // 2
+static void daE_DF_Create(fopAc_ac_c*); // 2
 static void setMidnaBindEffect(fopEn_enemy_c*, Z2CreatureEnemy*, cXyz*, cXyz*); // 2
 
 extern "C" void __ct__12daE_DF_HIO_cFv(); // 1
@@ -269,22 +269,21 @@ extern "C" void Yazirushi__8daE_DF_cFv(); // 1
 extern "C" void Draw__8daE_DF_cFv(); // 1
 extern "C" void Delete__8daE_DF_cFv(); // 1
 extern "C" void setBaseMtx__8daE_DF_cFv(); // 1
-extern "C" void daE_DF_Draw__FP8daE_DF_c(); // 1
+extern "C" static void daE_DF_Draw__FP8daE_DF_c(); // 1
 extern "C" static void daE_DF_Execute__FP8daE_DF_c(); // 1
-extern "C" bool daE_DF_IsDelete__FP8daE_DF_c(); // 1
-extern "C" void daE_DF_Delete__FP8daE_DF_c(); // 1
+extern "C" static bool daE_DF_IsDelete__FP8daE_DF_c(); // 1
+extern "C" static void daE_DF_Delete__FP8daE_DF_c(); // 1
 extern "C" void Create__8daE_DF_cFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void daE_DF_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daE_DF_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__12daE_DF_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_e_df_cpp(); // 1
 extern "C" static void setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daE_DF_Method[8];
 extern "C" extern void* g_profile_E_DF[12];
 
 // 
@@ -395,6 +394,8 @@ extern "C" void _restgpr_19(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
@@ -453,30 +454,30 @@ SECTION_DATA static u8 data_806AA034[6 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 806AA03C-806AA05C 0020+00 s=0 e=0 z=0  None .data      l_daE_DF_Method                                              */
-SECTION_DATA void* l_daE_DF_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 806AA03C-806AA05C 0020+00 s=1 e=0 z=0  None .data      l_daE_DF_Method                                              */
+SECTION_DATA static void* l_daE_DF_Method[8] = {
+	(void*)daE_DF_Create__FP10fopAc_ac_c,
+	(void*)daE_DF_Delete__FP8daE_DF_c,
+	(void*)daE_DF_Execute__FP8daE_DF_c,
+	(void*)daE_DF_IsDelete__FP8daE_DF_c,
+	(void*)daE_DF_Draw__FP8daE_DF_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 806AA05C-806AA08C 0030+00 s=0 e=0 z=0  None .data      g_profile_E_DF                                               */
+/* 806AA05C-806AA08C 0030+00 s=0 e=0 z=1  None .data      g_profile_E_DF                                               */
 SECTION_DATA void* g_profile_E_DF[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01BA0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000838,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00820000,
-	(void*)NULL,
+	(void*)&l_daE_DF_Method,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -485,35 +486,35 @@ SECTION_DATA void* g_profile_E_DF[12] = {
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 806AA098-806AA0A4 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 806AA0A4-806AA0B0 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 806AA0B0-806AA0BC 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 806AA0BC-806AA0C8 000C+00 s=2 e=0 z=0  None .data      __vt__12daE_DF_HIO_c                                         */
 SECTION_DATA static void* __vt__12daE_DF_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12daE_DF_HIO_cFv,
 };
 
 /* 806A76EC-806A7710 0024+00 s=1 e=0 z=0  None .text      __ct__12daE_DF_HIO_cFv                                       */
@@ -971,18 +972,18 @@ asm void daE_DF_c::setBaseMtx() {
 #pragma pop
 
 
-/* 806A9610-806A9630 0020+00 s=0 e=0 z=0  None .text      daE_DF_Draw__FP8daE_DF_c                                     */
+/* 806A9610-806A9630 0020+00 s=1 e=0 z=0  None .text      daE_DF_Draw__FP8daE_DF_c                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_DF_Draw(daE_DF_c* param_0) {
+asm static void daE_DF_Draw(daE_DF_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_df/d_a_e_df/daE_DF_Draw__FP8daE_DF_c.s"
 }
 #pragma pop
 
 
-/* 806A9630-806A9650 0020+00 s=1 e=0 z=0  None .text      daE_DF_Execute__FP8daE_DF_c                                  */
+/* 806A9630-806A9650 0020+00 s=2 e=0 z=0  None .text      daE_DF_Execute__FP8daE_DF_c                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -993,17 +994,17 @@ asm static void daE_DF_Execute(daE_DF_c* param_0) {
 #pragma pop
 
 
-/* 806A9650-806A9658 0008+00 s=0 e=0 z=0  None .text      daE_DF_IsDelete__FP8daE_DF_c                                 */
-bool daE_DF_IsDelete(daE_DF_c* param_0) {
+/* 806A9650-806A9658 0008+00 s=1 e=0 z=0  None .text      daE_DF_IsDelete__FP8daE_DF_c                                 */
+static bool daE_DF_IsDelete(daE_DF_c* param_0) {
 	return true;
 }
 
 
-/* 806A9658-806A9678 0020+00 s=0 e=0 z=0  None .text      daE_DF_Delete__FP8daE_DF_c                                   */
+/* 806A9658-806A9678 0020+00 s=1 e=0 z=0  None .text      daE_DF_Delete__FP8daE_DF_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_DF_Delete(daE_DF_c* param_0) {
+asm static void daE_DF_Delete(daE_DF_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_df/d_a_e_df/daE_DF_Delete__FP8daE_DF_c.s"
 }
@@ -1028,7 +1029,7 @@ asm void daE_DF_c::Create() {
 #pragma pop
 
 
-/* 806A9930-806A9978 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 806A9930-806A9978 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1039,7 +1040,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 806A9978-806A99C0 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 806A9978-806A99C0 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1050,7 +1051,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 806A99C0-806A9A1C 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 806A99C0-806A9A1C 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1061,18 +1062,18 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 806A9A1C-806A9A3C 0020+00 s=0 e=0 z=0  None .text      daE_DF_Create__FP10fopAc_ac_c                                */
+/* 806A9A1C-806A9A3C 0020+00 s=1 e=0 z=0  None .text      daE_DF_Create__FP10fopAc_ac_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_DF_Create(fopAc_ac_c* param_0) {
+asm static void daE_DF_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_df/d_a_e_df/daE_DF_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 806A9A3C-806A9A84 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 806A9A3C-806A9A84 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1083,7 +1084,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 806A9A84-806A9ACC 0048+00 s=1 e=0 z=0  None .text      __dt__12daE_DF_HIO_cFv                                       */
+/* 806A9A84-806A9ACC 0048+00 s=2 e=0 z=0  None .text      __dt__12daE_DF_HIO_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1094,7 +1095,7 @@ asm daE_DF_HIO_c::~daE_DF_HIO_c() {
 #pragma pop
 
 
-/* 806A9ACC-806A9B08 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_e_df_cpp                                         */
+/* 806A9ACC-806A9B08 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_e_df_cpp                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -82,10 +82,10 @@ struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

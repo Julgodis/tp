@@ -19,6 +19,7 @@ extern void* const data_80C5E8C8[2];
 // 
 
 
+extern "C" void __sinit_d_a_obj_lv4EdShutter_cpp(); // 1
 
 // 
 // Declarations:

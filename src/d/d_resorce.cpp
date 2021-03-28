@@ -11,10 +11,7 @@
 // Types:
 // 
 
-struct J3DModelData {
-	/* 80325E14 */ void newSharedDisplayList(u32);
-	/* 80325F94 */ void makeSharedDL();
-	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+struct cXyz {
 };
 
 struct JKRArchive {
@@ -29,7 +26,10 @@ struct JKRHeap {
 	/* 802CE83C */ void findFromRoot(void*);
 };
 
-struct cXyz {
+struct J3DModelData {
+	/* 80325E14 */ void newSharedDisplayList(u32);
+	/* 80325F94 */ void makeSharedDL();
+	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
 };
 
 struct dRes_info_c {

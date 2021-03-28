@@ -11,16 +11,16 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
 	/* 80084460 */ void ChkTgHit();
 	/* 800844F8 */ void GetTgHitObj();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daObj_BouMato_c {
@@ -198,10 +198,10 @@ struct cM3dGCir {
 	/* 8026EF18 */ ~cM3dGCir();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -212,11 +212,11 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daObj_BouMato_Create(void*); // 2
-void daObj_BouMato_Delete(void*); // 2
-void daObj_BouMato_Execute(void*); // 2
-void daObj_BouMato_Draw(void*); // 2
-bool daObj_BouMato_IsDelete(void*); // 2
+static void daObj_BouMato_Create(void*); // 2
+static void daObj_BouMato_Delete(void*); // 2
+static void daObj_BouMato_Execute(void*); // 2
+static void daObj_BouMato_Draw(void*); // 2
+static bool daObj_BouMato_IsDelete(void*); // 2
 
 extern "C" void __dt__15daObj_BouMato_cFv(); // 1
 extern "C" void __dt__5csXyzFv(); // 1
@@ -241,18 +241,16 @@ extern "C" void setSwayParam__15daObj_BouMato_cFP10fopAc_ac_c(); // 1
 extern "C" void setEnvTevColor__15daObj_BouMato_cFv(); // 1
 extern "C" void setRoomNo__15daObj_BouMato_cFv(); // 1
 extern "C" void setMtx__15daObj_BouMato_cFv(); // 1
-extern "C" void daObj_BouMato_Create__FPv(); // 1
-extern "C" void daObj_BouMato_Delete__FPv(); // 1
-extern "C" void daObj_BouMato_Execute__FPv(); // 1
-extern "C" void daObj_BouMato_Draw__FPv(); // 1
-extern "C" bool daObj_BouMato_IsDelete__FPv(); // 1
+extern "C" static void daObj_BouMato_Create__FPv(); // 1
+extern "C" static void daObj_BouMato_Delete__FPv(); // 1
+extern "C" static void daObj_BouMato_Execute__FPv(); // 1
+extern "C" static void daObj_BouMato_Draw__FPv(); // 1
+extern "C" static bool daObj_BouMato_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __sinit_d_a_obj_boumato_cpp(); // 1
 extern "C" void __dt__21daObj_BouMato_Param_cFv(); // 1
-extern "C" void func_80BBC44C(); // 1
-extern "C" void func_80BBC454(); // 1
-extern "C" extern u8 data_80BBC574[24];
-extern "C" extern void* daObj_BouMato_MethodTable[8];
+extern "C" static void func_80BBC44C(); // 1
+extern "C" static void func_80BBC454(); // 1
 extern "C" extern void* g_profile_OBJ_BOUMATO[12];
 
 // 
@@ -358,6 +356,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
@@ -374,144 +374,6 @@ extern "C" void __register_global_object(); // 1
 // 
 // Declarations:
 // 
-
-/* ############################################################################################## */
-/* 80BBC52C-80BBC570 0044+00 s=2 e=0 z=0  None .data      l_ccDCyl                                                     */
-SECTION_DATA static u8 l_ccDCyl[68] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BBC570-80BBC574 0004+00 s=1 e=0 z=0  None .data      l_resName                                                    */
-SECTION_DATA static void* l_resName = (void*)NULL;
-
-/* 80BBC574-80BBC58C 0018+00 s=0 e=0 z=0  None .data      jntCoOffset$4044                                             */
-SECTION_DATA u8 data_80BBC574[24] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x43, 0x96, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BBC58C-80BBC598 000C+00 s=1 e=0 z=0  None .data      jntCoData$4045                                               */
-SECTION_DATA static void* data_80BBC58C[3] = {
-	(void*)0x01010000,
-	(void*)0x40800000,
-	(void*)NULL,
-};
-
-/* 80BBC598-80BBC5B8 0020+00 s=0 e=0 z=0  None .data      daObj_BouMato_MethodTable                                    */
-SECTION_DATA void* daObj_BouMato_MethodTable[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80BBC5B8-80BBC5E8 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_BOUMATO                                        */
-SECTION_DATA void* g_profile_OBJ_BOUMATO[12] = {
-	(void*)0xFFFFFFFD,
-	(void*)0x0007FFFD,
-	(void*)0x012D0000,
-	(void*)NULL,
-	(void*)0x00000A40,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)0x00500000,
-	(void*)NULL,
-	(void*)0x00044100,
-	(void*)0x000E0000,
-};
-
-/* 80BBC5E8-80BBC60C 0024+00 s=3 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
-SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80BBC60C-80BBC618 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
-SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80BBC618-80BBC624 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
-SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80BBC624-80BBC630 000C+00 s=2 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
-SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80BBC630-80BBC63C 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80BBC63C-80BBC648 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
-SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80BBC648-80BBC654 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGLin                                              */
-SECTION_DATA static void* __vt__8cM3dGLin[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80BBC654-80BBC660 000C+00 s=2 e=0 z=0  None .data      __vt__15daObj_BouMato_c                                      */
-SECTION_DATA static void* __vt__15daObj_BouMato_c[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80BBAFEC-80BBB1F4 0208+00 s=0 e=0 z=0  None .text      __dt__15daObj_BouMato_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daObj_BouMato_c::~daObj_BouMato_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__15daObj_BouMato_cFv.s"
-}
-#pragma pop
-
-
-/* 80BBB1F4-80BBB230 003C+00 s=2 e=0 z=0  None .text      __dt__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::~csXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__5csXyzFv.s"
-}
-#pragma pop
-
 
 /* ############################################################################################## */
 /* 80BBC470-80BBC48C 001C+00 s=4 e=0 z=0  None .rodata    m__21daObj_BouMato_Param_c                                   */
@@ -539,112 +401,6 @@ SECTION_RODATA static u32 const lit_3958 = 0x43960000;
 /* 80BBC4C8-80BBC4CC 0004+00 s=1 e=0 z=0  None .rodata    @3959                                                        */
 SECTION_RODATA static u32 const lit_3959 = 0x43E10000;
 
-/* 80BBB230-80BBB558 0328+00 s=1 e=0 z=0  None .text      create__15daObj_BouMato_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObj_BouMato_c::create() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/create__15daObj_BouMato_cFv.s"
-}
-#pragma pop
-
-
-/* 80BBB558-80BBB55C 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-csXyz::csXyz() {
-	/* empty function */
-}
-
-
-/* 80BBB55C-80BBB5A4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGLinFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cM3dGLin::~cM3dGLin() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__8cM3dGLinFv.s"
-}
-#pragma pop
-
-
-/* 80BBB5A4-80BBB5EC 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cM3dGCyl::~cM3dGCyl() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__8cM3dGCylFv.s"
-}
-#pragma pop
-
-
-/* 80BBB5EC-80BBB634 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cM3dGAab::~cM3dGAab() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__8cM3dGAabFv.s"
-}
-#pragma pop
-
-
-/* 80BBB634-80BBB6A4 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm dBgS_AcchCir::~dBgS_AcchCir() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__12dBgS_AcchCirFv.s"
-}
-#pragma pop
-
-
-/* 80BBB6A4-80BBB700 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm dCcD_GStts::~dCcD_GStts() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__10dCcD_GSttsFv.s"
-}
-#pragma pop
-
-
-/* 80BBB700-80BBB770 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm dBgS_ObjAcch::~dBgS_ObjAcch() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__12dBgS_ObjAcchFv.s"
-}
-#pragma pop
-
-
-/* 80BBB770-80BBB800 0090+00 s=1 e=0 z=0  None .text      CreateHeap__15daObj_BouMato_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObj_BouMato_c::CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/CreateHeap__15daObj_BouMato_cFv.s"
-}
-#pragma pop
-
-
-/* 80BBB800-80BBB834 0034+00 s=1 e=0 z=0  None .text      Delete__15daObj_BouMato_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObj_BouMato_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/Delete__15daObj_BouMato_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
 /* 80BBC4CC-80BBC4D0 0004+00 s=3 e=0 z=0  None .rodata    @4241                                                        */
 SECTION_RODATA static u32 const lit_4241 = 0x3F800000;
 
@@ -700,7 +456,7 @@ SECTION_RODATA static u8 const lit_4359[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80BBC518-80BBC52C 0014+00 s=1 e=0 z=0  None .rodata    None                                                         */
+/* 80BBC518-80BBC52C 0014+00 s=2 e=0 z=0  None .rodata    None                                                         */
 SECTION_RODATA static u8 const struct_80BBC518[20] = {
 	/* 80BBC518 0001 stringBase_80BBC518 @stringBase0 */
 	0x00,
@@ -708,6 +464,248 @@ SECTION_RODATA static u8 const struct_80BBC518[20] = {
 	0x48, 0x5F, 0x42, 0x6F, 0x75, 0x4D, 0x61, 0x74, 0x6F, 0x00, 0x42, 0x6F, 0x75, 0x4D, 0x61, 0x74,
 	0x6F, 0x00, 0x00,
 };
+
+/* 80BBC52C-80BBC570 0044+00 s=2 e=0 z=0  None .data      l_ccDCyl                                                     */
+SECTION_DATA static u8 l_ccDCyl[68] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BBC570-80BBC574 0004+00 s=1 e=0 z=0  None .data      l_resName                                                    */
+SECTION_DATA static void* l_resName = (void*)(((char*)&struct_80BBC518)+0x1) /* None */;
+
+/* 80BBC574-80BBC58C 0018+00 s=1 e=0 z=0  None .data      jntCoOffset$4044                                             */
+SECTION_DATA static u8 data_80BBC574[24] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x43, 0x96, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BBC58C-80BBC598 000C+00 s=1 e=0 z=0  None .data      jntCoData$4045                                               */
+SECTION_DATA static void* data_80BBC58C[3] = {
+	(void*)0x01010000,
+	(void*)0x40800000,
+	(void*)&data_80BBC574,
+};
+
+/* 80BBC598-80BBC5B8 0020+00 s=1 e=0 z=0  None .data      daObj_BouMato_MethodTable                                    */
+SECTION_DATA static void* daObj_BouMato_MethodTable[8] = {
+	(void*)daObj_BouMato_Create__FPv,
+	(void*)daObj_BouMato_Delete__FPv,
+	(void*)daObj_BouMato_Execute__FPv,
+	(void*)daObj_BouMato_IsDelete__FPv,
+	(void*)daObj_BouMato_Draw__FPv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80BBC5B8-80BBC5E8 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_BOUMATO                                        */
+SECTION_DATA void* g_profile_OBJ_BOUMATO[12] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x012D0000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x00000A40,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopAc_Method,
+	(void*)0x00500000,
+	(void*)&daObj_BouMato_MethodTable,
+	(void*)0x00044100,
+	(void*)0x000E0000,
+};
+
+/* 80BBC5E8-80BBC60C 0024+00 s=3 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
+SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80BBC454,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80BBC44C,
+};
+
+/* 80BBC60C-80BBC618 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
+SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
+};
+
+/* 80BBC618-80BBC624 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
+SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
+};
+
+/* 80BBC624-80BBC630 000C+00 s=2 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
+SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
+};
+
+/* 80BBC630-80BBC63C 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA static void* __vt__8cM3dGAab[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
+};
+
+/* 80BBC63C-80BBC648 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
+SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
+};
+
+/* 80BBC648-80BBC654 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGLin                                              */
+SECTION_DATA static void* __vt__8cM3dGLin[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGLinFv,
+};
+
+/* 80BBC654-80BBC660 000C+00 s=2 e=0 z=0  None .data      __vt__15daObj_BouMato_c                                      */
+SECTION_DATA static void* __vt__15daObj_BouMato_c[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15daObj_BouMato_cFv,
+};
+
+/* 80BBAFEC-80BBB1F4 0208+00 s=1 e=0 z=0  None .text      __dt__15daObj_BouMato_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm daObj_BouMato_c::~daObj_BouMato_c() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__15daObj_BouMato_cFv.s"
+}
+#pragma pop
+
+
+/* 80BBB1F4-80BBB230 003C+00 s=2 e=0 z=0  None .text      __dt__5csXyzFv                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm csXyz::~csXyz() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__5csXyzFv.s"
+}
+#pragma pop
+
+
+/* 80BBB230-80BBB558 0328+00 s=1 e=0 z=0  None .text      create__15daObj_BouMato_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObj_BouMato_c::create() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/create__15daObj_BouMato_cFv.s"
+}
+#pragma pop
+
+
+/* 80BBB558-80BBB55C 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
+csXyz::csXyz() {
+	/* empty function */
+}
+
+
+/* 80BBB55C-80BBB5A4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGLinFv                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm cM3dGLin::~cM3dGLin() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__8cM3dGLinFv.s"
+}
+#pragma pop
+
+
+/* 80BBB5A4-80BBB5EC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm cM3dGCyl::~cM3dGCyl() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__8cM3dGCylFv.s"
+}
+#pragma pop
+
+
+/* 80BBB5EC-80BBB634 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm cM3dGAab::~cM3dGAab() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__8cM3dGAabFv.s"
+}
+#pragma pop
+
+
+/* 80BBB634-80BBB6A4 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm dBgS_AcchCir::~dBgS_AcchCir() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__12dBgS_AcchCirFv.s"
+}
+#pragma pop
+
+
+/* 80BBB6A4-80BBB700 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm dCcD_GStts::~dCcD_GStts() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__10dCcD_GSttsFv.s"
+}
+#pragma pop
+
+
+/* 80BBB700-80BBB770 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__12dBgS_ObjAcchFv.s"
+}
+#pragma pop
+
+
+/* 80BBB770-80BBB800 0090+00 s=1 e=0 z=0  None .text      CreateHeap__15daObj_BouMato_cFv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObj_BouMato_c::CreateHeap() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/CreateHeap__15daObj_BouMato_cFv.s"
+}
+#pragma pop
+
+
+/* 80BBB800-80BBB834 0034+00 s=1 e=0 z=0  None .text      Delete__15daObj_BouMato_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObj_BouMato_c::Delete() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/Delete__15daObj_BouMato_cFv.s"
+}
+#pragma pop
+
 
 /* 80BBB834-80BBBD80 054C+00 s=2 e=0 z=0  None .text      Execute__15daObj_BouMato_cFv                                 */
 #pragma push
@@ -837,57 +835,57 @@ asm void daObj_BouMato_c::setMtx() {
 #pragma pop
 
 
-/* 80BBC2C0-80BBC2E0 0020+00 s=0 e=0 z=0  None .text      daObj_BouMato_Create__FPv                                    */
+/* 80BBC2C0-80BBC2E0 0020+00 s=1 e=0 z=0  None .text      daObj_BouMato_Create__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_BouMato_Create(void* param_0) {
+asm static void daObj_BouMato_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/daObj_BouMato_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 80BBC2E0-80BBC300 0020+00 s=0 e=0 z=0  None .text      daObj_BouMato_Delete__FPv                                    */
+/* 80BBC2E0-80BBC300 0020+00 s=1 e=0 z=0  None .text      daObj_BouMato_Delete__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_BouMato_Delete(void* param_0) {
+asm static void daObj_BouMato_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/daObj_BouMato_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 80BBC300-80BBC320 0020+00 s=0 e=0 z=0  None .text      daObj_BouMato_Execute__FPv                                   */
+/* 80BBC300-80BBC320 0020+00 s=1 e=0 z=0  None .text      daObj_BouMato_Execute__FPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_BouMato_Execute(void* param_0) {
+asm static void daObj_BouMato_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/daObj_BouMato_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 80BBC320-80BBC340 0020+00 s=0 e=0 z=0  None .text      daObj_BouMato_Draw__FPv                                      */
+/* 80BBC320-80BBC340 0020+00 s=1 e=0 z=0  None .text      daObj_BouMato_Draw__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_BouMato_Draw(void* param_0) {
+asm static void daObj_BouMato_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/daObj_BouMato_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 80BBC340-80BBC348 0008+00 s=0 e=0 z=0  None .text      daObj_BouMato_IsDelete__FPv                                  */
-bool daObj_BouMato_IsDelete(void* param_0) {
+/* 80BBC340-80BBC348 0008+00 s=1 e=0 z=0  None .text      daObj_BouMato_IsDelete__FPv                                  */
+static bool daObj_BouMato_IsDelete(void* param_0) {
 	return true;
 }
 
 
-/* 80BBC348-80BBC390 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80BBC348-80BBC390 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -903,7 +901,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 SECTION_DATA static void* __vt__21daObj_BouMato_Param_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__21daObj_BouMato_Param_cFv,
 };
 
 /* 80BBC80C-80BBC818 000C+00 s=1 e=0 z=0  None .bss       @3830                                                        */
@@ -912,7 +910,7 @@ static u8 lit_3830[12];
 /* 80BBC818-80BBC81C 0004+00 s=1 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[4];
 
-/* 80BBC390-80BBC404 0074+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_boumato_cpp                                  */
+/* 80BBC390-80BBC404 0074+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_boumato_cpp                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -923,7 +921,7 @@ extern "C" asm void __sinit_d_a_obj_boumato_cpp() {
 #pragma pop
 
 
-/* 80BBC404-80BBC44C 0048+00 s=1 e=0 z=0  None .text      __dt__21daObj_BouMato_Param_cFv                              */
+/* 80BBC404-80BBC44C 0048+00 s=2 e=0 z=0  None .text      __dt__21daObj_BouMato_Param_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -934,22 +932,22 @@ asm daObj_BouMato_Param_c::~daObj_BouMato_Param_c() {
 #pragma pop
 
 
-/* 80BBC44C-80BBC454 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BBC44C-80BBC454 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BBC44C() {
+extern "C" asm static void func_80BBC44C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/func_80BBC44C.s"
 }
 #pragma pop
 
 
-/* 80BBC454-80BBC45C 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BBC454-80BBC45C 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BBC454() {
+extern "C" asm static void func_80BBC454() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/func_80BBC454.s"
 }

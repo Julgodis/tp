@@ -81,10 +81,10 @@ struct cXyz {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -103,6 +103,10 @@ struct cBgS_PolyInfo {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 80078690 */ bool Create();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -116,10 +120,10 @@ struct dScnKy_env_light_c {
 struct LIGHT_INFLUENCE {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -131,10 +135,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daPoCandle_Draw(daPoCandle_c*); // 2
-void daPoCandle_Execute(daPoCandle_c*); // 2
-void daPoCandle_Delete(daPoCandle_c*); // 2
-void daPoCandle_Create(fopAc_ac_c*); // 2
+static void daPoCandle_Draw(daPoCandle_c*); // 2
+static void daPoCandle_Execute(daPoCandle_c*); // 2
+static void daPoCandle_Delete(daPoCandle_c*); // 2
+static void daPoCandle_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__16daPoCandle_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -156,14 +160,14 @@ extern "C" void modeEnd__12daPoCandle_cFv(); // 1
 extern "C" void eventStart__12daPoCandle_cFv(); // 1
 extern "C" void Draw__12daPoCandle_cFv(); // 1
 extern "C" void Delete__12daPoCandle_cFv(); // 1
-extern "C" void daPoCandle_Draw__FP12daPoCandle_c(); // 1
-extern "C" void daPoCandle_Execute__FP12daPoCandle_c(); // 1
-extern "C" void daPoCandle_Delete__FP12daPoCandle_c(); // 1
-extern "C" void daPoCandle_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daPoCandle_Draw__FP12daPoCandle_c(); // 1
+extern "C" static void daPoCandle_Execute__FP12daPoCandle_c(); // 1
+extern "C" static void daPoCandle_Delete__FP12daPoCandle_c(); // 1
+extern "C" static void daPoCandle_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__16daPoCandle_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_poCandle_cpp(); // 1
-extern "C" void func_80CB25A0(); // 1
-extern "C" void func_80CB25A8(); // 1
+extern "C" static void func_80CB25A0(); // 1
+extern "C" static void func_80CB25A8(); // 1
 extern "C" void __dt__17dEvLib_callback_cFv(); // 1
 extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
 extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
@@ -171,7 +175,6 @@ extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
 extern "C" void __dt__12daPoCandle_cFv(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daPoCandle_Method[8];
 extern "C" extern void* g_profile_Obj_poCandle[12];
 
 // 
@@ -208,6 +211,10 @@ extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzU
 extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -225,6 +232,8 @@ extern "C" void PSMTXTrans(); // 1
 extern "C" void __ptmf_scall(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__16dBgS_MoveBgActor[10];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
@@ -257,28 +266,28 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 SECTION_DATA static void* lit_3774[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeWait__12daPoCandle_cFv,
 };
 
 /* 80CB271C-80CB2728 000C+00 s=1 e=0 z=0  None .data      @3775                                                        */
 SECTION_DATA static void* lit_3775[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeOnFire__12daPoCandle_cFv,
 };
 
 /* 80CB2728-80CB2734 000C+00 s=1 e=0 z=0  None .data      @3776                                                        */
 SECTION_DATA static void* lit_3776[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeOnSwWait__12daPoCandle_cFv,
 };
 
 /* 80CB2734-80CB2740 000C+00 s=1 e=0 z=0  None .data      @3777                                                        */
 SECTION_DATA static void* lit_3777[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeEnd__12daPoCandle_cFv,
 };
 
 /* 80CB2740-80CB2770 0030+00 s=1 e=0 z=0  None .data      mode_proc$3773                                               */
@@ -288,30 +297,30 @@ SECTION_DATA static u8 data_80CB2740[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80CB2770-80CB2790 0020+00 s=0 e=0 z=0  None .data      l_daPoCandle_Method                                          */
-SECTION_DATA void* l_daPoCandle_Method[8] = {
+/* 80CB2770-80CB2790 0020+00 s=1 e=0 z=0  None .data      l_daPoCandle_Method                                          */
+SECTION_DATA static void* l_daPoCandle_Method[8] = {
+	(void*)daPoCandle_Create__FP10fopAc_ac_c,
+	(void*)daPoCandle_Delete__FP12daPoCandle_c,
+	(void*)daPoCandle_Execute__FP12daPoCandle_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daPoCandle_Draw__FP12daPoCandle_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80CB2790-80CB27C0 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_poCandle                                       */
+/* 80CB2790-80CB27C0 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_poCandle                                       */
 SECTION_DATA void* g_profile_Obj_poCandle[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00A80000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000614,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x028A0000,
-	(void*)NULL,
+	(void*)&l_daPoCandle_Method,
 	(void*)0x00044000,
 	(void*)0x000E0000,
 };
@@ -320,46 +329,46 @@ SECTION_DATA void* g_profile_Obj_poCandle[12] = {
 SECTION_DATA static void* __vt__17dEvLib_callback_c[6] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__17dEvLib_callback_cFv,
+	(void*)eventStart__17dEvLib_callback_cFv,
+	(void*)eventRun__17dEvLib_callback_cFv,
+	(void*)eventEnd__17dEvLib_callback_cFv,
 };
 
 /* 80CB27D8-80CB2820 0048+00 s=2 e=0 z=0  None .data      __vt__12daPoCandle_c                                         */
 SECTION_DATA static void* __vt__12daPoCandle_c[18] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)CreateHeap__12daPoCandle_cFv,
+	(void*)Create__16dBgS_MoveBgActorFv,
+	(void*)Execute__12daPoCandle_cFPPA3_A4_f,
+	(void*)Draw__12daPoCandle_cFv,
+	(void*)Delete__12daPoCandle_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80CB25A8,
+	(void*)func_80CB25A0,
+	(void*)eventRun__17dEvLib_callback_cFv,
+	(void*)eventEnd__17dEvLib_callback_cFv,
+	(void*)__dt__12daPoCandle_cFv,
+	(void*)eventStart__12daPoCandle_cFv,
 };
 
 /* 80CB2820-80CB282C 000C+00 s=2 e=0 z=0  None .data      __vt__16daPoCandle_HIO_c                                     */
 SECTION_DATA static void* __vt__16daPoCandle_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__16daPoCandle_HIO_cFv,
 };
 
 /* 80CB282C-80CB2838 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
 /* 80CB1A6C-80CB1A9C 0030+00 s=1 e=0 z=0  None .text      __ct__16daPoCandle_HIO_cFv                                   */
@@ -373,7 +382,7 @@ asm daPoCandle_HIO_c::daPoCandle_HIO_c() {
 #pragma pop
 
 
-/* 80CB1A9C-80CB1AE4 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80CB1A9C-80CB1AE4 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -438,7 +447,7 @@ SECTION_RODATA static u32 const lit_3814 = 0xBF800000;
 SECTION_DEAD char const* const stringBase_80CB26E8 = "P_PCNDL";
 #pragma pop
 
-/* 80CB1B6C-80CB1BD8 006C+00 s=0 e=0 z=0  None .text      CreateHeap__12daPoCandle_cFv                                 */
+/* 80CB1B6C-80CB1BD8 006C+00 s=1 e=0 z=0  None .text      CreateHeap__12daPoCandle_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -514,7 +523,7 @@ static u8 l_HIO[12];
 /* 80CB2858-80CB285C 0004+00 s=1 e=0 z=0  None .bss       None                                                         */
 static u8 data_80CB2858[4];
 
-/* 80CB1F10-80CB2140 0230+00 s=0 e=0 z=0  None .text      Execute__12daPoCandle_cFPPA3_A4_f                            */
+/* 80CB1F10-80CB2140 0230+00 s=1 e=0 z=0  None .text      Execute__12daPoCandle_cFPPA3_A4_f                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -536,7 +545,7 @@ asm void daPoCandle_c::init_modeWait() {
 #pragma pop
 
 
-/* 80CB214C-80CB21D8 008C+00 s=0 e=0 z=0  None .text      modeWait__12daPoCandle_cFv                                   */
+/* 80CB214C-80CB21D8 008C+00 s=1 e=0 z=0  None .text      modeWait__12daPoCandle_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -558,7 +567,7 @@ asm void daPoCandle_c::init_modeOnFire() {
 #pragma pop
 
 
-/* 80CB22D4-80CB22F4 0020+00 s=0 e=0 z=0  None .text      modeOnFire__12daPoCandle_cFv                                 */
+/* 80CB22D4-80CB22F4 0020+00 s=1 e=0 z=0  None .text      modeOnFire__12daPoCandle_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -569,7 +578,7 @@ asm void daPoCandle_c::modeOnFire() {
 #pragma pop
 
 
-/* 80CB22F4-80CB2354 0060+00 s=0 e=0 z=0  None .text      modeOnSwWait__12daPoCandle_cFv                               */
+/* 80CB22F4-80CB2354 0060+00 s=1 e=0 z=0  None .text      modeOnSwWait__12daPoCandle_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -591,13 +600,13 @@ asm void daPoCandle_c::init_modeEnd() {
 #pragma pop
 
 
-/* 80CB2360-80CB2364 0004+00 s=0 e=0 z=0  None .text      modeEnd__12daPoCandle_cFv                                    */
+/* 80CB2360-80CB2364 0004+00 s=1 e=0 z=0  None .text      modeEnd__12daPoCandle_cFv                                    */
 void daPoCandle_c::modeEnd() {
 	/* empty function */
 }
 
 
-/* 80CB2364-80CB2388 0024+00 s=1 e=0 z=0  None .text      eventStart__12daPoCandle_cFv                                 */
+/* 80CB2364-80CB2388 0024+00 s=2 e=0 z=0  None .text      eventStart__12daPoCandle_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -608,7 +617,7 @@ asm void daPoCandle_c::eventStart() {
 #pragma pop
 
 
-/* 80CB2388-80CB242C 00A4+00 s=0 e=0 z=0  None .text      Draw__12daPoCandle_cFv                                       */
+/* 80CB2388-80CB242C 00A4+00 s=1 e=0 z=0  None .text      Draw__12daPoCandle_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -619,7 +628,7 @@ asm void daPoCandle_c::Draw() {
 #pragma pop
 
 
-/* 80CB242C-80CB247C 0050+00 s=0 e=0 z=0  None .text      Delete__12daPoCandle_cFv                                     */
+/* 80CB242C-80CB247C 0050+00 s=1 e=0 z=0  None .text      Delete__12daPoCandle_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -630,51 +639,51 @@ asm void daPoCandle_c::Delete() {
 #pragma pop
 
 
-/* 80CB247C-80CB24A8 002C+00 s=0 e=0 z=0  None .text      daPoCandle_Draw__FP12daPoCandle_c                            */
+/* 80CB247C-80CB24A8 002C+00 s=1 e=0 z=0  None .text      daPoCandle_Draw__FP12daPoCandle_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPoCandle_Draw(daPoCandle_c* param_0) {
+asm static void daPoCandle_Draw(daPoCandle_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poCandle/d_a_obj_poCandle/daPoCandle_Draw__FP12daPoCandle_c.s"
 }
 #pragma pop
 
 
-/* 80CB24A8-80CB24C8 0020+00 s=0 e=0 z=0  None .text      daPoCandle_Execute__FP12daPoCandle_c                         */
+/* 80CB24A8-80CB24C8 0020+00 s=1 e=0 z=0  None .text      daPoCandle_Execute__FP12daPoCandle_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPoCandle_Execute(daPoCandle_c* param_0) {
+asm static void daPoCandle_Execute(daPoCandle_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poCandle/d_a_obj_poCandle/daPoCandle_Execute__FP12daPoCandle_c.s"
 }
 #pragma pop
 
 
-/* 80CB24C8-80CB24E8 0020+00 s=0 e=0 z=0  None .text      daPoCandle_Delete__FP12daPoCandle_c                          */
+/* 80CB24C8-80CB24E8 0020+00 s=1 e=0 z=0  None .text      daPoCandle_Delete__FP12daPoCandle_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPoCandle_Delete(daPoCandle_c* param_0) {
+asm static void daPoCandle_Delete(daPoCandle_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poCandle/d_a_obj_poCandle/daPoCandle_Delete__FP12daPoCandle_c.s"
 }
 #pragma pop
 
 
-/* 80CB24E8-80CB2508 0020+00 s=0 e=0 z=0  None .text      daPoCandle_Create__FP10fopAc_ac_c                            */
+/* 80CB24E8-80CB2508 0020+00 s=1 e=0 z=0  None .text      daPoCandle_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPoCandle_Create(fopAc_ac_c* param_0) {
+asm static void daPoCandle_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poCandle/d_a_obj_poCandle/daPoCandle_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80CB2508-80CB2564 005C+00 s=1 e=0 z=0  None .text      __dt__16daPoCandle_HIO_cFv                                   */
+/* 80CB2508-80CB2564 005C+00 s=2 e=0 z=0  None .text      __dt__16daPoCandle_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -685,7 +694,7 @@ asm daPoCandle_HIO_c::~daPoCandle_HIO_c() {
 #pragma pop
 
 
-/* 80CB2564-80CB25A0 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_poCandle_cpp                                 */
+/* 80CB2564-80CB25A0 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_poCandle_cpp                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -696,29 +705,29 @@ extern "C" asm void __sinit_d_a_obj_poCandle_cpp() {
 #pragma pop
 
 
-/* 80CB25A0-80CB25A8 0008+00 s=0 e=0 z=0  None .text      @1448@eventStart__12daPoCandle_cFv                           */
+/* 80CB25A0-80CB25A8 0008+00 s=1 e=0 z=0  None .text      @1448@eventStart__12daPoCandle_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80CB25A0() {
+extern "C" asm static void func_80CB25A0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poCandle/d_a_obj_poCandle/func_80CB25A0.s"
 }
 #pragma pop
 
 
-/* 80CB25A8-80CB25B0 0008+00 s=0 e=0 z=0  None .text      @1448@__dt__12daPoCandle_cFv                                 */
+/* 80CB25A8-80CB25B0 0008+00 s=1 e=0 z=0  None .text      @1448@__dt__12daPoCandle_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80CB25A8() {
+extern "C" asm static void func_80CB25A8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poCandle/d_a_obj_poCandle/func_80CB25A8.s"
 }
 #pragma pop
 
 
-/* 80CB25B0-80CB25F8 0048+00 s=0 e=0 z=0  None .text      __dt__17dEvLib_callback_cFv                                  */
+/* 80CB25B0-80CB25F8 0048+00 s=1 e=0 z=0  None .text      __dt__17dEvLib_callback_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -729,25 +738,25 @@ asm dEvLib_callback_c::~dEvLib_callback_c() {
 #pragma pop
 
 
-/* 80CB25F8-80CB2600 0008+00 s=0 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
+/* 80CB25F8-80CB2600 0008+00 s=1 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
 bool dEvLib_callback_c::eventStart() {
 	return true;
 }
 
 
-/* 80CB2600-80CB2608 0008+00 s=0 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
+/* 80CB2600-80CB2608 0008+00 s=2 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
 bool dEvLib_callback_c::eventRun() {
 	return true;
 }
 
 
-/* 80CB2608-80CB2610 0008+00 s=0 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
+/* 80CB2608-80CB2610 0008+00 s=2 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
 bool dEvLib_callback_c::eventEnd() {
 	return true;
 }
 
 
-/* 80CB2610-80CB26A4 0094+00 s=1 e=0 z=0  None .text      __dt__12daPoCandle_cFv                                       */
+/* 80CB2610-80CB26A4 0094+00 s=2 e=0 z=0  None .text      __dt__12daPoCandle_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

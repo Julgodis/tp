@@ -19,6 +19,7 @@ extern void* const data_80A5DEE8[2];
 // 
 
 
+extern "C" void __sinit_d_a_npc_ks_cpp(); // 1
 
 // 
 // Declarations:

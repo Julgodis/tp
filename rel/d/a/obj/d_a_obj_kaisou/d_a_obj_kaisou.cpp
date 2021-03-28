@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daObjKaisou_c {
@@ -125,31 +125,30 @@ struct Z2SoundObjSimple {
 
 static void JointCallBack(J3DJoint*, int); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daObjKaisou_Create(fopAc_ac_c*); // 2
-void daObjKaisou_Delete(daObjKaisou_c*); // 2
-void daObjKaisou_Draw(daObjKaisou_c*); // 2
+static void daObjKaisou_Create(fopAc_ac_c*); // 2
+static void daObjKaisou_Delete(daObjKaisou_c*); // 2
+static void daObjKaisou_Draw(daObjKaisou_c*); // 2
 static void daObjKaisou_Execute(daObjKaisou_c*); // 2
-bool daObjKaisou_IsDelete(daObjKaisou_c*); // 2
+static bool daObjKaisou_IsDelete(daObjKaisou_c*); // 2
 
 extern "C" void ctrlJoint__13daObjKaisou_cFP8J3DJointP8J3DModel(); // 1
 extern "C" static void JointCallBack__FP8J3DJointi(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daObjKaisou_Create__FP10fopAc_ac_c(); // 1
-extern "C" void daObjKaisou_Delete__FP13daObjKaisou_c(); // 1
+extern "C" static void daObjKaisou_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjKaisou_Delete__FP13daObjKaisou_c(); // 1
 extern "C" void initCcCylinder__13daObjKaisou_cFv(); // 1
 extern "C" void setCcCylinder__13daObjKaisou_cFv(); // 1
 extern "C" void ObjHit__13daObjKaisou_cFv(); // 1
 extern "C" void Execute__13daObjKaisou_cFv(); // 1
 extern "C" void Delete__13daObjKaisou_cFv(); // 1
 extern "C" void setBaseMtx__13daObjKaisou_cFv(); // 1
-extern "C" void daObjKaisou_Draw__FP13daObjKaisou_c(); // 1
+extern "C" static void daObjKaisou_Draw__FP13daObjKaisou_c(); // 1
 extern "C" static void daObjKaisou_Execute__FP13daObjKaisou_c(); // 1
 extern "C" void create__13daObjKaisou_cFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" bool daObjKaisou_IsDelete__FP13daObjKaisou_c(); // 1
+extern "C" static bool daObjKaisou_IsDelete__FP13daObjKaisou_c(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObjKaisou_Method[8];
 extern "C" extern void* g_profile_Obj_Kaisou[12];
 
 // 
@@ -208,6 +207,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
@@ -341,7 +342,7 @@ SECTION_RODATA static u32 const lit_4161 = 0x447A0000;
 /* 80C34F9C-80C34FA0 0004+00 s=1 e=0 z=0  None .rodata    @4162                                                        */
 SECTION_RODATA static u32 const lit_4162 = 0x43FA0000;
 
-/* 80C34FA0-80C34FBE 001E+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80C34FA0-80C34FBE 001E+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -351,7 +352,7 @@ SECTION_DEAD char const* const stringBase_80C34FB6 = "D_MN01A";
 #pragma pop
 
 /* 80C34FC0-80C34FC4 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
 
 /* 80C342D4-80C3434C 0078+00 s=1 e=0 z=0  None .text      useHeapInit__FP10fopAc_ac_c                                  */
 #pragma push
@@ -364,22 +365,22 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80C3434C-80C3436C 0020+00 s=0 e=0 z=0  None .text      daObjKaisou_Create__FP10fopAc_ac_c                           */
+/* 80C3434C-80C3436C 0020+00 s=1 e=0 z=0  None .text      daObjKaisou_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKaisou_Create(fopAc_ac_c* param_0) {
+asm static void daObjKaisou_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/daObjKaisou_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C3436C-80C34390 0024+00 s=0 e=0 z=0  None .text      daObjKaisou_Delete__FP13daObjKaisou_c                        */
+/* 80C3436C-80C34390 0024+00 s=1 e=0 z=0  None .text      daObjKaisou_Delete__FP13daObjKaisou_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKaisou_Delete(daObjKaisou_c* param_0) {
+asm static void daObjKaisou_Delete(daObjKaisou_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/daObjKaisou_Delete__FP13daObjKaisou_c.s"
 }
@@ -411,38 +412,38 @@ asm void daObjKaisou_c::setCcCylinder() {
 /* ############################################################################################## */
 /* 80C34FC4-80C35038 0074+00 s=1 e=0 z=0  None .data      @3975                                                        */
 SECTION_DATA static void* lit_3975[29] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x34C),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x360),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x360),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x34C),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x360),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
+	(void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x34C),
 };
 
-/* 80C34438-80C34824 03EC+00 s=1 e=0 z=0  None .text      ObjHit__13daObjKaisou_cFv                                    */
+/* 80C34438-80C34824 03EC+00 s=2 e=0 z=0  None .text      ObjHit__13daObjKaisou_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -486,18 +487,18 @@ asm void daObjKaisou_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80C34B34-80C34BB8 0084+00 s=0 e=0 z=0  None .text      daObjKaisou_Draw__FP13daObjKaisou_c                          */
+/* 80C34B34-80C34BB8 0084+00 s=1 e=0 z=0  None .text      daObjKaisou_Draw__FP13daObjKaisou_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKaisou_Draw(daObjKaisou_c* param_0) {
+asm static void daObjKaisou_Draw(daObjKaisou_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/daObjKaisou_Draw__FP13daObjKaisou_c.s"
 }
 #pragma pop
 
 
-/* 80C34BB8-80C34BD8 0020+00 s=1 e=0 z=0  None .text      daObjKaisou_Execute__FP13daObjKaisou_c                       */
+/* 80C34BB8-80C34BD8 0020+00 s=2 e=0 z=0  None .text      daObjKaisou_Execute__FP13daObjKaisou_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -509,30 +510,30 @@ asm static void daObjKaisou_Execute(daObjKaisou_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80C35038-80C35058 0020+00 s=0 e=0 z=0  None .data      l_daObjKaisou_Method                                         */
-SECTION_DATA void* l_daObjKaisou_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80C35038-80C35058 0020+00 s=1 e=0 z=0  None .data      l_daObjKaisou_Method                                         */
+SECTION_DATA static void* l_daObjKaisou_Method[8] = {
+	(void*)daObjKaisou_Create__FP10fopAc_ac_c,
+	(void*)daObjKaisou_Delete__FP13daObjKaisou_c,
+	(void*)daObjKaisou_Execute__FP13daObjKaisou_c,
+	(void*)daObjKaisou_IsDelete__FP13daObjKaisou_c,
+	(void*)daObjKaisou_Draw__FP13daObjKaisou_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C35058-80C35088 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Kaisou                                         */
+/* 80C35058-80C35088 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Kaisou                                         */
 SECTION_DATA void* g_profile_Obj_Kaisou[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x006A0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x0000079C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01CC0000,
-	(void*)NULL,
+	(void*)&l_daObjKaisou_Method,
 	(void*)0x00040000,
 	(void*)0x000E0000,
 };
@@ -541,14 +542,14 @@ SECTION_DATA void* g_profile_Obj_Kaisou[12] = {
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 80C35094-80C350A0 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80C34BD8-80C34E4C 0274+00 s=1 e=0 z=0  None .text      create__13daObjKaisou_cFv                                    */
@@ -562,7 +563,7 @@ asm void daObjKaisou_c::create() {
 #pragma pop
 
 
-/* 80C34E4C-80C34E94 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80C34E4C-80C34E94 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -573,7 +574,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80C34E94-80C34EDC 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C34E94-80C34EDC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -584,8 +585,8 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80C34EDC-80C34EE4 0008+00 s=0 e=0 z=0  None .text      daObjKaisou_IsDelete__FP13daObjKaisou_c                      */
-bool daObjKaisou_IsDelete(daObjKaisou_c* param_0) {
+/* 80C34EDC-80C34EE4 0008+00 s=1 e=0 z=0  None .text      daObjKaisou_IsDelete__FP13daObjKaisou_c                      */
+static bool daObjKaisou_IsDelete(daObjKaisou_c* param_0) {
 	return true;
 }
 

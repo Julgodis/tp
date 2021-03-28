@@ -177,16 +177,16 @@ struct mDoExt_invisibleModel {
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
-struct J3DAnmTransform {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorf {
@@ -370,7 +370,7 @@ struct Z2SeMgr {
 static void mArg0Check(e_po_class*, s16); // 2
 static void anm_init(e_po_class*, int, f32, u8, f32); // 2
 static void nodeCallBack(J3DJoint*, int); // 2
-void daE_PO_Draw(e_po_class*); // 2
+static void daE_PO_Draw(e_po_class*); // 2
 static void e_po_opening(e_po_class*); // 2
 static void e_po_wait(e_po_class*); // 2
 static void e_po_avoid(e_po_class*); // 2
@@ -392,10 +392,10 @@ static void fopAcM_SetGroup(fopAc_ac_c*, u8); // 2
 static void action(e_po_class*); // 2
 static void daE_PO_Execute(e_po_class*); // 2
 static void mPo_tgHitCallback(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*); // 2
-bool daE_PO_IsDelete(e_po_class*); // 2
-void daE_PO_Delete(e_po_class*); // 2
+static bool daE_PO_IsDelete(e_po_class*); // 2
+static void daE_PO_Delete(e_po_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daE_PO_Create(fopAc_ac_c*); // 2
+static void daE_PO_Create(fopAc_ac_c*); // 2
 static void setMidnaBindEffect(fopEn_enemy_c*, Z2CreatureEnemy*, cXyz*, cXyz*); // 2
 static void dComIfGp_event_reset(); // 2
 static void fopAcM_onSwitch(fopAc_ac_c const*, int); // 2
@@ -413,7 +413,7 @@ extern "C" void __ct__12daE_PO_HIO_cFv(); // 1
 extern "C" static void mArg0Check__FP10e_po_classs(); // 1
 extern "C" static void anm_init__FP10e_po_classifUcf(); // 1
 extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" void daE_PO_Draw__FP10e_po_class(); // 1
+extern "C" static void daE_PO_Draw__FP10e_po_class(); // 1
 extern "C" static void e_po_opening__FP10e_po_class(); // 1
 extern "C" static void e_po_wait__FP10e_po_class(); // 1
 extern "C" static void e_po_avoid__FP10e_po_class(); // 1
@@ -436,10 +436,10 @@ extern "C" void OnCoSetBit__14cCcD_ObjHitInfFv(); // 1
 extern "C" static void action__FP10e_po_class(); // 1
 extern "C" static void daE_PO_Execute__FP10e_po_class(); // 1
 extern "C" static void mPo_tgHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf(); // 1
-extern "C" bool daE_PO_IsDelete__FP10e_po_class(); // 1
-extern "C" void daE_PO_Delete__FP10e_po_class(); // 1
+extern "C" static bool daE_PO_IsDelete__FP10e_po_class(); // 1
+extern "C" static void daE_PO_Delete__FP10e_po_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daE_PO_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daE_PO_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __ct__10e_po_classFv(); // 1
 extern "C" void cleanup__18dPa_levelEcallBackFv(); // 1
 extern "C" void __dt__18dPa_levelEcallBackFv(); // 1
@@ -457,8 +457,8 @@ extern "C" void draw__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
 extern "C" void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
 extern "C" void __dt__12daE_PO_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_e_po_cpp(); // 1
-extern "C" void func_80756E6C(); // 1
-extern "C" void func_80756E74(); // 1
+extern "C" static void func_80756E6C(); // 1
+extern "C" static void func_80756E74(); // 1
 extern "C" static void setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz(); // 1
 extern "C" void __dt__5csXyzFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
@@ -499,7 +499,6 @@ extern "C" extern u8 data_80757AFC[4];
 extern "C" extern u8 data_80757B00[4];
 extern "C" extern u8 data_80757B04[4];
 extern "C" extern u8 data_80757C78[4];
-extern "C" extern void* l_daE_PO_Method[8];
 extern "C" extern void* g_profile_E_PO[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -742,6 +741,8 @@ extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void abs(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern void* __vt__22dPa_hermiteEcallBack_c[9];
 extern "C" extern void* __vt__8dCcD_Sph[36];
@@ -887,78 +888,78 @@ SECTION_DATA u8 data_80757B04[4] = {
 
 /* 80757B08-80757BD8 00D0+00 s=1 e=0 z=0  None .data      @5635                                                        */
 SECTION_DATA static void* lit_5635[52] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x15C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x300),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x448),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x5F4),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x6C8),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0xAD8),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x97C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0xF38),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x127C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x12DC),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x130C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0xCC),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x162C),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x1414),
+	(void*)(((char*)e_po_dead__FP10e_po_class)+0x1440),
 };
 
 /* 80757BD8-80757C18 0040+00 s=1 e=0 z=0  None .data      @5903                                                        */
 SECTION_DATA static void* lit_5903[16] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)e_po_limbering__FP10e_po_class)+0x4C0),
+	(void*)(((char*)e_po_limbering__FP10e_po_class)+0x4F8),
+	(void*)(((char*)e_po_limbering__FP10e_po_class)+0x6C8),
+	(void*)(((char*)e_po_limbering__FP10e_po_class)+0x804),
+	(void*)(((char*)e_po_limbering__FP10e_po_class)+0x9BC),
+	(void*)(((char*)e_po_limbering__FP10e_po_class)+0x9BC),
+	(void*)(((char*)e_po_limbering__FP10e_po_class)+0x9BC),
+	(void*)(((char*)e_po_limbering__FP10e_po_class)+0x9BC),
+	(void*)(((char*)e_po_limbering__FP10e_po_class)+0x9BC),
+	(void*)(((char*)e_po_limbering__FP10e_po_class)+0x9BC),
+	(void*)(((char*)e_po_limbering__FP10e_po_class)+0x70),
+	(void*)(((char*)e_po_limbering__FP10e_po_class)+0x2C8),
+	(void*)(((char*)e_po_limbering__FP10e_po_class)+0x418),
+	(void*)(((char*)e_po_limbering__FP10e_po_class)+0x6A4),
+	(void*)(((char*)e_po_limbering__FP10e_po_class)+0x88C),
+	(void*)(((char*)e_po_limbering__FP10e_po_class)+0x8FC),
 };
 
 /* 80757C18-80757C1C 0004+00 s=1 e=0 z=0  None .data      holl_demo_eff_Dt$6023                                        */
@@ -973,27 +974,27 @@ SECTION_DATA static u8 data_80757C1C[8] = {
 
 /* 80757C24-80757C78 0054+00 s=1 e=0 z=0  None .data      @7233                                                        */
 SECTION_DATA static void* lit_7233[21] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)action__FP10e_po_class)+0x2D4),
+	(void*)(((char*)action__FP10e_po_class)+0x2E0),
+	(void*)(((char*)action__FP10e_po_class)+0x2EC),
+	(void*)(((char*)action__FP10e_po_class)+0x2F8),
+	(void*)(((char*)action__FP10e_po_class)+0x310),
+	(void*)(((char*)action__FP10e_po_class)+0x34C),
+	(void*)(((char*)action__FP10e_po_class)+0x358),
+	(void*)(((char*)action__FP10e_po_class)+0x36C),
+	(void*)(((char*)action__FP10e_po_class)+0x36C),
+	(void*)(((char*)action__FP10e_po_class)+0x36C),
+	(void*)(((char*)action__FP10e_po_class)+0x328),
+	(void*)(((char*)action__FP10e_po_class)+0x334),
+	(void*)(((char*)action__FP10e_po_class)+0x340),
+	(void*)(((char*)action__FP10e_po_class)+0x36C),
+	(void*)(((char*)action__FP10e_po_class)+0x36C),
+	(void*)(((char*)action__FP10e_po_class)+0x36C),
+	(void*)(((char*)action__FP10e_po_class)+0x36C),
+	(void*)(((char*)action__FP10e_po_class)+0x36C),
+	(void*)(((char*)action__FP10e_po_class)+0x36C),
+	(void*)(((char*)action__FP10e_po_class)+0x36C),
+	(void*)(((char*)action__FP10e_po_class)+0x364),
 };
 
 /* 80757C78-80757C7C 0004+00 s=0 e=0 z=0  None .data      po_bottleIn_dt$7646                                          */
@@ -1018,30 +1019,30 @@ SECTION_DATA static u8 data_80757CC0[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x41, 0xF0, 0x00, 0x00,
 };
 
-/* 80757D00-80757D20 0020+00 s=0 e=0 z=0  None .data      l_daE_PO_Method                                              */
-SECTION_DATA void* l_daE_PO_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80757D00-80757D20 0020+00 s=1 e=0 z=0  None .data      l_daE_PO_Method                                              */
+SECTION_DATA static void* l_daE_PO_Method[8] = {
+	(void*)daE_PO_Create__FP10fopAc_ac_c,
+	(void*)daE_PO_Delete__FP10e_po_class,
+	(void*)daE_PO_Execute__FP10e_po_class,
+	(void*)daE_PO_IsDelete__FP10e_po_class,
+	(void*)daE_PO_Draw__FP10e_po_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80757D20-80757D50 0030+00 s=0 e=0 z=0  None .data      g_profile_E_PO                                               */
+/* 80757D20-80757D50 0030+00 s=0 e=0 z=1  None .data      g_profile_E_PO                                               */
 SECTION_DATA void* g_profile_E_PO[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01DA0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000EE0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00A20000,
-	(void*)NULL,
+	(void*)&l_daE_PO_Method,
 	(void*)0x00044100,
 	(void*)0x020E0000,
 };
@@ -1050,34 +1051,34 @@ SECTION_DATA void* g_profile_E_PO[12] = {
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 80757D5C-80757D68 000C+00 s=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80757D68-80757D74 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80757D74-80757D98 0024+00 s=2 e=0 z=0  None .data      __vt__18dPa_levelEcallBack                                   */
 SECTION_DATA static void* __vt__18dPa_levelEcallBack[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__18dPa_levelEcallBackFv,
+	(void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)draw__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)cleanup__18dPa_levelEcallBackFv,
 };
 
 /* 80757D98-80757DB4 001C+00 s=1 e=0 z=0  None .data      __vt__18JPAEmitterCallBack                                   */
@@ -1085,51 +1086,51 @@ SECTION_DATA static void* __vt__18JPAEmitterCallBack[7] = {
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)draw__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
 };
 
 /* 80757DB4-80757DC0 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80757DC0-80757DCC 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 80757DCC-80757DD8 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80757DD8-80757DFC 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80756E74,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80756E6C,
 };
 
 /* 80757DFC-80757E08 000C+00 s=2 e=0 z=0  None .data      __vt__12daE_PO_HIO_c                                         */
 SECTION_DATA static void* __vt__12daE_PO_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12daE_PO_HIO_cFv,
 };
 
 /* 8074C54C-8074C5EC 00A0+00 s=1 e=0 z=0  None .text      __ct__12daE_PO_HIO_cFv                                       */
@@ -1880,11 +1881,11 @@ static u8 struct_80757E98[4];
 /* 80757E9C-80757EA0 0004+00 s=3 e=0 z=0  None .bss       None                                                         */
 static u8 struct_80757E9C[4];
 
-/* 8074C858-8074CCCC 0474+00 s=0 e=0 z=0  None .text      daE_PO_Draw__FP10e_po_class                                  */
+/* 8074C858-8074CCCC 0474+00 s=1 e=0 z=0  None .text      daE_PO_Draw__FP10e_po_class                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_PO_Draw(e_po_class* param_0) {
+asm static void daE_PO_Draw(e_po_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_po/d_a_e_po/daE_PO_Draw__FP10e_po_class.s"
 }
@@ -1979,7 +1980,7 @@ asm static void e_po_wolfbite(e_po_class* param_0) {
 #pragma pop
 
 
-/* 8074EA6C-807501B0 1744+00 s=1 e=0 z=0  None .text      e_po_dead__FP10e_po_class                                    */
+/* 8074EA6C-807501B0 1744+00 s=2 e=0 z=0  None .text      e_po_dead__FP10e_po_class                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2001,7 +2002,7 @@ asm static void e_rollingMove(e_po_class* param_0, s16 param_1, f32 param_2, f32
 #pragma pop
 
 
-/* 8075030C-80750E88 0B7C+00 s=1 e=0 z=0  None .text      e_po_limbering__FP10e_po_class                               */
+/* 8075030C-80750E88 0B7C+00 s=2 e=0 z=0  None .text      e_po_limbering__FP10e_po_class                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2284,7 +2285,7 @@ asm void cCcD_ObjHitInf::OnCoSetBit() {
 #pragma pop
 
 
-/* 80754AD8-807550EC 0614+00 s=1 e=0 z=0  None .text      action__FP10e_po_class                                       */
+/* 80754AD8-807550EC 0614+00 s=2 e=0 z=0  None .text      action__FP10e_po_class                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2295,7 +2296,7 @@ asm static void action(e_po_class* param_0) {
 #pragma pop
 
 
-/* 807550EC-80755C00 0B14+00 s=1 e=0 z=0  None .text      daE_PO_Execute__FP10e_po_class                               */
+/* 807550EC-80755C00 0B14+00 s=2 e=0 z=0  None .text      daE_PO_Execute__FP10e_po_class                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2312,17 +2313,17 @@ static void mPo_tgHitCallback(fopAc_ac_c* param_0, dCcD_GObjInf* param_1, fopAc_
 }
 
 
-/* 80755C04-80755C0C 0008+00 s=0 e=0 z=0  None .text      daE_PO_IsDelete__FP10e_po_class                              */
-bool daE_PO_IsDelete(e_po_class* param_0) {
+/* 80755C04-80755C0C 0008+00 s=1 e=0 z=0  None .text      daE_PO_IsDelete__FP10e_po_class                              */
+static bool daE_PO_IsDelete(e_po_class* param_0) {
 	return true;
 }
 
 
-/* 80755C0C-80755C94 0088+00 s=0 e=0 z=0  None .text      daE_PO_Delete__FP10e_po_class                                */
+/* 80755C0C-80755C94 0088+00 s=1 e=0 z=0  None .text      daE_PO_Delete__FP10e_po_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_PO_Delete(e_po_class* param_0) {
+asm static void daE_PO_Delete(e_po_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_po/d_a_e_po/daE_PO_Delete__FP10e_po_class.s"
 }
@@ -2340,11 +2341,11 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80756020-80756900 08E0+00 s=0 e=0 z=0  None .text      daE_PO_Create__FP10fopAc_ac_c                                */
+/* 80756020-80756900 08E0+00 s=1 e=0 z=0  None .text      daE_PO_Create__FP10fopAc_ac_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_PO_Create(fopAc_ac_c* param_0) {
+asm static void daE_PO_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_po/d_a_e_po/daE_PO_Create__FP10fopAc_ac_c.s"
 }
@@ -2362,13 +2363,13 @@ asm e_po_class::e_po_class() {
 #pragma pop
 
 
-/* 80756B00-80756B04 0004+00 s=0 e=0 z=0  None .text      cleanup__18dPa_levelEcallBackFv                              */
+/* 80756B00-80756B04 0004+00 s=1 e=0 z=0  None .text      cleanup__18dPa_levelEcallBackFv                              */
 void dPa_levelEcallBack::cleanup() {
 	/* empty function */
 }
 
 
-/* 80756B04-80756B78 0074+00 s=0 e=0 z=0  None .text      __dt__18dPa_levelEcallBackFv                                 */
+/* 80756B04-80756B78 0074+00 s=1 e=0 z=0  None .text      __dt__18dPa_levelEcallBackFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2379,7 +2380,7 @@ asm dPa_levelEcallBack::~dPa_levelEcallBack() {
 #pragma pop
 
 
-/* 80756B78-80756BC0 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80756B78-80756BC0 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2390,7 +2391,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80756BC0-80756C08 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80756BC0-80756C08 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2401,7 +2402,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80756C08-80756C50 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80756C08-80756C50 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2412,7 +2413,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80756C50-80756CAC 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80756C50-80756CAC 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2423,7 +2424,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80756CAC-80756D1C 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80756CAC-80756D1C 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2434,7 +2435,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80756D1C-80756D8C 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80756D1C-80756D8C 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2451,7 +2452,7 @@ csXyz::csXyz() {
 }
 
 
-/* 80756D90-80756DD8 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80756D90-80756DD8 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2462,31 +2463,31 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80756DD8-80756DDC 0004+00 s=0 e=0 z=0  None .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
+/* 80756DD8-80756DDC 0004+00 s=2 e=0 z=0  None .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
 void JPAEmitterCallBack::execute(JPABaseEmitter* param_0) {
 	/* empty function */
 }
 
 
-/* 80756DDC-80756DE0 0004+00 s=0 e=0 z=0  None .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
+/* 80756DDC-80756DE0 0004+00 s=2 e=0 z=0  None .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
 void JPAEmitterCallBack::executeAfter(JPABaseEmitter* param_0) {
 	/* empty function */
 }
 
 
-/* 80756DE0-80756DE4 0004+00 s=0 e=0 z=0  None .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
+/* 80756DE0-80756DE4 0004+00 s=2 e=0 z=0  None .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
 void JPAEmitterCallBack::draw(JPABaseEmitter* param_0) {
 	/* empty function */
 }
 
 
-/* 80756DE4-80756DE8 0004+00 s=0 e=0 z=0  None .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
+/* 80756DE4-80756DE8 0004+00 s=2 e=0 z=0  None .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
 void JPAEmitterCallBack::drawAfter(JPABaseEmitter* param_0) {
 	/* empty function */
 }
 
 
-/* 80756DE8-80756E30 0048+00 s=1 e=0 z=0  None .text      __dt__12daE_PO_HIO_cFv                                       */
+/* 80756DE8-80756E30 0048+00 s=2 e=0 z=0  None .text      __dt__12daE_PO_HIO_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2497,7 +2498,7 @@ asm daE_PO_HIO_c::~daE_PO_HIO_c() {
 #pragma pop
 
 
-/* 80756E30-80756E6C 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_e_po_cpp                                         */
+/* 80756E30-80756E6C 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_e_po_cpp                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2508,22 +2509,22 @@ extern "C" asm void __sinit_d_a_e_po_cpp() {
 #pragma pop
 
 
-/* 80756E6C-80756E74 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80756E6C-80756E74 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80756E6C() {
+extern "C" asm static void func_80756E6C() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_po/d_a_e_po/func_80756E6C.s"
 }
 #pragma pop
 
 
-/* 80756E74-80756E7C 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80756E74-80756E7C 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80756E74() {
+extern "C" asm static void func_80756E74() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_po/d_a_e_po/func_80756E74.s"
 }

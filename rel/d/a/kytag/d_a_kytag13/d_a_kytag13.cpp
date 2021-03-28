@@ -57,27 +57,26 @@ struct dBgS_PolyPassChk {
 // Forward References:
 // 
 
-bool daKytag13_Draw(kytag13_class*); // 2
+static bool daKytag13_Draw(kytag13_class*); // 2
 static void vectle_calc(DOUBLE_POS*, cXyz*); // 2
 static void daKytag13_Execute_standard(kytag13_class*); // 2
-void daKytag13_Execute(kytag13_class*); // 2
-bool daKytag13_IsDelete(kytag13_class*); // 2
-bool daKytag13_Delete(kytag13_class*); // 2
-void daKytag13_Create(fopAc_ac_c*); // 2
+static void daKytag13_Execute(kytag13_class*); // 2
+static bool daKytag13_IsDelete(kytag13_class*); // 2
+static bool daKytag13_Delete(kytag13_class*); // 2
+static void daKytag13_Create(fopAc_ac_c*); // 2
 
-extern "C" bool daKytag13_Draw__FP13kytag13_class(); // 1
+extern "C" static bool daKytag13_Draw__FP13kytag13_class(); // 1
 extern "C" static void vectle_calc__FP10DOUBLE_POSP4cXyz(); // 1
 extern "C" static void daKytag13_Execute_standard__FP13kytag13_class(); // 1
 extern "C" void __dt__14dBgS_ObjGndChkFv(); // 1
-extern "C" void daKytag13_Execute__FP13kytag13_class(); // 1
-extern "C" bool daKytag13_IsDelete__FP13kytag13_class(); // 1
-extern "C" bool daKytag13_Delete__FP13kytag13_class(); // 1
-extern "C" void daKytag13_Create__FP10fopAc_ac_c(); // 1
-extern "C" void func_80860450(); // 1
-extern "C" void func_80860458(); // 1
-extern "C" void func_80860460(); // 1
+extern "C" static void daKytag13_Execute__FP13kytag13_class(); // 1
+extern "C" static bool daKytag13_IsDelete__FP13kytag13_class(); // 1
+extern "C" static bool daKytag13_Delete__FP13kytag13_class(); // 1
+extern "C" static void daKytag13_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void func_80860450(); // 1
+extern "C" static void func_80860458(); // 1
+extern "C" static void func_80860460(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daKytag13_Method[8];
 extern "C" extern void* g_profile_KYTAG13[12];
 
 // 
@@ -124,6 +123,8 @@ extern "C" void _savegpr_21(); // 1
 extern "C" void _restgpr_21(); // 1
 extern "C" void strcmp(); // 1
 extern "C" void sqrt(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__18dBgS_ObjGndChk_All[12];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
@@ -136,8 +137,8 @@ extern "C" extern u8 struct_80450D64[4];
 // Declarations:
 // 
 
-/* 8085F1F8-8085F200 0008+00 s=0 e=0 z=0  None .text      daKytag13_Draw__FP13kytag13_class                            */
-bool daKytag13_Draw(kytag13_class* param_0) {
+/* 8085F1F8-8085F200 0008+00 s=1 e=0 z=0  None .text      daKytag13_Draw__FP13kytag13_class                            */
+static bool daKytag13_Draw(kytag13_class* param_0) {
 	return true;
 }
 
@@ -311,30 +312,30 @@ SECTION_RODATA static u8 const lit_4337[8] = {
 SECTION_DEAD char const* const stringBase_80860538 = "D_MN11";
 #pragma pop
 
-/* 80860540-80860560 0020+00 s=0 e=0 z=0  None .data      l_daKytag13_Method                                           */
-SECTION_DATA void* l_daKytag13_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80860540-80860560 0020+00 s=1 e=0 z=0  None .data      l_daKytag13_Method                                           */
+SECTION_DATA static void* l_daKytag13_Method[8] = {
+	(void*)daKytag13_Create__FP10fopAc_ac_c,
+	(void*)daKytag13_Delete__FP13kytag13_class,
+	(void*)daKytag13_Execute__FP13kytag13_class,
+	(void*)daKytag13_IsDelete__FP13kytag13_class,
+	(void*)daKytag13_Draw__FP13kytag13_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80860560-80860590 0030+00 s=0 e=0 z=0  None .data      g_profile_KYTAG13                                            */
+/* 80860560-80860590 0030+00 s=0 e=0 z=1  None .data      g_profile_KYTAG13                                            */
 SECTION_DATA void* g_profile_KYTAG13[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x02B70000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000580,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x006B0000,
-	(void*)NULL,
+	(void*)&l_daKytag13_Method,
 	(void*)0x00060000,
 	(void*)NULL,
 };
@@ -343,16 +344,16 @@ SECTION_DATA void* g_profile_KYTAG13[12] = {
 SECTION_DATA static void* __vt__14dBgS_ObjGndChk[12] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__14dBgS_ObjGndChkFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80860450,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80860460,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80860458,
 };
 
 /* 8085F2B0-80860148 0E98+00 s=1 e=0 z=0  None .text      daKytag13_Execute_standard__FP13kytag13_class                */
@@ -366,7 +367,7 @@ asm static void daKytag13_Execute_standard(kytag13_class* param_0) {
 #pragma pop
 
 
-/* 80860148-808601C0 0078+00 s=3 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
+/* 80860148-808601C0 0078+00 s=4 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -377,67 +378,67 @@ asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 #pragma pop
 
 
-/* 808601C0-80860200 0040+00 s=0 e=0 z=0  None .text      daKytag13_Execute__FP13kytag13_class                         */
+/* 808601C0-80860200 0040+00 s=1 e=0 z=0  None .text      daKytag13_Execute__FP13kytag13_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag13_Execute(kytag13_class* param_0) {
+asm static void daKytag13_Execute(kytag13_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/daKytag13_Execute__FP13kytag13_class.s"
 }
 #pragma pop
 
 
-/* 80860200-80860208 0008+00 s=0 e=0 z=0  None .text      daKytag13_IsDelete__FP13kytag13_class                        */
-bool daKytag13_IsDelete(kytag13_class* param_0) {
+/* 80860200-80860208 0008+00 s=1 e=0 z=0  None .text      daKytag13_IsDelete__FP13kytag13_class                        */
+static bool daKytag13_IsDelete(kytag13_class* param_0) {
 	return true;
 }
 
 
-/* 80860208-80860210 0008+00 s=0 e=0 z=0  None .text      daKytag13_Delete__FP13kytag13_class                          */
-bool daKytag13_Delete(kytag13_class* param_0) {
+/* 80860208-80860210 0008+00 s=1 e=0 z=0  None .text      daKytag13_Delete__FP13kytag13_class                          */
+static bool daKytag13_Delete(kytag13_class* param_0) {
 	return true;
 }
 
 
-/* 80860210-80860450 0240+00 s=0 e=0 z=0  None .text      daKytag13_Create__FP10fopAc_ac_c                             */
+/* 80860210-80860450 0240+00 s=1 e=0 z=0  None .text      daKytag13_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag13_Create(fopAc_ac_c* param_0) {
+asm static void daKytag13_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/daKytag13_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80860450-80860458 0008+00 s=0 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80860450-80860458 0008+00 s=1 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80860450() {
+extern "C" asm static void func_80860450() {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/func_80860450.s"
 }
 #pragma pop
 
 
-/* 80860458-80860460 0008+00 s=0 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80860458-80860460 0008+00 s=1 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80860458() {
+extern "C" asm static void func_80860458() {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/func_80860458.s"
 }
 #pragma pop
 
 
-/* 80860460-80860468 0008+00 s=0 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80860460-80860468 0008+00 s=1 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80860460() {
+extern "C" asm static void func_80860460() {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/func_80860460.s"
 }

@@ -11,6 +11,16 @@
 // Types:
 // 
 
+struct dTres_c {
+	struct typeGroupData_c {
+	};
+
+	struct data_s {
+	};
+
+	/* 8009C4B0 */ void getTypeToTypeGroupNo(u8);
+};
+
 struct dDrawPath_c {
 	struct room_class {
 	};
@@ -31,16 +41,6 @@ struct dDrawPath_c {
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
 	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CCC4 */ void drawPath();
-};
-
-struct dTres_c {
-	struct typeGroupData_c {
-	};
-
-	struct data_s {
-	};
-
-	/* 8009C4B0 */ void getTypeToTypeGroupNo(u8);
 };
 
 struct renderingAmap_c {

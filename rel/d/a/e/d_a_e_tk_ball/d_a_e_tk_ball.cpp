@@ -58,10 +58,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -141,7 +141,7 @@ struct Z2SoundObjSimple {
 // Forward References:
 // 
 
-void daE_TK_BALL_Draw(e_tk_ball_class*); // 2
+static void daE_TK_BALL_Draw(e_tk_ball_class*); // 2
 static void simple_bg_check(e_tk_ball_class*); // 2
 static void impact_eff_set(e_tk_ball_class*); // 2
 static void e_tk_ball_move(e_tk_ball_class*); // 2
@@ -149,12 +149,12 @@ static void e_tk_ball_return(e_tk_ball_class*); // 2
 static void e_tk_ball_drop(e_tk_ball_class*); // 2
 static void action(e_tk_ball_class*); // 2
 static void daE_TK_BALL_Execute(e_tk_ball_class*); // 2
-bool daE_TK_BALL_IsDelete(e_tk_ball_class*); // 2
-void daE_TK_BALL_Delete(e_tk_ball_class*); // 2
+static bool daE_TK_BALL_IsDelete(e_tk_ball_class*); // 2
+static void daE_TK_BALL_Delete(e_tk_ball_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daE_TK_BALL_Create(fopAc_ac_c*); // 2
+static void daE_TK_BALL_Create(fopAc_ac_c*); // 2
 
-extern "C" void daE_TK_BALL_Draw__FP15e_tk_ball_class(); // 1
+extern "C" static void daE_TK_BALL_Draw__FP15e_tk_ball_class(); // 1
 extern "C" static void simple_bg_check__FP15e_tk_ball_class(); // 1
 extern "C" static void impact_eff_set__FP15e_tk_ball_class(); // 1
 extern "C" static void e_tk_ball_move__FP15e_tk_ball_class(); // 1
@@ -162,14 +162,13 @@ extern "C" static void e_tk_ball_return__FP15e_tk_ball_class(); // 1
 extern "C" static void e_tk_ball_drop__FP15e_tk_ball_class(); // 1
 extern "C" static void action__FP15e_tk_ball_class(); // 1
 extern "C" static void daE_TK_BALL_Execute__FP15e_tk_ball_class(); // 1
-extern "C" bool daE_TK_BALL_IsDelete__FP15e_tk_ball_class(); // 1
-extern "C" void daE_TK_BALL_Delete__FP15e_tk_ball_class(); // 1
+extern "C" static bool daE_TK_BALL_IsDelete__FP15e_tk_ball_class(); // 1
+extern "C" static void daE_TK_BALL_Delete__FP15e_tk_ball_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daE_TK_BALL_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daE_TK_BALL_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daE_TK_BALL_Method[8];
 extern "C" extern void* g_profile_E_TK_BALL[12];
 
 // 
@@ -250,6 +249,8 @@ extern "C" void _savegpr_26(); // 1
 extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_26(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -267,11 +268,11 @@ extern "C" extern u8 mParticleTracePCB__13dPa_control_c[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 807BBFF8-807BC070 0078+00 s=0 e=0 z=0  None .text      daE_TK_BALL_Draw__FP15e_tk_ball_class                        */
+/* 807BBFF8-807BC070 0078+00 s=1 e=0 z=0  None .text      daE_TK_BALL_Draw__FP15e_tk_ball_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_TK_BALL_Draw(e_tk_ball_class* param_0) {
+asm static void daE_TK_BALL_Draw(e_tk_ball_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/daE_TK_BALL_Draw__FP15e_tk_ball_class.s"
 }
@@ -420,7 +421,7 @@ asm static void action(e_tk_ball_class* param_0) {
 #pragma pop
 
 
-/* 807BCF84-807BD0C0 013C+00 s=1 e=0 z=0  None .text      daE_TK_BALL_Execute__FP15e_tk_ball_class                     */
+/* 807BCF84-807BD0C0 013C+00 s=2 e=0 z=0  None .text      daE_TK_BALL_Execute__FP15e_tk_ball_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -431,8 +432,8 @@ asm static void daE_TK_BALL_Execute(e_tk_ball_class* param_0) {
 #pragma pop
 
 
-/* 807BD0C0-807BD0C8 0008+00 s=0 e=0 z=0  None .text      daE_TK_BALL_IsDelete__FP15e_tk_ball_class                    */
-bool daE_TK_BALL_IsDelete(e_tk_ball_class* param_0) {
+/* 807BD0C0-807BD0C8 0008+00 s=1 e=0 z=0  None .text      daE_TK_BALL_IsDelete__FP15e_tk_ball_class                    */
+static bool daE_TK_BALL_IsDelete(e_tk_ball_class* param_0) {
 	return true;
 }
 
@@ -446,11 +447,11 @@ SECTION_DEAD char const* const stringBase_807BD5C4 = "E_tk";
 SECTION_DEAD char const* const stringBase_807BD5C9 = "E_tk2";
 #pragma pop
 
-/* 807BD0C8-807BD13C 0074+00 s=0 e=0 z=0  None .text      daE_TK_BALL_Delete__FP15e_tk_ball_class                      */
+/* 807BD0C8-807BD13C 0074+00 s=1 e=0 z=0  None .text      daE_TK_BALL_Delete__FP15e_tk_ball_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_TK_BALL_Delete(e_tk_ball_class* param_0) {
+asm static void daE_TK_BALL_Delete(e_tk_ball_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/daE_TK_BALL_Delete__FP15e_tk_ball_class.s"
 }
@@ -485,30 +486,30 @@ SECTION_DATA static u8 data_807BD618[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x0C, 0x00, 0x00,
 };
 
-/* 807BD658-807BD678 0020+00 s=0 e=0 z=0  None .data      l_daE_TK_BALL_Method                                         */
-SECTION_DATA void* l_daE_TK_BALL_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 807BD658-807BD678 0020+00 s=1 e=0 z=0  None .data      l_daE_TK_BALL_Method                                         */
+SECTION_DATA static void* l_daE_TK_BALL_Method[8] = {
+	(void*)daE_TK_BALL_Create__FP10fopAc_ac_c,
+	(void*)daE_TK_BALL_Delete__FP15e_tk_ball_class,
+	(void*)daE_TK_BALL_Execute__FP15e_tk_ball_class,
+	(void*)daE_TK_BALL_IsDelete__FP15e_tk_ball_class,
+	(void*)daE_TK_BALL_Draw__FP15e_tk_ball_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 807BD678-807BD6A8 0030+00 s=0 e=0 z=0  None .data      g_profile_E_TK_BALL                                          */
+/* 807BD678-807BD6A8 0030+00 s=0 e=0 z=1  None .data      g_profile_E_TK_BALL                                          */
 SECTION_DATA void* g_profile_E_TK_BALL[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01D20000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000008CC,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00970000,
-	(void*)NULL,
+	(void*)&l_daE_TK_BALL_Method,
 	(void*)0x00040120,
 	(void*)NULL,
 };
@@ -517,28 +518,28 @@ SECTION_DATA void* g_profile_E_TK_BALL[12] = {
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 807BD6B4-807BD6C0 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
-/* 807BD1EC-807BD4D4 02E8+00 s=0 e=0 z=0  None .text      daE_TK_BALL_Create__FP10fopAc_ac_c                           */
+/* 807BD1EC-807BD4D4 02E8+00 s=1 e=0 z=0  None .text      daE_TK_BALL_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_TK_BALL_Create(fopAc_ac_c* param_0) {
+asm static void daE_TK_BALL_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/daE_TK_BALL_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 807BD4D4-807BD51C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 807BD4D4-807BD51C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -549,7 +550,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 807BD51C-807BD564 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 807BD51C-807BD564 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -19,6 +19,7 @@ extern void* const data_8054EAB0[2];
 // 
 
 
+extern "C" void __sinit_d_a_npc_kakashi_cpp(); // 1
 
 // 
 // Declarations:

@@ -84,10 +84,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -159,10 +159,10 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -174,29 +174,28 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daObj_Web0_Draw(obj_web0_class*); // 2
+static void daObj_Web0_Draw(obj_web0_class*); // 2
 static void damage_check(obj_web0_class*); // 2
 static void daObj_Web0_Execute(obj_web0_class*); // 2
-bool daObj_Web0_IsDelete(obj_web0_class*); // 2
-void daObj_Web0_Delete(obj_web0_class*); // 2
+static bool daObj_Web0_IsDelete(obj_web0_class*); // 2
+static void daObj_Web0_Delete(obj_web0_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daObj_Web0_Create(fopAc_ac_c*); // 2
+static void daObj_Web0_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__16daObj_Web0_HIO_cFv(); // 1
-extern "C" void daObj_Web0_Draw__FP14obj_web0_class(); // 1
+extern "C" static void daObj_Web0_Draw__FP14obj_web0_class(); // 1
 extern "C" static void damage_check__FP14obj_web0_class(); // 1
 extern "C" static void daObj_Web0_Execute__FP14obj_web0_class(); // 1
-extern "C" bool daObj_Web0_IsDelete__FP14obj_web0_class(); // 1
-extern "C" void daObj_Web0_Delete__FP14obj_web0_class(); // 1
+extern "C" static bool daObj_Web0_IsDelete__FP14obj_web0_class(); // 1
+extern "C" static void daObj_Web0_Delete__FP14obj_web0_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void daObj_Web0_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObj_Web0_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__16daObj_Web0_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_web0_cpp(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObj_Web0_Method[8];
 extern "C" extern void* g_profile_OBJ_WEB0[12];
 
 // 
@@ -273,6 +272,8 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -298,30 +299,30 @@ SECTION_DATA static u8 data_80D351C8[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
 };
 
-/* 80D35208-80D35228 0020+00 s=0 e=0 z=0  None .data      l_daObj_Web0_Method                                          */
-SECTION_DATA void* l_daObj_Web0_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80D35208-80D35228 0020+00 s=1 e=0 z=0  None .data      l_daObj_Web0_Method                                          */
+SECTION_DATA static void* l_daObj_Web0_Method[8] = {
+	(void*)daObj_Web0_Create__FP10fopAc_ac_c,
+	(void*)daObj_Web0_Delete__FP14obj_web0_class,
+	(void*)daObj_Web0_Execute__FP14obj_web0_class,
+	(void*)daObj_Web0_IsDelete__FP14obj_web0_class,
+	(void*)daObj_Web0_Draw__FP14obj_web0_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D35228-80D35258 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_WEB0                                           */
+/* 80D35228-80D35258 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_WEB0                                           */
 SECTION_DATA void* g_profile_OBJ_WEB0[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00280000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x0000073C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x002F0000,
-	(void*)NULL,
+	(void*)&l_daObj_Web0_Method,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -330,28 +331,28 @@ SECTION_DATA void* g_profile_OBJ_WEB0[12] = {
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80D35264-80D35270 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80D35270-80D3527C 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 80D3527C-80D35288 000C+00 s=2 e=0 z=0  None .data      __vt__16daObj_Web0_HIO_c                                     */
 SECTION_DATA static void* __vt__16daObj_Web0_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__16daObj_Web0_HIO_cFv,
 };
 
 /* 80D3452C-80D34544 0018+00 s=1 e=0 z=0  None .text      __ct__16daObj_Web0_HIO_cFv                                   */
@@ -365,11 +366,11 @@ asm daObj_Web0_HIO_c::daObj_Web0_HIO_c() {
 #pragma pop
 
 
-/* 80D34544-80D345C0 007C+00 s=0 e=0 z=0  None .text      daObj_Web0_Draw__FP14obj_web0_class                          */
+/* 80D34544-80D345C0 007C+00 s=1 e=0 z=0  None .text      daObj_Web0_Draw__FP14obj_web0_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Web0_Draw(obj_web0_class* param_0) {
+asm static void daObj_Web0_Draw(obj_web0_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_web0/d_a_obj_web0/daObj_Web0_Draw__FP14obj_web0_class.s"
 }
@@ -419,7 +420,7 @@ SECTION_RODATA static u8 const lit_3855[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80D34794-80D34B24 0390+00 s=1 e=0 z=0  None .text      daObj_Web0_Execute__FP14obj_web0_class                       */
+/* 80D34794-80D34B24 0390+00 s=2 e=0 z=0  None .text      daObj_Web0_Execute__FP14obj_web0_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -430,8 +431,8 @@ asm static void daObj_Web0_Execute(obj_web0_class* param_0) {
 #pragma pop
 
 
-/* 80D34B24-80D34B2C 0008+00 s=0 e=0 z=0  None .text      daObj_Web0_IsDelete__FP14obj_web0_class                      */
-bool daObj_Web0_IsDelete(obj_web0_class* param_0) {
+/* 80D34B24-80D34B2C 0008+00 s=1 e=0 z=0  None .text      daObj_Web0_IsDelete__FP14obj_web0_class                      */
+static bool daObj_Web0_IsDelete(obj_web0_class* param_0) {
 	return true;
 }
 
@@ -467,11 +468,11 @@ SECTION_DEAD char const* const stringBase_80D351BC = "Obj_web0";
 /* 80D35290-80D35294 0004+00 s=2 e=0 z=0  None .bss       None                                                         */
 static u8 data_80D35290[4];
 
-/* 80D34B2C-80D34B94 0068+00 s=0 e=0 z=0  None .text      daObj_Web0_Delete__FP14obj_web0_class                        */
+/* 80D34B2C-80D34B94 0068+00 s=1 e=0 z=0  None .text      daObj_Web0_Delete__FP14obj_web0_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Web0_Delete(obj_web0_class* param_0) {
+asm static void daObj_Web0_Delete(obj_web0_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_web0/d_a_obj_web0/daObj_Web0_Delete__FP14obj_web0_class.s"
 }
@@ -489,7 +490,7 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80D34D44-80D34D8C 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80D34D44-80D34D8C 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -507,18 +508,18 @@ static u8 lit_3643[12];
 /* 80D352A0-80D352A8 0008+00 s=2 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[8];
 
-/* 80D34D8C-80D35054 02C8+00 s=0 e=0 z=0  None .text      daObj_Web0_Create__FP10fopAc_ac_c                            */
+/* 80D34D8C-80D35054 02C8+00 s=1 e=0 z=0  None .text      daObj_Web0_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Web0_Create(fopAc_ac_c* param_0) {
+asm static void daObj_Web0_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_web0/d_a_obj_web0/daObj_Web0_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80D35054-80D3509C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80D35054-80D3509C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -529,7 +530,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80D3509C-80D350E4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80D3509C-80D350E4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -540,7 +541,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80D350E4-80D3512C 0048+00 s=1 e=0 z=0  None .text      __dt__16daObj_Web0_HIO_cFv                                   */
+/* 80D350E4-80D3512C 0048+00 s=2 e=0 z=0  None .text      __dt__16daObj_Web0_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -551,7 +552,7 @@ asm daObj_Web0_HIO_c::~daObj_Web0_HIO_c() {
 #pragma pop
 
 
-/* 80D3512C-80D35168 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_web0_cpp                                     */
+/* 80D3512C-80D35168 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_web0_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

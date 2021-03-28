@@ -124,10 +124,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -229,10 +229,10 @@ struct Z2SeMgr {
 // 
 
 static void bound(cXyz*, cBgS_PolyInfo const&, f32); // 2
-void daWdStick_Draw(daWdStick_c*); // 2
-void daWdStick_Execute(daWdStick_c*); // 2
-void daWdStick_Delete(daWdStick_c*); // 2
-void daWdStick_Create(fopAc_ac_c*); // 2
+static void daWdStick_Draw(daWdStick_c*); // 2
+static void daWdStick_Execute(daWdStick_c*); // 2
+static void daWdStick_Delete(daWdStick_c*); // 2
+static void daWdStick_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__15daWdStick_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -268,21 +268,20 @@ extern "C" void mode_init_sink__11daWdStick_cFv(); // 1
 extern "C" void mode_proc_sink__11daWdStick_cFv(); // 1
 extern "C" void Draw__11daWdStick_cFv(); // 1
 extern "C" void Delete__11daWdStick_cFv(); // 1
-extern "C" void daWdStick_Draw__FP11daWdStick_c(); // 1
-extern "C" void daWdStick_Execute__FP11daWdStick_c(); // 1
-extern "C" void daWdStick_Delete__FP11daWdStick_c(); // 1
-extern "C" void daWdStick_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daWdStick_Draw__FP11daWdStick_c(); // 1
+extern "C" static void daWdStick_Execute__FP11daWdStick_c(); // 1
+extern "C" static void daWdStick_Delete__FP11daWdStick_c(); // 1
+extern "C" static void daWdStick_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__15daWdStick_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_wdStick_cpp(); // 1
-extern "C" void func_80D340FC(); // 1
-extern "C" void func_80D34104(); // 1
-extern "C" void func_80D3410C(); // 1
-extern "C" void func_80D34114(); // 1
-extern "C" void func_80D3411C(); // 1
+extern "C" static void func_80D340FC(); // 1
+extern "C" static void func_80D34104(); // 1
+extern "C" static void func_80D3410C(); // 1
+extern "C" static void func_80D34114(); // 1
+extern "C" static void func_80D3411C(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daWdStick_Method[8];
 extern "C" extern void* g_profile_Obj_WdStick[12];
 
 // 
@@ -374,6 +373,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -419,35 +420,35 @@ SECTION_DATA static u8 mCcDSph__11daWdStick_c[64] = {
 SECTION_DATA static void* lit_4470[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)mode_proc_wait__11daWdStick_cFv,
 };
 
 /* 80D34288-80D34294 000C+00 s=1 e=0 z=0  None .data      @4471                                                        */
 SECTION_DATA static void* lit_4471[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)mode_proc_carry__11daWdStick_cFv,
 };
 
 /* 80D34294-80D342A0 000C+00 s=1 e=0 z=0  None .data      @4472                                                        */
 SECTION_DATA static void* lit_4472[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)mode_proc_drop__11daWdStick_cFv,
 };
 
 /* 80D342A0-80D342AC 000C+00 s=1 e=0 z=0  None .data      @4473                                                        */
 SECTION_DATA static void* lit_4473[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)mode_proc_roll__11daWdStick_cFv,
 };
 
 /* 80D342AC-80D342B8 000C+00 s=1 e=0 z=0  None .data      @4474                                                        */
 SECTION_DATA static void* lit_4474[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)mode_proc_sink__11daWdStick_cFv,
 };
 
 /* 80D342B8-80D342F4 003C+00 s=1 e=0 z=0  None .data      l_mode_func$4469                                             */
@@ -458,30 +459,30 @@ SECTION_DATA static u8 data_80D342B8[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80D342F4-80D34314 0020+00 s=0 e=0 z=0  None .data      l_daWdStick_Method                                           */
-SECTION_DATA void* l_daWdStick_Method[8] = {
+/* 80D342F4-80D34314 0020+00 s=1 e=0 z=0  None .data      l_daWdStick_Method                                           */
+SECTION_DATA static void* l_daWdStick_Method[8] = {
+	(void*)daWdStick_Create__FP10fopAc_ac_c,
+	(void*)daWdStick_Delete__FP11daWdStick_c,
+	(void*)daWdStick_Execute__FP11daWdStick_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daWdStick_Draw__FP11daWdStick_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D34314-80D34344 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_WdStick                                        */
+/* 80D34314-80D34344 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_WdStick                                        */
 SECTION_DATA void* g_profile_Obj_WdStick[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01650000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000AF8,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01F10000,
-	(void*)NULL,
+	(void*)&l_daWdStick_Method,
 	(void*)0x00044000,
 	(void*)0x000E0000,
 };
@@ -490,95 +491,95 @@ SECTION_DATA void* g_profile_Obj_WdStick[12] = {
 SECTION_DATA static void* __vt__14dBgS_ObjGndChk[12] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__14dBgS_ObjGndChkFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80D3410C,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80D3411C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80D34114,
 };
 
 /* 80D34374-80D34380 000C+00 s=4 e=0 z=0  None .data      __vt__8cM3dGPla                                              */
 SECTION_DATA static void* __vt__8cM3dGPla[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGPlaFv,
 };
 
 /* 80D34380-80D3438C 000C+00 s=1 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 80D3438C-80D34398 000C+00 s=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80D34398-80D343A4 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80D343A4-80D343B0 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80D343B0-80D343BC 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80D343BC-80D343E0 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80D34104,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80D340FC,
 };
 
 /* 80D343E0-80D343F8 0018+00 s=1 e=0 z=0  None .data      __vt__11daWdStick_c                                          */
 SECTION_DATA static void* __vt__11daWdStick_c[6] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__11daWdStick_cFv,
+	(void*)Execute__11daWdStick_cFv,
+	(void*)Draw__11daWdStick_cFv,
+	(void*)Delete__11daWdStick_cFv,
 };
 
 /* 80D343F8-80D34404 000C+00 s=2 e=0 z=0  None .data      __vt__15daWdStick_HIO_c                                      */
 SECTION_DATA static void* __vt__15daWdStick_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__15daWdStick_HIO_cFv,
 };
 
 /* 80D34404-80D34410 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
 /* 80D31B4C-80D31B88 003C+00 s=1 e=0 z=0  None .text      __ct__15daWdStick_HIO_cFv                                    */
@@ -592,7 +593,7 @@ asm daWdStick_HIO_c::daWdStick_HIO_c() {
 #pragma pop
 
 
-/* 80D31B88-80D31BD0 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80D31B88-80D31BD0 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -755,7 +756,7 @@ SECTION_RODATA static u32 const lit_4780 = 0xC0000000;
 SECTION_DEAD char const* const stringBase_80D34210 = "H_Kinobou";
 #pragma pop
 
-/* 80D31C58-80D31CC4 006C+00 s=0 e=0 z=0  None .text      CreateHeap__11daWdStick_cFv                                  */
+/* 80D31C58-80D31CC4 006C+00 s=1 e=0 z=0  None .text      CreateHeap__11daWdStick_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -777,7 +778,7 @@ asm void daWdStick_c::create() {
 #pragma pop
 
 
-/* 80D31F9C-80D31FE4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80D31F9C-80D31FE4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -788,7 +789,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80D31FE4-80D3202C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80D31FE4-80D3202C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -799,7 +800,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80D3202C-80D32088 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80D3202C-80D32088 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -810,7 +811,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80D32088-80D320F8 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80D32088-80D320F8 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -821,7 +822,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 80D320F8-80D32168 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80D320F8-80D32168 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -873,7 +874,7 @@ static u8 lit_3643[12];
 /* 80D34424-80D34430 000C+00 s=2 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[12];
 
-/* 80D3269C-80D32A70 03D4+00 s=0 e=0 z=0  None .text      Execute__11daWdStick_cFv                                     */
+/* 80D3269C-80D32A70 03D4+00 s=1 e=0 z=0  None .text      Execute__11daWdStick_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -895,7 +896,7 @@ asm static void bound(cXyz* param_0, cBgS_PolyInfo const& param_1, f32 param_2) 
 #pragma pop
 
 
-/* 80D32D6C-80D32DB4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 80D32D6C-80D32DB4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -954,7 +955,7 @@ asm void daWdStick_c::mode_init_wait() {
 #pragma pop
 
 
-/* 80D3353C-80D33588 004C+00 s=0 e=0 z=0  None .text      mode_proc_wait__11daWdStick_cFv                              */
+/* 80D3353C-80D33588 004C+00 s=1 e=0 z=0  None .text      mode_proc_wait__11daWdStick_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -976,7 +977,7 @@ asm void daWdStick_c::mode_init_carry() {
 #pragma pop
 
 
-/* 80D335AC-80D3386C 02C0+00 s=0 e=0 z=0  None .text      mode_proc_carry__11daWdStick_cFv                             */
+/* 80D335AC-80D3386C 02C0+00 s=1 e=0 z=0  None .text      mode_proc_carry__11daWdStick_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -998,7 +999,7 @@ asm void daWdStick_c::mode_init_drop() {
 #pragma pop
 
 
-/* 80D33890-80D338DC 004C+00 s=0 e=0 z=0  None .text      mode_proc_drop__11daWdStick_cFv                              */
+/* 80D33890-80D338DC 004C+00 s=1 e=0 z=0  None .text      mode_proc_drop__11daWdStick_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1020,7 +1021,7 @@ asm void daWdStick_c::mode_init_roll() {
 #pragma pop
 
 
-/* 80D338F4-80D33CCC 03D8+00 s=0 e=0 z=0  None .text      mode_proc_roll__11daWdStick_cFv                              */
+/* 80D338F4-80D33CCC 03D8+00 s=1 e=0 z=0  None .text      mode_proc_roll__11daWdStick_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1031,7 +1032,7 @@ asm void daWdStick_c::mode_proc_roll() {
 #pragma pop
 
 
-/* 80D33CCC-80D33D44 0078+00 s=3 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
+/* 80D33CCC-80D33D44 0078+00 s=4 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1064,7 +1065,7 @@ asm void daWdStick_c::mode_init_sink() {
 #pragma pop
 
 
-/* 80D33D8C-80D33EB0 0124+00 s=0 e=0 z=0  None .text      mode_proc_sink__11daWdStick_cFv                              */
+/* 80D33D8C-80D33EB0 0124+00 s=1 e=0 z=0  None .text      mode_proc_sink__11daWdStick_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1075,7 +1076,7 @@ asm void daWdStick_c::mode_proc_sink() {
 #pragma pop
 
 
-/* 80D33EB0-80D33F14 0064+00 s=0 e=0 z=0  None .text      Draw__11daWdStick_cFv                                        */
+/* 80D33EB0-80D33F14 0064+00 s=1 e=0 z=0  None .text      Draw__11daWdStick_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1086,7 +1087,7 @@ asm void daWdStick_c::Draw() {
 #pragma pop
 
 
-/* 80D33F14-80D33F44 0030+00 s=0 e=0 z=0  None .text      Delete__11daWdStick_cFv                                      */
+/* 80D33F14-80D33F44 0030+00 s=1 e=0 z=0  None .text      Delete__11daWdStick_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1097,51 +1098,51 @@ asm void daWdStick_c::Delete() {
 #pragma pop
 
 
-/* 80D33F44-80D33F70 002C+00 s=0 e=0 z=0  None .text      daWdStick_Draw__FP11daWdStick_c                              */
+/* 80D33F44-80D33F70 002C+00 s=1 e=0 z=0  None .text      daWdStick_Draw__FP11daWdStick_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daWdStick_Draw(daWdStick_c* param_0) {
+asm static void daWdStick_Draw(daWdStick_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wdStick/d_a_obj_wdStick/daWdStick_Draw__FP11daWdStick_c.s"
 }
 #pragma pop
 
 
-/* 80D33F70-80D33F9C 002C+00 s=0 e=0 z=0  None .text      daWdStick_Execute__FP11daWdStick_c                           */
+/* 80D33F70-80D33F9C 002C+00 s=1 e=0 z=0  None .text      daWdStick_Execute__FP11daWdStick_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daWdStick_Execute(daWdStick_c* param_0) {
+asm static void daWdStick_Execute(daWdStick_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wdStick/d_a_obj_wdStick/daWdStick_Execute__FP11daWdStick_c.s"
 }
 #pragma pop
 
 
-/* 80D33F9C-80D33FC8 002C+00 s=0 e=0 z=0  None .text      daWdStick_Delete__FP11daWdStick_c                            */
+/* 80D33F9C-80D33FC8 002C+00 s=1 e=0 z=0  None .text      daWdStick_Delete__FP11daWdStick_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daWdStick_Delete(daWdStick_c* param_0) {
+asm static void daWdStick_Delete(daWdStick_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wdStick/d_a_obj_wdStick/daWdStick_Delete__FP11daWdStick_c.s"
 }
 #pragma pop
 
 
-/* 80D33FC8-80D33FE8 0020+00 s=0 e=0 z=0  None .text      daWdStick_Create__FP10fopAc_ac_c                             */
+/* 80D33FC8-80D33FE8 0020+00 s=1 e=0 z=0  None .text      daWdStick_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daWdStick_Create(fopAc_ac_c* param_0) {
+asm static void daWdStick_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wdStick/d_a_obj_wdStick/daWdStick_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80D33FE8-80D34030 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80D33FE8-80D34030 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1152,7 +1153,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80D34030-80D3408C 005C+00 s=1 e=0 z=0  None .text      __dt__15daWdStick_HIO_cFv                                    */
+/* 80D34030-80D3408C 005C+00 s=2 e=0 z=0  None .text      __dt__15daWdStick_HIO_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1163,7 +1164,7 @@ asm daWdStick_HIO_c::~daWdStick_HIO_c() {
 #pragma pop
 
 
-/* 80D3408C-80D340FC 0070+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_wdStick_cpp                                  */
+/* 80D3408C-80D340FC 0070+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_wdStick_cpp                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1174,55 +1175,55 @@ extern "C" asm void __sinit_d_a_obj_wdStick_cpp() {
 #pragma pop
 
 
-/* 80D340FC-80D34104 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80D340FC-80D34104 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80D340FC() {
+extern "C" asm static void func_80D340FC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wdStick/d_a_obj_wdStick/func_80D340FC.s"
 }
 #pragma pop
 
 
-/* 80D34104-80D3410C 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80D34104-80D3410C 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80D34104() {
+extern "C" asm static void func_80D34104() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wdStick/d_a_obj_wdStick/func_80D34104.s"
 }
 #pragma pop
 
 
-/* 80D3410C-80D34114 0008+00 s=0 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80D3410C-80D34114 0008+00 s=1 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80D3410C() {
+extern "C" asm static void func_80D3410C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wdStick/d_a_obj_wdStick/func_80D3410C.s"
 }
 #pragma pop
 
 
-/* 80D34114-80D3411C 0008+00 s=0 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80D34114-80D3411C 0008+00 s=1 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80D34114() {
+extern "C" asm static void func_80D34114() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wdStick/d_a_obj_wdStick/func_80D34114.s"
 }
 #pragma pop
 
 
-/* 80D3411C-80D34124 0008+00 s=0 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80D3411C-80D34124 0008+00 s=1 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80D3411C() {
+extern "C" asm static void func_80D3411C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wdStick/d_a_obj_wdStick/func_80D3411C.s"
 }

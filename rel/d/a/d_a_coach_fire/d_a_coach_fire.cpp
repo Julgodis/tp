@@ -52,10 +52,10 @@ struct cCcD_GStts {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -110,27 +110,26 @@ struct daNpcCoach_c {
 // Forward References:
 // 
 
-void daCoachFire_Draw(daCoachFire_c*); // 2
-void daCoachFire_Execute(daCoachFire_c*); // 2
-bool daCoachFire_IsDelete(daCoachFire_c*); // 2
-void daCoachFire_Delete(daCoachFire_c*); // 2
-void daCoachFire_Create(fopAc_ac_c*); // 2
+static void daCoachFire_Draw(daCoachFire_c*); // 2
+static void daCoachFire_Execute(daCoachFire_c*); // 2
+static bool daCoachFire_IsDelete(daCoachFire_c*); // 2
+static void daCoachFire_Delete(daCoachFire_c*); // 2
+static void daCoachFire_Create(fopAc_ac_c*); // 2
 
 extern "C" void create_init__13daCoachFire_cFv(); // 1
 extern "C" void initBaseMtx__13daCoachFire_cFv(); // 1
 extern "C" void setBaseMtx__13daCoachFire_cFv(); // 1
 extern "C" void initCcSphere__13daCoachFire_cFv(); // 1
-extern "C" void daCoachFire_Draw__FP13daCoachFire_c(); // 1
-extern "C" void daCoachFire_Execute__FP13daCoachFire_c(); // 1
-extern "C" bool daCoachFire_IsDelete__FP13daCoachFire_c(); // 1
-extern "C" void daCoachFire_Delete__FP13daCoachFire_c(); // 1
-extern "C" void daCoachFire_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daCoachFire_Draw__FP13daCoachFire_c(); // 1
+extern "C" static void daCoachFire_Execute__FP13daCoachFire_c(); // 1
+extern "C" static bool daCoachFire_IsDelete__FP13daCoachFire_c(); // 1
+extern "C" static void daCoachFire_Delete__FP13daCoachFire_c(); // 1
+extern "C" static void daCoachFire_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daCoachFire_Method[8];
 extern "C" extern void* g_profile_COACH_FIRE[12];
 
 // 
@@ -173,6 +172,8 @@ extern "C" void PSMTXMultVec(); // 1
 extern "C" void PSVECScale(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -271,59 +272,59 @@ SECTION_RODATA static u8 const lit_3912[4] = {
 /* 80658450-80658454 0004+00 s=1 e=0 z=0  None .rodata    @3913                                                        */
 SECTION_RODATA static u32 const lit_3913 = 0x3F666666;
 
-/* 80657D9C-80657EA0 0104+00 s=0 e=0 z=0  None .text      daCoachFire_Draw__FP13daCoachFire_c                          */
+/* 80657D9C-80657EA0 0104+00 s=1 e=0 z=0  None .text      daCoachFire_Draw__FP13daCoachFire_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCoachFire_Draw(daCoachFire_c* param_0) {
+asm static void daCoachFire_Draw(daCoachFire_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/daCoachFire_Draw__FP13daCoachFire_c.s"
 }
 #pragma pop
 
 
-/* 80657EA0-80658094 01F4+00 s=0 e=0 z=0  None .text      daCoachFire_Execute__FP13daCoachFire_c                       */
+/* 80657EA0-80658094 01F4+00 s=1 e=0 z=0  None .text      daCoachFire_Execute__FP13daCoachFire_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCoachFire_Execute(daCoachFire_c* param_0) {
+asm static void daCoachFire_Execute(daCoachFire_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/daCoachFire_Execute__FP13daCoachFire_c.s"
 }
 #pragma pop
 
 
-/* 80658094-8065809C 0008+00 s=0 e=0 z=0  None .text      daCoachFire_IsDelete__FP13daCoachFire_c                      */
-bool daCoachFire_IsDelete(daCoachFire_c* param_0) {
+/* 80658094-8065809C 0008+00 s=1 e=0 z=0  None .text      daCoachFire_IsDelete__FP13daCoachFire_c                      */
+static bool daCoachFire_IsDelete(daCoachFire_c* param_0) {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 8065845C-8065847C 0020+00 s=0 e=0 z=0  None .data      l_daCoachFire_Method                                         */
-SECTION_DATA void* l_daCoachFire_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 8065845C-8065847C 0020+00 s=1 e=0 z=0  None .data      l_daCoachFire_Method                                         */
+SECTION_DATA static void* l_daCoachFire_Method[8] = {
+	(void*)daCoachFire_Create__FP10fopAc_ac_c,
+	(void*)daCoachFire_Delete__FP13daCoachFire_c,
+	(void*)daCoachFire_Execute__FP13daCoachFire_c,
+	(void*)daCoachFire_IsDelete__FP13daCoachFire_c,
+	(void*)daCoachFire_Draw__FP13daCoachFire_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 8065847C-806584AC 0030+00 s=0 e=0 z=0  None .data      g_profile_COACH_FIRE                                         */
+/* 8065847C-806584AC 0030+00 s=0 e=0 z=1  None .data      g_profile_COACH_FIRE                                         */
 SECTION_DATA void* g_profile_COACH_FIRE[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00580000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000714,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x014C0000,
-	(void*)NULL,
+	(void*)&l_daCoachFire_Method,
 	(void*)0x00044000,
 	(void*)0x000E0000,
 };
@@ -332,53 +333,53 @@ SECTION_DATA void* g_profile_COACH_FIRE[12] = {
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 806584B8-806584C4 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 806584C4-806584D0 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 806584D0-806584DC 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
-/* 8065809C-806581C0 0124+00 s=0 e=0 z=0  None .text      daCoachFire_Delete__FP13daCoachFire_c                        */
+/* 8065809C-806581C0 0124+00 s=1 e=0 z=0  None .text      daCoachFire_Delete__FP13daCoachFire_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCoachFire_Delete(daCoachFire_c* param_0) {
+asm static void daCoachFire_Delete(daCoachFire_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/daCoachFire_Delete__FP13daCoachFire_c.s"
 }
 #pragma pop
 
 
-/* 806581C0-806582AC 00EC+00 s=0 e=0 z=0  None .text      daCoachFire_Create__FP10fopAc_ac_c                           */
+/* 806581C0-806582AC 00EC+00 s=1 e=0 z=0  None .text      daCoachFire_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCoachFire_Create(fopAc_ac_c* param_0) {
+asm static void daCoachFire_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/daCoachFire_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 806582AC-806582F4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 806582AC-806582F4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -389,7 +390,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 806582F4-8065833C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 806582F4-8065833C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -400,7 +401,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 8065833C-80658398 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 8065833C-80658398 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -411,7 +412,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80658398-806583E0 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80658398-806583E0 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

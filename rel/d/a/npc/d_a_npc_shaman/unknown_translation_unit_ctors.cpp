@@ -19,6 +19,7 @@ extern void* const data_80AE6BB4[2];
 // 
 
 
+extern "C" void __sinit_d_a_npc_shaman_cpp(); // 1
 
 // 
 // Declarations:

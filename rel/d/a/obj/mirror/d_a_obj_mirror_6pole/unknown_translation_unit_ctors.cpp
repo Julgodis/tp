@@ -19,6 +19,7 @@ extern void* const data_80C96504[2];
 // 
 
 
+extern "C" void __sinit_d_a_obj_mirror_6pole_cpp(); // 1
 
 // 
 // Declarations:

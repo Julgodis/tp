@@ -40,9 +40,9 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-void daTagSpring_Execute(daTagSpring_c*); // 2
-void daTagSpring_Delete(daTagSpring_c*); // 2
-void daTagSpring_Create(daTagSpring_c*); // 2
+static void daTagSpring_Execute(daTagSpring_c*); // 2
+static void daTagSpring_Delete(daTagSpring_c*); // 2
+static void daTagSpring_Create(daTagSpring_c*); // 2
 
 extern "C" void initBaseMtx__13daTagSpring_cFv(); // 1
 extern "C" void setBaseMtx__13daTagSpring_cFv(); // 1
@@ -51,10 +51,9 @@ extern "C" void create__13daTagSpring_cFv(); // 1
 extern "C" void execute__13daTagSpring_cFv(); // 1
 extern "C" void checkArea__13daTagSpring_cFv(); // 1
 extern "C" bool _delete__13daTagSpring_cFv(); // 1
-extern "C" void daTagSpring_Execute__FP13daTagSpring_c(); // 1
-extern "C" void daTagSpring_Delete__FP13daTagSpring_c(); // 1
-extern "C" void daTagSpring_Create__FP13daTagSpring_c(); // 1
-extern "C" extern void* l_daTagSpring_Method[8];
+extern "C" static void daTagSpring_Execute__FP13daTagSpring_c(); // 1
+extern "C" static void daTagSpring_Delete__FP13daTagSpring_c(); // 1
+extern "C" static void daTagSpring_Create__FP13daTagSpring_c(); // 1
 extern "C" extern void* g_profile_Tag_Spring[12];
 
 // 
@@ -69,6 +68,8 @@ extern "C" void waterCheck__11fopAcM_wt_cFPC4cXyz(); // 1
 extern "C" void isSwitch__10dSv_info_cCFii(); // 1
 extern "C" void PSMTXTrans(); // 1
 extern "C" void PSVECSquareDistance(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 __float_nan;
@@ -178,33 +179,33 @@ bool daTagSpring_c::_delete() {
 }
 
 
-/* 805A6E04-805A6E24 0020+00 s=0 e=0 z=0  None .text      daTagSpring_Execute__FP13daTagSpring_c                       */
+/* 805A6E04-805A6E24 0020+00 s=1 e=0 z=0  None .text      daTagSpring_Execute__FP13daTagSpring_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagSpring_Execute(daTagSpring_c* param_0) {
+asm static void daTagSpring_Execute(daTagSpring_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/daTagSpring_Execute__FP13daTagSpring_c.s"
 }
 #pragma pop
 
 
-/* 805A6E24-805A6E44 0020+00 s=0 e=0 z=0  None .text      daTagSpring_Delete__FP13daTagSpring_c                        */
+/* 805A6E24-805A6E44 0020+00 s=1 e=0 z=0  None .text      daTagSpring_Delete__FP13daTagSpring_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagSpring_Delete(daTagSpring_c* param_0) {
+asm static void daTagSpring_Delete(daTagSpring_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/daTagSpring_Delete__FP13daTagSpring_c.s"
 }
 #pragma pop
 
 
-/* 805A6E44-805A6E64 0020+00 s=0 e=0 z=0  None .text      daTagSpring_Create__FP13daTagSpring_c                        */
+/* 805A6E44-805A6E64 0020+00 s=1 e=0 z=0  None .text      daTagSpring_Create__FP13daTagSpring_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagSpring_Create(daTagSpring_c* param_0) {
+asm static void daTagSpring_Create(daTagSpring_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/daTagSpring_Create__FP13daTagSpring_c.s"
 }
@@ -212,11 +213,11 @@ asm void daTagSpring_Create(daTagSpring_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 805A6E90-805A6EB0 0020+00 s=0 e=0 z=0  None .data      l_daTagSpring_Method                                         */
-SECTION_DATA void* l_daTagSpring_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 805A6E90-805A6EB0 0020+00 s=1 e=0 z=0  None .data      l_daTagSpring_Method                                         */
+SECTION_DATA static void* l_daTagSpring_Method[8] = {
+	(void*)daTagSpring_Create__FP13daTagSpring_c,
+	(void*)daTagSpring_Delete__FP13daTagSpring_c,
+	(void*)daTagSpring_Execute__FP13daTagSpring_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
@@ -224,18 +225,18 @@ SECTION_DATA void* l_daTagSpring_Method[8] = {
 	(void*)NULL,
 };
 
-/* 805A6EB0-805A6EE0 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_Spring                                         */
+/* 805A6EB0-805A6EE0 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_Spring                                         */
 SECTION_DATA void* g_profile_Tag_Spring[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01AD0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x0000056C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x024B0000,
-	(void*)NULL,
+	(void*)&l_daTagSpring_Method,
 	(void*)0x00040000,
 	(void*)0x000E0000,
 };

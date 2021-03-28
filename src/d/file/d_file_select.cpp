@@ -212,7 +212,7 @@ struct J2DTextBox {
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
-struct ResTLUT {
+struct ResTIMG {
 };
 
 struct JGeometry {
@@ -224,7 +224,7 @@ struct JGeometry {
 
 };
 
-struct ResTIMG {
+struct ResTLUT {
 };
 
 struct J2DPicture {
@@ -289,10 +289,10 @@ struct JUTNameTab {
 	/* 80191134 */ ~JUTNameTab();
 };
 
-struct COutFont_c {
+struct JUTFont {
 };
 
-struct JUTFont {
+struct COutFont_c {
 };
 
 struct dMsgString_c {

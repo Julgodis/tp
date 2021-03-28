@@ -44,10 +44,10 @@ struct dAttCatch_c {
 // Forward References:
 // 
 
-void daKiPot_Draw(daKiPot_c*); // 2
-void daKiPot_Execute(daKiPot_c*); // 2
-void daKiPot_Delete(daKiPot_c*); // 2
-void daKiPot_Create(fopAc_ac_c*); // 2
+static void daKiPot_Draw(daKiPot_c*); // 2
+static void daKiPot_Execute(daKiPot_c*); // 2
+static void daKiPot_Delete(daKiPot_c*); // 2
+static void daKiPot_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__13daKiPot_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -60,13 +60,12 @@ extern "C" void modeWait__9daKiPot_cFv(); // 1
 extern "C" void chkEvent__9daKiPot_cFv(); // 1
 extern "C" bool Draw__9daKiPot_cFv(); // 1
 extern "C" bool Delete__9daKiPot_cFv(); // 1
-extern "C" void daKiPot_Draw__FP9daKiPot_c(); // 1
-extern "C" void daKiPot_Execute__FP9daKiPot_c(); // 1
-extern "C" void daKiPot_Delete__FP9daKiPot_c(); // 1
-extern "C" void daKiPot_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daKiPot_Draw__FP9daKiPot_c(); // 1
+extern "C" static void daKiPot_Execute__FP9daKiPot_c(); // 1
+extern "C" static void daKiPot_Delete__FP9daKiPot_c(); // 1
+extern "C" static void daKiPot_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__13daKiPot_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_kiPot_cpp(); // 1
-extern "C" extern void* l_daKiPot_Method[8];
 extern "C" extern void* g_profile_Obj_KiPot[12];
 
 // 
@@ -84,6 +83,8 @@ extern "C" void request__11dAttCatch_cFP10fopAc_ac_cUcfffsi(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void PSMTXTrans(); // 1
 extern "C" void __ptmf_scall(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" void __register_global_object(); // 1
@@ -103,7 +104,7 @@ SECTION_DATA static u8 l_cull_box[24] = {
 SECTION_DATA static void* lit_3688[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeWait__9daKiPot_cFv,
 };
 
 /* 80C451C8-80C451D4 000C+00 s=1 e=0 z=0  None .data      mode_proc$3687                                               */
@@ -111,30 +112,30 @@ SECTION_DATA static u8 data_80C451C8[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C451D4-80C451F4 0020+00 s=0 e=0 z=0  None .data      l_daKiPot_Method                                             */
-SECTION_DATA void* l_daKiPot_Method[8] = {
+/* 80C451D4-80C451F4 0020+00 s=1 e=0 z=0  None .data      l_daKiPot_Method                                             */
+SECTION_DATA static void* l_daKiPot_Method[8] = {
+	(void*)daKiPot_Create__FP10fopAc_ac_c,
+	(void*)daKiPot_Delete__FP9daKiPot_c,
+	(void*)daKiPot_Execute__FP9daKiPot_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daKiPot_Draw__FP9daKiPot_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C451F4-80C45224 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_KiPot                                          */
+/* 80C451F4-80C45224 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_KiPot                                          */
 SECTION_DATA void* g_profile_Obj_KiPot[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x016D0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000578,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02050000,
-	(void*)NULL,
+	(void*)&l_daKiPot_Method,
 	(void*)0x00044000,
 	(void*)0x000E0000,
 };
@@ -143,14 +144,14 @@ SECTION_DATA void* g_profile_Obj_KiPot[12] = {
 SECTION_DATA static void* __vt__13daKiPot_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__13daKiPot_HIO_cFv,
 };
 
 /* 80C45230-80C4523C 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
 /* 80C44D0C-80C44D30 0024+00 s=1 e=0 z=0  None .text      __ct__13daKiPot_HIO_cFv                                      */
@@ -164,7 +165,7 @@ asm daKiPot_HIO_c::daKiPot_HIO_c() {
 #pragma pop
 
 
-/* 80C44D30-80C44D78 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80C44D30-80C44D78 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -254,7 +255,7 @@ SECTION_RODATA static u32 const lit_3712 = 0x42480000;
 /* 80C451A0-80C451A4 0004+00 s=1 e=0 z=0  None .rodata    @3713                                                        */
 SECTION_RODATA static u32 const lit_3713 = 0xC2480000;
 
-/* 80C44F80-80C45008 0088+00 s=0 e=0 z=0  None .text      modeWait__9daKiPot_cFv                                       */
+/* 80C44F80-80C45008 0088+00 s=1 e=0 z=0  None .text      modeWait__9daKiPot_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -288,51 +289,51 @@ bool daKiPot_c::Delete() {
 }
 
 
-/* 80C45068-80C45088 0020+00 s=0 e=0 z=0  None .text      daKiPot_Draw__FP9daKiPot_c                                   */
+/* 80C45068-80C45088 0020+00 s=1 e=0 z=0  None .text      daKiPot_Draw__FP9daKiPot_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKiPot_Draw(daKiPot_c* param_0) {
+asm static void daKiPot_Draw(daKiPot_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/daKiPot_Draw__FP9daKiPot_c.s"
 }
 #pragma pop
 
 
-/* 80C45088-80C450A8 0020+00 s=0 e=0 z=0  None .text      daKiPot_Execute__FP9daKiPot_c                                */
+/* 80C45088-80C450A8 0020+00 s=1 e=0 z=0  None .text      daKiPot_Execute__FP9daKiPot_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKiPot_Execute(daKiPot_c* param_0) {
+asm static void daKiPot_Execute(daKiPot_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/daKiPot_Execute__FP9daKiPot_c.s"
 }
 #pragma pop
 
 
-/* 80C450A8-80C450C8 0020+00 s=0 e=0 z=0  None .text      daKiPot_Delete__FP9daKiPot_c                                 */
+/* 80C450A8-80C450C8 0020+00 s=1 e=0 z=0  None .text      daKiPot_Delete__FP9daKiPot_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKiPot_Delete(daKiPot_c* param_0) {
+asm static void daKiPot_Delete(daKiPot_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/daKiPot_Delete__FP9daKiPot_c.s"
 }
 #pragma pop
 
 
-/* 80C450C8-80C450E8 0020+00 s=0 e=0 z=0  None .text      daKiPot_Create__FP10fopAc_ac_c                               */
+/* 80C450C8-80C450E8 0020+00 s=1 e=0 z=0  None .text      daKiPot_Create__FP10fopAc_ac_c                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKiPot_Create(fopAc_ac_c* param_0) {
+asm static void daKiPot_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/daKiPot_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C450E8-80C45144 005C+00 s=1 e=0 z=0  None .text      __dt__13daKiPot_HIO_cFv                                      */
+/* 80C450E8-80C45144 005C+00 s=2 e=0 z=0  None .text      __dt__13daKiPot_HIO_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -343,7 +344,7 @@ asm daKiPot_HIO_c::~daKiPot_HIO_c() {
 #pragma pop
 
 
-/* 80C45144-80C45180 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_kiPot_cpp                                    */
+/* 80C45144-80C45180 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_kiPot_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

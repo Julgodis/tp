@@ -81,7 +81,7 @@ asm daObj_SSBase_c::~daObj_SSBase_c() {
 #pragma pop
 
 
-/* 8015E4B0-8015E4C8 0018+00 s=1 e=0 z=0  None .text      getProcessID__14daObj_SSBase_cFv                             */
+/* 8015E4B0-8015E4C8 0018+00 s=1 e=0 z=2  None .text      getProcessID__14daObj_SSBase_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -74,10 +74,10 @@ struct dScnKy_env_light_c {
 
 static void daObjHata_c_createHeap(fopAc_ac_c*); // 2
 static void nodeCallBack(J3DJoint*, int); // 2
-void daObjHata_create(daObjHata_c*); // 2
-void daObjHata_Delete(daObjHata_c*); // 2
-void daObjHata_execute(daObjHata_c*); // 2
-void daObjHata_draw(daObjHata_c*); // 2
+static void daObjHata_create(daObjHata_c*); // 2
+static void daObjHata_Delete(daObjHata_c*); // 2
+static void daObjHata_execute(daObjHata_c*); // 2
+static void daObjHata_draw(daObjHata_c*); // 2
 
 extern "C" static void daObjHata_c_createHeap__FP10fopAc_ac_c(); // 1
 extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
@@ -93,12 +93,11 @@ extern "C" void execute__11daObjHata_cFv(); // 1
 extern "C" void setModelMtx__11daObjHata_cFv(); // 1
 extern "C" void init__11daObjHata_cFv(); // 1
 extern "C" void moveSwing__11daObjHata_cFv(); // 1
-extern "C" void daObjHata_create__FP11daObjHata_c(); // 1
-extern "C" void daObjHata_Delete__FP11daObjHata_c(); // 1
-extern "C" void daObjHata_execute__FP11daObjHata_c(); // 1
-extern "C" void daObjHata_draw__FP11daObjHata_c(); // 1
+extern "C" static void daObjHata_create__FP11daObjHata_c(); // 1
+extern "C" static void daObjHata_Delete__FP11daObjHata_c(); // 1
+extern "C" static void daObjHata_execute__FP11daObjHata_c(); // 1
+extern "C" static void daObjHata_draw__FP11daObjHata_c(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* daObjHata_METHODS[8];
 extern "C" extern void* g_profile_Obj_Hata[12];
 
 // 
@@ -142,6 +141,8 @@ extern "C" void _savegpr_21(); // 1
 extern "C" void _savegpr_26(); // 1
 extern "C" void _restgpr_21(); // 1
 extern "C" void _restgpr_26(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -186,33 +187,82 @@ asm csXyz::~csXyz() {
 
 
 /* ############################################################################################## */
-/* 80C194C8-80C194CC 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+/* 80C19478-80C1947C 0004+00 s=2 e=0 z=0  None .rodata    @3788                                                        */
+SECTION_RODATA static u32 const lit_3788 = 0x44A00000;
 
-/* 80C194CC-80C194EC 0020+00 s=0 e=0 z=0  None .data      daObjHata_METHODS                                            */
-SECTION_DATA void* daObjHata_METHODS[8] = {
+/* 80C1947C-80C19480 0004+00 s=2 e=0 z=0  None .rodata    @3789                                                        */
+SECTION_RODATA static u32 const lit_3789 = 0x3F800000;
+
+/* 80C19480-80C1948C 000C+00 s=1 e=0 z=0  None .rodata    SING$3793                                                    */
+SECTION_RODATA static u8 const data_80C19480[12] = {
+	0x00, 0x00, 0x00, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x01,
+};
+
+/* 80C1948C-80C19498 000C+00 s=1 e=0 z=0  None .rodata    AIM_ANGLE_X$3794                                             */
+SECTION_RODATA static u8 const data_80C1948C[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xBC, 0x00, 0x00, 0x02, 0xBC,
+};
+
+/* 80C19498-80C194A4 000C+00 s=1 e=0 z=0  None .rodata    STEP_ANGLE_X$3795                                            */
+SECTION_RODATA static u8 const data_80C19498[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x5A,
+};
+
+/* 80C194A4-80C194A8 0004+00 s=1 e=0 z=0  None .rodata    @3823                                                        */
+SECTION_RODATA static u32 const lit_3823 = 0x42480000;
+
+/* 80C194A8-80C194AC 0004+00 s=1 e=0 z=0  None .rodata    @3824                                                        */
+SECTION_RODATA static u32 const lit_3824 = 0x44BB8000;
+
+/* 80C194AC-80C194B0 0004+00 s=1 e=0 z=0  None .rodata    @3825                                                        */
+SECTION_RODATA static u32 const lit_3825 = 0x3DCCCCCD;
+
+/* 80C194B0-80C194B8 0004+04 s=1 e=0 z=0  None .rodata    @3826                                                        */
+SECTION_RODATA static u32 const lit_3826[1 + 1 /* padding */] = {
+	0x3F000000,
+	/* padding */
+	0x00000000,
+};
+
+/* 80C194B8-80C194C0 0008+00 s=1 e=0 z=0  None .rodata    @3828                                                        */
+SECTION_RODATA static u8 const lit_3828[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
+/* 80C194C0-80C194C5 0005+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80C194C0 = "Hata";
+#pragma pop
+
+/* 80C194C8-80C194CC 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+
+/* 80C194CC-80C194EC 0020+00 s=1 e=0 z=0  None .data      daObjHata_METHODS                                            */
+SECTION_DATA static void* daObjHata_METHODS[8] = {
+	(void*)daObjHata_create__FP11daObjHata_c,
+	(void*)daObjHata_Delete__FP11daObjHata_c,
+	(void*)daObjHata_execute__FP11daObjHata_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjHata_draw__FP11daObjHata_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C194EC-80C1951C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Hata                                           */
+/* 80C194EC-80C1951C 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Hata                                           */
 SECTION_DATA void* g_profile_Obj_Hata[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01A80000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005C4,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02EB0000,
-	(void*)NULL,
+	(void*)&daObjHata_METHODS,
 	(void*)0x00040180,
 	(void*)0x030E0000,
 };
@@ -221,7 +271,7 @@ SECTION_DATA void* g_profile_Obj_Hata[12] = {
 SECTION_DATA static void* __vt__11daObjHata_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__11daObjHata_cFv,
 };
 
 /* 80C18D08-80C18D64 005C+00 s=2 e=0 z=0  None .text      __ct__11daObjHata_cFv                                        */
@@ -241,7 +291,7 @@ csXyz::csXyz() {
 }
 
 
-/* 80C18D68-80C18E00 0098+00 s=0 e=0 z=0  None .text      __dt__11daObjHata_cFv                                        */
+/* 80C18D68-80C18E00 0098+00 s=1 e=0 z=0  None .text      __dt__11daObjHata_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -318,13 +368,6 @@ asm void daObjHata_c::setModelMtx() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80C19478-80C1947C 0004+00 s=2 e=0 z=0  None .rodata    @3788                                                        */
-SECTION_RODATA static u32 const lit_3788 = 0x44A00000;
-
-/* 80C1947C-80C19480 0004+00 s=2 e=0 z=0  None .rodata    @3789                                                        */
-SECTION_RODATA static u32 const lit_3789 = 0x3F800000;
-
 /* 80C190FC-80C1919C 00A0+00 s=1 e=0 z=0  None .text      init__11daObjHata_cFv                                        */
 #pragma push
 #pragma optimization_level 0
@@ -335,43 +378,6 @@ asm void daObjHata_c::init() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80C19480-80C1948C 000C+00 s=1 e=0 z=0  None .rodata    SING$3793                                                    */
-SECTION_RODATA static u8 const data_80C19480[12] = {
-	0x00, 0x00, 0x00, 0x01, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x01,
-};
-
-/* 80C1948C-80C19498 000C+00 s=1 e=0 z=0  None .rodata    AIM_ANGLE_X$3794                                             */
-SECTION_RODATA static u8 const data_80C1948C[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xBC, 0x00, 0x00, 0x02, 0xBC,
-};
-
-/* 80C19498-80C194A4 000C+00 s=1 e=0 z=0  None .rodata    STEP_ANGLE_X$3795                                            */
-SECTION_RODATA static u8 const data_80C19498[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x5A,
-};
-
-/* 80C194A4-80C194A8 0004+00 s=1 e=0 z=0  None .rodata    @3823                                                        */
-SECTION_RODATA static u32 const lit_3823 = 0x42480000;
-
-/* 80C194A8-80C194AC 0004+00 s=1 e=0 z=0  None .rodata    @3824                                                        */
-SECTION_RODATA static u32 const lit_3824 = 0x44BB8000;
-
-/* 80C194AC-80C194B0 0004+00 s=1 e=0 z=0  None .rodata    @3825                                                        */
-SECTION_RODATA static u32 const lit_3825 = 0x3DCCCCCD;
-
-/* 80C194B0-80C194B8 0004+04 s=1 e=0 z=0  None .rodata    @3826                                                        */
-SECTION_RODATA static u32 const lit_3826[1 + 1 /* padding */] = {
-	0x3F000000,
-	/* padding */
-	0x00000000,
-};
-
-/* 80C194B8-80C194C0 0008+00 s=1 e=0 z=0  None .rodata    @3828                                                        */
-SECTION_RODATA static u8 const lit_3828[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
 
 /* 80C1919C-80C193BC 0220+00 s=1 e=0 z=0  None .text      moveSwing__11daObjHata_cFv                                   */
 #pragma push
@@ -384,55 +390,47 @@ asm void daObjHata_c::moveSwing() {
 #pragma pop
 
 
-/* 80C193BC-80C19410 0054+00 s=0 e=0 z=0  None .text      daObjHata_create__FP11daObjHata_c                            */
+/* 80C193BC-80C19410 0054+00 s=1 e=0 z=0  None .text      daObjHata_create__FP11daObjHata_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjHata_create(daObjHata_c* param_0) {
+asm static void daObjHata_create(daObjHata_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/daObjHata_create__FP11daObjHata_c.s"
 }
 #pragma pop
 
 
-/* 80C19410-80C19430 0020+00 s=0 e=0 z=0  None .text      daObjHata_Delete__FP11daObjHata_c                            */
+/* 80C19410-80C19430 0020+00 s=1 e=0 z=0  None .text      daObjHata_Delete__FP11daObjHata_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjHata_Delete(daObjHata_c* param_0) {
+asm static void daObjHata_Delete(daObjHata_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/daObjHata_Delete__FP11daObjHata_c.s"
 }
 #pragma pop
 
 
-/* 80C19430-80C19450 0020+00 s=0 e=0 z=0  None .text      daObjHata_execute__FP11daObjHata_c                           */
+/* 80C19430-80C19450 0020+00 s=1 e=0 z=0  None .text      daObjHata_execute__FP11daObjHata_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjHata_execute(daObjHata_c* param_0) {
+asm static void daObjHata_execute(daObjHata_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/daObjHata_execute__FP11daObjHata_c.s"
 }
 #pragma pop
 
 
-/* 80C19450-80C19470 0020+00 s=0 e=0 z=0  None .text      daObjHata_draw__FP11daObjHata_c                              */
+/* 80C19450-80C19470 0020+00 s=1 e=0 z=0  None .text      daObjHata_draw__FP11daObjHata_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjHata_draw(daObjHata_c* param_0) {
+asm static void daObjHata_draw(daObjHata_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/daObjHata_draw__FP11daObjHata_c.s"
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80C194C0-80C194C5 0005+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80C194C0 = "Hata";
-#pragma pop
 

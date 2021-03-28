@@ -17,10 +17,10 @@ struct JASTrack {
 	/* 80292918 */ void writePort(u32, u16);
 };
 
-struct JAISound {
+struct JAISoundHandle {
 };
 
-struct JAISoundHandle {
+struct JAISoundID {
 };
 
 struct JGeometry {
@@ -32,7 +32,7 @@ struct JGeometry {
 
 };
 
-struct JAISoundID {
+struct JAISound {
 };
 
 struct Z2SoundMgr {

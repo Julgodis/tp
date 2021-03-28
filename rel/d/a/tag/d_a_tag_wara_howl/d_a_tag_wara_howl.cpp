@@ -31,10 +31,10 @@ struct fopAc_ac_c {
 // Forward References:
 // 
 
-void daTagWrHowl_create(daTagWrHowl_c*); // 2
-void daTagWrHowl_Delete(daTagWrHowl_c*); // 2
-void daTagWrHowl_execute(daTagWrHowl_c*); // 2
-void daTagWrHowl_draw(daTagWrHowl_c*); // 2
+static void daTagWrHowl_create(daTagWrHowl_c*); // 2
+static void daTagWrHowl_Delete(daTagWrHowl_c*); // 2
+static void daTagWrHowl_execute(daTagWrHowl_c*); // 2
+static void daTagWrHowl_draw(daTagWrHowl_c*); // 2
 
 extern "C" void __ct__13daTagWrHowl_cFv(); // 1
 extern "C" void __dt__13daTagWrHowl_cFv(); // 1
@@ -44,11 +44,10 @@ extern "C" bool draw__13daTagWrHowl_cFv(); // 1
 extern "C" void execute__13daTagWrHowl_cFv(); // 1
 extern "C" void init__13daTagWrHowl_cFv(); // 1
 extern "C" void chkWlfInTag__13daTagWrHowl_cFv(); // 1
-extern "C" void daTagWrHowl_create__FP13daTagWrHowl_c(); // 1
-extern "C" void daTagWrHowl_Delete__FP13daTagWrHowl_c(); // 1
-extern "C" void daTagWrHowl_execute__FP13daTagWrHowl_c(); // 1
-extern "C" void daTagWrHowl_draw__FP13daTagWrHowl_c(); // 1
-extern "C" extern void* daTagWrHowl_METHODS[8];
+extern "C" static void daTagWrHowl_create__FP13daTagWrHowl_c(); // 1
+extern "C" static void daTagWrHowl_Delete__FP13daTagWrHowl_c(); // 1
+extern "C" static void daTagWrHowl_execute__FP13daTagWrHowl_c(); // 1
+extern "C" static void daTagWrHowl_draw__FP13daTagWrHowl_c(); // 1
 extern "C" extern void* g_profile_Tag_WaraHowl[12];
 
 // 
@@ -61,6 +60,8 @@ extern "C" void __ct__10fopAc_ac_cFv(); // 1
 extern "C" void __dt__10fopAc_ac_cFv(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void PSVECSquareDistance(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 
@@ -68,30 +69,30 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 // 
 
 /* ############################################################################################## */
-/* 80D64204-80D64224 0020+00 s=0 e=0 z=0  None .data      daTagWrHowl_METHODS                                          */
-SECTION_DATA void* daTagWrHowl_METHODS[8] = {
+/* 80D64204-80D64224 0020+00 s=1 e=0 z=0  None .data      daTagWrHowl_METHODS                                          */
+SECTION_DATA static void* daTagWrHowl_METHODS[8] = {
+	(void*)daTagWrHowl_create__FP13daTagWrHowl_c,
+	(void*)daTagWrHowl_Delete__FP13daTagWrHowl_c,
+	(void*)daTagWrHowl_execute__FP13daTagWrHowl_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daTagWrHowl_draw__FP13daTagWrHowl_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D64224-80D64254 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_WaraHowl                                       */
+/* 80D64224-80D64254 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_WaraHowl                                       */
 SECTION_DATA void* g_profile_Tag_WaraHowl[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x018B0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000574,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02DD0000,
-	(void*)NULL,
+	(void*)&daTagWrHowl_METHODS,
 	(void*)0x00040000,
 	(void*)0x000E0000,
 };
@@ -100,7 +101,7 @@ SECTION_DATA void* g_profile_Tag_WaraHowl[12] = {
 SECTION_DATA static void* __vt__13daTagWrHowl_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__13daTagWrHowl_cFv,
 };
 
 /* 80D63F38-80D63F74 003C+00 s=2 e=0 z=0  None .text      __ct__13daTagWrHowl_cFv                                      */
@@ -114,7 +115,7 @@ asm daTagWrHowl_c::daTagWrHowl_c() {
 #pragma pop
 
 
-/* 80D63F74-80D63FD4 0060+00 s=0 e=0 z=0  None .text      __dt__13daTagWrHowl_cFv                                      */
+/* 80D63F74-80D63FD4 0060+00 s=1 e=0 z=0  None .text      __dt__13daTagWrHowl_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,44 +186,44 @@ asm void daTagWrHowl_c::chkWlfInTag() {
 #pragma pop
 
 
-/* 80D64144-80D64198 0054+00 s=0 e=0 z=0  None .text      daTagWrHowl_create__FP13daTagWrHowl_c                        */
+/* 80D64144-80D64198 0054+00 s=1 e=0 z=0  None .text      daTagWrHowl_create__FP13daTagWrHowl_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagWrHowl_create(daTagWrHowl_c* param_0) {
+asm static void daTagWrHowl_create(daTagWrHowl_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/daTagWrHowl_create__FP13daTagWrHowl_c.s"
 }
 #pragma pop
 
 
-/* 80D64198-80D641B8 0020+00 s=0 e=0 z=0  None .text      daTagWrHowl_Delete__FP13daTagWrHowl_c                        */
+/* 80D64198-80D641B8 0020+00 s=1 e=0 z=0  None .text      daTagWrHowl_Delete__FP13daTagWrHowl_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagWrHowl_Delete(daTagWrHowl_c* param_0) {
+asm static void daTagWrHowl_Delete(daTagWrHowl_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/daTagWrHowl_Delete__FP13daTagWrHowl_c.s"
 }
 #pragma pop
 
 
-/* 80D641B8-80D641D8 0020+00 s=0 e=0 z=0  None .text      daTagWrHowl_execute__FP13daTagWrHowl_c                       */
+/* 80D641B8-80D641D8 0020+00 s=1 e=0 z=0  None .text      daTagWrHowl_execute__FP13daTagWrHowl_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagWrHowl_execute(daTagWrHowl_c* param_0) {
+asm static void daTagWrHowl_execute(daTagWrHowl_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/daTagWrHowl_execute__FP13daTagWrHowl_c.s"
 }
 #pragma pop
 
 
-/* 80D641D8-80D641F8 0020+00 s=0 e=0 z=0  None .text      daTagWrHowl_draw__FP13daTagWrHowl_c                          */
+/* 80D641D8-80D641F8 0020+00 s=1 e=0 z=0  None .text      daTagWrHowl_draw__FP13daTagWrHowl_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagWrHowl_draw(daTagWrHowl_c* param_0) {
+asm static void daTagWrHowl_draw(daTagWrHowl_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/daTagWrHowl_draw__FP13daTagWrHowl_c.s"
 }

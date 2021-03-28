@@ -96,6 +96,9 @@ struct cBgS_PolyInfo {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -140,10 +143,10 @@ struct cBgW_BgId {
 	/* 802681D4 */ void ChkUsed() const;
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -155,10 +158,10 @@ struct Z2SeMgr {
 // 
 
 static void searchTornado2(void*, void*); // 2
-void daObjFan_create1st(daObjFan_c*); // 2
-void daObjFan_MoveBGDelete(daObjFan_c*); // 2
-void daObjFan_MoveBGExecute(daObjFan_c*); // 2
-void daObjFan_MoveBGDraw(daObjFan_c*); // 2
+static void daObjFan_create1st(daObjFan_c*); // 2
+static void daObjFan_MoveBGDelete(daObjFan_c*); // 2
+static void daObjFan_MoveBGExecute(daObjFan_c*); // 2
+static void daObjFan_MoveBGDraw(daObjFan_c*); // 2
 
 extern "C" static void searchTornado2__FPvPv(); // 1
 extern "C" void search_tornado__10daObjFan_cFv(); // 1
@@ -172,17 +175,14 @@ extern "C" void action__10daObjFan_cFv(); // 1
 extern "C" void setCollision__10daObjFan_cFv(); // 1
 extern "C" void Draw__10daObjFan_cFv(); // 1
 extern "C" void Delete__10daObjFan_cFv(); // 1
-extern "C" void daObjFan_create1st__FP10daObjFan_c(); // 1
+extern "C" static void daObjFan_create1st__FP10daObjFan_c(); // 1
 extern "C" void __dt__8dCcD_SphFv(); // 1
 extern "C" void __ct__8dCcD_SphFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void daObjFan_MoveBGDelete__FP10daObjFan_c(); // 1
-extern "C" void daObjFan_MoveBGExecute__FP10daObjFan_c(); // 1
-extern "C" void daObjFan_MoveBGDraw__FP10daObjFan_c(); // 1
-extern "C" extern u8 const struct_80BE5E58[20];
-extern "C" extern u8 const data_80BE5E6C[12];
-extern "C" extern void* daObjFan_METHODS[8];
+extern "C" static void daObjFan_MoveBGDelete__FP10daObjFan_c(); // 1
+extern "C" static void daObjFan_MoveBGExecute__FP10daObjFan_c(); // 1
+extern "C" static void daObjFan_MoveBGDraw__FP10daObjFan_c(); // 1
 extern "C" extern void* g_profile_Obj_Fan[12];
 
 // 
@@ -222,6 +222,9 @@ extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -255,6 +258,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -386,7 +391,7 @@ asm void daObjFan_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80BE4F08-80BE4FD4 00CC+00 s=0 e=0 z=0  None .text      Create__10daObjFan_cFv                                       */
+/* 80BE4F08-80BE4FD4 00CC+00 s=1 e=0 z=0  None .text      Create__10daObjFan_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -398,14 +403,53 @@ asm void daObjFan_c::Create() {
 
 
 /* ############################################################################################## */
-/* 80BE5E78-80BE5E84 000C+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80BE5E34-80BE5E38 0004+00 s=1 e=0 z=0  None .rodata    @3813                                                        */
+SECTION_RODATA static u32 const lit_3813 = 0x3F000000;
+
+/* 80BE5E38-80BE5E40 0008+00 s=2 e=0 z=0  None .rodata    @3815                                                        */
+SECTION_RODATA static u8 const lit_3815[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80BE4FD4-80BE50EC 0118+00 s=0 e=0 z=0  None .text      CreateHeap__10daObjFan_cFv                                   */
+/* 80BE5E40-80BE5E44 0004+00 s=1 e=0 z=0  None .rodata    @3929                                                        */
+SECTION_RODATA static u32 const lit_3929 = 0x3CA3D70A;
+
+/* 80BE5E44-80BE5E48 0004+00 s=1 e=0 z=0  None .rodata    @3930                                                        */
+SECTION_RODATA static u32 const lit_3930 = 0x42FE0000;
+
+/* 80BE5E48-80BE5E4C 0004+00 s=1 e=0 z=0  None .rodata    @3931                                                        */
+SECTION_RODATA static u32 const lit_3931 = 0x3F800000;
+
+/* 80BE5E4C-80BE5E50 0004+00 s=1 e=0 z=0  None .rodata    @3932                                                        */
+SECTION_RODATA static u32 const lit_3932 = 0xBF800000;
+
+/* 80BE5E50-80BE5E54 0004+00 s=1 e=0 z=0  None .rodata    @3964                                                        */
+SECTION_RODATA static u32 const lit_3964 = 0x43160000;
+
+/* 80BE5E54-80BE5E58 0004+00 s=1 e=0 z=0  None .rodata    @3965                                                        */
+SECTION_RODATA static u32 const lit_3965 = 0x43960000;
+
+/* 80BE5E58-80BE5E6C 0014+00 s=1 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const struct_80BE5E58[20] = {
+	/* 80BE5E58 000A stringBase_80BE5E58 @stringBase0 */
+	0x4F, 0x62, 0x6A, 0x5F, 0x70, 0x72, 0x6F, 0x70, 0x31, 0x00,
+	/* 80BE5E62 000A data_80BE5E62 None */
+	0x4F, 0x62, 0x6A, 0x5F, 0x70, 0x72, 0x6F, 0x70, 0x30, 0x00,
+};
+
+/* 80BE5E6C-80BE5E78 000C+00 s=1 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const data_80BE5E6C[12] = {
+	0x4F, 0x62, 0x6A, 0x5F, 0x70, 0x72, 0x6F, 0x70, 0x32, 0x00, 0x00, 0x00,
+};
+
+/* 80BE5E78-80BE5E84 000C+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName[3] = {
+	(void*)(((char*)&struct_80BE5E58)+0x0) /* @stringBase0 */,
+	(void*)(((char*)&struct_80BE5E58)+0xA) /* None */,
+	(void*)&data_80BE5E6C,
+};
+
+/* 80BE4FD4-80BE50EC 0118+00 s=1 e=0 z=0  None .text      CreateHeap__10daObjFan_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -427,16 +471,7 @@ asm void daObjFan_c::create1st() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80BE5E34-80BE5E38 0004+00 s=1 e=0 z=0  None .rodata    @3813                                                        */
-SECTION_RODATA static u32 const lit_3813 = 0x3F000000;
-
-/* 80BE5E38-80BE5E40 0008+00 s=2 e=0 z=0  None .rodata    @3815                                                        */
-SECTION_RODATA static u8 const lit_3815[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
-/* 80BE519C-80BE538C 01F0+00 s=0 e=0 z=0  None .text      Execute__10daObjFan_cFPPA3_A4_f                              */
+/* 80BE519C-80BE538C 01F0+00 s=1 e=0 z=0  None .text      Execute__10daObjFan_cFPPA3_A4_f                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -446,19 +481,6 @@ asm void daObjFan_c::Execute(f32 (** param_0)[3][4]) {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80BE5E40-80BE5E44 0004+00 s=1 e=0 z=0  None .rodata    @3929                                                        */
-SECTION_RODATA static u32 const lit_3929 = 0x3CA3D70A;
-
-/* 80BE5E44-80BE5E48 0004+00 s=1 e=0 z=0  None .rodata    @3930                                                        */
-SECTION_RODATA static u32 const lit_3930 = 0x42FE0000;
-
-/* 80BE5E48-80BE5E4C 0004+00 s=1 e=0 z=0  None .rodata    @3931                                                        */
-SECTION_RODATA static u32 const lit_3931 = 0x3F800000;
-
-/* 80BE5E4C-80BE5E50 0004+00 s=1 e=0 z=0  None .rodata    @3932                                                        */
-SECTION_RODATA static u32 const lit_3932 = 0xBF800000;
 
 /* 80BE538C-80BE583C 04B0+00 s=1 e=0 z=0  None .text      action__10daObjFan_cFv                                       */
 #pragma push
@@ -472,12 +494,6 @@ asm void daObjFan_c::action() {
 
 
 /* ############################################################################################## */
-/* 80BE5E50-80BE5E54 0004+00 s=1 e=0 z=0  None .rodata    @3964                                                        */
-SECTION_RODATA static u32 const lit_3964 = 0x43160000;
-
-/* 80BE5E54-80BE5E58 0004+00 s=1 e=0 z=0  None .rodata    @3965                                                        */
-SECTION_RODATA static u32 const lit_3965 = 0x43960000;
-
 /* 80BE5E84-80BE5EB4 0030+00 s=1 e=0 z=0  None .data      l_offset_posM$3940                                           */
 SECTION_DATA static u8 data_80BE5E84[48] = {
 	0xC3, 0x16, 0x00, 0x00, 0x43, 0x16, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC3, 0x16, 0x00, 0x00,
@@ -503,7 +519,7 @@ asm void daObjFan_c::setCollision() {
 #pragma pop
 
 
-/* 80BE5960-80BE5A04 00A4+00 s=0 e=0 z=0  None .text      Draw__10daObjFan_cFv                                         */
+/* 80BE5960-80BE5A04 00A4+00 s=1 e=0 z=0  None .text      Draw__10daObjFan_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -514,7 +530,7 @@ asm void daObjFan_c::Draw() {
 #pragma pop
 
 
-/* 80BE5A04-80BE5A78 0074+00 s=0 e=0 z=0  None .text      Delete__10daObjFan_cFv                                       */
+/* 80BE5A04-80BE5A78 0074+00 s=1 e=0 z=0  None .text      Delete__10daObjFan_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -526,30 +542,30 @@ asm void daObjFan_c::Delete() {
 
 
 /* ############################################################################################## */
-/* 80BE5EE4-80BE5F04 0020+00 s=0 e=0 z=0  None .data      daObjFan_METHODS                                             */
-SECTION_DATA void* daObjFan_METHODS[8] = {
+/* 80BE5EE4-80BE5F04 0020+00 s=1 e=0 z=0  None .data      daObjFan_METHODS                                             */
+SECTION_DATA static void* daObjFan_METHODS[8] = {
+	(void*)daObjFan_create1st__FP10daObjFan_c,
+	(void*)daObjFan_MoveBGDelete__FP10daObjFan_c,
+	(void*)daObjFan_MoveBGExecute__FP10daObjFan_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjFan_MoveBGDraw__FP10daObjFan_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80BE5F04-80BE5F34 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Fan                                            */
+/* 80BE5F04-80BE5F34 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Fan                                            */
 SECTION_DATA void* g_profile_Obj_Fan[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01860000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000AE4,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02350000,
-	(void*)NULL,
+	(void*)&daObjFan_METHODS,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -558,35 +574,35 @@ SECTION_DATA void* g_profile_Obj_Fan[12] = {
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80BE5F40-80BE5F4C 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80BE5F4C-80BE5F74 0028+00 s=1 e=0 z=0  None .data      __vt__10daObjFan_c                                           */
 SECTION_DATA static void* __vt__10daObjFan_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__10daObjFan_cFv,
+	(void*)Create__10daObjFan_cFv,
+	(void*)Execute__10daObjFan_cFPPA3_A4_f,
+	(void*)Draw__10daObjFan_cFv,
+	(void*)Delete__10daObjFan_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
-/* 80BE5A78-80BE5B2C 00B4+00 s=0 e=0 z=0  None .text      daObjFan_create1st__FP10daObjFan_c                           */
+/* 80BE5A78-80BE5B2C 00B4+00 s=1 e=0 z=0  None .text      daObjFan_create1st__FP10daObjFan_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjFan_create1st(daObjFan_c* param_0) {
+asm static void daObjFan_create1st(daObjFan_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fan/d_a_obj_fan/daObjFan_create1st__FP10daObjFan_c.s"
 }
@@ -615,7 +631,7 @@ asm dCcD_Sph::dCcD_Sph() {
 #pragma pop
 
 
-/* 80BE5C7C-80BE5CC4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80BE5C7C-80BE5CC4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -626,7 +642,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80BE5CC4-80BE5D0C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80BE5CC4-80BE5D0C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -637,50 +653,36 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80BE5D0C-80BE5D2C 0020+00 s=0 e=0 z=0  None .text      daObjFan_MoveBGDelete__FP10daObjFan_c                        */
+/* 80BE5D0C-80BE5D2C 0020+00 s=1 e=0 z=0  None .text      daObjFan_MoveBGDelete__FP10daObjFan_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjFan_MoveBGDelete(daObjFan_c* param_0) {
+asm static void daObjFan_MoveBGDelete(daObjFan_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fan/d_a_obj_fan/daObjFan_MoveBGDelete__FP10daObjFan_c.s"
 }
 #pragma pop
 
 
-/* 80BE5D2C-80BE5D4C 0020+00 s=0 e=0 z=0  None .text      daObjFan_MoveBGExecute__FP10daObjFan_c                       */
+/* 80BE5D2C-80BE5D4C 0020+00 s=1 e=0 z=0  None .text      daObjFan_MoveBGExecute__FP10daObjFan_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjFan_MoveBGExecute(daObjFan_c* param_0) {
+asm static void daObjFan_MoveBGExecute(daObjFan_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fan/d_a_obj_fan/daObjFan_MoveBGExecute__FP10daObjFan_c.s"
 }
 #pragma pop
 
 
-/* 80BE5D4C-80BE5D78 002C+00 s=0 e=0 z=0  None .text      daObjFan_MoveBGDraw__FP10daObjFan_c                          */
+/* 80BE5D4C-80BE5D78 002C+00 s=1 e=0 z=0  None .text      daObjFan_MoveBGDraw__FP10daObjFan_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjFan_MoveBGDraw(daObjFan_c* param_0) {
+asm static void daObjFan_MoveBGDraw(daObjFan_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fan/d_a_obj_fan/daObjFan_MoveBGDraw__FP10daObjFan_c.s"
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80BE5E58-80BE5E6C 0014+00 s=0 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA u8 const struct_80BE5E58[20] = {
-	/* 80BE5E58 000A stringBase_80BE5E58 @stringBase0 */
-	0x4F, 0x62, 0x6A, 0x5F, 0x70, 0x72, 0x6F, 0x70, 0x31, 0x00,
-	/* 80BE5E62 000A data_80BE5E62 None */
-	0x4F, 0x62, 0x6A, 0x5F, 0x70, 0x72, 0x6F, 0x70, 0x30, 0x00,
-};
-
-/* 80BE5E6C-80BE5E78 000C+00 s=0 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA u8 const data_80BE5E6C[12] = {
-	0x4F, 0x62, 0x6A, 0x5F, 0x70, 0x72, 0x6F, 0x70, 0x32, 0x00, 0x00, 0x00,
-};
 

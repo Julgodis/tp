@@ -124,10 +124,10 @@ struct dMsgObject_c {
 	/* 8023806C */ void demoMessageGroup();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

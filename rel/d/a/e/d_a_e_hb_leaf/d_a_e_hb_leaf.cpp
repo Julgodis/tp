@@ -18,16 +18,16 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct J3DModelData {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorf {
@@ -61,21 +61,20 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-void daE_HB_LEAF_Draw(e_hb_leaf_class*); // 2
+static void daE_HB_LEAF_Draw(e_hb_leaf_class*); // 2
 static void daE_HB_LEAF_Execute(e_hb_leaf_class*); // 2
-bool daE_HB_LEAF_IsDelete(e_hb_leaf_class*); // 2
-void daE_HB_LEAF_Delete(e_hb_leaf_class*); // 2
+static bool daE_HB_LEAF_IsDelete(e_hb_leaf_class*); // 2
+static void daE_HB_LEAF_Delete(e_hb_leaf_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daE_HB_LEAF_Create(fopAc_ac_c*); // 2
+static void daE_HB_LEAF_Create(fopAc_ac_c*); // 2
 
-extern "C" void daE_HB_LEAF_Draw__FP15e_hb_leaf_class(); // 1
+extern "C" static void daE_HB_LEAF_Draw__FP15e_hb_leaf_class(); // 1
 extern "C" static void daE_HB_LEAF_Execute__FP15e_hb_leaf_class(); // 1
-extern "C" bool daE_HB_LEAF_IsDelete__FP15e_hb_leaf_class(); // 1
-extern "C" void daE_HB_LEAF_Delete__FP15e_hb_leaf_class(); // 1
+extern "C" static bool daE_HB_LEAF_IsDelete__FP15e_hb_leaf_class(); // 1
+extern "C" static void daE_HB_LEAF_Delete__FP15e_hb_leaf_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daE_HB_LEAF_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daE_HB_LEAF_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daE_HB_LEAF_Method[8];
 extern "C" extern void* g_profile_E_HB_LEAF[12];
 
 // 
@@ -110,6 +109,8 @@ extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXTrans(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -118,18 +119,18 @@ extern "C" extern u8 g_env_light[4880];
 // Declarations:
 // 
 
-/* 806DFF58-806DFFC0 0068+00 s=0 e=0 z=0  None .text      daE_HB_LEAF_Draw__FP15e_hb_leaf_class                        */
+/* 806DFF58-806DFFC0 0068+00 s=1 e=0 z=0  None .text      daE_HB_LEAF_Draw__FP15e_hb_leaf_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_HB_LEAF_Draw(e_hb_leaf_class* param_0) {
+asm static void daE_HB_LEAF_Draw(e_hb_leaf_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hb_leaf/d_a_e_hb_leaf/daE_HB_LEAF_Draw__FP15e_hb_leaf_class.s"
 }
 #pragma pop
 
 
-/* 806DFFC0-806E00A0 00E0+00 s=1 e=0 z=0  None .text      daE_HB_LEAF_Execute__FP15e_hb_leaf_class                     */
+/* 806DFFC0-806E00A0 00E0+00 s=2 e=0 z=0  None .text      daE_HB_LEAF_Execute__FP15e_hb_leaf_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -140,8 +141,8 @@ asm static void daE_HB_LEAF_Execute(e_hb_leaf_class* param_0) {
 #pragma pop
 
 
-/* 806E00A0-806E00A8 0008+00 s=0 e=0 z=0  None .text      daE_HB_LEAF_IsDelete__FP15e_hb_leaf_class                    */
-bool daE_HB_LEAF_IsDelete(e_hb_leaf_class* param_0) {
+/* 806E00A0-806E00A8 0008+00 s=1 e=0 z=0  None .text      daE_HB_LEAF_IsDelete__FP15e_hb_leaf_class                    */
+static bool daE_HB_LEAF_IsDelete(e_hb_leaf_class* param_0) {
 	return true;
 }
 
@@ -157,11 +158,11 @@ SECTION_RODATA static u32 const lit_3690 = 0x3F800000;
 SECTION_DEAD char const* const stringBase_806E0294 = "E_HB";
 #pragma pop
 
-/* 806E00A8-806E00D8 0030+00 s=0 e=0 z=0  None .text      daE_HB_LEAF_Delete__FP15e_hb_leaf_class                      */
+/* 806E00A8-806E00D8 0030+00 s=1 e=0 z=0  None .text      daE_HB_LEAF_Delete__FP15e_hb_leaf_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_HB_LEAF_Delete(e_hb_leaf_class* param_0) {
+asm static void daE_HB_LEAF_Delete(e_hb_leaf_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hb_leaf/d_a_e_hb_leaf/daE_HB_LEAF_Delete__FP15e_hb_leaf_class.s"
 }
@@ -179,11 +180,11 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 806E01D8-806E0288 00B0+00 s=0 e=0 z=0  None .text      daE_HB_LEAF_Create__FP10fopAc_ac_c                           */
+/* 806E01D8-806E0288 00B0+00 s=1 e=0 z=0  None .text      daE_HB_LEAF_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_HB_LEAF_Create(fopAc_ac_c* param_0) {
+asm static void daE_HB_LEAF_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hb_leaf/d_a_e_hb_leaf/daE_HB_LEAF_Create__FP10fopAc_ac_c.s"
 }
@@ -191,30 +192,30 @@ asm void daE_HB_LEAF_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 806E029C-806E02BC 0020+00 s=0 e=0 z=0  None .data      l_daE_HB_LEAF_Method                                         */
-SECTION_DATA void* l_daE_HB_LEAF_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 806E029C-806E02BC 0020+00 s=1 e=0 z=0  None .data      l_daE_HB_LEAF_Method                                         */
+SECTION_DATA static void* l_daE_HB_LEAF_Method[8] = {
+	(void*)daE_HB_LEAF_Create__FP10fopAc_ac_c,
+	(void*)daE_HB_LEAF_Delete__FP15e_hb_leaf_class,
+	(void*)daE_HB_LEAF_Execute__FP15e_hb_leaf_class,
+	(void*)daE_HB_LEAF_IsDelete__FP15e_hb_leaf_class,
+	(void*)daE_HB_LEAF_Draw__FP15e_hb_leaf_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 806E02BC-806E02EC 0030+00 s=0 e=0 z=0  None .data      g_profile_E_HB_LEAF                                          */
+/* 806E02BC-806E02EC 0030+00 s=0 e=0 z=1  None .data      g_profile_E_HB_LEAF                                          */
 SECTION_DATA void* g_profile_E_HB_LEAF[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01CA0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005C0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x008D0000,
-	(void*)NULL,
+	(void*)&l_daE_HB_LEAF_Method,
 	(void*)0x00040000,
 	(void*)NULL,
 };

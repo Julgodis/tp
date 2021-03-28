@@ -19,6 +19,7 @@ extern void* const data_80C50CFC[2];
 // 
 
 
+extern "C" void __sinit_d_a_obj_kznkarm_cpp(); // 1
 
 // 
 // Declarations:

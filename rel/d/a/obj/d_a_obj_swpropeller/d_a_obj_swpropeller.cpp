@@ -137,10 +137,10 @@ struct JUTNameTab {
 
 static void nodeCallBack(J3DJoint*, int); // 2
 static void CheckCreateHeap(fopAc_ac_c*); // 2
-void daObjSwPr_Draw(daObjSwPr_c*); // 2
-void daObjSwPr_Execute(daObjSwPr_c*); // 2
-void daObjSwPr_Delete(daObjSwPr_c*); // 2
-void daObjSwPr_Create(fopAc_ac_c*); // 2
+static void daObjSwPr_Draw(daObjSwPr_c*); // 2
+static void daObjSwPr_Execute(daObjSwPr_c*); // 2
+static void daObjSwPr_Delete(daObjSwPr_c*); // 2
+static void daObjSwPr_Create(fopAc_ac_c*); // 2
 static void cLib_calcTimer__template0(u16*); // 2
 static void cLib_calcTimer__template1(u8*); // 2
 static void cLib_calcTimer__template2(s16*); // 2
@@ -161,15 +161,14 @@ extern "C" void execute_type_wind__11daObjSwPr_cFv(); // 1
 extern "C" void execute__11daObjSwPr_cFv(); // 1
 extern "C" void draw__11daObjSwPr_cFv(); // 1
 extern "C" void _delete__11daObjSwPr_cFv(); // 1
-extern "C" void daObjSwPr_Draw__FP11daObjSwPr_c(); // 1
-extern "C" void daObjSwPr_Execute__FP11daObjSwPr_c(); // 1
-extern "C" void daObjSwPr_Delete__FP11daObjSwPr_c(); // 1
-extern "C" void daObjSwPr_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjSwPr_Draw__FP11daObjSwPr_c(); // 1
+extern "C" static void daObjSwPr_Execute__FP11daObjSwPr_c(); // 1
+extern "C" static void daObjSwPr_Delete__FP11daObjSwPr_c(); // 1
+extern "C" static void daObjSwPr_Create__FP10fopAc_ac_c(); // 1
 extern "C" static void func_8059B26C(); // 1
 extern "C" static void func_8059B288(); // 1
 extern "C" static void func_8059B2A4(); // 1
 extern "C" extern u8 const l_r00_rot_time[6 + 2 /* padding */];
-extern "C" extern void* l_daObjSwPr_Method[8];
 extern "C" extern void* g_profile_Obj_Swpropeller[12];
 
 // 
@@ -232,6 +231,8 @@ extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
@@ -354,7 +355,7 @@ SECTION_RODATA static u8 const lit_4091[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 8059B360-8059B380 0020+00 s=2 e=0 z=0  None .rodata    None                                                         */
+/* 8059B360-8059B380 0020+00 s=4 e=0 z=0  None .rodata    None                                                         */
 SECTION_RODATA static u8 const struct_8059B360[32] = {
 	/* 8059B360 0009 stringBase_8059B360 @stringBase0 */
 	0x4B, 0x5F, 0x70, 0x72, 0x6F, 0x70, 0x30, 0x30, 0x00,
@@ -366,12 +367,12 @@ SECTION_RODATA static u8 const struct_8059B360[32] = {
 
 /* 8059B380-8059B388 0008+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
 SECTION_DATA static void* l_arcName[2] = {
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)&struct_8059B360)+0x0) /* @stringBase0 */,
+	(void*)(((char*)&struct_8059B360)+0x9) /* None */,
 };
 
 /* 8059B388-8059B38C 0004+00 s=1 e=0 z=0  None .data      l_joint_name                                                 */
-SECTION_DATA static void* l_joint_name = (void*)NULL;
+SECTION_DATA static void* l_joint_name = (void*)(((char*)&struct_8059B360)+0x12) /* None */;
 
 /* 8059A670-8059A808 0198+00 s=1 e=0 z=0  None .text      Create__11daObjSwPr_cFv                                      */
 #pragma push
@@ -396,30 +397,30 @@ asm void daObjSwPr_c::CreateHeap() {
 
 
 /* ############################################################################################## */
-/* 8059B38C-8059B3AC 0020+00 s=0 e=0 z=0  None .data      l_daObjSwPr_Method                                           */
-SECTION_DATA void* l_daObjSwPr_Method[8] = {
+/* 8059B38C-8059B3AC 0020+00 s=1 e=0 z=0  None .data      l_daObjSwPr_Method                                           */
+SECTION_DATA static void* l_daObjSwPr_Method[8] = {
+	(void*)daObjSwPr_Create__FP10fopAc_ac_c,
+	(void*)daObjSwPr_Delete__FP11daObjSwPr_c,
+	(void*)daObjSwPr_Execute__FP11daObjSwPr_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjSwPr_Draw__FP11daObjSwPr_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 8059B3AC-8059B3DC 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Swpropeller                                    */
+/* 8059B3AC-8059B3DC 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Swpropeller                                    */
 SECTION_DATA void* g_profile_Obj_Swpropeller[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x005E0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000840,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01C00000,
-	(void*)NULL,
+	(void*)&l_daObjSwPr_Method,
 	(void*)0x00044100,
 	(void*)0x000E0000,
 };
@@ -428,14 +429,14 @@ SECTION_DATA void* g_profile_Obj_Swpropeller[12] = {
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 8059B3E8-8059B3F4 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 8059A888-8059AA74 01EC+00 s=1 e=0 z=0  None .text      create__11daObjSwPr_cFv                                      */
@@ -449,7 +450,7 @@ asm void daObjSwPr_c::create() {
 #pragma pop
 
 
-/* 8059AA74-8059AABC 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 8059AA74-8059AABC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -460,7 +461,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 8059AABC-8059AB04 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 8059AABC-8059AB04 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -548,44 +549,44 @@ asm void daObjSwPr_c::_delete() {
 #pragma pop
 
 
-/* 8059B1EC-8059B20C 0020+00 s=0 e=0 z=0  None .text      daObjSwPr_Draw__FP11daObjSwPr_c                              */
+/* 8059B1EC-8059B20C 0020+00 s=1 e=0 z=0  None .text      daObjSwPr_Draw__FP11daObjSwPr_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSwPr_Draw(daObjSwPr_c* param_0) {
+asm static void daObjSwPr_Draw(daObjSwPr_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/daObjSwPr_Draw__FP11daObjSwPr_c.s"
 }
 #pragma pop
 
 
-/* 8059B20C-8059B22C 0020+00 s=0 e=0 z=0  None .text      daObjSwPr_Execute__FP11daObjSwPr_c                           */
+/* 8059B20C-8059B22C 0020+00 s=1 e=0 z=0  None .text      daObjSwPr_Execute__FP11daObjSwPr_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSwPr_Execute(daObjSwPr_c* param_0) {
+asm static void daObjSwPr_Execute(daObjSwPr_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/daObjSwPr_Execute__FP11daObjSwPr_c.s"
 }
 #pragma pop
 
 
-/* 8059B22C-8059B24C 0020+00 s=0 e=0 z=0  None .text      daObjSwPr_Delete__FP11daObjSwPr_c                            */
+/* 8059B22C-8059B24C 0020+00 s=1 e=0 z=0  None .text      daObjSwPr_Delete__FP11daObjSwPr_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSwPr_Delete(daObjSwPr_c* param_0) {
+asm static void daObjSwPr_Delete(daObjSwPr_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/daObjSwPr_Delete__FP11daObjSwPr_c.s"
 }
 #pragma pop
 
 
-/* 8059B24C-8059B26C 0020+00 s=0 e=0 z=0  None .text      daObjSwPr_Create__FP10fopAc_ac_c                             */
+/* 8059B24C-8059B26C 0020+00 s=1 e=0 z=0  None .text      daObjSwPr_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSwPr_Create(fopAc_ac_c* param_0) {
+asm static void daObjSwPr_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/daObjSwPr_Create__FP10fopAc_ac_c.s"
 }

@@ -54,10 +54,10 @@ struct J2DOrthoGraph {
 	/* 802E980C */ void setOrtho(JGeometry::TBox2<f32> const&, f32, f32);
 };
 
-struct ResTLUT {
+struct ResTIMG {
 };
 
-struct ResTIMG {
+struct ResTLUT {
 };
 
 struct J2DPicture {

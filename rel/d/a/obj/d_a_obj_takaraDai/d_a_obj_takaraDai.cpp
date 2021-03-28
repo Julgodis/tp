@@ -82,6 +82,10 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 80078690 */ bool Create();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -110,10 +114,10 @@ struct cBgW_BgId {
 // Forward References:
 // 
 
-void daTkraDai_Draw(daTkraDai_c*); // 2
-void daTkraDai_Execute(daTkraDai_c*); // 2
-void daTkraDai_Delete(daTkraDai_c*); // 2
-void daTkraDai_Create(fopAc_ac_c*); // 2
+static void daTkraDai_Draw(daTkraDai_c*); // 2
+static void daTkraDai_Execute(daTkraDai_c*); // 2
+static void daTkraDai_Delete(daTkraDai_c*); // 2
+static void daTkraDai_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__15daTkraDai_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -126,14 +130,13 @@ extern "C" void init_modeWait__11daTkraDai_cFv(); // 1
 extern "C" void modeWait__11daTkraDai_cFv(); // 1
 extern "C" void Draw__11daTkraDai_cFv(); // 1
 extern "C" void Delete__11daTkraDai_cFv(); // 1
-extern "C" void daTkraDai_Draw__FP11daTkraDai_c(); // 1
-extern "C" void daTkraDai_Execute__FP11daTkraDai_c(); // 1
-extern "C" void daTkraDai_Delete__FP11daTkraDai_c(); // 1
-extern "C" void daTkraDai_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daTkraDai_Draw__FP11daTkraDai_c(); // 1
+extern "C" static void daTkraDai_Execute__FP11daTkraDai_c(); // 1
+extern "C" static void daTkraDai_Delete__FP11daTkraDai_c(); // 1
+extern "C" static void daTkraDai_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__15daTkraDai_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_takaraDai_cpp(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daTkraDai_Method[8];
 extern "C" extern void* g_profile_Obj_TakaraDai[12];
 
 // 
@@ -166,6 +169,10 @@ extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -183,6 +190,8 @@ extern "C" void PSMTXMultVec(); // 1
 extern "C" void __ptmf_scall(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -235,7 +244,7 @@ SECTION_RODATA static u32 const lit_3638 = 0x3E99999A;
 SECTION_DATA static void* lit_3799[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeWait__11daTkraDai_cFv,
 };
 
 /* 80D0786C-80D07878 000C+00 s=1 e=0 z=0  None .data      mode_proc$3798                                               */
@@ -243,30 +252,30 @@ SECTION_DATA static u8 data_80D0786C[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80D07878-80D07898 0020+00 s=0 e=0 z=0  None .data      l_daTkraDai_Method                                           */
-SECTION_DATA void* l_daTkraDai_Method[8] = {
+/* 80D07878-80D07898 0020+00 s=1 e=0 z=0  None .data      l_daTkraDai_Method                                           */
+SECTION_DATA static void* l_daTkraDai_Method[8] = {
+	(void*)daTkraDai_Create__FP10fopAc_ac_c,
+	(void*)daTkraDai_Delete__FP11daTkraDai_c,
+	(void*)daTkraDai_Execute__FP11daTkraDai_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daTkraDai_Draw__FP11daTkraDai_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D07898-80D078C8 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_TakaraDai                                      */
+/* 80D07898-80D078C8 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_TakaraDai                                      */
 SECTION_DATA void* g_profile_Obj_TakaraDai[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00B70000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x0000065C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x028E0000,
-	(void*)NULL,
+	(void*)&l_daTkraDai_Method,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -275,28 +284,28 @@ SECTION_DATA void* g_profile_Obj_TakaraDai[12] = {
 SECTION_DATA static void* __vt__11daTkraDai_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__11daTkraDai_cFv,
+	(void*)Create__16dBgS_MoveBgActorFv,
+	(void*)Execute__11daTkraDai_cFPPA3_A4_f,
+	(void*)Draw__11daTkraDai_cFv,
+	(void*)Delete__11daTkraDai_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
 /* 80D078F0-80D078FC 000C+00 s=2 e=0 z=0  None .data      __vt__15daTkraDai_HIO_c                                      */
 SECTION_DATA static void* __vt__15daTkraDai_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__15daTkraDai_HIO_cFv,
 };
 
 /* 80D078FC-80D07908 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
 /* 80D06D8C-80D06E1C 0090+00 s=1 e=0 z=0  None .text      __ct__15daTkraDai_HIO_cFv                                    */
@@ -310,7 +319,7 @@ asm daTkraDai_HIO_c::daTkraDai_HIO_c() {
 #pragma pop
 
 
-/* 80D06E1C-80D06E64 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80D06E1C-80D06E64 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -364,7 +373,7 @@ SECTION_RODATA static u32 const lit_3828 = 0x43B40000;
 SECTION_DEAD char const* const stringBase_80D07854 = "M_TakaraD";
 #pragma pop
 
-/* 80D06FFC-80D07140 0144+00 s=0 e=0 z=0  None .text      CreateHeap__11daTkraDai_cFv                                  */
+/* 80D06FFC-80D07140 0144+00 s=1 e=0 z=0  None .text      CreateHeap__11daTkraDai_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -386,7 +395,7 @@ asm void daTkraDai_c::create() {
 #pragma pop
 
 
-/* 80D07344-80D073A4 0060+00 s=0 e=0 z=0  None .text      Execute__11daTkraDai_cFPPA3_A4_f                             */
+/* 80D07344-80D073A4 0060+00 s=1 e=0 z=0  None .text      Execute__11daTkraDai_cFPPA3_A4_f                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -429,7 +438,7 @@ asm void daTkraDai_c::init_modeWait() {
 #pragma pop
 
 
-/* 80D07528-80D075A4 007C+00 s=0 e=0 z=0  None .text      modeWait__11daTkraDai_cFv                                    */
+/* 80D07528-80D075A4 007C+00 s=1 e=0 z=0  None .text      modeWait__11daTkraDai_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -440,7 +449,7 @@ asm void daTkraDai_c::modeWait() {
 #pragma pop
 
 
-/* 80D075A4-80D07668 00C4+00 s=0 e=0 z=0  None .text      Draw__11daTkraDai_cFv                                        */
+/* 80D075A4-80D07668 00C4+00 s=1 e=0 z=0  None .text      Draw__11daTkraDai_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -451,7 +460,7 @@ asm void daTkraDai_c::Draw() {
 #pragma pop
 
 
-/* 80D07668-80D076D0 0068+00 s=0 e=0 z=0  None .text      Delete__11daTkraDai_cFv                                      */
+/* 80D07668-80D076D0 0068+00 s=1 e=0 z=0  None .text      Delete__11daTkraDai_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -462,51 +471,51 @@ asm void daTkraDai_c::Delete() {
 #pragma pop
 
 
-/* 80D076D0-80D076FC 002C+00 s=0 e=0 z=0  None .text      daTkraDai_Draw__FP11daTkraDai_c                              */
+/* 80D076D0-80D076FC 002C+00 s=1 e=0 z=0  None .text      daTkraDai_Draw__FP11daTkraDai_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTkraDai_Draw(daTkraDai_c* param_0) {
+asm static void daTkraDai_Draw(daTkraDai_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/daTkraDai_Draw__FP11daTkraDai_c.s"
 }
 #pragma pop
 
 
-/* 80D076FC-80D0771C 0020+00 s=0 e=0 z=0  None .text      daTkraDai_Execute__FP11daTkraDai_c                           */
+/* 80D076FC-80D0771C 0020+00 s=1 e=0 z=0  None .text      daTkraDai_Execute__FP11daTkraDai_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTkraDai_Execute(daTkraDai_c* param_0) {
+asm static void daTkraDai_Execute(daTkraDai_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/daTkraDai_Execute__FP11daTkraDai_c.s"
 }
 #pragma pop
 
 
-/* 80D0771C-80D0773C 0020+00 s=0 e=0 z=0  None .text      daTkraDai_Delete__FP11daTkraDai_c                            */
+/* 80D0771C-80D0773C 0020+00 s=1 e=0 z=0  None .text      daTkraDai_Delete__FP11daTkraDai_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTkraDai_Delete(daTkraDai_c* param_0) {
+asm static void daTkraDai_Delete(daTkraDai_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/daTkraDai_Delete__FP11daTkraDai_c.s"
 }
 #pragma pop
 
 
-/* 80D0773C-80D0775C 0020+00 s=0 e=0 z=0  None .text      daTkraDai_Create__FP10fopAc_ac_c                             */
+/* 80D0773C-80D0775C 0020+00 s=1 e=0 z=0  None .text      daTkraDai_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTkraDai_Create(fopAc_ac_c* param_0) {
+asm static void daTkraDai_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/daTkraDai_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80D0775C-80D077B8 005C+00 s=1 e=0 z=0  None .text      __dt__15daTkraDai_HIO_cFv                                    */
+/* 80D0775C-80D077B8 005C+00 s=2 e=0 z=0  None .text      __dt__15daTkraDai_HIO_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -517,7 +526,7 @@ asm daTkraDai_HIO_c::~daTkraDai_HIO_c() {
 #pragma pop
 
 
-/* 80D077B8-80D077F4 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_takaraDai_cpp                                */
+/* 80D077B8-80D077F4 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_takaraDai_cpp                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -19,6 +19,7 @@ extern void* const data_80739D4C[2];
 // 
 
 
+extern "C" void __sinit_d_a_e_oct_bg_cpp(); // 1
 
 // 
 // Declarations:

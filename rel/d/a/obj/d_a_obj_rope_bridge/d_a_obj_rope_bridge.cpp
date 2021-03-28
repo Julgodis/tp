@@ -93,10 +93,10 @@ struct J3DModel {
 struct _GXColor {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -152,6 +152,9 @@ struct cBgS_PolyInfo {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -213,10 +216,10 @@ struct Z2SoundObjSimple {
 // Forward References:
 // 
 
-void daObjRBridge_create1st(daObjRBridge_c*); // 2
-void daObjRBridge_MoveBGDelete(daObjRBridge_c*); // 2
-void daObjRBridge_MoveBGExecute(daObjRBridge_c*); // 2
-void daObjRBridge_MoveBGDraw(daObjRBridge_c*); // 2
+static void daObjRBridge_create1st(daObjRBridge_c*); // 2
+static void daObjRBridge_MoveBGDelete(daObjRBridge_c*); // 2
+static void daObjRBridge_MoveBGExecute(daObjRBridge_c*); // 2
+static void daObjRBridge_MoveBGDraw(daObjRBridge_c*); // 2
 
 extern "C" void initBaseMtx__14daObjRBridge_cFv(); // 1
 extern "C" void setBaseMtx__14daObjRBridge_cFv(); // 1
@@ -243,20 +246,18 @@ extern "C" void mode_end__14daObjRBridge_cFv(); // 1
 extern "C" void Draw__14daObjRBridge_cFv(); // 1
 extern "C" void checkHimoCulling__14daObjRBridge_cFv(); // 1
 extern "C" void Delete__14daObjRBridge_cFv(); // 1
-extern "C" void daObjRBridge_create1st__FP14daObjRBridge_c(); // 1
+extern "C" static void daObjRBridge_create1st__FP14daObjRBridge_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__8dCcD_CpsFv(); // 1
 extern "C" void __ct__8dCcD_CpsFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void daObjRBridge_MoveBGDelete__FP14daObjRBridge_c(); // 1
-extern "C" void daObjRBridge_MoveBGExecute__FP14daObjRBridge_c(); // 1
-extern "C" void daObjRBridge_MoveBGDraw__FP14daObjRBridge_c(); // 1
+extern "C" static void daObjRBridge_MoveBGDelete__FP14daObjRBridge_c(); // 1
+extern "C" static void daObjRBridge_MoveBGExecute__FP14daObjRBridge_c(); // 1
+extern "C" static void daObjRBridge_MoveBGDraw__FP14daObjRBridge_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" extern u8 const l_brg_height[8];
-extern "C" extern u8 const data_80597E54[16];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* daObjRBridge_METHODS[8];
 extern "C" extern void* g_profile_Obj_RopeBridge[12];
 
 // 
@@ -306,6 +307,9 @@ extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
 extern "C" void request__10dAttLook_cFP10fopAc_ac_cfffsi(); // 1
 extern "C" void dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -358,6 +362,8 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
 extern "C" extern void* __vt__19mDoExt_3DlineMat1_c[5];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__8dCcD_Cps[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -520,7 +526,7 @@ SECTION_RODATA static u8 const lit_4385[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80597E40-80597E54 0014+00 s=1 e=0 z=0  None .rodata    None                                                         */
+/* 80597E40-80597E54 0014+00 s=2 e=0 z=0  None .rodata    None                                                         */
 SECTION_RODATA static u8 const struct_80597E40[20] = {
 	/* 80597E40 000A stringBase_80597E40 @stringBase0 */
 	0x4C, 0x5F, 0x52, 0x6F, 0x70, 0x65, 0x42, 0x5F, 0x53, 0x00,
@@ -584,6 +590,11 @@ asm void daObjRBridge_c::setLinePos() {
 
 
 /* ############################################################################################## */
+/* 80597E54-80597E64 0010+00 s=1 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const data_80597E54[16] = {
+	0x4C, 0x5F, 0x52, 0x6F, 0x70, 0x65, 0x73, 0x74, 0x00, 0x44, 0x5F, 0x4D, 0x4E, 0x35, 0x34, 0x00,
+};
+
 /* 80597E64-80597E70 000C+00 s=3 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -598,12 +609,12 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 
 /* 80597E84-80597E8C 0008+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
 SECTION_DATA static void* l_arcName[2] = {
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)&struct_80597E40)+0x0) /* @stringBase0 */,
+	(void*)(((char*)&struct_80597E40)+0xA) /* None */,
 };
 
 /* 80597E8C-80597E90 0004+00 s=3 e=0 z=0  None .data      l_ropeArcName                                                */
-SECTION_DATA static void* l_ropeArcName = (void*)NULL;
+SECTION_DATA static void* l_ropeArcName = (void*)&data_80597E54;
 
 /* 80597E90-80597EA8 0018+00 s=1 e=0 z=0  None .data      l_rope_offsetL                                               */
 SECTION_DATA static u8 l_rope_offsetL[24] = {
@@ -711,7 +722,7 @@ SECTION_DATA static u8 l_cps_src[76] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
 };
 
-/* 805969FC-80596B88 018C+00 s=0 e=0 z=0  None .text      Create__14daObjRBridge_cFv                                   */
+/* 805969FC-80596B88 018C+00 s=1 e=0 z=0  None .text      Create__14daObjRBridge_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -727,21 +738,21 @@ asm void daObjRBridge_c::Create() {
 SECTION_DATA static void* lit_4218[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)mode_wait__14daObjRBridge_cFv,
 };
 
 /* 80597FF0-80597FFC 000C+00 s=1 e=0 z=0  None .data      @4219                                                        */
 SECTION_DATA static void* lit_4219[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)mode_cut__14daObjRBridge_cFv,
 };
 
 /* 80597FFC-80598008 000C+00 s=1 e=0 z=0  None .data      @4220                                                        */
 SECTION_DATA static void* lit_4220[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)mode_end__14daObjRBridge_cFv,
 };
 
 /* 80598008-8059802C 0024+00 s=1 e=0 z=0  None .data      mode_proc$4217                                               */
@@ -761,30 +772,30 @@ SECTION_DATA static u8 data_80598034[8] = {
 	0x00, 0x08, 0x01, 0x45, 0x00, 0x08, 0x01, 0x47,
 };
 
-/* 8059803C-8059805C 0020+00 s=0 e=0 z=0  None .data      daObjRBridge_METHODS                                         */
-SECTION_DATA void* daObjRBridge_METHODS[8] = {
+/* 8059803C-8059805C 0020+00 s=1 e=0 z=0  None .data      daObjRBridge_METHODS                                         */
+SECTION_DATA static void* daObjRBridge_METHODS[8] = {
+	(void*)daObjRBridge_create1st__FP14daObjRBridge_c,
+	(void*)daObjRBridge_MoveBGDelete__FP14daObjRBridge_c,
+	(void*)daObjRBridge_MoveBGExecute__FP14daObjRBridge_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjRBridge_MoveBGDraw__FP14daObjRBridge_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 8059805C-8059808C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_RopeBridge                                     */
+/* 8059805C-8059808C 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_RopeBridge                                     */
 SECTION_DATA void* g_profile_Obj_RopeBridge[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00850000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000B6C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00100000,
-	(void*)NULL,
+	(void*)&daObjRBridge_METHODS,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -793,28 +804,28 @@ SECTION_DATA void* g_profile_Obj_RopeBridge[12] = {
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80598098-805980A4 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 805980A4-805980B0 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 805980B0-805980BC 000C+00 s=4 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 805980BC-805980D0 0014+00 s=1 e=0 z=0  None .data      __vt__18mDoExt_3DlineMat_c                                   */
@@ -826,7 +837,7 @@ SECTION_DATA static void* __vt__18mDoExt_3DlineMat_c[5] = {
 	(void*)NULL,
 };
 
-/* 80596B88-80596DE8 0260+00 s=0 e=0 z=0  None .text      CreateHeap__14daObjRBridge_cFv                               */
+/* 80596B88-80596DE8 0260+00 s=1 e=0 z=0  None .text      CreateHeap__14daObjRBridge_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -854,7 +865,7 @@ asm void daObjRBridge_c::create1st() {
 #pragma pop
 
 
-/* 80596EBC-80596FA8 00EC+00 s=0 e=0 z=0  None .text      Execute__14daObjRBridge_cFPPA3_A4_f                          */
+/* 80596EBC-80596FA8 00EC+00 s=1 e=0 z=0  None .text      Execute__14daObjRBridge_cFPPA3_A4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -887,7 +898,7 @@ asm void daObjRBridge_c::init_wait() {
 #pragma pop
 
 
-/* 80597170-805973BC 024C+00 s=0 e=0 z=0  None .text      mode_wait__14daObjRBridge_cFv                                */
+/* 80597170-805973BC 024C+00 s=1 e=0 z=0  None .text      mode_wait__14daObjRBridge_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -909,7 +920,7 @@ asm void daObjRBridge_c::init_cut() {
 #pragma pop
 
 
-/* 805973E4-805975E8 0204+00 s=0 e=0 z=0  None .text      mode_cut__14daObjRBridge_cFv                                 */
+/* 805973E4-805975E8 0204+00 s=1 e=0 z=0  None .text      mode_cut__14daObjRBridge_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -931,13 +942,13 @@ asm void daObjRBridge_c::init_end() {
 #pragma pop
 
 
-/* 805975F4-805975F8 0004+00 s=0 e=0 z=0  None .text      mode_end__14daObjRBridge_cFv                                 */
+/* 805975F4-805975F8 0004+00 s=1 e=0 z=0  None .text      mode_end__14daObjRBridge_cFv                                 */
 void daObjRBridge_c::mode_end() {
 	/* empty function */
 }
 
 
-/* 805975F8-805977D0 01D8+00 s=0 e=0 z=0  None .text      Draw__14daObjRBridge_cFv                                     */
+/* 805975F8-805977D0 01D8+00 s=1 e=0 z=0  None .text      Draw__14daObjRBridge_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -959,7 +970,7 @@ asm void daObjRBridge_c::checkHimoCulling() {
 #pragma pop
 
 
-/* 805978BC-80597920 0064+00 s=0 e=0 z=0  None .text      Delete__14daObjRBridge_cFv                                   */
+/* 805978BC-80597920 0064+00 s=1 e=0 z=0  None .text      Delete__14daObjRBridge_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -975,28 +986,28 @@ asm void daObjRBridge_c::Delete() {
 SECTION_DATA static void* __vt__14daObjRBridge_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__14daObjRBridge_cFv,
+	(void*)Create__14daObjRBridge_cFv,
+	(void*)Execute__14daObjRBridge_cFPPA3_A4_f,
+	(void*)Draw__14daObjRBridge_cFv,
+	(void*)Delete__14daObjRBridge_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
-/* 80597920-80597A90 0170+00 s=0 e=0 z=0  None .text      daObjRBridge_create1st__FP14daObjRBridge_c                   */
+/* 80597920-80597A90 0170+00 s=1 e=0 z=0  None .text      daObjRBridge_create1st__FP14daObjRBridge_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjRBridge_create1st(daObjRBridge_c* param_0) {
+asm static void daObjRBridge_create1st(daObjRBridge_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/daObjRBridge_create1st__FP14daObjRBridge_c.s"
 }
 #pragma pop
 
 
-/* 80597A90-80597AD8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80597A90-80597AD8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1007,7 +1018,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80597AD8-80597B20 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80597AD8-80597B20 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1040,7 +1051,7 @@ asm dCcD_Cps::dCcD_Cps() {
 #pragma pop
 
 
-/* 80597C64-80597CC0 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80597C64-80597CC0 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1051,40 +1062,40 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80597CC0-80597CE0 0020+00 s=0 e=0 z=0  None .text      daObjRBridge_MoveBGDelete__FP14daObjRBridge_c                */
+/* 80597CC0-80597CE0 0020+00 s=1 e=0 z=0  None .text      daObjRBridge_MoveBGDelete__FP14daObjRBridge_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjRBridge_MoveBGDelete(daObjRBridge_c* param_0) {
+asm static void daObjRBridge_MoveBGDelete(daObjRBridge_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/daObjRBridge_MoveBGDelete__FP14daObjRBridge_c.s"
 }
 #pragma pop
 
 
-/* 80597CE0-80597D00 0020+00 s=0 e=0 z=0  None .text      daObjRBridge_MoveBGExecute__FP14daObjRBridge_c               */
+/* 80597CE0-80597D00 0020+00 s=1 e=0 z=0  None .text      daObjRBridge_MoveBGExecute__FP14daObjRBridge_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjRBridge_MoveBGExecute(daObjRBridge_c* param_0) {
+asm static void daObjRBridge_MoveBGExecute(daObjRBridge_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/daObjRBridge_MoveBGExecute__FP14daObjRBridge_c.s"
 }
 #pragma pop
 
 
-/* 80597D00-80597D2C 002C+00 s=0 e=0 z=0  None .text      daObjRBridge_MoveBGDraw__FP14daObjRBridge_c                  */
+/* 80597D00-80597D2C 002C+00 s=1 e=0 z=0  None .text      daObjRBridge_MoveBGDraw__FP14daObjRBridge_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjRBridge_MoveBGDraw(daObjRBridge_c* param_0) {
+asm static void daObjRBridge_MoveBGDraw(daObjRBridge_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/daObjRBridge_MoveBGDraw__FP14daObjRBridge_c.s"
 }
 #pragma pop
 
 
-/* 80597D2C-80597D74 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80597D2C-80597D74 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1094,10 +1105,4 @@ asm cCcD_GStts::~cCcD_GStts() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80597E54-80597E64 0010+00 s=0 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA u8 const data_80597E54[16] = {
-	0x4C, 0x5F, 0x52, 0x6F, 0x70, 0x65, 0x73, 0x74, 0x00, 0x44, 0x5F, 0x4D, 0x4E, 0x35, 0x34, 0x00,
-};
 

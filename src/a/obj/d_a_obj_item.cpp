@@ -165,10 +165,10 @@ struct dPa_followEcallBack {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -805,7 +805,7 @@ SECTION_DATA static void* l_daItem_Method[8] = {
 	(void*)NULL,
 };
 
-/* 803B9F74-803B9FA4 0030+00 s=0 e=0 z=0  None .data      g_profile_ITEM                                               */
+/* 803B9F74-803B9FA4 0030+00 s=0 e=0 z=1  None .data      g_profile_ITEM                                               */
 SECTION_DATA void* g_profile_ITEM[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,

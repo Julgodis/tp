@@ -66,7 +66,14 @@ struct daItemBase_c {
 	/* 80037A74 */ void show();
 	/* 80037ACC */ void chkDraw();
 	/* 80144724 */ void DeleteBase(char const*);
+	/* 8014474C */ bool clothCreate();
+	/* 80144754 */ bool __CreateHeap();
+	/* 80144B94 */ void DrawBase();
+	/* 80144C30 */ void RotateYBase();
+	/* 80144CC4 */ void settingBeforeDraw();
+	/* 80144D18 */ void setTevStr();
 	/* 80144D70 */ void setShadow();
+	/* 80144EDC */ void animEntry();
 	/* 8014503C */ void animPlay(f32, f32, f32, f32, f32, f32);
 };
 
@@ -95,11 +102,11 @@ struct dCcD_GObjInf {
 // Forward References:
 // 
 
-void daShopItem_Create(void*); // 2
-void daShopItem_Delete(void*); // 2
-void daShopItem_Draw(void*); // 2
-void daShopItem_Execute(void*); // 2
-bool daShopItem_IsDelete(void*); // 2
+static void daShopItem_Create(void*); // 2
+static void daShopItem_Delete(void*); // 2
+static void daShopItem_Draw(void*); // 2
+static void daShopItem_Execute(void*); // 2
+static bool daShopItem_IsDelete(void*); // 2
 
 extern "C" void getShopArcname__12daShopItem_cFv(); // 1
 extern "C" void getHeapSize__12daShopItem_cFv(); // 1
@@ -115,18 +122,17 @@ extern "C" void getBtpFrm__12daShopItem_cFv(); // 1
 extern "C" void getShadowSize__12daShopItem_cFv(); // 1
 extern "C" void getCollisionH__12daShopItem_cFv(); // 1
 extern "C" void getCollisionR__12daShopItem_cFv(); // 1
-extern "C" void daShopItem_Create__FPv(); // 1
+extern "C" static void daShopItem_Create__FPv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" void daShopItem_Delete__FPv(); // 1
-extern "C" void daShopItem_Draw__FPv(); // 1
-extern "C" void daShopItem_Execute__FPv(); // 1
-extern "C" bool daShopItem_IsDelete__FPv(); // 1
-extern "C" void func_8059F420(); // 1
-extern "C" void func_8059F428(); // 1
+extern "C" static void daShopItem_Delete__FPv(); // 1
+extern "C" static void daShopItem_Draw__FPv(); // 1
+extern "C" static void daShopItem_Execute__FPv(); // 1
+extern "C" static bool daShopItem_IsDelete__FPv(); // 1
+extern "C" static void func_8059F420(); // 1
+extern "C" static void func_8059F428(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* daShopItemMethodTable[8];
 extern "C" extern void* g_profile_ShopItem[12];
 
 // 
@@ -161,7 +167,14 @@ extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
 extern "C" void __ct__10dCcD_GSttsFv(); // 1
 extern "C" void __ct__12dCcD_GObjInfFv(); // 1
 extern "C" void DeleteBase__12daItemBase_cFPCc(); // 1
+extern "C" bool clothCreate__12daItemBase_cFv(); // 1
+extern "C" bool __CreateHeap__12daItemBase_cFv(); // 1
+extern "C" void DrawBase__12daItemBase_cFv(); // 1
+extern "C" void RotateYBase__12daItemBase_cFv(); // 1
+extern "C" void settingBeforeDraw__12daItemBase_cFv(); // 1
+extern "C" void setTevStr__12daItemBase_cFv(); // 1
 extern "C" void setShadow__12daItemBase_cFv(); // 1
+extern "C" void animEntry__12daItemBase_cFv(); // 1
 extern "C" void animPlay__12daItemBase_cFffffff(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void PSMTXCopy(); // 1
@@ -170,6 +183,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
 extern "C" extern void* const mData__12daShopItem_c[276];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12daItemBase_c[17 + 1 /* padding */];
@@ -298,13 +313,13 @@ asm void daShopItem_c::_draw() {
 #pragma pop
 
 
-/* 8059EF9C-8059EFA0 0004+00 s=0 e=0 z=0  None .text      setListStart__12daShopItem_cFv                               */
+/* 8059EF9C-8059EFA0 0004+00 s=1 e=0 z=0  None .text      setListStart__12daShopItem_cFv                               */
 void daShopItem_c::setListStart() {
 	/* empty function */
 }
 
 
-/* 8059EFA0-8059F024 0084+00 s=0 e=0 z=0  None .text      setShadow__12daShopItem_cFv                                  */
+/* 8059EFA0-8059F024 0084+00 s=1 e=0 z=0  None .text      setShadow__12daShopItem_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -315,7 +330,7 @@ asm void daShopItem_c::setShadow() {
 #pragma pop
 
 
-/* 8059F024-8059F044 0020+00 s=0 e=0 z=0  None .text      chkFlag__12daShopItem_cFi                                    */
+/* 8059F024-8059F044 0020+00 s=1 e=0 z=0  None .text      chkFlag__12daShopItem_cFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -326,7 +341,7 @@ asm void daShopItem_c::chkFlag(int param_0) {
 #pragma pop
 
 
-/* 8059F044-8059F064 0020+00 s=0 e=0 z=0  None .text      getTevFrm__12daShopItem_cFv                                  */
+/* 8059F044-8059F064 0020+00 s=1 e=0 z=0  None .text      getTevFrm__12daShopItem_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -337,7 +352,7 @@ asm void daShopItem_c::getTevFrm() {
 #pragma pop
 
 
-/* 8059F064-8059F084 0020+00 s=0 e=0 z=0  None .text      getBtpFrm__12daShopItem_cFv                                  */
+/* 8059F064-8059F084 0020+00 s=1 e=0 z=0  None .text      getBtpFrm__12daShopItem_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -348,7 +363,7 @@ asm void daShopItem_c::getBtpFrm() {
 #pragma pop
 
 
-/* 8059F084-8059F0A0 001C+00 s=0 e=0 z=0  None .text      getShadowSize__12daShopItem_cFv                              */
+/* 8059F084-8059F0A0 001C+00 s=1 e=0 z=0  None .text      getShadowSize__12daShopItem_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -359,7 +374,7 @@ asm void daShopItem_c::getShadowSize() {
 #pragma pop
 
 
-/* 8059F0A0-8059F0BC 001C+00 s=0 e=0 z=0  None .text      getCollisionH__12daShopItem_cFv                              */
+/* 8059F0A0-8059F0BC 001C+00 s=1 e=0 z=0  None .text      getCollisionH__12daShopItem_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -370,7 +385,7 @@ asm void daShopItem_c::getCollisionH() {
 #pragma pop
 
 
-/* 8059F0BC-8059F0D8 001C+00 s=0 e=0 z=0  None .text      getCollisionR__12daShopItem_cFv                              */
+/* 8059F0BC-8059F0D8 001C+00 s=1 e=0 z=0  None .text      getCollisionR__12daShopItem_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -382,30 +397,30 @@ asm void daShopItem_c::getCollisionR() {
 
 
 /* ############################################################################################## */
-/* 8059F49C-8059F4BC 0020+00 s=0 e=0 z=0  None .data      daShopItemMethodTable                                        */
-SECTION_DATA void* daShopItemMethodTable[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 8059F49C-8059F4BC 0020+00 s=1 e=0 z=0  None .data      daShopItemMethodTable                                        */
+SECTION_DATA static void* daShopItemMethodTable[8] = {
+	(void*)daShopItem_Create__FPv,
+	(void*)daShopItem_Delete__FPv,
+	(void*)daShopItem_Execute__FPv,
+	(void*)daShopItem_IsDelete__FPv,
+	(void*)daShopItem_Draw__FPv,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 8059F4BC-8059F4EC 0030+00 s=0 e=0 z=0  None .data      g_profile_ShopItem                                           */
+/* 8059F4BC-8059F4EC 0030+00 s=0 e=0 z=1  None .data      g_profile_ShopItem                                           */
 SECTION_DATA void* g_profile_ShopItem[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x021E0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000968,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00F20000,
-	(void*)NULL,
+	(void*)&daShopItemMethodTable,
 	(void*)0x00060100,
 	(void*)0x000E0000,
 };
@@ -414,62 +429,62 @@ SECTION_DATA void* g_profile_ShopItem[12] = {
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 8059F4F8-8059F504 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 8059F504-8059F528 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_8059F428,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_8059F420,
 };
 
 /* 8059F528-8059F56C 0044+00 s=1 e=0 z=0  None .data      __vt__12daShopItem_c                                         */
 SECTION_DATA static void* __vt__12daShopItem_c[17] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)DrawBase__12daItemBase_cFv,
+	(void*)setListStart__12daShopItem_cFv,
+	(void*)settingBeforeDraw__12daItemBase_cFv,
+	(void*)setTevStr__12daItemBase_cFv,
+	(void*)setShadow__12daShopItem_cFv,
+	(void*)animEntry__12daItemBase_cFv,
+	(void*)RotateYBase__12daItemBase_cFv,
+	(void*)clothCreate__12daItemBase_cFv,
+	(void*)__CreateHeap__12daItemBase_cFv,
+	(void*)chkFlag__12daShopItem_cFi,
+	(void*)getTevFrm__12daShopItem_cFv,
+	(void*)getBtpFrm__12daShopItem_cFv,
+	(void*)getShadowSize__12daShopItem_cFv,
+	(void*)getCollisionH__12daShopItem_cFv,
+	(void*)getCollisionR__12daShopItem_cFv,
 };
 
-/* 8059F0D8-8059F294 01BC+00 s=0 e=0 z=0  None .text      daShopItem_Create__FPv                                       */
+/* 8059F0D8-8059F294 01BC+00 s=1 e=0 z=0  None .text      daShopItem_Create__FPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daShopItem_Create(void* param_0) {
+asm static void daShopItem_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/daShopItem_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 8059F294-8059F2DC 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 8059F294-8059F2DC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -480,7 +495,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 8059F2DC-8059F324 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 8059F2DC-8059F324 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -491,7 +506,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 8059F324-8059F394 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 8059F324-8059F394 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -502,61 +517,61 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 8059F394-8059F3D0 003C+00 s=0 e=0 z=0  None .text      daShopItem_Delete__FPv                                       */
+/* 8059F394-8059F3D0 003C+00 s=1 e=0 z=0  None .text      daShopItem_Delete__FPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daShopItem_Delete(void* param_0) {
+asm static void daShopItem_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/daShopItem_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 8059F3D0-8059F3F4 0024+00 s=0 e=0 z=0  None .text      daShopItem_Draw__FPv                                         */
+/* 8059F3D0-8059F3F4 0024+00 s=1 e=0 z=0  None .text      daShopItem_Draw__FPv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daShopItem_Draw(void* param_0) {
+asm static void daShopItem_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/daShopItem_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 8059F3F4-8059F418 0024+00 s=0 e=0 z=0  None .text      daShopItem_Execute__FPv                                      */
+/* 8059F3F4-8059F418 0024+00 s=1 e=0 z=0  None .text      daShopItem_Execute__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daShopItem_Execute(void* param_0) {
+asm static void daShopItem_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/daShopItem_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 8059F418-8059F420 0008+00 s=0 e=0 z=0  None .text      daShopItem_IsDelete__FPv                                     */
-bool daShopItem_IsDelete(void* param_0) {
+/* 8059F418-8059F420 0008+00 s=1 e=0 z=0  None .text      daShopItem_IsDelete__FPv                                     */
+static bool daShopItem_IsDelete(void* param_0) {
 	return true;
 }
 
 
-/* 8059F420-8059F428 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 8059F420-8059F428 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8059F420() {
+extern "C" asm static void func_8059F420() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/func_8059F420.s"
 }
 #pragma pop
 
 
-/* 8059F428-8059F430 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 8059F428-8059F430 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8059F428() {
+extern "C" asm static void func_8059F428() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/func_8059F428.s"
 }

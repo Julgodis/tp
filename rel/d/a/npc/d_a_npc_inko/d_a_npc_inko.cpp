@@ -25,19 +25,19 @@ struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct Vec {
-};
-
-struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorf {
@@ -97,24 +97,23 @@ struct Z2SoundObjSimple {
 // 
 
 static void nodeCallBack(J3DJoint*, int); // 2
-void daNpc_Inko_Draw(npc_inko_class*); // 2
+static void daNpc_Inko_Draw(npc_inko_class*); // 2
 static void anm_init(npc_inko_class*, int, f32, u8, f32); // 2
 static void daNpc_Inko_Execute(npc_inko_class*); // 2
-bool daNpc_Inko_IsDelete(npc_inko_class*); // 2
-void daNpc_Inko_Delete(npc_inko_class*); // 2
+static bool daNpc_Inko_IsDelete(npc_inko_class*); // 2
+static void daNpc_Inko_Delete(npc_inko_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daNpc_Inko_Create(fopAc_ac_c*); // 2
+static void daNpc_Inko_Create(fopAc_ac_c*); // 2
 
 extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" void daNpc_Inko_Draw__FP14npc_inko_class(); // 1
+extern "C" static void daNpc_Inko_Draw__FP14npc_inko_class(); // 1
 extern "C" static void anm_init__FP14npc_inko_classifUcf(); // 1
 extern "C" static void daNpc_Inko_Execute__FP14npc_inko_class(); // 1
-extern "C" bool daNpc_Inko_IsDelete__FP14npc_inko_class(); // 1
-extern "C" void daNpc_Inko_Delete__FP14npc_inko_class(); // 1
+extern "C" static bool daNpc_Inko_IsDelete__FP14npc_inko_class(); // 1
+extern "C" static void daNpc_Inko_Delete__FP14npc_inko_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daNpc_Inko_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daNpc_Inko_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daNpc_Inko_Method[8];
 extern "C" extern void* g_profile_NPC_INKO[12];
 
 // 
@@ -187,6 +186,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
@@ -213,11 +214,11 @@ asm static void nodeCallBack(J3DJoint* param_0, int param_1) {
 #pragma pop
 
 
-/* 80A0CBB0-80A0CC18 0068+00 s=0 e=0 z=0  None .text      daNpc_Inko_Draw__FP14npc_inko_class                          */
+/* 80A0CBB0-80A0CC18 0068+00 s=1 e=0 z=0  None .text      daNpc_Inko_Draw__FP14npc_inko_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpc_Inko_Draw(npc_inko_class* param_0) {
+asm static void daNpc_Inko_Draw(npc_inko_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_Draw__FP14npc_inko_class.s"
 }
@@ -391,7 +392,7 @@ SECTION_DATA static u8 data_80A0E0E8[16] = {
 	0x00, 0x00, 0x03, 0x5B, 0x00, 0x00, 0x03, 0x5C, 0x00, 0x00, 0x03, 0x5D, 0x00, 0x00, 0x03, 0x5E,
 };
 
-/* 80A0CCC8-80A0DD70 10A8+00 s=1 e=0 z=0  None .text      daNpc_Inko_Execute__FP14npc_inko_class                       */
+/* 80A0CCC8-80A0DD70 10A8+00 s=2 e=0 z=0  None .text      daNpc_Inko_Execute__FP14npc_inko_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -402,17 +403,17 @@ asm static void daNpc_Inko_Execute(npc_inko_class* param_0) {
 #pragma pop
 
 
-/* 80A0DD70-80A0DD78 0008+00 s=0 e=0 z=0  None .text      daNpc_Inko_IsDelete__FP14npc_inko_class                      */
-bool daNpc_Inko_IsDelete(npc_inko_class* param_0) {
+/* 80A0DD70-80A0DD78 0008+00 s=1 e=0 z=0  None .text      daNpc_Inko_IsDelete__FP14npc_inko_class                      */
+static bool daNpc_Inko_IsDelete(npc_inko_class* param_0) {
 	return true;
 }
 
 
-/* 80A0DD78-80A0DDC8 0050+00 s=0 e=0 z=0  None .text      daNpc_Inko_Delete__FP14npc_inko_class                        */
+/* 80A0DD78-80A0DDC8 0050+00 s=1 e=0 z=0  None .text      daNpc_Inko_Delete__FP14npc_inko_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpc_Inko_Delete(npc_inko_class* param_0) {
+asm static void daNpc_Inko_Delete(npc_inko_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_Delete__FP14npc_inko_class.s"
 }
@@ -430,11 +431,11 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80A0DF08-80A0E00C 0104+00 s=0 e=0 z=0  None .text      daNpc_Inko_Create__FP10fopAc_ac_c                            */
+/* 80A0DF08-80A0E00C 0104+00 s=1 e=0 z=0  None .text      daNpc_Inko_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpc_Inko_Create(fopAc_ac_c* param_0) {
+asm static void daNpc_Inko_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_Create__FP10fopAc_ac_c.s"
 }
@@ -442,30 +443,30 @@ asm void daNpc_Inko_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80A0E0F8-80A0E118 0020+00 s=0 e=0 z=0  None .data      l_daNpc_Inko_Method                                          */
-SECTION_DATA void* l_daNpc_Inko_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80A0E0F8-80A0E118 0020+00 s=1 e=0 z=0  None .data      l_daNpc_Inko_Method                                          */
+SECTION_DATA static void* l_daNpc_Inko_Method[8] = {
+	(void*)daNpc_Inko_Create__FP10fopAc_ac_c,
+	(void*)daNpc_Inko_Delete__FP14npc_inko_class,
+	(void*)daNpc_Inko_Execute__FP14npc_inko_class,
+	(void*)daNpc_Inko_IsDelete__FP14npc_inko_class,
+	(void*)daNpc_Inko_Draw__FP14npc_inko_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80A0E118-80A0E148 0030+00 s=0 e=0 z=0  None .data      g_profile_NPC_INKO                                           */
+/* 80A0E118-80A0E148 0030+00 s=0 e=0 z=1  None .data      g_profile_NPC_INKO                                           */
 SECTION_DATA void* g_profile_NPC_INKO[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0008FFFD,
 	(void*)0x02FF0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000648,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02C00000,
-	(void*)NULL,
+	(void*)&l_daNpc_Inko_Method,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };

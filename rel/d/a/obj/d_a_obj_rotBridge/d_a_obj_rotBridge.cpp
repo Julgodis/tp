@@ -20,12 +20,12 @@ struct mDoHIO_entry_c {
 	/* 80CBE9DC */ ~mDoHIO_entry_c();
 };
 
+struct fopAc_ac_c {
+};
+
 struct dBgW {
 	/* 8007B970 */ dBgW();
 	/* 8007B9C0 */ void Move();
-};
-
-struct fopAc_ac_c {
 };
 
 struct daRotBridge_c {
@@ -52,10 +52,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -108,6 +108,10 @@ struct cBgS_PolyInfo {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 80078690 */ bool Create();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -144,10 +148,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daRotBridge_Draw(daRotBridge_c*); // 2
-void daRotBridge_Execute(daRotBridge_c*); // 2
-void daRotBridge_Delete(daRotBridge_c*); // 2
-void daRotBridge_Create(fopAc_ac_c*); // 2
+static void daRotBridge_Draw(daRotBridge_c*); // 2
+static void daRotBridge_Execute(daRotBridge_c*); // 2
+static void daRotBridge_Delete(daRotBridge_c*); // 2
+static void daRotBridge_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__17daRotBridge_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -161,14 +165,12 @@ extern "C" void playerAreaCheck__13daRotBridge_cFv(); // 1
 extern "C" void moveBridge__13daRotBridge_cFv(); // 1
 extern "C" void Draw__13daRotBridge_cFv(); // 1
 extern "C" void Delete__13daRotBridge_cFv(); // 1
-extern "C" void daRotBridge_Draw__FP13daRotBridge_c(); // 1
-extern "C" void daRotBridge_Execute__FP13daRotBridge_c(); // 1
-extern "C" void daRotBridge_Delete__FP13daRotBridge_c(); // 1
-extern "C" void daRotBridge_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daRotBridge_Draw__FP13daRotBridge_c(); // 1
+extern "C" static void daRotBridge_Execute__FP13daRotBridge_c(); // 1
+extern "C" static void daRotBridge_Delete__FP13daRotBridge_c(); // 1
+extern "C" static void daRotBridge_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__17daRotBridge_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_rotBridge_cpp(); // 1
-extern "C" extern u8 const struct_80CBF6C4[20];
-extern "C" extern void* l_daRotBridge_Method[8];
 extern "C" extern void* g_profile_Obj_RotBridge[12];
 
 // 
@@ -205,6 +207,10 @@ extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -226,6 +232,8 @@ extern "C" void PSMTXTrans(); // 1
 extern "C" void PSVECSquareMag(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -242,110 +250,6 @@ extern "C" void __register_global_object(); // 1
 /* 80CBF668-80CBF66C 0004+00 s=4 e=0 z=0  None .rodata    @3626                                                        */
 SECTION_RODATA static u32 const lit_3626 = 0x44BB8000;
 
-/* 80CBF6D8-80CBF6E4 000C+00 s=3 e=0 z=0  None .data      l_resNameIdx                                                 */
-SECTION_DATA static void* l_resNameIdx[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CBF6E4-80CBF704 0020+00 s=0 e=0 z=0  None .data      l_daRotBridge_Method                                         */
-SECTION_DATA void* l_daRotBridge_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CBF704-80CBF734 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_RotBridge                                      */
-SECTION_DATA void* g_profile_Obj_RotBridge[12] = {
-	(void*)0xFFFFFFFD,
-	(void*)0x0003FFFD,
-	(void*)0x00360000,
-	(void*)NULL,
-	(void*)0x00000610,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)0x01EA0000,
-	(void*)NULL,
-	(void*)0x00040000,
-	(void*)0x000E0000,
-};
-
-/* 80CBF734-80CBF740 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
-SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CBF740-80CBF768 0028+00 s=1 e=0 z=0  None .data      __vt__13daRotBridge_c                                        */
-SECTION_DATA static void* __vt__13daRotBridge_c[10] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CBF768-80CBF774 000C+00 s=2 e=0 z=0  None .data      __vt__17daRotBridge_HIO_c                                    */
-SECTION_DATA static void* __vt__17daRotBridge_HIO_c[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CBF774-80CBF780 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
-SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CBE98C-80CBE9DC 0050+00 s=1 e=0 z=0  None .text      __ct__17daRotBridge_HIO_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daRotBridge_HIO_c::daRotBridge_HIO_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/__ct__17daRotBridge_HIO_cFv.s"
-}
-#pragma pop
-
-
-/* 80CBE9DC-80CBEA24 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm mDoHIO_entry_c::~mDoHIO_entry_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/__dt__14mDoHIO_entry_cFv.s"
-}
-#pragma pop
-
-
-/* 80CBEA24-80CBEB38 0114+00 s=2 e=0 z=0  None .text      setBaseMtx__13daRotBridge_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daRotBridge_c::setBaseMtx() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/setBaseMtx__13daRotBridge_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
 /* 80CBF66C-80CBF678 000C+00 s=1 e=0 z=0  None .rodata    l_bmdIdx                                                     */
 SECTION_RODATA static u8 const l_bmdIdx[12] = {
 	0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x08,
@@ -368,7 +272,149 @@ SECTION_RODATA static u32 const lit_3694[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 80CBEB38-80CBECBC 0184+00 s=0 e=0 z=0  None .text      CreateHeap__13daRotBridge_cFv                                */
+/* 80CBF698-80CBF6A0 0008+00 s=2 e=0 z=0  None .rodata    @3776                                                        */
+SECTION_RODATA static u8 const lit_3776[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
+/* 80CBF6A0-80CBF6A4 0004+00 s=2 e=0 z=0  None .rodata    @3833                                                        */
+SECTION_RODATA static u32 const lit_3833 = 0xBF800000;
+
+/* 80CBF6A4-80CBF6A8 0004+00 s=2 e=0 z=0  None .rodata    @3878                                                        */
+SECTION_RODATA static u8 const lit_3878[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80CBF6A8-80CBF6B0 0008+00 s=1 e=0 z=0  None .rodata    @3879                                                        */
+SECTION_RODATA static u8 const lit_3879[8] = {
+	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80CBF6B0-80CBF6B8 0008+00 s=1 e=0 z=0  None .rodata    @3880                                                        */
+SECTION_RODATA static u8 const lit_3880[8] = {
+	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80CBF6B8-80CBF6C0 0008+00 s=1 e=0 z=0  None .rodata    @3881                                                        */
+SECTION_RODATA static u8 const lit_3881[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80CBF6C0-80CBF6C4 0004+00 s=1 e=0 z=0  None .rodata    @3939                                                        */
+SECTION_RODATA static u32 const lit_3939 = 0x41200000;
+
+/* 80CBF6C4-80CBF6D8 0014+00 s=1 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const struct_80CBF6C4[20] = {
+	/* 80CBF6C4 000A stringBase_80CBF6C4 @stringBase0 */
+	0x50, 0x5F, 0x4D, 0x62, 0x72, 0x69, 0x64, 0x67, 0x65, 0x00,
+	/* 80CBF6CE 000A data_80CBF6CE None */
+	0x50, 0x5F, 0x4D, 0x62, 0x72, 0x69, 0x64, 0x39, 0x00, 0x00,
+};
+
+/* 80CBF6D8-80CBF6E4 000C+00 s=3 e=0 z=0  None .data      l_resNameIdx                                                 */
+SECTION_DATA static void* l_resNameIdx[3] = {
+	(void*)(((char*)&struct_80CBF6C4)+0x0) /* @stringBase0 */,
+	(void*)(((char*)&struct_80CBF6C4)+0x0) /* @stringBase0 */,
+	(void*)(((char*)&struct_80CBF6C4)+0xA) /* None */,
+};
+
+/* 80CBF6E4-80CBF704 0020+00 s=1 e=0 z=0  None .data      l_daRotBridge_Method                                         */
+SECTION_DATA static void* l_daRotBridge_Method[8] = {
+	(void*)daRotBridge_Create__FP10fopAc_ac_c,
+	(void*)daRotBridge_Delete__FP13daRotBridge_c,
+	(void*)daRotBridge_Execute__FP13daRotBridge_c,
+	(void*)NULL,
+	(void*)daRotBridge_Draw__FP13daRotBridge_c,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80CBF704-80CBF734 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_RotBridge                                      */
+SECTION_DATA void* g_profile_Obj_RotBridge[12] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00360000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x00000610,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopAc_Method,
+	(void*)0x01EA0000,
+	(void*)&l_daRotBridge_Method,
+	(void*)0x00040000,
+	(void*)0x000E0000,
+};
+
+/* 80CBF734-80CBF740 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
+SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
+};
+
+/* 80CBF740-80CBF768 0028+00 s=1 e=0 z=0  None .data      __vt__13daRotBridge_c                                        */
+SECTION_DATA static void* __vt__13daRotBridge_c[10] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)CreateHeap__13daRotBridge_cFv,
+	(void*)Create__16dBgS_MoveBgActorFv,
+	(void*)Execute__13daRotBridge_cFPPA3_A4_f,
+	(void*)Draw__13daRotBridge_cFv,
+	(void*)Delete__13daRotBridge_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
+};
+
+/* 80CBF768-80CBF774 000C+00 s=2 e=0 z=0  None .data      __vt__17daRotBridge_HIO_c                                    */
+SECTION_DATA static void* __vt__17daRotBridge_HIO_c[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__17daRotBridge_HIO_cFv,
+};
+
+/* 80CBF774-80CBF780 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
+SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
+};
+
+/* 80CBE98C-80CBE9DC 0050+00 s=1 e=0 z=0  None .text      __ct__17daRotBridge_HIO_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm daRotBridge_HIO_c::daRotBridge_HIO_c() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/__ct__17daRotBridge_HIO_cFv.s"
+}
+#pragma pop
+
+
+/* 80CBE9DC-80CBEA24 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/__dt__14mDoHIO_entry_cFv.s"
+}
+#pragma pop
+
+
+/* 80CBEA24-80CBEB38 0114+00 s=2 e=0 z=0  None .text      setBaseMtx__13daRotBridge_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daRotBridge_c::setBaseMtx() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/setBaseMtx__13daRotBridge_cFv.s"
+}
+#pragma pop
+
+
+/* 80CBEB38-80CBECBC 0184+00 s=1 e=0 z=0  None .text      CreateHeap__13daRotBridge_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -378,12 +424,6 @@ asm void daRotBridge_c::CreateHeap() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80CBF698-80CBF6A0 0008+00 s=2 e=0 z=0  None .rodata    @3776                                                        */
-SECTION_RODATA static u8 const lit_3776[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
 
 /* 80CBECBC-80CBEED4 0218+00 s=1 e=0 z=0  None .text      create__13daRotBridge_cFv                                    */
 #pragma push
@@ -396,7 +436,7 @@ asm void daRotBridge_c::create() {
 #pragma pop
 
 
-/* 80CBEED4-80CBEF1C 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80CBEED4-80CBEF1C 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -418,11 +458,7 @@ asm void daRotBridge_c::rideCallBack(dBgW* param_0, fopAc_ac_c* param_1, fopAc_a
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80CBF6A0-80CBF6A4 0004+00 s=2 e=0 z=0  None .rodata    @3833                                                        */
-SECTION_RODATA static u32 const lit_3833 = 0xBF800000;
-
-/* 80CBEF34-80CBF050 011C+00 s=0 e=0 z=0  None .text      Execute__13daRotBridge_cFPPA3_A4_f                           */
+/* 80CBEF34-80CBF050 011C+00 s=1 e=0 z=0  None .text      Execute__13daRotBridge_cFPPA3_A4_f                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -434,26 +470,6 @@ asm void daRotBridge_c::Execute(f32 (** param_0)[3][4]) {
 
 
 /* ############################################################################################## */
-/* 80CBF6A4-80CBF6A8 0004+00 s=2 e=0 z=0  None .rodata    @3878                                                        */
-SECTION_RODATA static u8 const lit_3878[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80CBF6A8-80CBF6B0 0008+00 s=1 e=0 z=0  None .rodata    @3879                                                        */
-SECTION_RODATA static u8 const lit_3879[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80CBF6B0-80CBF6B8 0008+00 s=1 e=0 z=0  None .rodata    @3880                                                        */
-SECTION_RODATA static u8 const lit_3880[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80CBF6B8-80CBF6C0 0008+00 s=1 e=0 z=0  None .rodata    @3881                                                        */
-SECTION_RODATA static u8 const lit_3881[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
 /* 80CBF788-80CBF794 000C+00 s=1 e=0 z=0  None .bss       @3620                                                        */
 static u8 lit_3620[12];
 
@@ -471,10 +487,6 @@ asm void daRotBridge_c::playerAreaCheck() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80CBF6C0-80CBF6C4 0004+00 s=1 e=0 z=0  None .rodata    @3939                                                        */
-SECTION_RODATA static u32 const lit_3939 = 0x41200000;
-
 /* 80CBF1EC-80CBF404 0218+00 s=1 e=0 z=0  None .text      moveBridge__13daRotBridge_cFv                                */
 #pragma push
 #pragma optimization_level 0
@@ -486,7 +498,7 @@ asm void daRotBridge_c::moveBridge() {
 #pragma pop
 
 
-/* 80CBF404-80CBF4BC 00B8+00 s=0 e=0 z=0  None .text      Draw__13daRotBridge_cFv                                      */
+/* 80CBF404-80CBF4BC 00B8+00 s=1 e=0 z=0  None .text      Draw__13daRotBridge_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -497,7 +509,7 @@ asm void daRotBridge_c::Draw() {
 #pragma pop
 
 
-/* 80CBF4BC-80CBF530 0074+00 s=0 e=0 z=0  None .text      Delete__13daRotBridge_cFv                                    */
+/* 80CBF4BC-80CBF530 0074+00 s=1 e=0 z=0  None .text      Delete__13daRotBridge_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -508,51 +520,51 @@ asm void daRotBridge_c::Delete() {
 #pragma pop
 
 
-/* 80CBF530-80CBF55C 002C+00 s=0 e=0 z=0  None .text      daRotBridge_Draw__FP13daRotBridge_c                          */
+/* 80CBF530-80CBF55C 002C+00 s=1 e=0 z=0  None .text      daRotBridge_Draw__FP13daRotBridge_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daRotBridge_Draw(daRotBridge_c* param_0) {
+asm static void daRotBridge_Draw(daRotBridge_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/daRotBridge_Draw__FP13daRotBridge_c.s"
 }
 #pragma pop
 
 
-/* 80CBF55C-80CBF57C 0020+00 s=0 e=0 z=0  None .text      daRotBridge_Execute__FP13daRotBridge_c                       */
+/* 80CBF55C-80CBF57C 0020+00 s=1 e=0 z=0  None .text      daRotBridge_Execute__FP13daRotBridge_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daRotBridge_Execute(daRotBridge_c* param_0) {
+asm static void daRotBridge_Execute(daRotBridge_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/daRotBridge_Execute__FP13daRotBridge_c.s"
 }
 #pragma pop
 
 
-/* 80CBF57C-80CBF59C 0020+00 s=0 e=0 z=0  None .text      daRotBridge_Delete__FP13daRotBridge_c                        */
+/* 80CBF57C-80CBF59C 0020+00 s=1 e=0 z=0  None .text      daRotBridge_Delete__FP13daRotBridge_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daRotBridge_Delete(daRotBridge_c* param_0) {
+asm static void daRotBridge_Delete(daRotBridge_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/daRotBridge_Delete__FP13daRotBridge_c.s"
 }
 #pragma pop
 
 
-/* 80CBF59C-80CBF5BC 0020+00 s=0 e=0 z=0  None .text      daRotBridge_Create__FP10fopAc_ac_c                           */
+/* 80CBF59C-80CBF5BC 0020+00 s=1 e=0 z=0  None .text      daRotBridge_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daRotBridge_Create(fopAc_ac_c* param_0) {
+asm static void daRotBridge_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/daRotBridge_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80CBF5BC-80CBF618 005C+00 s=1 e=0 z=0  None .text      __dt__17daRotBridge_HIO_cFv                                  */
+/* 80CBF5BC-80CBF618 005C+00 s=2 e=0 z=0  None .text      __dt__17daRotBridge_HIO_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -563,7 +575,7 @@ asm daRotBridge_HIO_c::~daRotBridge_HIO_c() {
 #pragma pop
 
 
-/* 80CBF618-80CBF654 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_rotBridge_cpp                                */
+/* 80CBF618-80CBF654 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_rotBridge_cpp                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -573,13 +585,4 @@ extern "C" asm void __sinit_d_a_obj_rotBridge_cpp() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80CBF6C4-80CBF6D8 0014+00 s=0 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA u8 const struct_80CBF6C4[20] = {
-	/* 80CBF6C4 000A stringBase_80CBF6C4 @stringBase0 */
-	0x50, 0x5F, 0x4D, 0x62, 0x72, 0x69, 0x64, 0x67, 0x65, 0x00,
-	/* 80CBF6CE 000A data_80CBF6CE None */
-	0x50, 0x5F, 0x4D, 0x62, 0x72, 0x69, 0x64, 0x39, 0x00, 0x00,
-};
 

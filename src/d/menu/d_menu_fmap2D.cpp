@@ -87,6 +87,9 @@ struct dMenu_Fmap2DBack_c {
 	/* 801D5BB8 */ void setArrowPosAxis(f32, f32);
 };
 
+struct JKRArchive {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -98,9 +101,6 @@ struct JGeometry {
 
 struct J2DGrafContext {
 	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
-};
-
-struct JKRArchive {
 };
 
 struct J2DScreen {
@@ -220,10 +220,10 @@ struct CPaneMgrAlphaMorf {
 	/* 80255E28 */ void setAlphaMorfRate(f32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

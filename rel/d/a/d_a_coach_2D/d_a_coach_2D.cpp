@@ -76,10 +76,10 @@ struct dMsgScrnLight_c {
 	/* 80245F90 */ void draw(f32*, f32, f32, f32, f32, f32, f32, JUtility::TColor, JUtility::TColor);
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
 struct J2DScreen {
@@ -117,10 +117,10 @@ struct J2DAnmLoaderDataBase {
 // 
 
 static void daCoach2D_createHeap(fopAc_ac_c*); // 2
-void daCoach2D_create(daCoach2D_c*); // 2
-void daCoach2D_destroy(daCoach2D_c*); // 2
-void daCoach2D_execute(daCoach2D_c*); // 2
-void daCoach2D_draw(daCoach2D_c*); // 2
+static void daCoach2D_create(daCoach2D_c*); // 2
+static void daCoach2D_destroy(daCoach2D_c*); // 2
+static void daCoach2D_execute(daCoach2D_c*); // 2
+static void daCoach2D_draw(daCoach2D_c*); // 2
 
 extern "C" void draw__Q211daCoach2D_c6c_listFv(); // 1
 extern "C" static void daCoach2D_createHeap__FP10fopAc_ac_c(); // 1
@@ -133,10 +133,10 @@ extern "C" void drawMeter__11daCoach2D_cFv(); // 1
 extern "C" void initiate__11daCoach2D_cFv(); // 1
 extern "C" void update__11daCoach2D_cFv(); // 1
 extern "C" void setBrkAnime__11daCoach2D_cFb(); // 1
-extern "C" void daCoach2D_create__FP11daCoach2D_c(); // 1
-extern "C" void daCoach2D_destroy__FP11daCoach2D_c(); // 1
-extern "C" void daCoach2D_execute__FP11daCoach2D_c(); // 1
-extern "C" void daCoach2D_draw__FP11daCoach2D_c(); // 1
+extern "C" static void daCoach2D_create__FP11daCoach2D_c(); // 1
+extern "C" static void daCoach2D_destroy__FP11daCoach2D_c(); // 1
+extern "C" static void daCoach2D_execute__FP11daCoach2D_c(); // 1
+extern "C" static void daCoach2D_draw__FP11daCoach2D_c(); // 1
 extern "C" void draw__12dDlst_base_cFv(); // 1
 extern "C" void __dt__15daCoach2D_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -144,7 +144,6 @@ extern "C" void __dt__Q211daCoach2D_c6c_listFv(); // 1
 extern "C" void __dt__11daCoach2D_cFv(); // 1
 extern "C" void __sinit_d_a_coach_2D_cpp(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* daCoach2D_METHODS[8];
 extern "C" extern void* g_profile_COACH2D[12];
 
 // 
@@ -189,6 +188,8 @@ extern "C" void _savegpr_25(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_meter2_info[248];
 extern "C" void __register_global_object(); // 1
@@ -197,7 +198,7 @@ extern "C" void __register_global_object(); // 1
 // Declarations:
 // 
 
-/* 806569CC-80656A18 004C+00 s=0 e=0 z=0  None .text      draw__Q211daCoach2D_c6c_listFv                               */
+/* 806569CC-80656A18 004C+00 s=1 e=0 z=0  None .text      draw__Q211daCoach2D_c6c_listFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -257,7 +258,7 @@ SECTION_RODATA static u8 const lit_4056[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80657954-8065799A 0046+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80657954-8065799A 0046+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -277,7 +278,7 @@ SECTION_DATA static u8 data_8065799C[88] = {
 };
 
 /* 806579F4-806579F8 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
 
 /* 80656A38-80656D18 02E0+00 s=1 e=0 z=0  None .text      createHeap__11daCoach2D_cFv                                  */
 #pragma push
@@ -386,30 +387,30 @@ asm void daCoach2D_c::setBrkAnime(bool param_0) {
 
 
 /* ############################################################################################## */
-/* 806579F8-80657A18 0020+00 s=0 e=0 z=0  None .data      daCoach2D_METHODS                                            */
-SECTION_DATA void* daCoach2D_METHODS[8] = {
+/* 806579F8-80657A18 0020+00 s=1 e=0 z=0  None .data      daCoach2D_METHODS                                            */
+SECTION_DATA static void* daCoach2D_METHODS[8] = {
+	(void*)daCoach2D_create__FP11daCoach2D_c,
+	(void*)daCoach2D_destroy__FP11daCoach2D_c,
+	(void*)daCoach2D_execute__FP11daCoach2D_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daCoach2D_draw__FP11daCoach2D_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80657A18-80657A48 0030+00 s=0 e=0 z=0  None .data      g_profile_COACH2D                                            */
+/* 80657A18-80657A48 0030+00 s=0 e=0 z=1  None .data      g_profile_COACH2D                                            */
 SECTION_DATA void* g_profile_COACH2D[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00590000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000784,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02FC0000,
-	(void*)NULL,
+	(void*)&daCoach2D_METHODS,
 	(void*)0x00040000,
 	(void*)NULL,
 };
@@ -418,69 +419,69 @@ SECTION_DATA void* g_profile_COACH2D[12] = {
 SECTION_DATA static void* __vt__12dDlst_base_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)draw__12dDlst_base_cFv,
 };
 
 /* 80657A54-80657A60 000C+00 s=2 e=0 z=0  None .data      __vt__11daCoach2D_c                                          */
 SECTION_DATA static void* __vt__11daCoach2D_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__11daCoach2D_cFv,
 };
 
 /* 80657A60-80657A70 0010+00 s=3 e=0 z=0  None .data      __vt__Q211daCoach2D_c6c_list                                 */
 SECTION_DATA static void* __vt__Q211daCoach2D_c6c_list[4] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)draw__Q211daCoach2D_c6c_listFv,
+	(void*)__dt__Q211daCoach2D_c6c_listFv,
 };
 
-/* 8065764C-806576D4 0088+00 s=0 e=0 z=0  None .text      daCoach2D_create__FP11daCoach2D_c                            */
+/* 8065764C-806576D4 0088+00 s=1 e=0 z=0  None .text      daCoach2D_create__FP11daCoach2D_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCoach2D_create(daCoach2D_c* param_0) {
+asm static void daCoach2D_create(daCoach2D_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/daCoach2D_create__FP11daCoach2D_c.s"
 }
 #pragma pop
 
 
-/* 806576D4-806576F4 0020+00 s=0 e=0 z=0  None .text      daCoach2D_destroy__FP11daCoach2D_c                           */
+/* 806576D4-806576F4 0020+00 s=1 e=0 z=0  None .text      daCoach2D_destroy__FP11daCoach2D_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCoach2D_destroy(daCoach2D_c* param_0) {
+asm static void daCoach2D_destroy(daCoach2D_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/daCoach2D_destroy__FP11daCoach2D_c.s"
 }
 #pragma pop
 
 
-/* 806576F4-80657714 0020+00 s=0 e=0 z=0  None .text      daCoach2D_execute__FP11daCoach2D_c                           */
+/* 806576F4-80657714 0020+00 s=1 e=0 z=0  None .text      daCoach2D_execute__FP11daCoach2D_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCoach2D_execute(daCoach2D_c* param_0) {
+asm static void daCoach2D_execute(daCoach2D_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/daCoach2D_execute__FP11daCoach2D_c.s"
 }
 #pragma pop
 
 
-/* 80657714-80657734 0020+00 s=0 e=0 z=0  None .text      daCoach2D_draw__FP11daCoach2D_c                              */
+/* 80657714-80657734 0020+00 s=1 e=0 z=0  None .text      daCoach2D_draw__FP11daCoach2D_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCoach2D_draw(daCoach2D_c* param_0) {
+asm static void daCoach2D_draw(daCoach2D_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/daCoach2D_draw__FP11daCoach2D_c.s"
 }
 #pragma pop
 
 
-/* 80657734-80657738 0004+00 s=0 e=0 z=0  None .text      draw__12dDlst_base_cFv                                       */
+/* 80657734-80657738 0004+00 s=1 e=0 z=0  None .text      draw__12dDlst_base_cFv                                       */
 void dDlst_base_c::draw() {
 	/* empty function */
 }
@@ -491,17 +492,17 @@ void dDlst_base_c::draw() {
 SECTION_DATA static void* __vt__15daCoach2D_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__15daCoach2D_HIO_cFv,
 };
 
 /* 80657A7C-80657A88 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
-/* 80657738-80657794 005C+00 s=1 e=0 z=0  None .text      __dt__15daCoach2D_HIO_cFv                                    */
+/* 80657738-80657794 005C+00 s=2 e=0 z=0  None .text      __dt__15daCoach2D_HIO_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -512,7 +513,7 @@ asm daCoach2D_HIO_c::~daCoach2D_HIO_c() {
 #pragma pop
 
 
-/* 80657794-806577DC 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80657794-806577DC 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -523,7 +524,7 @@ asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 #pragma pop
 
 
-/* 806577DC-80657824 0048+00 s=0 e=0 z=0  None .text      __dt__Q211daCoach2D_c6c_listFv                               */
+/* 806577DC-80657824 0048+00 s=1 e=0 z=0  None .text      __dt__Q211daCoach2D_c6c_listFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -534,7 +535,7 @@ asm daCoach2D_c::c_list::~c_list() {
 #pragma pop
 
 
-/* 80657824-8065789C 0078+00 s=0 e=0 z=0  None .text      __dt__11daCoach2D_cFv                                        */
+/* 80657824-8065789C 0078+00 s=1 e=0 z=0  None .text      __dt__11daCoach2D_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -545,7 +546,7 @@ asm daCoach2D_c::~daCoach2D_c() {
 #pragma pop
 
 
-/* 8065789C-80657910 0074+00 s=0 e=0 z=0  None .text      __sinit_d_a_coach_2D_cpp                                     */
+/* 8065789C-80657910 0074+00 s=0 e=1 z=0  None .text      __sinit_d_a_coach_2D_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

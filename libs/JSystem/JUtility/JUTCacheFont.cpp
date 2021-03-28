@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct _GXTexMapID {
-};
-
 struct JKRHeap {
 };
 
 struct ResFONT {
+};
+
+struct _GXTexMapID {
 };
 
 struct JUTCacheFont {

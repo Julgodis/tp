@@ -100,9 +100,9 @@ struct cCcS {
 // Forward References:
 // 
 
-void daTagAtkItem_Execute(daTagAtkItem_c*); // 2
-void daTagAtkItem_Delete(daTagAtkItem_c*); // 2
-void daTagAtkItem_Create(daTagAtkItem_c*); // 2
+static void daTagAtkItem_Execute(daTagAtkItem_c*); // 2
+static void daTagAtkItem_Delete(daTagAtkItem_c*); // 2
+static void daTagAtkItem_Create(daTagAtkItem_c*); // 2
 
 extern "C" void setBaseMtx__14daTagAtkItem_cFv(); // 1
 extern "C" void Create__14daTagAtkItem_cFv(); // 1
@@ -117,19 +117,18 @@ extern "C" void eventEnd__14daTagAtkItem_cFv(); // 1
 extern "C" void checkHit__14daTagAtkItem_cFv(); // 1
 extern "C" void createItem__14daTagAtkItem_cFv(); // 1
 extern "C" bool _delete__14daTagAtkItem_cFv(); // 1
-extern "C" void daTagAtkItem_Execute__FP14daTagAtkItem_c(); // 1
-extern "C" void daTagAtkItem_Delete__FP14daTagAtkItem_c(); // 1
-extern "C" void daTagAtkItem_Create__FP14daTagAtkItem_c(); // 1
+extern "C" static void daTagAtkItem_Execute__FP14daTagAtkItem_c(); // 1
+extern "C" static void daTagAtkItem_Delete__FP14daTagAtkItem_c(); // 1
+extern "C" static void daTagAtkItem_Create__FP14daTagAtkItem_c(); // 1
 extern "C" void __dt__17dEvLib_callback_cFv(); // 1
 extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
 extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
 extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
-extern "C" void func_805A3100(); // 1
-extern "C" void func_805A3108(); // 1
-extern "C" void func_805A3110(); // 1
+extern "C" static void func_805A3100(); // 1
+extern "C" static void func_805A3108(); // 1
+extern "C" static void func_805A3110(); // 1
 extern "C" void __dt__14daTagAtkItem_cFv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" extern void* l_daTagAtkItem_Method[8];
 extern "C" extern void* g_profile_Tag_AttackItem[12];
 
 // 
@@ -168,6 +167,8 @@ extern "C" void _savegpr_27(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
@@ -219,11 +220,11 @@ asm void daTagAtkItem_c::Create() {
 
 
 /* ############################################################################################## */
-/* 805A3338-805A3358 0020+00 s=0 e=0 z=0  None .data      l_daTagAtkItem_Method                                        */
-SECTION_DATA void* l_daTagAtkItem_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 805A3338-805A3358 0020+00 s=1 e=0 z=0  None .data      l_daTagAtkItem_Method                                        */
+SECTION_DATA static void* l_daTagAtkItem_Method[8] = {
+	(void*)daTagAtkItem_Create__FP14daTagAtkItem_c,
+	(void*)daTagAtkItem_Delete__FP14daTagAtkItem_c,
+	(void*)daTagAtkItem_Execute__FP14daTagAtkItem_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
@@ -231,18 +232,18 @@ SECTION_DATA void* l_daTagAtkItem_Method[8] = {
 	(void*)NULL,
 };
 
-/* 805A3358-805A3388 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_AttackItem                                     */
+/* 805A3358-805A3388 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_AttackItem                                     */
 SECTION_DATA void* g_profile_Tag_AttackItem[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01AA0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000006FC,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02490000,
-	(void*)NULL,
+	(void*)&l_daTagAtkItem_Method,
 	(void*)0x00040000,
 	(void*)0x000E0000,
 };
@@ -253,51 +254,51 @@ SECTION_DATA static void* __vt__14daTagAtkItem_c[11] = {
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_805A3110,
+	(void*)func_805A3108,
+	(void*)eventRun__17dEvLib_callback_cFv,
+	(void*)func_805A3100,
+	(void*)__dt__14daTagAtkItem_cFv,
+	(void*)eventStart__14daTagAtkItem_cFv,
+	(void*)eventEnd__14daTagAtkItem_cFv,
 };
 
 /* 805A33B4-805A33C0 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 805A33C0-805A33CC 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 805A33CC-805A33D8 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 805A33D8-805A33E4 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 805A33E4-805A33FC 0018+00 s=3 e=0 z=0  None .data      __vt__17dEvLib_callback_c                                    */
 SECTION_DATA static void* __vt__17dEvLib_callback_c[6] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__17dEvLib_callback_cFv,
+	(void*)eventStart__17dEvLib_callback_cFv,
+	(void*)eventRun__17dEvLib_callback_cFv,
+	(void*)eventEnd__17dEvLib_callback_cFv,
 };
 
 /* 805A2A34-805A2B5C 0128+00 s=1 e=0 z=0  None .text      create__14daTagAtkItem_cFv                                   */
@@ -311,7 +312,7 @@ asm void daTagAtkItem_c::create() {
 #pragma pop
 
 
-/* 805A2B5C-805A2BA4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 805A2B5C-805A2BA4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -322,7 +323,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 805A2BA4-805A2BEC 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 805A2BA4-805A2BEC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -333,7 +334,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 805A2BEC-805A2C48 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 805A2BEC-805A2C48 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -366,7 +367,7 @@ asm void daTagAtkItem_c::action() {
 #pragma pop
 
 
-/* 805A2D10-805A2D34 0024+00 s=1 e=0 z=0  None .text      eventStart__14daTagAtkItem_cFv                               */
+/* 805A2D10-805A2D34 0024+00 s=2 e=0 z=0  None .text      eventStart__14daTagAtkItem_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -377,7 +378,7 @@ asm void daTagAtkItem_c::eventStart() {
 #pragma pop
 
 
-/* 805A2D34-805A2D58 0024+00 s=1 e=0 z=0  None .text      eventEnd__14daTagAtkItem_cFv                                 */
+/* 805A2D34-805A2D58 0024+00 s=2 e=0 z=0  None .text      eventEnd__14daTagAtkItem_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -443,40 +444,40 @@ bool daTagAtkItem_c::_delete() {
 }
 
 
-/* 805A3040-805A3060 0020+00 s=0 e=0 z=0  None .text      daTagAtkItem_Execute__FP14daTagAtkItem_c                     */
+/* 805A3040-805A3060 0020+00 s=1 e=0 z=0  None .text      daTagAtkItem_Execute__FP14daTagAtkItem_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagAtkItem_Execute(daTagAtkItem_c* param_0) {
+asm static void daTagAtkItem_Execute(daTagAtkItem_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/daTagAtkItem_Execute__FP14daTagAtkItem_c.s"
 }
 #pragma pop
 
 
-/* 805A3060-805A3080 0020+00 s=0 e=0 z=0  None .text      daTagAtkItem_Delete__FP14daTagAtkItem_c                      */
+/* 805A3060-805A3080 0020+00 s=1 e=0 z=0  None .text      daTagAtkItem_Delete__FP14daTagAtkItem_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagAtkItem_Delete(daTagAtkItem_c* param_0) {
+asm static void daTagAtkItem_Delete(daTagAtkItem_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/daTagAtkItem_Delete__FP14daTagAtkItem_c.s"
 }
 #pragma pop
 
 
-/* 805A3080-805A30A0 0020+00 s=0 e=0 z=0  None .text      daTagAtkItem_Create__FP14daTagAtkItem_c                      */
+/* 805A3080-805A30A0 0020+00 s=1 e=0 z=0  None .text      daTagAtkItem_Create__FP14daTagAtkItem_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagAtkItem_Create(daTagAtkItem_c* param_0) {
+asm static void daTagAtkItem_Create(daTagAtkItem_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/daTagAtkItem_Create__FP14daTagAtkItem_c.s"
 }
 #pragma pop
 
 
-/* 805A30A0-805A30E8 0048+00 s=0 e=0 z=0  None .text      __dt__17dEvLib_callback_cFv                                  */
+/* 805A30A0-805A30E8 0048+00 s=1 e=0 z=0  None .text      __dt__17dEvLib_callback_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -487,58 +488,58 @@ asm dEvLib_callback_c::~dEvLib_callback_c() {
 #pragma pop
 
 
-/* 805A30E8-805A30F0 0008+00 s=0 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
+/* 805A30E8-805A30F0 0008+00 s=2 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
 bool dEvLib_callback_c::eventRun() {
 	return true;
 }
 
 
-/* 805A30F0-805A30F8 0008+00 s=0 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
+/* 805A30F0-805A30F8 0008+00 s=1 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
 bool dEvLib_callback_c::eventStart() {
 	return true;
 }
 
 
-/* 805A30F8-805A3100 0008+00 s=0 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
+/* 805A30F8-805A3100 0008+00 s=1 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
 bool dEvLib_callback_c::eventEnd() {
 	return true;
 }
 
 
-/* 805A3100-805A3108 0008+00 s=0 e=0 z=0  None .text      @1384@eventEnd__14daTagAtkItem_cFv                           */
+/* 805A3100-805A3108 0008+00 s=1 e=0 z=0  None .text      @1384@eventEnd__14daTagAtkItem_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_805A3100() {
+extern "C" asm static void func_805A3100() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/func_805A3100.s"
 }
 #pragma pop
 
 
-/* 805A3108-805A3110 0008+00 s=0 e=0 z=0  None .text      @1384@eventStart__14daTagAtkItem_cFv                         */
+/* 805A3108-805A3110 0008+00 s=1 e=0 z=0  None .text      @1384@eventStart__14daTagAtkItem_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_805A3108() {
+extern "C" asm static void func_805A3108() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/func_805A3108.s"
 }
 #pragma pop
 
 
-/* 805A3110-805A3118 0008+00 s=0 e=0 z=0  None .text      @1384@__dt__14daTagAtkItem_cFv                               */
+/* 805A3110-805A3118 0008+00 s=1 e=0 z=0  None .text      @1384@__dt__14daTagAtkItem_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_805A3110() {
+extern "C" asm static void func_805A3110() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/func_805A3110.s"
 }
 #pragma pop
 
 
-/* 805A3118-805A3278 0160+00 s=1 e=0 z=0  None .text      __dt__14daTagAtkItem_cFv                                     */
+/* 805A3118-805A3278 0160+00 s=2 e=0 z=0  None .text      __dt__14daTagAtkItem_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -549,7 +550,7 @@ asm daTagAtkItem_c::~daTagAtkItem_c() {
 #pragma pop
 
 
-/* 805A3278-805A32C0 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 805A3278-805A32C0 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

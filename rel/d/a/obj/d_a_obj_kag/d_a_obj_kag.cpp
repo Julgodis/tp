@@ -91,10 +91,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -110,7 +110,16 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
+struct J3DAnmTransform {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
 struct J3DModelData {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct Vec {
@@ -119,15 +128,6 @@ struct Vec {
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfSO {
@@ -162,10 +162,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -248,18 +248,18 @@ struct cCcS {
 // 
 
 static void useHeapInit(fopAc_ac_c*); // 2
-void daObjKAG_Create(fopAc_ac_c*); // 2
-void daObjKAG_Delete(daObjKAG_c*); // 2
-void daObjKAG_Draw(daObjKAG_c*); // 2
+static void daObjKAG_Create(fopAc_ac_c*); // 2
+static void daObjKAG_Delete(daObjKAG_c*); // 2
+static void daObjKAG_Draw(daObjKAG_c*); // 2
 static void daObjKAG_Execute(daObjKAG_c*); // 2
-bool daObjKAG_IsDelete(daObjKAG_c*); // 2
+static bool daObjKAG_IsDelete(daObjKAG_c*); // 2
 
 extern "C" void __ct__14daObj_KagHIO_cFv(); // 1
 extern "C" void setAction__10daObjKAG_cFM10daObjKAG_cFPCvPv_v(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void daObjKAG_Create__FP10fopAc_ac_c(); // 1
-extern "C" void daObjKAG_Delete__FP10daObjKAG_c(); // 1
+extern "C" static void daObjKAG_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjKAG_Delete__FP10daObjKAG_c(); // 1
 extern "C" void Kag_Bgcheck__10daObjKAG_cFP4cXyzP5csXyzP4cXyz(); // 1
 extern "C" void __dt__8cM3dGPlaFv(); // 1
 extern "C" void fly__10daObjKAG_cFv(); // 1
@@ -275,13 +275,13 @@ extern "C" void hit_check__10daObjKAG_cFv(); // 1
 extern "C" void execute__10daObjKAG_cFv(); // 1
 extern "C" void _delete__10daObjKAG_cFv(); // 1
 extern "C" void setBaseMtx__10daObjKAG_cFv(); // 1
-extern "C" void daObjKAG_Draw__FP10daObjKAG_c(); // 1
+extern "C" static void daObjKAG_Draw__FP10daObjKAG_c(); // 1
 extern "C" static void daObjKAG_Execute__FP10daObjKAG_c(); // 1
 extern "C" void create__10daObjKAG_cFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" bool daObjKAG_IsDelete__FP10daObjKAG_c(); // 1
+extern "C" static bool daObjKAG_IsDelete__FP10daObjKAG_c(); // 1
 extern "C" void kag_setParticle__10daObjKAG_cFv(); // 1
 extern "C" void __dt__14daObj_KagHIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_kag_cpp(); // 1
@@ -289,7 +289,6 @@ extern "C" void Insect_Release__9dInsect_cFv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daObjKAG_Method[8];
 extern "C" extern void* g_profile_Obj_Kag[12];
 extern "C" extern void* __vt__9dInsect_c[3];
 
@@ -400,6 +399,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -446,117 +447,117 @@ SECTION_DATA static u8 data_80C31290[64] = {
 SECTION_DATA static void* lit_3980[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)wait__10daObjKAG_cFv,
 };
 
 /* 80C312DC-80C312E8 000C+00 s=1 e=0 z=0  None .data      @4341                                                        */
 SECTION_DATA static void* lit_4341[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)fly__10daObjKAG_cFv,
 };
 
 /* 80C312E8-80C312F4 000C+00 s=1 e=0 z=0  None .data      @4344                                                        */
 SECTION_DATA static void* lit_4344[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)walk__10daObjKAG_cFv,
 };
 
 /* 80C312F4-80C31300 000C+00 s=1 e=0 z=0  None .data      @4377                                                        */
 SECTION_DATA static void* lit_4377[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)fly__10daObjKAG_cFv,
 };
 
 /* 80C31300-80C3130C 000C+00 s=1 e=0 z=0  None .data      @4380                                                        */
 SECTION_DATA static void* lit_4380[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)wait__10daObjKAG_cFv,
 };
 
 /* 80C3130C-80C31318 000C+00 s=1 e=0 z=0  None .data      @4476                                                        */
 SECTION_DATA static void* lit_4476[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)fly__10daObjKAG_cFv,
 };
 
 /* 80C31318-80C31324 000C+00 s=1 e=0 z=0  None .data      @4479                                                        */
 SECTION_DATA static void* lit_4479[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)bin_action__10daObjKAG_cFv,
 };
 
 /* 80C31324-80C31330 000C+00 s=1 e=0 z=0  None .data      @4541                                                        */
 SECTION_DATA static void* lit_4541[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)fly__10daObjKAG_cFv,
 };
 
 /* 80C31330-80C3133C 000C+00 s=1 e=0 z=0  None .data      @4603                                                        */
 SECTION_DATA static void* lit_4603[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)fly__10daObjKAG_cFv,
 };
 
 /* 80C3133C-80C31348 000C+00 s=1 e=0 z=0  None .data      @4662                                                        */
 SECTION_DATA static void* lit_4662[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)hook__10daObjKAG_cFv,
 };
 
 /* 80C31348-80C31354 000C+00 s=1 e=0 z=0  None .data      @4665                                                        */
 SECTION_DATA static void* lit_4665[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)boomerang__10daObjKAG_cFv,
 };
 
 /* 80C31354-80C31360 000C+00 s=1 e=0 z=0  None .data      @4898                                                        */
 SECTION_DATA static void* lit_4898[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)bin_wait__10daObjKAG_cFv,
 };
 
 /* 80C31360-80C3136C 000C+00 s=1 e=0 z=0  None .data      @4901                                                        */
 SECTION_DATA static void* lit_4901[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
+	(void*)fly__10daObjKAG_cFv,
+};
+
+/* 80C3136C-80C3138C 0020+00 s=1 e=0 z=0  None .data      l_daObjKAG_Method                                            */
+SECTION_DATA static void* l_daObjKAG_Method[8] = {
+	(void*)daObjKAG_Create__FP10fopAc_ac_c,
+	(void*)daObjKAG_Delete__FP10daObjKAG_c,
+	(void*)daObjKAG_Execute__FP10daObjKAG_c,
+	(void*)daObjKAG_IsDelete__FP10daObjKAG_c,
+	(void*)daObjKAG_Draw__FP10daObjKAG_c,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C3136C-80C3138C 0020+00 s=0 e=0 z=0  None .data      l_daObjKAG_Method                                            */
-SECTION_DATA void* l_daObjKAG_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80C3138C-80C313BC 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Kag                                            */
+/* 80C3138C-80C313BC 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Kag                                            */
 SECTION_DATA void* g_profile_Obj_Kag[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01480000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000860,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01E50000,
-	(void*)NULL,
+	(void*)&l_daObjKAG_Method,
 	(void*)0x000C0100,
 	(void*)0x030E0000,
 };
@@ -565,63 +566,63 @@ SECTION_DATA void* g_profile_Obj_Kag[12] = {
 SECTION_DATA void* __vt__9dInsect_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)Insect_Release__9dInsect_cFv,
 };
 
 /* 80C313C8-80C313D4 000C+00 s=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80C313D4-80C313E0 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80C313E0-80C313EC 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80C313EC-80C313F8 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80C313F8-80C31404 000C+00 s=1 e=0 z=0  None .data      __vt__10daObjKAG_c                                           */
 SECTION_DATA static void* __vt__10daObjKAG_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)Insect_Release__9dInsect_cFv,
 };
 
 /* 80C31404-80C31410 000C+00 s=4 e=0 z=0  None .data      __vt__8cM3dGPla                                              */
 SECTION_DATA static void* __vt__8cM3dGPla[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGPlaFv,
 };
 
 /* 80C31410-80C3141C 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 80C3141C-80C31428 000C+00 s=2 e=0 z=0  None .data      __vt__14daObj_KagHIO_c                                       */
 SECTION_DATA static void* __vt__14daObj_KagHIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14daObj_KagHIO_cFv,
 };
 
 /* 80C2E40C-80C2E434 0028+00 s=1 e=0 z=0  None .text      __ct__14daObj_KagHIO_cFv                                     */
@@ -870,7 +871,7 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80C2E714-80C2E75C 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80C2E714-80C2E75C 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -881,22 +882,22 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80C2E75C-80C2E77C 0020+00 s=0 e=0 z=0  None .text      daObjKAG_Create__FP10fopAc_ac_c                              */
+/* 80C2E75C-80C2E77C 0020+00 s=1 e=0 z=0  None .text      daObjKAG_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKAG_Create(fopAc_ac_c* param_0) {
+asm static void daObjKAG_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kag/d_a_obj_kag/daObjKAG_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C2E77C-80C2E7A0 0024+00 s=0 e=0 z=0  None .text      daObjKAG_Delete__FP10daObjKAG_c                              */
+/* 80C2E77C-80C2E7A0 0024+00 s=1 e=0 z=0  None .text      daObjKAG_Delete__FP10daObjKAG_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKAG_Delete(daObjKAG_c* param_0) {
+asm static void daObjKAG_Delete(daObjKAG_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kag/d_a_obj_kag/daObjKAG_Delete__FP10daObjKAG_c.s"
 }
@@ -914,7 +915,7 @@ asm void daObjKAG_c::Kag_Bgcheck(cXyz* param_0, csXyz* param_1, cXyz* param_2) {
 #pragma pop
 
 
-/* 80C2E9F8-80C2EA40 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 80C2E9F8-80C2EA40 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -925,7 +926,7 @@ asm cM3dGPla::~cM3dGPla() {
 #pragma pop
 
 
-/* 80C2EA40-80C2F764 0D24+00 s=0 e=0 z=0  None .text      fly__10daObjKAG_cFv                                          */
+/* 80C2EA40-80C2F764 0D24+00 s=6 e=0 z=0  None .text      fly__10daObjKAG_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -936,7 +937,7 @@ asm void daObjKAG_c::fly() {
 #pragma pop
 
 
-/* 80C2F764-80C2F8C4 0160+00 s=0 e=0 z=0  None .text      wait__10daObjKAG_cFv                                         */
+/* 80C2F764-80C2F8C4 0160+00 s=2 e=0 z=0  None .text      wait__10daObjKAG_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -947,7 +948,7 @@ asm void daObjKAG_c::wait() {
 #pragma pop
 
 
-/* 80C2F8C4-80C2FD94 04D0+00 s=0 e=0 z=0  None .text      walk__10daObjKAG_cFv                                         */
+/* 80C2F8C4-80C2FD94 04D0+00 s=1 e=0 z=0  None .text      walk__10daObjKAG_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -958,7 +959,7 @@ asm void daObjKAG_c::walk() {
 #pragma pop
 
 
-/* 80C2FD94-80C2FF10 017C+00 s=0 e=0 z=0  None .text      bin_wait__10daObjKAG_cFv                                     */
+/* 80C2FD94-80C2FF10 017C+00 s=1 e=0 z=0  None .text      bin_wait__10daObjKAG_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -969,7 +970,7 @@ asm void daObjKAG_c::bin_wait() {
 #pragma pop
 
 
-/* 80C2FF10-80C30070 0160+00 s=0 e=0 z=0  None .text      bin_action__10daObjKAG_cFv                                   */
+/* 80C2FF10-80C30070 0160+00 s=1 e=0 z=0  None .text      bin_action__10daObjKAG_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -980,7 +981,7 @@ asm void daObjKAG_c::bin_action() {
 #pragma pop
 
 
-/* 80C30070-80C30274 0204+00 s=0 e=0 z=0  None .text      hook__10daObjKAG_cFv                                         */
+/* 80C30070-80C30274 0204+00 s=1 e=0 z=0  None .text      hook__10daObjKAG_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -991,7 +992,7 @@ asm void daObjKAG_c::hook() {
 #pragma pop
 
 
-/* 80C30274-80C303C4 0150+00 s=0 e=0 z=0  None .text      boomerang__10daObjKAG_cFv                                    */
+/* 80C30274-80C303C4 0150+00 s=1 e=0 z=0  None .text      boomerang__10daObjKAG_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1072,18 +1073,18 @@ asm void daObjKAG_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80C307D4-80C308D0 00FC+00 s=0 e=0 z=0  None .text      daObjKAG_Draw__FP10daObjKAG_c                                */
+/* 80C307D4-80C308D0 00FC+00 s=1 e=0 z=0  None .text      daObjKAG_Draw__FP10daObjKAG_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKAG_Draw(daObjKAG_c* param_0) {
+asm static void daObjKAG_Draw(daObjKAG_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kag/d_a_obj_kag/daObjKAG_Draw__FP10daObjKAG_c.s"
 }
 #pragma pop
 
 
-/* 80C308D0-80C308F0 0020+00 s=1 e=0 z=0  None .text      daObjKAG_Execute__FP10daObjKAG_c                             */
+/* 80C308D0-80C308F0 0020+00 s=2 e=0 z=0  None .text      daObjKAG_Execute__FP10daObjKAG_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1112,7 +1113,7 @@ asm void daObjKAG_c::create() {
 #pragma pop
 
 
-/* 80C30D60-80C30DA8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80C30D60-80C30DA8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1123,7 +1124,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80C30DA8-80C30DF0 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C30DA8-80C30DF0 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1134,7 +1135,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80C30DF0-80C30E4C 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80C30DF0-80C30E4C 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1145,8 +1146,8 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80C30E4C-80C30E54 0008+00 s=0 e=0 z=0  None .text      daObjKAG_IsDelete__FP10daObjKAG_c                            */
-bool daObjKAG_IsDelete(daObjKAG_c* param_0) {
+/* 80C30E4C-80C30E54 0008+00 s=1 e=0 z=0  None .text      daObjKAG_IsDelete__FP10daObjKAG_c                            */
+static bool daObjKAG_IsDelete(daObjKAG_c* param_0) {
 	return true;
 }
 
@@ -1162,7 +1163,7 @@ asm void daObjKAG_c::kag_setParticle() {
 #pragma pop
 
 
-/* 80C31060-80C310A8 0048+00 s=1 e=0 z=0  None .text      __dt__14daObj_KagHIO_cFv                                     */
+/* 80C31060-80C310A8 0048+00 s=2 e=0 z=0  None .text      __dt__14daObj_KagHIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1173,7 +1174,7 @@ asm daObj_KagHIO_c::~daObj_KagHIO_c() {
 #pragma pop
 
 
-/* 80C310A8-80C310E4 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_kag_cpp                                      */
+/* 80C310A8-80C310E4 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_kag_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1184,7 +1185,7 @@ extern "C" asm void __sinit_d_a_obj_kag_cpp() {
 #pragma pop
 
 
-/* 80C310E4-80C310F0 000C+00 s=0 e=0 z=0  None .text      Insect_Release__9dInsect_cFv                                 */
+/* 80C310E4-80C310F0 000C+00 s=2 e=0 z=0  None .text      Insect_Release__9dInsect_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1195,7 +1196,7 @@ asm void dInsect_c::Insect_Release() {
 #pragma pop
 
 
-/* 80C310F0-80C31138 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80C310F0-80C31138 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

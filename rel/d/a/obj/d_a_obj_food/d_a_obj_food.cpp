@@ -75,10 +75,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -189,7 +189,7 @@ struct Z2SoundObjSimple {
 // Forward References:
 // 
 
-void daObj_Food_Draw(obj_food_class*); // 2
+static void daObj_Food_Draw(obj_food_class*); // 2
 static void ground_ang_set(obj_food_class*); // 2
 static void food_carry(obj_food_class*); // 2
 static void wall_angle_get(obj_food_class*); // 2
@@ -197,13 +197,13 @@ static void food_normal(obj_food_class*); // 2
 static void ball_move(obj_food_class*); // 2
 static void action(obj_food_class*); // 2
 static void daObj_Food_Execute(obj_food_class*); // 2
-bool daObj_Food_IsDelete(obj_food_class*); // 2
-void daObj_Food_Delete(obj_food_class*); // 2
+static bool daObj_Food_IsDelete(obj_food_class*); // 2
+static void daObj_Food_Delete(obj_food_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daObj_Food_Create(fopAc_ac_c*); // 2
+static void daObj_Food_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__16daObj_Food_HIO_cFv(); // 1
-extern "C" void daObj_Food_Draw__FP14obj_food_class(); // 1
+extern "C" static void daObj_Food_Draw__FP14obj_food_class(); // 1
 extern "C" static void ground_ang_set__FP14obj_food_class(); // 1
 extern "C" static void food_carry__FP14obj_food_class(); // 1
 extern "C" static void wall_angle_get__FP14obj_food_class(); // 1
@@ -211,19 +211,18 @@ extern "C" static void food_normal__FP14obj_food_class(); // 1
 extern "C" static void ball_move__FP14obj_food_class(); // 1
 extern "C" static void action__FP14obj_food_class(); // 1
 extern "C" static void daObj_Food_Execute__FP14obj_food_class(); // 1
-extern "C" bool daObj_Food_IsDelete__FP14obj_food_class(); // 1
-extern "C" void daObj_Food_Delete__FP14obj_food_class(); // 1
+extern "C" static bool daObj_Food_IsDelete__FP14obj_food_class(); // 1
+extern "C" static void daObj_Food_Delete__FP14obj_food_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daObj_Food_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObj_Food_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__16daObj_Food_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_food_cpp(); // 1
-extern "C" void func_80BF1D6C(); // 1
-extern "C" void func_80BF1D74(); // 1
+extern "C" static void func_80BF1D6C(); // 1
+extern "C" static void func_80BF1D74(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObj_Food_Method[8];
 extern "C" extern void* g_profile_OBJ_FOOD[12];
 
 // 
@@ -327,6 +326,8 @@ extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -370,30 +371,30 @@ SECTION_DATA static u8 data_80BF1E60[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x41, 0x70, 0x00, 0x00,
 };
 
-/* 80BF1EA0-80BF1EC0 0020+00 s=0 e=0 z=0  None .data      l_daObj_Food_Method                                          */
-SECTION_DATA void* l_daObj_Food_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80BF1EA0-80BF1EC0 0020+00 s=1 e=0 z=0  None .data      l_daObj_Food_Method                                          */
+SECTION_DATA static void* l_daObj_Food_Method[8] = {
+	(void*)daObj_Food_Create__FP10fopAc_ac_c,
+	(void*)daObj_Food_Delete__FP14obj_food_class,
+	(void*)daObj_Food_Execute__FP14obj_food_class,
+	(void*)daObj_Food_IsDelete__FP14obj_food_class,
+	(void*)daObj_Food_Draw__FP14obj_food_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80BF1EC0-80BF1EF0 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_FOOD                                           */
+/* 80BF1EC0-80BF1EF0 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_FOOD                                           */
 SECTION_DATA void* g_profile_OBJ_FOOD[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01100000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000A90,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02C80000,
-	(void*)NULL,
+	(void*)&l_daObj_Food_Method,
 	(void*)0x00044100,
 	(void*)NULL,
 };
@@ -402,34 +403,34 @@ SECTION_DATA void* g_profile_OBJ_FOOD[12] = {
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80BF1EFC-80BF1F08 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80BF1F08-80BF1F2C 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80BF1D74,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80BF1D6C,
 };
 
 /* 80BF1F2C-80BF1F38 000C+00 s=2 e=0 z=0  None .data      __vt__16daObj_Food_HIO_c                                     */
 SECTION_DATA static void* __vt__16daObj_Food_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__16daObj_Food_HIO_cFv,
 };
 
 /* 80BF070C-80BF0730 0024+00 s=1 e=0 z=0  None .text      __ct__16daObj_Food_HIO_cFv                                   */
@@ -458,11 +459,11 @@ SECTION_RODATA static u8 const lit_3681[4] = {
 /* 80BF1DA0-80BF1DA4 0004+00 s=1 e=0 z=0  None .rodata    @3682                                                        */
 SECTION_RODATA static u32 const lit_3682 = 0x41980000;
 
-/* 80BF0730-80BF0854 0124+00 s=0 e=0 z=0  None .text      daObj_Food_Draw__FP14obj_food_class                          */
+/* 80BF0730-80BF0854 0124+00 s=1 e=0 z=0  None .text      daObj_Food_Draw__FP14obj_food_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Food_Draw(obj_food_class* param_0) {
+asm static void daObj_Food_Draw(obj_food_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/daObj_Food_Draw__FP14obj_food_class.s"
 }
@@ -631,7 +632,7 @@ asm static void action(obj_food_class* param_0) {
 #pragma pop
 
 
-/* 80BF1700-80BF1794 0094+00 s=1 e=0 z=0  None .text      daObj_Food_Execute__FP14obj_food_class                       */
+/* 80BF1700-80BF1794 0094+00 s=2 e=0 z=0  None .text      daObj_Food_Execute__FP14obj_food_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -642,8 +643,8 @@ asm static void daObj_Food_Execute(obj_food_class* param_0) {
 #pragma pop
 
 
-/* 80BF1794-80BF179C 0008+00 s=0 e=0 z=0  None .text      daObj_Food_IsDelete__FP14obj_food_class                      */
-bool daObj_Food_IsDelete(obj_food_class* param_0) {
+/* 80BF1794-80BF179C 0008+00 s=1 e=0 z=0  None .text      daObj_Food_IsDelete__FP14obj_food_class                      */
+static bool daObj_Food_IsDelete(obj_food_class* param_0) {
 	return true;
 }
 
@@ -656,11 +657,11 @@ bool daObj_Food_IsDelete(obj_food_class* param_0) {
 SECTION_DEAD char const* const stringBase_80BF1E10 = "Obj_fd";
 #pragma pop
 
-/* 80BF179C-80BF1804 0068+00 s=0 e=0 z=0  None .text      daObj_Food_Delete__FP14obj_food_class                        */
+/* 80BF179C-80BF1804 0068+00 s=1 e=0 z=0  None .text      daObj_Food_Delete__FP14obj_food_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Food_Delete(obj_food_class* param_0) {
+asm static void daObj_Food_Delete(obj_food_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/daObj_Food_Delete__FP14obj_food_class.s"
 }
@@ -678,18 +679,18 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80BF18CC-80BF1BE8 031C+00 s=0 e=0 z=0  None .text      daObj_Food_Create__FP10fopAc_ac_c                            */
+/* 80BF18CC-80BF1BE8 031C+00 s=1 e=0 z=0  None .text      daObj_Food_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Food_Create(fopAc_ac_c* param_0) {
+asm static void daObj_Food_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/daObj_Food_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80BF1BE8-80BF1C30 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80BF1BE8-80BF1C30 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -700,7 +701,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80BF1C30-80BF1C78 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80BF1C30-80BF1C78 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -711,7 +712,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80BF1C78-80BF1CE8 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80BF1C78-80BF1CE8 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -722,7 +723,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80BF1CE8-80BF1D30 0048+00 s=1 e=0 z=0  None .text      __dt__16daObj_Food_HIO_cFv                                   */
+/* 80BF1CE8-80BF1D30 0048+00 s=2 e=0 z=0  None .text      __dt__16daObj_Food_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -733,7 +734,7 @@ asm daObj_Food_HIO_c::~daObj_Food_HIO_c() {
 #pragma pop
 
 
-/* 80BF1D30-80BF1D6C 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_food_cpp                                     */
+/* 80BF1D30-80BF1D6C 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_food_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -744,22 +745,22 @@ extern "C" asm void __sinit_d_a_obj_food_cpp() {
 #pragma pop
 
 
-/* 80BF1D6C-80BF1D74 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BF1D6C-80BF1D74 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BF1D6C() {
+extern "C" asm static void func_80BF1D6C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/func_80BF1D6C.s"
 }
 #pragma pop
 
 
-/* 80BF1D74-80BF1D7C 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BF1D74-80BF1D7C 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BF1D74() {
+extern "C" asm static void func_80BF1D74() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/func_80BF1D74.s"
 }

@@ -69,6 +69,9 @@ struct dBgS_ObjGndChk_Spl {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -98,22 +101,22 @@ struct Vec {
 // 
 
 static void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
-void daObjIce_l_Draw(daObjIce_l_c*); // 2
-void daObjIce_l_Execute(daObjIce_l_c*); // 2
-bool daObjIce_l_IsDelete(daObjIce_l_c*); // 2
-void daObjIce_l_Delete(daObjIce_l_c*); // 2
-void daObjIce_l_Create(fopAc_ac_c*); // 2
+static void daObjIce_l_Draw(daObjIce_l_c*); // 2
+static void daObjIce_l_Execute(daObjIce_l_c*); // 2
+static bool daObjIce_l_IsDelete(daObjIce_l_c*); // 2
+static void daObjIce_l_Delete(daObjIce_l_c*); // 2
+static void daObjIce_l_Create(fopAc_ac_c*); // 2
 
 extern "C" void RideOn_Angle__12daObjIce_l_cFRsfsf(); // 1
 extern "C" void Check_RideOn__12daObjIce_l_cF4cXyz(); // 1
 extern "C" void initBaseMtx__12daObjIce_l_cFv(); // 1
 extern "C" void setBaseMtx__12daObjIce_l_cFv(); // 1
 extern "C" static void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c(); // 1
-extern "C" void daObjIce_l_Draw__FP12daObjIce_l_c(); // 1
-extern "C" void daObjIce_l_Execute__FP12daObjIce_l_c(); // 1
-extern "C" bool daObjIce_l_IsDelete__FP12daObjIce_l_c(); // 1
-extern "C" void daObjIce_l_Delete__FP12daObjIce_l_c(); // 1
-extern "C" void daObjIce_l_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjIce_l_Draw__FP12daObjIce_l_c(); // 1
+extern "C" static void daObjIce_l_Execute__FP12daObjIce_l_c(); // 1
+extern "C" static bool daObjIce_l_IsDelete__FP12daObjIce_l_c(); // 1
+extern "C" static void daObjIce_l_Delete__FP12daObjIce_l_c(); // 1
+extern "C" static void daObjIce_l_Create__FP10fopAc_ac_c(); // 1
 extern "C" void create__12daObjIce_l_cFv(); // 1
 extern "C" void CreateHeap__12daObjIce_l_cFv(); // 1
 extern "C" void Create__12daObjIce_l_cFv(); // 1
@@ -121,7 +124,6 @@ extern "C" void Execute__12daObjIce_l_cFPPA3_A4_f(); // 1
 extern "C" void Draw__12daObjIce_l_cFv(); // 1
 extern "C" void Delete__12daObjIce_l_cFv(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObjIce_l_Method[8];
 extern "C" extern void* g_profile_Obj_Ice_l[12];
 
 // 
@@ -155,6 +157,9 @@ extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5
 extern "C" void __ct__18dBgS_ObjGndChk_SplFv(); // 1
 extern "C" void __dt__18dBgS_ObjGndChk_SplFv(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -176,6 +181,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__9cCcD_Stts[8];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
@@ -298,50 +305,50 @@ asm static void rideCallBack(dBgW* param_0, fopAc_ac_c* param_1, fopAc_ac_c* par
 #pragma pop
 
 
-/* 80C20034-80C20060 002C+00 s=0 e=0 z=0  None .text      daObjIce_l_Draw__FP12daObjIce_l_c                            */
+/* 80C20034-80C20060 002C+00 s=1 e=0 z=0  None .text      daObjIce_l_Draw__FP12daObjIce_l_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjIce_l_Draw(daObjIce_l_c* param_0) {
+asm static void daObjIce_l_Draw(daObjIce_l_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_l/d_a_obj_ice_l/daObjIce_l_Draw__FP12daObjIce_l_c.s"
 }
 #pragma pop
 
 
-/* 80C20060-80C20080 0020+00 s=0 e=0 z=0  None .text      daObjIce_l_Execute__FP12daObjIce_l_c                         */
+/* 80C20060-80C20080 0020+00 s=1 e=0 z=0  None .text      daObjIce_l_Execute__FP12daObjIce_l_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjIce_l_Execute(daObjIce_l_c* param_0) {
+asm static void daObjIce_l_Execute(daObjIce_l_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_l/d_a_obj_ice_l/daObjIce_l_Execute__FP12daObjIce_l_c.s"
 }
 #pragma pop
 
 
-/* 80C20080-80C20088 0008+00 s=0 e=0 z=0  None .text      daObjIce_l_IsDelete__FP12daObjIce_l_c                        */
-bool daObjIce_l_IsDelete(daObjIce_l_c* param_0) {
+/* 80C20080-80C20088 0008+00 s=1 e=0 z=0  None .text      daObjIce_l_IsDelete__FP12daObjIce_l_c                        */
+static bool daObjIce_l_IsDelete(daObjIce_l_c* param_0) {
 	return true;
 }
 
 
-/* 80C20088-80C200AC 0024+00 s=0 e=0 z=0  None .text      daObjIce_l_Delete__FP12daObjIce_l_c                          */
+/* 80C20088-80C200AC 0024+00 s=1 e=0 z=0  None .text      daObjIce_l_Delete__FP12daObjIce_l_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjIce_l_Delete(daObjIce_l_c* param_0) {
+asm static void daObjIce_l_Delete(daObjIce_l_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_l/d_a_obj_ice_l/daObjIce_l_Delete__FP12daObjIce_l_c.s"
 }
 #pragma pop
 
 
-/* 80C200AC-80C200CC 0020+00 s=0 e=0 z=0  None .text      daObjIce_l_Create__FP10fopAc_ac_c                            */
+/* 80C200AC-80C200CC 0020+00 s=1 e=0 z=0  None .text      daObjIce_l_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjIce_l_Create(fopAc_ac_c* param_0) {
+asm static void daObjIce_l_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_l/d_a_obj_ice_l/daObjIce_l_Create__FP10fopAc_ac_c.s"
 }
@@ -403,7 +410,7 @@ SECTION_RODATA static u32 const lit_4002 = 0x3E4CCCCD;
 /* 80C20818-80C2081C 0004+00 s=1 e=0 z=0  None .rodata    @4003                                                        */
 SECTION_RODATA static u32 const lit_4003 = 0x3D4CCCCD;
 
-/* 80C2081C-80C20838 001C+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80C2081C-80C20838 001C+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -413,32 +420,32 @@ SECTION_DEAD char const* const stringBase_80C2082E = "Ice_l.bmd";
 #pragma pop
 
 /* 80C20838-80C2083C 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
 
-/* 80C2083C-80C2085C 0020+00 s=0 e=0 z=0  None .data      l_daObjIce_l_Method                                          */
-SECTION_DATA void* l_daObjIce_l_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80C2083C-80C2085C 0020+00 s=1 e=0 z=0  None .data      l_daObjIce_l_Method                                          */
+SECTION_DATA static void* l_daObjIce_l_Method[8] = {
+	(void*)daObjIce_l_Create__FP10fopAc_ac_c,
+	(void*)daObjIce_l_Delete__FP12daObjIce_l_c,
+	(void*)daObjIce_l_Execute__FP12daObjIce_l_c,
+	(void*)daObjIce_l_IsDelete__FP12daObjIce_l_c,
+	(void*)daObjIce_l_Draw__FP12daObjIce_l_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C2085C-80C2088C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Ice_l                                          */
+/* 80C2085C-80C2088C 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Ice_l                                          */
 SECTION_DATA void* g_profile_Obj_Ice_l[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00660000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000640,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01C80000,
-	(void*)NULL,
+	(void*)&l_daObjIce_l_Method,
 	(void*)0x00044180,
 	(void*)0x000E0000,
 };
@@ -447,14 +454,14 @@ SECTION_DATA void* g_profile_Obj_Ice_l[12] = {
 SECTION_DATA static void* __vt__12daObjIce_l_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__12daObjIce_l_cFv,
+	(void*)Create__12daObjIce_l_cFv,
+	(void*)Execute__12daObjIce_l_cFPPA3_A4_f,
+	(void*)Draw__12daObjIce_l_cFv,
+	(void*)Delete__12daObjIce_l_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
 /* 80C200CC-80C2030C 0240+00 s=1 e=0 z=0  None .text      create__12daObjIce_l_cFv                                     */
@@ -468,7 +475,7 @@ asm void daObjIce_l_c::create() {
 #pragma pop
 
 
-/* 80C2030C-80C20384 0078+00 s=0 e=0 z=0  None .text      CreateHeap__12daObjIce_l_cFv                                 */
+/* 80C2030C-80C20384 0078+00 s=1 e=0 z=0  None .text      CreateHeap__12daObjIce_l_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -479,7 +486,7 @@ asm void daObjIce_l_c::CreateHeap() {
 #pragma pop
 
 
-/* 80C20384-80C203C4 0040+00 s=0 e=0 z=0  None .text      Create__12daObjIce_l_cFv                                     */
+/* 80C20384-80C203C4 0040+00 s=1 e=0 z=0  None .text      Create__12daObjIce_l_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -490,7 +497,7 @@ asm void daObjIce_l_c::Create() {
 #pragma pop
 
 
-/* 80C203C4-80C206AC 02E8+00 s=0 e=0 z=0  None .text      Execute__12daObjIce_l_cFPPA3_A4_f                            */
+/* 80C203C4-80C206AC 02E8+00 s=1 e=0 z=0  None .text      Execute__12daObjIce_l_cFPPA3_A4_f                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -501,7 +508,7 @@ asm void daObjIce_l_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80C206AC-80C20750 00A4+00 s=0 e=0 z=0  None .text      Draw__12daObjIce_l_cFv                                       */
+/* 80C206AC-80C20750 00A4+00 s=1 e=0 z=0  None .text      Draw__12daObjIce_l_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -512,7 +519,7 @@ asm void daObjIce_l_c::Draw() {
 #pragma pop
 
 
-/* 80C20750-80C20784 0034+00 s=0 e=0 z=0  None .text      Delete__12daObjIce_l_cFv                                     */
+/* 80C20750-80C20784 0034+00 s=1 e=0 z=0  None .text      Delete__12daObjIce_l_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

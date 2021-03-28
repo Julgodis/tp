@@ -26,10 +26,10 @@ struct dDlst_KanteraIcon_c {
 	/* 801AED1C */ ~dDlst_KanteraIcon_c();
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
 struct J2DScreen {

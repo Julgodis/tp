@@ -46,10 +46,10 @@ struct cXyz {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -62,10 +62,10 @@ struct dPa_control_c {
 struct LIGHT_INFLUENCE {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -77,10 +77,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daTimeFire_Draw(daTimeFire_c*); // 2
-void daTimeFire_Execute(daTimeFire_c*); // 2
-void daTimeFire_Delete(daTimeFire_c*); // 2
-void daTimeFire_Create(fopAc_ac_c*); // 2
+static void daTimeFire_Draw(daTimeFire_c*); // 2
+static void daTimeFire_Execute(daTimeFire_c*); // 2
+static void daTimeFire_Delete(daTimeFire_c*); // 2
+static void daTimeFire_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__16daTimeFire_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -93,13 +93,12 @@ extern "C" void Execute__12daTimeFire_cFv(); // 1
 extern "C" void fireCheck__12daTimeFire_cFUc(); // 1
 extern "C" bool Draw__12daTimeFire_cFv(); // 1
 extern "C" void Delete__12daTimeFire_cFv(); // 1
-extern "C" void daTimeFire_Draw__FP12daTimeFire_c(); // 1
-extern "C" void daTimeFire_Execute__FP12daTimeFire_c(); // 1
-extern "C" void daTimeFire_Delete__FP12daTimeFire_c(); // 1
-extern "C" void daTimeFire_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daTimeFire_Draw__FP12daTimeFire_c(); // 1
+extern "C" static void daTimeFire_Execute__FP12daTimeFire_c(); // 1
+extern "C" static void daTimeFire_Delete__FP12daTimeFire_c(); // 1
+extern "C" static void daTimeFire_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__16daTimeFire_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_timeFire_cpp(); // 1
-extern "C" extern void* l_daTimeFire_Method[8];
 extern "C" extern void* g_profile_Obj_TimeFire[12];
 
 // 
@@ -129,6 +128,8 @@ extern "C" void __dl__FPv(); // 1
 extern "C" void PSMTXTrans(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
@@ -139,30 +140,30 @@ extern "C" void __register_global_object(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80D0F100-80D0F120 0020+00 s=0 e=0 z=0  None .data      l_daTimeFire_Method                                          */
-SECTION_DATA void* l_daTimeFire_Method[8] = {
+/* 80D0F100-80D0F120 0020+00 s=1 e=0 z=0  None .data      l_daTimeFire_Method                                          */
+SECTION_DATA static void* l_daTimeFire_Method[8] = {
+	(void*)daTimeFire_Create__FP10fopAc_ac_c,
+	(void*)daTimeFire_Delete__FP12daTimeFire_c,
+	(void*)daTimeFire_Execute__FP12daTimeFire_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daTimeFire_Draw__FP12daTimeFire_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D0F120-80D0F150 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_TimeFire                                       */
+/* 80D0F120-80D0F150 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_TimeFire                                       */
 SECTION_DATA void* g_profile_Obj_TimeFire[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01940000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005C0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02950000,
-	(void*)NULL,
+	(void*)&l_daTimeFire_Method,
 	(void*)0x00060000,
 	(void*)0x000E0000,
 };
@@ -171,14 +172,14 @@ SECTION_DATA void* g_profile_Obj_TimeFire[12] = {
 SECTION_DATA static void* __vt__16daTimeFire_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__16daTimeFire_HIO_cFv,
 };
 
 /* 80D0F15C-80D0F168 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
 /* 80D0E8EC-80D0E910 0024+00 s=1 e=0 z=0  None .text      __ct__16daTimeFire_HIO_cFv                                   */
@@ -192,7 +193,7 @@ asm daTimeFire_HIO_c::daTimeFire_HIO_c() {
 #pragma pop
 
 
-/* 80D0E910-80D0E958 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80D0E910-80D0E958 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -321,51 +322,51 @@ asm void daTimeFire_c::Delete() {
 #pragma pop
 
 
-/* 80D0EFB8-80D0EFD8 0020+00 s=0 e=0 z=0  None .text      daTimeFire_Draw__FP12daTimeFire_c                            */
+/* 80D0EFB8-80D0EFD8 0020+00 s=1 e=0 z=0  None .text      daTimeFire_Draw__FP12daTimeFire_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTimeFire_Draw(daTimeFire_c* param_0) {
+asm static void daTimeFire_Draw(daTimeFire_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/daTimeFire_Draw__FP12daTimeFire_c.s"
 }
 #pragma pop
 
 
-/* 80D0EFD8-80D0EFF8 0020+00 s=0 e=0 z=0  None .text      daTimeFire_Execute__FP12daTimeFire_c                         */
+/* 80D0EFD8-80D0EFF8 0020+00 s=1 e=0 z=0  None .text      daTimeFire_Execute__FP12daTimeFire_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTimeFire_Execute(daTimeFire_c* param_0) {
+asm static void daTimeFire_Execute(daTimeFire_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/daTimeFire_Execute__FP12daTimeFire_c.s"
 }
 #pragma pop
 
 
-/* 80D0EFF8-80D0F018 0020+00 s=0 e=0 z=0  None .text      daTimeFire_Delete__FP12daTimeFire_c                          */
+/* 80D0EFF8-80D0F018 0020+00 s=1 e=0 z=0  None .text      daTimeFire_Delete__FP12daTimeFire_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTimeFire_Delete(daTimeFire_c* param_0) {
+asm static void daTimeFire_Delete(daTimeFire_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/daTimeFire_Delete__FP12daTimeFire_c.s"
 }
 #pragma pop
 
 
-/* 80D0F018-80D0F038 0020+00 s=0 e=0 z=0  None .text      daTimeFire_Create__FP10fopAc_ac_c                            */
+/* 80D0F018-80D0F038 0020+00 s=1 e=0 z=0  None .text      daTimeFire_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTimeFire_Create(fopAc_ac_c* param_0) {
+asm static void daTimeFire_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/daTimeFire_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80D0F038-80D0F094 005C+00 s=1 e=0 z=0  None .text      __dt__16daTimeFire_HIO_cFv                                   */
+/* 80D0F038-80D0F094 005C+00 s=2 e=0 z=0  None .text      __dt__16daTimeFire_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -383,7 +384,7 @@ static u8 lit_3621[12];
 /* 80D0F17C-80D0F184 0008+00 s=1 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[8];
 
-/* 80D0F094-80D0F0D0 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_timeFire_cpp                                 */
+/* 80D0F094-80D0F0D0 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_timeFire_cpp                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

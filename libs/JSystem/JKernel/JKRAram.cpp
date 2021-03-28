@@ -14,13 +14,13 @@
 struct JKRAramBlock {
 };
 
-struct JKRExpandSwitch {
-};
-
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
+struct JKRExpandSwitch {
 };
 
 struct JKRAram {

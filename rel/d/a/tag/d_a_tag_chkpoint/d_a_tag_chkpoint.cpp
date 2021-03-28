@@ -35,19 +35,18 @@ struct daPy_py_c {
 // Forward References:
 // 
 
-bool daTag_Chk_Draw(daTag_Chk_c*); // 2
-void daTag_Chk_Execute(daTag_Chk_c*); // 2
-bool daTag_Chk_IsDelete(daTag_Chk_c*); // 2
-void daTag_Chk_Delete(daTag_Chk_c*); // 2
-void daTag_Chk_Create(fopAc_ac_c*); // 2
+static bool daTag_Chk_Draw(daTag_Chk_c*); // 2
+static void daTag_Chk_Execute(daTag_Chk_c*); // 2
+static bool daTag_Chk_IsDelete(daTag_Chk_c*); // 2
+static void daTag_Chk_Delete(daTag_Chk_c*); // 2
+static void daTag_Chk_Create(fopAc_ac_c*); // 2
 
 extern "C" void execute__11daTag_Chk_cFv(); // 1
-extern "C" bool daTag_Chk_Draw__FP11daTag_Chk_c(); // 1
-extern "C" void daTag_Chk_Execute__FP11daTag_Chk_c(); // 1
-extern "C" bool daTag_Chk_IsDelete__FP11daTag_Chk_c(); // 1
-extern "C" void daTag_Chk_Delete__FP11daTag_Chk_c(); // 1
-extern "C" void daTag_Chk_Create__FP10fopAc_ac_c(); // 1
-extern "C" extern void* l_daTag_Chk_Method[8];
+extern "C" static bool daTag_Chk_Draw__FP11daTag_Chk_c(); // 1
+extern "C" static void daTag_Chk_Execute__FP11daTag_Chk_c(); // 1
+extern "C" static bool daTag_Chk_IsDelete__FP11daTag_Chk_c(); // 1
+extern "C" static void daTag_Chk_Delete__FP11daTag_Chk_c(); // 1
+extern "C" static void daTag_Chk_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern void* g_profile_TAG_CHKPOINT[12];
 
 // 
@@ -61,6 +60,8 @@ extern "C" void isSwitch__10dSv_info_cCFii(); // 1
 extern "C" void setLookPos__9daPy_py_cFP4cXyz(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 struct_80450D64[4];
@@ -108,34 +109,34 @@ asm void daTag_Chk_c::execute() {
 #pragma pop
 
 
-/* 8048A9EC-8048A9F4 0008+00 s=0 e=0 z=0  None .text      daTag_Chk_Draw__FP11daTag_Chk_c                              */
-bool daTag_Chk_Draw(daTag_Chk_c* param_0) {
+/* 8048A9EC-8048A9F4 0008+00 s=1 e=0 z=0  None .text      daTag_Chk_Draw__FP11daTag_Chk_c                              */
+static bool daTag_Chk_Draw(daTag_Chk_c* param_0) {
 	return true;
 }
 
 
-/* 8048A9F4-8048AA18 0024+00 s=0 e=0 z=0  None .text      daTag_Chk_Execute__FP11daTag_Chk_c                           */
+/* 8048A9F4-8048AA18 0024+00 s=1 e=0 z=0  None .text      daTag_Chk_Execute__FP11daTag_Chk_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_Chk_Execute(daTag_Chk_c* param_0) {
+asm static void daTag_Chk_Execute(daTag_Chk_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_chkpoint/d_a_tag_chkpoint/daTag_Chk_Execute__FP11daTag_Chk_c.s"
 }
 #pragma pop
 
 
-/* 8048AA18-8048AA20 0008+00 s=0 e=0 z=0  None .text      daTag_Chk_IsDelete__FP11daTag_Chk_c                          */
-bool daTag_Chk_IsDelete(daTag_Chk_c* param_0) {
+/* 8048AA18-8048AA20 0008+00 s=1 e=0 z=0  None .text      daTag_Chk_IsDelete__FP11daTag_Chk_c                          */
+static bool daTag_Chk_IsDelete(daTag_Chk_c* param_0) {
 	return true;
 }
 
 
-/* 8048AA20-8048AA50 0030+00 s=0 e=0 z=0  None .text      daTag_Chk_Delete__FP11daTag_Chk_c                            */
+/* 8048AA20-8048AA50 0030+00 s=1 e=0 z=0  None .text      daTag_Chk_Delete__FP11daTag_Chk_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_Chk_Delete(daTag_Chk_c* param_0) {
+asm static void daTag_Chk_Delete(daTag_Chk_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_chkpoint/d_a_tag_chkpoint/daTag_Chk_Delete__FP11daTag_Chk_c.s"
 }
@@ -160,11 +161,11 @@ SECTION_RODATA static u8 const lit_3930[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8048AA50-8048AC20 01D0+00 s=0 e=0 z=0  None .text      daTag_Chk_Create__FP10fopAc_ac_c                             */
+/* 8048AA50-8048AC20 01D0+00 s=1 e=0 z=0  None .text      daTag_Chk_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_Chk_Create(fopAc_ac_c* param_0) {
+asm static void daTag_Chk_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_chkpoint/d_a_tag_chkpoint/daTag_Chk_Create__FP10fopAc_ac_c.s"
 }
@@ -172,30 +173,30 @@ asm void daTag_Chk_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 8048AC68-8048AC88 0020+00 s=0 e=0 z=0  None .data      l_daTag_Chk_Method                                           */
-SECTION_DATA void* l_daTag_Chk_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 8048AC68-8048AC88 0020+00 s=1 e=0 z=0  None .data      l_daTag_Chk_Method                                           */
+SECTION_DATA static void* l_daTag_Chk_Method[8] = {
+	(void*)daTag_Chk_Create__FP10fopAc_ac_c,
+	(void*)daTag_Chk_Delete__FP11daTag_Chk_c,
+	(void*)daTag_Chk_Execute__FP11daTag_Chk_c,
+	(void*)daTag_Chk_IsDelete__FP11daTag_Chk_c,
+	(void*)daTag_Chk_Draw__FP11daTag_Chk_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 8048AC88-8048ACB8 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_CHKPOINT                                       */
+/* 8048AC88-8048ACB8 0030+00 s=0 e=0 z=1  None .data      g_profile_TAG_CHKPOINT                                       */
 SECTION_DATA void* g_profile_TAG_CHKPOINT[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x02D00000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000588,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01180000,
-	(void*)NULL,
+	(void*)&l_daTag_Chk_Method,
 	(void*)0x00044000,
 	(void*)0x00060000,
 };

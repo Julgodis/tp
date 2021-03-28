@@ -82,6 +82,10 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 80078690 */ bool Create();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -95,10 +99,10 @@ struct dScnKy_env_light_c {
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -110,10 +114,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daSldWall_Draw(daSldWall_c*); // 2
-void daSldWall_Execute(daSldWall_c*); // 2
-void daSldWall_Delete(daSldWall_c*); // 2
-void daSldWall_Create(fopAc_ac_c*); // 2
+static void daSldWall_Draw(daSldWall_c*); // 2
+static void daSldWall_Execute(daSldWall_c*); // 2
+static void daSldWall_Delete(daSldWall_c*); // 2
+static void daSldWall_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__15daSldWall_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -131,15 +135,14 @@ extern "C" void modeMoveClose__11daSldWall_cFv(); // 1
 extern "C" void setSe__11daSldWall_cFv(); // 1
 extern "C" void Draw__11daSldWall_cFv(); // 1
 extern "C" void Delete__11daSldWall_cFv(); // 1
-extern "C" void daSldWall_Draw__FP11daSldWall_c(); // 1
-extern "C" void daSldWall_Execute__FP11daSldWall_c(); // 1
-extern "C" void daSldWall_Delete__FP11daSldWall_c(); // 1
-extern "C" void daSldWall_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daSldWall_Draw__FP11daSldWall_c(); // 1
+extern "C" static void daSldWall_Execute__FP11daSldWall_c(); // 1
+extern "C" static void daSldWall_Delete__FP11daSldWall_c(); // 1
+extern "C" static void daSldWall_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__15daSldWall_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_lv4SlideWall_cpp(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daSldWall_Method[8];
 extern "C" extern void* g_profile_Obj_Lv4SlideWall[12];
 
 // 
@@ -170,6 +173,10 @@ extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -184,6 +191,8 @@ extern "C" void PSMTXTrans(); // 1
 extern "C" void __ptmf_scall(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -218,21 +227,21 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 SECTION_DATA static void* lit_3720[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeWait__11daSldWall_cFv,
 };
 
 /* 80C626FC-80C62708 000C+00 s=1 e=0 z=0  None .data      @3721                                                        */
 SECTION_DATA static void* lit_3721[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeMoveOpen__11daSldWall_cFv,
 };
 
 /* 80C62708-80C62714 000C+00 s=1 e=0 z=0  None .data      @3722                                                        */
 SECTION_DATA static void* lit_3722[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeMoveClose__11daSldWall_cFv,
 };
 
 /* 80C62714-80C62738 0024+00 s=1 e=0 z=0  None .data      mode_proc$3719                                               */
@@ -242,30 +251,30 @@ SECTION_DATA static u8 data_80C62714[36] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C62738-80C62758 0020+00 s=0 e=0 z=0  None .data      l_daSldWall_Method                                           */
-SECTION_DATA void* l_daSldWall_Method[8] = {
+/* 80C62738-80C62758 0020+00 s=1 e=0 z=0  None .data      l_daSldWall_Method                                           */
+SECTION_DATA static void* l_daSldWall_Method[8] = {
+	(void*)daSldWall_Create__FP10fopAc_ac_c,
+	(void*)daSldWall_Delete__FP11daSldWall_c,
+	(void*)daSldWall_Execute__FP11daSldWall_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daSldWall_Draw__FP11daSldWall_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C62758-80C62788 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Lv4SlideWall                                   */
+/* 80C62758-80C62788 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Lv4SlideWall                                   */
 SECTION_DATA void* g_profile_Obj_Lv4SlideWall[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x009E0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005B4,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x027F0000,
-	(void*)NULL,
+	(void*)&l_daSldWall_Method,
 	(void*)0x00040000,
 	(void*)0x000E0000,
 };
@@ -274,28 +283,28 @@ SECTION_DATA void* g_profile_Obj_Lv4SlideWall[12] = {
 SECTION_DATA static void* __vt__11daSldWall_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__11daSldWall_cFv,
+	(void*)Create__16dBgS_MoveBgActorFv,
+	(void*)Execute__11daSldWall_cFPPA3_A4_f,
+	(void*)Draw__11daSldWall_cFv,
+	(void*)Delete__11daSldWall_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
 /* 80C627B0-80C627BC 000C+00 s=2 e=0 z=0  None .data      __vt__15daSldWall_HIO_c                                      */
 SECTION_DATA static void* __vt__15daSldWall_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__15daSldWall_HIO_cFv,
 };
 
 /* 80C627BC-80C627C8 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
 /* 80C61E2C-80C61E68 003C+00 s=1 e=0 z=0  None .text      __ct__15daSldWall_HIO_cFv                                    */
@@ -309,7 +318,7 @@ asm daSldWall_HIO_c::daSldWall_HIO_c() {
 #pragma pop
 
 
-/* 80C61E68-80C61EB0 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80C61E68-80C61EB0 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -357,7 +366,7 @@ SECTION_RODATA static u32 const lit_3766 = 0x3F000000;
 SECTION_DEAD char const* const stringBase_80C626C4 = "L4SldWall";
 #pragma pop
 
-/* 80C61F4C-80C61FB8 006C+00 s=0 e=0 z=0  None .text      CreateHeap__11daSldWall_cFv                                  */
+/* 80C61F4C-80C61FB8 006C+00 s=1 e=0 z=0  None .text      CreateHeap__11daSldWall_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -386,7 +395,7 @@ asm void daSldWall_c::create() {
 #pragma pop
 
 
-/* 80C620E4-80C62134 0050+00 s=0 e=0 z=0  None .text      Execute__11daSldWall_cFPPA3_A4_f                             */
+/* 80C620E4-80C62134 0050+00 s=1 e=0 z=0  None .text      Execute__11daSldWall_cFPPA3_A4_f                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -423,7 +432,7 @@ asm void daSldWall_c::init_modeWait() {
 #pragma pop
 
 
-/* 80C62244-80C62248 0004+00 s=0 e=0 z=0  None .text      modeWait__11daSldWall_cFv                                    */
+/* 80C62244-80C62248 0004+00 s=1 e=0 z=0  None .text      modeWait__11daSldWall_cFv                                    */
 void daSldWall_c::modeWait() {
 	/* empty function */
 }
@@ -440,7 +449,7 @@ asm void daSldWall_c::init_modeMoveOpen() {
 #pragma pop
 
 
-/* 80C62254-80C62314 00C0+00 s=0 e=0 z=0  None .text      modeMoveOpen__11daSldWall_cFv                                */
+/* 80C62254-80C62314 00C0+00 s=1 e=0 z=0  None .text      modeMoveOpen__11daSldWall_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -462,7 +471,7 @@ asm void daSldWall_c::init_modeMoveClose() {
 #pragma pop
 
 
-/* 80C62320-80C623E0 00C0+00 s=0 e=0 z=0  None .text      modeMoveClose__11daSldWall_cFv                               */
+/* 80C62320-80C623E0 00C0+00 s=1 e=0 z=0  None .text      modeMoveClose__11daSldWall_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -484,7 +493,7 @@ asm void daSldWall_c::setSe() {
 #pragma pop
 
 
-/* 80C6249C-80C62540 00A4+00 s=0 e=0 z=0  None .text      Draw__11daSldWall_cFv                                        */
+/* 80C6249C-80C62540 00A4+00 s=1 e=0 z=0  None .text      Draw__11daSldWall_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -495,7 +504,7 @@ asm void daSldWall_c::Draw() {
 #pragma pop
 
 
-/* 80C62540-80C62570 0030+00 s=0 e=0 z=0  None .text      Delete__11daSldWall_cFv                                      */
+/* 80C62540-80C62570 0030+00 s=1 e=0 z=0  None .text      Delete__11daSldWall_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -506,51 +515,51 @@ asm void daSldWall_c::Delete() {
 #pragma pop
 
 
-/* 80C62570-80C6259C 002C+00 s=0 e=0 z=0  None .text      daSldWall_Draw__FP11daSldWall_c                              */
+/* 80C62570-80C6259C 002C+00 s=1 e=0 z=0  None .text      daSldWall_Draw__FP11daSldWall_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daSldWall_Draw(daSldWall_c* param_0) {
+asm static void daSldWall_Draw(daSldWall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/daSldWall_Draw__FP11daSldWall_c.s"
 }
 #pragma pop
 
 
-/* 80C6259C-80C625BC 0020+00 s=0 e=0 z=0  None .text      daSldWall_Execute__FP11daSldWall_c                           */
+/* 80C6259C-80C625BC 0020+00 s=1 e=0 z=0  None .text      daSldWall_Execute__FP11daSldWall_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daSldWall_Execute(daSldWall_c* param_0) {
+asm static void daSldWall_Execute(daSldWall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/daSldWall_Execute__FP11daSldWall_c.s"
 }
 #pragma pop
 
 
-/* 80C625BC-80C625DC 0020+00 s=0 e=0 z=0  None .text      daSldWall_Delete__FP11daSldWall_c                            */
+/* 80C625BC-80C625DC 0020+00 s=1 e=0 z=0  None .text      daSldWall_Delete__FP11daSldWall_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daSldWall_Delete(daSldWall_c* param_0) {
+asm static void daSldWall_Delete(daSldWall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/daSldWall_Delete__FP11daSldWall_c.s"
 }
 #pragma pop
 
 
-/* 80C625DC-80C625FC 0020+00 s=0 e=0 z=0  None .text      daSldWall_Create__FP10fopAc_ac_c                             */
+/* 80C625DC-80C625FC 0020+00 s=1 e=0 z=0  None .text      daSldWall_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daSldWall_Create(fopAc_ac_c* param_0) {
+asm static void daSldWall_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/daSldWall_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C625FC-80C62658 005C+00 s=1 e=0 z=0  None .text      __dt__15daSldWall_HIO_cFv                                    */
+/* 80C625FC-80C62658 005C+00 s=2 e=0 z=0  None .text      __dt__15daSldWall_HIO_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -561,7 +570,7 @@ asm daSldWall_HIO_c::~daSldWall_HIO_c() {
 #pragma pop
 
 
-/* 80C62658-80C62694 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_lv4SlideWall_cpp                             */
+/* 80C62658-80C62694 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_lv4SlideWall_cpp                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

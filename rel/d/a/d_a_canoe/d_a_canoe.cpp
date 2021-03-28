@@ -130,10 +130,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -284,10 +284,10 @@ struct daTagWaterFall_c {
 
 static void daCanoe_searchTagWaterFall(fopAc_ac_c*, void*); // 2
 static void daCanoe_createHeap(fopAc_ac_c*); // 2
-void daCanoe_Create(fopAc_ac_c*); // 2
-void daCanoe_Delete(daCanoe_c*); // 2
-void daCanoe_Execute(daCanoe_c*); // 2
-void daCanoe_Draw(daCanoe_c*); // 2
+static void daCanoe_Create(fopAc_ac_c*); // 2
+static void daCanoe_Delete(daCanoe_c*); // 2
+static void daCanoe_Execute(daCanoe_c*); // 2
+static void daCanoe_Draw(daCanoe_c*); // 2
 
 extern "C" static void daCanoe_searchTagWaterFall__FP10fopAc_ac_cPv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
@@ -302,9 +302,9 @@ extern "C" void __dt__13dBgS_LinkAcchFv(); // 1
 extern "C" void __ct__13dBgS_LinkAcchFv(); // 1
 extern "C" void __dt__12dBgS_AcchCirFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void daCanoe_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daCanoe_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__9daCanoe_cFv(); // 1
-extern "C" void daCanoe_Delete__FP9daCanoe_c(); // 1
+extern "C" static void daCanoe_Delete__FP9daCanoe_c(); // 1
 extern "C" void setRoomInfo__9daCanoe_cFv(); // 1
 extern "C" void setMatrix__9daCanoe_cFv(); // 1
 extern "C" void setCollision__9daCanoe_cFv(); // 1
@@ -316,14 +316,13 @@ extern "C" void __dt__8cM3dGPlaFv(); // 1
 extern "C" void setPaddleEffect__9daCanoe_cFv(); // 1
 extern "C" void setCanoeSliderEffect__9daCanoe_cFv(); // 1
 extern "C" void execute__9daCanoe_cFv(); // 1
-extern "C" void daCanoe_Execute__FP9daCanoe_c(); // 1
+extern "C" static void daCanoe_Execute__FP9daCanoe_c(); // 1
 extern "C" void draw__9daCanoe_cFv(); // 1
-extern "C" void daCanoe_Draw__FP9daCanoe_c(); // 1
+extern "C" static void daCanoe_Draw__FP9daCanoe_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" void func_804DD5BC(); // 1
-extern "C" void func_804DD5C4(); // 1
+extern "C" static void func_804DD5BC(); // 1
+extern "C" static void func_804DD5C4(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daCanoe_Method[8];
 extern "C" extern void* g_profile_CANOE[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -509,6 +508,8 @@ extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void abs(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -799,30 +800,30 @@ asm void daCanoe_c::create() {
 
 
 /* ############################################################################################## */
-/* 804DD734-804DD754 0020+00 s=0 e=0 z=0  None .data      l_daCanoe_Method                                             */
-SECTION_DATA void* l_daCanoe_Method[8] = {
+/* 804DD734-804DD754 0020+00 s=1 e=0 z=0  None .data      l_daCanoe_Method                                             */
+SECTION_DATA static void* l_daCanoe_Method[8] = {
+	(void*)daCanoe_Create__FP10fopAc_ac_c,
+	(void*)daCanoe_Delete__FP9daCanoe_c,
+	(void*)daCanoe_Execute__FP9daCanoe_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daCanoe_Draw__FP9daCanoe_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 804DD754-804DD784 0030+00 s=0 e=0 z=0  None .data      g_profile_CANOE                                              */
+/* 804DD754-804DD784 0030+00 s=0 e=0 z=1  None .data      g_profile_CANOE                                              */
 SECTION_DATA void* g_profile_CANOE[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0004FFFD,
 	(void*)0x00ED0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000014DC,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02D40000,
-	(void*)NULL,
+	(void*)&l_daCanoe_Method,
 	(void*)0x00044100,
 	(void*)0x030E0000,
 };
@@ -831,55 +832,55 @@ SECTION_DATA void* g_profile_CANOE[12] = {
 SECTION_DATA static void* __vt__8cM3dGPla[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGPlaFv,
 };
 
 /* 804DD790-804DD79C 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 804DD79C-804DD7A8 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 804DD7A8-804DD7B4 000C+00 s=1 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 804DD7B4-804DD7D8 0024+00 s=2 e=0 z=0  None .data      __vt__13dBgS_LinkAcch                                        */
 SECTION_DATA static void* __vt__13dBgS_LinkAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__13dBgS_LinkAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_804DD5C4,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_804DD5BC,
 };
 
 /* 804DD7D8-804DD7E4 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 804DD7E4-804DD7F0 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 804DAB18-804DABE4 00CC+00 s=2 e=0 z=0  None .text      __dt__8dCcD_CylFv                                            */
@@ -904,7 +905,7 @@ asm dCcD_Cyl::dCcD_Cyl() {
 #pragma pop
 
 
-/* 804DAC68-804DACB0 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 804DAC68-804DACB0 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -915,7 +916,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 804DACB0-804DACF8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 804DACB0-804DACF8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -926,7 +927,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 804DACF8-804DAD68 0070+00 s=4 e=0 z=0  None .text      __dt__13dBgS_LinkAcchFv                                      */
+/* 804DACF8-804DAD68 0070+00 s=5 e=0 z=0  None .text      __dt__13dBgS_LinkAcchFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -948,7 +949,7 @@ asm dBgS_LinkAcch::dBgS_LinkAcch() {
 #pragma pop
 
 
-/* 804DADBC-804DAE2C 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 804DADBC-804DAE2C 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -959,7 +960,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 804DAE2C-804DAE88 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 804DAE2C-804DAE88 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -970,11 +971,11 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 804DAE88-804DAEA8 0020+00 s=0 e=0 z=0  None .text      daCanoe_Create__FP10fopAc_ac_c                               */
+/* 804DAE88-804DAEA8 0020+00 s=1 e=0 z=0  None .text      daCanoe_Create__FP10fopAc_ac_c                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCanoe_Create(fopAc_ac_c* param_0) {
+asm static void daCanoe_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/daCanoe_Create__FP10fopAc_ac_c.s"
 }
@@ -992,11 +993,11 @@ asm daCanoe_c::~daCanoe_c() {
 #pragma pop
 
 
-/* 804DAFE0-804DB008 0028+00 s=0 e=0 z=0  None .text      daCanoe_Delete__FP9daCanoe_c                                 */
+/* 804DAFE0-804DB008 0028+00 s=1 e=0 z=0  None .text      daCanoe_Delete__FP9daCanoe_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCanoe_Delete(daCanoe_c* param_0) {
+asm static void daCanoe_Delete(daCanoe_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/daCanoe_Delete__FP9daCanoe_c.s"
 }
@@ -1080,7 +1081,7 @@ asm void daCanoe_c::frontBackBgCheck() {
 #pragma pop
 
 
-/* 804DC2E8-804DC330 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 804DC2E8-804DC330 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1186,11 +1187,11 @@ asm void daCanoe_c::execute() {
 #pragma pop
 
 
-/* 804DD33C-804DD35C 0020+00 s=0 e=0 z=0  None .text      daCanoe_Execute__FP9daCanoe_c                                */
+/* 804DD33C-804DD35C 0020+00 s=1 e=0 z=0  None .text      daCanoe_Execute__FP9daCanoe_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCanoe_Execute(daCanoe_c* param_0) {
+asm static void daCanoe_Execute(daCanoe_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/daCanoe_Execute__FP9daCanoe_c.s"
 }
@@ -1208,18 +1209,18 @@ asm void daCanoe_c::draw() {
 #pragma pop
 
 
-/* 804DD554-804DD574 0020+00 s=0 e=0 z=0  None .text      daCanoe_Draw__FP9daCanoe_c                                   */
+/* 804DD554-804DD574 0020+00 s=1 e=0 z=0  None .text      daCanoe_Draw__FP9daCanoe_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCanoe_Draw(daCanoe_c* param_0) {
+asm static void daCanoe_Draw(daCanoe_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/daCanoe_Draw__FP9daCanoe_c.s"
 }
 #pragma pop
 
 
-/* 804DD574-804DD5BC 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 804DD574-804DD5BC 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1230,22 +1231,22 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 804DD5BC-804DD5C4 0008+00 s=0 e=0 z=0  None .text      @36@__dt__13dBgS_LinkAcchFv                                  */
+/* 804DD5BC-804DD5C4 0008+00 s=1 e=0 z=0  None .text      @36@__dt__13dBgS_LinkAcchFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_804DD5BC() {
+extern "C" asm static void func_804DD5BC() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/func_804DD5BC.s"
 }
 #pragma pop
 
 
-/* 804DD5C4-804DD5CC 0008+00 s=0 e=0 z=0  None .text      @20@__dt__13dBgS_LinkAcchFv                                  */
+/* 804DD5C4-804DD5CC 0008+00 s=1 e=0 z=0  None .text      @20@__dt__13dBgS_LinkAcchFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_804DD5C4() {
+extern "C" asm static void func_804DD5C4() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/func_804DD5C4.s"
 }

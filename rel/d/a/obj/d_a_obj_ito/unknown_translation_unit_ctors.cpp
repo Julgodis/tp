@@ -19,6 +19,7 @@ extern void* const data_8047D7FC[2];
 // 
 
 
+extern "C" void __sinit_d_a_obj_ito_cpp(); // 1
 
 // 
 // Declarations:

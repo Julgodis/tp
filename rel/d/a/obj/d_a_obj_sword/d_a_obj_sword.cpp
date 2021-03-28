@@ -75,6 +75,21 @@ struct daItemBase_c {
 	/* 80037A74 */ void show();
 	/* 80037ACC */ void chkDraw();
 	/* 80144724 */ void DeleteBase(char const*);
+	/* 8014474C */ bool clothCreate();
+	/* 80144754 */ bool __CreateHeap();
+	/* 80144B94 */ void DrawBase();
+	/* 80144C30 */ void RotateYBase();
+	/* 80144C7C */ void setListStart();
+	/* 80144CC4 */ void settingBeforeDraw();
+	/* 80144D18 */ void setTevStr();
+	/* 80144D70 */ void setShadow();
+	/* 80144EDC */ void animEntry();
+	/* 80145144 */ void chkFlag(int);
+	/* 80145164 */ void getTevFrm();
+	/* 80145180 */ void getBtpFrm();
+	/* 8014519C */ void getShadowSize();
+	/* 801451B4 */ void getCollisionH();
+	/* 801451D0 */ void getCollisionR();
 };
 
 struct dEvt_control_c {
@@ -111,10 +126,10 @@ struct cM3dGCir {
 // Forward References:
 // 
 
-void daObjSword_Draw(daObjSword_c*); // 2
-void daObjSword_Execute(daObjSword_c*); // 2
-void daObjSword_Delete(daObjSword_c*); // 2
-void daObjSword_Create(daObjSword_c*); // 2
+static void daObjSword_Draw(daObjSword_c*); // 2
+static void daObjSword_Execute(daObjSword_c*); // 2
+static void daObjSword_Delete(daObjSword_c*); // 2
+static void daObjSword_Create(daObjSword_c*); // 2
 
 extern "C" void initBaseMtx__12daObjSword_cFv(); // 1
 extern "C" void setBaseMtx__12daObjSword_cFv(); // 1
@@ -132,16 +147,15 @@ extern "C" void actionGetDemo__12daObjSword_cFv(); // 1
 extern "C" void execute__12daObjSword_cFv(); // 1
 extern "C" void draw__12daObjSword_cFv(); // 1
 extern "C" void _delete__12daObjSword_cFv(); // 1
-extern "C" void daObjSword_Draw__FP12daObjSword_c(); // 1
-extern "C" void daObjSword_Execute__FP12daObjSword_c(); // 1
-extern "C" void daObjSword_Delete__FP12daObjSword_c(); // 1
-extern "C" void daObjSword_Create__FP12daObjSword_c(); // 1
+extern "C" static void daObjSword_Draw__FP12daObjSword_c(); // 1
+extern "C" static void daObjSword_Execute__FP12daObjSword_c(); // 1
+extern "C" static void daObjSword_Delete__FP12daObjSword_c(); // 1
+extern "C" static void daObjSword_Create__FP12daObjSword_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" void func_80CFDE6C(); // 1
-extern "C" void func_80CFDE74(); // 1
+extern "C" static void func_80CFDE6C(); // 1
+extern "C" static void func_80CFDE74(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daObjSword_Method[8];
 extern "C" extern void* g_profile_Obj_Sword[12];
 
 // 
@@ -185,6 +199,21 @@ extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
 extern "C" void __ct__10dCcD_GSttsFv(); // 1
 extern "C" void __ct__12dCcD_GObjInfFv(); // 1
 extern "C" void DeleteBase__12daItemBase_cFPCc(); // 1
+extern "C" bool clothCreate__12daItemBase_cFv(); // 1
+extern "C" bool __CreateHeap__12daItemBase_cFv(); // 1
+extern "C" void DrawBase__12daItemBase_cFv(); // 1
+extern "C" void RotateYBase__12daItemBase_cFv(); // 1
+extern "C" void setListStart__12daItemBase_cFv(); // 1
+extern "C" void settingBeforeDraw__12daItemBase_cFv(); // 1
+extern "C" void setTevStr__12daItemBase_cFv(); // 1
+extern "C" void setShadow__12daItemBase_cFv(); // 1
+extern "C" void animEntry__12daItemBase_cFv(); // 1
+extern "C" void chkFlag__12daItemBase_cFi(); // 1
+extern "C" void getTevFrm__12daItemBase_cFv(); // 1
+extern "C" void getBtpFrm__12daItemBase_cFv(); // 1
+extern "C" void getShadowSize__12daItemBase_cFv(); // 1
+extern "C" void getCollisionH__12daItemBase_cFv(); // 1
+extern "C" void getCollisionR__12daItemBase_cFv(); // 1
 extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
 extern "C" void __dt__8cM3dGCirFv(); // 1
 extern "C" void __dl__FPv(); // 1
@@ -193,6 +222,8 @@ extern "C" void PSMTXTrans(); // 1
 extern "C" void __ptmf_scall(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* field_item_res__10dItem_data[1020];
@@ -265,21 +296,21 @@ asm void daObjSword_c::Create() {
 SECTION_DATA static void* lit_3900[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionWait__12daObjSword_cFv,
 };
 
 /* 80CFDED8-80CFDEE4 000C+00 s=1 e=0 z=0  None .data      @3901                                                        */
 SECTION_DATA static void* lit_3901[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionOrderGetDemo__12daObjSword_cFv,
 };
 
 /* 80CFDEE4-80CFDEF0 000C+00 s=1 e=0 z=0  None .data      @3902                                                        */
 SECTION_DATA static void* lit_3902[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionGetDemo__12daObjSword_cFv,
 };
 
 /* 80CFDEF0-80CFDF14 0024+00 s=1 e=0 z=0  None .data      l_demoFunc$3899                                              */
@@ -289,30 +320,30 @@ SECTION_DATA static u8 data_80CFDEF0[36] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80CFDF14-80CFDF34 0020+00 s=0 e=0 z=0  None .data      l_daObjSword_Method                                          */
-SECTION_DATA void* l_daObjSword_Method[8] = {
+/* 80CFDF14-80CFDF34 0020+00 s=1 e=0 z=0  None .data      l_daObjSword_Method                                          */
+SECTION_DATA static void* l_daObjSword_Method[8] = {
+	(void*)daObjSword_Create__FP12daObjSword_c,
+	(void*)daObjSword_Delete__FP12daObjSword_c,
+	(void*)daObjSword_Execute__FP12daObjSword_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjSword_Draw__FP12daObjSword_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80CFDF34-80CFDF64 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Sword                                          */
+/* 80CFDF34-80CFDF64 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Sword                                          */
 SECTION_DATA void* g_profile_Obj_Sword[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01AC0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000938,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x024A0000,
-	(void*)NULL,
+	(void*)&l_daObjSword_Method,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -321,69 +352,69 @@ SECTION_DATA void* g_profile_Obj_Sword[12] = {
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 80CFDF70-80CFDF7C 000C+00 s=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80CFDF7C-80CFDF88 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80CFDF88-80CFDFCC 0044+00 s=1 e=0 z=0  None .data      __vt__12daObjSword_c                                         */
 SECTION_DATA static void* __vt__12daObjSword_c[17] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)DrawBase__12daItemBase_cFv,
+	(void*)setListStart__12daItemBase_cFv,
+	(void*)settingBeforeDraw__12daItemBase_cFv,
+	(void*)setTevStr__12daItemBase_cFv,
+	(void*)setShadow__12daItemBase_cFv,
+	(void*)animEntry__12daItemBase_cFv,
+	(void*)RotateYBase__12daItemBase_cFv,
+	(void*)clothCreate__12daItemBase_cFv,
+	(void*)__CreateHeap__12daItemBase_cFv,
+	(void*)chkFlag__12daItemBase_cFi,
+	(void*)getTevFrm__12daItemBase_cFv,
+	(void*)getBtpFrm__12daItemBase_cFv,
+	(void*)getShadowSize__12daItemBase_cFv,
+	(void*)getCollisionH__12daItemBase_cFv,
+	(void*)getCollisionR__12daItemBase_cFv,
 };
 
 /* 80CFDFCC-80CFDFD8 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 80CFDFD8-80CFDFE4 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80CFDFE4-80CFE008 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80CFDE74,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80CFDE6C,
 };
 
 /* 80CFD67C-80CFD848 01CC+00 s=1 e=0 z=0  None .text      create__12daObjSword_cFv                                     */
@@ -397,7 +428,7 @@ asm void daObjSword_c::create() {
 #pragma pop
 
 
-/* 80CFD848-80CFD890 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80CFD848-80CFD890 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -408,7 +439,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80CFD890-80CFD8D8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80CFD890-80CFD8D8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -419,7 +450,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80CFD8D8-80CFD934 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80CFD8D8-80CFD934 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -430,7 +461,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80CFD934-80CFD9A4 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80CFD934-80CFD9A4 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -441,7 +472,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 80CFD9A4-80CFDA14 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80CFD9A4-80CFDA14 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -452,7 +483,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80CFDA14-80CFDA8C 0078+00 s=0 e=0 z=0  None .text      actionWait__12daObjSword_cFv                                 */
+/* 80CFDA14-80CFDA8C 0078+00 s=1 e=0 z=0  None .text      actionWait__12daObjSword_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -474,7 +505,7 @@ asm void daObjSword_c::initActionOrderGetDemo() {
 #pragma pop
 
 
-/* 80CFDB04-80CFDB80 007C+00 s=0 e=0 z=0  None .text      actionOrderGetDemo__12daObjSword_cFv                         */
+/* 80CFDB04-80CFDB80 007C+00 s=1 e=0 z=0  None .text      actionOrderGetDemo__12daObjSword_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -493,7 +524,7 @@ asm void daObjSword_c::actionOrderGetDemo() {
 SECTION_DEAD char const* const stringBase_80CFDE84 = "DEFAULT_GETITEM";
 #pragma pop
 
-/* 80CFDB80-80CFDC1C 009C+00 s=0 e=0 z=0  None .text      actionGetDemo__12daObjSword_cFv                              */
+/* 80CFDB80-80CFDC1C 009C+00 s=1 e=0 z=0  None .text      actionGetDemo__12daObjSword_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -537,51 +568,51 @@ asm void daObjSword_c::_delete() {
 #pragma pop
 
 
-/* 80CFDDA4-80CFDDC4 0020+00 s=0 e=0 z=0  None .text      daObjSword_Draw__FP12daObjSword_c                            */
+/* 80CFDDA4-80CFDDC4 0020+00 s=1 e=0 z=0  None .text      daObjSword_Draw__FP12daObjSword_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSword_Draw(daObjSword_c* param_0) {
+asm static void daObjSword_Draw(daObjSword_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/daObjSword_Draw__FP12daObjSword_c.s"
 }
 #pragma pop
 
 
-/* 80CFDDC4-80CFDDE4 0020+00 s=0 e=0 z=0  None .text      daObjSword_Execute__FP12daObjSword_c                         */
+/* 80CFDDC4-80CFDDE4 0020+00 s=1 e=0 z=0  None .text      daObjSword_Execute__FP12daObjSword_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSword_Execute(daObjSword_c* param_0) {
+asm static void daObjSword_Execute(daObjSword_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/daObjSword_Execute__FP12daObjSword_c.s"
 }
 #pragma pop
 
 
-/* 80CFDDE4-80CFDE04 0020+00 s=0 e=0 z=0  None .text      daObjSword_Delete__FP12daObjSword_c                          */
+/* 80CFDDE4-80CFDE04 0020+00 s=1 e=0 z=0  None .text      daObjSword_Delete__FP12daObjSword_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSword_Delete(daObjSword_c* param_0) {
+asm static void daObjSword_Delete(daObjSword_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/daObjSword_Delete__FP12daObjSword_c.s"
 }
 #pragma pop
 
 
-/* 80CFDE04-80CFDE24 0020+00 s=0 e=0 z=0  None .text      daObjSword_Create__FP12daObjSword_c                          */
+/* 80CFDE04-80CFDE24 0020+00 s=1 e=0 z=0  None .text      daObjSword_Create__FP12daObjSword_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSword_Create(daObjSword_c* param_0) {
+asm static void daObjSword_Create(daObjSword_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/daObjSword_Create__FP12daObjSword_c.s"
 }
 #pragma pop
 
 
-/* 80CFDE24-80CFDE6C 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80CFDE24-80CFDE6C 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -592,22 +623,22 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80CFDE6C-80CFDE74 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80CFDE6C-80CFDE74 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80CFDE6C() {
+extern "C" asm static void func_80CFDE6C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/func_80CFDE6C.s"
 }
 #pragma pop
 
 
-/* 80CFDE74-80CFDE7C 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80CFDE74-80CFDE7C 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80CFDE74() {
+extern "C" asm static void func_80CFDE74() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/func_80CFDE74.s"
 }

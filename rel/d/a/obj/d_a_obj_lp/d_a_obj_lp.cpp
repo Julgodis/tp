@@ -104,33 +104,32 @@ struct dBgS_ObjGndChk_Spl {
 // Forward References:
 // 
 
-void daObj_Lp_Draw(obj_lp_class*); // 2
+static void daObj_Lp_Draw(obj_lp_class*); // 2
 static void s_ks_sub(void*, void*); // 2
 static void hit_check(obj_lp_class*, wd_ss*); // 2
 static void hasu_action(obj_lp_class*, wd_ss*); // 2
 static void set_out_check(obj_lp_class*, cXyz*); // 2
 static void daObj_Lp_Execute(obj_lp_class*); // 2
-bool daObj_Lp_IsDelete(obj_lp_class*); // 2
-void daObj_Lp_Delete(obj_lp_class*); // 2
+static bool daObj_Lp_IsDelete(obj_lp_class*); // 2
+static void daObj_Lp_Delete(obj_lp_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void set_pos_check(obj_lp_class*, int); // 2
-void daObj_Lp_Create(fopAc_ac_c*); // 2
+static void daObj_Lp_Create(fopAc_ac_c*); // 2
 
-extern "C" void daObj_Lp_Draw__FP12obj_lp_class(); // 1
+extern "C" static void daObj_Lp_Draw__FP12obj_lp_class(); // 1
 extern "C" static void s_ks_sub__FPvPv(); // 1
 extern "C" static void hit_check__FP12obj_lp_classP5wd_ss(); // 1
 extern "C" static void hasu_action__FP12obj_lp_classP5wd_ss(); // 1
 extern "C" static void set_out_check__FP12obj_lp_classP4cXyz(); // 1
 extern "C" static void daObj_Lp_Execute__FP12obj_lp_class(); // 1
-extern "C" bool daObj_Lp_IsDelete__FP12obj_lp_class(); // 1
-extern "C" void daObj_Lp_Delete__FP12obj_lp_class(); // 1
+extern "C" static bool daObj_Lp_IsDelete__FP12obj_lp_class(); // 1
+extern "C" static void daObj_Lp_Delete__FP12obj_lp_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void set_pos_check__FP12obj_lp_classi(); // 1
-extern "C" void daObj_Lp_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObj_Lp_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__5wd_ssFv(); // 1
 extern "C" void __ct__5wd_ssFv(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObj_Lp_Method[8];
 extern "C" extern void* g_profile_OBJ_LP[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -264,6 +263,8 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
 extern "C" extern void* __vt__19mDoExt_3DlineMat0_c[5];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -281,11 +282,11 @@ SECTION_DATA static u8 data_80C55AD8[4] = {
 	0x14, 0x0A, 0x0A, 0xFF,
 };
 
-/* 80C54198-80C542FC 0164+00 s=0 e=0 z=0  None .text      daObj_Lp_Draw__FP12obj_lp_class                              */
+/* 80C54198-80C542FC 0164+00 s=1 e=0 z=0  None .text      daObj_Lp_Draw__FP12obj_lp_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Lp_Draw(obj_lp_class* param_0) {
+asm static void daObj_Lp_Draw(obj_lp_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/daObj_Lp_Draw__FP12obj_lp_class.s"
 }
@@ -540,7 +541,7 @@ SECTION_DEAD char const* const stringBase_80C55AC7 = "Obj_lp";
 SECTION_DEAD char const* const stringBase_80C55ACE = "F_SP127";
 #pragma pop
 
-/* 80C54D40-80C550F0 03B0+00 s=1 e=0 z=0  None .text      daObj_Lp_Execute__FP12obj_lp_class                           */
+/* 80C54D40-80C550F0 03B0+00 s=2 e=0 z=0  None .text      daObj_Lp_Execute__FP12obj_lp_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -551,17 +552,17 @@ asm static void daObj_Lp_Execute(obj_lp_class* param_0) {
 #pragma pop
 
 
-/* 80C550F0-80C550F8 0008+00 s=0 e=0 z=0  None .text      daObj_Lp_IsDelete__FP12obj_lp_class                          */
-bool daObj_Lp_IsDelete(obj_lp_class* param_0) {
+/* 80C550F0-80C550F8 0008+00 s=1 e=0 z=0  None .text      daObj_Lp_IsDelete__FP12obj_lp_class                          */
+static bool daObj_Lp_IsDelete(obj_lp_class* param_0) {
 	return true;
 }
 
 
-/* 80C550F8-80C5518C 0094+00 s=0 e=0 z=0  None .text      daObj_Lp_Delete__FP12obj_lp_class                            */
+/* 80C550F8-80C5518C 0094+00 s=1 e=0 z=0  None .text      daObj_Lp_Delete__FP12obj_lp_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Lp_Delete(obj_lp_class* param_0) {
+asm static void daObj_Lp_Delete(obj_lp_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/daObj_Lp_Delete__FP12obj_lp_class.s"
 }
@@ -591,30 +592,30 @@ asm static void set_pos_check(obj_lp_class* param_0, int param_1) {
 
 
 /* ############################################################################################## */
-/* 80C55ADC-80C55AFC 0020+00 s=0 e=0 z=0  None .data      l_daObj_Lp_Method                                            */
-SECTION_DATA void* l_daObj_Lp_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80C55ADC-80C55AFC 0020+00 s=1 e=0 z=0  None .data      l_daObj_Lp_Method                                            */
+SECTION_DATA static void* l_daObj_Lp_Method[8] = {
+	(void*)daObj_Lp_Create__FP10fopAc_ac_c,
+	(void*)daObj_Lp_Delete__FP12obj_lp_class,
+	(void*)daObj_Lp_Execute__FP12obj_lp_class,
+	(void*)daObj_Lp_IsDelete__FP12obj_lp_class,
+	(void*)daObj_Lp_Draw__FP12obj_lp_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C55AFC-80C55B2C 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_LP                                             */
+/* 80C55AFC-80C55B2C 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_LP                                             */
 SECTION_DATA void* g_profile_OBJ_LP[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01160000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x0000ADB8,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02C40000,
-	(void*)NULL,
+	(void*)&l_daObj_Lp_Method,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -628,11 +629,11 @@ SECTION_DATA static void* __vt__18mDoExt_3DlineMat_c[5] = {
 	(void*)NULL,
 };
 
-/* 80C55488-80C559C8 0540+00 s=0 e=0 z=0  None .text      daObj_Lp_Create__FP10fopAc_ac_c                              */
+/* 80C55488-80C559C8 0540+00 s=1 e=0 z=0  None .text      daObj_Lp_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Lp_Create(fopAc_ac_c* param_0) {
+asm static void daObj_Lp_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/daObj_Lp_Create__FP10fopAc_ac_c.s"
 }

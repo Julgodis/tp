@@ -99,15 +99,17 @@ struct Z2SeMgr {
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-struct J3DShape {
-	/* 80315300 */ void loadPreDrawSetting() const;
+struct J3DPacket;
+struct J3DDrawBuffer {
+	/* 8032548C */ void entryImm(J3DPacket*, u16);
 };
 
 struct J3DPacket {
+	/* 80312750 */ bool entry(J3DDrawBuffer*);
 };
 
-struct J3DDrawBuffer {
-	/* 8032548C */ void entryImm(J3DPacket*, u16);
+struct J3DShape {
+	/* 80315300 */ void loadPreDrawSetting() const;
 };
 
 // 
@@ -115,10 +117,10 @@ struct J3DDrawBuffer {
 // 
 
 static void daObjWchain_createHeap(fopAc_ac_c*); // 2
-void daObjWchain_Create(fopAc_ac_c*); // 2
-void daObjWchain_Delete(daObjWchain_c*); // 2
-void daObjWchain_Execute(daObjWchain_c*); // 2
-void daObjWchain_Draw(daObjWchain_c*); // 2
+static void daObjWchain_Create(fopAc_ac_c*); // 2
+static void daObjWchain_Delete(daObjWchain_c*); // 2
+static void daObjWchain_Execute(daObjWchain_c*); // 2
+static void daObjWchain_Draw(daObjWchain_c*); // 2
 
 extern "C" void createHeap__13daObjWchain_cFv(); // 1
 extern "C" static void daObjWchain_createHeap__FP10fopAc_ac_c(); // 1
@@ -127,19 +129,18 @@ extern "C" void __dt__5csXyzFv(); // 1
 extern "C" void __ct__5csXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void daObjWchain_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjWchain_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__13daObjWchain_cFv(); // 1
-extern "C" void daObjWchain_Delete__FP13daObjWchain_c(); // 1
+extern "C" static void daObjWchain_Delete__FP13daObjWchain_c(); // 1
 extern "C" void setMatrix__13daObjWchain_cFv(); // 1
 extern "C" void getChainAngleZ__13daObjWchain_cFP4cXyzi(); // 1
 extern "C" void setChainPos__13daObjWchain_cFv(); // 1
 extern "C" void execute__13daObjWchain_cFv(); // 1
-extern "C" void daObjWchain_Execute__FP13daObjWchain_c(); // 1
+extern "C" static void daObjWchain_Execute__FP13daObjWchain_c(); // 1
 extern "C" void draw__19daObjWchain_shape_cFv(); // 1
 extern "C" void draw__13daObjWchain_cFv(); // 1
-extern "C" void daObjWchain_Draw__FP13daObjWchain_c(); // 1
+extern "C" static void daObjWchain_Draw__FP13daObjWchain_c(); // 1
 extern "C" void __dt__19daObjWchain_shape_cFv(); // 1
-extern "C" extern void* l_daObjWchain_Method[8];
 extern "C" extern void* g_profile_Obj_Wchain[12];
 
 // 
@@ -207,6 +208,7 @@ extern "C" void cLib_chaseF__FPfff(); // 1
 extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
 extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
 extern "C" void __dl__FPv(); // 1
+extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
 extern "C" void loadPreDrawSetting__8J3DShapeCFv(); // 1
 extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
 extern "C" void PSMTXCopy(); // 1
@@ -227,6 +229,8 @@ extern "C" void _savegpr_22(); // 1
 extern "C" void _restgpr_20(); // 1
 extern "C" void _restgpr_22(); // 1
 extern "C" void abs(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__9J3DPacket[5];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
@@ -325,30 +329,30 @@ SECTION_RODATA static u8 const lit_3759[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80D319E4-80D31A04 0020+00 s=0 e=0 z=0  None .data      l_daObjWchain_Method                                         */
-SECTION_DATA void* l_daObjWchain_Method[8] = {
+/* 80D319E4-80D31A04 0020+00 s=1 e=0 z=0  None .data      l_daObjWchain_Method                                         */
+SECTION_DATA static void* l_daObjWchain_Method[8] = {
+	(void*)daObjWchain_Create__FP10fopAc_ac_c,
+	(void*)daObjWchain_Delete__FP13daObjWchain_c,
+	(void*)daObjWchain_Execute__FP13daObjWchain_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjWchain_Draw__FP13daObjWchain_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D31A04-80D31A34 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Wchain                                         */
+/* 80D31A04-80D31A34 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Wchain                                         */
 SECTION_DATA void* g_profile_Obj_Wchain[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01590000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000007BC,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00F70000,
-	(void*)NULL,
+	(void*)&l_daObjWchain_Method,
 	(void*)0x00060100,
 	(void*)0x030E0000,
 };
@@ -357,9 +361,9 @@ SECTION_DATA void* g_profile_Obj_Wchain[12] = {
 SECTION_DATA static void* __vt__19daObjWchain_shape_c[5] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__19daObjWchain_shape_cFv,
+	(void*)__dt__19daObjWchain_shape_cFv,
 };
 
 /* 80D2FFBC-80D30394 03D8+00 s=1 e=0 z=0  None .text      create__13daObjWchain_cFv                                    */
@@ -407,11 +411,11 @@ asm cXyz::~cXyz() {
 #pragma pop
 
 
-/* 80D30414-80D30434 0020+00 s=0 e=0 z=0  None .text      daObjWchain_Create__FP10fopAc_ac_c                           */
+/* 80D30414-80D30434 0020+00 s=1 e=0 z=0  None .text      daObjWchain_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjWchain_Create(fopAc_ac_c* param_0) {
+asm static void daObjWchain_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/daObjWchain_Create__FP10fopAc_ac_c.s"
 }
@@ -429,11 +433,11 @@ asm daObjWchain_c::~daObjWchain_c() {
 #pragma pop
 
 
-/* 80D3050C-80D30534 0028+00 s=0 e=0 z=0  None .text      daObjWchain_Delete__FP13daObjWchain_c                        */
+/* 80D3050C-80D30534 0028+00 s=1 e=0 z=0  None .text      daObjWchain_Delete__FP13daObjWchain_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjWchain_Delete(daObjWchain_c* param_0) {
+asm static void daObjWchain_Delete(daObjWchain_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/daObjWchain_Delete__FP13daObjWchain_c.s"
 }
@@ -560,11 +564,11 @@ asm void daObjWchain_c::execute() {
 #pragma pop
 
 
-/* 80D313F8-80D31418 0020+00 s=0 e=0 z=0  None .text      daObjWchain_Execute__FP13daObjWchain_c                       */
+/* 80D313F8-80D31418 0020+00 s=1 e=0 z=0  None .text      daObjWchain_Execute__FP13daObjWchain_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjWchain_Execute(daObjWchain_c* param_0) {
+asm static void daObjWchain_Execute(daObjWchain_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/daObjWchain_Execute__FP13daObjWchain_c.s"
 }
@@ -575,7 +579,7 @@ asm void daObjWchain_Execute(daObjWchain_c* param_0) {
 /* 80D319E0-80D319E4 0004+00 s=1 e=0 z=0  None .rodata    @4364                                                        */
 SECTION_RODATA static u32 const lit_4364 = 0xC10C0000;
 
-/* 80D31418-80D31810 03F8+00 s=0 e=0 z=0  None .text      draw__19daObjWchain_shape_cFv                                */
+/* 80D31418-80D31810 03F8+00 s=1 e=0 z=0  None .text      draw__19daObjWchain_shape_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -597,18 +601,18 @@ asm void daObjWchain_c::draw() {
 #pragma pop
 
 
-/* 80D318A0-80D318C0 0020+00 s=0 e=0 z=0  None .text      daObjWchain_Draw__FP13daObjWchain_c                          */
+/* 80D318A0-80D318C0 0020+00 s=1 e=0 z=0  None .text      daObjWchain_Draw__FP13daObjWchain_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjWchain_Draw(daObjWchain_c* param_0) {
+asm static void daObjWchain_Draw(daObjWchain_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/daObjWchain_Draw__FP13daObjWchain_c.s"
 }
 #pragma pop
 
 
-/* 80D318C0-80D3191C 005C+00 s=0 e=0 z=0  None .text      __dt__19daObjWchain_shape_cFv                                */
+/* 80D318C0-80D3191C 005C+00 s=1 e=0 z=0  None .text      __dt__19daObjWchain_shape_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

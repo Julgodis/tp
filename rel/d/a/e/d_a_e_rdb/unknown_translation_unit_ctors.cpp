@@ -19,6 +19,7 @@ extern void* const data_8076B448[2];
 // 
 
 
+extern "C" void __sinit_d_a_e_rdb_cpp(); // 1
 
 // 
 // Declarations:

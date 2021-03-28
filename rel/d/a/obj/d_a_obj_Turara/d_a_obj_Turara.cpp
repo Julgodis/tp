@@ -127,10 +127,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -170,6 +170,10 @@ struct dBgS_Acch {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 80078690 */ bool Create();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -224,10 +228,10 @@ struct cM3dGCir {
 	/* 8026EF18 */ ~cM3dGCir();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -238,10 +242,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daTurara_Draw(daTurara_c*); // 2
-void daTurara_Execute(daTurara_c*); // 2
-void daTurara_Delete(daTurara_c*); // 2
-void daTurara_Create(fopAc_ac_c*); // 2
+static void daTurara_Draw(daTurara_c*); // 2
+static void daTurara_Execute(daTurara_c*); // 2
+static void daTurara_Delete(daTurara_c*); // 2
+static void daTurara_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__14daTurara_HIO_cFv(); // 1
 extern "C" void __dt__18fOpAcm_HIO_entry_cFv(); // 1
@@ -271,17 +275,17 @@ extern "C" void init_modeDropEnd2__10daTurara_cFv(); // 1
 extern "C" void modeDropEnd2__10daTurara_cFv(); // 1
 extern "C" void Draw__10daTurara_cFv(); // 1
 extern "C" void Delete__10daTurara_cFv(); // 1
-extern "C" void daTurara_Draw__FP10daTurara_c(); // 1
-extern "C" void daTurara_Execute__FP10daTurara_c(); // 1
-extern "C" void daTurara_Delete__FP10daTurara_c(); // 1
-extern "C" void daTurara_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daTurara_Draw__FP10daTurara_c(); // 1
+extern "C" static void daTurara_Execute__FP10daTurara_c(); // 1
+extern "C" static void daTurara_Delete__FP10daTurara_c(); // 1
+extern "C" static void daTurara_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__14daTurara_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_Turara_cpp(); // 1
-extern "C" void func_80B9E690(); // 1
-extern "C" void func_80B9E698(); // 1
-extern "C" void func_80B9E6A0(); // 1
-extern "C" void func_80B9E6A8(); // 1
+extern "C" static void func_80B9E690(); // 1
+extern "C" static void func_80B9E698(); // 1
+extern "C" static void func_80B9E6A0(); // 1
+extern "C" static void func_80B9E6A8(); // 1
 extern "C" void __dt__17dEvLib_callback_cFv(); // 1
 extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
 extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
@@ -289,7 +293,6 @@ extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
 extern "C" void __dt__10daTurara_cFv(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daTurara_Method[8];
 extern "C" extern void* g_profile_Obj_Turara[12];
 
 // 
@@ -348,6 +351,10 @@ extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -384,6 +391,8 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__16dBgS_MoveBgActor[10];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -443,35 +452,35 @@ SECTION_DATA static u8 mCcDCyl__10daTurara_c[68] = {
 SECTION_DATA static void* lit_3924[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeWait__10daTurara_cFv,
 };
 
 /* 80B9E9EC-80B9E9F8 000C+00 s=1 e=0 z=0  None .data      @3925                                                        */
 SECTION_DATA static void* lit_3925[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeDropInit__10daTurara_cFv,
 };
 
 /* 80B9E9F8-80B9EA04 000C+00 s=1 e=0 z=0  None .data      @3926                                                        */
 SECTION_DATA static void* lit_3926[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeDrop__10daTurara_cFv,
 };
 
 /* 80B9EA04-80B9EA10 000C+00 s=1 e=0 z=0  None .data      @3927                                                        */
 SECTION_DATA static void* lit_3927[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeDropEnd__10daTurara_cFv,
 };
 
 /* 80B9EA10-80B9EA1C 000C+00 s=1 e=0 z=0  None .data      @3928                                                        */
 SECTION_DATA static void* lit_3928[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeDropEnd2__10daTurara_cFv,
 };
 
 /* 80B9EA1C-80B9EA58 003C+00 s=1 e=0 z=0  None .data      mode_proc$3923                                               */
@@ -482,30 +491,30 @@ SECTION_DATA static u8 data_80B9EA1C[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80B9EA58-80B9EA78 0020+00 s=0 e=0 z=0  None .data      l_daTurara_Method                                            */
-SECTION_DATA void* l_daTurara_Method[8] = {
+/* 80B9EA58-80B9EA78 0020+00 s=1 e=0 z=0  None .data      l_daTurara_Method                                            */
+SECTION_DATA static void* l_daTurara_Method[8] = {
+	(void*)daTurara_Create__FP10fopAc_ac_c,
+	(void*)daTurara_Delete__FP10daTurara_c,
+	(void*)daTurara_Execute__FP10daTurara_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daTurara_Draw__FP10daTurara_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80B9EA78-80B9EAA8 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Turara                                         */
+/* 80B9EA78-80B9EAA8 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Turara                                         */
 SECTION_DATA void* g_profile_Obj_Turara[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00500000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000998,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02210000,
-	(void*)NULL,
+	(void*)&l_daTurara_Method,
 	(void*)0x00044100,
 	(void*)0x000E0000,
 };
@@ -514,101 +523,101 @@ SECTION_DATA void* g_profile_Obj_Turara[12] = {
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80B9EAB4-80B9EAC0 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80B9EAC0-80B9EACC 000C+00 s=2 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 80B9EACC-80B9EAF0 0024+00 s=3 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80B9E6A8,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80B9E6A0,
 };
 
 /* 80B9EAF0-80B9EAFC 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 80B9EAFC-80B9EB08 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80B9EB08-80B9EB20 0018+00 s=3 e=0 z=0  None .data      __vt__17dEvLib_callback_c                                    */
 SECTION_DATA static void* __vt__17dEvLib_callback_c[6] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__17dEvLib_callback_cFv,
+	(void*)eventStart__17dEvLib_callback_cFv,
+	(void*)eventRun__17dEvLib_callback_cFv,
+	(void*)eventEnd__17dEvLib_callback_cFv,
 };
 
 /* 80B9EB20-80B9EB68 0048+00 s=2 e=0 z=0  None .data      __vt__10daTurara_c                                           */
 SECTION_DATA static void* __vt__10daTurara_c[18] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)CreateHeap__10daTurara_cFv,
+	(void*)Create__16dBgS_MoveBgActorFv,
+	(void*)Execute__10daTurara_cFPPA3_A4_f,
+	(void*)Draw__10daTurara_cFv,
+	(void*)Delete__10daTurara_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80B9E698,
+	(void*)func_80B9E690,
+	(void*)eventRun__17dEvLib_callback_cFv,
+	(void*)eventEnd__17dEvLib_callback_cFv,
+	(void*)__dt__10daTurara_cFv,
+	(void*)eventStart__10daTurara_cFv,
 };
 
 /* 80B9EB68-80B9EB74 000C+00 s=2 e=0 z=0  None .data      __vt__14daTurara_HIO_c                                       */
 SECTION_DATA static void* __vt__14daTurara_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14daTurara_HIO_cFv,
 };
 
 /* 80B9EB74-80B9EB80 000C+00 s=3 e=0 z=0  None .data      __vt__18fOpAcm_HIO_entry_c                                   */
 SECTION_DATA static void* __vt__18fOpAcm_HIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__18fOpAcm_HIO_entry_cFv,
 };
 
 /* 80B9EB80-80B9EB8C 000C+00 s=4 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
 /* 80B9CB8C-80B9CBF8 006C+00 s=1 e=0 z=0  None .text      __ct__14daTurara_HIO_cFv                                     */
@@ -622,7 +631,7 @@ asm daTurara_HIO_c::daTurara_HIO_c() {
 #pragma pop
 
 
-/* 80B9CBF8-80B9CC54 005C+00 s=0 e=0 z=0  None .text      __dt__18fOpAcm_HIO_entry_cFv                                 */
+/* 80B9CBF8-80B9CC54 005C+00 s=1 e=0 z=0  None .text      __dt__18fOpAcm_HIO_entry_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -633,7 +642,7 @@ asm fOpAcm_HIO_entry_c::~fOpAcm_HIO_entry_c() {
 #pragma pop
 
 
-/* 80B9CC54-80B9CC9C 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80B9CC54-80B9CC9C 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -713,7 +722,7 @@ SECTION_RODATA static u32 const lit_4264 = 0x3F333333;
 SECTION_DEAD char const* const stringBase_80B9E970 = "M_Turara";
 #pragma pop
 
-/* 80B9CD74-80B9CED8 0164+00 s=0 e=0 z=0  None .text      CreateHeap__10daTurara_cFv                                   */
+/* 80B9CD74-80B9CED8 0164+00 s=1 e=0 z=0  None .text      CreateHeap__10daTurara_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -735,7 +744,7 @@ asm void daTurara_c::create() {
 #pragma pop
 
 
-/* 80B9D29C-80B9D30C 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80B9D29C-80B9D30C 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -746,7 +755,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80B9D30C-80B9D37C 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80B9D30C-80B9D37C 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -757,7 +766,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 80B9D37C-80B9D3C4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80B9D37C-80B9D3C4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -768,7 +777,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80B9D3C4-80B9D40C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80B9D3C4-80B9D40C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -779,7 +788,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80B9D40C-80B9D468 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80B9D40C-80B9D468 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -801,7 +810,7 @@ asm void daTurara_c::setFallStat() {
 #pragma pop
 
 
-/* 80B9D4CC-80B9D548 007C+00 s=0 e=0 z=0  None .text      Execute__10daTurara_cFPPA3_A4_f                              */
+/* 80B9D4CC-80B9D548 007C+00 s=1 e=0 z=0  None .text      Execute__10daTurara_cFPPA3_A4_f                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -844,7 +853,7 @@ asm void daTurara_c::init_modeWait() {
 #pragma pop
 
 
-/* 80B9D738-80B9D998 0260+00 s=0 e=0 z=0  None .text      modeWait__10daTurara_cFv                                     */
+/* 80B9D738-80B9D998 0260+00 s=1 e=0 z=0  None .text      modeWait__10daTurara_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -855,7 +864,7 @@ asm void daTurara_c::modeWait() {
 #pragma pop
 
 
-/* 80B9D998-80B9D9BC 0024+00 s=1 e=0 z=0  None .text      eventStart__10daTurara_cFv                                   */
+/* 80B9D998-80B9D9BC 0024+00 s=2 e=0 z=0  None .text      eventStart__10daTurara_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -877,7 +886,7 @@ asm void daTurara_c::init_modeDropInit() {
 #pragma pop
 
 
-/* 80B9DA00-80B9DA44 0044+00 s=0 e=0 z=0  None .text      modeDropInit__10daTurara_cFv                                 */
+/* 80B9DA00-80B9DA44 0044+00 s=1 e=0 z=0  None .text      modeDropInit__10daTurara_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -899,7 +908,7 @@ asm void daTurara_c::init_modeDrop() {
 #pragma pop
 
 
-/* 80B9DB44-80B9DB90 004C+00 s=0 e=0 z=0  None .text      modeDrop__10daTurara_cFv                                     */
+/* 80B9DB44-80B9DB90 004C+00 s=1 e=0 z=0  None .text      modeDrop__10daTurara_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -932,7 +941,7 @@ asm void daTurara_c::init_modeDropEnd() {
 #pragma pop
 
 
-/* 80B9DE48-80B9E078 0230+00 s=0 e=0 z=0  None .text      modeDropEnd__10daTurara_cFv                                  */
+/* 80B9DE48-80B9E078 0230+00 s=1 e=0 z=0  None .text      modeDropEnd__10daTurara_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -954,7 +963,7 @@ asm void daTurara_c::init_modeDropEnd2() {
 #pragma pop
 
 
-/* 80B9E338-80B9E388 0050+00 s=0 e=0 z=0  None .text      modeDropEnd2__10daTurara_cFv                                 */
+/* 80B9E338-80B9E388 0050+00 s=1 e=0 z=0  None .text      modeDropEnd2__10daTurara_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -965,7 +974,7 @@ asm void daTurara_c::modeDropEnd2() {
 #pragma pop
 
 
-/* 80B9E388-80B9E478 00F0+00 s=0 e=0 z=0  None .text      Draw__10daTurara_cFv                                         */
+/* 80B9E388-80B9E478 00F0+00 s=1 e=0 z=0  None .text      Draw__10daTurara_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -976,7 +985,7 @@ asm void daTurara_c::Draw() {
 #pragma pop
 
 
-/* 80B9E478-80B9E4E0 0068+00 s=0 e=0 z=0  None .text      Delete__10daTurara_cFv                                       */
+/* 80B9E478-80B9E4E0 0068+00 s=1 e=0 z=0  None .text      Delete__10daTurara_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -987,51 +996,51 @@ asm void daTurara_c::Delete() {
 #pragma pop
 
 
-/* 80B9E4E0-80B9E50C 002C+00 s=0 e=0 z=0  None .text      daTurara_Draw__FP10daTurara_c                                */
+/* 80B9E4E0-80B9E50C 002C+00 s=1 e=0 z=0  None .text      daTurara_Draw__FP10daTurara_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTurara_Draw(daTurara_c* param_0) {
+asm static void daTurara_Draw(daTurara_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Turara/d_a_obj_Turara/daTurara_Draw__FP10daTurara_c.s"
 }
 #pragma pop
 
 
-/* 80B9E50C-80B9E52C 0020+00 s=0 e=0 z=0  None .text      daTurara_Execute__FP10daTurara_c                             */
+/* 80B9E50C-80B9E52C 0020+00 s=1 e=0 z=0  None .text      daTurara_Execute__FP10daTurara_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTurara_Execute(daTurara_c* param_0) {
+asm static void daTurara_Execute(daTurara_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Turara/d_a_obj_Turara/daTurara_Execute__FP10daTurara_c.s"
 }
 #pragma pop
 
 
-/* 80B9E52C-80B9E54C 0020+00 s=0 e=0 z=0  None .text      daTurara_Delete__FP10daTurara_c                              */
+/* 80B9E52C-80B9E54C 0020+00 s=1 e=0 z=0  None .text      daTurara_Delete__FP10daTurara_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTurara_Delete(daTurara_c* param_0) {
+asm static void daTurara_Delete(daTurara_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Turara/d_a_obj_Turara/daTurara_Delete__FP10daTurara_c.s"
 }
 #pragma pop
 
 
-/* 80B9E54C-80B9E56C 0020+00 s=0 e=0 z=0  None .text      daTurara_Create__FP10fopAc_ac_c                              */
+/* 80B9E54C-80B9E56C 0020+00 s=1 e=0 z=0  None .text      daTurara_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTurara_Create(fopAc_ac_c* param_0) {
+asm static void daTurara_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Turara/d_a_obj_Turara/daTurara_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80B9E56C-80B9E5B4 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80B9E56C-80B9E5B4 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1042,7 +1051,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80B9E5B4-80B9E620 006C+00 s=1 e=0 z=0  None .text      __dt__14daTurara_HIO_cFv                                     */
+/* 80B9E5B4-80B9E620 006C+00 s=2 e=0 z=0  None .text      __dt__14daTurara_HIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1053,7 +1062,7 @@ asm daTurara_HIO_c::~daTurara_HIO_c() {
 #pragma pop
 
 
-/* 80B9E620-80B9E690 0070+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_Turara_cpp                                   */
+/* 80B9E620-80B9E690 0070+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_Turara_cpp                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1064,51 +1073,51 @@ extern "C" asm void __sinit_d_a_obj_Turara_cpp() {
 #pragma pop
 
 
-/* 80B9E690-80B9E698 0008+00 s=0 e=0 z=0  None .text      @1448@eventStart__10daTurara_cFv                             */
+/* 80B9E690-80B9E698 0008+00 s=1 e=0 z=0  None .text      @1448@eventStart__10daTurara_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80B9E690() {
+extern "C" asm static void func_80B9E690() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Turara/d_a_obj_Turara/func_80B9E690.s"
 }
 #pragma pop
 
 
-/* 80B9E698-80B9E6A0 0008+00 s=0 e=0 z=0  None .text      @1448@__dt__10daTurara_cFv                                   */
+/* 80B9E698-80B9E6A0 0008+00 s=1 e=0 z=0  None .text      @1448@__dt__10daTurara_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80B9E698() {
+extern "C" asm static void func_80B9E698() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Turara/d_a_obj_Turara/func_80B9E698.s"
 }
 #pragma pop
 
 
-/* 80B9E6A0-80B9E6A8 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80B9E6A0-80B9E6A8 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80B9E6A0() {
+extern "C" asm static void func_80B9E6A0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Turara/d_a_obj_Turara/func_80B9E6A0.s"
 }
 #pragma pop
 
 
-/* 80B9E6A8-80B9E6B0 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80B9E6A8-80B9E6B0 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80B9E6A8() {
+extern "C" asm static void func_80B9E6A8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Turara/d_a_obj_Turara/func_80B9E6A8.s"
 }
 #pragma pop
 
 
-/* 80B9E6B0-80B9E6F8 0048+00 s=0 e=0 z=0  None .text      __dt__17dEvLib_callback_cFv                                  */
+/* 80B9E6B0-80B9E6F8 0048+00 s=1 e=0 z=0  None .text      __dt__17dEvLib_callback_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1119,25 +1128,25 @@ asm dEvLib_callback_c::~dEvLib_callback_c() {
 #pragma pop
 
 
-/* 80B9E6F8-80B9E700 0008+00 s=0 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
+/* 80B9E6F8-80B9E700 0008+00 s=1 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
 bool dEvLib_callback_c::eventStart() {
 	return true;
 }
 
 
-/* 80B9E700-80B9E708 0008+00 s=0 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
+/* 80B9E700-80B9E708 0008+00 s=2 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
 bool dEvLib_callback_c::eventRun() {
 	return true;
 }
 
 
-/* 80B9E708-80B9E710 0008+00 s=0 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
+/* 80B9E708-80B9E710 0008+00 s=2 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
 bool dEvLib_callback_c::eventEnd() {
 	return true;
 }
 
 
-/* 80B9E710-80B9E8E0 01D0+00 s=1 e=0 z=0  None .text      __dt__10daTurara_cFv                                         */
+/* 80B9E710-80B9E8E0 01D0+00 s=2 e=0 z=0  None .text      __dt__10daTurara_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

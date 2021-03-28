@@ -23,10 +23,10 @@ struct Vec {
 struct J3DMtxBuffer {
 };
 
-struct J3DModelData {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DModelData {
 };
 
 struct J3DVertexBuffer {

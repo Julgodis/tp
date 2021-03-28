@@ -110,11 +110,11 @@ struct cM3dGCyl {
 // Forward References:
 // 
 
-void daTag_AllMato_Create(void*); // 2
-void daTag_AllMato_Delete(void*); // 2
-void daTag_AllMato_Execute(void*); // 2
-void daTag_AllMato_Draw(void*); // 2
-bool daTag_AllMato_IsDelete(void*); // 2
+static void daTag_AllMato_Create(void*); // 2
+static void daTag_AllMato_Delete(void*); // 2
+static void daTag_AllMato_Execute(void*); // 2
+static void daTag_AllMato_Draw(void*); // 2
+static bool daTag_AllMato_IsDelete(void*); // 2
 
 extern "C" void create__15daTag_AllMato_cFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
@@ -135,11 +135,11 @@ extern "C" void checkCrsMato__15daTag_AllMato_cFv(); // 1
 extern "C" void checkCrsMato2__15daTag_AllMato_cFv(); // 1
 extern "C" void checkBrkMato__15daTag_AllMato_cFv(); // 1
 extern "C" void evtChange__15daTag_AllMato_cFUs(); // 1
-extern "C" void daTag_AllMato_Create__FPv(); // 1
-extern "C" void daTag_AllMato_Delete__FPv(); // 1
-extern "C" void daTag_AllMato_Execute__FPv(); // 1
-extern "C" void daTag_AllMato_Draw__FPv(); // 1
-extern "C" bool daTag_AllMato_IsDelete__FPv(); // 1
+extern "C" static void daTag_AllMato_Create__FPv(); // 1
+extern "C" static void daTag_AllMato_Delete__FPv(); // 1
+extern "C" static void daTag_AllMato_Execute__FPv(); // 1
+extern "C" static void daTag_AllMato_Draw__FPv(); // 1
+extern "C" static bool daTag_AllMato_IsDelete__FPv(); // 1
 extern "C" void __dt__18daNpcT_ActorMngr_cFv(); // 1
 extern "C" void __ct__18daNpcT_ActorMngr_cFv(); // 1
 extern "C" void checkCrs__15daObj_ItaMato_cFP10fopAc_ac_c4cXyz4cXyzf(); // 1
@@ -147,9 +147,6 @@ extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void checkCrs__15daObj_BouMato_cFP10fopAc_ac_c4cXyz4cXyzf(); // 1
 extern "C" void getStartPos__9daArrow_cFv(); // 1
 extern "C" void __dt__15daTag_AllMato_cFv(); // 1
-extern "C" extern u8 const struct_8048977C[48];
-extern "C" extern u8 const data_804897AC[16];
-extern "C" extern void* daTag_AllMato_MethodTable[8];
 extern "C" extern void* g_profile_TAG_ALLMATO[12];
 
 // 
@@ -227,6 +224,8 @@ extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strlen(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 struct_80450D64[4];
@@ -237,129 +236,24 @@ extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 // 
 
 /* ############################################################################################## */
+/* 8048973C-8048977C 0040+00 s=4 e=0 z=0  None .rodata    None                                                         */
+extern "C" u8 const struct_8048973C[64];
+
+/* 8048977C-804897AC 0030+00 s=3 e=0 z=0  None .rodata    None                                                         */
+extern "C" u8 const struct_8048977C[48];
+
 /* 804896E4-804896E8 0004+00 s=6 e=0 z=0  None .rodata    @4025                                                        */
 SECTION_RODATA static u32 const lit_4025 = 0x42C80000;
 
-/* 804897BC-804897FC 0040+00 s=2 e=0 z=0  None .data      l_evtList                                                    */
-SECTION_DATA static void* l_evtList[16] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)0x00000002,
-	(void*)NULL,
-	(void*)0x00000002,
-	(void*)NULL,
-	(void*)0x00000002,
-	(void*)NULL,
-	(void*)0x00000002,
-	(void*)NULL,
-	(void*)0x00000002,
-	(void*)NULL,
-	(void*)0x00000002,
-	(void*)NULL,
-	(void*)0x00000002,
-};
-
-/* 804897FC-80489808 000C+00 s=2 e=0 z=0  None .data      l_resNameList                                                */
-SECTION_DATA static void* l_resNameList[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80489808-80489828 0020+00 s=0 e=0 z=0  None .data      daTag_AllMato_MethodTable                                    */
-SECTION_DATA void* daTag_AllMato_MethodTable[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80489828-80489858 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_ALLMATO                                        */
-SECTION_DATA void* g_profile_TAG_ALLMATO[12] = {
-	(void*)0xFFFFFFFD,
-	(void*)0x000AFFFD,
-	(void*)0x030A0000,
-	(void*)NULL,
-	(void*)0x00001D18,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)0x01200000,
-	(void*)NULL,
-	(void*)0x00044000,
-	(void*)0x000E0000,
-};
-
-/* 80489858-80489864 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
-SECTION_DATA static void* __vt__8cM3dGSph[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80489864-80489870 000C+00 s=4 e=0 z=0  None .data      __vt__18daNpcT_ActorMngr_c                                   */
-SECTION_DATA static void* __vt__18daNpcT_ActorMngr_c[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80489870-8048987C 000C+00 s=2 e=0 z=0  None .data      __vt__15daTag_AllMato_c                                      */
-SECTION_DATA static void* __vt__15daTag_AllMato_c[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80487538-80487670 0138+00 s=1 e=0 z=0  None .text      create__15daTag_AllMato_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_AllMato_c::create() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_allmato/d_a_tag_allmato/create__15daTag_AllMato_cFv.s"
-}
-#pragma pop
-
-
-/* 80487670-804876AC 003C+00 s=2 e=0 z=0  None .text      __dt__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::~cXyz() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_allmato/d_a_tag_allmato/__dt__4cXyzFv.s"
-}
-#pragma pop
-
-
-/* 804876AC-804876B0 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-cXyz::cXyz() {
-	/* empty function */
-}
-
-
-/* 804876B0-804876B8 0008+00 s=1 e=0 z=0  None .text      Delete__15daTag_AllMato_cFv                                  */
-bool daTag_AllMato_c::Delete() {
-	return true;
-}
-
-
-/* ############################################################################################## */
 /* 804896E8-80489704 001C+00 s=1 e=0 z=0  None .rodata    @4071                                                        */
 SECTION_RODATA static void* const lit_4071[7] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)&struct_8048973C)+0x1) /* None */,
+	(void*)(((char*)&struct_8048973C)+0xF) /* None */,
+	(void*)(((char*)&struct_8048973C)+0x1D) /* None */,
+	(void*)(((char*)&struct_8048973C)+0x33) /* None */,
+	(void*)(((char*)&struct_8048977C)+0x0) /* None */,
+	(void*)(((char*)&struct_8048977C)+0xD) /* None */,
+	(void*)(((char*)&struct_8048977C)+0x1A) /* None */,
 };
 
 /* 80489704-8048970C 0004+04 s=4 e=0 z=0  None .rodata    @4606                                                        */
@@ -402,7 +296,7 @@ SECTION_RODATA static u32 const lit_4752 = 0x42F00000;
 /* 80489738-8048973C 0004+00 s=1 e=0 z=0  None .rodata    @4753                                                        */
 SECTION_RODATA static u32 const lit_4753 = 0x41F00000;
 
-/* 8048973C-8048977C 0040+00 s=1 e=0 z=0  None .rodata    None                                                         */
+/* 8048973C-8048977C 0040+00 s=4 e=0 z=0  None .rodata    None                                                         */
 SECTION_RODATA static u8 const struct_8048973C[64] = {
 	/* 8048973C 0001 stringBase_8048973C @stringBase0 */
 	0x00,
@@ -416,6 +310,133 @@ SECTION_RODATA static u8 const struct_8048973C[64] = {
 	/* 8048976F 000D data_8048976F None */
 	0x48, 0x49, 0x54, 0x5F, 0x42, 0x4F, 0x55, 0x4D, 0x41, 0x54, 0x4F, 0x31, 0x00,
 };
+
+/* 8048977C-804897AC 0030+00 s=3 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const struct_8048977C[48] = {
+	/* 8048977C 000D data_8048977C None */
+	0x48, 0x49, 0x54, 0x5F, 0x42, 0x4F, 0x55, 0x4D, 0x41, 0x54, 0x4F, 0x32, 0x00,
+	/* 80489789 000D data_80489789 None */
+	0x48, 0x49, 0x54, 0x5F, 0x42, 0x4F, 0x55, 0x4D, 0x41, 0x54, 0x4F, 0x33, 0x00,
+	/* 80489796 0010 data_80489796 None */
+	0x4E, 0x45, 0x41, 0x52, 0x50, 0x49, 0x4E, 0x5F, 0x42, 0x4F, 0x55, 0x4D, 0x41, 0x54, 0x4F, 0x00,
+	/* 804897A6 0006 data_804897A6 None */
+	0x54, 0x61, 0x72, 0x6F, 0x31, 0x00,
+};
+
+/* 804897AC-804897BC 0010+00 s=1 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const data_804897AC[16] = {
+	0x54, 0x61, 0x72, 0x6F, 0x32, 0x00, 0x41, 0x6C, 0x6C, 0x4D, 0x61, 0x74, 0x6F, 0x00, 0x00, 0x00,
+};
+
+/* 804897BC-804897FC 0040+00 s=2 e=0 z=0  None .data      l_evtList                                                    */
+SECTION_DATA static void* l_evtList[16] = {
+	(void*)(((char*)&struct_8048973C)+0x0) /* @stringBase0 */,
+	(void*)NULL,
+	(void*)(((char*)&struct_8048973C)+0x1) /* None */,
+	(void*)0x00000002,
+	(void*)(((char*)&struct_8048973C)+0xF) /* None */,
+	(void*)0x00000002,
+	(void*)(((char*)&struct_8048973C)+0x1D) /* None */,
+	(void*)0x00000002,
+	(void*)(((char*)&struct_8048973C)+0x33) /* None */,
+	(void*)0x00000002,
+	(void*)(((char*)&struct_8048977C)+0x0) /* None */,
+	(void*)0x00000002,
+	(void*)(((char*)&struct_8048977C)+0xD) /* None */,
+	(void*)0x00000002,
+	(void*)(((char*)&struct_8048977C)+0x1A) /* None */,
+	(void*)0x00000002,
+};
+
+/* 804897FC-80489808 000C+00 s=2 e=0 z=0  None .data      l_resNameList                                                */
+SECTION_DATA static void* l_resNameList[3] = {
+	(void*)(((char*)&struct_8048973C)+0x0) /* @stringBase0 */,
+	(void*)(((char*)&struct_8048977C)+0x2A) /* None */,
+	(void*)&data_804897AC,
+};
+
+/* 80489808-80489828 0020+00 s=1 e=0 z=0  None .data      daTag_AllMato_MethodTable                                    */
+SECTION_DATA static void* daTag_AllMato_MethodTable[8] = {
+	(void*)daTag_AllMato_Create__FPv,
+	(void*)daTag_AllMato_Delete__FPv,
+	(void*)daTag_AllMato_Execute__FPv,
+	(void*)daTag_AllMato_IsDelete__FPv,
+	(void*)daTag_AllMato_Draw__FPv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80489828-80489858 0030+00 s=0 e=0 z=1  None .data      g_profile_TAG_ALLMATO                                        */
+SECTION_DATA void* g_profile_TAG_ALLMATO[12] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x000AFFFD,
+	(void*)0x030A0000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x00001D18,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopAc_Method,
+	(void*)0x01200000,
+	(void*)&daTag_AllMato_MethodTable,
+	(void*)0x00044000,
+	(void*)0x000E0000,
+};
+
+/* 80489858-80489864 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
+SECTION_DATA static void* __vt__8cM3dGSph[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
+};
+
+/* 80489864-80489870 000C+00 s=4 e=0 z=0  None .data      __vt__18daNpcT_ActorMngr_c                                   */
+SECTION_DATA static void* __vt__18daNpcT_ActorMngr_c[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__18daNpcT_ActorMngr_cFv,
+};
+
+/* 80489870-8048987C 000C+00 s=2 e=0 z=0  None .data      __vt__15daTag_AllMato_c                                      */
+SECTION_DATA static void* __vt__15daTag_AllMato_c[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15daTag_AllMato_cFv,
+};
+
+/* 80487538-80487670 0138+00 s=1 e=0 z=0  None .text      create__15daTag_AllMato_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daTag_AllMato_c::create() {
+	nofralloc
+#include "asm/rel/d/a/tag/d_a_tag_allmato/d_a_tag_allmato/create__15daTag_AllMato_cFv.s"
+}
+#pragma pop
+
+
+/* 80487670-804876AC 003C+00 s=2 e=0 z=0  None .text      __dt__4cXyzFv                                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm cXyz::~cXyz() {
+	nofralloc
+#include "asm/rel/d/a/tag/d_a_tag_allmato/d_a_tag_allmato/__dt__4cXyzFv.s"
+}
+#pragma pop
+
+
+/* 804876AC-804876B0 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
+cXyz::cXyz() {
+	/* empty function */
+}
+
+
+/* 804876B0-804876B8 0008+00 s=1 e=0 z=0  None .text      Delete__15daTag_AllMato_cFv                                  */
+bool daTag_AllMato_c::Delete() {
+	return true;
+}
+
 
 /* 804876B8-80487C5C 05A4+00 s=1 e=0 z=0  None .text      Execute__15daTag_AllMato_cFv                                 */
 #pragma push
@@ -584,57 +605,57 @@ asm void daTag_AllMato_c::evtChange(u16 param_0) {
 #pragma pop
 
 
-/* 804890B0-804890D0 0020+00 s=0 e=0 z=0  None .text      daTag_AllMato_Create__FPv                                    */
+/* 804890B0-804890D0 0020+00 s=1 e=0 z=0  None .text      daTag_AllMato_Create__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_AllMato_Create(void* param_0) {
+asm static void daTag_AllMato_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_allmato/d_a_tag_allmato/daTag_AllMato_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 804890D0-804890F0 0020+00 s=0 e=0 z=0  None .text      daTag_AllMato_Delete__FPv                                    */
+/* 804890D0-804890F0 0020+00 s=1 e=0 z=0  None .text      daTag_AllMato_Delete__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_AllMato_Delete(void* param_0) {
+asm static void daTag_AllMato_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_allmato/d_a_tag_allmato/daTag_AllMato_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 804890F0-80489110 0020+00 s=0 e=0 z=0  None .text      daTag_AllMato_Execute__FPv                                   */
+/* 804890F0-80489110 0020+00 s=1 e=0 z=0  None .text      daTag_AllMato_Execute__FPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_AllMato_Execute(void* param_0) {
+asm static void daTag_AllMato_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_allmato/d_a_tag_allmato/daTag_AllMato_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 80489110-80489130 0020+00 s=0 e=0 z=0  None .text      daTag_AllMato_Draw__FPv                                      */
+/* 80489110-80489130 0020+00 s=1 e=0 z=0  None .text      daTag_AllMato_Draw__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_AllMato_Draw(void* param_0) {
+asm static void daTag_AllMato_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_allmato/d_a_tag_allmato/daTag_AllMato_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 80489130-80489138 0008+00 s=0 e=0 z=0  None .text      daTag_AllMato_IsDelete__FPv                                  */
-bool daTag_AllMato_IsDelete(void* param_0) {
+/* 80489130-80489138 0008+00 s=1 e=0 z=0  None .text      daTag_AllMato_IsDelete__FPv                                  */
+static bool daTag_AllMato_IsDelete(void* param_0) {
 	return true;
 }
 
 
-/* 80489138-80489180 0048+00 s=2 e=0 z=0  None .text      __dt__18daNpcT_ActorMngr_cFv                                 */
+/* 80489138-80489180 0048+00 s=3 e=0 z=0  None .text      __dt__18daNpcT_ActorMngr_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -667,7 +688,7 @@ asm void daObj_ItaMato_c::checkCrs(fopAc_ac_c* param_0, cXyz param_1, cXyz param
 #pragma pop
 
 
-/* 804893C4-8048940C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 804893C4-8048940C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -700,7 +721,7 @@ asm void daArrow_c::getStartPos() {
 #pragma pop
 
 
-/* 80489608-804896DC 00D4+00 s=0 e=0 z=0  None .text      __dt__15daTag_AllMato_cFv                                    */
+/* 80489608-804896DC 00D4+00 s=1 e=0 z=0  None .text      __dt__15daTag_AllMato_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -710,22 +731,4 @@ asm daTag_AllMato_c::~daTag_AllMato_c() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 8048977C-804897AC 0030+00 s=0 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA u8 const struct_8048977C[48] = {
-	/* 8048977C 000D data_8048977C None */
-	0x48, 0x49, 0x54, 0x5F, 0x42, 0x4F, 0x55, 0x4D, 0x41, 0x54, 0x4F, 0x32, 0x00,
-	/* 80489789 000D data_80489789 None */
-	0x48, 0x49, 0x54, 0x5F, 0x42, 0x4F, 0x55, 0x4D, 0x41, 0x54, 0x4F, 0x33, 0x00,
-	/* 80489796 0010 data_80489796 None */
-	0x4E, 0x45, 0x41, 0x52, 0x50, 0x49, 0x4E, 0x5F, 0x42, 0x4F, 0x55, 0x4D, 0x41, 0x54, 0x4F, 0x00,
-	/* 804897A6 0006 data_804897A6 None */
-	0x54, 0x61, 0x72, 0x6F, 0x31, 0x00,
-};
-
-/* 804897AC-804897BC 0010+00 s=0 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA u8 const data_804897AC[16] = {
-	0x54, 0x61, 0x72, 0x6F, 0x32, 0x00, 0x41, 0x6C, 0x6C, 0x4D, 0x61, 0x74, 0x6F, 0x00, 0x00, 0x00,
-};
 

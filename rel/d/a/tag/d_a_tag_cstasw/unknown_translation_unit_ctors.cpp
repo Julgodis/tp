@@ -19,6 +19,7 @@ extern void* const data_805A2518[2];
 // 
 
 
+extern "C" void __sinit_d_a_tag_CstaSw_cpp(); // 1
 
 // 
 // Declarations:

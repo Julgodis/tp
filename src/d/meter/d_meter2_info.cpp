@@ -11,6 +11,12 @@
 // Types:
 // 
 
+struct JMSMesgEntry_c {
+};
+
+struct JUTFont {
+};
+
 struct cXyz {
 };
 
@@ -18,13 +24,7 @@ struct J2DTextBox {
 	/* 8021C7F4 */ void getFont() const;
 };
 
-struct JUTFont {
-};
-
 struct J2DPicture {
-};
-
-struct JMSMesgEntry_c {
 };
 
 struct dMeter2Info_c {

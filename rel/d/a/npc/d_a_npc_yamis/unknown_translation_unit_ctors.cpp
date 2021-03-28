@@ -19,6 +19,7 @@ extern void* const data_80B4969C[2];
 // 
 
 
+extern "C" void __sinit_d_a_npc_yamis_cpp(); // 1
 
 // 
 // Declarations:

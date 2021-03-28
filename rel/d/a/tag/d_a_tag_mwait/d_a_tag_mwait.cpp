@@ -42,19 +42,18 @@ struct dMsgFlow_c {
 // Forward References:
 // 
 
-void daTagMwait_Create(fopAc_ac_c*); // 2
-void daTagMwait_Delete(daTagMwait_c*); // 2
-void daTagMwait_Execute(daTagMwait_c*); // 2
-bool daTagMwait_Draw(daTagMwait_c*); // 2
+static void daTagMwait_Create(fopAc_ac_c*); // 2
+static void daTagMwait_Delete(daTagMwait_c*); // 2
+static void daTagMwait_Execute(daTagMwait_c*); // 2
+static bool daTagMwait_Draw(daTagMwait_c*); // 2
 
 extern "C" void create__12daTagMwait_cFv(); // 1
-extern "C" void daTagMwait_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daTagMwait_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12daTagMwait_cFv(); // 1
-extern "C" void daTagMwait_Delete__FP12daTagMwait_c(); // 1
+extern "C" static void daTagMwait_Delete__FP12daTagMwait_c(); // 1
 extern "C" void execute__12daTagMwait_cFv(); // 1
-extern "C" void daTagMwait_Execute__FP12daTagMwait_c(); // 1
-extern "C" bool daTagMwait_Draw__FP12daTagMwait_c(); // 1
-extern "C" extern void* l_daTagMwait_Method[8];
+extern "C" static void daTagMwait_Execute__FP12daTagMwait_c(); // 1
+extern "C" static bool daTagMwait_Draw__FP12daTagMwait_c(); // 1
 extern "C" extern void* g_profile_Tag_Mwait[12];
 
 // 
@@ -83,6 +82,8 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 m_midnaActor__9daPy_py_c[4];
@@ -127,11 +128,11 @@ asm void daTagMwait_c::create() {
 #pragma pop
 
 
-/* 80D5BFFC-80D5C01C 0020+00 s=0 e=0 z=0  None .text      daTagMwait_Create__FP10fopAc_ac_c                            */
+/* 80D5BFFC-80D5C01C 0020+00 s=1 e=0 z=0  None .text      daTagMwait_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagMwait_Create(fopAc_ac_c* param_0) {
+asm static void daTagMwait_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mwait/d_a_tag_mwait/daTagMwait_Create__FP10fopAc_ac_c.s"
 }
@@ -149,11 +150,11 @@ asm daTagMwait_c::~daTagMwait_c() {
 #pragma pop
 
 
-/* 80D5C080-80D5C0A8 0028+00 s=0 e=0 z=0  None .text      daTagMwait_Delete__FP12daTagMwait_c                          */
+/* 80D5C080-80D5C0A8 0028+00 s=1 e=0 z=0  None .text      daTagMwait_Delete__FP12daTagMwait_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagMwait_Delete(daTagMwait_c* param_0) {
+asm static void daTagMwait_Delete(daTagMwait_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mwait/d_a_tag_mwait/daTagMwait_Delete__FP12daTagMwait_c.s"
 }
@@ -197,48 +198,48 @@ asm void daTagMwait_c::execute() {
 #pragma pop
 
 
-/* 80D5C550-80D5C570 0020+00 s=0 e=0 z=0  None .text      daTagMwait_Execute__FP12daTagMwait_c                         */
+/* 80D5C550-80D5C570 0020+00 s=1 e=0 z=0  None .text      daTagMwait_Execute__FP12daTagMwait_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagMwait_Execute(daTagMwait_c* param_0) {
+asm static void daTagMwait_Execute(daTagMwait_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mwait/d_a_tag_mwait/daTagMwait_Execute__FP12daTagMwait_c.s"
 }
 #pragma pop
 
 
-/* 80D5C570-80D5C578 0008+00 s=0 e=0 z=0  None .text      daTagMwait_Draw__FP12daTagMwait_c                            */
-bool daTagMwait_Draw(daTagMwait_c* param_0) {
+/* 80D5C570-80D5C578 0008+00 s=1 e=0 z=0  None .text      daTagMwait_Draw__FP12daTagMwait_c                            */
+static bool daTagMwait_Draw(daTagMwait_c* param_0) {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 80D5C5C4-80D5C5E4 0020+00 s=0 e=0 z=0  None .data      l_daTagMwait_Method                                          */
-SECTION_DATA void* l_daTagMwait_Method[8] = {
+/* 80D5C5C4-80D5C5E4 0020+00 s=1 e=0 z=0  None .data      l_daTagMwait_Method                                          */
+SECTION_DATA static void* l_daTagMwait_Method[8] = {
+	(void*)daTagMwait_Create__FP10fopAc_ac_c,
+	(void*)daTagMwait_Delete__FP12daTagMwait_c,
+	(void*)daTagMwait_Execute__FP12daTagMwait_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daTagMwait_Draw__FP12daTagMwait_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D5C5E4-80D5C614 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_Mwait                                          */
+/* 80D5C5E4-80D5C614 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_Mwait                                          */
 SECTION_DATA void* g_profile_Tag_Mwait[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x02C30000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005CC,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01000000,
-	(void*)NULL,
+	(void*)&l_daTagMwait_Method,
 	(void*)0x00044000,
 	(void*)0x030E0000,
 };

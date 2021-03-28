@@ -65,19 +65,22 @@ struct dBgS {
 	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
 };
 
-struct dBgW {
-	/* 8007B970 */ dBgW();
-	/* 8007B9C0 */ void Move();
-};
-
 struct cBgS_PolyInfo {
 };
 
 struct csXyz {
 };
 
+struct dBgW {
+	/* 8007B970 */ dBgW();
+	/* 8007B9C0 */ void Move();
+};
+
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -102,10 +105,10 @@ struct cBgW_BgId {
 	/* 802681D4 */ void ChkUsed() const;
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -118,10 +121,10 @@ struct Z2SeMgr {
 // 
 
 static void search_spinner_sub(void*, void*); // 2
-void daObjSwSpinner_create1st(daObjSwSpinner_c*); // 2
-void daObjSwSpinner_MoveBGDelete(daObjSwSpinner_c*); // 2
-void daObjSwSpinner_MoveBGExecute(daObjSwSpinner_c*); // 2
-void daObjSwSpinner_MoveBGDraw(daObjSwSpinner_c*); // 2
+static void daObjSwSpinner_create1st(daObjSwSpinner_c*); // 2
+static void daObjSwSpinner_MoveBGDelete(daObjSwSpinner_c*); // 2
+static void daObjSwSpinner_MoveBGExecute(daObjSwSpinner_c*); // 2
+static void daObjSwSpinner_MoveBGDraw(daObjSwSpinner_c*); // 2
 
 extern "C" static void search_spinner_sub__FPvPv(); // 1
 extern "C" void initBaseMtx__16daObjSwSpinner_cFv(); // 1
@@ -132,12 +135,11 @@ extern "C" void create1st__16daObjSwSpinner_cFv(); // 1
 extern "C" void Execute__16daObjSwSpinner_cFPPA3_A4_f(); // 1
 extern "C" void Draw__16daObjSwSpinner_cFv(); // 1
 extern "C" void Delete__16daObjSwSpinner_cFv(); // 1
-extern "C" void daObjSwSpinner_create1st__FP16daObjSwSpinner_c(); // 1
-extern "C" void daObjSwSpinner_MoveBGDelete__FP16daObjSwSpinner_c(); // 1
-extern "C" void daObjSwSpinner_MoveBGExecute__FP16daObjSwSpinner_c(); // 1
-extern "C" void daObjSwSpinner_MoveBGDraw__FP16daObjSwSpinner_c(); // 1
+extern "C" static void daObjSwSpinner_create1st__FP16daObjSwSpinner_c(); // 1
+extern "C" static void daObjSwSpinner_MoveBGDelete__FP16daObjSwSpinner_c(); // 1
+extern "C" static void daObjSwSpinner_MoveBGExecute__FP16daObjSwSpinner_c(); // 1
+extern "C" static void daObjSwSpinner_MoveBGDraw__FP16daObjSwSpinner_c(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* daObjSwSpinner_METHODS[8];
 extern "C" extern void* g_profile_Obj_SwSpinner[12];
 
 // 
@@ -174,6 +176,9 @@ extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -195,6 +200,8 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -272,7 +279,7 @@ SECTION_RODATA static u32 const lit_3773 = 0x42480000;
 /* 80D00ABC-80D00AC0 0004+00 s=1 e=0 z=0  None .rodata    @3774                                                        */
 SECTION_RODATA static u32 const lit_3774 = 0x41F00000;
 
-/* 80D00284-80D0035C 00D8+00 s=0 e=0 z=0  None .text      Create__16daObjSwSpinner_cFv                                 */
+/* 80D00284-80D0035C 00D8+00 s=1 e=0 z=0  None .text      Create__16daObjSwSpinner_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -284,10 +291,32 @@ asm void daObjSwSpinner_c::Create() {
 
 
 /* ############################################################################################## */
-/* 80D00AE0-80D00AE4 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+/* 80D00AC0-80D00AC4 0004+00 s=1 e=0 z=0  None .rodata    @3919                                                        */
+SECTION_RODATA static u32 const lit_3919 = 0x3DCCCCCD;
 
-/* 80D0035C-80D00498 013C+00 s=0 e=0 z=0  None .text      CreateHeap__16daObjSwSpinner_cFv                             */
+/* 80D00AC4-80D00AC8 0004+00 s=1 e=0 z=0  None .rodata    @3920                                                        */
+SECTION_RODATA static u32 const lit_3920 = 0x41200000;
+
+/* 80D00AC8-80D00ACC 0004+00 s=1 e=0 z=0  None .rodata    @3921                                                        */
+SECTION_RODATA static u32 const lit_3921 = 0x40000000;
+
+/* 80D00ACC-80D00AD0 0004+00 s=1 e=0 z=0  None .rodata    @3922                                                        */
+SECTION_RODATA static u32 const lit_3922 = 0x3F800000;
+
+/* 80D00AD0-80D00AD4 0004+00 s=1 e=0 z=0  None .rodata    @3923                                                        */
+SECTION_RODATA static u32 const lit_3923 = 0xBF800000;
+
+/* 80D00AD4-80D00ADE 000A+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80D00AD4 = "P_Sswitch";
+#pragma pop
+
+/* 80D00AE0-80D00AE4 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+
+/* 80D0035C-80D00498 013C+00 s=1 e=0 z=0  None .text      CreateHeap__16daObjSwSpinner_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -309,23 +338,7 @@ asm void daObjSwSpinner_c::create1st() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80D00AC0-80D00AC4 0004+00 s=1 e=0 z=0  None .rodata    @3919                                                        */
-SECTION_RODATA static u32 const lit_3919 = 0x3DCCCCCD;
-
-/* 80D00AC4-80D00AC8 0004+00 s=1 e=0 z=0  None .rodata    @3920                                                        */
-SECTION_RODATA static u32 const lit_3920 = 0x41200000;
-
-/* 80D00AC8-80D00ACC 0004+00 s=1 e=0 z=0  None .rodata    @3921                                                        */
-SECTION_RODATA static u32 const lit_3921 = 0x40000000;
-
-/* 80D00ACC-80D00AD0 0004+00 s=1 e=0 z=0  None .rodata    @3922                                                        */
-SECTION_RODATA static u32 const lit_3922 = 0x3F800000;
-
-/* 80D00AD0-80D00AD4 0004+00 s=1 e=0 z=0  None .rodata    @3923                                                        */
-SECTION_RODATA static u32 const lit_3923 = 0xBF800000;
-
-/* 80D00518-80D00890 0378+00 s=0 e=0 z=0  None .text      Execute__16daObjSwSpinner_cFPPA3_A4_f                        */
+/* 80D00518-80D00890 0378+00 s=1 e=0 z=0  None .text      Execute__16daObjSwSpinner_cFPPA3_A4_f                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -336,7 +349,7 @@ asm void daObjSwSpinner_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80D00890-80D00954 00C4+00 s=0 e=0 z=0  None .text      Draw__16daObjSwSpinner_cFv                                   */
+/* 80D00890-80D00954 00C4+00 s=1 e=0 z=0  None .text      Draw__16daObjSwSpinner_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -347,7 +360,7 @@ asm void daObjSwSpinner_c::Draw() {
 #pragma pop
 
 
-/* 80D00954-80D009C0 006C+00 s=0 e=0 z=0  None .text      Delete__16daObjSwSpinner_cFv                                 */
+/* 80D00954-80D009C0 006C+00 s=1 e=0 z=0  None .text      Delete__16daObjSwSpinner_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -359,30 +372,30 @@ asm void daObjSwSpinner_c::Delete() {
 
 
 /* ############################################################################################## */
-/* 80D00AE4-80D00B04 0020+00 s=0 e=0 z=0  None .data      daObjSwSpinner_METHODS                                       */
-SECTION_DATA void* daObjSwSpinner_METHODS[8] = {
+/* 80D00AE4-80D00B04 0020+00 s=1 e=0 z=0  None .data      daObjSwSpinner_METHODS                                       */
+SECTION_DATA static void* daObjSwSpinner_METHODS[8] = {
+	(void*)daObjSwSpinner_create1st__FP16daObjSwSpinner_c,
+	(void*)daObjSwSpinner_MoveBGDelete__FP16daObjSwSpinner_c,
+	(void*)daObjSwSpinner_MoveBGExecute__FP16daObjSwSpinner_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjSwSpinner_MoveBGDraw__FP16daObjSwSpinner_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D00B04-80D00B34 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_SwSpinner                                      */
+/* 80D00B04-80D00B34 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_SwSpinner                                      */
 SECTION_DATA void* g_profile_Obj_SwSpinner[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00B30000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005F4,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x022F0000,
-	(void*)NULL,
+	(void*)&daObjSwSpinner_METHODS,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -391,65 +404,57 @@ SECTION_DATA void* g_profile_Obj_SwSpinner[12] = {
 SECTION_DATA static void* __vt__16daObjSwSpinner_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__16daObjSwSpinner_cFv,
+	(void*)Create__16daObjSwSpinner_cFv,
+	(void*)Execute__16daObjSwSpinner_cFPPA3_A4_f,
+	(void*)Draw__16daObjSwSpinner_cFv,
+	(void*)Delete__16daObjSwSpinner_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
-/* 80D009C0-80D00A20 0060+00 s=0 e=0 z=0  None .text      daObjSwSpinner_create1st__FP16daObjSwSpinner_c               */
+/* 80D009C0-80D00A20 0060+00 s=1 e=0 z=0  None .text      daObjSwSpinner_create1st__FP16daObjSwSpinner_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSwSpinner_create1st(daObjSwSpinner_c* param_0) {
+asm static void daObjSwSpinner_create1st(daObjSwSpinner_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swspinner/d_a_obj_swspinner/daObjSwSpinner_create1st__FP16daObjSwSpinner_c.s"
 }
 #pragma pop
 
 
-/* 80D00A20-80D00A40 0020+00 s=0 e=0 z=0  None .text      daObjSwSpinner_MoveBGDelete__FP16daObjSwSpinner_c            */
+/* 80D00A20-80D00A40 0020+00 s=1 e=0 z=0  None .text      daObjSwSpinner_MoveBGDelete__FP16daObjSwSpinner_c            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSwSpinner_MoveBGDelete(daObjSwSpinner_c* param_0) {
+asm static void daObjSwSpinner_MoveBGDelete(daObjSwSpinner_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swspinner/d_a_obj_swspinner/daObjSwSpinner_MoveBGDelete__FP16daObjSwSpinner_c.s"
 }
 #pragma pop
 
 
-/* 80D00A40-80D00A60 0020+00 s=0 e=0 z=0  None .text      daObjSwSpinner_MoveBGExecute__FP16daObjSwSpinner_c           */
+/* 80D00A40-80D00A60 0020+00 s=1 e=0 z=0  None .text      daObjSwSpinner_MoveBGExecute__FP16daObjSwSpinner_c           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSwSpinner_MoveBGExecute(daObjSwSpinner_c* param_0) {
+asm static void daObjSwSpinner_MoveBGExecute(daObjSwSpinner_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swspinner/d_a_obj_swspinner/daObjSwSpinner_MoveBGExecute__FP16daObjSwSpinner_c.s"
 }
 #pragma pop
 
 
-/* 80D00A60-80D00A8C 002C+00 s=0 e=0 z=0  None .text      daObjSwSpinner_MoveBGDraw__FP16daObjSwSpinner_c              */
+/* 80D00A60-80D00A8C 002C+00 s=1 e=0 z=0  None .text      daObjSwSpinner_MoveBGDraw__FP16daObjSwSpinner_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSwSpinner_MoveBGDraw(daObjSwSpinner_c* param_0) {
+asm static void daObjSwSpinner_MoveBGDraw(daObjSwSpinner_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swspinner/d_a_obj_swspinner/daObjSwSpinner_MoveBGDraw__FP16daObjSwSpinner_c.s"
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80D00AD4-80D00ADE 000A+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80D00AD4 = "P_Sswitch";
-#pragma pop
 

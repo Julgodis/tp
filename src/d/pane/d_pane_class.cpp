@@ -11,11 +11,11 @@
 // Types:
 // 
 
-struct JKRArchive {
-};
-
 struct JSURandomInputStream {
 	/* 80255328 */ ~JSURandomInputStream();
+};
+
+struct JKRArchive {
 };
 
 struct J2DScreen {

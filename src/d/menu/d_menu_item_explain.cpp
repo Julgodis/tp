@@ -11,7 +11,7 @@
 // Types:
 // 
 
-struct J2DOrthoGraph {
+struct JKRArchive {
 };
 
 struct STControl {
@@ -20,10 +20,10 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
-struct JKRArchive {
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct J2DOrthoGraph {
 };
 
 struct dMenu_ItemExplain_c {
@@ -73,7 +73,13 @@ struct dKantera_icon_c {
 	/* 801AEC44 */ void setNowGauge(u16, u16);
 };
 
-struct ResTLUT {
+struct JMSMesgEntry_c {
+};
+
+struct JUTFont {
+};
+
+struct ResTIMG {
 };
 
 struct JGeometry {
@@ -85,18 +91,12 @@ struct JGeometry {
 
 };
 
-struct ResTIMG {
+struct ResTLUT {
 };
 
 struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
-};
-
-struct JMSMesgEntry_c {
-};
-
-struct JUTFont {
 };
 
 struct dMeter2Info_c {
@@ -153,10 +153,10 @@ struct CPaneMgrAlpha {
 	/* 80255828 */ void getAlphaRate();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

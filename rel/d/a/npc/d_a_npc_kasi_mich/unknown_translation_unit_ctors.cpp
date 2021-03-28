@@ -19,6 +19,7 @@ extern void* const data_80A2A038[2];
 // 
 
 
+extern "C" void __sinit_d_a_npc_kasi_mich_cpp(); // 1
 
 // 
 // Declarations:

@@ -69,10 +69,10 @@ struct J3DModel {
 struct _GXColor {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -185,7 +185,7 @@ struct J3DLightInfo {
 // 
 
 static void ride_call_back(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
-void daObj_Brg_Draw(obj_brg_class*); // 2
+static void daObj_Brg_Draw(obj_brg_class*); // 2
 static void control1(obj_brg_class*, br_s*); // 2
 static void control2(obj_brg_class*, br_s*); // 2
 static void control3(obj_brg_class*, br_s*); // 2
@@ -194,15 +194,15 @@ static void cut_control2(obj_brg_class*, br_s*); // 2
 static void himo_cut_control1(obj_brg_class*, cXyz*, f32); // 2
 static void obj_brg_move(obj_brg_class*); // 2
 static void daObj_Brg_Execute(obj_brg_class*); // 2
-void daObj_Brg_IsDelete(obj_brg_class*); // 2
-void daObj_Brg_Delete(obj_brg_class*); // 2
+static void daObj_Brg_IsDelete(obj_brg_class*); // 2
+static void daObj_Brg_Delete(obj_brg_class*); // 2
 static void CreateInit(fopAc_ac_c*); // 2
 static void CallbackCreateHeap(fopAc_ac_c*); // 2
-void daObj_Brg_Create(fopAc_ac_c*); // 2
+static void daObj_Brg_Create(fopAc_ac_c*); // 2
 
 extern "C" static void ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void daObj_Brg_Draw__FP13obj_brg_class(); // 1
+extern "C" static void daObj_Brg_Draw__FP13obj_brg_class(); // 1
 extern "C" static void control1__FP13obj_brg_classP4br_s(); // 1
 extern "C" static void control2__FP13obj_brg_classP4br_s(); // 1
 extern "C" static void control3__FP13obj_brg_classP4br_s(); // 1
@@ -211,11 +211,11 @@ extern "C" static void cut_control2__FP13obj_brg_classP4br_s(); // 1
 extern "C" static void himo_cut_control1__FP13obj_brg_classP4cXyzf(); // 1
 extern "C" static void obj_brg_move__FP13obj_brg_class(); // 1
 extern "C" static void daObj_Brg_Execute__FP13obj_brg_class(); // 1
-extern "C" void daObj_Brg_IsDelete__FP13obj_brg_class(); // 1
-extern "C" void daObj_Brg_Delete__FP13obj_brg_class(); // 1
+extern "C" static void daObj_Brg_IsDelete__FP13obj_brg_class(); // 1
+extern "C" static void daObj_Brg_Delete__FP13obj_brg_class(); // 1
 extern "C" static void CreateInit__FP10fopAc_ac_c(); // 1
 extern "C" static void CallbackCreateHeap__FP10fopAc_ac_c(); // 1
-extern "C" void daObj_Brg_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObj_Brg_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8dCcD_CylFv(); // 1
 extern "C" void __ct__8dCcD_CylFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
@@ -225,7 +225,6 @@ extern "C" void __ct__4br_sFv(); // 1
 extern "C" void __ct__11J3DLightObjFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObj_Brg_Method[8];
 extern "C" extern void* g_profile_OBJ_BRG[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -387,6 +386,8 @@ extern "C" void strcmp(); // 1
 extern "C" void sin(); // 1
 extern "C" extern u8 const j3dDefaultLightInfo[52];
 extern "C" extern void* __vt__19mDoExt_3DlineMat1_c[5];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__6dBgWSv[65 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -577,11 +578,11 @@ SECTION_DATA static u8 data_80BC23A8[4] = {
 	0x96, 0x96, 0x96, 0xFF,
 };
 
-/* 80BBCD38-80BBD740 0A08+00 s=0 e=0 z=0  None .text      daObj_Brg_Draw__FP13obj_brg_class                            */
+/* 80BBCD38-80BBD740 0A08+00 s=1 e=0 z=0  None .text      daObj_Brg_Draw__FP13obj_brg_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Brg_Draw(obj_brg_class* param_0) {
+asm static void daObj_Brg_Draw(obj_brg_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/daObj_Brg_Draw__FP13obj_brg_class.s"
 }
@@ -848,7 +849,7 @@ SECTION_RODATA static u32 const lit_5503 = 0x41800000;
 /* 80BC229C-80BC22A0 0004+00 s=1 e=0 z=0  None .rodata    @5504                                                        */
 SECTION_RODATA static u32 const lit_5504 = 0xC2200000;
 
-/* 80BBF21C-80BC0834 1618+00 s=1 e=0 z=0  None .text      daObj_Brg_Execute__FP13obj_brg_class                         */
+/* 80BBF21C-80BC0834 1618+00 s=2 e=0 z=0  None .text      daObj_Brg_Execute__FP13obj_brg_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -859,11 +860,11 @@ asm static void daObj_Brg_Execute(obj_brg_class* param_0) {
 #pragma pop
 
 
-/* 80BC0834-80BC0854 0020+00 s=0 e=0 z=0  None .text      daObj_Brg_IsDelete__FP13obj_brg_class                        */
+/* 80BC0834-80BC0854 0020+00 s=1 e=0 z=0  None .text      daObj_Brg_IsDelete__FP13obj_brg_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Brg_IsDelete(obj_brg_class* param_0) {
+asm static void daObj_Brg_IsDelete(obj_brg_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/daObj_Brg_IsDelete__FP13obj_brg_class.s"
 }
@@ -1053,11 +1054,11 @@ SECTION_DEAD char const* const stringBase_80BC2394 = "F_SP104";
 SECTION_DEAD char const* const stringBase_80BC239C = "D_MN05";
 #pragma pop
 
-/* 80BC0854-80BC08B0 005C+00 s=0 e=0 z=0  None .text      daObj_Brg_Delete__FP13obj_brg_class                          */
+/* 80BC0854-80BC08B0 005C+00 s=1 e=0 z=0  None .text      daObj_Brg_Delete__FP13obj_brg_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Brg_Delete(obj_brg_class* param_0) {
+asm static void daObj_Brg_Delete(obj_brg_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/daObj_Brg_Delete__FP13obj_brg_class.s"
 }
@@ -1106,30 +1107,30 @@ asm static void CallbackCreateHeap(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80BC2460-80BC2480 0020+00 s=0 e=0 z=0  None .data      l_daObj_Brg_Method                                           */
-SECTION_DATA void* l_daObj_Brg_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80BC2460-80BC2480 0020+00 s=1 e=0 z=0  None .data      l_daObj_Brg_Method                                           */
+SECTION_DATA static void* l_daObj_Brg_Method[8] = {
+	(void*)daObj_Brg_Create__FP10fopAc_ac_c,
+	(void*)daObj_Brg_Delete__FP13obj_brg_class,
+	(void*)daObj_Brg_Execute__FP13obj_brg_class,
+	(void*)daObj_Brg_IsDelete__FP13obj_brg_class,
+	(void*)daObj_Brg_Draw__FP13obj_brg_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80BC2480-80BC24B0 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_BRG                                            */
+/* 80BC2480-80BC24B0 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_BRG                                            */
 SECTION_DATA void* g_profile_OBJ_BRG[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x002C0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x0000B1F8,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00360000,
-	(void*)NULL,
+	(void*)&l_daObj_Brg_Method,
 	(void*)0x00044000,
 	(void*)0x000E0000,
 };
@@ -1138,14 +1139,14 @@ SECTION_DATA void* g_profile_OBJ_BRG[12] = {
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80BC24BC-80BC24C8 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 80BC24C8-80BC24DC 0014+00 s=2 e=0 z=0  None .data      __vt__18mDoExt_3DlineMat_c                                   */
@@ -1226,11 +1227,11 @@ static u8 lit_5809[12];
 /* 80BC2634-80BC273C 0108+00 s=1 e=0 z=0  None .bss       brg_init_pos$5785                                            */
 static u8 data_80BC2634[264];
 
-/* 80BC1050-80BC1D74 0D24+00 s=0 e=0 z=0  None .text      daObj_Brg_Create__FP10fopAc_ac_c                             */
+/* 80BC1050-80BC1D74 0D24+00 s=1 e=0 z=0  None .text      daObj_Brg_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Brg_Create(fopAc_ac_c* param_0) {
+asm static void daObj_Brg_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/daObj_Brg_Create__FP10fopAc_ac_c.s"
 }
@@ -1259,7 +1260,7 @@ asm dCcD_Cyl::dCcD_Cyl() {
 #pragma pop
 
 
-/* 80BC1EC4-80BC1F0C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80BC1EC4-80BC1F0C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1270,7 +1271,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80BC1F0C-80BC1F54 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80BC1F0C-80BC1F54 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

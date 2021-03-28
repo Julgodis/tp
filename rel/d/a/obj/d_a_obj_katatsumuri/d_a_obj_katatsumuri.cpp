@@ -16,10 +16,10 @@ struct daObj_KatHIO_c {
 	/* 80C3C5CC */ ~daObj_KatHIO_c();
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daObjKAT_c {
@@ -91,10 +91,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -110,21 +110,21 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
-};
-
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
+struct J3DModelData {
+};
+
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DAnmTransform {
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfSO {
@@ -158,10 +158,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -268,11 +268,11 @@ struct cCcS {
 
 static void JointCallBack(J3DJoint*, int); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daObjKAT_Create(fopAc_ac_c*); // 2
-void daObjKAT_Delete(daObjKAT_c*); // 2
-void daObjKAT_Draw(daObjKAT_c*); // 2
+static void daObjKAT_Create(fopAc_ac_c*); // 2
+static void daObjKAT_Delete(daObjKAT_c*); // 2
+static void daObjKAT_Draw(daObjKAT_c*); // 2
 static void daObjKAT_Execute(daObjKAT_c*); // 2
-bool daObjKAT_IsDelete(daObjKAT_c*); // 2
+static bool daObjKAT_IsDelete(daObjKAT_c*); // 2
 
 extern "C" void __ct__14daObj_KatHIO_cFv(); // 1
 extern "C" void InitCcSph__10daObjKAT_cFv(); // 1
@@ -282,8 +282,8 @@ extern "C" static void JointCallBack__FP8J3DJointi(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void CreateHeap__10daObjKAT_cFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void daObjKAT_Create__FP10fopAc_ac_c(); // 1
-extern "C" void daObjKAT_Delete__FP10daObjKAT_c(); // 1
+extern "C" static void daObjKAT_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjKAT_Delete__FP10daObjKAT_c(); // 1
 extern "C" void WallWalk__10daObjKAT_cFv(); // 1
 extern "C" void __dt__8cM3dGPlaFv(); // 1
 extern "C" void MoveAction__10daObjKAT_cFv(); // 1
@@ -299,22 +299,21 @@ extern "C" void Execute__10daObjKAT_cFv(); // 1
 extern "C" void Z_BufferChk__10daObjKAT_cFv(); // 1
 extern "C" void Delete__10daObjKAT_cFv(); // 1
 extern "C" void setBaseMtx__10daObjKAT_cFv(); // 1
-extern "C" void daObjKAT_Draw__FP10daObjKAT_c(); // 1
+extern "C" static void daObjKAT_Draw__FP10daObjKAT_c(); // 1
 extern "C" static void daObjKAT_Execute__FP10daObjKAT_c(); // 1
 extern "C" void CreateChk__10daObjKAT_cFv(); // 1
 extern "C" void create__10daObjKAT_cFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" bool daObjKAT_IsDelete__FP10daObjKAT_c(); // 1
+extern "C" static bool daObjKAT_IsDelete__FP10daObjKAT_c(); // 1
 extern "C" void __dt__14daObj_KatHIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_katatsumuri_cpp(); // 1
-extern "C" void func_80C3C650(); // 1
-extern "C" void func_80C3C658(); // 1
+extern "C" static void func_80C3C650(); // 1
+extern "C" static void func_80C3C658(); // 1
 extern "C" extern u32 const lit_3960;
 extern "C" extern u32 const lit_3962;
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObjKAT_Method[8];
 extern "C" extern void* g_profile_Obj_Kat[12];
 
 // 
@@ -431,6 +430,8 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -454,30 +455,30 @@ extern "C" void __register_global_object(); // 1
 /* 80C3C674-80C3C678 0004+00 s=10 e=0 z=0  None .rodata    @3775                                                        */
 SECTION_RODATA static u32 const lit_3775 = 0x3F800000;
 
-/* 80C3C770-80C3C790 0020+00 s=0 e=0 z=0  None .data      l_daObjKAT_Method                                            */
-SECTION_DATA void* l_daObjKAT_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80C3C770-80C3C790 0020+00 s=1 e=0 z=0  None .data      l_daObjKAT_Method                                            */
+SECTION_DATA static void* l_daObjKAT_Method[8] = {
+	(void*)daObjKAT_Create__FP10fopAc_ac_c,
+	(void*)daObjKAT_Delete__FP10daObjKAT_c,
+	(void*)daObjKAT_Execute__FP10daObjKAT_c,
+	(void*)daObjKAT_IsDelete__FP10daObjKAT_c,
+	(void*)daObjKAT_Draw__FP10daObjKAT_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C3C790-80C3C7C0 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Kat                                            */
+/* 80C3C790-80C3C7C0 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Kat                                            */
 SECTION_DATA void* g_profile_Obj_Kat[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x014B0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000A74,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01E80000,
-	(void*)NULL,
+	(void*)&l_daObjKAT_Method,
 	(void*)0x000C0100,
 	(void*)0x030E0000,
 };
@@ -486,55 +487,55 @@ SECTION_DATA void* g_profile_Obj_Kat[12] = {
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80C3C7CC-80C3C7D8 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80C3C7D8-80C3C7FC 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80C3C658,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80C3C650,
 };
 
 /* 80C3C7FC-80C3C808 000C+00 s=1 e=0 z=0  None .data      __vt__10daObjKAT_c                                           */
 SECTION_DATA static void* __vt__10daObjKAT_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)Insect_Release__10daObjKAT_cFv,
 };
 
 /* 80C3C808-80C3C814 000C+00 s=6 e=0 z=0  None .data      __vt__8cM3dGPla                                              */
 SECTION_DATA static void* __vt__8cM3dGPla[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGPlaFv,
 };
 
 /* 80C3C814-80C3C820 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 80C3C820-80C3C82C 000C+00 s=2 e=0 z=0  None .data      __vt__14daObj_KatHIO_c                                       */
 SECTION_DATA static void* __vt__14daObj_KatHIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14daObj_KatHIO_cFv,
 };
 
 /* 80C3996C-80C39994 0028+00 s=1 e=0 z=0  None .text      __ct__14daObj_KatHIO_cFv                                     */
@@ -765,7 +766,7 @@ asm void daObjKAT_c::CreateHeap() {
 #pragma pop
 
 
-/* 80C39E80-80C39EC8 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80C39E80-80C39EC8 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -776,22 +777,22 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80C39EC8-80C39EE8 0020+00 s=0 e=0 z=0  None .text      daObjKAT_Create__FP10fopAc_ac_c                              */
+/* 80C39EC8-80C39EE8 0020+00 s=1 e=0 z=0  None .text      daObjKAT_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKAT_Create(fopAc_ac_c* param_0) {
+asm static void daObjKAT_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_katatsumuri/d_a_obj_katatsumuri/daObjKAT_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C39EE8-80C39F0C 0024+00 s=0 e=0 z=0  None .text      daObjKAT_Delete__FP10daObjKAT_c                              */
+/* 80C39EE8-80C39F0C 0024+00 s=1 e=0 z=0  None .text      daObjKAT_Delete__FP10daObjKAT_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKAT_Delete(daObjKAT_c* param_0) {
+asm static void daObjKAT_Delete(daObjKAT_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_katatsumuri/d_a_obj_katatsumuri/daObjKAT_Delete__FP10daObjKAT_c.s"
 }
@@ -809,7 +810,7 @@ asm void daObjKAT_c::WallWalk() {
 #pragma pop
 
 
-/* 80C3A490-80C3A4D8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 80C3A490-80C3A4D8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -842,7 +843,7 @@ asm void daObjKAT_c::Action() {
 #pragma pop
 
 
-/* 80C3A680-80C3A698 0018+00 s=0 e=0 z=0  None .text      Insect_Release__10daObjKAT_cFv                               */
+/* 80C3A680-80C3A698 0018+00 s=1 e=0 z=0  None .text      Insect_Release__10daObjKAT_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -967,18 +968,18 @@ asm void daObjKAT_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80C3B9A0-80C3BA8C 00EC+00 s=0 e=0 z=0  None .text      daObjKAT_Draw__FP10daObjKAT_c                                */
+/* 80C3B9A0-80C3BA8C 00EC+00 s=1 e=0 z=0  None .text      daObjKAT_Draw__FP10daObjKAT_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKAT_Draw(daObjKAT_c* param_0) {
+asm static void daObjKAT_Draw(daObjKAT_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_katatsumuri/d_a_obj_katatsumuri/daObjKAT_Draw__FP10daObjKAT_c.s"
 }
 #pragma pop
 
 
-/* 80C3BA8C-80C3BAAC 0020+00 s=1 e=0 z=0  None .text      daObjKAT_Execute__FP10daObjKAT_c                             */
+/* 80C3BA8C-80C3BAAC 0020+00 s=2 e=0 z=0  None .text      daObjKAT_Execute__FP10daObjKAT_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1018,7 +1019,7 @@ asm void daObjKAT_c::create() {
 #pragma pop
 
 
-/* 80C3C4C4-80C3C50C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80C3C4C4-80C3C50C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1029,7 +1030,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80C3C50C-80C3C554 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C3C50C-80C3C554 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1040,7 +1041,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80C3C554-80C3C5C4 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80C3C554-80C3C5C4 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1051,13 +1052,13 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80C3C5C4-80C3C5CC 0008+00 s=0 e=0 z=0  None .text      daObjKAT_IsDelete__FP10daObjKAT_c                            */
-bool daObjKAT_IsDelete(daObjKAT_c* param_0) {
+/* 80C3C5C4-80C3C5CC 0008+00 s=1 e=0 z=0  None .text      daObjKAT_IsDelete__FP10daObjKAT_c                            */
+static bool daObjKAT_IsDelete(daObjKAT_c* param_0) {
 	return true;
 }
 
 
-/* 80C3C5CC-80C3C614 0048+00 s=1 e=0 z=0  None .text      __dt__14daObj_KatHIO_cFv                                     */
+/* 80C3C5CC-80C3C614 0048+00 s=2 e=0 z=0  None .text      __dt__14daObj_KatHIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1068,7 +1069,7 @@ asm daObj_KatHIO_c::~daObj_KatHIO_c() {
 #pragma pop
 
 
-/* 80C3C614-80C3C650 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_katatsumuri_cpp                              */
+/* 80C3C614-80C3C650 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_katatsumuri_cpp                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1079,22 +1080,22 @@ extern "C" asm void __sinit_d_a_obj_katatsumuri_cpp() {
 #pragma pop
 
 
-/* 80C3C650-80C3C658 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C3C650-80C3C658 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C3C650() {
+extern "C" asm static void func_80C3C650() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_katatsumuri/d_a_obj_katatsumuri/func_80C3C650.s"
 }
 #pragma pop
 
 
-/* 80C3C658-80C3C660 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C3C658-80C3C660 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C3C658() {
+extern "C" asm static void func_80C3C658() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_katatsumuri/d_a_obj_katatsumuri/func_80C3C658.s"
 }

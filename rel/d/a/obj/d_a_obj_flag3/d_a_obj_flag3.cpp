@@ -109,11 +109,13 @@ struct J3DSys {
 	/* 8031073C */ void reinitGX();
 };
 
-struct J3DPacket {
-};
-
+struct J3DPacket;
 struct J3DDrawBuffer {
 	/* 8032548C */ void entryImm(J3DPacket*, u16);
+};
+
+struct J3DPacket {
+	/* 80312750 */ bool entry(J3DDrawBuffer*);
 };
 
 struct J3DLightInfo {
@@ -125,26 +127,26 @@ struct J3DLightInfo {
 // 
 
 static void createSolidHeap(fopAc_ac_c*); // 2
-void daObjFlag3_Draw(daObjFlag3_c*); // 2
-void daObjFlag3_Execute(daObjFlag3_c*); // 2
-bool daObjFlag3_IsDelete(daObjFlag3_c*); // 2
-void daObjFlag3_Delete(daObjFlag3_c*); // 2
-void daObjFlag3_Create(fopAc_ac_c*); // 2
+static void daObjFlag3_Draw(daObjFlag3_c*); // 2
+static void daObjFlag3_Execute(daObjFlag3_c*); // 2
+static bool daObjFlag3_IsDelete(daObjFlag3_c*); // 2
+static void daObjFlag3_Delete(daObjFlag3_c*); // 2
+static void daObjFlag3_Create(fopAc_ac_c*); // 2
 
 extern "C" void createHeap__12daObjFlag3_cFv(); // 1
 extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
-extern "C" void daObjFlag3_Draw__FP12daObjFlag3_c(); // 1
-extern "C" void daObjFlag3_Execute__FP12daObjFlag3_c(); // 1
+extern "C" static void daObjFlag3_Draw__FP12daObjFlag3_c(); // 1
+extern "C" static void daObjFlag3_Execute__FP12daObjFlag3_c(); // 1
 extern "C" void execute__12daObjFlag3_cFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void execute__12FlagCloth2_cFv(); // 1
 extern "C" void calcFlagNormal__12FlagCloth2_cFP4cXyzi(); // 1
 extern "C" void calcFlagFactor__12FlagCloth2_cFP4cXyzP4cXyzP4cXyzi(); // 1
-extern "C" bool daObjFlag3_IsDelete__FP12daObjFlag3_c(); // 1
-extern "C" void daObjFlag3_Delete__FP12daObjFlag3_c(); // 1
+extern "C" static bool daObjFlag3_IsDelete__FP12daObjFlag3_c(); // 1
+extern "C" static void daObjFlag3_Delete__FP12daObjFlag3_c(); // 1
 extern "C" void __dt__12daObjFlag3_cFv(); // 1
 extern "C" void __dt__12FlagCloth2_cFv(); // 1
-extern "C" void daObjFlag3_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjFlag3_Create__FP10fopAc_ac_c(); // 1
 extern "C" void create__12daObjFlag3_cFv(); // 1
 extern "C" void create_init__12daObjFlag3_cFv(); // 1
 extern "C" void initFlagPos__12FlagCloth2_cFP4cXyzP10fopAc_ac_c(); // 1
@@ -159,7 +161,6 @@ extern "C" void getTargetPos__12FlagCloth2_cFv(); // 1
 extern "C" extern u8 const lit_3637[32];
 extern "C" extern u8 const data_80BF04B0[64];
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObjFlag3_Method[8];
 extern "C" extern void* g_profile_Obj_Flag3[12];
 
 // 
@@ -209,6 +210,7 @@ extern "C" void normalizeZP__4cXyzFv(); // 1
 extern "C" void cM_rndFX__Ff(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void reinitGX__6J3DSysFv(); // 1
+extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
 extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
 extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo(); // 1
 extern "C" void DCStoreRangeNoSync(); // 1
@@ -264,6 +266,8 @@ extern "C" void _restgpr_29(); // 1
 extern "C" void abs(); // 1
 extern "C" void sprintf(); // 1
 extern "C" extern u8 const j3dDefaultLightInfo[52];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -417,22 +421,22 @@ asm static void createSolidHeap(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80BEEC5C-80BEED1C 00C0+00 s=0 e=0 z=0  None .text      daObjFlag3_Draw__FP12daObjFlag3_c                            */
+/* 80BEEC5C-80BEED1C 00C0+00 s=1 e=0 z=0  None .text      daObjFlag3_Draw__FP12daObjFlag3_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjFlag3_Draw(daObjFlag3_c* param_0) {
+asm static void daObjFlag3_Draw(daObjFlag3_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/daObjFlag3_Draw__FP12daObjFlag3_c.s"
 }
 #pragma pop
 
 
-/* 80BEED1C-80BEED3C 0020+00 s=0 e=0 z=0  None .text      daObjFlag3_Execute__FP12daObjFlag3_c                         */
+/* 80BEED1C-80BEED3C 0020+00 s=1 e=0 z=0  None .text      daObjFlag3_Execute__FP12daObjFlag3_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjFlag3_Execute(daObjFlag3_c* param_0) {
+asm static void daObjFlag3_Execute(daObjFlag3_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/daObjFlag3_Execute__FP12daObjFlag3_c.s"
 }
@@ -494,17 +498,17 @@ asm void FlagCloth2_c::calcFlagFactor(cXyz* param_0, cXyz* param_1, cXyz* param_
 #pragma pop
 
 
-/* 80BEF6D0-80BEF6D8 0008+00 s=0 e=0 z=0  None .text      daObjFlag3_IsDelete__FP12daObjFlag3_c                        */
-bool daObjFlag3_IsDelete(daObjFlag3_c* param_0) {
+/* 80BEF6D0-80BEF6D8 0008+00 s=1 e=0 z=0  None .text      daObjFlag3_IsDelete__FP12daObjFlag3_c                        */
+static bool daObjFlag3_IsDelete(daObjFlag3_c* param_0) {
 	return true;
 }
 
 
-/* 80BEF6D8-80BEF700 0028+00 s=0 e=0 z=0  None .text      daObjFlag3_Delete__FP12daObjFlag3_c                          */
+/* 80BEF6D8-80BEF700 0028+00 s=1 e=0 z=0  None .text      daObjFlag3_Delete__FP12daObjFlag3_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjFlag3_Delete(daObjFlag3_c* param_0) {
+asm static void daObjFlag3_Delete(daObjFlag3_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/daObjFlag3_Delete__FP12daObjFlag3_c.s"
 }
@@ -523,30 +527,30 @@ asm daObjFlag3_c::~daObjFlag3_c() {
 
 
 /* ############################################################################################## */
-/* 80BF058C-80BF05AC 0020+00 s=0 e=0 z=0  None .data      l_daObjFlag3_Method                                          */
-SECTION_DATA void* l_daObjFlag3_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80BF058C-80BF05AC 0020+00 s=1 e=0 z=0  None .data      l_daObjFlag3_Method                                          */
+SECTION_DATA static void* l_daObjFlag3_Method[8] = {
+	(void*)daObjFlag3_Create__FP10fopAc_ac_c,
+	(void*)daObjFlag3_Delete__FP12daObjFlag3_c,
+	(void*)daObjFlag3_Execute__FP12daObjFlag3_c,
+	(void*)daObjFlag3_IsDelete__FP12daObjFlag3_c,
+	(void*)daObjFlag3_Draw__FP12daObjFlag3_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80BF05AC-80BF05DC 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Flag3                                          */
+/* 80BF05AC-80BF05DC 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Flag3                                          */
 SECTION_DATA void* g_profile_Obj_Flag3[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x013D0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00001340,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x001C0000,
-	(void*)NULL,
+	(void*)&l_daObjFlag3_Method,
 	(void*)0x00040000,
 	(void*)0x000E0000,
 };
@@ -555,40 +559,40 @@ SECTION_DATA void* g_profile_Obj_Flag3[12] = {
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80BF05E8-80BF05F4 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80BF05F4-80BF0600 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80BF0600-80BF060C 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80BF060C-80BF0620 0014+00 s=2 e=0 z=0  None .data      __vt__12FlagCloth2_c                                         */
 SECTION_DATA static void* __vt__12FlagCloth2_c[5] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__12FlagCloth2_cFv,
+	(void*)__dt__12FlagCloth2_cFv,
 };
 
-/* 80BEF790-80BEF93C 01AC+00 s=1 e=0 z=0  None .text      __dt__12FlagCloth2_cFv                                       */
+/* 80BEF790-80BEF93C 01AC+00 s=2 e=0 z=0  None .text      __dt__12FlagCloth2_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -599,11 +603,11 @@ asm FlagCloth2_c::~FlagCloth2_c() {
 #pragma pop
 
 
-/* 80BEF93C-80BEF95C 0020+00 s=0 e=0 z=0  None .text      daObjFlag3_Create__FP10fopAc_ac_c                            */
+/* 80BEF93C-80BEF95C 0020+00 s=1 e=0 z=0  None .text      daObjFlag3_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjFlag3_Create(fopAc_ac_c* param_0) {
+asm static void daObjFlag3_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/daObjFlag3_Create__FP10fopAc_ac_c.s"
 }
@@ -649,7 +653,7 @@ cXyz::cXyz() {
 }
 
 
-/* 80BEFF34-80BEFF7C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80BEFF34-80BEFF7C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -660,7 +664,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80BEFF7C-80BEFFC4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80BEFF7C-80BEFFC4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -671,7 +675,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80BEFFC4-80BF0020 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80BEFFC4-80BF0020 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -693,7 +697,7 @@ asm J3DLightObj::J3DLightObj() {
 #pragma pop
 
 
-/* 80BF0058-80BF00A0 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80BF0058-80BF00A0 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -704,7 +708,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80BF00A0-80BF0434 0394+00 s=0 e=0 z=0  None .text      draw__12FlagCloth2_cFv                                       */
+/* 80BF00A0-80BF0434 0394+00 s=1 e=0 z=0  None .text      draw__12FlagCloth2_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

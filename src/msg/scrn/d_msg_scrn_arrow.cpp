@@ -22,10 +22,10 @@ struct dMsgScrnArrow_c {
 	/* 8023C010 */ void dotAnimeMove();
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
 struct J2DScreen {

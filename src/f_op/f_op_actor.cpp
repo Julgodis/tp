@@ -96,10 +96,10 @@ struct dEvt_control_c {
 struct cXyz {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -278,7 +278,7 @@ asm J3DLightObj::J3DLightObj() {
 
 
 /* ############################################################################################## */
-/* 803A35B0-803A35D0 0020+00 s=0 e=3 z=0  None .data      g_fopAc_Method                                               */
+/* 803A35B0-803A35D0 0020+00 s=0 e=3 z=756  None .data      g_fopAc_Method                                               */
 SECTION_DATA void* g_fopAc_Method[8] = {
 	(void*)fopAc_Create__FPv,
 	(void*)fopAc_Delete__FPv,

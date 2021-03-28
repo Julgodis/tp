@@ -110,10 +110,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -230,7 +230,7 @@ struct Z2SeqMgr {
 
 static void anm_init(npc_henna_class*, int, f32, u8, f32); // 2
 static void nodeCallBack(J3DJoint*, int); // 2
-void daNpc_Henna_Draw(npc_henna_class*); // 2
+static void daNpc_Henna_Draw(npc_henna_class*); // 2
 static void s_npc_sub(void*, void*); // 2
 static void s_piro_sub(void*, void*); // 2
 static void s_du_sub(void*, void*); // 2
@@ -250,10 +250,10 @@ static void message_guide(npc_henna_class*); // 2
 static void s_boat_sub(void*, void*); // 2
 static void env_control(npc_henna_class*); // 2
 static void daNpc_Henna_Execute(npc_henna_class*); // 2
-bool daNpc_Henna_IsDelete(npc_henna_class*); // 2
-void daNpc_Henna_Delete(npc_henna_class*); // 2
+static bool daNpc_Henna_IsDelete(npc_henna_class*); // 2
+static void daNpc_Henna_Delete(npc_henna_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daNpc_Henna_Create(fopAc_ac_c*); // 2
+static void daNpc_Henna_Create(fopAc_ac_c*); // 2
 static void mDoAud_seStart(u32, Vec const*, u32, s8); // 2
 static void dComIfGp_setDoStatusForce(u8, u8); // 2
 static void dComIfGs_setEventReg(u16, u8); // 2
@@ -284,7 +284,7 @@ static void dComIfGs_onEventBit(u16); // 2
 extern "C" void __ct__17daNpc_Henna_HIO_cFv(); // 1
 extern "C" static void anm_init__FP15npc_henna_classifUcf(); // 1
 extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" void daNpc_Henna_Draw__FP15npc_henna_class(); // 1
+extern "C" static void daNpc_Henna_Draw__FP15npc_henna_class(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void __dt__8cM3dGPlaFv(); // 1
 extern "C" static void s_npc_sub__FPvPv(); // 1
@@ -306,13 +306,13 @@ extern "C" static void message_guide__FP15npc_henna_class(); // 1
 extern "C" static void s_boat_sub__FPvPv(); // 1
 extern "C" static void env_control__FP15npc_henna_class(); // 1
 extern "C" static void daNpc_Henna_Execute__FP15npc_henna_class(); // 1
-extern "C" bool daNpc_Henna_IsDelete__FP15npc_henna_class(); // 1
-extern "C" void daNpc_Henna_Delete__FP15npc_henna_class(); // 1
+extern "C" static bool daNpc_Henna_IsDelete__FP15npc_henna_class(); // 1
+extern "C" static void daNpc_Henna_Delete__FP15npc_henna_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void daNpc_Henna_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daNpc_Henna_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__17daNpc_Henna_HIO_cFv(); // 1
-extern "C" static void __sinit_d_a_npc_henna_cpp(); // 1
+extern "C" void __sinit_d_a_npc_henna_cpp(); // 1
 extern "C" void cancelOriginalDemo__9daPy_py_cFv(); // 1
 extern "C" void __ct__4cXyzFRC4cXyz(); // 1
 extern "C" static void mDoAud_seStart__FUlPC3VecUlSc(); // 1
@@ -413,7 +413,6 @@ extern "C" extern u32 const lit_5821;
 extern "C" extern u32 const lit_5822;
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daNpc_Henna_Method[8];
 extern "C" extern void* g_profile_NPC_HENNA[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -601,6 +600,8 @@ extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
@@ -652,35 +653,35 @@ SECTION_DATA static u8 check_kind[8] = {
 
 /* 8054ACB0-8054ACE4 0034+00 s=1 e=0 z=0  None .data      @4437                                                        */
 SECTION_DATA static void* lit_4437[13] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)henna_shop__FP15npc_henna_class)+0x48),
+	(void*)(((char*)henna_shop__FP15npc_henna_class)+0x74),
+	(void*)(((char*)henna_shop__FP15npc_henna_class)+0x7C),
+	(void*)(((char*)henna_shop__FP15npc_henna_class)+0x98),
+	(void*)(((char*)henna_shop__FP15npc_henna_class)+0xF8),
+	(void*)(((char*)henna_shop__FP15npc_henna_class)+0x110),
+	(void*)(((char*)henna_shop__FP15npc_henna_class)+0x334),
+	(void*)(((char*)henna_shop__FP15npc_henna_class)+0x334),
+	(void*)(((char*)henna_shop__FP15npc_henna_class)+0x334),
+	(void*)(((char*)henna_shop__FP15npc_henna_class)+0x334),
+	(void*)(((char*)henna_shop__FP15npc_henna_class)+0x154),
+	(void*)(((char*)henna_shop__FP15npc_henna_class)+0x204),
+	(void*)(((char*)henna_shop__FP15npc_henna_class)+0x2B4),
 };
 
 /* 8054ACE4-8054AD14 0030+00 s=1 e=0 z=0  None .data      @4753                                                        */
 SECTION_DATA static void* lit_4753[12] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)henna_ride__FP15npc_henna_class)+0xD4),
+	(void*)(((char*)henna_ride__FP15npc_henna_class)+0x2F0),
+	(void*)(((char*)henna_ride__FP15npc_henna_class)+0x10C),
+	(void*)(((char*)henna_ride__FP15npc_henna_class)+0x134),
+	(void*)(((char*)henna_ride__FP15npc_henna_class)+0x2F0),
+	(void*)(((char*)henna_ride__FP15npc_henna_class)+0x184),
+	(void*)(((char*)henna_ride__FP15npc_henna_class)+0x200),
+	(void*)(((char*)henna_ride__FP15npc_henna_class)+0x268),
+	(void*)(((char*)henna_ride__FP15npc_henna_class)+0x2F0),
+	(void*)(((char*)henna_ride__FP15npc_henna_class)+0x2F0),
+	(void*)(((char*)henna_ride__FP15npc_henna_class)+0x280),
+	(void*)(((char*)henna_ride__FP15npc_henna_class)+0x2B4),
 };
 
 /* 8054AD14-8054AD1C 0008+00 s=1 e=0 z=0  None .data      check_size$5372                                              */
@@ -690,112 +691,112 @@ SECTION_DATA static u8 data_8054AD14[8] = {
 
 /* 8054AD1C-8054AD6C 0050+00 s=1 e=0 z=0  None .data      @5825                                                        */
 SECTION_DATA static void* lit_5825[20] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1294),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1690),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1374),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x13C4),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x13E0),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x13FC),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1428),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1444),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1460),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1690),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1690),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x14EC),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1508),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1524),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1540),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x155C),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1578),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1594),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x15B0),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x15CC),
 };
 
 /* 8054AD6C-8054AEB4 0148+00 s=1 e=0 z=0  None .data      @5824                                                        */
 SECTION_DATA static void* lit_5824[82] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x124),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x340),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x3FC),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x56C),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x63C),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x6F0),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0xA50),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0xA50),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0xBB8),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0xBE8),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0xC54),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0xD58),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0xDE4),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0xE9C),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0xF28),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0xF7C),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1088),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x17B0),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1808),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1838),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x19C0),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1B18),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1BE4),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1BFC),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1CB0),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1DB4),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2C10),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1E20),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x1F68),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2068),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x20F4),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2314),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x23F8),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x246C),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2630),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2768),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x29A0),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2A88),
+	(void*)(((char*)demo_camera_shop__FP15npc_henna_class)+0x2B64),
 };
 
 /* 8054AEB4-8054AEC0 000C+00 s=1 e=0 z=0  None .data      btk_d$6463                                                   */
@@ -815,30 +816,30 @@ SECTION_DATA static u8 data_8054AEE0[32] = {
 	0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x0E, 0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x0B,
 };
 
-/* 8054AF00-8054AF20 0020+00 s=0 e=0 z=0  None .data      l_daNpc_Henna_Method                                         */
-SECTION_DATA void* l_daNpc_Henna_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 8054AF00-8054AF20 0020+00 s=1 e=0 z=0  None .data      l_daNpc_Henna_Method                                         */
+SECTION_DATA static void* l_daNpc_Henna_Method[8] = {
+	(void*)daNpc_Henna_Create__FP10fopAc_ac_c,
+	(void*)daNpc_Henna_Delete__FP15npc_henna_class,
+	(void*)daNpc_Henna_Execute__FP15npc_henna_class,
+	(void*)daNpc_Henna_IsDelete__FP15npc_henna_class,
+	(void*)daNpc_Henna_Draw__FP15npc_henna_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 8054AF20-8054AF50 0030+00 s=0 e=0 z=0  None .data      g_profile_NPC_HENNA                                          */
+/* 8054AF20-8054AF50 0030+00 s=0 e=0 z=1  None .data      g_profile_NPC_HENNA                                          */
 SECTION_DATA void* g_profile_NPC_HENNA[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x02550000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000007FC,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01560000,
-	(void*)NULL,
+	(void*)&l_daNpc_Henna_Method,
 	(void*)0x00044000,
 	(void*)0x04000000,
 };
@@ -847,21 +848,21 @@ SECTION_DATA void* g_profile_NPC_HENNA[12] = {
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 8054AF5C-8054AF68 000C+00 s=1 e=0 z=0  None .data      __vt__8cM3dGPla                                              */
 SECTION_DATA static void* __vt__8cM3dGPla[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGPlaFv,
 };
 
 /* 8054AF68-8054AF74 000C+00 s=2 e=0 z=0  None .data      __vt__17daNpc_Henna_HIO_c                                    */
 SECTION_DATA static void* __vt__17daNpc_Henna_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__17daNpc_Henna_HIO_cFv,
 };
 
 /* 80542F0C-80542F98 008C+00 s=1 e=0 z=0  None .text      __ct__17daNpc_Henna_HIO_cFv                                  */
@@ -1463,11 +1464,11 @@ asm static void nodeCallBack(J3DJoint* param_0, int param_1) {
 #pragma pop
 
 
-/* 80543350-805434C0 0170+00 s=0 e=0 z=0  None .text      daNpc_Henna_Draw__FP15npc_henna_class                        */
+/* 80543350-805434C0 0170+00 s=1 e=0 z=0  None .text      daNpc_Henna_Draw__FP15npc_henna_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpc_Henna_Draw(npc_henna_class* param_0) {
+asm static void daNpc_Henna_Draw(npc_henna_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/daNpc_Henna_Draw__FP15npc_henna_class.s"
 }
@@ -1485,7 +1486,7 @@ asm cXyz::~cXyz() {
 #pragma pop
 
 
-/* 805434FC-80543544 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 805434FC-80543544 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1562,7 +1563,7 @@ asm static void message_shop(npc_henna_class* param_0) {
 #pragma pop
 
 
-/* 8054395C-80543E68 050C+00 s=2 e=0 z=0  None .text      henna_shop__FP15npc_henna_class                              */
+/* 8054395C-80543E68 050C+00 s=3 e=0 z=0  None .text      henna_shop__FP15npc_henna_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1653,7 +1654,7 @@ static u8 l_HIO[56];
 /* 8054B004-8054B008 0004+00 s=4 e=0 z=0  None .bss       lrl                                                          */
 static u8 lrl[4];
 
-/* 8054403C-80544A4C 0A10+00 s=1 e=0 z=0  None .text      henna_ride__FP15npc_henna_class                              */
+/* 8054403C-80544A4C 0A10+00 s=2 e=0 z=0  None .text      henna_ride__FP15npc_henna_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1776,7 +1777,7 @@ static u8 lit_5131[12];
 /* 8054B0FC-8054B1EC 00F0+00 s=2 e=0 z=0  None .bss       zoom_check_pos                                               */
 static u8 zoom_check_pos[240];
 
-/* 80545638-805483F4 2DBC+00 s=1 e=0 z=0  None .text      demo_camera_shop__FP15npc_henna_class                        */
+/* 80545638-805483F4 2DBC+00 s=3 e=0 z=0  None .text      demo_camera_shop__FP15npc_henna_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1833,7 +1834,7 @@ asm static void env_control(npc_henna_class* param_0) {
 #pragma pop
 
 
-/* 805488B8-805492A4 09EC+00 s=1 e=0 z=0  None .text      daNpc_Henna_Execute__FP15npc_henna_class                     */
+/* 805488B8-805492A4 09EC+00 s=2 e=0 z=0  None .text      daNpc_Henna_Execute__FP15npc_henna_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1844,17 +1845,17 @@ asm static void daNpc_Henna_Execute(npc_henna_class* param_0) {
 #pragma pop
 
 
-/* 805492A4-805492AC 0008+00 s=0 e=0 z=0  None .text      daNpc_Henna_IsDelete__FP15npc_henna_class                    */
-bool daNpc_Henna_IsDelete(npc_henna_class* param_0) {
+/* 805492A4-805492AC 0008+00 s=1 e=0 z=0  None .text      daNpc_Henna_IsDelete__FP15npc_henna_class                    */
+static bool daNpc_Henna_IsDelete(npc_henna_class* param_0) {
 	return true;
 }
 
 
-/* 805492AC-80549300 0054+00 s=0 e=0 z=0  None .text      daNpc_Henna_Delete__FP15npc_henna_class                      */
+/* 805492AC-80549300 0054+00 s=1 e=0 z=0  None .text      daNpc_Henna_Delete__FP15npc_henna_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpc_Henna_Delete(npc_henna_class* param_0) {
+asm static void daNpc_Henna_Delete(npc_henna_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/daNpc_Henna_Delete__FP15npc_henna_class.s"
 }
@@ -1872,7 +1873,7 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 805496DC-80549724 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 805496DC-80549724 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1883,18 +1884,18 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80549724-80549E40 071C+00 s=0 e=0 z=0  None .text      daNpc_Henna_Create__FP10fopAc_ac_c                           */
+/* 80549724-80549E40 071C+00 s=1 e=0 z=0  None .text      daNpc_Henna_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpc_Henna_Create(fopAc_ac_c* param_0) {
+asm static void daNpc_Henna_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/daNpc_Henna_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80549E40-80549E88 0048+00 s=1 e=0 z=0  None .text      __dt__17daNpc_Henna_HIO_cFv                                  */
+/* 80549E40-80549E88 0048+00 s=2 e=0 z=0  None .text      __dt__17daNpc_Henna_HIO_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1905,11 +1906,11 @@ asm daNpc_Henna_HIO_c::~daNpc_Henna_HIO_c() {
 #pragma pop
 
 
-/* 80549E88-8054A384 04FC+00 s=1 e=0 z=0  None .text      __sinit_d_a_npc_henna_cpp                                    */
+/* 80549E88-8054A384 04FC+00 s=1 e=1 z=0  None .text      __sinit_d_a_npc_henna_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void __sinit_d_a_npc_henna_cpp() {
+extern "C" asm void __sinit_d_a_npc_henna_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/__sinit_d_a_npc_henna_cpp.s"
 }

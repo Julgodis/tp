@@ -19,6 +19,7 @@ extern void* const data_80C75510[2];
 // 
 
 
+extern "C" void __sinit_d_a_obj_lv6SwGate_cpp(); // 1
 
 // 
 // Declarations:

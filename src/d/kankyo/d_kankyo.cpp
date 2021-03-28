@@ -31,11 +31,11 @@ struct J3DLightInfo {
 struct _GXColor {
 };
 
-struct J3DModelData {
-	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
+	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
 };
 
 struct dScnKy_env_light_c {
@@ -132,10 +132,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -1687,7 +1687,7 @@ SECTION_DATA static void* l_dKy_Method[5] = {
 	(void*)dKy_Draw__FP17sub_kankyo__class,
 };
 
-/* 803BC0B4-803BC0DC 0028+00 s=0 e=0 z=0  None .data      g_profile_KANKYO                                             */
+/* 803BC0B4-803BC0DC 0028+00 s=0 e=0 z=1  None .data      g_profile_KANKYO                                             */
 SECTION_DATA void* g_profile_KANKYO[10] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0001FFFD,

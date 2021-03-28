@@ -44,10 +44,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -55,19 +55,19 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct Vec {
-};
-
-struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorf {
@@ -120,10 +120,10 @@ struct dBgS_AcchCir {
 	/* 80075F58 */ void SetWall(f32, f32);
 };
 
-struct csXyz {
+struct dBgS {
 };
 
-struct dBgS {
+struct csXyz {
 };
 
 struct dBgS_Acch {
@@ -182,7 +182,7 @@ struct Z2SeMgr {
 // 
 
 static void anm_init(fr_class*, int, f32, u8, f32); // 2
-void daFr_Draw(fr_class*); // 2
+static void daFr_Draw(fr_class*); // 2
 static void sibuki_set(fr_class*); // 2
 static void s_wd_sub(void*, void*); // 2
 static void wd_check(fr_class*); // 2
@@ -199,14 +199,14 @@ static void fr_message(fr_class*); // 2
 static void action(fr_class*); // 2
 static void message(fr_class*); // 2
 static void daFr_Execute(fr_class*); // 2
-bool daFr_IsDelete(fr_class*); // 2
-void daFr_Delete(fr_class*); // 2
+static bool daFr_IsDelete(fr_class*); // 2
+static void daFr_Delete(fr_class*); // 2
 static void useHeapIfrt(fopAc_ac_c*); // 2
-void daFr_Create(fopAc_ac_c*); // 2
+static void daFr_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__10daFr_HIO_cFv(); // 1
 extern "C" static void anm_init__FP8fr_classifUcf(); // 1
-extern "C" void daFr_Draw__FP8fr_class(); // 1
+extern "C" static void daFr_Draw__FP8fr_class(); // 1
 extern "C" static void sibuki_set__FP8fr_class(); // 1
 extern "C" static void s_wd_sub__FPvPv(); // 1
 extern "C" static void wd_check__FP8fr_class(); // 1
@@ -223,22 +223,21 @@ extern "C" static void fr_message__FP8fr_class(); // 1
 extern "C" static void action__FP8fr_class(); // 1
 extern "C" static void message__FP8fr_class(); // 1
 extern "C" static void daFr_Execute__FP8fr_class(); // 1
-extern "C" bool daFr_IsDelete__FP8fr_class(); // 1
-extern "C" void daFr_Delete__FP8fr_class(); // 1
+extern "C" static bool daFr_IsDelete__FP8fr_class(); // 1
+extern "C" static void daFr_Delete__FP8fr_class(); // 1
 extern "C" static void useHeapIfrt__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void daFr_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daFr_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__10daFr_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_fr_cpp(); // 1
-extern "C" void func_8051B9A4(); // 1
-extern "C" void func_8051B9AC(); // 1
+extern "C" static void func_8051B9A4(); // 1
+extern "C" static void func_8051B9AC(); // 1
 extern "C" extern u32 const lit_4224;
 extern "C" extern u32 const lit_4225;
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daFr_Method[8];
 extern "C" extern void* g_profile_FR[12];
 
 // 
@@ -348,6 +347,8 @@ extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -391,83 +392,83 @@ SECTION_RODATA static u32 const lit_3655 = 0x40C00000;
 
 /* 8051BA94-8051BB60 00CC+00 s=1 e=0 z=0  None .data      @4226                                                        */
 SECTION_DATA static void* lit_4226[51] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)action__FP8fr_class)+0x68),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0x78),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0x88),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xC8),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0x98),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xA4),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xB0),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xCC),
+	(void*)(((char*)action__FP8fr_class)+0xBC),
+};
+
+/* 8051BB60-8051BB80 0020+00 s=1 e=0 z=0  None .data      l_daFr_Method                                                */
+SECTION_DATA static void* l_daFr_Method[8] = {
+	(void*)daFr_Create__FP10fopAc_ac_c,
+	(void*)daFr_Delete__FP8fr_class,
+	(void*)daFr_Execute__FP8fr_class,
+	(void*)daFr_IsDelete__FP8fr_class,
+	(void*)daFr_Draw__FP8fr_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 8051BB60-8051BB80 0020+00 s=0 e=0 z=0  None .data      l_daFr_Method                                                */
-SECTION_DATA void* l_daFr_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 8051BB80-8051BBB0 0030+00 s=0 e=0 z=0  None .data      g_profile_FR                                                 */
+/* 8051BB80-8051BBB0 0030+00 s=0 e=0 z=1  None .data      g_profile_FR                                                 */
 SECTION_DATA void* g_profile_FR[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0008FFFD,
 	(void*)0x02E20000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000009E8,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00EB0000,
-	(void*)NULL,
+	(void*)&l_daFr_Method,
 	(void*)0x08040100,
 	(void*)0x04000000,
 };
@@ -476,41 +477,41 @@ SECTION_DATA void* g_profile_FR[12] = {
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 8051BBBC-8051BBC8 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 8051BBC8-8051BBEC 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_8051B9AC,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_8051B9A4,
 };
 
 /* 8051BBEC-8051BBF8 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 8051BBF8-8051BC04 000C+00 s=2 e=0 z=0  None .data      __vt__10daFr_HIO_c                                           */
 SECTION_DATA static void* __vt__10daFr_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10daFr_HIO_cFv,
 };
 
 /* 805198EC-8051994C 0060+00 s=1 e=0 z=0  None .text      __ct__10daFr_HIO_cFv                                         */
@@ -666,11 +667,11 @@ asm static void anm_init(fr_class* param_0, int param_1, f32 param_2, u8 param_3
 #pragma pop
 
 
-/* 805199F4-80519AB8 00C4+00 s=0 e=0 z=0  None .text      daFr_Draw__FP8fr_class                                       */
+/* 805199F4-80519AB8 00C4+00 s=1 e=0 z=0  None .text      daFr_Draw__FP8fr_class                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daFr_Draw(fr_class* param_0) {
+asm static void daFr_Draw(fr_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/daFr_Draw__FP8fr_class.s"
 }
@@ -830,7 +831,7 @@ asm static void fr_message(fr_class* param_0) {
 #pragma pop
 
 
-/* 8051AD04-8051B04C 0348+00 s=1 e=0 z=0  None .text      action__FP8fr_class                                          */
+/* 8051AD04-8051B04C 0348+00 s=2 e=0 z=0  None .text      action__FP8fr_class                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -852,7 +853,7 @@ asm static void message(fr_class* param_0) {
 #pragma pop
 
 
-/* 8051B170-8051B354 01E4+00 s=1 e=0 z=0  None .text      daFr_Execute__FP8fr_class                                    */
+/* 8051B170-8051B354 01E4+00 s=2 e=0 z=0  None .text      daFr_Execute__FP8fr_class                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -863,17 +864,17 @@ asm static void daFr_Execute(fr_class* param_0) {
 #pragma pop
 
 
-/* 8051B354-8051B35C 0008+00 s=0 e=0 z=0  None .text      daFr_IsDelete__FP8fr_class                                   */
-bool daFr_IsDelete(fr_class* param_0) {
+/* 8051B354-8051B35C 0008+00 s=1 e=0 z=0  None .text      daFr_IsDelete__FP8fr_class                                   */
+static bool daFr_IsDelete(fr_class* param_0) {
 	return true;
 }
 
 
-/* 8051B35C-8051B3B0 0054+00 s=0 e=0 z=0  None .text      daFr_Delete__FP8fr_class                                     */
+/* 8051B35C-8051B3B0 0054+00 s=1 e=0 z=0  None .text      daFr_Delete__FP8fr_class                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daFr_Delete(fr_class* param_0) {
+asm static void daFr_Delete(fr_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/daFr_Delete__FP8fr_class.s"
 }
@@ -891,7 +892,7 @@ asm static void useHeapIfrt(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 8051B550-8051B598 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 8051B550-8051B598 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -902,18 +903,18 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 8051B598-8051B820 0288+00 s=0 e=0 z=0  None .text      daFr_Create__FP10fopAc_ac_c                                  */
+/* 8051B598-8051B820 0288+00 s=1 e=0 z=0  None .text      daFr_Create__FP10fopAc_ac_c                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daFr_Create(fopAc_ac_c* param_0) {
+asm static void daFr_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/daFr_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8051B820-8051B868 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 8051B820-8051B868 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -924,7 +925,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 8051B868-8051B8B0 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 8051B868-8051B8B0 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -935,7 +936,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 8051B8B0-8051B920 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 8051B8B0-8051B920 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -946,7 +947,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 8051B920-8051B968 0048+00 s=1 e=0 z=0  None .text      __dt__10daFr_HIO_cFv                                         */
+/* 8051B920-8051B968 0048+00 s=2 e=0 z=0  None .text      __dt__10daFr_HIO_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -957,7 +958,7 @@ asm daFr_HIO_c::~daFr_HIO_c() {
 #pragma pop
 
 
-/* 8051B968-8051B9A4 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_fr_cpp                                           */
+/* 8051B968-8051B9A4 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_fr_cpp                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -968,22 +969,22 @@ extern "C" asm void __sinit_d_a_fr_cpp() {
 #pragma pop
 
 
-/* 8051B9A4-8051B9AC 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 8051B9A4-8051B9AC 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8051B9A4() {
+extern "C" asm static void func_8051B9A4() {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/func_8051B9A4.s"
 }
 #pragma pop
 
 
-/* 8051B9AC-8051B9B4 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 8051B9AC-8051B9B4 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8051B9AC() {
+extern "C" asm static void func_8051B9AC() {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/func_8051B9AC.s"
 }

@@ -54,10 +54,10 @@ struct dMeter2Draw_c {
 	/* 8021AAA4 */ void setAlphaAnimeMax(CPaneMgrAlpha*, s16);
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
 struct J2DScreen {

@@ -19,6 +19,7 @@ extern void* const data_80BAE154[2];
 // 
 
 
+extern "C" void __sinit_d_a_obj_bed_cpp(); // 1
 
 // 
 // Declarations:

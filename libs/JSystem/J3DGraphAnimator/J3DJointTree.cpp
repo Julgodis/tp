@@ -17,18 +17,18 @@ struct J3DMaterialTable {
 struct J3DShapeTable {
 };
 
+struct J3DMtxBuffer {
+};
+
 struct J3DJoint {
 	/* 8032F13C */ void appendChild(J3DJoint*);
 	/* 8032F3F8 */ void recursiveCalc();
 };
 
-struct J3DMtxBuffer {
+struct J3DModelHierarchy {
 };
 
 struct Vec {
-};
-
-struct J3DModelHierarchy {
 };
 
 struct J3DJointTree {

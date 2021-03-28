@@ -11,11 +11,11 @@
 // Types:
 // 
 
-struct JUTDirectPrint {
-	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
+struct __va_list_struct {
 };
 
-struct __va_list_struct {
+struct JUTDirectPrint {
+	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
 };
 
 struct OSContext {

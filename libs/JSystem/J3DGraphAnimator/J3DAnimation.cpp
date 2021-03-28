@@ -40,13 +40,13 @@ struct J3DAnmTransformKey {
 	/* 80329A34 */ void calcTransform(f32, u16, J3DTransformInfo*) const;
 };
 
-struct J3DModelData {
-};
-
 struct J3DMaterialTable {
 };
 
 struct J3DTextureSRTInfo {
+};
+
+struct J3DModelData {
 };
 
 struct J3DAnmTextureSRTKey {

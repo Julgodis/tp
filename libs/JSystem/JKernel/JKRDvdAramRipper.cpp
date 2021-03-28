@@ -11,18 +11,18 @@
 // Types:
 // 
 
+struct JKRDvdFile {
+	/* 802D9584 */ JKRDvdFile();
+	/* 802D9748 */ ~JKRDvdFile();
+	/* 802D98C4 */ void open(s32);
+};
+
 struct JKRADCommand {
 	/* 802DAF1C */ JKRADCommand();
 	/* 802DAF5C */ ~JKRADCommand();
 };
 
 struct JKRExpandSwitch {
-};
-
-struct JKRDvdFile {
-	/* 802D9584 */ JKRDvdFile();
-	/* 802D9748 */ ~JKRDvdFile();
-	/* 802D98C4 */ void open(s32);
 };
 
 struct JKRDvdAramRipper {

@@ -37,14 +37,13 @@ struct dPath {
 // Forward References:
 // 
 
-void daTagGuard_Create(fopAc_ac_c*); // 2
-void daTagGuard_Delete(daTagGuard_c*); // 2
+static void daTagGuard_Create(fopAc_ac_c*); // 2
+static void daTagGuard_Delete(daTagGuard_c*); // 2
 
 extern "C" void getAppearPoint__12daTagGuard_cFP3Vec(); // 1
 extern "C" void createGuard__12daTagGuard_cFUl(); // 1
-extern "C" void daTagGuard_Create__FP10fopAc_ac_c(); // 1
-extern "C" void daTagGuard_Delete__FP12daTagGuard_c(); // 1
-extern "C" extern void* l_daTagGuard_Method[8];
+extern "C" static void daTagGuard_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daTagGuard_Delete__FP12daTagGuard_c(); // 1
 extern "C" extern void* g_profile_TAG_GUARD[12];
 
 // 
@@ -62,6 +61,8 @@ extern "C" void fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i(); // 
 extern "C" void dPath_GetPnt__FPC5dPathi(); // 1
 extern "C" void dPath_GetRoomPath__Fii(); // 1
 extern "C" void cLib_targetAngleY__FPC3VecPC3Vec(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 
 // 
 // Declarations:
@@ -89,22 +90,22 @@ asm void daTagGuard_c::createGuard(u32 param_0) {
 #pragma pop
 
 
-/* 80D59928-80D599E0 00B8+00 s=0 e=0 z=0  None .text      daTagGuard_Create__FP10fopAc_ac_c                            */
+/* 80D59928-80D599E0 00B8+00 s=1 e=0 z=0  None .text      daTagGuard_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagGuard_Create(fopAc_ac_c* param_0) {
+asm static void daTagGuard_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_guard/d_a_tag_guard/daTagGuard_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80D599E0-80D59A10 0030+00 s=0 e=0 z=0  None .text      daTagGuard_Delete__FP12daTagGuard_c                          */
+/* 80D599E0-80D59A10 0030+00 s=1 e=0 z=0  None .text      daTagGuard_Delete__FP12daTagGuard_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagGuard_Delete(daTagGuard_c* param_0) {
+asm static void daTagGuard_Delete(daTagGuard_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_guard/d_a_tag_guard/daTagGuard_Delete__FP12daTagGuard_c.s"
 }
@@ -112,10 +113,10 @@ asm void daTagGuard_Delete(daTagGuard_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80D59A18-80D59A38 0020+00 s=0 e=0 z=0  None .data      l_daTagGuard_Method                                          */
-SECTION_DATA void* l_daTagGuard_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
+/* 80D59A18-80D59A38 0020+00 s=1 e=0 z=0  None .data      l_daTagGuard_Method                                          */
+SECTION_DATA static void* l_daTagGuard_Method[8] = {
+	(void*)daTagGuard_Create__FP10fopAc_ac_c,
+	(void*)daTagGuard_Delete__FP12daTagGuard_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
@@ -124,18 +125,18 @@ SECTION_DATA void* l_daTagGuard_Method[8] = {
 	(void*)NULL,
 };
 
-/* 80D59A38-80D59A68 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_GUARD                                          */
+/* 80D59A38-80D59A68 0030+00 s=0 e=0 z=1  None .data      g_profile_TAG_GUARD                                          */
 SECTION_DATA void* g_profile_TAG_GUARD[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x02960000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x0000056C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01980000,
-	(void*)NULL,
+	(void*)&l_daTagGuard_Method,
 	(void*)0x00040000,
 	(void*)0x000E0000,
 };

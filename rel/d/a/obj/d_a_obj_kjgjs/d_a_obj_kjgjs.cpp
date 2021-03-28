@@ -56,6 +56,9 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -73,10 +76,10 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-void daObjKJgjs_create1st(daObjKJgjs_c*); // 2
-void daObjKJgjs_MoveBGDelete(daObjKJgjs_c*); // 2
-void daObjKJgjs_MoveBGExecute(daObjKJgjs_c*); // 2
-void daObjKJgjs_MoveBGDraw(daObjKJgjs_c*); // 2
+static void daObjKJgjs_create1st(daObjKJgjs_c*); // 2
+static void daObjKJgjs_MoveBGDelete(daObjKJgjs_c*); // 2
+static void daObjKJgjs_MoveBGExecute(daObjKJgjs_c*); // 2
+static void daObjKJgjs_MoveBGDraw(daObjKJgjs_c*); // 2
 
 extern "C" void create1st__12daObjKJgjs_cFv(); // 1
 extern "C" void setMtx__12daObjKJgjs_cFv(); // 1
@@ -85,13 +88,12 @@ extern "C" void Create__12daObjKJgjs_cFv(); // 1
 extern "C" void Execute__12daObjKJgjs_cFPPA3_A4_f(); // 1
 extern "C" void Draw__12daObjKJgjs_cFv(); // 1
 extern "C" void Delete__12daObjKJgjs_cFv(); // 1
-extern "C" void daObjKJgjs_create1st__FP12daObjKJgjs_c(); // 1
-extern "C" void daObjKJgjs_MoveBGDelete__FP12daObjKJgjs_c(); // 1
-extern "C" void daObjKJgjs_MoveBGExecute__FP12daObjKJgjs_c(); // 1
-extern "C" void daObjKJgjs_MoveBGDraw__FP12daObjKJgjs_c(); // 1
+extern "C" static void daObjKJgjs_create1st__FP12daObjKJgjs_c(); // 1
+extern "C" static void daObjKJgjs_MoveBGDelete__FP12daObjKJgjs_c(); // 1
+extern "C" static void daObjKJgjs_MoveBGExecute__FP12daObjKJgjs_c(); // 1
+extern "C" static void daObjKJgjs_MoveBGDraw__FP12daObjKJgjs_c(); // 1
 extern "C" void __dt__12daObjKJgjs_cFv(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* daObjKJgjs_METHODS[8];
 extern "C" extern void* g_profile_Obj_KJgjs[12];
 
 // 
@@ -117,6 +119,9 @@ extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
 extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -125,6 +130,8 @@ extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP
 extern "C" void __dl__FPv(); // 1
 extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXTrans(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__16dBgS_MoveBgActor[10];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
@@ -141,8 +148,27 @@ SECTION_RODATA static u8 const l_dzbidx[8] = {
 	0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x09,
 };
 
+/* 80C4654C-80C46554 0008+00 s=1 e=0 z=0  None .rodata    l_bmdidx                                                     */
+SECTION_RODATA static u8 const l_bmdidx[8] = {
+	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05,
+};
+
+/* 80C46554-80C46584 0030+00 s=1 e=0 z=0  None .rodata    l_cull_box                                                   */
+SECTION_RODATA static u8 const l_cull_box[48] = {
+	0xC4, 0x9D, 0x80, 0x00, 0xC5, 0x3E, 0xA0, 0x00, 0xC4, 0x9D, 0x80, 0x00, 0x44, 0x9D, 0x80, 0x00,
+	0x45, 0x2F, 0x00, 0x00, 0x44, 0x9D, 0x80, 0x00, 0xC2, 0x98, 0xBD, 0x71, 0xC1, 0x2D, 0x47, 0xAE,
+	0xC2, 0x9D, 0x05, 0x1F, 0x42, 0x97, 0x0A, 0x3D, 0x41, 0x2F, 0x33, 0x33, 0x42, 0x9C, 0x1E, 0xB8,
+};
+
+/* 80C46584-80C4658B 0007+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80C46584 = "K_jgjs";
+#pragma pop
+
 /* 80C4658C-80C46590 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
 
 /* 80C46098-80C4616C 00D4+00 s=1 e=0 z=0  None .text      create1st__12daObjKJgjs_cFv                                  */
 #pragma push
@@ -166,13 +192,7 @@ asm void daObjKJgjs_c::setMtx() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80C4654C-80C46554 0008+00 s=1 e=0 z=0  None .rodata    l_bmdidx                                                     */
-SECTION_RODATA static u8 const l_bmdidx[8] = {
-	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05,
-};
-
-/* 80C461E4-80C46264 0080+00 s=0 e=0 z=0  None .text      CreateHeap__12daObjKJgjs_cFv                                 */
+/* 80C461E4-80C46264 0080+00 s=1 e=0 z=0  None .text      CreateHeap__12daObjKJgjs_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -183,15 +203,7 @@ asm void daObjKJgjs_c::CreateHeap() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80C46554-80C46584 0030+00 s=1 e=0 z=0  None .rodata    l_cull_box                                                   */
-SECTION_RODATA static u8 const l_cull_box[48] = {
-	0xC4, 0x9D, 0x80, 0x00, 0xC5, 0x3E, 0xA0, 0x00, 0xC4, 0x9D, 0x80, 0x00, 0x44, 0x9D, 0x80, 0x00,
-	0x45, 0x2F, 0x00, 0x00, 0x44, 0x9D, 0x80, 0x00, 0xC2, 0x98, 0xBD, 0x71, 0xC1, 0x2D, 0x47, 0xAE,
-	0xC2, 0x9D, 0x05, 0x1F, 0x42, 0x97, 0x0A, 0x3D, 0x41, 0x2F, 0x33, 0x33, 0x42, 0x9C, 0x1E, 0xB8,
-};
-
-/* 80C46264-80C46310 00AC+00 s=0 e=0 z=0  None .text      Create__12daObjKJgjs_cFv                                     */
+/* 80C46264-80C46310 00AC+00 s=1 e=0 z=0  None .text      Create__12daObjKJgjs_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -202,7 +214,7 @@ asm void daObjKJgjs_c::Create() {
 #pragma pop
 
 
-/* 80C46310-80C46320 0010+00 s=0 e=0 z=0  None .text      Execute__12daObjKJgjs_cFPPA3_A4_f                            */
+/* 80C46310-80C46320 0010+00 s=1 e=0 z=0  None .text      Execute__12daObjKJgjs_cFPPA3_A4_f                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -213,7 +225,7 @@ asm void daObjKJgjs_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80C46320-80C463C4 00A4+00 s=0 e=0 z=0  None .text      Draw__12daObjKJgjs_cFv                                       */
+/* 80C46320-80C463C4 00A4+00 s=1 e=0 z=0  None .text      Draw__12daObjKJgjs_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -224,7 +236,7 @@ asm void daObjKJgjs_c::Draw() {
 #pragma pop
 
 
-/* 80C463C4-80C46400 003C+00 s=0 e=0 z=0  None .text      Delete__12daObjKJgjs_cFv                                     */
+/* 80C463C4-80C46400 003C+00 s=1 e=0 z=0  None .text      Delete__12daObjKJgjs_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -236,30 +248,30 @@ asm void daObjKJgjs_c::Delete() {
 
 
 /* ############################################################################################## */
-/* 80C46590-80C465B0 0020+00 s=0 e=0 z=0  None .data      daObjKJgjs_METHODS                                           */
-SECTION_DATA void* daObjKJgjs_METHODS[8] = {
+/* 80C46590-80C465B0 0020+00 s=1 e=0 z=0  None .data      daObjKJgjs_METHODS                                           */
+SECTION_DATA static void* daObjKJgjs_METHODS[8] = {
+	(void*)daObjKJgjs_create1st__FP12daObjKJgjs_c,
+	(void*)daObjKJgjs_MoveBGDelete__FP12daObjKJgjs_c,
+	(void*)daObjKJgjs_MoveBGExecute__FP12daObjKJgjs_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjKJgjs_MoveBGDraw__FP12daObjKJgjs_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C465B0-80C465E0 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_KJgjs                                          */
+/* 80C465B0-80C465E0 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_KJgjs                                          */
 SECTION_DATA void* g_profile_Obj_KJgjs[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00DD0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000610,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02A50000,
-	(void*)NULL,
+	(void*)&daObjKJgjs_METHODS,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -268,62 +280,62 @@ SECTION_DATA void* g_profile_Obj_KJgjs[12] = {
 SECTION_DATA static void* __vt__12daObjKJgjs_c[11] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__12daObjKJgjs_cFv,
+	(void*)Create__12daObjKJgjs_cFv,
+	(void*)Execute__12daObjKJgjs_cFPPA3_A4_f,
+	(void*)Draw__12daObjKJgjs_cFv,
+	(void*)Delete__12daObjKJgjs_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)__dt__12daObjKJgjs_cFv,
 };
 
-/* 80C46400-80C46460 0060+00 s=0 e=0 z=0  None .text      daObjKJgjs_create1st__FP12daObjKJgjs_c                       */
+/* 80C46400-80C46460 0060+00 s=1 e=0 z=0  None .text      daObjKJgjs_create1st__FP12daObjKJgjs_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKJgjs_create1st(daObjKJgjs_c* param_0) {
+asm static void daObjKJgjs_create1st(daObjKJgjs_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kjgjs/d_a_obj_kjgjs/daObjKJgjs_create1st__FP12daObjKJgjs_c.s"
 }
 #pragma pop
 
 
-/* 80C46460-80C46480 0020+00 s=0 e=0 z=0  None .text      daObjKJgjs_MoveBGDelete__FP12daObjKJgjs_c                    */
+/* 80C46460-80C46480 0020+00 s=1 e=0 z=0  None .text      daObjKJgjs_MoveBGDelete__FP12daObjKJgjs_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKJgjs_MoveBGDelete(daObjKJgjs_c* param_0) {
+asm static void daObjKJgjs_MoveBGDelete(daObjKJgjs_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kjgjs/d_a_obj_kjgjs/daObjKJgjs_MoveBGDelete__FP12daObjKJgjs_c.s"
 }
 #pragma pop
 
 
-/* 80C46480-80C464A0 0020+00 s=0 e=0 z=0  None .text      daObjKJgjs_MoveBGExecute__FP12daObjKJgjs_c                   */
+/* 80C46480-80C464A0 0020+00 s=1 e=0 z=0  None .text      daObjKJgjs_MoveBGExecute__FP12daObjKJgjs_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKJgjs_MoveBGExecute(daObjKJgjs_c* param_0) {
+asm static void daObjKJgjs_MoveBGExecute(daObjKJgjs_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kjgjs/d_a_obj_kjgjs/daObjKJgjs_MoveBGExecute__FP12daObjKJgjs_c.s"
 }
 #pragma pop
 
 
-/* 80C464A0-80C464CC 002C+00 s=0 e=0 z=0  None .text      daObjKJgjs_MoveBGDraw__FP12daObjKJgjs_c                      */
+/* 80C464A0-80C464CC 002C+00 s=1 e=0 z=0  None .text      daObjKJgjs_MoveBGDraw__FP12daObjKJgjs_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKJgjs_MoveBGDraw(daObjKJgjs_c* param_0) {
+asm static void daObjKJgjs_MoveBGDraw(daObjKJgjs_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kjgjs/d_a_obj_kjgjs/daObjKJgjs_MoveBGDraw__FP12daObjKJgjs_c.s"
 }
 #pragma pop
 
 
-/* 80C464CC-80C4653C 0070+00 s=0 e=0 z=0  None .text      __dt__12daObjKJgjs_cFv                                       */
+/* 80C464CC-80C4653C 0070+00 s=1 e=0 z=0  None .text      __dt__12daObjKJgjs_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -333,12 +345,4 @@ asm daObjKJgjs_c::~daObjKJgjs_c() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80C46584-80C4658B 0007+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80C46584 = "K_jgjs";
-#pragma pop
 

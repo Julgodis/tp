@@ -67,19 +67,19 @@ struct mDoMtx_stack_c {
 	/* 805ADF08 */ void multVecZero(Vec*);
 };
 
-struct J3DModelData {
-};
-
-struct Z2Creature {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
+struct J3DModelData {
+};
+
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DAnmTransform {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfSO {
@@ -173,12 +173,12 @@ struct Z2CreatureEnemy {
 // Forward References:
 // 
 
-void daL7ODR_Draw(daL7ODR_c*); // 2
+static void daL7ODR_Draw(daL7ODR_c*); // 2
 static void daL7ODR_Execute(daL7ODR_c*); // 2
-bool daL7ODR_IsDelete(daL7ODR_c*); // 2
-void daL7ODR_Delete(daL7ODR_c*); // 2
+static bool daL7ODR_IsDelete(daL7ODR_c*); // 2
+static void daL7ODR_Delete(daL7ODR_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daL7ODR_Create(daL7ODR_c*); // 2
+static void daL7ODR_Create(daL7ODR_c*); // 2
 
 extern "C" void setAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v(); // 1
 extern "C" void action__9daL7ODR_cFv(); // 1
@@ -186,7 +186,7 @@ extern "C" void setDrAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v(); // 1
 extern "C" void dr_action__9daL7ODR_cFv(); // 1
 extern "C" void mtx_set__9daL7ODR_cFv(); // 1
 extern "C" void draw__9daL7ODR_cFv(); // 1
-extern "C" void daL7ODR_Draw__FP9daL7ODR_c(); // 1
+extern "C" static void daL7ODR_Draw__FP9daL7ODR_c(); // 1
 extern "C" void wait__9daL7ODR_cFv(); // 1
 extern "C" void pl_walk__9daL7ODR_cFv(); // 1
 extern "C" void setZoomOutCamPos__9daL7ODR_cFR4cXyzR4cXyzf(); // 1
@@ -194,17 +194,17 @@ extern "C" void dr_wait__9daL7ODR_cFv(); // 1
 extern "C" void dr_fly__9daL7ODR_cFv(); // 1
 extern "C" void execute__9daL7ODR_cFv(); // 1
 extern "C" static void daL7ODR_Execute__FP9daL7ODR_c(); // 1
-extern "C" bool daL7ODR_IsDelete__FP9daL7ODR_c(); // 1
+extern "C" static bool daL7ODR_IsDelete__FP9daL7ODR_c(); // 1
 extern "C" void _delete__9daL7ODR_cFv(); // 1
-extern "C" void daL7ODR_Delete__FP9daL7ODR_c(); // 1
+extern "C" static void daL7ODR_Delete__FP9daL7ODR_c(); // 1
 extern "C" void CreateHeap__9daL7ODR_cFv(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void check_start__9daL7ODR_cFv(); // 1
 extern "C" void create__9daL7ODR_cFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" void daL7ODR_Create__FP9daL7ODR_c(); // 1
-extern "C" void func_805ADD68(); // 1
-extern "C" void func_805ADD70(); // 1
+extern "C" static void daL7ODR_Create__FP9daL7ODR_c(); // 1
+extern "C" static void func_805ADD68(); // 1
+extern "C" static void func_805ADD70(); // 1
 extern "C" void changeDemoPos0__9daPy_py_cFPC4cXyz(); // 1
 extern "C" void changeDemoMode__9daPy_py_cFUliis(); // 1
 extern "C" void isStop__13mDoExt_morf_cFv(); // 1
@@ -213,7 +213,6 @@ extern "C" void __ct__4cXyzFRC4cXyz(); // 1
 extern "C" void multVecZero__14mDoMtx_stack_cFP3Vec(); // 1
 extern "C" void __as__4cXyzFRC4cXyz(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daL7ODR_Method[8];
 extern "C" extern void* g_profile_L7ODR[12];
 
 // 
@@ -312,6 +311,8 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
@@ -405,11 +406,11 @@ asm void daL7ODR_c::draw() {
 #pragma pop
 
 
-/* 805AB3D0-805AB3F0 0020+00 s=0 e=0 z=0  None .text      daL7ODR_Draw__FP9daL7ODR_c                                   */
+/* 805AB3D0-805AB3F0 0020+00 s=1 e=0 z=0  None .text      daL7ODR_Draw__FP9daL7ODR_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daL7ODR_Draw(daL7ODR_c* param_0) {
+asm static void daL7ODR_Draw(daL7ODR_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/daL7ODR_Draw__FP9daL7ODR_c.s"
 }
@@ -421,10 +422,10 @@ asm void daL7ODR_Draw(daL7ODR_c* param_0) {
 SECTION_DATA static void* lit_3871[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)pl_walk__9daL7ODR_cFv,
 };
 
-/* 805AB3F0-805AB520 0130+00 s=0 e=0 z=0  None .text      wait__9daL7ODR_cFv                                           */
+/* 805AB3F0-805AB520 0130+00 s=1 e=0 z=0  None .text      wait__9daL7ODR_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -488,17 +489,17 @@ SECTION_RODATA static u32 const lit_4130 = 0x44AF0000;
 SECTION_DATA static void* lit_3940[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)dr_fly__9daL7ODR_cFv,
 };
 
 /* 805AE0D0-805AE0DC 000C+00 s=1 e=0 z=0  None .data      @3947                                                        */
 SECTION_DATA static void* lit_3947[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)dr_fly__9daL7ODR_cFv,
 };
 
-/* 805AB520-805ABC2C 070C+00 s=0 e=0 z=0  None .text      pl_walk__9daL7ODR_cFv                                        */
+/* 805AB520-805ABC2C 070C+00 s=1 e=0 z=0  None .text      pl_walk__9daL7ODR_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -727,7 +728,7 @@ SECTION_DEAD char const* const stringBase_805AE0AC = "B_dr";
 SECTION_DEAD char const* const stringBase_805AE0B1 = "B_DR";
 #pragma pop
 
-/* 805ABCF8-805ABE0C 0114+00 s=0 e=0 z=0  None .text      dr_wait__9daL7ODR_cFv                                        */
+/* 805ABCF8-805ABE0C 0114+00 s=1 e=0 z=0  None .text      dr_wait__9daL7ODR_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -738,7 +739,7 @@ asm void daL7ODR_c::dr_wait() {
 #pragma pop
 
 
-/* 805ABE0C-805AD7B4 19A8+00 s=0 e=0 z=0  None .text      dr_fly__9daL7ODR_cFv                                         */
+/* 805ABE0C-805AD7B4 19A8+00 s=2 e=0 z=0  None .text      dr_fly__9daL7ODR_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -760,7 +761,7 @@ asm void daL7ODR_c::execute() {
 #pragma pop
 
 
-/* 805AD854-805AD874 0020+00 s=1 e=0 z=0  None .text      daL7ODR_Execute__FP9daL7ODR_c                                */
+/* 805AD854-805AD874 0020+00 s=2 e=0 z=0  None .text      daL7ODR_Execute__FP9daL7ODR_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -771,8 +772,8 @@ asm static void daL7ODR_Execute(daL7ODR_c* param_0) {
 #pragma pop
 
 
-/* 805AD874-805AD87C 0008+00 s=0 e=0 z=0  None .text      daL7ODR_IsDelete__FP9daL7ODR_c                               */
-bool daL7ODR_IsDelete(daL7ODR_c* param_0) {
+/* 805AD874-805AD87C 0008+00 s=1 e=0 z=0  None .text      daL7ODR_IsDelete__FP9daL7ODR_c                               */
+static bool daL7ODR_IsDelete(daL7ODR_c* param_0) {
 	return true;
 }
 
@@ -788,11 +789,11 @@ asm void daL7ODR_c::_delete() {
 #pragma pop
 
 
-/* 805AD8EC-805AD90C 0020+00 s=0 e=0 z=0  None .text      daL7ODR_Delete__FP9daL7ODR_c                                 */
+/* 805AD8EC-805AD90C 0020+00 s=1 e=0 z=0  None .text      daL7ODR_Delete__FP9daL7ODR_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daL7ODR_Delete(daL7ODR_c* param_0) {
+asm static void daL7ODR_Delete(daL7ODR_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/daL7ODR_Delete__FP9daL7ODR_c.s"
 }
@@ -837,40 +838,40 @@ asm void daL7ODR_c::check_start() {
 SECTION_DATA static void* lit_4839[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)wait__9daL7ODR_cFv,
 };
 
 /* 805AE0E8-805AE0F4 000C+00 s=1 e=0 z=0  None .data      @4841                                                        */
 SECTION_DATA static void* lit_4841[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
+	(void*)dr_wait__9daL7ODR_cFv,
+};
+
+/* 805AE0F4-805AE114 0020+00 s=1 e=0 z=0  None .data      l_daL7ODR_Method                                             */
+SECTION_DATA static void* l_daL7ODR_Method[8] = {
+	(void*)daL7ODR_Create__FP9daL7ODR_c,
+	(void*)daL7ODR_Delete__FP9daL7ODR_c,
+	(void*)daL7ODR_Execute__FP9daL7ODR_c,
+	(void*)daL7ODR_IsDelete__FP9daL7ODR_c,
+	(void*)daL7ODR_Draw__FP9daL7ODR_c,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 805AE0F4-805AE114 0020+00 s=0 e=0 z=0  None .data      l_daL7ODR_Method                                             */
-SECTION_DATA void* l_daL7ODR_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 805AE114-805AE144 0030+00 s=0 e=0 z=0  None .data      g_profile_L7ODR                                              */
+/* 805AE114-805AE144 0030+00 s=0 e=0 z=1  None .data      g_profile_L7ODR                                              */
 SECTION_DATA void* g_profile_L7ODR[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x02050000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000008B8,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00DE0000,
-	(void*)NULL,
+	(void*)&l_daL7ODR_Method,
 	(void*)0x00040100,
 	(void*)0x020E0000,
 };
@@ -879,13 +880,13 @@ SECTION_DATA void* g_profile_L7ODR[12] = {
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_805ADD70,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_805ADD68,
 };
 
 /* 805ADAC0-805ADCD8 0218+00 s=1 e=0 z=0  None .text      create__9daL7ODR_cFv                                         */
@@ -899,7 +900,7 @@ asm void daL7ODR_c::create() {
 #pragma pop
 
 
-/* 805ADCD8-805ADD48 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 805ADCD8-805ADD48 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -910,33 +911,33 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 805ADD48-805ADD68 0020+00 s=0 e=0 z=0  None .text      daL7ODR_Create__FP9daL7ODR_c                                 */
+/* 805ADD48-805ADD68 0020+00 s=1 e=0 z=0  None .text      daL7ODR_Create__FP9daL7ODR_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daL7ODR_Create(daL7ODR_c* param_0) {
+asm static void daL7ODR_Create(daL7ODR_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/daL7ODR_Create__FP9daL7ODR_c.s"
 }
 #pragma pop
 
 
-/* 805ADD68-805ADD70 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 805ADD68-805ADD70 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_805ADD68() {
+extern "C" asm static void func_805ADD68() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/func_805ADD68.s"
 }
 #pragma pop
 
 
-/* 805ADD70-805ADD78 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 805ADD70-805ADD78 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_805ADD70() {
+extern "C" asm static void func_805ADD70() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/func_805ADD70.s"
 }

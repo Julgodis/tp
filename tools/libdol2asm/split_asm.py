@@ -457,7 +457,7 @@ class Dol2AsmSplitter:
                                 debug(section.relocations)
                             assert symbol
 
-                            if isinstance(symbol, ASMFunction):
+                            if isinstance(symbol, ASMFunction) or isinstance(symbol, ReferenceArray):
                                 replace_offset = section.addr + relocation.offset
                                 key_addr, replace_symbol = self.symbol_table[-1,
                                                                              relocation]
@@ -470,8 +470,11 @@ class Dol2AsmSplitter:
                                         P=location,
                                         S=key_addr,
                                         A=0):
-                                    error(
-                                        f"unsupport relocation (type {relocation.type})")
+                                    error(f"unsupport relocation (type {relocation.type})")
+                                    fatal_exit()
+                            else:
+                                error(f"relocation for unsupported symbol {symbol.label} (symbol type {type(symbol).__name__})")
+                                fatal_exit()
 
     def reference_count(self):
         print(f"{self.step_count:2} Calculate reference count")
@@ -602,8 +605,8 @@ class Dol2AsmSplitter:
         start_time = time.time()
         self.generate_symbol_table()
         self.combine_symbols()
-        self.apply_relocations()
         self.search_for_reference_arrays()
+        self.apply_relocations()
         self.resolve_symbols()
         self.reference_count()
         self.name_symbols()

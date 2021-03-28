@@ -115,10 +115,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -157,10 +157,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -249,10 +249,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daGlwSph_Draw(daGlwSph_c*); // 2
-void daGlwSph_Execute(daGlwSph_c*); // 2
-void daGlwSph_Delete(daGlwSph_c*); // 2
-void daGlwSph_Create(fopAc_ac_c*); // 2
+static void daGlwSph_Draw(daGlwSph_c*); // 2
+static void daGlwSph_Execute(daGlwSph_c*); // 2
+static void daGlwSph_Delete(daGlwSph_c*); // 2
+static void daGlwSph_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__14daGlwSph_HIO_cFv(); // 1
 extern "C" void __dt__18fOpAcm_HIO_entry_cFv(); // 1
@@ -281,10 +281,10 @@ extern "C" void actionMoveInit__10daGlwSph_cFv(); // 1
 extern "C" void actionMove__10daGlwSph_cFv(); // 1
 extern "C" void draw__10daGlwSph_cFv(); // 1
 extern "C" void _delete__10daGlwSph_cFv(); // 1
-extern "C" void daGlwSph_Draw__FP10daGlwSph_c(); // 1
-extern "C" void daGlwSph_Execute__FP10daGlwSph_c(); // 1
-extern "C" void daGlwSph_Delete__FP10daGlwSph_c(); // 1
-extern "C" void daGlwSph_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daGlwSph_Draw__FP10daGlwSph_c(); // 1
+extern "C" static void daGlwSph_Execute__FP10daGlwSph_c(); // 1
+extern "C" static void daGlwSph_Delete__FP10daGlwSph_c(); // 1
+extern "C" static void daGlwSph_Create__FP10fopAc_ac_c(); // 1
 extern "C" void _clrLstBuf__12_GlSph_Mng_cFv(); // 1
 extern "C" void entry__12_GlSph_Mng_cFP10daGlwSph_c(); // 1
 extern "C" void remove__12_GlSph_Mng_cFP10daGlwSph_c(); // 1
@@ -300,11 +300,10 @@ extern "C" void __sinit_d_a_obj_glowSphere_cpp(); // 1
 extern "C" void __dt__12_GlSph_Mng_cFv(); // 1
 extern "C" void __dt__16_GlSph_LstInfo_cFv(); // 1
 extern "C" void __ct__16_GlSph_LstInfo_cFv(); // 1
-extern "C" void func_80BFA94C(); // 1
-extern "C" void func_80BFA954(); // 1
+extern "C" static void func_80BFA94C(); // 1
+extern "C" static void func_80BFA954(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daGlwSph_Method[8];
 extern "C" extern void* g_profile_Obj_glowSphere[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -426,6 +425,8 @@ extern "C" void _restgpr_21(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -487,21 +488,21 @@ SECTION_DATA static u8 l_envColor[16] = {
 SECTION_DATA static void* lit_3934[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionWait__10daGlwSph_cFv,
 };
 
 /* 80BFAA68-80BFAA74 000C+00 s=1 e=0 z=0  None .data      @3935                                                        */
 SECTION_DATA static void* lit_3935[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionGet__10daGlwSph_cFv,
 };
 
 /* 80BFAA74-80BFAA80 000C+00 s=1 e=0 z=0  None .data      @3936                                                        */
 SECTION_DATA static void* lit_3936[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionMove__10daGlwSph_cFv,
 };
 
 /* 80BFAA80-80BFAAA4 0024+00 s=1 e=0 z=0  None .data      l_func$3933                                                  */
@@ -546,30 +547,30 @@ SECTION_DATA static u8 data_80BFAABC[4] = {
 	0x96, 0x64, 0x00, 0xFF,
 };
 
-/* 80BFAAC0-80BFAAE0 0020+00 s=0 e=0 z=0  None .data      l_daGlwSph_Method                                            */
-SECTION_DATA void* l_daGlwSph_Method[8] = {
+/* 80BFAAC0-80BFAAE0 0020+00 s=1 e=0 z=0  None .data      l_daGlwSph_Method                                            */
+SECTION_DATA static void* l_daGlwSph_Method[8] = {
+	(void*)daGlwSph_Create__FP10fopAc_ac_c,
+	(void*)daGlwSph_Delete__FP10daGlwSph_c,
+	(void*)daGlwSph_Execute__FP10daGlwSph_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daGlwSph_Draw__FP10daGlwSph_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80BFAAE0-80BFAB10 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_glowSphere                                     */
+/* 80BFAAE0-80BFAB10 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_glowSphere                                     */
 SECTION_DATA void* g_profile_Obj_glowSphere[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x017B0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x0000098C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x028B0000,
-	(void*)NULL,
+	(void*)&l_daGlwSph_Method,
 	(void*)0x00040000,
 	(void*)0x000E0000,
 };
@@ -578,76 +579,76 @@ SECTION_DATA void* g_profile_Obj_glowSphere[12] = {
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 80BFAB1C-80BFAB28 000C+00 s=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80BFAB28-80BFAB34 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80BFAB34-80BFAB40 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80BFAB40-80BFAB4C 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80BFAB4C-80BFAB70 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80BFA954,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80BFA94C,
 };
 
 /* 80BFAB70-80BFAB7C 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 80BFAB7C-80BFAB88 000C+00 s=2 e=0 z=0  None .data      __vt__14daGlwSph_HIO_c                                       */
 SECTION_DATA static void* __vt__14daGlwSph_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14daGlwSph_HIO_cFv,
 };
 
 /* 80BFAB88-80BFAB94 000C+00 s=3 e=0 z=0  None .data      __vt__18fOpAcm_HIO_entry_c                                   */
 SECTION_DATA static void* __vt__18fOpAcm_HIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__18fOpAcm_HIO_entry_cFv,
 };
 
 /* 80BFAB94-80BFABA0 000C+00 s=4 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
 /* 80BF934C-80BF938C 0040+00 s=1 e=0 z=0  None .text      __ct__14daGlwSph_HIO_cFv                                     */
@@ -661,7 +662,7 @@ asm daGlwSph_HIO_c::daGlwSph_HIO_c() {
 #pragma pop
 
 
-/* 80BF938C-80BF93E8 005C+00 s=0 e=0 z=0  None .text      __dt__18fOpAcm_HIO_entry_cFv                                 */
+/* 80BF938C-80BF93E8 005C+00 s=1 e=0 z=0  None .text      __dt__18fOpAcm_HIO_entry_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -672,7 +673,7 @@ asm fOpAcm_HIO_entry_c::~fOpAcm_HIO_entry_c() {
 #pragma pop
 
 
-/* 80BF93E8-80BF9430 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80BF93E8-80BF9430 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -837,7 +838,7 @@ asm void daGlwSph_c::create() {
 #pragma pop
 
 
-/* 80BF9908-80BF9950 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80BF9908-80BF9950 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -848,7 +849,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80BF9950-80BF9998 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80BF9950-80BF9998 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -859,7 +860,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80BF9998-80BF99F4 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80BF9998-80BF99F4 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -870,7 +871,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80BF99F4-80BF9A64 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80BF99F4-80BF9A64 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -881,7 +882,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 80BF9A64-80BF9AD4 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80BF9A64-80BF9AD4 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -892,7 +893,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80BF9AD4-80BF9B1C 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80BF9AD4-80BF9B1C 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -977,7 +978,7 @@ asm void daGlwSph_c::actionWaitInit() {
 #pragma pop
 
 
-/* 80BFA070-80BFA074 0004+00 s=0 e=0 z=0  None .text      actionWait__10daGlwSph_cFv                                   */
+/* 80BFA070-80BFA074 0004+00 s=1 e=0 z=0  None .text      actionWait__10daGlwSph_cFv                                   */
 void daGlwSph_c::actionWait() {
 	/* empty function */
 }
@@ -994,7 +995,7 @@ asm void daGlwSph_c::actionGetInit() {
 #pragma pop
 
 
-/* 80BFA130-80BFA1E0 00B0+00 s=0 e=0 z=0  None .text      actionGet__10daGlwSph_cFv                                    */
+/* 80BFA130-80BFA1E0 00B0+00 s=1 e=0 z=0  None .text      actionGet__10daGlwSph_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1016,7 +1017,7 @@ asm void daGlwSph_c::actionMoveInit() {
 #pragma pop
 
 
-/* 80BFA204-80BFA2A4 00A0+00 s=0 e=0 z=0  None .text      actionMove__10daGlwSph_cFv                                   */
+/* 80BFA204-80BFA2A4 00A0+00 s=1 e=0 z=0  None .text      actionMove__10daGlwSph_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1049,44 +1050,44 @@ asm void daGlwSph_c::_delete() {
 #pragma pop
 
 
-/* 80BFA438-80BFA458 0020+00 s=0 e=0 z=0  None .text      daGlwSph_Draw__FP10daGlwSph_c                                */
+/* 80BFA438-80BFA458 0020+00 s=1 e=0 z=0  None .text      daGlwSph_Draw__FP10daGlwSph_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daGlwSph_Draw(daGlwSph_c* param_0) {
+asm static void daGlwSph_Draw(daGlwSph_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/daGlwSph_Draw__FP10daGlwSph_c.s"
 }
 #pragma pop
 
 
-/* 80BFA458-80BFA478 0020+00 s=0 e=0 z=0  None .text      daGlwSph_Execute__FP10daGlwSph_c                             */
+/* 80BFA458-80BFA478 0020+00 s=1 e=0 z=0  None .text      daGlwSph_Execute__FP10daGlwSph_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daGlwSph_Execute(daGlwSph_c* param_0) {
+asm static void daGlwSph_Execute(daGlwSph_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/daGlwSph_Execute__FP10daGlwSph_c.s"
 }
 #pragma pop
 
 
-/* 80BFA478-80BFA498 0020+00 s=0 e=0 z=0  None .text      daGlwSph_Delete__FP10daGlwSph_c                              */
+/* 80BFA478-80BFA498 0020+00 s=1 e=0 z=0  None .text      daGlwSph_Delete__FP10daGlwSph_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daGlwSph_Delete(daGlwSph_c* param_0) {
+asm static void daGlwSph_Delete(daGlwSph_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/daGlwSph_Delete__FP10daGlwSph_c.s"
 }
 #pragma pop
 
 
-/* 80BFA498-80BFA4B8 0020+00 s=0 e=0 z=0  None .text      daGlwSph_Create__FP10fopAc_ac_c                              */
+/* 80BFA498-80BFA4B8 0020+00 s=1 e=0 z=0  None .text      daGlwSph_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daGlwSph_Create(fopAc_ac_c* param_0) {
+asm static void daGlwSph_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/daGlwSph_Create__FP10fopAc_ac_c.s"
 }
@@ -1196,7 +1197,7 @@ asm void _GlSph_Mng_c::incSphSe() {
 #pragma pop
 
 
-/* 80BFA724-80BFA76C 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80BFA724-80BFA76C 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1207,7 +1208,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80BFA76C-80BFA7D8 006C+00 s=1 e=0 z=0  None .text      __dt__14daGlwSph_HIO_cFv                                     */
+/* 80BFA76C-80BFA7D8 006C+00 s=2 e=0 z=0  None .text      __dt__14daGlwSph_HIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1218,7 +1219,7 @@ asm daGlwSph_HIO_c::~daGlwSph_HIO_c() {
 #pragma pop
 
 
-/* 80BFA7D8-80BFA890 00B8+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_glowSphere_cpp                               */
+/* 80BFA7D8-80BFA890 00B8+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_glowSphere_cpp                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1262,22 +1263,22 @@ asm _GlSph_LstInfo_c::_GlSph_LstInfo_c() {
 #pragma pop
 
 
-/* 80BFA94C-80BFA954 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BFA94C-80BFA954 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BFA94C() {
+extern "C" asm static void func_80BFA94C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/func_80BFA94C.s"
 }
 #pragma pop
 
 
-/* 80BFA954-80BFA95C 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BFA954-80BFA95C 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BFA954() {
+extern "C" asm static void func_80BFA954() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/func_80BFA954.s"
 }

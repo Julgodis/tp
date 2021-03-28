@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J2DAnmColor {
+struct J2DAnmTextureSRTKey {
 };
 
-struct J2DAnmTextureSRTKey {
+struct J2DAnmColor {
 };
 
 struct JKRExpHeap {
@@ -110,11 +110,11 @@ struct dMsgScrnLight_c {
 	/* 80245C04 */ void draw(f32*, f32, f32, f32, f32, f32, u8);
 };
 
-struct J2DGrafContext {
-};
-
 struct JKRArchive {
 	/* 802D5ECC */ void readIdxResource(void*, u32, u32);
+};
+
+struct J2DGrafContext {
 };
 
 struct J2DScreen {

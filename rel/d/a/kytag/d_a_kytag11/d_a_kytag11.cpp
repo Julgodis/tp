@@ -31,20 +31,19 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-bool daKytag11_Draw(kytag11_class*); // 2
-void daKytag11_Execute(kytag11_class*); // 2
-bool daKytag11_IsDelete(kytag11_class*); // 2
-bool daKytag11_Delete(kytag11_class*); // 2
-void daKytag11_Create(fopAc_ac_c*); // 2
+static bool daKytag11_Draw(kytag11_class*); // 2
+static void daKytag11_Execute(kytag11_class*); // 2
+static bool daKytag11_IsDelete(kytag11_class*); // 2
+static bool daKytag11_Delete(kytag11_class*); // 2
+static void daKytag11_Create(fopAc_ac_c*); // 2
 static void dKankyo_DayProc(); // 2
 
-extern "C" bool daKytag11_Draw__FP13kytag11_class(); // 1
-extern "C" void daKytag11_Execute__FP13kytag11_class(); // 1
-extern "C" bool daKytag11_IsDelete__FP13kytag11_class(); // 1
-extern "C" bool daKytag11_Delete__FP13kytag11_class(); // 1
-extern "C" void daKytag11_Create__FP10fopAc_ac_c(); // 1
+extern "C" static bool daKytag11_Draw__FP13kytag11_class(); // 1
+extern "C" static void daKytag11_Execute__FP13kytag11_class(); // 1
+extern "C" static bool daKytag11_IsDelete__FP13kytag11_class(); // 1
+extern "C" static bool daKytag11_Delete__FP13kytag11_class(); // 1
+extern "C" static void daKytag11_Create__FP10fopAc_ac_c(); // 1
 extern "C" static void dKankyo_DayProc__Fv(); // 1
-extern "C" extern void* l_daKytag11_Method[8];
 extern "C" extern void* g_profile_KYTAG11[12];
 
 // 
@@ -62,6 +61,8 @@ extern "C" void __cvt_fp2unsigned(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -71,8 +72,8 @@ extern "C" extern u8 struct_80450D64[4];
 // Declarations:
 // 
 
-/* 80529518-80529520 0008+00 s=0 e=0 z=0  None .text      daKytag11_Draw__FP13kytag11_class                            */
-bool daKytag11_Draw(kytag11_class* param_0) {
+/* 80529518-80529520 0008+00 s=1 e=0 z=0  None .text      daKytag11_Draw__FP13kytag11_class                            */
+static bool daKytag11_Draw(kytag11_class* param_0) {
 	return true;
 }
 
@@ -102,34 +103,34 @@ SECTION_RODATA static u8 const lit_3880[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80529520-80529798 0278+00 s=0 e=0 z=0  None .text      daKytag11_Execute__FP13kytag11_class                         */
+/* 80529520-80529798 0278+00 s=1 e=0 z=0  None .text      daKytag11_Execute__FP13kytag11_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag11_Execute(kytag11_class* param_0) {
+asm static void daKytag11_Execute(kytag11_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag11/d_a_kytag11/daKytag11_Execute__FP13kytag11_class.s"
 }
 #pragma pop
 
 
-/* 80529798-805297A0 0008+00 s=0 e=0 z=0  None .text      daKytag11_IsDelete__FP13kytag11_class                        */
-bool daKytag11_IsDelete(kytag11_class* param_0) {
+/* 80529798-805297A0 0008+00 s=1 e=0 z=0  None .text      daKytag11_IsDelete__FP13kytag11_class                        */
+static bool daKytag11_IsDelete(kytag11_class* param_0) {
 	return true;
 }
 
 
-/* 805297A0-805297A8 0008+00 s=0 e=0 z=0  None .text      daKytag11_Delete__FP13kytag11_class                          */
-bool daKytag11_Delete(kytag11_class* param_0) {
+/* 805297A0-805297A8 0008+00 s=1 e=0 z=0  None .text      daKytag11_Delete__FP13kytag11_class                          */
+static bool daKytag11_Delete(kytag11_class* param_0) {
 	return true;
 }
 
 
-/* 805297A8-80529854 00AC+00 s=0 e=0 z=0  None .text      daKytag11_Create__FP10fopAc_ac_c                             */
+/* 805297A8-80529854 00AC+00 s=1 e=0 z=0  None .text      daKytag11_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag11_Create(fopAc_ac_c* param_0) {
+asm static void daKytag11_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag11/d_a_kytag11/daKytag11_Create__FP10fopAc_ac_c.s"
 }
@@ -148,30 +149,30 @@ asm static void dKankyo_DayProc() {
 
 
 /* ############################################################################################## */
-/* 805298B4-805298D4 0020+00 s=0 e=0 z=0  None .data      l_daKytag11_Method                                           */
-SECTION_DATA void* l_daKytag11_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 805298B4-805298D4 0020+00 s=1 e=0 z=0  None .data      l_daKytag11_Method                                           */
+SECTION_DATA static void* l_daKytag11_Method[8] = {
+	(void*)daKytag11_Create__FP10fopAc_ac_c,
+	(void*)daKytag11_Delete__FP13kytag11_class,
+	(void*)daKytag11_Execute__FP13kytag11_class,
+	(void*)daKytag11_IsDelete__FP13kytag11_class,
+	(void*)daKytag11_Draw__FP13kytag11_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 805298D4-80529904 0030+00 s=0 e=0 z=0  None .data      g_profile_KYTAG11                                            */
+/* 805298D4-80529904 0030+00 s=0 e=0 z=1  None .data      g_profile_KYTAG11                                            */
 SECTION_DATA void* g_profile_KYTAG11[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x02B50000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000574,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00690000,
-	(void*)NULL,
+	(void*)&l_daKytag11_Method,
 	(void*)0x00044000,
 	(void*)NULL,
 };

@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct JASSoundParams {
-};
-
 struct JASOscillator {
 	struct Point {
 	};
@@ -29,6 +26,9 @@ struct JASChannel {
 	/* 8029AB98 */ void setMixConfig(u32, u16);
 	/* 8029ACD4 */ void setKeySweepTarget(s32, u32);
 	/* 8029BBFC */ void free();
+};
+
+struct JASSoundParams {
 };
 
 struct JASDsp {

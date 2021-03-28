@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct cXyz {
+struct fopAc_ac_c {
 };
 
-struct fopAc_ac_c {
+struct cXyz {
 };
 
 struct dBgS_LinChk {

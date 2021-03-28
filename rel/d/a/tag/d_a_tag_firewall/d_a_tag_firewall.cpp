@@ -55,10 +55,10 @@ struct csXyz {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -108,27 +108,26 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-bool daTag_FWall_Draw(daTag_FWall_c*); // 2
-void daTag_FWall_Execute(daTag_FWall_c*); // 2
-void daTag_FWall_IsDelete(daTag_FWall_c*); // 2
-bool daTag_FWall_Delete(daTag_FWall_c*); // 2
-void daTag_FWall_Create(daTag_FWall_c*); // 2
+static bool daTag_FWall_Draw(daTag_FWall_c*); // 2
+static void daTag_FWall_Execute(daTag_FWall_c*); // 2
+static void daTag_FWall_IsDelete(daTag_FWall_c*); // 2
+static bool daTag_FWall_Delete(daTag_FWall_c*); // 2
+static void daTag_FWall_Create(daTag_FWall_c*); // 2
 
-extern "C" bool daTag_FWall_Draw__FP13daTag_FWall_c(); // 1
+extern "C" static bool daTag_FWall_Draw__FP13daTag_FWall_c(); // 1
 extern "C" void execute__13daTag_FWall_cFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void daTag_FWall_Execute__FP13daTag_FWall_c(); // 1
+extern "C" static void daTag_FWall_Execute__FP13daTag_FWall_c(); // 1
 extern "C" bool _delete__13daTag_FWall_cFv(); // 1
-extern "C" void daTag_FWall_IsDelete__FP13daTag_FWall_c(); // 1
-extern "C" bool daTag_FWall_Delete__FP13daTag_FWall_c(); // 1
+extern "C" static void daTag_FWall_IsDelete__FP13daTag_FWall_c(); // 1
+extern "C" static bool daTag_FWall_Delete__FP13daTag_FWall_c(); // 1
 extern "C" void create__13daTag_FWall_cFv(); // 1
 extern "C" void __dt__8dCcD_SphFv(); // 1
 extern "C" void __ct__8dCcD_SphFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
-extern "C" void daTag_FWall_Create__FP13daTag_FWall_c(); // 1
-extern "C" extern void* l_daTag_FWall_Method[8];
+extern "C" static void daTag_FWall_Create__FP13daTag_FWall_c(); // 1
 extern "C" extern void* g_profile_Tag_FWall[12];
 
 // 
@@ -163,6 +162,8 @@ extern "C" void PSVECSquareMag(); // 1
 extern "C" void __construct_array(); // 1
 extern "C" void _savegpr_16(); // 1
 extern "C" void _restgpr_16(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -176,8 +177,8 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 80D58938-80D58940 0008+00 s=0 e=0 z=0  None .text      daTag_FWall_Draw__FP13daTag_FWall_c                          */
-bool daTag_FWall_Draw(daTag_FWall_c* param_0) {
+/* 80D58938-80D58940 0008+00 s=1 e=0 z=0  None .text      daTag_FWall_Draw__FP13daTag_FWall_c                          */
+static bool daTag_FWall_Draw(daTag_FWall_c* param_0) {
 	return true;
 }
 
@@ -259,11 +260,11 @@ asm cXyz::~cXyz() {
 #pragma pop
 
 
-/* 80D59058-80D59078 0020+00 s=0 e=0 z=0  None .text      daTag_FWall_Execute__FP13daTag_FWall_c                       */
+/* 80D59058-80D59078 0020+00 s=1 e=0 z=0  None .text      daTag_FWall_Execute__FP13daTag_FWall_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_FWall_Execute(daTag_FWall_c* param_0) {
+asm static void daTag_FWall_Execute(daTag_FWall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_firewall/d_a_tag_firewall/daTag_FWall_Execute__FP13daTag_FWall_c.s"
 }
@@ -276,19 +277,19 @@ bool daTag_FWall_c::_delete() {
 }
 
 
-/* 80D59080-80D590A0 0020+00 s=0 e=0 z=0  None .text      daTag_FWall_IsDelete__FP13daTag_FWall_c                      */
+/* 80D59080-80D590A0 0020+00 s=1 e=0 z=0  None .text      daTag_FWall_IsDelete__FP13daTag_FWall_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_FWall_IsDelete(daTag_FWall_c* param_0) {
+asm static void daTag_FWall_IsDelete(daTag_FWall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_firewall/d_a_tag_firewall/daTag_FWall_IsDelete__FP13daTag_FWall_c.s"
 }
 #pragma pop
 
 
-/* 80D590A0-80D590A8 0008+00 s=0 e=0 z=0  None .text      daTag_FWall_Delete__FP13daTag_FWall_c                        */
-bool daTag_FWall_Delete(daTag_FWall_c* param_0) {
+/* 80D590A0-80D590A8 0008+00 s=1 e=0 z=0  None .text      daTag_FWall_Delete__FP13daTag_FWall_c                        */
+static bool daTag_FWall_Delete(daTag_FWall_c* param_0) {
 	return true;
 }
 
@@ -305,30 +306,30 @@ asm void daTag_FWall_c::create() {
 
 
 /* ############################################################################################## */
-/* 80D59554-80D59574 0020+00 s=0 e=0 z=0  None .data      l_daTag_FWall_Method                                         */
-SECTION_DATA void* l_daTag_FWall_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80D59554-80D59574 0020+00 s=1 e=0 z=0  None .data      l_daTag_FWall_Method                                         */
+SECTION_DATA static void* l_daTag_FWall_Method[8] = {
+	(void*)daTag_FWall_Create__FP13daTag_FWall_c,
+	(void*)daTag_FWall_Delete__FP13daTag_FWall_c,
+	(void*)daTag_FWall_Execute__FP13daTag_FWall_c,
+	(void*)daTag_FWall_IsDelete__FP13daTag_FWall_c,
+	(void*)daTag_FWall_Draw__FP13daTag_FWall_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D59574-80D595A4 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_FWall                                          */
+/* 80D59574-80D595A4 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_FWall                                          */
 SECTION_DATA void* g_profile_Tag_FWall[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01F70000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00002068,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00C50000,
-	(void*)NULL,
+	(void*)&l_daTag_FWall_Method,
 	(void*)0x00060100,
 	(void*)NULL,
 };
@@ -337,14 +338,14 @@ SECTION_DATA void* g_profile_Tag_FWall[12] = {
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80D595B0-80D595BC 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80D592D0-80D5939C 00CC+00 s=1 e=0 z=0  None .text      __dt__8dCcD_SphFv                                            */
@@ -369,7 +370,7 @@ asm dCcD_Sph::dCcD_Sph() {
 #pragma pop
 
 
-/* 80D59420-80D59468 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80D59420-80D59468 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -380,7 +381,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80D59468-80D594B0 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80D59468-80D594B0 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -397,11 +398,11 @@ cXyz::cXyz() {
 }
 
 
-/* 80D594B4-80D594D4 0020+00 s=0 e=0 z=0  None .text      daTag_FWall_Create__FP13daTag_FWall_c                        */
+/* 80D594B4-80D594D4 0020+00 s=1 e=0 z=0  None .text      daTag_FWall_Create__FP13daTag_FWall_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_FWall_Create(daTag_FWall_c* param_0) {
+asm static void daTag_FWall_Create(daTag_FWall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_firewall/d_a_tag_firewall/daTag_FWall_Create__FP13daTag_FWall_c.s"
 }

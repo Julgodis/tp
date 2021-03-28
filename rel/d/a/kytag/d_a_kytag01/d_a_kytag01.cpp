@@ -35,20 +35,19 @@ struct Z2EnvSeMgr {
 
 static void get_check_pos(kytag01_class*); // 2
 static void mist_tag_move(kytag01_class*); // 2
-bool daKytag01_Draw(kytag01_class*); // 2
-void daKytag01_Execute(kytag01_class*); // 2
-bool daKytag01_IsDelete(kytag01_class*); // 2
-bool daKytag01_Delete(kytag01_class*); // 2
-void daKytag01_Create(fopAc_ac_c*); // 2
+static bool daKytag01_Draw(kytag01_class*); // 2
+static void daKytag01_Execute(kytag01_class*); // 2
+static bool daKytag01_IsDelete(kytag01_class*); // 2
+static bool daKytag01_Delete(kytag01_class*); // 2
+static void daKytag01_Create(fopAc_ac_c*); // 2
 
 extern "C" static void get_check_pos__FP13kytag01_class(); // 1
 extern "C" static void mist_tag_move__FP13kytag01_class(); // 1
-extern "C" bool daKytag01_Draw__FP13kytag01_class(); // 1
-extern "C" void daKytag01_Execute__FP13kytag01_class(); // 1
-extern "C" bool daKytag01_IsDelete__FP13kytag01_class(); // 1
-extern "C" bool daKytag01_Delete__FP13kytag01_class(); // 1
-extern "C" void daKytag01_Create__FP10fopAc_ac_c(); // 1
-extern "C" extern void* l_daKytag01_Method[8];
+extern "C" static bool daKytag01_Draw__FP13kytag01_class(); // 1
+extern "C" static void daKytag01_Execute__FP13kytag01_class(); // 1
+extern "C" static bool daKytag01_IsDelete__FP13kytag01_class(); // 1
+extern "C" static bool daKytag01_Delete__FP13kytag01_class(); // 1
+extern "C" static void daKytag01_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern void* g_profile_KYTAG01[12];
 
 // 
@@ -77,6 +76,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void abs(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
 extern "C" extern u8 g_mEnvSeMgr[780];
@@ -162,8 +163,8 @@ asm static void mist_tag_move(kytag01_class* param_0) {
 #pragma pop
 
 
-/* 80855638-80855640 0008+00 s=0 e=0 z=0  None .text      daKytag01_Draw__FP13kytag01_class                            */
-bool daKytag01_Draw(kytag01_class* param_0) {
+/* 80855638-80855640 0008+00 s=1 e=0 z=0  None .text      daKytag01_Draw__FP13kytag01_class                            */
+static bool daKytag01_Draw(kytag01_class* param_0) {
 	return true;
 }
 
@@ -178,25 +179,25 @@ SECTION_RODATA static u32 const lit_3947 = 0x3CA3D70A;
 /* 808559DC-808559E0 0004+00 s=1 e=0 z=0  None .rodata    @3948                                                        */
 SECTION_RODATA static u32 const lit_3948 = 0x38D1B717;
 
-/* 80855640-808557DC 019C+00 s=0 e=0 z=0  None .text      daKytag01_Execute__FP13kytag01_class                         */
+/* 80855640-808557DC 019C+00 s=1 e=0 z=0  None .text      daKytag01_Execute__FP13kytag01_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag01_Execute(kytag01_class* param_0) {
+asm static void daKytag01_Execute(kytag01_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag01/d_a_kytag01/daKytag01_Execute__FP13kytag01_class.s"
 }
 #pragma pop
 
 
-/* 808557DC-808557E4 0008+00 s=0 e=0 z=0  None .text      daKytag01_IsDelete__FP13kytag01_class                        */
-bool daKytag01_IsDelete(kytag01_class* param_0) {
+/* 808557DC-808557E4 0008+00 s=1 e=0 z=0  None .text      daKytag01_IsDelete__FP13kytag01_class                        */
+static bool daKytag01_IsDelete(kytag01_class* param_0) {
 	return true;
 }
 
 
-/* 808557E4-808557EC 0008+00 s=0 e=0 z=0  None .text      daKytag01_Delete__FP13kytag01_class                          */
-bool daKytag01_Delete(kytag01_class* param_0) {
+/* 808557E4-808557EC 0008+00 s=1 e=0 z=0  None .text      daKytag01_Delete__FP13kytag01_class                          */
+static bool daKytag01_Delete(kytag01_class* param_0) {
 	return true;
 }
 
@@ -208,11 +209,11 @@ SECTION_RODATA static u32 const lit_4016 = 0x437F0000;
 /* 808559E4-808559E8 0004+00 s=1 e=0 z=0  None .rodata    @4017                                                        */
 SECTION_RODATA static u32 const lit_4017 = 0x41200000;
 
-/* 808557EC-80855984 0198+00 s=0 e=0 z=0  None .text      daKytag01_Create__FP10fopAc_ac_c                             */
+/* 808557EC-80855984 0198+00 s=1 e=0 z=0  None .text      daKytag01_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag01_Create(fopAc_ac_c* param_0) {
+asm static void daKytag01_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag01/d_a_kytag01/daKytag01_Create__FP10fopAc_ac_c.s"
 }
@@ -220,30 +221,30 @@ asm void daKytag01_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 808559E8-80855A08 0020+00 s=0 e=0 z=0  None .data      l_daKytag01_Method                                           */
-SECTION_DATA void* l_daKytag01_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 808559E8-80855A08 0020+00 s=1 e=0 z=0  None .data      l_daKytag01_Method                                           */
+SECTION_DATA static void* l_daKytag01_Method[8] = {
+	(void*)daKytag01_Create__FP10fopAc_ac_c,
+	(void*)daKytag01_Delete__FP13kytag01_class,
+	(void*)daKytag01_Execute__FP13kytag01_class,
+	(void*)daKytag01_IsDelete__FP13kytag01_class,
+	(void*)daKytag01_Draw__FP13kytag01_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80855A08-80855A38 0030+00 s=0 e=0 z=0  None .data      g_profile_KYTAG01                                            */
+/* 80855A08-80855A38 0030+00 s=0 e=0 z=1  None .data      g_profile_KYTAG01                                            */
 SECTION_DATA void* g_profile_KYTAG01[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x02AB0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005A0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x005F0000,
-	(void*)NULL,
+	(void*)&l_daKytag01_Method,
 	(void*)0x00040000,
 	(void*)NULL,
 };

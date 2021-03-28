@@ -11,11 +11,11 @@
 // Types:
 // 
 
-struct cCcD_GStts {
-};
-
 struct cXyz {
 	/* 80009184 */ ~cXyz();
+};
+
+struct cCcD_GObjInf {
 };
 
 struct cCcD_Stts {
@@ -25,7 +25,7 @@ struct cCcD_Stts {
 	/* 80263984 */ void GetWeightF() const;
 };
 
-struct cCcD_GObjInf {
+struct cCcD_GStts {
 };
 
 struct cCcD_Obj {

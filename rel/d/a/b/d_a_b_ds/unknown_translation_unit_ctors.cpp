@@ -19,6 +19,7 @@ extern void* const data_805DCA40[2];
 // 
 
 
+extern "C" void __sinit_d_a_b_ds_cpp(); // 1
 
 // 
 // Declarations:

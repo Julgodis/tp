@@ -22,16 +22,16 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorf {
@@ -65,21 +65,20 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-void daE_YD_LEAF_Draw(e_yd_leaf_class*); // 2
+static void daE_YD_LEAF_Draw(e_yd_leaf_class*); // 2
 static void daE_YD_LEAF_Execute(e_yd_leaf_class*); // 2
-bool daE_YD_LEAF_IsDelete(e_yd_leaf_class*); // 2
-void daE_YD_LEAF_Delete(e_yd_leaf_class*); // 2
+static bool daE_YD_LEAF_IsDelete(e_yd_leaf_class*); // 2
+static void daE_YD_LEAF_Delete(e_yd_leaf_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daE_YD_LEAF_Create(fopAc_ac_c*); // 2
+static void daE_YD_LEAF_Create(fopAc_ac_c*); // 2
 
-extern "C" void daE_YD_LEAF_Draw__FP15e_yd_leaf_class(); // 1
+extern "C" static void daE_YD_LEAF_Draw__FP15e_yd_leaf_class(); // 1
 extern "C" static void daE_YD_LEAF_Execute__FP15e_yd_leaf_class(); // 1
-extern "C" bool daE_YD_LEAF_IsDelete__FP15e_yd_leaf_class(); // 1
-extern "C" void daE_YD_LEAF_Delete__FP15e_yd_leaf_class(); // 1
+extern "C" static bool daE_YD_LEAF_IsDelete__FP15e_yd_leaf_class(); // 1
+extern "C" static void daE_YD_LEAF_Delete__FP15e_yd_leaf_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daE_YD_LEAF_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daE_YD_LEAF_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daE_YD_LEAF_Method[8];
 extern "C" extern void* g_profile_E_YD_LEAF[12];
 
 // 
@@ -119,6 +118,8 @@ extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXTrans(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -128,11 +129,11 @@ extern "C" extern u8 j3dSys[284];
 // Declarations:
 // 
 
-/* 807F7E18-807F7EC0 00A8+00 s=0 e=0 z=0  None .text      daE_YD_LEAF_Draw__FP15e_yd_leaf_class                        */
+/* 807F7E18-807F7EC0 00A8+00 s=1 e=0 z=0  None .text      daE_YD_LEAF_Draw__FP15e_yd_leaf_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_YD_LEAF_Draw(e_yd_leaf_class* param_0) {
+asm static void daE_YD_LEAF_Draw(e_yd_leaf_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_yd_leaf/d_a_e_yd_leaf/daE_YD_LEAF_Draw__FP15e_yd_leaf_class.s"
 }
@@ -149,7 +150,7 @@ SECTION_RODATA static u32 const lit_3708 = 0x3DA3D70A;
 /* 807F81F0-807F81F4 0004+00 s=1 e=0 z=0  None .rodata    @3709                                                        */
 SECTION_RODATA static u32 const lit_3709 = 0x3C23D70A;
 
-/* 807F7EC0-807F7FEC 012C+00 s=1 e=0 z=0  None .text      daE_YD_LEAF_Execute__FP15e_yd_leaf_class                     */
+/* 807F7EC0-807F7FEC 012C+00 s=2 e=0 z=0  None .text      daE_YD_LEAF_Execute__FP15e_yd_leaf_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,8 +161,8 @@ asm static void daE_YD_LEAF_Execute(e_yd_leaf_class* param_0) {
 #pragma pop
 
 
-/* 807F7FEC-807F7FF4 0008+00 s=0 e=0 z=0  None .text      daE_YD_LEAF_IsDelete__FP15e_yd_leaf_class                    */
-bool daE_YD_LEAF_IsDelete(e_yd_leaf_class* param_0) {
+/* 807F7FEC-807F7FF4 0008+00 s=1 e=0 z=0  None .text      daE_YD_LEAF_IsDelete__FP15e_yd_leaf_class                    */
+static bool daE_YD_LEAF_IsDelete(e_yd_leaf_class* param_0) {
 	return true;
 }
 
@@ -174,11 +175,11 @@ bool daE_YD_LEAF_IsDelete(e_yd_leaf_class* param_0) {
 SECTION_DEAD char const* const stringBase_807F81F4 = "E_YD";
 #pragma pop
 
-/* 807F7FF4-807F8024 0030+00 s=0 e=0 z=0  None .text      daE_YD_LEAF_Delete__FP15e_yd_leaf_class                      */
+/* 807F7FF4-807F8024 0030+00 s=1 e=0 z=0  None .text      daE_YD_LEAF_Delete__FP15e_yd_leaf_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_YD_LEAF_Delete(e_yd_leaf_class* param_0) {
+asm static void daE_YD_LEAF_Delete(e_yd_leaf_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_yd_leaf/d_a_e_yd_leaf/daE_YD_LEAF_Delete__FP15e_yd_leaf_class.s"
 }
@@ -196,11 +197,11 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 807F8124-807F81E0 00BC+00 s=0 e=0 z=0  None .text      daE_YD_LEAF_Create__FP10fopAc_ac_c                           */
+/* 807F8124-807F81E0 00BC+00 s=1 e=0 z=0  None .text      daE_YD_LEAF_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_YD_LEAF_Create(fopAc_ac_c* param_0) {
+asm static void daE_YD_LEAF_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_yd_leaf/d_a_e_yd_leaf/daE_YD_LEAF_Create__FP10fopAc_ac_c.s"
 }
@@ -208,30 +209,30 @@ asm void daE_YD_LEAF_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 807F81FC-807F821C 0020+00 s=0 e=0 z=0  None .data      l_daE_YD_LEAF_Method                                         */
-SECTION_DATA void* l_daE_YD_LEAF_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 807F81FC-807F821C 0020+00 s=1 e=0 z=0  None .data      l_daE_YD_LEAF_Method                                         */
+SECTION_DATA static void* l_daE_YD_LEAF_Method[8] = {
+	(void*)daE_YD_LEAF_Create__FP10fopAc_ac_c,
+	(void*)daE_YD_LEAF_Delete__FP15e_yd_leaf_class,
+	(void*)daE_YD_LEAF_Execute__FP15e_yd_leaf_class,
+	(void*)daE_YD_LEAF_IsDelete__FP15e_yd_leaf_class,
+	(void*)daE_YD_LEAF_Draw__FP15e_yd_leaf_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 807F821C-807F824C 0030+00 s=0 e=0 z=0  None .data      g_profile_E_YD_LEAF                                          */
+/* 807F821C-807F824C 0030+00 s=0 e=0 z=1  None .data      g_profile_E_YD_LEAF                                          */
 SECTION_DATA void* g_profile_E_YD_LEAF[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01CE0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005C0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00910000,
-	(void*)NULL,
+	(void*)&l_daE_YD_LEAF_Method,
 	(void*)0x00040000,
 	(void*)NULL,
 };

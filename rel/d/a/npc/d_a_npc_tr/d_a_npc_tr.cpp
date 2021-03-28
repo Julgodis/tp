@@ -66,30 +66,29 @@ struct dScnKy_env_light_c {
 // 
 
 static void nodeCallBack(J3DJoint*, int); // 2
-void daNPC_TR_Draw(npc_tr_class*); // 2
+static void daNPC_TR_Draw(npc_tr_class*); // 2
 static void npc_tr_move(npc_tr_class*); // 2
 static void action(npc_tr_class*); // 2
 static void daNPC_TR_Execute(npc_tr_class*); // 2
-bool daNPC_TR_IsDelete(npc_tr_class*); // 2
-void daNPC_TR_Delete(npc_tr_class*); // 2
+static bool daNPC_TR_IsDelete(npc_tr_class*); // 2
+static void daNPC_TR_Delete(npc_tr_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daNPC_TR_Create(fopAc_ac_c*); // 2
+static void daNPC_TR_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__14daNPC_TR_HIO_cFv(); // 1
 extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" void daNPC_TR_Draw__FP12npc_tr_class(); // 1
+extern "C" static void daNPC_TR_Draw__FP12npc_tr_class(); // 1
 extern "C" static void npc_tr_move__FP12npc_tr_class(); // 1
 extern "C" static void action__FP12npc_tr_class(); // 1
 extern "C" static void daNPC_TR_Execute__FP12npc_tr_class(); // 1
-extern "C" bool daNPC_TR_IsDelete__FP12npc_tr_class(); // 1
-extern "C" void daNPC_TR_Delete__FP12npc_tr_class(); // 1
+extern "C" static bool daNPC_TR_IsDelete__FP12npc_tr_class(); // 1
+extern "C" static void daNPC_TR_Delete__FP12npc_tr_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daNPC_TR_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daNPC_TR_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__14daNPC_TR_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_npc_tr_cpp(); // 1
 extern "C" extern u32 const lit_3849;
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daNPC_TR_Method[8];
 extern "C" extern void* g_profile_NPC_TR[12];
 
 // 
@@ -141,6 +140,8 @@ extern "C" void PSVECAdd(); // 1
 extern "C" void PSVECSquareMag(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -171,30 +172,30 @@ SECTION_RODATA static u32 const lit_3771 = 0x3F19999A;
 /* 80B2658C-80B26590 0004+00 s=1 e=0 z=0  None .rodata    @3772                                                        */
 SECTION_RODATA static u32 const lit_3772 = 0x437A0000;
 
-/* 80B26610-80B26630 0020+00 s=0 e=0 z=0  None .data      l_daNPC_TR_Method                                            */
-SECTION_DATA void* l_daNPC_TR_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80B26610-80B26630 0020+00 s=1 e=0 z=0  None .data      l_daNPC_TR_Method                                            */
+SECTION_DATA static void* l_daNPC_TR_Method[8] = {
+	(void*)daNPC_TR_Create__FP10fopAc_ac_c,
+	(void*)daNPC_TR_Delete__FP12npc_tr_class,
+	(void*)daNPC_TR_Execute__FP12npc_tr_class,
+	(void*)daNPC_TR_IsDelete__FP12npc_tr_class,
+	(void*)daNPC_TR_Draw__FP12npc_tr_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80B26630-80B26660 0030+00 s=0 e=0 z=0  None .data      g_profile_NPC_TR                                             */
+/* 80B26630-80B26660 0030+00 s=0 e=0 z=1  None .data      g_profile_NPC_TR                                             */
 SECTION_DATA void* g_profile_NPC_TR[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x010E0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000604,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02D30000,
-	(void*)NULL,
+	(void*)&l_daNPC_TR_Method,
 	(void*)0x00040100,
 	(void*)0x02000000,
 };
@@ -203,7 +204,7 @@ SECTION_DATA void* g_profile_NPC_TR[12] = {
 SECTION_DATA static void* __vt__14daNPC_TR_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14daNPC_TR_HIO_cFv,
 };
 
 /* 80B25A0C-80B25A54 0048+00 s=1 e=0 z=0  None .text      __ct__14daNPC_TR_HIO_cFv                                     */
@@ -228,11 +229,11 @@ asm static void nodeCallBack(J3DJoint* param_0, int param_1) {
 #pragma pop
 
 
-/* 80B25B78-80B25BDC 0064+00 s=0 e=0 z=0  None .text      daNPC_TR_Draw__FP12npc_tr_class                              */
+/* 80B25B78-80B25BDC 0064+00 s=1 e=0 z=0  None .text      daNPC_TR_Draw__FP12npc_tr_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNPC_TR_Draw(npc_tr_class* param_0) {
+asm static void daNPC_TR_Draw(npc_tr_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tr/d_a_npc_tr/daNPC_TR_Draw__FP12npc_tr_class.s"
 }
@@ -357,7 +358,7 @@ asm static void action(npc_tr_class* param_0) {
 #pragma pop
 
 
-/* 80B261D8-80B262D0 00F8+00 s=1 e=0 z=0  None .text      daNPC_TR_Execute__FP12npc_tr_class                           */
+/* 80B261D8-80B262D0 00F8+00 s=2 e=0 z=0  None .text      daNPC_TR_Execute__FP12npc_tr_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -368,8 +369,8 @@ asm static void daNPC_TR_Execute(npc_tr_class* param_0) {
 #pragma pop
 
 
-/* 80B262D0-80B262D8 0008+00 s=0 e=0 z=0  None .text      daNPC_TR_IsDelete__FP12npc_tr_class                          */
-bool daNPC_TR_IsDelete(npc_tr_class* param_0) {
+/* 80B262D0-80B262D8 0008+00 s=1 e=0 z=0  None .text      daNPC_TR_IsDelete__FP12npc_tr_class                          */
+static bool daNPC_TR_IsDelete(npc_tr_class* param_0) {
 	return true;
 }
 
@@ -382,11 +383,11 @@ bool daNPC_TR_IsDelete(npc_tr_class* param_0) {
 SECTION_DEAD char const* const stringBase_80B26608 = "NPC_TR";
 #pragma pop
 
-/* 80B262D8-80B2632C 0054+00 s=0 e=0 z=0  None .text      daNPC_TR_Delete__FP12npc_tr_class                            */
+/* 80B262D8-80B2632C 0054+00 s=1 e=0 z=0  None .text      daNPC_TR_Delete__FP12npc_tr_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNPC_TR_Delete(npc_tr_class* param_0) {
+asm static void daNPC_TR_Delete(npc_tr_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tr/d_a_npc_tr/daNPC_TR_Delete__FP12npc_tr_class.s"
 }
@@ -404,18 +405,18 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80B263E4-80B264E4 0100+00 s=0 e=0 z=0  None .text      daNPC_TR_Create__FP10fopAc_ac_c                              */
+/* 80B263E4-80B264E4 0100+00 s=1 e=0 z=0  None .text      daNPC_TR_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNPC_TR_Create(fopAc_ac_c* param_0) {
+asm static void daNPC_TR_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tr/d_a_npc_tr/daNPC_TR_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80B264E4-80B2652C 0048+00 s=1 e=0 z=0  None .text      __dt__14daNPC_TR_HIO_cFv                                     */
+/* 80B264E4-80B2652C 0048+00 s=2 e=0 z=0  None .text      __dt__14daNPC_TR_HIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -426,7 +427,7 @@ asm daNPC_TR_HIO_c::~daNPC_TR_HIO_c() {
 #pragma pop
 
 
-/* 80B2652C-80B26568 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_npc_tr_cpp                                       */
+/* 80B2652C-80B26568 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_npc_tr_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

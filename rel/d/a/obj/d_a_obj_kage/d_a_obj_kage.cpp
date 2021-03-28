@@ -60,21 +60,20 @@ struct Z2SoundObjSimple {
 // Forward References:
 // 
 
-void daObj_Kage_Draw(obj_kage_class*); // 2
+static void daObj_Kage_Draw(obj_kage_class*); // 2
 static void daObj_Kage_Execute(obj_kage_class*); // 2
-bool daObj_Kage_IsDelete(obj_kage_class*); // 2
-void daObj_Kage_Delete(obj_kage_class*); // 2
+static bool daObj_Kage_IsDelete(obj_kage_class*); // 2
+static void daObj_Kage_Delete(obj_kage_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daObj_Kage_Create(fopAc_ac_c*); // 2
+static void daObj_Kage_Create(fopAc_ac_c*); // 2
 
-extern "C" void daObj_Kage_Draw__FP14obj_kage_class(); // 1
+extern "C" static void daObj_Kage_Draw__FP14obj_kage_class(); // 1
 extern "C" static void daObj_Kage_Execute__FP14obj_kage_class(); // 1
-extern "C" bool daObj_Kage_IsDelete__FP14obj_kage_class(); // 1
-extern "C" void daObj_Kage_Delete__FP14obj_kage_class(); // 1
+extern "C" static bool daObj_Kage_IsDelete__FP14obj_kage_class(); // 1
+extern "C" static void daObj_Kage_Delete__FP14obj_kage_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daObj_Kage_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObj_Kage_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObj_Kage_Method[8];
 extern "C" extern void* g_profile_OBJ_KAGE[12];
 
 // 
@@ -122,6 +121,8 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -131,11 +132,11 @@ extern "C" extern u8 sincosTable___5JMath[65536];
 // Declarations:
 // 
 
-/* 80C314D8-80C3153C 0064+00 s=0 e=0 z=0  None .text      daObj_Kage_Draw__FP14obj_kage_class                          */
+/* 80C314D8-80C3153C 0064+00 s=1 e=0 z=0  None .text      daObj_Kage_Draw__FP14obj_kage_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Kage_Draw(obj_kage_class* param_0) {
+asm static void daObj_Kage_Draw(obj_kage_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kage/d_a_obj_kage/daObj_Kage_Draw__FP14obj_kage_class.s"
 }
@@ -178,7 +179,7 @@ SECTION_RODATA static u32 const lit_3863 = 0x3F800000;
 /* 80C31984-80C31988 0004+00 s=1 e=0 z=0  None .rodata    @3864                                                        */
 SECTION_RODATA static u32 const lit_3864 = 0x41200000;
 
-/* 80C3153C-80C31764 0228+00 s=1 e=0 z=0  None .text      daObj_Kage_Execute__FP14obj_kage_class                       */
+/* 80C3153C-80C31764 0228+00 s=2 e=0 z=0  None .text      daObj_Kage_Execute__FP14obj_kage_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -189,8 +190,8 @@ asm static void daObj_Kage_Execute(obj_kage_class* param_0) {
 #pragma pop
 
 
-/* 80C31764-80C3176C 0008+00 s=0 e=0 z=0  None .text      daObj_Kage_IsDelete__FP14obj_kage_class                      */
-bool daObj_Kage_IsDelete(obj_kage_class* param_0) {
+/* 80C31764-80C3176C 0008+00 s=1 e=0 z=0  None .text      daObj_Kage_IsDelete__FP14obj_kage_class                      */
+static bool daObj_Kage_IsDelete(obj_kage_class* param_0) {
 	return true;
 }
 
@@ -209,11 +210,11 @@ SECTION_RODATA static u32 const lit_3927 = 0xC3480000;
 SECTION_DEAD char const* const stringBase_80C31990 = "Obj_kage";
 #pragma pop
 
-/* 80C3176C-80C3179C 0030+00 s=0 e=0 z=0  None .text      daObj_Kage_Delete__FP14obj_kage_class                        */
+/* 80C3176C-80C3179C 0030+00 s=1 e=0 z=0  None .text      daObj_Kage_Delete__FP14obj_kage_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Kage_Delete(obj_kage_class* param_0) {
+asm static void daObj_Kage_Delete(obj_kage_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kage/d_a_obj_kage/daObj_Kage_Delete__FP14obj_kage_class.s"
 }
@@ -231,11 +232,11 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80C31808-80C31954 014C+00 s=0 e=0 z=0  None .text      daObj_Kage_Create__FP10fopAc_ac_c                            */
+/* 80C31808-80C31954 014C+00 s=1 e=0 z=0  None .text      daObj_Kage_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Kage_Create(fopAc_ac_c* param_0) {
+asm static void daObj_Kage_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kage/d_a_obj_kage/daObj_Kage_Create__FP10fopAc_ac_c.s"
 }
@@ -243,30 +244,30 @@ asm void daObj_Kage_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80C3199C-80C319BC 0020+00 s=0 e=0 z=0  None .data      l_daObj_Kage_Method                                          */
-SECTION_DATA void* l_daObj_Kage_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80C3199C-80C319BC 0020+00 s=1 e=0 z=0  None .data      l_daObj_Kage_Method                                          */
+SECTION_DATA static void* l_daObj_Kage_Method[8] = {
+	(void*)daObj_Kage_Create__FP10fopAc_ac_c,
+	(void*)daObj_Kage_Delete__FP14obj_kage_class,
+	(void*)daObj_Kage_Execute__FP14obj_kage_class,
+	(void*)daObj_Kage_IsDelete__FP14obj_kage_class,
+	(void*)daObj_Kage_Draw__FP14obj_kage_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C319BC-80C319EC 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_KAGE                                           */
+/* 80C319BC-80C319EC 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_KAGE                                           */
 SECTION_DATA void* g_profile_OBJ_KAGE[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x011A0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005B4,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x003E0000,
-	(void*)NULL,
+	(void*)&l_daObj_Kage_Method,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };

@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct Z2SoundHandlePool {
+struct JAISoundID {
 };
 
 struct Vec {
 };
 
-struct JAISoundID {
+struct Z2SoundHandlePool {
 };
 
 struct Z2SoundObjBase {

@@ -11,15 +11,15 @@
 // Types:
 // 
 
+struct CSTControl {
+};
+
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 8003242C */ void checkLeftTrigger();
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
-};
-
-struct CSTControl {
 };
 
 struct JKRExpHeap {
@@ -95,17 +95,17 @@ struct dSelect_cursor_c {
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
+struct JMSMesgEntry_c {
+};
+
+struct JUTFont {
+};
+
 struct ResTIMG {
 };
 
 struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
-};
-
-struct JMSMesgEntry_c {
-};
-
-struct JUTFont {
 };
 
 struct dMeter2Info_c {
@@ -158,10 +158,10 @@ struct CPaneMgrAlpha {
 	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

@@ -11,16 +11,16 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
 	/* 80084460 */ void ChkTgHit();
 	/* 800844F8 */ void GetTgHitObj();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daObj_ItaMato_c {
@@ -126,10 +126,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -206,10 +206,10 @@ struct cM3dGCir {
 	/* 8026EF18 */ ~cM3dGCir();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -220,11 +220,11 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daObj_ItaMato_Create(void*); // 2
-void daObj_ItaMato_Delete(void*); // 2
-void daObj_ItaMato_Execute(void*); // 2
-void daObj_ItaMato_Draw(void*); // 2
-bool daObj_ItaMato_IsDelete(void*); // 2
+static void daObj_ItaMato_Create(void*); // 2
+static void daObj_ItaMato_Delete(void*); // 2
+static void daObj_ItaMato_Execute(void*); // 2
+static void daObj_ItaMato_Draw(void*); // 2
+static bool daObj_ItaMato_IsDelete(void*); // 2
 
 extern "C" void __dt__15daObj_ItaMato_cFv(); // 1
 extern "C" void __dt__5csXyzFv(); // 1
@@ -248,18 +248,17 @@ extern "C" void setPrtcls__15daObj_ItaMato_cFv(); // 1
 extern "C" void setEnvTevColor__15daObj_ItaMato_cFv(); // 1
 extern "C" void setRoomNo__15daObj_ItaMato_cFv(); // 1
 extern "C" void setMtx__15daObj_ItaMato_cFv(); // 1
-extern "C" void daObj_ItaMato_Create__FPv(); // 1
-extern "C" void daObj_ItaMato_Delete__FPv(); // 1
-extern "C" void daObj_ItaMato_Execute__FPv(); // 1
-extern "C" void daObj_ItaMato_Draw__FPv(); // 1
-extern "C" bool daObj_ItaMato_IsDelete__FPv(); // 1
+extern "C" static void daObj_ItaMato_Create__FPv(); // 1
+extern "C" static void daObj_ItaMato_Delete__FPv(); // 1
+extern "C" static void daObj_ItaMato_Execute__FPv(); // 1
+extern "C" static void daObj_ItaMato_Draw__FPv(); // 1
+extern "C" static bool daObj_ItaMato_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __sinit_d_a_obj_itamato_cpp(); // 1
 extern "C" void __dt__21daObj_ItaMato_Param_cFv(); // 1
-extern "C" void func_80C2AB4C(); // 1
-extern "C" void func_80C2AB54(); // 1
+extern "C" static void func_80C2AB4C(); // 1
+extern "C" static void func_80C2AB54(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* daObj_ItaMato_MethodTable[8];
 extern "C" extern void* g_profile_OBJ_ITAMATO[12];
 
 // 
@@ -358,6 +357,8 @@ extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -375,130 +376,6 @@ extern "C" void __register_global_object(); // 1
 // 
 // Declarations:
 // 
-
-/* ############################################################################################## */
-/* 80C2AC34-80C2AC74 0040+00 s=2 e=0 z=0  None .data      l_ccDSph                                                     */
-SECTION_DATA static u8 l_ccDSph[64] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C2AC74-80C2AC78 0004+00 s=1 e=0 z=0  None .data      l_resName                                                    */
-SECTION_DATA static void* l_resName = (void*)NULL;
-
-/* 80C2AC78-80C2AC98 0020+00 s=0 e=0 z=0  None .data      daObj_ItaMato_MethodTable                                    */
-SECTION_DATA void* daObj_ItaMato_MethodTable[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80C2AC98-80C2ACC8 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_ITAMATO                                        */
-SECTION_DATA void* g_profile_OBJ_ITAMATO[12] = {
-	(void*)0xFFFFFFFD,
-	(void*)0x0007FFFD,
-	(void*)0x012E0000,
-	(void*)NULL,
-	(void*)0x00000A20,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)0x00530000,
-	(void*)NULL,
-	(void*)0x00044100,
-	(void*)0x000E0000,
-};
-
-/* 80C2ACC8-80C2ACEC 0024+00 s=3 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
-SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80C2ACEC-80C2ACF8 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
-SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80C2ACF8-80C2AD04 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
-SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80C2AD04-80C2AD10 000C+00 s=2 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
-SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80C2AD10-80C2AD1C 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80C2AD1C-80C2AD28 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
-SECTION_DATA static void* __vt__8cM3dGSph[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80C2AD28-80C2AD34 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGLin                                              */
-SECTION_DATA static void* __vt__8cM3dGLin[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80C2AD34-80C2AD40 000C+00 s=2 e=0 z=0  None .data      __vt__15daObj_ItaMato_c                                      */
-SECTION_DATA static void* __vt__15daObj_ItaMato_c[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80C294EC-80C296E0 01F4+00 s=0 e=0 z=0  None .text      __dt__15daObj_ItaMato_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daObj_ItaMato_c::~daObj_ItaMato_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_itamato/d_a_obj_itamato/__dt__15daObj_ItaMato_cFv.s"
-}
-#pragma pop
-
-
-/* 80C296E0-80C2971C 003C+00 s=2 e=0 z=0  None .text      __dt__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::~csXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_itamato/d_a_obj_itamato/__dt__5csXyzFv.s"
-}
-#pragma pop
-
 
 /* ############################################################################################## */
 /* 80C2AB70-80C2AB84 0014+00 s=4 e=0 z=0  None .rodata    m__21daObj_ItaMato_Param_c                                   */
@@ -593,13 +470,136 @@ SECTION_RODATA static u8 const data_80C2AC18[6 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 80C2AC20-80C2AC32 0012+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80C2AC20-80C2AC32 0012+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD char const* const stringBase_80C2AC20 = "H_ItaMato";
 SECTION_DEAD char const* const stringBase_80C2AC2A = "F_SP103";
 #pragma pop
+
+/* 80C2AC34-80C2AC74 0040+00 s=2 e=0 z=0  None .data      l_ccDSph                                                     */
+SECTION_DATA static u8 l_ccDSph[64] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C2AC74-80C2AC78 0004+00 s=1 e=0 z=0  None .data      l_resName                                                    */
+SECTION_DATA static void* l_resName = (void*)&stringBase0;
+
+/* 80C2AC78-80C2AC98 0020+00 s=1 e=0 z=0  None .data      daObj_ItaMato_MethodTable                                    */
+SECTION_DATA static void* daObj_ItaMato_MethodTable[8] = {
+	(void*)daObj_ItaMato_Create__FPv,
+	(void*)daObj_ItaMato_Delete__FPv,
+	(void*)daObj_ItaMato_Execute__FPv,
+	(void*)daObj_ItaMato_IsDelete__FPv,
+	(void*)daObj_ItaMato_Draw__FPv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80C2AC98-80C2ACC8 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_ITAMATO                                        */
+SECTION_DATA void* g_profile_OBJ_ITAMATO[12] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x012E0000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x00000A20,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopAc_Method,
+	(void*)0x00530000,
+	(void*)&daObj_ItaMato_MethodTable,
+	(void*)0x00044100,
+	(void*)0x000E0000,
+};
+
+/* 80C2ACC8-80C2ACEC 0024+00 s=3 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
+SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80C2AB54,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80C2AB4C,
+};
+
+/* 80C2ACEC-80C2ACF8 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
+SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
+};
+
+/* 80C2ACF8-80C2AD04 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
+SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
+};
+
+/* 80C2AD04-80C2AD10 000C+00 s=2 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
+SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
+};
+
+/* 80C2AD10-80C2AD1C 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA static void* __vt__8cM3dGAab[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
+};
+
+/* 80C2AD1C-80C2AD28 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
+SECTION_DATA static void* __vt__8cM3dGSph[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
+};
+
+/* 80C2AD28-80C2AD34 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGLin                                              */
+SECTION_DATA static void* __vt__8cM3dGLin[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGLinFv,
+};
+
+/* 80C2AD34-80C2AD40 000C+00 s=2 e=0 z=0  None .data      __vt__15daObj_ItaMato_c                                      */
+SECTION_DATA static void* __vt__15daObj_ItaMato_c[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15daObj_ItaMato_cFv,
+};
+
+/* 80C294EC-80C296E0 01F4+00 s=1 e=0 z=0  None .text      __dt__15daObj_ItaMato_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm daObj_ItaMato_c::~daObj_ItaMato_c() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_itamato/d_a_obj_itamato/__dt__15daObj_ItaMato_cFv.s"
+}
+#pragma pop
+
+
+/* 80C296E0-80C2971C 003C+00 s=2 e=0 z=0  None .text      __dt__5csXyzFv                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm csXyz::~csXyz() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_itamato/d_a_obj_itamato/__dt__5csXyzFv.s"
+}
+#pragma pop
+
 
 /* 80C2971C-80C29AC0 03A4+00 s=1 e=0 z=0  None .text      create__15daObj_ItaMato_cFv                                  */
 #pragma push
@@ -618,7 +618,7 @@ csXyz::csXyz() {
 }
 
 
-/* 80C29AC4-80C29B0C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGLinFv                                            */
+/* 80C29AC4-80C29B0C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGLinFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -629,7 +629,7 @@ asm cM3dGLin::~cM3dGLin() {
 #pragma pop
 
 
-/* 80C29B0C-80C29B54 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80C29B0C-80C29B54 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -640,7 +640,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80C29B54-80C29B9C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C29B54-80C29B9C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -651,7 +651,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80C29B9C-80C29C0C 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80C29B9C-80C29C0C 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -662,7 +662,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 80C29C0C-80C29C68 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80C29C0C-80C29C68 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -673,7 +673,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80C29C68-80C29CD8 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80C29C68-80C29CD8 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -816,57 +816,57 @@ asm void daObj_ItaMato_c::setMtx() {
 #pragma pop
 
 
-/* 80C2A9C0-80C2A9E0 0020+00 s=0 e=0 z=0  None .text      daObj_ItaMato_Create__FPv                                    */
+/* 80C2A9C0-80C2A9E0 0020+00 s=1 e=0 z=0  None .text      daObj_ItaMato_Create__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_ItaMato_Create(void* param_0) {
+asm static void daObj_ItaMato_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_itamato/d_a_obj_itamato/daObj_ItaMato_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 80C2A9E0-80C2AA00 0020+00 s=0 e=0 z=0  None .text      daObj_ItaMato_Delete__FPv                                    */
+/* 80C2A9E0-80C2AA00 0020+00 s=1 e=0 z=0  None .text      daObj_ItaMato_Delete__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_ItaMato_Delete(void* param_0) {
+asm static void daObj_ItaMato_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_itamato/d_a_obj_itamato/daObj_ItaMato_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 80C2AA00-80C2AA20 0020+00 s=0 e=0 z=0  None .text      daObj_ItaMato_Execute__FPv                                   */
+/* 80C2AA00-80C2AA20 0020+00 s=1 e=0 z=0  None .text      daObj_ItaMato_Execute__FPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_ItaMato_Execute(void* param_0) {
+asm static void daObj_ItaMato_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_itamato/d_a_obj_itamato/daObj_ItaMato_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 80C2AA20-80C2AA40 0020+00 s=0 e=0 z=0  None .text      daObj_ItaMato_Draw__FPv                                      */
+/* 80C2AA20-80C2AA40 0020+00 s=1 e=0 z=0  None .text      daObj_ItaMato_Draw__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_ItaMato_Draw(void* param_0) {
+asm static void daObj_ItaMato_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_itamato/d_a_obj_itamato/daObj_ItaMato_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 80C2AA40-80C2AA48 0008+00 s=0 e=0 z=0  None .text      daObj_ItaMato_IsDelete__FPv                                  */
-bool daObj_ItaMato_IsDelete(void* param_0) {
+/* 80C2AA40-80C2AA48 0008+00 s=1 e=0 z=0  None .text      daObj_ItaMato_IsDelete__FPv                                  */
+static bool daObj_ItaMato_IsDelete(void* param_0) {
 	return true;
 }
 
 
-/* 80C2AA48-80C2AA90 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80C2AA48-80C2AA90 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -882,7 +882,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 SECTION_DATA static void* __vt__21daObj_ItaMato_Param_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__21daObj_ItaMato_Param_cFv,
 };
 
 /* 80C2AD58-80C2AD64 000C+00 s=1 e=0 z=0  None .bss       @3836                                                        */
@@ -891,7 +891,7 @@ static u8 lit_3836[12];
 /* 80C2AD64-80C2AD68 0004+00 s=1 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[4];
 
-/* 80C2AA90-80C2AB04 0074+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_itamato_cpp                                  */
+/* 80C2AA90-80C2AB04 0074+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_itamato_cpp                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -902,7 +902,7 @@ extern "C" asm void __sinit_d_a_obj_itamato_cpp() {
 #pragma pop
 
 
-/* 80C2AB04-80C2AB4C 0048+00 s=1 e=0 z=0  None .text      __dt__21daObj_ItaMato_Param_cFv                              */
+/* 80C2AB04-80C2AB4C 0048+00 s=2 e=0 z=0  None .text      __dt__21daObj_ItaMato_Param_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -913,22 +913,22 @@ asm daObj_ItaMato_Param_c::~daObj_ItaMato_Param_c() {
 #pragma pop
 
 
-/* 80C2AB4C-80C2AB54 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C2AB4C-80C2AB54 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C2AB4C() {
+extern "C" asm static void func_80C2AB4C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_itamato/d_a_obj_itamato/func_80C2AB4C.s"
 }
 #pragma pop
 
 
-/* 80C2AB54-80C2AB5C 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C2AB54-80C2AB5C 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C2AB54() {
+extern "C" asm static void func_80C2AB54() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_itamato/d_a_obj_itamato/func_80C2AB54.s"
 }

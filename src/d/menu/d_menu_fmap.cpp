@@ -16,14 +16,11 @@ struct dMf_HIO_c {
 	/* 801CDA2C */ ~dMf_HIO_c();
 };
 
+struct CSTControl {
+};
+
 struct STControl {
 	/* 8003219C */ void checkTrigger();
-};
-
-struct dMenu_Fmap_stage_data_c {
-};
-
-struct CSTControl {
 };
 
 struct JKRHeap {
@@ -34,6 +31,9 @@ struct JKRHeap {
 
 struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
+struct dMenu_Fmap_stage_data_c {
 };
 
 struct dMenu_Fmap_c {
@@ -332,10 +332,10 @@ struct dMsgFlow_c {
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

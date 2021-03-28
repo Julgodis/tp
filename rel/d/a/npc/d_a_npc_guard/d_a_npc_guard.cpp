@@ -249,11 +249,11 @@ struct J3DFrameCtrl {
 // 
 
 static void createHeapCallBack(fopAc_ac_c*); // 2
-void daNpcGuard_Create(void*); // 2
-void daNpcGuard_Delete(void*); // 2
-void daNpcGuard_Execute(void*); // 2
-void daNpcGuard_Draw(void*); // 2
-bool daNpcGuard_IsDelete(void*); // 2
+static void daNpcGuard_Create(void*); // 2
+static void daNpcGuard_Delete(void*); // 2
+static void daNpcGuard_Execute(void*); // 2
+static void daNpcGuard_Draw(void*); // 2
+static bool daNpcGuard_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(int*); // 2
 static void cLib_getRndValue__template0(f32, f32); // 2
 static void cLib_getRndValue__template1(int, int); // 2
@@ -281,7 +281,7 @@ extern "C" void executeEscape__12daNpcGuard_cFv(); // 1
 extern "C" void setAngle__12daNpcGuard_cFv(); // 1
 extern "C" void setSpeed__12daNpcGuard_cFffPfi(); // 1
 extern "C" void pathMoveF__12daNpcGuard_cFv(); // 1
-extern "C" void daNpcGuard_Create__FPv(); // 1
+extern "C" static void daNpcGuard_Create__FPv(); // 1
 extern "C" void create__12daNpcGuard_cFv(); // 1
 extern "C" void create_init__12daNpcGuard_cFv(); // 1
 extern "C" void setMtx__12daNpcGuard_cFv(); // 1
@@ -290,19 +290,19 @@ extern "C" void __dt__5csXyzFv(); // 1
 extern "C" void __dt__8dCcD_SphFv(); // 1
 extern "C" void __ct__8dCcD_SphFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
-extern "C" void daNpcGuard_Delete__FPv(); // 1
+extern "C" static void daNpcGuard_Delete__FPv(); // 1
 extern "C" void __dt__12daNpcGuard_cFv(); // 1
-extern "C" void daNpcGuard_Execute__FPv(); // 1
+extern "C" static void daNpcGuard_Execute__FPv(); // 1
 extern "C" void execute__12daNpcGuard_cFv(); // 1
-extern "C" void daNpcGuard_Draw__FPv(); // 1
-extern "C" bool daNpcGuard_IsDelete__FPv(); // 1
+extern "C" static void daNpcGuard_Draw__FPv(); // 1
+extern "C" static bool daNpcGuard_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" static void func_809F24B4(); // 1
 extern "C" static void func_809F24D0(); // 1
 extern "C" static void func_809F250C(); // 1
 extern "C" void __sinit_d_a_npc_guard_cpp(); // 1
-extern "C" void func_809F26E8(); // 1
-extern "C" void func_809F26F0(); // 1
+extern "C" static void func_809F26E8(); // 1
+extern "C" static void func_809F26F0(); // 1
 extern "C" void __dt__18daNpcT_ActorMngr_cFv(); // 1
 extern "C" void __dt__10daNpcCd2_cFv(); // 1
 extern "C" void __dt__16dNpcLib_lookat_cFv(); // 1
@@ -314,7 +314,6 @@ extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" extern u8 const lit_4351[64];
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* daNpcGuard_METHODS[8];
 extern "C" extern void* g_profile_NPC_GUARD[12];
 
 // 
@@ -439,6 +438,8 @@ extern "C" void _restgpr_29(); // 1
 extern "C" void abs(); // 1
 extern "C" void pow(); // 1
 extern "C" extern u8 const m_cylDat__10daNpcCd2_c[68];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -638,98 +639,98 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 SECTION_DATA static void* lit_3824[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)initPath__12daNpcGuard_cFv,
 };
 
 /* 809F2D7C-809F2D88 000C+00 s=1 e=0 z=0  None .data      @3825                                                        */
 SECTION_DATA static void* lit_3825[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)executePath__12daNpcGuard_cFv,
 };
 
 /* 809F2D88-809F2D94 000C+00 s=1 e=0 z=0  None .data      @3826                                                        */
 SECTION_DATA static void* lit_3826[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)initRun__12daNpcGuard_cFv,
 };
 
 /* 809F2D94-809F2DA0 000C+00 s=1 e=0 z=0  None .data      @3827                                                        */
 SECTION_DATA static void* lit_3827[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)executeRun__12daNpcGuard_cFv,
 };
 
 /* 809F2DA0-809F2DAC 000C+00 s=1 e=0 z=0  None .data      @3828                                                        */
 SECTION_DATA static void* lit_3828[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)initFightWait__12daNpcGuard_cFv,
 };
 
 /* 809F2DAC-809F2DB8 000C+00 s=1 e=0 z=0  None .data      @3829                                                        */
 SECTION_DATA static void* lit_3829[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)executeFightWait__12daNpcGuard_cFv,
 };
 
 /* 809F2DB8-809F2DC4 000C+00 s=1 e=0 z=0  None .data      @3830                                                        */
 SECTION_DATA static void* lit_3830[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)initFightStep__12daNpcGuard_cFv,
 };
 
 /* 809F2DC4-809F2DD0 000C+00 s=1 e=0 z=0  None .data      @3831                                                        */
 SECTION_DATA static void* lit_3831[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)executeFightStep__12daNpcGuard_cFv,
 };
 
 /* 809F2DD0-809F2DDC 000C+00 s=1 e=0 z=0  None .data      @3832                                                        */
 SECTION_DATA static void* lit_3832[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)initFightMenace__12daNpcGuard_cFv,
 };
 
 /* 809F2DDC-809F2DE8 000C+00 s=1 e=0 z=0  None .data      @3833                                                        */
 SECTION_DATA static void* lit_3833[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)executeFightMenace__12daNpcGuard_cFv,
 };
 
 /* 809F2DE8-809F2DF4 000C+00 s=1 e=0 z=0  None .data      @3834                                                        */
 SECTION_DATA static void* lit_3834[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)initFear__12daNpcGuard_cFv,
 };
 
 /* 809F2DF4-809F2E00 000C+00 s=1 e=0 z=0  None .data      @3835                                                        */
 SECTION_DATA static void* lit_3835[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)executeFear__12daNpcGuard_cFv,
 };
 
 /* 809F2E00-809F2E0C 000C+00 s=1 e=0 z=0  None .data      @3836                                                        */
 SECTION_DATA static void* lit_3836[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)initEscape__12daNpcGuard_cFv,
 };
 
 /* 809F2E0C-809F2E18 000C+00 s=1 e=0 z=0  None .data      @3837                                                        */
 SECTION_DATA static void* lit_3837[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)executeEscape__12daNpcGuard_cFv,
 };
 
 /* 809F2E18-809F2EC0 00A8+00 s=2 e=0 z=0  None .data      ActionTable__12daNpcGuard_c                                  */
@@ -780,7 +781,7 @@ asm void daNpcGuard_c::callExecute() {
 #pragma pop
 
 
-/* 809EFEB8-809EFF1C 0064+00 s=0 e=0 z=0  None .text      initPath__12daNpcGuard_cFv                                   */
+/* 809EFEB8-809EFF1C 0064+00 s=1 e=0 z=0  None .text      initPath__12daNpcGuard_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -792,30 +793,30 @@ asm void daNpcGuard_c::initPath() {
 
 
 /* ############################################################################################## */
-/* 809F2EC0-809F2EE0 0020+00 s=0 e=0 z=0  None .data      daNpcGuard_METHODS                                           */
-SECTION_DATA void* daNpcGuard_METHODS[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 809F2EC0-809F2EE0 0020+00 s=1 e=0 z=0  None .data      daNpcGuard_METHODS                                           */
+SECTION_DATA static void* daNpcGuard_METHODS[8] = {
+	(void*)daNpcGuard_Create__FPv,
+	(void*)daNpcGuard_Delete__FPv,
+	(void*)daNpcGuard_Execute__FPv,
+	(void*)daNpcGuard_IsDelete__FPv,
+	(void*)daNpcGuard_Draw__FPv,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 809F2EE0-809F2F10 0030+00 s=0 e=0 z=0  None .data      g_profile_NPC_GUARD                                          */
+/* 809F2EE0-809F2F10 0030+00 s=0 e=0 z=1  None .data      g_profile_NPC_GUARD                                          */
 SECTION_DATA void* g_profile_NPC_GUARD[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x02970000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000DA8,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01960000,
-	(void*)NULL,
+	(void*)&daNpcGuard_METHODS,
 	(void*)0x00040107,
 	(void*)0x040E0000,
 };
@@ -824,93 +825,93 @@ SECTION_DATA void* g_profile_NPC_GUARD[12] = {
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 809F2F1C-809F2F28 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 809F2F28-809F2F34 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 809F2F34-809F2F40 000C+00 s=2 e=0 z=0  None .data      __vt__16dNpcLib_lookat_c                                     */
 SECTION_DATA static void* __vt__16dNpcLib_lookat_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__16dNpcLib_lookat_cFv,
 };
 
 /* 809F2F40-809F2F4C 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 809F2F4C-809F2F58 000C+00 s=3 e=0 z=0  None .data      __vt__18daNpcT_ActorMngr_c                                   */
 SECTION_DATA static void* __vt__18daNpcT_ActorMngr_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__18daNpcT_ActorMngr_cFv,
 };
 
 /* 809F2F58-809F2F64 000C+00 s=2 e=0 z=0  None .data      __vt__12daNpcGuard_c                                         */
 SECTION_DATA static void* __vt__12daNpcGuard_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12daNpcGuard_cFv,
 };
 
 /* 809F2F64-809F2F70 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 809F2F70-809F2F7C 000C+00 s=5 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 809F2F7C-809F2FA0 0024+00 s=3 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_809F26F0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_809F26E8,
 };
 
 /* 809F2FA0-809F2FAC 000C+00 s=2 e=0 z=0  None .data      __vt__10daNpcCd2_c                                           */
 SECTION_DATA static void* __vt__10daNpcCd2_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10daNpcCd2_cFv,
 };
 
 /* 809F2FAC-809F2FB8 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGPla                                              */
 SECTION_DATA static void* __vt__8cM3dGPla[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGPlaFv,
 };
 
-/* 809EFF1C-809F0100 01E4+00 s=0 e=0 z=0  None .text      executePath__12daNpcGuard_cFv                                */
+/* 809EFF1C-809F0100 01E4+00 s=1 e=0 z=0  None .text      executePath__12daNpcGuard_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -921,7 +922,7 @@ asm void daNpcGuard_c::executePath() {
 #pragma pop
 
 
-/* 809F0100-809F0148 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 809F0100-809F0148 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -943,7 +944,7 @@ asm cXyz::~cXyz() {
 #pragma pop
 
 
-/* 809F0184-809F01E8 0064+00 s=0 e=0 z=0  None .text      initRun__12daNpcGuard_cFv                                    */
+/* 809F0184-809F01E8 0064+00 s=1 e=0 z=0  None .text      initRun__12daNpcGuard_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -954,7 +955,7 @@ asm void daNpcGuard_c::initRun() {
 #pragma pop
 
 
-/* 809F01E8-809F03FC 0214+00 s=0 e=0 z=0  None .text      executeRun__12daNpcGuard_cFv                                 */
+/* 809F01E8-809F03FC 0214+00 s=1 e=0 z=0  None .text      executeRun__12daNpcGuard_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -965,7 +966,7 @@ asm void daNpcGuard_c::executeRun() {
 #pragma pop
 
 
-/* 809F03FC-809F04B4 00B8+00 s=0 e=0 z=0  None .text      initFightWait__12daNpcGuard_cFv                              */
+/* 809F03FC-809F04B4 00B8+00 s=1 e=0 z=0  None .text      initFightWait__12daNpcGuard_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -976,7 +977,7 @@ asm void daNpcGuard_c::initFightWait() {
 #pragma pop
 
 
-/* 809F04B4-809F06F4 0240+00 s=0 e=0 z=0  None .text      executeFightWait__12daNpcGuard_cFv                           */
+/* 809F04B4-809F06F4 0240+00 s=1 e=0 z=0  None .text      executeFightWait__12daNpcGuard_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -987,7 +988,7 @@ asm void daNpcGuard_c::executeFightWait() {
 #pragma pop
 
 
-/* 809F06F4-809F0700 000C+00 s=0 e=0 z=0  None .text      initFightStep__12daNpcGuard_cFv                              */
+/* 809F06F4-809F0700 000C+00 s=1 e=0 z=0  None .text      initFightStep__12daNpcGuard_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -998,7 +999,7 @@ asm void daNpcGuard_c::initFightStep() {
 #pragma pop
 
 
-/* 809F0700-809F0778 0078+00 s=0 e=0 z=0  None .text      executeFightStep__12daNpcGuard_cFv                           */
+/* 809F0700-809F0778 0078+00 s=1 e=0 z=0  None .text      executeFightStep__12daNpcGuard_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1009,7 +1010,7 @@ asm void daNpcGuard_c::executeFightStep() {
 #pragma pop
 
 
-/* 809F0778-809F07F8 0080+00 s=0 e=0 z=0  None .text      initFightMenace__12daNpcGuard_cFv                            */
+/* 809F0778-809F07F8 0080+00 s=1 e=0 z=0  None .text      initFightMenace__12daNpcGuard_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1020,7 +1021,7 @@ asm void daNpcGuard_c::initFightMenace() {
 #pragma pop
 
 
-/* 809F07F8-809F08DC 00E4+00 s=0 e=0 z=0  None .text      executeFightMenace__12daNpcGuard_cFv                         */
+/* 809F07F8-809F08DC 00E4+00 s=1 e=0 z=0  None .text      executeFightMenace__12daNpcGuard_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1031,7 +1032,7 @@ asm void daNpcGuard_c::executeFightMenace() {
 #pragma pop
 
 
-/* 809F08DC-809F0960 0084+00 s=0 e=0 z=0  None .text      initFear__12daNpcGuard_cFv                                   */
+/* 809F08DC-809F0960 0084+00 s=1 e=0 z=0  None .text      initFear__12daNpcGuard_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1042,7 +1043,7 @@ asm void daNpcGuard_c::initFear() {
 #pragma pop
 
 
-/* 809F0960-809F0A50 00F0+00 s=0 e=0 z=0  None .text      executeFear__12daNpcGuard_cFv                                */
+/* 809F0960-809F0A50 00F0+00 s=1 e=0 z=0  None .text      executeFear__12daNpcGuard_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1053,7 +1054,7 @@ asm void daNpcGuard_c::executeFear() {
 #pragma pop
 
 
-/* 809F0A50-809F0B20 00D0+00 s=0 e=0 z=0  None .text      initEscape__12daNpcGuard_cFv                                 */
+/* 809F0A50-809F0B20 00D0+00 s=1 e=0 z=0  None .text      initEscape__12daNpcGuard_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1064,7 +1065,7 @@ asm void daNpcGuard_c::initEscape() {
 #pragma pop
 
 
-/* 809F0B20-809F0DD4 02B4+00 s=0 e=0 z=0  None .text      executeEscape__12daNpcGuard_cFv                              */
+/* 809F0B20-809F0DD4 02B4+00 s=1 e=0 z=0  None .text      executeEscape__12daNpcGuard_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1108,11 +1109,11 @@ asm void daNpcGuard_c::pathMoveF() {
 #pragma pop
 
 
-/* 809F12D0-809F12F0 0020+00 s=0 e=0 z=0  None .text      daNpcGuard_Create__FPv                                       */
+/* 809F12D0-809F12F0 0020+00 s=1 e=0 z=0  None .text      daNpcGuard_Create__FPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcGuard_Create(void* param_0) {
+asm static void daNpcGuard_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/daNpcGuard_Create__FPv.s"
 }
@@ -1196,7 +1197,7 @@ asm dCcD_Sph::dCcD_Sph() {
 #pragma pop
 
 
-/* 809F1EF8-809F1F40 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 809F1EF8-809F1F40 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1207,18 +1208,18 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 809F1F40-809F1F74 0034+00 s=0 e=0 z=0  None .text      daNpcGuard_Delete__FPv                                       */
+/* 809F1F40-809F1F74 0034+00 s=1 e=0 z=0  None .text      daNpcGuard_Delete__FPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcGuard_Delete(void* param_0) {
+asm static void daNpcGuard_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/daNpcGuard_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 809F1F74-809F2024 00B0+00 s=0 e=0 z=0  None .text      __dt__12daNpcGuard_cFv                                       */
+/* 809F1F74-809F2024 00B0+00 s=1 e=0 z=0  None .text      __dt__12daNpcGuard_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1229,11 +1230,11 @@ asm daNpcGuard_c::~daNpcGuard_c() {
 #pragma pop
 
 
-/* 809F2024-809F2044 0020+00 s=0 e=0 z=0  None .text      daNpcGuard_Execute__FPv                                      */
+/* 809F2024-809F2044 0020+00 s=1 e=0 z=0  None .text      daNpcGuard_Execute__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcGuard_Execute(void* param_0) {
+asm static void daNpcGuard_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/daNpcGuard_Execute__FPv.s"
 }
@@ -1251,24 +1252,24 @@ asm void daNpcGuard_c::execute() {
 #pragma pop
 
 
-/* 809F2374-809F2464 00F0+00 s=0 e=0 z=0  None .text      daNpcGuard_Draw__FPv                                         */
+/* 809F2374-809F2464 00F0+00 s=1 e=0 z=0  None .text      daNpcGuard_Draw__FPv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcGuard_Draw(void* param_0) {
+asm static void daNpcGuard_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/daNpcGuard_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 809F2464-809F246C 0008+00 s=0 e=0 z=0  None .text      daNpcGuard_IsDelete__FPv                                     */
-bool daNpcGuard_IsDelete(void* param_0) {
+/* 809F2464-809F246C 0008+00 s=1 e=0 z=0  None .text      daNpcGuard_IsDelete__FPv                                     */
+static bool daNpcGuard_IsDelete(void* param_0) {
 	return true;
 }
 
 
-/* 809F246C-809F24B4 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 809F246C-809F24B4 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1312,7 +1313,7 @@ asm static void cLib_getRndValue__template1(int param_0, int param_1) {
 #pragma pop
 
 
-/* 809F2588-809F26E8 0160+00 s=0 e=0 z=0  None .text      __sinit_d_a_npc_guard_cpp                                    */
+/* 809F2588-809F26E8 0160+00 s=0 e=1 z=0  None .text      __sinit_d_a_npc_guard_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1323,29 +1324,29 @@ extern "C" asm void __sinit_d_a_npc_guard_cpp() {
 #pragma pop
 
 
-/* 809F26E8-809F26F0 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 809F26E8-809F26F0 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_809F26E8() {
+extern "C" asm static void func_809F26E8() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/func_809F26E8.s"
 }
 #pragma pop
 
 
-/* 809F26F0-809F26F8 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 809F26F0-809F26F8 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_809F26F0() {
+extern "C" asm static void func_809F26F0() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/func_809F26F0.s"
 }
 #pragma pop
 
 
-/* 809F26F8-809F2740 0048+00 s=0 e=0 z=0  None .text      __dt__18daNpcT_ActorMngr_cFv                                 */
+/* 809F26F8-809F2740 0048+00 s=1 e=0 z=0  None .text      __dt__18daNpcT_ActorMngr_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1356,7 +1357,7 @@ asm daNpcT_ActorMngr_c::~daNpcT_ActorMngr_c() {
 #pragma pop
 
 
-/* 809F2740-809F2990 0250+00 s=1 e=0 z=0  None .text      __dt__10daNpcCd2_cFv                                         */
+/* 809F2740-809F2990 0250+00 s=2 e=0 z=0  None .text      __dt__10daNpcCd2_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1367,7 +1368,7 @@ asm daNpcCd2_c::~daNpcCd2_c() {
 #pragma pop
 
 
-/* 809F2990-809F2A78 00E8+00 s=0 e=0 z=0  None .text      __dt__16dNpcLib_lookat_cFv                                   */
+/* 809F2990-809F2A78 00E8+00 s=1 e=0 z=0  None .text      __dt__16dNpcLib_lookat_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1378,7 +1379,7 @@ asm dNpcLib_lookat_c::~dNpcLib_lookat_c() {
 #pragma pop
 
 
-/* 809F2A78-809F2AC0 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 809F2A78-809F2AC0 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1389,7 +1390,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 809F2AC0-809F2B08 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 809F2AC0-809F2B08 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1400,7 +1401,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 809F2B08-809F2B64 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 809F2B08-809F2B64 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1411,7 +1412,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 809F2B64-809F2BD4 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 809F2B64-809F2BD4 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1422,7 +1423,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 809F2BD4-809F2C44 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 809F2BD4-809F2C44 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

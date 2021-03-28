@@ -19,6 +19,7 @@ extern void* const data_807AFD18[2];
 // 
 
 
+extern "C" void __sinit_d_a_e_sw_cpp(); // 1
 
 // 
 // Declarations:

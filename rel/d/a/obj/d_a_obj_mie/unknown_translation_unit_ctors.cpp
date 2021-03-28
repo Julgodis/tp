@@ -19,6 +19,7 @@ extern void* const data_80C95A98[2];
 // 
 
 
+extern "C" void __sinit_d_a_obj_mie_cpp(); // 1
 
 // 
 // Declarations:

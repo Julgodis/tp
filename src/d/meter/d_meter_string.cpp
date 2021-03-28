@@ -46,10 +46,10 @@ struct dMeter2Info_c {
 	/* 8021CC00 */ void resetMeterString();
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
 struct J2DScreen {

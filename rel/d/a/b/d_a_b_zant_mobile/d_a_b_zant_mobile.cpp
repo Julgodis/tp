@@ -108,19 +108,19 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
-};
-
-struct Z2Creature {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
+struct J3DModelData {
+};
+
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DAnmTransform {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfSO {
@@ -144,10 +144,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -160,11 +160,11 @@ struct dVibration_c {
 	/* 8006FD94 */ void StopQuake(int);
 };
 
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
+struct dBgW_Base {
 };
 
-struct dBgW_Base {
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
 struct cBgS {
@@ -248,16 +248,16 @@ struct Z2CreatureEnemy {
 // Forward References:
 // 
 
-void daB_ZANTZ_Draw(daB_ZANTZ_c*); // 2
-void daB_ZANTZ_Execute(daB_ZANTZ_c*); // 2
-bool daB_ZANTZ_IsDelete(daB_ZANTZ_c*); // 2
-void daB_ZANTZ_Delete(daB_ZANTZ_c*); // 2
+static void daB_ZANTZ_Draw(daB_ZANTZ_c*); // 2
+static void daB_ZANTZ_Execute(daB_ZANTZ_c*); // 2
+static bool daB_ZANTZ_IsDelete(daB_ZANTZ_c*); // 2
+static void daB_ZANTZ_Delete(daB_ZANTZ_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daB_ZANTZ_Create(daB_ZANTZ_c*); // 2
+static void daB_ZANTZ_Create(daB_ZANTZ_c*); // 2
 
 extern "C" void __ct__15daB_ZANTZ_HIO_cFv(); // 1
 extern "C" void draw__11daB_ZANTZ_cFv(); // 1
-extern "C" void daB_ZANTZ_Draw__FP11daB_ZANTZ_c(); // 1
+extern "C" static void daB_ZANTZ_Draw__FP11daB_ZANTZ_c(); // 1
 extern "C" void setSnortEffect__11daB_ZANTZ_cFi(); // 1
 extern "C" void calcSnortEffect__11daB_ZANTZ_cFv(); // 1
 extern "C" void setMouthMode__11daB_ZANTZ_cFUc(); // 1
@@ -267,10 +267,10 @@ extern "C" void __dt__14dBgS_ObjGndChkFv(); // 1
 extern "C" void action__11daB_ZANTZ_cFv(); // 1
 extern "C" void cc_set__11daB_ZANTZ_cFv(); // 1
 extern "C" void execute__11daB_ZANTZ_cFv(); // 1
-extern "C" void daB_ZANTZ_Execute__FP11daB_ZANTZ_c(); // 1
-extern "C" bool daB_ZANTZ_IsDelete__FP11daB_ZANTZ_c(); // 1
+extern "C" static void daB_ZANTZ_Execute__FP11daB_ZANTZ_c(); // 1
+extern "C" static bool daB_ZANTZ_IsDelete__FP11daB_ZANTZ_c(); // 1
 extern "C" void _delete__11daB_ZANTZ_cFv(); // 1
-extern "C" void daB_ZANTZ_Delete__FP11daB_ZANTZ_c(); // 1
+extern "C" static void daB_ZANTZ_Delete__FP11daB_ZANTZ_c(); // 1
 extern "C" void CreateHeap__11daB_ZANTZ_cFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
@@ -282,14 +282,13 @@ extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__8dCcD_SphFv(); // 1
 extern "C" void __ct__8dCcD_SphFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
-extern "C" void daB_ZANTZ_Create__FP11daB_ZANTZ_c(); // 1
+extern "C" static void daB_ZANTZ_Create__FP11daB_ZANTZ_c(); // 1
 extern "C" void __dt__15daB_ZANTZ_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_b_zant_mobile_cpp(); // 1
-extern "C" void func_80652710(); // 1
-extern "C" void func_80652718(); // 1
-extern "C" void func_80652720(); // 1
+extern "C" static void func_80652710(); // 1
+extern "C" static void func_80652718(); // 1
+extern "C" static void func_80652720(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daB_ZANTZ_Method[8];
 extern "C" extern void* g_profile_B_ZANTZ[12];
 
 // 
@@ -389,6 +388,8 @@ extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void abs(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -428,30 +429,30 @@ SECTION_DATA static u8 data_8065281C[68] = {
 	0x42, 0x20, 0x00, 0x00,
 };
 
-/* 80652860-80652880 0020+00 s=0 e=0 z=0  None .data      l_daB_ZANTZ_Method                                           */
-SECTION_DATA void* l_daB_ZANTZ_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80652860-80652880 0020+00 s=1 e=0 z=0  None .data      l_daB_ZANTZ_Method                                           */
+SECTION_DATA static void* l_daB_ZANTZ_Method[8] = {
+	(void*)daB_ZANTZ_Create__FP11daB_ZANTZ_c,
+	(void*)daB_ZANTZ_Delete__FP11daB_ZANTZ_c,
+	(void*)daB_ZANTZ_Execute__FP11daB_ZANTZ_c,
+	(void*)daB_ZANTZ_IsDelete__FP11daB_ZANTZ_c,
+	(void*)daB_ZANTZ_Draw__FP11daB_ZANTZ_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80652880-806528B0 0030+00 s=0 e=0 z=0  None .data      g_profile_B_ZANTZ                                            */
+/* 80652880-806528B0 0030+00 s=0 e=0 z=1  None .data      g_profile_B_ZANTZ                                            */
 SECTION_DATA void* g_profile_B_ZANTZ[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0004FFFD,
 	(void*)0x00F80000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000D14,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00E40000,
-	(void*)NULL,
+	(void*)&l_daB_ZANTZ_Method,
 	(void*)0x00040000,
 	(void*)0x020E0000,
 };
@@ -460,51 +461,51 @@ SECTION_DATA void* g_profile_B_ZANTZ[12] = {
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 806528BC-806528C8 000C+00 s=5 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 806528C8-806528D4 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 806528D4-806528E0 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 806528E0-80652910 0030+00 s=2 e=0 z=0  None .data      __vt__14dBgS_ObjGndChk                                       */
 SECTION_DATA static void* __vt__14dBgS_ObjGndChk[12] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__14dBgS_ObjGndChkFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80652710,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80652720,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80652718,
 };
 
 /* 80652910-8065291C 000C+00 s=2 e=0 z=0  None .data      __vt__15daB_ZANTZ_HIO_c                                      */
 SECTION_DATA static void* __vt__15daB_ZANTZ_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__15daB_ZANTZ_HIO_cFv,
 };
 
 /* 8065078C-806507B0 0024+00 s=1 e=0 z=0  None .text      __ct__15daB_ZANTZ_HIO_cFv                                    */
@@ -529,11 +530,11 @@ asm void daB_ZANTZ_c::draw() {
 #pragma pop
 
 
-/* 80650834-80650854 0020+00 s=0 e=0 z=0  None .text      daB_ZANTZ_Draw__FP11daB_ZANTZ_c                              */
+/* 80650834-80650854 0020+00 s=1 e=0 z=0  None .text      daB_ZANTZ_Draw__FP11daB_ZANTZ_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daB_ZANTZ_Draw(daB_ZANTZ_c* param_0) {
+asm static void daB_ZANTZ_Draw(daB_ZANTZ_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/daB_ZANTZ_Draw__FP11daB_ZANTZ_c.s"
 }
@@ -715,7 +716,7 @@ asm void daB_ZANTZ_c::getGroundPos() {
 #pragma pop
 
 
-/* 80651204-8065127C 0078+00 s=3 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
+/* 80651204-8065127C 0078+00 s=4 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -769,19 +770,19 @@ asm void daB_ZANTZ_c::execute() {
 #pragma pop
 
 
-/* 80651CF4-80651D14 0020+00 s=0 e=0 z=0  None .text      daB_ZANTZ_Execute__FP11daB_ZANTZ_c                           */
+/* 80651CF4-80651D14 0020+00 s=1 e=0 z=0  None .text      daB_ZANTZ_Execute__FP11daB_ZANTZ_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daB_ZANTZ_Execute(daB_ZANTZ_c* param_0) {
+asm static void daB_ZANTZ_Execute(daB_ZANTZ_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/daB_ZANTZ_Execute__FP11daB_ZANTZ_c.s"
 }
 #pragma pop
 
 
-/* 80651D14-80651D1C 0008+00 s=0 e=0 z=0  None .text      daB_ZANTZ_IsDelete__FP11daB_ZANTZ_c                          */
-bool daB_ZANTZ_IsDelete(daB_ZANTZ_c* param_0) {
+/* 80651D14-80651D1C 0008+00 s=1 e=0 z=0  None .text      daB_ZANTZ_IsDelete__FP11daB_ZANTZ_c                          */
+static bool daB_ZANTZ_IsDelete(daB_ZANTZ_c* param_0) {
 	return true;
 }
 
@@ -797,11 +798,11 @@ asm void daB_ZANTZ_c::_delete() {
 #pragma pop
 
 
-/* 80651DA4-80651DC4 0020+00 s=0 e=0 z=0  None .text      daB_ZANTZ_Delete__FP11daB_ZANTZ_c                            */
+/* 80651DA4-80651DC4 0020+00 s=1 e=0 z=0  None .text      daB_ZANTZ_Delete__FP11daB_ZANTZ_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daB_ZANTZ_Delete(daB_ZANTZ_c* param_0) {
+asm static void daB_ZANTZ_Delete(daB_ZANTZ_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/daB_ZANTZ_Delete__FP11daB_ZANTZ_c.s"
 }
@@ -819,7 +820,7 @@ asm void daB_ZANTZ_c::CreateHeap() {
 #pragma pop
 
 
-/* 80651FD0-80652018 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80651FD0-80652018 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -874,7 +875,7 @@ asm dCcD_Cyl::dCcD_Cyl() {
 #pragma pop
 
 
-/* 80652444-8065248C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80652444-8065248C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -885,7 +886,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 8065248C-806524D4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 8065248C-806524D4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -918,7 +919,7 @@ asm dCcD_Sph::dCcD_Sph() {
 #pragma pop
 
 
-/* 80652624-8065266C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80652624-8065266C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -929,18 +930,18 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 8065266C-8065268C 0020+00 s=0 e=0 z=0  None .text      daB_ZANTZ_Create__FP11daB_ZANTZ_c                            */
+/* 8065266C-8065268C 0020+00 s=1 e=0 z=0  None .text      daB_ZANTZ_Create__FP11daB_ZANTZ_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daB_ZANTZ_Create(daB_ZANTZ_c* param_0) {
+asm static void daB_ZANTZ_Create(daB_ZANTZ_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/daB_ZANTZ_Create__FP11daB_ZANTZ_c.s"
 }
 #pragma pop
 
 
-/* 8065268C-806526D4 0048+00 s=1 e=0 z=0  None .text      __dt__15daB_ZANTZ_HIO_cFv                                    */
+/* 8065268C-806526D4 0048+00 s=2 e=0 z=0  None .text      __dt__15daB_ZANTZ_HIO_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -951,7 +952,7 @@ asm daB_ZANTZ_HIO_c::~daB_ZANTZ_HIO_c() {
 #pragma pop
 
 
-/* 806526D4-80652710 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_b_zant_mobile_cpp                                */
+/* 806526D4-80652710 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_b_zant_mobile_cpp                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -962,33 +963,33 @@ extern "C" asm void __sinit_d_a_b_zant_mobile_cpp() {
 #pragma pop
 
 
-/* 80652710-80652718 0008+00 s=0 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80652710-80652718 0008+00 s=1 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80652710() {
+extern "C" asm static void func_80652710() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/func_80652710.s"
 }
 #pragma pop
 
 
-/* 80652718-80652720 0008+00 s=0 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80652718-80652720 0008+00 s=1 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80652718() {
+extern "C" asm static void func_80652718() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/func_80652718.s"
 }
 #pragma pop
 
 
-/* 80652720-80652728 0008+00 s=0 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80652720-80652728 0008+00 s=1 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80652720() {
+extern "C" asm static void func_80652720() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/func_80652720.s"
 }

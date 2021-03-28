@@ -41,26 +41,25 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-void daObjE_CREATE_Create(fopAc_ac_c*); // 2
-void daObjE_CREATE_Delete(daObjE_CREATE_c*); // 2
-bool daObjE_CREATE_Draw(daObjE_CREATE_c*); // 2
-void daObjE_CREATE_Execute(daObjE_CREATE_c*); // 2
-bool daObjE_CREATE_IsDelete(daObjE_CREATE_c*); // 2
+static void daObjE_CREATE_Create(fopAc_ac_c*); // 2
+static void daObjE_CREATE_Delete(daObjE_CREATE_c*); // 2
+static bool daObjE_CREATE_Draw(daObjE_CREATE_c*); // 2
+static void daObjE_CREATE_Execute(daObjE_CREATE_c*); // 2
+static bool daObjE_CREATE_IsDelete(daObjE_CREATE_c*); // 2
 
-extern "C" void daObjE_CREATE_Create__FP10fopAc_ac_c(); // 1
-extern "C" void daObjE_CREATE_Delete__FP15daObjE_CREATE_c(); // 1
+extern "C" static void daObjE_CREATE_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjE_CREATE_Delete__FP15daObjE_CREATE_c(); // 1
 extern "C" void NormalAction__15daObjE_CREATE_cFv(); // 1
 extern "C" void SearchAction__15daObjE_CREATE_cFv(); // 1
 extern "C" void LoopAction__15daObjE_CREATE_cFv(); // 1
 extern "C" void Action__15daObjE_CREATE_cFv(); // 1
 extern "C" void Execute__15daObjE_CREATE_cFv(); // 1
 extern "C" void Delete__15daObjE_CREATE_cFv(); // 1
-extern "C" bool daObjE_CREATE_Draw__FP15daObjE_CREATE_c(); // 1
-extern "C" void daObjE_CREATE_Execute__FP15daObjE_CREATE_c(); // 1
+extern "C" static bool daObjE_CREATE_Draw__FP15daObjE_CREATE_c(); // 1
+extern "C" static void daObjE_CREATE_Execute__FP15daObjE_CREATE_c(); // 1
 extern "C" void NameChk__15daObjE_CREATE_cFv(); // 1
 extern "C" void create__15daObjE_CREATE_cFv(); // 1
-extern "C" bool daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c(); // 1
-extern "C" extern void* l_daObjE_CREATE_Method[8];
+extern "C" static bool daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c(); // 1
 extern "C" extern void* g_profile_Obj_E_CREATE[12];
 
 // 
@@ -85,28 +84,30 @@ extern "C" void* __nwa__FUl(); // 1
 extern "C" void __dla__FPv(); // 1
 extern "C" void _savegpr_25(); // 1
 extern "C" void _restgpr_25(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 
 // Declarations:
 // 
 
-/* 80BE3178-80BE3198 0020+00 s=0 e=0 z=0  None .text      daObjE_CREATE_Create__FP10fopAc_ac_c                         */
+/* 80BE3178-80BE3198 0020+00 s=1 e=0 z=0  None .text      daObjE_CREATE_Create__FP10fopAc_ac_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjE_CREATE_Create(fopAc_ac_c* param_0) {
+asm static void daObjE_CREATE_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/daObjE_CREATE_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80BE3198-80BE31BC 0024+00 s=0 e=0 z=0  None .text      daObjE_CREATE_Delete__FP15daObjE_CREATE_c                    */
+/* 80BE3198-80BE31BC 0024+00 s=1 e=0 z=0  None .text      daObjE_CREATE_Delete__FP15daObjE_CREATE_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjE_CREATE_Delete(daObjE_CREATE_c* param_0) {
+asm static void daObjE_CREATE_Delete(daObjE_CREATE_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/daObjE_CREATE_Delete__FP15daObjE_CREATE_c.s"
 }
@@ -200,17 +201,17 @@ asm void daObjE_CREATE_c::Delete() {
 #pragma pop
 
 
-/* 80BE35F0-80BE35F8 0008+00 s=0 e=0 z=0  None .text      daObjE_CREATE_Draw__FP15daObjE_CREATE_c                      */
-bool daObjE_CREATE_Draw(daObjE_CREATE_c* param_0) {
+/* 80BE35F0-80BE35F8 0008+00 s=1 e=0 z=0  None .text      daObjE_CREATE_Draw__FP15daObjE_CREATE_c                      */
+static bool daObjE_CREATE_Draw(daObjE_CREATE_c* param_0) {
 	return true;
 }
 
 
-/* 80BE35F8-80BE3618 0020+00 s=0 e=0 z=0  None .text      daObjE_CREATE_Execute__FP15daObjE_CREATE_c                   */
+/* 80BE35F8-80BE3618 0020+00 s=1 e=0 z=0  None .text      daObjE_CREATE_Execute__FP15daObjE_CREATE_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjE_CREATE_Execute(daObjE_CREATE_c* param_0) {
+asm static void daObjE_CREATE_Execute(daObjE_CREATE_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/daObjE_CREATE_Execute__FP15daObjE_CREATE_c.s"
 }
@@ -220,22 +221,22 @@ asm void daObjE_CREATE_Execute(daObjE_CREATE_c* param_0) {
 /* ############################################################################################## */
 /* 80BE38A0-80BE38D4 0034+00 s=1 e=0 z=0  None .data      @3838                                                        */
 SECTION_DATA static void* lit_3838[13] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)NameChk__15daObjE_CREATE_cFv)+0x154),
+	(void*)(((char*)NameChk__15daObjE_CREATE_cFv)+0x50),
+	(void*)(((char*)NameChk__15daObjE_CREATE_cFv)+0x5C),
+	(void*)(((char*)NameChk__15daObjE_CREATE_cFv)+0x68),
+	(void*)(((char*)NameChk__15daObjE_CREATE_cFv)+0x7C),
+	(void*)(((char*)NameChk__15daObjE_CREATE_cFv)+0x90),
+	(void*)(((char*)NameChk__15daObjE_CREATE_cFv)+0xA8),
+	(void*)(((char*)NameChk__15daObjE_CREATE_cFv)+0xB4),
+	(void*)(((char*)NameChk__15daObjE_CREATE_cFv)+0xC0),
+	(void*)(((char*)NameChk__15daObjE_CREATE_cFv)+0xCC),
+	(void*)(((char*)NameChk__15daObjE_CREATE_cFv)+0x100),
+	(void*)(((char*)NameChk__15daObjE_CREATE_cFv)+0x114),
+	(void*)(((char*)NameChk__15daObjE_CREATE_cFv)+0x128),
 };
 
-/* 80BE3618-80BE3770 0158+00 s=1 e=0 z=0  None .text      NameChk__15daObjE_CREATE_cFv                                 */
+/* 80BE3618-80BE3770 0158+00 s=2 e=0 z=0  None .text      NameChk__15daObjE_CREATE_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -257,37 +258,37 @@ asm void daObjE_CREATE_c::create() {
 #pragma pop
 
 
-/* 80BE3878-80BE3880 0008+00 s=0 e=0 z=0  None .text      daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c                  */
-bool daObjE_CREATE_IsDelete(daObjE_CREATE_c* param_0) {
+/* 80BE3878-80BE3880 0008+00 s=1 e=0 z=0  None .text      daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c                  */
+static bool daObjE_CREATE_IsDelete(daObjE_CREATE_c* param_0) {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 80BE38D4-80BE38F4 0020+00 s=0 e=0 z=0  None .data      l_daObjE_CREATE_Method                                       */
-SECTION_DATA void* l_daObjE_CREATE_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80BE38D4-80BE38F4 0020+00 s=1 e=0 z=0  None .data      l_daObjE_CREATE_Method                                       */
+SECTION_DATA static void* l_daObjE_CREATE_Method[8] = {
+	(void*)daObjE_CREATE_Create__FP10fopAc_ac_c,
+	(void*)daObjE_CREATE_Delete__FP15daObjE_CREATE_c,
+	(void*)daObjE_CREATE_Execute__FP15daObjE_CREATE_c,
+	(void*)daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c,
+	(void*)daObjE_CREATE_Draw__FP15daObjE_CREATE_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80BE38F4-80BE3924 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_E_CREATE                                       */
+/* 80BE38F4-80BE3924 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_E_CREATE                                       */
 SECTION_DATA void* g_profile_Obj_E_CREATE[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00680000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000594,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01CA0000,
-	(void*)NULL,
+	(void*)&l_daObjE_CREATE_Method,
 	(void*)0x00040000,
 	(void*)0x000E0000,
 };

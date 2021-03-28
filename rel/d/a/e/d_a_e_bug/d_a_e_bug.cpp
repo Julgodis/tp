@@ -117,7 +117,7 @@ struct Z2SoundObjBeeGroup {
 // Forward References:
 // 
 
-void daE_Bug_Draw(e_bug_class*); // 2
+static void daE_Bug_Draw(e_bug_class*); // 2
 static void simple_bg_check(bug_s*, int); // 2
 static void bug_mtxset(bug_s*); // 2
 static void bug_mtxset_stick(bug_s*); // 2
@@ -136,13 +136,13 @@ static void bug_control(e_bug_class*); // 2
 static void s_boom_sub(void*, void*); // 2
 static void s_bomb_sub(void*, void*); // 2
 static void daE_Bug_Execute(e_bug_class*); // 2
-bool daE_Bug_IsDelete(e_bug_class*); // 2
-void daE_Bug_Delete(e_bug_class*); // 2
+static bool daE_Bug_IsDelete(e_bug_class*); // 2
+static void daE_Bug_Delete(e_bug_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daE_Bug_Create(fopAc_ac_c*); // 2
+static void daE_Bug_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__13daE_Bug_HIO_cFv(); // 1
-extern "C" void daE_Bug_Draw__FP11e_bug_class(); // 1
+extern "C" static void daE_Bug_Draw__FP11e_bug_class(); // 1
 extern "C" static void simple_bg_check__FP5bug_si(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" static void bug_mtxset__FP5bug_s(); // 1
@@ -162,16 +162,15 @@ extern "C" static void bug_control__FP11e_bug_class(); // 1
 extern "C" static void s_boom_sub__FPvPv(); // 1
 extern "C" static void s_bomb_sub__FPvPv(); // 1
 extern "C" static void daE_Bug_Execute__FP11e_bug_class(); // 1
-extern "C" bool daE_Bug_IsDelete__FP11e_bug_class(); // 1
-extern "C" void daE_Bug_Delete__FP11e_bug_class(); // 1
+extern "C" static bool daE_Bug_IsDelete__FP11e_bug_class(); // 1
+extern "C" static void daE_Bug_Delete__FP11e_bug_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daE_Bug_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daE_Bug_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__5bug_sFv(); // 1
 extern "C" void __ct__5bug_sFv(); // 1
 extern "C" void __dt__13daE_Bug_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_e_bug_cpp(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daE_Bug_Method[8];
 extern "C" extern void* g_profile_E_BUG[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -302,6 +301,8 @@ extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__16Z2SoundObjSimple[8];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
@@ -332,30 +333,30 @@ SECTION_DATA static u8 data_80697DB8[16] = {
 	0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC0, 0x00, 0x00, 0x00,
 };
 
-/* 80697DC8-80697DE8 0020+00 s=0 e=0 z=0  None .data      l_daE_Bug_Method                                             */
-SECTION_DATA void* l_daE_Bug_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80697DC8-80697DE8 0020+00 s=1 e=0 z=0  None .data      l_daE_Bug_Method                                             */
+SECTION_DATA static void* l_daE_Bug_Method[8] = {
+	(void*)daE_Bug_Create__FP10fopAc_ac_c,
+	(void*)daE_Bug_Delete__FP11e_bug_class,
+	(void*)daE_Bug_Execute__FP11e_bug_class,
+	(void*)daE_Bug_IsDelete__FP11e_bug_class,
+	(void*)daE_Bug_Draw__FP11e_bug_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80697DE8-80697E18 0030+00 s=0 e=0 z=0  None .data      g_profile_E_BUG                                              */
+/* 80697DE8-80697E18 0030+00 s=0 e=0 z=1  None .data      g_profile_E_BUG                                              */
 SECTION_DATA void* g_profile_E_BUG[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01EC0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00007DB0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00B60000,
-	(void*)NULL,
+	(void*)&l_daE_Bug_Method,
 	(void*)0x00044000,
 	(void*)0x000E0000,
 };
@@ -364,7 +365,7 @@ SECTION_DATA void* g_profile_E_BUG[12] = {
 SECTION_DATA static void* __vt__13daE_Bug_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__13daE_Bug_HIO_cFv,
 };
 
 /* 80694B8C-80694BBC 0030+00 s=1 e=0 z=0  None .text      __ct__13daE_Bug_HIO_cFv                                      */
@@ -436,11 +437,11 @@ static u8 l_HIO[16];
 /* 80697E8C-80697E90 0004+00 s=8 e=0 z=0  None .bss       None                                                         */
 static u8 struct_80697E8C[4];
 
-/* 80694BBC-80694CC8 010C+00 s=0 e=0 z=0  None .text      daE_Bug_Draw__FP11e_bug_class                                */
+/* 80694BBC-80694CC8 010C+00 s=1 e=0 z=0  None .text      daE_Bug_Draw__FP11e_bug_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_Bug_Draw(e_bug_class* param_0) {
+asm static void daE_Bug_Draw(e_bug_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/daE_Bug_Draw__FP11e_bug_class.s"
 }
@@ -831,7 +832,7 @@ SECTION_RODATA static u32 const lit_4947 = 0x42F00000;
 /* 80697D7C-80697D80 0004+00 s=1 e=0 z=0  None .rodata    @4948                                                        */
 SECTION_RODATA static u32 const lit_4948 = 0x43020000;
 
-/* 80697294-806975A0 030C+00 s=1 e=0 z=0  None .text      daE_Bug_Execute__FP11e_bug_class                             */
+/* 80697294-806975A0 030C+00 s=2 e=0 z=0  None .text      daE_Bug_Execute__FP11e_bug_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -842,8 +843,8 @@ asm static void daE_Bug_Execute(e_bug_class* param_0) {
 #pragma pop
 
 
-/* 806975A0-806975A8 0008+00 s=0 e=0 z=0  None .text      daE_Bug_IsDelete__FP11e_bug_class                            */
-bool daE_Bug_IsDelete(e_bug_class* param_0) {
+/* 806975A0-806975A8 0008+00 s=1 e=0 z=0  None .text      daE_Bug_IsDelete__FP11e_bug_class                            */
+static bool daE_Bug_IsDelete(e_bug_class* param_0) {
 	return true;
 }
 
@@ -872,11 +873,11 @@ SECTION_DEAD char const* const stringBase_80697D98 = "E_bug";
 SECTION_DEAD char const* const stringBase_80697D9E = "T_ENEMY";
 #pragma pop
 
-/* 806975A8-806976B4 010C+00 s=0 e=0 z=0  None .text      daE_Bug_Delete__FP11e_bug_class                              */
+/* 806975A8-806976B4 010C+00 s=1 e=0 z=0  None .text      daE_Bug_Delete__FP11e_bug_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_Bug_Delete(e_bug_class* param_0) {
+asm static void daE_Bug_Delete(e_bug_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/daE_Bug_Delete__FP11e_bug_class.s"
 }
@@ -894,11 +895,11 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 806977A8-80697B4C 03A4+00 s=0 e=0 z=0  None .text      daE_Bug_Create__FP10fopAc_ac_c                               */
+/* 806977A8-80697B4C 03A4+00 s=1 e=0 z=0  None .text      daE_Bug_Create__FP10fopAc_ac_c                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_Bug_Create(fopAc_ac_c* param_0) {
+asm static void daE_Bug_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/daE_Bug_Create__FP10fopAc_ac_c.s"
 }
@@ -927,7 +928,7 @@ asm bug_s::bug_s() {
 #pragma pop
 
 
-/* 80697BEC-80697C34 0048+00 s=1 e=0 z=0  None .text      __dt__13daE_Bug_HIO_cFv                                      */
+/* 80697BEC-80697C34 0048+00 s=2 e=0 z=0  None .text      __dt__13daE_Bug_HIO_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -938,7 +939,7 @@ asm daE_Bug_HIO_c::~daE_Bug_HIO_c() {
 #pragma pop
 
 
-/* 80697C34-80697C8C 0058+00 s=0 e=0 z=0  None .text      __sinit_d_a_e_bug_cpp                                        */
+/* 80697C34-80697C8C 0058+00 s=0 e=1 z=0  None .text      __sinit_d_a_e_bug_cpp                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -43,11 +43,11 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-void daTag_EvtArea_Create(void*); // 2
-void daTag_EvtArea_Delete(void*); // 2
-void daTag_EvtArea_Execute(void*); // 2
-void daTag_EvtArea_Draw(void*); // 2
-bool daTag_EvtArea_IsDelete(void*); // 2
+static void daTag_EvtArea_Create(void*); // 2
+static void daTag_EvtArea_Delete(void*); // 2
+static void daTag_EvtArea_Execute(void*); // 2
+static void daTag_EvtArea_Draw(void*); // 2
+static bool daTag_EvtArea_IsDelete(void*); // 2
 
 extern "C" void create__15daTag_EvtArea_cFv(); // 1
 extern "C" bool Delete__15daTag_EvtArea_cFv(); // 1
@@ -55,17 +55,16 @@ extern "C" void Execute__15daTag_EvtArea_cFv(); // 1
 extern "C" bool Draw__15daTag_EvtArea_cFv(); // 1
 extern "C" void isDelete__15daTag_EvtArea_cFv(); // 1
 extern "C" void chkPointInArea__15daTag_EvtArea_cF4cXyz4cXyz(); // 1
-extern "C" void daTag_EvtArea_Create__FPv(); // 1
-extern "C" void daTag_EvtArea_Delete__FPv(); // 1
-extern "C" void daTag_EvtArea_Execute__FPv(); // 1
-extern "C" void daTag_EvtArea_Draw__FPv(); // 1
-extern "C" bool daTag_EvtArea_IsDelete__FPv(); // 1
+extern "C" static void daTag_EvtArea_Create__FPv(); // 1
+extern "C" static void daTag_EvtArea_Delete__FPv(); // 1
+extern "C" static void daTag_EvtArea_Execute__FPv(); // 1
+extern "C" static void daTag_EvtArea_Draw__FPv(); // 1
+extern "C" static bool daTag_EvtArea_IsDelete__FPv(); // 1
 extern "C" void chkPointInArea__15daTag_EvtArea_cF4cXyz(); // 1
 extern "C" void __dt__15daTag_EvtArea_cFv(); // 1
 extern "C" extern u32 const lit_3854;
 extern "C" extern u32 const lit_3855;
 extern "C" extern u32 const lit_3856;
-extern "C" extern void* daTag_EvtArea_MethodTable[8];
 extern "C" extern void* g_profile_TAG_EVTAREA[12];
 
 // 
@@ -92,6 +91,8 @@ extern "C" void PSMTXMultVec(); // 1
 extern "C" void PSVECSubtract(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 struct_80450D64[4];
@@ -106,56 +107,56 @@ SECTION_RODATA static u32 const lit_3853 = 0x42C80000;
 
 /* 8048CDE8-8048CE48 0060+00 s=1 e=0 z=0  None .data      @3857                                                        */
 SECTION_DATA static void* lit_3857[24] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0xB4),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0xE0),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x10C),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x154),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x154),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x154),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x154),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x154),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x180),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x1A0),
+	(void*)(((char*)create__15daTag_EvtArea_cFv)+0x1A0),
+};
+
+/* 8048CE48-8048CE68 0020+00 s=1 e=0 z=0  None .data      daTag_EvtArea_MethodTable                                    */
+SECTION_DATA static void* daTag_EvtArea_MethodTable[8] = {
+	(void*)daTag_EvtArea_Create__FPv,
+	(void*)daTag_EvtArea_Delete__FPv,
+	(void*)daTag_EvtArea_Execute__FPv,
+	(void*)daTag_EvtArea_IsDelete__FPv,
+	(void*)daTag_EvtArea_Draw__FPv,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 8048CE48-8048CE68 0020+00 s=0 e=0 z=0  None .data      daTag_EvtArea_MethodTable                                    */
-SECTION_DATA void* daTag_EvtArea_MethodTable[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 8048CE68-8048CE98 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_EVTAREA                                        */
+/* 8048CE68-8048CE98 0030+00 s=0 e=0 z=1  None .data      g_profile_TAG_EVTAREA                                        */
 SECTION_DATA void* g_profile_TAG_EVTAREA[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0008FFFD,
 	(void*)0x02E90000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000570,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x011F0000,
-	(void*)NULL,
+	(void*)&daTag_EvtArea_MethodTable,
 	(void*)0x00044000,
 	(void*)0x000E0000,
 };
@@ -164,10 +165,10 @@ SECTION_DATA void* g_profile_TAG_EVTAREA[12] = {
 SECTION_DATA static void* __vt__15daTag_EvtArea_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__15daTag_EvtArea_cFv,
 };
 
-/* 8048C4F8-8048C728 0230+00 s=1 e=0 z=0  None .text      create__15daTag_EvtArea_cFv                                  */
+/* 8048C4F8-8048C728 0230+00 s=2 e=0 z=0  None .text      create__15daTag_EvtArea_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -241,52 +242,52 @@ asm void daTag_EvtArea_c::chkPointInArea(cXyz param_0, cXyz param_1) {
 #pragma pop
 
 
-/* 8048CC80-8048CCA0 0020+00 s=0 e=0 z=0  None .text      daTag_EvtArea_Create__FPv                                    */
+/* 8048CC80-8048CCA0 0020+00 s=1 e=0 z=0  None .text      daTag_EvtArea_Create__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_EvtArea_Create(void* param_0) {
+asm static void daTag_EvtArea_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/daTag_EvtArea_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 8048CCA0-8048CCC0 0020+00 s=0 e=0 z=0  None .text      daTag_EvtArea_Delete__FPv                                    */
+/* 8048CCA0-8048CCC0 0020+00 s=1 e=0 z=0  None .text      daTag_EvtArea_Delete__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_EvtArea_Delete(void* param_0) {
+asm static void daTag_EvtArea_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/daTag_EvtArea_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 8048CCC0-8048CCE0 0020+00 s=0 e=0 z=0  None .text      daTag_EvtArea_Execute__FPv                                   */
+/* 8048CCC0-8048CCE0 0020+00 s=1 e=0 z=0  None .text      daTag_EvtArea_Execute__FPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_EvtArea_Execute(void* param_0) {
+asm static void daTag_EvtArea_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/daTag_EvtArea_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 8048CCE0-8048CD00 0020+00 s=0 e=0 z=0  None .text      daTag_EvtArea_Draw__FPv                                      */
+/* 8048CCE0-8048CD00 0020+00 s=1 e=0 z=0  None .text      daTag_EvtArea_Draw__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_EvtArea_Draw(void* param_0) {
+asm static void daTag_EvtArea_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/daTag_EvtArea_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 8048CD00-8048CD08 0008+00 s=0 e=0 z=0  None .text      daTag_EvtArea_IsDelete__FPv                                  */
-bool daTag_EvtArea_IsDelete(void* param_0) {
+/* 8048CD00-8048CD08 0008+00 s=1 e=0 z=0  None .text      daTag_EvtArea_IsDelete__FPv                                  */
+static bool daTag_EvtArea_IsDelete(void* param_0) {
 	return true;
 }
 
@@ -302,7 +303,7 @@ asm void daTag_EvtArea_c::chkPointInArea(cXyz param_0) {
 #pragma pop
 
 
-/* 8048CD68-8048CDC8 0060+00 s=0 e=0 z=0  None .text      __dt__15daTag_EvtArea_cFv                                    */
+/* 8048CD68-8048CDC8 0060+00 s=1 e=0 z=0  None .text      __dt__15daTag_EvtArea_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

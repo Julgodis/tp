@@ -31,10 +31,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -107,28 +107,27 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-void daObj_Ihasi_Draw(obj_ihasi_class*); // 2
+static void daObj_Ihasi_Draw(obj_ihasi_class*); // 2
 static void ih_normal(obj_ihasi_class*); // 2
 static void ih_disappear(obj_ihasi_class*); // 2
 static void action(obj_ihasi_class*); // 2
 static void daObj_Ihasi_Execute(obj_ihasi_class*); // 2
-bool daObj_Ihasi_IsDelete(obj_ihasi_class*); // 2
-void daObj_Ihasi_Delete(obj_ihasi_class*); // 2
+static bool daObj_Ihasi_IsDelete(obj_ihasi_class*); // 2
+static void daObj_Ihasi_Delete(obj_ihasi_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daObj_Ihasi_Create(fopAc_ac_c*); // 2
+static void daObj_Ihasi_Create(fopAc_ac_c*); // 2
 
-extern "C" void daObj_Ihasi_Draw__FP15obj_ihasi_class(); // 1
+extern "C" static void daObj_Ihasi_Draw__FP15obj_ihasi_class(); // 1
 extern "C" static void ih_normal__FP15obj_ihasi_class(); // 1
 extern "C" static void ih_disappear__FP15obj_ihasi_class(); // 1
 extern "C" static void action__FP15obj_ihasi_class(); // 1
 extern "C" static void daObj_Ihasi_Execute__FP15obj_ihasi_class(); // 1
-extern "C" bool daObj_Ihasi_IsDelete__FP15obj_ihasi_class(); // 1
-extern "C" void daObj_Ihasi_Delete__FP15obj_ihasi_class(); // 1
+extern "C" static bool daObj_Ihasi_IsDelete__FP15obj_ihasi_class(); // 1
+extern "C" static void daObj_Ihasi_Delete__FP15obj_ihasi_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void daObj_Ihasi_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObj_Ihasi_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObj_Ihasi_Method[8];
 extern "C" extern void* g_profile_OBJ_IHASI[12];
 
 // 
@@ -179,6 +178,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
@@ -189,11 +190,11 @@ extern "C" extern u8 j3dSys[284];
 // Declarations:
 // 
 
-/* 80C26018-80C2611C 0104+00 s=0 e=0 z=0  None .text      daObj_Ihasi_Draw__FP15obj_ihasi_class                        */
+/* 80C26018-80C2611C 0104+00 s=1 e=0 z=0  None .text      daObj_Ihasi_Draw__FP15obj_ihasi_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Ihasi_Draw(obj_ihasi_class* param_0) {
+asm static void daObj_Ihasi_Draw(obj_ihasi_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ihasi/d_a_obj_ihasi/daObj_Ihasi_Draw__FP15obj_ihasi_class.s"
 }
@@ -233,7 +234,7 @@ asm static void action(obj_ihasi_class* param_0) {
 #pragma pop
 
 
-/* 80C26204-80C262C4 00C0+00 s=1 e=0 z=0  None .text      daObj_Ihasi_Execute__FP15obj_ihasi_class                     */
+/* 80C26204-80C262C4 00C0+00 s=2 e=0 z=0  None .text      daObj_Ihasi_Execute__FP15obj_ihasi_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -244,8 +245,8 @@ asm static void daObj_Ihasi_Execute(obj_ihasi_class* param_0) {
 #pragma pop
 
 
-/* 80C262C4-80C262CC 0008+00 s=0 e=0 z=0  None .text      daObj_Ihasi_IsDelete__FP15obj_ihasi_class                    */
-bool daObj_Ihasi_IsDelete(obj_ihasi_class* param_0) {
+/* 80C262C4-80C262CC 0008+00 s=1 e=0 z=0  None .text      daObj_Ihasi_IsDelete__FP15obj_ihasi_class                    */
+static bool daObj_Ihasi_IsDelete(obj_ihasi_class* param_0) {
 	return true;
 }
 
@@ -295,11 +296,11 @@ SECTION_DEAD char const* const stringBase_80C268C4 = "Obj_ihasi";
 SECTION_DEAD char const* const stringBase_80C268CE = "F_SP121";
 #pragma pop
 
-/* 80C262CC-80C26324 0058+00 s=0 e=0 z=0  None .text      daObj_Ihasi_Delete__FP15obj_ihasi_class                      */
+/* 80C262CC-80C26324 0058+00 s=1 e=0 z=0  None .text      daObj_Ihasi_Delete__FP15obj_ihasi_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Ihasi_Delete(obj_ihasi_class* param_0) {
+asm static void daObj_Ihasi_Delete(obj_ihasi_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ihasi/d_a_obj_ihasi/daObj_Ihasi_Delete__FP15obj_ihasi_class.s"
 }
@@ -307,30 +308,30 @@ asm void daObj_Ihasi_Delete(obj_ihasi_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 80C268D8-80C268F8 0020+00 s=0 e=0 z=0  None .data      l_daObj_Ihasi_Method                                         */
-SECTION_DATA void* l_daObj_Ihasi_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80C268D8-80C268F8 0020+00 s=1 e=0 z=0  None .data      l_daObj_Ihasi_Method                                         */
+SECTION_DATA static void* l_daObj_Ihasi_Method[8] = {
+	(void*)daObj_Ihasi_Create__FP10fopAc_ac_c,
+	(void*)daObj_Ihasi_Delete__FP15obj_ihasi_class,
+	(void*)daObj_Ihasi_Execute__FP15obj_ihasi_class,
+	(void*)daObj_Ihasi_IsDelete__FP15obj_ihasi_class,
+	(void*)daObj_Ihasi_Draw__FP15obj_ihasi_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C268F8-80C26928 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_IHASI                                          */
+/* 80C268F8-80C26928 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_IHASI                                          */
 SECTION_DATA void* g_profile_OBJ_IHASI[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00DE0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005C4,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02150000,
-	(void*)NULL,
+	(void*)&l_daObj_Ihasi_Method,
 	(void*)0x00044000,
 	(void*)0x000E0000,
 };
@@ -339,7 +340,7 @@ SECTION_DATA void* g_profile_OBJ_IHASI[12] = {
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 80C26324-80C264F8 01D4+00 s=1 e=0 z=0  None .text      useHeapInit__FP10fopAc_ac_c                                  */
@@ -353,7 +354,7 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80C264F8-80C26540 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80C264F8-80C26540 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -364,11 +365,11 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80C26540-80C26880 0340+00 s=0 e=0 z=0  None .text      daObj_Ihasi_Create__FP10fopAc_ac_c                           */
+/* 80C26540-80C26880 0340+00 s=1 e=0 z=0  None .text      daObj_Ihasi_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Ihasi_Create(fopAc_ac_c* param_0) {
+asm static void daObj_Ihasi_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ihasi/d_a_obj_ihasi/daObj_Ihasi_Create__FP10fopAc_ac_c.s"
 }

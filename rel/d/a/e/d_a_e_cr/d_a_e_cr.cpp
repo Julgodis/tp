@@ -76,19 +76,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
-};
-
-struct Z2Creature {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
+struct J3DModelData {
+};
+
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DAnmTransform {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfSO {
@@ -123,10 +123,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -207,7 +207,7 @@ struct J3DFrameCtrl {
 
 static void anm_init(e_cr_class*, int, f32, u8, f32); // 2
 static void nodeCallBack(J3DJoint*, int); // 2
-void daE_CR_Draw(e_cr_class*); // 2
+static void daE_CR_Draw(e_cr_class*); // 2
 static void other_bg_check(e_cr_class*, fopAc_ac_c*); // 2
 static void pl_check(e_cr_class*, f32, s16); // 2
 static void damage_check(e_cr_class*); // 2
@@ -217,16 +217,16 @@ static void e_cr_s_damage(e_cr_class*); // 2
 static void e_cr_damage(e_cr_class*); // 2
 static void action(e_cr_class*); // 2
 static void daE_CR_Execute(e_cr_class*); // 2
-bool daE_CR_IsDelete(e_cr_class*); // 2
-void daE_CR_Delete(e_cr_class*); // 2
+static bool daE_CR_IsDelete(e_cr_class*); // 2
+static void daE_CR_Delete(e_cr_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daE_CR_Create(fopAc_ac_c*); // 2
+static void daE_CR_Create(fopAc_ac_c*); // 2
 static void setMidnaBindEffect(fopEn_enemy_c*, Z2CreatureEnemy*, cXyz*, cXyz*); // 2
 
 extern "C" void __ct__12daE_CR_HIO_cFv(); // 1
 extern "C" static void anm_init__FP10e_cr_classifUcf(); // 1
 extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" void daE_CR_Draw__FP10e_cr_class(); // 1
+extern "C" static void daE_CR_Draw__FP10e_cr_class(); // 1
 extern "C" static void other_bg_check__FP10e_cr_classP10fopAc_ac_c(); // 1
 extern "C" static void pl_check__FP10e_cr_classfs(); // 1
 extern "C" static void damage_check__FP10e_cr_class(); // 1
@@ -236,10 +236,10 @@ extern "C" static void e_cr_s_damage__FP10e_cr_class(); // 1
 extern "C" static void e_cr_damage__FP10e_cr_class(); // 1
 extern "C" static void action__FP10e_cr_class(); // 1
 extern "C" static void daE_CR_Execute__FP10e_cr_class(); // 1
-extern "C" bool daE_CR_IsDelete__FP10e_cr_class(); // 1
-extern "C" void daE_CR_Delete__FP10e_cr_class(); // 1
+extern "C" static bool daE_CR_IsDelete__FP10e_cr_class(); // 1
+extern "C" static void daE_CR_Delete__FP10e_cr_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daE_CR_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daE_CR_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
@@ -248,12 +248,11 @@ extern "C" void __dt__12dBgS_AcchCirFv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__12daE_CR_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_e_cr_cpp(); // 1
-extern "C" void func_80699878(); // 1
-extern "C" void func_80699880(); // 1
+extern "C" static void func_80699878(); // 1
+extern "C" static void func_80699880(); // 1
 extern "C" static void setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daE_CR_Method[8];
 extern "C" extern void* g_profile_E_CR[12];
 
 // 
@@ -365,6 +364,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_19(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -465,30 +466,30 @@ SECTION_DATA static u8 data_80699D84[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
 };
 
-/* 80699DC4-80699DE4 0020+00 s=0 e=0 z=0  None .data      l_daE_CR_Method                                              */
-SECTION_DATA void* l_daE_CR_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80699DC4-80699DE4 0020+00 s=1 e=0 z=0  None .data      l_daE_CR_Method                                              */
+SECTION_DATA static void* l_daE_CR_Method[8] = {
+	(void*)daE_CR_Create__FP10fopAc_ac_c,
+	(void*)daE_CR_Delete__FP10e_cr_class,
+	(void*)daE_CR_Execute__FP10e_cr_class,
+	(void*)daE_CR_IsDelete__FP10e_cr_class,
+	(void*)daE_CR_Draw__FP10e_cr_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80699DE4-80699E14 0030+00 s=0 e=0 z=0  None .data      g_profile_E_CR                                               */
+/* 80699DE4-80699E14 0030+00 s=0 e=0 z=1  None .data      g_profile_E_CR                                               */
 SECTION_DATA void* g_profile_E_CR[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01C30000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000A60,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00710000,
-	(void*)NULL,
+	(void*)&l_daE_CR_Method,
 	(void*)0x10040100,
 	(void*)0x02000000,
 };
@@ -497,55 +498,55 @@ SECTION_DATA void* g_profile_E_CR[12] = {
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 80699E20-80699E2C 000C+00 s=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80699E2C-80699E38 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80699E38-80699E44 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80699E44-80699E50 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80699E50-80699E74 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80699880,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80699878,
 };
 
 /* 80699E74-80699E80 000C+00 s=2 e=0 z=0  None .data      __vt__12daE_CR_HIO_c                                         */
 SECTION_DATA static void* __vt__12daE_CR_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12daE_CR_HIO_cFv,
 };
 
 /* 8069800C-80698044 0038+00 s=1 e=0 z=0  None .text      __ct__12daE_CR_HIO_cFv                                       */
@@ -656,11 +657,11 @@ asm static void nodeCallBack(J3DJoint* param_0, int param_1) {
 #pragma pop
 
 
-/* 806981B4-80698250 009C+00 s=0 e=0 z=0  None .text      daE_CR_Draw__FP10e_cr_class                                  */
+/* 806981B4-80698250 009C+00 s=1 e=0 z=0  None .text      daE_CR_Draw__FP10e_cr_class                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_CR_Draw(e_cr_class* param_0) {
+asm static void daE_CR_Draw(e_cr_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_cr/d_a_e_cr/daE_CR_Draw__FP10e_cr_class.s"
 }
@@ -765,7 +766,7 @@ asm static void action(e_cr_class* param_0) {
 #pragma pop
 
 
-/* 80698F88-806991BC 0234+00 s=1 e=0 z=0  None .text      daE_CR_Execute__FP10e_cr_class                               */
+/* 80698F88-806991BC 0234+00 s=2 e=0 z=0  None .text      daE_CR_Execute__FP10e_cr_class                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -776,17 +777,17 @@ asm static void daE_CR_Execute(e_cr_class* param_0) {
 #pragma pop
 
 
-/* 806991BC-806991C4 0008+00 s=0 e=0 z=0  None .text      daE_CR_IsDelete__FP10e_cr_class                              */
-bool daE_CR_IsDelete(e_cr_class* param_0) {
+/* 806991BC-806991C4 0008+00 s=1 e=0 z=0  None .text      daE_CR_IsDelete__FP10e_cr_class                              */
+static bool daE_CR_IsDelete(e_cr_class* param_0) {
 	return true;
 }
 
 
-/* 806991C4-8069922C 0068+00 s=0 e=0 z=0  None .text      daE_CR_Delete__FP10e_cr_class                                */
+/* 806991C4-8069922C 0068+00 s=1 e=0 z=0  None .text      daE_CR_Delete__FP10e_cr_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_CR_Delete(e_cr_class* param_0) {
+asm static void daE_CR_Delete(e_cr_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_cr/d_a_e_cr/daE_CR_Delete__FP10e_cr_class.s"
 }
@@ -804,18 +805,18 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 8069936C-806995E0 0274+00 s=0 e=0 z=0  None .text      daE_CR_Create__FP10fopAc_ac_c                                */
+/* 8069936C-806995E0 0274+00 s=1 e=0 z=0  None .text      daE_CR_Create__FP10fopAc_ac_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_CR_Create(fopAc_ac_c* param_0) {
+asm static void daE_CR_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_cr/d_a_e_cr/daE_CR_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 806995E0-80699628 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 806995E0-80699628 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -826,7 +827,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80699628-80699670 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80699628-80699670 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -837,7 +838,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80699670-806996CC 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80699670-806996CC 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -848,7 +849,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 806996CC-8069973C 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 806996CC-8069973C 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -859,7 +860,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 8069973C-806997AC 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 8069973C-806997AC 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -870,7 +871,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 806997AC-806997F4 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 806997AC-806997F4 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -881,7 +882,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 806997F4-8069983C 0048+00 s=1 e=0 z=0  None .text      __dt__12daE_CR_HIO_cFv                                       */
+/* 806997F4-8069983C 0048+00 s=2 e=0 z=0  None .text      __dt__12daE_CR_HIO_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -892,7 +893,7 @@ asm daE_CR_HIO_c::~daE_CR_HIO_c() {
 #pragma pop
 
 
-/* 8069983C-80699878 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_e_cr_cpp                                         */
+/* 8069983C-80699878 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_e_cr_cpp                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -903,22 +904,22 @@ extern "C" asm void __sinit_d_a_e_cr_cpp() {
 #pragma pop
 
 
-/* 80699878-80699880 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80699878-80699880 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80699878() {
+extern "C" asm static void func_80699878() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_cr/d_a_e_cr/func_80699878.s"
 }
 #pragma pop
 
 
-/* 80699880-80699888 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80699880-80699888 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80699880() {
+extern "C" asm static void func_80699880() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_cr/d_a_e_cr/func_80699880.s"
 }

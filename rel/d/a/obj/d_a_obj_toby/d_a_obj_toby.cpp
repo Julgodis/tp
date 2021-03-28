@@ -86,10 +86,10 @@ struct dPa_simpleEcallBack {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -151,7 +151,7 @@ struct daE_HZ_c {
 // Forward References:
 // 
 
-void daObj_Toby_Draw(obj_toby_class*); // 2
+static void daObj_Toby_Draw(obj_toby_class*); // 2
 static void s_bomb_sub(void*, void*); // 2
 static void shot_b_sub(void*, void*); // 2
 static void s_hz_sub(void*, void*); // 2
@@ -161,14 +161,14 @@ static void yuka_mtxset(obj_toby_class*, yuka_s*); // 2
 static void yuka_control(obj_toby_class*); // 2
 static void demo_camera(obj_toby_class*); // 2
 static void daObj_Toby_Execute(obj_toby_class*); // 2
-bool daObj_Toby_IsDelete(obj_toby_class*); // 2
-void daObj_Toby_Delete(obj_toby_class*); // 2
+static bool daObj_Toby_IsDelete(obj_toby_class*); // 2
+static void daObj_Toby_Delete(obj_toby_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void set_pos_check(obj_toby_class*, int); // 2
-void daObj_Toby_Create(fopAc_ac_c*); // 2
+static void daObj_Toby_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__16daObj_Toby_HIO_cFv(); // 1
-extern "C" void daObj_Toby_Draw__FP14obj_toby_class(); // 1
+extern "C" static void daObj_Toby_Draw__FP14obj_toby_class(); // 1
 extern "C" static void s_bomb_sub__FPvPv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" static void shot_b_sub__FPvPv(); // 1
@@ -179,18 +179,17 @@ extern "C" static void yuka_mtxset__FP14obj_toby_classP6yuka_s(); // 1
 extern "C" static void yuka_control__FP14obj_toby_class(); // 1
 extern "C" static void demo_camera__FP14obj_toby_class(); // 1
 extern "C" static void daObj_Toby_Execute__FP14obj_toby_class(); // 1
-extern "C" bool daObj_Toby_IsDelete__FP14obj_toby_class(); // 1
-extern "C" void daObj_Toby_Delete__FP14obj_toby_class(); // 1
+extern "C" static bool daObj_Toby_IsDelete__FP14obj_toby_class(); // 1
+extern "C" static void daObj_Toby_Delete__FP14obj_toby_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void set_pos_check__FP14obj_toby_classi(); // 1
-extern "C" void daObj_Toby_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObj_Toby_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__6yuka_sFv(); // 1
 extern "C" void __ct__6yuka_sFv(); // 1
 extern "C" void __dt__16daObj_Toby_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_toby_cpp(); // 1
 extern "C" void getLeftHandPos__9daPy_py_cCFv(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObj_Toby_Method[8];
 extern "C" extern void* g_profile_OBJ_TOBY[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -321,6 +320,8 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -370,30 +371,30 @@ SECTION_DATA static u8 r11yuka_image[192] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80D15854-80D15874 0020+00 s=0 e=0 z=0  None .data      l_daObj_Toby_Method                                          */
-SECTION_DATA void* l_daObj_Toby_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80D15854-80D15874 0020+00 s=1 e=0 z=0  None .data      l_daObj_Toby_Method                                          */
+SECTION_DATA static void* l_daObj_Toby_Method[8] = {
+	(void*)daObj_Toby_Create__FP10fopAc_ac_c,
+	(void*)daObj_Toby_Delete__FP14obj_toby_class,
+	(void*)daObj_Toby_Execute__FP14obj_toby_class,
+	(void*)daObj_Toby_IsDelete__FP14obj_toby_class,
+	(void*)daObj_Toby_Draw__FP14obj_toby_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D15874-80D158A4 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_TOBY                                           */
+/* 80D15874-80D158A4 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_TOBY                                           */
 SECTION_DATA void* g_profile_OBJ_TOBY[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x002F0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00006374,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x003A0000,
-	(void*)NULL,
+	(void*)&l_daObj_Toby_Method,
 	(void*)0x00044000,
 	(void*)0x000E0000,
 };
@@ -402,7 +403,7 @@ SECTION_DATA void* g_profile_OBJ_TOBY[12] = {
 SECTION_DATA static void* __vt__16daObj_Toby_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__16daObj_Toby_HIO_cFv,
 };
 
 /* 80D1378C-80D137B0 0024+00 s=1 e=0 z=0  None .text      __ct__16daObj_Toby_HIO_cFv                                   */
@@ -416,11 +417,11 @@ asm daObj_Toby_HIO_c::daObj_Toby_HIO_c() {
 #pragma pop
 
 
-/* 80D137B0-80D13870 00C0+00 s=0 e=0 z=0  None .text      daObj_Toby_Draw__FP14obj_toby_class                          */
+/* 80D137B0-80D13870 00C0+00 s=1 e=0 z=0  None .text      daObj_Toby_Draw__FP14obj_toby_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Toby_Draw(obj_toby_class* param_0) {
+asm static void daObj_Toby_Draw(obj_toby_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/daObj_Toby_Draw__FP14obj_toby_class.s"
 }
@@ -693,7 +694,7 @@ asm static void demo_camera(obj_toby_class* param_0) {
 #pragma pop
 
 
-/* 80D14810-80D14884 0074+00 s=1 e=0 z=0  None .text      daObj_Toby_Execute__FP14obj_toby_class                       */
+/* 80D14810-80D14884 0074+00 s=2 e=0 z=0  None .text      daObj_Toby_Execute__FP14obj_toby_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -704,8 +705,8 @@ asm static void daObj_Toby_Execute(obj_toby_class* param_0) {
 #pragma pop
 
 
-/* 80D14884-80D1488C 0008+00 s=0 e=0 z=0  None .text      daObj_Toby_IsDelete__FP14obj_toby_class                      */
-bool daObj_Toby_IsDelete(obj_toby_class* param_0) {
+/* 80D14884-80D1488C 0008+00 s=1 e=0 z=0  None .text      daObj_Toby_IsDelete__FP14obj_toby_class                      */
+static bool daObj_Toby_IsDelete(obj_toby_class* param_0) {
 	return true;
 }
 
@@ -716,11 +717,11 @@ SECTION_RODATA static u8 const data_80D15664[8] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05,
 };
 
-/* 80D1488C-80D149DC 0150+00 s=0 e=0 z=0  None .text      daObj_Toby_Delete__FP14obj_toby_class                        */
+/* 80D1488C-80D149DC 0150+00 s=1 e=0 z=0  None .text      daObj_Toby_Delete__FP14obj_toby_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Toby_Delete(obj_toby_class* param_0) {
+asm static void daObj_Toby_Delete(obj_toby_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/daObj_Toby_Delete__FP14obj_toby_class.s"
 }
@@ -814,11 +815,11 @@ SECTION_DEAD char const* const stringBase_80D156BF = "Obj_Tob7";
 SECTION_DEAD char const* const stringBase_80D156C8 = "Obj_Toby";
 #pragma pop
 
-/* 80D14CFC-80D154F4 07F8+00 s=0 e=0 z=0  None .text      daObj_Toby_Create__FP10fopAc_ac_c                            */
+/* 80D14CFC-80D154F4 07F8+00 s=1 e=0 z=0  None .text      daObj_Toby_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Toby_Create(fopAc_ac_c* param_0) {
+asm static void daObj_Toby_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/daObj_Toby_Create__FP10fopAc_ac_c.s"
 }
@@ -842,7 +843,7 @@ yuka_s::yuka_s() {
 }
 
 
-/* 80D15534-80D1557C 0048+00 s=1 e=0 z=0  None .text      __dt__16daObj_Toby_HIO_cFv                                   */
+/* 80D15534-80D1557C 0048+00 s=2 e=0 z=0  None .text      __dt__16daObj_Toby_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -853,7 +854,7 @@ asm daObj_Toby_HIO_c::~daObj_Toby_HIO_c() {
 #pragma pop
 
 
-/* 80D1557C-80D155B8 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_toby_cpp                                     */
+/* 80D1557C-80D155B8 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_toby_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

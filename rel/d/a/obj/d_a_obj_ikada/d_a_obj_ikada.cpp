@@ -85,6 +85,9 @@ struct dBgS_Acch {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -114,32 +117,31 @@ struct Vec {
 // 
 
 static void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
-void daObjIkada_Draw(daObjIkada_c*); // 2
-void daObjIkada_Execute(daObjIkada_c*); // 2
-bool daObjIkada_IsDelete(daObjIkada_c*); // 2
-void daObjIkada_Delete(daObjIkada_c*); // 2
-void daObjIkada_Create(fopAc_ac_c*); // 2
+static void daObjIkada_Draw(daObjIkada_c*); // 2
+static void daObjIkada_Execute(daObjIkada_c*); // 2
+static bool daObjIkada_IsDelete(daObjIkada_c*); // 2
+static void daObjIkada_Delete(daObjIkada_c*); // 2
+static void daObjIkada_Create(fopAc_ac_c*); // 2
 
 extern "C" void RideOn_Angle__12daObjIkada_cFRsfsf(); // 1
 extern "C" void Check_RideOn__12daObjIkada_cFv(); // 1
 extern "C" void initBaseMtx__12daObjIkada_cFv(); // 1
 extern "C" void setBaseMtx__12daObjIkada_cFv(); // 1
 extern "C" static void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c(); // 1
-extern "C" void daObjIkada_Draw__FP12daObjIkada_c(); // 1
-extern "C" void daObjIkada_Execute__FP12daObjIkada_c(); // 1
-extern "C" bool daObjIkada_IsDelete__FP12daObjIkada_c(); // 1
-extern "C" void daObjIkada_Delete__FP12daObjIkada_c(); // 1
-extern "C" void daObjIkada_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjIkada_Draw__FP12daObjIkada_c(); // 1
+extern "C" static void daObjIkada_Execute__FP12daObjIkada_c(); // 1
+extern "C" static bool daObjIkada_IsDelete__FP12daObjIkada_c(); // 1
+extern "C" static void daObjIkada_Delete__FP12daObjIkada_c(); // 1
+extern "C" static void daObjIkada_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void CreateHeap__12daObjIkada_cFv(); // 1
 extern "C" void Create__12daObjIkada_cFv(); // 1
 extern "C" void Execute__12daObjIkada_cFPPA3_A4_f(); // 1
 extern "C" void Draw__12daObjIkada_cFv(); // 1
 extern "C" void Delete__12daObjIkada_cFv(); // 1
-extern "C" void func_80C274D8(); // 1
-extern "C" void func_80C274E0(); // 1
+extern "C" static void func_80C274D8(); // 1
+extern "C" static void func_80C274E0(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObjIkada_Method[8];
 extern "C" extern void* g_profile_Obj_Ikada[12];
 
 // 
@@ -178,6 +180,9 @@ extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -196,6 +201,8 @@ extern "C" void _savegpr_26(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__9cCcD_Stts[8];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
@@ -313,39 +320,39 @@ asm static void rideCallBack(dBgW* param_0, fopAc_ac_c* param_1, fopAc_ac_c* par
 #pragma pop
 
 
-/* 80C26D3C-80C26D68 002C+00 s=0 e=0 z=0  None .text      daObjIkada_Draw__FP12daObjIkada_c                            */
+/* 80C26D3C-80C26D68 002C+00 s=1 e=0 z=0  None .text      daObjIkada_Draw__FP12daObjIkada_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjIkada_Draw(daObjIkada_c* param_0) {
+asm static void daObjIkada_Draw(daObjIkada_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ikada/d_a_obj_ikada/daObjIkada_Draw__FP12daObjIkada_c.s"
 }
 #pragma pop
 
 
-/* 80C26D68-80C26D88 0020+00 s=0 e=0 z=0  None .text      daObjIkada_Execute__FP12daObjIkada_c                         */
+/* 80C26D68-80C26D88 0020+00 s=1 e=0 z=0  None .text      daObjIkada_Execute__FP12daObjIkada_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjIkada_Execute(daObjIkada_c* param_0) {
+asm static void daObjIkada_Execute(daObjIkada_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ikada/d_a_obj_ikada/daObjIkada_Execute__FP12daObjIkada_c.s"
 }
 #pragma pop
 
 
-/* 80C26D88-80C26D90 0008+00 s=0 e=0 z=0  None .text      daObjIkada_IsDelete__FP12daObjIkada_c                        */
-bool daObjIkada_IsDelete(daObjIkada_c* param_0) {
+/* 80C26D88-80C26D90 0008+00 s=1 e=0 z=0  None .text      daObjIkada_IsDelete__FP12daObjIkada_c                        */
+static bool daObjIkada_IsDelete(daObjIkada_c* param_0) {
 	return true;
 }
 
 
-/* 80C26D90-80C26DB4 0024+00 s=0 e=0 z=0  None .text      daObjIkada_Delete__FP12daObjIkada_c                          */
+/* 80C26D90-80C26DB4 0024+00 s=1 e=0 z=0  None .text      daObjIkada_Delete__FP12daObjIkada_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjIkada_Delete(daObjIkada_c* param_0) {
+asm static void daObjIkada_Delete(daObjIkada_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ikada/d_a_obj_ikada/daObjIkada_Delete__FP12daObjIkada_c.s"
 }
@@ -392,7 +399,7 @@ SECTION_RODATA static u32 const lit_3917 = 0x41700000;
 /* 80C27560-80C27564 0004+00 s=1 e=0 z=0  None .rodata    @3918                                                        */
 SECTION_RODATA static u32 const lit_3918 = 0x3E4CCCCD;
 
-/* 80C27564-80C27584 0020+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80C27564-80C27584 0020+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -402,32 +409,32 @@ SECTION_DEAD char const* const stringBase_80C27578 = "M_Ikada.bmd";
 #pragma pop
 
 /* 80C27584-80C27588 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
 
-/* 80C27588-80C275A8 0020+00 s=0 e=0 z=0  None .data      l_daObjIkada_Method                                          */
-SECTION_DATA void* l_daObjIkada_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80C27588-80C275A8 0020+00 s=1 e=0 z=0  None .data      l_daObjIkada_Method                                          */
+SECTION_DATA static void* l_daObjIkada_Method[8] = {
+	(void*)daObjIkada_Create__FP10fopAc_ac_c,
+	(void*)daObjIkada_Delete__FP12daObjIkada_c,
+	(void*)daObjIkada_Execute__FP12daObjIkada_c,
+	(void*)daObjIkada_IsDelete__FP12daObjIkada_c,
+	(void*)daObjIkada_Draw__FP12daObjIkada_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C275A8-80C275D8 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Ikada                                          */
+/* 80C275A8-80C275D8 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Ikada                                          */
 SECTION_DATA void* g_profile_Obj_Ikada[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00650000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000844,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01C70000,
-	(void*)NULL,
+	(void*)&l_daObjIkada_Method,
 	(void*)0x00040180,
 	(void*)0x000E0000,
 };
@@ -436,41 +443,41 @@ SECTION_DATA void* g_profile_Obj_Ikada[12] = {
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80C274E0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80C274D8,
 };
 
 /* 80C275FC-80C27624 0028+00 s=1 e=0 z=0  None .data      __vt__12daObjIkada_c                                         */
 SECTION_DATA static void* __vt__12daObjIkada_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__12daObjIkada_cFv,
+	(void*)Create__12daObjIkada_cFv,
+	(void*)Execute__12daObjIkada_cFPPA3_A4_f,
+	(void*)Draw__12daObjIkada_cFv,
+	(void*)Delete__12daObjIkada_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
-/* 80C26DB4-80C26FB8 0204+00 s=0 e=0 z=0  None .text      daObjIkada_Create__FP10fopAc_ac_c                            */
+/* 80C26DB4-80C26FB8 0204+00 s=1 e=0 z=0  None .text      daObjIkada_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjIkada_Create(fopAc_ac_c* param_0) {
+asm static void daObjIkada_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ikada/d_a_obj_ikada/daObjIkada_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C26FB8-80C27028 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80C26FB8-80C27028 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -481,7 +488,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80C27028-80C270A0 0078+00 s=0 e=0 z=0  None .text      CreateHeap__12daObjIkada_cFv                                 */
+/* 80C27028-80C270A0 0078+00 s=1 e=0 z=0  None .text      CreateHeap__12daObjIkada_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -492,7 +499,7 @@ asm void daObjIkada_c::CreateHeap() {
 #pragma pop
 
 
-/* 80C270A0-80C270E0 0040+00 s=0 e=0 z=0  None .text      Create__12daObjIkada_cFv                                     */
+/* 80C270A0-80C270E0 0040+00 s=1 e=0 z=0  None .text      Create__12daObjIkada_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -503,7 +510,7 @@ asm void daObjIkada_c::Create() {
 #pragma pop
 
 
-/* 80C270E0-80C27400 0320+00 s=0 e=0 z=0  None .text      Execute__12daObjIkada_cFPPA3_A4_f                            */
+/* 80C270E0-80C27400 0320+00 s=1 e=0 z=0  None .text      Execute__12daObjIkada_cFPPA3_A4_f                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -514,7 +521,7 @@ asm void daObjIkada_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80C27400-80C274A4 00A4+00 s=0 e=0 z=0  None .text      Draw__12daObjIkada_cFv                                       */
+/* 80C27400-80C274A4 00A4+00 s=1 e=0 z=0  None .text      Draw__12daObjIkada_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -525,7 +532,7 @@ asm void daObjIkada_c::Draw() {
 #pragma pop
 
 
-/* 80C274A4-80C274D8 0034+00 s=0 e=0 z=0  None .text      Delete__12daObjIkada_cFv                                     */
+/* 80C274A4-80C274D8 0034+00 s=1 e=0 z=0  None .text      Delete__12daObjIkada_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -536,22 +543,22 @@ asm void daObjIkada_c::Delete() {
 #pragma pop
 
 
-/* 80C274D8-80C274E0 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C274D8-80C274E0 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C274D8() {
+extern "C" asm static void func_80C274D8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ikada/d_a_obj_ikada/func_80C274D8.s"
 }
 #pragma pop
 
 
-/* 80C274E0-80C274E8 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C274E0-80C274E8 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C274E0() {
+extern "C" asm static void func_80C274E0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ikada/d_a_obj_ikada/func_80C274E0.s"
 }

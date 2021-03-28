@@ -19,6 +19,7 @@ extern void* const data_8066EDD4[2];
 // 
 
 
+extern "C" void __sinit_d_a_do_cpp(); // 1
 
 // 
 // Declarations:

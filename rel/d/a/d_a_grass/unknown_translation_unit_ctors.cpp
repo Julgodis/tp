@@ -19,6 +19,7 @@ extern void* const data_80523014[2];
 // 
 
 
+extern "C" void __sinit_d_a_grass_cpp(); // 1
 
 // 
 // Declarations:

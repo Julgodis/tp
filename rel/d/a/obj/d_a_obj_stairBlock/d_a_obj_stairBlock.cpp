@@ -56,10 +56,10 @@ struct cM3dGAab {
 	/* 80CE8748 */ ~cM3dGAab();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -120,10 +120,10 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -134,10 +134,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daStairBlock_Draw(daStairBlock_c*); // 2
-void daStairBlock_Execute(daStairBlock_c*); // 2
-void daStairBlock_Delete(daStairBlock_c*); // 2
-void daStairBlock_Create(fopAc_ac_c*); // 2
+static void daStairBlock_Draw(daStairBlock_c*); // 2
+static void daStairBlock_Execute(daStairBlock_c*); // 2
+static void daStairBlock_Delete(daStairBlock_c*); // 2
+static void daStairBlock_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__18daStairBlock_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -155,14 +155,13 @@ extern "C" void createHeapCallBack__14daStairBlock_cFP10fopAc_ac_c(); // 1
 extern "C" void Execute__14daStairBlock_cFv(); // 1
 extern "C" void Draw__14daStairBlock_cFv(); // 1
 extern "C" void Delete__14daStairBlock_cFv(); // 1
-extern "C" void daStairBlock_Draw__FP14daStairBlock_c(); // 1
-extern "C" void daStairBlock_Execute__FP14daStairBlock_c(); // 1
-extern "C" void daStairBlock_Delete__FP14daStairBlock_c(); // 1
-extern "C" void daStairBlock_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daStairBlock_Draw__FP14daStairBlock_c(); // 1
+extern "C" static void daStairBlock_Execute__FP14daStairBlock_c(); // 1
+extern "C" static void daStairBlock_Delete__FP14daStairBlock_c(); // 1
+extern "C" static void daStairBlock_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__18daStairBlock_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_stairBlock_cpp(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daStairBlock_Method[8];
 extern "C" extern void* g_profile_Obj_StairBlock[12];
 
 // 
@@ -221,6 +220,8 @@ extern "C" void _restgpr_20(); // 1
 extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_27(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -251,30 +252,30 @@ SECTION_DATA static u8 mCcDSph__14daStairBlock_c[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x80, 0x00, 0x00,
 };
 
-/* 80CE8F18-80CE8F38 0020+00 s=0 e=0 z=0  None .data      l_daStairBlock_Method                                        */
-SECTION_DATA void* l_daStairBlock_Method[8] = {
+/* 80CE8F18-80CE8F38 0020+00 s=1 e=0 z=0  None .data      l_daStairBlock_Method                                        */
+SECTION_DATA static void* l_daStairBlock_Method[8] = {
+	(void*)daStairBlock_Create__FP10fopAc_ac_c,
+	(void*)daStairBlock_Delete__FP14daStairBlock_c,
+	(void*)daStairBlock_Execute__FP14daStairBlock_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daStairBlock_Draw__FP14daStairBlock_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80CE8F38-80CE8F68 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_StairBlock                                     */
+/* 80CE8F38-80CE8F68 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_StairBlock                                     */
 SECTION_DATA void* g_profile_Obj_StairBlock[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01660000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x0000132C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01F40000,
-	(void*)NULL,
+	(void*)&l_daStairBlock_Method,
 	(void*)0x00044000,
 	(void*)0x000E0000,
 };
@@ -283,45 +284,45 @@ SECTION_DATA void* g_profile_Obj_StairBlock[12] = {
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 80CE8F74-80CE8F80 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80CE8F80-80CE8F8C 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80CE8F8C-80CE8FA4 0018+00 s=1 e=0 z=0  None .data      __vt__14daStairBlock_c                                       */
 SECTION_DATA static void* __vt__14daStairBlock_c[6] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__14daStairBlock_cFv,
+	(void*)Execute__14daStairBlock_cFv,
+	(void*)Draw__14daStairBlock_cFv,
+	(void*)Delete__14daStairBlock_cFv,
 };
 
 /* 80CE8FA4-80CE8FB0 000C+00 s=2 e=0 z=0  None .data      __vt__18daStairBlock_HIO_c                                   */
 SECTION_DATA static void* __vt__18daStairBlock_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__18daStairBlock_HIO_cFv,
 };
 
 /* 80CE8FB0-80CE8FBC 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
 /* 80CE816C-80CE81AC 0040+00 s=1 e=0 z=0  None .text      __ct__18daStairBlock_HIO_cFv                                 */
@@ -335,7 +336,7 @@ asm daStairBlock_HIO_c::daStairBlock_HIO_c() {
 #pragma pop
 
 
-/* 80CE81AC-80CE81F4 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80CE81AC-80CE81F4 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -412,7 +413,7 @@ SECTION_RODATA static u32 const lit_3943 = 0x43480000;
 SECTION_DEAD char const* const stringBase_80CE8ECC = "StaBlock";
 #pragma pop
 
-/* 80CE82A0-80CE83F0 0150+00 s=0 e=0 z=0  None .text      CreateHeap__14daStairBlock_cFv                               */
+/* 80CE82A0-80CE83F0 0150+00 s=1 e=0 z=0  None .text      CreateHeap__14daStairBlock_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -456,7 +457,7 @@ asm dCcD_Sph::dCcD_Sph() {
 #pragma pop
 
 
-/* 80CE8700-80CE8748 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80CE8700-80CE8748 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -467,7 +468,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80CE8748-80CE8790 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80CE8748-80CE8790 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -500,7 +501,7 @@ asm mDoExt_bckAnm::mDoExt_bckAnm() {
 #pragma pop
 
 
-/* 80CE882C-80CE8874 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80CE882C-80CE8874 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -529,7 +530,7 @@ static u8 lit_3640[12];
 /* 80CE8FD4-80CE9000 002C+00 s=2 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[44];
 
-/* 80CE88A0-80CE8B24 0284+00 s=0 e=0 z=0  None .text      Execute__14daStairBlock_cFv                                  */
+/* 80CE88A0-80CE8B24 0284+00 s=1 e=0 z=0  None .text      Execute__14daStairBlock_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -540,7 +541,7 @@ asm void daStairBlock_c::Execute() {
 #pragma pop
 
 
-/* 80CE8B24-80CE8C08 00E4+00 s=0 e=0 z=0  None .text      Draw__14daStairBlock_cFv                                     */
+/* 80CE8B24-80CE8C08 00E4+00 s=1 e=0 z=0  None .text      Draw__14daStairBlock_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -551,7 +552,7 @@ asm void daStairBlock_c::Draw() {
 #pragma pop
 
 
-/* 80CE8C08-80CE8C38 0030+00 s=0 e=0 z=0  None .text      Delete__14daStairBlock_cFv                                   */
+/* 80CE8C08-80CE8C38 0030+00 s=1 e=0 z=0  None .text      Delete__14daStairBlock_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -562,51 +563,51 @@ asm void daStairBlock_c::Delete() {
 #pragma pop
 
 
-/* 80CE8C38-80CE8C64 002C+00 s=0 e=0 z=0  None .text      daStairBlock_Draw__FP14daStairBlock_c                        */
+/* 80CE8C38-80CE8C64 002C+00 s=1 e=0 z=0  None .text      daStairBlock_Draw__FP14daStairBlock_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daStairBlock_Draw(daStairBlock_c* param_0) {
+asm static void daStairBlock_Draw(daStairBlock_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/daStairBlock_Draw__FP14daStairBlock_c.s"
 }
 #pragma pop
 
 
-/* 80CE8C64-80CE8C90 002C+00 s=0 e=0 z=0  None .text      daStairBlock_Execute__FP14daStairBlock_c                     */
+/* 80CE8C64-80CE8C90 002C+00 s=1 e=0 z=0  None .text      daStairBlock_Execute__FP14daStairBlock_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daStairBlock_Execute(daStairBlock_c* param_0) {
+asm static void daStairBlock_Execute(daStairBlock_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/daStairBlock_Execute__FP14daStairBlock_c.s"
 }
 #pragma pop
 
 
-/* 80CE8C90-80CE8CBC 002C+00 s=0 e=0 z=0  None .text      daStairBlock_Delete__FP14daStairBlock_c                      */
+/* 80CE8C90-80CE8CBC 002C+00 s=1 e=0 z=0  None .text      daStairBlock_Delete__FP14daStairBlock_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daStairBlock_Delete(daStairBlock_c* param_0) {
+asm static void daStairBlock_Delete(daStairBlock_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/daStairBlock_Delete__FP14daStairBlock_c.s"
 }
 #pragma pop
 
 
-/* 80CE8CBC-80CE8CDC 0020+00 s=0 e=0 z=0  None .text      daStairBlock_Create__FP10fopAc_ac_c                          */
+/* 80CE8CBC-80CE8CDC 0020+00 s=1 e=0 z=0  None .text      daStairBlock_Create__FP10fopAc_ac_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daStairBlock_Create(fopAc_ac_c* param_0) {
+asm static void daStairBlock_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/daStairBlock_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80CE8CDC-80CE8D38 005C+00 s=1 e=0 z=0  None .text      __dt__18daStairBlock_HIO_cFv                                 */
+/* 80CE8CDC-80CE8D38 005C+00 s=2 e=0 z=0  None .text      __dt__18daStairBlock_HIO_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -617,7 +618,7 @@ asm daStairBlock_HIO_c::~daStairBlock_HIO_c() {
 #pragma pop
 
 
-/* 80CE8D38-80CE8DA8 0070+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_stairBlock_cpp                               */
+/* 80CE8D38-80CE8DA8 0070+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_stairBlock_cpp                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

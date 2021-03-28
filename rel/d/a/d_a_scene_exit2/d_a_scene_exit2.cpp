@@ -59,10 +59,10 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -73,10 +73,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daScExit_Draw(daScExit_c*); // 2
-void daScExit_Execute(daScExit_c*); // 2
-void daScExit_Delete(daScExit_c*); // 2
-void daScExit_Create(daScExit_c*); // 2
+static void daScExit_Draw(daScExit_c*); // 2
+static void daScExit_Execute(daScExit_c*); // 2
+static void daScExit_Delete(daScExit_c*); // 2
+static void daScExit_Create(daScExit_c*); // 2
 static void cLib_calcTimer__template0(u8*); // 2
 
 extern "C" void initBaseMtx__10daScExit_cFv(); // 1
@@ -93,15 +93,13 @@ extern "C" void demoProc__10daScExit_cFv(); // 1
 extern "C" void checkArea__10daScExit_cFv(); // 1
 extern "C" bool draw__10daScExit_cFv(); // 1
 extern "C" void _delete__10daScExit_cFv(); // 1
-extern "C" void daScExit_Draw__FP10daScExit_c(); // 1
-extern "C" void daScExit_Execute__FP10daScExit_c(); // 1
-extern "C" void daScExit_Delete__FP10daScExit_c(); // 1
-extern "C" void daScExit_Create__FP10daScExit_c(); // 1
+extern "C" static void daScExit_Draw__FP10daScExit_c(); // 1
+extern "C" static void daScExit_Execute__FP10daScExit_c(); // 1
+extern "C" static void daScExit_Delete__FP10daScExit_c(); // 1
+extern "C" static void daScExit_Create__FP10daScExit_c(); // 1
 extern "C" static void func_8059E7D0(); // 1
 extern "C" extern u8 const lit_3800[4];
-extern "C" extern u8 const data_8059E828[16];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daScExit_Method[8];
 extern "C" extern void* g_profile_SCENE_EXIT2[12];
 
 // 
@@ -135,6 +133,8 @@ extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
 extern "C" void __ptmf_scall(); // 1
 extern "C" void _savegpr_27(); // 1
 extern "C" void _restgpr_27(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" extern u8 data_8059E920[4];
@@ -169,6 +169,32 @@ asm void daScExit_c::setBaseMtx() {
 /* 8059E7F4-8059E7F8 0004+00 s=2 e=0 z=0  None .rodata    @3659                                                        */
 SECTION_RODATA static u32 const lit_3659 = 0x42C80000;
 
+/* 8059E7F8-8059E7FC 0004+00 s=1 e=0 z=0  None .rodata    @3797                                                        */
+SECTION_RODATA static u32 const lit_3797 = 0x3F800000;
+
+/* 8059E7FC-8059E800 0004+00 s=1 e=0 z=0  None .rodata    @3798                                                        */
+SECTION_RODATA static u32 const lit_3798 = 0xBF800000;
+
+/* 8059E800-8059E804 0004+00 s=1 e=0 z=0  None .rodata    @3799                                                        */
+SECTION_RODATA static u32 const lit_3799 = 0x44480000;
+
+/* 8059E804-8059E808 0004+00 s=0 e=0 z=0  None .rodata    @3800                                                        */
+SECTION_RODATA u8 const lit_3800[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8059E808-8059E828 0020+00 s=4 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const struct_8059E808[32] = {
+	/* 8059E808 000A stringBase_8059E808 @stringBase0 */
+	0x53, 0x63, 0x65, 0x6E, 0x65, 0x45, 0x78, 0x69, 0x74, 0x00,
+	/* 8059E812 000B data_8059E812 None */
+	0x53, 0x43, 0x45, 0x4E, 0x45, 0x5F, 0x45, 0x58, 0x49, 0x54, 0x00,
+	/* 8059E81D 0005 data_8059E81D None */
+	0x57, 0x41, 0x49, 0x54, 0x00,
+	/* 8059E822 0006 data_8059E822 None */
+	0x53, 0x54, 0x41, 0x52, 0x54, 0x00,
+};
+
 /* 8059E838-8059E844 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -182,10 +208,10 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 8059E858-8059E85C 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+SECTION_DATA static void* l_arcName = (void*)(((char*)&struct_8059E808)+0x0) /* @stringBase0 */;
 
 /* 8059E85C-8059E860 0004+00 s=1 e=0 z=0  None .data      l_evName                                                     */
-SECTION_DATA static void* l_evName = (void*)NULL;
+SECTION_DATA static void* l_evName = (void*)(((char*)&struct_8059E808)+0xA) /* None */;
 
 /* 8059E1B0-8059E230 0080+00 s=1 e=0 z=0  None .text      Create__10daScExit_cFv                                       */
 #pragma push
@@ -225,28 +251,28 @@ asm void daScExit_c::execute() {
 SECTION_DATA static void* lit_3699[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionWait__10daScExit_cFv,
 };
 
 /* 8059E86C-8059E878 000C+00 s=1 e=0 z=0  None .data      @3700                                                        */
 SECTION_DATA static void* lit_3700[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionOrderEvent__10daScExit_cFv,
 };
 
 /* 8059E878-8059E884 000C+00 s=1 e=0 z=0  None .data      @3701                                                        */
 SECTION_DATA static void* lit_3701[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionEvent__10daScExit_cFv,
 };
 
 /* 8059E884-8059E890 000C+00 s=1 e=0 z=0  None .data      @3702                                                        */
 SECTION_DATA static void* lit_3702[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)actionDead__10daScExit_cFv,
 };
 
 /* 8059E890-8059E8C0 0030+00 s=1 e=0 z=0  None .data      l_func$3698                                                  */
@@ -267,7 +293,7 @@ asm void daScExit_c::event_proc_call() {
 #pragma pop
 
 
-/* 8059E3A0-8059E408 0068+00 s=0 e=0 z=0  None .text      actionWait__10daScExit_cFv                                   */
+/* 8059E3A0-8059E408 0068+00 s=1 e=0 z=0  None .text      actionWait__10daScExit_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -278,7 +304,7 @@ asm void daScExit_c::actionWait() {
 #pragma pop
 
 
-/* 8059E408-8059E488 0080+00 s=0 e=0 z=0  None .text      actionOrderEvent__10daScExit_cFv                             */
+/* 8059E408-8059E488 0080+00 s=1 e=0 z=0  None .text      actionOrderEvent__10daScExit_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -289,7 +315,7 @@ asm void daScExit_c::actionOrderEvent() {
 #pragma pop
 
 
-/* 8059E488-8059E504 007C+00 s=0 e=0 z=0  None .text      actionEvent__10daScExit_cFv                                  */
+/* 8059E488-8059E504 007C+00 s=1 e=0 z=0  None .text      actionEvent__10daScExit_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -300,44 +326,23 @@ asm void daScExit_c::actionEvent() {
 #pragma pop
 
 
-/* 8059E504-8059E508 0004+00 s=0 e=0 z=0  None .text      actionDead__10daScExit_cFv                                   */
+/* 8059E504-8059E508 0004+00 s=1 e=0 z=0  None .text      actionDead__10daScExit_cFv                                   */
 void daScExit_c::actionDead() {
 	/* empty function */
 }
 
 
 /* ############################################################################################## */
-/* 8059E7F8-8059E7FC 0004+00 s=1 e=0 z=0  None .rodata    @3797                                                        */
-SECTION_RODATA static u32 const lit_3797 = 0x3F800000;
-
-/* 8059E7FC-8059E800 0004+00 s=1 e=0 z=0  None .rodata    @3798                                                        */
-SECTION_RODATA static u32 const lit_3798 = 0xBF800000;
-
-/* 8059E800-8059E804 0004+00 s=1 e=0 z=0  None .rodata    @3799                                                        */
-SECTION_RODATA static u32 const lit_3799 = 0x44480000;
-
-/* 8059E804-8059E808 0004+00 s=0 e=0 z=0  None .rodata    @3800                                                        */
-SECTION_RODATA u8 const lit_3800[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 8059E808-8059E828 0020+00 s=1 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_8059E808[32] = {
-	/* 8059E808 000A stringBase_8059E808 @stringBase0 */
-	0x53, 0x63, 0x65, 0x6E, 0x65, 0x45, 0x78, 0x69, 0x74, 0x00,
-	/* 8059E812 000B data_8059E812 None */
-	0x53, 0x43, 0x45, 0x4E, 0x45, 0x5F, 0x45, 0x58, 0x49, 0x54, 0x00,
-	/* 8059E81D 0005 data_8059E81D None */
-	0x57, 0x41, 0x49, 0x54, 0x00,
-	/* 8059E822 0006 data_8059E822 None */
-	0x53, 0x54, 0x41, 0x52, 0x54, 0x00,
+/* 8059E828-8059E838 0010+00 s=1 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const data_8059E828[16] = {
+	0x53, 0x43, 0x45, 0x4E, 0x45, 0x5F, 0x43, 0x48, 0x47, 0x00, 0x54, 0x69, 0x6D, 0x65, 0x72, 0x00,
 };
 
 /* 8059E8C0-8059E8CC 000C+00 s=1 e=0 z=0  None .data      action_table$3745                                            */
 SECTION_DATA static void* data_8059E8C0[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)&struct_8059E808)+0x15) /* None */,
+	(void*)(((char*)&struct_8059E808)+0x1A) /* None */,
+	(void*)&data_8059E828,
 };
 
 /* 8059E508-8059E6CC 01C4+00 s=2 e=0 z=0  None .text      demoProc__10daScExit_cFv                                     */
@@ -379,44 +384,44 @@ asm void daScExit_c::_delete() {
 #pragma pop
 
 
-/* 8059E750-8059E770 0020+00 s=0 e=0 z=0  None .text      daScExit_Draw__FP10daScExit_c                                */
+/* 8059E750-8059E770 0020+00 s=1 e=0 z=0  None .text      daScExit_Draw__FP10daScExit_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daScExit_Draw(daScExit_c* param_0) {
+asm static void daScExit_Draw(daScExit_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/daScExit_Draw__FP10daScExit_c.s"
 }
 #pragma pop
 
 
-/* 8059E770-8059E790 0020+00 s=0 e=0 z=0  None .text      daScExit_Execute__FP10daScExit_c                             */
+/* 8059E770-8059E790 0020+00 s=1 e=0 z=0  None .text      daScExit_Execute__FP10daScExit_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daScExit_Execute(daScExit_c* param_0) {
+asm static void daScExit_Execute(daScExit_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/daScExit_Execute__FP10daScExit_c.s"
 }
 #pragma pop
 
 
-/* 8059E790-8059E7B0 0020+00 s=0 e=0 z=0  None .text      daScExit_Delete__FP10daScExit_c                              */
+/* 8059E790-8059E7B0 0020+00 s=1 e=0 z=0  None .text      daScExit_Delete__FP10daScExit_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daScExit_Delete(daScExit_c* param_0) {
+asm static void daScExit_Delete(daScExit_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/daScExit_Delete__FP10daScExit_c.s"
 }
 #pragma pop
 
 
-/* 8059E7B0-8059E7D0 0020+00 s=0 e=0 z=0  None .text      daScExit_Create__FP10daScExit_c                              */
+/* 8059E7B0-8059E7D0 0020+00 s=1 e=0 z=0  None .text      daScExit_Create__FP10daScExit_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daScExit_Create(daScExit_c* param_0) {
+asm static void daScExit_Create(daScExit_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/daScExit_Create__FP10daScExit_c.s"
 }
@@ -435,35 +440,30 @@ asm static void cLib_calcTimer__template0(u8* param_0) {
 
 
 /* ############################################################################################## */
-/* 8059E828-8059E838 0010+00 s=0 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA u8 const data_8059E828[16] = {
-	0x53, 0x43, 0x45, 0x4E, 0x45, 0x5F, 0x43, 0x48, 0x47, 0x00, 0x54, 0x69, 0x6D, 0x65, 0x72, 0x00,
-};
-
-/* 8059E8CC-8059E8EC 0020+00 s=0 e=0 z=0  None .data      l_daScExit_Method                                            */
-SECTION_DATA void* l_daScExit_Method[8] = {
+/* 8059E8CC-8059E8EC 0020+00 s=1 e=0 z=0  None .data      l_daScExit_Method                                            */
+SECTION_DATA static void* l_daScExit_Method[8] = {
+	(void*)daScExit_Create__FP10daScExit_c,
+	(void*)daScExit_Delete__FP10daScExit_c,
+	(void*)daScExit_Execute__FP10daScExit_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daScExit_Draw__FP10daScExit_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 8059E8EC-8059E91C 0030+00 s=0 e=0 z=0  None .data      g_profile_SCENE_EXIT2                                        */
+/* 8059E8EC-8059E91C 0030+00 s=0 e=0 z=1  None .data      g_profile_SCENE_EXIT2                                        */
 SECTION_DATA void* g_profile_SCENE_EXIT2[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01A70000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000580,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02470000,
-	(void*)NULL,
+	(void*)&l_daScExit_Method,
 	(void*)0x00040000,
 	(void*)0x000E0000,
 };

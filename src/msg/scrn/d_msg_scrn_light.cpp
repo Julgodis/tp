@@ -31,10 +31,10 @@ struct dMsgScrnLight_c {
 	/* 802460DC */ void drawCommon(f32, f32, f32, f32, f32);
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
 struct J2DScreen {

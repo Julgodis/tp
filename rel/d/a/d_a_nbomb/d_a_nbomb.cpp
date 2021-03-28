@@ -11,14 +11,14 @@
 // Types:
 // 
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-};
-
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
 };
 
 struct daNbomb_c {
@@ -130,10 +130,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -167,10 +167,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -330,10 +330,10 @@ static void daNbomb_coHitCallback(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_
 static void daNbomb_tgHitCallback(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*); // 2
 static void daNbomb_searchEnemy(fopAc_ac_c*, void*); // 2
 static void daNbomb_createHeap(fopAc_ac_c*); // 2
-void daNbomb_Create(fopAc_ac_c*); // 2
-void daNbomb_Delete(daNbomb_c*); // 2
-void daNbomb_Execute(daNbomb_c*); // 2
-void daNbomb_Draw(daNbomb_c*); // 2
+static void daNbomb_Create(fopAc_ac_c*); // 2
+static void daNbomb_Delete(daNbomb_c*); // 2
+static void daNbomb_Execute(daNbomb_c*); // 2
+static void daNbomb_Draw(daNbomb_c*); // 2
 
 extern "C" void coHitCallback__9daNbomb_cFP10fopAc_ac_c(); // 1
 extern "C" static void daNbomb_coHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf(); // 1
@@ -352,9 +352,9 @@ extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__12dBgS_AcchCirFv(); // 1
 extern "C" void __dt__13dBgS_BombAcchFv(); // 1
-extern "C" void daNbomb_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daNbomb_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__9daNbomb_cFv(); // 1
-extern "C" void daNbomb_Delete__FP9daNbomb_c(); // 1
+extern "C" static void daNbomb_Delete__FP9daNbomb_c(); // 1
 extern "C" void checkTimerStop__9daNbomb_cFv(); // 1
 extern "C" void checkExplode__9daNbomb_cFv(); // 1
 extern "C" void setRoomInfo__9daNbomb_cFv(); // 1
@@ -379,22 +379,20 @@ extern "C" void procBoomerangMove__9daNbomb_cFv(); // 1
 extern "C" void procInsectMoveInit__9daNbomb_cFv(); // 1
 extern "C" void procInsectMove__9daNbomb_cFv(); // 1
 extern "C" void execute__9daNbomb_cFv(); // 1
-extern "C" void daNbomb_Execute__FP9daNbomb_c(); // 1
+extern "C" static void daNbomb_Execute__FP9daNbomb_c(); // 1
 extern "C" void draw__9daNbomb_cFv(); // 1
-extern "C" void daNbomb_Draw__FP9daNbomb_c(); // 1
+extern "C" static void daNbomb_Draw__FP9daNbomb_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __sinit_d_a_nbomb_cpp(); // 1
-extern "C" void func_804CC2B0(); // 1
-extern "C" void func_804CC2B8(); // 1
+extern "C" static void func_804CC2B0(); // 1
+extern "C" static void func_804CC2B8(); // 1
 extern "C" void checkExplodeNow__9daNbomb_cFv(); // 1
 extern "C" void deleteBombAndEffect__9daNbomb_cFv(); // 1
 extern "C" void setCargoBombExplode__9daNbomb_cFv(); // 1
 extern "C" bool checkExplodeNow__7dBomb_cFv(); // 1
 extern "C" void deleteBombAndEffect__7dBomb_cFv(); // 1
 extern "C" void setCargoBombExplode__7dBomb_cFv(); // 1
-extern "C" extern u8 const l_arcNameBombF[6 + 2 /* padding */];
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daNbombMethod[8];
 extern "C" extern void* g_profile_NBOMB[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -639,6 +637,8 @@ extern "C" void _restgpr_29(); // 1
 extern "C" void abs(); // 1
 extern "C" void strcmp(); // 1
 extern "C" extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -697,21 +697,21 @@ SECTION_RODATA static u8 const l_localCenterOffset[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x41, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804CC358-804CC360 0006+02 s=0 e=0 z=0  None .rodata    l_arcNameBombF                                               */
-SECTION_RODATA u8 const l_arcNameBombF[6 + 2 /* padding */] = {
+/* 804CC358-804CC360 0006+02 s=1 e=0 z=0  None .rodata    l_arcNameBombF                                               */
+SECTION_RODATA static u8 const l_arcNameBombF[6 + 2 /* padding */] = {
 	0x42, 0x6F, 0x6D, 0x62, 0x66, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 804CC360-804CC368 0005+03 s=1 e=0 z=0  None .rodata    l_arcNameBombE                                               */
+/* 804CC360-804CC368 0005+03 s=2 e=0 z=0  None .rodata    l_arcNameBombE                                               */
 SECTION_RODATA static u8 const l_arcNameBombE[5 + 3 /* padding */] = {
 	0x45, 0x5F, 0x42, 0x49, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
-/* 804CC368-804CC370 0005+03 s=1 e=0 z=0  None .rodata    l_arcNameBombEW                                              */
+/* 804CC368-804CC370 0005+03 s=2 e=0 z=0  None .rodata    l_arcNameBombEW                                              */
 SECTION_RODATA static u8 const l_arcNameBombEW[5 + 3 /* padding */] = {
 	0x45, 0x5F, 0x42, 0x47, 0x00,
 	/* padding */
@@ -816,9 +816,9 @@ SECTION_DATA static void* m_arcNameList__9daNbomb_c[6] = {
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)&l_arcNameBombF,
+	(void*)&l_arcNameBombE,
+	(void*)&l_arcNameBombEW,
 };
 
 /* 804CC530-804CC53C 000A+02 s=1 e=0 z=0  None .data      enemyBombID$5072                                             */
@@ -832,75 +832,75 @@ SECTION_DATA static u8 data_804CC530[10 + 2 /* padding */] = {
 SECTION_DATA static void* lit_5313[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)procExplode__9daNbomb_cFv,
 };
 
 /* 804CC548-804CC554 000C+00 s=1 e=0 z=0  None .data      @5462                                                        */
 SECTION_DATA static void* lit_5462[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)procCarry__9daNbomb_cFv,
 };
 
 /* 804CC554-804CC560 000C+00 s=1 e=0 z=0  None .data      @5630                                                        */
 SECTION_DATA static void* lit_5630[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)procWait__9daNbomb_cFv,
 };
 
 /* 804CC560-804CC56C 000C+00 s=1 e=0 z=0  None .data      @5886                                                        */
 SECTION_DATA static void* lit_5886[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)procFlowerWait__9daNbomb_cFv,
 };
 
 /* 804CC56C-804CC578 000C+00 s=1 e=0 z=0  None .data      @5921                                                        */
 SECTION_DATA static void* lit_5921[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)procBoomerangMove__9daNbomb_cFv,
 };
 
 /* 804CC578-804CC584 000C+00 s=1 e=0 z=0  None .data      @5924                                                        */
 SECTION_DATA static void* lit_5924[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)procBoomerangMove__9daNbomb_cFv,
 };
 
 /* 804CC584-804CC590 000C+00 s=1 e=0 z=0  None .data      @5987                                                        */
 SECTION_DATA static void* lit_5987[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
+	(void*)procInsectMove__9daNbomb_cFv,
+};
+
+/* 804CC590-804CC5B0 0020+00 s=1 e=0 z=0  None .data      l_daNbombMethod                                              */
+SECTION_DATA static void* l_daNbombMethod[8] = {
+	(void*)daNbomb_Create__FP10fopAc_ac_c,
+	(void*)daNbomb_Delete__FP9daNbomb_c,
+	(void*)daNbomb_Execute__FP9daNbomb_c,
+	(void*)NULL,
+	(void*)daNbomb_Draw__FP9daNbomb_c,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 804CC590-804CC5B0 0020+00 s=0 e=0 z=0  None .data      l_daNbombMethod                                              */
-SECTION_DATA void* l_daNbombMethod[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 804CC5B0-804CC5E0 0030+00 s=0 e=0 z=0  None .data      g_profile_NBOMB                                              */
+/* 804CC5B0-804CC5E0 0030+00 s=0 e=0 z=1  None .data      g_profile_NBOMB                                              */
 SECTION_DATA void* g_profile_NBOMB[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x02210000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000C44,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x010E0000,
-	(void*)NULL,
+	(void*)&l_daNbombMethod,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -909,80 +909,80 @@ SECTION_DATA void* g_profile_NBOMB[12] = {
 SECTION_DATA static void* __vt__8cM3dGPla[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGPlaFv,
 };
 
 /* 804CC5EC-804CC5F8 000C+00 s=2 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 804CC5F8-804CC604 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 804CC604-804CC610 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 804CC610-804CC61C 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 804CC61C-804CC628 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 804CC628-804CC64C 0024+00 s=3 e=0 z=0  None .data      __vt__13dBgS_BombAcch                                        */
 SECTION_DATA static void* __vt__13dBgS_BombAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__13dBgS_BombAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_804CC2B8,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_804CC2B0,
 };
 
 /* 804CC64C-804CC660 0014+00 s=2 e=0 z=0  None .data      __vt__9daNbomb_c                                             */
 SECTION_DATA static void* __vt__9daNbomb_c[5] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)checkExplodeNow__9daNbomb_cFv,
+	(void*)deleteBombAndEffect__9daNbomb_cFv,
+	(void*)setCargoBombExplode__9daNbomb_cFv,
 };
 
 /* 804CC660-804CC674 0014+00 s=2 e=0 z=0  None .data      __vt__7dBomb_c                                               */
 SECTION_DATA static void* __vt__7dBomb_c[5] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)checkExplodeNow__7dBomb_cFv,
+	(void*)deleteBombAndEffect__7dBomb_cFv,
+	(void*)setCargoBombExplode__7dBomb_cFv,
 };
 
 /* 804CC674-804CC680 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 804C7114-804C72BC 01A8+00 s=1 e=0 z=0  None .text      createHeap__9daNbomb_cFv                                     */
@@ -996,7 +996,7 @@ asm void daNbomb_c::createHeap() {
 #pragma pop
 
 
-/* 804C72BC-804C7304 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 804C72BC-804C7304 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1240,7 +1240,7 @@ asm daNbomb_c::daNbomb_c() {
 #pragma pop
 
 
-/* 804C7CC8-804C7D10 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 804C7CC8-804C7D10 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1251,7 +1251,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 804C7D10-804C7D58 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 804C7D10-804C7D58 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1262,7 +1262,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 804C7D58-804C7DB4 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 804C7D58-804C7DB4 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1273,7 +1273,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 804C7DB4-804C7E24 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 804C7DB4-804C7E24 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1284,7 +1284,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 804C7E24-804C7E94 0070+00 s=2 e=0 z=0  None .text      __dt__13dBgS_BombAcchFv                                      */
+/* 804C7E24-804C7E94 0070+00 s=3 e=0 z=0  None .text      __dt__13dBgS_BombAcchFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1295,11 +1295,11 @@ asm dBgS_BombAcch::~dBgS_BombAcch() {
 #pragma pop
 
 
-/* 804C7E94-804C7EB4 0020+00 s=0 e=0 z=0  None .text      daNbomb_Create__FP10fopAc_ac_c                               */
+/* 804C7E94-804C7EB4 0020+00 s=1 e=0 z=0  None .text      daNbomb_Create__FP10fopAc_ac_c                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNbomb_Create(fopAc_ac_c* param_0) {
+asm static void daNbomb_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/daNbomb_Create__FP10fopAc_ac_c.s"
 }
@@ -1317,11 +1317,11 @@ asm daNbomb_c::~daNbomb_c() {
 #pragma pop
 
 
-/* 804C826C-804C8294 0028+00 s=0 e=0 z=0  None .text      daNbomb_Delete__FP9daNbomb_c                                 */
+/* 804C826C-804C8294 0028+00 s=1 e=0 z=0  None .text      daNbomb_Delete__FP9daNbomb_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNbomb_Delete(daNbomb_c* param_0) {
+asm static void daNbomb_Delete(daNbomb_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/daNbomb_Delete__FP9daNbomb_c.s"
 }
@@ -1482,7 +1482,7 @@ asm void daNbomb_c::insectLineCheck() {
 #pragma pop
 
 
-/* 804C8A40-804C8A88 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 804C8A40-804C8A88 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1515,7 +1515,7 @@ asm void daNbomb_c::procExplodeInit() {
 #pragma pop
 
 
-/* 804C9118-804C93E0 02C8+00 s=0 e=0 z=0  None .text      procExplode__9daNbomb_cFv                                    */
+/* 804C9118-804C93E0 02C8+00 s=1 e=0 z=0  None .text      procExplode__9daNbomb_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1537,7 +1537,7 @@ asm void daNbomb_c::procCarryInit() {
 #pragma pop
 
 
-/* 804C955C-804C9930 03D4+00 s=0 e=0 z=0  None .text      procCarry__9daNbomb_cFv                                      */
+/* 804C955C-804C9930 03D4+00 s=1 e=0 z=0  None .text      procCarry__9daNbomb_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1559,7 +1559,7 @@ asm void daNbomb_c::procWaitInit() {
 #pragma pop
 
 
-/* 804C9984-804CA268 08E4+00 s=1 e=0 z=0  None .text      procWait__9daNbomb_cFv                                       */
+/* 804C9984-804CA268 08E4+00 s=2 e=0 z=0  None .text      procWait__9daNbomb_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1581,7 +1581,7 @@ asm void daNbomb_c::procFlowerWaitInit() {
 #pragma pop
 
 
-/* 804CA2EC-804CA3B8 00CC+00 s=0 e=0 z=0  None .text      procFlowerWait__9daNbomb_cFv                                 */
+/* 804CA2EC-804CA3B8 00CC+00 s=1 e=0 z=0  None .text      procFlowerWait__9daNbomb_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1603,7 +1603,7 @@ asm void daNbomb_c::procBoomerangMoveInit(dCcD_GObjInf* param_0) {
 #pragma pop
 
 
-/* 804CA4E0-804CA688 01A8+00 s=0 e=0 z=0  None .text      procBoomerangMove__9daNbomb_cFv                              */
+/* 804CA4E0-804CA688 01A8+00 s=2 e=0 z=0  None .text      procBoomerangMove__9daNbomb_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1625,7 +1625,7 @@ asm void daNbomb_c::procInsectMoveInit() {
 #pragma pop
 
 
-/* 804CA780-804CAEE8 0768+00 s=1 e=0 z=0  None .text      procInsectMove__9daNbomb_cFv                                 */
+/* 804CA780-804CAEE8 0768+00 s=2 e=0 z=0  None .text      procInsectMove__9daNbomb_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1647,11 +1647,11 @@ asm void daNbomb_c::execute() {
 #pragma pop
 
 
-/* 804CBC40-804CBC60 0020+00 s=0 e=0 z=0  None .text      daNbomb_Execute__FP9daNbomb_c                                */
+/* 804CBC40-804CBC60 0020+00 s=1 e=0 z=0  None .text      daNbomb_Execute__FP9daNbomb_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNbomb_Execute(daNbomb_c* param_0) {
+asm static void daNbomb_Execute(daNbomb_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/daNbomb_Execute__FP9daNbomb_c.s"
 }
@@ -1669,18 +1669,18 @@ asm void daNbomb_c::draw() {
 #pragma pop
 
 
-/* 804CC200-804CC220 0020+00 s=0 e=0 z=0  None .text      daNbomb_Draw__FP9daNbomb_c                                   */
+/* 804CC200-804CC220 0020+00 s=1 e=0 z=0  None .text      daNbomb_Draw__FP9daNbomb_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNbomb_Draw(daNbomb_c* param_0) {
+asm static void daNbomb_Draw(daNbomb_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/daNbomb_Draw__FP9daNbomb_c.s"
 }
 #pragma pop
 
 
-/* 804CC220-804CC268 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 804CC220-804CC268 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1691,7 +1691,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 804CC268-804CC2B0 0048+00 s=0 e=0 z=0  None .text      __sinit_d_a_nbomb_cpp                                        */
+/* 804CC268-804CC2B0 0048+00 s=0 e=1 z=0  None .text      __sinit_d_a_nbomb_cpp                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1702,29 +1702,29 @@ extern "C" asm void __sinit_d_a_nbomb_cpp() {
 #pragma pop
 
 
-/* 804CC2B0-804CC2B8 0008+00 s=0 e=0 z=0  None .text      @36@__dt__13dBgS_BombAcchFv                                  */
+/* 804CC2B0-804CC2B8 0008+00 s=1 e=0 z=0  None .text      @36@__dt__13dBgS_BombAcchFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_804CC2B0() {
+extern "C" asm static void func_804CC2B0() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/func_804CC2B0.s"
 }
 #pragma pop
 
 
-/* 804CC2B8-804CC2C0 0008+00 s=0 e=0 z=0  None .text      @20@__dt__13dBgS_BombAcchFv                                  */
+/* 804CC2B8-804CC2C0 0008+00 s=1 e=0 z=0  None .text      @20@__dt__13dBgS_BombAcchFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_804CC2B8() {
+extern "C" asm static void func_804CC2B8() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/func_804CC2B8.s"
 }
 #pragma pop
 
 
-/* 804CC2C0-804CC2D4 0014+00 s=0 e=0 z=0  None .text      checkExplodeNow__9daNbomb_cFv                                */
+/* 804CC2C0-804CC2D4 0014+00 s=1 e=0 z=0  None .text      checkExplodeNow__9daNbomb_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1735,7 +1735,7 @@ asm void daNbomb_c::checkExplodeNow() {
 #pragma pop
 
 
-/* 804CC2D4-804CC30C 0038+00 s=0 e=0 z=0  None .text      deleteBombAndEffect__9daNbomb_cFv                            */
+/* 804CC2D4-804CC30C 0038+00 s=1 e=0 z=0  None .text      deleteBombAndEffect__9daNbomb_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1746,7 +1746,7 @@ asm void daNbomb_c::deleteBombAndEffect() {
 #pragma pop
 
 
-/* 804CC30C-804CC31C 0010+00 s=0 e=0 z=0  None .text      setCargoBombExplode__9daNbomb_cFv                            */
+/* 804CC30C-804CC31C 0010+00 s=1 e=0 z=0  None .text      setCargoBombExplode__9daNbomb_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1757,19 +1757,19 @@ asm void daNbomb_c::setCargoBombExplode() {
 #pragma pop
 
 
-/* 804CC31C-804CC324 0008+00 s=0 e=0 z=0  None .text      checkExplodeNow__7dBomb_cFv                                  */
+/* 804CC31C-804CC324 0008+00 s=1 e=0 z=0  None .text      checkExplodeNow__7dBomb_cFv                                  */
 bool dBomb_c::checkExplodeNow() {
 	return false;
 }
 
 
-/* 804CC324-804CC328 0004+00 s=0 e=0 z=0  None .text      deleteBombAndEffect__7dBomb_cFv                              */
+/* 804CC324-804CC328 0004+00 s=1 e=0 z=0  None .text      deleteBombAndEffect__7dBomb_cFv                              */
 void dBomb_c::deleteBombAndEffect() {
 	/* empty function */
 }
 
 
-/* 804CC328-804CC32C 0004+00 s=0 e=0 z=0  None .text      setCargoBombExplode__7dBomb_cFv                              */
+/* 804CC328-804CC32C 0004+00 s=1 e=0 z=0  None .text      setCargoBombExplode__7dBomb_cFv                              */
 void dBomb_c::setCargoBombExplode() {
 	/* empty function */
 }

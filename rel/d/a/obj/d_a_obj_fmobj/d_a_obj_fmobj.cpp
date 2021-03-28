@@ -86,21 +86,20 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-void daObj_Fmobj_Draw(obj_fmobj_class*); // 2
-void daObj_Fmobj_Execute(obj_fmobj_class*); // 2
-bool daObj_Fmobj_IsDelete(obj_fmobj_class*); // 2
-void daObj_Fmobj_Delete(obj_fmobj_class*); // 2
+static void daObj_Fmobj_Draw(obj_fmobj_class*); // 2
+static void daObj_Fmobj_Execute(obj_fmobj_class*); // 2
+static bool daObj_Fmobj_IsDelete(obj_fmobj_class*); // 2
+static void daObj_Fmobj_Delete(obj_fmobj_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daObj_Fmobj_Create(fopAc_ac_c*); // 2
+static void daObj_Fmobj_Create(fopAc_ac_c*); // 2
 
-extern "C" void daObj_Fmobj_Draw__FP15obj_fmobj_class(); // 1
-extern "C" void daObj_Fmobj_Execute__FP15obj_fmobj_class(); // 1
-extern "C" bool daObj_Fmobj_IsDelete__FP15obj_fmobj_class(); // 1
-extern "C" void daObj_Fmobj_Delete__FP15obj_fmobj_class(); // 1
+extern "C" static void daObj_Fmobj_Draw__FP15obj_fmobj_class(); // 1
+extern "C" static void daObj_Fmobj_Execute__FP15obj_fmobj_class(); // 1
+extern "C" static bool daObj_Fmobj_IsDelete__FP15obj_fmobj_class(); // 1
+extern "C" static void daObj_Fmobj_Delete__FP15obj_fmobj_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daObj_Fmobj_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObj_Fmobj_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObj_Fmobj_Method[8];
 extern "C" extern void* g_profile_OBJ_FMOBJ[12];
 
 // 
@@ -141,6 +140,8 @@ extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXTrans(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -149,30 +150,30 @@ extern "C" extern u8 g_env_light[4880];
 // Declarations:
 // 
 
-/* 8057CBD8-8057CC44 006C+00 s=0 e=0 z=0  None .text      daObj_Fmobj_Draw__FP15obj_fmobj_class                        */
+/* 8057CBD8-8057CC44 006C+00 s=1 e=0 z=0  None .text      daObj_Fmobj_Draw__FP15obj_fmobj_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Fmobj_Draw(obj_fmobj_class* param_0) {
+asm static void daObj_Fmobj_Draw(obj_fmobj_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fmobj/d_a_obj_fmobj/daObj_Fmobj_Draw__FP15obj_fmobj_class.s"
 }
 #pragma pop
 
 
-/* 8057CC44-8057CC84 0040+00 s=0 e=0 z=0  None .text      daObj_Fmobj_Execute__FP15obj_fmobj_class                     */
+/* 8057CC44-8057CC84 0040+00 s=1 e=0 z=0  None .text      daObj_Fmobj_Execute__FP15obj_fmobj_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Fmobj_Execute(obj_fmobj_class* param_0) {
+asm static void daObj_Fmobj_Execute(obj_fmobj_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fmobj/d_a_obj_fmobj/daObj_Fmobj_Execute__FP15obj_fmobj_class.s"
 }
 #pragma pop
 
 
-/* 8057CC84-8057CC8C 0008+00 s=0 e=0 z=0  None .text      daObj_Fmobj_IsDelete__FP15obj_fmobj_class                    */
-bool daObj_Fmobj_IsDelete(obj_fmobj_class* param_0) {
+/* 8057CC84-8057CC8C 0008+00 s=1 e=0 z=0  None .text      daObj_Fmobj_IsDelete__FP15obj_fmobj_class                    */
+static bool daObj_Fmobj_IsDelete(obj_fmobj_class* param_0) {
 	return true;
 }
 
@@ -196,11 +197,11 @@ SECTION_RODATA static u32 const lit_3745 = 0xC1F00000;
 SECTION_DEAD char const* const stringBase_8057CF74 = "Obj_Fmobj";
 #pragma pop
 
-/* 8057CC8C-8057CCDC 0050+00 s=0 e=0 z=0  None .text      daObj_Fmobj_Delete__FP15obj_fmobj_class                      */
+/* 8057CC8C-8057CCDC 0050+00 s=1 e=0 z=0  None .text      daObj_Fmobj_Delete__FP15obj_fmobj_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Fmobj_Delete(obj_fmobj_class* param_0) {
+asm static void daObj_Fmobj_Delete(obj_fmobj_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fmobj/d_a_obj_fmobj/daObj_Fmobj_Delete__FP15obj_fmobj_class.s"
 }
@@ -218,11 +219,11 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 8057CDE0-8057CF60 0180+00 s=0 e=0 z=0  None .text      daObj_Fmobj_Create__FP10fopAc_ac_c                           */
+/* 8057CDE0-8057CF60 0180+00 s=1 e=0 z=0  None .text      daObj_Fmobj_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Fmobj_Create(fopAc_ac_c* param_0) {
+asm static void daObj_Fmobj_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fmobj/d_a_obj_fmobj/daObj_Fmobj_Create__FP10fopAc_ac_c.s"
 }
@@ -230,30 +231,30 @@ asm void daObj_Fmobj_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 8057CF80-8057CFA0 0020+00 s=0 e=0 z=0  None .data      l_daObj_Fmobj_Method                                         */
-SECTION_DATA void* l_daObj_Fmobj_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 8057CF80-8057CFA0 0020+00 s=1 e=0 z=0  None .data      l_daObj_Fmobj_Method                                         */
+SECTION_DATA static void* l_daObj_Fmobj_Method[8] = {
+	(void*)daObj_Fmobj_Create__FP10fopAc_ac_c,
+	(void*)daObj_Fmobj_Delete__FP15obj_fmobj_class,
+	(void*)daObj_Fmobj_Execute__FP15obj_fmobj_class,
+	(void*)daObj_Fmobj_IsDelete__FP15obj_fmobj_class,
+	(void*)daObj_Fmobj_Draw__FP15obj_fmobj_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 8057CFA0-8057CFD0 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_FMOBJ                                          */
+/* 8057CFA0-8057CFD0 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_FMOBJ                                          */
 SECTION_DATA void* g_profile_OBJ_FMOBJ[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00260000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005BC,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00280000,
-	(void*)NULL,
+	(void*)&l_daObj_Fmobj_Method,
 	(void*)0x00040100,
 	(void*)0x00070000,
 };

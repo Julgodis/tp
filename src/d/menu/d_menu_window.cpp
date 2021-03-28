@@ -270,10 +270,10 @@ struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -2093,7 +2093,7 @@ SECTION_DATA static void* l_dMw_Method[5] = {
 	(void*)dMw_Draw__FP5dMw_c,
 };
 
-/* 803BF094-803BF0D4 0028+18 s=0 e=0 z=0  None .data      g_profile_MENUWINDOW                                         */
+/* 803BF094-803BF0D4 0028+18 s=0 e=0 z=1  None .data      g_profile_MENUWINDOW                                         */
 SECTION_DATA void* g_profile_MENUWINDOW[10 + 6 /* padding */] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000CFFFD,

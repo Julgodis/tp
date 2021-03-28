@@ -19,6 +19,7 @@ extern void* const data_809918E4[2];
 // 
 
 
+extern "C" void __sinit_d_a_npc_chin_cpp(); // 1
 
 // 
 // Declarations:

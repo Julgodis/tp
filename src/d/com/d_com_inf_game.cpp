@@ -11,13 +11,10 @@
 // Types:
 // 
 
-struct J3DModelData {
-};
-
 struct cXyz {
 };
 
-struct dStage_startStage_c {
+struct J3DModelData {
 };
 
 struct dTimer_c {
@@ -31,6 +28,9 @@ struct dTimer_c {
 };
 
 struct J3DModel {
+};
+
+struct dStage_startStage_c {
 };
 
 struct dComIfG_play_c {

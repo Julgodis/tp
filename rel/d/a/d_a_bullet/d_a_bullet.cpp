@@ -149,11 +149,11 @@ struct cM3dGCir {
 // Forward References:
 // 
 
-void daBullet_Create(void*); // 2
-void daBullet_Delete(void*); // 2
-void daBullet_Execute(void*); // 2
-void daBullet_Draw(void*); // 2
-bool daBullet_IsDelete(void*); // 2
+static void daBullet_Create(void*); // 2
+static void daBullet_Delete(void*); // 2
+static void daBullet_Execute(void*); // 2
+static void daBullet_Draw(void*); // 2
+static bool daBullet_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(int*); // 2
 
 extern "C" void __dt__10daBullet_cFv(); // 1
@@ -175,22 +175,20 @@ extern "C" void initialize__10daBullet_cFv(); // 1
 extern "C" void setProcess__10daBullet_cFM10daBullet_cFPCvPvPv_i(); // 1
 extern "C" void wait__10daBullet_cFPv(); // 1
 extern "C" void move__10daBullet_cFPv(); // 1
-extern "C" void daBullet_Create__FPv(); // 1
-extern "C" void daBullet_Delete__FPv(); // 1
-extern "C" void daBullet_Execute__FPv(); // 1
-extern "C" void daBullet_Draw__FPv(); // 1
-extern "C" bool daBullet_IsDelete__FPv(); // 1
+extern "C" static void daBullet_Create__FPv(); // 1
+extern "C" static void daBullet_Delete__FPv(); // 1
+extern "C" static void daBullet_Execute__FPv(); // 1
+extern "C" static void daBullet_Draw__FPv(); // 1
+extern "C" static bool daBullet_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" static void func_80656618(); // 1
 extern "C" void __sinit_d_a_bullet_cpp(); // 1
 extern "C" void __dt__16daBullet_Param_cFv(); // 1
-extern "C" void func_806566F0(); // 1
-extern "C" void func_806566F8(); // 1
+extern "C" static void func_806566F0(); // 1
+extern "C" static void func_806566F8(); // 1
 extern "C" extern u32 const lit_3843;
 extern "C" extern u32 const lit_3844;
 extern "C" extern u8 const lit_3845[4];
-extern "C" extern u8 const struct_80656774[24];
-extern "C" extern void* daBullet_MethodTable[8];
 extern "C" extern void* g_profile_BULLET[12];
 
 // 
@@ -247,6 +245,8 @@ extern "C" void __ptmf_test(); // 1
 extern "C" void __ptmf_scall(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -265,11 +265,53 @@ extern void* const pad_8065670C[2];
 // 
 
 /* ############################################################################################## */
+/* 80656714-80656744 0030+00 s=2 e=0 z=0  None .rodata    mCcDObjInfo__10daBullet_c                                    */
+SECTION_RODATA static u8 const mCcDObjInfo__10daBullet_c[48] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80656744-8065675C 0018+00 s=2 e=0 z=0  None .rodata    m__16daBullet_Param_c                                        */
+SECTION_RODATA static u8 const m__16daBullet_Param_c[24] = {
+	0xC0, 0x40, 0x00, 0x00, 0x43, 0x7F, 0x00, 0x00, 0x40, 0x40, 0x00, 0x00, 0x3F, 0xC0, 0x00, 0x00,
+	0x40, 0x40, 0x00, 0x00, 0x07, 0x08, 0x00, 0x00,
+};
+
+/* 8065675C-80656760 0004+00 s=1 e=0 z=0  None .rodata    @3824                                                        */
+SECTION_RODATA static u32 const lit_3824 = 0xCE6E6B28;
+
+/* 80656760-80656764 0004+00 s=0 e=0 z=0  None .rodata    @3843                                                        */
+SECTION_RODATA u32 const lit_3843 = 0x3DCCCCCD;
+
+/* 80656764-80656768 0004+00 s=0 e=0 z=0  None .rodata    @3844                                                        */
+SECTION_RODATA u32 const lit_3844 = 0x3F000000;
+
+/* 80656768-8065676C 0004+00 s=0 e=0 z=0  None .rodata    @3845                                                        */
+SECTION_RODATA u8 const lit_3845[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8065676C-80656770 0004+00 s=1 e=0 z=0  None .rodata    @3908                                                        */
+SECTION_RODATA static u32 const lit_3908 = 0xC1200000;
+
+/* 80656770-80656774 0004+00 s=1 e=0 z=0  None .rodata    @3909                                                        */
+SECTION_RODATA static u32 const lit_3909 = 0x41200000;
+
+/* 80656774-8065678C 0018+00 s=2 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const struct_80656774[24] = {
+	/* 80656774 0007 stringBase_80656774 @stringBase0 */
+	0x48, 0x61, 0x6E, 0x6A, 0x6F, 0x31, 0x00,
+	/* 8065677B 0011 data_8065677B None */
+	0x68, 0x61, 0x6E, 0x6A, 0x6F, 0x5F, 0x73, 0x74, 0x6F, 0x6E, 0x65, 0x2E, 0x62, 0x6D, 0x64, 0x00,
+	0x00,
+};
+
 /* 8065678C-80656790 0004+00 s=1 e=0 z=0  None .data      l_resFileNameList                                            */
-SECTION_DATA static void* l_resFileNameList = (void*)NULL;
+SECTION_DATA static void* l_resFileNameList = (void*)(((char*)&struct_80656774)+0x0) /* @stringBase0 */;
 
 /* 80656790-80656794 0004+00 s=2 e=0 z=0  None .data      l_bmdFileNameList                                            */
-SECTION_DATA static void* l_bmdFileNameList = (void*)NULL;
+SECTION_DATA static void* l_bmdFileNameList = (void*)(((char*)&struct_80656774)+0x7) /* None */;
 
 /* 80656794-806567D4 0040+00 s=2 e=0 z=0  None .data      mCcDSph__10daBullet_c                                        */
 SECTION_DATA static u8 mCcDSph__10daBullet_c[64] = {
@@ -283,40 +325,40 @@ SECTION_DATA static u8 mCcDSph__10daBullet_c[64] = {
 SECTION_DATA static void* lit_3878[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)wait__10daBullet_cFPv,
 };
 
 /* 806567E0-806567EC 000C+00 s=1 e=0 z=0  None .data      @3933                                                        */
 SECTION_DATA static void* lit_3933[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
+	(void*)move__10daBullet_cFPv,
+};
+
+/* 806567EC-8065680C 0020+00 s=1 e=0 z=0  None .data      daBullet_MethodTable                                         */
+SECTION_DATA static void* daBullet_MethodTable[8] = {
+	(void*)daBullet_Create__FPv,
+	(void*)daBullet_Delete__FPv,
+	(void*)daBullet_Execute__FPv,
+	(void*)daBullet_IsDelete__FPv,
+	(void*)daBullet_Draw__FPv,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 806567EC-8065680C 0020+00 s=0 e=0 z=0  None .data      daBullet_MethodTable                                         */
-SECTION_DATA void* daBullet_MethodTable[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 8065680C-8065683C 0030+00 s=0 e=0 z=0  None .data      g_profile_BULLET                                             */
+/* 8065680C-8065683C 0030+00 s=0 e=0 z=1  None .data      g_profile_BULLET                                             */
 SECTION_DATA void* g_profile_BULLET[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0008FFFD,
 	(void*)0x02E60000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x0000095C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02EF0000,
-	(void*)NULL,
+	(void*)&daBullet_MethodTable,
 	(void*)0x00044000,
 	(void*)0x000E0000,
 };
@@ -325,58 +367,58 @@ SECTION_DATA void* g_profile_BULLET[12] = {
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_806566F8,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_806566F0,
 };
 
 /* 80656860-8065686C 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 8065686C-80656878 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80656878-80656884 000C+00 s=2 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 80656884-80656890 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80656890-8065689C 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 8065689C-806568A8 000C+00 s=2 e=0 z=0  None .data      __vt__10daBullet_c                                           */
 SECTION_DATA static void* __vt__10daBullet_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10daBullet_cFv,
 };
 
-/* 8065594C-80655B08 01BC+00 s=0 e=0 z=0  None .text      __dt__10daBullet_cFv                                         */
+/* 8065594C-80655B08 01BC+00 s=1 e=0 z=0  None .text      __dt__10daBullet_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -398,7 +440,7 @@ asm void daBullet_c::create() {
 #pragma pop
 
 
-/* 80655C90-80655CD8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80655C90-80655CD8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -409,7 +451,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80655CD8-80655D20 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80655CD8-80655D20 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -420,7 +462,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80655D20-80655D90 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80655D20-80655D90 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -431,7 +473,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 80655D90-80655DEC 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80655D90-80655DEC 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -442,7 +484,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80655DEC-80655E5C 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80655DEC-80655E5C 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -474,23 +516,6 @@ asm void daBullet_c::Delete() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80656714-80656744 0030+00 s=2 e=0 z=0  None .rodata    mCcDObjInfo__10daBullet_c                                    */
-SECTION_RODATA static u8 const mCcDObjInfo__10daBullet_c[48] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80656744-8065675C 0018+00 s=2 e=0 z=0  None .rodata    m__16daBullet_Param_c                                        */
-SECTION_RODATA static u8 const m__16daBullet_Param_c[24] = {
-	0xC0, 0x40, 0x00, 0x00, 0x43, 0x7F, 0x00, 0x00, 0x40, 0x40, 0x00, 0x00, 0x3F, 0xC0, 0x00, 0x00,
-	0x40, 0x40, 0x00, 0x00, 0x07, 0x08, 0x00, 0x00,
-};
-
-/* 8065675C-80656760 0004+00 s=1 e=0 z=0  None .rodata    @3824                                                        */
-SECTION_RODATA static u32 const lit_3824 = 0xCE6E6B28;
 
 /* 80655F10-806560FC 01EC+00 s=2 e=0 z=0  None .text      Execute__10daBullet_cFv                                      */
 #pragma push
@@ -558,24 +583,6 @@ asm void daBullet_c::getTypeFromParam() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80656760-80656764 0004+00 s=0 e=0 z=0  None .rodata    @3843                                                        */
-SECTION_RODATA u32 const lit_3843 = 0x3DCCCCCD;
-
-/* 80656764-80656768 0004+00 s=0 e=0 z=0  None .rodata    @3844                                                        */
-SECTION_RODATA u32 const lit_3844 = 0x3F000000;
-
-/* 80656768-8065676C 0004+00 s=0 e=0 z=0  None .rodata    @3845                                                        */
-SECTION_RODATA u8 const lit_3845[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 8065676C-80656770 0004+00 s=1 e=0 z=0  None .rodata    @3908                                                        */
-SECTION_RODATA static u32 const lit_3908 = 0xC1200000;
-
-/* 80656770-80656774 0004+00 s=1 e=0 z=0  None .rodata    @3909                                                        */
-SECTION_RODATA static u32 const lit_3909 = 0x41200000;
-
 /* 806561D0-80656378 01A8+00 s=1 e=0 z=0  None .text      initialize__10daBullet_cFv                                   */
 #pragma push
 #pragma optimization_level 0
@@ -598,7 +605,7 @@ asm void daBullet_c::setProcess(int (daBullet_c::*)(void*)) {
 #pragma pop
 
 
-/* 80656420-806564B8 0098+00 s=0 e=0 z=0  None .text      wait__10daBullet_cFPv                                        */
+/* 80656420-806564B8 0098+00 s=1 e=0 z=0  None .text      wait__10daBullet_cFPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -609,7 +616,7 @@ asm void daBullet_c::wait(void* param_0) {
 #pragma pop
 
 
-/* 806564B8-80656548 0090+00 s=0 e=0 z=0  None .text      move__10daBullet_cFPv                                        */
+/* 806564B8-80656548 0090+00 s=1 e=0 z=0  None .text      move__10daBullet_cFPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -620,57 +627,57 @@ asm void daBullet_c::move(void* param_0) {
 #pragma pop
 
 
-/* 80656548-80656568 0020+00 s=0 e=0 z=0  None .text      daBullet_Create__FPv                                         */
+/* 80656548-80656568 0020+00 s=1 e=0 z=0  None .text      daBullet_Create__FPv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBullet_Create(void* param_0) {
+asm static void daBullet_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/daBullet_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 80656568-80656588 0020+00 s=0 e=0 z=0  None .text      daBullet_Delete__FPv                                         */
+/* 80656568-80656588 0020+00 s=1 e=0 z=0  None .text      daBullet_Delete__FPv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBullet_Delete(void* param_0) {
+asm static void daBullet_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/daBullet_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 80656588-806565A8 0020+00 s=0 e=0 z=0  None .text      daBullet_Execute__FPv                                        */
+/* 80656588-806565A8 0020+00 s=1 e=0 z=0  None .text      daBullet_Execute__FPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBullet_Execute(void* param_0) {
+asm static void daBullet_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/daBullet_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 806565A8-806565C8 0020+00 s=0 e=0 z=0  None .text      daBullet_Draw__FPv                                           */
+/* 806565A8-806565C8 0020+00 s=1 e=0 z=0  None .text      daBullet_Draw__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBullet_Draw(void* param_0) {
+asm static void daBullet_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/daBullet_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 806565C8-806565D0 0008+00 s=0 e=0 z=0  None .text      daBullet_IsDelete__FPv                                       */
-bool daBullet_IsDelete(void* param_0) {
+/* 806565C8-806565D0 0008+00 s=1 e=0 z=0  None .text      daBullet_IsDelete__FPv                                       */
+static bool daBullet_IsDelete(void* param_0) {
 	return true;
 }
 
 
-/* 806565D0-80656618 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 806565D0-80656618 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -697,7 +704,7 @@ asm static void cLib_calcTimer__template0(int* param_0) {
 SECTION_DATA static void* __vt__16daBullet_Param_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__16daBullet_Param_cFv,
 };
 
 /* 806568C0-806568CC 000C+00 s=1 e=0 z=0  None .bss       @3619                                                        */
@@ -706,7 +713,7 @@ static u8 lit_3619[12];
 /* 806568CC-806568D0 0004+00 s=1 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[4];
 
-/* 80656634-806566A8 0074+00 s=0 e=0 z=0  None .text      __sinit_d_a_bullet_cpp                                       */
+/* 80656634-806566A8 0074+00 s=0 e=1 z=0  None .text      __sinit_d_a_bullet_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -717,7 +724,7 @@ extern "C" asm void __sinit_d_a_bullet_cpp() {
 #pragma pop
 
 
-/* 806566A8-806566F0 0048+00 s=1 e=0 z=0  None .text      __dt__16daBullet_Param_cFv                                   */
+/* 806566A8-806566F0 0048+00 s=2 e=0 z=0  None .text      __dt__16daBullet_Param_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -728,35 +735,25 @@ asm daBullet_Param_c::~daBullet_Param_c() {
 #pragma pop
 
 
-/* 806566F0-806566F8 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 806566F0-806566F8 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_806566F0() {
+extern "C" asm static void func_806566F0() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/func_806566F0.s"
 }
 #pragma pop
 
 
-/* 806566F8-80656700 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 806566F8-80656700 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_806566F8() {
+extern "C" asm static void func_806566F8() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/func_806566F8.s"
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80656774-8065678C 0018+00 s=0 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA u8 const struct_80656774[24] = {
-	/* 80656774 0007 stringBase_80656774 @stringBase0 */
-	0x48, 0x61, 0x6E, 0x6A, 0x6F, 0x31, 0x00,
-	/* 8065677B 0011 data_8065677B None */
-	0x68, 0x61, 0x6E, 0x6A, 0x6F, 0x5F, 0x73, 0x74, 0x6F, 0x6E, 0x65, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-	0x00,
-};
 

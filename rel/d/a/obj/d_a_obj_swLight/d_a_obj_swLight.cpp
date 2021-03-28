@@ -107,17 +107,20 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dBgW {
-};
-
 struct cBgS_PolyInfo {
 };
 
 struct csXyz {
 };
 
+struct dBgW {
+};
+
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -162,10 +165,10 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -190,10 +193,10 @@ struct JUTNameTab {
 // Forward References:
 // 
 
-void daObjSwLight_create1st(daObjSwLight_c*); // 2
-void daObjSwLight_MoveBGDelete(daObjSwLight_c*); // 2
-void daObjSwLight_MoveBGExecute(daObjSwLight_c*); // 2
-void daObjSwLight_MoveBGDraw(daObjSwLight_c*); // 2
+static void daObjSwLight_create1st(daObjSwLight_c*); // 2
+static void daObjSwLight_MoveBGDelete(daObjSwLight_c*); // 2
+static void daObjSwLight_MoveBGExecute(daObjSwLight_c*); // 2
+static void daObjSwLight_MoveBGDraw(daObjSwLight_c*); // 2
 static void cLib_calcTimer__template0(u16*); // 2
 static void cLib_calcTimer__template1(u8*); // 2
 
@@ -215,16 +218,16 @@ extern "C" void checkHit__14daObjSwLight_cFv(); // 1
 extern "C" void setOnTimer__14daObjSwLight_cFv(); // 1
 extern "C" void Draw__14daObjSwLight_cFv(); // 1
 extern "C" void Delete__14daObjSwLight_cFv(); // 1
-extern "C" void daObjSwLight_create1st__FP14daObjSwLight_c(); // 1
+extern "C" static void daObjSwLight_create1st__FP14daObjSwLight_c(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __ct__8dCcD_SphFv(); // 1
 extern "C" void __dt__8dCcD_SphFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void daObjSwLight_MoveBGDelete__FP14daObjSwLight_c(); // 1
-extern "C" void daObjSwLight_MoveBGExecute__FP14daObjSwLight_c(); // 1
-extern "C" void daObjSwLight_MoveBGDraw__FP14daObjSwLight_c(); // 1
+extern "C" static void daObjSwLight_MoveBGDelete__FP14daObjSwLight_c(); // 1
+extern "C" static void daObjSwLight_MoveBGExecute__FP14daObjSwLight_c(); // 1
+extern "C" static void daObjSwLight_MoveBGDraw__FP14daObjSwLight_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__17dEvLib_callback_cFv(); // 1
 extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
@@ -233,10 +236,9 @@ extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
 extern "C" void __dt__14daObjSwLight_cFv(); // 1
 extern "C" static void func_80CF8358(); // 1
 extern "C" static void func_80CF8374(); // 1
-extern "C" void func_80CF8390(); // 1
+extern "C" static void func_80CF8390(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* daObjSwLight_METHODS[8];
 extern "C" extern void* g_profile_Obj_SwLight[12];
 
 // 
@@ -271,6 +273,9 @@ extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void eventUpdate__17dEvLib_callback_cFv(); // 1
 extern "C" void orderEvent__17dEvLib_callback_cFiii(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -309,6 +314,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__16dBgS_MoveBgActor[10];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
@@ -409,7 +416,7 @@ SECTION_RODATA static u8 const lit_3833[8] = {
 /* 80CF8450-80CF8454 0004+00 s=2 e=0 z=0  None .rodata    @3844                                                        */
 SECTION_RODATA static u32 const lit_3844 = 0x41C80000;
 
-/* 80CF8454-80CF8466 0012+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80CF8454-80CF8466 0012+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -430,7 +437,7 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80CF8488-80CF848C 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
 
 /* 80CF848C-80CF84A4 0018+00 s=1 e=0 z=0  None .data      l_cull_box                                                   */
 SECTION_DATA static u8 l_cull_box[24] = {
@@ -447,7 +454,7 @@ SECTION_DATA static u8 l_cyl_src[68] = {
 	0x43, 0x2A, 0x00, 0x00,
 };
 
-/* 80CF7038-80CF71F0 01B8+00 s=0 e=0 z=0  None .text      Create__14daObjSwLight_cFv                                   */
+/* 80CF7038-80CF71F0 01B8+00 s=1 e=0 z=0  None .text      Create__14daObjSwLight_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -458,7 +465,7 @@ asm void daObjSwLight_c::Create() {
 #pragma pop
 
 
-/* 80CF71F0-80CF7260 0070+00 s=0 e=0 z=0  None .text      CreateHeap__14daObjSwLight_cFv                               */
+/* 80CF71F0-80CF7260 0070+00 s=1 e=0 z=0  None .text      CreateHeap__14daObjSwLight_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -480,7 +487,7 @@ asm void daObjSwLight_c::create1st() {
 #pragma pop
 
 
-/* 80CF7320-80CF73E0 00C0+00 s=0 e=0 z=0  None .text      Execute__14daObjSwLight_cFPPA3_A4_f                          */
+/* 80CF7320-80CF73E0 00C0+00 s=1 e=0 z=0  None .text      Execute__14daObjSwLight_cFPPA3_A4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -496,28 +503,28 @@ asm void daObjSwLight_c::Execute(f32 (** param_0)[3][4]) {
 SECTION_DATA static void* lit_3738[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeSwOnWait__14daObjSwLight_cFv,
 };
 
 /* 80CF84F4-80CF8500 000C+00 s=1 e=0 z=0  None .data      @3739                                                        */
 SECTION_DATA static void* lit_3739[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeSwOffWait__14daObjSwLight_cFv,
 };
 
 /* 80CF8500-80CF850C 000C+00 s=1 e=0 z=0  None .data      @3740                                                        */
 SECTION_DATA static void* lit_3740[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeOnLight__14daObjSwLight_cFv,
 };
 
 /* 80CF850C-80CF8518 000C+00 s=1 e=0 z=0  None .data      @3741                                                        */
 SECTION_DATA static void* lit_3741[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeDead__14daObjSwLight_cFv,
 };
 
 /* 80CF8518-80CF8548 0030+00 s=1 e=0 z=0  None .data      l_func$3737                                                  */
@@ -549,7 +556,7 @@ asm void daObjSwLight_c::init_modeSwOnWait() {
 #pragma pop
 
 
-/* 80CF766C-80CF777C 0110+00 s=0 e=0 z=0  None .text      modeSwOnWait__14daObjSwLight_cFv                             */
+/* 80CF766C-80CF777C 0110+00 s=1 e=0 z=0  None .text      modeSwOnWait__14daObjSwLight_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -571,7 +578,7 @@ asm void daObjSwLight_c::init_modeOnLight() {
 #pragma pop
 
 
-/* 80CF7788-80CF77D8 0050+00 s=0 e=0 z=0  None .text      modeOnLight__14daObjSwLight_cFv                              */
+/* 80CF7788-80CF77D8 0050+00 s=1 e=0 z=0  None .text      modeOnLight__14daObjSwLight_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -593,7 +600,7 @@ asm void daObjSwLight_c::init_modeSwOffWait() {
 #pragma pop
 
 
-/* 80CF7838-80CF7974 013C+00 s=0 e=0 z=0  None .text      modeSwOffWait__14daObjSwLight_cFv                            */
+/* 80CF7838-80CF7974 013C+00 s=1 e=0 z=0  None .text      modeSwOffWait__14daObjSwLight_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -604,7 +611,7 @@ asm void daObjSwLight_c::modeSwOffWait() {
 #pragma pop
 
 
-/* 80CF7974-80CF7978 0004+00 s=0 e=0 z=0  None .text      modeDead__14daObjSwLight_cFv                                 */
+/* 80CF7974-80CF7978 0004+00 s=1 e=0 z=0  None .text      modeDead__14daObjSwLight_cFv                                 */
 void daObjSwLight_c::modeDead() {
 	/* empty function */
 }
@@ -632,7 +639,7 @@ asm void daObjSwLight_c::setOnTimer() {
 #pragma pop
 
 
-/* 80CF7A98-80CF7BA8 0110+00 s=0 e=0 z=0  None .text      Draw__14daObjSwLight_cFv                                     */
+/* 80CF7A98-80CF7BA8 0110+00 s=1 e=0 z=0  None .text      Draw__14daObjSwLight_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -643,7 +650,7 @@ asm void daObjSwLight_c::Draw() {
 #pragma pop
 
 
-/* 80CF7BA8-80CF7BF0 0048+00 s=0 e=0 z=0  None .text      Delete__14daObjSwLight_cFv                                   */
+/* 80CF7BA8-80CF7BF0 0048+00 s=1 e=0 z=0  None .text      Delete__14daObjSwLight_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -655,30 +662,30 @@ asm void daObjSwLight_c::Delete() {
 
 
 /* ############################################################################################## */
-/* 80CF8548-80CF8568 0020+00 s=0 e=0 z=0  None .data      daObjSwLight_METHODS                                         */
-SECTION_DATA void* daObjSwLight_METHODS[8] = {
+/* 80CF8548-80CF8568 0020+00 s=1 e=0 z=0  None .data      daObjSwLight_METHODS                                         */
+SECTION_DATA static void* daObjSwLight_METHODS[8] = {
+	(void*)daObjSwLight_create1st__FP14daObjSwLight_c,
+	(void*)daObjSwLight_MoveBGDelete__FP14daObjSwLight_c,
+	(void*)daObjSwLight_MoveBGExecute__FP14daObjSwLight_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjSwLight_MoveBGDraw__FP14daObjSwLight_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80CF8568-80CF8598 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_SwLight                                        */
+/* 80CF8568-80CF8598 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_SwLight                                        */
 SECTION_DATA void* g_profile_Obj_SwLight[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00AC0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000B28,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x022A0000,
-	(void*)NULL,
+	(void*)&daObjSwLight_METHODS,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -687,80 +694,80 @@ SECTION_DATA void* g_profile_Obj_SwLight[12] = {
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80CF85A4-80CF85B0 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80CF85B0-80CF85BC 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 80CF85BC-80CF85C8 000C+00 s=5 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80CF85C8-80CF85D4 000C+00 s=5 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80CF85D4-80CF85EC 0018+00 s=3 e=0 z=0  None .data      __vt__17dEvLib_callback_c                                    */
 SECTION_DATA static void* __vt__17dEvLib_callback_c[6] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__17dEvLib_callback_cFv,
+	(void*)eventStart__17dEvLib_callback_cFv,
+	(void*)eventRun__17dEvLib_callback_cFv,
+	(void*)eventEnd__17dEvLib_callback_cFv,
 };
 
 /* 80CF85EC-80CF8630 0044+00 s=2 e=0 z=0  None .data      __vt__14daObjSwLight_c                                       */
 SECTION_DATA static void* __vt__14daObjSwLight_c[17] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)CreateHeap__14daObjSwLight_cFv,
+	(void*)Create__14daObjSwLight_cFv,
+	(void*)Execute__14daObjSwLight_cFPPA3_A4_f,
+	(void*)Draw__14daObjSwLight_cFv,
+	(void*)Delete__14daObjSwLight_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80CF8390,
+	(void*)eventStart__17dEvLib_callback_cFv,
+	(void*)eventRun__17dEvLib_callback_cFv,
+	(void*)eventEnd__17dEvLib_callback_cFv,
+	(void*)__dt__14daObjSwLight_cFv,
 };
 
-/* 80CF7BF0-80CF7D8C 019C+00 s=0 e=0 z=0  None .text      daObjSwLight_create1st__FP14daObjSwLight_c                   */
+/* 80CF7BF0-80CF7D8C 019C+00 s=1 e=0 z=0  None .text      daObjSwLight_create1st__FP14daObjSwLight_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSwLight_create1st(daObjSwLight_c* param_0) {
+asm static void daObjSwLight_create1st(daObjSwLight_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swLight/d_a_obj_swLight/daObjSwLight_create1st__FP14daObjSwLight_c.s"
 }
 #pragma pop
 
 
-/* 80CF7D8C-80CF7DD4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80CF7D8C-80CF7DD4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -793,7 +800,7 @@ asm dCcD_Sph::~dCcD_Sph() {
 #pragma pop
 
 
-/* 80CF7F24-80CF7F6C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80CF7F24-80CF7F6C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -804,7 +811,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80CF7F6C-80CF7FB4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80CF7F6C-80CF7FB4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -815,7 +822,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80CF7FB4-80CF8010 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80CF7FB4-80CF8010 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -826,40 +833,40 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80CF8010-80CF8030 0020+00 s=0 e=0 z=0  None .text      daObjSwLight_MoveBGDelete__FP14daObjSwLight_c                */
+/* 80CF8010-80CF8030 0020+00 s=1 e=0 z=0  None .text      daObjSwLight_MoveBGDelete__FP14daObjSwLight_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSwLight_MoveBGDelete(daObjSwLight_c* param_0) {
+asm static void daObjSwLight_MoveBGDelete(daObjSwLight_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swLight/d_a_obj_swLight/daObjSwLight_MoveBGDelete__FP14daObjSwLight_c.s"
 }
 #pragma pop
 
 
-/* 80CF8030-80CF8050 0020+00 s=0 e=0 z=0  None .text      daObjSwLight_MoveBGExecute__FP14daObjSwLight_c               */
+/* 80CF8030-80CF8050 0020+00 s=1 e=0 z=0  None .text      daObjSwLight_MoveBGExecute__FP14daObjSwLight_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSwLight_MoveBGExecute(daObjSwLight_c* param_0) {
+asm static void daObjSwLight_MoveBGExecute(daObjSwLight_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swLight/d_a_obj_swLight/daObjSwLight_MoveBGExecute__FP14daObjSwLight_c.s"
 }
 #pragma pop
 
 
-/* 80CF8050-80CF807C 002C+00 s=0 e=0 z=0  None .text      daObjSwLight_MoveBGDraw__FP14daObjSwLight_c                  */
+/* 80CF8050-80CF807C 002C+00 s=1 e=0 z=0  None .text      daObjSwLight_MoveBGDraw__FP14daObjSwLight_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSwLight_MoveBGDraw(daObjSwLight_c* param_0) {
+asm static void daObjSwLight_MoveBGDraw(daObjSwLight_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swLight/d_a_obj_swLight/daObjSwLight_MoveBGDraw__FP14daObjSwLight_c.s"
 }
 #pragma pop
 
 
-/* 80CF807C-80CF80C4 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80CF807C-80CF80C4 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -870,7 +877,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80CF80C4-80CF810C 0048+00 s=0 e=0 z=0  None .text      __dt__17dEvLib_callback_cFv                                  */
+/* 80CF80C4-80CF810C 0048+00 s=1 e=0 z=0  None .text      __dt__17dEvLib_callback_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -881,25 +888,25 @@ asm dEvLib_callback_c::~dEvLib_callback_c() {
 #pragma pop
 
 
-/* 80CF810C-80CF8114 0008+00 s=0 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
+/* 80CF810C-80CF8114 0008+00 s=2 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
 bool dEvLib_callback_c::eventStart() {
 	return true;
 }
 
 
-/* 80CF8114-80CF811C 0008+00 s=0 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
+/* 80CF8114-80CF811C 0008+00 s=2 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
 bool dEvLib_callback_c::eventRun() {
 	return true;
 }
 
 
-/* 80CF811C-80CF8124 0008+00 s=0 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
+/* 80CF811C-80CF8124 0008+00 s=2 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
 bool dEvLib_callback_c::eventEnd() {
 	return true;
 }
 
 
-/* 80CF8124-80CF8358 0234+00 s=1 e=0 z=0  None .text      __dt__14daObjSwLight_cFv                                     */
+/* 80CF8124-80CF8358 0234+00 s=2 e=0 z=0  None .text      __dt__14daObjSwLight_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -932,11 +939,11 @@ asm static void cLib_calcTimer__template1(u8* param_0) {
 #pragma pop
 
 
-/* 80CF8390-80CF8398 0008+00 s=0 e=0 z=0  None .text      @1440@__dt__14daObjSwLight_cFv                               */
+/* 80CF8390-80CF8398 0008+00 s=1 e=0 z=0  None .text      @1440@__dt__14daObjSwLight_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80CF8390() {
+extern "C" asm static void func_80CF8390() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swLight/d_a_obj_swLight/func_80CF8390.s"
 }

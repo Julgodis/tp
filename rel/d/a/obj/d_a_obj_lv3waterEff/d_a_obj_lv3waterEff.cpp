@@ -30,10 +30,10 @@ struct fopAc_ac_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -43,10 +43,10 @@ struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -57,9 +57,9 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daObjWaterEff_Execute(daObjWaterEff_c*); // 2
-void daObjWaterEff_Delete(daObjWaterEff_c*); // 2
-void daObjWaterEff_Create(fopAc_ac_c*); // 2
+static void daObjWaterEff_Execute(daObjWaterEff_c*); // 2
+static void daObjWaterEff_Delete(daObjWaterEff_c*); // 2
+static void daObjWaterEff_Create(fopAc_ac_c*); // 2
 
 extern "C" void Create__15daObjWaterEff_cFv(); // 1
 extern "C" void create__15daObjWaterEff_cFv(); // 1
@@ -67,10 +67,9 @@ extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
 extern "C" void execute__15daObjWaterEff_cFv(); // 1
 extern "C" void _delete__15daObjWaterEff_cFv(); // 1
-extern "C" void daObjWaterEff_Execute__FP15daObjWaterEff_c(); // 1
-extern "C" void daObjWaterEff_Delete__FP15daObjWaterEff_c(); // 1
-extern "C" void daObjWaterEff_Create__FP10fopAc_ac_c(); // 1
-extern "C" extern void* l_daObjWaterEff_Method[8];
+extern "C" static void daObjWaterEff_Execute__FP15daObjWaterEff_c(); // 1
+extern "C" static void daObjWaterEff_Delete__FP15daObjWaterEff_c(); // 1
+extern "C" static void daObjWaterEff_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern void* g_profile_Obj_WaterEff[12];
 
 // 
@@ -88,6 +87,8 @@ extern "C" void __dl__FPv(); // 1
 extern "C" void __construct_array(); // 1
 extern "C" void _savegpr_25(); // 1
 extern "C" void _restgpr_25(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
@@ -187,33 +188,33 @@ asm void daObjWaterEff_c::_delete() {
 #pragma pop
 
 
-/* 80C5C810-80C5C830 0020+00 s=0 e=0 z=0  None .text      daObjWaterEff_Execute__FP15daObjWaterEff_c                   */
+/* 80C5C810-80C5C830 0020+00 s=1 e=0 z=0  None .text      daObjWaterEff_Execute__FP15daObjWaterEff_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjWaterEff_Execute(daObjWaterEff_c* param_0) {
+asm static void daObjWaterEff_Execute(daObjWaterEff_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3waterEff/d_a_obj_lv3waterEff/daObjWaterEff_Execute__FP15daObjWaterEff_c.s"
 }
 #pragma pop
 
 
-/* 80C5C830-80C5C850 0020+00 s=0 e=0 z=0  None .text      daObjWaterEff_Delete__FP15daObjWaterEff_c                    */
+/* 80C5C830-80C5C850 0020+00 s=1 e=0 z=0  None .text      daObjWaterEff_Delete__FP15daObjWaterEff_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjWaterEff_Delete(daObjWaterEff_c* param_0) {
+asm static void daObjWaterEff_Delete(daObjWaterEff_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3waterEff/d_a_obj_lv3waterEff/daObjWaterEff_Delete__FP15daObjWaterEff_c.s"
 }
 #pragma pop
 
 
-/* 80C5C850-80C5C870 0020+00 s=0 e=0 z=0  None .text      daObjWaterEff_Create__FP10fopAc_ac_c                         */
+/* 80C5C850-80C5C870 0020+00 s=1 e=0 z=0  None .text      daObjWaterEff_Create__FP10fopAc_ac_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjWaterEff_Create(fopAc_ac_c* param_0) {
+asm static void daObjWaterEff_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3waterEff/d_a_obj_lv3waterEff/daObjWaterEff_Create__FP10fopAc_ac_c.s"
 }
@@ -221,11 +222,11 @@ asm void daObjWaterEff_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80C5C8A0-80C5C8C0 0020+00 s=0 e=0 z=0  None .data      l_daObjWaterEff_Method                                       */
-SECTION_DATA void* l_daObjWaterEff_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80C5C8A0-80C5C8C0 0020+00 s=1 e=0 z=0  None .data      l_daObjWaterEff_Method                                       */
+SECTION_DATA static void* l_daObjWaterEff_Method[8] = {
+	(void*)daObjWaterEff_Create__FP10fopAc_ac_c,
+	(void*)daObjWaterEff_Delete__FP15daObjWaterEff_c,
+	(void*)daObjWaterEff_Execute__FP15daObjWaterEff_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
@@ -233,18 +234,18 @@ SECTION_DATA void* l_daObjWaterEff_Method[8] = {
 	(void*)NULL,
 };
 
-/* 80C5C8C0-80C5C8F0 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_WaterEff                                       */
+/* 80C5C8C0-80C5C8F0 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_WaterEff                                       */
 SECTION_DATA void* g_profile_Obj_WaterEff[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x017F0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000594,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x022B0000,
-	(void*)NULL,
+	(void*)&l_daObjWaterEff_Method,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };

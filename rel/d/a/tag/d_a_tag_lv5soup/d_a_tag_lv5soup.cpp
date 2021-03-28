@@ -41,24 +41,23 @@ struct cXyz {
 // Forward References:
 // 
 
-void daTag_Lv5Soup_Create(void*); // 2
-void daTag_Lv5Soup_Delete(void*); // 2
-void daTag_Lv5Soup_Execute(void*); // 2
-void daTag_Lv5Soup_Draw(void*); // 2
-bool daTag_Lv5Soup_IsDelete(void*); // 2
+static void daTag_Lv5Soup_Create(void*); // 2
+static void daTag_Lv5Soup_Delete(void*); // 2
+static void daTag_Lv5Soup_Execute(void*); // 2
+static void daTag_Lv5Soup_Draw(void*); // 2
+static bool daTag_Lv5Soup_IsDelete(void*); // 2
 
 extern "C" void create__15daTag_Lv5Soup_cFv(); // 1
 extern "C" bool Delete__15daTag_Lv5Soup_cFv(); // 1
 extern "C" void Execute__15daTag_Lv5Soup_cFv(); // 1
 extern "C" bool Draw__15daTag_Lv5Soup_cFv(); // 1
 extern "C" void isAreaCheck__15daTag_Lv5Soup_cFv(); // 1
-extern "C" void daTag_Lv5Soup_Create__FPv(); // 1
-extern "C" void daTag_Lv5Soup_Delete__FPv(); // 1
-extern "C" void daTag_Lv5Soup_Execute__FPv(); // 1
-extern "C" void daTag_Lv5Soup_Draw__FPv(); // 1
-extern "C" bool daTag_Lv5Soup_IsDelete__FPv(); // 1
+extern "C" static void daTag_Lv5Soup_Create__FPv(); // 1
+extern "C" static void daTag_Lv5Soup_Delete__FPv(); // 1
+extern "C" static void daTag_Lv5Soup_Execute__FPv(); // 1
+extern "C" static void daTag_Lv5Soup_Draw__FPv(); // 1
+extern "C" static bool daTag_Lv5Soup_IsDelete__FPv(); // 1
 extern "C" void __dt__15daTag_Lv5Soup_cFv(); // 1
-extern "C" extern void* daTag_Lv5Soup_MethodTable[8];
 extern "C" extern void* g_profile_TAG_LV5SOUP[12];
 
 // 
@@ -76,6 +75,8 @@ extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
 extern "C" void __mi__4cXyzCFRC3Vec(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void PSVECSquareMag(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 __float_nan;
 
@@ -96,30 +97,30 @@ SECTION_RODATA static u32 const lit_3657 = 0x41F00000;
 /* 80D5B168-80D5B16C 0004+00 s=1 e=0 z=0  None .rodata    @3658                                                        */
 SECTION_RODATA static u32 const lit_3658 = 0x42340000;
 
-/* 80D5B18C-80D5B1AC 0020+00 s=0 e=0 z=0  None .data      daTag_Lv5Soup_MethodTable                                    */
-SECTION_DATA void* daTag_Lv5Soup_MethodTable[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80D5B18C-80D5B1AC 0020+00 s=1 e=0 z=0  None .data      daTag_Lv5Soup_MethodTable                                    */
+SECTION_DATA static void* daTag_Lv5Soup_MethodTable[8] = {
+	(void*)daTag_Lv5Soup_Create__FPv,
+	(void*)daTag_Lv5Soup_Delete__FPv,
+	(void*)daTag_Lv5Soup_Execute__FPv,
+	(void*)daTag_Lv5Soup_IsDelete__FPv,
+	(void*)daTag_Lv5Soup_Draw__FPv,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D5B1AC-80D5B1DC 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_LV5SOUP                                        */
+/* 80D5B1AC-80D5B1DC 0030+00 s=0 e=0 z=1  None .data      g_profile_TAG_LV5SOUP                                        */
 SECTION_DATA void* g_profile_TAG_LV5SOUP[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01220000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x0000056C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00460000,
-	(void*)NULL,
+	(void*)&daTag_Lv5Soup_MethodTable,
 	(void*)0x00064100,
 	(void*)0x050E0000,
 };
@@ -128,7 +129,7 @@ SECTION_DATA void* g_profile_TAG_LV5SOUP[12] = {
 SECTION_DATA static void* __vt__15daTag_Lv5Soup_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__15daTag_Lv5Soup_cFv,
 };
 
 /* 80D5AD58-80D5ADEC 0094+00 s=1 e=0 z=0  None .text      create__15daTag_Lv5Soup_cFv                                  */
@@ -200,57 +201,57 @@ asm void daTag_Lv5Soup_c::isAreaCheck() {
 #pragma pop
 
 
-/* 80D5B06C-80D5B08C 0020+00 s=0 e=0 z=0  None .text      daTag_Lv5Soup_Create__FPv                                    */
+/* 80D5B06C-80D5B08C 0020+00 s=1 e=0 z=0  None .text      daTag_Lv5Soup_Create__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_Lv5Soup_Create(void* param_0) {
+asm static void daTag_Lv5Soup_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv5soup/d_a_tag_lv5soup/daTag_Lv5Soup_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 80D5B08C-80D5B0AC 0020+00 s=0 e=0 z=0  None .text      daTag_Lv5Soup_Delete__FPv                                    */
+/* 80D5B08C-80D5B0AC 0020+00 s=1 e=0 z=0  None .text      daTag_Lv5Soup_Delete__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_Lv5Soup_Delete(void* param_0) {
+asm static void daTag_Lv5Soup_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv5soup/d_a_tag_lv5soup/daTag_Lv5Soup_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 80D5B0AC-80D5B0CC 0020+00 s=0 e=0 z=0  None .text      daTag_Lv5Soup_Execute__FPv                                   */
+/* 80D5B0AC-80D5B0CC 0020+00 s=1 e=0 z=0  None .text      daTag_Lv5Soup_Execute__FPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_Lv5Soup_Execute(void* param_0) {
+asm static void daTag_Lv5Soup_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv5soup/d_a_tag_lv5soup/daTag_Lv5Soup_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 80D5B0CC-80D5B0EC 0020+00 s=0 e=0 z=0  None .text      daTag_Lv5Soup_Draw__FPv                                      */
+/* 80D5B0CC-80D5B0EC 0020+00 s=1 e=0 z=0  None .text      daTag_Lv5Soup_Draw__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_Lv5Soup_Draw(void* param_0) {
+asm static void daTag_Lv5Soup_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv5soup/d_a_tag_lv5soup/daTag_Lv5Soup_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 80D5B0EC-80D5B0F4 0008+00 s=0 e=0 z=0  None .text      daTag_Lv5Soup_IsDelete__FPv                                  */
-bool daTag_Lv5Soup_IsDelete(void* param_0) {
+/* 80D5B0EC-80D5B0F4 0008+00 s=1 e=0 z=0  None .text      daTag_Lv5Soup_IsDelete__FPv                                  */
+static bool daTag_Lv5Soup_IsDelete(void* param_0) {
 	return true;
 }
 
 
-/* 80D5B0F4-80D5B154 0060+00 s=0 e=0 z=0  None .text      __dt__15daTag_Lv5Soup_cFv                                    */
+/* 80D5B0F4-80D5B154 0060+00 s=1 e=0 z=0  None .text      __dt__15daTag_Lv5Soup_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

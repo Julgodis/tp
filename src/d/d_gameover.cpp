@@ -139,7 +139,7 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-struct ResTLUT {
+struct ResTIMG {
 };
 
 struct JGeometry {
@@ -151,7 +151,7 @@ struct JGeometry {
 
 };
 
-struct ResTIMG {
+struct ResTLUT {
 };
 
 struct J2DPicture {
@@ -529,7 +529,7 @@ SECTION_DATA static void* l_dGameover_Method[5] = {
 	(void*)dGameover_Draw__FP11dGameover_c,
 };
 
-/* 803BBD40-803BBD68 0028+00 s=0 e=0 z=0  None .data      g_profile_GAMEOVER                                           */
+/* 803BBD40-803BBD68 0028+00 s=0 e=0 z=1  None .data      g_profile_GAMEOVER                                           */
 SECTION_DATA void* g_profile_GAMEOVER[10] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000CFFFD,

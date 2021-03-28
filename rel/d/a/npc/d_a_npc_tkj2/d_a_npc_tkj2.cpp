@@ -90,19 +90,19 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
-};
-
-struct Z2Creature {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
+struct J3DModelData {
+};
+
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DAnmTransform {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfSO {
@@ -239,7 +239,7 @@ struct Z2CreatureEnemy {
 
 static void anm_init(npc_tkj2_class*, int, f32, u8, f32); // 2
 static void nodeCallBack(J3DJoint*, int); // 2
-void daNpc_Tkj2_Draw(npc_tkj2_class*); // 2
+static void daNpc_Tkj2_Draw(npc_tkj2_class*); // 2
 static void npc_tkj2_carry_check(npc_tkj2_class*); // 2
 static void mode_init_boomCarry(npc_tkj2_class*); // 2
 static void Wind_effect(npc_tkj2_class*); // 2
@@ -256,15 +256,15 @@ static void npc_tkj2_return(npc_tkj2_class*); // 2
 static void ObjHit(npc_tkj2_class*); // 2
 static void action(npc_tkj2_class*); // 2
 static void daNpc_Tkj2_Execute(npc_tkj2_class*); // 2
-bool daNpc_Tkj2_IsDelete(npc_tkj2_class*); // 2
-void daNpc_Tkj2_Delete(npc_tkj2_class*); // 2
+static bool daNpc_Tkj2_IsDelete(npc_tkj2_class*); // 2
+static void daNpc_Tkj2_Delete(npc_tkj2_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daNpc_Tkj2_Create(fopAc_ac_c*); // 2
+static void daNpc_Tkj2_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__16daNpc_Tkj2_HIO_cFv(); // 1
 extern "C" static void anm_init__FP14npc_tkj2_classifUcf(); // 1
 extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" void daNpc_Tkj2_Draw__FP14npc_tkj2_class(); // 1
+extern "C" static void daNpc_Tkj2_Draw__FP14npc_tkj2_class(); // 1
 extern "C" static void npc_tkj2_carry_check__FP14npc_tkj2_class(); // 1
 extern "C" static void mode_init_boomCarry__FP14npc_tkj2_class(); // 1
 extern "C" static void Wind_effect__FP14npc_tkj2_class(); // 1
@@ -283,21 +283,21 @@ extern "C" static void npc_tkj2_return__FP14npc_tkj2_class(); // 1
 extern "C" static void ObjHit__FP14npc_tkj2_class(); // 1
 extern "C" static void action__FP14npc_tkj2_class(); // 1
 extern "C" static void daNpc_Tkj2_Execute__FP14npc_tkj2_class(); // 1
-extern "C" bool daNpc_Tkj2_IsDelete__FP14npc_tkj2_class(); // 1
-extern "C" void daNpc_Tkj2_Delete__FP14npc_tkj2_class(); // 1
+extern "C" static bool daNpc_Tkj2_IsDelete__FP14npc_tkj2_class(); // 1
+extern "C" static void daNpc_Tkj2_Delete__FP14npc_tkj2_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void daNpc_Tkj2_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daNpc_Tkj2_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__16daNpc_Tkj2_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_npc_tkj2_cpp(); // 1
-extern "C" void func_80B142A0(); // 1
-extern "C" void func_80B142A8(); // 1
-extern "C" void func_80B142B0(); // 1
-extern "C" void func_80B142B8(); // 1
-extern "C" void func_80B142C0(); // 1
+extern "C" static void func_80B142A0(); // 1
+extern "C" static void func_80B142A8(); // 1
+extern "C" static void func_80B142B0(); // 1
+extern "C" static void func_80B142B8(); // 1
+extern "C" static void func_80B142C0(); // 1
 extern "C" extern u32 const lit_4756;
 extern "C" extern u32 const lit_4757;
 extern "C" extern u32 const lit_4758;
@@ -305,7 +305,6 @@ extern "C" extern u32 const lit_4759;
 extern "C" extern u32 const lit_4760;
 extern "C" extern u8 const lit_4763[8];
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daNpc_Tkj2_Method[8];
 extern "C" extern void* g_profile_NPC_TKJ2[12];
 
 // 
@@ -433,6 +432,8 @@ extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -461,13 +462,13 @@ SECTION_RODATA static u32 const lit_3649 = 0x40000000;
 
 /* 80B143B8-80B143D4 001C+00 s=1 e=0 z=0  None .data      @4761                                                        */
 SECTION_DATA static void* lit_4761[7] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)action__FP14npc_tkj2_class)+0xC8),
+	(void*)(((char*)action__FP14npc_tkj2_class)+0x128),
+	(void*)(((char*)action__FP14npc_tkj2_class)+0x138),
+	(void*)(((char*)action__FP14npc_tkj2_class)+0x144),
+	(void*)(((char*)action__FP14npc_tkj2_class)+0x284),
+	(void*)(((char*)action__FP14npc_tkj2_class)+0x28C),
+	(void*)(((char*)action__FP14npc_tkj2_class)+0x210),
 };
 
 /* 80B143D4-80B14414 0040+00 s=1 e=0 z=0  None .data      cc_sph_src$4995                                              */
@@ -478,30 +479,30 @@ SECTION_DATA static u8 data_80B143D4[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x41, 0xA0, 0x00, 0x00,
 };
 
-/* 80B14414-80B14434 0020+00 s=0 e=0 z=0  None .data      l_daNpc_Tkj2_Method                                          */
-SECTION_DATA void* l_daNpc_Tkj2_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80B14414-80B14434 0020+00 s=1 e=0 z=0  None .data      l_daNpc_Tkj2_Method                                          */
+SECTION_DATA static void* l_daNpc_Tkj2_Method[8] = {
+	(void*)daNpc_Tkj2_Create__FP10fopAc_ac_c,
+	(void*)daNpc_Tkj2_Delete__FP14npc_tkj2_class,
+	(void*)daNpc_Tkj2_Execute__FP14npc_tkj2_class,
+	(void*)daNpc_Tkj2_IsDelete__FP14npc_tkj2_class,
+	(void*)daNpc_Tkj2_Draw__FP14npc_tkj2_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80B14434-80B14464 0030+00 s=0 e=0 z=0  None .data      g_profile_NPC_TKJ2                                           */
+/* 80B14434-80B14464 0030+00 s=0 e=0 z=1  None .data      g_profile_NPC_TKJ2                                           */
 SECTION_DATA void* g_profile_NPC_TKJ2[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01090000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000AA0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02B80000,
-	(void*)NULL,
+	(void*)&l_daNpc_Tkj2_Method,
 	(void*)0x000C4000,
 	(void*)NULL,
 };
@@ -510,64 +511,64 @@ SECTION_DATA void* g_profile_NPC_TKJ2[12] = {
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80B14470-80B1447C 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80B1447C-80B144A0 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80B142C0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80B142B8,
 };
 
 /* 80B144A0-80B144AC 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 80B144AC-80B144DC 0030+00 s=2 e=0 z=0  None .data      __vt__14dBgS_ObjGndChk                                       */
 SECTION_DATA static void* __vt__14dBgS_ObjGndChk[12] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__14dBgS_ObjGndChkFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80B142A0,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80B142B0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80B142A8,
 };
 
 /* 80B144DC-80B144E8 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGPla                                              */
 SECTION_DATA static void* __vt__8cM3dGPla[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGPlaFv,
 };
 
 /* 80B144E8-80B144F4 000C+00 s=2 e=0 z=0  None .data      __vt__16daNpc_Tkj2_HIO_c                                     */
 SECTION_DATA static void* __vt__16daNpc_Tkj2_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__16daNpc_Tkj2_HIO_cFv,
 };
 
 /* 80B10DEC-80B10E20 0034+00 s=1 e=0 z=0  None .text      __ct__16daNpc_Tkj2_HIO_cFv                                   */
@@ -760,11 +761,11 @@ asm static void nodeCallBack(J3DJoint* param_0, int param_1) {
 #pragma pop
 
 
-/* 80B1101C-80B11130 0114+00 s=0 e=0 z=0  None .text      daNpc_Tkj2_Draw__FP14npc_tkj2_class                          */
+/* 80B1101C-80B11130 0114+00 s=1 e=0 z=0  None .text      daNpc_Tkj2_Draw__FP14npc_tkj2_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpc_Tkj2_Draw(npc_tkj2_class* param_0) {
+asm static void daNpc_Tkj2_Draw(npc_tkj2_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/daNpc_Tkj2_Draw__FP14npc_tkj2_class.s"
 }
@@ -815,7 +816,7 @@ asm static void CheckRoof(npc_tkj2_class* param_0) {
 #pragma pop
 
 
-/* 80B1169C-80B116E4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 80B1169C-80B116E4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -848,7 +849,7 @@ asm static void GndCheck2(npc_tkj2_class* param_0) {
 #pragma pop
 
 
-/* 80B11BD0-80B11C48 0078+00 s=3 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
+/* 80B11BD0-80B11C48 0078+00 s=4 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -957,7 +958,7 @@ asm static void ObjHit(npc_tkj2_class* param_0) {
 #pragma pop
 
 
-/* 80B12E88-80B1376C 08E4+00 s=1 e=0 z=0  None .text      action__FP14npc_tkj2_class                                   */
+/* 80B12E88-80B1376C 08E4+00 s=2 e=0 z=0  None .text      action__FP14npc_tkj2_class                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -968,7 +969,7 @@ asm static void action(npc_tkj2_class* param_0) {
 #pragma pop
 
 
-/* 80B1376C-80B13B38 03CC+00 s=1 e=0 z=0  None .text      daNpc_Tkj2_Execute__FP14npc_tkj2_class                       */
+/* 80B1376C-80B13B38 03CC+00 s=2 e=0 z=0  None .text      daNpc_Tkj2_Execute__FP14npc_tkj2_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -979,17 +980,17 @@ asm static void daNpc_Tkj2_Execute(npc_tkj2_class* param_0) {
 #pragma pop
 
 
-/* 80B13B38-80B13B40 0008+00 s=0 e=0 z=0  None .text      daNpc_Tkj2_IsDelete__FP14npc_tkj2_class                      */
-bool daNpc_Tkj2_IsDelete(npc_tkj2_class* param_0) {
+/* 80B13B38-80B13B40 0008+00 s=1 e=0 z=0  None .text      daNpc_Tkj2_IsDelete__FP14npc_tkj2_class                      */
+static bool daNpc_Tkj2_IsDelete(npc_tkj2_class* param_0) {
 	return true;
 }
 
 
-/* 80B13B40-80B13BA8 0068+00 s=0 e=0 z=0  None .text      daNpc_Tkj2_Delete__FP14npc_tkj2_class                        */
+/* 80B13B40-80B13BA8 0068+00 s=1 e=0 z=0  None .text      daNpc_Tkj2_Delete__FP14npc_tkj2_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpc_Tkj2_Delete(npc_tkj2_class* param_0) {
+asm static void daNpc_Tkj2_Delete(npc_tkj2_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/daNpc_Tkj2_Delete__FP14npc_tkj2_class.s"
 }
@@ -1007,7 +1008,7 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80B13E20-80B13E68 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80B13E20-80B13E68 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1018,18 +1019,18 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80B13E68-80B1411C 02B4+00 s=0 e=0 z=0  None .text      daNpc_Tkj2_Create__FP10fopAc_ac_c                            */
+/* 80B13E68-80B1411C 02B4+00 s=1 e=0 z=0  None .text      daNpc_Tkj2_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpc_Tkj2_Create(fopAc_ac_c* param_0) {
+asm static void daNpc_Tkj2_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/daNpc_Tkj2_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80B1411C-80B14164 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80B1411C-80B14164 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1040,7 +1041,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80B14164-80B141AC 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80B14164-80B141AC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1051,7 +1052,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80B141AC-80B1421C 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80B141AC-80B1421C 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1062,7 +1063,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80B1421C-80B14264 0048+00 s=1 e=0 z=0  None .text      __dt__16daNpc_Tkj2_HIO_cFv                                   */
+/* 80B1421C-80B14264 0048+00 s=2 e=0 z=0  None .text      __dt__16daNpc_Tkj2_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1073,7 +1074,7 @@ asm daNpc_Tkj2_HIO_c::~daNpc_Tkj2_HIO_c() {
 #pragma pop
 
 
-/* 80B14264-80B142A0 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_npc_tkj2_cpp                                     */
+/* 80B14264-80B142A0 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_npc_tkj2_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1084,55 +1085,55 @@ extern "C" asm void __sinit_d_a_npc_tkj2_cpp() {
 #pragma pop
 
 
-/* 80B142A0-80B142A8 0008+00 s=0 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80B142A0-80B142A8 0008+00 s=1 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80B142A0() {
+extern "C" asm static void func_80B142A0() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/func_80B142A0.s"
 }
 #pragma pop
 
 
-/* 80B142A8-80B142B0 0008+00 s=0 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80B142A8-80B142B0 0008+00 s=1 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80B142A8() {
+extern "C" asm static void func_80B142A8() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/func_80B142A8.s"
 }
 #pragma pop
 
 
-/* 80B142B0-80B142B8 0008+00 s=0 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80B142B0-80B142B8 0008+00 s=1 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80B142B0() {
+extern "C" asm static void func_80B142B0() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/func_80B142B0.s"
 }
 #pragma pop
 
 
-/* 80B142B8-80B142C0 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80B142B8-80B142C0 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80B142B8() {
+extern "C" asm static void func_80B142B8() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/func_80B142B8.s"
 }
 #pragma pop
 
 
-/* 80B142C0-80B142C8 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80B142C0-80B142C8 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80B142C0() {
+extern "C" asm static void func_80B142C0() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/func_80B142C0.s"
 }

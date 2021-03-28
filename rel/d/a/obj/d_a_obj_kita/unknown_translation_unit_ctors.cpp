@@ -19,6 +19,7 @@ extern void* const data_80C45F08[2];
 // 
 
 
+extern "C" void __sinit_d_a_obj_kita_cpp(); // 1
 
 // 
 // Declarations:

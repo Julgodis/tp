@@ -243,10 +243,10 @@ struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -1146,7 +1146,7 @@ SECTION_DATA static void* l_dMeter2_Method[5] = {
 	(void*)dMeter2_Draw__FP9dMeter2_c,
 };
 
-/* 803BFA68-803BFA90 0028+00 s=0 e=0 z=0  None .data      g_profile_METER2                                             */
+/* 803BFA68-803BFA90 0028+00 s=0 e=0 z=1  None .data      g_profile_METER2                                             */
 SECTION_DATA void* g_profile_METER2[10] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000CFFFD,

@@ -96,6 +96,9 @@ struct dBgS_Acch {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -117,10 +120,10 @@ struct dScnKy_env_light_c {
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -133,11 +136,11 @@ struct Z2SeMgr {
 // 
 
 static void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
-void daObjDust_Draw(daObjDust_c*); // 2
-void daObjDust_Execute(daObjDust_c*); // 2
-bool daObjDust_IsDelete(daObjDust_c*); // 2
-void daObjDust_Delete(daObjDust_c*); // 2
-void daObjDust_Create(fopAc_ac_c*); // 2
+static void daObjDust_Draw(daObjDust_c*); // 2
+static void daObjDust_Execute(daObjDust_c*); // 2
+static bool daObjDust_IsDelete(daObjDust_c*); // 2
+static void daObjDust_Delete(daObjDust_c*); // 2
+static void daObjDust_Create(fopAc_ac_c*); // 2
 
 extern "C" void Search_Ymb__11daObjDust_cFv(); // 1
 extern "C" void RideOn_Angle__11daObjDust_cFRsfsf(); // 1
@@ -145,11 +148,11 @@ extern "C" void Check_RideOn__11daObjDust_cFv(); // 1
 extern "C" void initBaseMtx__11daObjDust_cFv(); // 1
 extern "C" void setBaseMtx__11daObjDust_cFv(); // 1
 extern "C" static void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c(); // 1
-extern "C" void daObjDust_Draw__FP11daObjDust_c(); // 1
-extern "C" void daObjDust_Execute__FP11daObjDust_c(); // 1
-extern "C" bool daObjDust_IsDelete__FP11daObjDust_c(); // 1
-extern "C" void daObjDust_Delete__FP11daObjDust_c(); // 1
-extern "C" void daObjDust_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjDust_Draw__FP11daObjDust_c(); // 1
+extern "C" static void daObjDust_Execute__FP11daObjDust_c(); // 1
+extern "C" static bool daObjDust_IsDelete__FP11daObjDust_c(); // 1
+extern "C" static void daObjDust_Delete__FP11daObjDust_c(); // 1
+extern "C" static void daObjDust_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void CreateHeap__11daObjDust_cFv(); // 1
 extern "C" void Create__11daObjDust_cFv(); // 1
@@ -157,10 +160,9 @@ extern "C" void Execute__11daObjDust_cFPPA3_A4_f(); // 1
 extern "C" void Draw__11daObjDust_cFv(); // 1
 extern "C" void Delete__11daObjDust_cFv(); // 1
 extern "C" void func_80BE2F74(); // 1
-extern "C" void func_80BE2F80(); // 1
-extern "C" void func_80BE2F88(); // 1
+extern "C" static void func_80BE2F80(); // 1
+extern "C" static void func_80BE2F88(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObjDust_Method[8];
 extern "C" extern void* g_profile_Obj_DUST[12];
 
 // 
@@ -204,6 +206,9 @@ extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -223,6 +228,8 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__9cCcD_Stts[8];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
@@ -375,39 +382,39 @@ asm static void rideCallBack(dBgW* param_0, fopAc_ac_c* param_1, fopAc_ac_c* par
 #pragma pop
 
 
-/* 80BE27BC-80BE27E8 002C+00 s=0 e=0 z=0  None .text      daObjDust_Draw__FP11daObjDust_c                              */
+/* 80BE27BC-80BE27E8 002C+00 s=1 e=0 z=0  None .text      daObjDust_Draw__FP11daObjDust_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjDust_Draw(daObjDust_c* param_0) {
+asm static void daObjDust_Draw(daObjDust_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dust/d_a_obj_dust/daObjDust_Draw__FP11daObjDust_c.s"
 }
 #pragma pop
 
 
-/* 80BE27E8-80BE2808 0020+00 s=0 e=0 z=0  None .text      daObjDust_Execute__FP11daObjDust_c                           */
+/* 80BE27E8-80BE2808 0020+00 s=1 e=0 z=0  None .text      daObjDust_Execute__FP11daObjDust_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjDust_Execute(daObjDust_c* param_0) {
+asm static void daObjDust_Execute(daObjDust_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dust/d_a_obj_dust/daObjDust_Execute__FP11daObjDust_c.s"
 }
 #pragma pop
 
 
-/* 80BE2808-80BE2810 0008+00 s=0 e=0 z=0  None .text      daObjDust_IsDelete__FP11daObjDust_c                          */
-bool daObjDust_IsDelete(daObjDust_c* param_0) {
+/* 80BE2808-80BE2810 0008+00 s=1 e=0 z=0  None .text      daObjDust_IsDelete__FP11daObjDust_c                          */
+static bool daObjDust_IsDelete(daObjDust_c* param_0) {
 	return true;
 }
 
 
-/* 80BE2810-80BE2834 0024+00 s=0 e=0 z=0  None .text      daObjDust_Delete__FP11daObjDust_c                            */
+/* 80BE2810-80BE2834 0024+00 s=1 e=0 z=0  None .text      daObjDust_Delete__FP11daObjDust_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjDust_Delete(daObjDust_c* param_0) {
+asm static void daObjDust_Delete(daObjDust_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dust/d_a_obj_dust/daObjDust_Delete__FP11daObjDust_c.s"
 }
@@ -454,7 +461,7 @@ SECTION_RODATA static u32 const lit_3969 = 0x41700000;
 /* 80BE301C-80BE3020 0004+00 s=1 e=0 z=0  None .rodata    @3970                                                        */
 SECTION_RODATA static u32 const lit_3970 = 0x3C23D70A;
 
-/* 80BE3020-80BE3051 0031+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80BE3020-80BE3051 0031+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -464,32 +471,32 @@ SECTION_DEAD char const* const stringBase_80BE303C = "M_FloatingDust01.bmd";
 #pragma pop
 
 /* 80BE3054-80BE3058 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
 
-/* 80BE3058-80BE3078 0020+00 s=0 e=0 z=0  None .data      l_daObjDust_Method                                           */
-SECTION_DATA void* l_daObjDust_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80BE3058-80BE3078 0020+00 s=1 e=0 z=0  None .data      l_daObjDust_Method                                           */
+SECTION_DATA static void* l_daObjDust_Method[8] = {
+	(void*)daObjDust_Create__FP10fopAc_ac_c,
+	(void*)daObjDust_Delete__FP11daObjDust_c,
+	(void*)daObjDust_Execute__FP11daObjDust_c,
+	(void*)daObjDust_IsDelete__FP11daObjDust_c,
+	(void*)daObjDust_Draw__FP11daObjDust_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80BE3078-80BE30A8 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_DUST                                           */
+/* 80BE3078-80BE30A8 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_DUST                                           */
 SECTION_DATA void* g_profile_Obj_DUST[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00760000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x0000084C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01D90000,
-	(void*)NULL,
+	(void*)&l_daObjDust_Method,
 	(void*)0x00040180,
 	(void*)0x000E0000,
 };
@@ -498,41 +505,41 @@ SECTION_DATA void* g_profile_Obj_DUST[12] = {
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80BE2F88,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80BE2F80,
 };
 
 /* 80BE30CC-80BE30F4 0028+00 s=1 e=0 z=0  None .data      __vt__11daObjDust_c                                          */
 SECTION_DATA static void* __vt__11daObjDust_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__11daObjDust_cFv,
+	(void*)Create__11daObjDust_cFv,
+	(void*)Execute__11daObjDust_cFPPA3_A4_f,
+	(void*)Draw__11daObjDust_cFv,
+	(void*)Delete__11daObjDust_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
-/* 80BE2834-80BE2A00 01CC+00 s=0 e=0 z=0  None .text      daObjDust_Create__FP10fopAc_ac_c                             */
+/* 80BE2834-80BE2A00 01CC+00 s=1 e=0 z=0  None .text      daObjDust_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjDust_Create(fopAc_ac_c* param_0) {
+asm static void daObjDust_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dust/d_a_obj_dust/daObjDust_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80BE2A00-80BE2A70 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80BE2A00-80BE2A70 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -543,7 +550,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80BE2A70-80BE2AE8 0078+00 s=0 e=0 z=0  None .text      CreateHeap__11daObjDust_cFv                                  */
+/* 80BE2A70-80BE2AE8 0078+00 s=1 e=0 z=0  None .text      CreateHeap__11daObjDust_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -554,7 +561,7 @@ asm void daObjDust_c::CreateHeap() {
 #pragma pop
 
 
-/* 80BE2AE8-80BE2B30 0048+00 s=0 e=0 z=0  None .text      Create__11daObjDust_cFv                                      */
+/* 80BE2AE8-80BE2B30 0048+00 s=1 e=0 z=0  None .text      Create__11daObjDust_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -565,7 +572,7 @@ asm void daObjDust_c::Create() {
 #pragma pop
 
 
-/* 80BE2B30-80BE2E9C 036C+00 s=0 e=0 z=0  None .text      Execute__11daObjDust_cFPPA3_A4_f                             */
+/* 80BE2B30-80BE2E9C 036C+00 s=1 e=0 z=0  None .text      Execute__11daObjDust_cFPPA3_A4_f                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -576,7 +583,7 @@ asm void daObjDust_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80BE2E9C-80BE2F40 00A4+00 s=0 e=0 z=0  None .text      Draw__11daObjDust_cFv                                        */
+/* 80BE2E9C-80BE2F40 00A4+00 s=1 e=0 z=0  None .text      Draw__11daObjDust_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -587,7 +594,7 @@ asm void daObjDust_c::Draw() {
 #pragma pop
 
 
-/* 80BE2F40-80BE2F74 0034+00 s=0 e=0 z=0  None .text      Delete__11daObjDust_cFv                                      */
+/* 80BE2F40-80BE2F74 0034+00 s=1 e=0 z=0  None .text      Delete__11daObjDust_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -609,22 +616,22 @@ asm void JMath::TSinCosTable__template0::sinShort(s16 param_0) const {
 #pragma pop
 
 
-/* 80BE2F80-80BE2F88 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BE2F80-80BE2F88 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BE2F80() {
+extern "C" asm static void func_80BE2F80() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dust/d_a_obj_dust/func_80BE2F80.s"
 }
 #pragma pop
 
 
-/* 80BE2F88-80BE2F90 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BE2F88-80BE2F90 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BE2F88() {
+extern "C" asm static void func_80BE2F88() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dust/d_a_obj_dust/func_80BE2F88.s"
 }

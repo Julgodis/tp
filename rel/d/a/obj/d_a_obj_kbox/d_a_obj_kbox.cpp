@@ -89,10 +89,10 @@ struct dPa_modelEcallBack {
 	/* 8004AC00 */ void setModel(JPABaseEmitter*, J3DModelData*, dKy_tevstr_c const&, u8, void*, u8, u8);
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -103,17 +103,17 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
+struct cBgS_LinChk {
+};
+
+struct dBgW_Base {
+};
+
 struct Vec {
 };
 
 struct cBgS_GndChk {
 	/* 80267D0C */ void SetPos(Vec const*);
-};
-
-struct cBgS_LinChk {
-};
-
-struct dBgW_Base {
 };
 
 struct cBgS {
@@ -222,7 +222,7 @@ struct Z2SoundObjSimple {
 
 static void ride_call_back(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
 static void break_eff(obj_kbox_class*); // 2
-void daObj_Kbox_Draw(obj_kbox_class*); // 2
+static void daObj_Kbox_Draw(obj_kbox_class*); // 2
 static void kbox_ground(obj_kbox_class*); // 2
 static void kbox_carry(obj_kbox_class*); // 2
 static void water_check(obj_kbox_class*); // 2
@@ -230,16 +230,16 @@ static void kbox_drop(obj_kbox_class*); // 2
 static void kbox_float(obj_kbox_class*); // 2
 static void action(obj_kbox_class*); // 2
 static void daObj_Kbox_Execute(obj_kbox_class*); // 2
-bool daObj_Kbox_IsDelete(obj_kbox_class*); // 2
-void daObj_Kbox_Delete(obj_kbox_class*); // 2
+static bool daObj_Kbox_IsDelete(obj_kbox_class*); // 2
+static void daObj_Kbox_Delete(obj_kbox_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daObj_Kbox_Create(fopAc_ac_c*); // 2
+static void daObj_Kbox_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__16daObj_Kbox_HIO_cFv(); // 1
 extern "C" static void ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c(); // 1
 extern "C" static void break_eff__FP14obj_kbox_class(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void daObj_Kbox_Draw__FP14obj_kbox_class(); // 1
+extern "C" static void daObj_Kbox_Draw__FP14obj_kbox_class(); // 1
 extern "C" static void kbox_ground__FP14obj_kbox_class(); // 1
 extern "C" static void kbox_carry__FP14obj_kbox_class(); // 1
 extern "C" static void water_check__FP14obj_kbox_class(); // 1
@@ -248,22 +248,21 @@ extern "C" static void kbox_drop__FP14obj_kbox_class(); // 1
 extern "C" static void kbox_float__FP14obj_kbox_class(); // 1
 extern "C" static void action__FP14obj_kbox_class(); // 1
 extern "C" static void daObj_Kbox_Execute__FP14obj_kbox_class(); // 1
-extern "C" bool daObj_Kbox_IsDelete__FP14obj_kbox_class(); // 1
-extern "C" void daObj_Kbox_Delete__FP14obj_kbox_class(); // 1
+extern "C" static bool daObj_Kbox_IsDelete__FP14obj_kbox_class(); // 1
+extern "C" static void daObj_Kbox_Delete__FP14obj_kbox_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daObj_Kbox_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObj_Kbox_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__16daObj_Kbox_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_kbox_cpp(); // 1
-extern "C" void func_80C3F01C(); // 1
-extern "C" void func_80C3F024(); // 1
-extern "C" void func_80C3F02C(); // 1
-extern "C" void func_80C3F034(); // 1
-extern "C" void func_80C3F03C(); // 1
+extern "C" static void func_80C3F01C(); // 1
+extern "C" static void func_80C3F024(); // 1
+extern "C" static void func_80C3F02C(); // 1
+extern "C" static void func_80C3F034(); // 1
+extern "C" static void func_80C3F03C(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObj_Kbox_Method[8];
 extern "C" extern void* g_profile_OBJ_KBOX[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -421,6 +420,8 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -458,30 +459,30 @@ SECTION_DATA static u8 data_80C3F134[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
 };
 
-/* 80C3F174-80C3F194 0020+00 s=0 e=0 z=0  None .data      l_daObj_Kbox_Method                                          */
-SECTION_DATA void* l_daObj_Kbox_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80C3F174-80C3F194 0020+00 s=1 e=0 z=0  None .data      l_daObj_Kbox_Method                                          */
+SECTION_DATA static void* l_daObj_Kbox_Method[8] = {
+	(void*)daObj_Kbox_Create__FP10fopAc_ac_c,
+	(void*)daObj_Kbox_Delete__FP14obj_kbox_class,
+	(void*)daObj_Kbox_Execute__FP14obj_kbox_class,
+	(void*)daObj_Kbox_IsDelete__FP14obj_kbox_class,
+	(void*)daObj_Kbox_Draw__FP14obj_kbox_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C3F194-80C3F1C4 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_KBOX                                           */
+/* 80C3F194-80C3F1C4 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_KBOX                                           */
 SECTION_DATA void* g_profile_OBJ_KBOX[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0008FFFD,
 	(void*)0x02EF0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000009F0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x002B0000,
-	(void*)NULL,
+	(void*)&l_daObj_Kbox_Method,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -490,50 +491,50 @@ SECTION_DATA void* g_profile_OBJ_KBOX[12] = {
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80C3F1D0-80C3F1DC 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80C3F1DC-80C3F200 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80C3F03C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80C3F034,
 };
 
 /* 80C3F200-80C3F230 0030+00 s=2 e=0 z=0  None .data      __vt__14dBgS_ObjGndChk                                       */
 SECTION_DATA static void* __vt__14dBgS_ObjGndChk[12] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__14dBgS_ObjGndChkFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80C3F01C,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80C3F02C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80C3F024,
 };
 
 /* 80C3F230-80C3F23C 000C+00 s=2 e=0 z=0  None .data      __vt__16daObj_Kbox_HIO_c                                     */
 SECTION_DATA static void* __vt__16daObj_Kbox_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__16daObj_Kbox_HIO_cFv,
 };
 
 /* 80C3D60C-80C3D630 0024+00 s=1 e=0 z=0  None .text      __ct__16daObj_Kbox_HIO_cFv                                   */
@@ -777,11 +778,11 @@ asm cXyz::~cXyz() {
 #pragma pop
 
 
-/* 80C3D8F8-80C3DA18 0120+00 s=0 e=0 z=0  None .text      daObj_Kbox_Draw__FP14obj_kbox_class                          */
+/* 80C3D8F8-80C3DA18 0120+00 s=1 e=0 z=0  None .text      daObj_Kbox_Draw__FP14obj_kbox_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Kbox_Draw(obj_kbox_class* param_0) {
+asm static void daObj_Kbox_Draw(obj_kbox_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/daObj_Kbox_Draw__FP14obj_kbox_class.s"
 }
@@ -821,7 +822,7 @@ asm static void water_check(obj_kbox_class* param_0) {
 #pragma pop
 
 
-/* 80C3DDC4-80C3DE3C 0078+00 s=3 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
+/* 80C3DDC4-80C3DE3C 0078+00 s=4 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -872,7 +873,7 @@ asm static void action(obj_kbox_class* param_0) {
 #pragma pop
 
 
-/* 80C3E8E8-80C3EA24 013C+00 s=1 e=0 z=0  None .text      daObj_Kbox_Execute__FP14obj_kbox_class                       */
+/* 80C3E8E8-80C3EA24 013C+00 s=2 e=0 z=0  None .text      daObj_Kbox_Execute__FP14obj_kbox_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -883,17 +884,17 @@ asm static void daObj_Kbox_Execute(obj_kbox_class* param_0) {
 #pragma pop
 
 
-/* 80C3EA24-80C3EA2C 0008+00 s=0 e=0 z=0  None .text      daObj_Kbox_IsDelete__FP14obj_kbox_class                      */
-bool daObj_Kbox_IsDelete(obj_kbox_class* param_0) {
+/* 80C3EA24-80C3EA2C 0008+00 s=1 e=0 z=0  None .text      daObj_Kbox_IsDelete__FP14obj_kbox_class                      */
+static bool daObj_Kbox_IsDelete(obj_kbox_class* param_0) {
 	return true;
 }
 
 
-/* 80C3EA2C-80C3EAAC 0080+00 s=0 e=0 z=0  None .text      daObj_Kbox_Delete__FP14obj_kbox_class                        */
+/* 80C3EA2C-80C3EAAC 0080+00 s=1 e=0 z=0  None .text      daObj_Kbox_Delete__FP14obj_kbox_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Kbox_Delete(obj_kbox_class* param_0) {
+asm static void daObj_Kbox_Delete(obj_kbox_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/daObj_Kbox_Delete__FP14obj_kbox_class.s"
 }
@@ -911,18 +912,18 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80C3EBCC-80C3EE98 02CC+00 s=0 e=0 z=0  None .text      daObj_Kbox_Create__FP10fopAc_ac_c                            */
+/* 80C3EBCC-80C3EE98 02CC+00 s=1 e=0 z=0  None .text      daObj_Kbox_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Kbox_Create(fopAc_ac_c* param_0) {
+asm static void daObj_Kbox_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/daObj_Kbox_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C3EE98-80C3EEE0 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80C3EE98-80C3EEE0 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -933,7 +934,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80C3EEE0-80C3EF28 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C3EEE0-80C3EF28 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -944,7 +945,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80C3EF28-80C3EF98 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80C3EF28-80C3EF98 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -955,7 +956,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80C3EF98-80C3EFE0 0048+00 s=1 e=0 z=0  None .text      __dt__16daObj_Kbox_HIO_cFv                                   */
+/* 80C3EF98-80C3EFE0 0048+00 s=2 e=0 z=0  None .text      __dt__16daObj_Kbox_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -966,7 +967,7 @@ asm daObj_Kbox_HIO_c::~daObj_Kbox_HIO_c() {
 #pragma pop
 
 
-/* 80C3EFE0-80C3F01C 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_kbox_cpp                                     */
+/* 80C3EFE0-80C3F01C 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_kbox_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -977,55 +978,55 @@ extern "C" asm void __sinit_d_a_obj_kbox_cpp() {
 #pragma pop
 
 
-/* 80C3F01C-80C3F024 0008+00 s=0 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80C3F01C-80C3F024 0008+00 s=1 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C3F01C() {
+extern "C" asm static void func_80C3F01C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/func_80C3F01C.s"
 }
 #pragma pop
 
 
-/* 80C3F024-80C3F02C 0008+00 s=0 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80C3F024-80C3F02C 0008+00 s=1 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C3F024() {
+extern "C" asm static void func_80C3F024() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/func_80C3F024.s"
 }
 #pragma pop
 
 
-/* 80C3F02C-80C3F034 0008+00 s=0 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80C3F02C-80C3F034 0008+00 s=1 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C3F02C() {
+extern "C" asm static void func_80C3F02C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/func_80C3F02C.s"
 }
 #pragma pop
 
 
-/* 80C3F034-80C3F03C 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C3F034-80C3F03C 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C3F034() {
+extern "C" asm static void func_80C3F034() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/func_80C3F034.s"
 }
 #pragma pop
 
 
-/* 80C3F03C-80C3F044 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C3F03C-80C3F044 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C3F03C() {
+extern "C" asm static void func_80C3F03C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/func_80C3F03C.s"
 }

@@ -205,6 +205,7 @@ struct dCcD_Cyl {
 struct daObj_SSBase_c {
 	/* 8015E3F8 */ daObj_SSBase_c();
 	/* 8015E450 */ ~daObj_SSBase_c();
+	/* 8015E4B0 */ void getProcessID();
 };
 
 struct dKy_tevstr_c {
@@ -244,11 +245,11 @@ struct daMyna_c {
 // Forward References:
 // 
 
-void daObj_SSDrink_Create(void*); // 2
-void daObj_SSDrink_Delete(void*); // 2
-void daObj_SSDrink_Execute(void*); // 2
-void daObj_SSDrink_Draw(void*); // 2
-bool daObj_SSDrink_IsDelete(void*); // 2
+static void daObj_SSDrink_Create(void*); // 2
+static void daObj_SSDrink_Delete(void*); // 2
+static void daObj_SSDrink_Execute(void*); // 2
+static void daObj_SSDrink_Draw(void*); // 2
+static bool daObj_SSDrink_IsDelete(void*); // 2
 
 extern "C" void __dt__15daObj_SSDrink_cFv(); // 1
 extern "C" void create__15daObj_SSDrink_cFv(); // 1
@@ -282,15 +283,15 @@ extern "C" void orderEvent__15daObj_SSDrink_cFv(); // 1
 extern "C" bool wait__15daObj_SSDrink_cFPv(); // 1
 extern "C" void talk__15daObj_SSDrink_cFPv(); // 1
 extern "C" void drink__15daObj_SSDrink_cFPv(); // 1
-extern "C" void daObj_SSDrink_Create__FPv(); // 1
-extern "C" void daObj_SSDrink_Delete__FPv(); // 1
-extern "C" void daObj_SSDrink_Execute__FPv(); // 1
-extern "C" void daObj_SSDrink_Draw__FPv(); // 1
-extern "C" bool daObj_SSDrink_IsDelete__FPv(); // 1
+extern "C" static void daObj_SSDrink_Create__FPv(); // 1
+extern "C" static void daObj_SSDrink_Delete__FPv(); // 1
+extern "C" static void daObj_SSDrink_Execute__FPv(); // 1
+extern "C" static void daObj_SSDrink_Draw__FPv(); // 1
+extern "C" static bool daObj_SSDrink_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __sinit_d_a_obj_ss_drink_cpp(); // 1
-extern "C" void func_80CE672C(); // 1
-extern "C" void func_80CE6734(); // 1
+extern "C" static void func_80CE672C(); // 1
+extern "C" static void func_80CE6734(); // 1
 extern "C" void getLeftHandPos__9daPy_py_cCFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
@@ -298,9 +299,7 @@ extern "C" void __dt__12dBgS_AcchCirFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern u8 const data_80CE6998[44];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* daObj_SSDrink_MethodTable[8];
 extern "C" extern void* g_profile_OBJ_SSDRINK[12];
 
 // 
@@ -359,6 +358,7 @@ extern "C" void __dt__12dCcD_GObjInfFv(); // 1
 extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
 extern "C" void __ct__14daObj_SSBase_cFv(); // 1
 extern "C" void __dt__14daObj_SSBase_cFv(); // 1
+extern "C" void getProcessID__14daObj_SSBase_cFv(); // 1
 extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
 extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
 extern "C" void dMsgObject_addTotalPrice__Fs(); // 1
@@ -388,6 +388,8 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
@@ -403,225 +405,6 @@ extern u8 const data_80CE692C[4];
 // 
 // Declarations:
 // 
-
-/* ############################################################################################## */
-/* 80CE69C4-80CE69D0 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80CE69D0-80CE69E4 0004+10 s=0 e=0 z=0  None .data      @1787                                                        */
-SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
-	0x02000201,
-	/* padding */
-	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
-};
-
-/* 80CE69E4-80CE69E8 0004+00 s=2 e=0 z=0  None .data      l_resFileName                                                */
-SECTION_DATA static void* l_resFileName = (void*)NULL;
-
-/* 80CE69E8-80CE69EC 0004+00 s=2 e=0 z=0  None .data      l_bmdName                                                    */
-SECTION_DATA static void* l_bmdName = (void*)NULL;
-
-/* 80CE69EC-80CE6A30 0044+00 s=2 e=0 z=0  None .data      mCcDCyl__15daObj_SSDrink_c                                   */
-SECTION_DATA static u8 mCcDCyl__15daObj_SSDrink_c[68] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80CE6A30-80CE6A3C 000C+00 s=1 e=0 z=0  None .data      @4020                                                        */
-SECTION_DATA static void* lit_4020[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)NULL,
-};
-
-/* 80CE6A3C-80CE6A48 000C+00 s=1 e=0 z=0  None .data      @4063                                                        */
-SECTION_DATA static void* lit_4063[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)NULL,
-};
-
-/* 80CE6A48-80CE6A54 000C+00 s=1 e=0 z=0  None .data      @4164                                                        */
-SECTION_DATA static void* lit_4164[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)NULL,
-};
-
-/* 80CE6A54-80CE6A60 000C+00 s=1 e=0 z=0  None .data      @4233                                                        */
-SECTION_DATA static void* lit_4233[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)NULL,
-};
-
-/* 80CE6A60-80CE6A6C 000C+00 s=1 e=0 z=0  None .data      @4284                                                        */
-SECTION_DATA static void* lit_4284[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)NULL,
-};
-
-/* 80CE6A6C-80CE6A78 000C+00 s=1 e=0 z=0  None .data      @4334                                                        */
-SECTION_DATA static void* lit_4334[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)NULL,
-};
-
-/* 80CE6A78-80CE6A84 000C+00 s=1 e=0 z=0  None .data      @4344                                                        */
-SECTION_DATA static void* lit_4344[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)NULL,
-};
-
-/* 80CE6A84-80CE6A90 000C+00 s=1 e=0 z=0  None .data      @4352                                                        */
-SECTION_DATA static void* lit_4352[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)NULL,
-};
-
-/* 80CE6A90-80CE6A9C 000C+00 s=1 e=0 z=0  None .data      @4405                                                        */
-SECTION_DATA static void* lit_4405[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)NULL,
-};
-
-/* 80CE6A9C-80CE6AA8 000C+00 s=1 e=0 z=0  None .data      @4432                                                        */
-SECTION_DATA static void* lit_4432[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)NULL,
-};
-
-/* 80CE6AA8-80CE6AC8 0020+00 s=0 e=0 z=0  None .data      daObj_SSDrink_MethodTable                                    */
-SECTION_DATA void* daObj_SSDrink_MethodTable[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CE6AC8-80CE6AF8 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_SSDRINK                                        */
-SECTION_DATA void* g_profile_OBJ_SSDRINK[12] = {
-	(void*)0xFFFFFFFD,
-	(void*)0x0007FFFD,
-	(void*)0x01200000,
-	(void*)NULL,
-	(void*)0x00000B10,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)0x00440000,
-	(void*)NULL,
-	(void*)0x00064100,
-	(void*)0x050E0000,
-};
-
-/* 80CE6AF8-80CE6B04 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGPla                                              */
-SECTION_DATA static void* __vt__8cM3dGPla[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CE6B04-80CE6B10 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
-SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CE6B10-80CE6B34 0024+00 s=3 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
-SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CE6B34-80CE6B40 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
-SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CE6B40-80CE6B4C 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
-SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CE6B4C-80CE6B58 000C+00 s=2 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
-SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CE6B58-80CE6B64 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CE6B64-80CE6B70 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
-SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CE6B70-80CE6B84 0014+00 s=2 e=0 z=0  None .data      __vt__15daObj_SSDrink_c                                      */
-SECTION_DATA static void* __vt__15daObj_SSDrink_c[5] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CE4F78-80CE51C8 0250+00 s=0 e=0 z=0  None .text      __dt__15daObj_SSDrink_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daObj_SSDrink_c::~daObj_SSDrink_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/__dt__15daObj_SSDrink_cFv.s"
-}
-#pragma pop
-
-
-/* 80CE51C8-80CE53EC 0224+00 s=1 e=0 z=0  None .text      create__15daObj_SSDrink_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObj_SSDrink_c::create() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/create__15daObj_SSDrink_cFv.s"
-}
-#pragma pop
-
 
 /* ############################################################################################## */
 /* 80CE6930-80CE6960 0030+00 s=5 e=0 z=0  None .rodata    mCcDObjInfo__15daObj_SSDrink_c                               */
@@ -666,12 +449,237 @@ SECTION_RODATA static u8 const lit_4320[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80CE6990-80CE6998 0008+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80CE6990-80CE6998 0008+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD char const* const stringBase_80CE6990 = "Obj_btl";
 #pragma pop
+
+/* 80CE6998-80CE69C4 002C+00 s=1 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const data_80CE6998[44] = {
+	0x61, 0x6C, 0x5F, 0x62, 0x6F, 0x74, 0x74, 0x6C, 0x65, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x61, 0x6C,
+	0x5F, 0x62, 0x6F, 0x74, 0x74, 0x6C, 0x65, 0x2E, 0x62, 0x74, 0x70, 0x00, 0x61, 0x6C, 0x5F, 0x62,
+	0x6F, 0x74, 0x74, 0x6C, 0x65, 0x2E, 0x62, 0x72, 0x6B, 0x00, 0x00, 0x00,
+};
+
+/* 80CE69C4-80CE69D0 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80CE69D0-80CE69E4 0004+10 s=0 e=0 z=0  None .data      @1787                                                        */
+SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
+	0x02000201,
+	/* padding */
+	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
+};
+
+/* 80CE69E4-80CE69E8 0004+00 s=2 e=0 z=0  None .data      l_resFileName                                                */
+SECTION_DATA static void* l_resFileName = (void*)&stringBase0;
+
+/* 80CE69E8-80CE69EC 0004+00 s=2 e=0 z=0  None .data      l_bmdName                                                    */
+SECTION_DATA static void* l_bmdName = (void*)&data_80CE6998;
+
+/* 80CE69EC-80CE6A30 0044+00 s=2 e=0 z=0  None .data      mCcDCyl__15daObj_SSDrink_c                                   */
+SECTION_DATA static u8 mCcDCyl__15daObj_SSDrink_c[68] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80CE6A30-80CE6A3C 000C+00 s=1 e=0 z=0  None .data      @4020                                                        */
+SECTION_DATA static void* lit_4020[3] = {
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)drink__15daObj_SSDrink_cFPv,
+};
+
+/* 80CE6A3C-80CE6A48 000C+00 s=1 e=0 z=0  None .data      @4063                                                        */
+SECTION_DATA static void* lit_4063[3] = {
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)drink__15daObj_SSDrink_cFPv,
+};
+
+/* 80CE6A48-80CE6A54 000C+00 s=1 e=0 z=0  None .data      @4164                                                        */
+SECTION_DATA static void* lit_4164[3] = {
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)wait__15daObj_SSDrink_cFPv,
+};
+
+/* 80CE6A54-80CE6A60 000C+00 s=1 e=0 z=0  None .data      @4233                                                        */
+SECTION_DATA static void* lit_4233[3] = {
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)drink__15daObj_SSDrink_cFPv,
+};
+
+/* 80CE6A60-80CE6A6C 000C+00 s=1 e=0 z=0  None .data      @4284                                                        */
+SECTION_DATA static void* lit_4284[3] = {
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)talk__15daObj_SSDrink_cFPv,
+};
+
+/* 80CE6A6C-80CE6A78 000C+00 s=1 e=0 z=0  None .data      @4334                                                        */
+SECTION_DATA static void* lit_4334[3] = {
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)drink__15daObj_SSDrink_cFPv,
+};
+
+/* 80CE6A78-80CE6A84 000C+00 s=1 e=0 z=0  None .data      @4344                                                        */
+SECTION_DATA static void* lit_4344[3] = {
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)talk__15daObj_SSDrink_cFPv,
+};
+
+/* 80CE6A84-80CE6A90 000C+00 s=1 e=0 z=0  None .data      @4352                                                        */
+SECTION_DATA static void* lit_4352[3] = {
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)talk__15daObj_SSDrink_cFPv,
+};
+
+/* 80CE6A90-80CE6A9C 000C+00 s=1 e=0 z=0  None .data      @4405                                                        */
+SECTION_DATA static void* lit_4405[3] = {
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)drink__15daObj_SSDrink_cFPv,
+};
+
+/* 80CE6A9C-80CE6AA8 000C+00 s=1 e=0 z=0  None .data      @4432                                                        */
+SECTION_DATA static void* lit_4432[3] = {
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)wait__15daObj_SSDrink_cFPv,
+};
+
+/* 80CE6AA8-80CE6AC8 0020+00 s=1 e=0 z=0  None .data      daObj_SSDrink_MethodTable                                    */
+SECTION_DATA static void* daObj_SSDrink_MethodTable[8] = {
+	(void*)daObj_SSDrink_Create__FPv,
+	(void*)daObj_SSDrink_Delete__FPv,
+	(void*)daObj_SSDrink_Execute__FPv,
+	(void*)daObj_SSDrink_IsDelete__FPv,
+	(void*)daObj_SSDrink_Draw__FPv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80CE6AC8-80CE6AF8 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_SSDRINK                                        */
+SECTION_DATA void* g_profile_OBJ_SSDRINK[12] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01200000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x00000B10,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopAc_Method,
+	(void*)0x00440000,
+	(void*)&daObj_SSDrink_MethodTable,
+	(void*)0x00064100,
+	(void*)0x050E0000,
+};
+
+/* 80CE6AF8-80CE6B04 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGPla                                              */
+SECTION_DATA static void* __vt__8cM3dGPla[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGPlaFv,
+};
+
+/* 80CE6B04-80CE6B10 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
+SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
+};
+
+/* 80CE6B10-80CE6B34 0024+00 s=3 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
+SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80CE6734,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80CE672C,
+};
+
+/* 80CE6B34-80CE6B40 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
+SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
+};
+
+/* 80CE6B40-80CE6B4C 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
+SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
+};
+
+/* 80CE6B4C-80CE6B58 000C+00 s=2 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
+SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
+};
+
+/* 80CE6B58-80CE6B64 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA static void* __vt__8cM3dGAab[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
+};
+
+/* 80CE6B64-80CE6B70 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
+SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
+};
+
+/* 80CE6B70-80CE6B84 0014+00 s=2 e=0 z=0  None .data      __vt__15daObj_SSDrink_c                                      */
+SECTION_DATA static void* __vt__15daObj_SSDrink_c[5] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15daObj_SSDrink_cFv,
+	(void*)setSoldOut__15daObj_SSDrink_cFv,
+	(void*)getProcessID__14daObj_SSBase_cFv,
+};
+
+/* 80CE4F78-80CE51C8 0250+00 s=1 e=0 z=0  None .text      __dt__15daObj_SSDrink_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm daObj_SSDrink_c::~daObj_SSDrink_c() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/__dt__15daObj_SSDrink_cFv.s"
+}
+#pragma pop
+
+
+/* 80CE51C8-80CE53EC 0224+00 s=1 e=0 z=0  None .text      create__15daObj_SSDrink_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObj_SSDrink_c::create() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/create__15daObj_SSDrink_cFv.s"
+}
+#pragma pop
+
 
 /* 80CE53EC-80CE55A8 01BC+00 s=1 e=0 z=0  None .text      CreateHeap__15daObj_SSDrink_cFv                              */
 #pragma push
@@ -684,7 +692,7 @@ asm void daObj_SSDrink_c::CreateHeap() {
 #pragma pop
 
 
-/* 80CE55A8-80CE55F0 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80CE55A8-80CE55F0 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -728,7 +736,7 @@ asm void daObj_SSDrink_c::Draw() {
 #pragma pop
 
 
-/* 80CE5994-80CE59DC 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 80CE5994-80CE59DC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -750,7 +758,7 @@ asm void daObj_SSDrink_c::createHeapCallBack(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80CE59FC-80CE5A50 0054+00 s=0 e=0 z=0  None .text      setSoldOut__15daObj_SSDrink_cFv                              */
+/* 80CE59FC-80CE5A50 0054+00 s=1 e=0 z=0  None .text      setSoldOut__15daObj_SSDrink_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -970,13 +978,13 @@ asm void daObj_SSDrink_c::orderEvent() {
 #pragma pop
 
 
-/* 80CE644C-80CE6454 0008+00 s=0 e=0 z=0  None .text      wait__15daObj_SSDrink_cFPv                                   */
+/* 80CE644C-80CE6454 0008+00 s=2 e=0 z=0  None .text      wait__15daObj_SSDrink_cFPv                                   */
 bool daObj_SSDrink_c::wait(void* param_0) {
 	return true;
 }
 
 
-/* 80CE6454-80CE6514 00C0+00 s=0 e=0 z=0  None .text      talk__15daObj_SSDrink_cFPv                                   */
+/* 80CE6454-80CE6514 00C0+00 s=3 e=0 z=0  None .text      talk__15daObj_SSDrink_cFPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -987,7 +995,7 @@ asm void daObj_SSDrink_c::talk(void* param_0) {
 #pragma pop
 
 
-/* 80CE6514-80CE6624 0110+00 s=0 e=0 z=0  None .text      drink__15daObj_SSDrink_cFPv                                  */
+/* 80CE6514-80CE6624 0110+00 s=5 e=0 z=0  None .text      drink__15daObj_SSDrink_cFPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -998,57 +1006,57 @@ asm void daObj_SSDrink_c::drink(void* param_0) {
 #pragma pop
 
 
-/* 80CE6624-80CE6644 0020+00 s=0 e=0 z=0  None .text      daObj_SSDrink_Create__FPv                                    */
+/* 80CE6624-80CE6644 0020+00 s=1 e=0 z=0  None .text      daObj_SSDrink_Create__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_SSDrink_Create(void* param_0) {
+asm static void daObj_SSDrink_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/daObj_SSDrink_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 80CE6644-80CE6664 0020+00 s=0 e=0 z=0  None .text      daObj_SSDrink_Delete__FPv                                    */
+/* 80CE6644-80CE6664 0020+00 s=1 e=0 z=0  None .text      daObj_SSDrink_Delete__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_SSDrink_Delete(void* param_0) {
+asm static void daObj_SSDrink_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/daObj_SSDrink_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 80CE6664-80CE6684 0020+00 s=0 e=0 z=0  None .text      daObj_SSDrink_Execute__FPv                                   */
+/* 80CE6664-80CE6684 0020+00 s=1 e=0 z=0  None .text      daObj_SSDrink_Execute__FPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_SSDrink_Execute(void* param_0) {
+asm static void daObj_SSDrink_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/daObj_SSDrink_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 80CE6684-80CE66A4 0020+00 s=0 e=0 z=0  None .text      daObj_SSDrink_Draw__FPv                                      */
+/* 80CE6684-80CE66A4 0020+00 s=1 e=0 z=0  None .text      daObj_SSDrink_Draw__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_SSDrink_Draw(void* param_0) {
+asm static void daObj_SSDrink_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/daObj_SSDrink_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 80CE66A4-80CE66AC 0008+00 s=0 e=0 z=0  None .text      daObj_SSDrink_IsDelete__FPv                                  */
-bool daObj_SSDrink_IsDelete(void* param_0) {
+/* 80CE66A4-80CE66AC 0008+00 s=1 e=0 z=0  None .text      daObj_SSDrink_IsDelete__FPv                                  */
+static bool daObj_SSDrink_IsDelete(void* param_0) {
 	return true;
 }
 
 
-/* 80CE66AC-80CE66F4 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80CE66AC-80CE66F4 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1059,7 +1067,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80CE66F4-80CE672C 0038+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_ss_drink_cpp                                 */
+/* 80CE66F4-80CE672C 0038+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_ss_drink_cpp                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1070,22 +1078,22 @@ extern "C" asm void __sinit_d_a_obj_ss_drink_cpp() {
 #pragma pop
 
 
-/* 80CE672C-80CE6734 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80CE672C-80CE6734 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80CE672C() {
+extern "C" asm static void func_80CE672C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/func_80CE672C.s"
 }
 #pragma pop
 
 
-/* 80CE6734-80CE673C 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80CE6734-80CE673C 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80CE6734() {
+extern "C" asm static void func_80CE6734() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/func_80CE6734.s"
 }
@@ -1103,7 +1111,7 @@ asm void daPy_py_c::getLeftHandPos() const {
 #pragma pop
 
 
-/* 80CE6758-80CE67A0 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80CE6758-80CE67A0 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1114,7 +1122,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80CE67A0-80CE67E8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80CE67A0-80CE67E8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1125,7 +1133,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80CE67E8-80CE6858 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80CE67E8-80CE6858 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1136,7 +1144,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 80CE6858-80CE68B4 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80CE6858-80CE68B4 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1147,7 +1155,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80CE68B4-80CE6924 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80CE68B4-80CE6924 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1157,12 +1165,4 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80CE6998-80CE69C4 002C+00 s=0 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA u8 const data_80CE6998[44] = {
-	0x61, 0x6C, 0x5F, 0x62, 0x6F, 0x74, 0x74, 0x6C, 0x65, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x61, 0x6C,
-	0x5F, 0x62, 0x6F, 0x74, 0x74, 0x6C, 0x65, 0x2E, 0x62, 0x74, 0x70, 0x00, 0x61, 0x6C, 0x5F, 0x62,
-	0x6F, 0x74, 0x74, 0x6C, 0x65, 0x2E, 0x62, 0x72, 0x6B, 0x00, 0x00, 0x00,
-};
 

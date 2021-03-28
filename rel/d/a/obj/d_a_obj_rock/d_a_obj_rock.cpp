@@ -115,27 +115,26 @@ struct cCcS {
 // Forward References:
 // 
 
-void daObj_Rock_Draw(obj_rock_class*); // 2
+static void daObj_Rock_Draw(obj_rock_class*); // 2
 static void daObj_Rock_Execute(obj_rock_class*); // 2
-bool daObj_Rock_IsDelete(obj_rock_class*); // 2
-void daObj_Rock_Delete(obj_rock_class*); // 2
+static bool daObj_Rock_IsDelete(obj_rock_class*); // 2
+static void daObj_Rock_Delete(obj_rock_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void set_pos_check(obj_rock_class*, int); // 2
-void daObj_Rock_Create(fopAc_ac_c*); // 2
+static void daObj_Rock_Create(fopAc_ac_c*); // 2
 
-extern "C" void daObj_Rock_Draw__FP14obj_rock_class(); // 1
+extern "C" static void daObj_Rock_Draw__FP14obj_rock_class(); // 1
 extern "C" static void daObj_Rock_Execute__FP14obj_rock_class(); // 1
-extern "C" bool daObj_Rock_IsDelete__FP14obj_rock_class(); // 1
-extern "C" void daObj_Rock_Delete__FP14obj_rock_class(); // 1
+extern "C" static bool daObj_Rock_IsDelete__FP14obj_rock_class(); // 1
+extern "C" static void daObj_Rock_Delete__FP14obj_rock_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void set_pos_check__FP14obj_rock_classi(); // 1
-extern "C" void daObj_Rock_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObj_Rock_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__7rock_ssFv(); // 1
 extern "C" void __ct__7rock_ssFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObj_Rock_Method[8];
 extern "C" extern void* g_profile_OBJ_ROCK[12];
 
 // 
@@ -200,6 +199,8 @@ extern "C" void _restgpr_23(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -214,11 +215,11 @@ extern "C" extern u32 __float_nan;
 // Declarations:
 // 
 
-/* 80CBDC98-80CBDD20 0088+00 s=0 e=0 z=0  None .text      daObj_Rock_Draw__FP14obj_rock_class                          */
+/* 80CBDC98-80CBDD20 0088+00 s=1 e=0 z=0  None .text      daObj_Rock_Draw__FP14obj_rock_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Rock_Draw(obj_rock_class* param_0) {
+asm static void daObj_Rock_Draw(obj_rock_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rock/d_a_obj_rock/daObj_Rock_Draw__FP14obj_rock_class.s"
 }
@@ -229,7 +230,7 @@ asm void daObj_Rock_Draw(obj_rock_class* param_0) {
 /* 80CBE7A4-80CBE7A8 0004+00 s=3 e=0 z=0  None .rodata    @3814                                                        */
 SECTION_RODATA static u32 const lit_3814 = 0x42C80000;
 
-/* 80CBDD20-80CBDE48 0128+00 s=1 e=0 z=0  None .text      daObj_Rock_Execute__FP14obj_rock_class                       */
+/* 80CBDD20-80CBDE48 0128+00 s=2 e=0 z=0  None .text      daObj_Rock_Execute__FP14obj_rock_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -240,8 +241,8 @@ asm static void daObj_Rock_Execute(obj_rock_class* param_0) {
 #pragma pop
 
 
-/* 80CBDE48-80CBDE50 0008+00 s=0 e=0 z=0  None .text      daObj_Rock_IsDelete__FP14obj_rock_class                      */
-bool daObj_Rock_IsDelete(obj_rock_class* param_0) {
+/* 80CBDE48-80CBDE50 0008+00 s=1 e=0 z=0  None .text      daObj_Rock_IsDelete__FP14obj_rock_class                      */
+static bool daObj_Rock_IsDelete(obj_rock_class* param_0) {
 	return true;
 }
 
@@ -297,11 +298,11 @@ SECTION_RODATA static u8 const lit_4018[8] = {
 SECTION_DEAD char const* const stringBase_80CBE7E4 = "Obj_rock";
 #pragma pop
 
-/* 80CBDE50-80CBDED8 0088+00 s=0 e=0 z=0  None .text      daObj_Rock_Delete__FP14obj_rock_class                        */
+/* 80CBDE50-80CBDED8 0088+00 s=1 e=0 z=0  None .text      daObj_Rock_Delete__FP14obj_rock_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Rock_Delete(obj_rock_class* param_0) {
+asm static void daObj_Rock_Delete(obj_rock_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rock/d_a_obj_rock/daObj_Rock_Delete__FP14obj_rock_class.s"
 }
@@ -339,11 +340,11 @@ SECTION_DATA static u8 data_80CBE7F0[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
 };
 
-/* 80CBE138-80CBE5A4 046C+00 s=0 e=0 z=0  None .text      daObj_Rock_Create__FP10fopAc_ac_c                            */
+/* 80CBE138-80CBE5A4 046C+00 s=1 e=0 z=0  None .text      daObj_Rock_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Rock_Create(fopAc_ac_c* param_0) {
+asm static void daObj_Rock_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rock/d_a_obj_rock/daObj_Rock_Create__FP10fopAc_ac_c.s"
 }
@@ -351,30 +352,30 @@ asm void daObj_Rock_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80CBE830-80CBE850 0020+00 s=0 e=0 z=0  None .data      l_daObj_Rock_Method                                          */
-SECTION_DATA void* l_daObj_Rock_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80CBE830-80CBE850 0020+00 s=1 e=0 z=0  None .data      l_daObj_Rock_Method                                          */
+SECTION_DATA static void* l_daObj_Rock_Method[8] = {
+	(void*)daObj_Rock_Create__FP10fopAc_ac_c,
+	(void*)daObj_Rock_Delete__FP14obj_rock_class,
+	(void*)daObj_Rock_Execute__FP14obj_rock_class,
+	(void*)daObj_Rock_IsDelete__FP14obj_rock_class,
+	(void*)daObj_Rock_Draw__FP14obj_rock_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80CBE850-80CBE880 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_ROCK                                           */
+/* 80CBE850-80CBE880 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_ROCK                                           */
 SECTION_DATA void* g_profile_OBJ_ROCK[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01180000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00001BBC,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02C60000,
-	(void*)NULL,
+	(void*)&l_daObj_Rock_Method,
 	(void*)0x00040000,
 	(void*)0x000E0000,
 };
@@ -383,14 +384,14 @@ SECTION_DATA void* g_profile_OBJ_ROCK[12] = {
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80CBE88C-80CBE898 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80CBE5A4-80CBE678 00D4+00 s=1 e=0 z=0  None .text      __dt__7rock_ssFv                                             */
@@ -415,7 +416,7 @@ asm rock_ss::rock_ss() {
 #pragma pop
 
 
-/* 80CBE70C-80CBE754 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80CBE70C-80CBE754 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -426,7 +427,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80CBE754-80CBE79C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80CBE754-80CBE79C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

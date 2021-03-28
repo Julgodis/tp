@@ -60,6 +60,15 @@ struct dMenu_DmapBg_c {
 	/* 801BB468 */ void drawCursor();
 };
 
+struct CSTControl {
+};
+
+struct J2DOrthoGraph {
+};
+
+struct JKRArchive {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -73,20 +82,11 @@ struct J2DGrafContext {
 	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
 };
 
-struct JKRArchive {
-};
-
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
-};
-
-struct J2DOrthoGraph {
-};
-
-struct CSTControl {
 };
 
 struct dMenu_Dmap_c {
@@ -313,10 +313,10 @@ struct CPaneMgrAlphaMorf {
 	/* 80255E28 */ void setAlphaMorfRate(f32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

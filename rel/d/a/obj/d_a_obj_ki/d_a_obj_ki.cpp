@@ -45,16 +45,16 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorf {
@@ -112,25 +112,25 @@ struct dScnKy_env_light_c {
 // 
 
 static void nodeCallBack(J3DJoint*, int); // 2
-void daObj_Ki_Draw(obj_ki_class*); // 2
+static void daObj_Ki_Draw(obj_ki_class*); // 2
 static void action(obj_ki_class*); // 2
 static void daObj_Ki_Execute(obj_ki_class*); // 2
-bool daObj_Ki_IsDelete(obj_ki_class*); // 2
-void daObj_Ki_Delete(obj_ki_class*); // 2
+static bool daObj_Ki_IsDelete(obj_ki_class*); // 2
+static void daObj_Ki_Delete(obj_ki_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daObj_Ki_Create(fopAc_ac_c*); // 2
+static void daObj_Ki_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__14daObj_Ki_HIO_cFv(); // 1
 extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" void daObj_Ki_Draw__FP12obj_ki_class(); // 1
+extern "C" static void daObj_Ki_Draw__FP12obj_ki_class(); // 1
 extern "C" static void action__FP12obj_ki_class(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" static void daObj_Ki_Execute__FP12obj_ki_class(); // 1
 extern "C" void __dt__5csXyzFv(); // 1
-extern "C" bool daObj_Ki_IsDelete__FP12obj_ki_class(); // 1
-extern "C" void daObj_Ki_Delete__FP12obj_ki_class(); // 1
+extern "C" static bool daObj_Ki_IsDelete__FP12obj_ki_class(); // 1
+extern "C" static void daObj_Ki_Delete__FP12obj_ki_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daObj_Ki_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObj_Ki_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__7sq_cp_sFv(); // 1
 extern "C" void __ct__7sq_cp_sFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
@@ -138,7 +138,6 @@ extern "C" void __ct__5csXyzFv(); // 1
 extern "C" void __dt__14daObj_Ki_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_ki_cpp(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObj_Ki_Method[8];
 extern "C" extern void* g_profile_OBJ_KI[12];
 
 // 
@@ -193,6 +192,8 @@ extern "C" void _savegpr_24(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_28(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -217,30 +218,30 @@ SECTION_DATA static u8 data_80C44B98[8] = {
 	0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x0E,
 };
 
-/* 80C44BA0-80C44BC0 0020+00 s=0 e=0 z=0  None .data      l_daObj_Ki_Method                                            */
-SECTION_DATA void* l_daObj_Ki_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80C44BA0-80C44BC0 0020+00 s=1 e=0 z=0  None .data      l_daObj_Ki_Method                                            */
+SECTION_DATA static void* l_daObj_Ki_Method[8] = {
+	(void*)daObj_Ki_Create__FP10fopAc_ac_c,
+	(void*)daObj_Ki_Delete__FP12obj_ki_class,
+	(void*)daObj_Ki_Execute__FP12obj_ki_class,
+	(void*)daObj_Ki_IsDelete__FP12obj_ki_class,
+	(void*)daObj_Ki_Draw__FP12obj_ki_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C44BC0-80C44BF0 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_KI                                             */
+/* 80C44BC0-80C44BF0 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_KI                                             */
 SECTION_DATA void* g_profile_OBJ_KI[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01110000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000670,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02C20000,
-	(void*)NULL,
+	(void*)&l_daObj_Ki_Method,
 	(void*)0x00040100,
 	(void*)0x00070000,
 };
@@ -249,7 +250,7 @@ SECTION_DATA void* g_profile_OBJ_KI[12] = {
 SECTION_DATA static void* __vt__14daObj_Ki_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14daObj_Ki_HIO_cFv,
 };
 
 /* 80C43EEC-80C43F0C 0020+00 s=1 e=0 z=0  None .text      __ct__14daObj_Ki_HIO_cFv                                     */
@@ -274,11 +275,11 @@ asm static void nodeCallBack(J3DJoint* param_0, int param_1) {
 #pragma pop
 
 
-/* 80C44010-80C44080 0070+00 s=0 e=0 z=0  None .text      daObj_Ki_Draw__FP12obj_ki_class                              */
+/* 80C44010-80C44080 0070+00 s=1 e=0 z=0  None .text      daObj_Ki_Draw__FP12obj_ki_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Ki_Draw(obj_ki_class* param_0) {
+asm static void daObj_Ki_Draw(obj_ki_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/daObj_Ki_Draw__FP12obj_ki_class.s"
 }
@@ -319,7 +320,7 @@ SECTION_RODATA static u8 const lit_3793[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80C440C8-80C443E0 0318+00 s=1 e=0 z=0  None .text      daObj_Ki_Execute__FP12obj_ki_class                           */
+/* 80C440C8-80C443E0 0318+00 s=2 e=0 z=0  None .text      daObj_Ki_Execute__FP12obj_ki_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -341,8 +342,8 @@ asm csXyz::~csXyz() {
 #pragma pop
 
 
-/* 80C4441C-80C44424 0008+00 s=0 e=0 z=0  None .text      daObj_Ki_IsDelete__FP12obj_ki_class                          */
-bool daObj_Ki_IsDelete(obj_ki_class* param_0) {
+/* 80C4441C-80C44424 0008+00 s=1 e=0 z=0  None .text      daObj_Ki_IsDelete__FP12obj_ki_class                          */
+static bool daObj_Ki_IsDelete(obj_ki_class* param_0) {
 	return true;
 }
 
@@ -401,11 +402,11 @@ SECTION_DEAD char const* const stringBase_80C44B88 = "Obj_Ki";
 /* 80C44C08-80C44C0C 0004+00 s=2 e=0 z=0  None .bss       None                                                         */
 static u8 data_80C44C08[4];
 
-/* 80C44424-80C4448C 0068+00 s=0 e=0 z=0  None .text      daObj_Ki_Delete__FP12obj_ki_class                            */
+/* 80C44424-80C4448C 0068+00 s=1 e=0 z=0  None .text      daObj_Ki_Delete__FP12obj_ki_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Ki_Delete(obj_ki_class* param_0) {
+asm static void daObj_Ki_Delete(obj_ki_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/daObj_Ki_Delete__FP12obj_ki_class.s"
 }
@@ -430,11 +431,11 @@ static u8 lit_3643[12];
 /* 80C44C18-80C44C20 0008+00 s=2 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[8];
 
-/* 80C4466C-80C449F8 038C+00 s=0 e=0 z=0  None .text      daObj_Ki_Create__FP10fopAc_ac_c                              */
+/* 80C4466C-80C449F8 038C+00 s=1 e=0 z=0  None .text      daObj_Ki_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Ki_Create(fopAc_ac_c* param_0) {
+asm static void daObj_Ki_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/daObj_Ki_Create__FP10fopAc_ac_c.s"
 }
@@ -475,7 +476,7 @@ csXyz::csXyz() {
 }
 
 
-/* 80C44AA8-80C44AF0 0048+00 s=1 e=0 z=0  None .text      __dt__14daObj_Ki_HIO_cFv                                     */
+/* 80C44AA8-80C44AF0 0048+00 s=2 e=0 z=0  None .text      __dt__14daObj_Ki_HIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -486,7 +487,7 @@ asm daObj_Ki_HIO_c::~daObj_Ki_HIO_c() {
 #pragma pop
 
 
-/* 80C44AF0-80C44B2C 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_ki_cpp                                       */
+/* 80C44AF0-80C44B2C 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_ki_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

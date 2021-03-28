@@ -35,6 +35,7 @@ struct daTag_SSDrink_c {
 struct daObj_SSBase_c {
 	/* 8015E3F8 */ daObj_SSBase_c();
 	/* 8015E450 */ ~daObj_SSBase_c();
+	/* 8015E4B0 */ void getProcessID();
 	/* 80D63794 */ void setSoldOut();
 };
 
@@ -75,11 +76,11 @@ struct cXyz {
 // Forward References:
 // 
 
-void daTag_SSDrink_Create(void*); // 2
-void daTag_SSDrink_Delete(void*); // 2
-void daTag_SSDrink_Execute(void*); // 2
-void daTag_SSDrink_Draw(void*); // 2
-bool daTag_SSDrink_IsDelete(void*); // 2
+static void daTag_SSDrink_Create(void*); // 2
+static void daTag_SSDrink_Delete(void*); // 2
+static void daTag_SSDrink_Execute(void*); // 2
+static void daTag_SSDrink_Draw(void*); // 2
+static bool daTag_SSDrink_IsDelete(void*); // 2
 
 extern "C" void create__15daTag_SSDrink_cFv(); // 1
 extern "C" bool Delete__15daTag_SSDrink_cFv(); // 1
@@ -98,14 +99,13 @@ extern "C" void chkEvent__15daTag_SSDrink_cFv(); // 1
 extern "C" void orderEvent__15daTag_SSDrink_cFv(); // 1
 extern "C" void wait__15daTag_SSDrink_cFPv(); // 1
 extern "C" void talk__15daTag_SSDrink_cFPv(); // 1
-extern "C" void daTag_SSDrink_Create__FPv(); // 1
-extern "C" void daTag_SSDrink_Delete__FPv(); // 1
-extern "C" void daTag_SSDrink_Execute__FPv(); // 1
-extern "C" void daTag_SSDrink_Draw__FPv(); // 1
-extern "C" bool daTag_SSDrink_IsDelete__FPv(); // 1
+extern "C" static void daTag_SSDrink_Create__FPv(); // 1
+extern "C" static void daTag_SSDrink_Delete__FPv(); // 1
+extern "C" static void daTag_SSDrink_Execute__FPv(); // 1
+extern "C" static void daTag_SSDrink_Draw__FPv(); // 1
+extern "C" static bool daTag_SSDrink_IsDelete__FPv(); // 1
 extern "C" void __dt__15daTag_SSDrink_cFv(); // 1
 extern "C" void setSoldOut__14daObj_SSBase_cFv(); // 1
-extern "C" extern void* daTag_SSDrink_MethodTable[8];
 extern "C" extern void* g_profile_TAG_SSDRINK[12];
 
 // 
@@ -127,6 +127,7 @@ extern "C" void ChkPresentEnd__16dEvent_manager_cFv(); // 1
 extern "C" void request__11dAttCatch_cFP10fopAc_ac_cUcfffsi(); // 1
 extern "C" void __ct__14daObj_SSBase_cFv(); // 1
 extern "C" void __dt__14daObj_SSBase_cFv(); // 1
+extern "C" void getProcessID__14daObj_SSBase_cFv(); // 1
 extern "C" void dMsgObject_addTotalPrice__Fs(); // 1
 extern "C" void __ct__10dMsgFlow_cFv(); // 1
 extern "C" void __dt__10dMsgFlow_cFv(); // 1
@@ -139,6 +140,8 @@ extern "C" void __ptmf_cmpr(); // 1
 extern "C" void __ptmf_scall(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 
@@ -148,67 +151,67 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 /* ############################################################################################## */
 /* 80D637BC-80D637D8 001C+00 s=1 e=0 z=0  None .data      @3806                                                        */
 SECTION_DATA static void* lit_3806[7] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)getTypeFromParam__15daTag_SSDrink_cFv)+0x28),
+	(void*)(((char*)getTypeFromParam__15daTag_SSDrink_cFv)+0x38),
+	(void*)(((char*)getTypeFromParam__15daTag_SSDrink_cFv)+0x48),
+	(void*)(((char*)getTypeFromParam__15daTag_SSDrink_cFv)+0x58),
+	(void*)(((char*)getTypeFromParam__15daTag_SSDrink_cFv)+0x68),
+	(void*)(((char*)getTypeFromParam__15daTag_SSDrink_cFv)+0x78),
+	(void*)(((char*)getTypeFromParam__15daTag_SSDrink_cFv)+0x88),
 };
 
 /* 80D637D8-80D637E4 000C+00 s=1 e=0 z=0  None .data      @3829                                                        */
 SECTION_DATA static void* lit_3829[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)wait__15daTag_SSDrink_cFPv,
 };
 
 /* 80D637E4-80D637F0 000C+00 s=1 e=0 z=0  None .data      @3881                                                        */
 SECTION_DATA static void* lit_3881[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)talk__15daTag_SSDrink_cFPv,
 };
 
 /* 80D637F0-80D637FC 000C+00 s=1 e=0 z=0  None .data      @3889                                                        */
 SECTION_DATA static void* lit_3889[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)talk__15daTag_SSDrink_cFPv,
 };
 
 /* 80D637FC-80D63808 000C+00 s=1 e=0 z=0  None .data      @4003                                                        */
 SECTION_DATA static void* lit_4003[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
+	(void*)wait__15daTag_SSDrink_cFPv,
+};
+
+/* 80D63808-80D63828 0020+00 s=1 e=0 z=0  None .data      daTag_SSDrink_MethodTable                                    */
+SECTION_DATA static void* daTag_SSDrink_MethodTable[8] = {
+	(void*)daTag_SSDrink_Create__FPv,
+	(void*)daTag_SSDrink_Delete__FPv,
+	(void*)daTag_SSDrink_Execute__FPv,
+	(void*)daTag_SSDrink_IsDelete__FPv,
+	(void*)daTag_SSDrink_Draw__FPv,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D63808-80D63828 0020+00 s=0 e=0 z=0  None .data      daTag_SSDrink_MethodTable                                    */
-SECTION_DATA void* daTag_SSDrink_MethodTable[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80D63828-80D63858 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_SSDRINK                                        */
+/* 80D63828-80D63858 0030+00 s=0 e=0 z=1  None .data      g_profile_TAG_SSDRINK                                        */
 SECTION_DATA void* g_profile_TAG_SSDRINK[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01220000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005D8,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00460000,
-	(void*)NULL,
+	(void*)&daTag_SSDrink_MethodTable,
 	(void*)0x00064100,
 	(void*)0x050E0000,
 };
@@ -217,9 +220,9 @@ SECTION_DATA void* g_profile_TAG_SSDRINK[12] = {
 SECTION_DATA static void* __vt__15daTag_SSDrink_c[5] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__15daTag_SSDrink_cFv,
+	(void*)setSoldOut__14daObj_SSBase_cFv,
+	(void*)getProcessID__14daObj_SSBase_cFv,
 };
 
 /* 80D62DB8-80D62E5C 00A4+00 s=1 e=0 z=0  None .text      create__15daTag_SSDrink_cFv                                  */
@@ -256,7 +259,7 @@ bool daTag_SSDrink_c::Draw() {
 }
 
 
-/* 80D62ED8-80D62F80 00A8+00 s=1 e=0 z=0  None .text      getTypeFromParam__15daTag_SSDrink_cFv                        */
+/* 80D62ED8-80D62F80 00A8+00 s=2 e=0 z=0  None .text      getTypeFromParam__15daTag_SSDrink_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -401,7 +404,7 @@ SECTION_RODATA static u32 const lit_3991 = 0x43480000;
 /* 80D637B8-80D637BC 0004+00 s=1 e=0 z=0  None .rodata    @3992                                                        */
 SECTION_RODATA static u32 const lit_3992 = 0x42C80000;
 
-/* 80D63490-80D635C8 0138+00 s=0 e=0 z=0  None .text      wait__15daTag_SSDrink_cFPv                                   */
+/* 80D63490-80D635C8 0138+00 s=2 e=0 z=0  None .text      wait__15daTag_SSDrink_cFPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -412,7 +415,7 @@ asm void daTag_SSDrink_c::wait(void* param_0) {
 #pragma pop
 
 
-/* 80D635C8-80D6369C 00D4+00 s=0 e=0 z=0  None .text      talk__15daTag_SSDrink_cFPv                                   */
+/* 80D635C8-80D6369C 00D4+00 s=2 e=0 z=0  None .text      talk__15daTag_SSDrink_cFPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -423,57 +426,57 @@ asm void daTag_SSDrink_c::talk(void* param_0) {
 #pragma pop
 
 
-/* 80D6369C-80D636BC 0020+00 s=0 e=0 z=0  None .text      daTag_SSDrink_Create__FPv                                    */
+/* 80D6369C-80D636BC 0020+00 s=1 e=0 z=0  None .text      daTag_SSDrink_Create__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_SSDrink_Create(void* param_0) {
+asm static void daTag_SSDrink_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ss_drink/d_a_tag_ss_drink/daTag_SSDrink_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 80D636BC-80D636DC 0020+00 s=0 e=0 z=0  None .text      daTag_SSDrink_Delete__FPv                                    */
+/* 80D636BC-80D636DC 0020+00 s=1 e=0 z=0  None .text      daTag_SSDrink_Delete__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_SSDrink_Delete(void* param_0) {
+asm static void daTag_SSDrink_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ss_drink/d_a_tag_ss_drink/daTag_SSDrink_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 80D636DC-80D636FC 0020+00 s=0 e=0 z=0  None .text      daTag_SSDrink_Execute__FPv                                   */
+/* 80D636DC-80D636FC 0020+00 s=1 e=0 z=0  None .text      daTag_SSDrink_Execute__FPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_SSDrink_Execute(void* param_0) {
+asm static void daTag_SSDrink_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ss_drink/d_a_tag_ss_drink/daTag_SSDrink_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 80D636FC-80D6371C 0020+00 s=0 e=0 z=0  None .text      daTag_SSDrink_Draw__FPv                                      */
+/* 80D636FC-80D6371C 0020+00 s=1 e=0 z=0  None .text      daTag_SSDrink_Draw__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_SSDrink_Draw(void* param_0) {
+asm static void daTag_SSDrink_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ss_drink/d_a_tag_ss_drink/daTag_SSDrink_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 80D6371C-80D63724 0008+00 s=0 e=0 z=0  None .text      daTag_SSDrink_IsDelete__FPv                                  */
-bool daTag_SSDrink_IsDelete(void* param_0) {
+/* 80D6371C-80D63724 0008+00 s=1 e=0 z=0  None .text      daTag_SSDrink_IsDelete__FPv                                  */
+static bool daTag_SSDrink_IsDelete(void* param_0) {
 	return true;
 }
 
 
-/* 80D63724-80D63794 0070+00 s=0 e=0 z=0  None .text      __dt__15daTag_SSDrink_cFv                                    */
+/* 80D63724-80D63794 0070+00 s=1 e=0 z=0  None .text      __dt__15daTag_SSDrink_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -484,7 +487,7 @@ asm daTag_SSDrink_c::~daTag_SSDrink_c() {
 #pragma pop
 
 
-/* 80D63794-80D63798 0004+00 s=0 e=0 z=0  None .text      setSoldOut__14daObj_SSBase_cFv                               */
+/* 80D63794-80D63798 0004+00 s=1 e=0 z=0  None .text      setSoldOut__14daObj_SSBase_cFv                               */
 void daObj_SSBase_c::setSoldOut() {
 	/* empty function */
 }

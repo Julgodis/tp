@@ -88,11 +88,11 @@ struct dCcD_GObjInf {
 // 
 
 static void createSolidHeap(fopAc_ac_c*); // 2
-void daObjSakuita_Draw(daObjSakuita_c*); // 2
-void daObjSakuita_Execute(daObjSakuita_c*); // 2
-bool daObjSakuita_IsDelete(daObjSakuita_c*); // 2
-void daObjSakuita_Delete(daObjSakuita_c*); // 2
-void daObjSakuita_Create(fopAc_ac_c*); // 2
+static void daObjSakuita_Draw(daObjSakuita_c*); // 2
+static void daObjSakuita_Execute(daObjSakuita_c*); // 2
+static bool daObjSakuita_IsDelete(daObjSakuita_c*); // 2
+static void daObjSakuita_Delete(daObjSakuita_c*); // 2
+static void daObjSakuita_Create(fopAc_ac_c*); // 2
 
 extern "C" void create_init__14daObjSakuita_cFv(); // 1
 extern "C" void initBaseMtx__14daObjSakuita_cFv(); // 1
@@ -100,19 +100,18 @@ extern "C" void setBaseMtx__14daObjSakuita_cFv(); // 1
 extern "C" void setPlatePos__14daObjSakuita_cFv(); // 1
 extern "C" void calcAngle__14daObjSakuita_cFv(); // 1
 extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
-extern "C" void daObjSakuita_Draw__FP14daObjSakuita_c(); // 1
-extern "C" void daObjSakuita_Execute__FP14daObjSakuita_c(); // 1
-extern "C" bool daObjSakuita_IsDelete__FP14daObjSakuita_c(); // 1
-extern "C" void daObjSakuita_Delete__FP14daObjSakuita_c(); // 1
+extern "C" static void daObjSakuita_Draw__FP14daObjSakuita_c(); // 1
+extern "C" static void daObjSakuita_Execute__FP14daObjSakuita_c(); // 1
+extern "C" static bool daObjSakuita_IsDelete__FP14daObjSakuita_c(); // 1
+extern "C" static void daObjSakuita_Delete__FP14daObjSakuita_c(); // 1
 extern "C" void __dt__14daObjSakuita_cFv(); // 1
-extern "C" void daObjSakuita_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjSakuita_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" extern u32 const lit_3704;
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObjSakuita_Method[8];
 extern "C" extern void* g_profile_Obj_Sakuita[12];
 
 // 
@@ -163,6 +162,8 @@ extern "C" void __dl__FPv(); // 1
 extern "C" void PSMTXCopy(); // 1
 extern "C" void PSVECAdd(); // 1
 extern "C" void PSVECScale(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
@@ -224,7 +225,7 @@ SECTION_RODATA static u8 const lit_3781[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80CC5114-80CC512C 0018+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80CC5114-80CC512C 0018+00 s=4 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -233,7 +234,7 @@ SECTION_DEAD char const* const stringBase_80CC511E = "A_Sakuita.bmd";
 #pragma pop
 
 /* 80CC512C-80CC5130 0004+00 s=4 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
 
 /* 80CC46F8-80CC47F8 0100+00 s=1 e=0 z=0  None .text      create_init__14daObjSakuita_cFv                              */
 #pragma push
@@ -301,39 +302,39 @@ asm static void createSolidHeap(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80CC4BD4-80CC4C14 0040+00 s=0 e=0 z=0  None .text      daObjSakuita_Draw__FP14daObjSakuita_c                        */
+/* 80CC4BD4-80CC4C14 0040+00 s=1 e=0 z=0  None .text      daObjSakuita_Draw__FP14daObjSakuita_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSakuita_Draw(daObjSakuita_c* param_0) {
+asm static void daObjSakuita_Draw(daObjSakuita_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/daObjSakuita_Draw__FP14daObjSakuita_c.s"
 }
 #pragma pop
 
 
-/* 80CC4C14-80CC4C6C 0058+00 s=0 e=0 z=0  None .text      daObjSakuita_Execute__FP14daObjSakuita_c                     */
+/* 80CC4C14-80CC4C6C 0058+00 s=1 e=0 z=0  None .text      daObjSakuita_Execute__FP14daObjSakuita_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSakuita_Execute(daObjSakuita_c* param_0) {
+asm static void daObjSakuita_Execute(daObjSakuita_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/daObjSakuita_Execute__FP14daObjSakuita_c.s"
 }
 #pragma pop
 
 
-/* 80CC4C6C-80CC4C74 0008+00 s=0 e=0 z=0  None .text      daObjSakuita_IsDelete__FP14daObjSakuita_c                    */
-bool daObjSakuita_IsDelete(daObjSakuita_c* param_0) {
+/* 80CC4C6C-80CC4C74 0008+00 s=1 e=0 z=0  None .text      daObjSakuita_IsDelete__FP14daObjSakuita_c                    */
+static bool daObjSakuita_IsDelete(daObjSakuita_c* param_0) {
 	return true;
 }
 
 
-/* 80CC4C74-80CC4C9C 0028+00 s=0 e=0 z=0  None .text      daObjSakuita_Delete__FP14daObjSakuita_c                      */
+/* 80CC4C74-80CC4C9C 0028+00 s=1 e=0 z=0  None .text      daObjSakuita_Delete__FP14daObjSakuita_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSakuita_Delete(daObjSakuita_c* param_0) {
+asm static void daObjSakuita_Delete(daObjSakuita_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/daObjSakuita_Delete__FP14daObjSakuita_c.s"
 }
@@ -341,30 +342,30 @@ asm void daObjSakuita_Delete(daObjSakuita_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80CC5130-80CC5150 0020+00 s=0 e=0 z=0  None .data      l_daObjSakuita_Method                                        */
-SECTION_DATA void* l_daObjSakuita_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80CC5130-80CC5150 0020+00 s=1 e=0 z=0  None .data      l_daObjSakuita_Method                                        */
+SECTION_DATA static void* l_daObjSakuita_Method[8] = {
+	(void*)daObjSakuita_Create__FP10fopAc_ac_c,
+	(void*)daObjSakuita_Delete__FP14daObjSakuita_c,
+	(void*)daObjSakuita_Execute__FP14daObjSakuita_c,
+	(void*)daObjSakuita_IsDelete__FP14daObjSakuita_c,
+	(void*)daObjSakuita_Draw__FP14daObjSakuita_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80CC5150-80CC5180 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Sakuita                                        */
+/* 80CC5150-80CC5180 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Sakuita                                        */
 SECTION_DATA void* g_profile_Obj_Sakuita[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01540000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000750,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00240000,
-	(void*)NULL,
+	(void*)&l_daObjSakuita_Method,
 	(void*)0x00040180,
 	(void*)0x000E0000,
 };
@@ -373,28 +374,28 @@ SECTION_DATA void* g_profile_Obj_Sakuita[12] = {
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80CC518C-80CC5198 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80CC5198-80CC51A4 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80CC51A4-80CC51B0 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 80CC4C9C-80CC4E40 01A4+00 s=1 e=0 z=0  None .text      __dt__14daObjSakuita_cFv                                     */
@@ -408,18 +409,18 @@ asm daObjSakuita_c::~daObjSakuita_c() {
 #pragma pop
 
 
-/* 80CC4E40-80CC4F78 0138+00 s=0 e=0 z=0  None .text      daObjSakuita_Create__FP10fopAc_ac_c                          */
+/* 80CC4E40-80CC4F78 0138+00 s=1 e=0 z=0  None .text      daObjSakuita_Create__FP10fopAc_ac_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSakuita_Create(fopAc_ac_c* param_0) {
+asm static void daObjSakuita_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/daObjSakuita_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80CC4F78-80CC4FC0 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80CC4F78-80CC4FC0 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -430,7 +431,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80CC4FC0-80CC5008 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80CC4FC0-80CC5008 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -441,7 +442,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80CC5008-80CC5064 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80CC5008-80CC5064 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -452,7 +453,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80CC5064-80CC50AC 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80CC5064-80CC50AC 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

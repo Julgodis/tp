@@ -127,10 +127,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -158,22 +158,22 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
+struct J3DAnmTransform {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
 struct J3DModelData {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfSO {
@@ -231,10 +231,10 @@ struct dEvt_control_c {
 	/* 80042468 */ void reset();
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -346,10 +346,10 @@ struct cM3dGLin {
 
 static void daCstatue_atHitCallback(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*); // 2
 static void daCstatue_createHeap(fopAc_ac_c*); // 2
-void daCstatue_Create(fopAc_ac_c*); // 2
-void daCstatue_Delete(daCstatue_c*); // 2
-void daCstatue_Execute(daCstatue_c*); // 2
-void daCstatue_Draw(daCstatue_c*); // 2
+static void daCstatue_Create(fopAc_ac_c*); // 2
+static void daCstatue_Delete(daCstatue_c*); // 2
+static void daCstatue_Execute(daCstatue_c*); // 2
+static void daCstatue_Draw(daCstatue_c*); // 2
 
 extern "C" void atHitCallback__11daCstatue_cFP10fopAc_ac_c(); // 1
 extern "C" static void daCstatue_atHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf(); // 1
@@ -366,9 +366,9 @@ extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__15dBgS_StatueAcchFv(); // 1
 extern "C" void __dt__12dBgS_AcchCirFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void daCstatue_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daCstatue_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__11daCstatue_cFv(); // 1
-extern "C" void daCstatue_Delete__FP11daCstatue_c(); // 1
+extern "C" static void daCstatue_Delete__FP11daCstatue_c(); // 1
 extern "C" void setRoomInfo__11daCstatue_cFv(); // 1
 extern "C" void setMatrix__11daCstatue_cFv(); // 1
 extern "C" void posMove__11daCstatue_cFv(); // 1
@@ -381,14 +381,13 @@ extern "C" void initBrk__11daCstatue_cFUs(); // 1
 extern "C" void initStopBrkBtk__11daCstatue_cFv(); // 1
 extern "C" void initStartBrkBtk__11daCstatue_cFv(); // 1
 extern "C" void execute__11daCstatue_cFv(); // 1
-extern "C" void daCstatue_Execute__FP11daCstatue_c(); // 1
+extern "C" static void daCstatue_Execute__FP11daCstatue_c(); // 1
 extern "C" void draw__11daCstatue_cFv(); // 1
-extern "C" void daCstatue_Draw__FP11daCstatue_c(); // 1
+extern "C" static void daCstatue_Draw__FP11daCstatue_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" void func_80667678(); // 1
-extern "C" void func_80667680(); // 1
+extern "C" static void func_80667678(); // 1
+extern "C" static void func_80667680(); // 1
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daCstatue_Method[8];
 extern "C" extern void* g_profile_CSTATUE[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -586,6 +585,8 @@ extern "C" void _restgpr_23(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__8dCcD_Cps[36];
@@ -717,30 +718,30 @@ SECTION_DATA static u8 l_sphSrc[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00,
 };
 
-/* 80667AA0-80667AC0 0020+00 s=0 e=0 z=0  None .data      l_daCstatue_Method                                           */
-SECTION_DATA void* l_daCstatue_Method[8] = {
+/* 80667AA0-80667AC0 0020+00 s=1 e=0 z=0  None .data      l_daCstatue_Method                                           */
+SECTION_DATA static void* l_daCstatue_Method[8] = {
+	(void*)daCstatue_Create__FP10fopAc_ac_c,
+	(void*)daCstatue_Delete__FP11daCstatue_c,
+	(void*)daCstatue_Execute__FP11daCstatue_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daCstatue_Draw__FP11daCstatue_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80667AC0-80667AF0 0030+00 s=0 e=0 z=0  None .data      g_profile_CSTATUE                                            */
+/* 80667AC0-80667AF0 0030+00 s=0 e=0 z=1  None .data      g_profile_CSTATUE                                            */
 SECTION_DATA void* g_profile_CSTATUE[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01980000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000B2C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x010F0000,
-	(void*)NULL,
+	(void*)&l_daCstatue_Method,
 	(void*)0x00060520,
 	(void*)0x030E0000,
 };
@@ -749,69 +750,69 @@ SECTION_DATA void* g_profile_CSTATUE[12] = {
 SECTION_DATA static void* __vt__8cM3dGPla[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGPlaFv,
 };
 
 /* 80667AFC-80667B08 000C+00 s=1 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 80667B08-80667B14 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80667B14-80667B20 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80667B20-80667B44 0024+00 s=3 e=0 z=0  None .data      __vt__15dBgS_StatueAcch                                      */
 SECTION_DATA static void* __vt__15dBgS_StatueAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__15dBgS_StatueAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80667680,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80667678,
 };
 
 /* 80667B44-80667B50 000C+00 s=3 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 80667B50-80667B5C 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80667B5C-80667B68 000C+00 s=4 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 80667B68-80667B74 000C+00 s=6 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 806636EC-80663AA4 03B8+00 s=1 e=0 z=0  None .text      createHeap__11daCstatue_cFv                                  */
@@ -825,7 +826,7 @@ asm void daCstatue_c::createHeap() {
 #pragma pop
 
 
-/* 80663AA4-80663AEC 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80663AA4-80663AEC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -836,7 +837,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80663AEC-80663B34 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80663AEC-80663B34 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -880,7 +881,7 @@ asm dCcD_Sph::dCcD_Sph() {
 #pragma pop
 
 
-/* 80663CC0-80663D08 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80663CC0-80663D08 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1016,7 +1017,7 @@ asm void daCstatue_c::create() {
 #pragma pop
 
 
-/* 8066469C-806646F8 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 8066469C-806646F8 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1027,7 +1028,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 806646F8-80664768 0070+00 s=2 e=0 z=0  None .text      __dt__15dBgS_StatueAcchFv                                    */
+/* 806646F8-80664768 0070+00 s=3 e=0 z=0  None .text      __dt__15dBgS_StatueAcchFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1038,7 +1039,7 @@ asm dBgS_StatueAcch::~dBgS_StatueAcch() {
 #pragma pop
 
 
-/* 80664768-806647D8 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80664768-806647D8 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1049,7 +1050,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 806647D8-80664820 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 806647D8-80664820 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1060,11 +1061,11 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80664820-80664840 0020+00 s=0 e=0 z=0  None .text      daCstatue_Create__FP10fopAc_ac_c                             */
+/* 80664820-80664840 0020+00 s=1 e=0 z=0  None .text      daCstatue_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCstatue_Create(fopAc_ac_c* param_0) {
+asm static void daCstatue_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/daCstatue_Create__FP10fopAc_ac_c.s"
 }
@@ -1082,11 +1083,11 @@ asm daCstatue_c::~daCstatue_c() {
 #pragma pop
 
 
-/* 80664A78-80664AA0 0028+00 s=0 e=0 z=0  None .text      daCstatue_Delete__FP11daCstatue_c                            */
+/* 80664A78-80664AA0 0028+00 s=1 e=0 z=0  None .text      daCstatue_Delete__FP11daCstatue_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCstatue_Delete(daCstatue_c* param_0) {
+asm static void daCstatue_Delete(daCstatue_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/daCstatue_Delete__FP11daCstatue_c.s"
 }
@@ -1208,7 +1209,7 @@ asm void daCstatue_c::posMove() {
 #pragma pop
 
 
-/* 80665514-8066555C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 80665514-8066555C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1488,11 +1489,11 @@ asm void daCstatue_c::execute() {
 #pragma pop
 
 
-/* 80667418-80667438 0020+00 s=0 e=0 z=0  None .text      daCstatue_Execute__FP11daCstatue_c                           */
+/* 80667418-80667438 0020+00 s=1 e=0 z=0  None .text      daCstatue_Execute__FP11daCstatue_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCstatue_Execute(daCstatue_c* param_0) {
+asm static void daCstatue_Execute(daCstatue_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/daCstatue_Execute__FP11daCstatue_c.s"
 }
@@ -1510,18 +1511,18 @@ asm void daCstatue_c::draw() {
 #pragma pop
 
 
-/* 80667610-80667630 0020+00 s=0 e=0 z=0  None .text      daCstatue_Draw__FP11daCstatue_c                              */
+/* 80667610-80667630 0020+00 s=1 e=0 z=0  None .text      daCstatue_Draw__FP11daCstatue_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCstatue_Draw(daCstatue_c* param_0) {
+asm static void daCstatue_Draw(daCstatue_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/daCstatue_Draw__FP11daCstatue_c.s"
 }
 #pragma pop
 
 
-/* 80667630-80667678 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80667630-80667678 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1532,22 +1533,22 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80667678-80667680 0008+00 s=0 e=0 z=0  None .text      @36@__dt__15dBgS_StatueAcchFv                                */
+/* 80667678-80667680 0008+00 s=1 e=0 z=0  None .text      @36@__dt__15dBgS_StatueAcchFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80667678() {
+extern "C" asm static void func_80667678() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/func_80667678.s"
 }
 #pragma pop
 
 
-/* 80667680-80667688 0008+00 s=0 e=0 z=0  None .text      @20@__dt__15dBgS_StatueAcchFv                                */
+/* 80667680-80667688 0008+00 s=1 e=0 z=0  None .text      @20@__dt__15dBgS_StatueAcchFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80667680() {
+extern "C" asm static void func_80667680() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/func_80667680.s"
 }

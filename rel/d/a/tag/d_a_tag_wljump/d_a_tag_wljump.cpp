@@ -51,10 +51,10 @@ struct dMsgFlow_c {
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -65,20 +65,19 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daTagWljump_Create(fopAc_ac_c*); // 2
-void daTagWljump_Delete(daTagWljump_c*); // 2
-void daTagWljump_Execute(daTagWljump_c*); // 2
-void daTagWljump_Draw(daTagWljump_c*); // 2
+static void daTagWljump_Create(fopAc_ac_c*); // 2
+static void daTagWljump_Delete(daTagWljump_c*); // 2
+static void daTagWljump_Execute(daTagWljump_c*); // 2
+static void daTagWljump_Draw(daTagWljump_c*); // 2
 
 extern "C" void create__13daTagWljump_cFv(); // 1
-extern "C" void daTagWljump_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daTagWljump_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__13daTagWljump_cFv(); // 1
-extern "C" void daTagWljump_Delete__FP13daTagWljump_c(); // 1
+extern "C" static void daTagWljump_Delete__FP13daTagWljump_c(); // 1
 extern "C" void execute__13daTagWljump_cFv(); // 1
-extern "C" void daTagWljump_Execute__FP13daTagWljump_c(); // 1
+extern "C" static void daTagWljump_Execute__FP13daTagWljump_c(); // 1
 extern "C" bool draw__13daTagWljump_cFv(); // 1
-extern "C" void daTagWljump_Draw__FP13daTagWljump_c(); // 1
-extern "C" extern void* l_daTagWljump_Method[8];
+extern "C" static void daTagWljump_Draw__FP13daTagWljump_c(); // 1
 extern "C" extern void* g_profile_Tag_Wljump[12];
 
 // 
@@ -106,6 +105,8 @@ extern "C" void __dl__FPv(); // 1
 extern "C" void PSVECSquareDistance(); // 1
 extern "C" void _savegpr_26(); // 1
 extern "C" void _restgpr_26(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 m_midnaActor__9daPy_py_c[4];
@@ -126,11 +127,11 @@ asm void daTagWljump_c::create() {
 #pragma pop
 
 
-/* 80D64FE4-80D65004 0020+00 s=0 e=0 z=0  None .text      daTagWljump_Create__FP10fopAc_ac_c                           */
+/* 80D64FE4-80D65004 0020+00 s=1 e=0 z=0  None .text      daTagWljump_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagWljump_Create(fopAc_ac_c* param_0) {
+asm static void daTagWljump_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wljump/d_a_tag_wljump/daTagWljump_Create__FP10fopAc_ac_c.s"
 }
@@ -148,11 +149,11 @@ asm daTagWljump_c::~daTagWljump_c() {
 #pragma pop
 
 
-/* 80D65068-80D65090 0028+00 s=0 e=0 z=0  None .text      daTagWljump_Delete__FP13daTagWljump_c                        */
+/* 80D65068-80D65090 0028+00 s=1 e=0 z=0  None .text      daTagWljump_Delete__FP13daTagWljump_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagWljump_Delete(daTagWljump_c* param_0) {
+asm static void daTagWljump_Delete(daTagWljump_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wljump/d_a_tag_wljump/daTagWljump_Delete__FP13daTagWljump_c.s"
 }
@@ -222,11 +223,11 @@ asm void daTagWljump_c::execute() {
 #pragma pop
 
 
-/* 80D6587C-80D6589C 0020+00 s=0 e=0 z=0  None .text      daTagWljump_Execute__FP13daTagWljump_c                       */
+/* 80D6587C-80D6589C 0020+00 s=1 e=0 z=0  None .text      daTagWljump_Execute__FP13daTagWljump_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagWljump_Execute(daTagWljump_c* param_0) {
+asm static void daTagWljump_Execute(daTagWljump_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wljump/d_a_tag_wljump/daTagWljump_Execute__FP13daTagWljump_c.s"
 }
@@ -239,11 +240,11 @@ bool daTagWljump_c::draw() {
 }
 
 
-/* 80D658A4-80D658C4 0020+00 s=0 e=0 z=0  None .text      daTagWljump_Draw__FP13daTagWljump_c                          */
+/* 80D658A4-80D658C4 0020+00 s=1 e=0 z=0  None .text      daTagWljump_Draw__FP13daTagWljump_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTagWljump_Draw(daTagWljump_c* param_0) {
+asm static void daTagWljump_Draw(daTagWljump_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wljump/d_a_tag_wljump/daTagWljump_Draw__FP13daTagWljump_c.s"
 }
@@ -251,30 +252,30 @@ asm void daTagWljump_Draw(daTagWljump_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80D65914-80D65934 0020+00 s=0 e=0 z=0  None .data      l_daTagWljump_Method                                         */
-SECTION_DATA void* l_daTagWljump_Method[8] = {
+/* 80D65914-80D65934 0020+00 s=1 e=0 z=0  None .data      l_daTagWljump_Method                                         */
+SECTION_DATA static void* l_daTagWljump_Method[8] = {
+	(void*)daTagWljump_Create__FP10fopAc_ac_c,
+	(void*)daTagWljump_Delete__FP13daTagWljump_c,
+	(void*)daTagWljump_Execute__FP13daTagWljump_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daTagWljump_Draw__FP13daTagWljump_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D65934-80D65964 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_Wljump                                         */
+/* 80D65934-80D65964 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_Wljump                                         */
 SECTION_DATA void* g_profile_Tag_Wljump[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x02C70000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005CC,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01040000,
-	(void*)NULL,
+	(void*)&l_daTagWljump_Method,
 	(void*)0x00044000,
 	(void*)0x030E0000,
 };

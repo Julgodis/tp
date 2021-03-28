@@ -19,6 +19,7 @@ extern void* const data_80C91934[2];
 // 
 
 
+extern "C" void __sinit_d_a_obj_master_sword_cpp(); // 1
 
 // 
 // Declarations:

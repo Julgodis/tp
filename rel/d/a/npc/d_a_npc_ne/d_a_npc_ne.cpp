@@ -84,16 +84,16 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
-struct J3DAnmTransform {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorf {
@@ -156,10 +156,10 @@ struct dEvt_control_c {
 	/* 80042468 */ void reset();
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -293,7 +293,7 @@ struct Z2SoundObjSimple {
 
 static void anm_init(npc_ne_class*, int, f32, u8, f32); // 2
 static void nodeCallBack(J3DJoint*, int); // 2
-void daNpc_Ne_Draw(npc_ne_class*); // 2
+static void daNpc_Ne_Draw(npc_ne_class*); // 2
 static void other_bg_check(fopAc_ac_c*, fopAc_ac_c*); // 2
 static void ne_carry_check(npc_ne_class*); // 2
 static void way_bg_check(npc_ne_class*, s16); // 2
@@ -332,15 +332,15 @@ static void action(npc_ne_class*); // 2
 static void demo_camera(npc_ne_class*); // 2
 static void message(npc_ne_class*); // 2
 static void daNpc_Ne_Execute(npc_ne_class*); // 2
-bool daNpc_Ne_IsDelete(npc_ne_class*); // 2
-void daNpc_Ne_Delete(npc_ne_class*); // 2
+static bool daNpc_Ne_IsDelete(npc_ne_class*); // 2
+static void daNpc_Ne_Delete(npc_ne_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daNpc_Ne_Create(fopAc_ac_c*); // 2
+static void daNpc_Ne_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__14daNpc_Ne_HIO_cFv(); // 1
 extern "C" static void anm_init__FP12npc_ne_classifUcf(); // 1
 extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" void daNpc_Ne_Draw__FP12npc_ne_class(); // 1
+extern "C" static void daNpc_Ne_Draw__FP12npc_ne_class(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" static void other_bg_check__FP10fopAc_ac_cP10fopAc_ac_c(); // 1
 extern "C" static void ne_carry_check__FP12npc_ne_class(); // 1
@@ -382,19 +382,19 @@ extern "C" static void action__FP12npc_ne_class(); // 1
 extern "C" static void demo_camera__FP12npc_ne_class(); // 1
 extern "C" static void message__FP12npc_ne_class(); // 1
 extern "C" static void daNpc_Ne_Execute__FP12npc_ne_class(); // 1
-extern "C" bool daNpc_Ne_IsDelete__FP12npc_ne_class(); // 1
-extern "C" void daNpc_Ne_Delete__FP12npc_ne_class(); // 1
+extern "C" static bool daNpc_Ne_IsDelete__FP12npc_ne_class(); // 1
+extern "C" static void daNpc_Ne_Delete__FP12npc_ne_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void daNpc_Ne_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daNpc_Ne_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __ct__12npc_ne_classFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__14daNpc_Ne_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_npc_ne_cpp(); // 1
-extern "C" void func_80A923F8(); // 1
-extern "C" void func_80A92400(); // 1
+extern "C" static void func_80A923F8(); // 1
+extern "C" static void func_80A92400(); // 1
 extern "C" extern u32 const lit_4377;
 extern "C" extern u32 const lit_5007;
 extern "C" extern u32 const lit_5008;
@@ -408,7 +408,6 @@ extern "C" extern u32 const lit_6819;
 extern "C" extern u32 const lit_6820;
 extern "C" extern u32 const lit_6822;
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daNpc_Ne_Method[8];
 extern "C" extern void* g_profile_NPC_NE[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -628,6 +627,8 @@ extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -708,79 +709,79 @@ SECTION_DATA static u8 home_path[608] = {
 
 /* 80A92850-80A92880 0030+00 s=1 e=0 z=0  None .data      @5010                                                        */
 SECTION_DATA static void* lit_5010[12] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)npc_ne_tame__FP12npc_ne_class)+0xD0),
+	(void*)(((char*)npc_ne_tame__FP12npc_ne_class)+0x110),
+	(void*)(((char*)npc_ne_tame__FP12npc_ne_class)+0x21C),
+	(void*)(((char*)npc_ne_tame__FP12npc_ne_class)+0x760),
+	(void*)(((char*)npc_ne_tame__FP12npc_ne_class)+0x760),
+	(void*)(((char*)npc_ne_tame__FP12npc_ne_class)+0x44C),
+	(void*)(((char*)npc_ne_tame__FP12npc_ne_class)+0x4A4),
+	(void*)(((char*)npc_ne_tame__FP12npc_ne_class)+0x52C),
+	(void*)(((char*)npc_ne_tame__FP12npc_ne_class)+0x594),
+	(void*)(((char*)npc_ne_tame__FP12npc_ne_class)+0x760),
+	(void*)(((char*)npc_ne_tame__FP12npc_ne_class)+0x684),
+	(void*)(((char*)npc_ne_tame__FP12npc_ne_class)+0x684),
 };
 
 /* 80A92880-80A9289C 001C+00 s=1 e=0 z=0  None .data      @5215                                                        */
 SECTION_DATA static void* lit_5215[7] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)npc_ne_ball__FP12npc_ne_class)+0x1BC),
+	(void*)(((char*)npc_ne_ball__FP12npc_ne_class)+0x224),
+	(void*)(((char*)npc_ne_ball__FP12npc_ne_class)+0x3D8),
+	(void*)(((char*)npc_ne_ball__FP12npc_ne_class)+0x430),
+	(void*)(((char*)npc_ne_ball__FP12npc_ne_class)+0x560),
+	(void*)(((char*)npc_ne_ball__FP12npc_ne_class)+0x4BC),
+	(void*)(((char*)npc_ne_ball__FP12npc_ne_class)+0x4E8),
 };
 
 /* 80A9289C-80A928F0 0054+00 s=1 e=0 z=0  None .data      @5659                                                        */
 SECTION_DATA static void* lit_5659[21] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x7C),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0xB0),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x100),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x2B4),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x2EC),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x84C),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x84C),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x84C),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x84C),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x84C),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x338),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x464),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x528),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x5A4),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x5E4),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x84C),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x84C),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x84C),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x84C),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x84C),
+	(void*)(((char*)npc_ne_home__FP12npc_ne_class)+0x7E8),
 };
 
 /* 80A928F0-80A92944 0054+00 s=1 e=0 z=0  None .data      @6824                                                        */
 SECTION_DATA static void* lit_6824[21] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)action__FP12npc_ne_class)+0x164),
+	(void*)(((char*)action__FP12npc_ne_class)+0x178),
+	(void*)(((char*)action__FP12npc_ne_class)+0x190),
+	(void*)(((char*)action__FP12npc_ne_class)+0x1BC),
+	(void*)(((char*)action__FP12npc_ne_class)+0x1A8),
+	(void*)(((char*)action__FP12npc_ne_class)+0x200),
+	(void*)(((char*)action__FP12npc_ne_class)+0x210),
+	(void*)(((char*)action__FP12npc_ne_class)+0x1CC),
+	(void*)(((char*)action__FP12npc_ne_class)+0x1D8),
+	(void*)(((char*)action__FP12npc_ne_class)+0x1EC),
+	(void*)(((char*)action__FP12npc_ne_class)+0x220),
+	(void*)(((char*)action__FP12npc_ne_class)+0x30C),
+	(void*)(((char*)action__FP12npc_ne_class)+0x238),
+	(void*)(((char*)action__FP12npc_ne_class)+0x264),
+	(void*)(((char*)action__FP12npc_ne_class)+0x27C),
+	(void*)(((char*)action__FP12npc_ne_class)+0x294),
+	(void*)(((char*)action__FP12npc_ne_class)+0x2A8),
+	(void*)(((char*)action__FP12npc_ne_class)+0x2BC),
+	(void*)(((char*)action__FP12npc_ne_class)+0x2D0),
+	(void*)(((char*)action__FP12npc_ne_class)+0x30C),
+	(void*)(((char*)action__FP12npc_ne_class)+0x2E8),
 };
 
 /* 80A92944-80A92948 0004+00 s=1 e=0 z=0  None .data      e_name$7147                                                  */
@@ -809,30 +810,30 @@ SECTION_DATA static u8 data_80A92990[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x41, 0x70, 0x00, 0x00,
 };
 
-/* 80A929D0-80A929F0 0020+00 s=0 e=0 z=0  None .data      l_daNpc_Ne_Method                                            */
-SECTION_DATA void* l_daNpc_Ne_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80A929D0-80A929F0 0020+00 s=1 e=0 z=0  None .data      l_daNpc_Ne_Method                                            */
+SECTION_DATA static void* l_daNpc_Ne_Method[8] = {
+	(void*)daNpc_Ne_Create__FP10fopAc_ac_c,
+	(void*)daNpc_Ne_Delete__FP12npc_ne_class,
+	(void*)daNpc_Ne_Execute__FP12npc_ne_class,
+	(void*)daNpc_Ne_IsDelete__FP12npc_ne_class,
+	(void*)daNpc_Ne_Draw__FP12npc_ne_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80A929F0-80A92A20 0030+00 s=0 e=0 z=0  None .data      g_profile_NPC_NE                                             */
+/* 80A929F0-80A92A20 0030+00 s=0 e=0 z=1  None .data      g_profile_NPC_NE                                             */
 SECTION_DATA void* g_profile_NPC_NE[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x010D0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000CC4,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02BC0000,
-	(void*)NULL,
+	(void*)&l_daNpc_Ne_Method,
 	(void*)0x08044000,
 	(void*)0x04000000,
 };
@@ -841,48 +842,48 @@ SECTION_DATA void* g_profile_NPC_NE[12] = {
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80A92A2C-80A92A38 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80A92A38-80A92A5C 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80A92400,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80A923F8,
 };
 
 /* 80A92A5C-80A92A68 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 80A92A68-80A92A74 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGPla                                              */
 SECTION_DATA static void* __vt__8cM3dGPla[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGPlaFv,
 };
 
 /* 80A92A74-80A92A80 000C+00 s=2 e=0 z=0  None .data      __vt__14daNpc_Ne_HIO_c                                       */
 SECTION_DATA static void* __vt__14daNpc_Ne_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14daNpc_Ne_HIO_cFv,
 };
 
 /* 80A88CCC-80A88D14 0048+00 s=1 e=0 z=0  None .text      __ct__14daNpc_Ne_HIO_cFv                                     */
@@ -1244,11 +1245,11 @@ SECTION_DEAD char const* const stringBase_80A925DF = "F_SP103";
 SECTION_DEAD char const* const stringBase_80A925E7 = "Npc_ne";
 #pragma pop
 
-/* 80A88FC4-80A89160 019C+00 s=0 e=0 z=0  None .text      daNpc_Ne_Draw__FP12npc_ne_class                              */
+/* 80A88FC4-80A89160 019C+00 s=1 e=0 z=0  None .text      daNpc_Ne_Draw__FP12npc_ne_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpc_Ne_Draw(npc_ne_class* param_0) {
+asm static void daNpc_Ne_Draw(npc_ne_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/daNpc_Ne_Draw__FP12npc_ne_class.s"
 }
@@ -1299,7 +1300,7 @@ asm static void way_bg_check(npc_ne_class* param_0, s16 param_1) {
 #pragma pop
 
 
-/* 80A895F8-80A89640 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 80A895F8-80A89640 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1484,7 +1485,7 @@ asm static void s_fish_sub(void* param_0, void* param_1) {
 #pragma pop
 
 
-/* 80A8AB70-80A8B530 09C0+00 s=1 e=0 z=0  None .text      npc_ne_tame__FP12npc_ne_class                                */
+/* 80A8AB70-80A8B530 09C0+00 s=2 e=0 z=0  None .text      npc_ne_tame__FP12npc_ne_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1517,7 +1518,7 @@ asm static void npc_ne_bird(npc_ne_class* param_0) {
 #pragma pop
 
 
-/* 80A8BAFC-80A8C094 0598+00 s=1 e=0 z=0  None .text      npc_ne_ball__FP12npc_ne_class                                */
+/* 80A8BAFC-80A8C094 0598+00 s=2 e=0 z=0  None .text      npc_ne_ball__FP12npc_ne_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1583,7 +1584,7 @@ asm static void home_path_search(npc_ne_class* param_0, int param_1) {
 #pragma pop
 
 
-/* 80A8CC64-80A8D608 09A4+00 s=1 e=0 z=0  None .text      npc_ne_home__FP12npc_ne_class                                */
+/* 80A8CC64-80A8D608 09A4+00 s=2 e=0 z=0  None .text      npc_ne_home__FP12npc_ne_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1721,7 +1722,7 @@ asm static void npc_ne_message(npc_ne_class* param_0) {
 #pragma pop
 
 
-/* 80A8F278-80A903E8 1170+00 s=1 e=0 z=0  None .text      action__FP12npc_ne_class                                     */
+/* 80A8F278-80A903E8 1170+00 s=2 e=0 z=0  None .text      action__FP12npc_ne_class                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1754,7 +1755,7 @@ asm static void message(npc_ne_class* param_0) {
 #pragma pop
 
 
-/* 80A91004-80A9172C 0728+00 s=1 e=0 z=0  None .text      daNpc_Ne_Execute__FP12npc_ne_class                           */
+/* 80A91004-80A9172C 0728+00 s=2 e=0 z=0  None .text      daNpc_Ne_Execute__FP12npc_ne_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1765,17 +1766,17 @@ asm static void daNpc_Ne_Execute(npc_ne_class* param_0) {
 #pragma pop
 
 
-/* 80A9172C-80A91734 0008+00 s=0 e=0 z=0  None .text      daNpc_Ne_IsDelete__FP12npc_ne_class                          */
-bool daNpc_Ne_IsDelete(npc_ne_class* param_0) {
+/* 80A9172C-80A91734 0008+00 s=1 e=0 z=0  None .text      daNpc_Ne_IsDelete__FP12npc_ne_class                          */
+static bool daNpc_Ne_IsDelete(npc_ne_class* param_0) {
 	return true;
 }
 
 
-/* 80A91734-80A91798 0064+00 s=0 e=0 z=0  None .text      daNpc_Ne_Delete__FP12npc_ne_class                            */
+/* 80A91734-80A91798 0064+00 s=1 e=0 z=0  None .text      daNpc_Ne_Delete__FP12npc_ne_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpc_Ne_Delete(npc_ne_class* param_0) {
+asm static void daNpc_Ne_Delete(npc_ne_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/daNpc_Ne_Delete__FP12npc_ne_class.s"
 }
@@ -1793,7 +1794,7 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80A91B40-80A91B88 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80A91B40-80A91B88 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1804,11 +1805,11 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80A91B88-80A92118 0590+00 s=0 e=0 z=0  None .text      daNpc_Ne_Create__FP10fopAc_ac_c                              */
+/* 80A91B88-80A92118 0590+00 s=1 e=0 z=0  None .text      daNpc_Ne_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpc_Ne_Create(fopAc_ac_c* param_0) {
+asm static void daNpc_Ne_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/daNpc_Ne_Create__FP10fopAc_ac_c.s"
 }
@@ -1826,7 +1827,7 @@ asm npc_ne_class::npc_ne_class() {
 #pragma pop
 
 
-/* 80A92274-80A922BC 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80A92274-80A922BC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1837,7 +1838,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80A922BC-80A92304 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80A922BC-80A92304 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1848,7 +1849,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80A92304-80A92374 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80A92304-80A92374 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1859,7 +1860,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80A92374-80A923BC 0048+00 s=1 e=0 z=0  None .text      __dt__14daNpc_Ne_HIO_cFv                                     */
+/* 80A92374-80A923BC 0048+00 s=2 e=0 z=0  None .text      __dt__14daNpc_Ne_HIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1870,7 +1871,7 @@ asm daNpc_Ne_HIO_c::~daNpc_Ne_HIO_c() {
 #pragma pop
 
 
-/* 80A923BC-80A923F8 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_npc_ne_cpp                                       */
+/* 80A923BC-80A923F8 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_npc_ne_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1881,22 +1882,22 @@ extern "C" asm void __sinit_d_a_npc_ne_cpp() {
 #pragma pop
 
 
-/* 80A923F8-80A92400 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80A923F8-80A92400 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80A923F8() {
+extern "C" asm static void func_80A923F8() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/func_80A923F8.s"
 }
 #pragma pop
 
 
-/* 80A92400-80A92408 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80A92400-80A92408 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80A92400() {
+extern "C" asm static void func_80A92400() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/func_80A92400.s"
 }

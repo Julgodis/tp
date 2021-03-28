@@ -19,6 +19,7 @@ extern void* const data_809F2C44[2];
 // 
 
 
+extern "C" void __sinit_d_a_npc_guard_cpp(); // 1
 
 // 
 // Declarations:

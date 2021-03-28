@@ -49,91 +49,91 @@ struct dStage_roomControl_c {
 	/* 80024DB0 */ void SetTimePass(int);
 };
 
-struct stage_plight_info_class {
-};
-
-struct dStage_FloorInfo_c {
-};
-
-struct stage_camera_class {
-};
-
-struct dStage_Lbnk_c {
+struct stage_arrow_class {
 };
 
 struct dStage_dPath_c {
 };
 
-struct dStage_MemoryMap_c {
-};
-
-struct stage_arrow_class {
+struct roomRead_class {
 };
 
 struct dStage_dPnt_c {
+};
+
+struct stage_envr_info_class {
+};
+
+struct dStage_FileList2_dt_c {
+};
+
+struct stage_map_info_dummy_class {
+};
+
+struct stage_vrboxcol_info_class {
+};
+
+struct stage_plight_info_class {
+};
+
+struct dStage_MapEventInfo_c {
+};
+
+struct stage_map_info_class {
+};
+
+struct stage_pselect_info_class {
+};
+
+struct stage_stag_info_class {
+};
+
+struct stage_palette_info_class {
+};
+
+struct stage_tresure_class {
+};
+
+struct dStage_FloorInfo_c {
+};
+
+struct dStage_SoundInfo_c {
+};
+
+struct dStage_Lbnk_c {
+};
+
+struct stage_camera_class {
+};
+
+struct dStage_Multi_c {
+};
+
+struct dStage_MemoryMap_c {
+};
+
+struct dStage_FileList_dt_c {
+};
+
+struct stage_vrbox_info_class {
+};
+
+struct dStage_DMap_c {
+};
+
+struct stage_scls_info_dummy_class {
+};
+
+struct stage_actor_class {
+};
+
+struct dStage_MemoryConfig_c {
 };
 
 struct stage_pure_lightvec_info_class {
 };
 
 struct dStage_Elst_c {
-};
-
-struct stage_scls_info_dummy_class {
-};
-
-struct dStage_MapEventInfo_c {
-};
-
-struct stage_palette_info_class {
-};
-
-struct dStage_MemoryConfig_c {
-};
-
-struct stage_map_info_class {
-};
-
-struct stage_stag_info_class {
-};
-
-struct stage_envr_info_class {
-};
-
-struct dStage_DMap_c {
-};
-
-struct stage_map_info_dummy_class {
-};
-
-struct dStage_SoundInfo_c {
-};
-
-struct stage_tresure_class {
-};
-
-struct stage_actor_class {
-};
-
-struct stage_vrbox_info_class {
-};
-
-struct dStage_FileList2_dt_c {
-};
-
-struct roomRead_class {
-};
-
-struct dStage_Multi_c {
-};
-
-struct dStage_FileList_dt_c {
-};
-
-struct stage_pselect_info_class {
-};
-
-struct stage_vrboxcol_info_class {
 };
 
 struct dStage_stageDt_c {

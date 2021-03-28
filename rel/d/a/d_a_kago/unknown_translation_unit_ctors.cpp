@@ -19,6 +19,7 @@ extern void* const data_80854AF0[2];
 // 
 
 
+extern "C" void __sinit_d_a_kago_cpp(); // 1
 
 // 
 // Declarations:

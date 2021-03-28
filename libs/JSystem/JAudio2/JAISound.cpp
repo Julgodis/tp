@@ -18,6 +18,15 @@ struct JAISoundHandle {
 struct JAIAudience {
 };
 
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
 struct JAISoundID {
 };
 
@@ -27,15 +36,6 @@ struct JASSoundParams {
 struct JASTrack {
 	/* 80291444 */ void setChannelMgrCount(u32);
 	/* 802919F4 */ void assignExtBuffer(u32, JASSoundParams*);
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
-
 };
 
 struct JAISound {

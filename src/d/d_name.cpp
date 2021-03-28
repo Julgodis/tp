@@ -118,10 +118,10 @@ struct CPaneMgrAlpha {
 	/* 80255608 */ void hide();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

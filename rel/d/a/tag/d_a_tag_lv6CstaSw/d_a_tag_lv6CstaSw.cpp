@@ -51,10 +51,10 @@ struct cXyz {
 // Forward References:
 // 
 
-void daLv6CstaSw_Draw(daLv6CstaSw_c*); // 2
-void daLv6CstaSw_Execute(daLv6CstaSw_c*); // 2
-void daLv6CstaSw_Delete(daLv6CstaSw_c*); // 2
-void daLv6CstaSw_Create(fopAc_ac_c*); // 2
+static void daLv6CstaSw_Draw(daLv6CstaSw_c*); // 2
+static void daLv6CstaSw_Execute(daLv6CstaSw_c*); // 2
+static void daLv6CstaSw_Delete(daLv6CstaSw_c*); // 2
+static void daLv6CstaSw_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__17daLv6CstaSw_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -65,13 +65,12 @@ extern "C" void areaCheck__13daLv6CstaSw_cFv(); // 1
 extern "C" void Execute__13daLv6CstaSw_cFv(); // 1
 extern "C" bool Draw__13daLv6CstaSw_cFv(); // 1
 extern "C" bool Delete__13daLv6CstaSw_cFv(); // 1
-extern "C" void daLv6CstaSw_Draw__FP13daLv6CstaSw_c(); // 1
-extern "C" void daLv6CstaSw_Execute__FP13daLv6CstaSw_c(); // 1
-extern "C" void daLv6CstaSw_Delete__FP13daLv6CstaSw_c(); // 1
-extern "C" void daLv6CstaSw_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daLv6CstaSw_Draw__FP13daLv6CstaSw_c(); // 1
+extern "C" static void daLv6CstaSw_Execute__FP13daLv6CstaSw_c(); // 1
+extern "C" static void daLv6CstaSw_Delete__FP13daLv6CstaSw_c(); // 1
+extern "C" static void daLv6CstaSw_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__17daLv6CstaSw_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_tag_lv6CstaSw_cpp(); // 1
-extern "C" extern void* l_daLv6CstaSw_Method[8];
 extern "C" extern void* g_profile_Tag_Lv6CstaSw[12];
 
 // 
@@ -96,6 +95,8 @@ extern "C" void PSMTXTrans(); // 1
 extern "C" void PSVECSquareMag(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 __float_nan;
@@ -106,30 +107,30 @@ extern "C" void __register_global_object(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80D5B810-80D5B830 0020+00 s=0 e=0 z=0  None .data      l_daLv6CstaSw_Method                                         */
-SECTION_DATA void* l_daLv6CstaSw_Method[8] = {
+/* 80D5B810-80D5B830 0020+00 s=1 e=0 z=0  None .data      l_daLv6CstaSw_Method                                         */
+SECTION_DATA static void* l_daLv6CstaSw_Method[8] = {
+	(void*)daLv6CstaSw_Create__FP10fopAc_ac_c,
+	(void*)daLv6CstaSw_Delete__FP13daLv6CstaSw_c,
+	(void*)daLv6CstaSw_Execute__FP13daLv6CstaSw_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daLv6CstaSw_Draw__FP13daLv6CstaSw_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D5B830-80D5B860 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_Lv6CstaSw                                      */
+/* 80D5B830-80D5B860 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_Lv6CstaSw                                      */
 SECTION_DATA void* g_profile_Tag_Lv6CstaSw[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01910000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000570,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02920000,
-	(void*)NULL,
+	(void*)&l_daLv6CstaSw_Method,
 	(void*)0x00044000,
 	(void*)0x000E0000,
 };
@@ -138,14 +139,14 @@ SECTION_DATA void* g_profile_Tag_Lv6CstaSw[12] = {
 SECTION_DATA static void* __vt__17daLv6CstaSw_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__17daLv6CstaSw_HIO_cFv,
 };
 
 /* 80D5B86C-80D5B878 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
 /* 80D5B2EC-80D5B310 0024+00 s=1 e=0 z=0  None .text      __ct__17daLv6CstaSw_HIO_cFv                                  */
@@ -159,7 +160,7 @@ asm daLv6CstaSw_HIO_c::daLv6CstaSw_HIO_c() {
 #pragma pop
 
 
-/* 80D5B310-80D5B358 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80D5B310-80D5B358 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -263,51 +264,51 @@ bool daLv6CstaSw_c::Delete() {
 }
 
 
-/* 80D5B6C0-80D5B6E0 0020+00 s=0 e=0 z=0  None .text      daLv6CstaSw_Draw__FP13daLv6CstaSw_c                          */
+/* 80D5B6C0-80D5B6E0 0020+00 s=1 e=0 z=0  None .text      daLv6CstaSw_Draw__FP13daLv6CstaSw_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daLv6CstaSw_Draw(daLv6CstaSw_c* param_0) {
+asm static void daLv6CstaSw_Draw(daLv6CstaSw_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/daLv6CstaSw_Draw__FP13daLv6CstaSw_c.s"
 }
 #pragma pop
 
 
-/* 80D5B6E0-80D5B700 0020+00 s=0 e=0 z=0  None .text      daLv6CstaSw_Execute__FP13daLv6CstaSw_c                       */
+/* 80D5B6E0-80D5B700 0020+00 s=1 e=0 z=0  None .text      daLv6CstaSw_Execute__FP13daLv6CstaSw_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daLv6CstaSw_Execute(daLv6CstaSw_c* param_0) {
+asm static void daLv6CstaSw_Execute(daLv6CstaSw_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/daLv6CstaSw_Execute__FP13daLv6CstaSw_c.s"
 }
 #pragma pop
 
 
-/* 80D5B700-80D5B720 0020+00 s=0 e=0 z=0  None .text      daLv6CstaSw_Delete__FP13daLv6CstaSw_c                        */
+/* 80D5B700-80D5B720 0020+00 s=1 e=0 z=0  None .text      daLv6CstaSw_Delete__FP13daLv6CstaSw_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daLv6CstaSw_Delete(daLv6CstaSw_c* param_0) {
+asm static void daLv6CstaSw_Delete(daLv6CstaSw_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/daLv6CstaSw_Delete__FP13daLv6CstaSw_c.s"
 }
 #pragma pop
 
 
-/* 80D5B720-80D5B740 0020+00 s=0 e=0 z=0  None .text      daLv6CstaSw_Create__FP10fopAc_ac_c                           */
+/* 80D5B720-80D5B740 0020+00 s=1 e=0 z=0  None .text      daLv6CstaSw_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daLv6CstaSw_Create(fopAc_ac_c* param_0) {
+asm static void daLv6CstaSw_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/daLv6CstaSw_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80D5B740-80D5B79C 005C+00 s=1 e=0 z=0  None .text      __dt__17daLv6CstaSw_HIO_cFv                                  */
+/* 80D5B740-80D5B79C 005C+00 s=2 e=0 z=0  None .text      __dt__17daLv6CstaSw_HIO_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -325,7 +326,7 @@ static u8 lit_3619[12];
 /* 80D5B88C-80D5B894 0008+00 s=1 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[8];
 
-/* 80D5B79C-80D5B7D8 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_tag_lv6CstaSw_cpp                                */
+/* 80D5B79C-80D5B7D8 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_tag_lv6CstaSw_cpp                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -19,6 +19,7 @@ extern void* const data_80C53FA8[2];
 // 
 
 
+extern "C" void __sinit_d_a_obj_lbox_cpp(); // 1
 
 // 
 // Declarations:

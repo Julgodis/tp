@@ -93,6 +93,9 @@ struct dBgS_LinChk {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -118,10 +121,10 @@ struct Z2SoundObjSimple {
 // Forward References:
 // 
 
-void daObjFallObj_create1st(daObjFallObj_c*); // 2
-void daObjFallObj_MoveBGDelete(daObjFallObj_c*); // 2
-void daObjFallObj_MoveBGExecute(daObjFallObj_c*); // 2
-void daObjFallObj_MoveBGDraw(daObjFallObj_c*); // 2
+static void daObjFallObj_create1st(daObjFallObj_c*); // 2
+static void daObjFallObj_MoveBGDelete(daObjFallObj_c*); // 2
+static void daObjFallObj_MoveBGExecute(daObjFallObj_c*); // 2
+static void daObjFallObj_MoveBGDraw(daObjFallObj_c*); // 2
 static void cLib_calcTimer__template0(s16*); // 2
 static void cLib_calcTimer__template1(u8*); // 2
 
@@ -144,14 +147,13 @@ extern "C" void checkHang__14daObjFallObj_cFv(); // 1
 extern "C" void checkHang2__14daObjFallObj_cFv(); // 1
 extern "C" void Draw__14daObjFallObj_cFv(); // 1
 extern "C" void Delete__14daObjFallObj_cFv(); // 1
-extern "C" void daObjFallObj_create1st__FP14daObjFallObj_c(); // 1
-extern "C" void daObjFallObj_MoveBGDelete__FP14daObjFallObj_c(); // 1
-extern "C" void daObjFallObj_MoveBGExecute__FP14daObjFallObj_c(); // 1
-extern "C" void daObjFallObj_MoveBGDraw__FP14daObjFallObj_c(); // 1
+extern "C" static void daObjFallObj_create1st__FP14daObjFallObj_c(); // 1
+extern "C" static void daObjFallObj_MoveBGDelete__FP14daObjFallObj_c(); // 1
+extern "C" static void daObjFallObj_MoveBGExecute__FP14daObjFallObj_c(); // 1
+extern "C" static void daObjFallObj_MoveBGDraw__FP14daObjFallObj_c(); // 1
 extern "C" static void func_80BE4A70(); // 1
 extern "C" static void func_80BE4A8C(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* daObjFallObj_METHODS[8];
 extern "C" extern void* g_profile_Obj_FallObj[12];
 
 // 
@@ -201,6 +203,9 @@ extern "C" void __ct__11dBgS_LinChkFv(); // 1
 extern "C" void __dt__11dBgS_LinChkFv(); // 1
 extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -216,6 +221,8 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -261,38 +268,6 @@ SECTION_RODATA static u32 const lit_3678 = 0xC3960000;
 /* 80BE4AB8-80BE4ABC 0004+00 s=1 e=0 z=0  None .rodata    @3679                                                        */
 SECTION_RODATA static u32 const lit_3679 = 0xC0C00000;
 
-/* 80BE4B20-80BE4B24 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
-
-/* 80BE4B24-80BE4B3C 0018+00 s=1 e=0 z=0  None .data      l_cull_box                                                   */
-SECTION_DATA static u8 l_cull_box[24] = {
-	0xC3, 0x48, 0x00, 0x00, 0xC6, 0x1C, 0x40, 0x00, 0xC3, 0x48, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00,
-	0x44, 0x16, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00,
-};
-
-/* 80BE3A88-80BE3BA8 0120+00 s=0 e=0 z=0  None .text      Create__14daObjFallObj_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjFallObj_c::Create() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/Create__14daObjFallObj_cFv.s"
-}
-#pragma pop
-
-
-/* 80BE3BA8-80BE3BD4 002C+00 s=2 e=0 z=0  None .text      getFallTime__14daObjFallObj_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjFallObj_c::getFallTime() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/getFallTime__14daObjFallObj_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
 /* 80BE4ABC-80BE4AC0 0004+00 s=1 e=0 z=0  None .rodata    @3705                                                        */
 SECTION_RODATA static u32 const lit_3705 = 0x43E10000;
 
@@ -307,40 +282,6 @@ SECTION_RODATA static u8 const lit_3709[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80BE3BD4-80BE3C28 0054+00 s=1 e=0 z=0  None .text      getFallHeight__14daObjFallObj_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjFallObj_c::getFallHeight() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/getFallHeight__14daObjFallObj_cFv.s"
-}
-#pragma pop
-
-
-/* 80BE3C28-80BE3C98 0070+00 s=0 e=0 z=0  None .text      CreateHeap__14daObjFallObj_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjFallObj_c::CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/CreateHeap__14daObjFallObj_cFv.s"
-}
-#pragma pop
-
-
-/* 80BE3C98-80BE3D24 008C+00 s=1 e=0 z=0  None .text      create1st__14daObjFallObj_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjFallObj_c::create1st() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/create1st__14daObjFallObj_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
 /* 80BE4AD0-80BE4AD4 0004+00 s=1 e=0 z=0  None .rodata    @3818                                                        */
 SECTION_RODATA static u32 const lit_3818 = 0x43160000;
 
@@ -365,7 +306,102 @@ SECTION_RODATA static u8 const lit_3822[8] = {
 /* 80BE4AF0-80BE4AF4 0004+00 s=1 e=0 z=0  None .rodata    @3823                                                        */
 SECTION_RODATA static u32 const lit_3823 = 0x45066000;
 
-/* 80BE3D24-80BE4138 0414+00 s=0 e=0 z=0  None .text      Execute__14daObjFallObj_cFPPA3_A4_f                          */
+/* 80BE4AF4-80BE4AF8 0004+00 s=1 e=0 z=0  None .rodata    @3882                                                        */
+SECTION_RODATA static u32 const lit_3882 = 0xC1C80000;
+
+/* 80BE4AF8-80BE4B00 0004+04 s=1 e=0 z=0  None .rodata    @3883                                                        */
+SECTION_RODATA static u32 const lit_3883[1 + 1 /* padding */] = {
+	0x3F800000,
+	/* padding */
+	0x00000000,
+};
+
+/* 80BE4B00-80BE4B08 0008+00 s=1 e=0 z=0  None .rodata    @3930                                                        */
+SECTION_RODATA static u8 const lit_3930[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
+/* 80BE4B08-80BE4B0C 0004+00 s=2 e=0 z=0  None .rodata    @3949                                                        */
+SECTION_RODATA static u32 const lit_3949 = 0x461C4000;
+
+/* 80BE4B0C-80BE4B10 0004+00 s=1 e=0 z=0  None .rodata    @3990                                                        */
+SECTION_RODATA static u32 const lit_3990 = 0x437A0000;
+
+/* 80BE4B10-80BE4B14 0004+00 s=1 e=0 z=0  None .rodata    @3991                                                        */
+SECTION_RODATA static u32 const lit_3991 = 0x42C80000;
+
+/* 80BE4B14-80BE4B1E 000A+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80BE4B14 = "K_drock00";
+#pragma pop
+
+/* 80BE4B20-80BE4B24 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+
+/* 80BE4B24-80BE4B3C 0018+00 s=1 e=0 z=0  None .data      l_cull_box                                                   */
+SECTION_DATA static u8 l_cull_box[24] = {
+	0xC3, 0x48, 0x00, 0x00, 0xC6, 0x1C, 0x40, 0x00, 0xC3, 0x48, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00,
+	0x44, 0x16, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00,
+};
+
+/* 80BE3A88-80BE3BA8 0120+00 s=1 e=0 z=0  None .text      Create__14daObjFallObj_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjFallObj_c::Create() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/Create__14daObjFallObj_cFv.s"
+}
+#pragma pop
+
+
+/* 80BE3BA8-80BE3BD4 002C+00 s=2 e=0 z=0  None .text      getFallTime__14daObjFallObj_cFv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjFallObj_c::getFallTime() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/getFallTime__14daObjFallObj_cFv.s"
+}
+#pragma pop
+
+
+/* 80BE3BD4-80BE3C28 0054+00 s=1 e=0 z=0  None .text      getFallHeight__14daObjFallObj_cFv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjFallObj_c::getFallHeight() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/getFallHeight__14daObjFallObj_cFv.s"
+}
+#pragma pop
+
+
+/* 80BE3C28-80BE3C98 0070+00 s=1 e=0 z=0  None .text      CreateHeap__14daObjFallObj_cFv                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjFallObj_c::CreateHeap() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/CreateHeap__14daObjFallObj_cFv.s"
+}
+#pragma pop
+
+
+/* 80BE3C98-80BE3D24 008C+00 s=1 e=0 z=0  None .text      create1st__14daObjFallObj_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjFallObj_c::create1st() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/create1st__14daObjFallObj_cFv.s"
+}
+#pragma pop
+
+
+/* 80BE3D24-80BE4138 0414+00 s=1 e=0 z=0  None .text      Execute__14daObjFallObj_cFPPA3_A4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -398,17 +434,6 @@ asm void daObjFallObj_c::action_wait(bool param_0) {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80BE4AF4-80BE4AF8 0004+00 s=1 e=0 z=0  None .rodata    @3882                                                        */
-SECTION_RODATA static u32 const lit_3882 = 0xC1C80000;
-
-/* 80BE4AF8-80BE4B00 0004+04 s=1 e=0 z=0  None .rodata    @3883                                                        */
-SECTION_RODATA static u32 const lit_3883[1 + 1 /* padding */] = {
-	0x3F800000,
-	/* padding */
-	0x00000000,
-};
-
 /* 80BE42C0-80BE43E4 0124+00 s=1 e=0 z=0  None .text      action_fallStart__14daObjFallObj_cFv                         */
 #pragma push
 #pragma optimization_level 0
@@ -420,12 +445,6 @@ asm void daObjFallObj_c::action_fallStart() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80BE4B00-80BE4B08 0008+00 s=1 e=0 z=0  None .rodata    @3930                                                        */
-SECTION_RODATA static u8 const lit_3930[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
 /* 80BE43E4-80BE45F4 0210+00 s=1 e=0 z=0  None .text      action_countdown__14daObjFallObj_cFv                         */
 #pragma push
 #pragma optimization_level 0
@@ -436,10 +455,6 @@ asm void daObjFallObj_c::action_countdown() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80BE4B08-80BE4B0C 0004+00 s=2 e=0 z=0  None .rodata    @3949                                                        */
-SECTION_RODATA static u32 const lit_3949 = 0x461C4000;
 
 /* 80BE45F4-80BE466C 0078+00 s=1 e=0 z=0  None .text      action_fall__14daObjFallObj_cFv                              */
 #pragma push
@@ -469,13 +484,6 @@ asm void daObjFallObj_c::action_follow_fall() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80BE4B0C-80BE4B10 0004+00 s=1 e=0 z=0  None .rodata    @3990                                                        */
-SECTION_RODATA static u32 const lit_3990 = 0x437A0000;
-
-/* 80BE4B10-80BE4B14 0004+00 s=1 e=0 z=0  None .rodata    @3991                                                        */
-SECTION_RODATA static u32 const lit_3991 = 0x42C80000;
-
 /* 80BE4700-80BE47A0 00A0+00 s=2 e=0 z=0  None .text      checkHang__14daObjFallObj_cFv                                */
 #pragma push
 #pragma optimization_level 0
@@ -498,7 +506,7 @@ asm void daObjFallObj_c::checkHang2() {
 #pragma pop
 
 
-/* 80BE48A4-80BE4948 00A4+00 s=0 e=0 z=0  None .text      Draw__14daObjFallObj_cFv                                     */
+/* 80BE48A4-80BE4948 00A4+00 s=1 e=0 z=0  None .text      Draw__14daObjFallObj_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -509,7 +517,7 @@ asm void daObjFallObj_c::Draw() {
 #pragma pop
 
 
-/* 80BE4948-80BE4990 0048+00 s=0 e=0 z=0  None .text      Delete__14daObjFallObj_cFv                                   */
+/* 80BE4948-80BE4990 0048+00 s=1 e=0 z=0  None .text      Delete__14daObjFallObj_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -521,30 +529,30 @@ asm void daObjFallObj_c::Delete() {
 
 
 /* ############################################################################################## */
-/* 80BE4B3C-80BE4B5C 0020+00 s=0 e=0 z=0  None .data      daObjFallObj_METHODS                                         */
-SECTION_DATA void* daObjFallObj_METHODS[8] = {
+/* 80BE4B3C-80BE4B5C 0020+00 s=1 e=0 z=0  None .data      daObjFallObj_METHODS                                         */
+SECTION_DATA static void* daObjFallObj_METHODS[8] = {
+	(void*)daObjFallObj_create1st__FP14daObjFallObj_c,
+	(void*)daObjFallObj_MoveBGDelete__FP14daObjFallObj_c,
+	(void*)daObjFallObj_MoveBGExecute__FP14daObjFallObj_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjFallObj_MoveBGDraw__FP14daObjFallObj_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80BE4B5C-80BE4B8C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_FallObj                                        */
+/* 80BE4B5C-80BE4B8C 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_FallObj                                        */
 SECTION_DATA void* g_profile_Obj_FallObj[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00AA0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000614,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02280000,
-	(void*)NULL,
+	(void*)&daObjFallObj_METHODS,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -553,54 +561,54 @@ SECTION_DATA void* g_profile_Obj_FallObj[12] = {
 SECTION_DATA static void* __vt__14daObjFallObj_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__14daObjFallObj_cFv,
+	(void*)Create__14daObjFallObj_cFv,
+	(void*)Execute__14daObjFallObj_cFPPA3_A4_f,
+	(void*)Draw__14daObjFallObj_cFv,
+	(void*)Delete__14daObjFallObj_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
-/* 80BE4990-80BE4A04 0074+00 s=0 e=0 z=0  None .text      daObjFallObj_create1st__FP14daObjFallObj_c                   */
+/* 80BE4990-80BE4A04 0074+00 s=1 e=0 z=0  None .text      daObjFallObj_create1st__FP14daObjFallObj_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjFallObj_create1st(daObjFallObj_c* param_0) {
+asm static void daObjFallObj_create1st(daObjFallObj_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/daObjFallObj_create1st__FP14daObjFallObj_c.s"
 }
 #pragma pop
 
 
-/* 80BE4A04-80BE4A24 0020+00 s=0 e=0 z=0  None .text      daObjFallObj_MoveBGDelete__FP14daObjFallObj_c                */
+/* 80BE4A04-80BE4A24 0020+00 s=1 e=0 z=0  None .text      daObjFallObj_MoveBGDelete__FP14daObjFallObj_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjFallObj_MoveBGDelete(daObjFallObj_c* param_0) {
+asm static void daObjFallObj_MoveBGDelete(daObjFallObj_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/daObjFallObj_MoveBGDelete__FP14daObjFallObj_c.s"
 }
 #pragma pop
 
 
-/* 80BE4A24-80BE4A44 0020+00 s=0 e=0 z=0  None .text      daObjFallObj_MoveBGExecute__FP14daObjFallObj_c               */
+/* 80BE4A24-80BE4A44 0020+00 s=1 e=0 z=0  None .text      daObjFallObj_MoveBGExecute__FP14daObjFallObj_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjFallObj_MoveBGExecute(daObjFallObj_c* param_0) {
+asm static void daObjFallObj_MoveBGExecute(daObjFallObj_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/daObjFallObj_MoveBGExecute__FP14daObjFallObj_c.s"
 }
 #pragma pop
 
 
-/* 80BE4A44-80BE4A70 002C+00 s=0 e=0 z=0  None .text      daObjFallObj_MoveBGDraw__FP14daObjFallObj_c                  */
+/* 80BE4A44-80BE4A70 002C+00 s=1 e=0 z=0  None .text      daObjFallObj_MoveBGDraw__FP14daObjFallObj_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjFallObj_MoveBGDraw(daObjFallObj_c* param_0) {
+asm static void daObjFallObj_MoveBGDraw(daObjFallObj_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/daObjFallObj_MoveBGDraw__FP14daObjFallObj_c.s"
 }
@@ -628,12 +636,4 @@ asm static void cLib_calcTimer__template1(u8* param_0) {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80BE4B14-80BE4B1E 000A+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80BE4B14 = "K_drock00";
-#pragma pop
 

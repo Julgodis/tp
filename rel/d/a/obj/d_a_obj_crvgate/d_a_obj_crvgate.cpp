@@ -134,6 +134,9 @@ struct dBgS_Acch {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -202,16 +205,16 @@ struct Z2SoundObjSimple {
 // Forward References:
 // 
 
-void daObjCRVGATE_Create(fopAc_ac_c*); // 2
-void daObjCRVGATE_Delete(daObjCRVGATE_c*); // 2
-void daObjCRVGATE_Draw(daObjCRVGATE_c*); // 2
+static void daObjCRVGATE_Create(fopAc_ac_c*); // 2
+static void daObjCRVGATE_Delete(daObjCRVGATE_c*); // 2
+static void daObjCRVGATE_Draw(daObjCRVGATE_c*); // 2
 static void daObjCRVGATE_Execute(daObjCRVGATE_c*); // 2
-bool daObjCRVGATE_IsDelete(daObjCRVGATE_c*); // 2
+static bool daObjCRVGATE_IsDelete(daObjCRVGATE_c*); // 2
 
 extern "C" void initCcCylinder__14daObjCRVGATE_cFv(); // 1
 extern "C" void setCcCylinder__14daObjCRVGATE_cFv(); // 1
-extern "C" void daObjCRVGATE_Create__FP10fopAc_ac_c(); // 1
-extern "C" void daObjCRVGATE_Delete__FP14daObjCRVGATE_c(); // 1
+extern "C" static void daObjCRVGATE_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjCRVGATE_Delete__FP14daObjCRVGATE_c(); // 1
 extern "C" void checkOpen__14daObjCRVGATE_cFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void actionStartEvent__14daObjCRVGATE_cFv(); // 1
@@ -232,7 +235,7 @@ extern "C" void DoorAction__14daObjCRVGATE_cFv(); // 1
 extern "C" void B_CloseAction__14daObjCRVGATE_cFv(); // 1
 extern "C" void SetB_Close__14daObjCRVGATE_cFv(); // 1
 extern "C" void setBaseMtx__14daObjCRVGATE_cFv(); // 1
-extern "C" void daObjCRVGATE_Draw__FP14daObjCRVGATE_c(); // 1
+extern "C" static void daObjCRVGATE_Draw__FP14daObjCRVGATE_c(); // 1
 extern "C" static void daObjCRVGATE_Execute__FP14daObjCRVGATE_c(); // 1
 extern "C" void CreateHeap__14daObjCRVGATE_cFv(); // 1
 extern "C" void SetDoor__14daObjCRVGATE_cFv(); // 1
@@ -244,17 +247,16 @@ extern "C" void __ct__8dCcD_SphFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
-extern "C" bool daObjCRVGATE_IsDelete__FP14daObjCRVGATE_c(); // 1
+extern "C" static bool daObjCRVGATE_IsDelete__FP14daObjCRVGATE_c(); // 1
 extern "C" void Create__14daObjCRVGATE_cFv(); // 1
 extern "C" void Execute__14daObjCRVGATE_cFPPA3_A4_f(); // 1
 extern "C" void Draw__14daObjCRVGATE_cFv(); // 1
 extern "C" void Delete__14daObjCRVGATE_cFv(); // 1
-extern "C" void func_80BD30A8(); // 1
-extern "C" void func_80BD30B0(); // 1
+extern "C" static void func_80BD30A8(); // 1
+extern "C" static void func_80BD30B0(); // 1
 extern "C" extern u32 const lit_4671;
 extern "C" extern u32 const lit_4672;
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObjCRVGATE_Method[8];
 extern "C" extern void* g_profile_Obj_CRVGATE[12];
 
 // 
@@ -311,6 +313,9 @@ extern "C" void __dt__9dBgS_AcchFv(); // 1
 extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -362,6 +367,8 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void abs(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -438,22 +445,22 @@ asm void daObjCRVGATE_c::setCcCylinder() {
 #pragma pop
 
 
-/* 80BD0658-80BD0678 0020+00 s=0 e=0 z=0  None .text      daObjCRVGATE_Create__FP10fopAc_ac_c                          */
+/* 80BD0658-80BD0678 0020+00 s=1 e=0 z=0  None .text      daObjCRVGATE_Create__FP10fopAc_ac_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjCRVGATE_Create(fopAc_ac_c* param_0) {
+asm static void daObjCRVGATE_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/daObjCRVGATE_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80BD0678-80BD069C 0024+00 s=0 e=0 z=0  None .text      daObjCRVGATE_Delete__FP14daObjCRVGATE_c                      */
+/* 80BD0678-80BD069C 0024+00 s=1 e=0 z=0  None .text      daObjCRVGATE_Delete__FP14daObjCRVGATE_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjCRVGATE_Delete(daObjCRVGATE_c* param_0) {
+asm static void daObjCRVGATE_Delete(daObjCRVGATE_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/daObjCRVGATE_Delete__FP14daObjCRVGATE_c.s"
 }
@@ -782,18 +789,18 @@ asm void daObjCRVGATE_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80BD2624-80BD2650 002C+00 s=0 e=0 z=0  None .text      daObjCRVGATE_Draw__FP14daObjCRVGATE_c                        */
+/* 80BD2624-80BD2650 002C+00 s=1 e=0 z=0  None .text      daObjCRVGATE_Draw__FP14daObjCRVGATE_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjCRVGATE_Draw(daObjCRVGATE_c* param_0) {
+asm static void daObjCRVGATE_Draw(daObjCRVGATE_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/daObjCRVGATE_Draw__FP14daObjCRVGATE_c.s"
 }
 #pragma pop
 
 
-/* 80BD2650-80BD2670 0020+00 s=1 e=0 z=0  None .text      daObjCRVGATE_Execute__FP14daObjCRVGATE_c                     */
+/* 80BD2650-80BD2670 0020+00 s=2 e=0 z=0  None .text      daObjCRVGATE_Execute__FP14daObjCRVGATE_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -826,7 +833,7 @@ SECTION_RODATA static u32 const lit_5064 = 0xC3FA0000;
 /* 80BD31B8-80BD31BC 0004+00 s=1 e=0 z=0  None .rodata    @5065                                                        */
 SECTION_RODATA static u32 const lit_5065 = 0x447A0000;
 
-/* 80BD31BC-80BD31F3 0037+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80BD31BC-80BD31F3 0037+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -837,9 +844,9 @@ SECTION_DEAD char const* const stringBase_80BD31E3 = "CaravanGate.dzb";
 #pragma pop
 
 /* 80BD31F4-80BD31F8 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
 
-/* 80BD2670-80BD2758 00E8+00 s=0 e=0 z=0  None .text      CreateHeap__14daObjCRVGATE_cFv                               */
+/* 80BD2670-80BD2758 00E8+00 s=1 e=0 z=0  None .text      CreateHeap__14daObjCRVGATE_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -862,30 +869,30 @@ asm void daObjCRVGATE_c::SetDoor() {
 
 
 /* ############################################################################################## */
-/* 80BD31F8-80BD3218 0020+00 s=0 e=0 z=0  None .data      l_daObjCRVGATE_Method                                        */
-SECTION_DATA void* l_daObjCRVGATE_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80BD31F8-80BD3218 0020+00 s=1 e=0 z=0  None .data      l_daObjCRVGATE_Method                                        */
+SECTION_DATA static void* l_daObjCRVGATE_Method[8] = {
+	(void*)daObjCRVGATE_Create__FP10fopAc_ac_c,
+	(void*)daObjCRVGATE_Delete__FP14daObjCRVGATE_c,
+	(void*)daObjCRVGATE_Execute__FP14daObjCRVGATE_c,
+	(void*)daObjCRVGATE_IsDelete__FP14daObjCRVGATE_c,
+	(void*)daObjCRVGATE_Draw__FP14daObjCRVGATE_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80BD3218-80BD3248 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_CRVGATE                                        */
+/* 80BD3218-80BD3248 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_CRVGATE                                        */
 SECTION_DATA void* g_profile_Obj_CRVGATE[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x006F0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000DE4,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01D20000,
-	(void*)NULL,
+	(void*)&l_daObjCRVGATE_Method,
 	(void*)0x00040180,
 	(void*)0x000E0000,
 };
@@ -894,48 +901,48 @@ SECTION_DATA void* g_profile_Obj_CRVGATE[12] = {
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80BD3254-80BD3260 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 80BD3260-80BD326C 000C+00 s=4 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80BD326C-80BD3290 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80BD30B0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80BD30A8,
 };
 
 /* 80BD3290-80BD32B8 0028+00 s=1 e=0 z=0  None .data      __vt__14daObjCRVGATE_c                                       */
 SECTION_DATA static void* __vt__14daObjCRVGATE_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__14daObjCRVGATE_cFv,
+	(void*)Create__14daObjCRVGATE_cFv,
+	(void*)Execute__14daObjCRVGATE_cFPPA3_A4_f,
+	(void*)Draw__14daObjCRVGATE_cFv,
+	(void*)Delete__14daObjCRVGATE_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
 /* 80BD28C0-80BD2BE4 0324+00 s=1 e=0 z=0  None .text      create__14daObjCRVGATE_cFv                                   */
@@ -949,7 +956,7 @@ asm void daObjCRVGATE_c::create() {
 #pragma pop
 
 
-/* 80BD2BE4-80BD2C2C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80BD2BE4-80BD2C2C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -960,7 +967,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80BD2C2C-80BD2C74 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80BD2C2C-80BD2C74 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -993,7 +1000,7 @@ asm dCcD_Sph::dCcD_Sph() {
 #pragma pop
 
 
-/* 80BD2DC4-80BD2E0C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80BD2DC4-80BD2E0C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1004,7 +1011,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80BD2E0C-80BD2E7C 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80BD2E0C-80BD2E7C 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1021,13 +1028,13 @@ cXyz::cXyz() {
 }
 
 
-/* 80BD2E80-80BD2E88 0008+00 s=0 e=0 z=0  None .text      daObjCRVGATE_IsDelete__FP14daObjCRVGATE_c                    */
-bool daObjCRVGATE_IsDelete(daObjCRVGATE_c* param_0) {
+/* 80BD2E80-80BD2E88 0008+00 s=1 e=0 z=0  None .text      daObjCRVGATE_IsDelete__FP14daObjCRVGATE_c                    */
+static bool daObjCRVGATE_IsDelete(daObjCRVGATE_c* param_0) {
 	return true;
 }
 
 
-/* 80BD2E88-80BD2ECC 0044+00 s=0 e=0 z=0  None .text      Create__14daObjCRVGATE_cFv                                   */
+/* 80BD2E88-80BD2ECC 0044+00 s=1 e=0 z=0  None .text      Create__14daObjCRVGATE_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1042,7 +1049,7 @@ asm void daObjCRVGATE_c::Create() {
 /* 80BD32B8-80BD32BC 0002+02 s=1 e=0 z=0  None .bss       s_CoCount__29@unnamed@d_a_obj_crvgate_cpp@                   */
 static u8 data_80BD32B8[2 + 2 /* padding */];
 
-/* 80BD2ECC-80BD2FB8 00EC+00 s=0 e=0 z=0  None .text      Execute__14daObjCRVGATE_cFPPA3_A4_f                          */
+/* 80BD2ECC-80BD2FB8 00EC+00 s=1 e=0 z=0  None .text      Execute__14daObjCRVGATE_cFPPA3_A4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1053,7 +1060,7 @@ asm void daObjCRVGATE_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80BD2FB8-80BD3074 00BC+00 s=0 e=0 z=0  None .text      Draw__14daObjCRVGATE_cFv                                     */
+/* 80BD2FB8-80BD3074 00BC+00 s=1 e=0 z=0  None .text      Draw__14daObjCRVGATE_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1064,7 +1071,7 @@ asm void daObjCRVGATE_c::Draw() {
 #pragma pop
 
 
-/* 80BD3074-80BD30A8 0034+00 s=0 e=0 z=0  None .text      Delete__14daObjCRVGATE_cFv                                   */
+/* 80BD3074-80BD30A8 0034+00 s=1 e=0 z=0  None .text      Delete__14daObjCRVGATE_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1075,22 +1082,22 @@ asm void daObjCRVGATE_c::Delete() {
 #pragma pop
 
 
-/* 80BD30A8-80BD30B0 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BD30A8-80BD30B0 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BD30A8() {
+extern "C" asm static void func_80BD30A8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/func_80BD30A8.s"
 }
 #pragma pop
 
 
-/* 80BD30B0-80BD30B8 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BD30B0-80BD30B8 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BD30B0() {
+extern "C" asm static void func_80BD30B0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/func_80BD30B0.s"
 }

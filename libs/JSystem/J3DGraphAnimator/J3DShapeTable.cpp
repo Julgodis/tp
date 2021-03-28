@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J3DDrawMtxData {
+struct J3DVertexData {
 };
 
-struct J3DVertexData {
+struct J3DDrawMtxData {
 };
 
 struct J3DShapeTable {

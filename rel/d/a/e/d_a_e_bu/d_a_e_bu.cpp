@@ -76,19 +76,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
-};
-
-struct Z2Creature {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
+struct J3DModelData {
+};
+
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DAnmTransform {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfSO {
@@ -128,10 +128,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -226,7 +226,7 @@ struct J3DFrameCtrl {
 static void bu_disappear(fopAc_ac_c*); // 2
 static void anm_init(e_bu_class*, int, f32, u8, f32); // 2
 static void nodeCallBack(J3DJoint*, int); // 2
-void daE_BU_Draw(e_bu_class*); // 2
+static void daE_BU_Draw(e_bu_class*); // 2
 static void other_bg_check(e_bu_class*, fopAc_ac_c*); // 2
 static void pl_check(e_bu_class*, f32, s16); // 2
 static void damage_check(e_bu_class*); // 2
@@ -242,17 +242,17 @@ static void e_bu_chance(e_bu_class*); // 2
 static void e_bu_head(e_bu_class*); // 2
 static void action(e_bu_class*); // 2
 static void daE_BU_Execute(e_bu_class*); // 2
-bool daE_BU_IsDelete(e_bu_class*); // 2
-void daE_BU_Delete(e_bu_class*); // 2
+static bool daE_BU_IsDelete(e_bu_class*); // 2
+static void daE_BU_Delete(e_bu_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daE_BU_Create(fopAc_ac_c*); // 2
+static void daE_BU_Create(fopAc_ac_c*); // 2
 static void setMidnaBindEffect(fopEn_enemy_c*, Z2CreatureEnemy*, cXyz*, cXyz*); // 2
 
 extern "C" void __ct__12daE_BU_HIO_cFv(); // 1
 extern "C" static void bu_disappear__FP10fopAc_ac_c(); // 1
 extern "C" static void anm_init__FP10e_bu_classifUcf(); // 1
 extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" void daE_BU_Draw__FP10e_bu_class(); // 1
+extern "C" static void daE_BU_Draw__FP10e_bu_class(); // 1
 extern "C" static void other_bg_check__FP10e_bu_classP10fopAc_ac_c(); // 1
 extern "C" static void pl_check__FP10e_bu_classfs(); // 1
 extern "C" static void damage_check__FP10e_bu_class(); // 1
@@ -268,10 +268,10 @@ extern "C" static void e_bu_chance__FP10e_bu_class(); // 1
 extern "C" static void e_bu_head__FP10e_bu_class(); // 1
 extern "C" static void action__FP10e_bu_class(); // 1
 extern "C" static void daE_BU_Execute__FP10e_bu_class(); // 1
-extern "C" bool daE_BU_IsDelete__FP10e_bu_class(); // 1
-extern "C" void daE_BU_Delete__FP10e_bu_class(); // 1
+extern "C" static bool daE_BU_IsDelete__FP10e_bu_class(); // 1
+extern "C" static void daE_BU_Delete__FP10e_bu_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daE_BU_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daE_BU_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
@@ -280,8 +280,8 @@ extern "C" void __dt__12dBgS_AcchCirFv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__12daE_BU_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_e_bu_cpp(); // 1
-extern "C" void func_80694258(); // 1
-extern "C" void func_80694260(); // 1
+extern "C" static void func_80694258(); // 1
+extern "C" static void func_80694260(); // 1
 extern "C" static void setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz(); // 1
 extern "C" extern u32 const lit_4451;
 extern "C" extern u32 const lit_4452;
@@ -292,7 +292,6 @@ extern "C" extern u32 const lit_4456;
 extern "C" extern u32 const lit_4546;
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daE_BU_Method[8];
 extern "C" extern void* g_profile_E_BU[12];
 
 // 
@@ -422,6 +421,8 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -521,45 +522,45 @@ SECTION_DATA static u8 data_806947AC[6 + 2 /* padding */] = {
 
 /* 806947B4-806947E8 0034+00 s=1 e=0 z=0  None .data      @4457                                                        */
 SECTION_DATA static void* lit_4457[13] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)e_bu_head__FP10e_bu_class)+0x48),
+	(void*)(((char*)e_bu_head__FP10e_bu_class)+0x68),
+	(void*)(((char*)e_bu_head__FP10e_bu_class)+0x11C),
+	(void*)(((char*)e_bu_head__FP10e_bu_class)+0x15C),
+	(void*)(((char*)e_bu_head__FP10e_bu_class)+0x278),
+	(void*)(((char*)e_bu_head__FP10e_bu_class)+0x438),
+	(void*)(((char*)e_bu_head__FP10e_bu_class)+0x438),
+	(void*)(((char*)e_bu_head__FP10e_bu_class)+0x438),
+	(void*)(((char*)e_bu_head__FP10e_bu_class)+0x438),
+	(void*)(((char*)e_bu_head__FP10e_bu_class)+0x438),
+	(void*)(((char*)e_bu_head__FP10e_bu_class)+0x2D0),
+	(void*)(((char*)e_bu_head__FP10e_bu_class)+0x328),
+	(void*)(((char*)e_bu_head__FP10e_bu_class)+0x398),
 };
 
 /* 806947E8-80694840 0058+00 s=1 e=0 z=0  None .data      @4547                                                        */
 SECTION_DATA static void* lit_4547[22] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)action__FP10e_bu_class)+0x8C),
+	(void*)(((char*)action__FP10e_bu_class)+0xA4),
+	(void*)(((char*)action__FP10e_bu_class)+0xB0),
+	(void*)(((char*)action__FP10e_bu_class)+0xBC),
+	(void*)(((char*)action__FP10e_bu_class)+0x168),
+	(void*)(((char*)action__FP10e_bu_class)+0xD4),
+	(void*)(((char*)action__FP10e_bu_class)+0xE0),
+	(void*)(((char*)action__FP10e_bu_class)+0x168),
+	(void*)(((char*)action__FP10e_bu_class)+0x168),
+	(void*)(((char*)action__FP10e_bu_class)+0x168),
+	(void*)(((char*)action__FP10e_bu_class)+0xEC),
+	(void*)(((char*)action__FP10e_bu_class)+0x168),
+	(void*)(((char*)action__FP10e_bu_class)+0x168),
+	(void*)(((char*)action__FP10e_bu_class)+0x168),
+	(void*)(((char*)action__FP10e_bu_class)+0x168),
+	(void*)(((char*)action__FP10e_bu_class)+0x104),
+	(void*)(((char*)action__FP10e_bu_class)+0x168),
+	(void*)(((char*)action__FP10e_bu_class)+0x168),
+	(void*)(((char*)action__FP10e_bu_class)+0x168),
+	(void*)(((char*)action__FP10e_bu_class)+0x168),
+	(void*)(((char*)action__FP10e_bu_class)+0x168),
+	(void*)(((char*)action__FP10e_bu_class)+0x11C),
 };
 
 /* 80694840-80694848 0008+00 s=1 e=0 z=0  None .data      fire_name$4572                                               */
@@ -582,30 +583,30 @@ SECTION_DATA static u8 data_80694850[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
 };
 
-/* 80694890-806948B0 0020+00 s=0 e=0 z=0  None .data      l_daE_BU_Method                                              */
-SECTION_DATA void* l_daE_BU_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80694890-806948B0 0020+00 s=1 e=0 z=0  None .data      l_daE_BU_Method                                              */
+SECTION_DATA static void* l_daE_BU_Method[8] = {
+	(void*)daE_BU_Create__FP10fopAc_ac_c,
+	(void*)daE_BU_Delete__FP10e_bu_class,
+	(void*)daE_BU_Execute__FP10e_bu_class,
+	(void*)daE_BU_IsDelete__FP10e_bu_class,
+	(void*)daE_BU_Draw__FP10e_bu_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 806948B0-806948E0 0030+00 s=0 e=0 z=0  None .data      g_profile_E_BU                                               */
+/* 806948B0-806948E0 0030+00 s=0 e=0 z=1  None .data      g_profile_E_BU                                               */
 SECTION_DATA void* g_profile_E_BU[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01EB0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000AA4,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00B50000,
-	(void*)NULL,
+	(void*)&l_daE_BU_Method,
 	(void*)0x100C0120,
 	(void*)0x020E0000,
 };
@@ -614,55 +615,55 @@ SECTION_DATA void* g_profile_E_BU[12] = {
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 806948EC-806948F8 000C+00 s=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 806948F8-80694904 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80694904-80694910 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80694910-8069491C 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 8069491C-80694940 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80694260,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80694258,
 };
 
 /* 80694940-8069494C 000C+00 s=2 e=0 z=0  None .data      __vt__12daE_BU_HIO_c                                         */
 SECTION_DATA static void* __vt__12daE_BU_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12daE_BU_HIO_cFv,
 };
 
 /* 806911AC-806911F0 0044+00 s=1 e=0 z=0  None .text      __ct__12daE_BU_HIO_cFv                                       */
@@ -851,11 +852,11 @@ static u8 lit_3804[12];
 /* 80694968-80694984 001C+00 s=11 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[28];
 
-/* 80691458-80691504 00AC+00 s=0 e=0 z=0  None .text      daE_BU_Draw__FP10e_bu_class                                  */
+/* 80691458-80691504 00AC+00 s=1 e=0 z=0  None .text      daE_BU_Draw__FP10e_bu_class                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_BU_Draw(e_bu_class* param_0) {
+asm static void daE_BU_Draw(e_bu_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bu/d_a_e_bu/daE_BU_Draw__FP10e_bu_class.s"
 }
@@ -998,7 +999,7 @@ asm static void e_bu_chance(e_bu_class* param_0) {
 #pragma pop
 
 
-/* 80692AF4-80693074 0580+00 s=1 e=0 z=0  None .text      e_bu_head__FP10e_bu_class                                    */
+/* 80692AF4-80693074 0580+00 s=2 e=0 z=0  None .text      e_bu_head__FP10e_bu_class                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1009,7 +1010,7 @@ asm static void e_bu_head(e_bu_class* param_0) {
 #pragma pop
 
 
-/* 80693074-80693528 04B4+00 s=1 e=0 z=0  None .text      action__FP10e_bu_class                                       */
+/* 80693074-80693528 04B4+00 s=2 e=0 z=0  None .text      action__FP10e_bu_class                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1020,7 +1021,7 @@ asm static void action(e_bu_class* param_0) {
 #pragma pop
 
 
-/* 80693528-80693A30 0508+00 s=1 e=0 z=0  None .text      daE_BU_Execute__FP10e_bu_class                               */
+/* 80693528-80693A30 0508+00 s=2 e=0 z=0  None .text      daE_BU_Execute__FP10e_bu_class                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1031,17 +1032,17 @@ asm static void daE_BU_Execute(e_bu_class* param_0) {
 #pragma pop
 
 
-/* 80693A30-80693A38 0008+00 s=0 e=0 z=0  None .text      daE_BU_IsDelete__FP10e_bu_class                              */
-bool daE_BU_IsDelete(e_bu_class* param_0) {
+/* 80693A30-80693A38 0008+00 s=1 e=0 z=0  None .text      daE_BU_IsDelete__FP10e_bu_class                              */
+static bool daE_BU_IsDelete(e_bu_class* param_0) {
 	return true;
 }
 
 
-/* 80693A38-80693AA0 0068+00 s=0 e=0 z=0  None .text      daE_BU_Delete__FP10e_bu_class                                */
+/* 80693A38-80693AA0 0068+00 s=1 e=0 z=0  None .text      daE_BU_Delete__FP10e_bu_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_BU_Delete(e_bu_class* param_0) {
+asm static void daE_BU_Delete(e_bu_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bu/d_a_e_bu/daE_BU_Delete__FP10e_bu_class.s"
 }
@@ -1059,18 +1060,18 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80693BD4-80693FC0 03EC+00 s=0 e=0 z=0  None .text      daE_BU_Create__FP10fopAc_ac_c                                */
+/* 80693BD4-80693FC0 03EC+00 s=1 e=0 z=0  None .text      daE_BU_Create__FP10fopAc_ac_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daE_BU_Create(fopAc_ac_c* param_0) {
+asm static void daE_BU_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bu/d_a_e_bu/daE_BU_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80693FC0-80694008 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80693FC0-80694008 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1081,7 +1082,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80694008-80694050 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80694008-80694050 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1092,7 +1093,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80694050-806940AC 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80694050-806940AC 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1103,7 +1104,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 806940AC-8069411C 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 806940AC-8069411C 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1114,7 +1115,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 8069411C-8069418C 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 8069411C-8069418C 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1125,7 +1126,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 8069418C-806941D4 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 8069418C-806941D4 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1136,7 +1137,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 806941D4-8069421C 0048+00 s=1 e=0 z=0  None .text      __dt__12daE_BU_HIO_cFv                                       */
+/* 806941D4-8069421C 0048+00 s=2 e=0 z=0  None .text      __dt__12daE_BU_HIO_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1147,7 +1148,7 @@ asm daE_BU_HIO_c::~daE_BU_HIO_c() {
 #pragma pop
 
 
-/* 8069421C-80694258 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_e_bu_cpp                                         */
+/* 8069421C-80694258 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_e_bu_cpp                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1158,22 +1159,22 @@ extern "C" asm void __sinit_d_a_e_bu_cpp() {
 #pragma pop
 
 
-/* 80694258-80694260 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80694258-80694260 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80694258() {
+extern "C" asm static void func_80694258() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bu/d_a_e_bu/func_80694258.s"
 }
 #pragma pop
 
 
-/* 80694260-80694268 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80694260-80694268 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80694260() {
+extern "C" asm static void func_80694260() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bu/d_a_e_bu/func_80694260.s"
 }

@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct J2DOrthoGraph {
-};
-
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct J2DOrthoGraph {
 };
 
 struct dMsgScrnExplain_c {
@@ -94,10 +94,10 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
 struct J2DScreen {
@@ -123,10 +123,10 @@ struct CPaneMgrAlpha {
 	/* 802557D0 */ void setAlphaRate(f32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

@@ -84,6 +84,10 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 80078690 */ bool Create();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -101,10 +105,10 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-void daKekaiTrap_Draw(daKekaiTrap_c*); // 2
-void daKekaiTrap_Execute(daKekaiTrap_c*); // 2
-void daKekaiTrap_Delete(daKekaiTrap_c*); // 2
-void daKekaiTrap_Create(fopAc_ac_c*); // 2
+static void daKekaiTrap_Draw(daKekaiTrap_c*); // 2
+static void daKekaiTrap_Execute(daKekaiTrap_c*); // 2
+static void daKekaiTrap_Delete(daKekaiTrap_c*); // 2
+static void daKekaiTrap_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__17daKekaiTrap_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -121,15 +125,14 @@ extern "C" void init_modeMoveDown__13daKekaiTrap_cFv(); // 1
 extern "C" void modeMoveDown__13daKekaiTrap_cFv(); // 1
 extern "C" void Draw__13daKekaiTrap_cFv(); // 1
 extern "C" void Delete__13daKekaiTrap_cFv(); // 1
-extern "C" void daKekaiTrap_Draw__FP13daKekaiTrap_c(); // 1
-extern "C" void daKekaiTrap_Execute__FP13daKekaiTrap_c(); // 1
-extern "C" void daKekaiTrap_Delete__FP13daKekaiTrap_c(); // 1
-extern "C" void daKekaiTrap_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daKekaiTrap_Draw__FP13daKekaiTrap_c(); // 1
+extern "C" static void daKekaiTrap_Execute__FP13daKekaiTrap_c(); // 1
+extern "C" static void daKekaiTrap_Delete__FP13daKekaiTrap_c(); // 1
+extern "C" static void daKekaiTrap_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__17daKekaiTrap_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_lv8KekkaiTrap_cpp(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daKekaiTrap_Method[8];
 extern "C" extern void* g_profile_Obj_Lv8KekkaiTrap[12];
 
 // 
@@ -159,6 +162,10 @@ extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -172,6 +179,8 @@ extern "C" void PSMTXTrans(); // 1
 extern "C" void __ptmf_scall(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -191,6 +200,22 @@ SECTION_RODATA static u8 const lit_3651[4] = {
 /* 80C884E8-80C884EC 0004+00 s=1 e=0 z=0  None .rodata    @3652                                                        */
 SECTION_RODATA static u32 const lit_3652 = 0x3F333333;
 
+/* 80C884EC-80C884F0 0004+00 s=2 e=0 z=0  None .rodata    @3802                                                        */
+SECTION_RODATA static u32 const lit_3802 = 0x41F00000;
+
+/* 80C884F0-80C884F4 0004+00 s=2 e=0 z=0  None .rodata    @3803                                                        */
+SECTION_RODATA static u32 const lit_3803 = 0x3F800000;
+
+/* 80C884F4-80C884F8 0004+00 s=2 e=0 z=0  None .rodata    @3804                                                        */
+SECTION_RODATA static u32 const lit_3804 = 0x3CF5C28F;
+
+/* 80C884F8-80C88502 000A+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80C884F8 = "Lv8Kekkai";
+#pragma pop
+
 /* 80C88504-80C88510 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -204,7 +229,7 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80C88524-80C88528 0004+00 s=3 e=0 z=0  None .data      l_type                                                       */
-SECTION_DATA static void* l_type = (void*)NULL;
+SECTION_DATA static void* l_type = (void*)&stringBase0;
 
 /* 80C88528-80C8852C 0004+00 s=1 e=0 z=0  None .data      l_bmdIdx                                                     */
 SECTION_DATA static u32 l_bmdIdx = 0x00000004;
@@ -216,21 +241,21 @@ SECTION_DATA static u32 l_dzbIdx = 0x00000007;
 SECTION_DATA static void* lit_3756[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeWait__13daKekaiTrap_cFv,
 };
 
 /* 80C8853C-80C88548 000C+00 s=1 e=0 z=0  None .data      @3757                                                        */
 SECTION_DATA static void* lit_3757[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeMoveUp__13daKekaiTrap_cFv,
 };
 
 /* 80C88548-80C88554 000C+00 s=1 e=0 z=0  None .data      @3758                                                        */
 SECTION_DATA static void* lit_3758[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeMoveDown__13daKekaiTrap_cFv,
 };
 
 /* 80C88554-80C88578 0024+00 s=1 e=0 z=0  None .data      mode_proc$3755                                               */
@@ -240,30 +265,30 @@ SECTION_DATA static u8 data_80C88554[36] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C88578-80C88598 0020+00 s=0 e=0 z=0  None .data      l_daKekaiTrap_Method                                         */
-SECTION_DATA void* l_daKekaiTrap_Method[8] = {
+/* 80C88578-80C88598 0020+00 s=1 e=0 z=0  None .data      l_daKekaiTrap_Method                                         */
+SECTION_DATA static void* l_daKekaiTrap_Method[8] = {
+	(void*)daKekaiTrap_Create__FP10fopAc_ac_c,
+	(void*)daKekaiTrap_Delete__FP13daKekaiTrap_c,
+	(void*)daKekaiTrap_Execute__FP13daKekaiTrap_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daKekaiTrap_Draw__FP13daKekaiTrap_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C88598-80C885C8 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Lv8KekkaiTrap                                  */
+/* 80C88598-80C885C8 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Lv8KekkaiTrap                                  */
 SECTION_DATA void* g_profile_Obj_Lv8KekkaiTrap[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00A30000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005B4,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02840000,
-	(void*)NULL,
+	(void*)&l_daKekaiTrap_Method,
 	(void*)0x00044000,
 	(void*)0x000E0000,
 };
@@ -272,28 +297,28 @@ SECTION_DATA void* g_profile_Obj_Lv8KekkaiTrap[12] = {
 SECTION_DATA static void* __vt__13daKekaiTrap_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__13daKekaiTrap_cFv,
+	(void*)Create__16dBgS_MoveBgActorFv,
+	(void*)Execute__13daKekaiTrap_cFPPA3_A4_f,
+	(void*)Draw__13daKekaiTrap_cFv,
+	(void*)Delete__13daKekaiTrap_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
 /* 80C885F0-80C885FC 000C+00 s=2 e=0 z=0  None .data      __vt__17daKekaiTrap_HIO_c                                    */
 SECTION_DATA static void* __vt__17daKekaiTrap_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__17daKekaiTrap_HIO_cFv,
 };
 
 /* 80C885FC-80C88608 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
 /* 80C87CAC-80C87CF8 004C+00 s=1 e=0 z=0  None .text      __ct__17daKekaiTrap_HIO_cFv                                  */
@@ -307,7 +332,7 @@ asm daKekaiTrap_HIO_c::daKekaiTrap_HIO_c() {
 #pragma pop
 
 
-/* 80C87CF8-80C87D40 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80C87CF8-80C87D40 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -329,7 +354,7 @@ asm void daKekaiTrap_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80C87DC8-80C87E48 0080+00 s=0 e=0 z=0  None .text      CreateHeap__13daKekaiTrap_cFv                                */
+/* 80C87DC8-80C87E48 0080+00 s=1 e=0 z=0  None .text      CreateHeap__13daKekaiTrap_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -351,7 +376,7 @@ asm void daKekaiTrap_c::create() {
 #pragma pop
 
 
-/* 80C87FB0-80C88000 0050+00 s=0 e=0 z=0  None .text      Execute__13daKekaiTrap_cFPPA3_A4_f                           */
+/* 80C87FB0-80C88000 0050+00 s=1 e=0 z=0  None .text      Execute__13daKekaiTrap_cFPPA3_A4_f                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -394,7 +419,7 @@ asm void daKekaiTrap_c::init_modeWait() {
 #pragma pop
 
 
-/* 80C88110-80C88114 0004+00 s=0 e=0 z=0  None .text      modeWait__13daKekaiTrap_cFv                                  */
+/* 80C88110-80C88114 0004+00 s=1 e=0 z=0  None .text      modeWait__13daKekaiTrap_cFv                                  */
 void daKekaiTrap_c::modeWait() {
 	/* empty function */
 }
@@ -411,17 +436,7 @@ asm void daKekaiTrap_c::init_modeMoveUp() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80C884EC-80C884F0 0004+00 s=2 e=0 z=0  None .rodata    @3802                                                        */
-SECTION_RODATA static u32 const lit_3802 = 0x41F00000;
-
-/* 80C884F0-80C884F4 0004+00 s=2 e=0 z=0  None .rodata    @3803                                                        */
-SECTION_RODATA static u32 const lit_3803 = 0x3F800000;
-
-/* 80C884F4-80C884F8 0004+00 s=2 e=0 z=0  None .rodata    @3804                                                        */
-SECTION_RODATA static u32 const lit_3804 = 0x3CF5C28F;
-
-/* 80C88138-80C881F0 00B8+00 s=0 e=0 z=0  None .text      modeMoveUp__13daKekaiTrap_cFv                                */
+/* 80C88138-80C881F0 00B8+00 s=1 e=0 z=0  None .text      modeMoveUp__13daKekaiTrap_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -443,7 +458,7 @@ asm void daKekaiTrap_c::init_modeMoveDown() {
 #pragma pop
 
 
-/* 80C88214-80C882C8 00B4+00 s=0 e=0 z=0  None .text      modeMoveDown__13daKekaiTrap_cFv                              */
+/* 80C88214-80C882C8 00B4+00 s=1 e=0 z=0  None .text      modeMoveDown__13daKekaiTrap_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -454,7 +469,7 @@ asm void daKekaiTrap_c::modeMoveDown() {
 #pragma pop
 
 
-/* 80C882C8-80C8836C 00A4+00 s=0 e=0 z=0  None .text      Draw__13daKekaiTrap_cFv                                      */
+/* 80C882C8-80C8836C 00A4+00 s=1 e=0 z=0  None .text      Draw__13daKekaiTrap_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -465,7 +480,7 @@ asm void daKekaiTrap_c::Draw() {
 #pragma pop
 
 
-/* 80C8836C-80C883AC 0040+00 s=0 e=0 z=0  None .text      Delete__13daKekaiTrap_cFv                                    */
+/* 80C8836C-80C883AC 0040+00 s=1 e=0 z=0  None .text      Delete__13daKekaiTrap_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -476,51 +491,51 @@ asm void daKekaiTrap_c::Delete() {
 #pragma pop
 
 
-/* 80C883AC-80C883D8 002C+00 s=0 e=0 z=0  None .text      daKekaiTrap_Draw__FP13daKekaiTrap_c                          */
+/* 80C883AC-80C883D8 002C+00 s=1 e=0 z=0  None .text      daKekaiTrap_Draw__FP13daKekaiTrap_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKekaiTrap_Draw(daKekaiTrap_c* param_0) {
+asm static void daKekaiTrap_Draw(daKekaiTrap_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/daKekaiTrap_Draw__FP13daKekaiTrap_c.s"
 }
 #pragma pop
 
 
-/* 80C883D8-80C883F8 0020+00 s=0 e=0 z=0  None .text      daKekaiTrap_Execute__FP13daKekaiTrap_c                       */
+/* 80C883D8-80C883F8 0020+00 s=1 e=0 z=0  None .text      daKekaiTrap_Execute__FP13daKekaiTrap_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKekaiTrap_Execute(daKekaiTrap_c* param_0) {
+asm static void daKekaiTrap_Execute(daKekaiTrap_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/daKekaiTrap_Execute__FP13daKekaiTrap_c.s"
 }
 #pragma pop
 
 
-/* 80C883F8-80C88418 0020+00 s=0 e=0 z=0  None .text      daKekaiTrap_Delete__FP13daKekaiTrap_c                        */
+/* 80C883F8-80C88418 0020+00 s=1 e=0 z=0  None .text      daKekaiTrap_Delete__FP13daKekaiTrap_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKekaiTrap_Delete(daKekaiTrap_c* param_0) {
+asm static void daKekaiTrap_Delete(daKekaiTrap_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/daKekaiTrap_Delete__FP13daKekaiTrap_c.s"
 }
 #pragma pop
 
 
-/* 80C88418-80C88438 0020+00 s=0 e=0 z=0  None .text      daKekaiTrap_Create__FP10fopAc_ac_c                           */
+/* 80C88418-80C88438 0020+00 s=1 e=0 z=0  None .text      daKekaiTrap_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKekaiTrap_Create(fopAc_ac_c* param_0) {
+asm static void daKekaiTrap_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/daKekaiTrap_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C88438-80C88494 005C+00 s=1 e=0 z=0  None .text      __dt__17daKekaiTrap_HIO_cFv                                  */
+/* 80C88438-80C88494 005C+00 s=2 e=0 z=0  None .text      __dt__17daKekaiTrap_HIO_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -531,7 +546,7 @@ asm daKekaiTrap_HIO_c::~daKekaiTrap_HIO_c() {
 #pragma pop
 
 
-/* 80C88494-80C884D0 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_lv8KekkaiTrap_cpp                            */
+/* 80C88494-80C884D0 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_lv8KekkaiTrap_cpp                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -541,12 +556,4 @@ extern "C" asm void __sinit_d_a_obj_lv8KekkaiTrap_cpp() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80C884F8-80C88502 000A+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80C884F8 = "Lv8Kekkai";
-#pragma pop
 

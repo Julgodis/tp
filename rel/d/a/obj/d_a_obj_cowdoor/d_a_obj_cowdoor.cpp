@@ -55,6 +55,9 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -72,10 +75,10 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-void daCowdoor_Draw(daCowdoor_c*); // 2
-void daCowdoor_Execute(daCowdoor_c*); // 2
-void daCowdoor_Delete(daCowdoor_c*); // 2
-void daCowdoor_Create(fopAc_ac_c*); // 2
+static void daCowdoor_Draw(daCowdoor_c*); // 2
+static void daCowdoor_Execute(daCowdoor_c*); // 2
+static void daCowdoor_Delete(daCowdoor_c*); // 2
+static void daCowdoor_Create(fopAc_ac_c*); // 2
 
 extern "C" void setBaseMtx__11daCowdoor_cFv(); // 1
 extern "C" void Create__11daCowdoor_cFv(); // 1
@@ -84,12 +87,10 @@ extern "C" void create__11daCowdoor_cFv(); // 1
 extern "C" void Execute__11daCowdoor_cFPPA3_A4_f(); // 1
 extern "C" void Draw__11daCowdoor_cFv(); // 1
 extern "C" void Delete__11daCowdoor_cFv(); // 1
-extern "C" void daCowdoor_Draw__FP11daCowdoor_c(); // 1
-extern "C" void daCowdoor_Execute__FP11daCowdoor_c(); // 1
-extern "C" void daCowdoor_Delete__FP11daCowdoor_c(); // 1
-extern "C" void daCowdoor_Create__FP10fopAc_ac_c(); // 1
-extern "C" extern u8 const struct_80BCCBB8[36];
-extern "C" extern void* l_daCowdoor_Method[8];
+extern "C" static void daCowdoor_Draw__FP11daCowdoor_c(); // 1
+extern "C" static void daCowdoor_Execute__FP11daCowdoor_c(); // 1
+extern "C" static void daCowdoor_Delete__FP11daCowdoor_c(); // 1
+extern "C" static void daCowdoor_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern void* g_profile_Obj_Cowdoor[12];
 
 // 
@@ -114,6 +115,9 @@ extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
 extern "C" void getObjectResName2Index__14dRes_control_cFPCcPCc(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -121,6 +125,8 @@ extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
 extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
 extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXTrans(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -145,7 +151,7 @@ asm void daCowdoor_c::setBaseMtx() {
 /* 80BCCBB4-80BCCBB8 0004+00 s=1 e=0 z=0  None .rodata    @3648                                                        */
 SECTION_RODATA static u32 const lit_3648 = 0x40A00000;
 
-/* 80BCC86C-80BCC8C4 0058+00 s=0 e=0 z=0  None .text      Create__11daCowdoor_cFv                                      */
+/* 80BCC86C-80BCC8C4 0058+00 s=1 e=0 z=0  None .text      Create__11daCowdoor_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,13 +163,23 @@ asm void daCowdoor_c::Create() {
 
 
 /* ############################################################################################## */
+/* 80BCCBB8-80BCCBDC 0024+00 s=3 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const struct_80BCCBB8[36] = {
+	/* 80BCCBB8 0009 stringBase_80BCCBB8 @stringBase0 */
+	0x41, 0x5F, 0x55, 0x48, 0x44, 0x6F, 0x6F, 0x72, 0x00,
+	/* 80BCCBC1 000D data_80BCCBC1 None */
+	0x41, 0x5F, 0x55, 0x48, 0x44, 0x6F, 0x6F, 0x72, 0x2E, 0x62, 0x6D, 0x64, 0x00,
+	/* 80BCCBCE 000E data_80BCCBCE None */
+	0x41, 0x5F, 0x55, 0x48, 0x44, 0x6F, 0x6F, 0x72, 0x2E, 0x64, 0x7A, 0x62, 0x00, 0x00,
+};
+
 /* 80BCCBDC-80BCCBE0 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+SECTION_DATA static void* l_arcName = (void*)(((char*)&struct_80BCCBB8)+0x0) /* @stringBase0 */;
 
 /* 80BCCBE0-80BCCBE4 0004+00 s=1 e=0 z=0  None .data      l_bmdName                                                    */
-SECTION_DATA static void* l_bmdName = (void*)NULL;
+SECTION_DATA static void* l_bmdName = (void*)(((char*)&struct_80BCCBB8)+0x9) /* None */;
 
-/* 80BCC8C4-80BCC93C 0078+00 s=0 e=0 z=0  None .text      CreateHeap__11daCowdoor_cFv                                  */
+/* 80BCC8C4-80BCC93C 0078+00 s=1 e=0 z=0  None .text      CreateHeap__11daCowdoor_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -176,32 +192,32 @@ asm void daCowdoor_c::CreateHeap() {
 
 /* ############################################################################################## */
 /* 80BCCBE4-80BCCBE8 0004+00 s=1 e=0 z=0  None .data      l_dzbName                                                    */
-SECTION_DATA static void* l_dzbName = (void*)NULL;
+SECTION_DATA static void* l_dzbName = (void*)(((char*)&struct_80BCCBB8)+0x16) /* None */;
 
-/* 80BCCBE8-80BCCC08 0020+00 s=0 e=0 z=0  None .data      l_daCowdoor_Method                                           */
-SECTION_DATA void* l_daCowdoor_Method[8] = {
+/* 80BCCBE8-80BCCC08 0020+00 s=1 e=0 z=0  None .data      l_daCowdoor_Method                                           */
+SECTION_DATA static void* l_daCowdoor_Method[8] = {
+	(void*)daCowdoor_Create__FP10fopAc_ac_c,
+	(void*)daCowdoor_Delete__FP11daCowdoor_c,
+	(void*)daCowdoor_Execute__FP11daCowdoor_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daCowdoor_Draw__FP11daCowdoor_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80BCCC08-80BCCC38 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Cowdoor                                        */
+/* 80BCCC08-80BCCC38 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Cowdoor                                        */
 SECTION_DATA void* g_profile_Obj_Cowdoor[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x005D0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005AC,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01BF0000,
-	(void*)NULL,
+	(void*)&l_daCowdoor_Method,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -210,14 +226,14 @@ SECTION_DATA void* g_profile_Obj_Cowdoor[12] = {
 SECTION_DATA static void* __vt__11daCowdoor_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__11daCowdoor_cFv,
+	(void*)Create__11daCowdoor_cFv,
+	(void*)Execute__11daCowdoor_cFPPA3_A4_f,
+	(void*)Draw__11daCowdoor_cFv,
+	(void*)Delete__11daCowdoor_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
 /* 80BCC93C-80BCCA1C 00E0+00 s=1 e=0 z=0  None .text      create__11daCowdoor_cFv                                      */
@@ -231,7 +247,7 @@ asm void daCowdoor_c::create() {
 #pragma pop
 
 
-/* 80BCCA1C-80BCCA48 002C+00 s=0 e=0 z=0  None .text      Execute__11daCowdoor_cFPPA3_A4_f                             */
+/* 80BCCA1C-80BCCA48 002C+00 s=1 e=0 z=0  None .text      Execute__11daCowdoor_cFPPA3_A4_f                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -242,7 +258,7 @@ asm void daCowdoor_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80BCCA48-80BCCAEC 00A4+00 s=0 e=0 z=0  None .text      Draw__11daCowdoor_cFv                                        */
+/* 80BCCA48-80BCCAEC 00A4+00 s=1 e=0 z=0  None .text      Draw__11daCowdoor_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -253,7 +269,7 @@ asm void daCowdoor_c::Draw() {
 #pragma pop
 
 
-/* 80BCCAEC-80BCCB20 0034+00 s=0 e=0 z=0  None .text      Delete__11daCowdoor_cFv                                      */
+/* 80BCCAEC-80BCCB20 0034+00 s=1 e=0 z=0  None .text      Delete__11daCowdoor_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -264,58 +280,47 @@ asm void daCowdoor_c::Delete() {
 #pragma pop
 
 
-/* 80BCCB20-80BCCB4C 002C+00 s=0 e=0 z=0  None .text      daCowdoor_Draw__FP11daCowdoor_c                              */
+/* 80BCCB20-80BCCB4C 002C+00 s=1 e=0 z=0  None .text      daCowdoor_Draw__FP11daCowdoor_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCowdoor_Draw(daCowdoor_c* param_0) {
+asm static void daCowdoor_Draw(daCowdoor_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/daCowdoor_Draw__FP11daCowdoor_c.s"
 }
 #pragma pop
 
 
-/* 80BCCB4C-80BCCB6C 0020+00 s=0 e=0 z=0  None .text      daCowdoor_Execute__FP11daCowdoor_c                           */
+/* 80BCCB4C-80BCCB6C 0020+00 s=1 e=0 z=0  None .text      daCowdoor_Execute__FP11daCowdoor_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCowdoor_Execute(daCowdoor_c* param_0) {
+asm static void daCowdoor_Execute(daCowdoor_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/daCowdoor_Execute__FP11daCowdoor_c.s"
 }
 #pragma pop
 
 
-/* 80BCCB6C-80BCCB8C 0020+00 s=0 e=0 z=0  None .text      daCowdoor_Delete__FP11daCowdoor_c                            */
+/* 80BCCB6C-80BCCB8C 0020+00 s=1 e=0 z=0  None .text      daCowdoor_Delete__FP11daCowdoor_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCowdoor_Delete(daCowdoor_c* param_0) {
+asm static void daCowdoor_Delete(daCowdoor_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/daCowdoor_Delete__FP11daCowdoor_c.s"
 }
 #pragma pop
 
 
-/* 80BCCB8C-80BCCBAC 0020+00 s=0 e=0 z=0  None .text      daCowdoor_Create__FP10fopAc_ac_c                             */
+/* 80BCCB8C-80BCCBAC 0020+00 s=1 e=0 z=0  None .text      daCowdoor_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daCowdoor_Create(fopAc_ac_c* param_0) {
+asm static void daCowdoor_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/daCowdoor_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80BCCBB8-80BCCBDC 0024+00 s=0 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA u8 const struct_80BCCBB8[36] = {
-	/* 80BCCBB8 0009 stringBase_80BCCBB8 @stringBase0 */
-	0x41, 0x5F, 0x55, 0x48, 0x44, 0x6F, 0x6F, 0x72, 0x00,
-	/* 80BCCBC1 000D data_80BCCBC1 None */
-	0x41, 0x5F, 0x55, 0x48, 0x44, 0x6F, 0x6F, 0x72, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-	/* 80BCCBCE 000E data_80BCCBCE None */
-	0x41, 0x5F, 0x55, 0x48, 0x44, 0x6F, 0x6F, 0x72, 0x2E, 0x64, 0x7A, 0x62, 0x00, 0x00,
-};
 

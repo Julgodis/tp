@@ -18,7 +18,30 @@ struct dCamMapToolData {
 	/* 8015FEB8 */ void Set(s32, s32, fopAc_ac_c*, u16, u8);
 };
 
-struct stage_camera2_data_class {
+struct Vec {
+};
+
+struct cXyz {
+	/* 80009184 */ ~cXyz();
+	/* 800977F4 */ cXyz(cXyz const&);
+	/* 8014195C */ cXyz(f32, f32, f32);
+	/* 800125DC */ cXyz();
+	/* 8008E790 */ void abs() const;
+	/* 8008E8D0 */ void operator-=(Vec const&);
+	/* 8008E904 */ void operator+=(Vec const&);
+	/* 800977D8 */ void operator=(cXyz const&);
+	/* 80182D8C */ void set(f32, f32, f32);
+	/* 80266AE4 */ void operator+(Vec const&) const;
+	/* 80266B34 */ void operator-(Vec const&) const;
+	/* 80266B84 */ void operator*(f32) const;
+	/* 80266BD0 */ void operator*(Vec const&) const;
+	/* 80266CE4 */ void norm() const;
+	/* 80266EF4 */ void normalize();
+	/* 8026706C */ bool operator!=(Vec const&) const;
+};
+
+struct dBgS_LinChk {
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
 struct cSAngle {
@@ -53,33 +76,10 @@ struct cSAngle {
 	/* 802712B4 */ void operator*=(f32);
 };
 
-struct Vec {
-};
-
-struct cXyz {
-	/* 80009184 */ ~cXyz();
-	/* 800977F4 */ cXyz(cXyz const&);
-	/* 8014195C */ cXyz(f32, f32, f32);
-	/* 800125DC */ cXyz();
-	/* 8008E790 */ void abs() const;
-	/* 8008E8D0 */ void operator-=(Vec const&);
-	/* 8008E904 */ void operator+=(Vec const&);
-	/* 800977D8 */ void operator=(cXyz const&);
-	/* 80182D8C */ void set(f32, f32, f32);
-	/* 80266AE4 */ void operator+(Vec const&) const;
-	/* 80266B34 */ void operator-(Vec const&) const;
-	/* 80266B84 */ void operator*(f32) const;
-	/* 80266BD0 */ void operator*(Vec const&) const;
-	/* 80266CE4 */ void norm() const;
-	/* 80266EF4 */ void normalize();
-	/* 8026706C */ bool operator!=(Vec const&) const;
-};
-
-struct dBgS_LinChk {
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
 struct camera_class {
+};
+
+struct stage_camera2_data_class {
 };
 
 struct dCamera_c {
@@ -525,12 +525,12 @@ struct cBgS {
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
+struct csXyz {
+};
+
 struct dBgS_RoofChk {
 	/* 80078FF4 */ dBgS_RoofChk();
 	/* 80079090 */ ~dBgS_RoofChk();
-};
-
-struct csXyz {
 };
 
 struct dBgS {
@@ -2059,7 +2059,7 @@ SECTION_DATA static void* method[5] = {
 	(void*)camera_draw__FP20camera_process_class,
 };
 
-/* 803BA6F8-803BA73C 0044+00 s=0 e=0 z=0  None .data      g_profile_CAMERA                                             */
+/* 803BA6F8-803BA73C 0044+00 s=0 e=0 z=1  None .data      g_profile_CAMERA                                             */
 SECTION_DATA void* g_profile_CAMERA[17] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000BFFFD,
@@ -2080,7 +2080,7 @@ SECTION_DATA void* g_profile_CAMERA[17] = {
 	(void*)NULL,
 };
 
-/* 803BA73C-803BA798 0044+18 s=0 e=0 z=0  None .data      g_profile_CAMERA2                                            */
+/* 803BA73C-803BA798 0044+18 s=0 e=0 z=1  None .data      g_profile_CAMERA2                                            */
 SECTION_DATA void* g_profile_CAMERA2[17 + 6 /* padding */] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000BFFFD,

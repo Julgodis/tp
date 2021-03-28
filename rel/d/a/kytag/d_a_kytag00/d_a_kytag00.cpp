@@ -37,11 +37,11 @@ static void raincnt_set(f32); // 2
 static void raincnt_cut(); // 2
 static void wether_tag_efect_reset(kytag00_class*); // 2
 static void wether_tag_efect_move(kytag00_class*); // 2
-void daKytag00_Draw(kytag00_class*); // 2
-void daKytag00_Execute(kytag00_class*); // 2
-bool daKytag00_IsDelete(kytag00_class*); // 2
-void daKytag00_Delete(kytag00_class*); // 2
-void daKytag00_Create(fopAc_ac_c*); // 2
+static void daKytag00_Draw(kytag00_class*); // 2
+static void daKytag00_Execute(kytag00_class*); // 2
+static bool daKytag00_IsDelete(kytag00_class*); // 2
+static void daKytag00_Delete(kytag00_class*); // 2
+static void daKytag00_Create(fopAc_ac_c*); // 2
 
 extern "C" static void get_check_pos__FP13kytag00_class(); // 1
 extern "C" static void wether_tag_reset__FP13kytag00_class(); // 1
@@ -50,18 +50,17 @@ extern "C" static void raincnt_set__Ff(); // 1
 extern "C" static void raincnt_cut__Fv(); // 1
 extern "C" static void wether_tag_efect_reset__FP13kytag00_class(); // 1
 extern "C" static void wether_tag_efect_move__FP13kytag00_class(); // 1
-extern "C" void daKytag00_Draw__FP13kytag00_class(); // 1
-extern "C" void daKytag00_Execute__FP13kytag00_class(); // 1
-extern "C" bool daKytag00_IsDelete__FP13kytag00_class(); // 1
-extern "C" void daKytag00_Delete__FP13kytag00_class(); // 1
-extern "C" void daKytag00_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daKytag00_Draw__FP13kytag00_class(); // 1
+extern "C" static void daKytag00_Execute__FP13kytag00_class(); // 1
+extern "C" static bool daKytag00_IsDelete__FP13kytag00_class(); // 1
+extern "C" static void daKytag00_Delete__FP13kytag00_class(); // 1
+extern "C" static void daKytag00_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern u32 const lit_4101;
 extern "C" extern u32 const lit_4102;
 extern "C" extern u32 const lit_4103;
 extern "C" extern u32 const lit_4104;
 extern "C" extern u32 const lit_4105;
 extern "C" extern u32 const lit_4106;
-extern "C" extern void* l_daKytag00_Method[8];
 extern "C" extern void* g_profile_KYTAG00[12];
 
 // 
@@ -79,6 +78,8 @@ extern "C" void _savegpr_27(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
 extern "C" extern u8 g_mEnvSeMgr[780];
@@ -192,28 +193,28 @@ asm static void raincnt_cut() {
 /* ############################################################################################## */
 /* 8046C9E0-8046CA2C 004C+00 s=1 e=0 z=0  None .data      @3957                                                        */
 SECTION_DATA static void* lit_3957[19] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0xEC),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0x40),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0x48),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0x60),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0x78),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0x78),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0x78),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0xCC),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0xCC),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0xCC),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0xCC),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0xCC),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0xCC),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0xCC),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0x60),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0xE0),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0x48),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0xCC),
+	(void*)(((char*)wether_tag_efect_reset__FP13kytag00_class)+0xCC),
 };
 
-/* 8046BDB8-8046BEB8 0100+00 s=2 e=0 z=0  None .text      wether_tag_efect_reset__FP13kytag00_class                    */
+/* 8046BDB8-8046BEB8 0100+00 s=3 e=0 z=0  None .text      wether_tag_efect_reset__FP13kytag00_class                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -227,28 +228,28 @@ asm static void wether_tag_efect_reset(kytag00_class* param_0) {
 /* ############################################################################################## */
 /* 8046CA2C-8046CA78 004C+00 s=1 e=0 z=0  None .data      @4108                                                        */
 SECTION_DATA static void* lit_4108[19] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x788),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x2A4),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x2B0),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x3B8),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x41C),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x43C),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x464),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x4B4),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x4E0),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x50C),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x538),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x564),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x598),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x5C4),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x3B8),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x5F0),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x614),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x71C),
+	(void*)(((char*)wether_tag_efect_move__FP13kytag00_class)+0x748),
 };
 
-/* 8046BEB8-8046C660 07A8+00 s=2 e=0 z=0  None .text      wether_tag_efect_move__FP13kytag00_class                     */
+/* 8046BEB8-8046C660 07A8+00 s=3 e=0 z=0  None .text      wether_tag_efect_move__FP13kytag00_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -259,11 +260,11 @@ asm static void wether_tag_efect_move(kytag00_class* param_0) {
 #pragma pop
 
 
-/* 8046C660-8046C684 0024+00 s=0 e=0 z=0  None .text      daKytag00_Draw__FP13kytag00_class                            */
+/* 8046C660-8046C684 0024+00 s=1 e=0 z=0  None .text      daKytag00_Draw__FP13kytag00_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag00_Draw(kytag00_class* param_0) {
+asm static void daKytag00_Draw(kytag00_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag00/d_a_kytag00/daKytag00_Draw__FP13kytag00_class.s"
 }
@@ -298,39 +299,39 @@ SECTION_RODATA static u32 const lit_4146 = 0x3C23D70A;
 /* 8046C9DC-8046C9E0 0004+00 s=1 e=0 z=0  None .rodata    @4147                                                        */
 SECTION_RODATA static u32 const lit_4147 = 0x38D1B717;
 
-/* 8046C684-8046C76C 00E8+00 s=0 e=0 z=0  None .text      daKytag00_Execute__FP13kytag00_class                         */
+/* 8046C684-8046C76C 00E8+00 s=1 e=0 z=0  None .text      daKytag00_Execute__FP13kytag00_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag00_Execute(kytag00_class* param_0) {
+asm static void daKytag00_Execute(kytag00_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag00/d_a_kytag00/daKytag00_Execute__FP13kytag00_class.s"
 }
 #pragma pop
 
 
-/* 8046C76C-8046C774 0008+00 s=0 e=0 z=0  None .text      daKytag00_IsDelete__FP13kytag00_class                        */
-bool daKytag00_IsDelete(kytag00_class* param_0) {
+/* 8046C76C-8046C774 0008+00 s=1 e=0 z=0  None .text      daKytag00_IsDelete__FP13kytag00_class                        */
+static bool daKytag00_IsDelete(kytag00_class* param_0) {
 	return true;
 }
 
 
-/* 8046C774-8046C7BC 0048+00 s=0 e=0 z=0  None .text      daKytag00_Delete__FP13kytag00_class                          */
+/* 8046C774-8046C7BC 0048+00 s=1 e=0 z=0  None .text      daKytag00_Delete__FP13kytag00_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag00_Delete(kytag00_class* param_0) {
+asm static void daKytag00_Delete(kytag00_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag00/d_a_kytag00/daKytag00_Delete__FP13kytag00_class.s"
 }
 #pragma pop
 
 
-/* 8046C7BC-8046C978 01BC+00 s=0 e=0 z=0  None .text      daKytag00_Create__FP10fopAc_ac_c                             */
+/* 8046C7BC-8046C978 01BC+00 s=1 e=0 z=0  None .text      daKytag00_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag00_Create(fopAc_ac_c* param_0) {
+asm static void daKytag00_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag00/d_a_kytag00/daKytag00_Create__FP10fopAc_ac_c.s"
 }
@@ -338,30 +339,30 @@ asm void daKytag00_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 8046CA78-8046CA98 0020+00 s=0 e=0 z=0  None .data      l_daKytag00_Method                                           */
-SECTION_DATA void* l_daKytag00_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 8046CA78-8046CA98 0020+00 s=1 e=0 z=0  None .data      l_daKytag00_Method                                           */
+SECTION_DATA static void* l_daKytag00_Method[8] = {
+	(void*)daKytag00_Create__FP10fopAc_ac_c,
+	(void*)daKytag00_Delete__FP13kytag00_class,
+	(void*)daKytag00_Execute__FP13kytag00_class,
+	(void*)daKytag00_IsDelete__FP13kytag00_class,
+	(void*)daKytag00_Draw__FP13kytag00_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 8046CA98-8046CAC8 0030+00 s=0 e=0 z=0  None .data      g_profile_KYTAG00                                            */
+/* 8046CA98-8046CAC8 0030+00 s=0 e=0 z=1  None .data      g_profile_KYTAG00                                            */
 SECTION_DATA void* g_profile_KYTAG00[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x02AA0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x0000058C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x005E0000,
-	(void*)NULL,
+	(void*)&l_daKytag00_Method,
 	(void*)0x00044000,
 	(void*)NULL,
 };

@@ -55,14 +55,14 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct dBgW_Base {
+};
+
 struct Vec {
 };
 
 struct cBgS_GndChk {
 	/* 80267D0C */ void SetPos(Vec const*);
-};
-
-struct dBgW_Base {
 };
 
 struct cBgS {
@@ -113,31 +113,30 @@ struct Z2SoundObjSimple {
 // 
 
 static void ride_call_back(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
-void daObj_Fw_Draw(obj_fw_class*); // 2
+static void daObj_Fw_Draw(obj_fw_class*); // 2
 static void water_check(obj_fw_class*); // 2
 static void fw_float(obj_fw_class*); // 2
 static void action(obj_fw_class*); // 2
 static void daObj_Fw_Execute(obj_fw_class*); // 2
-bool daObj_Fw_IsDelete(obj_fw_class*); // 2
-void daObj_Fw_Delete(obj_fw_class*); // 2
+static bool daObj_Fw_IsDelete(obj_fw_class*); // 2
+static void daObj_Fw_Delete(obj_fw_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daObj_Fw_Create(fopAc_ac_c*); // 2
+static void daObj_Fw_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__14daObj_Fw_HIO_cFv(); // 1
 extern "C" static void ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c(); // 1
-extern "C" void daObj_Fw_Draw__FP12obj_fw_class(); // 1
+extern "C" static void daObj_Fw_Draw__FP12obj_fw_class(); // 1
 extern "C" static void water_check__FP12obj_fw_class(); // 1
 extern "C" static void fw_float__FP12obj_fw_class(); // 1
 extern "C" static void action__FP12obj_fw_class(); // 1
 extern "C" static void daObj_Fw_Execute__FP12obj_fw_class(); // 1
-extern "C" bool daObj_Fw_IsDelete__FP12obj_fw_class(); // 1
-extern "C" void daObj_Fw_Delete__FP12obj_fw_class(); // 1
+extern "C" static bool daObj_Fw_IsDelete__FP12obj_fw_class(); // 1
+extern "C" static void daObj_Fw_Delete__FP12obj_fw_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daObj_Fw_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObj_Fw_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__14daObj_Fw_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_fw_cpp(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObj_Fw_Method[8];
 extern "C" extern void* g_profile_OBJ_FW[12];
 
 // 
@@ -208,6 +207,8 @@ extern "C" void PSMTXMultVec(); // 1
 extern "C" void PSVECAdd(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -232,30 +233,30 @@ SECTION_DATA static u8 data_80BF2BB4[8] = {
 	0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x09,
 };
 
-/* 80BF2BBC-80BF2BDC 0020+00 s=0 e=0 z=0  None .data      l_daObj_Fw_Method                                            */
-SECTION_DATA void* l_daObj_Fw_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80BF2BBC-80BF2BDC 0020+00 s=1 e=0 z=0  None .data      l_daObj_Fw_Method                                            */
+SECTION_DATA static void* l_daObj_Fw_Method[8] = {
+	(void*)daObj_Fw_Create__FP10fopAc_ac_c,
+	(void*)daObj_Fw_Delete__FP12obj_fw_class,
+	(void*)daObj_Fw_Execute__FP12obj_fw_class,
+	(void*)daObj_Fw_IsDelete__FP12obj_fw_class,
+	(void*)daObj_Fw_Draw__FP12obj_fw_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80BF2BDC-80BF2C0C 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_FW                                             */
+/* 80BF2BDC-80BF2C0C 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_FW                                             */
 SECTION_DATA void* g_profile_OBJ_FW[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0008FFFD,
 	(void*)0x02F00000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000628,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x002A0000,
-	(void*)NULL,
+	(void*)&l_daObj_Fw_Method,
 	(void*)0x00044100,
 	(void*)0x000E0000,
 };
@@ -264,7 +265,7 @@ SECTION_DATA void* g_profile_OBJ_FW[12] = {
 SECTION_DATA static void* __vt__14daObj_Fw_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14daObj_Fw_HIO_cFv,
 };
 
 /* 80BF204C-80BF2070 0024+00 s=1 e=0 z=0  None .text      __ct__14daObj_Fw_HIO_cFv                                     */
@@ -310,11 +311,11 @@ asm static void ride_call_back(dBgW* param_0, fopAc_ac_c* param_1, fopAc_ac_c* p
 #pragma pop
 
 
-/* 80BF219C-80BF2200 0064+00 s=0 e=0 z=0  None .text      daObj_Fw_Draw__FP12obj_fw_class                              */
+/* 80BF219C-80BF2200 0064+00 s=1 e=0 z=0  None .text      daObj_Fw_Draw__FP12obj_fw_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Fw_Draw(obj_fw_class* param_0) {
+asm static void daObj_Fw_Draw(obj_fw_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fw/d_a_obj_fw/daObj_Fw_Draw__FP12obj_fw_class.s"
 }
@@ -399,7 +400,7 @@ asm static void action(obj_fw_class* param_0) {
 #pragma pop
 
 
-/* 80BF2670-80BF2718 00A8+00 s=1 e=0 z=0  None .text      daObj_Fw_Execute__FP12obj_fw_class                           */
+/* 80BF2670-80BF2718 00A8+00 s=2 e=0 z=0  None .text      daObj_Fw_Execute__FP12obj_fw_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -410,8 +411,8 @@ asm static void daObj_Fw_Execute(obj_fw_class* param_0) {
 #pragma pop
 
 
-/* 80BF2718-80BF2720 0008+00 s=0 e=0 z=0  None .text      daObj_Fw_IsDelete__FP12obj_fw_class                          */
-bool daObj_Fw_IsDelete(obj_fw_class* param_0) {
+/* 80BF2718-80BF2720 0008+00 s=1 e=0 z=0  None .text      daObj_Fw_IsDelete__FP12obj_fw_class                          */
+static bool daObj_Fw_IsDelete(obj_fw_class* param_0) {
 	return true;
 }
 
@@ -439,11 +440,11 @@ SECTION_RODATA static u32 const lit_3922 = 0x47800000;
 SECTION_DEAD char const* const stringBase_80BF2BA4 = "RYUW00";
 #pragma pop
 
-/* 80BF2720-80BF279C 007C+00 s=0 e=0 z=0  None .text      daObj_Fw_Delete__FP12obj_fw_class                            */
+/* 80BF2720-80BF279C 007C+00 s=1 e=0 z=0  None .text      daObj_Fw_Delete__FP12obj_fw_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Fw_Delete(obj_fw_class* param_0) {
+asm static void daObj_Fw_Delete(obj_fw_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fw/d_a_obj_fw/daObj_Fw_Delete__FP12obj_fw_class.s"
 }
@@ -461,18 +462,18 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80BF28D0-80BF2AB0 01E0+00 s=0 e=0 z=0  None .text      daObj_Fw_Create__FP10fopAc_ac_c                              */
+/* 80BF28D0-80BF2AB0 01E0+00 s=1 e=0 z=0  None .text      daObj_Fw_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Fw_Create(fopAc_ac_c* param_0) {
+asm static void daObj_Fw_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fw/d_a_obj_fw/daObj_Fw_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80BF2AB0-80BF2AF8 0048+00 s=1 e=0 z=0  None .text      __dt__14daObj_Fw_HIO_cFv                                     */
+/* 80BF2AB0-80BF2AF8 0048+00 s=2 e=0 z=0  None .text      __dt__14daObj_Fw_HIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -483,7 +484,7 @@ asm daObj_Fw_HIO_c::~daObj_Fw_HIO_c() {
 #pragma pop
 
 
-/* 80BF2AF8-80BF2B34 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_fw_cpp                                       */
+/* 80BF2AF8-80BF2B34 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_fw_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

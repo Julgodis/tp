@@ -19,6 +19,7 @@ extern void* const data_80D5DD48[2];
 // 
 
 
+extern "C" void __sinit_d_a_tag_poFire_cpp(); // 1
 
 // 
 // Declarations:

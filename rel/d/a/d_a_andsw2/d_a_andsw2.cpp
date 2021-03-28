@@ -51,15 +51,15 @@ struct dEvent_manager_c {
 // Forward References:
 // 
 
-void daAndsw2_actionOnAll(daAndsw2_c*); // 2
-void daAndsw2_actionTimer(daAndsw2_c*); // 2
-void daAndsw2_actionOrder(daAndsw2_c*); // 2
-void daAndsw2_actionEvent(daAndsw2_c*); // 2
-void daAndsw2_actionOff(daAndsw2_c*); // 2
-bool daAndsw2_actionWait(daAndsw2_c*); // 2
-void daAndsw2_Execute(daAndsw2_c*); // 2
-void daAndsw2_Delete(daAndsw2_c*); // 2
-void daAndsw2_Create(fopAc_ac_c*); // 2
+static void daAndsw2_actionOnAll(daAndsw2_c*); // 2
+static void daAndsw2_actionTimer(daAndsw2_c*); // 2
+static void daAndsw2_actionOrder(daAndsw2_c*); // 2
+static void daAndsw2_actionEvent(daAndsw2_c*); // 2
+static void daAndsw2_actionOff(daAndsw2_c*); // 2
+static bool daAndsw2_actionWait(daAndsw2_c*); // 2
+static void daAndsw2_Execute(daAndsw2_c*); // 2
+static void daAndsw2_Delete(daAndsw2_c*); // 2
+static void daAndsw2_Create(fopAc_ac_c*); // 2
 
 extern "C" void getEventNo__10daAndsw2_cFv(); // 1
 extern "C" void getSwbit__10daAndsw2_cFv(); // 1
@@ -74,16 +74,15 @@ extern "C" void chkSwStatus__10daAndsw2_cFv(); // 1
 extern "C" void chkSwStatus2__10daAndsw2_cFv(); // 1
 extern "C" void __dt__10daAndsw2_cFv(); // 1
 extern "C" void create__10daAndsw2_cFv(); // 1
-extern "C" void daAndsw2_actionOnAll__FP10daAndsw2_c(); // 1
-extern "C" void daAndsw2_actionTimer__FP10daAndsw2_c(); // 1
-extern "C" void daAndsw2_actionOrder__FP10daAndsw2_c(); // 1
-extern "C" void daAndsw2_actionEvent__FP10daAndsw2_c(); // 1
-extern "C" void daAndsw2_actionOff__FP10daAndsw2_c(); // 1
-extern "C" bool daAndsw2_actionWait__FP10daAndsw2_c(); // 1
-extern "C" void daAndsw2_Execute__FP10daAndsw2_c(); // 1
-extern "C" void daAndsw2_Delete__FP10daAndsw2_c(); // 1
-extern "C" void daAndsw2_Create__FP10fopAc_ac_c(); // 1
-extern "C" extern void* l_daAndsw2_Method[8];
+extern "C" static void daAndsw2_actionOnAll__FP10daAndsw2_c(); // 1
+extern "C" static void daAndsw2_actionTimer__FP10daAndsw2_c(); // 1
+extern "C" static void daAndsw2_actionOrder__FP10daAndsw2_c(); // 1
+extern "C" static void daAndsw2_actionEvent__FP10daAndsw2_c(); // 1
+extern "C" static void daAndsw2_actionOff__FP10daAndsw2_c(); // 1
+extern "C" static bool daAndsw2_actionWait__FP10daAndsw2_c(); // 1
+extern "C" static void daAndsw2_Execute__FP10daAndsw2_c(); // 1
+extern "C" static void daAndsw2_Delete__FP10daAndsw2_c(); // 1
+extern "C" static void daAndsw2_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern void* g_profile_ANDSW2[12];
 
 // 
@@ -111,6 +110,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 
@@ -252,16 +253,16 @@ asm daAndsw2_c::~daAndsw2_c() {
 /* ############################################################################################## */
 /* 804D6AC8-804D6AE4 001C+00 s=1 e=0 z=0  None .data      @3821                                                        */
 SECTION_DATA static void* lit_3821[7] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)create__10daAndsw2_cFv)+0x74),
+	(void*)(((char*)create__10daAndsw2_cFv)+0xD8),
+	(void*)(((char*)create__10daAndsw2_cFv)+0x148),
+	(void*)(((char*)create__10daAndsw2_cFv)+0x1AC),
+	(void*)(((char*)create__10daAndsw2_cFv)+0x210),
+	(void*)(((char*)create__10daAndsw2_cFv)+0x21C),
+	(void*)(((char*)create__10daAndsw2_cFv)+0xD8),
 };
 
-/* 804D6120-804D63A4 0284+00 s=1 e=0 z=0  None .text      create__10daAndsw2_cFv                                       */
+/* 804D6120-804D63A4 0284+00 s=2 e=0 z=0  None .text      create__10daAndsw2_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -272,63 +273,63 @@ asm void daAndsw2_c::create() {
 #pragma pop
 
 
-/* 804D63A4-804D6580 01DC+00 s=0 e=0 z=0  None .text      daAndsw2_actionOnAll__FP10daAndsw2_c                         */
+/* 804D63A4-804D6580 01DC+00 s=1 e=0 z=0  None .text      daAndsw2_actionOnAll__FP10daAndsw2_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daAndsw2_actionOnAll(daAndsw2_c* param_0) {
+asm static void daAndsw2_actionOnAll(daAndsw2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionOnAll__FP10daAndsw2_c.s"
 }
 #pragma pop
 
 
-/* 804D6580-804D6704 0184+00 s=0 e=0 z=0  None .text      daAndsw2_actionTimer__FP10daAndsw2_c                         */
+/* 804D6580-804D6704 0184+00 s=1 e=0 z=0  None .text      daAndsw2_actionTimer__FP10daAndsw2_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daAndsw2_actionTimer(daAndsw2_c* param_0) {
+asm static void daAndsw2_actionTimer(daAndsw2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionTimer__FP10daAndsw2_c.s"
 }
 #pragma pop
 
 
-/* 804D6704-804D68A4 01A0+00 s=0 e=0 z=0  None .text      daAndsw2_actionOrder__FP10daAndsw2_c                         */
+/* 804D6704-804D68A4 01A0+00 s=1 e=0 z=0  None .text      daAndsw2_actionOrder__FP10daAndsw2_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daAndsw2_actionOrder(daAndsw2_c* param_0) {
+asm static void daAndsw2_actionOrder(daAndsw2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionOrder__FP10daAndsw2_c.s"
 }
 #pragma pop
 
 
-/* 804D68A4-804D6960 00BC+00 s=0 e=0 z=0  None .text      daAndsw2_actionEvent__FP10daAndsw2_c                         */
+/* 804D68A4-804D6960 00BC+00 s=1 e=0 z=0  None .text      daAndsw2_actionEvent__FP10daAndsw2_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daAndsw2_actionEvent(daAndsw2_c* param_0) {
+asm static void daAndsw2_actionEvent(daAndsw2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionEvent__FP10daAndsw2_c.s"
 }
 #pragma pop
 
 
-/* 804D6960-804D6A34 00D4+00 s=0 e=0 z=0  None .text      daAndsw2_actionOff__FP10daAndsw2_c                           */
+/* 804D6960-804D6A34 00D4+00 s=1 e=0 z=0  None .text      daAndsw2_actionOff__FP10daAndsw2_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daAndsw2_actionOff(daAndsw2_c* param_0) {
+asm static void daAndsw2_actionOff(daAndsw2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionOff__FP10daAndsw2_c.s"
 }
 #pragma pop
 
 
-/* 804D6A34-804D6A3C 0008+00 s=0 e=0 z=0  None .text      daAndsw2_actionWait__FP10daAndsw2_c                          */
-bool daAndsw2_actionWait(daAndsw2_c* param_0) {
+/* 804D6A34-804D6A3C 0008+00 s=1 e=0 z=0  None .text      daAndsw2_actionWait__FP10daAndsw2_c                          */
+static bool daAndsw2_actionWait(daAndsw2_c* param_0) {
 	return true;
 }
 
@@ -336,41 +337,41 @@ bool daAndsw2_actionWait(daAndsw2_c* param_0) {
 /* ############################################################################################## */
 /* 804D6AE4-804D6AFC 0018+00 s=1 e=0 z=0  None .data      l_action$localstatic3$execute__10daAndsw2_cFv                */
 SECTION_DATA static void* data_804D6AE4[6] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daAndsw2_actionOnAll__FP10daAndsw2_c,
+	(void*)daAndsw2_actionTimer__FP10daAndsw2_c,
+	(void*)daAndsw2_actionOrder__FP10daAndsw2_c,
+	(void*)daAndsw2_actionEvent__FP10daAndsw2_c,
+	(void*)daAndsw2_actionOff__FP10daAndsw2_c,
+	(void*)daAndsw2_actionWait__FP10daAndsw2_c,
 };
 
-/* 804D6A3C-804D6A78 003C+00 s=0 e=0 z=0  None .text      daAndsw2_Execute__FP10daAndsw2_c                             */
+/* 804D6A3C-804D6A78 003C+00 s=1 e=0 z=0  None .text      daAndsw2_Execute__FP10daAndsw2_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daAndsw2_Execute(daAndsw2_c* param_0) {
+asm static void daAndsw2_Execute(daAndsw2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_Execute__FP10daAndsw2_c.s"
 }
 #pragma pop
 
 
-/* 804D6A78-804D6AA0 0028+00 s=0 e=0 z=0  None .text      daAndsw2_Delete__FP10daAndsw2_c                              */
+/* 804D6A78-804D6AA0 0028+00 s=1 e=0 z=0  None .text      daAndsw2_Delete__FP10daAndsw2_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daAndsw2_Delete(daAndsw2_c* param_0) {
+asm static void daAndsw2_Delete(daAndsw2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_Delete__FP10daAndsw2_c.s"
 }
 #pragma pop
 
 
-/* 804D6AA0-804D6AC0 0020+00 s=0 e=0 z=0  None .text      daAndsw2_Create__FP10fopAc_ac_c                              */
+/* 804D6AA0-804D6AC0 0020+00 s=1 e=0 z=0  None .text      daAndsw2_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daAndsw2_Create(fopAc_ac_c* param_0) {
+asm static void daAndsw2_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_Create__FP10fopAc_ac_c.s"
 }
@@ -378,11 +379,11 @@ asm void daAndsw2_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 804D6AFC-804D6B1C 0020+00 s=0 e=0 z=0  None .data      l_daAndsw2_Method                                            */
-SECTION_DATA void* l_daAndsw2_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 804D6AFC-804D6B1C 0020+00 s=1 e=0 z=0  None .data      l_daAndsw2_Method                                            */
+SECTION_DATA static void* l_daAndsw2_Method[8] = {
+	(void*)daAndsw2_Create__FP10fopAc_ac_c,
+	(void*)daAndsw2_Delete__FP10daAndsw2_c,
+	(void*)daAndsw2_Execute__FP10daAndsw2_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
@@ -390,18 +391,18 @@ SECTION_DATA void* l_daAndsw2_Method[8] = {
 	(void*)NULL,
 };
 
-/* 804D6B1C-804D6B4C 0030+00 s=0 e=0 z=0  None .data      g_profile_ANDSW2                                             */
+/* 804D6B1C-804D6B4C 0030+00 s=0 e=0 z=1  None .data      g_profile_ANDSW2                                             */
 SECTION_DATA void* g_profile_ANDSW2[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x02310000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000570,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x012F0000,
-	(void*)NULL,
+	(void*)&l_daAndsw2_Method,
 	(void*)0x00044000,
 	(void*)0x00060000,
 };

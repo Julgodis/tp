@@ -20,10 +20,10 @@ struct mDoHIO_entry_c {
 	/* 80CB8EBC */ ~mDoHIO_entry_c();
 };
 
-struct dBgW {
+struct fopAc_ac_c {
 };
 
-struct fopAc_ac_c {
+struct dBgW {
 };
 
 struct daRfHole_c {
@@ -79,10 +79,10 @@ struct cXyz {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -101,6 +101,10 @@ struct cBgS_PolyInfo {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 80078690 */ bool Create();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -122,10 +126,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daRfHole_Draw(daRfHole_c*); // 2
-void daRfHole_Execute(daRfHole_c*); // 2
-void daRfHole_Delete(daRfHole_c*); // 2
-void daRfHole_Create(fopAc_ac_c*); // 2
+static void daRfHole_Draw(daRfHole_c*); // 2
+static void daRfHole_Execute(daRfHole_c*); // 2
+static void daRfHole_Delete(daRfHole_c*); // 2
+static void daRfHole_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__14daRfHole_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -147,15 +151,14 @@ extern "C" void modeEnd__10daRfHole_cFv(); // 1
 extern "C" void setBreakEffect__10daRfHole_cFv(); // 1
 extern "C" void Draw__10daRfHole_cFv(); // 1
 extern "C" void Delete__10daRfHole_cFv(); // 1
-extern "C" void daRfHole_Draw__FP10daRfHole_c(); // 1
-extern "C" void daRfHole_Execute__FP10daRfHole_c(); // 1
-extern "C" void daRfHole_Delete__FP10daRfHole_c(); // 1
-extern "C" void daRfHole_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daRfHole_Draw__FP10daRfHole_c(); // 1
+extern "C" static void daRfHole_Execute__FP10daRfHole_c(); // 1
+extern "C" static void daRfHole_Delete__FP10daRfHole_c(); // 1
+extern "C" static void daRfHole_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__14daRfHole_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_rfHole_cpp(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daRfHole_Method[8];
 extern "C" extern void* g_profile_Obj_RfHole[12];
 
 // 
@@ -190,6 +193,10 @@ extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzU
 extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -208,6 +215,8 @@ extern "C" void _savegpr_26(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_28(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -250,28 +259,28 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 SECTION_DATA static void* lit_3835[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeWait__10daRfHole_cFv,
 };
 
 /* 80CB9AF8-80CB9B04 000C+00 s=1 e=0 z=0  None .data      @3836                                                        */
 SECTION_DATA static void* lit_3836[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeBreak__10daRfHole_cFv,
 };
 
 /* 80CB9B04-80CB9B10 000C+00 s=1 e=0 z=0  None .data      @3837                                                        */
 SECTION_DATA static void* lit_3837[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeBreakEff__10daRfHole_cFv,
 };
 
 /* 80CB9B10-80CB9B1C 000C+00 s=1 e=0 z=0  None .data      @3838                                                        */
 SECTION_DATA static void* lit_3838[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeEnd__10daRfHole_cFv,
 };
 
 /* 80CB9B1C-80CB9B4C 0030+00 s=1 e=0 z=0  None .data      mode_proc$3834                                               */
@@ -281,30 +290,30 @@ SECTION_DATA static u8 data_80CB9B1C[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80CB9B4C-80CB9B6C 0020+00 s=0 e=0 z=0  None .data      l_daRfHole_Method                                            */
-SECTION_DATA void* l_daRfHole_Method[8] = {
+/* 80CB9B4C-80CB9B6C 0020+00 s=1 e=0 z=0  None .data      l_daRfHole_Method                                            */
+SECTION_DATA static void* l_daRfHole_Method[8] = {
+	(void*)daRfHole_Create__FP10fopAc_ac_c,
+	(void*)daRfHole_Delete__FP10daRfHole_c,
+	(void*)daRfHole_Execute__FP10daRfHole_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daRfHole_Draw__FP10daRfHole_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80CB9B6C-80CB9B9C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_RfHole                                         */
+/* 80CB9B6C-80CB9B9C 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_RfHole                                         */
 SECTION_DATA void* g_profile_Obj_RfHole[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00430000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005B4,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02020000,
-	(void*)NULL,
+	(void*)&l_daRfHole_Method,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -313,28 +322,28 @@ SECTION_DATA void* g_profile_Obj_RfHole[12] = {
 SECTION_DATA static void* __vt__10daRfHole_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__10daRfHole_cFv,
+	(void*)Create__16dBgS_MoveBgActorFv,
+	(void*)Execute__10daRfHole_cFPPA3_A4_f,
+	(void*)Draw__10daRfHole_cFv,
+	(void*)Delete__10daRfHole_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
 /* 80CB9BC4-80CB9BD0 000C+00 s=2 e=0 z=0  None .data      __vt__14daRfHole_HIO_c                                       */
 SECTION_DATA static void* __vt__14daRfHole_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14daRfHole_HIO_cFv,
 };
 
 /* 80CB9BD0-80CB9BDC 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
 /* 80CB8E6C-80CB8EBC 0050+00 s=1 e=0 z=0  None .text      __ct__14daRfHole_HIO_cFv                                     */
@@ -348,7 +357,7 @@ asm daRfHole_HIO_c::daRfHole_HIO_c() {
 #pragma pop
 
 
-/* 80CB8EBC-80CB8F04 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80CB8EBC-80CB8F04 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -406,7 +415,7 @@ SECTION_RODATA static u8 const data_80CB9AB4[10 + 2 /* padding */] = {
 SECTION_DEAD char const* const stringBase_80CB9AC0 = "Otosiana";
 #pragma pop
 
-/* 80CB8F8C-80CB8FF8 006C+00 s=0 e=0 z=0  None .text      CreateHeap__10daRfHole_cFv                                   */
+/* 80CB8F8C-80CB8FF8 006C+00 s=1 e=0 z=0  None .text      CreateHeap__10daRfHole_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -457,7 +466,7 @@ asm void daRfHole_c::playerAreaCheck() {
 #pragma pop
 
 
-/* 80CB940C-80CB9464 0058+00 s=0 e=0 z=0  None .text      Execute__10daRfHole_cFPPA3_A4_f                              */
+/* 80CB940C-80CB9464 0058+00 s=1 e=0 z=0  None .text      Execute__10daRfHole_cFPPA3_A4_f                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -494,7 +503,7 @@ asm void daRfHole_c::init_modeWait() {
 #pragma pop
 
 
-/* 80CB952C-80CB9558 002C+00 s=0 e=0 z=0  None .text      modeWait__10daRfHole_cFv                                     */
+/* 80CB952C-80CB9558 002C+00 s=1 e=0 z=0  None .text      modeWait__10daRfHole_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -516,7 +525,7 @@ asm void daRfHole_c::init_modeBreak() {
 #pragma pop
 
 
-/* 80CB96AC-80CB96CC 0020+00 s=0 e=0 z=0  None .text      modeBreak__10daRfHole_cFv                                    */
+/* 80CB96AC-80CB96CC 0020+00 s=1 e=0 z=0  None .text      modeBreak__10daRfHole_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -538,7 +547,7 @@ asm void daRfHole_c::init_modeBreakEff() {
 #pragma pop
 
 
-/* 80CB971C-80CB973C 0020+00 s=0 e=0 z=0  None .text      modeBreakEff__10daRfHole_cFv                                 */
+/* 80CB971C-80CB973C 0020+00 s=1 e=0 z=0  None .text      modeBreakEff__10daRfHole_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -560,7 +569,7 @@ asm void daRfHole_c::init_modeEnd() {
 #pragma pop
 
 
-/* 80CB9748-80CB9768 0020+00 s=0 e=0 z=0  None .text      modeEnd__10daRfHole_cFv                                      */
+/* 80CB9748-80CB9768 0020+00 s=1 e=0 z=0  None .text      modeEnd__10daRfHole_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -582,7 +591,7 @@ asm void daRfHole_c::setBreakEffect() {
 #pragma pop
 
 
-/* 80CB9878-80CB991C 00A4+00 s=0 e=0 z=0  None .text      Draw__10daRfHole_cFv                                         */
+/* 80CB9878-80CB991C 00A4+00 s=1 e=0 z=0  None .text      Draw__10daRfHole_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -593,7 +602,7 @@ asm void daRfHole_c::Draw() {
 #pragma pop
 
 
-/* 80CB991C-80CB994C 0030+00 s=0 e=0 z=0  None .text      Delete__10daRfHole_cFv                                       */
+/* 80CB991C-80CB994C 0030+00 s=1 e=0 z=0  None .text      Delete__10daRfHole_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -604,51 +613,51 @@ asm void daRfHole_c::Delete() {
 #pragma pop
 
 
-/* 80CB994C-80CB9978 002C+00 s=0 e=0 z=0  None .text      daRfHole_Draw__FP10daRfHole_c                                */
+/* 80CB994C-80CB9978 002C+00 s=1 e=0 z=0  None .text      daRfHole_Draw__FP10daRfHole_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daRfHole_Draw(daRfHole_c* param_0) {
+asm static void daRfHole_Draw(daRfHole_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/daRfHole_Draw__FP10daRfHole_c.s"
 }
 #pragma pop
 
 
-/* 80CB9978-80CB9998 0020+00 s=0 e=0 z=0  None .text      daRfHole_Execute__FP10daRfHole_c                             */
+/* 80CB9978-80CB9998 0020+00 s=1 e=0 z=0  None .text      daRfHole_Execute__FP10daRfHole_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daRfHole_Execute(daRfHole_c* param_0) {
+asm static void daRfHole_Execute(daRfHole_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/daRfHole_Execute__FP10daRfHole_c.s"
 }
 #pragma pop
 
 
-/* 80CB9998-80CB99B8 0020+00 s=0 e=0 z=0  None .text      daRfHole_Delete__FP10daRfHole_c                              */
+/* 80CB9998-80CB99B8 0020+00 s=1 e=0 z=0  None .text      daRfHole_Delete__FP10daRfHole_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daRfHole_Delete(daRfHole_c* param_0) {
+asm static void daRfHole_Delete(daRfHole_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/daRfHole_Delete__FP10daRfHole_c.s"
 }
 #pragma pop
 
 
-/* 80CB99B8-80CB99D8 0020+00 s=0 e=0 z=0  None .text      daRfHole_Create__FP10fopAc_ac_c                              */
+/* 80CB99B8-80CB99D8 0020+00 s=1 e=0 z=0  None .text      daRfHole_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daRfHole_Create(fopAc_ac_c* param_0) {
+asm static void daRfHole_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/daRfHole_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80CB99D8-80CB9A34 005C+00 s=1 e=0 z=0  None .text      __dt__14daRfHole_HIO_cFv                                     */
+/* 80CB99D8-80CB9A34 005C+00 s=2 e=0 z=0  None .text      __dt__14daRfHole_HIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -659,7 +668,7 @@ asm daRfHole_HIO_c::~daRfHole_HIO_c() {
 #pragma pop
 
 
-/* 80CB9A34-80CB9A70 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_rfHole_cpp                                   */
+/* 80CB9A34-80CB9A70 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_rfHole_cpp                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

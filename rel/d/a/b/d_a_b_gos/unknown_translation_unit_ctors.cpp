@@ -19,6 +19,7 @@ extern void* const data_806053B4[2];
 // 
 
 
+extern "C" void __sinit_d_a_b_gos_cpp(); // 1
 
 // 
 // Declarations:

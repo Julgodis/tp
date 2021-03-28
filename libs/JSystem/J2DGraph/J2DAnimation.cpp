@@ -110,10 +110,10 @@ struct JUTResReference {
 struct JUTTransparency {
 };
 
-struct _GXTlut {
+struct _GXTlutFmt {
 };
 
-struct _GXTlutFmt {
+struct _GXTlut {
 };
 
 struct JUTPalette {

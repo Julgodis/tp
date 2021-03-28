@@ -121,10 +121,10 @@ struct dEvt_control_c {
 	/* 80042468 */ void reset();
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -248,17 +248,17 @@ struct Z2SoundObjSimple {
 // Forward References:
 // 
 
-void daObj_Kanban2_Draw(daObj_Kanban2_c*); // 2
+static void daObj_Kanban2_Draw(daObj_Kanban2_c*); // 2
 static void daObj_Kanban2_Execute(daObj_Kanban2_c*); // 2
-bool daObj_Kanban2_IsDelete(daObj_Kanban2_c*); // 2
-void daObj_Kanban2_Delete(daObj_Kanban2_c*); // 2
+static bool daObj_Kanban2_IsDelete(daObj_Kanban2_c*); // 2
+static void daObj_Kanban2_Delete(daObj_Kanban2_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daObj_Kanban2_Create(daObj_Kanban2_c*); // 2
+static void daObj_Kanban2_Create(daObj_Kanban2_c*); // 2
 
 extern "C" void __ct__19daObj_Kanban2_HIO_cFv(); // 1
 extern "C" void draw__15daObj_Kanban2_cFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void daObj_Kanban2_Draw__FP15daObj_Kanban2_c(); // 1
+extern "C" static void daObj_Kanban2_Draw__FP15daObj_Kanban2_c(); // 1
 extern "C" void setKanbanSE__15daObj_Kanban2_cFi(); // 1
 extern "C" void createBreakParts__15daObj_Kanban2_cFUl5csXyz(); // 1
 extern "C" void createWallHitBreak__15daObj_Kanban2_cFv(); // 1
@@ -289,20 +289,20 @@ extern "C" void mtx_set__15daObj_Kanban2_cFv(); // 1
 extern "C" void cc_set__15daObj_Kanban2_cFv(); // 1
 extern "C" void execute__15daObj_Kanban2_cFv(); // 1
 extern "C" static void daObj_Kanban2_Execute__FP15daObj_Kanban2_c(); // 1
-extern "C" bool daObj_Kanban2_IsDelete__FP15daObj_Kanban2_c(); // 1
+extern "C" static bool daObj_Kanban2_IsDelete__FP15daObj_Kanban2_c(); // 1
 extern "C" void _delete__15daObj_Kanban2_cFv(); // 1
-extern "C" void daObj_Kanban2_Delete__FP15daObj_Kanban2_c(); // 1
+extern "C" static void daObj_Kanban2_Delete__FP15daObj_Kanban2_c(); // 1
 extern "C" void CreateHeap__15daObj_Kanban2_cFv(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void create__15daObj_Kanban2_cFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" void daObj_Kanban2_Create__FP15daObj_Kanban2_c(); // 1
+extern "C" static void daObj_Kanban2_Create__FP15daObj_Kanban2_c(); // 1
 extern "C" void __dt__19daObj_Kanban2_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_kanban2_cpp(); // 1
-extern "C" void func_805855FC(); // 1
-extern "C" void func_80585604(); // 1
+extern "C" static void func_805855FC(); // 1
+extern "C" static void func_80585604(); // 1
 extern "C" extern u32 const lit_4285;
 extern "C" extern u32 const lit_4330;
 extern "C" extern u32 const lit_4331;
@@ -312,7 +312,6 @@ extern "C" extern u32 const lit_4927;
 extern "C" extern u32 const lit_4928;
 extern "C" extern u32 const lit_4930;
 extern "C" extern u32 const lit_4931;
-extern "C" extern void* l_daObj_Kanban2_Method[8];
 extern "C" extern void* g_profile_OBJ_KANBAN2[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -487,6 +486,8 @@ extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void abs(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -510,27 +511,261 @@ extern "C" void __register_global_object(); // 1
 /* 80585620-80585624 0004+00 s=19 e=0 z=0  None .rodata    @3970                                                        */
 SECTION_RODATA static u32 const lit_3970 = 0x3F800000;
 
+/* 80585624-80585628 0004+00 s=4 e=0 z=0  None .rodata    @4013                                                        */
+SECTION_RODATA static u32 const lit_4013 = 0x42C80000;
+
+/* 80585628-8058562C 0004+00 s=1 e=0 z=0  None .rodata    @4014                                                        */
+SECTION_RODATA static u32 const lit_4014 = 0x43C80000;
+
+/* 8058562C-80585630 0004+00 s=9 e=0 z=0  None .rodata    @4015                                                        */
+SECTION_RODATA static u8 const lit_4015[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80585630-80585634 0004+00 s=4 e=0 z=0  None .rodata    @4036                                                        */
+SECTION_RODATA static u32 const lit_4036 = 0xBF800000;
+
+/* 80585634-80585638 0004+00 s=3 e=0 z=0  None .rodata    @4283                                                        */
+SECTION_RODATA static u32 const lit_4283 = 0x3F000000;
+
+/* 80585638-8058563C 0004+00 s=4 e=0 z=0  None .rodata    @4284                                                        */
+SECTION_RODATA static u32 const lit_4284 = 0x42200000;
+
+/* 8058563C-80585640 0004+00 s=0 e=0 z=0  None .rodata    @4285                                                        */
+SECTION_RODATA u32 const lit_4285 = 0x447A0000;
+
+/* 80585640-80585644 0004+00 s=0 e=0 z=0  None .rodata    @4330                                                        */
+SECTION_RODATA u32 const lit_4330 = 0x41700000;
+
+/* 80585644-80585648 0004+00 s=0 e=0 z=0  None .rodata    @4331                                                        */
+SECTION_RODATA u32 const lit_4331 = 0x45FA0000;
+
+/* 80585648-8058564C 0004+00 s=2 e=0 z=0  None .rodata    @4332                                                        */
+SECTION_RODATA static u32 const lit_4332 = 0x40A00000;
+
+/* 8058564C-80585650 0004+00 s=1 e=0 z=0  None .rodata    @4344                                                        */
+SECTION_RODATA static u32 const lit_4344 = 0xC0400000;
+
+/* 80585650-80585654 0004+00 s=8 e=0 z=0  None .rodata    @4345                                                        */
+SECTION_RODATA static u32 const lit_4345 = 0x41200000;
+
+/* 80585654-80585658 0004+00 s=2 e=0 z=0  None .rodata    @4346                                                        */
+SECTION_RODATA static u32 const lit_4346 = 0x457A0000;
+
+/* 80585658-80585660 0008+00 s=1 e=0 z=0  None .rodata    @4417                                                        */
+SECTION_RODATA static u8 const lit_4417[8] = {
+	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80585660-80585668 0008+00 s=1 e=0 z=0  None .rodata    @4418                                                        */
+SECTION_RODATA static u8 const lit_4418[8] = {
+	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80585668-80585670 0008+00 s=1 e=0 z=0  None .rodata    @4419                                                        */
+SECTION_RODATA static u8 const lit_4419[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80585670-80585674 0004+00 s=1 e=0 z=0  None .rodata    @4420                                                        */
+SECTION_RODATA static u32 const lit_4420 = 0x451C4000;
+
+/* 80585674-80585678 0004+00 s=2 e=0 z=0  None .rodata    @4421                                                        */
+SECTION_RODATA static u32 const lit_4421 = 0x43FA0000;
+
+/* 80585678-8058567C 0004+00 s=2 e=0 z=0  None .rodata    @4450                                                        */
+SECTION_RODATA static u32 const lit_4450 = 0x43480000;
+
+/* 8058567C-80585680 0004+00 s=2 e=0 z=0  None .rodata    @4489                                                        */
+SECTION_RODATA static u32 const lit_4489 = 0x42480000;
+
+/* 80585680-80585688 0004+04 s=3 e=0 z=0  None .rodata    @4490                                                        */
+SECTION_RODATA static u32 const lit_4490[1 + 1 /* padding */] = {
+	0xCE6E6B28,
+	/* padding */
+	0x00000000,
+};
+
+/* 80585688-80585690 0008+00 s=1 e=0 z=0  None .rodata    @4555                                                        */
+SECTION_RODATA static u8 const lit_4555[8] = {
+	0x3F, 0x94, 0x7A, 0xE1, 0x47, 0xAE, 0x14, 0x7B,
+};
+
+/* 80585690-80585694 0004+00 s=2 e=0 z=0  None .rodata    @4645                                                        */
+SECTION_RODATA static u32 const lit_4645 = 0x41F00000;
+
+/* 80585694-80585698 0004+00 s=2 e=0 z=0  None .rodata    @4646                                                        */
+SECTION_RODATA static u32 const lit_4646 = 0x41A00000;
+
+/* 80585698-805856A0 0008+00 s=3 e=0 z=0  None .rodata    @4648                                                        */
+SECTION_RODATA static u8 const lit_4648[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
+/* 805856A0-805856A4 0004+00 s=4 e=0 z=0  None .rodata    @4781                                                        */
+SECTION_RODATA static u32 const lit_4781 = 0x428C0000;
+
+/* 805856A4-805856A8 0004+00 s=1 e=0 z=0  None .rodata    @4782                                                        */
+SECTION_RODATA static u32 const lit_4782 = 0x45600000;
+
+/* 805856A8-805856AC 0004+00 s=2 e=0 z=0  None .rodata    @4783                                                        */
+SECTION_RODATA static u32 const lit_4783 = 0x45000000;
+
+/* 805856AC-805856B0 0004+00 s=1 e=0 z=0  None .rodata    @4784                                                        */
+SECTION_RODATA static u32 const lit_4784 = 0xC5000000;
+
+/* 805856B0-805856B4 0004+00 s=1 e=0 z=0  None .rodata    @4861                                                        */
+SECTION_RODATA static u32 const lit_4861 = 0x43160000;
+
+/* 805856B4-805856B8 0004+00 s=1 e=0 z=0  None .rodata    @4922                                                        */
+SECTION_RODATA static u32 const lit_4922 = 0xC0800000;
+
+/* 805856B8-805856BC 0004+00 s=1 e=0 z=0  None .rodata    @4923                                                        */
+SECTION_RODATA static u32 const lit_4923 = 0x420C0000;
+
+/* 805856BC-805856C0 0004+00 s=0 e=0 z=0  None .rodata    @4924                                                        */
+SECTION_RODATA u32 const lit_4924 = 0x3F333333;
+
+/* 805856C0-805856C4 0004+00 s=1 e=0 z=0  None .rodata    @4925                                                        */
+SECTION_RODATA static u32 const lit_4925 = 0x44800000;
+
+/* 805856C4-805856C8 0004+00 s=0 e=0 z=0  None .rodata    @4926                                                        */
+SECTION_RODATA u32 const lit_4926 = 0x3F19999A;
+
+/* 805856C8-805856CC 0004+00 s=0 e=0 z=0  None .rodata    @4927                                                        */
+SECTION_RODATA u32 const lit_4927 = 0x41C80000;
+
+/* 805856CC-805856D0 0004+00 s=0 e=0 z=0  None .rodata    @4928                                                        */
+SECTION_RODATA u32 const lit_4928 = 0x42A00000;
+
+/* 805856D0-805856D4 0004+00 s=1 e=0 z=0  None .rodata    @4929                                                        */
+SECTION_RODATA static u32 const lit_4929 = 0x44000000;
+
+/* 805856D4-805856D8 0004+00 s=0 e=0 z=0  None .rodata    @4930                                                        */
+SECTION_RODATA u32 const lit_4930 = 0x40800000;
+
+/* 805856D8-805856DC 0004+00 s=0 e=0 z=0  None .rodata    @4931                                                        */
+SECTION_RODATA u32 const lit_4931 = 0x45800000;
+
+/* 805856DC-805856E0 0004+00 s=1 e=0 z=0  None .rodata    @4932                                                        */
+SECTION_RODATA static u32 const lit_4932 = 0x46000000;
+
+/* 805856E0-805856E4 0004+00 s=1 e=0 z=0  None .rodata    @5147                                                        */
+SECTION_RODATA static u32 const lit_5147 = 0x3F400000;
+
+/* 805856E4-805856E8 0004+00 s=1 e=0 z=0  None .rodata    @5148                                                        */
+SECTION_RODATA static u32 const lit_5148 = 0x3E4CCCCD;
+
+/* 805856E8-805856EC 0004+00 s=1 e=0 z=0  None .rodata    @5149                                                        */
+SECTION_RODATA static u32 const lit_5149 = 0xC1200000;
+
+/* 805856EC-805856F0 0004+00 s=1 e=0 z=0  None .rodata    @5269                                                        */
+SECTION_RODATA static u32 const lit_5269 = 0x40000000;
+
+/* 805856F0-805856F4 0004+00 s=1 e=0 z=0  None .rodata    @5270                                                        */
+SECTION_RODATA static u32 const lit_5270 = 0x3DCCCCCD;
+
+/* 805856F4-805856F8 0004+00 s=1 e=0 z=0  None .rodata    @5271                                                        */
+SECTION_RODATA static u32 const lit_5271 = 0x44FA0000;
+
+/* 805856F8-805856FC 0004+00 s=1 e=0 z=0  None .rodata    @5272                                                        */
+SECTION_RODATA static u32 const lit_5272 = 0x3E99999A;
+
+/* 805856FC-80585700 0004+00 s=1 e=0 z=0  None .rodata    @5273                                                        */
+SECTION_RODATA static u32 const lit_5273 = 0x3D4CCCCD;
+
+/* 80585700-80585708 0008+00 s=1 e=0 z=0  None .rodata    @5275                                                        */
+SECTION_RODATA static u8 const lit_5275[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80585708-8058570C 0004+00 s=1 e=0 z=0  None .rodata    @5378                                                        */
+SECTION_RODATA static u32 const lit_5378 = 0xC1A00000;
+
+/* 8058570C-80585710 0004+00 s=1 e=0 z=0  None .rodata    @5568                                                        */
+SECTION_RODATA static u32 const lit_5568 = 0xC3480000;
+
+/* 80585710-8058586C 015C+00 s=4 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const struct_80585710[348] = {
+	/* 80585710 000F stringBase_80585710 @stringBase0 */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x2E, 0x62, 0x6D, 0x64, 0x00,
+	/* 8058571F 0012 data_8058571F None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x31, 0x2E, 0x62, 0x6D,
+	0x64, 0x00,
+	/* 80585731 0012 data_80585731 None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x32, 0x2E, 0x62, 0x6D,
+	0x64, 0x00,
+	/* 80585743 0012 data_80585743 None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x33, 0x2E, 0x62, 0x6D,
+	0x64, 0x00,
+	/* 80585755 0012 data_80585755 None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x34, 0x2E, 0x62, 0x6D,
+	0x64, 0x00,
+	/* 80585767 0012 data_80585767 None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x35, 0x2E, 0x62, 0x6D,
+	0x64, 0x00,
+	/* 80585779 0012 data_80585779 None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x36, 0x2E, 0x62, 0x6D,
+	0x64, 0x00,
+	/* 8058578B 0012 data_8058578B None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x37, 0x2E, 0x62, 0x6D,
+	0x64, 0x00,
+	/* 8058579D 0012 data_8058579D None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x38, 0x2E, 0x62, 0x6D,
+	0x64, 0x00,
+	/* 805857AF 0012 data_805857AF None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x39, 0x2E, 0x62, 0x6D,
+	0x64, 0x00,
+	/* 805857C1 0012 data_805857C1 None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x30, 0x2E, 0x62, 0x6D,
+	0x64, 0x00,
+	/* 805857D3 0012 data_805857D3 None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x31, 0x2E, 0x62, 0x6D,
+	0x64, 0x00,
+	/* 805857E5 0012 data_805857E5 None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x32, 0x2E, 0x62, 0x6D,
+	0x64, 0x00,
+	/* 805857F7 0012 data_805857F7 None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x33, 0x2E, 0x62, 0x6D,
+	0x64, 0x00,
+	/* 80585809 0012 data_80585809 None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x34, 0x2E, 0x62, 0x6D,
+	0x64, 0x00,
+	/* 8058581B 0012 data_8058581B None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x35, 0x2E, 0x62, 0x6D,
+	0x64, 0x00,
+	/* 8058582D 0012 data_8058582D None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x36, 0x2E, 0x62, 0x6D,
+	0x64, 0x00,
+	/* 8058583F 0012 data_8058583F None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x37, 0x2E, 0x62, 0x6D,
+	0x64, 0x00,
+	/* 80585851 001B data_80585851 None */
+	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x38, 0x2E, 0x62, 0x6D,
+	0x64, 0x00, 0x4F, 0x62, 0x6A, 0x5F, 0x6B, 0x6E, 0x32, 0x00, 0x00,
+};
+
 /* 8058586C-805858B8 004C+00 s=1 e=0 z=0  None .data      l_kn2_bmdidx__29@unnamed@d_a_obj_kanban2_cpp@                */
 SECTION_DATA static void* data_8058586C[19] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)&struct_80585710)+0x0) /* @stringBase0 */,
+	(void*)(((char*)&struct_80585710)+0xF) /* None */,
+	(void*)(((char*)&struct_80585710)+0x21) /* None */,
+	(void*)(((char*)&struct_80585710)+0x33) /* None */,
+	(void*)(((char*)&struct_80585710)+0x45) /* None */,
+	(void*)(((char*)&struct_80585710)+0x57) /* None */,
+	(void*)(((char*)&struct_80585710)+0x69) /* None */,
+	(void*)(((char*)&struct_80585710)+0x7B) /* None */,
+	(void*)(((char*)&struct_80585710)+0x8D) /* None */,
+	(void*)(((char*)&struct_80585710)+0x9F) /* None */,
+	(void*)(((char*)&struct_80585710)+0xB1) /* None */,
+	(void*)(((char*)&struct_80585710)+0xC3) /* None */,
+	(void*)(((char*)&struct_80585710)+0xD5) /* None */,
+	(void*)(((char*)&struct_80585710)+0xE7) /* None */,
+	(void*)(((char*)&struct_80585710)+0xF9) /* None */,
+	(void*)(((char*)&struct_80585710)+0x10B) /* None */,
+	(void*)(((char*)&struct_80585710)+0x11D) /* None */,
+	(void*)(((char*)&struct_80585710)+0x12F) /* None */,
+	(void*)(((char*)&struct_80585710)+0x141) /* None */,
 };
 
 /* 805858B8-805858C8 0010+00 s=1 e=0 z=0  None .data      dKn2_CarryOffset__29@unnamed@d_a_obj_kanban2_cpp@            */
@@ -590,59 +825,59 @@ SECTION_DATA static u8 data_80585A04[144] = {
 
 /* 80585A94-80585B30 009C+00 s=1 e=0 z=0  None .data      @4133                                                        */
 SECTION_DATA static void* lit_4133[39] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xD0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0x78),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0x68),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0x78),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xC0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0x60),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0x78),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0x9C),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xC8),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xD0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0x60),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xD0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xD0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xD0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xD0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xD0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xD0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xD0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xC8),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0x60),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0x70),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xD0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xC8),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xC8),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xC8),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xD0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0x9C),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xD0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xD0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xD0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xC8),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0x9C),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0x70),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0x68),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xD0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xD0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xD0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0xC0),
+	(void*)(((char*)getKanbanCutType__15daObj_Kanban2_cFv)+0x78),
 };
 
 /* 80585B30-80585B58 0028+00 s=1 e=0 z=0  None .data      @4286                                                        */
 SECTION_DATA static void* lit_4286[10] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)damage_check__15daObj_Kanban2_cFv)+0x1D0),
+	(void*)(((char*)damage_check__15daObj_Kanban2_cFv)+0x28C),
+	(void*)(((char*)damage_check__15daObj_Kanban2_cFv)+0x294),
+	(void*)(((char*)damage_check__15daObj_Kanban2_cFv)+0x2B0),
+	(void*)(((char*)damage_check__15daObj_Kanban2_cFv)+0x2EC),
+	(void*)(((char*)damage_check__15daObj_Kanban2_cFv)+0x328),
+	(void*)(((char*)damage_check__15daObj_Kanban2_cFv)+0x3F8),
+	(void*)(((char*)damage_check__15daObj_Kanban2_cFv)+0x400),
+	(void*)(((char*)damage_check__15daObj_Kanban2_cFv)+0x408),
+	(void*)(((char*)damage_check__15daObj_Kanban2_cFv)+0x454),
 };
 
 /* 80585B58-80585B60 0008+00 s=1 e=0 z=0  None .data      w_eff_id$4564                                                */
@@ -652,34 +887,34 @@ SECTION_DATA static u8 data_80585B58[8] = {
 
 /* 80585B60-80585B84 0024+00 s=1 e=0 z=0  None .data      @4933                                                        */
 SECTION_DATA static void* lit_4933[9] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)initPart__15daObj_Kanban2_cFv)+0xA0),
+	(void*)(((char*)initPart__15daObj_Kanban2_cFv)+0x328),
+	(void*)(((char*)initPart__15daObj_Kanban2_cFv)+0x328),
+	(void*)(((char*)initPart__15daObj_Kanban2_cFv)+0x42C),
+	(void*)(((char*)initPart__15daObj_Kanban2_cFv)+0x42C),
+	(void*)(((char*)initPart__15daObj_Kanban2_cFv)+0x10C),
+	(void*)(((char*)initPart__15daObj_Kanban2_cFv)+0x294),
+	(void*)(((char*)initPart__15daObj_Kanban2_cFv)+0x310),
+	(void*)(((char*)initPart__15daObj_Kanban2_cFv)+0x3A4),
 };
 
 /* 80585B84-80585BC0 003C+00 s=1 e=0 z=0  None .data      @5150                                                        */
 SECTION_DATA static void* lit_5150[15] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)executePart__15daObj_Kanban2_cFv)+0x90),
+	(void*)(((char*)executePart__15daObj_Kanban2_cFv)+0x90),
+	(void*)(((char*)executePart__15daObj_Kanban2_cFv)+0x90),
+	(void*)(((char*)executePart__15daObj_Kanban2_cFv)+0x504),
+	(void*)(((char*)executePart__15daObj_Kanban2_cFv)+0x5BC),
+	(void*)(((char*)executePart__15daObj_Kanban2_cFv)+0x90),
+	(void*)(((char*)executePart__15daObj_Kanban2_cFv)+0x90),
+	(void*)(((char*)executePart__15daObj_Kanban2_cFv)+0x90),
+	(void*)(((char*)executePart__15daObj_Kanban2_cFv)+0x90),
+	(void*)(((char*)executePart__15daObj_Kanban2_cFv)+0x9C),
+	(void*)(((char*)executePart__15daObj_Kanban2_cFv)+0x244),
+	(void*)(((char*)executePart__15daObj_Kanban2_cFv)+0x380),
+	(void*)(((char*)executePart__15daObj_Kanban2_cFv)+0x548),
+	(void*)(((char*)executePart__15daObj_Kanban2_cFv)+0x578),
+	(void*)(((char*)executePart__15daObj_Kanban2_cFv)+0x5F8),
 };
 
 /* 80585BC0-80585BCC 000C+00 s=1 e=0 z=0  None .data      kn2_speed_rate$5184                                          */
@@ -687,30 +922,30 @@ SECTION_DATA static u8 data_80585BC0[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0xC0, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00,
 };
 
-/* 80585BCC-80585BEC 0020+00 s=0 e=0 z=0  None .data      l_daObj_Kanban2_Method                                       */
-SECTION_DATA void* l_daObj_Kanban2_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80585BCC-80585BEC 0020+00 s=1 e=0 z=0  None .data      l_daObj_Kanban2_Method                                       */
+SECTION_DATA static void* l_daObj_Kanban2_Method[8] = {
+	(void*)daObj_Kanban2_Create__FP15daObj_Kanban2_c,
+	(void*)daObj_Kanban2_Delete__FP15daObj_Kanban2_c,
+	(void*)daObj_Kanban2_Execute__FP15daObj_Kanban2_c,
+	(void*)daObj_Kanban2_IsDelete__FP15daObj_Kanban2_c,
+	(void*)daObj_Kanban2_Draw__FP15daObj_Kanban2_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80585BEC-80585C1C 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_KANBAN2                                        */
+/* 80585BEC-80585C1C 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_KANBAN2                                        */
 SECTION_DATA void* g_profile_OBJ_KANBAN2[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x011B0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000A50,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x003F0000,
-	(void*)NULL,
+	(void*)&l_daObj_Kanban2_Method,
 	(void*)0x00044100,
 	(void*)0x03000000,
 };
@@ -719,41 +954,41 @@ SECTION_DATA void* g_profile_OBJ_KANBAN2[12] = {
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80585C28-80585C34 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80585C34-80585C58 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80585604,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_805855FC,
 };
 
 /* 80585C58-80585C64 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGPla                                              */
 SECTION_DATA static void* __vt__8cM3dGPla[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGPlaFv,
 };
 
 /* 80585C64-80585C70 000C+00 s=2 e=0 z=0  None .data      __vt__19daObj_Kanban2_HIO_c                                  */
 SECTION_DATA static void* __vt__19daObj_Kanban2_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__19daObj_Kanban2_HIO_cFv,
 };
 
 /* 8058176C-80581790 0024+00 s=1 e=0 z=0  None .text      __ct__19daObj_Kanban2_HIO_cFv                                */
@@ -766,18 +1001,6 @@ asm daObj_Kanban2_HIO_c::daObj_Kanban2_HIO_c() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80585624-80585628 0004+00 s=4 e=0 z=0  None .rodata    @4013                                                        */
-SECTION_RODATA static u32 const lit_4013 = 0x42C80000;
-
-/* 80585628-8058562C 0004+00 s=1 e=0 z=0  None .rodata    @4014                                                        */
-SECTION_RODATA static u32 const lit_4014 = 0x43C80000;
-
-/* 8058562C-80585630 0004+00 s=9 e=0 z=0  None .rodata    @4015                                                        */
-SECTION_RODATA static u8 const lit_4015[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
 
 /* 80581790-805818DC 014C+00 s=1 e=0 z=0  None .text      draw__15daObj_Kanban2_cFv                                    */
 #pragma push
@@ -801,20 +1024,16 @@ asm cXyz::~cXyz() {
 #pragma pop
 
 
-/* 80581918-80581938 0020+00 s=0 e=0 z=0  None .text      daObj_Kanban2_Draw__FP15daObj_Kanban2_c                      */
+/* 80581918-80581938 0020+00 s=1 e=0 z=0  None .text      daObj_Kanban2_Draw__FP15daObj_Kanban2_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Kanban2_Draw(daObj_Kanban2_c* param_0) {
+asm static void daObj_Kanban2_Draw(daObj_Kanban2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/daObj_Kanban2_Draw__FP15daObj_Kanban2_c.s"
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80585630-80585634 0004+00 s=4 e=0 z=0  None .rodata    @4036                                                        */
-SECTION_RODATA static u32 const lit_4036 = 0xBF800000;
 
 /* 80581938-805819BC 0084+00 s=1 e=0 z=0  None .text      setKanbanSE__15daObj_Kanban2_cFi                             */
 #pragma push
@@ -849,7 +1068,7 @@ asm void daObj_Kanban2_c::createWallHitBreak() {
 #pragma pop
 
 
-/* 80581B5C-80581C48 00EC+00 s=1 e=0 z=0  None .text      getKanbanCutType__15daObj_Kanban2_cFv                        */
+/* 80581B5C-80581C48 00EC+00 s=2 e=0 z=0  None .text      getKanbanCutType__15daObj_Kanban2_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -871,14 +1090,7 @@ asm void daObj_Kanban2_c::getKanbanWolfCutType() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80585634-80585638 0004+00 s=3 e=0 z=0  None .rodata    @4283                                                        */
-SECTION_RODATA static u32 const lit_4283 = 0x3F000000;
-
-/* 80585638-8058563C 0004+00 s=4 e=0 z=0  None .rodata    @4284                                                        */
-SECTION_RODATA static u32 const lit_4284 = 0x42200000;
-
-/* 80581D04-8058221C 0518+00 s=1 e=0 z=0  None .text      damage_check__15daObj_Kanban2_cFv                            */
+/* 80581D04-8058221C 0518+00 s=2 e=0 z=0  None .text      damage_check__15daObj_Kanban2_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -888,28 +1100,6 @@ asm void daObj_Kanban2_c::damage_check() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 8058563C-80585640 0004+00 s=0 e=0 z=0  None .rodata    @4285                                                        */
-SECTION_RODATA u32 const lit_4285 = 0x447A0000;
-
-/* 80585640-80585644 0004+00 s=0 e=0 z=0  None .rodata    @4330                                                        */
-SECTION_RODATA u32 const lit_4330 = 0x41700000;
-
-/* 80585644-80585648 0004+00 s=0 e=0 z=0  None .rodata    @4331                                                        */
-SECTION_RODATA u32 const lit_4331 = 0x45FA0000;
-
-/* 80585648-8058564C 0004+00 s=2 e=0 z=0  None .rodata    @4332                                                        */
-SECTION_RODATA static u32 const lit_4332 = 0x40A00000;
-
-/* 8058564C-80585650 0004+00 s=1 e=0 z=0  None .rodata    @4344                                                        */
-SECTION_RODATA static u32 const lit_4344 = 0xC0400000;
-
-/* 80585650-80585654 0004+00 s=8 e=0 z=0  None .rodata    @4345                                                        */
-SECTION_RODATA static u32 const lit_4345 = 0x41200000;
-
-/* 80585654-80585658 0004+00 s=2 e=0 z=0  None .rodata    @4346                                                        */
-SECTION_RODATA static u32 const lit_4346 = 0x457A0000;
 
 /* 8058221C-805822F0 00D4+00 s=1 e=0 z=0  None .text      float_damage_check__15daObj_Kanban2_cFv                      */
 #pragma push
@@ -922,28 +1112,6 @@ asm void daObj_Kanban2_c::float_damage_check() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80585658-80585660 0008+00 s=1 e=0 z=0  None .rodata    @4417                                                        */
-SECTION_RODATA static u8 const lit_4417[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80585660-80585668 0008+00 s=1 e=0 z=0  None .rodata    @4418                                                        */
-SECTION_RODATA static u8 const lit_4418[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80585668-80585670 0008+00 s=1 e=0 z=0  None .rodata    @4419                                                        */
-SECTION_RODATA static u8 const lit_4419[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80585670-80585674 0004+00 s=1 e=0 z=0  None .rodata    @4420                                                        */
-SECTION_RODATA static u32 const lit_4420 = 0x451C4000;
-
-/* 80585674-80585678 0004+00 s=2 e=0 z=0  None .rodata    @4421                                                        */
-SECTION_RODATA static u32 const lit_4421 = 0x43FA0000;
-
 /* 805822F0-805825A4 02B4+00 s=2 e=0 z=0  None .text      deletePart__15daObj_Kanban2_cFv                              */
 #pragma push
 #pragma optimization_level 0
@@ -954,10 +1122,6 @@ asm void daObj_Kanban2_c::deletePart() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80585678-8058567C 0004+00 s=2 e=0 z=0  None .rodata    @4450                                                        */
-SECTION_RODATA static u32 const lit_4450 = 0x43480000;
 
 /* 805825A4-805826D4 0130+00 s=1 e=0 z=0  None .text      getWallAngle__15daObj_Kanban2_cFv                            */
 #pragma push
@@ -970,7 +1134,7 @@ asm void daObj_Kanban2_c::getWallAngle() {
 #pragma pop
 
 
-/* 805826D4-8058271C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 805826D4-8058271C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -980,17 +1144,6 @@ asm cM3dGPla::~cM3dGPla() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 8058567C-80585680 0004+00 s=2 e=0 z=0  None .rodata    @4489                                                        */
-SECTION_RODATA static u32 const lit_4489 = 0x42480000;
-
-/* 80585680-80585688 0004+04 s=3 e=0 z=0  None .rodata    @4490                                                        */
-SECTION_RODATA static u32 const lit_4490[1 + 1 /* padding */] = {
-	0xCE6E6B28,
-	/* padding */
-	0x00000000,
-};
 
 /* 8058271C-80582894 0178+00 s=2 e=0 z=0  None .text      setGroundAngle__15daObj_Kanban2_cFv                          */
 #pragma push
@@ -1035,12 +1188,6 @@ asm void daObj_Kanban2_c::setCullMtx() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80585688-80585690 0008+00 s=1 e=0 z=0  None .rodata    @4555                                                        */
-SECTION_RODATA static u8 const lit_4555[8] = {
-	0x3F, 0x94, 0x7A, 0xE1, 0x47, 0xAE, 0x14, 0x7B,
-};
 
 /* 80582AAC-80582AFC 0050+00 s=1 e=0 z=0  None .text      setSmokeEffect__15daObj_Kanban2_cF4cXyz                      */
 #pragma push
@@ -1125,18 +1272,6 @@ asm void daObj_Kanban2_c::setWaterEffect() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80585690-80585694 0004+00 s=2 e=0 z=0  None .rodata    @4645                                                        */
-SECTION_RODATA static u32 const lit_4645 = 0x41F00000;
-
-/* 80585694-80585698 0004+00 s=2 e=0 z=0  None .rodata    @4646                                                        */
-SECTION_RODATA static u32 const lit_4646 = 0x41A00000;
-
-/* 80585698-805856A0 0008+00 s=3 e=0 z=0  None .rodata    @4648                                                        */
-SECTION_RODATA static u8 const lit_4648[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
 /* 80582C40-80582E68 0228+00 s=3 e=0 z=0  None .text      setCenterPos__15daObj_Kanban2_cFv                            */
 #pragma push
 #pragma optimization_level 0
@@ -1170,19 +1305,6 @@ asm void daObj_Kanban2_c::setActionMode(int param_0, int param_1) {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 805856A0-805856A4 0004+00 s=4 e=0 z=0  None .rodata    @4781                                                        */
-SECTION_RODATA static u32 const lit_4781 = 0x428C0000;
-
-/* 805856A4-805856A8 0004+00 s=1 e=0 z=0  None .rodata    @4782                                                        */
-SECTION_RODATA static u32 const lit_4782 = 0x45600000;
-
-/* 805856A8-805856AC 0004+00 s=2 e=0 z=0  None .rodata    @4783                                                        */
-SECTION_RODATA static u32 const lit_4783 = 0x45000000;
-
-/* 805856AC-805856B0 0004+00 s=1 e=0 z=0  None .rodata    @4784                                                        */
-SECTION_RODATA static u32 const lit_4784 = 0xC5000000;
-
 /* 80582F40-80583364 0424+00 s=1 e=0 z=0  None .text      calcNormalSwing__15daObj_Kanban2_cFv                         */
 #pragma push
 #pragma optimization_level 0
@@ -1193,10 +1315,6 @@ asm void daObj_Kanban2_c::calcNormalSwing() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 805856B0-805856B4 0004+00 s=1 e=0 z=0  None .rodata    @4861                                                        */
-SECTION_RODATA static u32 const lit_4861 = 0x43160000;
 
 /* 80583364-80583598 0234+00 s=1 e=0 z=0  None .text      executeNormal__15daObj_Kanban2_cFv                           */
 #pragma push
@@ -1209,41 +1327,7 @@ asm void daObj_Kanban2_c::executeNormal() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 805856B4-805856B8 0004+00 s=1 e=0 z=0  None .rodata    @4922                                                        */
-SECTION_RODATA static u32 const lit_4922 = 0xC0800000;
-
-/* 805856B8-805856BC 0004+00 s=1 e=0 z=0  None .rodata    @4923                                                        */
-SECTION_RODATA static u32 const lit_4923 = 0x420C0000;
-
-/* 805856BC-805856C0 0004+00 s=0 e=0 z=0  None .rodata    @4924                                                        */
-SECTION_RODATA u32 const lit_4924 = 0x3F333333;
-
-/* 805856C0-805856C4 0004+00 s=1 e=0 z=0  None .rodata    @4925                                                        */
-SECTION_RODATA static u32 const lit_4925 = 0x44800000;
-
-/* 805856C4-805856C8 0004+00 s=0 e=0 z=0  None .rodata    @4926                                                        */
-SECTION_RODATA u32 const lit_4926 = 0x3F19999A;
-
-/* 805856C8-805856CC 0004+00 s=0 e=0 z=0  None .rodata    @4927                                                        */
-SECTION_RODATA u32 const lit_4927 = 0x41C80000;
-
-/* 805856CC-805856D0 0004+00 s=0 e=0 z=0  None .rodata    @4928                                                        */
-SECTION_RODATA u32 const lit_4928 = 0x42A00000;
-
-/* 805856D0-805856D4 0004+00 s=1 e=0 z=0  None .rodata    @4929                                                        */
-SECTION_RODATA static u32 const lit_4929 = 0x44000000;
-
-/* 805856D4-805856D8 0004+00 s=0 e=0 z=0  None .rodata    @4930                                                        */
-SECTION_RODATA u32 const lit_4930 = 0x40800000;
-
-/* 805856D8-805856DC 0004+00 s=0 e=0 z=0  None .rodata    @4931                                                        */
-SECTION_RODATA u32 const lit_4931 = 0x45800000;
-
-/* 805856DC-805856E0 0004+00 s=1 e=0 z=0  None .rodata    @4932                                                        */
-SECTION_RODATA static u32 const lit_4932 = 0x46000000;
-
-/* 80583598-80583A2C 0494+00 s=1 e=0 z=0  None .text      initPart__15daObj_Kanban2_cFv                                */
+/* 80583598-80583A2C 0494+00 s=2 e=0 z=0  None .text      initPart__15daObj_Kanban2_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1254,7 +1338,7 @@ asm void daObj_Kanban2_c::initPart() {
 #pragma pop
 
 
-/* 80583A2C-8058437C 0950+00 s=1 e=0 z=0  None .text      executePart__15daObj_Kanban2_cFv                             */
+/* 80583A2C-8058437C 0950+00 s=2 e=0 z=0  None .text      executePart__15daObj_Kanban2_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1264,36 +1348,6 @@ asm void daObj_Kanban2_c::executePart() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 805856E0-805856E4 0004+00 s=1 e=0 z=0  None .rodata    @5147                                                        */
-SECTION_RODATA static u32 const lit_5147 = 0x3F400000;
-
-/* 805856E4-805856E8 0004+00 s=1 e=0 z=0  None .rodata    @5148                                                        */
-SECTION_RODATA static u32 const lit_5148 = 0x3E4CCCCD;
-
-/* 805856E8-805856EC 0004+00 s=1 e=0 z=0  None .rodata    @5149                                                        */
-SECTION_RODATA static u32 const lit_5149 = 0xC1200000;
-
-/* 805856EC-805856F0 0004+00 s=1 e=0 z=0  None .rodata    @5269                                                        */
-SECTION_RODATA static u32 const lit_5269 = 0x40000000;
-
-/* 805856F0-805856F4 0004+00 s=1 e=0 z=0  None .rodata    @5270                                                        */
-SECTION_RODATA static u32 const lit_5270 = 0x3DCCCCCD;
-
-/* 805856F4-805856F8 0004+00 s=1 e=0 z=0  None .rodata    @5271                                                        */
-SECTION_RODATA static u32 const lit_5271 = 0x44FA0000;
-
-/* 805856F8-805856FC 0004+00 s=1 e=0 z=0  None .rodata    @5272                                                        */
-SECTION_RODATA static u32 const lit_5272 = 0x3E99999A;
-
-/* 805856FC-80585700 0004+00 s=1 e=0 z=0  None .rodata    @5273                                                        */
-SECTION_RODATA static u32 const lit_5273 = 0x3D4CCCCD;
-
-/* 80585700-80585708 0008+00 s=1 e=0 z=0  None .rodata    @5275                                                        */
-SECTION_RODATA static u8 const lit_5275[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
 
 /* 8058437C-80584884 0508+00 s=1 e=0 z=0  None .text      executeFloat__15daObj_Kanban2_cFv                            */
 #pragma push
@@ -1328,10 +1382,6 @@ asm void daObj_Kanban2_c::action() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80585708-8058570C 0004+00 s=1 e=0 z=0  None .rodata    @5378                                                        */
-SECTION_RODATA static u32 const lit_5378 = 0xC1A00000;
-
 /* 80584AD8-80584CFC 0224+00 s=1 e=0 z=0  None .text      mtx_set__15daObj_Kanban2_cFv                                 */
 #pragma push
 #pragma optimization_level 0
@@ -1365,7 +1415,7 @@ asm void daObj_Kanban2_c::execute() {
 #pragma pop
 
 
-/* 80584EB0-80584ED0 0020+00 s=1 e=0 z=0  None .text      daObj_Kanban2_Execute__FP15daObj_Kanban2_c                   */
+/* 80584EB0-80584ED0 0020+00 s=2 e=0 z=0  None .text      daObj_Kanban2_Execute__FP15daObj_Kanban2_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1376,75 +1426,11 @@ asm static void daObj_Kanban2_Execute(daObj_Kanban2_c* param_0) {
 #pragma pop
 
 
-/* 80584ED0-80584ED8 0008+00 s=0 e=0 z=0  None .text      daObj_Kanban2_IsDelete__FP15daObj_Kanban2_c                  */
-bool daObj_Kanban2_IsDelete(daObj_Kanban2_c* param_0) {
+/* 80584ED0-80584ED8 0008+00 s=1 e=0 z=0  None .text      daObj_Kanban2_IsDelete__FP15daObj_Kanban2_c                  */
+static bool daObj_Kanban2_IsDelete(daObj_Kanban2_c* param_0) {
 	return true;
 }
 
-
-/* ############################################################################################## */
-/* 8058570C-80585710 0004+00 s=1 e=0 z=0  None .rodata    @5568                                                        */
-SECTION_RODATA static u32 const lit_5568 = 0xC3480000;
-
-/* 80585710-8058586C 015C+00 s=3 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_80585710[348] = {
-	/* 80585710 000F stringBase_80585710 @stringBase0 */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-	/* 8058571F 0012 data_8058571F None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x31, 0x2E, 0x62, 0x6D,
-	0x64, 0x00,
-	/* 80585731 0012 data_80585731 None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x32, 0x2E, 0x62, 0x6D,
-	0x64, 0x00,
-	/* 80585743 0012 data_80585743 None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x33, 0x2E, 0x62, 0x6D,
-	0x64, 0x00,
-	/* 80585755 0012 data_80585755 None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x34, 0x2E, 0x62, 0x6D,
-	0x64, 0x00,
-	/* 80585767 0012 data_80585767 None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x35, 0x2E, 0x62, 0x6D,
-	0x64, 0x00,
-	/* 80585779 0012 data_80585779 None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x36, 0x2E, 0x62, 0x6D,
-	0x64, 0x00,
-	/* 8058578B 0012 data_8058578B None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x37, 0x2E, 0x62, 0x6D,
-	0x64, 0x00,
-	/* 8058579D 0012 data_8058579D None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x38, 0x2E, 0x62, 0x6D,
-	0x64, 0x00,
-	/* 805857AF 0012 data_805857AF None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x30, 0x39, 0x2E, 0x62, 0x6D,
-	0x64, 0x00,
-	/* 805857C1 0012 data_805857C1 None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x30, 0x2E, 0x62, 0x6D,
-	0x64, 0x00,
-	/* 805857D3 0012 data_805857D3 None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x31, 0x2E, 0x62, 0x6D,
-	0x64, 0x00,
-	/* 805857E5 0012 data_805857E5 None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x32, 0x2E, 0x62, 0x6D,
-	0x64, 0x00,
-	/* 805857F7 0012 data_805857F7 None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x33, 0x2E, 0x62, 0x6D,
-	0x64, 0x00,
-	/* 80585809 0012 data_80585809 None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x34, 0x2E, 0x62, 0x6D,
-	0x64, 0x00,
-	/* 8058581B 0012 data_8058581B None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x35, 0x2E, 0x62, 0x6D,
-	0x64, 0x00,
-	/* 8058582D 0012 data_8058582D None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x36, 0x2E, 0x62, 0x6D,
-	0x64, 0x00,
-	/* 8058583F 0012 data_8058583F None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x37, 0x2E, 0x62, 0x6D,
-	0x64, 0x00,
-	/* 80585851 001B data_80585851 None */
-	0x4A, 0x5F, 0x6B, 0x61, 0x6E, 0x62, 0x61, 0x6E, 0x30, 0x30, 0x5F, 0x31, 0x38, 0x2E, 0x62, 0x6D,
-	0x64, 0x00, 0x4F, 0x62, 0x6A, 0x5F, 0x6B, 0x6E, 0x32, 0x00, 0x00,
-};
 
 /* 80584ED8-80584F44 006C+00 s=1 e=0 z=0  None .text      _delete__15daObj_Kanban2_cFv                                 */
 #pragma push
@@ -1457,11 +1443,11 @@ asm void daObj_Kanban2_c::_delete() {
 #pragma pop
 
 
-/* 80584F44-80584F64 0020+00 s=0 e=0 z=0  None .text      daObj_Kanban2_Delete__FP15daObj_Kanban2_c                    */
+/* 80584F44-80584F64 0020+00 s=1 e=0 z=0  None .text      daObj_Kanban2_Delete__FP15daObj_Kanban2_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Kanban2_Delete(daObj_Kanban2_c* param_0) {
+asm static void daObj_Kanban2_Delete(daObj_Kanban2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/daObj_Kanban2_Delete__FP15daObj_Kanban2_c.s"
 }
@@ -1501,7 +1487,7 @@ asm void daObj_Kanban2_c::create() {
 #pragma pop
 
 
-/* 80585458-805854A0 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80585458-805854A0 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1512,7 +1498,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 805854A0-805854E8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 805854A0-805854E8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1523,7 +1509,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 805854E8-80585558 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 805854E8-80585558 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1534,18 +1520,18 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80585558-80585578 0020+00 s=0 e=0 z=0  None .text      daObj_Kanban2_Create__FP15daObj_Kanban2_c                    */
+/* 80585558-80585578 0020+00 s=1 e=0 z=0  None .text      daObj_Kanban2_Create__FP15daObj_Kanban2_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Kanban2_Create(daObj_Kanban2_c* param_0) {
+asm static void daObj_Kanban2_Create(daObj_Kanban2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/daObj_Kanban2_Create__FP15daObj_Kanban2_c.s"
 }
 #pragma pop
 
 
-/* 80585578-805855C0 0048+00 s=1 e=0 z=0  None .text      __dt__19daObj_Kanban2_HIO_cFv                                */
+/* 80585578-805855C0 0048+00 s=2 e=0 z=0  None .text      __dt__19daObj_Kanban2_HIO_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1556,7 +1542,7 @@ asm daObj_Kanban2_HIO_c::~daObj_Kanban2_HIO_c() {
 #pragma pop
 
 
-/* 805855C0-805855FC 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_kanban2_cpp                                  */
+/* 805855C0-805855FC 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_kanban2_cpp                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1567,22 +1553,22 @@ extern "C" asm void __sinit_d_a_obj_kanban2_cpp() {
 #pragma pop
 
 
-/* 805855FC-80585604 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 805855FC-80585604 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_805855FC() {
+extern "C" asm static void func_805855FC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/func_805855FC.s"
 }
 #pragma pop
 
 
-/* 80585604-8058560C 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80585604-8058560C 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80585604() {
+extern "C" asm static void func_80585604() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/func_80585604.s"
 }

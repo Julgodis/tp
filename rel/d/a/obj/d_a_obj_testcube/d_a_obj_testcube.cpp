@@ -19,22 +19,24 @@ extern "C" extern void* g_profile_Obj_TestCube[12];
 // 
 
 
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80D0BB60-80D0BB90 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_TestCube                                       */
+/* 80D0BB60-80D0BB90 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_TestCube                                       */
 SECTION_DATA void* g_profile_Obj_TestCube[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00540000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005A0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01BA0000,
 	(void*)NULL,
 	(void*)0x00040100,

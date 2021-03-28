@@ -106,10 +106,10 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -125,11 +125,11 @@ struct daNPC_TK_c {
 // 
 
 static void createSolidHeap(fopAc_ac_c*); // 2
-void daObjKazeNeko_Draw(daObjKazeNeko_c*); // 2
-void daObjKazeNeko_Execute(daObjKazeNeko_c*); // 2
-bool daObjKazeNeko_IsDelete(daObjKazeNeko_c*); // 2
-void daObjKazeNeko_Delete(daObjKazeNeko_c*); // 2
-void daObjKazeNeko_Create(fopAc_ac_c*); // 2
+static void daObjKazeNeko_Draw(daObjKazeNeko_c*); // 2
+static void daObjKazeNeko_Execute(daObjKazeNeko_c*); // 2
+static bool daObjKazeNeko_IsDelete(daObjKazeNeko_c*); // 2
+static void daObjKazeNeko_Delete(daObjKazeNeko_c*); // 2
+static void daObjKazeNeko_Create(fopAc_ac_c*); // 2
 
 extern "C" void create_init__15daObjKazeNeko_cFv(); // 1
 extern "C" void initBaseMtx__15daObjKazeNeko_cFv(); // 1
@@ -139,17 +139,16 @@ extern "C" void setCcCylinder__15daObjKazeNeko_cFv(); // 1
 extern "C" void swingHead__15daObjKazeNeko_cFv(); // 1
 extern "C" void getFirstVec__15daObjKazeNeko_cFP4cXyzi(); // 1
 extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
-extern "C" void daObjKazeNeko_Draw__FP15daObjKazeNeko_c(); // 1
-extern "C" void daObjKazeNeko_Execute__FP15daObjKazeNeko_c(); // 1
-extern "C" bool daObjKazeNeko_IsDelete__FP15daObjKazeNeko_c(); // 1
-extern "C" void daObjKazeNeko_Delete__FP15daObjKazeNeko_c(); // 1
-extern "C" void daObjKazeNeko_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjKazeNeko_Draw__FP15daObjKazeNeko_c(); // 1
+extern "C" static void daObjKazeNeko_Execute__FP15daObjKazeNeko_c(); // 1
+extern "C" static bool daObjKazeNeko_IsDelete__FP15daObjKazeNeko_c(); // 1
+extern "C" static void daObjKazeNeko_Delete__FP15daObjKazeNeko_c(); // 1
+extern "C" static void daObjKazeNeko_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObjKazeNeko_Method[8];
 extern "C" extern void* g_profile_Obj_KazeNeko[12];
 
 // 
@@ -211,6 +210,8 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
@@ -357,7 +358,7 @@ SECTION_RODATA static u8 const lit_4119[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80C3D474-80C3D48E 001A+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80C3D474-80C3D48E 001A+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -367,7 +368,7 @@ SECTION_DEAD char const* const stringBase_80C3D486 = "arm.bmd";
 #pragma pop
 
 /* 80C3D490-80C3D494 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
 
 /* 80C3CC90-80C3CD90 0100+00 s=1 e=0 z=0  None .text      createSolidHeap__FP10fopAc_ac_c                              */
 #pragma push
@@ -380,59 +381,59 @@ asm static void createSolidHeap(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80C3CD90-80C3CEA8 0118+00 s=0 e=0 z=0  None .text      daObjKazeNeko_Draw__FP15daObjKazeNeko_c                      */
+/* 80C3CD90-80C3CEA8 0118+00 s=1 e=0 z=0  None .text      daObjKazeNeko_Draw__FP15daObjKazeNeko_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKazeNeko_Draw(daObjKazeNeko_c* param_0) {
+asm static void daObjKazeNeko_Draw(daObjKazeNeko_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/daObjKazeNeko_Draw__FP15daObjKazeNeko_c.s"
 }
 #pragma pop
 
 
-/* 80C3CEA8-80C3D030 0188+00 s=0 e=0 z=0  None .text      daObjKazeNeko_Execute__FP15daObjKazeNeko_c                   */
+/* 80C3CEA8-80C3D030 0188+00 s=1 e=0 z=0  None .text      daObjKazeNeko_Execute__FP15daObjKazeNeko_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKazeNeko_Execute(daObjKazeNeko_c* param_0) {
+asm static void daObjKazeNeko_Execute(daObjKazeNeko_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/daObjKazeNeko_Execute__FP15daObjKazeNeko_c.s"
 }
 #pragma pop
 
 
-/* 80C3D030-80C3D038 0008+00 s=0 e=0 z=0  None .text      daObjKazeNeko_IsDelete__FP15daObjKazeNeko_c                  */
-bool daObjKazeNeko_IsDelete(daObjKazeNeko_c* param_0) {
+/* 80C3D030-80C3D038 0008+00 s=1 e=0 z=0  None .text      daObjKazeNeko_IsDelete__FP15daObjKazeNeko_c                  */
+static bool daObjKazeNeko_IsDelete(daObjKazeNeko_c* param_0) {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 80C3D494-80C3D4B4 0020+00 s=0 e=0 z=0  None .data      l_daObjKazeNeko_Method                                       */
-SECTION_DATA void* l_daObjKazeNeko_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80C3D494-80C3D4B4 0020+00 s=1 e=0 z=0  None .data      l_daObjKazeNeko_Method                                       */
+SECTION_DATA static void* l_daObjKazeNeko_Method[8] = {
+	(void*)daObjKazeNeko_Create__FP10fopAc_ac_c,
+	(void*)daObjKazeNeko_Delete__FP15daObjKazeNeko_c,
+	(void*)daObjKazeNeko_Execute__FP15daObjKazeNeko_c,
+	(void*)daObjKazeNeko_IsDelete__FP15daObjKazeNeko_c,
+	(void*)daObjKazeNeko_Draw__FP15daObjKazeNeko_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C3D4B4-80C3D4E4 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_KazeNeko                                       */
+/* 80C3D4B4-80C3D4E4 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_KazeNeko                                       */
 SECTION_DATA void* g_profile_Obj_KazeNeko[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x014E0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000754,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x001E0000,
-	(void*)NULL,
+	(void*)&l_daObjKazeNeko_Method,
 	(void*)0x00044180,
 	(void*)0x000E0000,
 };
@@ -441,53 +442,53 @@ SECTION_DATA void* g_profile_Obj_KazeNeko[12] = {
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80C3D4F0-80C3D4FC 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80C3D4FC-80C3D508 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80C3D508-80C3D514 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
-/* 80C3D038-80C3D168 0130+00 s=0 e=0 z=0  None .text      daObjKazeNeko_Delete__FP15daObjKazeNeko_c                    */
+/* 80C3D038-80C3D168 0130+00 s=1 e=0 z=0  None .text      daObjKazeNeko_Delete__FP15daObjKazeNeko_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKazeNeko_Delete(daObjKazeNeko_c* param_0) {
+asm static void daObjKazeNeko_Delete(daObjKazeNeko_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/daObjKazeNeko_Delete__FP15daObjKazeNeko_c.s"
 }
 #pragma pop
 
 
-/* 80C3D168-80C3D2A0 0138+00 s=0 e=0 z=0  None .text      daObjKazeNeko_Create__FP10fopAc_ac_c                         */
+/* 80C3D168-80C3D2A0 0138+00 s=1 e=0 z=0  None .text      daObjKazeNeko_Create__FP10fopAc_ac_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKazeNeko_Create(fopAc_ac_c* param_0) {
+asm static void daObjKazeNeko_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/daObjKazeNeko_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C3D2A0-80C3D2E8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80C3D2A0-80C3D2E8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -498,7 +499,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80C3D2E8-80C3D330 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C3D2E8-80C3D330 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -509,7 +510,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80C3D330-80C3D38C 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80C3D330-80C3D38C 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -520,7 +521,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80C3D38C-80C3D3D4 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80C3D38C-80C3D3D4 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

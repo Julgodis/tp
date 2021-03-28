@@ -86,6 +86,9 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -112,10 +115,10 @@ struct Z2SeMgr {
 // 
 
 static void PPCallBack(fopAc_ac_c*, fopAc_ac_c*, s16, dBgW_Base::PushPullLabel); // 2
-void daObjSwTurn_create1st(daObjSwTurn_c*); // 2
-void daObjSwTurn_MoveBGDelete(daObjSwTurn_c*); // 2
-void daObjSwTurn_MoveBGExecute(daObjSwTurn_c*); // 2
-void daObjSwTurn_MoveBGDraw(daObjSwTurn_c*); // 2
+static void daObjSwTurn_create1st(daObjSwTurn_c*); // 2
+static void daObjSwTurn_MoveBGDelete(daObjSwTurn_c*); // 2
+static void daObjSwTurn_MoveBGExecute(daObjSwTurn_c*); // 2
+static void daObjSwTurn_MoveBGDraw(daObjSwTurn_c*); // 2
 
 extern "C" static void PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel(); // 1
 extern "C" void initBaseMtx__13daObjSwTurn_cFv(); // 1
@@ -133,13 +136,11 @@ extern "C" void rotate_sub_0__13daObjSwTurn_cFv(); // 1
 extern "C" void rotate_sub_1__13daObjSwTurn_cFv(); // 1
 extern "C" void Draw__13daObjSwTurn_cFv(); // 1
 extern "C" void Delete__13daObjSwTurn_cFv(); // 1
-extern "C" void daObjSwTurn_create1st__FP13daObjSwTurn_c(); // 1
-extern "C" void daObjSwTurn_MoveBGDelete__FP13daObjSwTurn_c(); // 1
-extern "C" void daObjSwTurn_MoveBGExecute__FP13daObjSwTurn_c(); // 1
-extern "C" void daObjSwTurn_MoveBGDraw__FP13daObjSwTurn_c(); // 1
-extern "C" extern u8 const struct_80D020B8[20];
+extern "C" static void daObjSwTurn_create1st__FP13daObjSwTurn_c(); // 1
+extern "C" static void daObjSwTurn_MoveBGDelete__FP13daObjSwTurn_c(); // 1
+extern "C" static void daObjSwTurn_MoveBGExecute__FP13daObjSwTurn_c(); // 1
+extern "C" static void daObjSwTurn_MoveBGDraw__FP13daObjSwTurn_c(); // 1
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* daObjSwTurn_METHODS[8];
 extern "C" extern void* g_profile_Obj_SwTurn[12];
 
 // 
@@ -174,6 +175,9 @@ extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -191,6 +195,8 @@ extern "C" void _savegpr_27(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -274,7 +280,7 @@ asm void daObjSwTurn_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80D00D78-80D00EE4 016C+00 s=0 e=0 z=0  None .text      Create__13daObjSwTurn_cFv                                    */
+/* 80D00D78-80D00EE4 016C+00 s=1 e=0 z=0  None .text      Create__13daObjSwTurn_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -286,6 +292,41 @@ asm void daObjSwTurn_c::Create() {
 
 
 /* ############################################################################################## */
+/* 80D02094-80D02098 0004+00 s=5 e=0 z=0  None .rodata    @4098                                                        */
+SECTION_RODATA static u32 const lit_4098 = 0x3F800000;
+
+/* 80D02098-80D0209C 0004+00 s=5 e=0 z=0  None .rodata    @4099                                                        */
+SECTION_RODATA static u32 const lit_4099 = 0xBF800000;
+
+/* 80D0209C-80D020A4 0004+04 s=1 e=0 z=0  None .rodata    @4100                                                        */
+SECTION_RODATA static u32 const lit_4100[1 + 1 /* padding */] = {
+	0x41200000,
+	/* padding */
+	0x00000000,
+};
+
+/* 80D020A4-80D020AC 0008+00 s=4 e=0 z=0  None .rodata    @4102                                                        */
+SECTION_RODATA static u8 const lit_4102[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
+/* 80D020AC-80D020B0 0004+00 s=1 e=0 z=0  None .rodata    @4127                                                        */
+SECTION_RODATA static u32 const lit_4127 = 0x47000000;
+
+/* 80D020B0-80D020B4 0004+00 s=1 e=0 z=0  None .rodata    @4189                                                        */
+SECTION_RODATA static u32 const lit_4189 = 0x46800000;
+
+/* 80D020B4-80D020B8 0004+00 s=1 e=0 z=0  None .rodata    @4304                                                        */
+SECTION_RODATA static u32 const lit_4304 = 0x45AAA800;
+
+/* 80D020B8-80D020CC 0014+00 s=1 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const struct_80D020B8[20] = {
+	/* 80D020B8 0009 stringBase_80D020B8 @stringBase0 */
+	0x50, 0x5F, 0x4C, 0x76, 0x34, 0x74, 0x73, 0x77, 0x00,
+	/* 80D020C1 000B data_80D020C1 None */
+	0x50, 0x5F, 0x4C, 0x76, 0x34, 0x74, 0x73, 0x77, 0x44, 0x00, 0x00,
+};
+
 /* 80D020CC-80D020D8 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -300,11 +341,11 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 
 /* 80D020EC-80D020F4 0008+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
 SECTION_DATA static void* l_arcName[2] = {
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)&struct_80D020B8)+0x0) /* @stringBase0 */,
+	(void*)(((char*)&struct_80D020B8)+0x9) /* None */,
 };
 
-/* 80D00EE4-80D00F64 0080+00 s=0 e=0 z=0  None .text      CreateHeap__13daObjSwTurn_cFv                                */
+/* 80D00EE4-80D00F64 0080+00 s=1 e=0 z=0  None .text      CreateHeap__13daObjSwTurn_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -326,7 +367,7 @@ asm void daObjSwTurn_c::create1st() {
 #pragma pop
 
 
-/* 80D01074-80D010D4 0060+00 s=0 e=0 z=0  None .text      Execute__13daObjSwTurn_cFPPA3_A4_f                           */
+/* 80D01074-80D010D4 0060+00 s=1 e=0 z=0  None .text      Execute__13daObjSwTurn_cFPPA3_A4_f                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -342,14 +383,14 @@ asm void daObjSwTurn_c::Execute(f32 (** param_0)[3][4]) {
 SECTION_DATA static void* lit_3813[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeWait__13daObjSwTurn_cFv,
 };
 
 /* 80D02100-80D0210C 000C+00 s=1 e=0 z=0  None .data      @3814                                                        */
 SECTION_DATA static void* lit_3814[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeRotate__13daObjSwTurn_cFv,
 };
 
 /* 80D0210C-80D02124 0018+00 s=1 e=0 z=0  None .data      l_func$3812                                                  */
@@ -380,26 +421,7 @@ asm void daObjSwTurn_c::init_modeWait() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80D02094-80D02098 0004+00 s=5 e=0 z=0  None .rodata    @4098                                                        */
-SECTION_RODATA static u32 const lit_4098 = 0x3F800000;
-
-/* 80D02098-80D0209C 0004+00 s=5 e=0 z=0  None .rodata    @4099                                                        */
-SECTION_RODATA static u32 const lit_4099 = 0xBF800000;
-
-/* 80D0209C-80D020A4 0004+04 s=1 e=0 z=0  None .rodata    @4100                                                        */
-SECTION_RODATA static u32 const lit_4100[1 + 1 /* padding */] = {
-	0x41200000,
-	/* padding */
-	0x00000000,
-};
-
-/* 80D020A4-80D020AC 0008+00 s=4 e=0 z=0  None .rodata    @4102                                                        */
-SECTION_RODATA static u8 const lit_4102[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
-/* 80D01198-80D01770 05D8+00 s=0 e=0 z=0  None .text      modeWait__13daObjSwTurn_cFv                                  */
+/* 80D01198-80D01770 05D8+00 s=1 e=0 z=0  None .text      modeWait__13daObjSwTurn_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -409,10 +431,6 @@ asm void daObjSwTurn_c::modeWait() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80D020AC-80D020B0 0004+00 s=1 e=0 z=0  None .rodata    @4127                                                        */
-SECTION_RODATA static u32 const lit_4127 = 0x47000000;
 
 /* 80D01770-80D018B4 0144+00 s=1 e=0 z=0  None .text      init_modeRotate__13daObjSwTurn_cFv                           */
 #pragma push
@@ -425,7 +443,7 @@ asm void daObjSwTurn_c::init_modeRotate() {
 #pragma pop
 
 
-/* 80D018B4-80D01958 00A4+00 s=0 e=0 z=0  None .text      modeRotate__13daObjSwTurn_cFv                                */
+/* 80D018B4-80D01958 00A4+00 s=1 e=0 z=0  None .text      modeRotate__13daObjSwTurn_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -435,10 +453,6 @@ asm void daObjSwTurn_c::modeRotate() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80D020B0-80D020B4 0004+00 s=1 e=0 z=0  None .rodata    @4189                                                        */
-SECTION_RODATA static u32 const lit_4189 = 0x46800000;
 
 /* 80D01958-80D01B60 0208+00 s=1 e=0 z=0  None .text      rotate_sub_0__13daObjSwTurn_cFv                              */
 #pragma push
@@ -451,10 +465,6 @@ asm void daObjSwTurn_c::rotate_sub_0() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80D020B4-80D020B8 0004+00 s=1 e=0 z=0  None .rodata    @4304                                                        */
-SECTION_RODATA static u32 const lit_4304 = 0x45AAA800;
-
 /* 80D01B60-80D01EB0 0350+00 s=1 e=0 z=0  None .text      rotate_sub_1__13daObjSwTurn_cFv                              */
 #pragma push
 #pragma optimization_level 0
@@ -466,7 +476,7 @@ asm void daObjSwTurn_c::rotate_sub_1() {
 #pragma pop
 
 
-/* 80D01EB0-80D01F58 00A8+00 s=0 e=0 z=0  None .text      Draw__13daObjSwTurn_cFv                                      */
+/* 80D01EB0-80D01F58 00A8+00 s=1 e=0 z=0  None .text      Draw__13daObjSwTurn_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -477,7 +487,7 @@ asm void daObjSwTurn_c::Draw() {
 #pragma pop
 
 
-/* 80D01F58-80D01F98 0040+00 s=0 e=0 z=0  None .text      Delete__13daObjSwTurn_cFv                                    */
+/* 80D01F58-80D01F98 0040+00 s=1 e=0 z=0  None .text      Delete__13daObjSwTurn_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -489,30 +499,30 @@ asm void daObjSwTurn_c::Delete() {
 
 
 /* ############################################################################################## */
-/* 80D02124-80D02144 0020+00 s=0 e=0 z=0  None .data      daObjSwTurn_METHODS                                          */
-SECTION_DATA void* daObjSwTurn_METHODS[8] = {
+/* 80D02124-80D02144 0020+00 s=1 e=0 z=0  None .data      daObjSwTurn_METHODS                                          */
+SECTION_DATA static void* daObjSwTurn_METHODS[8] = {
+	(void*)daObjSwTurn_create1st__FP13daObjSwTurn_c,
+	(void*)daObjSwTurn_MoveBGDelete__FP13daObjSwTurn_c,
+	(void*)daObjSwTurn_MoveBGExecute__FP13daObjSwTurn_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjSwTurn_MoveBGDraw__FP13daObjSwTurn_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D02144-80D02174 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_SwTurn                                         */
+/* 80D02144-80D02174 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_SwTurn                                         */
 SECTION_DATA void* g_profile_Obj_SwTurn[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x001E0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005E0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x000E0000,
-	(void*)NULL,
+	(void*)&daObjSwTurn_METHODS,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -521,66 +531,57 @@ SECTION_DATA void* g_profile_Obj_SwTurn[12] = {
 SECTION_DATA static void* __vt__13daObjSwTurn_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__13daObjSwTurn_cFv,
+	(void*)Create__13daObjSwTurn_cFv,
+	(void*)Execute__13daObjSwTurn_cFPPA3_A4_f,
+	(void*)Draw__13daObjSwTurn_cFv,
+	(void*)Delete__13daObjSwTurn_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
-/* 80D01F98-80D01FF8 0060+00 s=0 e=0 z=0  None .text      daObjSwTurn_create1st__FP13daObjSwTurn_c                     */
+/* 80D01F98-80D01FF8 0060+00 s=1 e=0 z=0  None .text      daObjSwTurn_create1st__FP13daObjSwTurn_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSwTurn_create1st(daObjSwTurn_c* param_0) {
+asm static void daObjSwTurn_create1st(daObjSwTurn_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/daObjSwTurn_create1st__FP13daObjSwTurn_c.s"
 }
 #pragma pop
 
 
-/* 80D01FF8-80D02018 0020+00 s=0 e=0 z=0  None .text      daObjSwTurn_MoveBGDelete__FP13daObjSwTurn_c                  */
+/* 80D01FF8-80D02018 0020+00 s=1 e=0 z=0  None .text      daObjSwTurn_MoveBGDelete__FP13daObjSwTurn_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSwTurn_MoveBGDelete(daObjSwTurn_c* param_0) {
+asm static void daObjSwTurn_MoveBGDelete(daObjSwTurn_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/daObjSwTurn_MoveBGDelete__FP13daObjSwTurn_c.s"
 }
 #pragma pop
 
 
-/* 80D02018-80D02038 0020+00 s=0 e=0 z=0  None .text      daObjSwTurn_MoveBGExecute__FP13daObjSwTurn_c                 */
+/* 80D02018-80D02038 0020+00 s=1 e=0 z=0  None .text      daObjSwTurn_MoveBGExecute__FP13daObjSwTurn_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSwTurn_MoveBGExecute(daObjSwTurn_c* param_0) {
+asm static void daObjSwTurn_MoveBGExecute(daObjSwTurn_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/daObjSwTurn_MoveBGExecute__FP13daObjSwTurn_c.s"
 }
 #pragma pop
 
 
-/* 80D02038-80D02064 002C+00 s=0 e=0 z=0  None .text      daObjSwTurn_MoveBGDraw__FP13daObjSwTurn_c                    */
+/* 80D02038-80D02064 002C+00 s=1 e=0 z=0  None .text      daObjSwTurn_MoveBGDraw__FP13daObjSwTurn_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjSwTurn_MoveBGDraw(daObjSwTurn_c* param_0) {
+asm static void daObjSwTurn_MoveBGDraw(daObjSwTurn_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/daObjSwTurn_MoveBGDraw__FP13daObjSwTurn_c.s"
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80D020B8-80D020CC 0014+00 s=0 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA u8 const struct_80D020B8[20] = {
-	/* 80D020B8 0009 stringBase_80D020B8 @stringBase0 */
-	0x50, 0x5F, 0x4C, 0x76, 0x34, 0x74, 0x73, 0x77, 0x00,
-	/* 80D020C1 000B data_80D020C1 None */
-	0x50, 0x5F, 0x4C, 0x76, 0x34, 0x74, 0x73, 0x77, 0x44, 0x00, 0x00,
-};
 

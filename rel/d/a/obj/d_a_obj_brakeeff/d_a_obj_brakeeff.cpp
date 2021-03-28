@@ -73,10 +73,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -153,28 +153,27 @@ struct cCcS {
 // Forward References:
 // 
 
-void daObj_Brakeeff_Draw(obj_brakeeff_class*); // 2
+static void daObj_Brakeeff_Draw(obj_brakeeff_class*); // 2
 static void obj_brakeeff_1(obj_brakeeff_class*); // 2
 static void action(obj_brakeeff_class*); // 2
 static void daObj_Brakeeff_Execute(obj_brakeeff_class*); // 2
-bool daObj_Brakeeff_IsDelete(obj_brakeeff_class*); // 2
-void daObj_Brakeeff_Delete(obj_brakeeff_class*); // 2
+static bool daObj_Brakeeff_IsDelete(obj_brakeeff_class*); // 2
+static void daObj_Brakeeff_Delete(obj_brakeeff_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daObj_Brakeeff_Create(fopAc_ac_c*); // 2
+static void daObj_Brakeeff_Create(fopAc_ac_c*); // 2
 
-extern "C" void daObj_Brakeeff_Draw__FP18obj_brakeeff_class(); // 1
+extern "C" static void daObj_Brakeeff_Draw__FP18obj_brakeeff_class(); // 1
 extern "C" static void obj_brakeeff_1__FP18obj_brakeeff_class(); // 1
 extern "C" static void action__FP18obj_brakeeff_class(); // 1
 extern "C" static void daObj_Brakeeff_Execute__FP18obj_brakeeff_class(); // 1
-extern "C" bool daObj_Brakeeff_IsDelete__FP18obj_brakeeff_class(); // 1
-extern "C" void daObj_Brakeeff_Delete__FP18obj_brakeeff_class(); // 1
+extern "C" static bool daObj_Brakeeff_IsDelete__FP18obj_brakeeff_class(); // 1
+extern "C" static void daObj_Brakeeff_Delete__FP18obj_brakeeff_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void daObj_Brakeeff_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObj_Brakeeff_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObj_Brakeeff_Method[8];
 extern "C" extern void* g_profile_OBJ_BEF[12];
 
 // 
@@ -240,6 +239,8 @@ extern "C" void _savegpr_24(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -253,11 +254,11 @@ extern "C" extern u8 g_env_light[4880];
 // Declarations:
 // 
 
-/* 8046DCB8-8046DD38 0080+00 s=0 e=0 z=0  None .text      daObj_Brakeeff_Draw__FP18obj_brakeeff_class                  */
+/* 8046DCB8-8046DD38 0080+00 s=1 e=0 z=0  None .text      daObj_Brakeeff_Draw__FP18obj_brakeeff_class                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Brakeeff_Draw(obj_brakeeff_class* param_0) {
+asm static void daObj_Brakeeff_Draw(obj_brakeeff_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brakeeff/d_a_obj_brakeeff/daObj_Brakeeff_Draw__FP18obj_brakeeff_class.s"
 }
@@ -306,7 +307,7 @@ asm static void action(obj_brakeeff_class* param_0) {
 #pragma pop
 
 
-/* 8046DFB0-8046E098 00E8+00 s=1 e=0 z=0  None .text      daObj_Brakeeff_Execute__FP18obj_brakeeff_class               */
+/* 8046DFB0-8046E098 00E8+00 s=2 e=0 z=0  None .text      daObj_Brakeeff_Execute__FP18obj_brakeeff_class               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -317,8 +318,8 @@ asm static void daObj_Brakeeff_Execute(obj_brakeeff_class* param_0) {
 #pragma pop
 
 
-/* 8046E098-8046E0A0 0008+00 s=0 e=0 z=0  None .text      daObj_Brakeeff_IsDelete__FP18obj_brakeeff_class              */
-bool daObj_Brakeeff_IsDelete(obj_brakeeff_class* param_0) {
+/* 8046E098-8046E0A0 0008+00 s=1 e=0 z=0  None .text      daObj_Brakeeff_IsDelete__FP18obj_brakeeff_class              */
+static bool daObj_Brakeeff_IsDelete(obj_brakeeff_class* param_0) {
 	return true;
 }
 
@@ -331,11 +332,11 @@ bool daObj_Brakeeff_IsDelete(obj_brakeeff_class* param_0) {
 SECTION_DEAD char const* const stringBase_8046E538 = "Obj_Bef";
 #pragma pop
 
-/* 8046E0A0-8046E0F0 0050+00 s=0 e=0 z=0  None .text      daObj_Brakeeff_Delete__FP18obj_brakeeff_class                */
+/* 8046E0A0-8046E0F0 0050+00 s=1 e=0 z=0  None .text      daObj_Brakeeff_Delete__FP18obj_brakeeff_class                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Brakeeff_Delete(obj_brakeeff_class* param_0) {
+asm static void daObj_Brakeeff_Delete(obj_brakeeff_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brakeeff/d_a_obj_brakeeff/daObj_Brakeeff_Delete__FP18obj_brakeeff_class.s"
 }
@@ -361,30 +362,30 @@ SECTION_DATA static u8 data_8046E55C[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
 };
 
-/* 8046E59C-8046E5BC 0020+00 s=0 e=0 z=0  None .data      l_daObj_Brakeeff_Method                                      */
-SECTION_DATA void* l_daObj_Brakeeff_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 8046E59C-8046E5BC 0020+00 s=1 e=0 z=0  None .data      l_daObj_Brakeeff_Method                                      */
+SECTION_DATA static void* l_daObj_Brakeeff_Method[8] = {
+	(void*)daObj_Brakeeff_Create__FP10fopAc_ac_c,
+	(void*)daObj_Brakeeff_Delete__FP18obj_brakeeff_class,
+	(void*)daObj_Brakeeff_Execute__FP18obj_brakeeff_class,
+	(void*)daObj_Brakeeff_IsDelete__FP18obj_brakeeff_class,
+	(void*)daObj_Brakeeff_Draw__FP18obj_brakeeff_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 8046E5BC-8046E5EC 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_BEF                                            */
+/* 8046E5BC-8046E5EC 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_BEF                                            */
 SECTION_DATA void* g_profile_OBJ_BEF[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00250000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x0000073C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00270000,
-	(void*)NULL,
+	(void*)&l_daObj_Brakeeff_Method,
 	(void*)0x00040100,
 	(void*)0x00070000,
 };
@@ -393,21 +394,21 @@ SECTION_DATA void* g_profile_OBJ_BEF[12] = {
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 8046E5F8-8046E604 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 8046E604-8046E610 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 8046E0F0-8046E2B0 01C0+00 s=1 e=0 z=0  None .text      useHeapInit__FP10fopAc_ac_c                                  */
@@ -421,7 +422,7 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 8046E2B0-8046E2F8 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 8046E2B0-8046E2F8 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -432,18 +433,18 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 8046E2F8-8046E490 0198+00 s=0 e=0 z=0  None .text      daObj_Brakeeff_Create__FP10fopAc_ac_c                        */
+/* 8046E2F8-8046E490 0198+00 s=1 e=0 z=0  None .text      daObj_Brakeeff_Create__FP10fopAc_ac_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Brakeeff_Create(fopAc_ac_c* param_0) {
+asm static void daObj_Brakeeff_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brakeeff/d_a_obj_brakeeff/daObj_Brakeeff_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8046E490-8046E4D8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 8046E490-8046E4D8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -454,7 +455,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 8046E4D8-8046E520 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 8046E4D8-8046E520 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

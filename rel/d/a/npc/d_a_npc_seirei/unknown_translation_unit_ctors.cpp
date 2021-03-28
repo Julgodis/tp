@@ -19,6 +19,7 @@ extern void* const data_80AD7C94[2];
 // 
 
 
+extern "C" void __sinit_d_a_npc_seirei_cpp(); // 1
 
 // 
 // Declarations:

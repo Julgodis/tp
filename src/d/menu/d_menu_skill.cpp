@@ -11,12 +11,12 @@
 // Types:
 // 
 
+struct CSTControl {
+};
+
 struct STControl {
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
-};
-
-struct CSTControl {
 };
 
 struct JKRExpHeap {
@@ -118,10 +118,10 @@ struct CPaneMgrAlpha {
 	/* 802557D0 */ void setAlphaRate(f32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {

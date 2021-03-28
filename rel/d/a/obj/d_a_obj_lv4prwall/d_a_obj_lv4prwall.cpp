@@ -71,6 +71,9 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -84,10 +87,10 @@ struct dScnKy_env_light_c {
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -100,10 +103,10 @@ struct Z2SeMgr {
 // 
 
 static void searchObjSwTurn(void*, void*); // 2
-void daObjLv4PRwall_create1st(daObjLv4PRwall_c*); // 2
-void daObjLv4PRwall_MoveBGDelete(daObjLv4PRwall_c*); // 2
-void daObjLv4PRwall_MoveBGExecute(daObjLv4PRwall_c*); // 2
-void daObjLv4PRwall_MoveBGDraw(daObjLv4PRwall_c*); // 2
+static void daObjLv4PRwall_create1st(daObjLv4PRwall_c*); // 2
+static void daObjLv4PRwall_MoveBGDelete(daObjLv4PRwall_c*); // 2
+static void daObjLv4PRwall_MoveBGExecute(daObjLv4PRwall_c*); // 2
+static void daObjLv4PRwall_MoveBGDraw(daObjLv4PRwall_c*); // 2
 
 extern "C" void create1st__16daObjLv4PRwall_cFv(); // 1
 extern "C" void setMtx__16daObjLv4PRwall_cFv(); // 1
@@ -113,13 +116,11 @@ extern "C" static void searchObjSwTurn__FPvPv(); // 1
 extern "C" void Execute__16daObjLv4PRwall_cFPPA3_A4_f(); // 1
 extern "C" void Draw__16daObjLv4PRwall_cFv(); // 1
 extern "C" void Delete__16daObjLv4PRwall_cFv(); // 1
-extern "C" void daObjLv4PRwall_create1st__FP16daObjLv4PRwall_c(); // 1
-extern "C" void daObjLv4PRwall_MoveBGDelete__FP16daObjLv4PRwall_c(); // 1
-extern "C" void daObjLv4PRwall_MoveBGExecute__FP16daObjLv4PRwall_c(); // 1
-extern "C" void daObjLv4PRwall_MoveBGDraw__FP16daObjLv4PRwall_c(); // 1
+extern "C" static void daObjLv4PRwall_create1st__FP16daObjLv4PRwall_c(); // 1
+extern "C" static void daObjLv4PRwall_MoveBGDelete__FP16daObjLv4PRwall_c(); // 1
+extern "C" static void daObjLv4PRwall_MoveBGExecute__FP16daObjLv4PRwall_c(); // 1
+extern "C" static void daObjLv4PRwall_MoveBGDraw__FP16daObjLv4PRwall_c(); // 1
 extern "C" void __dt__16daObjLv4PRwall_cFv(); // 1
-extern "C" extern u8 const struct_80C69974[28];
-extern "C" extern void* daObjLv4PRwall_METHODS[8];
 extern "C" extern void* g_profile_Obj_Lv4PRwall[12];
 
 // 
@@ -156,6 +157,9 @@ extern "C" void StartQuake__12dVibration_cFii4cXyz(); // 1
 extern "C" void StopQuake__12dVibration_cFi(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -169,6 +173,8 @@ extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXTrans(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__16dBgS_MoveBgActor[10];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
@@ -187,25 +193,6 @@ SECTION_RODATA static u8 const l_dzbidx[12] = {
 	0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x07,
 };
 
-/* 80C69990-80C6999C 000C+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80C68C98-80C68DD8 0140+00 s=1 e=0 z=1  None .text      create1st__16daObjLv4PRwall_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjLv4PRwall_c::create1st() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/create1st__16daObjLv4PRwall_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
 /* 80C698F4-80C69900 000C+00 s=1 e=0 z=0  None .rodata    l_bmdidx                                                     */
 SECTION_RODATA static u8 const l_bmdidx[12] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04,
@@ -231,6 +218,57 @@ SECTION_RODATA static u8 const lit_3691[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
+/* 80C69958-80C6995C 0004+00 s=2 e=0 z=0  None .rodata    @3713                                                        */
+SECTION_RODATA static u8 const lit_3713[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C6995C-80C69960 0004+00 s=1 e=0 z=0  None .rodata    @3959                                                        */
+SECTION_RODATA static u32 const lit_3959 = 0xC0000000;
+
+/* 80C69960-80C69964 0004+00 s=1 e=0 z=0  None .rodata    @3960                                                        */
+SECTION_RODATA static u32 const lit_3960 = 0x3F800000;
+
+/* 80C69964-80C69968 0004+00 s=1 e=0 z=0  None .rodata    @3961                                                        */
+SECTION_RODATA static u32 const lit_3961 = 0xBF800000;
+
+/* 80C69968-80C6996C 0004+00 s=1 e=0 z=0  None .rodata    @3962                                                        */
+SECTION_RODATA static u32 const lit_3962 = 0x3F000000;
+
+/* 80C6996C-80C69970 0004+00 s=1 e=0 z=0  None .rodata    @3963                                                        */
+SECTION_RODATA static u32 const lit_3963 = 0xBE4CCCCD;
+
+/* 80C69970-80C69974 0004+00 s=1 e=0 z=0  None .rodata    @3964                                                        */
+SECTION_RODATA static u32 const lit_3964 = 0x41A00000;
+
+/* 80C69974-80C69990 001C+00 s=1 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const struct_80C69974[28] = {
+	/* 80C69974 000A stringBase_80C69974 @stringBase0 */
+	0x50, 0x52, 0x57, 0x61, 0x6C, 0x6C, 0x52, 0x30, 0x39, 0x00,
+	/* 80C6997E 0008 data_80C6997E None */
+	0x50, 0x5F, 0x52, 0x77, 0x61, 0x6C, 0x6C, 0x00,
+	/* 80C69986 000A data_80C69986 None */
+	0x50, 0x52, 0x57, 0x61, 0x6C, 0x6C, 0x52, 0x30, 0x34, 0x00,
+};
+
+/* 80C69990-80C6999C 000C+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName[3] = {
+	(void*)(((char*)&struct_80C69974)+0x0) /* @stringBase0 */,
+	(void*)(((char*)&struct_80C69974)+0xA) /* None */,
+	(void*)(((char*)&struct_80C69974)+0x12) /* None */,
+};
+
+/* 80C68C98-80C68DD8 0140+00 s=1 e=0 z=1  None .text      create1st__16daObjLv4PRwall_cFv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjLv4PRwall_c::create1st() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/create1st__16daObjLv4PRwall_cFv.s"
+}
+#pragma pop
+
+
 /* 80C68DD8-80C68F20 0148+00 s=3 e=0 z=0  None .text      setMtx__16daObjLv4PRwall_cFv                                 */
 #pragma push
 #pragma optimization_level 0
@@ -242,7 +280,7 @@ asm void daObjLv4PRwall_c::setMtx() {
 #pragma pop
 
 
-/* 80C68F20-80C68FA0 0080+00 s=0 e=0 z=0  None .text      CreateHeap__16daObjLv4PRwall_cFv                             */
+/* 80C68F20-80C68FA0 0080+00 s=1 e=0 z=0  None .text      CreateHeap__16daObjLv4PRwall_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -253,13 +291,7 @@ asm void daObjLv4PRwall_c::CreateHeap() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80C69958-80C6995C 0004+00 s=2 e=0 z=0  None .rodata    @3713                                                        */
-SECTION_RODATA static u8 const lit_3713[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C68FA0-80C69064 00C4+00 s=0 e=0 z=0  None .text      Create__16daObjLv4PRwall_cFv                                 */
+/* 80C68FA0-80C69064 00C4+00 s=1 e=0 z=0  None .text      Create__16daObjLv4PRwall_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -281,26 +313,7 @@ asm static void searchObjSwTurn(void* param_0, void* param_1) {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80C6995C-80C69960 0004+00 s=1 e=0 z=0  None .rodata    @3959                                                        */
-SECTION_RODATA static u32 const lit_3959 = 0xC0000000;
-
-/* 80C69960-80C69964 0004+00 s=1 e=0 z=0  None .rodata    @3960                                                        */
-SECTION_RODATA static u32 const lit_3960 = 0x3F800000;
-
-/* 80C69964-80C69968 0004+00 s=1 e=0 z=0  None .rodata    @3961                                                        */
-SECTION_RODATA static u32 const lit_3961 = 0xBF800000;
-
-/* 80C69968-80C6996C 0004+00 s=1 e=0 z=0  None .rodata    @3962                                                        */
-SECTION_RODATA static u32 const lit_3962 = 0x3F000000;
-
-/* 80C6996C-80C69970 0004+00 s=1 e=0 z=0  None .rodata    @3963                                                        */
-SECTION_RODATA static u32 const lit_3963 = 0xBE4CCCCD;
-
-/* 80C69970-80C69974 0004+00 s=1 e=0 z=0  None .rodata    @3964                                                        */
-SECTION_RODATA static u32 const lit_3964 = 0x41A00000;
-
-/* 80C690D8-80C696BC 05E4+00 s=0 e=0 z=0  None .text      Execute__16daObjLv4PRwall_cFPPA3_A4_f                        */
+/* 80C690D8-80C696BC 05E4+00 s=1 e=0 z=0  None .text      Execute__16daObjLv4PRwall_cFPPA3_A4_f                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -311,7 +324,7 @@ asm void daObjLv4PRwall_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80C696BC-80C69760 00A4+00 s=0 e=0 z=0  None .text      Draw__16daObjLv4PRwall_cFv                                   */
+/* 80C696BC-80C69760 00A4+00 s=1 e=0 z=0  None .text      Draw__16daObjLv4PRwall_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -322,7 +335,7 @@ asm void daObjLv4PRwall_c::Draw() {
 #pragma pop
 
 
-/* 80C69760-80C697A4 0044+00 s=0 e=0 z=0  None .text      Delete__16daObjLv4PRwall_cFv                                 */
+/* 80C69760-80C697A4 0044+00 s=1 e=0 z=0  None .text      Delete__16daObjLv4PRwall_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -334,30 +347,30 @@ asm void daObjLv4PRwall_c::Delete() {
 
 
 /* ############################################################################################## */
-/* 80C6999C-80C699BC 0020+00 s=0 e=0 z=0  None .data      daObjLv4PRwall_METHODS                                       */
-SECTION_DATA void* daObjLv4PRwall_METHODS[8] = {
+/* 80C6999C-80C699BC 0020+00 s=1 e=0 z=0  None .data      daObjLv4PRwall_METHODS                                       */
+SECTION_DATA static void* daObjLv4PRwall_METHODS[8] = {
+	(void*)daObjLv4PRwall_create1st__FP16daObjLv4PRwall_c,
+	(void*)daObjLv4PRwall_MoveBGDelete__FP16daObjLv4PRwall_c,
+	(void*)daObjLv4PRwall_MoveBGExecute__FP16daObjLv4PRwall_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjLv4PRwall_MoveBGDraw__FP16daObjLv4PRwall_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C699BC-80C699EC 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Lv4PRwall                                      */
+/* 80C699BC-80C699EC 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Lv4PRwall                                      */
 SECTION_DATA void* g_profile_Obj_Lv4PRwall[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00D00000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x0000062C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02A00000,
-	(void*)NULL,
+	(void*)&daObjLv4PRwall_METHODS,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -366,62 +379,62 @@ SECTION_DATA void* g_profile_Obj_Lv4PRwall[12] = {
 SECTION_DATA static void* __vt__16daObjLv4PRwall_c[11] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__16daObjLv4PRwall_cFv,
+	(void*)Create__16daObjLv4PRwall_cFv,
+	(void*)Execute__16daObjLv4PRwall_cFPPA3_A4_f,
+	(void*)Draw__16daObjLv4PRwall_cFv,
+	(void*)Delete__16daObjLv4PRwall_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)__dt__16daObjLv4PRwall_cFv,
 };
 
-/* 80C697A4-80C69804 0060+00 s=0 e=0 z=0  None .text      daObjLv4PRwall_create1st__FP16daObjLv4PRwall_c               */
+/* 80C697A4-80C69804 0060+00 s=1 e=0 z=0  None .text      daObjLv4PRwall_create1st__FP16daObjLv4PRwall_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjLv4PRwall_create1st(daObjLv4PRwall_c* param_0) {
+asm static void daObjLv4PRwall_create1st(daObjLv4PRwall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/daObjLv4PRwall_create1st__FP16daObjLv4PRwall_c.s"
 }
 #pragma pop
 
 
-/* 80C69804-80C69824 0020+00 s=0 e=0 z=0  None .text      daObjLv4PRwall_MoveBGDelete__FP16daObjLv4PRwall_c            */
+/* 80C69804-80C69824 0020+00 s=1 e=0 z=0  None .text      daObjLv4PRwall_MoveBGDelete__FP16daObjLv4PRwall_c            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjLv4PRwall_MoveBGDelete(daObjLv4PRwall_c* param_0) {
+asm static void daObjLv4PRwall_MoveBGDelete(daObjLv4PRwall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/daObjLv4PRwall_MoveBGDelete__FP16daObjLv4PRwall_c.s"
 }
 #pragma pop
 
 
-/* 80C69824-80C69844 0020+00 s=0 e=0 z=0  None .text      daObjLv4PRwall_MoveBGExecute__FP16daObjLv4PRwall_c           */
+/* 80C69824-80C69844 0020+00 s=1 e=0 z=0  None .text      daObjLv4PRwall_MoveBGExecute__FP16daObjLv4PRwall_c           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjLv4PRwall_MoveBGExecute(daObjLv4PRwall_c* param_0) {
+asm static void daObjLv4PRwall_MoveBGExecute(daObjLv4PRwall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/daObjLv4PRwall_MoveBGExecute__FP16daObjLv4PRwall_c.s"
 }
 #pragma pop
 
 
-/* 80C69844-80C69870 002C+00 s=0 e=0 z=0  None .text      daObjLv4PRwall_MoveBGDraw__FP16daObjLv4PRwall_c              */
+/* 80C69844-80C69870 002C+00 s=1 e=0 z=0  None .text      daObjLv4PRwall_MoveBGDraw__FP16daObjLv4PRwall_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjLv4PRwall_MoveBGDraw(daObjLv4PRwall_c* param_0) {
+asm static void daObjLv4PRwall_MoveBGDraw(daObjLv4PRwall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/daObjLv4PRwall_MoveBGDraw__FP16daObjLv4PRwall_c.s"
 }
 #pragma pop
 
 
-/* 80C69870-80C698E0 0070+00 s=0 e=0 z=0  None .text      __dt__16daObjLv4PRwall_cFv                                   */
+/* 80C69870-80C698E0 0070+00 s=1 e=0 z=0  None .text      __dt__16daObjLv4PRwall_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -431,15 +444,4 @@ asm daObjLv4PRwall_c::~daObjLv4PRwall_c() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80C69974-80C69990 001C+00 s=0 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA u8 const struct_80C69974[28] = {
-	/* 80C69974 000A stringBase_80C69974 @stringBase0 */
-	0x50, 0x52, 0x57, 0x61, 0x6C, 0x6C, 0x52, 0x30, 0x39, 0x00,
-	/* 80C6997E 0008 data_80C6997E None */
-	0x50, 0x5F, 0x52, 0x77, 0x61, 0x6C, 0x6C, 0x00,
-	/* 80C69986 000A data_80C69986 None */
-	0x50, 0x52, 0x57, 0x61, 0x6C, 0x6C, 0x52, 0x30, 0x34, 0x00,
-};
 

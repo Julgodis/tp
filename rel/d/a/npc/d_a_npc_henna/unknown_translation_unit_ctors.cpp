@@ -19,6 +19,7 @@ extern void* const data_8054A950[2];
 // 
 
 
+extern "C" void __sinit_d_a_npc_henna_cpp(); // 1
 
 // 
 // Declarations:

@@ -298,7 +298,7 @@ SECTION_DATA static void* l_dScnName_Method[5] = {
 	(void*)dScnName_Draw__FP10dScnName_c,
 };
 
-/* 803C30F0-803C3118 0028+00 s=0 e=0 z=0  None .data      g_profile_NAME_SCENE                                         */
+/* 803C30F0-803C3118 0028+00 s=0 e=0 z=1  None .data      g_profile_NAME_SCENE                                         */
 SECTION_DATA void* g_profile_NAME_SCENE[10] = {
 	(void*)NULL,
 	(void*)0x0001FFFD,
@@ -312,7 +312,7 @@ SECTION_DATA void* g_profile_NAME_SCENE[10] = {
 	(void*)NULL,
 };
 
-/* 803C3118-803C3140 0028+00 s=0 e=0 z=0  None .data      g_profile_NAMEEX_SCENE                                       */
+/* 803C3118-803C3140 0028+00 s=0 e=0 z=1  None .data      g_profile_NAMEEX_SCENE                                       */
 SECTION_DATA void* g_profile_NAMEEX_SCENE[10] = {
 	(void*)NULL,
 	(void*)0x0001FFFD,

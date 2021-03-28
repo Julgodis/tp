@@ -91,35 +91,34 @@ struct daNpcT_DmgStagger_c {
 struct J3DAnmTevRegKey {
 };
 
-struct J3DAnmTexPattern {
+struct J3DJoint {
 };
 
-struct J3DAnmTextureSRTKey {
-};
-
-struct dCcD_GObjInf {
-	/* 80084460 */ void ChkTgHit();
-};
-
-struct J3DAnmTransformKey {
-};
-
-struct J3DModelData {
+struct daNpcT_motionAnmData_c {
 };
 
 struct _GXColorS10 {
 };
 
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
+	/* 80112C80 */ csXyz();
+	/* 8026745C */ void operator+=(csXyz&);
+};
+
+struct J3DAnmTexPattern {
+};
+
+struct J3DModelData {
+};
+
 struct daNpcT_faceMotionAnmData_c {
 };
 
-struct J3DJoint {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmColor {
-};
-
-struct daNpcT_motionAnmData_c {
+struct J3DAnmTransformKey {
 };
 
 struct J3DAnmTransform {
@@ -129,10 +128,11 @@ struct J3DFrameCtrl {
 	/* 803283FC */ void init(s16);
 };
 
-struct csXyz {
-	/* 80018BD0 */ ~csXyz();
-	/* 80112C80 */ csXyz();
-	/* 8026745C */ void operator+=(csXyz&);
+struct J3DAnmColor {
+};
+
+struct dCcD_GObjInf {
+	/* 80084460 */ void ChkTgHit();
 };
 
 struct daNpcT_c {
@@ -315,13 +315,13 @@ struct daBaseNpc_c {
 	/* 8014F4AC */ bool dbgDraw();
 };
 
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
+};
+
 struct dBgW {
 	/* 8007B970 */ dBgW();
 	/* 8007B9C0 */ void Move();
-};
-
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct daBaseNpc_moveBgActor_c {
@@ -591,10 +591,10 @@ struct dEvent_manager_c {
 	/* 800483E8 */ void getRunEventName();
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -612,13 +612,13 @@ struct dPaPoT_c {
 struct cBgS_LinChk {
 };
 
+struct dBgW_Base {
+};
+
 struct cBgS_GndChk {
 	/* 80267C1C */ cBgS_GndChk();
 	/* 80267C94 */ ~cBgS_GndChk();
 	/* 80267D28 */ void SetPos(cXyz const*);
-};
-
-struct dBgW_Base {
 };
 
 struct cBgS {
@@ -2435,7 +2435,7 @@ asm void daNpcT_c::playAllAnm() {
 #pragma pop
 
 
-/* 801490D4-80149190 00BC+00 s=1 e=1 z=0  None .text      ctrlBtk__8daNpcT_cFv                                         */
+/* 801490D4-80149190 00BC+00 s=1 e=1 z=55  None .text      ctrlBtk__8daNpcT_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2490,7 +2490,7 @@ asm void daNpcT_c::ctrlMsgAnm(int* param_0, int* param_1, fopAc_ac_c* param_2, i
 #pragma pop
 
 
-/* 8014951C-8014997C 0460+00 s=1 e=1 z=0  None .text      ctrlJoint__8daNpcT_cFP8J3DJointP8J3DModel                    */
+/* 8014951C-8014997C 0460+00 s=1 e=1 z=59  None .text      ctrlJoint__8daNpcT_cFP8J3DJointP8J3DModel                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2570,7 +2570,7 @@ SECTION_DEAD char const* const stringBase_803929F7 = "%d,   \t//  デバグ情�
 SECTION_DEAD static char const* const pad_80392A12 = "\0\0\0\0\0";
 #pragma pop
 
-/* 8014997C-80149BB4 0238+00 s=1 e=1 z=0  None .text      evtProc__8daNpcT_cFv                                         */
+/* 8014997C-80149BB4 0238+00 s=1 e=1 z=58  None .text      evtProc__8daNpcT_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2581,7 +2581,7 @@ asm void daNpcT_c::evtProc() {
 #pragma pop
 
 
-/* 80149BB4-80149D7C 01C8+00 s=1 e=1 z=0  None .text      setFootPos__8daNpcT_cFv                                      */
+/* 80149BB4-80149D7C 01C8+00 s=1 e=1 z=60  None .text      setFootPos__8daNpcT_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2592,7 +2592,7 @@ asm void daNpcT_c::setFootPos() {
 #pragma pop
 
 
-/* 80149D7C-8014A05C 02E0+00 s=1 e=1 z=0  None .text      setFootPrtcl__8daNpcT_cFP4cXyzff                             */
+/* 80149D7C-8014A05C 02E0+00 s=1 e=1 z=60  None .text      setFootPrtcl__8daNpcT_cFP4cXyzff                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2603,13 +2603,13 @@ asm void daNpcT_c::setFootPrtcl(cXyz* param_0, f32 param_1, f32 param_2) {
 #pragma pop
 
 
-/* 8014A05C-8014A064 0008+00 s=1 e=1 z=0  None .text      checkCullDraw__8daNpcT_cFv                                   */
+/* 8014A05C-8014A064 0008+00 s=1 e=1 z=60  None .text      checkCullDraw__8daNpcT_cFv                                   */
 bool daNpcT_c::checkCullDraw() {
 	return false;
 }
 
 
-/* 8014A064-8014A0B0 004C+00 s=1 e=1 z=0  None .text      twilight__8daNpcT_cFv                                        */
+/* 8014A064-8014A0B0 004C+00 s=1 e=1 z=60  None .text      twilight__8daNpcT_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2620,7 +2620,7 @@ asm void daNpcT_c::twilight() {
 #pragma pop
 
 
-/* 8014A0B0-8014A224 0174+00 s=1 e=1 z=0  None .text      evtOrder__8daNpcT_cFv                                        */
+/* 8014A0B0-8014A224 0174+00 s=1 e=1 z=59  None .text      evtOrder__8daNpcT_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2642,7 +2642,7 @@ asm void daNpcT_c::evtChange() {
 #pragma pop
 
 
-/* 8014A324-8014A388 0064+00 s=1 e=1 z=0  None .text      clrParam__8daNpcT_cFv                                        */
+/* 8014A324-8014A388 0064+00 s=1 e=1 z=60  None .text      clrParam__8daNpcT_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2664,7 +2664,7 @@ asm void daNpcT_c::setFaceMotionAnm(int param_0, bool param_1) {
 #pragma pop
 
 
-/* 8014A628-8014A908 02E0+00 s=1 e=1 z=0  None .text      setMotionAnm__8daNpcT_cFifi                                  */
+/* 8014A628-8014A908 02E0+00 s=1 e=1 z=59  None .text      setMotionAnm__8daNpcT_cFifi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3792,7 +3792,7 @@ asm daBaseNpc_c::~daBaseNpc_c() {
 #pragma pop
 
 
-/* 8014EAD0-8014EC50 0180+00 s=2 e=0 z=0  None .text      execute__11daBaseNpc_cFv                                     */
+/* 8014EAD0-8014EC50 0180+00 s=2 e=0 z=2  None .text      execute__11daBaseNpc_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3803,7 +3803,7 @@ asm void daBaseNpc_c::execute() {
 #pragma pop
 
 
-/* 8014EC50-8014EE3C 01EC+00 s=2 e=0 z=0  None .text      draw__11daBaseNpc_cFf                                        */
+/* 8014EC50-8014EE3C 01EC+00 s=2 e=0 z=2  None .text      draw__11daBaseNpc_cFf                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3814,7 +3814,7 @@ asm void daBaseNpc_c::draw(f32 param_0) {
 #pragma pop
 
 
-/* 8014EE3C-8014EE44 0008+00 s=2 e=0 z=0  None .text      getResName__11daBaseNpc_cFv                                  */
+/* 8014EE3C-8014EE44 0008+00 s=2 e=0 z=1  None .text      getResName__11daBaseNpc_cFv                                  */
 bool daBaseNpc_c::getResName() {
 	return false;
 }
@@ -3875,7 +3875,7 @@ asm void daBaseNpc_c::setBtpAnm(J3DAnmTexPattern* param_0, J3DModelData* param_1
 #pragma pop
 
 
-/* 8014EFA4-8014EFF0 004C+00 s=2 e=0 z=0  None .text      attnSttsOn__11daBaseNpc_cFii                                 */
+/* 8014EFA4-8014EFF0 004C+00 s=2 e=0 z=2  None .text      attnSttsOn__11daBaseNpc_cFii                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3886,7 +3886,7 @@ asm void daBaseNpc_c::attnSttsOn(int param_0, int param_1) {
 #pragma pop
 
 
-/* 8014EFF0-8014EFF4 0004+00 s=2 e=0 z=0  None .text      setParam__11daBaseNpc_cFv                                    */
+/* 8014EFF0-8014EFF4 0004+00 s=2 e=0 z=1  None .text      setParam__11daBaseNpc_cFv                                    */
 void daBaseNpc_c::setParam() {
 	/* empty function */
 }
@@ -3903,7 +3903,7 @@ asm void daBaseNpc_c::orderEvent(int param_0, char* param_1) {
 #pragma pop
 
 
-/* 8014F09C-8014F0A0 0004+00 s=2 e=0 z=0  None .text      mainProc__11daBaseNpc_cFv                                    */
+/* 8014F09C-8014F0A0 0004+00 s=2 e=0 z=1  None .text      mainProc__11daBaseNpc_cFv                                    */
 void daBaseNpc_c::mainProc() {
 	/* empty function */
 }
@@ -3931,7 +3931,7 @@ asm void daBaseNpc_c::setRoomNo() {
 #pragma pop
 
 
-/* 8014F140-8014F148 0008+00 s=2 e=0 z=0  None .text      btkCtrl__11daBaseNpc_cFv                                     */
+/* 8014F140-8014F148 0008+00 s=2 e=0 z=2  None .text      btkCtrl__11daBaseNpc_cFv                                     */
 bool daBaseNpc_c::btkCtrl() {
 	return false;
 }
@@ -3959,7 +3959,7 @@ asm void daBaseNpc_c::checkEndAnm(J3DFrameCtrl* param_0) {
 #pragma pop
 
 
-/* 8014F228-8014F38C 0164+00 s=2 e=0 z=0  None .text      allAnmPlay__11daBaseNpc_cFv                                  */
+/* 8014F228-8014F38C 0164+00 s=2 e=0 z=2  None .text      allAnmPlay__11daBaseNpc_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3970,13 +3970,13 @@ asm void daBaseNpc_c::allAnmPlay() {
 #pragma pop
 
 
-/* 8014F38C-8014F390 0004+00 s=2 e=0 z=0  None .text      adjustShapeAngle__11daBaseNpc_cFv                            */
+/* 8014F38C-8014F390 0004+00 s=2 e=0 z=1  None .text      adjustShapeAngle__11daBaseNpc_cFv                            */
 void daBaseNpc_c::adjustShapeAngle() {
 	/* empty function */
 }
 
 
-/* 8014F390-8014F4A0 0110+00 s=2 e=0 z=0  None .text      setMtx__11daBaseNpc_cFi                                      */
+/* 8014F390-8014F4A0 0110+00 s=2 e=0 z=1  None .text      setMtx__11daBaseNpc_cFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3987,25 +3987,25 @@ asm void daBaseNpc_c::setMtx(int param_0) {
 #pragma pop
 
 
-/* 8014F4A0-8014F4A4 0004+00 s=2 e=0 z=0  None .text      setCollisions__11daBaseNpc_cFv                               */
+/* 8014F4A0-8014F4A4 0004+00 s=2 e=0 z=1  None .text      setCollisions__11daBaseNpc_cFv                               */
 void daBaseNpc_c::setCollisions() {
 	/* empty function */
 }
 
 
-/* 8014F4A4-8014F4A8 0004+00 s=2 e=0 z=0  None .text      setAttnPos__11daBaseNpc_cFv                                  */
+/* 8014F4A4-8014F4A8 0004+00 s=2 e=0 z=1  None .text      setAttnPos__11daBaseNpc_cFv                                  */
 void daBaseNpc_c::setAttnPos() {
 	/* empty function */
 }
 
 
-/* 8014F4A8-8014F4AC 0004+00 s=2 e=0 z=0  None .text      drawOtherMdls__11daBaseNpc_cFv                               */
+/* 8014F4A8-8014F4AC 0004+00 s=2 e=0 z=1  None .text      drawOtherMdls__11daBaseNpc_cFv                               */
 void daBaseNpc_c::drawOtherMdls() {
 	/* empty function */
 }
 
 
-/* 8014F4AC-8014F4B4 0008+00 s=2 e=0 z=0  None .text      dbgDraw__11daBaseNpc_cFv                                     */
+/* 8014F4AC-8014F4B4 0008+00 s=2 e=0 z=1  None .text      dbgDraw__11daBaseNpc_cFv                                     */
 bool daBaseNpc_c::dbgDraw() {
 	return true;
 }
@@ -4669,7 +4669,7 @@ asm void daNpcF_c::srchActor(void* param_0, void* param_1) {
 #pragma pop
 
 
-/* 8015276C-801527FC 0090+00 s=2 e=0 z=9  None .text      setMtx__8daNpcF_cFv                                          */
+/* 8015276C-801527FC 0090+00 s=2 e=0 z=40  None .text      setMtx__8daNpcF_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4680,7 +4680,7 @@ asm void daNpcF_c::setMtx() {
 #pragma pop
 
 
-/* 801527FC-801528C8 00CC+00 s=2 e=0 z=0  None .text      setMtx2__8daNpcF_cFv                                         */
+/* 801527FC-801528C8 00CC+00 s=2 e=0 z=38  None .text      setMtx2__8daNpcF_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

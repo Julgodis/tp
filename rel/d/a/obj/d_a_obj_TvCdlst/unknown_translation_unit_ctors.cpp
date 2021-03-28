@@ -19,6 +19,7 @@ extern void* const data_80B9F87C[2];
 // 
 
 
+extern "C" void __sinit_d_a_obj_TvCdlst_cpp(); // 1
 
 // 
 // Declarations:

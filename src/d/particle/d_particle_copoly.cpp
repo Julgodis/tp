@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct dKy_tevstr_c {
-};
-
 struct cXyz {
 };
 
-struct dBgS_Acch {
+struct dKy_tevstr_c {
 };
 
 struct csXyz {
+};
+
+struct dBgS_Acch {
 };
 
 struct dPaPo_c {

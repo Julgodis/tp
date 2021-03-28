@@ -64,23 +64,22 @@ struct dScnKy_env_light_c {
 // 
 
 static void daObjBombf_createHeap(fopAc_ac_c*); // 2
-void daObjBombf_Create(fopAc_ac_c*); // 2
-void daObjBombf_Delete(daObjBombf_c*); // 2
-void daObjBombf_Execute(daObjBombf_c*); // 2
-void daObjBombf_Draw(daObjBombf_c*); // 2
+static void daObjBombf_Create(fopAc_ac_c*); // 2
+static void daObjBombf_Delete(daObjBombf_c*); // 2
+static void daObjBombf_Execute(daObjBombf_c*); // 2
+static void daObjBombf_Draw(daObjBombf_c*); // 2
 
 extern "C" void createHeap__12daObjBombf_cFv(); // 1
 extern "C" static void daObjBombf_createHeap__FP10fopAc_ac_c(); // 1
 extern "C" void create__12daObjBombf_cFv(); // 1
-extern "C" void daObjBombf_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjBombf_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12daObjBombf_cFv(); // 1
-extern "C" void daObjBombf_Delete__FP12daObjBombf_c(); // 1
+extern "C" static void daObjBombf_Delete__FP12daObjBombf_c(); // 1
 extern "C" void setMatrix__12daObjBombf_cFv(); // 1
 extern "C" void execute__12daObjBombf_cFv(); // 1
-extern "C" void daObjBombf_Execute__FP12daObjBombf_c(); // 1
+extern "C" static void daObjBombf_Execute__FP12daObjBombf_c(); // 1
 extern "C" void draw__12daObjBombf_cFv(); // 1
-extern "C" void daObjBombf_Draw__FP12daObjBombf_c(); // 1
-extern "C" extern void* l_daObjBombf_Method[8];
+extern "C" static void daObjBombf_Draw__FP12daObjBombf_c(); // 1
 extern "C" extern void* g_profile_Obj_Bombf[12];
 
 // 
@@ -123,6 +122,8 @@ extern "C" void PSMTXTrans(); // 1
 extern "C" void PSMTXMultVec(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -187,11 +188,11 @@ asm void daObjBombf_c::create() {
 #pragma pop
 
 
-/* 80BBAB9C-80BBABBC 0020+00 s=0 e=0 z=0  None .text      daObjBombf_Create__FP10fopAc_ac_c                            */
+/* 80BBAB9C-80BBABBC 0020+00 s=1 e=0 z=0  None .text      daObjBombf_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjBombf_Create(fopAc_ac_c* param_0) {
+asm static void daObjBombf_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bombf/d_a_obj_bombf/daObjBombf_Create__FP10fopAc_ac_c.s"
 }
@@ -209,11 +210,11 @@ asm daObjBombf_c::~daObjBombf_c() {
 #pragma pop
 
 
-/* 80BBAC24-80BBAC4C 0028+00 s=0 e=0 z=0  None .text      daObjBombf_Delete__FP12daObjBombf_c                          */
+/* 80BBAC24-80BBAC4C 0028+00 s=1 e=0 z=0  None .text      daObjBombf_Delete__FP12daObjBombf_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjBombf_Delete(daObjBombf_c* param_0) {
+asm static void daObjBombf_Delete(daObjBombf_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bombf/d_a_obj_bombf/daObjBombf_Delete__FP12daObjBombf_c.s"
 }
@@ -248,11 +249,11 @@ asm void daObjBombf_c::execute() {
 #pragma pop
 
 
-/* 80BBADD8-80BBADF8 0020+00 s=0 e=0 z=0  None .text      daObjBombf_Execute__FP12daObjBombf_c                         */
+/* 80BBADD8-80BBADF8 0020+00 s=1 e=0 z=0  None .text      daObjBombf_Execute__FP12daObjBombf_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjBombf_Execute(daObjBombf_c* param_0) {
+asm static void daObjBombf_Execute(daObjBombf_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bombf/d_a_obj_bombf/daObjBombf_Execute__FP12daObjBombf_c.s"
 }
@@ -270,11 +271,11 @@ asm void daObjBombf_c::draw() {
 #pragma pop
 
 
-/* 80BBAE5C-80BBAE7C 0020+00 s=0 e=0 z=0  None .text      daObjBombf_Draw__FP12daObjBombf_c                            */
+/* 80BBAE5C-80BBAE7C 0020+00 s=1 e=0 z=0  None .text      daObjBombf_Draw__FP12daObjBombf_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjBombf_Draw(daObjBombf_c* param_0) {
+asm static void daObjBombf_Draw(daObjBombf_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bombf/d_a_obj_bombf/daObjBombf_Draw__FP12daObjBombf_c.s"
 }
@@ -282,30 +283,30 @@ asm void daObjBombf_Draw(daObjBombf_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80BBAEA8-80BBAEC8 0020+00 s=0 e=0 z=0  None .data      l_daObjBombf_Method                                          */
-SECTION_DATA void* l_daObjBombf_Method[8] = {
+/* 80BBAEA8-80BBAEC8 0020+00 s=1 e=0 z=0  None .data      l_daObjBombf_Method                                          */
+SECTION_DATA static void* l_daObjBombf_Method[8] = {
+	(void*)daObjBombf_Create__FP10fopAc_ac_c,
+	(void*)daObjBombf_Delete__FP12daObjBombf_c,
+	(void*)daObjBombf_Execute__FP12daObjBombf_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjBombf_Draw__FP12daObjBombf_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80BBAEC8-80BBAEF8 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Bombf                                          */
+/* 80BBAEC8-80BBAEF8 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Bombf                                          */
 SECTION_DATA void* g_profile_Obj_Bombf[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x02BF0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000588,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00FB0000,
-	(void*)NULL,
+	(void*)&l_daObjBombf_Method,
 	(void*)0x00040100,
 	(void*)0x030E0000,
 };

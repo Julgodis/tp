@@ -595,7 +595,7 @@ SECTION_DATA static void* l_dTimer_Method[5] = {
 	(void*)dTimer_Draw__FP8dTimer_c,
 };
 
-/* 803C33F8-803C3420 0028+00 s=0 e=0 z=0  None .data      g_profile_TIMER                                              */
+/* 803C33F8-803C3420 0028+00 s=0 e=0 z=1  None .data      g_profile_TIMER                                              */
 SECTION_DATA void* g_profile_TIMER[10] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000CFFFD,

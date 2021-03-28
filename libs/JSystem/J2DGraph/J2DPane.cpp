@@ -11,6 +11,45 @@
 // Types:
 // 
 
+struct JKRArchive {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DBasePosition {
+};
+
+struct J2DAnmTransform {
+};
+
+struct JSUStreamSeekFrom {
+};
+
+struct JSURandomInputStream {
+	/* 802DC370 */ void align(s32);
+	/* 802DC458 */ void peek(void*, s32);
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+struct J2DAnmVisibilityFull {
+};
+
+struct ResFONT {
+};
+
+struct J2DAnmVtxColor {
+};
+
+struct _GXCullMode {
+};
+
+struct ResTIMG {
+};
+
+struct J2DAnmColor {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -25,55 +64,16 @@ struct J2DGrafContext {
 	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
 };
 
-struct J2DAnmTransform {
-};
-
-struct J2DRotateAxis {
-};
-
-struct _GXCullMode {
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmBase {
-};
-
 struct J2DAnmTexPattern {
-};
-
-struct J2DAnmVisibilityFull {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct J2DAnmColor {
 };
 
 struct J2DAnmTextureSRTKey {
 };
 
-struct ResTIMG {
+struct J2DRotateAxis {
 };
 
-struct ResFONT {
-};
-
-struct JKRArchive {
-};
-
-struct JSUStreamSeekFrom {
-};
-
-struct JSURandomInputStream {
-	/* 802DC370 */ void align(s32);
-	/* 802DC458 */ void peek(void*, s32);
-	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
-};
-
-struct J2DBasePosition {
+struct J2DAnmBase {
 };
 
 struct J2DPane {

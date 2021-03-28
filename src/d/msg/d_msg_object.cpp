@@ -21,6 +21,22 @@ struct dMsgObject_HIO_c {
 	/* 80238BDC */ ~dMsgObject_HIO_c();
 };
 
+struct fopAc_ac_c {
+};
+
+struct JUTFont {
+};
+
+struct COutFont_c {
+	/* 80225C94 */ COutFont_c(u8);
+};
+
+struct J2DTextBox {
+};
+
+struct msg_class {
+};
+
 struct JKRArchive {
 	struct EMountMode {
 	};
@@ -33,22 +49,6 @@ struct JKRHeap {
 
 struct mDoDvdThd_mountXArchive_c {
 	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
-};
-
-struct J2DTextBox {
-};
-
-struct fopAc_ac_c {
-};
-
-struct JUTFont {
-};
-
-struct msg_class {
-};
-
-struct COutFont_c {
-	/* 80225C94 */ COutFont_c(u8);
 };
 
 struct dMsgObject_c {
@@ -806,7 +806,7 @@ SECTION_DATA static void* l_dMsgObject_Method[5] = {
 	(void*)dMsgObject_Draw__FP12dMsgObject_c,
 };
 
-/* 803C0BB0-803C0BD8 0028+00 s=0 e=0 z=0  None .data      g_profile_MSG_OBJECT                                         */
+/* 803C0BB0-803C0BD8 0028+00 s=0 e=0 z=1  None .data      g_profile_MSG_OBJECT                                         */
 SECTION_DATA void* g_profile_MSG_OBJECT[10] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000CFFFD,

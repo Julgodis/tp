@@ -38,10 +38,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -84,10 +84,10 @@ struct dScnKy_env_light_c {
 // 
 
 static void daPPolamp_c_createHeap(fopAc_ac_c*); // 2
-void daPPolamp_create(daPPolamp_c*); // 2
-void daPPolamp_Delete(daPPolamp_c*); // 2
-void daPPolamp_execute(daPPolamp_c*); // 2
-void daPPolamp_draw(daPPolamp_c*); // 2
+static void daPPolamp_create(daPPolamp_c*); // 2
+static void daPPolamp_Delete(daPPolamp_c*); // 2
+static void daPPolamp_execute(daPPolamp_c*); // 2
+static void daPPolamp_draw(daPPolamp_c*); // 2
 
 extern "C" static void daPPolamp_c_createHeap__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__11daPPolamp_cFv(); // 1
@@ -100,13 +100,12 @@ extern "C" void setPclModelMtx__11daPPolamp_cFv(); // 1
 extern "C" void createHeap__11daPPolamp_cFv(); // 1
 extern "C" void moveSwing__11daPPolamp_cFv(); // 1
 extern "C" void initParam__11daPPolamp_cFv(); // 1
-extern "C" void daPPolamp_create__FP11daPPolamp_c(); // 1
+extern "C" static void daPPolamp_create__FP11daPPolamp_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void daPPolamp_Delete__FP11daPPolamp_c(); // 1
-extern "C" void daPPolamp_execute__FP11daPPolamp_c(); // 1
-extern "C" void daPPolamp_draw__FP11daPPolamp_c(); // 1
+extern "C" static void daPPolamp_Delete__FP11daPPolamp_c(); // 1
+extern "C" static void daPPolamp_execute__FP11daPPolamp_c(); // 1
+extern "C" static void daPPolamp_draw__FP11daPPolamp_c(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* daPPolamp_METHODS[8];
 extern "C" extern void* g_profile_PPolamp[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -195,6 +194,8 @@ extern "C" void PSMTXTrans(); // 1
 extern "C" void PSMTXMultVec(); // 1
 extern "C" void _savegpr_27(); // 1
 extern "C" void _restgpr_27(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -215,33 +216,86 @@ asm static void daPPolamp_c_createHeap(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80D4D2D0-80D4D2D4 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+/* 80D4D27C-80D4D288 000C+00 s=2 e=0 z=0  None .rodata    @3757                                                        */
+SECTION_RODATA static u8 const lit_3757[12] = {
+	0x00, 0x00, 0x00, 0x00, 0xC2, 0x34, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
 
-/* 80D4D2D4-80D4D2F4 0020+00 s=0 e=0 z=0  None .data      daPPolamp_METHODS                                            */
-SECTION_DATA void* daPPolamp_METHODS[8] = {
+/* 80D4D288-80D4D290 0008+00 s=1 e=0 z=0  None .rodata    @3797                                                        */
+SECTION_RODATA static u8 const lit_3797[8] = {
+	0x00, 0x48, 0x00, 0x85, 0x00, 0xFF, 0x00, 0xFF,
+};
+
+/* 80D4D290-80D4D298 0008+00 s=1 e=0 z=0  None .rodata    @3802                                                        */
+SECTION_RODATA static u8 const lit_3802[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0x00, 0xFF,
+};
+
+/* 80D4D298-80D4D2A4 000C+00 s=1 e=0 z=0  None .rodata    @3859                                                        */
+SECTION_RODATA static u8 const lit_3859[12] = {
+	0x00, 0x00, 0x00, 0x00, 0xC2, 0x34, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80D4D2A4-80D4D2A8 0004+00 s=2 e=0 z=0  None .rodata    @3909                                                        */
+SECTION_RODATA static u32 const lit_3909 = 0x3F800000;
+
+/* 80D4D2A8-80D4D2AC 0004+00 s=1 e=0 z=0  None .rodata    @3922                                                        */
+SECTION_RODATA static u32 const lit_3922 = 0x43E10000;
+
+/* 80D4D2AC-80D4D2B0 0004+00 s=1 e=0 z=0  None .rodata    @3923                                                        */
+SECTION_RODATA static u32 const lit_3923 = 0x3DCCCCCD;
+
+/* 80D4D2B0-80D4D2B4 0004+00 s=1 e=0 z=0  None .rodata    @3924                                                        */
+SECTION_RODATA static u32 const lit_3924 = 0x3F8CCCCD;
+
+/* 80D4D2B4-80D4D2B8 0004+00 s=1 e=0 z=0  None .rodata    @3925                                                        */
+SECTION_RODATA static u32 const lit_3925 = 0x3DF5C28F;
+
+/* 80D4D2B8-80D4D2BC 0004+00 s=1 e=0 z=0  None .rodata    @3926                                                        */
+SECTION_RODATA static u32 const lit_3926 = 0x42A00000;
+
+/* 80D4D2BC-80D4D2C4 0008+00 s=1 e=0 z=0  None .rodata    @3928                                                        */
+SECTION_RODATA static u8 const lit_3928[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
+/* 80D4D2C4-80D4D2C8 0004+00 s=1 e=0 z=0  None .rodata    @3936                                                        */
+SECTION_RODATA static u32 const lit_3936 = 0x3E4CCCCD;
+
+/* 80D4D2C8-80D4D2D0 0008+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80D4D2C8 = "PPolamp";
+#pragma pop
+
+/* 80D4D2D0-80D4D2D4 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+
+/* 80D4D2D4-80D4D2F4 0020+00 s=1 e=0 z=0  None .data      daPPolamp_METHODS                                            */
+SECTION_DATA static void* daPPolamp_METHODS[8] = {
+	(void*)daPPolamp_create__FP11daPPolamp_c,
+	(void*)daPPolamp_Delete__FP11daPPolamp_c,
+	(void*)daPPolamp_execute__FP11daPPolamp_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daPPolamp_draw__FP11daPPolamp_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D4D2F4-80D4D324 0030+00 s=0 e=0 z=0  None .data      g_profile_PPolamp                                            */
+/* 80D4D2F4-80D4D324 0030+00 s=0 e=0 z=1  None .data      g_profile_PPolamp                                            */
 SECTION_DATA void* g_profile_PPolamp[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01020000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005AC,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02D70000,
-	(void*)NULL,
+	(void*)&daPPolamp_METHODS,
 	(void*)0x00040180,
 	(void*)0x030C0000,
 };
@@ -250,17 +304,17 @@ SECTION_DATA void* g_profile_PPolamp[12] = {
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 80D4D330-80D4D33C 000C+00 s=2 e=0 z=0  None .data      __vt__11daPPolamp_c                                          */
 SECTION_DATA static void* __vt__11daPPolamp_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__11daPPolamp_cFv,
 };
 
-/* 80D4C958-80D4C9FC 00A4+00 s=0 e=0 z=0  None .text      __dt__11daPPolamp_cFv                                        */
+/* 80D4C958-80D4C9FC 00A4+00 s=1 e=0 z=0  None .text      __dt__11daPPolamp_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -270,12 +324,6 @@ asm daPPolamp_c::~daPPolamp_c() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80D4D27C-80D4D288 000C+00 s=2 e=0 z=0  None .rodata    @3757                                                        */
-SECTION_RODATA static u8 const lit_3757[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xC2, 0x34, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
 
 /* 80D4C9FC-80D4CB24 0128+00 s=1 e=0 z=0  None .text      create__11daPPolamp_cFv                                      */
 #pragma push
@@ -300,16 +348,6 @@ asm void daPPolamp_c::execute() {
 
 
 /* ############################################################################################## */
-/* 80D4D288-80D4D290 0008+00 s=1 e=0 z=0  None .rodata    @3797                                                        */
-SECTION_RODATA static u8 const lit_3797[8] = {
-	0x00, 0x48, 0x00, 0x85, 0x00, 0xFF, 0x00, 0xFF,
-};
-
-/* 80D4D290-80D4D298 0008+00 s=1 e=0 z=0  None .rodata    @3802                                                        */
-SECTION_RODATA static u8 const lit_3802[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0x00, 0xFF,
-};
-
 /* 80D4D340-80D4D344 0001+03 s=1 e=0 z=0  None .bss       @1109                                                        */
 static u8 lit_1109[1 + 3 /* padding */];
 
@@ -397,12 +435,6 @@ asm void daPPolamp_c::setModelMtx() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80D4D298-80D4D2A4 000C+00 s=1 e=0 z=0  None .rodata    @3859                                                        */
-SECTION_RODATA static u8 const lit_3859[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xC2, 0x34, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
 /* 80D4CDA8-80D4CE9C 00F4+00 s=1 e=0 z=0  None .text      setPclModelMtx__11daPPolamp_cFv                              */
 #pragma push
 #pragma optimization_level 0
@@ -413,10 +445,6 @@ asm void daPPolamp_c::setPclModelMtx() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80D4D2A4-80D4D2A8 0004+00 s=2 e=0 z=0  None .rodata    @3909                                                        */
-SECTION_RODATA static u32 const lit_3909 = 0x3F800000;
 
 /* 80D4CE9C-80D4CFB0 0114+00 s=1 e=0 z=0  None .text      createHeap__11daPPolamp_cFv                                  */
 #pragma push
@@ -429,27 +457,6 @@ asm void daPPolamp_c::createHeap() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80D4D2A8-80D4D2AC 0004+00 s=1 e=0 z=0  None .rodata    @3922                                                        */
-SECTION_RODATA static u32 const lit_3922 = 0x43E10000;
-
-/* 80D4D2AC-80D4D2B0 0004+00 s=1 e=0 z=0  None .rodata    @3923                                                        */
-SECTION_RODATA static u32 const lit_3923 = 0x3DCCCCCD;
-
-/* 80D4D2B0-80D4D2B4 0004+00 s=1 e=0 z=0  None .rodata    @3924                                                        */
-SECTION_RODATA static u32 const lit_3924 = 0x3F8CCCCD;
-
-/* 80D4D2B4-80D4D2B8 0004+00 s=1 e=0 z=0  None .rodata    @3925                                                        */
-SECTION_RODATA static u32 const lit_3925 = 0x3DF5C28F;
-
-/* 80D4D2B8-80D4D2BC 0004+00 s=1 e=0 z=0  None .rodata    @3926                                                        */
-SECTION_RODATA static u32 const lit_3926 = 0x42A00000;
-
-/* 80D4D2BC-80D4D2C4 0008+00 s=1 e=0 z=0  None .rodata    @3928                                                        */
-SECTION_RODATA static u8 const lit_3928[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
 /* 80D4CFB0-80D4D10C 015C+00 s=1 e=0 z=0  None .text      moveSwing__11daPPolamp_cFv                                   */
 #pragma push
 #pragma optimization_level 0
@@ -460,10 +467,6 @@ asm void daPPolamp_c::moveSwing() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80D4D2C4-80D4D2C8 0004+00 s=1 e=0 z=0  None .rodata    @3936                                                        */
-SECTION_RODATA static u32 const lit_3936 = 0x3E4CCCCD;
 
 /* 80D4D10C-80D4D140 0034+00 s=1 e=0 z=0  None .text      initParam__11daPPolamp_cFv                                   */
 #pragma push
@@ -476,18 +479,18 @@ asm void daPPolamp_c::initParam() {
 #pragma pop
 
 
-/* 80D4D140-80D4D1CC 008C+00 s=0 e=0 z=0  None .text      daPPolamp_create__FP11daPPolamp_c                            */
+/* 80D4D140-80D4D1CC 008C+00 s=1 e=0 z=0  None .text      daPPolamp_create__FP11daPPolamp_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPPolamp_create(daPPolamp_c* param_0) {
+asm static void daPPolamp_create(daPPolamp_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/daPPolamp_create__FP11daPPolamp_c.s"
 }
 #pragma pop
 
 
-/* 80D4D1CC-80D4D214 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80D4D1CC-80D4D214 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -498,33 +501,33 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80D4D214-80D4D234 0020+00 s=0 e=0 z=0  None .text      daPPolamp_Delete__FP11daPPolamp_c                            */
+/* 80D4D214-80D4D234 0020+00 s=1 e=0 z=0  None .text      daPPolamp_Delete__FP11daPPolamp_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPPolamp_Delete(daPPolamp_c* param_0) {
+asm static void daPPolamp_Delete(daPPolamp_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/daPPolamp_Delete__FP11daPPolamp_c.s"
 }
 #pragma pop
 
 
-/* 80D4D234-80D4D254 0020+00 s=0 e=0 z=0  None .text      daPPolamp_execute__FP11daPPolamp_c                           */
+/* 80D4D234-80D4D254 0020+00 s=1 e=0 z=0  None .text      daPPolamp_execute__FP11daPPolamp_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPPolamp_execute(daPPolamp_c* param_0) {
+asm static void daPPolamp_execute(daPPolamp_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/daPPolamp_execute__FP11daPPolamp_c.s"
 }
 #pragma pop
 
 
-/* 80D4D254-80D4D274 0020+00 s=0 e=0 z=0  None .text      daPPolamp_draw__FP11daPPolamp_c                              */
+/* 80D4D254-80D4D274 0020+00 s=1 e=0 z=0  None .text      daPPolamp_draw__FP11daPPolamp_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPPolamp_draw(daPPolamp_c* param_0) {
+asm static void daPPolamp_draw(daPPolamp_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/daPPolamp_draw__FP11daPPolamp_c.s"
 }
@@ -532,13 +535,6 @@ asm void daPPolamp_draw(daPPolamp_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80D4D2C8-80D4D2D0 0008+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80D4D2C8 = "PPolamp";
-#pragma pop
-
 /* 80D4D394-80D4D398 0004+00 s=0 e=0 z=0  None .bss       sInstance__40JASGlobalInstance<19JASDefaultBankTable>        */
 u8 data_80D4D394[4];
 

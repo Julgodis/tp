@@ -53,10 +53,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -106,6 +106,10 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 80078690 */ bool Create();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -119,10 +123,10 @@ struct dScnKy_env_light_c {
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -133,10 +137,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daMagLiftRot_Draw(daMagLiftRot_c*); // 2
-void daMagLiftRot_Execute(daMagLiftRot_c*); // 2
-void daMagLiftRot_Delete(daMagLiftRot_c*); // 2
-void daMagLiftRot_Create(fopAc_ac_c*); // 2
+static void daMagLiftRot_Draw(daMagLiftRot_c*); // 2
+static void daMagLiftRot_Execute(daMagLiftRot_c*); // 2
+static void daMagLiftRot_Delete(daMagLiftRot_c*); // 2
+static void daMagLiftRot_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__18daMagLiftRot_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -154,15 +158,13 @@ extern "C" void init_modeMoveWait__14daMagLiftRot_cFv(); // 1
 extern "C" void modeMoveWait__14daMagLiftRot_cFv(); // 1
 extern "C" void Draw__14daMagLiftRot_cFv(); // 1
 extern "C" void Delete__14daMagLiftRot_cFv(); // 1
-extern "C" void daMagLiftRot_Draw__FP14daMagLiftRot_c(); // 1
-extern "C" void daMagLiftRot_Execute__FP14daMagLiftRot_c(); // 1
-extern "C" void daMagLiftRot_Delete__FP14daMagLiftRot_c(); // 1
-extern "C" void daMagLiftRot_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daMagLiftRot_Draw__FP14daMagLiftRot_c(); // 1
+extern "C" static void daMagLiftRot_Execute__FP14daMagLiftRot_c(); // 1
+extern "C" static void daMagLiftRot_Delete__FP14daMagLiftRot_c(); // 1
+extern "C" static void daMagLiftRot_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__18daMagLiftRot_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_magLiftRot_cpp(); // 1
-extern "C" extern u8 const struct_80C8FB74[28];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daMagLiftRot_Method[8];
 extern "C" extern void* g_profile_Obj_MagLiftRot[12];
 
 // 
@@ -202,6 +204,10 @@ extern "C" void isSwitch__10dSv_info_cCFii(); // 1
 extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -222,6 +228,8 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -273,6 +281,69 @@ SECTION_RODATA static u32 const lit_3637 = 0x41F00000;
 /* 80C8FB14-80C8FB18 0004+00 s=1 e=0 z=0  None .rodata    @3638                                                        */
 SECTION_RODATA static u32 const lit_3638 = 0x3E99999A;
 
+/* 80C8FB18-80C8FB24 000C+00 s=1 e=0 z=0  None .rodata    l_bmdIdx                                                     */
+SECTION_RODATA static u8 const l_bmdIdx[12] = {
+	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x06,
+};
+
+/* 80C8FB24-80C8FB30 000C+00 s=1 e=0 z=0  None .rodata    l_dzbIdx                                                     */
+SECTION_RODATA static u8 const l_dzbIdx[12] = {
+	0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x0F,
+};
+
+/* 80C8FB30-80C8FB3C 000C+00 s=3 e=0 z=0  None .rodata    l_btkIdx                                                     */
+SECTION_RODATA static u8 const l_btkIdx[12] = {
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x0C,
+};
+
+/* 80C8FB3C-80C8FB48 000C+00 s=3 e=0 z=0  None .rodata    l_brkIdx                                                     */
+SECTION_RODATA static u8 const l_brkIdx[12] = {
+	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x09,
+};
+
+/* 80C8FB48-80C8FB50 0004+04 s=1 e=0 z=0  None .rodata    @3816                                                        */
+SECTION_RODATA static u32 const lit_3816[1 + 1 /* padding */] = {
+	0x3F000000,
+	/* padding */
+	0x00000000,
+};
+
+/* 80C8FB50-80C8FB58 0008+00 s=1 e=0 z=0  None .rodata    @3818                                                        */
+SECTION_RODATA static u8 const lit_3818[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C8FB58-80C8FB60 0004+04 s=2 e=0 z=0  None .rodata    @3882                                                        */
+SECTION_RODATA static u32 const lit_3882[1 + 1 /* padding */] = {
+	0x43360B61,
+	/* padding */
+	0x00000000,
+};
+
+/* 80C8FB60-80C8FB68 0008+00 s=1 e=0 z=0  None .rodata    @3885                                                        */
+SECTION_RODATA static u8 const lit_3885[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
+/* 80C8FB68-80C8FB6C 0004+00 s=2 e=0 z=0  None .rodata    @3949                                                        */
+SECTION_RODATA static u32 const lit_3949 = 0xBF800000;
+
+/* 80C8FB6C-80C8FB70 0004+00 s=2 e=0 z=0  None .rodata    @3950                                                        */
+SECTION_RODATA static u32 const lit_3950 = 0x44BD6000;
+
+/* 80C8FB70-80C8FB74 0004+00 s=2 e=0 z=0  None .rodata    @3951                                                        */
+SECTION_RODATA static u32 const lit_3951 = 0xC4BD6000;
+
+/* 80C8FB74-80C8FB90 001C+00 s=1 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const struct_80C8FB74[28] = {
+	/* 80C8FB74 0009 stringBase_80C8FB74 @stringBase0 */
+	0x4D, 0x61, 0x67, 0x4C, 0x69, 0x66, 0x74, 0x53, 0x00,
+	/* 80C8FB7D 0009 data_80C8FB7D None */
+	0x4D, 0x61, 0x67, 0x4C, 0x69, 0x66, 0x74, 0x4D, 0x00,
+	/* 80C8FB86 000A data_80C8FB86 None */
+	0x4D, 0x61, 0x67, 0x4C, 0x69, 0x66, 0x74, 0x4C, 0x00, 0x00,
+};
+
 /* 80C8FB90-80C8FB9C 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -287,30 +358,30 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 
 /* 80C8FBB0-80C8FBBC 000C+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
 SECTION_DATA static void* l_arcName[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)&struct_80C8FB74)+0x0) /* @stringBase0 */,
+	(void*)(((char*)&struct_80C8FB74)+0x9) /* None */,
+	(void*)(((char*)&struct_80C8FB74)+0x12) /* None */,
 };
 
 /* 80C8FBBC-80C8FBC8 000C+00 s=1 e=0 z=0  None .data      @3856                                                        */
 SECTION_DATA static void* lit_3856[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeMove__14daMagLiftRot_cFv,
 };
 
 /* 80C8FBC8-80C8FBD4 000C+00 s=1 e=0 z=0  None .data      @3857                                                        */
 SECTION_DATA static void* lit_3857[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeWait__14daMagLiftRot_cFv,
 };
 
 /* 80C8FBD4-80C8FBE0 000C+00 s=1 e=0 z=0  None .data      @3858                                                        */
 SECTION_DATA static void* lit_3858[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeMoveWait__14daMagLiftRot_cFv,
 };
 
 /* 80C8FBE0-80C8FC04 0024+00 s=1 e=0 z=0  None .data      mode_proc$3855                                               */
@@ -330,30 +401,30 @@ SECTION_DATA static u8 data_80C8FC10[12] = {
 	0x00, 0x08, 0x01, 0x30, 0x00, 0x08, 0x01, 0x32, 0x00, 0x08, 0x01, 0x34,
 };
 
-/* 80C8FC1C-80C8FC3C 0020+00 s=0 e=0 z=0  None .data      l_daMagLiftRot_Method                                        */
-SECTION_DATA void* l_daMagLiftRot_Method[8] = {
+/* 80C8FC1C-80C8FC3C 0020+00 s=1 e=0 z=0  None .data      l_daMagLiftRot_Method                                        */
+SECTION_DATA static void* l_daMagLiftRot_Method[8] = {
+	(void*)daMagLiftRot_Create__FP10fopAc_ac_c,
+	(void*)daMagLiftRot_Delete__FP14daMagLiftRot_c,
+	(void*)daMagLiftRot_Execute__FP14daMagLiftRot_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daMagLiftRot_Draw__FP14daMagLiftRot_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C8FC3C-80C8FC6C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_MagLiftRot                                     */
+/* 80C8FC3C-80C8FC6C 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_MagLiftRot                                     */
 SECTION_DATA void* g_profile_Obj_MagLiftRot[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00380000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000634,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01ED0000,
-	(void*)NULL,
+	(void*)&l_daMagLiftRot_Method,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -362,35 +433,35 @@ SECTION_DATA void* g_profile_Obj_MagLiftRot[12] = {
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 80C8FC78-80C8FCA0 0028+00 s=1 e=0 z=0  None .data      __vt__14daMagLiftRot_c                                       */
 SECTION_DATA static void* __vt__14daMagLiftRot_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__14daMagLiftRot_cFv,
+	(void*)Create__16dBgS_MoveBgActorFv,
+	(void*)Execute__14daMagLiftRot_cFPPA3_A4_f,
+	(void*)Draw__14daMagLiftRot_cFv,
+	(void*)Delete__14daMagLiftRot_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
 /* 80C8FCA0-80C8FCAC 000C+00 s=2 e=0 z=0  None .data      __vt__18daMagLiftRot_HIO_c                                   */
 SECTION_DATA static void* __vt__18daMagLiftRot_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__18daMagLiftRot_HIO_cFv,
 };
 
 /* 80C8FCAC-80C8FCB8 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
 /* 80C8E94C-80C8E9E0 0094+00 s=1 e=0 z=0  None .text      __ct__18daMagLiftRot_HIO_cFv                                 */
@@ -404,7 +475,7 @@ asm daMagLiftRot_HIO_c::daMagLiftRot_HIO_c() {
 #pragma pop
 
 
-/* 80C8E9E0-80C8EA28 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80C8E9E0-80C8EA28 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -426,28 +497,7 @@ asm void daMagLiftRot_c::setBaseMtx() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80C8FB18-80C8FB24 000C+00 s=1 e=0 z=0  None .rodata    l_bmdIdx                                                     */
-SECTION_RODATA static u8 const l_bmdIdx[12] = {
-	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x06,
-};
-
-/* 80C8FB24-80C8FB30 000C+00 s=1 e=0 z=0  None .rodata    l_dzbIdx                                                     */
-SECTION_RODATA static u8 const l_dzbIdx[12] = {
-	0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x0F,
-};
-
-/* 80C8FB30-80C8FB3C 000C+00 s=3 e=0 z=0  None .rodata    l_btkIdx                                                     */
-SECTION_RODATA static u8 const l_btkIdx[12] = {
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x0C,
-};
-
-/* 80C8FB3C-80C8FB48 000C+00 s=3 e=0 z=0  None .rodata    l_brkIdx                                                     */
-SECTION_RODATA static u8 const l_brkIdx[12] = {
-	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x09,
-};
-
-/* 80C8EB1C-80C8EC64 0148+00 s=0 e=0 z=0  None .text      CreateHeap__14daMagLiftRot_cFv                               */
+/* 80C8EB1C-80C8EC64 0148+00 s=1 e=0 z=0  None .text      CreateHeap__14daMagLiftRot_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -457,19 +507,6 @@ asm void daMagLiftRot_c::CreateHeap() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80C8FB48-80C8FB50 0004+04 s=1 e=0 z=0  None .rodata    @3816                                                        */
-SECTION_RODATA static u32 const lit_3816[1 + 1 /* padding */] = {
-	0x3F000000,
-	/* padding */
-	0x00000000,
-};
-
-/* 80C8FB50-80C8FB58 0008+00 s=1 e=0 z=0  None .rodata    @3818                                                        */
-SECTION_RODATA static u8 const lit_3818[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
 
 /* 80C8EC64-80C8EF4C 02E8+00 s=1 e=0 z=0  None .text      create__14daMagLiftRot_cFv                                   */
 #pragma push
@@ -482,7 +519,7 @@ asm void daMagLiftRot_c::create() {
 #pragma pop
 
 
-/* 80C8EF4C-80C8EF94 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80C8EF4C-80C8EF94 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -493,7 +530,7 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80C8EF94-80C8F02C 0098+00 s=0 e=0 z=0  None .text      Execute__14daMagLiftRot_cFPPA3_A4_f                          */
+/* 80C8EF94-80C8F02C 0098+00 s=1 e=0 z=0  None .text      Execute__14daMagLiftRot_cFPPA3_A4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -505,18 +542,6 @@ asm void daMagLiftRot_c::Execute(f32 (** param_0)[3][4]) {
 
 
 /* ############################################################################################## */
-/* 80C8FB58-80C8FB60 0004+04 s=2 e=0 z=0  None .rodata    @3882                                                        */
-SECTION_RODATA static u32 const lit_3882[1 + 1 /* padding */] = {
-	0x43360B61,
-	/* padding */
-	0x00000000,
-};
-
-/* 80C8FB60-80C8FB68 0008+00 s=1 e=0 z=0  None .rodata    @3885                                                        */
-SECTION_RODATA static u8 const lit_3885[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
 /* 80C8FCC0-80C8FCCC 000C+00 s=1 e=0 z=0  None .bss       @3621                                                        */
 static u8 lit_3621[12];
 
@@ -537,16 +562,6 @@ asm void daMagLiftRot_c::moveLift() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80C8FB68-80C8FB6C 0004+00 s=2 e=0 z=0  None .rodata    @3949                                                        */
-SECTION_RODATA static u32 const lit_3949 = 0xBF800000;
-
-/* 80C8FB6C-80C8FB70 0004+00 s=2 e=0 z=0  None .rodata    @3950                                                        */
-SECTION_RODATA static u32 const lit_3950 = 0x44BD6000;
-
-/* 80C8FB70-80C8FB74 0004+00 s=2 e=0 z=0  None .rodata    @3951                                                        */
-SECTION_RODATA static u32 const lit_3951 = 0xC4BD6000;
-
 /* 80C8F264-80C8F4A0 023C+00 s=1 e=0 z=0  None .text      init_modeMove__14daMagLiftRot_cFv                            */
 #pragma push
 #pragma optimization_level 0
@@ -558,7 +573,7 @@ asm void daMagLiftRot_c::init_modeMove() {
 #pragma pop
 
 
-/* 80C8F4A0-80C8F538 0098+00 s=0 e=0 z=0  None .text      modeMove__14daMagLiftRot_cFv                                 */
+/* 80C8F4A0-80C8F538 0098+00 s=1 e=0 z=0  None .text      modeMove__14daMagLiftRot_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -580,7 +595,7 @@ asm void daMagLiftRot_c::init_modeWait() {
 #pragma pop
 
 
-/* 80C8F7CC-80C8F804 0038+00 s=0 e=0 z=0  None .text      modeWait__14daMagLiftRot_cFv                                 */
+/* 80C8F7CC-80C8F804 0038+00 s=1 e=0 z=0  None .text      modeWait__14daMagLiftRot_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -602,7 +617,7 @@ asm void daMagLiftRot_c::init_modeMoveWait() {
 #pragma pop
 
 
-/* 80C8F810-80C8F86C 005C+00 s=0 e=0 z=0  None .text      modeMoveWait__14daMagLiftRot_cFv                             */
+/* 80C8F810-80C8F86C 005C+00 s=1 e=0 z=0  None .text      modeMoveWait__14daMagLiftRot_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -613,7 +628,7 @@ asm void daMagLiftRot_c::modeMoveWait() {
 #pragma pop
 
 
-/* 80C8F86C-80C8F970 0104+00 s=0 e=0 z=0  None .text      Draw__14daMagLiftRot_cFv                                     */
+/* 80C8F86C-80C8F970 0104+00 s=1 e=0 z=0  None .text      Draw__14daMagLiftRot_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -624,7 +639,7 @@ asm void daMagLiftRot_c::Draw() {
 #pragma pop
 
 
-/* 80C8F970-80C8F9B0 0040+00 s=0 e=0 z=0  None .text      Delete__14daMagLiftRot_cFv                                   */
+/* 80C8F970-80C8F9B0 0040+00 s=1 e=0 z=0  None .text      Delete__14daMagLiftRot_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -635,51 +650,51 @@ asm void daMagLiftRot_c::Delete() {
 #pragma pop
 
 
-/* 80C8F9B0-80C8F9DC 002C+00 s=0 e=0 z=0  None .text      daMagLiftRot_Draw__FP14daMagLiftRot_c                        */
+/* 80C8F9B0-80C8F9DC 002C+00 s=1 e=0 z=0  None .text      daMagLiftRot_Draw__FP14daMagLiftRot_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daMagLiftRot_Draw(daMagLiftRot_c* param_0) {
+asm static void daMagLiftRot_Draw(daMagLiftRot_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/daMagLiftRot_Draw__FP14daMagLiftRot_c.s"
 }
 #pragma pop
 
 
-/* 80C8F9DC-80C8F9FC 0020+00 s=0 e=0 z=0  None .text      daMagLiftRot_Execute__FP14daMagLiftRot_c                     */
+/* 80C8F9DC-80C8F9FC 0020+00 s=1 e=0 z=0  None .text      daMagLiftRot_Execute__FP14daMagLiftRot_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daMagLiftRot_Execute(daMagLiftRot_c* param_0) {
+asm static void daMagLiftRot_Execute(daMagLiftRot_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/daMagLiftRot_Execute__FP14daMagLiftRot_c.s"
 }
 #pragma pop
 
 
-/* 80C8F9FC-80C8FA1C 0020+00 s=0 e=0 z=0  None .text      daMagLiftRot_Delete__FP14daMagLiftRot_c                      */
+/* 80C8F9FC-80C8FA1C 0020+00 s=1 e=0 z=0  None .text      daMagLiftRot_Delete__FP14daMagLiftRot_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daMagLiftRot_Delete(daMagLiftRot_c* param_0) {
+asm static void daMagLiftRot_Delete(daMagLiftRot_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/daMagLiftRot_Delete__FP14daMagLiftRot_c.s"
 }
 #pragma pop
 
 
-/* 80C8FA1C-80C8FA3C 0020+00 s=0 e=0 z=0  None .text      daMagLiftRot_Create__FP10fopAc_ac_c                          */
+/* 80C8FA1C-80C8FA3C 0020+00 s=1 e=0 z=0  None .text      daMagLiftRot_Create__FP10fopAc_ac_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daMagLiftRot_Create(fopAc_ac_c* param_0) {
+asm static void daMagLiftRot_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/daMagLiftRot_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C8FA3C-80C8FA98 005C+00 s=1 e=0 z=0  None .text      __dt__18daMagLiftRot_HIO_cFv                                 */
+/* 80C8FA3C-80C8FA98 005C+00 s=2 e=0 z=0  None .text      __dt__18daMagLiftRot_HIO_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -690,7 +705,7 @@ asm daMagLiftRot_HIO_c::~daMagLiftRot_HIO_c() {
 #pragma pop
 
 
-/* 80C8FA98-80C8FAD4 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_magLiftRot_cpp                               */
+/* 80C8FA98-80C8FAD4 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_magLiftRot_cpp                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -700,15 +715,4 @@ extern "C" asm void __sinit_d_a_obj_magLiftRot_cpp() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80C8FB74-80C8FB90 001C+00 s=0 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA u8 const struct_80C8FB74[28] = {
-	/* 80C8FB74 0009 stringBase_80C8FB74 @stringBase0 */
-	0x4D, 0x61, 0x67, 0x4C, 0x69, 0x66, 0x74, 0x53, 0x00,
-	/* 80C8FB7D 0009 data_80C8FB7D None */
-	0x4D, 0x61, 0x67, 0x4C, 0x69, 0x66, 0x74, 0x4D, 0x00,
-	/* 80C8FB86 000A data_80C8FB86 None */
-	0x4D, 0x61, 0x67, 0x4C, 0x69, 0x66, 0x74, 0x4C, 0x00, 0x00,
-};
 

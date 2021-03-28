@@ -19,6 +19,7 @@ extern void* const data_80870080[2];
 // 
 
 
+extern "C" void __sinit_d_a_mg_fshop_cpp(); // 1
 
 // 
 // Declarations:

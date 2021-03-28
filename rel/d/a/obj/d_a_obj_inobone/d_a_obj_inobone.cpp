@@ -83,10 +83,10 @@ struct dPa_modelEcallBack {
 	/* 8004AC00 */ void setModel(JPABaseEmitter*, J3DModelData*, dKy_tevstr_c const&, u8, void*, u8, u8);
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -120,10 +120,10 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -147,10 +147,10 @@ static void bornTgCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf
 static void bornCoCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*); // 2
 static void s_boar_sub(void*, void*); // 2
 static void CheckCreateHeap(fopAc_ac_c*); // 2
-void daObjIBone_Draw(daObjIBone_c*); // 2
-void daObjIBone_Execute(daObjIBone_c*); // 2
-void daObjIBone_Delete(daObjIBone_c*); // 2
-void daObjIBone_Create(fopAc_ac_c*); // 2
+static void daObjIBone_Draw(daObjIBone_c*); // 2
+static void daObjIBone_Execute(daObjIBone_c*); // 2
+static void daObjIBone_Delete(daObjIBone_c*); // 2
+static void daObjIBone_Create(fopAc_ac_c*); // 2
 
 extern "C" static void bornTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf(); // 1
 extern "C" static void bornCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf(); // 1
@@ -167,11 +167,10 @@ extern "C" void execute__12daObjIBone_cFv(); // 1
 extern "C" void setBreakEffect__12daObjIBone_cFv(); // 1
 extern "C" void draw__12daObjIBone_cFv(); // 1
 extern "C" void _delete__12daObjIBone_cFv(); // 1
-extern "C" void daObjIBone_Draw__FP12daObjIBone_c(); // 1
-extern "C" void daObjIBone_Execute__FP12daObjIBone_c(); // 1
-extern "C" void daObjIBone_Delete__FP12daObjIBone_c(); // 1
-extern "C" void daObjIBone_Create__FP10fopAc_ac_c(); // 1
-extern "C" extern void* l_daObjIBone_Method[8];
+extern "C" static void daObjIBone_Draw__FP12daObjIBone_c(); // 1
+extern "C" static void daObjIBone_Execute__FP12daObjIBone_c(); // 1
+extern "C" static void daObjIBone_Delete__FP12daObjIBone_c(); // 1
+extern "C" static void daObjIBone_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern void* g_profile_Obj_InoBone[12];
 
 // 
@@ -238,6 +237,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
@@ -360,117 +361,11 @@ asm void daObjIBone_c::Create() {
 
 
 /* ############################################################################################## */
-/* 80C281F8-80C281FC 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
-
-/* 80C281FC-80C28200 0004+00 s=1 e=0 z=0  None .data      l_bmdName                                                    */
-SECTION_DATA static void* l_bmdName = (void*)NULL;
-
-/* 80C279A8-80C27A20 0078+00 s=1 e=0 z=0  None .text      CreateHeap__12daObjIBone_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjIBone_c::CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/CreateHeap__12daObjIBone_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 80C28200-80C28220 0020+00 s=0 e=0 z=0  None .data      l_daObjIBone_Method                                          */
-SECTION_DATA void* l_daObjIBone_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80C28220-80C28250 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_InoBone                                        */
-SECTION_DATA void* g_profile_Obj_InoBone[12] = {
-	(void*)0xFFFFFFFD,
-	(void*)0x0007FFFD,
-	(void*)0x015F0000,
-	(void*)NULL,
-	(void*)0x0000084C,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)0x02D90000,
-	(void*)NULL,
-	(void*)0x00040100,
-	(void*)0x000E0000,
-};
-
-/* 80C28250-80C2825C 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
-SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80C2825C-80C28268 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80C27A20-80C27BBC 019C+00 s=1 e=0 z=0  None .text      create__12daObjIBone_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjIBone_c::create() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/func_80C27A20.s"
-}
-#pragma pop
-
-
-/* 80C27BBC-80C27C04 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cM3dGCyl::~cM3dGCyl() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/__dt__8cM3dGCylFv.s"
-}
-#pragma pop
-
-
-/* 80C27C04-80C27C4C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cM3dGAab::~cM3dGAab() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/__dt__8cM3dGAabFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
 /* 80C281B4-80C281B8 0004+00 s=1 e=0 z=0  None .rodata    @3926                                                        */
 SECTION_RODATA static u8 const lit_3926[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C27C4C-80C27E48 01FC+00 s=1 e=0 z=0  None .text      execute__12daObjIBone_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjIBone_c::execute() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/execute__12daObjIBone_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
 /* 80C281B8-80C281BC 0002+02 s=1 e=0 z=0  None .rodata    particle_id$3930                                             */
 SECTION_RODATA static u8 const data_80C281B8[2 + 2 /* padding */] = {
 	0x82, 0xE3,
@@ -484,7 +379,7 @@ SECTION_RODATA static u32 const lit_3963 = 0x3F800000;
 /* 80C281C0-80C281C4 0004+00 s=1 e=0 z=0  None .rodata    @3964                                                        */
 SECTION_RODATA static u32 const lit_3964 = 0xBF800000;
 
-/* 80C281C4-80C281F8 0034+00 s=1 e=0 z=0  None .rodata    None                                                         */
+/* 80C281C4-80C281F8 0034+00 s=3 e=0 z=0  None .rodata    None                                                         */
 SECTION_RODATA static u8 const struct_80C281C4[52] = {
 	/* 80C281C4 000A stringBase_80C281C4 @stringBase0 */
 	0x4F, 0x62, 0x6A, 0x5F, 0x49, 0x62, 0x6F, 0x6E, 0x65, 0x00,
@@ -493,6 +388,110 @@ SECTION_RODATA static u8 const struct_80C281C4[52] = {
 	0x65, 0x61, 0x6B, 0x42, 0x6F, 0x61, 0x72, 0x42, 0x6F, 0x6E, 0x65, 0x2E, 0x62, 0x6D, 0x64, 0x00,
 	0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00, 0x00, 0x00, 0x00,
 };
+
+/* 80C281F8-80C281FC 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)(((char*)&struct_80C281C4)+0x0) /* @stringBase0 */;
+
+/* 80C281FC-80C28200 0004+00 s=1 e=0 z=0  None .data      l_bmdName                                                    */
+SECTION_DATA static void* l_bmdName = (void*)(((char*)&struct_80C281C4)+0xA) /* None */;
+
+/* 80C279A8-80C27A20 0078+00 s=1 e=0 z=0  None .text      CreateHeap__12daObjIBone_cFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjIBone_c::CreateHeap() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/CreateHeap__12daObjIBone_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
+/* 80C28200-80C28220 0020+00 s=1 e=0 z=0  None .data      l_daObjIBone_Method                                          */
+SECTION_DATA static void* l_daObjIBone_Method[8] = {
+	(void*)daObjIBone_Create__FP10fopAc_ac_c,
+	(void*)daObjIBone_Delete__FP12daObjIBone_c,
+	(void*)daObjIBone_Execute__FP12daObjIBone_c,
+	(void*)NULL,
+	(void*)daObjIBone_Draw__FP12daObjIBone_c,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80C28220-80C28250 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_InoBone                                        */
+SECTION_DATA void* g_profile_Obj_InoBone[12] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x015F0000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x0000084C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopAc_Method,
+	(void*)0x02D90000,
+	(void*)&l_daObjIBone_Method,
+	(void*)0x00040100,
+	(void*)0x000E0000,
+};
+
+/* 80C28250-80C2825C 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
+SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
+};
+
+/* 80C2825C-80C28268 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA static void* __vt__8cM3dGAab[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
+};
+
+/* 80C27A20-80C27BBC 019C+00 s=1 e=0 z=0  None .text      create__12daObjIBone_cFv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjIBone_c::create() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/func_80C27A20.s"
+}
+#pragma pop
+
+
+/* 80C27BBC-80C27C04 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm cM3dGCyl::~cM3dGCyl() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/__dt__8cM3dGCylFv.s"
+}
+#pragma pop
+
+
+/* 80C27C04-80C27C4C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm cM3dGAab::~cM3dGAab() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/__dt__8cM3dGAabFv.s"
+}
+#pragma pop
+
+
+/* 80C27C4C-80C27E48 01FC+00 s=1 e=0 z=0  None .text      execute__12daObjIBone_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjIBone_c::execute() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/execute__12daObjIBone_cFv.s"
+}
+#pragma pop
+
 
 /* 80C27E48-80C27FEC 01A4+00 s=1 e=0 z=0  None .text      setBreakEffect__12daObjIBone_cFv                             */
 #pragma push
@@ -527,44 +526,44 @@ asm void daObjIBone_c::_delete() {
 #pragma pop
 
 
-/* 80C28098-80C280B8 0020+00 s=0 e=0 z=0  None .text      daObjIBone_Draw__FP12daObjIBone_c                            */
+/* 80C28098-80C280B8 0020+00 s=1 e=0 z=0  None .text      daObjIBone_Draw__FP12daObjIBone_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjIBone_Draw(daObjIBone_c* param_0) {
+asm static void daObjIBone_Draw(daObjIBone_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/daObjIBone_Draw__FP12daObjIBone_c.s"
 }
 #pragma pop
 
 
-/* 80C280B8-80C280D8 0020+00 s=0 e=0 z=0  None .text      daObjIBone_Execute__FP12daObjIBone_c                         */
+/* 80C280B8-80C280D8 0020+00 s=1 e=0 z=0  None .text      daObjIBone_Execute__FP12daObjIBone_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjIBone_Execute(daObjIBone_c* param_0) {
+asm static void daObjIBone_Execute(daObjIBone_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/daObjIBone_Execute__FP12daObjIBone_c.s"
 }
 #pragma pop
 
 
-/* 80C280D8-80C280F8 0020+00 s=0 e=0 z=0  None .text      daObjIBone_Delete__FP12daObjIBone_c                          */
+/* 80C280D8-80C280F8 0020+00 s=1 e=0 z=0  None .text      daObjIBone_Delete__FP12daObjIBone_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjIBone_Delete(daObjIBone_c* param_0) {
+asm static void daObjIBone_Delete(daObjIBone_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/daObjIBone_Delete__FP12daObjIBone_c.s"
 }
 #pragma pop
 
 
-/* 80C280F8-80C28118 0020+00 s=0 e=0 z=0  None .text      daObjIBone_Create__FP10fopAc_ac_c                            */
+/* 80C280F8-80C28118 0020+00 s=1 e=0 z=0  None .text      daObjIBone_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjIBone_Create(fopAc_ac_c* param_0) {
+asm static void daObjIBone_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/daObjIBone_Create__FP10fopAc_ac_c.s"
 }

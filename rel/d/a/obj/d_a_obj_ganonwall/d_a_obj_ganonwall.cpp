@@ -43,10 +43,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -91,10 +91,10 @@ struct JUTNameTab {
 // 
 
 static void CheckCreateHeap(fopAc_ac_c*); // 2
-void daObjGWall_Draw(daObjGWall_c*); // 2
-void daObjGWall_Execute(daObjGWall_c*); // 2
-void daObjGWall_Delete(daObjGWall_c*); // 2
-void daObjGWall_Create(daObjGWall_c*); // 2
+static void daObjGWall_Draw(daObjGWall_c*); // 2
+static void daObjGWall_Execute(daObjGWall_c*); // 2
+static void daObjGWall_Delete(daObjGWall_c*); // 2
+static void daObjGWall_Create(daObjGWall_c*); // 2
 
 extern "C" static void CheckCreateHeap__FP10fopAc_ac_c(); // 1
 extern "C" void initBaseMtx__12daObjGWall_cFv(); // 1
@@ -107,13 +107,11 @@ extern "C" void execute__12daObjGWall_cFv(); // 1
 extern "C" void checkDraw__12daObjGWall_cFv(); // 1
 extern "C" void draw__12daObjGWall_cFv(); // 1
 extern "C" void _delete__12daObjGWall_cFv(); // 1
-extern "C" void daObjGWall_Draw__FP12daObjGWall_c(); // 1
-extern "C" void daObjGWall_Execute__FP12daObjGWall_c(); // 1
-extern "C" void daObjGWall_Delete__FP12daObjGWall_c(); // 1
-extern "C" void daObjGWall_Create__FP12daObjGWall_c(); // 1
+extern "C" static void daObjGWall_Draw__FP12daObjGWall_c(); // 1
+extern "C" static void daObjGWall_Execute__FP12daObjGWall_c(); // 1
+extern "C" static void daObjGWall_Delete__FP12daObjGWall_c(); // 1
+extern "C" static void daObjGWall_Create__FP12daObjGWall_c(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern u8 const data_80BF56DC[8];
-extern "C" extern void* l_daObjGWall_Method[8];
 extern "C" extern void* g_profile_Obj_GanonWall[12];
 
 // 
@@ -158,6 +156,8 @@ extern "C" void PSMTXCopy(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
@@ -224,11 +224,49 @@ SECTION_RODATA static u8 const l_color[96] = {
 /* 80BF56AC-80BF56B0 0004+00 s=1 e=0 z=0  None .rodata    @3681                                                        */
 SECTION_RODATA static u32 const lit_3681 = 0x49742400;
 
+/* 80BF56B0-80BF56B4 0004+00 s=1 e=0 z=0  None .rodata    @3711                                                        */
+SECTION_RODATA static u32 const lit_3711 = 0x3F800000;
+
+/* 80BF56B4-80BF56B8 0004+00 s=1 e=0 z=0  None .rodata    @3836                                                        */
+SECTION_RODATA static u32 const lit_3836 = 0x447A0000;
+
+/* 80BF56B8-80BF56BC 0004+00 s=1 e=0 z=0  None .rodata    @3837                                                        */
+SECTION_RODATA static u32 const lit_3837 = 0x48742400;
+
+/* 80BF56BC-80BF56C4 0004+04 s=1 e=0 z=0  None .rodata    @3838                                                        */
+SECTION_RODATA static u32 const lit_3838[1 + 1 /* padding */] = {
+	0x42700000,
+	/* padding */
+	0x00000000,
+};
+
+/* 80BF56C4-80BF56CC 0008+00 s=1 e=0 z=0  None .rodata    @3840                                                        */
+SECTION_RODATA static u8 const lit_3840[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
+/* 80BF56CC-80BF56D4 0008+00 s=1 e=0 z=0  None .rodata    @3842                                                        */
+SECTION_RODATA static u8 const lit_3842[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BF56D4-80BF56DC 0008+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80BF56D4 = "Y_gwall";
+#pragma pop
+
+/* 80BF56DC-80BF56E4 0008+00 s=1 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const data_80BF56DC[8] = {
+	0x6D, 0x61, 0x74, 0x30, 0x30, 0x00, 0x00, 0x00,
+};
+
 /* 80BF56E4-80BF56E8 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
 
 /* 80BF56E8-80BF56EC 0004+00 s=1 e=0 z=0  None .data      l_matName                                                    */
-SECTION_DATA static void* l_matName = (void*)NULL;
+SECTION_DATA static void* l_matName = (void*)&data_80BF56DC;
 
 /* 80BF4DA8-80BF4E8C 00E4+00 s=1 e=0 z=0  None .text      Create__12daObjGWall_cFv                                     */
 #pragma push
@@ -242,33 +280,30 @@ asm void daObjGWall_c::Create() {
 
 
 /* ############################################################################################## */
-/* 80BF56B0-80BF56B4 0004+00 s=1 e=0 z=0  None .rodata    @3711                                                        */
-SECTION_RODATA static u32 const lit_3711 = 0x3F800000;
-
-/* 80BF56EC-80BF570C 0020+00 s=0 e=0 z=0  None .data      l_daObjGWall_Method                                          */
-SECTION_DATA void* l_daObjGWall_Method[8] = {
+/* 80BF56EC-80BF570C 0020+00 s=1 e=0 z=0  None .data      l_daObjGWall_Method                                          */
+SECTION_DATA static void* l_daObjGWall_Method[8] = {
+	(void*)daObjGWall_Create__FP12daObjGWall_c,
+	(void*)daObjGWall_Delete__FP12daObjGWall_c,
+	(void*)daObjGWall_Execute__FP12daObjGWall_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjGWall_Draw__FP12daObjGWall_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80BF570C-80BF573C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_GanonWall                                      */
+/* 80BF570C-80BF573C 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_GanonWall                                      */
 SECTION_DATA void* g_profile_Obj_GanonWall[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01960000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000580,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x023A0000,
-	(void*)NULL,
+	(void*)&l_daObjGWall_Method,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -277,7 +312,7 @@ SECTION_DATA void* g_profile_Obj_GanonWall[12] = {
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 80BF4E8C-80BF4FA8 011C+00 s=1 e=0 z=0  None .text      CreateHeap__12daObjGWall_cFv                                 */
@@ -291,7 +326,7 @@ asm void daObjGWall_c::CreateHeap() {
 #pragma pop
 
 
-/* 80BF4FA8-80BF4FF0 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80BF4FA8-80BF4FF0 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -335,30 +370,6 @@ asm void daObjGWall_c::checkDraw() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80BF56B4-80BF56B8 0004+00 s=1 e=0 z=0  None .rodata    @3836                                                        */
-SECTION_RODATA static u32 const lit_3836 = 0x447A0000;
-
-/* 80BF56B8-80BF56BC 0004+00 s=1 e=0 z=0  None .rodata    @3837                                                        */
-SECTION_RODATA static u32 const lit_3837 = 0x48742400;
-
-/* 80BF56BC-80BF56C4 0004+04 s=1 e=0 z=0  None .rodata    @3838                                                        */
-SECTION_RODATA static u32 const lit_3838[1 + 1 /* padding */] = {
-	0x42700000,
-	/* padding */
-	0x00000000,
-};
-
-/* 80BF56C4-80BF56CC 0008+00 s=1 e=0 z=0  None .rodata    @3840                                                        */
-SECTION_RODATA static u8 const lit_3840[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
-/* 80BF56CC-80BF56D4 0008+00 s=1 e=0 z=0  None .rodata    @3842                                                        */
-SECTION_RODATA static u8 const lit_3842[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
 /* 80BF5168-80BF5530 03C8+00 s=1 e=0 z=0  None .text      draw__12daObjGWall_cFv                                       */
 #pragma push
 #pragma optimization_level 0
@@ -381,60 +392,47 @@ asm void daObjGWall_c::_delete() {
 #pragma pop
 
 
-/* 80BF5564-80BF5584 0020+00 s=0 e=0 z=0  None .text      daObjGWall_Draw__FP12daObjGWall_c                            */
+/* 80BF5564-80BF5584 0020+00 s=1 e=0 z=0  None .text      daObjGWall_Draw__FP12daObjGWall_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjGWall_Draw(daObjGWall_c* param_0) {
+asm static void daObjGWall_Draw(daObjGWall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/daObjGWall_Draw__FP12daObjGWall_c.s"
 }
 #pragma pop
 
 
-/* 80BF5584-80BF55A4 0020+00 s=0 e=0 z=0  None .text      daObjGWall_Execute__FP12daObjGWall_c                         */
+/* 80BF5584-80BF55A4 0020+00 s=1 e=0 z=0  None .text      daObjGWall_Execute__FP12daObjGWall_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjGWall_Execute(daObjGWall_c* param_0) {
+asm static void daObjGWall_Execute(daObjGWall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/daObjGWall_Execute__FP12daObjGWall_c.s"
 }
 #pragma pop
 
 
-/* 80BF55A4-80BF55C4 0020+00 s=0 e=0 z=0  None .text      daObjGWall_Delete__FP12daObjGWall_c                          */
+/* 80BF55A4-80BF55C4 0020+00 s=1 e=0 z=0  None .text      daObjGWall_Delete__FP12daObjGWall_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjGWall_Delete(daObjGWall_c* param_0) {
+asm static void daObjGWall_Delete(daObjGWall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/daObjGWall_Delete__FP12daObjGWall_c.s"
 }
 #pragma pop
 
 
-/* 80BF55C4-80BF55E4 0020+00 s=0 e=0 z=0  None .text      daObjGWall_Create__FP12daObjGWall_c                          */
+/* 80BF55C4-80BF55E4 0020+00 s=1 e=0 z=0  None .text      daObjGWall_Create__FP12daObjGWall_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjGWall_Create(daObjGWall_c* param_0) {
+asm static void daObjGWall_Create(daObjGWall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/daObjGWall_Create__FP12daObjGWall_c.s"
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80BF56D4-80BF56DC 0008+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80BF56D4 = "Y_gwall";
-#pragma pop
-
-/* 80BF56DC-80BF56E4 0008+00 s=0 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA u8 const data_80BF56DC[8] = {
-	0x6D, 0x61, 0x74, 0x30, 0x30, 0x00, 0x00, 0x00,
-};
 

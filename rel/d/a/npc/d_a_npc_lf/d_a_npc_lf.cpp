@@ -71,25 +71,25 @@ struct dScnKy_env_light_c {
 // 
 
 static void nodeCallBack(J3DJoint*, int); // 2
-void daNPC_LF_Draw(npc_lf_class*); // 2
+static void daNPC_LF_Draw(npc_lf_class*); // 2
 static void npc_lf_move(fopAc_ac_c*, lf_s*); // 2
 static void action(fopAc_ac_c*, lf_s*); // 2
 static void daNPC_LF_Execute(npc_lf_class*); // 2
-bool daNPC_LF_IsDelete(npc_lf_class*); // 2
-void daNPC_LF_Delete(npc_lf_class*); // 2
+static bool daNPC_LF_IsDelete(npc_lf_class*); // 2
+static void daNPC_LF_Delete(npc_lf_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daNPC_LF_Create(fopAc_ac_c*); // 2
+static void daNPC_LF_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__14daNPC_LF_HIO_cFv(); // 1
 extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" void daNPC_LF_Draw__FP12npc_lf_class(); // 1
+extern "C" static void daNPC_LF_Draw__FP12npc_lf_class(); // 1
 extern "C" static void npc_lf_move__FP10fopAc_ac_cP4lf_s(); // 1
 extern "C" static void action__FP10fopAc_ac_cP4lf_s(); // 1
 extern "C" static void daNPC_LF_Execute__FP12npc_lf_class(); // 1
-extern "C" bool daNPC_LF_IsDelete__FP12npc_lf_class(); // 1
-extern "C" void daNPC_LF_Delete__FP12npc_lf_class(); // 1
+extern "C" static bool daNPC_LF_IsDelete__FP12npc_lf_class(); // 1
+extern "C" static void daNPC_LF_Delete__FP12npc_lf_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daNPC_LF_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daNPC_LF_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__4lf_sFv(); // 1
 extern "C" void __ct__4lf_sFv(); // 1
 extern "C" void __dt__14daNPC_LF_HIO_cFv(); // 1
@@ -151,6 +151,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -186,30 +188,30 @@ SECTION_DATA static u8 data_80A6AA1C[12] = {
 	0x3F, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x40, 0x20, 0x00, 0x00,
 };
 
-/* 80A6AA28-80A6AA48 0020+00 s=1 e=0 z=0  None .data      l_daNPC_LF_Method                                            */
+/* 80A6AA28-80A6AA48 0020+00 s=2 e=0 z=0  None .data      l_daNPC_LF_Method                                            */
 SECTION_DATA static void* l_daNPC_LF_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daNPC_LF_Create__FP10fopAc_ac_c,
+	(void*)daNPC_LF_Delete__FP12npc_lf_class,
+	(void*)daNPC_LF_Execute__FP12npc_lf_class,
+	(void*)daNPC_LF_IsDelete__FP12npc_lf_class,
+	(void*)daNPC_LF_Draw__FP12npc_lf_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80A6AA48-80A6AA78 0030+00 s=0 e=0 z=0  None .data      g_profile_NPC_LF                                             */
+/* 80A6AA48-80A6AA78 0030+00 s=0 e=0 z=1  None .data      g_profile_NPC_LF                                             */
 SECTION_DATA void* g_profile_NPC_LF[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x010F0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00001FC4,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02BE0000,
-	(void*)NULL,
+	(void*)&l_daNPC_LF_Method,
 	(void*)0x00040000,
 	(void*)0x02000000,
 };
@@ -218,7 +220,7 @@ SECTION_DATA void* g_profile_NPC_LF[12] = {
 SECTION_DATA static void* __vt__14daNPC_LF_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14daNPC_LF_HIO_cFv,
 };
 
 /* 80A69B6C-80A69BB4 0048+00 s=1 e=0 z=0  None .text      __ct__14daNPC_LF_HIO_cFv                                     */
@@ -243,11 +245,11 @@ asm static void nodeCallBack(J3DJoint* param_0, int param_1) {
 #pragma pop
 
 
-/* 80A69CD8-80A69D90 00B8+00 s=0 e=0 z=0  None .text      daNPC_LF_Draw__FP12npc_lf_class                              */
+/* 80A69CD8-80A69D90 00B8+00 s=1 e=0 z=0  None .text      daNPC_LF_Draw__FP12npc_lf_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNPC_LF_Draw(npc_lf_class* param_0) {
+asm static void daNPC_LF_Draw(npc_lf_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_lf/d_a_npc_lf/daNPC_LF_Draw__FP12npc_lf_class.s"
 }
@@ -374,7 +376,7 @@ asm static void action(fopAc_ac_c* param_0, lf_s* param_1) {
 /* 80A6AA00-80A6AA04 0004+00 s=1 e=0 z=0  None .rodata    @4060                                                        */
 SECTION_RODATA static u32 const lit_4060 = 0x44BB8000;
 
-/* 80A6A420-80A6A514 00F4+00 s=1 e=0 z=0  None .text      daNPC_LF_Execute__FP12npc_lf_class                           */
+/* 80A6A420-80A6A514 00F4+00 s=2 e=0 z=0  None .text      daNPC_LF_Execute__FP12npc_lf_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -385,8 +387,8 @@ asm static void daNPC_LF_Execute(npc_lf_class* param_0) {
 #pragma pop
 
 
-/* 80A6A514-80A6A51C 0008+00 s=0 e=0 z=0  None .text      daNPC_LF_IsDelete__FP12npc_lf_class                          */
-bool daNPC_LF_IsDelete(npc_lf_class* param_0) {
+/* 80A6A514-80A6A51C 0008+00 s=1 e=0 z=0  None .text      daNPC_LF_IsDelete__FP12npc_lf_class                          */
+static bool daNPC_LF_IsDelete(npc_lf_class* param_0) {
 	return true;
 }
 
@@ -411,11 +413,11 @@ SECTION_RODATA static u32 const lit_4176 = 0x47800000;
 SECTION_DEAD char const* const stringBase_80A6AA14 = "NPC_LF";
 #pragma pop
 
-/* 80A6A51C-80A6A570 0054+00 s=0 e=0 z=0  None .text      daNPC_LF_Delete__FP12npc_lf_class                            */
+/* 80A6A51C-80A6A570 0054+00 s=1 e=0 z=0  None .text      daNPC_LF_Delete__FP12npc_lf_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNPC_LF_Delete(npc_lf_class* param_0) {
+asm static void daNPC_LF_Delete(npc_lf_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_lf/d_a_npc_lf/daNPC_LF_Delete__FP12npc_lf_class.s"
 }
@@ -433,11 +435,11 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80A6A650-80A6A8A4 0254+00 s=0 e=0 z=0  None .text      daNPC_LF_Create__FP10fopAc_ac_c                              */
+/* 80A6A650-80A6A8A4 0254+00 s=1 e=0 z=0  None .text      daNPC_LF_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNPC_LF_Create(fopAc_ac_c* param_0) {
+asm static void daNPC_LF_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_lf/d_a_npc_lf/daNPC_LF_Create__FP10fopAc_ac_c.s"
 }
@@ -461,7 +463,7 @@ lf_s::lf_s() {
 }
 
 
-/* 80A6A8E4-80A6A92C 0048+00 s=1 e=0 z=0  None .text      __dt__14daNPC_LF_HIO_cFv                                     */
+/* 80A6A8E4-80A6A92C 0048+00 s=2 e=0 z=0  None .text      __dt__14daNPC_LF_HIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -472,7 +474,7 @@ asm daNPC_LF_HIO_c::~daNPC_LF_HIO_c() {
 #pragma pop
 
 
-/* 80A6A92C-80A6A968 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_npc_lf_cpp                                       */
+/* 80A6A92C-80A6A968 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_npc_lf_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -21,19 +21,13 @@ struct cBgW_NodeTree {
 	/* 80079238 */ ~cBgW_NodeTree();
 };
 
-struct cBgS_PolyPassChk {
+struct cBgS_GrpPassChk {
 };
 
 struct cBgS_LinChk {
 };
 
-struct cBgS_GndChk {
-};
-
-struct cBgS_ShdwDraw {
-};
-
-struct cBgS_GrpPassChk {
+struct cBgS_PolyPassChk {
 };
 
 struct cBgS_PolyInfo {
@@ -44,6 +38,12 @@ struct cXyz {
 };
 
 struct cBgD_t {
+};
+
+struct cBgS_ShdwDraw {
+};
+
+struct cBgS_GndChk {
 };
 
 struct cBgW {
@@ -112,11 +112,11 @@ struct cBgW_GrpElm {
 	/* 8007A1E4 */ cBgW_GrpElm();
 };
 
-struct cM3dGPla {
-	/* 8026F57C */ void getCrossY(cXyz const&, f32*) const;
+struct Vec {
 };
 
-struct Vec {
+struct cM3dGPla {
+	/* 8026F57C */ void getCrossY(cXyz const&, f32*) const;
 };
 
 struct cM3dGTri {
@@ -124,10 +124,19 @@ struct cM3dGTri {
 	/* 8026F85C */ void setBg(Vec const*, Vec const*, Vec const*, cM3dGPla const*);
 };
 
-struct dBgS_CaptPoly {
+struct fopAc_ac_c {
 };
 
 struct dBgS_RoofChk {
+};
+
+struct dBgS_SplGrpChk {
+};
+
+struct dBgS_CaptPoly {
+};
+
+struct csXyz {
 };
 
 struct dBgS_Acch {
@@ -137,16 +146,7 @@ struct dBgS_Acch {
 	/* 800772E8 */ void CalcMovePosWork();
 };
 
-struct fopAc_ac_c {
-};
-
 struct dBgS_SphChk {
-};
-
-struct dBgS_SplGrpChk {
-};
-
-struct csXyz {
 };
 
 struct dBgW {

@@ -76,11 +76,11 @@ struct Z2SpotMic {
 	/* 802BD03C */ void calcMicVolume(f32, int, f32);
 };
 
-struct JAISoundID {
-};
-
 struct JAIAudible {
 	/* 8029EFAC */ ~JAIAudible();
+};
+
+struct JAISoundID {
 };
 
 struct Z2Audience {

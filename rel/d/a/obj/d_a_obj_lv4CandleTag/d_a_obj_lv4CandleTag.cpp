@@ -58,10 +58,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -72,10 +72,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void dalv4CandleTag_Draw(dalv4CandleTag_c*); // 2
-void dalv4CandleTag_Execute(dalv4CandleTag_c*); // 2
-void dalv4CandleTag_Delete(dalv4CandleTag_c*); // 2
-void dalv4CandleTag_Create(fopAc_ac_c*); // 2
+static void dalv4CandleTag_Draw(dalv4CandleTag_c*); // 2
+static void dalv4CandleTag_Execute(dalv4CandleTag_c*); // 2
+static void dalv4CandleTag_Delete(dalv4CandleTag_c*); // 2
+static void dalv4CandleTag_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__20dalv4CandleTag_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -94,21 +94,20 @@ extern "C" void modeEnd__16dalv4CandleTag_cFv(); // 1
 extern "C" void eventStart__16dalv4CandleTag_cFv(); // 1
 extern "C" bool Draw__16dalv4CandleTag_cFv(); // 1
 extern "C" bool Delete__16dalv4CandleTag_cFv(); // 1
-extern "C" void dalv4CandleTag_Draw__FP16dalv4CandleTag_c(); // 1
-extern "C" void dalv4CandleTag_Execute__FP16dalv4CandleTag_c(); // 1
-extern "C" void dalv4CandleTag_Delete__FP16dalv4CandleTag_c(); // 1
-extern "C" void dalv4CandleTag_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void dalv4CandleTag_Draw__FP16dalv4CandleTag_c(); // 1
+extern "C" static void dalv4CandleTag_Execute__FP16dalv4CandleTag_c(); // 1
+extern "C" static void dalv4CandleTag_Delete__FP16dalv4CandleTag_c(); // 1
+extern "C" static void dalv4CandleTag_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__20dalv4CandleTag_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_lv4CandleTag_cpp(); // 1
-extern "C" void func_80C5DA58(); // 1
-extern "C" void func_80C5DA60(); // 1
+extern "C" static void func_80C5DA58(); // 1
+extern "C" static void func_80C5DA60(); // 1
 extern "C" void __dt__17dEvLib_callback_cFv(); // 1
 extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
 extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
 extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
 extern "C" void __dt__16dalv4CandleTag_cFv(); // 1
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_dalv4CandleTag_Method[8];
 extern "C" extern void* g_profile_Tag_Lv4Candle[12];
 
 // 
@@ -129,6 +128,8 @@ extern "C" void PSMTXTrans(); // 1
 extern "C" void __ptmf_scall(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
@@ -155,28 +156,28 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 SECTION_DATA static void* lit_3686[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeWatch__16dalv4CandleTag_cFv,
 };
 
 /* 80C5DB90-80C5DB9C 000C+00 s=1 e=0 z=0  None .data      @3687                                                        */
 SECTION_DATA static void* lit_3687[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeNG__16dalv4CandleTag_cFv,
 };
 
 /* 80C5DB9C-80C5DBA8 000C+00 s=1 e=0 z=0  None .data      @3688                                                        */
 SECTION_DATA static void* lit_3688[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeNGWait__16dalv4CandleTag_cFv,
 };
 
 /* 80C5DBA8-80C5DBB4 000C+00 s=1 e=0 z=0  None .data      @3689                                                        */
 SECTION_DATA static void* lit_3689[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)modeEnd__16dalv4CandleTag_cFv,
 };
 
 /* 80C5DBB4-80C5DBE4 0030+00 s=1 e=0 z=0  None .data      mode_proc$3685                                               */
@@ -186,30 +187,30 @@ SECTION_DATA static u8 data_80C5DBB4[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C5DBE4-80C5DC04 0020+00 s=0 e=0 z=0  None .data      l_dalv4CandleTag_Method                                      */
-SECTION_DATA void* l_dalv4CandleTag_Method[8] = {
+/* 80C5DBE4-80C5DC04 0020+00 s=1 e=0 z=0  None .data      l_dalv4CandleTag_Method                                      */
+SECTION_DATA static void* l_dalv4CandleTag_Method[8] = {
+	(void*)dalv4CandleTag_Create__FP10fopAc_ac_c,
+	(void*)dalv4CandleTag_Delete__FP16dalv4CandleTag_c,
+	(void*)dalv4CandleTag_Execute__FP16dalv4CandleTag_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)dalv4CandleTag_Draw__FP16dalv4CandleTag_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C5DC04-80C5DC34 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_Lv4Candle                                      */
+/* 80C5DC04-80C5DC34 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_Lv4Candle                                      */
 SECTION_DATA void* g_profile_Tag_Lv4Candle[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01730000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x0000058C,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x021C0000,
-	(void*)NULL,
+	(void*)&l_dalv4CandleTag_Method,
 	(void*)0x00044000,
 	(void*)0x000E0000,
 };
@@ -220,36 +221,36 @@ SECTION_DATA static void* __vt__16dalv4CandleTag_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80C5DA60,
+	(void*)func_80C5DA58,
+	(void*)eventRun__17dEvLib_callback_cFv,
+	(void*)eventEnd__17dEvLib_callback_cFv,
+	(void*)__dt__16dalv4CandleTag_cFv,
+	(void*)eventStart__16dalv4CandleTag_cFv,
 };
 
 /* 80C5DC5C-80C5DC74 0018+00 s=3 e=0 z=0  None .data      __vt__17dEvLib_callback_c                                    */
 SECTION_DATA static void* __vt__17dEvLib_callback_c[6] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__17dEvLib_callback_cFv,
+	(void*)eventStart__17dEvLib_callback_cFv,
+	(void*)eventRun__17dEvLib_callback_cFv,
+	(void*)eventEnd__17dEvLib_callback_cFv,
 };
 
 /* 80C5DC74-80C5DC80 000C+00 s=2 e=0 z=0  None .data      __vt__20dalv4CandleTag_HIO_c                                 */
 SECTION_DATA static void* __vt__20dalv4CandleTag_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__20dalv4CandleTag_HIO_cFv,
 };
 
 /* 80C5DC80-80C5DC8C 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
 /* 80C5D44C-80C5D470 0024+00 s=1 e=0 z=0  None .text      __ct__20dalv4CandleTag_HIO_cFv                               */
@@ -263,7 +264,7 @@ asm dalv4CandleTag_HIO_c::dalv4CandleTag_HIO_c() {
 #pragma pop
 
 
-/* 80C5D470-80C5D4B8 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80C5D470-80C5D4B8 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -339,7 +340,7 @@ asm void dalv4CandleTag_c::init_modeWatch() {
 #pragma pop
 
 
-/* 80C5D6E0-80C5D78C 00AC+00 s=0 e=0 z=0  None .text      modeWatch__16dalv4CandleTag_cFv                              */
+/* 80C5D6E0-80C5D78C 00AC+00 s=1 e=0 z=0  None .text      modeWatch__16dalv4CandleTag_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -368,7 +369,7 @@ asm void dalv4CandleTag_c::init_modeNG() {
 #pragma pop
 
 
-/* 80C5D814-80C5D8A0 008C+00 s=0 e=0 z=0  None .text      modeNG__16dalv4CandleTag_cFv                                 */
+/* 80C5D814-80C5D8A0 008C+00 s=1 e=0 z=0  None .text      modeNG__16dalv4CandleTag_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -390,7 +391,7 @@ asm void dalv4CandleTag_c::init_modeNGWait() {
 #pragma pop
 
 
-/* 80C5D8AC-80C5D8FC 0050+00 s=0 e=0 z=0  None .text      modeNGWait__16dalv4CandleTag_cFv                             */
+/* 80C5D8AC-80C5D8FC 0050+00 s=1 e=0 z=0  None .text      modeNGWait__16dalv4CandleTag_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -412,13 +413,13 @@ asm void dalv4CandleTag_c::init_modeEnd() {
 #pragma pop
 
 
-/* 80C5D908-80C5D90C 0004+00 s=0 e=0 z=0  None .text      modeEnd__16dalv4CandleTag_cFv                                */
+/* 80C5D908-80C5D90C 0004+00 s=1 e=0 z=0  None .text      modeEnd__16dalv4CandleTag_cFv                                */
 void dalv4CandleTag_c::modeEnd() {
 	/* empty function */
 }
 
 
-/* 80C5D90C-80C5D930 0024+00 s=1 e=0 z=0  None .text      eventStart__16dalv4CandleTag_cFv                             */
+/* 80C5D90C-80C5D930 0024+00 s=2 e=0 z=0  None .text      eventStart__16dalv4CandleTag_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -441,51 +442,51 @@ bool dalv4CandleTag_c::Delete() {
 }
 
 
-/* 80C5D940-80C5D960 0020+00 s=0 e=0 z=0  None .text      dalv4CandleTag_Draw__FP16dalv4CandleTag_c                    */
+/* 80C5D940-80C5D960 0020+00 s=1 e=0 z=0  None .text      dalv4CandleTag_Draw__FP16dalv4CandleTag_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dalv4CandleTag_Draw(dalv4CandleTag_c* param_0) {
+asm static void dalv4CandleTag_Draw(dalv4CandleTag_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4CandleTag/d_a_obj_lv4CandleTag/dalv4CandleTag_Draw__FP16dalv4CandleTag_c.s"
 }
 #pragma pop
 
 
-/* 80C5D960-80C5D980 0020+00 s=0 e=0 z=0  None .text      dalv4CandleTag_Execute__FP16dalv4CandleTag_c                 */
+/* 80C5D960-80C5D980 0020+00 s=1 e=0 z=0  None .text      dalv4CandleTag_Execute__FP16dalv4CandleTag_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dalv4CandleTag_Execute(dalv4CandleTag_c* param_0) {
+asm static void dalv4CandleTag_Execute(dalv4CandleTag_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4CandleTag/d_a_obj_lv4CandleTag/dalv4CandleTag_Execute__FP16dalv4CandleTag_c.s"
 }
 #pragma pop
 
 
-/* 80C5D980-80C5D9A0 0020+00 s=0 e=0 z=0  None .text      dalv4CandleTag_Delete__FP16dalv4CandleTag_c                  */
+/* 80C5D980-80C5D9A0 0020+00 s=1 e=0 z=0  None .text      dalv4CandleTag_Delete__FP16dalv4CandleTag_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dalv4CandleTag_Delete(dalv4CandleTag_c* param_0) {
+asm static void dalv4CandleTag_Delete(dalv4CandleTag_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4CandleTag/d_a_obj_lv4CandleTag/dalv4CandleTag_Delete__FP16dalv4CandleTag_c.s"
 }
 #pragma pop
 
 
-/* 80C5D9A0-80C5D9C0 0020+00 s=0 e=0 z=0  None .text      dalv4CandleTag_Create__FP10fopAc_ac_c                        */
+/* 80C5D9A0-80C5D9C0 0020+00 s=1 e=0 z=0  None .text      dalv4CandleTag_Create__FP10fopAc_ac_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dalv4CandleTag_Create(fopAc_ac_c* param_0) {
+asm static void dalv4CandleTag_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4CandleTag/d_a_obj_lv4CandleTag/dalv4CandleTag_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C5D9C0-80C5DA1C 005C+00 s=1 e=0 z=0  None .text      __dt__20dalv4CandleTag_HIO_cFv                               */
+/* 80C5D9C0-80C5DA1C 005C+00 s=2 e=0 z=0  None .text      __dt__20dalv4CandleTag_HIO_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -496,7 +497,7 @@ asm dalv4CandleTag_HIO_c::~dalv4CandleTag_HIO_c() {
 #pragma pop
 
 
-/* 80C5DA1C-80C5DA58 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_lv4CandleTag_cpp                             */
+/* 80C5DA1C-80C5DA58 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_lv4CandleTag_cpp                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -507,29 +508,29 @@ extern "C" asm void __sinit_d_a_obj_lv4CandleTag_cpp() {
 #pragma pop
 
 
-/* 80C5DA58-80C5DA60 0008+00 s=0 e=0 z=0  None .text      @1392@eventStart__16dalv4CandleTag_cFv                       */
+/* 80C5DA58-80C5DA60 0008+00 s=1 e=0 z=0  None .text      @1392@eventStart__16dalv4CandleTag_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C5DA58() {
+extern "C" asm static void func_80C5DA58() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4CandleTag/d_a_obj_lv4CandleTag/func_80C5DA58.s"
 }
 #pragma pop
 
 
-/* 80C5DA60-80C5DA68 0008+00 s=0 e=0 z=0  None .text      @1392@__dt__16dalv4CandleTag_cFv                             */
+/* 80C5DA60-80C5DA68 0008+00 s=1 e=0 z=0  None .text      @1392@__dt__16dalv4CandleTag_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C5DA60() {
+extern "C" asm static void func_80C5DA60() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4CandleTag/d_a_obj_lv4CandleTag/func_80C5DA60.s"
 }
 #pragma pop
 
 
-/* 80C5DA68-80C5DAB0 0048+00 s=0 e=0 z=0  None .text      __dt__17dEvLib_callback_cFv                                  */
+/* 80C5DA68-80C5DAB0 0048+00 s=1 e=0 z=0  None .text      __dt__17dEvLib_callback_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -540,25 +541,25 @@ asm dEvLib_callback_c::~dEvLib_callback_c() {
 #pragma pop
 
 
-/* 80C5DAB0-80C5DAB8 0008+00 s=0 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
+/* 80C5DAB0-80C5DAB8 0008+00 s=2 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
 bool dEvLib_callback_c::eventRun() {
 	return true;
 }
 
 
-/* 80C5DAB8-80C5DAC0 0008+00 s=0 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
+/* 80C5DAB8-80C5DAC0 0008+00 s=2 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
 bool dEvLib_callback_c::eventEnd() {
 	return true;
 }
 
 
-/* 80C5DAC0-80C5DAC8 0008+00 s=0 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
+/* 80C5DAC0-80C5DAC8 0008+00 s=1 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
 bool dEvLib_callback_c::eventStart() {
 	return true;
 }
 
 
-/* 80C5DAC8-80C5DB48 0080+00 s=1 e=0 z=0  None .text      __dt__16dalv4CandleTag_cFv                                   */
+/* 80C5DAC8-80C5DB48 0080+00 s=2 e=0 z=0  None .text      __dt__16dalv4CandleTag_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

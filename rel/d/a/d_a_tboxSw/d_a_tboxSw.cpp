@@ -35,21 +35,20 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-void daTboxSw_Draw(daTboxSw_c*); // 2
-void daTboxSw_Execute(daTboxSw_c*); // 2
-void daTboxSw_Delete(daTboxSw_c*); // 2
-void daTboxSw_Create(fopAc_ac_c*); // 2
+static void daTboxSw_Draw(daTboxSw_c*); // 2
+static void daTboxSw_Execute(daTboxSw_c*); // 2
+static void daTboxSw_Delete(daTboxSw_c*); // 2
+static void daTboxSw_Create(fopAc_ac_c*); // 2
 
 extern "C" bool Create__10daTboxSw_cFv(); // 1
 extern "C" void create__10daTboxSw_cFv(); // 1
 extern "C" void execute__10daTboxSw_cFv(); // 1
 extern "C" bool draw__10daTboxSw_cFv(); // 1
 extern "C" bool _delete__10daTboxSw_cFv(); // 1
-extern "C" void daTboxSw_Draw__FP10daTboxSw_c(); // 1
-extern "C" void daTboxSw_Execute__FP10daTboxSw_c(); // 1
-extern "C" void daTboxSw_Delete__FP10daTboxSw_c(); // 1
-extern "C" void daTboxSw_Create__FP10fopAc_ac_c(); // 1
-extern "C" extern void* l_daTboxSw_Method[8];
+extern "C" static void daTboxSw_Draw__FP10daTboxSw_c(); // 1
+extern "C" static void daTboxSw_Execute__FP10daTboxSw_c(); // 1
+extern "C" static void daTboxSw_Delete__FP10daTboxSw_c(); // 1
+extern "C" static void daTboxSw_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern void* g_profile_TBOX_SW[12];
 
 // 
@@ -62,6 +61,8 @@ extern "C" void __ct__10fopAc_ac_cFv(); // 1
 extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
 extern "C" void isTbox__12dSv_memBit_cCFi(); // 1
 extern "C" void onSwitch__10dSv_info_cFii(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 
@@ -108,44 +109,44 @@ bool daTboxSw_c::_delete() {
 }
 
 
-/* 80D66948-80D66968 0020+00 s=0 e=0 z=0  None .text      daTboxSw_Draw__FP10daTboxSw_c                                */
+/* 80D66948-80D66968 0020+00 s=1 e=0 z=0  None .text      daTboxSw_Draw__FP10daTboxSw_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTboxSw_Draw(daTboxSw_c* param_0) {
+asm static void daTboxSw_Draw(daTboxSw_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_tboxSw/d_a_tboxSw/daTboxSw_Draw__FP10daTboxSw_c.s"
 }
 #pragma pop
 
 
-/* 80D66968-80D66988 0020+00 s=0 e=0 z=0  None .text      daTboxSw_Execute__FP10daTboxSw_c                             */
+/* 80D66968-80D66988 0020+00 s=1 e=0 z=0  None .text      daTboxSw_Execute__FP10daTboxSw_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTboxSw_Execute(daTboxSw_c* param_0) {
+asm static void daTboxSw_Execute(daTboxSw_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_tboxSw/d_a_tboxSw/daTboxSw_Execute__FP10daTboxSw_c.s"
 }
 #pragma pop
 
 
-/* 80D66988-80D669A8 0020+00 s=0 e=0 z=0  None .text      daTboxSw_Delete__FP10daTboxSw_c                              */
+/* 80D66988-80D669A8 0020+00 s=1 e=0 z=0  None .text      daTboxSw_Delete__FP10daTboxSw_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTboxSw_Delete(daTboxSw_c* param_0) {
+asm static void daTboxSw_Delete(daTboxSw_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_tboxSw/d_a_tboxSw/daTboxSw_Delete__FP10daTboxSw_c.s"
 }
 #pragma pop
 
 
-/* 80D669A8-80D669C8 0020+00 s=0 e=0 z=0  None .text      daTboxSw_Create__FP10fopAc_ac_c                              */
+/* 80D669A8-80D669C8 0020+00 s=1 e=0 z=0  None .text      daTboxSw_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTboxSw_Create(fopAc_ac_c* param_0) {
+asm static void daTboxSw_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_tboxSw/d_a_tboxSw/daTboxSw_Create__FP10fopAc_ac_c.s"
 }
@@ -153,30 +154,30 @@ asm void daTboxSw_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80D669D0-80D669F0 0020+00 s=0 e=0 z=0  None .data      l_daTboxSw_Method                                            */
-SECTION_DATA void* l_daTboxSw_Method[8] = {
+/* 80D669D0-80D669F0 0020+00 s=1 e=0 z=0  None .data      l_daTboxSw_Method                                            */
+SECTION_DATA static void* l_daTboxSw_Method[8] = {
+	(void*)daTboxSw_Create__FP10fopAc_ac_c,
+	(void*)daTboxSw_Delete__FP10daTboxSw_c,
+	(void*)daTboxSw_Execute__FP10daTboxSw_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daTboxSw_Draw__FP10daTboxSw_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D669F0-80D66A20 0030+00 s=0 e=0 z=0  None .data      g_profile_TBOX_SW                                            */
+/* 80D669F0-80D66A20 0030+00 s=0 e=0 z=1  None .data      g_profile_TBOX_SW                                            */
 SECTION_DATA void* g_profile_TBOX_SW[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x016E0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000568,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x020E0000,
-	(void*)NULL,
+	(void*)&l_daTboxSw_Method,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };

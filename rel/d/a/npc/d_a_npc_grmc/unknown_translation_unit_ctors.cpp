@@ -19,6 +19,7 @@ extern void* const data_809D9D5C[2];
 // 
 
 
+extern "C" void __sinit_d_a_npc_grmc_cpp(); // 1
 
 // 
 // Declarations:

@@ -19,6 +19,7 @@ extern void* const data_8074BF28[2];
 // 
 
 
+extern "C" void __sinit_d_a_e_pm_cpp(); // 1
 
 // 
 // Declarations:

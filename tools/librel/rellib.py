@@ -275,7 +275,10 @@ def apply_relocation(kind: int, module: int,
     else:
         return False
 
-    if kind == R_PPC_ADDR16 or kind == R_PPC_ADDR16_LO:
+    if kind == R_PPC_ADDR32:
+        R = (S + A) & 0xFFFFFFFF
+        Y = struct.pack('>I', R)
+    elif kind == R_PPC_ADDR16 or kind == R_PPC_ADDR16_LO:
         R = (S + A) & 0xFFFF
         Y = struct.pack('>H', R)
     elif kind == R_PPC_ADDR16_HI:

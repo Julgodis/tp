@@ -563,7 +563,7 @@ SECTION_DATA static void* l_dScnPly_Method[5] = {
 	(void*)dScnPly_Draw__FP9dScnPly_c,
 };
 
-/* 803C31D4-803C31FC 0028+00 s=0 e=0 z=0  None .data      g_profile_PLAY_SCENE                                         */
+/* 803C31D4-803C31FC 0028+00 s=0 e=0 z=1  None .data      g_profile_PLAY_SCENE                                         */
 SECTION_DATA void* g_profile_PLAY_SCENE[10] = {
 	(void*)NULL,
 	(void*)0x0001FFFD,
@@ -577,7 +577,7 @@ SECTION_DATA void* g_profile_PLAY_SCENE[10] = {
 	(void*)NULL,
 };
 
-/* 803C31FC-803C3224 0028+00 s=0 e=0 z=0  None .data      g_profile_OPENING_SCENE                                      */
+/* 803C31FC-803C3224 0028+00 s=0 e=0 z=1  None .data      g_profile_OPENING_SCENE                                      */
 SECTION_DATA void* g_profile_OPENING_SCENE[10] = {
 	(void*)NULL,
 	(void*)0x0001FFFD,

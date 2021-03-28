@@ -104,9 +104,6 @@ struct dBgS_GndChk {
 	/* 800775F0 */ ~dBgS_GndChk();
 };
 
-struct dBgW {
-};
-
 struct cBgS_PolyInfo {
 	/* 802680B0 */ ~cBgS_PolyInfo();
 };
@@ -114,8 +111,14 @@ struct cBgS_PolyInfo {
 struct csXyz {
 };
 
+struct dBgW {
+};
+
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -145,10 +148,10 @@ struct cM3dGCir {
 // Forward References:
 // 
 
-void daObjL4DigSand_create1st(daObjL4DigSand_c*); // 2
-void daObjL4DigSand_MoveBGDelete(daObjL4DigSand_c*); // 2
-void daObjL4DigSand_MoveBGExecute(daObjL4DigSand_c*); // 2
-void daObjL4DigSand_MoveBGDraw(daObjL4DigSand_c*); // 2
+static void daObjL4DigSand_create1st(daObjL4DigSand_c*); // 2
+static void daObjL4DigSand_MoveBGDelete(daObjL4DigSand_c*); // 2
+static void daObjL4DigSand_MoveBGExecute(daObjL4DigSand_c*); // 2
+static void daObjL4DigSand_MoveBGDraw(daObjL4DigSand_c*); // 2
 static void cLib_calcTimer__template0(u8*); // 2
 
 extern "C" void initBaseMtx__16daObjL4DigSand_cFv(); // 1
@@ -167,25 +170,24 @@ extern "C" void mode_init_end__16daObjL4DigSand_cFv(); // 1
 extern "C" void mode_end__16daObjL4DigSand_cFv(); // 1
 extern "C" void Draw__16daObjL4DigSand_cFv(); // 1
 extern "C" void Delete__16daObjL4DigSand_cFv(); // 1
-extern "C" void daObjL4DigSand_create1st__FP16daObjL4DigSand_c(); // 1
+extern "C" static void daObjL4DigSand_create1st__FP16daObjL4DigSand_c(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__12dBgS_AcchCirFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" void daObjL4DigSand_MoveBGDelete__FP16daObjL4DigSand_c(); // 1
-extern "C" void daObjL4DigSand_MoveBGExecute__FP16daObjL4DigSand_c(); // 1
-extern "C" void daObjL4DigSand_MoveBGDraw__FP16daObjL4DigSand_c(); // 1
+extern "C" static void daObjL4DigSand_MoveBGDelete__FP16daObjL4DigSand_c(); // 1
+extern "C" static void daObjL4DigSand_MoveBGExecute__FP16daObjL4DigSand_c(); // 1
+extern "C" static void daObjL4DigSand_MoveBGDraw__FP16daObjL4DigSand_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" static void func_80C67588(); // 1
-extern "C" void func_80C675A4(); // 1
-extern "C" void func_80C675AC(); // 1
-extern "C" void func_80C675B4(); // 1
-extern "C" void func_80C675BC(); // 1
-extern "C" void func_80C675C4(); // 1
+extern "C" static void func_80C675A4(); // 1
+extern "C" static void func_80C675AC(); // 1
+extern "C" static void func_80C675B4(); // 1
+extern "C" static void func_80C675BC(); // 1
+extern "C" static void func_80C675C4(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* daObjL4DigSand_METHODS[8];
 extern "C" extern void* g_profile_Obj_Lv4DigSand[12];
 
 // 
@@ -220,6 +222,9 @@ extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void __ct__11dBgS_GndChkFv(); // 1
 extern "C" void __dt__11dBgS_GndChkFv(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -241,6 +246,8 @@ extern "C" void _savegpr_27(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
@@ -278,7 +285,7 @@ asm void daObjL4DigSand_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80C66BC8-80C66C24 005C+00 s=0 e=0 z=0  None .text      Create__16daObjL4DigSand_cFv                                 */
+/* 80C66BC8-80C66C24 005C+00 s=1 e=0 z=0  None .text      Create__16daObjL4DigSand_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -290,6 +297,25 @@ asm void daObjL4DigSand_c::Create() {
 
 
 /* ############################################################################################## */
+/* 80C675D4-80C675D8 0004+00 s=2 e=0 z=0  None .rodata    @3746                                                        */
+SECTION_RODATA static u32 const lit_3746 = 0xCE6E6B28;
+
+/* 80C675D8-80C675DC 0004+00 s=1 e=0 z=0  None .rodata    @3765                                                        */
+SECTION_RODATA static u32 const lit_3765 = 0x41200000;
+
+/* 80C675DC-80C675E0 0004+00 s=1 e=0 z=0  None .rodata    @3766                                                        */
+SECTION_RODATA static u32 const lit_3766 = 0x41700000;
+
+/* 80C675E0-80C675E4 0004+00 s=1 e=0 z=0  None .rodata    @3767                                                        */
+SECTION_RODATA static u32 const lit_3767 = 0x3F800000;
+
+/* 80C675E4-80C675EC 0008+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80C675E4 = "P_DSand";
+#pragma pop
+
 /* 80C675EC-80C675F8 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -303,9 +329,9 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80C6760C-80C67610 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
 
-/* 80C66C24-80C66C94 0070+00 s=0 e=0 z=0  None .text      CreateHeap__16daObjL4DigSand_cFv                             */
+/* 80C66C24-80C66C94 0070+00 s=1 e=0 z=0  None .text      CreateHeap__16daObjL4DigSand_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -327,7 +353,7 @@ asm void daObjL4DigSand_c::create1st() {
 #pragma pop
 
 
-/* 80C66D40-80C66DD0 0090+00 s=0 e=0 z=0  None .text      Execute__16daObjL4DigSand_cFPPA3_A4_f                        */
+/* 80C66D40-80C66DD0 0090+00 s=1 e=0 z=0  None .text      Execute__16daObjL4DigSand_cFPPA3_A4_f                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -343,21 +369,21 @@ asm void daObjL4DigSand_c::Execute(f32 (** param_0)[3][4]) {
 SECTION_DATA static void* lit_3715[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)mode_wait__16daObjL4DigSand_cFv,
 };
 
 /* 80C6761C-80C67628 000C+00 s=1 e=0 z=0  None .data      @3716                                                        */
 SECTION_DATA static void* lit_3716[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)mode_dig__16daObjL4DigSand_cFv,
 };
 
 /* 80C67628-80C67634 000C+00 s=1 e=0 z=0  None .data      @3717                                                        */
 SECTION_DATA static void* lit_3717[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)mode_end__16daObjL4DigSand_cFv,
 };
 
 /* 80C67634-80C67658 0024+00 s=1 e=0 z=0  None .data      l_func$3714                                                  */
@@ -389,7 +415,7 @@ asm void daObjL4DigSand_c::mode_init_wait() {
 #pragma pop
 
 
-/* 80C66E80-80C66EAC 002C+00 s=0 e=0 z=0  None .text      mode_wait__16daObjL4DigSand_cFv                              */
+/* 80C66E80-80C66EAC 002C+00 s=1 e=0 z=0  None .text      mode_wait__16daObjL4DigSand_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -401,33 +427,30 @@ asm void daObjL4DigSand_c::mode_wait() {
 
 
 /* ############################################################################################## */
-/* 80C675D4-80C675D8 0004+00 s=2 e=0 z=0  None .rodata    @3746                                                        */
-SECTION_RODATA static u32 const lit_3746 = 0xCE6E6B28;
-
-/* 80C67658-80C67678 0020+00 s=0 e=0 z=0  None .data      daObjL4DigSand_METHODS                                       */
-SECTION_DATA void* daObjL4DigSand_METHODS[8] = {
+/* 80C67658-80C67678 0020+00 s=1 e=0 z=0  None .data      daObjL4DigSand_METHODS                                       */
+SECTION_DATA static void* daObjL4DigSand_METHODS[8] = {
+	(void*)daObjL4DigSand_create1st__FP16daObjL4DigSand_c,
+	(void*)daObjL4DigSand_MoveBGDelete__FP16daObjL4DigSand_c,
+	(void*)daObjL4DigSand_MoveBGExecute__FP16daObjL4DigSand_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjL4DigSand_MoveBGDraw__FP16daObjL4DigSand_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C67678-80C676A8 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Lv4DigSand                                     */
+/* 80C67678-80C676A8 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Lv4DigSand                                     */
 SECTION_DATA void* g_profile_Obj_Lv4DigSand[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00A90000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000944,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02270000,
-	(void*)NULL,
+	(void*)&daObjL4DigSand_METHODS,
 	(void*)0x00044100,
 	(void*)0x000E0000,
 };
@@ -436,64 +459,64 @@ SECTION_DATA void* g_profile_Obj_Lv4DigSand[12] = {
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 80C676B4-80C676C0 000C+00 s=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80C676C0-80C676CC 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80C676CC-80C676D8 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 80C676D8-80C676E4 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80C676E4-80C67708 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80C675C4,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80C675BC,
 };
 
 /* 80C67708-80C67738 0030+00 s=2 e=0 z=0  None .data      __vt__14dBgS_ObjGndChk                                       */
 SECTION_DATA static void* __vt__14dBgS_ObjGndChk[12] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__14dBgS_ObjGndChkFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80C675A4,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80C675B4,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80C675AC,
 };
 
 /* 80C66EAC-80C66F84 00D8+00 s=1 e=0 z=0  None .text      mode_init_dig__16daObjL4DigSand_cFv                          */
@@ -507,7 +530,7 @@ asm void daObjL4DigSand_c::mode_init_dig() {
 #pragma pop
 
 
-/* 80C66F84-80C66FFC 0078+00 s=3 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
+/* 80C66F84-80C66FFC 0078+00 s=4 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -518,17 +541,7 @@ asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80C675D8-80C675DC 0004+00 s=1 e=0 z=0  None .rodata    @3765                                                        */
-SECTION_RODATA static u32 const lit_3765 = 0x41200000;
-
-/* 80C675DC-80C675E0 0004+00 s=1 e=0 z=0  None .rodata    @3766                                                        */
-SECTION_RODATA static u32 const lit_3766 = 0x41700000;
-
-/* 80C675E0-80C675E4 0004+00 s=1 e=0 z=0  None .rodata    @3767                                                        */
-SECTION_RODATA static u32 const lit_3767 = 0x3F800000;
-
-/* 80C66FFC-80C670AC 00B0+00 s=0 e=0 z=0  None .text      mode_dig__16daObjL4DigSand_cFv                               */
+/* 80C66FFC-80C670AC 00B0+00 s=1 e=0 z=0  None .text      mode_dig__16daObjL4DigSand_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -550,13 +563,13 @@ asm void daObjL4DigSand_c::mode_init_end() {
 #pragma pop
 
 
-/* 80C67100-80C67104 0004+00 s=0 e=0 z=0  None .text      mode_end__16daObjL4DigSand_cFv                               */
+/* 80C67100-80C67104 0004+00 s=1 e=0 z=0  None .text      mode_end__16daObjL4DigSand_cFv                               */
 void daObjL4DigSand_c::mode_end() {
 	/* empty function */
 }
 
 
-/* 80C67104-80C671A8 00A4+00 s=0 e=0 z=0  None .text      Draw__16daObjL4DigSand_cFv                                   */
+/* 80C67104-80C671A8 00A4+00 s=1 e=0 z=0  None .text      Draw__16daObjL4DigSand_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -567,7 +580,7 @@ asm void daObjL4DigSand_c::Draw() {
 #pragma pop
 
 
-/* 80C671A8-80C671DC 0034+00 s=0 e=0 z=0  None .text      Delete__16daObjL4DigSand_cFv                                 */
+/* 80C671A8-80C671DC 0034+00 s=1 e=0 z=0  None .text      Delete__16daObjL4DigSand_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -583,28 +596,28 @@ asm void daObjL4DigSand_c::Delete() {
 SECTION_DATA static void* __vt__16daObjL4DigSand_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__16daObjL4DigSand_cFv,
+	(void*)Create__16daObjL4DigSand_cFv,
+	(void*)Execute__16daObjL4DigSand_cFPPA3_A4_f,
+	(void*)Draw__16daObjL4DigSand_cFv,
+	(void*)Delete__16daObjL4DigSand_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
-/* 80C671DC-80C67308 012C+00 s=0 e=0 z=0  None .text      daObjL4DigSand_create1st__FP16daObjL4DigSand_c               */
+/* 80C671DC-80C67308 012C+00 s=1 e=0 z=0  None .text      daObjL4DigSand_create1st__FP16daObjL4DigSand_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjL4DigSand_create1st(daObjL4DigSand_c* param_0) {
+asm static void daObjL4DigSand_create1st(daObjL4DigSand_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/daObjL4DigSand_create1st__FP16daObjL4DigSand_c.s"
 }
 #pragma pop
 
 
-/* 80C67308-80C67350 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80C67308-80C67350 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -615,7 +628,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80C67350-80C67398 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C67350-80C67398 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -626,7 +639,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80C67398-80C673F4 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80C67398-80C673F4 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -637,7 +650,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80C673F4-80C67464 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80C673F4-80C67464 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -648,7 +661,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 80C67464-80C674D4 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80C67464-80C674D4 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -659,40 +672,40 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80C674D4-80C674F4 0020+00 s=0 e=0 z=0  None .text      daObjL4DigSand_MoveBGDelete__FP16daObjL4DigSand_c            */
+/* 80C674D4-80C674F4 0020+00 s=1 e=0 z=0  None .text      daObjL4DigSand_MoveBGDelete__FP16daObjL4DigSand_c            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjL4DigSand_MoveBGDelete(daObjL4DigSand_c* param_0) {
+asm static void daObjL4DigSand_MoveBGDelete(daObjL4DigSand_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/daObjL4DigSand_MoveBGDelete__FP16daObjL4DigSand_c.s"
 }
 #pragma pop
 
 
-/* 80C674F4-80C67514 0020+00 s=0 e=0 z=0  None .text      daObjL4DigSand_MoveBGExecute__FP16daObjL4DigSand_c           */
+/* 80C674F4-80C67514 0020+00 s=1 e=0 z=0  None .text      daObjL4DigSand_MoveBGExecute__FP16daObjL4DigSand_c           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjL4DigSand_MoveBGExecute(daObjL4DigSand_c* param_0) {
+asm static void daObjL4DigSand_MoveBGExecute(daObjL4DigSand_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/daObjL4DigSand_MoveBGExecute__FP16daObjL4DigSand_c.s"
 }
 #pragma pop
 
 
-/* 80C67514-80C67540 002C+00 s=0 e=0 z=0  None .text      daObjL4DigSand_MoveBGDraw__FP16daObjL4DigSand_c              */
+/* 80C67514-80C67540 002C+00 s=1 e=0 z=0  None .text      daObjL4DigSand_MoveBGDraw__FP16daObjL4DigSand_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjL4DigSand_MoveBGDraw(daObjL4DigSand_c* param_0) {
+asm static void daObjL4DigSand_MoveBGDraw(daObjL4DigSand_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/daObjL4DigSand_MoveBGDraw__FP16daObjL4DigSand_c.s"
 }
 #pragma pop
 
 
-/* 80C67540-80C67588 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80C67540-80C67588 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -714,66 +727,58 @@ asm static void cLib_calcTimer__template0(u8* param_0) {
 #pragma pop
 
 
-/* 80C675A4-80C675AC 0008+00 s=0 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80C675A4-80C675AC 0008+00 s=1 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C675A4() {
+extern "C" asm static void func_80C675A4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/func_80C675A4.s"
 }
 #pragma pop
 
 
-/* 80C675AC-80C675B4 0008+00 s=0 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80C675AC-80C675B4 0008+00 s=1 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C675AC() {
+extern "C" asm static void func_80C675AC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/func_80C675AC.s"
 }
 #pragma pop
 
 
-/* 80C675B4-80C675BC 0008+00 s=0 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80C675B4-80C675BC 0008+00 s=1 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C675B4() {
+extern "C" asm static void func_80C675B4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/func_80C675B4.s"
 }
 #pragma pop
 
 
-/* 80C675BC-80C675C4 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C675BC-80C675C4 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C675BC() {
+extern "C" asm static void func_80C675BC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/func_80C675BC.s"
 }
 #pragma pop
 
 
-/* 80C675C4-80C675CC 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C675C4-80C675CC 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C675C4() {
+extern "C" asm static void func_80C675C4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/func_80C675C4.s"
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80C675E4-80C675EC 0008+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80C675E4 = "P_DSand";
-#pragma pop
 

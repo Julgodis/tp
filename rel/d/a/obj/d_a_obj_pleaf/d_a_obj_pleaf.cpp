@@ -145,11 +145,11 @@ struct cM3dGCir {
 // Forward References:
 // 
 
-void daObj_Pleaf_Create(void*); // 2
-void daObj_Pleaf_Delete(void*); // 2
-void daObj_Pleaf_Execute(void*); // 2
-void daObj_Pleaf_Draw(void*); // 2
-bool daObj_Pleaf_IsDelete(void*); // 2
+static void daObj_Pleaf_Create(void*); // 2
+static void daObj_Pleaf_Delete(void*); // 2
+static void daObj_Pleaf_Execute(void*); // 2
+static void daObj_Pleaf_Draw(void*); // 2
+static bool daObj_Pleaf_IsDelete(void*); // 2
 
 extern "C" void __dt__13daObj_Pleaf_cFv(); // 1
 extern "C" void create__13daObj_Pleaf_cFv(); // 1
@@ -168,18 +168,17 @@ extern "C" void isDelete__13daObj_Pleaf_cFv(); // 1
 extern "C" void setEnvTevColor__13daObj_Pleaf_cFv(); // 1
 extern "C" void setRoomNo__13daObj_Pleaf_cFv(); // 1
 extern "C" void setMtx__13daObj_Pleaf_cFv(); // 1
-extern "C" void daObj_Pleaf_Create__FPv(); // 1
-extern "C" void daObj_Pleaf_Delete__FPv(); // 1
-extern "C" void daObj_Pleaf_Execute__FPv(); // 1
-extern "C" void daObj_Pleaf_Draw__FPv(); // 1
-extern "C" bool daObj_Pleaf_IsDelete__FPv(); // 1
+extern "C" static void daObj_Pleaf_Create__FPv(); // 1
+extern "C" static void daObj_Pleaf_Delete__FPv(); // 1
+extern "C" static void daObj_Pleaf_Execute__FPv(); // 1
+extern "C" static void daObj_Pleaf_Draw__FPv(); // 1
+extern "C" static bool daObj_Pleaf_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __sinit_d_a_obj_pleaf_cpp(); // 1
 extern "C" void __dt__19daObj_Pleaf_Param_cFv(); // 1
-extern "C" void func_80CB1840(); // 1
-extern "C" void func_80CB1848(); // 1
+extern "C" static void func_80CB1840(); // 1
+extern "C" static void func_80CB1848(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* daObj_Pleaf_MethodTable[8];
 extern "C" extern void* g_profile_OBJ_PLEAF[12];
 
 // 
@@ -231,6 +230,8 @@ extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXTrans(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -245,104 +246,6 @@ extern "C" void __register_global_object(); // 1
 // 
 // Declarations:
 // 
-
-/* ############################################################################################## */
-/* 80CB189C-80CB18A0 0004+00 s=1 e=0 z=0  None .data      l_resName                                                    */
-SECTION_DATA static void* l_resName = (void*)NULL;
-
-/* 80CB18A0-80CB18C0 0020+00 s=0 e=0 z=0  None .data      daObj_Pleaf_MethodTable                                      */
-SECTION_DATA void* daObj_Pleaf_MethodTable[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CB18C0-80CB18F0 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_PLEAF                                          */
-SECTION_DATA void* g_profile_OBJ_PLEAF[12] = {
-	(void*)0xFFFFFFFD,
-	(void*)0x0008FFFD,
-	(void*)0x02F50000,
-	(void*)NULL,
-	(void*)0x00000950,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)0x02C90000,
-	(void*)NULL,
-	(void*)0x00044100,
-	(void*)0x000E0000,
-};
-
-/* 80CB18F0-80CB1914 0024+00 s=3 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
-SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CB1914-80CB1920 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
-SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CB1920-80CB192C 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
-SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CB192C-80CB1938 000C+00 s=2 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
-SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CB1938-80CB1944 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CB1944-80CB1950 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
-SECTION_DATA static void* __vt__8cM3dGSph[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CB1950-80CB195C 000C+00 s=2 e=0 z=0  None .data      __vt__13daObj_Pleaf_c                                        */
-SECTION_DATA static void* __vt__13daObj_Pleaf_c[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80CB0D4C-80CB0F08 01BC+00 s=0 e=0 z=0  None .text      __dt__13daObj_Pleaf_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daObj_Pleaf_c::~daObj_Pleaf_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/__dt__13daObj_Pleaf_cFv.s"
-}
-#pragma pop
-
 
 /* ############################################################################################## */
 /* 80CB1864-80CB1874 0010+00 s=2 e=0 z=0  None .rodata    m__19daObj_Pleaf_Param_c                                     */
@@ -365,6 +268,116 @@ SECTION_RODATA static u32 const lit_3908 = 0x42480000;
 /* 80CB1884-80CB1888 0004+00 s=3 e=0 z=0  None .rodata    @3909                                                        */
 SECTION_RODATA static u32 const lit_3909 = 0xCE6E6B28;
 
+/* 80CB1888-80CB188C 0004+00 s=1 e=0 z=0  None .rodata    @4025                                                        */
+SECTION_RODATA static u32 const lit_4025 = 0x41A00000;
+
+/* 80CB188C-80CB1890 0004+00 s=1 e=0 z=0  None .rodata    @4026                                                        */
+SECTION_RODATA static u32 const lit_4026 = 0x3F800000;
+
+/* 80CB1890-80CB1899 0009+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80CB1890 = "J_Hatake";
+#pragma pop
+
+/* 80CB189C-80CB18A0 0004+00 s=1 e=0 z=0  None .data      l_resName                                                    */
+SECTION_DATA static void* l_resName = (void*)&stringBase0;
+
+/* 80CB18A0-80CB18C0 0020+00 s=1 e=0 z=0  None .data      daObj_Pleaf_MethodTable                                      */
+SECTION_DATA static void* daObj_Pleaf_MethodTable[8] = {
+	(void*)daObj_Pleaf_Create__FPv,
+	(void*)daObj_Pleaf_Delete__FPv,
+	(void*)daObj_Pleaf_Execute__FPv,
+	(void*)daObj_Pleaf_IsDelete__FPv,
+	(void*)daObj_Pleaf_Draw__FPv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80CB18C0-80CB18F0 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_PLEAF                                          */
+SECTION_DATA void* g_profile_OBJ_PLEAF[12] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x0008FFFD,
+	(void*)0x02F50000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x00000950,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopAc_Method,
+	(void*)0x02C90000,
+	(void*)&daObj_Pleaf_MethodTable,
+	(void*)0x00044100,
+	(void*)0x000E0000,
+};
+
+/* 80CB18F0-80CB1914 0024+00 s=3 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
+SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80CB1848,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80CB1840,
+};
+
+/* 80CB1914-80CB1920 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
+SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
+};
+
+/* 80CB1920-80CB192C 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
+SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
+};
+
+/* 80CB192C-80CB1938 000C+00 s=2 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
+SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
+};
+
+/* 80CB1938-80CB1944 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA static void* __vt__8cM3dGAab[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
+};
+
+/* 80CB1944-80CB1950 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
+SECTION_DATA static void* __vt__8cM3dGSph[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
+};
+
+/* 80CB1950-80CB195C 000C+00 s=2 e=0 z=0  None .data      __vt__13daObj_Pleaf_c                                        */
+SECTION_DATA static void* __vt__13daObj_Pleaf_c[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13daObj_Pleaf_cFv,
+};
+
+/* 80CB0D4C-80CB0F08 01BC+00 s=1 e=0 z=0  None .text      __dt__13daObj_Pleaf_cFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm daObj_Pleaf_c::~daObj_Pleaf_c() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/__dt__13daObj_Pleaf_cFv.s"
+}
+#pragma pop
+
+
 /* 80CB0F08-80CB1180 0278+00 s=1 e=0 z=0  None .text      create__13daObj_Pleaf_cFv                                    */
 #pragma push
 #pragma optimization_level 0
@@ -376,7 +389,7 @@ asm void daObj_Pleaf_c::create() {
 #pragma pop
 
 
-/* 80CB1180-80CB11C8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80CB1180-80CB11C8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -387,7 +400,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80CB11C8-80CB1210 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80CB11C8-80CB1210 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -398,7 +411,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80CB1210-80CB1280 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80CB1210-80CB1280 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -409,7 +422,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 80CB1280-80CB12DC 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80CB1280-80CB12DC 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -420,7 +433,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80CB12DC-80CB134C 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80CB12DC-80CB134C 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -463,13 +476,6 @@ asm void daObj_Pleaf_c::Execute() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80CB1888-80CB188C 0004+00 s=1 e=0 z=0  None .rodata    @4025                                                        */
-SECTION_RODATA static u32 const lit_4025 = 0x41A00000;
-
-/* 80CB188C-80CB1890 0004+00 s=1 e=0 z=0  None .rodata    @4026                                                        */
-SECTION_RODATA static u32 const lit_4026 = 0x3F800000;
 
 /* 80CB14D4-80CB1598 00C4+00 s=1 e=0 z=0  None .text      Draw__13daObj_Pleaf_cFv                                      */
 #pragma push
@@ -548,57 +554,57 @@ asm void daObj_Pleaf_c::setMtx() {
 #pragma pop
 
 
-/* 80CB16E8-80CB1708 0020+00 s=0 e=0 z=0  None .text      daObj_Pleaf_Create__FPv                                      */
+/* 80CB16E8-80CB1708 0020+00 s=1 e=0 z=0  None .text      daObj_Pleaf_Create__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Pleaf_Create(void* param_0) {
+asm static void daObj_Pleaf_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/daObj_Pleaf_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 80CB1708-80CB1728 0020+00 s=0 e=0 z=0  None .text      daObj_Pleaf_Delete__FPv                                      */
+/* 80CB1708-80CB1728 0020+00 s=1 e=0 z=0  None .text      daObj_Pleaf_Delete__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Pleaf_Delete(void* param_0) {
+asm static void daObj_Pleaf_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/daObj_Pleaf_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 80CB1728-80CB1748 0020+00 s=0 e=0 z=0  None .text      daObj_Pleaf_Execute__FPv                                     */
+/* 80CB1728-80CB1748 0020+00 s=1 e=0 z=0  None .text      daObj_Pleaf_Execute__FPv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Pleaf_Execute(void* param_0) {
+asm static void daObj_Pleaf_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/daObj_Pleaf_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 80CB1748-80CB1768 0020+00 s=0 e=0 z=0  None .text      daObj_Pleaf_Draw__FPv                                        */
+/* 80CB1748-80CB1768 0020+00 s=1 e=0 z=0  None .text      daObj_Pleaf_Draw__FPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Pleaf_Draw(void* param_0) {
+asm static void daObj_Pleaf_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/daObj_Pleaf_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 80CB1768-80CB1770 0008+00 s=0 e=0 z=0  None .text      daObj_Pleaf_IsDelete__FPv                                    */
-bool daObj_Pleaf_IsDelete(void* param_0) {
+/* 80CB1768-80CB1770 0008+00 s=1 e=0 z=0  None .text      daObj_Pleaf_IsDelete__FPv                                    */
+static bool daObj_Pleaf_IsDelete(void* param_0) {
 	return true;
 }
 
 
-/* 80CB1770-80CB17B8 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80CB1770-80CB17B8 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -614,7 +620,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 SECTION_DATA static void* __vt__19daObj_Pleaf_Param_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__19daObj_Pleaf_Param_cFv,
 };
 
 /* 80CB1970-80CB197C 000C+00 s=1 e=0 z=0  None .bss       @3805                                                        */
@@ -623,7 +629,7 @@ static u8 lit_3805[12];
 /* 80CB197C-80CB1980 0004+00 s=1 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[4];
 
-/* 80CB17B8-80CB17F8 0040+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_pleaf_cpp                                    */
+/* 80CB17B8-80CB17F8 0040+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_pleaf_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -634,7 +640,7 @@ extern "C" asm void __sinit_d_a_obj_pleaf_cpp() {
 #pragma pop
 
 
-/* 80CB17F8-80CB1840 0048+00 s=1 e=0 z=0  None .text      __dt__19daObj_Pleaf_Param_cFv                                */
+/* 80CB17F8-80CB1840 0048+00 s=2 e=0 z=0  None .text      __dt__19daObj_Pleaf_Param_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -645,33 +651,25 @@ asm daObj_Pleaf_Param_c::~daObj_Pleaf_Param_c() {
 #pragma pop
 
 
-/* 80CB1840-80CB1848 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80CB1840-80CB1848 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80CB1840() {
+extern "C" asm static void func_80CB1840() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/func_80CB1840.s"
 }
 #pragma pop
 
 
-/* 80CB1848-80CB1850 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80CB1848-80CB1850 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80CB1848() {
+extern "C" asm static void func_80CB1848() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/func_80CB1848.s"
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80CB1890-80CB1899 0009+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80CB1890 = "J_Hatake";
-#pragma pop
 

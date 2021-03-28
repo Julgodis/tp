@@ -113,16 +113,16 @@ struct mDoMtx_stack_c {
 struct J3DModel {
 };
 
-struct J3DModelData {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorf {
@@ -372,7 +372,7 @@ static void frog_nodeCallBack(J3DJoint*, int); // 2
 static void ws_nodeCallBack(J3DJoint*, int); // 2
 static void Reel_CallBack(J3DJoint*, int); // 2
 static void Worm_nodeCallBack(J3DJoint*, int); // 2
-void dmg_rod_Draw(dmg_rod_class*); // 2
+static void dmg_rod_Draw(dmg_rod_class*); // 2
 static void rod_control(dmg_rod_class*); // 2
 static void rod_main(dmg_rod_class*); // 2
 static void line_control1(dmg_rod_class*); // 2
@@ -424,10 +424,10 @@ static void cam_3d_morf(dmg_rod_class*, f32); // 2
 static void play_camera(dmg_rod_class*); // 2
 static void play_camera_u(dmg_rod_class*); // 2
 static void dmg_rod_Execute(dmg_rod_class*); // 2
-void dmg_rod_IsDelete(dmg_rod_class*); // 2
-void dmg_rod_Delete(dmg_rod_class*); // 2
+static void dmg_rod_IsDelete(dmg_rod_class*); // 2
+static void dmg_rod_Delete(dmg_rod_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void dmg_rod_Create(fopAc_ac_c*); // 2
+static void dmg_rod_Create(fopAc_ac_c*); // 2
 static void daAlink_getAlinkActorClass(); // 2
 static void dComIfGp_event_runCheck(); // 2
 static void dComIfGp_checkPlayerStatus0(int, u32); // 2
@@ -446,7 +446,7 @@ extern "C" static void frog_nodeCallBack__FP8J3DJointi(); // 1
 extern "C" static void ws_nodeCallBack__FP8J3DJointi(); // 1
 extern "C" static void Reel_CallBack__FP8J3DJointi(); // 1
 extern "C" static void Worm_nodeCallBack__FP8J3DJointi(); // 1
-extern "C" void dmg_rod_Draw__FP13dmg_rod_class(); // 1
+extern "C" static void dmg_rod_Draw__FP13dmg_rod_class(); // 1
 extern "C" static void rod_control__FP13dmg_rod_class(); // 1
 extern "C" static void rod_main__FP13dmg_rod_class(); // 1
 extern "C" static void line_control1__FP13dmg_rod_class(); // 1
@@ -499,10 +499,10 @@ extern "C" static void cam_3d_morf__FP13dmg_rod_classf(); // 1
 extern "C" static void play_camera__FP13dmg_rod_class(); // 1
 extern "C" static void play_camera_u__FP13dmg_rod_class(); // 1
 extern "C" static void dmg_rod_Execute__FP13dmg_rod_class(); // 1
-extern "C" void dmg_rod_IsDelete__FP13dmg_rod_class(); // 1
-extern "C" void dmg_rod_Delete__FP13dmg_rod_class(); // 1
+extern "C" static void dmg_rod_IsDelete__FP13dmg_rod_class(); // 1
+extern "C" static void dmg_rod_Delete__FP13dmg_rod_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void dmg_rod_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void dmg_rod_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __ct__13dmg_rod_classFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
@@ -517,8 +517,8 @@ extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__13dmg_rod_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_mg_rod_cpp(); // 1
 extern "C" static void func_804BB130(); // 1
-extern "C" void func_804BB168(); // 1
-extern "C" void func_804BB170(); // 1
+extern "C" static void func_804BB168(); // 1
+extern "C" static void func_804BB170(); // 1
 extern "C" void __dt__5csXyzFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" static void daAlink_getAlinkActorClass__Fv(); // 1
@@ -545,7 +545,6 @@ extern "C" static void dComIfGp_setZStatusForce__FUcUc(); // 1
 extern "C" extern u32 const lit_7880;
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_dmg_rod_Method[8];
 extern "C" extern void* g_profile_MG_ROD[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -826,6 +825,8 @@ extern "C" void abs(); // 1
 extern "C" void strcmp(); // 1
 extern "C" void tan(); // 1
 extern "C" extern void* __vt__19mDoExt_3DlineMat0_c[5];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -1045,15 +1046,15 @@ SECTION_DATA static u8 data_804BB9DC[16] = {
 
 /* 804BB9EC-804BBA10 0024+00 s=1 e=0 z=0  None .data      @7881                                                        */
 SECTION_DATA static void* lit_7881[9] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)(((char*)lure_main__FP13dmg_rod_class)+0x70),
+	(void*)(((char*)lure_main__FP13dmg_rod_class)+0x84),
+	(void*)(((char*)lure_main__FP13dmg_rod_class)+0x1B4),
+	(void*)(((char*)lure_main__FP13dmg_rod_class)+0xAC),
+	(void*)(((char*)lure_main__FP13dmg_rod_class)+0xD0),
+	(void*)(((char*)lure_main__FP13dmg_rod_class)+0x118),
+	(void*)(((char*)lure_main__FP13dmg_rod_class)+0x144),
+	(void*)(((char*)lure_main__FP13dmg_rod_class)+0x16C),
+	(void*)(((char*)lure_main__FP13dmg_rod_class)+0x190),
 };
 
 /* 804BBA10-804BBA18 0008+00 s=1 e=0 z=0  None .data      hook_size$8962                                               */
@@ -1097,30 +1098,30 @@ SECTION_DATA static u8 data_804BBA6C[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00,
 };
 
-/* 804BBAAC-804BBACC 0020+00 s=0 e=0 z=0  None .data      l_dmg_rod_Method                                             */
-SECTION_DATA void* l_dmg_rod_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 804BBAAC-804BBACC 0020+00 s=1 e=0 z=0  None .data      l_dmg_rod_Method                                             */
+SECTION_DATA static void* l_dmg_rod_Method[8] = {
+	(void*)dmg_rod_Create__FP10fopAc_ac_c,
+	(void*)dmg_rod_Delete__FP13dmg_rod_class,
+	(void*)dmg_rod_Execute__FP13dmg_rod_class,
+	(void*)dmg_rod_IsDelete__FP13dmg_rod_class,
+	(void*)dmg_rod_Draw__FP13dmg_rod_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 804BBACC-804BBAFC 0030+00 s=0 e=0 z=0  None .data      g_profile_MG_ROD                                             */
+/* 804BBACC-804BBAFC 0030+00 s=0 e=0 z=1  None .data      g_profile_MG_ROD                                             */
 SECTION_DATA void* g_profile_MG_ROD[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0008FFFD,
 	(void*)0x02E40000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00001690,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01B60000,
-	(void*)NULL,
+	(void*)&l_dmg_rod_Method,
 	(void*)0x00060000,
 	(void*)NULL,
 };
@@ -1129,48 +1130,48 @@ SECTION_DATA void* g_profile_MG_ROD[12] = {
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 804BBB08-804BBB14 000C+00 s=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 804BBB14-804BBB20 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 804BBB20-804BBB2C 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 804BBB2C-804BBB38 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 804BBB38-804BBB5C 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_804BB170,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_804BB168,
 };
 
 /* 804BBB5C-804BBB70 0014+00 s=1 e=0 z=0  None .data      __vt__18mDoExt_3DlineMat_c                                   */
@@ -1186,14 +1187,14 @@ SECTION_DATA static void* __vt__18mDoExt_3DlineMat_c[5] = {
 SECTION_DATA static void* __vt__8cM3dGPla[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGPlaFv,
 };
 
 /* 804BBB7C-804BBB88 000C+00 s=2 e=0 z=0  None .data      __vt__13dmg_rod_HIO_c                                        */
 SECTION_DATA static void* __vt__13dmg_rod_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__13dmg_rod_HIO_cFv,
 };
 
 /* 804A95EC-804A964C 0060+00 s=1 e=0 z=0  None .text      __ct__13dmg_rod_HIO_cFv                                      */
@@ -1259,11 +1260,11 @@ asm static void Worm_nodeCallBack(J3DJoint* param_0, int param_1) {
 /* 804BB560-804BB564 0004+00 s=5 e=0 z=0  None .rodata    @4545                                                        */
 SECTION_RODATA static u32 const lit_4545 = 0x459C4000;
 
-/* 804A99E0-804A9EAC 04CC+00 s=0 e=0 z=0  None .text      dmg_rod_Draw__FP13dmg_rod_class                              */
+/* 804A99E0-804A9EAC 04CC+00 s=1 e=0 z=0  None .text      dmg_rod_Draw__FP13dmg_rod_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dmg_rod_Draw(dmg_rod_class* param_0) {
+asm static void dmg_rod_Draw(dmg_rod_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/dmg_rod_Draw__FP13dmg_rod_class.s"
 }
@@ -1476,7 +1477,7 @@ asm static void line_control1(dmg_rod_class* param_0) {
 #pragma pop
 
 
-/* 804AB01C-804AB064 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 804AB01C-804AB064 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2071,7 +2072,7 @@ asm static void lure_disp(dmg_rod_class* param_0) {
 #pragma pop
 
 
-/* 804B1D14-804B265C 0948+00 s=1 e=0 z=0  None .text      lure_main__FP13dmg_rod_class                                 */
+/* 804B1D14-804B265C 0948+00 s=2 e=0 z=0  None .text      lure_main__FP13dmg_rod_class                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2492,7 +2493,7 @@ asm static void play_camera_u(dmg_rod_class* param_0) {
 #pragma pop
 
 
-/* 804B9318-804BA098 0D80+00 s=1 e=0 z=0  None .text      dmg_rod_Execute__FP13dmg_rod_class                           */
+/* 804B9318-804BA098 0D80+00 s=2 e=0 z=0  None .text      dmg_rod_Execute__FP13dmg_rod_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2503,22 +2504,22 @@ asm static void dmg_rod_Execute(dmg_rod_class* param_0) {
 #pragma pop
 
 
-/* 804BA098-804BA14C 00B4+00 s=0 e=0 z=0  None .text      dmg_rod_IsDelete__FP13dmg_rod_class                          */
+/* 804BA098-804BA14C 00B4+00 s=1 e=0 z=0  None .text      dmg_rod_IsDelete__FP13dmg_rod_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dmg_rod_IsDelete(dmg_rod_class* param_0) {
+asm static void dmg_rod_IsDelete(dmg_rod_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/dmg_rod_IsDelete__FP13dmg_rod_class.s"
 }
 #pragma pop
 
 
-/* 804BA14C-804BA1F4 00A8+00 s=0 e=0 z=0  None .text      dmg_rod_Delete__FP13dmg_rod_class                            */
+/* 804BA14C-804BA1F4 00A8+00 s=1 e=0 z=0  None .text      dmg_rod_Delete__FP13dmg_rod_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dmg_rod_Delete(dmg_rod_class* param_0) {
+asm static void dmg_rod_Delete(dmg_rod_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/dmg_rod_Delete__FP13dmg_rod_class.s"
 }
@@ -2536,11 +2537,11 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 804BA83C-804BAC0C 03D0+00 s=0 e=0 z=0  None .text      dmg_rod_Create__FP10fopAc_ac_c                               */
+/* 804BA83C-804BAC0C 03D0+00 s=1 e=0 z=0  None .text      dmg_rod_Create__FP10fopAc_ac_c                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dmg_rod_Create(fopAc_ac_c* param_0) {
+asm static void dmg_rod_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/dmg_rod_Create__FP10fopAc_ac_c.s"
 }
@@ -2558,7 +2559,7 @@ asm dmg_rod_class::dmg_rod_class() {
 #pragma pop
 
 
-/* 804BADAC-804BADF4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 804BADAC-804BADF4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2569,7 +2570,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 804BADF4-804BAE3C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 804BADF4-804BAE3C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2580,7 +2581,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 804BAE3C-804BAE98 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 804BAE3C-804BAE98 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2591,7 +2592,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 804BAE98-804BAF08 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 804BAE98-804BAF08 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2602,7 +2603,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 804BAF08-804BAF78 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 804BAF08-804BAF78 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2647,7 +2648,7 @@ cXyz::cXyz() {
 }
 
 
-/* 804BB028-804BB070 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 804BB028-804BB070 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2658,7 +2659,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 804BB070-804BB0B8 0048+00 s=1 e=0 z=0  None .text      __dt__13dmg_rod_HIO_cFv                                      */
+/* 804BB070-804BB0B8 0048+00 s=2 e=0 z=0  None .text      __dt__13dmg_rod_HIO_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2669,7 +2670,7 @@ asm dmg_rod_HIO_c::~dmg_rod_HIO_c() {
 #pragma pop
 
 
-/* 804BB0B8-804BB130 0078+00 s=0 e=0 z=0  None .text      __sinit_d_a_mg_rod_cpp                                       */
+/* 804BB0B8-804BB130 0078+00 s=0 e=1 z=0  None .text      __sinit_d_a_mg_rod_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2691,22 +2692,22 @@ extern "C" asm static void func_804BB130() {
 #pragma pop
 
 
-/* 804BB168-804BB170 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 804BB168-804BB170 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_804BB168() {
+extern "C" asm static void func_804BB168() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/func_804BB168.s"
 }
 #pragma pop
 
 
-/* 804BB170-804BB178 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 804BB170-804BB178 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_804BB170() {
+extern "C" asm static void func_804BB170() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/func_804BB170.s"
 }

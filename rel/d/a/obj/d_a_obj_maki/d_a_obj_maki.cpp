@@ -80,10 +80,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -133,10 +133,10 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -148,27 +148,26 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daObj_Maki_Draw(obj_maki_class*); // 2
+static void daObj_Maki_Draw(obj_maki_class*); // 2
 static void daObj_Maki_Execute(obj_maki_class*); // 2
-bool daObj_Maki_IsDelete(obj_maki_class*); // 2
-void daObj_Maki_Delete(obj_maki_class*); // 2
+static bool daObj_Maki_IsDelete(obj_maki_class*); // 2
+static void daObj_Maki_Delete(obj_maki_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daObj_Maki_Create(fopAc_ac_c*); // 2
+static void daObj_Maki_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__16daObj_Maki_HIO_cFv(); // 1
-extern "C" void daObj_Maki_Draw__FP14obj_maki_class(); // 1
+extern "C" static void daObj_Maki_Draw__FP14obj_maki_class(); // 1
 extern "C" static void daObj_Maki_Execute__FP14obj_maki_class(); // 1
-extern "C" bool daObj_Maki_IsDelete__FP14obj_maki_class(); // 1
-extern "C" void daObj_Maki_Delete__FP14obj_maki_class(); // 1
+extern "C" static bool daObj_Maki_IsDelete__FP14obj_maki_class(); // 1
+extern "C" static void daObj_Maki_Delete__FP14obj_maki_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void daObj_Maki_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObj_Maki_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__16daObj_Maki_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_maki_cpp(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObj_Maki_Method[8];
 extern "C" extern void* g_profile_OBJ_MAKI[12];
 
 // 
@@ -235,6 +234,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_23(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -271,30 +272,30 @@ SECTION_DATA static u8 data_80C90984[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
 };
 
-/* 80C909C4-80C909E4 0020+00 s=0 e=0 z=0  None .data      l_daObj_Maki_Method                                          */
-SECTION_DATA void* l_daObj_Maki_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80C909C4-80C909E4 0020+00 s=1 e=0 z=0  None .data      l_daObj_Maki_Method                                          */
+SECTION_DATA static void* l_daObj_Maki_Method[8] = {
+	(void*)daObj_Maki_Create__FP10fopAc_ac_c,
+	(void*)daObj_Maki_Delete__FP14obj_maki_class,
+	(void*)daObj_Maki_Execute__FP14obj_maki_class,
+	(void*)daObj_Maki_IsDelete__FP14obj_maki_class,
+	(void*)daObj_Maki_Draw__FP14obj_maki_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C909E4-80C90A14 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_MAKI                                           */
+/* 80C909E4-80C90A14 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_MAKI                                           */
 SECTION_DATA void* g_profile_OBJ_MAKI[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x002B0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000730,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x00320000,
-	(void*)NULL,
+	(void*)&l_daObj_Maki_Method,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -303,28 +304,28 @@ SECTION_DATA void* g_profile_OBJ_MAKI[12] = {
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80C90A20-80C90A2C 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80C90A2C-80C90A38 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 80C90A38-80C90A44 000C+00 s=2 e=0 z=0  None .data      __vt__16daObj_Maki_HIO_c                                     */
 SECTION_DATA static void* __vt__16daObj_Maki_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__16daObj_Maki_HIO_cFv,
 };
 
 /* 80C8FE0C-80C8FE24 0018+00 s=1 e=0 z=0  None .text      __ct__16daObj_Maki_HIO_cFv                                   */
@@ -338,11 +339,11 @@ asm daObj_Maki_HIO_c::daObj_Maki_HIO_c() {
 #pragma pop
 
 
-/* 80C8FE24-80C8FEDC 00B8+00 s=0 e=0 z=0  None .text      daObj_Maki_Draw__FP14obj_maki_class                          */
+/* 80C8FE24-80C8FEDC 00B8+00 s=1 e=0 z=0  None .text      daObj_Maki_Draw__FP14obj_maki_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Maki_Draw(obj_maki_class* param_0) {
+asm static void daObj_Maki_Draw(obj_maki_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_maki/d_a_obj_maki/daObj_Maki_Draw__FP14obj_maki_class.s"
 }
@@ -376,7 +377,7 @@ SECTION_RODATA static u8 const lit_3934[4] = {
 /* 80C90950-80C90954 0004+00 s=1 e=0 z=0  None .rodata    @3935                                                        */
 SECTION_RODATA static u32 const lit_3935 = 0x469C4000;
 
-/* 80C8FEDC-80C90378 049C+00 s=1 e=0 z=0  None .text      daObj_Maki_Execute__FP14obj_maki_class                       */
+/* 80C8FEDC-80C90378 049C+00 s=2 e=0 z=0  None .text      daObj_Maki_Execute__FP14obj_maki_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -387,8 +388,8 @@ asm static void daObj_Maki_Execute(obj_maki_class* param_0) {
 #pragma pop
 
 
-/* 80C90378-80C90380 0008+00 s=0 e=0 z=0  None .text      daObj_Maki_IsDelete__FP14obj_maki_class                      */
-bool daObj_Maki_IsDelete(obj_maki_class* param_0) {
+/* 80C90378-80C90380 0008+00 s=1 e=0 z=0  None .text      daObj_Maki_IsDelete__FP14obj_maki_class                      */
+static bool daObj_Maki_IsDelete(obj_maki_class* param_0) {
 	return true;
 }
 
@@ -414,11 +415,11 @@ SECTION_DEAD char const* const stringBase_80C90969 = "F_SP118";
 /* 80C90A50-80C90A54 0004+00 s=2 e=0 z=0  None .bss       None                                                         */
 static u8 data_80C90A50[4];
 
-/* 80C90380-80C903F0 0070+00 s=0 e=0 z=0  None .text      daObj_Maki_Delete__FP14obj_maki_class                        */
+/* 80C90380-80C903F0 0070+00 s=1 e=0 z=0  None .text      daObj_Maki_Delete__FP14obj_maki_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Maki_Delete(obj_maki_class* param_0) {
+asm static void daObj_Maki_Delete(obj_maki_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_maki/d_a_obj_maki/daObj_Maki_Delete__FP14obj_maki_class.s"
 }
@@ -436,7 +437,7 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80C90544-80C9058C 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80C90544-80C9058C 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -454,18 +455,18 @@ static u8 lit_3764[12];
 /* 80C90A60-80C90A68 0008+00 s=2 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[8];
 
-/* 80C9058C-80C9080C 0280+00 s=0 e=0 z=0  None .text      daObj_Maki_Create__FP10fopAc_ac_c                            */
+/* 80C9058C-80C9080C 0280+00 s=1 e=0 z=0  None .text      daObj_Maki_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Maki_Create(fopAc_ac_c* param_0) {
+asm static void daObj_Maki_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_maki/d_a_obj_maki/daObj_Maki_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C9080C-80C90854 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80C9080C-80C90854 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -476,7 +477,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80C90854-80C9089C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C90854-80C9089C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -487,7 +488,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80C9089C-80C908E4 0048+00 s=1 e=0 z=0  None .text      __dt__16daObj_Maki_HIO_cFv                                   */
+/* 80C9089C-80C908E4 0048+00 s=2 e=0 z=0  None .text      __dt__16daObj_Maki_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -498,7 +499,7 @@ asm daObj_Maki_HIO_c::~daObj_Maki_HIO_c() {
 #pragma pop
 
 
-/* 80C908E4-80C90920 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_maki_cpp                                     */
+/* 80C908E4-80C90920 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_maki_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

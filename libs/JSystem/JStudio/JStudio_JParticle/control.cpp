@@ -55,7 +55,7 @@ struct JStudio_JParticle {
 
 };
 
-struct JPAEmitterCallBack {
+struct JPAParticleCallBack {
 };
 
 struct JGeometry {
@@ -67,7 +67,7 @@ struct JGeometry {
 
 };
 
-struct JPAParticleCallBack {
+struct JPAEmitterCallBack {
 };
 
 struct JPAEmitterManager {

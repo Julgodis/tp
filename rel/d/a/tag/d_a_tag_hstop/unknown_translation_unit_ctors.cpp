@@ -19,6 +19,7 @@ extern void* const data_805A4B0C[2];
 // 
 
 
+extern "C" void __sinit_d_a_tag_hstop_cpp(); // 1
 
 // 
 // Declarations:

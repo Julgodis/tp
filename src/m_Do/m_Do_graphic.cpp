@@ -117,13 +117,13 @@ struct dMenu_Collect3D_c {
 	/* 801B75E8 */ void setupItem3D(f32 (* )[4]);
 };
 
+struct _GXRenderModeObj {
+};
+
 struct JUTXfb {
 	struct EXfbNumber {
 	};
 
-};
-
-struct _GXRenderModeObj {
 };
 
 struct JFWDisplay {

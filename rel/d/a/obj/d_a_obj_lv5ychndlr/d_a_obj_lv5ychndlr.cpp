@@ -94,6 +94,9 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -136,10 +139,10 @@ struct Z2SeMgr {
 // 
 
 static void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
-void daObjYchndlr_create1st(daObjYchndlr_c*); // 2
-void daObjYchndlr_MoveBGDelete(daObjYchndlr_c*); // 2
-void daObjYchndlr_MoveBGExecute(daObjYchndlr_c*); // 2
-void daObjYchndlr_MoveBGDraw(daObjYchndlr_c*); // 2
+static void daObjYchndlr_create1st(daObjYchndlr_c*); // 2
+static void daObjYchndlr_MoveBGDelete(daObjYchndlr_c*); // 2
+static void daObjYchndlr_MoveBGExecute(daObjYchndlr_c*); // 2
+static void daObjYchndlr_MoveBGDraw(daObjYchndlr_c*); // 2
 
 extern "C" void create1st__14daObjYchndlr_cFv(); // 1
 extern "C" void setMtx__14daObjYchndlr_cFv(); // 1
@@ -150,19 +153,18 @@ extern "C" void Create__14daObjYchndlr_cFv(); // 1
 extern "C" void Execute__14daObjYchndlr_cFPPA3_A4_f(); // 1
 extern "C" void Draw__14daObjYchndlr_cFv(); // 1
 extern "C" void Delete__14daObjYchndlr_cFv(); // 1
-extern "C" void daObjYchndlr_create1st__FP14daObjYchndlr_c(); // 1
+extern "C" static void daObjYchndlr_create1st__FP14daObjYchndlr_c(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__8dCcD_CylFv(); // 1
 extern "C" void __ct__8dCcD_CylFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void daObjYchndlr_MoveBGDelete__FP14daObjYchndlr_c(); // 1
-extern "C" void daObjYchndlr_MoveBGExecute__FP14daObjYchndlr_c(); // 1
-extern "C" void daObjYchndlr_MoveBGDraw__FP14daObjYchndlr_c(); // 1
+extern "C" static void daObjYchndlr_MoveBGDelete__FP14daObjYchndlr_c(); // 1
+extern "C" static void daObjYchndlr_MoveBGExecute__FP14daObjYchndlr_c(); // 1
+extern "C" static void daObjYchndlr_MoveBGDraw__FP14daObjYchndlr_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__14daObjYchndlr_cFv(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* daObjYchndlr_METHODS[8];
 extern "C" extern void* g_profile_Obj_Ychndlr[12];
 
 // 
@@ -192,6 +194,9 @@ extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
 extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -228,6 +233,8 @@ extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__16dBgS_MoveBgActor[10];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -245,21 +252,6 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 // Declarations:
 // 
-
-/* ############################################################################################## */
-/* 80C6E9F4-80C6E9F8 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
-
-/* 80C6D758-80C6D7E0 0088+00 s=1 e=0 z=0  None .text      create1st__14daObjYchndlr_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjYchndlr_c::create1st() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/create1st__14daObjYchndlr_cFv.s"
-}
-#pragma pop
-
 
 /* ############################################################################################## */
 /* 80C6E980-80C6E988 0008+00 s=2 e=0 z=0  None .rodata    l_bmdidx                                                     */
@@ -281,97 +273,9 @@ SECTION_RODATA static u8 const lit_3699[4] = {
 /* 80C6E9A4-80C6E9A8 0004+00 s=1 e=0 z=0  None .rodata    @3700                                                        */
 SECTION_RODATA static u32 const lit_3700 = 0xC4520000;
 
-/* 80C6E9F8-80C6EA28 0030+00 s=2 e=0 z=0  None .data      l_shaft_vec                                                  */
-SECTION_DATA static u8 l_shaft_vec[48] = {
-	0xC3, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00, 0x43, 0x0C, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00, 0xC3, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0xC3, 0x48, 0x00, 0x00, 0x43, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC3, 0x48, 0x00, 0x00,
-};
-
-/* 80C6EA28-80C6EA30 0008+00 s=1 e=0 z=0  None .data      l_shaft_roty                                                 */
-SECTION_DATA static u8 l_shaft_roty[8] = {
-	0x7F, 0xFF, 0x7F, 0xFF, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C6D7E0-80C6D980 01A0+00 s=2 e=0 z=0  None .text      setMtx__14daObjYchndlr_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjYchndlr_c::setMtx() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/setMtx__14daObjYchndlr_cFv.s"
-}
-#pragma pop
-
-
-/* 80C6D980-80C6D9A8 0028+00 s=1 e=0 z=0  None .text      rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void rideCallBack(dBgW* param_0, fopAc_ac_c* param_1, fopAc_ac_c* param_2) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
 /* 80C6E9A8-80C6E9AC 0004+00 s=2 e=0 z=0  None .rodata    @3718                                                        */
 SECTION_RODATA static u32 const lit_3718 = 0x3F800000;
 
-/* 80C6D9A8-80C6DA5C 00B4+00 s=1 e=0 z=0  None .text      rideActor__14daObjYchndlr_cFP10fopAc_ac_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjYchndlr_c::rideActor(fopAc_ac_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/rideActor__14daObjYchndlr_cFP10fopAc_ac_c.s"
-}
-#pragma pop
-
-
-/* 80C6DA5C-80C6DB5C 0100+00 s=0 e=0 z=0  None .text      CreateHeap__14daObjYchndlr_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjYchndlr_c::CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/CreateHeap__14daObjYchndlr_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 80C6EA30-80C6EA74 0044+00 s=1 e=0 z=0  None .data      l_cc_src_shaft_cyl                                           */
-SECTION_DATA static u8 l_cc_src_shaft_cyl[68] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
-	0x42, 0xC8, 0x00, 0x00,
-};
-
-/* 80C6EA74-80C6EAB8 0044+00 s=1 e=0 z=0  None .data      l_cc_cyl_src                                                 */
-SECTION_DATA static u8 l_cc_cyl_src[68] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x40, 0x80, 0x00, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x43, 0xAF, 0x00, 0x00,
-	0x43, 0x16, 0x00, 0x00,
-};
-
-/* 80C6DB5C-80C6DC64 0108+00 s=0 e=0 z=0  None .text      Create__14daObjYchndlr_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjYchndlr_c::Create() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/Create__14daObjYchndlr_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
 /* 80C6E9AC-80C6E9B0 0004+00 s=1 e=0 z=0  None .rodata    @3881                                                        */
 SECTION_RODATA static u32 const lit_3881 = 0x3DCCCCCD;
 
@@ -417,7 +321,115 @@ SECTION_RODATA static u8 const lit_3894[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80C6DC64-80C6E300 069C+00 s=0 e=0 z=0  None .text      Execute__14daObjYchndlr_cFPPA3_A4_f                          */
+/* 80C6E9E8-80C6E9F2 000A+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80C6E9E8 = "Ychandelr";
+#pragma pop
+
+/* 80C6E9F4-80C6E9F8 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+
+/* 80C6D758-80C6D7E0 0088+00 s=1 e=0 z=0  None .text      create1st__14daObjYchndlr_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjYchndlr_c::create1st() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/create1st__14daObjYchndlr_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
+/* 80C6E9F8-80C6EA28 0030+00 s=2 e=0 z=0  None .data      l_shaft_vec                                                  */
+SECTION_DATA static u8 l_shaft_vec[48] = {
+	0xC3, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00, 0x43, 0x0C, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00, 0xC3, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0xC3, 0x48, 0x00, 0x00, 0x43, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC3, 0x48, 0x00, 0x00,
+};
+
+/* 80C6EA28-80C6EA30 0008+00 s=1 e=0 z=0  None .data      l_shaft_roty                                                 */
+SECTION_DATA static u8 l_shaft_roty[8] = {
+	0x7F, 0xFF, 0x7F, 0xFF, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C6D7E0-80C6D980 01A0+00 s=2 e=0 z=0  None .text      setMtx__14daObjYchndlr_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjYchndlr_c::setMtx() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/setMtx__14daObjYchndlr_cFv.s"
+}
+#pragma pop
+
+
+/* 80C6D980-80C6D9A8 0028+00 s=1 e=0 z=0  None .text      rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void rideCallBack(dBgW* param_0, fopAc_ac_c* param_1, fopAc_ac_c* param_2) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
+}
+#pragma pop
+
+
+/* 80C6D9A8-80C6DA5C 00B4+00 s=1 e=0 z=0  None .text      rideActor__14daObjYchndlr_cFP10fopAc_ac_c                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjYchndlr_c::rideActor(fopAc_ac_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/rideActor__14daObjYchndlr_cFP10fopAc_ac_c.s"
+}
+#pragma pop
+
+
+/* 80C6DA5C-80C6DB5C 0100+00 s=1 e=0 z=0  None .text      CreateHeap__14daObjYchndlr_cFv                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjYchndlr_c::CreateHeap() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/CreateHeap__14daObjYchndlr_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
+/* 80C6EA30-80C6EA74 0044+00 s=1 e=0 z=0  None .data      l_cc_src_shaft_cyl                                           */
+SECTION_DATA static u8 l_cc_src_shaft_cyl[68] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
+	0x42, 0xC8, 0x00, 0x00,
+};
+
+/* 80C6EA74-80C6EAB8 0044+00 s=1 e=0 z=0  None .data      l_cc_cyl_src                                                 */
+SECTION_DATA static u8 l_cc_cyl_src[68] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x40, 0x80, 0x00, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x43, 0xAF, 0x00, 0x00,
+	0x43, 0x16, 0x00, 0x00,
+};
+
+/* 80C6DB5C-80C6DC64 0108+00 s=1 e=0 z=0  None .text      Create__14daObjYchndlr_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjYchndlr_c::Create() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/Create__14daObjYchndlr_cFv.s"
+}
+#pragma pop
+
+
+/* 80C6DC64-80C6E300 069C+00 s=1 e=0 z=0  None .text      Execute__14daObjYchndlr_cFPPA3_A4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -428,7 +440,7 @@ asm void daObjYchndlr_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80C6E300-80C6E3C8 00C8+00 s=0 e=0 z=0  None .text      Draw__14daObjYchndlr_cFv                                     */
+/* 80C6E300-80C6E3C8 00C8+00 s=1 e=0 z=0  None .text      Draw__14daObjYchndlr_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -439,7 +451,7 @@ asm void daObjYchndlr_c::Draw() {
 #pragma pop
 
 
-/* 80C6E3C8-80C6E404 003C+00 s=0 e=0 z=0  None .text      Delete__14daObjYchndlr_cFv                                   */
+/* 80C6E3C8-80C6E404 003C+00 s=1 e=0 z=0  None .text      Delete__14daObjYchndlr_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -451,30 +463,30 @@ asm void daObjYchndlr_c::Delete() {
 
 
 /* ############################################################################################## */
-/* 80C6EAB8-80C6EAD8 0020+00 s=0 e=0 z=0  None .data      daObjYchndlr_METHODS                                         */
-SECTION_DATA void* daObjYchndlr_METHODS[8] = {
+/* 80C6EAB8-80C6EAD8 0020+00 s=1 e=0 z=0  None .data      daObjYchndlr_METHODS                                         */
+SECTION_DATA static void* daObjYchndlr_METHODS[8] = {
+	(void*)daObjYchndlr_create1st__FP14daObjYchndlr_c,
+	(void*)daObjYchndlr_MoveBGDelete__FP14daObjYchndlr_c,
+	(void*)daObjYchndlr_MoveBGExecute__FP14daObjYchndlr_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjYchndlr_MoveBGDraw__FP14daObjYchndlr_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C6EAD8-80C6EB08 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Ychndlr                                        */
+/* 80C6EAD8-80C6EB08 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Ychndlr                                        */
 SECTION_DATA void* g_profile_Obj_Ychndlr[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00C90000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000CA0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02980000,
-	(void*)NULL,
+	(void*)&daObjYchndlr_METHODS,
 	(void*)0x00040100,
 	(void*)0x000E0000,
 };
@@ -483,57 +495,57 @@ SECTION_DATA void* g_profile_Obj_Ychndlr[12] = {
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80C6EB14-80C6EB20 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80C6EB20-80C6EB2C 000C+00 s=5 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 80C6EB2C-80C6EB38 000C+00 s=5 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80C6EB38-80C6EB64 002C+00 s=2 e=0 z=0  None .data      __vt__14daObjYchndlr_c                                       */
 SECTION_DATA static void* __vt__14daObjYchndlr_c[11] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__14daObjYchndlr_cFv,
+	(void*)Create__14daObjYchndlr_cFv,
+	(void*)Execute__14daObjYchndlr_cFPPA3_A4_f,
+	(void*)Draw__14daObjYchndlr_cFv,
+	(void*)Delete__14daObjYchndlr_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)__dt__14daObjYchndlr_cFv,
 };
 
-/* 80C6E404-80C6E518 0114+00 s=0 e=0 z=0  None .text      daObjYchndlr_create1st__FP14daObjYchndlr_c                   */
+/* 80C6E404-80C6E518 0114+00 s=1 e=0 z=0  None .text      daObjYchndlr_create1st__FP14daObjYchndlr_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjYchndlr_create1st(daObjYchndlr_c* param_0) {
+asm static void daObjYchndlr_create1st(daObjYchndlr_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/daObjYchndlr_create1st__FP14daObjYchndlr_c.s"
 }
 #pragma pop
 
 
-/* 80C6E518-80C6E560 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80C6E518-80C6E560 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -544,7 +556,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80C6E560-80C6E5A8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C6E560-80C6E5A8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -577,7 +589,7 @@ asm dCcD_Cyl::dCcD_Cyl() {
 #pragma pop
 
 
-/* 80C6E6F8-80C6E754 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80C6E6F8-80C6E754 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -588,40 +600,40 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80C6E754-80C6E774 0020+00 s=0 e=0 z=0  None .text      daObjYchndlr_MoveBGDelete__FP14daObjYchndlr_c                */
+/* 80C6E754-80C6E774 0020+00 s=1 e=0 z=0  None .text      daObjYchndlr_MoveBGDelete__FP14daObjYchndlr_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjYchndlr_MoveBGDelete(daObjYchndlr_c* param_0) {
+asm static void daObjYchndlr_MoveBGDelete(daObjYchndlr_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/daObjYchndlr_MoveBGDelete__FP14daObjYchndlr_c.s"
 }
 #pragma pop
 
 
-/* 80C6E774-80C6E794 0020+00 s=0 e=0 z=0  None .text      daObjYchndlr_MoveBGExecute__FP14daObjYchndlr_c               */
+/* 80C6E774-80C6E794 0020+00 s=1 e=0 z=0  None .text      daObjYchndlr_MoveBGExecute__FP14daObjYchndlr_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjYchndlr_MoveBGExecute(daObjYchndlr_c* param_0) {
+asm static void daObjYchndlr_MoveBGExecute(daObjYchndlr_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/daObjYchndlr_MoveBGExecute__FP14daObjYchndlr_c.s"
 }
 #pragma pop
 
 
-/* 80C6E794-80C6E7C0 002C+00 s=0 e=0 z=0  None .text      daObjYchndlr_MoveBGDraw__FP14daObjYchndlr_c                  */
+/* 80C6E794-80C6E7C0 002C+00 s=1 e=0 z=0  None .text      daObjYchndlr_MoveBGDraw__FP14daObjYchndlr_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjYchndlr_MoveBGDraw(daObjYchndlr_c* param_0) {
+asm static void daObjYchndlr_MoveBGDraw(daObjYchndlr_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/daObjYchndlr_MoveBGDraw__FP14daObjYchndlr_c.s"
 }
 #pragma pop
 
 
-/* 80C6E7C0-80C6E808 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80C6E7C0-80C6E808 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -632,7 +644,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80C6E808-80C6E978 0170+00 s=0 e=0 z=0  None .text      __dt__14daObjYchndlr_cFv                                     */
+/* 80C6E808-80C6E978 0170+00 s=1 e=0 z=0  None .text      __dt__14daObjYchndlr_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -642,12 +654,4 @@ asm daObjYchndlr_c::~daObjYchndlr_c() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80C6E9E8-80C6E9F2 000A+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80C6E9E8 = "Ychandelr";
-#pragma pop
 

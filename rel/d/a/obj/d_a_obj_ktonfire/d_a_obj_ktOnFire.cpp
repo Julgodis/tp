@@ -58,10 +58,10 @@ struct dSv_info_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -102,10 +102,10 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -117,10 +117,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daKtOnFire_Draw(daKtOnFire_c*); // 2
-void daKtOnFire_Execute(daKtOnFire_c*); // 2
-void daKtOnFire_Delete(daKtOnFire_c*); // 2
-void daKtOnFire_Create(fopAc_ac_c*); // 2
+static void daKtOnFire_Draw(daKtOnFire_c*); // 2
+static void daKtOnFire_Execute(daKtOnFire_c*); // 2
+static void daKtOnFire_Delete(daKtOnFire_c*); // 2
+static void daKtOnFire_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__16daKtOnFire_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -134,13 +134,12 @@ extern "C" void cutLight__12daKtOnFire_cFv(); // 1
 extern "C" void Execute__12daKtOnFire_cFv(); // 1
 extern "C" bool Draw__12daKtOnFire_cFv(); // 1
 extern "C" void Delete__12daKtOnFire_cFv(); // 1
-extern "C" void daKtOnFire_Draw__FP12daKtOnFire_c(); // 1
-extern "C" void daKtOnFire_Execute__FP12daKtOnFire_c(); // 1
-extern "C" void daKtOnFire_Delete__FP12daKtOnFire_c(); // 1
-extern "C" void daKtOnFire_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daKtOnFire_Draw__FP12daKtOnFire_c(); // 1
+extern "C" static void daKtOnFire_Execute__FP12daKtOnFire_c(); // 1
+extern "C" static void daKtOnFire_Delete__FP12daKtOnFire_c(); // 1
+extern "C" static void daKtOnFire_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__16daKtOnFire_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_ktOnFire_cpp(); // 1
-extern "C" extern void* l_daKtOnFire_Method[8];
 extern "C" extern void* g_profile_Tag_KtOnFire[12];
 
 // 
@@ -180,6 +179,8 @@ extern "C" void __dl__FPv(); // 1
 extern "C" void PSMTXTrans(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
@@ -211,30 +212,30 @@ SECTION_DATA static u8 mCcDCyl__12daKtOnFire_c[68] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8058D038-8058D058 0020+00 s=0 e=0 z=0  None .data      l_daKtOnFire_Method                                          */
-SECTION_DATA void* l_daKtOnFire_Method[8] = {
+/* 8058D038-8058D058 0020+00 s=1 e=0 z=0  None .data      l_daKtOnFire_Method                                          */
+SECTION_DATA static void* l_daKtOnFire_Method[8] = {
+	(void*)daKtOnFire_Create__FP10fopAc_ac_c,
+	(void*)daKtOnFire_Delete__FP12daKtOnFire_c,
+	(void*)daKtOnFire_Execute__FP12daKtOnFire_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daKtOnFire_Draw__FP12daKtOnFire_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 8058D058-8058D088 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_KtOnFire                                       */
+/* 8058D058-8058D088 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_KtOnFire                                       */
 SECTION_DATA void* g_profile_Tag_KtOnFire[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01680000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000728,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01F60000,
-	(void*)NULL,
+	(void*)&l_daKtOnFire_Method,
 	(void*)0x00044000,
 	(void*)0x000E0000,
 };
@@ -243,28 +244,28 @@ SECTION_DATA void* g_profile_Tag_KtOnFire[12] = {
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 8058D094-8058D0A0 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 8058D0A0-8058D0AC 000C+00 s=2 e=0 z=0  None .data      __vt__16daKtOnFire_HIO_c                                     */
 SECTION_DATA static void* __vt__16daKtOnFire_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__16daKtOnFire_HIO_cFv,
 };
 
 /* 8058D0AC-8058D0B8 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
 /* 8058C60C-8058C630 0024+00 s=1 e=0 z=0  None .text      __ct__16daKtOnFire_HIO_cFv                                   */
@@ -278,7 +279,7 @@ asm daKtOnFire_HIO_c::daKtOnFire_HIO_c() {
 #pragma pop
 
 
-/* 8058C630-8058C678 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 8058C630-8058C678 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -331,7 +332,7 @@ asm void daKtOnFire_c::create() {
 #pragma pop
 
 
-/* 8058C8D0-8058C918 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 8058C8D0-8058C918 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -342,7 +343,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 8058C918-8058C960 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 8058C918-8058C960 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -437,51 +438,51 @@ asm void daKtOnFire_c::Delete() {
 #pragma pop
 
 
-/* 8058CE28-8058CE48 0020+00 s=0 e=0 z=0  None .text      daKtOnFire_Draw__FP12daKtOnFire_c                            */
+/* 8058CE28-8058CE48 0020+00 s=1 e=0 z=0  None .text      daKtOnFire_Draw__FP12daKtOnFire_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKtOnFire_Draw(daKtOnFire_c* param_0) {
+asm static void daKtOnFire_Draw(daKtOnFire_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ktonfire/d_a_obj_ktOnFire/daKtOnFire_Draw__FP12daKtOnFire_c.s"
 }
 #pragma pop
 
 
-/* 8058CE48-8058CE68 0020+00 s=0 e=0 z=0  None .text      daKtOnFire_Execute__FP12daKtOnFire_c                         */
+/* 8058CE48-8058CE68 0020+00 s=1 e=0 z=0  None .text      daKtOnFire_Execute__FP12daKtOnFire_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKtOnFire_Execute(daKtOnFire_c* param_0) {
+asm static void daKtOnFire_Execute(daKtOnFire_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ktonfire/d_a_obj_ktOnFire/daKtOnFire_Execute__FP12daKtOnFire_c.s"
 }
 #pragma pop
 
 
-/* 8058CE68-8058CE88 0020+00 s=0 e=0 z=0  None .text      daKtOnFire_Delete__FP12daKtOnFire_c                          */
+/* 8058CE68-8058CE88 0020+00 s=1 e=0 z=0  None .text      daKtOnFire_Delete__FP12daKtOnFire_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKtOnFire_Delete(daKtOnFire_c* param_0) {
+asm static void daKtOnFire_Delete(daKtOnFire_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ktonfire/d_a_obj_ktOnFire/daKtOnFire_Delete__FP12daKtOnFire_c.s"
 }
 #pragma pop
 
 
-/* 8058CE88-8058CEA8 0020+00 s=0 e=0 z=0  None .text      daKtOnFire_Create__FP10fopAc_ac_c                            */
+/* 8058CE88-8058CEA8 0020+00 s=1 e=0 z=0  None .text      daKtOnFire_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKtOnFire_Create(fopAc_ac_c* param_0) {
+asm static void daKtOnFire_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ktonfire/d_a_obj_ktOnFire/daKtOnFire_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8058CEA8-8058CF04 005C+00 s=1 e=0 z=0  None .text      __dt__16daKtOnFire_HIO_cFv                                   */
+/* 8058CEA8-8058CF04 005C+00 s=2 e=0 z=0  None .text      __dt__16daKtOnFire_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -492,7 +493,7 @@ asm daKtOnFire_HIO_c::~daKtOnFire_HIO_c() {
 #pragma pop
 
 
-/* 8058CF04-8058CF74 0070+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_ktOnFire_cpp                                 */
+/* 8058CF04-8058CF74 0070+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_ktOnFire_cpp                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

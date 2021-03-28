@@ -36,22 +36,21 @@ struct dSv_event_c {
 // Forward References:
 // 
 
-bool daNpc_Fish_Draw(npc_fish_class*); // 2
-bool daNpc_Fish_Execute(npc_fish_class*); // 2
-bool daNpc_Fish_IsDelete(npc_fish_class*); // 2
-bool daNpc_Fish_Delete(npc_fish_class*); // 2
+static bool daNpc_Fish_Draw(npc_fish_class*); // 2
+static bool daNpc_Fish_Execute(npc_fish_class*); // 2
+static bool daNpc_Fish_IsDelete(npc_fish_class*); // 2
+static bool daNpc_Fish_Delete(npc_fish_class*); // 2
 static void fish_set(fopAc_ac_c*, fish_data_s*); // 2
-void daNpc_Fish_Create(fopAc_ac_c*); // 2
+static void daNpc_Fish_Create(fopAc_ac_c*); // 2
 
-extern "C" bool daNpc_Fish_Draw__FP14npc_fish_class(); // 1
-extern "C" bool daNpc_Fish_Execute__FP14npc_fish_class(); // 1
-extern "C" bool daNpc_Fish_IsDelete__FP14npc_fish_class(); // 1
-extern "C" bool daNpc_Fish_Delete__FP14npc_fish_class(); // 1
+extern "C" static bool daNpc_Fish_Draw__FP14npc_fish_class(); // 1
+extern "C" static bool daNpc_Fish_Execute__FP14npc_fish_class(); // 1
+extern "C" static bool daNpc_Fish_IsDelete__FP14npc_fish_class(); // 1
+extern "C" static bool daNpc_Fish_Delete__FP14npc_fish_class(); // 1
 extern "C" static void fish_set__FP10fopAc_ac_cP11fish_data_s(); // 1
-extern "C" void daNpc_Fish_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daNpc_Fish_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daNpc_Fish_Method[8];
 extern "C" extern void* g_profile_NPC_FISH[12];
 
 // 
@@ -71,6 +70,8 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -79,26 +80,26 @@ extern "C" extern u8 g_env_light[4880];
 // Declarations:
 // 
 
-/* 80542178-80542180 0008+00 s=0 e=0 z=0  None .text      daNpc_Fish_Draw__FP14npc_fish_class                          */
-bool daNpc_Fish_Draw(npc_fish_class* param_0) {
+/* 80542178-80542180 0008+00 s=1 e=0 z=0  None .text      daNpc_Fish_Draw__FP14npc_fish_class                          */
+static bool daNpc_Fish_Draw(npc_fish_class* param_0) {
 	return true;
 }
 
 
-/* 80542180-80542188 0008+00 s=0 e=0 z=0  None .text      daNpc_Fish_Execute__FP14npc_fish_class                       */
-bool daNpc_Fish_Execute(npc_fish_class* param_0) {
+/* 80542180-80542188 0008+00 s=1 e=0 z=0  None .text      daNpc_Fish_Execute__FP14npc_fish_class                       */
+static bool daNpc_Fish_Execute(npc_fish_class* param_0) {
 	return true;
 }
 
 
-/* 80542188-80542190 0008+00 s=0 e=0 z=0  None .text      daNpc_Fish_IsDelete__FP14npc_fish_class                      */
-bool daNpc_Fish_IsDelete(npc_fish_class* param_0) {
+/* 80542188-80542190 0008+00 s=1 e=0 z=0  None .text      daNpc_Fish_IsDelete__FP14npc_fish_class                      */
+static bool daNpc_Fish_IsDelete(npc_fish_class* param_0) {
 	return true;
 }
 
 
-/* 80542190-80542198 0008+00 s=0 e=0 z=0  None .text      daNpc_Fish_Delete__FP14npc_fish_class                        */
-bool daNpc_Fish_Delete(npc_fish_class* param_0) {
+/* 80542190-80542198 0008+00 s=1 e=0 z=0  None .text      daNpc_Fish_Delete__FP14npc_fish_class                        */
+static bool daNpc_Fish_Delete(npc_fish_class* param_0) {
 	return true;
 }
 
@@ -310,11 +311,11 @@ SECTION_DATA static u8 lf_pos[144] = {
 	0xC4, 0x2F, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0xC6, 0x0B, 0x84, 0x00, 0xC4, 0x1D, 0x80, 0x00,
 };
 
-/* 80542254-805424B8 0264+00 s=0 e=0 z=0  None .text      daNpc_Fish_Create__FP10fopAc_ac_c                            */
+/* 80542254-805424B8 0264+00 s=1 e=0 z=0  None .text      daNpc_Fish_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpc_Fish_Create(fopAc_ac_c* param_0) {
+asm static void daNpc_Fish_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_fish/d_a_npc_fish/daNpc_Fish_Create__FP10fopAc_ac_c.s"
 }
@@ -322,30 +323,30 @@ asm void daNpc_Fish_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80542DC8-80542DE8 0020+00 s=0 e=0 z=0  None .data      l_daNpc_Fish_Method                                          */
-SECTION_DATA void* l_daNpc_Fish_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80542DC8-80542DE8 0020+00 s=1 e=0 z=0  None .data      l_daNpc_Fish_Method                                          */
+SECTION_DATA static void* l_daNpc_Fish_Method[8] = {
+	(void*)daNpc_Fish_Create__FP10fopAc_ac_c,
+	(void*)daNpc_Fish_Delete__FP14npc_fish_class,
+	(void*)daNpc_Fish_Execute__FP14npc_fish_class,
+	(void*)daNpc_Fish_IsDelete__FP14npc_fish_class,
+	(void*)daNpc_Fish_Draw__FP14npc_fish_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80542DE8-80542E18 0030+00 s=0 e=0 z=0  None .data      g_profile_NPC_FISH                                           */
+/* 80542DE8-80542E18 0030+00 s=0 e=0 z=1  None .data      g_profile_NPC_FISH                                           */
 SECTION_DATA void* g_profile_NPC_FISH[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01350000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000005B4,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02CF0000,
-	(void*)NULL,
+	(void*)&l_daNpc_Fish_Method,
 	(void*)0x00040100,
 	(void*)0x00060000,
 };

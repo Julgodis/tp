@@ -17,14 +17,14 @@ struct JUtility {
 
 };
 
-struct J2DTextBoxHBinding {
-};
-
 struct JUTFont {
 	/* 802DEDC4 */ void setGradColor(JUtility::TColor, JUtility::TColor);
 };
 
 struct J2DTextBoxVBinding {
+};
+
+struct J2DTextBoxHBinding {
 };
 
 struct J2DPrint {

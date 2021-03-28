@@ -19,6 +19,7 @@ extern void* const data_80A0663C[2];
 // 
 
 
+extern "C" void __sinit_d_a_npc_hoz_cpp(); // 1
 
 // 
 // Declarations:

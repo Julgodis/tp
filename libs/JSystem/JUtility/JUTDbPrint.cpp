@@ -11,11 +11,6 @@
 // Types:
 // 
 
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
 struct JUtility {
 	struct TColor {
 	};
@@ -25,6 +20,11 @@ struct JUtility {
 struct JUTFont {
 	/* 802DED70 */ void setCharColor(JUtility::TColor);
 	/* 802DEE28 */ void drawString_size_scale(f32, f32, f32, f32, char const*, u32, bool);
+};
+
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 struct JUTDbPrint {

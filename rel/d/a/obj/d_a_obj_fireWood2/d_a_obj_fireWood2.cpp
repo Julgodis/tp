@@ -59,10 +59,10 @@ struct dSv_info_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {
@@ -103,10 +103,10 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -118,10 +118,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daFireWood2_Draw(daFireWood2_c*); // 2
-void daFireWood2_Execute(daFireWood2_c*); // 2
-void daFireWood2_Delete(daFireWood2_c*); // 2
-void daFireWood2_Create(fopAc_ac_c*); // 2
+static void daFireWood2_Draw(daFireWood2_c*); // 2
+static void daFireWood2_Execute(daFireWood2_c*); // 2
+static void daFireWood2_Delete(daFireWood2_c*); // 2
+static void daFireWood2_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__17daFireWood2_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -136,13 +136,12 @@ extern "C" void pointLightProc__13daFireWood2_cFv(); // 1
 extern "C" void Execute__13daFireWood2_cFv(); // 1
 extern "C" bool Draw__13daFireWood2_cFv(); // 1
 extern "C" void Delete__13daFireWood2_cFv(); // 1
-extern "C" void daFireWood2_Draw__FP13daFireWood2_c(); // 1
-extern "C" void daFireWood2_Execute__FP13daFireWood2_c(); // 1
-extern "C" void daFireWood2_Delete__FP13daFireWood2_c(); // 1
-extern "C" void daFireWood2_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daFireWood2_Draw__FP13daFireWood2_c(); // 1
+extern "C" static void daFireWood2_Execute__FP13daFireWood2_c(); // 1
+extern "C" static void daFireWood2_Delete__FP13daFireWood2_c(); // 1
+extern "C" static void daFireWood2_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__17daFireWood2_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_fireWood2_cpp(); // 1
-extern "C" extern void* l_daFireWood2_Method[8];
 extern "C" extern void* g_profile_Obj_FireWood2[12];
 
 // 
@@ -184,6 +183,8 @@ extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
 extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void PSMTXTrans(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
@@ -223,30 +224,30 @@ SECTION_DATA static u8 l_cull_box[24] = {
 	0x42, 0xC8, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
 };
 
-/* 80BE8FF4-80BE9014 0020+00 s=0 e=0 z=0  None .data      l_daFireWood2_Method                                         */
-SECTION_DATA void* l_daFireWood2_Method[8] = {
+/* 80BE8FF4-80BE9014 0020+00 s=1 e=0 z=0  None .data      l_daFireWood2_Method                                         */
+SECTION_DATA static void* l_daFireWood2_Method[8] = {
+	(void*)daFireWood2_Create__FP10fopAc_ac_c,
+	(void*)daFireWood2_Delete__FP13daFireWood2_c,
+	(void*)daFireWood2_Execute__FP13daFireWood2_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daFireWood2_Draw__FP13daFireWood2_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80BE9014-80BE9044 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_FireWood2                                      */
+/* 80BE9014-80BE9044 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_FireWood2                                      */
 SECTION_DATA void* g_profile_Obj_FireWood2[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00390000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000740,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01EE0000,
-	(void*)NULL,
+	(void*)&l_daFireWood2_Method,
 	(void*)0x00060000,
 	(void*)0x000E0000,
 };
@@ -255,28 +256,28 @@ SECTION_DATA void* g_profile_Obj_FireWood2[12] = {
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 80BE9050-80BE905C 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80BE905C-80BE9068 000C+00 s=2 e=0 z=0  None .data      __vt__17daFireWood2_HIO_c                                    */
 SECTION_DATA static void* __vt__17daFireWood2_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__17daFireWood2_HIO_cFv,
 };
 
 /* 80BE9068-80BE9074 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
 /* 80BE824C-80BE8288 003C+00 s=1 e=0 z=0  None .text      __ct__17daFireWood2_HIO_cFv                                  */
@@ -290,7 +291,7 @@ asm daFireWood2_HIO_c::daFireWood2_HIO_c() {
 #pragma pop
 
 
-/* 80BE8288-80BE82D0 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80BE8288-80BE82D0 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -330,7 +331,7 @@ asm void daFireWood2_c::create() {
 #pragma pop
 
 
-/* 80BE85B0-80BE85F8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80BE85B0-80BE85F8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -341,7 +342,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80BE85F8-80BE8640 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80BE85F8-80BE8640 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -466,51 +467,51 @@ asm void daFireWood2_c::Delete() {
 #pragma pop
 
 
-/* 80BE8DD4-80BE8DF4 0020+00 s=0 e=0 z=0  None .text      daFireWood2_Draw__FP13daFireWood2_c                          */
+/* 80BE8DD4-80BE8DF4 0020+00 s=1 e=0 z=0  None .text      daFireWood2_Draw__FP13daFireWood2_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daFireWood2_Draw(daFireWood2_c* param_0) {
+asm static void daFireWood2_Draw(daFireWood2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood2/d_a_obj_fireWood2/daFireWood2_Draw__FP13daFireWood2_c.s"
 }
 #pragma pop
 
 
-/* 80BE8DF4-80BE8E14 0020+00 s=0 e=0 z=0  None .text      daFireWood2_Execute__FP13daFireWood2_c                       */
+/* 80BE8DF4-80BE8E14 0020+00 s=1 e=0 z=0  None .text      daFireWood2_Execute__FP13daFireWood2_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daFireWood2_Execute(daFireWood2_c* param_0) {
+asm static void daFireWood2_Execute(daFireWood2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood2/d_a_obj_fireWood2/daFireWood2_Execute__FP13daFireWood2_c.s"
 }
 #pragma pop
 
 
-/* 80BE8E14-80BE8E34 0020+00 s=0 e=0 z=0  None .text      daFireWood2_Delete__FP13daFireWood2_c                        */
+/* 80BE8E14-80BE8E34 0020+00 s=1 e=0 z=0  None .text      daFireWood2_Delete__FP13daFireWood2_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daFireWood2_Delete(daFireWood2_c* param_0) {
+asm static void daFireWood2_Delete(daFireWood2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood2/d_a_obj_fireWood2/daFireWood2_Delete__FP13daFireWood2_c.s"
 }
 #pragma pop
 
 
-/* 80BE8E34-80BE8E54 0020+00 s=0 e=0 z=0  None .text      daFireWood2_Create__FP10fopAc_ac_c                           */
+/* 80BE8E34-80BE8E54 0020+00 s=1 e=0 z=0  None .text      daFireWood2_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daFireWood2_Create(fopAc_ac_c* param_0) {
+asm static void daFireWood2_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood2/d_a_obj_fireWood2/daFireWood2_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80BE8E54-80BE8EB0 005C+00 s=1 e=0 z=0  None .text      __dt__17daFireWood2_HIO_cFv                                  */
+/* 80BE8E54-80BE8EB0 005C+00 s=2 e=0 z=0  None .text      __dt__17daFireWood2_HIO_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -521,7 +522,7 @@ asm daFireWood2_HIO_c::~daFireWood2_HIO_c() {
 #pragma pop
 
 
-/* 80BE8EB0-80BE8F20 0070+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_fireWood2_cpp                                */
+/* 80BE8EB0-80BE8F20 0070+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_fireWood2_cpp                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

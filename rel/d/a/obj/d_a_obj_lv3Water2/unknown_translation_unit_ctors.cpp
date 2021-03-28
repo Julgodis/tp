@@ -19,6 +19,7 @@ extern void* const data_80C5B350[2];
 // 
 
 
+extern "C" void __sinit_d_a_obj_lv3Water2_cpp(); // 1
 
 // 
 // Declarations:

@@ -19,6 +19,7 @@ extern void* const data_8055A5A0[2];
 // 
 
 
+extern "C" void __sinit_d_a_npc_kolin_cpp(); // 1
 
 // 
 // Declarations:

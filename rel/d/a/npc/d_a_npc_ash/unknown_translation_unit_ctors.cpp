@@ -19,6 +19,7 @@ extern void* const data_8095D62C[2];
 // 
 
 
+extern "C" void __sinit_d_a_npc_ash_cpp(); // 1
 
 // 
 // Declarations:

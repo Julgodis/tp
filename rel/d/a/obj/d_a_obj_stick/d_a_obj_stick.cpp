@@ -148,11 +148,11 @@ struct cM3dGCir {
 // Forward References:
 // 
 
-void daObj_Stick_Create(void*); // 2
-void daObj_Stick_Delete(void*); // 2
-void daObj_Stick_Execute(void*); // 2
-void daObj_Stick_Draw(void*); // 2
-bool daObj_Stick_IsDelete(void*); // 2
+static void daObj_Stick_Create(void*); // 2
+static void daObj_Stick_Delete(void*); // 2
+static void daObj_Stick_Execute(void*); // 2
+static void daObj_Stick_Draw(void*); // 2
+static bool daObj_Stick_IsDelete(void*); // 2
 
 extern "C" void __dt__13daObj_Stick_cFv(); // 1
 extern "C" void create__13daObj_Stick_cFv(); // 1
@@ -171,18 +171,17 @@ extern "C" void isDelete__13daObj_Stick_cFv(); // 1
 extern "C" void setEnvTevColor__13daObj_Stick_cFv(); // 1
 extern "C" void setRoomNo__13daObj_Stick_cFv(); // 1
 extern "C" void setMtx__13daObj_Stick_cFv(); // 1
-extern "C" void daObj_Stick_Create__FPv(); // 1
-extern "C" void daObj_Stick_Delete__FPv(); // 1
-extern "C" void daObj_Stick_Execute__FPv(); // 1
-extern "C" void daObj_Stick_Draw__FPv(); // 1
-extern "C" bool daObj_Stick_IsDelete__FPv(); // 1
+extern "C" static void daObj_Stick_Create__FPv(); // 1
+extern "C" static void daObj_Stick_Delete__FPv(); // 1
+extern "C" static void daObj_Stick_Execute__FPv(); // 1
+extern "C" static void daObj_Stick_Draw__FPv(); // 1
+extern "C" static bool daObj_Stick_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __sinit_d_a_obj_stick_cpp(); // 1
 extern "C" void __dt__19daObj_Stick_Param_cFv(); // 1
-extern "C" void func_80599E18(); // 1
-extern "C" void func_80599E20(); // 1
+extern "C" static void func_80599E18(); // 1
+extern "C" static void func_80599E20(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* daObj_Stick_MethodTable[8];
 extern "C" extern void* g_profile_OBJ_STICK[12];
 
 // 
@@ -235,6 +234,8 @@ extern "C" void PSMTXTrans(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" extern u8 const mCcDObjData__8daNpcT_c[48];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
@@ -249,112 +250,6 @@ extern "C" void __register_global_object(); // 1
 // 
 // Declarations:
 // 
-
-/* ############################################################################################## */
-/* 80599E70-80599EB0 0040+00 s=2 e=0 z=0  None .data      mCcDSph__13daObj_Stick_c                                     */
-SECTION_DATA static u8 mCcDSph__13daObj_Stick_c[64] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80599EB0-80599EB4 0004+00 s=1 e=0 z=0  None .data      l_resName                                                    */
-SECTION_DATA static void* l_resName = (void*)NULL;
-
-/* 80599EB4-80599ED4 0020+00 s=0 e=0 z=0  None .data      daObj_Stick_MethodTable                                      */
-SECTION_DATA void* daObj_Stick_MethodTable[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80599ED4-80599F04 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_STICK                                          */
-SECTION_DATA void* g_profile_OBJ_STICK[12] = {
-	(void*)0xFFFFFFFD,
-	(void*)0x0007FFFD,
-	(void*)0x01300000,
-	(void*)NULL,
-	(void*)0x00000950,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)0x00550000,
-	(void*)NULL,
-	(void*)0x00044100,
-	(void*)0x000E0000,
-};
-
-/* 80599F04-80599F28 0024+00 s=3 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
-SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80599F28-80599F34 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
-SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80599F34-80599F40 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
-SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80599F40-80599F4C 000C+00 s=2 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
-SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80599F4C-80599F58 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80599F58-80599F64 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
-SECTION_DATA static void* __vt__8cM3dGSph[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80599F64-80599F70 000C+00 s=2 e=0 z=0  None .data      __vt__13daObj_Stick_c                                        */
-SECTION_DATA static void* __vt__13daObj_Stick_c[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 8059922C-805993E8 01BC+00 s=0 e=0 z=0  None .text      __dt__13daObj_Stick_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daObj_Stick_c::~daObj_Stick_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/__dt__13daObj_Stick_cFv.s"
-}
-#pragma pop
-
 
 /* ############################################################################################## */
 /* 80599E3C-80599E4C 0010+00 s=3 e=0 z=0  None .rodata    m__19daObj_Stick_Param_c                                     */
@@ -377,6 +272,124 @@ SECTION_RODATA static u32 const lit_3921 = 0x42960000;
 /* 80599E5C-80599E60 0004+00 s=3 e=0 z=0  None .rodata    @3922                                                        */
 SECTION_RODATA static u32 const lit_3922 = 0xCE6E6B28;
 
+/* 80599E60-80599E64 0004+00 s=1 e=0 z=0  None .rodata    @4045                                                        */
+SECTION_RODATA static u32 const lit_4045 = 0x41A00000;
+
+/* 80599E64-80599E68 0004+00 s=1 e=0 z=0  None .rodata    @4046                                                        */
+SECTION_RODATA static u32 const lit_4046 = 0x3F800000;
+
+/* 80599E68-80599E6E 0006+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80599E68 = "Taro6";
+#pragma pop
+
+/* 80599E70-80599EB0 0040+00 s=2 e=0 z=0  None .data      mCcDSph__13daObj_Stick_c                                     */
+SECTION_DATA static u8 mCcDSph__13daObj_Stick_c[64] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80599EB0-80599EB4 0004+00 s=1 e=0 z=0  None .data      l_resName                                                    */
+SECTION_DATA static void* l_resName = (void*)&stringBase0;
+
+/* 80599EB4-80599ED4 0020+00 s=1 e=0 z=0  None .data      daObj_Stick_MethodTable                                      */
+SECTION_DATA static void* daObj_Stick_MethodTable[8] = {
+	(void*)daObj_Stick_Create__FPv,
+	(void*)daObj_Stick_Delete__FPv,
+	(void*)daObj_Stick_Execute__FPv,
+	(void*)daObj_Stick_IsDelete__FPv,
+	(void*)daObj_Stick_Draw__FPv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80599ED4-80599F04 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_STICK                                          */
+SECTION_DATA void* g_profile_OBJ_STICK[12] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01300000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x00000950,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopAc_Method,
+	(void*)0x00550000,
+	(void*)&daObj_Stick_MethodTable,
+	(void*)0x00044100,
+	(void*)0x000E0000,
+};
+
+/* 80599F04-80599F28 0024+00 s=3 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
+SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80599E20,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80599E18,
+};
+
+/* 80599F28-80599F34 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
+SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
+};
+
+/* 80599F34-80599F40 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
+SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
+};
+
+/* 80599F40-80599F4C 000C+00 s=2 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
+SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
+};
+
+/* 80599F4C-80599F58 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA static void* __vt__8cM3dGAab[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
+};
+
+/* 80599F58-80599F64 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
+SECTION_DATA static void* __vt__8cM3dGSph[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
+};
+
+/* 80599F64-80599F70 000C+00 s=2 e=0 z=0  None .data      __vt__13daObj_Stick_c                                        */
+SECTION_DATA static void* __vt__13daObj_Stick_c[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13daObj_Stick_cFv,
+};
+
+/* 8059922C-805993E8 01BC+00 s=1 e=0 z=0  None .text      __dt__13daObj_Stick_cFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm daObj_Stick_c::~daObj_Stick_c() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/__dt__13daObj_Stick_cFv.s"
+}
+#pragma pop
+
+
 /* 805993E8-805996BC 02D4+00 s=1 e=0 z=0  None .text      create__13daObj_Stick_cFv                                    */
 #pragma push
 #pragma optimization_level 0
@@ -388,7 +401,7 @@ asm void daObj_Stick_c::create() {
 #pragma pop
 
 
-/* 805996BC-80599704 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 805996BC-80599704 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -399,7 +412,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80599704-8059974C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80599704-8059974C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -410,7 +423,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 8059974C-805997BC 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 8059974C-805997BC 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -421,7 +434,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 805997BC-80599818 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 805997BC-80599818 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -432,7 +445,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80599818-80599888 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80599818-80599888 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -475,13 +488,6 @@ asm void daObj_Stick_c::Execute() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80599E60-80599E64 0004+00 s=1 e=0 z=0  None .rodata    @4045                                                        */
-SECTION_RODATA static u32 const lit_4045 = 0x41A00000;
-
-/* 80599E64-80599E68 0004+00 s=1 e=0 z=0  None .rodata    @4046                                                        */
-SECTION_RODATA static u32 const lit_4046 = 0x3F800000;
 
 /* 80599A78-80599B3C 00C4+00 s=1 e=0 z=0  None .text      Draw__13daObj_Stick_cFv                                      */
 #pragma push
@@ -560,57 +566,57 @@ asm void daObj_Stick_c::setMtx() {
 #pragma pop
 
 
-/* 80599C8C-80599CAC 0020+00 s=0 e=0 z=0  None .text      daObj_Stick_Create__FPv                                      */
+/* 80599C8C-80599CAC 0020+00 s=1 e=0 z=0  None .text      daObj_Stick_Create__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Stick_Create(void* param_0) {
+asm static void daObj_Stick_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/daObj_Stick_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 80599CAC-80599CCC 0020+00 s=0 e=0 z=0  None .text      daObj_Stick_Delete__FPv                                      */
+/* 80599CAC-80599CCC 0020+00 s=1 e=0 z=0  None .text      daObj_Stick_Delete__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Stick_Delete(void* param_0) {
+asm static void daObj_Stick_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/daObj_Stick_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 80599CCC-80599CEC 0020+00 s=0 e=0 z=0  None .text      daObj_Stick_Execute__FPv                                     */
+/* 80599CCC-80599CEC 0020+00 s=1 e=0 z=0  None .text      daObj_Stick_Execute__FPv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Stick_Execute(void* param_0) {
+asm static void daObj_Stick_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/daObj_Stick_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 80599CEC-80599D0C 0020+00 s=0 e=0 z=0  None .text      daObj_Stick_Draw__FPv                                        */
+/* 80599CEC-80599D0C 0020+00 s=1 e=0 z=0  None .text      daObj_Stick_Draw__FPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Stick_Draw(void* param_0) {
+asm static void daObj_Stick_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/daObj_Stick_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 80599D0C-80599D14 0008+00 s=0 e=0 z=0  None .text      daObj_Stick_IsDelete__FPv                                    */
-bool daObj_Stick_IsDelete(void* param_0) {
+/* 80599D0C-80599D14 0008+00 s=1 e=0 z=0  None .text      daObj_Stick_IsDelete__FPv                                    */
+static bool daObj_Stick_IsDelete(void* param_0) {
 	return true;
 }
 
 
-/* 80599D14-80599D5C 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80599D14-80599D5C 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -622,18 +628,11 @@ asm cCcD_GStts::~cCcD_GStts() {
 
 
 /* ############################################################################################## */
-/* 80599E68-80599E6E 0006+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80599E68 = "Taro6";
-#pragma pop
-
 /* 80599F70-80599F7C 000C+00 s=2 e=0 z=0  None .data      __vt__19daObj_Stick_Param_c                                  */
 SECTION_DATA static void* __vt__19daObj_Stick_Param_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__19daObj_Stick_Param_cFv,
 };
 
 /* 80599F88-80599F94 000C+00 s=1 e=0 z=0  None .bss       @3805                                                        */
@@ -642,7 +641,7 @@ static u8 lit_3805[12];
 /* 80599F94-80599F98 0004+00 s=1 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[4];
 
-/* 80599D5C-80599DD0 0074+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_stick_cpp                                    */
+/* 80599D5C-80599DD0 0074+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_stick_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -653,7 +652,7 @@ extern "C" asm void __sinit_d_a_obj_stick_cpp() {
 #pragma pop
 
 
-/* 80599DD0-80599E18 0048+00 s=1 e=0 z=0  None .text      __dt__19daObj_Stick_Param_cFv                                */
+/* 80599DD0-80599E18 0048+00 s=2 e=0 z=0  None .text      __dt__19daObj_Stick_Param_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -664,22 +663,22 @@ asm daObj_Stick_Param_c::~daObj_Stick_Param_c() {
 #pragma pop
 
 
-/* 80599E18-80599E20 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80599E18-80599E20 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80599E18() {
+extern "C" asm static void func_80599E18() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/func_80599E18.s"
 }
 #pragma pop
 
 
-/* 80599E20-80599E28 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80599E20-80599E28 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80599E20() {
+extern "C" asm static void func_80599E20() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/func_80599E20.s"
 }

@@ -19,6 +19,7 @@ extern void* const data_805A1144[2];
 // 
 
 
+extern "C" void __sinit_d_a_sq_cpp(); // 1
 
 // 
 // Declarations:

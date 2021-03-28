@@ -54,11 +54,11 @@ struct daItemBase_c {
 // Forward References:
 // 
 
-void daTag_ShopItem_Create(void*); // 2
-void daTag_ShopItem_Delete(void*); // 2
-void daTag_ShopItem_Execute(void*); // 2
-void daTag_ShopItem_Draw(void*); // 2
-bool daTag_ShopItem_IsDelete(void*); // 2
+static void daTag_ShopItem_Create(void*); // 2
+static void daTag_ShopItem_Delete(void*); // 2
+static void daTag_ShopItem_Execute(void*); // 2
+static void daTag_ShopItem_Draw(void*); // 2
+static bool daTag_ShopItem_IsDelete(void*); // 2
 
 extern "C" void create__16daTag_ShopItem_cFv(); // 1
 extern "C" void Delete__16daTag_ShopItem_cFv(); // 1
@@ -69,14 +69,13 @@ extern "C" void getGroupID__16daTag_ShopItem_cFv(); // 1
 extern "C" void getSwitchBit1__16daTag_ShopItem_cFv(); // 1
 extern "C" void getSwitchBit2__16daTag_ShopItem_cFv(); // 1
 extern "C" void initialize__16daTag_ShopItem_cFv(); // 1
-extern "C" void daTag_ShopItem_Create__FPv(); // 1
-extern "C" void daTag_ShopItem_Delete__FPv(); // 1
-extern "C" void daTag_ShopItem_Execute__FPv(); // 1
-extern "C" void daTag_ShopItem_Draw__FPv(); // 1
-extern "C" bool daTag_ShopItem_IsDelete__FPv(); // 1
+extern "C" static void daTag_ShopItem_Create__FPv(); // 1
+extern "C" static void daTag_ShopItem_Delete__FPv(); // 1
+extern "C" static void daTag_ShopItem_Execute__FPv(); // 1
+extern "C" static void daTag_ShopItem_Draw__FPv(); // 1
+extern "C" static bool daTag_ShopItem_IsDelete__FPv(); // 1
 extern "C" void __dt__16daTag_ShopItem_cFv(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* daTag_ShopItem_MethodTable[8];
 extern "C" extern void* g_profile_TAG_SHOPITM[12];
 
 // 
@@ -103,6 +102,8 @@ extern "C" void hide__12daItemBase_cFv(); // 1
 extern "C" void show__12daItemBase_cFv(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
@@ -136,30 +137,30 @@ SECTION_RODATA static u32 const lit_3781 = 0x42340000;
 SECTION_DEAD char const* const stringBase_80D611E8 = "F_SP109";
 #pragma pop
 
-/* 80D611F0-80D61210 0020+00 s=0 e=0 z=0  None .data      daTag_ShopItem_MethodTable                                   */
-SECTION_DATA void* daTag_ShopItem_MethodTable[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80D611F0-80D61210 0020+00 s=1 e=0 z=0  None .data      daTag_ShopItem_MethodTable                                   */
+SECTION_DATA static void* daTag_ShopItem_MethodTable[8] = {
+	(void*)daTag_ShopItem_Create__FPv,
+	(void*)daTag_ShopItem_Delete__FPv,
+	(void*)daTag_ShopItem_Execute__FPv,
+	(void*)daTag_ShopItem_IsDelete__FPv,
+	(void*)daTag_ShopItem_Draw__FPv,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80D61210-80D61240 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_SHOPITM                                        */
+/* 80D61210-80D61240 0030+00 s=0 e=0 z=1  None .data      g_profile_TAG_SHOPITM                                        */
 SECTION_DATA void* g_profile_TAG_SHOPITM[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01270000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000574,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x004B0000,
-	(void*)NULL,
+	(void*)&daTag_ShopItem_MethodTable,
 	(void*)0x00064100,
 	(void*)0x050E0000,
 };
@@ -168,7 +169,7 @@ SECTION_DATA void* g_profile_TAG_SHOPITM[12] = {
 SECTION_DATA static void* __vt__16daTag_ShopItem_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__16daTag_ShopItem_cFv,
 };
 
 /* 80D60B78-80D60D78 0200+00 s=1 e=0 z=0  None .text      create__16daTag_ShopItem_cFv                                 */
@@ -265,57 +266,57 @@ asm void daTag_ShopItem_c::initialize() {
 #pragma pop
 
 
-/* 80D610E0-80D61100 0020+00 s=0 e=0 z=0  None .text      daTag_ShopItem_Create__FPv                                   */
+/* 80D610E0-80D61100 0020+00 s=1 e=0 z=0  None .text      daTag_ShopItem_Create__FPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_ShopItem_Create(void* param_0) {
+asm static void daTag_ShopItem_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/daTag_ShopItem_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 80D61100-80D61120 0020+00 s=0 e=0 z=0  None .text      daTag_ShopItem_Delete__FPv                                   */
+/* 80D61100-80D61120 0020+00 s=1 e=0 z=0  None .text      daTag_ShopItem_Delete__FPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_ShopItem_Delete(void* param_0) {
+asm static void daTag_ShopItem_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/daTag_ShopItem_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 80D61120-80D61140 0020+00 s=0 e=0 z=0  None .text      daTag_ShopItem_Execute__FPv                                  */
+/* 80D61120-80D61140 0020+00 s=1 e=0 z=0  None .text      daTag_ShopItem_Execute__FPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_ShopItem_Execute(void* param_0) {
+asm static void daTag_ShopItem_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/daTag_ShopItem_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 80D61140-80D61160 0020+00 s=0 e=0 z=0  None .text      daTag_ShopItem_Draw__FPv                                     */
+/* 80D61140-80D61160 0020+00 s=1 e=0 z=0  None .text      daTag_ShopItem_Draw__FPv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daTag_ShopItem_Draw(void* param_0) {
+asm static void daTag_ShopItem_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/daTag_ShopItem_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 80D61160-80D61168 0008+00 s=0 e=0 z=0  None .text      daTag_ShopItem_IsDelete__FPv                                 */
-bool daTag_ShopItem_IsDelete(void* param_0) {
+/* 80D61160-80D61168 0008+00 s=1 e=0 z=0  None .text      daTag_ShopItem_IsDelete__FPv                                 */
+static bool daTag_ShopItem_IsDelete(void* param_0) {
 	return true;
 }
 
 
-/* 80D61168-80D611C8 0060+00 s=0 e=0 z=0  None .text      __dt__16daTag_ShopItem_cFv                                   */
+/* 80D61168-80D611C8 0060+00 s=1 e=0 z=0  None .text      __dt__16daTag_ShopItem_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

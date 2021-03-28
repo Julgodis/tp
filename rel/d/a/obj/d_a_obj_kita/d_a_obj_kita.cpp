@@ -104,32 +104,31 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void daObj_Kita_Draw(obj_kita_class*); // 2
+static void daObj_Kita_Draw(obj_kita_class*); // 2
 static void ride_call_back(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
 static void ita_control(obj_kita_class*); // 2
 static void action(obj_kita_class*); // 2
 static void daObj_Kita_Execute(obj_kita_class*); // 2
-bool daObj_Kita_IsDelete(obj_kita_class*); // 2
-void daObj_Kita_Delete(obj_kita_class*); // 2
+static bool daObj_Kita_IsDelete(obj_kita_class*); // 2
+static void daObj_Kita_Delete(obj_kita_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daObj_Kita_Create(fopAc_ac_c*); // 2
+static void daObj_Kita_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__16daObj_Kita_HIO_cFv(); // 1
-extern "C" void daObj_Kita_Draw__FP14obj_kita_class(); // 1
+extern "C" static void daObj_Kita_Draw__FP14obj_kita_class(); // 1
 extern "C" static void ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c(); // 1
 extern "C" static void ita_control__FP14obj_kita_class(); // 1
 extern "C" static void action__FP14obj_kita_class(); // 1
 extern "C" static void daObj_Kita_Execute__FP14obj_kita_class(); // 1
-extern "C" bool daObj_Kita_IsDelete__FP14obj_kita_class(); // 1
-extern "C" void daObj_Kita_Delete__FP14obj_kita_class(); // 1
+extern "C" static bool daObj_Kita_IsDelete__FP14obj_kita_class(); // 1
+extern "C" static void daObj_Kita_Delete__FP14obj_kita_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daObj_Kita_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObj_Kita_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__6kita_sFv(); // 1
 extern "C" void __ct__6kita_sFv(); // 1
 extern "C" void __dt__16daObj_Kita_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_kita_cpp(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObj_Kita_Method[8];
 extern "C" extern void* g_profile_OBJ_KITA[12];
 
 // 
@@ -203,6 +202,8 @@ extern "C" void _restgpr_23(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
@@ -228,30 +229,30 @@ SECTION_RODATA static u32 const lit_3771 = 0x43480000;
 /* 80C45F28-80C45F2C 0004+00 s=1 e=0 z=0  None .rodata    @3772                                                        */
 SECTION_RODATA static u32 const lit_3772 = 0x3F19999A;
 
-/* 80C45F8C-80C45FAC 0020+00 s=0 e=0 z=0  None .data      l_daObj_Kita_Method                                          */
-SECTION_DATA void* l_daObj_Kita_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80C45F8C-80C45FAC 0020+00 s=1 e=0 z=0  None .data      l_daObj_Kita_Method                                          */
+SECTION_DATA static void* l_daObj_Kita_Method[8] = {
+	(void*)daObj_Kita_Create__FP10fopAc_ac_c,
+	(void*)daObj_Kita_Delete__FP14obj_kita_class,
+	(void*)daObj_Kita_Execute__FP14obj_kita_class,
+	(void*)daObj_Kita_IsDelete__FP14obj_kita_class,
+	(void*)daObj_Kita_Draw__FP14obj_kita_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C45FAC-80C45FDC 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_KITA                                           */
+/* 80C45FAC-80C45FDC 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_KITA                                           */
 SECTION_DATA void* g_profile_OBJ_KITA[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01120000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000D78,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x02C30000,
-	(void*)NULL,
+	(void*)&l_daObj_Kita_Method,
 	(void*)0x00040000,
 	(void*)0x000E0000,
 };
@@ -260,7 +261,7 @@ SECTION_DATA void* g_profile_OBJ_KITA[12] = {
 SECTION_DATA static void* __vt__16daObj_Kita_HIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__16daObj_Kita_HIO_cFv,
 };
 
 /* 80C4534C-80C4538C 0040+00 s=1 e=0 z=0  None .text      __ct__16daObj_Kita_HIO_cFv                                   */
@@ -274,11 +275,11 @@ asm daObj_Kita_HIO_c::daObj_Kita_HIO_c() {
 #pragma pop
 
 
-/* 80C4538C-80C45424 0098+00 s=0 e=0 z=0  None .text      daObj_Kita_Draw__FP14obj_kita_class                          */
+/* 80C4538C-80C45424 0098+00 s=1 e=0 z=0  None .text      daObj_Kita_Draw__FP14obj_kita_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Kita_Draw(obj_kita_class* param_0) {
+asm static void daObj_Kita_Draw(obj_kita_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kita/d_a_obj_kita/daObj_Kita_Draw__FP14obj_kita_class.s"
 }
@@ -384,7 +385,7 @@ asm static void action(obj_kita_class* param_0) {
 #pragma pop
 
 
-/* 80C45A10-80C45A6C 005C+00 s=1 e=0 z=0  None .text      daObj_Kita_Execute__FP14obj_kita_class                       */
+/* 80C45A10-80C45A6C 005C+00 s=2 e=0 z=0  None .text      daObj_Kita_Execute__FP14obj_kita_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -395,8 +396,8 @@ asm static void daObj_Kita_Execute(obj_kita_class* param_0) {
 #pragma pop
 
 
-/* 80C45A6C-80C45A74 0008+00 s=0 e=0 z=0  None .text      daObj_Kita_IsDelete__FP14obj_kita_class                      */
-bool daObj_Kita_IsDelete(obj_kita_class* param_0) {
+/* 80C45A6C-80C45A74 0008+00 s=1 e=0 z=0  None .text      daObj_Kita_IsDelete__FP14obj_kita_class                      */
+static bool daObj_Kita_IsDelete(obj_kita_class* param_0) {
 	return true;
 }
 
@@ -418,11 +419,11 @@ SECTION_RODATA static u32 const lit_4085 = 0x477FFF00;
 SECTION_DEAD char const* const stringBase_80C45F80 = "Obj_kita";
 #pragma pop
 
-/* 80C45A74-80C45B10 009C+00 s=0 e=0 z=0  None .text      daObj_Kita_Delete__FP14obj_kita_class                        */
+/* 80C45A74-80C45B10 009C+00 s=1 e=0 z=0  None .text      daObj_Kita_Delete__FP14obj_kita_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Kita_Delete(obj_kita_class* param_0) {
+asm static void daObj_Kita_Delete(obj_kita_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kita/d_a_obj_kita/daObj_Kita_Delete__FP14obj_kita_class.s"
 }
@@ -440,11 +441,11 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80C45C4C-80C45E44 01F8+00 s=0 e=0 z=0  None .text      daObj_Kita_Create__FP10fopAc_ac_c                            */
+/* 80C45C4C-80C45E44 01F8+00 s=1 e=0 z=0  None .text      daObj_Kita_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Kita_Create(fopAc_ac_c* param_0) {
+asm static void daObj_Kita_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kita/d_a_obj_kita/daObj_Kita_Create__FP10fopAc_ac_c.s"
 }
@@ -468,7 +469,7 @@ kita_s::kita_s() {
 }
 
 
-/* 80C45E84-80C45ECC 0048+00 s=1 e=0 z=0  None .text      __dt__16daObj_Kita_HIO_cFv                                   */
+/* 80C45E84-80C45ECC 0048+00 s=2 e=0 z=0  None .text      __dt__16daObj_Kita_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -479,7 +480,7 @@ asm daObj_Kita_HIO_c::~daObj_Kita_HIO_c() {
 #pragma pop
 
 
-/* 80C45ECC-80C45F08 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_kita_cpp                                     */
+/* 80C45ECC-80C45F08 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_kita_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

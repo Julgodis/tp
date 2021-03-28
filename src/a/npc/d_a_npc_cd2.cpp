@@ -45,14 +45,14 @@ struct daNpcCd2_c {
 	/* 801599C4 */ void getTexAnmP(int);
 };
 
+struct fopAc_ac_c {
+};
+
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 };
 
 struct Vec {
-};
-
-struct fopAc_ac_c {
 };
 
 struct PathTrace_c {
@@ -112,19 +112,19 @@ struct mDoExt_btpAnm {
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
-struct J3DModelData {
-};
-
-struct Z2Creature {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
+struct J3DModelData {
+};
+
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DAnmTransform {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfSO {
@@ -154,10 +154,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {

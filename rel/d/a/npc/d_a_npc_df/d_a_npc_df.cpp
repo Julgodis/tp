@@ -97,36 +97,35 @@ struct dBgS_PolyPassChk {
 // Forward References:
 // 
 
-void daNpc_Df_Draw(npc_df_class*); // 2
+static void daNpc_Df_Draw(npc_df_class*); // 2
 static void df_fly(npc_df_class*, df_s*); // 2
 static void df_rod(npc_df_class*, df_s*); // 2
 static void df_control(npc_df_class*); // 2
 static void s_rod_sub(void*, void*); // 2
 static void daNpc_Df_Execute(npc_df_class*); // 2
-bool daNpc_Df_IsDelete(npc_df_class*); // 2
-void daNpc_Df_Delete(npc_df_class*); // 2
+static bool daNpc_Df_IsDelete(npc_df_class*); // 2
+static void daNpc_Df_Delete(npc_df_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-void daNpc_Df_Create(fopAc_ac_c*); // 2
+static void daNpc_Df_Create(fopAc_ac_c*); // 2
 
-extern "C" void daNpc_Df_Draw__FP12npc_df_class(); // 1
+extern "C" static void daNpc_Df_Draw__FP12npc_df_class(); // 1
 extern "C" static void df_fly__FP12npc_df_classP4df_s(); // 1
 extern "C" static void df_rod__FP12npc_df_classP4df_s(); // 1
 extern "C" static void df_control__FP12npc_df_class(); // 1
 extern "C" static void s_rod_sub__FPvPv(); // 1
 extern "C" static void daNpc_Df_Execute__FP12npc_df_class(); // 1
-extern "C" bool daNpc_Df_IsDelete__FP12npc_df_class(); // 1
-extern "C" void daNpc_Df_Delete__FP12npc_df_class(); // 1
+extern "C" static bool daNpc_Df_IsDelete__FP12npc_df_class(); // 1
+extern "C" static void daNpc_Df_Delete__FP12npc_df_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void daNpc_Df_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daNpc_Df_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__4df_sFv(); // 1
 extern "C" void __ct__4df_sFv(); // 1
 extern "C" void __sinit_d_a_npc_df_cpp(); // 1
 extern "C" void __dt__14dBgS_ObjGndChkFv(); // 1
-extern "C" void func_809A6878(); // 1
-extern "C" void func_809A6880(); // 1
-extern "C" void func_809A6888(); // 1
+extern "C" static void func_809A6878(); // 1
+extern "C" static void func_809A6880(); // 1
+extern "C" static void func_809A6888(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daNpc_Df_Method[8];
 extern "C" extern void* g_profile_NPC_DF[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -248,6 +247,8 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 sincosTable___5JMath[65536];
@@ -259,11 +260,11 @@ extern "C" void __register_global_object(); // 1
 // Declarations:
 // 
 
-/* 809A538C-809A5424 0098+00 s=0 e=0 z=0  None .text      daNpc_Df_Draw__FP12npc_df_class                              */
+/* 809A538C-809A5424 0098+00 s=1 e=0 z=0  None .text      daNpc_Df_Draw__FP12npc_df_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpc_Df_Draw(npc_df_class* param_0) {
+asm static void daNpc_Df_Draw(npc_df_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_df/d_a_npc_df/daNpc_Df_Draw__FP12npc_df_class.s"
 }
@@ -540,7 +541,7 @@ asm static void s_rod_sub(void* param_0, void* param_1) {
 #pragma pop
 
 
-/* 809A6360-809A63AC 004C+00 s=1 e=0 z=0  None .text      daNpc_Df_Execute__FP12npc_df_class                           */
+/* 809A6360-809A63AC 004C+00 s=2 e=0 z=0  None .text      daNpc_Df_Execute__FP12npc_df_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -551,8 +552,8 @@ asm static void daNpc_Df_Execute(npc_df_class* param_0) {
 #pragma pop
 
 
-/* 809A63AC-809A63B4 0008+00 s=0 e=0 z=0  None .text      daNpc_Df_IsDelete__FP12npc_df_class                          */
-bool daNpc_Df_IsDelete(npc_df_class* param_0) {
+/* 809A63AC-809A63B4 0008+00 s=1 e=0 z=0  None .text      daNpc_Df_IsDelete__FP12npc_df_class                          */
+static bool daNpc_Df_IsDelete(npc_df_class* param_0) {
 	return true;
 }
 
@@ -565,11 +566,11 @@ bool daNpc_Df_IsDelete(npc_df_class* param_0) {
 SECTION_DEAD char const* const stringBase_809A697C = "Npc_df";
 #pragma pop
 
-/* 809A63B4-809A6478 00C4+00 s=0 e=0 z=0  None .text      daNpc_Df_Delete__FP12npc_df_class                            */
+/* 809A63B4-809A6478 00C4+00 s=1 e=0 z=0  None .text      daNpc_Df_Delete__FP12npc_df_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpc_Df_Delete(npc_df_class* param_0) {
+asm static void daNpc_Df_Delete(npc_df_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_df/d_a_npc_df/daNpc_Df_Delete__FP12npc_df_class.s"
 }
@@ -587,11 +588,11 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 809A6564-809A6728 01C4+00 s=0 e=0 z=0  None .text      daNpc_Df_Create__FP10fopAc_ac_c                              */
+/* 809A6564-809A6728 01C4+00 s=1 e=0 z=0  None .text      daNpc_Df_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpc_Df_Create(fopAc_ac_c* param_0) {
+asm static void daNpc_Df_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_df/d_a_npc_df/daNpc_Df_Create__FP10fopAc_ac_c.s"
 }
@@ -616,30 +617,30 @@ df_s::df_s() {
 
 
 /* ############################################################################################## */
-/* 809A6984-809A69A4 0020+00 s=0 e=0 z=0  None .data      l_daNpc_Df_Method                                            */
-SECTION_DATA void* l_daNpc_Df_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 809A6984-809A69A4 0020+00 s=1 e=0 z=0  None .data      l_daNpc_Df_Method                                            */
+SECTION_DATA static void* l_daNpc_Df_Method[8] = {
+	(void*)daNpc_Df_Create__FP10fopAc_ac_c,
+	(void*)daNpc_Df_Delete__FP12npc_df_class,
+	(void*)daNpc_Df_Execute__FP12npc_df_class,
+	(void*)daNpc_Df_IsDelete__FP12npc_df_class,
+	(void*)daNpc_Df_Draw__FP12npc_df_class,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 809A69A4-809A69D4 0030+00 s=0 e=0 z=0  None .data      g_profile_NPC_DF                                             */
+/* 809A69A4-809A69D4 0030+00 s=0 e=0 z=1  None .data      g_profile_NPC_DF                                             */
 SECTION_DATA void* g_profile_NPC_DF[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0009FFFD,
 	(void*)0x03070000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000D44,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01B70000,
-	(void*)NULL,
+	(void*)&l_daNpc_Df_Method,
 	(void*)0x00040000,
 	(void*)0x000E0000,
 };
@@ -648,19 +649,19 @@ SECTION_DATA void* g_profile_NPC_DF[12] = {
 SECTION_DATA static void* __vt__14dBgS_ObjGndChk[12] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__14dBgS_ObjGndChkFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_809A6878,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_809A6888,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_809A6880,
 };
 
-/* 809A6768-809A6800 0098+00 s=0 e=0 z=0  None .text      __sinit_d_a_npc_df_cpp                                       */
+/* 809A6768-809A6800 0098+00 s=0 e=1 z=0  None .text      __sinit_d_a_npc_df_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -671,7 +672,7 @@ extern "C" asm void __sinit_d_a_npc_df_cpp() {
 #pragma pop
 
 
-/* 809A6800-809A6878 0078+00 s=4 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
+/* 809A6800-809A6878 0078+00 s=5 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -682,33 +683,33 @@ asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 #pragma pop
 
 
-/* 809A6878-809A6880 0008+00 s=0 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
+/* 809A6878-809A6880 0008+00 s=1 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_809A6878() {
+extern "C" asm static void func_809A6878() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_df/d_a_npc_df/func_809A6878.s"
 }
 #pragma pop
 
 
-/* 809A6880-809A6888 0008+00 s=0 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
+/* 809A6880-809A6888 0008+00 s=1 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_809A6880() {
+extern "C" asm static void func_809A6880() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_df/d_a_npc_df/func_809A6880.s"
 }
 #pragma pop
 
 
-/* 809A6888-809A6890 0008+00 s=0 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
+/* 809A6888-809A6890 0008+00 s=1 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_809A6888() {
+extern "C" asm static void func_809A6888() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_df/d_a_npc_df/func_809A6888.s"
 }

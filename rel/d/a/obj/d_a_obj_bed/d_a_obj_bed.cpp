@@ -144,11 +144,11 @@ struct cM3dGCir {
 // Forward References:
 // 
 
-void daObj_Bed_Create(void*); // 2
-void daObj_Bed_Delete(void*); // 2
-void daObj_Bed_Execute(void*); // 2
-void daObj_Bed_Draw(void*); // 2
-bool daObj_Bed_IsDelete(void*); // 2
+static void daObj_Bed_Create(void*); // 2
+static void daObj_Bed_Delete(void*); // 2
+static void daObj_Bed_Execute(void*); // 2
+static void daObj_Bed_Draw(void*); // 2
+static bool daObj_Bed_IsDelete(void*); // 2
 
 extern "C" void __dt__11daObj_Bed_cFv(); // 1
 extern "C" void create__11daObj_Bed_cFv(); // 1
@@ -167,17 +167,16 @@ extern "C" void isDelete__11daObj_Bed_cFv(); // 1
 extern "C" void setEnvTevColor__11daObj_Bed_cFv(); // 1
 extern "C" void setRoomNo__11daObj_Bed_cFv(); // 1
 extern "C" void setMtx__11daObj_Bed_cFv(); // 1
-extern "C" void daObj_Bed_Create__FPv(); // 1
-extern "C" void daObj_Bed_Delete__FPv(); // 1
-extern "C" void daObj_Bed_Execute__FPv(); // 1
-extern "C" void daObj_Bed_Draw__FPv(); // 1
-extern "C" bool daObj_Bed_IsDelete__FPv(); // 1
+extern "C" static void daObj_Bed_Create__FPv(); // 1
+extern "C" static void daObj_Bed_Delete__FPv(); // 1
+extern "C" static void daObj_Bed_Execute__FPv(); // 1
+extern "C" static void daObj_Bed_Draw__FPv(); // 1
+extern "C" static bool daObj_Bed_IsDelete__FPv(); // 1
 extern "C" void __sinit_d_a_obj_bed_cpp(); // 1
 extern "C" void __dt__17daObj_Bed_Param_cFv(); // 1
-extern "C" void func_80BAE144(); // 1
-extern "C" void func_80BAE14C(); // 1
+extern "C" static void func_80BAE144(); // 1
+extern "C" static void func_80BAE14C(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* daObj_Bed_MethodTable[8];
 extern "C" extern void* g_profile_OBJ_BED[12];
 
 // 
@@ -235,6 +234,8 @@ extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXTrans(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
@@ -244,90 +245,6 @@ extern "C" void __register_global_object(); // 1
 // 
 // Declarations:
 // 
-
-/* ############################################################################################## */
-/* 80BAE198-80BAE19C 0004+00 s=1 e=0 z=0  None .data      l_resName                                                    */
-SECTION_DATA static void* l_resName = (void*)NULL;
-
-/* 80BAE19C-80BAE1BC 0020+00 s=0 e=0 z=0  None .data      daObj_Bed_MethodTable                                        */
-SECTION_DATA void* daObj_Bed_MethodTable[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80BAE1BC-80BAE1EC 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_BED                                            */
-SECTION_DATA void* g_profile_OBJ_BED[12] = {
-	(void*)0xFFFFFFFD,
-	(void*)0x0007FFFD,
-	(void*)0x012C0000,
-	(void*)NULL,
-	(void*)0x00000844,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)0x004F0000,
-	(void*)NULL,
-	(void*)0x00044100,
-	(void*)0x000E0000,
-};
-
-/* 80BAE1EC-80BAE210 0024+00 s=3 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
-SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80BAE210-80BAE21C 000C+00 s=2 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
-SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80BAE21C-80BAE228 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
-SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80BAE228-80BAE234 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGLin                                              */
-SECTION_DATA static void* __vt__8cM3dGLin[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80BAE234-80BAE240 000C+00 s=2 e=0 z=0  None .data      __vt__11daObj_Bed_c                                          */
-SECTION_DATA static void* __vt__11daObj_Bed_c[3] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80BAD66C-80BAD790 0124+00 s=0 e=0 z=0  None .text      __dt__11daObj_Bed_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daObj_Bed_c::~daObj_Bed_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/__dt__11daObj_Bed_cFv.s"
-}
-#pragma pop
-
 
 /* ############################################################################################## */
 /* 80BAE168-80BAE178 0010+00 s=2 e=0 z=0  None .rodata    m__17daObj_Bed_Param_c                                       */
@@ -347,6 +264,102 @@ SECTION_RODATA static u32 const lit_3904 = 0x43480000;
 /* 80BAE184-80BAE188 0004+00 s=3 e=0 z=0  None .rodata    @3905                                                        */
 SECTION_RODATA static u32 const lit_3905 = 0xCE6E6B28;
 
+/* 80BAE188-80BAE18C 0004+00 s=1 e=0 z=0  None .rodata    @3985                                                        */
+SECTION_RODATA static u32 const lit_3985 = 0x41A00000;
+
+/* 80BAE18C-80BAE190 0004+00 s=1 e=0 z=0  None .rodata    @3986                                                        */
+SECTION_RODATA static u32 const lit_3986 = 0x3F800000;
+
+/* 80BAE190-80BAE197 0007+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80BAE190 = "KH_Bed";
+#pragma pop
+
+/* 80BAE198-80BAE19C 0004+00 s=1 e=0 z=0  None .data      l_resName                                                    */
+SECTION_DATA static void* l_resName = (void*)&stringBase0;
+
+/* 80BAE19C-80BAE1BC 0020+00 s=1 e=0 z=0  None .data      daObj_Bed_MethodTable                                        */
+SECTION_DATA static void* daObj_Bed_MethodTable[8] = {
+	(void*)daObj_Bed_Create__FPv,
+	(void*)daObj_Bed_Delete__FPv,
+	(void*)daObj_Bed_Execute__FPv,
+	(void*)daObj_Bed_IsDelete__FPv,
+	(void*)daObj_Bed_Draw__FPv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80BAE1BC-80BAE1EC 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_BED                                            */
+SECTION_DATA void* g_profile_OBJ_BED[12] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x012C0000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x00000844,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopAc_Method,
+	(void*)0x004F0000,
+	(void*)&daObj_Bed_MethodTable,
+	(void*)0x00044100,
+	(void*)0x000E0000,
+};
+
+/* 80BAE1EC-80BAE210 0024+00 s=3 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
+SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80BAE14C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80BAE144,
+};
+
+/* 80BAE210-80BAE21C 000C+00 s=2 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
+SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
+};
+
+/* 80BAE21C-80BAE228 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
+SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
+};
+
+/* 80BAE228-80BAE234 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGLin                                              */
+SECTION_DATA static void* __vt__8cM3dGLin[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGLinFv,
+};
+
+/* 80BAE234-80BAE240 000C+00 s=2 e=0 z=0  None .data      __vt__11daObj_Bed_c                                          */
+SECTION_DATA static void* __vt__11daObj_Bed_c[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11daObj_Bed_cFv,
+};
+
+/* 80BAD66C-80BAD790 0124+00 s=1 e=0 z=0  None .text      __dt__11daObj_Bed_cFv                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm daObj_Bed_c::~daObj_Bed_c() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/__dt__11daObj_Bed_cFv.s"
+}
+#pragma pop
+
+
 /* 80BAD790-80BADA00 0270+00 s=1 e=0 z=0  None .text      create__11daObj_Bed_cFv                                      */
 #pragma push
 #pragma optimization_level 0
@@ -358,7 +371,7 @@ asm void daObj_Bed_c::create() {
 #pragma pop
 
 
-/* 80BADA00-80BADA48 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGLinFv                                            */
+/* 80BADA00-80BADA48 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGLinFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -369,7 +382,7 @@ asm cM3dGLin::~cM3dGLin() {
 #pragma pop
 
 
-/* 80BADA48-80BADA90 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80BADA48-80BADA90 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -380,7 +393,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80BADA90-80BADB00 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80BADA90-80BADB00 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -391,7 +404,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 80BADB00-80BADB70 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80BADB00-80BADB70 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -434,13 +447,6 @@ asm void daObj_Bed_c::Execute() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80BAE188-80BAE18C 0004+00 s=1 e=0 z=0  None .rodata    @3985                                                        */
-SECTION_RODATA static u32 const lit_3985 = 0x41A00000;
-
-/* 80BAE18C-80BAE190 0004+00 s=1 e=0 z=0  None .rodata    @3986                                                        */
-SECTION_RODATA static u32 const lit_3986 = 0x3F800000;
 
 /* 80BADDF4-80BADEB8 00C4+00 s=1 e=0 z=0  None .text      Draw__11daObj_Bed_cFv                                        */
 #pragma push
@@ -525,52 +531,52 @@ asm void daObj_Bed_c::setMtx() {
 #pragma pop
 
 
-/* 80BAE034-80BAE054 0020+00 s=0 e=0 z=0  None .text      daObj_Bed_Create__FPv                                        */
+/* 80BAE034-80BAE054 0020+00 s=1 e=0 z=0  None .text      daObj_Bed_Create__FPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Bed_Create(void* param_0) {
+asm static void daObj_Bed_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/daObj_Bed_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 80BAE054-80BAE074 0020+00 s=0 e=0 z=0  None .text      daObj_Bed_Delete__FPv                                        */
+/* 80BAE054-80BAE074 0020+00 s=1 e=0 z=0  None .text      daObj_Bed_Delete__FPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Bed_Delete(void* param_0) {
+asm static void daObj_Bed_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/daObj_Bed_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 80BAE074-80BAE094 0020+00 s=0 e=0 z=0  None .text      daObj_Bed_Execute__FPv                                       */
+/* 80BAE074-80BAE094 0020+00 s=1 e=0 z=0  None .text      daObj_Bed_Execute__FPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Bed_Execute(void* param_0) {
+asm static void daObj_Bed_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/daObj_Bed_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 80BAE094-80BAE0B4 0020+00 s=0 e=0 z=0  None .text      daObj_Bed_Draw__FPv                                          */
+/* 80BAE094-80BAE0B4 0020+00 s=1 e=0 z=0  None .text      daObj_Bed_Draw__FPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj_Bed_Draw(void* param_0) {
+asm static void daObj_Bed_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/daObj_Bed_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 80BAE0B4-80BAE0BC 0008+00 s=0 e=0 z=0  None .text      daObj_Bed_IsDelete__FPv                                      */
-bool daObj_Bed_IsDelete(void* param_0) {
+/* 80BAE0B4-80BAE0BC 0008+00 s=1 e=0 z=0  None .text      daObj_Bed_IsDelete__FPv                                      */
+static bool daObj_Bed_IsDelete(void* param_0) {
 	return true;
 }
 
@@ -580,7 +586,7 @@ bool daObj_Bed_IsDelete(void* param_0) {
 SECTION_DATA static void* __vt__17daObj_Bed_Param_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__17daObj_Bed_Param_cFv,
 };
 
 /* 80BAE258-80BAE264 000C+00 s=1 e=0 z=0  None .bss       @3805                                                        */
@@ -589,7 +595,7 @@ static u8 lit_3805[12];
 /* 80BAE264-80BAE268 0004+00 s=1 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[4];
 
-/* 80BAE0BC-80BAE0FC 0040+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_bed_cpp                                      */
+/* 80BAE0BC-80BAE0FC 0040+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_bed_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -600,7 +606,7 @@ extern "C" asm void __sinit_d_a_obj_bed_cpp() {
 #pragma pop
 
 
-/* 80BAE0FC-80BAE144 0048+00 s=1 e=0 z=0  None .text      __dt__17daObj_Bed_Param_cFv                                  */
+/* 80BAE0FC-80BAE144 0048+00 s=2 e=0 z=0  None .text      __dt__17daObj_Bed_Param_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -611,33 +617,25 @@ asm daObj_Bed_Param_c::~daObj_Bed_Param_c() {
 #pragma pop
 
 
-/* 80BAE144-80BAE14C 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BAE144-80BAE14C 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BAE144() {
+extern "C" asm static void func_80BAE144() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/func_80BAE144.s"
 }
 #pragma pop
 
 
-/* 80BAE14C-80BAE154 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BAE14C-80BAE154 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BAE14C() {
+extern "C" asm static void func_80BAE14C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/func_80BAE14C.s"
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80BAE190-80BAE197 0007+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80BAE190 = "KH_Bed";
-#pragma pop
 

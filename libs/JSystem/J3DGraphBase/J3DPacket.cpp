@@ -271,7 +271,7 @@ asm void J3DDisplayListObj::endPatch() {
 #pragma pop
 
 
-/* 80312750-80312758 0008+00 s=3 e=16 z=0  None .text      entry__9J3DPacketFP13J3DDrawBuffer                           */
+/* 80312750-80312758 0008+00 s=3 e=16 z=10  None .text      entry__9J3DPacketFP13J3DDrawBuffer                           */
 bool J3DPacket::entry(J3DDrawBuffer* param_0) {
 	return true;
 }

@@ -116,6 +116,9 @@ struct dBgS_GndChk {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -145,10 +148,10 @@ struct cM3dGCir {
 // Forward References:
 // 
 
-void daObjDigSnow_create1st(daObjDigSnow_c*); // 2
-void daObjDigSnow_MoveBGDelete(daObjDigSnow_c*); // 2
-void daObjDigSnow_MoveBGExecute(daObjDigSnow_c*); // 2
-void daObjDigSnow_MoveBGDraw(daObjDigSnow_c*); // 2
+static void daObjDigSnow_create1st(daObjDigSnow_c*); // 2
+static void daObjDigSnow_MoveBGDelete(daObjDigSnow_c*); // 2
+static void daObjDigSnow_MoveBGExecute(daObjDigSnow_c*); // 2
+static void daObjDigSnow_MoveBGDraw(daObjDigSnow_c*); // 2
 
 extern "C" void initBaseMtx__14daObjDigSnow_cFv(); // 1
 extern "C" void setBaseMtx__14daObjDigSnow_cFv(); // 1
@@ -166,24 +169,23 @@ extern "C" void mode_init_end__14daObjDigSnow_cFv(); // 1
 extern "C" void mode_end__14daObjDigSnow_cFv(); // 1
 extern "C" void Draw__14daObjDigSnow_cFv(); // 1
 extern "C" void Delete__14daObjDigSnow_cFv(); // 1
-extern "C" void daObjDigSnow_create1st__FP14daObjDigSnow_c(); // 1
+extern "C" static void daObjDigSnow_create1st__FP14daObjDigSnow_c(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__12dBgS_AcchCirFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" void daObjDigSnow_MoveBGDelete__FP14daObjDigSnow_c(); // 1
-extern "C" void daObjDigSnow_MoveBGExecute__FP14daObjDigSnow_c(); // 1
-extern "C" void daObjDigSnow_MoveBGDraw__FP14daObjDigSnow_c(); // 1
+extern "C" static void daObjDigSnow_MoveBGDelete__FP14daObjDigSnow_c(); // 1
+extern "C" static void daObjDigSnow_MoveBGExecute__FP14daObjDigSnow_c(); // 1
+extern "C" static void daObjDigSnow_MoveBGDraw__FP14daObjDigSnow_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" void func_80BDD698(); // 1
-extern "C" void func_80BDD6A0(); // 1
-extern "C" void func_80BDD6A8(); // 1
-extern "C" void func_80BDD6B0(); // 1
-extern "C" void func_80BDD6B8(); // 1
+extern "C" static void func_80BDD698(); // 1
+extern "C" static void func_80BDD6A0(); // 1
+extern "C" static void func_80BDD6A8(); // 1
+extern "C" static void func_80BDD6B0(); // 1
+extern "C" static void func_80BDD6B8(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* daObjDigSnow_METHODS[8];
 extern "C" extern void* g_profile_Obj_DigSnow[12];
 
 // 
@@ -219,6 +221,9 @@ extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void __ct__11dBgS_GndChkFv(); // 1
 extern "C" void __dt__11dBgS_GndChkFv(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -239,6 +244,8 @@ extern "C" void _savegpr_27(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
@@ -276,7 +283,7 @@ asm void daObjDigSnow_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80BDCD08-80BDCD64 005C+00 s=0 e=0 z=0  None .text      Create__14daObjDigSnow_cFv                                   */
+/* 80BDCD08-80BDCD64 005C+00 s=1 e=0 z=0  None .text      Create__14daObjDigSnow_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -288,6 +295,28 @@ asm void daObjDigSnow_c::Create() {
 
 
 /* ############################################################################################## */
+/* 80BDD6C8-80BDD6CC 0004+00 s=2 e=0 z=0  None .rodata    @3744                                                        */
+SECTION_RODATA static u32 const lit_3744 = 0xCE6E6B28;
+
+/* 80BDD6CC-80BDD6D0 0004+00 s=1 e=0 z=0  None .rodata    @3761                                                        */
+SECTION_RODATA static u32 const lit_3761 = 0x41200000;
+
+/* 80BDD6D0-80BDD6D4 0004+00 s=1 e=0 z=0  None .rodata    @3762                                                        */
+SECTION_RODATA static u32 const lit_3762 = 0x420C0000;
+
+/* 80BDD6D4-80BDD6D8 0004+00 s=1 e=0 z=0  None .rodata    @3763                                                        */
+SECTION_RODATA static u32 const lit_3763 = 0x3F800000;
+
+/* 80BDD6D8-80BDD6DC 0004+00 s=1 e=0 z=0  None .rodata    @3764                                                        */
+SECTION_RODATA static u32 const lit_3764 = 0x41F00000;
+
+/* 80BDD6DC-80BDD6E6 000A+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80BDD6DC = "Y_horiyuk";
+#pragma pop
+
 /* 80BDD6E8-80BDD6F4 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -301,9 +330,9 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80BDD708-80BDD70C 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)NULL;
+SECTION_DATA static void* l_arcName = (void*)&stringBase0;
 
-/* 80BDCD64-80BDCDD4 0070+00 s=0 e=0 z=0  None .text      CreateHeap__14daObjDigSnow_cFv                               */
+/* 80BDCD64-80BDCDD4 0070+00 s=1 e=0 z=0  None .text      CreateHeap__14daObjDigSnow_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -325,7 +354,7 @@ asm void daObjDigSnow_c::create1st() {
 #pragma pop
 
 
-/* 80BDCE84-80BDCF00 007C+00 s=0 e=0 z=0  None .text      Execute__14daObjDigSnow_cFPPA3_A4_f                          */
+/* 80BDCE84-80BDCF00 007C+00 s=1 e=0 z=0  None .text      Execute__14daObjDigSnow_cFPPA3_A4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -341,21 +370,21 @@ asm void daObjDigSnow_c::Execute(f32 (** param_0)[3][4]) {
 SECTION_DATA static void* lit_3713[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)mode_wait__14daObjDigSnow_cFv,
 };
 
 /* 80BDD718-80BDD724 000C+00 s=1 e=0 z=0  None .data      @3714                                                        */
 SECTION_DATA static void* lit_3714[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)mode_dig__14daObjDigSnow_cFv,
 };
 
 /* 80BDD724-80BDD730 000C+00 s=1 e=0 z=0  None .data      @3715                                                        */
 SECTION_DATA static void* lit_3715[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)mode_end__14daObjDigSnow_cFv,
 };
 
 /* 80BDD730-80BDD754 0024+00 s=1 e=0 z=0  None .data      l_func$3712                                                  */
@@ -387,7 +416,7 @@ asm void daObjDigSnow_c::mode_init_wait() {
 #pragma pop
 
 
-/* 80BDCFB0-80BDCFDC 002C+00 s=0 e=0 z=0  None .text      mode_wait__14daObjDigSnow_cFv                                */
+/* 80BDCFB0-80BDCFDC 002C+00 s=1 e=0 z=0  None .text      mode_wait__14daObjDigSnow_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -399,33 +428,30 @@ asm void daObjDigSnow_c::mode_wait() {
 
 
 /* ############################################################################################## */
-/* 80BDD6C8-80BDD6CC 0004+00 s=2 e=0 z=0  None .rodata    @3744                                                        */
-SECTION_RODATA static u32 const lit_3744 = 0xCE6E6B28;
-
-/* 80BDD754-80BDD774 0020+00 s=0 e=0 z=0  None .data      daObjDigSnow_METHODS                                         */
-SECTION_DATA void* daObjDigSnow_METHODS[8] = {
+/* 80BDD754-80BDD774 0020+00 s=1 e=0 z=0  None .data      daObjDigSnow_METHODS                                         */
+SECTION_DATA static void* daObjDigSnow_METHODS[8] = {
+	(void*)daObjDigSnow_create1st__FP14daObjDigSnow_c,
+	(void*)daObjDigSnow_MoveBGDelete__FP14daObjDigSnow_c,
+	(void*)daObjDigSnow_MoveBGExecute__FP14daObjDigSnow_c,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)daObjDigSnow_MoveBGDraw__FP14daObjDigSnow_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80BDD774-80BDD7A4 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_DigSnow                                        */
+/* 80BDD774-80BDD7A4 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_DigSnow                                        */
 SECTION_DATA void* g_profile_Obj_DigSnow[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0003FFFD,
 	(void*)0x00900000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000944,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x027A0000,
-	(void*)NULL,
+	(void*)&daObjDigSnow_METHODS,
 	(void*)0x00044100,
 	(void*)0x000E0000,
 };
@@ -434,64 +460,64 @@ SECTION_DATA void* g_profile_Obj_DigSnow[12] = {
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 80BDD7B0-80BDD7BC 000C+00 s=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80BDD7BC-80BDD7C8 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80BDD7C8-80BDD7D4 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 80BDD7D4-80BDD7E0 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80BDD7E0-80BDD804 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80BDD6B8,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80BDD6B0,
 };
 
 /* 80BDD804-80BDD834 0030+00 s=2 e=0 z=0  None .data      __vt__14dBgS_ObjGndChk                                       */
 SECTION_DATA static void* __vt__14dBgS_ObjGndChk[12] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__14dBgS_ObjGndChkFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80BDD698,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80BDD6A8,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80BDD6A0,
 };
 
 /* 80BDCFDC-80BDD0AC 00D0+00 s=1 e=0 z=0  None .text      mode_init_dig__14daObjDigSnow_cFv                            */
@@ -505,7 +531,7 @@ asm void daObjDigSnow_c::mode_init_dig() {
 #pragma pop
 
 
-/* 80BDD0AC-80BDD124 0078+00 s=3 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
+/* 80BDD0AC-80BDD124 0078+00 s=4 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -516,20 +542,7 @@ asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80BDD6CC-80BDD6D0 0004+00 s=1 e=0 z=0  None .rodata    @3761                                                        */
-SECTION_RODATA static u32 const lit_3761 = 0x41200000;
-
-/* 80BDD6D0-80BDD6D4 0004+00 s=1 e=0 z=0  None .rodata    @3762                                                        */
-SECTION_RODATA static u32 const lit_3762 = 0x420C0000;
-
-/* 80BDD6D4-80BDD6D8 0004+00 s=1 e=0 z=0  None .rodata    @3763                                                        */
-SECTION_RODATA static u32 const lit_3763 = 0x3F800000;
-
-/* 80BDD6D8-80BDD6DC 0004+00 s=1 e=0 z=0  None .rodata    @3764                                                        */
-SECTION_RODATA static u32 const lit_3764 = 0x41F00000;
-
-/* 80BDD124-80BDD1BC 0098+00 s=0 e=0 z=0  None .text      mode_dig__14daObjDigSnow_cFv                                 */
+/* 80BDD124-80BDD1BC 0098+00 s=1 e=0 z=0  None .text      mode_dig__14daObjDigSnow_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -551,13 +564,13 @@ asm void daObjDigSnow_c::mode_init_end() {
 #pragma pop
 
 
-/* 80BDD210-80BDD214 0004+00 s=0 e=0 z=0  None .text      mode_end__14daObjDigSnow_cFv                                 */
+/* 80BDD210-80BDD214 0004+00 s=1 e=0 z=0  None .text      mode_end__14daObjDigSnow_cFv                                 */
 void daObjDigSnow_c::mode_end() {
 	/* empty function */
 }
 
 
-/* 80BDD214-80BDD2B8 00A4+00 s=0 e=0 z=0  None .text      Draw__14daObjDigSnow_cFv                                     */
+/* 80BDD214-80BDD2B8 00A4+00 s=1 e=0 z=0  None .text      Draw__14daObjDigSnow_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -568,7 +581,7 @@ asm void daObjDigSnow_c::Draw() {
 #pragma pop
 
 
-/* 80BDD2B8-80BDD2EC 0034+00 s=0 e=0 z=0  None .text      Delete__14daObjDigSnow_cFv                                   */
+/* 80BDD2B8-80BDD2EC 0034+00 s=1 e=0 z=0  None .text      Delete__14daObjDigSnow_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -584,28 +597,28 @@ asm void daObjDigSnow_c::Delete() {
 SECTION_DATA static void* __vt__14daObjDigSnow_c[10] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)CreateHeap__14daObjDigSnow_cFv,
+	(void*)Create__14daObjDigSnow_cFv,
+	(void*)Execute__14daObjDigSnow_cFPPA3_A4_f,
+	(void*)Draw__14daObjDigSnow_cFv,
+	(void*)Delete__14daObjDigSnow_cFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
-/* 80BDD2EC-80BDD418 012C+00 s=0 e=0 z=0  None .text      daObjDigSnow_create1st__FP14daObjDigSnow_c                   */
+/* 80BDD2EC-80BDD418 012C+00 s=1 e=0 z=0  None .text      daObjDigSnow_create1st__FP14daObjDigSnow_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjDigSnow_create1st(daObjDigSnow_c* param_0) {
+asm static void daObjDigSnow_create1st(daObjDigSnow_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/daObjDigSnow_create1st__FP14daObjDigSnow_c.s"
 }
 #pragma pop
 
 
-/* 80BDD418-80BDD460 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80BDD418-80BDD460 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -616,7 +629,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80BDD460-80BDD4A8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80BDD460-80BDD4A8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -627,7 +640,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80BDD4A8-80BDD504 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80BDD4A8-80BDD504 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -638,7 +651,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80BDD504-80BDD574 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80BDD504-80BDD574 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -649,7 +662,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 80BDD574-80BDD5E4 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80BDD574-80BDD5E4 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -660,40 +673,40 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80BDD5E4-80BDD604 0020+00 s=0 e=0 z=0  None .text      daObjDigSnow_MoveBGDelete__FP14daObjDigSnow_c                */
+/* 80BDD5E4-80BDD604 0020+00 s=1 e=0 z=0  None .text      daObjDigSnow_MoveBGDelete__FP14daObjDigSnow_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjDigSnow_MoveBGDelete(daObjDigSnow_c* param_0) {
+asm static void daObjDigSnow_MoveBGDelete(daObjDigSnow_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/daObjDigSnow_MoveBGDelete__FP14daObjDigSnow_c.s"
 }
 #pragma pop
 
 
-/* 80BDD604-80BDD624 0020+00 s=0 e=0 z=0  None .text      daObjDigSnow_MoveBGExecute__FP14daObjDigSnow_c               */
+/* 80BDD604-80BDD624 0020+00 s=1 e=0 z=0  None .text      daObjDigSnow_MoveBGExecute__FP14daObjDigSnow_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjDigSnow_MoveBGExecute(daObjDigSnow_c* param_0) {
+asm static void daObjDigSnow_MoveBGExecute(daObjDigSnow_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/daObjDigSnow_MoveBGExecute__FP14daObjDigSnow_c.s"
 }
 #pragma pop
 
 
-/* 80BDD624-80BDD650 002C+00 s=0 e=0 z=0  None .text      daObjDigSnow_MoveBGDraw__FP14daObjDigSnow_c                  */
+/* 80BDD624-80BDD650 002C+00 s=1 e=0 z=0  None .text      daObjDigSnow_MoveBGDraw__FP14daObjDigSnow_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjDigSnow_MoveBGDraw(daObjDigSnow_c* param_0) {
+asm static void daObjDigSnow_MoveBGDraw(daObjDigSnow_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/daObjDigSnow_MoveBGDraw__FP14daObjDigSnow_c.s"
 }
 #pragma pop
 
 
-/* 80BDD650-80BDD698 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80BDD650-80BDD698 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -704,66 +717,58 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80BDD698-80BDD6A0 0008+00 s=0 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80BDD698-80BDD6A0 0008+00 s=1 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BDD698() {
+extern "C" asm static void func_80BDD698() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/func_80BDD698.s"
 }
 #pragma pop
 
 
-/* 80BDD6A0-80BDD6A8 0008+00 s=0 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80BDD6A0-80BDD6A8 0008+00 s=1 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BDD6A0() {
+extern "C" asm static void func_80BDD6A0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/func_80BDD6A0.s"
 }
 #pragma pop
 
 
-/* 80BDD6A8-80BDD6B0 0008+00 s=0 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80BDD6A8-80BDD6B0 0008+00 s=1 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BDD6A8() {
+extern "C" asm static void func_80BDD6A8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/func_80BDD6A8.s"
 }
 #pragma pop
 
 
-/* 80BDD6B0-80BDD6B8 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BDD6B0-80BDD6B8 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BDD6B0() {
+extern "C" asm static void func_80BDD6B0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/func_80BDD6B0.s"
 }
 #pragma pop
 
 
-/* 80BDD6B8-80BDD6C0 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BDD6B8-80BDD6C0 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BDD6B8() {
+extern "C" asm static void func_80BDD6B8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/func_80BDD6B8.s"
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80BDD6DC-80BDD6E6 000A+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80BDD6DC = "Y_horiyuk";
-#pragma pop
 

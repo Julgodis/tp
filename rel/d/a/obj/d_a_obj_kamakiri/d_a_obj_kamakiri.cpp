@@ -88,10 +88,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -107,21 +107,21 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
-};
-
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
+struct J3DModelData {
+};
+
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DAnmTransform {
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfSO {
@@ -156,10 +156,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -264,11 +264,11 @@ struct cCcS {
 // 
 
 static void useHeapInit(fopAc_ac_c*); // 2
-void daObjKAM_Create(fopAc_ac_c*); // 2
-void daObjKAM_Delete(daObjKAM_c*); // 2
-void daObjKAM_Draw(daObjKAM_c*); // 2
+static void daObjKAM_Create(fopAc_ac_c*); // 2
+static void daObjKAM_Delete(daObjKAM_c*); // 2
+static void daObjKAM_Draw(daObjKAM_c*); // 2
 static void daObjKAM_Execute(daObjKAM_c*); // 2
-bool daObjKAM_IsDelete(daObjKAM_c*); // 2
+static bool daObjKAM_IsDelete(daObjKAM_c*); // 2
 
 extern "C" void __ct__14daObj_KamHIO_cFv(); // 1
 extern "C" void InitCcSph__10daObjKAM_cFv(); // 1
@@ -276,8 +276,8 @@ extern "C" void SetCcSph__10daObjKAM_cFv(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void CreateHeap__10daObjKAM_cFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void daObjKAM_Create__FP10fopAc_ac_c(); // 1
-extern "C" void daObjKAM_Delete__FP10daObjKAM_c(); // 1
+extern "C" static void daObjKAM_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjKAM_Delete__FP10daObjKAM_c(); // 1
 extern "C" void ShopWaitAction__10daObjKAM_cFv(); // 1
 extern "C" void WaitAction__10daObjKAM_cFv(); // 1
 extern "C" void WallCheck__10daObjKAM_cFv(); // 1
@@ -296,21 +296,20 @@ extern "C" void ObjHit__10daObjKAM_cFv(); // 1
 extern "C" void Execute__10daObjKAM_cFv(); // 1
 extern "C" void Delete__10daObjKAM_cFv(); // 1
 extern "C" void setBaseMtx__10daObjKAM_cFv(); // 1
-extern "C" void daObjKAM_Draw__FP10daObjKAM_c(); // 1
+extern "C" static void daObjKAM_Draw__FP10daObjKAM_c(); // 1
 extern "C" static void daObjKAM_Execute__FP10daObjKAM_c(); // 1
 extern "C" void CreateChk__10daObjKAM_cFv(); // 1
 extern "C" void create__10daObjKAM_cFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" bool daObjKAM_IsDelete__FP10daObjKAM_c(); // 1
+extern "C" static bool daObjKAM_IsDelete__FP10daObjKAM_c(); // 1
 extern "C" void __dt__14daObj_KamHIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_kamakiri_cpp(); // 1
-extern "C" void func_80C383E4(); // 1
-extern "C" void func_80C383EC(); // 1
+extern "C" static void func_80C383E4(); // 1
+extern "C" static void func_80C383EC(); // 1
 extern "C" extern u32 const lit_4437;
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daObjKAM_Method[8];
 extern "C" extern void* g_profile_Obj_Kam[12];
 
 // 
@@ -424,6 +423,8 @@ extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -448,30 +449,30 @@ SECTION_RODATA static u32 const lit_3775 = 0x3FC00000;
 /* 80C3840C-80C38410 0004+00 s=1 e=0 z=0  None .rodata    @3776                                                        */
 SECTION_RODATA static u32 const lit_3776 = 0x3F99999A;
 
-/* 80C3850C-80C3852C 0020+00 s=0 e=0 z=0  None .data      l_daObjKAM_Method                                            */
-SECTION_DATA void* l_daObjKAM_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 80C3850C-80C3852C 0020+00 s=1 e=0 z=0  None .data      l_daObjKAM_Method                                            */
+SECTION_DATA static void* l_daObjKAM_Method[8] = {
+	(void*)daObjKAM_Create__FP10fopAc_ac_c,
+	(void*)daObjKAM_Delete__FP10daObjKAM_c,
+	(void*)daObjKAM_Execute__FP10daObjKAM_c,
+	(void*)daObjKAM_IsDelete__FP10daObjKAM_c,
+	(void*)daObjKAM_Draw__FP10daObjKAM_c,
 	(void*)NULL,
 	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80C3852C-80C3855C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Kam                                            */
+/* 80C3852C-80C3855C 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Kam                                            */
 SECTION_DATA void* g_profile_Obj_Kam[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01450000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x00000A68,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01E20000,
-	(void*)NULL,
+	(void*)&l_daObjKAM_Method,
 	(void*)0x000C0120,
 	(void*)0x030E0000,
 };
@@ -480,55 +481,55 @@ SECTION_DATA void* g_profile_Obj_Kam[12] = {
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80C383EC,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80C383E4,
 };
 
 /* 80C38580-80C3858C 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80C3858C-80C38598 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80C38598-80C385A4 000C+00 s=1 e=0 z=0  None .data      __vt__10daObjKAM_c                                           */
 SECTION_DATA static void* __vt__10daObjKAM_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)Insect_Release__10daObjKAM_cFv,
 };
 
 /* 80C385A4-80C385B0 000C+00 s=5 e=0 z=0  None .data      __vt__8cM3dGPla                                              */
 SECTION_DATA static void* __vt__8cM3dGPla[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGPlaFv,
 };
 
 /* 80C385B0-80C385BC 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 80C385BC-80C385C8 000C+00 s=2 e=0 z=0  None .data      __vt__14daObj_KamHIO_c                                       */
 SECTION_DATA static void* __vt__14daObj_KamHIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__14daObj_KamHIO_cFv,
 };
 
 /* 80C3518C-80C351BC 0030+00 s=1 e=0 z=0  None .text      __ct__14daObj_KamHIO_cFv                                     */
@@ -736,7 +737,7 @@ asm void daObjKAM_c::CreateHeap() {
 #pragma pop
 
 
-/* 80C355F8-80C35640 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80C355F8-80C35640 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -747,22 +748,22 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80C35640-80C35660 0020+00 s=0 e=0 z=0  None .text      daObjKAM_Create__FP10fopAc_ac_c                              */
+/* 80C35640-80C35660 0020+00 s=1 e=0 z=0  None .text      daObjKAM_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKAM_Create(fopAc_ac_c* param_0) {
+asm static void daObjKAM_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/daObjKAM_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C35660-80C35684 0024+00 s=0 e=0 z=0  None .text      daObjKAM_Delete__FP10daObjKAM_c                              */
+/* 80C35660-80C35684 0024+00 s=1 e=0 z=0  None .text      daObjKAM_Delete__FP10daObjKAM_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKAM_Delete(daObjKAM_c* param_0) {
+asm static void daObjKAM_Delete(daObjKAM_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/daObjKAM_Delete__FP10daObjKAM_c.s"
 }
@@ -802,7 +803,7 @@ asm void daObjKAM_c::WallCheck() {
 #pragma pop
 
 
-/* 80C35B9C-80C35BE4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 80C35B9C-80C35BE4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -879,7 +880,7 @@ asm void daObjKAM_c::ShopAction() {
 #pragma pop
 
 
-/* 80C36CA0-80C36CB8 0018+00 s=0 e=0 z=0  None .text      Insect_Release__10daObjKAM_cFv                               */
+/* 80C36CA0-80C36CB8 0018+00 s=1 e=0 z=0  None .text      Insect_Release__10daObjKAM_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -971,18 +972,18 @@ asm void daObjKAM_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80C377F4-80C378D4 00E0+00 s=0 e=0 z=0  None .text      daObjKAM_Draw__FP10daObjKAM_c                                */
+/* 80C377F4-80C378D4 00E0+00 s=1 e=0 z=0  None .text      daObjKAM_Draw__FP10daObjKAM_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjKAM_Draw(daObjKAM_c* param_0) {
+asm static void daObjKAM_Draw(daObjKAM_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/daObjKAM_Draw__FP10daObjKAM_c.s"
 }
 #pragma pop
 
 
-/* 80C378D4-80C378F4 0020+00 s=1 e=0 z=0  None .text      daObjKAM_Execute__FP10daObjKAM_c                             */
+/* 80C378D4-80C378F4 0020+00 s=2 e=0 z=0  None .text      daObjKAM_Execute__FP10daObjKAM_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1022,7 +1023,7 @@ asm void daObjKAM_c::create() {
 #pragma pop
 
 
-/* 80C38258-80C382C8 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80C38258-80C382C8 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1033,7 +1034,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80C382C8-80C38310 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80C382C8-80C38310 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1044,7 +1045,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80C38310-80C38358 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C38310-80C38358 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1055,13 +1056,13 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80C38358-80C38360 0008+00 s=0 e=0 z=0  None .text      daObjKAM_IsDelete__FP10daObjKAM_c                            */
-bool daObjKAM_IsDelete(daObjKAM_c* param_0) {
+/* 80C38358-80C38360 0008+00 s=1 e=0 z=0  None .text      daObjKAM_IsDelete__FP10daObjKAM_c                            */
+static bool daObjKAM_IsDelete(daObjKAM_c* param_0) {
 	return true;
 }
 
 
-/* 80C38360-80C383A8 0048+00 s=1 e=0 z=0  None .text      __dt__14daObj_KamHIO_cFv                                     */
+/* 80C38360-80C383A8 0048+00 s=2 e=0 z=0  None .text      __dt__14daObj_KamHIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1072,7 +1073,7 @@ asm daObj_KamHIO_c::~daObj_KamHIO_c() {
 #pragma pop
 
 
-/* 80C383A8-80C383E4 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_kamakiri_cpp                                 */
+/* 80C383A8-80C383E4 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_kamakiri_cpp                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1083,22 +1084,22 @@ extern "C" asm void __sinit_d_a_obj_kamakiri_cpp() {
 #pragma pop
 
 
-/* 80C383E4-80C383EC 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C383E4-80C383EC 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C383E4() {
+extern "C" asm static void func_80C383E4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/func_80C383E4.s"
 }
 #pragma pop
 
 
-/* 80C383EC-80C383F4 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C383EC-80C383F4 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80C383EC() {
+extern "C" asm static void func_80C383EC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/func_80C383EC.s"
 }

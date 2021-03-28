@@ -19,6 +19,7 @@ extern void* const data_80CCB074[2];
 // 
 
 
+extern "C" void __sinit_d_a_obj_scannon_crs_cpp(); // 1
 
 // 
 // Declarations:

@@ -96,10 +96,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -115,7 +115,16 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
+struct J3DAnmTransform {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
 struct J3DModelData {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct Vec {
@@ -124,15 +133,6 @@ struct Vec {
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfSO {
@@ -168,10 +168,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -245,18 +245,18 @@ struct cM3dGCir {
 // 
 
 static void useHeapInit(fopAc_ac_c*); // 2
-void daObjBATTA_Create(fopAc_ac_c*); // 2
-void daObjBATTA_Delete(daObjBATTA_c*); // 2
-void daObjBATTA_Draw(daObjBATTA_c*); // 2
+static void daObjBATTA_Create(fopAc_ac_c*); // 2
+static void daObjBATTA_Delete(daObjBATTA_c*); // 2
+static void daObjBATTA_Draw(daObjBATTA_c*); // 2
 static void daObjBATTA_Execute(daObjBATTA_c*); // 2
-bool daObjBATTA_IsDelete(daObjBATTA_c*); // 2
+static bool daObjBATTA_IsDelete(daObjBATTA_c*); // 2
 
 extern "C" void __ct__16daObj_BattaHIO_cFv(); // 1
 extern "C" void setAction__12daObjBATTA_cFM12daObjBATTA_cFPCvPv_v(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void daObjBATTA_Create__FP10fopAc_ac_c(); // 1
-extern "C" void daObjBATTA_Delete__FP12daObjBATTA_c(); // 1
+extern "C" static void daObjBATTA_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daObjBATTA_Delete__FP12daObjBATTA_c(); // 1
 extern "C" void wait__12daObjBATTA_cFv(); // 1
 extern "C" void turn__12daObjBATTA_cFv(); // 1
 extern "C" void jump__12daObjBATTA_cFv(); // 1
@@ -272,7 +272,7 @@ extern "C" void hit_check__12daObjBATTA_cFv(); // 1
 extern "C" void execute__12daObjBATTA_cFv(); // 1
 extern "C" void _delete__12daObjBATTA_cFv(); // 1
 extern "C" void mtx_set__12daObjBATTA_cFv(); // 1
-extern "C" void daObjBATTA_Draw__FP12daObjBATTA_c(); // 1
+extern "C" static void daObjBATTA_Draw__FP12daObjBATTA_c(); // 1
 extern "C" static void daObjBATTA_Execute__FP12daObjBATTA_c(); // 1
 extern "C" void create__12daObjBATTA_cFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
@@ -280,16 +280,15 @@ extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__12dBgS_AcchCirFv(); // 1
-extern "C" bool daObjBATTA_IsDelete__FP12daObjBATTA_c(); // 1
+extern "C" static bool daObjBATTA_IsDelete__FP12daObjBATTA_c(); // 1
 extern "C" void __dt__16daObj_BattaHIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_batta_cpp(); // 1
-extern "C" void func_80BAC8F8(); // 1
-extern "C" void func_80BAC900(); // 1
+extern "C" static void func_80BAC8F8(); // 1
+extern "C" static void func_80BAC900(); // 1
 extern "C" void Insect_Release__9dInsect_cFv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* l_daObjBATTA_Method[8];
 extern "C" extern void* g_profile_Obj_Batta[12];
 extern "C" extern void* __vt__9dInsect_c[3];
 
@@ -399,6 +398,8 @@ extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void abs(); // 1
 extern "C" void strcmp(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -447,145 +448,145 @@ SECTION_DATA static u8 data_80BACA90[64] = {
 SECTION_DATA static void* lit_3903[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)jump__12daObjBATTA_cFv,
 };
 
 /* 80BACADC-80BACAE8 000C+00 s=1 e=0 z=0  None .data      @3907                                                        */
 SECTION_DATA static void* lit_3907[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)turn__12daObjBATTA_cFv,
 };
 
 /* 80BACAE8-80BACAF4 000C+00 s=1 e=0 z=0  None .data      @3992                                                        */
 SECTION_DATA static void* lit_3992[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)jump__12daObjBATTA_cFv,
 };
 
 /* 80BACAF4-80BACB00 000C+00 s=1 e=0 z=0  None .data      @3998                                                        */
 SECTION_DATA static void* lit_3998[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)jump__12daObjBATTA_cFv,
 };
 
 /* 80BACB00-80BACB0C 000C+00 s=1 e=0 z=0  None .data      @4151                                                        */
 SECTION_DATA static void* lit_4151[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)fly_up__12daObjBATTA_cFv,
 };
 
 /* 80BACB0C-80BACB18 000C+00 s=1 e=0 z=0  None .data      @4155                                                        */
 SECTION_DATA static void* lit_4155[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)wait__12daObjBATTA_cFv,
 };
 
 /* 80BACB18-80BACB24 000C+00 s=1 e=0 z=0  None .data      @4246                                                        */
 SECTION_DATA static void* lit_4246[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)fly_down__12daObjBATTA_cFv,
 };
 
 /* 80BACB24-80BACB30 000C+00 s=1 e=0 z=0  None .data      @4353                                                        */
 SECTION_DATA static void* lit_4353[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)wait__12daObjBATTA_cFv,
 };
 
 /* 80BACB30-80BACB3C 000C+00 s=1 e=0 z=0  None .data      @4415                                                        */
 SECTION_DATA static void* lit_4415[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)wait__12daObjBATTA_cFv,
 };
 
 /* 80BACB3C-80BACB48 000C+00 s=1 e=0 z=0  None .data      @4418                                                        */
 SECTION_DATA static void* lit_4418[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)bin_action__12daObjBATTA_cFv,
 };
 
 /* 80BACB48-80BACB54 000C+00 s=1 e=0 z=0  None .data      @4485                                                        */
 SECTION_DATA static void* lit_4485[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)wait__12daObjBATTA_cFv,
 };
 
 /* 80BACB54-80BACB60 000C+00 s=1 e=0 z=0  None .data      @4521                                                        */
 SECTION_DATA static void* lit_4521[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)wait__12daObjBATTA_cFv,
 };
 
 /* 80BACB60-80BACB6C 000C+00 s=1 e=0 z=0  None .data      @4620                                                        */
 SECTION_DATA static void* lit_4620[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)boomerang__12daObjBATTA_cFv,
 };
 
 /* 80BACB6C-80BACB78 000C+00 s=1 e=0 z=0  None .data      @4648                                                        */
 SECTION_DATA static void* lit_4648[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)hook__12daObjBATTA_cFv,
 };
 
 /* 80BACB78-80BACB84 000C+00 s=1 e=0 z=0  None .data      @4651                                                        */
 SECTION_DATA static void* lit_4651[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)boomerang__12daObjBATTA_cFv,
 };
 
 /* 80BACB84-80BACB90 000C+00 s=1 e=0 z=0  None .data      @4880                                                        */
 SECTION_DATA static void* lit_4880[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
-	(void*)NULL,
+	(void*)bin_wait__12daObjBATTA_cFv,
 };
 
 /* 80BACB90-80BACB9C 000C+00 s=1 e=0 z=0  None .data      @4883                                                        */
 SECTION_DATA static void* lit_4883[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
+	(void*)wait__12daObjBATTA_cFv,
+};
+
+/* 80BACB9C-80BACBBC 0020+00 s=1 e=0 z=0  None .data      l_daObjBATTA_Method                                          */
+SECTION_DATA static void* l_daObjBATTA_Method[8] = {
+	(void*)daObjBATTA_Create__FP10fopAc_ac_c,
+	(void*)daObjBATTA_Delete__FP12daObjBATTA_c,
+	(void*)daObjBATTA_Execute__FP12daObjBATTA_c,
+	(void*)daObjBATTA_IsDelete__FP12daObjBATTA_c,
+	(void*)daObjBATTA_Draw__FP12daObjBATTA_c,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 80BACB9C-80BACBBC 0020+00 s=0 e=0 z=0  None .data      l_daObjBATTA_Method                                          */
-SECTION_DATA void* l_daObjBATTA_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 80BACBBC-80BACBEC 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Batta                                          */
+/* 80BACBBC-80BACBEC 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Batta                                          */
 SECTION_DATA void* g_profile_Obj_Batta[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0007FFFD,
 	(void*)0x01490000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000009F8,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x01E60000,
-	(void*)NULL,
+	(void*)&l_daObjBATTA_Method,
 	(void*)0x000C0120,
 	(void*)0x030E0000,
 };
@@ -594,76 +595,76 @@ SECTION_DATA void* g_profile_Obj_Batta[12] = {
 SECTION_DATA void* __vt__9dInsect_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)Insect_Release__9dInsect_cFv,
 };
 
 /* 80BACBF8-80BACC04 000C+00 s=1 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 80BACC04-80BACC10 000C+00 s=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10cCcD_GSttsFv,
 };
 
 /* 80BACC10-80BACC1C 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__10dCcD_GSttsFv,
 };
 
 /* 80BACC1C-80BACC28 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80BACC28-80BACC34 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 80BACC34-80BACC58 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
 	(void*)NULL,
 	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
 	(void*)NULL,
 	(void*)NULL,
+	(void*)func_80BAC900,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)func_80BAC8F8,
 };
 
 /* 80BACC58-80BACC64 000C+00 s=1 e=0 z=0  None .data      __vt__12daObjBATTA_c                                         */
 SECTION_DATA static void* __vt__12daObjBATTA_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)Insect_Release__9dInsect_cFv,
 };
 
 /* 80BACC64-80BACC70 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 80BACC70-80BACC7C 000C+00 s=2 e=0 z=0  None .data      __vt__16daObj_BattaHIO_c                                     */
 SECTION_DATA static void* __vt__16daObj_BattaHIO_c[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__16daObj_BattaHIO_cFv,
 };
 
 /* 80BA9E2C-80BA9E5C 0030+00 s=1 e=0 z=0  None .text      __ct__16daObj_BattaHIO_cFv                                   */
@@ -885,7 +886,7 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80BAA13C-80BAA184 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80BAA13C-80BAA184 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -896,29 +897,29 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80BAA184-80BAA1A4 0020+00 s=0 e=0 z=0  None .text      daObjBATTA_Create__FP10fopAc_ac_c                            */
+/* 80BAA184-80BAA1A4 0020+00 s=1 e=0 z=0  None .text      daObjBATTA_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjBATTA_Create(fopAc_ac_c* param_0) {
+asm static void daObjBATTA_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_batta/d_a_obj_batta/daObjBATTA_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80BAA1A4-80BAA1C8 0024+00 s=0 e=0 z=0  None .text      daObjBATTA_Delete__FP12daObjBATTA_c                          */
+/* 80BAA1A4-80BAA1C8 0024+00 s=1 e=0 z=0  None .text      daObjBATTA_Delete__FP12daObjBATTA_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjBATTA_Delete(daObjBATTA_c* param_0) {
+asm static void daObjBATTA_Delete(daObjBATTA_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_batta/d_a_obj_batta/daObjBATTA_Delete__FP12daObjBATTA_c.s"
 }
 #pragma pop
 
 
-/* 80BAA1C8-80BAA47C 02B4+00 s=0 e=0 z=0  None .text      wait__12daObjBATTA_cFv                                       */
+/* 80BAA1C8-80BAA47C 02B4+00 s=6 e=0 z=0  None .text      wait__12daObjBATTA_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -929,7 +930,7 @@ asm void daObjBATTA_c::wait() {
 #pragma pop
 
 
-/* 80BAA47C-80BAAA18 059C+00 s=0 e=0 z=0  None .text      turn__12daObjBATTA_cFv                                       */
+/* 80BAA47C-80BAAA18 059C+00 s=1 e=0 z=0  None .text      turn__12daObjBATTA_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -940,7 +941,7 @@ asm void daObjBATTA_c::turn() {
 #pragma pop
 
 
-/* 80BAAA18-80BAAD30 0318+00 s=0 e=0 z=0  None .text      jump__12daObjBATTA_cFv                                       */
+/* 80BAAA18-80BAAD30 0318+00 s=3 e=0 z=0  None .text      jump__12daObjBATTA_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -951,7 +952,7 @@ asm void daObjBATTA_c::jump() {
 #pragma pop
 
 
-/* 80BAAD30-80BAB234 0504+00 s=0 e=0 z=0  None .text      fly_up__12daObjBATTA_cFv                                     */
+/* 80BAAD30-80BAB234 0504+00 s=1 e=0 z=0  None .text      fly_up__12daObjBATTA_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -962,7 +963,7 @@ asm void daObjBATTA_c::fly_up() {
 #pragma pop
 
 
-/* 80BAB234-80BAB500 02CC+00 s=0 e=0 z=0  None .text      fly_down__12daObjBATTA_cFv                                   */
+/* 80BAB234-80BAB500 02CC+00 s=1 e=0 z=0  None .text      fly_down__12daObjBATTA_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -973,7 +974,7 @@ asm void daObjBATTA_c::fly_down() {
 #pragma pop
 
 
-/* 80BAB500-80BAB6C8 01C8+00 s=0 e=0 z=0  None .text      bin_wait__12daObjBATTA_cFv                                   */
+/* 80BAB500-80BAB6C8 01C8+00 s=1 e=0 z=0  None .text      bin_wait__12daObjBATTA_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -984,7 +985,7 @@ asm void daObjBATTA_c::bin_wait() {
 #pragma pop
 
 
-/* 80BAB6C8-80BAB820 0158+00 s=0 e=0 z=0  None .text      bin_action__12daObjBATTA_cFv                                 */
+/* 80BAB6C8-80BAB820 0158+00 s=1 e=0 z=0  None .text      bin_action__12daObjBATTA_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -995,7 +996,7 @@ asm void daObjBATTA_c::bin_action() {
 #pragma pop
 
 
-/* 80BAB820-80BAB934 0114+00 s=0 e=0 z=0  None .text      hook__12daObjBATTA_cFv                                       */
+/* 80BAB820-80BAB934 0114+00 s=1 e=0 z=0  None .text      hook__12daObjBATTA_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1006,7 +1007,7 @@ asm void daObjBATTA_c::hook() {
 #pragma pop
 
 
-/* 80BAB934-80BABA98 0164+00 s=0 e=0 z=0  None .text      boomerang__12daObjBATTA_cFv                                  */
+/* 80BAB934-80BABA98 0164+00 s=2 e=0 z=0  None .text      boomerang__12daObjBATTA_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1087,18 +1088,18 @@ asm void daObjBATTA_c::mtx_set() {
 #pragma pop
 
 
-/* 80BAC084-80BAC174 00F0+00 s=0 e=0 z=0  None .text      daObjBATTA_Draw__FP12daObjBATTA_c                            */
+/* 80BAC084-80BAC174 00F0+00 s=1 e=0 z=0  None .text      daObjBATTA_Draw__FP12daObjBATTA_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjBATTA_Draw(daObjBATTA_c* param_0) {
+asm static void daObjBATTA_Draw(daObjBATTA_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_batta/d_a_obj_batta/daObjBATTA_Draw__FP12daObjBATTA_c.s"
 }
 #pragma pop
 
 
-/* 80BAC174-80BAC194 0020+00 s=1 e=0 z=0  None .text      daObjBATTA_Execute__FP12daObjBATTA_c                         */
+/* 80BAC174-80BAC194 0020+00 s=2 e=0 z=0  None .text      daObjBATTA_Execute__FP12daObjBATTA_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1127,7 +1128,7 @@ asm void daObjBATTA_c::create() {
 #pragma pop
 
 
-/* 80BAC6A0-80BAC6E8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80BAC6A0-80BAC6E8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1138,7 +1139,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80BAC6E8-80BAC730 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80BAC6E8-80BAC730 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1149,7 +1150,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80BAC730-80BAC78C 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80BAC730-80BAC78C 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1160,7 +1161,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80BAC78C-80BAC7FC 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80BAC78C-80BAC7FC 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1171,7 +1172,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80BAC7FC-80BAC86C 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80BAC7FC-80BAC86C 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1182,13 +1183,13 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 80BAC86C-80BAC874 0008+00 s=0 e=0 z=0  None .text      daObjBATTA_IsDelete__FP12daObjBATTA_c                        */
-bool daObjBATTA_IsDelete(daObjBATTA_c* param_0) {
+/* 80BAC86C-80BAC874 0008+00 s=1 e=0 z=0  None .text      daObjBATTA_IsDelete__FP12daObjBATTA_c                        */
+static bool daObjBATTA_IsDelete(daObjBATTA_c* param_0) {
 	return true;
 }
 
 
-/* 80BAC874-80BAC8BC 0048+00 s=1 e=0 z=0  None .text      __dt__16daObj_BattaHIO_cFv                                   */
+/* 80BAC874-80BAC8BC 0048+00 s=2 e=0 z=0  None .text      __dt__16daObj_BattaHIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1199,7 +1200,7 @@ asm daObj_BattaHIO_c::~daObj_BattaHIO_c() {
 #pragma pop
 
 
-/* 80BAC8BC-80BAC8F8 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_batta_cpp                                    */
+/* 80BAC8BC-80BAC8F8 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_batta_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1210,29 +1211,29 @@ extern "C" asm void __sinit_d_a_obj_batta_cpp() {
 #pragma pop
 
 
-/* 80BAC8F8-80BAC900 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BAC8F8-80BAC900 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BAC8F8() {
+extern "C" asm static void func_80BAC8F8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_batta/d_a_obj_batta/func_80BAC8F8.s"
 }
 #pragma pop
 
 
-/* 80BAC900-80BAC908 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BAC900-80BAC908 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80BAC900() {
+extern "C" asm static void func_80BAC900() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_batta/d_a_obj_batta/func_80BAC900.s"
 }
 #pragma pop
 
 
-/* 80BAC908-80BAC914 000C+00 s=0 e=0 z=0  None .text      Insect_Release__9dInsect_cFv                                 */
+/* 80BAC908-80BAC914 000C+00 s=2 e=0 z=0  None .text      Insect_Release__9dInsect_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1243,7 +1244,7 @@ asm void dInsect_c::Insect_Release() {
 #pragma pop
 
 
-/* 80BAC914-80BAC95C 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80BAC914-80BAC95C 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

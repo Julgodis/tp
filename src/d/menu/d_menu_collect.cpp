@@ -11,18 +11,18 @@
 // Types:
 // 
 
+struct J2DAnmTextureSRTKey {
+};
+
+struct CSTControl {
+};
+
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 8003242C */ void checkLeftTrigger();
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct CSTControl {
 };
 
 struct JKRHeap {

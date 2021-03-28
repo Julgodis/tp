@@ -11,6 +11,12 @@
 // Types:
 // 
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -22,12 +28,6 @@ struct JGeometry {
 	struct TVec2 { };
 	/* TVec2<f32> */
 	struct TVec2__template1 {
-	};
-
-};
-
-struct JUtility {
-	struct TColor {
 	};
 
 };

@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct JAISoundID {
+};
+
 struct Z2SoundStarter {
 };
 
 struct Vec {
-};
-
-struct JAISoundID {
 };
 
 struct Z2Creature {

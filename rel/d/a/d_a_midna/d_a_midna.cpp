@@ -28,9 +28,6 @@ struct daMidna_McaMorfCB1_c {
 	/* 804C6398 */ ~daMidna_McaMorfCB1_c();
 };
 
-struct J3DModelData {
-};
-
 struct Vec {
 };
 
@@ -44,6 +41,12 @@ struct cXyz {
 	/* 804BD8F4 */ cXyz();
 };
 
+struct J3DAnmTransform {
+};
+
+struct J3DModelData {
+};
+
 struct J3DDeformData {
 };
 
@@ -55,9 +58,6 @@ struct J3DModel {
 struct mDoExt_invisibleModel {
 	/* 8000E53C */ void create(J3DModel*, u8);
 	/* 8000E7C0 */ void entryDL(cXyz*);
-};
-
-struct J3DAnmTransform {
 };
 
 struct daMidna_c {
@@ -199,15 +199,15 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
+struct mDoExt_McaMorfCallBack1_c {
+};
+
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 	/* 802C0628 */ void initAnime(void*, bool, f32, f32);
 	/* 802C06D0 */ void updateAnime(f32, f32);
-};
-
-struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
@@ -281,10 +281,10 @@ struct dEvent_manager_c {
 	/* 8004882C */ void checkStartDemo();
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -408,11 +408,11 @@ struct J3DAnmLoaderDataBase {
 
 static void daMidna_modelCallBack(J3DJoint*, int); // 2
 static void daMidna_createHeap(fopAc_ac_c*); // 2
-void daMidna_Create(fopAc_ac_c*); // 2
+static void daMidna_Create(fopAc_ac_c*); // 2
 static void daMidna_searchNpc(fopAc_ac_c*, void*); // 2
-void daMidna_Execute(daMidna_c*); // 2
-void daMidna_Draw(daMidna_c*); // 2
-void daMidna_Delete(daMidna_c*); // 2
+static void daMidna_Execute(daMidna_c*); // 2
+static void daMidna_Draw(daMidna_c*); // 2
+static void daMidna_Delete(daMidna_c*); // 2
 static void cLib_calcTimer__template0(u8*); // 2
 
 extern "C" void init__16daMidna_matAnm_cFv(); // 1
@@ -442,7 +442,7 @@ extern "C" void create__9daMidna_cFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
 extern "C" void __defctor__14daPy_anmHeap_cFv(); // 1
-extern "C" void daMidna_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daMidna_Create__FP10fopAc_ac_c(); // 1
 extern "C" void allAnimePlay__9daMidna_cFv(); // 1
 extern "C" void setMatrix__9daMidna_cFv(); // 1
 extern "C" void setBodyPartMatrix__9daMidna_cFv(); // 1
@@ -478,17 +478,16 @@ extern "C" void checkMetamorphoseEnableBase__9daMidna_cFv(); // 1
 extern "C" void checkNoDrawState__9daMidna_cFv(); // 1
 extern "C" void setSound__9daMidna_cFv(); // 1
 extern "C" void execute__9daMidna_cFv(); // 1
-extern "C" void daMidna_Execute__FP9daMidna_c(); // 1
+extern "C" static void daMidna_Execute__FP9daMidna_c(); // 1
 extern "C" void draw__9daMidna_cFv(); // 1
-extern "C" void daMidna_Draw__FP9daMidna_c(); // 1
+extern "C" static void daMidna_Draw__FP9daMidna_c(); // 1
 extern "C" void __dt__9daMidna_cFv(); // 1
-extern "C" void daMidna_Delete__FP9daMidna_c(); // 1
+extern "C" static void daMidna_Delete__FP9daMidna_c(); // 1
 extern "C" void calc__11J3DTexNoAnmCFPUs(); // 1
 extern "C" static void func_804C637C(); // 1
 extern "C" void __dt__20daMidna_McaMorfCB1_cFv(); // 1
 extern "C" void __dt__16daMidna_matAnm_cFv(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* l_daMidna_Method[8];
 extern "C" extern void* g_profile_MIDNA[12];
 
 // 
@@ -700,6 +699,8 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__14J3DMaterialAnm[4];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 mGndCheck__11fopAcM_gc_c[84];
@@ -819,7 +820,7 @@ SECTION_RODATA static u8 const lit_4305[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 804BC248-804BC36C 0124+00 s=0 e=0 z=0  None .text      calc__16daMidna_matAnm_cCFP11J3DMaterial                     */
+/* 804BC248-804BC36C 0124+00 s=1 e=0 z=0  None .text      calc__16daMidna_matAnm_cCFP11J3DMaterial                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -830,7 +831,7 @@ asm void daMidna_matAnm_c::calc(J3DMaterial* param_0) const {
 #pragma pop
 
 
-/* 804BC36C-804BC3E0 0074+00 s=0 e=0 z=0  None .text      execute__20daMidna_McaMorfCB1_cFUsP16J3DTransformInfo        */
+/* 804BC36C-804BC3E0 0074+00 s=1 e=0 z=0  None .text      execute__20daMidna_McaMorfCB1_cFUsP16J3DTransformInfo        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1312,33 +1313,33 @@ SECTION_DEAD char const* const stringBase_804C6C2C = "fprm0";
 SECTION_DATA static void* lit_4662[3] = {
 	(void*)NULL,
 	(void*)0xFFFFFFFF,
+	(void*)checkMetamorphoseEnableBase__9daMidna_cFv,
+};
+
+/* 804C6C40-804C6C60 0020+00 s=1 e=0 z=0  None .data      l_daMidna_Method                                             */
+SECTION_DATA static void* l_daMidna_Method[8] = {
+	(void*)daMidna_Create__FP10fopAc_ac_c,
+	(void*)daMidna_Delete__FP9daMidna_c,
+	(void*)daMidna_Execute__FP9daMidna_c,
+	(void*)NULL,
+	(void*)daMidna_Draw__FP9daMidna_c,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)NULL,
 };
 
-/* 804C6C40-804C6C60 0020+00 s=0 e=0 z=0  None .data      l_daMidna_Method                                             */
-SECTION_DATA void* l_daMidna_Method[8] = {
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-};
-
-/* 804C6C60-804C6C90 0030+00 s=0 e=0 z=0  None .data      g_profile_MIDNA                                              */
+/* 804C6C60-804C6C90 0030+00 s=0 e=0 z=1  None .data      g_profile_MIDNA                                              */
 SECTION_DATA void* g_profile_MIDNA[12] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0006FFFD,
 	(void*)0x00FF0000,
-	(void*)NULL,
+	(void*)&g_fpcLf_Method,
 	(void*)0x000009E0,
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)&g_fopAc_Method,
 	(void*)0x005C0000,
-	(void*)NULL,
+	(void*)&l_daMidna_Method,
 	(void*)0x00060000,
 	(void*)0x03000000,
 };
@@ -1354,30 +1355,30 @@ SECTION_DATA static void* __vt__25mDoExt_McaMorfCallBack1_c[3] = {
 SECTION_DATA static void* __vt__11J3DTexNoAnm[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)calc__11J3DTexNoAnmCFPUs,
 };
 
 /* 804C6CA8-804C6CB4 000C+00 s=4 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 804C6CB4-804C6CC4 0010+00 s=3 e=0 z=0  None .data      __vt__20daMidna_McaMorfCB1_c                                 */
 SECTION_DATA static void* __vt__20daMidna_McaMorfCB1_c[4] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)execute__20daMidna_McaMorfCB1_cFUsP16J3DTransformInfo,
+	(void*)__dt__20daMidna_McaMorfCB1_cFv,
 };
 
 /* 804C6CC4-804C6CD4 0010+00 s=2 e=0 z=0  None .data      __vt__16daMidna_matAnm_c                                     */
 SECTION_DATA static void* __vt__16daMidna_matAnm_c[4] = {
 	(void*)NULL,
 	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+	(void*)__dt__16daMidna_matAnm_cFv,
+	(void*)calc__16daMidna_matAnm_cCFP11J3DMaterial,
 };
 
 /* 804BC868-804BD050 07E8+00 s=1 e=0 z=0  None .text      createHeap__9daMidna_cFv                                     */
@@ -1391,7 +1392,7 @@ asm void daMidna_c::createHeap() {
 #pragma pop
 
 
-/* 804BD050-804BD098 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 804BD050-804BD098 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1562,11 +1563,11 @@ asm void daPy_anmHeap_c::__defctor() {
 #pragma pop
 
 
-/* 804BD91C-804BD93C 0020+00 s=0 e=0 z=0  None .text      daMidna_Create__FP10fopAc_ac_c                               */
+/* 804BD91C-804BD93C 0020+00 s=1 e=0 z=0  None .text      daMidna_Create__FP10fopAc_ac_c                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daMidna_Create(fopAc_ac_c* param_0) {
+asm static void daMidna_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/daMidna_Create__FP10fopAc_ac_c.s"
 }
@@ -1914,7 +1915,7 @@ asm void daMidna_c::setMidnaNoDrawFlg() {
 #pragma pop
 
 
-/* 804C4AE8-804C4B68 0080+00 s=0 e=0 z=0  None .text      checkMetamorphoseEnableBase__9daMidna_cFv                    */
+/* 804C4AE8-804C4B68 0080+00 s=1 e=0 z=0  None .text      checkMetamorphoseEnableBase__9daMidna_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1958,11 +1959,11 @@ asm void daMidna_c::execute() {
 #pragma pop
 
 
-/* 804C59E8-804C5A08 0020+00 s=0 e=0 z=0  None .text      daMidna_Execute__FP9daMidna_c                                */
+/* 804C59E8-804C5A08 0020+00 s=1 e=0 z=0  None .text      daMidna_Execute__FP9daMidna_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daMidna_Execute(daMidna_c* param_0) {
+asm static void daMidna_Execute(daMidna_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/daMidna_Execute__FP9daMidna_c.s"
 }
@@ -1980,11 +1981,11 @@ asm void daMidna_c::draw() {
 #pragma pop
 
 
-/* 804C6184-804C61A4 0020+00 s=0 e=0 z=0  None .text      daMidna_Draw__FP9daMidna_c                                   */
+/* 804C6184-804C61A4 0020+00 s=1 e=0 z=0  None .text      daMidna_Draw__FP9daMidna_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daMidna_Draw(daMidna_c* param_0) {
+asm static void daMidna_Draw(daMidna_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/daMidna_Draw__FP9daMidna_c.s"
 }
@@ -2002,18 +2003,18 @@ asm daMidna_c::~daMidna_c() {
 #pragma pop
 
 
-/* 804C6324-804C634C 0028+00 s=0 e=0 z=0  None .text      daMidna_Delete__FP9daMidna_c                                 */
+/* 804C6324-804C634C 0028+00 s=1 e=0 z=0  None .text      daMidna_Delete__FP9daMidna_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daMidna_Delete(daMidna_c* param_0) {
+asm static void daMidna_Delete(daMidna_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/daMidna_Delete__FP9daMidna_c.s"
 }
 #pragma pop
 
 
-/* 804C634C-804C637C 0030+00 s=0 e=0 z=0  None .text      calc__11J3DTexNoAnmCFPUs                                     */
+/* 804C634C-804C637C 0030+00 s=1 e=0 z=0  None .text      calc__11J3DTexNoAnmCFPUs                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2035,7 +2036,7 @@ asm static void cLib_calcTimer__template0(u8* param_0) {
 #pragma pop
 
 
-/* 804C6398-804C63E0 0048+00 s=0 e=0 z=0  None .text      __dt__20daMidna_McaMorfCB1_cFv                               */
+/* 804C6398-804C63E0 0048+00 s=1 e=0 z=0  None .text      __dt__20daMidna_McaMorfCB1_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2046,7 +2047,7 @@ asm daMidna_McaMorfCB1_c::~daMidna_McaMorfCB1_c() {
 #pragma pop
 
 
-/* 804C63E0-804C64C0 00E0+00 s=0 e=0 z=0  None .text      __dt__16daMidna_matAnm_cFv                                   */
+/* 804C63E0-804C64C0 00E0+00 s=1 e=0 z=0  None .text      __dt__16daMidna_matAnm_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
